@@ -1,4 +1,4 @@
-package com.example.honkai_stargazer.ui.theme
+package com.voc.honkai_stargazer.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package com.example.honkai_stargazer.ui.theme
+package com.voc.honkai_stargazer.ui.theme
 
 import android.app.Activity
 import android.os.Build
