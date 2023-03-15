@@ -7,6 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -43,10 +45,21 @@ fun BottomBar(navController: NavController, screens: List<Screens.BottomNavigati
         screens.forEach { screen ->
             BottomNavigationItem(
                 icon = {
-                    Icon(
-                        imageVector = screen.icon,
-                        contentDescription = screen.title,
-                    )
+                    if (screen.icon != null) {
+                        Icon(
+                            imageVector = screen.icon,
+                            contentDescription = screen.title,
+                            modifier = Modifier.size(24.dp)
+                        )
+                    } else {
+                        val vector = ImageVector.vectorResource(id = screen.drawableIcon!!)
+                        Icon(
+                            imageVector = vector,
+                            contentDescription = screen.title,
+                            modifier = Modifier.size(24.dp)
+                        )
+                    }
+
                 },
                 label = {Text(text = screen.title)},
                 selected = currentRoute == screen.route,
