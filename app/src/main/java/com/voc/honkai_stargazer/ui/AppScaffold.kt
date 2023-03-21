@@ -1,5 +1,6 @@
 package com.voc.honkai_stargazer.ui
 
+import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.material3.*
@@ -21,8 +22,11 @@ import com.voc.honkai_stargazer.vm.MainViewModel
 
 @Composable
 fun AppScaffold(
+    jsonString: String,
     viewModel: MainViewModel = hiltViewModel()
 ){
+    Log.v("test2", jsonString)
+    viewModel.setCurrentString(jsonString)
     val navController = rememberNavController()
     Scaffold(
         bottomBar = {

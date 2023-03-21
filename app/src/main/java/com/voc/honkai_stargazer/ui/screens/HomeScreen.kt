@@ -14,6 +14,5 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel(),
     mainViewModel: MainViewModel,
 ) {
-    mainViewModel.setCurrentScreen(Screens.BottomNavigationScreens.Home)
     Text("Home Screen")
 }

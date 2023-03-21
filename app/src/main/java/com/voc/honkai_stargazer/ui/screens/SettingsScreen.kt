@@ -14,6 +14,5 @@ fun SettingsScreen(
     viewModel: SettingsViewModel = hiltViewModel(),
     mainViewModel: MainViewModel,
 ) {
-    mainViewModel.setCurrentScreen(Screens.BottomNavigationScreens.Settings)
     Text("Settings Screen")
 }
