@@ -1,10 +1,9 @@
 package com.voc.honkai_stargazer.ui.screens
 
+import android.util.Log
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
@@ -36,6 +35,8 @@ fun CharacterListScreen(
     var text by remember { mutableStateOf("") }
     val focusManager = LocalFocusManager.current
 
+    viewModel.fromJsonString(mainViewModel.jsonString.collectAsState().value)
+
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -62,5 +63,18 @@ fun CharacterListScreen(
                 focusedIndicatorColor = Color.Transparent, //hide the indicator
             )
         )
+
+        LazyColumn(
+            modifier = Modifier.fillMaxWidth(),
+        ){
+            viewModel.characterList.let { list ->
+                items(list.size) { index ->
+                    Text(
+                        text = list[index].name
+                    )
+                }
+            }
+        }
+
     }
 }
