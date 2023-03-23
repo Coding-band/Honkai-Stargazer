@@ -7,10 +7,15 @@ import com.voc.honkai_stargazer.data.local.StargazerDB
 import com.voc.honkai_stargazer.data.local.StargazerDao
 import com.voc.honkai_stargazer.data.repo.Repository
 import com.voc.honkai_stargazer.data.repo.RepositoryImpl
+import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
+@Module
+@InstallIn(SingletonComponent::class)
 object AppModule {
 
     @Provides

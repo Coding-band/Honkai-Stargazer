@@ -1,8 +1,12 @@
 package com.voc.honkai_stargazer.models
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity(tableName = "character_db")
 data class CharacterEntity(
+    @PrimaryKey(autoGenerate = false)
     @SerializedName("Name")
     val name: String,
     @SerializedName("Rarity")
