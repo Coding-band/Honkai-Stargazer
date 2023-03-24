@@ -5,26 +5,23 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Icon
-import androidx.compose.material.Text
-import androidx.compose.material.TextField
-import androidx.compose.material.TextFieldDefaults
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.FilterAlt
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.FilterAlt
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.Blue
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.voc.honkai_stargazer.navigation.Screens
+import com.voc.honkai_stargazer.models.CharacterEntity
 import com.voc.honkai_stargazer.vm.CharacterListViewModel
-import com.voc.honkai_stargazer.vm.HomeViewModel
 import com.voc.honkai_stargazer.vm.MainViewModel
+import com.voc.honkai_stargazer.ui.theme.CardContainerColor
 
 @Composable
 fun CharacterListScreen(
@@ -35,7 +32,7 @@ fun CharacterListScreen(
     var text by remember { mutableStateOf("") }
     val focusManager = LocalFocusManager.current
 
-    viewModel.fromJsonString(mainViewModel.jsonString.collectAsState().value)
+    viewModel.getCharacters("")
 
     Column(
         modifier = Modifier.fillMaxSize()
@@ -43,7 +40,7 @@ fun CharacterListScreen(
         TextField(
             value = text,
             placeholder = {
-                          Text("Search...")
+                Text("Search...")
             },
             onValueChange = {
                 text = it
@@ -53,10 +50,13 @@ fun CharacterListScreen(
                 .padding(16.dp),
             shape = RoundedCornerShape(32.dp),
             leadingIcon = {
-                Icon(Icons.Outlined.FilterAlt, "", modifier = Modifier.clickable { focusManager.clearFocus() })
+                Icon(
+                    Icons.Outlined.FilterAlt,
+                    "",
+                    modifier = Modifier.clickable { focusManager.clearFocus() })
             },
             trailingIcon = {
-                Icon(Icons.Filled.Search, "", )
+                Icon(Icons.Filled.Search, "")
             },
             colors = TextFieldDefaults.textFieldColors(
                 unfocusedIndicatorColor = Color.Transparent,
@@ -66,11 +66,57 @@ fun CharacterListScreen(
 
         LazyColumn(
             modifier = Modifier.fillMaxWidth(),
-        ){
+        ) {
             viewModel.characterList.let { list ->
                 items(list.size) { index ->
+                    CharacterCard(characterEntity = list[index])
+                }
+            }
+        }
+
+    }
+}
+
+@Composable
+fun CharacterCard(characterEntity: CharacterEntity) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(8.dp),
+        backgroundColor = CardContainerColor,
+        elevation = 2.dp,
+        ) {
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(4.dp)
+        ) {
+            Column {
+                //TODO: CHARACTER IMAGE
+            }
+            Row(modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween) {
+                Column {
                     Text(
-                        text = list[index].name
+                        text = characterEntity.name,
+                        fontWeight = FontWeight.Bold
+                    )
+                    Text(
+                        text = "Roles: "
+                    )
+                    Text(
+                        text = "Path: "
+                    )
+                }
+                Column (
+                    horizontalAlignment = Alignment.End
+                        ){
+                    Text(
+                        text = characterEntity.rarity.toString(),
+                    )
+                    Text(
+                        text = characterEntity.role
+                    )
+                    Text(
+                        text = characterEntity.path
                     )
                 }
             }
