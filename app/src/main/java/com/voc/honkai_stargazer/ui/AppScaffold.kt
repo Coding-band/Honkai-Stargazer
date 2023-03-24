@@ -25,7 +25,6 @@ fun AppScaffold(
     jsonString: String,
     viewModel: MainViewModel = hiltViewModel()
 ){
-    Log.v("test2", jsonString)
     viewModel.setCurrentString(jsonString)
     val navController = rememberNavController()
     Scaffold(
