@@ -6,4 +6,5 @@ import kotlinx.coroutines.flow.Flow
 interface Repository {
     suspend fun insertCharacters(characters: List<CharacterEntity>)
     suspend fun getCharacters(query: String): Flow<List<CharacterEntity>>
+    suspend fun getCharacter(name: String): Flow<CharacterEntity>
 }

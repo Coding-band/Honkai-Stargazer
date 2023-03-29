@@ -17,4 +17,8 @@ class RepositoryImpl @Inject constructor(
     override suspend fun getCharacters(query: String): Flow<List<CharacterEntity>> = withContext(Dispatchers.IO) {
         return@withContext stargazerDao.getCharacters(query)
     }
+
+    override suspend fun getCharacter(name: String): Flow<CharacterEntity> = withContext(Dispatchers.IO) {
+        return@withContext stargazerDao.getCharacter(name)
+    }
 }

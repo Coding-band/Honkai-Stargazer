@@ -1,10 +1,10 @@
 package com.voc.honkai_stargazer.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.voc.honkai_stargazer.ui.screens.CharacterDetailsScreen
 import com.voc.honkai_stargazer.ui.screens.CharacterListScreen
 import com.voc.honkai_stargazer.ui.screens.HomeScreen
 import com.voc.honkai_stargazer.ui.screens.SettingsScreen
@@ -21,18 +21,28 @@ fun NavigationHost(
     ) {
         composable(Screens.BottomNavigationScreens.Home.route) {
             HomeScreen(
-                mainViewModel = viewModel
+                navController = navController
             )
         }
         composable(Screens.BottomNavigationScreens.Characters.route) {
             CharacterListScreen(
-                mainViewModel = viewModel
+                navController = navController
             )
         }
         composable(Screens.BottomNavigationScreens.Settings.route) {
             SettingsScreen(
-                mainViewModel = viewModel
+                navController = navController
             )
+        }
+
+        composable("characterDetails/{name}") { navBackStackEntry ->
+            val characterName = navBackStackEntry.arguments?.getString("name")
+            if (characterName != null) {
+                CharacterDetailsScreen(
+                    characterName = characterName,
+                    navController = navController
+                )
+            }
         }
     }
 }

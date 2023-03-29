@@ -15,4 +15,7 @@ interface StargazerDao {
 
     @Query("select * from character_db where name like '%' || :query  || '%' ")
     fun getCharacters(query: String): Flow<List<CharacterEntity>>
+
+    @Query("select * from character_db where name = :name")
+    fun getCharacter(name: String): Flow<CharacterEntity>
 }
