@@ -1,5 +1,6 @@
 package com.voc.honkai_stargazer.vm
 
+import androidx.compose.foundation.gestures.DraggableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -20,6 +21,15 @@ class CharacterDetailsViewModel @Inject constructor(
         private set
 
     var characterTabIndex: Int by mutableStateOf(0)
+        private set
+
+    var isSwipeLeft: Boolean = false
+
+    private val draggableState  = DraggableState { delta ->
+        isSwipeLeft = delta > 0
+    }
+
+    var dragState: DraggableState by mutableStateOf(draggableState)
 
     fun getCharacter(name: String) = viewModelScope.launch {
         repository.getCharacter(name).collectLatest {
@@ -27,7 +37,23 @@ class CharacterDetailsViewModel @Inject constructor(
         }
     }
 
-    fun setCharacterTabIndex(index : Int) = viewModelScope.launch {
+    fun setCharacterTabIndex(index: Int) = viewModelScope.launch {
         characterTabIndex = index
     }
+
+    fun updateTabIndexBasedOnSwipe() = viewModelScope.launch {
+        when (isSwipeLeft) {
+            true -> {
+                if (characterTabIndex > 0) {
+                    characterTabIndex--
+                }
+            }
+            false -> {
+                if (characterTabIndex < 2) {
+                    characterTabIndex++
+                }
+            }
+        }
+    }
+
 }

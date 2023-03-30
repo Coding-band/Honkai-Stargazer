@@ -1,6 +1,10 @@
 package com.voc.honkai_stargazer.ui.screens
 
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.draggable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material.icons.Icons
@@ -17,6 +21,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.voc.honkai_stargazer.models.CharacterEntity
 import com.voc.honkai_stargazer.ui.theme.Grey4F
+import com.voc.honkai_stargazer.ui.theme.Grey78
 import com.voc.honkai_stargazer.ui.theme.PurpleA4
 import com.voc.honkai_stargazer.ui.theme.WhiteFE
 import com.voc.honkai_stargazer.util.Constants.CHARACTER_TABS
@@ -118,11 +123,29 @@ fun CharacterDetailsScreen(
                 )
             }
         }
-        if (character != null) {
-            when (characterTabIndex) {
-                0 -> Profile(characterEntity = character)
+        Column (
+            modifier = Modifier
+                .fillMaxSize()
+                .draggable(
+                    state = viewModel.dragState,
+                    orientation = Orientation.Horizontal,
+                    onDragStarted = { },
+                    onDragStopped = {
+                        viewModel.updateTabIndexBasedOnSwipe()
+                    })
+                .verticalScroll(
+                    rememberScrollState(),
+                ),
+                ) {
+            if (character != null) {
+                when (characterTabIndex) {
+                    0 -> Profile(characterEntity = character)
+                    1 -> Combat(characterEntity = character)
+                    2 -> Eidolon(characterEntity = character)
+                }
             }
         }
+
     }
 }
 
@@ -140,7 +163,9 @@ fun Profile(characterEntity: CharacterEntity) {
         ) {
             Column (modifier = Modifier.padding(8.dp)) {
                 Row(
-                    modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 16.dp),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Column {
@@ -166,5 +191,130 @@ fun Profile(characterEntity: CharacterEntity) {
                 Text(characterEntity.description)
             }
         }
+    }
+}
+
+@Composable
+fun Combat(characterEntity: CharacterEntity) {
+    Column (modifier = Modifier.fillMaxWidth()) {
+        Text(
+            text = "Combat",
+            color = PurpleA4,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(8.dp)
+        )
+        SkillCard(
+            name = characterEntity.basicAttackName,
+            type = "Basic Attack",
+            description = characterEntity.basicAttackDescription
+        )
+        SkillCard(
+            name = characterEntity.skillName,
+            type = "Skill",
+            description = characterEntity.skillDescription
+        )
+        SkillCard(
+            name = characterEntity.ultimate,
+            type = "Ultimate",
+            description = characterEntity.ultimateDescription
+        )
+        Text(
+            text = "Talent",
+            color = PurpleA4,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(8.dp)
+        )
+        SkillCard(
+            name = characterEntity.talent,
+            description = characterEntity.talentDescription
+        )
+        Text(
+            text = "Technique",
+            color = PurpleA4,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(8.dp)
+        )
+        SkillCard(
+            name = characterEntity.technique,
+            description = characterEntity.techniqueDescription
+        )
+    }
+
+}
+
+@Composable
+fun SkillCard (name: String, type: String, description: String) {
+    Card (
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(8.dp),
+        backgroundColor = WhiteFE,
+        elevation = 2.dp,
+    ) {
+        Column (
+            modifier = Modifier.padding(4.dp)
+                ) {
+            Row {
+                Column {
+                    Text(
+                        text = name,
+                        color = Grey4F,
+                        fontWeight = FontWeight.Bold
+                    )
+                    Text(
+                        text = type,
+                        color = Grey78
+                    )
+                }
+            }
+            Text(
+                text = description,
+                color = Grey4F
+            )
+        }
+    }
+}
+
+@Composable
+fun SkillCard (name: String, description: String) {
+    Card (
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(8.dp),
+        backgroundColor = WhiteFE,
+        elevation = 2.dp,
+    ) {
+        Column (
+            modifier = Modifier.padding(4.dp)
+        ) {
+            Row {
+                Column {
+                    Text(
+                        text = name,
+                        color = Grey4F,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+            }
+            Text(
+                text = description,
+                color = Grey4F
+            )
+        }
+    }
+}
+
+@Composable
+fun Eidolon(characterEntity: CharacterEntity) {
+    Column (
+        modifier = Modifier.fillMaxWidth()
+            ) {
+        SkillCard(name = "1. ${characterEntity.eOneName}", description = characterEntity.eOneDescription)
+        SkillCard(name = "2. ${characterEntity.eTwoName}", description = characterEntity.eTwoDescription)
+        SkillCard(name = "3. ${characterEntity.eThreeName}", description = characterEntity.eThreeDescription)
+        SkillCard(name = "4. ${characterEntity.eFourName}", description = characterEntity.eFourDescription)
+        SkillCard(name = "5. ${characterEntity.eFiveName}", description = characterEntity.eFiveDescription)
+        SkillCard(name = "6. ${characterEntity.eSixName}", description = characterEntity.eSixDescription)
+
     }
 }

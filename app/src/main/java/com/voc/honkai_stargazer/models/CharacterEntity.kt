@@ -40,20 +40,22 @@ data class CharacterEntity(
     @SerializedName("Talent")
     val talent: String,
     @SerializedName("Telent description")
-    val technique: String,
+    val talentDescription: String,
     @SerializedName("Technique")
-    val techniqueDescription: String,
+    val technique: String,
     @SerializedName("Technique descript")
-    val basicAttackTraceName: String,
+    val techniqueDescription: String,
     @SerializedName("Base ATK Traces")
-    val basicAttackTraceDescription: String,
+    val basicAttackTraceName: String,
     @SerializedName("Base ATK Traces description")
-    val skillTraceName: String,
+    val basicAttackTraceDescription: String,
     @SerializedName("Skill Traces")
-    val skillTraceDescription: String,
+    val skillTraceName: String,
     @SerializedName("Skill traces descrip")
-    val ultimateTraceName: String,
+    val skillTraceDescription: String,
     @SerializedName("Ultimate Traces")
+    val ultimateTraceName: String,
+    @SerializedName("Ultimate Traces desc")
     val ultimateTraceDescription: String,
     @SerializedName("Other Traces")
     val otherTraces: String,
