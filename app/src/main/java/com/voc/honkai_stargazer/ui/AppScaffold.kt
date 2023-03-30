@@ -11,10 +11,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
 import com.voc.honkai_stargazer.navigation.NavigationHost
 import com.voc.honkai_stargazer.navigation.Screens
 import com.voc.honkai_stargazer.navigation.screensInBottomNavigation
@@ -28,6 +32,23 @@ fun AppScaffold(
     viewModel.setCurrentString(jsonString)
     val navController = rememberNavController()
     Scaffold(
+        topBar = {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                AndroidView(
+                    modifier = Modifier.fillMaxWidth(),
+                    factory = { context ->
+                        AdView(context).apply {
+                            setAdSize(AdSize.BANNER)
+                            adUnitId = "ca-app-pub-1889384269259267/4278227521"
+                            loadAd(AdRequest.Builder().build())
+                        }
+                    }
+                )
+            }
+        },
         bottomBar = {
             if (viewModel.bottomBarVisibility) {
                 BottomBar(navController = navController, screens = screensInBottomNavigation)
