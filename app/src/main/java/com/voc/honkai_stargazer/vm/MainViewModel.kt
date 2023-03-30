@@ -1,5 +1,8 @@
 package com.voc.honkai_stargazer.vm
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
@@ -16,10 +19,12 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(
     private val repository: RepositoryImpl
-): ViewModel() {
+) : ViewModel() {
 
     private val _jsonString = MutableStateFlow<String>("")
-    val jsonString get() = _jsonString.asStateFlow()
+
+    var bottomBarVisibility: Boolean by mutableStateOf(true)
+        private set
 
     fun setCurrentString(screen: String) = viewModelScope.launch {
         _jsonString.value = screen
@@ -30,6 +35,10 @@ class MainViewModel @Inject constructor(
         val gson = Gson()
         val listType: Type = object : TypeToken<List<CharacterEntity?>?>() {}.type
         return gson.fromJson(jsonString, listType)
+    }
+
+    fun setBottomBarVisibility(b: Boolean) = viewModelScope.launch {
+        bottomBarVisibility = b
     }
 
 }

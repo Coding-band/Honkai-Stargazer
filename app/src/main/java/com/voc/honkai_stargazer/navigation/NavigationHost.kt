@@ -26,7 +26,8 @@ fun NavigationHost(
         }
         composable(Screens.BottomNavigationScreens.Characters.route) {
             CharacterListScreen(
-                navController = navController
+                navController = navController,
+                mainViewModel = viewModel
             )
         }
         composable(Screens.BottomNavigationScreens.Settings.route) {
@@ -40,7 +41,8 @@ fun NavigationHost(
             if (characterName != null) {
                 CharacterDetailsScreen(
                     characterName = characterName,
-                    navController = navController
+                    navController = navController,
+                    mainViewModel = viewModel
                 )
             }
         }

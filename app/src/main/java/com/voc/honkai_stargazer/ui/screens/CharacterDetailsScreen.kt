@@ -1,8 +1,6 @@
 package com.voc.honkai_stargazer.ui.screens
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.R
 import androidx.compose.material.*
 import androidx.compose.material.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material.icons.Icons
@@ -23,14 +21,17 @@ import com.voc.honkai_stargazer.ui.theme.PurpleA4
 import com.voc.honkai_stargazer.ui.theme.WhiteFE
 import com.voc.honkai_stargazer.util.Constants.CHARACTER_TABS
 import com.voc.honkai_stargazer.vm.CharacterDetailsViewModel
+import com.voc.honkai_stargazer.vm.MainViewModel
 
 @Composable
 fun CharacterDetailsScreen(
     characterName: String,
     viewModel: CharacterDetailsViewModel = hiltViewModel(),
-    navController: NavController
+    navController: NavController,
+    mainViewModel: MainViewModel
 ) {
     viewModel.getCharacter(characterName)
+    mainViewModel.setBottomBarVisibility(false)
     val character = viewModel.character
     val characterTabIndex = viewModel.characterTabIndex
     Column(

@@ -20,13 +20,16 @@ import androidx.navigation.NavController
 import com.voc.honkai_stargazer.models.CharacterEntity
 import com.voc.honkai_stargazer.vm.CharacterListViewModel
 import com.voc.honkai_stargazer.ui.theme.WhiteFE
+import com.voc.honkai_stargazer.vm.MainViewModel
 
 @Composable
 fun CharacterListScreen(
     modifier: Modifier = Modifier,
     viewModel: CharacterListViewModel = hiltViewModel(),
     navController: NavController,
+    mainViewModel: MainViewModel,
 ) {
+    mainViewModel.setBottomBarVisibility(true)
     var text by remember { mutableStateOf("") }
     val focusManager = LocalFocusManager.current
 

@@ -29,7 +29,9 @@ fun AppScaffold(
     val navController = rememberNavController()
     Scaffold(
         bottomBar = {
-            BottomBar(navController = navController, screens = screensInBottomNavigation)
+            if (viewModel.bottomBarVisibility) {
+                BottomBar(navController = navController, screens = screensInBottomNavigation)
+            }
         }
     ) { innerPadding ->
         Box(modifier = Modifier.padding(innerPadding)) {
