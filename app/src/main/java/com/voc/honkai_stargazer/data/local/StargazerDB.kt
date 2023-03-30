@@ -9,7 +9,7 @@ import com.voc.honkai_stargazer.models.CharacterEntity
         CharacterEntity::class,
     ],
     exportSchema = false,
-    version = 1,
+    version = 2,
 )
 abstract class StargazerDB : RoomDatabase() {
     abstract fun getDao(): StargazerDao
