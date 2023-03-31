@@ -32,23 +32,21 @@ fun CharacterListScreen(
     mainViewModel: MainViewModel,
 ) {
     mainViewModel.setBottomBarVisibility(true)
-    var text by remember { mutableStateOf("") }
     val focusManager = LocalFocusManager.current
-
-    viewModel.getCharacters("")
+    val query = viewModel.query
 
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
         TextField(
-            value = text,
+            value = query,
             placeholder = {
                 Text(
                     text = stringResource(id = R.string.search_hint)
                 )
             },
             onValueChange = {
-                text = it
+                viewModel.onQueryInput(it)
             },
             modifier = Modifier
                 .fillMaxWidth()

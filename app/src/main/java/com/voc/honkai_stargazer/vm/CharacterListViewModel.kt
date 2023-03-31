@@ -26,10 +26,23 @@ class CharacterListViewModel @Inject constructor(
 
     var characterList: List<CharacterEntity> by mutableStateOf(listOf())
         private set
-    fun getCharacters(query: String) = viewModelScope.launch {
+
+    var query: String by mutableStateOf("")
+        private set
+
+    init {
+        getCharacters()
+    }
+
+    private fun getCharacters() = viewModelScope.launch {
         repository.getCharacters(query).collectLatest {
             characterList = it
         }
+    }
+
+    fun onQueryInput(newQuery: String) = viewModelScope.launch {
+        query = newQuery
+        getCharacters()
     }
 
 }
