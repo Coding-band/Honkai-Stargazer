@@ -13,10 +13,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.voc.honkai_stargazer.R
 import com.voc.honkai_stargazer.models.CharacterEntity
 import com.voc.honkai_stargazer.vm.CharacterListViewModel
 import com.voc.honkai_stargazer.ui.theme.WhiteFE
@@ -41,7 +43,9 @@ fun CharacterListScreen(
         TextField(
             value = text,
             placeholder = {
-                Text("Search...")
+                Text(
+                    text = stringResource(id = R.string.search_hint)
+                )
             },
             onValueChange = {
                 text = it
@@ -116,10 +120,10 @@ fun CharacterCard(
                         fontWeight = FontWeight.Bold
                     )
                     Text(
-                        text = "Roles: "
+                        text = stringResource(id = R.string.roles_label)
                     )
                     Text(
-                        text = "Path: "
+                        text = stringResource(id = R.string.path_label)
                     )
                 }
                 Column(
