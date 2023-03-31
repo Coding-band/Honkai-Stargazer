@@ -60,7 +60,7 @@ data class CharacterEntity(
     @SerializedName("Other Traces")
     val otherTraces: String,
     @SerializedName("Other Traces desc")
-    val otherTracesDescription: String,
+    val otherTracesDescription: String?,
     @SerializedName("Name of E1")
     val eOneName: String,
     @SerializedName("Name of E2")
