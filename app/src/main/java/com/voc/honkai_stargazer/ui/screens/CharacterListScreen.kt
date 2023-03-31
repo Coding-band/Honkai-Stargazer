@@ -101,6 +101,7 @@ fun CharacterCard(
             },
         backgroundColor = WhiteFE,
         elevation = 2.dp,
+        shape = RoundedCornerShape(8.dp)
     ) {
         Row(
             modifier = Modifier

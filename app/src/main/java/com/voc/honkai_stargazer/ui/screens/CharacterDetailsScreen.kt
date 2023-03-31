@@ -4,6 +4,7 @@ import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.draggable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.TabRowDefaults.tabIndicatorOffset
@@ -160,6 +161,7 @@ fun Profile(characterEntity: CharacterEntity) {
                 .padding(8.dp),
             backgroundColor = WhiteFE,
             elevation = 2.dp,
+            shape = RoundedCornerShape(8.dp)
         ) {
             Column (modifier = Modifier.padding(8.dp)) {
                 Row(
@@ -250,6 +252,7 @@ fun SkillCard (name: String, type: String, description: String) {
             .padding(8.dp),
         backgroundColor = WhiteFE,
         elevation = 2.dp,
+        shape = RoundedCornerShape(8.dp)
     ) {
         Column (
             modifier = Modifier.padding(4.dp)
@@ -283,6 +286,7 @@ fun SkillCard (name: String, description: String) {
             .padding(8.dp),
         backgroundColor = WhiteFE,
         elevation = 2.dp,
+        shape = RoundedCornerShape(8.dp)
     ) {
         Column (
             modifier = Modifier.padding(4.dp)
