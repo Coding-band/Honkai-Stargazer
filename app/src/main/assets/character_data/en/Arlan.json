@@ -1,0 +1,288 @@
+{
+  "name": "Arlan",
+  "damageType": "Lightning",
+  "baseType": "Destruction",
+  "star": 4,
+  "stats": [
+    {
+      "level": 0,
+      "maxLevel": 20,
+      "attackBase": 81.6,
+      "attackAdd": 4.08,
+      "hpBase": 163.2,
+      "hpAdd": 8.16,
+      "defenseBase": 45,
+      "defenseAdd": 2.25,
+      "crate": 0.05,
+      "cdmg": 0.5,
+      "aggro": 125,
+      "speedBase": 102,
+      "speedAdd": 0
+    },
+    {
+      "level": 1,
+      "maxLevel": 30,
+      "attackBase": 114.24,
+      "attackAdd": 4.08,
+      "hpBase": 228.48,
+      "hpAdd": 8.16,
+      "defenseBase": 63,
+      "defenseAdd": 2.25,
+      "crate": 0.05,
+      "cdmg": 0.5,
+      "aggro": 125,
+      "speedBase": 102,
+      "speedAdd": 0
+    },
+    {
+      "level": 2,
+      "maxLevel": 40,
+      "attackBase": 146.88,
+      "attackAdd": 4.08,
+      "hpBase": 293.76,
+      "hpAdd": 8.16,
+      "defenseBase": 81,
+      "defenseAdd": 2.25,
+      "crate": 0.05,
+      "cdmg": 0.5,
+      "aggro": 125,
+      "speedBase": 102,
+      "speedAdd": 0
+    },
+    {
+      "level": 3,
+      "maxLevel": 50,
+      "attackBase": 179.52,
+      "attackAdd": 4.08,
+      "hpBase": 359.04,
+      "hpAdd": 8.16,
+      "defenseBase": 99,
+      "defenseAdd": 2.25,
+      "crate": 0.05,
+      "cdmg": 0.5,
+      "aggro": 125,
+      "speedBase": 102,
+      "speedAdd": 0
+    },
+    {
+      "level": 4,
+      "maxLevel": 60,
+      "attackBase": 212.16,
+      "attackAdd": 4.08,
+      "hpBase": 424.32,
+      "hpAdd": 8.16,
+      "defenseBase": 117,
+      "defenseAdd": 2.25,
+      "crate": 0.05,
+      "cdmg": 0.5,
+      "aggro": 125,
+      "speedBase": 102,
+      "speedAdd": 0
+    },
+    {
+      "level": 5,
+      "maxLevel": 70,
+      "attackBase": 244.8,
+      "attackAdd": 4.08,
+      "hpBase": 489.6,
+      "hpAdd": 8.16,
+      "defenseBase": 135,
+      "defenseAdd": 2.25,
+      "crate": 0.05,
+      "cdmg": 0.5,
+      "aggro": 125,
+      "speedBase": 102,
+      "speedAdd": 0
+    },
+    {
+      "level": 6,
+      "maxLevel": 80,
+      "attackBase": 277.44,
+      "attackAdd": 4.08,
+      "hpBase": 554.88,
+      "hpAdd": 8.16,
+      "defenseBase": 153,
+      "defenseAdd": 2.25,
+      "crate": 0.05,
+      "cdmg": 0.5,
+      "aggro": 125,
+      "speedBase": 102,
+      "speedAdd": 0
+    }
+  ],
+  "skills": [
+    {
+      "name": "Lightning Rush",
+      "tag": "Single Target",
+      "type": "Basic ATK",
+      "desc": [
+        "Deals Lightning DMG equal to **50%** of Arlan's ATK to a single enemy.",
+        "Deals Lightning DMG equal to **60%** of Arlan's ATK to a single enemy.",
+        "Deals Lightning DMG equal to **70%** of Arlan's ATK to a single enemy.",
+        "Deals Lightning DMG equal to **80%** of Arlan's ATK to a single enemy.",
+        "Deals Lightning DMG equal to **90%** of Arlan's ATK to a single enemy.",
+        "Deals Lightning DMG equal to **100%** of Arlan's ATK to a single enemy."
+      ]
+    },
+    {
+      "name": "Shackle Breaker",
+      "tag": "Single Target",
+      "type": "Skill",
+      "desc": [
+        "Consumes Arlan's HP equal to 15% of his Max HP to deal Lightning DMG equal to **120%** of Arlan's ATK to a single enemy. If Arlan does not have sufficient HP, his HP will be reduced to 1 after using his Skill.",
+        "Consumes Arlan's HP equal to 15% of his Max HP to deal Lightning DMG equal to **132%** of Arlan's ATK to a single enemy. If Arlan does not have sufficient HP, his HP will be reduced to 1 after using his Skill.",
+        "Consumes Arlan's HP equal to 15% of his Max HP to deal Lightning DMG equal to **144%** of Arlan's ATK to a single enemy. If Arlan does not have sufficient HP, his HP will be reduced to 1 after using his Skill.",
+        "Consumes Arlan's HP equal to 15% of his Max HP to deal Lightning DMG equal to **156%** of Arlan's ATK to a single enemy. If Arlan does not have sufficient HP, his HP will be reduced to 1 after using his Skill.",
+        "Consumes Arlan's HP equal to 15% of his Max HP to deal Lightning DMG equal to **168%** of Arlan's ATK to a single enemy. If Arlan does not have sufficient HP, his HP will be reduced to 1 after using his Skill.",
+        "Consumes Arlan's HP equal to 15% of his Max HP to deal Lightning DMG equal to **180%** of Arlan's ATK to a single enemy. If Arlan does not have sufficient HP, his HP will be reduced to 1 after using his Skill.",
+        "Consumes Arlan's HP equal to 15% of his Max HP to deal Lightning DMG equal to **195%** of Arlan's ATK to a single enemy. If Arlan does not have sufficient HP, his HP will be reduced to 1 after using his Skill.",
+        "Consumes Arlan's HP equal to 15% of his Max HP to deal Lightning DMG equal to **210%** of Arlan's ATK to a single enemy. If Arlan does not have sufficient HP, his HP will be reduced to 1 after using his Skill."
+      ]
+    },
+    {
+      "name": "Frenzied Punishment",
+      "tag": "Blast",
+      "type": "Ultimate",
+      "desc": [
+        "Deals Lightning DMG equal to **192%** of Arlan's ATK to a single enemy and Lightning DMG equal to **96%** of Arlan's ATK to enemies adjacent to it.",
+        "Deals Lightning DMG equal to **205%** of Arlan's ATK to a single enemy and Lightning DMG equal to **102%** of Arlan's ATK to enemies adjacent to it.",
+        "Deals Lightning DMG equal to **218%** of Arlan's ATK to a single enemy and Lightning DMG equal to **109%** of Arlan's ATK to enemies adjacent to it.",
+        "Deals Lightning DMG equal to **230%** of Arlan's ATK to a single enemy and Lightning DMG equal to **115%** of Arlan's ATK to enemies adjacent to it.",
+        "Deals Lightning DMG equal to **243%** of Arlan's ATK to a single enemy and Lightning DMG equal to **122%** of Arlan's ATK to enemies adjacent to it.",
+        "Deals Lightning DMG equal to **256%** of Arlan's ATK to a single enemy and Lightning DMG equal to **128%** of Arlan's ATK to enemies adjacent to it.",
+        "Deals Lightning DMG equal to **272%** of Arlan's ATK to a single enemy and Lightning DMG equal to **136%** of Arlan's ATK to enemies adjacent to it.",
+        "Deals Lightning DMG equal to **288%** of Arlan's ATK to a single enemy and Lightning DMG equal to **144%** of Arlan's ATK to enemies adjacent to it."
+      ]
+    },
+    {
+      "name": "Pain and Anger",
+      "tag": "Enhance",
+      "type": "Talent",
+      "desc": [
+        "Increases Arlan's DMG for every percent of HP below his Max HP, up to a max of **36%** more DMG.",
+        "Increases Arlan's DMG for every percent of HP below his Max HP, up to a max of **40%** more DMG.",
+        "Increases Arlan's DMG for every percent of HP below his Max HP, up to a max of **43%** more DMG.",
+        "Increases Arlan's DMG for every percent of HP below his Max HP, up to a max of **47%** more DMG.",
+        "Increases Arlan's DMG for every percent of HP below his Max HP, up to a max of **50%** more DMG.",
+        "Increases Arlan's DMG for every percent of HP below his Max HP, up to a max of **54%** more DMG.",
+        "Increases Arlan's DMG for every percent of HP below his Max HP, up to a max of **59%** more DMG.",
+        "Increases Arlan's DMG for every percent of HP below his Max HP, up to a max of **63%** more DMG."
+      ]
+    },
+    {
+      "name": "Swift Harvest",
+      "type": "Technique",
+      "desc": [
+        "Immediately attacks the enemy. After entering battle, deals Lightning DMG equal to 80% of Arlan's ATK to all enemies."
+      ]
+    }
+  ],
+  "eidolons": [
+    {
+      "name": "To the Bitter End",
+      "desc": "When HP is lower than or equal to 50% of Max HP, increases Skill's DMG by 10%."
+    },
+    {
+      "name": "Breaking Free",
+      "desc": "Using Skill or Ultimate removes 1 debuff from oneself."
+    },
+    {
+      "name": "Power Through",
+      "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10."
+    },
+    {
+      "name": "Turn the Tables",
+      "desc": "When struck by a killing blow after entering battle, instead of becoming knocked down, Arlan immediately restores his HP to 25% of his Max HP. This effect is automatically removed after it is triggered once or after 2 turn(s) have elapsed."
+    },
+    {
+      "name": "Hammer and Tongs",
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15."
+    },
+    {
+      "name": "Self-Sacrifice",
+      "desc": "When HP drops to 50% or below, Ultimate deals 20% more DMG. The DMG multiplier of DMG taken by the target enemy now applies to adjacent enemies as well."
+    }
+  ],
+  "skillTree": [
+    {
+      "name": "Revival",
+      "desc": "If the current HP percentage is 30% or lower when defeating an enemy, immediately restores HP equal to 20% of Max HP.",
+      "minAsc": 2,
+      "children": [
+        {
+          "name": "Effect RES Boost",
+          "desc": "Effect RES increases by 4.0%",
+          "minAsc": 2,
+          "children": [
+            {
+              "name": "ATK Boost",
+              "desc": "ATK increases by 4.0%",
+              "minAsc": 3,
+              "children": [
+                {
+                  "name": "HP Boost",
+                  "desc": "Max HP increases by 4.0%",
+                  "minAsc": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Endurance",
+      "desc": "The chance to resist DoT Debuffs increases by 50%.",
+      "minAsc": 4,
+      "children": [
+        {
+          "name": "ATK Boost",
+          "desc": "ATK increases by 6.0%",
+          "minAsc": 4,
+          "children": [
+            {
+              "name": "Effect RES Boost",
+              "desc": "Effect RES increases by 6.0%",
+              "minAsc": 5,
+              "children": [
+                {
+                  "name": "ATK Boost",
+                  "desc": "ATK increases by 6.0%",
+                  "minAsc": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Repel",
+      "desc": "Upon entering battle, if Arlan's HP is less than or equal to 50%, he can nullify all DMG received except for DoT until after he is attacked.",
+      "minAsc": 6,
+      "children": [
+        {
+          "name": "HP Boost",
+          "desc": "Max HP increases by 6.0%",
+          "minAsc": 6,
+          "children": [
+            {
+              "name": "Effect RES Boost",
+              "desc": "Effect RES increases by 8.0%",
+              "minLevel": 75
+            },
+            {
+              "name": "ATK Boost",
+              "desc": "ATK increases by 8.0%",
+              "minLevel": 80
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ATK Boost",
+      "desc": "ATK increases by 4.0%"
+    }
+  ]
+}

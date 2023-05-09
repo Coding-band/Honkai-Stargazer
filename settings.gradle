@@ -1,15 +1,10 @@
 pluginManagement {
     repositories {
-        gradlePluginPortal()
         google()
         mavenCentral()
-    }
-    resolutionStrategy {
-        eachPlugin {
-            if(requested.id.id == "dagger.hilt.android.plugin"){
-                useModule("com.google.dagger:hilt-android-gradle-plugin:2.42")
-            }
-        }
+        gradlePluginPortal()
+
+        maven { url 'https://jitpack.io' }
     }
 }
 dependencyResolutionManagement {
@@ -17,7 +12,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
+        maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "Honkai-Stargazer"
+rootProject.name = "Honkai Stargazer"
 include ':app'
+
+
