@@ -64,18 +64,31 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
         Transformation transformation = new RoundedCornersTransformation(radius, margin);
 
         holder.item_element.setVisibility(View.GONE);
+        holder.item_relic_ll.setVisibility(View.GONE);
+        holder.item_sub_ll.setVisibility(View.GONE);
+        holder.item_normal_ll.setVisibility(View.VISIBLE);
+
+        int ico_rss = R.drawable.ico_lost_img;
+        if (TYPE.equals(ItemRSS.TYPE_CHARACTER)){
+            ico_rss = item_rss.getCharByName(hsrItem.getName())[0];
+            holder.item_element.setVisibility(View.VISIBLE);
+            holder.item_element.setImageResource(item_rss.getIconByElement(hsrItem.getElement()));
+        }else if (TYPE.equals(ItemRSS.TYPE_LIGHTCONE)){
+            ico_rss = item_rss.getLightconeByName(hsrItem.getName())[0];
+        }else if (TYPE.equals(ItemRSS.TYPE_RELIC)){
+            holder.item_relic_ll.setVisibility(View.VISIBLE);
+            holder.item_normal_ll.setVisibility(View.GONE);
+            holder.item_rare.setVisibility(View.GONE);
+            holder.item_sub_ll.setVisibility(View.VISIBLE);
+            ico_rss = item_rss.getLightconeByName(hsrItem.getName())[0];
+        }
+
+        //https://honkai-star-rail.fandom.com/wiki/Relic/Sets
 
         Picasso.get()
-                .load (
-                        TYPE.equals(ItemRSS.TYPE_CHARACTER) ? item_rss.getCharByName(hsrItem.getName())[0] :
-                                item_rss.getLightconeByName(hsrItem.getName())
-                )
+                .load (ico_rss)
                 .transform(transformation)
                 .into (holder.item_ico);
-
-        if (TYPE.equals(ItemRSS.TYPE_CHARACTER)){
-            holder.item_element.setImageResource(item_rss.getIconByElement(hsrItem.getElement()));
-        }
 
         holder.item_path_ico.setImageResource(item_rss.getIconByPath(hsrItem.getPath()));
         holder.item_path_tv.setText(hsrItem.getPath());
@@ -95,7 +108,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView item_ico, item_element, item_path_ico;
         public TextView item_name, item_hp_tv, item_def_tv, item_atk_tv, item_speed_tv, item_path_tv;
-        public LinearLayout item_hp_ll, item_def_ll, item_atk_ll, item_speed_ll;
+        public LinearLayout item_hp_ll, item_def_ll, item_atk_ll, item_speed_ll, item_sub_ll, item_relic_ll, item_normal_ll;
         public ScaleRatingBar item_rare;
 
         public ViewHolder(View itemView, final AdapterView.OnItemClickListener listener) {
@@ -116,6 +129,9 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
             item_def_ll = itemView.findViewById(R.id.item_def_ll);
             item_atk_ll = itemView.findViewById(R.id.item_atk_ll);
             item_speed_ll = itemView.findViewById(R.id.item_speed_ll);
+            item_sub_ll = itemView.findViewById(R.id.item_sub_ll);
+            item_relic_ll = itemView.findViewById(R.id.item_relic_ll);
+            item_normal_ll = itemView.findViewById(R.id.item_normal_ll);
         }
     }
 

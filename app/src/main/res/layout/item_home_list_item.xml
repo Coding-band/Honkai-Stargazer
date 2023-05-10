@@ -18,18 +18,18 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:orientation="horizontal">
 
             <FrameLayout
                 android:layout_width="96dp"
-                android:layout_height="96dp">
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/item_ico"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
                     app:srcCompat="@drawable/kafka_icon" />
 
                 <ImageView
@@ -38,12 +38,47 @@
                     android:layout_height="24dp"
                     app:srcCompat="@drawable/element_lightning" />
 
+                <LinearLayout
+                    android:id="@+id/item_sub_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/item_sub_item1"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="bottom|center"
+                        android:layout_marginTop="100dp"
+                        app:srcCompat="@drawable/ico_lost_img" />
+
+                    <ImageView
+                        android:id="@+id/item_sub_item2"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="bottom|center"
+                        android:layout_marginTop="100dp"
+                        app:srcCompat="@drawable/ico_lost_img" />
+
+                    <ImageView
+                        android:id="@+id/item_sub_item3"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="bottom|center"
+                        android:layout_marginTop="100dp"
+                        app:srcCompat="@drawable/ico_lost_img" />
+
+                </LinearLayout>
+
             </FrameLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
+                android:minHeight="96dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -89,155 +124,203 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TableLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center">
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <LinearLayout
-                                android:id="@+id/item_hp_ll"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginRight="2dp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    android:layout_width="24dp"
-                                    android:layout_height="wrap_content"
-                                    android:adjustViewBounds="true"
-                                    app:srcCompat="@drawable/ic_hp"
-                                    app:tint="@color/ic_daynight_tint" />
-
-                                <TextView
-                                    android:id="@+id/item_hp_tv"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center|left"
-                                    android:text="1241" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/item_def_ll"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginRight="2dp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    android:layout_width="24dp"
-                                    android:layout_height="wrap_content"
-                                    android:adjustViewBounds="true"
-                                    app:srcCompat="@drawable/ic_def"
-                                    app:tint="@color/ic_daynight_tint" />
-
-                                <TextView
-                                    android:id="@+id/item_def_tv"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center|left"
-                                    android:text="606" />
-                            </LinearLayout>
-
-                        </TableRow>
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <LinearLayout
-                                android:id="@+id/item_atk_ll"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginRight="2dp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    android:layout_width="24dp"
-                                    android:layout_height="wrap_content"
-                                    android:adjustViewBounds="true"
-                                    app:srcCompat="@drawable/ic_atk"
-                                    app:tint="@color/ic_daynight_tint" />
-
-                                <TextView
-                                    android:id="@+id/item_atk_tv"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center|left"
-                                    android:text="601" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/item_speed_ll"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginRight="2dp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    android:layout_width="24dp"
-                                    android:layout_height="wrap_content"
-                                    android:adjustViewBounds="true"
-                                    app:srcCompat="@drawable/ic_speed"
-                                    app:tint="@color/ic_daynight_tint" />
-
-                                <TextView
-                                    android:id="@+id/item_speed_tv"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center|left"
-                                    android:text="95" />
-                            </LinearLayout>
-                        </TableRow>
-
-                    </TableLayout>
-
-                    <View
-                        android:id="@+id/view"
-                        android:layout_width="2dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:layout_marginBottom="6dp"
-                        android:background="@color/split_line_bg" />
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/item_normal_ll"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1.3"
-                        android:gravity="center"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
 
-                        <ImageView
-                            android:id="@+id/item_path_ico"
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:layout_gravity="center"
-                            app:tint="@color/ic_daynight_tint"
-                            app:srcCompat="@drawable/path_the_nihility" />
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:id="@+id/item_hp_ll"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="wrap_content"
+                                        android:adjustViewBounds="true"
+                                        app:srcCompat="@drawable/ic_hp"
+                                        app:tint="@color/ic_daynight_tint" />
+
+                                    <TextView
+                                        android:id="@+id/item_hp_tv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center|left"
+                                        android:text="1241" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/item_def_ll"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="wrap_content"
+                                        android:adjustViewBounds="true"
+                                        app:srcCompat="@drawable/ic_def"
+                                        app:tint="@color/ic_daynight_tint" />
+
+                                    <TextView
+                                        android:id="@+id/item_def_tv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center|left"
+                                        android:text="606" />
+                                </LinearLayout>
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:id="@+id/item_atk_ll"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="wrap_content"
+                                        android:adjustViewBounds="true"
+                                        app:srcCompat="@drawable/ic_atk"
+                                        app:tint="@color/ic_daynight_tint" />
+
+                                    <TextView
+                                        android:id="@+id/item_atk_tv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center|left"
+                                        android:text="601" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/item_speed_ll"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="wrap_content"
+                                        android:adjustViewBounds="true"
+                                        app:srcCompat="@drawable/ic_speed"
+                                        app:tint="@color/ic_daynight_tint" />
+
+                                    <TextView
+                                        android:id="@+id/item_speed_tv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center|left"
+                                        android:text="95" />
+                                </LinearLayout>
+                            </TableRow>
+
+                        </TableLayout>
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/split_line_bg" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/item_path_ico"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/path_the_nihility"
+                                app:tint="@color/ic_daynight_tint" />
+
+                            <TextView
+                                android:id="@+id/item_path_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:text="Nihility" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/item_relic_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
 
                         <TextView
-                            android:id="@+id/item_path_tv"
+                            android:id="@+id/item_2pc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="4dp"
-                            android:text="Nihility" />
+                            android:text="2pc :"
+                            android:textColor="@color/home_list_item_title"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/item_2pc_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reduces DMG taken by 8%"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/item_4pc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4pc :"
+                            android:textColor="@color/home_list_item_title"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/item_4pc_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="At the beginning of the turn, if the wearer's HP is equal to or less than 50%, restores HP equal to 8% of their Max HP and regenerates 5 Energy."
+                            android:textSize="12sp" />
                     </LinearLayout>
                 </LinearLayout>
+
             </LinearLayout>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

@@ -8,11 +8,13 @@
         android:id="@+id/charactersListView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:paddingTop="72dp"
+        android:layout_marginTop="4dp"
+        android:requiresFadingEdge="vertical"
+        android:fadingEdgeLength="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <LinearLayout
         android:id="@+id/linearLayout"

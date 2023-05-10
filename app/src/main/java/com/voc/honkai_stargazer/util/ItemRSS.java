@@ -63,82 +63,84 @@ public class ItemRSS {
         }
     }
 
-    public int getLightconeByName(String lightconeNameInFile){
+    public int[] getLightconeByName(String lightconeNameInFile){
         switch (lightconeNameInFile){
-            case "Amber" : return R.drawable.amber;
-            case "Adversarial" : return R.drawable.adversarial;
-            case "Arrows" : return R.drawable.arrows;
-            case "A Secret Vow" : return R.drawable.a_secret_vow;
-            case "Before Dawn" : return R.drawable.before_dawn;
-            case "But the Battle Isn't Over" : return R.drawable.but_the_battle_isnt_over;
-            case "Carve the Moon, Weave the Clouds" : return R.drawable.carve_the_moon_weave_the_clouds;
-            case "Chorus" : return R.drawable.chorus;
-            case "Collapsing Sky" : return R.drawable.collapsing_sky;
-            case "Cornucopia" : return R.drawable.cornucopia;
-            case "Cruising in the Stellar Sea" : return R.drawable.cruising_in_the_stellar_sea;
-            case "Dance! Dance! Dance!" : return R.drawable.dance_dance_dance;
-            case "Darting Arrow" : return R.drawable.darting_arrow;
-            case "Data Bank" : return R.drawable.data_bank;
-            case "Day One of My New Life" : return R.drawable.day_one_of_my_new_life;
-            case "Defense" : return R.drawable.defense;
-            case "Eyes of the Prey" : return R.drawable.eyes_of_the_prey;
-            case "Echoes of the Coffin" : return R.drawable.echoes_of_the_coffin;
-            case "Fermata" : return R.drawable.fermata;
-            case "Fine Fruit" : return R.drawable.fine_fruit;
-            case "Geniuses' Repose" : return R.drawable.geniuses_repose;
-            case "Good Night and Sleep Well" : return R.drawable.good_night_and_sleep_well;
-            case "Hidden Shadow" : return R.drawable.hidden_shadow;
-            case "In the Name of the World" : return R.drawable.in_the_name_of_the_world;
-            case "In the Night" : return R.drawable.in_the_night;
-            case "Incessant Rain" : return R.drawable.incessant_rain;
-            case "Landau's Choice" : return R.drawable.landaus_choice;
-            case "Loop" : return R.drawable.loop;
-            case "Make the World Clamor" : return R.drawable.make_the_world_clamor;
-            case "Mediation" : return R.drawable.mediation;
-            case "Memories of the Past" : return R.drawable.memories_of_the_past;
-            case "Meshing Cogs" : return R.drawable.meshing_cogs;
-            case "Moment of Victory" : return R.drawable.moment_of_victory;
-            case "Multiplication" : return R.drawable.multiplication;
-            case "Mutual Demise" : return R.drawable.mutual_demise;
-            case "Night on the Milky Way" : return R.drawable.night_on_the_milky_way;
-            case "Nowhere to Run" : return R.drawable.nowhere_to_run;
-            case "Only Silence Remains" : return R.drawable.only_silence_remains;
-            case "On the Fall of an Aeon" : return R.drawable.on_the_fall_of_an_aeon;
-            case "Passkey" : return R.drawable.passkey;
-            case "Patience Is All You Need" : return R.drawable.patience_is_all_you_need;
-            case "Past and Future" : return R.drawable.past_and_future;
-            case "Perfect Timing" : return R.drawable.perfect_timing;
-            case "Pioneering" : return R.drawable.pioneering;
-            case "Planetary Rendezvous" : return R.drawable.planetary_rendezvous;
-            case "Post-Op Conversation" : return R.drawable.post_op_conversation;
-            case "Quid Pro Quo" : return R.drawable.quid_pro_quo;
-            case "Resolution Shines As Pearls of Sweat" : return R.drawable.resolution_shines_as_pearls_of_sweat;
-            case "Return to Darkness" : return R.drawable.return_to_darkness;
-            case "River Flows in Spring" : return R.drawable.river_flows_in_spring;
-            case "Sagacity" : return R.drawable.sagacity;
-            case "Shared Feeling" : return R.drawable.shared_feeling;
-            case "Shattered Home" : return R.drawable.shattered_home;
-            case "Sleep Like the Dead" : return R.drawable.sleep_like_the_dead;
-            case "Something Irreplaceable" : return R.drawable.something_irreplaceable;
-            case "Subscribe for More!" : return R.drawable.subscribe_for_more;
-            case "Swordplay" : return R.drawable.swordplay;
-            case "Texture of Memories" : return R.drawable.texture_of_memories;
-            case "The Birth of the Self" : return R.drawable.the_birth_of_the_self;
-            case "The Moles Welcome You" : return R.drawable.the_moles_welcome_you;
-            case "The Seriousness of Breakfast" : return R.drawable.the_seriousness_of_breakfast;
-            case "The Unreachable Side" : return R.drawable.the_unreachable_side;
-            case "This Is Me!" : return R.drawable.this_is_me;
-            case "Time Waits for No One" : return R.drawable.time_waits_for_no_one;
-            case "Today Is Another Peaceful Day" : return R.drawable.today_is_another_peaceful_day;
-            case "Trend of the Universal Market" : return R.drawable.trend_of_the_universal_market;
-            case "Under the Blue Sky" : return R.drawable.under_the_blue_sky;
-            case "Void" : return R.drawable.void_;
-            case "Warmth Shortens Cold Nights" : return R.drawable.warmth_shortens_cold_nights;
-            case "We Are Wildfire" : return R.drawable.we_are_wildfire;
-            case "We Will Meet Again" : return R.drawable.we_will_meet_again;
-            case "Woof! Walk Time!" : return R.drawable.woof_walk_time;
+            case "Amber" : return new int[] {R.drawable.amber, R.drawable.amber_artwork};
+            case "Arrows" : return new int[] {R.drawable.arrows, R.drawable.arrows_artwork};
+            case "A Secret Vow" : return new int[] {R.drawable.a_secret_vow, R.drawable.a_secret_vow_artwork};
+            case "Before Dawn" : return new int[] {R.drawable.before_dawn, R.drawable.before_dawn_artwork};
+            case "But the Battle Isnt Over" : return new int[] {R.drawable.but_the_battle_isnt_over, R.drawable.but_the_battle_isnt_over_artwork};
+            case "Carve the Moon Weave the Clouds" : return new int[] {R.drawable.carve_the_moon_weave_the_clouds, R.drawable.carve_the_moon_weave_the_clouds_artwork};
+            case "Chorus" : return new int[] {R.drawable.chorus, R.drawable.chorus_artwork};
+            case "Collapsing Sky" : return new int[] {R.drawable.collapsing_sky, R.drawable.collapsing_sky_artwork};
+            case "Cornucopia" : return new int[] {R.drawable.cornucopia, R.drawable.cornucopia_artwork};
+            case "Cruising in the Stellar Sea" : return new int[] {R.drawable.cruising_in_the_stellar_sea, R.drawable.cruising_in_the_stellar_sea_artwork};
+            case "Dance! Dance! Dance!" : return new int[] {R.drawable.dance_dance_dance, R.drawable.dance_dance_dance_artwork};
+            case "Darting Arrow" : return new int[] {R.drawable.darting_arrow, R.drawable.darting_arrow_artwork};
+            case "Data Bank" : return new int[] {R.drawable.data_bank, R.drawable.data_bank_artwork};
+            case "Day One of My New Life" : return new int[] {R.drawable.day_one_of_my_new_life, R.drawable.day_one_of_my_new_life_artwork};
+            case "Defense" : return new int[] {R.drawable.defense, R.drawable.defense_artwork};
+            case "Eyes of the Prey" : return new int[] {R.drawable.eyes_of_the_prey, R.drawable.eyes_of_the_prey_artwork};
+            case "Fermata" : return new int[] {R.drawable.fermata, R.drawable.fermata_artwork};
+            case "Fine Fruit" : return new int[] {R.drawable.fine_fruit, R.drawable.fine_fruit_artwork};
+            case "Geniuses Repose" : return new int[] {R.drawable.geniuses_repose, R.drawable.geniuses_repose_artwork};
+            case "Good Night and Sleep Well" : return new int[] {R.drawable.good_night_and_sleep_well, R.drawable.good_night_and_sleep_well_artwork};
+            case "Hidden Shadow" : return new int[] {R.drawable.hidden_shadow, R.drawable.hidden_shadow_artwork};
+            case "In the Name of the World" : return new int[] {R.drawable.in_the_name_of_the_world, R.drawable.in_the_name_of_the_world_artwork};
+            case "In the Night" : return new int[] {R.drawable.in_the_night, R.drawable.in_the_night_artwork};
+            case "Landaus Choice" : return new int[] {R.drawable.landaus_choice, R.drawable.landaus_choice_artwork};
+            case "Loop" : return new int[] {R.drawable.loop, R.drawable.loop_artwork};
+            case "Make the World Clamor" : return new int[] {R.drawable.make_the_world_clamor, R.drawable.make_the_world_clamor_artwork};
+            case "Mediation" : return new int[] {R.drawable.mediation, R.drawable.mediation_artwork};
+            case "Memories of the Past" : return new int[] {R.drawable.memories_of_the_past, R.drawable.memories_of_the_past_artwork};
+            case "Meshing Cogs" : return new int[] {R.drawable.meshing_cogs, R.drawable.meshing_cogs_artwork};
+            case "Moment of Victory" : return new int[] {R.drawable.moment_of_victory, R.drawable.moment_of_victory_artwork};
+            case "Multiplication" : return new int[] {R.drawable.multiplication, R.drawable.multiplication_artwork};
+            case "Mutual Demise" : return new int[] {R.drawable.mutual_demise, R.drawable.mutual_demise_artwork};
+            case "Night on the Milky Way" : return new int[] {R.drawable.night_on_the_milky_way, R.drawable.night_on_the_milky_way_artwork};
+            case "Nowhere to Run" : return new int[] {R.drawable.nowhere_to_run, R.drawable.nowhere_to_run_artwork};
+            case "Only Silence Remains" : return new int[] {R.drawable.only_silence_remains, R.drawable.only_silence_remains_artwork};
+            case "On the Fall of an Aeon" : return new int[] {R.drawable.on_the_fall_of_an_aeon, R.drawable.on_the_fall_of_an_aeon_artwork};
+            case "Passkey" : return new int[] {R.drawable.passkey, R.drawable.passkey_artwork};
+            case "Past and Future" : return new int[] {R.drawable.past_and_future, R.drawable.past_and_future_artwork};
+            case "Perfect Timing" : return new int[] {R.drawable.perfect_timing, R.drawable.perfect_timing_artwork};
+            case "Pioneering" : return new int[] {R.drawable.pioneering, R.drawable.pioneering_artwork};
+            case "Planetary Rendezvous" : return new int[] {R.drawable.planetary_rendezvous, R.drawable.planetary_rendezvous_artwork};
+            case "Post-Op Conversation" : return new int[] {R.drawable.post_op_conversation, R.drawable.post_op_conversation_artwork};
+            case "Quid Pro Quo" : return new int[] {R.drawable.quid_pro_quo, R.drawable.quid_pro_quo_artwork};
+            case "Resolution Shines As Pearls of Sweat" : return new int[] {R.drawable.resolution_shines_as_pearls_of_sweat, R.drawable.resolution_shines_as_pearls_of_sweat_artwork};
+            case "Return to Darkness" : return new int[] {R.drawable.return_to_darkness, R.drawable.return_to_darkness_artwork};
+            case "River Flows in Spring" : return new int[] {R.drawable.river_flows_in_spring, R.drawable.river_flows_in_spring_artwork};
+            case "Sagacity" : return new int[] {R.drawable.sagacity, R.drawable.sagacity_artwork};
+            case "Shared Feeling" : return new int[] {R.drawable.shared_feeling, R.drawable.shared_feeling_artwork};
+            case "Shattered Home" : return new int[] {R.drawable.shattered_home, R.drawable.shattered_home_artwork};
+            case "Sleep Like the Dead" : return new int[] {R.drawable.sleep_like_the_dead, R.drawable.sleep_like_the_dead_artwork};
+            case "Something Irreplaceable" : return new int[] {R.drawable.something_irreplaceable, R.drawable.something_irreplaceable_artwork};
+            case "Subscribe for More!" : return new int[] {R.drawable.subscribe_for_more, R.drawable.subscribe_for_more_artwork};
+            case "Swordplay" : return new int[] {R.drawable.swordplay, R.drawable.swordplay_artwork};
+            case "Texture of Memories" : return new int[] {R.drawable.texture_of_memories, R.drawable.texture_of_memories_artwork};
+            case "The Birth of the Self" : return new int[] {R.drawable.the_birth_of_the_self, R.drawable.the_birth_of_the_self_artwork};
+            case "The Moles Welcome You" : return new int[] {R.drawable.the_moles_welcome_you, R.drawable.the_moles_welcome_you_artwork};
+            case "The Seriousness of Breakfast" : return new int[] {R.drawable.the_seriousness_of_breakfast, R.drawable.the_seriousness_of_breakfast_artwork};
+            case "This Is Me!" : return new int[] {R.drawable.this_is_me, R.drawable.this_is_me_artwork};
+            case "Time Waits for No One" : return new int[] {R.drawable.time_waits_for_no_one, R.drawable.time_waits_for_no_one_artwork};
+            case "Today Is Another Peaceful Day" : return new int[] {R.drawable.today_is_another_peaceful_day, R.drawable.today_is_another_peaceful_day_artwork};
+            case "Trend of the Universal Market" : return new int[] {R.drawable.trend_of_the_universal_market, R.drawable.trend_of_the_universal_market_artwork};
+            case "Under the Blue Sky" : return new int[] {R.drawable.under_the_blue_sky, R.drawable.under_the_blue_sky_artwork};
+            case "Void" : return new int[] {R.drawable.void_, R.drawable.void_artwork};
+            case "Warmth Shortens Cold Nights" : return new int[] {R.drawable.warmth_shortens_cold_nights, R.drawable.warmth_shortens_cold_nights_artwork};
+            case "We Are Wildfire" : return new int[] {R.drawable.we_are_wildfire, R.drawable.we_are_wildfire_artwork};
+            case "We Will Meet Again" : return new int[] {R.drawable.we_will_meet_again, R.drawable.we_will_meet_again_artwork};
+            case "Woof! Walk Time!" : return new int[] {R.drawable.woof_walk_time, R.drawable.woof_walk_time_artwork};
 
-            default: return R.drawable.ico_lost_img;
+
+            default: return new int[]{R.drawable.ico_lost_img,R.drawable.ico_lost_img};
+        }
+    }
+
+    public int getRelicByName(String relicNameInFile){
+        switch (relicNameInFile){
+            default:return R.drawable.ico_lost_img;
         }
     }
 
