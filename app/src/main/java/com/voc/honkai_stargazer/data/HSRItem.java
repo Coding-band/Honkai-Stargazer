@@ -5,7 +5,7 @@ public class HSRItem {
     public String type; //類別
     public String element; //元素
     public String path; //元素
-    public int rare; //稀有度
+    public int rare = 0; //稀有度
     public String status; //即將推出
 
     public double HP;

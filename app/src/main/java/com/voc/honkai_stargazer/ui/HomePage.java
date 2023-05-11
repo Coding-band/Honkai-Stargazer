@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import android.app.Activity;
 import android.content.Context;
@@ -71,6 +72,7 @@ public class HomePage extends AppCompatActivity {
         root_init();
         character_init();
         lightcone_init();
+        relic_init();
     }
 
     public void root_init(){
@@ -78,31 +80,55 @@ public class HomePage extends AppCompatActivity {
         home_characters = mInflater.inflate(R.layout.fragment_home_characters, null,false);
         home_lightcones = mInflater.inflate(R.layout.fragment_home_lightcones, null,false);
         home_relics = mInflater.inflate(R.layout.fragment_home_relics, null,false);
+        home_settings = mInflater.inflate(R.layout.fragment_home_settings, null,false);
 
         viewPager_List = new ArrayList<View>();
         viewPager_List.add(home_characters);
         viewPager_List.add(home_lightcones);
         viewPager_List.add(home_relics);
+        viewPager_List.add(home_settings);
 
         viewPager = findViewById(R.id.home_vp);
         viewPager.setAdapter(new CustomViewPagerAdapter(viewPager_List));
 
         home_nav = findViewById(R.id.home_nav);
+
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                int[] posList = new int[]{R.id.menu_characters, R.id.menu_lightcones, R.id.menu_relics, R.id.menu_settings};
+                home_nav.setSelectedItemId(posList[position]);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
         home_nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.menu_characters:{
                         viewPager.setCurrentItem(0);
-                        break;
+                        return true;
                     }
                     case R.id.menu_lightcones: {
                         viewPager.setCurrentItem(1);
-                        break;
+                        return true;
                     }
                     case R.id.menu_relics:{
                         viewPager.setCurrentItem(2);
-                        break;
+                        return true;
+                    }
+                    case R.id.menu_settings:{
+                        viewPager.setCurrentItem(3);
+                        return true;
                     }
                 }
                 return false;
@@ -130,6 +156,16 @@ public class HomePage extends AppCompatActivity {
         lightconesListView.setAdapter(lightconesAdapter);
         lightconesListView.removeAllViewsInLayout();
         lightcone_list_reload();
+    }
+    public void relic_init(){
+        relicsListView = home_relics.findViewById(R.id.relicsListView);
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(context, 1);
+
+        relicsAdapter = new HSRItemAdapter(context,activity,sharedPreferences, ItemRSS.TYPE_RELIC);
+        relicsListView.setLayoutManager(mLayoutManager);
+        relicsListView.setAdapter(relicsAdapter);
+        relicsListView.removeAllViewsInLayout();
+        relic_list_reload();
     }
 
     private void char_list_reload() {
@@ -184,13 +220,39 @@ public class HomePage extends AppCompatActivity {
                 HSRItem hsrItem = new HSRItem();
                 hsrItem.setName(name);
                 hsrItem.setPath(path);
-                hsrItem.setName(name);
                 hsrItem.setRare(rare);
                 hsrItem.setStatus(status);
 
                 lightconesList.add(hsrItem);
             }
             lightconesAdapter.filterList(lightconesList);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+    private void relic_list_reload() {
+        String name ,type,status;
+        int rare;
+        //charactersList.clear();
+
+        String json_base = LoadAssestData(context,"relic_data/relic_list.json");;
+        //Get data from JSON
+        try {
+            JSONArray array = new JSONArray(json_base);
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject object = array.getJSONObject(i);
+                name = object.getString("name");
+                type = object.getString("type");
+                status = object.getString("status");
+
+                HSRItem hsrItem = new HSRItem();
+                hsrItem.setName(name);
+                hsrItem.setType(type);
+                hsrItem.setStatus(status);
+
+                relicsList.add(hsrItem);
+            }
+            relicsAdapter.filterList(relicsList);
         } catch (JSONException e) {
             e.printStackTrace();
         }

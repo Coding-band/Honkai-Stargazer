@@ -73,14 +73,32 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
             ico_rss = item_rss.getCharByName(hsrItem.getName())[0];
             holder.item_element.setVisibility(View.VISIBLE);
             holder.item_element.setImageResource(item_rss.getIconByElement(hsrItem.getElement()));
+
+            holder.item_rare.setNumStars(hsrItem.getRare());
+            holder.item_rare.setRating(hsrItem.getRare());
+
+            holder.item_path_ico.setImageResource(item_rss.getIconByPath(hsrItem.getPath()));
+            holder.item_path_tv.setText(hsrItem.getPath());
+
         }else if (TYPE.equals(ItemRSS.TYPE_LIGHTCONE)){
             ico_rss = item_rss.getLightconeByName(hsrItem.getName())[0];
+
+            holder.item_rare.setNumStars(hsrItem.getRare());
+            holder.item_rare.setRating(hsrItem.getRare());
+
+            holder.item_path_ico.setImageResource(item_rss.getIconByPath(hsrItem.getPath()));
+            holder.item_path_tv.setText(hsrItem.getPath());
+
         }else if (TYPE.equals(ItemRSS.TYPE_RELIC)){
             holder.item_relic_ll.setVisibility(View.VISIBLE);
             holder.item_normal_ll.setVisibility(View.GONE);
             holder.item_rare.setVisibility(View.GONE);
             holder.item_sub_ll.setVisibility(View.VISIBLE);
-            ico_rss = item_rss.getLightconeByName(hsrItem.getName())[0];
+            holder.item_sub_item2.setVisibility(View.GONE);
+            holder.item_sub_item3.setVisibility(View.GONE);
+            holder.item_2pc_status.setText(item_rss.getRelicStatusByName(hsrItem.getName(), context, ItemRSS.LANG_EN)[0]);
+            holder.item_4pc_status.setText(item_rss.getRelicStatusByName(hsrItem.getName(), context, ItemRSS.LANG_EN)[1]);
+            ico_rss = item_rss.getRelicByName(hsrItem.getName())[0];
         }
 
         //https://honkai-star-rail.fandom.com/wiki/Relic/Sets
@@ -90,10 +108,23 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
                 .transform(transformation)
                 .into (holder.item_ico);
 
-        holder.item_path_ico.setImageResource(item_rss.getIconByPath(hsrItem.getPath()));
-        holder.item_path_tv.setText(hsrItem.getPath());
-        holder.item_rare.setNumStars(hsrItem.getRare());
-        holder.item_rare.setRating(hsrItem.getRare());
+        if (TYPE.equals(ItemRSS.TYPE_RELIC)) {
+            Picasso.get()
+                    .load(item_rss.getRelicByName(hsrItem.getName())[1])
+                    .into(holder.item_sub_item1);
+
+            if (item_rss.getRelicByName(hsrItem.getName()).length > 2){
+                holder.item_sub_item2.setVisibility(View.VISIBLE);
+                holder.item_sub_item3.setVisibility(View.VISIBLE);
+                Picasso.get()
+                        .load(item_rss.getRelicByName(hsrItem.getName())[2])
+                        .into(holder.item_sub_item2);
+                Picasso.get()
+                        .load(item_rss.getRelicByName(hsrItem.getName())[3])
+                        .into(holder.item_sub_item3);
+            }
+        }
+
         holder.item_name.setText(hsrItem.getName());
         holder.item_name.setTypeface(null, Typeface.BOLD);;
 
@@ -107,7 +138,9 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView item_ico, item_element, item_path_ico;
+        public ImageView item_sub_item1, item_sub_item2, item_sub_item3;
         public TextView item_name, item_hp_tv, item_def_tv, item_atk_tv, item_speed_tv, item_path_tv;
+        public TextView item_2pc_status, item_4pc_status;
         public LinearLayout item_hp_ll, item_def_ll, item_atk_ll, item_speed_ll, item_sub_ll, item_relic_ll, item_normal_ll;
         public ScaleRatingBar item_rare;
 
@@ -132,6 +165,13 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
             item_sub_ll = itemView.findViewById(R.id.item_sub_ll);
             item_relic_ll = itemView.findViewById(R.id.item_relic_ll);
             item_normal_ll = itemView.findViewById(R.id.item_normal_ll);
+
+            item_sub_item1 = itemView.findViewById(R.id.item_sub_item1);
+            item_sub_item2 = itemView.findViewById(R.id.item_sub_item2);
+            item_sub_item3 = itemView.findViewById(R.id.item_sub_item3);
+
+            item_2pc_status = itemView.findViewById(R.id.item_2pc_status);
+            item_4pc_status = itemView.findViewById(R.id.item_4pc_status);
         }
     }
 

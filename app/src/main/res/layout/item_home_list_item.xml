@@ -41,7 +41,8 @@
                 <LinearLayout
                     android:id="@+id/item_sub_ll"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="128dp"
+                    android:layout_gravity="bottom"
                     android:gravity="bottom|center"
                     android:orientation="horizontal"
                     android:visibility="gone">
@@ -51,24 +52,21 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:layout_gravity="bottom|center"
-                        android:layout_marginTop="100dp"
-                        app:srcCompat="@drawable/ico_lost_img" />
+                        app:srcCompat="@drawable/champion_of_streetwise_boxing_1" />
 
                     <ImageView
                         android:id="@+id/item_sub_item2"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:layout_gravity="bottom|center"
-                        android:layout_marginTop="100dp"
-                        app:srcCompat="@drawable/ico_lost_img" />
+                        app:srcCompat="@drawable/champion_of_streetwise_boxing_1" />
 
                     <ImageView
                         android:id="@+id/item_sub_item3"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:layout_gravity="bottom|center"
-                        android:layout_marginTop="100dp"
-                        app:srcCompat="@drawable/ico_lost_img" />
+                        app:srcCompat="@drawable/champion_of_streetwise_boxing_1" />
 
                 </LinearLayout>
 
@@ -301,6 +299,11 @@
                             android:layout_height="wrap_content"
                             android:text="Reduces DMG taken by 8%"
                             android:textSize="12sp" />
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp" />
 
                         <TextView
                             android:id="@+id/item_4pc"

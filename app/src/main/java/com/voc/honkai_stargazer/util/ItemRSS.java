@@ -1,8 +1,25 @@
 package com.voc.honkai_stargazer.util;
 
+import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
+
+import android.content.Context;
+
 import com.voc.honkai_stargazer.R;
+import com.voc.honkai_stargazer.data.HSRItem;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class ItemRSS {
+
+    public static final String LANG_EN = "en";
+    public static final String LANG_ZH_HK = "zh_hk";
+    public static final String LANG_ZH_CN = "zh_cn";
+    public static final String LANG_RU = "ru";
+    public static final String LANG_UK = "uk";
+    public static final String LANG_JA_JP = "jp_jp";
+
     public static final String ELEMENT_FIRE = "Fire";
     public static final String ELEMENT_ICE = "Ice";
     public static final String ELEMENT_PHYSICAL = "Physical";
@@ -29,6 +46,7 @@ public class ItemRSS {
     public static final String TYPE_CHARACTER = "Character";
     public static final String TYPE_LIGHTCONE = "Lightcone";
     public static final String TYPE_RELIC = "Relic";
+    //public static final String TYPE_ORNAMENT = "Ornament";
 
     public int[] getCharByName(String charNameInFile){
         switch (charNameInFile){
@@ -68,9 +86,10 @@ public class ItemRSS {
             case "Amber" : return new int[] {R.drawable.amber, R.drawable.amber_artwork};
             case "Arrows" : return new int[] {R.drawable.arrows, R.drawable.arrows_artwork};
             case "A Secret Vow" : return new int[] {R.drawable.a_secret_vow, R.drawable.a_secret_vow_artwork};
+            case "Adversarial" : return new int[] {R.drawable.a_secret_vow, R.drawable.a_secret_vow_artwork};
             case "Before Dawn" : return new int[] {R.drawable.before_dawn, R.drawable.before_dawn_artwork};
-            case "But the Battle Isnt Over" : return new int[] {R.drawable.but_the_battle_isnt_over, R.drawable.but_the_battle_isnt_over_artwork};
-            case "Carve the Moon Weave the Clouds" : return new int[] {R.drawable.carve_the_moon_weave_the_clouds, R.drawable.carve_the_moon_weave_the_clouds_artwork};
+            case "But the Battle Isn't Over" : return new int[] {R.drawable.but_the_battle_isnt_over, R.drawable.but_the_battle_isnt_over_artwork};
+            case "Carve the Moon, Weave the Clouds" : return new int[] {R.drawable.carve_the_moon_weave_the_clouds, R.drawable.carve_the_moon_weave_the_clouds_artwork};
             case "Chorus" : return new int[] {R.drawable.chorus, R.drawable.chorus_artwork};
             case "Collapsing Sky" : return new int[] {R.drawable.collapsing_sky, R.drawable.collapsing_sky_artwork};
             case "Cornucopia" : return new int[] {R.drawable.cornucopia, R.drawable.cornucopia_artwork};
@@ -81,14 +100,16 @@ public class ItemRSS {
             case "Day One of My New Life" : return new int[] {R.drawable.day_one_of_my_new_life, R.drawable.day_one_of_my_new_life_artwork};
             case "Defense" : return new int[] {R.drawable.defense, R.drawable.defense_artwork};
             case "Eyes of the Prey" : return new int[] {R.drawable.eyes_of_the_prey, R.drawable.eyes_of_the_prey_artwork};
+            case "Echoes of the Coffin" : return new int[] {R.drawable.echoes_of_the_coffin, R.drawable.echoes_of_the_coffin_artwork};
             case "Fermata" : return new int[] {R.drawable.fermata, R.drawable.fermata_artwork};
             case "Fine Fruit" : return new int[] {R.drawable.fine_fruit, R.drawable.fine_fruit_artwork};
-            case "Geniuses Repose" : return new int[] {R.drawable.geniuses_repose, R.drawable.geniuses_repose_artwork};
+            case "Geniuses' Repose" : return new int[] {R.drawable.geniuses_repose, R.drawable.geniuses_repose_artwork};
             case "Good Night and Sleep Well" : return new int[] {R.drawable.good_night_and_sleep_well, R.drawable.good_night_and_sleep_well_artwork};
             case "Hidden Shadow" : return new int[] {R.drawable.hidden_shadow, R.drawable.hidden_shadow_artwork};
             case "In the Name of the World" : return new int[] {R.drawable.in_the_name_of_the_world, R.drawable.in_the_name_of_the_world_artwork};
             case "In the Night" : return new int[] {R.drawable.in_the_night, R.drawable.in_the_night_artwork};
-            case "Landaus Choice" : return new int[] {R.drawable.landaus_choice, R.drawable.landaus_choice_artwork};
+            case "Incessant Rain" : return new int[] {R.drawable.incessant_rain, R.drawable.incessant_rain_artwork};
+            case "Landau's Choice" : return new int[] {R.drawable.landaus_choice, R.drawable.landaus_choice_artwork};
             case "Loop" : return new int[] {R.drawable.loop, R.drawable.loop_artwork};
             case "Make the World Clamor" : return new int[] {R.drawable.make_the_world_clamor, R.drawable.make_the_world_clamor_artwork};
             case "Mediation" : return new int[] {R.drawable.mediation, R.drawable.mediation_artwork};
@@ -103,6 +124,7 @@ public class ItemRSS {
             case "On the Fall of an Aeon" : return new int[] {R.drawable.on_the_fall_of_an_aeon, R.drawable.on_the_fall_of_an_aeon_artwork};
             case "Passkey" : return new int[] {R.drawable.passkey, R.drawable.passkey_artwork};
             case "Past and Future" : return new int[] {R.drawable.past_and_future, R.drawable.past_and_future_artwork};
+            case "Patience Is All You Need" : return new int[] {R.drawable.patience_is_all_you_need, R.drawable.patience_is_all_you_need_artwork};
             case "Perfect Timing" : return new int[] {R.drawable.perfect_timing, R.drawable.perfect_timing_artwork};
             case "Pioneering" : return new int[] {R.drawable.pioneering, R.drawable.pioneering_artwork};
             case "Planetary Rendezvous" : return new int[] {R.drawable.planetary_rendezvous, R.drawable.planetary_rendezvous_artwork};
@@ -122,6 +144,7 @@ public class ItemRSS {
             case "The Birth of the Self" : return new int[] {R.drawable.the_birth_of_the_self, R.drawable.the_birth_of_the_self_artwork};
             case "The Moles Welcome You" : return new int[] {R.drawable.the_moles_welcome_you, R.drawable.the_moles_welcome_you_artwork};
             case "The Seriousness of Breakfast" : return new int[] {R.drawable.the_seriousness_of_breakfast, R.drawable.the_seriousness_of_breakfast_artwork};
+            case "The Unreachable Side" : return new int[] {R.drawable.the_unreachable_side, R.drawable.the_unreachable_side_artwork};
             case "This Is Me!" : return new int[] {R.drawable.this_is_me, R.drawable.this_is_me_artwork};
             case "Time Waits for No One" : return new int[] {R.drawable.time_waits_for_no_one, R.drawable.time_waits_for_no_one_artwork};
             case "Today Is Another Peaceful Day" : return new int[] {R.drawable.today_is_another_peaceful_day, R.drawable.today_is_another_peaceful_day_artwork};
@@ -138,9 +161,54 @@ public class ItemRSS {
         }
     }
 
-    public int getRelicByName(String relicNameInFile){
+    public int[] getRelicByName(String relicNameInFile){
         switch (relicNameInFile){
-            default:return R.drawable.ico_lost_img;
+            case "Band of Sizzling Thunder" : return new int[] {R.drawable.band_of_sizzling_thunder_1, R.drawable.band_of_sizzling_thunder_2, R.drawable.band_of_sizzling_thunder_3, R.drawable.band_of_sizzling_thunder_4};
+            case "Belobog of the Architects" : return new int[] {R.drawable.belobog_of_the_architects_5, R.drawable.belobog_of_the_architects_6};
+            case "Celestial Differentiator" : return new int[] {R.drawable.celestial_differentiator_5, R.drawable.celestial_differentiator_6};
+            case "Champion of Streetwise Boxing" : return new int[] {R.drawable.champion_of_streetwise_boxing_1, R.drawable.champion_of_streetwise_boxing_2, R.drawable.champion_of_streetwise_boxing_3, R.drawable.champion_of_streetwise_boxing_4};
+            case "Eagle of Twilight Line" : return new int[] {R.drawable.eagle_of_twilight_line_1, R.drawable.eagle_of_twilight_line_2, R.drawable.eagle_of_twilight_line_3, R.drawable.eagle_of_twilight_line_4};
+            case "Firesmith of Lava-Forging" : return new int[] {R.drawable.firesmith_of_lava_forging_1, R.drawable.firesmith_of_lava_forging_2, R.drawable.firesmith_of_lava_forging_3, R.drawable.firesmith_of_lava_forging_4};
+            case "Fleet of the Ageless" : return new int[] {R.drawable.fleet_of_the_ageless_5, R.drawable.fleet_of_the_ageless_6};
+            case "Genius of Brilliant Stars" : return new int[] {R.drawable.genius_of_brilliant_stars_1, R.drawable.genius_of_brilliant_stars_2, R.drawable.genius_of_brilliant_stars_3, R.drawable.genius_of_brilliant_stars_4};
+            case "Guard of Wuthering Snow" : return new int[] {R.drawable.guard_of_wuthering_snow_1, R.drawable.guard_of_wuthering_snow_2, R.drawable.guard_of_wuthering_snow_3, R.drawable.guard_of_wuthering_snow_4};
+            case "Hunter of Glacial Forest" : return new int[] {R.drawable.hunter_of_glacial_forest_1, R.drawable.hunter_of_glacial_forest_2, R.drawable.hunter_of_glacial_forest_3, R.drawable.hunter_of_glacial_forest_4};
+            case "Inert Salsotto" : return new int[] {R.drawable.inert_salsotto_5, R.drawable.inert_salsotto_6};
+            case "Knight of Purity Palace" : return new int[] {R.drawable.knight_of_purity_palace_1, R.drawable.knight_of_purity_palace_2, R.drawable.knight_of_purity_palace_3, R.drawable.knight_of_purity_palace_4};
+            case "Musketeer of Wild Wheat" : return new int[] {R.drawable.musketeer_of_wild_wheat_1, R.drawable.musketeer_of_wild_wheat_2, R.drawable.musketeer_of_wild_wheat_3, R.drawable.musketeer_of_wild_wheat_4};
+            case "Pan-Galactic Commercial Enterprise" : return new int[] {R.drawable.pan_galactic_commercial_enterprise_5, R.drawable.pan_galactic_commercial_enterprise_6};
+            case "Passerby of Wandering Cloud" : return new int[] {R.drawable.passerby_of_wandering_cloud_1, R.drawable.passerby_of_wandering_cloud_2, R.drawable.passerby_of_wandering_cloud_3, R.drawable.passerby_of_wandering_cloud_4};
+            case "Space Sealing Station" : return new int[] {R.drawable.space_sealing_station_5, R.drawable.space_sealing_station_6};
+            case "Sprightly Vonwacq" : return new int[] {R.drawable.sprightly_vonwacq_5, R.drawable.sprightly_vonwacq_6};
+            case "Talia Kingdom of Banditry" : return new int[] {R.drawable.talia_kingdom_of_banditry_5, R.drawable.talia_kingdom_of_banditry_6};
+            case "Thief of Shooting Meteor" : return new int[] {R.drawable.thief_of_shooting_meteor_1, R.drawable.thief_of_shooting_meteor_2, R.drawable.thief_of_shooting_meteor_3, R.drawable.thief_of_shooting_meteor_4};
+            case "Wastelander of Banditry Desert" : return new int[] {R.drawable.wastelander_of_banditry_desert_1, R.drawable.wastelander_of_banditry_desert_2, R.drawable.wastelander_of_banditry_desert_3, R.drawable.wastelander_of_banditry_desert_4};
+
+            default:return new int[]{R.drawable.ico_lost_img,R.drawable.ico_lost_img,R.drawable.ico_lost_img,R.drawable.ico_lost_img};
+        }
+    }
+
+    public String[] getRelicStatusByName(String relicNameInFile, Context context, String LANGUAGE){
+        String json_base = LoadAssestData(context,"lightcone_data/"+LANGUAGE+"/lightcone_pc.json");
+        String[] feedback = new String[]{"N/A","N/A"};
+        //Get data from JSON
+        try {
+            JSONObject object = new JSONObject(json_base);
+            if (object.has(relicNameInFile)){
+                JSONArray bonuses = object.getJSONObject(relicNameInFile).getJSONArray("bonuses");
+                if (bonuses != null){
+                    for(int x = 0 ; x < bonuses.length() ; x++){
+                        feedback[x] = bonuses.getJSONObject(x).getString("desc");
+                    }
+                    return feedback;
+                }else{
+                    return new String[]{"bonuses NULL","bonuses NULL"};
+                }
+            }
+            return new String[]{object.getJSONObject(relicNameInFile).toString(),"no this name"};
+        } catch (JSONException e) {
+            feedback = new String[]{"ERROR - JSONExpection",e.getLocalizedMessage()};
+            return feedback;
         }
     }
 
