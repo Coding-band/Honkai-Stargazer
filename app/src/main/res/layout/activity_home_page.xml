@@ -10,6 +10,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/status_bar_color"
     tools:context=".ui.HomePage">
 
     <com.voc.honkai_stargazer.util.CustomViewPager
@@ -25,7 +26,7 @@
         android:id="@+id/home_nav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#F3EDF7"
+        android:background="@color/nav_bar_color"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -12,6 +12,9 @@ import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,12 +32,15 @@ import com.voc.honkai_stargazer.R;
 import com.voc.honkai_stargazer.data.HSRItem;
 import com.voc.honkai_stargazer.util.CustomViewPagerAdapter;
 import com.voc.honkai_stargazer.util.ItemRSS;
+import com.voc.honkai_stargazer.util.LogExport;
 import com.willy.ratingbar.ScaleRatingBar;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class InfoCharacterPage {
     Context context;
@@ -51,6 +57,8 @@ public class InfoCharacterPage {
     public static final int TAB_EIDOLON = 102;
 
     ItemRSS item_rss;
+
+    ArrayList<String> materialList = new ArrayList<>();
 
     public void setup(Context context, Activity activity, HSRItem hsrItem){
         this.context = context;
@@ -87,6 +95,22 @@ public class InfoCharacterPage {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
+                /*
+                String json_base2 = LoadAssestData(context, "character_data/character_list.json");
+                try {
+                    JSONArray array = new JSONArray(json_base2);
+                    for (int i = 0; i < array.length(); i++) {
+                        JSONObject object = array.getJSONObject(i);
+                        String json_base = LoadAssestData(context, "character_data/" + "en" + "/" + object.getString("fileName") + ".json");
+                        if (json_base != null) {
+                            JSONObject jsonObject = new JSONObject(json_base);
+                            help_tool_skill(jsonObject);
+                        }
+                    }
+                }catch (JSONException e){
+                    e.printStackTrace();
+                }
+                 */
             }
         });
 
@@ -127,7 +151,10 @@ public class InfoCharacterPage {
 
                 init_intro(jsonObject);
                 //init_combat(jsonObject);
-                //init_eidolon(jsonObject);
+                init_eidolon(jsonObject);
+                //help_tool_eidolon(jsonObject);
+                //help_tool_material(jsonObject);
+                //help_tool_skill(jsonObject, hsrItem.getName());
 
             } catch (JSONException e) {
                 throw new RuntimeException(e);
@@ -160,9 +187,85 @@ public class InfoCharacterPage {
     private void init_combat() {
     }
 
-    private void init_eidolon() {
+    private void init_eidolon(JSONObject jsonObject) throws JSONException {
+        JSONArray ranks = jsonObject.getJSONArray("ranks");
+
+        ImageView eidolon_ico1 = info_eidolon.findViewById(R.id.eidolon_ico1);
+        ImageView eidolon_ico2 = info_eidolon.findViewById(R.id.eidolon_ico2);
+        ImageView eidolon_ico3 = info_eidolon.findViewById(R.id.eidolon_ico3);
+        ImageView eidolon_ico4 = info_eidolon.findViewById(R.id.eidolon_ico4);
+        ImageView eidolon_ico5 = info_eidolon.findViewById(R.id.eidolon_ico5);
+        ImageView eidolon_ico6 = info_eidolon.findViewById(R.id.eidolon_ico6);
+        TextView eidolon_name1 = info_eidolon.findViewById(R.id.eidolon_name1);
+        TextView eidolon_name2 = info_eidolon.findViewById(R.id.eidolon_name2);
+        TextView eidolon_name3 = info_eidolon.findViewById(R.id.eidolon_name3);
+        TextView eidolon_name4 = info_eidolon.findViewById(R.id.eidolon_name4);
+        TextView eidolon_name5 = info_eidolon.findViewById(R.id.eidolon_name5);
+        TextView eidolon_name6 = info_eidolon.findViewById(R.id.eidolon_name6);
+        TextView eidolon_desc1 = info_eidolon.findViewById(R.id.eidolon_desc1);
+        TextView eidolon_desc2 = info_eidolon.findViewById(R.id.eidolon_desc2);
+        TextView eidolon_desc3 = info_eidolon.findViewById(R.id.eidolon_desc3);
+        TextView eidolon_desc4 = info_eidolon.findViewById(R.id.eidolon_desc4);
+        TextView eidolon_desc5 = info_eidolon.findViewById(R.id.eidolon_desc5);
+        TextView eidolon_desc6 = info_eidolon.findViewById(R.id.eidolon_desc6);
+
+        eidolon_ico1.setImageResource(item_rss.getCharByName(hsrItem.getName())[2]);
+        eidolon_ico2.setImageResource(item_rss.getCharByName(hsrItem.getName())[3]);
+        eidolon_ico3.setImageResource(item_rss.getCharByName(hsrItem.getName())[4]);
+        eidolon_ico4.setImageResource(item_rss.getCharByName(hsrItem.getName())[5]);
+        eidolon_ico5.setImageResource(item_rss.getCharByName(hsrItem.getName())[6]);
+        eidolon_ico6.setImageResource(item_rss.getCharByName(hsrItem.getName())[7]);
+
+        eidolon_name1.setText(ranks.getJSONObject(0).getString("name"));
+        eidolon_name2.setText(ranks.getJSONObject(1).getString("name"));
+        eidolon_name3.setText(ranks.getJSONObject(2).getString("name"));
+        eidolon_name4.setText(ranks.getJSONObject(3).getString("name"));
+        eidolon_name5.setText(ranks.getJSONObject(4).getString("name"));
+        eidolon_name6.setText(ranks.getJSONObject(5).getString("name"));
+
+        eidolon_desc1.setText(ItemRSS.valuedText(ranks.getJSONObject(0).getString("descHash"), ranks.getJSONObject(0).getJSONArray("params"),context), TextView.BufferType.SPANNABLE);
+        eidolon_desc2.setText(ItemRSS.valuedText(ranks.getJSONObject(1).getString("descHash"), ranks.getJSONObject(1).getJSONArray("params"),context), TextView.BufferType.SPANNABLE);
+        eidolon_desc3.setText(ItemRSS.valuedText(ranks.getJSONObject(2).getString("descHash"), ranks.getJSONObject(2).getJSONArray("params"),context), TextView.BufferType.SPANNABLE);
+        eidolon_desc4.setText(ItemRSS.valuedText(ranks.getJSONObject(3).getString("descHash"), ranks.getJSONObject(3).getJSONArray("params"),context), TextView.BufferType.SPANNABLE);
+        eidolon_desc5.setText(ItemRSS.valuedText(ranks.getJSONObject(4).getString("descHash"), ranks.getJSONObject(4).getJSONArray("params"),context), TextView.BufferType.SPANNABLE);
+        eidolon_desc6.setText(ItemRSS.valuedText(ranks.getJSONObject(5).getString("descHash"), ranks.getJSONObject(5).getJSONArray("params"),context), TextView.BufferType.SPANNABLE);
 
 
+    }
+
+    private void help_tool_eidolon(JSONObject jsonObject) throws JSONException {
+        String str_final = "";//""-----------"+jsonObject.getString("name")+"-----------"+"\n";
+        JSONArray ranks = jsonObject.getJSONArray("ranks");
+        for (int x = 0  ;x < ranks.length() ; x++){
+            str_final = str_final + "ren https://starrailstation.com/assets/"+ranks.getJSONObject(x).getString("artPath")+".webp \""+jsonObject.getString("name").toLowerCase().replace(" ","_").replace("'","")+"_eidolon"+String.valueOf(x+1)+".webp\""+"\n";
+        }
+
+        LogExport.special(str_final, context, LogExport.BETA_TESTING);
+    }
+    private void help_tool_material(JSONObject jsonObject) throws JSONException {
+        String str_final = "";//""-----------"+jsonObject.getString("name")+"-----------"+"\n";
+        JSONObject ranks = jsonObject.getJSONObject("itemReferences");
+        Iterator<String> iter = ranks.keys();
+        for (int x = 0  ;x < ranks.length() ; x++){
+            String key = iter.next();
+            if (!materialList.contains(ranks.getJSONObject(key).getString("iconPath")+".webp")){
+                str_final = str_final + "ren https://starrailstation.com/assets/"+ranks.getJSONObject(key).getString("iconPath")+".webp \"material_"+ranks.getJSONObject(key).getString("name").toLowerCase().replace(" ","_").replace("'","")+".webp\""+"\n";
+                materialList.add(ranks.getJSONObject(key).getString("iconPath")+".webp");
+            }
+        }
+
+        LogExport.special(str_final, context, LogExport.BETA_TESTING);
+    }
+    private void help_tool_skill(JSONObject jsonObject) throws JSONException {
+        String str_final = "";//""-----------"+jsonObject.getString("name")+"-----------"+"\n";
+        JSONArray ranks = jsonObject.getJSONArray("skills");
+        for (int x = 0  ;x < ranks.length() ; x++){
+            if (x != 4){
+                str_final = str_final + "ren https://starrailstation.com/assets/"+ranks.getJSONObject(x).getString("iconPath")+".webp \""+jsonObject.getString("name").toLowerCase().replace(" ","_").replace("'","")+"_skill"+String.valueOf(x+1)+".webp\""+"\n";
+            }
+        }
+
+        LogExport.special(str_final, context, LogExport.BETA_TESTING);
     }
 
 }

@@ -10,6 +10,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/status_bar_color"
     tools:context=".ui.InfoCharacterPage">
 
     <LinearLayout
@@ -46,6 +47,7 @@
         android:id="@+id/info_tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/status_bar_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,6 +57,15 @@
         app:tabIndicatorFullWidth="true">
 
     </com.google.android.material.tabs.TabLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_tablayout"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/info_vp"

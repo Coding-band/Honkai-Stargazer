@@ -103,8 +103,8 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
             holder.item_sub_ll.setVisibility(View.VISIBLE);
             holder.item_sub_item2.setVisibility(View.GONE);
             holder.item_sub_item3.setVisibility(View.GONE);
-            holder.item_2pc_status.setText(item_rss.getRelicStatusByName(hsrItem.getName(), context, ItemRSS.LANG_EN)[0]);
-            holder.item_4pc_status.setText(item_rss.getRelicStatusByName(hsrItem.getName(), context, ItemRSS.LANG_EN)[1]);
+            holder.item_2pc_status.setText(item_rss.getRelicStatusByName(hsrItem.getName(), context, ItemRSS.LANG_EN)[0], TextView.BufferType.SPANNABLE);
+            holder.item_4pc_status.setText(item_rss.getRelicStatusByName(hsrItem.getName(), context, ItemRSS.LANG_EN)[1], TextView.BufferType.SPANNABLE);
             ico_rss = item_rss.getRelicByName(hsrItem.getName())[0];
         }
 
