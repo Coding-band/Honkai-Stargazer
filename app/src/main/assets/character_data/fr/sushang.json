@@ -1,0 +1,2394 @@
+{
+ "name": "Sushang",
+ "spRequirement": 120,
+ "rarity": 4,
+ "descHash": "Née sur le Yaoqing de Xianzhou, elle a été envoyée chez les Chevaliers des nuages du Luofu pour son entraînement militaire. Elle manie l'épée de famille que lui a offerte sa mère et espère bien écrire sa propre histoire.",
+ "iconPath": "ebad922c3652e677f45b86d689cd06d161c3af19f682d1c0742012b043027505",
+ "bgPath": "8fec2a5c123aeae3525bea2a371c37ac210d7072c96bb371b57862fb20af97c0",
+ "figPath": "6d653a7ba413765cf9d0e6c5f8a61e9e414b78e5a393a84e9c19c6a01d089719",
+ "fgPath": "1a9e22a8eaf5fc67282cf64d4dc570bf0b4c956b90167cdcb0ed08433f2edede",
+ "artPath": "3562896a9b7604475f5b3d7bc3221053409244a2fd0b859a8f1f7dbb10c8c350",
+ "miniIconPath": "3aed4d7fdbe85d9f52d4c5d0dfcea6aac5acc9ec50af06aa486f8584ae5b3299",
+ "splashIconPath": "cbe61d37b5bafc6825db783d9274c1ac4495dbb862e154938622ecdd2102bfc9",
+ "damageType": {
+  "id": 1,
+  "iconPath": "ae78085438eecf2462f1256329b5aa2369f01b8cda6926ea0a08b1b8affe5108",
+  "color": "#FFFFFF",
+  "name": "Physique",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "f888d91738330cac6e95609d73ab3c9d4be23794bb22c5257171857c4c722262",
+  "altIconPath": "09f49c24cff05770b7c6decea7821c42fb5ddb87f1141b08d9a2c7d8d9344efc",
+  "color": "#FFFFFF",
+  "name": "La Chasse",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 2,
+  "iconPath": "c66788e18b85100348634e29b364a9e96096bfcd10a9607ae873ceb817744d83",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "Complainte du gardien",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "Avec ce diadème, le vœu corrompu d'une Gardienne s'est également brisé.<br />Elle cherchait le moyen d'éviter à son peuple le redoutable Hiver éternel, mais a fini par devenir la marionnette d'une conscience qui la dépasse.<br /><br />« Le titre de Gardien suprême s'est transmis de génération en génération chez les dirigeants de Belobog, c'est celui qui prend soin de tous les autres. Nul n'a songé que les Gardiens eux-mêmes pouvaient avoir besoin d'attention et de protection. »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "Écho de la guerre de la Colline de l'Hiver éternel"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Entraînement quotidien"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Récompense d'affectation"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "fcb7215a2a17b09cd16362b5e1b398eaaf2fde23a94057c5f961151885a620c5",
+   "name": "Module de l'artifex",
+   "desc": "Composant utilisé dans les ingéniosités. Matière première utilisée pour les améliorations.",
+   "lore": "La base de la technologie des ingéniosités de Xianzhou. C'est le plus petit composant de toutes les pièces de machine. Le casser reviendrait à détruire la structure cellulaire d'un être vivant.<br /><br />« La Guilde de l'intelligentsia a fixé une prime de deux millions de crédits pour obtenir des plans techniques qui permettraient de démonter parfaitement les marionnettes mécaniques de Xianzhou. »<br />« Si vous connaissez Screwllum, alors ces deux millions sont à vous... »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "Ingéniosité envoûtée ou autre ennemi du Port Mirétoiles",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "1977002edbf48f44c49d08284ce2681f622e70c447d50de10a8b9491dfcb719c",
+   "name": "Roue dentée de l'artifex",
+   "desc": "Partie des machines de Xianzhou. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "Les composants connecteurs de la technologie des ingéniosités de Xianzhou. Les fines dents complexes des roues sont aussi minuscules que des graines de moutarde. Pourtant, elles s'imbriquent pour former un corps complexe, ce qui donne l'illusion que la machine est en vie.<br /><br />« Sa forme est en parfaite harmonie avec la nature, ses mouvements cycliques faisant écho au cosmos. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "Ingéniosité envoûtée de niveau d'équilibre 2+ ou autre ennemi du Port Mirétoiles",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635674": {
+   "id": 635674,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "cb316badc06db5719753768d375ae94463fad49721b56569985ab88a684474c4",
+   "name": "Flèche du chasseur de bêtes",
+   "desc": "Pointe de flèche forgée à partir de givracier par les artisans de Xianzhou. Permet d'améliorer légèrement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Chasse</span>.",
+   "lore": "Cadeau que les parents offrent à leurs enfants lorsque ces derniers tuent leur première proie, lors de la cérémonie de passage à la majorité. Il symbolise les succès à venir, aussi sûrs que la flèche qui file en direction de sa cible.<br /><br />« Puissent la flèche à ta taille et l'épée dans ton fourreau t'être fidèles et toujours trouver leur cible. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635674",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques"
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "058379eb2e88612f2b1f78a6c3195c457e124c9b6de602d6dd2fe0b2d17245f3",
+   "name": "Gyrocœur de l'artifex",
+   "desc": "Composant utilisé dans les ingéniosités. Matériau avancé utilisé pour les améliorations.",
+   "lore": "Le cœur de la technologie des ingéniosités de Xianzhou. La sphère armillaire tourbillonne et vibre telle l'essence d'un cœur, donnant l'illusion que la machine pense comme un être vivant.<br /><br />« N'ayez pas peur. Lui enlever son cœur la rendrait... le rendrait ?... Non, cela lui ferait perdre toute sensibilité et retourner à ses origines mécaniques. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "Ingéniosité envoûtée de niveau d'équilibre 4+ ou autre ennemi du Port Mirétoiles",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836260": {
+   "id": 836260,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "f0bb6fd4143f707987f651fa21b81257202d038949944fa22d7615ad342d5bfa",
+   "name": "Flèche du chasseur d'étoiles",
+   "desc": "Fragment de la Flèche de lumière briseuse de ciel tirée par le Seigneur archer de la destinée. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Chasse</span>.",
+   "lore": "Les ruines d'une construction divine que les humains ordinaires ont rarement la chance de contempler. Quelle est donc la force capable de faire exploser des étoiles à des années-lumière ? L'humanité ne peut qu'imaginer la puissance de la Flèche de lumière d'après les cendres qu'elle a laissées dans son sillage.<br />Seul le Maître de la fournaise, chef des artisans de Xianzhou, peut forger à nouveau ces éclats pour ceux qui en sont dignes.<br /><br />« La mort d'une étoile brillera de mille feux pour les siècles à venir. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836260",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "866633": {
+   "id": 866633,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "d97cb9072570df0b85725f8a0783d22e500c3e06e49b7fbc8dd485e7ba1b9516",
+   "name": "Dents brisées du loup de fer",
+   "desc": "Dents de scie abandonnées par des automates. Permet l'élévation des personnages de type physique.",
+   "lore": "On dit que les techniques de fonderie développées par les Architectes leur permettaient de créer des tronçonneuses capables de fendre des rochers géants. Ces techniques ont depuis longtemps été oubliées.<br /><br />« Le boss Svarog dit que sa lame est tellement fine qu'elle peut couper l'espace entre les molécules... C'est quoi des molécules ? »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/866633",
+   "comeFrom": [
+    "Ombre stagnante de la Grande mine",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920201": {
+   "id": 920201,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a9dabc100dfb0916188799f2d83770e60721301f4d7c930b850ae55815281ad1",
+   "name": "Flèche du tueur de démons",
+   "desc": "Pointe de flèche forgée à partir d'essence de stellaris par les artisans de Xianzhou. Permet d'améliorer modérément les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Chasse</span>.",
+   "lore": "Une flèche plus fine qu'un doigt. Elle peut être utilisée à l'aide d'une arbalète électromagnétique ou d'un arc thermique. Sa puissance est telle qu'elle peut pénétrer les carapaces robustes des abominations en un seul coup.<br /><br />« Le banni céleste arrive de loin, après avoir parcouru de grandes distances entre les océans d'étoiles. Similaires à l'averse, les flèches s'abattent sur un casque reflétant l'éclat de la lune. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920201",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549503,
+     "count": 4
+    }
+   ],
+   "attackBase": 76.8,
+   "attackAdd": 3.84,
+   "hpBase": 124.8,
+   "hpAdd": 6.24,
+   "defenseBase": 57,
+   "defenseAdd": 2.85,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 107,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549503,
+     "count": 8
+    }
+   ],
+   "attackBase": 107.52,
+   "attackAdd": 3.84,
+   "hpBase": 174.72,
+   "hpAdd": 6.24,
+   "defenseBase": 79.8,
+   "defenseAdd": 2.85,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 107,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633444,
+     "count": 5
+    },
+    {
+     "id": 866633,
+     "count": 2
+    }
+   ],
+   "attackBase": 138.24,
+   "attackAdd": 3.84,
+   "hpBase": 224.64,
+   "hpAdd": 6.24,
+   "defenseBase": 102.6,
+   "defenseAdd": 2.85,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 107,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633444,
+     "count": 8
+    },
+    {
+     "id": 866633,
+     "count": 5
+    }
+   ],
+   "attackBase": 168.96,
+   "attackAdd": 3.84,
+   "hpBase": 274.56,
+   "hpAdd": 6.24,
+   "defenseBase": 125.4,
+   "defenseAdd": 2.85,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 107,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717385,
+     "count": 5
+    },
+    {
+     "id": 866633,
+     "count": 15
+    }
+   ],
+   "attackBase": 199.68,
+   "attackAdd": 3.84,
+   "hpBase": 324.48,
+   "hpAdd": 6.24,
+   "defenseBase": 148.2,
+   "defenseAdd": 2.85,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 107,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717385,
+     "count": 7
+    },
+    {
+     "id": 866633,
+     "count": 28
+    }
+   ],
+   "attackBase": 230.4,
+   "attackAdd": 3.84,
+   "hpBase": 374.4,
+   "hpAdd": 6.24,
+   "defenseBase": 171,
+   "defenseAdd": 2.85,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 107,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 261.12,
+   "attackAdd": 3.84,
+   "hpBase": 424.32,
+   "hpAdd": 6.24,
+   "defenseBase": 193.8,
+   "defenseAdd": 2.85,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 107,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "dd1924dd4e5230edf45c31b1ae85abb36b7ff226cb72d975e632fdf1cc365abe",
+   "name": "Tranchant aiguisé",
+   "descHash": "Régénère 1 point de compétence après avoir utilisé la compétence contre un ennemi qui subit une Rupture de faiblesse.",
+   "params": []
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "af8c0f07a8bfdf6b154fba4599032197ef0d00eae957a7d6cf88093a5d7d4822",
+   "name": "Surentraînée",
+   "descHash": "Après avoir déclenché Posture de l'épée, les DGT subis par Sushang sont réduits de <nobr>#1[i]%</nobr> pendant 1 tour.",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "f113125e0223a9159893896a2d03ecd2cfd1e4271a59bb14f7b7f61639108979",
+   "name": "Née de la célébrité",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "592467d789aac8420fc842e753c506b60e717ff81a7432736e9713f46f8f4d5a",
+   "name": "Rupture du cœur",
+   "descHash": "L'effet de Rupture de Sushang augmente de <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.4
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "513b5f985b101300277a702d5f162cef2d6560c8b1948fc6c3aca9bf58ffcfd9",
+   "name": "Victoire du Taixu",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "b2eddc2d4997dc46e0b48a1c691de4474cc4d9ed7d66c07fdfa650d9a3ee280b",
+   "name": "Fluide comme l'eau",
+   "descHash": "L'augmentation de VIT conférée par le talent devient cumulable jusqu'à 2 fois. De plus, Sushang obtient immédiatement 1 cumul d'augmentation de VIT après avoir rejoint le combat.",
+   "params": []
+  }
+ ],
+ "skillGrouping": [
+  [
+   93988
+  ],
+  [
+   378515
+  ],
+  [
+   261870
+  ],
+  [
+   579101
+  ],
+  [
+   663042
+  ]
+ ],
+ "skills": [
+  {
+   "id": 93988,
+   "name": "Escrime perce-nuages : Étoile brillante",
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Sushang à un ennemi unique.",
+   "typeDescHash": "ATQ normale",
+   "iconPath": "67e231b77b0d05343380cfb12aa110059d6d5b19a9d583aef7e1b39b3d7d974c",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635674,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920201,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920201,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836260,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836260,
+       "count": 6
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 378515,
+   "name": "Escrime perce-nuages : Chute de montagne",
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Sushang à un ennemi unique. De plus, il y a <nobr>#3[i]%</nobr> de chances de déclencher Posture de l'épée lors du coup final, ce qui inflige à l'ennemi des DGT physiques <u>additionnels</u> équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de l'ATQ de Sushang.<br />Si l'ennemi est affecté par <u>Rupture de faiblesse</u>, le déclenchement de Posture de l'épée est garanti.",
+   "typeDescHash": "Compétence",
+   "iconPath": "eb0838257c72cf6c2f0ebfd9093363129d470ffd0382ea107aabe49f75585d0e",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1.05,
+      0.5,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.155,
+      0.55,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.26,
+      0.6,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635674,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.365,
+      0.65,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920201,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.47,
+      0.7,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920201,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.575,
+      0.75,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920201,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.70625,
+      0.8125,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836260,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.8375,
+      0.875,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836260,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.96875,
+      0.9375,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836260,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      2.1,
+      1,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836260,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      2.205,
+      1.05,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      2.31,
+      1.1,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      2.415,
+      1.15,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      2.52,
+      1.2,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      2.625,
+      1.25,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 261870,
+   "name": "Forme de Taixu : Héraut de l'aube",
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Sushang à un ennemi unique et avance immédiatement l'action de Sushang de <nobr>100</nobr> %. De plus, l'ATQ de Sushang augmente de <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span> et l'utilisation de sa compétence a 2 chances supplémentaires de déclencher Posture de l'épée pendant <nobr>#2[i]</nobr> tours.<br />Lorsque Posture de l'épée est déclenchée par les chances supplémentaires, elle inflige <nobr>#3[i]%</nobr> des DGT initiaux.",
+   "typeDescHash": "Ultime",
+   "iconPath": "a6fe6e4bcd38875e727edb311593d30b65a99908801c2ee857eb3b496a978b9e",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1.92,
+      2,
+      0.5,
+      0.18
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      2.048,
+      2,
+      0.5,
+      0.192
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      2.176,
+      2,
+      0.5,
+      0.204
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635674,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      2.304,
+      2,
+      0.5,
+      0.216
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920201,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      2.432,
+      2,
+      0.5,
+      0.228
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920201,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      2.56,
+      2,
+      0.5,
+      0.24
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920201,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      2.72,
+      2,
+      0.5,
+      0.255
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836260,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      2.88,
+      2,
+      0.5,
+      0.27
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836260,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      3.04,
+      2,
+      0.5,
+      0.285
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836260,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      3.2,
+      2,
+      0.5,
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836260,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      3.328,
+      2,
+      0.5,
+      0.312
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      3.456,
+      2,
+      0.5,
+      0.324
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      3.584,
+      2,
+      0.5,
+      0.336
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      3.712,
+      2,
+      0.5,
+      0.348
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      3.84,
+      2,
+      0.5,
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  },
+  {
+   "id": 579101,
+   "name": "Lame dansante",
+   "tagHash": "Renforcement",
+   "descHash": "Lorsqu'un ennemi subit une Rupture de faiblesse sur le champ de bataille, la VIT de Sushang augmente de <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[f2]%</nobr></span> pendant <nobr>#2[i]</nobr> tours.",
+   "typeDescHash": "Talent",
+   "iconPath": "ad66d8e99892fd4896dccb6e52fa238917005024f4640e2345a7b4d3caca0f87",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.15,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.155,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.16,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635674,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.165,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920201,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.17,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920201,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.175,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920201,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.18125,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836260,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.1875,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836260,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.19375,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836260,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.2,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836260,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.205,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.21,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.215,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.22,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.225,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 746983,
+   "name": "Attaque",
+   "tagHash": "",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
+   "typeDescHash": "",
+   "iconPath": "67e231b77b0d05343380cfb12aa110059d6d5b19a9d583aef7e1b39b3d7d974c",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 663042,
+   "name": "Escrime perce-nuages : Cri de guerre",
+   "tagHash": "",
+   "descHash": "Attaque immédiatement un ennemi. Sushang inflige des DGT physiques équivalents à <nobr>#1[i]%</nobr> de son ATQ à tous les ennemis en entrant en combat.",
+   "typeDescHash": "Technique",
+   "iconPath": "5782e06e2b453d4226a8b427aeedc8e5ae369bd56dc076d6a9a54004b583ad36",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1206101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1206202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1206203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 731290,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920201,
+          "count": 2
+         },
+         {
+          "id": 633444,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 731289,
+      "name": "Augmentation de PV",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635674,
+        "count": 2
+       },
+       {
+        "id": 549503,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 731193,
+    "name": "Cœur pur",
+    "descHash": "Réduit les chances du personnage d'être attaqué par des ennemis quand son pourcentage de PV est inférieur ou égal à <nobr>#1[i]%</nobr>.",
+    "iconPath": "5acd037f83ec998ae37aa6953967a72363ba8bd49727b6a959438184d8033fb2",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.5,
+       0.5
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635674,
+        "count": 2
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1206102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1206205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1206206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 731285,
+        "name": "Augmentation de PV",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "PV",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836260,
+          "count": 2
+         },
+         {
+          "id": 717385,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 731288,
+      "name": "Augmentation d'ATQ",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920201,
+        "count": 4
+       },
+       {
+        "id": 633444,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 731196,
+    "name": "Riposte",
+    "descHash": "Pour chaque déclenchement de Posture de l'épée, les DGT infligés par Posture de l'épée augmentent de <nobr>#1[i]%</nobr>. Cumulable jusqu'à <nobr>#2[i]</nobr> fois.",
+    "iconPath": "26b6d7188bbbb978be75351ba3dbcd0ec9f4a345e0013721344dc88567b5879d",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.025,
+       10
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920201,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1206103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1206208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1206209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 731300,
+        "name": "Augmentation de PV",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "PV",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836260,
+          "count": 6
+         },
+         {
+          "id": 717385,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1206210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 614646,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836260,
+          "count": 6
+         },
+         {
+          "id": 717385,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 731299,
+      "name": "Augmentation de DÉF",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+      "statusList": [
+       {
+        "key": "DÉF",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836260,
+        "count": 6
+       },
+       {
+        "id": 717385,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 731195,
+    "name": "Victorieuse",
+    "descHash": "Si des ennemis sur le champ de bataille sont affectés par une Rupture de faiblesse après utilisation de l'ATQ normale ou de la compétence, l'action de Sushang est avancée de <nobr>#1[i]%</nobr>",
+    "iconPath": "d5b0cee70546ec3dfd1a7c6f3261224c5878d3163b327d0e42078aba1d4fdf0f",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.15
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836260,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1206201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 731292,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549503,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1206204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 731287,
+    "name": "Augmentation de DÉF",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+    "statusList": [
+     {
+      "key": "DÉF",
+      "value": 0.05
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 8000
+     },
+     {
+      "id": 920201,
+      "count": 2
+     },
+     {
+      "id": 633444,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1206207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 731286,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.06
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 36000
+     },
+     {
+      "id": 836260,
+      "count": 2
+     },
+     {
+      "id": 717385,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corps",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "Chances de coup critique",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "Pieds",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "VIT",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+   },
+   {
+    "relicTypeHash": "Sphère planaire",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "Augm. des DGT physiques",
+    "propertyIconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e"
+   },
+   {
+    "relicTypeHash": "Corde de liaison",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "Effet de Rupture",
+    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Première rencontre",
+   "text": "Je m'appelle Sushang, et je viens de rejoindre les Chevaliers des nuages. Viens me voir si tu as un problème... Même si, bon, je ne connais pas très bien le Luofu, héhé.",
+   "unlockRequirement": "",
+   "cnUrl": "00abc49970bee47b7fb437197c82fdb0887a9ef6c0cec5b95e60db864405057a",
+   "jpUrl": "71d60138c6f57716092665054ee4fe54328c0d58d40e91329e25bbdf980ffd84",
+   "enUrl": "c250b08b8766db2c25951a4c39ae35e77e556d17230c4023469963172073d853",
+   "krUrl": "ee956445fc8aecb30a4a519b46589ea0af19c229f7904c7839b0bc74f6430f8d"
+  },
+  {
+   "id": 2,
+   "title": "Salutation",
+   "text": "Inutile de te formaliser avec moi, j'aide tous les... Hein ? Tu viens juste dire bonjour ? Tu n'as pas besoin de mon aide ?",
+   "unlockRequirement": "",
+   "cnUrl": "ec21d8143e6db1c1519c10e3e93e5e6737ffd6cd12aa4b2f46812f2518c911eb",
+   "jpUrl": "21b691af2f5bbad8fed829bfd65774b87faa5afdb77f7973da8e5eb60ada3d3f",
+   "enUrl": "286bcd524664e4c195aee34e7938f5d41c9df88b3f5a9cc5034b9b48bed896e5",
+   "krUrl": "c6e1497bd2cd2bd4987d331535ae645686f9af0896e5d4c72a32a7c61a7981a2"
+  },
+  {
+   "id": 3,
+   "title": "Au revoir",
+   "text": "J'ai encore été très motivée à aider aujourd'hui ! Je suis vraiment contente de moi. Il est temps d'aller me reposer !",
+   "unlockRequirement": "",
+   "cnUrl": "a3f86a4e8736d3450e4e5c6b7317d347a93fc406280bc5854df07c396b855b99",
+   "jpUrl": "dda179e227200948f75836acd4e8c88014604f99537704827184747ed926de03",
+   "enUrl": "87f41b65b412e7a6292893f354814426d7c70e5b82014dace5817e9356208557",
+   "krUrl": "ebbd2945791e32a1fceb3724459c0554290a1b822695eea336e6eb6ccefd0094"
+  },
+  {
+   "id": 4,
+   "title": "Connaître Sushang : Credo",
+   "text": "« Apporte toujours ton aide. Fais une bonne action par jour et remets-toi en question trois fois par jour. » Je veillerai à ce qu'on inscrive ces mots dans ma biographie plus tard !",
+   "unlockRequirement": "",
+   "cnUrl": "98ba06fc4452569c97dff41828595f1be800e9774a0f936438c6d3caccdec55e",
+   "jpUrl": "93049f829a56852d02a8a533f22ef6acbec54634a1db0dfda398a28152dd3502",
+   "enUrl": "06e63361600e532621dd87e937e9691be409f71466b980e3004bd6b946268889",
+   "krUrl": "08b447970a3707d37c3d1e6f4cbc3d534f53b766ae4f9770d9ebc67e0b72acda"
+  },
+  {
+   "id": 5,
+   "title": "Bavardage : Épée de Xuanyuan",
+   "text": "C'est un souvenir de famille, elle doit avoir une longue histoire, j'imagine ? Ma mère peut la manier à une main, mais moi j'ai du mal avec deux, alors...",
+   "unlockRequirement": "",
+   "cnUrl": "456ce04fc205b76d5db68ea182859eefa77f1f56a486e69edc733be3c54814d0",
+   "jpUrl": "a03620118f1ce376200a1901b1206eb71c2094ed83ad0a3bc4aa757d9caf0a5f",
+   "enUrl": "d3d3a765c4e474c3d36987bac0828981d270ca0da2fda1cc5150c53a15f8acd9",
+   "krUrl": "10e87dcdef2bdcd36866f0d932ce69e7294f53315a6c69463e52e2f66229d74a"
+  },
+  {
+   "id": 6,
+   "title": "Passe-temps",
+   "text": "Quand j'étais petite, j'étais fascinée par les Foxiens qu'on voyait dans la rue raconter les histoires des martyrs des Chevaliers des nuages. Ma mère devait me tirer par la main ou je serais restée à les écouter toute la journée !",
+   "unlockRequirement": "",
+   "cnUrl": "09f8ffd16ced4f34b91d7cc9866366ba76dd6c3de081df751900753db5d27784",
+   "jpUrl": "dd50d59b370a973d9984393c0e1e3c1e0501c56c3b3f25886e72631c7d6e6562",
+   "enUrl": "9920f1a426b1e875df88f769bc35589d0fb87c0823b09ba93298db2da9bf05db",
+   "krUrl": "24a3d395af94d0e0e9197d07ae439d04a8bab9a8a846c1e885296248dd8709d1"
+  },
+  {
+   "id": 7,
+   "title": "Problèmes",
+   "text": "Tous les habitants de l'extérieur qui arrivent à Xianzhou commencent leurs phrases par « Il y a un vieux proverbe à Xianzhou qui dit... », mais moi qui suis née ici, je n'en connais aucun. Bizarre...",
+   "unlockRequirement": "",
+   "cnUrl": "b553800ec3b6e74e99f3663cd68969376ce78736fdc22d28f7f8b3262c733c3a",
+   "jpUrl": "4a22578d6c5e6e50381bafae6d6c6bc4da62ca1b22f48cf7985d3a863a2c449e",
+   "enUrl": "bab1bb9bbf5694c338a8d3a4ce01d2e28a308f985ff1c0bcebf01397eb3629ab",
+   "krUrl": "12f24b47c1e87b2b3ad6517549c63c08ab5aff6e64ef53b08610b9bb285baf14"
+  },
+  {
+   "id": 8,
+   "title": "Anecdote",
+   "text": "*soupir* Pas facile d'être née dans une famille militaire. Ma mère m'a entraînée aux arts martiaux depuis toute petite, et je devais me lever avant l'aube pour croiser le fer avec elle. J'étais si fatiguée que je m'endormais en classe. Les professeurs m'appelaient Sushang au bois dormant...",
+   "unlockRequirement": "",
+   "cnUrl": "1014b813e8a032b472c42936fbaf6b9ff95b3526e8729814d50c3b74f546a0da",
+   "jpUrl": "38321c85a9a974bc3acdc169c6cf18f2467efe1e3c9ce4cca351f85de7162368",
+   "enUrl": "1a161fb79ad69c5086cb86d71aa7df66ee06497c29d3f3d2cd9cdff0963817a4",
+   "krUrl": "9ebd36ed5a9ed3adc2a6d6a64d8d7c1f8ff6c73684638fe1932b3722343bcf14"
+  },
+  {
+   "id": 9,
+   "title": "Connaissances",
+   "text": "Écouter une histoire à bord du Luofu, c'est un rêve devenu réalité ! C'est quand même là que le Quintet de haut-nuage a connu la gloire. On y retrouve toute l'expertise de monsieur Xiyan, le conteur du Comte insomniaque.",
+   "unlockRequirement": "",
+   "cnUrl": "c70cb41961100e929812f486dea974200dd02c9e28030fe14b0e8303340eb712",
+   "jpUrl": "cdf94d798a861a8057b9c188cdae1d2e4c1c9f0204b66e9c6231749e057e4343",
+   "enUrl": "89fddb8e215583c5c25eea76aeab9e9edba61247a263a850b8d7c72d1693bb4c",
+   "krUrl": "188c6b0f9e8a425920b5e4b6a41cb0ba8e8f75236f0d9cbca54117f0f2602c50"
+  },
+  {
+   "id": 10,
+   "title": "À propos de Jing Yuan",
+   "text": "Le « général endormi » du Luofu de Xianzhou... J'ai entendu parler de lui, et j'ai l'impression qu'il ne fait rien... Il n'est pas aussi doué que notre générale à bord du Yaoqing.",
+   "unlockRequirement": "",
+   "cnUrl": "340af81952c399f0cb80fda577f577e5df3a6797e38eb48833a284afc9970185",
+   "jpUrl": "0f7d1d662e5d87616c50ded585ad0e5d2d3f428b37cd8d384447a65d10385a3c",
+   "enUrl": "7fe6565cb73b62f73219f02b53ffce0a421ccf9f083e418f6aac15582280320a",
+   "krUrl": "4f50f4a61677a1228fe8be34a916ad5bcdfaf11da9b010321eba34c8b9a5c743"
+  },
+  {
+   "id": 11,
+   "title": "À propos de Yanqing",
+   "text": "Il est si jeune, et déjà lieutenant des Chevaliers des nuages ?! Il aurait une mère encore plus stricte que la mienne ?",
+   "unlockRequirement": "",
+   "cnUrl": "61d67f0adc2ec8ba54cfba87040f47d01e0fd73719d9efd4fbf7b14ccde14cc1",
+   "jpUrl": "e54b124e1edbe72a33a0c932becc6f8edd6a6dc2c9d9f975d3b9fca3f1d3c44f",
+   "enUrl": "e524c70efe0d40c8a17eaec26cf2cdf39bdba63ed94848d52c64c35fd5a5ecb0",
+   "krUrl": "0aaba776f227451dde92c866318fe327320eadbc3f9514ccaa5b388608509172"
+  },
+  {
+   "id": 12,
+   "title": "À propos de Fu Xuan",
+   "text": "Je pense à ça à chaque fois que j'entends la divinatrice Fu parler : on vient toutes les deux de Xianzhou, mais est-ce qu'on parle bien la même langue ?",
+   "unlockRequirement": "",
+   "cnUrl": "abbde921ebff9d9d875d5e922e2582b97efeaab255906027cdf6698a6933e822",
+   "jpUrl": "ef668b29b9b3519e9da3e718346358f2eed26fb71463240ef34d2f2cb8f65bb4",
+   "enUrl": "54f95d280a24084792b3422d0a5871bb4cadf44490fae94e6858102286ca5015",
+   "krUrl": "e0ee5bc63019e350da3e2c2cabaf8925e6d3d297ad5d1208b525cedd93b74bb4"
+  },
+  {
+   "id": 13,
+   "title": "À propos de Yukong",
+   "text": "Il paraît que les vétérans des Chevaliers des nuages l'appellent la « Foxienne feu d'étoile ». C'est la meilleure pilote du Luofu, et ses exploits en astroskiff sont inégalables ! Je ne pensais pas qu'elle me parlerait aussi poliment quand je l'ai croisée...",
+   "unlockRequirement": "",
+   "cnUrl": "0444c1548408e626e17d920545191578a7710a38c13752bec44761263b7317bd",
+   "jpUrl": "1ad212025ab2eb324f73bbc2b7ae6491d0001ef8bfaae285fd0a539df81037ea",
+   "enUrl": "9d4f7d90e4f376e2e5820ab9cd9bfad2ec0f0895ed883a4cd3d348f46753f7e4",
+   "krUrl": "676b114552fe8e2e38a300d97660c55003a0b09681d18014aecb47932d25b2f3"
+  },
+  {
+   "id": 14,
+   "title": "À propos de Tingyun",
+   "text": "J'ai croisé Tingyun dans tellement de magasins que je l'ai prise pour une acheteuse compulsive... Puis j'ai appris que tous les magasins lui appartenaient !",
+   "unlockRequirement": "",
+   "cnUrl": "de6b2f3a0c1d3c1f9e8293e6564556a7a293e373c2ce6e6d9dfe9b2ac934b25a",
+   "jpUrl": "a1c32348825038175cf192097c934f58dd5696c271c166d3ba3059956955cfe0",
+   "enUrl": "131f2749431a6a906d3e640bc1b063c4d355de08de39b4e85927a6b1aafa28f7",
+   "krUrl": "a8684043a84ed34b607d9c7bfda7eadff4af6d0f4a69469cace9763fa4465f1f"
+  },
+  {
+   "id": 15,
+   "title": "À propos de Qingque",
+   "text": "C'est la jeune fille qui joue dans la salle de jeux, c'est ça ? Elle doit jouer depuis des années pour être si forte... Elle maîtrise son domaine comme un art martial.",
+   "unlockRequirement": "",
+   "cnUrl": "595cc20fc018f4c907c070f3e0c6c75135556a5977d94a77fc89acda247c106f",
+   "jpUrl": "db4875a0a89d8dd1cf6ef2f6c03fd4d8d3e742c994ec463056447bec290fb651",
+   "enUrl": "c1cdccefd80794eb8c304f9f4aa6c3bcef0745e0ff5a0042781654879d9c5d99",
+   "krUrl": "da67b25a43cfc272bd6bc1f5252a409ccce27ad310dca2159625f16dd566c608"
+  },
+  {
+   "id": 16,
+   "title": "À propos de Luocha",
+   "text": "Il a l'air faible, mais il a du cran. S'il n'était pas à Xianzhou et qu'il ne m'avait pas rencontrée, il se serait fait voler à trimballer cette grosse valise avec lui.",
+   "unlockRequirement": "",
+   "cnUrl": "5f8707296512423484e4b0b4ef58bc0c096a4f0f08073d725e2ec4c957d6087f",
+   "jpUrl": "d44dda96542cc11a1371d9119a010b5ae1bc33d7eb3883d67b7703613809e7f2",
+   "enUrl": "29902c7b6cff389c442f5dc23de7657fe84160ddae6809f8c4f431be547aa4ac",
+   "krUrl": "75aa6d915d71bea5681cc2741641bfdc2583ceb574462339521deb200a7ca240"
+  },
+  {
+   "id": 17,
+   "title": "À propos de Bailu",
+   "text": "Bailu... C'est cette fille guérisseuse. Il paraît que ses pleurs peuvent guérir les malades... N'importe quoi ! Enfin, c'est une Vidyadharienne, et avec eux, plus c'est gros, plus ça a de chances d'être vrai.",
+   "unlockRequirement": "",
+   "cnUrl": "a2346962642ab88a5b944f5ded1ebd0297600c5ab40f85a8458c48856baa642e",
+   "jpUrl": "6a08f9f2792e801645f455e8a93e5b56dafe5c0d16e1325653eb22f2df669fa9",
+   "enUrl": "e600cdf80f9a09af4184809a17485eb44be686fd626d52afa44c142686ef87b8",
+   "krUrl": "e490f73be111a676f0ec8356c46591ee477f0b2a3890af5a158f8f65489de1b6"
+  },
+  {
+   "id": 18,
+   "title": "À propos de Jingliu",
+   "text": "« Un éclat de clair de lune, neuf cents vies » : c'est ma phrase préférée parmi les histoires de monsieur Xiyan à propos de Jingliu. Pourquoi les archives des Chevaliers des nuages ne parlent-elles pas d'une telle maîtresse de l'épée ?",
+   "unlockRequirement": "",
+   "cnUrl": "256bde1fd886b8912555fedfc72be583d5f493f585f4770e94a8bbea52416e05",
+   "jpUrl": "b4b1f4a5ecc5f46cdfb0e9d81c1056d2b160b63a90fea4872efdea88a76cbc73",
+   "enUrl": "ce4b400a58a8893f97cdc2dcc9a69a57bb522749056685f9454d36cb4d84a698",
+   "krUrl": "c696694d62098ca866024b5df1a7c687dd30fbec7ef45b293300221b9136da49"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Détails du personnage",
+   "text": "Une nouvelle venue parmi les Chevaliers des nuages. Naïve et enthousiaste, elle manie une grande épée.<br />Fervente admiratrice des légendes historiques des Chevaliers des nuages, elle désire ardemment devenir elle-même une figure légendaire.<br />De ce fait, Sushang croit fermement à la nécessité d'aider les autres, d'effectuer une bonne action tous les jours et de méditer trois fois par jour. Elle consacre donc le plus clair de son temps à venir en aide à autrui.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Histoire du personnage : Partie I",
+   "text": "Ô Portail de jade si brillant, ô cieux de jade aériens. Les astroskiffs sillonnent la Grande foire et les touristes affluent à la porte du ciel. Quiconque entre ou sort du Luofu peut apercevoir en levant les yeux un immense portail, dont la membrane tourbillonne comme un vortex. Cette porte se tient au milieu de rien, sans mur pour la supporter, et laisse les vaisseaux aller et venir. C'est une chose à voir dans sa vie.<br /><br />Cette porte du ciel s'appelle le Portail de jade et constitue l'entrée des domainosphères de Xianzhou. Plus loin, les voyageurs affluent vers l'intérieur du Luofu. Parmi eux se trouve une jeune fille vêtue d'une robe couleur pêche, d'environ <nobr>16</nobr> ou <nobr>17</nobr> ans. Mais comme il s'agit d'une native de Xianzhou, il est impossible de deviner son âge réel, pas plus que de savoir quelle force étrange lui permet de tenir dans sa main son énorme épée.<br /><br />D'environ soixante-quatre centimètres, elle est hors du commun. Elle a beau être enveloppée d'un linge blanc, on dirait quand même une antiquité. Pourtant, il s'agit bien d'une arme. Ses deux tranchants sont aussi fins que des ailes de cigale, comme si une vive brise était capable de les briser. Lorsque les gens voient cette arme, ils n'en reviennent pas. Visiblement habituée, la jeune fille fronce simplement les sourcils d'agacement en marmonnant :<br />« Que c'est étrange ! Mère m'a appris à chanter cette rengaine pour m'aider à me concentrer. Pourquoi cela ne fonctionne-t-il pas maintenant ? »<br /><br />Avant qu'elle n'ait le temps de psalmodier d'autres mots obscurs, un douanier vidyadharien fit signe à la fille de venir : « Suivant, s'il vous plaît ! » La fille sursauta et serra fort les dents, mais se résigna à avancer.<br /><br />« On peut fondre de l'or, mais un serment... » lança d'un ton austère la jeune fille au Vidyadharien.<br />« On peut fondre de l'or, mais on ne peut pas briser un serment. » Le Vidyadharien répondit d'un air ahuri : « Vous êtes à la douane, de quel serment parlez-vous ? Nom, provenance, raison de votre voyage, c'est tout ce que je veux savoir. »<br />Elle resta médusée et pensa s'être trompée dans son proverbe du Luofu. Désemparée, elle ramassa son Miroir carré et répondit : <br />« Nom : Sushang ; effets personnels : une épée de Xuanyuan ; provenance... »<br />« Zut, comment écrit-on \"Yaoqing\", s'il vous plaît ? »",
+   "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie II",
+   "text": "Cela faisait un moment que Sushang n'avait pas répondu à l'appel des Chevaliers des nuages du Luofu. Elle s'occupait en patrouillant dans les rues mais ne rencontrait jamais la moindre activité criminelle, ce qui l'énervait encore plus. Finalement, elle n'eut d'autre choix que de s'entraîner à l'épée et d'écouter des histoires pendant son temps libre. Ces journées sans intérêt n'en finissaient plus.<br /><br />Un jour, elle attendait, avachie sur la table, au Comte insomniaque que le conteur se prépare et commence son histoire du Quintet de haut-nuage du Luofu. Mais avant même que le silence ne tombe, un Chevalier des nuages fit irruption en criant : <br />« Sushang, viens immédiatement ! Les habitants de l'extérieur nous causent encore des problèmes ! »<br /><br />En entendant cet appel, elle écarquilla les yeux et empoigna rapidement sa grande épée avant de foncer sur les lieux. À son arrivée, elle vit une fille rousse avalant des épées et crachant du feu devant une foule exaltée. Peu de temps après, cette même fille installa une dalle de granite verte, déterminée à effectuer son coup du « destructeur de dalle avec la poitrine ».<br /><br />« Arrêtez ! La circulation ici a toujours posé problème. Ce n'est pas un fichu cirque, OK ? » cria Sushang d'un ton ferme en fléchissant les jambes et en brandissant son épée de Xuanyuan pour la pointer vers la femme. Cette dernière remarqua son manque de stabilité et resta calme. Elle la contourna avant de faire tournoyer une fois de plus son bâton enflammé, à la surprise générale.<br /><br />« Par respect, je vais partir ! » dit la rouquine à voix haute. D'un mouvement de main, la pointe émoussée de sa lance vint bloquer les mains de Sushang. Sushang eut un mouvement de recul, après quoi la femme sortit subitement plusieurs objets ronds de son sac qu'elle lança violemment au sol pour envoyer fumée et flammes de tous les côtés, dans une série d'explosions incessantes. Lorsque Sushang retrouva ses esprits, la femme avait disparu : <br />« C'était quoi, ça... des pétards ? »<br />« Cette habitante de l'extérieur... Mieux vaut ne pas la sous-estimer ! »",
+   "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie III",
+   "text": "Chers parents,<br /><br />Comment allez-vous ? Je me bats aux côtés des Chevaliers des nuages du Luofu depuis quelque temps maintenant, comme vous me l'aviez demandé. Je tenais donc à vous l'annoncer !<br /><br />Je pense que l'événement le plus important de ces derniers temps est... que j'ai su m'occuper seule d'une personne dangereuse sans compter sur qui que ce soit d'autre ! Cette habitante de l'extérieur ne cesse de semer le trouble avec tous ses explosifs, au risque de blesser le public. Mais elle doit s'y sentir forcée par les vicissitudes de la vie. Grâce à moi, elle a décidé de tourner la page, et on est maintenant de très bonnes amies !<br /><br />J'ai aussi suivi votre conseil en m'entraînant tous les jours à l'épée. Je trouve que j'ai beaucoup progressé. Vous seriez fiers de mes progrès si je venais vous voir !<br /><br />Je me souviens qu'à mon départ, vous m'aviez dit d'arrêter mes caprices et de m'entraîner avec l'armée. Eh bien désormais, je m'entraîne beaucoup et je deviens de plus en plus mature. Il me reste tant à apprendre, mais je gère ! Vous n'avez donc aucune raison de vous inquiéter pour moi !<br /><br /><align=\"right\">Sushang</align><br /><align=\"right\"><nobr>21</nobr> octobre</align>",
+   "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie IV",
+   "text": "Sushang :<br /><br />Lire ta lettre, c'est presque comme t'avoir parmi nous. Nous sommes tous deux sains et saufs, ne t'inquiète donc pas pour nous.<br /><br />Quant à ta situation actuelle, nous comprenons et sommes très fiers. Nous t'avons par ailleurs ajouté ici des instructions et espérons que tu sauras faire l'effort de les suivre.<br /><br />Tout d'abord, avant de te faire de nouveaux amis, assure-toi qu'il s'agit d'une bonne personne. Sushang, tu as maintenant <nobr>15</nobr> ans, mais tu ne comprends toujours pas à quel point le monde peut être imprévisible et dangereux. Ton entente avec des bandits nous a beaucoup inquiétés et offensés. Prends uniquement pour amis des personnes honnêtes, dignes de confiance et cultivées. Mais évite les personnes opportunistes, lisses et flatteuses.<br /><br />Deuxièmement, n'essaie pas d'accomplir des choses grandioses. Nous connaissons ton goût pour la justice, mais tu sembles confondre fiction et réalité, ou tout du moins, tu sembles exagérer. Un vieux dicton de Xanzhou dit : « Tout comme une réputation se forge difficilement, la gloire ne peut être une coïncidence. » Il n'est pas bon d'accomplir des exploits et de s'en vanter. N'oublie jamais : nous, peuple de Xianzhou, sommes éternels. Ainsi, la célébrité et la fortune éphémères nous filent entre les doigts, jusque dans les sables du temps. Tu dois donc construire de bonnes bases, être méticuleuse et te concentrer sur l'aspect pratique des choses, comme si tu faisais du patin à glace. Un seul faux pas, et tu auras des ennuis, tu tomberas dans les griffes du mara et en assumeras les conséquences à vie !<br /><br />P.-S. : Aiguise bien ton épée chaque jour et n'oublie pas de réciter ton swara de bretteur pour focaliser ton esprit. L'esprit forme la base des arts martiaux, et lorsqu'il sera aussi informe que l'air, ton épée ne deviendra rien d'autre qu'une béquille sur laquelle t'appuyer. Herbe, bois, pierre, bambou et éléments similaires peuvent tous servir d'épée. Suis ton cœur et ta force librement. Il te faudra encore de nombreux jours pour atteindre la maîtrise parfaite de ton épée de Xuanyuan.<br /><br />P.-P.-S. : Tu as fait de nombreuses erreurs d'écriture, Sushang. S'il te plaît, lis davantage lorsque tu n'es pas en service. Et on dit « je m'en occupe », pas « je gère ».<br /><br /><align=\"right\">Suyi</align><br /><align=\"right\"><nobr>22</nobr> octobre</align>",
+   "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
+  }
+ ],
+ "archive": {
+  "cvCn": "陈婷婷",
+  "cvJp": "福圓美里",
+  "cvKr": "박시윤",
+  "cvEn": "Anjali Kunapaneni",
+  "camp": "Luofu de Xianzhou"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "sushang"
+}

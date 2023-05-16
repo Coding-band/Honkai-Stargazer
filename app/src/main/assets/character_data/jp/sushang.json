@@ -1,0 +1,2394 @@
+{
+ "name": "素裳",
+ "spRequirement": 120,
+ "rarity": 4,
+ "descHash": "仙舟「曜青」で生まれ、「羅浮」の雲騎軍で訓練を受けている新兵。 彼女は母から贈られた家伝の剣を手に、これから訪れる未来に期待を膨らませている。",
+ "iconPath": "ebad922c3652e677f45b86d689cd06d161c3af19f682d1c0742012b043027505",
+ "bgPath": "8fec2a5c123aeae3525bea2a371c37ac210d7072c96bb371b57862fb20af97c0",
+ "figPath": "6d653a7ba413765cf9d0e6c5f8a61e9e414b78e5a393a84e9c19c6a01d089719",
+ "fgPath": "1a9e22a8eaf5fc67282cf64d4dc570bf0b4c956b90167cdcb0ed08433f2edede",
+ "artPath": "3562896a9b7604475f5b3d7bc3221053409244a2fd0b859a8f1f7dbb10c8c350",
+ "miniIconPath": "3aed4d7fdbe85d9f52d4c5d0dfcea6aac5acc9ec50af06aa486f8584ae5b3299",
+ "splashIconPath": "cbe61d37b5bafc6825db783d9274c1ac4495dbb862e154938622ecdd2102bfc9",
+ "damageType": {
+  "id": 1,
+  "iconPath": "ae78085438eecf2462f1256329b5aa2369f01b8cda6926ea0a08b1b8affe5108",
+  "color": "#FFFFFF",
+  "name": "物理",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "f888d91738330cac6e95609d73ab3c9d4be23794bb22c5257171857c4c722262",
+  "altIconPath": "09f49c24cff05770b7c6decea7821c42fb5ddb87f1141b08d9a2c7d8d9344efc",
+  "color": "#FFFFFF",
+  "name": "巡狩",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 2,
+  "iconPath": "c66788e18b85100348634e29b364a9e96096bfcd10a9607ae873ceb817744d83",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "運命の足跡",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "幾度の敗北があなたに勝利をもたらし、一歩一歩の前進があなたを運命の転換点へと導いた。",
+   "purpose": "軌跡素材",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」ポイント報酬",
+    "ナナシの勲功",
+    "エンバー交換",
+    "期間限定イベント報酬"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "守護者の悲願",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "この仮面と一緒に、1人の守護者の歪んだ願いも砕け散った。<br />彼女は常冬の終末の中で民の未来を切り開くことを志したが、より壮大な意思に操られる傀儡となってしまった。<br /><br />「大守護者。ベロブルグの統治者が代々受け継ぐ称号であり、すべての市民を見守る者——だが人々は知らない、彼女たちを見守る人はいないということを」",
+   "purpose": "軌跡素材",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "歴戦余韻「常冬峰」"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "漫遊指南",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>20000</nobr>獲得できる。",
+   "lore": "世界を渡り歩くためには欠かせない、冒険手引き集。閲覧キーを押すと、電子音声が理解可能な言語で、有名な冒険者たちが様々な世界で体験したことや、彼らが色々な星で得た貴重な知識を語り聞かせてくれる。<br /><br />「漫遊指南最新シリーズ『スペースグルメガイド』が現在発売中。ぜひお買い求めください」<br />「投稿の際は、博識学会共感覚ビーコンのオペレーター<nobr>23</nobr>θにお繋ぎください。原稿料はあなたが普段から利用している方法でお振込みいたします」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "「忘却の庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "冒険記録",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>5000</nobr>獲得できる。",
+   "lore": "綺麗に装丁された、一目でためになるとわかる冒険日誌。冒険に関する細かい描写、価値のある情報、サバイバル術が書かれている。<br /><br />「なんで数字化してデバイスに保存しないの？持ち歩きやすくなるでしょ」<br />「お前が思っているより、先進技術は恒星嵐や中性子噴出に弱いんだ。なにより、この本の制作者は、最も簡単な方法で人々に読んでもらいたかったんだろう」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "デイリー訓練"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "旅の見聞",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>1000</nobr>獲得できる。",
+   "lore": "旅の出来事を記した日記。字はかすれており、不鮮明。思うままに内容が書かれてあるので、あまり助けにはならないだろう。<br /><br />「読み終わったら早くその紙切れを捨てるのよ、丹恒？」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "依頼報酬"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "fcb7215a2a17b09cd16362b5e1b398eaaf2fde23a94057c5f961151885a620c5",
+   "name": "工造機関",
+   "desc": "仙舟機巧の部品、強化に必要な簡易素材。",
+   "lore": "仙舟機巧術の基礎。機巧部品の最小構成単位、分解する時は生物の細胞構造を破壊しているように見える。<br /><br />「博識学会は<nobr>200</nobr>万信用ポイントで、仙舟の傀儡を傷つけずに解体する技術案を懸賞する」<br />「スクリューガムと知り合いなら、この<nobr>200</nobr>万はタダも同然……」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "入魔機巧などの敵からドロップ「廻星港」",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "1977002edbf48f44c49d08284ce2681f622e70c447d50de10a8b9491dfcb719c",
+   "name": "工造迴輪",
+   "desc": "仙舟機巧の部品、強化に必要な普通素材。",
+   "lore": "仙舟機巧術の連結部品。塵のように小さな歯車が緻密に繋がり、複雑な機体を形成し、機械に命を吹き込む。<br /><br />「その形は天を模し、円を成す。その動きは道を倣い、廻を成す」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "入魔機巧などの敵からドロップ「廻星港」（均衡Lv.2以上）",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "635674": {
+   "id": 635674,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "cb316badc06db5719753768d375ae94463fad49721b56569985ab88a684474c4",
+   "name": "狩獣の矢",
+   "desc": "仙舟の匠が星間寒鉄を鍛えて作った矢じり。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">巡狩</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "成人の儀の際、人生初の獲物を狩った少年少女に、彼らが人生の目標を成就できるように願った両親から贈られるもの。<br /><br />「腰の弓が、匣の剣が、埃に蝕まれぬように」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/635674",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」"
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "058379eb2e88612f2b1f78a6c3195c457e124c9b6de602d6dd2fe0b2d17245f3",
+   "name": "工造渾心",
+   "desc": "仙舟機巧の部品、強化に必要な高級素材。",
+   "lore": "仙舟機巧術の中枢。渾儀は心臓のように脈動し、機械に生き物の如く思考を与える。<br /><br />「怖がる必要はありません。心を取り外せば、彼…彼女？いや、其は心智を失い、無機質の塊に戻ります」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "入魔機巧などの敵からドロップ「廻星港」（均衡Lv.4以上）",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "836260": {
+   "id": 836260,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "f0bb6fd4143f707987f651fa21b81257202d038949944fa22d7615ad342d5bfa",
+   "name": "逐星の矢",
+   "desc": "帝弓の司命が放った傾天の光矢の破片。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">巡狩</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "縁がなければ見ることのできない神の痕。光年を超えて星を砕く一撃。人々は、光の矢が残した残響からその力を想像することしかできない。<br />仙舟の匠の頭「百冶」だけに、その欠片を鍛え、蓋世の功績を残した大英雄に贈与する資格がある。<br /><br />「星を裂きて天を傾げる、万古を照らす光」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/836260",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  },
+  "866633": {
+   "id": 866633,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "d97cb9072570df0b85725f8a0783d22e500c3e06e49b7fbc8dd485e7ba1b9516",
+   "name": "鉄狼の砕けた刃",
+   "desc": "自動機兵が残した細かいノコギリの歯。物理キャラクターの昇格素材。",
+   "lore": "かつて建創者の金属加工技術は、岩盤を切り開くチェーンソーをも作れたという。このような技術は現在は失われている。<br /><br />「スヴァローグさんは、この刃は分子の隙間に切り込むことができると言っていたけど…分子ってなんだ？」",
+   "purpose": "キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/866633",
+   "comeFrom": [
+    "凝結虚影「大鉱区」",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "920201": {
+   "id": 920201,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a9dabc100dfb0916188799f2d83770e60721301f4d7c930b850ae55815281ad1",
+   "name": "屠魔の矢",
+   "desc": "仙舟の匠が星辰玉を使い、丹精を込めて鍛え上げた矢じり。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">巡狩</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "指よりも少し細いの矢じり、電磁気クロスボウかサーマルボウの弾薬として使われる。金石のように硬い忌み物の殻を一撃で貫けるほどの強度。<br /><br />「天上の謫仙来られ、舟に乗りて星海を渡る。飛矢、疾雨を射落とし、明るき兜が白月を照らす」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/920201",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549503,
+     "count": 4
+    }
+   ],
+   "attackBase": 76.8,
+   "attackAdd": 3.84,
+   "hpBase": 124.8,
+   "hpAdd": 6.24,
+   "defenseBase": 57,
+   "defenseAdd": 2.85,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 107,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549503,
+     "count": 8
+    }
+   ],
+   "attackBase": 107.52,
+   "attackAdd": 3.84,
+   "hpBase": 174.72,
+   "hpAdd": 6.24,
+   "defenseBase": 79.8,
+   "defenseAdd": 2.85,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 107,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633444,
+     "count": 5
+    },
+    {
+     "id": 866633,
+     "count": 2
+    }
+   ],
+   "attackBase": 138.24,
+   "attackAdd": 3.84,
+   "hpBase": 224.64,
+   "hpAdd": 6.24,
+   "defenseBase": 102.6,
+   "defenseAdd": 2.85,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 107,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633444,
+     "count": 8
+    },
+    {
+     "id": 866633,
+     "count": 5
+    }
+   ],
+   "attackBase": 168.96,
+   "attackAdd": 3.84,
+   "hpBase": 274.56,
+   "hpAdd": 6.24,
+   "defenseBase": 125.4,
+   "defenseAdd": 2.85,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 107,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717385,
+     "count": 5
+    },
+    {
+     "id": 866633,
+     "count": 15
+    }
+   ],
+   "attackBase": 199.68,
+   "attackAdd": 3.84,
+   "hpBase": 324.48,
+   "hpAdd": 6.24,
+   "defenseBase": 148.2,
+   "defenseAdd": 2.85,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 107,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717385,
+     "count": 7
+    },
+    {
+     "id": 866633,
+     "count": 28
+    }
+   ],
+   "attackBase": 230.4,
+   "attackAdd": 3.84,
+   "hpBase": 374.4,
+   "hpAdd": 6.24,
+   "defenseBase": 171,
+   "defenseAdd": 2.85,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 107,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 261.12,
+   "attackAdd": 3.84,
+   "hpBase": 424.32,
+   "hpAdd": 6.24,
+   "defenseBase": 193.8,
+   "defenseAdd": 2.85,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 107,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "dd1924dd4e5230edf45c31b1ae85abb36b7ff226cb72d975e632fdf1cc365abe",
+   "name": "游刃有余",
+   "descHash": "弱点撃破状態の敵に対して戦闘スキルを発動した後、SPを1回復する。",
+   "params": []
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "af8c0f07a8bfdf6b154fba4599032197ef0d00eae957a7d6cf88093a5d7d4822",
+   "name": "其の身、百煉",
+   "descHash": "「剣勢」発動後、素裳の被ダメージ-<nobr>#1[i]%</nobr>、1ターン継続。",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "f113125e0223a9159893896a2d03ecd2cfd1e4271a59bb14f7b7f61639108979",
+   "name": "伝古剣流",
+   "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "592467d789aac8420fc842e753c506b60e717ff81a7432736e9713f46f8f4d5a",
+   "name": "其の心、百闢",
+   "descHash": "素裳の撃破特効+<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.4
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "513b5f985b101300277a702d5f162cef2d6560c8b1948fc6c3aca9bf58ffcfd9",
+   "name": "太虚神意",
+   "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "b2eddc2d4997dc46e0b48a1c691de4474cc4d9ed7d66c07fdfa650d9a3ee280b",
+   "name": "上善若水",
+   "descHash": "天賦の加速効果が累積できるようになる、最大で2層累積できる。戦闘に入った後、素裳は天賦の加速効果を1層獲得する。",
+   "params": []
+  }
+ ],
+ "skillGrouping": [
+  [
+   93988
+  ],
+  [
+   378515
+  ],
+  [
+   261870
+  ],
+  [
+   579101
+  ],
+  [
+   663042
+  ]
+ ],
+ "skills": [
+  {
+   "id": 93988,
+   "name": "雲騎剣経・月虹",
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体に素裳の攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#FFFFFF;\">物理</span>ダメージを与える。",
+   "typeDescHash": "通常攻撃",
+   "iconPath": "67e231b77b0d05343380cfb12aa110059d6d5b19a9d583aef7e1b39b3d7d974c",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635674,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920201,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920201,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836260,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836260,
+       "count": 6
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 378515,
+   "name": "雲騎剣経・山傾",
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体に素裳の攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#FFFFFF;\">物理</span>ダメージを与える。最後の1ヒットの後に<nobr>#3[i]%</nobr>の確率で「剣勢」を発動し、敵に素裳の攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分の<span style=\"color:#FFFFFF;\">物理</span><u>付加ダメージ</u>を与える。<br />敵が<u>弱点撃破状態</u>である場合、「剣勢」は必ず発動する。",
+   "typeDescHash": "戦闘スキル",
+   "iconPath": "eb0838257c72cf6c2f0ebfd9093363129d470ffd0382ea107aabe49f75585d0e",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1.05,
+      0.5,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.155,
+      0.55,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.26,
+      0.6,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635674,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.365,
+      0.65,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920201,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.47,
+      0.7,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920201,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.575,
+      0.75,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920201,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.70625,
+      0.8125,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836260,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.8375,
+      0.875,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836260,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.96875,
+      0.9375,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836260,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      2.1,
+      1,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836260,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      2.205,
+      1.05,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      2.31,
+      1.1,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      2.415,
+      1.15,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      2.52,
+      1.2,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      2.625,
+      1.25,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 261870,
+   "name": "太虚形蘊・燭夜",
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体に素裳の攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#FFFFFF;\">物理</span>ダメージを与え、素裳の次の行動順が<nobr>100%</nobr>早まる。素裳の攻撃力+<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span>、戦闘スキルを発動した時に「剣勢」発動の判定回数+2、<nobr>#2[i]</nobr>ターン継続。<br />追加の判定で発動した「剣勢」のダメージは本来のダメージの<nobr>#3[i]%</nobr>となる。",
+   "typeDescHash": "必殺技",
+   "iconPath": "a6fe6e4bcd38875e727edb311593d30b65a99908801c2ee857eb3b496a978b9e",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1.92,
+      2,
+      0.5,
+      0.18
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      2.048,
+      2,
+      0.5,
+      0.192
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      2.176,
+      2,
+      0.5,
+      0.204
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635674,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      2.304,
+      2,
+      0.5,
+      0.216
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920201,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      2.432,
+      2,
+      0.5,
+      0.228
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920201,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      2.56,
+      2,
+      0.5,
+      0.24
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920201,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      2.72,
+      2,
+      0.5,
+      0.255
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836260,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      2.88,
+      2,
+      0.5,
+      0.27
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836260,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      3.04,
+      2,
+      0.5,
+      0.285
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836260,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      3.2,
+      2,
+      0.5,
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836260,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      3.328,
+      2,
+      0.5,
+      0.312
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      3.456,
+      2,
+      0.5,
+      0.324
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      3.584,
+      2,
+      0.5,
+      0.336
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      3.712,
+      2,
+      0.5,
+      0.348
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      3.84,
+      2,
+      0.5,
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  },
+  {
+   "id": 579101,
+   "name": "游刃若水",
+   "tagHash": "強化",
+   "descHash": "フィールド上の敵が弱点撃破された時、素裳の速度+<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[f2]%</nobr></span>、<nobr>#2[i]</nobr>ターン継続。",
+   "typeDescHash": "天賦",
+   "iconPath": "ad66d8e99892fd4896dccb6e52fa238917005024f4640e2345a7b4d3caca0f87",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.15,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.155,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.16,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635674,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.165,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920201,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.17,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920201,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.175,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920201,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.18125,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836260,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.1875,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836260,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.19375,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836260,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.2,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836260,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.205,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.21,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.215,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.22,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.225,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 746983,
+   "name": "攻撃",
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
+   "typeDescHash": "",
+   "iconPath": "67e231b77b0d05343380cfb12aa110059d6d5b19a9d583aef7e1b39b3d7d974c",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 663042,
+   "name": "雲騎剣経・叩陣",
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、敵全体に素裳の攻撃力<nobr>#1[i]%</nobr>分の<span style=\"color:#FFFFFF;\">物理</span>ダメージを与える。",
+   "typeDescHash": "秘技",
+   "iconPath": "5782e06e2b453d4226a8b427aeedc8e5ae369bd56dc076d6a9a54004b583ad36",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1206101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1206202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1206203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 731290,
+        "name": "攻撃強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "攻撃力",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920201,
+          "count": 2
+         },
+         {
+          "id": 633444,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 731289,
+      "name": "HP強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "HP",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635674,
+        "count": 2
+       },
+       {
+        "id": 549503,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 731193,
+    "name": "純真",
+    "descHash": "残りHPが<nobr>#1[i]%</nobr>以下の場合、敵に攻撃される確率がダウンする。",
+    "iconPath": "5acd037f83ec998ae37aa6953967a72363ba8bd49727b6a959438184d8033fb2",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.5,
+       0.5
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635674,
+        "count": 2
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1206102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1206205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1206206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 731285,
+        "name": "HP強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "HP",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836260,
+          "count": 2
+         },
+         {
+          "id": 717385,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 731288,
+      "name": "攻撃強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "攻撃力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920201,
+        "count": 4
+       },
+       {
+        "id": 633444,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 731196,
+    "name": "逐寇",
+    "descHash": "「剣勢」を発動するたび、「剣勢」の与ダメージ+<nobr>#1[i]%</nobr>、最大で<nobr>#2[i]</nobr>回累積できる。",
+    "iconPath": "26b6d7188bbbb978be75351ba3dbcd0ec9f4a345e0013721344dc88567b5879d",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.025,
+       10
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920201,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1206103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1206208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1206209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 731300,
+        "name": "HP強化",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "HP",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836260,
+          "count": 6
+         },
+         {
+          "id": 717385,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1206210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 614646,
+        "name": "攻撃強化",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "攻撃力",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836260,
+          "count": 6
+         },
+         {
+          "id": 717385,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 731299,
+      "name": "防御強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+      "statusList": [
+       {
+        "key": "防御力",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836260,
+        "count": 6
+       },
+       {
+        "id": 717385,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 731195,
+    "name": "破敵",
+    "descHash": "通常攻撃または戦闘スキルを発動した後、フィールド上に弱点撃破状態の敵が存在する場合、素裳の行動順が<nobr>#1[i]%</nobr>早まる。",
+    "iconPath": "d5b0cee70546ec3dfd1a7c6f3261224c5878d3163b327d0e42078aba1d4fdf0f",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.15
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836260,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1206201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 731292,
+    "name": "攻撃強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "攻撃力",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549503,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1206204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 731287,
+    "name": "防御強化",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+    "statusList": [
+     {
+      "key": "防御力",
+      "value": 0.05
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 8000
+     },
+     {
+      "id": 920201,
+      "count": 2
+     },
+     {
+      "id": 633444,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1206207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 731286,
+    "name": "攻撃強化",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "攻撃力",
+      "value": 0.06
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 36000
+     },
+     {
+      "id": 836260,
+      "count": 2
+     },
+     {
+      "id": 717385,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "胴体",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "会心率",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "速度",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+   },
+   {
+    "relicTypeHash": "次元界オーブ",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "物理与ダメージ",
+    "propertyIconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e"
+   },
+   {
+    "relicTypeHash": "連結縄",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "撃破特効",
+    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初対面",
+   "text": "アタシは素裳、最近雲騎軍に加入したんだ。もし危険な目に遭ったらアタシを呼んで、全力で守るから！",
+   "unlockRequirement": "",
+   "cnUrl": "00abc49970bee47b7fb437197c82fdb0887a9ef6c0cec5b95e60db864405057a",
+   "jpUrl": "71d60138c6f57716092665054ee4fe54328c0d58d40e91329e25bbdf980ffd84",
+   "enUrl": "c250b08b8766db2c25951a4c39ae35e77e556d17230c4023469963172073d853",
+   "krUrl": "ee956445fc8aecb30a4a519b46589ea0af19c229f7904c7839b0bc74f6430f8d"
+  },
+  {
+   "id": 2,
+   "title": "挨拶",
+   "text": "堅苦しい挨拶は要らないよ、アタシはいつでも…えっ、本当に挨拶だけ？手助けは不要なの？",
+   "unlockRequirement": "",
+   "cnUrl": "ec21d8143e6db1c1519c10e3e93e5e6737ffd6cd12aa4b2f46812f2518c911eb",
+   "jpUrl": "21b691af2f5bbad8fed829bfd65774b87faa5afdb77f7973da8e5eb60ada3d3f",
+   "enUrl": "286bcd524664e4c195aee34e7938f5d41c9df88b3f5a9cc5034b9b48bed896e5",
+   "krUrl": "c6e1497bd2cd2bd4987d331535ae645686f9af0896e5d4c72a32a7c61a7981a2"
+  },
+  {
+   "id": 3,
+   "title": "お別れ",
+   "text": "今日も「人助け」の1日だったなあ、自分に大満足！じゃ、さよなら！",
+   "unlockRequirement": "",
+   "cnUrl": "a3f86a4e8736d3450e4e5c6b7317d347a93fc406280bc5854df07c396b855b99",
+   "jpUrl": "dda179e227200948f75836acd4e8c88014604f99537704827184747ed926de03",
+   "enUrl": "87f41b65b412e7a6292893f354814426d7c70e5b82014dace5817e9356208557",
+   "krUrl": "ebbd2945791e32a1fceb3724459c0554290a1b822695eea336e6eb6ccefd0094"
+  },
+  {
+   "id": 4,
+   "title": "自分について・信条",
+   "text": "「頼まれたら必ず応じる、日に三度は我が身を省みる」――この言葉は、いつかアタシの伝記に記されて、歴史に残ることになる！",
+   "unlockRequirement": "",
+   "cnUrl": "98ba06fc4452569c97dff41828595f1be800e9774a0f936438c6d3caccdec55e",
+   "jpUrl": "93049f829a56852d02a8a533f22ef6acbec54634a1db0dfda398a28152dd3502",
+   "enUrl": "06e63361600e532621dd87e937e9691be409f71466b980e3004bd6b946268889",
+   "krUrl": "08b447970a3707d37c3d1e6f4cbc3d534f53b766ae4f9770d9ebc67e0b72acda"
+  },
+  {
+   "id": 5,
+   "title": "世間話・軒轅剣",
+   "text": "家伝の武器らしくて、結構有名なものなんだって。母さんは片手で簡単に振るえるけど、アタシは両手で持つのも大変なんだよね…はあ……",
+   "unlockRequirement": "",
+   "cnUrl": "456ce04fc205b76d5db68ea182859eefa77f1f56a486e69edc733be3c54814d0",
+   "jpUrl": "a03620118f1ce376200a1901b1206eb71c2094ed83ad0a3bc4aa757d9caf0a5f",
+   "enUrl": "d3d3a765c4e474c3d36987bac0828981d270ca0da2fda1cc5150c53a15f8acd9",
+   "krUrl": "10e87dcdef2bdcd36866f0d932ce69e7294f53315a6c69463e52e2f66229d74a"
+  },
+  {
+   "id": 6,
+   "title": "趣味",
+   "text": "子供の頃は、街で『雲騎英烈伝』を詠む狐族の講談師を見るたびに、その場から動けなくなってたなあ。母さんがアタシを引き摺って帰ったりしなければ、ずっと聞いていられたよ！",
+   "unlockRequirement": "",
+   "cnUrl": "09f8ffd16ced4f34b91d7cc9866366ba76dd6c3de081df751900753db5d27784",
+   "jpUrl": "dd50d59b370a973d9984393c0e1e3c1e0501c56c3b3f25886e72631c7d6e6562",
+   "enUrl": "9920f1a426b1e875df88f769bc35589d0fb87c0823b09ba93298db2da9bf05db",
+   "krUrl": "24a3d395af94d0e0e9197d07ae439d04a8bab9a8a846c1e885296248dd8709d1"
+  },
+  {
+   "id": 7,
+   "title": "悩み事",
+   "text": "最近仙舟に来た殊俗の民ときたら、口を開けば「仙舟のことわざには…」って語り始めるけど、アタシみたいな現地人は何もわからないんだ…",
+   "unlockRequirement": "",
+   "cnUrl": "b553800ec3b6e74e99f3663cd68969376ce78736fdc22d28f7f8b3262c733c3a",
+   "jpUrl": "4a22578d6c5e6e50381bafae6d6c6bc4da62ca1b22f48cf7985d3a863a2c449e",
+   "enUrl": "bab1bb9bbf5694c338a8d3a4ce01d2e28a308f985ff1c0bcebf01397eb3629ab",
+   "krUrl": "12f24b47c1e87b2b3ad6517549c63c08ab5aff6e64ef53b08610b9bb285baf14"
+  },
+  {
+   "id": 8,
+   "title": "シェア",
+   "text": "はあ、軍人の家系に生まれると大変だよ。子供の時から母さんに武術を叩き込まれるんだけど、夜明けの鐘が鳴る前に特訓が始まるから、朝には疲れちゃって…学校の授業が始まる頃には寝ちゃうの。だから、先生達には眠りのりっちゃんって呼ばれてたんだ……",
+   "unlockRequirement": "",
+   "cnUrl": "1014b813e8a032b472c42936fbaf6b9ff95b3526e8729814d50c3b74f546a0da",
+   "jpUrl": "38321c85a9a974bc3acdc169c6cf18f2467efe1e3c9ce4cca351f85de7162368",
+   "enUrl": "1a161fb79ad69c5086cb86d71aa7df66ee06497c29d3f3d2cd9cdff0963817a4",
+   "krUrl": "9ebd36ed5a9ed3adc2a6d6a64d8d7c1f8ff6c73684638fe1932b3722343bcf14"
+  },
+  {
+   "id": 9,
+   "title": "見聞",
+   "text": "やっと「羅浮」で講談を聴くっていう願いが叶った！「雲上の五騎士」の名はここから広まったんだから、本場で聴いておかないとね！「フヤコウ」のシエン先生の十八番なんだから。",
+   "unlockRequirement": "",
+   "cnUrl": "c70cb41961100e929812f486dea974200dd02c9e28030fe14b0e8303340eb712",
+   "jpUrl": "cdf94d798a861a8057b9c188cdae1d2e4c1c9f0204b66e9c6231749e057e4343",
+   "enUrl": "89fddb8e215583c5c25eea76aeab9e9edba61247a263a850b8d7c72d1693bb4c",
+   "krUrl": "188c6b0f9e8a425920b5e4b6a41cb0ba8e8f75236f0d9cbca54117f0f2602c50"
+  },
+  {
+   "id": 10,
+   "title": "景元について",
+   "text": "よく仙舟「羅浮」の「無眼将軍」の噂を聞くけど、なんだか仕事をしている印象がないというか…うん、アタシたち仙舟「曜青」の女将軍には敵わないね。",
+   "unlockRequirement": "",
+   "cnUrl": "340af81952c399f0cb80fda577f577e5df3a6797e38eb48833a284afc9970185",
+   "jpUrl": "0f7d1d662e5d87616c50ded585ad0e5d2d3f428b37cd8d384447a65d10385a3c",
+   "enUrl": "7fe6565cb73b62f73219f02b53ffce0a421ccf9f083e418f6aac15582280320a",
+   "krUrl": "4f50f4a61677a1228fe8be34a916ad5bcdfaf11da9b010321eba34c8b9a5c743"
+  },
+  {
+   "id": 11,
+   "title": "彦卿について",
+   "text": "あんなに若いのに、もう雲騎驍衛！？もしかして…アタシの母さんより強い人が、陰で剣の鍛錬を促してたりして！",
+   "unlockRequirement": "",
+   "cnUrl": "61d67f0adc2ec8ba54cfba87040f47d01e0fd73719d9efd4fbf7b14ccde14cc1",
+   "jpUrl": "e54b124e1edbe72a33a0c932becc6f8edd6a6dc2c9d9f975d3b9fca3f1d3c44f",
+   "enUrl": "e524c70efe0d40c8a17eaec26cf2cdf39bdba63ed94848d52c64c35fd5a5ecb0",
+   "krUrl": "0aaba776f227451dde92c866318fe327320eadbc3f9514ccaa5b388608509172"
+  },
+  {
+   "id": 12,
+   "title": "符玄について",
+   "text": "太卜様の言葉を聞くたびに、心の中で考えるんだ。同じ仙舟人なのに、本当に同じ言語を使っているのかなって。",
+   "unlockRequirement": "",
+   "cnUrl": "abbde921ebff9d9d875d5e922e2582b97efeaab255906027cdf6698a6933e822",
+   "jpUrl": "ef668b29b9b3519e9da3e718346358f2eed26fb71463240ef34d2f2cb8f65bb4",
+   "enUrl": "54f95d280a24084792b3422d0a5871bb4cadf44490fae94e6858102286ca5015",
+   "krUrl": "e0ee5bc63019e350da3e2c2cabaf8925e6d3d297ad5d1208b525cedd93b74bb4"
+  },
+  {
+   "id": 13,
+   "title": "御空について",
+   "text": "雲騎軍の老兵から「星火の狐」の話を聞いたことがあるよ。羅浮いちの飛行士として、御空様が残した星槎記録は今も破られてないんだって！実際に会ってみたら、思ったより柔らかい話し方をする人だった。",
+   "unlockRequirement": "",
+   "cnUrl": "0444c1548408e626e17d920545191578a7710a38c13752bec44761263b7317bd",
+   "jpUrl": "1ad212025ab2eb324f73bbc2b7ae6491d0001ef8bfaae285fd0a539df81037ea",
+   "enUrl": "9d4f7d90e4f376e2e5820ab9cd9bfad2ec0f0895ed883a4cd3d348f46753f7e4",
+   "krUrl": "676b114552fe8e2e38a300d97660c55003a0b09681d18014aecb47932d25b2f3"
+  },
+  {
+   "id": 14,
+   "title": "停雲について",
+   "text": "いろんな店で停雲さんを見たことがあるんだけど、ずっとお客さんだと思ってたんだよね。よく買い物をする人だなあって…でも後になって、それが彼女の店だって分かったの！",
+   "unlockRequirement": "",
+   "cnUrl": "de6b2f3a0c1d3c1f9e8293e6564556a7a293e373c2ce6e6d9dfe9b2ac934b25a",
+   "jpUrl": "a1c32348825038175cf192097c934f58dd5696c271c166d3ba3059956955cfe0",
+   "enUrl": "131f2749431a6a906d3e640bc1b063c4d355de08de39b4e85927a6b1aafa28f7",
+   "krUrl": "a8684043a84ed34b607d9c7bfda7eadff4af6d0f4a69469cace9763fa4465f1f"
+  },
+  {
+   "id": 15,
+   "title": "青雀について",
+   "text": "牌荘で牌を打ってる子のこと？ははっ、あの牌を打つ手の力、きっと何年もかけて磨いたものだろうね…あの域に達するまで牌を打ち続けてきたなら、もう立派な武芸だよ。",
+   "unlockRequirement": "",
+   "cnUrl": "595cc20fc018f4c907c070f3e0c6c75135556a5977d94a77fc89acda247c106f",
+   "jpUrl": "db4875a0a89d8dd1cf6ef2f6c03fd4d8d3e742c994ec463056447bec290fb651",
+   "enUrl": "c1cdccefd80794eb8c304f9f4aa6c3bcef0745e0ff5a0042781654879d9c5d99",
+   "krUrl": "da67b25a43cfc272bd6bc1f5252a409ccce27ad310dca2159625f16dd566c608"
+  },
+  {
+   "id": 16,
+   "title": "羅刹について",
+   "text": "弱そうに見えて、なかなか根性がある人って感じかな。あんなに大きな箱を持ち歩いてるんだもん、仙舟でアタシに出会ってなかったら、絶対に悪人に目をつけられてたよ。",
+   "unlockRequirement": "",
+   "cnUrl": "5f8707296512423484e4b0b4ef58bc0c096a4f0f08073d725e2ec4c957d6087f",
+   "jpUrl": "d44dda96542cc11a1371d9119a010b5ae1bc33d7eb3883d67b7703613809e7f2",
+   "enUrl": "29902c7b6cff389c442f5dc23de7657fe84160ddae6809f8c4f431be547aa4ac",
+   "krUrl": "75aa6d915d71bea5681cc2741641bfdc2583ceb574462339521deb200a7ca240"
+  },
+  {
+   "id": 17,
+   "title": "白露について",
+   "text": "白露…ああ！「啣薬の龍女」様？彼女が泣けば病が治るとか…ちょっと信じられないよね！でも持明族か…持明族なら、確かに信憑性があるかも……",
+   "unlockRequirement": "",
+   "cnUrl": "a2346962642ab88a5b944f5ded1ebd0297600c5ab40f85a8458c48856baa642e",
+   "jpUrl": "6a08f9f2792e801645f455e8a93e5b56dafe5c0d16e1325653eb22f2df669fa9",
+   "enUrl": "e600cdf80f9a09af4184809a17485eb44be686fd626d52afa44c142686ef87b8",
+   "krUrl": "e490f73be111a676f0ec8356c46591ee477f0b2a3890af5a158f8f65489de1b6"
+  },
+  {
+   "id": 18,
+   "title": "鏡流について",
+   "text": "「月光一線、九百生滅」――シエン先生の鏡流に関する話本の中で、この言葉が一番好きなんだ。でも…これほどの剣士が、どうして雲騎軍の史書に記載されてないんだろう……",
+   "unlockRequirement": "",
+   "cnUrl": "256bde1fd886b8912555fedfc72be583d5f493f585f4770e94a8bbea52416e05",
+   "jpUrl": "b4b1f4a5ecc5f46cdfb0e9d81c1056d2b160b63a90fea4872efdea88a76cbc73",
+   "enUrl": "ce4b400a58a8893f97cdc2dcc9a69a57bb522749056685f9454d36cb4d84a698",
+   "krUrl": "c696694d62098ca866024b5df1a7c687dd30fbec7ef45b293300221b9136da49"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "キャラクター詳細",
+   "text": "一本の重剣を携えた少女。雲騎軍の新人で単純かつ熱心。<br />雲騎軍の伝説に憧れ、自分も名を響かせるような人物になりたいと願っている。<br />そのため、素裳は「頼まれたら必ず応じる、日に三度は我が身を省みる」という信条を固く守り、人助けを楽しみながら慌ただしい日々を送っている。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "ストーリー・1",
+   "text": "玉界は朗朗、瓊田は蕩蕩。星槎は海市に織り込まれ、天門を往来する遊客は絡繹として絶えない。羅浮に出入りする客人は、頭を上げれば広々とした界門を見ることができる。その空間の隔膜は渦のように揺らぎながら、拠り所もなく大小不同の船を吐納している。実に壮観な光景だ。<br /><br />この天門の名は「玉界」、実は仙舟洞天の出入り口である。門の下、少し離れた場所に並んだ観光客の列が、ゆっくりと羅浮の中へ進んでいく。その中に杏黄の服を着た少女がいた。顔だけ見れば<nobr>16</nobr>、<nobr>17</nobr>歳くらいだろうが、仙舟の尺度では実年齢を推測することはできない。また、どれほどの怪力なのかはわからないが、かなり重そうな剣を背負っている。<br /><br />その剣は二尺一寸ほどあり、尋常ならざる大きさを誇る。白い布で剣身を覆ってはいるが、どうにも古典的で素朴に見える。しかし、その両刃はセミの翼のように薄く、髪の毛を乗せて息を吹けば両断できるほど鋭い。行き交う遊覧客はその兵器を見て度々賞賛の意を表しているが、少女は眉間にしわを寄せて考え込んだ。<br />「変だなぁ。母さんが教えてくれたこの心訣、心を静められるって言ってたのに、どうして効かないんだろう？」<br /><br />彼女がさらに小難しい言葉を口にする前に、関門を守る持明の男が彼女に向かって手を振った。「次の人！」少女は驚いて歯を食い縛ったが、意を決して前に進み出た。<br /><br />「金石は鑠けども、盟誓は……」少女は持明の男に向かって真面目に告げる。<br />「金石は鑠けども、盟誓は不破なり」、持明の男は少し訝しげに言った。「ただ通関すればいいのに、なぜ呪文を唱えたんだ？氏名、来歴、入境理由などを細かく記入してもらおうか」<br />少女は黙り込んだ。そして、自分が羅浮の典故を間違って使ったことに気付く。彼女は仕方なく四方鏡を取り出し、男の要求通りに報告を始めた。<br />「氏名：素裳、持ち物：『軒轅』、来歴……」<br />「…もう！この『曜青』の『曜』って字…どうやって書くんだっけ？」",
+   "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・2",
+   "text": "素裳が雲騎の招集に応えて羅浮に来てから、すでにそれなりの時間が経過している。彼女は日頃から真剣に見回りをしていたが、いくら続けても事件に遭遇することはなく、そのせいで最近は苛立ちを感じていた。結局、彼女は暇さえあれば剣術や武術の鍛錬をしたり、講談を聞きに行ったりと、とにかく退屈な日々を送っていた。<br /><br />その日、彼女は「不夜侯」のテーブルにもたれながら、講談師が羅浮「雲上の五騎士」の話を始めるのを待っていた。しかし驚堂木が落とされる前に、雲騎の同僚が扉を破って入って来るや否や、堂内で叫んだ。<br />「素裳、急げ！あの殊俗の民がまた騒ぎを起こしたぞ！」<br /><br />その言葉を聞いた素裳は瞬く間に気力を取り戻し、重剣を持って外に飛び出した。現場に到着すると、赤い髪の少女が剣を呑んだり、火を吹いたりと、周りの観客を賑わせている。やがて、その少女は巨大な青花崗岩の大板を持ち出して、その場で「胸で大石砕き」を披露しようとした。<br /><br />「そこまで！ここは普段から渋滞が問題になってるの。雑技をしていい場所じゃないよ！」素裳は厳しく叫びながら、『軒轅』の切っ先を少女に向ける。素裳の剣が不安定に揺れていることに気付いた少女は、怯むことなく斜め後ろに足を戻すと、その三尺はある火棍を振り上げた。<br /><br />「こっちから行かせてもらうね！」その赤い髪の少女は朗々とした声を上げ、槍棒を素裳の腕部めがけて投げつけた。素裳は咄嗟に一歩後退したが、その隙に少女は懐から丸いものを取り出し、それを勢いよく地面に叩きつけた。爆発音が立て続けに聞こえ、辺りが一瞬にして煙に包まれる。素裳が気が付いた時には、少女は姿を消していた。<br />「これって…爆竹！？」<br />「あの殊俗の民…侮れない！」",
+   "unlockRequirement": "キャラLv.<nobr>40</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・3",
+   "text": "「親愛なる母さん、父さんへ<br /><br />2人とも元気にしてる？アタシは言われた通り羅浮の雲騎で修行してるよ。今回は2人に報告したいことがあるんだ！<br /><br />アタシにとって、ここ最近で一番重要な出来事は——やっぱり他の人の手を借りないで危険分子を1人制圧したことかな！その殊俗の民はあちこちで騒ぎを起こしてるだけじゃなく、大量の爆発物を持ってたりもして、公共の安全を脅かしてたんだ。でも…その子は生計を立てるために仕方なくやってたんだって。今はアタシに感化されて更生して——なんとアタシの友達になったの！<br /><br />それから、2人の言いつけ通り毎日剣術の稽古を続けてるんだけど、すっごく上達した気がするの。休暇が取れたら家に帰って2人にも見せてあげるね。きっと喜んでもらえると思う！<br /><br />家を出る時に母さんと父さんに言われたことも忘れてないよ。心を鎮めて鍛錬に励む、決して心遠意馬してはいけない。アタシは色んなことを経験して、少しずつ成長してる。まだまだ足りないものもあるけど、アタシはもう独覇一面になったから！2人も心配しないでね！<br /><br /><align=\"right\">素裳</align><br /><align=\"right\"><nobr>10</nobr>月<nobr>21</nobr>日」</align>",
+   "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・4",
+   "text": "「素裳へ<br /><br />手紙を貰って、まるであなたに再会したかのような気持ちになりました。こちらは変わりありませんので、どうか心配なく。<br /><br />手紙に記されていた近況はよくわかりました、喜ばしい限りです。今回は新しく言いつけておきたいことができたので、この手紙の通りに努めてください。<br /><br />其の一、交友の際は損益を明確にするように。あなたはすでに及笄の歳ですが、人心は計り難いこと、世には陥穽の危険があることをまだ理解していない。邪なる悪党と同じ道を行くことになれば、私たちは深い憂いと憤りを感じるでしょう。素直な人、信頼できる人、知識のある人は君子であり、広く交際するべきですが、便辟する人、善柔な人、便佞な人は小人であり、離れるべきです。<br /><br />其の二、功名心に囚われてはならない。素裳が常に義侠心を貫いていること、義を重んじていることは私たちも知っていますが、手紙の内容には虚実が入り混じっていて、いくつか誇張されていると思われる箇所もありました。仙舟の諺にもあるように、『名は簡にして得られず、誉は巧にして立たず』。実力を発揮して傲慢になり、功績を自矜することは、多くの苦労をしたとしても避けるべきです。肝に銘じておきなさい。私たち仙舟の民の寿限は無窮ですが、幾多の功名は目前を過ぎる雲煙に過ぎません。だからこそ人は根本を固め、薄氷の上を歩くような気持ちで歩を進める必要があるのです。一時でも功を急げば、岐路の先で災難に遭い、魔陰に落ち、終生の害となるでしょう！<br /><br />別：日頃から剣技を砥礪すること。『剣心訣』を唱え心気を凝練することも忘れずに。心蘊は武芸の根本、いつか無形に心気を練り上げられた時、剣は身外のものと知るはずです。草、木、石、竹、すべて等しく剣と成し、心と力に順じ、逍遥自在の境地に至れば、『軒轅』を飼い慣らせる日も近いでしょう。<br /><br />又：誤字が多いわね、素裳。勤務の後は読書しなさい。それと、正しくは「独当一面」で「独覇」じゃないわ。<br /><br /><align=\"right\">素衣</align><br /><align=\"right\"><nobr>10</nobr>月<nobr>22</nobr>日」</align>",
+   "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
+  }
+ ],
+ "archive": {
+  "cvCn": "陈婷婷",
+  "cvJp": "福圓美里",
+  "cvKr": "박시윤",
+  "cvEn": "Anjali Kunapaneni",
+  "camp": "仙舟「羅浮」"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "sushang"
+}

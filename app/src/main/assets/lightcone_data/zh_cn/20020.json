@@ -1,0 +1,497 @@
+{
+ "name": "睿见",
+ "rarity": 3,
+ "descHash": "自时光中凝取的稀薄力量。正是所有微不足道的刹那，编织成了壮绝的命运。<br /><br />「智慧之人如果无法抛弃人的身份，则会被智慧抛弃。」",
+ "iconPath": "2918d0650e88aa10d220cd3289544540a184ba51d40c91ded44cc421d207bc73",
+ "artPath": "03e78b4bc42a4db24d8e023bb85997f98f92b8304fc124d8d82e667d89a29e99",
+ "mediumIconPath": "04a6158f9473cad9705a50066cc854aedf5155a251a5005ec6de54f4cccd9ae5",
+ "baseType": {
+  "id": 0,
+  "iconPath": "b9e59719a64e109bbcf97e61c2cf3c99730af37cbd230758a45d291825dbd941",
+  "color": "#FFFFFF",
+  "name": "智识",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用点",
+   "desc": "星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。",
+   "lore": "「人们奔波、争斗、贸易，为的不过是个终端里显示的数字。但真正珍贵之物，公司的数字是买不到的。」",
+   "purpose": "通用货币",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "拟造花萼【大矿区】",
+    "任务奖励",
+    "委托奖励"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5930a427c19aedca23d55eb6ef670cc8ecf07466630281586f32f4d5e8d49409",
+   "name": "掠夺的本能",
+   "desc": "微弱的反物质，强化所需的简单材料。",
+   "lore": "由虚卒•掠夺者体内逸散出的微弱反物质，如同破坏本能的具现化。<br /><br />「它们都在期许着湮灭之刻，与世界一同炼铸、同化。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "虚卒•掠夺者等敌方掉落【收容舱段】",
+    "虚卒•掠夺者等敌方掉落【支援舱段】",
+    "「模拟宇宙」中敌方掉落",
+    "委托奖励",
+    "余烬兑换",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "69d0630f4dc8d8bb4706a8a973f720ce46452e189a62c7b8b6f2ca8d567ca8ae",
+   "name": "篡改的野心",
+   "desc": "稀薄的反物质，强化所需的普通材料。",
+   "lore": "漂浮在虚卒•篡改者周身的的稀薄反物质，正反粒子于此达成了危险的平衡。。<br /><br />「它们都在期许着湮灭之刻，与世界一同炼铸、同化。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "均衡等级2及以上虚卒•掠夺者等敌方掉落【收容舱段】",
+    "均衡等级2及以上虚卒•掠夺者等敌方掉落【支援舱段】",
+    "「万能合成机」- 材料合成",
+    "「模拟宇宙」中敌方掉落",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "635675": {
+   "id": 635675,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a11149500124597e50362c7c3cd94c209d1a1b48d77ce9f7dfdfac64d8840ef3",
+   "name": "灵感之钥",
+   "desc": "出现在苦思学者手中的幻之钥匙。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">智识</span>角色的命途行迹。",
+   "lore": "可以解锁被封存在意识深处的灵感。<br />抓住钥匙，即是抓住了思维中蹿闪的火花，照亮了前进的道路。<br /><br />「尤里卡！」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 2,
+   "rewardPath": "/material/635675",
+   "comeFrom": [
+    "拟造花萼【铆钉镇】"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "提纯以太",
+   "desc": "光锥的强化材料，可以获得<nobr>6000</nobr>点光锥经验。",
+   "lore": "一罐经由特殊技术精炼而成的以太。<br /><br />「忆庭盼望重现往日的辉煌，但那是由他们所选择的『往日辉煌』，明白吗？」",
+   "purpose": "光锥经验材料",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "拟造花萼【边缘通路】",
+    "「忘却之庭」"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "91f62f32ecd1e7b88c9e30002d215b1a5936ac221782a17d2f34837a967ed557",
+   "name": "凝缩以太",
+   "desc": "光锥的强化材料，可以获得<nobr>2000</nobr>点光锥经验。",
+   "lore": "一罐经由特殊技术精炼而成的以太。<br /><br />「小心轻放，勿压勿摔。破损泄漏后请参照《流溢灾难应对手册》第二章内容进行灾后处置。」",
+   "purpose": "光锥经验材料",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "拟造花萼【边缘通路】"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "554d37978b82c3f38bafee8771f8ab4248a1fe9d4e130bb5711064238666f491",
+   "name": "稀薄以太",
+   "desc": "光锥的强化材料，可以获得<nobr>500</nobr>点光锥经验。",
+   "lore": "本不应存在于现实的假想介质，创造光锥的基本原料。<br />将之注入光锥，能令封装其中的事象更为清晰。<br /><br />「原来如此，流光忆庭的『意质』就是这东西，怪不得忆者能携带记忆进行星际旅行。」",
+   "purpose": "光锥经验材料",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "拟造花萼【边缘通路】",
+    "委托奖励"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ea7f9727e8ba2c2039043d319ab4aa087ca6dbf08ec08876b1418d42c0f8a670",
+   "name": "践踏的意志",
+   "desc": "凝缩的反物质，强化所需的高级材料。",
+   "lore": "虚卒•践踏者体内高度凝缩的反物质，湮灭之刻正是文明毁灭的号角。<br /><br />「它们都在期许着湮灭之刻，与世界一同炼铸、同化。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "均衡等级4及以上虚卒•掠夺者等敌方掉落【收容舱段】",
+    "均衡等级4及以上虚卒•掠夺者等敌方掉落【支援舱段】",
+    "「万能合成机」- 材料合成",
+    "「模拟宇宙」中敌方掉落",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "836261": {
+   "id": 836261,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "name": "智识之钥",
+   "desc": "出现在银河绝顶天才手中的幻之钥匙。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">智识</span>角色的命途行迹。",
+   "lore": "此为受邀请者的证明，能够开启智识殿堂的门扉。<br />钥匙就在手中，但寻到它能开启的大门却比得到钥匙更为艰辛。穿越门扉之人会意识到，一经踏入将再也没有回头的可能。<br /><br />「智识不能告诉你宇宙的答案，但智识能让你明白如何提问。」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/836261",
+   "comeFrom": [
+    "拟造花萼【铆钉镇】",
+    "「万能合成机」- 材料合成"
+   ]
+  },
+  "920202": {
+   "id": 920202,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "974e6b2e34ddd65a7b7edc1e2edd1b85ffbf62d63b7318313e7f387747d83f4f",
+   "name": "启迪之钥",
+   "desc": "出现在诸界智者手中的幻之钥匙。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">智识</span>角色的命途行迹。",
+   "lore": "能够打开禁锢了真理的谜题之锁，寻获人智难以领悟的启迪。<br />无论持有者如何展示证明，身边的人却看不见钥匙的存在。有人相信这是上天的垂怜，有人以为这是精神失常的先兆。<br /><br />「我做了一个梦，梦见分子们如蛇般盘起，首尾相衔。醒来后才意识到，这不就是我一直在找的答案吗？」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 3,
+   "rewardPath": "/material/920202",
+   "comeFrom": [
+    "拟造花萼【铆钉镇】",
+    "「万能合成机」- 材料合成"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3000
+    },
+    {
+     "id": 549437,
+     "count": 4
+    }
+   ],
+   "attackBase": 16.8,
+   "attackAdd": 2.52,
+   "hpBase": 33.6,
+   "hpAdd": 5.04,
+   "defenseBase": 12,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6000
+    },
+    {
+     "id": 635675,
+     "count": 2
+    },
+    {
+     "id": 549437,
+     "count": 8
+    }
+   ],
+   "attackBase": 36.96,
+   "attackAdd": 2.52,
+   "hpBase": 73.92,
+   "hpAdd": 5.04,
+   "defenseBase": 26.4,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12000
+    },
+    {
+     "id": 920202,
+     "count": 2
+    },
+    {
+     "id": 633378,
+     "count": 4
+    }
+   ],
+   "attackBase": 63.84,
+   "attackAdd": 2.52,
+   "hpBase": 127.68,
+   "hpAdd": 5.04,
+   "defenseBase": 45.6,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 30000
+    },
+    {
+     "id": 920202,
+     "count": 4
+    },
+    {
+     "id": 633378,
+     "count": 6
+    }
+   ],
+   "attackBase": 90.72,
+   "attackAdd": 2.52,
+   "hpBase": 181.44,
+   "hpAdd": 5.04,
+   "defenseBase": 64.8,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 60000
+    },
+    {
+     "id": 836261,
+     "count": 3
+    },
+    {
+     "id": 717319,
+     "count": 3
+    }
+   ],
+   "attackBase": 117.6,
+   "attackAdd": 2.52,
+   "hpBase": 235.2,
+   "hpAdd": 5.04,
+   "defenseBase": 84,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 120000
+    },
+    {
+     "id": 836261,
+     "count": 6
+    },
+    {
+     "id": 717319,
+     "count": 5
+    }
+   ],
+   "attackBase": 144.48,
+   "attackAdd": 2.52,
+   "hpBase": 288.96,
+   "hpAdd": 5.04,
+   "defenseBase": 103.2,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 171.36,
+   "attackAdd": 2.52,
+   "hpBase": 342.72,
+   "hpAdd": 5.04,
+   "defenseBase": 122.4,
+   "defenseAdd": 1.8
+  }
+ ],
+ "skill": {
+  "id": 20020,
+  "name": "天才",
+  "descHash": "当装备者施放终结技时，攻击力提高<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>，持续<nobr>#2[i]</nobr>回合。",
+  "levelData": [
+   {
+    "level": 1,
+    "params": [
+     0.24,
+     2
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 2,
+    "params": [
+     0.3,
+     2
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 3,
+    "params": [
+     0.36,
+     2
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 4,
+    "params": [
+     0.42,
+     2
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 5,
+    "params": [
+     0.48,
+     2
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 40,
+   "2": 60,
+   "3": 100,
+   "4": 160,
+   "5": 220,
+   "6": 300,
+   "7": 380,
+   "8": 480,
+   "9": 580,
+   "10": 700,
+   "11": 820,
+   "12": 950,
+   "13": 1090,
+   "14": 1240,
+   "15": 1390,
+   "16": 1560,
+   "17": 1730,
+   "18": 1910,
+   "19": 2090,
+   "20": 2170,
+   "21": 2260,
+   "22": 2350,
+   "23": 2430,
+   "24": 2520,
+   "25": 2620,
+   "26": 2710,
+   "27": 2800,
+   "28": 2900,
+   "29": 2990,
+   "30": 3100,
+   "31": 3200,
+   "32": 3300,
+   "33": 3400,
+   "34": 3510,
+   "35": 3620,
+   "36": 3730,
+   "37": 3830,
+   "38": 3950,
+   "39": 4060,
+   "40": 4170,
+   "41": 4580,
+   "42": 4840,
+   "43": 5110,
+   "44": 5380,
+   "45": 5660,
+   "46": 5950,
+   "47": 6230,
+   "48": 6530,
+   "49": 6830,
+   "50": 7140,
+   "51": 7450,
+   "52": 7760,
+   "53": 8090,
+   "54": 8410,
+   "55": 8750,
+   "56": 9080,
+   "57": 9430,
+   "58": 9770,
+   "59": 10130,
+   "60": 10480,
+   "61": 10970,
+   "62": 11560,
+   "63": 12160,
+   "64": 12760,
+   "65": 13370,
+   "66": 13990,
+   "67": 14620,
+   "68": 15260,
+   "69": 15910,
+   "70": 16570,
+   "71": 18490,
+   "72": 20230,
+   "73": 22000,
+   "74": 23790,
+   "75": 25610,
+   "76": 27450,
+   "77": 29320,
+   "78": 31220,
+   "79": 33140,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "20020"
+}

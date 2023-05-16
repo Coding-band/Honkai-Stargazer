@@ -1,0 +1,2250 @@
+{
+ "name": "Kafka",
+ "spRequirement": 120,
+ "rarity": 5,
+ "descHash": "Membre des Chasseurs de Stellaron. Une femme d'une grande beauté à la fois calme, réfléchie et professionnelle. A envoûté Pionnier/Pionnière pour lui/la faire absorber le Stellaron à l'aide de Chuchotement de l'esprit. Pour passer le temps, elle achète des manteaux et les organise selon son humeur.",
+ "iconPath": "3245159af32d69709bd5c59c447dffd2035aef63678fcc417f9e5111c0b47489",
+ "bgPath": "1f71d79b6ec7621cde49e5ae00cc625d974b57c391c3f0cf288849bf83cf272b",
+ "figPath": "4f63f1995bef2faf7532f21ca00a2a0d195d4e4a8caad1ce366250027c2751cd",
+ "fgPath": "0e0439a615c2295342e9089eece833c1ef201c8ecd6e39737415dd06c62b2130",
+ "artPath": "52c49981721892b8412b51c85d3b0369f0714ffe2bf9c7bcc0e03d26499075b7",
+ "miniIconPath": "490fd18d97462b88b6559e735b6f696745cd72dc3f43879dd90940f50ded9f80",
+ "splashIconPath": "ae5f2457f2598b5a2567bcc4c10450e7e1d18ffb387b36043afb467c7fbb5ef3",
+ "damageType": {
+  "id": 8,
+  "iconPath": "e8e459ad283c3df43713b2d13203b3dc8c636150d0c536f38e2ad62bd72b6e83",
+  "color": "#8872F1",
+  "name": "Foudre",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "ef1c10d1a5c22dc9e9294e81827aae2ec71c4a79633349c8c9d699a9568a6e00",
+  "altIconPath": "0df2cbf11d8f19f8c650742d8717144159e74ae7608dfb17c31734925e8ee7c3",
+  "color": "#FFFFFF",
+  "name": "La Nihilité",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 5,
+  "iconPath": "46809b2e4ea3502400dc31a9af1552ced0d5890b1b96f43ab9ac6fdc73fdd5f5",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "151161": {
+   "id": 151161,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "6b4243b69df9f37fab4f6cda60edc49711505bf5c2ce0b517d6272be5df311df",
+   "name": "Bâton de foudre du métamorphe",
+   "desc": "Morceau de bois au bout pointu. Il appartenait à un métamorphe des Disciples du Sanctus Medicus. Permet l'élévation des personnages de type foudre.",
+   "lore": "D'après les anciens écrits de Xianzhou, ceux qui ont connu l'élévation peuvent invoquer la foudre et commander le vent. Les Disciples du Sanctus Medicus prétendaient être les héritiers de la voie des dieux. En démontrant un pouvoir divin, ils ont secrètement attiré de nombreux fidèles. Des éclairs s'enroulent autour de ce bâton en bois... Se pourrait-il que les Disciples soient plus que de simples mortels ?<br /><br />« L'enveloppe mortelle n'est qu'illusion. La vérité n'apparaît qu'à ceux qui choisissent de s'élever. »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/151161",
+   "comeFrom": [
+    "Ombre stagnante du Port Mirétoiles",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Entraînement quotidien"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Récompense d'affectation"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5930a427c19aedca23d55eb6ef670cc8ecf07466630281586f32f4d5e8d49409",
+   "name": "Instinct de pilleur",
+   "desc": "Une petite quantité d'antimatière. Matériau commun utilisé pour le renforcement.",
+   "lore": "Petite quantité d'antimatière qui émane d'un Reaver des Rangers du néant, telle la matérialisation de son instinct destructeur.<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "Reaver des Rangers du néant ou autre ennemi de la Zone de stockage",
+    "Reaver des Rangers du néant ou autre ennemi de la Zone de ravitaillement",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "69d0630f4dc8d8bb4706a8a973f720ce46452e189a62c7b8b6f2ca8d567ca8ae",
+   "name": "Ambition d'usurpateur",
+   "desc": "Une quantité modérée d'antimatière. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "Quantité modérée d'antimatière qui flotte autour d'un Distorseur des Rangers du néant. La quantité de particules de matière et d'antimatière a atteint un niveau dangereux...<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "Reaver des Rangers du néant de niveau d'équilibre 2+ ou autre ennemi de la Zone de stockage",
+    "Reaver des Rangers du néant de niveau d'équilibre 2+ ou autre ennemi de la Zone de ravitaillement",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "eb2e2feca2b8c63d7bd3d8b8e5a296d336fa0e30ca425e8e5489df4c015d1685",
+   "name": "Obsidienne d'effroi",
+   "desc": "Fragment de matière noire capturé dans le vide. Permet d'améliorer légèrement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Nihilité</span>.",
+   "lore": "Rien ne prouve son noumène.<br />Touchez avec délicatesse pour entendre un vague murmure de la part de l'éclat.<br /><br />« ████ ██ █ █ »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "Calice de la Grande mine"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ea7f9727e8ba2c2039043d319ab4aa087ca6dbf08ec08876b1418d42c0f8a670",
+   "name": "Volonté de conquérant",
+   "desc": "Antimatière condensée. Matériau avancé utilisé pour le renforcement.",
+   "lore": "Antimatière hautement condensée dans le corps d'un Piétineur des Rangers du néant. Le moment de l'oblitération est l'appel à la destruction des civilisations.<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "Reaver des Rangers du néant de niveau d'équilibre 4+ ou autre ennemi de la Zone de stockage",
+    "Reaver des Rangers du néant de niveau d'équilibre 4+ ou autre ennemi de la Zone de ravitaillement",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "name": "Obsidienne d'obsession",
+   "desc": "Beau fragment de matière noire capturé dans le vide. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Nihilité</span>.",
+   "lore": "Un simple regard dans le prisme enverra les faibles d'esprit et les moins déterminés dans le chaos pour l'éternité.<br /><br />«           »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "ce4a765c779cfd1480029c5f6daa7ea755b5c3ec5661609bfd2dd5191b55f2d0",
+   "name": "Obsidienne de désolation",
+   "desc": "Fragment de matière noire capturé dans le vide. Permet d'améliorer modérément les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Nihilité</span>.",
+   "lore": "Il n'y a aucun reflet à la surface du prisme noir. Non seulement il absorbe toute la lumière, mais il semble aussi capturer les émotions de son porteur, ne laissant qu'un vide absolu.<br /><br />« ... »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "91205616cca581bc299d91a1af94a91981d58328675779f8e66ccbaf679e5e94",
+   "name": "Route finale du destructeur",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "Le cœur du Léviathan a cessé de battre, mais son esprit est toujours vivant, bien que prisonnier d'une boîte. Tant que le couvercle reste fermé, il erre entre deux mondes et alimente le moteur de la destruction.<br /><br />« La Bête du jugement dernier est un fléau fabriqué dans la Forge de la guerre en utilisant les restes d'un Léviathan et les os de la lamentation d'un millier de morts. Il aspire à sa propre destruction et à celle de l'univers. »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "Écho de la guerre de la Zone de ravitaillement"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549437,
+     "count": 5
+    }
+   ],
+   "attackBase": 92.4,
+   "attackAdd": 4.62,
+   "hpBase": 147.84,
+   "hpAdd": 7.392,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549437,
+     "count": 10
+    }
+   ],
+   "attackBase": 129.36,
+   "attackAdd": 4.62,
+   "hpBase": 206.976,
+   "hpAdd": 7.392,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633378,
+     "count": 6
+    },
+    {
+     "id": 151161,
+     "count": 3
+    }
+   ],
+   "attackBase": 166.32,
+   "attackAdd": 4.62,
+   "hpBase": 266.112,
+   "hpAdd": 7.392,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633378,
+     "count": 9
+    },
+    {
+     "id": 151161,
+     "count": 7
+    }
+   ],
+   "attackBase": 203.28,
+   "attackAdd": 4.62,
+   "hpBase": 325.248,
+   "hpAdd": 7.392,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717319,
+     "count": 6
+    },
+    {
+     "id": 151161,
+     "count": 20
+    }
+   ],
+   "attackBase": 240.24,
+   "attackAdd": 4.62,
+   "hpBase": 384.384,
+   "hpAdd": 7.392,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717319,
+     "count": 9
+    },
+    {
+     "id": 151161,
+     "count": 35
+    }
+   ],
+   "attackBase": 277.2,
+   "attackAdd": 4.62,
+   "hpBase": 443.52,
+   "hpAdd": 7.392,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 314.16,
+   "attackAdd": 4.62,
+   "hpBase": 502.656,
+   "hpAdd": 7.392,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "7b6f5935b6c40f38b5659c6191aa3a954b93faf844da952128eecd07f1acd165",
+   "name": "Da capo",
+   "descHash": "Après utilisation de l'ultime, les ennemis subissent immédiatement les DGT infligés par tous les effets de dégâts sur la durée actuels au lieu de subir les DGT de Stupéfaction.",
+   "params": []
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "538224d1bff4ddaa5b3a382b7dec6715f6e203787514ae30fc8580592786c8b9",
+   "name": "Fortississimo",
+   "descHash": "Augmente l'efficacité de Rupture de faiblesse de <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.5
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "282d0f8b1b6862721da826efea3fb8fe39fc4b6baef24b1ae8e99775cf6de43c",
+   "name": "Capriccio",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "b00feab609469465e1f2dab0495e662bb89b58866dd248bc09cb08a64d79b772",
+   "name": "Recitativo",
+   "descHash": "L'augmentation des dégâts sur la durée causée par le talent est prolongée de <nobr>#1[i]</nobr> tours. Cet effet devient cumulable et peut se cumuler jusqu'à <nobr>#2[i]</nobr> fois.",
+   "params": [
+    1,
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "b6aff0092003e7a7444981c504fdf7989af3aeef042c7875a9bc843771d4cbbf",
+   "name": "Doloroso",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "69452b6da16e232896122cd4aa322ff0ab83b937fad926bf29b5eb079205ff59",
+   "name": "Leggiero",
+   "descHash": "L'ultime augmente le multiplicateur des DGT de Stupéfaction sur les ennemis de <nobr>#1[i]%</nobr> et prolonge la durée de Stupéfaction d'<nobr>#2[i]</nobr> tour.",
+   "params": [
+    1,
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   791017
+  ],
+  [
+   874958
+  ],
+  [
+   958899
+  ],
+  [
+   75544
+  ],
+  [
+   360071
+  ]
+ ],
+ "skills": [
+  {
+   "id": 791017,
+   "name": "Tumulte de minuit",
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Kafka à un ennemi unique.",
+   "typeDescHash": "ATQ normale",
+   "iconPath": "ab604a7ba23014f17854b81c81862ee626fe01b3686466dab7b960af636d3460",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 874958,
+   "name": "Caresse du clair de lune",
+   "tagHash": "Propagation",
+   "descHash": "Inflige des DGT de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Kafka à une cible ennemie et des DGT de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de l'ATQ de Kafka aux ennemis adjacents.<br />Si la cible ennemie est soumise à des dégâts sur la durée, tous les dégâts sur la durée qu'elle subit actuellement produisent immédiatement des DGT équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span> des DGT initiaux.",
+   "typeDescHash": "Compétence",
+   "iconPath": "4123bc1cb808ade2f3d0fe08dcd954a4b99964f273631f6240bdcf12b8354bb3",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.8,
+      0.8,
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.88,
+      0.82,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.96,
+      0.84,
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.04,
+      0.86,
+      0.39
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.12,
+      0.88,
+      0.42
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.2,
+      0.9,
+      0.45
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.3,
+      0.925,
+      0.4875
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.4,
+      0.95,
+      0.525
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.5,
+      0.975,
+      0.5625
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.6,
+      1,
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.68,
+      1.02,
+      0.63
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.76,
+      1.04,
+      0.66
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.84,
+      1.06,
+      0.69
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.92,
+      1.08,
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      2,
+      1.1,
+      0.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 958899,
+   "name": "Trille crépusculaire",
+   "tagHash": "ZdE",
+   "descHash": "Inflige des DGT de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Kafka à tous les ennemis. Les ennemis touchés ont <nobr>#2[i]%</nobr> de <u>chances de base</u> d'être stupéfiés et de subir immédiatement des DGT équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#5[i]%</nobr></span> des dégâts sur la durée. Stupéfaction dure <nobr>#3[i]</nobr> tours.<br />Les ennemis stupéfiés subissent des dégâts de foudre sur la durée équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span> de l'ATQ de Kafka au début de chaque tour.",
+   "typeDescHash": "Ultime",
+   "iconPath": "d60a4a8778ee3e234488deb0f1ca6e937028af85aa8762b90ad18c0b8fa63661",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.48,
+      1,
+      2,
+      0.75,
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.512,
+      1,
+      2,
+      0.825625,
+      0.82
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.544,
+      1,
+      2,
+      0.90125,
+      0.84
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.576,
+      1,
+      2,
+      0.976875,
+      0.86
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.608,
+      1,
+      2,
+      1.0525,
+      0.88
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.64,
+      1,
+      2,
+      1.1659375,
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.68,
+      1,
+      2,
+      1.3171875,
+      0.925
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.72,
+      1,
+      2,
+      1.50625,
+      0.95
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.76,
+      1,
+      2,
+      1.733125,
+      0.975
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.8,
+      1,
+      2,
+      1.96,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.832,
+      1,
+      2,
+      2.0583124,
+      1.02
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.864,
+      1,
+      2,
+      2.156625,
+      1.04
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.896,
+      1,
+      2,
+      2.2549374,
+      1.06
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.928,
+      1,
+      2,
+      2.35325,
+      1.08
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.96,
+      1,
+      2,
+      2.4515624,
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  },
+  {
+   "id": 75544,
+   "name": "Douce mais cruelle",
+   "tagHash": "Cible unique",
+   "descHash": "Lorsqu'un allié de Kafka utilise une ATQ normale sur un ennemi, Kafka lance immédiatement 1 <u>attaque de suivi</u> et inflige des DGT de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de sa propre ATQ à cet ennemi, avec <nobr>#4[i]%</nobr> de chances de base d'augmenter les dégâts sur la durée subis par cet ennemi de <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span> pendant <nobr>#3[i]</nobr> tours. Cet effet ne peut être déclenché qu'1 fois par tour.",
+   "typeDescHash": "Talent",
+   "iconPath": "cd7ba256de0bc5447b98a31dc955e51585fb81d91e91ab3b0664c6e622a65370",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.6,
+      0.15,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.66,
+      0.155,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.72,
+      0.16,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.78,
+      0.165,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.84,
+      0.17,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.9,
+      0.175,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.975,
+      0.18125,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.05,
+      0.1875,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.125,
+      0.19375,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.2,
+      0.2,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.26,
+      0.205,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.32,
+      0.21,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.38,
+      0.215,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.44,
+      0.22,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.5,
+      0.225,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 276130,
+   "name": "Attaque",
+   "tagHash": "",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
+   "typeDescHash": "",
+   "iconPath": "ab604a7ba23014f17854b81c81862ee626fe01b3686466dab7b960af636d3460",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 360071,
+   "name": "La pitié n'est pas un pardon",
+   "tagHash": "",
+   "descHash": "Attaque immédiatement un ennemi. Inflige des DGT de foudre équivalents à <nobr>#4[i]%</nobr> de l'ATQ de Kafka à un ennemi aléatoire après être entré en combat. D'autre part, tous les ennemis ont <nobr>#1[i]%</nobr> de <u>chances de base</u> d'être stupéfiés pendant <nobr>#3[i]</nobr> tours.<br />Les ennemis stupéfiés subissent des dégâts de foudre sur la durée équivalents à <nobr>#2[i]%</nobr> de l'ATQ de Kafka au début de chaque tour.",
+   "typeDescHash": "Technique",
+   "iconPath": "75f1d0bbf3f830e51e6d52c34caad41e6ce419d1d14771fa2f491bfadb96953d",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1,
+      0.5,
+      3,
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1005101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1005202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1005203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1005204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 227730,
+          "name": "Augmentation de PV",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+          "statusList": [
+           {
+            "key": "PV",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920196,
+            "count": 3
+           },
+           {
+            "id": 633378,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 227733,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920196,
+          "count": 3
+         },
+         {
+          "id": 633378,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 227732,
+      "name": "Renforcement de Rupture",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "Effet de Rupture",
+        "value": 0.053
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635669,
+        "count": 3
+       },
+       {
+        "id": 549437,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 227636,
+    "name": "Torture",
+    "descHash": "Lorsque des dégâts sur la durée infligent immédiatement des dégâts aux ennemis en raison de la compétence ou de l'ultime de Kafka, le multiplicateur de DGT augmente de manière proportionnelle, d'un pourcentage équivalent à <nobr>#1[i]%</nobr> de l'effet de Rupture de Kafka, jusqu'à un maximum de <nobr>#2[i]%</nobr>.",
+    "iconPath": "c5385f3a8aadf454b4e7a9b242cb5bf0375ead7e697aae89271fb01b83de5005",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.15,
+       0.3
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635669,
+        "count": 3
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1005102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1005205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1005206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1005207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 227729,
+          "name": "Augmentation d'ATQ",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+          "statusList": [
+           {
+            "key": "ATQ",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836255,
+            "count": 3
+           },
+           {
+            "id": 717319,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 227728,
+        "name": "Renforcement de Rupture",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "Effet de Rupture",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836255,
+          "count": 3
+         },
+         {
+          "id": 717319,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 227731,
+      "name": "Augmentation d'ATQ",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920196,
+        "count": 5
+       },
+       {
+        "id": 633378,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 227639,
+    "name": "Pillage",
+    "descHash": "Lorsqu'un ennemi affecté par l'effet Stupéfaction est vaincu, Kafka régénère en plus <nobr>#1[i]</nobr> points d'énergie.",
+    "iconPath": "5023a997e2c504b1d33a12bb953ae75d3ca43fa99ccf86ef6fb2fd14f82fb5f8",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       5
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920196,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1005103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1005208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 227742,
+      "name": "Augmentation de PV",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1005209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 227743,
+      "name": "Renforcement de Rupture",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "Effet de Rupture",
+        "value": 0.107
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 227638,
+    "name": "Épines",
+    "descHash": "Le talent a <nobr>#1[i]%</nobr> plus de chances de base d'augmenter les dégâts sur la durée infligés aux ennemis et l'ultime a <nobr>#2[i]%</nobr> plus de chances de base de stupéfier les ennemis.",
+    "iconPath": "f7fb6225102c401d074c9bd647d20dea38fcd2ae47581a95bda7c6419fe08639",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.2,
+       0.2
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1005201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1005210,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 311675,
+      "name": "Augmentation d'ATQ",
+      "levelReq": 80,
+      "promotionReq": 0,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 227735,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549437,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corps",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "ATQ",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+   },
+   {
+    "relicTypeHash": "Pieds",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "VIT",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+   },
+   {
+    "relicTypeHash": "Sphère planaire",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "Augm. des DGT de foudre",
+    "propertyIconPath": "6acd635b37377d308961b26cf64a7a0ceed4e922bdf0427b620249351796ecd4"
+   },
+   {
+    "relicTypeHash": "Corde de liaison",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "Effet de Rupture",
+    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+   }
+  ]
+ },
+ "voiceItems": [],
+ "storyItems": [],
+ "archive": {},
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "kafka"
+}

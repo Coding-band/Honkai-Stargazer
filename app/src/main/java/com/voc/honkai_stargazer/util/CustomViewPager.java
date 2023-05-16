@@ -1,3 +1,9 @@
+/*
+ * Project Honkai Stargazer (崩壞•星穹觀星者) was
+ * Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
+ * Copyright © 2023 Xectorda 版權所有
+ */
+
 package com.voc.honkai_stargazer.util;
 
 import android.content.Context;
@@ -6,12 +12,6 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import androidx.viewpager.widget.ViewPager;
-
-/*
- * Project Genshin Spirit (原神小幫手) was
- * Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
- * Copyright © 2023 Xectorda 版權所有
- */
 
 //https://stackoverflow.com/questions/7814017/is-it-possible-to-disable-scrolling-on-a-viewpager
 public class CustomViewPager extends ViewPager {

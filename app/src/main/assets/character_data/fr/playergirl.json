@@ -1,0 +1,2698 @@
+{
+ "name": "Pionnière",
+ "spRequirement": 120,
+ "rarity": 5,
+ "descHash": "",
+ "iconPath": "49c86bee23a1299d009fec8b67d38f0759dd4a35470643219317db4e498a8f37",
+ "bgPath": "2668b0843e7f3eb4820f944c28f903a86b3777dcfca85b278f23b077b190b5d9",
+ "figPath": "cfdfdb1165287c6184983b7a6fe922b7e2888a4b18fa5d82c0f0b2496ecdb5cb",
+ "fgPath": "",
+ "artPath": "867d9462227486e3da09bdebaad72a960c8922745020ea6b0fc01185dd8692b0",
+ "miniIconPath": "b986cea1eea406367b330789022d63877567bac48a65d659da75fd795e8f7dda",
+ "splashIconPath": "1b9ea28de9d7ad65ed5c152fce7c744a2f2461d4fae4fd0fd9d662348a96631d",
+ "damageType": {
+  "id": 1,
+  "iconPath": "ae78085438eecf2462f1256329b5aa2369f01b8cda6926ea0a08b1b8affe5108",
+  "color": "#FFFFFF",
+  "name": "Physique",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "57e114954f0de32a3762e77aa2fd4f791deb47497337366308c51de1d0f12430",
+  "altIconPath": "fccc485934c16aa04a6ddacdbfec82b1e59182ba83b560af62ed57b29033c308",
+  "color": "#FFFFFF",
+  "name": "La Destruction",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 1,
+  "iconPath": "10dae0df031160c29bace386a1220e539f2b5e13765cdd0f6d2a2143bca2755c",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Entraînement quotidien"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Récompense d'affectation"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5930a427c19aedca23d55eb6ef670cc8ecf07466630281586f32f4d5e8d49409",
+   "name": "Instinct de pilleur",
+   "desc": "Une petite quantité d'antimatière. Matériau commun utilisé pour le renforcement.",
+   "lore": "Petite quantité d'antimatière qui émane d'un Reaver des Rangers du néant, telle la matérialisation de son instinct destructeur.<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "Reaver des Rangers du néant ou autre ennemi de la Zone de stockage",
+    "Reaver des Rangers du néant ou autre ennemi de la Zone de ravitaillement",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "69d0630f4dc8d8bb4706a8a973f720ce46452e189a62c7b8b6f2ca8d567ca8ae",
+   "name": "Ambition d'usurpateur",
+   "desc": "Une quantité modérée d'antimatière. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "Quantité modérée d'antimatière qui flotte autour d'un Distorseur des Rangers du néant. La quantité de particules de matière et d'antimatière a atteint un niveau dangereux...<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "Reaver des Rangers du néant de niveau d'équilibre 2+ ou autre ennemi de la Zone de stockage",
+    "Reaver des Rangers du néant de niveau d'équilibre 2+ ou autre ennemi de la Zone de ravitaillement",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635673": {
+   "id": 635673,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1cfcf420c7cd53b503eead070d126b1448cd68bf3f9b0ddca916d10b1747537b",
+   "name": "Lame brisée",
+   "desc": "Fragments d'arme abandonnés par les membres de la Légion d'antimatière. Permet d'améliorer légèrement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Destruction</span>.",
+   "lore": "Cette marque représente leur rang et leurs accomplissements au nom de la Destruction.<br />Le maître de cette arme incendie des villes sur le dos de son cheval écarlate. Son but est d'arracher la paix à l'humanité et de faire tomber les nations une à une.<br /><br />« Le porteur de cette marque est chargé de détruire la paix des nations .»",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635673",
+   "comeFrom": [
+    "Calice de la Zone de stockage"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ea7f9727e8ba2c2039043d319ab4aa087ca6dbf08ec08876b1418d42c0f8a670",
+   "name": "Volonté de conquérant",
+   "desc": "Antimatière condensée. Matériau avancé utilisé pour le renforcement.",
+   "lore": "Antimatière hautement condensée dans le corps d'un Piétineur des Rangers du néant. Le moment de l'oblitération est l'appel à la destruction des civilisations.<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "Reaver des Rangers du néant de niveau d'équilibre 4+ ou autre ennemi de la Zone de stockage",
+    "Reaver des Rangers du néant de niveau d'équilibre 4+ ou autre ennemi de la Zone de ravitaillement",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "782692": {
+   "id": 782692,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "7a42ca2323eb2224644c54f364da09df012442c0e83d9b460e8bf46348bcd8f1",
+   "name": "Ectostella énigmatique",
+   "desc": "Un cristal insondable. Matériau d'élévation pour le pionnier/la pionnière.",
+   "lore": "Arraché à la plus puissante des créatures, ce cristal reflète les mirages mouvants. Passé et futur s'entremêlent sur ses innombrables facettes, en tentant d'engloutir ceux qui le regardent.<br /><br />« La civilisation n'est qu'une fine couche de glace sur l'océan noir et profond du chaos. »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/782692",
+   "comeFrom": [
+    "Récompense de mission",
+    "Récompense de niveau"
+   ]
+  },
+  "836259": {
+   "id": 836259,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "name": "Lame briseuse de monde",
+   "desc": "Arme cassée laissée à l'abandon par les membres de la Légion d'antimatière. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Destruction</span>.",
+   "lore": "Cette arme représente le rang et les succès accomplis par son propriétaire au nom de la Destruction.<br />Le maître de cette arme est celui qui arrive à la fin de la guerre pour en raviver les braises et consumer le monde. Quelles que soient les gloires du passé ou les bénédictions accordées par les dieux, cette planète est condamnée à redevenir poussière et à s'éteindre dans les profondeurs du ciel étoilé.<br /><br />Le porteur de cette marque a la charge de purifier le monde.",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836259",
+   "comeFrom": [
+    "Calice de la Zone de stockage",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920200": {
+   "id": 920200,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1da1734309fa1e0ed5035575293caab81cfa7723f7bf4a81d36d9833d80b36",
+   "name": "Lame sans vie",
+   "desc": "Fragments d'arme abandonnés par les membres de la Légion d'antimatière. Permet d'améliorer modérément les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Destruction</span>.",
+   "lore": "Cette marque représente leur rang et leurs accomplissements au nom de la Destruction.<br />Le maître de cette arme voue une haine féroce à tous les êtres doués de sensibilité. Il se délecte des lamentations des êtres intelligents comme de douces mélodies, et renverse des civilisations millénaires en un clin d'œil.<br /><br />« Le porteur de cette marque a pour mission de couper le souffle des vivants. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920200",
+   "comeFrom": [
+    "Calice de la Zone de stockage",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "91205616cca581bc299d91a1af94a91981d58328675779f8e66ccbaf679e5e94",
+   "name": "Route finale du destructeur",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "Le cœur du Léviathan a cessé de battre, mais son esprit est toujours vivant, bien que prisonnier d'une boîte. Tant que le couvercle reste fermé, il erre entre deux mondes et alimente le moteur de la destruction.<br /><br />« La Bête du jugement dernier est un fléau fabriqué dans la Forge de la guerre en utilisant les restes d'un Léviathan et les os de la lamentation d'un millier de morts. Il aspire à sa propre destruction et à celle de l'univers. »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "Écho de la guerre de la Zone de ravitaillement"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549437,
+     "count": 4
+    }
+   ],
+   "attackBase": 84.48,
+   "attackAdd": 4.224,
+   "hpBase": 163.68,
+   "hpAdd": 8.184,
+   "defenseBase": 62.7,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549437,
+     "count": 8
+    }
+   ],
+   "attackBase": 118.272,
+   "attackAdd": 4.224,
+   "hpBase": 229.152,
+   "hpAdd": 8.184,
+   "defenseBase": 87.78,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633378,
+     "count": 5
+    },
+    {
+     "id": 782692,
+     "count": 4
+    }
+   ],
+   "attackBase": 152.064,
+   "attackAdd": 4.224,
+   "hpBase": 294.624,
+   "hpAdd": 8.184,
+   "defenseBase": 112.86,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633378,
+     "count": 8
+    },
+    {
+     "id": 782692,
+     "count": 6
+    }
+   ],
+   "attackBase": 185.856,
+   "attackAdd": 4.224,
+   "hpBase": 360.096,
+   "hpAdd": 8.184,
+   "defenseBase": 137.94,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717319,
+     "count": 5
+    },
+    {
+     "id": 782692,
+     "count": 8
+    }
+   ],
+   "attackBase": 219.648,
+   "attackAdd": 4.224,
+   "hpBase": 425.568,
+   "hpAdd": 8.184,
+   "defenseBase": 163.02,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717319,
+     "count": 7
+    },
+    {
+     "id": 782692,
+     "count": 10
+    }
+   ],
+   "attackBase": 253.44,
+   "attackAdd": 4.224,
+   "hpBase": 491.04,
+   "hpAdd": 8.184,
+   "defenseBase": 188.1,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 287.232,
+   "attackAdd": 4.224,
+   "hpBase": 556.512,
+   "hpAdd": 8.184,
+   "defenseBase": 213.18,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 100,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "e64596f001fc37ef51c078d7ec930d0fb3a15d589ee8ad6228805bdef5afd252",
+   "name": "Étoile tombée du ciel",
+   "descHash": "Lorsque des ennemis sont vaincus par l'ultime du pionnier/de la pionnière, ce dernier/cette dernière régénère <nobr>#1[i]</nobr> points d'énergie supplémentaires. Cet effet ne peut être déclenché qu'une fois par attaque.",
+   "params": [
+    10
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "77bf690fa41ee1f68ea3102d5e7199966133aaafeba796e8e9a1a825000d5d99",
+   "name": "À son corps défendant",
+   "descHash": "Attaquer des ennemis ayant une Faiblesse physique restaure une quantité de PV équivalente à <nobr>#1[i]%</nobr> de l'ATQ du pionnier à ce dernier/de la pionnière à cette dernière.",
+   "params": [
+    0.05
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "9c3684f28b69483d8d90456b08e704aa225afe1ec19bb92d6c2400eee4210317",
+   "name": "Un chuchotement pour seul guide",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "c5fc4d10e733dc986d073687c1e1cac25219d8a029df9c8313ce1524ca090fad",
+   "name": "Regard destructeur",
+   "descHash": "Les chances de coup critique du personnage augmentent de <nobr>#1[i]%</nobr> contre les ennemis victimes d'une Rupture de faiblesse.",
+   "params": [
+    0.25
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "f971bad331ea8c2df332a715e6e565703b3ac6022f503d39d06627b03ea738fb",
+   "name": "Un espoir de survie",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "487b238c673ae2beba57aa0b79d5b22418e76f93ae93019e8def2b4abc57a234",
+   "name": "Une volonté de pionnier",
+   "descHash": "Le talent du pionnier/de la pionnière se déclenche également lorsqu'il/elle élimine un ennemi.",
+   "params": [
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   611211
+  ],
+  [
+   494566
+  ],
+  [
+   410625,
+   464792,
+   380851
+  ],
+  [
+   326684
+  ],
+  [
+   42157
+  ]
+ ],
+ "skills": [
+  {
+   "id": 611211,
+   "name": "Coup d'adieu",
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ du pionnier/de la pionnière à un ennemi unique.",
+   "typeDescHash": "ATQ normale",
+   "iconPath": "a837b6c6a70b2e60b6b835073aa5914fb27d1fc4b875bbcc77e271640e68d05a",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 494566,
+   "name": "Home run final",
+   "tagHash": "Propagation",
+   "descHash": "Inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ du pionnier/de la pionnière à un ennemi unique et aux ennemis adjacents.",
+   "typeDescHash": "Compétence",
+   "iconPath": "757e36a10f05bffaadb295beabf6687469ff8484b1a917ecb88a33cac2db6c3d",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.625
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6875
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8125
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.875
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.9375
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.015625
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.09375
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.171875
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.3125
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.375
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.4375
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.5625
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 410625,
+   "name": "Lançeur/Lançeuse de poussière d'étoile",
+   "tagHash": "Renforcement",
+   "descHash": "Vous choisissez entre deux modes d'attaque pour infliger un coup dévastateur.<br />Frappe écrasante : Coup d'adieu inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ du pionnier/de la pionnière à un ennemi unique.<br />Frappe écrasante : Home run final inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de l'ATQ du pionnier/de la pionnière à un ennemi unique, ainsi que des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de l'ATQ du pionnier/de la pionnière aux ennemis adjacents.",
+   "typeDescHash": "Ultime",
+   "iconPath": "41a885cd6780f16e562086becf14093bd57c5f523fe31136a2d2dabf752100d8",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      3,
+      1.8,
+      1.08
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      3.15,
+      1.89,
+      1.134
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      3.3,
+      1.98,
+      1.188
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      3.45,
+      2.07,
+      1.242
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      3.6,
+      2.16,
+      1.296
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      3.75,
+      2.25,
+      1.35
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      3.9375,
+      2.3625,
+      1.4175
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      4.125,
+      2.475,
+      1.485
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      4.3125,
+      2.5875,
+      1.5525
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      4.5,
+      2.7,
+      1.62
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      4.65,
+      2.79,
+      1.674
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      4.8,
+      2.88,
+      1.728
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      4.95,
+      2.97,
+      1.782
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      5.1,
+      3.06,
+      1.836
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      5.25,
+      3.15,
+      1.89
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  },
+  {
+   "id": 326684,
+   "name": "Pickoff parfait",
+   "tagHash": "Renforcement",
+   "descHash": "L'ATQ augmente de <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> à chaque fois que le personnage fait subir une Rupture de faiblesse à un ennemi. Effet cumulable jusqu'à <nobr>#2[i]</nobr> fois.",
+   "typeDescHash": "Talent",
+   "iconPath": "69a5f892c526ae538016ceaf567c1bc473656921b0f155f5d282f91d9f8340d5",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.1,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.11,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.12,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.13,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.14,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.15,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.1625,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.175,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.1875,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.2,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.21,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.22,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.23,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.24,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.25,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 126098,
+   "name": "Attaque",
+   "tagHash": "",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
+   "typeDescHash": "",
+   "iconPath": "a837b6c6a70b2e60b6b835073aa5914fb27d1fc4b875bbcc77e271640e68d05a",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 42157,
+   "name": "Troisième prise immortelle",
+   "tagHash": "Restauration",
+   "descHash": "Soigne immédiatement tous les alliés à hauteur de <nobr>#1[i]%</nobr> de leurs PV max respectifs après utilisation de cette technique.",
+   "typeDescHash": "Technique",
+   "iconPath": "507acbda38f50922f91ce4fd10ec62796d8ecbdc324a41ec3e4cdfa80b4f7a1e",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.15
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 464792,
+   "name": "Frappe écrasante : Coup d'adieu",
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ du pionnier/de la pionnière à un ennemi unique.",
+   "typeDescHash": "Ultime",
+   "iconPath": "e790568d6547087adb422a8c61010ba178879b87311381293018001dee120d53",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      3.15
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      3.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      3.45
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      3.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      3.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      3.9375
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      4.125
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      4.3125
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      4.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      4.65
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      4.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      4.95
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      5.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      5.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  },
+  {
+   "id": 380851,
+   "name": "Frappe écrasante : Home run final",
+   "tagHash": "Propagation",
+   "descHash": "Inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ du pionnier/de la pionnière à un ennemi unique et des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de son ATQ aux ennemis adjacents.",
+   "typeDescHash": "Ultime",
+   "iconPath": "1274c945f2135966474f490430d92f0185ff92ef5b3b4e0fb9e99ff15fc80320",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1.8,
+      1.08
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.89,
+      1.134
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.98,
+      1.188
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      2.07,
+      1.242
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      2.16,
+      1.296
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      2.25,
+      1.35
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      2.3625,
+      1.4175
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      2.475,
+      1.485
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      2.5875,
+      1.5525
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      2.7,
+      1.62
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      2.79,
+      1.674
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      2.88,
+      1.728
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      2.97,
+      1.782
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      3.06,
+      1.836
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      3.15,
+      1.89
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 8002101,
+   "type": 1,
+   "children": [
+    {
+     "id": 8002202,
+     "type": 2,
+     "children": [
+      {
+       "id": 8002203,
+       "type": 2,
+       "children": [
+        {
+         "id": 8002204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 494494,
+          "name": "Augmentation de DÉF",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+          "statusList": [
+           {
+            "key": "DÉF",
+            "value": 0.05
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 920200,
+            "count": 2
+           },
+           {
+            "id": 633378,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 494495,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920200,
+          "count": 2
+         },
+         {
+          "id": 633378,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 494496,
+      "name": "Augmentation de PV",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635673,
+        "count": 2
+       },
+       {
+        "id": 549437,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 494464,
+    "name": "Élan de la bataille",
+    "descHash": "Régénère immédiatement <nobr>#1[i]</nobr> points d'énergie en début de combat.",
+    "iconPath": "c89cda28e50097a1c1101cd4c560c0d680ed440b469f53a19815691fdcc3d6c0",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       15
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635673,
+        "count": 2
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 8002102,
+   "type": 1,
+   "children": [
+    {
+     "id": 8002205,
+     "type": 2,
+     "children": [
+      {
+       "id": 8002206,
+       "type": 2,
+       "children": [
+        {
+         "id": 8002207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 494491,
+          "name": "Augmentation d'ATQ",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+          "statusList": [
+           {
+            "key": "ATQ",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 836259,
+            "count": 2
+           },
+           {
+            "id": 717319,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 494492,
+        "name": "Augmentation de PV",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "PV",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836259,
+          "count": 2
+         },
+         {
+          "id": 717319,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 494493,
+      "name": "Augmentation d'ATQ",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920200,
+        "count": 4
+       },
+       {
+        "id": 633378,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 494465,
+    "name": "Ténacité",
+    "descHash": "Chaque cumul du talent augmente la DÉF du pionnier/de la pionnière de <nobr>#1[i]%</nobr>.",
+    "iconPath": "a035ccd65285b5487de2fa3bb759670bcffb2158309a24749e23805b67413100",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.1
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920200,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 8002103,
+   "type": 1,
+   "children": [
+    {
+     "id": 8002208,
+     "type": 2,
+     "children": [
+      {
+       "id": 8002209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 494489,
+        "name": "Augmentation de PV",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "PV",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836259,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 8002210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 377853,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836259,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 494490,
+      "name": "Augmentation de DÉF",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+      "statusList": [
+       {
+        "key": "DÉF",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836259,
+        "count": 6
+       },
+       {
+        "id": 717319,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 494466,
+    "name": "Soif d'en découdre",
+    "descHash": "Les DGT infligés à la cible principale augmentent de <nobr>#1[i]%</nobr> lorsque le personnage utilise sa compétence ou son ultime « Frappe écrasante : Home run final ».",
+    "iconPath": "f7ec0fad09b1e54ef8212181a21b8a44f1633f88e8d3da5810740a905b061c3f",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.25
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836259,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 8002201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 494497,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549437,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corps",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "Chances de coup critique",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "Pieds",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "ATQ",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+   },
+   {
+    "relicTypeHash": "Sphère planaire",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "Augm. des DGT physiques",
+    "propertyIconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e"
+   },
+   {
+    "relicTypeHash": "Corde de liaison",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "Effet de Rupture",
+    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+   }
+  ]
+ },
+ "voiceItems": [],
+ "storyItems": [],
+ "archive": {},
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "playergirl"
+}

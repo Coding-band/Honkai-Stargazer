@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Project Honkai Stargazer (崩壞•星穹觀星者) was
+  ~ Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
+  ~ Copyright © 2023 Xectorda 版權所有
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.InfoCharacterPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/intro_ico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/himeko_splash" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_char_info_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:translationZ="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="Rarity" />
+
+                    <com.willy.ratingbar.ScaleRatingBar
+                        android:id="@+id/intro_rare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|right"
+                        android:gravity="center"
+                        app:srb_clearRatingEnabled="true"
+                        app:srb_clickable="true"
+                        app:srb_drawableEmpty="@drawable/ic_rare_star"
+                        app:srb_drawableFilled="@drawable/ic_rare_star"
+                        app:srb_isIndicator="false"
+                        app:srb_minimumStars="1"
+                        app:srb_numStars="5"
+                        app:srb_rating="5"
+                        app:srb_scrollable="true"
+                        app:srb_starHeight="16dp"
+                        app:srb_starPadding="2dp"
+                        app:srb_starWidth="16dp"
+                        app:srb_stepSize="0.5"></com.willy.ratingbar.ScaleRatingBar>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="Path" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/intro_path_ico"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/path_the_nihility"
+                            app:tint="@color/ic_daynight_tint" />
+
+                        <TextView
+                            android:id="@+id/intro_path_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:text="Nihility" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="Element" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/intro_element_ico"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/element_fire" />
+
+                        <TextView
+                            android:id="@+id/intro_element_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:text="Fire" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/intro_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="The one who repaired the Astral Express. To witness the vast starry sky, she decided to travel with the Astral Express. Her hobby is brewing hand-made coffee."
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

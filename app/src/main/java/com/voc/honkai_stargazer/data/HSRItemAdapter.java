@@ -1,3 +1,9 @@
+/*
+ * Project Honkai Stargazer (崩壞•星穹觀星者) was
+ * Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
+ * Copyright © 2023 Xectorda 版權所有
+ */
+
 package com.voc.honkai_stargazer.data;
 
 import android.app.Activity;
@@ -21,6 +27,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 import com.voc.honkai_stargazer.R;
+import com.voc.honkai_stargazer.ui.InfoCharacterPage;
 import com.voc.honkai_stargazer.util.ItemRSS;
 import com.voc.honkai_stargazer.util.RoundedCornersTransformation;
 import com.willy.ratingbar.ScaleRatingBar;
@@ -128,6 +135,17 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
         holder.item_name.setText(hsrItem.getName());
         holder.item_name.setTypeface(null, Typeface.BOLD);;
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (TYPE){
+                    case ItemRSS.TYPE_CHARACTER: new InfoCharacterPage().setup(context, activity,hsrItem); return;
+                    case ItemRSS.TYPE_LIGHTCONE: return;
+                    case ItemRSS.TYPE_RELIC: return;
+                }
+            }
+        });
+
     }
 
     @Override
@@ -172,6 +190,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
 
             item_2pc_status = itemView.findViewById(R.id.item_2pc_status);
             item_4pc_status = itemView.findViewById(R.id.item_4pc_status);
+
         }
     }
 

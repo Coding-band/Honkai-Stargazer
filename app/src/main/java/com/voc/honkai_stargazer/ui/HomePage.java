@@ -1,3 +1,9 @@
+/*
+ * Project Honkai Stargazer (崩壞•星穹觀星者) was
+ * Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
+ * Copyright © 2023 Xectorda 版權所有
+ */
+
 package com.voc.honkai_stargazer.ui;
 
 import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
@@ -169,7 +175,7 @@ public class HomePage extends AppCompatActivity {
     }
 
     private void char_list_reload() {
-        String name ,element,path,sex,status;
+        String name ,element,path,sex,status,fileName;
         int rare;
         //charactersList.clear();
 
@@ -185,6 +191,7 @@ public class HomePage extends AppCompatActivity {
                 sex = object.getString("sex");
                 rare = object.getInt("rare");
                 status = object.getString("status");
+                fileName = object.getString("fileName");
 
                 HSRItem hsrItem = new HSRItem();
                 hsrItem.setName(name);
@@ -193,6 +200,7 @@ public class HomePage extends AppCompatActivity {
                 hsrItem.setName(name);
                 hsrItem.setRare(rare);
                 hsrItem.setStatus(status);
+                hsrItem.setFileName(fileName);
 
                 charactersList.add(hsrItem);
             }
@@ -202,7 +210,7 @@ public class HomePage extends AppCompatActivity {
         }
     }
     private void lightcone_list_reload() {
-        String name ,path,status;
+        String name ,path,status,fileName;
         int rare;
         //charactersList.clear();
 
@@ -216,12 +224,14 @@ public class HomePage extends AppCompatActivity {
                 path = object.getString("path");
                 rare = object.getInt("rare");
                 status = object.getString("status");
+                fileName = object.getString("fileName");
 
                 HSRItem hsrItem = new HSRItem();
                 hsrItem.setName(name);
                 hsrItem.setPath(path);
                 hsrItem.setRare(rare);
                 hsrItem.setStatus(status);
+                hsrItem.setFileName(fileName);
 
                 lightconesList.add(hsrItem);
             }
@@ -231,7 +241,7 @@ public class HomePage extends AppCompatActivity {
         }
     }
     private void relic_list_reload() {
-        String name ,type,status;
+        String name ,type,status,fileName;
         int rare;
         //charactersList.clear();
 
@@ -244,11 +254,13 @@ public class HomePage extends AppCompatActivity {
                 name = object.getString("name");
                 type = object.getString("type");
                 status = object.getString("status");
+                fileName = object.getString("fileName");
 
                 HSRItem hsrItem = new HSRItem();
                 hsrItem.setName(name);
                 hsrItem.setType(type);
                 hsrItem.setStatus(status);
+                hsrItem.setFileName(fileName);
 
                 relicsList.add(hsrItem);
             }

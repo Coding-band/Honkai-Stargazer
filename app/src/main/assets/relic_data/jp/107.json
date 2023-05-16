@@ -1,0 +1,2449 @@
+{
+ "name": "溶岩で鍛造する火匠",
+ "iconPath": "4e1b9c5acb703068e9f801a1346f839f36b9e1b2116fe7c0d893c73141fbf96d",
+ "artPath": "2e8aa1c2c540390cade44d3019cc165c58d9b70e666eac7c9809d255c76d7e07",
+ "rarity": 5,
+ "embeddedBaseTypes": {
+  "0": {
+   "id": 0,
+   "iconPath": "0c88f2c3d931255f78ee56e3d6a83a2ba0c277c6344e39b711e2ade65ed05b90",
+   "color": "#FFFFFF",
+   "name": "",
+   "rarity": 0
+  },
+  "1": {
+   "id": 1,
+   "iconPath": "3cac2e295748fd50d15bf04acd5f52c9ef38a9d901d8a45a2ec05e7b023f6899",
+   "color": "#FFFFFF",
+   "name": "頭部",
+   "rarity": 0
+  },
+  "2": {
+   "id": 2,
+   "iconPath": "85ad631eaac4657808b7c9a3f4a789aadea2c06819e76c986eff7d570147e0c9",
+   "color": "#FFFFFF",
+   "name": "手部",
+   "rarity": 0
+  },
+  "3": {
+   "id": 3,
+   "iconPath": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+   "color": "#FFFFFF",
+   "name": "胴体",
+   "rarity": 0
+  },
+  "4": {
+   "id": 4,
+   "iconPath": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+   "color": "#FFFFFF",
+   "name": "脚部",
+   "rarity": 0
+  },
+  "5": {
+   "id": 5,
+   "iconPath": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+   "color": "#FFFFFF",
+   "name": "次元界オーブ",
+   "rarity": 0
+  },
+  "6": {
+   "id": 6,
+   "iconPath": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+   "color": "#FFFFFF",
+   "name": "連結縄",
+   "rarity": 0
+  }
+ },
+ "skills": [
+  {
+   "useNum": 2,
+   "desc": "<span style=\"color:#F84F36;\">炎</span>属性ダメージ+<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.1
+   ]
+  },
+  {
+   "useNum": 4,
+   "desc": "装備キャラの戦闘スキルの与ダメージ+<nobr>#1[i]%</nobr>。必殺技を発動した後、次の攻撃の<span style=\"color:#F84F36;\">炎</span>属性与ダメージ+<nobr>#2[i]%</nobr>。",
+   "params": [
+    0.12,
+    0.12
+   ]
+  }
+ ],
+ "pieces": {
+  "1": {
+   "name": "火匠の黒曜レンズ",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "663aa82b56bd772db05ca0ff7e40f9c30d38a0e29884f08749c5bef08b57e967",
+   "baseTypeText": "頭部",
+   "loreTitle": "火匠の黒曜レンズ",
+   "miniLore": "漆黒の結晶で創られたゴーグルのレンズ。このレンズを通せば、激しく弾ける火も、微かな残影になる。",
+   "lore": "神兵の武器を鍛える、それは火匠一族にとって天賦の使命であり、一生の呪いでもあった。<br /><br />解放された火匠一族は戦争洪炉の世界に移住し、その才能の極致を発揮すると同時に、壊滅の息吹に染まり始めた。<br /><br />炉の光と火花は目を焼く程に輝く。鍛造の過程で、素材は神器となり、匠は視力を失う。フーイは、火山の麓で珍しい黒曜炎晶を見つけ、丁寧に磨いてゴーグルのレンズを作った。それから、強烈な火花は、青白いシルエットだけになった。しかし、強欲な匠は呪いから逃れることはできず、全てを究極の炎の中で燃やした。<br /><br />フーイは戦争洪炉の中の反物質レギオンを鍛えられる素材と見なし、自分自身を燃え盛る烈火とした。<br /><br />「例えば、熱核反応を私の炉にできる可能性はないのでしょうか？」フーイは、限界まで高められる炎を探し求め、暴走した核融合反応の中で滅んでしまった。",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 45.1584,
+       "levelAdd": 15.80544,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 67.7376,
+       "levelAdd": 23.70816,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 90.3168,
+       "levelAdd": 31.61088,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 112.896,
+       "levelAdd": 39.5136,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "2": {
+   "name": "火匠の操炎の指輪",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "6989e7265a092b2c88b4584a14ceed3092594790e79022ac606b58a05edbe53a",
+   "baseTypeText": "手部",
+   "loreTitle": "火匠の操炎の指輪",
+   "miniLore": "炎のシンボルが彫られた指輪、火匠一族の最高の名誉の証。",
+   "lore": "九百度の炎は粘土を陶器にし、数千度の炉火は銅や錫を溶かす…原始的な鍛造ほど、極限の温度を求める。<br /><br />レギオンの生物は物質の拘束からの解放を渇望し、壊滅の熱波がもたらす昇変を追い求める。<br /><br />熟練した匠は、信じられない程の高温の炎を生成できる。烈炎の黒体放射は青い光を放つ、それはもうすぐ死ぬ恒星のようであった。火匠は皆、烈炎を操る天才だが、その中でも特に優れた者だけが、達人の証である操炎の指輪を与えられる。<br /><br />戦争洪炉はもはや匠と素材を区別しない、反物質の生物を鍛える火匠たちも壊滅の武器の一部となった。<br /><br />「鍛造品は炉の温度が決める、炉の温度は火匠が決める」壊滅の技能を掌握する火匠にとって、これは当たり前のことである。",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 22.5792,
+       "levelAdd": 7.90272,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 33.8688,
+       "levelAdd": 11.85408,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 45.1584,
+       "levelAdd": 15.80544,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 56.448,
+       "levelAdd": 19.7568,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "3": {
+   "name": "火匠の防炎エプロン",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "78fbe0a20c1ac910090219deb7118bea26021ad6825622d6b2cb1e4962ef511c",
+   "baseTypeText": "胴体",
+   "loreTitle": "火匠の防炎エプロン",
+   "miniLore": "鍛冶職人のエプロンには無駄な装飾がなく、革のシボと家紋だけがはっきりと見える。",
+   "lore": "反物質レギオンは朽ち果てた「戦争洪炉」を火匠に贈り、彼らが火の世界で自由に鍛造できるように計らった。<br /><br />両目を焦がす溶岩の世界でハンマーを振り続ければ、新生と壊滅は二律背反ではなくなる。<br /><br />ソルトは、活火山から噴出する溶岩を利用して、レギオンの武器に激しい壊滅の息吹を付与するのを得意としていた。沸騰する猛毒のガスも、躍動する溶岩も、ソルトの焼入れを妨げることはできない。熱を受け止めるソルトのエプロンは炎オオトカゲの皮でできた防火仕様である。溶岩が引いた後でも、エプロンは新品同様だった。<br /><br />レギオンの戦力は洪炉の中で、肉体と武器が融合するまで何度も鍛えられ、壊滅の兵器と成る。<br /><br />「唯一絶対の壊滅の力を……」炎を操る匠たちは、その武器に込めた恐ろしい欲望を決して隠さなかった。",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.007258,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "治癒量",
+       "propertyIconPath": "a30cffd7e2ccc5db2ee0d1316b1480c7eebc7eb030a727d19c38ee0835cae32d",
+       "isPercent": true,
+       "baseValue": 0.022118,
+       "levelAdd": 0.0077410005,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.010886001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "治癒量",
+       "propertyIconPath": "a30cffd7e2ccc5db2ee0d1316b1480c7eebc7eb030a727d19c38ee0835cae32d",
+       "isPercent": true,
+       "baseValue": 0.033178,
+       "levelAdd": 0.011612,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.082944,
+       "levelAdd": 0.029029999,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "治癒量",
+       "propertyIconPath": "a30cffd7e2ccc5db2ee0d1316b1480c7eebc7eb030a727d19c38ee0835cae32d",
+       "isPercent": true,
+       "baseValue": 0.044237,
+       "levelAdd": 0.015483,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.10368,
+       "levelAdd": 0.036288,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "治癒量",
+       "propertyIconPath": "a30cffd7e2ccc5db2ee0d1316b1480c7eebc7eb030a727d19c38ee0835cae32d",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "4": {
+   "name": "火匠の合金義肢",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "cab0e0b62ec5485d34ce0d77413b7aca9b91a299ac31880c891d2456ea42019c",
+   "baseTypeText": "脚部",
+   "loreTitle": "火匠の合金義肢",
+   "miniLore": "金属素材の義肢。表面には立体的な炎の紋様が絡みついている。",
+   "lore": "古の時代、牢獄世界の主は無二の鍛造技術を失うことを憂い、卑怯な手段で火匠一族を縛った——禁錮されていた時期、火匠の族長は皆脚部に障害があった。<br /><br />壊滅の主は囚われの火匠一族を解放し、壊滅の印は火匠たちに尽きる事のない力を与えた。<br /><br />牢獄を離れた後でも、火匠の族長は常人のように行動できなかった、だが彼は真の自由を手に入れた——卓越した技術のせいで囚われる事のない自由を。族長は怨恨と屈辱を鍛造に傾注し、連日ハンマーを振っても全く疲れを感じなかった。頑固で高慢な反物質の生物でさえ、何度も叩かれるうちに形を変え、壊滅者の改造に屈するしかなかった。<br /><br />形ある牢獄は消えたが、鍛造への狂気的な打ち込みも一種の牢獄ではないのか？<br /><br />「生身の身体は妨げ、鍛造もまた壊滅」族長は欠けていく匠が増えるのを見て、感慨深く語る。",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6128,
+       "levelAdd": 1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2.4192,
+       "levelAdd": 1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 3.2256,
+       "levelAdd": 1.1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 4.032,
+       "levelAdd": 1.4,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻撃力",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心率",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "会心ダメージ",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果命中",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "効果抵抗",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "撃破特効",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  }
+ },
+ "pageId": "107"
+}

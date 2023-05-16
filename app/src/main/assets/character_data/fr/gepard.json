@@ -1,0 +1,2358 @@
+{
+ "name": "Gepard",
+ "spRequirement": 100,
+ "rarity": 5,
+ "descHash": "Capitaine des Gardes de la crinière d'argent et puissant guerrier de Belobog. D'un naturel méticuleux et vigilant, il est aussi toujours fidèle à ses principes.",
+ "iconPath": "0696b2bfa4fa4763b3e71ddcb8b490aaae91958a512d1e596fad958e897a87b1",
+ "bgPath": "34112491e4e2f1753f3a9feff6358cd5f2e962c7db95a2ec37203d269fa39f68",
+ "figPath": "e1621b800d1d24167145dbd903cf2a06a6738e176945dedd106bf30ff302a8f8",
+ "fgPath": "8506127b2274a60fe0f8b8fe21965e0a91400c6a20e87c59d2b4a0d8ea36adfa",
+ "artPath": "c5bcfec01ce392f42654d5be48bfeceb4ba8b53eeee3e5c9263f3c53b00a9174",
+ "miniIconPath": "cff242d83528bc8051b118c1a90ec6a5d6f63091acfaf0e139e8ba0532715f6e",
+ "splashIconPath": "e07822c72adcb2a0a71907bbfe48f7da04a9e34eda152ecbf8ce6d8ec64e313f",
+ "damageType": {
+  "id": 4,
+  "iconPath": "3a4e72fd1d4a41926980ab22b12c81cde3147050577efcfdac462e0f60271b9f",
+  "color": "#47C7FD",
+  "name": "Glace",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "129eb76a6f0c9be69f8c2263f5e53030909c36d7e4de7a0571dd5665ac645b33",
+  "altIconPath": "9d034d41c43efff65e81e11d6215e3ce43eb0a2e32036648f707751a8d0a15b6",
+  "color": "#FFFFFF",
+  "name": "La Préservation",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 6,
+  "iconPath": "7ffdd2cf6f7c119724e700bbf531b0ff62f3f1e2c32159e1a1f2bc6c77416163",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation"
+   ]
+  },
+  "67219": {
+   "id": 67219,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "03a85f3ccfcb36eb4e371d602e552113e1ada82e6ca848ca9d4f2761f6991e5e",
+   "name": "Corne des neiges",
+   "desc": "Corne brisée de Rôdeur glacial. Permet l'élévation des personnages de type glace.",
+   "lore": "Les Gardes de la crinière d'argent organisaient des concours où le vainqueur devait rapporter une partie du corps d'un monstre dans le temps imparti. Cette corne froide et cassée doit en être un trophée.<br /><br />« Sire Bova, ce n'est pas un bois d'élan, nous ne pouvons pas l'accrocher au-dessus du fourneau à géomoelle. »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/67219",
+   "comeFrom": [
+    "Ombre stagnante du Couloir des échos faiblissants",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "Complainte du gardien",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "Avec ce diadème, le vœu corrompu d'une Gardienne s'est également brisé.<br />Elle cherchait le moyen d'éviter à son peuple le redoutable Hiver éternel, mais a fini par devenir la marionnette d'une conscience qui la dépasse.<br /><br />« Le titre de Gardien suprême s'est transmis de génération en génération chez les dirigeants de Belobog, c'est celui qui prend soin de tous les autres. Nul n'a songé que les Gardiens eux-mêmes pouvaient avoir besoin d'attention et de protection. »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "Écho de la guerre de la Colline de l'Hiver éternel"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Entraînement quotidien"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Récompense d'affectation"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "2901efa774991b0ce2037520ce85ff99af64f37ee6364ffda560278736df6a19",
+   "name": "Badge de la crinière d'argent",
+   "desc": "Badge porté par les soldats de la Garde de la crinière d'argent. Matériau commun utilisé pour le renforcement.",
+   "lore": "Il est criblé d'éraflures dues à l'érosion causée par le vent et la neige.<br /><br />« Dans l'ancien temps, il n'y avait qu'un seul moyen pour les Gardes de la crinière d'argent de partir à la retraite : la mort. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "Garde de la crinière d'argent ou autre ennemi des Plaines des neiges périphériques",
+    "Marcheur de l'ombre de l'Hiver éternel ou autre ennemi du Couloir des échos faiblissants",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "042dc7973ef7c36858a4aa58ef7d32335f528b3c4bc4f0c4ce2e7f401039a7c5",
+   "name": "Insigne de la crinière d'argent",
+   "desc": "Insigne militaire porté par les capitaines de la Garde de la crinière d'argent. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "Il s'agit peut-être d'une preuve d'héroïsme qui permet de se vanter auprès de sa famille. Ou peut-être qu'il s'agit d'un porte-bonheur qui peut protéger d'une balle.<br /><br />« Les temps ont changé. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "Garde de la crinière d'argent de niveau d'équilibre 2+ ou autre ennemi des Plaines des neiges périphériques",
+    "Marcheur de l'ombre de l'Hiver éternel de niveau d'équilibre 2+ ou autre ennemi du Couloir des échos faiblissants",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635668": {
+   "id": 635668,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "751785c1795d0c216b39deec5fa263ee8119f6295a1582c75e5f4a958a17a385",
+   "name": "Endurance de bronze",
+   "desc": "Bouclier de bronze, grossier mais résistant. Permet d'améliorer légèrement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Préservation</span>.",
+   "lore": "De vieilles légendes racontent comment les humains épuisèrent toutes les méthodes primitives pour suivre les dieux au combat, face à des monstres incroyablement puissants.<br />Ce bouclier en fut le témoin.<br /><br />« Nous n'avons d'autre choix que d'y mettre un terme, quand bien même nos efforts seraient futiles. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635668",
+   "comeFrom": [
+    "Calice de la Zone de ravitaillement"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "name": "Médaille de la crinière d'argent",
+   "desc": "Médaille d'honneur portée par les soldats de la Garde de la crinière d'argent ayant servi de façon courageuse et méritante. Matériau avancé utilisé pour le renforcement.",
+   "lore": "Une marque d'honneur décernée à ceux qui ont combattu les créatures du Fragmentum, les habitants du Souterrain, et les catastrophes soudaines.<br />Elle est plus souvent placée sur le cercueil qu'épinglée sur la poitrine de son propriétaire.<br /><br />« Rappelle-toi, jeune Gepard. Ceci n'est pas un jouet : c'est le destin et le sang de la famille Landau. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "Garde de la crinière d'argent de niveau d'équilibre 4+ ou autre ennemi des Plaines des neiges périphériques",
+    "Marcheur de l'ombre de l'Hiver éternel de niveau d'équilibre 4+ ou autre ennemi du Couloir des échos faiblissants",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836254": {
+   "id": 836254,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1313f4b8549d0b129fb33fcd3745a87a8030d13fc8c28159f0dd2868a203ac2f",
+   "name": "Protection d'ambre",
+   "desc": "Bouclier unique, incrusté de fragments d'ambre venus de mines au-delà du ciel. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Préservation</span>.",
+   "lore": "Le porteur de ce bouclier est protégé par un mur invisible, qui repousse aussi bien les flèches de feu que les griffes les plus gigantesques.<br />De vieilles légendes parlent d'une guerre au cours de laquelle le héros d'une tribu sonna la charge équipé d'un bouclier de bronze aux côtés de guerriers armés de lances de feu pour affronter un Léviathan.<br />Ce bouclier en fut le témoin.<br /><br />« Ne dépassez pas cette ligne. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836254",
+   "comeFrom": [
+    "Calice de la Zone de ravitaillement",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920195": {
+   "id": 920195,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "40bec463d92cede13fc22b7ac618c83f9d27e06e1a8c95a37d32cedc83fffe17",
+   "name": "Serment d'acier",
+   "desc": "Bouclier résultant d'une maîtrise inégalée d'un alliage inconnu. Permet d'améliorer modérément les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Préservation</span>.",
+   "lore": "Ce grand bouclier aussi léger qu'une plume est pourtant capable d'arrêter les attaques les plus lourdes sans montrer la moindre égratignure.<br />De vieilles légendes parlent d'une guerre au cours de laquelle de fougueux guerriers armés de lances capables d'émettre des rayons mortels et de boucliers en givracier défendirent une nation condamnée à disparaître.<br />Ce bouclier en fut le témoin.<br /><br />« De puissantes voix retentissent : l'ennemi est à nos portes ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920195",
+   "comeFrom": [
+    "Calice de la Zone de ravitaillement",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549407,
+     "count": 5
+    }
+   ],
+   "attackBase": 73.92,
+   "attackAdd": 3.696,
+   "hpBase": 190.08,
+   "hpAdd": 9.504,
+   "defenseBase": 89.1,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549407,
+     "count": 10
+    }
+   ],
+   "attackBase": 103.488,
+   "attackAdd": 3.696,
+   "hpBase": 266.112,
+   "hpAdd": 9.504,
+   "defenseBase": 124.74,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633348,
+     "count": 6
+    },
+    {
+     "id": 67219,
+     "count": 3
+    }
+   ],
+   "attackBase": 133.056,
+   "attackAdd": 3.696,
+   "hpBase": 342.144,
+   "hpAdd": 9.504,
+   "defenseBase": 160.38,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633348,
+     "count": 9
+    },
+    {
+     "id": 67219,
+     "count": 7
+    }
+   ],
+   "attackBase": 162.624,
+   "attackAdd": 3.696,
+   "hpBase": 418.176,
+   "hpAdd": 9.504,
+   "defenseBase": 196.02,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717289,
+     "count": 6
+    },
+    {
+     "id": 67219,
+     "count": 20
+    }
+   ],
+   "attackBase": 192.192,
+   "attackAdd": 3.696,
+   "hpBase": 494.208,
+   "hpAdd": 9.504,
+   "defenseBase": 231.66,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717289,
+     "count": 9
+    },
+    {
+     "id": 67219,
+     "count": 35
+    }
+   ],
+   "attackBase": 221.76,
+   "attackAdd": 3.696,
+   "hpBase": 570.24,
+   "hpAdd": 9.504,
+   "defenseBase": 267.3,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 251.328,
+   "attackAdd": 3.696,
+   "hpBase": 646.272,
+   "hpAdd": 9.504,
+   "defenseBase": 302.94,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "40ea7e986a0ba510073b959d4bffb40d9e888d3bce8018f15e35ce8c6c194c30",
+   "name": "Devoir de diligence",
+   "descHash": "Augmente les chances de base que la cible ennemie soit gelée lors de l'utilisation de la compétence de <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.35
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "56b9b0d55a492e92c8e7869e8c87bfda002669772b49f11dbe69f3b41f34da18",
+   "name": "Froid persistant",
+   "descHash": "Quand un ennemi gelé par la compétence est dégelé, sa VIT diminue de <nobr>#1[i]%</nobr> pendant <nobr>#2[i]</nobr> tour.",
+   "params": [
+    0.2,
+    1
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "1b61fa938f72eac53422f79f17b50342e9e8c732e79b23af0027f7b0aacdc7ce",
+   "name": "Sans reddition",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "2ac465e7f349b630aa2b0f442a0ab0e037ad2fbd51b519c65d83f278a8187c39",
+   "name": "La foi déplace les montagnes",
+   "descHash": "Lorsque Gepard participe au combat, la RÉS aux effets de tous les alliés augmente de <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "ddb303335c81a925f1215123b30ef6a25bb787db4d88b7c90adcc3cad3bb9e61",
+   "name": "Poing de fer froid",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "a6deb836531fc2a96fd05a74cece35d2c4399a497f4a5a71dc41172e36b41821",
+   "name": "Détermination sans faille",
+   "descHash": "Lorsque le talent de Gepard est déclenché, son action est avancée de <nobr>100</nobr> % et il restaure des PV supplémentaires équivalents à <nobr>#1[i]%</nobr> de ses PV max.",
+   "params": [
+    0.5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   866633
+  ],
+  [
+   983278
+  ],
+  [
+   67219
+  ],
+  [
+   151160
+  ],
+  [
+   468391
+  ]
+ ],
+ "skills": [
+  {
+   "id": 866633,
+   "name": "Poing de la conviction",
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Gepard à un ennemi unique.",
+   "typeDescHash": "ATQ normale",
+   "iconPath": "86f4ab2ddba799691718737ac0d50e86939c71341075dfedff87448a7d119138",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 983278,
+   "name": "Frappe intimidante",
+   "tagHash": "Incapacitation",
+   "descHash": "Inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Gepard à un ennemi unique avec <nobr>#2[i]%</nobr> de <u>chances de base</u> de geler l'ennemi pendant <nobr>#3[i]</nobr> tour.<br />Un ennemi gelé ne peut pas agir et subit des DGT de glace <u>additionnels</u> équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span> de l'ATQ de Gepard au début de chaque tour.",
+   "typeDescHash": "Compétence",
+   "iconPath": "b019a13d800df94a29d24ea36e0e9ef56fa814ef42a45f2e5dd3b89dd4361797",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1,
+      0.65,
+      1,
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.1,
+      0.65,
+      1,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.2,
+      0.65,
+      1,
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.3,
+      0.65,
+      1,
+      0.39
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.4,
+      0.65,
+      1,
+      0.42
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.5,
+      0.65,
+      1,
+      0.45
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.625,
+      0.65,
+      1,
+      0.4875
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.75,
+      0.65,
+      1,
+      0.525
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.875,
+      0.65,
+      1,
+      0.5625
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      2,
+      0.65,
+      1,
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      2.1,
+      0.65,
+      1,
+      0.63
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      2.2,
+      0.65,
+      1,
+      0.66
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      2.3,
+      0.65,
+      1,
+      0.69
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      2.4,
+      0.65,
+      1,
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      2.5,
+      0.65,
+      1,
+      0.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 67219,
+   "name": "Rempart d'endurance",
+   "tagHash": "Défense",
+   "descHash": "Accorde à tous les alliés un bouclier qui absorbe une quantité de DGT équivalente à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de la DÉF de Gepard + <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#3[i]</nobr></span> pendant <nobr>#2[i]</nobr> tours.",
+   "typeDescHash": "Ultime",
+   "iconPath": "c1909a1a7b0f45d66ab7389d1a04384fa9353dc3ee107b5d928105020097ad41",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.3,
+      3,
+      150
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.31875,
+      3,
+      240
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.3375,
+      3,
+      307.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.35625,
+      3,
+      375
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.375,
+      3,
+      420
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.39,
+      3,
+      465
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.405,
+      3,
+      498.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.42,
+      3,
+      532.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.435,
+      3,
+      566.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.45,
+      3,
+      600
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.465,
+      3,
+      633.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.48,
+      3,
+      667.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.495,
+      3,
+      701.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.51,
+      3,
+      735
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.525,
+      3,
+      768.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 100
+  },
+  {
+   "id": 151160,
+   "name": "Volonté inflexible",
+   "tagHash": "Restauration",
+   "descHash": "Au lieu de tomber <u>à terre</u> lorsqu'il subit un coup fatal, Gepard restaure immédiatement <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de ses PV max. Cet effet ne peut se déclencher qu'une fois par combat.",
+   "typeDescHash": "Talent",
+   "iconPath": "a40bef4869899186a858f02ef602213feabe267f01d5cd6792498e13b9e6c8f5",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.275
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.325
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.35
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.375
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.40625
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.4375
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.46875
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.525
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.55
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.575
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.625
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 351746,
+   "name": "Attaque",
+   "tagHash": "",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
+   "typeDescHash": "",
+   "iconPath": "86f4ab2ddba799691718737ac0d50e86939c71341075dfedff87448a7d119138",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 468391,
+   "name": "Camaraderie",
+   "tagHash": "Défense",
+   "descHash": "Après utilisation de la technique de Gepard, tous les alliés gagnent un bouclier qui absorbe des DGT équivalents à <nobr>#1[i]%</nobr> de la DÉF de Gepard + <nobr>#3[i]</nobr> pendant <nobr>#2[i]</nobr> tours au début du combat suivant.",
+   "typeDescHash": "Technique",
+   "iconPath": "d077f03c4e71b12749241449629c3becef9b3912d3299ac7e9bfba016aa7c941",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.24,
+      2,
+      150
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1104103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1104208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1104209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 303359,
+        "name": "Augmentation de la RÉS aux effets",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+        "statusList": [
+         {
+          "key": "RÉS aux effets",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836254,
+          "count": 8
+         },
+         {
+          "id": 717289,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1104210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 419995,
+        "name": "Augmentation des DGT de glace",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+        "statusList": [
+         {
+          "key": "Augm. des DGT de glace",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836254,
+          "count": 8
+         },
+         {
+          "id": 717289,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 303358,
+      "name": "Augmentation de DÉF",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+      "statusList": [
+       {
+        "key": "DÉF",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836254,
+        "count": 8
+       },
+       {
+        "id": 717289,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 303254,
+    "name": "Esprit combatif",
+    "descHash": "L'ATQ de Gepard augmente à hauteur de <nobr>#1[i]%</nobr> de sa DÉF actuelle. Cet effet s'actualise au début de chaque tour.",
+    "iconPath": "2cd5543062f2740d57c143b05ae1d991bd895f75edfd9eb2aeea50cb10fc8750",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.35
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836254,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1104201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1104101,
+     "type": 1,
+     "children": [
+      {
+       "id": 1104202,
+       "type": 2,
+       "children": [
+        {
+         "id": 1104203,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 303349,
+          "name": "Augmentation des DGT de glace",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+          "statusList": [
+           {
+            "key": "Augm. des DGT de glace",
+            "value": 0.032
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920195,
+            "count": 3
+           },
+           {
+            "id": 633348,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 303348,
+        "name": "Augmentation de la RÉS aux effets",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+        "statusList": [
+         {
+          "key": "RÉS aux effets",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 5000
+         },
+         {
+          "id": 635668,
+          "count": 3
+         },
+         {
+          "id": 549407,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "id": 303252,
+      "name": "Intégrité",
+      "descHash": "Gepard a de plus grandes chances d'être attaqué par les ennemis.",
+      "iconPath": "2868135c9d13bee8ad2a4e6fa72393cf4c2d8c69534c266dd60130610af518fe",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "levelData": [
+       {
+        "level": 1,
+        "params": [
+         3
+        ],
+        "levelReq": 0,
+        "promotionReq": 2,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 5000
+         },
+         {
+          "id": 635668,
+          "count": 3
+         },
+         {
+          "id": 270195,
+          "count": 1
+         }
+        ]
+       }
+      ],
+      "ultimateCost": 0
+     }
+    },
+    {
+     "id": 1104102,
+     "type": 1,
+     "children": [
+      {
+       "id": 1104205,
+       "type": 2,
+       "children": [
+        {
+         "id": 1104206,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 303344,
+          "name": "Augmentation de la RÉS aux effets",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+          "statusList": [
+           {
+            "key": "RÉS aux effets",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836254,
+            "count": 3
+           },
+           {
+            "id": 717289,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 303347,
+        "name": "Augmentation des DGT de glace",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+        "statusList": [
+         {
+          "key": "Augm. des DGT de glace",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 20000
+         },
+         {
+          "id": 920195,
+          "count": 5
+         },
+         {
+          "id": 633348,
+          "count": 4
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "id": 303255,
+      "name": "Commandant",
+      "descHash": "Lorsque Volonté inflexible est déclenchée, Gepard régénère toute son énergie.",
+      "iconPath": "6763442330252266961d0d23e21bed264bd719bc788945eeb145a9abfa167df4",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "levelData": [
+       {
+        "level": 1,
+        "params": [],
+        "levelReq": 0,
+        "promotionReq": 4,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 20000
+         },
+         {
+          "id": 920195,
+          "count": 5
+         },
+         {
+          "id": 125435,
+          "count": 1
+         },
+         {
+          "id": 270195,
+          "count": 1
+         }
+        ]
+       }
+      ],
+      "ultimateCost": 0
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 303351,
+    "name": "Augmentation des DGT de glace",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+    "statusList": [
+     {
+      "key": "Augm. des DGT de glace",
+      "value": 0.032
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549407,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1104204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 303346,
+    "name": "Augmentation de DÉF",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+    "statusList": [
+     {
+      "key": "DÉF",
+      "value": 0.05
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 10000
+     },
+     {
+      "id": 920195,
+      "count": 3
+     },
+     {
+      "id": 633348,
+      "count": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": 1104207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 303345,
+    "name": "Augmentation des DGT de glace",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+    "statusList": [
+     {
+      "key": "Augm. des DGT de glace",
+      "value": 0.048
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 45000
+     },
+     {
+      "id": 836254,
+      "count": 3
+     },
+     {
+      "id": 717289,
+      "count": 3
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corps",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "DÉF",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "Pieds",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "DÉF",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "Sphère planaire",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "DÉF",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "Corde de liaison",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "Taux de régénération d'énergie",
+    "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Première rencontre",
+   "text": "Je m'appelle Gepard Landau. Je suis le capitaine des Gardes de la crinière d'argent. Si tu remarques quelque chose de suspect en ville, tu peux toujours me le signaler.",
+   "unlockRequirement": "",
+   "cnUrl": "72890afe2e60cec8a13be2c476db4a77ca06284e2fa56dee5440dca11f0dabf4",
+   "jpUrl": "05334b123d37ddd3fa32d0d49ef725043312feffe972acd129faac95a24cd9bf",
+   "enUrl": "690627c4f90e8c1be7d5f4c0ca7039fbe353abab94a2a110c2f57173cbe0f19c",
+   "krUrl": "bacff2e16eaadd6bcc5592239bd11a208030e9dcb3bd2c206ef4c52af293bd8f"
+  },
+  {
+   "id": 2,
+   "title": "Salutation",
+   "text": "Te voilà. Je viens de finir l'entraînement.",
+   "unlockRequirement": "",
+   "cnUrl": "687ea41f875942f6b7ddb63858397d17ed9b0fb4ca59f8a92476c60f2bb70f53",
+   "jpUrl": "4c04626530ca04489981c11ff82951143e83d2e0bb0ae3d2b075e33f3925d2e2",
+   "enUrl": "f769f01da9e8069af45575dad2485d9eca6ca8059a4dbc57f1e4ac6fcf76dba2",
+   "krUrl": "3a06076eecf664ca4f452419f9f2d34cf7255ba40e3efb48dc710c4843aeb172"
+  },
+  {
+   "id": 3,
+   "title": "Au revoir",
+   "text": "Pardonne-moi, mais il me reste une tâche à accomplir. Je dois te laisser.",
+   "unlockRequirement": "",
+   "cnUrl": "8bd1b5476acd7820224c088c4b1d9cc2cd53554a860037dbfe70f2a6636c3937",
+   "jpUrl": "3590be049fccc2a24253ea0929964e9d670142fd7086f0239376dbcfab936c8e",
+   "enUrl": "176269ef8f56721f126b9a037f301fef2efa23fd9d7a1184339ff6cb228295ef",
+   "krUrl": "13dfbb072bf36c0a546fffeaaf04d26f9b0a872998be18c8be394d1dc5961304"
+  },
+  {
+   "id": 4,
+   "title": "Connaître Gepard",
+   "text": "En tant que Garde de la crinière d'argent, je tiens mon serment. Non pas par peur, mais parce que je me dois de le faire.",
+   "unlockRequirement": "",
+   "cnUrl": "3e7ee0366742917c10500e5c5c7618407c400a0a9d2b8c61c3e8b9c3b09f9a32",
+   "jpUrl": "0f28fb2baf29345728a29eac5e39d5708f7f69411a3c8c2da9645226c8233c28",
+   "enUrl": "d0fc506a7f81f46b34ba5f83cde262654ebdcb0cfc3139466cead3da2e249a09",
+   "krUrl": "d8f4860e173f7af060a72add20ebeeb556227a67f9cd5b1579ac536b59b1975f"
+  },
+  {
+   "id": 5,
+   "title": "Bavardage : Belobog",
+   "text": "Belobog est loin d'être ensevelie sous le rideau de neige. Cette ville représente le dernier bastion de la planète face à la férocité du Gel éternel.",
+   "unlockRequirement": "",
+   "cnUrl": "a487738238bfb0d1f355618787aefc68241a975a45b229b7f1de9c37b7dc207a",
+   "jpUrl": "241c7166483bdd11a50b8fcd61721564816eb18131fdd7fc1463f733d5313a38",
+   "enUrl": "bee7ec3424b4e18877e8ec362abb6a9494feaec7760b19784826859958f5d8dd",
+   "krUrl": "5bb5dacb2b1a2faa5d32cb8ea441f9ba3e8424b54b348e977abc80d9ae20a583"
+  },
+  {
+   "id": 6,
+   "title": "Passe-temps",
+   "text": "Je fais pousser des fleurs, mais... je n'ai pas vraiment la main verte.",
+   "unlockRequirement": "",
+   "cnUrl": "3bc60faf4d80fd7586f34be3fc4350f24fd0636146835d7001fbc4eb623a384d",
+   "jpUrl": "7eb25f4e148cf21f8c0cbaad08856621337dcb85ca884675da67fc8dfdb187b4",
+   "enUrl": "0534137ccd37613b00ed784bcbe113b2de6a4cea35761dca48a69b89f307e94e",
+   "krUrl": "b19f453253b08e2e9128b6f38d6d23f4cc6635e56b65cf258d99d0ba82b385f1"
+  },
+  {
+   "id": 7,
+   "title": "Problèmes",
+   "text": "Les chansons de ma sœur sont très populaires chez les gardes. Il y a toujours quelqu'un pour les chantonner en dehors des heures de service. Ces derniers temps, je me suis surpris à les fredonner inconsciemment. Même au travail...",
+   "unlockRequirement": "",
+   "cnUrl": "45030fcacac5d7ae81201c33550bc413ee36b778a4fa51f29009f1e2f6aa4bce",
+   "jpUrl": "82c7ca4cd2da584b20198717baa5c2469749a1f503b6f7671ff849fe5ca2b786",
+   "enUrl": "ef13ff4980ffc7690b3ff0b791fea1e208412625b068fe315ab94ab020dd88e0",
+   "krUrl": "7749e96703a6b2e3f188c9a9fc582955b98114dfed4bddef5cebd018914c9861"
+  },
+  {
+   "id": 8,
+   "title": "Anecdote",
+   "text": "La famille Landau a l'honneur et la responsabilité de servir les Gardiens suprêmes de génération en génération. Ce n'est qu'en devenant un bouclier pour la population qu'on est digne de porter le titre d'« Architecte ».",
+   "unlockRequirement": "",
+   "cnUrl": "1fa9277e57f949fd71f9d4663a55b598958c0d99d26ece2c58e41f6b30f08a5c",
+   "jpUrl": "2b4e693fe9b3389834235a951d3a1e57ee3b4b9b22b6c3dd8d84e0fdc09fb2b9",
+   "enUrl": "0ca28d1e0bc6a570906bd59ec347eaae537a73d52a34d0bcca24fac02dcc83ac",
+   "krUrl": "77c0e589fddefe83cf24abd035fb8ab3faef29b311d6908f6dc7e52394a76660"
+  },
+  {
+   "id": 9,
+   "title": "Connaissances",
+   "text": "Ces derniers temps, de nombreux enfants m'ont demandé comment devenir capitaine... Tss, je n'ai rien trouvé de mieux que de leur recommander un entraînement sérieux et un bon régime alimentaire.",
+   "unlockRequirement": "",
+   "cnUrl": "14307587afdbe94c1882b85a5b843b0165aa90af1f223194bf66f820e7d760c3",
+   "jpUrl": "3f3fec8f3c9d838952b4770e4f1bb4f6239b4344496a500ecbb040d772407270",
+   "enUrl": "0c6bdf0d7efde09736f4a5f68a769596da60bcefaecdbbdf8d706d91a883edce",
+   "krUrl": "f75f8c9f5a57d982889da158c5f6296f41ac13a817999d0fd466ac4475dedcdb"
+  },
+  {
+   "id": 10,
+   "title": "À propos de Bronya",
+   "text": "Dame Bronya s'est aventurée au cœur des régions les plus dangereuses du front à nos côtés. À de nombreuses reprises, qui plus est.",
+   "unlockRequirement": "",
+   "cnUrl": "9afdee6bf476100dbffa88b713d5452f9964acec9a5ec82263d634621ff620a0",
+   "jpUrl": "d8d1cdf8e559c4184b1528284fd0377b0c8ffaa4b015a76e58161b9b7411864a",
+   "enUrl": "0c83d5b73c6362de215164be49d67867bfb34c7b1e91ae5c22de860992eeb4ef",
+   "krUrl": "0dbeef7826cc940d561f1a5166a30ce98f2c80398b500e866d45191f5429d7f0"
+  },
+  {
+   "id": 11,
+   "title": "À propos de Serval",
+   "text": "J'entends souvent les gens dire que ma sœur a beaucoup changé depuis qu'elle a quitté la Garde. Très franchement... elle n'a pas du tout changé.",
+   "unlockRequirement": "",
+   "cnUrl": "4353735c2d46857710214d05fc1772336b63702302be241b39506fb9197103b3",
+   "jpUrl": "8103fbca0770244c7d6ea1ef626850e977c77b1fdcc40edbb14dfa029bba4736",
+   "enUrl": "f73dfafd94ead3c30468a606e27388b3a1cfdb72011663e196e46713317804c4",
+   "krUrl": "6664010611ef9657032b03400409c434bbf12aca0ff8558aba6d5ac32af4b375"
+  },
+  {
+   "id": 12,
+   "title": "À propos de Pela",
+   "text": "J'ai entendu ma sœur commencer à demander à Pela de s'occuper de mes fleurs en mon absence... J'espère que ça ne la dérange pas trop.",
+   "unlockRequirement": "",
+   "cnUrl": "c85485c84c4a4404df854c2b4837f6a60abd03dee27e8b8b59a1c6ea8ad2a374",
+   "jpUrl": "48ee9f40193cbc69159c4434d8d2760bbd15a4c81359c78cfe9a28a7d5f6cf04",
+   "enUrl": "3db6e08f6f5e795d35f7f7faf3cfc4e48d7ae13385b41a65707479c3f7c1dcd7",
+   "krUrl": "244d415f29fe1f4a3644fe2bf57d17e7c6a8f6f75976b1fde0377d8a8987c906"
+  },
+  {
+   "id": 13,
+   "title": "À propos de Cocolia",
+   "text": "J'ai toujours été convaincu que personne ne connaissait aussi bien cette ville et ne l'aimait autant que la Gardienne suprême.",
+   "unlockRequirement": "",
+   "cnUrl": "c318738e6b8b5b2bc9675af7974166b0f34631656ddd31060f6636e4bfc956d5",
+   "jpUrl": "c9c49f1796515332d389d9a755d515b48b41b6e7f239beceff86f7e0777411da",
+   "enUrl": "9d98191ca152189327cdcaf972f79eae927c603abd53b4bc9275ad074ca03085",
+   "krUrl": "5bc9f3f659eb244f5daded5c0574478c74838e2104713dcaf15573e50128f95d"
+  },
+  {
+   "id": 14,
+   "title": "À propos de Sampo",
+   "text": "C'est un... rusé. D'après les renseignements recueillis auprès de citoyens, il aurait mis la main sur des reliques anciennes. Il en aurait vendu la plupart, mais il utiliserait les dernières pour commettre diverses fraudes.",
+   "unlockRequirement": "",
+   "cnUrl": "8f5ee637cd2b5890d7cfa9364227a0c46f2ee7e044136e95555be538c40bd727",
+   "jpUrl": "e5490d28041fb52200abac60be2b9ddad90e13f78bca5235a192718c5a2d96e4",
+   "enUrl": "740bf5232fc24c28ffbefcc4d34e1e2b8833bdc585c41e37706e78d70fea2487",
+   "krUrl": "2f3169e56ae2e3a82ef69b84759f5e70571ca9a6b83be2444dd71263573fafa9"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Détails du personnage",
+   "text": "L'honorable et intègre capitaine des Gardes de la crinière d'argent au nom noble, celui de Landau.<br />Dans la ville de Belobog, en proie au gel, la vie peut malgré tout suivre son cours normal...<br />C'est en grande partie grâce à Gepard et à ses Gardes de la crinière d'argent qui préservent la paix au quotidien.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Histoire du personnage : Partie I",
+   "text": "Le jeune capitaine se tenait au sommet du rempart nord.<br /><br />Il scrutait les vastes étendues blafardes qui s'étendaient devant lui, et observait les créatures étranges du Fragmentum qui formaient au loin un essaim vibrionnant au milieu de la neige. Il vit les intrépides Gardes de la crinière d'argent alignés avec discipline, bien décidés à protéger la ville, tel un rempart défensif.<br /><br />Il n'avait pas changé. À l'époque où il n'était qu'un humble soldat, il avait juré d'être le plus puissant bouclier de Belobog. Capitaine ou non, il s'était engagé à mourir aux côtés de ses camarades. Il ne s'agissait pas d'une promesse en l'air, car Qlipoth était témoin de ce serment.<br /><br />Cependant, à ce moment-là, il n'était pas là où il aurait dû être. Et cela à la demande de la Gardienne suprême.<br /><br />À quoi pensait exactement la Gardienne suprême ? Le jeune capitaine n'en avait aucune idée. Mais il se forçait à rester concentré sur le conflit en cours.<br /><br />« Souviens-toi, Gepard Landau. »<br />« Le doute engendre l'arrogance et le mal. En tant que modèle pour Belobog, tu ne devrais pas trop réfléchir. »<br /><br />Le jeune capitaine se tenait au sommet du rempart nord.",
+   "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie II",
+   "text": "Après la plus épique des batailles, les quelques gardes survivants regagnèrent Belobog. La Gardienne suprême ordonna un défilé pour célébrer aussitôt cette victoire durement gagnée. Pendant plus de trois jours et trois nuits, la ville entière baigna dans une atmosphère de carnaval où les rires et la joie étaient au rendez-vous. La célébration atteignit son apogée lors d'une cérémonie de remise de prix aux Gardes de la crinière d'argent.<br /><br />Sous le regard attentif de la foule, la Gardienne suprême décerna un prix aux plus grands des soldats pour service rendu. Le jeune capitaine exceptionnel issu d'une famille noble enfila en silence le brassard en géomoelle. Léger, flexible et solide, il dégageait une étrange aura. C'est la seule sensation que lui inspirait ce trésor.<br /><br />Combien de ses camarades avaient été sacrifiés pour une médaille, aussi glorieuse soit-elle ? Il se força à ne pas trop y réfléchir. Pour l'instant, il ne pouvait que répondre aux attentes de la Gardienne suprême et de tout Belobog, le sourire aux lèvres. Tel était le devoir d'un soldat loyal.<br /><br />Lorsque le capitaine finit d'enfiler son brassard, un rayon de lumière éblouissante jaillit d'entre les jointures des plaques. La foule se souleva et entama spontanément une interminable ovation.<br /><br />Personne ne pouvait déceler les visages éreintés derrière les casques des Gardes de la crinière d'argent. Seule la victoire triomphale importait.",
+   "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie III",
+   "text": "Après tout, la Gardienne suprême avait pris une décision judicieuse et stratégique.<br /><br />Après la guerre, de nombreux habitants de Belobog pouvaient enfin souffler et essayer de recoller les morceaux pour reprendre une vie normale. Cependant, pas même le capitaine lui-même n'aurait pu imaginer qu'après cette paix illusoire, ils auraient à faire face à une guerre totale encore plus tragique. Sans aide extérieure, cette guerre prolongée provoquerait la chute de Belobog.<br /><br />Il vérifia son bouclier. La grande muraille fonctionnait toujours. Ce lourd dispositif de champ de force avait été fabriqué à la main par sa sœur à partir d'une caisse à outils. Si quelque chose était cassé, le pauvre capitaine devait compter sur la star de rock pour procéder à la réparation.<br /><br />« Gepard, si... et je dis bien, si... » il réfléchissait aux mots de sa sœur, « Si un jour, la Gardienne suprême t'ordonne d'abandonner le peuple de Belobog pour ses intérêts personnels... Que ferais-tu ? »<br />« Elle ne ferait jamais cela. Elle est la Gardienne suprême. » Son ton était déterminé.<br />« Je parle hypothétiquement. » Elle l'observait.<br />« Je ne sais pas trop pourquoi tu me demandes ça, mais j'ai prêté un serment de préservation à Qlipoth. Je protégerai Belobog et son peuple à tout prix. Et si je dois sacrifier ma propre vie, qu'il en soit ainsi. »<br />« Si un jour, protéger le peuple signifie désobéir aux ordres de la Gardienne suprême... et si l'un ou l'autre choix me mettait en danger... alors je choisirais de protéger le peuple. Parce que je ne suis pas censé faire autrement. »<br />Ils se turent un moment avant qu'un rire ne vienne briser le silence. Elle riait à gorge déployée.<br />« Gepard, oh Gepard... »<br />« Tu es vraiment un Landau, n'est-ce pas ? »",
+   "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie IV",
+   "text": "Le jeune capitaine se tenait au sommet du rempart nord.<br /><br />Il jeta un coup d'œil discret en direction de la prestigieuse Gardienne. Il vit qu'elle gardait la tête haute et regardait le blizzard, comme si rien dans la ville ne la concernait. Son peuple ne pouvait pas la rendre heureuse. Il ne pouvait pas non plus la mettre en colère, la rendre triste ou l'effrayer. Son regard était vide.<br /><br />À quoi pensait exactement la Gardienne suprême ? Le jeune capitaine se creusait la tête, mais aucune réponse ne lui vint à l'esprit.<br /><br />L'élégante cacophonie des cornemuses résonna pour marquer le début de l'assaut, déchirant en un instant le rideau de neige. Les braves guerriers vêtus d'uniformes bleus répondirent à l'appel, levant leur hallebarde à tour de rôle et pointant l'extrémité aiguisée vers les hordes grouillantes de monstres. Sous le feu de l'artillerie, ils amorcèrent leur charge mortelle.<br /><br />Gepard Landau, à quoi pensais-tu ? Le jeune capitaine se creusait la tête.<br /><br />« Souviens-toi, Gepard Landau. »<br />« Tu défendras Belobog et son peuple coûte que coûte. Tu n'abandonneras jamais les gens que tu es censé protéger... Tu ne jetteras jamais le déshonneur sur le nom de Landau ! »<br /><br />Cette fois-ci, le jeune capitaine avait enfin trouvé une réponse...<br />il était déjà parti vers le champ de bataille.",
+   "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
+  }
+ ],
+ "archive": {
+  "cvCn": "马洋",
+  "cvJp": "古川慎",
+  "cvKr": "민승우",
+  "cvEn": "Bryson Baugus",
+  "camp": "Belobog"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "gepard"
+}

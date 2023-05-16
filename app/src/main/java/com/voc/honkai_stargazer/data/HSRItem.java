@@ -1,3 +1,9 @@
+/*
+ * Project Honkai Stargazer (崩壞•星穹觀星者) was
+ * Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
+ * Copyright © 2023 Xectorda 版權所有
+ */
+
 package com.voc.honkai_stargazer.data;
 
 public class HSRItem {
@@ -12,6 +18,7 @@ public class HSRItem {
     public double DEF;
     public double ATK;
     public double SPEED;
+    public String fileName; //檔案名稱
 
     public String getName() {
         return name;
@@ -91,5 +98,13 @@ public class HSRItem {
 
     public void setSPEED(double SPEED) {
         this.SPEED = SPEED;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 }

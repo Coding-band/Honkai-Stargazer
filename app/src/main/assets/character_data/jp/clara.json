@@ -1,0 +1,2379 @@
+{
+ "name": "クラーラ",
+ "spRequirement": 110,
+ "rarity": 5,
+ "descHash": "機械と一緒に暮らしている流浪の少女。 内向的で優しく、純粋な心を持っている。 下層部の人々が互いの「家族」になることを願っている。",
+ "iconPath": "ed14eb05f7ce0df1e6d7320432d226dfd078b38e366d6a9bfbaf940e95b298f6",
+ "bgPath": "d335030ce1ced4b0519e8e00d6f9ddbe6b6c1bd97f029d7a9a3e71a0e22c7fc5",
+ "figPath": "f0e58b5e5509a7f65791b6ce4d667f5429be8913fd494ac61f4e9b4a6aa11d60",
+ "fgPath": "c69ead2056540f6797335e5eef9719374153e4a4d3f31447ff9bc2ee3649659a",
+ "artPath": "9f7d87a700a5b5e11195ef57bc2ef5874635779d2edb9e86d4e840ad34ec0b5b",
+ "miniIconPath": "f6809c62b85e05914e3507624eabb1939109f9c38f1fde352626f54888cfcba2",
+ "splashIconPath": "80250b40d167ca2ba09fc4120b67d0321c06c47518189354c650728b9337cb1f",
+ "damageType": {
+  "id": 1,
+  "iconPath": "ae78085438eecf2462f1256329b5aa2369f01b8cda6926ea0a08b1b8affe5108",
+  "color": "#FFFFFF",
+  "name": "物理",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "57e114954f0de32a3762e77aa2fd4f791deb47497337366308c51de1d0f12430",
+  "altIconPath": "fccc485934c16aa04a6ddacdbfec82b1e59182ba83b560af62ed57b29033c308",
+  "color": "#FFFFFF",
+  "name": "壊滅",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 1,
+  "iconPath": "10dae0df031160c29bace386a1220e539f2b5e13765cdd0f6d2a2143bca2755c",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "運命の足跡",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "幾度の敗北があなたに勝利をもたらし、一歩一歩の前進があなたを運命の転換点へと導いた。",
+   "purpose": "軌跡素材",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」ポイント報酬",
+    "ナナシの勲功",
+    "エンバー交換",
+    "期間限定イベント報酬"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "守護者の悲願",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "この仮面と一緒に、1人の守護者の歪んだ願いも砕け散った。<br />彼女は常冬の終末の中で民の未来を切り開くことを志したが、より壮大な意思に操られる傀儡となってしまった。<br /><br />「大守護者。ベロブルグの統治者が代々受け継ぐ称号であり、すべての市民を見守る者——だが人々は知らない、彼女たちを見守る人はいないということを」",
+   "purpose": "軌跡素材",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "歴戦余韻「常冬峰」"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "漫遊指南",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>20000</nobr>獲得できる。",
+   "lore": "世界を渡り歩くためには欠かせない、冒険手引き集。閲覧キーを押すと、電子音声が理解可能な言語で、有名な冒険者たちが様々な世界で体験したことや、彼らが色々な星で得た貴重な知識を語り聞かせてくれる。<br /><br />「漫遊指南最新シリーズ『スペースグルメガイド』が現在発売中。ぜひお買い求めください」<br />「投稿の際は、博識学会共感覚ビーコンのオペレーター<nobr>23</nobr>θにお繋ぎください。原稿料はあなたが普段から利用している方法でお振込みいたします」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "「忘却の庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "冒険記録",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>5000</nobr>獲得できる。",
+   "lore": "綺麗に装丁された、一目でためになるとわかる冒険日誌。冒険に関する細かい描写、価値のある情報、サバイバル術が書かれている。<br /><br />「なんで数字化してデバイスに保存しないの？持ち歩きやすくなるでしょ」<br />「お前が思っているより、先進技術は恒星嵐や中性子噴出に弱いんだ。なにより、この本の制作者は、最も簡単な方法で人々に読んでもらいたかったんだろう」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "デイリー訓練"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "旅の見聞",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>1000</nobr>獲得できる。",
+   "lore": "旅の出来事を記した日記。字はかすれており、不鮮明。思うままに内容が書かれてあるので、あまり助けにはならないだろう。<br /><br />「読み終わったら早くその紙切れを捨てるのよ、丹恒？」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "依頼報酬"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "a01d7231993bf0450534073f8515ba34a99653c455e03f9f43053719a34aff98",
+   "name": "古代パーツ",
+   "desc": "旧世界時代の残留機械のパーツ。強化に必要な簡易素材。",
+   "lore": "いくら小さくとも、現在では再現が困難な技術で鋳造、研磨されている。<br /><br />「旧世界の小さなネジが、我らの鎧よりも頑丈だとは」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "自動機兵などの敵ドロップ「機械集落」",
+    "自動機兵などの敵ドロップ「大鉱区」",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "191ad5f4b9fd5180b9065e05d463d6df35334c87ce1428e89d8d507e69177dc7",
+   "name": "古代シャフト",
+   "desc": "旧世界時代の残留機械のシャフト。強化に必要な普通素材。",
+   "lore": "精密に組み立てられた部品。一度分解すると復元することはできない。ベロブルグ技術部の熟練の整備員でも、簡単に手出しはできない。<br /><br />「バカ、これを青鎧に渡したって缶詰何個分だろ？スヴァローグに渡せば、もう衣住食には困らないぜ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "自動機兵などの敵がドロップ「機械集落」（均衡Lv.2以上）",
+    "自動機兵などの敵がドロップ「大鉱区」（均衡Lv.2以上）",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "635673": {
+   "id": 635673,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1cfcf420c7cd53b503eead070d126b1448cd68bf3f9b0ddca916d10b1747537b",
+   "name": "破砕の刃切",
+   "desc": "反物質レギオンのメンバーが落とした武器の破片。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "この焼印は階級と「壊滅」の功績を示す。<br />この武器の主は紅の馬にまたがり、都市を燃やし、人々を仲たがいし、国を蟻の巣のように潰した。<br /><br />「この印を持つ者、平和を国々から放逐せよ」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/635673",
+   "comeFrom": [
+    "疑似花萼「収容部分」"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "name": "古代エンジン",
+   "desc": "旧世界時代の残留機械のエンジン。強化に必要な高級素材。",
+   "lore": "地髄を原動力としている。回転時に火花が散るのではなく、オーロラがゆらゆらと広がる。<br /><br />「大守護者直属の技術部だけに、旧世界の資料を閲覧する権限が与えられてるの。私はね、クビにされたからもう入れないよ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "自動機兵などの敵がドロップ「機械集落」（均衡Lv.4以上）",
+    "自動機兵などの敵がドロップ「大鉱区」（均衡Lv.4以上）",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "836259": {
+   "id": 836259,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "name": "浄世の刃切",
+   "desc": "反物質レギオンのメンバーが落とした破れた武器。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "この武器は、持ち主のレギオンでの階級と「壊滅」の功績を示す。<br />この武器の主は戦争の終わり際に登場し、劫火で世界を焼き尽くした。どれだけ神に祝福されていようと、どれだけ輝かしい功績があろうと、その星は燃え尽きた炭のように、星空の暗闇の中、死んでいくだろう。<br /><br />「この印を持つ者、世界を滅掃せよ」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/836259",
+   "comeFrom": [
+    "疑似花萼「収容部分」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  },
+  "866633": {
+   "id": 866633,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "d97cb9072570df0b85725f8a0783d22e500c3e06e49b7fbc8dd485e7ba1b9516",
+   "name": "鉄狼の砕けた刃",
+   "desc": "自動機兵が残した細かいノコギリの歯。物理キャラクターの昇格素材。",
+   "lore": "かつて建創者の金属加工技術は、岩盤を切り開くチェーンソーをも作れたという。このような技術は現在は失われている。<br /><br />「スヴァローグさんは、この刃は分子の隙間に切り込むことができると言っていたけど…分子ってなんだ？」",
+   "purpose": "キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/866633",
+   "comeFrom": [
+    "凝結虚影「大鉱区」",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "920200": {
+   "id": 920200,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1da1734309fa1e0ed5035575293caab81cfa7723f7bf4a81d36d9833d80b36",
+   "name": "無生の刃切",
+   "desc": "反物質レギオンのメンバーが落とした破れた鍔。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "この焼印は階級と「壊滅」の功績を示す。<br />この武器の主はすべての思考する生物を恨んでいた。彼らは知性ある生物の悲鳴を心地良い楽曲のように堪能し、数千年かけて築いた文明を一晩で滅ぼした。<br /><br />「この印を持つ者、呼吸を衆生から奪い給え」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/920200",
+   "comeFrom": [
+    "疑似花萼「収容部分」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549408,
+     "count": 5
+    }
+   ],
+   "attackBase": 100.32,
+   "attackAdd": 5.016,
+   "hpBase": 168.96,
+   "hpAdd": 8.448,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549408,
+     "count": 10
+    }
+   ],
+   "attackBase": 140.448,
+   "attackAdd": 5.016,
+   "hpBase": 236.544,
+   "hpAdd": 8.448,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633349,
+     "count": 6
+    },
+    {
+     "id": 866633,
+     "count": 3
+    }
+   ],
+   "attackBase": 180.576,
+   "attackAdd": 5.016,
+   "hpBase": 304.128,
+   "hpAdd": 8.448,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633349,
+     "count": 9
+    },
+    {
+     "id": 866633,
+     "count": 7
+    }
+   ],
+   "attackBase": 220.704,
+   "attackAdd": 5.016,
+   "hpBase": 371.712,
+   "hpAdd": 8.448,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717290,
+     "count": 6
+    },
+    {
+     "id": 866633,
+     "count": 20
+    }
+   ],
+   "attackBase": 260.832,
+   "attackAdd": 5.016,
+   "hpBase": 439.296,
+   "hpAdd": 8.448,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717290,
+     "count": 9
+    },
+    {
+     "id": 866633,
+     "count": 35
+    }
+   ],
+   "attackBase": 300.96,
+   "attackAdd": 5.016,
+   "hpBase": 506.88,
+   "hpAdd": 8.448,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 341.088,
+   "attackAdd": 5.016,
+   "hpBase": 574.464,
+   "hpAdd": 8.448,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "4a7c180ec7c961faee21e24fbc057174789723c19f85add6cf47236cbf8bdd2b",
+   "name": "大きな後ろ姿",
+   "descHash": "戦闘スキルを発動した後、敵に付与した「反撃の印」が失効しなくなる。",
+   "params": []
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "eef148752ed1f5a8d070b4f53dfb1dcd68a9d409c63a538724dd425330b11d8f",
+   "name": "ぎゅっとした抱擁",
+   "descHash": "必殺技を発動した後、攻撃力+<nobr>#1[i]%</nobr>、<nobr>#2[i]</nobr>ターン継続。",
+   "params": [
+    0.3,
+    2
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "4e2c3cf3098eb4b75980adb81c38a07be1474aefe72a4fb56b5316834bded740",
+   "name": "冷徹な鉄甲",
+   "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "bcc5e475f5f14a2cae5a94cc654c301c00027d5444e838265e234d3a93d9217b",
+   "name": "家族の温かさ",
+   "descHash": "攻撃を受けた後、クラーラの被ダメージ-<nobr>#1[i]%</nobr>、次のターンが回ってくるまで継続。",
+   "params": [
+    0.3
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "c039825cb8396fadd31ba5faf689697494227d463f77f7905dcea398ca74375d",
+   "name": "小さな約束",
+   "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "238257725efa29126a176bf6b02954d76fac8bcef1876390b11bb75c2f8063cf",
+   "name": "長い間の付き添い",
+   "descHash": "他の味方が攻撃された後も、スヴァローグは<nobr>#1[i]%</nobr>の固定確率で攻撃者にカウンターを行い、その敵に「反撃の印」を付与する。必殺技を発動した時、さらに強化反撃の回数+<nobr>#2[i]</nobr>。",
+   "params": [
+    0.5,
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   310670
+  ],
+  [
+   226729
+  ],
+  [
+   110084
+  ],
+  [
+   795783
+  ],
+  [
+   511256
+  ]
+ ],
+ "skills": [
+  {
+   "id": 310670,
+   "name": "クラーラもお手伝いします",
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体にクラーラの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#FFFFFF;\">物理</span>ダメージを与える。",
+   "typeDescHash": "通常攻撃",
+   "iconPath": "a56a8dd217b79ffc2557b9b6ee7ca0e8f9ac596ce78704cfb8572793692a4975",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 226729,
+   "name": "スヴァローグが見てる",
+   "tagHash": "全体攻撃",
+   "descHash": "敵全体にクラーラの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#FFFFFF;\">物理</span>ダメージを与える。スヴァローグに「反撃の印」を付与された敵に対し、さらにクラーラの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分の<span style=\"color:#FFFFFF;\">物理</span>ダメージを与える。<br />戦闘スキルを発動した後、すべての「反撃の印」が失効する。",
+   "typeDescHash": "戦闘スキル",
+   "iconPath": "c733f760b7c0b9b08cd348e80be013fae237c2712127681e68c58942737dac41",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.6,
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.66,
+      0.66
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.72,
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.78,
+      0.78
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.84,
+      0.84
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.9,
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.975,
+      0.975
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.05,
+      1.05
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.125,
+      1.125
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.2,
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.26,
+      1.26
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.32,
+      1.32
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.38,
+      1.38
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.44,
+      1.44
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.5,
+      1.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 110084,
+   "name": "命令じゃなくて約束",
+   "tagHash": "強化",
+   "descHash": "必殺技を発動した後、さらにクラーラの被ダメージ-<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span>、敵に攻撃される確率が大幅アップ、<nobr>#3[i]</nobr>ターン継続。<br />スヴァローグの<u>カウンター</u>を強化。任意の味方が攻撃を受けた後、スヴァローグが攻撃者に<u>カウンター</u>を行い、<u>カウンター</u>のダメージ倍率+<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>、隣接する敵にメインターゲットに対する<nobr>50%</nobr>分のダメージを与える。強化効果は<nobr>#5[i]</nobr>回発動できる。",
+   "typeDescHash": "必殺技",
+   "iconPath": "ce7af5b7d5ea1e0fea993c2dc6d2b8a4cf06f28372bb0648029ee754469a1e5f",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      5,
+      0.96,
+      2,
+      0.15,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      5,
+      1.024,
+      2,
+      0.16,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      5,
+      1.088,
+      2,
+      0.17,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      5,
+      1.152,
+      2,
+      0.18,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      5,
+      1.216,
+      2,
+      0.19,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      5,
+      1.28,
+      2,
+      0.2,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      5,
+      1.36,
+      2,
+      0.2125,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      5,
+      1.44,
+      2,
+      0.225,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      5,
+      1.52,
+      2,
+      0.2375,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      5,
+      1.6,
+      2,
+      0.25,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      5,
+      1.664,
+      2,
+      0.26,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      5,
+      1.728,
+      2,
+      0.27,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      5,
+      1.792,
+      2,
+      0.28,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      5,
+      1.856,
+      2,
+      0.29,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      5,
+      1.92,
+      2,
+      0.3,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 110
+  },
+  {
+   "id": 795783,
+   "name": "家族なんだから",
+   "tagHash": "単体攻撃",
+   "descHash": "クラーラはスヴァローグの保護により被ダメージ-<nobr>#3[i]%</nobr>。クラーラを攻撃した敵に対し、スヴァローグが「反撃の印」を付与して<u>カウンター</u>し、クラーラの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分の<span style=\"color:#FFFFFF;\">物理</span>ダメージを与える。",
+   "typeDescHash": "天賦",
+   "iconPath": "0cf0ee129cd4db07eb16e4c59da3690937f45cfe6780d6a9949efeb203858819",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1,
+      0.8,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1,
+      0.88,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1,
+      0.96,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1,
+      1.04,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1,
+      1.12,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1,
+      1.2,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1,
+      1.3,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1,
+      1.4,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1,
+      1.5,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1,
+      1.6,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1,
+      1.68,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1,
+      1.76,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1,
+      1.84,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1,
+      1.92,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1,
+      2,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 595197,
+   "name": "攻撃",
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
+   "typeDescHash": "",
+   "iconPath": "a56a8dd217b79ffc2557b9b6ee7ca0e8f9ac596ce78704cfb8572793692a4975",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 511256,
+   "name": "勝利の小さな対価",
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、クラーラが敵に攻撃される確率がアップする、<nobr>#1[i]</nobr>ターン継続。",
+   "typeDescHash": "秘技",
+   "iconPath": "b2bb21eba04d3fa208a4d8698169257e73af1a7376832b91304e6b8ea8c1825f",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      2,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1107102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1107205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1107206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1107207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 947968,
+          "name": "攻撃強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+          "statusList": [
+           {
+            "key": "攻撃力",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836259,
+            "count": 3
+           },
+           {
+            "id": 717290,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 947967,
+        "name": "ダメージ強化・物理",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#FFFFFF;\">物理</span>与ダメージ",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836259,
+          "count": 3
+         },
+         {
+          "id": 717290,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 947970,
+      "name": "攻撃強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "攻撃力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 633349,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 947878,
+    "name": "守護",
+    "descHash": "行動制限系デバフを抵抗する確率+<nobr>#1[i]%</nobr>。",
+    "iconPath": "84ccd1a22755bb0519affc339f316f793fb22ab86a553f379a236f6399469861",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.35
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1107101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1107202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1107203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1107204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 947969,
+          "name": "HP強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+          "statusList": [
+           {
+            "key": "HP",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920200,
+            "count": 3
+           },
+           {
+            "id": 633349,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 947972,
+        "name": "攻撃強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "攻撃力",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920200,
+          "count": 3
+         },
+         {
+          "id": 633349,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 947971,
+      "name": "ダメージ強化・物理",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#FFFFFF;\">物理</span>与ダメージ",
+        "value": 0.032
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 549408,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 947875,
+    "name": "家族",
+    "descHash": "攻撃を受けた時、<nobr>#1[i]%</nobr>の固定確率で自身のデバフを1つ解除する。",
+    "iconPath": "9eb6853e6b9c0df2fa5f3210abcf981350869bfc8a9f6a49001982c1c4052da3",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.35
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1107103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1107208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1107209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 947982,
+        "name": "ダメージ強化・物理",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#FFFFFF;\">物理</span>与ダメージ",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717290,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1107210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 864032,
+        "name": "攻撃強化",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "攻撃力",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717290,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 947981,
+      "name": "HP強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "HP",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 717290,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 947877,
+    "name": "復讐",
+    "descHash": "スヴァローグのカウンターの与ダメージ+<nobr>#1[i]%</nobr>。",
+    "iconPath": "89dbcbd906fa02b1cb3ab71ced5a143e2f276cae8703f90411c885e9efbb2e38",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.3
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1107201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 947974,
+    "name": "攻撃強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "攻撃力",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549408,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "胴体",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "会心率",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "攻撃力",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+   },
+   {
+    "relicTypeHash": "次元界オーブ",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "物理与ダメージ",
+    "propertyIconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e"
+   },
+   {
+    "relicTypeHash": "連結縄",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "撃破特効",
+    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初対面",
+   "text": "-こんにちは…クラーラです。スヴァローグのように…家族になってくれますか？<br />-私がいるのだから、開拓者もクラーラの家族だ。",
+   "unlockRequirement": "",
+   "cnUrl": "14010cbfdb7df931fde8346fccd7573b8eb42a148082f626cc407e48bdf2d95f",
+   "jpUrl": "cba7689810ca26b1b6586abae22502a87039ad6d70e51f87058f9c8341106196",
+   "enUrl": "c0af06f850ea342152a61e685719fb42a6a97c476f2172453fd18a4126d94a70",
+   "krUrl": "55c0449a78f69f0de74c1ce0fabe45a380b56cffa6bd6ca5a4ee45437cb6e8ef"
+  },
+  {
+   "id": 2,
+   "title": "挨拶",
+   "text": "今日もクラーラと一緒に頑張りましょう。",
+   "unlockRequirement": "",
+   "cnUrl": "f80164407b8eb941afb061cec6e25a7c1c0975d0d29ca9dcc41eff1e7b06e1b8",
+   "jpUrl": "ff09ade91944647bb51321a4b7a92c4047a2135cf8dffa235af4b3017f646ab3",
+   "enUrl": "99c13b9247c16836082c34b1f629eab06b4a547c6d857ed90bb9f86470e68a47",
+   "krUrl": "d4ca048595fd69be6553fb9ac4b2da41b5cfe30a47f1bf5e006b24b4e881cbda"
+  },
+  {
+   "id": 3,
+   "title": "お別れ",
+   "text": "クラーラも眠いから、スヴァローグにもたれかかって寝るつもりです。あなたも一緒にどうですか？",
+   "unlockRequirement": "",
+   "cnUrl": "3bc4798928677158c4136c930775e33f2310d51ec72feff0508a5055b5fa3730",
+   "jpUrl": "9af3661b65f482d4ecce4c69d5dfa1d81bbb4000b5a07574a8775abba48b0d7e",
+   "enUrl": "2aa83aef1948e5303cbfb2c519e8b122fe8cc902bb40d26bba7cb218d9cf47dd",
+   "krUrl": "96b2250c81fec2de084d56693589d4257e0d9c537b484e3fd6de43b372a5fe9e"
+  },
+  {
+   "id": 4,
+   "title": "自分について・記憶",
+   "text": "スヴァローグの「計算」でも、人の「記憶」を切り離すことはできません…だから、クラーラはみなさんを絶対に忘れません。",
+   "unlockRequirement": "",
+   "cnUrl": "918111b9d327397b037d1ad6fb4a8eeda06e613a4841949719a7ea1587094852",
+   "jpUrl": "81e1a02be385c4110f52c427b0311e9f4760639bd81b14a254adc453d9e0fb78",
+   "enUrl": "28464c3c31ad159a36a1566ec75144321fa184cb113cdd469030ade6a54938c8",
+   "krUrl": "3d872ea739a269895af6545a6fcac91d78c3e9f0ccf17ea4811b0a5b69b5e44b"
+  },
+  {
+   "id": 5,
+   "title": "雑談・おままごと",
+   "text": "前におままごとをしていた時、パーキンスにお客さんのお出迎えを頼んだら、本当に人を連れてきたんです～",
+   "unlockRequirement": "",
+   "cnUrl": "3c8a3e657e9efc9aa1769f72ef8eac4c2aa21e6e5622005235d34e1711844406",
+   "jpUrl": "d0d92001bb551cc2a2808c1b2757309646e991307fcb5e48d38a1ea1c2770450",
+   "enUrl": "3cebb22488a33f79cfaf9063e84a011b2204ef5aff5e577c7992a1d85877a02b",
+   "krUrl": "a184940fdac59ecb6547662584955f4fd143a6bafc77215db07825f865334d8c"
+  },
+  {
+   "id": 6,
+   "title": "趣味",
+   "text": "スヴァローグの記録には面白いものがたくさんあります。例えば「映画」は…たくさんの人がおままごとをしてるみたいです。",
+   "unlockRequirement": "",
+   "cnUrl": "05fd35b69797a64c52e71ebe9d98012cd54feba2de74c6c51d9974c7fbd21d8f",
+   "jpUrl": "fbe73dde23f926b325098fa5aa9d35ab8f299ca04c6d7c0624dec360b619ee1f",
+   "enUrl": "59649c4b33537324f544124ea3abbf7ee8bc27467e5c89bae25d0451c1d80db6",
+   "krUrl": "a260f22b70cf828a77e12bcf277d854c1f820311fd13c80020ce0bde01941a96"
+  },
+  {
+   "id": 7,
+   "title": "悩み事",
+   "text": "なんとか説得して「映画」ごっこをしたのに、スヴァローグったら、木とか石の役しかしてくれないんです…「お父さん」みたいな役は、やっぱりダメみたい…",
+   "unlockRequirement": "",
+   "cnUrl": "dab637a290f20bc1933cc83b8e54ebaaeb2babca6a4d7a2402dbea29163a887b",
+   "jpUrl": "c87812834b0d699705d3635870f8841a0e1ed1632225544d6e254230f8f4305c",
+   "enUrl": "713243353bea2d61d5160b24cb29402579dc279fa54e82bb6e2489595db8229c",
+   "krUrl": "361bf20e56ca7e02b86261061d9dba90534ad31b506fd75ba46758a5d83d2d51"
+  },
+  {
+   "id": 8,
+   "title": "シェア",
+   "text": "クラーラのロボットのお友達は、言葉遣いはちょっと怖いけど、嘘をつかないいい子たちなんですよ。",
+   "unlockRequirement": "",
+   "cnUrl": "4150bbf333d112a647bbbdbe3e685666298a6ee43ab320cd7b4600be4e753343",
+   "jpUrl": "7b0784c33d1851d545345f4ab3946d1381c336b62cdaab5947674c4a3dad806e",
+   "enUrl": "5dbc862f58b91cbd2c3d1f8bdcd0b07479b6f8001b8a34553a781821ad9b50c0",
+   "krUrl": "dbb7e4ea20b3ca265386d54b7f5c1671a5ba5a16a7af68c3e35f3f7727a75839"
+  },
+  {
+   "id": 9,
+   "title": "見聞",
+   "text": "スヴァローグが休んでいる時、音がするんです。その音は…いびきにそっくりなんですよ～",
+   "unlockRequirement": "",
+   "cnUrl": "b9364060a7335c6b14a5480b7d59da74c30de8157e3f275f2d41ef536a81e897",
+   "jpUrl": "13d0d84ca6b5e14dcb896f05135fa925b7a816eb0403a24e3e71656427941360",
+   "enUrl": "27e0a59c10cb4e0ed80a8607dba44e953737910524507a1a98cbf3be0c0d00e8",
+   "krUrl": "24f26bf061ddbe739ce5ca9191b47b822c6b23823304dc25a764aa9b35649d51"
+  },
+  {
+   "id": 10,
+   "title": "ナターシャについて",
+   "text": "ナターシャさんはクラーラもお医者さんだって言うんです。しかも、ロボットのお医者さんだそうです。",
+   "unlockRequirement": "",
+   "cnUrl": "c7b282b166bed942db7d1edaec23e540db42f1250ce8797c6648764206e902bc",
+   "jpUrl": "6407b2a8e480ca9b9772bc70ac79bd48135b546174fc8ef23d98c9e093731d61",
+   "enUrl": "09fcb9f3935f061eb5141c891f9e23e4a3d152433bb7cb11e4e6ea0d42b405a9",
+   "krUrl": "a5d1cfd767c29f457d107ba5582e9430c1cf5102b13c7934343e667c5fe05fcd"
+  },
+  {
+   "id": 11,
+   "title": "ゼーレについて",
+   "text": "以前、クラーラが…探しているパーツが岩の間に挟まって、とれなかった時があったんです。その際に通りかかったゼーレお姉さんが、一撃で岩を砕いてくれんですが…クラーラがありがとって言う前に立ち去ってしまいました…",
+   "unlockRequirement": "",
+   "cnUrl": "327d009e565b3b5eb0309e70f2ce04c86642897a9a3505db56cb05e254125dcd",
+   "jpUrl": "05b5141c9bf1608113cf0ff69c45daa13066b6cdf1600f1e0d36252f54729f0b",
+   "enUrl": "780a4edd66b8adee7349af865b7c97c4fc78d99fff6238404779357fe1e14ffa",
+   "krUrl": "283a869e49cd098fb4dbf2d02e833076480c5c76d5fafb45cd43e76f2365101e"
+  },
+  {
+   "id": 12,
+   "title": "スヴァローグについて",
+   "text": "実は…スヴァローグの手は、クラーラの髪を乾かす機械にもなるし、大きな石の塊から小さな机と椅子を作り出すこともできるんです……",
+   "unlockRequirement": "",
+   "cnUrl": "4486aa6ca921050a48460cd55dd86daa48dda5d7db4e77467540e38329907ec9",
+   "jpUrl": "8e27dba2075271eddc710cb8f80d92dcc0b79e6adb23321f52d89f0e0e5669a3",
+   "enUrl": "8c9bdce6fe7b24805d4c17d75916cb36c0a3c87e3dddf84e0a4f415e1448c510",
+   "krUrl": "4857e75d0fe9bb94913ce33f56bde8ec1bdd051d7bfe9ed8398800205b2c43e6"
+  },
+  {
+   "id": 13,
+   "title": "フックについて",
+   "text": "フックからモグラ党に誘われたけど…かくれんぼの時、スヴァローグはどうすればいいんだろう……",
+   "unlockRequirement": "",
+   "cnUrl": "119ce790d9d6e3e67ff8475b94cade83bb0bb148aef8100b228699351b65923f",
+   "jpUrl": "5efbea0338dddd52d8357eaa1157e43c7460161aefad2a6d0cae9e4d975cb7f2",
+   "enUrl": "2fe9059415c35c2c7b61e4d0c66dc263e585db75d18948d9eeb3c4071f7b1591",
+   "krUrl": "bf9d529b75dc1c0ea252fb8afd842d6b3a7cd70e28b59f1436fc74d59e296381"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "キャラクター詳細",
+   "text": "ロボットに育てられた少女。年齢にそぐわない鋭さや頑固さがある。<br />クラーラにとって、スヴァローグの計算は決して間違うことのない世界の法則だった。<br />その「計算」によって得られた結果が、必ずしもすべての人に幸福をもたらすわけではないとわかるまでは。<br />臆病な少女は、勇気を出して立ち上がることを決意した。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "ストーリー・1",
+   "text": "「——記録 建創紀元████年██月██日」<br /><br />「ボルダータウン南東部のゴミ埋立地で人類の少女を発見」<br /><br />「スキャンによれば、この少女には如何なる機体組織構造の破壊や機能障害もない。しかし精神状態は非常に不安定で、自分の状況を伝えることを拒否。回避する傾向が著しい」<br />「コミュニケーションを継続したところ、一部の情報の入手に成功」<br />「少女は泣き出した。その時間、およそ3時間7分」<br /><br />「少女の名前はクラーラ。出自は不明」<br />「結論：基地に連れ帰り、さらなる観察と情報収集を行い、後続の処置案を考える」",
+   "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・2",
+   "text": "「——記録 建創紀元████年██月██日」<br /><br />「クラーラはベロブルグの共通言語を使いこなしており、機械工学の分野で優れた才能を発揮しているが、他の人類との交流を拒絶している。この人格傾向は、クラーラがベロブルグで長期発展していくうえで不利になる」<br /><br />「現在の急務は、クラーラのために適切なコミュニケーション教育案を作成することである。優先度：高」<br /><br />「——記録 建創紀元████年██月██日」<br /><br />「クラーラがボルダータウンで同年齢の個体と接触することに成功。今回の接触対象の名前はフック。ボルダータウンの治安組織『モグラ党』の総責任者を自称している——この社会組織に関連する情報はデータベースにはない」<br /><br />「クラーラとフックの接触は最初あまり順調ではなく、クラーラはかなりの羞恥心を露わにしていた。しかし、相手は極端な情熱と共感をもって状況を打開することに成功。クラーラを『モグラ党の名誉隊員』と呼んだ。コミュニケーション終了後、クラーラはフックのことを『初めての友達』と表現した」<br /><br />「この出来事はクラーラにとって極めて重要である。今日の記録を『重要』フォルダーに保存」",
+   "unlockRequirement": "キャラLv.<nobr>40</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・3",
+   "text": "「——記録 建創紀元████年██月██日」<br /><br />「クラーラの指導のもと、多くの流浪者が基地周辺に集落を作り、彼女の援助を頼りに生存している。この行為は『存護』の指令と相反するものではないが、この基地の輸送通路を通って上層部に行こうとする者も少なくない。ベロブルグの滅亡を加速させないために、基地の門を閉鎖することを決定」<br /><br />「この件は以前クラーラとも議論した。彼女は門を封鎖する行為を『理解できない』としている。それに対して私は以下の演算結果を伝えた。大守護者が裂界との戦いに過度な資源を投入したことにより、かえって上層部の壊滅が早まったこと。下層部にとっては上層部から隔絶することが最善の選択であること。そうすれば、人々はより多くの生存時間を確保できること——最終的に、クラーラは同意を示した」<br /><br />「大多数の人類は非論理的に行動するが、クラーラは違う——私に育てられ、自動機兵に囲まれて成長した彼女の行動は、真の理性に基づいている。彼女の存在はベロブルグの終焉の過程に関する演算結果に影響を与えるかもしれない。さらに観察する必要がある」",
+   "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・4",
+   "text": "「——記録 建創紀元████年██月██日」<br /><br />「私は誕生した時から下層部を『存護』する指令を受けている——たとえ上層部より1秒しか長く存続させることができないとしても、私は指令を厳守する。ベロブルグの伝統文化にある概念を借りれば、『何の疑問もなく、私は自分に課せられた使命に忠実である』と言えるだろう。そのため、私は自分の計算結果を鉄則であると考え——何者にも何事にも揺らぐことはない——これには『外から来た者』も含まれている」<br /><br />「しかし、私は膨大な演算結果の中で、ある可能性に気が付いた」<br /><br />「この演算結果では、クラーラはベロブルグのすべてを変える。かつて、私は彼女のことを『その行為は真の理性に基づいている』と評価した。この演算結果をもとに新たに結論を見直すと、間違いではないが、偏りがあったことが判明した」<br /><br />「この演算結果の中で、クラーラは『真の理性』を持つことが現状を変える鍵ではなく、むしろ彼女の真摯かつ情熱的な『感情』がすべての計算結果を覆すこと、そしてベロブルグの滅亡の運命を逆転させることを証明した。しかし、新たな外因が介入しない限り、この演算結果の達成確率が<nobr>0.25272%</nobr>を超えることはない。小確率イベントグループに分類し、この演算結果に対する研究を一時停止しなければならない」<br /><br />「現在、下層部の存続確率は過去5サイクルの間で明らかな上昇傾向は見られない。評価としては保留も認められるが、関連するリスクの要因を監視下に置くことに変わりはない」<br /><br />「本サイクルではクラーラの家族を探すことに専念する。彼女は『もう本当の家族を見つけた』と言っているが、一刻も早くクラーラの本当の家族の居場所を突き止めるため、今後も情報収集を続けていく」",
+   "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
+  }
+ ],
+ "archive": {
+  "cvCn": "紫苏九月",
+  "cvJp": "日高里菜",
+  "cvKr": "김예림",
+  "cvEn": "Emily Sun",
+  "camp": "ベロブルグ"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "clara"
+}

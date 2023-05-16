@@ -1,0 +1,2405 @@
+{
+ "name": "Tingyun",
+ "spRequirement": 130,
+ "rarity": 4,
+ "descHash": "Amicassadrice de la Commission du ciel du Luofu de Xianzhou. Elle voyage accompagnée de délégués commerciaux dans le but d'établir des relations et des alliances commerciales avec de nombreux mondes.",
+ "iconPath": "f577f6f4c33429a9b2c5c5836f8426f78808cfed465b9baedfea917c17de2f4b",
+ "bgPath": "facf7366c6e139ce3f72f79498d262c10a792007f84a7787fb8782e0031d2ea2",
+ "figPath": "3e452b021f9c8a3bd5b0c329eabd39e908194051d32273710edc7a99241b0c90",
+ "fgPath": "a7c33ffc198f65e61f34e88bc840c95c34e7c304f40dcbd500b7d84564b1b294",
+ "artPath": "9a3b0bbc050274b5ec65cafdc4fa765f44525f6766df92f86b808fb939f175ac",
+ "miniIconPath": "cac6913dde5736f954cac07f8420bfb6254a619e0ee465d407947973004ddda5",
+ "splashIconPath": "3aea41d1eb32d3b951578c913319c43795f2785c70d62c1194f00ddf176a116f",
+ "damageType": {
+  "id": 8,
+  "iconPath": "e8e459ad283c3df43713b2d13203b3dc8c636150d0c536f38e2ad62bd72b6e83",
+  "color": "#8872F1",
+  "name": "Foudre",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "635d8139b8f487db38f821f15a8b67f9e3c83a06071567b67770b9ca462c237e",
+  "altIconPath": "25e370b70daf67ebcfb8c270316852f47bd3e32b3459b4c8c5ca206da4c7860b",
+  "color": "#FFFFFF",
+  "name": "L'Harmonie",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 4,
+  "iconPath": "aee7f899a278735eda2872652cca14dc6b4c74c9f5689a59bbf33fa00b64ed44",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "151160": {
+   "id": 151160,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "f4e0301b109ba0ab0b633a7186df88a0fa0be8a70edf33c88539672e514bbc8c",
+   "name": "Couronne d'éclair de l'ombre révolue",
+   "desc": "Casque d'Ombre gardienne. Permet l'élévation des personnages de type foudre.",
+   "lore": "Un accessoire abandonné par l'ombre d'une Gardienne du passé. Il raconte l'histoire de la ville de l'Hiver éternel.<br /><br />« Svetlana la dure... Sa colère est aussi terrifiante que le tonnerre et son châtiment aussi rapide que l'éclair. »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/151160",
+   "comeFrom": [
+    "Ombre stagnante du Couloir des échos faiblissants",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Entraînement quotidien"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Récompense d'affectation"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "0c1388031133950e67459c98aad3ef2f784468e8339b131b94a4da88bbd608e3",
+   "name": "Jeune pousse immortelle",
+   "desc": "Jeune pousse ayant bourgeonné à partir d'une ancienne construction divine. Matériau commun utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Il y a de très nombreuses années, le désir orgueilleux et démesuré d'un souverain pour l'immortalité a mené la flotte de Xianzhou à lever les voiles en direction de la mer cosmique pour y rechercher des remèdes divins.<br /><br />« Nous voulons vivre jusqu'à des temps sans fin et maintenir notre empire pour l'éternité. Malheureusement, la vie humaine prend toujours fin, et les capacités humaines ont leurs limites. Par conséquent, nous avons envoyé neuf Navium Astriger pour naviguer au-delà du ciel, à la recherche des recettes divines de l'immortalité. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "Soldat frappé par le mara ou autre ennemi de Passenuage",
+    "Soldat frappé par le mara ou autre ennemi du Port Mirétoiles",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5697f106bffd77cdaac463118c2612ee69e0d906afac35a2161414374437171c",
+   "name": "Aérofleur immortelle",
+   "desc": "Nouvelle fleur ayant éclos à partir d'une ancienne construction divine. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Après d'innombrables tentatives, la flotte à la recherche du remède de l'immortalité était capable de contempler le visage de l'être divin. La divinité envoya ses bénédictions sous une forme matérielle, et l'Arbre d'ambroisie étendit ses feuilles.<br /><br />« De nouveaux bourgeons descendirent sur la lune, où des fleurs divines se mirent à pousser entre les nuages. Le temps de la floraison, le vieux bois retrouva sa jeunesse. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "Soldat frappé par le mara de niveau d'équilibre 2+ ou autre ennemi de Passenuage",
+    "Soldat frappé par le mara de niveau d'équilibre 2+ ou autre ennemi du Port Mirétoiles",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635670": {
+   "id": 635670,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a327a767852b95b69b5d25ec4abc08aa0a548455bcf70fa743c6b9acc9356a38",
+   "name": "Accord harmonique",
+   "desc": "Boîte à musique compacte, fabriquée par un inconnu. Permet d'améliorer légèrement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Harmonie</span>.",
+   "lore": "Joue un air joyeux et apaisant.<br />S'il semble simple, n'importe quel amateur de musique verra la maîtrise du compositeur de cet air.<br /><br />« Prends la main de ta Famille et danse ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635670",
+   "comeFrom": [
+    "Calice de la Colonie de robots"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "786a4710552f5db3cdbe821ed399429f2c61f1c0a70c89309cd3e3943a9918e6",
+   "name": "Branche-lumière immortelle",
+   "desc": "Branche à feuilles caduques provenant d'une ancienne construction divine. Matériau avancé utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Après les Trois souffrances, Xianzhou a été en proie à la dévastation. Les Homo celestinae se sont retrouvés au rang de démons, et les catastrophes se sont enchaînées sans discontinuer.<br /><br />« En vertu du décret de la Commission des dix seigneurs, quiconque sur le point d'être frappé par le mara sera saisi par les juges infernaux et envoyé à la Prison des enchaînés. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "Soldat frappé par le mara de niveau d'équilibre 4+ ou autre ennemi de Passenuage",
+    "Soldat frappé par le mara de niveau d'équilibre 4+ ou autre ennemi du Port Mirétoiles",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836256": {
+   "id": 836256,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e0a98987f6f4c66f28c5b9b79a757e590ae649d0e44ec47ada0ec1bac39e78fa",
+   "name": "Symphonie de stellaris",
+   "desc": "Boîte à musique complexe, fabriquée par un inconnu. Permet d'améliorer considérablement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Harmonie</span>.",
+   "lore": "Joue une puissante symphonie galactique.<br /><br />« Certains astronomes pensent que les révolutions des sphères célestes fonctionnent de la même manière que des structures mécaniques complexes. Les notes, aussi claires que le cristal, émises par le mouvement des étoiles ont été baptisées \"Harmonie des sphères célestes\". »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836256",
+   "comeFrom": [
+    "Calice de la Colonie de robots",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920197": {
+   "id": 920197,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "2e991dc7b3d976ae72c1f7dfcc0cfb1ff4c33223d33db5479a3dcd8d039ffa1a",
+   "name": "Hymne ancestral",
+   "desc": "Boîte à musique, fabriquée par un inconnu. Permet d'améliorer modérément les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Harmonie</span>.",
+   "lore": "Joue un hymne chanté par un petit groupe.<br />Il est impossible de savoir à qui s'adresse cet hymne.<br /><br />« Misère, épreuve du Très haut ! Richesse, grâce du Très haut ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920197",
+   "comeFrom": [
+    "Calice de la Colonie de robots",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "91205616cca581bc299d91a1af94a91981d58328675779f8e66ccbaf679e5e94",
+   "name": "Route finale du destructeur",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "Le cœur du Léviathan a cessé de battre, mais son esprit est toujours vivant, bien que prisonnier d'une boîte. Tant que le couvercle reste fermé, il erre entre deux mondes et alimente le moteur de la destruction.<br /><br />« La Bête du jugement dernier est un fléau fabriqué dans la Forge de la guerre en utilisant les restes d'un Léviathan et les os de la lamentation d'un millier de morts. Il aspire à sa propre destruction et à celle de l'univers. »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "Écho de la guerre de la Zone de ravitaillement"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549504,
+     "count": 4
+    }
+   ],
+   "attackBase": 72,
+   "attackAdd": 3.6,
+   "hpBase": 115.2,
+   "hpAdd": 5.76,
+   "defenseBase": 54,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 112,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549504,
+     "count": 8
+    }
+   ],
+   "attackBase": 100.8,
+   "attackAdd": 3.6,
+   "hpBase": 161.28,
+   "hpAdd": 5.76,
+   "defenseBase": 75.6,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 112,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633445,
+     "count": 5
+    },
+    {
+     "id": 151160,
+     "count": 2
+    }
+   ],
+   "attackBase": 129.6,
+   "attackAdd": 3.6,
+   "hpBase": 207.36,
+   "hpAdd": 5.76,
+   "defenseBase": 97.2,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 112,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633445,
+     "count": 8
+    },
+    {
+     "id": 151160,
+     "count": 5
+    }
+   ],
+   "attackBase": 158.4,
+   "attackAdd": 3.6,
+   "hpBase": 253.44,
+   "hpAdd": 5.76,
+   "defenseBase": 118.8,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 112,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717386,
+     "count": 5
+    },
+    {
+     "id": 151160,
+     "count": 15
+    }
+   ],
+   "attackBase": 187.2,
+   "attackAdd": 3.6,
+   "hpBase": 299.52,
+   "hpAdd": 5.76,
+   "defenseBase": 140.4,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 112,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717386,
+     "count": 7
+    },
+    {
+     "id": 151160,
+     "count": 28
+    }
+   ],
+   "attackBase": 216,
+   "attackAdd": 3.6,
+   "hpBase": 345.6,
+   "hpAdd": 5.76,
+   "defenseBase": 162,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 112,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 244.8,
+   "attackAdd": 3.6,
+   "hpBase": 391.68,
+   "hpAdd": 5.76,
+   "defenseBase": 183.6,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 112,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "75a95999b288af7ef80fd61feadf80a930b1f6fb783fef0d9c6d7db06888eaa6",
+   "name": "Bénédiction de vivacité",
+   "descHash": "La VIT de l'allié béni augmente de <nobr>#1[i]%</nobr> pendant 1 tour après utilisation de son ultime.",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "0f8e74c9afb5fcec30a74d8d3e739062c461ad9892b47f5a49b4565f5c2e869d",
+   "name": "Généreuse donatrice",
+   "descHash": "L'allié béni régénère <nobr>#1[i]</nobr> points d'énergie après avoir éliminé un ennemi. Cet effet ne peut être déclenché qu'1 fois par tour.",
+   "params": [
+    5
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "7abe5bdbe96185d155e9e106328af9e738bea1aeb4a500c86c56357ebd2e3195",
+   "name": "Héritage des jours bénis",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "e455c2f3a98f123ab3c46033fe89a6e5c604706688df4ab710030d741e2de4c0",
+   "name": "Versatilité joviale",
+   "descHash": "Le multiplicateur de DGT de la bénédiction augmente de <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "0b17ff4123abc6ceea64b3becbf9cf38a4af213c78f399dcd6be214e933a5b2b",
+   "name": "Passante coquette",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "3da5ef2c51f98c7f8e1a58ed8f37b40f10af3414970522544a29f24eadd8eb97",
+   "name": "Paix et richesse pour tous",
+   "descHash": "L'ultime régénère <nobr>#1[i]</nobr> points d'énergie supplémentaires à la cible alliée.",
+   "params": [
+    10
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   743992
+  ],
+  [
+   28519
+  ],
+  [
+   944578
+  ],
+  [
+   459465
+  ],
+  [
+   543406
+  ]
+ ],
+ "skills": [
+  {
+   "id": 743992,
+   "name": "Expulsion",
+   "tagHash": "Cible unique",
+   "descHash": "Tingyun inflige des DGT de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de son ATQ à un ennemi unique.",
+   "typeDescHash": "ATQ normale",
+   "iconPath": "28e152dec82e5ec2e4925c297ea392186bab0b0b242489df1d07c1f7795cb072",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635670,
+       "count": 2
+      },
+      {
+       "id": 549504,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920197,
+       "count": 2
+      },
+      {
+       "id": 633445,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920197,
+       "count": 4
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836256,
+       "count": 2
+      },
+      {
+       "id": 717386,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836256,
+       "count": 6
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 28519,
+   "name": "Mélodie apaisante",
+   "tagHash": "Soutien",
+   "descHash": "Accorde une bénédiction à un allié unique qui augmente son ATQ de <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>, dans la limite de <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span> de l'ATQ actuelle de Tingyun.<br />Lorsque l'allié béni attaque, il inflige des DGT de foudre <u>additionnels</u> équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de sa propre ATQ 1 fois.<br />La bénédiction dure <nobr>#3[i]</nobr> tours et n'est effective que sur le dernier personnage à bénéficier de la compétence de Tingyun.",
+   "typeDescHash": "Compétence",
+   "iconPath": "4a41656549e3a1a360c4345fdb2ac86893da9b1aeee75c64f3864fe88bdc880b",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.2,
+      0.25,
+      3,
+      0.15
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.22,
+      0.275,
+      3,
+      0.16
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549504,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.24,
+      0.3,
+      3,
+      0.17
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635670,
+       "count": 2
+      },
+      {
+       "id": 549504,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.26,
+      0.325,
+      3,
+      0.18
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920197,
+       "count": 2
+      },
+      {
+       "id": 633445,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.28,
+      0.35,
+      3,
+      0.19
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920197,
+       "count": 4
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.3,
+      0.375,
+      3,
+      0.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920197,
+       "count": 6
+      },
+      {
+       "id": 633445,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.325,
+      0.40625,
+      3,
+      0.2125
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836256,
+       "count": 2
+      },
+      {
+       "id": 717386,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.35,
+      0.4375,
+      3,
+      0.225
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836256,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.375,
+      0.46875,
+      3,
+      0.2375
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836256,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.4,
+      0.5,
+      3,
+      0.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836256,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.42,
+      0.525,
+      3,
+      0.26
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.44,
+      0.55,
+      3,
+      0.27
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.46,
+      0.575,
+      3,
+      0.28
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.48,
+      0.6,
+      3,
+      0.29
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.5,
+      0.625,
+      3,
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 944578,
+   "name": "Bienveillance des nuages",
+   "tagHash": "Soutien",
+   "descHash": "Régénère <nobr>#1[i]</nobr> points d'énergie à un allié unique et augmente les DGT qu'il inflige de <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#3[i]%</nobr></span> pendant <nobr>#2[i]</nobr> tours.",
+   "typeDescHash": "Ultime",
+   "iconPath": "fc81836a15c754b30b09aeab0b5153796ef7717ec1efb91b1708aaad82700de6",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      50,
+      2,
+      0.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      50,
+      2,
+      0.23
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549504,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      50,
+      2,
+      0.26
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635670,
+       "count": 2
+      },
+      {
+       "id": 549504,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      50,
+      2,
+      0.29
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920197,
+       "count": 2
+      },
+      {
+       "id": 633445,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      50,
+      2,
+      0.32
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920197,
+       "count": 4
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      50,
+      2,
+      0.35
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920197,
+       "count": 6
+      },
+      {
+       "id": 633445,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      50,
+      2,
+      0.3875
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836256,
+       "count": 2
+      },
+      {
+       "id": 717386,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      50,
+      2,
+      0.425
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836256,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      50,
+      2,
+      0.4625
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836256,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      50,
+      2,
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836256,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      50,
+      2,
+      0.53
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      50,
+      2,
+      0.56
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      50,
+      2,
+      0.59
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      50,
+      2,
+      0.62
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      50,
+      2,
+      0.65
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 130
+  },
+  {
+   "id": 459465,
+   "name": "Déluge d'étincelles pourpres",
+   "tagHash": "Renforcement",
+   "descHash": "Lorsque Tingyun attaque un ennemi, l'allié béni inflige immédiatement des DGT de foudre <u>additionnels</u> équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de sa propre ATQ au même ennemi.",
+   "typeDescHash": "Talent",
+   "iconPath": "127087b653c36b6404e77d9493d3c7b82e9da23582bf3362411a3b9211cea7b3",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549504,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635670,
+       "count": 2
+      },
+      {
+       "id": 549504,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.39
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920197,
+       "count": 2
+      },
+      {
+       "id": 633445,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.42
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920197,
+       "count": 4
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.45
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920197,
+       "count": 6
+      },
+      {
+       "id": 633445,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.4875
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836256,
+       "count": 2
+      },
+      {
+       "id": 717386,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.525
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836256,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.5625
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836256,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836256,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.63
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.66
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.69
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 660051,
+   "name": "Attaque",
+   "tagHash": "",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
+   "typeDescHash": "",
+   "iconPath": "28e152dec82e5ec2e4925c297ea392186bab0b0b242489df1d07c1f7795cb072",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 543406,
+   "name": "Douce brise",
+   "tagHash": "Soutien",
+   "descHash": "Tingyun régénère immédiatement <nobr>#1[i]</nobr> points d'énergie lorsqu'elle utilise sa technique.",
+   "typeDescHash": "Technique",
+   "iconPath": "af2d395ebe3ff08f5475417abb83cb7faf4bce376d92a88cf5b3b2e8eea37876",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      50
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1202101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1202202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1202203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 381294,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920197,
+          "count": 2
+         },
+         {
+          "id": 633445,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 381293,
+      "name": "Augmentation de DÉF",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+      "statusList": [
+       {
+        "key": "DÉF",
+        "value": 0.05
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635670,
+        "count": 2
+       },
+       {
+        "id": 549504,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 381197,
+    "name": "Jovialité nourrie",
+    "descHash": "La VIT de Tingyun augmente de <nobr>#1[i]%</nobr> pendant 1 tour après utilisation de sa compétence.",
+    "iconPath": "e17accce93a74d82be451ee077bcbbb4f81c29baff1d5c5f15d9029b2e572cef",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.2
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635670,
+        "count": 2
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1202103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1202208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1202209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 381304,
+        "name": "Augmentation de DÉF",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+        "statusList": [
+         {
+          "key": "DÉF",
+          "value": 0.1
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836256,
+          "count": 6
+         },
+         {
+          "id": 717386,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1202210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 264650,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836256,
+          "count": 6
+         },
+         {
+          "id": 717386,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 381303,
+      "name": "Augmentation des DGT de foudre",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "6acd635b37377d308961b26cf64a7a0ceed4e922bdf0427b620249351796ecd4",
+      "statusList": [
+       {
+        "key": "Augm. des DGT de foudre",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836256,
+        "count": 6
+       },
+       {
+        "id": 717386,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 381199,
+    "name": "Passage jubilatoire",
+    "descHash": "Tingyun régénère immédiatement <nobr>#1[i]</nobr> points d'énergie au début de son tour.",
+    "iconPath": "1c03321fab6be9f03372197fbf35d64689dab1fbe440d91fdb3d4a4df37ebc46",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       5
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836256,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1202201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1202204,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 381291,
+      "name": "Augmentation des DGT de foudre",
+      "levelReq": 0,
+      "promotionReq": 3,
+      "iconPath": "6acd635b37377d308961b26cf64a7a0ceed4e922bdf0427b620249351796ecd4",
+      "statusList": [
+       {
+        "key": "Augm. des DGT de foudre",
+        "value": 0.032
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 8000
+       },
+       {
+        "id": 920197,
+        "count": 2
+       },
+       {
+        "id": 633445,
+        "count": 2
+       }
+      ]
+     }
+    },
+    {
+     "id": 1202207,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 381290,
+      "name": "Augmentation d'ATQ",
+      "levelReq": 0,
+      "promotionReq": 5,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 36000
+       },
+       {
+        "id": 836256,
+        "count": 2
+       },
+       {
+        "id": 717386,
+        "count": 2
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 381296,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1202102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1202205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1202206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 381289,
+        "name": "Augmentation de DÉF",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+        "statusList": [
+         {
+          "key": "DÉF",
+          "value": 0.075
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836256,
+          "count": 2
+         },
+         {
+          "id": 717386,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 381292,
+      "name": "Augmentation d'ATQ",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920197,
+        "count": 4
+       },
+       {
+        "id": 633445,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 381200,
+    "name": "Subjugation de la peine",
+    "descHash": "Augmente les DGT de l'ATQ normale de <nobr>#1[i]%</nobr>.",
+    "iconPath": "31b67ca55d30346fa95f59ac22748818e8f4dfa75f4cfc01480e4ca3ac595bbb",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.4
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920197,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corps",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "Chances de coup critique",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "Pieds",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "VIT",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+   },
+   {
+    "relicTypeHash": "Sphère planaire",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "Augm. des DGT de foudre",
+    "propertyIconPath": "6acd635b37377d308961b26cf64a7a0ceed4e922bdf0427b620249351796ecd4"
+   },
+   {
+    "relicTypeHash": "Corde de liaison",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "Taux de régénération d'énergie",
+    "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Première rencontre",
+   "text": "Je m'appelle Tingyun, et je suis l'amicassadrice de la guilde marchande de la Commission du ciel du Luofu. Cher bienfaiteur/Chère bienfaitrice, je compte sur ton aide.",
+   "unlockRequirement": "",
+   "cnUrl": "1f41f2e83a8284ee215185f340effb14ac36e517b514fefcfc42860748848056",
+   "jpUrl": "f7d600cdeaf0d78e5355b4d21676942906469045d61106e9fe24a0dd2cfbc187",
+   "enUrl": "acef7b119565dea0f0fff623e981216cfd09d1fb4a2ccbc86d459f837c8c293a",
+   "krUrl": "fc73781bb68a0a0351626712d8fe05c181f89a9d9ab7ec03140ff7d0e8f26bf3"
+  },
+  {
+   "id": 2,
+   "title": "Salutation",
+   "text": "Où est-ce que tu vas ? S'il te plaît, emmène-moi avec toi.~",
+   "unlockRequirement": "",
+   "cnUrl": "0fa74f28dbcd2d22166b6dc0b953bce41f38a01520371de86abfac947c0de535",
+   "jpUrl": "8f353c35ebe8c431a91aed23b6e8eec1affe96958e0d967c8f7efe6323ecf2a3",
+   "enUrl": "1650f121a2634a464deddc9c1db29d9d8e49ce459af79bbd9191ec5917855b4a",
+   "krUrl": "8488df27a1d51e2affaa08985a86f1f263a44822f6c9cb5947d5500f9f1d964d"
+  },
+  {
+   "id": 3,
+   "title": "Au revoir",
+   "text": "Ah, il est tard, même ma queue semble fatiguée. Toutes mes excuses, mais je vais devoir te laisser...",
+   "unlockRequirement": "",
+   "cnUrl": "7cc90285f413ea30818f26cddfbd12d1b0ca49e5084406d0462a965fedd24f5c",
+   "jpUrl": "db6e270a6021e2152e2f066f3df26dd87ca1404324043a1cbab1f4b9d60caea5",
+   "enUrl": "22fc9160b418241043119bb2b89c3b2eaa8090b5559e150735e3a9e4d79a9e06",
+   "krUrl": "c6621ff9da36996e32e792fa58ce8cb085954acef73b90fed4446c2295f04576"
+  },
+  {
+   "id": 4,
+   "title": "Connaître Tingyun : Queue",
+   "text": "Il est très important de prendre soin de sa queue le soir. Il faut la démêler à l'aide d'une brosse en buis, puis appliquer une crème adoucissante sur les racines et l'envelopper de soie nébuleuse avant d'aller se coucher. Ainsi, ma queue sera douce et soyeuse au réveil.",
+   "unlockRequirement": "",
+   "cnUrl": "7440f1261adae596e01fb5fa85b82693e93b0de65719823799ee90050df93855",
+   "jpUrl": "dc5f9deb4cc38eef2a3a3bd4bb2acc1a465ada17a37dc712a7e4212330dd08a4",
+   "enUrl": "c43a2ed354f237991ddae905bbcd1c53fb80babcdb30e56a8b3b4afb27e50d5c",
+   "krUrl": "b983a2e1236d20bc02f1179ec043c5eea718c3cb00c4366cd7ad713f8441b678"
+  },
+  {
+   "id": 5,
+   "title": "Connaître Tingyun : Bracelet de jade",
+   "text": "Ce bracelet n'a rien d'ancien, mais ce jade était si vert et si intense que j'ai demandé à un artisan de me le fabriquer. Il est plus difficile de trouver des objets pour moi que pour ma boutique. Ils doivent être de qualité, mais aussi me taper dans l'œil.",
+   "unlockRequirement": "",
+   "cnUrl": "e87ba254c8a177a5d14760c68d9b29f8cec395b6774267c8b434a564d35e2aab",
+   "jpUrl": "77a929773ef305c05fd03a571a7ea919bd12bb1fd97f5ec15acd6290b428ca67",
+   "enUrl": "5247a496be7ddb509c79cab4613dc2d0153b6042738dfd4e9cc0900dc1333244",
+   "krUrl": "07d013bc157d7ec49d7fb5ac5e8b6079776fa5c2888d1f5ee785a8705921436e"
+  },
+  {
+   "id": 6,
+   "title": "Bavardage : Affaires",
+   "text": "La paix est bonne pour les affaires. Il est plus facile de travailler avec des gens raisonnables. Pour les moins raisonnables, les rafraîchir avec un éventail fait souvent des miracles.",
+   "unlockRequirement": "",
+   "cnUrl": "7b0634e17d813de1093dcafc9a43b213895735bfac9eae6c75dab8b0c32f1bf9",
+   "jpUrl": "fd6bfd331d6e47f2020f14e3ce091a96cd855a890d09d37c6df15f443d4fefaa",
+   "enUrl": "8b1b4def495c593855da83a4b0bd9c47f79da1d66b0da8c0bb752d9d132d3f32",
+   "krUrl": "02d4b11b4e2727141f05910c5114f0e2efc9419995ab7c27cb32cfb6ed8f004f"
+  },
+  {
+   "id": 7,
+   "title": "Bavardage : Ambassadrice d'affaires",
+   "text": "Chaque fois que je pars, je laisse une lettre au fond d'un tiroir de ma boutique. Quand je reviens, je la brûle. Et si je ne reviens pas... eh bien, il restera toujours un souvenir de moi.",
+   "unlockRequirement": "",
+   "cnUrl": "a03d874112ba8b2610d1f68645b15713dcddd519fb50c78634e689fcfcf2ee01",
+   "jpUrl": "008c5c6ae1bcd2836850b71105c1146cec91ea36c5dadaf984e59b3f3cda8b2f",
+   "enUrl": "7435197224eea997ce5f6182a1ba7d88e4e996f1e95a01d426f17f843aa96c01",
+   "krUrl": "b428ddcdb425f1dd32b0a3f6faaf59da55d8f20c6a334cb6d46662568ad94708"
+  },
+  {
+   "id": 8,
+   "title": "Passe-temps",
+   "text": "Quand j'ai le temps, je vais au Comte insomniaque en fin de journée. Si je veux un peu de compagnie, je discute avec les autres clients. Si je veux me reposer, j'observe simplement les gens et je lance mes dés en m'essayant à la divination. C'est assez amusant.",
+   "unlockRequirement": "",
+   "cnUrl": "09a67c2488022d0c8f14d75bf802ddafa2dfd145a07220422dac8334ef78e155",
+   "jpUrl": "10474ee0c2ce7d3ce67004f2d5e14fab6a8387527654cde5f4e40c7d95a6d5a6",
+   "enUrl": "fe6b2072746c13eb29a09fad02f2b91691866243c423be6a5cea861b88a7a812",
+   "krUrl": "a07d4be57bfae72c1ca943a583522c41825d11065c29691ec596385b3e649f00"
+  },
+  {
+   "id": 9,
+   "title": "Problèmes",
+   "text": "Tous les membres de la Commission du ciel sont courageux. Je les admire, mais je ne pourrais jamais faire comme eux... Je suis plus douée pour les joutes verbales et les négociations fines...",
+   "unlockRequirement": "",
+   "cnUrl": "6dadf79ac3cec267087c341b732e57107264cb21407614a4b42840602067fbef",
+   "jpUrl": "caadf93aaec0ff14e50428316155ad68c2686b8628c3e9c85acdedc47161c0a1",
+   "enUrl": "8f86485f2db292a9db0ad4bf30d95d24efc338e6748b91cbc84d59014c9b28c7",
+   "krUrl": "b9d0d8a9ace6fdc553a571f9f6ec21536eec141f0d9c18a7c9399b8e877119a2"
+  },
+  {
+   "id": 10,
+   "title": "Anecdote",
+   "text": "Le prix d'achat de l'ambre céleste a doublé pour soutenir le Seigneur de la Préservation. Mais c'est la Corporation qui déterminera si c'est une bonne ou une mauvaise nouvelle pour les mondes riches en minerais...",
+   "unlockRequirement": "",
+   "cnUrl": "8227555c46cbaf254307401cb63bcff3fcaad7918103d857a89d66a0cc743106",
+   "jpUrl": "b115e55a75a8a5c6373b3a323f28e682b2950717d3f48e5ea6e364cfdf771e4e",
+   "enUrl": "4a629a31211f1634e7e24e04ea9186c4f2953d9a6021724808c4f70b76bd6e0d",
+   "krUrl": "75b775de81da1f6682fe4bd37c4696c2eb82d0a6fa2f4313c5e37b9792f21094"
+  },
+  {
+   "id": 11,
+   "title": "Connaissances",
+   "text": "La plupart des êtres que j'ai rencontrés au sein des Flammes sifflantes ont une origine et un but. Les créatures avec lesquelles on ne peut pas communiquer sont les plus terrifiantes, car elles usent d'autres méthodes pour conquérir...",
+   "unlockRequirement": "",
+   "cnUrl": "679756c45464a9513315d74605797c3c4c5d2734a4c26d329a412c7e0c630b3b",
+   "jpUrl": "eb65f04c742e00eab32903a93f4855b328d9ff8c15a228635ba3a6184373afdd",
+   "enUrl": "3621f7611080b025264a5535fab321513681c00136b7acedba33c9fa1f80b04c",
+   "krUrl": "b045b6b9d7812d60c36e199d142d1585c31968f62d813decfcf802940b6fefae"
+  },
+  {
+   "id": 12,
+   "title": "À propos de Jing Yuan",
+   "text": "Le général est un grand maître dans l'art de maximiser les résultats pour un minimum d'efforts. Je ne le dépasserai jamais sur ce plan.",
+   "unlockRequirement": "",
+   "cnUrl": "46665b6e040a65ebbe7e2a3464a21f7cd2af7a39936aaf3548c766a5641a8f80",
+   "jpUrl": "73e644fa55ec8516c8738d984d9f60b3900841125e034df07cfdb0fd7655dbb8",
+   "enUrl": "2e7d0b2f345e5f65744fbbde961ee86029d8a7d2b0a3ec45ce2254b29bc33d24",
+   "krUrl": "79914c710ceccc68a7668bed90a11d5a4e3105f113d28ea674089e73b81800b1"
+  },
+  {
+   "id": 13,
+   "title": "À propos de Yanqing",
+   "text": "Un jour, je lui ai offert des objets que je jugeais rares et qu'il a acceptés en me remerciant respectueusement. Plus tard, je l'ai vu choisir soigneusement des épées à la Commission de l'artisanat... Héhé, les enfants sont des petites bêtes intelligentes.",
+   "unlockRequirement": "",
+   "cnUrl": "92309998d9ea5f0f63cdea3dc5bc104215cda3f0a371bba4f2904ec97fc41d8d",
+   "jpUrl": "ced0ccdf60c1ceb9748d261ca0ae41d85120d97187d64cfdcbb182cc43a9f79a",
+   "enUrl": "0743e0123236b7004f13a424b6aae81a3cbe0804916cd72480c985cd39e2be80",
+   "krUrl": "616fc2266c4ff5b0e76b071a50290866df2dd5b86434e2989a4bae03f8cfe900"
+  },
+  {
+   "id": 14,
+   "title": "À propos de Yukong",
+   "text": "Qu'il s'agisse de piloter des astroskiffs ou de mener la Commission du ciel, madame Yukong répond toujours présente. Je n'ai pas ses compétences de timonière.",
+   "unlockRequirement": "",
+   "cnUrl": "a61917108e701e4b4dbaf7594bb82bbc0718f6c8fb5a3e2336fe2406df6198fd",
+   "jpUrl": "d9efcac04091748da3888892a02bb1e9a7eaab22317d9631d7e429b5f39917db",
+   "enUrl": "565021ac4fa4425eefe48eddd854c5987098552c4581cb6a8885e2ecde60853a",
+   "krUrl": "caf7f52d909358eb978cd963a40dab15fa447564da3f53d6119c1d328da6fc04"
+  },
+  {
+   "id": 15,
+   "title": "À propos de Luocha",
+   "text": "Un homme d'affaires venu d'au-delà du ciel ? Il n'est même pas dans les registres des Flammes sifflantes... C'est bizarre, pourquoi je ne me souviens pas de lui...",
+   "unlockRequirement": "",
+   "cnUrl": "c263d358fefca2ad873d3620470204dc51c5657b767b7860ec1f27ed2d433431",
+   "jpUrl": "437d01210811bd319377a431fa93cf5aa07de706aa1aad96dbff2ca1a7279fa7",
+   "enUrl": "06e8c82c7dc53977622b82350222ac8d4b8743f43843e00a0fd2a5e8c3daaec4",
+   "krUrl": "28b18ad13505cf37378484a93326d719488aa7408e5f197e70fb5959ea155b5e"
+  },
+  {
+   "id": 16,
+   "title": "À propos de Sushang",
+   "text": "Sushang est très gentille, elle passe tous les jours me voir au magasin. « Les affaires sont mauvaises ? Je vais t'aider ! » « On a abîmé ta vitrine ? Je vais t'aider ! »...",
+   "unlockRequirement": "",
+   "cnUrl": "7b4495d1745e5f06527dcd9d5776ea436bdaaa89e9c0db05c3fb3aa70d445951",
+   "jpUrl": "1a1b42ce79c03b048e28f0d574229f1cb63847c52f8609df223faf8f24a21abd",
+   "enUrl": "b14277661cd4687b8af0bb249e4ab9cbff5577f2edce5755a9cf347dabb9a010",
+   "krUrl": "921cb5addc6bb53e05ec1574a2d7fb411a9b5be70833977c97b866a7f08653f7"
+  },
+  {
+   "id": 17,
+   "title": "À propos de Bailu",
+   "text": "Dame Bailu a de petites mains, mais elle est très douée... Je vais la voir pour me faire masser dès que je retourne à bord du Luofu.",
+   "unlockRequirement": "",
+   "cnUrl": "f3917c441fa2afd3fa62fe1c2cd2ac9e3d599682bd3f7e7ee365515d54b9ea19",
+   "jpUrl": "9ac372da87003ceacda1680e422bdcfeb5ea7bb035c6808757bb22e8d7ba04ab",
+   "enUrl": "980e65e706290129755892f3cb5c229cec1f66a1dd16b5e127e8c5c90b6b7d53",
+   "krUrl": "33287d719f8bbd5ec5e6e75b25e41e93d2cf623276eb5114e42a6e6430038e3b"
+  },
+  {
+   "id": 18,
+   "title": "À propos de Qingque",
+   "text": "Je croyais que c'était juste une habituée de la salle de jeux, mais j'ai appris récemment qu'elle était divinatrice à la Commission de divination... Ils ne croulent pas sous le travail là-bas ? Où trouve-t-elle le temps d'aller à la salle de jeux ?",
+   "unlockRequirement": "",
+   "cnUrl": "a8b9e66f840bc32a80205511cdbec48b481a2a6705d8dd2fc107a7cc54435c86",
+   "jpUrl": "cd6b88ce1215f9eed20fcf53f943d72971640ab4d3616306697a80b4c92cc441",
+   "enUrl": "c69c532965f2e16b6f97de51f0e8d68dc51591add9068cd5df83fcec408c252a",
+   "krUrl": "bca5449673d2aae8586f171c8db488a8e4682063b0a3d4f7d7fc904dd97b73c4"
+  },
+  {
+   "id": 19,
+   "title": "À propos de Fu Xuan",
+   "text": "La Maîtresse de la divination a parfois des manières un peu rudes, mais elle parle avec sagesse. Et ses leçons sont toujours mémorables...",
+   "unlockRequirement": "",
+   "cnUrl": "bc74ff4de5c08cb4c93c4160cec2bb7700c153dd318b3fbffd5fb6bc1802cba7",
+   "jpUrl": "4904bf1393d4f073cc53561966e50ba624795d22239b251b0342b8e24c22766c",
+   "enUrl": "d8560e367b051b846470d2ed1ed28f15daf6666cbd0b3e8cf3a9c3483e4266f5",
+   "krUrl": "5bd14808e446beea06d3210f88e46567842c5b9b8347f72c0855d67e4df543b2"
+  },
+  {
+   "id": 20,
+   "title": "À propos de Mengming",
+   "text": "Mengming s'occupe de tout au salon de thé. Les gens disent que les Foxiens sont nés pour les affaires, mais ça n'a rien de facile, c'est du travail !",
+   "unlockRequirement": "",
+   "cnUrl": "d3748c5123b7f851a73fd0da59f52eac37fdd53cd3fa4ae46d5c3ded6a2dba27",
+   "jpUrl": "4f826fc31100253611acf04a710cd0bec580994f680ac7f7f663901e78cbb4c2",
+   "enUrl": "092430ed01c99ff9fb426a0a97e111655f037eda79c60b3316363261953983a7",
+   "krUrl": "428974b7902d2644b2806729d9cdf2eb839d530c955fc90fbb843b337ce5b307"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Détails du personnage",
+   "text": "Cette charmante Foxienne est la porte-parole des Flammes sifflantes, une guilde marchande officiellement approuvée par la Commission du ciel.<br />Elle est douée d'un tel talent d'oratrice que son public reste souvent pendu à ses lèvres, avide d'autres récits épiques. Depuis qu'elle en a la charge, les foires de Xianzhou sont connues dans toute la galaxie.<br />« Dans la mesure du possible, faire de son mieux pour éviter les conflits et persuader ceux qui peuvent l'être », telle est la devise de Tingyun.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Histoire du personnage : Partie I",
+   "text": "Il existe un dicton : « Les Foxiens sont nés pour les affaires. » Attardez-vous un peu au salon de thé le Comte insomniaque, et vous finirez par faire ce même constat.<br /><br />« Il y a quelque chose que vous ignorez », lâcha la Foxienne tout en agitant son délicat éventail plié. Elle fixait à travers lui l'homme sceptique devant elle. « Différentes terres donnent naissance à différentes formes de vies. Si les graines de sablorange de la Confédération des eaux amères sont transplantées dans les sols sacrés de Vonwacq elles produiront des oranges sucrées. Ceci est naturellement dû aux sols fertiles et équilibrés de Vonwacq. Et si les alevins de poisson-lumière de Thalassa sont introduits dans mon monde et élevés par les Vidyadhariens du Royaume de l'abysse écailleux, ils pourront doubler de taille et atteindre plus d'un mètre de long. »<br /><br />« Le dernier plan des Flammes sifflantes consiste à sélectionner avec soin les espèces ayant un potentiel commercial, et à les acheminer via des astroskiffs marchands pour un transport sécurisé. Dans un délai d'un mois, vous recevrez le premier lot de marchandises. Celles-ci ajouteront au prestige du palais de cristal au fond des abysses de Thalassa, et pourront même devenir des produits commerciaux uniques pour votre nation. »<br /><br />L'homme aux branchies souffla quelques bulles, ce qui représentait un accord un peu timide dans sa culture. Puis il parla en prononçant de douces syllabes : « Je pensais que les Flammes sifflantes étaient des commerçants spéculateurs impliqués dans l'arbitrage. Avez-vous l'intention de changer la situation actuelle de l'industrie logistique, sur laquelle la CPI a la main mise ? Dites-moi... Combien vous en voulez ? »<br /><br />« Pour un service de renvoi, nous prenons quatre-vingt-dix pour cent. Un courtier ne fait que passer le produit d'une main à l'autre. Ou plutôt, d'une nageoire à l'autre. Comme le dit le dicton : \"Les meilleures affaires ne sont pas une question de profit\". Ce n'est qu'en faisant profiter les autres que nous pouvons espérer en profiter nous-mêmes. Si le Palais de cristal est d'accord, j'aimerais conclure un contr... Hum, je veux dire un partenariat à long terme. Qu'en dites-vous ? »<br /><br />Ce jour-là, Tingyun a non seulement conclu un marché, mais elle a aussi formé une nouvelle amitié pour l'Alliance.",
+   "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie II",
+   "text": "Tingyun a toujours été différente des autres.<br /><br />Les Foxiens sont synonymes de rapidité et d'agilité. Cela vient de leurs réflexes fulgurants ainsi que de leurs sens aiguisés, donnant lieu par la même occasion de jeunes Foxiens espiègles et joueurs. Mais qu'en est-il de Tingyun ? Cette jeune fille aux oreilles pointues arbore toujours un pelage doux et soyeux. Lorsqu'elle rencontre quelqu'un, elle ne s'amuse pas à lui tirer sa fourrure, et elle sait rester calme si on les lui tire. Avec un sourire innocent et sa voix douce, elle peut même persuader l'autre d'arrêter...<br /><br />Il n'est pas difficile de comprendre les différences dans la nature humaine. Mais contrairement aux Foxiens de son âge, tous occupés à mettre leur maison sens dessus dessous, Tingyun, qui n'a jamais su se battre, était source de frustration pour ses parents, tous deux ayant servi dans l'armée de la Commission du ciel. Conscients que Tingyun ne reprendrait pas l'affaire familiale, ils laissèrent leurs préjugés de côté pour que leur fille s'épanouisse en toute liberté...<br /><br />C'est donc une brillante nouvelle star du commerce qui s'est révélée à bord du Luofu de Xianzhou. Sa personnalité chaleureuse et son talent ont permis à cette jeune Foxienne d'accomplir successivement des missions commerciales sur seize planètes différentes, ainsi que de signer à nouveau un autre accord bilatéral avec la CPI. La célèbre manne commerciale de Xianzhou, ou Grande foire, est aussi devenue une fête réputée grâce à sa mobilisation.",
+   "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie III",
+   "text": "En parlant de l'éventail réticulé à six brins de Tingyun : il s'agit d'une ingéniosité bien connue de la Commission de l'artisanat.<br /><br />La plupart des marchands portent des armes pour se défendre lorsqu'ils voyagent. Mais Tingyun fait exception à la règle. Elle refuse de s'équiper d'armes qui ne conviennent pas à son style, telles que lames, lances, épées et hallebardes, solides mais peu gracieuses. Elle considère en outre les pièges tels que les fléchettes et les aiguilles comme toxiques et indignes d'elle.<br /><br />Après y avoir mûrement réfléchi, Tingyun a finalement choisi cet éventail réticulé orné de gravures. Voici son explication :<br /><br />« Les commerçants aiment par-dessus tout la paix. S'équiper d'une arme apporte le déshonneur aux amitiés, ce qui est mauvais pour les affaires. »<br /><br />« Mon éventail est différent d'une arme. Je peux l'utiliser pour me rafraîchir ou pour calmer un vilain client. Il est plus agréable d'avoir une conversation civilisée, mais si les choses tournent au vinaigre... »<br /><br />« ... Il me suffit de les refroidir encore plus à l'aide de mon éventail, jusqu'à ce qu'ils se calment et comprennent que je suis sérieuse ! »",
+   "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie IV",
+   "text": "Cependant, si elle veut un jour être promue au poste de timonière en chef, la personnalité avenante de Tingyun deviendra un véritable obstacle. Après tout, la Commission du ciel a toujours été dirigée par des pilotes de première classe, des guerriers baptisés par le feu de la guerre. Tingyun, quant à elle, n'a aucun talent pour conduire un astroskiff, encore moins pour tuer. C'est là la différence majeure entre elle et l'actuelle timonière en chef de la Commission du ciel, Yukong.<br /><br />Qui plus est, Yukong a déjà prévu de confier l'avenir à Tingyun, mais cette dernière n'est pas certaine de ses capacités à assumer cette responsabilité.<br /><br />Pour elle, Yukong n'est pas simplement une supérieure de confiance, ou même une sauveuse en cas de crise. Dans son cœur, Yukong est aussi une sorte d'idole grandiose. Elle la voit comme quelqu'un à qui confier son esprit, un repère pour la guider. Elle veut s'accrocher à la lumière des étoiles, mais elle s'est rendu compte qu'elle ne pouvait que chasser dans l'ombre et le désespoir. Jusqu'à ce qu'un jour, cette étoile solitaire lui dise :<br /><br />« Les temps ont changé. Xianzhou a changé. Un jour, ce vaisseau géant sera exsangue de voir le ciel affligé par le sang et la guerre. Quand ce jour viendra, la Commission du ciel sera le théâtre de tes performances. »<br /><br />Elle ignorait quelle était la part d'humour dans ces propos, mais elle scella précieusement ces mots dans une enveloppe qu'elle enferma au fond du tiroir de sa boutique. Elle décida de ne jamais oublier.<br /><br />« Même si je ne peux pas combattre, il me reste une chance de montrer ma force », pensa la jeune Foxienne. Le Luofu était amarré en orbite et en cours de redynamisation après une campagne contre les abominations. Le commerce prospère devint la toile de fond de l'époque.<br /><br />Comprenant les attentes de Yukong à son sujet, Tingyun s'enfuit par delà les cieux à la recherche d'autres alliances et amitiés.<br /><br />« À la question, qui est la meilleure timonière en chef du Luofu, les gens répondent naturellement que la championne est madame Yukong. Mais pour être honnête... »<br />« Mes talents d'oratrice doivent contribuer au poste de timonière en chef, non ? »",
+   "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
+  }
+ ],
+ "archive": {
+  "cvCn": "蒋丽",
+  "cvJp": "高田憂希",
+  "cvKr": "이명호",
+  "cvEn": "Laci Morgan",
+  "camp": "Luofu de Xianzhou"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "tingyun"
+}

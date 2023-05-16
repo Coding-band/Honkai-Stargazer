@@ -1,0 +1,2400 @@
+{
+ "name": "サンポ",
+ "spRequirement": 120,
+ "rarity": 4,
+ "descHash": "地上と地下を行き来する商人。 馴れ馴れしく、情熱的でユーモアがあり、いつも道化を演じている。",
+ "iconPath": "081f215e852fda9d7d093d8233e0925f4e6ce557f6d2645fa580b862dfd4df70",
+ "bgPath": "94ae5659dd46e1d46691ef4ad3f4b23f57455afca9c5bfe3b720af60c8d8ac01",
+ "figPath": "41c0ea3bd1fd051d0db4486b2a6bae560552f1c3353195293b127c489aa249a8",
+ "fgPath": "a64ab8dfd9ab6bcc02418394e637a1df36a05ec65b860ecc6a3a9be3e98ae3df",
+ "artPath": "ecb70e9b09da01a44ac87c25dcf7bd155c261bb457782a3ac5456c8ce80da3b5",
+ "miniIconPath": "f4b35a0b3ac81dab0e3384e0736f95068b7ca3130ae1df5b0cb916db3b7ea377",
+ "splashIconPath": "6e439dff39727f8f2f7c334bce51980fce8b28a87d88fec654f7b24108b8681c",
+ "damageType": {
+  "id": 16,
+  "iconPath": "a77d91df3b1045f9fa66ce1300c4d921c0f89e51135df8208904334e8a0f0b80",
+  "color": "#00FF9C",
+  "name": "風",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "ef1c10d1a5c22dc9e9294e81827aae2ec71c4a79633349c8c9d699a9568a6e00",
+  "altIconPath": "0df2cbf11d8f19f8c650742d8717144159e74ae7608dfb17c31734925e8ee7c3",
+  "color": "#FFFFFF",
+  "name": "虚無",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 5,
+  "iconPath": "46809b2e4ea3502400dc31a9af1552ced0d5890b1b96f43ab9ac6fdc73fdd5f5",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "運命の足跡",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "幾度の敗北があなたに勝利をもたらし、一歩一歩の前進があなたを運命の転換点へと導いた。",
+   "purpose": "軌跡素材",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」ポイント報酬",
+    "ナナシの勲功",
+    "エンバー交換",
+    "期間限定イベント報酬"
+   ]
+  },
+  "267805": {
+   "id": 267805,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "822b1e8c023333b210f71f503cce58516c58ffc4f47c709a4ba4bc03387fdd68",
+   "name": "暴風の眼",
+   "desc": "ストームが残した矢じり。風属性キャラクターの昇格素材。",
+   "lore": "裂界が、ある種のヴォイドレンジャーを模して創ったモンスターが残したもの。螺旋気流の中心に、微かに矢じりが見える。<br /><br />「裂界で死んだ者は、裂界で蘇る」",
+   "purpose": "キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/267805",
+   "comeFrom": [
+    "凝滞虚影「リベットタウン」",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "守護者の悲願",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "この仮面と一緒に、1人の守護者の歪んだ願いも砕け散った。<br />彼女は常冬の終末の中で民の未来を切り開くことを志したが、より壮大な意思に操られる傀儡となってしまった。<br /><br />「大守護者。ベロブルグの統治者が代々受け継ぐ称号であり、すべての市民を見守る者——だが人々は知らない、彼女たちを見守る人はいないということを」",
+   "purpose": "軌跡素材",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "歴戦余韻「常冬峰」"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "漫遊指南",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>20000</nobr>獲得できる。",
+   "lore": "世界を渡り歩くためには欠かせない、冒険手引き集。閲覧キーを押すと、電子音声が理解可能な言語で、有名な冒険者たちが様々な世界で体験したことや、彼らが色々な星で得た貴重な知識を語り聞かせてくれる。<br /><br />「漫遊指南最新シリーズ『スペースグルメガイド』が現在発売中。ぜひお買い求めください」<br />「投稿の際は、博識学会共感覚ビーコンのオペレーター<nobr>23</nobr>θにお繋ぎください。原稿料はあなたが普段から利用している方法でお振込みいたします」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "「忘却の庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "冒険記録",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>5000</nobr>獲得できる。",
+   "lore": "綺麗に装丁された、一目でためになるとわかる冒険日誌。冒険に関する細かい描写、価値のある情報、サバイバル術が書かれている。<br /><br />「なんで数字化してデバイスに保存しないの？持ち歩きやすくなるでしょ」<br />「お前が思っているより、先進技術は恒星嵐や中性子噴出に弱いんだ。なにより、この本の制作者は、最も簡単な方法で人々に読んでもらいたかったんだろう」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "デイリー訓練"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "旅の見聞",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>1000</nobr>獲得できる。",
+   "lore": "旅の出来事を記した日記。字はかすれており、不鮮明。思うままに内容が書かれてあるので、あまり助けにはならないだろう。<br /><br />「読み終わったら早くその紙切れを捨てるのよ、丹恒？」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "依頼報酬"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "a01d7231993bf0450534073f8515ba34a99653c455e03f9f43053719a34aff98",
+   "name": "古代パーツ",
+   "desc": "旧世界時代の残留機械のパーツ。強化に必要な簡易素材。",
+   "lore": "いくら小さくとも、現在では再現が困難な技術で鋳造、研磨されている。<br /><br />「旧世界の小さなネジが、我らの鎧よりも頑丈だとは」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "自動機兵などの敵ドロップ「機械集落」",
+    "自動機兵などの敵ドロップ「大鉱区」",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "191ad5f4b9fd5180b9065e05d463d6df35334c87ce1428e89d8d507e69177dc7",
+   "name": "古代シャフト",
+   "desc": "旧世界時代の残留機械のシャフト。強化に必要な普通素材。",
+   "lore": "精密に組み立てられた部品。一度分解すると復元することはできない。ベロブルグ技術部の熟練の整備員でも、簡単に手出しはできない。<br /><br />「バカ、これを青鎧に渡したって缶詰何個分だろ？スヴァローグに渡せば、もう衣住食には困らないぜ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "自動機兵などの敵がドロップ「機械集落」（均衡Lv.2以上）",
+    "自動機兵などの敵がドロップ「大鉱区」（均衡Lv.2以上）",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "eb2e2feca2b8c63d7bd3d8b8e5a296d336fa0e30ca425e8e5489df4c015d1685",
+   "name": "黯淡な黒曜",
+   "desc": "虚空から得た暗黒物質の一欠片。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">虚無</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "いかなる方法でも欠片の本体を特定することはできない。<br />軽く触れると、破片から不明瞭な言葉が聞こえてくる。<br /><br />「████ ██ █ █」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "疑似花萼「大鉱区」"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "name": "古代エンジン",
+   "desc": "旧世界時代の残留機械のエンジン。強化に必要な高級素材。",
+   "lore": "地髄を原動力としている。回転時に火花が散るのではなく、オーロラがゆらゆらと広がる。<br /><br />「大守護者直属の技術部だけに、旧世界の資料を閲覧する権限が与えられてるの。私はね、クビにされたからもう入れないよ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "自動機兵などの敵がドロップ「機械集落」（均衡Lv.4以上）",
+    "自動機兵などの敵がドロップ「大鉱区」（均衡Lv.4以上）",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "name": "沈淪せし黒曜",
+   "desc": "虚空から得た完全なる暗黒物質。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">虚無</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "意思が弱い者は一目見ただけで、永遠に混沌の中に沈み込んでしまう。<br /><br />「         」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "ce4a765c779cfd1480029c5f6daa7ea755b5c3ec5661609bfd2dd5191b55f2d0",
+   "name": "虚空の黒曜",
+   "desc": "虚空から得た暗黒物質の一塊。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">虚無</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "漆黒の側面は如何なる物影をも映さない。光を吸収するだけではなく、手に持った者の感情を奪い、淡々とした虚しさだけを残す。<br /><br />「……」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549408,
+     "count": 4
+    }
+   ],
+   "attackBase": 84,
+   "attackAdd": 4.2,
+   "hpBase": 139.2,
+   "hpAdd": 6.96,
+   "defenseBase": 54,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549408,
+     "count": 8
+    }
+   ],
+   "attackBase": 117.6,
+   "attackAdd": 4.2,
+   "hpBase": 194.88,
+   "hpAdd": 6.96,
+   "defenseBase": 75.6,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633349,
+     "count": 5
+    },
+    {
+     "id": 267805,
+     "count": 2
+    }
+   ],
+   "attackBase": 151.2,
+   "attackAdd": 4.2,
+   "hpBase": 250.56,
+   "hpAdd": 6.96,
+   "defenseBase": 97.2,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633349,
+     "count": 8
+    },
+    {
+     "id": 267805,
+     "count": 5
+    }
+   ],
+   "attackBase": 184.8,
+   "attackAdd": 4.2,
+   "hpBase": 306.24,
+   "hpAdd": 6.96,
+   "defenseBase": 118.8,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717290,
+     "count": 5
+    },
+    {
+     "id": 267805,
+     "count": 15
+    }
+   ],
+   "attackBase": 218.4,
+   "attackAdd": 4.2,
+   "hpBase": 361.92,
+   "hpAdd": 6.96,
+   "defenseBase": 140.4,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717290,
+     "count": 7
+    },
+    {
+     "id": 267805,
+     "count": 28
+    }
+   ],
+   "attackBase": 252,
+   "attackAdd": 4.2,
+   "hpBase": 417.6,
+   "hpAdd": 6.96,
+   "defenseBase": 162,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 285.6,
+   "attackAdd": 4.2,
+   "hpBase": 473.28,
+   "hpAdd": 6.96,
+   "defenseBase": 183.6,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "6150faa4e0b1645e2309af7539ab64983cd15cf3fd708ff479876b4f420ea08f",
+   "name": "値上げする愛",
+   "descHash": "戦闘スキルを発動した時、さらにランダムな敵単体にダメージを<nobr>#1[i]</nobr>回与える。",
+   "params": [
+    1
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "3bbdffdf361cbed69736dc1d65f2b6d7715e708b094903a0cdaf9d2cf82b85cb",
+   "name": "熱情はうつる",
+   "descHash": "風化状態の敵が倒された時、<nobr>#1[i]%</nobr>の基礎確率で敵全体に、天賦と同じ風化状態を<nobr>#2[i]</nobr>層付与する。",
+   "params": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "8b5ed606803e17e31f37faea7fc48768e5c8ad52faea66926afb222b990af912",
+   "name": "大儲け！",
+   "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "e12c093f2b9d701b3b67058576b782cb2a45c2887e5dc9fa961e17bdb134939d",
+   "name": "愛する程恨む",
+   "descHash": "戦闘スキルが風化状態<nobr>#1[i]</nobr>層以上の敵に命中した時、その敵が受けている風化状態が本来のダメージ<nobr>#2[i]%</nobr>分のダメージを発生する。",
+   "params": [
+    5,
+    0.08
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "7fde87a94f7b016f973ba62dac8312babb2623aefa70224cf88bc19dd04a9092",
+   "name": "超大儲け！",
+   "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "9830dbce5369faa6f44e2385b0d0455272fcdb5639917c0739af84913f1873e7",
+   "name": "消費のアップグレード",
+   "descHash": "天賦が付与した風化状態のダメージ倍率+<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.15
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   849349
+  ],
+  [
+   933290
+  ],
+  [
+   49935
+  ],
+  [
+   364236
+  ],
+  [
+   648763
+  ]
+ ],
+ "skills": [
+  {
+   "id": 849349,
+   "name": "眩い刃紋",
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体にサンポの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与える。",
+   "typeDescHash": "通常攻撃",
+   "iconPath": "e124f432c6d6584df9101416b7c3fbdea275f89c899150ff48c695a329c9f823",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 933290,
+   "name": "反復横跳びの愛",
+   "tagHash": "バウンド",
+   "descHash": "指定した敵単体にサンポの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与え、さらに<nobr>#1[i]</nobr>ヒットする。1ヒットごとにランダムな敵単体にサンポの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与える。",
+   "typeDescHash": "戦闘スキル",
+   "iconPath": "7bfe182a258c7fe6c994becd0f4cc319644011f1b804bd60df1df3288ec42b39",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      4,
+      0.28
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      4,
+      0.308
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549408,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      4,
+      0.336
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      4,
+      0.364
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      4,
+      0.392
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      4,
+      0.42
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920196,
+       "count": 6
+      },
+      {
+       "id": 633349,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      4,
+      0.455
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      4,
+      0.49
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836255,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      4,
+      0.525
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      4,
+      0.56
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836255,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      4,
+      0.588
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      4,
+      0.616
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      4,
+      0.644
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      4,
+      0.672
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      4,
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 49935,
+   "name": "サプライズボックス",
+   "tagHash": "妨害",
+   "descHash": "敵全体にサンポの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与え、<nobr>#4[i]%</nobr>の<u>基礎確率</u>で攻撃を受けた敵の持続被ダメージ+<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>、<nobr>#3[i]</nobr>ターン継続。",
+   "typeDescHash": "必殺技",
+   "iconPath": "c8958a189a2e897573d60a4166b2c3f89c74173ffeda1edec62bedf42d165eb1",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.96,
+      0.2,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.024,
+      0.21,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549408,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.088,
+      0.22,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.152,
+      0.23,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.216,
+      0.24,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.28,
+      0.25,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920196,
+       "count": 6
+      },
+      {
+       "id": 633349,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.36,
+      0.2625,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.44,
+      0.275,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836255,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.52,
+      0.2875,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.6,
+      0.3,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836255,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.664,
+      0.31,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.728,
+      0.32,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.792,
+      0.33,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.856,
+      0.34,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.92,
+      0.35,
+      2,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  },
+  {
+   "id": 364236,
+   "name": "風を切り裂く匕首",
+   "tagHash": "強化",
+   "descHash": "サンポの攻撃が敵に命中した後、<nobr>#1[i]%</nobr>の<u>基礎確率</u>で敵を<span style=\"color:#00FF9C;\">風</span>化状態にする、<nobr>#3[i]</nobr>ターン継続。<br /><span style=\"color:#00FF9C;\">風</span>化状態の敵はターンが回ってくるたびに、サンポの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性持続ダメージを受ける。<span style=\"color:#00FF9C;\">風</span>化状態は最大で<nobr>#4[i]</nobr>層累積できる。",
+   "typeDescHash": "天賦",
+   "iconPath": "b59c336ba6c2c3c0d7a68c487affaf33fcc401777b222e35e63c1b664b75de4d",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.65,
+      0.2,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.65,
+      0.22,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549408,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.65,
+      0.24,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.65,
+      0.26,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.65,
+      0.28,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.65,
+      0.31,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920196,
+       "count": 6
+      },
+      {
+       "id": 633349,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.65,
+      0.35,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.65,
+      0.4,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836255,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.65,
+      0.46,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.65,
+      0.52,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836255,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.65,
+      0.546,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.65,
+      0.572,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.65,
+      0.598,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.65,
+      0.624,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.65,
+      0.65,
+      3,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 564822,
+   "name": "攻撃",
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
+   "typeDescHash": "",
+   "iconPath": "e124f432c6d6584df9101416b7c3fbdea275f89c899150ff48c695a329c9f823",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 648763,
+   "name": "一番の輝きをあなたへ",
+   "tagHash": "妨害",
+   "descHash": "秘技を使用した後、一定区域内の敵を<nobr>#1[i]</nobr>秒間のブラインド状態にする。ブラインド状態の敵は味方を発見できない。<br />ブラインド状態の敵を先制攻撃して戦闘に入った時、<nobr>#2[i]%</nobr>の<u>固定確率</u>で、敵単体それぞれの行動順を<nobr>#3[i]%</nobr>遅延させる。",
+   "typeDescHash": "秘技",
+   "iconPath": "47d83ca715bf3ed0cc556cbbf750bc5644df38ad4a4a30c4fcbc3ac2277df425",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      10,
+      1,
+      0.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1108102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1108205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1108206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1108207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 286061,
+          "name": "攻撃強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+          "statusList": [
+           {
+            "key": "攻撃力",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 836255,
+            "count": 2
+           },
+           {
+            "id": 717290,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 286060,
+        "name": "効果命中強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+        "statusList": [
+         {
+          "key": "効果命中",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836255,
+          "count": 2
+         },
+         {
+          "id": 717290,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 286063,
+      "name": "攻撃強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "攻撃力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920196,
+        "count": 4
+       },
+       {
+        "id": 633349,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 285971,
+    "name": "予備プラン",
+    "descHash": "必殺技を発動した時、さらにEPを<nobr>#1[i]</nobr>回復する。",
+    "iconPath": "ad61a89bb232a760efd6249c97e7a7ac94bbbd280df52cda7a1427f8ab7f0284",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       10
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920196,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1108103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1108208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 286074,
+      "name": "効果抵抗強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+      "statusList": [
+       {
+        "key": "効果抵抗",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 717290,
+        "count": 6
+       }
+      ]
+     }
+    },
+    {
+     "id": 1108209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 286075,
+      "name": "効果命中強化",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+      "statusList": [
+       {
+        "key": "効果命中",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 717290,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 285970,
+    "name": "火に油",
+    "descHash": "<span style=\"color:#00FF9C;\">風</span>化状態の敵に対する、サンポの被ダメージ-<nobr>#1[i]%</nobr>。",
+    "iconPath": "f3807259480abf963c205ba7528c727b26aaf770ffbca65b3b82c28faf2ac197",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.15
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1108201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1108210,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 370007,
+      "name": "攻撃強化",
+      "levelReq": 80,
+      "promotionReq": 0,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "攻撃力",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 717290,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 286067,
+    "name": "攻撃強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "攻撃力",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549408,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1108101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1108202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1108203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1108204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 286062,
+          "name": "効果抵抗強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+          "statusList": [
+           {
+            "key": "効果抵抗",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 920196,
+            "count": 2
+           },
+           {
+            "id": 633349,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 286065,
+        "name": "攻撃強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "攻撃力",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920196,
+          "count": 2
+         },
+         {
+          "id": 633349,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 286064,
+      "name": "効果命中強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+      "statusList": [
+       {
+        "key": "効果命中",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635669,
+        "count": 2
+       },
+       {
+        "id": 549408,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 285968,
+    "name": "ワナ",
+    "descHash": "天賦による敵の<span style=\"color:#00FF9C;\">風</span>化状態の継続時間+<nobr>#1[i]</nobr>ターン。",
+    "iconPath": "fcf499c20092da938c118623dec6b09ebb8e0b89e1ec0e4186c478a8444e915b",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       1
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635669,
+        "count": 2
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "胴体",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "攻撃力",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "速度",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+   },
+   {
+    "relicTypeHash": "次元界オーブ",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "風属性与ダメージ",
+    "propertyIconPath": "fe44fb655f65017dcad0c260b4dcffe14de4b14816734239c2c60d4624cf8163"
+   },
+   {
+    "relicTypeHash": "連結縄",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "EP回復効率",
+    "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初対面",
+   "text": "こんにちは、開拓者。僕、サンポ・コースキが傍にいれば、あなたは商人、ガイド、話し相手を同時に手に入れたことになる…どうです？お得だと思いませんか？",
+   "unlockRequirement": "",
+   "cnUrl": "09963ac540efd7233b997527b6c7112b569ab5bac322f0f8a50633571b19c5cc",
+   "jpUrl": "f33541e54fd27fdd0f05766af2a67afdad6fa2520375e8f6e99886ead6eaf0f3",
+   "enUrl": "c6463ab3e549cc2a4d7dc4b8e8d6c7e9efdd7c4045b7ad4295639c0b0bad90d9",
+   "krUrl": "bc1f9bfeff43e0cc9cc0b1e133be14f2c500f3feb81a8231fa46064e44216793"
+  },
+  {
+   "id": 2,
+   "title": "挨拶",
+   "text": "今日は何をしますか？お金があれば何でもしますよ。なければ…それでも構いません。さあ、何でも言ってください。",
+   "unlockRequirement": "",
+   "cnUrl": "c89efc9bcf9abb4f5884675ac28d8509f0cb62b7a26e31467028ab65965b5847",
+   "jpUrl": "a49d22d07f648a9bffd8933df3b514a408d6b3c033017d3cad39262b868e60d5",
+   "enUrl": "d64c5883cb82fb633baee91c5a4edff221613075d34d15efc8e7010e38ec543d",
+   "krUrl": "c48b67f490008d2d8d5dec7c46f336b997601562857b57d802be61bc400405b7"
+  },
+  {
+   "id": 3,
+   "title": "お別れ",
+   "text": "休憩するべき時は、しっかり休みましょう…そう身構えないでください、僕は逃げたりなんかしませんよ。",
+   "unlockRequirement": "",
+   "cnUrl": "d95a3ed85b0b9c69ab4d91a64c1c942713f027f96368ed638787194fad9bd2c2",
+   "jpUrl": "fe1f2cb364f4fb056656b6bc29c365feada9741e753b26450c8929e35935b365",
+   "enUrl": "893b261a96f85152f1303c88397963af052660ae741d17e6af46e7dc044cb9ab",
+   "krUrl": "29018a06993cd1937395c868514910db4ba4609a0158f80b2734ba181ed16b09"
+  },
+  {
+   "id": 4,
+   "title": "自分について",
+   "text": "僕のことですか。僕はただの、よくトラブルに巻き込まれ、犠牲を払っても見返りすらもらえずに終わってしまう、不運で…心優しい人ですよ。",
+   "unlockRequirement": "",
+   "cnUrl": "53e81e36aaa2c4b4e1deab183a59041a9a437eeeafd8239e6b6038e2511c96cc",
+   "jpUrl": "818661abe86134045e2f8ddf0b0a3980dcadf2ea0ea62dc71d528a3cf8571011",
+   "enUrl": "b8bcc513966f1ee1ae9e4817d861376918a79deb3ed72a4ea629cf5b289d03e5",
+   "krUrl": "422b72a25ccb7294175b77526679a2379c83549e7bda1c86e202a7e64581c344"
+  },
+  {
+   "id": 5,
+   "title": "雑談・情報",
+   "text": "同じ情報でも異なるラッピングをすれば、簡単に別の人に売ることができます。これが利益の最大化ですよ。",
+   "unlockRequirement": "",
+   "cnUrl": "49e6d889c2bd0cdfc4f4d55d629abd48b2f2d08cdf896896e1bbcbc481980f60",
+   "jpUrl": "3f43aa3230f75c98044ca2d1d4ee75622ea4fe7f0189cebfb196ea4fb5b6e2ee",
+   "enUrl": "625453f353079c0a3da7778883c8368e92d03f47573f947185c021b6b9d46d82",
+   "krUrl": "d3fde37b14226f814e480154cdfba2df02f3a1a147b4746a42b18d4f1283f76c"
+  },
+  {
+   "id": 6,
+   "title": "趣味",
+   "text": "僕は、人同士が良い関係を築くには、会話が必要不可欠だと信じています。",
+   "unlockRequirement": "",
+   "cnUrl": "a1f848dece1ea4a5399158ab34c35b99be02f99d7069f75c07e24dd1b2311389",
+   "jpUrl": "3a2060763b5b17c4cec5ddf58df230ab6ff5273842f6247afde9e8381bdf5072",
+   "enUrl": "6c0eb958e34e74a74c30cc354db2daafc47360091f57f4d3e1c30e3c728088be",
+   "krUrl": "9dfe6b0df2040ffdff707740d39285f721d6036596e708b79435ba7cd8341737"
+  },
+  {
+   "id": 7,
+   "title": "悩み事",
+   "text": "僕は買い手が欲しい物を売ります。それなのに、彼らは僕を詐欺師と呼ぶのです。腹立たしいと思いませんか……",
+   "unlockRequirement": "",
+   "cnUrl": "b5ed41aff4f42b5ded2417c515c2106baeddd0c2bf3363242a194a7dfeb1f714",
+   "jpUrl": "22c6505edc3d15fccb182635be037c6f9b6ba93a31d406d5c3f2396caec65fd9",
+   "enUrl": "5040265eeb52fa884492c1dab15ce15c581c1efba4ffc274fd1fe6522e7f5136",
+   "krUrl": "9619bbdba0702c589a39178785dabb94903b186955fd97e2361ccc00b5cc7160"
+  },
+  {
+   "id": 8,
+   "title": "シェア",
+   "text": "ベロブルグのような辺鄙な場所であればあるほど、人々は自身の利益を重視します——そうなれば僕の独壇場ですよ。",
+   "unlockRequirement": "",
+   "cnUrl": "61770f11755e33a4089e03082bca84943397ccbebad41322f191a68272e22786",
+   "jpUrl": "cba88bf1713b67a4f90fb4467e8e197e39c3ee21b30c0b7c1a7f8c7adcbd095e",
+   "enUrl": "0ac04b9c4de830a723d00b433374e891000decad83008e181686c0f49d9fab1a",
+   "krUrl": "6b76251434ad71baf1f7350d8cdf7217cb518ee6b4507de683d5c44dcebd02fa"
+  },
+  {
+   "id": 9,
+   "title": "見聞",
+   "text": "どうやってこの雪で覆われた地に降り立ったのです？飛行機でしょうか？列車に乗ってきたなんて言われても信じませんよ。",
+   "unlockRequirement": "",
+   "cnUrl": "657f3f713bb6eace3301e9a3bcf658660354a9e38635e7090a32ab0e3edf94a8",
+   "jpUrl": "ca3796a9c7d10f9c2819f4b9b4dfdb1e56b8b8b9ee85089c9d2f9c650e8770e3",
+   "enUrl": "769895ba2c5362dffa80b1572fa21256cfa5ad5db95295374e0ef2e004d46fb6",
+   "krUrl": "29713b6ee6f83d0a55e78398041a616b3f99f8f5d594415425a2164804b30a71"
+  },
+  {
+   "id": 10,
+   "title": "ナターシャについて",
+   "text": "下層部に来たばかりの頃は、ナターシャさんの手伝いをして薬品などを入手していましたが、親しくなってからは情報も提供するようにしています。",
+   "unlockRequirement": "",
+   "cnUrl": "a363306db6b33a0e9cfc1403e05e042f9bc5a79b27b706deacae832bd25c7127",
+   "jpUrl": "7d5152f844a41ae163e5ac4c8afca0175ab95eb5d4cf012ee4322e73fad98d8d",
+   "enUrl": "d7c876facbf2a98623d918dbcf86dabc006b8a076b7427ce27ee7a3e0493d752",
+   "krUrl": "f0c199d1227dcea31217a9f94ca742175d951373a3692c7a5130418ccdd80af6"
+  },
+  {
+   "id": 11,
+   "title": "スヴァローグについて",
+   "text": "スヴァローグと交渉しようとする人がいたら、このサンポ、その方のことも心の底から尊敬しますよ。",
+   "unlockRequirement": "",
+   "cnUrl": "fd85916a75c80e11187deec3ab55fe5103a6c3fd7b808e4310c2ac7cf6766ba9",
+   "jpUrl": "efc2d4e1e6bb1d6eeb00f6a0a9c7acfa56315e3872bd351218ee0d0835ccc78b",
+   "enUrl": "23b7da99f9155f1a412ee120aa69d658a2487e05c642c7625d29f7065509b9c6",
+   "krUrl": "6677cf0b0e32077c3e01e4589d3554f7226d65c88385d4ab17ac5e8fc061d43e"
+  },
+  {
+   "id": 12,
+   "title": "クラーラについて",
+   "text": "あの赤い服の少女は本当にすごいですね。なぜ、あんなデカい機械と平気で会話ができるのでしょう？",
+   "unlockRequirement": "",
+   "cnUrl": "c074d3e72ec9e806048b88dc2bc311868019b39b45766f52640e9383c87fd3e6",
+   "jpUrl": "26977842beced007e525200861597dc171eaeae96f648cf28eb8f67a14298342",
+   "enUrl": "e4de6dea230571c6113242f86be64bf8bfa08cb9c0321b1c8e9223acfb78862e",
+   "krUrl": "1cb99d34ba1a82f9e08a36800b9f144318e566290f4ab90dd6287106145ed94c"
+  },
+  {
+   "id": 13,
+   "title": "ゼーレについて",
+   "text": "ゼーレさんは平気で僕に武力行使するのに、僕は言い返すことすらできない。これは僕の問題でしょうか？それとも彼女の問題でしょうか？",
+   "unlockRequirement": "",
+   "cnUrl": "0949f5bf6a48242816749a1a5f72def2a7de7309b406a0c547e71b557d13b6d4",
+   "jpUrl": "b4c787ef31ce375ff0da27f5220ca52bc2d27580fca1bb9a84c90e5e06879ea9",
+   "enUrl": "0ebf46cf879ff8b3a3fc4faa9cf2f4c5dd699d39e2099365b3321646536f972e",
+   "krUrl": "348e44cea51b9c9bdc4049156252d9dd6a7050725e65d94fda9723bc9b307852"
+  },
+  {
+   "id": 14,
+   "title": "ジェパードについて",
+   "text": "よくお会いしますよ。いつも僕が逃げ、彼が追う。そんな関係ですね。正直に言うと、このような追いかけっこは…少しクセになるのです。",
+   "unlockRequirement": "",
+   "cnUrl": "f10e39060048957b7fca1d4791fcbc081e4049e5efb213c912ed83fb8fcc657e",
+   "jpUrl": "41eb806ba60fe0e7c5e4bcf449c885ea050e480f1932fa12733bb5a032fb7e33",
+   "enUrl": "819ecb3c48d38ede428d28fe5fb40b8758c8700f3a7ef7d88967e28e2586f35b",
+   "krUrl": "275163f23081e5f1d68621a3c561899573d3337cf989400af033dad911e3019e"
+  },
+  {
+   "id": 15,
+   "title": "セーバルについて",
+   "text": "以前は良好な関係でしたが、今は…彼女の弟さんよりはマシだと思います。",
+   "unlockRequirement": "",
+   "cnUrl": "df46dd0d848b652b7ab9d7b244bf83c25b0a19156b7f7629c8f5e669e9d0867b",
+   "jpUrl": "2760ca7c947abe7c83f539024595b773dc79b7488985ff7a166667d352232918",
+   "enUrl": "ad929f64cb3f74a89fa117d46aca0e7f6ce8fd753f9e0f0b486c85d9a143640c",
+   "krUrl": "3388ea55d731d6c25cb24bb640e2f38e2ed805bc122a71833912725487587602"
+  },
+  {
+   "id": 16,
+   "title": "ブローニャについて",
+   "text": "これは些細な夢なのですが、未来の大守護者と顔見知りになりたいんです。どんな形でも構いません——僕がボコボコにされるシチュエーションでも大丈夫ですよ！",
+   "unlockRequirement": "",
+   "cnUrl": "b043f2974da123943d8dfb1aa6ecda8667ea9cbdaf12b7152cb41e19dc1ede6e",
+   "jpUrl": "540ce5eaf18c6e75cff608519c0af7b3c6c6d4434482d372ce8f15ffb08b9a3e",
+   "enUrl": "f4a597abaefdae4482e6267f0cec146848eed3cfc8d5e31537ae2e7265bc1b4b",
+   "krUrl": "7be4250a8c32029fa399aa408aaa9467965e63d3b4ccd9e63b3c43b7210e55ad"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "キャラクター詳細",
+   "text": "口が達者な商人、「利益」あるところにサンポあり。<br />サンポが手にする圧倒的な量の情報に人は近づかざるを得ないが、彼の「客」になるのは決して良いことではない。<br />値段さえ見合えば、「客」はいつでも彼の「商品」になり得るのだ。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "ストーリー・1",
+   "text": "「皆さん、こんにちは！私は水晶日報の記者ブルーヘアー・ポサンです。私は今、行政区の噴水広場に来ています。近くに『ネイビーブルー詐欺被害者の会』のメンバーだという方がいますので、これから簡単なインタビューをしたいと思います」<br /><br />「こんにちは。詐欺に遭った経験について聞かせていただけますか？」<br /><br />「はあ…本当に腹が立つ！あの青髪の男め、さっさと死にやがれ！」<br /><br />「その、テレビの生放送なので…少し落ち着いてください」<br /><br />「ゴホン…わかった。水晶日報だったな？そうだ、苦しんでいる人々を報道するんだ。建創者のくだらないゴシップは程々にしておけ……」<br /><br />「…あの青髪の賊は、まだ行政区をうろついてる！つい昨日も、アイツは私の店から黒パンスパイスを<nobr>1.5</nobr>kgも盗んだんだ！<nobr>1.5</nobr>kgだぞ？それだけあれば、官僚や貴人たちがどれだけの間使えると思ってる！あの野郎、きっと次はスパイス工場に強盗にでも入るぞ！」<br /><br />「落ち着いてください！あなたの境遇には深く同情します…ところで、さっきベロブルグのスパイス工場と仰いましたね？」<br /><br />「ああ…言ったな。それがどうかしたのか？」<br /><br />「その工場の具体的な場所を教えていただけませんか？」<br /><br />「はあ…なんでだ？」<br /><br />「それはもちろん、メディアとして少しでも社会の正義に貢献したいからですよ——工場の正確な場所がわかれば、シルバーメインや正義感溢れる市民を動員して窃盗を防ぐことができるでしょう？」<br /><br />「ふむ…確かに一理あるな。よく聞け、工場の場所は……」",
+   "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・2",
+   "text": "「お名前をどうぞ」<br /><br />「アレクセイ。アレクセイ・ボゴダです」<br /><br />「階級は？」<br /><br />「一等兵です」<br /><br />「こんにちは、アレクセイ一等兵。私はブルーヘアー・ポサン。シルバーメイン直属の上級人材資源専門家です。今回はジェパード戍衛官からあなたの私用による休暇申請の審査をするよう頼まれました」<br /><br />「お会いできて光栄です。ブルーヘアー女史」<br /><br />「どれどれ…4ヶ月前の防衛行動により負傷、全身の5か所を骨折したと…それでも、あなたは今まで責務を全うしてきた。素晴らしいではありませんか！」<br /><br />「ありがとうございます、ブルーヘアー女史」<br /><br />「あなたが守っているのは…シルバーメイン禁区の3号武器庫ですよね？さすがです！聞くところによると、そこは極めて重要な軍事拠点で、中には最もお金に…いえ、価値のあるシルバーメインの軍装備が保管されているとか」<br /><br />「その通りです」<br /><br />「ふむふむ…はい、問題ありません。アレクセイ一等兵、不測の事態さえ起こらなければ、来週の火曜日から家に戻って休めるでしょう」<br /><br />「…え？来週から？確か…僕のような重要な防衛業務担当の申請が受理されるには、少なくとも1ヶ月は——」<br /><br />「…何も言う必要はありません、一等兵——あなたの頑張りには感謝しますが、私にとって何よりも重要なのは、シルバーメインの心身の健康を守ることなのです。安心してください、代わりの人員はすでに見つけてあります。何も心配することはありません」<br /><br />「…わかりました。本当にありがとうございます」<br /><br />「よろしい！では来週の火曜日——<nobr>20</nobr>時<nobr>17</nobr>分までに、荷物を持って禁区を離れてくださいね！」",
+   "unlockRequirement": "キャラLv.<nobr>40</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・3",
+   "text": "「よお、兄弟」<br /><br />「よお——お前もあのポサンとかいう奴のために働いてるのか？」<br /><br />「ああ。お前は爆破担当か？」<br /><br />「そうだ。お前は…ピッキング担当だな？」<br /><br />「その通りだ」<br /><br />「よし、これで全員揃ったな。仕事を始めるぞ」<br /><br />「…これを…こうして…よし、これでいい。後は待つだけだ」<br /><br />「なんか頼りないな…こんな小さいので本当にこのデカい鉄の門を吹き飛ばせるのか？」<br /><br />「俺はお前の実力を疑ったりしないぞ、兄弟。俺を信じろ。お前が泥遊びした回数よりも、俺が鉱山を爆破した回数のほうが多いんだからな」<br /><br />「ああ…わかったよ。そういえば、お前はあの女になんて言われたんだ？」<br /><br />「廃工場、見張りはいない、ブツは好きに持っていけ。こんな簡単な仕事は初めてだ。お前は？」<br /><br />「ああ、俺も同じことを言われた。ただ、なんかおかしい気がするんだよな……」<br /><br />「稼げる時は稼ぐ、だろ？余計なことは考えるな。ほら、耳を塞げ——火を点けるぞ！」<br /><br />「……」<br /><br />「…おいおい、やりすぎだろ兄弟。もう十分ホットな展開だってのに！」<br /><br />「言っただろ、俺の力を信じろって。行くぞ、次はお前の出番だ——」<br /><br />「シィッ！喋るな、聞こえたか？中で話し声がした！」<br /><br />「なんだって？いや、そんなはずはない。あの女は誰もいないって——」<br /><br />「シルバーメイン…シルバーメインだ！くそ、兄弟！早く逃げるぞ！」<br /><br />「くそっ、ポサンめ！覚えてやがれ！」",
+   "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・4",
+   "text": "「おはようございます。少しよろしいでしょうか？」<br /><br />「…あなたは？どうして朝からシルバーメインがここに？」<br /><br />「申し訳ありません、ミス。建創者の命令で、各家庭に聞き込みをしているのです」<br /><br />「え…聞き込み？何についてですか？私は何も……」<br /><br />「落ち着いてください、ミス——これはあなた個人に対するものではなく、ベロブルグの全市民を対象とした聞き取り調査ですので」<br /><br />「な…何か事件が？」<br /><br />「私を信じて協力していただければ何も問題はありません。質問したいことは1つだけ…あなたの家にカツラはありますか？」<br /><br />「え…カツラ？な、ないですけど。ほら、私の髪は量が多いくらいですし…どうしてそんなことを聞くんですか？」<br /><br />「本当ですか？もう一度よく思い出してみてください。シルバーメインはベロブルグにあるすべてのカツラを回収するよう命じられています。拒否すると深刻な事態に発展する可能性が……」<br /><br />「いえ、うちにそんなものはありません。信じられないなら、中に入って調べてもらっても構いませんよ」<br /><br />「ああ、そこまでする必要はありません。あなたは何も隠していないと信じます。それでは——」<br /><br />「…待ってください。一体何があったのか聞いてもいいですか？」<br /><br />「そうですね、あなたになら教えても大丈夫でしょう。実は最近、女装した賊が上層部をうろついていて、あちこちで詐欺を働いているんですよ。その男は極めて謎めいた人物で、頻繁に身分や外見を変えることもあり、まだ居場所を突き止められていないんです。それで治安大臣が昨日の報告会で激怒して、ベロブルグ中のカツラを回収すると……」<br /><br />「…そんな不思議なことが起こってたなんて」<br /><br />「正直、シルバーメインもあなたと同じ気持ちです。私たちは聞き込みを続けなければならないので…これで失礼します。お邪魔しました、ミス・ポサン」",
+   "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
+  }
+ ],
+ "archive": {
+  "cvCn": "刘圣博",
+  "cvJp": "平川大輔",
+  "cvKr": "정재헌",
+  "cvEn": "Roger Rose",
+  "camp": "ベロブルグ"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "sampo"
+}

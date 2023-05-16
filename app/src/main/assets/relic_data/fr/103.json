@@ -1,0 +1,2448 @@
+{
+ "name": "Chevalier du palais de la pureté",
+ "iconPath": "1abd2de49fe9971a1a5aa0d3d80e595785635d0e0d51666160c821ddfe205105",
+ "artPath": "e91b675153b0f9eeb8be866900bab7da9a6d1c0f967bd8f48b70590e3ee0b102",
+ "rarity": 5,
+ "embeddedBaseTypes": {
+  "0": {
+   "id": 0,
+   "iconPath": "0c88f2c3d931255f78ee56e3d6a83a2ba0c277c6344e39b711e2ade65ed05b90",
+   "color": "#FFFFFF",
+   "name": "",
+   "rarity": 0
+  },
+  "1": {
+   "id": 1,
+   "iconPath": "3cac2e295748fd50d15bf04acd5f52c9ef38a9d901d8a45a2ec05e7b023f6899",
+   "color": "#FFFFFF",
+   "name": "Tête",
+   "rarity": 0
+  },
+  "2": {
+   "id": 2,
+   "iconPath": "85ad631eaac4657808b7c9a3f4a789aadea2c06819e76c986eff7d570147e0c9",
+   "color": "#FFFFFF",
+   "name": "Mains",
+   "rarity": 0
+  },
+  "3": {
+   "id": 3,
+   "iconPath": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+   "color": "#FFFFFF",
+   "name": "Corps",
+   "rarity": 0
+  },
+  "4": {
+   "id": 4,
+   "iconPath": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+   "color": "#FFFFFF",
+   "name": "Pieds",
+   "rarity": 0
+  },
+  "5": {
+   "id": 5,
+   "iconPath": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+   "color": "#FFFFFF",
+   "name": "Sphère planaire",
+   "rarity": 0
+  },
+  "6": {
+   "id": 6,
+   "iconPath": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+   "color": "#FFFFFF",
+   "name": "Corde de liaison",
+   "rarity": 0
+  }
+ },
+ "skills": [
+  {
+   "useNum": 2,
+   "desc": "Augmente la DÉF de <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.15
+   ]
+  },
+  {
+   "useNum": 4,
+   "desc": "Augmente de <nobr>#1[i]%</nobr> les DGT max absorbés par le bouclier créé par le porteur.",
+   "params": [
+    0.2
+   ]
+  }
+ ],
+ "pieces": {
+  "1": {
+   "name": "Casque de pardon du chevalier",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "87dc9c6187c34b827308962a7627978d01682a46e346ee38b9f7d834391ff7b1",
+   "baseTypeText": "Tête",
+   "loreTitle": "Casque de pardon du chevalier",
+   "miniLore": "Un casque qui émule les statues religieuses en pierre de la Déesse du pardon. Il était utilisé pour cacher le visage de celui ou celle qui le portait.",
+   "lore": "Le Chevalier solennel n'avait jamais ôté son casque dur et lourd devant quiconque. La solennité religieuse et le silence de Safina projetaient une atmosphère d'intimidation pesante.<br /><br />Que ce soit les démons hautains ou les ecclésiastiques fous, tous ne pouvaient que se laisser submerger par la peur sous la pression de sa solennité.<br /><br />Seuls quelques religieux avaient eu vent de l'origine démoniaque que Safina dissimulait constamment derrière cet imposant casque de religiosité. L'Église craignait et tout autant qu'elle convoitait les pouvoirs diaboliques qui avaient engendré Safina... Ils s'étaient emparés du bébé, lui avaient appris à se comporter en vaillant Chevalier solennel, lui avaient interdit de révéler sa véritable apparence, lui avaient inculqué d'obéir constamment aux ordres de l'Église et avaient fini par faire d'elle le chevalier silencieux de la demoiselle.<br /><br />Demoiselle Vanira, qui avait à peu près le même âge que Safina, lui avait enseigné les écritures. Vanira se souvenait encore de l'apparence qu'avait le diable en contemplant son profil à la lueur des bougies.<br /><br />« Ma chère Safina, j'ai vu ton visage et je m'en rappellerai toujours. ». Demoiselle Vanira perdit peu à peu la vue après avoir atteint l'âge adulte.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 45.1584,
+       "levelAdd": 15.80544,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 67.7376,
+       "levelAdd": 23.70816,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 90.3168,
+       "levelAdd": 31.61088,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 112.896,
+       "levelAdd": 39.5136,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "2": {
+   "name": "Anneau du serment silencieux du chevalier",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "0b7b7246183e55256e238919cebd6e3de7bcf5cac4ed58bd99cd28c263068e8c",
+   "baseTypeText": "Mains",
+   "loreTitle": "Anneau du serment silencieux du chevalier",
+   "miniLore": "Un anneau d'argent décoré d'un motif religieux et enchâssé d'une gemme ternie.",
+   "lore": "Petit à petit, la solennité et le décorum s'émiettèrent, poussant les Chevaliers de l'Église à s'affronter les uns les autres alors que les anneaux qu'ils avaient jurés de protéger s'affaiblissaient.<br /><br />Le pouvoir issu des mers stellaires accordait à l'Église la force de punir les démons, mais il propageait également une insanité qui rongeait la rationalité humaine.<br /><br />Tourmentés par cette folie, les Chevaliers de l'Église n'étaient plus en mesure de discerner les convenances et l'ordre, obsédés par le bannissement des créatures du mal pour le salut de l'Église toute entière. Lorsque ces menaces s'abattirent sur la Demoiselle, Safina n'hésita pas une seconde. Elle ne pouvait pas rester à rien faire, quand bien même son adversaire aurait été le Grand chevalier de l'Église du palais de la pureté.<br /><br />Le Chevalier solennel se devait de toujours protéger et défendre la Demoiselle. Safina ne l'oubliait pas.<br /><br />« Ma chère Safina, tu n'as pas à te sentir coupable. Tel est le sort réservé à ceux qui convoitent le pouvoir des Aiôns. » Tout ce qu'il restait de l'Église était la Demoiselle et son chevalier gardien.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 22.5792,
+       "levelAdd": 7.90272,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 33.8688,
+       "levelAdd": 11.85408,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 45.1584,
+       "levelAdd": 15.80544,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 56.448,
+       "levelAdd": 19.7568,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "3": {
+   "name": "Plastron solennel du chevalier",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "1d8c5bc372ea1a226f14060088746ed376ab304494915cc214cb30bbd8fe24de",
+   "baseTypeText": "Corps",
+   "loreTitle": "Plastron solennel du chevalier",
+   "miniLore": "Un plastron lourd orné des symboles caractéristiques de l'Église du palais de la pureté. Même les jointures sont étanches.",
+   "lore": "L'armure du Chevalier solennel devait être bénie par demoiselle Vanira lors d'une cérémonie au cours de laquelle il fallait prononcer le vœu d'entrer à son service en tant que chevalier gardien.<br /><br />L'Église entravait autrefois les mains et les pieds du jeune démon avec des chaînes en métal. À présent, Safina voulait que son armure soit forgée à partir de métaux provenant de la terre des démons afin qu'un jour, elle puisse reposer en paix aux côtés d'un objet originaire de sa terre natale.<br /><br />La Demoiselle de l'Église du palais de la pureté lava l'armure de ses péchés, récita des prières à son dieu et apposa un ancien miracle sur le plastron, juste au-dessus du cœur. L'Église ne croyait pas en la loyauté des démons, mais elle était convaincue que ses doctrines pouvaient tout purifier. Safina observa en silence cet ancien rite qui lui assignait ses responsabilités.<br /><br />La demoiselle ne croyait pas que la cérémonie avait le moindre but ou qu'il y avait le moindre péché à absoudre.<br /><br />« Ma chère Safina, en tant que chevalier, tu devras protéger la Demoiselle. » Posant sa tête contre le plastron de Safina, Vanira entendit clairement son cœur battre la chamade.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.007258,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Augm. des soins prodigués",
+       "propertyIconPath": "a30cffd7e2ccc5db2ee0d1316b1480c7eebc7eb030a727d19c38ee0835cae32d",
+       "isPercent": true,
+       "baseValue": 0.022118,
+       "levelAdd": 0.0077410005,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.010886001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Augm. des soins prodigués",
+       "propertyIconPath": "a30cffd7e2ccc5db2ee0d1316b1480c7eebc7eb030a727d19c38ee0835cae32d",
+       "isPercent": true,
+       "baseValue": 0.033178,
+       "levelAdd": 0.011612,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.082944,
+       "levelAdd": 0.029029999,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Augm. des soins prodigués",
+       "propertyIconPath": "a30cffd7e2ccc5db2ee0d1316b1480c7eebc7eb030a727d19c38ee0835cae32d",
+       "isPercent": true,
+       "baseValue": 0.044237,
+       "levelAdd": 0.015483,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.10368,
+       "levelAdd": 0.036288,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Augm. des soins prodigués",
+       "propertyIconPath": "a30cffd7e2ccc5db2ee0d1316b1480c7eebc7eb030a727d19c38ee0835cae32d",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "4": {
+   "name": "Bottes de fer de l'ordre du chevalier",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "e77ac080d3e312dcdc98b25967fe5596b9d227dfa05934f8f2638f1eaf2993d5",
+   "baseTypeText": "Pieds",
+   "loreTitle": "Bottes de fer de l'ordre du chevalier",
+   "miniLore": "Bottes standard distribuées aux Chevaliers de l'Église du palais de la pureté sur le talon desquelles est gravé un simple mot : Ordre.",
+   "lore": "Après l'effondrement de l'Église du palais de la pureté, Safina a retiré ses bottes de fer de chevalier et s'est engagée pour un long périple en direction de la terre des démons en compagnie de demoiselle Vanira.<br /><br />À la demande de cette dernière, Safina ne laissa aucun chevalier propager la folie de l'Église. Ce secret était enfoui à jamais au plus profond de leur cœur.<br /><br />Nul ne sait quand la rumeur a commencé à circuler. On parlait d'une progéniture du diable autrefois bannie par l'Église qui aurait pris possession du saint Chevalier solennel, et d'une sorcière maléfique qui aurait poussé le chevalier à briser l'ordre du pontife... Mais au fil du temps, les rumeurs sont devenues réalité, et les fervents adeptes de l'Église se sont mis à blâmer le Chevalier solennel, déversant sur elle toute leur frustration et leur haine, la considérant comme la source de tous les malheurs.<br /><br />Après avoir perdu leur lieu de refuge, la demoiselle suggéra de se mettre en route pour sa terre natale.<br /><br />« À présent, je serai un démon, et toi, tu en redeviendras un. » Safina ne put réfuter la déclaration de Vanira.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6128,
+       "levelAdd": 1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2.4192,
+       "levelAdd": 1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 3.2256,
+       "levelAdd": 1.1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 4.032,
+       "levelAdd": 1.4,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DÉF",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VIT",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances de coup critique",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DGT CRIT",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chances d'app. des effets",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RÉS aux effets",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effet de Rupture",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  }
+ },
+ "pageId": "103"
+}

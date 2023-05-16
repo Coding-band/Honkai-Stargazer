@@ -1,3 +1,9 @@
+<!--
+  ~ Project Honkai Stargazer (崩壞•星穹觀星者) was
+  ~ Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
+  ~ Copyright © 2023 Xectorda 版權所有
+  -->
+
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.HonkaiStargazer" parent="Theme.Material3.DayNight.NoActionBar">
@@ -18,4 +24,26 @@
     <style name="Widget.BottomNavigationView" parent="Widget.Material3.NavigationView">
         <item name="fontFamily">@font/hsr_font</item>
     </style>
+
+    <style name="PageDialogStyle_P">
+        <!--边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--没有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否浮现在Activity之上 -->
+        <item name="android:windowIsFloating">false</item>
+        <!--背景透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 是否有覆盖 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--进出的显示动画 -->
+        <item name="android:windowAnimationStyle">@style/PauseDialogAnimation</item>
+        <!--背景变暗-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="PauseDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_left</item>
+    </style>
+
 </resources>

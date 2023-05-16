@@ -1,0 +1,497 @@
+{
+ "name": "晚安與睡顏",
+ "rarity": 4,
+ "descHash": "靜謐的燈光勾勒出塵埃的軌跡，<br />平穩的呼吸裡有少女香甜的夢囈。<br />一個人影出現在她身後，悄無聲息。<br />「嘖嘖嘖，果然還是摘掉眼鏡比較可愛嘛。」<br />吉他手端詳著她的睡顏喃喃自語：<br />「晚安，愛操心的天才少女。」",
+ "iconPath": "120b247009c9656da9bdbcca8d3d99d8eb36ba9d35ad8dd3b08b535db30db80d",
+ "artPath": "121d07793845af31469644ecefda75ccc080915c958ead1aa8d7927b827da87d",
+ "mediumIconPath": "bf4e509ab09e6a8f1229b2d6454bd3554c705230a351f99388f476470da7abee",
+ "baseType": {
+  "id": 0,
+  "iconPath": "ef1c10d1a5c22dc9e9294e81827aae2ec71c4a79633349c8c9d699a9568a6e00",
+  "color": "#FFFFFF",
+  "name": "虛無",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用點",
+   "desc": "星際和平公司與客戶結算時使用的貨幣，如今已成為太空旅行的硬通貨。",
+   "lore": "「人們奔波、爭鬥、貿易，為的不過是個終端裡顯示的數字。但真正珍貴之物，公司的數字是買不到的。」",
+   "purpose": "通用貨幣",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "任務獎勵",
+    "委託獎勵"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "2901efa774991b0ce2037520ce85ff99af64f37ee6364ffda560278736df6a19",
+   "name": "鐵衛扣飾",
+   "desc": "銀鬃鐵衛士兵佩戴的扣針徽章。強化所需的簡單材料。",
+   "lore": "風霜刮蝕下滿是磨痕。<br /><br />「在古老的年代，銀鬃鐵衛只有一種退休的形式：那就是死亡。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "銀鬃鐵衛等敵方掉落【城郊雪原】",
+    "永冬災影等敵方掉落【殘響迴廊】",
+    "「模擬宇宙」中敵方掉落",
+    "委託獎勵",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "042dc7973ef7c36858a4aa58ef7d32335f528b3c4bc4f0c4ce2e7f401039a7c5",
+   "name": "鐵衛軍徽",
+   "desc": "銀鬃鐵衛隊長佩戴的軍銜標誌。強化所需的普通材料。",
+   "lore": "也許是在家人面前誇耀的證明，也許是擋住子彈的幸運符。<br /><br />「時代變了。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "均衡等級2及以上銀鬃鐵衛等敵方掉落【城郊雪原】",
+    "均衡等級2及以上永冬災影等敵方掉落【殘響迴廊】",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "eb2e2feca2b8c63d7bd3d8b8e5a296d336fa0e30ca425e8e5489df4c015d1685",
+   "name": "黯淡黑曜",
+   "desc": "一片自虛空中捕獲的黑質。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "任何手段都無法驗明它的本體。<br />輕輕觸碰，從碎片中傳來不明的囈語。<br /><br />「████ ██ █ █」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "擬造花萼【大礦區】"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "提純以太",
+   "desc": "光錐的強化材料，可以獲得<nobr>6000</nobr>點光錐經驗。",
+   "lore": "一罐經由特殊技術精煉而成的以太。<br /><br />「憶庭盼望重現往日的輝煌，但那是由他們所選擇的『往日輝煌』，明白嗎？」",
+   "purpose": "光錐經驗材料",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "擬造花萼【邊緣通路】",
+    "「忘卻之庭」"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "91f62f32ecd1e7b88c9e30002d215b1a5936ac221782a17d2f34837a967ed557",
+   "name": "凝縮以太",
+   "desc": "光錐的強化材料，可以獲得<nobr>2000</nobr>點光錐經驗。",
+   "lore": "一罐經由特殊技術精煉而成的以太。<br /><br />「小心輕放，勿壓勿摔。破損洩漏後請參照《流溢災難應對手冊》第二章內容進行災後處置。」",
+   "purpose": "光錐經驗材料",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "擬造花萼【邊緣通路】"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "554d37978b82c3f38bafee8771f8ab4248a1fe9d4e130bb5711064238666f491",
+   "name": "稀薄以太",
+   "desc": "光錐的強化材料，可以獲得<nobr>500</nobr>點光錐經驗。",
+   "lore": "本不應存在於現實的假想介質，創造光錐的基本原料。<br />將之注入光錐，能令封裝其中的事象更為清晰。<br /><br />「原來如此，流光憶庭的『意質』就是這東西，怪不得憶者能攜帶記憶進行星際旅行。」",
+   "purpose": "光錐經驗材料",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "擬造花萼【邊緣通路】",
+    "委託獎勵"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "name": "鐵衛勳章",
+   "desc": "功勳鐵衛佩戴的軍功章。強化所需的高階材料。",
+   "lore": "對抗裂隙魔物，地底人和突發災變後頒授的榮譽證明。<br />它往往不在獲勳者的胸膛上，而是擺在他的棺槨上。<br /><br />「它不是玩具，小杰。記好了：這是朗道家族的使命，是朗道家族的血。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "均衡等級4及以上銀鬃鐵衛等敵方掉落【城郊雪原】",
+    "均衡等級4及以上永冬災影等敵方掉落【殘響迴廊】",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "name": "沉淪黑曜",
+   "desc": "一整塊自虛空中捕獲的黑質。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "意志薄弱之人只是向其稜面送去一瞥，便會在混沌中永世沉淪。<br /><br />「         」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "「萬能合成機」- 材料合成"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "ce4a765c779cfd1480029c5f6daa7ea755b5c3ec5661609bfd2dd5191b55f2d0",
+   "name": "虛空黑曜",
+   "desc": "一塊自虛空中捕獲的黑質。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "漆黑的稜面上甚至反射不出任何倒影。它不僅吸收著光，似乎還奪走了持有者的情緒起伏，只留下淡淡的空洞感。<br /><br />「……」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "「萬能合成機」- 材料合成"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549407,
+     "count": 5
+    }
+   ],
+   "attackBase": 21.6,
+   "attackAdd": 3.24,
+   "hpBase": 43.2,
+   "hpAdd": 6.48,
+   "defenseBase": 15,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 635669,
+     "count": 3
+    },
+    {
+     "id": 549407,
+     "count": 10
+    }
+   ],
+   "attackBase": 47.52,
+   "attackAdd": 3.24,
+   "hpBase": 95.04,
+   "hpAdd": 6.48,
+   "defenseBase": 33,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 920196,
+     "count": 3
+    },
+    {
+     "id": 633348,
+     "count": 6
+    }
+   ],
+   "attackBase": 82.08,
+   "attackAdd": 3.24,
+   "hpBase": 164.16,
+   "hpAdd": 6.48,
+   "defenseBase": 57,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 920196,
+     "count": 6
+    },
+    {
+     "id": 633348,
+     "count": 9
+    }
+   ],
+   "attackBase": 116.64,
+   "attackAdd": 3.24,
+   "hpBase": 233.28,
+   "hpAdd": 6.48,
+   "defenseBase": 81,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 836255,
+     "count": 4
+    },
+    {
+     "id": 717289,
+     "count": 5
+    }
+   ],
+   "attackBase": 151.2,
+   "attackAdd": 3.24,
+   "hpBase": 302.4,
+   "hpAdd": 6.48,
+   "defenseBase": 105,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 836255,
+     "count": 8
+    },
+    {
+     "id": 717289,
+     "count": 7
+    }
+   ],
+   "attackBase": 185.76,
+   "attackAdd": 3.24,
+   "hpBase": 371.52,
+   "hpAdd": 6.48,
+   "defenseBase": 129,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 220.32,
+   "attackAdd": 3.24,
+   "hpBase": 440.64,
+   "hpAdd": 6.48,
+   "defenseBase": 153,
+   "defenseAdd": 2.25
+  }
+ ],
+ "skill": {
+  "id": 21001,
+  "name": "勞碌者",
+  "descHash": "敵方目標每承受1個負面效果，裝備者對其造成的傷害提高<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>，最多疊加<nobr>#2[i]</nobr>層。該效果對持續傷害也會生效。",
+  "levelData": [
+   {
+    "level": 1,
+    "params": [
+     0.12,
+     3
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 2,
+    "params": [
+     0.15,
+     3
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 3,
+    "params": [
+     0.18,
+     3
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 4,
+    "params": [
+     0.21,
+     3
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 5,
+    "params": [
+     0.24,
+     3
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 50,
+   "2": 80,
+   "3": 140,
+   "4": 210,
+   "5": 300,
+   "6": 400,
+   "7": 510,
+   "8": 640,
+   "9": 780,
+   "10": 930,
+   "11": 1090,
+   "12": 1260,
+   "13": 1460,
+   "14": 1650,
+   "15": 1860,
+   "16": 2080,
+   "17": 2300,
+   "18": 2540,
+   "19": 2790,
+   "20": 2900,
+   "21": 3010,
+   "22": 3130,
+   "23": 3240,
+   "24": 3360,
+   "25": 3490,
+   "26": 3610,
+   "27": 3740,
+   "28": 3860,
+   "29": 3990,
+   "30": 4130,
+   "31": 4260,
+   "32": 4400,
+   "33": 4540,
+   "34": 4680,
+   "35": 4820,
+   "36": 4970,
+   "37": 5110,
+   "38": 5260,
+   "39": 5410,
+   "40": 5560,
+   "41": 6100,
+   "42": 6450,
+   "43": 6810,
+   "44": 7180,
+   "45": 7550,
+   "46": 7930,
+   "47": 8310,
+   "48": 8710,
+   "49": 9110,
+   "50": 9520,
+   "51": 9940,
+   "52": 10350,
+   "53": 10780,
+   "54": 11220,
+   "55": 11660,
+   "56": 12110,
+   "57": 12570,
+   "58": 13030,
+   "59": 13500,
+   "60": 13980,
+   "61": 14630,
+   "62": 15420,
+   "63": 16210,
+   "64": 17010,
+   "65": 17830,
+   "66": 18660,
+   "67": 19500,
+   "68": 20350,
+   "69": 21220,
+   "70": 22100,
+   "71": 24650,
+   "72": 26970,
+   "73": 29330,
+   "74": 31720,
+   "75": 34140,
+   "76": 36600,
+   "77": 39100,
+   "78": 41620,
+   "79": 44180,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "21001"
+}

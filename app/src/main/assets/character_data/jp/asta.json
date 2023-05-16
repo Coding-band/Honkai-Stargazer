@@ -1,0 +1,2306 @@
+{
+ "name": "アスター",
+ "spRequirement": 120,
+ "rarity": 4,
+ "descHash": "宇宙ステーション「ヘルタ」の所長を務める、名門出身のお嬢様。 好奇心旺盛な天文学者で、癖のある宇宙ステーションのスタッフたちをまとめるのが得意。",
+ "iconPath": "901e84e641fd918331aa8318217d907c9164dd25ef7b0a240c96ba910447e913",
+ "bgPath": "721c6b885c3587f01d945c5fee4f465b0e6d6cc91b1aaa7ab16c617a962cdfb1",
+ "figPath": "cc5b646248642543a934eb9da26903d56a70c70660969383e6a565dee2941f1e",
+ "fgPath": "f0242f8f03f8fdb32fb57fba853c3e9c479784a2921438740166d25535b28a64",
+ "artPath": "469b8b7230a3341f2e3d75d098a7d1c1d319d6d6e23962014a76e3a883648659",
+ "miniIconPath": "dce21bb3c06f264b6acc9af0d1fa60873e65fd2a5ab2f217aa80328022eaa78a",
+ "splashIconPath": "546c0736aea1d847e072a733f25b2f00feb7d6e6b473110ef809d0fd0abdbe8b",
+ "damageType": {
+  "id": 2,
+  "iconPath": "de0c257eb00c86e608b1d3a42b9c2aa396a576d29f7d7093fdb0a741c39b23a4",
+  "color": "#F84F36",
+  "name": "炎",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "635d8139b8f487db38f821f15a8b67f9e3c83a06071567b67770b9ca462c237e",
+  "altIconPath": "25e370b70daf67ebcfb8c270316852f47bd3e32b3459b4c8c5ca206da4c7860b",
+  "color": "#FFFFFF",
+  "name": "調和",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 4,
+  "iconPath": "aee7f899a278735eda2872652cca14dc6b4c74c9f5689a59bbf33fa00b64ed44",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "運命の足跡",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "幾度の敗北があなたに勝利をもたらし、一歩一歩の前進があなたを運命の転換点へと導いた。",
+   "purpose": "軌跡素材",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」ポイント報酬",
+    "ナナシの勲功",
+    "エンバー交換",
+    "期間限定イベント報酬"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "漫遊指南",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>20000</nobr>獲得できる。",
+   "lore": "世界を渡り歩くためには欠かせない、冒険手引き集。閲覧キーを押すと、電子音声が理解可能な言語で、有名な冒険者たちが様々な世界で体験したことや、彼らが色々な星で得た貴重な知識を語り聞かせてくれる。<br /><br />「漫遊指南最新シリーズ『スペースグルメガイド』が現在発売中。ぜひお買い求めください」<br />「投稿の際は、博識学会共感覚ビーコンのオペレーター<nobr>23</nobr>θにお繋ぎください。原稿料はあなたが普段から利用している方法でお振込みいたします」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "「忘却の庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "冒険記録",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>5000</nobr>獲得できる。",
+   "lore": "綺麗に装丁された、一目でためになるとわかる冒険日誌。冒険に関する細かい描写、価値のある情報、サバイバル術が書かれている。<br /><br />「なんで数字化してデバイスに保存しないの？持ち歩きやすくなるでしょ」<br />「お前が思っているより、先進技術は恒星嵐や中性子噴出に弱いんだ。なにより、この本の制作者は、最も簡単な方法で人々に読んでもらいたかったんだろう」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "デイリー訓練"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "旅の見聞",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>1000</nobr>獲得できる。",
+   "lore": "旅の出来事を記した日記。字はかすれており、不鮮明。思うままに内容が書かれてあるので、あまり助けにはならないだろう。<br /><br />「読み終わったら早くその紙切れを捨てるのよ、丹恒？」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "依頼報酬"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "2901efa774991b0ce2037520ce85ff99af64f37ee6364ffda560278736df6a19",
+   "name": "シルバーメインの釦",
+   "desc": "シルバーメインの兵士が装着する飾りボタン。強化に必要な簡易素材。",
+   "lore": "雨や霜に晒された痕跡がある。<br /><br />「古い時代、シルバーメインには一つだけ引退する方法があった、それは死ぬことである」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "シルバーメインなどの敵がドロップ「郊外雪原」",
+    "永冬の災影などの敵がドロップ「残響回廊」",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "042dc7973ef7c36858a4aa58ef7d32335f528b3c4bc4f0c4ce2e7f401039a7c5",
+   "name": "シルバーメインの記章",
+   "desc": "シルバーメインの隊長が装着する軍の階級章。強化に必要な普通素材。",
+   "lore": "家族に自慢するための証拠品かもしれないし、幸運にも弾丸を防いだお守りかもしれない。<br /><br />「時代は変わった」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "シルバーメインなどの敵がドロップ「「郊外雪原」（均衡Lv.2以上）",
+    "永冬の災影などの敵がドロップ「残響回廊」（均衡Lv.2以上）",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "635670": {
+   "id": 635670,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a327a767852b95b69b5d25ec4abc08aa0a548455bcf70fa743c6b9acc9356a38",
+   "name": "調和のハーモニー",
+   "desc": "誰が作ったのかわからないオルゴール。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">調和</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "軽快で明るい民謡が流れる。<br />非常にシンプルな曲調だが、音楽的素養がある人なら、この曲が実力のある巨匠によって作曲されたものに違いないと理解できるだろう。<br /><br />「さあ！みんなで手を繋ぎ、踊りましょう！」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/635670",
+   "comeFrom": [
+    "疑似花萼「機械集落」"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "name": "シルバーメインの勲章",
+   "desc": "手柄を立てたシルバーメインが装着する勲章。強化に必要な高級素材。",
+   "lore": "「隙」の魔物、地下民に立ち向かい、災いを乗り越えた後に授与された名誉の証。<br />これは功績者の胸に掲げられることより、その人の棺桶の上に置かれることの方が多い。<br /><br />「それはおもちゃじゃないわ、ジェパード。覚えておいて、これがランドゥー家の使命、ランドゥー家の血なのよ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "シルバーメインなどの敵がドロップ「「郊外雪原」（均衡Lv.4以上）",
+    "永冬の災影などの敵がドロップ「残響回廊」（均衡Lv.4以上）",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "836256": {
+   "id": 836256,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e0a98987f6f4c66f28c5b9b79a757e590ae649d0e44ec47ada0ec1bac39e78fa",
+   "name": "群星の楽章",
+   "desc": "誰が作ったのか分からないオルゴール、非常に複雑な構造をしている。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">調和</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "魂を震わすコズミックシンフォニーが流れる。<br /><br />「一部の天文学者は、天体が複雑な構造をした機械のように動いているとし、星々が動く時、水晶のように煌めく旋律が聞こえると主張する。それが『天体のシンフォニー』である」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/836256",
+   "comeFrom": [
+    "疑似花萼「機械集落」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  },
+  "920197": {
+   "id": 920197,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "2e991dc7b3d976ae72c1f7dfcc0cfb1ff4c33223d33db5479a3dcd8d039ffa1a",
+   "name": "ファミリー賛歌",
+   "desc": "誰が作ったのか分からないオルゴール。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">調和</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "小楽団が歌う讃美歌が流れる。<br />讃美歌が讃えているのはどの神なのか？今となってはもう考証できない。<br /><br />「もし私が貧しく卑しいのなら、それは神が与えた試練である！もし私が富に満ち足りていたのなら、それは神が与えた恩恵である！」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/920197",
+   "comeFrom": [
+    "疑似花萼「機械集落」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  },
+  "983278": {
+   "id": 983278,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "1f3033f7a0d40ab304f7c4af7eaa7a00cc0b0a1cfd9f7698fcbf0b0b8d9321d5",
+   "name": "恒温晶殻",
+   "desc": "まるで炎が固まったかのような熱い結晶。炎属性キャラクターの昇格素材。",
+   "lore": "異次元の生物の遺体から採れる奇妙な結晶の殻。生前ほど高温ではないが、今でも暖かさを放っている。<br /><br />「外は寒いけど、この宝石を持っていれば、遠くまで行って、人がいるかもしれない都市を探すことができる…」",
+   "purpose": "キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/983278",
+   "comeFrom": [
+    "凝滞虚影「シルバーメイン禁区」",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "91205616cca581bc299d91a1af94a91981d58328675779f8e66ccbaf679e5e94",
+   "name": "壊滅者の末路",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "古獣の身躯は既に滅びたが、匣の中には未だ死滅していない意志が閉じ込められている。だが、この匣を開く者がいなければ、その意志は存在すると存在しないが重なり合った状態を保ち、壊滅のエンジンを動かし続ける。<br /><br />「終末獣。古獣の残片を礎に、幾万もの死者の恨みと悲しみを触媒として、戦争熔炉で鋳造した災い——壊滅の道を貫くと同時に、自身の消滅を渇望している」",
+   "purpose": "軌跡素材",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "歴戦余韻「サポート部分」"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549407,
+     "count": 4
+    }
+   ],
+   "attackBase": 69.6,
+   "attackAdd": 3.48,
+   "hpBase": 139.2,
+   "hpAdd": 6.96,
+   "defenseBase": 63,
+   "defenseAdd": 3.15,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549407,
+     "count": 8
+    }
+   ],
+   "attackBase": 97.44,
+   "attackAdd": 3.48,
+   "hpBase": 194.88,
+   "hpAdd": 6.96,
+   "defenseBase": 88.2,
+   "defenseAdd": 3.15,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633348,
+     "count": 5
+    },
+    {
+     "id": 983278,
+     "count": 2
+    }
+   ],
+   "attackBase": 125.28,
+   "attackAdd": 3.48,
+   "hpBase": 250.56,
+   "hpAdd": 6.96,
+   "defenseBase": 113.4,
+   "defenseAdd": 3.15,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633348,
+     "count": 8
+    },
+    {
+     "id": 983278,
+     "count": 5
+    }
+   ],
+   "attackBase": 153.12,
+   "attackAdd": 3.48,
+   "hpBase": 306.24,
+   "hpAdd": 6.96,
+   "defenseBase": 138.6,
+   "defenseAdd": 3.15,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717289,
+     "count": 5
+    },
+    {
+     "id": 983278,
+     "count": 15
+    }
+   ],
+   "attackBase": 180.96,
+   "attackAdd": 3.48,
+   "hpBase": 361.92,
+   "hpAdd": 6.96,
+   "defenseBase": 163.8,
+   "defenseAdd": 3.15,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717289,
+     "count": 7
+    },
+    {
+     "id": 983278,
+     "count": 28
+    }
+   ],
+   "attackBase": 208.8,
+   "attackAdd": 3.48,
+   "hpBase": 417.6,
+   "hpAdd": 6.96,
+   "defenseBase": 189,
+   "defenseAdd": 3.15,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 236.64,
+   "attackAdd": 3.48,
+   "hpBase": 473.28,
+   "hpAdd": 6.96,
+   "defenseBase": 214.2,
+   "defenseAdd": 3.15,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "589b48c1d279bc0b4c13440b66f5b8cd4bca2b7201758a51d2a730be1d9959cc",
+   "name": "星に無言の歌あり",
+   "descHash": "戦闘スキルを発動した時、さらにランダムな敵単体にダメージを1回与える。",
+   "params": []
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "c4bf5518cd303acac1b14cf747e9d4a072b925dace3729774edbdd8b884d7413",
+   "name": "月は盈虚の意を現す",
+   "descHash": "必殺技を発動した時、アスターの次のターンの蓄エネ層数が減少しなくなる。",
+   "params": [
+    1
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "d50f39013a32742ed1c7d78f893a2f92fd45330defbf6f6d566e3208ba177739",
+   "name": "黄道隕石の変",
+   "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "943f6cc129208b88f935599e7efb1dc07f5d23335a5a7ecef1f4e944bfed66bb",
+   "name": "極光が顕現する時",
+   "descHash": "天賦の蓄エネが<nobr>#1[i]</nobr>層以上の時、アスターのEP回復効率+<nobr>#2[i]%</nobr>。",
+   "params": [
+    2,
+    0.15
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "df11670f06edefc97045a700e37ba1dc484d81be7220d444ddae9113c585145c",
+   "name": "深空座す天体の謎",
+   "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "fe34091248d7426a41172d9f9a3ff3d843191c970502fc18b572f830cc3863ac",
+   "name": "銀河の下に眠る",
+   "descHash": "ターンが回ってきた時、天賦の蓄エネ層数減少値-<nobr>#1[i]</nobr>。",
+   "params": [
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   741029
+  ],
+  [
+   824970
+  ],
+  [
+   941615
+  ],
+  [
+   255916
+  ],
+  [
+   540443
+  ]
+ ],
+ "skills": [
+  {
+   "id": 741029,
+   "name": "スペクトル光線",
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体にアスターの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F84F36;\">炎</span>属性ダメージを与える。",
+   "typeDescHash": "通常攻撃",
+   "iconPath": "69a8b6b17c07742fce28a7498443c2f336b7c6620c13bac18304bc1e8a02ae63",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635670,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920197,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920197,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836256,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836256,
+       "count": 6
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 824970,
+   "name": "スターフォール",
+   "tagHash": "バウンド",
+   "descHash": "指定した敵単体にアスターの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F84F36;\">炎</span>属性ダメージを与え、さらに4ヒットする。1ヒットごとに、ランダムな敵単体にアスターの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F84F36;\">炎</span>属性ダメージを与える。",
+   "typeDescHash": "戦闘スキル",
+   "iconPath": "eea0d9edda926ce98cb4bcd43f7ced8484e4c50a61a3a7807fdc9d7903375942",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.275
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549407,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635670,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.325
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920197,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.35
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920197,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.375
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920197,
+       "count": 6
+      },
+      {
+       "id": 633348,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.40625
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836256,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.4375
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836256,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.46875
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836256,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836256,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.525
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.55
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.575
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.625
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 941615,
+   "name": "星空祝言",
+   "tagHash": "サポート",
+   "descHash": "味方全体の速度+<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]</nobr></span>、<nobr>#2[i]</nobr>ターン継続。",
+   "typeDescHash": "必殺技",
+   "iconPath": "f31d5c79cbdd7eeb387d67bf3e32b6592cc1e0ab49a49b4744a280ec5b6cc5af",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      36,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      37.4,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549407,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      38.8,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635670,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      40.2,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920197,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      41.6,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920197,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      43,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920197,
+       "count": 6
+      },
+      {
+       "id": 633348,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      44.75,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836256,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      46.5,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836256,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      48.25,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836256,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      50,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836256,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      51.4,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      52.8,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      54.2,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      55.6,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      57,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  },
+  {
+   "id": 255916,
+   "name": "天象学",
+   "tagHash": "サポート",
+   "descHash": "異なる敵に攻撃が命中するごとに蓄エネを1層獲得する。攻撃を受けた敵の弱点が<span style=\"color:#F84F36;\">炎</span>属性の場合、さらに蓄エネを1層獲得する。<br />アスターが持つ蓄エネ1層につき、味方全体の攻撃力+<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>、最大で<nobr>#2[i]</nobr>回累積できる。<br />自身の2ターン目から、アスターのターンが回ってくるたびに蓄エネ層数-<nobr>#3[i]</nobr>。",
+   "typeDescHash": "天賦",
+   "iconPath": "fdd1fbb53f79591dee371c88e331521331e5f23ba5b0da1fa78df3de2db4345d",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.07,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.077,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549407,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.084,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635670,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.091,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920197,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.098,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920197,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.105,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920197,
+       "count": 6
+      },
+      {
+       "id": 633348,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.11375,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836256,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.1225,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836256,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.13125,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836256,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.14,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836256,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.147,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.154,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.161,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.168,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.175,
+      5,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 456502,
+   "name": "攻撃",
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
+   "typeDescHash": "",
+   "iconPath": "69a8b6b17c07742fce28a7498443c2f336b7c6620c13bac18304bc1e8a02ae63",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 540443,
+   "name": "着想の一閃",
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、敵全体にアスターの攻撃力<nobr>#1[i]%</nobr>分の<span style=\"color:#F84F36;\">炎</span>属性ダメージを与える。",
+   "typeDescHash": "秘技",
+   "iconPath": "a862cf070ac0c426f476b5a39609d0d9b41bf846a2eb296e0dbfb802d16c6975",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1009101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1009202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1009203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 177745,
+        "name": "ダメージ強化・炎",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "5b7a8da3b4d685c3e9cc470faae12c21e3fd75df90cd8fcfcd6c8f2784c02a3f",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#F84F36;\">炎</span>属性与ダメージ",
+          "value": 0.032
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920197,
+          "count": 2
+         },
+         {
+          "id": 633348,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 177744,
+      "name": "防御強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+      "statusList": [
+       {
+        "key": "防御力",
+        "value": 0.05
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635670,
+        "count": 2
+       },
+       {
+        "id": 549407,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 177648,
+    "name": "火花",
+    "descHash": "通常攻撃を行った時、<nobr>#1[i]%</nobr>の基礎確率で敵を燃焼状態にする、<nobr>#2[i]</nobr>ターン継続。<br />燃焼状態の敵はターンが回ってくるたびに、アスターの通常攻撃ダメージ<nobr>#3[i]%</nobr>分の<span style=\"color:#F84F36;\">炎</span>属性持続ダメージを受ける。",
+    "iconPath": "31cc161601a953e22969f8edc2d1dbd4df3a9f2a139336934bd372ebd187fc9b",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.8,
+       3,
+       0.5
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635670,
+        "count": 2
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1009102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1009205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1009206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 177740,
+        "name": "防御強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+        "statusList": [
+         {
+          "key": "防御力",
+          "value": 0.075
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836256,
+          "count": 2
+         },
+         {
+          "id": 717289,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 177743,
+      "name": "ダメージ強化・炎",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "5b7a8da3b4d685c3e9cc470faae12c21e3fd75df90cd8fcfcd6c8f2784c02a3f",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#F84F36;\">炎</span>属性与ダメージ",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920197,
+        "count": 4
+       },
+       {
+        "id": 633348,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 177651,
+    "name": "点火",
+    "descHash": "アスターがフィールド上にいる時、味方全体の<span style=\"color:#F84F36;\">炎</span>属性ダメージ+<nobr>#1[i]%</nobr>。",
+    "iconPath": "3ac3ff4ffda3a4451a5684a01f4ec1d7dde879bc2c59f7b3a749406f351d62df",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.18
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920197,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1009103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1009208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1009209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 177755,
+        "name": "防御強化",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+        "statusList": [
+         {
+          "key": "防御力",
+          "value": 0.1
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836256,
+          "count": 6
+         },
+         {
+          "id": 717289,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1009210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 294391,
+        "name": "ダメージ強化・炎",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "5b7a8da3b4d685c3e9cc470faae12c21e3fd75df90cd8fcfcd6c8f2784c02a3f",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#F84F36;\">炎</span>属性与ダメージ",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836256,
+          "count": 6
+         },
+         {
+          "id": 717289,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 177754,
+      "name": "会心率強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+      "statusList": [
+       {
+        "key": "会心率",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836256,
+        "count": 6
+       },
+       {
+        "id": 717289,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 177650,
+    "name": "星座",
+    "descHash": "アスターが持つ蓄エネ1層につき、自身の防御力+<nobr>#1[i]%</nobr>。",
+    "iconPath": "4e1dcb667d47c749915c3a0471100784df8dd845c4775bf13fac7562dc9c9c22",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.06
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836256,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1009201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1009204,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 177742,
+      "name": "会心率強化",
+      "levelReq": 0,
+      "promotionReq": 3,
+      "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+      "statusList": [
+       {
+        "key": "会心率",
+        "value": 0.026999999
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 8000
+       },
+       {
+        "id": 920197,
+        "count": 2
+       },
+       {
+        "id": 633348,
+        "count": 2
+       }
+      ]
+     }
+    },
+    {
+     "id": 1009207,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 177741,
+      "name": "ダメージ強化・炎",
+      "levelReq": 0,
+      "promotionReq": 5,
+      "iconPath": "5b7a8da3b4d685c3e9cc470faae12c21e3fd75df90cd8fcfcd6c8f2784c02a3f",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#F84F36;\">炎</span>属性与ダメージ",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 36000
+       },
+       {
+        "id": 836256,
+        "count": 2
+       },
+       {
+        "id": 717289,
+        "count": 2
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 177747,
+    "name": "ダメージ強化・炎",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "5b7a8da3b4d685c3e9cc470faae12c21e3fd75df90cd8fcfcd6c8f2784c02a3f",
+    "statusList": [
+     {
+      "key": "<span style=\"color:#F84F36;\">炎</span>属性与ダメージ",
+      "value": 0.032
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549407,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "胴体",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "会心率",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "攻撃力",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+   },
+   {
+    "relicTypeHash": "次元界オーブ",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "炎属性与ダメージ",
+    "propertyIconPath": "5b7a8da3b4d685c3e9cc470faae12c21e3fd75df90cd8fcfcd6c8f2784c02a3f"
+   },
+   {
+    "relicTypeHash": "連結縄",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "撃破特効",
+    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初対面",
+   "text": "こんにちは、開拓者。私は宇宙ステーション「ヘルタ」の所長、アスターよ。助けが必要な時は、必ず言うから…大丈夫、貴方に遠慮はしないわ。",
+   "unlockRequirement": "",
+   "cnUrl": "f115c4c352485fec249c14a9b59a32781162d13635fcb55caf477ff299dc46e3",
+   "jpUrl": "e1dd9ca90f643ff2ebecd45c2e5f3ae49762f0e0d7cbc10572147e02712b615f",
+   "enUrl": "78475e4f1793366485050303b5c13be2357b84fb0412fdb28dca2684d4189a75",
+   "krUrl": "76eb2027bbf4624cd14421c5c73dfe2387917df6e0b29172f25aba80baceade2"
+  },
+  {
+   "id": 2,
+   "title": "挨拶",
+   "text": "来たのね。以前、テストを行っていたアレイ型観測器の結果がそろそろ出ているはずよ。一緒に見に行かない？",
+   "unlockRequirement": "",
+   "cnUrl": "28d0af803b38221e9bcda94895410daca86f76788c6ef0542f38e3de0e97b925",
+   "jpUrl": "b27b6fc6f4f7cd65e8959a4fb343f0f47633cb75a2b218e6fc6c456f1117f7ee",
+   "enUrl": "74522c50324acbc5bbc508bda89362215d10b2ee3114719d50263780642fa317",
+   "krUrl": "097e2aa62184d5ec80dae72c30564d3528a9e155e1b4b5ead07d34bba22829b3"
+  },
+  {
+   "id": 3,
+   "title": "お別れ",
+   "text": "もうこんな時間？仕事をしていると時間が早く過ぎるわ。",
+   "unlockRequirement": "",
+   "cnUrl": "6c81c7434ac2bec651867745ab93cde5960e3c3c4a436460919ccd4aba928388",
+   "jpUrl": "efcb1d054056cc8b79a42ac0f05be898dc7c40ff3ed89cc751f9cc356ed26660",
+   "enUrl": "fa313b86b8482921af5065122d0b2b25294fe01de60081e774d597e4a34a69d5",
+   "krUrl": "7a6c36c227e08426937df8ce61a0f06f3e4d8c64432b1512b578324419f2fae3"
+  },
+  {
+   "id": 4,
+   "title": "自分について・家族",
+   "text": "はあ、私が全く連絡を取らなくても、あの親戚たちは勝手に向こうから探しに来るのよ。",
+   "unlockRequirement": "",
+   "cnUrl": "49bd3ef47ab85b888589e55435efc7b241fc05d61ebbb79d5ee25ed821861b69",
+   "jpUrl": "369051f09aa955c94f415058069a2889341800b11042e3394ef3a50bf86ab97d",
+   "enUrl": "0d4b7d6e97f7a30c8474961c41de1e7fbb9301059b36512feaeee28902870e7a",
+   "krUrl": "a06d82fe63a069a0b5e68565b82ec5015a17f711b686e9fa7471b1a0659b0b5e"
+  },
+  {
+   "id": 5,
+   "title": "自分について・仕事",
+   "text": "そうよ。仕事を頑張らなければ、家業を継ぐ羽目になる……",
+   "unlockRequirement": "",
+   "cnUrl": "2809ca42f1b03caf1cceea3236c57a65e0b4ffa8dc5dfc6f02c82642deae4748",
+   "jpUrl": "9fd6fa93b280877732f9ef8c85d5dcc87a953a763166b24a4a0052e5d681a89d",
+   "enUrl": "4673918d030819da9a2098e83a23420bb18d93b691e825bf82578fd55af7ee78",
+   "krUrl": "02cfbe136ff08ed7ddfcfde3546ad471c61bfc8b78a1d1fce2fb281e8a4342d1"
+  },
+  {
+   "id": 6,
+   "title": "雑談・天文学の論文",
+   "text": "…まだ一文字も書いてないけど、書き出せばすぐに終わるわ。",
+   "unlockRequirement": "",
+   "cnUrl": "5c837e99a0f4cdb3e634007a8ae005dba4668e495e59a32bed57a9ba22e56346",
+   "jpUrl": "7eaef51ffa23e6875f8c8212a9e5cab966e6efc35b2f755f939f60a5c2731537",
+   "enUrl": "9ebe51f01d7342f5e50ffa6ac20f87beb0633da279f854c8fd1855bf886ecbbe",
+   "krUrl": "dbbaae3ab3d37fce68edc703b1ecd35cf386c91fdc4d81c72765e86e8c33d239"
+  },
+  {
+   "id": 7,
+   "title": "雑談・宇宙ステーション",
+   "text": "「宇宙ステーションはヘルタのおもちゃ箱に過ぎない」、この言葉は真実よ。でも、ミス・ヘルタの所有物だから、おもちゃ箱と言ってもとても危険なの。",
+   "unlockRequirement": "",
+   "cnUrl": "9efc87a8b2688e7eb463b4ccd6d1cff3dce6c3ec7003113a1f3eb9e065045754",
+   "jpUrl": "54dd427c665a266718d2bcfacfa70d7b79f05011788379621fef02c7f25309d8",
+   "enUrl": "456aa37c9a674b00270716c32f5604109fe41c09f97399a8e25563147ec3c4a1",
+   "krUrl": "31602ebcfda06b8b7fff38f41b1a5b1cb131cd04761ff97f34f7c9a49b7397e4"
+  },
+  {
+   "id": 8,
+   "title": "趣味",
+   "text": "宇宙ステーション建設に継続的な投資を行い、スタッフの福利厚生を充実させ、好循環を生み出すことよ。そうすることで、所長の需要、つまり、私のショッピング欲を満たすことができるの。",
+   "unlockRequirement": "",
+   "cnUrl": "8d6d8696d7719da841c0305db50ffd1db19e46d8906ea4b1db5e7e1970f1b075",
+   "jpUrl": "c596e87aa00ad26425f878b596dce11dbdf66e0553c67a6854276d4aae9bd9de",
+   "enUrl": "c130aafe090217a8af3029f5cc9cd52067f226d9f9776d15487fdafe735bd399",
+   "krUrl": "ebf09f71a352f6c5bfdbb9603f03e0c1686795bb07977ce8dd0813263bdd77a7"
+  },
+  {
+   "id": 9,
+   "title": "悩み事",
+   "text": "ミス・ヘルタが宇宙ステーションに来る回数が増えるといいんだけどね。スタッフはみんな彼女を追い求めて、宇宙ステーションに来ているのよ。",
+   "unlockRequirement": "",
+   "cnUrl": "8c347f5506d2e71f8a1a4fdac08987b1a6b76eb7ccffc18f1011eba29de7c1c2",
+   "jpUrl": "856ba495c4e64661654ceb8760b235f5a9b7c8276aa5f6079751988ac8066c41",
+   "enUrl": "ff690eea2bb9ad230a04271d304b175163e6cbe2b2700812608190b3f15164ea",
+   "krUrl": "4ef9074654979c74219bbfbc517ccdb5bb387bf3b02fb0821c92f9343e6892a8"
+  },
+  {
+   "id": 10,
+   "title": "シェア",
+   "text": "最初にステーションに着いた時は、スタッフが私専用の部屋を用意してくれてありがたかったわ。けど、みんなから離れすぎていたから、そこで過ごす気にはならなかったの。",
+   "unlockRequirement": "",
+   "cnUrl": "51d042228565e21926f7c22e2be9d2aff98e26cefd53592ea9bd7f08774855c7",
+   "jpUrl": "a8de44aaf92452458ab87e7722fadbdfc8dc5ca516c1592a653759afd155423f",
+   "enUrl": "7f171256aaef31fffad031179a5f65866489ee4f79e4b1982caf1f14335a1db3",
+   "krUrl": "00c126b9f26aee718b7c58bdc0b74db059f9a255821e891c7e9840922c1baa92"
+  },
+  {
+   "id": 11,
+   "title": "見聞",
+   "text": "たとえ監視室であろうと、監視されているものよ。",
+   "unlockRequirement": "",
+   "cnUrl": "7ac402638219aa4c5b0286fb92901254916dcbc567c00b5a6b2fe9cd71387a94",
+   "jpUrl": "8882681e3a7fd479017e5d3bfc40cb1c97aa089d9287be861f679e912551ab1a",
+   "enUrl": "01e77ac087ea380cd09eec1f54393e41328bccc562802a5e05b140a8167a11f5",
+   "krUrl": "5f0074547beb7ca5b6702f49d06cf3589879eb5cec2cccca928d594a80adf6f7"
+  },
+  {
+   "id": 12,
+   "title": "アーランについて",
+   "text": "普段のアーランの真似をするわ。「みんな、アスター所長の言うことを聞け」。そして私が「アーランも少しは気を付けてよね」って注意すると、「大事ありません。自分なりの判断基準があるので」って言うのよ。",
+   "unlockRequirement": "",
+   "cnUrl": "c6566c8830ae1dca22425ce62ebefb9f0c49f8d9ea5db50cde218cf14b9b1c0d",
+   "jpUrl": "ca19734aff4b1c11f48e067e545b7e197b578053c714fbac058024639ee00f86",
+   "enUrl": "b0488f7c9f47347333f24cf0df27e60b923237a3e3f4b0bef44e75fab05ad2e3",
+   "krUrl": "518e8f183b3c9950f3a2719e69f39b570b90343931f096be51c492e04039d564"
+  },
+  {
+   "id": 13,
+   "title": "ヘルタについて",
+   "text": "もし自分もミス・ヘルタのようにわがままでもいいんじゃないかと考える人がいたら、まずは彼女と同等の頭脳を持っているかを考えるべきね。",
+   "unlockRequirement": "",
+   "cnUrl": "610bd213cf388afdb1b92a0016709d048ca43f6da672284bc86dc93dc07f5856",
+   "jpUrl": "be6d4b8475871f390eee291782ab8c61920f3c3db41c9ef43a5d92abc2207d71",
+   "enUrl": "6fc84e1ac98dfcf5586cf59daf5ac37de933b80a541c35b86ba6705be1f5bebf",
+   "krUrl": "a09b965138b271f1bd618f5a49eb3a38fa57b140926bd36d91de2a2607788b14"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "キャラクター詳細",
+   "text": "好奇心旺盛で元気いっぱいな少女。名義上は宇宙ステーション「ヘルタ」の所長。<br />各々の意見を述べるスタッフたちを管理したり、博識学会の無理難題に失礼のないよう返答したりするのは、彼女にとって造作もないことである。<br />宇宙ステーションの指揮なんて……家業を引き継ぐより簡単よね！",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "ストーリー・1",
+   "text": "まだ幼いアスターが自分で望遠鏡を選び始めた時、大人たちの称賛がそれとなく伝わってきた。そして、彼女はそれを誇りに思っていた。なぜなら彼女は、望遠鏡の主鏡の製造技術や天体自動導入装置のタイプを一目で判別できるからである。<br /><br />しかし、ある日盗み聞きをしていた彼女は真相を知った。彼らが称賛していたのは、1人の少女がこんなにも高価なものを選んだということに対してだったのだと。<br /><br />観客の目に個人の嗜好は存在しない。彼らは彼女を甘やかされて育った娘だと思っている。<br /><br />「星が好き？ああ、女の子はキラキラしたものが好きだからな」<br />「えっと…私は恒星胚胎について研究してるの。いつの日か星を発見して、自分の名前を付けたくて…他の素晴らしい天文学者たちのように……」<br />「それだけか？それなら今年の誕生日プレゼントは、アスターの名前を星につけるというのにしようか？星2つでもいい、大して金はかからないからな！」<br />「……」<br />「おい、アスター？どこに行くんだ！アスター！」",
+   "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・2",
+   "text": "彼女は理解していた。自分と母親がボランティアとして合格かどうかは関係ない。人々は彼女たちがそこにいることだけを望んでいるのだ。<br /><br />食糧の分配が終わり、人々がまばらに散っていく中、小さな男の子だけがそこに残った。彼は右手を怪我しており、その目は狼のように鋭く、睨まれると少し不快な気持ちになる。<br /><br />「貴方も私にお金を借りたいの？」<br />「金はいらない。さっきの食事代を払わないといけないのに、今は金がないんだ」<br /><br />知らない「友達」がお金を借りにくることはあっても、お金を返そうとする人に出会ったことがなかったアスターは、驚きのあまり目を見開いた。傍にいる母親も笑いを堪えきれない様子だ。<br /><br />「貴方、まだ子供じゃない。何ができるの？」<br />「ケンカ」<br />「それは褒められたことじゃないわね——こうしましょう、私が貴方に仕事を紹介するわ」<br /><br />——アスターの心の中では、あの時のアーランの食事代は、彼が返したいと申し出た時点で清算されている。",
+   "unlockRequirement": "キャラLv.<nobr>40</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・3",
+   "text": "「星は自分の軌道を辿っていけるけど、人間は…人間は本当に自分の運命を掌握できないの？」<br /><br />恵まれた家庭環境はアスターに星空を探索する力を与えたが、それは同時に彼女を束縛していた。<br /><br />アスターが大きくなるにつれて、彼女の天文学者になりたいという夢は親族から異端視されるようになった——彼女は家族会議で親戚と何度この問題について議論したか、もう覚えていない。<br /><br />ある日の家族会議が終わった後、部屋に人形の少女が入ってきた。そして、先ほどまで威張り散らしていた親族の1人が、その少女の前では唯々諾々としていた。<br /><br />「この子だったよね？」<br />「しかし彼女は……」<br />「何がしかし、なの？遠路遥々やってきて、あなたたちのくだらない学術報告を聞くよりは、この子とあなたたちの言い争いを聞いてたほうが面白い」<br />「……」<br />「3日以内に、宇宙ステーションで彼女の姿を見られるようにして。いい？」<br /><br />それだけ言うと、人形の少女は振り返ることなく去っていった。",
+   "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・4",
+   "text": "宇宙ステーション「ヘルタ」の所長になってから、アスターの生活は以前よりも格段に忙しくなった。各々の意見を述べるスタッフたちをまとめ、ヘルタに代わっておびただしい数のメールに返信し、頻繁にカンパニーと交渉を行い、様々なルートから新しい設備を購入する…しかし同時に、彼女はここで今までにない自由を手に入れた——<br /><br />「2号設備部分のニューウェル・イマン望遠鏡を使用、<nobr>100</nobr>倍天文単位に設定。前方の『分子雲コア』を観測するわ」<br />「粒子の密度には特に注意するように。超緻密構造を発見したら、すぐに『恒星胚胎』の分裂過程を記録して！」<br /><br />アスターには暇になると考えることがある。それは自分が宇宙ステーションを引き継いでからというもの、ミス・ヘルタが一度も姿を表していないということだ。以前彼女に尋ねたこともあるのだが、得られたのは「興味深いことや新しいものがなければ行かない」という返答だった。<br /><br />「……この子とあなたたちの言い争いを聞いてたほうが面白い、かぁ」<br /><br />彼女は遠い昔のあの日のことを思い出した。ヘルタが何気なく口にした、その言葉を。<br /><br />記憶の中のヘルタは輝かしい星の中に立っていて、彼女に星と自分の運命を掌握する力を与えてくれているようだった。",
+   "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
+  }
+ ],
+ "archive": {
+  "cvCn": "龟娘",
+  "cvJp": "赤﨑千夏",
+  "cvKr": "김현지",
+  "cvEn": "Felecia Angelle",
+  "camp": "宇宙ステーション「ヘルタ」"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "asta"
+}

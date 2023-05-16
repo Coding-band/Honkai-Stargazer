@@ -1,0 +1,2379 @@
+{
+ "name": "克拉拉",
+ "spRequirement": 110,
+ "rarity": 5,
+ "descHash": "與機械生活在一起的流浪少女。 內向、溫柔，有一顆純粹的心。 渴望下層區的大家都能成為彼此的「家人」。",
+ "iconPath": "ed14eb05f7ce0df1e6d7320432d226dfd078b38e366d6a9bfbaf940e95b298f6",
+ "bgPath": "d335030ce1ced4b0519e8e00d6f9ddbe6b6c1bd97f029d7a9a3e71a0e22c7fc5",
+ "figPath": "f0e58b5e5509a7f65791b6ce4d667f5429be8913fd494ac61f4e9b4a6aa11d60",
+ "fgPath": "c69ead2056540f6797335e5eef9719374153e4a4d3f31447ff9bc2ee3649659a",
+ "artPath": "9f7d87a700a5b5e11195ef57bc2ef5874635779d2edb9e86d4e840ad34ec0b5b",
+ "miniIconPath": "f6809c62b85e05914e3507624eabb1939109f9c38f1fde352626f54888cfcba2",
+ "splashIconPath": "80250b40d167ca2ba09fc4120b67d0321c06c47518189354c650728b9337cb1f",
+ "damageType": {
+  "id": 1,
+  "iconPath": "ae78085438eecf2462f1256329b5aa2369f01b8cda6926ea0a08b1b8affe5108",
+  "color": "#FFFFFF",
+  "name": "物理",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "57e114954f0de32a3762e77aa2fd4f791deb47497337366308c51de1d0f12430",
+  "altIconPath": "fccc485934c16aa04a6ddacdbfec82b1e59182ba83b560af62ed57b29033c308",
+  "color": "#FFFFFF",
+  "name": "毀滅",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 1,
+  "iconPath": "10dae0df031160c29bace386a1220e539f2b5e13765cdd0f6d2a2143bca2755c",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用點",
+   "desc": "星際和平公司與客戶結算時使用的貨幣，如今已成為太空旅行的硬通貨。",
+   "lore": "「人們奔波、爭鬥、貿易，為的不過是個終端裡顯示的數字。但真正珍貴之物，公司的數字是買不到的。」",
+   "purpose": "通用貨幣",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "任務獎勵",
+    "委託獎勵"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "命運的足跡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "一次又一次的敗北成就了你的勝利，一步又一步的前進讓你抵達了命運的拐點。",
+   "purpose": "行跡材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」積分獎勵",
+    "無名勳禮",
+    "餘燼兌換",
+    "限時活動獎勵"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "守護者的悲願",
+   "desc": "行跡升級的高階素材。",
+   "lore": "與這副面甲一同破碎的，還有一位守護者扭曲的願望。<br />她渴望在永冬末日中為子民開闢前路，卻最終淪為了更恢巨集的意志所操縱的傀儡。<br /><br />「大守護者，貝洛伯格統治者世代傳承的頭銜，看顧所有子民的人——人們並不知道，她們無人看顧，無人守護。」",
+   "purpose": "行跡材料",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "歷戰餘響【永冬嶺】"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "漫遊指南",
+   "desc": "角色的經驗材料，可以獲得<nobr>20000</nobr>點角色經驗。",
+   "lore": "跨越諸界必備的冒險叢書。按下閱讀鍵，充滿磁性的聲音將以你能聽懂的語言講述知名冒險家們在不同世界間的傳奇經歷，以及他們在各個星球上獲得的珍貴智慧。<br /><br />「漫遊指南全新書系《星際美食烹飪導覽》開售在即，敬請支援。」<br />「投稿請接入博識學會聯覺信標<nobr>23</nobr>θ聯絡員，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色經驗材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "「忘卻之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "冒險記錄",
+   "desc": "角色的經驗材料，可以獲得<nobr>5000</nobr>點角色經驗。",
+   "lore": "裝訂嚴整，一看就頗有教育意義的冒險札記。圖文並茂地描述了冒險行動的始末、有價值的資訊和生存相關的技巧。<br /><br />「幹嘛不資料化放進光刻片裡？便攜多了。」<br />「面對恆星風暴和中子流噴發時，高科技比你想象的還要脆弱。何況，製作這本書的人一定希望人們用最簡單的方式閱讀它。」",
+   "purpose": "角色經驗材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "每日實訓"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "旅情見聞",
+   "desc": "角色的經驗材料，可以獲得<nobr>1000</nobr>點角色經驗。",
+   "lore": "記錄旅途見聞的日誌，字跡漫漶不清，內容隨心所欲，對你並沒有太大的幫助。<br /><br />「看完了就趕緊把這堆廢紙處理掉吧，丹恆？」",
+   "purpose": "角色經驗材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "委託獎勵"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "a01d7231993bf0450534073f8515ba34a99653c455e03f9f43053719a34aff98",
+   "name": "古代零件",
+   "desc": "舊世界時代遺留的機器零件。強化所需的簡單材料。",
+   "lore": "儘管體積微不足道，卻以如今的人們難以重現的技術鑄造打磨而成。<br /><br />「舊世界的一顆小螺絲都比我們的盔甲結實。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "自動機兵等敵方掉落【機械聚落】",
+    "自動機兵等敵方掉落【大礦區】",
+    "「模擬宇宙」中敵方掉落",
+    "委託獎勵",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "191ad5f4b9fd5180b9065e05d463d6df35334c87ce1428e89d8d507e69177dc7",
+   "name": "古代轉軸",
+   "desc": "舊世界時代遺留的機器傳動軸。強化所需的普通材料。",
+   "lore": "精密結合的機件一旦拆開就再也無法復原，即便貝洛伯格技術部的維修老手也不敢輕易動它。<br /><br />「笨蛋，這東西交給藍甲人才值幾個罐頭？拿去給史瓦羅大佬，保你吃穿不愁。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "均衡等級2及以上自動機兵等敵方掉落【機械聚落】",
+    "均衡等級2及以上自動機兵等敵方掉落【大礦區】",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "635673": {
+   "id": 635673,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1cfcf420c7cd53b503eead070d126b1448cd68bf3f9b0ddca916d10b1747537b",
+   "name": "破碎殘刃",
+   "desc": "反物質軍團成員遺落的武器碎片。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">毀滅</span>角色的命途行跡。",
+   "lore": "此烙印代表其位階和「毀滅」的功業。<br />這柄武器的主人騎乘紅馬，點燃城市，使眾人反目，令國度如蟻群潰散。<br /><br />「持此印者，受命將和平逐出列國。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/635673",
+   "comeFrom": [
+    "擬造花萼【收容艙段】"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "name": "古代引擎",
+   "desc": "舊世界時代遺留的機器引擎。強化所需的高階材料。",
+   "lore": "以地髓為能源注入動力，運轉時噴燃的並非火星，而是遊走的極光。<br /><br />「只有大守護者直屬的技術部有權調閱舊世界的資料，我嘛，被開除後就進不去啦。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "均衡等級4及以上自動機兵等敵方掉落【機械聚落】",
+    "均衡等級4及以上自動機兵等敵方掉落【大礦區】",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "836259": {
+   "id": 836259,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "name": "淨世殘刃",
+   "desc": "反物質軍團成員遺落的殘損武器。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">毀滅</span>角色的命途行跡。",
+   "lore": "這柄武器代表著主人在軍團中的位階和「毀滅」的功業。<br />這柄武器的主人負責在戰爭尾聲時登場，點燃劫火焚燒世界。無論受何方神明眷顧，無論曾擁有何等輝煌的基業，這顆星球終將如同熄滅的炭燼，在星空深處黯淡死去。<br /><br />「持此印者，受命淨空世界。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/836259",
+   "comeFrom": [
+    "擬造花萼【收容艙段】",
+    "「萬能合成機」- 材料合成"
+   ]
+  },
+  "866633": {
+   "id": 866633,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "d97cb9072570df0b85725f8a0783d22e500c3e06e49b7fbc8dd485e7ba1b9516",
+   "name": "鐵狼碎齒",
+   "desc": "自動機兵遺留的零碎鋸齒，物理屬性角色的晉升素材。",
+   "lore": "據說築城者曾經的冶金技術能打造出切開磐巖的鏈鋸。這樣巧妙的工藝如今已無法復現。<br /><br />「史瓦羅大佬說那刃片薄得能切進分子間的空隙…分子是什麼玩意兒？」",
+   "purpose": "角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/866633",
+   "comeFrom": [
+    "凝滯虛影【大礦區】",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "920200": {
+   "id": 920200,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1da1734309fa1e0ed5035575293caab81cfa7723f7bf4a81d36d9833d80b36",
+   "name": "無生殘刃",
+   "desc": "反物質軍團成員遺落的武器殘鍔。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">毀滅</span>角色的命途行跡。",
+   "lore": "此烙印代表其位階和「毀滅」的功業。<br />這柄武器的主人憎恨著所有會思考的生靈，他們聆聽智慧生物的哀鳴猶如悅耳曲聲，他們令數千年的文明高塔於一夕坍塌。<br /><br />「持此印者，受命使呼吸遠離眾生。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/920200",
+   "comeFrom": [
+    "擬造花萼【收容艙段】",
+    "「萬能合成機」- 材料合成"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549408,
+     "count": 5
+    }
+   ],
+   "attackBase": 100.32,
+   "attackAdd": 5.016,
+   "hpBase": 168.96,
+   "hpAdd": 8.448,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549408,
+     "count": 10
+    }
+   ],
+   "attackBase": 140.448,
+   "attackAdd": 5.016,
+   "hpBase": 236.544,
+   "hpAdd": 8.448,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633349,
+     "count": 6
+    },
+    {
+     "id": 866633,
+     "count": 3
+    }
+   ],
+   "attackBase": 180.576,
+   "attackAdd": 5.016,
+   "hpBase": 304.128,
+   "hpAdd": 8.448,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633349,
+     "count": 9
+    },
+    {
+     "id": 866633,
+     "count": 7
+    }
+   ],
+   "attackBase": 220.704,
+   "attackAdd": 5.016,
+   "hpBase": 371.712,
+   "hpAdd": 8.448,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717290,
+     "count": 6
+    },
+    {
+     "id": 866633,
+     "count": 20
+    }
+   ],
+   "attackBase": 260.832,
+   "attackAdd": 5.016,
+   "hpBase": 439.296,
+   "hpAdd": 8.448,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717290,
+     "count": 9
+    },
+    {
+     "id": 866633,
+     "count": 35
+    }
+   ],
+   "attackBase": 300.96,
+   "attackAdd": 5.016,
+   "hpBase": 506.88,
+   "hpAdd": 8.448,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 341.088,
+   "attackAdd": 5.016,
+   "hpBase": 574.464,
+   "hpAdd": 8.448,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "4a7c180ec7c961faee21e24fbc057174789723c19f85add6cf47236cbf8bdd2b",
+   "name": "高大的背影",
+   "descHash": "施放戰技後，不會清除敵方目標的【反擊標記】。",
+   "params": []
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "eef148752ed1f5a8d070b4f53dfb1dcd68a9d409c63a538724dd425330b11d8f",
+   "name": "緊緊的擁抱",
+   "descHash": "施放終結技後攻擊力提高<nobr>#1[i]%</nobr>，持續<nobr>#2[i]</nobr>回合。",
+   "params": [
+    0.3,
+    2
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "4e2c3cf3098eb4b75980adb81c38a07be1474aefe72a4fb56b5316834bded740",
+   "name": "冰冷的鋼甲",
+   "descHash": "戰技等級+2，最多不超過<nobr>15</nobr>級；普攻等級+1，最多不超過<nobr>10</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "bcc5e475f5f14a2cae5a94cc654c301c00027d5444e838265e234d3a93d9217b",
+   "name": "家人的溫暖",
+   "descHash": "受到攻擊後，克拉拉受到的傷害降低<nobr>#1[i]%</nobr>，效果持續到自己的下個回合開始。",
+   "params": [
+    0.3
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "c039825cb8396fadd31ba5faf689697494227d463f77f7905dcea398ca74375d",
+   "name": "小小的承諾",
+   "descHash": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "238257725efa29126a176bf6b02954d76fac8bcef1876390b11bb75c2f8063cf",
+   "name": "長久的陪伴",
+   "descHash": "我方其他目標遭到攻擊後，史瓦羅也有<nobr>#1[i]%</nobr>的固定概率觸發對攻擊者的反擊，並對攻擊目標新增【反擊標記】。施放終結技時，額外增加<nobr>#2[i]</nobr>次強化反擊的次數。",
+   "params": [
+    0.5,
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   310670
+  ],
+  [
+   226729
+  ],
+  [
+   110084
+  ],
+  [
+   795783
+  ],
+  [
+   511256
+  ]
+ ],
+ "skills": [
+  {
+   "id": 310670,
+   "name": "我也想幫上忙",
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於克拉拉<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。",
+   "typeDescHash": "普攻",
+   "iconPath": "a56a8dd217b79ffc2557b9b6ee7ca0e8f9ac596ce78704cfb8572793692a4975",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 226729,
+   "name": "史瓦羅在看著你",
+   "tagHash": "群攻",
+   "descHash": "對敵方全體造成等同於克拉拉<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害，並對所有被史瓦羅標上【反擊標記】的敵方目標額外造成等同於克拉拉<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。<br />戰技施放後所有【反擊標記】失效。",
+   "typeDescHash": "戰技",
+   "iconPath": "c733f760b7c0b9b08cd348e80be013fae237c2712127681e68c58942737dac41",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.6,
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.66,
+      0.66
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.72,
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.78,
+      0.78
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.84,
+      0.84
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.9,
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.975,
+      0.975
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.05,
+      1.05
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.125,
+      1.125
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.2,
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.26,
+      1.26
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.32,
+      1.32
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.38,
+      1.38
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.44,
+      1.44
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.5,
+      1.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 110084,
+   "name": "是約定不是命令",
+   "tagHash": "強化",
+   "descHash": "施放終結技後克拉拉受到的傷害額外降低<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span>且被敵方目標攻擊的概率大幅提高，持續<nobr>#3[i]</nobr>回合。<br />同時史瓦羅的<u>反擊</u>得到強化，當任意我方目標受到攻擊後史瓦羅立即施放<u>反擊</u>，對敵方目標造成的傷害倍率提高<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>，並對其相鄰目標造成相當於主目標<nobr>50%</nobr>的傷害。強化效果可生效<nobr>#5[i]</nobr>次。",
+   "typeDescHash": "終結技",
+   "iconPath": "ce7af5b7d5ea1e0fea993c2dc6d2b8a4cf06f28372bb0648029ee754469a1e5f",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      5,
+      0.96,
+      2,
+      0.15,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      5,
+      1.024,
+      2,
+      0.16,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      5,
+      1.088,
+      2,
+      0.17,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      5,
+      1.152,
+      2,
+      0.18,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      5,
+      1.216,
+      2,
+      0.19,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      5,
+      1.28,
+      2,
+      0.2,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      5,
+      1.36,
+      2,
+      0.2125,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      5,
+      1.44,
+      2,
+      0.225,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      5,
+      1.52,
+      2,
+      0.2375,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      5,
+      1.6,
+      2,
+      0.25,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      5,
+      1.664,
+      2,
+      0.26,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      5,
+      1.728,
+      2,
+      0.27,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      5,
+      1.792,
+      2,
+      0.28,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      5,
+      1.856,
+      2,
+      0.29,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      5,
+      1.92,
+      2,
+      0.3,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 110
+  },
+  {
+   "id": 795783,
+   "name": "因為我們是家人",
+   "tagHash": "單攻",
+   "descHash": "克拉拉在史瓦羅的保護下受到敵方目標攻擊的傷害降低<nobr>#3[i]%</nobr>。攻擊克拉拉的敵方目標會被史瓦羅標上【反擊標記】，並遭到史瓦羅的<u>反擊</u>，對其造成等同於克拉拉<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。",
+   "typeDescHash": "天賦",
+   "iconPath": "0cf0ee129cd4db07eb16e4c59da3690937f45cfe6780d6a9949efeb203858819",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1,
+      0.8,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1,
+      0.88,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1,
+      0.96,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1,
+      1.04,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1,
+      1.12,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1,
+      1.2,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1,
+      1.3,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1,
+      1.4,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1,
+      1.5,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1,
+      1.6,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1,
+      1.68,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1,
+      1.76,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1,
+      1.84,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1,
+      1.92,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1,
+      2,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 595197,
+   "name": "攻擊",
+   "tagHash": "",
+   "descHash": "攻擊敵人，進入戰鬥後削弱敵方目標對應屬性韌性。",
+   "typeDescHash": "",
+   "iconPath": "a56a8dd217b79ffc2557b9b6ee7ca0e8f9ac596ce78704cfb8572793692a4975",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 511256,
+   "name": "勝利的小小代價",
+   "tagHash": "",
+   "descHash": "立即攻擊敵人，進入戰鬥後克拉拉受到敵方攻擊的概率提高，持續<nobr>#1[i]</nobr>回合。",
+   "typeDescHash": "祕技",
+   "iconPath": "b2bb21eba04d3fa208a4d8698169257e73af1a7376832b91304e6b8ea8c1825f",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      2,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1107102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1107205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1107206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1107207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 947968,
+          "name": "攻擊強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+          "statusList": [
+           {
+            "key": "攻擊力",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836259,
+            "count": 3
+           },
+           {
+            "id": 717290,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 947967,
+        "name": "傷害強化•物理",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#FFFFFF;\">物理</span>屬性傷害提高",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836259,
+          "count": 3
+         },
+         {
+          "id": 717290,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 947970,
+      "name": "攻擊強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "攻擊力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 633349,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 947878,
+    "name": "守護",
+    "descHash": "抵抗控制類負面狀態的概率提高<nobr>#1[i]%</nobr>。",
+    "iconPath": "84ccd1a22755bb0519affc339f316f793fb22ab86a553f379a236f6399469861",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.35
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1107101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1107202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1107203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1107204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 947969,
+          "name": "生命強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+          "statusList": [
+           {
+            "key": "生命值",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920200,
+            "count": 3
+           },
+           {
+            "id": 633349,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 947972,
+        "name": "攻擊強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "攻擊力",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920200,
+          "count": 3
+         },
+         {
+          "id": 633349,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 947971,
+      "name": "傷害強化•物理",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#FFFFFF;\">物理</span>屬性傷害提高",
+        "value": 0.032
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 549408,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 947875,
+    "name": "家人",
+    "descHash": "受到攻擊時有<nobr>#1[i]%</nobr>的固定概率解除自身1個負面效果。",
+    "iconPath": "9eb6853e6b9c0df2fa5f3210abcf981350869bfc8a9f6a49001982c1c4052da3",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.35
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1107103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1107208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1107209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 947982,
+        "name": "傷害強化•物理",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#FFFFFF;\">物理</span>屬性傷害提高",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717290,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1107210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 864032,
+        "name": "攻擊強化",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "攻擊力",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717290,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 947981,
+      "name": "生命強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "生命值",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 717290,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 947877,
+    "name": "復仇",
+    "descHash": "史瓦羅的反擊造成的傷害提高<nobr>#1[i]%</nobr>。",
+    "iconPath": "89dbcbd906fa02b1cb3ab71ced5a143e2f276cae8703f90411c885e9efbb2e38",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.3
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1107201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 947974,
+    "name": "攻擊強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "攻擊力",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549408,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "軀幹",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "暴擊率",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "腳部",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "攻擊力",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+   },
+   {
+    "relicTypeHash": "位面球",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "物理屬性傷害提高",
+    "propertyIconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e"
+   },
+   {
+    "relicTypeHash": "連結繩",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "擊破特攻",
+    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初次見面",
+   "text": "克拉拉：你好…我是克拉拉，可以成為我的家人麼…就像史瓦羅先生一樣。<br />史瓦羅：有我在，開拓者就是你的家人。",
+   "unlockRequirement": "",
+   "cnUrl": "14010cbfdb7df931fde8346fccd7573b8eb42a148082f626cc407e48bdf2d95f",
+   "jpUrl": "cba7689810ca26b1b6586abae22502a87039ad6d70e51f87058f9c8341106196",
+   "enUrl": "c0af06f850ea342152a61e685719fb42a6a97c476f2172453fd18a4126d94a70",
+   "krUrl": "55c0449a78f69f0de74c1ce0fabe45a380b56cffa6bd6ca5a4ee45437cb6e8ef"
+  },
+  {
+   "id": 2,
+   "title": "問候",
+   "text": "今天也要和克拉拉一起加油哦。",
+   "unlockRequirement": "",
+   "cnUrl": "f80164407b8eb941afb061cec6e25a7c1c0975d0d29ca9dcc41eff1e7b06e1b8",
+   "jpUrl": "ff09ade91944647bb51321a4b7a92c4047a2135cf8dffa235af4b3017f646ab3",
+   "enUrl": "99c13b9247c16836082c34b1f629eab06b4a547c6d857ed90bb9f86470e68a47",
+   "krUrl": "d4ca048595fd69be6553fb9ac4b2da41b5cfe30a47f1bf5e006b24b4e881cbda"
+  },
+  {
+   "id": 3,
+   "title": "道別",
+   "text": "克拉拉也困了，想靠著史瓦羅先生的手臂睡一會兒，你要來試試麼？",
+   "unlockRequirement": "",
+   "cnUrl": "3bc4798928677158c4136c930775e33f2310d51ec72feff0508a5055b5fa3730",
+   "jpUrl": "9af3661b65f482d4ecce4c69d5dfa1d81bbb4000b5a07574a8775abba48b0d7e",
+   "enUrl": "2aa83aef1948e5303cbfb2c519e8b122fe8cc902bb40d26bba7cb218d9cf47dd",
+   "krUrl": "96b2250c81fec2de084d56693589d4257e0d9c537b484e3fd6de43b372a5fe9e"
+  },
+  {
+   "id": 4,
+   "title": "關於自己•記憶",
+   "text": "即使是史瓦羅先生的「計算」，也不能脫離大家的「記憶」…所以，克拉拉絕對不會忘記大家的。",
+   "unlockRequirement": "",
+   "cnUrl": "918111b9d327397b037d1ad6fb4a8eeda06e613a4841949719a7ea1587094852",
+   "jpUrl": "81e1a02be385c4110f52c427b0311e9f4760639bd81b14a254adc453d9e0fb78",
+   "enUrl": "28464c3c31ad159a36a1566ec75144321fa184cb113cdd469030ade6a54938c8",
+   "krUrl": "3d872ea739a269895af6545a6fcac91d78c3e9f0ccf17ea4811b0a5b69b5e44b"
+  },
+  {
+   "id": 5,
+   "title": "閒談•過家家",
+   "text": "以前玩過家家的時候，克拉拉讓帕金斯他們出門去迎接客人，結果，真的有人跟來了~",
+   "unlockRequirement": "",
+   "cnUrl": "3c8a3e657e9efc9aa1769f72ef8eac4c2aa21e6e5622005235d34e1711844406",
+   "jpUrl": "d0d92001bb551cc2a2808c1b2757309646e991307fcb5e48d38a1ea1c2770450",
+   "enUrl": "3cebb22488a33f79cfaf9063e84a011b2204ef5aff5e577c7992a1d85877a02b",
+   "krUrl": "a184940fdac59ecb6547662584955f4fd143a6bafc77215db07825f865334d8c"
+  },
+  {
+   "id": 6,
+   "title": "愛好",
+   "text": "史瓦羅先生的記憶庫中有許多有趣的東西，比如「電影」…就像很多人在一起過家家！",
+   "unlockRequirement": "",
+   "cnUrl": "05fd35b69797a64c52e71ebe9d98012cd54feba2de74c6c51d9974c7fbd21d8f",
+   "jpUrl": "fbe73dde23f926b325098fa5aa9d35ab8f299ca04c6d7c0624dec360b619ee1f",
+   "enUrl": "59649c4b33537324f544124ea3abbf7ee8bc27467e5c89bae25d0451c1d80db6",
+   "krUrl": "a260f22b70cf828a77e12bcf277d854c1f820311fd13c80020ce0bde01941a96"
+  },
+  {
+   "id": 7,
+   "title": "煩惱",
+   "text": "好不容易說服史瓦羅先生模仿一次「電影」，他只願意演大樹、石頭…「父親」什麼的，果然不行麼…",
+   "unlockRequirement": "",
+   "cnUrl": "dab637a290f20bc1933cc83b8e54ebaaeb2babca6a4d7a2402dbea29163a887b",
+   "jpUrl": "c87812834b0d699705d3635870f8841a0e1ed1632225544d6e254230f8f4305c",
+   "enUrl": "713243353bea2d61d5160b24cb29402579dc279fa54e82bb6e2489595db8229c",
+   "krUrl": "361bf20e56ca7e02b86261061d9dba90534ad31b506fd75ba46758a5d83d2d51"
+  },
+  {
+   "id": 8,
+   "title": "分享",
+   "text": "克拉拉的機器夥伴們，雖然有時說話有些粗魯，但都是不會說謊的乖孩子哦。",
+   "unlockRequirement": "",
+   "cnUrl": "4150bbf333d112a647bbbdbe3e685666298a6ee43ab320cd7b4600be4e753343",
+   "jpUrl": "7b0784c33d1851d545345f4ab3946d1381c336b62cdaab5947674c4a3dad806e",
+   "enUrl": "5dbc862f58b91cbd2c3d1f8bdcd0b07479b6f8001b8a34553a781821ad9b50c0",
+   "krUrl": "dbb7e4ea20b3ca265386d54b7f5c1671a5ba5a16a7af68c3e35f3f7727a75839"
+  },
+  {
+   "id": 9,
+   "title": "見聞",
+   "text": "史瓦羅先生休眠的時候，身體裡也會傳出聲音，就像…就像在打呼嚕一樣~",
+   "unlockRequirement": "",
+   "cnUrl": "b9364060a7335c6b14a5480b7d59da74c30de8157e3f275f2d41ef536a81e897",
+   "jpUrl": "13d0d84ca6b5e14dcb896f05135fa925b7a816eb0403a24e3e71656427941360",
+   "enUrl": "27e0a59c10cb4e0ed80a8607dba44e953737910524507a1a98cbf3be0c0d00e8",
+   "krUrl": "24f26bf061ddbe739ce5ca9191b47b822c6b23823304dc25a764aa9b35649d51"
+  },
+  {
+   "id": 10,
+   "title": "關於娜塔莎",
+   "text": "娜塔莎姐姐說克拉拉也是醫生呢，是機器夥伴的醫生。",
+   "unlockRequirement": "",
+   "cnUrl": "c7b282b166bed942db7d1edaec23e540db42f1250ce8797c6648764206e902bc",
+   "jpUrl": "6407b2a8e480ca9b9772bc70ac79bd48135b546174fc8ef23d98c9e093731d61",
+   "enUrl": "09fcb9f3935f061eb5141c891f9e23e4a3d152433bb7cb11e4e6ea0d42b405a9",
+   "krUrl": "a5d1cfd767c29f457d107ba5582e9430c1cf5102b13c7934343e667c5fe05fcd"
+  },
+  {
+   "id": 11,
+   "title": "關於希兒",
+   "text": "有一次，克拉拉想找的零件死死地嵌在巖壁裡，正好被希兒姐姐看到，她一隻手就敲碎了巖壁…克拉拉還沒來得及和她道謝，她就走了……",
+   "unlockRequirement": "",
+   "cnUrl": "327d009e565b3b5eb0309e70f2ce04c86642897a9a3505db56cb05e254125dcd",
+   "jpUrl": "05b5141c9bf1608113cf0ff69c45daa13066b6cdf1600f1e0d36252f54729f0b",
+   "enUrl": "780a4edd66b8adee7349af865b7c97c4fc78d99fff6238404779357fe1e14ffa",
+   "krUrl": "283a869e49cd098fb4dbf2d02e833076480c5c76d5fafb45cd43e76f2365101e"
+  },
+  {
+   "id": 12,
+   "title": "關於史瓦羅",
+   "text": "其實…史瓦羅先生的手，可以變成幫克拉拉吹頭髮的機器，還可以把大石塊切成小桌子和小椅子呢……",
+   "unlockRequirement": "",
+   "cnUrl": "4486aa6ca921050a48460cd55dd86daa48dda5d7db4e77467540e38329907ec9",
+   "jpUrl": "8e27dba2075271eddc710cb8f80d92dcc0b79e6adb23321f52d89f0e0e5669a3",
+   "enUrl": "8c9bdce6fe7b24805d4c17d75916cb36c0a3c87e3dddf84e0a4f415e1448c510",
+   "krUrl": "4857e75d0fe9bb94913ce33f56bde8ec1bdd051d7bfe9ed8398800205b2c43e6"
+  },
+  {
+   "id": 13,
+   "title": "關於虎克",
+   "text": "虎克邀請我加入鼴鼠黨，但…如果要玩捉迷藏的話，史瓦羅先生怎麼辦……",
+   "unlockRequirement": "",
+   "cnUrl": "119ce790d9d6e3e67ff8475b94cade83bb0bb148aef8100b228699351b65923f",
+   "jpUrl": "5efbea0338dddd52d8357eaa1157e43c7460161aefad2a6d0cae9e4d975cb7f2",
+   "enUrl": "2fe9059415c35c2c7b61e4d0c66dc263e585db75d18948d9eeb3c4071f7b1591",
+   "krUrl": "bf9d529b75dc1c0ea252fb8afd842d6b3a7cd70e28b59f1436fc74d59e296381"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "角色詳情",
+   "text": "被機器人養大的女孩，有著超越年齡的通透和堅持。<br />對克拉拉而言，史瓦羅理性的計算是世界法則，絕不會出錯。<br />直到發現「計算」得到的結果，並不一定能帶給大家幸福。<br />怯生生的女孩決定勇敢起來。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "角色故事·一",
+   "text": "「——日誌 築城紀元████年██月██日。」<br /><br />「在磐巖鎮東南方向的垃圾填埋場中發現一人類幼年女性。」<br /><br />「經掃描，未見該幼童存在任何機體組織結構破壞或功能障礙，但精神狀況較不穩定，對溝通自身狀況一事表現抗拒，迴避傾向明顯。」<br />「繼續嘗試與其交流，成功獲得部分資訊。」<br />「幼童開始哭泣，長達三小時零七分。」<br /><br />「該幼童名為克拉拉，身世不明。」<br />「結論：將其帶回基地觀察，進一步收集相關資訊，以便生成後續處置方案。」",
+   "unlockRequirement": "角色等級<nobr>20</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·二",
+   "text": "「——日誌 築城紀元████年██月██日。」<br /><br />「克拉拉已能夠熟練使用貝洛伯格通用語言，並在機械工程學科領域方面表現出卓越天賦，但克拉拉仍抗拒與其他人類進行交流。經評估，此種人格傾向不利於克拉拉在貝洛伯格的長遠發展。」<br /><br />「目前亟需為克拉拉擬定合適的社會交際教育方案，其優先順序置為：高。」<br /><br />「——日誌 築城紀元████年██月██日。」<br /><br />「克拉拉成功與磐巖鎮中同齡個體進行接觸。本次接觸物件名為虎克，自稱來自磐巖鎮當地的治安組織『鼴鼠黨』，身份為總負責人——在本機資料庫中未見該社會組織及其相關資訊。」<br /><br />「克拉拉與虎克的接觸起初不太順利，表現出了相當的羞怯情緒。但對方成功以極端的熱情與同理心成功開啟局面，並稱其為『鼴鼠黨的榮譽隊員』。交流結束後，克拉拉將虎克描述為『第一個好朋友』。」<br /><br />「此事對克拉拉而言意義重大，已將本日誌歸檔為『重要』。」",
+   "unlockRequirement": "角色等級<nobr>40</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·三",
+   "text": "「——日誌 築城紀元████年██月██日。」<br /><br />「在克拉拉的指引下，已有為數眾多的流浪者在本基地周圍建立聚落，並依靠克拉拉的救助維生。這一行為與『存護』之指令並不相悖，然而，其中有許多人試圖通過本基地的運輸通道進入上層區。為此必須將基地大門封閉，以避免加劇貝洛伯格的滅亡程序。」<br /><br />「克拉拉曾就此事與我發起討論：她認為封閉大門這一行為是『無法理解』的。對此，我已告知演算結果：大守護者將過多資源投入到對裂界的戰事上，這一行為反而會加速上層區的覆滅；對於下層區而言，與之隔絕將是最好的選擇——下層區人民將因此爭取到更多存活的時間。最終，克拉拉對此表示認可。」<br /><br />「絕大多數人類的行為毫無邏輯可言，可克拉拉並非如此——她由我撫養、在自動機兵間成長，其一切行為舉止都更多出自真正的理性。她的存在或許能夠影響到關於貝洛伯格滅亡程序的演算結果，但仍需更多觀察。」",
+   "unlockRequirement": "角色等級<nobr>60</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·四",
+   "text": "「——日誌 築城紀元████年██月██日。」<br /><br />「我自誕生之初便被輸入了『存護』下層區的指令——即使下層區只能比上層區多留存哪怕一毫秒，我也會嚴格將之執行。若借貝洛伯格傳統文化中的概念描述，或許也可以這樣說：『毫無疑問地，我忠於自己被賦予的使命』。因此，我視自己的計算結果為鐵律——任何人、任何事物都無法使我動搖——包括『外來者』在內。」<br /><br />「但是，在大量演算結果中，我注意到這樣一種可能性。」<br /><br />「在該演算結果中，克拉拉改變了貝洛伯格的一切。我曾對她如此評價：『她的一切行為舉止都更多出自真正的理性』。若以該演算結果為基礎，重新審視這一結論，我不能將之視為錯誤，但我注意到它有失偏頗。」<br /><br />「在該演算結果中，克拉拉同時證明了一點：具備『真正的理性』並非改變現狀的關鍵，反而是她那真摯且熱烈的『情感』將一切計算結果顛覆，徹底扭轉了貝洛伯格註定滅亡的未來。然而，除非有新的外因介入，該演算結果觸達概率不高於<nobr>0.25272%</nobr>，應歸入小概率事件組，暫停對該演算結果的進一步研究。」<br /><br />「如今，下層區的存續概率在過去五個週期內未見明顯上升趨勢，評估認為該事項允許暫緩執行，但我仍將對相關風險因子置於監控下。」<br /><br />「在本週期內，我將專注於為克拉拉尋找家人一事。儘管克拉拉不斷表示『自己已經找到了真正的家人』，我還是將持續蒐集相關資訊，以便儘早發現克拉拉真正的家人之所在。」",
+   "unlockRequirement": "角色等級<nobr>80</nobr>解鎖"
+  }
+ ],
+ "archive": {
+  "cvCn": "紫蘇九月",
+  "cvJp": "日高裡菜",
+  "cvKr": "김예림",
+  "cvEn": "Emily Sun",
+  "camp": "貝洛伯格"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "clara"
+}

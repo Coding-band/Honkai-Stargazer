@@ -1,3 +1,9 @@
+/*
+ * Project Honkai Stargazer (崩壞•星穹觀星者) was
+ * Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
+ * Copyright © 2023 Xectorda 版權所有
+ */
+
 package com.voc.honkai_stargazer.util;
 
 import android.content.Context;
@@ -10,7 +16,7 @@ import java.io.InputStream;
 public class LoadAssestData {
 
     public static String LoadAssestData (Context context, String inFile){
-        String tContents = "";
+        String tContents = null;
 
         try {
             InputStream stream = context.getAssets().open(inFile);

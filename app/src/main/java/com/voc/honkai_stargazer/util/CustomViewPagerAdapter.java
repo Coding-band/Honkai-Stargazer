@@ -1,8 +1,10 @@
-package com.voc.honkai_stargazer.util;/*
- * Project Genshin Spirit (原神小幫手) was
+/*
+ * Project Honkai Stargazer (崩壞•星穹觀星者) was
  * Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
- * Copyright © 2022 Xectorda 版權所有
+ * Copyright © 2023 Xectorda 版權所有
  */
+
+package com.voc.honkai_stargazer.util;
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,11 +12,6 @@ import android.view.ViewGroup;
 import androidx.viewpager.widget.PagerAdapter;
 
 import java.util.List;
-/*
- * Project Genshin Spirit (原神小幫手) was
- * Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
- * Copyright © 2023 Xectorda 版權所有
- */
 
 public class CustomViewPagerAdapter extends PagerAdapter
 {

@@ -1,0 +1,2357 @@
+{
+ "name": "セーバル",
+ "spRequirement": 100,
+ "rarity": 4,
+ "descHash": "ベロブルグの機械工、前職は建創者の技術部門の研究員。 ジェパード・ランドゥーの姉だが、弟とはまったく異なる性格をしている。 大寒波が訪れる前に存在した「ロック」という古典音楽を熱愛している。",
+ "iconPath": "cad9de5e9d91532ac990da88a1994b2ff107a184744f4eb372131aa2b694e773",
+ "bgPath": "2cb545b2ca6365924583989cb65847893805af217ce995b9aa6aeb4d60e92b3f",
+ "figPath": "e21a40cd78d877fa3d594d458f7bfbf7b779ec1b615cf5476f1b60e89e7d4b35",
+ "fgPath": "1ca4e00ac8af08cc8917a0675c6d40a2c878241e906805ebbd30a13e3d1d0cf9",
+ "artPath": "312d2f50d5a3dea5056b3acb74ce0ecb862907bbe213551d59d08c66f3db9041",
+ "miniIconPath": "af2dda50f7907c178345610d7b71de325aa634a392f2856ec630f52954ad6724",
+ "splashIconPath": "6652458b2ea6d17607863873a3508ca06e43101557c1c7faad5f29b20b16a3be",
+ "damageType": {
+  "id": 8,
+  "iconPath": "e8e459ad283c3df43713b2d13203b3dc8c636150d0c536f38e2ad62bd72b6e83",
+  "color": "#8872F1",
+  "name": "雷",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "b9e59719a64e109bbcf97e61c2cf3c99730af37cbd230758a45d291825dbd941",
+  "altIconPath": "2711d1f5592aee2297cc8ef3a82ed4e7b6958efe02a2a79f7ea3e97246ec9837",
+  "color": "#FFFFFF",
+  "name": "知恵",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 3,
+  "iconPath": "312ed1eeb6d329b90b5506b23fd487883f83124ccabedaf6cfafbb913d86c74c",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "運命の足跡",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "幾度の敗北があなたに勝利をもたらし、一歩一歩の前進があなたを運命の転換点へと導いた。",
+   "purpose": "軌跡素材",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」ポイント報酬",
+    "ナナシの勲功",
+    "エンバー交換",
+    "期間限定イベント報酬"
+   ]
+  },
+  "151160": {
+   "id": 151160,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "f4e0301b109ba0ab0b633a7186df88a0fa0be8a70edf33c88539672e514bbc8c",
+   "name": "過去の影の雷冠",
+   "desc": "守護者の影が身につけていた頭飾り。雷属性キャラクターの昇格素材。",
+   "lore": "かつての守護者の姿が消え去った後に残った装飾品。常冬の城の過去を語っているようだ。<br /><br />「鉄腕のスベトラーナ——彼女の怒りは雷鳴のごとく鼓膜を揺らし、彼女の処罰は稲光のごとく素早く執行される」",
+   "purpose": "キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/151160",
+   "comeFrom": [
+    "凝滞虚影「残響回廊」",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "守護者の悲願",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "この仮面と一緒に、1人の守護者の歪んだ願いも砕け散った。<br />彼女は常冬の終末の中で民の未来を切り開くことを志したが、より壮大な意思に操られる傀儡となってしまった。<br /><br />「大守護者。ベロブルグの統治者が代々受け継ぐ称号であり、すべての市民を見守る者——だが人々は知らない、彼女たちを見守る人はいないということを」",
+   "purpose": "軌跡素材",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "歴戦余韻「常冬峰」"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "漫遊指南",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>20000</nobr>獲得できる。",
+   "lore": "世界を渡り歩くためには欠かせない、冒険手引き集。閲覧キーを押すと、電子音声が理解可能な言語で、有名な冒険者たちが様々な世界で体験したことや、彼らが色々な星で得た貴重な知識を語り聞かせてくれる。<br /><br />「漫遊指南最新シリーズ『スペースグルメガイド』が現在発売中。ぜひお買い求めください」<br />「投稿の際は、博識学会共感覚ビーコンのオペレーター<nobr>23</nobr>θにお繋ぎください。原稿料はあなたが普段から利用している方法でお振込みいたします」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "「忘却の庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "冒険記録",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>5000</nobr>獲得できる。",
+   "lore": "綺麗に装丁された、一目でためになるとわかる冒険日誌。冒険に関する細かい描写、価値のある情報、サバイバル術が書かれている。<br /><br />「なんで数字化してデバイスに保存しないの？持ち歩きやすくなるでしょ」<br />「お前が思っているより、先進技術は恒星嵐や中性子噴出に弱いんだ。なにより、この本の制作者は、最も簡単な方法で人々に読んでもらいたかったんだろう」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "デイリー訓練"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "旅の見聞",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>1000</nobr>獲得できる。",
+   "lore": "旅の出来事を記した日記。字はかすれており、不鮮明。思うままに内容が書かれてあるので、あまり助けにはならないだろう。<br /><br />「読み終わったら早くその紙切れを捨てるのよ、丹恒？」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "依頼報酬"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "2901efa774991b0ce2037520ce85ff99af64f37ee6364ffda560278736df6a19",
+   "name": "シルバーメインの釦",
+   "desc": "シルバーメインの兵士が装着する飾りボタン。強化に必要な簡易素材。",
+   "lore": "雨や霜に晒された痕跡がある。<br /><br />「古い時代、シルバーメインには一つだけ引退する方法があった、それは死ぬことである」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "シルバーメインなどの敵がドロップ「郊外雪原」",
+    "永冬の災影などの敵がドロップ「残響回廊」",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "042dc7973ef7c36858a4aa58ef7d32335f528b3c4bc4f0c4ce2e7f401039a7c5",
+   "name": "シルバーメインの記章",
+   "desc": "シルバーメインの隊長が装着する軍の階級章。強化に必要な普通素材。",
+   "lore": "家族に自慢するための証拠品かもしれないし、幸運にも弾丸を防いだお守りかもしれない。<br /><br />「時代は変わった」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "シルバーメインなどの敵がドロップ「「郊外雪原」（均衡Lv.2以上）",
+    "永冬の災影などの敵がドロップ「残響回廊」（均衡Lv.2以上）",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "635675": {
+   "id": 635675,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a11149500124597e50362c7c3cd94c209d1a1b48d77ce9f7dfdfac64d8840ef3",
+   "name": "着想のカギ",
+   "desc": "苦慮している学者の手の中に現れる幻のカギ。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">知恵</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "意識の奥底に封じられた閃きを解き放つことができる。<br />カギを掴んだということは、己の中にある進むべき道を照らす光を掴んだということである。<br /><br />「エウレカ！」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/635675",
+   "comeFrom": [
+    "疑似花萼「リベットタウン」"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "name": "シルバーメインの勲章",
+   "desc": "手柄を立てたシルバーメインが装着する勲章。強化に必要な高級素材。",
+   "lore": "「隙」の魔物、地下民に立ち向かい、災いを乗り越えた後に授与された名誉の証。<br />これは功績者の胸に掲げられることより、その人の棺桶の上に置かれることの方が多い。<br /><br />「それはおもちゃじゃないわ、ジェパード。覚えておいて、これがランドゥー家の使命、ランドゥー家の血なのよ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "シルバーメインなどの敵がドロップ「「郊外雪原」（均衡Lv.4以上）",
+    "永冬の災影などの敵がドロップ「残響回廊」（均衡Lv.4以上）",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "836261": {
+   "id": 836261,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "name": "叡智のカギ",
+   "desc": "宇宙の頂点に立つ天才の手の中に現れるカギ。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">知恵</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "このカギは、持ち主が知恵の神殿の扉を開く権利を得たという証拠である。<br />カギを手にしても、そのカギで開けられる扉を見つける方が大変である。扉の向こうに行った者は、もう振り返る必要がないことを悟るだろう。<br /><br />「知恵は宇宙の真理を教えてくれるわけではないが、どのように疑問を持てばよいかを教えてくれる」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/836261",
+   "comeFrom": [
+    "疑似花萼「リベットタウン」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  },
+  "920202": {
+   "id": 920202,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "974e6b2e34ddd65a7b7edc1e2edd1b85ffbf62d63b7318313e7f387747d83f4f",
+   "name": "啓発のカギ",
+   "desc": "諸界の智者の手の中に現れる幻のカギ。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">知恵</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "真実を封印している錠前を開き、人智ではたどり着けない領域へと到達させる力を持つ。<br />持ち主がどうにかしてカギを見せようとしても、周りの人はカギの存在を認識することができない。ある人はこれを天啓とし、ある人は狂気の兆しとした。<br /><br />「分子が蛇のようにとぐろを巻いている夢を見たんだ。目覚めたときに気付いた、これが私の求めていた答えだと！」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/920202",
+   "comeFrom": [
+    "疑似花萼「リベットタウン」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549407,
+     "count": 4
+    }
+   ],
+   "attackBase": 88.8,
+   "attackAdd": 4.44,
+   "hpBase": 124.8,
+   "hpAdd": 6.24,
+   "defenseBase": 51,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549407,
+     "count": 8
+    }
+   ],
+   "attackBase": 124.32,
+   "attackAdd": 4.44,
+   "hpBase": 174.72,
+   "hpAdd": 6.24,
+   "defenseBase": 71.4,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633348,
+     "count": 5
+    },
+    {
+     "id": 151160,
+     "count": 2
+    }
+   ],
+   "attackBase": 159.84,
+   "attackAdd": 4.44,
+   "hpBase": 224.64,
+   "hpAdd": 6.24,
+   "defenseBase": 91.8,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633348,
+     "count": 8
+    },
+    {
+     "id": 151160,
+     "count": 5
+    }
+   ],
+   "attackBase": 195.36,
+   "attackAdd": 4.44,
+   "hpBase": 274.56,
+   "hpAdd": 6.24,
+   "defenseBase": 112.2,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717289,
+     "count": 5
+    },
+    {
+     "id": 151160,
+     "count": 15
+    }
+   ],
+   "attackBase": 230.88,
+   "attackAdd": 4.44,
+   "hpBase": 324.48,
+   "hpAdd": 6.24,
+   "defenseBase": 132.6,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717289,
+     "count": 7
+    },
+    {
+     "id": 151160,
+     "count": 28
+    }
+   ],
+   "attackBase": 266.4,
+   "attackAdd": 4.44,
+   "hpBase": 374.4,
+   "hpAdd": 6.24,
+   "defenseBase": 153,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 301.92,
+   "attackAdd": 4.44,
+   "hpBase": 424.32,
+   "hpAdd": 6.24,
+   "defenseBase": 173.4,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "8440734acd6fe752374cc16bf385bcb9db2944020aeba129738b197ff8f45b0f",
+   "name": "いつまでも鳴り響け",
+   "descHash": "通常攻撃は指定した敵に隣接するランダムな敵に、通常攻撃のダメージ<nobr>#1[i]%</nobr>分の雷属性ダメージを与える。",
+   "params": [
+    0.6
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "3d57fe0c1e54141a1cba420dd0f9394568dddb4252e7142db1dc7f5864018260",
+   "name": "アンコール！",
+   "descHash": "天賦の付加ダメージを1回発動するたびに、セーバルはEPを<nobr>#1[i]</nobr>回復する。",
+   "params": [
+    4
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "28ef5c642307a6c75d346f8f1bb56f468357590d3d379e78c971d643b5db62d4",
+   "name": "聞け、歯車の鼓動を",
+   "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "a77d235e80ca9f5af9f8844ef12f7d49fd0aa96346a6945cc62d5ba32fa1bf09",
+   "name": "噪音を鳴らせ！",
+   "descHash": "必殺技を発動した時、<nobr>#1[i]%</nobr>の基礎確率で感電状態でない敵を、戦闘スキルが与えるものと同じ感電状態にする。",
+   "params": [
+    1
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "45076347a90d01726de9f1c0799be7e686204c7657948c9b93f8b78e6c2e2682",
+   "name": "ベロブルグ最強音！",
+   "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "5f3fe241a2fa2dd9f619b8e3a76de6f988cdc5476905fe691fcb86c1d79dbb15",
+   "name": "この一曲、<br />天穹を貫く！",
+   "descHash": "感電状態の敵に対するセーバルの与ダメージ+<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.3
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   960674
+  ],
+  [
+   876733
+  ],
+  [
+   792792
+  ],
+  [
+   676147
+  ],
+  [
+   391620
+  ]
+ ],
+ "skills": [
+  {
+   "id": 960674,
+   "name": "雷鳴音階",
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体にセーバルの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与える。",
+   "typeDescHash": "通常攻撃",
+   "iconPath": "ac5258010ed190458bb9c1c37d5128ba6c2a6eb3efb0a3a9da0d9e5f26b68322",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635675,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920202,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920202,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836261,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836261,
+       "count": 6
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 876733,
+   "name": "スパーク",
+   "tagHash": "拡散攻撃",
+   "descHash": "指定した敵単体にセーバルの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与え、隣接する敵にセーバルの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与える。さらに<nobr>#3[i]%</nobr>の<u>基礎確率</u>で攻撃を受けた敵を感電状態にする、<nobr>#4[i]</nobr>ターン継続。<br />感電状態の敵はターンが回ってくるたびに、セーバルの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#5[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性持続ダメージを受ける。",
+   "typeDescHash": "戦闘スキル",
+   "iconPath": "ea52b05156394a61f635af9817c75f6b9e1733fa754dc27163e6a6716fbfadff",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.7,
+      0.3,
+      0.8,
+      2,
+      0.4
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.77,
+      0.33,
+      0.8,
+      2,
+      0.44
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549407,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.84,
+      0.36,
+      0.8,
+      2,
+      0.48
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635675,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.91,
+      0.39,
+      0.8,
+      2,
+      0.52
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920202,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.98,
+      0.42,
+      0.8,
+      2,
+      0.56
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920202,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.05,
+      0.45,
+      0.8,
+      2,
+      0.62
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920202,
+       "count": 6
+      },
+      {
+       "id": 633348,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1375,
+      0.4875,
+      0.8,
+      2,
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836261,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.225,
+      0.525,
+      0.8,
+      2,
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836261,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3125,
+      0.5625,
+      0.8,
+      2,
+      0.92
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836261,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.4,
+      0.6,
+      0.8,
+      2,
+      1.04
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836261,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.47,
+      0.63,
+      0.8,
+      2,
+      1.092
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.54,
+      0.66,
+      0.8,
+      2,
+      1.144
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.61,
+      0.69,
+      0.8,
+      2,
+      1.196
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.68,
+      0.72,
+      0.8,
+      2,
+      1.248
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.75,
+      0.75,
+      0.8,
+      2,
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 792792,
+   "name": "機械ブーム登場！",
+   "tagHash": "全体攻撃",
+   "descHash": "敵全体にセーバルの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与え、敵の感電状態+<nobr>#2[i]</nobr>ターン。",
+   "typeDescHash": "必殺技",
+   "iconPath": "6b736e3bfb758c60e27cba052ead108e46547bdf702bf535b6c261a4de51b6c2",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1.08,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.152,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549407,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.224,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635675,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.296,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920202,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.368,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920202,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.44,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920202,
+       "count": 6
+      },
+      {
+       "id": 633348,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.53,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836261,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.62,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836261,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.71,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836261,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.8,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836261,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.872,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.944,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      2.016,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      2.088,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      2.16,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 100
+  },
+  {
+   "id": 676147,
+   "name": "情熱コード",
+   "tagHash": "強化",
+   "descHash": "攻撃を行った後、すべての感電状態の敵にセーバルの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性<u>付加ダメージ</u>を与える。",
+   "typeDescHash": "天賦",
+   "iconPath": "ad1f83f964426251ce3c032372f0a49ef6d88115a783d56402ed9cc724727172",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.396
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549407,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.432
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635675,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.468
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920202,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.504
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920202,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.54
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920202,
+       "count": 6
+      },
+      {
+       "id": 633348,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.585
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836261,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.63
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836261,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.675
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836261,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836261,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.756
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.792
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.828
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.864
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 475561,
+   "name": "攻撃",
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
+   "typeDescHash": "",
+   "iconPath": "ac5258010ed190458bb9c1c37d5128ba6c2a6eb3efb0a3a9da0d9e5f26b68322",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 391620,
+   "name": "おやすみ、ベロブルグ",
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、ランダムな敵単体にセーバルの攻撃力<nobr>#4[i]%</nobr>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与え、<nobr>#1[i]%</nobr>の<u>基礎確率</u>で敵単体それぞれに感電状態を付与する、<nobr>#3[i]</nobr>ターン継続。<br />感電状態の敵はターンが回ってくるたびに、セーバルの攻撃力<nobr>#2[i]%</nobr>分の<span style=\"color:#c75de2;\">雷</span>属性持続ダメージを受ける。",
+   "typeDescHash": "秘技",
+   "iconPath": "494c5bbe1ca913be4529699e98885e3dfee35073fa93579dcab4f4795f669497",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1,
+      0.5,
+      3,
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1103101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1103202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1103203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 597976,
+        "name": "会心率強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+        "statusList": [
+         {
+          "key": "会心率",
+          "value": 0.026999999
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920202,
+          "count": 2
+         },
+         {
+          "id": 633348,
+          "count": 2
+         }
+        ]
+       }
+      },
+      {
+       "id": 1103204,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 597973,
+        "name": "効果抵抗強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+        "statusList": [
+         {
+          "key": "効果抵抗",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920202,
+          "count": 2
+         },
+         {
+          "id": 633348,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 597975,
+      "name": "効果命中強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+      "statusList": [
+       {
+        "key": "効果命中",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635675,
+        "count": 2
+       },
+       {
+        "id": 549407,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 597879,
+    "name": "ロック",
+    "descHash": "戦闘スキルを発動した時、攻撃を受けた敵が感電状態になる基礎確率+<nobr>#1[i]%</nobr>。",
+    "iconPath": "e4252bc396051881a6f371a03a91a8da9ac8590dbc5ef3613e71b82690425000",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.2
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635675,
+        "count": 2
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1103102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1103205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1103206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 597971,
+        "name": "効果命中強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+        "statusList": [
+         {
+          "key": "効果命中",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836261,
+          "count": 2
+         },
+         {
+          "id": 717289,
+          "count": 2
+         }
+        ]
+       }
+      },
+      {
+       "id": 1103207,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 597972,
+        "name": "会心率強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+        "statusList": [
+         {
+          "key": "会心率",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836261,
+          "count": 2
+         },
+         {
+          "id": 717289,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 597974,
+      "name": "会心率強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+      "statusList": [
+       {
+        "key": "会心率",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920202,
+        "count": 4
+       },
+       {
+        "id": 633348,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 597882,
+    "name": "電子音",
+    "descHash": "戦闘開始時、EPを<nobr>#1[i]</nobr>回復する。",
+    "iconPath": "8762f5a57eca7307f80ff74f7788bf2028e79f6a211fa06befded6b7aca33728",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       15
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920202,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1103103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1103208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 597985,
+      "name": "効果抵抗強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+      "statusList": [
+       {
+        "key": "効果抵抗",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836261,
+        "count": 6
+       },
+       {
+        "id": 717289,
+        "count": 6
+       }
+      ]
+     }
+    },
+    {
+     "id": 1103209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 597986,
+      "name": "効果命中強化",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+      "statusList": [
+       {
+        "key": "効果命中",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836261,
+        "count": 6
+       },
+       {
+        "id": 717289,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 597881,
+    "name": "狂熱",
+    "descHash": "敵を倒した後、攻撃力+<nobr>#1[i]%</nobr>、<nobr>#2[i]</nobr>ターン継続。",
+    "iconPath": "951244654bfaa0be6799ff34021ff54bcc9f6d5a329cf3de55748b48a2cd21a5",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.2,
+       2
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836261,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1103201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 597978,
+    "name": "会心率強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+    "statusList": [
+     {
+      "key": "会心率",
+      "value": 0.026999999
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549407,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1103210,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 514036,
+    "name": "会心率強化",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+    "statusList": [
+     {
+      "key": "会心率",
+      "value": 0.053
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 128000
+     },
+     {
+      "id": 836261,
+      "count": 6
+     },
+     {
+      "id": 717289,
+      "count": 6
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "胴体",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "会心率",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "速度",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+   },
+   {
+    "relicTypeHash": "次元界オーブ",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "雷属性与ダメージ",
+    "propertyIconPath": "6acd635b37377d308961b26cf64a7a0ceed4e922bdf0427b620249351796ecd4"
+   },
+   {
+    "relicTypeHash": "連結縄",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "撃破特効",
+    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初対面",
+   "text": "やあ、開拓者、私はセーバル・ランドゥー。ベロブルグの機械工——もちろん、そっちは趣味で、ロックミュージシャンこそが私の本職さ。",
+   "unlockRequirement": "",
+   "cnUrl": "d0dd14afe8a71235f947ee2046e73ccf9b3b173a84aa684bc63e907cc653e894",
+   "jpUrl": "ae685f8158d9a3072a6702782fb5a42beed458cdf97466cda845c77a73f4ab96",
+   "enUrl": "1053f064d3e72b532b2d4431cbe24fe8f6d3c2ec1a1350b02da86ee6c3527eb6",
+   "krUrl": "9a7109409b96e402e40729d8d5460d821aea73ed5dc05652981cffc9b55eb18f"
+  },
+  {
+   "id": 2,
+   "title": "挨拶",
+   "text": "あれ、もう仕事を始めるの？",
+   "unlockRequirement": "",
+   "cnUrl": "0f08738f8f491d30e55b72d8716ae3247046344b39368b68e37b53fc32b46cb9",
+   "jpUrl": "0a4d49e74807f38bed9bf6fc89d6cfb4386b9bdb767d5be64d586ad91ccbfff4",
+   "enUrl": "13bd2b875763f39c6dec804f2b6ad8bcddd92394f8156ebcbc9ebb5d181d1921",
+   "krUrl": "bd29efef0b1c1b5ed91d38e68e1f69d72e156bd1021e584dc6fb65e4f35f7d80"
+  },
+  {
+   "id": 3,
+   "title": "お別れ",
+   "text": "仕事はもう終わり、これからは作曲の時間だ～",
+   "unlockRequirement": "",
+   "cnUrl": "abda7f498bd1881da60301873b353321eb91aa4978063ef839784e513a97c845",
+   "jpUrl": "97fabf527b31f19193099a49ecd1f718595b48336ce13324b217b1c07cfbbffe",
+   "enUrl": "26274fe439158d099e54a697d0cb36890c84739bcef78a895f70ec24578f641d",
+   "krUrl": "457afadde5d40d792e663e3d5580e10e7852d735a07c6edd99221634bb86ef00"
+  },
+  {
+   "id": 4,
+   "title": "自分について・ランドゥー",
+   "text": "ランドゥー家の人間の共通点は、頑固者なところだよ。",
+   "unlockRequirement": "",
+   "cnUrl": "c49549dbe997ba3720c004af59fdf42c234974b0a0b340f0578d38ccb51023f2",
+   "jpUrl": "e3758957c301ca8d6dfb620df57e08aacea0208f3c198fad9c388f51ee32b8a3",
+   "enUrl": "36752c3bfdf79a925ecb0072f6bdbbcb8698caa9b482234e8f34c7a8ab425b5c",
+   "krUrl": "4eae04558fef582c9792accfe034e46aba252fc4c5f6d65c3e68c74dc30bc3c8"
+  },
+  {
+   "id": 5,
+   "title": "雑談・メカニックの仕事",
+   "text": "リラックスして自由に仕事をしていれば、最高の気分で作品に臨むことができるんだ。",
+   "unlockRequirement": "",
+   "cnUrl": "0da669b15b9f1cd2685947b8fcf881309d4a507f2ad4e09b00e75537277c44c9",
+   "jpUrl": "9a1bbb1d92e7ede6b5aa2a8e6d6f79974a25662b7aa55e04053f3a6437b880c9",
+   "enUrl": "bd8906c62d186b1e49456325c974f8d2d7fe1a5168d298b590fd8cf5a0b6f7e7",
+   "krUrl": "e56e06569a792fc629d91a035920efc56be5b0d6aa9c6c0f6de3f5dacc96185c"
+  },
+  {
+   "id": 6,
+   "title": "雑談・バンド",
+   "text": "ペラは忙しくて、週末もボランティアをしてる。だから、基本的に「機械ブーム」の練習は夜になるんだ。",
+   "unlockRequirement": "",
+   "cnUrl": "b98b8a21e6072dc0102c39dd3e12f5dca6dcf8bae54583bbb5076a322f530e08",
+   "jpUrl": "8ce1ef5a410350ae2e2379ca93eee40f637ba8f9857728aaefdd84125ad2ce6e",
+   "enUrl": "2037446aa6055585b7c818d93f81b924a2fbc10baec981541b965f69447b9ab9",
+   "krUrl": "b141cb796ba3fb392d5e13a2870dc41898d148f32087f4b090204444d6215c6d"
+  },
+  {
+   "id": 7,
+   "title": "趣味",
+   "text": "ロックンロールが本業だから、趣味は「仕事」になるはず。今のところ…問題はないよ？",
+   "unlockRequirement": "",
+   "cnUrl": "cf4517d29d2d858456ad440a3de893953e10ac860b238038ca82f51030518e55",
+   "jpUrl": "2c67548cffd502852a231f4f30f31056183c09b8ae970708339dda8c4db404c5",
+   "enUrl": "253480ad36ca8193a55d3c63e81b45ef532ffbc9ebba374ef0f1d9263a314861",
+   "krUrl": "a2dbd3eabc83167fa8e9e9adf8eb94757a90bbec9bb17d7889833cee5a42f9db"
+  },
+  {
+   "id": 8,
+   "title": "悩み事",
+   "text": "からくり工房をよく閉めるから、どうやって稼いでいるのか聞かれるんだ。この問題の答えは明白さ——全く儲かってないよ！",
+   "unlockRequirement": "",
+   "cnUrl": "3888d94784a90c1b159e7c06d1018171631a21e73ecfd9ccebca950a49c42763",
+   "jpUrl": "c5f7627c4be5da9f8e27fea3e0be93fea5a2c5e2f9f850e617dc7b4a3ee00e0e",
+   "enUrl": "792a3776f10e928cd4a5b89bcf1e334fbafb57254db6cfa34268f005c929b636",
+   "krUrl": "f2153a1a83b4c176f798a3a4f54badddf90fe156747b8f42abd6d2f882cec275"
+  },
+  {
+   "id": 9,
+   "title": "シェア",
+   "text": "私は、機械、研究、音楽、どれに関することでもうまくやれる。あ、ということは…私の苦手分野は「儲ける」ことかもしれないね？",
+   "unlockRequirement": "",
+   "cnUrl": "cc7dcf1a08ba3739db036b4d42a2195a9504291a884eb17305990c6ff41f413c",
+   "jpUrl": "bb09950c65a85455c48d46733a1516a35eeb2595954ec4f72d6e159eb8a55f43",
+   "enUrl": "b1ab3cd349243f99fa36aac675d0ab511f747dda626ecbdcadaedb73a8792fbf",
+   "krUrl": "3ae53a95db67cc63e03f2f2e76e0c4b56ee920d0ab12f489361a4f6445771b21"
+  },
+  {
+   "id": 10,
+   "title": "見聞",
+   "text": "ブローニャが大守護者になったら、黄金シアターでライブさせてもらえると思う？ロックバージョンの『大守護者』を書いて…ロックンロールミュージカル！",
+   "unlockRequirement": "",
+   "cnUrl": "fae97bcbe0a632c6934b80227929a6c4547391353321d1c0f0ed1c03e3e28709",
+   "jpUrl": "7774c33d8ce0ed5509d65ea5cb70fdb65b187c746e862dbbabdf183e162b82bd",
+   "enUrl": "1b0d05111d8ad0a76d1b7272d433316ca81f6be4eb29eaa50acea29d639a8165",
+   "krUrl": "8af49728bc8ee1991c9fa36d8cc614c2f2ac55f627b3e1e15ed1d0ce5bdcc763"
+  },
+  {
+   "id": 11,
+   "title": "ジェパードについて",
+   "text": "弟が自分の面倒をちゃんと見ることができれば、姉である私が世話を焼く必要はなくなるんだけど…いや、この話はやめよう。私が弟に心配をかける回数もそこそこあるから、お互い様だね。",
+   "unlockRequirement": "",
+   "cnUrl": "dff755f9f7c57872eeee04e6bfe96f3e2b8a63c562d10c7230c0c2067b48517d",
+   "jpUrl": "a17aa6baecf6a336868b00c0fbc29da3dd0b5b28b80f8f156ecfdca436bd47e3",
+   "enUrl": "aa91989df97e5a50a247ce7121829e28423c04756ac1dc2d32a0706a9945359d",
+   "krUrl": "cd9dad67f4ae39bba263159b55e3c41ffe98e5791edc418734b7f0f402ba3042"
+  },
+  {
+   "id": 12,
+   "title": "ペラについて",
+   "text": "ドラムを叩けるし、花も育てることができて、さらに報告書も完璧。ペラより頼りになる子が他にいると思う？",
+   "unlockRequirement": "",
+   "cnUrl": "3e2459b9ee5b754e06822b43894623634ff0cd796800eb6bbc6eb3164d5d6fc4",
+   "jpUrl": "5cc3c3c029b90a8ce2a62dd88f960890bd427a06107a5f045712bf5f82be72ca",
+   "enUrl": "29439049e2dcb8a997d45c84c70e737b56455c4decc75ce6ffe7204dfe0b7c41",
+   "krUrl": "38e099d84e797c9d329d33516488d242b1b9b462922c5a823199d7994fe6e6a7"
+  },
+  {
+   "id": 13,
+   "title": "ブローニャについて",
+   "text": "ブローニャはいい子だよ。カカリアの教育を受けているだけあるね。最近顔を見てないから、会いたいよ。",
+   "unlockRequirement": "",
+   "cnUrl": "68a9625234cb52d2fbfab17572805b47c167dfa270a39f3d127624709fdb2758",
+   "jpUrl": "6e5fa104782e4aae2fee4f7f8117a4660aed7ca31c671500145e3002a14368c3",
+   "enUrl": "94a9ac990eec4043cd371a91565622dee6dae9a622f41484f8f9096c8a798ff4",
+   "krUrl": "eb4ac0a27feefe06770bfb21ca8dad08f9222f205b9456aa0b949d0189fa59a3"
+  },
+  {
+   "id": 14,
+   "title": "カカリアについて",
+   "text": "私が知っているカカリアは屋上で私の歌を聴いてくれるけど…「大守護者」は、そんなことをしない。",
+   "unlockRequirement": "",
+   "cnUrl": "0b98ec2544c12f76b040aa3667a8d15428b86e0c666bb248f6c0e913137924c6",
+   "jpUrl": "5538afae26c58d145279bf43f2d7e0823cde6e2d7f00defdcd2a0bb474c282fe",
+   "enUrl": "b9f38d69c39ba9e3b1146f0e528e4d1b94cd0d518702a2c7879d4c68c315e414",
+   "krUrl": "2ac104ad7198e06f0f92cd8ad27006a71a1bbdeb24dbc8a227fd7fa48d4a9f88"
+  },
+  {
+   "id": 15,
+   "title": "サンポについて",
+   "text": "サンポ？弟が早く彼を捕まえないか、首を長くして待っているよ。",
+   "unlockRequirement": "",
+   "cnUrl": "874dbfc2c53a0235b15c8d541cb91bb2a727ec23819cf60fd29481675b46dcda",
+   "jpUrl": "cf0986811861d624979f014394e75df3a3867df7bafbb7bd2112f8910947a697",
+   "enUrl": "594321626bbbc1bed8acffe4e3d1a3fc3488909fcabd465a755c75ae28c1d068",
+   "krUrl": "aa8685e137dd043014b2ecb0da06a14bac3debce693d72fda9dcec261adea648"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "キャラクター詳細",
+   "text": "自由で反抗的なランドゥー家の長女。かつてのカカリアの親友で、今は趣味を楽しむ機械工。<br />常冬のベロブルグで「パーペチュアル」というからくり工房を経営しているが、時々休業してはロックミュージックの野外ライブを開催している。<br />からくり工房はどうやって儲けているんだと人に問われると…彼女は「これは趣味だよ。私、お金には困ってないからさ」と答えた。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "ストーリー・1",
+   "text": "彼女こそ、ベロブルグで最も天才的な機械工にしてロックスター、そしてシルバーメイン戍衛官であるジェパード・ランドゥーの姉である……<br /><br />「ストップ。前半はいいけど、後半のセリフは削除してくれる？」<br />「そんな簡単に私の身分を要約しないでほしいんだ。私、セーバル・ランドゥーは、誰の付属品でもないんだから」<br /><br />「…えっ、もう何もないって？わかった、じゃあ私が自分で補足する。何か壊れた時は——行政区のからくり工房『パーペチュアル』に来るといい。いつでも大歓迎だ！」<br />「なに？ロックが聴きたい？はは、それならもっと歓迎する——そういう時も『パーペチュアル』に来て、『機械ブーム』と一緒にこの都市をロックにしよう！」",
+   "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・2",
+   "text": "セーバル・ランドゥーはベロブルグ行政区の中心部にある——からくり工房『パーペチュアル』——という建物で、名目上は機械の修理をして生計を立てている。<br /><br />しかし正確に言うと、この天才機械工の勤務時間は、ほとんど各種楽器の修理や改造に充てられている……<br /><br />「ちょっと、雑誌に書いてあることを鵜呑みにするんじゃない！私は真面目に仕事をしてるんだって……」<br />「小さいのは地髄暖房から大きいのは車のエンジン、さらにはシルバーメイン製の自動機兵まで、大抵のものは修理できる。それから、よくある機械の修理や改修だけじゃなくて、それに新機能を追加するサービスも提供してるんだ」<br />「例えば、除雪機に外付けドリルを追加したり、トースターに弾道計算装置を追加したり…とかね」<br /><br />「は？商売の調子は？って、どういう意味？あんまり詮索しないでほしいな——私はお腹を満たせて音楽ができればそれでいいんだ」<br />「そもそもお金を稼ぐつもりはないしね…人生は短い、時間があるなら趣味に費やしたほうがいい」",
+   "unlockRequirement": "キャラLv.<nobr>40</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・3",
+   "text": "セーバルが再び趣味の音楽を取り戻せたのは、彼女がランドゥー家と完全に決別した後だった。<br /><br />そして、この有名なからくり工房は彼女が思う存分ロックを楽しむための拠点となった——度々苦情が寄せられているが、寒波前の前衛芸術は、流行を追う多くの若者に支持されているようだ……<br /><br />「本当に…参ったよ！この手の雑誌が『音楽評論家』って呼ぶ連中は、もっと的を得た意見を言えないもんなの？『度々苦情が』？『流行を追う多くの若者』？こんなの私もファンも納得しないから！」<br />「まあ、『機械ブーム』が若い子たちに人気なのは事実だけど——あの年頃の子たちは情熱に満ち溢れてるか、才能があるのに機会に恵まれてないかのどっちかだからね……」<br />「どういう感情だったとしても、たまには発散する場が必要だ。そこで、私の『ロック』が最適だったってわけ！」<br /><br />「…あの頃の私みたいにね」<br />「いや、何でもない！気にしないで、ちょっと昔のことを思い出しただけだから……」",
+   "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・4",
+   "text": "かつては誰もが知っていた。セーバル・ランドゥーこそ、シルバーメインで最も優秀な頭脳の持ち主であるということを——ランドゥー家の天才令嬢に関する噂の8割は、このことに関連している。<br /><br />しかし、数年前のある日、その噂はたちまち新しい噂に取って代わられた。大守護者と親しくしていたはずの彼女が、なぜ何の前触れもなく軍から追い出されたのか？セーバルは大守護者のことを恨んでいるのだろうか？人々は様々な憶測を巡らせた。<br /><br />「最初の質問に対する答えは簡単だ——ノーコメント。シルバーメインの最高機密に関わることだから、理解して」<br />「2つ目の質問に関しては……」<br /><br />「私は…ちっとも気にしてない。考えてもみなよ、今みたいに悠々自適な生活を送れることよりいいことなんてある？むしろ、こうなるように手を貸してくれたあの女に——感謝しないとね！」<br />「こんな世の中なんだから、楽しめるうちに楽しまないと…損でしょ」<br /><br />「終末が決まってるのに、本当の楽しみなんてあるのかって思うけどね」",
+   "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
+  }
+ ],
+ "archive": {
+  "cvCn": "穆雪婷",
+  "cvJp": "愛美",
+  "cvKr": "민아",
+  "cvEn": "Natalie Van Sistine",
+  "camp": "ベロブルグ"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "serval"
+}

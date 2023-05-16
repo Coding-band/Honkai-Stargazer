@@ -1,0 +1,2403 @@
+{
+ "name": "三月なのか",
+ "spRequirement": 120,
+ "rarity": 4,
+ "descHash": "かつて恒氷の中で眠っていた少女。すべての記憶を失っている。 本当の自分を見つけるために、列車に乗って旅をすることを決めた。 約<nobr>67</nobr>種の「身の上話」を用意しているらしい。",
+ "iconPath": "5792f07862d451fa3e15d3656f705d3dcf66e0bd24ceaaf286603c1c82933796",
+ "bgPath": "df7bc20d3cae115730132c84b25f3156b1543ec1c63937f3db1d2be2069a31b5",
+ "figPath": "1d3d7a02929d0282079c45f6a03c614dd06509c9d71ac4aea583d982f2d4a7e0",
+ "fgPath": "08f39d51903b6501be3f75ac20cf1056cbbe441519a29e1123cd92905edd9497",
+ "artPath": "ec380815c0bf9adf977a54790d5067ebb74910cb498f3e4e2a50ae1bc5946134",
+ "miniIconPath": "ffcd4f65588b0d7103a41e71f375a404f57597e6fecec282b79f167c70ecccf5",
+ "splashIconPath": "845a9c92bf8f04c56203cf1c5ef52064bf733aaba749e5f43634cd35c9991dca",
+ "damageType": {
+  "id": 4,
+  "iconPath": "3a4e72fd1d4a41926980ab22b12c81cde3147050577efcfdac462e0f60271b9f",
+  "color": "#47C7FD",
+  "name": "氷",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "129eb76a6f0c9be69f8c2263f5e53030909c36d7e4de7a0571dd5665ac645b33",
+  "altIconPath": "9d034d41c43efff65e81e11d6215e3ce43eb0a2e32036648f707751a8d0a15b6",
+  "color": "#FFFFFF",
+  "name": "存護",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 6,
+  "iconPath": "7ffdd2cf6f7c119724e700bbf531b0ff62f3f1e2c32159e1a1f2bc6c77416163",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬"
+   ]
+  },
+  "67219": {
+   "id": 67219,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "03a85f3ccfcb36eb4e371d602e552113e1ada82e6ca848ca9d4f2761f6991e5e",
+   "name": "吹雪の角",
+   "desc": "冷寒徘徊者の角。氷属性キャラクターの昇格素材。",
+   "lore": "シルバーメインでは時折、勝負が行われることがある——制限時間内にモンスターの身体の一部を持ち帰るのだ。この冷たい角も、いつかの勝負の戦利品なのだろう。<br /><br />「ボアール大臣、これは雪鹿の角ではありません。地髄暖炉の上に飾るには不向きです」",
+   "purpose": "キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/67219",
+   "comeFrom": [
+    "凝滞虚影「残響回廊」",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "運命の足跡",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "幾度の敗北があなたに勝利をもたらし、一歩一歩の前進があなたを運命の転換点へと導いた。",
+   "purpose": "軌跡素材",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」ポイント報酬",
+    "ナナシの勲功",
+    "エンバー交換",
+    "期間限定イベント報酬"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "漫遊指南",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>20000</nobr>獲得できる。",
+   "lore": "世界を渡り歩くためには欠かせない、冒険手引き集。閲覧キーを押すと、電子音声が理解可能な言語で、有名な冒険者たちが様々な世界で体験したことや、彼らが色々な星で得た貴重な知識を語り聞かせてくれる。<br /><br />「漫遊指南最新シリーズ『スペースグルメガイド』が現在発売中。ぜひお買い求めください」<br />「投稿の際は、博識学会共感覚ビーコンのオペレーター<nobr>23</nobr>θにお繋ぎください。原稿料はあなたが普段から利用している方法でお振込みいたします」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "「忘却の庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "冒険記録",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>5000</nobr>獲得できる。",
+   "lore": "綺麗に装丁された、一目でためになるとわかる冒険日誌。冒険に関する細かい描写、価値のある情報、サバイバル術が書かれている。<br /><br />「なんで数字化してデバイスに保存しないの？持ち歩きやすくなるでしょ」<br />「お前が思っているより、先進技術は恒星嵐や中性子噴出に弱いんだ。なにより、この本の制作者は、最も簡単な方法で人々に読んでもらいたかったんだろう」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "デイリー訓練"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "旅の見聞",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>1000</nobr>獲得できる。",
+   "lore": "旅の出来事を記した日記。字はかすれており、不鮮明。思うままに内容が書かれてあるので、あまり助けにはならないだろう。<br /><br />「読み終わったら早くその紙切れを捨てるのよ、丹恒？」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "依頼報酬"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5930a427c19aedca23d55eb6ef670cc8ecf07466630281586f32f4d5e8d49409",
+   "name": "略奪の本能",
+   "desc": "微弱な反物質、強化に必要な簡易素材。",
+   "lore": "ヴォイドレンジャー・略奪の体内から散逸する微弱な反物質、まるで破壊本能の具現化。<br /><br />「彼らは湮滅の刻を待ち望み、世界と共に鍛錬され、一体化しようとしている」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "ヴォイドレンジャー・略奪などの敵がドロップ「収容部分」",
+    "ヴォイドレンジャー・略奪などの敵がドロップ「サポート部分」",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "69d0630f4dc8d8bb4706a8a973f720ce46452e189a62c7b8b6f2ca8d567ca8ae",
+   "name": "改ざんの野心",
+   "desc": "希薄な反物質、強化に必要な普通素材。",
+   "lore": "ヴォイドレンジャー・改ざんの周辺に浮かぶ希薄な反物質、粒子と反粒子がここで危険な均衡を成す。<br /><br />「彼らは湮滅の刻を待ち望み、世界と共に鍛錬され、一体化しようとしている」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "ヴォイドレンジャー・略奪などの敵がドロップ「収容部分」（均衡Lv.2以上）",
+    "ヴォイドレンジャー・略奪などの敵がドロップ「サポート部分」（均衡Lv.2以上）",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "635668": {
+   "id": 635668,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "751785c1795d0c216b39deec5fa263ee8119f6295a1582c75e5f4a958a17a385",
+   "name": "青銅の執着",
+   "desc": "青銅で造られた古い手盾。作りは粗いが実用性が高い。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">存護</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "言い伝えによれば、太古に戦乱あり。人々はあらゆる原始的な手段を尽くし、神の下で無敵の獣に立ち向かったという。<br />この盾が、その戦いの見証者。<br /><br />「抵抗に意味はなくても、抵抗を諦めることはない」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/635668",
+   "comeFrom": [
+    "疑似花萼「サポート部分」"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ea7f9727e8ba2c2039043d319ab4aa087ca6dbf08ec08876b1418d42c0f8a670",
+   "name": "踏みにじる意志",
+   "desc": "凝縮された反物質、強化に必要な高級素材。",
+   "lore": "ヴォイドレンジャー・蹂躙の体内で高度に凝縮された反物質、湮滅の刻が文明の壊滅を告げる。<br /><br />「彼らは湮滅の刻を待ち望み、世界と共に鍛錬され、一体化しようとしている」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "ヴォイドレンジャー・略奪などの敵がドロップ「収容部分」（均衡Lv.4以上）",
+    "ヴォイドレンジャー・略奪などの敵がドロップ「サポート部分」（均衡Lv.4以上）",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "836254": {
+   "id": 836254,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1313f4b8549d0b129fb33fcd3745a87a8030d13fc8c28159f0dd2868a203ac2f",
+   "name": "琥珀の堅守",
+   "desc": "奇異な大盾。天空の遥か彼方で採掘した琥珀が散りばめられいる。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">存護</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "この盾を持っている者は、まるで見えない壁に守られているようである。例え火の矢であろうと、山の如き巨大な爪であろうと、その持ち主を傷付けられない。<br />言い伝えによれば、太古に戦乱あり。青銅の盾を携えた集落の英雄と、灼熱の槍を握りしめた戦士が肩を並べ、古獣に向かって決死の突撃を行った。<br />この盾が、その戦いの見証者。<br /><br />「限界を超えるな」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/836254",
+   "comeFrom": [
+    "疑似花萼「サポート部分」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  },
+  "920195": {
+   "id": 920195,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "40bec463d92cede13fc22b7ac618c83f9d27e06e1a8c95a37d32cedc83fffe17",
+   "name": "寒鉄の誓い",
+   "desc": "未知の合金で造られた盾。その複雑な作りは、再現が困難である。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">存護</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "決して小さくはないのに、軽々と振り回すことができ、攻撃を受けても表面には傷一つ残らない。<br />言い伝えによれば、太古に戦乱あり。戦士たちは灼熱の光線を放つ槍と、寒鉄で造られた盾を手に持ち、陥落する運命にある国を守った。<br />この盾が、その戦いの見証者。<br /><br />「『城下に敵兵来たり！城下に敵兵来たり！』、戦士たちの勇ましい声が聞こえる」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/920195",
+   "comeFrom": [
+    "疑似花萼「サポート部分」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "91205616cca581bc299d91a1af94a91981d58328675779f8e66ccbaf679e5e94",
+   "name": "壊滅者の末路",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "古獣の身躯は既に滅びたが、匣の中には未だ死滅していない意志が閉じ込められている。だが、この匣を開く者がいなければ、その意志は存在すると存在しないが重なり合った状態を保ち、壊滅のエンジンを動かし続ける。<br /><br />「終末獣。古獣の残片を礎に、幾万もの死者の恨みと悲しみを触媒として、戦争熔炉で鋳造した災い——壊滅の道を貫くと同時に、自身の消滅を渇望している」",
+   "purpose": "軌跡素材",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "歴戦余韻「サポート部分」"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549437,
+     "count": 4
+    }
+   ],
+   "attackBase": 69.6,
+   "attackAdd": 3.48,
+   "hpBase": 144,
+   "hpAdd": 7.2,
+   "defenseBase": 78,
+   "defenseAdd": 3.9,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 101,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549437,
+     "count": 8
+    }
+   ],
+   "attackBase": 97.44,
+   "attackAdd": 3.48,
+   "hpBase": 201.6,
+   "hpAdd": 7.2,
+   "defenseBase": 109.2,
+   "defenseAdd": 3.9,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 101,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633378,
+     "count": 5
+    },
+    {
+     "id": 67219,
+     "count": 2
+    }
+   ],
+   "attackBase": 125.28,
+   "attackAdd": 3.48,
+   "hpBase": 259.2,
+   "hpAdd": 7.2,
+   "defenseBase": 140.4,
+   "defenseAdd": 3.9,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 101,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633378,
+     "count": 8
+    },
+    {
+     "id": 67219,
+     "count": 5
+    }
+   ],
+   "attackBase": 153.12,
+   "attackAdd": 3.48,
+   "hpBase": 316.8,
+   "hpAdd": 7.2,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.9,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 101,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717319,
+     "count": 5
+    },
+    {
+     "id": 67219,
+     "count": 15
+    }
+   ],
+   "attackBase": 180.96,
+   "attackAdd": 3.48,
+   "hpBase": 374.4,
+   "hpAdd": 7.2,
+   "defenseBase": 202.8,
+   "defenseAdd": 3.9,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 101,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717319,
+     "count": 7
+    },
+    {
+     "id": 67219,
+     "count": 28
+    }
+   ],
+   "attackBase": 208.8,
+   "attackAdd": 3.48,
+   "hpBase": 432,
+   "hpAdd": 7.2,
+   "defenseBase": 234,
+   "defenseAdd": 3.9,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 101,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 236.64,
+   "attackAdd": 3.48,
+   "hpBase": 489.6,
+   "hpAdd": 7.2,
+   "defenseBase": 265.2,
+   "defenseAdd": 3.9,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 101,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "c70face58fd3f2ae2779d8af9ae759758a1bd7a982c52693264aa5dffbf08ee0",
+   "name": "記憶の中の君",
+   "descHash": "必殺技が敵1体を凍結状態にするたび、三月なのかはEPを<nobr>#1[i]</nobr>回復する。",
+   "params": [
+    6
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "6e385aa57c492ea4cc1ed22751309ead70897e1c3ea76cdb86652e4c0cc8f60f",
+   "name": "記憶の中のあの子",
+   "descHash": "戦闘に入る時、残りHP割合が最も低い味方に、三月なのかの防御力<nobr>#1[i]%</nobr>+<nobr>#3[i]</nobr>の耐久値を持つバリアを付与する、<nobr>#2[i]</nobr>ターン継続。",
+   "params": [
+    0.24,
+    3,
+    320
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "12cca20745cad27c6c1be1254c1e9b5df9b8d1e6221213dbd0b94531cc4f255c",
+   "name": "記憶の中の全て",
+   "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "fcd40d1998b7c6923e3f29eaa1d13a81c1f9e7a95c34d7bfc6d33b241c160233",
+   "name": "もう失いたくない",
+   "descHash": "ターンが回ってくるたび、天賦のカウンター効果を発動できる回数+1。カウンターのダメージ基礎値が、三月なのかの防御力<nobr>#1[i]%</nobr>分アップする。",
+   "params": [
+    0.3
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "8470357ff181928ab8bbd993d5bcc8ae1bf2fc7dbf5c5f793dd5bd4cf5c4faf8",
+   "name": "もう忘れたくない",
+   "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "e7dfe98b1d989f2e959ce3c30f2734766b0311ede109bd2c9df99e8b90ad6c21",
+   "name": "このまま、ずっと…",
+   "descHash": "戦闘スキルによるバリアで守られている味方は、ターンが回ってくるたびにHPをそれぞれの最大HP<nobr>#1[i]%</nobr>+<nobr>#2[i]</nobr>回復する。",
+   "params": [
+    0.04,
+    106
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   441021
+  ],
+  [
+   524962
+  ],
+  [
+   641607
+  ],
+  [
+   955908
+  ],
+  [
+   240435
+  ]
+ ],
+ "skills": [
+  {
+   "id": 441021,
+   "name": "極寒の弓矢",
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体に三月なのかの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与える。",
+   "typeDescHash": "通常攻撃",
+   "iconPath": "8fe5541f66620cc2a7de7c13ce4aa58f18a4c85547045ee8785fba4b756133f1",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635668,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920195,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920195,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836254,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836254,
+       "count": 6
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 524962,
+   "name": "可愛いは正義",
+   "tagHash": "防御",
+   "descHash": "指定した味方単体に三月なのかの防御力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>+<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]</nobr></span>の耐久値を持つバリアを与える、<nobr>#2[i]</nobr>ターン継続。<br />その味方の残りHPが<nobr>#3[i]%</nobr>以上の場合、敵に攻撃される確率が大幅にアップする。",
+   "typeDescHash": "戦闘スキル",
+   "iconPath": "595548f37abc0f33d03758e454093797af09c7af383810d4f7f484cd82212349",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.38,
+      3,
+      0.3,
+      190,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.40375,
+      3,
+      0.3,
+      304,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.4275,
+      3,
+      0.3,
+      389.5,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635668,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.45125,
+      3,
+      0.3,
+      475,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920195,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.475,
+      3,
+      0.3,
+      532,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920195,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.494,
+      3,
+      0.3,
+      589,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920195,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.513,
+      3,
+      0.3,
+      631.75,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836254,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.532,
+      3,
+      0.3,
+      674.5,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836254,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.551,
+      3,
+      0.3,
+      717.25,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836254,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.57,
+      3,
+      0.3,
+      760,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836254,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.589,
+      3,
+      0.3,
+      802.75,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.608,
+      3,
+      0.3,
+      845.5,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.627,
+      3,
+      0.3,
+      888.25,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.646,
+      3,
+      0.3,
+      931,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.665,
+      3,
+      0.3,
+      973.75,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 641607,
+   "name": "氷刻矢雨の時",
+   "tagHash": "全体攻撃",
+   "descHash": "敵全体に三月なのかの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与える。攻撃を受けた敵は<nobr>#2[i]%</nobr>の<u>基礎確率</u>で凍結状態になる、<nobr>#3[i]</nobr>ターン継続。<br />凍結状態の敵は行動できなくなり、ターンが回ってくるたびに三月なのかの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性<u>付加ダメージ</u>を受ける。",
+   "typeDescHash": "必殺技",
+   "iconPath": "55ade179edd68bf9776032c65e4347fc240c5fb0a3f4f3a83f3eb8a7a4a19595",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.9,
+      0.5,
+      1,
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.96,
+      0.5,
+      1,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.02,
+      0.5,
+      1,
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635668,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.08,
+      0.5,
+      1,
+      0.39
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920195,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.14,
+      0.5,
+      1,
+      0.42
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920195,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.2,
+      0.5,
+      1,
+      0.45
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920195,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.275,
+      0.5,
+      1,
+      0.4875
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836254,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.35,
+      0.5,
+      1,
+      0.525
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836254,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.425,
+      0.5,
+      1,
+      0.5625
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836254,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.5,
+      0.5,
+      1,
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836254,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.56,
+      0.5,
+      1,
+      0.63
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.62,
+      0.5,
+      1,
+      0.66
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.68,
+      0.5,
+      1,
+      0.69
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.74,
+      0.5,
+      1,
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.8,
+      0.5,
+      1,
+      0.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  },
+  {
+   "id": 955908,
+   "name": "少女の特権",
+   "tagHash": "単体攻撃",
+   "descHash": "バリアを持つ味方が敵に攻撃された後、三月なのかは攻撃者に<u>カウンター</u>を発動し、三月なのかの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与える。この効果はターンが回ってくるたびに<nobr>#2[i]</nobr>回発動できる。",
+   "typeDescHash": "天賦",
+   "iconPath": "051c25b170f8af3095b6020ea30ad6ecb24527ba9d052c5cf6b70849683dde24",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.55,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.6,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635668,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.65,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920195,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.7,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920195,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.75,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920195,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.8125,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836254,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.875,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836254,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.9375,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836254,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836254,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.05,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.1,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.15,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.2,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.25,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 156494,
+   "name": "攻撃",
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
+   "typeDescHash": "",
+   "iconPath": "8fe5541f66620cc2a7de7c13ce4aa58f18a4c85547045ee8785fba4b756133f1",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 240435,
+   "name": "凍る瞬間",
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、<nobr>#1[i]%</nobr>の<u>基礎確率</u>でランダムな敵単体を凍結状態にする、<nobr>#2[i]</nobr>ターン継続。<br />凍結状態の敵は行動できなくなり、ターンが回ってくるたびに三月なのかの攻撃力<nobr>#3[i]%</nobr>分の<span style=\"color:#47C7FD;\">氷</span>属性<u>付加ダメージ</u>を受ける。",
+   "typeDescHash": "秘技",
+   "iconPath": "6218868e0d00bcb80a71ac17033f87d96af71755afd85dd7007b9d92df7d458e",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1,
+      1,
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1001103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1001208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1001209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 877747,
+        "name": "ダメージ強化・氷",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#47C7FD;\">氷</span>属性与ダメージ",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836254,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1001210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 961679,
+        "name": "防御強化",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+        "statusList": [
+         {
+          "key": "防御力",
+          "value": 0.1
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836254,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 877746,
+      "name": "ダメージ強化・氷",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#47C7FD;\">氷</span>属性与ダメージ",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836254,
+        "count": 6
+       },
+       {
+        "id": 717319,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 877642,
+    "name": "氷呪",
+    "descHash": "必殺技を発動した時、敵を凍結状態にする基礎確率+<nobr>#1[i]%</nobr>。",
+    "iconPath": "4f68b9672c134013190b556a1a98cc7bc5f133f469154126e2381624443393f3",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.15
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836254,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1001201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1001101,
+     "type": 1,
+     "children": [
+      {
+       "id": 1001202,
+       "type": 2,
+       "children": [
+        {
+         "id": 1001203,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 877737,
+          "name": "ダメージ強化・氷",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+          "statusList": [
+           {
+            "key": "<span style=\"color:#47C7FD;\">氷</span>属性与ダメージ",
+            "value": 0.032
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 920195,
+            "count": 2
+           },
+           {
+            "id": 633378,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 877736,
+        "name": "防御強化",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+        "statusList": [
+         {
+          "key": "防御力",
+          "value": 0.05
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 4000
+         },
+         {
+          "id": 635668,
+          "count": 2
+         },
+         {
+          "id": 549437,
+          "count": 4
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "id": 877640,
+      "name": "純潔",
+      "descHash": "戦闘スキルを発動した時、指定した味方単体のデバフを1つ解除する。",
+      "iconPath": "1259a1d60430b175f8053cf0998bfa4da258d88048a4a7433ba2f50b7472ae52",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "levelData": [
+       {
+        "level": 1,
+        "params": [],
+        "levelReq": 0,
+        "promotionReq": 2,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 4000
+         },
+         {
+          "id": 635668,
+          "count": 2
+         },
+         {
+          "id": 985668,
+          "count": 1
+         }
+        ]
+       }
+      ],
+      "ultimateCost": 0
+     }
+    },
+    {
+     "id": 1001102,
+     "type": 1,
+     "children": [
+      {
+       "id": 1001205,
+       "type": 2,
+       "children": [
+        {
+         "id": 1001206,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 877732,
+          "name": "効果抵抗強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+          "statusList": [
+           {
+            "key": "効果抵抗",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 836254,
+            "count": 2
+           },
+           {
+            "id": 717319,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 877735,
+        "name": "ダメージ強化・氷",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#47C7FD;\">氷</span>属性与ダメージ",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 16000
+         },
+         {
+          "id": 920195,
+          "count": 4
+         },
+         {
+          "id": 633378,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "id": 877643,
+      "name": "加護",
+      "descHash": "戦闘スキルで付与したバリアの継続時間+<nobr>#1[i]</nobr>ターン。",
+      "iconPath": "01fea7d5e30c789a502db09d89d71f788db21f2a2b1521232e9f0624551fea58",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "levelData": [
+       {
+        "level": 1,
+        "params": [
+         1
+        ],
+        "levelReq": 0,
+        "promotionReq": 4,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 16000
+         },
+         {
+          "id": 920195,
+          "count": 4
+         },
+         {
+          "id": 125435,
+          "count": 1
+         },
+         {
+          "id": 985668,
+          "count": 1
+         }
+        ]
+       }
+      ],
+      "ultimateCost": 0
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 877739,
+    "name": "ダメージ強化・氷",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+    "statusList": [
+     {
+      "key": "<span style=\"color:#47C7FD;\">氷</span>属性与ダメージ",
+      "value": 0.032
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549437,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1001204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 877734,
+    "name": "効果抵抗強化",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+    "statusList": [
+     {
+      "key": "効果抵抗",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 8000
+     },
+     {
+      "id": 920195,
+      "count": 2
+     },
+     {
+      "id": 633378,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1001207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 877733,
+    "name": "防御強化",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+    "statusList": [
+     {
+      "key": "防御力",
+      "value": 0.075
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 36000
+     },
+     {
+      "id": 836254,
+      "count": 2
+     },
+     {
+      "id": 717319,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "胴体",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "効果命中",
+    "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "防御力",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "次元界オーブ",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "防御力",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "連結縄",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "防御力",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初対面",
+   "text": "初めまして、開拓者。ようこそ星穹列車へ！私は三月なのか。列車の乗員で、君の同僚でもあります。それでは、最初に乗員証の写真を撮らせてくださいね…なんちゃって。冗談だよ、びっくりした～？",
+   "unlockRequirement": "",
+   "cnUrl": "4698d36d76d55783520f73d915408cbeae132336a9dc63846456b71cff74bd67",
+   "jpUrl": "dfb14332545b6f4015cf72e2483d7dbad714cbf8e2adb16fd1c1b633d7e9395d",
+   "enUrl": "04c606c3cb544d0b89900e8433021022ff2aa6d1d91d65c793d00f70e34e045e",
+   "krUrl": "0817918ce6fdb79097f9bfc1456bf100c1c82351e8f43d1f00fc0b40840bf5c7"
+  },
+  {
+   "id": 2,
+   "title": "挨拶",
+   "text": "あ、いいところに来た！今日はまだ、一緒に写真撮ってないよね？",
+   "unlockRequirement": "",
+   "cnUrl": "753c24836b8fa4812217504f5758726ee07a05bc2c32361b9e30dfecbc594f3b",
+   "jpUrl": "0e061fb939bd2f6835d6a188d471254e5a007f2af871f41fe94d4f8a21701fa5",
+   "enUrl": "78ff7915a37ecdc01b168103268b168c675a0a510538e3726a903706648340a8",
+   "krUrl": "d7d152a1e536d2f3092275fa5b6af75194a1ae73709fc6fd1806a656cc5513f8"
+  },
+  {
+   "id": 3,
+   "title": "お別れ",
+   "text": "今日の写真の整理が終わったから、ウチはもう寝るね。アンタもゲームで夜更かししないように！",
+   "unlockRequirement": "",
+   "cnUrl": "fdf510be02fe477aca7cb66bc2904b467f6028d7738a828b3e92c4cd70ea9384",
+   "jpUrl": "fefe09652371c50b3e6e8d54f6b78f5d28ce2acb694aaa414dce5ef54e2d105e",
+   "enUrl": "0ca45a185dbf2fc9b96d1853eb69bb5a4b787eb7239fbb885b3a22ac70a0b06b",
+   "krUrl": "c319b9cdbd30a1745d2834d996e7cbd706aaa5d39efd863c954e520bbf637e75"
+  },
+  {
+   "id": 4,
+   "title": "自分について・名前",
+   "text": "この名前は自分でつけたんだよ～。みんな、ウチのことを三月ちゃんとかなのかって呼ぶけど…アンタは？なんて呼びたい？",
+   "unlockRequirement": "",
+   "cnUrl": "a4d2e46a5e17bf403063a52fc7f526caf5796f2df3c13fa6c588c6bd2443deab",
+   "jpUrl": "04bc926f1761d8c49b8c84cbaf0548f3b91c9bd0fd6d61a89bde0031ae1e4bfb",
+   "enUrl": "9cf788858282a24bd0a2d548895ae4f845b92e0ff96e55bda166e838c8394c2d",
+   "krUrl": "f8f986deb6465396a54330cc3ccee378c55285f3384848e8408996fd25d86ba2"
+  },
+  {
+   "id": 5,
+   "title": "自分について・過去",
+   "text": "ウチの過去は、もしかしたら昔にあるんじゃなくて、この先にあるのかもしれない。だからウチは進み続けるんだ。たとえ…いつか列車がなくなってもね。",
+   "unlockRequirement": "",
+   "cnUrl": "1b312442b1fa2c71d4c49ae7a8fa9974bd6e70f45a5bfceece4bdab947c80135",
+   "jpUrl": "bc81048c7dee5af8be5956702a373e841f6789129e07e9976165bda22921b6c4",
+   "enUrl": "e2a0fddb4dc018abe6078820cdf4579084080489e07f5d96252ab3f257a2bd56",
+   "krUrl": "cc3ae078874067ef6f0d2457a3df7eaf5975b6aec5864d31fe5a0c0db41748a2"
+  },
+  {
+   "id": 6,
+   "title": "雑談・ジュース",
+   "text": "ジュース…考えると喉が渇く、渇けば飲むしかない、飲むと…止まらなくなる……",
+   "unlockRequirement": "",
+   "cnUrl": "6ae18ece1297e1b94f6f54f509b4e9bc7023880f49f3711697facd61198190bb",
+   "jpUrl": "614e31e149552b3c1c4d687314812dadd9d3652584a7c3dc0bcebb70398b65cd",
+   "enUrl": "8c21eeb3edf893b3e7dde51321e1330215ea8a016a9bdbb7a939cf08dfb5a7ca",
+   "krUrl": "60946524708da8072e47e8dab82447405d1e48ff319ae7a95e397e518a510d61"
+  },
+  {
+   "id": 7,
+   "title": "雑談・写真",
+   "text": "確かに写真は現実じゃないけど、それがいっぱいあれば、ちょっとだけ現実に近づくよね？",
+   "unlockRequirement": "",
+   "cnUrl": "739109aeabec5169e2b05212f0e1ceb38ddee330be221376619f95bdb4e0fbaf",
+   "jpUrl": "f34df04cf2037263f3ba269a4c261f3ffa59d294b0b18910877182f0d950f476",
+   "enUrl": "5c7108428042518595ef28616940a751f37dc1d45698961057389b7c4d026d85",
+   "krUrl": "c2a3b0241165e9597037dc54dbcd38e5efd60c1df38199e312e71f3bb6b79405"
+  },
+  {
+   "id": 8,
+   "title": "趣味",
+   "text": "写真を撮ることと、日記を書くことだよ～",
+   "unlockRequirement": "",
+   "cnUrl": "f84cff29e08feb8c58c19265f63fcf34fd22252e015f59b44cefa89ed7d325ff",
+   "jpUrl": "b7b1398227a1239dbba2ed786624df37850e0fe9d908813875254d6a6b11d664",
+   "enUrl": "088832f44c8cd0a8a884c40043cec9b84f2ca12d56c9d755c23eca4ad78897f9",
+   "krUrl": "7f099d8e60d8a3263db3cd1e7422348ce39774c14d92fb42a3a6a024ac49e30f"
+  },
+  {
+   "id": 9,
+   "title": "悩み事",
+   "text": "お喋りする相手がいない時は、退屈で死にそうになるよ～。列車にいる時、姫子やヨウおじちゃん、パムは大体忙しそうにしてるから。丹恒は忙しくないけど、お喋りがあまり好きじゃないんだよね……",
+   "unlockRequirement": "",
+   "cnUrl": "41b6322b484d0a40f72d88f75c5e480d3a73dd2dd1de584f5de49843442332d1",
+   "jpUrl": "387f5c5b21e4193f2f486d7c5f2b35025af9565e78efbf821f9882094861b825",
+   "enUrl": "6b1792e63441263d6486c4c40c907d0ef745ab88fc100318490edc4fa88145ec",
+   "krUrl": "e37a40545101c0b4543437e040404cc9be4b276adb74ebbae7053c7652f90939"
+  },
+  {
+   "id": 10,
+   "title": "シェア",
+   "text": "アルバムの整理が終わってから車窓の外を見ると、見慣れた景色のはずなのに、それでもまた写真を撮っちゃうんだ…こうして列車に乗って、星を眺めることができるなんて、本当に幸せだよね～",
+   "unlockRequirement": "",
+   "cnUrl": "9c2fb13fda8551765c35f2335cbc4bce6132e5d9931f0195f452d05e7cff2ec3",
+   "jpUrl": "0abcced313bc1207e777b2bb55abda88f2b8d1d4d7e30006970baea6c7f9f9c9",
+   "enUrl": "b0423d590d8e260ce860eda4afbdb7fdfa8af5e4c0278a0fe86a317522ffd22d",
+   "krUrl": "ab713458aa454c12bd6074c440b9f32310c78198a174096ad634ab9ee86dbe44"
+  },
+  {
+   "id": 11,
+   "title": "見聞",
+   "text": "どんなに「暗黒」な料理でも、「開拓」の精神で向き合わないと！でも、真穴子のゼリー寄せと姫子の淹れたコーヒーだけは本当に不味いんだよね…",
+   "unlockRequirement": "",
+   "cnUrl": "9bc8222c3f0f01e98c1e5fb504f80d6202bfa7762c7fe8dd2f5366f0a5eb953f",
+   "jpUrl": "f449cac2ba8cd7bed257e6d7fcb342afea88ed34baddc6eb3826f7d5df20a388",
+   "enUrl": "f566b215f74610055667ad58ea78045bf520e497385261272b53235e053b524f",
+   "krUrl": "0fea2a662a4515a16714558f9ab016ae96ea5b9edd1a9c68101fdf3e4292c1b9"
+  },
+  {
+   "id": 12,
+   "title": "丹恒について",
+   "text": "丹恒は…ウチよりも前から列車に乗ってるんだけど、全然自分の昔の話をしないんだよね…アンタもチャンスがあったら、ウチの代わりに探ってみて。",
+   "unlockRequirement": "",
+   "cnUrl": "954aa73f516e93559752153c03208c64353e066abf2d30cd02cd12a4633cee69",
+   "jpUrl": "caa7da92f2fd4d7e83f62d12dbdea50c195f4e36d783e9d1fa5edebc123838a2",
+   "enUrl": "e7dff15abd1d2423dd06257480bb160a3f9a2b24ab014d7942fae721e6d2607d",
+   "krUrl": "a6f423db2fd102f32bcab483e314a8b4ca4a92b123ae6c3b9aca4f19d2fd4430"
+  },
+  {
+   "id": 13,
+   "title": "姫子について",
+   "text": "姫子は綺麗で、大人で、頼りになって、しかもすごく優雅で、列車のナビゲーターでもある…ウチも姫子みたいな大人になれるよね！でも、今のウチのこの感じも悪くないと思うんだ～",
+   "unlockRequirement": "",
+   "cnUrl": "0c334d2d643382c9fc91e6c038dce0761ff272c055767f09ad96391456997e15",
+   "jpUrl": "86aeaa68fe3b0cf1e9dd3be524725892fe12c12365cd4983c764e0ed93c7e7cf",
+   "enUrl": "717d03d48727203cb0c16c4b24fd3b74584e2c56297e14b09c4f722dfaa2ad48",
+   "krUrl": "689a0fff8195ffbda147c9e3f941f775928ad867eb58f9df4804a999a80a67b1"
+  },
+  {
+   "id": 14,
+   "title": "ヴェルトについて",
+   "text": "ヨウおじちゃんは昔、秘密組織のボスとして星を救ったり、先生をしたり、それからアニメの原画を描いてたりしたんだって！すごいよね、万能すぎてめちゃくちゃ宇宙人っぽい……",
+   "unlockRequirement": "",
+   "cnUrl": "4a1cee257a867e1841da6d043b792016a9d404cda71951b2eb360da57d4c424b",
+   "jpUrl": "b82ce770f98cf5436a5f91738846a981c505d65cd2b3286b8a94b2464297e105",
+   "enUrl": "f4b8c2f358daad6ecdb6d85fc61c314ec96c9c91eb43cef47f4e6600afa2b9db",
+   "krUrl": "8755e1e6d248255df8dd7a5cdca4e0aa0249b95ada808495f6850c9c92fe724e"
+  },
+  {
+   "id": 15,
+   "title": "パムについて",
+   "text": "車掌さんは最高だよ！",
+   "unlockRequirement": "",
+   "cnUrl": "6a31b6b52f51533e47ecf6bde9511a9c2987c46d05f4c7aa1b2f33c39d1daeeb",
+   "jpUrl": "7b7a4eff251be8c014aa3a0eb449a3a3be6dc3373afaed8a66476baf60451df6",
+   "enUrl": "e1cc17712db6fc0b0127574efca5a2a49ec17c9df2f7371770f8f1195b2eb3da",
+   "krUrl": "1ed98623038c568d0c836bb5ce2afbeae8297179d896266e6fc4a1b0a17c38f7"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "キャラクター詳細",
+   "text": "お茶目な少女。写真撮影など、この年頃の少女が興味を持つような物事すべてに「執着」するべきだと思っている。<br />漂流する恒氷の中から目覚め、自分に関する記憶をすべて失っていることに気付いた少女は、しばらく思い悩んだ後、生まれ変わった日を自分の名前にすることに決めた。<br />この日、三月なのかは「誕生」した。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "ストーリー・1",
+   "text": "なぜ三月なのかは写真を撮るのか？<br />「第一に、ウチみたいな女の子はこういうことが好きなはずだから」<br />「第二に、写真に撮ったものは忘れたりしないから」<br /><br />三月なのかが写真を撮る際に学んだことは？<br />「まず、暗黒料理は細部まで撮影すること！『撮ることは食べることと同じである。よく味わうべし』ってね」<br />「あと、自分が目を閉じて誰かを撮影すると、絶対に相手も目を閉じてるんだ！」<br /><br />なぜ三月なのかはカメラを肌身離さず持ち歩いているのか？<br />「次にウチを氷の中に閉じ込める時は、絶対カメラも一緒に入れてよね！」<br /><br />では、なぜ三月なのかはスマホを使って写真を撮らないのか？<br />「言われてみれば、なんでだろ——って、カメラのほうがそれっぽいからに決まってるじゃん！」",
+   "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・2",
+   "text": "能力は「六相氷」だが、三月なのかはそれは氷ではなく、ある種の凝固した結晶だと主張している。<br />「何度も言わせないでよね。あんなに綺麗な氷、見たことある？」<br /><br />戦闘時に使用している弓矢も「六相氷」で形成したものだが、彼女は弓矢を使うことに不満を持っている。<br />「だって、弓を使うエースなんて見たことある？」<br />「それに、ウチが作った矢でウチが作った盾を攻撃しても何も起きないじゃん！」<br /><br />そのため、以前は「斬星破宙・ビッググラスソード」という名の奥義の修行に励んでいたが、未だに成果は出ていない。<br />「三月ちゃん、名前からしてそれって大剣よね？」<br />「うん。でも、氷の像を落とした方が…効果があるかも」",
+   "unlockRequirement": "キャラLv.<nobr>40</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・3",
+   "text": "「車掌」のパム、「ナビゲーター」の姫子、「護衛」の丹恒、「なんでもできる」ヴェルトに対して、彼女は「勇者」を自称している。三月なのか本人でも列車での自分の役割を説明することはできない。<br />しかし彼女の一挙手一投足は、しばしば列車組の行動方針に影響を与えている。<br /><br />「三月ちゃんが転んだぞ……」<br />「三月、頭上の鉛鉱の玉に注意しろ」<br />「三月ちゃん、あっちの景色は撮った？」<br />「俺はなのかを信じている。あの子が不味いと言ったものは、本当に不味いからな」<br /><br />つまり三月なのかは周囲を不安にさせているのではなく、むしろ気にかけられているのだ。<br />もちろん、三月なのかはそんなことには気付かずに、開拓者にぴったりな列車の役割を全力で考えている。",
+   "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・4",
+   "text": "様々な兆候が示していても、ずっと宇宙を漂っていた三月なのかにとって、目覚めた時の状況は悪いものではなかった。<br />何しろたまたま通りかかった列車に乗ることができて、そこの乗客たちも親切そうだったのだから。<br />唯一の問題は、周りの状況はそれなりに理解できても、自分のことはまったくわからないということだった。<br /><br />「ウチは誰で、どこから来たんだろ……」<br /><br />三月なのかは鏡の中の自分を見つめ、姫子が用意してくれた服を試着しながら、何十通りもの自分の身の上を想像した。<br />しかし、どれが自分の過去で、どれが自分のような少女に相応しい過去なのか…三月なのかはわからなかった。<br />彼女に選べるのは今の自分だけであり、彼女が想いを馳せることができるのは、この先の未来だけである。<br />三月なのかは恐れを抱くと同時に、喜びも感じていた。",
+   "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
+  }
+ ],
+ "archive": {
+  "cvCn": "诺亚",
+  "cvJp": "小倉唯",
+  "cvKr": "정혜원",
+  "cvEn": "Skyler Davenport",
+  "camp": "星穹列車"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "mar7th"
+}

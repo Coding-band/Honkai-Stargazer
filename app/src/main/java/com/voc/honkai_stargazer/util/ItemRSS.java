@@ -1,3 +1,9 @@
+/*
+ * Project Honkai Stargazer (崩壞•星穹觀星者) was
+ * Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
+ * Copyright © 2023 Xectorda 版權所有
+ */
+
 package com.voc.honkai_stargazer.util;
 
 import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
@@ -13,7 +19,7 @@ import org.json.JSONObject;
 
 public class ItemRSS {
 
-    public static final String LANG_EN = "en";
+    public static final String LANG_EN = "en"; //DEFAULT CASE, now for beta test.
     public static final String LANG_ZH_HK = "zh_hk";
     public static final String LANG_ZH_CN = "zh_cn";
     public static final String LANG_RU = "ru";
@@ -180,7 +186,7 @@ public class ItemRSS {
             case "Passerby of Wandering Cloud" : return new int[] {R.drawable.passerby_of_wandering_cloud_1, R.drawable.passerby_of_wandering_cloud_2, R.drawable.passerby_of_wandering_cloud_3, R.drawable.passerby_of_wandering_cloud_4};
             case "Space Sealing Station" : return new int[] {R.drawable.space_sealing_station_5, R.drawable.space_sealing_station_6};
             case "Sprightly Vonwacq" : return new int[] {R.drawable.sprightly_vonwacq_5, R.drawable.sprightly_vonwacq_6};
-            case "Talia Kingdom of Banditry" : return new int[] {R.drawable.talia_kingdom_of_banditry_5, R.drawable.talia_kingdom_of_banditry_6};
+            case "Talia: Kingdom of Banditry" : return new int[] {R.drawable.talia_kingdom_of_banditry_5, R.drawable.talia_kingdom_of_banditry_6};
             case "Thief of Shooting Meteor" : return new int[] {R.drawable.thief_of_shooting_meteor_1, R.drawable.thief_of_shooting_meteor_2, R.drawable.thief_of_shooting_meteor_3, R.drawable.thief_of_shooting_meteor_4};
             case "Wastelander of Banditry Desert" : return new int[] {R.drawable.wastelander_of_banditry_desert_1, R.drawable.wastelander_of_banditry_desert_2, R.drawable.wastelander_of_banditry_desert_3, R.drawable.wastelander_of_banditry_desert_4};
 
@@ -235,6 +241,31 @@ public class ItemRSS {
             case PATH_NIHILITY: return R.drawable.path_the_nihility;
             case PATH_PRESERVATION: return R.drawable.path_the_preservation;
             default: return R.drawable.ico_lost_img;
+        }
+    }
+    public int getNameByElement(String element){
+        switch (element){
+            case ELEMENT_FIRE: return R.string.element_fire;
+            case ELEMENT_ICE: return R.string.element_ice;
+            case ELEMENT_IMAGINARY: return R.string.element_imaginary;
+            case ELEMENT_LIGHTNING: return R.string.element_lightning;
+            case ELEMENT_PHYSICAL: return R.string.element_physical;
+            case ELEMENT_QUANTUM: return R.string.element_quantum;
+            case ELEMENT_WIND: return R.string.element_wind;
+            default: return R.string.n_a;
+        }
+    }
+
+    public int getNameByPath(String path){
+        switch (path){
+            case PATH_ABSTRUCTION: return R.string.path_the_abundance;
+            case PATH_DESTRUCTION: return R.string.path_the_destruction;
+            case PATH_ERUDITION: return R.string.path_the_erudition;
+            case PATH_HARMONY: return R.string.path_the_harmony;
+            case PATH_HUNT: return R.string.path_the_hunt;
+            case PATH_NIHILITY: return R.string.path_the_nihility;
+            case PATH_PRESERVATION: return R.string.path_the_preservation;
+            default: return R.string.n_a;
         }
     }
 }

@@ -1,0 +1,2358 @@
+{
+ "name": "傑帕德",
+ "spRequirement": 100,
+ "rarity": 5,
+ "descHash": "銀鬃鐵衛的戍衛官，貝洛伯格數一數二的戰士。 表裡如一，一絲不苟，從不懈怠。",
+ "iconPath": "0696b2bfa4fa4763b3e71ddcb8b490aaae91958a512d1e596fad958e897a87b1",
+ "bgPath": "34112491e4e2f1753f3a9feff6358cd5f2e962c7db95a2ec37203d269fa39f68",
+ "figPath": "e1621b800d1d24167145dbd903cf2a06a6738e176945dedd106bf30ff302a8f8",
+ "fgPath": "8506127b2274a60fe0f8b8fe21965e0a91400c6a20e87c59d2b4a0d8ea36adfa",
+ "artPath": "c5bcfec01ce392f42654d5be48bfeceb4ba8b53eeee3e5c9263f3c53b00a9174",
+ "miniIconPath": "cff242d83528bc8051b118c1a90ec6a5d6f63091acfaf0e139e8ba0532715f6e",
+ "splashIconPath": "e07822c72adcb2a0a71907bbfe48f7da04a9e34eda152ecbf8ce6d8ec64e313f",
+ "damageType": {
+  "id": 4,
+  "iconPath": "3a4e72fd1d4a41926980ab22b12c81cde3147050577efcfdac462e0f60271b9f",
+  "color": "#47C7FD",
+  "name": "冰",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "129eb76a6f0c9be69f8c2263f5e53030909c36d7e4de7a0571dd5665ac645b33",
+  "altIconPath": "9d034d41c43efff65e81e11d6215e3ce43eb0a2e32036648f707751a8d0a15b6",
+  "color": "#FFFFFF",
+  "name": "存護",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 6,
+  "iconPath": "7ffdd2cf6f7c119724e700bbf531b0ff62f3f1e2c32159e1a1f2bc6c77416163",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用點",
+   "desc": "星際和平公司與客戶結算時使用的貨幣，如今已成為太空旅行的硬通貨。",
+   "lore": "「人們奔波、爭鬥、貿易，為的不過是個終端裡顯示的數字。但真正珍貴之物，公司的數字是買不到的。」",
+   "purpose": "通用貨幣",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "任務獎勵",
+    "委託獎勵"
+   ]
+  },
+  "67219": {
+   "id": 67219,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "03a85f3ccfcb36eb4e371d602e552113e1ada82e6ca848ca9d4f2761f6991e5e",
+   "name": "風雪之角",
+   "desc": "深寒徘徊者斷折的角，冰屬性角色的晉升素材。",
+   "lore": "銀鬃鐵衛間偶爾會進行一場比鬥——在規定時間內帶回怪物殘軀的一部分。這支冰冷的斷角想必就是某場比試的戰利品。<br /><br />「波瓦大臣，這不是雪鹿角，它也不適合掛在地髓壁爐的上邊。」",
+   "purpose": "角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/67219",
+   "comeFrom": [
+    "凝滯虛影【殘響迴廊】",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "命運的足跡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "一次又一次的敗北成就了你的勝利，一步又一步的前進讓你抵達了命運的拐點。",
+   "purpose": "行跡材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」積分獎勵",
+    "無名勳禮",
+    "餘燼兌換",
+    "限時活動獎勵"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "守護者的悲願",
+   "desc": "行跡升級的高階素材。",
+   "lore": "與這副面甲一同破碎的，還有一位守護者扭曲的願望。<br />她渴望在永冬末日中為子民開闢前路，卻最終淪為了更恢巨集的意志所操縱的傀儡。<br /><br />「大守護者，貝洛伯格統治者世代傳承的頭銜，看顧所有子民的人——人們並不知道，她們無人看顧，無人守護。」",
+   "purpose": "行跡材料",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "歷戰餘響【永冬嶺】"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "漫遊指南",
+   "desc": "角色的經驗材料，可以獲得<nobr>20000</nobr>點角色經驗。",
+   "lore": "跨越諸界必備的冒險叢書。按下閱讀鍵，充滿磁性的聲音將以你能聽懂的語言講述知名冒險家們在不同世界間的傳奇經歷，以及他們在各個星球上獲得的珍貴智慧。<br /><br />「漫遊指南全新書系《星際美食烹飪導覽》開售在即，敬請支援。」<br />「投稿請接入博識學會聯覺信標<nobr>23</nobr>θ聯絡員，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色經驗材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "「忘卻之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "冒險記錄",
+   "desc": "角色的經驗材料，可以獲得<nobr>5000</nobr>點角色經驗。",
+   "lore": "裝訂嚴整，一看就頗有教育意義的冒險札記。圖文並茂地描述了冒險行動的始末、有價值的資訊和生存相關的技巧。<br /><br />「幹嘛不資料化放進光刻片裡？便攜多了。」<br />「面對恆星風暴和中子流噴發時，高科技比你想象的還要脆弱。何況，製作這本書的人一定希望人們用最簡單的方式閱讀它。」",
+   "purpose": "角色經驗材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "每日實訓"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "旅情見聞",
+   "desc": "角色的經驗材料，可以獲得<nobr>1000</nobr>點角色經驗。",
+   "lore": "記錄旅途見聞的日誌，字跡漫漶不清，內容隨心所欲，對你並沒有太大的幫助。<br /><br />「看完了就趕緊把這堆廢紙處理掉吧，丹恆？」",
+   "purpose": "角色經驗材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "委託獎勵"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "2901efa774991b0ce2037520ce85ff99af64f37ee6364ffda560278736df6a19",
+   "name": "鐵衛扣飾",
+   "desc": "銀鬃鐵衛士兵佩戴的扣針徽章。強化所需的簡單材料。",
+   "lore": "風霜刮蝕下滿是磨痕。<br /><br />「在古老的年代，銀鬃鐵衛只有一種退休的形式：那就是死亡。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "銀鬃鐵衛等敵方掉落【城郊雪原】",
+    "永冬災影等敵方掉落【殘響迴廊】",
+    "「模擬宇宙」中敵方掉落",
+    "委託獎勵",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "042dc7973ef7c36858a4aa58ef7d32335f528b3c4bc4f0c4ce2e7f401039a7c5",
+   "name": "鐵衛軍徽",
+   "desc": "銀鬃鐵衛隊長佩戴的軍銜標誌。強化所需的普通材料。",
+   "lore": "也許是在家人面前誇耀的證明，也許是擋住子彈的幸運符。<br /><br />「時代變了。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "均衡等級2及以上銀鬃鐵衛等敵方掉落【城郊雪原】",
+    "均衡等級2及以上永冬災影等敵方掉落【殘響迴廊】",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "635668": {
+   "id": 635668,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "751785c1795d0c216b39deec5fa263ee8119f6295a1582c75e5f4a958a17a385",
+   "name": "青銅的執著",
+   "desc": "青銅錘成的古老手盾，工藝粗糙卻耐用。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">存護</span>角色的命途行跡。",
+   "lore": "傳說太古曾有戰爭浩劫，人們窮盡一切原始的手段，追隨神明對抗無可匹敵的獸。<br />這面盾牌便是那場戰爭的見證。<br /><br />「不可抵擋，我等仍盡力抵擋。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/635668",
+   "comeFrom": [
+    "擬造花萼【支援艙段】"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "name": "鐵衛勳章",
+   "desc": "功勳鐵衛佩戴的軍功章。強化所需的高階材料。",
+   "lore": "對抗裂隙魔物，地底人和突發災變後頒授的榮譽證明。<br />它往往不在獲勳者的胸膛上，而是擺在他的棺槨上。<br /><br />「它不是玩具，小杰。記好了：這是朗道家族的使命，是朗道家族的血。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "均衡等級4及以上銀鬃鐵衛等敵方掉落【城郊雪原】",
+    "均衡等級4及以上永冬災影等敵方掉落【殘響迴廊】",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "836254": {
+   "id": 836254,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1313f4b8549d0b129fb33fcd3745a87a8030d13fc8c28159f0dd2868a203ac2f",
+   "name": "琥珀的堅守",
+   "desc": "奇異的大盾，鑲飾著自天外鑿取的琥珀。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">存護</span>角色的命途行跡。",
+   "lore": "握持盾牌者彷彿被無形的牆垣所保護，無論是裝填烈焰的箭矢，還是山峰般巨大的利爪都無法損傷其身。<br />傳說在太古曾有戰爭浩劫，佩戴青銅盾牌的部落英雄，與手握熾熱槍戟的戰士們並肩而立，向古獸進行決死的衝鋒。<br />這面盾牌便是那場戰爭的見證。<br /><br />「萬勿逾界。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/836254",
+   "comeFrom": [
+    "擬造花萼【支援艙段】",
+    "「萬能合成機」- 材料合成"
+   ]
+  },
+  "920195": {
+   "id": 920195,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "40bec463d92cede13fc22b7ac618c83f9d27e06e1a8c95a37d32cedc83fffe17",
+   "name": "寒鐵的誓言",
+   "desc": "以未知合金鍛造而成的護盾，製作技藝難以復現。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">存護</span>角色的命途行跡。",
+   "lore": "雖然體積不小，揮舞起來卻輕若無物。遭受衝擊，盾面也不留絲毫痕跡。<br />傳說太古曾有戰爭浩劫，神采飛揚的戰士們手握髮出熾熱死線的槍戟與寒鐵鑄造的護盾，保衛註定陷落的國土。<br />這面盾牌便是那場戰爭的見證。<br /><br />「「兵臨城下」，雄渾之聲說著，「兵臨城下」。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/920195",
+   "comeFrom": [
+    "擬造花萼【支援艙段】",
+    "「萬能合成機」- 材料合成"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549407,
+     "count": 5
+    }
+   ],
+   "attackBase": 73.92,
+   "attackAdd": 3.696,
+   "hpBase": 190.08,
+   "hpAdd": 9.504,
+   "defenseBase": 89.1,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549407,
+     "count": 10
+    }
+   ],
+   "attackBase": 103.488,
+   "attackAdd": 3.696,
+   "hpBase": 266.112,
+   "hpAdd": 9.504,
+   "defenseBase": 124.74,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633348,
+     "count": 6
+    },
+    {
+     "id": 67219,
+     "count": 3
+    }
+   ],
+   "attackBase": 133.056,
+   "attackAdd": 3.696,
+   "hpBase": 342.144,
+   "hpAdd": 9.504,
+   "defenseBase": 160.38,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633348,
+     "count": 9
+    },
+    {
+     "id": 67219,
+     "count": 7
+    }
+   ],
+   "attackBase": 162.624,
+   "attackAdd": 3.696,
+   "hpBase": 418.176,
+   "hpAdd": 9.504,
+   "defenseBase": 196.02,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717289,
+     "count": 6
+    },
+    {
+     "id": 67219,
+     "count": 20
+    }
+   ],
+   "attackBase": 192.192,
+   "attackAdd": 3.696,
+   "hpBase": 494.208,
+   "hpAdd": 9.504,
+   "defenseBase": 231.66,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717289,
+     "count": 9
+    },
+    {
+     "id": 67219,
+     "count": 35
+    }
+   ],
+   "attackBase": 221.76,
+   "attackAdd": 3.696,
+   "hpBase": 570.24,
+   "hpAdd": 9.504,
+   "defenseBase": 267.3,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 251.328,
+   "attackAdd": 3.696,
+   "hpBase": 646.272,
+   "hpAdd": 9.504,
+   "defenseBase": 302.94,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "40ea7e986a0ba510073b959d4bffb40d9e888d3bce8018f15e35ce8c6c194c30",
+   "name": "恪盡職守",
+   "descHash": "施放戰技時，使受到攻擊的敵方目標陷入凍結狀態的基礎概率提高<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.35
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "56b9b0d55a492e92c8e7869e8c87bfda002669772b49f11dbe69f3b41f34da18",
+   "name": "餘寒",
+   "descHash": "戰技使敵方目標陷入的凍結狀態解除後，目標的速度降低<nobr>#1[i]%</nobr>，持續<nobr>#2[i]</nobr>回合。",
+   "params": [
+    0.2,
+    1
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "1b61fa938f72eac53422f79f17b50342e9e8c732e79b23af0027f7b0aacdc7ce",
+   "name": "永不陷落",
+   "descHash": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "2ac465e7f349b630aa2b0f442a0ab0e037ad2fbd51b519c65d83f278a8187c39",
+   "name": "精誠所至",
+   "descHash": "傑帕德在場時，我方全體的效果抵抗提高<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "ddb303335c81a925f1215123b30ef6a25bb787db4d88b7c90adcc3cad3bb9e61",
+   "name": "拳似寒鐵",
+   "descHash": "戰技等級+2，最多不超過<nobr>15</nobr>級；普攻等級+1，最多不超過<nobr>10</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "a6deb836531fc2a96fd05a74cece35d2c4399a497f4a5a71dc41172e36b41821",
+   "name": "不屈的決意",
+   "descHash": "觸發天賦時傑帕德行動提前<nobr>100%</nobr>，且當前生命值的回覆量額外增加自身生命上限的<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   866633
+  ],
+  [
+   983278
+  ],
+  [
+   67219
+  ],
+  [
+   151160
+  ],
+  [
+   468391
+  ]
+ ],
+ "skills": [
+  {
+   "id": 866633,
+   "name": "一意之拳",
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於傑帕德<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#47C7FD;\">冰</span>屬性傷害。",
+   "typeDescHash": "普攻",
+   "iconPath": "86f4ab2ddba799691718737ac0d50e86939c71341075dfedff87448a7d119138",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 983278,
+   "name": "震懾之擊",
+   "tagHash": "妨害",
+   "descHash": "對指定敵方單體造成等同於傑帕德<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#47C7FD;\">冰</span>屬性傷害，同時有<nobr>#2[i]%</nobr>的<u>基礎概率</u>使受到攻擊的敵方目標陷入凍結狀態，持續<nobr>#3[i]</nobr>回合。<br />凍結狀態下，敵方目標不能行動同時每回合開始時受到等同於傑帕德<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span>攻擊力的<span style=\"color:#47C7FD;\">冰</span>屬性<u>附加傷害</u>。",
+   "typeDescHash": "戰技",
+   "iconPath": "b019a13d800df94a29d24ea36e0e9ef56fa814ef42a45f2e5dd3b89dd4361797",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1,
+      0.65,
+      1,
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.1,
+      0.65,
+      1,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.2,
+      0.65,
+      1,
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.3,
+      0.65,
+      1,
+      0.39
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.4,
+      0.65,
+      1,
+      0.42
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.5,
+      0.65,
+      1,
+      0.45
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.625,
+      0.65,
+      1,
+      0.4875
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.75,
+      0.65,
+      1,
+      0.525
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.875,
+      0.65,
+      1,
+      0.5625
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      2,
+      0.65,
+      1,
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      2.1,
+      0.65,
+      1,
+      0.63
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      2.2,
+      0.65,
+      1,
+      0.66
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      2.3,
+      0.65,
+      1,
+      0.69
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      2.4,
+      0.65,
+      1,
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      2.5,
+      0.65,
+      1,
+      0.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 67219,
+   "name": "永屹之壁",
+   "tagHash": "防禦",
+   "descHash": "為我方全體提供能夠抵消等同於傑帕德<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>防禦力+<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#3[i]</nobr></span>傷害的護盾，持續<nobr>#2[i]</nobr>回合。",
+   "typeDescHash": "終結技",
+   "iconPath": "c1909a1a7b0f45d66ab7389d1a04384fa9353dc3ee107b5d928105020097ad41",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.3,
+      3,
+      150
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.31875,
+      3,
+      240
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.3375,
+      3,
+      307.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.35625,
+      3,
+      375
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.375,
+      3,
+      420
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.39,
+      3,
+      465
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.405,
+      3,
+      498.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.42,
+      3,
+      532.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.435,
+      3,
+      566.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.45,
+      3,
+      600
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.465,
+      3,
+      633.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.48,
+      3,
+      667.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.495,
+      3,
+      701.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.51,
+      3,
+      735
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.525,
+      3,
+      768.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 100
+  },
+  {
+   "id": 151160,
+   "name": "不屈之身",
+   "tagHash": "回覆",
+   "descHash": "受到致命攻擊時傑帕德不會陷入<u>無法戰鬥狀態</u>，並立即回覆等同於自身生命上限<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>的生命值。該效果單場戰鬥中只能觸發1次。",
+   "typeDescHash": "天賦",
+   "iconPath": "a40bef4869899186a858f02ef602213feabe267f01d5cd6792498e13b9e6c8f5",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.275
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.325
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.35
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.375
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.40625
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.4375
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.46875
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.525
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.55
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.575
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.625
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 351746,
+   "name": "攻擊",
+   "tagHash": "",
+   "descHash": "攻擊敵人，進入戰鬥後削弱敵方目標對應屬性韌性。",
+   "typeDescHash": "",
+   "iconPath": "86f4ab2ddba799691718737ac0d50e86939c71341075dfedff87448a7d119138",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 468391,
+   "name": "有情之證",
+   "tagHash": "防禦",
+   "descHash": "使用祕技後，下一次戰鬥開始時為我方全體提供能夠抵消等同於傑帕德<nobr>#1[i]%</nobr>防禦力+<nobr>#3[i]</nobr>傷害的護盾，持續<nobr>#2[i]</nobr>回合。",
+   "typeDescHash": "祕技",
+   "iconPath": "d077f03c4e71b12749241449629c3becef9b3912d3299ac7e9bfba016aa7c941",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.24,
+      2,
+      150
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1104103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1104208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1104209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 303359,
+        "name": "效果抵抗強化",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+        "statusList": [
+         {
+          "key": "效果抵抗",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836254,
+          "count": 8
+         },
+         {
+          "id": 717289,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1104210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 419995,
+        "name": "傷害強化•冰",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#47C7FD;\">冰</span>屬性傷害提高",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836254,
+          "count": 8
+         },
+         {
+          "id": 717289,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 303358,
+      "name": "防禦強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+      "statusList": [
+       {
+        "key": "防禦力",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836254,
+        "count": 8
+       },
+       {
+        "id": 717289,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 303254,
+    "name": "戰意",
+    "descHash": "傑帕德提高等同於自身當前防禦力<nobr>#1[i]%</nobr>的攻擊力，每回合開始時重新整理。",
+    "iconPath": "2cd5543062f2740d57c143b05ae1d991bd895f75edfd9eb2aeea50cb10fc8750",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.35
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836254,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1104201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1104101,
+     "type": 1,
+     "children": [
+      {
+       "id": 1104202,
+       "type": 2,
+       "children": [
+        {
+         "id": 1104203,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 303349,
+          "name": "傷害強化•冰",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+          "statusList": [
+           {
+            "key": "<span style=\"color:#47C7FD;\">冰</span>屬性傷害提高",
+            "value": 0.032
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920195,
+            "count": 3
+           },
+           {
+            "id": 633348,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 303348,
+        "name": "效果抵抗強化",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+        "statusList": [
+         {
+          "key": "效果抵抗",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 5000
+         },
+         {
+          "id": 635668,
+          "count": 3
+         },
+         {
+          "id": 549407,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "id": 303252,
+      "name": "剛正",
+      "descHash": "傑帕德被敵方攻擊的概率提高。",
+      "iconPath": "2868135c9d13bee8ad2a4e6fa72393cf4c2d8c69534c266dd60130610af518fe",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "levelData": [
+       {
+        "level": 1,
+        "params": [
+         3
+        ],
+        "levelReq": 0,
+        "promotionReq": 2,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 5000
+         },
+         {
+          "id": 635668,
+          "count": 3
+         },
+         {
+          "id": 270195,
+          "count": 1
+         }
+        ]
+       }
+      ],
+      "ultimateCost": 0
+     }
+    },
+    {
+     "id": 1104102,
+     "type": 1,
+     "children": [
+      {
+       "id": 1104205,
+       "type": 2,
+       "children": [
+        {
+         "id": 1104206,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 303344,
+          "name": "效果抵抗強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+          "statusList": [
+           {
+            "key": "效果抵抗",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836254,
+            "count": 3
+           },
+           {
+            "id": 717289,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 303347,
+        "name": "傷害強化•冰",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#47C7FD;\">冰</span>屬性傷害提高",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 20000
+         },
+         {
+          "id": 920195,
+          "count": 5
+         },
+         {
+          "id": 633348,
+          "count": 4
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "id": 303255,
+      "name": "統領",
+      "descHash": "【不屈之身】觸發後，傑帕德的能量立即恢復至<nobr>100%</nobr>。",
+      "iconPath": "6763442330252266961d0d23e21bed264bd719bc788945eeb145a9abfa167df4",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "levelData": [
+       {
+        "level": 1,
+        "params": [],
+        "levelReq": 0,
+        "promotionReq": 4,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 20000
+         },
+         {
+          "id": 920195,
+          "count": 5
+         },
+         {
+          "id": 125435,
+          "count": 1
+         },
+         {
+          "id": 270195,
+          "count": 1
+         }
+        ]
+       }
+      ],
+      "ultimateCost": 0
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 303351,
+    "name": "傷害強化•冰",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+    "statusList": [
+     {
+      "key": "<span style=\"color:#47C7FD;\">冰</span>屬性傷害提高",
+      "value": 0.032
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549407,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1104204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 303346,
+    "name": "防禦強化",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+    "statusList": [
+     {
+      "key": "防禦力",
+      "value": 0.05
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 10000
+     },
+     {
+      "id": 920195,
+      "count": 3
+     },
+     {
+      "id": 633348,
+      "count": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": 1104207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 303345,
+    "name": "傷害強化•冰",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+    "statusList": [
+     {
+      "key": "<span style=\"color:#47C7FD;\">冰</span>屬性傷害提高",
+      "value": 0.048
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 45000
+     },
+     {
+      "id": 836254,
+      "count": 3
+     },
+     {
+      "id": 717289,
+      "count": 3
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "軀幹",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "防禦力",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "腳部",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "防禦力",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "位面球",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "防禦力",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "連結繩",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "能量恢復效率",
+    "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初次見面",
+   "text": "我是貝洛伯格的銀鬃鐵衛戍衛官，傑帕德•朗道。如果你在城中發現任何異常，都可向我報告。",
+   "unlockRequirement": "",
+   "cnUrl": "72890afe2e60cec8a13be2c476db4a77ca06284e2fa56dee5440dca11f0dabf4",
+   "jpUrl": "05334b123d37ddd3fa32d0d49ef725043312feffe972acd129faac95a24cd9bf",
+   "enUrl": "690627c4f90e8c1be7d5f4c0ca7039fbe353abab94a2a110c2f57173cbe0f19c",
+   "krUrl": "bacff2e16eaadd6bcc5592239bd11a208030e9dcb3bd2c206ef4c52af293bd8f"
+  },
+  {
+   "id": 2,
+   "title": "問候",
+   "text": "你來了，我剛結束鍛鍊。",
+   "unlockRequirement": "",
+   "cnUrl": "687ea41f875942f6b7ddb63858397d17ed9b0fb4ca59f8a92476c60f2bb70f53",
+   "jpUrl": "4c04626530ca04489981c11ff82951143e83d2e0bb0ae3d2b075e33f3925d2e2",
+   "enUrl": "f769f01da9e8069af45575dad2485d9eca6ca8059a4dbc57f1e4ac6fcf76dba2",
+   "krUrl": "3a06076eecf664ca4f452419f9f2d34cf7255ba40e3efb48dc710c4843aeb172"
+  },
+  {
+   "id": 3,
+   "title": "道別",
+   "text": "抱歉，我還有任務在身，就在這目送你離開吧。",
+   "unlockRequirement": "",
+   "cnUrl": "8bd1b5476acd7820224c088c4b1d9cc2cd53554a860037dbfe70f2a6636c3937",
+   "jpUrl": "3590be049fccc2a24253ea0929964e9d670142fd7086f0239376dbcfab936c8e",
+   "enUrl": "176269ef8f56721f126b9a037f301fef2efa23fd9d7a1184339ff6cb228295ef",
+   "krUrl": "13dfbb072bf36c0a546fffeaaf04d26f9b0a872998be18c8be394d1dc5961304"
+  },
+  {
+   "id": 4,
+   "title": "關於自己",
+   "text": "身為銀鬃鐵衛，遵守誓言是因為相信我們不應違背，而不是因為害怕違背。",
+   "unlockRequirement": "",
+   "cnUrl": "3e7ee0366742917c10500e5c5c7618407c400a0a9d2b8c61c3e8b9c3b09f9a32",
+   "jpUrl": "0f28fb2baf29345728a29eac5e39d5708f7f69411a3c8c2da9645226c8233c28",
+   "enUrl": "d0fc506a7f81f46b34ba5f83cde262654ebdcb0cfc3139466cead3da2e249a09",
+   "krUrl": "d8f4860e173f7af060a72add20ebeeb556227a67f9cd5b1579ac536b59b1975f"
+  },
+  {
+   "id": 5,
+   "title": "閒談•貝洛伯格",
+   "text": "貝洛伯格並非隱於雪幕之中，而是作為這顆星球最後的堡壘抵禦著風雪的侵凌。",
+   "unlockRequirement": "",
+   "cnUrl": "a487738238bfb0d1f355618787aefc68241a975a45b229b7f1de9c37b7dc207a",
+   "jpUrl": "241c7166483bdd11a50b8fcd61721564816eb18131fdd7fc1463f733d5313a38",
+   "enUrl": "bee7ec3424b4e18877e8ec362abb6a9494feaec7760b19784826859958f5d8dd",
+   "krUrl": "5bb5dacb2b1a2faa5d32cb8ea441f9ba3e8424b54b348e977abc80d9ae20a583"
+  },
+  {
+   "id": 6,
+   "title": "愛好",
+   "text": "養花，只是我並不精通於此。",
+   "unlockRequirement": "",
+   "cnUrl": "3bc60faf4d80fd7586f34be3fc4350f24fd0636146835d7001fbc4eb623a384d",
+   "jpUrl": "7eb25f4e148cf21f8c0cbaad08856621337dcb85ca884675da67fc8dfdb187b4",
+   "enUrl": "0534137ccd37613b00ed784bcbe113b2de6a4cea35761dca48a69b89f307e94e",
+   "krUrl": "b19f453253b08e2e9128b6f38d6d23f4cc6635e56b65cf258d99d0ba82b385f1"
+  },
+  {
+   "id": 7,
+   "title": "煩惱",
+   "text": "姐姐的歌在鐵衛裡還挺受歡迎，休息時總會聽到，結果連我在巡邏時都會不自覺地哼出來，哎……",
+   "unlockRequirement": "",
+   "cnUrl": "45030fcacac5d7ae81201c33550bc413ee36b778a4fa51f29009f1e2f6aa4bce",
+   "jpUrl": "82c7ca4cd2da584b20198717baa5c2469749a1f503b6f7671ff849fe5ca2b786",
+   "enUrl": "ef13ff4980ffc7690b3ff0b791fea1e208412625b068fe315ab94ab020dd88e0",
+   "krUrl": "7749e96703a6b2e3f188c9a9fc582955b98114dfed4bddef5cebd018914c9861"
+  },
+  {
+   "id": 8,
+   "title": "分享",
+   "text": "朗道家世代為大守護者效力，這是榮譽，亦是責任。只有成為民眾可以仰賴的盾牌，才能安心接受這「築城者」的稱謂帶來的名譽。",
+   "unlockRequirement": "",
+   "cnUrl": "1fa9277e57f949fd71f9d4663a55b598958c0d99d26ece2c58e41f6b30f08a5c",
+   "jpUrl": "2b4e693fe9b3389834235a951d3a1e57ee3b4b9b22b6c3dd8d84e0fdc09fb2b9",
+   "enUrl": "0ca28d1e0bc6a570906bd59ec347eaae537a73d52a34d0bcca24fac02dcc83ac",
+   "krUrl": "77c0e589fddefe83cf24abd035fb8ab3faef29b311d6908f6dc7e52394a76660"
+  },
+  {
+   "id": 9,
+   "title": "見聞",
+   "text": "最近總有小孩子問我，怎樣才能當上戍衛官…老實說，除了堅持鍛鍊和平衡飲食以外，我也給不出什麼有用的建議。",
+   "unlockRequirement": "",
+   "cnUrl": "14307587afdbe94c1882b85a5b843b0165aa90af1f223194bf66f820e7d760c3",
+   "jpUrl": "3f3fec8f3c9d838952b4770e4f1bb4f6239b4344496a500ecbb040d772407270",
+   "enUrl": "0c6bdf0d7efde09736f4a5f68a769596da60bcefaecdbbdf8d706d91a883edce",
+   "krUrl": "f75f8c9f5a57d982889da158c5f6296f41ac13a817999d0fd466ac4475dedcdb"
+  },
+  {
+   "id": 10,
+   "title": "關於布洛妮婭",
+   "text": "布洛妮婭大人已數次深入最危險的前線，與我們並肩作戰。",
+   "unlockRequirement": "",
+   "cnUrl": "9afdee6bf476100dbffa88b713d5452f9964acec9a5ec82263d634621ff620a0",
+   "jpUrl": "d8d1cdf8e559c4184b1528284fd0377b0c8ffaa4b015a76e58161b9b7411864a",
+   "enUrl": "0c83d5b73c6362de215164be49d67867bfb34c7b1e91ae5c22de860992eeb4ef",
+   "krUrl": "0dbeef7826cc940d561f1a5166a30ce98f2c80398b500e866d45191f5429d7f0"
+  },
+  {
+   "id": 11,
+   "title": "關於希露瓦",
+   "text": "很多人都津津樂道於姐姐離開部隊後的轉變，其實…她一直都沒有變過。",
+   "unlockRequirement": "",
+   "cnUrl": "4353735c2d46857710214d05fc1772336b63702302be241b39506fb9197103b3",
+   "jpUrl": "8103fbca0770244c7d6ea1ef626850e977c77b1fdcc40edbb14dfa029bba4736",
+   "enUrl": "f73dfafd94ead3c30468a606e27388b3a1cfdb72011663e196e46713317804c4",
+   "krUrl": "6664010611ef9657032b03400409c434bbf12aca0ff8558aba6d5ac32af4b375"
+  },
+  {
+   "id": 12,
+   "title": "關於佩拉",
+   "text": "聽說我不在家的時候，姐姐開始把花拜託給佩拉照顧了…希望沒給她添太多麻煩。",
+   "unlockRequirement": "",
+   "cnUrl": "c85485c84c4a4404df854c2b4837f6a60abd03dee27e8b8b59a1c6ea8ad2a374",
+   "jpUrl": "48ee9f40193cbc69159c4434d8d2760bbd15a4c81359c78cfe9a28a7d5f6cf04",
+   "enUrl": "3db6e08f6f5e795d35f7f7faf3cfc4e48d7ae13385b41a65707479c3f7c1dcd7",
+   "krUrl": "244d415f29fe1f4a3644fe2bf57d17e7c6a8f6f75976b1fde0377d8a8987c906"
+  },
+  {
+   "id": 13,
+   "title": "關於可可利亞",
+   "text": "我始終堅信，沒有比大守護者更熟悉、更熱愛這座城市的人了。",
+   "unlockRequirement": "",
+   "cnUrl": "c318738e6b8b5b2bc9675af7974166b0f34631656ddd31060f6636e4bfc956d5",
+   "jpUrl": "c9c49f1796515332d389d9a755d515b48b41b6e7f239beceff86f7e0777411da",
+   "enUrl": "9d98191ca152189327cdcaf972f79eae927c603abd53b4bc9275ad074ca03085",
+   "krUrl": "5bc9f3f659eb244f5daded5c0574478c74838e2104713dcaf15573e50128f95d"
+  },
+  {
+   "id": 14,
+   "title": "關於桑博",
+   "text": "此人頗為狡猾。根據市民報案線索，他不知從哪搞了些古代遺物，也未全數倒賣，手頭自留了幾件，專門用來騙人。",
+   "unlockRequirement": "",
+   "cnUrl": "8f5ee637cd2b5890d7cfa9364227a0c46f2ee7e044136e95555be538c40bd727",
+   "jpUrl": "e5490d28041fb52200abac60be2b9ddad90e13f78bca5235a192718c5a2d96e4",
+   "enUrl": "740bf5232fc24c28ffbefcc4d34e1e2b8833bdc585c41e37706e78d70fea2487",
+   "krUrl": "2f3169e56ae2e3a82ef69b84759f5e70571ca9a6b83be2444dd71263573fafa9"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "角色詳情",
+   "text": "高潔正直的銀鬃鐵衛戍衛官，出身於血脈高貴的朗道家族。<br />在時刻遭受風雪侵凌的貝洛伯格，人們的衣食住行尚能如舊——<br />正是因為傑帕德與他率領的銀鬃鐵衛在守護這平淡無奇的日常生活。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "角色故事·一",
+   "text": "年輕的戍衛官站在北方的城垛上。<br /><br />他俯瞰慘白的無際大地。他見裂界的異形在茫茫雪線中結成翻滾的陰雲。他見無畏的鐵衛憑城列隊立定，彷彿一道堅實的胸牆。<br /><br />那是他原本的位置。在他尚且是個不起眼的列兵時，便已發誓成為貝洛伯格最堅固的盾牌，應與戰友同生共死——哪怕是當上了戍衛官也不例外——這絕非鐵衛圍爐夜話時的戲言，因那克里珀正是此誓之見證。<br /><br />然而，此時的他卻未能出現在他應至的地點——這正是大守護者的要求。<br /><br />大守護者究竟是作何考慮？年輕的戍衛官想不明白。不過，他很快就勒令自己將注意力放在眼下的戰事上。<br /><br />「記住，傑帕德•朗道——」<br />「懷疑生驕慢，懷疑生邪念。作為貝洛伯格的典範，你不應有多餘的思考。」<br /><br />年輕的戍衛官站在北方的城垛上。",
+   "unlockRequirement": "角色等級<nobr>20</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·二",
+   "text": "在那場極盡壯烈的戰事之後，所剩無幾的鐵衛班師振旅，回到貝洛伯格。大守護者為了慶祝這場來之不易的勝利，立即下令召開慶典。舉城上下徹夜狂歡三日有餘，歡聲笑語未曾間斷，而慶典氣氛在那場專為鐵衛開設的授勳典禮上達到了最高潮。<br /><br />在眾人的注視下，大守護者為此役中軍功最為卓著之人頒授獎勵。出身於貝洛伯格望族的年輕戍衛官默默地佩戴那由地髓鍛成的臂甲——輕便、靈活、強韌，同時散逸著極光般的輝彩——這是他對這件珍寶的全部印象。<br /><br />如此榮耀的勳章是用多少戰友的生命換來的？他逼迫自己不去想這件事。當下的他只能以笑容迎合大守護者與貝洛伯格的期待，因為這才是一名忠誠的衛士該做的。<br /><br />在戍衛官將臂甲佩戴完全的那一瞬間，激烈的輝光從甲冑的連線處迸射而出。下一刻，典禮的觀眾席上爆發出經久不息的熱烈掌聲。<br /><br />人們看不到眾鐵衛盔面下的倦容——他們以為這是一場凱旋。",
+   "unlockRequirement": "角色等級<nobr>40</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·三",
+   "text": "大守護者的決策是正確的。<br /><br />戰事過後，貝洛伯格的許多人終於暫歇一口氣，重新拾起那尚不完整的簡單日常。然而，包括戍衛官在內的人們並不知道——待虛偽的和平過後，他們即將面對的只有更加慘烈的長期拉鋸；若無外物干涉，這曠日持久的戰事將以貝洛伯格的隕落作結。<br /><br />此時，他正在寢室中檢查自己的盾牌「壁壘」是否運轉如初。這架沉重的力場防護裝置由他的姐姐用琴盒親手改裝而成——如果真出了什麼問題，可憐的戍衛官恐怕又要向那位歷來放飛自我的搖滾明星求援了。<br /><br />「傑帕德，如果，我是說如果，」他想起她的話，「如果有一天，大守護者命令你放棄貝洛伯格的人民，只為了實現她的某個目的…你會怎麼做？」<br />「她絕不會那麼做。她是大守護者。」他很堅定。<br />「我是說如果。」她看著他。<br />「我不清楚你為什麼如此發問，但我已向克里珀立下存護誓言。我將捍衛貝洛伯格與她的人民，不計任何代價——當然也包括我的生命。」<br />「如果有一天，保護人民意味著違抗大守護者的命令，並且無論如何選擇都會令我深陷險境，那我仍會選擇前者。因為這才是我該做的事。」<br />他們沉默。然後，她大笑。<br />「傑帕德啊傑帕德……」<br />「你不愧是我們朗道家的人。」",
+   "unlockRequirement": "角色等級<nobr>60</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·四",
+   "text": "年輕的戍衛官站在北方的城垛上。<br /><br />他側目向那位尊貴的守護者。他見她只是昂首眺望著風雪深處，彷彿城下的一切都與她無關。她的子民無法使她歡樂、憤怒、哀傷或是驚懼。她的眸子中只有無盡的空虛。<br /><br />大守護者究竟是作何考慮？年輕的戍衛官極盡所能思考，卻沒有答案。<br /><br />象徵發起進攻的悠揚風笛聲在大氣中炸響，剎那間撕碎了雪幕——身著藍衣的驍勇戰士們響應樂聲的召喚，紛紛架起長戟，將槍頭對準瞭如風暴般聚湧的異界怪形。在炮火的掩護下，他們開始了有死無生的衝鋒。<br /><br />傑帕德•朗道，你又作何考慮？年輕的戍衛官極盡所能思考。<br /><br />「記住，傑帕德•朗道——」<br />「你將捍衛貝洛伯格與她的人民，不計任何代價——絕不要辜負你應守護的人們…勿令朗道家蒙羞！」<br /><br />這一次，年輕的戍衛官的內心求得了答案<br />——他向戰場走去。",
+   "unlockRequirement": "角色等級<nobr>80</nobr>解鎖"
+  }
+ ],
+ "archive": {
+  "cvCn": "馬洋",
+  "cvJp": "古川慎",
+  "cvKr": "민승우",
+  "cvEn": "Bryson Baugus",
+  "camp": "貝洛伯格"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "gepard"
+}

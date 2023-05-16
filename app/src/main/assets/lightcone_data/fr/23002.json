@@ -1,0 +1,502 @@
+{
+ "name": "Quelque chose d'irremplaçable",
+ "rarity": 5,
+ "descHash": "« Si un jour je ne suis plus là, occupe-toi de cette base de données s'il te plaît, Svarog.  »<br />(Qui est-ce... Pourquoi ce message est-il dans mes archives...?)<br />« Y a-t-il quelque chose d'irremplaçable pour toi, Svarog ?»<br />(Irremplaçable... les pièces cassées... peuvent toujours être remplacées...)<br />« Tu verras, un jour, tu trouveras, Svarog. »<br />(De telles choses... n'apportent que des problèmes...)<br /><br />« Ce jour-là... tu devras partir. »",
+ "iconPath": "6055da303bb75b0bd788ff1f7c95eed8bbde4bc2ba24805df60eb0ce633d2dad",
+ "artPath": "14f1e05bd6df873507b906b79b291e6c47f884590bbce9b818dbce9770c54ac1",
+ "mediumIconPath": "335ae718e557b8ebf7af7074161ba3e2d1c0713d056a48664d267f94507c47d9",
+ "baseType": {
+  "id": 0,
+  "iconPath": "57e114954f0de32a3762e77aa2fd4f791deb47497337366308c51de1d0f12430",
+  "color": "#FFFFFF",
+  "name": "La Destruction",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "a01d7231993bf0450534073f8515ba34a99653c455e03f9f43053719a34aff98",
+   "name": "Ancienne pièce mécanique",
+   "desc": "Pièce mécanique provenant de l'Ancien monde. Matériau commun utilisé pour le renforcement.",
+   "lore": "Malgré sa taille, elle a été moulée et polie d'une façon qu'il serait difficile de reproduire aujourd'hui.<br /><br />« Une simple vis de l'Ancien monde est plus solide que nos armures. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "Automate ou autre ennemi de la Colonie de robots",
+    "Automate ou autre ennemi de la Grande mine",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "191ad5f4b9fd5180b9065e05d463d6df35334c87ce1428e89d8d507e69177dc7",
+   "name": "Ancien essieu",
+   "desc": "Essieu mécanique provenant de l'Ancien monde. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "Une fois démontés, les composants de précision ne peuvent pas être réassemblés. Même les vétérans de la maintenance de la Division technologique de Belobog y réfléchiraient à deux fois avant d'y toucher.<br /><br />« Imbécile, les Tuniques bleues ne vont te donner que quelques conserves en échange. Amène ça au boss Svarog et tu n'auras plus à te soucier de ta nourriture ou de tes vêtements pendant un moment. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "Automate de niveau d'équilibre 2+ ou autre ennemi de la colonie de robots",
+    "Automate de niveau d'équilibre 2+ ou autre ennemi de la Grande mine",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635673": {
+   "id": 635673,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1cfcf420c7cd53b503eead070d126b1448cd68bf3f9b0ddca916d10b1747537b",
+   "name": "Lame brisée",
+   "desc": "Fragments d'arme abandonnés par les membres de la Légion d'antimatière. Permet d'améliorer légèrement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Destruction</span>.",
+   "lore": "Cette marque représente leur rang et leurs accomplissements au nom de la Destruction.<br />Le maître de cette arme incendie des villes sur le dos de son cheval écarlate. Son but est d'arracher la paix à l'humanité et de faire tomber les nations une à une.<br /><br />« Le porteur de cette marque est chargé de détruire la paix des nations .»",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635673",
+   "comeFrom": [
+    "Calice de la Zone de stockage"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "Éther purifié",
+   "desc": "Matériau de renforcement de cône de lumière. Confère 6 <nobr>000</nobr> points d'EXP de cône de lumière.",
+   "lore": "Une bouteille d'éther raffiné par des procédés spéciaux.<br /><br />« Le Jardin se félicite de recréer une gloire passée, mais c'est une \"gloire passée\" qu'ils ont choisie. Tu comprends ? »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Salle oubliée"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "91f62f32ecd1e7b88c9e30002d215b1a5936ac221782a17d2f34837a967ed557",
+   "name": "Éther condensé",
+   "desc": "Matériau de renforcement de cône de lumière. Confère 2 <nobr>000</nobr> points d'EXP de cône de lumière.",
+   "lore": "Une bouteille d'éther raffiné par des procédés spéciaux.<br /><br />« À manier avec précaution, ne pas faire tomber, ne pas appliquer de pression. En cas de dommage ou de fuite, se référer au chapitre II du \"Manuel de prise en charge des désastres\" pour une solution d'urgence. »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Calice du Col de Backwater"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "554d37978b82c3f38bafee8771f8ab4248a1fe9d4e130bb5711064238666f491",
+   "name": "Éther dilué",
+   "desc": "Matériau de renforcement de cône de lumière. Confère <nobr>500</nobr> points d'EXP de cône de lumière.",
+   "lore": "Substance imaginaire qui ne devrait pas exister dans le monde réel. Il s'agit du matériau de base pour fabriquer les cônes de lumière.<br />Les images des cônes de lumière sont plus nettes avec cette substance.<br /><br />« Je vois... Alors c'est ça la « Sentiention » du Jardin de la mémoire. Pas étonnant que les protecteurs de la mémoire puissent embarquer pour des voyages galactiques avec des souvenirs. »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Récompense d'affectation"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "name": "Ancien moteur",
+   "desc": "Moteur mécanique provenant de l'Ancien monde. Matériau avancé utilisé pour le renforcement.",
+   "lore": "Il utilise de la géomoelle comme source d'énergie. Lorsqu'il est alimenté, il crache des aurores vagabondes, et non des étincelles.<br /><br />« Il n'y a que la Division technologique directement rattachée à la Gardienne suprême qui a accès aux informations concernant l'Ancien monde. J'ai perdu mes accès quand on m'a mise à la porte. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "Automate de niveau d'équilibre 4+ ou autre ennemi de la colonie de robots",
+    "Automate de niveau d'équilibre 4+ ou autre ennemi de la Grande mine",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836259": {
+   "id": 836259,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "name": "Lame briseuse de monde",
+   "desc": "Arme cassée laissée à l'abandon par les membres de la Légion d'antimatière. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Destruction</span>.",
+   "lore": "Cette arme représente le rang et les succès accomplis par son propriétaire au nom de la Destruction.<br />Le maître de cette arme est celui qui arrive à la fin de la guerre pour en raviver les braises et consumer le monde. Quelles que soient les gloires du passé ou les bénédictions accordées par les dieux, cette planète est condamnée à redevenir poussière et à s'éteindre dans les profondeurs du ciel étoilé.<br /><br />Le porteur de cette marque a la charge de purifier le monde.",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836259",
+   "comeFrom": [
+    "Calice de la Zone de stockage",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920200": {
+   "id": 920200,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1da1734309fa1e0ed5035575293caab81cfa7723f7bf4a81d36d9833d80b36",
+   "name": "Lame sans vie",
+   "desc": "Fragments d'arme abandonnés par les membres de la Légion d'antimatière. Permet d'améliorer modérément les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Destruction</span>.",
+   "lore": "Cette marque représente leur rang et leurs accomplissements au nom de la Destruction.<br />Le maître de cette arme voue une haine féroce à tous les êtres doués de sensibilité. Il se délecte des lamentations des êtres intelligents comme de douces mélodies, et renverse des civilisations millénaires en un clin d'œil.<br /><br />« Le porteur de cette marque a pour mission de couper le souffle des vivants. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920200",
+   "comeFrom": [
+    "Calice de la Zone de stockage",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 5000
+    },
+    {
+     "id": 549408,
+     "count": 8
+    }
+   ],
+   "attackBase": 26.4,
+   "attackAdd": 3.96,
+   "hpBase": 52.8,
+   "hpAdd": 7.92,
+   "defenseBase": 18,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 10000
+    },
+    {
+     "id": 635673,
+     "count": 4
+    },
+    {
+     "id": 549408,
+     "count": 12
+    }
+   ],
+   "attackBase": 58.08,
+   "attackAdd": 3.96,
+   "hpBase": 116.16,
+   "hpAdd": 7.92,
+   "defenseBase": 39.6,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 20000
+    },
+    {
+     "id": 920200,
+     "count": 4
+    },
+    {
+     "id": 633349,
+     "count": 8
+    }
+   ],
+   "attackBase": 100.32,
+   "attackAdd": 3.96,
+   "hpBase": 200.64,
+   "hpAdd": 7.92,
+   "defenseBase": 68.4,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 50000
+    },
+    {
+     "id": 920200,
+     "count": 8
+    },
+    {
+     "id": 633349,
+     "count": 12
+    }
+   ],
+   "attackBase": 142.56,
+   "attackAdd": 3.96,
+   "hpBase": 285.12,
+   "hpAdd": 7.92,
+   "defenseBase": 97.2,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 100000
+    },
+    {
+     "id": 836259,
+     "count": 5
+    },
+    {
+     "id": 717290,
+     "count": 6
+    }
+   ],
+   "attackBase": 184.8,
+   "attackAdd": 3.96,
+   "hpBase": 369.6,
+   "hpAdd": 7.92,
+   "defenseBase": 126,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 200000
+    },
+    {
+     "id": 836259,
+     "count": 10
+    },
+    {
+     "id": 717290,
+     "count": 8
+    }
+   ],
+   "attackBase": 227.04,
+   "attackAdd": 3.96,
+   "hpBase": 454.08,
+   "hpAdd": 7.92,
+   "defenseBase": 154.8,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 269.28,
+   "attackAdd": 3.96,
+   "hpBase": 538.56,
+   "hpAdd": 7.92,
+   "defenseBase": 183.6,
+   "defenseAdd": 2.7
+  }
+ ],
+ "skill": {
+  "id": 23002,
+  "name": "Liens familiaux",
+  "descHash": "Augmente l'ATQ du porteur de <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. Lorsque le porteur élimine un ennemi ou est touché par une attaque, il restaure immédiatement des PV équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de son ATQ. D'autre part, ses DGT augmentent de <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#3[i]%</nobr></span> jusqu'à la fin de son prochain tour. Cet effet n'est pas cumulable et ne peut se déclencher qu'1 fois par tour.",
+  "levelData": [
+   {
+    "level": 1,
+    "params": [
+     0.24,
+     0.08,
+     0.24
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 2,
+    "params": [
+     0.28,
+     0.09,
+     0.28
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 3,
+    "params": [
+     0.32,
+     0.1,
+     0.32
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 4,
+    "params": [
+     0.36,
+     0.11,
+     0.36
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 5,
+    "params": [
+     0.4,
+     0.12,
+     0.4
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 60,
+   "2": 100,
+   "3": 170,
+   "4": 260,
+   "5": 370,
+   "6": 500,
+   "7": 640,
+   "8": 800,
+   "9": 970,
+   "10": 1160,
+   "11": 1360,
+   "12": 1580,
+   "13": 1820,
+   "14": 2060,
+   "15": 2320,
+   "16": 2600,
+   "17": 2880,
+   "18": 3180,
+   "19": 3490,
+   "20": 3620,
+   "21": 3760,
+   "22": 3910,
+   "23": 4050,
+   "24": 4200,
+   "25": 4360,
+   "26": 4510,
+   "27": 4670,
+   "28": 4830,
+   "29": 4990,
+   "30": 5160,
+   "31": 5330,
+   "32": 5500,
+   "33": 5670,
+   "34": 5850,
+   "35": 6030,
+   "36": 6210,
+   "37": 6390,
+   "38": 6580,
+   "39": 6760,
+   "40": 6950,
+   "41": 7630,
+   "42": 8060,
+   "43": 8510,
+   "44": 8970,
+   "45": 9440,
+   "46": 9910,
+   "47": 10390,
+   "48": 10890,
+   "49": 11390,
+   "50": 11900,
+   "51": 12420,
+   "52": 12940,
+   "53": 13480,
+   "54": 14020,
+   "55": 14580,
+   "56": 15140,
+   "57": 15710,
+   "58": 16290,
+   "59": 16880,
+   "60": 17470,
+   "61": 18290,
+   "62": 19270,
+   "63": 20260,
+   "64": 21260,
+   "65": 22290,
+   "66": 23320,
+   "67": 24370,
+   "68": 25440,
+   "69": 26520,
+   "70": 27620,
+   "71": 30810,
+   "72": 33710,
+   "73": 36660,
+   "74": 39650,
+   "75": 42680,
+   "76": 45750,
+   "77": 48870,
+   "78": 52030,
+   "79": 55230,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "23002"
+}

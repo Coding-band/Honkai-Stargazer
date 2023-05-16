@@ -1,0 +1,2446 @@
+{
+ "name": "Скиталец блуждающего облака",
+ "iconPath": "4572d979d27faa81ae07050fd777b65e7ad6e293fa40303c3eae2fbd18c60aee",
+ "artPath": "cb1c0856a025491c8a6854df7de85d4e39584b16bf195a74a5939e6cdc79989b",
+ "rarity": 5,
+ "embeddedBaseTypes": {
+  "0": {
+   "id": 0,
+   "iconPath": "0c88f2c3d931255f78ee56e3d6a83a2ba0c277c6344e39b711e2ade65ed05b90",
+   "color": "#FFFFFF",
+   "name": "",
+   "rarity": 0
+  },
+  "1": {
+   "id": 1,
+   "iconPath": "3cac2e295748fd50d15bf04acd5f52c9ef38a9d901d8a45a2ec05e7b023f6899",
+   "color": "#FFFFFF",
+   "name": "Голова",
+   "rarity": 0
+  },
+  "2": {
+   "id": 2,
+   "iconPath": "85ad631eaac4657808b7c9a3f4a789aadea2c06819e76c986eff7d570147e0c9",
+   "color": "#FFFFFF",
+   "name": "Руки",
+   "rarity": 0
+  },
+  "3": {
+   "id": 3,
+   "iconPath": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+   "color": "#FFFFFF",
+   "name": "Тело",
+   "rarity": 0
+  },
+  "4": {
+   "id": 4,
+   "iconPath": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+   "color": "#FFFFFF",
+   "name": "Ноги",
+   "rarity": 0
+  },
+  "5": {
+   "id": 5,
+   "iconPath": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+   "color": "#FFFFFF",
+   "name": "Планарная сфера",
+   "rarity": 0
+  },
+  "6": {
+   "id": 6,
+   "iconPath": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+   "color": "#FFFFFF",
+   "name": "Соединительная верёвка",
+   "rarity": 0
+  }
+ },
+ "skills": [
+  {
+   "useNum": 2,
+   "desc": "Повышает исходящее исцеление на <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.1
+   ]
+  },
+  {
+   "useNum": 4,
+   "desc": "В начале боя немедленно восстанавливает 1 очко навыков союзникам.",
+   "params": []
+  }
+ ],
+ "pieces": {
+  "1": {
+   "name": "Весенняя шпилька скитальца",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "d5e67bb31d32bfc148fe04c747128cdc3250983a1f6f7259883a85f63248c592",
+   "baseTypeText": "Голова",
+   "loreTitle": "Весенняя шпилька скитальца",
+   "miniLore": "Сухая ветка использовалась как импровизированная шпилька для волос. На некогда мёртвой ветке распустились цветочные почки. Теперь прошлое мертво. Шпилька, инкрустированная позолоченными бутонами цветов, напоминает о начале новой жизни.",
+   "lore": "Неназванный очнулся от долгого сна. Далёкое хорошо знакомое напряжение никуда не делось, а фантомная боль была всё так же ясна и остра. Его прошлое разлетелось на тысячи осколков так, что он даже позабыл собственное имя.<br /><br />Бесцельно скитаясь, он пил талый снег и питался дикими зверями. Однажды он сорвал засохшую ветку и использовал её, чтобы убрать свои волосы.<br /><br />Его длинные каштановые локоны струились, подобно горному роднику. Конвульсии и судороги проходили по всему телу, словно под кожей прыгали и ныряли речные карпы. Чудесные силы изменяли его тело: сухожилия рвались, а затем восстанавливались, кости ломались и срастались, вызывая невыносимую боль. После бесконечных мучений и страданий его разбитое прошлое начало собираться воедино... Когда он взглянул на своё отражение в воде, вся история этой трагедии постепенно прояснилась.<br /><br />Только когда лицо в отражении перестало быть незнакомым, неназванный увидел, что на некогда мёртвой ветке в его волосах появляются бутоны.<br /><br />Словно молния, его пронзила мысль, что проклятие бессмертия, как и ненависть к прошлому, всё ещё разливаются в его жилах. И это ОН - только что распустившийся цветок на увядшей ветке дерева.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 45.1584,
+       "levelAdd": 15.80544,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 67.7376,
+       "levelAdd": 23.70816,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 90.3168,
+       "levelAdd": 31.61088,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 112.896,
+       "levelAdd": 39.5136,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "2": {
+   "name": "Наручи дракона-скитальца",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "8a3b080e3d3b24761d15a3f41fdf6e4a7ced1e9db87f437d44c11cb5e683f876",
+   "baseTypeText": "Руки",
+   "loreTitle": "Наручи дракона-скитальца",
+   "miniLore": "Эти наручи сделаны из золотых кораллов с волнистым переплетением и кожи какого-то неизвестного животного. Только мастера расы драконов видьядхара могут выковать такие превосходные доспехи.",
+   "lore": "Кажется, даже если один наруч находится далеко от другого, между ними существует телепатическая связь. У неназванного был только один наруч, но он мог чувствовать температуру второго, касаясь своего кончиками пальцев.<br /><br />Он закрывал глаза, пытаясь через слабую связь уловить любую информацию: местонахождение второго наруча или его владельца.<br /><br />Однажды неназванному довелось сразиться в поединке с владелицей второго наруча. В тонких, но сильных руках последней было копьё, и лезвие на поле боя сверкало, словно плеяда падающих звёзд. Затем неназванный разделил кубок вместе с противницей. Они вместе вглядывались в лик холодной луны, не говоря ни слова. Но в конечном итоге распри между ними взяли верх. Вспыхнувшая любовь превратилась в чудовище, и оба пали в пучину вечной ненависти и раскаяния.<br /><br />Парные предметы всегда стремятся к воссоединению. Они испивали многолетнюю вражду, будто выдержанное вино, глоток за глотком, пока бутыль ненависти не опустела.<br /><br />Чувствует ли владелица второго наруча то же самое? Неназванный не хотел знать.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 22.5792,
+       "levelAdd": 7.90272,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 33.8688,
+       "levelAdd": 11.85408,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 45.1584,
+       "levelAdd": 15.80544,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 56.448,
+       "levelAdd": 19.7568,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "3": {
+   "name": "Рваное вышитое пальто скитальца",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "19afab2e4510e199b56b1a383cfe81d36ed149c85bac756bab12be0e8988e764",
+   "baseTypeText": "Тело",
+   "loreTitle": "Рваное вышитое пальто скитальца",
+   "miniLore": "Старое потрёпанное пальто, вышивка изрезана мечом. Раны зарастают, а дыры на плаще - нет, как не проходит и человеческая боль.",
+   "lore": "Неназванный скитался в изгнании, словно ходячий мертвец, пока на его пути не появились женщина в очках и человек в огромных доспехах. Не успели они выступить с предложением, как в полном молчании неназванный достал меч из ножен. После схватки женщина улыбнулась и предложила сделку, от которой неназванный не смог отказаться.<br /><br />Он принял условия, получил новую личность и вернулся в цивилизованный мир.<br /><br />Неназванного отвели в ателье, где сняли с него мерки и сшили презентабельный костюм... Его подстригли и побрили - и он обрёл прежний облик. В смутных воспоминаниях о былых временах он понял, что чувствовал, когда, наконец, принял осторожное решение подарить своему близкому нефритовую фляжку, но был потрясён осознанием того, что близкого нет рядом.<br /><br />В оцепенении он понял, что его тело, его жизнь, его любовь и ненависть, даже одежда, которую он носит, - всё, чем он когда-либо владел, взято взаймы.<br /><br />Он всё вернёт, а потом испустит последний вздох.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.007258,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Бонус исцеления",
+       "propertyIconPath": "a30cffd7e2ccc5db2ee0d1316b1480c7eebc7eb030a727d19c38ee0835cae32d",
+       "isPercent": true,
+       "baseValue": 0.022118,
+       "levelAdd": 0.0077410005,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.010886001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Бонус исцеления",
+       "propertyIconPath": "a30cffd7e2ccc5db2ee0d1316b1480c7eebc7eb030a727d19c38ee0835cae32d",
+       "isPercent": true,
+       "baseValue": 0.033178,
+       "levelAdd": 0.011612,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.082944,
+       "levelAdd": 0.029029999,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Бонус исцеления",
+       "propertyIconPath": "a30cffd7e2ccc5db2ee0d1316b1480c7eebc7eb030a727d19c38ee0835cae32d",
+       "isPercent": true,
+       "baseValue": 0.044237,
+       "levelAdd": 0.015483,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.10368,
+       "levelAdd": 0.036288,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Бонус исцеления",
+       "propertyIconPath": "a30cffd7e2ccc5db2ee0d1316b1480c7eebc7eb030a727d19c38ee0835cae32d",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "4": {
+   "name": "Мрачные сапоги скитальца",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "1a44dece7019c509cf09433adc71e6d6c872f695cc4fd18e5f369a169bfb90e4",
+   "baseTypeText": "Ноги",
+   "loreTitle": "Мрачные сапоги скитальца",
+   "miniLore": "Пара добротных сапог, которые оставили следы во многих мирах и были свидетелями ситуаций, когда жизнь их владельца висела на волоске.",
+   "lore": "Неназванный выполнял приказы раба и отправлялся на другую сторону неба со своим новым компаньоном. Он плутал, полный недоумения и ненависти, среди бесчисленных миров, неоднократно оказываясь в смертельной опасности.<br /><br />Он давно забыл радость созидания и терялся в череде нескончаемых поединков.<br /><br />В прошлых битвах он получил множество ударов мечом и порезов. В прошлых поражениях его тело снова и снова раскалывалось и разбивалось вдребезги. Его противник всегда заканчивал битву одним решающим ударом прямо в сердце. И теперь боевые движения, что приносили эти раны и шрамы, отпечатались в его памяти, и его воинское мастерство закалилось в нескончаемых смертельных боях. Неназванный мечом прорубал себе путь сквозь препятствия. Он много раз падал, но снова и снова поднимался. Казалось, он совсем забыл о ненависти и сосредоточился на танце с мечом.<br /><br />Раб пообещал принести долгожданный конец его жизни и его ненависти. Неназванный кивнул, вложил меч обратно в ножны и поспешил в следующий поход.<br /><br />Если жизнь - это длительное путешествие, то неназванный желает перешагнуть через бассейны крови тех, кого ненавидел, прежде чем встретит собственный конец.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6128,
+       "levelAdd": 1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2.4192,
+       "levelAdd": 1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 3.2256,
+       "levelAdd": 1.1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 4.032,
+       "levelAdd": 1.4,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сила атаки",
+       "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Защита",
+       "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Скорость",
+       "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. шанс",
+       "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Крит. урон",
+       "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Шанс попадания эффектов",
+       "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Сопротивление эффектам",
+       "propertyIconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Эффект пробития",
+       "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  }
+ },
+ "pageId": "101"
+}

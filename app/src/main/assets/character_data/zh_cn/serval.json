@@ -1,0 +1,2357 @@
+{
+ "name": "希露瓦",
+ "spRequirement": 100,
+ "rarity": 4,
+ "descHash": "贝洛伯格的机械师，曾任筑城者技术部研究员。 身为杰帕德•朗道的姐姐，性格却与弟弟截然不同。 钟爱大寒潮前一种名为「摇滚」的古老音乐艺术。",
+ "iconPath": "cad9de5e9d91532ac990da88a1994b2ff107a184744f4eb372131aa2b694e773",
+ "bgPath": "2cb545b2ca6365924583989cb65847893805af217ce995b9aa6aeb4d60e92b3f",
+ "figPath": "e21a40cd78d877fa3d594d458f7bfbf7b779ec1b615cf5476f1b60e89e7d4b35",
+ "fgPath": "1ca4e00ac8af08cc8917a0675c6d40a2c878241e906805ebbd30a13e3d1d0cf9",
+ "artPath": "312d2f50d5a3dea5056b3acb74ce0ecb862907bbe213551d59d08c66f3db9041",
+ "miniIconPath": "af2dda50f7907c178345610d7b71de325aa634a392f2856ec630f52954ad6724",
+ "splashIconPath": "6652458b2ea6d17607863873a3508ca06e43101557c1c7faad5f29b20b16a3be",
+ "damageType": {
+  "id": 8,
+  "iconPath": "e8e459ad283c3df43713b2d13203b3dc8c636150d0c536f38e2ad62bd72b6e83",
+  "color": "#8872F1",
+  "name": "雷",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "b9e59719a64e109bbcf97e61c2cf3c99730af37cbd230758a45d291825dbd941",
+  "altIconPath": "2711d1f5592aee2297cc8ef3a82ed4e7b6958efe02a2a79f7ea3e97246ec9837",
+  "color": "#FFFFFF",
+  "name": "智识",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 3,
+  "iconPath": "312ed1eeb6d329b90b5506b23fd487883f83124ccabedaf6cfafbb913d86c74c",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用点",
+   "desc": "星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。",
+   "lore": "「人们奔波、争斗、贸易，为的不过是个终端里显示的数字。但真正珍贵之物，公司的数字是买不到的。」",
+   "purpose": "通用货币",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "拟造花萼【大矿区】",
+    "任务奖励",
+    "委托奖励"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "命运的足迹",
+   "desc": "行迹升级的高阶素材。",
+   "lore": "一次又一次的败北成就了你的胜利，一步又一步的前进让你抵达了命运的拐点。",
+   "purpose": "行迹材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模拟宇宙」积分奖励",
+    "无名勋礼",
+    "余烬兑换",
+    "限时活动奖励"
+   ]
+  },
+  "151160": {
+   "id": 151160,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "f4e0301b109ba0ab0b633a7186df88a0fa0be8a70edf33c88539672e514bbc8c",
+   "name": "往日之影的雷冠",
+   "desc": "守护者之影佩戴的头饰，雷属性角色的晋升素材。",
+   "lore": "往昔守护者的身影消散后残留的饰物，仿佛在掌心中诉说着永冬之城的过去。<br /><br />「铁腕的斯维特兰娜——她的怒火震耳如惊雷，她的责罚迅疾如闪电。」",
+   "purpose": "角色晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/151160",
+   "comeFrom": [
+    "凝滞虚影【残响回廊】",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "守护者的悲愿",
+   "desc": "行迹升级的高阶素材。",
+   "lore": "与这副面甲一同破碎的，还有一位守护者扭曲的愿望。<br />她渴望在永冬末日中为子民开辟前路，却最终沦为了更恢宏的意志所操纵的傀儡。<br /><br />「大守护者，贝洛伯格统治者世代传承的头衔，看顾所有子民的人——人们并不知道，她们无人看顾，无人守护。」",
+   "purpose": "行迹材料",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "历战余响【永冬岭】"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "漫游指南",
+   "desc": "角色的经验材料，可以获得<nobr>20000</nobr>点角色经验。",
+   "lore": "跨越诸界必备的冒险丛书。按下阅读键，充满磁性的声音将以你能听懂的语言讲述知名冒险家们在不同世界间的传奇经历，以及他们在各个星球上获得的珍贵智慧。<br /><br />「漫游指南全新书系《星际美食烹饪导览》开售在即，敬请支持。」<br />「投稿请接入博识学会联觉信标<nobr>23</nobr>θ联络员，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色经验材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "「忘却之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "冒险记录",
+   "desc": "角色的经验材料，可以获得<nobr>5000</nobr>点角色经验。",
+   "lore": "装订严整，一看就颇有教育意义的冒险札记。图文并茂地描述了冒险行动的始末、有价值的信息和生存相关的技巧。<br /><br />「干嘛不数据化放进光刻片里？便携多了。」<br />「面对恒星风暴和中子流喷发时，高科技比你想象的还要脆弱。何况，制作这本书的人一定希望人们用最简单的方式阅读它。」",
+   "purpose": "角色经验材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "每日实训"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "旅情见闻",
+   "desc": "角色的经验材料，可以获得<nobr>1000</nobr>点角色经验。",
+   "lore": "记录旅途见闻的日志，字迹漫漶不清，内容随心所欲，对你并没有太大的帮助。<br /><br />「看完了就赶紧把这堆废纸处理掉吧，丹恒？」",
+   "purpose": "角色经验材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "委托奖励"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "2901efa774991b0ce2037520ce85ff99af64f37ee6364ffda560278736df6a19",
+   "name": "铁卫扣饰",
+   "desc": "银鬃铁卫士兵佩戴的扣针徽章。强化所需的简单材料。",
+   "lore": "风霜刮蚀下满是磨痕。<br /><br />「在古老的年代，银鬃铁卫只有一种退休的形式：那就是死亡。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "银鬃铁卫等敌方掉落【城郊雪原】",
+    "永冬灾影等敌方掉落【残响回廊】",
+    "「模拟宇宙」中敌方掉落",
+    "委托奖励",
+    "余烬兑换",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "042dc7973ef7c36858a4aa58ef7d32335f528b3c4bc4f0c4ce2e7f401039a7c5",
+   "name": "铁卫军徽",
+   "desc": "银鬃铁卫队长佩戴的军衔标志。强化所需的普通材料。",
+   "lore": "也许是在家人面前夸耀的证明，也许是挡住子弹的幸运符。<br /><br />「时代变了。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "均衡等级2及以上银鬃铁卫等敌方掉落【城郊雪原】",
+    "均衡等级2及以上永冬灾影等敌方掉落【残响回廊】",
+    "「万能合成机」- 材料合成",
+    "「模拟宇宙」中敌方掉落",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "635675": {
+   "id": 635675,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a11149500124597e50362c7c3cd94c209d1a1b48d77ce9f7dfdfac64d8840ef3",
+   "name": "灵感之钥",
+   "desc": "出现在苦思学者手中的幻之钥匙。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">智识</span>角色的命途行迹。",
+   "lore": "可以解锁被封存在意识深处的灵感。<br />抓住钥匙，即是抓住了思维中蹿闪的火花，照亮了前进的道路。<br /><br />「尤里卡！」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 2,
+   "rewardPath": "/material/635675",
+   "comeFrom": [
+    "拟造花萼【铆钉镇】"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "name": "铁卫勋章",
+   "desc": "功勋铁卫佩戴的军功章。强化所需的高级材料。",
+   "lore": "对抗裂隙魔物，地底人和突发灾变后颁授的荣誉证明。<br />它往往不在获勋者的胸膛上，而是摆在他的棺椁上。<br /><br />「它不是玩具，小杰。记好了：这是朗道家族的使命，是朗道家族的血。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "均衡等级4及以上银鬃铁卫等敌方掉落【城郊雪原】",
+    "均衡等级4及以上永冬灾影等敌方掉落【残响回廊】",
+    "「万能合成机」- 材料合成",
+    "「模拟宇宙」中敌方掉落",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "836261": {
+   "id": 836261,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "name": "智识之钥",
+   "desc": "出现在银河绝顶天才手中的幻之钥匙。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">智识</span>角色的命途行迹。",
+   "lore": "此为受邀请者的证明，能够开启智识殿堂的门扉。<br />钥匙就在手中，但寻到它能开启的大门却比得到钥匙更为艰辛。穿越门扉之人会意识到，一经踏入将再也没有回头的可能。<br /><br />「智识不能告诉你宇宙的答案，但智识能让你明白如何提问。」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/836261",
+   "comeFrom": [
+    "拟造花萼【铆钉镇】",
+    "「万能合成机」- 材料合成"
+   ]
+  },
+  "920202": {
+   "id": 920202,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "974e6b2e34ddd65a7b7edc1e2edd1b85ffbf62d63b7318313e7f387747d83f4f",
+   "name": "启迪之钥",
+   "desc": "出现在诸界智者手中的幻之钥匙。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">智识</span>角色的命途行迹。",
+   "lore": "能够打开禁锢了真理的谜题之锁，寻获人智难以领悟的启迪。<br />无论持有者如何展示证明，身边的人却看不见钥匙的存在。有人相信这是上天的垂怜，有人以为这是精神失常的先兆。<br /><br />「我做了一个梦，梦见分子们如蛇般盘起，首尾相衔。醒来后才意识到，这不就是我一直在找的答案吗？」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 3,
+   "rewardPath": "/material/920202",
+   "comeFrom": [
+    "拟造花萼【铆钉镇】",
+    "「万能合成机」- 材料合成"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549407,
+     "count": 4
+    }
+   ],
+   "attackBase": 88.8,
+   "attackAdd": 4.44,
+   "hpBase": 124.8,
+   "hpAdd": 6.24,
+   "defenseBase": 51,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549407,
+     "count": 8
+    }
+   ],
+   "attackBase": 124.32,
+   "attackAdd": 4.44,
+   "hpBase": 174.72,
+   "hpAdd": 6.24,
+   "defenseBase": 71.4,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633348,
+     "count": 5
+    },
+    {
+     "id": 151160,
+     "count": 2
+    }
+   ],
+   "attackBase": 159.84,
+   "attackAdd": 4.44,
+   "hpBase": 224.64,
+   "hpAdd": 6.24,
+   "defenseBase": 91.8,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633348,
+     "count": 8
+    },
+    {
+     "id": 151160,
+     "count": 5
+    }
+   ],
+   "attackBase": 195.36,
+   "attackAdd": 4.44,
+   "hpBase": 274.56,
+   "hpAdd": 6.24,
+   "defenseBase": 112.2,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717289,
+     "count": 5
+    },
+    {
+     "id": 151160,
+     "count": 15
+    }
+   ],
+   "attackBase": 230.88,
+   "attackAdd": 4.44,
+   "hpBase": 324.48,
+   "hpAdd": 6.24,
+   "defenseBase": 132.6,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717289,
+     "count": 7
+    },
+    {
+     "id": 151160,
+     "count": 28
+    }
+   ],
+   "attackBase": 266.4,
+   "attackAdd": 4.44,
+   "hpBase": 374.4,
+   "hpAdd": 6.24,
+   "defenseBase": 153,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 301.92,
+   "attackAdd": 4.44,
+   "hpBase": 424.32,
+   "hpAdd": 6.24,
+   "defenseBase": 173.4,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "8440734acd6fe752374cc16bf385bcb9db2944020aeba129738b197ff8f45b0f",
+   "name": "余音绕梁",
+   "descHash": "普攻对指定敌方目标的1个随机相邻目标造成等同于普攻伤害<nobr>#1[i]%</nobr>的雷属性伤害。",
+   "params": [
+    0.6
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "3d57fe0c1e54141a1cba420dd0f9394568dddb4252e7142db1dc7f5864018260",
+   "name": "安可！",
+   "descHash": "每触发1次天赋的附加伤害，希露瓦恢复<nobr>#1[i]</nobr>点能量。",
+   "params": [
+    4
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "28ef5c642307a6c75d346f8f1bb56f468357590d3d379e78c971d643b5db62d4",
+   "name": "听，齿轮的心跳",
+   "descHash": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "a77d235e80ca9f5af9f8844ef12f7d49fd0aa96346a6945cc62d5ba32fa1bf09",
+   "name": "制造噪音吧！",
+   "descHash": "施放终结技时，有<nobr>#1[i]%</nobr>基础概率使非触电状态下的敌方目标状态陷入与战技相同的触电状态。",
+   "params": [
+    1
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "45076347a90d01726de9f1c0799be7e686204c7657948c9b93f8b78e6c2e2682",
+   "name": "贝洛伯格最强音！",
+   "descHash": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "5f3fe241a2fa2dd9f619b8e3a76de6f988cdc5476905fe691fcb86c1d79dbb15",
+   "name": "这一曲，贯穿天穹！",
+   "descHash": "希露瓦对触电状态下的敌方目标造成的伤害提高<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.3
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   960674
+  ],
+  [
+   876733
+  ],
+  [
+   792792
+  ],
+  [
+   676147
+  ],
+  [
+   391620
+  ]
+ ],
+ "skills": [
+  {
+   "id": 960674,
+   "name": "雷鸣音阶",
+   "tagHash": "单攻",
+   "descHash": "对指定敌方单体造成等同于希露瓦<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#c75de2;\">雷</span>属性伤害。",
+   "typeDescHash": "普攻",
+   "iconPath": "ac5258010ed190458bb9c1c37d5128ba6c2a6eb3efb0a3a9da0d9e5f26b68322",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635675,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920202,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920202,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836261,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836261,
+       "count": 6
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 876733,
+   "name": "电光石火间",
+   "tagHash": "扩散",
+   "descHash": "对指定敌方单体造成等同于希露瓦<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#c75de2;\">雷</span>属性伤害，同时对其相邻目标造成等同于希露瓦<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻击力的<span style=\"color:#c75de2;\">雷</span>属性伤害，此外有<nobr>#3[i]%</nobr>的<u>基础概率</u>使受到攻击的敌方目标陷入触电状态，持续<nobr>#4[i]</nobr>回合。<br />触电状态下，敌方目标每回合开始时受到等同于希露瓦<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#5[i]%</nobr></span>攻击力的<span style=\"color:#c75de2;\">雷</span>属性持续伤害。",
+   "typeDescHash": "战技",
+   "iconPath": "ea52b05156394a61f635af9817c75f6b9e1733fa754dc27163e6a6716fbfadff",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.7,
+      0.3,
+      0.8,
+      2,
+      0.4
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.77,
+      0.33,
+      0.8,
+      2,
+      0.44
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549407,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.84,
+      0.36,
+      0.8,
+      2,
+      0.48
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635675,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.91,
+      0.39,
+      0.8,
+      2,
+      0.52
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920202,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.98,
+      0.42,
+      0.8,
+      2,
+      0.56
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920202,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.05,
+      0.45,
+      0.8,
+      2,
+      0.62
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920202,
+       "count": 6
+      },
+      {
+       "id": 633348,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1375,
+      0.4875,
+      0.8,
+      2,
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836261,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.225,
+      0.525,
+      0.8,
+      2,
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836261,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3125,
+      0.5625,
+      0.8,
+      2,
+      0.92
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836261,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.4,
+      0.6,
+      0.8,
+      2,
+      1.04
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836261,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.47,
+      0.63,
+      0.8,
+      2,
+      1.092
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.54,
+      0.66,
+      0.8,
+      2,
+      1.144
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.61,
+      0.69,
+      0.8,
+      2,
+      1.196
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.68,
+      0.72,
+      0.8,
+      2,
+      1.248
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.75,
+      0.75,
+      0.8,
+      2,
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 792792,
+   "name": "机械热潮登场！",
+   "tagHash": "群攻",
+   "descHash": "对敌方全体造成等同于希露瓦<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#c75de2;\">雷</span>属性伤害，并使触电状态下的敌方目标延长<nobr>#2[i]</nobr>回合的触电状态。",
+   "typeDescHash": "终结技",
+   "iconPath": "6b736e3bfb758c60e27cba052ead108e46547bdf702bf535b6c261a4de51b6c2",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1.08,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.152,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549407,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.224,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635675,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.296,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920202,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.368,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920202,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.44,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920202,
+       "count": 6
+      },
+      {
+       "id": 633348,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.53,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836261,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.62,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836261,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.71,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836261,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.8,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836261,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.872,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.944,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      2.016,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      2.088,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      2.16,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 100
+  },
+  {
+   "id": 676147,
+   "name": "燃情和弦",
+   "tagHash": "强化",
+   "descHash": "施放攻击后，对所有触电状态下的敌方目标造成等同于希露瓦<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#c75de2;\">雷</span>属性<u>附加伤害</u>。",
+   "typeDescHash": "天赋",
+   "iconPath": "ad1f83f964426251ce3c032372f0a49ef6d88115a783d56402ed9cc724727172",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.396
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549407,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.432
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635675,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.468
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920202,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.504
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920202,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.54
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920202,
+       "count": 6
+      },
+      {
+       "id": 633348,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.585
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836261,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.63
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836261,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.675
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836261,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836261,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.756
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.792
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.828
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.864
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 475561,
+   "name": "攻击",
+   "tagHash": "",
+   "descHash": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。",
+   "typeDescHash": "",
+   "iconPath": "ac5258010ed190458bb9c1c37d5128ba6c2a6eb3efb0a3a9da0d9e5f26b68322",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 391620,
+   "name": "晚安，贝洛伯格",
+   "tagHash": "",
+   "descHash": "立即攻击敌人，进入战斗后对敌方随机单体造成等同于希露瓦<nobr>#4[i]%</nobr>攻击力的<span style=\"color:#c75de2;\">雷</span>属性伤害，同时有<nobr>#1[i]%</nobr>的<u>基础概率</u>使敌方每个单体目标陷入触电状态，持续<nobr>#3[i]</nobr>回合。<br />触电状态下，敌方目标每回合开始时受到等同于希露瓦<nobr>#2[i]%</nobr>攻击力的<span style=\"color:#c75de2;\">雷</span>属性持续伤害。",
+   "typeDescHash": "秘技",
+   "iconPath": "494c5bbe1ca913be4529699e98885e3dfee35073fa93579dcab4f4795f669497",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1,
+      0.5,
+      3,
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1103101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1103202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1103203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 597976,
+        "name": "暴击率强化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+        "statusList": [
+         {
+          "key": "暴击率",
+          "value": 0.026999999
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920202,
+          "count": 2
+         },
+         {
+          "id": 633348,
+          "count": 2
+         }
+        ]
+       }
+      },
+      {
+       "id": 1103204,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 597973,
+        "name": "效果抵抗强化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+        "statusList": [
+         {
+          "key": "效果抵抗",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920202,
+          "count": 2
+         },
+         {
+          "id": 633348,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 597975,
+      "name": "效果命中强化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+      "statusList": [
+       {
+        "key": "效果命中",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635675,
+        "count": 2
+       },
+       {
+        "id": 549407,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 597879,
+    "name": "摇滚",
+    "descHash": "施放战技时，使受到攻击的敌方目标陷入触电状态的基础概率提高<nobr>#1[i]%</nobr>。",
+    "iconPath": "e4252bc396051881a6f371a03a91a8da9ac8590dbc5ef3613e71b82690425000",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.2
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635675,
+        "count": 2
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1103102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1103205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1103206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 597971,
+        "name": "效果命中强化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+        "statusList": [
+         {
+          "key": "效果命中",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836261,
+          "count": 2
+         },
+         {
+          "id": 717289,
+          "count": 2
+         }
+        ]
+       }
+      },
+      {
+       "id": 1103207,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 597972,
+        "name": "暴击率强化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+        "statusList": [
+         {
+          "key": "暴击率",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836261,
+          "count": 2
+         },
+         {
+          "id": 717289,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 597974,
+      "name": "暴击率强化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+      "statusList": [
+       {
+        "key": "暴击率",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920202,
+        "count": 4
+       },
+       {
+        "id": 633348,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 597882,
+    "name": "电音",
+    "descHash": "战斗开始时，立即恢复<nobr>#1[i]</nobr>点能量。",
+    "iconPath": "8762f5a57eca7307f80ff74f7788bf2028e79f6a211fa06befded6b7aca33728",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       15
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920202,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1103103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1103208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 597985,
+      "name": "效果抵抗强化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+      "statusList": [
+       {
+        "key": "效果抵抗",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836261,
+        "count": 6
+       },
+       {
+        "id": 717289,
+        "count": 6
+       }
+      ]
+     }
+    },
+    {
+     "id": 1103209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 597986,
+      "name": "效果命中强化",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+      "statusList": [
+       {
+        "key": "效果命中",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836261,
+        "count": 6
+       },
+       {
+        "id": 717289,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 597881,
+    "name": "狂热",
+    "descHash": "消灭敌方目标后，攻击力提高<nobr>#1[i]%</nobr>，持续<nobr>#2[i]</nobr>回合。",
+    "iconPath": "951244654bfaa0be6799ff34021ff54bcc9f6d5a329cf3de55748b48a2cd21a5",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.2,
+       2
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836261,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1103201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 597978,
+    "name": "暴击率强化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+    "statusList": [
+     {
+      "key": "暴击率",
+      "value": 0.026999999
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549407,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1103210,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 514036,
+    "name": "暴击率强化",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+    "statusList": [
+     {
+      "key": "暴击率",
+      "value": 0.053
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 128000
+     },
+     {
+      "id": 836261,
+      "count": 6
+     },
+     {
+      "id": 717289,
+      "count": 6
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "躯干",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "暴击率",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "速度",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+   },
+   {
+    "relicTypeHash": "位面球",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "雷属性伤害提高",
+    "propertyIconPath": "6acd635b37377d308961b26cf64a7a0ceed4e922bdf0427b620249351796ecd4"
+   },
+   {
+    "relicTypeHash": "连结绳",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "击破特攻",
+    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初次见面",
+   "text": "嗨，开拓者，我是希露瓦•朗道，贝洛伯格的机械师——当然，这是一份兴趣使然的工作，摇滚演出才是我的主业。",
+   "unlockRequirement": "",
+   "cnUrl": "d0dd14afe8a71235f947ee2046e73ccf9b3b173a84aa684bc63e907cc653e894",
+   "jpUrl": "ae685f8158d9a3072a6702782fb5a42beed458cdf97466cda845c77a73f4ab96",
+   "enUrl": "1053f064d3e72b532b2d4431cbe24fe8f6d3c2ec1a1350b02da86ee6c3527eb6",
+   "krUrl": "9a7109409b96e402e40729d8d5460d821aea73ed5dc05652981cffc9b55eb18f"
+  },
+  {
+   "id": 2,
+   "title": "问候",
+   "text": "咦，现在就要开始工作了么？",
+   "unlockRequirement": "",
+   "cnUrl": "0f08738f8f491d30e55b72d8716ae3247046344b39368b68e37b53fc32b46cb9",
+   "jpUrl": "0a4d49e74807f38bed9bf6fc89d6cfb4386b9bdb767d5be64d586ad91ccbfff4",
+   "enUrl": "13bd2b875763f39c6dec804f2b6ad8bcddd92394f8156ebcbc9ebb5d181d1921",
+   "krUrl": "bd29efef0b1c1b5ed91d38e68e1f69d72e156bd1021e584dc6fb65e4f35f7d80"
+  },
+  {
+   "id": 3,
+   "title": "道别",
+   "text": "收工收工，写曲子咯~",
+   "unlockRequirement": "",
+   "cnUrl": "abda7f498bd1881da60301873b353321eb91aa4978063ef839784e513a97c845",
+   "jpUrl": "97fabf527b31f19193099a49ecd1f718595b48336ce13324b217b1c07cfbbffe",
+   "enUrl": "26274fe439158d099e54a697d0cb36890c84739bcef78a895f70ec24578f641d",
+   "krUrl": "457afadde5d40d792e663e3d5580e10e7852d735a07c6edd99221634bb86ef00"
+  },
+  {
+   "id": 4,
+   "title": "关于自己•朗道",
+   "text": "朗道家的人，要说有什么共通之处，就是各有各的固执。",
+   "unlockRequirement": "",
+   "cnUrl": "c49549dbe997ba3720c004af59fdf42c234974b0a0b340f0578d38ccb51023f2",
+   "jpUrl": "e3758957c301ca8d6dfb620df57e08aacea0208f3c198fad9c388f51ee32b8a3",
+   "enUrl": "36752c3bfdf79a925ecb0072f6bdbbcb8698caa9b482234e8f34c7a8ab425b5c",
+   "krUrl": "4eae04558fef582c9792accfe034e46aba252fc4c5f6d65c3e68c74dc30bc3c8"
+  },
+  {
+   "id": 5,
+   "title": "闲谈•机械师的工作",
+   "text": "只有轻松随性的工作，才能保证心情愉悦，给创作带来充分的灵感~",
+   "unlockRequirement": "",
+   "cnUrl": "0da669b15b9f1cd2685947b8fcf881309d4a507f2ad4e09b00e75537277c44c9",
+   "jpUrl": "9a1bbb1d92e7ede6b5aa2a8e6d6f79974a25662b7aa55e04053f3a6437b880c9",
+   "enUrl": "bd8906c62d186b1e49456325c974f8d2d7fe1a5168d298b590fd8cf5a0b6f7e7",
+   "krUrl": "e56e06569a792fc629d91a035920efc56be5b0d6aa9c6c0f6de3f5dacc96185c"
+  },
+  {
+   "id": 6,
+   "title": "闲谈•乐队",
+   "text": "佩拉很忙，有时周末还要帮忙做义工，所以「机械热潮」基本都在晚上排练。",
+   "unlockRequirement": "",
+   "cnUrl": "b98b8a21e6072dc0102c39dd3e12f5dca6dcf8bae54583bbb5076a322f530e08",
+   "jpUrl": "8ce1ef5a410350ae2e2379ca93eee40f637ba8f9857728aaefdd84125ad2ce6e",
+   "enUrl": "2037446aa6055585b7c818d93f81b924a2fbc10baec981541b965f69447b9ab9",
+   "krUrl": "b141cb796ba3fb392d5e13a2870dc41898d148f32087f4b090204444d6215c6d"
+  },
+  {
+   "id": 7,
+   "title": "爱好",
+   "text": "摇滚是主业的话，爱好就是「工作」了吧，似乎…也没问题？",
+   "unlockRequirement": "",
+   "cnUrl": "cf4517d29d2d858456ad440a3de893953e10ac860b238038ca82f51030518e55",
+   "jpUrl": "2c67548cffd502852a231f4f30f31056183c09b8ae970708339dda8c4db404c5",
+   "enUrl": "253480ad36ca8193a55d3c63e81b45ef532ffbc9ebba374ef0f1d9263a314861",
+   "krUrl": "a2dbd3eabc83167fa8e9e9adf8eb94757a90bbec9bb17d7889833cee5a42f9db"
+  },
+  {
+   "id": 8,
+   "title": "烦恼",
+   "text": "总有人问我机械屋停业怎么赚钱的问题，这答案难道不是显而易见——不赚钱啊。",
+   "unlockRequirement": "",
+   "cnUrl": "3888d94784a90c1b159e7c06d1018171631a21e73ecfd9ccebca950a49c42763",
+   "jpUrl": "c5f7627c4be5da9f8e27fea3e0be93fea5a2c5e2f9f850e617dc7b4a3ee00e0e",
+   "enUrl": "792a3776f10e928cd4a5b89bcf1e334fbafb57254db6cfa34268f005c929b636",
+   "krUrl": "f2153a1a83b4c176f798a3a4f54badddf90fe156747b8f42abd6d2f882cec275"
+  },
+  {
+   "id": 9,
+   "title": "分享",
+   "text": "不管是机械、科研还是音乐，我好像每样都很精通喔？啊，所以…我不擅长的事，只有「赚钱」了吧？",
+   "unlockRequirement": "",
+   "cnUrl": "cc7dcf1a08ba3739db036b4d42a2195a9504291a884eb17305990c6ff41f413c",
+   "jpUrl": "bb09950c65a85455c48d46733a1516a35eeb2595954ec4f72d6e159eb8a55f43",
+   "enUrl": "b1ab3cd349243f99fa36aac675d0ab511f747dda626ecbdcadaedb73a8792fbf",
+   "krUrl": "3ae53a95db67cc63e03f2f2e76e0c4b56ee920d0ab12f489361a4f6445771b21"
+  },
+  {
+   "id": 10,
+   "title": "见闻",
+   "text": "你说，等布洛妮娅当上大守护者了，能不能让我上黄金歌剧院的舞台上表演？我给她改编一首摇滚版的《大守护者》…摇滚音乐剧！",
+   "unlockRequirement": "",
+   "cnUrl": "fae97bcbe0a632c6934b80227929a6c4547391353321d1c0f0ed1c03e3e28709",
+   "jpUrl": "7774c33d8ce0ed5509d65ea5cb70fdb65b187c746e862dbbabdf183e162b82bd",
+   "enUrl": "1b0d05111d8ad0a76d1b7272d433316ca81f6be4eb29eaa50acea29d639a8165",
+   "krUrl": "8af49728bc8ee1991c9fa36d8cc614c2f2ac55f627b3e1e15ed1d0ce5bdcc763"
+  },
+  {
+   "id": 11,
+   "title": "关于杰帕德",
+   "text": "老弟要是能对自己的事上心一些就好啦，免得姐姐我来替他操心…算啦算啦，我让他操心的事也不少，就这么扯平吧。",
+   "unlockRequirement": "",
+   "cnUrl": "dff755f9f7c57872eeee04e6bfe96f3e2b8a63c562d10c7230c0c2067b48517d",
+   "jpUrl": "a17aa6baecf6a336868b00c0fbc29da3dd0b5b28b80f8f156ecfdca436bd47e3",
+   "enUrl": "aa91989df97e5a50a247ce7121829e28423c04756ac1dc2d32a0706a9945359d",
+   "krUrl": "cd9dad67f4ae39bba263159b55e3c41ffe98e5791edc418734b7f0f402ba3042"
+  },
+  {
+   "id": 12,
+   "title": "关于佩拉",
+   "text": "会打鼓会养花会写报告，这世上还有比佩拉更靠谱的好姑娘吗？",
+   "unlockRequirement": "",
+   "cnUrl": "3e2459b9ee5b754e06822b43894623634ff0cd796800eb6bbc6eb3164d5d6fc4",
+   "jpUrl": "5cc3c3c029b90a8ce2a62dd88f960890bd427a06107a5f045712bf5f82be72ca",
+   "enUrl": "29439049e2dcb8a997d45c84c70e737b56455c4decc75ce6ffe7204dfe0b7c41",
+   "krUrl": "38e099d84e797c9d329d33516488d242b1b9b462922c5a823199d7994fe6e6a7"
+  },
+  {
+   "id": 13,
+   "title": "关于布洛妮娅",
+   "text": "布洛妮娅是个好孩子，不愧是可可利亚教育出来的。最近不太见面了，我还挺想她的。",
+   "unlockRequirement": "",
+   "cnUrl": "68a9625234cb52d2fbfab17572805b47c167dfa270a39f3d127624709fdb2758",
+   "jpUrl": "6e5fa104782e4aae2fee4f7f8117a4660aed7ca31c671500145e3002a14368c3",
+   "enUrl": "94a9ac990eec4043cd371a91565622dee6dae9a622f41484f8f9096c8a798ff4",
+   "krUrl": "eb4ac0a27feefe06770bfb21ca8dad08f9222f205b9456aa0b949d0189fa59a3"
+  },
+  {
+   "id": 14,
+   "title": "关于可可利亚",
+   "text": "我认识的可可利亚会去屋顶上听我唱歌，但…「大守护者」不会。",
+   "unlockRequirement": "",
+   "cnUrl": "0b98ec2544c12f76b040aa3667a8d15428b86e0c666bb248f6c0e913137924c6",
+   "jpUrl": "5538afae26c58d145279bf43f2d7e0823cde6e2d7f00defdcd2a0bb474c282fe",
+   "enUrl": "b9f38d69c39ba9e3b1146f0e528e4d1b94cd0d518702a2c7879d4c68c315e414",
+   "krUrl": "2ac104ad7198e06f0f92cd8ad27006a71a1bbdeb24dbc8a227fd7fa48d4a9f88"
+  },
+  {
+   "id": 15,
+   "title": "关于桑博",
+   "text": "他嘛，我就等着老弟什么时候能逮着他。",
+   "unlockRequirement": "",
+   "cnUrl": "874dbfc2c53a0235b15c8d541cb91bb2a727ec23819cf60fd29481675b46dcda",
+   "jpUrl": "cf0986811861d624979f014394e75df3a3867df7bafbb7bd2112f8910947a697",
+   "enUrl": "594321626bbbc1bed8acffe4e3d1a3fc3488909fcabd465a755c75ae28c1d068",
+   "krUrl": "aa8685e137dd043014b2ecb0da06a14bac3debce693d72fda9dcec261adea648"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "角色详情",
+   "text": "自由叛逆的朗道家长女，曾是可可利亚的挚友，如今是兴趣使然的机械师。<br />在永冬的贝洛伯格经营着名为「永动」的机械屋，时不时停业举办摇滚露天演出。<br />如果有人过问机械屋怎么赚钱…「这是兴趣，亲爱的，我不缺钱。」",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "角色故事·一",
+   "text": "这位正是全贝洛伯格最天才的机械师兼摇滚明星、银鬃铁卫戍卫官杰帕德•朗道的姐姐……<br /><br />「停，打住。前面的可以留着，后半句就免了吧。」<br />「劝你别这样简单概括我的身份…我，希露瓦•朗道，从来都不是任何人的附属品。」<br /><br />「…呃，没下文了吗？行吧，那我自己再补充点：有什么东西坏了的话——你可以来行政区的机械屋『永动』找我，我随时欢迎。」<br />「什么，想来听摇滚？嘿，那我可更欢迎啦——你还是可以来行政区的机械屋『永动』，和『机械热潮』一起，让这座城市燥起来吧！」",
+   "unlockRequirement": "角色等级<nobr>20</nobr>解锁"
+  },
+  {
+   "title": "角色故事·二",
+   "text": "希露瓦•朗道在贝洛伯格行政区中心拥有一处地产——机械屋「永动」——名义上，她在此处靠机械维修营生。<br /><br />但确切地说，这位天才机械师的工作时间几乎被都用来修理改造各种乐器……<br /><br />「哎，你可别听这杂志上乱讲啊！姐姐我可是有正经生意的……」<br />「小到地髓供暖器，大到汽车引擎，甚至是铁卫制式的自动机兵，维修起来都是小意思；另外，除了常见设备的维修翻新，我还能提供新功能附装的服务！」<br />「比如说，为推雪机增加外悬挂钻头、为烤面包机加装弹道计算装置…之类的。」<br /><br />「啊？你问生意怎么样？嗐，别打听那么多——知道我能在填饱肚子之余玩玩音乐就行啦。」<br />「反正，我是从来没打算卯着劲挣钱…人生苦短，有时间还不如多搞搞自己的兴趣爱好。」",
+   "unlockRequirement": "角色等级<nobr>40</nobr>解锁"
+  },
+  {
+   "title": "角色故事·三",
+   "text": "希露瓦得以重拾过往的音乐爱好，是在她与朗道家彻底割席后。<br /><br />于是，这远近闻名的机械屋便成为她尽情摇滚的根据地——虽然屡遭投诉，但这种产自寒潮前的先锋艺术还是受到大批跟风的年轻人追捧……<br /><br />「我真是…服了！你们这些杂志小报的所谓『音乐评论家』，能不能中肯一点啊！什么『屡遭投诉』？什么『跟风的年轻人』？我和我的粉丝们可不答应！」<br />「哎，不过我们『机械热潮』特别受年轻人喜爱倒是真的——大家在这个年纪，要么是满腔热血、要不就是怀才不遇……」<br />「无论是哪一种情绪，总归是要发泄出来才行嘛。而我的『摇滚』恰恰就是最好的解决方案啦！」<br /><br />「…就像我当年做的那样。」<br />「嗐，没事没事！你放心，我只是突然想起过去的事情了……」",
+   "unlockRequirement": "角色等级<nobr>60</nobr>解锁"
+  },
+  {
+   "title": "角色故事·四",
+   "text": "过去，人人都知道希露瓦•朗道曾是银鬃铁卫军中最聪慧的大脑——有关朗道家天才大小姐的诸多传闻中，有八成都与这件事相关。<br /><br />然而，就在数年前的某天，这些传闻几乎是在顷刻间便被新的流言取代：素来与大守护者交往密切的她为何毫无预兆地被开出军队？希露瓦又是否对此怀恨在心？人们对此众说纷纭。<br /><br />「第一个问题的答案很简单——无可奉告。这事关银鬃铁卫的最高机密，希望能你们体谅一下。」<br />「至于第二个问题嘛……」<br /><br />「我…我是完全不在乎啦。你想啊，能名正言顺地过上这样悠闲的生活，还有比这更爽的事吗？倒不如说是那女人帮了我一把——我还得谢谢她呢！」<br />「这个世道，不如及时行乐…个屁啦。」<br /><br />「既然末日已经注定，哪有什么真正的乐子可言。」",
+   "unlockRequirement": "角色等级<nobr>80</nobr>解锁"
+  }
+ ],
+ "archive": {
+  "cvCn": "穆雪婷",
+  "cvJp": "愛美",
+  "cvKr": "민아",
+  "cvEn": "Natalie Van Sistine",
+  "camp": "贝洛伯格"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "serval"
+}

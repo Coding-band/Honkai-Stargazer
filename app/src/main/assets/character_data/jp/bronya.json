@@ -1,0 +1,2372 @@
+{
+ "name": "ブローニャ",
+ "spRequirement": 120,
+ "rarity": 5,
+ "descHash": "ベロブルグの「大守護者」の継承者。 姫としての高貴さと、軍人としての堅実さを兼ね備えている。",
+ "iconPath": "879c32651bb4bfdb65cb21106775fec38cdbb78182e5990075684c6fdd9e4203",
+ "bgPath": "e57cf98c24b0cc0a2f94518809c9c9dbb7e385260427d58cda64ee2fad810c1e",
+ "figPath": "c22dfae7568a1d31d238ad50ad01c6226d04d58e8b7346def94044b4f70cdcae",
+ "fgPath": "65e49ee3a665e199ef715fd786505bd391cb2c10dab627b3bd8001f399f91edb",
+ "artPath": "409f4e40234348f6545d322934289836a77025a8bbb6d2bb1062ee032f77c1eb",
+ "miniIconPath": "8ac0c4431202cbbafa651660036fa49a15e1c14ca2674c18e9a60ee904db31ca",
+ "splashIconPath": "055b8bcad58b75e935ef230e8f98214812101765b2106f9051aca37ca7dd2b38",
+ "damageType": {
+  "id": 16,
+  "iconPath": "a77d91df3b1045f9fa66ce1300c4d921c0f89e51135df8208904334e8a0f0b80",
+  "color": "#00FF9C",
+  "name": "風",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "635d8139b8f487db38f821f15a8b67f9e3c83a06071567b67770b9ca462c237e",
+  "altIconPath": "25e370b70daf67ebcfb8c270316852f47bd3e32b3459b4c8c5ca206da4c7860b",
+  "color": "#FFFFFF",
+  "name": "調和",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 4,
+  "iconPath": "aee7f899a278735eda2872652cca14dc6b4c74c9f5689a59bbf33fa00b64ed44",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "運命の足跡",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "幾度の敗北があなたに勝利をもたらし、一歩一歩の前進があなたを運命の転換点へと導いた。",
+   "purpose": "軌跡素材",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」ポイント報酬",
+    "ナナシの勲功",
+    "エンバー交換",
+    "期間限定イベント報酬"
+   ]
+  },
+  "267805": {
+   "id": 267805,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "822b1e8c023333b210f71f503cce58516c58ffc4f47c709a4ba4bc03387fdd68",
+   "name": "暴風の眼",
+   "desc": "ストームが残した矢じり。風属性キャラクターの昇格素材。",
+   "lore": "裂界が、ある種のヴォイドレンジャーを模して創ったモンスターが残したもの。螺旋気流の中心に、微かに矢じりが見える。<br /><br />「裂界で死んだ者は、裂界で蘇る」",
+   "purpose": "キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/267805",
+   "comeFrom": [
+    "凝滞虚影「リベットタウン」",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "守護者の悲願",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "この仮面と一緒に、1人の守護者の歪んだ願いも砕け散った。<br />彼女は常冬の終末の中で民の未来を切り開くことを志したが、より壮大な意思に操られる傀儡となってしまった。<br /><br />「大守護者。ベロブルグの統治者が代々受け継ぐ称号であり、すべての市民を見守る者——だが人々は知らない、彼女たちを見守る人はいないということを」",
+   "purpose": "軌跡素材",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "歴戦余韻「常冬峰」"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "漫遊指南",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>20000</nobr>獲得できる。",
+   "lore": "世界を渡り歩くためには欠かせない、冒険手引き集。閲覧キーを押すと、電子音声が理解可能な言語で、有名な冒険者たちが様々な世界で体験したことや、彼らが色々な星で得た貴重な知識を語り聞かせてくれる。<br /><br />「漫遊指南最新シリーズ『スペースグルメガイド』が現在発売中。ぜひお買い求めください」<br />「投稿の際は、博識学会共感覚ビーコンのオペレーター<nobr>23</nobr>θにお繋ぎください。原稿料はあなたが普段から利用している方法でお振込みいたします」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "「忘却の庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "冒険記録",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>5000</nobr>獲得できる。",
+   "lore": "綺麗に装丁された、一目でためになるとわかる冒険日誌。冒険に関する細かい描写、価値のある情報、サバイバル術が書かれている。<br /><br />「なんで数字化してデバイスに保存しないの？持ち歩きやすくなるでしょ」<br />「お前が思っているより、先進技術は恒星嵐や中性子噴出に弱いんだ。なにより、この本の制作者は、最も簡単な方法で人々に読んでもらいたかったんだろう」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "デイリー訓練"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "旅の見聞",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>1000</nobr>獲得できる。",
+   "lore": "旅の出来事を記した日記。字はかすれており、不鮮明。思うままに内容が書かれてあるので、あまり助けにはならないだろう。<br /><br />「読み終わったら早くその紙切れを捨てるのよ、丹恒？」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "依頼報酬"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "2901efa774991b0ce2037520ce85ff99af64f37ee6364ffda560278736df6a19",
+   "name": "シルバーメインの釦",
+   "desc": "シルバーメインの兵士が装着する飾りボタン。強化に必要な簡易素材。",
+   "lore": "雨や霜に晒された痕跡がある。<br /><br />「古い時代、シルバーメインには一つだけ引退する方法があった、それは死ぬことである」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "シルバーメインなどの敵がドロップ「郊外雪原」",
+    "永冬の災影などの敵がドロップ「残響回廊」",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "042dc7973ef7c36858a4aa58ef7d32335f528b3c4bc4f0c4ce2e7f401039a7c5",
+   "name": "シルバーメインの記章",
+   "desc": "シルバーメインの隊長が装着する軍の階級章。強化に必要な普通素材。",
+   "lore": "家族に自慢するための証拠品かもしれないし、幸運にも弾丸を防いだお守りかもしれない。<br /><br />「時代は変わった」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "シルバーメインなどの敵がドロップ「「郊外雪原」（均衡Lv.2以上）",
+    "永冬の災影などの敵がドロップ「残響回廊」（均衡Lv.2以上）",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "635670": {
+   "id": 635670,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a327a767852b95b69b5d25ec4abc08aa0a548455bcf70fa743c6b9acc9356a38",
+   "name": "調和のハーモニー",
+   "desc": "誰が作ったのかわからないオルゴール。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">調和</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "軽快で明るい民謡が流れる。<br />非常にシンプルな曲調だが、音楽的素養がある人なら、この曲が実力のある巨匠によって作曲されたものに違いないと理解できるだろう。<br /><br />「さあ！みんなで手を繋ぎ、踊りましょう！」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/635670",
+   "comeFrom": [
+    "疑似花萼「機械集落」"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "name": "シルバーメインの勲章",
+   "desc": "手柄を立てたシルバーメインが装着する勲章。強化に必要な高級素材。",
+   "lore": "「隙」の魔物、地下民に立ち向かい、災いを乗り越えた後に授与された名誉の証。<br />これは功績者の胸に掲げられることより、その人の棺桶の上に置かれることの方が多い。<br /><br />「それはおもちゃじゃないわ、ジェパード。覚えておいて、これがランドゥー家の使命、ランドゥー家の血なのよ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "シルバーメインなどの敵がドロップ「「郊外雪原」（均衡Lv.4以上）",
+    "永冬の災影などの敵がドロップ「残響回廊」（均衡Lv.4以上）",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "836256": {
+   "id": 836256,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e0a98987f6f4c66f28c5b9b79a757e590ae649d0e44ec47ada0ec1bac39e78fa",
+   "name": "群星の楽章",
+   "desc": "誰が作ったのか分からないオルゴール、非常に複雑な構造をしている。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">調和</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "魂を震わすコズミックシンフォニーが流れる。<br /><br />「一部の天文学者は、天体が複雑な構造をした機械のように動いているとし、星々が動く時、水晶のように煌めく旋律が聞こえると主張する。それが『天体のシンフォニー』である」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/836256",
+   "comeFrom": [
+    "疑似花萼「機械集落」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  },
+  "920197": {
+   "id": 920197,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "2e991dc7b3d976ae72c1f7dfcc0cfb1ff4c33223d33db5479a3dcd8d039ffa1a",
+   "name": "ファミリー賛歌",
+   "desc": "誰が作ったのか分からないオルゴール。<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">調和</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "小楽団が歌う讃美歌が流れる。<br />讃美歌が讃えているのはどの神なのか？今となってはもう考証できない。<br /><br />「もし私が貧しく卑しいのなら、それは神が与えた試練である！もし私が富に満ち足りていたのなら、それは神が与えた恩恵である！」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/920197",
+   "comeFrom": [
+    "疑似花萼「機械集落」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549407,
+     "count": 5
+    }
+   ],
+   "attackBase": 79.2,
+   "attackAdd": 3.96,
+   "hpBase": 168.96,
+   "hpAdd": 8.448,
+   "defenseBase": 72.6,
+   "defenseAdd": 3.63,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 99,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549407,
+     "count": 10
+    }
+   ],
+   "attackBase": 110.88,
+   "attackAdd": 3.96,
+   "hpBase": 236.544,
+   "hpAdd": 8.448,
+   "defenseBase": 101.64,
+   "defenseAdd": 3.63,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 99,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633348,
+     "count": 6
+    },
+    {
+     "id": 267805,
+     "count": 3
+    }
+   ],
+   "attackBase": 142.56,
+   "attackAdd": 3.96,
+   "hpBase": 304.128,
+   "hpAdd": 8.448,
+   "defenseBase": 130.68,
+   "defenseAdd": 3.63,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 99,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633348,
+     "count": 9
+    },
+    {
+     "id": 267805,
+     "count": 7
+    }
+   ],
+   "attackBase": 174.24,
+   "attackAdd": 3.96,
+   "hpBase": 371.712,
+   "hpAdd": 8.448,
+   "defenseBase": 159.72,
+   "defenseAdd": 3.63,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 99,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717289,
+     "count": 6
+    },
+    {
+     "id": 267805,
+     "count": 20
+    }
+   ],
+   "attackBase": 205.92,
+   "attackAdd": 3.96,
+   "hpBase": 439.296,
+   "hpAdd": 8.448,
+   "defenseBase": 188.76,
+   "defenseAdd": 3.63,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 99,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717289,
+     "count": 9
+    },
+    {
+     "id": 267805,
+     "count": 35
+    }
+   ],
+   "attackBase": 237.6,
+   "attackAdd": 3.96,
+   "hpBase": 506.88,
+   "hpAdd": 8.448,
+   "defenseBase": 217.8,
+   "defenseAdd": 3.63,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 99,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 269.28,
+   "attackAdd": 3.96,
+   "hpBase": 574.464,
+   "hpAdd": 8.448,
+   "defenseBase": 246.84,
+   "defenseAdd": 3.63,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 99,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "f76fc71fe532ff644df5522a6541d5970783fbeeb04c4f11b29fa344e2eb36ae",
+   "name": "英気を養う",
+   "descHash": "戦闘スキルを発動した時、<nobr>#1[i]%</nobr>の固定確率でSPを1回復する、クールタイムは1ターン。",
+   "params": [
+    0.5
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "43746abe73215a5325802ea470ca97170943c151f38823f0f8d73888c4a08898",
+   "name": "急行軍",
+   "descHash": "戦闘スキルを発動した時、指定された味方は行動した後に速度+<nobr>#1[i]%</nobr>、1ターン継続。",
+   "params": [
+    0.3
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "986959668883d50b9a6632a24d6bc0ce671bea47de2221c48c98389ce76b6152",
+   "name": "一斉射撃",
+   "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "8a624bd9da254480123bcf3b1ca27f1f89a0f1d04702d8df44094dfc69fe293a",
+   "name": "不意打ち",
+   "descHash": "他の味方が、弱点が風属性の敵に通常攻撃を行った後、ブローニャは追加攻撃を発動し、その敵に通常攻撃のダメージ<nobr>#1[i]%</nobr>分の風属性ダメージを与える、この効果はターンが回ってくるたびに1回発動できる。",
+   "params": [
+    0.8
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "36052e2484e82b6621315cea8235494fc3fceebfabc62d18efa4842fe214d792",
+   "name": "向かう所敵なし",
+   "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "7e64c42ea80c261f077c7b6ee1fddf7974d68fce70df4ad892b8e6fc37dbfbc6",
+   "name": "気勢貫天",
+   "descHash": "戦闘スキルが付与する、指定した味方の与ダメージアップ効果の継続時間+<nobr>#1[i]</nobr>ターン。",
+   "params": [
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   635672
+  ],
+  [
+   920199
+  ],
+  [
+   836258
+  ],
+  [
+   351145
+  ],
+  [
+   435086
+  ]
+ ],
+ "skills": [
+  {
+   "id": 635672,
+   "name": "疾風の弾丸",
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体にブローニャの攻撃力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与える。",
+   "typeDescHash": "通常攻撃",
+   "iconPath": "71c81ecfb436d5e7f326d39471b3c2f190ec56300a71bd4e1f97640a8dbd3f47",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635670,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920197,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920197,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836256,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836256,
+       "count": 8
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 920199,
+   "name": "作戦再展開",
+   "tagHash": "サポート",
+   "descHash": "指定した味方単体の<u>デバフ</u>を1つ解除し、その味方を直ちに行動させ、与ダメージ+<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>、<nobr>#3[i]</nobr>ターン継続。<br />自身に対してこのスキルを発動した時、即時行動の効果は発動しない。",
+   "typeDescHash": "戦闘スキル",
+   "iconPath": "1c0b1d3bbd2b7376e6934f4ae327361d80d54137a5f16ccbe5830eabf235ffe0",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.33,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.363,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.396,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635670,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.429,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920197,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.462,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920197,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.495,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920197,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.53625,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836256,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.5775,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836256,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.61875,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836256,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.66,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836256,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.693,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.726,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.759,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.792,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.825,
+      0,
+      1,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 836258,
+   "name": "ベロブルグ行進曲",
+   "tagHash": "サポート",
+   "descHash": "味方全体の攻撃力+<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>、会心ダメージがブローニャの会心ダメージの<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>+<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>アップする、<nobr>#4[i]</nobr>ターン継続。",
+   "typeDescHash": "必殺技",
+   "iconPath": "97459612506624e7a1ea8dbc485b2fede3ab5c7b5dab887c41594cd6b92bad2f",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.33,
+      0.12,
+      0.12,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.352,
+      0.124,
+      0.128,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.374,
+      0.128,
+      0.13599999,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635670,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.396,
+      0.132,
+      0.144,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920197,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.418,
+      0.13599999,
+      0.152,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920197,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.44,
+      0.14,
+      0.16,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920197,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.4675,
+      0.145,
+      0.17,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836256,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.495,
+      0.15,
+      0.18,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836256,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.5225,
+      0.155,
+      0.19,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836256,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.55,
+      0.16,
+      0.2,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836256,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.572,
+      0.164,
+      0.208,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.594,
+      0.168,
+      0.216,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.616,
+      0.172,
+      0.224,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.638,
+      0.176,
+      0.232,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.66,
+      0.18,
+      0.24,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  },
+  {
+   "id": 351145,
+   "name": "先人一歩",
+   "tagHash": "強化",
+   "descHash": "通常攻撃を行った後、ブローニャの<u>行動順</u>が<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span><u>早まる</u>。",
+   "typeDescHash": "天賦",
+   "iconPath": "af4b47219312bba33ddc3d06dec20136ae3313551cdaf78be06f76448476e39f",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.15
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.165
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.18
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635670,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.195
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920197,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.21
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920197,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.225
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920197,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.24375
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836256,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.2625
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836256,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.28125
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836256,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836256,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.315
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.345
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.375
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 551731,
+   "name": "攻撃",
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
+   "typeDescHash": "",
+   "iconPath": "71c81ecfb436d5e7f326d39471b3c2f190ec56300a71bd4e1f97640a8dbd3f47",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 435086,
+   "name": "旗の下で",
+   "tagHash": "サポート",
+   "descHash": "秘技を使用した後、次の戦闘開始時、味方全体の攻撃力+<nobr>#1[i]%</nobr>、<nobr>#2[i]</nobr>ターン継続。",
+   "typeDescHash": "秘技",
+   "iconPath": "0e1d0e8ee9e043657c77874148bdd0901db777dc33d3e5dab84437789275bfe4",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.15,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1101101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1101202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1101203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 272974,
+        "name": "ダメージ強化・風",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "fe44fb655f65017dcad0c260b4dcffe14de4b14816734239c2c60d4624cf8163",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#00FF9C;\">風</span>属性与ダメージ",
+          "value": 0.032
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920197,
+          "count": 3
+         },
+         {
+          "id": 633348,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 272973,
+      "name": "会心ダメージ強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+      "statusList": [
+       {
+        "key": "会心ダメージ",
+        "value": 0.053
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635670,
+        "count": 3
+       },
+       {
+        "id": 549407,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 272877,
+    "name": "号令",
+    "descHash": "通常攻撃の会心率が<nobr>100%</nobr>まで上がる。",
+    "iconPath": "2092bf49734665b568a478fac87adf54c7b9ad73b553081527308605fe476349",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635670,
+        "count": 3
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1101102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1101205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1101206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 272969,
+        "name": "会心ダメージ強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+        "statusList": [
+         {
+          "key": "会心ダメージ",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836256,
+          "count": 3
+         },
+         {
+          "id": 717289,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 272972,
+      "name": "ダメージ強化・風",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "fe44fb655f65017dcad0c260b4dcffe14de4b14816734239c2c60d4624cf8163",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#00FF9C;\">風</span>属性与ダメージ",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920197,
+        "count": 5
+       },
+       {
+        "id": 633348,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 272880,
+    "name": "陣地",
+    "descHash": "戦闘開始時、味方全体の防御力+<nobr>#2[i]%</nobr>、<nobr>#1[i]</nobr>ターン継続。",
+    "iconPath": "b296f3e7e18add176b9c2d4d7c88919d6a0f589d00f05f672fa369d7317c92d0",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       2,
+       0.2
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920197,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1101103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1101208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1101209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 272984,
+        "name": "会心ダメージ強化",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+        "statusList": [
+         {
+          "key": "会心ダメージ",
+          "value": 0.107
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836256,
+          "count": 8
+         },
+         {
+          "id": 717289,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1101210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 189034,
+        "name": "ダメージ強化・風",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "fe44fb655f65017dcad0c260b4dcffe14de4b14816734239c2c60d4624cf8163",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#00FF9C;\">風</span>属性与ダメージ",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836256,
+          "count": 8
+         },
+         {
+          "id": 717289,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 272983,
+      "name": "効果抵抗強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+      "statusList": [
+       {
+        "key": "効果抵抗",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836256,
+        "count": 8
+       },
+       {
+        "id": 717289,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 272879,
+    "name": "軍勢",
+    "descHash": "ブローニャがフィールド上にいる時、味方全体の与ダメージ+<nobr>#1[i]%</nobr>。",
+    "iconPath": "cee850bc7d23edfcd0e72754f7fa01f4f51d1f0ab52f0f69ed86518550f20553",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.1
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836256,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1101201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1101204,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 272971,
+      "name": "効果抵抗強化",
+      "levelReq": 0,
+      "promotionReq": 3,
+      "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+      "statusList": [
+       {
+        "key": "効果抵抗",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 10000
+       },
+       {
+        "id": 920197,
+        "count": 3
+       },
+       {
+        "id": 633348,
+        "count": 3
+       }
+      ]
+     }
+    },
+    {
+     "id": 1101207,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 272970,
+      "name": "ダメージ強化・風",
+      "levelReq": 0,
+      "promotionReq": 5,
+      "iconPath": "fe44fb655f65017dcad0c260b4dcffe14de4b14816734239c2c60d4624cf8163",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#00FF9C;\">風</span>属性与ダメージ",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 45000
+       },
+       {
+        "id": 836256,
+        "count": 3
+       },
+       {
+        "id": 717289,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 272976,
+    "name": "ダメージ強化・風",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "fe44fb655f65017dcad0c260b4dcffe14de4b14816734239c2c60d4624cf8163",
+    "statusList": [
+     {
+      "key": "<span style=\"color:#00FF9C;\">風</span>属性与ダメージ",
+      "value": 0.032
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549407,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "胴体",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "会心ダメージ",
+    "propertyIconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "速度",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+   },
+   {
+    "relicTypeHash": "次元界オーブ",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "風属性与ダメージ",
+    "propertyIconPath": "fe44fb655f65017dcad0c260b4dcffe14de4b14816734239c2c60d4624cf8163"
+   },
+   {
+    "relicTypeHash": "連結縄",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "EP回復効率",
+    "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初対面",
+   "text": "私はベロブルグ「大守護者」の後継者、シルバーメインのリーダー、ブローニャ・ランドである…今のは格式を重んじた自己紹介に過ぎない。私のことはブローニャと呼べばいい。",
+   "unlockRequirement": "",
+   "cnUrl": "cf0ec5d65d93cceef3429e0b4e4165383588e7918faa3d2c2a207f9b6fd03160",
+   "jpUrl": "92d31127c64503d8720030d7001b5a26b53a8b8d4189bd657e2e537e28912d48",
+   "enUrl": "03bb6cdfb05c087b68efc39617f7672d0cea569ec39078817a2984421f129f69",
+   "krUrl": "71db2e347b1dd3d7daec16a6b97c29042b1c6642f76fa3cb865fa4bf073333e9"
+  },
+  {
+   "id": 2,
+   "title": "挨拶",
+   "text": "昨晩、悪夢を見た…ご、ごめんなさい。まだ少し眠いみたい。",
+   "unlockRequirement": "",
+   "cnUrl": "6f40660c8885b5d20f348466f5cd00c62f2c8d31bcc2fb6957ac325c309377c4",
+   "jpUrl": "6aae5bb0160b35ff0ad5f813a0e6fc70e12e250027e0f1c86c230cd19dffdb34",
+   "enUrl": "987ab014a81dafb0161c6b21d0bbfc2b10927c464261d50de746f7c3e8ce010e",
+   "krUrl": "f68d2f30c30edf4659f8038ebc9f8c2d2bafde4da08d642821836cef80bbcafe"
+  },
+  {
+   "id": 3,
+   "title": "お別れ",
+   "text": "もう少し散歩してもいい？…遠くまではいかないから、心配しないで。また明日。",
+   "unlockRequirement": "",
+   "cnUrl": "9e85d4ee50b2022ab3187e09175855fa75be5e2a55eb29e494d67b9891250e3f",
+   "jpUrl": "77217cbce6758885a0d37e126cf6a8d7ef5933e711fd5c324e6f085268e0ff54",
+   "enUrl": "29ea778b58a4d521a7d9a4b6a8d2f6b481d8db7fb6545043022a2097a24a8bc6",
+   "krUrl": "d86071ecc0449273745ac047fc693fc0656c695692154ca3f368fc8ea7052457"
+  },
+  {
+   "id": 4,
+   "title": "自分について",
+   "text": "時々、自分が自分ではなく、ある種のシンボルだと錯覚することがある——「大守護者」を継承するのは、他の人間でも問題ない。そんな風に考えるの。この気持ちがどこから来るのかわからないけど、このままではいけないと思う。",
+   "unlockRequirement": "",
+   "cnUrl": "3311756f7a6c02702768be4e2b01f5c8fabfdcd08dc46d29bad0324b35c1ad7f",
+   "jpUrl": "59c8d58cc6b9373b2e561ca2e673094b324838a7a47aa0e66dd1cc998527de11",
+   "enUrl": "5264f21bfdc7b4e954ae52ac6b2206eab9d0041d02c7a9a006963286cab78f1c",
+   "krUrl": "55af2c717b21ae82a7c896e31e08f0ebbe1cb893a5ad12b098e45e8eefecacbd"
+  },
+  {
+   "id": 5,
+   "title": "雑談・建創者",
+   "text": "建創者は城壁を築き、私たちから吹雪を遠ざけた。でも私たちは、吹雪がまだ吹き荒れていることを決して忘れてはならない。",
+   "unlockRequirement": "",
+   "cnUrl": "5133ff7f465838a5817852fd303a5962936aaf209d09b4c7146facd087505d8b",
+   "jpUrl": "c2698438a8e713d89989bb5ecaa0f9e3b8935372c33248c15db7848917c97a5e",
+   "enUrl": "23c47ab25b7bdd0a9a5a42083a822d8574a704b499d0b271eca6df31206ddf42",
+   "krUrl": "dc401d53afddbf7f8faaa7e9239437f46775199f7fefa17c91466fda9d875d2f"
+  },
+  {
+   "id": 6,
+   "title": "趣味",
+   "text": "黄金シアターから微かに聞こえる歌声。早朝に響く慌ただしい人々の足音。夜の静かなクリフォト城。少し矛盾しているかもしれないけど、全部好ましいと思ってる。",
+   "unlockRequirement": "",
+   "cnUrl": "c2d6270a15dedd06caee797aa5a009fead37b9fde640deb9337e8f9cd4cdc91c",
+   "jpUrl": "3374894b982100263c9c1d6027468ac145f8d2012a969080121d6a5a898e310e",
+   "enUrl": "66f03a0d0b57fe97ca8ea18236cce1e0d8d9aa6b71e3a8ce85e63e35e52aef41",
+   "krUrl": "b51efe5342431cfaf131cb84519c2f235f3d5cf03a688c909a8fc1870fca6b98"
+  },
+  {
+   "id": 7,
+   "title": "悩み事",
+   "text": "悪を裁く時は、怒りを抑えて失言しないようにしている場合が多い。",
+   "unlockRequirement": "",
+   "cnUrl": "1ceacb1f2d477f2c0a5d70729253e82064e5e37c1eca616f3aac17b6e11431bc",
+   "jpUrl": "4aff692201cbf8bb5b5abc97998b54e13259ebd43da0df4177eedb9dba1ac4ba",
+   "enUrl": "2a27dd5f2fd1b83784c2c47f195bb3d51e88795b0762559ad9392178c01a4824",
+   "krUrl": "c5c4967862748799a2065817d72dff7c1764f3f33c010baaae1564b7f0b562fd"
+  },
+  {
+   "id": 8,
+   "title": "シェア",
+   "text": "前線で過ごす時間が長くなると、官邸でゆっくり休みたい願望が強くなる。でも、いざ官邸のベッドで横になると、前線の状況が心配になる…これがお母様が言う「責任」というもの？",
+   "unlockRequirement": "",
+   "cnUrl": "d42b6886efd76c29bdade3e763a46cda3d697f3e56ca215ac5c37c0a7673c074",
+   "jpUrl": "d4485238be42a519ec6e2a81854145ea56fa78d7d83c75bbd5ce5a47d30226b2",
+   "enUrl": "a51d731a779bdf3f05fada6b0240b28a436e06d4c68c24d9539ea5846629293d",
+   "krUrl": "6971b62614345eeae793e59a32b1bbd327376c503dbaa103959c6ca0ab8a1279"
+  },
+  {
+   "id": 9,
+   "title": "見聞",
+   "text": "「太陽の日」は春分を祝うための祭日だった。でも、今のベロブルグの人々にとっては、ただの休暇に過ぎない…私は「太陽の日」の本来の意味を取り戻したいと思っている。",
+   "unlockRequirement": "",
+   "cnUrl": "5dbc66851ff21a062af3a0393ab9a6501815e135cb87c40cd6a97e7b0a4cb21e",
+   "jpUrl": "c7ccec1b14a0ede8d862fbf5df8398249606d9de1be9225fca0dcdfad6b2b14a",
+   "enUrl": "2cc7a0df5e4d620462ebebe7a26baa5edea83d50143da9e64b7fd708b1dfda14",
+   "krUrl": "0e1c5f729de2251ab6d0971dbd308e02862a2d6338a15dc0b111c8394bf1bb47"
+  },
+  {
+   "id": 10,
+   "title": "ジェパードについて",
+   "text": "ジェパード戍衛官…彼は、ベロブルグの鉄壁と表現しても過言ではないと思う。ここでは、「守る」ことは「攻める」ことより遥かに難しい。",
+   "unlockRequirement": "",
+   "cnUrl": "77b1303d805f6470350d03b74b3abb178c6cb6f2eae6b303f59ef4d2b5a8223d",
+   "jpUrl": "70a5ed88dec5ffb422b72916abc25a017d1774a4702a15dd3dd465a5762909f4",
+   "enUrl": "9e07cab37de890e7a6e1ed3c349657b89629894e02954fe911ee38b109a17812",
+   "krUrl": "2584ea8a405a20539da54c83e07b1710778c8fd85037d451719d77b9f2ab34ea"
+  },
+  {
+   "id": 11,
+   "title": "セーバルについて",
+   "text": "昔の話だけれど、お母様たちが会議を行う際は、私も出席を許されていたの。セーバルさんはいつも、私の疑問に対して丁寧に答えてくれた…あの日々はもう、遥か遠くの出来事のように思える。",
+   "unlockRequirement": "",
+   "cnUrl": "37b982b2b17f48bf9ab98da1d8ed3e1038fd312c59507184032b61fa0aa2655f",
+   "jpUrl": "3cada34457b9b9d075fa4d307879471a91f75e8a15a10f2f52cb804351167862",
+   "enUrl": "3a1ca99da9118b27a6cc3d5e0faad17565f3a4a169215dbd0b36da8a1afe5447",
+   "krUrl": "d7ecea75230de1c0f32a1fa4ca84d3a1bbfdf9bb5b40dd1a22795ed07ec67ea1"
+  },
+  {
+   "id": 12,
+   "title": "ペラについて",
+   "text": "彼女は私から褒められるたびに、必死に嬉しさを表情に出さないようにしている…理解出来て当然でしょ？私も同じような練習をしたことがあるもの。",
+   "unlockRequirement": "",
+   "cnUrl": "271d598790f78403a6f13468a4772b651a1c3f1bcbf2142d832a5ade2cabea77",
+   "jpUrl": "2d5e89c6ddef64437e1eb9745ac2d47f4354d3282b0f7717d5e9b512a4b32400",
+   "enUrl": "f306f24e236634ae33fe0550fdc84523d53f24dd3fee0778e1716616e0ec2ef7",
+   "krUrl": "26ad46ad3ec8c16c39f82f7d7f43b0f729e7cf628bc453b8bf8d41870247a075"
+  },
+  {
+   "id": 13,
+   "title": "カカリアについて",
+   "text": "私はお母様を尊敬している。ただ、私の記憶にあるお母様とは違っていて……あるいは、私が勝手にお母様の姿を作り上げていたのかもしれない……",
+   "unlockRequirement": "",
+   "cnUrl": "d7bd9e45846b273b1fe1cf160786997e6cbf413cc973760571db3e1d21ad3a29",
+   "jpUrl": "dbed4f1b326b0c328c06c199c746a37ea445c84c5d632f99cab3ea3df36491d2",
+   "enUrl": "60ac582d7220f149bf179aeb8006eef8118f4787007b59f6c54db60b03aac70f",
+   "krUrl": "800004b457d938d65b51da2ca10fb704a9569a2c07808b2cbb7ad457950d7caa"
+  },
+  {
+   "id": 14,
+   "title": "ゼーレについて",
+   "text": "あの出会いは本来ならばある種の災難だったのかもしれないけど、新しい未来の始まりとなった…ゼーレに聞かれたら、また道理を説いていると言われるかもしれない。",
+   "unlockRequirement": "開拓クエスト「リターンズ」をクリアした後に解放",
+   "cnUrl": "69594ee4c2b655c8a08835322c5161a652a36d6b35f2479666a3ddd966a043f5",
+   "jpUrl": "0d2337962e35a3e2785863b637b18b5899881966e37e7d484a76cbf67bf1bdee",
+   "enUrl": "79e3fd5990a089cbeb7520191bf36069718acd8b232cce07444bdf97bc7ee9dc",
+   "krUrl": "b97242e1584a60bea284d7e5500af6b9aa591106bc3396cef85e95a6b354c4dd"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "キャラクター詳細",
+   "text": "ベロブルグの「大守護者」の継承者、若く有能なシルバーメインのリーダー。<br />ブローニャは幼い頃から厳格な教育を受け、「継承者」に必要な気品と親しみやすさを身につけた。<br />しかし、下層部の劣悪な環境を目の当たりにした未来の指導者は、次第に疑問を抱くようになる……「私が受けた訓練は、本当に民が望む生活を与えられるものなの？」",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "ストーリー・1",
+   "text": "少女は幼い頃から自分の考えを隠すことを学んだ。毎日、他の子供たちと同じ石畳の上を歩き、同じ遊びをして、同じ趣味を通して交流した。しかし、彼女は決して些細で平凡な生活に溺れることはなかった——1人になれる時間があると、彼女は灰褐色の石のベンチに腰掛け、頭上の円盤によって遮られていない完全な空を想像した。<br /><br />少女は見た。働く人々の滝のように流れる汗を、そして生存の重圧が彼らの生活に対する情熱を砕くところを。その疲れてはいるが素朴な瞳を見て、彼女は困惑の沼に沈んだ。人生はこうなるように定められているのだろうか？広い空が巨大な鋼鉄の円盤に断絶されているように、彼女が憧れている自由も欠けているのだろうか？<br /><br />彼女は懸命に沼から這い出ると、埃が積もった石畳の上に、自分が一生貫こうとする理想を書き留めた。<br /><br />「この世界を…より良いものに変える」",
+   "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・2",
+   "text": "母親の膝に座っている時、彼女は少し冷たい腕で自分を優しく包み込んでくれる。それが少女に何とも言えない安心感を与えるのだ。母親は深く穏やかな声で、少女に遥か昔の民話を語り聞かせてくれた——その物語の結末は円満とは言えないが、少女はとても気に入っている。母親はとっくに彼女の好みを把握していた。円満に終わる童話は少女を退屈にさせるだけで、考えることを止めさせてしまう。そうなれば、彼女はすぐに眠ってしまうのだ。<br /><br />「お母様…どうしてグラト卿はキャサリンのように幸せに暮らせないのですか？」<br />「彼に幸せになって欲しいのか、ブローニャ？」<br />「グラト卿は善良な人です。善良な人は幸せな生活を送るべきです」<br /><br />その会話はそこで終わったが、彼女は母親が優しく笑ったことを覚えている。数年後、あのクリフォト城での暖かい午後を思い出して、彼女は当時の母親の笑顔には、無念という感情が隠されていたのかもしれないと思った。",
+   "unlockRequirement": "キャラLv.<nobr>40</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・3",
+   "text": "シルバーメインの制服を着た瞬間から、少女は一切の覚悟を決めた。しかし、彼女が初めて出席した葬儀は、想像を遥かに超える重々しいものだった。<br /><br />それは彼女が初めて軍を率いた時のことであった。北方の廃墟の中で、シルバーメインと裂界の造物は残酷な殺し合いを行った。少女は数十名の兵士を率いて、武器も食糧も尽きるまで孤軍奮闘した。緊急避難の道中、恐ろしい裂界の幻影が彼女に突然襲い掛かった——致命的な攻撃は1人の兵士が身を挺して遮ってくれたが、彼女は命の恩人の顔を見る余裕もなかった。<br /><br />葬儀のラッパが響き渡る。若い戍衛官は少女の悲しみを見て取り、彼女の傍に近づいた。<br /><br />「棺には何も入っていない。彼をベロブルグに連れ帰る余裕もなかった……」<br />「ご自分を責める必要はありません。あなたのために、この都市のために、誰もが同じように犠牲になる覚悟を持っているのですから」<br />「…私が彼の代わりになれたら、どんなによかったか……」<br />「そのような重々しい考えを呑み込むことを学ぶのも、リーダーになるために必要なことでしょう」",
+   "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・4",
+   "text": "少女は部屋の中を行ったり来たりしている。強固な門が彼女と大勢の市民の間を隔てていた。彼女はこうしたスピーチには慣れていたが、どれだけ技術が向上しようと待ち時間の不安が消えることはない。これから自分が交わす約束や、人々の心を慰めるために丹精込めて考えた言葉を思い浮かべながら、ほんの数分の間、彼女は子供時代と同じ混乱と疑惑に陥った。<br /><br />突然の風が室内の淀んだ空気を動かし、彼女の長い髪を揺らした。少女が振り返ると、見慣れた姿がこちらに向かって歩いてきた——彼女の足取りは軽く静かで、まるで色とりどりの蝶の群れのように、重苦しいホールの雰囲気を変えていく。<br /><br />「また余計なこと考えてるんでしょ？」<br /><br />蝶のような少女が意地の悪い笑顔で尋ねた。それに対して、彼女は何とも言えない笑みを浮かべる。<br /><br />「いつものこと。あなたも知っているでしょう——事前に緊張しておけば、本番で実力を発揮できるって」<br />「ふっ、ドジしないでよね。最近は骨董品たちが何か企んでるみたいだけど、アンタの弱みが掴めないって悩んでたわ」<br />「ふふ…じゃあ、あなたに彼らの面倒を見てもらわないと」<br />「あ、そろそろ時間ね。ほら」<br /><br />歯車が噛み合い、回転する鈍い音がホールに響く。少女は最後に傍にいる人を一瞥した——彼女は影の中に下がって、信頼を湛えた笑顔で頷いた。<br /><br />門がゆっくりと開いていく。暖かい光がホールに射し込み、彼女の顔を照らした。次いで、耳をつんざくような歓声と拍手が聞こえてくる——<br /><br />「行ってきなさい、ブローニャ」",
+   "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
+  }
+ ],
+ "archive": {
+  "cvCn": "谢莹",
+  "cvJp": "阿澄佳奈",
+  "cvKr": "이보희",
+  "cvEn": "Madeline Reiter",
+  "camp": "ベロブルグ"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "bronya"
+}

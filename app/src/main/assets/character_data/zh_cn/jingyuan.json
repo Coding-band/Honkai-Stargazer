@@ -1,0 +1,2429 @@
+{
+ "name": "景元",
+ "spRequirement": 130,
+ "rarity": 5,
+ "descHash": "仙舟联盟帝弓七天将之一，负责节制罗浮云骑军的「神策将军」。 师从前代「罗浮」剑首，但并不显名于武力。",
+ "iconPath": "64ae9b299da4943e1b416a3f2242abe8388cf0c94b8137638eed88b8902164be",
+ "bgPath": "ffef71b666a93c38a4e798fda8a15d0ae469c87ce8f51f9b52ebc61b1748cfbc",
+ "figPath": "013e705d04fe33417d60f9df8d2560aaecba3d9441c6756b2aee9f9eb37ca456",
+ "fgPath": "3b8f6903855819a98478fb8871eeb3d1c1bc342f9a7bc0bf1601348c39938f1e",
+ "artPath": "17fcbab3d01bbab4835aebdf1acfc48bc8bcba1bd2754bbe135026adf1fcedec",
+ "miniIconPath": "1992ce35189fdd378ea28ab9b798a4da202c5dc362ca74afbfb05956902575bb",
+ "splashIconPath": "a4bb2dc9f7ed523821e893d962c7b0b3318f4c19f74e676e079701103f50c4e6",
+ "damageType": {
+  "id": 8,
+  "iconPath": "e8e459ad283c3df43713b2d13203b3dc8c636150d0c536f38e2ad62bd72b6e83",
+  "color": "#8872F1",
+  "name": "雷",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "b9e59719a64e109bbcf97e61c2cf3c99730af37cbd230758a45d291825dbd941",
+  "altIconPath": "2711d1f5592aee2297cc8ef3a82ed4e7b6958efe02a2a79f7ea3e97246ec9837",
+  "color": "#FFFFFF",
+  "name": "智识",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 3,
+  "iconPath": "312ed1eeb6d329b90b5506b23fd487883f83124ccabedaf6cfafbb913d86c74c",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用点",
+   "desc": "星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。",
+   "lore": "「人们奔波、争斗、贸易，为的不过是个终端里显示的数字。但真正珍贵之物，公司的数字是买不到的。」",
+   "purpose": "通用货币",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "拟造花萼【大矿区】",
+    "任务奖励",
+    "委托奖励"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "命运的足迹",
+   "desc": "行迹升级的高阶素材。",
+   "lore": "一次又一次的败北成就了你的胜利，一步又一步的前进让你抵达了命运的拐点。",
+   "purpose": "行迹材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模拟宇宙」积分奖励",
+    "无名勋礼",
+    "余烬兑换",
+    "限时活动奖励"
+   ]
+  },
+  "151161": {
+   "id": 151161,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "6b4243b69df9f37fab4f6cda60edc49711505bf5c2ce0b517d6272be5df311df",
+   "name": "炼形者雷枝",
+   "desc": "「药王秘传」炼形者遗下的枪尖木枝，雷属性角色的晋升素材。",
+   "lore": "按仙舟古籍记载，修道有成者能呼来雷霆，驭使巽风。「药王秘传」自诩仙道传人，以展现旧日仙迹为凭，暗中招募信众。这截木枝上雷电萦绕，似乎证明其所言非虚。<br /><br />「凡胎皮相乃幻化，勘破我执方显真。」",
+   "purpose": "角色晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/151161",
+   "comeFrom": [
+    "凝滞虚影【迴星港】",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "漫游指南",
+   "desc": "角色的经验材料，可以获得<nobr>20000</nobr>点角色经验。",
+   "lore": "跨越诸界必备的冒险丛书。按下阅读键，充满磁性的声音将以你能听懂的语言讲述知名冒险家们在不同世界间的传奇经历，以及他们在各个星球上获得的珍贵智慧。<br /><br />「漫游指南全新书系《星际美食烹饪导览》开售在即，敬请支持。」<br />「投稿请接入博识学会联觉信标<nobr>23</nobr>θ联络员，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色经验材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "「忘却之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "冒险记录",
+   "desc": "角色的经验材料，可以获得<nobr>5000</nobr>点角色经验。",
+   "lore": "装订严整，一看就颇有教育意义的冒险札记。图文并茂地描述了冒险行动的始末、有价值的信息和生存相关的技巧。<br /><br />「干嘛不数据化放进光刻片里？便携多了。」<br />「面对恒星风暴和中子流喷发时，高科技比你想象的还要脆弱。何况，制作这本书的人一定希望人们用最简单的方式阅读它。」",
+   "purpose": "角色经验材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "每日实训"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "旅情见闻",
+   "desc": "角色的经验材料，可以获得<nobr>1000</nobr>点角色经验。",
+   "lore": "记录旅途见闻的日志，字迹漫漶不清，内容随心所欲，对你并没有太大的帮助。<br /><br />「看完了就赶紧把这堆废纸处理掉吧，丹恒？」",
+   "purpose": "角色经验材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "委托奖励"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "0c1388031133950e67459c98aad3ef2f784468e8339b131b94a4da88bbd608e3",
+   "name": "永寿幼芽",
+   "desc": "古老神物萌发的新芽，强化所需的简单材料。",
+   "lore": "仙舟长生种「无尽形寿」的源头，「丰饶」神迹的残余。无数岁月前，一位帝皇的长生妄念促成了仙舟舰队渡航天之外海，求取仙方。<br /><br />「朕欲垂化万世，国祚永延。惜乎天年有尽，人力有穷。故遣天艟九座，飙航天外，谒求仙方。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "魔阴身士卒等敌方掉落【流云渡】",
+    "魔阴身士卒等敌方掉落【迴星港】",
+    "「模拟宇宙」中敌方掉落",
+    "委托奖励",
+    "余烬兑换",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5697f106bffd77cdaac463118c2612ee69e0d906afac35a2161414374437171c",
+   "name": "永寿天华",
+   "desc": "古老神物结成的花朵，强化所需的普通材料。",
+   "lore": "仙舟长生种「无尽形寿」的源头，「丰饶」神迹的残余。历经坎坷，求药之舟谒见天颜。神明垂迹显化，建木生发。<br /><br />「新蕊月中落，天华云外香。桂馥吐纳间，鹤发换青髫。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "均衡等级2及以上魔阴身士卒等敌方掉落【流云渡】",
+    "均衡等级2及以上魔阴身士卒等敌方掉落【迴星港】",
+    "「万能合成机」- 材料合成",
+    "「模拟宇宙」中敌方掉落",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "635675": {
+   "id": 635675,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a11149500124597e50362c7c3cd94c209d1a1b48d77ce9f7dfdfac64d8840ef3",
+   "name": "灵感之钥",
+   "desc": "出现在苦思学者手中的幻之钥匙。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">智识</span>角色的命途行迹。",
+   "lore": "可以解锁被封存在意识深处的灵感。<br />抓住钥匙，即是抓住了思维中蹿闪的火花，照亮了前进的道路。<br /><br />「尤里卡！」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 2,
+   "rewardPath": "/material/635675",
+   "comeFrom": [
+    "拟造花萼【铆钉镇】"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "786a4710552f5db3cdbe821ed399429f2c61f1c0a70c89309cd3e3943a9918e6",
+   "name": "永寿荣枝",
+   "desc": "古老神物的枯荣之枝，强化所需的高级材料。",
+   "lore": "仙舟长生种「无尽形寿」的源头，「丰饶」神迹的残余。三灾过后，仙舟生灵涂炭。天人堕魔，苦厄不绝。<br /><br />「按十王司律令，凡濒陷魔阴者，将受判官勾摄，入幽狱审断。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "均衡等级4及以上魔阴身士卒等敌方掉落【流云渡】",
+    "均衡等级4及以上魔阴身士卒等敌方掉落【迴星港】",
+    "「万能合成机」- 材料合成",
+    "「模拟宇宙」中敌方掉落",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "836261": {
+   "id": 836261,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "name": "智识之钥",
+   "desc": "出现在银河绝顶天才手中的幻之钥匙。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">智识</span>角色的命途行迹。",
+   "lore": "此为受邀请者的证明，能够开启智识殿堂的门扉。<br />钥匙就在手中，但寻到它能开启的大门却比得到钥匙更为艰辛。穿越门扉之人会意识到，一经踏入将再也没有回头的可能。<br /><br />「智识不能告诉你宇宙的答案，但智识能让你明白如何提问。」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/836261",
+   "comeFrom": [
+    "拟造花萼【铆钉镇】",
+    "「万能合成机」- 材料合成"
+   ]
+  },
+  "920202": {
+   "id": 920202,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "974e6b2e34ddd65a7b7edc1e2edd1b85ffbf62d63b7318313e7f387747d83f4f",
+   "name": "启迪之钥",
+   "desc": "出现在诸界智者手中的幻之钥匙。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">智识</span>角色的命途行迹。",
+   "lore": "能够打开禁锢了真理的谜题之锁，寻获人智难以领悟的启迪。<br />无论持有者如何展示证明，身边的人却看不见钥匙的存在。有人相信这是上天的垂怜，有人以为这是精神失常的先兆。<br /><br />「我做了一个梦，梦见分子们如蛇般盘起，首尾相衔。醒来后才意识到，这不就是我一直在找的答案吗？」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 3,
+   "rewardPath": "/material/920202",
+   "comeFrom": [
+    "拟造花萼【铆钉镇】",
+    "「万能合成机」- 材料合成"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "91205616cca581bc299d91a1af94a91981d58328675779f8e66ccbaf679e5e94",
+   "name": "毁灭者的末路",
+   "desc": "行迹升级的高阶素材。",
+   "lore": "古兽的身躯虽已销殒，匣中却还囚禁着尚未死灭的意志。但只要无人打开这个匣子，它的意志就处于存在与不存在的叠加态，驱动着毁灭的引擎运行下去。<br /><br />「末日兽，战争熔炉以古兽残片为基万骸哀怨为引铸炼而成的灾厄——贯彻毁灭的同时亦渴求着自身的消亡。」",
+   "purpose": "行迹材料",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "历战余响【支援舱段】"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549504,
+     "count": 5
+    }
+   ],
+   "attackBase": 95.04,
+   "attackAdd": 4.752,
+   "hpBase": 158.4,
+   "hpAdd": 7.92,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549504,
+     "count": 10
+    }
+   ],
+   "attackBase": 133.056,
+   "attackAdd": 4.752,
+   "hpBase": 221.76,
+   "hpAdd": 7.92,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633445,
+     "count": 6
+    },
+    {
+     "id": 151161,
+     "count": 3
+    }
+   ],
+   "attackBase": 171.072,
+   "attackAdd": 4.752,
+   "hpBase": 285.12,
+   "hpAdd": 7.92,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633445,
+     "count": 9
+    },
+    {
+     "id": 151161,
+     "count": 7
+    }
+   ],
+   "attackBase": 209.088,
+   "attackAdd": 4.752,
+   "hpBase": 348.48,
+   "hpAdd": 7.92,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717386,
+     "count": 6
+    },
+    {
+     "id": 151161,
+     "count": 20
+    }
+   ],
+   "attackBase": 247.104,
+   "attackAdd": 4.752,
+   "hpBase": 411.84,
+   "hpAdd": 7.92,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717386,
+     "count": 9
+    },
+    {
+     "id": 151161,
+     "count": 35
+    }
+   ],
+   "attackBase": 285.12,
+   "attackAdd": 4.752,
+   "hpBase": 475.2,
+   "hpAdd": 7.92,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 323.136,
+   "attackAdd": 4.752,
+   "hpBase": 538.56,
+   "hpAdd": 7.92,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "bb6407724936626f9c132a0e5dda78484394b04c9b2838fa6ad4b566891ed4dc",
+   "name": "星流霆击碎昆冈",
+   "descHash": "【神君】施放攻击时，对指定敌方单体的相邻目标造成的伤害倍率额外提高，提高数值等同于对主目标伤害倍率的<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.25
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "b9a2c1830b33c850a0b13d96876b37c84ae1b3e3d0ed4fcdca58ccb50a3b39de",
+   "name": "戎戈动地开天阵",
+   "descHash": "【神君】行动后，景元的普攻、战技、终结技造成的伤害提高<nobr>#1[i]%</nobr>，持续<nobr>#2[i]</nobr>回合。",
+   "params": [
+    0.2,
+    2
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "d3c8ca2ac8364808ddbb02267368dd0b14c088752959ee472a47a3d10bb08a47",
+   "name": "移锋惊电冲霄汉",
+   "descHash": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "9e4f61dc0bc37de21a8dde311a72f2f7fe051d87659bfc8c4a56706ec59fe916",
+   "name": "刃卷横云落玉沙",
+   "descHash": "【神君】每段攻击后，景元恢复<nobr>#1[i]</nobr>点能量。",
+   "params": [
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "ee66dd2fafa88e2ab70525fa9599e74aaaaa2ce6cd79f96500605d1a12fd87e0",
+   "name": "百战弃躯轻死生",
+   "descHash": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "66f2603a1407e17533a20ec7c3cfba5360a27107b17556e08beaac13117365e8",
+   "name": "威灵有应破敌雠",
+   "descHash": "【神君】每段攻击后会使指定敌方目标额外陷入易伤状态。<br />易伤状态下的敌方目标受到的伤害提高<nobr>#1[i]%</nobr>，持续至【神君】本次攻击结束，该效果最多叠加<nobr>#2[i]</nobr>层。",
+   "params": [
+    0.12,
+    3
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   418990
+  ],
+  [
+   302345
+  ],
+  [
+   218404
+  ],
+  [
+   904103
+  ],
+  [
+   619576
+  ]
+ ],
+ "skills": [
+  {
+   "id": 418990,
+   "name": "石火流光",
+   "tagHash": "单攻",
+   "descHash": "对指定敌方单体造成等同于景元<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#c75de2;\">雷</span>属性伤害。",
+   "typeDescHash": "普攻",
+   "iconPath": "cf45b4f511a518e640d28d3e44f8fbe4ce7a1865a043180f6d42466a4a502307",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 302345,
+   "name": "紫霄震曜",
+   "tagHash": "群攻",
+   "descHash": "对敌方全体造成等同于景元<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#c75de2;\">雷</span>属性伤害，同时增加<nobr>#2[i]</nobr>段【神君】下回合的攻击段数。",
+   "typeDescHash": "战技",
+   "iconPath": "878027dd8917c05d7c3092f8dacbf9e65e2435b1f3ed15da6db14d0d6c5ddb1f",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.55,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.6,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.65,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.7,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.75,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.8125,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.875,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.9375,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.05,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.1,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.15,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.2,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.25,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 218404,
+   "name": "吾身光明",
+   "tagHash": "群攻",
+   "descHash": "对敌方全体造成等同于景元<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#c75de2;\">雷</span>属性伤害。同时增加<nobr>#2[i]</nobr>段【神君】下回合的攻击段数。",
+   "typeDescHash": "终结技",
+   "iconPath": "f0e53a3bb9b2aaacaea5d582ca0b6da93b6b216fee588cfd76b6c4a47f852bf4",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1.2,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.28,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.36,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.44,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.52,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.6,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.7,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.8,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.9,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      2,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      2.08,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      2.16,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      2.24,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      2.32,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      2.4,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 130
+  },
+  {
+   "id": 904103,
+   "name": "斩勘神形",
+   "tagHash": "弹射",
+   "descHash": "战斗开始时召唤【神君】。【神君】初始拥有<nobr>#1[i]</nobr>点速度以及<nobr>#4[i]</nobr>段攻击段数，行动时发动<u>追加攻击</u>，每段攻击对随机敌方单体造成等同于景元攻击力<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>的<span style=\"color:#c75de2;\">雷</span>属性伤害，同时对其相邻目标造成等同于主目标<nobr>#5[i]%</nobr>的<span style=\"color:#c75de2;\">雷</span>属性伤害。<br />【神君】最多累计<nobr>#6[i]</nobr>段攻击段数且每增加1段攻击段数，速度提高<nobr>#3[i]</nobr>点，行动结束后速度和攻击段数恢复至初始状态。<br />当景元陷入<u>无法战斗状态</u>时【神君】消失。<br />当景元受到<u>控制类负面状态</u>影响时【神君】也无法行动。",
+   "typeDescHash": "天赋",
+   "iconPath": "c43b75a1946b584ba59978f9c822b5f9a64f30e4af5e480db25a3a9d7d23f91f",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      60,
+      0.33,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      60,
+      0.363,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      60,
+      0.396,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      60,
+      0.429,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      60,
+      0.462,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      60,
+      0.495,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      60,
+      0.53625,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      60,
+      0.5775,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      60,
+      0.61875,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      60,
+      0.66,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      60,
+      0.693,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      60,
+      0.726,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      60,
+      0.759,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      60,
+      0.792,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      60,
+      0.825,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 703517,
+   "name": "攻击",
+   "tagHash": "",
+   "descHash": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。",
+   "typeDescHash": "",
+   "iconPath": "cf45b4f511a518e640d28d3e44f8fbe4ce7a1865a043180f6d42466a4a502307",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 619576,
+   "name": "摄召威灵",
+   "tagHash": "强化",
+   "descHash": "使用秘技后，下一次战斗开始时【神君】第1回合的攻击段数增加<nobr>#1[i]</nobr>段。",
+   "typeDescHash": "秘技",
+   "iconPath": "48a7b2d40c6d609aaaed7a6ea7c8de8c1336dc6f89ca865412b23f8ae78a9a52",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1204101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1204202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1204203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 56292,
+        "name": "攻击强化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "攻击力",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920202,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      },
+      {
+       "id": 1204204,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 56289,
+        "name": "防御强化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+        "statusList": [
+         {
+          "key": "防御力",
+          "value": 0.05
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920202,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 56291,
+      "name": "暴击率强化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+      "statusList": [
+       {
+        "key": "暴击率",
+        "value": 0.026999999
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635675,
+        "count": 3
+       },
+       {
+        "id": 549504,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 56195,
+    "name": "破阵",
+    "descHash": "若【神君】下回合的攻击段数大于等于<nobr>#1[i]</nobr>段，则其下回合的暴击伤害提高<nobr>#2[i]%</nobr>。",
+    "iconPath": "ad09ab5b01e18d37e87b4999661b4c7b7cb7a781357077da07cd476e023bb383",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       6,
+       0.25
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635675,
+        "count": 3
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1204102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1204205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1204206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 56287,
+        "name": "暴击率强化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+        "statusList": [
+         {
+          "key": "暴击率",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836261,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      },
+      {
+       "id": 1204207,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 56288,
+        "name": "攻击强化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "攻击力",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836261,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 56290,
+      "name": "攻击强化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "攻击力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920202,
+        "count": 5
+       },
+       {
+        "id": 633445,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 56198,
+    "name": "绸缪",
+    "descHash": "战斗开始时，立即恢复<nobr>#1[i]</nobr>点能量。",
+    "iconPath": "8987f2ac047783d8eb8ba71e6acea06d38c02040c83a9f90a04d37c3e45ad4d8",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       15
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920202,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1204103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1204208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 56301,
+      "name": "防御强化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+      "statusList": [
+       {
+        "key": "防御力",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1204209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 56302,
+      "name": "暴击率强化",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+      "statusList": [
+       {
+        "key": "暴击率",
+        "value": 0.053
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 56197,
+    "name": "遣将",
+    "descHash": "施放战技后，暴击率提升<nobr>#1[i]%</nobr>，持续<nobr>#2[i]</nobr>回合。",
+    "iconPath": "cea35b2ef548fded4e88a5f17abbefb2438b752a1d5836ae7682c5813172c2ca",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.1,
+       2
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1204201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 56294,
+    "name": "攻击强化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "攻击力",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1204210,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 939648,
+    "name": "攻击强化",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "攻击力",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 160000
+     },
+     {
+      "id": 836261,
+      "count": 8
+     },
+     {
+      "id": 717386,
+      "count": 8
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "躯干",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "暴击率",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "攻击力",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+   },
+   {
+    "relicTypeHash": "位面球",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "雷属性伤害提高",
+    "propertyIconPath": "6acd635b37377d308961b26cf64a7a0ceed4e922bdf0427b620249351796ecd4"
+   },
+   {
+    "relicTypeHash": "连结绳",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "能量恢复效率",
+    "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初次见面",
+   "text": "我是「罗浮」云骑将军景元。不必拘谨，「将军」只是一时的身份，你称呼我景元便可。",
+   "unlockRequirement": "",
+   "cnUrl": "80d0a57a5541f52c6136a7ce385ab5e994e5c7200f34b9c5810859bde312d4d2",
+   "jpUrl": "d47eab6829d2a8f087407bc0a81f2d4b212814d5a728011d83459d0472536c04",
+   "enUrl": "d6a0312d94219eb39d66482df0134b46a8c9d5517eaef37a592483ac8677c490",
+   "krUrl": "1c7bbada75bf893af9d06adaaed0e1d8295eea999d2e0d9273e87a6215e95746"
+  },
+  {
+   "id": 2,
+   "title": "问候",
+   "text": "来了呀，若是有什么旅行异闻，也同我讲讲吧。",
+   "unlockRequirement": "",
+   "cnUrl": "2452db280f98bcabb400cba770790dd9f04f55811054f9b5edcb926055ad5935",
+   "jpUrl": "a3fe4b904443f02abedae504ee947980e43d28dce8c44310bdef2743f3576cf2",
+   "enUrl": "2d9d7b1fb4347849c959483a77e9d914fe9645a926f8fe9143cb4746cc898011",
+   "krUrl": "75748fc90f638dcac46c608f39a6bc35cd2c335655155a8d8727203534a3affd"
+  },
+  {
+   "id": 3,
+   "title": "道别",
+   "text": "嗯，你好好休息…我还有些要务处理，恕不能远送。",
+   "unlockRequirement": "",
+   "cnUrl": "5c104dc3d7ec3331451e1e0ba1c899999401731de8c92fab5c4b4591be74888a",
+   "jpUrl": "b952ca9d2e0daea05f2fb4adb331f1107b4580fb0060db4d741cf89e9deb0460",
+   "enUrl": "c3989de287f1917e4bb92c1ce5b18d4acdb5ecc4abe3a0b5023ecc992828d96a",
+   "krUrl": "c5c856f9f218806126c2ace59483e7627bf05696610876ee6ff3d28abd9aa433"
+  },
+  {
+   "id": 4,
+   "title": "关于自己",
+   "text": "昔日仇敌或死或擒，故交好友风流云散。这么想来，我确确实实已是个「老人」了…",
+   "unlockRequirement": "",
+   "cnUrl": "300c01ac711da4db6a21263f4ee3042a68ad3b7541702025267ce1fa82836566",
+   "jpUrl": "b2566e824ee7ea6cdf3ae2fe3e825d3051c4304eafb34a875a0e536fbadd611a",
+   "enUrl": "d12bd1d15144e93457ddb5e428336ed90f919fb460bbad3614da0a5fa88a0158",
+   "krUrl": "9e251b9d0bd099f27f548febbe2c9c713a1fe8244e288b6d3730f47ab0ce4565"
+  },
+  {
+   "id": 5,
+   "title": "闲谈•弈棋",
+   "text": "善弈者无通盘妙手，人们会为一子妙手力挽狂澜而喜，却不为大局危倾而忧。",
+   "unlockRequirement": "",
+   "cnUrl": "1cc8c4fb237f07882e3c0ff6edc0695a0f5b1ce5151aec5036ee943a663669e9",
+   "jpUrl": "db544670756f74b97243d565da49a3a146eb747644d1d0f8d7a57a2eb97fb029",
+   "enUrl": "c9a07b05e242e31c317df4bf213b8055da690c01ed38f256f3bf5073fea4a1c3",
+   "krUrl": "55de126e46b4fa6262ad73c801b6cc200c07d785960fb633b7af4f88553ff5e0"
+  },
+  {
+   "id": 6,
+   "title": "闲谈•罗浮",
+   "text": "或许外来者习惯将「罗浮」简称为仙舟，但…「罗浮」不等于仙舟，「罗浮」就是「罗浮」。",
+   "unlockRequirement": "",
+   "cnUrl": "3865316d2d22d07131e759d2c0bc2712062540ee9af6da3e9486eda6a63fadc7",
+   "jpUrl": "c9fe48fb247124197bbbc6b92b2ccde52eb844ef94a5b693e0cc731e22f2f9b6",
+   "enUrl": "eab1197b7707f5c491191ac30487abfca6f5bf1a5397cb3087376401be161259",
+   "krUrl": "ea90c2986d8f131c715111e3ba96518fe935d6f2aabb9da3d31a777ca4e7da9b"
+  },
+  {
+   "id": 7,
+   "title": "爱好",
+   "text": "闭目养神。随着时间流逝，这越发不是件易事。",
+   "unlockRequirement": "",
+   "cnUrl": "6ec0e830f620e160b70bd9e9bd28c4ab2c8cbb4d034640cd5447c96d97aea1b6",
+   "jpUrl": "ca7b1669c12762f704e1bdbb75a5ca34da4dc712a93a983f52f426827ef65ce6",
+   "enUrl": "d62243f05d9575fa79b30f90ec523b5dced65f0fa04d3243cd8b041efac43668",
+   "krUrl": "f4ce9549daf0f19f65ed3ffbdfdddc172e573865c20cb3aa7d21b11a974c0b24"
+  },
+  {
+   "id": 8,
+   "title": "烦恼",
+   "text": "我平生最怕麻烦，麻烦不只分大小，还分远近。如何布局谋划，还得劳神费力哪……",
+   "unlockRequirement": "",
+   "cnUrl": "7d324a7219ad836c38a8ed78a102fd281dc2ab88b99a248ba78856ac6775bab1",
+   "jpUrl": "0a1f866568dcdf7543c255eea76b94c4b074a2fd92a5ba071c2672daa87259e2",
+   "enUrl": "2f05fd623660d1602a83e129e4877f6550dd8fb8dfe11d946d3b8a7173523f82",
+   "krUrl": "2014d5825713a158fb5dbecd005ec3cecde8cd912bfb637b399811dd1724a909"
+  },
+  {
+   "id": 9,
+   "title": "分享",
+   "text": "这尊威灵唤作「神霄雷府总司驱雷掣电追魔扫秽天君」。是从古书里看来的称谓，只是名字太长不好记，便掐头去尾简称为「神…君」。",
+   "unlockRequirement": "",
+   "cnUrl": "c537fd08e758ef5957ec946e344f2fd1f1a5adfc696f6ec58c4fd6d9e003f1ef",
+   "jpUrl": "2da39e09e7a584061b8163d162546291cabd34d1f4e111ce0deda1599aa97c84",
+   "enUrl": "a9735b666ea282e65100e8931c39307f87cc2d45a7d9f530d5a1717616618e43",
+   "krUrl": "5891c71d3edb9ebee07b94ef993abf930ac0fac845497da0e491f1682db28f46"
+  },
+  {
+   "id": 10,
+   "title": "见闻",
+   "text": "我受俗务羁扰多年，不仅对周遭事物见怪不怪，人也变得无趣。一定要说有什么见闻，便是遇见你这般云游天外之人吧。",
+   "unlockRequirement": "",
+   "cnUrl": "872ada57c0b00f76f73bb3a7383c156207eab6a5e2bdf94461653ab6e80bc8ec",
+   "jpUrl": "0e55c1215e220ad458ae7c86e87fb10f5e6fd7f2a8a28faf97a132e4dfa9e176",
+   "enUrl": "9bc426f72860e5637f62ae1dfc4d29968daef068b0d88efa2e40992a31c2513b",
+   "krUrl": "70e8c394ebd21265b8558895ac63b323ae131cc0793cc193f9e40f697d203337"
+  },
+  {
+   "id": 11,
+   "title": "关于彦卿",
+   "text": "你若当他是个孩子，他便会端起大人的架子来。你若当他是个大人，他又会露出小孩子的脾性来。",
+   "unlockRequirement": "",
+   "cnUrl": "c3326ddac6da7e1d905996c05bd95a5d146948d59768963f2911acb42a0daa5b",
+   "jpUrl": "1d1e7ed1216eccda57b24d5c9f7f978f6a51a4eeed7e5f538a21cbb5c61dc6ef",
+   "enUrl": "a5525651791027d928d37473e9cbde516dc58188b1bb4a9f9b4b3df657152662",
+   "krUrl": "af6421bdc3f4ae4c5872a34dd17cceb2b102188d811e49a218370b7f010e85b3"
+  },
+  {
+   "id": 12,
+   "title": "关于符玄",
+   "text": "符卿的心思我明白，所以还得多让她等一等，她要是有耐心等下去，便到时机了。",
+   "unlockRequirement": "",
+   "cnUrl": "e43e67c82a391b2b22ada506afefa29de704842df2f83714e885453699b6abb3",
+   "jpUrl": "9bc686af3b9bbd6b1bf22d0fdff4a55c9de9cf356e2ceb21cebf8f749bfbc5e4",
+   "enUrl": "4aebcb66e940f4d79e68019996da501385c388fbe3994ed4813c412abb143bd2",
+   "krUrl": "321f4194f32cdc19e521ffb6ee4d08e658eaf9bd7fe32700d2fed4239d17b4db"
+  },
+  {
+   "id": 13,
+   "title": "关于驭空",
+   "text": "人人都当驭空司舵是退休了…殊不知她在放下最热爱的飞行后，选择了另一条更艰难的道路。",
+   "unlockRequirement": "",
+   "cnUrl": "2ae80aae77930e53aa32ffcdafc35c1ffaa9ca85bd99cccab886db5aeb60fecc",
+   "jpUrl": "27155476f35911f500af0550142fed4174d6d485dceba11016b6e8b994d96fb6",
+   "enUrl": "24168c5cf5ddbe076c2e3a1876f878491c5303202bc41d16cc6df6e6d6899485",
+   "krUrl": "b469a0891190fcbf2b749e31292928c4b56bb983a0782ad1e20b1394cf886783"
+  },
+  {
+   "id": 14,
+   "title": "关于停云",
+   "text": "正是像停云小姐这样的接渡使往来周旋，仙舟的贸易才能有如今的繁盛。",
+   "unlockRequirement": "",
+   "cnUrl": "9ac4ef22d307ce33419e2a5be24a7b0322212253c17ad64074e233741c59b39b",
+   "jpUrl": "8fbe00b17a9e332e6c15240e98f45bf77f896913bcbd9a9fa897bffacd721fb5",
+   "enUrl": "cd1672dd0ebdd704eaadd6ca38d7b16bfc7367141fe2fb6302663648444d4513",
+   "krUrl": "42a23a9dd556d5f1528fad52ab4c384d4e052e50446bf4e17eca9f65a8ae4a1c"
+  },
+  {
+   "id": 15,
+   "title": "关于罗刹",
+   "text": "我也见过不少行商，但你不觉得，像他这般不急于做成生意的行商并不多么？",
+   "unlockRequirement": "",
+   "cnUrl": "c311f1c4ec7b4779228e4dd24643521aa85f5ca100ca28d7783e0fed2adf4c3f",
+   "jpUrl": "1dd5c54139d3d1f818575045d479c77fae1e42c19004f9b701460d114150b35d",
+   "enUrl": "c38d788ad5fe328aa34d73e8a6f769ae5d6e538fd7fd3f78a588c9ad93955ca0",
+   "krUrl": "d380fee36725ae9f798437ff8e348afb6391b382cb0ee4d518820bb93008994e"
+  },
+  {
+   "id": 16,
+   "title": "关于素裳",
+   "text": "无忧无虑的云骑新人哪…我也有过这样的日子，虽然已经过去很久了。",
+   "unlockRequirement": "",
+   "cnUrl": "5fd08c58370919154f00545bb114c45eb6bda9e6389148f6e3c58594e2b3083f",
+   "jpUrl": "2b43008b11cfa5255b6e314f67654a15a03c4428cc14938c86ed365b7990b9ca",
+   "enUrl": "ef214f59320e82262d061e8968557e1f91462db2eff7e84e284c8cb25c47d156",
+   "krUrl": "2b429a409cdb8e286e0000190c776179d8ca223489b435973bb493b0b933cf6a"
+  },
+  {
+   "id": 17,
+   "title": "关于白露",
+   "text": "持明族的尊长不好当啊…希望她这一世一切安好。",
+   "unlockRequirement": "",
+   "cnUrl": "e5a4a0411b78025c8ae519b3313cedba69165735ba09bc89512d55dc1e926b66",
+   "jpUrl": "95f1383a63e25ffba40375671e77b8e972e6ad64ddbee4d54f70142c44e68a22",
+   "enUrl": "562c71b4b42d597987f08c358451a29f9bbd4469fae2d029b8b8ccd2bd4a10ea",
+   "krUrl": "673855766357fd0ecb3dcc5939d7b62b9f01db588966b764361e48b67df8d38d"
+  },
+  {
+   "id": 18,
+   "title": "关于镜流",
+   "text": "她教我研习剑技，却始终未能与我亲近一些…但无边的夜色中，哪有比始终当空的明月更亲近人的存在呢？",
+   "unlockRequirement": "",
+   "cnUrl": "b076be3fb86e19a1c6cafef2f7c0bdd09119ac5ee9068f29c2441fd405893552",
+   "jpUrl": "0296cf16daf09fc870b007e35ce9575ea0838f86810a4467b42645d52ac41be6",
+   "enUrl": "0bce97771eba2a84e0b8386ef6ac6a7d5fb79ed7a84776334733b833d1168937",
+   "krUrl": "e6895184e4873a6e2646b3c0d9748cd892b537f6dd5c042675a2f53a217e89f5"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "角色详情",
+   "text": "位列帝弓七天将之一的「神策将军」，外表懒散、心思缜密。不以危局中力挽狂澜为智策，因此在常事上十分下功夫，以免节外生枝。因其细心谋划，仙舟承平日久，看似行事慵懒的景元反被送上绰号「闭目将军」。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "角色故事·一",
+   "text": "「想请教太卜大人，这星阵棋为何是棋枰四方，棋子浑圆？」<br />「取法天圆地方？古人文明未开化前，相信大地平坦。这星阵棋仿效的是列国逐鹿相争，一统大地的旧事，自然是方枰。至于棋子…那时的人相信天如穹盖浑圆，棋子仿效星辰流转，下应人事，自然是圆的。」<br />「不对，不对。」<br />「你未下的四十八手，我已预见了。景元，你要是想借提问让我分神，我劝你趁早歇歇。」<br />「哎，符卿怎么无端疑我？」<br />「别打岔，你接着说。」<br />「诚如符卿所说，棋是比喻，以局喻人。战争的规则写的明明白白，各子的行动早有定数，也不过是进退飞跳罢了。因此进退以方，这便是方枰的原因。至于棋子，先贤有云『用智如圆』，阵中各子皆有自己的心智，所以用了圆棋。」<br />「《玉沙巡拾》一书里提过星阵棋的来由，景元，我读书多，你莫要诳骗我！」<br />「云车左移三进四，将军。你输了，符卿。」<br />「等，等等！为什么刚刚的预视里没看到这一手？退、退回去重来。」<br />「棋子如人，各有心智。你我落子无悔，岂有重来的道理？哈哈，一司之首岂能混赖？」",
+   "unlockRequirement": "角色等级<nobr>20</nobr>解锁"
+  },
+  {
+   "title": "角色故事·二",
+   "text": "作为横跨六大仙舟的建制，云骑军自火劫大战的尾声中脱胎，立誓卫蔽仙舟，奉行帝弓的「巡猎」诰谕，传承至今。尽管长生种的寿命漫长到不可思议，但在血火厮杀的战争中，却鲜有云骑将军能在履任后撑过百年的大关。与其说这是一种宿命，不如说这是一种传统。作为镇护仙舟、讨伐孽物的武装力量，将军除去绸缪调遣的职责，更需要身先士卒，叩关斩阵。在无数残酷短暂的年限记录之中，负责节制罗浮云骑军的「神策将军」景元却脱颖而出，已安然治军数百年。在他折冲运筹之下，罗浮云骑一度蜚声联盟，立下过众多惊人的战绩。虽然有人腹诽他本人畏战怯阵，鲜少动武。但也不得不承认，其人的智谋不逊于最锋锐的利剑，尽解难结。",
+   "unlockRequirement": "角色等级<nobr>40</nobr>解锁"
+  },
+  {
+   "title": "角色故事·三",
+   "text": "如今流传最广的传言中，景元出生于世代效力地衡司的家族中。<br /><br />按照从狐人传入的「试儿」习俗，家长会在幼儿周围摆上种种物事玩具任其抓取，以卜前途。其父母原本指望孩子继承衣钵，成为地衡司的学者或是执事官，景元却独独抓起了玩具刀剑。<br /><br />似乎「试儿」之俗应证了未来。在学宫结业后，为了摆脱望眼欲穿的人生，景元不顾家族的反对加入了云骑军。<br /><br />在云骑军的战事牍库中，记录了他身为云骑士卒的首次出征。运送部队的天艟迫降在了一颗海洋星球上。此地深受孽物的侵染，一支被称为「傀儡蛸」的新兴长生种劫持了云骑的心智，混入舰队中，几乎成功将这艘战舰转化为自己的巢穴。景元敏锐地觉察出了危机，并迅速梳理出傀儡蛸操控的条件，应对手法。剩余的船员最终通过了敌我难辨的考验，击败了对手，安然返乡。<br /><br />这场几乎兵不血刃的战争让云骑将军们看到了景元的锋芒。重返仙舟后，景元在云骑军内部崭露头角，受到重用。<br /><br />他的应变急智和实用主义手段屡屡让上级们难忘又头疼。最终，受到前任罗浮剑首的邀请，景元加入其所部为之效力，开启了「云上五骁」传奇之路。",
+   "unlockRequirement": "角色等级<nobr>60</nobr>解锁"
+  },
+  {
+   "title": "角色故事·四",
+   "text": "作为仙舟历史上著名的传奇，来自诸仙舟云骑军中的五位英雄聚首同战，合称「云上五骁」。以此五人为首，成就的功勋史不绝书：驱走攻入塔拉萨的步离人舰队；破坏丰饶联军中慧骃族与造翼者的同盟；乃至解围玉阙仙舟，并击溃了活体星球「计都蜃楼」，保全了联盟凝视星海的眼睛……<br /><br />然而累累功业，最终却敌不过时间的轻轻一弹指。「云上五骁」在短暂相聚不逾百年的时光后分崩离析。随着战事渐少，联盟各大仙舟各循其位，罗浮开始巡航于银河间的商路，为联盟寻求补给与盟助。<br /><br />故交旧友风流云散，不复存焉；宿敌旧雠或死或擒，徒留回忆。倒下的将军不必承受此等折磨，而活下来的将军必须面对一切：无论曾梦想过何等伟大的远景，无论曾战胜过多少个神明一样的强敌，时间总是逐一拔去你的爪牙却又不杀死你，让你苟延在角落中憎恨自己的无力。<br /><br />而唯有真正的智者，才能在时光这位不败的对手前兀自傲立。",
+   "unlockRequirement": "角色等级<nobr>80</nobr>解锁"
+  }
+ ],
+ "archive": {
+  "cvCn": "孙晔",
+  "cvJp": "小野大輔",
+  "cvKr": "류승곤",
+  "cvEn": "Alejandro Saab",
+  "camp": "仙舟「罗浮」"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "jingyuan"
+}

@@ -1,0 +1,2271 @@
+{
+ "name": "阿蘭",
+ "spRequirement": 110,
+ "rarity": 4,
+ "descHash": "空間站「黑塔」的防衛科負責人。 不善言辭，希望保護珍視研究的人們順利完成他們的研究。",
+ "iconPath": "ac8a9eb26e24f09b6343fd984cbaadf23a722e6b84355b7fef4e36411b15b3e8",
+ "bgPath": "39348ba0146969e7d9127c0c45185fb77a51c07e8498f49c013051c2b071eb9e",
+ "figPath": "49e676f3c8f4fa05f093e86f11ef1ef037e34490a050608eddc2b1801a05f662",
+ "fgPath": "6b080f18349c534be6a92dcb98401d66a8be149c7215096eded21a82a1d8a7c7",
+ "artPath": "8398326c016ea6a4ae74f1f782b6a02d01229d5adb14718dc37a29be2e220d6f",
+ "miniIconPath": "4cddd180d1802750591c017f12dfd28755697e3cd821bf7fa31f8111411ef008",
+ "splashIconPath": "97ed39640dfea927b355226a5a10d10c9881aa60fd83b8a2235b1dc77d9b6cbd",
+ "damageType": {
+  "id": 8,
+  "iconPath": "e8e459ad283c3df43713b2d13203b3dc8c636150d0c536f38e2ad62bd72b6e83",
+  "color": "#8872F1",
+  "name": "雷",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "57e114954f0de32a3762e77aa2fd4f791deb47497337366308c51de1d0f12430",
+  "altIconPath": "fccc485934c16aa04a6ddacdbfec82b1e59182ba83b560af62ed57b29033c308",
+  "color": "#FFFFFF",
+  "name": "毀滅",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 1,
+  "iconPath": "10dae0df031160c29bace386a1220e539f2b5e13765cdd0f6d2a2143bca2755c",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用點",
+   "desc": "星際和平公司與客戶結算時使用的貨幣，如今已成為太空旅行的硬通貨。",
+   "lore": "「人們奔波、爭鬥、貿易，為的不過是個終端裡顯示的數字。但真正珍貴之物，公司的數字是買不到的。」",
+   "purpose": "通用貨幣",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "任務獎勵",
+    "委託獎勵"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "命運的足跡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "一次又一次的敗北成就了你的勝利，一步又一步的前進讓你抵達了命運的拐點。",
+   "purpose": "行跡材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」積分獎勵",
+    "無名勳禮",
+    "餘燼兌換",
+    "限時活動獎勵"
+   ]
+  },
+  "151160": {
+   "id": 151160,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "f4e0301b109ba0ab0b633a7186df88a0fa0be8a70edf33c88539672e514bbc8c",
+   "name": "往日之影的雷冠",
+   "desc": "守護者之影佩戴的頭飾，雷屬性角色的晉升素材。",
+   "lore": "往昔守護者的身影消散後殘留的飾物，彷彿在掌心中訴說著永冬之城的過去。<br /><br />「鐵腕的斯維特蘭娜——她的怒火震耳如驚雷，她的責罰迅疾如閃電。」",
+   "purpose": "角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/151160",
+   "comeFrom": [
+    "凝滯虛影【殘響迴廊】",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "漫遊指南",
+   "desc": "角色的經驗材料，可以獲得<nobr>20000</nobr>點角色經驗。",
+   "lore": "跨越諸界必備的冒險叢書。按下閱讀鍵，充滿磁性的聲音將以你能聽懂的語言講述知名冒險家們在不同世界間的傳奇經歷，以及他們在各個星球上獲得的珍貴智慧。<br /><br />「漫遊指南全新書系《星際美食烹飪導覽》開售在即，敬請支援。」<br />「投稿請接入博識學會聯覺信標<nobr>23</nobr>θ聯絡員，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色經驗材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "「忘卻之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "冒險記錄",
+   "desc": "角色的經驗材料，可以獲得<nobr>5000</nobr>點角色經驗。",
+   "lore": "裝訂嚴整，一看就頗有教育意義的冒險札記。圖文並茂地描述了冒險行動的始末、有價值的資訊和生存相關的技巧。<br /><br />「幹嘛不資料化放進光刻片裡？便攜多了。」<br />「面對恆星風暴和中子流噴發時，高科技比你想象的還要脆弱。何況，製作這本書的人一定希望人們用最簡單的方式閱讀它。」",
+   "purpose": "角色經驗材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "每日實訓"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "旅情見聞",
+   "desc": "角色的經驗材料，可以獲得<nobr>1000</nobr>點角色經驗。",
+   "lore": "記錄旅途見聞的日誌，字跡漫漶不清，內容隨心所欲，對你並沒有太大的幫助。<br /><br />「看完了就趕緊把這堆廢紙處理掉吧，丹恆？」",
+   "purpose": "角色經驗材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "委託獎勵"
+   ]
+  },
+  "549438": {
+   "id": 549438,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4b2515eee489b695028b8b790795cdd3e71cfd4b1de7a006a6030882b039706c",
+   "name": "熄滅原核",
+   "desc": "裂界中徘徊的怪物的心臟，強化所需的簡單材料。",
+   "lore": "就像孳生惡瘤的病灶，引致罪行的衝動，它是裂界扭曲的源頭。<br />在沉重的打擊下，這顆心臟已然停止搏動，失去了光澤。<br /><br />「初步判定它是某種雜交產物：一半原體，另一半的資料與星核高度擬合——生物科，莎拉•卡斯特羅」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/549438",
+   "comeFrom": [
+    "炎華造物等敵方掉落【邊緣通路】",
+    "炎華造物等敵方掉落【鉚釘鎮】",
+    "「模擬宇宙」中敵方掉落",
+    "委託獎勵",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "633379": {
+   "id": 633379,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4f83a6b3e1cca8b6421a25a880516c3d27117937ae2f7f196180bbb0e1d28c3f",
+   "name": "微光原核",
+   "desc": "裂界中徘徊的怪物的心臟，強化所需的普通材料。",
+   "lore": "就像孳生惡瘤的病灶，引致罪行的衝動，它是裂界扭曲的源頭。<br />這顆心臟已然閃著微光，其上的紋路仍有生命力。<br /><br />「這究竟是什麼怪物？你看見了嗎——那是上一任隊長的臉，是他的臉！」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/633379",
+   "comeFrom": [
+    "均衡等級2及以上炎華造物等敵方掉落【邊緣通路】",
+    "均衡等級2及以上炎華造物等敵方掉落【鉚釘鎮】",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "635673": {
+   "id": 635673,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1cfcf420c7cd53b503eead070d126b1448cd68bf3f9b0ddca916d10b1747537b",
+   "name": "破碎殘刃",
+   "desc": "反物質軍團成員遺落的武器碎片。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">毀滅</span>角色的命途行跡。",
+   "lore": "此烙印代表其位階和「毀滅」的功業。<br />這柄武器的主人騎乘紅馬，點燃城市，使眾人反目，令國度如蟻群潰散。<br /><br />「持此印者，受命將和平逐出列國。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/635673",
+   "comeFrom": [
+    "擬造花萼【收容艙段】"
+   ]
+  },
+  "717320": {
+   "id": 717320,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "f32ca1d67c0e385f701d450cae1c5dea41f334e31d61eb331d4be4dc7551c378",
+   "name": "蠢動原核",
+   "desc": "裂界中徘徊的怪物的心臟，強化所需的高階材料。",
+   "lore": "就像孳生惡瘤的病灶，引致罪行的衝動，它是裂界扭曲的源頭。<br />這顆心臟依然緩緩律動，其力量殘留，必將引發新的災難。為恐再生事端，最好儘快將它滅活處理。<br /><br />「就像癌變……」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/717320",
+   "comeFrom": [
+    "均衡等級4及以上炎華造物等敵方掉落【邊緣通路】",
+    "均衡等級4及以上炎華造物等敵方掉落【鉚釘鎮】",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "836259": {
+   "id": 836259,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "name": "淨世殘刃",
+   "desc": "反物質軍團成員遺落的殘損武器。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">毀滅</span>角色的命途行跡。",
+   "lore": "這柄武器代表著主人在軍團中的位階和「毀滅」的功業。<br />這柄武器的主人負責在戰爭尾聲時登場，點燃劫火焚燒世界。無論受何方神明眷顧，無論曾擁有何等輝煌的基業，這顆星球終將如同熄滅的炭燼，在星空深處黯淡死去。<br /><br />「持此印者，受命淨空世界。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/836259",
+   "comeFrom": [
+    "擬造花萼【收容艙段】",
+    "「萬能合成機」- 材料合成"
+   ]
+  },
+  "920200": {
+   "id": 920200,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1da1734309fa1e0ed5035575293caab81cfa7723f7bf4a81d36d9833d80b36",
+   "name": "無生殘刃",
+   "desc": "反物質軍團成員遺落的武器殘鍔。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">毀滅</span>角色的命途行跡。",
+   "lore": "此烙印代表其位階和「毀滅」的功業。<br />這柄武器的主人憎恨著所有會思考的生靈，他們聆聽智慧生物的哀鳴猶如悅耳曲聲，他們令數千年的文明高塔於一夕坍塌。<br /><br />「持此印者，受命使呼吸遠離眾生。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/920200",
+   "comeFrom": [
+    "擬造花萼【收容艙段】",
+    "「萬能合成機」- 材料合成"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "91205616cca581bc299d91a1af94a91981d58328675779f8e66ccbaf679e5e94",
+   "name": "毀滅者的末路",
+   "desc": "行跡升級的高階素材。",
+   "lore": "古獸的身軀雖已銷殞，匣中卻還囚禁著尚未死滅的意志。但只要無人開啟這個匣子，它的意志就處於存在與不存在的疊加態，驅動著毀滅的引擎執行下去。<br /><br />「末日獸，戰爭熔爐以古獸殘片為基萬骸哀怨為引鑄煉而成的災厄——貫徹毀滅的同時亦渴求著自身的消亡。」",
+   "purpose": "行跡材料",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "歷戰餘響【支援艙段】"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549438,
+     "count": 4
+    }
+   ],
+   "attackBase": 81.6,
+   "attackAdd": 4.08,
+   "hpBase": 163.2,
+   "hpAdd": 8.16,
+   "defenseBase": 45,
+   "defenseAdd": 2.25,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 102,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549438,
+     "count": 8
+    }
+   ],
+   "attackBase": 114.24,
+   "attackAdd": 4.08,
+   "hpBase": 228.48,
+   "hpAdd": 8.16,
+   "defenseBase": 63,
+   "defenseAdd": 2.25,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 102,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633379,
+     "count": 5
+    },
+    {
+     "id": 151160,
+     "count": 2
+    }
+   ],
+   "attackBase": 146.88,
+   "attackAdd": 4.08,
+   "hpBase": 293.76,
+   "hpAdd": 8.16,
+   "defenseBase": 81,
+   "defenseAdd": 2.25,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 102,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633379,
+     "count": 8
+    },
+    {
+     "id": 151160,
+     "count": 5
+    }
+   ],
+   "attackBase": 179.52,
+   "attackAdd": 4.08,
+   "hpBase": 359.04,
+   "hpAdd": 8.16,
+   "defenseBase": 99,
+   "defenseAdd": 2.25,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 102,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717320,
+     "count": 5
+    },
+    {
+     "id": 151160,
+     "count": 15
+    }
+   ],
+   "attackBase": 212.16,
+   "attackAdd": 4.08,
+   "hpBase": 424.32,
+   "hpAdd": 8.16,
+   "defenseBase": 117,
+   "defenseAdd": 2.25,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 102,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717320,
+     "count": 7
+    },
+    {
+     "id": 151160,
+     "count": 28
+    }
+   ],
+   "attackBase": 244.8,
+   "attackAdd": 4.08,
+   "hpBase": 489.6,
+   "hpAdd": 8.16,
+   "defenseBase": 135,
+   "defenseAdd": 2.25,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 102,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 277.44,
+   "attackAdd": 4.08,
+   "hpBase": 554.88,
+   "hpAdd": 8.16,
+   "defenseBase": 153,
+   "defenseAdd": 2.25,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 102,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "6e6b731ef311aab1800f4a2bc7ee977a95fdb9005886c7df2b9cc38cd8c2734e",
+   "name": "萬死不辭",
+   "descHash": "當前生命值百分比小於等於<nobr>50%</nobr>時，戰技造成的傷害提高<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.1
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "df5551c4077f7795408947fffaffe401aabbb585c0253fc64865f3b96dfded9f",
+   "name": "除制去縛",
+   "descHash": "施放戰技、終結技時，解除自身的1個負面效果。",
+   "params": []
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "77c685de201e9663f51594606fca97cf62e6a49ef0397bbc607576f2f71d361d",
+   "name": "重劍強攻",
+   "descHash": "戰技等級+2，最多不超過<nobr>15</nobr>級；普攻等級+1，最多不超過<nobr>10</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "65024cfa6bb52f45b5b4d11a2e4a4ef956f46675e5e2e67c42de7cb3df470521",
+   "name": "絕處反擊",
+   "descHash": "進入戰鬥後，受到致命攻擊時阿蘭不會陷入無法戰鬥狀態，並立即回覆至自身生命上限的<nobr>#1[i]%</nobr>。該效果在觸發1次後或持續<nobr>#2[i]</nobr>回合後自動解除。",
+   "params": [
+    0.25,
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "0ad25f381a7d6513af2378a6f1ad8c272bbd8be0db0640a66a70cfb130d0c03b",
+   "name": "全力傾注",
+   "descHash": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "9f2086bc87e84eb3f6f77379693fdbdff0f48c384478f7cb51bfbf35a14ac664",
+   "name": "以身作引",
+   "descHash": "當前生命值百分比小於等於<nobr>50%</nobr>時，終結技造成的傷害提高<nobr>#1[i]%</nobr>，且對相鄰目標的傷害倍率提高到與主目標相同的傷害倍率。",
+   "params": [
+    0.2
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   578528
+  ],
+  [
+   863055
+  ],
+  [
+   779114
+  ],
+  [
+   294001
+  ],
+  [
+   377942
+  ]
+ ],
+ "skills": [
+  {
+   "id": 578528,
+   "name": "如雷疾行",
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於阿蘭<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#c75de2;\">雷</span>屬性傷害。",
+   "typeDescHash": "普攻",
+   "iconPath": "decd8d3c23ff0f1043be46860c6f89934ed5d59aedd6c832062ca2bf053bfa1b",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549438,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633379,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717320,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 863055,
+   "name": "禁錮解除",
+   "tagHash": "單攻",
+   "descHash": "消耗等同於阿蘭生命上限<nobr>#1[i]%</nobr>的生命值對指定敵方單體造成等同於阿蘭<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#c75de2;\">雷</span>屬性傷害。若當前生命值不足，施放戰技時阿蘭的當前生命值降至1點。",
+   "typeDescHash": "戰技",
+   "iconPath": "31bd191fb80fe4a6864919fc38565aae337c930a9601cf2099844bb425604599",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.15,
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.15,
+      1.32
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549438,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.15,
+      1.44
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549438,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.15,
+      1.56
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633379,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.15,
+      1.68
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.15,
+      1.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633379,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.15,
+      1.95
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717320,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.15,
+      2.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.15,
+      2.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.15,
+      2.4
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.15,
+      2.52
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.15,
+      2.64
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.15,
+      2.76
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.15,
+      2.88
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.15,
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 779114,
+   "name": "狂者制裁",
+   "tagHash": "擴散",
+   "descHash": "對指定敵方單體造成等同於阿蘭<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#c75de2;\">雷</span>屬性傷害，同時對其相鄰目標造成等同於阿蘭<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#c75de2;\">雷</span>屬性傷害。",
+   "typeDescHash": "終結技",
+   "iconPath": "8aa4ccbad053f7907fdf9211fc6debd6201528080506dd3dea206b1fa108aeb2",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1.92,
+      0.96
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      2.048,
+      1.024
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549438,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      2.176,
+      1.088
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549438,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      2.304,
+      1.152
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633379,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      2.432,
+      1.216
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      2.56,
+      1.28
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633379,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      2.72,
+      1.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717320,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      2.88,
+      1.44
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      3.04,
+      1.52
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      3.2,
+      1.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      3.328,
+      1.664
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      3.456,
+      1.728
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      3.584,
+      1.792
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      3.712,
+      1.856
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      3.84,
+      1.92
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 110
+  },
+  {
+   "id": 294001,
+   "name": "至痛至怒",
+   "tagHash": "強化",
+   "descHash": "根據阿蘭當前損失的生命值百分比獲得傷害加成，最多使阿蘭造成的傷害提高<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>。",
+   "typeDescHash": "天賦",
+   "iconPath": "9da1a1d2fd33b9d98a4cef97b7de3e61819130ec4a8ea3a07d3ecf8c36807b4b",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.396
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549438,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.432
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549438,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.468
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633379,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.504
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.54
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633379,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.585
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717320,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.63
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.675
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.756
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.792
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.828
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.864
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 494587,
+   "name": "攻擊",
+   "tagHash": "",
+   "descHash": "攻擊敵人，進入戰鬥後削弱敵方目標對應屬性韌性。",
+   "typeDescHash": "",
+   "iconPath": "decd8d3c23ff0f1043be46860c6f89934ed5d59aedd6c832062ca2bf053bfa1b",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 377942,
+   "name": "極速收割",
+   "tagHash": "",
+   "descHash": "立即攻擊敵人，進入戰鬥後對敵方全體造成等同於阿蘭<nobr>#1[i]%</nobr>攻擊力的<span style=\"color:#c75de2;\">雷</span>屬性傷害。",
+   "typeDescHash": "祕技",
+   "iconPath": "c8424bf57a542dee0c534e63bb34090aca82249d58ea547a0b52cd59696a13e9",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1008101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1008202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1008203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1008204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 215827,
+          "name": "生命強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+          "statusList": [
+           {
+            "key": "生命值",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 920200,
+            "count": 2
+           },
+           {
+            "id": 633379,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 215830,
+        "name": "攻擊強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "攻擊力",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920200,
+          "count": 2
+         },
+         {
+          "id": 633379,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 215829,
+      "name": "效果抵抗強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+      "statusList": [
+       {
+        "key": "效果抵抗",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635673,
+        "count": 2
+       },
+       {
+        "id": 549438,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 215733,
+    "name": "蘇生",
+    "descHash": "消滅敵方目標時，若當前生命值百分比小於等於<nobr>#1[i]%</nobr>，則立即回覆等同於自身生命上限<nobr>#2[i]%</nobr>的生命值。",
+    "iconPath": "ef057bf2eb1c5c85a200401ef0f46a2f367e23c39b917185ece41648432e7fdf",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.3,
+       0.2
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635673,
+        "count": 2
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1008103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1008208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1008209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 215840,
+        "name": "效果抵抗強化",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+        "statusList": [
+         {
+          "key": "效果抵抗",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836259,
+          "count": 6
+         },
+         {
+          "id": 717320,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1008210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 99186,
+        "name": "攻擊強化",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "攻擊力",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836259,
+          "count": 6
+         },
+         {
+          "id": 717320,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 215839,
+      "name": "生命強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "生命值",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836259,
+        "count": 6
+       },
+       {
+        "id": 717320,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 215735,
+    "name": "抗禦",
+    "descHash": "進入戰鬥時，若當前生命值百分比小於等於<nobr>#1[i]%</nobr>，阿蘭可以抵抗除持續傷害外的所有傷害。當阿蘭受到攻擊後，該效果解除。",
+    "iconPath": "79212fd5fe378f02ad9115261f545b77527d460ae08fa39ae78abc210e57d82c",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.5
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836259,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1008201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 215832,
+    "name": "攻擊強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "攻擊力",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549438,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1008102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1008205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1008206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1008207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 215826,
+          "name": "攻擊強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+          "statusList": [
+           {
+            "key": "攻擊力",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 836259,
+            "count": 2
+           },
+           {
+            "id": 717320,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 215825,
+        "name": "效果抵抗強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+        "statusList": [
+         {
+          "key": "效果抵抗",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836259,
+          "count": 2
+         },
+         {
+          "id": 717320,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 215828,
+      "name": "攻擊強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "攻擊力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920200,
+        "count": 4
+       },
+       {
+        "id": 633379,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 215736,
+    "name": "堅忍",
+    "descHash": "抵抗持續傷害類負面狀態的概率提高<nobr>#1[i]%</nobr>。",
+    "iconPath": "d048ddb1fd607d7672f810926f626b7b642f05fc2020cff2753758035706b98a",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.5
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920200,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "軀幹",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "暴擊率",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "腳部",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "攻擊力",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+   },
+   {
+    "relicTypeHash": "位面球",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "雷屬性傷害提高",
+    "propertyIconPath": "6acd635b37377d308961b26cf64a7a0ceed4e922bdf0427b620249351796ecd4"
+   },
+   {
+    "relicTypeHash": "連結繩",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "擊破特攻",
+    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初次見面",
+   "text": "你好，開拓者，我是空間站「黑塔」的防衛科負責人阿蘭，在空間站期間，我會全力護你安全。",
+   "unlockRequirement": "",
+   "cnUrl": "5f3b120b9892fafdb8b4fc631622eadf0a16cec92aeffebd1bf72509b2fd5c7a",
+   "jpUrl": "10b0ca3c38b00ebb65980e3fb15f2ceef59c2ebacafea3d15481c4e2634d2c0b",
+   "enUrl": "7c8479f079696b96eb741725c10e7a9eca5917bfcd628a86387fe4c6150ae478",
+   "krUrl": "ca59cc1added965726868e11319986d744f559b136d0174f028fcdba2c150142"
+  },
+  {
+   "id": 2,
+   "title": "問候",
+   "text": "種子島的新口味蚯蚓幹今天上架，現在去能趕個早場，不用排隊。",
+   "unlockRequirement": "",
+   "cnUrl": "8db78e71715907efdc8b9a1a9b7081bb7840e0f22e19f66bf7a6d952ed1adb00",
+   "jpUrl": "41b8c43663c2fc87a3d3fa5bf726ff1042634d0200136af3d40d709b7882a2cf",
+   "enUrl": "153422e85bc7370df58a3efefeb809d6ba826b4b4942be77b34f773628f4169e",
+   "krUrl": "6292d815570b1d88ba797d91ad8868676ba39d4ff7c0afa25471e8dda5f26fe9"
+  },
+  {
+   "id": 3,
+   "title": "道別",
+   "text": "睡前來一杯混合蔬菜汁吧，有助於入眠。我今天有夜班值勤，明天見。",
+   "unlockRequirement": "",
+   "cnUrl": "c4bd3dcf9814fce5fef1d82d76988513a676bfbb13ccaff05fb24720624010e7",
+   "jpUrl": "17cb07a2d4eb7eae4950a227955a2961ef3e3197a81845f3a6fe584e383ba731",
+   "enUrl": "4d45da961c302a28bcd268870fc50914ca3156c1c9814ce9124a090bfd636349",
+   "krUrl": "f238a8587e34c9839e92dac8eb72d53b4a820ee86205060d2cdfe6e60caa8592"
+  },
+  {
+   "id": 4,
+   "title": "關於自己•尋找佩佩",
+   "text": "「空間站『尋找佩佩』大賽」至今已舉辦了九屆，我…蟬聯了冠軍。",
+   "unlockRequirement": "",
+   "cnUrl": "c56d953328794cc151546e2c1d934c8545869eb434f1cc22958c7928d2c9b9b2",
+   "jpUrl": "a7e0eef89465125f6645055ccdf405a1a9b2ad5c5c1468f3224e6d2e56111040",
+   "enUrl": "a3a444719f2d4e55d3659b8dd86146777ee321a0fd74a7fd45fdf567b60c1085",
+   "krUrl": "d2593cafd9e2236d9c8cc701501eb50100d2b70e987ce89cce60895e106d7ce1"
+  },
+  {
+   "id": 5,
+   "title": "閒談•巡邏",
+   "text": "巡邏時，我會盡量不引人注目，既不打擾科員，又能看到他們工作時最投入的神情。",
+   "unlockRequirement": "",
+   "cnUrl": "470ebff38b7cd37cd7bca9bb83778b729c359ee0a5032bcfe7678be8a394c743",
+   "jpUrl": "abf4fe0c3f41d392645285033a2df1340f516ebd279ab7445ab5f3da59c8cbbb",
+   "enUrl": "71830edace23ce4a812900e7ffc354b54ac704a3d856bb6e3d4c4faf10e3c197",
+   "krUrl": "d347c0553cd279ba3672682e4f7607a607bde45dceb9e665a4b88a51e62abc27"
+  },
+  {
+   "id": 6,
+   "title": "愛好",
+   "text": "大劍得時刻保持乾淨才行。",
+   "unlockRequirement": "",
+   "cnUrl": "2267b4256c32ab27c3b2160c6b912959c707d672779fe135cb3d925bb4d31356",
+   "jpUrl": "76bf95d743f36d93863e6cfb9d5e09d1a161151b959e51d65f4711da7117bbbc",
+   "enUrl": "36402a362219f65f56710d846ff6918023c2df58dc9b1ed6ece49e4cd0ff5c94",
+   "krUrl": "7aded84f8a56dda7d9d3cfe64e7fec1cfb78cefa75e03c6988f323775e58e625"
+  },
+  {
+   "id": 7,
+   "title": "煩惱",
+   "text": "手機殼的發貨地離空間站遠，得滿五千個起送…不不，請別告訴小姐。",
+   "unlockRequirement": "",
+   "cnUrl": "8262335ea8c0272fc5f96674f0be5379324ea4d67066f04625f519d600434022",
+   "jpUrl": "4f9da6ec288e1d068d1ca519428b532a0b7ec0fd283d9f13bf832395a345abe9",
+   "enUrl": "cdf9a836aba6826f88591853ace387a6539505053f4f1ee4db29bb8157d4c2c6",
+   "krUrl": "c3a3350f2266fbcd0ae89f864139fba152e2642aeb13eb38d5c34f7bce30835a"
+  },
+  {
+   "id": 8,
+   "title": "分享",
+   "text": "在通用圖鑑中找不到空間站裡收容的大劍碎片…它一定很特殊吧。",
+   "unlockRequirement": "",
+   "cnUrl": "fc534f247414475286a0e1d785f1888d7197e6f549cb4baf3174c71dfba54c0f",
+   "jpUrl": "60a8db638c07296aa39fb2b24f43dbbdded917faeda88e9a5df607b472000faa",
+   "enUrl": "6d36515633899985cf384ef73316f49b8abdca6561e2a47f4f6aa3f650c69652",
+   "krUrl": "5c71554e305878fd991700feb3193466e92a56cdfd8d5f700842c45de91aa2ba"
+  },
+  {
+   "id": 9,
+   "title": "見聞",
+   "text": "聽科員說，有些奇物是自己主動要求來到空間站的。",
+   "unlockRequirement": "",
+   "cnUrl": "e72e4f5bf8a7cec1ec95036afa7bdccefa7ff1a23e1a282e2d27a6e0ccfa940f",
+   "jpUrl": "aa3c73c6e1396923fadca4a48f963d420c633d9eba054d9ca562225eecaeec24",
+   "enUrl": "d689972de3ad861f36201485bde2dad1581ade83e424f5801a5627a35c1e46fa",
+   "krUrl": "c7a5e7d3f51259bf8cd113abcd83dd1f22336f463654e73c8467fd100fcbcdd1"
+  },
+  {
+   "id": 10,
+   "title": "關於艾絲妲",
+   "text": "…不知道為什麼，我好像時不時就惹小姐生氣？",
+   "unlockRequirement": "",
+   "cnUrl": "fdf1d1d95eb66e1c5ed40f31235c136f96eec880b2d8504aee789cbcbd3631aa",
+   "jpUrl": "1e6383f9df32e8ae6e67204d8be6965facea0a03632cef85bd1692fb78750bad",
+   "enUrl": "6013beaae1c65d6b84fc7f61504fd2e93b344eec67f94f64c16ed6eb0feedcff",
+   "krUrl": "832d81372cdd3df0a8610088595c9e1106d3f20b4ae8ae70ad34a7ae661e11a6"
+  },
+  {
+   "id": 11,
+   "title": "關於黑塔",
+   "text": "和其他科員不同，我並非黑塔女士的追隨者，但她仍舊默許了我在這兒工作。",
+   "unlockRequirement": "",
+   "cnUrl": "f5d971f61133de29eb2f15ed8ba7ce9c735cee9ef4e483940382451c4fa1bb26",
+   "jpUrl": "b2be86d4852272d54bf546a24fe958ba1d102bf6d07204ff78b881dadee320b9",
+   "enUrl": "85e73f474907936886915d080e91bb2263f8cca3f2d3bfc20b3740eddcafcc4e",
+   "krUrl": "6faa0159860d98d14d07bc90a8beb2187ada0f145c6c474d2e5a82f01f46a91e"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "角色詳情",
+   "text": "不善言辭的空間站「黑塔」防衛科負責人。<br />雖然不懂科研，但為了保護珍視研究的空間站科員順利完成他們的研究，阿蘭可以拼上性命。他早已習慣疼痛，並將負傷視作勳章。<br />也只有抱著佩佩時，男孩才會放下戒備，露出難得一見的笑容。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "角色故事·一",
+   "text": "如何評價阿蘭在防衛科的工作？<br />——大哥，是指引防衛科前進的明燈，是支撐大家戰鬥的核心！若無大哥一日，則空間站哀鴻遍野；若無大哥十日，則空間站民不聊生；若無大哥百日，則空間站宛如煉獄！<br />——但他在工作時間和佩佩玩電子飛盤誒。<br />——因為大哥提前完成了防衛科的日常訓練！目睹大哥的身姿，也是對我們的激勵！<br />——但他在工作時間和佩佩玩電子飛盤誒。<br />——你怎麼知道和佩佩玩電子飛盤不是大哥的工作之……<br /><br />「巡邏的時候玩手機，沒收。」<br />「不是，阿蘭大哥，有人在群裡說你壞話，你不管管？」<br />「沒空。」<br />「啊？有緊急任務嗎？我跟你一起去，發生啥了？」<br />「帶佩佩去做復健訓練，玩電子飛盤。」",
+   "unlockRequirement": "角色等級<nobr>20</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·二",
+   "text": "在艾絲妲小姐家中，怪異且貴重的東西數不勝數，一條奄奄一息的小狗反而有些惹人注目。<br /><br />更何況她哭得很傷心，當父母安慰著艾絲妲，說撿來的狗多半活不長，不如給她再買一條的時候，她哭得更大聲了。<br /><br />而那條髒兮兮的小狗只是躺在那，甚至沒力氣抬起頭看一眼周圍的人們。哭喊、爭吵、沉默，這一切都和它無關。<br /><br />他一度以為它已經停止了呼吸，因此蹲下身探了探它的鼻息。突然，小狗用舌頭舔了舔他的手指，這是它力所能及之下，能觸碰的最遠距離。<br /><br />——它的舌頭溼漉漉的。<br /><br />「想玩電子飛盤麼？」<br /><br />無神的眼睛亮了起來。",
+   "unlockRequirement": "角色等級<nobr>40</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·三",
+   "text": "他在走廊停下腳步，望向窗外，宇宙寂靜，映著他的黑眼圈。<br /><br />窗上出現另一雙佈滿血絲的眼睛，眼睛的主人比平時在科員前更放鬆些，漫不經心地打了個長長的哈欠。<br /><br />「這麼晚了，還不休息？」<br />「有點不放心，出來巡邏一趟……」<br />「我剛替防護罩更新了程式碼，安保系統也運轉正常。」<br />「可能是我多慮了，但……」<br />「我知道。你是防衛科的負責人，我相信你的直覺。」<br /><br />空間站依舊燈火通明，不分晝夜輪轉，他們回到各自的崗位。<br /><br />他們都明白，黑塔女士的光芒籠罩也好，空間站的防禦措施也好，防衛科的日夜不眠也好，如果危機發生…… <br /><br />也只在剎那。",
+   "unlockRequirement": "角色等級<nobr>60</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·四",
+   "text": "「所有人都撤離了，阿蘭，趕快撤退！」<br />「可能還有幸存的科員。」<br />「沒有了…已經沒有其他生命訊號了。」<br /><br />他明白自己應該相信艾絲妲，直到他看見反物質軍團正如潮水般向他湧來。監察域傳來的訊號微弱，艾絲妲看不到這個畫面。<br /><br />此刻，他正站在電梯前。這裡只有他一個人，他必須做出判斷，即使要反抗艾絲妲的命令——為了守護他們，不惜一切代價也要封鎖電梯的許可權，不能讓怪物再接近主控艙段一步。<br /><br />「抱歉，小姐……」<br /><br />他還來不及解釋，就遭到反物質軍團的背後偷襲，他倒下，遠端通訊隨之切斷。<br /><br />他想起自己無論是在小姐家工作，還是前往空間站「黑塔」成為防衛科負責人，自始至終未有任何「猶豫」。因為小姐決定前往了那個方向，所以自己當然要追隨著一起。這是理所應當的事。<br /><br />阿蘭艱難地抬起頭，怪物步步朝他圍攏。他也未曾反抗過小姐的命令，這是第一次。<br /><br />「希望不是最後一次吧。」<br /><br />他突然冒出這樣的念頭。<br /><br />他用大劍支撐著自己的身體，緩慢地、堅定地站起身。",
+   "unlockRequirement": "角色等級<nobr>80</nobr>解鎖"
+  }
+ ],
+ "archive": {
+  "cvCn": "陶典",
+  "cvJp": "白石涼子",
+  "cvKr": "김율",
+  "cvEn": "Dani Chambers",
+  "camp": "空間站「黑塔」"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "arlan"
+}

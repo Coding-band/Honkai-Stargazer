@@ -1,0 +1,2698 @@
+{
+ "name": "開拓者",
+ "spRequirement": 120,
+ "rarity": 5,
+ "descHash": "",
+ "iconPath": "f43b619415520e92c63ac94bfd8f3ee6549e93db005820f66930fe060f5f50dc",
+ "bgPath": "68cb69755c59be0ff0b45be489bb7fc126eec607f24bfc8cef9f141bcc56736f",
+ "figPath": "ce9f276fb80637ea4ef49edb7ff0c8c91fac1cf12c25ba151ecd7f82e531e9dd",
+ "fgPath": "",
+ "artPath": "af3909adc707cbbaedbe5c5a1651ccd8636f7ad6bc675dce129a1251b53f7eee",
+ "miniIconPath": "5089e473e31d0b24e67cec3546cfd4e3c5fb40d982eab9560134c6ecd6aedaf9",
+ "splashIconPath": "9bc7388c948cdb91da4a9c8cbbe68e28e796e120097985148efe125282b7312d",
+ "damageType": {
+  "id": 1,
+  "iconPath": "ae78085438eecf2462f1256329b5aa2369f01b8cda6926ea0a08b1b8affe5108",
+  "color": "#FFFFFF",
+  "name": "物理",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "57e114954f0de32a3762e77aa2fd4f791deb47497337366308c51de1d0f12430",
+  "altIconPath": "fccc485934c16aa04a6ddacdbfec82b1e59182ba83b560af62ed57b29033c308",
+  "color": "#FFFFFF",
+  "name": "毀滅",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 1,
+  "iconPath": "10dae0df031160c29bace386a1220e539f2b5e13765cdd0f6d2a2143bca2755c",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "信用點",
+   "desc": "星際和平公司與客戶結算時使用的貨幣，如今已成為太空旅行的硬通貨。",
+   "lore": "「人們奔波、爭鬥、貿易，為的不過是個終端裡顯示的數字。但真正珍貴之物，公司的數字是買不到的。」",
+   "purpose": "通用貨幣",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "任務獎勵",
+    "委託獎勵"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "命運的足跡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "一次又一次的敗北成就了你的勝利，一步又一步的前進讓你抵達了命運的拐點。",
+   "purpose": "行跡材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」積分獎勵",
+    "無名勳禮",
+    "餘燼兌換",
+    "限時活動獎勵"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "漫遊指南",
+   "desc": "角色的經驗材料，可以獲得<nobr>20000</nobr>點角色經驗。",
+   "lore": "跨越諸界必備的冒險叢書。按下閱讀鍵，充滿磁性的聲音將以你能聽懂的語言講述知名冒險家們在不同世界間的傳奇經歷，以及他們在各個星球上獲得的珍貴智慧。<br /><br />「漫遊指南全新書系《星際美食烹飪導覽》開售在即，敬請支援。」<br />「投稿請接入博識學會聯覺信標<nobr>23</nobr>θ聯絡員，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色經驗材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "「忘卻之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "冒險記錄",
+   "desc": "角色的經驗材料，可以獲得<nobr>5000</nobr>點角色經驗。",
+   "lore": "裝訂嚴整，一看就頗有教育意義的冒險札記。圖文並茂地描述了冒險行動的始末、有價值的資訊和生存相關的技巧。<br /><br />「幹嘛不資料化放進光刻片裡？便攜多了。」<br />「面對恆星風暴和中子流噴發時，高科技比你想象的還要脆弱。何況，製作這本書的人一定希望人們用最簡單的方式閱讀它。」",
+   "purpose": "角色經驗材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "每日實訓"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "旅情見聞",
+   "desc": "角色的經驗材料，可以獲得<nobr>1000</nobr>點角色經驗。",
+   "lore": "記錄旅途見聞的日誌，字跡漫漶不清，內容隨心所欲，對你並沒有太大的幫助。<br /><br />「看完了就趕緊把這堆廢紙處理掉吧，丹恆？」",
+   "purpose": "角色經驗材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "委託獎勵"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5930a427c19aedca23d55eb6ef670cc8ecf07466630281586f32f4d5e8d49409",
+   "name": "掠奪的本能",
+   "desc": "微弱的反物質，強化所需的簡單材料。",
+   "lore": "由虛卒•掠奪者體內逸散出的微弱反物質，如同破壞本能的具現化。<br /><br />「它們都在期許著湮滅之刻，與世界一同煉鑄、同化。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "虛卒•掠奪者等敵方掉落【收容艙段】",
+    "虛卒•掠奪者等敵方掉落【支援艙段】",
+    "「模擬宇宙」中敵方掉落",
+    "委託獎勵",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "69d0630f4dc8d8bb4706a8a973f720ce46452e189a62c7b8b6f2ca8d567ca8ae",
+   "name": "篡改的野心",
+   "desc": "稀薄的反物質，強化所需的普通材料。",
+   "lore": "漂浮在虛卒•篡改者周身的的稀薄反物質，正反粒子於此達成了危險的平衡。。<br /><br />「它們都在期許著湮滅之刻，與世界一同煉鑄、同化。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "均衡等級2及以上虛卒•掠奪者等敵方掉落【收容艙段】",
+    "均衡等級2及以上虛卒•掠奪者等敵方掉落【支援艙段】",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "635673": {
+   "id": 635673,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1cfcf420c7cd53b503eead070d126b1448cd68bf3f9b0ddca916d10b1747537b",
+   "name": "破碎殘刃",
+   "desc": "反物質軍團成員遺落的武器碎片。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">毀滅</span>角色的命途行跡。",
+   "lore": "此烙印代表其位階和「毀滅」的功業。<br />這柄武器的主人騎乘紅馬，點燃城市，使眾人反目，令國度如蟻群潰散。<br /><br />「持此印者，受命將和平逐出列國。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/635673",
+   "comeFrom": [
+    "擬造花萼【收容艙段】"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ea7f9727e8ba2c2039043d319ab4aa087ca6dbf08ec08876b1418d42c0f8a670",
+   "name": "踐踏的意志",
+   "desc": "凝縮的反物質，強化所需的高階材料。",
+   "lore": "虛卒•踐踏者體內高度凝縮的反物質，湮滅之刻正是文明毀滅的號角。<br /><br />「它們都在期許著湮滅之刻，與世界一同煉鑄、同化。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "均衡等級4及以上虛卒•掠奪者等敵方掉落【收容艙段】",
+    "均衡等級4及以上虛卒•掠奪者等敵方掉落【支援艙段】",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "782692": {
+   "id": 782692,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "7a42ca2323eb2224644c54f364da09df012442c0e83d9b460e8bf46348bcd8f1",
+   "name": "深邃的星外質",
+   "desc": "深邃的稜晶，開拓者的晉升素材。",
+   "lore": "從至高存在中剝離，倒映著萬變幻影。在每一個稜面上，逝去之物和未來之物閃爍著，想要將觀測者吞沒。<br /><br />「文明就像混沌黑暗的深海之上，那薄薄的一層冰。」",
+   "purpose": "角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/782692",
+   "comeFrom": [
+    "任務獎勵",
+    "等級獎勵"
+   ]
+  },
+  "836259": {
+   "id": 836259,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "name": "淨世殘刃",
+   "desc": "反物質軍團成員遺落的殘損武器。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">毀滅</span>角色的命途行跡。",
+   "lore": "這柄武器代表著主人在軍團中的位階和「毀滅」的功業。<br />這柄武器的主人負責在戰爭尾聲時登場，點燃劫火焚燒世界。無論受何方神明眷顧，無論曾擁有何等輝煌的基業，這顆星球終將如同熄滅的炭燼，在星空深處黯淡死去。<br /><br />「持此印者，受命淨空世界。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/836259",
+   "comeFrom": [
+    "擬造花萼【收容艙段】",
+    "「萬能合成機」- 材料合成"
+   ]
+  },
+  "920200": {
+   "id": 920200,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1da1734309fa1e0ed5035575293caab81cfa7723f7bf4a81d36d9833d80b36",
+   "name": "無生殘刃",
+   "desc": "反物質軍團成員遺落的武器殘鍔。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">毀滅</span>角色的命途行跡。",
+   "lore": "此烙印代表其位階和「毀滅」的功業。<br />這柄武器的主人憎恨著所有會思考的生靈，他們聆聽智慧生物的哀鳴猶如悅耳曲聲，他們令數千年的文明高塔於一夕坍塌。<br /><br />「持此印者，受命使呼吸遠離眾生。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/920200",
+   "comeFrom": [
+    "擬造花萼【收容艙段】",
+    "「萬能合成機」- 材料合成"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "91205616cca581bc299d91a1af94a91981d58328675779f8e66ccbaf679e5e94",
+   "name": "毀滅者的末路",
+   "desc": "行跡升級的高階素材。",
+   "lore": "古獸的身軀雖已銷殞，匣中卻還囚禁著尚未死滅的意志。但只要無人開啟這個匣子，它的意志就處於存在與不存在的疊加態，驅動著毀滅的引擎執行下去。<br /><br />「末日獸，戰爭熔爐以古獸殘片為基萬骸哀怨為引鑄煉而成的災厄——貫徹毀滅的同時亦渴求著自身的消亡。」",
+   "purpose": "行跡材料",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "歷戰餘響【支援艙段】"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549437,
+     "count": 4
+    }
+   ],
+   "attackBase": 84.48,
+   "attackAdd": 4.224,
+   "hpBase": 163.68,
+   "hpAdd": 8.184,
+   "defenseBase": 62.7,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549437,
+     "count": 8
+    }
+   ],
+   "attackBase": 118.272,
+   "attackAdd": 4.224,
+   "hpBase": 229.152,
+   "hpAdd": 8.184,
+   "defenseBase": 87.78,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633378,
+     "count": 5
+    },
+    {
+     "id": 782692,
+     "count": 4
+    }
+   ],
+   "attackBase": 152.064,
+   "attackAdd": 4.224,
+   "hpBase": 294.624,
+   "hpAdd": 8.184,
+   "defenseBase": 112.86,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633378,
+     "count": 8
+    },
+    {
+     "id": 782692,
+     "count": 6
+    }
+   ],
+   "attackBase": 185.856,
+   "attackAdd": 4.224,
+   "hpBase": 360.096,
+   "hpAdd": 8.184,
+   "defenseBase": 137.94,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717319,
+     "count": 5
+    },
+    {
+     "id": 782692,
+     "count": 8
+    }
+   ],
+   "attackBase": 219.648,
+   "attackAdd": 4.224,
+   "hpBase": 425.568,
+   "hpAdd": 8.184,
+   "defenseBase": 163.02,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717319,
+     "count": 7
+    },
+    {
+     "id": 782692,
+     "count": 10
+    }
+   ],
+   "attackBase": 253.44,
+   "attackAdd": 4.224,
+   "hpBase": 491.04,
+   "hpAdd": 8.184,
+   "defenseBase": 188.1,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 100,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 287.232,
+   "attackAdd": 4.224,
+   "hpBase": 556.512,
+   "hpAdd": 8.184,
+   "defenseBase": 213.18,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 100,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "b04008fa0071c3ca3bba22474821154ffd7b4bba2332ac8b306cb13c37632de8",
+   "name": "墜臨萬界的星芒",
+   "descHash": "施放終結技消滅敵方目標時，開拓者額外恢復<nobr>#1[i]</nobr>點能量，該效果每次攻擊只能觸發1次。",
+   "params": [
+    10
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "451d91adcd3647fb5b29dbaaa137f47f0479f893a6498145790d1578a3cc5611",
+   "name": "因緣假合的人身",
+   "descHash": "施放攻擊後，若擊中的敵方目標弱點為物理屬性，則回覆等同於開拓者<nobr>#1[i]%</nobr>攻擊力的生命值。",
+   "params": [
+    0.05
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "acf47d497d87e07dcb8b4ce796321cbae1513d3134774453c228cadac4a56900",
+   "name": "揭示前路的言靈",
+   "descHash": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "26f83127dcfd865935db6afe2429bcc2fa4b0c459f31afe492fc1ecf5145afed",
+   "name": "凝眸毀滅的瞬間",
+   "descHash": "擊中處於弱點選破狀態的敵方目標時，暴擊率提高<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.25
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "f180228c949a45cbae6fd5f280029b05a11a7011f04933ed5da12ce7312ca08e",
+   "name": "劫餘重生的希望",
+   "descHash": "終結技等級+2，最多不超過<nobr>15</nobr>級；普攻等級+1，最多不超過<nobr>10</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "f6b893540dccfc9a9c6e0a52eb1d38a3562e4847c07fedafdad4c94e0cdcc82d",
+   "name": "拓宇行天的意志",
+   "descHash": "開拓者消滅敵方目標時，也會觸發天賦。",
+   "params": [
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   448710
+  ],
+  [
+   532651
+  ],
+  [
+   649296,
+   101705,
+   218350
+  ],
+  [
+   963597
+  ],
+  [
+   248124
+  ]
+ ],
+ "skills": [
+  {
+   "id": 448710,
+   "name": "再見安打",
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於開拓者<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。",
+   "typeDescHash": "普攻",
+   "iconPath": "a837b6c6a70b2e60b6b835073aa5914fb27d1fc4b875bbcc77e271640e68d05a",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 532651,
+   "name": "安息全壘打",
+   "tagHash": "擴散",
+   "descHash": "對指定敵方單體及其相鄰目標造成等同於開拓者<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。",
+   "typeDescHash": "戰技",
+   "iconPath": "757e36a10f05bffaadb295beabf6687469ff8484b1a917ecb88a33cac2db6c3d",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.625
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6875
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8125
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.875
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.9375
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.015625
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.09375
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.171875
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.3125
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.375
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.4375
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.5625
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 649296,
+   "name": "星塵王牌",
+   "tagHash": "強化",
+   "descHash": "在兩種攻擊模式中選擇其一揮出全力一擊。<br />【全勝•再見安打】：對指定敵方單體造成等同於開拓者<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。<br />【全勝•安息全壘打】：對指定敵方單體造成等同於開拓者<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害，並對其相鄰目標造成等同於開拓者<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#3[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。",
+   "typeDescHash": "終結技",
+   "iconPath": "41a885cd6780f16e562086becf14093bd57c5f523fe31136a2d2dabf752100d8",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      3,
+      1.8,
+      1.08
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      3.15,
+      1.89,
+      1.134
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      3.3,
+      1.98,
+      1.188
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      3.45,
+      2.07,
+      1.242
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      3.6,
+      2.16,
+      1.296
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      3.75,
+      2.25,
+      1.35
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      3.9375,
+      2.3625,
+      1.4175
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      4.125,
+      2.475,
+      1.485
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      4.3125,
+      2.5875,
+      1.5525
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      4.5,
+      2.7,
+      1.62
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      4.65,
+      2.79,
+      1.674
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      4.8,
+      2.88,
+      1.728
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      4.95,
+      2.97,
+      1.782
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      5.1,
+      3.06,
+      1.836
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      5.25,
+      3.15,
+      1.89
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  },
+  {
+   "id": 963597,
+   "name": "牽制盜壘",
+   "tagHash": "強化",
+   "descHash": "每次擊破敵方目標的弱點後，攻擊力提高<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>，該效果最多疊加<nobr>#2[i]</nobr>層。",
+   "typeDescHash": "天賦",
+   "iconPath": "69a5f892c526ae538016ceaf567c1bc473656921b0f155f5d282f91d9f8340d5",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.1,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.11,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.12,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.13,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.14,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.15,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.1625,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.175,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.1875,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.2,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.21,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.22,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.23,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.24,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.25,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 164183,
+   "name": "攻擊",
+   "tagHash": "",
+   "descHash": "攻擊敵人，進入戰鬥後削弱敵方目標對應屬性韌性。",
+   "typeDescHash": "",
+   "iconPath": "a837b6c6a70b2e60b6b835073aa5914fb27d1fc4b875bbcc77e271640e68d05a",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 248124,
+   "name": "不滅三振",
+   "tagHash": "回覆",
+   "descHash": "使用祕技後立即為我方全體回覆等同於各自生命上限<nobr>#1[i]%</nobr>的生命值。",
+   "typeDescHash": "祕技",
+   "iconPath": "507acbda38f50922f91ce4fd10ec62796d8ecbdc324a41ec3e4cdfa80b4f7a1e",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.15
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 101705,
+   "name": "全勝•再見安打",
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於開拓者<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。",
+   "typeDescHash": "終結技",
+   "iconPath": "e790568d6547087adb422a8c61010ba178879b87311381293018001dee120d53",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      3.15
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      3.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      3.45
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      3.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      3.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      3.9375
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      4.125
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      4.3125
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      4.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      4.65
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      4.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      4.95
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      5.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      5.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  },
+  {
+   "id": 218350,
+   "name": "全勝•安息全壘打",
+   "tagHash": "擴散",
+   "descHash": "對指定敵方單體造成等同於開拓者<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害，同時對其相鄰目標造成等同於開拓者<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。",
+   "typeDescHash": "終結技",
+   "iconPath": "1274c945f2135966474f490430d92f0185ff92ef5b3b4e0fb9e99ff15fc80320",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1.8,
+      1.08
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.89,
+      1.134
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.98,
+      1.188
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      2.07,
+      1.242
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      2.16,
+      1.296
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      2.25,
+      1.35
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      2.3625,
+      1.4175
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      2.475,
+      1.485
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      2.5875,
+      1.5525
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      2.7,
+      1.62
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      2.79,
+      1.674
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      2.88,
+      1.728
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      2.97,
+      1.782
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      3.06,
+      1.836
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      3.15,
+      1.89
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 8001101,
+   "type": 1,
+   "children": [
+    {
+     "id": 8001202,
+     "type": 2,
+     "children": [
+      {
+       "id": 8001203,
+       "type": 2,
+       "children": [
+        {
+         "id": 8001204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 131407,
+          "name": "防禦強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+          "statusList": [
+           {
+            "key": "防禦力",
+            "value": 0.05
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 920200,
+            "count": 2
+           },
+           {
+            "id": 633378,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 131408,
+        "name": "攻擊強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "攻擊力",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920200,
+          "count": 2
+         },
+         {
+          "id": 633378,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 131409,
+      "name": "生命強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "生命值",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635673,
+        "count": 2
+       },
+       {
+        "id": 549437,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 131377,
+    "name": "蓄勢",
+    "descHash": "戰鬥開始時，立即恢復<nobr>#1[i]</nobr>點能量。",
+    "iconPath": "c89cda28e50097a1c1101cd4c560c0d680ed440b469f53a19815691fdcc3d6c0",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       15
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635673,
+        "count": 2
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 8001102,
+   "type": 1,
+   "children": [
+    {
+     "id": 8001205,
+     "type": 2,
+     "children": [
+      {
+       "id": 8001206,
+       "type": 2,
+       "children": [
+        {
+         "id": 8001207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 131404,
+          "name": "攻擊強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+          "statusList": [
+           {
+            "key": "攻擊力",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 836259,
+            "count": 2
+           },
+           {
+            "id": 717319,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 131405,
+        "name": "生命強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "生命值",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836259,
+          "count": 2
+         },
+         {
+          "id": 717319,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 131406,
+      "name": "攻擊強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "攻擊力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920200,
+        "count": 4
+       },
+       {
+        "id": 633378,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 131378,
+    "name": "堅韌",
+    "descHash": "天賦的效果每層同時使開拓者的防禦力提高<nobr>#1[i]%</nobr>。",
+    "iconPath": "a035ccd65285b5487de2fa3bb759670bcffb2158309a24749e23805b67413100",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.1
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920200,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 8001103,
+   "type": 1,
+   "children": [
+    {
+     "id": 8001208,
+     "type": 2,
+     "children": [
+      {
+       "id": 8001209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 131402,
+        "name": "生命強化",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "生命值",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836259,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 8001210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 215352,
+        "name": "攻擊強化",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "攻擊力",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836259,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 131403,
+      "name": "防禦強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+      "statusList": [
+       {
+        "key": "防禦力",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836259,
+        "count": 6
+       },
+       {
+        "id": 717319,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 131379,
+    "name": "鬥志",
+    "descHash": "施放戰技或終結技【全勝•安息全壘打】時，對指定敵方目標造成的傷害提高<nobr>#1[i]%</nobr>。",
+    "iconPath": "f7ec0fad09b1e54ef8212181a21b8a44f1633f88e8d3da5810740a905b061c3f",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.25
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836259,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 8001201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 131410,
+    "name": "攻擊強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "攻擊力",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549437,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "軀幹",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "暴擊率",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "腳部",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "攻擊力",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+   },
+   {
+    "relicTypeHash": "位面球",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "物理屬性傷害提高",
+    "propertyIconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e"
+   },
+   {
+    "relicTypeHash": "連結繩",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "擊破特攻",
+    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+   }
+  ]
+ },
+ "voiceItems": [],
+ "storyItems": [],
+ "archive": {},
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "playerboy"
+}
