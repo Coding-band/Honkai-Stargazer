@@ -222,6 +222,7 @@ public class ItemRSS {
             case "Bronya" : return new int[]{R.drawable.bronya_skill1, R.drawable.bronya_skill2, R.drawable.bronya_skill3, R.drawable.bronya_skill4, R.drawable.bronya_skill6};
             case "Clara" : return new int[]{R.drawable.clara_skill1, R.drawable.clara_skill2, R.drawable.clara_skill3, R.drawable.clara_skill4, R.drawable.clara_skill6};
             case "Dan Heng" : return new int[]{R.drawable.dan_heng_skill1, R.drawable.dan_heng_skill2, R.drawable.dan_heng_skill3, R.drawable.dan_heng_skill4, R.drawable.dan_heng_skill6};
+            case "Gepard" : return new int[]{R.drawable.gepard_skill1, R.drawable.gepard_skill2, R.drawable.gepard_skill3, R.drawable.gepard_skill4, R.drawable.gepard_skill6};
             case "Herta" : return new int[]{R.drawable.herta_skill1, R.drawable.herta_skill2, R.drawable.herta_skill3, R.drawable.herta_skill4, R.drawable.herta_skill6};
             case "Himeko" : return new int[]{R.drawable.himeko_skill1, R.drawable.himeko_skill2, R.drawable.himeko_skill3, R.drawable.himeko_skill4, R.drawable.himeko_skill6};
             case "Hook" : return new int[]{R.drawable.hook_skill1, R.drawable.hook_skill2, R.drawable.hook_skill3, R.drawable.hook_skill4, R.drawable.hook_skill6};
@@ -400,6 +401,8 @@ public class ItemRSS {
         if (params != null){
             // Turn #1[i] to value
             desc = desc.replace("f1]","i]");
+            desc = desc.replace("<nobr>","");
+            desc = desc.replace("</nobr>","");
             desc = desc.replaceAll("<[^>]*>", "");
             NumberFormat nf = NumberFormat.getNumberInstance();
             nf.setRoundingMode(RoundingMode.HALF_UP);

@@ -255,7 +255,7 @@ public class InfoCharacterPage {
         combat_status_seekbar.setMax(80-1+6);
         combat_material_init(combat_status_material_ll, jsonObject, -1);
         combat_status_change(jsonObject, combat_status_seekbar, 0, combat_status_hp, combat_status_atk, combat_status_def, combat_status_spd, combat_status_taunt);
-        combat_status_lv.setText(String.valueOf(1)+" / "+String.valueOf(20));
+        combat_status_lv.setText("01/20");
 
         combat_status_seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -274,7 +274,7 @@ public class InfoCharacterPage {
 
                     combat_material_change(combat_status_material_ll, jsonObject, lvlPART);
                     combat_status_change(jsonObject, seekBar, lvlPART, combat_status_hp, combat_status_atk, combat_status_def, combat_status_spd, combat_status_taunt);
-                    combat_status_lv.setText(String.valueOf(lvlCurr)+" / "+String.valueOf(lvlMax[lvlPART]));
+                    combat_status_lv.setText((lvlCurr < 10 ? "0" : "")+String.valueOf(lvlCurr)+" / "+String.valueOf(lvlMax[lvlPART]));
                 } catch (JSONException e) {
                     throw new RuntimeException(e);
                 }
@@ -324,6 +324,7 @@ public class InfoCharacterPage {
             combat_desc_change(desc, skills.getJSONObject(finalX), seekbar);
             combat_material_init(material_ll, skills.getJSONObject(finalX), finalX);
             combat_material_change(material_ll, skills.getJSONObject(finalX), seekbar.getProgress());
+            lv.setText("01");
 
             seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                 @Override
@@ -331,7 +332,7 @@ public class InfoCharacterPage {
                     try {
                         combat_material_change(material_ll, skills.getJSONObject(finalX), seekBar.getProgress());
                         combat_desc_change(desc, skills.getJSONObject(finalX), seekBar);
-                        lv.setText(String.valueOf(seekBar.getProgress()+1));
+                        lv.setText((seekBar.getProgress()+1 < 10 ? "0" : "")+String.valueOf(seekBar.getProgress()+1));
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
                     }
@@ -406,7 +407,7 @@ public class InfoCharacterPage {
                 case -1 :
                     acceptPurposeIdDemo =  new int[]{
                             ItemRSS.MATERIAL_COMMON_CURRENCY,
-                            ItemRSS.MATERIAL_CHARACTER_EXP_MATERIAL,
+                            //ItemRSS.MATERIAL_CHARACTER_EXP_MATERIAL,
                             ItemRSS.MATERIAL_TRACE_MATERIAL_CHARACTER_ASCENSION_MATERIALS,
                             ItemRSS.MATERIAL_CHARACTER_ASCENSION_MATERIALS
                     };break;

@@ -59,6 +59,7 @@
     </com.google.android.material.tabs.TabLayout>
 
     <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -74,5 +75,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/info_tablayout" />
+        app:layout_constraintTop_toBottomOf="@+id/materialDivider" />
 </androidx.constraintlayout.widget.ConstraintLayout>
