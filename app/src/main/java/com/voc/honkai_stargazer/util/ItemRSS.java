@@ -11,6 +11,7 @@ import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.net.Uri;
+import android.text.Html;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
@@ -22,6 +23,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class ItemRSS {
@@ -60,6 +64,13 @@ public class ItemRSS {
     public static final String TYPE_LIGHTCONE = "Lightcone";
     public static final String TYPE_RELIC = "Relic";
     //public static final String TYPE_ORNAMENT = "Ornament";
+
+    public static final int MATERIAL_CHARACTER_EXP_MATERIAL = 1;
+    public static final int MATERIAL_CHARACTER_ASCENSION_MATERIALS = 2;
+    public static final int MATERIAL_TRACE_MATERIAL_LIGHTCONE_ASCENSION_MATERIALS = 3;
+    public static final int MATERIAL_TRACE_MATERIALS = 4;
+    public static final int MATERIAL_TRACE_MATERIAL_CHARACTER_ASCENSION_MATERIALS = 7;
+    public static final int MATERIAL_COMMON_CURRENCY = 11;
 
     public int[] getCharByName(String charNameInFile){
         switch (charNameInFile){
@@ -235,6 +246,67 @@ public class ItemRSS {
         }
     }
 
+    public int getMaterialByID(int materialID){
+        switch (materialID){
+            case 29328 : return R.drawable.material_credit;
+            case 125435 : return R.drawable.material_tracks_of_destiny;
+            case 151160 : return R.drawable.material_lightning_crown_of_the_past_shadow;
+            case 409960 : return R.drawable.material_travelers_guide;
+            case 409961 : return R.drawable.material_adventure_log;
+            case 409962 : return R.drawable.material_travel_encounters;
+            case 549438 : return R.drawable.material_extinguished_core;
+            case 633379 : return R.drawable.material_glimmering_core;
+            case 635673 : return R.drawable.material_shattered_blade;
+            case 717320 : return R.drawable.material_squirming_core;
+            case 836259 : return R.drawable.material_worldbreaker_blade;
+            case 920200 : return R.drawable.material_lifeless_blade;
+            case 985668 : return R.drawable.material_destroyers_final_road;
+            case 549407 : return R.drawable.material_silvermane_badge;
+            case 633348 : return R.drawable.material_silvermane_insignia;
+            case 635670 : return R.drawable.material_harmonic_tune;
+            case 717289 : return R.drawable.material_silvermane_medal;
+            case 836256 : return R.drawable.material_stellaris_symphony;
+            case 920197 : return R.drawable.material_ancestral_hymn;
+            case 983278 : return R.drawable.material_endotherm_chitin;
+            case 270195 : return R.drawable.material_guardians_lament;
+            case 635671 : return R.drawable.material_seed_of_abundance;
+            case 836257 : return R.drawable.material_flower_of_eternity;
+            case 920198 : return R.drawable.material_sprout_of_life;
+            case 267805 : return R.drawable.material_storm_eye;
+            case 549408 : return R.drawable.material_ancient_part;
+            case 633349 : return R.drawable.material_ancient_spindle;
+            case 717290 : return R.drawable.material_ancient_engine;
+            case 866633 : return R.drawable.material_broken_teeth_of_iron_wolf;
+            case 635674 : return R.drawable.material_arrow_of_the_beast_hunter;
+            case 836260 : return R.drawable.material_arrow_of_the_starchaser;
+            case 920201 : return R.drawable.material_arrow_of_the_demon_slayer;
+            case 67219 : return R.drawable.material_horn_of_snow;
+            case 635668 : return R.drawable.material_endurance_of_bronze;
+            case 836254 : return R.drawable.material_safeguard_of_amber;
+            case 920195 : return R.drawable.material_oath_of_steel;
+            case 635675 : return R.drawable.material_key_of_inspiration;
+            case 836261 : return R.drawable.material_key_of_wisdom;
+            case 920202 : return R.drawable.material_key_of_knowledge;
+            case 151161 : return R.drawable.material_shape_shifters_lightning_staff;
+            case 549504 : return R.drawable.material_immortal_scionette;
+            case 633445 : return R.drawable.material_immortal_aeroblossom;
+            case 717386 : return R.drawable.material_immortal_lumintwig;
+            case 549437 : return R.drawable.material_thiefs_instinct;
+            case 633378 : return R.drawable.material_usurpers_scheme;
+            case 635669 : return R.drawable.material_obsidian_of_dread;
+            case 717319 : return R.drawable.material_conquerors_will;
+            case 836255 : return R.drawable.material_obsidian_of_obsession;
+            case 920196 : return R.drawable.material_obsidian_of_desolation;
+            case 468391 : return R.drawable.material_golden_crown_of_the_past_shadow;
+            case 549503 : return R.drawable.material_artifexs_module;
+            case 633444 : return R.drawable.material_artifexs_cogwheel;
+            case 717385 : return R.drawable.material_artifexs_gyreheart;
+            case 351746 : return R.drawable.material_void_cast_iron;
+            case 67220 : return R.drawable.material_gelid_chitin;
+
+            default: return R.drawable.ico_lost_img;
+        }
+    }
 
     public SpannableString[] getRelicStatusByName(String relicNameInFile, Context context, String LANGUAGE){
         String json_base = LoadAssestData(context,"relic_data/relic_pc.json");
@@ -259,6 +331,17 @@ public class ItemRSS {
         } catch (JSONException e) {
             feedback = new String[]{"ERROR - JSONExpection",e.getLocalizedMessage()};
             return new SpannableString[]{new SpannableString(feedback[0]),new SpannableString(feedback[1])};
+        }
+    }
+
+    public int getBgByItemRarity(int rarity){
+        switch (rarity){
+            case 1 : return R.drawable.bg_rare_1;
+            case 2 : return R.drawable.bg_rare_2;
+            case 3 : return R.drawable.bg_rare_3;
+            case 4 : return R.drawable.bg_rare_4;
+            case 5 : return R.drawable.bg_rare_5;
+            default: return R.drawable.bg_rare_0;
         }
     }
 
@@ -316,20 +399,21 @@ public class ItemRSS {
     public static SpannableString valuedText(String desc, JSONArray params, Context context) throws JSONException {
         if (params != null){
             // Turn #1[i] to value
-            desc = desc.replace("<nobr>","")
-                    .replace("</nobr>","")
-                    .replace("<br />","")
-                    .replace("<unbreak>","")
-                    .replace("</unbreak>","")
-            ;
+            desc = desc.replace("f1]","i]");
+            desc = desc.replaceAll("<[^>]*>", "");
+            NumberFormat nf = NumberFormat.getNumberInstance();
+            nf.setRoundingMode(RoundingMode.HALF_UP);
+            nf.setMaximumFractionDigits(2);
+            //nf.setMinimumFractionDigits(2); //當value的值是100.00的時候返回100
+
             ArrayList<Boolean> isPercent = new ArrayList<Boolean>();
             for (int x = 0 ; x < params.length() ; x++){
                 String keyword = "#"+String.valueOf(x+1)+"[i]";
                 if (desc.contains(keyword+"%")){
-                    desc = desc.replace(keyword,String.valueOf(params.getDouble(x)*100));
+                    desc = desc.replace(keyword, nf.format(params.getDouble(x) * 100));
                     isPercent.add(true);
                 }else{
-                    desc = desc.replace(keyword,String.valueOf(params.getDouble(x)));
+                    desc = desc.replace(keyword,nf.format(params.getDouble(x)));
                     isPercent.add(false);
                 }
             }
@@ -338,12 +422,21 @@ public class ItemRSS {
 
             //Highlight keyword (Value)
             for (int x = 0 ; x < params.length() ; x++){
-                String keyword = (isPercent.get(x) ? String.valueOf((params.getDouble(x)*100))+"%" : String.valueOf(params.getDouble(x)));
+                String keyword = (isPercent.get(x) ? (nf.format(params.getDouble(x)*100))+"%" : nf.format(params.getDouble(x)));
+                String keyword_spec = (isPercent.get(x) ? (" "+nf.format(params.getDouble(x)*100))+"% " : " "+nf.format(params.getDouble(x))+" ");
                 for (int i = -1; (i = desc.indexOf(keyword, i + 1)) != -1; i++) {
                     mSpannavleString.setSpan(new ForegroundColorSpan(
                                     context.getResources().getColor(R.color.highlight_color)),
                             desc.indexOf(keyword),
                             desc.indexOf(keyword)+keyword.length(),
+                            Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+                    );
+                }
+                for (int i = -1; (i = desc.indexOf(keyword_spec, i + 1)) != -1; i++) {
+                    mSpannavleString.setSpan(new ForegroundColorSpan(
+                                    context.getResources().getColor(R.color.highlight_color)),
+                            desc.indexOf(keyword_spec),
+                            desc.indexOf(keyword_spec)+keyword_spec.length(),
                             Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
                     );
                 }
