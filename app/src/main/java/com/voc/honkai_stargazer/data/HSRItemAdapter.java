@@ -133,7 +133,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
         }
 
         holder.item_name.setText(hsrItem.getName());
-        holder.item_name.setTypeface(null, Typeface.BOLD);;
+        holder.item_name.getPaint().setFakeBoldText(true);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -198,5 +198,55 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
     public void filterList(ArrayList<HSRItem> filteredList) {
         hsritemList = filteredList;
         notifyDataSetChanged();
+    }
+
+    public void filterRequestList(ArrayList<HSRItem> preList, FilterPreference preference) {
+        ArrayList<HSRItem> filteredList = new ArrayList<>();
+        if (!preference.isAll()){
+            for (HSRItem hsrItem : preList){
+                boolean isTrueA = false;
+                boolean isTrueB = false;
+                boolean isTrueC = false;
+                boolean isTrueD = false;
+
+
+                if (!preference.isElementNotRequest()){
+                    if (preference.isFire() && hsrItem.getElement().equals(ItemRSS.ELEMENT_FIRE)){isTrueA = true;}
+                    else if (preference.isImaginary() && hsrItem.getElement().equals(ItemRSS.ELEMENT_IMAGINARY)){isTrueA = true;}
+                    else if (preference.isIce() && hsrItem.getElement().equals(ItemRSS.ELEMENT_ICE)){isTrueA = true;}
+                    else if (preference.isLightning() && hsrItem.getElement().equals(ItemRSS.ELEMENT_LIGHTNING)){isTrueA = true;}
+                    else if (preference.isPhysical() && hsrItem.getElement().equals(ItemRSS.ELEMENT_PHYSICAL)){isTrueA = true;}
+                    else if (preference.isQuantum() && hsrItem.getElement().equals(ItemRSS.ELEMENT_QUANTUM)){isTrueA = true;}
+                    else if (preference.isWind() && hsrItem.getElement().equals(ItemRSS.ELEMENT_WIND)){isTrueA = true;}
+                }
+
+                if (!preference.isPathNotRequest()){
+                    if (preference.isAbundance() && hsrItem.getPath().equals(ItemRSS.PATH_ABSTRUCTION)){isTrueB = true;}
+                    else if (preference.isDestruction() && hsrItem.getPath().equals(ItemRSS.PATH_DESTRUCTION)){isTrueB = true;}
+                    else if (preference.isErudition() && hsrItem.getPath().equals(ItemRSS.PATH_ERUDITION)){isTrueB = true;}
+                    else if (preference.isHarmony() && hsrItem.getPath().equals(ItemRSS.PATH_HARMONY)){isTrueB = true;}
+                    else if (preference.isHunt() && hsrItem.getPath().equals(ItemRSS.PATH_HUNT)){isTrueB = true;}
+                    else if (preference.isNihility() && hsrItem.getPath().equals(ItemRSS.PATH_NIHILITY)){isTrueB = true;}
+                    else if (preference.isPreservation() && hsrItem.getPath().equals(ItemRSS.PATH_PRESERVATION)){isTrueB = true;}
+                }
+
+                if (!preference.isRareNotRequest()){
+                    if (preference.isRare3() && hsrItem.getRare() == 3 && (preference.getType().equals(ItemRSS.TYPE_LIGHTCONE))){isTrueC = true;}
+                    else if (preference.isRare4() && hsrItem.getRare() == 4){isTrueC = true;}
+                    else if (preference.isRare5() && hsrItem.getRare() == 5){isTrueC = true;}
+                }
+                if (!preference.isStatusNotRequest() ){
+                    if (preference.isRelease() && hsrItem.getStatus().equals(ItemRSS.STATUS_RELEASED)){isTrueD = true;}
+                    else if (preference.isSoon() && hsrItem.getStatus().equals(ItemRSS.STATUS_SOON)){isTrueD = true;}
+                    else if (preference.isBeta() && hsrItem.getStatus().equals(ItemRSS.STATUS_BETA)){isTrueD = true;}
+                }
+
+                if ((!preference.isElementNotRequest() ? isTrueA : true) && (!preference.isPathNotRequest() ? isTrueB : true) && (!preference.isRareNotRequest() ? isTrueC : true) && (!preference.isStatusNotRequest() ? isTrueD : true)){
+                    filteredList.add(hsrItem);
+                }
+            }
+            hsritemList = filteredList;
+            notifyDataSetChanged();
+        }
     }
 }

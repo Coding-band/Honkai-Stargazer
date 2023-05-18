@@ -10,23 +10,36 @@ import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.voc.honkai_stargazer.R;
+import com.voc.honkai_stargazer.data.FilterPreference;
 import com.voc.honkai_stargazer.data.HSRItem;
 import com.voc.honkai_stargazer.data.HSRItemAdapter;
 import com.voc.honkai_stargazer.util.CustomViewPager;
@@ -64,6 +77,8 @@ public class HomePage extends AppCompatActivity {
     Context context;
     Activity activity;
 
+    //Character, Lightcone, Relic
+    FilterPreference[] filterPreferences = new FilterPreference[]{new FilterPreference(),new FilterPreference(),new FilterPreference()};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,6 +166,14 @@ public class HomePage extends AppCompatActivity {
         charactersListView.setAdapter(charactersAdapter);
         charactersListView.removeAllViewsInLayout();
         char_list_reload();
+
+        ImageButton characterFilter = home_characters.findViewById(R.id.characterFilter);
+        characterFilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                filterHandler(ItemRSS.TYPE_CHARACTER);
+            }
+        });
     }
 
     public void lightcone_init(){
@@ -161,7 +184,16 @@ public class HomePage extends AppCompatActivity {
         lightconesListView.setLayoutManager(mLayoutManager);
         lightconesListView.setAdapter(lightconesAdapter);
         lightconesListView.removeAllViewsInLayout();
+
         lightcone_list_reload();
+
+        ImageButton lightconeFilter = home_lightcones.findViewById(R.id.lightconeFilter);
+        lightconeFilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                filterHandler(ItemRSS.TYPE_LIGHTCONE);
+            }
+        });
     }
     public void relic_init(){
         relicsListView = home_relics.findViewById(R.id.relicsListView);
@@ -172,6 +204,14 @@ public class HomePage extends AppCompatActivity {
         relicsListView.setAdapter(relicsAdapter);
         relicsListView.removeAllViewsInLayout();
         relic_list_reload();
+
+        ImageButton relicFilter = home_relics.findViewById(R.id.relicFilter);
+        relicFilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                filterHandler(ItemRSS.TYPE_RELIC);
+            }
+        });
     }
 
     private void char_list_reload() {
@@ -268,5 +308,138 @@ public class HomePage extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+
+    private void filterHandler(String TYPE){
+        final Dialog dialog = new Dialog(context, R.style.PageDialogStyle_P);
+        View view = View.inflate(context, R.layout.fragment_home_filter, null);
+        dialog.setContentView(view);
+        dialog.setCanceledOnTouchOutside(true);
+        Window dialogWindow = dialog.getWindow();
+        WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+
+        final FilterPreference[] filterPreference = {new FilterPreference()};
+
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        lp.gravity = Gravity.BOTTOM;
+        dialogWindow.setAttributes(lp);
+
+        //Init UI
+        LinearLayout filter_element_ll = view.findViewById(R.id.filter_element_ll);
+        ImageView filter_physical = view.findViewById(R.id.filter_physical);
+        ImageView filter_fire = view.findViewById(R.id.filter_fire);
+        ImageView filter_ice = view.findViewById(R.id.filter_ice);
+        ImageView filter_lightning = view.findViewById(R.id.filter_lightning);
+        ImageView filter_wind = view.findViewById(R.id.filter_wind);
+        ImageView filter_quantum = view.findViewById(R.id.filter_quantum);
+        ImageView filter_imaginary = view.findViewById(R.id.filter_imaginary);
+
+        LinearLayout filter_path_ll = view.findViewById(R.id.filter_path_ll);
+        ImageView filter_abundance = view.findViewById(R.id.filter_abundance);
+        ImageView filter_destruction = view.findViewById(R.id.filter_destruction);
+        ImageView filter_hunt = view.findViewById(R.id.filter_hunt);
+        ImageView filter_harmony = view.findViewById(R.id.filter_harmony);
+        ImageView filter_erudition = view.findViewById(R.id.filter_erudition);
+        ImageView filter_nihility = view.findViewById(R.id.filter_nihility);
+        ImageView filter_preservation = view.findViewById(R.id.filter_preservation);
+
+        LinearLayout filter_rarity_ll = view.findViewById(R.id.filter_rarity_ll);
+        ToggleButton filter_rare_1 = view.findViewById(R.id.filter_rare_1);
+        ToggleButton filter_rare_2 = view.findViewById(R.id.filter_rare_2);
+        ToggleButton filter_rare_3 = view.findViewById(R.id.filter_rare_3);
+        ToggleButton filter_rare_4 = view.findViewById(R.id.filter_rare_4);
+        ToggleButton filter_rare_5 = view.findViewById(R.id.filter_rare_5);
+
+        LinearLayout filter_status_ll = view.findViewById(R.id.filter_status_ll);
+        ToggleButton filter_release = view.findViewById(R.id.filter_release);
+        ToggleButton filter_soon = view.findViewById(R.id.filter_soon);
+        ToggleButton filter_beta = view.findViewById(R.id.filter_beta);
+
+        Button filter_cancel = view.findViewById(R.id.filter_cancel);
+        Button filter_apply = view.findViewById(R.id.filter_apply);
+
+        switch (TYPE){
+            case ItemRSS.TYPE_CHARACTER: {filter_rare_1.setVisibility(View.GONE); filter_rare_2.setVisibility(View.GONE); filter_rare_3.setVisibility(View.GONE); filterPreference[0] = filterPreferences[0]; break;}
+            case ItemRSS.TYPE_LIGHTCONE: {filter_rare_1.setVisibility(View.GONE); filter_rare_2.setVisibility(View.GONE); filter_element_ll.setVisibility(View.GONE);  filterPreference[0] = filterPreferences[1]; break;}
+            case ItemRSS.TYPE_RELIC: {filter_element_ll.setVisibility(View.GONE); filter_path_ll.setVisibility(View.GONE);  filterPreference[0] = filterPreferences[2]; break;}
+        }
+        filter_apply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (TYPE){
+                    case ItemRSS.TYPE_CHARACTER: {filterPreference[0].setType(ItemRSS.TYPE_CHARACTER); filterPreferences[0] = filterPreference[0]; charactersAdapter.filterRequestList(charactersList,filterPreference[0]); break;}
+                    case ItemRSS.TYPE_LIGHTCONE: {filterPreference[0].setType(ItemRSS.TYPE_LIGHTCONE);filterPreferences[1] = filterPreference[0]; lightconesAdapter.filterRequestList(lightconesList,filterPreference[0]);break;}
+                    case ItemRSS.TYPE_RELIC: {filterPreference[0].setType(ItemRSS.TYPE_RELIC);filterPreferences[2] = filterPreference[0]; relicsAdapter.filterRequestList(relicsList,filterPreference[0]);break;}
+                }
+                dialog.dismiss();
+            }
+        });
+
+        filter_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        if(!filterPreference[0].isFire()){filter_fire.setAlpha(0.4f);}else{filter_fire.setAlpha(1.0f);}
+        if(!filterPreference[0].isIce()){filter_ice.setAlpha(0.4f);}else{filter_ice.setAlpha(1.0f);}
+        if(!filterPreference[0].isImaginary()){filter_imaginary.setAlpha(0.4f);}else{filter_imaginary.setAlpha(1.0f);}
+        if(!filterPreference[0].isLightning()){filter_lightning.setAlpha(0.4f);}else{filter_lightning.setAlpha(1.0f);}
+        if(!filterPreference[0].isPhysical()){filter_physical.setAlpha(0.4f);}else{filter_physical.setAlpha(1.0f);}
+        if(!filterPreference[0].isQuantum()){filter_quantum.setAlpha(0.4f);}else{filter_quantum.setAlpha(1.0f);}
+        if(!filterPreference[0].isWind()){filter_wind.setAlpha(0.4f);}else{filter_wind.setAlpha(1.0f);}
+
+        if(!filterPreference[0].isAbundance()){filter_abundance.setAlpha(0.4f);}else{filter_abundance.setAlpha(1.0f);}
+        if(!filterPreference[0].isDestruction()){filter_destruction.setAlpha(0.4f);}else{filter_destruction.setAlpha(1.0f);}
+        if(!filterPreference[0].isErudition()){filter_erudition.setAlpha(0.4f);}else{filter_erudition.setAlpha(1.0f);}
+        if(!filterPreference[0].isHarmony()){filter_harmony.setAlpha(0.4f);}else{filter_harmony.setAlpha(1.0f);}
+        if(!filterPreference[0].isHunt()){filter_hunt.setAlpha(0.4f);}else{filter_hunt.setAlpha(1.0f);}
+        if(!filterPreference[0].isNihility()){filter_nihility.setAlpha(0.4f);}else{filter_nihility.setAlpha(1.0f);}
+        if(!filterPreference[0].isWind()){filter_preservation.setAlpha(0.4f);}else{filter_preservation.setAlpha(1.0f);}
+
+
+        if(!filterPreference[0].isRare1()){filter_rare_1.setChecked(false);}else{filter_rare_1.setChecked(true);}
+        if(!filterPreference[0].isRare2()){filter_rare_2.setChecked(false);}else{filter_rare_2.setChecked(true);}
+        if(!filterPreference[0].isRare3()){filter_rare_3.setChecked(false);}else{filter_rare_3.setChecked(true);}
+        if(!filterPreference[0].isRare4()){filter_rare_4.setChecked(false);}else{filter_rare_4.setChecked(true);}
+        if(!filterPreference[0].isRare5()){filter_rare_5.setChecked(false);}else{filter_rare_5.setChecked(true);}
+
+        if(!filterPreference[0].isRelease()){filter_release.setChecked(false);}else{filter_release.setChecked(true);}
+        if(!filterPreference[0].isBeta()){filter_beta.setChecked(false);}else{filter_beta.setChecked(true);}
+        if(!filterPreference[0].isSoon()){filter_soon.setChecked(false);}else{filter_soon.setChecked(true);}
+
+
+        filter_fire.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setFire(!filterPreference[0].isFire());if(!filterPreference[0].isFire()){filter_fire.setAlpha(0.4f);}else{filter_fire.setAlpha(1.0f);}}});
+        filter_ice.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setIce(!filterPreference[0].isIce());if(!filterPreference[0].isIce()){filter_ice.setAlpha(0.4f);}else{filter_ice.setAlpha(1.0f);}}});
+        filter_imaginary.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setImaginary(!filterPreference[0].isImaginary());if(!filterPreference[0].isImaginary()){filter_imaginary.setAlpha(0.4f);}else{filter_imaginary.setAlpha(1.0f);}}});
+        filter_lightning.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setLightning(!filterPreference[0].isLightning());if(!filterPreference[0].isLightning()){filter_lightning.setAlpha(0.4f);}else{filter_lightning.setAlpha(1.0f);}}});
+        filter_physical.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setPhysical(!filterPreference[0].isPhysical());if(!filterPreference[0].isPhysical()){filter_physical.setAlpha(0.4f);}else{filter_physical.setAlpha(1.0f);}}});
+        filter_quantum.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setQuantum(!filterPreference[0].isQuantum());if(!filterPreference[0].isQuantum()){filter_quantum.setAlpha(0.4f);}else{filter_quantum.setAlpha(1.0f);}}});
+        filter_wind.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setWind(!filterPreference[0].isWind());if(!filterPreference[0].isWind()){filter_wind.setAlpha(0.4f);}else{filter_wind.setAlpha(1.0f);}}});
+
+        filter_abundance.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setAbundance(!filterPreference[0].isAbundance());if(!filterPreference[0].isAbundance()){filter_abundance.setAlpha(0.4f);}else{filter_abundance.setAlpha(1.0f);}}});
+        filter_destruction.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setDestruction(!filterPreference[0].isDestruction());if(!filterPreference[0].isDestruction()){filter_destruction.setAlpha(0.4f);}else{filter_destruction.setAlpha(1.0f);}}});
+        filter_erudition.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setErudition(!filterPreference[0].isErudition());if(!filterPreference[0].isErudition()){filter_erudition.setAlpha(0.4f);}else{filter_erudition.setAlpha(1.0f);}}});
+        filter_harmony.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setHarmony(!filterPreference[0].isHarmony());if(!filterPreference[0].isHarmony()){filter_harmony.setAlpha(0.4f);}else{filter_harmony.setAlpha(1.0f);}}});
+        filter_hunt.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setHunt(!filterPreference[0].isHunt());if(!filterPreference[0].isHunt()){filter_hunt.setAlpha(0.4f);}else{filter_hunt.setAlpha(1.0f);}}});
+        filter_nihility.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setNihility(!filterPreference[0].isNihility());if(!filterPreference[0].isNihility()){filter_nihility.setAlpha(0.4f);}else{filter_nihility.setAlpha(1.0f);}}});
+        filter_preservation.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setPreservation(!filterPreference[0].isPreservation());if(!filterPreference[0].isWind()){filter_preservation.setAlpha(0.4f);}else{filter_preservation.setAlpha(1.0f);}}});
+
+
+        filter_rare_1.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setRare1(!filterPreference[0].isRare1());}});
+        filter_rare_2.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setRare2(!filterPreference[0].isRare2());}});
+        filter_rare_3.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setRare3(!filterPreference[0].isRare3());}});
+        filter_rare_4.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setRare4(!filterPreference[0].isRare4());}});
+        filter_rare_5.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setRare5(!filterPreference[0].isRare5());}});
+
+        filter_release.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setRelease(!filterPreference[0].isRelease());}});
+        filter_beta.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setBeta(!filterPreference[0].isBeta());}});
+        filter_soon.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setSoon(!filterPreference[0].isSoon());}});
+
+
+        dialog.show();
     }
 }

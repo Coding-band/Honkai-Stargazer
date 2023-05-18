@@ -41,6 +41,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -68,7 +69,6 @@ public class InfoCharacterPage {
 
     ArrayList<MaterialItem> materialItemsRef = new ArrayList<>();
     ArrayList<Integer> materialItemsID = new ArrayList<>();
-    ArrayList<String> materialList = new ArrayList<>(); //For help tool
 
     public void setup(Context context, Activity activity, HSRItem hsrItem){
         this.context = context;
@@ -139,7 +139,9 @@ public class InfoCharacterPage {
         if (json_base != null){
             try {
                 JSONObject jsonObject = new JSONObject(json_base);
-                ((TextView) view.findViewById(R.id.info_char_name)).setText(jsonObject.getString("name"));
+                TextView info_char_name = view.findViewById(R.id.info_char_name);
+                info_char_name.setText(jsonObject.getString("name"));
+                info_char_name.getPaint().setFakeBoldText(true);
 
                 itemReferences_init(jsonObject);
                 init_intro(jsonObject);
@@ -357,15 +359,13 @@ public class InfoCharacterPage {
         if (jsonObject.has("levelData")) {
             JSONArray levelData = jsonObject.getJSONArray("levelData");
 
-            NumberFormat nf = NumberFormat.getNumberInstance();
-            nf.setRoundingMode(RoundingMode.HALF_UP);
-            nf.setMaximumFractionDigits(2);
+            DecimalFormat df = ItemRSS.getDecimalFormat();
 
-            combat_status_hp.setText(nf.format(levelData.getJSONObject(lvlPART).getDouble("hpBase") + levelData.getJSONObject(lvlPART).getDouble("hpAdd") * (seekBar.getProgress() - lvlPART)));
-            combat_status_atk.setText(nf.format(levelData.getJSONObject(lvlPART).getDouble("attackBase") + levelData.getJSONObject(lvlPART).getDouble("attackAdd") * (seekBar.getProgress() - lvlPART)));
-            combat_status_def.setText(nf.format(levelData.getJSONObject(lvlPART).getDouble("defenseBase") + levelData.getJSONObject(lvlPART).getDouble("defenseAdd") * (seekBar.getProgress() - lvlPART)));
-            combat_status_spd.setText(nf.format(levelData.getJSONObject(lvlPART).getDouble("speedBase") + levelData.getJSONObject(lvlPART).getDouble("speedAdd") * (seekBar.getProgress() - lvlPART)));
-            combat_status_taunt.setText(nf.format(levelData.getJSONObject(lvlPART).getDouble("aggro")));
+            combat_status_hp.setText(df.format(levelData.getJSONObject(lvlPART).getDouble("hpBase") + levelData.getJSONObject(lvlPART).getDouble("hpAdd") * (seekBar.getProgress() - lvlPART)));
+            combat_status_atk.setText(df.format(levelData.getJSONObject(lvlPART).getDouble("attackBase") + levelData.getJSONObject(lvlPART).getDouble("attackAdd") * (seekBar.getProgress() - lvlPART)));
+            combat_status_def.setText(df.format(levelData.getJSONObject(lvlPART).getDouble("defenseBase") + levelData.getJSONObject(lvlPART).getDouble("defenseAdd") * (seekBar.getProgress() - lvlPART)));
+            combat_status_spd.setText(df.format(levelData.getJSONObject(lvlPART).getDouble("speedBase") + levelData.getJSONObject(lvlPART).getDouble("speedAdd") * (seekBar.getProgress() - lvlPART)));
+            combat_status_taunt.setText(df.format(levelData.getJSONObject(lvlPART).getDouble("aggro")));
         }
     }
     /*
@@ -534,76 +534,6 @@ public class InfoCharacterPage {
         eidolon_desc5.setText(ItemRSS.valuedText(ranks.getJSONObject(4).getString("descHash"), ranks.getJSONObject(4).getJSONArray("params"),context), TextView.BufferType.SPANNABLE);
         eidolon_desc6.setText(ItemRSS.valuedText(ranks.getJSONObject(5).getString("descHash"), ranks.getJSONObject(5).getJSONArray("params"),context), TextView.BufferType.SPANNABLE);
 
-    }
-
-    /*
-    Help Tool, for dev only
-     */
-
-    private void trigger_help_tool(){
-        String json_base2 = LoadAssestData(context, "character_data/character_list.json");
-        try {
-            JSONArray array = new JSONArray(json_base2);
-            for (int i = 0; i < array.length(); i++) {
-                JSONObject object = array.getJSONObject(i);
-                String json_base = LoadAssestData(context, "character_data/" + "en" + "/" + object.getString("fileName") + ".json");
-                if (json_base != null) {
-                    JSONObject jsonObject = new JSONObject(json_base);
-                    help_tool_material_id(jsonObject);
-                }
-            }
-        }catch (JSONException e){
-            e.printStackTrace();
-        }
-    }
-
-    private void help_tool_eidolon(JSONObject jsonObject) throws JSONException {
-        String str_final = "";//""-----------"+jsonObject.getString("name")+"-----------"+"\n";
-        JSONArray ranks = jsonObject.getJSONArray("ranks");
-        for (int x = 0  ;x < ranks.length() ; x++){
-            str_final = str_final + "ren https://starrailstation.com/assets/"+ranks.getJSONObject(x).getString("artPath")+".webp \""+jsonObject.getString("name").toLowerCase().replace(" ","_").replace("'","")+"_eidolon"+String.valueOf(x+1)+".webp\""+"\n";
-        }
-
-        LogExport.special(str_final, context, LogExport.BETA_TESTING);
-    }
-    private void help_tool_material(JSONObject jsonObject) throws JSONException {
-        String str_final = "";//""-----------"+jsonObject.getString("name")+"-----------"+"\n";
-        JSONObject ranks = jsonObject.getJSONObject("itemReferences");
-        Iterator<String> iter = ranks.keys();
-        for (int x = 0  ;x < ranks.length() ; x++){
-            String key = iter.next();
-            if (!materialList.contains(ranks.getJSONObject(key).getString("iconPath")+".webp")){
-                str_final = str_final + "ren https://starrailstation.com/assets/"+ranks.getJSONObject(key).getString("iconPath")+".webp \"material_"+ranks.getJSONObject(key).getString("name").toLowerCase().replace(" ","_").replace("'","")+".webp\""+"\n";
-                materialList.add(ranks.getJSONObject(key).getString("iconPath")+".webp");
-            }
-        }
-
-        LogExport.special(str_final, context, LogExport.BETA_TESTING);
-    }
-    private void help_tool_material_id(JSONObject jsonObject) throws JSONException {
-        String str_final = "";//""-----------"+jsonObject.getString("name")+"-----------"+"\n";
-        JSONObject ranks = jsonObject.getJSONObject("itemReferences");
-        Iterator<String> iter = ranks.keys();
-        for (int x = 0  ;x < ranks.length() ; x++){
-            String key = iter.next();
-            if (!materialList.contains(String.valueOf(ranks.getJSONObject(key).getInt("id")))){
-                str_final = str_final + "ID: "+String.valueOf(ranks.getJSONObject(key).getInt("id"))+" || material_"+ranks.getJSONObject(key).getString("name").toLowerCase().replace(" ","_").replace("'","")+"\""+"\n";
-                materialList.add(String.valueOf(ranks.getJSONObject(key).getInt("id")));
-            }
-        }
-
-        LogExport.special(str_final, context, LogExport.BETA_TESTING);
-    }
-    private void help_tool_skill(JSONObject jsonObject) throws JSONException {
-        String str_final = "";//""-----------"+jsonObject.getString("name")+"-----------"+"\n";
-        JSONArray ranks = jsonObject.getJSONArray("skills");
-        for (int x = 0  ;x < ranks.length() ; x++){
-            if (x != 4){
-                str_final = str_final + "ren https://starrailstation.com/assets/"+ranks.getJSONObject(x).getString("iconPath")+".webp \""+jsonObject.getString("name").toLowerCase().replace(" ","_").replace("'","")+"_skill"+String.valueOf(x+1)+".webp\""+"\n";
-            }
-        }
-
-        LogExport.special(str_final, context, LogExport.BETA_TESTING);
     }
 
 }

@@ -13,7 +13,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,6 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:text="Character's Stats"
+                android:textColor="@color/filter_btn_themed"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -234,8 +236,8 @@
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     android:scrollbars="none">
 
                     <LinearLayout
@@ -253,26 +255,28 @@
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="LV."
-                            android:textColor="@color/filter_btn_themed" />
+                            android:textColor="@color/filter_btn_themed"
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/combat_status_lv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="36/40" />
+                            android:text="36/40"
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                     <SeekBar
                         android:id="@+id/combat_status_seekbar"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:max="100"
                         android:progress="20"
                         android:progressDrawable="@drawable/bg_seekbar_line"
@@ -291,6 +295,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:text="Combat"
+                android:textColor="@color/filter_btn_themed"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -353,8 +358,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:requiresFadingEdge="horizontal"
                     android:fadingEdgeLength="20dp"
+                    android:requiresFadingEdge="horizontal"
                     android:scrollbars="none">
 
                     <LinearLayout
@@ -372,26 +377,28 @@
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="LV."
-                            android:textColor="@color/filter_btn_themed" />
+                            android:textColor="@color/filter_btn_themed"
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/combat_skill1_lv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1" />
+                            android:text="01"
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                     <SeekBar
                         android:id="@+id/combat_skill1_seekbar"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:max="100"
                         android:progress="20"
                         android:progressDrawable="@drawable/bg_seekbar_line"
@@ -461,8 +468,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:requiresFadingEdge="horizontal"
                     android:fadingEdgeLength="20dp"
+                    android:requiresFadingEdge="horizontal"
                     android:scrollbars="none">
 
                     <LinearLayout
@@ -473,7 +480,6 @@
                 </HorizontalScrollView>
 
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -481,26 +487,28 @@
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="LV."
-                            android:textColor="@color/filter_btn_themed" />
+                            android:textColor="@color/filter_btn_themed"
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/combat_skill2_lv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1" />
+                            android:text="01"
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                     <SeekBar
                         android:id="@+id/combat_skill2_seekbar"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:max="100"
                         android:progress="20"
                         android:progressDrawable="@drawable/bg_seekbar_line"
@@ -570,8 +578,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:requiresFadingEdge="horizontal"
                     android:fadingEdgeLength="20dp"
+                    android:requiresFadingEdge="horizontal"
                     android:scrollbars="none">
 
                     <LinearLayout
@@ -596,19 +604,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="LV."
-                            android:textColor="@color/filter_btn_themed" />
+                            android:textColor="@color/filter_btn_themed"
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/combat_skill3_lv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1" />
+                            android:text="01"
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                     <SeekBar
                         android:id="@+id/combat_skill3_seekbar"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:max="100"
                         android:progress="20"
                         android:progressDrawable="@drawable/bg_seekbar_line"
@@ -679,8 +689,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:requiresFadingEdge="horizontal"
                     android:fadingEdgeLength="20dp"
+                    android:requiresFadingEdge="horizontal"
                     android:scrollbars="none">
 
                     <LinearLayout
@@ -697,26 +707,28 @@
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="LV."
-                            android:textColor="@color/filter_btn_themed" />
+                            android:textColor="@color/filter_btn_themed"
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/combat_skill4_lv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1" />
+                            android:text="01"
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                     <SeekBar
                         android:id="@+id/combat_skill4_seekbar"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:max="100"
                         android:progress="20"
                         android:progressDrawable="@drawable/bg_seekbar_line"
@@ -786,8 +798,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:requiresFadingEdge="horizontal"
                     android:fadingEdgeLength="20dp"
+                    android:requiresFadingEdge="horizontal"
                     android:scrollbars="none">
 
                     <LinearLayout
@@ -798,7 +810,6 @@
                 </HorizontalScrollView>
 
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -806,26 +817,28 @@
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="LV."
-                            android:textColor="@color/filter_btn_themed" />
+                            android:textColor="@color/filter_btn_themed"
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/combat_skill6_lv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1" />
+                            android:text="01"
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                     <SeekBar
                         android:id="@+id/combat_skill6_seekbar"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:max="100"
                         android:progress="20"
                         android:progressDrawable="@drawable/bg_seekbar_line"

@@ -9,6 +9,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/bg_filter_page"
     android:orientation="vertical"
     android:padding="8dp">
 
@@ -21,364 +22,440 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <LinearLayout
+        android:id="@+id/filter_element_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Element"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Element"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/filter_physical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:maxWidth="72dp"
+                android:maxHeight="72dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                app:srcCompat="@drawable/element_physical" />
+
+            <ImageView
+                android:id="@+id/filter_fire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:maxWidth="72dp"
+                android:maxHeight="72dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                app:srcCompat="@drawable/element_fire" />
+
+            <ImageView
+                android:id="@+id/filter_ice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:maxWidth="72dp"
+                android:maxHeight="72dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                app:srcCompat="@drawable/element_ice" />
+
+            <ImageView
+                android:id="@+id/filter_lightning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:maxWidth="72dp"
+                android:maxHeight="72dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                app:srcCompat="@drawable/element_lightning" />
+
+            <ImageView
+                android:id="@+id/filter_wind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:maxWidth="72dp"
+                android:maxHeight="72dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                app:srcCompat="@drawable/element_wind" />
+
+            <ImageView
+                android:id="@+id/filter_quantum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:maxWidth="72dp"
+                android:maxHeight="72dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                app:srcCompat="@drawable/element_quantum" />
+
+            <ImageView
+                android:id="@+id/filter_imaginary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:maxWidth="72dp"
+                android:maxHeight="72dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                app:srcCompat="@drawable/element_imaginary" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/filter_path_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Path"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/filter_destruction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:maxWidth="72dp"
+                android:maxHeight="72dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                app:srcCompat="@drawable/path_the_destruction"
+                app:tint="@color/ic_daynight_tint" />
+
+            <ImageView
+                android:id="@+id/filter_hunt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:maxWidth="72dp"
+                android:maxHeight="72dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                app:srcCompat="@drawable/path_the_hunt"
+                app:tint="@color/ic_daynight_tint" />
+
+            <ImageView
+                android:id="@+id/filter_erudition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:maxWidth="72dp"
+                android:maxHeight="72dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                app:srcCompat="@drawable/path_the_erudition"
+                app:tint="@color/ic_daynight_tint" />
+
+            <ImageView
+                android:id="@+id/filter_harmony"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:maxWidth="72dp"
+                android:maxHeight="72dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                app:srcCompat="@drawable/path_the_harmony"
+                app:tint="@color/ic_daynight_tint" />
+
+            <ImageView
+                android:id="@+id/filter_nihility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:maxWidth="72dp"
+                android:maxHeight="72dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                app:srcCompat="@drawable/path_the_nihility"
+                app:tint="@color/ic_daynight_tint" />
+
+            <ImageView
+                android:id="@+id/filter_preservation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:maxWidth="72dp"
+                android:maxHeight="72dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                app:srcCompat="@drawable/path_the_preservation"
+                app:tint="@color/ic_daynight_tint" />
+
+            <ImageView
+                android:id="@+id/filter_abundance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:maxWidth="72dp"
+                android:maxHeight="72dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                app:srcCompat="@drawable/path_the_abundance"
+                app:tint="@color/ic_daynight_tint" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/filter_rarity_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Rarity"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/filter_rare_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_filter_btn"
+                android:checked="true"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:minHeight="40dp"
+                android:textOff="1 ✦"
+                android:textOn="1 ✦"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <ToggleButton
+                android:id="@+id/filter_rare_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_filter_btn"
+                android:checked="true"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:minHeight="40dp"
+                android:textOff="2 ✦"
+                android:textOn="2 ✦"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <ToggleButton
+                android:id="@+id/filter_rare_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_filter_btn"
+                android:checked="true"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:minHeight="40dp"
+                android:textOff="3 ✦"
+                android:textOn="3 ✦"
+                android:textSize="16sp" />
+
+            <ToggleButton
+                android:id="@+id/filter_rare_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_filter_btn"
+                android:checked="true"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:minHeight="40dp"
+                android:textOff="4 ✦"
+                android:textOn="4 ✦"
+                android:textSize="16sp" />
+
+            <ToggleButton
+                android:id="@+id/filter_rare_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_filter_btn"
+                android:checked="true"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:minHeight="40dp"
+                android:textOff="5 ✦"
+                android:textOn="5 ✦"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/filter_status_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Status"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/filter_release"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_filter_btn"
+                android:capitalize="none"
+                android:checked="true"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:minHeight="40dp"
+                android:padding="4dp"
+                android:textOff="Released"
+                android:textOn="Released"
+                android:textSize="12sp" />
+
+            <ToggleButton
+                android:id="@+id/filter_soon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_filter_btn"
+                android:capitalize="none"
+                android:checked="true"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:minHeight="40dp"
+                android:padding="4dp"
+                android:textOff="Soon"
+                android:textOn="Soon"
+                android:textSize="12sp" />
+
+            <ToggleButton
+                android:id="@+id/filter_beta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_filter_btn"
+                android:capitalize="none"
+                android:checked="true"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:minHeight="40dp"
+                android:padding="4dp"
+                android:textOff="Beta"
+                android:textOn="Beta"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/filter_physical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:alpha="0.4"
-            android:maxWidth="72dp"
-            android:maxHeight="72dp"
-            android:minWidth="24dp"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/element_physical" />
-
-        <ImageView
-            android:id="@+id/filter_fire"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:alpha="0.4"
-            android:maxWidth="72dp"
-            android:maxHeight="72dp"
-            android:minWidth="24dp"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/element_fire" />
-
-        <ImageView
-            android:id="@+id/filter_ice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:alpha="0.4"
-            android:maxWidth="72dp"
-            android:maxHeight="72dp"
-            android:minWidth="24dp"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/element_ice" />
-
-        <ImageView
-            android:id="@+id/filter_lightning"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:alpha="0.4"
-            android:maxWidth="72dp"
-            android:maxHeight="72dp"
-            android:minWidth="24dp"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/element_lightning" />
-
-        <ImageView
-            android:id="@+id/filter_wind"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:alpha="0.4"
-            android:maxWidth="72dp"
-            android:maxHeight="72dp"
-            android:minWidth="24dp"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/element_wind" />
-
-        <ImageView
-            android:id="@+id/filter_quantum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:alpha="0.4"
-            android:maxWidth="72dp"
-            android:maxHeight="72dp"
-            android:minWidth="24dp"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/element_quantum" />
-
-        <ImageView
-            android:id="@+id/filter_imaginary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:alpha="0.4"
-            android:maxWidth="72dp"
-            android:maxHeight="72dp"
-            android:minWidth="24dp"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/element_imaginary" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Path"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/filter_destruction"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:alpha="0.4"
-            android:maxWidth="72dp"
-            android:maxHeight="72dp"
-            android:minWidth="24dp"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/path_the_destruction"
-            app:tint="@color/ic_daynight_tint" />
-
-        <ImageView
-            android:id="@+id/filter_hunt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:alpha="0.4"
-            android:maxWidth="72dp"
-            android:maxHeight="72dp"
-            android:minWidth="24dp"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/path_the_hunt"
-            app:tint="@color/ic_daynight_tint" />
-
-        <ImageView
-            android:id="@+id/filter_erudition"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:alpha="0.4"
-            android:maxWidth="72dp"
-            android:maxHeight="72dp"
-            android:minWidth="24dp"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/path_the_erudition"
-            app:tint="@color/ic_daynight_tint" />
-
-        <ImageView
-            android:id="@+id/filter_harmony"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:alpha="0.4"
-            android:maxWidth="72dp"
-            android:maxHeight="72dp"
-            android:minWidth="24dp"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/path_the_harmony"
-            app:tint="@color/ic_daynight_tint" />
-
-        <ImageView
-            android:id="@+id/filter_nihility"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:alpha="0.4"
-            android:maxWidth="72dp"
-            android:maxHeight="72dp"
-            android:minWidth="24dp"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/path_the_nihility"
-            app:tint="@color/ic_daynight_tint" />
-
-        <ImageView
-            android:id="@+id/filter_preservation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:alpha="0.4"
-            android:maxWidth="72dp"
-            android:maxHeight="72dp"
-            android:minWidth="24dp"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/path_the_preservation"
-            app:tint="@color/ic_daynight_tint" />
-
-        <ImageView
-            android:id="@+id/filter_abundance"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:alpha="0.4"
-            android:maxWidth="72dp"
-            android:maxHeight="72dp"
-            android:minWidth="24dp"
-            android:minHeight="24dp"
-            app:srcCompat="@drawable/path_the_abundance"
-            app:tint="@color/ic_daynight_tint" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Rarity"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <ToggleButton
-            android:id="@+id/filter_rare_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="8dp"
-            android:background="@drawable/bg_filter_btn"
-            android:checked="true"
-            android:gravity="center"
-            android:minWidth="64dp"
-            android:minHeight="40dp"
-            android:textOff="4 ✦"
-            android:textOn="4 ✦"
-            android:textSize="16sp" />
-
-        <ToggleButton
-            android:id="@+id/filter_rare_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_filter_btn"
-            android:checked="true"
-            android:gravity="center"
-            android:minWidth="64dp"
-            android:minHeight="40dp"
-            android:textOff="5 ✦"
-            android:textOn="5 ✦"
-            android:textSize="16sp" />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Status"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <ToggleButton
-            android:id="@+id/filter_release"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="8dp"
-            android:background="@drawable/bg_filter_btn"
-            android:capitalize="none"
-            android:checked="true"
-            android:gravity="center"
-            android:minWidth="64dp"
-            android:minHeight="40dp"
-            android:padding="4dp"
-            android:textOff="Released"
-            android:textOn="Released"
-            android:textSize="12sp" />
-
-        <ToggleButton
-            android:id="@+id/filter_soon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="8dp"
-            android:background="@drawable/bg_filter_btn"
-            android:capitalize="none"
-            android:checked="true"
-            android:gravity="center"
-            android:minWidth="64dp"
-            android:minHeight="40dp"
-            android:padding="4dp"
-            android:textOff="Soon"
-            android:textOn="Soon"
-            android:textSize="12sp" />
-
-        <ToggleButton
-            android:id="@+id/filter_beta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="8dp"
-            android:background="@drawable/bg_filter_btn"
-            android:capitalize="none"
-            android:checked="true"
-            android:gravity="center"
-            android:minWidth="64dp"
-            android:minHeight="40dp"
-            android:padding="4dp"
-            android:textOff="Beta"
-            android:textOn="Beta"
-            android:textSize="12sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/filter_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -391,7 +468,7 @@
             app:strokeWidth="1dp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/filter_apply"
             style="@style/Widget.Material3.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

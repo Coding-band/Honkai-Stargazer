@@ -54,7 +54,7 @@ public class ItemRSS {
     public static final String PATH_HUNT = "Hunt";
 
     public static final String STATUS_RELEASED = "RELEASED";
-    public static final String STATUS_UPCOMING = "UPCOMING";
+    public static final String STATUS_SOON = "SOON";
     public static final String STATUS_BETA = "BETA";
 
     public static final String SEX_MALE = "Male";
@@ -71,6 +71,17 @@ public class ItemRSS {
     public static final int MATERIAL_TRACE_MATERIALS = 4;
     public static final int MATERIAL_TRACE_MATERIAL_CHARACTER_ASCENSION_MATERIALS = 7;
     public static final int MATERIAL_COMMON_CURRENCY = 11;
+
+    public static NumberFormat getNumberFormat() {
+        NumberFormat nf = NumberFormat.getNumberInstance();
+        nf.setRoundingMode(RoundingMode.HALF_UP);
+        nf.setMaximumFractionDigits(2);
+        return nf;
+    }
+    public static DecimalFormat getDecimalFormat() {
+        DecimalFormat df = new DecimalFormat("#,###.##");
+        return df;
+    }
 
     public int[] getCharByName(String charNameInFile){
         switch (charNameInFile){
@@ -404,19 +415,18 @@ public class ItemRSS {
             desc = desc.replace("<nobr>","");
             desc = desc.replace("</nobr>","");
             desc = desc.replaceAll("<[^>]*>", "");
-            NumberFormat nf = NumberFormat.getNumberInstance();
-            nf.setRoundingMode(RoundingMode.HALF_UP);
-            nf.setMaximumFractionDigits(2);
+
+            DecimalFormat df = ItemRSS.getDecimalFormat();
             //nf.setMinimumFractionDigits(2); //當value的值是100.00的時候返回100
 
             ArrayList<Boolean> isPercent = new ArrayList<Boolean>();
             for (int x = 0 ; x < params.length() ; x++){
                 String keyword = "#"+String.valueOf(x+1)+"[i]";
                 if (desc.contains(keyword+"%")){
-                    desc = desc.replace(keyword, nf.format(params.getDouble(x) * 100));
+                    desc = desc.replace(keyword, df.format(params.getDouble(x) * 100));
                     isPercent.add(true);
                 }else{
-                    desc = desc.replace(keyword,nf.format(params.getDouble(x)));
+                    desc = desc.replace(keyword,df.format(params.getDouble(x)));
                     isPercent.add(false);
                 }
             }
@@ -425,8 +435,8 @@ public class ItemRSS {
 
             //Highlight keyword (Value)
             for (int x = 0 ; x < params.length() ; x++){
-                String keyword = (isPercent.get(x) ? (nf.format(params.getDouble(x)*100))+"%" : nf.format(params.getDouble(x)));
-                String keyword_spec = (isPercent.get(x) ? (" "+nf.format(params.getDouble(x)*100))+"% " : " "+nf.format(params.getDouble(x))+" ");
+                String keyword = (isPercent.get(x) ? (df.format(params.getDouble(x)*100))+"%" : df.format(params.getDouble(x)));
+                String keyword_spec = (isPercent.get(x) ? (" "+df.format(params.getDouble(x)*100))+"% " : " "+df.format(params.getDouble(x))+" ");
                 for (int i = -1; (i = desc.indexOf(keyword, i + 1)) != -1; i++) {
                     mSpannavleString.setSpan(new ForegroundColorSpan(
                                     context.getResources().getColor(R.color.highlight_color)),
