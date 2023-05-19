@@ -132,7 +132,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
             }
         }
 
-        holder.item_name.setText(hsrItem.getName());
+        holder.item_name.setText(item_rss.getLocalNameByName(hsrItem.getName(),context));
         holder.item_name.getPaint().setFakeBoldText(true);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

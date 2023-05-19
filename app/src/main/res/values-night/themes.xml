@@ -51,4 +51,29 @@
         <item name="android:windowExitAnimation">@anim/slide_out_left</item>
     </style>
 
+    <style name="FilterDialogStyle_F">
+        <!--对话框背景 -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!--边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--没有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否浮现在Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!--背景透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否有覆盖 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--进出的显示动画 -->
+        <item name="android:windowAnimationStyle">@style/normalDialogAnim</item>
+        <!--背景变暗-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">stateUnchanged</item>
+    </style>
+
+    <style name="normalDialogAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/normal_navi_down_enter</item>
+        <item name="android:windowExitAnimation">@anim/normal_navi_down_exit</item>
+    </style>
+
 </resources>

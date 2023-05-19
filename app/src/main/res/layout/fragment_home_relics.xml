@@ -46,12 +46,12 @@
             app:layout_constraintVertical_bias="0.0">
 
             <ImageButton
-                android:id="@+id/relicFilter"
+                android:id="@+id/relicSearchBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|left"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                app:srcCompat="@drawable/ic_filter" />
+                app:srcCompat="@drawable/ic_search" />
 
             <EditText
                 android:id="@+id/relicSearchEt"
@@ -64,12 +64,12 @@
                 android:inputType="textPersonName" />
 
             <ImageButton
-                android:id="@+id/relicSearchBtn"
+                android:id="@+id/relicFilter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|left"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                app:srcCompat="@drawable/ic_search" />
+                app:srcCompat="@drawable/ic_filter" />
         </LinearLayout>
 
     </com.google.android.material.appbar.AppBarLayout>

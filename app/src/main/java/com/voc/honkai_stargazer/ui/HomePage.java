@@ -10,7 +10,6 @@ import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -20,8 +19,11 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.graphics.Color;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -30,10 +32,10 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -45,12 +47,14 @@ import com.voc.honkai_stargazer.data.HSRItemAdapter;
 import com.voc.honkai_stargazer.util.CustomViewPager;
 import com.voc.honkai_stargazer.util.CustomViewPagerAdapter;
 import com.voc.honkai_stargazer.util.ItemRSS;
+import com.voc.honkai_stargazer.util.LangUtil;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class HomePage extends AppCompatActivity {
 
@@ -80,6 +84,7 @@ public class HomePage extends AppCompatActivity {
     //Character, Lightcone, Relic
     FilterPreference[] filterPreferences = new FilterPreference[]{new FilterPreference(),new FilterPreference(),new FilterPreference()};
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,10 +95,48 @@ public class HomePage extends AppCompatActivity {
         sharedPreferences = context.getSharedPreferences("user_info",MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
+        lang_setup();
+
         root_init();
         character_init();
         lightcone_init();
         relic_init();
+        setting_init();
+
+    }
+
+    public void setting_init() {
+
+    }
+
+    public void lang_setup(){
+        sharedPreferences = getSharedPreferences("user_info",MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+        LangUtil.LangType langType = LangUtil.LangType.EN;
+        if(sharedPreferences.getString("curr_lang","").isEmpty()){
+            String tag = Locale.getDefault().toLanguageTag();
+            if(tag.contains("zh-")){
+                if(tag.equals("zh-CN")){
+                    editor.putString("curr_lang","zh_cn"); langType = LangUtil.LangType.ZH_CN;
+                }else{
+                    editor.putString("curr_lang","zh_hk");langType = LangUtil.LangType.ZH_HK;
+                }
+            }else if(tag.contains("en-")){
+                editor.putString("curr_lang","en"); langType = LangUtil.LangType.EN;
+            }else if(tag.contains("ru-")){
+                editor.putString("curr_lang","ru"); langType = LangUtil.LangType.RU;
+            }else if(tag.contains("ja-")){
+                editor.putString("curr_lang","jp"); langType = LangUtil.LangType.JP;
+            }else if(tag.contains("fr-")){
+                editor.putString("curr_lang","fr"); langType = LangUtil.LangType.FR;
+            }else if(tag.contains("uk-")){
+                editor.putString("curr_lang","ua"); langType = LangUtil.LangType.UA;
+            }else{
+                editor.putString("curr_lang","en"); langType = LangUtil.LangType.EN;
+            }
+            editor.apply();
+            LangUtil.getAttachBaseContext(context, langType);
+        }
     }
 
     public void root_init(){
@@ -168,12 +211,15 @@ public class HomePage extends AppCompatActivity {
         char_list_reload();
 
         ImageButton characterFilter = home_characters.findViewById(R.id.characterFilter);
+        EditText characterSearchEt = home_characters.findViewById(R.id.characterSearchEt);
         characterFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 filterHandler(ItemRSS.TYPE_CHARACTER);
             }
         });
+
+        characterSearchEt.addTextChangedListener(searchBarHandler(ItemRSS.TYPE_CHARACTER, characterSearchEt));
     }
 
     public void lightcone_init(){
@@ -188,12 +234,14 @@ public class HomePage extends AppCompatActivity {
         lightcone_list_reload();
 
         ImageButton lightconeFilter = home_lightcones.findViewById(R.id.lightconeFilter);
+        EditText lightconeSearchEt = home_lightcones.findViewById(R.id.lightconeSearchEt);
         lightconeFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 filterHandler(ItemRSS.TYPE_LIGHTCONE);
             }
         });
+        lightconeSearchEt.addTextChangedListener(searchBarHandler(ItemRSS.TYPE_LIGHTCONE, lightconeSearchEt));
     }
     public void relic_init(){
         relicsListView = home_relics.findViewById(R.id.relicsListView);
@@ -206,12 +254,14 @@ public class HomePage extends AppCompatActivity {
         relic_list_reload();
 
         ImageButton relicFilter = home_relics.findViewById(R.id.relicFilter);
+        EditText relicSearchEt = home_relics.findViewById(R.id.relicSearchEt);
         relicFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 filterHandler(ItemRSS.TYPE_RELIC);
             }
         });
+        relicSearchEt.addTextChangedListener(searchBarHandler(ItemRSS.TYPE_RELIC, relicSearchEt));
     }
 
     private void char_list_reload() {
@@ -310,9 +360,67 @@ public class HomePage extends AppCompatActivity {
         }
     }
 
+    private TextWatcher searchBarHandler(String TYPE, EditText editText){
+        return new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                HSRItemAdapter adapter = charactersAdapter;
+                ArrayList<HSRItem> list = charactersList;
+                ItemRSS item_rss = new ItemRSS();
+
+                switch (TYPE){
+                    case ItemRSS.TYPE_CHARACTER:{
+                        adapter = charactersAdapter;
+                        list = charactersList;
+                        break;
+                    }
+                    case ItemRSS.TYPE_LIGHTCONE:{
+                        adapter = lightconesAdapter;
+                        list = lightconesList;
+                        break;
+                    }
+                    case ItemRSS.TYPE_RELIC:{
+                        adapter = relicsAdapter;
+                        list = relicsList;
+                        break;
+                    }
+                }
+
+                if (editText.getText() != null){
+                    String request = editText.getText().toString();
+                    if (!request.equals("")){
+                        ArrayList<HSRItem> filteredList = new ArrayList<>();
+                        int x = 0;
+                        for (HSRItem item : list) {
+                            String str = request.toLowerCase();
+                            if (item_rss.getLocalNameByName(item.getName(),context).contains(str)||item_rss.getLocalNameByName(item.getName(),context).toLowerCase().contains(str)||item.getName().toLowerCase().contains(str)){ // EN -> ZH
+                                filteredList.add(item);
+                            }
+                            x = x +1;
+                        }
+                        adapter.filterList(filteredList);
+                    }else{
+                        adapter.filterList(list);
+                    }
+                }else{
+                    adapter.filterList(list);
+                }
+            }
+        };
+    }
 
     private void filterHandler(String TYPE){
-        final Dialog dialog = new Dialog(context, R.style.PageDialogStyle_P);
+        final Dialog dialog = new Dialog(context, R.style.FilterDialogStyle_F);
         View view = View.inflate(context, R.layout.fragment_home_filter, null);
         dialog.setContentView(view);
         dialog.setCanceledOnTouchOutside(true);

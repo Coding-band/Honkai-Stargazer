@@ -33,6 +33,7 @@ import com.voc.honkai_stargazer.data.HSRItem;
 import com.voc.honkai_stargazer.data.MaterialItem;
 import com.voc.honkai_stargazer.util.CustomViewPagerAdapter;
 import com.voc.honkai_stargazer.util.ItemRSS;
+import com.voc.honkai_stargazer.util.LangUtil;
 import com.voc.honkai_stargazer.util.LogExport;
 import com.willy.ratingbar.ScaleRatingBar;
 
@@ -133,7 +134,7 @@ public class InfoCharacterPage {
         });
         info_vp.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(info_tablayout));
 
-        String LANGUAGE = ItemRSS.LANG_EN;
+        String LANGUAGE = context.getSharedPreferences("user_info",Context.MODE_PRIVATE).getString("curr_lang","N/A");
         //Read JSON from Assests
         String json_base = LoadAssestData(context,"character_data/"+LANGUAGE+"/"+hsrItem.getFileName()+".json");
         if (json_base != null){

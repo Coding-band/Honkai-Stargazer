@@ -47,12 +47,12 @@
             app:layout_constraintVertical_bias="0.0">
 
             <ImageButton
-                android:id="@+id/lightconeFilter"
+                android:id="@+id/lightconeSearchBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|left"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                app:srcCompat="@drawable/ic_filter" />
+                app:srcCompat="@drawable/ic_search" />
 
             <EditText
                 android:id="@+id/lightconeSearchEt"
@@ -65,12 +65,12 @@
                 android:inputType="textPersonName" />
 
             <ImageButton
-                android:id="@+id/lightconeSearchBtn"
+                android:id="@+id/lightconeFilter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|left"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                app:srcCompat="@drawable/ic_search" />
+                app:srcCompat="@drawable/ic_filter" />
         </LinearLayout>
 
     </com.google.android.material.appbar.AppBarLayout>

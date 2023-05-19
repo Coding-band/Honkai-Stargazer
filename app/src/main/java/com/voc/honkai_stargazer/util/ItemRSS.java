@@ -224,6 +224,136 @@ public class ItemRSS {
         }
     }
 
+    public String getLocalNameByName(String itemNameInFile, Context context){
+        switch (itemNameInFile){
+            // Character
+            case "Arlan" : return context.getString(R.string.arlan);
+            case "Asta" : return context.getString(R.string.asta);
+            case "Bailu" : return context.getString(R.string.bailu);
+            //case "Blade" : return context.getString(R.string.blade);
+            case "Bronya" : return context.getString(R.string.bronya);
+            case "Clara" : return context.getString(R.string.clara);
+            case "Dan Heng" : return context.getString(R.string.dan_heng);
+            case "Herta" : return context.getString(R.string.herta);
+            case "Himeko" : return context.getString(R.string.himeko);
+            case "Hook" : return context.getString(R.string.hook);
+            case "Jing Yuan" : return context.getString(R.string.jing_yuan);
+            case "Kafka" : return context.getString(R.string.kafka);
+            case "Luocha" : return context.getString(R.string.luocha);
+            case "March 7th" : return context.getString(R.string.march_7th);
+            case "Natasha" : return context.getString(R.string.natasha);
+            case "Pela" : return context.getString(R.string.pela);
+            case "Qingque" : return context.getString(R.string.qingque);
+            case "Sampo" : return context.getString(R.string.sampo);
+            case "Seele" : return context.getString(R.string.seele);
+            case "Serval" : return context.getString(R.string.serval);
+            case "Silver Wolf" : return context.getString(R.string.silver_wolf);
+            case "Sushang" : return context.getString(R.string.sushang);
+            case "Tingyun" : return context.getString(R.string.tingyun);
+            case "Welt" : return context.getString(R.string.welt);
+            case "Yanqing" : return context.getString(R.string.yanqing);
+
+
+            //Lightcone
+            case "A Secret Vow" : return context.getString(R.string.a_secret_vow);
+            case "Adversarial" : return context.getString(R.string.adversarial);
+            case "Amber" : return context.getString(R.string.amber);
+            case "Arrows" : return context.getString(R.string.arrows);
+            case "Before Dawn" : return context.getString(R.string.before_dawn);
+            case "But the Battle Isn't Over" : return context.getString(R.string.but_the_battle_isnt_over);
+            case "Carve the Moon, Weave the Clouds" : return context.getString(R.string.carve_the_moon_weave_the_clouds);
+            case "Chorus" : return context.getString(R.string.chorus);
+            case "Collapsing Sky" : return context.getString(R.string.collapsing_sky);
+            case "Cornucopia" : return context.getString(R.string.cornucopia);
+            case "Cruising in the Stellar Sea" : return context.getString(R.string.cruising_in_the_stellar_sea);
+            case "Dance! Dance! Dance!" : return context.getString(R.string.dance_dance_dance);
+            case "Darting Arrow" : return context.getString(R.string.darting_arrow);
+            case "Data Bank" : return context.getString(R.string.data_bank);
+            case "Day One of My New Life" : return context.getString(R.string.day_one_of_my_new_life);
+            case "Defense" : return context.getString(R.string.defense);
+            //case "Echoes of the Coffin" : return context.getString(R.string.echoes_of_the_coffin);
+            case "Eyes of the Prey" : return context.getString(R.string.eyes_of_the_prey);
+            case "Fermata" : return context.getString(R.string.fermata);
+            case "Fine Fruit" : return context.getString(R.string.fine_fruit);
+            case "Geniuses' Repose" : return context.getString(R.string.geniuses_repose);
+            case "Good Night and Sleep Well" : return context.getString(R.string.good_night_and_sleep_well);
+            case "Hidden Shadow" : return context.getString(R.string.hidden_shadow);
+            case "In the Name of the World" : return context.getString(R.string.in_the_name_of_the_world);
+            case "In the Night" : return context.getString(R.string.in_the_night);
+            //case "Incessant Rain" : return context.getString(R.string.incessant_rain);
+            case "Landau's Choice" : return context.getString(R.string.landaus_choice);
+            case "Loop" : return context.getString(R.string.loop);
+            case "Make the World Clamor" : return context.getString(R.string.make_the_world_clamor);
+            case "Mediation" : return context.getString(R.string.mediation);
+            case "Memories of the Past" : return context.getString(R.string.memories_of_the_past);
+            case "Meshing Cogs" : return context.getString(R.string.meshing_cogs);
+            case "Moment of Victory" : return context.getString(R.string.moment_of_victory);
+            case "Multiplication" : return context.getString(R.string.multiplication);
+            case "Mutual Demise" : return context.getString(R.string.mutual_demise);
+            case "Night on the Milky Way" : return context.getString(R.string.night_on_the_milky_way);
+            case "Nowhere to Run" : return context.getString(R.string.nowhere_to_run);
+            case "On the Fall of an Aeon" : return context.getString(R.string.on_the_fall_of_an_aeon);
+            case "Only Silence Remains" : return context.getString(R.string.only_silence_remains);
+            case "Passkey" : return context.getString(R.string.passkey);
+            case "Past and Future" : return context.getString(R.string.past_and_future);
+            //case "Patience Is All You Need" : return context.getString(R.string.patience_is_all_you_need);
+            case "Perfect Timing" : return context.getString(R.string.perfect_timing);
+            case "Pioneering" : return context.getString(R.string.pioneering);
+            case "Planetary Rendezvous" : return context.getString(R.string.planetary_rendezvous);
+            case "Post-Op Conversation" : return context.getString(R.string.post_op_conversation);
+            case "Quid Pro Quo" : return context.getString(R.string.quid_pro_quo);
+            case "Resolution Shines As Pearls of Sweat" : return context.getString(R.string.resolution_shines_as_pearls_of_sweat);
+            case "Return to Darkness" : return context.getString(R.string.return_to_darkness);
+            case "River Flows in Spring" : return context.getString(R.string.river_flows_in_spring);
+            case "Sagacity" : return context.getString(R.string.sagacity);
+            case "Shared Feeling" : return context.getString(R.string.shared_feeling);
+            case "Shattered Home" : return context.getString(R.string.shattered_home);
+            case "Sleep Like the Dead" : return context.getString(R.string.sleep_like_the_dead);
+            case "Something Irreplaceable" : return context.getString(R.string.something_irreplaceable);
+            case "Subscribe for More!" : return context.getString(R.string.subscribe_for_more);
+            case "Swordplay" : return context.getString(R.string.swordplay);
+            case "Texture of Memories" : return context.getString(R.string.texture_of_memories);
+            case "The Birth of the Self" : return context.getString(R.string.the_birth_of_the_self);
+            case "The Moles Welcome You" : return context.getString(R.string.the_moles_welcome_you);
+            case "The Seriousness of Breakfast" : return context.getString(R.string.the_seriousness_of_breakfast);
+            //case "The Unreachable Side" : return context.getString(R.string.the_unreachable_side);
+            case "This Is Me!" : return context.getString(R.string.this_is_me);
+            case "Time Waits for No One" : return context.getString(R.string.time_waits_for_no_one);
+            case "Today Is Another Peaceful Day" : return context.getString(R.string.today_is_another_peaceful_day);
+            case "Trend of the Universal Market" : return context.getString(R.string.trend_of_the_universal_market);
+            case "Under the Blue Sky" : return context.getString(R.string.under_the_blue_sky);
+            case "Void" : return context.getString(R.string.void_);
+            case "Warmth Shortens Cold Nights" : return context.getString(R.string.warmth_shortens_cold_nights);
+            case "We Are Wildfire" : return context.getString(R.string.we_are_wildfire);
+            case "We Will Meet Again" : return context.getString(R.string.we_will_meet_again);
+            case "Woof! Walk Time!" : return context.getString(R.string.woof_walk_time);
+
+            //Relic
+            case "Band of Sizzling Thunder" : return context.getString(R.string.band_of_sizzling_thunder);
+            case "Belobog of the Architects" : return context.getString(R.string.belobog_of_the_architects);
+            case "Celestial Differentiator" : return context.getString(R.string.celestial_differentiator);
+            case "Champion of Streetwise Boxing" : return context.getString(R.string.champion_of_streetwise_boxing);
+            case "Eagle of Twilight Line" : return context.getString(R.string.eagle_of_twilight_line);
+            case "Firesmith of Lava-Forging" : return context.getString(R.string.firesmith_of_lava_forging);
+            case "Fleet of the Ageless" : return context.getString(R.string.fleet_of_the_ageless);
+            case "Genius of Brilliant Stars" : return context.getString(R.string.genius_of_brilliant_stars);
+            case "Guard of Wuthering Snow" : return context.getString(R.string.guard_of_wuthering_snow);
+            case "Hunter of Glacial Forest" : return context.getString(R.string.hunter_of_glacial_forest);
+            case "Inert Salsotto" : return context.getString(R.string.inert_salsotto);
+            case "Knight of Purity Palace" : return context.getString(R.string.knight_of_purity_palace);
+            case "Musketeer of Wild Wheat" : return context.getString(R.string.musketeer_of_wild_wheat);
+            case "Pan-Galactic Commercial Enterprise" : return context.getString(R.string.pan_galactic_commercial_enterprise);
+            case "Passerby of Wandering Cloud" : return context.getString(R.string.passerby_of_wandering_cloud);
+            case "Space Sealing Station" : return context.getString(R.string.space_sealing_station);
+            case "Sprightly Vonwacq" : return context.getString(R.string.sprightly_vonwacq);
+            case "Talia: Kingdom of Banditry" : return context.getString(R.string.talia_kingdom_of_banditry);
+            case "Thief of Shooting Meteor" : return context.getString(R.string.thief_of_shooting_meteor);
+            case "Wastelander of Banditry Desert" : return context.getString(R.string.wastelander_of_banditry_desert);
+
+            default: return itemNameInFile;
+        }
+    }
+
     public int[] getCharSkillByName(String charNameInFile){
         switch (charNameInFile){
             case "Arlan" : return new int[]{R.drawable.arlan_skill1, R.drawable.arlan_skill2, R.drawable.arlan_skill3, R.drawable.arlan_skill4, R.drawable.arlan_skill6};
