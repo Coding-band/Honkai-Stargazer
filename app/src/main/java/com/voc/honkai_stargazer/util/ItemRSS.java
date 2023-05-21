@@ -6,10 +6,12 @@
 
 package com.voc.honkai_stargazer.util;
 
+import static android.content.Context.MODE_PRIVATE;
 import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
 
 import android.app.DownloadManager;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.text.Html;
 import android.text.SpannableString;
@@ -27,15 +29,17 @@ import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class ItemRSS {
 
     public static final String LANG_EN = "en"; //DEFAULT CASE, now for beta test.
     public static final String LANG_ZH_HK = "zh_hk";
     public static final String LANG_ZH_CN = "zh_cn";
+    public static final String LANG_FR = "fr";
     public static final String LANG_RU = "ru";
-    public static final String LANG_UK = "uk";
-    public static final String LANG_JA_JP = "jp_jp";
+    public static final String LANG_UA = "ua";
+    public static final String LANG_JA_JP = "jp";
 
     public static final String ELEMENT_FIRE = "Fire";
     public static final String ELEMENT_ICE = "Ice";
@@ -83,34 +87,79 @@ public class ItemRSS {
         return df;
     }
 
+
+    public static LangUtil.LangType initLang(Context context){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("user_info",MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        LangUtil.LangType langType = LangUtil.LangType.EN;
+
+
+        if(sharedPreferences.getString("curr_lang","").isEmpty()){
+            String tag = Locale.getDefault().toLanguageTag();
+            if(tag.contains("zh-")){
+                if(tag.equals("zh-CN")){
+                    editor.putString("curr_lang","zh_cn"); langType = LangUtil.LangType.ZH_CN;
+                }else{
+                    editor.putString("curr_lang","zh_hk");langType = LangUtil.LangType.ZH_HK;
+                }
+            }else if(tag.contains("en-")){
+                editor.putString("curr_lang","en"); langType = LangUtil.LangType.EN;
+            }else if(tag.contains("ru-")){
+                editor.putString("curr_lang","ru"); langType = LangUtil.LangType.RU;
+            }else if(tag.contains("ja-")){
+                editor.putString("curr_lang","jp"); langType = LangUtil.LangType.JP;
+            }else if(tag.contains("fr-")){
+                editor.putString("curr_lang","fr"); langType = LangUtil.LangType.FR;
+            }else if(tag.contains("uk-")){
+                editor.putString("curr_lang","ua"); langType = LangUtil.LangType.UA;
+            }else{
+                editor.putString("curr_lang","en"); langType = LangUtil.LangType.EN;
+            }
+            editor.apply();
+            LangUtil.getAttachBaseContext(context, langType);
+        }else{
+            switch (sharedPreferences.getString("curr_lang","")){
+                case LANG_EN: langType = LangUtil.LangType.EN;break;
+                case LANG_ZH_CN: langType = LangUtil.LangType.ZH_CN;break;
+                case LANG_ZH_HK: langType = LangUtil.LangType.ZH_HK;break;
+                case LANG_JA_JP: langType = LangUtil.LangType.JP;break;
+                case LANG_FR: langType = LangUtil.LangType.FR;break;
+                case LANG_RU: langType = LangUtil.LangType.RU;break;
+                case LANG_UA: langType = LangUtil.LangType.UA;break;
+                default:langType = LangUtil.LangType.EN;break;
+            }
+        }
+        return langType;
+    }
+
     public int[] getCharByName(String charNameInFile){
         switch (charNameInFile){
-            case "Arlan" : return new int[]{R.drawable.arlan_icon, R.drawable.arlan_splash, R.drawable.arlan_eidolon1, R.drawable.arlan_eidolon2, R.drawable.arlan_eidolon3, R.drawable.arlan_eidolon4, R.drawable.arlan_eidolon5, R.drawable.arlan_eidolon6};
-            case "Asta" : return new int[]{R.drawable.asta_icon, R.drawable.asta_splash, R.drawable.asta_eidolon1, R.drawable.asta_eidolon2, R.drawable.asta_eidolon3, R.drawable.asta_eidolon4, R.drawable.asta_eidolon5, R.drawable.asta_eidolon6};
-            case "Bailu" : return new int[]{R.drawable.bailu_icon, R.drawable.bailu_splash, R.drawable.bailu_eidolon1, R.drawable.bailu_eidolon2, R.drawable.bailu_eidolon3, R.drawable.bailu_eidolon4, R.drawable.bailu_eidolon5, R.drawable.bailu_eidolon6};
-            case "Blade" : return new int[]{R.drawable.blade_icon, R.drawable.blade_splash, R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img};
-            case "Bronya" : return new int[]{R.drawable.bronya_icon, R.drawable.bronya_splash, R.drawable.bronya_eidolon1, R.drawable.bronya_eidolon2, R.drawable.bronya_eidolon3, R.drawable.bronya_eidolon4, R.drawable.bronya_eidolon5, R.drawable.bronya_eidolon6};
-            case "Clara" : return new int[]{R.drawable.clara_icon, R.drawable.clara_splash, R.drawable.clara_eidolon1, R.drawable.clara_eidolon2, R.drawable.clara_eidolon3, R.drawable.clara_eidolon4, R.drawable.clara_eidolon5, R.drawable.clara_eidolon6};
-            case "Dan Heng" : return new int[]{R.drawable.dan_heng_icon, R.drawable.dan_heng_splash, R.drawable.dan_heng_eidolon1, R.drawable.dan_heng_eidolon2, R.drawable.dan_heng_eidolon3, R.drawable.dan_heng_eidolon4, R.drawable.dan_heng_eidolon5, R.drawable.dan_heng_eidolon6};
-            case "Gepard" : return new int[]{R.drawable.gepard_icon, R.drawable.gepard_splash, R.drawable.gepard_eidolon1, R.drawable.gepard_eidolon2, R.drawable.gepard_eidolon3, R.drawable.gepard_eidolon4, R.drawable.gepard_eidolon5, R.drawable.gepard_eidolon6};
-            case "Herta" : return new int[]{R.drawable.herta_icon, R.drawable.herta_splash, R.drawable.herta_eidolon1, R.drawable.herta_eidolon2, R.drawable.herta_eidolon3, R.drawable.herta_eidolon4, R.drawable.herta_eidolon5, R.drawable.herta_eidolon6};
-            case "Himeko" : return new int[]{R.drawable.himeko_icon, R.drawable.himeko_splash, R.drawable.himeko_eidolon1, R.drawable.himeko_eidolon2, R.drawable.himeko_eidolon3, R.drawable.himeko_eidolon4, R.drawable.himeko_eidolon5, R.drawable.himeko_eidolon6};
-            case "Hook" : return new int[]{R.drawable.hook_icon, R.drawable.hook_splash, R.drawable.hook_eidolon1, R.drawable.hook_eidolon2, R.drawable.hook_eidolon3, R.drawable.hook_eidolon4, R.drawable.hook_eidolon5, R.drawable.hook_eidolon6};
-            case "Jing Yuan" : return new int[]{R.drawable.jing_yuan_icon, R.drawable.jing_yuan_splash, R.drawable.jing_yuan_eidolon1, R.drawable.jing_yuan_eidolon2, R.drawable.jing_yuan_eidolon3, R.drawable.jing_yuan_eidolon4, R.drawable.jing_yuan_eidolon5, R.drawable.jing_yuan_eidolon6};
-            case "Kafka" : return new int[]{R.drawable.kafka_icon, R.drawable.kafka_splash, R.drawable.kafka_eidolon1, R.drawable.kafka_eidolon2, R.drawable.kafka_eidolon3, R.drawable.kafka_eidolon4, R.drawable.kafka_eidolon5, R.drawable.kafka_eidolon6};
-            case "Luocha" : return new int[]{R.drawable.luocha_icon, R.drawable.luocha_splash, R.drawable.luocha_eidolon1, R.drawable.luocha_eidolon2, R.drawable.luocha_eidolon3, R.drawable.luocha_eidolon4, R.drawable.luocha_eidolon5, R.drawable.luocha_eidolon6};
-            case "March 7th" : return new int[]{R.drawable.march_7th_icon, R.drawable.march_7th_splash, R.drawable.march_7th_eidolon1, R.drawable.march_7th_eidolon2, R.drawable.march_7th_eidolon3, R.drawable.march_7th_eidolon4, R.drawable.march_7th_eidolon5, R.drawable.march_7th_eidolon6};
-            case "Natasha" : return new int[]{R.drawable.natasha_icon, R.drawable.natasha_splash, R.drawable.natasha_eidolon1, R.drawable.natasha_eidolon2, R.drawable.natasha_eidolon3, R.drawable.natasha_eidolon4, R.drawable.natasha_eidolon5, R.drawable.natasha_eidolon6};
-            case "Pela" : return new int[]{R.drawable.pela_icon, R.drawable.pela_splash, R.drawable.pela_eidolon1, R.drawable.pela_eidolon2, R.drawable.pela_eidolon3, R.drawable.pela_eidolon4, R.drawable.pela_eidolon5, R.drawable.pela_eidolon6};
-            case "Qingque" : return new int[]{R.drawable.qingque_icon, R.drawable.qingque_splash, R.drawable.qingque_eidolon1, R.drawable.qingque_eidolon2, R.drawable.qingque_eidolon3, R.drawable.qingque_eidolon4, R.drawable.qingque_eidolon5, R.drawable.qingque_eidolon6};
-            case "Sampo" : return new int[]{R.drawable.sampo_icon, R.drawable.sampo_splash, R.drawable.sampo_eidolon1, R.drawable.sampo_eidolon2, R.drawable.sampo_eidolon3, R.drawable.sampo_eidolon4, R.drawable.sampo_eidolon5, R.drawable.sampo_eidolon6};
-            case "Seele" : return new int[]{R.drawable.seele_icon, R.drawable.seele_splash, R.drawable.seele_eidolon1, R.drawable.seele_eidolon2, R.drawable.seele_eidolon3, R.drawable.seele_eidolon4, R.drawable.seele_eidolon5, R.drawable.seele_eidolon6};
-            case "Serval" : return new int[]{R.drawable.serval_icon, R.drawable.serval_splash, R.drawable.serval_eidolon1, R.drawable.serval_eidolon2, R.drawable.serval_eidolon3, R.drawable.serval_eidolon4, R.drawable.serval_eidolon5, R.drawable.serval_eidolon6};
-            case "Silver Wolf" : return new int[]{R.drawable.silver_wolf_icon, R.drawable.silver_wolf_splash, R.drawable.silver_wolf_eidolon1, R.drawable.silver_wolf_eidolon2, R.drawable.silver_wolf_eidolon3, R.drawable.silver_wolf_eidolon4, R.drawable.silver_wolf_eidolon5, R.drawable.silver_wolf_eidolon6};
-            case "Sushang" : return new int[]{R.drawable.sushang_icon, R.drawable.sushang_splash, R.drawable.sushang_eidolon1, R.drawable.sushang_eidolon2, R.drawable.sushang_eidolon3, R.drawable.sushang_eidolon4, R.drawable.sushang_eidolon5, R.drawable.sushang_eidolon6};
-            case "Tingyun" : return new int[]{R.drawable.tingyun_icon, R.drawable.tingyun_splash, R.drawable.tingyun_eidolon1, R.drawable.tingyun_eidolon2, R.drawable.tingyun_eidolon3, R.drawable.tingyun_eidolon4, R.drawable.tingyun_eidolon5, R.drawable.tingyun_eidolon6};
-            case "Welt" : return new int[]{R.drawable.welt_icon, R.drawable.welt_splash, R.drawable.welt_eidolon1, R.drawable.welt_eidolon2, R.drawable.welt_eidolon3, R.drawable.welt_eidolon4, R.drawable.welt_eidolon5, R.drawable.welt_eidolon6};
-            case "Yanqing" : return new int[]{R.drawable.yanqing_icon, R.drawable.yanqing_splash, R.drawable.yanqing_eidolon1, R.drawable.yanqing_eidolon2, R.drawable.yanqing_eidolon3, R.drawable.yanqing_eidolon4, R.drawable.yanqing_eidolon5, R.drawable.yanqing_eidolon6};
+            case "Arlan" : return new int[]{R.drawable.arlan_icon, R.drawable.arlan_splash,R.drawable.arlan_fade, R.drawable.arlan_eidolon1, R.drawable.arlan_eidolon2, R.drawable.arlan_eidolon3, R.drawable.arlan_eidolon4, R.drawable.arlan_eidolon5, R.drawable.arlan_eidolon6};
+            case "Asta" : return new int[]{R.drawable.asta_icon, R.drawable.asta_splash,R.drawable.asta_fade, R.drawable.asta_eidolon1, R.drawable.asta_eidolon2, R.drawable.asta_eidolon3, R.drawable.asta_eidolon4, R.drawable.asta_eidolon5, R.drawable.asta_eidolon6};
+            case "Bailu" : return new int[]{R.drawable.bailu_icon, R.drawable.bailu_splash, R.drawable.bailu_fade,R.drawable.bailu_eidolon1, R.drawable.bailu_eidolon2, R.drawable.bailu_eidolon3, R.drawable.bailu_eidolon4, R.drawable.bailu_eidolon5, R.drawable.bailu_eidolon6};
+            case "Blade" : return new int[]{R.drawable.blade_icon, R.drawable.blade_splash, R.drawable.blade_icon,R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img};
+            case "Bronya" : return new int[]{R.drawable.bronya_icon, R.drawable.bronya_splash, R.drawable.bronya_fade,R.drawable.bronya_eidolon1, R.drawable.bronya_eidolon2, R.drawable.bronya_eidolon3, R.drawable.bronya_eidolon4, R.drawable.bronya_eidolon5, R.drawable.bronya_eidolon6};
+            case "Clara" : return new int[]{R.drawable.clara_icon, R.drawable.clara_splash, R.drawable.clara_fade,R.drawable.clara_eidolon1, R.drawable.clara_eidolon2, R.drawable.clara_eidolon3, R.drawable.clara_eidolon4, R.drawable.clara_eidolon5, R.drawable.clara_eidolon6};
+            case "Dan Heng" : return new int[]{R.drawable.dan_heng_icon, R.drawable.dan_heng_splash,R.drawable.dan_heng_fade, R.drawable.dan_heng_eidolon1, R.drawable.dan_heng_eidolon2, R.drawable.dan_heng_eidolon3, R.drawable.dan_heng_eidolon4, R.drawable.dan_heng_eidolon5, R.drawable.dan_heng_eidolon6};
+            case "Gepard" : return new int[]{R.drawable.gepard_icon, R.drawable.gepard_splash, R.drawable.gepard_fade,R.drawable.gepard_eidolon1, R.drawable.gepard_eidolon2, R.drawable.gepard_eidolon3, R.drawable.gepard_eidolon4, R.drawable.gepard_eidolon5, R.drawable.gepard_eidolon6};
+            case "Herta" : return new int[]{R.drawable.herta_icon, R.drawable.herta_splash, R.drawable.herta_fade,R.drawable.herta_eidolon1, R.drawable.herta_eidolon2, R.drawable.herta_eidolon3, R.drawable.herta_eidolon4, R.drawable.herta_eidolon5, R.drawable.herta_eidolon6};
+            case "Himeko" : return new int[]{R.drawable.himeko_icon, R.drawable.himeko_splash, R.drawable.himeko_fade,R.drawable.himeko_eidolon1, R.drawable.himeko_eidolon2, R.drawable.himeko_eidolon3, R.drawable.himeko_eidolon4, R.drawable.himeko_eidolon5, R.drawable.himeko_eidolon6};
+            case "Hook" : return new int[]{R.drawable.hook_icon, R.drawable.hook_splash, R.drawable.hook_fade,R.drawable.hook_eidolon1, R.drawable.hook_eidolon2, R.drawable.hook_eidolon3, R.drawable.hook_eidolon4, R.drawable.hook_eidolon5, R.drawable.hook_eidolon6};
+            case "Jing Yuan" : return new int[]{R.drawable.jing_yuan_icon, R.drawable.jing_yuan_splash, R.drawable.jing_yuan_fade,R.drawable.jing_yuan_eidolon1, R.drawable.jing_yuan_eidolon2, R.drawable.jing_yuan_eidolon3, R.drawable.jing_yuan_eidolon4, R.drawable.jing_yuan_eidolon5, R.drawable.jing_yuan_eidolon6};
+            case "Kafka" : return new int[]{R.drawable.kafka_icon, R.drawable.kafka_splash, R.drawable.kafka_icon,R.drawable.kafka_eidolon1, R.drawable.kafka_eidolon2, R.drawable.kafka_eidolon3, R.drawable.kafka_eidolon4, R.drawable.kafka_eidolon5, R.drawable.kafka_eidolon6};
+            case "Luocha" : return new int[]{R.drawable.luocha_icon, R.drawable.luocha_splash,R.drawable.luocha_icon, R.drawable.luocha_eidolon1, R.drawable.luocha_eidolon2, R.drawable.luocha_eidolon3, R.drawable.luocha_eidolon4, R.drawable.luocha_eidolon5, R.drawable.luocha_eidolon6};
+            case "March 7th" : return new int[]{R.drawable.march_7th_icon, R.drawable.march_7th_splash, R.drawable.march_7th_fade, R.drawable.march_7th_eidolon1, R.drawable.march_7th_eidolon2, R.drawable.march_7th_eidolon3, R.drawable.march_7th_eidolon4, R.drawable.march_7th_eidolon5, R.drawable.march_7th_eidolon6};
+            case "Natasha" : return new int[]{R.drawable.natasha_icon, R.drawable.natasha_splash,R.drawable.natasha_fade, R.drawable.natasha_eidolon1, R.drawable.natasha_eidolon2, R.drawable.natasha_eidolon3, R.drawable.natasha_eidolon4, R.drawable.natasha_eidolon5, R.drawable.natasha_eidolon6};
+            case "Pela" : return new int[]{R.drawable.pela_icon, R.drawable.pela_splash, R.drawable.pela_fade,R.drawable.pela_eidolon1, R.drawable.pela_eidolon2, R.drawable.pela_eidolon3, R.drawable.pela_eidolon4, R.drawable.pela_eidolon5, R.drawable.pela_eidolon6};
+            case "Qingque" : return new int[]{R.drawable.qingque_icon, R.drawable.qingque_splash, R.drawable.qingque_fade,R.drawable.qingque_eidolon1, R.drawable.qingque_eidolon2, R.drawable.qingque_eidolon3, R.drawable.qingque_eidolon4, R.drawable.qingque_eidolon5, R.drawable.qingque_eidolon6};
+            case "Sampo" : return new int[]{R.drawable.sampo_icon, R.drawable.sampo_splash,R.drawable.sampo_fade, R.drawable.sampo_eidolon1, R.drawable.sampo_eidolon2, R.drawable.sampo_eidolon3, R.drawable.sampo_eidolon4, R.drawable.sampo_eidolon5, R.drawable.sampo_eidolon6};
+            case "Seele" : return new int[]{R.drawable.seele_icon, R.drawable.seele_splash,R.drawable.seele_fade, R.drawable.seele_eidolon1, R.drawable.seele_eidolon2, R.drawable.seele_eidolon3, R.drawable.seele_eidolon4, R.drawable.seele_eidolon5, R.drawable.seele_eidolon6};
+            case "Serval" : return new int[]{R.drawable.serval_icon, R.drawable.serval_splash,R.drawable.serval_fade, R.drawable.serval_eidolon1, R.drawable.serval_eidolon2, R.drawable.serval_eidolon3, R.drawable.serval_eidolon4, R.drawable.serval_eidolon5, R.drawable.serval_eidolon6};
+            case "Silver Wolf" : return new int[]{R.drawable.silver_wolf_icon, R.drawable.silver_wolf_splash,R.drawable.silver_wolf_icon, R.drawable.silver_wolf_eidolon1, R.drawable.silver_wolf_eidolon2, R.drawable.silver_wolf_eidolon3, R.drawable.silver_wolf_eidolon4, R.drawable.silver_wolf_eidolon5, R.drawable.silver_wolf_eidolon6};
+            case "Sushang" : return new int[]{R.drawable.sushang_icon, R.drawable.sushang_splash,R.drawable.sushang_fade, R.drawable.sushang_eidolon1, R.drawable.sushang_eidolon2, R.drawable.sushang_eidolon3, R.drawable.sushang_eidolon4, R.drawable.sushang_eidolon5, R.drawable.sushang_eidolon6};
+            case "Tingyun" : return new int[]{R.drawable.tingyun_icon, R.drawable.tingyun_splash, R.drawable.tingyun_fade,R.drawable.tingyun_eidolon1, R.drawable.tingyun_eidolon2, R.drawable.tingyun_eidolon3, R.drawable.tingyun_eidolon4, R.drawable.tingyun_eidolon5, R.drawable.tingyun_eidolon6};
+            case "Welt" : return new int[]{R.drawable.welt_icon, R.drawable.welt_splash,R.drawable.welt_fade, R.drawable.welt_eidolon1, R.drawable.welt_eidolon2, R.drawable.welt_eidolon3, R.drawable.welt_eidolon4, R.drawable.welt_eidolon5, R.drawable.welt_eidolon6};
+            case "Yanqing" : return new int[]{R.drawable.yanqing_icon, R.drawable.yanqing_splash,R.drawable.yanqing_fade, R.drawable.yanqing_eidolon1, R.drawable.yanqing_eidolon2, R.drawable.yanqing_eidolon3, R.drawable.yanqing_eidolon4, R.drawable.yanqing_eidolon5, R.drawable.yanqing_eidolon6};
 
 
             default: return new int[]{R.drawable.ico_lost_img, R.drawable.ico_lost_img};
@@ -122,7 +171,7 @@ public class ItemRSS {
             case "Amber" : return new int[] {R.drawable.amber, R.drawable.amber_artwork};
             case "Arrows" : return new int[] {R.drawable.arrows, R.drawable.arrows_artwork};
             case "A Secret Vow" : return new int[] {R.drawable.a_secret_vow, R.drawable.a_secret_vow_artwork};
-            case "Adversarial" : return new int[] {R.drawable.a_secret_vow, R.drawable.a_secret_vow_artwork};
+            case "Adversarial" : return new int[] {R.drawable.adversarial, R.drawable.adversarial_artwork};
             case "Before Dawn" : return new int[] {R.drawable.before_dawn, R.drawable.before_dawn_artwork};
             case "But the Battle Isn't Over" : return new int[] {R.drawable.but_the_battle_isnt_over, R.drawable.but_the_battle_isnt_over_artwork};
             case "Carve the Moon, Weave the Clouds" : return new int[] {R.drawable.carve_the_moon_weave_the_clouds, R.drawable.carve_the_moon_weave_the_clouds_artwork};
@@ -234,6 +283,7 @@ public class ItemRSS {
             case "Bronya" : return context.getString(R.string.bronya);
             case "Clara" : return context.getString(R.string.clara);
             case "Dan Heng" : return context.getString(R.string.dan_heng);
+            case "Gepard" : return context.getString(R.string.gepard);
             case "Herta" : return context.getString(R.string.herta);
             case "Himeko" : return context.getString(R.string.himeko);
             case "Hook" : return context.getString(R.string.hook);
@@ -450,30 +500,32 @@ public class ItemRSS {
         }
     }
 
-    public SpannableString[] getRelicStatusByName(String relicNameInFile, Context context, String LANGUAGE){
-        String json_base = LoadAssestData(context,"relic_data/relic_pc.json");
+    public SpannableString[] getRelicStatusByName(String relicNameInFile, Context context){
+        String LANGUAGE = ItemRSS.initLang(context).getCode();
+        String json_base = LoadAssestData(context,"relic_data/relic_pc_"+LANGUAGE+".json");
         String[] feedback = new String[]{"N/A","N/A"};
-        SpannableString[] feedbackSpannableString = new SpannableString[]{new SpannableString("N/A"),new SpannableString("N/A")};
+        SpannableString[] feedbackSpannableString = new SpannableString[]{new SpannableString("DEFAULT N/A"),new SpannableString("DEFAULT N/A")};
         //Get data from JSON
-        try {
-            JSONObject object = new JSONObject(json_base);
-            if (object.has(relicNameInFile)){
-                JSONArray bonuses = object.getJSONObject(relicNameInFile).getJSONArray("bonuses");
-                if (bonuses != null){
-                    for(int x = 0 ; x < bonuses.length() ; x++){
-                        feedback[x] = bonuses.getJSONObject(x).getString("desc");
-                        feedbackSpannableString[x] = valuedText(feedback[x],bonuses.getJSONObject(x).getJSONArray("params"), context);
+
+        if (!json_base.equals("")){
+            try {
+                JSONObject jsonObject = new JSONObject(json_base);
+                if (jsonObject.has(relicNameInFile)){
+                    JSONArray relicStatus = jsonObject.getJSONArray(relicNameInFile);
+                    for (int x = 0 ; x < relicStatus.length() ; x++){
+                        feedback[x] = relicStatus.getJSONObject(x).getString("desc");
+                        feedbackSpannableString[x] = valuedText(feedback[x],relicStatus.getJSONObject(x).getJSONArray("params"), context);
                     }
                     return feedbackSpannableString;
                 }else{
-                    return new SpannableString[]{new SpannableString("bonuses NULL"),new SpannableString("bonuses NULL")};
+                    return new SpannableString[]{new SpannableString("No Data in ["+LANGUAGE+"] Relic_PC File"),new SpannableString("No Data in ["+LANGUAGE+"] Relic_PC File")};
                 }
+            } catch (JSONException e) {
+                feedback = new String[]{"ERROR - JSONExpection",e.getLocalizedMessage()};
+                return new SpannableString[]{new SpannableString(feedback[0]),new SpannableString(feedback[1])};
             }
-            return new SpannableString[]{new SpannableString(object.getJSONObject(relicNameInFile).toString()),new SpannableString("no this name")};
-        } catch (JSONException e) {
-            feedback = new String[]{"ERROR - JSONExpection",e.getLocalizedMessage()};
-            return new SpannableString[]{new SpannableString(feedback[0]),new SpannableString(feedback[1])};
         }
+        return new SpannableString[]{new SpannableString("No Relic_PC File in ["+LANGUAGE+"]"),new SpannableString("No Relic_PC File in ["+LANGUAGE+"]")};
     }
 
     public int getBgByItemRarity(int rarity){
@@ -567,19 +619,22 @@ public class ItemRSS {
             for (int x = 0 ; x < params.length() ; x++){
                 String keyword = (isPercent.get(x) ? (df.format(params.getDouble(x)*100))+"%" : df.format(params.getDouble(x)));
                 String keyword_spec = (isPercent.get(x) ? (" "+df.format(params.getDouble(x)*100))+"% " : " "+df.format(params.getDouble(x))+" ");
+
                 for (int i = -1; (i = desc.indexOf(keyword, i + 1)) != -1; i++) {
                     mSpannavleString.setSpan(new ForegroundColorSpan(
                                     context.getResources().getColor(R.color.highlight_color)),
-                            desc.indexOf(keyword),
-                            desc.indexOf(keyword)+keyword.length(),
+                            i,
+                            i+keyword.length(),
                             Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
                     );
                 }
+
+
                 for (int i = -1; (i = desc.indexOf(keyword_spec, i + 1)) != -1; i++) {
                     mSpannavleString.setSpan(new ForegroundColorSpan(
                                     context.getResources().getColor(R.color.highlight_color)),
-                            desc.indexOf(keyword_spec),
-                            desc.indexOf(keyword_spec)+keyword_spec.length(),
+                            i,
+                            i+keyword_spec.length(),
                             Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
                     );
                 }
@@ -612,7 +667,7 @@ public class ItemRSS {
         };
         for (int x = 0 ; x < keywords.length ; x++){
             for (int i = -1; (i = str.indexOf(keywords[x], i + 1)) != -1; i++) {
-                mSpannavleString.setSpan(new ForegroundColorSpan(context.getResources().getColor(keywordsColor[x])),str.indexOf(keywords[x]),str.indexOf(keywords[x])+keywords[x].length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                mSpannavleString.setSpan(new ForegroundColorSpan(context.getResources().getColor(keywordsColor[x])),i,i+keywords[x].length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             }
         }
         return mSpannavleString;

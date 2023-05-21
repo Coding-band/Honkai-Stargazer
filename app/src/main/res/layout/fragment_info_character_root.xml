@@ -45,6 +45,7 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/info_tablayout"
+        style="@style/Widget.TabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/status_bar_color"
@@ -56,9 +57,9 @@
         app:tabIndicator="@drawable/bg_tab_indicater"
         app:tabIndicatorColor="@color/home_list_item_title"
         app:tabIndicatorFullWidth="true"
-        app:tabTextColor="@color/ic_daynight_tint">
-
-    </com.google.android.material.tabs.TabLayout>
+        app:tabTextAppearance="@style/Widget.TabWidget"
+        app:tabTextColor="@color/tv_daynight_tint"
+        app:tabUnboundedRipple="false"></com.google.android.material.tabs.TabLayout>
 
     <com.google.android.material.divider.MaterialDivider
         android:id="@+id/materialDivider"

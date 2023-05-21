@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="Character's Stats"
+                android:text="@string/character_status_title"
                 android:textColor="@color/filter_btn_themed"
                 android:textSize="20sp" />
 
@@ -59,7 +59,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="HP" />
+                            android:text="@string/status_hp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -72,7 +72,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="87" />
+                            android:text="3.1415" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -98,7 +98,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="ATK" />
+                            android:text="@string/status_atk" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -111,7 +111,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="87" />
+                            android:text="67" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -137,7 +137,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="DEF" />
+                            android:text="@string/status_def" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -176,7 +176,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="SPD" />
+                            android:text="@string/status_speed" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -189,7 +189,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="87" />
+                            android:text="07" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -215,7 +215,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="TAUNT" />
+                            android:text="@string/status_taunt" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -228,7 +228,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="87" />
+                            android:text="20" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -294,7 +294,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="Combat"
+                android:text="@string/character_skill_title"
                 android:textColor="@color/filter_btn_themed"
                 android:textSize="20sp" />
 
@@ -333,7 +333,7 @@
                             android:id="@+id/combat_skill1_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Victory Rush"
+                            android:text="Somebocchi"
                             android:textSize="18sp" />
 
                         <TextView
@@ -352,7 +352,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Deals Fire DMG equal to 50% of Himeko's ATK to a single enemy." />
+                    android:text="Deals Fire DMG equal to 50% of Somebody's ATK to a single enemy." />
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
@@ -443,7 +443,7 @@
                             android:id="@+id/combat_skill2_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Victory Rush"
+                            android:text="Sleep well !"
                             android:textSize="18sp" />
 
                         <TextView
@@ -462,7 +462,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Deals Fire DMG equal to 50% of Himeko's ATK to a single enemy." />
+                    android:text="Deals Fire DMG equal to 50% of Somebody's ATK to a single enemy." />
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
@@ -553,7 +553,7 @@
                             android:id="@+id/combat_skill3_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Victory Rush"
+                            android:text="Develop Rush"
                             android:textSize="18sp" />
 
                         <TextView
@@ -572,7 +572,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Deals Fire DMG equal to 50% of Himeko's ATK to a single enemy." />
+                    android:text="Deals Fire DMG equal to 50% of Somebody's ATK to a single enemy." />
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
@@ -663,7 +663,7 @@
                             android:id="@+id/combat_skill4_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Victory Rush"
+                            android:text="Time to say goodbye"
                             android:textSize="18sp" />
 
                         <TextView
@@ -682,7 +682,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Deals Fire DMG equal to 50% of Himeko's ATK to a single enemy." />
+                    android:text="Deals Fire DMG equal to 50% of Somebody's ATK to a single enemy." />
 
 
                 <HorizontalScrollView
@@ -773,7 +773,7 @@
                             android:id="@+id/combat_skill6_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Victory Rush"
+                            android:text="Who are you ?"
                             android:textSize="18sp" />
 
                         <TextView
@@ -792,7 +792,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Deals Fire DMG equal to 50% of Himeko's ATK to a single enemy." />
+                    android:text="Deals Fire DMG equal to 50% of Somebody's ATK to a single enemy." />
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"

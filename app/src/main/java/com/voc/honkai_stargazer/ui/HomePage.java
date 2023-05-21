@@ -95,7 +95,7 @@ public class HomePage extends AppCompatActivity {
         sharedPreferences = context.getSharedPreferences("user_info",MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
-        lang_setup();
+        ItemRSS.initLang(context);
 
         root_init();
         character_init();
@@ -107,36 +107,6 @@ public class HomePage extends AppCompatActivity {
 
     public void setting_init() {
 
-    }
-
-    public void lang_setup(){
-        sharedPreferences = getSharedPreferences("user_info",MODE_PRIVATE);
-        editor = sharedPreferences.edit();
-        LangUtil.LangType langType = LangUtil.LangType.EN;
-        if(sharedPreferences.getString("curr_lang","").isEmpty()){
-            String tag = Locale.getDefault().toLanguageTag();
-            if(tag.contains("zh-")){
-                if(tag.equals("zh-CN")){
-                    editor.putString("curr_lang","zh_cn"); langType = LangUtil.LangType.ZH_CN;
-                }else{
-                    editor.putString("curr_lang","zh_hk");langType = LangUtil.LangType.ZH_HK;
-                }
-            }else if(tag.contains("en-")){
-                editor.putString("curr_lang","en"); langType = LangUtil.LangType.EN;
-            }else if(tag.contains("ru-")){
-                editor.putString("curr_lang","ru"); langType = LangUtil.LangType.RU;
-            }else if(tag.contains("ja-")){
-                editor.putString("curr_lang","jp"); langType = LangUtil.LangType.JP;
-            }else if(tag.contains("fr-")){
-                editor.putString("curr_lang","fr"); langType = LangUtil.LangType.FR;
-            }else if(tag.contains("uk-")){
-                editor.putString("curr_lang","ua"); langType = LangUtil.LangType.UA;
-            }else{
-                editor.putString("curr_lang","en"); langType = LangUtil.LangType.EN;
-            }
-            editor.apply();
-            LangUtil.getAttachBaseContext(context, langType);
-        }
     }
 
     public void root_init(){
@@ -202,7 +172,13 @@ public class HomePage extends AppCompatActivity {
 
     public void character_init(){
         charactersListView = home_characters.findViewById(R.id.charactersListView);
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(context, 1);
+        int grid = 1;
+        switch (sharedPreferences.getString("grid_"+ItemRSS.TYPE_CHARACTER,HSRItemAdapter.DEFAULT)){
+            default:
+            case HSRItemAdapter.ONE_IN_ROW: grid = 1; break;
+            case HSRItemAdapter.THREE_IN_ROW: grid = 3; break;
+        }
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(context,grid );
 
         charactersAdapter = new HSRItemAdapter(context,activity,sharedPreferences, ItemRSS.TYPE_CHARACTER);
         charactersListView.setLayoutManager(mLayoutManager);
@@ -219,12 +195,25 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
+        ImageButton characterLayout = home_characters.findViewById(R.id.characterLayout);
+        characterLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeListGrid(characterLayout,ItemRSS.TYPE_CHARACTER, charactersListView, charactersAdapter,charactersAdapter.getFilterList());
+            }
+        });
         characterSearchEt.addTextChangedListener(searchBarHandler(ItemRSS.TYPE_CHARACTER, characterSearchEt));
     }
 
     public void lightcone_init(){
         lightconesListView = home_lightcones.findViewById(R.id.lightconesListView);
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(context, 1);
+        int grid = 1;
+        switch (sharedPreferences.getString("grid_"+ItemRSS.TYPE_LIGHTCONE,HSRItemAdapter.DEFAULT)){
+            default:
+            case HSRItemAdapter.ONE_IN_ROW: grid = 1; break;
+            case HSRItemAdapter.THREE_IN_ROW: grid = 3; break;
+        }
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(context,grid );
 
         lightconesAdapter = new HSRItemAdapter(context,activity,sharedPreferences, ItemRSS.TYPE_LIGHTCONE);
         lightconesListView.setLayoutManager(mLayoutManager);
@@ -242,6 +231,14 @@ public class HomePage extends AppCompatActivity {
             }
         });
         lightconeSearchEt.addTextChangedListener(searchBarHandler(ItemRSS.TYPE_LIGHTCONE, lightconeSearchEt));
+
+        ImageButton lightconeLayout = home_lightcones.findViewById(R.id.lightconeLayout);
+        lightconeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeListGrid(lightconeLayout,ItemRSS.TYPE_LIGHTCONE, lightconesListView,lightconesAdapter,lightconesAdapter.getFilterList());
+            }
+        });
     }
     public void relic_init(){
         relicsListView = home_relics.findViewById(R.id.relicsListView);
@@ -506,7 +503,7 @@ public class HomePage extends AppCompatActivity {
         if(!filterPreference[0].isHarmony()){filter_harmony.setAlpha(0.4f);}else{filter_harmony.setAlpha(1.0f);}
         if(!filterPreference[0].isHunt()){filter_hunt.setAlpha(0.4f);}else{filter_hunt.setAlpha(1.0f);}
         if(!filterPreference[0].isNihility()){filter_nihility.setAlpha(0.4f);}else{filter_nihility.setAlpha(1.0f);}
-        if(!filterPreference[0].isWind()){filter_preservation.setAlpha(0.4f);}else{filter_preservation.setAlpha(1.0f);}
+        if(!filterPreference[0].isPreservation()){filter_preservation.setAlpha(0.4f);}else{filter_preservation.setAlpha(1.0f);}
 
 
         if(!filterPreference[0].isRare1()){filter_rare_1.setChecked(false);}else{filter_rare_1.setChecked(true);}
@@ -548,6 +545,34 @@ public class HomePage extends AppCompatActivity {
         filter_soon.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setSoon(!filterPreference[0].isSoon());}});
 
 
-        dialog.show();
+        if (!dialog.isShowing()){
+            dialog.show();
+        }
+    }
+
+
+    private void changeListGrid(ImageButton button, String TYPE, RecyclerView recyclerView, HSRItemAdapter adapter, ArrayList<HSRItem> arrayList){
+        String status = sharedPreferences.getString("grid_"+TYPE,HSRItemAdapter.DEFAULT);
+        switch (status){
+            case HSRItemAdapter.ONE_IN_ROW: {
+                editor.putString("grid_"+TYPE,HSRItemAdapter.THREE_IN_ROW).apply();
+                RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(context, 3);
+                recyclerView.setLayoutManager(mLayoutManager);
+                adapter.filterList(arrayList);
+                recyclerView.setAdapter(adapter);
+
+                button.setImageResource(R.drawable.ic_row_3_item);
+                break;
+            }
+            case HSRItemAdapter.THREE_IN_ROW: {
+                editor.putString("grid_"+TYPE,HSRItemAdapter.ONE_IN_ROW).apply();
+                RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(context, 1);
+                recyclerView.setLayoutManager(mLayoutManager);
+                recyclerView.setAdapter(adapter);
+                adapter.filterList(arrayList);
+                button.setImageResource(R.drawable.ic_row_1_item);
+                break;
+            }
+        }
     }
 }

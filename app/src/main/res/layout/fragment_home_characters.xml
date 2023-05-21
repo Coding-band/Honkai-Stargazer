@@ -29,47 +29,78 @@
         app:expanded="true">
 
         <LinearLayout
-            android:id="@+id/characterSearchBar"
-            app:layout_scrollFlags="scroll|enterAlways"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_margin="8dp"
-            android:background="@drawable/bg_search_kwang"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/characterSearchBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|left"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                app:srcCompat="@drawable/ic_search" />
-
-            <EditText
-                android:id="@+id/characterSearchEt"
-                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:id="@+id/characterSearchBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:ems="10"
-                android:hint="Hinted Search Text"
-                android:inputType="textPersonName" />
+                android:background="@drawable/bg_search_kwang"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_scrollFlags="scroll|enterAlways">
 
-            <ImageButton
-                android:id="@+id/characterFilter"
+                <EditText
+                    android:id="@+id/characterSearchEt"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/home_search_bar_hint"
+                    android:inputType="textPersonName" />
+
+                <ImageButton
+                    android:id="@+id/characterSearchBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/ic_search" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|left"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                app:srcCompat="@drawable/ic_filter" />
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/characterFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_margin="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/ic_filter" />
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent" />
+
+                <ImageButton
+                    android:id="@+id/characterLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/ic_row_3_item" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </com.google.android.material.appbar.AppBarLayout>

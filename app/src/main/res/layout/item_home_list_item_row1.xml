@@ -36,6 +36,7 @@
                     android:id="@+id/item_ico"
                     android:layout_width="96dp"
                     android:layout_height="96dp"
+                    android:adjustViewBounds="true"
                     app:srcCompat="@drawable/kafka_icon" />
 
                 <ImageView
@@ -43,6 +44,14 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     app:srcCompat="@drawable/element_lightning" />
+
+                <ImageView
+                    android:id="@+id/item_beta"
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/fg_item_beta" />
 
                 <LinearLayout
                     android:id="@+id/item_sub_ll"
@@ -294,6 +303,7 @@
                         android:id="@+id/item_relic_ll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:orientation="vertical"
                         android:visibility="gone">
 
@@ -303,14 +313,14 @@
                             android:layout_height="wrap_content"
                             android:text="2pc :"
                             android:textColor="@color/home_list_item_title"
-                            android:textSize="14sp" />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/item_2pc_status"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Reduces DMG taken by 8%"
-                            android:textSize="12sp" />
+                            android:textSize="14sp" />
 
                         <View
                             android:id="@+id/view2"
@@ -323,14 +333,14 @@
                             android:layout_height="wrap_content"
                             android:text="4pc :"
                             android:textColor="@color/home_list_item_title"
-                            android:textSize="14sp" />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/item_4pc_status"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="At the beginning of the turn, if the wearer's HP is equal to or less than 50%, restores HP equal to 8% of their Max HP and regenerates 5 Energy."
-                            android:textSize="12sp" />
+                            android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
 

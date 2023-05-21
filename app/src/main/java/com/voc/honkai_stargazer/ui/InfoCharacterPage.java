@@ -116,6 +116,7 @@ public class InfoCharacterPage {
         info_tablayout.addTab(info_tablayout.newTab().setId(TAB_COMBAT).setText(R.string.character_combat));
         info_tablayout.addTab(info_tablayout.newTab().setId(TAB_EIDOLON).setText(R.string.character_eidolon));
 
+
         info_tablayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -134,10 +135,10 @@ public class InfoCharacterPage {
         });
         info_vp.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(info_tablayout));
 
-        String LANGUAGE = context.getSharedPreferences("user_info",Context.MODE_PRIVATE).getString("curr_lang","N/A");
+        String LANGUAGE = ItemRSS.initLang(context).getCode();
         //Read JSON from Assests
         String json_base = LoadAssestData(context,"character_data/"+LANGUAGE+"/"+hsrItem.getFileName()+".json");
-        if (json_base != null){
+        if (json_base != ""){
             try {
                 JSONObject jsonObject = new JSONObject(json_base);
                 TextView info_char_name = view.findViewById(R.id.info_char_name);
@@ -152,7 +153,9 @@ public class InfoCharacterPage {
                 //help_tool_material(jsonObject);
                 //help_tool_skill(jsonObject, hsrItem.getName());
 
-                dialog.show();
+                if (!dialog.isShowing()){
+                    dialog.show();
+                }
 
             } catch (JSONException e) {
                 throw new RuntimeException(e);
@@ -201,7 +204,7 @@ public class InfoCharacterPage {
             public int compare(MaterialItem obj1, MaterialItem obj2) {
                 // ## Ascending order
                 //return obj1.getId().compareToIgnoreCase(obj2.firstName); // To compare string values
-                 return Integer.valueOf(obj1.getRarity()).compareTo(Integer.valueOf(obj2.getRarity())); // To compare integer values
+                return Integer.valueOf(obj1.getRarity()).compareTo(Integer.valueOf(obj2.getRarity())); // To compare integer values
 
                 // ## Descending order
                 // return obj2.firstName.compareToIgnoreCase(obj1.firstName); // To compare string values
@@ -210,12 +213,12 @@ public class InfoCharacterPage {
         });
         Collections.sort(exp, new Comparator<MaterialItem>(){
             public int compare(MaterialItem obj1, MaterialItem obj2) {
-                 return Integer.valueOf(obj1.getRarity()).compareTo(Integer.valueOf(obj2.getRarity()));
+                return Integer.valueOf(obj1.getRarity()).compareTo(Integer.valueOf(obj2.getRarity()));
             }
         });
         Collections.sort(currency, new Comparator<MaterialItem>(){
             public int compare(MaterialItem obj1, MaterialItem obj2) {
-                 return Integer.valueOf(obj1.getRarity()).compareTo(Integer.valueOf(obj2.getRarity()));
+                return Integer.valueOf(obj1.getRarity()).compareTo(Integer.valueOf(obj2.getRarity()));
             }
         });
         materialItemsRef.addAll(currency);
@@ -275,7 +278,7 @@ public class InfoCharacterPage {
 
                     lvlCurr = seekBar.getProgress() + 1 - lvlPART;
 
-                    combat_material_change(combat_status_material_ll, jsonObject, lvlPART);
+                    combat_material_change(combat_status_material_ll, jsonObject, lvlPART-1);
                     combat_status_change(jsonObject, seekBar, lvlPART, combat_status_hp, combat_status_atk, combat_status_def, combat_status_spd, combat_status_taunt);
                     combat_status_lv.setText((lvlCurr < 10 ? "0" : "")+String.valueOf(lvlCurr)+" / "+String.valueOf(lvlMax[lvlPART]));
                 } catch (JSONException e) {
@@ -293,9 +296,6 @@ public class InfoCharacterPage {
 
             }
         });
-
-
-
 
         //Combat Card
         int[] combat_ico = new int[]{R.id.combat_skill1_ico,R.id.combat_skill2_ico,R.id.combat_skill3_ico,R.id.combat_skill4_ico,R.id.combat_skill6_ico};
@@ -326,7 +326,7 @@ public class InfoCharacterPage {
             type.setText(skills.getJSONObject(finalX).getString("typeDescHash"));
             combat_desc_change(desc, skills.getJSONObject(finalX), seekbar);
             combat_material_init(material_ll, skills.getJSONObject(finalX), finalX);
-            combat_material_change(material_ll, skills.getJSONObject(finalX), seekbar.getProgress());
+            combat_material_change(material_ll, skills.getJSONObject(finalX), -1);
             lv.setText("01");
 
             seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -379,8 +379,10 @@ public class InfoCharacterPage {
             for (int x = 0 ; x < levelData.length() ; x++){
                 JSONArray cost = levelData.getJSONObject(x).getJSONArray("cost");
                 for (int y = 0 ; y < cost.length() ; y++){
-                    if (!materialItemsID.contains(cost.getJSONObject(y).getInt("id"))){
-                        materialItemsID.add(cost.getJSONObject(y).getInt("id"));
+                    if (y - 1 >= 0){
+                        if (!materialItemsID.contains(cost.getJSONObject(y).getInt("id"))){
+                            materialItemsID.add(cost.getJSONObject(y).getInt("id"));
+                        }
                     }
                 }
             }
@@ -514,12 +516,12 @@ public class InfoCharacterPage {
         TextView eidolon_desc5 = info_eidolon.findViewById(R.id.eidolon_desc5);
         TextView eidolon_desc6 = info_eidolon.findViewById(R.id.eidolon_desc6);
 
-        eidolon_ico1.setImageResource(item_rss.getCharByName(hsrItem.getName())[2]);
-        eidolon_ico2.setImageResource(item_rss.getCharByName(hsrItem.getName())[3]);
-        eidolon_ico3.setImageResource(item_rss.getCharByName(hsrItem.getName())[4]);
-        eidolon_ico4.setImageResource(item_rss.getCharByName(hsrItem.getName())[5]);
-        eidolon_ico5.setImageResource(item_rss.getCharByName(hsrItem.getName())[6]);
-        eidolon_ico6.setImageResource(item_rss.getCharByName(hsrItem.getName())[7]);
+        eidolon_ico1.setImageResource(item_rss.getCharByName(hsrItem.getName())[3]);
+        eidolon_ico2.setImageResource(item_rss.getCharByName(hsrItem.getName())[4]);
+        eidolon_ico3.setImageResource(item_rss.getCharByName(hsrItem.getName())[5]);
+        eidolon_ico4.setImageResource(item_rss.getCharByName(hsrItem.getName())[6]);
+        eidolon_ico5.setImageResource(item_rss.getCharByName(hsrItem.getName())[7]);
+        eidolon_ico6.setImageResource(item_rss.getCharByName(hsrItem.getName())[8]);
 
         eidolon_name1.setText(ranks.getJSONObject(0).getString("name"));
         eidolon_name2.setText(ranks.getJSONObject(1).getString("name"));

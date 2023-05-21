@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Filter"
+        android:text="@string/filter"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Element"
+            android:text="@string/element"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -157,7 +157,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Path"
+            android:text="@string/path"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -287,7 +287,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Rarity"
+            android:text="@string/rarity"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -302,6 +302,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="8dp"
                 android:layout_weight="1"
+                style="?android:attr/borderlessButtonStyle"
                 android:background="@drawable/bg_filter_btn"
                 android:checked="true"
                 android:gravity="center"
@@ -318,6 +319,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="8dp"
                 android:layout_weight="1"
+                style="?android:attr/borderlessButtonStyle"
                 android:background="@drawable/bg_filter_btn"
                 android:checked="true"
                 android:gravity="center"
@@ -336,6 +338,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_filter_btn"
                 android:checked="true"
+                style="?android:attr/borderlessButtonStyle"
                 android:gravity="center"
                 android:minWidth="64dp"
                 android:minHeight="40dp"
@@ -353,6 +356,7 @@
                 android:gravity="center"
                 android:minWidth="64dp"
                 android:minHeight="40dp"
+                style="?android:attr/borderlessButtonStyle"
                 android:textOff="4 ✦"
                 android:textOn="4 ✦"
                 android:textSize="16sp" />
@@ -362,6 +366,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_filter_btn"
@@ -388,7 +393,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Status"
+            android:text="@string/status"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -399,6 +404,7 @@
 
             <ToggleButton
                 android:id="@+id/filter_release"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="8dp"
@@ -409,12 +415,13 @@
                 android:minWidth="64dp"
                 android:minHeight="40dp"
                 android:padding="4dp"
-                android:textOff="Released"
-                android:textOn="Released"
+                android:textOff="@string/released"
+                android:textOn="@string/released"
                 android:textSize="12sp" />
 
             <ToggleButton
                 android:id="@+id/filter_soon"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="8dp"
@@ -425,12 +432,13 @@
                 android:minWidth="64dp"
                 android:minHeight="40dp"
                 android:padding="4dp"
-                android:textOff="Soon"
-                android:textOn="Soon"
+                android:textOff="@string/soon"
+                android:textOn="@string/soon"
                 android:textSize="12sp" />
 
             <ToggleButton
                 android:id="@+id/filter_beta"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="8dp"
@@ -441,8 +449,8 @@
                 android:minWidth="64dp"
                 android:minHeight="40dp"
                 android:padding="4dp"
-                android:textOff="Beta"
-                android:textOn="Beta"
+                android:textOff="@string/beta"
+                android:textOn="@string/beta"
                 android:textSize="12sp" />
         </LinearLayout>
     </LinearLayout>
@@ -462,7 +470,7 @@
             android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:backgroundTint="#00000000"
-            android:text="@android:string/cancel"
+            android:text="@string/cancel"
             android:textColor="@color/filter_btn_themed"
             app:strokeColor="@color/filter_btn_stroke"
             app:strokeWidth="1dp" />
@@ -476,6 +484,6 @@
             android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:backgroundTint="@color/filter_btn_themed"
-            android:text="Apply" />
+            android:text="@string/apply" />
     </LinearLayout>
 </LinearLayout>

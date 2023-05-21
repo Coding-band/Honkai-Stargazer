@@ -21,10 +21,16 @@
         <item name="android:navigationBarColor">@color/nav_bar_color</item>
         <!-- Customize your theme here. -->
         <item name="fontFamily">@font/hsr_font</item>
+        <item name="android:textColor">@color/tv_daynight_tint</item>
     </style>
-
     <style name="Widget.BottomNavigationView" parent="Widget.Material3.NavigationView">
         <item name="fontFamily">@font/hsr_font</item>
+    </style>
+    <style name="Widget.TabLayout" parent="Widget.Material3.TabLayout">
+        <item name="fontFamily">@font/hsr_font</item>
+    </style>
+    <style name="Widget.TabWidget" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/hsr_font</item>
     </style>
 
 

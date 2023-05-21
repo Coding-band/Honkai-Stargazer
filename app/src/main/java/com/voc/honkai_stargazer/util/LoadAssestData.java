@@ -16,7 +16,7 @@ import java.io.InputStream;
 public class LoadAssestData {
 
     public static String LoadAssestData (Context context, String inFile){
-        String tContents = null;
+        String tContents = "";
 
         try {
             InputStream stream = context.getAssets().open(inFile);

@@ -9,14 +9,21 @@ package com.voc.honkai_stargazer.dev;
 import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.voc.honkai_stargazer.data.MaterialItem;
+import com.voc.honkai_stargazer.util.LangUtil;
 import com.voc.honkai_stargazer.util.LogExport;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -33,7 +40,7 @@ public class HelpTool {
             for (int i = 0; i < array.length(); i++) {
                 JSONObject object = array.getJSONObject(i);
                 String json_base = LoadAssestData(context, "character_data/" + "en" + "/" + object.getString("fileName") + ".json");
-                if (json_base != null) {
+                if (!json_base.equals("")) {
                     JSONObject jsonObject = new JSONObject(json_base);
 
                 }
@@ -90,5 +97,41 @@ public class HelpTool {
         }
 
         LogExport.special(str_final, context, LogExport.BETA_TESTING);
+    }
+
+    public void help_tool_export_relic_pc_run(Context context) throws JSONException {
+        help_tool_export_relic_pc(LangUtil.LangType.EN,context);
+        help_tool_export_relic_pc(LangUtil.LangType.ZH_HK,context);
+        help_tool_export_relic_pc(LangUtil.LangType.ZH_CN,context);
+        help_tool_export_relic_pc(LangUtil.LangType.RU,context);
+        help_tool_export_relic_pc(LangUtil.LangType.FR,context);
+        help_tool_export_relic_pc(LangUtil.LangType.UA,context);
+    }
+
+    public void help_tool_export_relic_pc(LangUtil.LangType langType,Context context) throws JSONException{
+        String dataInList = LoadAssestData(context, "relic_data/relic_list.json");
+        if (!dataInList.equals("")){
+            JSONArray array = new JSONArray(dataInList);
+            String dataRelease = "{\n";
+            for (int x = 0 ; x < array.length() ; x ++){
+                if (!array.getJSONObject(x).getString("fileName").isEmpty() && !array.getJSONObject(x).getString("fileName").contains("N/A")){
+                    String dataInRelic = LoadAssestData(context, "relic_data/"+langType.getCode()+"/"+array.getJSONObject(x).getString("fileName")+".json");
+                    JSONArray skills = new JSONObject(dataInRelic).getJSONArray("skills");
+                    dataRelease = dataRelease + "\t\""+array.getJSONObject(x).getString("name")+"\" : "+skills.toString() + (x+1 < array.length() ? ",\n" : "\n}") ;
+                }
+            }
+
+            try {
+                File ext = context.getFilesDir();
+                if (!Files.exists(Paths.get(ext + "/" + "relic_pc_"+langType.getCode()+".json"))) {
+                    Files.createFile(Paths.get(ext + "/" + "relic_pc_"+langType.getCode()+".json"));
+                    Files.write(Paths.get(ext + "/" + "relic_pc_"+langType.getCode()+".json"), dataRelease.getBytes(), new StandardOpenOption[]{StandardOpenOption.WRITE});
+                }else{
+                    Files.write(Paths.get(ext + "/" + "relic_pc_"+langType.getCode()+".json"), dataRelease.getBytes(), new StandardOpenOption[]{StandardOpenOption.WRITE});
+                }
+            } catch (IOException e) {
+                Log.i("LogExport -> HelpTool", e.getMessage());
+            }
+        }
     }
 }
