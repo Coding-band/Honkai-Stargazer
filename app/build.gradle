@@ -26,13 +26,16 @@ android {
 
         flavorDimensions "version"
         productFlavors {
-            // For Develop Testing
-            dev {
+            // For Google Play Store
+            dev{
                 versionCode = code
                 versionNameSuffix "-dev" + " ("+code+")"
-                applicationId "com.voc.honkai_stargazer"
-
-
+                applicationId "com.voc.honkai_stargazer_gp"
+                bundle{
+                    language {
+                        enableSplit = false;
+                    }
+                }
             }
             // For Google Play Store
             gp{
@@ -45,11 +48,14 @@ android {
                     }
                 }
             }
-            // For Translator and Beta Tester
+
+            // For Develop Testing
             beta {
                 versionCode = code
-                versionNameSuffix "-beta" + " ("+code+")"
+                versionNameSuffix "-alpha" + " ("+code+")"
                 applicationId "com.voc.honkai_stargazer_beta"
+
+
             }
         }
     }
@@ -78,6 +84,13 @@ android {
             }
         }
     }
+
+    bundle{
+        language {
+            enableSplit = false;
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -94,6 +107,9 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.bumptech.glide:glide:4.15.1'
     implementation 'com.github.ome450901:SimpleRatingBar:1.5.1'
+    implementation "com.android.billingclient:billing:6.0.0"
+    implementation 'com.google.guava:guava:21.0'
+    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
 
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
 

@@ -93,7 +93,6 @@ public class ItemRSS {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         LangUtil.LangType langType = LangUtil.LangType.EN;
 
-
         if(sharedPreferences.getString("curr_lang","").isEmpty()){
             String tag = Locale.getDefault().toLanguageTag();
             if(tag.contains("zh-")){

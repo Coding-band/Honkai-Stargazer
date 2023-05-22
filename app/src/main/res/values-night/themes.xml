@@ -8,7 +8,7 @@
     <!-- Base application theme. -->
     <style name="Theme.HonkaiStargazer" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/filter_btn_themed</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -22,16 +22,20 @@
         <!-- Customize your theme here. -->
         <item name="fontFamily">@font/hsr_font</item>
         <item name="android:textColor">@color/tv_daynight_tint</item>
+        <item name="switchStyle">@style/Widget.Switch</item>
     </style>
-
-
-
     <style name="Widget.BottomNavigationView" parent="Widget.Material3.NavigationView">
         <item name="fontFamily">@font/hsr_font</item>
-        <item name="android:textColor">@color/tv_daynight_tint</item>
     </style>
     <style name="Widget.TabLayout" parent="Widget.Material3.TabLayout">
         <item name="fontFamily">@font/hsr_font</item>
+    </style>
+    <style name="Widget.TabWidget" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/hsr_font</item>
+    </style>
+    <style name="Widget.Switch" parent="Widget.Material3.CompoundButton.Switch">
+        <item name="android:track">@drawable/app_switch_track</item>
+        <item name="android:thumb">@drawable/app_switch_thumb</item>
     </style>
 
 

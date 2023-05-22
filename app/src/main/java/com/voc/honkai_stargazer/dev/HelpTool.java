@@ -103,6 +103,7 @@ public class HelpTool {
         help_tool_export_relic_pc(LangUtil.LangType.EN,context);
         help_tool_export_relic_pc(LangUtil.LangType.ZH_HK,context);
         help_tool_export_relic_pc(LangUtil.LangType.ZH_CN,context);
+        help_tool_export_relic_pc(LangUtil.LangType.JP,context);
         help_tool_export_relic_pc(LangUtil.LangType.RU,context);
         help_tool_export_relic_pc(LangUtil.LangType.FR,context);
         help_tool_export_relic_pc(LangUtil.LangType.UA,context);

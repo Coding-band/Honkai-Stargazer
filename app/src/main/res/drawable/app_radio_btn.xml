@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Project Honkai Stargazer (崩壞•星穹觀星者) was
+  ~ Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
+  ~ Copyright © 2023 Xectorda 版權所有
+  -->
+
+
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/on"
+        android:state_checked="true"
+        android:drawable="@drawable/btn_radio_on_mtrl" />
+    <item
+        android:id="@+id/off"
+        android:drawable="@drawable/btn_radio_off_mtrl" />
+    <transition
+        android:fromId="@+id/on"
+        android:toId="@+id/off"
+        android:drawable="@drawable/btn_radio_on_to_off_mtrl_animation" />
+    <transition
+        android:fromId="@+id/off"
+        android:toId="@+id/on"
+        android:drawable="@drawable/btn_radio_off_to_on_mtrl_animation" />
+</animated-selector>

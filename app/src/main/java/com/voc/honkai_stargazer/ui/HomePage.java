@@ -10,6 +10,7 @@ import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -36,24 +37,34 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.navigation.NavigationBarView;
+import com.voc.honkai_stargazer.BuildConfig;
 import com.voc.honkai_stargazer.R;
 import com.voc.honkai_stargazer.data.FilterPreference;
 import com.voc.honkai_stargazer.data.HSRItem;
 import com.voc.honkai_stargazer.data.HSRItemAdapter;
+import com.voc.honkai_stargazer.dev.HelpTool;
+import com.voc.honkai_stargazer.util.BillingHelper;
 import com.voc.honkai_stargazer.util.CustomViewPager;
 import com.voc.honkai_stargazer.util.CustomViewPagerAdapter;
 import com.voc.honkai_stargazer.util.ItemRSS;
 import com.voc.honkai_stargazer.util.LangUtil;
+import com.voc.honkai_stargazer.util.ThemeUtil;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class HomePage extends AppCompatActivity {
@@ -84,16 +95,23 @@ public class HomePage extends AppCompatActivity {
     //Character, Lightcone, Relic
     FilterPreference[] filterPreferences = new FilterPreference[]{new FilterPreference(),new FilterPreference(),new FilterPreference()};
 
+    BillingHelper billingHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
-
         context = this;
         activity = this;
         sharedPreferences = context.getSharedPreferences("user_info",MODE_PRIVATE);
         editor = sharedPreferences.edit();
+        if (sharedPreferences.getString("dayNight",ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM).equals(ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM)) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+        } else if(sharedPreferences.getString("dayNight","FOLLOW_SYSTEM").equals(ThemeUtil.DAYNIGHT_NIGHT)){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+        setContentView(R.layout.activity_home_page);
 
         ItemRSS.initLang(context);
 
@@ -103,9 +121,6 @@ public class HomePage extends AppCompatActivity {
         relic_init();
         setting_init();
 
-    }
-
-    public void setting_init() {
 
     }
 
@@ -259,6 +274,83 @@ public class HomePage extends AppCompatActivity {
             }
         });
         relicSearchEt.addTextChangedListener(searchBarHandler(ItemRSS.TYPE_RELIC, relicSearchEt));
+    }
+
+
+    public void setting_init() {
+        //Language
+        ChipGroup setting_lang = home_settings.findViewById(R.id.setting_lang);
+        Chip setting_lang_en = home_settings.findViewById(R.id.setting_lang_en);
+        Chip setting_lang_zh_hk = home_settings.findViewById(R.id.setting_lang_zh_hk);
+        Chip setting_lang_zh_cn = home_settings.findViewById(R.id.setting_lang_zh_cn);
+        Chip setting_lang_fr = home_settings.findViewById(R.id.setting_lang_fr);
+        Chip setting_lang_jp = home_settings.findViewById(R.id.setting_lang_jp);
+        Chip setting_lang_ru = home_settings.findViewById(R.id.setting_lang_ru);
+        Chip setting_lang_ua = home_settings.findViewById(R.id.setting_lang_ua);
+
+        switch (sharedPreferences.getString("curr_lang","")){
+            case ItemRSS.LANG_ZH_HK: setting_lang_zh_hk.setChecked(true);break;
+            case ItemRSS.LANG_ZH_CN: setting_lang_zh_cn.setChecked(true);break;
+            case ItemRSS.LANG_FR: setting_lang_fr.setChecked(true);break;
+            case ItemRSS.LANG_JA_JP: setting_lang_jp.setChecked(true);break;
+            case ItemRSS.LANG_RU: setting_lang_ru.setChecked(true);break;
+            case ItemRSS.LANG_UA: setting_lang_ua.setChecked(true);break;
+            default:
+            case ItemRSS.LANG_EN: setting_lang_en.setChecked(true);break;
+        }
+        setting_lang.setOnCheckedStateChangeListener(new ChipGroup.OnCheckedStateChangeListener() {
+            @Override
+            public void onCheckedChanged(@NonNull ChipGroup group, @NonNull List<Integer> checkedIds) {
+                int id = group.getCheckedChipId();
+                switch (id){
+                    case R.id.setting_lang_zh_hk: LangUtil.getAttachBaseContext(context, LangUtil.LangType.ZH_HK);recreate();break;
+                    case R.id.setting_lang_zh_cn: LangUtil.getAttachBaseContext(context, LangUtil.LangType.ZH_CN);recreate();break;
+                    case R.id.setting_lang_fr: LangUtil.getAttachBaseContext(context, LangUtil.LangType.FR);recreate();break;
+                    case R.id.setting_lang_jp: LangUtil.getAttachBaseContext(context, LangUtil.LangType.JP);recreate();break;
+                    case R.id.setting_lang_ru: LangUtil.getAttachBaseContext(context, LangUtil.LangType.RU);recreate();break;
+                    case R.id.setting_lang_ua: LangUtil.getAttachBaseContext(context, LangUtil.LangType.UA);recreate();break;
+                    default:
+                    case R.id.setting_lang_en: LangUtil.getAttachBaseContext(context, LangUtil.LangType.EN);recreate();break;
+                }
+            }
+        });
+
+
+        //DayNight
+        RadioGroup setting_daynight = home_settings.findViewById(R.id.setting_daynight);
+        RadioButton setting_daynight_light = home_settings.findViewById(R.id.setting_daynight_light);
+        RadioButton setting_daynight_dark = home_settings.findViewById(R.id.setting_daynight_dark);
+        RadioButton setting_daynight_system = home_settings.findViewById(R.id.setting_daynight_system);
+
+        switch (sharedPreferences.getString("dayNight",ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM)){
+            case ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM: setting_daynight_system.setChecked(true);break;
+            case ThemeUtil.DAYNIGHT_DAY: setting_daynight_light.setChecked(true);break;
+            case ThemeUtil.DAYNIGHT_NIGHT: setting_daynight_dark.setChecked(true);break;
+        }
+        setting_daynight.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                int id = group.getCheckedRadioButtonId();
+                switch (id){
+                    case R.id.setting_daynight_light : AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); editor.putString("dayNight",ThemeUtil.DAYNIGHT_DAY).apply(); recreate();break;
+                    case R.id.setting_daynight_dark : AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES); editor.putString("dayNight",ThemeUtil.DAYNIGHT_NIGHT).apply(); recreate();break;
+                    case R.id.setting_daynight_system : AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM); editor.putString("dayNight",ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM).apply();recreate(); break;
+                }
+            }
+        });
+
+        Chip setting_donate_1 = home_settings.findViewById(R.id.setting_donate_1);
+        Chip setting_donate_2 = home_settings.findViewById(R.id.setting_donate_2);
+        Chip setting_donate_3 = home_settings.findViewById(R.id.setting_donate_3);
+        Chip setting_donate_4 = home_settings.findViewById(R.id.setting_donate_4);
+
+        if (billingHelper != null){billingHelper.close();}
+        billingHelper = new BillingHelper(context, activity,new Chip[]{setting_donate_1,setting_donate_2,setting_donate_3,setting_donate_4});
+
+        TextView setting_version = home_settings.findViewById(R.id.setting_version);
+        setting_version.setText(BuildConfig.VERSION_NAME);
+
+
     }
 
     private void char_list_reload() {
@@ -451,16 +543,16 @@ public class HomePage extends AppCompatActivity {
         ImageView filter_preservation = view.findViewById(R.id.filter_preservation);
 
         LinearLayout filter_rarity_ll = view.findViewById(R.id.filter_rarity_ll);
-        ToggleButton filter_rare_1 = view.findViewById(R.id.filter_rare_1);
-        ToggleButton filter_rare_2 = view.findViewById(R.id.filter_rare_2);
-        ToggleButton filter_rare_3 = view.findViewById(R.id.filter_rare_3);
-        ToggleButton filter_rare_4 = view.findViewById(R.id.filter_rare_4);
-        ToggleButton filter_rare_5 = view.findViewById(R.id.filter_rare_5);
+        Chip filter_rare_1 = view.findViewById(R.id.filter_rare_1);
+        Chip filter_rare_2 = view.findViewById(R.id.filter_rare_2);
+        Chip filter_rare_3 = view.findViewById(R.id.filter_rare_3);
+        Chip filter_rare_4 = view.findViewById(R.id.filter_rare_4);
+        Chip filter_rare_5 = view.findViewById(R.id.filter_rare_5);
 
         LinearLayout filter_status_ll = view.findViewById(R.id.filter_status_ll);
-        ToggleButton filter_release = view.findViewById(R.id.filter_release);
-        ToggleButton filter_soon = view.findViewById(R.id.filter_soon);
-        ToggleButton filter_beta = view.findViewById(R.id.filter_beta);
+        Chip filter_release = view.findViewById(R.id.filter_release);
+        Chip filter_soon = view.findViewById(R.id.filter_soon);
+        Chip filter_beta = view.findViewById(R.id.filter_beta);
 
         Button filter_cancel = view.findViewById(R.id.filter_cancel);
         Button filter_apply = view.findViewById(R.id.filter_apply);
@@ -574,5 +666,17 @@ public class HomePage extends AppCompatActivity {
                 break;
             }
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        SharedPreferences sharedPreferences = newBase.getSharedPreferences("user_info",MODE_PRIVATE);
+        super.attachBaseContext(LangUtil.getAttachBaseContext(newBase, LangUtil.getLangTypeByCode(sharedPreferences.getString("curr_lang",""))));
+    }
+
+    @Override
+    public void recreate() {
+        billingHelper.close();
+        super.recreate();
     }
 }

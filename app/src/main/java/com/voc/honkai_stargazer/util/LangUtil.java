@@ -7,6 +7,7 @@
 package com.voc.honkai_stargazer.util;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
@@ -25,7 +26,7 @@ public class LangUtil {
         JP(Locale.JAPAN,"jp","日本語"),
         FR(Locale.FRANCE,"fr","Français"),
         RU(new Locale("ru", "RU"),"ru","Русский"),
-        UA(new Locale("uk", "UA"),"ua","українська");
+        UA(new Locale("uk", "UA"),"ua","Українська");
 
         private Locale locale;
         private String code;
@@ -47,21 +48,32 @@ public class LangUtil {
         }
     }
 
-    private static Context context;
     public static LangUtil getInstance(LangType type){
         if (INSTANCE == null) {
             INSTANCE = new LangUtil();
         }
         return(INSTANCE);
     }
+
+    public static LangType getLangTypeByCode(String code){
+        LangType langType = LangType.EN;
+        switch (code){
+            case ItemRSS.LANG_EN: langType = LangUtil.LangType.EN;break;
+            case ItemRSS.LANG_ZH_CN: langType = LangUtil.LangType.ZH_CN;break;
+            case ItemRSS.LANG_ZH_HK: langType = LangUtil.LangType.ZH_HK;break;
+            case ItemRSS.LANG_JA_JP: langType = LangUtil.LangType.JP;break;
+            case ItemRSS.LANG_FR: langType = LangUtil.LangType.FR;break;
+            case ItemRSS.LANG_RU: langType = LangUtil.LangType.RU;break;
+            case ItemRSS.LANG_UA: langType = LangUtil.LangType.UA;break;
+            default:langType = LangUtil.LangType.EN;break;
+        }
+        return langType;
+    }
+
     private LangUtil(){};
 
     public static Context getAttachBaseContext(Context context, LangType type) {
-        if (Build.VERSION.SDK_INT >= 24) {
-            return updateResources(context, type);
-        }
-        changeResLanguage(context, type);
-        return context;
+        return updateResources(context, type);
     }
 
     private static Context updateResources(Context context, LangType type) {
@@ -69,6 +81,18 @@ public class LangUtil {
         Locale currentLang = type.getLocale();
         Configuration configuration = resources.getConfiguration();
         configuration.setLocale(currentLang);
+        SharedPreferences.Editor editor = context.getSharedPreferences("user_info",Context.MODE_PRIVATE).edit();
+        switch (type){
+            case ZH_CN: editor.putString("curr_lang",LangType.ZH_CN.getCode()).apply();break;
+            case ZH_HK: editor.putString("curr_lang",LangType.ZH_HK.getCode()).apply();break;
+            case FR: editor.putString("curr_lang",LangType.FR.getCode()).apply();break;
+            case JP: editor.putString("curr_lang",LangType.JP.getCode()).apply();break;
+            case RU: editor.putString("curr_lang",LangType.RU.getCode()).apply();break;
+            case UA: editor.putString("curr_lang",LangType.UA.getCode()).apply();break;
+            default:
+            case EN: editor.putString("curr_lang",LangType.EN.getCode()).apply();break;
+        }
+
         return context.createConfigurationContext(configuration);
     }
 
