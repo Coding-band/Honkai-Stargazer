@@ -7,16 +7,20 @@
 package com.voc.honkai_stargazer.util;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
-import android.os.Handler;
-import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.android.billingclient.api.AcknowledgePurchaseParams;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingFlowParams;
@@ -28,11 +32,9 @@ import com.android.billingclient.api.ProductDetailsResponseListener;
 import com.android.billingclient.api.Purchase;
 import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.QueryProductDetailsParams;
-import com.android.billingclient.api.QueryPurchasesParams;
 import com.google.android.material.chip.Chip;
-import com.google.android.material.chip.ChipGroup;
 import com.google.common.collect.ImmutableList;
-import com.voc.honkai_stargazer.data.MaterialItem;
+import com.voc.honkai_stargazer.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -63,6 +65,10 @@ public class BillingHelper {
 
     private Chip[] chips;
 
+    public static final String PAYMENT_SUCCESS = "PAYMENT_SUCCESS";
+    public static final String PAYMENT_FAILED = "PAYMENT_FAILED";
+    public static final String PAYMENT_USER_CANCELLED = "PAYMENT_USER_CANCELLED";
+
     public BillingHelper(Context context, Activity activity, Chip[] chips) {
         this.context = context;
         this.activity = activity;
@@ -71,34 +77,121 @@ public class BillingHelper {
         billingClient = BillingClient.newBuilder(context)
                 .setListener(new PurchasesUpdatedListener() {
                     @Override
-                    public void onPurchasesUpdated(@NonNull BillingResult billingResult, @Nullable List<Purchase> list) {
-                        connectToGooglePlayBilling();
+                    public void onPurchasesUpdated(@NonNull BillingResult billingResult, @Nullable List<Purchase> purchases) {
+                        if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK && purchases != null) {
+                            for (Purchase purchase : purchases) {
+                                handlePurchase(purchase);
+                            }
+
+                            displayDialog(PAYMENT_SUCCESS,billingResult);
+
+                        } else if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.USER_CANCELED) {
+                            // Handle an error caused by a user cancelling the purchase flow.
+                            displayDialog(PAYMENT_USER_CANCELLED,billingResult);
+                        } else {
+                            displayDialog(PAYMENT_FAILED,billingResult);
+                        }
                     }
                 })
                 .enablePendingPurchases()
                 .build();
-        connectToGooglePlayBilling();
+        connectToGooglePlayBilling(chips);
     }
 
-    private void connectToGooglePlayBilling(){
+    private void displayDialog(String resultTag, BillingResult billingResult) {
+        if (resultTag.equals(PAYMENT_USER_CANCELLED)) return;
+        final Dialog dialog = new Dialog(context, R.style.FilterDialogStyle_F);
+        View view = View.inflate(context, R.layout.fragment_donation_result, null);
+        ImageView donation_ico = view.findViewById(R.id.donation_ico);
+        TextView donation_thx = view.findViewById(R.id.donation_thx);
+        TextView donation_msg = view.findViewById(R.id.donation_msg);
+        TextView donation_error_msg = view.findViewById(R.id.donation_error_msg);
+        Button donation_close = view.findViewById(R.id.donation_close);
+        donation_error_msg.setVisibility(View.GONE);
+        donation_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (dialog.isShowing()){
+                    dialog.dismiss();
+                }
+            }
+        });
+
+        switch (resultTag){
+            case PAYMENT_SUCCESS: {
+                donation_ico.setImageResource(R.drawable.pom_pom_success);
+                donation_thx.setText(context.getString(R.string.setting_donation_thx_success));
+                donation_msg.setText(context.getString(R.string.setting_donation_msg_success));
+                break;
+            }
+            case PAYMENT_FAILED: {
+                donation_ico.setImageResource(R.drawable.pom_pom_failed_issue);
+                donation_thx.setText(context.getString(R.string.setting_donation_thx_failed));
+                donation_msg.setText(context.getString(R.string.setting_donation_msg_failed));
+                donation_error_msg.setVisibility(View.VISIBLE);
+                donation_error_msg.setText("ERROR CODE ["+String.valueOf(billingResult.getResponseCode())+"]"+(!billingResult.getDebugMessage().isEmpty() ? "\n"+billingResult.getDebugMessage() : ""));
+                break;
+            }
+        }
+
+        dialog.setContentView(view);
+        dialog.setCanceledOnTouchOutside(true);
+        Window dialogWindow = dialog.getWindow();
+        WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.gravity = Gravity.CENTER;
+        dialogWindow.setAttributes(lp);
+
+        if (!dialog.isShowing()){
+            dialog.show();
+        }
+    }
+
+    void handlePurchase(Purchase purchase) {
+        // Purchase retrieved from BillingClient#queryPurchasesAsync or your PurchasesUpdatedListener.
+
+        // Verify the purchase.
+        // Ensure entitlement was not already granted for this purchaseToken.
+        // Grant entitlement to the user.
+
+        ConsumeParams consumeParams =
+                ConsumeParams.newBuilder()
+                        .setPurchaseToken(purchase.getPurchaseToken())
+                        .build();
+
+        ConsumeResponseListener listener = new ConsumeResponseListener() {
+            @Override
+            public void onConsumeResponse(BillingResult billingResult, String purchaseToken) {
+                if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
+                    // Handle the success of the consume operation.
+
+                }
+            }
+        };
+
+        billingClient.consumeAsync(consumeParams, listener);
+    }
+
+    private void connectToGooglePlayBilling(Chip[] chips){
         billingClient.startConnection(
                 new BillingClientStateListener() {
                     @Override
                     public void onBillingServiceDisconnected() {
-                        connectToGooglePlayBilling();
+                        connectToGooglePlayBilling(chips);
                     }
 
                     @Override
                     public void onBillingSetupFinished(@NonNull BillingResult billingResult) {
                         if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK){
-                            getProductDetails();
+                            getProductDetails(chips);
                         }
                     }
                 }
         );
     }
 
-    private void getProductDetails(){
+    private void getProductDetails(Chip[] chips){
         productList = new ArrayList<>();
         for (int x = 0 ; x < purchaseItemIDs.size() ; x ++){
             productList.add(
@@ -125,10 +218,9 @@ public class BillingHelper {
                         return Integer.compare(price1, price2);
                     }
                 });
+
                 if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK && list != null){
                     for (int pos = 0 ; pos < list.size() && pos < chips.length ; pos ++){
-                        chips[pos].setText(list.get(pos).getOneTimePurchaseOfferDetails().getFormattedPrice());
-
                         ImmutableList productDetailsParamsList =
                                 ImmutableList.of(
                                         BillingFlowParams.ProductDetailsParams.newBuilder()
@@ -139,13 +231,12 @@ public class BillingHelper {
                                                 //.setOfferToken(selectedOfferToken)
                                                 .build()
                                 );
-
-
                         chips[pos].setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 billingClient.launchBillingFlow(activity, BillingFlowParams.newBuilder()
                                         .setProductDetailsParamsList(productDetailsParamsList)
+                                        .setIsOfferPersonalized(true)
                                         .build()
                                 );
                             }

@@ -22,6 +22,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
@@ -115,7 +116,7 @@ public class HomePage extends AppCompatActivity {
 
         ItemRSS.initLang(context);
 
-        root_init();
+        root_init(false);
         character_init();
         lightcone_init();
         relic_init();
@@ -124,7 +125,7 @@ public class HomePage extends AppCompatActivity {
 
     }
 
-    public void root_init(){
+    public void root_init(boolean isSetting){
         final LayoutInflater mInflater = getLayoutInflater().from(this);
         home_characters = mInflater.inflate(R.layout.fragment_home_characters, null,false);
         home_lightcones = mInflater.inflate(R.layout.fragment_home_lightcones, null,false);
@@ -183,6 +184,10 @@ public class HomePage extends AppCompatActivity {
                 return false;
             }
         });
+
+        if (isSetting){
+            viewPager.setCurrentItem(3);
+        }
     }
 
     public void character_init(){
@@ -344,7 +349,9 @@ public class HomePage extends AppCompatActivity {
         Chip setting_donate_3 = home_settings.findViewById(R.id.setting_donate_3);
         Chip setting_donate_4 = home_settings.findViewById(R.id.setting_donate_4);
 
-        if (billingHelper != null){billingHelper.close();}
+        if (billingHelper != null){
+            billingHelper.close();
+        }
         billingHelper = new BillingHelper(context, activity,new Chip[]{setting_donate_1,setting_donate_2,setting_donate_3,setting_donate_4});
 
         TextView setting_version = home_settings.findViewById(R.id.setting_version);
@@ -678,5 +685,6 @@ public class HomePage extends AppCompatActivity {
     public void recreate() {
         billingHelper.close();
         super.recreate();
+        root_init(true);
     }
 }

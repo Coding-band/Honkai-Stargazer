@@ -6,6 +6,7 @@
 
 package com.voc.honkai_stargazer.util;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -74,6 +75,30 @@ public class LangUtil {
 
     public static Context getAttachBaseContext(Context context, LangType type) {
         return updateResources(context, type);
+    }
+
+
+    public static void updateLocale(Context baseContext, LangType type, Activity activity) {
+
+
+        SharedPreferences.Editor editor = baseContext.getSharedPreferences("user_info",Context.MODE_PRIVATE).edit();
+        switch (type){
+            case ZH_CN: editor.putString("curr_lang",LangType.ZH_CN.getCode()).apply();break;
+            case ZH_HK: editor.putString("curr_lang",LangType.ZH_HK.getCode()).apply();break;
+            case FR: editor.putString("curr_lang",LangType.FR.getCode()).apply();break;
+            case JP: editor.putString("curr_lang",LangType.JP.getCode()).apply();break;
+            case RU: editor.putString("curr_lang",LangType.RU.getCode()).apply();break;
+            case UA: editor.putString("curr_lang",LangType.UA.getCode()).apply();break;
+            default:
+            case EN: editor.putString("curr_lang",LangType.EN.getCode()).apply();break;
+        }
+
+        Locale locale = new Locale(type.getCode());
+        Locale.setDefault(locale);
+        Resources resources = activity.getResources();
+        Configuration config = resources.getConfiguration();
+        config.setLocale(locale);
+        resources.updateConfiguration(config, resources.getDisplayMetrics());
     }
 
     private static Context updateResources(Context context, LangType type) {
