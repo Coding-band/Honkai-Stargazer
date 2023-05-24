@@ -69,6 +69,8 @@ public class BillingHelper {
     public static final String PAYMENT_FAILED = "PAYMENT_FAILED";
     public static final String PAYMENT_USER_CANCELLED = "PAYMENT_USER_CANCELLED";
 
+    Dialog dialog = null;
+
     public BillingHelper(Context context, Activity activity, Chip[] chips) {
         this.context = context;
         this.activity = activity;
@@ -100,7 +102,8 @@ public class BillingHelper {
 
     private void displayDialog(String resultTag, BillingResult billingResult) {
         if (resultTag.equals(PAYMENT_USER_CANCELLED)) return;
-        final Dialog dialog = new Dialog(context, R.style.FilterDialogStyle_F);
+        if (dialog != null) return;
+        dialog = new Dialog(context, R.style.FilterDialogStyle_F);
         View view = View.inflate(context, R.layout.fragment_donation_result, null);
         ImageView donation_ico = view.findViewById(R.id.donation_ico);
         TextView donation_thx = view.findViewById(R.id.donation_thx);
@@ -113,6 +116,7 @@ public class BillingHelper {
             public void onClick(View v) {
                 if (dialog.isShowing()){
                     dialog.dismiss();
+                    dialog = null;
                 }
             }
         });

@@ -7,7 +7,6 @@
 package com.voc.honkai_stargazer.util;
 
 import static android.content.Context.MODE_PRIVATE;
-import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
 
 import android.app.DownloadManager;
 import android.content.Context;
@@ -25,6 +24,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -502,10 +503,12 @@ public class ItemRSS {
     public SpannableString[] getRelicStatusByName(String relicNameInFile, Context context){
         String LANGUAGE = ItemRSS.initLang(context).getCode();
         String json_base = LoadAssestData(context,"relic_data/relic_pc_"+LANGUAGE+".json");
+        String json_base2 = LoadAssestData(context,"relic_data/relic_pc_"+LangUtil.LangType.EN.getCode()+".json");
         String[] feedback = new String[]{"N/A","N/A"};
         SpannableString[] feedbackSpannableString = new SpannableString[]{new SpannableString("DEFAULT N/A"),new SpannableString("DEFAULT N/A")};
         //Get data from JSON
 
+        if (json_base == "" && json_base2 != ""){json_base  =json_base2;}
         if (!json_base.equals("")){
             try {
                 JSONObject jsonObject = new JSONObject(json_base);
@@ -670,5 +673,23 @@ public class ItemRSS {
             }
         }
         return mSpannavleString;
+    }
+
+    public static String LoadAssestData (Context context, String inFile){
+        String tContents = "";
+
+        try {
+            InputStream stream = context.getAssets().open(inFile);
+
+            int size = stream.available();
+            byte[] buffer = new byte[size];
+            stream.read(buffer);
+            stream.close();
+            tContents = new String(buffer);
+        } catch (IOException e) {
+            // Handle exceptions here
+        }
+
+        return tContents;
     }
 }

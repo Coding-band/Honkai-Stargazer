@@ -7,7 +7,7 @@
 package com.voc.honkai_stargazer.ui;
 
 
-import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
+import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -138,6 +138,8 @@ public class InfoCharacterPage {
         String LANGUAGE = ItemRSS.initLang(context).getCode();
         //Read JSON from Assests
         String json_base = LoadAssestData(context,"character_data/"+LANGUAGE+"/"+hsrItem.getFileName()+".json");
+        String json_base2 = LoadAssestData(context,"character_data/"+LangUtil.LangType.EN.getCode()+"/"+hsrItem.getFileName()+".json");
+        if (json_base == "" && json_base2 != ""){json_base  =json_base2;}
         if (json_base != ""){
             try {
                 JSONObject jsonObject = new JSONObject(json_base);

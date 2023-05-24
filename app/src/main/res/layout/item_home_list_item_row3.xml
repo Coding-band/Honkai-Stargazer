@@ -18,7 +18,7 @@
         android:layout_weight="1"
         app:cardBackgroundColor="@color/home_list_item_bg"
         app:cardCornerRadius="15dp"
-        app:cardElevation="4dp"
+        app:cardElevation="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,18 +53,20 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
                     android:orientation="vertical">
 
                     <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_card_item_gradient">
 
                         <com.willy.ratingbar.ScaleRatingBar
                             android:id="@+id/item_rare"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
-                            android:layout_gravity="center"
+                            android:layout_gravity="bottom|center"
                             android:gravity="center"
                             app:srb_clearRatingEnabled="true"
                             app:srb_clickable="true"
@@ -84,8 +86,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:background="@drawable/bg_card_item_gradient"
+                    android:layout_margin="2dp"
                     android:orientation="horizontal"
                     android:paddingLeft="4dp"
                     android:paddingRight="4dp">
@@ -169,7 +170,7 @@
                     android:paddingLeft="4dp"
                     android:paddingRight="4dp"
                     android:text="2O48"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <LinearLayout

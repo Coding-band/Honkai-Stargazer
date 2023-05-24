@@ -9,23 +9,21 @@ package com.voc.honkai_stargazer.data;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.drawable.Drawable;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.CenterCrop;
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
-import com.bumptech.glide.request.RequestOptions;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 import com.voc.honkai_stargazer.R;
@@ -52,6 +50,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
     private SharedPreferences sharedPreferences;
 
     private String TYPE = ItemRSS.TYPE_CHARACTER;
+    private int lastPosition = -1;
 
     public HSRItemAdapter(Context context, Activity activity, SharedPreferences sharedPreferences, String TYPE) {
         this.context = context;
@@ -63,6 +62,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
     @NonNull
     @Override
     public HSRItemAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         switch (sharedPreferences.getString("grid_"+TYPE,HSRItemAdapter.DEFAULT)){
             case HSRItemAdapter.THREE_IN_ROW:{
                 View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_home_list_item_row3, parent, false);
@@ -82,6 +82,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull HSRItemAdapter.ViewHolder holder, int position) {
         HSRItem hsrItem = hsritemList.get(position);
+        setAnimation(holder.itemView);
         item_rss = new ItemRSS();
         DisplayMetrics displayMetrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
@@ -198,6 +199,11 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
         }else{
             holder.item_beta.setVisibility(View.GONE);
         }
+    }
+
+    private void setAnimation(View viewToAnimate){
+        Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.fade_in);
+        viewToAnimate.startAnimation(animation);
     }
 
     @Override

@@ -6,7 +6,7 @@
 
 package com.voc.honkai_stargazer.dev;
 
-import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
+import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
 
 import android.content.Context;
 import android.util.Log;

@@ -8,7 +8,7 @@ package com.voc.honkai_stargazer.ui;
 
 
 import static android.graphics.Bitmap.Config.ARGB_8888;
-import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
+import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -106,6 +106,8 @@ public class InfoLightconePage {
         String LANGUAGE = ItemRSS.initLang(context).getCode();
         //Read JSON from Assests
         String json_base = LoadAssestData(context, "lightcone_data/" + LANGUAGE + "/" + hsrItem.getFileName() + ".json");
+        String json_base2 = LoadAssestData(context,"lightcone_data/"+LangUtil.LangType.EN.getCode()+"/"+hsrItem.getFileName()+".json");
+        if (json_base == "" && json_base2 != ""){json_base  =json_base2;}
         if (!json_base.equals("")) {
             try {
                 JSONObject jsonObject = new JSONObject(json_base);

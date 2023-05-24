@@ -6,7 +6,8 @@
 
 package com.voc.honkai_stargazer.ui;
 
-import static com.voc.honkai_stargazer.util.LoadAssestData.LoadAssestData;
+import static com.voc.honkai_stargazer.dev.DevPage.TRIG_TOUCH;
+import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,9 +19,11 @@ import androidx.viewpager.widget.ViewPager;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
@@ -41,6 +44,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -58,6 +62,7 @@ import com.voc.honkai_stargazer.util.CustomViewPager;
 import com.voc.honkai_stargazer.util.CustomViewPagerAdapter;
 import com.voc.honkai_stargazer.util.ItemRSS;
 import com.voc.honkai_stargazer.util.LangUtil;
+import com.voc.honkai_stargazer.util.MyItemAnimator;
 import com.voc.honkai_stargazer.util.ThemeUtil;
 
 import org.json.JSONArray;
@@ -97,6 +102,7 @@ public class HomePage extends AppCompatActivity {
     FilterPreference[] filterPreferences = new FilterPreference[]{new FilterPreference(),new FilterPreference(),new FilterPreference()};
 
     BillingHelper billingHelper;
+    int trig_time = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -202,6 +208,7 @@ public class HomePage extends AppCompatActivity {
 
         charactersAdapter = new HSRItemAdapter(context,activity,sharedPreferences, ItemRSS.TYPE_CHARACTER);
         charactersListView.setLayoutManager(mLayoutManager);
+        charactersListView.setItemAnimator(new MyItemAnimator());
         charactersListView.setAdapter(charactersAdapter);
         charactersListView.removeAllViewsInLayout();
         char_list_reload();
@@ -237,6 +244,7 @@ public class HomePage extends AppCompatActivity {
 
         lightconesAdapter = new HSRItemAdapter(context,activity,sharedPreferences, ItemRSS.TYPE_LIGHTCONE);
         lightconesListView.setLayoutManager(mLayoutManager);
+        lightconesListView.setItemAnimator(new MyItemAnimator());
         lightconesListView.setAdapter(lightconesAdapter);
         lightconesListView.removeAllViewsInLayout();
 
@@ -266,6 +274,7 @@ public class HomePage extends AppCompatActivity {
 
         relicsAdapter = new HSRItemAdapter(context,activity,sharedPreferences, ItemRSS.TYPE_RELIC);
         relicsListView.setLayoutManager(mLayoutManager);
+        relicsListView.setItemAnimator(new MyItemAnimator());
         relicsListView.setAdapter(relicsAdapter);
         relicsListView.removeAllViewsInLayout();
         relic_list_reload();
@@ -354,9 +363,41 @@ public class HomePage extends AppCompatActivity {
         }
         billingHelper = new BillingHelper(context, activity,new Chip[]{setting_donate_1,setting_donate_2,setting_donate_3,setting_donate_4});
 
+        //Version Name
         TextView setting_version = home_settings.findViewById(R.id.setting_version);
         setting_version.setText(BuildConfig.VERSION_NAME);
 
+        //Links-Github-Discord
+        ImageView setting_app_ico = home_settings.findViewById(R.id.setting_app_ico);
+        ImageView setting_github = home_settings.findViewById(R.id.setting_github);
+        ImageView setting_discord = home_settings.findViewById(R.id.setting_discord);
+
+        setting_github.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Vocaloid2048/Honkai-Stargazer"));
+                startActivity(browserIntent);
+            }
+        });
+        setting_discord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://discord.gg/uXatcbWKv2"));
+                startActivity(browserIntent);
+            }
+        });
+
+        setting_app_ico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (trig_time < TRIG_TOUCH && sharedPreferences.getBoolean("isDevModeOn",false) == false){
+                    trig_time += 1;
+                }else{
+                    editor.putBoolean("isDevModeOn",true).apply();
+                    Toast.makeText(context, "Developer Mode on", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 

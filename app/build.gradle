@@ -11,7 +11,7 @@ android {
         minSdk 26
         targetSdk 33
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -30,12 +30,7 @@ android {
             dev{
                 versionCode = code
                 versionNameSuffix "-dev" + " ("+code+")"
-                applicationId "com.voc.honkai_stargazer_gp"
-                bundle{
-                    language {
-                        enableSplit = false;
-                    }
-                }
+                applicationId "com.voc.honkai_stargazer"
             }
             // For Google Play Store
             gp{
@@ -52,6 +47,7 @@ android {
             // For Develop Testing
             beta {
                 versionCode = code
+                versionName = versionCode+"."+code
                 versionNameSuffix "-alpha" + " ("+code+")"
                 applicationId "com.voc.honkai_stargazer_beta"
 
@@ -112,6 +108,7 @@ dependencies {
     implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
 
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
+    implementation 'com.google.android.play:app-update:2.0.1'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
