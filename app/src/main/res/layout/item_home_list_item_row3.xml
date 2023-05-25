@@ -42,6 +42,18 @@
                     android:visibility="invisible"
                     app:srcCompat="@drawable/serval_fade" />
 
+                <TextView
+                    android:id="@+id/item_choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@drawable/bg_rare_1"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="1"
+                    android:textColor="@android:color/holo_red_light"
+                    android:visibility="gone" />
+
                 <ImageView
                     android:id="@+id/item_ico"
                     android:layout_width="match_parent"

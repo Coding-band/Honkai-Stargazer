@@ -331,6 +331,15 @@
                         android:adjustViewBounds="true"
                         app:srcCompat="@drawable/github_mark"
                         app:tint="@color/brand_tint" />
+
+                    <ImageView
+                        android:id="@+id/setting_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_margin="4dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/round_email_24"
+                        app:tint="@color/brand_tint" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -403,6 +412,17 @@
                     android:drawableLeft="@drawable/ic_rare_star"
                     android:drawablePadding="4dp"
                     android:text="https://wiki.biligame.com/sr/首页"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:drawableLeft="@drawable/ic_rare_star"
+                    android:drawablePadding="4dp"
+                    android:text="https://www.prydwen.gg/star-rail"
                     android:textSize="16sp" />
             </LinearLayout>
 

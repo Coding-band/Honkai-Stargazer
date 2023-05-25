@@ -19,6 +19,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -27,6 +28,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 import com.voc.honkai_stargazer.R;
+import com.voc.honkai_stargazer.dev.CharAdviceSuggester;
+import com.voc.honkai_stargazer.ui.DevPage;
 import com.voc.honkai_stargazer.ui.InfoCharacterPage;
 import com.voc.honkai_stargazer.ui.InfoLightconePage;
 import com.voc.honkai_stargazer.util.ItemRSS;
@@ -43,6 +46,9 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
     public static final String THREE_IN_ROW = "THREE_IN_ROW";
     private AdapterView.OnItemClickListener mListener;
     private ArrayList<HSRItem> hsritemList;
+    private ArrayList<HSRItem> hsritemSelectedList;
+    private int maxSizeOfList = -1;
+    private boolean isForSelect = false;
 
     private ItemRSS item_rss ;
     private Context context;
@@ -52,11 +58,12 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
     private String TYPE = ItemRSS.TYPE_CHARACTER;
     private int lastPosition = -1;
 
-    public HSRItemAdapter(Context context, Activity activity, SharedPreferences sharedPreferences, String TYPE) {
+    public HSRItemAdapter(Context context, Activity activity, SharedPreferences sharedPreferences, String TYPE, boolean isForSelect) {
         this.context = context;
         this.activity = activity;
         this.sharedPreferences = sharedPreferences;
         this.TYPE = TYPE;
+        this.isForSelect = isForSelect;
     }
 
     @NonNull
@@ -117,7 +124,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
             holder.item_path_ico.setImageResource(item_rss.getIconByPath(hsrItem.getPath()));
             holder.item_path_tv.setText(hsrItem.getPath());
 
-        }else if (TYPE.equals(ItemRSS.TYPE_RELIC)){
+        }else if (TYPE.equals(ItemRSS.TYPE_RELIC) || TYPE.equals(ItemRSS.TYPE_ORNAMENT)){
             holder.item_relic_ll.setVisibility(View.VISIBLE);
             holder.item_normal_ll.setVisibility(View.GONE);
             holder.item_rare.setVisibility(View.GONE);
@@ -163,7 +170,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
 
         holder.itemView.getLayoutParams().width = (int) ((displayMetrics.widthPixels - 8*displayMetrics.density) / grid);
 
-        if (TYPE.equals(ItemRSS.TYPE_RELIC)) {
+        if (TYPE.equals(ItemRSS.TYPE_RELIC) || TYPE.equals(ItemRSS.TYPE_ORNAMENT)) {
             Picasso.get()
                     .load(item_rss.getRelicByName(hsrItem.getName())[1])
                     .into(holder.item_sub_item1);
@@ -186,10 +193,22 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (TYPE){
-                    case ItemRSS.TYPE_CHARACTER: new InfoCharacterPage().setup(context, activity,hsrItem); return;
-                    case ItemRSS.TYPE_LIGHTCONE: new InfoLightconePage().setup(context,activity, hsrItem);return;
-                    case ItemRSS.TYPE_RELIC: return;
+                if (isForSelect){
+                    if (context instanceof DevPage){
+                        if (!hsritemSelectedList.contains(hsrItem) && hsritemSelectedList.size() + 1 <= maxSizeOfList){
+                            ((DevPage) context).casAddItem(hsrItem,TYPE);
+                        }else if(hsritemSelectedList.size() + 1 > maxSizeOfList){
+                            Toast.makeText(context, "Max is "+String.valueOf(maxSizeOfList)+" !", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(context, "You have chose it !", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }else{
+                    switch (TYPE){
+                        case ItemRSS.TYPE_CHARACTER: new InfoCharacterPage().setup(context, activity,hsrItem); return;
+                        case ItemRSS.TYPE_LIGHTCONE: new InfoLightconePage().setup(context,activity, hsrItem);return;
+                        case ItemRSS.TYPE_RELIC: return;
+                    }
                 }
             }
         });
@@ -259,10 +278,19 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
     public ArrayList<HSRItem> getFilterList(){
         return hsritemList;
     }
+    public ArrayList<HSRItem> getFilterSelectedList(){
+        return hsritemSelectedList;
+    }
 
     public void filterList(ArrayList<HSRItem> filteredList) {
         hsritemList = filteredList;
         notifyDataSetChanged();
+    }
+    public void selectedList(ArrayList<HSRItem> hsritemSelectedList) {
+        this.hsritemSelectedList = hsritemSelectedList;
+    }
+    public void maxSizeOfList(int maxSizeOfList) {
+        this.maxSizeOfList = maxSizeOfList;
     }
 
     public void filterRequestList(ArrayList<HSRItem> preList, FilterPreference preference) {

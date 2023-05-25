@@ -241,6 +241,7 @@ public class InfoCharacterPage {
         intro_path_ico.setImageResource(item_rss.getIconByPath(hsrItem.getPath()));
         intro_element_ico.setImageResource(item_rss.getIconByElement(hsrItem.getElement()));
         intro_path_tv.setText(item_rss.getNameByPath(hsrItem.getPath()));
+        intro_path_tv.getPaint().setFakeBoldText(true);
         intro_element_tv.setText(item_rss.getNameByElement(hsrItem.getElement()));
         intro_rare.setNumStars(hsrItem.getRare());
         intro_rare.setRating(hsrItem.getRare());

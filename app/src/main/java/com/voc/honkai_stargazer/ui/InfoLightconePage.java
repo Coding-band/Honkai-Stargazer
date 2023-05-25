@@ -175,6 +175,7 @@ public class InfoLightconePage {
 
         info_lightcone_path_ico.setImageResource(item_rss.getIconByPath(hsrItem.getPath()));
         info_lightcone_path_tv.setText(item_rss.getNameByPath(hsrItem.getPath()));
+        info_lightcone_path_tv.getPaint().setFakeBoldText(true);
         info_lightcone_lv.setText("01/20");
         info_lightcone_rare.setRating(hsrItem.getRare());
         info_lightcone_rare.setNumStars(hsrItem.getRare());

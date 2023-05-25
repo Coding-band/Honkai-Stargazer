@@ -135,4 +135,11 @@ public class HelpTool {
             }
         }
     }
+
+    /*
+    https://www.prydwen.gg/page-data/star-rail/characters/bailu/page-data.json
+    only need
+    buildData in ./result/data/currentUnit/nodes/[x]/
+    teams in ./result/data/currentUnit/nodes/[x]/
+     */
 }

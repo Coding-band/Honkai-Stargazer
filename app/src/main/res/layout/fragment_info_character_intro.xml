@@ -35,63 +35,18 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@drawable/bg_char_info_card"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:translationZ="3dp">
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
                     android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center|left"
-                        android:text="@string/rarity" />
-
-                    <com.willy.ratingbar.ScaleRatingBar
-                        android:id="@+id/intro_rare"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center|right"
-                        android:gravity="center"
-                        app:srb_clearRatingEnabled="true"
-                        app:srb_clickable="true"
-                        app:srb_drawableEmpty="@drawable/ic_rare_star"
-                        app:srb_drawableFilled="@drawable/ic_rare_star"
-                        app:srb_isIndicator="false"
-                        app:srb_minimumStars="1"
-                        app:srb_numStars="5"
-                        app:srb_rating="5"
-                        app:srb_scrollable="true"
-                        app:srb_starHeight="16dp"
-                        app:srb_starPadding="2dp"
-                        app:srb_starWidth="16dp"
-                        app:srb_stepSize="0.5"></com.willy.ratingbar.ScaleRatingBar>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center|left"
-                        android:text="@string/path" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -100,8 +55,8 @@
 
                         <ImageView
                             android:id="@+id/intro_path_ico"
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:layout_gravity="center"
                             app:srcCompat="@drawable/path_the_nihility"
                             app:tint="@color/ic_daynight_tint" />
@@ -111,9 +66,40 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
-                            android:text="Nihility" />
+                            android:text="Nihility"
+                            android:textSize="18sp" />
                     </LinearLayout>
                 </LinearLayout>
+
+                <com.willy.ratingbar.ScaleRatingBar
+                    android:id="@+id/intro_rare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|right"
+                    android:gravity="center"
+                    app:srb_clearRatingEnabled="true"
+                    app:srb_clickable="true"
+                    app:srb_drawableEmpty="@drawable/ic_rare_star"
+                    app:srb_drawableFilled="@drawable/ic_rare_star"
+                    app:srb_isIndicator="false"
+                    app:srb_minimumStars="1"
+                    app:srb_numStars="5"
+                    app:srb_rating="5"
+                    app:srb_scrollable="true"
+                    app:srb_starHeight="16dp"
+                    app:srb_starPadding="2dp"
+                    app:srb_starWidth="16dp"
+                    app:srb_stepSize="0.5"></com.willy.ratingbar.ScaleRatingBar>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_char_info_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:translationZ="3dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"

@@ -4,397 +4,441 @@
  * Copyright © 2023 Xectorda 版權所有
  */
 
-package com.voc.honkai_stargazer.ui;
+package com.voc.honkai_stargazer.dev;
 
-import static com.voc.honkai_stargazer.ui.DevPage.TRIG_TOUCH;
+import static android.content.Context.MODE_PRIVATE;
+
 import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
-import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.android.material.chip.Chip;
-import com.google.android.material.chip.ChipGroup;
-import com.google.android.material.navigation.NavigationBarView;
-import com.voc.honkai_stargazer.BuildConfig;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.gson.Gson;
+import com.squareup.picasso.Picasso;
 import com.voc.honkai_stargazer.R;
 import com.voc.honkai_stargazer.data.FilterPreference;
 import com.voc.honkai_stargazer.data.HSRItem;
 import com.voc.honkai_stargazer.data.HSRItemAdapter;
-import com.voc.honkai_stargazer.util.BillingHelper;
-import com.voc.honkai_stargazer.util.CustomViewPager;
-import com.voc.honkai_stargazer.util.CustomViewPagerAdapter;
+import com.voc.honkai_stargazer.util.IconArrayAdapter;
 import com.voc.honkai_stargazer.util.ItemRSS;
-import com.voc.honkai_stargazer.util.LangUtil;
 import com.voc.honkai_stargazer.util.MyItemAnimator;
-import com.voc.honkai_stargazer.util.ThemeUtil;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
-public class HomePage extends AppCompatActivity {
+public class CharAdviceSuggester {
 
-    CustomViewPager viewPager;
-    private ArrayList<View> viewPager_List;
-    View home_characters, home_lightcones, home_relics, home_settings;
-    BottomNavigationView home_nav;
-
-    RecyclerView charactersListView ;
-    RecyclerView lightconesListView ;
-    RecyclerView relicsListView ;
-
-    ArrayList<HSRItem> charactersList = new ArrayList<>();
-    ArrayList<HSRItem> lightconesList = new ArrayList<>();
-    ArrayList<HSRItem> relicsList = new ArrayList<>();
-
-    HSRItemAdapter charactersAdapter ;
-    HSRItemAdapter lightconesAdapter ;
-    HSRItemAdapter relicsAdapter ;
+    public static final String CAS_RELIC = "RELIC";
+    public static final String CAS_PLANETARY = "ORNAMENTS";
+    final int LIGHTCON_SIZE = 10;
+    final int RELIC_SIZE = 5;
+    final int PLANETARY_SIZE = 5;
+    Context context;
+    Activity activity;
 
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
-    Context context;
-    Activity activity;
+    Dialog dialog;
+    Dialog dialogX;
+    View rootView;
+    ItemRSS item_rss;
+    RecyclerView lightconesListView ;
 
-    //Character, Lightcone, Relic
+    ArrayList<HSRItem> charactersList = new ArrayList<>();
+    ArrayList<HSRItem> lightconesList = new ArrayList<>();
+    ArrayList<HSRItem> lightconesListBase = new ArrayList<>();
+    ArrayList<HSRItem> relicsList = new ArrayList<>();
+    ArrayList<HSRItem> planetaryList = new ArrayList<>();
+    ArrayList<HSRItem> selectedLightCones = new ArrayList<>();
+    ArrayList<HSRItem> selectedRelics = new ArrayList<>();
+    ArrayList<HSRItem> selectedPlanetarys = new ArrayList<>();
+
+    LinearLayout lightcone_ll, relic_ll, planetary_ll;
+    DisplayMetrics displayMetrics;
+    HSRItemAdapter adapter;
+
+    FloatingActionButton lightcone_float, relic_float, planetary_float = null;
+
     FilterPreference[] filterPreferences = new FilterPreference[]{new FilterPreference(),new FilterPreference(),new FilterPreference()};
 
-    BillingHelper billingHelper;
-    int trig_time = 0;
+    String charName = "N/A";
+    String charTag = "N/A";
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        context = this;
-        activity = this;
+    String[] tagList = new String[]{"DPS","Support","Healer","Utility","Shielder","Debuffer","Tanker"};
+
+    public void init(Context context, Activity activity){
+        this.context = context;
+        this.activity = activity;
         sharedPreferences = context.getSharedPreferences("user_info",MODE_PRIVATE);
         editor = sharedPreferences.edit();
-        if (sharedPreferences.getString("dayNight",ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM).equals(ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM)) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
-        } else if(sharedPreferences.getString("dayNight","FOLLOW_SYSTEM").equals(ThemeUtil.DAYNIGHT_NIGHT)){
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        }else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        item_rss = new ItemRSS();
+
+        dialog = new Dialog(context, R.style.PageDialogStyle_P);
+        rootView = View.inflate(context, R.layout.fragment_char_advice_suggest, null);
+        dialog.setContentView(rootView);
+        dialog.setCanceledOnTouchOutside(true);
+        //view.setMinimumHeight((int) (ScreenSizeUtils.getInstance(this).getScreenHeight()));
+        Window dialogWindow = dialog.getWindow();
+        WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+
+        displayMetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.gravity = Gravity.CENTER;
+        dialogWindow.setAttributes(lp);
+
+        char_list_reload();
+        lightcone_list_reload();
+        relic_list_reload();
+
+        root_init();
+
+        if (!dialog.isShowing()){
+            dialog.show();
         }
-        setContentView(R.layout.activity_home_page);
-
-        ItemRSS.initLang(context);
-
-        root_init(false);
-        character_init();
-        lightcone_init();
-        relic_init();
-        setting_init();
-
-
     }
 
-    public void root_init(boolean isSetting){
-        final LayoutInflater mInflater = getLayoutInflater().from(this);
-        home_characters = mInflater.inflate(R.layout.fragment_home_characters, null,false);
-        home_lightcones = mInflater.inflate(R.layout.fragment_home_lightcones, null,false);
-        home_relics = mInflater.inflate(R.layout.fragment_home_relics, null,false);
-        home_settings = mInflater.inflate(R.layout.fragment_home_settings, null,false);
+    public void root_init(){
+        IconArrayAdapter char_aa = new IconArrayAdapter(context,charactersList);
+        char_aa.setDropDownViewResource(R.layout.icon_spinner_dropdown_item);
+        Spinner char_spinner = rootView.findViewById(R.id.char_spinner);
+        char_spinner.setAdapter(char_aa);
+        char_spinner.setSelection(0);
 
-        viewPager_List = new ArrayList<View>();
-        viewPager_List.add(home_characters);
-        viewPager_List.add(home_lightcones);
-        viewPager_List.add(home_relics);
-        viewPager_List.add(home_settings);
+        lightcone_ll = rootView.findViewById(R.id.lightcone_ll);
+        relic_ll = rootView.findViewById(R.id.relic_ll);
+        planetary_ll = rootView.findViewById(R.id.planetary_ll);
 
-        viewPager = findViewById(R.id.home_vp);
-        viewPager.setAdapter(new CustomViewPagerAdapter(viewPager_List));
-
-        home_nav = findViewById(R.id.home_nav);
-
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        char_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                int[] posList = new int[]{R.id.menu_characters, R.id.menu_lightcones, R.id.menu_relics, R.id.menu_settings};
-                home_nav.setSelectedItemId(posList[position]);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-        home_nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.menu_characters:{
-                        viewPager.setCurrentItem(0);
-                        return true;
-                    }
-                    case R.id.menu_lightcones: {
-                        viewPager.setCurrentItem(1);
-                        return true;
-                    }
-                    case R.id.menu_relics:{
-                        viewPager.setCurrentItem(2);
-                        return true;
-                    }
-                    case R.id.menu_settings:{
-                        viewPager.setCurrentItem(3);
-                        return true;
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                charName = charactersList.get(position).getName();
+                ArrayList<HSRItem> availableLightCones = new ArrayList<>();
+                for (HSRItem hsrItem : lightconesListBase){
+                    if (hsrItem.getPath().equals(charactersList.get(position).getPath())){
+                        availableLightCones.add(hsrItem);
                     }
                 }
-                return false;
+                lightconesList = availableLightCones;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
 
-        if (isSetting){
-            viewPager.setCurrentItem(3);
-        }
+
+        ArrayAdapter tag_aa = new ArrayAdapter(context,R.layout.spinner_item,tagList);
+        tag_aa.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        Spinner tag_spinner = rootView.findViewById(R.id.tag_spinner);
+        tag_spinner.setAdapter(tag_aa);
+        tag_spinner.setSelection(0);
+
+        lightcone_ll = rootView.findViewById(R.id.lightcone_ll);
+        relic_ll = rootView.findViewById(R.id.relic_ll);
+        planetary_ll = rootView.findViewById(R.id.planetary_ll);
+
+        tag_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                charTag = tagList[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        lightcone_ll_refresh();
+        relic_ll_refresh();
+        planetary_ll_refresh();
+
+        Button save = rootView.findViewById(R.id.save);
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    saveJSON();
+                } catch (IOException | JSONException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
     }
 
-    public void character_init(){
-        charactersListView = home_characters.findViewById(R.id.charactersListView);
-        int grid = 1;
-        switch (sharedPreferences.getString("grid_"+ItemRSS.TYPE_CHARACTER,HSRItemAdapter.DEFAULT)){
+    private void saveJSON() throws IOException, JSONException {
+        //Arrays To JSON -> "advice"
+        String itemInAdvice = "{";
+
+        //Add Lightcones
+        itemInAdvice = itemInAdvice + "\n  \"lightcones\" : [";
+        for (int x =  0; x < selectedLightCones.size() ; x++){
+            itemInAdvice = itemInAdvice + "\""+selectedLightCones.get(x).getName()+"\"";
+            if (x + 1 < selectedLightCones.size()){
+                itemInAdvice = itemInAdvice + ",\n";
+            }
+        }
+        itemInAdvice = itemInAdvice + "\n],";
+
+        //Add Relic
+        itemInAdvice = itemInAdvice + "\n  \"relics\" : [";
+        for (int x =  0; x < selectedRelics.size() ; x++){
+            itemInAdvice = itemInAdvice + "\""+selectedRelics.get(x).getName()+"\"";
+            if (x + 1 < selectedRelics.size()){
+                itemInAdvice = itemInAdvice + ",\n";
+            }
+        }
+        itemInAdvice = itemInAdvice + "\n],";
+
+        //Add Planetary
+        itemInAdvice = itemInAdvice + "\n  \"planetarys" +
+                "\" : [";
+        for (int x =  0; x < selectedPlanetarys.size() ; x++){
+            itemInAdvice = itemInAdvice + "\""+selectedPlanetarys.get(x).getName()+"\"";
+            if (x + 1 < selectedPlanetarys.size()){
+                itemInAdvice = itemInAdvice + ",\n";
+            }
+        }
+        itemInAdvice = itemInAdvice + "\n],";
+
+        //Add Tag
+        itemInAdvice = itemInAdvice + "\n\"tag\":\""+ charTag+"\"";
+
+        itemInAdvice = itemInAdvice + "}";
+
+        // Save To .JSON
+        File folder = new File(context.getFilesDir() + "/suggestions/");
+        File file = new File(context.getFilesDir() + "/suggestions/"+charName.toLowerCase()+".json");
+
+
+        if (!folder.exists()){
+            folder.mkdir();
+        }
+        if (!file.exists()){
+            file.createNewFile();
+        }else{
+
+        }
+
+
+    }
+    private void lightcone_ll_refresh() {
+        if (lightcone_float == null){
+            lightcone_float = rootView.findViewById(R.id.lightcone_float);
+            lightcone_float.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listDialog(ItemRSS.TYPE_LIGHTCONE, lightconesList, selectedLightCones, LIGHTCON_SIZE);
+                }
+            });
+        }
+        lightcone_ll.removeAllViews();
+        for (int x = 0 ; x < selectedLightCones.size() ; x++){
+            View item_view = LayoutInflater.from(context).inflate(R.layout.item_char_advice_suggest_ll_item, lightcone_ll, false);
+            ImageView item_img  = item_view.findViewById(R.id.item_img);
+            ImageView item_delete = item_view.findViewById(R.id.item_delete);
+            TextView item_choice = item_view.findViewById(R.id.item_choice);
+            Picasso.get()
+                    .load(item_rss.getLightconeByName(selectedLightCones.get(x).getName())[0])
+                    .fit()
+                    .into(item_img);
+            item_choice.setText(String.valueOf(x+1));
+            int finalX = x;
+            item_delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    lightcone_ll.removeView(item_view);
+                    selectedLightCones.remove(finalX);
+                    lightcone_ll_refresh();
+                }
+            });
+            lightcone_ll.addView(item_view);
+        }
+        lightcone_ll.addView(lightcone_float);
+    }
+    private void relic_ll_refresh() {
+        if (relic_float == null){
+            relic_float = rootView.findViewById(R.id.relic_float);
+            relic_float.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listDialog(ItemRSS.TYPE_RELIC, relicsList, selectedRelics, RELIC_SIZE);
+                }
+            });
+        }
+        relic_ll.removeAllViews();
+        for (int x = 0 ; x < selectedRelics.size() ; x++){
+            View item_view = LayoutInflater.from(context).inflate(R.layout.item_char_advice_suggest_ll_item, relic_ll, false);
+            ImageView item_img  = item_view.findViewById(R.id.item_img);
+            ImageView item_delete = item_view.findViewById(R.id.item_delete);
+            TextView item_choice = item_view.findViewById(R.id.item_choice);
+            Picasso.get()
+                    .load(item_rss.getRelicByName(selectedRelics.get(x).getName())[0])
+                    .fit()
+                    .into(item_img);
+            item_choice.setText(String.valueOf(x+1));
+            int finalX = x;
+            item_delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    relic_ll.removeView(item_view);
+                    selectedRelics.remove(finalX);
+                    relic_ll_refresh();
+                }
+            });
+            relic_ll.addView(item_view);
+        }
+        relic_ll.addView(relic_float);
+    }
+    private void planetary_ll_refresh() {
+        if (planetary_float == null){
+            planetary_float = rootView.findViewById(R.id.planetary_float);
+            planetary_float.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listDialog(ItemRSS.TYPE_ORNAMENT, planetaryList, selectedPlanetarys, PLANETARY_SIZE);
+                }
+            });
+        }
+        planetary_ll.removeAllViews();
+        for (int x = 0 ; x < selectedPlanetarys.size() ; x++){
+            View item_view = LayoutInflater.from(context).inflate(R.layout.item_char_advice_suggest_ll_item, planetary_ll, false);
+            ImageView item_img  = item_view.findViewById(R.id.item_img);
+            ImageView item_delete = item_view.findViewById(R.id.item_delete);
+            TextView item_choice = item_view.findViewById(R.id.item_choice);
+            Picasso.get()
+                    .load(item_rss.getRelicByName(selectedPlanetarys.get(x).getName())[0])
+                    .fit()
+                    .into(item_img);
+            item_choice.setText(String.valueOf(x+1));
+            int finalX = x;
+            item_delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    planetary_ll.removeView(item_view);
+                    selectedPlanetarys.remove(finalX);
+                    planetary_ll_refresh();
+                }
+            });
+            planetary_ll.addView(item_view);
+        }
+        planetary_ll.addView(planetary_float);
+    }
+
+    private void listDialog(String TYPE, ArrayList<HSRItem> hsrItems, ArrayList<HSRItem> selectedHsrItems, int maxSizeOfList){
+        dialogX = new Dialog(context, R.style.PageDialogStyle_P);
+        View view = View.inflate(context, R.layout.fragment_home_characters, null);
+
+        dialogX.setContentView(view);
+        dialogX.setCanceledOnTouchOutside(true);
+        //view.setMinimumHeight((int) (ScreenSizeUtils.getInstance(this).getScreenHeight()));
+        Window dialogWindow = dialogX.getWindow();
+        WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.gravity = Gravity.CENTER;
+        dialogWindow.setAttributes(lp);
+
+        if (!dialogX.isShowing()){
+            dialogX.show();
+        }
+
+        RecyclerView charactersListView = view.findViewById(R.id.charactersListView);
+        int grid = 3;
+        switch (sharedPreferences.getString("grid_"+TYPE,HSRItemAdapter.DEFAULT)){
             default:
             case HSRItemAdapter.ONE_IN_ROW: grid = 1; break;
             case HSRItemAdapter.THREE_IN_ROW: grid = 3; break;
         }
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(context,grid );
 
-        charactersAdapter = new HSRItemAdapter(context,activity,sharedPreferences, ItemRSS.TYPE_CHARACTER,false);
+        adapter = new HSRItemAdapter(context,activity,sharedPreferences, TYPE,true);
         charactersListView.setLayoutManager(mLayoutManager);
         charactersListView.setItemAnimator(new MyItemAnimator());
-        charactersListView.setAdapter(charactersAdapter);
+        charactersListView.setAdapter(adapter);
         charactersListView.removeAllViewsInLayout();
-        char_list_reload();
+        adapter.filterList(hsrItems);
+        adapter.selectedList(selectedHsrItems);
+        adapter.maxSizeOfList(maxSizeOfList);
 
-        ImageButton characterFilter = home_characters.findViewById(R.id.characterFilter);
-        EditText characterSearchEt = home_characters.findViewById(R.id.characterSearchEt);
+        ImageButton characterFilter = view.findViewById(R.id.characterFilter);
+        EditText characterSearchEt = view.findViewById(R.id.characterSearchEt);
         characterFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                filterHandler(ItemRSS.TYPE_CHARACTER);
+                filterHandler(TYPE);
             }
         });
 
-        ImageButton characterLayout = home_characters.findViewById(R.id.characterLayout);
+        ImageButton characterLayout = view.findViewById(R.id.characterLayout);
         characterLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeListGrid(characterLayout,ItemRSS.TYPE_CHARACTER, charactersListView, charactersAdapter,charactersAdapter.getFilterList());
+                changeListGrid(characterLayout,TYPE, charactersListView, adapter,adapter.getFilterList());
             }
         });
-        characterSearchEt.addTextChangedListener(searchBarHandler(ItemRSS.TYPE_CHARACTER, characterSearchEt));
+        characterSearchEt.addTextChangedListener(searchBarHandler(TYPE, characterSearchEt));
     }
 
-    public void lightcone_init(){
-        lightconesListView = home_lightcones.findViewById(R.id.lightconesListView);
-        int grid = 1;
-        switch (sharedPreferences.getString("grid_"+ItemRSS.TYPE_LIGHTCONE,HSRItemAdapter.DEFAULT)){
-            default:
-            case HSRItemAdapter.ONE_IN_ROW: grid = 1; break;
-            case HSRItemAdapter.THREE_IN_ROW: grid = 3; break;
+    public void portAddItem(HSRItem hsrItem, String type) {
+        if (dialogX != null && dialogX.isShowing()){
+            dialogX.dismiss();
         }
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(context,grid );
-
-        lightconesAdapter = new HSRItemAdapter(context,activity,sharedPreferences, ItemRSS.TYPE_LIGHTCONE,false);
-        lightconesListView.setLayoutManager(mLayoutManager);
-        lightconesListView.setItemAnimator(new MyItemAnimator());
-        lightconesListView.setAdapter(lightconesAdapter);
-        lightconesListView.removeAllViewsInLayout();
-
-        lightcone_list_reload();
-
-        ImageButton lightconeFilter = home_lightcones.findViewById(R.id.lightconeFilter);
-        EditText lightconeSearchEt = home_lightcones.findViewById(R.id.lightconeSearchEt);
-        lightconeFilter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                filterHandler(ItemRSS.TYPE_LIGHTCONE);
+        switch (type){
+            case ItemRSS.TYPE_LIGHTCONE: {
+                selectedLightCones.add(hsrItem);
+                lightcone_ll_refresh();
+                break;
             }
-        });
-        lightconeSearchEt.addTextChangedListener(searchBarHandler(ItemRSS.TYPE_LIGHTCONE, lightconeSearchEt));
-
-        ImageButton lightconeLayout = home_lightcones.findViewById(R.id.lightconeLayout);
-        lightconeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                changeListGrid(lightconeLayout,ItemRSS.TYPE_LIGHTCONE, lightconesListView,lightconesAdapter,lightconesAdapter.getFilterList());
+            case ItemRSS.TYPE_RELIC: {
+                selectedRelics.add(hsrItem);
+                relic_ll_refresh();
+                break;
             }
-        });
-    }
-    public void relic_init(){
-        relicsListView = home_relics.findViewById(R.id.relicsListView);
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(context, 1);
-
-        relicsAdapter = new HSRItemAdapter(context,activity,sharedPreferences, ItemRSS.TYPE_RELIC,false);
-        relicsListView.setLayoutManager(mLayoutManager);
-        relicsListView.setItemAnimator(new MyItemAnimator());
-        relicsListView.setAdapter(relicsAdapter);
-        relicsListView.removeAllViewsInLayout();
-        relic_list_reload();
-
-        ImageButton relicFilter = home_relics.findViewById(R.id.relicFilter);
-        EditText relicSearchEt = home_relics.findViewById(R.id.relicSearchEt);
-        relicFilter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                filterHandler(ItemRSS.TYPE_RELIC);
+            case ItemRSS.TYPE_ORNAMENT: {
+                selectedPlanetarys.add(hsrItem);
+                planetary_ll_refresh();
+                break;
             }
-        });
-        relicSearchEt.addTextChangedListener(searchBarHandler(ItemRSS.TYPE_RELIC, relicSearchEt));
+        }
     }
 
-
-    public void setting_init() {
-        //Language
-        ChipGroup setting_lang = home_settings.findViewById(R.id.setting_lang);
-        Chip setting_lang_en = home_settings.findViewById(R.id.setting_lang_en);
-        Chip setting_lang_zh_hk = home_settings.findViewById(R.id.setting_lang_zh_hk);
-        Chip setting_lang_zh_cn = home_settings.findViewById(R.id.setting_lang_zh_cn);
-        Chip setting_lang_fr = home_settings.findViewById(R.id.setting_lang_fr);
-        Chip setting_lang_jp = home_settings.findViewById(R.id.setting_lang_jp);
-        Chip setting_lang_ru = home_settings.findViewById(R.id.setting_lang_ru);
-        Chip setting_lang_ua = home_settings.findViewById(R.id.setting_lang_ua);
-
-        switch (sharedPreferences.getString("curr_lang","")){
-            case ItemRSS.LANG_ZH_HK: setting_lang_zh_hk.setChecked(true);break;
-            case ItemRSS.LANG_ZH_CN: setting_lang_zh_cn.setChecked(true);break;
-            case ItemRSS.LANG_FR: setting_lang_fr.setChecked(true);break;
-            case ItemRSS.LANG_JA_JP: setting_lang_jp.setChecked(true);break;
-            case ItemRSS.LANG_RU: setting_lang_ru.setChecked(true);break;
-            case ItemRSS.LANG_UA: setting_lang_ua.setChecked(true);break;
-            default:
-            case ItemRSS.LANG_EN: setting_lang_en.setChecked(true);break;
-        }
-        setting_lang.setOnCheckedStateChangeListener(new ChipGroup.OnCheckedStateChangeListener() {
-            @Override
-            public void onCheckedChanged(@NonNull ChipGroup group, @NonNull List<Integer> checkedIds) {
-                int id = group.getCheckedChipId();
-                switch (id){
-                    case R.id.setting_lang_zh_hk: LangUtil.getAttachBaseContext(context, LangUtil.LangType.ZH_HK);recreate();break;
-                    case R.id.setting_lang_zh_cn: LangUtil.getAttachBaseContext(context, LangUtil.LangType.ZH_CN);recreate();break;
-                    case R.id.setting_lang_fr: LangUtil.getAttachBaseContext(context, LangUtil.LangType.FR);recreate();break;
-                    case R.id.setting_lang_jp: LangUtil.getAttachBaseContext(context, LangUtil.LangType.JP);recreate();break;
-                    case R.id.setting_lang_ru: LangUtil.getAttachBaseContext(context, LangUtil.LangType.RU);recreate();break;
-                    case R.id.setting_lang_ua: LangUtil.getAttachBaseContext(context, LangUtil.LangType.UA);recreate();break;
-                    default:
-                    case R.id.setting_lang_en: LangUtil.getAttachBaseContext(context, LangUtil.LangType.EN);recreate();break;
-                }
-            }
-        });
-
-
-        //DayNight
-        RadioGroup setting_daynight = home_settings.findViewById(R.id.setting_daynight);
-        RadioButton setting_daynight_light = home_settings.findViewById(R.id.setting_daynight_light);
-        RadioButton setting_daynight_dark = home_settings.findViewById(R.id.setting_daynight_dark);
-        RadioButton setting_daynight_system = home_settings.findViewById(R.id.setting_daynight_system);
-
-        switch (sharedPreferences.getString("dayNight",ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM)){
-            case ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM: setting_daynight_system.setChecked(true);break;
-            case ThemeUtil.DAYNIGHT_DAY: setting_daynight_light.setChecked(true);break;
-            case ThemeUtil.DAYNIGHT_NIGHT: setting_daynight_dark.setChecked(true);break;
-        }
-        setting_daynight.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int id = group.getCheckedRadioButtonId();
-                switch (id){
-                    case R.id.setting_daynight_light : AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); editor.putString("dayNight",ThemeUtil.DAYNIGHT_DAY).apply(); recreate();break;
-                    case R.id.setting_daynight_dark : AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES); editor.putString("dayNight",ThemeUtil.DAYNIGHT_NIGHT).apply(); recreate();break;
-                    case R.id.setting_daynight_system : AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM); editor.putString("dayNight",ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM).apply();recreate(); break;
-                }
-            }
-        });
-
-        Chip setting_donate_1 = home_settings.findViewById(R.id.setting_donate_1);
-        Chip setting_donate_2 = home_settings.findViewById(R.id.setting_donate_2);
-        Chip setting_donate_3 = home_settings.findViewById(R.id.setting_donate_3);
-        Chip setting_donate_4 = home_settings.findViewById(R.id.setting_donate_4);
-
-        if (billingHelper != null){
-            billingHelper.close();
-        }
-        billingHelper = new BillingHelper(context, activity,new Chip[]{setting_donate_1,setting_donate_2,setting_donate_3,setting_donate_4});
-
-        //Version Name
-        TextView setting_version = home_settings.findViewById(R.id.setting_version);
-        setting_version.setText(BuildConfig.VERSION_NAME);
-
-        //Links-Github-Discord
-        ImageView setting_app_ico = home_settings.findViewById(R.id.setting_app_ico);
-        ImageView setting_github = home_settings.findViewById(R.id.setting_github);
-        ImageView setting_discord = home_settings.findViewById(R.id.setting_discord);
-
-        setting_github.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Vocaloid2048/Honkai-Stargazer"));
-                startActivity(browserIntent);
-            }
-        });
-        setting_discord.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://discord.gg/uXatcbWKv2"));
-                startActivity(browserIntent);
-            }
-        });
-
-        setting_app_ico.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (trig_time < TRIG_TOUCH && sharedPreferences.getBoolean("isDevModeOn",false) == false){
-                    trig_time += 1;
-                }else if(sharedPreferences.getBoolean("isDevModeOn",false) == false){
-                    editor.putBoolean("isDevModeOn",true).apply();
-                    Toast.makeText(context, "Developer Mode on", Toast.LENGTH_SHORT).show();
-                }else{
-                    startActivity(new Intent(activity, DevPage.class));
-                }
-            }
-        });
-
-    }
-
+    //IMPORTANT
     private void char_list_reload() {
         String name ,element,path,sex,status,fileName;
         int rare;
@@ -425,7 +469,6 @@ public class HomePage extends AppCompatActivity {
 
                 charactersList.add(hsrItem);
             }
-            charactersAdapter.filterList(charactersList);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -454,9 +497,8 @@ public class HomePage extends AppCompatActivity {
                 hsrItem.setStatus(status);
                 hsrItem.setFileName(fileName);
 
-                lightconesList.add(hsrItem);
+                lightconesListBase.add(hsrItem);
             }
-            lightconesAdapter.filterList(lightconesList);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -483,14 +525,16 @@ public class HomePage extends AppCompatActivity {
                 hsrItem.setStatus(status);
                 hsrItem.setFileName(fileName);
 
-                relicsList.add(hsrItem);
+                if (type.equals(CAS_RELIC)){
+                    relicsList.add(hsrItem);
+                }else{
+                    planetaryList.add(hsrItem);
+                }
             }
-            relicsAdapter.filterList(relicsList);
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
-
     private TextWatcher searchBarHandler(String TYPE, EditText editText){
         return new TextWatcher() {
             @Override
@@ -505,23 +549,19 @@ public class HomePage extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                HSRItemAdapter adapter = charactersAdapter;
-                ArrayList<HSRItem> list = charactersList;
+                ArrayList<HSRItem> list = planetaryList;
                 ItemRSS item_rss = new ItemRSS();
 
                 switch (TYPE){
-                    case ItemRSS.TYPE_CHARACTER:{
-                        adapter = charactersAdapter;
-                        list = charactersList;
+                    case ItemRSS.TYPE_ORNAMENT:{
+                        list = planetaryList;
                         break;
                     }
                     case ItemRSS.TYPE_LIGHTCONE:{
-                        adapter = lightconesAdapter;
                         list = lightconesList;
                         break;
                     }
                     case ItemRSS.TYPE_RELIC:{
-                        adapter = relicsAdapter;
                         list = relicsList;
                         break;
                     }
@@ -549,7 +589,6 @@ public class HomePage extends AppCompatActivity {
             }
         };
     }
-
     private void filterHandler(String TYPE){
         final Dialog dialog = new Dialog(context, R.style.FilterDialogStyle_F);
         View view = View.inflate(context, R.layout.fragment_home_filter, null);
@@ -600,17 +639,17 @@ public class HomePage extends AppCompatActivity {
         Button filter_apply = view.findViewById(R.id.filter_apply);
 
         switch (TYPE){
-            case ItemRSS.TYPE_CHARACTER: {filter_rare_1.setVisibility(View.GONE); filter_rare_2.setVisibility(View.GONE); filter_rare_3.setVisibility(View.GONE); filterPreference[0] = filterPreferences[0]; break;}
             case ItemRSS.TYPE_LIGHTCONE: {filter_rare_1.setVisibility(View.GONE); filter_rare_2.setVisibility(View.GONE); filter_element_ll.setVisibility(View.GONE);  filterPreference[0] = filterPreferences[1]; break;}
+            case ItemRSS.TYPE_ORNAMENT:
             case ItemRSS.TYPE_RELIC: {filter_element_ll.setVisibility(View.GONE); filter_path_ll.setVisibility(View.GONE);  filterPreference[0] = filterPreferences[2]; break;}
         }
         filter_apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 switch (TYPE){
-                    case ItemRSS.TYPE_CHARACTER: {filterPreference[0].setType(ItemRSS.TYPE_CHARACTER); filterPreferences[0] = filterPreference[0]; charactersAdapter.filterRequestList(charactersList,filterPreference[0]); break;}
-                    case ItemRSS.TYPE_LIGHTCONE: {filterPreference[0].setType(ItemRSS.TYPE_LIGHTCONE);filterPreferences[1] = filterPreference[0]; lightconesAdapter.filterRequestList(lightconesList,filterPreference[0]);break;}
-                    case ItemRSS.TYPE_RELIC: {filterPreference[0].setType(ItemRSS.TYPE_RELIC);filterPreferences[2] = filterPreference[0]; relicsAdapter.filterRequestList(relicsList,filterPreference[0]);break;}
+                    case ItemRSS.TYPE_LIGHTCONE: {filterPreference[0].setType(ItemRSS.TYPE_LIGHTCONE);filterPreferences[1] = filterPreference[0]; adapter.filterRequestList(lightconesList,filterPreference[0]);break;}
+                    case ItemRSS.TYPE_ORNAMENT:
+                    case ItemRSS.TYPE_RELIC: {filterPreference[0].setType(ItemRSS.TYPE_RELIC);filterPreferences[2] = filterPreference[0]; adapter.filterRequestList(relicsList,filterPreference[0]);break;}
                 }
                 dialog.dismiss();
             }
@@ -667,7 +706,6 @@ public class HomePage extends AppCompatActivity {
         filter_nihility.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setNihility(!filterPreference[0].isNihility());if(!filterPreference[0].isNihility()){filter_nihility.setAlpha(0.4f);}else{filter_nihility.setAlpha(1.0f);}}});
         filter_preservation.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setPreservation(!filterPreference[0].isPreservation());if(!filterPreference[0].isPreservation()){filter_preservation.setAlpha(0.4f);}else{filter_preservation.setAlpha(1.0f);}}});
 
-
         filter_rare_1.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setRare1(!filterPreference[0].isRare1());}});
         filter_rare_2.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setRare2(!filterPreference[0].isRare2());}});
         filter_rare_3.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {filterPreference[0].setRare3(!filterPreference[0].isRare3());}});
@@ -683,7 +721,6 @@ public class HomePage extends AppCompatActivity {
             dialog.show();
         }
     }
-
 
     private void changeListGrid(ImageButton button, String TYPE, RecyclerView recyclerView, HSRItemAdapter adapter, ArrayList<HSRItem> arrayList){
         String status = sharedPreferences.getString("grid_"+TYPE,HSRItemAdapter.DEFAULT);
@@ -708,18 +745,5 @@ public class HomePage extends AppCompatActivity {
                 break;
             }
         }
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        SharedPreferences sharedPreferences = newBase.getSharedPreferences("user_info",MODE_PRIVATE);
-        super.attachBaseContext(LangUtil.getAttachBaseContext(newBase, LangUtil.getLangTypeByCode(sharedPreferences.getString("curr_lang",""))));
-    }
-
-    @Override
-    public void recreate() {
-        billingHelper.close();
-        super.recreate();
-        root_init(true);
     }
 }

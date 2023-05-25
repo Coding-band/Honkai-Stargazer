@@ -68,7 +68,7 @@ public class ItemRSS {
     public static final String TYPE_CHARACTER = "Character";
     public static final String TYPE_LIGHTCONE = "Lightcone";
     public static final String TYPE_RELIC = "Relic";
-    //public static final String TYPE_ORNAMENT = "Ornament";
+    public static final String TYPE_ORNAMENT = "Ornament";
 
     public static final int MATERIAL_CHARACTER_EXP_MATERIAL = 1;
     public static final int MATERIAL_CHARACTER_ASCENSION_MATERIALS = 2;
