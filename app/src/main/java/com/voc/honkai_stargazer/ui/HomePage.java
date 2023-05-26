@@ -8,10 +8,13 @@ package com.voc.honkai_stargazer.ui;
 
 import static com.voc.honkai_stargazer.ui.DevPage.TRIG_TOUCH;
 import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
+import static com.voc.honkai_stargazer.util.ItemRSS.LoadData;
+import static com.voc.honkai_stargazer.util.ItemRSS.LoadExtendData;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -25,6 +28,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -55,6 +59,7 @@ import com.voc.honkai_stargazer.util.CustomViewPager;
 import com.voc.honkai_stargazer.util.CustomViewPagerAdapter;
 import com.voc.honkai_stargazer.util.ItemRSS;
 import com.voc.honkai_stargazer.util.LangUtil;
+import com.voc.honkai_stargazer.util.LogExport;
 import com.voc.honkai_stargazer.util.MyItemAnimator;
 import com.voc.honkai_stargazer.util.ThemeUtil;
 
@@ -62,6 +67,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -96,6 +106,8 @@ public class HomePage extends AppCompatActivity {
     BillingHelper billingHelper;
     int trig_time = 0;
 
+    public static final String TAG = "HomePage";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,6 +125,62 @@ public class HomePage extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         ItemRSS.initLang(context);
+        LogExport.init(context);
+
+        if (!sharedPreferences.getString("last_bug_report","NONE").equals("NONE")){
+            String reportName = sharedPreferences.getString("last_bug_report","NONE");
+            final Dialog dialog = new Dialog(context, R.style.NormalDialogStyle_N);
+            View view = View.inflate(context, R.layout.fragment_dialog_bug, null);
+            dialog.setContentView(view);
+            dialog.setCanceledOnTouchOutside(true);
+            Window dialogWindow = dialog.getWindow();
+            WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+
+            lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+            lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+            lp.gravity = Gravity.CENTER;
+            dialogWindow.setAttributes(lp);
+
+            String bugReport = LoadExtendData(context, "honkai_stargazer/bugLog/" + reportName);
+            TextView bug_log = view.findViewById(R.id.bug_log);
+            bug_log.setText((bugReport.equals("") ? "Empty" : bugReport));
+            editor.putString("last_bug_report","NONE").apply();
+
+            Button cancel = view.findViewById(R.id.bug_cancel);
+            cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (dialog.isShowing() && dialog != null){
+                        dialog.dismiss();
+                    }
+                }
+            });
+
+            Button email = view.findViewById(R.id.bug_email);
+            email.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (dialog.isShowing() && dialog != null){
+                        dialog.dismiss();
+                    }
+                    Uri path = FileProvider.getUriForFile(activity, ItemRSS.APPLICATION_ID_PROVIDER,new File(context.getExternalMediaDirs()[0]+"/"+"honkai_stargazer/bugLog/" +reportName));
+                    Intent i = new Intent(Intent.ACTION_SEND);
+                    i.setType("message/rfc822");
+                    i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"xectorda@gmail.com"});
+                    i.putExtra(Intent.EXTRA_SUBJECT, "[Honkai Stargazer - BUG REPORT]");
+                    i.putExtra(Intent.EXTRA_TEXT   , "This is an auto-generate Email from Honkai Stargazer app, with an appendix of bug issue.");
+                    i.putExtra(Intent.EXTRA_STREAM, path);
+                    if (i.resolveActivity(activity.getPackageManager()) != null) {
+                        activity.startActivity(i);
+                    }
+                }
+            });
+
+
+            if (!dialog.isShowing() && dialog != null){
+                dialog.show();
+            }
+        }
 
         root_init(false);
         character_init();
@@ -363,6 +431,7 @@ public class HomePage extends AppCompatActivity {
         ImageView setting_app_ico = home_settings.findViewById(R.id.setting_app_ico);
         ImageView setting_github = home_settings.findViewById(R.id.setting_github);
         ImageView setting_discord = home_settings.findViewById(R.id.setting_discord);
+        ImageView setting_email = home_settings.findViewById(R.id.setting_email);
 
         setting_github.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -376,6 +445,18 @@ public class HomePage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://discord.gg/uXatcbWKv2"));
                 startActivity(browserIntent);
+            }
+        });
+        setting_email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("message/rfc822");
+                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"xectorda@gmail.com"});
+                i.putExtra(Intent.EXTRA_SUBJECT, "[Honkai Stargazer - INFORMATION SUGGESTION]");
+                if (i.resolveActivity(activity.getPackageManager()) != null) {
+                    activity.startActivity(i);
+                }
             }
         });
 
@@ -427,7 +508,10 @@ public class HomePage extends AppCompatActivity {
             }
             charactersAdapter.filterList(charactersList);
         } catch (JSONException e) {
-            e.printStackTrace();
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            LogExport.bugLog(TAG, "char_list_reload", sw.toString(), context);
         }
     }
     private void lightcone_list_reload() {
@@ -458,7 +542,10 @@ public class HomePage extends AppCompatActivity {
             }
             lightconesAdapter.filterList(lightconesList);
         } catch (JSONException e) {
-            e.printStackTrace();
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            LogExport.bugLog(TAG, "lightcone_list_reload", sw.toString(), context);
         }
     }
     private void relic_list_reload() {
@@ -487,7 +574,10 @@ public class HomePage extends AppCompatActivity {
             }
             relicsAdapter.filterList(relicsList);
         } catch (JSONException e) {
-            e.printStackTrace();
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            LogExport.bugLog(TAG, "relic_list_reload", sw.toString(), context);
         }
     }
 

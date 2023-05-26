@@ -61,7 +61,7 @@
                     android:layout_gravity="bottom|center"
                     android:layout_marginTop="20dp"
                     android:adjustViewBounds="false"
-                    app:srcCompat="@drawable/serval_fade" />
+                    app:srcCompat="@drawable/tingyun_fade" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -98,10 +98,12 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
+                    android:background="@drawable/bg_card_item_gradient_rotate"
                     android:orientation="horizontal"
                     android:paddingLeft="4dp"
-                    android:paddingRight="4dp">
+                    android:paddingTop="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="20dp">
 
                     <ImageView
                         android:id="@+id/item_path_ico"
@@ -184,6 +186,77 @@
                     android:text="2O48"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/item_material_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:alpha="0.75"
+                    android:gravity="center"
+                    android:text="Hi there, I'm using Honkai Stargazer!"
+                    android:textColor="@color/tv_daynight_tint"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/item_material_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="64dp"
+                        android:maxHeight="64dp"
+                        android:minWidth="32dp"
+                        android:minHeight="32dp"
+                        app:srcCompat="@drawable/material_extinguished_core" />
+
+                    <ImageView
+                        android:id="@+id/item_material_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="64dp"
+                        android:maxHeight="64dp"
+                        android:minWidth="32dp"
+                        android:minHeight="32dp"
+                        app:srcCompat="@drawable/material_extinguished_core" />
+
+                    <ImageView
+                        android:id="@+id/item_material_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="64dp"
+                        android:maxHeight="64dp"
+                        android:minWidth="32dp"
+                        android:minHeight="32dp"
+                        app:srcCompat="@drawable/material_extinguished_core" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/item_intro_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:alpha="0.75"
+                    android:text="Hi there, I'm using Honkai Stargazer!"
+                    android:textColor="@color/tv_daynight_tint"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:visibility="gone" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

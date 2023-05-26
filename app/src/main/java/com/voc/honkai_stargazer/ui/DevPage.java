@@ -23,7 +23,13 @@ import android.widget.ImageButton;
 import com.voc.honkai_stargazer.R;
 import com.voc.honkai_stargazer.data.HSRItem;
 import com.voc.honkai_stargazer.dev.CharAdviceSuggester;
+import com.voc.honkai_stargazer.util.LogExport;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.ArrayList;
 
 public class DevPage extends AppCompatActivity {
@@ -36,6 +42,8 @@ public class DevPage extends AppCompatActivity {
     SharedPreferences.Editor editor;
 
     CharAdviceSuggester charAdviceSuggester;
+
+    public static final String TAG = "DevPage";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,21 +54,38 @@ public class DevPage extends AppCompatActivity {
         sharedPreferences = context.getSharedPreferences("user_info",MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
+        ImageButton dev_back = findViewById(R.id.dev_back);
+        dev_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
         charAdviceSuggester = new CharAdviceSuggester();
         //themeChanger();
 
         Button dev_char_advice_btn = findViewById(R.id.dev_char_advice_btn);
-        ImageButton dev_back = findViewById(R.id.dev_back);
+        Button dev_expection_btn = findViewById(R.id.dev_expection_btn);
         dev_char_advice_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 charAdviceSuggester.init(context,activity);
             }
         });
-        dev_back.setOnClickListener(new View.OnClickListener() {
+        dev_expection_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                try {
+                    JSONObject jsonObject = new JSONObject("{\"sb\":\"AAA\"}");
+                    String str = jsonObject.getString("FAILED");
+                } catch (JSONException e) {
+                    StringWriter sw = new StringWriter();
+                    PrintWriter pw = new PrintWriter(sw);
+                    e.printStackTrace(pw);
+                    LogExport.bugLog(TAG, "dev_expection_btn.onClick()", sw.toString(), context);
+                }
             }
         });
     }

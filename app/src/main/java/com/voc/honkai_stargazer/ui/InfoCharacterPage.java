@@ -41,6 +41,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -70,6 +72,7 @@ public class InfoCharacterPage {
 
     ArrayList<MaterialItem> materialItemsRef = new ArrayList<>();
     ArrayList<Integer> materialItemsID = new ArrayList<>();
+    public static final String TAG = "InfoCharacterPage";
 
     public void setup(Context context, Activity activity, HSRItem hsrItem){
         this.context = context;
@@ -160,7 +163,10 @@ public class InfoCharacterPage {
                 }
 
             } catch (JSONException e) {
-                throw new RuntimeException(e);
+                StringWriter sw = new StringWriter();
+                PrintWriter pw = new PrintWriter(sw);
+                e.printStackTrace(pw);
+                LogExport.bugLog(TAG, "Read JSON from Assests", sw.toString(), context);
             }
         }else{
             Toast.makeText(context, "["+LANGUAGE+"] "+hsrItem.getName()+"'s file not exist", Toast.LENGTH_SHORT).show();
@@ -285,7 +291,10 @@ public class InfoCharacterPage {
                     combat_status_change(jsonObject, seekBar, lvlPART, combat_status_hp, combat_status_atk, combat_status_def, combat_status_spd, combat_status_taunt);
                     combat_status_lv.setText((lvlCurr < 10 ? "0" : "")+String.valueOf(lvlCurr)+" / "+String.valueOf(lvlMax[lvlPART]));
                 } catch (JSONException e) {
-                    throw new RuntimeException(e);
+                    StringWriter sw = new StringWriter();
+                    PrintWriter pw = new PrintWriter(sw);
+                    e.printStackTrace(pw);
+                    LogExport.bugLog(TAG, "combat_material_change | combat_status_change", sw.toString(), context);
                 }
             }
 
@@ -340,7 +349,10 @@ public class InfoCharacterPage {
                         combat_desc_change(desc, skills.getJSONObject(finalX), seekBar);
                         lv.setText((seekBar.getProgress()+1 < 10 ? "0" : "")+String.valueOf(seekBar.getProgress()+1));
                     } catch (JSONException e) {
-                        throw new RuntimeException(e);
+                        StringWriter sw = new StringWriter();
+                        PrintWriter pw = new PrintWriter(sw);
+                        e.printStackTrace(pw);
+                        LogExport.bugLog(TAG, "combat_material_change | combat_desc_change", sw.toString(), context);
                     }
                 }
 

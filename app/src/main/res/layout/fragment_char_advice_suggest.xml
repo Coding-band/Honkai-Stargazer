@@ -36,7 +36,7 @@
             android:layout_height="match_parent"
             android:layout_marginRight="60dp"
             android:gravity="center"
-            android:text="Character Advice Suggester"
+            android:text="@string/cas_title"
             android:textColor="@color/home_list_item_title"
             android:textSize="20sp" />
     </LinearLayout>
@@ -59,6 +59,23 @@
             android:paddingRight="8dp">
 
             <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0. Enter Your Name"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="text"
+                android:maxEms="30" />
+
+            <TextView
                 android:id="@+id/textView24"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -78,7 +95,10 @@
                 android:id="@+id/status_file"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Found suggestion of bailu, new record will insert"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="right"
+                android:text="@string/cas_exist_file"
                 android:textColor="@android:color/holo_red_light" />
 
             <TextView
@@ -181,11 +201,69 @@
             </HorizontalScrollView>
 
             <TextView
+                android:id="@+id/textView30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="5. Choose Teammates (Max 3)"
+                android:textSize="16sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:id="@+id/teammate1_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="96dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/teammate1_float"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        app:fabCustomSize="48dp"
+                        app:fabSize="auto"
+                        app:maxImageSize="32dp"
+                        app:srcCompat="@drawable/outline_add_24" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:id="@+id/teammate2_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="96dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/teammate2_float"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        app:fabCustomSize="48dp"
+                        app:fabSize="auto"
+                        app:maxImageSize="32dp"
+                        app:srcCompat="@drawable/outline_add_24" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="5. Choose Type of This Set"
+                android:text="6. Choose Type of This Set"
                 android:textSize="16sp" />
 
             <Spinner
@@ -196,14 +274,35 @@
                 android:background="@drawable/bg_select_list"
                 android:popupBackground="@drawable/bg_spinner_expand" />
 
-            <Button
-                android:id="@+id/save"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Save" />
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/cas_save_only" />
+
+                <Button
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/email" />
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

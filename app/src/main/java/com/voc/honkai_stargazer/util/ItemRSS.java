@@ -24,6 +24,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.math.RoundingMode;
@@ -66,6 +68,8 @@ public class ItemRSS {
     public static final String SEX_FEMALE = "Female";
 
     public static final String TYPE_CHARACTER = "Character";
+    public static final String TYPE_CHARACTER_TEAM1 = "Character_TEAM1";
+    public static final String TYPE_CHARACTER_TEAM2 = "Character_TEAM2";
     public static final String TYPE_LIGHTCONE = "Lightcone";
     public static final String TYPE_RELIC = "Relic";
     public static final String TYPE_ORNAMENT = "Ornament";
@@ -76,6 +80,7 @@ public class ItemRSS {
     public static final int MATERIAL_TRACE_MATERIALS = 4;
     public static final int MATERIAL_TRACE_MATERIAL_CHARACTER_ASCENSION_MATERIALS = 7;
     public static final int MATERIAL_COMMON_CURRENCY = 11;
+    public static final String APPLICATION_ID_PROVIDER = "com.voc.honkai_stargazer.provider";
 
     public static NumberFormat getNumberFormat() {
         NumberFormat nf = NumberFormat.getNumberInstance();
@@ -691,5 +696,41 @@ public class ItemRSS {
         }
 
         return tContents;
+    }
+    public static String LoadData(Context context, String inFile) {
+        String tContents = "";
+        try {
+            File file = new File(context.getFilesDir()+"/"+inFile);
+            InputStream stream = new FileInputStream(file);
+
+            int size = stream.available();
+            byte[] buffer = new byte[size];
+            stream.read(buffer);
+            stream.close();
+            tContents = new String(buffer);
+        } catch (IOException e) {
+            // Handle exceptions here
+        }
+
+        return tContents;
+
+    }
+    public static String LoadExtendData(Context context, String inFile) {
+        String tContents = "";
+        try {
+            File file = new File(context.getExternalMediaDirs()[0]+"/"+inFile);
+            InputStream stream = new FileInputStream(file);
+
+            int size = stream.available();
+            byte[] buffer = new byte[size];
+            stream.read(buffer);
+            stream.close();
+            tContents = new String(buffer);
+        } catch (IOException e) {
+            // Handle exceptions here
+        }
+
+        return tContents;
+
     }
 }

@@ -188,6 +188,8 @@ public class InfoLightconePage {
 
         asc_material_init(info_lightcone_material_ll, jsonObject,-1 );
         asc_material_change(info_lightcone_material_ll, jsonObject, -1);
+        asc_status_change(jsonObject, info_lightcone_seekbar, 0, info_lightcone_hp, info_lightcone_atk, info_lightcone_def);
+
 
         info_lightcone_seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override

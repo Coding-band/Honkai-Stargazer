@@ -42,7 +42,7 @@ public class IconArrayAdapter extends ArrayAdapter {
     }
 
     private View getImageForPosition(int position, View convertView, ViewGroup parent) {
-        Transformation transformation = new RoundedCornersTransformation(360, 0);
+        Transformation transformation = new RoundedCornersTransformation(90, 0);
         ItemRSS itemRSS = new ItemRSS();
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View row = inflater.inflate(R.layout.icon_spinner_dropdown_item, parent, false);

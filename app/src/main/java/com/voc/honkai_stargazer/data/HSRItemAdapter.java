@@ -6,6 +6,9 @@
 
 package com.voc.honkai_stargazer.data;
 
+import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
+import static com.voc.honkai_stargazer.util.ItemRSS.TYPE_LIGHTCONE;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -33,10 +36,18 @@ import com.voc.honkai_stargazer.ui.DevPage;
 import com.voc.honkai_stargazer.ui.InfoCharacterPage;
 import com.voc.honkai_stargazer.ui.InfoLightconePage;
 import com.voc.honkai_stargazer.util.ItemRSS;
+import com.voc.honkai_stargazer.util.LangUtil;
+import com.voc.honkai_stargazer.util.LogExport;
 import com.voc.honkai_stargazer.util.RoundedCornersTransformation;
 import com.willy.ratingbar.ScaleRatingBar;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHolder>{
 
@@ -57,6 +68,8 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
 
     private String TYPE = ItemRSS.TYPE_CHARACTER;
     private int lastPosition = -1;
+
+    public static final String TAG = "HSRItemAdapter";
 
     public HSRItemAdapter(Context context, Activity activity, SharedPreferences sharedPreferences, String TYPE, boolean isForSelect) {
         this.context = context;
@@ -104,7 +117,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
         holder.item_normal_ll.setVisibility(View.VISIBLE);
 
         int ico_rss = R.drawable.ico_lost_img;
-        if (TYPE.equals(ItemRSS.TYPE_CHARACTER)){
+        if (TYPE.equals(ItemRSS.TYPE_CHARACTER) || TYPE.equals(ItemRSS.TYPE_CHARACTER_TEAM1) || TYPE.equals(ItemRSS.TYPE_CHARACTER_TEAM2)){
             ico_rss = item_rss.getCharByName(hsrItem.getName())[(sharedPreferences.getString("grid_"+TYPE,HSRItemAdapter.DEFAULT).equals(THREE_IN_ROW) ? 2 : 0)];
             holder.item_element.setVisibility(View.VISIBLE);
             holder.item_element.setImageResource(item_rss.getIconByElement(hsrItem.getElement()));
@@ -142,8 +155,6 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
 
             ico_rss = item_rss.getRelicByName(hsrItem.getName())[0];
         }
-
-        //https://honkai-star-rail.fandom.com/wiki/Relic/Sets
 
         double img_width = 96 * displayMetrics.density;
         double img_height = 96 * displayMetrics.density;
@@ -198,9 +209,9 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
                         if (!hsritemSelectedList.contains(hsrItem) && hsritemSelectedList.size() + 1 <= maxSizeOfList){
                             ((DevPage) context).casAddItem(hsrItem,TYPE);
                         }else if(hsritemSelectedList.size() + 1 > maxSizeOfList){
-                            Toast.makeText(context, "Max is "+String.valueOf(maxSizeOfList)+" !", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, context.getString(R.string.cas_max_size)+String.valueOf(maxSizeOfList), Toast.LENGTH_SHORT).show();
                         }else{
-                            Toast.makeText(context, "You have chose it !", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, context.getString(R.string.cas_item_selected), Toast.LENGTH_SHORT).show();
                         }
                     }
                 }else{
@@ -218,6 +229,57 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
         }else{
             holder.item_beta.setVisibility(View.GONE);
         }
+
+        String LANGUAGE = ItemRSS.initLang(context).getCode();
+        //Read JSON from Assests
+        String heading = "character_data";
+        if (TYPE.equals(TYPE_LIGHTCONE)){
+            heading = "lightcone_data";
+
+            holder.item_material_3.setVisibility(View.GONE);
+        }
+
+
+        holder.item_material_1.setImageResource(R.drawable.ico_lost_img);
+        holder.item_material_2.setImageResource(R.drawable.ico_lost_img);
+        holder.item_material_3.setImageResource(R.drawable.ico_lost_img);
+
+        //Read JSON Assest Data
+        String json_base = LoadAssestData(context,heading+"/"+LANGUAGE+"/"+hsrItem.getFileName()+".json");
+        String json_base2 = LoadAssestData(context,heading+"/"+ LangUtil.LangType.EN.getCode()+"/"+hsrItem.getFileName()+".json");
+        if (json_base == "" && json_base2 != ""){json_base = json_base2;}
+        if (json_base != "" && sharedPreferences.getString("grid_"+TYPE,HSRItemAdapter.DEFAULT).equals(ONE_IN_ROW)){
+            try {
+                JSONObject jsonObject = new JSONObject(json_base);
+                JSONObject itemReferences = jsonObject.getJSONObject("itemReferences");
+                Iterator<String> item_iter = itemReferences.keys();
+                while (item_iter.hasNext()){
+                    String materialKey = item_iter.next();
+                    int id = itemReferences.getJSONObject(materialKey).getInt("id");
+                    int purposeId = itemReferences.getJSONObject(materialKey).getInt("purposeId");
+                    int rare = itemReferences.getJSONObject(materialKey).getInt("rarity");
+
+                    //獵獸之矢
+                    if (purposeId == 3 && rare == 2){
+                        Picasso.get().load(item_rss.getMaterialByID(id)).into(holder.item_material_1);
+                    }
+                    //熄滅原核
+                    if (purposeId == 7 && rare == 2){
+                        Picasso.get().load(item_rss.getMaterialByID(id)).into(holder.item_material_2);
+                    }
+                    //暴風之眼
+                    if (purposeId == 2 && rare == 4){
+                        Picasso.get().load(item_rss.getMaterialByID(id)).into(holder.item_material_3);
+                    }
+
+                }
+            } catch (JSONException e) {
+                StringWriter sw = new StringWriter();
+                PrintWriter pw = new PrintWriter(sw);
+                e.printStackTrace(pw);
+                LogExport.bugLog(TAG, "Read JSON Assest Data", sw.toString(), context);
+            }
+        }
     }
 
     private void setAnimation(View viewToAnimate){
@@ -234,6 +296,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView item_ico, item_element, item_path_ico;
         public ImageView item_sub_item1, item_sub_item2, item_sub_item3, item_beta;
+        public ImageView item_material_1, item_material_2, item_material_3;
         public TextView item_name, item_hp_tv, item_def_tv, item_atk_tv, item_speed_tv, item_path_tv;
         public TextView item_2pc_status, item_4pc_status, item_4pc;
         public LinearLayout item_hp_ll, item_def_ll, item_atk_ll, item_speed_ll, item_sub_ll, item_relic_ll, item_normal_ll;
@@ -260,6 +323,9 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
             item_sub_ll = itemView.findViewById(R.id.item_sub_ll);
             item_relic_ll = itemView.findViewById(R.id.item_relic_ll);
             item_normal_ll = itemView.findViewById(R.id.item_normal_ll);
+            item_material_1 = itemView.findViewById(R.id.item_material_1);
+            item_material_2 = itemView.findViewById(R.id.item_material_2);
+            item_material_3 = itemView.findViewById(R.id.item_material_3);
 
             item_sub_item1 = itemView.findViewById(R.id.item_sub_item1);
             item_sub_item2 = itemView.findViewById(R.id.item_sub_item2);
