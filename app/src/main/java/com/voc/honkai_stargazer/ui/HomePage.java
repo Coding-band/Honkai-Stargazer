@@ -258,11 +258,12 @@ public class HomePage extends AppCompatActivity {
 
     public void character_init(){
         charactersListView = home_characters.findViewById(R.id.charactersListView);
+        ImageButton characterLayout = home_characters.findViewById(R.id.characterLayout);
         int grid = 1;
         switch (sharedPreferences.getString("grid_"+ItemRSS.TYPE_CHARACTER,HSRItemAdapter.DEFAULT)){
             default:
-            case HSRItemAdapter.ONE_IN_ROW: grid = 1; break;
-            case HSRItemAdapter.THREE_IN_ROW: grid = 3; break;
+            case HSRItemAdapter.ONE_IN_ROW: grid = 1; characterLayout.setImageResource(R.drawable.ic_row_1_item);break;
+            case HSRItemAdapter.THREE_IN_ROW: grid = 3; characterLayout.setImageResource(R.drawable.ic_row_3_item);break;
         }
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(context,grid );
 
@@ -282,7 +283,6 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
-        ImageButton characterLayout = home_characters.findViewById(R.id.characterLayout);
         characterLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -294,11 +294,12 @@ public class HomePage extends AppCompatActivity {
 
     public void lightcone_init(){
         lightconesListView = home_lightcones.findViewById(R.id.lightconesListView);
+        ImageButton lightconeLayout = home_lightcones.findViewById(R.id.lightconeLayout);
         int grid = 1;
         switch (sharedPreferences.getString("grid_"+ItemRSS.TYPE_LIGHTCONE,HSRItemAdapter.DEFAULT)){
             default:
-            case HSRItemAdapter.ONE_IN_ROW: grid = 1; break;
-            case HSRItemAdapter.THREE_IN_ROW: grid = 3; break;
+            case HSRItemAdapter.ONE_IN_ROW: grid = 1; lightconeLayout.setImageResource(R.drawable.ic_row_1_item);break;
+            case HSRItemAdapter.THREE_IN_ROW: grid = 3; lightconeLayout.setImageResource(R.drawable.ic_row_3_item);break;
         }
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(context,grid );
 
@@ -320,7 +321,6 @@ public class HomePage extends AppCompatActivity {
         });
         lightconeSearchEt.addTextChangedListener(searchBarHandler(ItemRSS.TYPE_LIGHTCONE, lightconeSearchEt));
 
-        ImageButton lightconeLayout = home_lightcones.findViewById(R.id.lightconeLayout);
         lightconeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -477,6 +477,7 @@ public class HomePage extends AppCompatActivity {
     }
 
     private void char_list_reload() {
+        charactersList = new ArrayList<>();
         String name ,element,path,sex,status,fileName;
         int rare;
         //charactersList.clear();
@@ -515,6 +516,7 @@ public class HomePage extends AppCompatActivity {
         }
     }
     private void lightcone_list_reload() {
+        lightconesList = new ArrayList<>();
         String name ,path,status,fileName;
         int rare;
         //charactersList.clear();
@@ -549,6 +551,7 @@ public class HomePage extends AppCompatActivity {
         }
     }
     private void relic_list_reload() {
+        relicsList = new ArrayList<>();
         String name ,type,status,fileName;
         int rare;
         //charactersList.clear();
@@ -811,5 +814,13 @@ public class HomePage extends AppCompatActivity {
         billingHelper.close();
         super.recreate();
         root_init(true);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        charactersAdapter.filterList(charactersAdapter.getFilterList());
+        lightconesAdapter.filterList(lightconesAdapter.getFilterList());
+        relicsAdapter.filterList(relicsAdapter.getFilterList());
     }
 }

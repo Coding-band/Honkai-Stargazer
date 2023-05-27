@@ -36,7 +36,21 @@
     <style name="Widget.Switch" parent="Widget.Material3.CompoundButton.Switch">
         <item name="android:track">@drawable/app_switch_track</item>
         <item name="android:thumb">@drawable/app_switch_thumb</item>
+        <item name="background">@null</item>
+        <item name="android:background">@null</item>
+
     </style>
+    <style name="Widget.Chip.TextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/hsr_font</item>
+    </style>
+    <style name="Widget.Chip" parent="Widget.Material3.Chip.Assist">
+        <item name="android:textColor">@color/tv_daynight_tint_semi</item>
+        <item name="fontFamily">@font/hsr_font</item>
+    </style>
+    <style name="Widget.ChipGroup" parent="Widget.Material3.ChipGroup">
+        <item name="chipSpacingVertical">0dp</item>
+    </style>
+
 
 
     <style name="PageDialogStyle_P">

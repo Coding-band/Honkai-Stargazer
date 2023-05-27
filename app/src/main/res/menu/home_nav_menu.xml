@@ -8,15 +8,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_characters"
-        android:icon="@drawable/ic_person"
+        android:icon="@drawable/ic_character_icon"
+        android:iconTint="@color/home_bar_icon"
         android:title="@string/home_characters"></item>
     <item
         android:id="@+id/menu_lightcones"
-        android:icon="@drawable/ic_tornado"
+        android:icon="@drawable/ic_lightcone_icon"
+        android:iconTint="@color/home_bar_icon"
         android:title="@string/home_lightcones"></item>
     <item
         android:id="@+id/menu_relics"
-        android:icon="@drawable/ic_health_and_safety"
+        android:icon="@drawable/ic_relic_icon"
+        android:iconTint="@color/home_bar_icon"
         android:title="@string/home_relics"></item>
     <item
         android:id="@+id/menu_settings"

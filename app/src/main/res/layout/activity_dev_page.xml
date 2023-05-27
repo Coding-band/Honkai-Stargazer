@@ -10,6 +10,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/home_page_bg"
     tools:context=".ui.DevPage">
 
     <LinearLayout
@@ -96,6 +97,17 @@
                 android:text="Monet Engine"
                 android:visibility="visible" />
 
+            <Switch
+                android:id="@+id/setting_shadow_list_item"
+                style="@style/Widget.Switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/hsr_font"
+                android:switchPadding="8dp"
+                android:text="Shadow of List Item"
+                android:visibility="visible" />
+
             <View
                 android:id="@+id/divider3"
                 android:layout_width="match_parent"
@@ -156,13 +168,16 @@
                 android:text="@string/easter_egg"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/textView42"
+            <Switch
+                android:id="@+id/dev_siptik_rotate"
+                style="@style/Widget.Switch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="N/A"
-                android:textSize="14sp" />
+                android:checked="false"
+                android:fontFamily="@font/hsr_font"
+                android:switchPadding="8dp"
+                android:text="Rotate HSR Item"
+                android:visibility="visible" />
 
             <View
                 android:id="@+id/divider4"

@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -111,6 +112,8 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
         int margin = 0;
         Transformation transformation = new RoundedCornersTransformation(radius, margin);
 
+        holder.item_card.setCardElevation((sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0));
+
         holder.item_element.setVisibility(View.GONE);
         holder.item_relic_ll.setVisibility(View.GONE);
         holder.item_sub_ll.setVisibility(View.GONE);
@@ -175,6 +178,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
                 .resize((int) img_width, (int) img_height)
                 .centerCrop()
                 .transform(transformation)
+                .rotate((sharedPreferences.getBoolean("isRotateItemIcon", false) ? 180 :0 ))
                 .into (holder.item_ico);
         holder.item_ico.setAdjustViewBounds(true);
 
@@ -184,6 +188,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
         if (TYPE.equals(ItemRSS.TYPE_RELIC) || TYPE.equals(ItemRSS.TYPE_ORNAMENT)) {
             Picasso.get()
                     .load(item_rss.getRelicByName(hsrItem.getName())[1])
+                    .rotate((sharedPreferences.getBoolean("isRotateItemIcon", false) ? 180 :0 ))
                     .into(holder.item_sub_item1);
 
             if (item_rss.getRelicByName(hsrItem.getName()).length > 2){
@@ -191,9 +196,11 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
                 holder.item_sub_item3.setVisibility(View.VISIBLE);
                 Picasso.get()
                         .load(item_rss.getRelicByName(hsrItem.getName())[2])
+                        .rotate((sharedPreferences.getBoolean("isRotateItemIcon", false) ? 180 :0 ))
                         .into(holder.item_sub_item2);
                 Picasso.get()
                         .load(item_rss.getRelicByName(hsrItem.getName())[3])
+                        .rotate((sharedPreferences.getBoolean("isRotateItemIcon", false) ? 180 :0 ))
                         .into(holder.item_sub_item3);
             }
         }
@@ -302,6 +309,8 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
         public LinearLayout item_hp_ll, item_def_ll, item_atk_ll, item_speed_ll, item_sub_ll, item_relic_ll, item_normal_ll;
         public ScaleRatingBar item_rare;
 
+        public CardView item_card;
+
         public ViewHolder(View itemView, final AdapterView.OnItemClickListener listener) {
             super(itemView);
 
@@ -311,6 +320,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
             item_rare = itemView.findViewById(R.id.item_rare);
             item_path_tv = itemView.findViewById(R.id.item_path_tv);
             item_path_ico = itemView.findViewById(R.id.item_path_ico);
+            item_card = itemView.findViewById(R.id.item_card);
 
             item_hp_tv = itemView.findViewById(R.id.item_hp_tv);
             item_def_tv = itemView.findViewById(R.id.item_def_tv);

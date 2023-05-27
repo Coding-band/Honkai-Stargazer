@@ -234,7 +234,7 @@ public class CharAdviceSuggester {
         ll_refresh(TYPE_RELIC);
         ll_refresh(TYPE_ORNAMENT);
 
-        Button cas_back = rootView.findViewById(R.id.cas_back);
+        ImageButton cas_back = rootView.findViewById(R.id.cas_back);
         cas_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -561,6 +561,7 @@ public class CharAdviceSuggester {
 
     //IMPORTANT
     private void char_list_reload() {
+        charactersBaseList = new ArrayList<>();
         String name ,element,path,sex,status,fileName;
         int rare;
         //charactersList.clear();
@@ -598,6 +599,7 @@ public class CharAdviceSuggester {
         }
     }
     private void lightcone_list_reload() {
+        lightconesListBase = new ArrayList<>();
         String name ,path,status,fileName;
         int rare;
         //charactersList.clear();
@@ -631,6 +633,7 @@ public class CharAdviceSuggester {
         }
     }
     private void relic_list_reload() {
+        relicsList = new ArrayList<>();
         String name ,type,status,fileName;
         int rare;
         //charactersList.clear();

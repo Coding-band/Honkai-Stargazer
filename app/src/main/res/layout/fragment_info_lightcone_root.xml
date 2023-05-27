@@ -378,24 +378,6 @@
                 android:padding="16dp"
                 android:translationZ="3dp">
 
-
-                <TextView
-                    android:id="@+id/info_desc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="SipTik really loves Kafka, don't tell me why I know but at least SipTik told me the fact. If you are reading this message, why not think about to ask SipTik about Kafka ?" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                android:background="@drawable/bg_char_info_card"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:translationZ="3dp">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -457,6 +439,24 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Increases DMG dealt by the wearer by 20%. The wearer also deals an extra 20% of DMG to enemies with a higher HP percentage than the wearer." />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_char_info_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:translationZ="3dp">
+
+
+                <TextView
+                    android:id="@+id/info_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SipTik really loves Kafka, don't tell me why I know but at least SipTik told me the fact. If you are reading this message, why not think about to ask SipTik about Kafka ?" />
 
             </LinearLayout>
 

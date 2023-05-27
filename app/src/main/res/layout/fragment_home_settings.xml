@@ -9,7 +9,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/home_page_bg">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,6 +38,7 @@
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/setting_lang"
+                style="@style/Widget.ChipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:selectionRequired="true"
@@ -44,73 +46,87 @@
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/setting_lang_en"
-                    style="@style/Widget.Material3.Chip.Assist"
+                    style="@style/Widget.Chip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checkable="true"
                     android:checked="true"
                     android:fontFamily="@font/hsr_font"
-                    android:text="English" />
+                    android:text="English"
+                    android:textAppearance="@style/Widget.TabWidget"
+                    app:chipBackgroundColor="@color/chip_background_color_setting" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/setting_lang_zh_hk"
-                    style="@style/Widget.Material3.Chip.Assist"
+                    style="@style/Widget.Chip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checkable="true"
                     android:checked="false"
                     android:fontFamily="@font/hsr_font"
-                    android:text="繁體中文" />
+                    android:text="繁體中文"
+                    android:textAppearance="@style/Widget.TabWidget"
+                    app:chipBackgroundColor="@color/chip_background_color_setting" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/setting_lang_zh_cn"
-                    style="@style/Widget.Material3.Chip.Assist"
+                    style="@style/Widget.Chip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checkable="true"
                     android:checked="false"
                     android:fontFamily="@font/hsr_font"
-                    android:text="简体中文" />
+                    android:text="简体中文"
+                    android:textAppearance="@style/Widget.TabWidget"
+                    app:chipBackgroundColor="@color/chip_background_color_setting" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/setting_lang_jp"
-                    style="@style/Widget.Material3.Chip.Assist"
+                    style="@style/Widget.Chip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checkable="true"
                     android:checked="false"
                     android:fontFamily="@font/hsr_font"
-                    android:text="日本語" />
+                    android:text="日本語"
+                    android:textAppearance="@style/Widget.TabWidget"
+                    app:chipBackgroundColor="@color/chip_background_color_setting" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/setting_lang_fr"
-                    style="@style/Widget.Material3.Chip.Assist"
+                    style="@style/Widget.Chip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checkable="true"
                     android:checked="false"
                     android:fontFamily="@font/hsr_font"
-                    android:text="Français" />
+                    android:text="Français"
+                    android:textAppearance="@style/Widget.TabWidget"
+                    app:chipBackgroundColor="@color/chip_background_color_setting" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/setting_lang_ru"
-                    style="@style/Widget.Material3.Chip.Assist"
+                    style="@style/Widget.Chip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checkable="true"
                     android:checked="false"
                     android:fontFamily="@font/hsr_font"
-                    android:text="Русский" />
+                    android:text="Русский"
+                    android:textAppearance="@style/Widget.TabWidget"
+                    app:chipBackgroundColor="@color/chip_background_color_setting" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/setting_lang_ua"
-                    style="@style/Widget.Material3.Chip.Assist"
+                    style="@style/Widget.Chip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checkable="true"
                     android:checked="false"
                     android:fontFamily="@font/hsr_font"
-                    android:text="Українська" />
+                    android:text="Українська"
+                    android:textAppearance="@style/Widget.TabWidget"
+                    app:chipBackgroundColor="@color/chip_background_color_setting" />
             </com.google.android.material.chip.ChipGroup>
 
             <TextView
@@ -181,41 +197,49 @@
                 android:textSize="24sp" />
 
             <com.google.android.material.chip.ChipGroup
+                style="@style/Widget.ChipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:singleSelection="true">
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/setting_donate_1"
-                    style="@style/Widget.Material3.Chip.Assist"
+                    style="@style/Widget.Chip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checkable="false"
-                    android:text="HK$8" />
+                    android:text="HK$8"
+                    android:textAppearance="@style/Widget.Chip.TextAppearance"
+                    app:chipBackgroundColor="@color/chip_background_color_setting" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/setting_donate_2"
-                    style="@style/Widget.Material3.Chip.Assist"
+                    style="@style/Widget.Chip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checkable="false"
-                    android:text="HK$30" />
+                    android:text="HK$30"
+                    android:textAppearance="@style/Widget.Chip.TextAppearance"
+                    app:chipBackgroundColor="@color/chip_background_color_setting" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/setting_donate_3"
-                    style="@style/Widget.Material3.Chip.Assist"
+                    style="@style/Widget.Chip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checkable="false"
-                    android:text="HK$50" />
+                    android:text="HK$50"
+                    android:textAppearance="@style/Widget.Chip.TextAppearance"
+                    app:chipBackgroundColor="@color/chip_background_color_setting" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/setting_donate_4"
-                    style="@style/Widget.Material3.Chip.Assist"
+                    style="@style/Widget.Chip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checkable="false"
-                    android:text="HK$100" />
+                    android:text="HK$100"
+                    android:textAppearance="@style/Widget.Chip.TextAppearance"
+                    app:chipBackgroundColor="@color/chip_background_color_setting" />
 
             </com.google.android.material.chip.ChipGroup>
 
