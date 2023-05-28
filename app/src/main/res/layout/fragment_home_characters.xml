@@ -27,13 +27,14 @@
         android:id="@+id/character_app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/home_page_bg"
+        android:background="@color/transparent"
         app:expanded="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_scrollFlags="scroll|enterAlways">
 
             <LinearLayout
                 android:id="@+id/characterSearchBar"
