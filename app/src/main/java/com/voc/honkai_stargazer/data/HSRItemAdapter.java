@@ -165,7 +165,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
 
         if (sharedPreferences.getString("grid_"+TYPE,HSRItemAdapter.DEFAULT).equals(THREE_IN_ROW)){
             grid = 3;
-            img_width = (displayMetrics.widthPixels - 8*displayMetrics.density)/3;
+            img_width = (displayMetrics.widthPixels )/3;
             img_height = img_width * 1.2;
         }
 
@@ -183,7 +183,10 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
         holder.item_ico.setAdjustViewBounds(true);
 
 
-        holder.itemView.getLayoutParams().width = (int) ((displayMetrics.widthPixels - 8*displayMetrics.density) / grid);
+        holder.itemView.getLayoutParams().width = (int) ((displayMetrics.widthPixels ) / grid);
+
+        holder.item_kwang_alpha.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
+        holder.item_kwang_alpha.getLayoutParams().height = ViewGroup.LayoutParams.MATCH_PARENT;
 
         if (TYPE.equals(ItemRSS.TYPE_RELIC) || TYPE.equals(ItemRSS.TYPE_ORNAMENT)) {
             Picasso.get()
@@ -301,7 +304,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView item_ico, item_element, item_path_ico;
+        public ImageView item_ico, item_element, item_path_ico, item_kwang_alpha;
         public ImageView item_sub_item1, item_sub_item2, item_sub_item3, item_beta;
         public ImageView item_material_1, item_material_2, item_material_3;
         public TextView item_name, item_hp_tv, item_def_tv, item_atk_tv, item_speed_tv, item_path_tv;
@@ -320,6 +323,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
             item_rare = itemView.findViewById(R.id.item_rare);
             item_path_tv = itemView.findViewById(R.id.item_path_tv);
             item_path_ico = itemView.findViewById(R.id.item_path_ico);
+            item_kwang_alpha = itemView.findViewById(R.id.item_kwang_alpha);
             item_card = itemView.findViewById(R.id.item_card);
 
             item_hp_tv = itemView.findViewById(R.id.item_hp_tv);

@@ -27,7 +27,9 @@ public class LangUtil {
         JP(Locale.JAPAN,"jp","日本語"),
         FR(Locale.FRANCE,"fr","Français"),
         RU(new Locale("ru", "RU"),"ru","Русский"),
-        UA(new Locale("uk", "UA"),"ua","Українська");
+        UA(new Locale("uk", "UA"),"ua","Українська"),
+        DE(new Locale("de", "DE"),"de","Deutsch"),
+        PT(new Locale("pt", "PT"),"pt","Português");
 
         private Locale locale;
         private String code;
@@ -59,14 +61,16 @@ public class LangUtil {
     public static LangType getLangTypeByCode(String code){
         LangType langType = LangType.EN;
         switch (code){
-            case ItemRSS.LANG_EN: langType = LangUtil.LangType.EN;break;
-            case ItemRSS.LANG_ZH_CN: langType = LangUtil.LangType.ZH_CN;break;
-            case ItemRSS.LANG_ZH_HK: langType = LangUtil.LangType.ZH_HK;break;
-            case ItemRSS.LANG_JA_JP: langType = LangUtil.LangType.JP;break;
-            case ItemRSS.LANG_FR: langType = LangUtil.LangType.FR;break;
-            case ItemRSS.LANG_RU: langType = LangUtil.LangType.RU;break;
-            case ItemRSS.LANG_UA: langType = LangUtil.LangType.UA;break;
-            default:langType = LangUtil.LangType.EN;break;
+            case ItemRSS.LANG_EN: langType = LangType.EN;break;
+            case ItemRSS.LANG_ZH_CN: langType = LangType.ZH_CN;break;
+            case ItemRSS.LANG_ZH_HK: langType = LangType.ZH_HK;break;
+            case ItemRSS.LANG_JP: langType = LangType.JP;break;
+            case ItemRSS.LANG_FR: langType = LangType.FR;break;
+            case ItemRSS.LANG_RU: langType = LangType.RU;break;
+            case ItemRSS.LANG_UA: langType = LangType.UA;break;
+            case ItemRSS.LANG_DE: langType = LangType.DE;break;
+            case ItemRSS.LANG_PT: langType = LangType.PT;break;
+            default:langType = LangType.EN;break;
         }
         return langType;
     }
@@ -89,6 +93,8 @@ public class LangUtil {
             case JP: editor.putString("curr_lang",LangType.JP.getCode()).apply();break;
             case RU: editor.putString("curr_lang",LangType.RU.getCode()).apply();break;
             case UA: editor.putString("curr_lang",LangType.UA.getCode()).apply();break;
+            case DE: editor.putString("curr_lang",LangType.DE.getCode()).apply();break;
+            case PT: editor.putString("curr_lang",LangType.PT.getCode()).apply();break;
             default:
             case EN: editor.putString("curr_lang",LangType.EN.getCode()).apply();break;
         }
@@ -114,6 +120,8 @@ public class LangUtil {
             case JP: editor.putString("curr_lang",LangType.JP.getCode()).apply();break;
             case RU: editor.putString("curr_lang",LangType.RU.getCode()).apply();break;
             case UA: editor.putString("curr_lang",LangType.UA.getCode()).apply();break;
+            case DE: editor.putString("curr_lang",LangType.DE.getCode()).apply();break;
+            case PT: editor.putString("curr_lang",LangType.PT.getCode()).apply();break;
             default:
             case EN: editor.putString("curr_lang",LangType.EN.getCode()).apply();break;
         }

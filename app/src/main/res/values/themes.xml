@@ -38,7 +38,16 @@
         <item name="android:thumb">@drawable/app_switch_thumb</item>
         <item name="background">@null</item>
         <item name="android:background">@null</item>
+        <item name="rippleColor">@null</item>
 
+    </style>
+    <style name="Widget.Seekbar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressDrawable">@drawable/bg_seekbar_line</item>
+        <item name="android:thumbTint">@color/filter_btn_themed</item>
+    </style>
+    <style name="Widget.Seekbar.Discrete" parent="Widget.AppCompat.SeekBar.Discrete">
+        <item name="android:progressDrawable">@drawable/bg_seekbar_line</item>
+        <item name="android:thumbTint">@color/filter_btn_themed</item>
     </style>
     <style name="Widget.Chip.TextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
         <item name="android:fontFamily">@font/hsr_font</item>
@@ -114,10 +123,34 @@
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:windowSoftInputMode">stateUnchanged</item>
     </style>
+    <style name="RadioDialogStyle_R">
+        <!--对话框背景 -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!--边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--没有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否浮现在Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!--背景透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否有覆盖 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--进出的显示动画 -->
+        <item name="android:windowAnimationStyle">@style/fadeDialogAnim</item>
+        <!--背景变暗-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">stateUnchanged</item>
+    </style>
 
     <style name="normalDialogAnim" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/normal_navi_down_enter</item>
         <item name="android:windowExitAnimation">@anim/normal_navi_down_exit</item>
+    </style>
+
+    <style name="fadeDialogAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
     </style>
 
 </resources>

@@ -11,7 +11,7 @@ android {
         minSdk 26
         targetSdk 33
         versionCode 1
-        versionName "1.0.5"
+        versionName "1.2.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -30,7 +30,7 @@ android {
             dev{
                 versionCode = code
                 versionNameSuffix "-dev" + " ("+code+")"
-                applicationId "com.voc.honkai_stargazer"
+                applicationId "com.voc.honkai_stargazer_gp"
             }
             // For Google Play Store
             gp{

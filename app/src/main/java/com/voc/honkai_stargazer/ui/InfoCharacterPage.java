@@ -12,6 +12,8 @@ import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +37,7 @@ import com.voc.honkai_stargazer.util.CustomViewPagerAdapter;
 import com.voc.honkai_stargazer.util.ItemRSS;
 import com.voc.honkai_stargazer.util.LangUtil;
 import com.voc.honkai_stargazer.util.LogExport;
+import com.voc.honkai_stargazer.util.VibrateUtil;
 import com.willy.ratingbar.ScaleRatingBar;
 
 import org.json.JSONArray;
@@ -74,11 +77,14 @@ public class InfoCharacterPage {
     ArrayList<Integer> materialItemsID = new ArrayList<>();
     public static final String TAG = "InfoCharacterPage";
 
+    SharedPreferences sharedPreferences;
+
     public void setup(Context context, Activity activity, HSRItem hsrItem){
         this.context = context;
         this.activity = activity;
         this.hsrItem = hsrItem;
         item_rss = new ItemRSS();
+        sharedPreferences = context.getSharedPreferences("user_info",Context.MODE_PRIVATE);
 
         final LayoutInflater mInflater = activity.getLayoutInflater().from(context);
         info_introducing = mInflater.inflate(R.layout.fragment_info_character_intro, null,false);
@@ -253,6 +259,13 @@ public class InfoCharacterPage {
         intro_rare.setRating(hsrItem.getRare());
         intro_desc.setText(jsonObject.getString("descHash"));
 
+        LinearLayout intro_ll_1 = info_introducing.findViewById(R.id.intro_ll_1);
+
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
+        intro_ll_1.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+
     }
 
     private void init_combat(JSONObject jsonObject) throws JSONException {
@@ -266,6 +279,23 @@ public class InfoCharacterPage {
         SeekBar combat_status_seekbar = info_combat.findViewById(R.id.combat_status_seekbar);
         TextView combat_status_lv = info_combat.findViewById(R.id.combat_status_lv);
 
+        LinearLayout combat_ll_0 = info_combat.findViewById(R.id.combat_ll_0);
+        LinearLayout combat_ll_1 = info_combat.findViewById(R.id.combat_ll_1);
+        LinearLayout combat_ll_2 = info_combat.findViewById(R.id.combat_ll_2);
+        LinearLayout combat_ll_3 = info_combat.findViewById(R.id.combat_ll_3);
+        LinearLayout combat_ll_4 = info_combat.findViewById(R.id.combat_ll_4);
+        LinearLayout combat_ll_6 = info_combat.findViewById(R.id.combat_ll_6);
+
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
+        combat_ll_0.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+        combat_ll_1.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+        combat_ll_2.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+        combat_ll_3.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+        combat_ll_4.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+        combat_ll_6.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+
         combat_status_seekbar.setProgress(0);
         combat_status_seekbar.setMax(80-1+6);
         combat_material_init(combat_status_material_ll, jsonObject, -1);
@@ -275,6 +305,7 @@ public class InfoCharacterPage {
         combat_status_seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                VibrateUtil.vibrate(context);
                 try {
                     int lvlCurr = seekBar.getProgress()+1;
                     int lvlPART = 0;
@@ -344,6 +375,7 @@ public class InfoCharacterPage {
             seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                 @Override
                 public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                    VibrateUtil.vibrate(context);
                     try {
                         combat_material_change(material_ll, skills.getJSONObject(finalX), seekBar.getProgress());
                         combat_desc_change(desc, skills.getJSONObject(finalX), seekBar);
@@ -552,6 +584,22 @@ public class InfoCharacterPage {
         eidolon_desc5.setText(ItemRSS.valuedText(ranks.getJSONObject(4).getString("descHash"), ranks.getJSONObject(4).getJSONArray("params"),context), TextView.BufferType.SPANNABLE);
         eidolon_desc6.setText(ItemRSS.valuedText(ranks.getJSONObject(5).getString("descHash"), ranks.getJSONObject(5).getJSONArray("params"),context), TextView.BufferType.SPANNABLE);
 
+        LinearLayout eidolon_ll_1 = info_eidolon.findViewById(R.id.eidolon_ll_1);
+        LinearLayout eidolon_ll_2 = info_eidolon.findViewById(R.id.eidolon_ll_2);
+        LinearLayout eidolon_ll_3 = info_eidolon.findViewById(R.id.eidolon_ll_3);
+        LinearLayout eidolon_ll_4 = info_eidolon.findViewById(R.id.eidolon_ll_4);
+        LinearLayout eidolon_ll_5 = info_eidolon.findViewById(R.id.eidolon_ll_5);
+        LinearLayout eidolon_ll_6 = info_eidolon.findViewById(R.id.eidolon_ll_6);
+
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
+        eidolon_ll_1.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+        eidolon_ll_2.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+        eidolon_ll_3.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+        eidolon_ll_4.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+        eidolon_ll_5.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+        eidolon_ll_6.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
     }
 
 }

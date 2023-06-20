@@ -107,6 +107,8 @@ public class HelpTool {
         help_tool_export_relic_pc(LangUtil.LangType.RU,context);
         help_tool_export_relic_pc(LangUtil.LangType.FR,context);
         help_tool_export_relic_pc(LangUtil.LangType.UA,context);
+        help_tool_export_relic_pc(LangUtil.LangType.DE,context);
+        help_tool_export_relic_pc(LangUtil.LangType.PT,context);
     }
 
     public void help_tool_export_relic_pc(LangUtil.LangType langType,Context context) throws JSONException{

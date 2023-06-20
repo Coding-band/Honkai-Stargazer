@@ -42,7 +42,9 @@ public class ItemRSS {
     public static final String LANG_FR = "fr";
     public static final String LANG_RU = "ru";
     public static final String LANG_UA = "ua";
-    public static final String LANG_JA_JP = "jp";
+    public static final String LANG_JP = "jp";
+    public static final String LANG_DE = "de";
+    public static final String LANG_PT = "pt";
 
     public static final String ELEMENT_FIRE = "Fire";
     public static final String ELEMENT_ICE = "Ice";
@@ -117,6 +119,10 @@ public class ItemRSS {
                 editor.putString("curr_lang","fr"); langType = LangUtil.LangType.FR;
             }else if(tag.contains("uk-")){
                 editor.putString("curr_lang","ua"); langType = LangUtil.LangType.UA;
+            }else if(tag.contains("de-")){
+                editor.putString("curr_lang","de"); langType = LangUtil.LangType.DE;
+            }else if(tag.contains("pt-")){
+                editor.putString("curr_lang","pt"); langType = LangUtil.LangType.PT;
             }else{
                 editor.putString("curr_lang","en"); langType = LangUtil.LangType.EN;
             }
@@ -127,10 +133,12 @@ public class ItemRSS {
                 case LANG_EN: langType = LangUtil.LangType.EN;break;
                 case LANG_ZH_CN: langType = LangUtil.LangType.ZH_CN;break;
                 case LANG_ZH_HK: langType = LangUtil.LangType.ZH_HK;break;
-                case LANG_JA_JP: langType = LangUtil.LangType.JP;break;
+                case LANG_JP: langType = LangUtil.LangType.JP;break;
                 case LANG_FR: langType = LangUtil.LangType.FR;break;
                 case LANG_RU: langType = LangUtil.LangType.RU;break;
                 case LANG_UA: langType = LangUtil.LangType.UA;break;
+                case LANG_DE: langType = LangUtil.LangType.DE;break;
+                case LANG_PT: langType = LangUtil.LangType.PT;break;
                 default:langType = LangUtil.LangType.EN;break;
             }
         }

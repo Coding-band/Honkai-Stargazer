@@ -8,7 +8,6 @@ package com.voc.honkai_stargazer.ui;
 
 import static com.voc.honkai_stargazer.ui.DevPage.TRIG_TOUCH;
 import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
-import static com.voc.honkai_stargazer.util.ItemRSS.LoadData;
 import static com.voc.honkai_stargazer.util.ItemRSS.LoadExtendData;
 
 import androidx.annotation.NonNull;
@@ -28,7 +27,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
+import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -42,6 +41,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -62,6 +62,7 @@ import com.voc.honkai_stargazer.util.LangUtil;
 import com.voc.honkai_stargazer.util.LogExport;
 import com.voc.honkai_stargazer.util.MyItemAnimator;
 import com.voc.honkai_stargazer.util.ThemeUtil;
+import com.voc.honkai_stargazer.util.VibrateUtil;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -70,8 +71,6 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -105,8 +104,10 @@ public class HomePage extends AppCompatActivity {
 
     BillingHelper billingHelper;
     int trig_time = 0;
+    int vibration_lvl = 0;
 
     public static final String TAG = "HomePage";
+    ThemeUtil themeUtil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -177,7 +178,7 @@ public class HomePage extends AppCompatActivity {
             });
 
 
-            if (!dialog.isShowing() && dialog != null){
+            if (dialog != null && !dialog.isShowing()){
                 dialog.show();
             }
         }
@@ -349,79 +350,215 @@ public class HomePage extends AppCompatActivity {
         });
         relicSearchEt.addTextChangedListener(searchBarHandler(ItemRSS.TYPE_RELIC, relicSearchEt));
     }
+    public void setting_init(){
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
 
+        LinearLayout setting_lang = home_settings.findViewById(R.id.setting_lang);
+        LinearLayout setting_material_engine = home_settings.findViewById(R.id.setting_material_engine);
+        LinearLayout setting_daynight = home_settings.findViewById(R.id.setting_daynight);
+        LinearLayout setting_haptic = home_settings.findViewById(R.id.setting_haptic);
 
-    public void setting_init() {
+        TextView setting_lang_display = home_settings.findViewById(R.id.setting_lang_display);
+        TextView setting_material_engine_display = home_settings.findViewById(R.id.setting_material_engine_display);
+        TextView setting_daynight_display = home_settings.findViewById(R.id.setting_daynight_display);
+        TextView setting_haptic_display = home_settings.findViewById(R.id.setting_haptic_display);
+
+        LinearLayout setting_donate_1 = home_settings.findViewById(R.id.setting_donate_1);
+        LinearLayout setting_donate_2 = home_settings.findViewById(R.id.setting_donate_2);
+        LinearLayout setting_donate_3 = home_settings.findViewById(R.id.setting_donate_3);
+        LinearLayout setting_donate_4 = home_settings.findViewById(R.id.setting_donate_4);
+
         //Language
-        ChipGroup setting_lang = home_settings.findViewById(R.id.setting_lang);
-        Chip setting_lang_en = home_settings.findViewById(R.id.setting_lang_en);
-        Chip setting_lang_zh_hk = home_settings.findViewById(R.id.setting_lang_zh_hk);
-        Chip setting_lang_zh_cn = home_settings.findViewById(R.id.setting_lang_zh_cn);
-        Chip setting_lang_fr = home_settings.findViewById(R.id.setting_lang_fr);
-        Chip setting_lang_jp = home_settings.findViewById(R.id.setting_lang_jp);
-        Chip setting_lang_ru = home_settings.findViewById(R.id.setting_lang_ru);
-        Chip setting_lang_ua = home_settings.findViewById(R.id.setting_lang_ua);
-
-        switch (sharedPreferences.getString("curr_lang","")){
-            case ItemRSS.LANG_ZH_HK: setting_lang_zh_hk.setChecked(true);break;
-            case ItemRSS.LANG_ZH_CN: setting_lang_zh_cn.setChecked(true);break;
-            case ItemRSS.LANG_FR: setting_lang_fr.setChecked(true);break;
-            case ItemRSS.LANG_JA_JP: setting_lang_jp.setChecked(true);break;
-            case ItemRSS.LANG_RU: setting_lang_ru.setChecked(true);break;
-            case ItemRSS.LANG_UA: setting_lang_ua.setChecked(true);break;
-            default:
-            case ItemRSS.LANG_EN: setting_lang_en.setChecked(true);break;
-        }
-        setting_lang.setOnCheckedStateChangeListener(new ChipGroup.OnCheckedStateChangeListener() {
+        setting_lang_display.setText(LangUtil.getLangTypeByCode(sharedPreferences.getString("curr_lang","")).getFullName());
+        setting_lang.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(@NonNull ChipGroup group, @NonNull List<Integer> checkedIds) {
-                int id = group.getCheckedChipId();
-                switch (id){
-                    case R.id.setting_lang_zh_hk: LangUtil.getAttachBaseContext(context, LangUtil.LangType.ZH_HK);recreate();break;
-                    case R.id.setting_lang_zh_cn: LangUtil.getAttachBaseContext(context, LangUtil.LangType.ZH_CN);recreate();break;
-                    case R.id.setting_lang_fr: LangUtil.getAttachBaseContext(context, LangUtil.LangType.FR);recreate();break;
-                    case R.id.setting_lang_jp: LangUtil.getAttachBaseContext(context, LangUtil.LangType.JP);recreate();break;
-                    case R.id.setting_lang_ru: LangUtil.getAttachBaseContext(context, LangUtil.LangType.RU);recreate();break;
-                    case R.id.setting_lang_ua: LangUtil.getAttachBaseContext(context, LangUtil.LangType.UA);recreate();break;
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(context,R.style.RadioDialogStyle_R);
+                View view = View.inflate(context, R.layout.dialog_language, null);
+                dialog.setContentView(view);
+                dialog.setCanceledOnTouchOutside(false);
+                Window dialogWindow = dialog.getWindow();
+                WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+
+                RadioGroup setting_lang_group = view.findViewById(R.id.setting_lang_group);
+                RadioButton setting_lang_zh_hk = view.findViewById(R.id.setting_lang_zh_hk);
+                RadioButton setting_lang_zh_cn = view.findViewById(R.id.setting_lang_zh_cn);
+                RadioButton setting_lang_fr = view.findViewById(R.id.setting_lang_fr);
+                RadioButton setting_lang_jp = view.findViewById(R.id.setting_lang_jp);
+                RadioButton setting_lang_ru = view.findViewById(R.id.setting_lang_ru);
+                RadioButton setting_lang_ua = view.findViewById(R.id.setting_lang_ua);
+                RadioButton setting_lang_de = view.findViewById(R.id.setting_lang_de);
+                RadioButton setting_lang_pt = view.findViewById(R.id.setting_lang_pt);
+                RadioButton setting_lang_en = view.findViewById(R.id.setting_lang_en);
+
+                switch (sharedPreferences.getString("curr_lang","")){
+                    case ItemRSS.LANG_ZH_HK: setting_lang_zh_hk.setChecked(true);break;
+                    case ItemRSS.LANG_ZH_CN: setting_lang_zh_cn.setChecked(true);break;
+                    case ItemRSS.LANG_FR: setting_lang_fr.setChecked(true);break;
+                    case ItemRSS.LANG_JP: setting_lang_jp.setChecked(true);break;
+                    case ItemRSS.LANG_RU: setting_lang_ru.setChecked(true);break;
+                    case ItemRSS.LANG_UA: setting_lang_ua.setChecked(true);break;
+                    case ItemRSS.LANG_DE: setting_lang_de.setChecked(true);break;
+                    case ItemRSS.LANG_PT: setting_lang_pt.setChecked(true);break;
                     default:
-                    case R.id.setting_lang_en: LangUtil.getAttachBaseContext(context, LangUtil.LangType.EN);recreate();break;
+                    case ItemRSS.LANG_EN: setting_lang_en.setChecked(true);break;
+                }
+
+                Button dialog_ok = view.findViewById(R.id.dialog_ok);
+                dialog_ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        switch (setting_lang_group.getCheckedRadioButtonId()){
+                            case R.id.setting_lang_zh_hk: setting_lang_display.setText(LangUtil.LangType.ZH_HK.getFullName()); LangUtil.getAttachBaseContext(context, LangUtil.LangType.ZH_HK);recreate();break;
+                            case R.id.setting_lang_zh_cn: setting_lang_display.setText(LangUtil.LangType.ZH_CN.getFullName());LangUtil.getAttachBaseContext(context, LangUtil.LangType.ZH_CN);recreate();break;
+                            case R.id.setting_lang_fr: setting_lang_display.setText(LangUtil.LangType.FR.getFullName());LangUtil.getAttachBaseContext(context, LangUtil.LangType.FR);recreate();break;
+                            case R.id.setting_lang_jp: setting_lang_display.setText(LangUtil.LangType.JP.getFullName());LangUtil.getAttachBaseContext(context, LangUtil.LangType.JP);recreate();break;
+                            case R.id.setting_lang_ru: setting_lang_display.setText(LangUtil.LangType.RU.getFullName());LangUtil.getAttachBaseContext(context, LangUtil.LangType.RU);recreate();break;
+                            case R.id.setting_lang_ua: setting_lang_display.setText(LangUtil.LangType.UA.getFullName());LangUtil.getAttachBaseContext(context, LangUtil.LangType.UA);recreate();break;
+                            case R.id.setting_lang_de: setting_lang_display.setText(LangUtil.LangType.DE.getFullName());LangUtil.getAttachBaseContext(context, LangUtil.LangType.DE);recreate();break;
+                            case R.id.setting_lang_pt: setting_lang_display.setText(LangUtil.LangType.PT.getFullName());LangUtil.getAttachBaseContext(context, LangUtil.LangType.PT);recreate();break;
+                            default:
+                            case R.id.setting_lang_en: setting_lang_display.setText(LangUtil.LangType.EN.getFullName());LangUtil.getAttachBaseContext(context, LangUtil.LangType.EN);recreate();break;
+                        }
+
+
+                        if (dialog.isShowing() && dialog != null){
+                            dialog.dismiss();
+                        }
+
+
+
+                    }
+                });
+
+                lp.width = (int) (displayMetrics.widthPixels*0.9);
+                lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                lp.gravity = Gravity.CENTER;
+                dialogWindow.setAttributes(lp);
+
+                if (!dialog.isShowing() && dialog != null){
+                    dialog.show();
                 }
             }
         });
 
-
-        //DayNight
-        RadioGroup setting_daynight = home_settings.findViewById(R.id.setting_daynight);
-        RadioButton setting_daynight_light = home_settings.findViewById(R.id.setting_daynight_light);
-        RadioButton setting_daynight_dark = home_settings.findViewById(R.id.setting_daynight_dark);
-        RadioButton setting_daynight_system = home_settings.findViewById(R.id.setting_daynight_system);
-
+        //DayNight Theme
         switch (sharedPreferences.getString("dayNight",ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM)){
-            case ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM: setting_daynight_system.setChecked(true);break;
-            case ThemeUtil.DAYNIGHT_DAY: setting_daynight_light.setChecked(true);break;
-            case ThemeUtil.DAYNIGHT_NIGHT: setting_daynight_dark.setChecked(true);break;
+            case ThemeUtil.DAYNIGHT_DAY: setting_daynight_display.setText(R.string.setting_daynight_light);break;
+            case ThemeUtil.DAYNIGHT_NIGHT: setting_daynight_display.setText(R.string.setting_daynight_dark);break;
+            default: setting_daynight_display.setText(R.string.setting_daynight_system);break;
         }
-        setting_daynight.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        setting_daynight.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int id = group.getCheckedRadioButtonId();
-                switch (id){
-                    case R.id.setting_daynight_light : AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); editor.putString("dayNight",ThemeUtil.DAYNIGHT_DAY).apply(); recreate();break;
-                    case R.id.setting_daynight_dark : AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES); editor.putString("dayNight",ThemeUtil.DAYNIGHT_NIGHT).apply(); recreate();break;
-                    case R.id.setting_daynight_system : AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM); editor.putString("dayNight",ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM).apply();recreate(); break;
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(context,R.style.RadioDialogStyle_R);
+                View view = View.inflate(context, R.layout.dialog_daynight, null);
+                dialog.setContentView(view);
+                dialog.setCanceledOnTouchOutside(false);
+                Window dialogWindow = dialog.getWindow();
+                WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+
+                //DayNight
+                RadioGroup setting_daynight_group = view.findViewById(R.id.setting_daynight_group);
+                RadioButton setting_daynight_light = view.findViewById(R.id.setting_daynight_light);
+                RadioButton setting_daynight_dark = view.findViewById(R.id.setting_daynight_dark);
+                RadioButton setting_daynight_system = view.findViewById(R.id.setting_daynight_system);
+
+                switch (sharedPreferences.getString("dayNight",ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM)){
+                    case ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM: setting_daynight_system.setChecked(true);break;
+                    case ThemeUtil.DAYNIGHT_DAY: setting_daynight_light.setChecked(true);break;
+                    case ThemeUtil.DAYNIGHT_NIGHT: setting_daynight_dark.setChecked(true);break;
+                }
+
+                Button dialog_ok = view.findViewById(R.id.dialog_ok);
+                dialog_ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (dialog.isShowing() && dialog != null){
+                            dialog.dismiss();
+                        }
+                        switch (setting_daynight_group.getCheckedRadioButtonId()){
+                            case R.id.setting_daynight_light : AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); editor.putString("dayNight",ThemeUtil.DAYNIGHT_DAY).apply(); recreate();break;
+                            case R.id.setting_daynight_dark : AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES); editor.putString("dayNight",ThemeUtil.DAYNIGHT_NIGHT).apply(); recreate();break;
+                            default:
+                            case R.id.setting_daynight_system : AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM); editor.putString("dayNight",ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM).apply();recreate(); break;
+                        }
+                    }
+                });
+
+                lp.width = (int) (displayMetrics.widthPixels*0.9);
+                lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                lp.gravity = Gravity.CENTER;
+                dialogWindow.setAttributes(lp);
+
+                if (!dialog.isShowing() && dialog != null){
+                    dialog.show();
                 }
             }
         });
 
-        Chip setting_donate_1 = home_settings.findViewById(R.id.setting_donate_1);
-        Chip setting_donate_2 = home_settings.findViewById(R.id.setting_donate_2);
-        Chip setting_donate_3 = home_settings.findViewById(R.id.setting_donate_3);
-        Chip setting_donate_4 = home_settings.findViewById(R.id.setting_donate_4);
+        //Haptic Feedback
+        setting_haptic_display.setText(context.getString(R.string.setting_haptic_feedback_level).replace("{%1}",String.valueOf(VibrateUtil.getVibrationLvl(context))));
+        setting_haptic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(context,R.style.RadioDialogStyle_R);
+                View view = View.inflate(context, R.layout.dialog_haptic, null);
+                dialog.setContentView(view);
+                dialog.setCanceledOnTouchOutside(false);
+                Window dialogWindow = dialog.getWindow();
+                WindowManager.LayoutParams lp = dialogWindow.getAttributes();
 
+                SeekBar setting_haptic_seekbar = view.findViewById(R.id.setting_haptic_seekbar);
+                Button dialog_ok = view.findViewById(R.id.dialog_ok);
+
+                vibration_lvl = VibrateUtil.getVibrationLvl(context);
+                setting_haptic_seekbar.setProgress(vibration_lvl);
+                setting_haptic_seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                        VibrateUtil.vibrate(context,progress);
+                        vibration_lvl = progress;
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+
+                    }
+
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+
+                    }
+                });
+                dialog_ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        VibrateUtil.setVibrationLvl(context, vibration_lvl);
+                        setting_haptic_display.setText(context.getString(R.string.setting_haptic_feedback_level).replace("{%1}",String.valueOf(VibrateUtil.getVibrationLvl(context))));
+                        if (dialog.isShowing() && dialog != null){
+                            dialog.dismiss();
+                        }
+                    }
+                });
+
+                lp.width = (int) (displayMetrics.widthPixels*0.9);
+                lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                lp.gravity = Gravity.CENTER;
+                dialogWindow.setAttributes(lp);
+
+                if (!dialog.isShowing() && dialog != null){
+                    dialog.show();
+                }
+            }
+        });
+
+        //Donation
         if (billingHelper != null){
             billingHelper.close();
         }
-        billingHelper = new BillingHelper(context, activity,new Chip[]{setting_donate_1,setting_donate_2,setting_donate_3,setting_donate_4});
+        billingHelper = new BillingHelper(context, activity,new LinearLayout[]{setting_donate_1,setting_donate_2,setting_donate_3,setting_donate_4});
 
         //Version Name
         TextView setting_version = home_settings.findViewById(R.id.setting_version);
@@ -433,6 +570,7 @@ public class HomePage extends AppCompatActivity {
         ImageView setting_discord = home_settings.findViewById(R.id.setting_discord);
         ImageView setting_email = home_settings.findViewById(R.id.setting_email);
 
+        //About
         setting_github.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -459,7 +597,6 @@ public class HomePage extends AppCompatActivity {
                 }
             }
         });
-
         setting_app_ico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -705,14 +842,18 @@ public class HomePage extends AppCompatActivity {
                     case ItemRSS.TYPE_LIGHTCONE: {filterPreference[0].setType(ItemRSS.TYPE_LIGHTCONE);filterPreferences[1] = filterPreference[0]; lightconesAdapter.filterRequestList(lightconesList,filterPreference[0]);break;}
                     case ItemRSS.TYPE_RELIC: {filterPreference[0].setType(ItemRSS.TYPE_RELIC);filterPreferences[2] = filterPreference[0]; relicsAdapter.filterRequestList(relicsList,filterPreference[0]);break;}
                 }
-                dialog.dismiss();
+                if (dialog.isShowing() && dialog != null){
+                    dialog.dismiss();
+                }
             }
         });
 
         filter_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog.dismiss();
+                if (dialog.isShowing() && dialog != null){
+                    dialog.dismiss();
+                }
             }
         });
 
@@ -811,7 +952,9 @@ public class HomePage extends AppCompatActivity {
 
     @Override
     public void recreate() {
-        billingHelper.close();
+        if (billingHelper != null){
+            billingHelper.close();
+        }
         super.recreate();
         root_init(true);
     }

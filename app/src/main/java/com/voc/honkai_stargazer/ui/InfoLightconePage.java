@@ -13,6 +13,7 @@ import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -51,6 +52,7 @@ import com.voc.honkai_stargazer.dev.HelpTool;
 import com.voc.honkai_stargazer.util.ItemRSS;
 import com.voc.honkai_stargazer.util.LangUtil;
 import com.voc.honkai_stargazer.util.RoundedCornersTransformation;
+import com.voc.honkai_stargazer.util.VibrateUtil;
 import com.willy.ratingbar.ScaleRatingBar;
 
 import org.json.JSONArray;
@@ -75,12 +77,14 @@ public class InfoLightconePage {
     ArrayList<Integer> materialItemsID = new ArrayList<>();
 
     String[] skillLvl = new String[]{"1","2","3","4","5"};
+    SharedPreferences sharedPreferences;
 
     public void setup(Context context, Activity activity, HSRItem hsrItem) {
         this.context = context;
         this.activity = activity;
         this.hsrItem = hsrItem;
         item_rss = new ItemRSS();
+        sharedPreferences = context.getSharedPreferences("user_info",Context.MODE_PRIVATE);
 
         final Dialog dialog = new Dialog(context, R.style.PageDialogStyle_P);
         View view = View.inflate(context, R.layout.fragment_info_lightcone_root, null);
@@ -154,6 +158,14 @@ public class InfoLightconePage {
         TextView info_desc = view.findViewById(R.id.info_desc);
         SeekBar info_lightcone_seekbar = view.findViewById(R.id.info_lightcone_seekbar);
 
+        LinearLayout lightcone_ll_1 = view.findViewById(R.id.lightcone_ll_1);
+        LinearLayout lightcone_ll_2 = view.findViewById(R.id.lightcone_ll_2);
+        LinearLayout lightcone_ll_3 = view.findViewById(R.id.lightcone_ll_3);
+
+        lightcone_ll_1.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+        lightcone_ll_2.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+        lightcone_ll_3.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
+
         Bitmap bitmapOriginal = BitmapFactory.decodeResource(context.getResources(),item_rss.getLightconeByName(hsrItem.getName())[1]);
         Bitmap croppedBitmap = Bitmap.createBitmap(bitmapOriginal, (int) (20*displayMetrics.density), (int) (20*displayMetrics.density),bitmapOriginal.getWidth()-(int) (40*displayMetrics.density), bitmapOriginal.getHeight()-(int) (40*displayMetrics.density));
 
@@ -194,6 +206,7 @@ public class InfoLightconePage {
         info_lightcone_seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                VibrateUtil.vibrate(context);
                 try {
                     int lvlCurr = seekBar.getProgress()+1;
                     int lvlPART = 0;

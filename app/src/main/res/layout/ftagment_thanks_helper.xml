@@ -16,7 +16,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="8dp"
             android:orientation="vertical">
 
             <TextView
@@ -60,7 +59,7 @@
                         android:drawableLeft="@drawable/ic_rare_star"
                         android:drawablePadding="4dp"
                         android:fontFamily="@font/hsr_font"
-                        android:text="SipTik#1171" />
+                        android:text="siptik (SipTik#1171)" />
                 </LinearLayout>
 
                 <TextView
@@ -89,7 +88,7 @@
                         android:drawableLeft="@drawable/ic_rare_star"
                         android:drawablePadding="4dp"
                         android:fontFamily="@font/hsr_font"
-                        android:text="SipTik#1171" />
+                        android:text="siptik (SipTik#1171)" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -126,15 +125,66 @@
                         android:drawableLeft="@drawable/ic_rare_star"
                         android:drawablePadding="4dp"
                         android:fontFamily="@font/hsr_font"
-                        android:text="𝕽𝖚𝖗𝖎#3080" />
+                        android:text="ruri_otogi (𝕽𝖚𝖗𝖎#3080)" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/helper_de_de_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Deutsch"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:text="KillGor#1421"
-                        android:visibility="gone" />
+                        android:drawableLeft="@drawable/ic_rare_star"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/hsr_font"
+                        android:text="marik._." />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/helper_pt_pt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Português"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/ic_rare_star"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/hsr_font"
+                        android:text="whitykun" />
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -159,7 +209,7 @@
                 android:drawableLeft="@drawable/ic_rare_star"
                 android:drawablePadding="4dp"
                 android:fontFamily="@font/hsr_font"
-                android:text="SipTik#1171" />
+                android:text="siptik (SipTik#1171)" />
 
             <TextView
                 android:id="@+id/helper_icon_design_title"
@@ -192,7 +242,7 @@
                 android:drawableLeft="@drawable/ic_rare_star"
                 android:drawablePadding="4dp"
                 android:fontFamily="@font/hsr_font"
-                android:text="2O48#6892" />
+                android:text="2o48 (2O48#6892)" />
 
             <TextView
                 android:id="@+id/helper_ui_design_title3"
@@ -217,10 +267,10 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="4dp"
-                    android:drawableLeft="@drawable/ic_rare_star"
+                    android:drawableLeft="@drawable/circle_spec_blue"
                     android:drawablePadding="4dp"
                     android:fontFamily="@font/hsr_font"
-                    android:text="2O48#6892" />
+                    android:text="2o48 (2O48#6892)" />
 
                 <TextView
                     android:id="@+id/textView39"
@@ -229,10 +279,10 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="4dp"
-                    android:drawableLeft="@drawable/ic_rare_star"
+                    android:drawableLeft="@drawable/circle_spec_red"
                     android:drawablePadding="4dp"
                     android:fontFamily="@font/hsr_font"
-                    android:text="SipTik#1171" />
+                    android:text="siptik (SipTik#1171)" />
 
                 <TextView
                     android:id="@+id/textView40"
@@ -241,10 +291,10 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="4dp"
-                    android:drawableLeft="@drawable/ic_rare_star"
+                    android:drawableLeft="@drawable/circle_spec_yellow"
                     android:drawablePadding="4dp"
                     android:fontFamily="@font/hsr_font"
-                    android:text="Somebody#9466" />
+                    android:text="somebody.c (Somebody#9466)" />
 
                 <TextView
                     android:id="@+id/textView41"
@@ -253,10 +303,10 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="4dp"
-                    android:drawableLeft="@drawable/ic_rare_star"
+                    android:drawableLeft="@drawable/circle_spec_pink"
                     android:drawablePadding="4dp"
                     android:fontFamily="@font/hsr_font"
-                    android:text="Voc-夜芷冰#2512" />
+                    android:text="vocaloid2048 (Voc-夜芷冰#2512)" />
 
             </LinearLayout>
 

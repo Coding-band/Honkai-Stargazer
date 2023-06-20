@@ -15,6 +15,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,7 +33,6 @@ import com.android.billingclient.api.ProductDetailsResponseListener;
 import com.android.billingclient.api.Purchase;
 import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.QueryProductDetailsParams;
-import com.google.android.material.chip.Chip;
 import com.google.common.collect.ImmutableList;
 import com.voc.honkai_stargazer.R;
 
@@ -40,6 +40,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
 public class BillingHelper {
     public static final String DONATION_HKD_8 = "donation_hkd_8";
@@ -63,19 +64,24 @@ public class BillingHelper {
 
     private BillingClient billingClient ;
 
-    private Chip[] chips;
+    private LinearLayout[] lls;
 
     public static final String PAYMENT_SUCCESS = "PAYMENT_SUCCESS";
     public static final String PAYMENT_FAILED = "PAYMENT_FAILED";
     public static final String PAYMENT_USER_CANCELLED = "PAYMENT_USER_CANCELLED";
 
     Dialog dialog = null;
-
-    public BillingHelper(Context context, Activity activity, Chip[] chips) {
+    public BillingHelper(Context context, Activity activity, LinearLayout[] lls) {
         this.context = context;
         this.activity = activity;
-        this.chips = chips;
+        this.lls = lls;
 
+        initBilling();
+        connectToGooglePlayBilling(lls);
+    }
+
+    private void initBilling() {
+        System.out.println("initBilling");
         billingClient = BillingClient.newBuilder(context)
                 .setListener(new PurchasesUpdatedListener() {
                     @Override
@@ -97,7 +103,6 @@ public class BillingHelper {
                 })
                 .enablePendingPurchases()
                 .build();
-        connectToGooglePlayBilling(chips);
     }
 
     private void displayDialog(String resultTag, BillingResult billingResult) {
@@ -176,27 +181,31 @@ public class BillingHelper {
 
         billingClient.consumeAsync(consumeParams, listener);
     }
+    private void connectToGooglePlayBilling(LinearLayout[] lls){
+        if (billingClient == null){
+            initBilling();
+        }
 
-    private void connectToGooglePlayBilling(Chip[] chips){
         billingClient.startConnection(
                 new BillingClientStateListener() {
                     @Override
                     public void onBillingServiceDisconnected() {
-                        connectToGooglePlayBilling(chips);
+                        connectToGooglePlayBilling(lls);
                     }
 
                     @Override
                     public void onBillingSetupFinished(@NonNull BillingResult billingResult) {
                         if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK){
-                            getProductDetails(chips);
+                            getProductDetails(lls);
                         }
                     }
                 }
         );
     }
 
-    private void getProductDetails(Chip[] chips){
+    private void getProductDetails(LinearLayout[] lls){
         productList = new ArrayList<>();
+
         for (int x = 0 ; x < purchaseItemIDs.size() ; x ++){
             productList.add(
                     QueryProductDetailsParams.Product.newBuilder()
@@ -224,7 +233,9 @@ public class BillingHelper {
                 });
 
                 if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK && list != null){
-                    for (int pos = 0 ; pos < list.size() && pos < chips.length ; pos ++){
+
+                    System.out.println("list : "+list.size() + " | lls : "+lls.length);
+                    for (int pos = 0 ; pos < list.size() && pos < lls.length ; pos ++){
                         ImmutableList productDetailsParamsList =
                                 ImmutableList.of(
                                         BillingFlowParams.ProductDetailsParams.newBuilder()
@@ -235,7 +246,8 @@ public class BillingHelper {
                                                 //.setOfferToken(selectedOfferToken)
                                                 .build()
                                 );
-                        chips[pos].setOnClickListener(new View.OnClickListener() {
+
+                        lls[pos].setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 billingClient.launchBillingFlow(activity, BillingFlowParams.newBuilder()
@@ -256,9 +268,9 @@ public class BillingHelper {
         if (billingClient != null){
             billingClient.endConnection();
             billingClient = null;
-            for (Chip chip : chips){
-                chip.setOnClickListener(null);
-                chip = null;
+            for (LinearLayout linearLayout : lls){
+                linearLayout.setOnClickListener(null);
+                linearLayout = null;
             }
         }
     }
