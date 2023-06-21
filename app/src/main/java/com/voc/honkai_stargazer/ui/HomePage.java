@@ -13,6 +13,7 @@ import static com.voc.honkai_stargazer.util.ItemRSS.LoadExtendData;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -32,6 +33,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -107,7 +109,7 @@ public class HomePage extends AppCompatActivity {
     int vibration_lvl = 0;
 
     public static final String TAG = "HomePage";
-    ThemeUtil themeUtil;
+    ThemeUtil themeUtil ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +129,7 @@ public class HomePage extends AppCompatActivity {
 
         ItemRSS.initLang(context);
         LogExport.init(context);
+        themeUtil = new ThemeUtil(context);
 
         if (!sharedPreferences.getString("last_bug_report","NONE").equals("NONE")){
             String reportName = sharedPreferences.getString("last_bug_report","NONE");
@@ -189,15 +192,24 @@ public class HomePage extends AppCompatActivity {
         relic_init();
         setting_init();
 
-
     }
 
     public void root_init(boolean isSetting){
+
         final LayoutInflater mInflater = getLayoutInflater().from(this);
         home_characters = mInflater.inflate(R.layout.fragment_home_characters, null,false);
         home_lightcones = mInflater.inflate(R.layout.fragment_home_lightcones, null,false);
         home_relics = mInflater.inflate(R.layout.fragment_home_relics, null,false);
         home_settings = mInflater.inflate(R.layout.fragment_home_settings, null,false);
+
+        themeUtil.themeTint(
+                findViewById(R.id.rootView_home),
+                home_characters.findViewById(R.id.rootView_home_characters),
+                home_lightcones.findViewById(R.id.rootView_home_lightcones),
+                home_relics.findViewById(R.id.rootView_home_relics),
+                home_settings.findViewById(R.id.rootView_home_settings)
+        );
+        themeUtil.navigationSetup(getWindow());
 
         viewPager_List = new ArrayList<View>();
         viewPager_List.add(home_characters);
@@ -787,6 +799,7 @@ public class HomePage extends AppCompatActivity {
         dialog.setCanceledOnTouchOutside(true);
         Window dialogWindow = dialog.getWindow();
         WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+        themeUtil.themeTint(view.findViewById(R.id.rootView_home_filter));
 
         final FilterPreference[] filterPreference = {new FilterPreference()};
 

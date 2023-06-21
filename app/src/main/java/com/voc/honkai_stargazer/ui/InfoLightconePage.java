@@ -52,6 +52,7 @@ import com.voc.honkai_stargazer.dev.HelpTool;
 import com.voc.honkai_stargazer.util.ItemRSS;
 import com.voc.honkai_stargazer.util.LangUtil;
 import com.voc.honkai_stargazer.util.RoundedCornersTransformation;
+import com.voc.honkai_stargazer.util.ThemeUtil;
 import com.voc.honkai_stargazer.util.VibrateUtil;
 import com.willy.ratingbar.ScaleRatingBar;
 
@@ -79,6 +80,8 @@ public class InfoLightconePage {
     String[] skillLvl = new String[]{"1","2","3","4","5"};
     SharedPreferences sharedPreferences;
 
+    ThemeUtil themeUtil;
+
     public void setup(Context context, Activity activity, HSRItem hsrItem) {
         this.context = context;
         this.activity = activity;
@@ -93,6 +96,12 @@ public class InfoLightconePage {
         //view.setMinimumHeight((int) (ScreenSizeUtils.getInstance(this).getScreenHeight()));
         Window dialogWindow = dialog.getWindow();
         WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+
+        themeUtil = new ThemeUtil(context);
+        themeUtil.navigationSetup(dialogWindow);
+        themeUtil.themeTint(
+                view.findViewById(R.id.rootView_info_lightcone)
+        );
 
         lp.width = WindowManager.LayoutParams.MATCH_PARENT;
         lp.height = WindowManager.LayoutParams.MATCH_PARENT;

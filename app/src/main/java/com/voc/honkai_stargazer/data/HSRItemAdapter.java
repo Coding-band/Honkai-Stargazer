@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -40,6 +41,7 @@ import com.voc.honkai_stargazer.util.ItemRSS;
 import com.voc.honkai_stargazer.util.LangUtil;
 import com.voc.honkai_stargazer.util.LogExport;
 import com.voc.honkai_stargazer.util.RoundedCornersTransformation;
+import com.voc.honkai_stargazer.util.ThemeUtil;
 import com.willy.ratingbar.ScaleRatingBar;
 
 import org.json.JSONException;
@@ -118,6 +120,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
         holder.item_relic_ll.setVisibility(View.GONE);
         holder.item_sub_ll.setVisibility(View.GONE);
         holder.item_normal_ll.setVisibility(View.VISIBLE);
+
 
         int ico_rss = R.drawable.ico_lost_img;
         if (TYPE.equals(ItemRSS.TYPE_CHARACTER) || TYPE.equals(ItemRSS.TYPE_CHARACTER_TEAM1) || TYPE.equals(ItemRSS.TYPE_CHARACTER_TEAM2)){
@@ -314,6 +317,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
 
         public CardView item_card;
 
+        public ConstraintLayout item_root;
         public ViewHolder(View itemView, final AdapterView.OnItemClickListener listener) {
             super(itemView);
 
@@ -324,6 +328,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
             item_path_tv = itemView.findViewById(R.id.item_path_tv);
             item_path_ico = itemView.findViewById(R.id.item_path_ico);
             item_kwang_alpha = itemView.findViewById(R.id.item_kwang_alpha);
+            item_card = itemView.findViewById(R.id.item_card);
             item_card = itemView.findViewById(R.id.item_card);
 
             item_hp_tv = itemView.findViewById(R.id.item_hp_tv);
@@ -350,6 +355,12 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
             item_4pc = itemView.findViewById(R.id.item_4pc);
 
             item_beta = itemView.findViewById(R.id.item_beta);
+            item_root = itemView.findViewById(R.id.rootView_row);
+
+            ThemeUtil themeUtil = new ThemeUtil(context);
+            themeUtil.themeTint(
+                    item_root
+            );
 
         }
     }

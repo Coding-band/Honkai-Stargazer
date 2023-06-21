@@ -37,6 +37,7 @@ import com.voc.honkai_stargazer.util.CustomViewPagerAdapter;
 import com.voc.honkai_stargazer.util.ItemRSS;
 import com.voc.honkai_stargazer.util.LangUtil;
 import com.voc.honkai_stargazer.util.LogExport;
+import com.voc.honkai_stargazer.util.ThemeUtil;
 import com.voc.honkai_stargazer.util.VibrateUtil;
 import com.willy.ratingbar.ScaleRatingBar;
 
@@ -79,6 +80,8 @@ public class InfoCharacterPage {
 
     SharedPreferences sharedPreferences;
 
+    ThemeUtil themeUtil;
+
     public void setup(Context context, Activity activity, HSRItem hsrItem){
         this.context = context;
         this.activity = activity;
@@ -103,6 +106,15 @@ public class InfoCharacterPage {
         //view.setMinimumHeight((int) (ScreenSizeUtils.getInstance(this).getScreenHeight()));
         Window dialogWindow = dialog.getWindow();
         WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+
+        themeUtil = new ThemeUtil(context);
+        themeUtil.navigationSetup(activity.getWindow());
+        themeUtil.themeTint(
+                view.findViewById(R.id.rootView_info_character),
+                info_introducing.findViewById(R.id.rootView_info_character_intro),
+                info_combat.findViewById(R.id.rootView_info_character_combat),
+                info_eidolon.findViewById(R.id.rootView_info_character_eidolon)
+        );
 
         lp.width = WindowManager.LayoutParams.MATCH_PARENT;
         lp.height = WindowManager.LayoutParams.MATCH_PARENT;
