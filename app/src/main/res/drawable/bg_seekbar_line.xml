@@ -5,28 +5,14 @@
   -->
 
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/background"
-        android:gravity="center_vertical|fill_horizontal">
-        <shape android:shape="rectangle">
-            <corners android:radius="5dp" />
-            <size android:height="5dp" />
-            <solid android:color="@color/tv_nightday_tint" />
-        </shape>
-    </item>
     <item android:id="@+id/progress"
         android:gravity="center_vertical|fill_horizontal">
         <scale android:scaleWidth="100%">
-            <selector>
-                <item android:state_enabled="false"
-                    android:drawable="@color/transparent" />
-                <item>
-                    <shape android:shape="rectangle">
-                        <corners android:radius="5dp" />
-                        <size android:height="5dp" />
-                        <solid android:color="@color/seekbar_line_progress" />
-                    </shape>
-                </item>
-            </selector>
+            <shape android:shape="rectangle">
+                <corners android:radius="5dp" />
+                <size android:height="5dp" />
+                <solid android:color="@color/seekbar_line_progress" />
+            </shape>
         </scale>
     </item>
 </layer-list>

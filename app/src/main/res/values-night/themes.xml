@@ -42,10 +42,12 @@
     </style>
     <style name="Widget.Seekbar" parent="Widget.AppCompat.SeekBar">
         <item name="android:progressDrawable">@drawable/bg_seekbar_line</item>
+        <item name="android:background">@drawable/bg_seekbar_bg</item>
         <item name="android:thumbTint">@color/filter_btn_themed</item>
     </style>
     <style name="Widget.Seekbar.Discrete" parent="Widget.AppCompat.SeekBar.Discrete">
         <item name="android:progressDrawable">@drawable/bg_seekbar_line</item>
+        <item name="android:background">@drawable/bg_seekbar_bg</item>
         <item name="android:thumbTint">@color/filter_btn_themed</item>
     </style>
     <style name="Widget.Chip.TextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">

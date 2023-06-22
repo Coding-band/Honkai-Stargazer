@@ -24,6 +24,8 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
@@ -392,6 +394,10 @@ public class HomePage extends AppCompatActivity {
                 dialog.setCanceledOnTouchOutside(false);
                 Window dialogWindow = dialog.getWindow();
                 WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+                themeUtil.navigationSetup(dialogWindow);
+                themeUtil.themeTint(
+                        view.findViewById(R.id.rootView_dialog_language)
+                );
 
                 RadioGroup setting_lang_group = view.findViewById(R.id.setting_lang_group);
                 RadioButton setting_lang_zh_hk = view.findViewById(R.id.setting_lang_zh_hk);
@@ -471,6 +477,11 @@ public class HomePage extends AppCompatActivity {
                 Window dialogWindow = dialog.getWindow();
                 WindowManager.LayoutParams lp = dialogWindow.getAttributes();
 
+                themeUtil.navigationSetup(dialogWindow);
+                themeUtil.themeTint(
+                        view.findViewById(R.id.rootView_dialog_daynight)
+                );
+
                 //DayNight
                 RadioGroup setting_daynight_group = view.findViewById(R.id.setting_daynight_group);
                 RadioButton setting_daynight_light = view.findViewById(R.id.setting_daynight_light);
@@ -522,6 +533,11 @@ public class HomePage extends AppCompatActivity {
                 Window dialogWindow = dialog.getWindow();
                 WindowManager.LayoutParams lp = dialogWindow.getAttributes();
 
+                themeUtil.navigationSetup(dialogWindow);
+                themeUtil.themeTint(
+                        view.findViewById(R.id.rootView_dialog_haptic)
+                );
+
                 SeekBar setting_haptic_seekbar = view.findViewById(R.id.setting_haptic_seekbar);
                 Button dialog_ok = view.findViewById(R.id.dialog_ok);
 
@@ -549,6 +565,72 @@ public class HomePage extends AppCompatActivity {
                     public void onClick(View v) {
                         VibrateUtil.setVibrationLvl(context, vibration_lvl);
                         setting_haptic_display.setText(context.getString(R.string.setting_haptic_feedback_level).replace("{%1}",String.valueOf(VibrateUtil.getVibrationLvl(context))));
+                        if (dialog.isShowing() && dialog != null){
+                            dialog.dismiss();
+                        }
+                    }
+                });
+
+                lp.width = (int) (displayMetrics.widthPixels*0.9);
+                lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                lp.gravity = Gravity.CENTER;
+                dialogWindow.setAttributes(lp);
+
+                if (!dialog.isShowing() && dialog != null){
+                    dialog.show();
+                }
+            }
+        });
+
+        //Material Color Change
+        setting_material_engine_display.setText(sharedPreferences.getString("themedColor",ThemeUtil.COLOR_1));
+
+        setting_material_engine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(context,R.style.RadioDialogStyle_R);
+                View view = View.inflate(context, R.layout.dialog_color, null);
+                dialog.setContentView(view);
+                dialog.setCanceledOnTouchOutside(false);
+                Window dialogWindow = dialog.getWindow();
+                WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+
+                themeUtil.navigationSetup(dialogWindow);
+                themeUtil.themeTint(
+                        view.findViewById(R.id.rootView_dialog_color)
+                );
+
+                Button dialog_ok = view.findViewById(R.id.dialog_ok);
+                RadioGroup setting_color_group = view.findViewById(R.id.setting_color_group);
+                RadioButton setting_color_1 = view.findViewById(R.id.setting_color_1);
+                RadioButton setting_color_2 = view.findViewById(R.id.setting_color_2);
+                RadioButton setting_color_3 = view.findViewById(R.id.setting_color_3);
+                RadioButton setting_color_4 = view.findViewById(R.id.setting_color_4);
+                RadioButton setting_color_5 = view.findViewById(R.id.setting_color_5);
+                RadioButton setting_color_6 = view.findViewById(R.id.setting_color_6);
+
+                String tmpColor = sharedPreferences.getString("themedColor",ThemeUtil.COLOR_1);
+
+                switch (tmpColor){
+                    case ThemeUtil.COLOR_1: setting_color_1.setChecked(true);tmpColor = ThemeUtil.COLOR_1;break;
+                    case ThemeUtil.COLOR_2: setting_color_2.setChecked(true);tmpColor = ThemeUtil.COLOR_2;break;
+                    case ThemeUtil.COLOR_3: setting_color_3.setChecked(true);tmpColor = ThemeUtil.COLOR_3;break;
+                    case ThemeUtil.COLOR_4: setting_color_4.setChecked(true);tmpColor = ThemeUtil.COLOR_4;break;
+                    case ThemeUtil.COLOR_5: setting_color_5.setChecked(true);tmpColor = ThemeUtil.COLOR_5;break;
+                    case ThemeUtil.COLOR_6: setting_color_6.setChecked(true);tmpColor = ThemeUtil.COLOR_6;break;
+                }
+                dialog_ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        switch (setting_color_group.getCheckedRadioButtonId()){
+                            case R.id.setting_color_1 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_1).apply();recreate();break;
+                            case R.id.setting_color_2 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_2).apply();recreate();break;
+                            case R.id.setting_color_3 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_3).apply();recreate();break;
+                            case R.id.setting_color_4 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_4).apply();recreate();break;
+                            case R.id.setting_color_5 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_5).apply();recreate();break;
+                            case R.id.setting_color_6 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_6).apply();recreate();break;
+                        }
+                        setting_material_engine_display.setText(sharedPreferences.getString("themedColor",ThemeUtil.COLOR_1));
                         if (dialog.isShowing() && dialog != null){
                             dialog.dismiss();
                         }
@@ -799,7 +881,11 @@ public class HomePage extends AppCompatActivity {
         dialog.setCanceledOnTouchOutside(true);
         Window dialogWindow = dialog.getWindow();
         WindowManager.LayoutParams lp = dialogWindow.getAttributes();
-        themeUtil.themeTint(view.findViewById(R.id.rootView_home_filter));
+
+        themeUtil.navigationSetup(dialogWindow);
+        themeUtil.themeTint(
+                view.findViewById(R.id.rootView_home_filter)
+        );
 
         final FilterPreference[] filterPreference = {new FilterPreference()};
 

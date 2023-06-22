@@ -5,7 +5,7 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/rootView_dialog_language"
+    android:id="@+id/rootView_dialog_color"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_dialog_bg"
@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="@string/setting_language_title"
+        android:text="@string/setting_material_color_title"
         android:textSize="24sp" />
 
     <ScrollView
@@ -34,66 +34,69 @@
             android:orientation="vertical">
 
             <RadioGroup
-                android:id="@+id/setting_lang_group"
-                android:layout_width="match_parent"
+                android:id="@+id/setting_color_group"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent">
 
                 <RadioButton
-                    android:id="@+id/setting_lang_en"
-                    android:layout_width="match_parent"
+                    android:id="@+id/setting_color_1"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
-                    android:text="English" />
+                    android:drawableRight="@drawable/circle_spec_red"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#6750A4"
+                    android:text="#6750A4" />
 
                 <RadioButton
-                    android:id="@+id/setting_lang_zh_hk"
+                    android:id="@+id/setting_color_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="繁體中文" />
+                    android:checked="false"
+                    android:drawableRight="@drawable/circle_spec_red"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#009688"
+                    android:text="#009688" />
 
                 <RadioButton
-                    android:id="@+id/setting_lang_zh_cn"
+                    android:id="@+id/setting_color_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="简体中文" />
+                    android:checked="false"
+                    android:drawableRight="@drawable/circle_spec_red"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#F6C032"
+                    android:text="#F6C032" />
 
                 <RadioButton
-                    android:id="@+id/setting_lang_jp"
+                    android:id="@+id/setting_color_4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="日本語" />
+                    android:checked="false"
+                    android:drawableRight="@drawable/circle_spec_red"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#32C7F6"
+                    android:text="#32C7F6" />
 
                 <RadioButton
-                    android:id="@+id/setting_lang_fr"
+                    android:id="@+id/setting_color_5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Français"
-                    android:visibility="visible" />
+                    android:checked="false"
+                    android:drawableRight="@drawable/circle_spec_red"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#F63279"
+                    android:text="#F63279" />
 
                 <RadioButton
-                    android:id="@+id/setting_lang_ru"
+                    android:id="@+id/setting_color_6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Русский" />
-
-                <RadioButton
-                    android:id="@+id/setting_lang_ua"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Українська" />
-
-                <RadioButton
-                    android:id="@+id/setting_lang_de"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Deutsch"
-                    android:visibility="visible" />
-
-                <RadioButton
-                    android:id="@+id/setting_lang_pt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Português" />
+                    android:checked="false"
+                    android:drawableRight="@drawable/circle_spec_red"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#73D246"
+                    android:text="#73D246" />
             </RadioGroup>
         </LinearLayout>
     </ScrollView>
