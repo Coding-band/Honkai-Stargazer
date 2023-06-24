@@ -605,6 +605,15 @@ public class ItemRSS {
         }
     }
 
+    public String localeStatusFromPrydwen(String status, Context context){
+        switch (status){
+            case "Speed" : return context.getString(R.string.status_speed);
+            case "ATK%" : return context.getString(R.string.status_atk);
+            case "CRIT Rate" : return context.getString(R.string.status_crit_rate);
+        }
+        return status;
+    }
+
     public static SpannableString valuedText(String desc, JSONArray params, Context context) throws JSONException {
         if (params != null){
             // Turn #1[i] to value

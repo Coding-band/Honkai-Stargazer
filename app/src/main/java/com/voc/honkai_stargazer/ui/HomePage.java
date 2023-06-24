@@ -58,6 +58,7 @@ import com.voc.honkai_stargazer.R;
 import com.voc.honkai_stargazer.data.FilterPreference;
 import com.voc.honkai_stargazer.data.HSRItem;
 import com.voc.honkai_stargazer.data.HSRItemAdapter;
+import com.voc.honkai_stargazer.dev.HelpTool;
 import com.voc.honkai_stargazer.util.BillingHelper;
 import com.voc.honkai_stargazer.util.CustomViewPager;
 import com.voc.honkai_stargazer.util.CustomViewPagerAdapter;
@@ -82,7 +83,7 @@ public class HomePage extends AppCompatActivity {
 
     CustomViewPager viewPager;
     private ArrayList<View> viewPager_List;
-    View home_characters, home_lightcones, home_relics, home_settings;
+    View home_home, home_characters, home_lightcones, home_relics, home_settings;
     BottomNavigationView home_nav;
 
     RecyclerView charactersListView ;
@@ -131,7 +132,7 @@ public class HomePage extends AppCompatActivity {
 
         ItemRSS.initLang(context);
         LogExport.init(context);
-        themeUtil = new ThemeUtil(context);
+        themeUtil = new ThemeUtil(context,activity);
 
         if (!sharedPreferences.getString("last_bug_report","NONE").equals("NONE")){
             String reportName = sharedPreferences.getString("last_bug_report","NONE");
@@ -199,6 +200,7 @@ public class HomePage extends AppCompatActivity {
     public void root_init(boolean isSetting){
 
         final LayoutInflater mInflater = getLayoutInflater().from(this);
+        home_home = mInflater.inflate(R.layout.fragment_home_home, null,false);
         home_characters = mInflater.inflate(R.layout.fragment_home_characters, null,false);
         home_lightcones = mInflater.inflate(R.layout.fragment_home_lightcones, null,false);
         home_relics = mInflater.inflate(R.layout.fragment_home_relics, null,false);
@@ -206,6 +208,7 @@ public class HomePage extends AppCompatActivity {
 
         themeUtil.themeTint(
                 findViewById(R.id.rootView_home),
+                home_home.findViewById(R.id.rootView_home_home),
                 home_characters.findViewById(R.id.rootView_home_characters),
                 home_lightcones.findViewById(R.id.rootView_home_lightcones),
                 home_relics.findViewById(R.id.rootView_home_relics),
@@ -214,6 +217,7 @@ public class HomePage extends AppCompatActivity {
         themeUtil.navigationSetup(getWindow());
 
         viewPager_List = new ArrayList<View>();
+        viewPager_List.add(home_home);
         viewPager_List.add(home_characters);
         viewPager_List.add(home_lightcones);
         viewPager_List.add(home_relics);
@@ -232,7 +236,7 @@ public class HomePage extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                int[] posList = new int[]{R.id.menu_characters, R.id.menu_lightcones, R.id.menu_relics, R.id.menu_settings};
+                int[] posList = new int[]{R.id.menu_home, R.id.menu_characters, R.id.menu_lightcones, R.id.menu_relics, R.id.menu_settings};
                 home_nav.setSelectedItemId(posList[position]);
             }
 
@@ -245,20 +249,24 @@ public class HomePage extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.menu_characters:{
+                    case R.id.menu_home:{
                         viewPager.setCurrentItem(0);
                         return true;
                     }
-                    case R.id.menu_lightcones: {
+                    case R.id.menu_characters:{
                         viewPager.setCurrentItem(1);
                         return true;
                     }
-                    case R.id.menu_relics:{
+                    case R.id.menu_lightcones: {
                         viewPager.setCurrentItem(2);
                         return true;
                     }
-                    case R.id.menu_settings:{
+                    case R.id.menu_relics:{
                         viewPager.setCurrentItem(3);
+                        return true;
+                    }
+                    case R.id.menu_settings:{
+                        viewPager.setCurrentItem(4);
                         return true;
                     }
                 }
@@ -267,7 +275,7 @@ public class HomePage extends AppCompatActivity {
         });
 
         if (isSetting){
-            viewPager.setCurrentItem(3);
+            viewPager.setCurrentItem(4);
         }
     }
 

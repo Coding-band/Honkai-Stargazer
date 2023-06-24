@@ -97,7 +97,7 @@ public class InfoLightconePage {
         Window dialogWindow = dialog.getWindow();
         WindowManager.LayoutParams lp = dialogWindow.getAttributes();
 
-        themeUtil = new ThemeUtil(context);
+        themeUtil = new ThemeUtil(context,activity);
         themeUtil.navigationSetup(dialogWindow);
         themeUtil.themeTint(
                 view.findViewById(R.id.rootView_info_lightcone)
@@ -170,10 +170,6 @@ public class InfoLightconePage {
         LinearLayout lightcone_ll_1 = view.findViewById(R.id.lightcone_ll_1);
         LinearLayout lightcone_ll_2 = view.findViewById(R.id.lightcone_ll_2);
         LinearLayout lightcone_ll_3 = view.findViewById(R.id.lightcone_ll_3);
-
-        lightcone_ll_1.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
-        lightcone_ll_2.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
-        lightcone_ll_3.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
 
         Bitmap bitmapOriginal = BitmapFactory.decodeResource(context.getResources(),item_rss.getLightconeByName(hsrItem.getName())[1]);
         Bitmap croppedBitmap = Bitmap.createBitmap(bitmapOriginal, (int) (20*displayMetrics.density), (int) (20*displayMetrics.density),bitmapOriginal.getWidth()-(int) (40*displayMetrics.density), bitmapOriginal.getHeight()-(int) (40*displayMetrics.density));

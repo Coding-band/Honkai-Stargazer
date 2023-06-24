@@ -47,11 +47,8 @@ import org.json.JSONObject;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.math.RoundingMode;
 import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -64,13 +61,19 @@ public class InfoCharacterPage {
     HSRItem hsrItem;
 
     ViewPager info_vp;
-    View info_introducing, info_combat, info_eidolon;
+    View info_introducing, info_combat, info_eidolon, info_advice, info_trace;
     ArrayList<View> viewArrayList = new ArrayList<>();
     TabLayout info_tablayout;
 
     public static final int TAB_INTRODUCING = 100;
     public static final int TAB_COMBAT = 101;
     public static final int TAB_EIDOLON = 102;
+    public static final int TAB_ADVICE = 103;
+    public static final int TAB_TRACE = 104;
+
+    public static final String CHOICE_OR = " / ";
+    public static final String CHOICE_BEST = " >>> ";
+    public static final String CHOICE_BETTER = " > ";
 
     ItemRSS item_rss;
 
@@ -93,11 +96,13 @@ public class InfoCharacterPage {
         info_introducing = mInflater.inflate(R.layout.fragment_info_character_intro, null,false);
         info_combat = mInflater.inflate(R.layout.fragment_info_character_combat, null,false);
         info_eidolon = mInflater.inflate(R.layout.fragment_info_character_eidolon, null,false);
+        info_advice = mInflater.inflate(R.layout.fragment_info_character_advice, null,false);
 
         viewArrayList = new ArrayList<>();
         viewArrayList.add(info_introducing);
         viewArrayList.add(info_combat);
         viewArrayList.add(info_eidolon);
+        viewArrayList.add(info_advice);
 
         final Dialog dialog = new Dialog(context, R.style.PageDialogStyle_P);
         View view = View.inflate(context, R.layout.fragment_info_character_root, null);
@@ -107,13 +112,14 @@ public class InfoCharacterPage {
         Window dialogWindow = dialog.getWindow();
         WindowManager.LayoutParams lp = dialogWindow.getAttributes();
 
-        themeUtil = new ThemeUtil(context);
+        themeUtil = new ThemeUtil(context,activity);
         themeUtil.navigationSetup(activity.getWindow());
         themeUtil.themeTint(
                 view.findViewById(R.id.rootView_info_character),
                 info_introducing.findViewById(R.id.rootView_info_character_intro),
                 info_combat.findViewById(R.id.rootView_info_character_combat),
-                info_eidolon.findViewById(R.id.rootView_info_character_eidolon)
+                info_eidolon.findViewById(R.id.rootView_info_character_eidolon),
+                info_advice.findViewById(R.id.rootView_info_character_advice)
         );
 
         lp.width = WindowManager.LayoutParams.MATCH_PARENT;
@@ -136,6 +142,7 @@ public class InfoCharacterPage {
         info_tablayout.addTab(info_tablayout.newTab().setId(TAB_INTRODUCING).setText(R.string.character_intro));
         info_tablayout.addTab(info_tablayout.newTab().setId(TAB_COMBAT).setText(R.string.character_combat));
         info_tablayout.addTab(info_tablayout.newTab().setId(TAB_EIDOLON).setText(R.string.character_eidolon));
+        info_tablayout.addTab(info_tablayout.newTab().setId(TAB_ADVICE).setText(R.string.character_advice));
 
 
         info_tablayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -160,6 +167,18 @@ public class InfoCharacterPage {
         //Read JSON from Assests
         String json_base = LoadAssestData(context,"character_data/"+LANGUAGE+"/"+hsrItem.getFileName()+".json");
         String json_base2 = LoadAssestData(context,"character_data/"+LangUtil.LangType.EN.getCode()+"/"+hsrItem.getFileName()+".json");
+        String json_advice = LoadAssestData(context, "character_data/advice/" +hsrItem.getFileName()+".json");
+        System.out.println("JSON : "+ "character_data/advice/" +hsrItem.getFileName()+".json");
+
+        try {
+            init_advice(json_advice);
+        } catch (JSONException e) {
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            LogExport.bugLog(TAG, "Read JSON from Assests - advice", sw.toString(), context);
+        }
+
         if (json_base == "" && json_base2 != ""){json_base  =json_base2;}
         if (json_base != ""){
             try {
@@ -190,6 +209,113 @@ public class InfoCharacterPage {
             Toast.makeText(context, "["+LANGUAGE+"] "+hsrItem.getName()+"'s file not exist", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    private void init_advice(String json_advice) throws JSONException{
+        System.out.println("json_advice : aa"+json_advice+"bb");
+        if (json_advice.equals("")){
+            info_tablayout.removeTabAt(info_tablayout.getTabCount()-1);
+        }else{
+            JSONObject jsonAdvice = new JSONObject(json_advice);
+
+            // Relic
+            JSONArray relics = jsonAdvice.getJSONArray("relics");
+            LinearLayout advice_relic_set_ll = info_advice.findViewById(R.id.advice_relic_set_ll);
+
+            String tmpBody = "";
+            String tmpFeet = "";
+            TextView advice_relic_body_name = advice_relic_set_ll.findViewById(R.id.advice_relic_body_name);
+            TextView advice_relic_feet_name = advice_relic_set_ll.findViewById(R.id.advice_relic_feet_name);
+            JSONArray body = jsonAdvice.getJSONArray("body");
+            JSONArray feet = jsonAdvice.getJSONArray("feet");
+            for (int x = 0 ; x < body.length() ; x++){tmpBody += body.getJSONObject(x).getString("stat") + (x+1 < body.length() ? CHOICE_OR : "");}
+            for (int x = 0 ; x < feet.length() ; x++){tmpFeet += feet.getJSONObject(x).getString("stat") + (x+1 < feet.length() ? CHOICE_OR : "");}
+            advice_relic_body_name.setText(tmpBody);
+            advice_relic_feet_name.setText(tmpFeet);
+
+            for (int x = 0 ; x < relics.length() ; x++){
+                JSONObject relic_set = relics.getJSONObject(x);
+                String relic = relic_set.getString("relic");
+                String relic_2 = relic_set.getString("relic_2");
+
+                View relicItem = View.inflate(context, R.layout.item_advice_relic, null);
+                ImageView advice_relic_set_icon = relicItem.findViewById(R.id.advice_relic_set_icon);
+                ImageView advice_relic_set_icon2 = relicItem.findViewById(R.id.advice_relic_set_icon2);
+                TextView advice_relic_set_name = relicItem.findViewById(R.id.advice_relic_set_name);
+                TextView advice_relic_set_name2 = relicItem.findViewById(R.id.advice_relic_set_name2);
+                ImageButton advice_relic_set_btn = relicItem.findViewById(R.id.advice_relic_set_btn);
+                TextView advice_relic_set_2pc_title = relicItem.findViewById(R.id.advice_relic_set_2pc_title);
+                TextView advice_relic_set_4pc_title = relicItem.findViewById(R.id.advice_relic_set_4pc_title);
+                TextView advice_relic_set_2pc = relicItem.findViewById(R.id.advice_relic_set_2pc);
+                TextView advice_relic_set_4pc = relicItem.findViewById(R.id.advice_relic_set_4pc);
+
+                Picasso.get()
+                        .load(item_rss.getRelicByName(relic)[0])
+                        .into(advice_relic_set_icon);
+                advice_relic_set_name.setText(item_rss.getLocalNameByName(relic,context));
+                advice_relic_set_2pc.setText(item_rss.getRelicStatusByName(relic,context)[0]);
+                advice_relic_set_4pc.setText(item_rss.getRelicStatusByName(relic,context)[1]);
+
+                // 2x2pc
+                if (!relic_2.equals("") && relic_2 != null){
+                    advice_relic_set_2pc_title.setText(context.getString(R.string.relic_2pc)+" ("+item_rss.getLocalNameByName(relic,context)+")");
+                    advice_relic_set_4pc_title.setText(context.getString(R.string.relic_2pc)+" ("+item_rss.getLocalNameByName(relic_2,context)+")");
+                    advice_relic_set_name2.setText(item_rss.getLocalNameByName(relic_2,context));
+                    Picasso.get()
+                            .load(item_rss.getRelicByName(relic_2)[0])
+                            .into(advice_relic_set_icon2);
+                }else{
+                    advice_relic_set_icon2.setVisibility(View.GONE);
+                    advice_relic_set_name2.setVisibility(View.GONE);
+                }
+
+                advice_relic_set_ll.addView(relicItem, 0);
+            }
+
+            // Planetary Planar
+            JSONArray planars = jsonAdvice.getJSONArray("planars");
+            LinearLayout advice_planetary_planar_set_ll = info_advice.findViewById(R.id.advice_planetary_planar_set_ll);
+
+            String tmpRope = "";
+            String tmpSphere = "";
+            TextView advice_planetary_planar_sphere_name = advice_planetary_planar_set_ll.findViewById(R.id.advice_planetary_planar_sphere_name);
+            TextView advice_planetary_link_rope_name = advice_planetary_planar_set_ll.findViewById(R.id.advice_planetary_link_rope_name);
+            JSONArray rope = jsonAdvice.getJSONArray("rope");
+            JSONArray sphere = jsonAdvice.getJSONArray("sphere");
+            for (int x = 0 ; x < rope.length() ; x++){tmpRope += rope.getJSONObject(x).getString("stat") + (x+1 < body.length() ? CHOICE_OR : "");}
+            for (int x = 0 ; x < sphere.length() ; x++){tmpSphere += sphere.getJSONObject(x).getString("stat") + (x+1 < feet.length() ? CHOICE_OR : "");}
+            advice_planetary_link_rope_name.setText(tmpRope);
+            advice_planetary_planar_sphere_name.setText(tmpSphere);
+
+            for (int x = 0 ; x < planars.length() ; x++){
+                JSONObject planar_set = planars.getJSONObject(x);
+                String planar = planar_set.getString("planar");
+
+                View relicItem = View.inflate(context, R.layout.item_advice_relic, null);
+                ImageView advice_relic_set_icon = relicItem.findViewById(R.id.advice_relic_set_icon);
+                ImageView advice_relic_set_icon2 = relicItem.findViewById(R.id.advice_relic_set_icon2);
+                TextView advice_relic_set_name = relicItem.findViewById(R.id.advice_relic_set_name);
+                TextView advice_relic_set_name2 = relicItem.findViewById(R.id.advice_relic_set_name2);
+                ImageButton advice_relic_set_btn = relicItem.findViewById(R.id.advice_relic_set_btn);
+                TextView advice_relic_set_2pc_title = relicItem.findViewById(R.id.advice_relic_set_2pc_title);
+                TextView advice_relic_set_4pc_title = relicItem.findViewById(R.id.advice_relic_set_4pc_title);
+                TextView advice_relic_set_2pc = relicItem.findViewById(R.id.advice_relic_set_2pc);
+                TextView advice_relic_set_4pc = relicItem.findViewById(R.id.advice_relic_set_4pc);
+
+                Picasso.get()
+                        .load(item_rss.getRelicByName(planar)[0])
+                        .into(advice_relic_set_icon);
+                advice_relic_set_name.setText(item_rss.getLocalNameByName(planar,context));
+                advice_relic_set_2pc.setText(item_rss.getRelicStatusByName(planar,context)[0]);
+
+                advice_relic_set_icon2.setVisibility(View.GONE);
+                advice_relic_set_name2.setVisibility(View.GONE);
+                advice_relic_set_4pc.setVisibility(View.GONE);
+                advice_relic_set_4pc_title.setVisibility(View.GONE);
+
+                advice_planetary_planar_set_ll.addView(relicItem, 0);
+            }
+        }
     }
 
     private void itemReferences_init(JSONObject jsonObject) throws JSONException {
@@ -276,8 +402,6 @@ public class InfoCharacterPage {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
 
-        intro_ll_1.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
-
     }
 
     private void init_combat(JSONObject jsonObject) throws JSONException {
@@ -300,13 +424,6 @@ public class InfoCharacterPage {
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-
-        combat_ll_0.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
-        combat_ll_1.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
-        combat_ll_2.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
-        combat_ll_3.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
-        combat_ll_4.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
-        combat_ll_6.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
 
         combat_status_seekbar.setProgress(0);
         combat_status_seekbar.setMax(80-1+6);
@@ -605,13 +722,6 @@ public class InfoCharacterPage {
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-
-        eidolon_ll_1.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
-        eidolon_ll_2.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
-        eidolon_ll_3.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
-        eidolon_ll_4.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
-        eidolon_ll_5.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
-        eidolon_ll_6.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
     }
 
 }

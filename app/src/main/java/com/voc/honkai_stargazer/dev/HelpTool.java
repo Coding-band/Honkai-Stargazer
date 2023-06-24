@@ -9,6 +9,7 @@ package com.voc.honkai_stargazer.dev;
 import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.util.Log;
 
 import com.voc.honkai_stargazer.data.MaterialItem;
@@ -19,19 +20,32 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Writer;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class HelpTool {
 
     /*
     Help Tool, for dev only
      */
+
+    Context context = null;
 
     public static void trigger_help_tool(Context context){
         String json_base2 = LoadAssestData(context, "character_data/character_list.json");
@@ -144,4 +158,117 @@ public class HelpTool {
     buildData in ./result/data/currentUnit/nodes/[x]/
     teams in ./result/data/currentUnit/nodes/[x]/
      */
+
+    public void help_tool_export_locale_advice(Context context){
+        String json_base2 = LoadAssestData(context, "character_data/character_list.json");
+        try {
+            this.context = context;
+            JSONArray array = new JSONArray(json_base2);
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject object = array.getJSONObject(i);
+                String urlName = object.getString("name").toLowerCase().replace(" ","-");
+                new JsonTask().execute("https://www.prydwen.gg/page-data/star-rail/characters/"+urlName+"/page-data.json",object.getString("name"),object.getString("fileName"));
+            }
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+    }
+
+
+    private class JsonTask extends AsyncTask<String, String, String> {
+
+        String charName = "N/A";
+        String fileName = "N/A";
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        protected String doInBackground(String... params) {
+            charName = params[1];
+            fileName = params[2];
+
+            HttpURLConnection connection = null;
+            BufferedReader reader = null;
+
+            try {
+                URL url = new URL(params[0]);
+                connection = (HttpURLConnection) url.openConnection();
+                connection.connect();
+
+
+                InputStream stream = connection.getInputStream();
+
+                reader = new BufferedReader(new InputStreamReader(stream));
+
+                StringBuffer buffer = new StringBuffer();
+                String line = "";
+
+                while ((line = reader.readLine()) != null) {
+                    buffer.append(line+"\n");
+                }
+
+                return buffer.toString();
+
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (connection != null) {
+                    connection.disconnect();
+                }
+                try {
+                    if (reader != null) {
+                        reader.close();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String jsonData) {
+            String resultData = "NULL";
+            try{
+                if (jsonData != null){
+                    JSONObject jsonObject = new JSONObject(jsonData);
+                    JSONObject jsonTMP = null;
+                    JSONArray jsonARR = null;
+                    JSONArray buildData = null;
+                    JSONObject buildDataOBJ = null;
+                    JSONArray teams = null;
+                    if (jsonObject.has("result")) jsonTMP = jsonObject.getJSONObject("result");
+                    if (jsonTMP.has("data")) jsonTMP = jsonTMP.getJSONObject("data");
+                    if (jsonTMP.has("currentUnit")) jsonTMP = jsonTMP.getJSONObject("currentUnit");
+                    if (jsonTMP.has("nodes")) jsonARR = jsonTMP.getJSONArray("nodes");
+                    if (jsonARR.getJSONObject(0).has("buildData")) buildData = jsonARR.getJSONObject(0).getJSONArray("buildData");
+                    if (jsonARR.getJSONObject(0).has("teams")) {
+                        teams = jsonARR.getJSONObject(0).getJSONArray("teams");
+                        buildData = buildData.put(teams);
+                    }
+                    buildDataOBJ = buildData.getJSONObject(0);
+                    resultData = (buildDataOBJ != null ? buildDataOBJ.toString() : null);
+
+                    System.out.println(charName+" : "+resultData);
+
+                    File ext = context.getFilesDir();
+                    if (!Files.exists(Paths.get(ext + "/" + fileName+".json"))) {
+                        Files.createFile(Paths.get(ext + "/" + fileName+".json"));
+                        Files.write(Paths.get(ext + "/" + fileName +".json"), resultData.getBytes(), new StandardOpenOption[]{StandardOpenOption.APPEND});
+                    }else{
+                        Files.write(Paths.get(ext + "/" + resultData+".json"), resultData.getBytes(), new StandardOpenOption[]{StandardOpenOption.APPEND});
+                    }
+
+                }
+            } catch (JSONException e) {
+                System.out.println(charName+" : []");
+            } catch (IOException e) {
+                System.out.println(charName+" : I/O ERROR");
+            }
+            super.onPostExecute(jsonData);
+        }
+    }
 }

@@ -6,6 +6,7 @@
 
 package com.voc.honkai_stargazer.util;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
@@ -13,6 +14,7 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -52,11 +54,13 @@ public class ThemeUtil {
     public static final String COLOR_6 = "#73D246";
 
     private Context context;
+    private Activity activity;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
     int themedColor = Color.parseColor("#009688");
-    public ThemeUtil(Context context){
+    public ThemeUtil(Context context, Activity activity){
         this.context = context;
+        this.activity = activity;
         sharedPreferences = context.getSharedPreferences("user_info",Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
     }
@@ -66,6 +70,8 @@ public class ThemeUtil {
         window.setNavigationBarColor(colorMultiply(themedColor,context.getColor(R.color.nav_bar_tint),TINT_COMMON,true));
     }
     public void themeTint(ViewGroup... parentLayouts){
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         themedColor = Color.parseColor(sharedPreferences.getString("themedColor","#6750A4"));
         ColorStateList baseList = new ColorStateList(
                 new int[][]{
@@ -141,12 +147,14 @@ public class ThemeUtil {
                     ((ScaleRatingBar) view).setFilledDrawable(rare_star);
                 }
                 else if(view instanceof CardView){
+                    ((CardView) view).setCardElevation((sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0));
                     ((CardView) view).setCardBackgroundColor(colorMultiply(themedColor,context.getColor(R.color.home_bar_tint),TINT_COMMON,false));
                 }
                 else if(view.getId() == R.id.view_top_grad || view.getId() == R.id.view_bottom_grad){
                     view.setBackgroundTintList(ColorStateList.valueOf(colorMultiply(themedColor,context.getColor(R.color.home_bar_tint),TINT_COMMON,false)));
                 }
                 else if (view.getBackground() != null && view.getBackground().getConstantState() == context.getDrawable(R.drawable.bg_char_info_card).getConstantState()){
+                    view.setTranslationZ(sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0);
                     view.setBackgroundTintList(cardList);
                 }
                 else if (view instanceof SeekBar){

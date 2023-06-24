@@ -114,8 +114,6 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
         int margin = 0;
         Transformation transformation = new RoundedCornersTransformation(radius, margin);
 
-        holder.item_card.setCardElevation((sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0));
-
         holder.item_element.setVisibility(View.GONE);
         holder.item_relic_ll.setVisibility(View.GONE);
         holder.item_sub_ll.setVisibility(View.GONE);
@@ -357,7 +355,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
             item_beta = itemView.findViewById(R.id.item_beta);
             item_root = itemView.findViewById(R.id.rootView_row);
 
-            ThemeUtil themeUtil = new ThemeUtil(context);
+            ThemeUtil themeUtil = new ThemeUtil(context,activity);
             themeUtil.themeTint(
                     item_root
             );

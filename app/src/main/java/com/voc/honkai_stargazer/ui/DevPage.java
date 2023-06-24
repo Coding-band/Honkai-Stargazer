@@ -93,6 +93,7 @@ public class DevPage extends AppCompatActivity {
                     PrintWriter pw = new PrintWriter(sw);
                     e.printStackTrace(pw);
                     LogExport.bugLog(TAG, "dev_expection_btn.onClick()", sw.toString(), context);
+                    new RuntimeException(e);
                     Toast.makeText(context, "Please check test log available or not", Toast.LENGTH_SHORT).show();
                 }
             }
