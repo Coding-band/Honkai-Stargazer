@@ -145,6 +145,9 @@ public class ItemRSS {
         return langType;
     }
 
+    /**
+     * Update Ver. 1.0.5
+     */
     public int[] getCharByName(String charNameInFile){
         switch (charNameInFile){
             case "Arlan" : return new int[]{R.drawable.arlan_icon, R.drawable.arlan_splash,R.drawable.arlan_fade, R.drawable.arlan_eidolon1, R.drawable.arlan_eidolon2, R.drawable.arlan_eidolon3, R.drawable.arlan_eidolon4, R.drawable.arlan_eidolon5, R.drawable.arlan_eidolon6};
@@ -179,6 +182,9 @@ public class ItemRSS {
         }
     }
 
+    /**
+     * Update Ver. 1.0.5
+     */
     public int[] getLightconeByName(String lightconeNameInFile){
         switch (lightconeNameInFile){
             case "Amber" : return new int[] {R.drawable.amber, R.drawable.amber_artwork};
@@ -259,6 +265,9 @@ public class ItemRSS {
         }
     }
 
+    /**
+     * Update Ver. 1.0.5
+     */
     public int[] getRelicByName(String relicNameInFile){
         switch (relicNameInFile){
             case "Band of Sizzling Thunder" : return new int[] {R.drawable.band_of_sizzling_thunder_1, R.drawable.band_of_sizzling_thunder_2, R.drawable.band_of_sizzling_thunder_3, R.drawable.band_of_sizzling_thunder_4};
@@ -286,6 +295,10 @@ public class ItemRSS {
         }
     }
 
+
+    /**
+     * Update Ver. 1.0.5
+     */
     public String getLocalNameByName(String itemNameInFile, Context context){
         switch (itemNameInFile){
             // Character
@@ -414,6 +427,92 @@ public class ItemRSS {
             case "Wastelander of Banditry Desert" : return context.getString(R.string.wastelander_of_banditry_desert);
 
             default: return itemNameInFile;
+        }
+    }
+
+    /**
+     * Update Ver. 1.0.5
+     * @param name Name of Lightcone in Prydwen
+     * @param context Context for using context.getString(...)
+     * @return
+     */
+    public String getLocaleNameByPrydwen(String name, Context context){
+        switch (name){
+            //Lightcone
+            case "a-secret-vow": return "A Secret Vow";
+            case "adversarial": return "Adversarial";
+            case "amber": return "Amber";
+            case "arrows": return "Arrows";
+            case "before-dawn": return "Before Dawn";
+            case "but-the-battle-isnt-over": return "But the Battle Isn't Over";
+            case "carve-the-moon-weave-the-clouds": return "Carve the Moon, Weave the Clouds";
+            case "chorus": return "Chorus";
+            case "collapsing-sky": return "Collapsing Sky";
+            case "cornucopia": return "Cornucopia";
+            case "cruising-in-the-stellar-sea": return "Cruising in the Stellar Sea";
+            case "dance-dance-dance": return "Dance! Dance! Dance!";
+            case "darting-arrow": return "Darting Arrow";
+            case "data-bank": return "Data Bank";
+            case "day-one-of-my-new-life": return "Day One of My New Life";
+            case "defense": return "Defense";
+            case "echoes-of-the-coffin": return "Echoes of the Coffin";
+            case "eyes-of-the-prey": return "Eyes of the Prey";
+            case "fermata": return "Fermata";
+            case "fine-fruit": return "Fine Fruit";
+            case "geniuses-repose": return "Geniuses' Repose";
+            case "good-night-and-sleep-well": return "Good Night and Sleep Well";
+            case "hidden-shadow": return "Hidden Shadow";
+            case "in-the-name-of-the-world": return "In the Name of the World";
+            case "in-the-night": return "In the Night";
+            case "incessant-rain": return "Incessant Rain";
+            case "landaus-choice": return "Landau's Choice";
+            case "loop": return "Loop";
+            case "make-the-world-clamor": return "Make the World Clamor";
+            case "mediation": return "Mediation";
+            case "memories-of-the-past": return "Memories of the Past";
+            case "meshing-cogs": return "Meshing Cogs";
+            case "moment-of-victory": return "Moment of Victory";
+            case "multiplication": return "Multiplication";
+            case "mutual-demise": return "Mutual Demise";
+            case "night-on-the-milky-way": return "Night on the Milky Way";
+            case "nowhere-to-run": return "Nowhere to Run";
+            case "on-the-fall-of-an-aeon": return "On the Fall of an Aeon";
+            case "only-silence-remains": return "Only Silence Remains";
+            case "passkey": return "Passkey";
+            case "past-and-future": return "Past and Future";
+            case "patience-is-all-you-need": return "Patience Is All You Need";
+            case "perfect-timing": return "Perfect Timing";
+            case "pioneering": return "Pioneering";
+            case "planetary-rendezvous": return "Planetary Rendezvous";
+            case "post-op-conversation": return "Post-Op Conversation";
+            case "quid-pro-quo": return "Quid Pro Quo";
+            case "resolution-shines-as-pearls-of-sweat": return "Resolution Shines As Pearls of Sweat";
+            case "return-to-darkness": return "Return to Darkness";
+            case "river-flows-in-spring": return "River Flows in Spring";
+            case "sagacity": return "Sagacity";
+            case "shared-feeling": return "Shared Feeling";
+            case "shattered-home": return "Shattered Home";
+            case "sleep-like-the-dead": return "Sleep Like the Dead";
+            case "something-irreplaceable": return "Something Irreplaceable";
+            case "subscribe-for-more": return "Subscribe for More!";
+            case "swordplay": return "Swordplay";
+            case "texture-of-memories": return "Texture of Memories";
+            case "the-birth-of-the-self": return "The Birth of the Self";
+            case "the-moles-welcome-you": return "The Moles Welcome You";
+            case "the-seriousness-of-breakfast": return "The Seriousness of Breakfast";
+            case "the-unreachable-side": return "The Unreachable Side";
+            case "this-is-me": return "This Is Me!";
+            case "time-waits-for-no-one": return "Time Waits for No One";
+            case "today-is-another-peaceful-day": return "Today Is Another Peaceful Day";
+            case "trend-of-the-universal-market": return "Trend of the Universal Market";
+            case "under-the-blue-sky": return "Under the Blue Sky";
+            case "void": return "Void";
+            case "warmth-shortens-cold-nights": return "Warmth Shortens Cold Nights";
+            case "we-are-wildfire": return "We Are Wildfire";
+            case "we-will-meet-again": return "We Will Meet Again";
+            case "woof-walk-time": return "Woof! Walk Time!";
+
+            default: return name;
         }
     }
 
@@ -609,7 +708,21 @@ public class ItemRSS {
         switch (status){
             case "Speed" : return context.getString(R.string.status_speed);
             case "ATK%" : return context.getString(R.string.status_atk);
+            case "CRIT DMG" : return context.getString(R.string.status_crit_dmg);
             case "CRIT Rate" : return context.getString(R.string.status_crit_rate);
+            case "Break Effect" : return context.getString(R.string.status_break_effect);
+            case "Effect HIT Rate" :
+            case "Effect Hit Rate" :
+                return context.getString(R.string.status_effect_hit_rate);
+            case "Energy Regen Rate" : return context.getString(R.string.status_energy_regeneration_rate);
+            case "Outgoing Healing" : return context.getString(R.string.status_outgoing_healing_boost);
+            case "Physical DMG" : return context.getString(R.string.status_physical_dmg_boost);
+            case "Fire DMG" : return context.getString(R.string.status_fire_dmg_boost);
+            case "Ice DMG" : return context.getString(R.string.status_ice_dmg_boost);
+            case "Wind DMG" : return context.getString(R.string.status_wind_dmg_boost);
+            case "Lightning DMG" : return context.getString(R.string.status_lightning_dmg_boost);
+            case "Quantum DMG" : return context.getString(R.string.status_quantum_dmg_boost);
+            case "Imaginary DMG" : return context.getString(R.string.status_imaginary_dmg_boost);
         }
         return status;
     }

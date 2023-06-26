@@ -12,6 +12,7 @@ import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.DisplayMetrics;
@@ -46,12 +47,14 @@ public class ThemeUtil {
     public static final float TINT_COMMON = 0.6f;
     public static final float TINT_CARD = 0.85f;
 
-    public static final String COLOR_1 = "#6750A4";
-    public static final String COLOR_2 = "#009688";
-    public static final String COLOR_3 = "#F6C032";
-    public static final String COLOR_4 = "#32C7F6";
-    public static final String COLOR_5 = "#F63279";
-    public static final String COLOR_6 = "#73D246";
+    public static final String COLOR_1 = "#EF5350";
+    public static final String COLOR_2 = "#7E57C2";
+    public static final String COLOR_3 = "#5C6BC0";
+    public static final String COLOR_4 = "#42A5F5";
+    public static final String COLOR_5 = "#26C6DA";
+    public static final String COLOR_6 = "#26A69A";
+    public static final String COLOR_7 = "#66BB6A";
+    public static final String COLOR_8 = "#FFCA28";
 
     private Context context;
     private Activity activity;
@@ -112,12 +115,27 @@ public class ThemeUtil {
             for (int count = 0; count < parentLayout.getChildCount(); count++){
                 View view = parentLayout.getChildAt(count);
                 if(view instanceof Switch){
+                    Typeface typeface = context.getResources().getFont(R.font.roboto);
+                    if (sharedPreferences.getBoolean("isHSRFont", false) == true){
+                        typeface = context.getResources().getFont(R.font.hsr_font);
+                    }
+                    ((TextView) view).setTypeface(typeface);
                     ((Switch) view).setTrackTintList(switchList);
                 }
                 else if (view instanceof RadioButton){
+                    Typeface typeface = context.getResources().getFont(R.font.roboto);
+                    if (sharedPreferences.getBoolean("isHSRFont", false) == true){
+                        typeface = context.getResources().getFont(R.font.hsr_font);
+                    }
+                    ((TextView) view).setTypeface(typeface);
                     ((RadioButton) view).setButtonTintList(oneColorList);
                 }
                 else if (view instanceof Button){
+                    Typeface typeface = context.getResources().getFont(R.font.roboto);
+                    if (sharedPreferences.getBoolean("isHSRFont", false) == true){
+                        typeface = context.getResources().getFont(R.font.hsr_font);
+                    }
+                    ((TextView) view).setTypeface(typeface);
                     if (((Button) view).getText().equals(context.getText(R.string.apply)) || ((Button) view).getText().equals(context.getText(android.R.string.ok)) || ((Button) view).getText().equals(context.getText(R.string.dev_btn_open))){
                         ((Button) view).setBackgroundTintList(oneColorList);
                     }else if (((Button) view).getText().equals(context.getText(R.string.cancel))){
@@ -125,14 +143,38 @@ public class ThemeUtil {
                     }
                 }
                 else if(view instanceof TextView){
+                    Typeface typeface = context.getResources().getFont(R.font.roboto);
+                    if (sharedPreferences.getBoolean("isHSRFont", false) == true){
+                        typeface = context.getResources().getFont(R.font.hsr_font);
+                    }
+                    ((TextView) view).setTypeface(typeface);
                     if (((TextView) view).getCurrentTextColor() == context.getColor(R.color.theme_color_base)){
                         ((TextView) view).setTextColor(themedColor);
+                    }
+                }
+                else if (view instanceof ImageView && view.getBackground() != null){
+                    boolean isSpecific = false;
+                    Drawable drawable = context.getDrawable(R.drawable.bg_skill_round);
+
+                    if (view.getBackground().getConstantState() == context.getDrawable(R.drawable.ic_rare_star).getConstantState()){
+                        drawable = context.getDrawable(R.drawable.ic_rare_star);
+                        isSpecific = true;
+                    }else if (view.getBackground().getConstantState() == context.getDrawable(R.drawable.bg_skill_round).getConstantState()){
+                        drawable = context.getDrawable(R.drawable.bg_skill_round);
+                        isSpecific = true;
+                    }else if (view.getBackground().getConstantState() == context.getDrawable(R.drawable.circle_spec_theme).getConstantState()){
+                        drawable = context.getDrawable(R.drawable.circle_spec_theme);
+                        isSpecific = true;
+                    }
+
+                    if (isSpecific){
+                        drawable.setTint(themedColor);
+                        ((ImageView) view).setBackground(drawable);
                     }
                 }
                 else if(view instanceof BottomNavigationView){
                     view.setBackgroundColor(colorMultiply(themedColor,context.getColor(R.color.nav_bar_tint),TINT_COMMON,true));
                     ((BottomNavigationView) view).setItemActiveIndicatorColor(mixColorList);
-
                 }
                 else if(view.getId() == R.id.characterSearchBar || view.getId() == R.id.lightconeSearchBar || view.getId() == R.id.relicSearchBar){
                     view.setBackgroundTintList(mixColorList);
@@ -141,10 +183,10 @@ public class ThemeUtil {
                     view.setBackgroundTintList(ColorStateList.valueOf(colorMultiply(themedColor,context.getColor(R.color.home_bar_tint),TINT_COMMON,false)));
                 }
                 else if(view instanceof ScaleRatingBar){
-                    Drawable rare_star = context.getDrawable(R.drawable.ic_rare_star);
-                    rare_star.setTint(themedColor);
-                    ((ScaleRatingBar) view).setEmptyDrawable(rare_star);
-                    ((ScaleRatingBar) view).setFilledDrawable(rare_star);
+                    Drawable drawable = context.getDrawable(R.drawable.ic_rare_star);
+                    drawable.setTint(themedColor);
+                    ((ScaleRatingBar) view).setEmptyDrawable(drawable);
+                    ((ScaleRatingBar) view).setFilledDrawable(drawable);
                 }
                 else if(view instanceof CardView){
                     ((CardView) view).setCardElevation((sharedPreferences.getBoolean("isShadowInListItem",true) ? 4*displayMetrics.density : 0));
@@ -164,11 +206,6 @@ public class ThemeUtil {
                 }
                 else if (view instanceof TabLayout){
                     ((TabLayout) view).setSelectedTabIndicatorColor(themedColor);
-                }
-                else if (view instanceof ImageView && view.getBackground() != null && view.getBackground().getConstantState() == context.getDrawable(R.drawable.bg_skill_round).getConstantState()){
-                    Drawable rare_star = context.getDrawable(R.drawable.bg_skill_round);
-                    rare_star.setTint(themedColor);
-                    ((ImageView) view).setBackground(rare_star);
                 }
 
                 if(view instanceof ViewGroup){

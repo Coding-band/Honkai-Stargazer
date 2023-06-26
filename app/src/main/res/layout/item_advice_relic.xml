@@ -74,12 +74,13 @@
 
             <ImageButton
                 android:id="@+id/advice_relic_set_btn"
-                app:srcCompat="@drawable/baseline_arrow_drop_down_24"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="16dp"
-                android:background="@drawable/circle_spec_theme" />
+                android:background="@drawable/bg_skill_round"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_arrow_hide_btn" />
 
         </LinearLayout>
 
@@ -88,7 +89,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
 
             <TextView
                 android:id="@+id/advice_relic_set_2pc_title"
@@ -105,7 +107,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp"
                 android:text="idk"
-                android:textColor="@color/tv_daynight_tint"
+                android:textColor="@color/tv_daynight_tint_semi"
                 android:textSize="16sp" />
 
             <TextView
@@ -123,7 +125,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp"
                 android:text="idk"
-                android:textColor="@color/tv_daynight_tint"
+                android:textColor="@color/tv_daynight_tint_semi"
                 android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>

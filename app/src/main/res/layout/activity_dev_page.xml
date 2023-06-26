@@ -93,7 +93,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:fontFamily="@font/hsr_font"
                 android:switchPadding="8dp"
                 android:text="Monet Engine"
                 android:visibility="visible" />
@@ -107,7 +106,7 @@
                 android:fontFamily="@font/hsr_font"
                 android:switchPadding="8dp"
                 android:text="Shadow of List Item"
-                android:visibility="visible" />
+                android:visibility="gone" />
 
             <View
                 android:id="@+id/divider3"
@@ -175,7 +174,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checked="false"
-                android:fontFamily="@font/hsr_font"
                 android:switchPadding="8dp"
                 android:text="Rotate HSR Item"
                 android:visibility="visible" />

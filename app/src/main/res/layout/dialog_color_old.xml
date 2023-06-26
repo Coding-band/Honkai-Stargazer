@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Project Honkai Stargazer (崩壞•星穹觀星者) was
+  ~ Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
+  ~ Copyright © 2023 Xectorda 版權所有
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView_dialog_color"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_bg"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/setting_material_color_title"
+        android:textSize="24sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fadeScrollbars="false"
+        android:requiresFadingEdge="horizontal|vertical"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/setting_color_group"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/setting_color_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:drawableRight="@drawable/circle_spec_red"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#6750A4"
+                    android:text="#6750A4" />
+
+                <RadioButton
+                    android:id="@+id/setting_color_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:drawableRight="@drawable/circle_spec_red"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#009688"
+                    android:text="#009688" />
+
+                <RadioButton
+                    android:id="@+id/setting_color_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:drawableRight="@drawable/circle_spec_red"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#F6C032"
+                    android:text="#F6C032" />
+
+                <RadioButton
+                    android:id="@+id/setting_color_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:drawableRight="@drawable/circle_spec_red"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#32C7F6"
+                    android:text="#32C7F6" />
+
+                <RadioButton
+                    android:id="@+id/setting_color_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:drawableRight="@drawable/circle_spec_red"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#F63279"
+                    android:text="#F63279" />
+
+                <RadioButton
+                    android:id="@+id/setting_color_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:drawableRight="@drawable/circle_spec_red"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#73D246"
+                    android:text="#73D246" />
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/dialog_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="@android:string/ok" />
+</LinearLayout>

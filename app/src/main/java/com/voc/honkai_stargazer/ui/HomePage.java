@@ -39,6 +39,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -46,6 +47,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -113,6 +115,7 @@ public class HomePage extends AppCompatActivity {
 
     public static final String TAG = "HomePage";
     ThemeUtil themeUtil ;
+    String tmpColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -385,6 +388,8 @@ public class HomePage extends AppCompatActivity {
         TextView setting_material_engine_display = home_settings.findViewById(R.id.setting_material_engine_display);
         TextView setting_daynight_display = home_settings.findViewById(R.id.setting_daynight_display);
         TextView setting_haptic_display = home_settings.findViewById(R.id.setting_haptic_display);
+        Switch setting_shadow_list_item = home_settings.findViewById(R.id.setting_shadow_list_item);
+        Switch setting_hsr_font = home_settings.findViewById(R.id.setting_hsr_font);
 
         LinearLayout setting_donate_1 = home_settings.findViewById(R.id.setting_donate_1);
         LinearLayout setting_donate_2 = home_settings.findViewById(R.id.setting_donate_2);
@@ -609,34 +614,49 @@ public class HomePage extends AppCompatActivity {
                 );
 
                 Button dialog_ok = view.findViewById(R.id.dialog_ok);
-                RadioGroup setting_color_group = view.findViewById(R.id.setting_color_group);
-                RadioButton setting_color_1 = view.findViewById(R.id.setting_color_1);
-                RadioButton setting_color_2 = view.findViewById(R.id.setting_color_2);
-                RadioButton setting_color_3 = view.findViewById(R.id.setting_color_3);
-                RadioButton setting_color_4 = view.findViewById(R.id.setting_color_4);
-                RadioButton setting_color_5 = view.findViewById(R.id.setting_color_5);
-                RadioButton setting_color_6 = view.findViewById(R.id.setting_color_6);
+                ImageView color_radio_1 = view.findViewById(R.id.color_radio_1);
+                ImageView color_radio_2 = view.findViewById(R.id.color_radio_2);
+                ImageView color_radio_3 = view.findViewById(R.id.color_radio_3);
+                ImageView color_radio_4 = view.findViewById(R.id.color_radio_4);
+                ImageView color_radio_5 = view.findViewById(R.id.color_radio_5);
+                ImageView color_radio_6 = view.findViewById(R.id.color_radio_6);
+                ImageView color_radio_7 = view.findViewById(R.id.color_radio_7);
+                ImageView color_radio_8 = view.findViewById(R.id.color_radio_8);
 
-                String tmpColor = sharedPreferences.getString("themedColor",ThemeUtil.COLOR_1);
+                tmpColor = sharedPreferences.getString("themedColor",ThemeUtil.COLOR_1);
 
                 switch (tmpColor){
-                    case ThemeUtil.COLOR_1: setting_color_1.setChecked(true);tmpColor = ThemeUtil.COLOR_1;break;
-                    case ThemeUtil.COLOR_2: setting_color_2.setChecked(true);tmpColor = ThemeUtil.COLOR_2;break;
-                    case ThemeUtil.COLOR_3: setting_color_3.setChecked(true);tmpColor = ThemeUtil.COLOR_3;break;
-                    case ThemeUtil.COLOR_4: setting_color_4.setChecked(true);tmpColor = ThemeUtil.COLOR_4;break;
-                    case ThemeUtil.COLOR_5: setting_color_5.setChecked(true);tmpColor = ThemeUtil.COLOR_5;break;
-                    case ThemeUtil.COLOR_6: setting_color_6.setChecked(true);tmpColor = ThemeUtil.COLOR_6;break;
+                    case ThemeUtil.COLOR_1: color_radio_1.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_1;break;
+                    case ThemeUtil.COLOR_2: color_radio_2.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_2;break;
+                    case ThemeUtil.COLOR_3: color_radio_3.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_3;break;
+                    case ThemeUtil.COLOR_4: color_radio_4.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_4;break;
+                    case ThemeUtil.COLOR_5: color_radio_5.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_5;break;
+                    case ThemeUtil.COLOR_6: color_radio_6.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_6;break;
+                    case ThemeUtil.COLOR_7: color_radio_7.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_7;break;
+                    case ThemeUtil.COLOR_8: color_radio_8.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_8;break;
                 }
+
+                color_radio_1.setOnClickListener(colorListener(color_radio_1,color_radio_2,color_radio_3,color_radio_4,color_radio_5,color_radio_6,color_radio_7,color_radio_8, ThemeUtil.COLOR_1));
+                color_radio_2.setOnClickListener(colorListener(color_radio_1,color_radio_2,color_radio_3,color_radio_4,color_radio_5,color_radio_6,color_radio_7,color_radio_8, ThemeUtil.COLOR_2));
+                color_radio_3.setOnClickListener(colorListener(color_radio_1,color_radio_2,color_radio_3,color_radio_4,color_radio_5,color_radio_6,color_radio_7,color_radio_8, ThemeUtil.COLOR_3));
+                color_radio_4.setOnClickListener(colorListener(color_radio_1,color_radio_2,color_radio_3,color_radio_4,color_radio_5,color_radio_6,color_radio_7,color_radio_8, ThemeUtil.COLOR_4));
+                color_radio_5.setOnClickListener(colorListener(color_radio_1,color_radio_2,color_radio_3,color_radio_4,color_radio_5,color_radio_6,color_radio_7,color_radio_8, ThemeUtil.COLOR_5));
+                color_radio_6.setOnClickListener(colorListener(color_radio_1,color_radio_2,color_radio_3,color_radio_4,color_radio_5,color_radio_6,color_radio_7,color_radio_8, ThemeUtil.COLOR_6));
+                color_radio_7.setOnClickListener(colorListener(color_radio_1,color_radio_2,color_radio_3,color_radio_4,color_radio_5,color_radio_6,color_radio_7,color_radio_8, ThemeUtil.COLOR_7));
+                color_radio_8.setOnClickListener(colorListener(color_radio_1,color_radio_2,color_radio_3,color_radio_4,color_radio_5,color_radio_6,color_radio_7,color_radio_8, ThemeUtil.COLOR_8));
+
                 dialog_ok.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        switch (setting_color_group.getCheckedRadioButtonId()){
-                            case R.id.setting_color_1 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_1).apply();recreate();break;
-                            case R.id.setting_color_2 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_2).apply();recreate();break;
-                            case R.id.setting_color_3 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_3).apply();recreate();break;
-                            case R.id.setting_color_4 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_4).apply();recreate();break;
-                            case R.id.setting_color_5 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_5).apply();recreate();break;
-                            case R.id.setting_color_6 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_6).apply();recreate();break;
+                        switch (tmpColor){
+                            case ThemeUtil.COLOR_1 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_1).apply();recreate();break;
+                            case ThemeUtil.COLOR_2 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_2).apply();recreate();break;
+                            case ThemeUtil.COLOR_3 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_3).apply();recreate();break;
+                            case ThemeUtil.COLOR_4 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_4).apply();recreate();break;
+                            case ThemeUtil.COLOR_5 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_5).apply();recreate();break;
+                            case ThemeUtil.COLOR_6 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_6).apply();recreate();break;
+                            case ThemeUtil.COLOR_7 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_7).apply();recreate();break;
+                            case ThemeUtil.COLOR_8 : sharedPreferences.edit().putString("themedColor",ThemeUtil.COLOR_8).apply();recreate();break;
                         }
                         setting_material_engine_display.setText(sharedPreferences.getString("themedColor",ThemeUtil.COLOR_1));
                         if (dialog.isShowing() && dialog != null){
@@ -653,6 +673,26 @@ public class HomePage extends AppCompatActivity {
                 if (!dialog.isShowing() && dialog != null){
                     dialog.show();
                 }
+            }
+        });
+
+        //Shadow
+        setting_shadow_list_item.setChecked(sharedPreferences.getBoolean("isShadowInListItem", false));
+        setting_shadow_list_item.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                editor.putBoolean("isShadowInListItem", isChecked).apply();
+                recreate();
+            }
+        });
+
+        //HSR Font
+        setting_hsr_font.setChecked(sharedPreferences.getBoolean("isHSRFont", false));
+        setting_hsr_font.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                editor.putBoolean("isHSRFont", isChecked).apply();
+                recreate();
             }
         });
 
@@ -713,6 +753,42 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
+    }
+
+    public View.OnClickListener colorListener(
+            ImageView color_radio_1,
+            ImageView color_radio_2,
+            ImageView color_radio_3,
+            ImageView color_radio_4,
+            ImageView color_radio_5,
+            ImageView color_radio_6,
+            ImageView color_radio_7,
+            ImageView color_radio_8,
+            String TYPE){
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                color_radio_1.setImageResource(R.drawable.ic_radio_uncheck);
+                color_radio_2.setImageResource(R.drawable.ic_radio_uncheck);
+                color_radio_3.setImageResource(R.drawable.ic_radio_uncheck);
+                color_radio_4.setImageResource(R.drawable.ic_radio_uncheck);
+                color_radio_5.setImageResource(R.drawable.ic_radio_uncheck);
+                color_radio_6.setImageResource(R.drawable.ic_radio_uncheck);
+                color_radio_7.setImageResource(R.drawable.ic_radio_uncheck);
+                color_radio_8.setImageResource(R.drawable.ic_radio_uncheck);
+
+                switch (TYPE){
+                    case ThemeUtil.COLOR_1: color_radio_1.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_1;break;
+                    case ThemeUtil.COLOR_2: color_radio_2.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_2;break;
+                    case ThemeUtil.COLOR_3: color_radio_3.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_3;break;
+                    case ThemeUtil.COLOR_4: color_radio_4.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_4;break;
+                    case ThemeUtil.COLOR_5: color_radio_5.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_5;break;
+                    case ThemeUtil.COLOR_6: color_radio_6.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_6;break;
+                    case ThemeUtil.COLOR_7: color_radio_7.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_7;break;
+                    case ThemeUtil.COLOR_8: color_radio_8.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_8;break;
+                }
+            }
+        };
     }
 
     private void char_list_reload() {

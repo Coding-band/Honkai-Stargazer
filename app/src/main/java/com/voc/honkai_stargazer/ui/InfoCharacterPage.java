@@ -13,12 +13,19 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.Transformation;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -84,6 +91,9 @@ public class InfoCharacterPage {
     SharedPreferences sharedPreferences;
 
     ThemeUtil themeUtil;
+
+    ArrayList<HSRItem> lightconesList = new ArrayList<>();
+    ArrayList<String> lightconesNameList = new ArrayList<>();
 
     public void setup(Context context, Activity activity, HSRItem hsrItem){
         this.context = context;
@@ -163,6 +173,8 @@ public class InfoCharacterPage {
         });
         info_vp.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(info_tablayout));
 
+        lightcone_list_reload();
+
         String LANGUAGE = ItemRSS.initLang(context).getCode();
         //Read JSON from Assests
         String json_base = LoadAssestData(context,"character_data/"+LANGUAGE+"/"+hsrItem.getFileName()+".json");
@@ -212,6 +224,9 @@ public class InfoCharacterPage {
     }
 
     private void init_advice(String json_advice) throws JSONException{
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
         System.out.println("json_advice : aa"+json_advice+"bb");
         if (json_advice.equals("")){
             info_tablayout.removeTabAt(info_tablayout.getTabCount()-1);
@@ -228,8 +243,8 @@ public class InfoCharacterPage {
             TextView advice_relic_feet_name = advice_relic_set_ll.findViewById(R.id.advice_relic_feet_name);
             JSONArray body = jsonAdvice.getJSONArray("body");
             JSONArray feet = jsonAdvice.getJSONArray("feet");
-            for (int x = 0 ; x < body.length() ; x++){tmpBody += body.getJSONObject(x).getString("stat") + (x+1 < body.length() ? CHOICE_OR : "");}
-            for (int x = 0 ; x < feet.length() ; x++){tmpFeet += feet.getJSONObject(x).getString("stat") + (x+1 < feet.length() ? CHOICE_OR : "");}
+            for (int x = 0 ; x < body.length() ; x++){tmpBody += item_rss.localeStatusFromPrydwen(body.getJSONObject(x).getString("stat"),context) + (x+1 < body.length() ? CHOICE_OR : "");}
+            for (int x = 0 ; x < feet.length() ; x++){tmpFeet += item_rss.localeStatusFromPrydwen(feet.getJSONObject(x).getString("stat"),context) + (x+1 < feet.length() ? CHOICE_OR : "");}
             advice_relic_body_name.setText(tmpBody);
             advice_relic_feet_name.setText(tmpFeet);
 
@@ -243,15 +258,13 @@ public class InfoCharacterPage {
                 ImageView advice_relic_set_icon2 = relicItem.findViewById(R.id.advice_relic_set_icon2);
                 TextView advice_relic_set_name = relicItem.findViewById(R.id.advice_relic_set_name);
                 TextView advice_relic_set_name2 = relicItem.findViewById(R.id.advice_relic_set_name2);
-                ImageButton advice_relic_set_btn = relicItem.findViewById(R.id.advice_relic_set_btn);
                 TextView advice_relic_set_2pc_title = relicItem.findViewById(R.id.advice_relic_set_2pc_title);
                 TextView advice_relic_set_4pc_title = relicItem.findViewById(R.id.advice_relic_set_4pc_title);
                 TextView advice_relic_set_2pc = relicItem.findViewById(R.id.advice_relic_set_2pc);
                 TextView advice_relic_set_4pc = relicItem.findViewById(R.id.advice_relic_set_4pc);
+                LinearLayout advice_relic_set_info = relicItem.findViewById(R.id.advice_relic_set_info);
+                ImageButton advice_relic_set_btn = relicItem.findViewById(R.id.advice_relic_set_btn);
 
-                Picasso.get()
-                        .load(item_rss.getRelicByName(relic)[0])
-                        .into(advice_relic_set_icon);
                 advice_relic_set_name.setText(item_rss.getLocalNameByName(relic,context));
                 advice_relic_set_2pc.setText(item_rss.getRelicStatusByName(relic,context)[0]);
                 advice_relic_set_4pc.setText(item_rss.getRelicStatusByName(relic,context)[1]);
@@ -261,14 +274,62 @@ public class InfoCharacterPage {
                     advice_relic_set_2pc_title.setText(context.getString(R.string.relic_2pc)+" ("+item_rss.getLocalNameByName(relic,context)+")");
                     advice_relic_set_4pc_title.setText(context.getString(R.string.relic_2pc)+" ("+item_rss.getLocalNameByName(relic_2,context)+")");
                     advice_relic_set_name2.setText(item_rss.getLocalNameByName(relic_2,context));
+
+                    advice_relic_set_icon.getLayoutParams().width = (int) (48 * displayMetrics.density);
+                    advice_relic_set_icon.getLayoutParams().height = (int) (48 * displayMetrics.density);
+                    Picasso.get()
+                            .load(item_rss.getRelicByName(relic)[0])
+                            .into(advice_relic_set_icon);
+
+                    advice_relic_set_icon2.getLayoutParams().width = (int) (48 * displayMetrics.density);
+                    advice_relic_set_icon2.getLayoutParams().height = (int) (48 * displayMetrics.density);
                     Picasso.get()
                             .load(item_rss.getRelicByName(relic_2)[0])
                             .into(advice_relic_set_icon2);
                 }else{
+                    advice_relic_set_icon.getLayoutParams().width = (int) (64 * displayMetrics.density);
+                    advice_relic_set_icon.getLayoutParams().height = (int) (64 * displayMetrics.density);
+                    Picasso.get()
+                            .load(item_rss.getRelicByName(relic)[0])
+                            .into(advice_relic_set_icon);
+
                     advice_relic_set_icon2.setVisibility(View.GONE);
                     advice_relic_set_name2.setVisibility(View.GONE);
                 }
 
+                advice_relic_set_btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (advice_relic_set_info.getVisibility() == View.VISIBLE){
+                            Animation ani = new ShowAnim(advice_relic_set_info,false);
+                            ani.setDuration(250);
+                            ani.setAnimationListener(new Animation.AnimationListener() {
+                                @Override
+                                public void onAnimationStart(Animation animation) {
+
+                                }
+
+                                @Override
+                                public void onAnimationEnd(Animation animation) {
+                                    advice_relic_set_info.setVisibility(View.GONE);
+                                }
+
+                                @Override
+                                public void onAnimationRepeat(Animation animation) {
+
+                                }
+                            });
+                            advice_relic_set_info.startAnimation(ani);
+                            ImageViewAnimatedChange(context, advice_relic_set_btn, R.drawable.ic_arrow_show_btn);
+                        }else{
+                            Animation ani = new ShowAnim(advice_relic_set_info,true);
+                            ani.setDuration(250);
+                            advice_relic_set_info.setVisibility(View.VISIBLE);
+                            advice_relic_set_info.startAnimation(ani);
+                            ImageViewAnimatedChange(context, advice_relic_set_btn, R.drawable.ic_arrow_hide_btn);
+                        }
+                    }
+                });
                 advice_relic_set_ll.addView(relicItem, 0);
             }
 
@@ -282,8 +343,8 @@ public class InfoCharacterPage {
             TextView advice_planetary_link_rope_name = advice_planetary_planar_set_ll.findViewById(R.id.advice_planetary_link_rope_name);
             JSONArray rope = jsonAdvice.getJSONArray("rope");
             JSONArray sphere = jsonAdvice.getJSONArray("sphere");
-            for (int x = 0 ; x < rope.length() ; x++){tmpRope += rope.getJSONObject(x).getString("stat") + (x+1 < body.length() ? CHOICE_OR : "");}
-            for (int x = 0 ; x < sphere.length() ; x++){tmpSphere += sphere.getJSONObject(x).getString("stat") + (x+1 < feet.length() ? CHOICE_OR : "");}
+            for (int x = 0 ; x < rope.length() ; x++){tmpRope += item_rss.localeStatusFromPrydwen(rope.getJSONObject(x).getString("stat"),context) + (x+1 < rope.length() ? CHOICE_OR : "");}
+            for (int x = 0 ; x < sphere.length() ; x++){tmpSphere += item_rss.localeStatusFromPrydwen(sphere.getJSONObject(x).getString("stat"),context) + (x+1 < sphere.length() ? CHOICE_OR : "");}
             advice_planetary_link_rope_name.setText(tmpRope);
             advice_planetary_planar_sphere_name.setText(tmpSphere);
 
@@ -296,14 +357,18 @@ public class InfoCharacterPage {
                 ImageView advice_relic_set_icon2 = relicItem.findViewById(R.id.advice_relic_set_icon2);
                 TextView advice_relic_set_name = relicItem.findViewById(R.id.advice_relic_set_name);
                 TextView advice_relic_set_name2 = relicItem.findViewById(R.id.advice_relic_set_name2);
+                LinearLayout advice_relic_set_info = relicItem.findViewById(R.id.advice_relic_set_info);
                 ImageButton advice_relic_set_btn = relicItem.findViewById(R.id.advice_relic_set_btn);
                 TextView advice_relic_set_2pc_title = relicItem.findViewById(R.id.advice_relic_set_2pc_title);
                 TextView advice_relic_set_4pc_title = relicItem.findViewById(R.id.advice_relic_set_4pc_title);
                 TextView advice_relic_set_2pc = relicItem.findViewById(R.id.advice_relic_set_2pc);
                 TextView advice_relic_set_4pc = relicItem.findViewById(R.id.advice_relic_set_4pc);
 
+                advice_relic_set_icon.getLayoutParams().width = (int) (64 * displayMetrics.density);
+                advice_relic_set_icon.getLayoutParams().height = (int) (64 * displayMetrics.density);
                 Picasso.get()
                         .load(item_rss.getRelicByName(planar)[0])
+                        .fit()
                         .into(advice_relic_set_icon);
                 advice_relic_set_name.setText(item_rss.getLocalNameByName(planar,context));
                 advice_relic_set_2pc.setText(item_rss.getRelicStatusByName(planar,context)[0]);
@@ -312,9 +377,121 @@ public class InfoCharacterPage {
                 advice_relic_set_name2.setVisibility(View.GONE);
                 advice_relic_set_4pc.setVisibility(View.GONE);
                 advice_relic_set_4pc_title.setVisibility(View.GONE);
+                advice_relic_set_btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (advice_relic_set_info.getVisibility() == View.VISIBLE){
+                            Animation ani = new ShowAnim(advice_relic_set_info,false);
+                            ani.setDuration(250);
+                            ani.setAnimationListener(new Animation.AnimationListener() {
+                                @Override
+                                public void onAnimationStart(Animation animation) {
+
+                                }
+
+                                @Override
+                                public void onAnimationEnd(Animation animation) {
+                                    advice_relic_set_info.setVisibility(View.GONE);
+                                }
+
+                                @Override
+                                public void onAnimationRepeat(Animation animation) {
+
+                                }
+                            });
+                            advice_relic_set_info.startAnimation(ani);
+                            ImageViewAnimatedChange(context, advice_relic_set_btn, R.drawable.ic_arrow_show_btn);
+                        }else{
+                            Animation ani = new ShowAnim(advice_relic_set_info,true);
+                            ani.setDuration(250);
+                            advice_relic_set_info.setVisibility(View.VISIBLE);
+                            advice_relic_set_info.startAnimation(ani);
+                            ImageViewAnimatedChange(context, advice_relic_set_btn, R.drawable.ic_arrow_hide_btn);
+                        }
+                    }
+                });
 
                 advice_planetary_planar_set_ll.addView(relicItem, 0);
             }
+
+            // Lightcone
+            JSONArray lightcone = jsonAdvice.getJSONArray("cones");
+            LinearLayout advice_lightcone_ll = info_advice.findViewById(R.id.advice_lightcone_ll);
+            for (int x = 0 ; x < lightcone.length() ; x ++){
+                View lightconeItem = View.inflate(context, R.layout.item_advice_lightcone, null);
+                ImageView advicve_lightcone_img = lightconeItem.findViewById(R.id.advicve_lightcone_img);
+                TextView advicve_lightcone_name = lightconeItem.findViewById(R.id.advicve_lightcone_name);
+                TextView advicve_lightcone_lvl = lightconeItem.findViewById(R.id.advicve_lightcone_lvl);
+                ImageView advice_lightcone_star = lightconeItem.findViewById(R.id.advice_lightcone_star);
+
+                Picasso.get()
+                        .load(item_rss.getLightconeByName(item_rss.getLocaleNameByPrydwen(lightcone.getJSONObject(x).getString("cone"), context))[0])
+                        .error(R.drawable.ico_lost_img)
+                        .into(advicve_lightcone_img);
+                advicve_lightcone_name.setText(item_rss.getLocalNameByName(item_rss.getLocaleNameByPrydwen(lightcone.getJSONObject(x).getString("cone"), context), context));
+                advicve_lightcone_lvl.setText(String.valueOf(lightconesList.get(lightconesNameList.indexOf(
+                        item_rss.getLocaleNameByPrydwen(lightcone.getJSONObject(x).getString("cone"), context)
+                )).getRare()));
+
+                Drawable drawable = context.getDrawable(R.drawable.ic_rare_star);
+                drawable.setTint(Color.parseColor(sharedPreferences.getString("themedColor","#6750A4")));
+                advice_lightcone_star.setBackground(drawable);
+                advice_lightcone_ll.addView(lightconeItem);
+            }
+
+            themeUtil.themeTint(
+                    info_advice.findViewById(R.id.rootView_info_character_advice)
+            );
+        }
+    }
+    public class ShowAnim extends Animation {
+        View view;
+        boolean isPushDownAnim;
+        int targetHeight;
+        int targetTop;
+        int targetTopLast;
+
+        public ShowAnim(View view, boolean isPushDownAnim) {
+            this.view = view;
+            this.isPushDownAnim = isPushDownAnim;
+            targetHeight = view.getMeasuredHeight();
+            if (isPushDownAnim){
+                targetTop = 0;
+                targetTopLast = -view.getMeasuredHeight();
+            }else{
+                targetTop = -view.getMeasuredHeight();
+                targetTopLast = 0;
+            }
+
+        }
+
+        @Override
+        protected void applyTransformation(float interpolatedTime, Transformation t) {
+            float interpolatedTime_auth = interpolatedTime;
+            if (isPushDownAnim){
+                interpolatedTime_auth = (1-interpolatedTime);
+            }
+
+            DisplayMetrics displayMetrics = new DisplayMetrics();
+            activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
+            ViewGroup.MarginLayoutParams layoutParams =
+                    (ViewGroup.MarginLayoutParams) view.getLayoutParams();
+            layoutParams.setMargins(0, (int)  ((targetTopLast + targetTop)*interpolatedTime_auth),0,0);
+            view.setLayoutParams(layoutParams);
+            view.setAlpha(1-interpolatedTime_auth*2);
+
+        }
+
+        @Override
+        public void initialize(int width, int height, int parentWidth,
+                               int parentHeight) {
+            super.initialize(width, height, parentWidth, parentHeight);
+        }
+
+        @Override
+        public boolean willChangeBounds() {
+            return true;
         }
     }
 
@@ -724,4 +901,61 @@ public class InfoCharacterPage {
         activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
     }
 
+
+    public void ImageViewAnimatedChange(Context c, final ImageView v, final int new_image) {
+        final Animation anim_out = AnimationUtils.loadAnimation(c, R.anim.fade_out);
+        final Animation anim_in  = AnimationUtils.loadAnimation(c, R.anim.fade_in);
+        anim_out.setAnimationListener(new Animation.AnimationListener()
+        {
+            @Override public void onAnimationStart(Animation animation) {}
+            @Override public void onAnimationRepeat(Animation animation) {}
+            @Override public void onAnimationEnd(Animation animation)
+            {
+                v.setImageResource(new_image);
+                anim_in.setAnimationListener(new Animation.AnimationListener() {
+                    @Override public void onAnimationStart(Animation animation) {}
+                    @Override public void onAnimationRepeat(Animation animation) {}
+                    @Override public void onAnimationEnd(Animation animation) {}
+                });
+                v.startAnimation(anim_in);
+            }
+        });
+        v.startAnimation(anim_out);
+    }
+
+    private void lightcone_list_reload() {
+        lightconesList = new ArrayList<>();
+        String name ,path,status,fileName;
+        int rare;
+        //charactersList.clear();
+
+        String json_base = LoadAssestData(context,"lightcone_data/lightcone_list.json");;
+        //Get data from JSON
+        try {
+            JSONArray array = new JSONArray(json_base);
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject object = array.getJSONObject(i);
+                name = object.getString("name");
+                path = object.getString("path");
+                rare = object.getInt("rare");
+                status = object.getString("status");
+                fileName = object.getString("fileName");
+
+                HSRItem hsrItem = new HSRItem();
+                hsrItem.setName(name);
+                hsrItem.setPath(path);
+                hsrItem.setRare(rare);
+                hsrItem.setStatus(status);
+                hsrItem.setFileName(fileName);
+
+                lightconesList.add(hsrItem);
+                lightconesNameList.add(name);
+            }
+        } catch (JSONException e) {
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            LogExport.bugLog(TAG, "lightcone_list_reload", sw.toString(), context);
+        }
+    }
 }

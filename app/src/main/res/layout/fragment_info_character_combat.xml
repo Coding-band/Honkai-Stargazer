@@ -810,7 +810,8 @@
                     android:layout_marginBottom="8dp"
                     android:fadingEdgeLength="20dp"
                     android:requiresFadingEdge="horizontal"
-                    android:scrollbars="none">
+                    android:scrollbars="none"
+                    android:visibility="gone">
 
                     <LinearLayout
                         android:id="@+id/combat_skill6_material_ll"
@@ -823,7 +824,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                     <LinearLayout
                         android:layout_width="wrap_content"

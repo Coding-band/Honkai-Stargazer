@@ -5,6 +5,7 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/rootView_dialog_color"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -17,89 +18,105 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="@string/setting_material_color_title"
+        android:text="@string/theme_change_title"
         android:textSize="24sp" />
 
-    <ScrollView
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:fadeScrollbars="false"
-        android:requiresFadingEdge="horizontal|vertical"
-        android:scrollbars="none">
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
 
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <RadioGroup
-                android:id="@+id/setting_color_group"
+            <ImageView
+                android:id="@+id/color_radio_1"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_radio_uncheck"
+                app:tint="#EF5350" />
 
-                <RadioButton
-                    android:id="@+id/setting_color_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:drawableRight="@drawable/circle_spec_red"
-                    android:drawablePadding="4dp"
-                    android:drawableTint="#6750A4"
-                    android:text="#6750A4" />
+            <ImageView
+                android:id="@+id/color_radio_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_radio_uncheck"
+                app:tint="#7E57C2" />
 
-                <RadioButton
-                    android:id="@+id/setting_color_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:drawableRight="@drawable/circle_spec_red"
-                    android:drawablePadding="4dp"
-                    android:drawableTint="#009688"
-                    android:text="#009688" />
+            <ImageView
+                android:id="@+id/color_radio_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_radio_uncheck"
+                app:tint="#5C6BC0" />
 
-                <RadioButton
-                    android:id="@+id/setting_color_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:drawableRight="@drawable/circle_spec_red"
-                    android:drawablePadding="4dp"
-                    android:drawableTint="#F6C032"
-                    android:text="#F6C032" />
+            <ImageView
+                android:id="@+id/color_radio_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_radio_uncheck"
+                app:tint="#42A5F5" />
+        </TableRow>
 
-                <RadioButton
-                    android:id="@+id/setting_color_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:drawableRight="@drawable/circle_spec_red"
-                    android:drawablePadding="4dp"
-                    android:drawableTint="#32C7F6"
-                    android:text="#32C7F6" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-                <RadioButton
-                    android:id="@+id/setting_color_5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:drawableRight="@drawable/circle_spec_red"
-                    android:drawablePadding="4dp"
-                    android:drawableTint="#F63279"
-                    android:text="#F63279" />
+            <ImageView
+                android:id="@+id/color_radio_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_radio_uncheck"
+                app:tint="#26C6DA" />
 
-                <RadioButton
-                    android:id="@+id/setting_color_6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:drawableRight="@drawable/circle_spec_red"
-                    android:drawablePadding="4dp"
-                    android:drawableTint="#73D246"
-                    android:text="#73D246" />
-            </RadioGroup>
-        </LinearLayout>
-    </ScrollView>
+            <ImageView
+                android:id="@+id/color_radio_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_radio_uncheck"
+                app:tint="#26A69A" />
+
+            <ImageView
+                android:id="@+id/color_radio_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_radio_uncheck"
+                app:tint="#66BB6A" />
+
+            <ImageView
+                android:id="@+id/color_radio_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_radio_uncheck"
+                app:tint="#FFCA28" />
+        </TableRow>
+
+    </TableLayout>
 
     <Button
         android:id="@+id/dialog_ok"
