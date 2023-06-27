@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Project Honkai Stargazer (崩壞•星穹觀星者) was
+  ~ Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
+  ~ Copyright © 2023 Xectorda 版權所有
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/tv_daynight_tint"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_skill_round"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/tv_nightday_tint"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="經驗值"
+                android:textColor="@color/tv_nightday_tint"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="64dp" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="65536/1048576"
+                android:textColor="@color/tv_nightday_tint"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.Seekbar.FULL"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:max="2160"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progress="1920" />
+
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:foreground="@drawable/bg_card_kwang"
+        android:foregroundTint="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/coin"
+            app:tint="@color/theme_color_base" />
+
+        <TextView
+            android:id="@+id/textView63"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="33000"
+            android:textColor="@color/tv_nightday_tint"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/museum_cancel"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:layout_margin="12dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:src="@drawable/round_cancel_24"
+        app:tint="@color/tv_nightday_tint" />
+
+</LinearLayout>

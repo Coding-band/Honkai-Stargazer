@@ -14,10 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HonkaiStargazer">
         <activity
+            android:name=".ui.MuseumPage"
+            android:screenOrientation="landscape"
+            android:exported="false" />
+        <activity
             android:name=".ui.DevPage"
             android:exported="false" />
         <activity
-            android:name=".ui.HomePage"
+            android:name=".ui.RootPage"
             android:configChanges="locale|orientation|uiMode"
             android:exported="true"
             android:theme="@style/Theme.HonkaiStargazer"
@@ -34,11 +38,11 @@
             android:authorities="com.voc.honkai_stargazer.provider"
             android:exported="false"
             android:grantUriPermissions="true">
+
             <!-- ressource file to create -->
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths">
-            </meta-data>
+                android:resource="@xml/file_paths"></meta-data>
         </provider>
     </application>
 

@@ -1,0 +1,2379 @@
+{
+ "name": "Clara",
+ "spRequirement": 110,
+ "rarity": 5,
+ "descHash": "Garota indigente que vaga pelo mundo e vive com robôs. Ela é introvertida e gentil e tem coração puro. Deseja que todos do Mundo de Baixo sejam uma só família.",
+ "iconPath": "ed14eb05f7ce0df1e6d7320432d226dfd078b38e366d6a9bfbaf940e95b298f6",
+ "bgPath": "d335030ce1ced4b0519e8e00d6f9ddbe6b6c1bd97f029d7a9a3e71a0e22c7fc5",
+ "figPath": "f0e58b5e5509a7f65791b6ce4d667f5429be8913fd494ac61f4e9b4a6aa11d60",
+ "fgPath": "c69ead2056540f6797335e5eef9719374153e4a4d3f31447ff9bc2ee3649659a",
+ "artPath": "9f7d87a700a5b5e11195ef57bc2ef5874635779d2edb9e86d4e840ad34ec0b5b",
+ "miniIconPath": "f6809c62b85e05914e3507624eabb1939109f9c38f1fde352626f54888cfcba2",
+ "splashIconPath": "80250b40d167ca2ba09fc4120b67d0321c06c47518189354c650728b9337cb1f",
+ "damageType": {
+  "id": 1,
+  "iconPath": "ae78085438eecf2462f1256329b5aa2369f01b8cda6926ea0a08b1b8affe5108",
+  "color": "#FFFFFF",
+  "name": "Físico",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "57e114954f0de32a3762e77aa2fd4f791deb47497337366308c51de1d0f12430",
+  "altIconPath": "fccc485934c16aa04a6ddacdbfec82b1e59182ba83b560af62ed57b29033c308",
+  "color": "#FFFFFF",
+  "name": "A Destruição",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 1,
+  "iconPath": "10dae0df031160c29bace386a1220e539f2b5e13765cdd0f6d2a2143bca2755c",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Crédito",
+   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
+   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
+   "purpose": "Moeda Comum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cálice (Grande Mina)",
+    "Recompensas de Missão",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "Rastros de Destino",
+   "desc": "Material avançado para subir o nível de Rastros.",
+   "lore": "Sua vitória é garantida por inúmeras falhas, e os pequenos passos que você deu levaram a uma reviravolta do destino.",
+   "purpose": "Materiais de Rastro",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Recompensas de Pontuação do Universo Simulado",
+    "Honra dos Inominados",
+    "Troca de Brasas",
+    "Recompensas de Evento por Tempo Limitado"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "Lamento do Guardião",
+   "desc": "Material avançado para subir o nível de Rastros.",
+   "lore": "A viseira não é a única coisa que está quebrada. Junto, está o desejo distorcido de uma guardiã.<br />Ela queria encontrar uma saída para que seu povo fugisse de Inverno Eterno, mas acabou se tornando uma marionete de forças superiores.<br /><br />\"Guardiã Suprema é um título passado por gerações de governantes de Belobog. O que ninguém entende é que as guardiãs também anseiam por cuidado e proteção.\"",
+   "purpose": "Materiais de Rastro",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "Eco da Guerra (Colina do Inverno Eterno)"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "Guia do Viajante",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>20.000</nobr> de EXP de Personagem.",
+   "lore": "Leitura obrigatória para explorar o mundo. Pressione o botão \"Ler\" para reproduzir uma voz atraente num idioma que você entenda falando sobre os encontros lendários de aventureiros renomados em diferentes mundos, bem como a sabedoria e o conhecimento precioso que eles acumularam.<br /><br />\"A novíssima série do Guia do Viajante, 'Manual de Gastronomia Galáctica do Chefe', já está disponível para compra.\"<br />\"Para fazer pedidos, envie um sinal de sinestesia para ERD<nobr>-23</nobr>θ e entre em contato com um representante da Guilda de Intelectuais. Temos várias formas de pagamento.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Salão Esquecido"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "Registro de Aventura",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>5.000</nobr> de EXP de Personagem.",
+   "lore": "Coleção bem-organizada de notas de aventura educacional contendo incontáveis ilustrações e textos com histórias completas, bem como informações valiosas e técnicas de sobrevivência.<br /><br />\"Por que não digitalizamos isso e guardamos em um disco de fotolitografia? Seria muito mais prático.\"<br />\"Tecnologia avançada é muito mais frágil do que você imagina diante de tempestades estelares e erupções de fluxo de neurônios. Além disso, tenho certeza de que o autor deste livro gostaria que as pessoas o lessem da forma mais simples possível.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Treinamento Diário"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "Encontros de Viagens",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>1.000</nobr> de EXP de Personagem.",
+   "lore": "Diário de viagem com assuntos aleatórios escritos numa letra feia. Não tem muita utilidade.<br /><br />\"Dan Heng, termine logo de ler isso para jogarmos fora.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "a01d7231993bf0450534073f8515ba34a99653c455e03f9f43053719a34aff98",
+   "name": "Peça Antiga",
+   "desc": "Peças mecânicas do Velho Mundo deixadas para trás. Material bruto usado para aprimoramentos.",
+   "lore": "Apesar de seu tamanho, foi moldada e polida de um jeito que, hoje, as pessoas teriam dificuldade de replicar.<br /><br />\"Um parafuso do Velho Mundo é mais forte que uma armadura da atualidade.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "Assentamento de Robôs: Autômatos ou outros inimigos",
+    "Grande Mina: Autômatos ou outros inimigos",
+    "Inimigos do Universo Simulado",
+    "Recompensas de Atribuição",
+    "Troca de Brasas",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "191ad5f4b9fd5180b9065e05d463d6df35334c87ce1428e89d8d507e69177dc7",
+   "name": "Eixo Antigo",
+   "desc": "Eixo mecânico do Velho Mundo deixado para trás. Material normal usado para aprimoramentos.",
+   "lore": "Uma vez desmontado, seus componentes de precisão jamais podem ser montados novamente. Até mesmo os experientes em consertos da Divisão Tecnológica de Belobog pensariam duas vezes antes de tocar nisso.<br /><br />\"Seu imbecil, os Casacos Azuis vão trocar isso apenas por uns enlatados. Leve ao Chefe Svarog e você não vai precisar de comida nem de roupa por um bom tempo.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "Assentamento de Robôs: Autômatos ou outros inimigos - Nível de Equilíbrio 2+",
+    "Grande Mina: Autômatos ou outros inimigos - Nível de Equilíbrio 2+",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "635673": {
+   "id": 635673,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1cfcf420c7cd53b503eead070d126b1448cd68bf3f9b0ddca916d10b1747537b",
+   "name": "Lâmina Despedaçada",
+   "desc": "Fragmentos de arma deixados por membros da Legião Antimatéria. Usados para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Destruição</span>.",
+   "lore": "Essa marca representa seu ranque e feitos em nome da Destruição.<br />O mestre desta arma cavalga em um cavalo escarlate para incendiar cidades, para tomar a paz da humanidade e para destruir nações semelhantes a formigueiros.<br /><br />\"O portador desta marca é incumbido de acabar com a paz das nações.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/635673",
+   "comeFrom": [
+    "Cálice (Zona de Armazenamento)"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "name": "Motor Antigo",
+   "desc": "Motor mecânico do Velho Mundo deixado para trás. Material avançado usado para aprimoramentos.",
+   "lore": "Usa Geoessência como a fonte de energia. Quando alimentado, descarrega auroras errantes, em vez de faíscas.<br /><br />\"Somente a Divisão Tecnológica sob comando direto da Guardiã Suprema tem acesso a informações sobre o Velho Mundo. Eu perdi meus privilégios depois que me demitiram.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "Assentamento de Robôs: Autômatos ou outros inimigos - Nível de Equilíbrio 4+",
+    "Grande Mina: Autômatos ou outros inimigos - Nível de Equilíbrio 4+",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "836259": {
+   "id": 836259,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "name": "Lâmina Destruidora de Mundos",
+   "desc": "Arma quebrada deixada por membros da Legião Antimatéria. Usada para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Destruição</span>.",
+   "lore": "Esta arma representa o ranque e as conquistas de seu dono em nome da Destruição.<br />O dono desta arma é aquele que chega no fim da guerra para atiçar as brasas que consomem o mundo. Independentemente das glórias do passado ou das bênçãos de suas divindades, este planeta está destinado a voltar às cinzas de onde veio, e murchar nas profundezas do céu estrelado.<br /><br />\"O objetivo do usuário desta arma é purificar o mundo.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/836259",
+   "comeFrom": [
+    "Cálice (Zona de Armazenamento)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  },
+  "866633": {
+   "id": 866633,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "d97cb9072570df0b85725f8a0783d22e500c3e06e49b7fbc8dd485e7ba1b9516",
+   "name": "Dentes Quebrados do Lobo de Ferro",
+   "desc": "Dente de serra fragmentado deixado por autômatos. Pode ser usado para Ascensão de personagens do tipo Físico.",
+   "lore": "Dizem que as técnicas de fundição dos Arquitetos permitem fazer motosserras resistentes o suficiente para dividir rochas ao meio. Tais técnicas foram deixadas para trás há muito tempo.<br /><br />\"O chefe Svarog diz que sua lâmina é tão afiada que pode cortar o espaço exato entre duas moléculas... Mas o que são moléculas?\"",
+   "purpose": "Materiais de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/866633",
+   "comeFrom": [
+    "Sombra Estagnada (Grande Mina)",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "920200": {
+   "id": 920200,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1da1734309fa1e0ed5035575293caab81cfa7723f7bf4a81d36d9833d80b36",
+   "name": "Lâmina Inerte",
+   "desc": "Resquícios de armas deixados por membros da Legião Antimatéria. Usados para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Destruição</span>.",
+   "lore": "Essa marca representa seu ranque e feitos em nome da Destruição.<br />O mestre desta arma carrega um forte ódio por todos os seres sencientes. Eles se deleitam no lamento de seres inteligentes como se fossem doces melodias, e derrubam civilizações com milênios de história em um piscar de olhos.<br /><br />\"O portador desta marca é incumbido de acabar com a respiração entre os vivos.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/920200",
+   "comeFrom": [
+    "Cálice (Zona de Armazenamento)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549408,
+     "count": 5
+    }
+   ],
+   "attackBase": 100.32,
+   "attackAdd": 5.016,
+   "hpBase": 168.96,
+   "hpAdd": 8.448,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549408,
+     "count": 10
+    }
+   ],
+   "attackBase": 140.448,
+   "attackAdd": 5.016,
+   "hpBase": 236.544,
+   "hpAdd": 8.448,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633349,
+     "count": 6
+    },
+    {
+     "id": 866633,
+     "count": 3
+    }
+   ],
+   "attackBase": 180.576,
+   "attackAdd": 5.016,
+   "hpBase": 304.128,
+   "hpAdd": 8.448,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633349,
+     "count": 9
+    },
+    {
+     "id": 866633,
+     "count": 7
+    }
+   ],
+   "attackBase": 220.704,
+   "attackAdd": 5.016,
+   "hpBase": 371.712,
+   "hpAdd": 8.448,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717290,
+     "count": 6
+    },
+    {
+     "id": 866633,
+     "count": 20
+    }
+   ],
+   "attackBase": 260.832,
+   "attackAdd": 5.016,
+   "hpBase": 439.296,
+   "hpAdd": 8.448,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717290,
+     "count": 9
+    },
+    {
+     "id": 866633,
+     "count": 35
+    }
+   ],
+   "attackBase": 300.96,
+   "attackAdd": 5.016,
+   "hpBase": 506.88,
+   "hpAdd": 8.448,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 341.088,
+   "attackAdd": 5.016,
+   "hpBase": 574.464,
+   "hpAdd": 8.448,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "4a7c180ec7c961faee21e24fbc057174789723c19f85add6cf47236cbf8bdd2b",
+   "name": "Uma Figura Alta",
+   "descHash": "Usar a Perícia não removerá Marcas do Contra-Ataque do inimigo.",
+   "params": []
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "eef148752ed1f5a8d070b4f53dfb1dcd68a9d409c63a538724dd425330b11d8f",
+   "name": "Um Abraço Apertado",
+   "descHash": "Após usar a Perícia Suprema, o ATQ aumenta em <nobr>#1[i]%</nobr> por <nobr>#2[i]</nobr> rodada(s).",
+   "params": [
+    0.3,
+    2
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "4e2c3cf3098eb4b75980adb81c38a07be1474aefe72a4fb56b5316834bded740",
+   "name": "Armadura de Aço Fria",
+   "descHash": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "bcc5e475f5f14a2cae5a94cc654c301c00027d5444e838265e234d3a93d9217b",
+   "name": "Aconchego Familiar",
+   "descHash": "Após sofrer um ataque, o Dano recebido por Clara é reduzido em <nobr>#1[i]%</nobr>. Este efeito dura até o início da rodada seguinte.",
+   "params": [
+    0.3
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "c039825cb8396fadd31ba5faf689697494227d463f77f7905dcea398ca74375d",
+   "name": "Uma Pequena Promessa",
+   "descHash": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "238257725efa29126a176bf6b02954d76fac8bcef1876390b11bb75c2f8063cf",
+   "name": "Longa Companhia",
+   "descHash": "Quando outros aliados são atingidos, Svarog também tem <nobr>#1[i]%</nobr> de chance fixa de ativar um Contra-Ataque no atacante e marcá-lo com uma Marca do Contra-Ataque. Ao usar a Perícia Suprema, o número de Contra-Ataque(s) Aprimorado(s) aumenta em <nobr>#2[i]</nobr>.",
+   "params": [
+    0.5,
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   310670
+  ],
+  [
+   226729
+  ],
+  [
+   110084
+  ],
+  [
+   795783
+  ],
+  [
+   511256
+  ]
+ ],
+ "skills": [
+  {
+   "id": 310670,
+   "name": "Eu Quero Ajudar",
+   "tagHash": "Alvo Único",
+   "descHash": "Causa Dano <span style=\"color:#FFFFFF;\">Físico</span> igual a <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Clara a um único inimigo.",
+   "typeDescHash": "ATQ Básico",
+   "iconPath": "a56a8dd217b79ffc2557b9b6ee7ca0e8f9ac596ce78704cfb8572793692a4975",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 226729,
+   "name": "Svarog Cuida de Você",
+   "tagHash": "Área",
+   "descHash": "Causa Dano <span style=\"color:#FFFFFF;\">Físico</span> igual a <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Clara a todos os inimigos e adicionalmente causa Dano <span style=\"color:#FFFFFF;\">Físico</span> igual a <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span> do ATQ de Clara a inimigos marcados por Svarog com uma Marca do Contra-Ataque.<br />Após o uso desta Perícia, todas as Marcas do Contra-Ataque serão removidas.",
+   "typeDescHash": "Perícia",
+   "iconPath": "c733f760b7c0b9b08cd348e80be013fae237c2712127681e68c58942737dac41",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.6,
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.66,
+      0.66
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.72,
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.78,
+      0.78
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.84,
+      0.84
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.9,
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.975,
+      0.975
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.05,
+      1.05
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.125,
+      1.125
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.2,
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.26,
+      1.26
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.32,
+      1.32
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.38,
+      1.38
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.44,
+      1.44
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.5,
+      1.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 110084,
+   "name": "É Promessa, Não Ordem",
+   "tagHash": "Aprimoramento",
+   "descHash": "Após Clara usar sua Perícia Suprema, o Dano causado a ela é reduzido em <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span> extra, e ela terá muito mais chances de ser atacada por inimigos por <nobr>#3[i]</nobr> rodada(s).<br />Além disso, o <u>Contra-Ataque</u> de Svarog é aprimorado. Quando um aliado é atacado, Svarog usa um <u>Contra-Ataque</u> imediatamente, e seu multiplicador de Dano contra o inimigo aumenta em <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Inimigos adjacentes a ele sofrem <nobr>50%</nobr> do Dano causado ao inimigo-alvo. <u>Contra-Ataque(s)</u> aprimorado(s) podem entrar em vigor <nobr>#5[i]</nobr> vez(es).",
+   "typeDescHash": "Perícia Suprema",
+   "iconPath": "ce7af5b7d5ea1e0fea993c2dc6d2b8a4cf06f28372bb0648029ee754469a1e5f",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      5,
+      0.96,
+      2,
+      0.15,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      5,
+      1.024,
+      2,
+      0.16,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      5,
+      1.088,
+      2,
+      0.17,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      5,
+      1.152,
+      2,
+      0.18,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      5,
+      1.216,
+      2,
+      0.19,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      5,
+      1.28,
+      2,
+      0.2,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      5,
+      1.36,
+      2,
+      0.2125,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      5,
+      1.44,
+      2,
+      0.225,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      5,
+      1.52,
+      2,
+      0.2375,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      5,
+      1.6,
+      2,
+      0.25,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      5,
+      1.664,
+      2,
+      0.26,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      5,
+      1.728,
+      2,
+      0.27,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      5,
+      1.792,
+      2,
+      0.28,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      5,
+      1.856,
+      2,
+      0.29,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      5,
+      1.92,
+      2,
+      0.3,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 110
+  },
+  {
+   "id": 795783,
+   "name": "Porque Somos uma Família",
+   "tagHash": "Alvo Único",
+   "descHash": "Sob a proteção de Svarog, o Dano recebido por Clara ao ser atingida por ataques inimigos é reduzido em <nobr>#3[i]%</nobr>. Svarog marca inimigos que atacarem Clara com sua Marca do Contra-Ataque e então <u>Contra-Ataca</u>, causando Dano <span style=\"color:#FFFFFF;\">Físico</span> igual a <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span> do ATQ de Clara.",
+   "typeDescHash": "Talento",
+   "iconPath": "0cf0ee129cd4db07eb16e4c59da3690937f45cfe6780d6a9949efeb203858819",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1,
+      0.8,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1,
+      0.88,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1,
+      0.96,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1,
+      1.04,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1,
+      1.12,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1,
+      1.2,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1,
+      1.3,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1,
+      1.4,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1,
+      1.5,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1,
+      1.6,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1,
+      1.68,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1,
+      1.76,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1,
+      1.84,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1,
+      1.92,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1,
+      2,
+      0.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 595197,
+   "name": "Ataque",
+   "tagHash": "",
+   "descHash": "Ataca um inimigo, e quando a batalha começa, reduz a Tenacidade do alvo inimigo do Tipo correspondente.",
+   "typeDescHash": "",
+   "iconPath": "a56a8dd217b79ffc2557b9b6ee7ca0e8f9ac596ce78704cfb8572793692a4975",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 511256,
+   "name": "Um Preço Baixo pela Vitória",
+   "tagHash": "",
+   "descHash": "Ataca o inimigo imediatamente. Ao entrar na batalha, a chance de Clara ser atacada por inimigos aumenta por <nobr>#1[i]</nobr> rodada(s).",
+   "typeDescHash": "Técnica",
+   "iconPath": "b2bb21eba04d3fa208a4d8698169257e73af1a7376832b91304e6b8ea8c1825f",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      2,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1107102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1107205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1107206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1107207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 947968,
+          "name": "Bônus de ATQ",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+          "statusList": [
+           {
+            "key": "ATQ",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836259,
+            "count": 3
+           },
+           {
+            "id": 717290,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 947967,
+        "name": "Bônus de Dano: Físico",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e",
+        "statusList": [
+         {
+          "key": "Bônus de Dano <span style=\"color:#FFFFFF;\">Físico</span>",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836259,
+          "count": 3
+         },
+         {
+          "id": 717290,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 947970,
+      "name": "Bônus de ATQ",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 633349,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 947878,
+    "name": "Sob Proteção",
+    "descHash": "A chance de resistir a penalidades de Controle Negativo aumenta em <nobr>#1[i]%</nobr>.",
+    "iconPath": "84ccd1a22755bb0519affc339f316f793fb22ab86a553f379a236f6399469861",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.35
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1107101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1107202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1107203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1107204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 947969,
+          "name": "Bônus de PV",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+          "statusList": [
+           {
+            "key": "PV",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920200,
+            "count": 3
+           },
+           {
+            "id": 633349,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 947972,
+        "name": "Bônus de ATQ",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920200,
+          "count": 3
+         },
+         {
+          "id": 633349,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 947971,
+      "name": "Bônus de Dano: Físico",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e",
+      "statusList": [
+       {
+        "key": "Bônus de Dano <span style=\"color:#FFFFFF;\">Físico</span>",
+        "value": 0.032
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 549408,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 947875,
+    "name": "Afinidade",
+    "descHash": "Ao receber um ataque, este personagem tem uma chance fixa de <nobr>#1[i]%</nobr> de remover uma penalidade que tiver sido aplicada a ele.",
+    "iconPath": "9eb6853e6b9c0df2fa5f3210abcf981350869bfc8a9f6a49001982c1c4052da3",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.35
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1107103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1107208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1107209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 947982,
+        "name": "Bônus de Dano: Físico",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e",
+        "statusList": [
+         {
+          "key": "Bônus de Dano <span style=\"color:#FFFFFF;\">Físico</span>",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717290,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1107210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 864032,
+        "name": "Bônus de ATQ",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717290,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 947981,
+      "name": "Bônus de PV",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 717290,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 947877,
+    "name": "Vingança",
+    "descHash": "Aumenta em <nobr>#1[i]%</nobr> o Dano de Contra-Ataque de Svarog.",
+    "iconPath": "89dbcbd906fa02b1cb3ab71ced5a143e2f276cae8703f90411c885e9efbb2e38",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.3
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1107201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 947974,
+    "name": "Bônus de ATQ",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549408,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corpo",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "Chance de CRIT",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "Pés",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "ATQ",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+   },
+   {
+    "relicTypeHash": "Esfera Plana",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "Bônus de Dano Físico",
+    "propertyIconPath": "a493793d3b77e04dfb9b717f664a7d46c36a9a8a043dedf7049a10a628eebd8e"
+   },
+   {
+    "relicTypeHash": "Corda de Ligação",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "Efeito de Quebra",
+    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Primeiro Encontro",
+   "text": "Clara: Olá... Sou Clara. Quer entrar para minha família? Como o Sr. Svarog?<br />Svarog: Enquanto eu estiver aqui, Desbravador/Desbravadora é sua família.",
+   "unlockRequirement": "",
+   "cnUrl": "14010cbfdb7df931fde8346fccd7573b8eb42a148082f626cc407e48bdf2d95f",
+   "jpUrl": "cba7689810ca26b1b6586abae22502a87039ad6d70e51f87058f9c8341106196",
+   "enUrl": "c0af06f850ea342152a61e685719fb42a6a97c476f2172453fd18a4126d94a70",
+   "krUrl": "55c0449a78f69f0de74c1ce0fabe45a380b56cffa6bd6ca5a4ee45437cb6e8ef"
+  },
+  {
+   "id": 2,
+   "title": "Cumprimento",
+   "text": "Vamos trabalhar muito hoje!",
+   "unlockRequirement": "",
+   "cnUrl": "f80164407b8eb941afb061cec6e25a7c1c0975d0d29ca9dcc41eff1e7b06e1b8",
+   "jpUrl": "ff09ade91944647bb51321a4b7a92c4047a2135cf8dffa235af4b3017f646ab3",
+   "enUrl": "99c13b9247c16836082c34b1f629eab06b4a547c6d857ed90bb9f86470e68a47",
+   "krUrl": "d4ca048595fd69be6553fb9ac4b2da41b5cfe30a47f1bf5e006b24b4e881cbda"
+  },
+  {
+   "id": 3,
+   "title": "Despedida",
+   "text": "Estou ficando com sono, hora da soneca no braço do Sr. Svarog. Você vem?",
+   "unlockRequirement": "",
+   "cnUrl": "3bc4798928677158c4136c930775e33f2310d51ec72feff0508a5055b5fa3730",
+   "jpUrl": "9af3661b65f482d4ecce4c69d5dfa1d81bbb4000b5a07574a8775abba48b0d7e",
+   "enUrl": "2aa83aef1948e5303cbfb2c519e8b122fe8cc902bb40d26bba7cb218d9cf47dd",
+   "krUrl": "96b2250c81fec2de084d56693589d4257e0d9c537b484e3fd6de43b372a5fe9e"
+  },
+  {
+   "id": 4,
+   "title": "Sobre Si: Memórias",
+   "text": "Memórias são importantes. Até os cálculos do Sr. Svarog precisam levá-las em consideração... Não vou esquecer de você.",
+   "unlockRequirement": "",
+   "cnUrl": "918111b9d327397b037d1ad6fb4a8eeda06e613a4841949719a7ea1587094852",
+   "jpUrl": "81e1a02be385c4110f52c427b0311e9f4760639bd81b14a254adc453d9e0fb78",
+   "enUrl": "28464c3c31ad159a36a1566ec75144321fa184cb113cdd469030ade6a54938c8",
+   "krUrl": "3d872ea739a269895af6545a6fcac91d78c3e9f0ccf17ea4811b0a5b69b5e44b"
+  },
+  {
+   "id": 5,
+   "title": "Bate-papo: Brincar de Casinha",
+   "text": "Uma vez, quando eu tava brincando de casinha, pedi ao Perkins para atender a porta, e alguém veio mesmo visitar!",
+   "unlockRequirement": "",
+   "cnUrl": "3c8a3e657e9efc9aa1769f72ef8eac4c2aa21e6e5622005235d34e1711844406",
+   "jpUrl": "d0d92001bb551cc2a2808c1b2757309646e991307fcb5e48d38a1ea1c2770450",
+   "enUrl": "3cebb22488a33f79cfaf9063e84a011b2204ef5aff5e577c7992a1d85877a02b",
+   "krUrl": "a184940fdac59ecb6547662584955f4fd143a6bafc77215db07825f865334d8c"
+  },
+  {
+   "id": 6,
+   "title": "Hobbies",
+   "text": "Tem muitas coisas interessantes no banco de memórias do Sr. Svarog, tipo... filmes! É como assistir a muitas pessoas brincando de casinha juntas!",
+   "unlockRequirement": "",
+   "cnUrl": "05fd35b69797a64c52e71ebe9d98012cd54feba2de74c6c51d9974c7fbd21d8f",
+   "jpUrl": "fbe73dde23f926b325098fa5aa9d35ab8f299ca04c6d7c0624dec360b619ee1f",
+   "enUrl": "59649c4b33537324f544124ea3abbf7ee8bc27467e5c89bae25d0451c1d80db6",
+   "krUrl": "a260f22b70cf828a77e12bcf277d854c1f820311fd13c80020ce0bde01941a96"
+  },
+  {
+   "id": 7,
+   "title": "Irritações",
+   "text": "É difícil fazer o Sr. Svarog encenar um filme comigo. Ele só quer fazer papel de árvore ou pedra... Queria que ele fizesse o pai...",
+   "unlockRequirement": "",
+   "cnUrl": "dab637a290f20bc1933cc83b8e54ebaaeb2babca6a4d7a2402dbea29163a887b",
+   "jpUrl": "c87812834b0d699705d3635870f8841a0e1ed1632225544d6e254230f8f4305c",
+   "enUrl": "713243353bea2d61d5160b24cb29402579dc279fa54e82bb6e2489595db8229c",
+   "krUrl": "361bf20e56ca7e02b86261061d9dba90534ad31b506fd75ba46758a5d83d2d51"
+  },
+  {
+   "id": 8,
+   "title": "Uma Curiosidade",
+   "text": "Às vezes, meus amigos robôs são grosseiros, mas lá no fundo eles são gentis e honestos.",
+   "unlockRequirement": "",
+   "cnUrl": "4150bbf333d112a647bbbdbe3e685666298a6ee43ab320cd7b4600be4e753343",
+   "jpUrl": "7b0784c33d1851d545345f4ab3946d1381c336b62cdaab5947674c4a3dad806e",
+   "enUrl": "5dbc862f58b91cbd2c3d1f8bdcd0b07479b6f8001b8a34553a781821ad9b50c0",
+   "krUrl": "dbb7e4ea20b3ca265386d54b7f5c1671a5ba5a16a7af68c3e35f3f7727a75839"
+  },
+  {
+   "id": 9,
+   "title": "Conhecimento",
+   "text": "Quando o Sr. Svarog está dormindo, o corpo dele faz um barulho. É tipo... um ronco.",
+   "unlockRequirement": "",
+   "cnUrl": "b9364060a7335c6b14a5480b7d59da74c30de8157e3f275f2d41ef536a81e897",
+   "jpUrl": "13d0d84ca6b5e14dcb896f05135fa925b7a816eb0403a24e3e71656427941360",
+   "enUrl": "27e0a59c10cb4e0ed80a8607dba44e953737910524507a1a98cbf3be0c0d00e8",
+   "krUrl": "24f26bf061ddbe739ce5ca9191b47b822c6b23823304dc25a764aa9b35649d51"
+  },
+  {
+   "id": 10,
+   "title": "Sobre Natasha",
+   "text": "A Natasha disse que também sou médica: dos meus amigos robôs!",
+   "unlockRequirement": "",
+   "cnUrl": "c7b282b166bed942db7d1edaec23e540db42f1250ce8797c6648764206e902bc",
+   "jpUrl": "6407b2a8e480ca9b9772bc70ac79bd48135b546174fc8ef23d98c9e093731d61",
+   "enUrl": "09fcb9f3935f061eb5141c891f9e23e4a3d152433bb7cb11e4e6ea0d42b405a9",
+   "krUrl": "a5d1cfd767c29f457d107ba5582e9430c1cf5102b13c7934343e667c5fe05fcd"
+  },
+  {
+   "id": 11,
+   "title": "Sobre Seele",
+   "text": "Eu me lembro que uma vez a senhorita Seele me viu tentando pegar um componente de uma rachadura de pedras. Ela esmagou as pedras com uma mão e saiu andando antes que eu pudesse agradecer...",
+   "unlockRequirement": "",
+   "cnUrl": "327d009e565b3b5eb0309e70f2ce04c86642897a9a3505db56cb05e254125dcd",
+   "jpUrl": "05b5141c9bf1608113cf0ff69c45daa13066b6cdf1600f1e0d36252f54729f0b",
+   "enUrl": "780a4edd66b8adee7349af865b7c97c4fc78d99fff6238404779357fe1e14ffa",
+   "krUrl": "283a869e49cd098fb4dbf2d02e833076480c5c76d5fafb45cd43e76f2365101e"
+  },
+  {
+   "id": 12,
+   "title": "Sobre Svarog",
+   "text": "Você sabia que as mãos do Sr. Svarog podem virar máquinas de secar cabelo? Elas também cortam pedras grandes e as transformam em mesinhas e cadeiras...",
+   "unlockRequirement": "",
+   "cnUrl": "4486aa6ca921050a48460cd55dd86daa48dda5d7db4e77467540e38329907ec9",
+   "jpUrl": "8e27dba2075271eddc710cb8f80d92dcc0b79e6adb23321f52d89f0e0e5669a3",
+   "enUrl": "8c9bdce6fe7b24805d4c17d75916cb36c0a3c87e3dddf84e0a4f415e1448c510",
+   "krUrl": "4857e75d0fe9bb94913ce33f56bde8ec1bdd051d7bfe9ed8398800205b2c43e6"
+  },
+  {
+   "id": 13,
+   "title": "Sobre Hook",
+   "text": "A Hook me convidou para entrar para as Toupeiras. Eu queria, mas acho que o Sr. Svarog é muito grande para brincar de esconde-esconde com a gente...",
+   "unlockRequirement": "",
+   "cnUrl": "119ce790d9d6e3e67ff8475b94cade83bb0bb148aef8100b228699351b65923f",
+   "jpUrl": "5efbea0338dddd52d8357eaa1157e43c7460161aefad2a6d0cae9e4d975cb7f2",
+   "enUrl": "2fe9059415c35c2c7b61e4d0c66dc263e585db75d18948d9eeb3c4071f7b1591",
+   "krUrl": "bf9d529b75dc1c0ea252fb8afd842d6b3a7cd70e28b59f1436fc74d59e296381"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Detalhes de Personagem",
+   "text": "Uma jovem que cresceu aos cuidados de um robô. Sua perspicácia e firmeza superam o esperado de alguém da sua idade.<br />Para Clara, os cálculos de Svarog são as leis do mundo, e infalíveis.<br />Ao menos era assim até ela perceber que os cálculos nem sempre trazem felicidade para todos.<br />Ela, que já foi uma menininha tímida, hoje decide deixar sua timidez de lado.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "História de Personagem: Parte I",
+   "text": "\"— Registro ██/██/████ DC.\"<br /><br />\"Uma menininha foi encontrada em um aterro ao sudeste da Vila do Rochedo.\"<br /><br />\"Exames mostram que a criança não tem lesões nem problemas físicos, mas o estado mental dela é relativamente instável. Ela resiste às perguntas sobre o seu estado e claramente quer evitar o assunto.\"<br />\"Seguimos com as tentativas de comunicação e conseguimos algumas informações.\"<br />\"A criancinha começa a chorar, por três horas e sete minutos.\"<br /><br />\"O nome da criancinha é Clara. Seu passado é desconhecido.\"<br />\"Conclusão: levá-la de volta à base para observação, e colher mais informações para elaborar um plano de acompanhamento para cuidar dela.\"",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>20</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte II",
+   "text": "\"— Registro ██/██/████ DC.\"<br /><br />\"Clara se tornou fluente na língua comum de Belobog, e tem grande talento no campo da engenharia mecânica, mas ainda resiste à comunicação com outros humanos. Conclusão: essa tendência é prejudicial para o desenvolvimento dela a longo prazo em Belobog.\"<br /><br />\"No momento há uma necessidade urgente de desenvolver um programa de socialização e comunicação adequada para Clara. Prioridade: Alta.\"<br /><br />\"— Registro ██/██/████ DC.\"<br /><br />\"Clara teve êxito ao fazer contato com uma colega da sua idade na Vila do Rochedo. O contato se chama Hook, e ela diz gerenciar uma organização de segurança local: as Toupeiras. Nenhuma informação sobre essa organização foi encontrada no meu banco de dados.\"<br /><br />\"O contato de Clara com Hook não foi bem a princípio. Ela demonstrou considerável timidez. Mas a outra criança conseguiu fazer a conversa fluir com muito entusiasmo e empatia, chamando Clara de 'membro honorária das Toupeiras'. Após o contato, Clara descreveu Hook como 'sua primeira amiga'.\"<br /><br />\"Essa questão tem uma relevância tremenda para Clara, e este registro foi catalogado como: Importante.\"",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>40</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte III",
+   "text": "\"— Registro ██/██/████ DC.\"<br /><br />\"Sob a orientação de Clara, muitos indigentes montaram assentamentos na periferia da base, e dependem de Clara para sobreviver. Esse comportamento não contraria as ordens da Preservação. Porém, muitos deles estão tentando entrar no Mundo de Cima através das passagens de transporte dessa base. Os portões da base devem ser bem fechados para evitar acelerar o fim de Belobog.\"<br /><br />\"Clara já discutiu isso comigo antes. Ela acredita que trancar os portões representa um ato 'incompreensível'. Eu respondi com os cálculos das previsões. Ao alocar recursos demais na guerra contra o Fragmentum, a Guardiã Suprema está acelerando a destruição do Mundo de Cima. O isolamento seria a melhor opção para o povo do Mundo de Baixo. Isso daria mais tempo a eles para tentarem sobreviver. Por fim, Clara concordou\".<br /><br />\"A maioria dos humanos se comporta de modo irracional, mas Clara não. Ela está sendo criada por mim entre autômatos. O comportamento dela é mais puramente racional. Sua presença pode afetar os cálculos das previsões do fim de Belobog, mas é preciso fazer mais observações.\"",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>60</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte IV",
+   "text": "\"— Registro ██/██/████ DC.\"<br /><br />\"Desde que eu fui criado, minhas ordens são para preservar o Mundo de Baixo. E ainda que eu só possa preservá-lo por um milissegundo a mais que o Mundo de Cima, eu cumprirei essas ordens. Como diz um provérbio de Belobog: 'Sou fiel à missão que me foi dada, sem qualquer hesitação.' Sendo assim, enxergo meus cálculos como leis imutáveis. Nada nem ninguém é capaz de me abalar, nem mesmo Forasteiros.\"<br /><br />\"Contudo, eu encontrei essa possível permutação entre os cálculos.\"<br /><br />\"Nesse cálculo, Clara transforma Belobog por completo. Certa vez, eu disse a respeito dela: 'O comportamento dela é mais puramente racional.' Tomando esse possível resultado como base e reexaminando minha conclusão, não posso encará-lo como um erro. Entretanto, admito que é tendencioso.\"<br /><br />\"Com os resultados desse cálculo, Clara também provou que a chave para mudar o status quo não passa pela racionalidade pura. Sinceridade e emoção, sim, foram capazes de derrubar todos os cálculos e reverter completamente o destino maldito de Belobog. Contudo, a não ser que novas forças externas intervenham, a chance disso é menor que <nobr>0,25272%</nobr>, ou seja, uma probabilidade baixa. Mais pesquisas a respeito desses cálculos estão suspensas no momento.\"<br /><br />\"A probabilidade de sobrevivência no Mundo de Baixo não teve um aumento significativo nos últimos cinco ciclos. Isso significa que a implementação disso pode estar suspensa, mas eu continuarei a monitorar todos os fatores de risco relevantes.\"<br /><br />\"Durante este ciclo, meu foco será encontrar a família de Clara. Embora ela insista que já achou sua verdadeira família, continuarei coletando toda e qualquer informação a fim de rastrear a família biológica de Clara o quanto antes.\"",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>80</nobr> de Personagem"
+  }
+ ],
+ "archive": {
+  "cvCn": "紫苏九月",
+  "cvJp": "日高里菜",
+  "cvKr": "김예림",
+  "cvEn": "Emily Sun",
+  "camp": "Belobog"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "clara"
+}

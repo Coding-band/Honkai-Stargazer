@@ -1,0 +1,497 @@
+{
+ "name": "Antagonista",
+ "rarity": 3,
+ "descHash": "Uma gota de força condensada pelo próprio tempo. Todos os momentos aparentemente insignificantes se unem para formar o magnífico coro do destino. <br /><br />\"Quem luta pela liberdade nunca morre, pois suas histórias são contadas para sempre.\"",
+ "iconPath": "848a049d2354c1f77ac6762b2d3376cc80ee276fc9f9bf57aef0e8a8c666c535",
+ "artPath": "2d6a624414a7838429fc2cc4a708484e4655656510d9b604fc13fbe89b80c754",
+ "mediumIconPath": "5c73e94ecbfebaa41dab8bed6c0b03583671633be039bba34f15ccab750f1440",
+ "baseType": {
+  "id": 0,
+  "iconPath": "f888d91738330cac6e95609d73ab3c9d4be23794bb22c5257171857c4c722262",
+  "color": "#FFFFFF",
+  "name": "A Caça",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Crédito",
+   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
+   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
+   "purpose": "Moeda Comum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cálice (Grande Mina)",
+    "Recompensas de Missão",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "a01d7231993bf0450534073f8515ba34a99653c455e03f9f43053719a34aff98",
+   "name": "Peça Antiga",
+   "desc": "Peças mecânicas do Velho Mundo deixadas para trás. Material bruto usado para aprimoramentos.",
+   "lore": "Apesar de seu tamanho, foi moldada e polida de um jeito que, hoje, as pessoas teriam dificuldade de replicar.<br /><br />\"Um parafuso do Velho Mundo é mais forte que uma armadura da atualidade.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "Assentamento de Robôs: Autômatos ou outros inimigos",
+    "Grande Mina: Autômatos ou outros inimigos",
+    "Inimigos do Universo Simulado",
+    "Recompensas de Atribuição",
+    "Troca de Brasas",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "191ad5f4b9fd5180b9065e05d463d6df35334c87ce1428e89d8d507e69177dc7",
+   "name": "Eixo Antigo",
+   "desc": "Eixo mecânico do Velho Mundo deixado para trás. Material normal usado para aprimoramentos.",
+   "lore": "Uma vez desmontado, seus componentes de precisão jamais podem ser montados novamente. Até mesmo os experientes em consertos da Divisão Tecnológica de Belobog pensariam duas vezes antes de tocar nisso.<br /><br />\"Seu imbecil, os Casacos Azuis vão trocar isso apenas por uns enlatados. Leve ao Chefe Svarog e você não vai precisar de comida nem de roupa por um bom tempo.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "Assentamento de Robôs: Autômatos ou outros inimigos - Nível de Equilíbrio 2+",
+    "Grande Mina: Autômatos ou outros inimigos - Nível de Equilíbrio 2+",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "635674": {
+   "id": 635674,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "cb316badc06db5719753768d375ae94463fad49721b56569985ab88a684474c4",
+   "name": "Flecha de Caça-Feras",
+   "desc": "Ponta de flecha forjada com Aço Congelado pelos artesãos do Xianzhou. Usada para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Caça</span>.",
+   "lore": "Presente que os pais dão às crianças que conseguiram caçar sua primeira presa na cerimônia de maioridade. É uma bênção para que a vida delas seja verdadeira e bem sucedida como uma flecha que se encaminha em direção ao seu alvo.<br /><br />\"Que a flecha em sua cintura e a espada em sua bainha continuem precisas e sempre encontrem o seu alvo.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/635674",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "Éter Refinado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>6000</nobr> de EXP de Cone de Luz.",
+   "lore": "Uma lata de éter que foi extraída e destilada usando procedimentos especiais.<br /><br />\"O Jardim espera poder recriar uma glória do passado, mas é uma 'glória do passado' selecionada por eles. Você entende?\"",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)",
+    "Salão Esquecido"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "91f62f32ecd1e7b88c9e30002d215b1a5936ac221782a17d2f34837a967ed557",
+   "name": "Éter Condensado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>2.000</nobr> de EXP de Cone de Luz.",
+   "lore": "Lata de éter refinado com técnicas especiais.<br /><br />\"Manuseie com cuidado, não deixe cair nem faça pressão sobre ela. Caso ocorra algum vazamento, consulte o capítulo II do \"Manual de Respostas a Desastres de Vazamentos\" para respostas de emergência.\"",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "554d37978b82c3f38bafee8771f8ab4248a1fe9d4e130bb5711064238666f491",
+   "name": "Éter Espalhado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>500</nobr> de EXP de Cone de Luz.",
+   "lore": "Substância imaginária que não deveria existir. O material básico usado para criar Cones de Luz.<br />As imagens dos Cones de Luz se tornam ainda mais claras quando imbuídas dessa substância.<br /><br />\"Entendi, então esse é o suposto \"Sentimento\" do Jardim da Recordação. É por isso que os Memoriadores conseguem fazer viagens galácticas com lembranças.\"",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "name": "Motor Antigo",
+   "desc": "Motor mecânico do Velho Mundo deixado para trás. Material avançado usado para aprimoramentos.",
+   "lore": "Usa Geoessência como a fonte de energia. Quando alimentado, descarrega auroras errantes, em vez de faíscas.<br /><br />\"Somente a Divisão Tecnológica sob comando direto da Guardiã Suprema tem acesso a informações sobre o Velho Mundo. Eu perdi meus privilégios depois que me demitiram.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "Assentamento de Robôs: Autômatos ou outros inimigos - Nível de Equilíbrio 4+",
+    "Grande Mina: Autômatos ou outros inimigos - Nível de Equilíbrio 4+",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "836260": {
+   "id": 836260,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "f0bb6fd4143f707987f651fa21b81257202d038949944fa22d7615ad342d5bfa",
+   "name": "Flecha de Caça-Estrela",
+   "desc": "Um fragmento da Flecha Luminosa Devasta-Céu disparada pela Flecha do Destino. Usado para conceder um aumento considerável de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Caça</span>.",
+   "lore": "Os restos de uma construção divina que os humanos comuns raramente podem vislumbrar. Que tipo de força pode fragmentar estrelas que estão a anos-luz? A humanidade pode apenas imaginar o poder da Flecha Luminosa pelas cinzas que ela deixou para trás.<br />Apenas o mestre da fornalha, chefe dos artesãos do Xianzhou, é qualificado para forjar os fragmentos para quem os merecer.<br /><br />\"A morte de uma estrela continua brilhando por eras.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/836260",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  },
+  "920201": {
+   "id": 920201,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a9dabc100dfb0916188799f2d83770e60721301f4d7c930b850ae55815281ad1",
+   "name": "Flecha de Caça-Demônio",
+   "desc": "Ponta de flecha forjada com Essência de Stellaris pelos artesãos do Xianzhou. Usada para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Caça</span>.",
+   "lore": "Uma flecha mais fina que a espessura de um dedo. Pode ser utilizada em uma besta eletromagnética ou em um arco teleguiado por temperatura como munição. Seu poder é suficiente para perfurar as grossas couraças das abominações com apenas um acerto.<br /><br />\"O banido celestial chega de longe, depois de percorrer grandes distâncias entre oceanos de estrelas. Uma enxurrada de flechas cai como chuva, atingindo um elmo que reflete o forte brilho da lua.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/920201",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3000
+    },
+    {
+     "id": 549408,
+     "count": 4
+    }
+   ],
+   "attackBase": 16.8,
+   "attackAdd": 2.52,
+   "hpBase": 33.6,
+   "hpAdd": 5.04,
+   "defenseBase": 12,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6000
+    },
+    {
+     "id": 635674,
+     "count": 2
+    },
+    {
+     "id": 549408,
+     "count": 8
+    }
+   ],
+   "attackBase": 36.96,
+   "attackAdd": 2.52,
+   "hpBase": 73.92,
+   "hpAdd": 5.04,
+   "defenseBase": 26.4,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12000
+    },
+    {
+     "id": 920201,
+     "count": 2
+    },
+    {
+     "id": 633349,
+     "count": 4
+    }
+   ],
+   "attackBase": 63.84,
+   "attackAdd": 2.52,
+   "hpBase": 127.68,
+   "hpAdd": 5.04,
+   "defenseBase": 45.6,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 30000
+    },
+    {
+     "id": 920201,
+     "count": 4
+    },
+    {
+     "id": 633349,
+     "count": 6
+    }
+   ],
+   "attackBase": 90.72,
+   "attackAdd": 2.52,
+   "hpBase": 181.44,
+   "hpAdd": 5.04,
+   "defenseBase": 64.8,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 60000
+    },
+    {
+     "id": 836260,
+     "count": 3
+    },
+    {
+     "id": 717290,
+     "count": 3
+    }
+   ],
+   "attackBase": 117.6,
+   "attackAdd": 2.52,
+   "hpBase": 235.2,
+   "hpAdd": 5.04,
+   "defenseBase": 84,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 120000
+    },
+    {
+     "id": 836260,
+     "count": 6
+    },
+    {
+     "id": 717290,
+     "count": 5
+    }
+   ],
+   "attackBase": 144.48,
+   "attackAdd": 2.52,
+   "hpBase": 288.96,
+   "hpAdd": 5.04,
+   "defenseBase": 103.2,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 171.36,
+   "attackAdd": 2.52,
+   "hpBase": 342.72,
+   "hpAdd": 5.04,
+   "defenseBase": 122.4,
+   "defenseAdd": 1.8
+  }
+ ],
+ "skill": {
+  "id": 20014,
+  "name": "Aliança",
+  "descHash": "Quando o usuário derrota um inimigo, aumenta a VEL em <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> por <nobr>#2[i]</nobr> rodada(s).",
+  "levelData": [
+   {
+    "level": 1,
+    "params": [
+     0.1,
+     2
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 2,
+    "params": [
+     0.12,
+     2
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 3,
+    "params": [
+     0.14,
+     2
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 4,
+    "params": [
+     0.16,
+     2
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 5,
+    "params": [
+     0.18,
+     2
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 40,
+   "2": 60,
+   "3": 100,
+   "4": 160,
+   "5": 220,
+   "6": 300,
+   "7": 380,
+   "8": 480,
+   "9": 580,
+   "10": 700,
+   "11": 820,
+   "12": 950,
+   "13": 1090,
+   "14": 1240,
+   "15": 1390,
+   "16": 1560,
+   "17": 1730,
+   "18": 1910,
+   "19": 2090,
+   "20": 2170,
+   "21": 2260,
+   "22": 2350,
+   "23": 2430,
+   "24": 2520,
+   "25": 2620,
+   "26": 2710,
+   "27": 2800,
+   "28": 2900,
+   "29": 2990,
+   "30": 3100,
+   "31": 3200,
+   "32": 3300,
+   "33": 3400,
+   "34": 3510,
+   "35": 3620,
+   "36": 3730,
+   "37": 3830,
+   "38": 3950,
+   "39": 4060,
+   "40": 4170,
+   "41": 4580,
+   "42": 4840,
+   "43": 5110,
+   "44": 5380,
+   "45": 5660,
+   "46": 5950,
+   "47": 6230,
+   "48": 6530,
+   "49": 6830,
+   "50": 7140,
+   "51": 7450,
+   "52": 7760,
+   "53": 8090,
+   "54": 8410,
+   "55": 8750,
+   "56": 9080,
+   "57": 9430,
+   "58": 9770,
+   "59": 10130,
+   "60": 10480,
+   "61": 10970,
+   "62": 11560,
+   "63": 12160,
+   "64": 12760,
+   "65": 13370,
+   "66": 13990,
+   "67": 14620,
+   "68": 15260,
+   "69": 15910,
+   "70": 16570,
+   "71": 18490,
+   "72": 20230,
+   "73": 22000,
+   "74": 23790,
+   "75": 25610,
+   "76": 27450,
+   "77": 29320,
+   "78": 31220,
+   "79": 33140,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "20014"
+}

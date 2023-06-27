@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -70,6 +71,7 @@ public class DevPage extends AppCompatActivity {
         //init
         Button dev_char_advice_btn = findViewById(R.id.dev_char_advice_btn);
         Button dev_expection_btn = findViewById(R.id.dev_expection_btn);
+        Button dev_museum_btn = findViewById(R.id.dev_museum_btn);
         Switch dev_siptik_rotate = findViewById(R.id.dev_siptik_rotate);
         Switch setting_shadow_list_item = findViewById(R.id.setting_shadow_list_item);
 
@@ -114,6 +116,15 @@ public class DevPage extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 editor.putBoolean("isShadowInListItem", isChecked).apply();
+            }
+        });
+
+        //Museum
+        dev_museum_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, MuseumPage.class);
+                startActivity(intent);
             }
         });
 

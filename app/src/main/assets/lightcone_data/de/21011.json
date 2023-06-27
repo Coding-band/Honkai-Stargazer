@@ -1,0 +1,492 @@
+{
+ "name": "Planetarisches Rendezvous",
+ "rarity": 4,
+ "descHash": "Sie hatte keine Ahnung, was auf sie zukommen würde, als sie diese Reise antrat.<br />Sie wusste nur eines: Sie könnte endlich die wertenden Blicke und Streitereien in ihrer Familie hinter sich lassen.<br />Es fühlte sich an, als hätte sie verstanden, was der Dichter zu sagen versuchte.<br />„Eines Tages wuchsen uns Flügel und wir vergaßen, wie es ist zu laufen.“<br /><br />Ihre Augen begannen zu leuchten wie funkelnden Sterne.",
+ "iconPath": "a41907c35b20d73063735d0d14e4275f5cd8571bb69f0223fa706f49e63d935a",
+ "artPath": "d3b749de5768b94138344d69067ca6e97c4e078200c50ac29393759a07b0fec0",
+ "mediumIconPath": "9b83248fdb2043ad8a30eccf97455b21a301eec9381b841bc2dfbeedda7cf179",
+ "baseType": {
+  "id": 0,
+  "iconPath": "635d8139b8f487db38f821f15a8b67f9e3c83a06071567b67770b9ca462c237e",
+  "color": "#FFFFFF",
+  "name": "Die Harmonie",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Credit",
+   "desc": "Diese Währung, die von der Interastrale Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
+   "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
+   "purpose": "Gemeinsame Währung",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Blütenkelch (Große Mine)",
+    "Missionsbelohnungen",
+    "Auftragsbelohnungen"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5930a427c19aedca23d55eb6ef670cc8ecf07466630281586f32f4d5e8d49409",
+   "name": "Instinkt des Diebes",
+   "desc": "Eine kleine Menge von Antimaterie. Ein Rohmaterial zur Verstärkung.",
+   "lore": "Eine kleine Menge Antimaterie, die aus dem Leeren-Ranger: Plünderer austritt wie die Materialisierung seines zerstörerischen Instinkts.<br /><br />„Sie alle freuen sich auf den Moment der Auslöschung, wenn sie neu geschmiedet werden und mit der gesamten Welt verschmelzen.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "Lagerzone: Leeren-Ranger: Plünderer oder andere Gegner",
+    "Versorgungszone: Leeren-Ranger: Plünderer oder andere Gegner",
+    "Universum-Simulation-Gegner",
+    "Auftragsbelohnungen",
+    "Glut-Tausch",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "69d0630f4dc8d8bb4706a8a973f720ce46452e189a62c7b8b6f2ca8d567ca8ae",
+   "name": "Ehrgeiz der Verzerrung",
+   "desc": "Eine mittelgroße Menge an Antimaterie. Ein normales Material zur Verstärkung.",
+   "lore": "Eine mittelgroße Menge Antimaterie, die um den Leeren-Ranger: Verzerrer herumschwebt. Die Menge der Materie- und Antimaterieteilchen hat ein gefährliches Verhältnis erreicht ...<br /><br />„Sie alle freuen sich auf den Moment der Auslöschung, wenn sie neu geschmiedet werden und mit der gesamten Welt verschmelzen.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "Lagerzone: Leeren-Ranger: Plünderer (Balance-Stufe 2+) oder andere Gegner",
+    "Versorgungszone: Leeren-Ranger: Plünderer (Balance-Stufe 2+) oder andere Gegner",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "635670": {
+   "id": 635670,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a327a767852b95b69b5d25ec4abc08aa0a548455bcf70fa743c6b9acc9356a38",
+   "name": "Harmonische Melodie",
+   "desc": "Eine kompakte Spieldose eines unbekannten Herstellers, mit der Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Harmonie</span> ein wenig hochgestuft werden können.",
+   "lore": "Sie spielt ein beruhigendes, heiteres Lied.<br />Die Melodie ist einfach, aber jeder, der auch nur ein wenig von Musik versteht, erkennt, dass es meisterhaft komponiert wurde.<br /><br />„Nehmt einander bei den Händen und tanzt!“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/635670",
+   "comeFrom": [
+    "Blütenkelch (Robotersiedlung)"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "Raffinierter Äther",
+   "desc": "Verstärkungsmaterial für Lichtkegel, enthält <nobr>6.000</nobr> Lichtkegel-EP.",
+   "lore": "Ein Behälter mit Äther, der durch ein spezielles Verfahren gereinigt wurde.<br /><br />„Der Garten freut sich darauf, seine frühere Pracht wiederherzustellen. Aber es ist eine ‚frühere Pracht‘, die sie selbst ausgewählt haben. Verstehst du?“",
+   "purpose": "Lichtkegel-EP-Material",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Blütenkelch (Abgelegener Pass)",
+    "Vergessene Halle"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "91f62f32ecd1e7b88c9e30002d215b1a5936ac221782a17d2f34837a967ed557",
+   "name": "Verdichteter Äther",
+   "desc": "Verstärkungsmaterial für Lichtkegel, enthält <nobr>2.000</nobr> Lichtkegel-EP.",
+   "lore": "Ein Behälter mit Äther, der durch ein spezielles Verfahren gereinigt wurde.<br /><br />„Behälter mit Vorsicht handhaben, nicht fallen lassen oder unter Druck setzen. Bei Beschädigung oder undichten Stellen bitte Kapitel II der ‚Anweisungen für den Umgang mit Leckagen‘ befolgen.“",
+   "purpose": "Lichtkegel-EP-Material",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Blütenkelch (Abgelegener Pass)"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "554d37978b82c3f38bafee8771f8ab4248a1fe9d4e130bb5711064238666f491",
+   "name": "Verdünnter Äther",
+   "desc": "Verstärkungsmaterial für Lichtkegel, enthält <nobr>500</nobr> Lichtkegel-EP.",
+   "lore": "Eine imaginäre Substanz, die eigentlich nicht in der Realität existieren dürfte und als Grundstoff zur Herstellung von Lichtkegeln verwendet wird.<br />Die in Lichtkegeln enthaltenen Bilder werden klarer, wenn sie mit dieser Substanz angereichert werden.<br /><br />„Aha, das ist also die sogenannte ‚Sentiention‘ des Gartens des Gedächtnisses. Kein Wunder, dass die Wahrer der Erinnerungen durch die Galaxie reisen können.“",
+   "purpose": "Lichtkegel-EP-Material",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Blütenkelch (Abgelegener Pass)",
+    "Auftragsbelohnungen"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ea7f9727e8ba2c2039043d319ab4aa087ca6dbf08ec08876b1418d42c0f8a670",
+   "name": "Wille des Eroberers",
+   "desc": "Kondensierte Antimaterie. Ein fortschrittliches Material zur Verstärkung.",
+   "lore": "Hochverdichtete Antimaterie im Körper des Leeren-Rangers: Trampler. Der Moment der Auslöschung ist der Fanfarenstoß für die Zerstörung der Zivilisationen.<br /><br />„Sie alle freuen sich auf den Moment der Auslöschung, wenn sie neu geschmiedet werden und mit der gesamten Welt verschmelzen.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "Lagerzone: Leeren-Ranger: Plünderer (Balance-Stufe 4+) oder andere Gegner",
+    "Versorgungszone: Leeren-Ranger: Plünderer (Balance-Stufe 4+) oder andere Gegner",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "836256": {
+   "id": 836256,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e0a98987f6f4c66f28c5b9b79a757e590ae649d0e44ec47ada0ec1bac39e78fa",
+   "name": "Opus Stellaris",
+   "desc": "Eine raffinierte Spieldose eines unbekannten Herstellers, mit der Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Harmonie</span> stark hochgestuft werden können.",
+   "lore": "Spielt eine kraftvolle galaktische Sinfonie.<br /><br />„Manche Astronomen glauben, dass die Himmelskörper ihre Bahnen ziehen wie Teile einer komplizierten Maschine. Die schöne Melodie, die durch die Bewegungen der Sterne entsteht, ist auch als ‚Harmonie der Himmelskörper‘ bekannt.“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/836256",
+   "comeFrom": [
+    "Blütenkelch (Robotersiedlung)",
+    "Omni-Synthesemaschine – Materialsynthese"
+   ]
+  },
+  "920197": {
+   "id": 920197,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "2e991dc7b3d976ae72c1f7dfcc0cfb1ff4c33223d33db5479a3dcd8d039ffa1a",
+   "name": "Ode an die Familie",
+   "desc": "Eine Spieldose eines unbekannten Herstellers, mit der Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Harmonie</span> mäßig hochgestuft werden können.",
+   "lore": "Spielt eine Hymne, die von einer kleinen Kapelle gesungen wird.<br />Es ist unmöglich zu sagen, wer im Liedtext gepriesen wird.<br /><br />„Armut ist die Prüfung des Erhabenen! Reichtum ist die Gnade des Erhabenen!“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/920197",
+   "comeFrom": [
+    "Blütenkelch (Robotersiedlung)",
+    "Omni-Synthesemaschine – Materialsynthese"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549437,
+     "count": 5
+    }
+   ],
+   "attackBase": 19.2,
+   "attackAdd": 2.88,
+   "hpBase": 48,
+   "hpAdd": 7.2,
+   "defenseBase": 15,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 635670,
+     "count": 3
+    },
+    {
+     "id": 549437,
+     "count": 10
+    }
+   ],
+   "attackBase": 42.24,
+   "attackAdd": 2.88,
+   "hpBase": 105.6,
+   "hpAdd": 7.2,
+   "defenseBase": 33,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 920197,
+     "count": 3
+    },
+    {
+     "id": 633378,
+     "count": 6
+    }
+   ],
+   "attackBase": 72.96,
+   "attackAdd": 2.88,
+   "hpBase": 182.4,
+   "hpAdd": 7.2,
+   "defenseBase": 57,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 920197,
+     "count": 6
+    },
+    {
+     "id": 633378,
+     "count": 9
+    }
+   ],
+   "attackBase": 103.68,
+   "attackAdd": 2.88,
+   "hpBase": 259.2,
+   "hpAdd": 7.2,
+   "defenseBase": 81,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 836256,
+     "count": 4
+    },
+    {
+     "id": 717319,
+     "count": 5
+    }
+   ],
+   "attackBase": 134.4,
+   "attackAdd": 2.88,
+   "hpBase": 336,
+   "hpAdd": 7.2,
+   "defenseBase": 105,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 836256,
+     "count": 8
+    },
+    {
+     "id": 717319,
+     "count": 7
+    }
+   ],
+   "attackBase": 165.12,
+   "attackAdd": 2.88,
+   "hpBase": 412.8,
+   "hpAdd": 7.2,
+   "defenseBase": 129,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 195.84,
+   "attackAdd": 2.88,
+   "hpBase": 489.6,
+   "hpAdd": 7.2,
+   "defenseBase": 153,
+   "defenseAdd": 2.25
+  }
+ ],
+ "skill": {
+  "id": 21011,
+  "name": "Abreise",
+  "descHash": "Wenn ein Verbündeter nach Kampfeintritt denselben SCH-Typ wie der Träger verursacht, wird der zugefügte SCH um <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> erhöht.",
+  "levelData": [
+   {
+    "level": 1,
+    "params": [
+     0.12
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 2,
+    "params": [
+     0.15
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 3,
+    "params": [
+     0.18
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 4,
+    "params": [
+     0.21
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 5,
+    "params": [
+     0.24
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 50,
+   "2": 80,
+   "3": 140,
+   "4": 210,
+   "5": 300,
+   "6": 400,
+   "7": 510,
+   "8": 640,
+   "9": 780,
+   "10": 930,
+   "11": 1090,
+   "12": 1260,
+   "13": 1460,
+   "14": 1650,
+   "15": 1860,
+   "16": 2080,
+   "17": 2300,
+   "18": 2540,
+   "19": 2790,
+   "20": 2900,
+   "21": 3010,
+   "22": 3130,
+   "23": 3240,
+   "24": 3360,
+   "25": 3490,
+   "26": 3610,
+   "27": 3740,
+   "28": 3860,
+   "29": 3990,
+   "30": 4130,
+   "31": 4260,
+   "32": 4400,
+   "33": 4540,
+   "34": 4680,
+   "35": 4820,
+   "36": 4970,
+   "37": 5110,
+   "38": 5260,
+   "39": 5410,
+   "40": 5560,
+   "41": 6100,
+   "42": 6450,
+   "43": 6810,
+   "44": 7180,
+   "45": 7550,
+   "46": 7930,
+   "47": 8310,
+   "48": 8710,
+   "49": 9110,
+   "50": 9520,
+   "51": 9940,
+   "52": 10350,
+   "53": 10780,
+   "54": 11220,
+   "55": 11660,
+   "56": 12110,
+   "57": 12570,
+   "58": 13030,
+   "59": 13500,
+   "60": 13980,
+   "61": 14630,
+   "62": 15420,
+   "63": 16210,
+   "64": 17010,
+   "65": 17830,
+   "66": 18660,
+   "67": 19500,
+   "68": 20350,
+   "69": 21220,
+   "70": 22100,
+   "71": 24650,
+   "72": 26970,
+   "73": 29330,
+   "74": 31720,
+   "75": 34140,
+   "76": 36600,
+   "77": 39100,
+   "78": 41620,
+   "79": 44180,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "21011"
+}

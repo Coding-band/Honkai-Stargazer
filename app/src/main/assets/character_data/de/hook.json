@@ -1,0 +1,2675 @@
+{
+ "name": "Hook",
+ "spRequirement": 120,
+ "rarity": 4,
+ "descHash": "Der (selbst ernannte) Boss der „Maulwürfe“, eines Abenteuertrupps aus dem Untergrund. Sie liebt ihre Freiheit und betrachtet das Leben als eine Reihe von Abenteuern.",
+ "iconPath": "3febfe576e6aeecabb43a8e36fdc076d6caea775cffb17224c218b5aed10ed52",
+ "bgPath": "1861ea442c4e24e2dd0c99825eea38c95d83f7c6ed314ae425821728dff3d03e",
+ "figPath": "eff07da2a115ab846fb6959503d7dbe125e4681bf89f878f2d5a91213b887bd8",
+ "fgPath": "5b847120de6de7781a4607296d4cbdf9ba1121d4f548f7df74455a52b3f232c0",
+ "artPath": "46eee9b2bb70b66bd13de87de9c3e295033e03738aa7eeacecd29f57e732dad3",
+ "miniIconPath": "4582bff28b6c956723cf4a3d72725a1ee68de806da5f54e543d697a397503541",
+ "splashIconPath": "3c65307dfdb5809c5647cce7f01939a514624c14b49cf15f45743ed179ac2258",
+ "damageType": {
+  "id": 2,
+  "iconPath": "de0c257eb00c86e608b1d3a42b9c2aa396a576d29f7d7093fdb0a741c39b23a4",
+  "color": "#F84F36",
+  "name": "Feuer",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "57e114954f0de32a3762e77aa2fd4f791deb47497337366308c51de1d0f12430",
+  "altIconPath": "fccc485934c16aa04a6ddacdbfec82b1e59182ba83b560af62ed57b29033c308",
+  "color": "#FFFFFF",
+  "name": "Die Zerstörung",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 1,
+  "iconPath": "10dae0df031160c29bace386a1220e539f2b5e13765cdd0f6d2a2143bca2755c",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Credit",
+   "desc": "Diese Währung, die von der Interastrale Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
+   "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
+   "purpose": "Gemeinsame Währung",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Blütenkelch (Große Mine)",
+    "Missionsbelohnungen",
+    "Auftragsbelohnungen"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "Spuren des Schicksals",
+   "desc": "Fortschrittliches Material zum Hochstufen von Spuren.",
+   "lore": "Unzählige Fehlschläge sicherten deinen Sieg und deine kleinen Schritte führten dich an den Wendepunkt des Schicksals.",
+   "purpose": "Spurenmaterial",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Punktebelohnungen in der Universum-Simulation",
+    "Namenlose Ehre",
+    "Glut-Tausch",
+    "Belohnungen für zeitlich begrenzte Aktionen"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "Lamento der Wächterin",
+   "desc": "Fortgeschrittenes Material zum Hochstufen von Spuren.",
+   "lore": "Nicht nur die Maske ist beschädigt, auch der Wunsch der Wächterin, die sie trug, wurde verzerrt.<br />Sie wollte ihrem Volk zur Flucht vor dem Immerwinter verhelfen, aber wurde schließlich zu einer Marionette höherer Mächte.<br /><br />„Der Titel der Obersten Wächterin wurde auf Belobog über viele Generationen vererbt. Niemand hat je daran gedacht, dass auch die Wächter selbst Fürsorge und Schutz brauchen.“",
+   "purpose": "Spurenmaterial",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "Echo des Krieges (Immerwinterhügel)"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "Reiseführer",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>20.000</nobr> Figuren-EP.",
+   "lore": "Pflichtlektüre für Weltreisende. Auf Knopfdruck beginnt eine angenehme Stimme in der Sprache des Lesers von den legendären Erlebnissen berühmter Abenteurer auf diversen Planeten zu erzählen und ihr gesammeltes Wissen zusammenzufassen.<br /><br />„Die brandneue Reiseführer-Reihe ‚Das Handbuch für die galaktische Küche‘ ist jetzt erhältlich.“<br />„Einsendungen bitte per Telepathie über Synästhesie-Leuchtfeuer ERD<nobr>-23</nobr>θ an das Team der Intelligenzia-Gilde. Flexible Zahlungsoptionen.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Vergessene Halle"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "Abenteuer-Log",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>5.000</nobr> Figuren-EP.",
+   "lore": "Eine säuberlich organisierte Sammlung lehrreicher Notizen mit unzähligen Illustrationen und Texten, die diverse Abenteuer vom Anfang bis zum Ende beschreiben, sowie wertvollen Tipps und Überlebenstechniken.<br /><br />„Warum werden die Daten nicht in einer Foto-CD gespeichert? Wäre doch viel praktischer.“<br />„Moderne Technologie ist angesichts von Sternenstürmen und Neuronenfluss-Eruptionen viel empfindlicher, als man denkt. Außerdem hätte der Autor des Buchs sicher gewollt, dass man es auf die einfachste Art liest.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Tägliches Training"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "Reisebegegnungen",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>1.000</nobr> Figuren-EP.",
+   "lore": "Ein unleserlich von Hand geschriebenes Reisetagebuch mit wirren Inhalten. Es nützt dir wenig.<br /><br />„Dan Heng, lies das endlich fertig, damit es in den Müll kann.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Auftragsbelohnungen"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "a01d7231993bf0450534073f8515ba34a99653c455e03f9f43053719a34aff98",
+   "name": "Uraltes Teil",
+   "desc": "Zurückgelassene Maschinenteile aus der Alten Welt. Ein Rohmaterial zur Verstärkung.",
+   "lore": "So ein winziges Bauteil könnte in dieser hohen Qualität heute kaum mehr gegossen und geschliffen werden.<br /><br />„Eine kleine Schraube der Alten Welt hält mehr aus als unsere Rüstungen.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "Robotersiedlung: Automatons oder andere Gegner",
+    "Große Mine: Automatons oder andere Gegner",
+    "Universum-Simulation-Gegner",
+    "Auftragsbelohnungen",
+    "Glut-Tausch",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "191ad5f4b9fd5180b9065e05d463d6df35334c87ce1428e89d8d507e69177dc7",
+   "name": "Uralte Spindel",
+   "desc": "Eine zurückgelassene Maschinenspindel aus der Alten Welt. Ein normales Material zur Verstärkung.",
+   "lore": "Wurden diese Präzisionsbauteile einmal auseinandergenommen, kann sie niemand wieder zusammensetzen. Selbst die erfahrenen Mechaniker der Technologieabteilung von Belobog überlegen sich zweimal, sie anzufassen.<br /><br />„Du Depp! Von den Blaumänteln bekommst du dafür höchstens ein paar Konserven. Wenn du das Ding zu Boss Svarog bringst, hast du für eine ganze Weile genug Kleidung und Essen.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "Robotersiedlung: Automatons (Balance-Stufe 2+) oder andere Gegner",
+    "Große Mine: Automatons (Balance-Stufe 2+) oder andere Gegner",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "635673": {
+   "id": 635673,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1cfcf420c7cd53b503eead070d126b1448cd68bf3f9b0ddca916d10b1747537b",
+   "name": "Zerbrochene Klinge",
+   "desc": "Von Mitgliedern der Antimaterie-Legion zurückgelassene Waffenfragmente, mit denen Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Zerstörung</span> ein wenig hochgestuft werden können.",
+   "lore": "Dieses Brandzeichen steht für den Rang und die Leistungen der Zerstörung.<br />Der Meister dieser Waffe ritt auf einem scharlachroten Pferd, setzte die Städte in Brand, hetzte die Menschen gegeneinander auf und brachte Nationen zu Fall wie Ameisenhaufen.<br /><br />„Der Träger dieses Brandzeichens hat die Aufgabe, den Frieden aus den Nationen zu vertreiben.“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/635673",
+   "comeFrom": [
+    "Blütenkelch (Lagerzone)"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "name": "Uraltes Triebwerk",
+   "desc": "Ein zurückgelassener Triebwerk aus der Alten Welt. Ein fortschrittliches Material zur Verstärkung.",
+   "lore": "Es nutzt Geomark als Energiequelle. Wenn es mit Energie versorgt wird, spuckt es wandernde Polarlichter, keine Funken.<br /><br />„Nur die Technologieabteilung, die direkt der Obersten Wächterin untersteht, hat Zugang zu Informationen über die Alte Welt. Ich habe meine Privilegien verloren, nachdem ich gefeuert wurde.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "Robotersiedlung: Automatons (Balance-Stufe 4+) oder andere Gegner",
+    "Große Mine: Automatons (Balance-Stufe 4+) oder andere Gegner",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "836259": {
+   "id": 836259,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "name": "Zerstörerische Klinge",
+   "desc": "Von Mitgliedern der Antimaterie-Legion zurückgelassene beschädigte Waffen, mit denen Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Zerstörung</span> stark hochgestuft werden können.",
+   "lore": "Diese Waffe steht für den Status und die Errungenschaften ihres Besitzers im Namen der Zerstörung.<br />Der Meister dieser Waffe tritt am Ende eines Krieges in Erscheinung und facht die Glut an, welche die Welt verzehrt. Dieser Planet ist trotz seiner ruhmreichen Vergangenheit und trotz des Segens seiner Götter dazu bestimmt, wieder in die Asche zu sinken, aus der er einst entstand, und in der Tiefe des Firmaments zu vergehen.<br /><br />Der Träger dieses Zeichens hat den Auftrag, die Welt zu reinigen.",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/836259",
+   "comeFrom": [
+    "Blütenkelch (Lagerzone)",
+    "Omni-Synthesemaschine – Materialsynthese"
+   ]
+  },
+  "920200": {
+   "id": 920200,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1da1734309fa1e0ed5035575293caab81cfa7723f7bf4a81d36d9833d80b36",
+   "name": "Leblose Klinge",
+   "desc": "Von Mitgliedern der Antimaterie-Legion zurückgelassene Überreste von Waffen, mit denen Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Zerstörung</span> mäßig hochgestuft werden können.",
+   "lore": "Dieses Brandzeichen steht für den Rang und die Leistungen der Zerstörung.<br />Der Meister dieser Waffe hegt einen starken Hass auf alle empfindungsfähigen Wesen. Sie erfreuen sich an der Klage intelligenter Wesen als süße Melodien und stürzen Zivilisationen mit Jahrtausende alter Geschichte im Handumdrehen.<br /><br />„Der Träger dieses Brandzeichens hat die Aufgabe, den Atem unter den Lebenden anzuhalten.“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/920200",
+   "comeFrom": [
+    "Blütenkelch (Lagerzone)",
+    "Omni-Synthesemaschine – Materialsynthese"
+   ]
+  },
+  "983278": {
+   "id": 983278,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "1f3033f7a0d40ab304f7c4af7eaa7a00cc0b0a1cfd9f7698fcbf0b0b8d9321d5",
+   "name": "Endothermes Chitin",
+   "desc": "Heiße, durchscheinende Substanz, die im festen Zustand fast wie Feuer aussieht. Material zum Aufstieg der Figuren mit Feuer-Typ.",
+   "lore": "Seltsames Chitin aus der Schale einer interdimensionalen Kreatur. Man verbrennt sich nicht mehr daran, aber es ist noch warm.<br /><br />„Draußen ist es zu kalt. Aber mit diesem Edelstein kommst du trotzdem weit genug, um nach Städten zu suchen, wo es noch Menschen gibt ...“",
+   "purpose": "Material zum Figurenaufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/983278",
+   "comeFrom": [
+    "Ruhender Schatten (Sperrgebiet der Silbermähnen-Wache)",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549408,
+     "count": 4
+    }
+   ],
+   "attackBase": 84,
+   "attackAdd": 4.2,
+   "hpBase": 182.4,
+   "hpAdd": 9.12,
+   "defenseBase": 48,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 94,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549408,
+     "count": 8
+    }
+   ],
+   "attackBase": 117.6,
+   "attackAdd": 4.2,
+   "hpBase": 255.36,
+   "hpAdd": 9.12,
+   "defenseBase": 67.2,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 94,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633349,
+     "count": 5
+    },
+    {
+     "id": 983278,
+     "count": 2
+    }
+   ],
+   "attackBase": 151.2,
+   "attackAdd": 4.2,
+   "hpBase": 328.32,
+   "hpAdd": 9.12,
+   "defenseBase": 86.4,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 94,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633349,
+     "count": 8
+    },
+    {
+     "id": 983278,
+     "count": 5
+    }
+   ],
+   "attackBase": 184.8,
+   "attackAdd": 4.2,
+   "hpBase": 401.28,
+   "hpAdd": 9.12,
+   "defenseBase": 105.6,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 94,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717290,
+     "count": 5
+    },
+    {
+     "id": 983278,
+     "count": 15
+    }
+   ],
+   "attackBase": 218.4,
+   "attackAdd": 4.2,
+   "hpBase": 474.24,
+   "hpAdd": 9.12,
+   "defenseBase": 124.8,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 94,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717290,
+     "count": 7
+    },
+    {
+     "id": 983278,
+     "count": 28
+    }
+   ],
+   "attackBase": 252,
+   "attackAdd": 4.2,
+   "hpBase": 547.2,
+   "hpAdd": 9.12,
+   "defenseBase": 144,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 94,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 285.6,
+   "attackAdd": 4.2,
+   "hpBase": 620.16,
+   "hpAdd": 9.12,
+   "defenseBase": 163.2,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 94,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "dfcc91d9b65dd85c70ebe7f82444f5fb5a45f705e7024b6a232a5a1af3ed081d",
+   "name": "Früh zu Bett, früh aus den Federn",
+   "descHash": "Die verstärkte Fertigkeit verursacht <nobr>#1[i]%</nobr> mehr SCH.",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "317931c38280636c3dd3c35aa5a09be9a5037e1565c34ba3ef2bfda390cf30fa",
+   "name": "Glücklicher Bauch, glücklicher Körper",
+   "descHash": "Verlängert die Dauer des durch Fertigkeit verursachten Brennens um <nobr>#1[i]</nobr> Rd.",
+   "params": [
+    1
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "093e3a444eedb8b061f21af574cda6fc2a86d8a14916a739ec9aad5ba702f1df",
+   "name": "Nicht wählerisch sein, schmeckt alles fein",
+   "descHash": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis zu max. St. <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "d273295a6cbd18f46b28036fbf9b1d14570b5a08c881204e067052f35312d063",
+   "name": "Nichts wissen macht auch nichts",
+   "descHash": "Beim Auslösung des Talents besteht eine Grundchance von <nobr>#1[i]%</nobr>, dass angrenzende Ziele des anvisierten Gegners von Brennen betroffen werden, das durch Fertigkeit verursacht wird.",
+   "params": [
+    1
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "1985c907496c4bc33ed250ccad43944b2ab342d5ae1313bd996ddf19bb25657b",
+   "name": "Für den Ruhm der Maulwürfe",
+   "descHash": "Ultimate-Stufe +2 bis zu max. St. <nobr>15</nobr>. Talentstufe +2 bis zu max. St. <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "cedf37c6063b76d1808aacaf3b61b873152890977a91de396b34b6c036e3de8c",
+   "name": "Immer bereit zum Schlagen und Treten",
+   "descHash": "Hook fügt brennenden Gegnern <nobr>#1[i]%</nobr> mehr SCH zu.",
+   "params": [
+    0.2
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   935680
+  ],
+  [
+   252911,
+   198744
+  ],
+  [
+   136266
+  ],
+  [
+   651153
+  ],
+  [
+   767798
+  ]
+ ],
+ "skills": [
+  {
+   "id": 935680,
+   "name": "Hey! Verbrenn dich nicht!",
+   "tagHash": "Einzelangriff",
+   "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#F84F36;\">Feuer</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Hooks ANG zu.",
+   "typeDescHash": "Standardangriff",
+   "iconPath": "a5cb78f5a4a459bad26f2a27272a81e3861905d38c5ab1c80360046d68148bf5",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 252911,
+   "name": "Hey! Erinnerst du dich an Hook?",
+   "tagHash": "Einzelangriff",
+   "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#F84F36;\">Feuer</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Hooks ANG zu und verursacht bei dem Ziel mit einer <u>Grundchance</u> von <nobr>#2[i]%</nobr> für <nobr>#3[i]</nobr> Rd. Brennen.<br />Brennende Gegner erleiden zu Beginn jeder Runde <span style=\"color:#F84F36;\">Feuer</span>-DoT in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span> von Hooks ANG.",
+   "typeDescHash": "Fertigkeit",
+   "iconPath": "5c78cc30b0589bd54b4729dbffd4b29a1934bec8ecf1d5cb3c72c9f47c8b3250",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1.2,
+      1,
+      2,
+      0.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.32,
+      1,
+      2,
+      0.275
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549408,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.44,
+      1,
+      2,
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.56,
+      1,
+      2,
+      0.325
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.68,
+      1,
+      2,
+      0.35
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.8,
+      1,
+      2,
+      0.3875
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633349,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.95,
+      1,
+      2,
+      0.4375
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      2.1,
+      1,
+      2,
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      2.25,
+      1,
+      2,
+      0.575
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      2.4,
+      1,
+      2,
+      0.65
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      2.52,
+      1,
+      2,
+      0.6825
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      2.64,
+      1,
+      2,
+      0.715
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      2.76,
+      1,
+      2,
+      0.7475
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      2.88,
+      1,
+      2,
+      0.78
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      3,
+      1,
+      2,
+      0.8125
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 136266,
+   "name": "Bumm! Hier kommt das Feuer!",
+   "tagHash": "Einzelangriff",
+   "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#F84F36;\">Feuer</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Hooks ANG zu.<br />Verstärkt nach dem Einsatz des Ultimates die nächste Fertigkeit, die dem anvisierten Gegner sowie angrenzenden Zielen SCH zufügt.",
+   "typeDescHash": "Ultimate",
+   "iconPath": "cd0d00b09eb574c4aabf9d3ba714dfa3d2f2dc6701d35bf35ee4b22b934d6702",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      2.4
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      2.56
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549408,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      2.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      2.88
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      3.04
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      3.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633349,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      3.4
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      3.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      3.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      4
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      4.16
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      4.32
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      4.48
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      4.64
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      4.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  },
+  {
+   "id": 651153,
+   "name": "Ha! Öl ins Feuer!",
+   "tagHash": "Verstärkung",
+   "descHash": "Beim Angriff gegen brennende Gegner wird <u>zusätzlich</u> <span style=\"color:#F84F36;\">Feuer</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Hooks ANG zugefügt und zusätzlich <nobr>#2[i]</nobr> Pkt. Energie wiederhergestellt.",
+   "typeDescHash": "Talent",
+   "iconPath": "7b0455e4c0a47f9031ed651950fc66f87bc90f78214925a46dc9800a951c2824",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.55,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549408,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.6,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.65,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.7,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.75,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633349,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.8125,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.875,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.9375,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.05,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.1,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.15,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.2,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.25,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 851739,
+   "name": "Angriff",
+   "tagHash": "",
+   "descHash": "Greift den Gegner an und schwächt nach Kampfeintritt den Widerstand des Ziels gegen den entsprechenden Typ.",
+   "typeDescHash": "",
+   "iconPath": "a5cb78f5a4a459bad26f2a27272a81e3861905d38c5ab1c80360046d68148bf5",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 767798,
+   "name": "Puh! Sieh sich einer das Chaos an!",
+   "tagHash": "",
+   "descHash": "Greift den Gegner unmittelbar an. Nach Kampfeintritt fügt Hook einem zufälligen Gegner <span style=\"color:#F84F36;\">Feuer</span>-SCH in Höhe von <nobr>#4[i]%</nobr> ihres ANG zu und hat eine <u>Grundchance</u> von <nobr>#1[i]%</nobr>, bei allen Gegnern für <nobr>#3[i]</nobr> Rd. Brennen zu verursachen.<br />Brennende Gegner erleiden zu Beginn jeder Runde <span style=\"color:#F84F36;\">Feuer</span>-DoT in Höhe von <nobr>#2[i]%</nobr> von Hooks ANG.",
+   "typeDescHash": "Technik",
+   "iconPath": "f4301800f52a84ca204b5caaaa33e5f57e46bdcb4bfcaba247b660aa4fd4110c",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1,
+      0.5,
+      3,
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 198744,
+   "name": "Hey! Erinnerst du dich an Hook?",
+   "tagHash": "Ausdehnung",
+   "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#F84F36;\">Feuer</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Hooks ANG zu und verursacht beim Ziel mit einer <u>Grundchance</u> von <nobr>#2[i]%</nobr> für <nobr>#3[i]</nobr> Rd. Brennen. Fügt außerdem angrenzenden Zielen <span style=\"color:#F84F36;\">Feuer</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#5[i]%</nobr></span> von Hooks ANG zu.<br />Brennende Gegner erleiden zu Beginn jeder Runde <span style=\"color:#F84F36;\">Feuer</span>-DoT in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span> von Hooks ANG.",
+   "typeDescHash": "Fertigkeit",
+   "iconPath": "5c78cc30b0589bd54b4729dbffd4b29a1934bec8ecf1d5cb3c72c9f47c8b3250",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1.4,
+      1,
+      2,
+      0.25,
+      0.4
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.54,
+      1,
+      2,
+      0.275,
+      0.44
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549408,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.68,
+      1,
+      2,
+      0.3,
+      0.48
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635673,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.82,
+      1,
+      2,
+      0.325,
+      0.52
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920200,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.96,
+      1,
+      2,
+      0.35,
+      0.56
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920200,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      2.1,
+      1,
+      2,
+      0.3875,
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920200,
+       "count": 6
+      },
+      {
+       "id": 633349,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      2.275,
+      1,
+      2,
+      0.4375,
+      0.65
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836259,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      2.45,
+      1,
+      2,
+      0.5,
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836259,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      2.625,
+      1,
+      2,
+      0.575,
+      0.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836259,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      2.8,
+      1,
+      2,
+      0.65,
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836259,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      2.94,
+      1,
+      2,
+      0.6825,
+      0.84
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      3.08,
+      1,
+      2,
+      0.715,
+      0.88
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      3.22,
+      1,
+      2,
+      0.7475,
+      0.92
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      3.36,
+      1,
+      2,
+      0.78,
+      0.96
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      3.5,
+      1,
+      2,
+      0.8125,
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1109101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1109202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1109203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1109204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 572979,
+          "name": "KRIT-SCH-Verstärkung",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+          "statusList": [
+           {
+            "key": "KRIT-SCH",
+            "value": 0.053
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 920200,
+            "count": 2
+           },
+           {
+            "id": 633349,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 572982,
+        "name": "ANG-Verstärkung",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "ANG",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920200,
+          "count": 2
+         },
+         {
+          "id": 633349,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 572981,
+      "name": "LP-Verstärkung",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "LP",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635673,
+        "count": 2
+       },
+       {
+        "id": 549408,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 572885,
+    "name": "Unschuld",
+    "descHash": "Stellt bei Auslösung des Talents LP in Höhe von <nobr>#1[i]%</nobr> von Hooks max. LP wieder her.",
+    "iconPath": "8cbec8db934b56e9db31f97799ee7250c3072feb1f77fa034df516acec1b7f32",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.05
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635673,
+        "count": 2
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1109103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1109208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1109209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 572992,
+        "name": "LP-Verstärkung",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "LP",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836259,
+          "count": 6
+         },
+         {
+          "id": 717290,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1109210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 489042,
+        "name": "ANG-Verstärkung",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "ANG",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836259,
+          "count": 6
+         },
+         {
+          "id": 717290,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 572991,
+      "name": "KRIT-SCH-Verstärkung",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "70505c64ff7cb3df4a9faf76eb488438570422a20d9dd2f42225da1dd1c97648",
+      "statusList": [
+       {
+        "key": "KRIT-SCH",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836259,
+        "count": 6
+       },
+       {
+        "id": 717290,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 572887,
+    "name": "Spiel mit dem Feuer",
+    "descHash": "Zieht nach dem Einsatz des Ultimates Hooks Aktion um <nobr>#2[i]%</nobr> vor und stellt zusätzlich <nobr>#1[i]</nobr> Pkt. Energie wieder her.",
+    "iconPath": "30f718a8c21719521a55cb285a05db42d93ace0cd3316c9206e6604b67e14954",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       5,
+       0.2
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836259,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1109201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 572984,
+    "name": "ANG-Verstärkung",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "ANG",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549408,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1109102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1109205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1109206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1109207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 572978,
+          "name": "ANG-Verstärkung",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+          "statusList": [
+           {
+            "key": "ANG",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 836259,
+            "count": 2
+           },
+           {
+            "id": 717290,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 572977,
+        "name": "LP-Verstärkung",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "LP",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836259,
+          "count": 2
+         },
+         {
+          "id": 717290,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 572980,
+      "name": "ANG-Verstärkung",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "ANG",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920200,
+        "count": 4
+       },
+       {
+        "id": 633349,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 572888,
+    "name": "Naivität",
+    "descHash": "Erhöht die Chance von WDS gegen Mengenkontrolle-Debuffs um <nobr>#1[i]%</nobr>.",
+    "iconPath": "11de557bc9b9951f65d7811df608d63a08d2ff977638148577e19f445c1e0b5f",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.35
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920200,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Körper",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "KRIT-Rate",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "Füße",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "GES",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+   },
+   {
+    "relicTypeHash": "Planarsphäre",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "Feuer-SCH-Erhöhung",
+    "propertyIconPath": "5b7a8da3b4d685c3e9cc470faae12c21e3fd75df90cd8fcfcd6c8f2784c02a3f"
+   },
+   {
+    "relicTypeHash": "Verbindungsseil",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "ANG",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Erstes Treffen",
+   "text": "Haha, die Erwachsenen in der Unterwelt hören auf Wildfeuer und die Kinder hören auf uns Maulwürfe. Ich bin übrigens Boss der Maulwürfe. Du kannst mich Pechschwarze Hook die Große nennen!",
+   "unlockRequirement": "",
+   "cnUrl": "c401ee5f8656c4daecf203b09dd2891c31eca04a28fe5fb29a0a89dd6f183844",
+   "jpUrl": "fad9e628d10a0d18eb50da440eb51bab5db0b0375e7398b8661ad7c4a81d303b",
+   "enUrl": "bbe0934931c7387b6389d7b027a8fac4644a0bc2ba4f47fa551768e0c1813c0b",
+   "krUrl": "c5eeb6c5991f50e4f72e5134a8b5cb31da4dcb2286942c8bee85a7f7c05796cc"
+  },
+  {
+   "id": 2,
+   "title": "Begrüßung",
+   "text": "Maulwürfe, Maulwürfe, raus aus den Löchern, tapfere Maulwürfe, gebt es ihnen noch und nöcher!",
+   "unlockRequirement": "",
+   "cnUrl": "dafd405175c3636376eb4778935eb87abc1f3a5e7d2f6aa5b1e3eb849c21dc51",
+   "jpUrl": "d46efe1ec0e7166ac53fc6958a3198181c451b550b7deed379e9a6f7cad9dd6e",
+   "enUrl": "224b3d8d5cb87f1fc3030f13277d9d5870c556b51e368b51e7734a6ab8f1fe61",
+   "krUrl": "7abc2715c092a1edde1395613ca7b27b18df36296f771c9fb796cdf39279b48b"
+  },
+  {
+   "id": 3,
+   "title": "Abschied",
+   "text": "Maulwürfe abtreten! Schlaft gut und bis morgen!",
+   "unlockRequirement": "",
+   "cnUrl": "323f4b5f997e9ef21f6684b8ab1c404a39b811c3e11552e5eddabd6c5ed9b327",
+   "jpUrl": "a3fa451413f462c78253b2c4e283d483a8f1369fe278944ca74b9e207cf3d383",
+   "enUrl": "d47d1d689682e2f25ab7cf110f71ba37d6d723a9f6b1ad73d6dffaeffc9728b4",
+   "krUrl": "e7abeedec14e7b043d991064c0c4ca942b5477a05eb11d5a2d3901426c6ca100"
+  },
+  {
+   "id": 4,
+   "title": "Über sich selbst: Grabotron",
+   "text": "Grabotron war einst ein fleißiger Bergarbeiter. Nachdem er sich zur Ruhe gesetzt hatte, hörte er meinen Ruf und wurde zur Eisenfaust, die alle rücksichtslosen Schurken zerschlägt!",
+   "unlockRequirement": "",
+   "cnUrl": "313952f00fca7ba1b159032f35b4e09c5158d3eb5b7db53bc67d319464c0a0b9",
+   "jpUrl": "57aec8d94107ebc920b5fb9979ac1d954b3d0dbec863701a0ba7c3d660915144",
+   "enUrl": "236c1f18a11ccdd2e324895722b43755963f695b72bc35c20e179b8181f92e9f",
+   "krUrl": "aa9112ed69a97dd552810fd6ff88fac60e2f5bf90a14b5cdc90054932ca2f9f5"
+  },
+  {
+   "id": 5,
+   "title": "Plaudern: Mitglieder der Maulwürfe",
+   "text": "Haha! Unter meiner Führung haben wir Julian Tausendgesicht, Luka Starkarm und Gewitztes Kind rekrutiert! Alle schließen sich der Sache an!",
+   "unlockRequirement": "",
+   "cnUrl": "9458bd7f503aba262970795a61b6edfb415937585a3957232cd70b486366b257",
+   "jpUrl": "6a411454250cb2d6b982097b9d4f929da95ae2417c8a6c3466c3c26c267b6616",
+   "enUrl": "359aa273a4d98290b9def32e22f15190d760abd7ac6b3f1d05f9352ddad9682c",
+   "krUrl": "822c79d4a2f582f9e755ddba3de5a9ae7b50cc8f536ab848d8807702795e3296"
+  },
+  {
+   "id": 6,
+   "title": "Hobbys",
+   "text": "Expeditionen in den Minen, Expeditionen in der Klinik, Expeditionen an der Oberfläche ... Ex... Expeditionen ins Unbekannte!",
+   "unlockRequirement": "",
+   "cnUrl": "a34d0eaac2b43c4d50d3e3ad18521e9b044084e68b92a8b62cd29cc6ce477696",
+   "jpUrl": "551d0311c161b029b86212772f709f2d841be2a2bbd2c658833aefba57826129",
+   "enUrl": "c031ff30ad3099ac47a71f6c59ffe960ce510f88a1fa3f513d26aab2163240e9",
+   "krUrl": "a5bf9036d25c368a50436935f9cde12906116adef38a523ad0edba78e427def3"
+  },
+  {
+   "id": 7,
+   "title": "Ärgernisse",
+   "text": "Man sagt, wenn man sich zu viele Sorgen macht, wird der Kopf schwer. Wäre es dann nicht schwieriger für mich, größer zu werden? Uaaah ...",
+   "unlockRequirement": "",
+   "cnUrl": "efa518fbda0d55a3b25e7bc9226c36f4e623793b8b987afa0b5c60d75cbfcedc",
+   "jpUrl": "53b4b5a51e59dc563bd9f80f01e024f400129ab0eced7b69ce8d2a926b397f80",
+   "enUrl": "6af177768bfd0b8b36fca671da167ac10289f116f7a44fd0ccbbcc46ebac5e02",
+   "krUrl": "79cb08d36d7c30e8a84376c0f657b11a61115f233f8a22ba6bb8f5226c7ae1aa"
+  },
+  {
+   "id": 8,
+   "title": "Etwas Mitteilenswertes",
+   "text": "Die Erwachsenen sagen immer Dinge wie: „Du wirst es verstehen, wenn du älter bist.“ Hook hat aber gehört, dass man Dinge vergisst, wenn man älter ist! Du glaubst mir nicht? Mal sehen, wer mehr weiß!",
+   "unlockRequirement": "",
+   "cnUrl": "580d05e7f2a466193b98964630c4c35097bd68e95dc414457c5364750de96fad",
+   "jpUrl": "114c1015e76d7b762ba68fe52616a2e66395449645299aa23069aff94e3668bf",
+   "enUrl": "f3e0ecd2ed1cdc498043d5179bac03412d5a327cc613810f255ba37965485ec2",
+   "krUrl": "152ad6052249afcdd2703bbf5e06515fa9758d31c683754357e30bc52761eca6"
+  },
+  {
+   "id": 9,
+   "title": "Wissen",
+   "text": "Hook interessiert sich für viele Dinge, wie ... Echsen, die Geomark auf dem Rücken tragen, o... oder Olme, die überleben, ohne zu fressen ... Natasha hat mir erzählt, dass es an der Oberfläche Blumen gibt, die nur einmal im Jahr blühen. Ich möchte die unbedingt mal sehen ...",
+   "unlockRequirement": "",
+   "cnUrl": "340a254d6d56db443e75cd05b4844049d8952e32fe42468ca6c17745b08c5c4e",
+   "jpUrl": "0c2f66c1fd511a5ce64090cb42d1abdb9c770ba3c19ec9b8014dbed57bc704a4",
+   "enUrl": "2d6bfbe4455cb7014f366dc3577bb5557b357c8f61f13174f50a4b5e4c6e76c5",
+   "krUrl": "345e5ff15e0403f35fbe264982adb3e35f8bb91fc738ae68914fb7565144eb54"
+  },
+  {
+   "id": 10,
+   "title": "Über Natasha",
+   "text": "Alte Hexe ... Ähm ... Natasha ist hübsch und nett, aber wenn sie wütend wird, ist sie, äh ... nicht so nett. Aber trotzdem noch hübsch ...",
+   "unlockRequirement": "",
+   "cnUrl": "096427a31a9bbb185507852285d4ab6cf90cb0b4bc15666c04cba25bd0b60da7",
+   "jpUrl": "e254158bcf784d9475e7b76908fd274f2329664771e84fbffa2993bd1912aea4",
+   "enUrl": "997e3145b1d4602c23ed4c66623f21ca4c528fb3cfea46900bb99e9904e30992",
+   "krUrl": "375f783795431b74e4892704d7a69b998bcc6f0c00780e59ca98af5fa116985a"
+  },
+  {
+   "id": 11,
+   "title": "Über Clara",
+   "text": "Uaaah ... Clara ... wann kannst du dich endlich den Maulwürfen anschließen?",
+   "unlockRequirement": "",
+   "cnUrl": "d5fce2c474c58c39a83e20b39490791170f9bd0fb50826fe6dbe801405a59af2",
+   "jpUrl": "7915a9f27376c1529374bfcab55ad88bba1d6a2392961f898cf002f6c35ee4a2",
+   "enUrl": "f496706cec4bf8bc445bf32d12cbfc9d7ccb3538907c6d75b2f8e210c38a7546",
+   "krUrl": "2c44c057354e262e17bdc2d1cc5923e82ede5effb295f7052b872a92d3efa2f2"
+  },
+  {
+   "id": 12,
+   "title": "Über Svarog",
+   "text": "Hooks Grabotron ist mächtiger als Svarogs Faust! Hmpf!",
+   "unlockRequirement": "",
+   "cnUrl": "852c1947c17ef948b3aa5db35235f86dd639b10975bd030768e90e78365d9a12",
+   "jpUrl": "3402e80d31b0f3218c4c7492076a7a2cefa6004f2bced6d9fb97252490e41335",
+   "enUrl": "889001256ccf83dd417e46be46549af0584e84c3c6556e3e40bcf27560ed6875",
+   "krUrl": "1046280b34d2aa7606ab5bb41a018b8cc88867f7c667596f516249532a204a4b"
+  },
+  {
+   "id": 13,
+   "title": "Über Sampo",
+   "text": "Ich begegne Herrn Sampo fast überall. Mag er auch Expeditionen?",
+   "unlockRequirement": "",
+   "cnUrl": "7eba0e79c5b19564026b0810730932e05d088beb589c7541344137ab907b34e9",
+   "jpUrl": "6cc68011e55fc372a6af8d5d751a885802c80b512e20d6528d0ef8a33c6c5d53",
+   "enUrl": "85bc7158247d5164cf9abe71349c6ac24990a247859bde5a24ec414ff7d21ad6",
+   "krUrl": "6abf7137276da3ccc2e05e0d459f673f55b18f3a23c493387f30a366eb10869b"
+  },
+  {
+   "id": 14,
+   "title": "Über Seele",
+   "text": "Fräulein Seele redet laut, aber manchmal geht Hook bei einem Streit dennoch als Siegerin hervor, hehe ...",
+   "unlockRequirement": "",
+   "cnUrl": "d3f27682fae4985d499b9a688f5e889b0b67cacd9330dd3f3a6b65e557abf9b4",
+   "jpUrl": "6439931ad8771d69cc33066b8d78b8d8abe48c0abfaced4d3c473972496e3620",
+   "enUrl": "ae1697fa798f4757d7ff587dce54a192eead9d604c7cfaeb5df8d08a043bc195",
+   "krUrl": "138912aad482a4c309330cec6b34cbe6e09544c2d96cad726f5dffd12802f4fc"
+  },
+  {
+   "id": 15,
+   "title": "Über Fersman",
+   "text": "Hook liebt Papa! Eines Tages wird Hook einen großen Schatz ausgraben und Papa ein riesiges Haus bauen!",
+   "unlockRequirement": "",
+   "cnUrl": "703fa65ab1f188b4aee065c8ffda857bc0d961e6976204934a8f21ae3a3655f5",
+   "jpUrl": "5f275d2b9fab4a1509611b24e6e466d4985f8369a7112acb84d0093d47ddc994",
+   "enUrl": "2bb8d7627d9609e8791377d74cfdd0b9eeecfb4e7df975120fe6d1189f93a91c",
+   "krUrl": "f066162f81b1117837c3260494668e3d6acd041f9a6ef42c23acac550986055d"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Figurendetails",
+   "text": "Sie leitet den Abenteuertrupp der Maulwürfe und nennt sich die Pechschwarze Hook die Große.<br />Sie wird nicht gerne als Kind bezeichnet und glaubt, dass sie alles auch ohne die Hilfe von Erwachsenen schaffen kann.<br />Erwachsene gehen auf Abenteuer im Fragmentum, Sampo geht auf Abenteuer an der Oberfläche und Patienten gehen ein riskantes Abenteuer ein, wenn sie sich von Natasha behandeln lassen ... Unter der Leitung von Hook können auch Kinder ihre eigenen Abenteuer haben!",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Figurenprofil: Teil I",
+   "text": "„██/██/██  Wetter: gut  Stimmung: sehr schlecht“<br /><br />„Heute habe ich die <s>Ganzgläser</s> <s>Raganzgläser</s> Reagenzgläser der alten Hexe zerbrochen und wurde ausgeschimpft.“<br /><br />„Die alte Hexe ist schrecklich! Sie lässt uns in der Mittagspause nie miteinander spielen, wir müssen immer Mittagsschlaf machen. Ich hasse sie!“<br /><br />„Wir sollten gegen ihre <s>Spiegelei</s> – <s>Allerlei</s> – <s>Rührei</s> – Tyrannei rebellieren! Wir können nicht zulassen, dass sie damit <s>wegkommt</s> – <s>rumkommt</s> – durchkommt!<br /><br />„Ich werde eine Bande, die Maulwürfe, gründen und alle Kinder aus der Klinik <s> schnappen</s> <s> kidnappen </s> <s> einziehen </s> einladen! Wir werden die alte Hexe erledigen! Und dann können wir essen, was wir wollen, und gemeinsam Spaß haben – und niemand kann uns aufhalten!“<br /><br />„Und ich werde die Anführerin der Maulwürfe sein! Und der ganzen Klinik! Ich werde die alte Hexe jeden Tag zur Schnecke machen und sie alle <s> Hausaufgaben </s> <s> Haussachen </s> Hausarbeit machen lassen ! Muahaha!“",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>20</nobr> freigeschaltet"
+  },
+  {
+   "title": "Figurenprofil: Teil II",
+   "text": "„██/██/██  Wetter: Eiskalt Stimmung: Sehr glücklich“<br /><br />„Heute bin ich zum <s> Maschinenfreud </s> <s> Maschinenfreid </s> Maschinenfriedhof gegangen, um mir eine nette Waffe zu suchen. Als Anführerin der Maulwürfe brauche ich unbedingt eine gute Waffe!“<br /><br />„Dort habe ich ein Mädchen getroffen. Sie war ein paar Jahre älter als ich (aber ich bin immer noch die Anführerin!) und sie trug eine hübsche rote Jacke. Aber sie trug keine Schuhe. Ich weiß nicht, warum sie keine Schuhe trug. So würde sie doch sehr frieren! Vielleicht hat sie aber nicht sehr gefroren.“<br /><br />„Ihr Haar war weiß wie Schnee, und es war sehr schön! Ich will auch weiße Haare, lange weiße Haare.“<br /><br />„Sie war sehr schüchtern, anfangs zu schüchtern, um mit mir zu reden. Aber das macht nichts! Ich <s> quassle für mein Leben gern und </s> schließe für mein Leben gern neue Freundschaften. Ich habe sehr, sehr lange mit ihr gequatscht. Ich weiß, dass sie Clara heißt und dass ihr Vater ein supergroßer Roboter ist!“<br /><br />„Ihr Vater ist echt cool, aber nicht so cool wie Papa Fersman! Sie ist jetzt meine Freundin und sie hat mir geholfen, einen echt starken Grabotron zu finden! Sie ist jetzt ein Ehrenmitglied der Maulwürde!“",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>40</nobr> freigeschaltet"
+  },
+  {
+   "title": "Figurenprofil: Teil III",
+   "text": "„██/██/██  Wetter: Immer noch eiskalt  Stimmung: <s> Schlecht </s> Normal“<br /><br />„Heute haben Alinas Mutter und Vater sie besucht. Alina war sehr glücklich, und es hat mich auch glücklich gemacht, sie so zu sehen.“<br /><br />„Ich habe an Mama und Papa gedacht. Ich habe sie schon lange nicht mehr gesehen! Obwohl Papa Fersman sehr, sehr nett zu mir ist, vermisse ich meine Mama und meinen Papa immer noch!“<br /><br />„Abends hat mir Papa Fersman noch einmal erklärt, warum Mama und Papa nicht zurückkehren konnten. Aber ich weiß das schon ... weil Papa Fersman mir das schon so oft gesagt hat!“ „Ich habe bemerkt, dass Papa Fersman in letzter Zeit ständig Sachen vergisst! Ich habe Natasha gefragt, und sie sagte, es liegt daran, dass Papa Fersman langsam alt wird. Dann habe ich gefragt, ob sie Papa Fersman wieder gesund machen könnte, aber sie sagte, leider nein.“<br /><br />„Ich glaube, die alte Hexe lügt mich an, weil ich in letzter Zeit etwas frech gewesen bin! Sie ist der beste Doktor in der Stadt und kann alles heilen. Warum kann sie dann Papa Fersman nicht heilen?“<br /><br />„Na gut, ich habe beschlossen, dass ich alles aufschreiben werde, was Papa Fersman gesagt hat! Weil ich die große böse Anführerin der Maulwürfe bin!“",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>60</nobr> freigeschaltet"
+  },
+  {
+   "title": "Figurenprofil: Teil IV",
+   "text": "„██/██/██, Adresse: Die Klinik. Hatte gerade ein offenes Gespräch mit Hook. Es verlief wie folgt:“<br /><br />„Papa Fersman war einmal ein sehr guter Freund von Mama und Papa. Damals lebten wir alle in einer kleinen Stadt im Norden. Eines Tages ging Mama ins Fragmentum und kam nie wieder heraus. Mama hat so gerne Grillolm gegessen. Papa hat sie so sehr vermisst, dass er mir jeden Tag Grillolm gekocht hat.“<br /><br />„Als ich eines Tages nach Hause kam, sah ich Papa unter Schmerzen auf dem Bett liegen. Ich bin in Tränen ausgebrochen und zu Papa Fersman nebenan gelaufen. Er hat mir gesagt, dass mein Papa krank ist, und er ist mit Papa und mir zum Arzt in der Stadt gegangen.“<br /><br />„Wir blieben mehrere Tage lang mit meinem Papa beim Arzt. Am Ende hatten wir fast unser ganzes Geld aufgebracht. Papa hat mir im Geheimen zugeflüstert, dass ich das Geld sparen soll. Er hat mir außerdem gesagt, dass er sich hier nicht wohlfühlt und dass er nach Hause will. Also bin ich zu Papa Fersman gegangen und habe ihm gesagt, dass ich mit meinem Papa wieder nach Hause will. Aber als Papa Fersman und ich ihn besucht haben, hat er nicht mehr mit mir geredet.“<br /><br />„Papa Fersman war auf seinen Knien und weinte, aber ich habe nicht verstanden, was passiert war. Papa Fersman hat mir erklärt, dass mein Vater meine Mutter so vermisst hat, dass er sie in seinen Träumen besucht hat. Ich habe Papa Fersman gefragt, wann mein Papa denn wieder aufwachen würde. Papa Fersman hat aber einfach weitergeweint und mir nicht geantwortet ...“<br /><br />„Ich habe – ich habe nicht geweint! Nein ... Natasha, ich brauche kein Taschentuch ...“<br /><br />„Hinterher habe ich den Doktor im Geheimen etwas gefragt. Ich weiß, dass mein Papa wirklich gestorben ist und nie wiederkommen wird und das gilt auch für Mama ... Ich weiß, dass Papa Fersman mich nicht traurig machen will, deswegen lügt er mich an ...“<br /><br />„Ich weiß, dass Papa Fersman der beste Mensch auf der ganzen Welt ist, und ich habe Papa Fersman am liebsten ...“<br /><br />„Und deswegen möchte mit allen viele Schätze finden, damit wir Papa Fersman ein schönes großes Haus bauen und ihn wieder heilen können!“",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>80</nobr> freigeschaltet"
+  }
+ ],
+ "archive": {
+  "cvCn": "王晓彤",
+  "cvJp": "徳井青空",
+  "cvKr": "이재현",
+  "cvEn": "Felecia Angelle",
+  "camp": "Belobog"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "hook"
+}

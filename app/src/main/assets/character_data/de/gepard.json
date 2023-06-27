@@ -1,0 +1,2358 @@
+{
+ "name": "Gepard",
+ "spRequirement": 100,
+ "rarity": 5,
+ "descHash": "Ein Hauptmann der Silbermähnen-Wachen und ein herausragender Krieger aus Belobog. Er ist ein durch und durch penibler und wachsamer Typ, der sich stets selbst treu bleibt.",
+ "iconPath": "0696b2bfa4fa4763b3e71ddcb8b490aaae91958a512d1e596fad958e897a87b1",
+ "bgPath": "34112491e4e2f1753f3a9feff6358cd5f2e962c7db95a2ec37203d269fa39f68",
+ "figPath": "e1621b800d1d24167145dbd903cf2a06a6738e176945dedd106bf30ff302a8f8",
+ "fgPath": "8506127b2274a60fe0f8b8fe21965e0a91400c6a20e87c59d2b4a0d8ea36adfa",
+ "artPath": "c5bcfec01ce392f42654d5be48bfeceb4ba8b53eeee3e5c9263f3c53b00a9174",
+ "miniIconPath": "cff242d83528bc8051b118c1a90ec6a5d6f63091acfaf0e139e8ba0532715f6e",
+ "splashIconPath": "e07822c72adcb2a0a71907bbfe48f7da04a9e34eda152ecbf8ce6d8ec64e313f",
+ "damageType": {
+  "id": 4,
+  "iconPath": "3a4e72fd1d4a41926980ab22b12c81cde3147050577efcfdac462e0f60271b9f",
+  "color": "#47C7FD",
+  "name": "Eis",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "129eb76a6f0c9be69f8c2263f5e53030909c36d7e4de7a0571dd5665ac645b33",
+  "altIconPath": "9d034d41c43efff65e81e11d6215e3ce43eb0a2e32036648f707751a8d0a15b6",
+  "color": "#FFFFFF",
+  "name": "Die Bewahrung",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 6,
+  "iconPath": "7ffdd2cf6f7c119724e700bbf531b0ff62f3f1e2c32159e1a1f2bc6c77416163",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Credit",
+   "desc": "Diese Währung, die von der Interastrale Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
+   "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
+   "purpose": "Gemeinsame Währung",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Blütenkelch (Große Mine)",
+    "Missionsbelohnungen",
+    "Auftragsbelohnungen"
+   ]
+  },
+  "67219": {
+   "id": 67219,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "03a85f3ccfcb36eb4e371d602e552113e1ada82e6ca848ca9d4f2761f6991e5e",
+   "name": "Horn aus Schnee",
+   "desc": "Zerbrochenes Horn eines Eisigen Streuners. Material zum Aufstieg der Figuren mit Eis-Typ.",
+   "lore": "Die Silbermähnen-Wachen trugen Wettbewerbe aus, bei denen der Sieger innerhalb einer gewissen Zeit einen Körperteil eines Monsters beschaffen musste. Dieses kalte, zerbrochene Horn muss aus einem solchen Wettbewerb stammen.<br /><br />„Sir Bova, das ist aber kein Elchgeweih und über den Geomark-Schmelzofen will sich das bestimmt auch niemand hängen.“",
+   "purpose": "Material zum Figurenaufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/67219",
+   "comeFrom": [
+    "Ruhender Schatten (Korridor der verhallenden Echos)",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "Spuren des Schicksals",
+   "desc": "Fortschrittliches Material zum Hochstufen von Spuren.",
+   "lore": "Unzählige Fehlschläge sicherten deinen Sieg und deine kleinen Schritte führten dich an den Wendepunkt des Schicksals.",
+   "purpose": "Spurenmaterial",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Punktebelohnungen in der Universum-Simulation",
+    "Namenlose Ehre",
+    "Glut-Tausch",
+    "Belohnungen für zeitlich begrenzte Aktionen"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "Lamento der Wächterin",
+   "desc": "Fortgeschrittenes Material zum Hochstufen von Spuren.",
+   "lore": "Nicht nur die Maske ist beschädigt, auch der Wunsch der Wächterin, die sie trug, wurde verzerrt.<br />Sie wollte ihrem Volk zur Flucht vor dem Immerwinter verhelfen, aber wurde schließlich zu einer Marionette höherer Mächte.<br /><br />„Der Titel der Obersten Wächterin wurde auf Belobog über viele Generationen vererbt. Niemand hat je daran gedacht, dass auch die Wächter selbst Fürsorge und Schutz brauchen.“",
+   "purpose": "Spurenmaterial",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "Echo des Krieges (Immerwinterhügel)"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "Reiseführer",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>20.000</nobr> Figuren-EP.",
+   "lore": "Pflichtlektüre für Weltreisende. Auf Knopfdruck beginnt eine angenehme Stimme in der Sprache des Lesers von den legendären Erlebnissen berühmter Abenteurer auf diversen Planeten zu erzählen und ihr gesammeltes Wissen zusammenzufassen.<br /><br />„Die brandneue Reiseführer-Reihe ‚Das Handbuch für die galaktische Küche‘ ist jetzt erhältlich.“<br />„Einsendungen bitte per Telepathie über Synästhesie-Leuchtfeuer ERD<nobr>-23</nobr>θ an das Team der Intelligenzia-Gilde. Flexible Zahlungsoptionen.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Vergessene Halle"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "Abenteuer-Log",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>5.000</nobr> Figuren-EP.",
+   "lore": "Eine säuberlich organisierte Sammlung lehrreicher Notizen mit unzähligen Illustrationen und Texten, die diverse Abenteuer vom Anfang bis zum Ende beschreiben, sowie wertvollen Tipps und Überlebenstechniken.<br /><br />„Warum werden die Daten nicht in einer Foto-CD gespeichert? Wäre doch viel praktischer.“<br />„Moderne Technologie ist angesichts von Sternenstürmen und Neuronenfluss-Eruptionen viel empfindlicher, als man denkt. Außerdem hätte der Autor des Buchs sicher gewollt, dass man es auf die einfachste Art liest.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Tägliches Training"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "Reisebegegnungen",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>1.000</nobr> Figuren-EP.",
+   "lore": "Ein unleserlich von Hand geschriebenes Reisetagebuch mit wirren Inhalten. Es nützt dir wenig.<br /><br />„Dan Heng, lies das endlich fertig, damit es in den Müll kann.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Auftragsbelohnungen"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "2901efa774991b0ce2037520ce85ff99af64f37ee6364ffda560278736df6a19",
+   "name": "Anstecker der Silbermähnen-Wache",
+   "desc": "Anstecker einer Silbermähnen-Wache. Ein Rohmaterial zur Verstärkung.",
+   "lore": "Ein Veteran trägt viele Narben aus dem Kampf mit sich.<br /><br />„Früher gab es für Silbermähnen-Wachen nur eine Möglichkeit des Ruhestands: den Tod.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "Äußere Schneewüste: Silbermähnen-Wachen oder andere Gegner",
+    "Korridor der verhallenden Echos: Immerwinter-Schattenwandler oder andere Gegner",
+    "Universum-Simulation-Gegner",
+    "Auftragsbelohnungen",
+    "Glut-Tausch",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "042dc7973ef7c36858a4aa58ef7d32335f528b3c4bc4f0c4ce2e7f401039a7c5",
+   "name": "Insignien der Silbermähnen-Wache",
+   "desc": "Insignien eines Hauptmannes der Silbermähnen-Wachen. Ein normales Material zur Verstärkung.",
+   "lore": "Vielleicht sind sie ein Beweis deiner Heldentaten, mit dem du vor deiner Familie angeben kannst. Vielleicht sind sie ein Glücksbringer, die eine tödliche Kugel ablenken.<br /><br />„Die Zeiten haben sich geändert.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "Äußere Schneewüste: Silbermähnen-Wachen (Balance-Stufe 2+) oder andere Gegner",
+    "Korridor der verhallenden Echos: Immerwinter-Schattenwandler (Balance-Stufe 2+) oder andere Gegner",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "635668": {
+   "id": 635668,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "751785c1795d0c216b39deec5fa263ee8119f6295a1582c75e5f4a958a17a385",
+   "name": "Beständigkeit von Bronze",
+   "desc": "Ein primitiv wirkender, aber stabiler alter Bronzeschild, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Bewahrung</span> ein wenig hochgestuft werden können.",
+   "lore": "Uralte Legenden berichten von einem Krieg, bei dem Menschen sämtliche verfügbaren primitiven Mittel ausschöpften, um den Göttern in eine Schlacht gegen übermächtige Bestien zu folgen.<br />Dieser Schild ist ein Zeitzeuge jenes Krieges.<br /><br />„Es gibt keine andere Wahl, als sie zu stoppen, selbst wenn alle Mühen umsonst sind.“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/635668",
+   "comeFrom": [
+    "Blütenkelch (Versorgungszone)"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "name": "Orden der Silbermähnen-Wache",
+   "desc": "Tapferkeitsmedaille einer besonders verdienstvollen Silbermähnen-Wache. Ein fortschrittliches Material zur Verstärkung.",
+   "lore": "Eine Tapferkeitsmedaille, die diejenigen erhalten, die gegen Kluftwesen, Untergrundbewohner und plötzliche Katastrophen ankämpfen.<br />Sie wird normalerweise nicht an der Brust getragen, sondern als Grabbeigabe verliehen.<br /><br />„Vergiss nicht, junger Gepard. Das ist kein Spielzeug, sondern Blut und Schicksal der Familie Landau.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "Äußere Schneewüste: Silbermähnen-Wachen (Balance-Stufe 4+) oder andere Gegner",
+    "Korridor der verhallenden Echos: Immerwinter-Schattenwandler (Balance-Stufe 4+) oder andere Gegner",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "836254": {
+   "id": 836254,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1313f4b8549d0b129fb33fcd3745a87a8030d13fc8c28159f0dd2868a203ac2f",
+   "name": "Schutz des Bernsteins",
+   "desc": "Ein ungewöhnlicher mit Bernsteinen von jenseits des Himmels besetzter großer Schild, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Bewahrung</span> stark hochgestuft werden können.",
+   "lore": "Der Träger dieses Schilds scheint von einer unsichtbaren Mauer umgeben zu sein, die ihn vor brennenden Pfeilen und kolossalen Klauen schützt.<br />Uralte Legenden erzählen von einem Krieg, in dem ein Stammesheld mit einem Bronzeschild an der Seite von mit Feuerspeeren bewaffneten Kriegern einen Leviathan angriff.<br />Dieser Schild ist ein Zeitzeuge jenes Krieges.<br /><br />„Bis hierher und nicht weiter.“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/836254",
+   "comeFrom": [
+    "Blütenkelch (Versorgungszone)",
+    "Omni-Synthesemaschine – Materialsynthese"
+   ]
+  },
+  "920195": {
+   "id": 920195,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "40bec463d92cede13fc22b7ac618c83f9d27e06e1a8c95a37d32cedc83fffe17",
+   "name": "Schwur des Stahls",
+   "desc": "Ein mit unersetzlicher handwerklicher Technik aus einem unbekannten Metall geschmiedeter Schild, mit dem Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Bewahrung</span> mäßig hochgestuft werden können.",
+   "lore": "Dieser Schild trägt sich trotz seiner Größe leicht wie eine Feder. Selbst Frontalangriffe hinterlassen nicht einmal einen Kratzer auf seiner Oberfläche.<br />Uralte Legenden berichten von einem Krieg, in dem feurige Krieger, bewaffnet mit Speeren, die Todesstrahlen verschossen, und Schilden aus Froststahl, ihre zum Untergang verdammte Nation verteidigten.<br />Dieser Schild ist ein Zeitzeuge jenes Krieges.<br /><br />„Der mächtige Stimmenchor ruft: ‚Der Feind steht vor unseren Toren!‘“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/920195",
+   "comeFrom": [
+    "Blütenkelch (Versorgungszone)",
+    "Omni-Synthesemaschine – Materialsynthese"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549407,
+     "count": 5
+    }
+   ],
+   "attackBase": 73.92,
+   "attackAdd": 3.696,
+   "hpBase": 190.08,
+   "hpAdd": 9.504,
+   "defenseBase": 89.1,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549407,
+     "count": 10
+    }
+   ],
+   "attackBase": 103.488,
+   "attackAdd": 3.696,
+   "hpBase": 266.112,
+   "hpAdd": 9.504,
+   "defenseBase": 124.74,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633348,
+     "count": 6
+    },
+    {
+     "id": 67219,
+     "count": 3
+    }
+   ],
+   "attackBase": 133.056,
+   "attackAdd": 3.696,
+   "hpBase": 342.144,
+   "hpAdd": 9.504,
+   "defenseBase": 160.38,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633348,
+     "count": 9
+    },
+    {
+     "id": 67219,
+     "count": 7
+    }
+   ],
+   "attackBase": 162.624,
+   "attackAdd": 3.696,
+   "hpBase": 418.176,
+   "hpAdd": 9.504,
+   "defenseBase": 196.02,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717289,
+     "count": 6
+    },
+    {
+     "id": 67219,
+     "count": 20
+    }
+   ],
+   "attackBase": 192.192,
+   "attackAdd": 3.696,
+   "hpBase": 494.208,
+   "hpAdd": 9.504,
+   "defenseBase": 231.66,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717289,
+     "count": 9
+    },
+    {
+     "id": 67219,
+     "count": 35
+    }
+   ],
+   "attackBase": 221.76,
+   "attackAdd": 3.696,
+   "hpBase": 570.24,
+   "hpAdd": 9.504,
+   "defenseBase": 267.3,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 251.328,
+   "attackAdd": 3.696,
+   "hpBase": 646.272,
+   "hpAdd": 9.504,
+   "defenseBase": 302.94,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "40ea7e986a0ba510073b959d4bffb40d9e888d3bce8018f15e35ce8c6c194c30",
+   "name": "Sorgfaltspflicht",
+   "descHash": "Erhöht beim Einsatz der Fertigkeit die Grundchance, das Ziel einzufrieren, um <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.35
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "56b9b0d55a492e92c8e7869e8c87bfda002669772b49f11dbe69f3b41f34da18",
+   "name": "Hartnäckige Kälte",
+   "descHash": "Wenn der durch die Fertigkeit eingefrorene Gegner sich von „Gefroren“ erholt, sinkt seine GES für <nobr>#2[i]</nobr> Rd. um <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.2,
+    1
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "1b61fa938f72eac53422f79f17b50342e9e8c732e79b23af0027f7b0aacdc7ce",
+   "name": "Niemals aufgeben",
+   "descHash": "Ultimate-Stufe +2 bis zu max. St. <nobr>15</nobr>. Talentstufe +2 bis zu max. St. <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "2ac465e7f349b630aa2b0f442a0ab0e037ad2fbd51b519c65d83f278a8187c39",
+   "name": "Der Glaube versetzt Berge",
+   "descHash": "Erhöht den Effekt-WDS aller Verbündeten um <nobr>#1[i]%</nobr>, wenn Gepard mitkämpft.",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "ddb303335c81a925f1215123b30ef6a25bb787db4d88b7c90adcc3cad3bb9e61",
+   "name": "Kalte Eisenfaust",
+   "descHash": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis zu max. St. <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "a6deb836531fc2a96fd05a74cece35d2c4399a497f4a5a71dc41172e36b41821",
+   "name": "Unnachgiebige Entschlossenheit",
+   "descHash": "Bei Auslösung des Talents wird Gepards Aktion um <nobr>100</nobr> % vorgezogen und seine LP-Wiederherstellung wird zusätzlich um <nobr>#1[i]%</nobr> seiner max. LP erhöht.",
+   "params": [
+    0.5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   866633
+  ],
+  [
+   983278
+  ],
+  [
+   67219
+  ],
+  [
+   151160
+  ],
+  [
+   468391
+  ]
+ ],
+ "skills": [
+  {
+   "id": 866633,
+   "name": "Faust der Überzeugung",
+   "tagHash": "Einzelangriff",
+   "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Gepards ANG zu.",
+   "typeDescHash": "Standardangriff",
+   "iconPath": "86f4ab2ddba799691718737ac0d50e86939c71341075dfedff87448a7d119138",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 983278,
+   "name": "Einschüchternder Schlag",
+   "tagHash": "Beeinträchtigung",
+   "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Gepards ANG zu und verursacht beim Ziel mit einer <u>Grundchance</u> von <nobr>#2[i]%</nobr> für <nobr>#3[i]</nobr> Rd. Gefroren.<br />Ein gefrorener Gegner kann keine Aktionen ausführen und erleidet zu Beginn jeder Runde <u>zusätzlichen</u> <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span> von Gepards ANG.",
+   "typeDescHash": "Fertigkeit",
+   "iconPath": "b019a13d800df94a29d24ea36e0e9ef56fa814ef42a45f2e5dd3b89dd4361797",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1,
+      0.65,
+      1,
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.1,
+      0.65,
+      1,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.2,
+      0.65,
+      1,
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.3,
+      0.65,
+      1,
+      0.39
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.4,
+      0.65,
+      1,
+      0.42
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.5,
+      0.65,
+      1,
+      0.45
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.625,
+      0.65,
+      1,
+      0.4875
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.75,
+      0.65,
+      1,
+      0.525
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.875,
+      0.65,
+      1,
+      0.5625
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      2,
+      0.65,
+      1,
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      2.1,
+      0.65,
+      1,
+      0.63
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      2.2,
+      0.65,
+      1,
+      0.66
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      2.3,
+      0.65,
+      1,
+      0.69
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      2.4,
+      0.65,
+      1,
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      2.5,
+      0.65,
+      1,
+      0.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 67219,
+   "name": "Emporragendes Bollwerk",
+   "tagHash": "Verteidigung",
+   "descHash": "Gewährt allen Verbündeten für <nobr>#2[i]</nobr> Rd. einen Schild, der SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Gepards VTD plus <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#3[i]</nobr></span> absorbiert.",
+   "typeDescHash": "Ultimate",
+   "iconPath": "c1909a1a7b0f45d66ab7389d1a04384fa9353dc3ee107b5d928105020097ad41",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.3,
+      3,
+      150
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.31875,
+      3,
+      240
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.3375,
+      3,
+      307.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.35625,
+      3,
+      375
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.375,
+      3,
+      420
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.39,
+      3,
+      465
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.405,
+      3,
+      498.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.42,
+      3,
+      532.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.435,
+      3,
+      566.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.45,
+      3,
+      600
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.465,
+      3,
+      633.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.48,
+      3,
+      667.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.495,
+      3,
+      701.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.51,
+      3,
+      735
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.525,
+      3,
+      768.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 100
+  },
+  {
+   "id": 151160,
+   "name": "Unnachgiebiger Wille",
+   "tagHash": "Wiederherstellung",
+   "descHash": "Gepard wird durch einen Todesstoß nicht <u>handlungsunfähig</u>, sondern stellt unmittelbar <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> seiner max. LP wieder her. Dieser Effekt kann nur einmal pro Kampf ausgelöst werden.",
+   "typeDescHash": "Talent",
+   "iconPath": "a40bef4869899186a858f02ef602213feabe267f01d5cd6792498e13b9e6c8f5",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.275
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.325
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.35
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.375
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.40625
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.4375
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.46875
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.525
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.55
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.575
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.625
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 351746,
+   "name": "Angriff",
+   "tagHash": "",
+   "descHash": "Greift den Gegner an und schwächt nach Kampfeintritt den Widerstand des Ziels gegen den entsprechenden Typ.",
+   "typeDescHash": "",
+   "iconPath": "86f4ab2ddba799691718737ac0d50e86939c71341075dfedff87448a7d119138",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 468391,
+   "name": "Kameradschaft",
+   "tagHash": "Verteidigung",
+   "descHash": "Die Technik gewährt allen Verbündeten zu Beginn des nächsten Kampfs einen Schild, der SCH in Höhe von <nobr>#1[i]%</nobr> von Gepards VTD plus <nobr>#3[i]</nobr> für <nobr>#2[i]</nobr> Rd. absorbiert.",
+   "typeDescHash": "Technik",
+   "iconPath": "d077f03c4e71b12749241449629c3becef9b3912d3299ac7e9bfba016aa7c941",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.24,
+      2,
+      150
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1104103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1104208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1104209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 303359,
+        "name": "Effekt-WDS-Verstärkung",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+        "statusList": [
+         {
+          "key": "Effekt-WDS",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836254,
+          "count": 8
+         },
+         {
+          "id": 717289,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1104210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 419995,
+        "name": "SCH-Verstärkung: Eis",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#47C7FD;\">Eis</span>-SCH-Erhöhung",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836254,
+          "count": 8
+         },
+         {
+          "id": 717289,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 303358,
+      "name": "VTD-Verstärkung",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+      "statusList": [
+       {
+        "key": "VTD",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836254,
+        "count": 8
+       },
+       {
+        "id": 717289,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 303254,
+    "name": "Kampfgeist",
+    "descHash": "Erhöht Gepards ANG um <nobr>#1[i]%</nobr> seiner aktuellen VTD. Dieser Effekt wird zu Beginn jeder Runde aktualisiert.",
+    "iconPath": "2cd5543062f2740d57c143b05ae1d991bd895f75edfd9eb2aeea50cb10fc8750",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.35
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836254,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1104201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1104101,
+     "type": 1,
+     "children": [
+      {
+       "id": 1104202,
+       "type": 2,
+       "children": [
+        {
+         "id": 1104203,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 303349,
+          "name": "SCH-Verstärkung: Eis",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+          "statusList": [
+           {
+            "key": "<span style=\"color:#47C7FD;\">Eis</span>-SCH-Erhöhung",
+            "value": 0.032
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920195,
+            "count": 3
+           },
+           {
+            "id": 633348,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 303348,
+        "name": "Effekt-WDS-Verstärkung",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+        "statusList": [
+         {
+          "key": "Effekt-WDS",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 5000
+         },
+         {
+          "id": 635668,
+          "count": 3
+         },
+         {
+          "id": 549407,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "id": 303252,
+      "name": "Integrität",
+      "descHash": "Erhöht die Chance, dass Gepard angegriffen wird.",
+      "iconPath": "2868135c9d13bee8ad2a4e6fa72393cf4c2d8c69534c266dd60130610af518fe",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "levelData": [
+       {
+        "level": 1,
+        "params": [
+         3
+        ],
+        "levelReq": 0,
+        "promotionReq": 2,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 5000
+         },
+         {
+          "id": 635668,
+          "count": 3
+         },
+         {
+          "id": 270195,
+          "count": 1
+         }
+        ]
+       }
+      ],
+      "ultimateCost": 0
+     }
+    },
+    {
+     "id": 1104102,
+     "type": 1,
+     "children": [
+      {
+       "id": 1104205,
+       "type": 2,
+       "children": [
+        {
+         "id": 1104206,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 303344,
+          "name": "Effekt-WDS-Verstärkung",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+          "statusList": [
+           {
+            "key": "Effekt-WDS",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836254,
+            "count": 3
+           },
+           {
+            "id": 717289,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 303347,
+        "name": "SCH-Verstärkung: Eis",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#47C7FD;\">Eis</span>-SCH-Erhöhung",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 20000
+         },
+         {
+          "id": 920195,
+          "count": 5
+         },
+         {
+          "id": 633348,
+          "count": 4
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "id": 303255,
+      "name": "Kommandant",
+      "descHash": "Stellt Gepards Energie auf <nobr>100</nobr> % wieder her, wenn „Unnachgiebiger Wille“ ausgelöst wird.",
+      "iconPath": "6763442330252266961d0d23e21bed264bd719bc788945eeb145a9abfa167df4",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "levelData": [
+       {
+        "level": 1,
+        "params": [],
+        "levelReq": 0,
+        "promotionReq": 4,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 20000
+         },
+         {
+          "id": 920195,
+          "count": 5
+         },
+         {
+          "id": 125435,
+          "count": 1
+         },
+         {
+          "id": 270195,
+          "count": 1
+         }
+        ]
+       }
+      ],
+      "ultimateCost": 0
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 303351,
+    "name": "SCH-Verstärkung: Eis",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+    "statusList": [
+     {
+      "key": "<span style=\"color:#47C7FD;\">Eis</span>-SCH-Erhöhung",
+      "value": 0.032
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549407,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1104204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 303346,
+    "name": "VTD-Verstärkung",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+    "statusList": [
+     {
+      "key": "VTD",
+      "value": 0.05
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 10000
+     },
+     {
+      "id": 920195,
+      "count": 3
+     },
+     {
+      "id": 633348,
+      "count": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": 1104207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 303345,
+    "name": "SCH-Verstärkung: Eis",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+    "statusList": [
+     {
+      "key": "<span style=\"color:#47C7FD;\">Eis</span>-SCH-Erhöhung",
+      "value": 0.048
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 45000
+     },
+     {
+      "id": 836254,
+      "count": 3
+     },
+     {
+      "id": 717289,
+      "count": 3
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Körper",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "VTD",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "Füße",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "VTD",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "Planarsphäre",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "VTD",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "Verbindungsseil",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "Energie-Wiederherstellungsrate",
+    "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Erstes Treffen",
+   "text": "Mein Name ist Gepard Landau, ich bin Hauptmann der Silbermähnen-Wachen. Wenn du etwas Verdächtiges in der Stadt entdeckst, kannst du es mir jederzeit melden.",
+   "unlockRequirement": "",
+   "cnUrl": "72890afe2e60cec8a13be2c476db4a77ca06284e2fa56dee5440dca11f0dabf4",
+   "jpUrl": "05334b123d37ddd3fa32d0d49ef725043312feffe972acd129faac95a24cd9bf",
+   "enUrl": "690627c4f90e8c1be7d5f4c0ca7039fbe353abab94a2a110c2f57173cbe0f19c",
+   "krUrl": "bacff2e16eaadd6bcc5592239bd11a208030e9dcb3bd2c206ef4c52af293bd8f"
+  },
+  {
+   "id": 2,
+   "title": "Begrüßung",
+   "text": "Du bist hier. Ich habe gerade das Training beendet.",
+   "unlockRequirement": "",
+   "cnUrl": "687ea41f875942f6b7ddb63858397d17ed9b0fb4ca59f8a92476c60f2bb70f53",
+   "jpUrl": "4c04626530ca04489981c11ff82951143e83d2e0bb0ae3d2b075e33f3925d2e2",
+   "enUrl": "f769f01da9e8069af45575dad2485d9eca6ca8059a4dbc57f1e4ac6fcf76dba2",
+   "krUrl": "3a06076eecf664ca4f452419f9f2d34cf7255ba40e3efb48dc710c4843aeb172"
+  },
+  {
+   "id": 3,
+   "title": "Abschied",
+   "text": "Ich bitte um Entschuldigung, ich habe noch einen Auftrag zu erledigen. Ich werde dich hier verabschieden müssen.",
+   "unlockRequirement": "",
+   "cnUrl": "8bd1b5476acd7820224c088c4b1d9cc2cd53554a860037dbfe70f2a6636c3937",
+   "jpUrl": "3590be049fccc2a24253ea0929964e9d670142fd7086f0239376dbcfab936c8e",
+   "enUrl": "176269ef8f56721f126b9a037f301fef2efa23fd9d7a1184339ff6cb228295ef",
+   "krUrl": "13dfbb072bf36c0a546fffeaaf04d26f9b0a872998be18c8be394d1dc5961304"
+  },
+  {
+   "id": 4,
+   "title": "Über sich selbst",
+   "text": "Als Silbermähnen-Wache halte ich mich an den Eid, nicht weil ich mich davor fürchte, dagegen zu verstoßen, sondern weil ich verpflichtet bin, ihn einzuhalten.",
+   "unlockRequirement": "",
+   "cnUrl": "3e7ee0366742917c10500e5c5c7618407c400a0a9d2b8c61c3e8b9c3b09f9a32",
+   "jpUrl": "0f28fb2baf29345728a29eac5e39d5708f7f69411a3c8c2da9645226c8233c28",
+   "enUrl": "d0fc506a7f81f46b34ba5f83cde262654ebdcb0cfc3139466cead3da2e249a09",
+   "krUrl": "d8f4860e173f7af060a72add20ebeeb556227a67f9cd5b1579ac536b59b1975f"
+  },
+  {
+   "id": 5,
+   "title": "Plaudern: Belobog",
+   "text": "Belobog ist weit davon entfernt, unter dem Schneevorhang begraben zu sein. Diese Stadt ist die letzte Bastion des Planeten gegen die Grausamkeit des Ewigen Frosts.",
+   "unlockRequirement": "",
+   "cnUrl": "a487738238bfb0d1f355618787aefc68241a975a45b229b7f1de9c37b7dc207a",
+   "jpUrl": "241c7166483bdd11a50b8fcd61721564816eb18131fdd7fc1463f733d5313a38",
+   "enUrl": "bee7ec3424b4e18877e8ec362abb6a9494feaec7760b19784826859958f5d8dd",
+   "krUrl": "5bb5dacb2b1a2faa5d32cb8ea441f9ba3e8424b54b348e977abc80d9ae20a583"
+  },
+  {
+   "id": 6,
+   "title": "Hobbys",
+   "text": "Ich züchte Blumen. *seufz* ... Ich bin aber nicht sehr gut darin.",
+   "unlockRequirement": "",
+   "cnUrl": "3bc60faf4d80fd7586f34be3fc4350f24fd0636146835d7001fbc4eb623a384d",
+   "jpUrl": "7eb25f4e148cf21f8c0cbaad08856621337dcb85ca884675da67fc8dfdb187b4",
+   "enUrl": "0534137ccd37613b00ed784bcbe113b2de6a4cea35761dca48a69b89f307e94e",
+   "krUrl": "b19f453253b08e2e9128b6f38d6d23f4cc6635e56b65cf258d99d0ba82b385f1"
+  },
+  {
+   "id": 7,
+   "title": "Ärgernisse",
+   "text": "Die Lieder meiner Schwester sind bei den Wachen sehr beliebt – es gibt immer jemanden, der eines singt, wenn wir nicht im Dienst sind. In letzter Zeit habe ich mich sogar selbst dabei ertappt, wie ich, ohne es zu merken, während meines Dienstes die Melodien gesummt habe ... *seufz*",
+   "unlockRequirement": "",
+   "cnUrl": "45030fcacac5d7ae81201c33550bc413ee36b778a4fa51f29009f1e2f6aa4bce",
+   "jpUrl": "82c7ca4cd2da584b20198717baa5c2469749a1f503b6f7671ff849fe5ca2b786",
+   "enUrl": "ef13ff4980ffc7690b3ff0b791fea1e208412625b068fe315ab94ab020dd88e0",
+   "krUrl": "7749e96703a6b2e3f188c9a9fc582955b98114dfed4bddef5cebd018914c9861"
+  },
+  {
+   "id": 8,
+   "title": "Etwas Mitteilenswertes",
+   "text": "Die Familie Landau hat seit Generationen die Ehre und Verantwortung, der Obersten Wächterin zu dienen. Nur wer zum Schutzschild für die Menschen wird, hat den Titel „Architekt“ verdient.",
+   "unlockRequirement": "",
+   "cnUrl": "1fa9277e57f949fd71f9d4663a55b598958c0d99d26ece2c58e41f6b30f08a5c",
+   "jpUrl": "2b4e693fe9b3389834235a951d3a1e57ee3b4b9b22b6c3dd8d84e0fdc09fb2b9",
+   "enUrl": "0ca28d1e0bc6a570906bd59ec347eaae537a73d52a34d0bcca24fac02dcc83ac",
+   "krUrl": "77c0e589fddefe83cf24abd035fb8ab3faef29b311d6908f6dc7e52394a76660"
+  },
+  {
+   "id": 9,
+   "title": "Wissen",
+   "text": "In letzter Zeit haben mich viele Kinder gefragt, wie man Hauptmann wird ... *seufz* Um ehrlich zu sein, ist der beste Rat, den ich geben kann, weiter zu trainieren und sich ausgewogen zu ernähren.",
+   "unlockRequirement": "",
+   "cnUrl": "14307587afdbe94c1882b85a5b843b0165aa90af1f223194bf66f820e7d760c3",
+   "jpUrl": "3f3fec8f3c9d838952b4770e4f1bb4f6239b4344496a500ecbb040d772407270",
+   "enUrl": "0c6bdf0d7efde09736f4a5f68a769596da60bcefaecdbbdf8d706d91a883edce",
+   "krUrl": "f75f8c9f5a57d982889da158c5f6296f41ac13a817999d0fd466ac4475dedcdb"
+  },
+  {
+   "id": 10,
+   "title": "Über Bronya",
+   "text": "Frau Bronya hat sich mit uns tief in die gefährlichsten Regionen der Front gewagt – und zwar viele Male.",
+   "unlockRequirement": "",
+   "cnUrl": "9afdee6bf476100dbffa88b713d5452f9964acec9a5ec82263d634621ff620a0",
+   "jpUrl": "d8d1cdf8e559c4184b1528284fd0377b0c8ffaa4b015a76e58161b9b7411864a",
+   "enUrl": "0c83d5b73c6362de215164be49d67867bfb34c7b1e91ae5c22de860992eeb4ef",
+   "krUrl": "0dbeef7826cc940d561f1a5166a30ce98f2c80398b500e866d45191f5429d7f0"
+  },
+  {
+   "id": 11,
+   "title": "Über Serval",
+   "text": "Viele Leute scheinen gerne darüber zu reden, wie sich meine Schwester verändert hat, seit sie die Wache verlassen hat, aber in Wirklichkeit ... ist sie immer noch die gleiche Person.",
+   "unlockRequirement": "",
+   "cnUrl": "4353735c2d46857710214d05fc1772336b63702302be241b39506fb9197103b3",
+   "jpUrl": "8103fbca0770244c7d6ea1ef626850e977c77b1fdcc40edbb14dfa029bba4736",
+   "enUrl": "f73dfafd94ead3c30468a606e27388b3a1cfdb72011663e196e46713317804c4",
+   "krUrl": "6664010611ef9657032b03400409c434bbf12aca0ff8558aba6d5ac32af4b375"
+  },
+  {
+   "id": 12,
+   "title": "Über Pela",
+   "text": "Ich habe gehört, dass meine Schwester Pela gebeten hat, sich um meine Blumen zu kümmern, wenn ich weg bin ... Ich hoffe, es macht ihr nicht zu viel Arbeit.",
+   "unlockRequirement": "",
+   "cnUrl": "c85485c84c4a4404df854c2b4837f6a60abd03dee27e8b8b59a1c6ea8ad2a374",
+   "jpUrl": "48ee9f40193cbc69159c4434d8d2760bbd15a4c81359c78cfe9a28a7d5f6cf04",
+   "enUrl": "3db6e08f6f5e795d35f7f7faf3cfc4e48d7ae13385b41a65707479c3f7c1dcd7",
+   "krUrl": "244d415f29fe1f4a3644fe2bf57d17e7c6a8f6f75976b1fde0377d8a8987c906"
+  },
+  {
+   "id": 13,
+   "title": "Über Cocolia",
+   "text": "Ich war immer der festen Überzeugung, dass niemand diese Stadt besser kennt oder mehr liebt als die Oberste Wächterin.",
+   "unlockRequirement": "",
+   "cnUrl": "c318738e6b8b5b2bc9675af7974166b0f34631656ddd31060f6636e4bfc956d5",
+   "jpUrl": "c9c49f1796515332d389d9a755d515b48b41b6e7f239beceff86f7e0777411da",
+   "enUrl": "9d98191ca152189327cdcaf972f79eae927c603abd53b4bc9275ad074ca03085",
+   "krUrl": "5bc9f3f659eb244f5daded5c0574478c74838e2104713dcaf15573e50128f95d"
+  },
+  {
+   "id": 14,
+   "title": "Über Sampo",
+   "text": "Er ist sehr gerissen. Nach Aussagen einiger Bürger ist er in den Besitz alter Relikte gekommen. Die meisten hat er verkauft, den Rest benutzt er, diverse Schwindeleien zu begehen.",
+   "unlockRequirement": "",
+   "cnUrl": "8f5ee637cd2b5890d7cfa9364227a0c46f2ee7e044136e95555be538c40bd727",
+   "jpUrl": "e5490d28041fb52200abac60be2b9ddad90e13f78bca5235a192718c5a2d96e4",
+   "enUrl": "740bf5232fc24c28ffbefcc4d34e1e2b8833bdc585c41e37706e78d70fea2487",
+   "krUrl": "2f3169e56ae2e3a82ef69b84759f5e70571ca9a6b83be2444dd71263573fafa9"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Figurendetails",
+   "text": "Der ehrenwerte, rechtschaffene Hauptmann der Silbermähnen-Wachen, der den noblen Familiennamen Landau trägt.<br />In der von Frost umtosten Stadt Belobog ist weiterhin ein normales Leben möglich ...<br />Das liegt nicht zuletzt an Gepard und seinen Silbermähnen-Wachen, die den Frieden des alltäglichen Lebens wahren.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Figurenprofil: Teil I",
+   "text": "Der junge Hauptmann stand auf dem nördlichen Wall.<br /><br />Er betrachtete das blasse Ödland vor sich und beobachtete, wie die seltsamen Wesen aus dem Fragmentum in der Ferne einen wilden Schwarm bildeten. Er sah, wie die furchtlosen Silbermähnen-Wachen in Formation aufgereiht standen, um die Stadt gleich einem schützenden Wall zu bewachen.<br /><br />Das war seine ursprüngliche Position. Als er noch ein bescheidener einfacher Soldat war, hatte er geschworen, als Belobogs stärkster Schild zu dienen, und gelobt, mit seinen Kameraden zu stehen und zu sterben – selbst als Hauptmann. Dies ist kein informeller Witz der Silbermähnen-Wachen, denn Qlipoth bezeugt diesen Eid.<br /><br />Jedoch war er zu diesem Zeitpunkt nicht, wo er hätte sein sollen – und all das auf Wunsch der Obersten Wächterin.<br /><br />Was genau dachte sich die Oberste Wächterin dabei? Der junge Hauptmann konnte es sich nicht erklären. Doch zwang er sich bald, sich auf den aktuellen Konflikt zu konzentrieren.<br /><br />„Vergiss nicht, Gepard Landau:“<br />„Zweifel sind der Nährboden für Arroganz und Böses. Als Vorbild für Belobog solltest du dir nicht zu viele Gedanken machen.“<br /><br />Der junge Hauptmann stand auf dem nördlichen Wall.",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>20</nobr> freigeschaltet"
+  },
+  {
+   "title": "Figurenprofil: Teil II",
+   "text": "Nach der epischsten aller Schlachten begaben sich die wenigen überlebenden Silbermähnen-Wachen zurück nach Belobog. Zur Feier dieses hart erkämpften Sieges ordnete die Oberste Wächterin eine sofortige Parade an. Mehr als drei Tage und Nächte lang schwelgte die ganze Stadt in einer ausgelassenen Stimmung voller Gelächter und Freude. Die Feier erreichte ihren Höhepunkt mit einer Preisverleihung an die Silbermähnen-Wachen.<br /><br />Unter den wachsamen Blicken der Menge verlieh die Oberste Wächterin dem besten Soldaten eine Auszeichnung für außergewöhnliche militärische Dienste. Dieser junge Hauptmann aus noblem Hause trug seine aus Geomark geschmiedete Armrüstung, die leicht, flexibel und stark war und gleichsam eine Art Aura ausstrahlte. Das war der einzige Eindruck, den dieser Schatz ihm vermittelte.<br /><br />Das Leben wie vieler seiner Kameraden war für eine solch glorreiche Medaille eingetauscht worden? Er zwang sich, nicht daran zu denken. In diesem Moment konnte er nur die Erwartungen der Obersten Wächterin und ganz Belobogs mit einem Lächeln erfüllen – denn das ist es, was ein loyaler Soldat tun muss.<br /><br />Während der Hauptmann die Armrüstung trug, schoss plötzlich ein gleißender Lichtstrahl aus den Verbindungsstücken zwischen den Platten hervor. Die Menge brach in lange anhaltende stehende Ovationen aus.<br /><br />Niemand konnte die erschöpften Gesichter unter den Helmen dieser Silbermähnen-Wachen sehen – die Leute hielten das lediglich für einen triumphalen Sieg.",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>40</nobr> freigeschaltet"
+  },
+  {
+   "title": "Figurenprofil: Teil III",
+   "text": "Die Oberste Wächterin hatte schließlich die richtige, strategisch kluge Entscheidung getroffen.<br /><br />Nach dem Krieg konnten viele Einwohner Belobogs endlich erleichtert aufatmen und wieder zu ihrem einfachen Leben zurückkehren. Jedoch hätte sich nicht einmal der Hauptmann selbst vorstellen können, dass ihnen nach diesem vermeintlich aufkeimenden Frieden ein immer tragischerer totaler Krieg bevorstehen würde. Ohne Hilfe von außen würde dieser langwierige Krieg den Untergang ganz Belobogs einläuten.<br /><br />Genau in diesem Moment prüfte er, ob sein Schild, die Barriere, noch wie immer funktionierte. Seine Schwester hatte dieses schwere Kraftfeldgerät aus einem Instrumentenkoffer gebastelt – und wenn etwas kaputt war, musste sich der arme Hauptmann darauf verlassen, dass seine geniale Schwester das wieder hinbiegen würde.<br /><br />„Gepard, falls – und ich meine falls –“ erinnerte er sich an ihre Worte, „Falls dir die Oberste Wächterin eines Tages befiehlt, die Menschen von Belobog im Stich zu lassen, um irgendein Ziel von ihr zu erreichen ... Was würdest du tun?“<br />„Das würde sie nie wagen. Sie ist die Oberste Wächterin.“ Er war sich ganz sicher.<br />„Aber nur mal angenommen.“ Sie sah ihn an.<br />„Ich weiß nicht, warum du fragst, aber ich habe Qlipoth den Eid der Bewahrung geschworen. Ich werde Belobog und seine Menschen um jeden Preis schützen, natürlich auch mit meinem Leben.“<br />„Wenn eines Tages der Schutz der Menschen bedeuten würde, den Befehlen der Oberste Wächterin nicht zu gehorchen, und wenn mich die eine oder andere Wahl in Gefahr bringen würde, würde ich mich immer noch für Ersteres entscheiden. Denn das ist meine Aufgabe.“<br />Beide verstummten, dann lachte sie laut auf.<br />„Gepard, oh Gepard ...“<br />„Du bist wirklich ein Landau, nicht wahr?“",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>60</nobr> freigeschaltet"
+  },
+  {
+   "title": "Figurenprofil: Teil IV",
+   "text": "Der junge Hauptmann stand auf dem nördlichen Wall.<br /><br />Er betrachtete die angesehene Wächterin aus den Augenwinkeln. Er sah, wie sie erhobenen Hauptes nach unten blickte, als hätte nichts in der Stadt etwas mit ihr zu tun. Ihr Volk konnte sie nicht glücklich oder wütend, traurig oder ängstlich machen. In diesen Augen lag nur Leere.<br /><br />Was ging der Obersten Wächterin wohl durch den Kopf? Der junge Hauptmann grübelte vor sich hin, aber er fand keine Antwort.<br /><br />Das Schrillen der Dudelsäcke unter den Explosionen leitete den Sturmangriff ein, der den Schneevorhang sofort zerriss – und die mutigen Krieger in Blau reagierten auf den Appell, reckten einer nach dem anderen ihre Hellebarden in die Luft und richteten ihre Spitzen auf den Schwarm der außerirdischen Monster. Unter der Deckung des Artilleriefeuers begannen sie ihren Angriff auf Leben und Tod.<br /><br />Gepard Landau, was hast du dir nur gedacht? Der junge Hauptmann zermartert sein Gehirn.<br /><br />„Vergiss nicht, Gepard Landau.“<br />„Du wirst Belobog und seine Bewohner um jeden Preis verteidigen. Du wirst niemals die Menschen im Stich lassen, die du schützen sollst ... Bringe niemals Schande über den Namen Landau!“<br /><br />Dieses Mal hat der junge Hauptmann endlich seine Antwort gefunden<br />und schritt auf das Schlachtfeld.",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>80</nobr> freigeschaltet"
+  }
+ ],
+ "archive": {
+  "cvCn": "马洋",
+  "cvJp": "古川慎",
+  "cvKr": "민승우",
+  "cvEn": "Bryson Baugus",
+  "camp": "Belobog"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "gepard"
+}

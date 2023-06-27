@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Project Honkai Stargazer (崩壞•星穹觀星者) was
+  ~ Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
+  ~ Copyright © 2023 Xectorda 版權所有
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MuseumPage">
+
+    <include
+        layout="@layout/fragment_museum_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical"
+            android:paddingLeft="16dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:fadingEdge="horizontal|vertical"
+                android:fadingEdgeLength="15dp"
+                android:requiresFadingEdge="horizontal|vertical"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/bg_char_info_card"
+                        android:foreground="@drawable/bg_card_kwang"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_skill_round"
+                            android:gravity="center"
+                            android:text="01"
+                            android:textColor="@color/tv_nightday_tint"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:text="館區1"
+                            android:textColor="@color/tv_daynight_tint"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:text="S"
+                            android:textColor="@color/theme_color_base"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/bg_char_info_card"
+                        android:foreground="@drawable/bg_card_kwang"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_skill_round"
+                            android:gravity="center"
+                            android:text="01"
+                            android:textColor="@color/tv_nightday_tint"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:text="館區1"
+                            android:textColor="@color/tv_daynight_tint"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:text="S"
+                            android:textColor="@color/theme_color_base"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/bg_char_info_card"
+                        android:foreground="@drawable/bg_card_kwang"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_skill_round"
+                            android:gravity="center"
+                            android:text="01"
+                            android:textColor="@color/tv_nightday_tint"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:text="館區1"
+                            android:textColor="@color/tv_daynight_tint"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:text="S"
+                            android:textColor="@color/theme_color_base"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/bg_char_info_card"
+                        android:foreground="@drawable/bg_card_kwang"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_skill_round"
+                            android:gravity="center"
+                            android:text="01"
+                            android:textColor="@color/tv_nightday_tint"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:text="館區1"
+                            android:textColor="@color/tv_daynight_tint"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:text="S"
+                            android:textColor="@color/theme_color_base"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/bg_char_info_card"
+                        android:foreground="@drawable/bg_card_kwang"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_skill_round"
+                            android:gravity="center"
+                            android:text="01"
+                            android:textColor="@color/tv_nightday_tint"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:text="館區1"
+                            android:textColor="@color/tv_daynight_tint"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:text="S"
+                            android:textColor="@color/theme_color_base"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/bg_char_info_card"
+                        android:foreground="@drawable/bg_card_kwang"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_skill_round"
+                            android:gravity="center"
+                            android:text="01"
+                            android:textColor="@color/tv_nightday_tint"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:text="館區1"
+                            android:textColor="@color/tv_daynight_tint"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:text="S"
+                            android:textColor="@color/theme_color_base"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_char_info_card"
+                android:foreground="@drawable/bg_card_kwang"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/textView67"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableTint="@color/theme_color_base"
+                    android:text="額外經營目標"
+                    android:textColor="@color/tv_daynight_tint"
+                    android:textSize="16sp"
+                    app:drawableLeftCompat="@drawable/round_insert_drive_file_24" />
+
+                <TextView
+                    android:id="@+id/textView68"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="你今次要做咩嘢？估下先陣間揭曉呀"
+                    android:textColor="@color/tv_daynight_tint"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@color/tv_daynight_tint_semi"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/fragment_museum_part_preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="開始經營" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

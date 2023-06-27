@@ -1,0 +1,2357 @@
+{
+ "name": "Serval",
+ "spRequirement": 100,
+ "rarity": 4,
+ "descHash": "Eine Belobog-Mechanikerin, die früher als Forscherin für die Technologieabteilung der Architekten tätig war. Gepard Landau und seine ältere Schwester könnten unterschiedlicher nicht sein. Sie ist ein Fan einer uralten Musikrichtung namens „Rock ’n’ Roll“, die vor dem Ewigen Frost populär war.",
+ "iconPath": "cad9de5e9d91532ac990da88a1994b2ff107a184744f4eb372131aa2b694e773",
+ "bgPath": "2cb545b2ca6365924583989cb65847893805af217ce995b9aa6aeb4d60e92b3f",
+ "figPath": "e21a40cd78d877fa3d594d458f7bfbf7b779ec1b615cf5476f1b60e89e7d4b35",
+ "fgPath": "1ca4e00ac8af08cc8917a0675c6d40a2c878241e906805ebbd30a13e3d1d0cf9",
+ "artPath": "312d2f50d5a3dea5056b3acb74ce0ecb862907bbe213551d59d08c66f3db9041",
+ "miniIconPath": "af2dda50f7907c178345610d7b71de325aa634a392f2856ec630f52954ad6724",
+ "splashIconPath": "6652458b2ea6d17607863873a3508ca06e43101557c1c7faad5f29b20b16a3be",
+ "damageType": {
+  "id": 8,
+  "iconPath": "e8e459ad283c3df43713b2d13203b3dc8c636150d0c536f38e2ad62bd72b6e83",
+  "color": "#8872F1",
+  "name": "Blitz",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "b9e59719a64e109bbcf97e61c2cf3c99730af37cbd230758a45d291825dbd941",
+  "altIconPath": "2711d1f5592aee2297cc8ef3a82ed4e7b6958efe02a2a79f7ea3e97246ec9837",
+  "color": "#FFFFFF",
+  "name": "Die Gelehrsamkeit",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 3,
+  "iconPath": "312ed1eeb6d329b90b5506b23fd487883f83124ccabedaf6cfafbb913d86c74c",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Credit",
+   "desc": "Diese Währung, die von der Interastrale Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
+   "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
+   "purpose": "Gemeinsame Währung",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Blütenkelch (Große Mine)",
+    "Missionsbelohnungen",
+    "Auftragsbelohnungen"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "Spuren des Schicksals",
+   "desc": "Fortschrittliches Material zum Hochstufen von Spuren.",
+   "lore": "Unzählige Fehlschläge sicherten deinen Sieg und deine kleinen Schritte führten dich an den Wendepunkt des Schicksals.",
+   "purpose": "Spurenmaterial",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Punktebelohnungen in der Universum-Simulation",
+    "Namenlose Ehre",
+    "Glut-Tausch",
+    "Belohnungen für zeitlich begrenzte Aktionen"
+   ]
+  },
+  "151160": {
+   "id": 151160,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "f4e0301b109ba0ab0b633a7186df88a0fa0be8a70edf33c88539672e514bbc8c",
+   "name": "Blitzkrone der vergangenen Schatten",
+   "desc": "Kopfbedeckung des Wächterschattens. Material zum Aufstieg der Figuren mit Blitz-Typ.",
+   "lore": "Ein Accessoire, das der Schatten eines früheren Wächters zurückließ und das von der Immerwinterstadt erzählt.<br /><br />„Svetlana die Hartherzige – ihr Zorn war schrecklich wie der Donner und ihre Rache kam so schnell wie der Blitz.“",
+   "purpose": "Material zum Figurenaufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/151160",
+   "comeFrom": [
+    "Ruhender Schatten (Korridor der verhallenden Echos)",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "Lamento der Wächterin",
+   "desc": "Fortgeschrittenes Material zum Hochstufen von Spuren.",
+   "lore": "Nicht nur die Maske ist beschädigt, auch der Wunsch der Wächterin, die sie trug, wurde verzerrt.<br />Sie wollte ihrem Volk zur Flucht vor dem Immerwinter verhelfen, aber wurde schließlich zu einer Marionette höherer Mächte.<br /><br />„Der Titel der Obersten Wächterin wurde auf Belobog über viele Generationen vererbt. Niemand hat je daran gedacht, dass auch die Wächter selbst Fürsorge und Schutz brauchen.“",
+   "purpose": "Spurenmaterial",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "Echo des Krieges (Immerwinterhügel)"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "Reiseführer",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>20.000</nobr> Figuren-EP.",
+   "lore": "Pflichtlektüre für Weltreisende. Auf Knopfdruck beginnt eine angenehme Stimme in der Sprache des Lesers von den legendären Erlebnissen berühmter Abenteurer auf diversen Planeten zu erzählen und ihr gesammeltes Wissen zusammenzufassen.<br /><br />„Die brandneue Reiseführer-Reihe ‚Das Handbuch für die galaktische Küche‘ ist jetzt erhältlich.“<br />„Einsendungen bitte per Telepathie über Synästhesie-Leuchtfeuer ERD<nobr>-23</nobr>θ an das Team der Intelligenzia-Gilde. Flexible Zahlungsoptionen.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Vergessene Halle"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "Abenteuer-Log",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>5.000</nobr> Figuren-EP.",
+   "lore": "Eine säuberlich organisierte Sammlung lehrreicher Notizen mit unzähligen Illustrationen und Texten, die diverse Abenteuer vom Anfang bis zum Ende beschreiben, sowie wertvollen Tipps und Überlebenstechniken.<br /><br />„Warum werden die Daten nicht in einer Foto-CD gespeichert? Wäre doch viel praktischer.“<br />„Moderne Technologie ist angesichts von Sternenstürmen und Neuronenfluss-Eruptionen viel empfindlicher, als man denkt. Außerdem hätte der Autor des Buchs sicher gewollt, dass man es auf die einfachste Art liest.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Tägliches Training"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "Reisebegegnungen",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>1.000</nobr> Figuren-EP.",
+   "lore": "Ein unleserlich von Hand geschriebenes Reisetagebuch mit wirren Inhalten. Es nützt dir wenig.<br /><br />„Dan Heng, lies das endlich fertig, damit es in den Müll kann.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Auftragsbelohnungen"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "2901efa774991b0ce2037520ce85ff99af64f37ee6364ffda560278736df6a19",
+   "name": "Anstecker der Silbermähnen-Wache",
+   "desc": "Anstecker einer Silbermähnen-Wache. Ein Rohmaterial zur Verstärkung.",
+   "lore": "Ein Veteran trägt viele Narben aus dem Kampf mit sich.<br /><br />„Früher gab es für Silbermähnen-Wachen nur eine Möglichkeit des Ruhestands: den Tod.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "Äußere Schneewüste: Silbermähnen-Wachen oder andere Gegner",
+    "Korridor der verhallenden Echos: Immerwinter-Schattenwandler oder andere Gegner",
+    "Universum-Simulation-Gegner",
+    "Auftragsbelohnungen",
+    "Glut-Tausch",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "042dc7973ef7c36858a4aa58ef7d32335f528b3c4bc4f0c4ce2e7f401039a7c5",
+   "name": "Insignien der Silbermähnen-Wache",
+   "desc": "Insignien eines Hauptmannes der Silbermähnen-Wachen. Ein normales Material zur Verstärkung.",
+   "lore": "Vielleicht sind sie ein Beweis deiner Heldentaten, mit dem du vor deiner Familie angeben kannst. Vielleicht sind sie ein Glücksbringer, die eine tödliche Kugel ablenken.<br /><br />„Die Zeiten haben sich geändert.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "Äußere Schneewüste: Silbermähnen-Wachen (Balance-Stufe 2+) oder andere Gegner",
+    "Korridor der verhallenden Echos: Immerwinter-Schattenwandler (Balance-Stufe 2+) oder andere Gegner",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "635675": {
+   "id": 635675,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a11149500124597e50362c7c3cd94c209d1a1b48d77ce9f7dfdfac64d8840ef3",
+   "name": "Schlüssel der Inspiration",
+   "desc": "Ein mythischer Schlüssel aus den Händen der Meditierenden Gelehrten, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Gelehrsamkeit</span> ein wenig hochgestuft werden können.",
+   "lore": "Kann tief im Bewusstsein verborgene Erkenntnisse erschließen.<br />Wer diesen Schlüssel erlangt, besitzt damit die Glut, die den weiteren Weg erhellt.<br /><br />„Heureka!“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/635675",
+   "comeFrom": [
+    "Blütenkelch (Nietstadt)"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "name": "Orden der Silbermähnen-Wache",
+   "desc": "Tapferkeitsmedaille einer besonders verdienstvollen Silbermähnen-Wache. Ein fortschrittliches Material zur Verstärkung.",
+   "lore": "Eine Tapferkeitsmedaille, die diejenigen erhalten, die gegen Kluftwesen, Untergrundbewohner und plötzliche Katastrophen ankämpfen.<br />Sie wird normalerweise nicht an der Brust getragen, sondern als Grabbeigabe verliehen.<br /><br />„Vergiss nicht, junger Gepard. Das ist kein Spielzeug, sondern Blut und Schicksal der Familie Landau.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "Äußere Schneewüste: Silbermähnen-Wachen (Balance-Stufe 4+) oder andere Gegner",
+    "Korridor der verhallenden Echos: Immerwinter-Schattenwandler (Balance-Stufe 4+) oder andere Gegner",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "836261": {
+   "id": 836261,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "name": "Schlüssel der Weisheit",
+   "desc": "Ein mythischer Schlüssel aus den Händen der größten Ausnahmetalente der Galaxie, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Gelehrsamkeit</span> stark hochgestuft werden können.",
+   "lore": "Gilt als Beweis für eine Einladung in den Nous-Tempel.<br />An den Schlüssel zu gelangen ist nicht halb so schwierig wie die Tür zu finden, zu der er gehört. Wer durch die heiligen Pforten tritt, erkennt sofort, dass es kein Zurück gibt, wenn man erst einen Fuß auf die andere Seite gesetzt hat.<br /><br />„Wissen gibt uns nicht alle Antworten im Universum, aber es befähigt uns dazu, die richtigen Fragen zu stellen.“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/836261",
+   "comeFrom": [
+    "Blütenkelch (Nietstadt)",
+    "Omni-Synthesemaschine – Materialsynthese"
+   ]
+  },
+  "920202": {
+   "id": 920202,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "974e6b2e34ddd65a7b7edc1e2edd1b85ffbf62d63b7318313e7f387747d83f4f",
+   "name": "Schlüssel des Wissens",
+   "desc": "Ein mythischer Schlüssel aus den Händen der Weisen der Welten, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Gelehrsamkeit</span> mäßig hochgestuft werden können.",
+   "lore": "Kann die Mysterien erschließen, in denen die Wahrheit der Welt gebunden ist, und Wissen jenseits der menschlichen Vorstellungskraft gewähren.<br />Der Besitz dieses Schlüssels kann nicht bewiesen werden, indem man ihn anderen zeigt, denn seine physische Gestalt ist nur für den Besitzer sichtbar. Daher gilt der Schlüssel manchen als Geschenk des Himmels und anderen als Symptom einer psychischen Störung.<br /><br />„Ich träumte von Molekülen, ineinander verschlungen wie eine Schlange, die sich in den Schwanz beißt. Als ich aufwachte, erkannte ich, dass dies die Antwort war, nach der ich so lange gesucht hatte!“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/920202",
+   "comeFrom": [
+    "Blütenkelch (Nietstadt)",
+    "Omni-Synthesemaschine – Materialsynthese"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549407,
+     "count": 4
+    }
+   ],
+   "attackBase": 88.8,
+   "attackAdd": 4.44,
+   "hpBase": 124.8,
+   "hpAdd": 6.24,
+   "defenseBase": 51,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549407,
+     "count": 8
+    }
+   ],
+   "attackBase": 124.32,
+   "attackAdd": 4.44,
+   "hpBase": 174.72,
+   "hpAdd": 6.24,
+   "defenseBase": 71.4,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633348,
+     "count": 5
+    },
+    {
+     "id": 151160,
+     "count": 2
+    }
+   ],
+   "attackBase": 159.84,
+   "attackAdd": 4.44,
+   "hpBase": 224.64,
+   "hpAdd": 6.24,
+   "defenseBase": 91.8,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633348,
+     "count": 8
+    },
+    {
+     "id": 151160,
+     "count": 5
+    }
+   ],
+   "attackBase": 195.36,
+   "attackAdd": 4.44,
+   "hpBase": 274.56,
+   "hpAdd": 6.24,
+   "defenseBase": 112.2,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717289,
+     "count": 5
+    },
+    {
+     "id": 151160,
+     "count": 15
+    }
+   ],
+   "attackBase": 230.88,
+   "attackAdd": 4.44,
+   "hpBase": 324.48,
+   "hpAdd": 6.24,
+   "defenseBase": 132.6,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717289,
+     "count": 7
+    },
+    {
+     "id": 151160,
+     "count": 28
+    }
+   ],
+   "attackBase": 266.4,
+   "attackAdd": 4.44,
+   "hpBase": 374.4,
+   "hpAdd": 6.24,
+   "defenseBase": 153,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 301.92,
+   "attackAdd": 4.44,
+   "hpBase": 424.32,
+   "hpAdd": 6.24,
+   "defenseBase": 173.4,
+   "defenseAdd": 2.55,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 104,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "8440734acd6fe752374cc16bf385bcb9db2944020aeba129738b197ff8f45b0f",
+   "name": "Kraftvoll und durchschlagend",
+   "descHash": "Der Standardangriff fügt einem zufälligen angrenzenden Gegner Blitz-SCH in Höhe von <nobr>#1[i]%</nobr> des Standardangriff-SCH von Serval zu.",
+   "params": [
+    0.6
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "3d57fe0c1e54141a1cba420dd0f9394568dddb4252e7142db1dc7f5864018260",
+   "name": "Zugabe!",
+   "descHash": "Jedes Mal, wenn ihr Talent zusätzlichen SCH verursacht, erhält Serval <nobr>#1[i]</nobr> Pkt. Energie zurück.",
+   "params": [
+    4
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "28ef5c642307a6c75d346f8f1bb56f468357590d3d379e78c971d643b5db62d4",
+   "name": "Dem Herzschlag der Zahnräder lauschen",
+   "descHash": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis zu max. St. <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "a77d235e80ca9f5af9f8844ef12f7d49fd0aa96346a6945cc62d5ba32fa1bf09",
+   "name": "Etwas Lärm, bitte!",
+   "descHash": "Beim Einsatz des Ultimates besteht eine Grundchance von <nobr>#1[i]%</nobr>, bei nicht geschockten Gegnern Schock zu verursachen. Dieser Effekt ist derselbe wie bei der Fertigkeit.",
+   "params": [
+    1
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "45076347a90d01726de9f1c0799be7e686204c7657948c9b93f8b78e6c2e2682",
+   "name": "Belobogs lautestes Dröhnen!",
+   "descHash": "Ultimate-Stufe +2 bis zu max. St. <nobr>15</nobr>. Talentstufe +2 bis zu max. St. <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "5f3fe241a2fa2dd9f619b8e3a76de6f988cdc5476905fe691fcb86c1d79dbb15",
+   "name": "Dieses Lied hallt durch den Himmel!",
+   "descHash": "Serval fügt geschockten Gegnern <nobr>#1[i]%</nobr> mehr SCH zu.",
+   "params": [
+    0.3
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   960674
+  ],
+  [
+   876733
+  ],
+  [
+   792792
+  ],
+  [
+   676147
+  ],
+  [
+   391620
+  ]
+ ],
+ "skills": [
+  {
+   "id": 960674,
+   "name": "Grollender Donner",
+   "tagHash": "Einzelangriff",
+   "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Servals ANG zu.",
+   "typeDescHash": "Standardangriff",
+   "iconPath": "ac5258010ed190458bb9c1c37d5128ba6c2a6eb3efb0a3a9da0d9e5f26b68322",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635675,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920202,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920202,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836261,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836261,
+       "count": 6
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 876733,
+   "name": "Heller Blitz",
+   "tagHash": "Ausdehnung",
+   "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Servals ANG zu und fügt angrenzenden Zielen <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span> von Servals ANG zu. Verursacht außerdem bei den getroffenen Gegnern mit einer <u>Grundchance</u> von <nobr>#3[i]%</nobr> für <nobr>#4[i]</nobr> Rd. Schock.<br />Geschockte Gegner erleiden zu Beginn jeder Runde <span style=\"color:#c75de2;\">Blitz</span>-DoT in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#5[i]%</nobr></span> von Servals ANG.",
+   "typeDescHash": "Fertigkeit",
+   "iconPath": "ea52b05156394a61f635af9817c75f6b9e1733fa754dc27163e6a6716fbfadff",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.7,
+      0.3,
+      0.8,
+      2,
+      0.4
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.77,
+      0.33,
+      0.8,
+      2,
+      0.44
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549407,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.84,
+      0.36,
+      0.8,
+      2,
+      0.48
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635675,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.91,
+      0.39,
+      0.8,
+      2,
+      0.52
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920202,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.98,
+      0.42,
+      0.8,
+      2,
+      0.56
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920202,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.05,
+      0.45,
+      0.8,
+      2,
+      0.62
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920202,
+       "count": 6
+      },
+      {
+       "id": 633348,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1375,
+      0.4875,
+      0.8,
+      2,
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836261,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.225,
+      0.525,
+      0.8,
+      2,
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836261,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3125,
+      0.5625,
+      0.8,
+      2,
+      0.92
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836261,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.4,
+      0.6,
+      0.8,
+      2,
+      1.04
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836261,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.47,
+      0.63,
+      0.8,
+      2,
+      1.092
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.54,
+      0.66,
+      0.8,
+      2,
+      1.144
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.61,
+      0.69,
+      0.8,
+      2,
+      1.196
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.68,
+      0.72,
+      0.8,
+      2,
+      1.248
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.75,
+      0.75,
+      0.8,
+      2,
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 792792,
+   "name": "Hier kommt das mechanische Fieber",
+   "tagHash": "Flächenangriff",
+   "descHash": "Fügt allen Gegnern <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Servals ANG zu. Verlängert die Dauer von Schock von Gegnern um <nobr>#2[i]</nobr> Rd.",
+   "typeDescHash": "Ultimate",
+   "iconPath": "6b736e3bfb758c60e27cba052ead108e46547bdf702bf535b6c261a4de51b6c2",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1.08,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.152,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549407,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.224,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635675,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.296,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920202,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.368,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920202,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.44,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920202,
+       "count": 6
+      },
+      {
+       "id": 633348,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.53,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836261,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.62,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836261,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.71,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836261,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.8,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836261,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.872,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.944,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      2.016,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      2.088,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      2.16,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 100
+  },
+  {
+   "id": 676147,
+   "name": "Galvanische Bänder",
+   "tagHash": "Verstärkung",
+   "descHash": "Fügt nach dem Angriff allen geschockten Gegnern <u>zusätzlichen</u> <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Servals ANG zu.",
+   "typeDescHash": "Talent",
+   "iconPath": "ad1f83f964426251ce3c032372f0a49ef6d88115a783d56402ed9cc724727172",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.396
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549407,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.432
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635675,
+       "count": 2
+      },
+      {
+       "id": 549407,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.468
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920202,
+       "count": 2
+      },
+      {
+       "id": 633348,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.504
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920202,
+       "count": 4
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.54
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920202,
+       "count": 6
+      },
+      {
+       "id": 633348,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.585
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836261,
+       "count": 2
+      },
+      {
+       "id": 717289,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.63
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836261,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.675
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836261,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836261,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.756
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.792
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.828
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.864
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 475561,
+   "name": "Angriff",
+   "tagHash": "",
+   "descHash": "Greift den Gegner an und schwächt nach Kampfeintritt den Widerstand des Ziels gegen den entsprechenden Typ.",
+   "typeDescHash": "",
+   "iconPath": "ac5258010ed190458bb9c1c37d5128ba6c2a6eb3efb0a3a9da0d9e5f26b68322",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 391620,
+   "name": "Gute Nacht, Belobog",
+   "tagHash": "",
+   "descHash": "Greift den Gegner unmittelbar an. Fügt nach Kampfeintritt einem zufälligen Gegner <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <nobr>#4[i]%</nobr> von Servals ANG zu. Verursacht gleichzeitig bei allen Gegner mit einer <u>Grundchance</u> von <nobr>#1[i]%</nobr> für <nobr>#3[i]</nobr> Rd. Schock.<br />Geschockte Gegner erleiden zu Beginn jeder Runde <span style=\"color:#c75de2;\">Blitz</span>-DoT in Höhe von <nobr>#2[i]%</nobr> von Servals ANG.",
+   "typeDescHash": "Technik",
+   "iconPath": "494c5bbe1ca913be4529699e98885e3dfee35073fa93579dcab4f4795f669497",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1,
+      0.5,
+      3,
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1103101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1103202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1103203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 597976,
+        "name": "KRIT-Rate-Verstärkung",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+        "statusList": [
+         {
+          "key": "KRIT-Rate",
+          "value": 0.026999999
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920202,
+          "count": 2
+         },
+         {
+          "id": 633348,
+          "count": 2
+         }
+        ]
+       }
+      },
+      {
+       "id": 1103204,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 597973,
+        "name": "Effekt-WDS-Verstärkung",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+        "statusList": [
+         {
+          "key": "Effekt-WDS",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920202,
+          "count": 2
+         },
+         {
+          "id": 633348,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 597975,
+      "name": "Effekt-Trefferrate-Verstärkung",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+      "statusList": [
+       {
+        "key": "Effekt-Trefferrate",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635675,
+        "count": 2
+       },
+       {
+        "id": 549407,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 597879,
+    "name": "Rock ’n’ Roll",
+    "descHash": "Erhöht die Grundchance, dass die Fertigkeit bei Gegnern Schock verursacht, um <nobr>#1[i]%</nobr>.",
+    "iconPath": "e4252bc396051881a6f371a03a91a8da9ac8590dbc5ef3613e71b82690425000",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.2
+      ],
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635675,
+        "count": 2
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1103102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1103205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1103206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 597971,
+        "name": "Effekt-Trefferrate-Verstärkung",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+        "statusList": [
+         {
+          "key": "Effekt-Trefferrate",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836261,
+          "count": 2
+         },
+         {
+          "id": 717289,
+          "count": 2
+         }
+        ]
+       }
+      },
+      {
+       "id": 1103207,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 597972,
+        "name": "KRIT-Rate-Verstärkung",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+        "statusList": [
+         {
+          "key": "KRIT-Rate",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836261,
+          "count": 2
+         },
+         {
+          "id": 717289,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 597974,
+      "name": "KRIT-Rate-Verstärkung",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+      "statusList": [
+       {
+        "key": "KRIT-Rate",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920202,
+        "count": 4
+       },
+       {
+        "id": 633348,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 597882,
+    "name": "Schwingen der Saiten",
+    "descHash": "Stellt zu Beginn des Kampfes unmittelbar <nobr>#1[i]</nobr> Pkt. Energie wieder her.",
+    "iconPath": "8762f5a57eca7307f80ff74f7788bf2028e79f6a211fa06befded6b7aca33728",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       15
+      ],
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920202,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1103103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1103208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 597985,
+      "name": "Effekt-WDS-Verstärkung",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+      "statusList": [
+       {
+        "key": "Effekt-WDS",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836261,
+        "count": 6
+       },
+       {
+        "id": 717289,
+        "count": 6
+       }
+      ]
+     }
+    },
+    {
+     "id": 1103209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 597986,
+      "name": "Effekt-Trefferrate-Verstärkung",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+      "statusList": [
+       {
+        "key": "Effekt-Trefferrate",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836261,
+        "count": 6
+       },
+       {
+        "id": 717289,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 597881,
+    "name": "Manie",
+    "descHash": "Erhöht den ANG für <nobr>#2[i]</nobr> Rd. um <nobr>#1[i]%</nobr>, wenn ein Gegner besiegt wird.",
+    "iconPath": "951244654bfaa0be6799ff34021ff54bcc9f6d5a329cf3de55748b48a2cd21a5",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.2,
+       2
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836261,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1103201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 597978,
+    "name": "KRIT-Rate-Verstärkung",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+    "statusList": [
+     {
+      "key": "KRIT-Rate",
+      "value": 0.026999999
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549407,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1103210,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 514036,
+    "name": "KRIT-Rate-Verstärkung",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+    "statusList": [
+     {
+      "key": "KRIT-Rate",
+      "value": 0.053
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 128000
+     },
+     {
+      "id": 836261,
+      "count": 6
+     },
+     {
+      "id": 717289,
+      "count": 6
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Körper",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "KRIT-Rate",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "Füße",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "GES",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+   },
+   {
+    "relicTypeHash": "Planarsphäre",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "Blitz-SCH-Erhöhung",
+    "propertyIconPath": "6acd635b37377d308961b26cf64a7a0ceed4e922bdf0427b620249351796ecd4"
+   },
+   {
+    "relicTypeHash": "Verbindungsseil",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "Brucheffekt",
+    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Erstes Treffen",
+   "text": "Hallo Trailblazer, mein Name ist Serval Landau, ich bin eine Belobog-Mechanikerin. Natürlich mache ich das nur nebenbei – Rock ’n’ Roll ist mein Hauptberuf.",
+   "unlockRequirement": "",
+   "cnUrl": "d0dd14afe8a71235f947ee2046e73ccf9b3b173a84aa684bc63e907cc653e894",
+   "jpUrl": "ae685f8158d9a3072a6702782fb5a42beed458cdf97466cda845c77a73f4ab96",
+   "enUrl": "1053f064d3e72b532b2d4431cbe24fe8f6d3c2ec1a1350b02da86ee6c3527eb6",
+   "krUrl": "9a7109409b96e402e40729d8d5460d821aea73ed5dc05652981cffc9b55eb18f"
+  },
+  {
+   "id": 2,
+   "title": "Begrüßung",
+   "text": "Hm? Du fängst so früh an zu arbeiten?",
+   "unlockRequirement": "",
+   "cnUrl": "0f08738f8f491d30e55b72d8716ae3247046344b39368b68e37b53fc32b46cb9",
+   "jpUrl": "0a4d49e74807f38bed9bf6fc89d6cfb4386b9bdb767d5be64d586ad91ccbfff4",
+   "enUrl": "13bd2b875763f39c6dec804f2b6ad8bcddd92394f8156ebcbc9ebb5d181d1921",
+   "krUrl": "bd29efef0b1c1b5ed91d38e68e1f69d72e156bd1021e584dc6fb65e4f35f7d80"
+  },
+  {
+   "id": 3,
+   "title": "Abschied",
+   "text": "Ich melde mich jetzt ab! Es ist Zeit, mit dem Komponieren anzufangen.",
+   "unlockRequirement": "",
+   "cnUrl": "abda7f498bd1881da60301873b353321eb91aa4978063ef839784e513a97c845",
+   "jpUrl": "97fabf527b31f19193099a49ecd1f718595b48336ce13324b217b1c07cfbbffe",
+   "enUrl": "26274fe439158d099e54a697d0cb36890c84739bcef78a895f70ec24578f641d",
+   "krUrl": "457afadde5d40d792e663e3d5580e10e7852d735a07c6edd99221634bb86ef00"
+  },
+  {
+   "id": 4,
+   "title": "Über sich selbst: Landau",
+   "text": "Wenn wir Landaus eines gemeinsam haben, dann ist es, dass wir alle auf unsere eigene Art stur sind.",
+   "unlockRequirement": "",
+   "cnUrl": "c49549dbe997ba3720c004af59fdf42c234974b0a0b340f0578d38ccb51023f2",
+   "jpUrl": "e3758957c301ca8d6dfb620df57e08aacea0208f3c198fad9c388f51ee32b8a3",
+   "enUrl": "36752c3bfdf79a925ecb0072f6bdbbcb8698caa9b482234e8f34c7a8ab425b5c",
+   "krUrl": "4eae04558fef582c9792accfe034e46aba252fc4c5f6d65c3e68c74dc30bc3c8"
+  },
+  {
+   "id": 5,
+   "title": "Plaudern: Über die Arbeit als Mechanikerin",
+   "text": "Wenn du nicht willst, dass du einen Burnout bekommst oder deine Kreativität unterdrückst, dann setze dich bei der Arbeit nicht zu sehr unter Druck.",
+   "unlockRequirement": "",
+   "cnUrl": "0da669b15b9f1cd2685947b8fcf881309d4a507f2ad4e09b00e75537277c44c9",
+   "jpUrl": "9a1bbb1d92e7ede6b5aa2a8e6d6f79974a25662b7aa55e04053f3a6437b880c9",
+   "enUrl": "bd8906c62d186b1e49456325c974f8d2d7fe1a5168d298b590fd8cf5a0b6f7e7",
+   "krUrl": "e56e06569a792fc629d91a035920efc56be5b0d6aa9c6c0f6de3f5dacc96185c"
+  },
+  {
+   "id": 6,
+   "title": "Plaudern: Band",
+   "text": "Pela hat viel um die Ohren. Manchmal arbeitet sie auch noch ehrenamtlich an den Wochenenden, deshalb legen wir die Proben des Mechanischen Fiebers meist auf die Nacht.",
+   "unlockRequirement": "",
+   "cnUrl": "b98b8a21e6072dc0102c39dd3e12f5dca6dcf8bae54583bbb5076a322f530e08",
+   "jpUrl": "8ce1ef5a410350ae2e2379ca93eee40f637ba8f9857728aaefdd84125ad2ce6e",
+   "enUrl": "2037446aa6055585b7c818d93f81b924a2fbc10baec981541b965f69447b9ab9",
+   "krUrl": "b141cb796ba3fb392d5e13a2870dc41898d148f32087f4b090204444d6215c6d"
+  },
+  {
+   "id": 7,
+   "title": "Hobbys",
+   "text": "Da ich hauptberuflich Rock ’n’ Roll mache, würde ich sagen, mein Beruf ist ... mein Hobby? Ist da was falsch dran?",
+   "unlockRequirement": "",
+   "cnUrl": "cf4517d29d2d858456ad440a3de893953e10ac860b238038ca82f51030518e55",
+   "jpUrl": "2c67548cffd502852a231f4f30f31056183c09b8ae970708339dda8c4db404c5",
+   "enUrl": "253480ad36ca8193a55d3c63e81b45ef532ffbc9ebba374ef0f1d9263a314861",
+   "krUrl": "a2dbd3eabc83167fa8e9e9adf8eb94757a90bbec9bb17d7889833cee5a42f9db"
+  },
+  {
+   "id": 8,
+   "title": "Ärgernisse",
+   "text": "Ich werde immer wieder gefragt, wie ich mit meiner Werkstatt Geld verdiene, ohne Geschäfte zu machen. Die Antwort liegt doch auf der Hand: Ich verdiene kein Geld damit!",
+   "unlockRequirement": "",
+   "cnUrl": "3888d94784a90c1b159e7c06d1018171631a21e73ecfd9ccebca950a49c42763",
+   "jpUrl": "c5f7627c4be5da9f8e27fea3e0be93fea5a2c5e2f9f850e617dc7b4a3ee00e0e",
+   "enUrl": "792a3776f10e928cd4a5b89bcf1e334fbafb57254db6cfa34268f005c929b636",
+   "krUrl": "f2153a1a83b4c176f798a3a4f54badddf90fe156747b8f42abd6d2f882cec275"
+  },
+  {
+   "id": 9,
+   "title": "Etwas Mitteilenswertes",
+   "text": "Mechanik, Forschung und Musik sind alles Dinge, in denen ich ziemlich gut bin, findest du nicht? Aber ich schätze, Geld verdienen steht nicht auf der Liste ...",
+   "unlockRequirement": "",
+   "cnUrl": "cc7dcf1a08ba3739db036b4d42a2195a9504291a884eb17305990c6ff41f413c",
+   "jpUrl": "bb09950c65a85455c48d46733a1516a35eeb2595954ec4f72d6e159eb8a55f43",
+   "enUrl": "b1ab3cd349243f99fa36aac675d0ab511f747dda626ecbdcadaedb73a8792fbf",
+   "krUrl": "3ae53a95db67cc63e03f2f2e76e0c4b56ee920d0ab12f489361a4f6445771b21"
+  },
+  {
+   "id": 10,
+   "title": "Wissen",
+   "text": "Glaubst du, Bronya lässt mich im Goldenen Theater auftreten, wenn sie die Obersten Wächterin wird? Ich werde die Bühnenshow der Obersten Wächterin neu arrangieren und ein Rock-’n’-Roll-Musical daraus machen!",
+   "unlockRequirement": "",
+   "cnUrl": "fae97bcbe0a632c6934b80227929a6c4547391353321d1c0f0ed1c03e3e28709",
+   "jpUrl": "7774c33d8ce0ed5509d65ea5cb70fdb65b187c746e862dbbabdf183e162b82bd",
+   "enUrl": "1b0d05111d8ad0a76d1b7272d433316ca81f6be4eb29eaa50acea29d639a8165",
+   "krUrl": "8af49728bc8ee1991c9fa36d8cc614c2f2ac55f627b3e1e15ed1d0ce5bdcc763"
+  },
+  {
+   "id": 11,
+   "title": "Über Gepard",
+   "text": "Wenn er sich mehr um seine Angelegenheiten kümmern würde, würde mir das eine Menge Kopfzerbrechen ersparen ... Ich glaube aber, ich bereite ihm auch ein paar Kopfschmerzen ... Vielleicht sind wir ja quitt.",
+   "unlockRequirement": "",
+   "cnUrl": "dff755f9f7c57872eeee04e6bfe96f3e2b8a63c562d10c7230c0c2067b48517d",
+   "jpUrl": "a17aa6baecf6a336868b00c0fbc29da3dd0b5b28b80f8f156ecfdca436bd47e3",
+   "enUrl": "aa91989df97e5a50a247ce7121829e28423c04756ac1dc2d32a0706a9945359d",
+   "krUrl": "cd9dad67f4ae39bba263159b55e3c41ffe98e5791edc418734b7f0f402ba3042"
+  },
+  {
+   "id": 12,
+   "title": "Über Pela",
+   "text": "Sie ist eine tolle Schlagzeugerin und eine großartige Reporterin. Nenn mir ein zuverlässigeres Mädchen. Ich warte.",
+   "unlockRequirement": "",
+   "cnUrl": "3e2459b9ee5b754e06822b43894623634ff0cd796800eb6bbc6eb3164d5d6fc4",
+   "jpUrl": "5cc3c3c029b90a8ce2a62dd88f960890bd427a06107a5f045712bf5f82be72ca",
+   "enUrl": "29439049e2dcb8a997d45c84c70e737b56455c4decc75ce6ffe7204dfe0b7c41",
+   "krUrl": "38e099d84e797c9d329d33516488d242b1b9b462922c5a823199d7994fe6e6a7"
+  },
+  {
+   "id": 13,
+   "title": "Über Bronya",
+   "text": "Bronya ist ein gutes Kind – man merkt, dass sie viel von Cocolia gelernt hat. *seufz* Es ist schon eine Weile her, dass wir uns das letzte Mal gesehen haben. Ich vermisse sie.",
+   "unlockRequirement": "",
+   "cnUrl": "68a9625234cb52d2fbfab17572805b47c167dfa270a39f3d127624709fdb2758",
+   "jpUrl": "6e5fa104782e4aae2fee4f7f8117a4660aed7ca31c671500145e3002a14368c3",
+   "enUrl": "94a9ac990eec4043cd371a91565622dee6dae9a622f41484f8f9096c8a798ff4",
+   "krUrl": "eb4ac0a27feefe06770bfb21ca8dad08f9222f205b9456aa0b949d0189fa59a3"
+  },
+  {
+   "id": 14,
+   "title": "Über Cocolia",
+   "text": "Die Cocolia, die ich kannte, saß auf dem Dach und hörte sich meine Lieder an, aber ... nicht die Oberste Wächterin.",
+   "unlockRequirement": "",
+   "cnUrl": "0b98ec2544c12f76b040aa3667a8d15428b86e0c666bb248f6c0e913137924c6",
+   "jpUrl": "5538afae26c58d145279bf43f2d7e0823cde6e2d7f00defdcd2a0bb474c282fe",
+   "enUrl": "b9f38d69c39ba9e3b1146f0e528e4d1b94cd0d518702a2c7879d4c68c315e414",
+   "krUrl": "2ac104ad7198e06f0f92cd8ad27006a71a1bbdeb24dbc8a227fd7fa48d4a9f88"
+  },
+  {
+   "id": 15,
+   "title": "Über Sampo",
+   "text": "Hah, dieser Kerl. Eines Tages wird er von meinem Bruder geschnappt werden.",
+   "unlockRequirement": "",
+   "cnUrl": "874dbfc2c53a0235b15c8d541cb91bb2a727ec23819cf60fd29481675b46dcda",
+   "jpUrl": "cf0986811861d624979f014394e75df3a3867df7bafbb7bd2112f8910947a697",
+   "enUrl": "594321626bbbc1bed8acffe4e3d1a3fc3488909fcabd465a755c75ae28c1d068",
+   "krUrl": "aa8685e137dd043014b2ecb0da06a14bac3debce693d72fda9dcec261adea648"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Figurendetails",
+   "text": "Die freie, rebellische älteste Tochter der Landaus und einst eine gute Freundin Cocolias. Aufgrund ihrer Interessen arbeitet sie nun als Mechanikerin.<br />Im durch den Immerwinter geplagten Belobog eröffnete sie eine Werkstatt namens „Nimmerwinter“, die wegen „Rock ’n’ Roll“-Auftritten ab und zu schließt.<br />Und sollte sie jemand nach der Rentabilität der Werkstatt fragen ... „Das hier ist nur ein Hobby, Schätzchen. Mir mangelt es nicht an Geld.“",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Figurenprofil: Teil I",
+   "text": "Das ist die talentierteste Mechanikerin in ganz Belobog – und zudem die Schwester von Hauptmann Gepard Landau von den Silbermähnen-Wachen. Haben wir schon erwähnt, dass sie hierzulande zudem ein Rockstar ist?<br /><br />„Halt, halt, halt. Lasst den Anfang und das Ende drin und lasst den Mittelteil raus.“<br />„Handelt meine Identität nicht so flüchtig ab ... Ich, Serval Landau, bin niemandes Accessoire.“<br /><br />„... Oh, danach kommt nichts mehr? Toll, dann lasst mich mal was beisteuern: Wenn etwas kaputt ist, schaut jederzeit in unserer Nimmerwinter-Werkstatt im Verwaltungsbezirk vorbei und wendet euch an mich.“<br />„Wie war das, ihr wollt etwas Rock ’n’ Roll hören? Na, umso besser. Schaut in unserer Nimmerwinter-Werkstatt im Verwaltungsbezirk vorbei, um diese Stadt zu rocken – mit ‚Mechanisches Fieber‘!“",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>20</nobr> freigeschaltet"
+  },
+  {
+   "title": "Figurenprofil: Teil II",
+   "text": "Serval Landau gehört ein Stück Land im Herzen von Belobogs Verwaltungsbezirk – die Nimmerwinter-Werkstatt – wo sie theoretisch ihren Lebensunterhalt mit der Reparatur von mechanischen Geräten verdient.<br /><br />Aber eigentlich verwendet diese geniale Mechanikerin beinahe ihre gesamte Zeit dafür, verschiedene Musikinstrumente zu reparieren und zu verbessern ...<br /><br />„Ts, beachtet dieses dämliche Magazin gar nicht! Ich bin eine angesehene Geschäftsinhaberin ...“<br />„Ob es nun so klein ist wie ein Geomark-Radiator oder so große wie ein Automotor – oder gar ein Silbermähnen-Automaton – all das ist gar kein Problem. Neben der Wartung und Überholung alltäglicher Geräte bieten wir auch Modifizierungen an.“<br />„Wie das Anbringen eines externen Bohrers an einem Schneepflug oder eines ballistischen Computers an einem Toaster ... Derlei Sachen.“<br /><br />„Hm? Wie das Geschäft läuft? Hey, stellt nicht so viele Fragen. Ihr wisst doch, dass ich mich in meiner Freizeit gerne mit Musik beschäftige.“<br />„Jedenfalls hatte ich nie vor, ein Vermögen zu verdienen ... Das Leben ist zu kurz. Warum sich nicht ausgiebig seinen Hobbys widmen?“",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>40</nobr> freigeschaltet"
+  },
+  {
+   "title": "Figurenprofil: Teil III",
+   "text": "Serval gelang es, ihre Leidenschaft für Musik neu zu entfachen, nachdem sie alle Verbindungen zu ihrem Klan abgebrochen hatte.<br /><br />Das führte dazu, dass ihre renommierte Werkstatt für sie ein Ort wurde, an dem sie abrocken konnte. Obwohl es immer wieder zu Beschwerden kommt, interessieren sich ganze Horden von Hipster-Kids für diese angesagte Kunstform, die aus der Zeit vor dem Ewigen Frost stammt ...<br /><br />„Oh, ich geb’s auf! Könnt ihr billigen Klatschblätter und eure sogenannten ‚Musikkritiker‘ euch bitte auf das konzentrieren, was wichtig ist? ‚Immer wieder Beschwerden‘ ... ‚Hipster-Kids‘ ... Meine Fans und ich würden das bestreiten!“<br />„Aber es stimmt wohl, dass ‚Mechanisches Fieber‘ bei jungen Leuten beliebt ist. In dem Alter sind Kinder voller Enthusiasmus und werden nicht genügend wertgeschätzt ...“<br />„Egal, wie man sich gerade fühlt, manchmal muss man einfach Dampf ablassen. Und abzurocken ist nun einmal einfach die beste Art, das zu tun!“<br /><br />„... So wie ich das früher gemacht habe.“<br />„Hey, schon gut! Entspannt euch, ich habe nur ein wenig in Erinnerungen geschwelgt ...“",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>60</nobr> freigeschaltet"
+  },
+  {
+   "title": "Figurenprofil: Teil IV",
+   "text": "In vergangenen Zeiten wusste jeder, dass Serval Landau die klügste aller Silbermähnen-Wachen war. Achtzig Prozent der Gerüchte über die talentierte älteste Tochter der Landaus rühren von dieser Tatsache her.<br /><br />Eines Tages wurden diese Gerüchte jedoch durch neuen Klatsch ersetzt: Warum wurde sie, die immer eine enge Beziehung zur Obersten Wächterin gehabt hatte, ohne Vorwarnung aus den Streitkräften entlassen? Hegt Serval deshalb immer noch einen Groll? Dazu hat jeder seine eigene Theorie.<br /><br />„Die Antwort auf die erste Frage ist einfach: ‚Kein Kommentar.‘ Das mit den Silbermähnen-Wachen ist streng geheim. Ich hoffe, ihr versteht das.“<br />„Und was die zweite Frage angeht ...“<br /><br />„Das ... Das ist mir schnurzpiepegal. Denkt doch mal darüber nach. Gibt es etwas Besseres, als zu Recht ein geruhsames Leben zu führen? Ich sehe es lieber so, dass diese Dame mir geholfen hat. Ich sollte ihr wirklich dankbar sein!“<br />„In dieser Welt, in der wir leben, ist es besser, den Moment zu genießen ... und abzurocken, Mann!“<br /><br />„Letzten Endes sind wir alle dem Untergang geweiht. Asche zu Asche, Staub zu Staub. Wo bleibt denn da der Spaß?“",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>80</nobr> freigeschaltet"
+  }
+ ],
+ "archive": {
+  "cvCn": "穆雪婷",
+  "cvJp": "愛美",
+  "cvKr": "민아",
+  "cvEn": "Natalie Van Sistine",
+  "camp": "Belobog"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "serval"
+}

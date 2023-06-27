@@ -1,0 +1,2403 @@
+{
+ "name": "7. März",
+ "spRequirement": 120,
+ "rarity": 4,
+ "descHash": "Ein Mädchen, das einst im ewigen Eis schlief und nichts über ihre Vergangenheit weiß. Sie hat sich dem Astralexpress angeschlossen, um ihrer Herkunft auf den Grund zu gehen. Bisher hat sie sich ca. <nobr>67</nobr> verschiedene Versionen ihrer Lebensgeschichte ausgemalt.",
+ "iconPath": "5792f07862d451fa3e15d3656f705d3dcf66e0bd24ceaaf286603c1c82933796",
+ "bgPath": "df7bc20d3cae115730132c84b25f3156b1543ec1c63937f3db1d2be2069a31b5",
+ "figPath": "1d3d7a02929d0282079c45f6a03c614dd06509c9d71ac4aea583d982f2d4a7e0",
+ "fgPath": "08f39d51903b6501be3f75ac20cf1056cbbe441519a29e1123cd92905edd9497",
+ "artPath": "ec380815c0bf9adf977a54790d5067ebb74910cb498f3e4e2a50ae1bc5946134",
+ "miniIconPath": "ffcd4f65588b0d7103a41e71f375a404f57597e6fecec282b79f167c70ecccf5",
+ "splashIconPath": "845a9c92bf8f04c56203cf1c5ef52064bf733aaba749e5f43634cd35c9991dca",
+ "damageType": {
+  "id": 4,
+  "iconPath": "3a4e72fd1d4a41926980ab22b12c81cde3147050577efcfdac462e0f60271b9f",
+  "color": "#47C7FD",
+  "name": "Eis",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "129eb76a6f0c9be69f8c2263f5e53030909c36d7e4de7a0571dd5665ac645b33",
+  "altIconPath": "9d034d41c43efff65e81e11d6215e3ce43eb0a2e32036648f707751a8d0a15b6",
+  "color": "#FFFFFF",
+  "name": "Die Bewahrung",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 6,
+  "iconPath": "7ffdd2cf6f7c119724e700bbf531b0ff62f3f1e2c32159e1a1f2bc6c77416163",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Credit",
+   "desc": "Diese Währung, die von der Interastrale Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
+   "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
+   "purpose": "Gemeinsame Währung",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Blütenkelch (Große Mine)",
+    "Missionsbelohnungen",
+    "Auftragsbelohnungen"
+   ]
+  },
+  "67219": {
+   "id": 67219,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "03a85f3ccfcb36eb4e371d602e552113e1ada82e6ca848ca9d4f2761f6991e5e",
+   "name": "Horn aus Schnee",
+   "desc": "Zerbrochenes Horn eines Eisigen Streuners. Material zum Aufstieg der Figuren mit Eis-Typ.",
+   "lore": "Die Silbermähnen-Wachen trugen Wettbewerbe aus, bei denen der Sieger innerhalb einer gewissen Zeit einen Körperteil eines Monsters beschaffen musste. Dieses kalte, zerbrochene Horn muss aus einem solchen Wettbewerb stammen.<br /><br />„Sir Bova, das ist aber kein Elchgeweih und über den Geomark-Schmelzofen will sich das bestimmt auch niemand hängen.“",
+   "purpose": "Material zum Figurenaufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/67219",
+   "comeFrom": [
+    "Ruhender Schatten (Korridor der verhallenden Echos)",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "Spuren des Schicksals",
+   "desc": "Fortschrittliches Material zum Hochstufen von Spuren.",
+   "lore": "Unzählige Fehlschläge sicherten deinen Sieg und deine kleinen Schritte führten dich an den Wendepunkt des Schicksals.",
+   "purpose": "Spurenmaterial",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Punktebelohnungen in der Universum-Simulation",
+    "Namenlose Ehre",
+    "Glut-Tausch",
+    "Belohnungen für zeitlich begrenzte Aktionen"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "Reiseführer",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>20.000</nobr> Figuren-EP.",
+   "lore": "Pflichtlektüre für Weltreisende. Auf Knopfdruck beginnt eine angenehme Stimme in der Sprache des Lesers von den legendären Erlebnissen berühmter Abenteurer auf diversen Planeten zu erzählen und ihr gesammeltes Wissen zusammenzufassen.<br /><br />„Die brandneue Reiseführer-Reihe ‚Das Handbuch für die galaktische Küche‘ ist jetzt erhältlich.“<br />„Einsendungen bitte per Telepathie über Synästhesie-Leuchtfeuer ERD<nobr>-23</nobr>θ an das Team der Intelligenzia-Gilde. Flexible Zahlungsoptionen.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Vergessene Halle"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "Abenteuer-Log",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>5.000</nobr> Figuren-EP.",
+   "lore": "Eine säuberlich organisierte Sammlung lehrreicher Notizen mit unzähligen Illustrationen und Texten, die diverse Abenteuer vom Anfang bis zum Ende beschreiben, sowie wertvollen Tipps und Überlebenstechniken.<br /><br />„Warum werden die Daten nicht in einer Foto-CD gespeichert? Wäre doch viel praktischer.“<br />„Moderne Technologie ist angesichts von Sternenstürmen und Neuronenfluss-Eruptionen viel empfindlicher, als man denkt. Außerdem hätte der Autor des Buchs sicher gewollt, dass man es auf die einfachste Art liest.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Tägliches Training"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "Reisebegegnungen",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>1.000</nobr> Figuren-EP.",
+   "lore": "Ein unleserlich von Hand geschriebenes Reisetagebuch mit wirren Inhalten. Es nützt dir wenig.<br /><br />„Dan Heng, lies das endlich fertig, damit es in den Müll kann.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Auftragsbelohnungen"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5930a427c19aedca23d55eb6ef670cc8ecf07466630281586f32f4d5e8d49409",
+   "name": "Instinkt des Diebes",
+   "desc": "Eine kleine Menge von Antimaterie. Ein Rohmaterial zur Verstärkung.",
+   "lore": "Eine kleine Menge Antimaterie, die aus dem Leeren-Ranger: Plünderer austritt wie die Materialisierung seines zerstörerischen Instinkts.<br /><br />„Sie alle freuen sich auf den Moment der Auslöschung, wenn sie neu geschmiedet werden und mit der gesamten Welt verschmelzen.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "Lagerzone: Leeren-Ranger: Plünderer oder andere Gegner",
+    "Versorgungszone: Leeren-Ranger: Plünderer oder andere Gegner",
+    "Universum-Simulation-Gegner",
+    "Auftragsbelohnungen",
+    "Glut-Tausch",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "69d0630f4dc8d8bb4706a8a973f720ce46452e189a62c7b8b6f2ca8d567ca8ae",
+   "name": "Ehrgeiz der Verzerrung",
+   "desc": "Eine mittelgroße Menge an Antimaterie. Ein normales Material zur Verstärkung.",
+   "lore": "Eine mittelgroße Menge Antimaterie, die um den Leeren-Ranger: Verzerrer herumschwebt. Die Menge der Materie- und Antimaterieteilchen hat ein gefährliches Verhältnis erreicht ...<br /><br />„Sie alle freuen sich auf den Moment der Auslöschung, wenn sie neu geschmiedet werden und mit der gesamten Welt verschmelzen.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "Lagerzone: Leeren-Ranger: Plünderer (Balance-Stufe 2+) oder andere Gegner",
+    "Versorgungszone: Leeren-Ranger: Plünderer (Balance-Stufe 2+) oder andere Gegner",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "635668": {
+   "id": 635668,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "751785c1795d0c216b39deec5fa263ee8119f6295a1582c75e5f4a958a17a385",
+   "name": "Beständigkeit von Bronze",
+   "desc": "Ein primitiv wirkender, aber stabiler alter Bronzeschild, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Bewahrung</span> ein wenig hochgestuft werden können.",
+   "lore": "Uralte Legenden berichten von einem Krieg, bei dem Menschen sämtliche verfügbaren primitiven Mittel ausschöpften, um den Göttern in eine Schlacht gegen übermächtige Bestien zu folgen.<br />Dieser Schild ist ein Zeitzeuge jenes Krieges.<br /><br />„Es gibt keine andere Wahl, als sie zu stoppen, selbst wenn alle Mühen umsonst sind.“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/635668",
+   "comeFrom": [
+    "Blütenkelch (Versorgungszone)"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ea7f9727e8ba2c2039043d319ab4aa087ca6dbf08ec08876b1418d42c0f8a670",
+   "name": "Wille des Eroberers",
+   "desc": "Kondensierte Antimaterie. Ein fortschrittliches Material zur Verstärkung.",
+   "lore": "Hochverdichtete Antimaterie im Körper des Leeren-Rangers: Trampler. Der Moment der Auslöschung ist der Fanfarenstoß für die Zerstörung der Zivilisationen.<br /><br />„Sie alle freuen sich auf den Moment der Auslöschung, wenn sie neu geschmiedet werden und mit der gesamten Welt verschmelzen.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "Lagerzone: Leeren-Ranger: Plünderer (Balance-Stufe 4+) oder andere Gegner",
+    "Versorgungszone: Leeren-Ranger: Plünderer (Balance-Stufe 4+) oder andere Gegner",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "836254": {
+   "id": 836254,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1313f4b8549d0b129fb33fcd3745a87a8030d13fc8c28159f0dd2868a203ac2f",
+   "name": "Schutz des Bernsteins",
+   "desc": "Ein ungewöhnlicher mit Bernsteinen von jenseits des Himmels besetzter großer Schild, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Bewahrung</span> stark hochgestuft werden können.",
+   "lore": "Der Träger dieses Schilds scheint von einer unsichtbaren Mauer umgeben zu sein, die ihn vor brennenden Pfeilen und kolossalen Klauen schützt.<br />Uralte Legenden erzählen von einem Krieg, in dem ein Stammesheld mit einem Bronzeschild an der Seite von mit Feuerspeeren bewaffneten Kriegern einen Leviathan angriff.<br />Dieser Schild ist ein Zeitzeuge jenes Krieges.<br /><br />„Bis hierher und nicht weiter.“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/836254",
+   "comeFrom": [
+    "Blütenkelch (Versorgungszone)",
+    "Omni-Synthesemaschine – Materialsynthese"
+   ]
+  },
+  "920195": {
+   "id": 920195,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "40bec463d92cede13fc22b7ac618c83f9d27e06e1a8c95a37d32cedc83fffe17",
+   "name": "Schwur des Stahls",
+   "desc": "Ein mit unersetzlicher handwerklicher Technik aus einem unbekannten Metall geschmiedeter Schild, mit dem Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad der Bewahrung</span> mäßig hochgestuft werden können.",
+   "lore": "Dieser Schild trägt sich trotz seiner Größe leicht wie eine Feder. Selbst Frontalangriffe hinterlassen nicht einmal einen Kratzer auf seiner Oberfläche.<br />Uralte Legenden berichten von einem Krieg, in dem feurige Krieger, bewaffnet mit Speeren, die Todesstrahlen verschossen, und Schilden aus Froststahl, ihre zum Untergang verdammte Nation verteidigten.<br />Dieser Schild ist ein Zeitzeuge jenes Krieges.<br /><br />„Der mächtige Stimmenchor ruft: ‚Der Feind steht vor unseren Toren!‘“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/920195",
+   "comeFrom": [
+    "Blütenkelch (Versorgungszone)",
+    "Omni-Synthesemaschine – Materialsynthese"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "91205616cca581bc299d91a1af94a91981d58328675779f8e66ccbaf679e5e94",
+   "name": "Ende des Zerstörers",
+   "desc": "Fortgeschrittenes Material zum Hochstufen von Spuren.",
+   "lore": "Das Herz des Leviathans schlägt nicht mehr, doch sein Verstand lebt weiter, wenn auch nur im Inneren seines Gehäuses. Solange der Deckel geschlossen bleibt, ist der Verstand gleichzeitig lebendig und tot und treibt die Zerstörungsmaschine an.<br /><br />„Die Bestie des Jüngsten Gerichts, ein Ungeheuer aus dem Feuer der Kriegsschmiede. Sie besteht aus den Resten des Leviathans und den klagenden Gebeinen Tausender, und sie sehnt sich danach, das Universum und sich selbst zu zerstören.“",
+   "purpose": "Spurenmaterial",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "Echo des Krieges (Versorgungszone)"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549437,
+     "count": 4
+    }
+   ],
+   "attackBase": 69.6,
+   "attackAdd": 3.48,
+   "hpBase": 144,
+   "hpAdd": 7.2,
+   "defenseBase": 78,
+   "defenseAdd": 3.9,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 101,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549437,
+     "count": 8
+    }
+   ],
+   "attackBase": 97.44,
+   "attackAdd": 3.48,
+   "hpBase": 201.6,
+   "hpAdd": 7.2,
+   "defenseBase": 109.2,
+   "defenseAdd": 3.9,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 101,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633378,
+     "count": 5
+    },
+    {
+     "id": 67219,
+     "count": 2
+    }
+   ],
+   "attackBase": 125.28,
+   "attackAdd": 3.48,
+   "hpBase": 259.2,
+   "hpAdd": 7.2,
+   "defenseBase": 140.4,
+   "defenseAdd": 3.9,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 101,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633378,
+     "count": 8
+    },
+    {
+     "id": 67219,
+     "count": 5
+    }
+   ],
+   "attackBase": 153.12,
+   "attackAdd": 3.48,
+   "hpBase": 316.8,
+   "hpAdd": 7.2,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.9,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 101,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717319,
+     "count": 5
+    },
+    {
+     "id": 67219,
+     "count": 15
+    }
+   ],
+   "attackBase": 180.96,
+   "attackAdd": 3.48,
+   "hpBase": 374.4,
+   "hpAdd": 7.2,
+   "defenseBase": 202.8,
+   "defenseAdd": 3.9,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 101,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717319,
+     "count": 7
+    },
+    {
+     "id": 67219,
+     "count": 28
+    }
+   ],
+   "attackBase": 208.8,
+   "attackAdd": 3.48,
+   "hpBase": 432,
+   "hpAdd": 7.2,
+   "defenseBase": 234,
+   "defenseAdd": 3.9,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 101,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 236.64,
+   "attackAdd": 3.48,
+   "hpBase": 489.6,
+   "hpAdd": 7.2,
+   "defenseBase": 265.2,
+   "defenseAdd": 3.9,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 101,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "c70face58fd3f2ae2779d8af9ae759758a1bd7a982c52693264aa5dffbf08ee0",
+   "name": "Erinnerung an dich",
+   "descHash": "Für jedes Ziel, das 7. März mit ihrem Ultimate einfriert, wird ihre Energie um <nobr>#1[i]</nobr> Pkt. wiederhergestellt.",
+   "params": [
+    6
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "6e385aa57c492ea4cc1ed22751309ead70897e1c3ea76cdb86652e4c0cc8f60f",
+   "name": "Erinnerung an es",
+   "descHash": "Gewährt beim Kampfeintritt dem Verbündeten mit den wenigsten LP einen Schild in Höhe von <nobr>#1[i]%</nobr> von 7. März’ VTD plus <nobr>#3[i]</nobr> für <nobr>#2[i]</nobr> Rd.",
+   "params": [
+    0.24,
+    3,
+    320
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "12cca20745cad27c6c1be1254c1e9b5df9b8d1e6221213dbd0b94531cc4f255c",
+   "name": "Erinnerung an alles",
+   "descHash": "Ultimate-Stufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis zu max. St. <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "fcd40d1998b7c6923e3f29eaa1d13a81c1f9e7a95c34d7bfc6d33b241c160233",
+   "name": "Ich will nicht verlieren",
+   "descHash": "Erhöht die Auslösungsanzahl des Konters durch Talent pro Runde um 1. Erhöht den durch Konter verursachten SCH um <nobr>#1[i]%</nobr> von 7. März’ VTD.",
+   "params": [
+    0.3
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "8470357ff181928ab8bbd993d5bcc8ae1bf2fc7dbf5c5f793dd5bd4cf5c4faf8",
+   "name": "Ich will nicht vergessen",
+   "descHash": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Talentstufe +2 bis zu max. St. <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "e7dfe98b1d989f2e959ce3c30f2734766b0311ede109bd2c9df99e8b90ad6c21",
+   "name": "Immer so weiter ...",
+   "descHash": "Verbündete, die durch den Schild der Fertigkeit geschützt sind, werden zu Beginn jeder Runde LP in Höhe von <nobr>#1[i]%</nobr> ihrer max. LP plus <nobr>#2[i]</nobr> wiederhergestellt.",
+   "params": [
+    0.04,
+    106
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   441021
+  ],
+  [
+   524962
+  ],
+  [
+   641607
+  ],
+  [
+   955908
+  ],
+  [
+   240435
+  ]
+ ],
+ "skills": [
+  {
+   "id": 441021,
+   "name": "Bitterkalter Pfeil",
+   "tagHash": "Einzelangriff",
+   "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von 7. März’ ANG zu.",
+   "typeDescHash": "Standardangriff",
+   "iconPath": "8fe5541f66620cc2a7de7c13ce4aa58f18a4c85547045ee8785fba4b756133f1",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635668,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920195,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920195,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836254,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836254,
+       "count": 6
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 524962,
+   "name": "Die Macht der Niedlichkeit",
+   "tagHash": "Verteidigung",
+   "descHash": "Gewährt einem anvisierten Verbündeten einen Schild, der <nobr>#2[i]</nobr> Rd. hält und SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von 7. März’ VTD plus <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]</nobr></span> absorbieren kann.<br />Wenn der Verbündete aktuell min. <nobr>#3[i]%</nobr> seiner LP hat, wird die Chance, vom Gegner angegriffen zu werden, stark erhöht.",
+   "typeDescHash": "Fertigkeit",
+   "iconPath": "595548f37abc0f33d03758e454093797af09c7af383810d4f7f484cd82212349",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.38,
+      3,
+      0.3,
+      190,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.40375,
+      3,
+      0.3,
+      304,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.4275,
+      3,
+      0.3,
+      389.5,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635668,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.45125,
+      3,
+      0.3,
+      475,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920195,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.475,
+      3,
+      0.3,
+      532,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920195,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.494,
+      3,
+      0.3,
+      589,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920195,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.513,
+      3,
+      0.3,
+      631.75,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836254,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.532,
+      3,
+      0.3,
+      674.5,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836254,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.551,
+      3,
+      0.3,
+      717.25,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836254,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.57,
+      3,
+      0.3,
+      760,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836254,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.589,
+      3,
+      0.3,
+      802.75,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.608,
+      3,
+      0.3,
+      845.5,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.627,
+      3,
+      0.3,
+      888.25,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.646,
+      3,
+      0.3,
+      931,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.665,
+      3,
+      0.3,
+      973.75,
+      5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 641607,
+   "name": "Gletscherkaskade",
+   "tagHash": "Flächenangriff",
+   "descHash": "Fügt allen Gegnern <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von 7. März’ ANG zu und friert die getroffenen Gegner mit einer <u>Grundchance</u> von <nobr>#2[i]%</nobr> für <nobr>#3[i]</nobr> Rd. ein.<br />Eingefrorene Gegner können keine Aktionen ausführen und erleiden zu Beginn jeder Runde <u>zusätzlichen</u> <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span> von 7. März’ ANG.",
+   "typeDescHash": "Ultimate",
+   "iconPath": "55ade179edd68bf9776032c65e4347fc240c5fb0a3f4f3a83f3eb8a7a4a19595",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.9,
+      0.5,
+      1,
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.96,
+      0.5,
+      1,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.02,
+      0.5,
+      1,
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635668,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.08,
+      0.5,
+      1,
+      0.39
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920195,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.14,
+      0.5,
+      1,
+      0.42
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920195,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.2,
+      0.5,
+      1,
+      0.45
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920195,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.275,
+      0.5,
+      1,
+      0.4875
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836254,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.35,
+      0.5,
+      1,
+      0.525
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836254,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.425,
+      0.5,
+      1,
+      0.5625
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836254,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1.5,
+      0.5,
+      1,
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836254,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.56,
+      0.5,
+      1,
+      0.63
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.62,
+      0.5,
+      1,
+      0.66
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.68,
+      0.5,
+      1,
+      0.69
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.74,
+      0.5,
+      1,
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.8,
+      0.5,
+      1,
+      0.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 120
+  },
+  {
+   "id": 955908,
+   "name": "Mädchenpower",
+   "tagHash": "Einzelangriff",
+   "descHash": "Wird ein Verbündeter mit Schild von einem Gegner angegriffen, führt 7. März sofort einen <u>Konter</u> aus, der dem Angreifer <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ihres ANG zufügt. Dieser Effekt kann pro Runde <nobr>#2[i]</nobr>-mal ausgelöst werden.",
+   "typeDescHash": "Talent",
+   "iconPath": "051c25b170f8af3095b6020ea30ad6ecb24527ba9d052c5cf6b70849683dde24",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.55,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549437,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.6,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635668,
+       "count": 2
+      },
+      {
+       "id": 549437,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.65,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920195,
+       "count": 2
+      },
+      {
+       "id": 633378,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.7,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920195,
+       "count": 4
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.75,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920195,
+       "count": 6
+      },
+      {
+       "id": 633378,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.8125,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836254,
+       "count": 2
+      },
+      {
+       "id": 717319,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.875,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836254,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.9375,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836254,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      1,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836254,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      1.05,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      1.1,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      1.15,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      1.2,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      1.25,
+      2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 156494,
+   "name": "Angriff",
+   "tagHash": "",
+   "descHash": "Greift den Gegner an und schwächt nach Kampfeintritt den Widerstand des Ziels gegen den entsprechenden Typ.",
+   "typeDescHash": "",
+   "iconPath": "8fe5541f66620cc2a7de7c13ce4aa58f18a4c85547045ee8785fba4b756133f1",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 240435,
+   "name": "Eiskalte Schönheit",
+   "tagHash": "",
+   "descHash": "Greift den Gegner unmittelbar an. Nach Kampfeintritt besteht eine <u>Grundchance</u> von <nobr>#1[i]%</nobr>, einen zufällig ausgewählten Gegner für <nobr>#2[i]</nobr> Rd. einzufrieren.<br />Eingefrorene Gegner können sich nicht bewegen und erleiden zu Beginn jeder Runde <u>zusätzlichen</u> <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <nobr>#3[i]%</nobr> von 7. März’ ANG.",
+   "typeDescHash": "Technik",
+   "iconPath": "6218868e0d00bcb80a71ac17033f87d96af71755afd85dd7007b9d92df7d458e",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1,
+      1,
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1001103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1001208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1001209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 877747,
+        "name": "SCH-Verstärkung: Eis",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#47C7FD;\">Eis</span>-SCH-Erhöhung",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836254,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1001210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 961679,
+        "name": "VTD-Verstärkung",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+        "statusList": [
+         {
+          "key": "VTD",
+          "value": 0.1
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836254,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 877746,
+      "name": "SCH-Verstärkung: Eis",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#47C7FD;\">Eis</span>-SCH-Erhöhung",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836254,
+        "count": 6
+       },
+       {
+        "id": 717319,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 877642,
+    "name": "Eiszauber",
+    "descHash": "Erhöht die Grundchance, dass Gegner durch den Ultimate eingefroren werden, um <nobr>#1[i]%</nobr>.",
+    "iconPath": "4f68b9672c134013190b556a1a98cc7bc5f133f469154126e2381624443393f3",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.15
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836254,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1001201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1001101,
+     "type": 1,
+     "children": [
+      {
+       "id": 1001202,
+       "type": 2,
+       "children": [
+        {
+         "id": 1001203,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 877737,
+          "name": "SCH-Verstärkung: Eis",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+          "statusList": [
+           {
+            "key": "<span style=\"color:#47C7FD;\">Eis</span>-SCH-Erhöhung",
+            "value": 0.032
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 920195,
+            "count": 2
+           },
+           {
+            "id": 633378,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 877736,
+        "name": "VTD-Verstärkung",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+        "statusList": [
+         {
+          "key": "VTD",
+          "value": 0.05
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 4000
+         },
+         {
+          "id": 635668,
+          "count": 2
+         },
+         {
+          "id": 549437,
+          "count": 4
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "id": 877640,
+      "name": "Reinigen",
+      "descHash": "Entfernt beim Einsatz der Fertigkeit 1 Debuff von einem anvisierten Verbündeten.",
+      "iconPath": "1259a1d60430b175f8053cf0998bfa4da258d88048a4a7433ba2f50b7472ae52",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "levelData": [
+       {
+        "level": 1,
+        "params": [],
+        "levelReq": 0,
+        "promotionReq": 2,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 4000
+         },
+         {
+          "id": 635668,
+          "count": 2
+         },
+         {
+          "id": 985668,
+          "count": 1
+         }
+        ]
+       }
+      ],
+      "ultimateCost": 0
+     }
+    },
+    {
+     "id": 1001102,
+     "type": 1,
+     "children": [
+      {
+       "id": 1001205,
+       "type": 2,
+       "children": [
+        {
+         "id": 1001206,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 877732,
+          "name": "Effekt-WDS-Verstärkung",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+          "statusList": [
+           {
+            "key": "Effekt-WDS",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 836254,
+            "count": 2
+           },
+           {
+            "id": 717319,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 877735,
+        "name": "SCH-Verstärkung: Eis",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#47C7FD;\">Eis</span>-SCH-Erhöhung",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 16000
+         },
+         {
+          "id": 920195,
+          "count": 4
+         },
+         {
+          "id": 633378,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "id": 877643,
+      "name": "Verstärken",
+      "descHash": "Verlängert die Dauer des Schilds, den die Fertigkeit gewährt, um <nobr>#1[i]</nobr> Rd.",
+      "iconPath": "01fea7d5e30c789a502db09d89d71f788db21f2a2b1521232e9f0624551fea58",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "levelData": [
+       {
+        "level": 1,
+        "params": [
+         1
+        ],
+        "levelReq": 0,
+        "promotionReq": 4,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 16000
+         },
+         {
+          "id": 920195,
+          "count": 4
+         },
+         {
+          "id": 125435,
+          "count": 1
+         },
+         {
+          "id": 985668,
+          "count": 1
+         }
+        ]
+       }
+      ],
+      "ultimateCost": 0
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 877739,
+    "name": "SCH-Verstärkung: Eis",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+    "statusList": [
+     {
+      "key": "<span style=\"color:#47C7FD;\">Eis</span>-SCH-Erhöhung",
+      "value": 0.032
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549437,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1001204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 877734,
+    "name": "Effekt-WDS-Verstärkung",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+    "statusList": [
+     {
+      "key": "Effekt-WDS",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 8000
+     },
+     {
+      "id": 920195,
+      "count": 2
+     },
+     {
+      "id": 633378,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1001207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 877733,
+    "name": "VTD-Verstärkung",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+    "statusList": [
+     {
+      "key": "VTD",
+      "value": 0.075
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 36000
+     },
+     {
+      "id": 836254,
+      "count": 2
+     },
+     {
+      "id": 717319,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Körper",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "Effekt-Trefferrate",
+    "propertyIconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb"
+   },
+   {
+    "relicTypeHash": "Füße",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "VTD",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "Planarsphäre",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "VTD",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "Verbindungsseil",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "VTD",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Erstes Treffen",
+   "text": "Hallo, Trailblazer. Willkommen an Bord des Astralexpresses. Mein Name ist 7. März, ich bin einer der Passagiere vom Astralexpress. Wir werden zusammenarbeiten. Zuerst müssen wir ein Foto von dir machen ... Haha, da bist du aber etwas erschrocken, oder? War nur ein Scherz ...",
+   "unlockRequirement": "",
+   "cnUrl": "4698d36d76d55783520f73d915408cbeae132336a9dc63846456b71cff74bd67",
+   "jpUrl": "dfb14332545b6f4015cf72e2483d7dbad714cbf8e2adb16fd1c1b633d7e9395d",
+   "enUrl": "04c606c3cb544d0b89900e8433021022ff2aa6d1d91d65c793d00f70e34e045e",
+   "krUrl": "0817918ce6fdb79097f9bfc1456bf100c1c82351e8f43d1f00fc0b40840bf5c7"
+  },
+  {
+   "id": 2,
+   "title": "Begrüßung",
+   "text": "Du kommst gerade rechtzeitig! Wir haben heute noch kein Selfie gemacht.",
+   "unlockRequirement": "",
+   "cnUrl": "753c24836b8fa4812217504f5758726ee07a05bc2c32361b9e30dfecbc594f3b",
+   "jpUrl": "0e061fb939bd2f6835d6a188d471254e5a007f2af871f41fe94d4f8a21701fa5",
+   "enUrl": "78ff7915a37ecdc01b168103268b168c675a0a510538e3726a903706648340a8",
+   "krUrl": "d7d152a1e536d2f3092275fa5b6af75194a1ae73709fc6fd1806a656cc5513f8"
+  },
+  {
+   "id": 3,
+   "title": "Abschied",
+   "text": "Ich werde mich etwas ausruhen, nachdem ich diese Fotos sortiert habe. Bleib nicht wieder die ganze Nacht auf und spiel Videospiele!",
+   "unlockRequirement": "",
+   "cnUrl": "fdf510be02fe477aca7cb66bc2904b467f6028d7738a828b3e92c4cd70ea9384",
+   "jpUrl": "fefe09652371c50b3e6e8d54f6b78f5d28ce2acb694aaa414dce5ef54e2d105e",
+   "enUrl": "0ca45a185dbf2fc9b96d1853eb69bb5a4b787eb7239fbb885b3a22ac70a0b06b",
+   "krUrl": "c319b9cdbd30a1745d2834d996e7cbd706aaa5d39efd863c954e520bbf637e75"
+  },
+  {
+   "id": 4,
+   "title": "Über sich selbst: Name",
+   "text": "Ich habe mir meinen Namen selbst ausgedacht, aber manche Leute nennen mich einfach März oder Märzchen ... Was ist dir lieber?",
+   "unlockRequirement": "",
+   "cnUrl": "a4d2e46a5e17bf403063a52fc7f526caf5796f2df3c13fa6c588c6bd2443deab",
+   "jpUrl": "04bc926f1761d8c49b8c84cbaf0548f3b91c9bd0fd6d61a89bde0031ae1e4bfb",
+   "enUrl": "9cf788858282a24bd0a2d548895ae4f845b92e0ff96e55bda166e838c8394c2d",
+   "krUrl": "f8f986deb6465396a54330cc3ccee378c55285f3384848e8408996fd25d86ba2"
+  },
+  {
+   "id": 5,
+   "title": "Über sich selbst: Vergangenheit",
+   "text": "Vielleicht liegt meine Vergangenheit nicht hinter mir, sondern vor mir. Deshalb werde ich weiter voranschreiten, von einer Station zur anderen ... auch ohne den Express.",
+   "unlockRequirement": "",
+   "cnUrl": "1b312442b1fa2c71d4c49ae7a8fa9974bd6e70f45a5bfceece4bdab947c80135",
+   "jpUrl": "bc81048c7dee5af8be5956702a373e841f6789129e07e9976165bda22921b6c4",
+   "enUrl": "e2a0fddb4dc018abe6078820cdf4579084080489e07f5d96252ab3f257a2bd56",
+   "krUrl": "cc3ae078874067ef6f0d2457a3df7eaf5975b6aec5864d31fe5a0c0db41748a2"
+  },
+  {
+   "id": 6,
+   "title": "Plaudern: Saft",
+   "text": "Ahh, Saft ... Wenn ich nur das Wort sage, verspüre ich ein Verlangen. Wenn ich ein Verlangen verspüre, will ich einen trinken. Und wenn ich einen trinke ... Ahh ... Ich kann nicht aufhören ...",
+   "unlockRequirement": "",
+   "cnUrl": "6ae18ece1297e1b94f6f54f509b4e9bc7023880f49f3711697facd61198190bb",
+   "jpUrl": "614e31e149552b3c1c4d687314812dadd9d3652584a7c3dc0bcebb70398b65cd",
+   "enUrl": "8c21eeb3edf893b3e7dde51321e1330215ea8a016a9bdbb7a939cf08dfb5a7ca",
+   "krUrl": "60946524708da8072e47e8dab82447405d1e48ff319ae7a95e397e518a510d61"
+  },
+  {
+   "id": 7,
+   "title": "Plaudern: Fotos",
+   "text": "Natürlich stellen Fotos nicht die Realität dar, aber wenn man genug davon hat, kommt man der Realität dann nicht ein wenig näher?",
+   "unlockRequirement": "",
+   "cnUrl": "739109aeabec5169e2b05212f0e1ceb38ddee330be221376619f95bdb4e0fbaf",
+   "jpUrl": "f34df04cf2037263f3ba269a4c261f3ffa59d294b0b18910877182f0d950f476",
+   "enUrl": "5c7108428042518595ef28616940a751f37dc1d45698961057389b7c4d026d85",
+   "krUrl": "c2a3b0241165e9597037dc54dbcd38e5efd60c1df38199e312e71f3bb6b79405"
+  },
+  {
+   "id": 8,
+   "title": "Hobbys",
+   "text": "Fotos machen, in mein Tagebuch schreiben, was gibt es sonst noch zu sagen?",
+   "unlockRequirement": "",
+   "cnUrl": "f84cff29e08feb8c58c19265f63fcf34fd22252e015f59b44cefa89ed7d325ff",
+   "jpUrl": "b7b1398227a1239dbba2ed786624df37850e0fe9d908813875254d6a6b11d664",
+   "enUrl": "088832f44c8cd0a8a884c40043cec9b84f2ca12d56c9d755c23eca4ad78897f9",
+   "krUrl": "7f099d8e60d8a3263db3cd1e7422348ce39774c14d92fb42a3a6a024ac49e30f"
+  },
+  {
+   "id": 9,
+   "title": "Ärgernisse",
+   "text": "Ich langweile mich sehr, wenn niemand mit mir redet. Wenn wir mit dem Express unterwegs sind, sind Himeko und Herr Yang ziemlich beschäftigt, aber Dan Heng hat normalerweise frei. Er plaudert aber nicht gerne ...",
+   "unlockRequirement": "",
+   "cnUrl": "41b6322b484d0a40f72d88f75c5e480d3a73dd2dd1de584f5de49843442332d1",
+   "jpUrl": "387f5c5b21e4193f2f486d7c5f2b35025af9565e78efbf821f9882094861b825",
+   "enUrl": "6b1792e63441263d6486c4c40c907d0ef745ab88fc100318490edc4fa88145ec",
+   "krUrl": "e37a40545101c0b4543437e040404cc9be4b276adb74ebbae7053c7652f90939"
+  },
+  {
+   "id": 10,
+   "title": "Etwas Mitteilenswertes",
+   "text": "Jedes Mal, wenn ich mit dem Sortieren meines Albums fertig bin und aus dem Fenster schaue, möchte ich ein weiteres Foto machen ... Obwohl ich die Aussicht schon tausendmal gesehen habe, fühle ich mich immer noch glücklich, wenn ich die Sterne so anschaue.",
+   "unlockRequirement": "",
+   "cnUrl": "9c2fb13fda8551765c35f2335cbc4bce6132e5d9931f0195f452d05e7cff2ec3",
+   "jpUrl": "0abcced313bc1207e777b2bb55abda88f2b8d1d4d7e30006970baea6c7f9f9c9",
+   "enUrl": "b0423d590d8e260ce860eda4afbdb7fdfa8af5e4c0278a0fe86a317522ffd22d",
+   "krUrl": "ab713458aa454c12bd6074c440b9f32310c78198a174096ad634ab9ee86dbe44"
+  },
+  {
+   "id": 11,
+   "title": "Wissen",
+   "text": "Egal, wie ekelhaft das Gericht ist, du musst all deine Trailblaze-Mentalität aufbringen und dich ihm stellen! Ich will nicht lügen, aber Aale-Gelee und Himekos Kaffee sind ziemlich schwer verdaulich ...",
+   "unlockRequirement": "",
+   "cnUrl": "9bc8222c3f0f01e98c1e5fb504f80d6202bfa7762c7fe8dd2f5366f0a5eb953f",
+   "jpUrl": "f449cac2ba8cd7bed257e6d7fcb342afea88ed34baddc6eb3826f7d5df20a388",
+   "enUrl": "f566b215f74610055667ad58ea78045bf520e497385261272b53235e053b524f",
+   "krUrl": "0fea2a662a4515a16714558f9ab016ae96ea5b9edd1a9c68101fdf3e4292c1b9"
+  },
+  {
+   "id": 12,
+   "title": "Über Dan Heng",
+   "text": "... Dan Heng hat den Zug vor mir erwischt. Er hat nie über seine Vergangenheit gesprochen ... Warum fragst du ihn nicht danach, wenn du die Gelegenheit dazu hast?",
+   "unlockRequirement": "",
+   "cnUrl": "954aa73f516e93559752153c03208c64353e066abf2d30cd02cd12a4633cee69",
+   "jpUrl": "caa7da92f2fd4d7e83f62d12dbdea50c195f4e36d783e9d1fa5edebc123838a2",
+   "enUrl": "e7dff15abd1d2423dd06257480bb160a3f9a2b24ab014d7942fae721e6d2607d",
+   "krUrl": "a6f423db2fd102f32bcab483e314a8b4ca4a92b123ae6c3b9aca4f19d2fd4430"
+  },
+  {
+   "id": 13,
+   "title": "Über Himeko",
+   "text": "Ahh, die schöne Himeko. Sie ist vernünftig, zuverlässig und elegant. Es ist toll, sie als Navigatorin zu haben ... Wenn ich erwachsen bin, will ich genau wie sie sein! Ich mag aber auch mein jetziges Ich.",
+   "unlockRequirement": "",
+   "cnUrl": "0c334d2d643382c9fc91e6c038dce0761ff272c055767f09ad96391456997e15",
+   "jpUrl": "86aeaa68fe3b0cf1e9dd3be524725892fe12c12365cd4983c764e0ed93c7e7cf",
+   "enUrl": "717d03d48727203cb0c16c4b24fd3b74584e2c56297e14b09c4f722dfaa2ad48",
+   "krUrl": "689a0fff8195ffbda147c9e3f941f775928ad867eb58f9df4804a999a80a67b1"
+  },
+  {
+   "id": 14,
+   "title": "Über Welt",
+   "text": "Ich habe gehört, dass Herr Yang einmal der Anführer einer Geheimorganisation war und einen ganzen Planeten gerettet hat! Ganz zu schweigen davon, dass er Lehrer und sogar Storyboard-Künstler war! *seufz* Er muss ein Außerirdischer sein oder so ...",
+   "unlockRequirement": "",
+   "cnUrl": "4a1cee257a867e1841da6d043b792016a9d404cda71951b2eb360da57d4c424b",
+   "jpUrl": "b82ce770f98cf5436a5f91738846a981c505d65cd2b3286b8a94b2464297e105",
+   "enUrl": "f4b8c2f358daad6ecdb6d85fc61c314ec96c9c91eb43cef47f4e6600afa2b9db",
+   "krUrl": "8755e1e6d248255df8dd7a5cdca4e0aa0249b95ada808495f6850c9c92fe724e"
+  },
+  {
+   "id": 15,
+   "title": "Über Pom-Pom",
+   "text": "Der Schaffner ist der Beste!",
+   "unlockRequirement": "",
+   "cnUrl": "6a31b6b52f51533e47ecf6bde9511a9c2987c46d05f4c7aa1b2f33c39d1daeeb",
+   "jpUrl": "7b7a4eff251be8c014aa3a0eb449a3a3be6dc3373afaed8a66476baf60451df6",
+   "enUrl": "e1cc17712db6fc0b0127574efca5a2a49ec17c9df2f7371770f8f1195b2eb3da",
+   "krUrl": "1ed98623038c568d0c836bb5ce2afbeae8297179d896266e6fc4a1b0a17c38f7"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Figurendetails",
+   "text": "Ein lebhaftes, eigenwilliges Mädchen, das sich für alles interessiert, was Mädchen in seinem Alter so mögen, wie zum Beispiel die Fotografie.<br />Nachdem sie aus einem umhertreibenden Stück ewigen Eises erwachte, hatte sie keinerlei Erinnerungen an seine eigene Vergangenheit. Obwohl sie anfangs aufgrund seiner unklaren Identität niedergeschlagen war, beschloss sie, sich nach dem Datum der Erlösung zu benennen.<br />Und so wurde an jenem Tag 7. März geboren.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Figurenprofil: Teil I",
+   "text": "Warum macht 7. März Fotos?<br />„Erstens sollten Mädchen wie ich ein solches Hobby haben.“<br />„Außerdem vergesse ich nichts, von dem ich ein Foto habe.“<br /><br />Was hat 7. März über Fotografie gelernt?<br />„Die erste Regel lautet: Auch wenn man im Dunkeln Gerichte fotografiert, sollte trotzdem jedes Detail dieser Gerichte zu erkennen sein, denn wie beim Essen gilt auch beim Fotografieren: Jedes Detail zählt.<br />Regel Nummer zwei: Solange man mit geschlossenen Augen ein Foto macht, kann man auch den Ausdruck des Motivs mit geschlossenen Augen einfangen.“<br /><br />Warum hat 7. März immer ihre Kamera dabei?<br />„Falls mich jemals wieder jemand im Eis einsperrt, habe ich wenigstens meine Kamera dabei!“<br /><br />Warum verwendet 7. März nicht einfach die Kamera ihres Handys?<br />„Oh ja, warum eigentlich nicht? ... Na, weil ich Kameras liebe!“",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>20</nobr> freigeschaltet"
+  },
+  {
+   "title": "Figurenprofil: Teil II",
+   "text": "7. März’ Fähigkeit heißt „Sechsstufiges Eis“, aber sie betont stets, dass es sich dabei nicht um Eis, sondern um eine Art verdichteten Kristall handelt.<br />„Also bitte, Eis sieht bei Weitem nicht so schön aus.“<br /><br />Die Pfeile und Bogen, die 7. März im Kampf benutzte, wurden ebenfalls aus Sechsstufigem Eis geformt, doch sie war mit dieser Bewaffnung nicht zufrieden.<br />„Keiner der großen Krieger verwendet einen Bogen!<br />Abgesehen davon passiert überhaupt nichts, wenn ich einen Pfeil auf meinen Schild schieße!“<br /><br />7. März hat außerdem ausgiebig eine Fertigkeit namens „Sternenriss: Großschwert aus Glas“ trainiert, aber bisher nur mit mäßigem Erfolg.<br />„Drei, sollte es sich dem Namen zufolge nicht um ein Großschwert handeln?“<br />„Nun, das würde sich aber bei Weitem nicht so gut anfühlen wie eine Eisskulptur ... Zack.“",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>40</nobr> freigeschaltet"
+  },
+  {
+   "title": "Figurenprofil: Teil III",
+   "text": "Verglichen mit dem Schaffner Pom-Pom, der Pilotin Himeko, dem Wächter Dan Heng und dem Alleskönner Welt fällt es selbst 7. März schwer, ihre Rolle an Bord des Expresses zu erklären, obwohl sie sich selbst als „Kriegerin“ bezeichnet.<br />Doch jeder von 7. März’ Schritten hat einen Einfluss auf das Verhalten der Besatzung.<br /><br />„Passagierin 7. März rutschte aus und fiel hin ...“<br />„Drei, Vorsicht vor der Galenitkugel über deinem Kopf.“<br />„Drei, hast du schon Fotos von diesem Anblick dort drüben gemacht?“<br />„Ich glaube Drei. Wenn sie sagt, es schmeckt nicht, dann kann es wirklich nicht besonders lecker sein.“<br /><br />Es stimmt nicht, dass 7. März allen ständig nur Sorgen bereitet. Man könnte eher sagen, dass sie dabei ist, einen Platz in ihren Herzen zu erobern.<br />7. März ist sich dessen natürlich nicht bewusst, und sie hat damit zu kämpfen, die richtige Rolle für Trailblazer zu finden.",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>60</nobr> freigeschaltet"
+  },
+  {
+   "title": "Figurenprofil: Teil IV",
+   "text": "7. März erwachte an einem nicht allzu üblen Ort, nachdem sie im Weltraum umhergetrieben war.<br />Sie kam auf einem vorüberfahrenden Zug zu sich und die Leute sahen alle ziemlich freundlich aus.<br />Das einzige Problem ist, dass sie zwar einigermaßen versteht, was um sie herum geschieht, aber noch immer nichts über sich selbst weiß.<br /><br />„Wer bin ich? Woher komme ich ...?“<br /><br />Während 7. März sich selbst im Spiegel betrachtete und die verschiedenen Outfits von Himeko anprobierte, dachte sie sich Dutzende von möglichen früheren Leben aus.<br />Doch sie wusste immer noch nicht, wie ihre Vergangenheit wirklich ausgesehen hatte und was für eine Vergangenheit man bei einem Mädchen wie ihr erwarten könnte ...<br />7. März hat keine Vergangenheit, lediglich eine Gegenwart und eine Zukunft.<br />Das macht ihr Angst, dennoch ist sie zuversichtlich.",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>80</nobr> freigeschaltet"
+  }
+ ],
+ "archive": {
+  "cvCn": "诺亚",
+  "cvJp": "小倉唯",
+  "cvKr": "정혜원",
+  "cvEn": "Skyler Davenport",
+  "camp": "Astralexpress"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "mar7th"
+}

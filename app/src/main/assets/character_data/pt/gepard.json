@@ -1,0 +1,2358 @@
+{
+ "name": "Gepard",
+ "spRequirement": 100,
+ "rarity": 5,
+ "descHash": "Capitão dos Guardas Crinalva e um grande guerreiro de Belobog. É extremamente meticuloso e atencioso, além de sempre manter sua própria honra.",
+ "iconPath": "0696b2bfa4fa4763b3e71ddcb8b490aaae91958a512d1e596fad958e897a87b1",
+ "bgPath": "34112491e4e2f1753f3a9feff6358cd5f2e962c7db95a2ec37203d269fa39f68",
+ "figPath": "e1621b800d1d24167145dbd903cf2a06a6738e176945dedd106bf30ff302a8f8",
+ "fgPath": "8506127b2274a60fe0f8b8fe21965e0a91400c6a20e87c59d2b4a0d8ea36adfa",
+ "artPath": "c5bcfec01ce392f42654d5be48bfeceb4ba8b53eeee3e5c9263f3c53b00a9174",
+ "miniIconPath": "cff242d83528bc8051b118c1a90ec6a5d6f63091acfaf0e139e8ba0532715f6e",
+ "splashIconPath": "e07822c72adcb2a0a71907bbfe48f7da04a9e34eda152ecbf8ce6d8ec64e313f",
+ "damageType": {
+  "id": 4,
+  "iconPath": "3a4e72fd1d4a41926980ab22b12c81cde3147050577efcfdac462e0f60271b9f",
+  "color": "#47C7FD",
+  "name": "Gelo",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "129eb76a6f0c9be69f8c2263f5e53030909c36d7e4de7a0571dd5665ac645b33",
+  "altIconPath": "9d034d41c43efff65e81e11d6215e3ce43eb0a2e32036648f707751a8d0a15b6",
+  "color": "#FFFFFF",
+  "name": "A Preservação",
+  "rarity": 0
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 6,
+  "iconPath": "7ffdd2cf6f7c119724e700bbf531b0ff62f3f1e2c32159e1a1f2bc6c77416163",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Crédito",
+   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
+   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
+   "purpose": "Moeda Comum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cálice (Grande Mina)",
+    "Recompensas de Missão",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "67219": {
+   "id": 67219,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "03a85f3ccfcb36eb4e371d602e552113e1ada82e6ca848ca9d4f2761f6991e5e",
+   "name": "Chifre de Neve",
+   "desc": "Chifre quebrado de um Gatuno Glacial. Pode ser usado para Ascensão de personagens de Dano de Gelo.",
+   "lore": "Os Guardas Crinalva organizavam competições onde o vencedor deveria, em um tempo definido, buscar partes do corpo de um monstro. Este chifre quebrado e gelado deve ter sido um troféu dessas competições.<br /><br />\"Sr. Bova, isso não é um chifre de alce, e muito menos algo apropriado para decorar a fornalha de Geoessência.\"",
+   "purpose": "Materiais de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/67219",
+   "comeFrom": [
+    "Sombra Estagnada (Corredor de Ecos Atenuados)",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "name": "Rastros de Destino",
+   "desc": "Material avançado para subir o nível de Rastros.",
+   "lore": "Sua vitória é garantida por inúmeras falhas, e os pequenos passos que você deu levaram a uma reviravolta do destino.",
+   "purpose": "Materiais de Rastro",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Recompensas de Pontuação do Universo Simulado",
+    "Honra dos Inominados",
+    "Troca de Brasas",
+    "Recompensas de Evento por Tempo Limitado"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "ed0c6ddf746bb8fe5f178943cd2836c9c4f98c2647479d389e2640b5f38d1317",
+   "name": "Lamento do Guardião",
+   "desc": "Material avançado para subir o nível de Rastros.",
+   "lore": "A viseira não é a única coisa que está quebrada. Junto, está o desejo distorcido de uma guardiã.<br />Ela queria encontrar uma saída para que seu povo fugisse de Inverno Eterno, mas acabou se tornando uma marionete de forças superiores.<br /><br />\"Guardiã Suprema é um título passado por gerações de governantes de Belobog. O que ninguém entende é que as guardiãs também anseiam por cuidado e proteção.\"",
+   "purpose": "Materiais de Rastro",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "Eco da Guerra (Colina do Inverno Eterno)"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "name": "Guia do Viajante",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>20.000</nobr> de EXP de Personagem.",
+   "lore": "Leitura obrigatória para explorar o mundo. Pressione o botão \"Ler\" para reproduzir uma voz atraente num idioma que você entenda falando sobre os encontros lendários de aventureiros renomados em diferentes mundos, bem como a sabedoria e o conhecimento precioso que eles acumularam.<br /><br />\"A novíssima série do Guia do Viajante, 'Manual de Gastronomia Galáctica do Chefe', já está disponível para compra.\"<br />\"Para fazer pedidos, envie um sinal de sinestesia para ERD<nobr>-23</nobr>θ e entre em contato com um representante da Guilda de Intelectuais. Temos várias formas de pagamento.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Salão Esquecido"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "name": "Registro de Aventura",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>5.000</nobr> de EXP de Personagem.",
+   "lore": "Coleção bem-organizada de notas de aventura educacional contendo incontáveis ilustrações e textos com histórias completas, bem como informações valiosas e técnicas de sobrevivência.<br /><br />\"Por que não digitalizamos isso e guardamos em um disco de fotolitografia? Seria muito mais prático.\"<br />\"Tecnologia avançada é muito mais frágil do que você imagina diante de tempestades estelares e erupções de fluxo de neurônios. Além disso, tenho certeza de que o autor deste livro gostaria que as pessoas o lessem da forma mais simples possível.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Treinamento Diário"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "name": "Encontros de Viagens",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>1.000</nobr> de EXP de Personagem.",
+   "lore": "Diário de viagem com assuntos aleatórios escritos numa letra feia. Não tem muita utilidade.<br /><br />\"Dan Heng, termine logo de ler isso para jogarmos fora.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "2901efa774991b0ce2037520ce85ff99af64f37ee6364ffda560278736df6a19",
+   "name": "Distintivo Crinalva",
+   "desc": "Distintivo usado por soldados das Guardas Crinalva. Material bruto usado para aprimoramentos.",
+   "lore": "Está cheio de arranhões da erosão do vento e da neve.<br /><br />\"Em tempos antigos, só tinha uma maneira de um Guarda Crinalva se aposentar: morrendo.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "Planícies Nevadas Distantes: Guardas Crinalva ou outros inimigos",
+    "Corredor de Ecos Atenuados: Habitantes da Sombra do Inverno Eterno ou outros inimigos",
+    "Inimigos do Universo Simulado",
+    "Recompensas de Atribuição",
+    "Troca de Brasas",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "042dc7973ef7c36858a4aa58ef7d32335f528b3c4bc4f0c4ce2e7f401039a7c5",
+   "name": "Insígnia Crinalva",
+   "desc": "Insígnia de patente militar usada pelos capitães da Guarda Crinalva. Material normal usado para aprimoramentos.",
+   "lore": "Pode ser uma prova de heroísmo para se gabar dentro de casa, como pode também ser um amuleto da sorte para proteger você de um tiro.<br /><br />\"Os tempos mudaram.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "Planícies Nevadas Distantes: Guardas Crinalva ou outros inimigos - Nível de Equilíbrio 2+",
+    "Corredor de Ecos Atenuados: Habitantes da Sombra do Inverno Eterno ou outros inimigos - Nível de Equilíbrio 2+",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "635668": {
+   "id": 635668,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "751785c1795d0c216b39deec5fa263ee8119f6295a1582c75e5f4a958a17a385",
+   "name": "Resistência de Bronze",
+   "desc": "Um antigo escudo de bronze grosseiro, mas durável. Usado para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Preservação</span>.",
+   "lore": "Lendas antigas contam a história de uma guerra onde humanos esgotaram todos os recursos primitivos, seguindo seus deuses na batalha contra bestas extremamente poderosas.<br />Este escudo é testemunha dessa guerra.<br /><br />\"Não há escolha a não ser pará-los, mesmo que os esforços sejam inúteis.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/635668",
+   "comeFrom": [
+    "Cálice (Zona de Abastecimento)"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "name": "Medalha Crinalva",
+   "desc": "Medalha de honra usada por soldados da Guarda Crinalva concedida por mérito e serviços prestados. Material avançado usado para aprimoramentos.",
+   "lore": "Uma prova de honra concedida àqueles que lutam contra criaturas do Fragmentum, Subterrenos e desastres repentinos.<br />Geralmente seu portador não a carrega no peito, a não ser que esteja dentro de um caixão.<br /><br />\"Lembre-se, jovem Gepard, isso não é um brinquedo: é o destino e o sangue da família Landau.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "Planícies Nevadas Distantes: Guardas Crinalva ou outros inimigos - Nível de Equilíbrio 4+",
+    "Corredor de Ecos Atenuados: Habitantes da Sombra do Inverno Eterno ou outros inimigos - Nível de Equilíbrio 4+",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "836254": {
+   "id": 836254,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1313f4b8549d0b129fb33fcd3745a87a8030d13fc8c28159f0dd2868a203ac2f",
+   "name": "Proteção de Âmbar",
+   "desc": "Um escudo incomum imbuído com âmbares extraídos de locais que vão além dos céus. Usado para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Preservação</span>.",
+   "lore": "O portador deste escudo aparentemente é protegido por uma parede invisível, imune a flechas de fogo ou garras robustas.<br />Lendas antigas contam a história de uma guerra onde um herói tribal portando um escudo de bronze lutou contra um Leviatã, junto com guerreiros armados com lanças ardentes.<br />Este escudo é testemunha dessa guerra.<br /><br />\"Não cruze a linha.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/836254",
+   "comeFrom": [
+    "Cálice (Zona de Abastecimento)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  },
+  "920195": {
+   "id": 920195,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "40bec463d92cede13fc22b7ac618c83f9d27e06e1a8c95a37d32cedc83fffe17",
+   "name": "Juramento de Aço",
+   "desc": "Um escudo forjado com a perícia insubstituível de uma liga desconhecida. Usado para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Preservação</span>.",
+   "lore": "Pode até ser um escudo grande, mas é leve como uma pena. Mesmo que receba um ataque poderoso, nenhuma marca é vista na face do escudo.<br />Lendas antigas contam a história de uma guerra onde guerreiros de espíritos elevados empunhavam lanças e escudos radiantes forjados de Aço Congelado para defender uma nação destinada a cair diante da guerra.<br />Este escudo é testemunha dessa guerra.<br /><br />\"Vozes poderosas ecoam: Os inimigos estão diante de nós!\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/920195",
+   "comeFrom": [
+    "Cálice (Zona de Abastecimento)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549407,
+     "count": 5
+    }
+   ],
+   "attackBase": 73.92,
+   "attackAdd": 3.696,
+   "hpBase": 190.08,
+   "hpAdd": 9.504,
+   "defenseBase": 89.1,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549407,
+     "count": 10
+    }
+   ],
+   "attackBase": 103.488,
+   "attackAdd": 3.696,
+   "hpBase": 266.112,
+   "hpAdd": 9.504,
+   "defenseBase": 124.74,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633348,
+     "count": 6
+    },
+    {
+     "id": 67219,
+     "count": 3
+    }
+   ],
+   "attackBase": 133.056,
+   "attackAdd": 3.696,
+   "hpBase": 342.144,
+   "hpAdd": 9.504,
+   "defenseBase": 160.38,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633348,
+     "count": 9
+    },
+    {
+     "id": 67219,
+     "count": 7
+    }
+   ],
+   "attackBase": 162.624,
+   "attackAdd": 3.696,
+   "hpBase": 418.176,
+   "hpAdd": 9.504,
+   "defenseBase": 196.02,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717289,
+     "count": 6
+    },
+    {
+     "id": 67219,
+     "count": 20
+    }
+   ],
+   "attackBase": 192.192,
+   "attackAdd": 3.696,
+   "hpBase": 494.208,
+   "hpAdd": 9.504,
+   "defenseBase": 231.66,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717289,
+     "count": 9
+    },
+    {
+     "id": 67219,
+     "count": 35
+    }
+   ],
+   "attackBase": 221.76,
+   "attackAdd": 3.696,
+   "hpBase": 570.24,
+   "hpAdd": 9.504,
+   "defenseBase": 267.3,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 251.328,
+   "attackAdd": 3.696,
+   "hpBase": 646.272,
+   "hpAdd": 9.504,
+   "defenseBase": 302.94,
+   "defenseAdd": 4.455,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 92,
+   "speedAdd": 0
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "",
+   "artPath": "40ea7e986a0ba510073b959d4bffb40d9e888d3bce8018f15e35ce8c6c194c30",
+   "name": "Esforço Necessário",
+   "descHash": "Ao usar a Perícia, aumenta a chance-base de causar Congelamento ao inimigo atingido em <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.35
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "",
+   "artPath": "56b9b0d55a492e92c8e7869e8c87bfda002669772b49f11dbe69f3b41f34da18",
+   "name": "Frio Perdurante",
+   "descHash": "Depois que um inimigo Congelado pela Perícia descongela, a VEL dele é reduzida em <nobr>#1[i]%</nobr> por <nobr>#2[i]</nobr> rodada(s).",
+   "params": [
+    0.2,
+    1
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "",
+   "artPath": "1b61fa938f72eac53422f79f17b50342e9e8c732e79b23af0027f7b0aacdc7ce",
+   "name": "Nunca Se Renda",
+   "descHash": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "",
+   "artPath": "2ac465e7f349b630aa2b0f442a0ab0e037ad2fbd51b519c65d83f278a8187c39",
+   "name": "A Fé Move Montanhas",
+   "descHash": "Quando Gepard estiver em batalha, a RES a Efeito de todos os aliados aumenta em <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "",
+   "artPath": "ddb303335c81a925f1215123b30ef6a25bb787db4d88b7c90adcc3cad3bb9e61",
+   "name": "Punho de Ferro Gélido",
+   "descHash": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "",
+   "artPath": "a6deb836531fc2a96fd05a74cece35d2c4399a497f4a5a71dc41172e36b41821",
+   "name": "Determinação Inabalável",
+   "descHash": "Quando seu Talento for ativado, a ação de Gepard é Avançada Adiante em <nobr>100%</nobr>, e ele restaura <nobr>#1[i]%</nobr> de seus PV máximos como PV extras.",
+   "params": [
+    0.5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   866633
+  ],
+  [
+   983278
+  ],
+  [
+   67219
+  ],
+  [
+   151160
+  ],
+  [
+   468391
+  ]
+ ],
+ "skills": [
+  {
+   "id": 866633,
+   "name": "Punho da Condenação",
+   "tagHash": "Alvo Único",
+   "descHash": "Causa Dano de <span style=\"color:#47C7FD;\">Gelo</span> igual a <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Gepard a um único inimigo.",
+   "typeDescHash": "ATQ Básico",
+   "iconPath": "86f4ab2ddba799691718737ac0d50e86939c71341075dfedff87448a7d119138",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.7
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.8
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.9
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.1
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 8,
+     "params": [
+      1.2
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 9,
+     "params": [
+      1.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 983278,
+   "name": "Golpe Intimidador",
+   "tagHash": "Incapacitação",
+   "descHash": "Causa Dano de <span style=\"color:#47C7FD;\">Gelo</span> igual a <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Gepard a um único inimigo, com <nobr>#2[i]%</nobr> de <u>chance-base</u> de o inimigo sofrer Congelamento por <nobr>#3[i]</nobr> rodada(s).<br />Durante o Congelamento, o inimigo não pode agir e sofre Dano <u>Adicional</u> de <span style=\"color:#47C7FD;\">Gelo</span> igual a <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]%</nobr></span> do ATQ de Gepard no início de cada rodada.",
+   "typeDescHash": "Perícia",
+   "iconPath": "b019a13d800df94a29d24ea36e0e9ef56fa814ef42a45f2e5dd3b89dd4361797",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      1,
+      0.65,
+      1,
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      1.1,
+      0.65,
+      1,
+      0.33
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      1.2,
+      0.65,
+      1,
+      0.36
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      1.3,
+      0.65,
+      1,
+      0.39
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      1.4,
+      0.65,
+      1,
+      0.42
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      1.5,
+      0.65,
+      1,
+      0.45
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      1.625,
+      0.65,
+      1,
+      0.4875
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      1.75,
+      0.65,
+      1,
+      0.525
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      1.875,
+      0.65,
+      1,
+      0.5625
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      2,
+      0.65,
+      1,
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      2.1,
+      0.65,
+      1,
+      0.63
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      2.2,
+      0.65,
+      1,
+      0.66
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      2.3,
+      0.65,
+      1,
+      0.69
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      2.4,
+      0.65,
+      1,
+      0.72
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      2.5,
+      0.65,
+      1,
+      0.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 67219,
+   "name": "Muralha Resistente",
+   "tagHash": "Defesa",
+   "descHash": "Aplica um Escudo a todos os aliados, absorvendo Dano igual a <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr> </span>da DEF de Gepard mais <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#3[i]</nobr> </span>por <nobr>#2[i]</nobr> rodada(s).",
+   "typeDescHash": "Perícia Suprema",
+   "iconPath": "c1909a1a7b0f45d66ab7389d1a04384fa9353dc3ee107b5d928105020097ad41",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.3,
+      3,
+      150
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.31875,
+      3,
+      240
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.3375,
+      3,
+      307.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.35625,
+      3,
+      375
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.375,
+      3,
+      420
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.39,
+      3,
+      465
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.405,
+      3,
+      498.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.42,
+      3,
+      532.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.435,
+      3,
+      566.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.45,
+      3,
+      600
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.465,
+      3,
+      633.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.48,
+      3,
+      667.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.495,
+      3,
+      701.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.51,
+      3,
+      735
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.525,
+      3,
+      768.75
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 100
+  },
+  {
+   "id": 151160,
+   "name": "Vontade Inabalável",
+   "tagHash": "Restauração",
+   "descHash": "Ao ser alvo de um golpe fatal, em vez de ficar <u>derrubado</u>, Gepard restaura imediatamente <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de seus PV máximos. Este efeito só pode ser ativado uma vez por batalha.",
+   "typeDescHash": "Talento",
+   "iconPath": "a40bef4869899186a858f02ef602213feabe267f01d5cd6792498e13b9e6c8f5",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.25
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 2,
+     "params": [
+      0.275
+     ],
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 3,
+     "params": [
+      0.3
+     ],
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 4,
+     "params": [
+      0.325
+     ],
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 5,
+     "params": [
+      0.35
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 6,
+     "params": [
+      0.375
+     ],
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "level": 7,
+     "params": [
+      0.40625
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "level": 8,
+     "params": [
+      0.4375
+     ],
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "level": 9,
+     "params": [
+      0.46875
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 10,
+     "params": [
+      0.5
+     ],
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "level": 11,
+     "params": [
+      0.525
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 12,
+     "params": [
+      0.55
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 13,
+     "params": [
+      0.575
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 14,
+     "params": [
+      0.6
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "level": 15,
+     "params": [
+      0.625
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 351746,
+   "name": "Ataque",
+   "tagHash": "",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do alvo inimigo do Tipo correspondente.",
+   "typeDescHash": "",
+   "iconPath": "86f4ab2ddba799691718737ac0d50e86939c71341075dfedff87448a7d119138",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  },
+  {
+   "id": 468391,
+   "name": "Camaradagem",
+   "tagHash": "Defesa",
+   "descHash": "Após Gepard usar sua Técnica, quando a próxima batalha começar, um Escudo será aplicado a todos os aliados, absorvendo Dano igual a <nobr>#1[i]%</nobr> da DEF de Gepard mais <nobr>#3[i]</nobr> por <nobr>#2[i]</nobr> rodada(s).",
+   "typeDescHash": "Técnica",
+   "iconPath": "d077f03c4e71b12749241449629c3becef9b3912d3299ac7e9bfba016aa7c941",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "level": 1,
+     "params": [
+      0.24,
+      2,
+      150
+     ],
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ],
+   "ultimateCost": 0
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1104103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1104208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1104209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 303359,
+        "name": "Bônus de RES a Efeito",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+        "statusList": [
+         {
+          "key": "RES a Efeito",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836254,
+          "count": 8
+         },
+         {
+          "id": 717289,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1104210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 419995,
+        "name": "Bônus de Dano: Gelo",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+        "statusList": [
+         {
+          "key": "Bônus de Dano de <span style=\"color:#47C7FD;\">Gelo</span>",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836254,
+          "count": 8
+         },
+         {
+          "id": 717289,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 303358,
+      "name": "Bônus de DEF",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+      "statusList": [
+       {
+        "key": "DEF",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836254,
+        "count": 8
+       },
+       {
+        "id": 717289,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "id": 303254,
+    "name": "Ânimo de Lutar",
+    "descHash": "O ATQ de Gepard aumenta em <nobr>#1[i]%</nobr> de sua DEF atual. Este efeito é renovado no início de cada rodada.",
+    "iconPath": "2cd5543062f2740d57c143b05ae1d991bd895f75edfd9eb2aeea50cb10fc8750",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "level": 1,
+      "params": [
+       0.35
+      ],
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836254,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ],
+    "ultimateCost": 0
+   }
+  },
+  {
+   "id": 1104201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1104101,
+     "type": 1,
+     "children": [
+      {
+       "id": 1104202,
+       "type": 2,
+       "children": [
+        {
+         "id": 1104203,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 303349,
+          "name": "Bônus de Dano: Gelo",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+          "statusList": [
+           {
+            "key": "Bônus de Dano de <span style=\"color:#47C7FD;\">Gelo</span>",
+            "value": 0.032
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920195,
+            "count": 3
+           },
+           {
+            "id": 633348,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 303348,
+        "name": "Bônus de RES a Efeito",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+        "statusList": [
+         {
+          "key": "RES a Efeito",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 5000
+         },
+         {
+          "id": 635668,
+          "count": 3
+         },
+         {
+          "id": 549407,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "id": 303252,
+      "name": "Integridade",
+      "descHash": "Gepard tem mais chance de ser atacado por inimigos.",
+      "iconPath": "2868135c9d13bee8ad2a4e6fa72393cf4c2d8c69534c266dd60130610af518fe",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "levelData": [
+       {
+        "level": 1,
+        "params": [
+         3
+        ],
+        "levelReq": 0,
+        "promotionReq": 2,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 5000
+         },
+         {
+          "id": 635668,
+          "count": 3
+         },
+         {
+          "id": 270195,
+          "count": 1
+         }
+        ]
+       }
+      ],
+      "ultimateCost": 0
+     }
+    },
+    {
+     "id": 1104102,
+     "type": 1,
+     "children": [
+      {
+       "id": 1104205,
+       "type": 2,
+       "children": [
+        {
+         "id": 1104206,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 303344,
+          "name": "Bônus de RES a Efeito",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+          "statusList": [
+           {
+            "key": "RES a Efeito",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836254,
+            "count": 3
+           },
+           {
+            "id": 717289,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 303347,
+        "name": "Bônus de Dano: Gelo",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+        "statusList": [
+         {
+          "key": "Bônus de Dano de <span style=\"color:#47C7FD;\">Gelo</span>",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 20000
+         },
+         {
+          "id": 920195,
+          "count": 5
+         },
+         {
+          "id": 633348,
+          "count": 4
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "id": 303255,
+      "name": "Comandante",
+      "descHash": "Quando a \"Vontade Inabalável\" for ativada, a Energia de Gepard será restaurada para <nobr>100%</nobr>.",
+      "iconPath": "6763442330252266961d0d23e21bed264bd719bc788945eeb145a9abfa167df4",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "levelData": [
+       {
+        "level": 1,
+        "params": [],
+        "levelReq": 0,
+        "promotionReq": 4,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 20000
+         },
+         {
+          "id": 920195,
+          "count": 5
+         },
+         {
+          "id": 125435,
+          "count": 1
+         },
+         {
+          "id": 270195,
+          "count": 1
+         }
+        ]
+       }
+      ],
+      "ultimateCost": 0
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 303351,
+    "name": "Bônus de Dano: Gelo",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+    "statusList": [
+     {
+      "key": "Bônus de Dano de <span style=\"color:#47C7FD;\">Gelo</span>",
+      "value": 0.032
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549407,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1104204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 303346,
+    "name": "Bônus de DEF",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+    "statusList": [
+     {
+      "key": "DEF",
+      "value": 0.05
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 10000
+     },
+     {
+      "id": 920195,
+      "count": 3
+     },
+     {
+      "id": 633348,
+      "count": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": 1104207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 303345,
+    "name": "Bônus de Dano: Gelo",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177",
+    "statusList": [
+     {
+      "key": "Bônus de Dano de <span style=\"color:#47C7FD;\">Gelo</span>",
+      "value": 0.048
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 45000
+     },
+     {
+      "id": 836254,
+      "count": 3
+     },
+     {
+      "id": 717289,
+      "count": 3
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corpo",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "DEF",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "Pés",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "DEF",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "Esfera Plana",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "DEF",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+   },
+   {
+    "relicTypeHash": "Corda de Ligação",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "Taxa de Regeneração de Energia",
+    "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Primeiro Encontro",
+   "text": "Meu nome é Gepard Landau, sou o capitão dos Guardas Crinalva. Se descobrir alguma coisa suspeita na cidade, sempre pode me informar.",
+   "unlockRequirement": "",
+   "cnUrl": "72890afe2e60cec8a13be2c476db4a77ca06284e2fa56dee5440dca11f0dabf4",
+   "jpUrl": "05334b123d37ddd3fa32d0d49ef725043312feffe972acd129faac95a24cd9bf",
+   "enUrl": "690627c4f90e8c1be7d5f4c0ca7039fbe353abab94a2a110c2f57173cbe0f19c",
+   "krUrl": "bacff2e16eaadd6bcc5592239bd11a208030e9dcb3bd2c206ef4c52af293bd8f"
+  },
+  {
+   "id": 2,
+   "title": "Cumprimento",
+   "text": "Você está aqui. Acabei de treinar.",
+   "unlockRequirement": "",
+   "cnUrl": "687ea41f875942f6b7ddb63858397d17ed9b0fb4ca59f8a92476c60f2bb70f53",
+   "jpUrl": "4c04626530ca04489981c11ff82951143e83d2e0bb0ae3d2b075e33f3925d2e2",
+   "enUrl": "f769f01da9e8069af45575dad2485d9eca6ca8059a4dbc57f1e4ac6fcf76dba2",
+   "krUrl": "3a06076eecf664ca4f452419f9f2d34cf7255ba40e3efb48dc710c4843aeb172"
+  },
+  {
+   "id": 3,
+   "title": "Despedida",
+   "text": "Perdão, ainda tenho um treinamento. Tenho que ir.",
+   "unlockRequirement": "",
+   "cnUrl": "8bd1b5476acd7820224c088c4b1d9cc2cd53554a860037dbfe70f2a6636c3937",
+   "jpUrl": "3590be049fccc2a24253ea0929964e9d670142fd7086f0239376dbcfab936c8e",
+   "enUrl": "176269ef8f56721f126b9a037f301fef2efa23fd9d7a1184339ff6cb228295ef",
+   "krUrl": "13dfbb072bf36c0a546fffeaaf04d26f9b0a872998be18c8be394d1dc5961304"
+  },
+  {
+   "id": 4,
+   "title": "Sobre Si",
+   "text": "Como um Guarda Crinalva, eu sigo o juramento não porque tenho medo de desobedecê-lo, mas porque sou obrigado a segui-lo.",
+   "unlockRequirement": "",
+   "cnUrl": "3e7ee0366742917c10500e5c5c7618407c400a0a9d2b8c61c3e8b9c3b09f9a32",
+   "jpUrl": "0f28fb2baf29345728a29eac5e39d5708f7f69411a3c8c2da9645226c8233c28",
+   "enUrl": "d0fc506a7f81f46b34ba5f83cde262654ebdcb0cfc3139466cead3da2e249a09",
+   "krUrl": "d8f4860e173f7af060a72add20ebeeb556227a67f9cd5b1579ac536b59b1975f"
+  },
+  {
+   "id": 5,
+   "title": "Bate-papo: Belobog",
+   "text": "Belobog está longe de ficar enterrada numa cortina de neve. Esta cidade é o último baluarte do planeta contra a ferocidade do Congelamento Eterno.",
+   "unlockRequirement": "",
+   "cnUrl": "a487738238bfb0d1f355618787aefc68241a975a45b229b7f1de9c37b7dc207a",
+   "jpUrl": "241c7166483bdd11a50b8fcd61721564816eb18131fdd7fc1463f733d5313a38",
+   "enUrl": "bee7ec3424b4e18877e8ec362abb6a9494feaec7760b19784826859958f5d8dd",
+   "krUrl": "5bb5dacb2b1a2faa5d32cb8ea441f9ba3e8424b54b348e977abc80d9ae20a583"
+  },
+  {
+   "id": 6,
+   "title": "Hobbies",
+   "text": "Cultivo flores, ah... mas não sou muito bom nisso.",
+   "unlockRequirement": "",
+   "cnUrl": "3bc60faf4d80fd7586f34be3fc4350f24fd0636146835d7001fbc4eb623a384d",
+   "jpUrl": "7eb25f4e148cf21f8c0cbaad08856621337dcb85ca884675da67fc8dfdb187b4",
+   "enUrl": "0534137ccd37613b00ed784bcbe113b2de6a4cea35761dca48a69b89f307e94e",
+   "krUrl": "b19f453253b08e2e9128b6f38d6d23f4cc6635e56b65cf258d99d0ba82b385f1"
+  },
+  {
+   "id": 7,
+   "title": "Irritações",
+   "text": "As músicas da minha irmã são muito populares entre os Guardas, sempre tem alguém cantando quando não está em serviço. Recentemente, vi que eu mesmo estava cantarolando sem perceber, mesmo em serviço... *suspiro*",
+   "unlockRequirement": "",
+   "cnUrl": "45030fcacac5d7ae81201c33550bc413ee36b778a4fa51f29009f1e2f6aa4bce",
+   "jpUrl": "82c7ca4cd2da584b20198717baa5c2469749a1f503b6f7671ff849fe5ca2b786",
+   "enUrl": "ef13ff4980ffc7690b3ff0b791fea1e208412625b068fe315ab94ab020dd88e0",
+   "krUrl": "7749e96703a6b2e3f188c9a9fc582955b98114dfed4bddef5cebd018914c9861"
+  },
+  {
+   "id": 8,
+   "title": "Uma Curiosidade",
+   "text": "A família Landau tem a honra e a responsabilidade de servir às guardiãs supremas há gerações. Só ao virar um escudo para as pessoas é que você se torna digno do título \"Arquiteto.\"",
+   "unlockRequirement": "",
+   "cnUrl": "1fa9277e57f949fd71f9d4663a55b598958c0d99d26ece2c58e41f6b30f08a5c",
+   "jpUrl": "2b4e693fe9b3389834235a951d3a1e57ee3b4b9b22b6c3dd8d84e0fdc09fb2b9",
+   "enUrl": "0ca28d1e0bc6a570906bd59ec347eaae537a73d52a34d0bcca24fac02dcc83ac",
+   "krUrl": "77c0e589fddefe83cf24abd035fb8ab3faef29b311d6908f6dc7e52394a76660"
+  },
+  {
+   "id": 9,
+   "title": "Conhecimento",
+   "text": "Ultimamente, muitas crianças vieram me perguntar como podem virar capitães... *suspiro* Sinceramente, o melhor conselho que posso dar é treinar e ter uma dieta equilibrada.",
+   "unlockRequirement": "",
+   "cnUrl": "14307587afdbe94c1882b85a5b843b0165aa90af1f223194bf66f820e7d760c3",
+   "jpUrl": "3f3fec8f3c9d838952b4770e4f1bb4f6239b4344496a500ecbb040d772407270",
+   "enUrl": "0c6bdf0d7efde09736f4a5f68a769596da60bcefaecdbbdf8d706d91a883edce",
+   "krUrl": "f75f8c9f5a57d982889da158c5f6296f41ac13a817999d0fd466ac4475dedcdb"
+  },
+  {
+   "id": 10,
+   "title": "Sobre Bronya",
+   "text": "A Dama Bronya já foi conosco a regiões muito perigosas na linha de frente, muitas vezes, na verdade.",
+   "unlockRequirement": "",
+   "cnUrl": "9afdee6bf476100dbffa88b713d5452f9964acec9a5ec82263d634621ff620a0",
+   "jpUrl": "d8d1cdf8e559c4184b1528284fd0377b0c8ffaa4b015a76e58161b9b7411864a",
+   "enUrl": "0c83d5b73c6362de215164be49d67867bfb34c7b1e91ae5c22de860992eeb4ef",
+   "krUrl": "0dbeef7826cc940d561f1a5166a30ce98f2c80398b500e866d45191f5429d7f0"
+  },
+  {
+   "id": 11,
+   "title": "Sobre Serval",
+   "text": "Muitas pessoas parecem gostar de falar sobre como minha irmã mudou depois que saiu da Guarda, mas, na verdade... Ela ainda é a mesma pessoa.",
+   "unlockRequirement": "",
+   "cnUrl": "4353735c2d46857710214d05fc1772336b63702302be241b39506fb9197103b3",
+   "jpUrl": "8103fbca0770244c7d6ea1ef626850e977c77b1fdcc40edbb14dfa029bba4736",
+   "enUrl": "f73dfafd94ead3c30468a606e27388b3a1cfdb72011663e196e46713317804c4",
+   "krUrl": "6664010611ef9657032b03400409c434bbf12aca0ff8558aba6d5ac32af4b375"
+  },
+  {
+   "id": 12,
+   "title": "Sobre Pela",
+   "text": "Soube que minha irmã pediu para Pela cuidar das minhas flores quando estou fora... Espero que isso não a incomode.",
+   "unlockRequirement": "",
+   "cnUrl": "c85485c84c4a4404df854c2b4837f6a60abd03dee27e8b8b59a1c6ea8ad2a374",
+   "jpUrl": "48ee9f40193cbc69159c4434d8d2760bbd15a4c81359c78cfe9a28a7d5f6cf04",
+   "enUrl": "3db6e08f6f5e795d35f7f7faf3cfc4e48d7ae13385b41a65707479c3f7c1dcd7",
+   "krUrl": "244d415f29fe1f4a3644fe2bf57d17e7c6a8f6f75976b1fde0377d8a8987c906"
+  },
+  {
+   "id": 13,
+   "title": "Sobre Cocolia",
+   "text": "Sempre acreditei que ninguém conhece e ama mais esta cidade do que a Guardiã Suprema.",
+   "unlockRequirement": "",
+   "cnUrl": "c318738e6b8b5b2bc9675af7974166b0f34631656ddd31060f6636e4bfc956d5",
+   "jpUrl": "c9c49f1796515332d389d9a755d515b48b41b6e7f239beceff86f7e0777411da",
+   "enUrl": "9d98191ca152189327cdcaf972f79eae927c603abd53b4bc9275ad074ca03085",
+   "krUrl": "5bc9f3f659eb244f5daded5c0574478c74838e2104713dcaf15573e50128f95d"
+  },
+  {
+   "id": 14,
+   "title": "Sobre Sampo",
+   "text": "Ele é muito... astuto. De acordo com as pistas dos cidadãos, ele tem várias relíquias antigas. Vendeu a maior parte delas, mas parece usar as outras para cometer fraudes.",
+   "unlockRequirement": "",
+   "cnUrl": "8f5ee637cd2b5890d7cfa9364227a0c46f2ee7e044136e95555be538c40bd727",
+   "jpUrl": "e5490d28041fb52200abac60be2b9ddad90e13f78bca5235a192718c5a2d96e4",
+   "enUrl": "740bf5232fc24c28ffbefcc4d34e1e2b8833bdc585c41e37706e78d70fea2487",
+   "krUrl": "2f3169e56ae2e3a82ef69b84759f5e70571ca9a6b83be2444dd71263573fafa9"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Detalhes de Personagem",
+   "text": "Capitão íntegro e honrado da Guarda Crinalva. Ele carrega o nome nobre da família Landau.<br />Em Belobog, uma cidade atingida pelo frio, a vida pode continuar normalmente...<br />Isso é possível graças a Gepard e seus Guardas Crinalva, que protegem a paz da vida cotidiana.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "História de Personagem: Parte I",
+   "text": "O jovem capitão permanece no topo da muralha norte.<br /><br />Ele examina as pálidas terras devastadas à frente e observa enquanto os estranhos seres do Fragmentum formavam um enxame fervilhante à distância, em meio à neve. Ele vê os destemidos Guardas Crinalva entrarem em formação para proteger a cidade, como um muro de defesa.<br /><br />Aquela era sua posição original. Anos atrás, quando ainda era um humilde soldado raso, ele jurou servir como o escudo mais forte de Belobog, que ficaria ao lado de seus companheiros e morreria com eles. Isso não mudaria mesmo ao se tornar capitão. Não era só papo furado dos Guardas Crinalva, Qlipoth era testemunha deste voto.<br /><br />No entanto, neste momento, ele não está onde deveria estar, e isso é por ordem da Guardiã Suprema.<br /><br />O que exatamente a Guardiã Suprema está pensando? O jovem capitão não faz ideia. Mas ele logo se força a se concentrar no conflito à sua frente.<br /><br />\"Lembre-se, Gepard Landau.\"<br />\"A dúvida gera arrogância, e a dúvida gera o mal. Como modelo para Belobog, você não pode pensar demais nas coisas.\"<br /><br />O jovem capitão permanece no topo da muralha norte.",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>20</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte II",
+   "text": "Depois da batalha mais épica da história, os poucos Guardas Crinalva sobreviventes voltaram para Belobog. Imediatamente a Guardiã Suprema ordenou um desfile para comemorar essa vitória tão sofrida. Durante mais de três dias e três noites, toda a cidade aproveitou o clima de festa, com muitas gargalhadas e alegria, e a festança culminou com uma cerimônia de condecoração para os Guardas Crinalva.<br /><br />Sob o olhar curioso da multidão, a Guardiã Suprema presenteou os soldados mais corajosos por um ótimo serviço militar. Este jovem capitão de uma casa nobre silenciosamente veste sua armadura forjada em Geoessência - leve, flexível, resistente e irradiando uma luz remanescente das auroras. Esta era a única impressão que ele tinha deste tesouro.<br /><br />Quantos dos companheiros dele haviam perdido a vida em troca daquela medalha gloriosa? Ele afasta esse pensamento. Ali, a única coisa que ele pode fazer para atender às expectativas da Guardiã Suprema e de toda Belobog é sorrir, porque é isso que um soldado leal deve fazer.<br /><br />No momento em que o capitão termina de vestir o braço da sua armadura, um raio de luz brilhante surge das juntas da sua proteção. A multidão irrompe em um longo e espontâneo aplauso.<br /><br />Ninguém vê os rostos exaustos por baixo dos capacetes daqueles Guardas Crinalva. Todos acham que aquela foi simplesmente uma vitória triunfal.",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>40</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte III",
+   "text": "A Guardiã Suprema fez a escolha certa.<br /><br />Depois da guerra, muitos residentes de Belobog finalmente puderam respirar aliviados e juntar os cacos das suas vidas. Porém, nem mesmo o próprio Capitão poderia ter imaginado que, depois dessa farsa da paz, eles enfrentariam uma guerra ainda maior e mais trágica. Sem ajuda de fora, esse conflito prolongado traria a destruição de toda Belobog.<br /><br />Agora, ele está conferindo se o seu escudo - o Fortificação - ainda está funcionando como antes. Esse aparelho de campo de força pesado foi feito à mão pela sua irmã a partir de uma maleta de instrumentos. E, se alguma coisa quebra, o pobre capitão depende de sua irmã rockeira para consertar.<br /><br />\"Gepard, se... Digo, se...\" Ele lembra das palavras dela. \"Se um dia a Guardiã Suprema ordenar que você abandone o povo de Belobog por um motivo dela... O que você faria?\"<br />\"Ela jamais faria isso. Ela é a Guardiã Suprema.\" Ele tinha certeza.<br />\"Estou falando hipoteticamente.\" Ela olhou para ele.<br />\"Não sei por que pergunta, mas fiz um Juramento da Preservação a Qlipoth. Vou proteger Belobog e seu povo a qualquer custo. Inclusive com a minha própria vida, é claro.\"<br />\"Se um dia proteger o povo significar desobedecer às ordens da Guardiã Suprema, e se qualquer escolha me puser em perigo, ainda assim, eu escolheria a primeira opção, porque é isso o que devo fazer.\"<br />Eles ficam em silêncio, até ela dar uma gargalhada.<br />\"Gepard, ah, Gepard...\"<br />\"Você é mesmo um Landau, não é?\"",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>60</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte IV",
+   "text": "O jovem capitão permanece no topo da muralha norte.<br /><br />Ele olha de rabo de olho para a adorada Guardiã. Ele a vê com a cabeça erguida enquanto ela olha para a nevasca, como se nada na cidade abaixo tivesse nada a ver com ela. O povo dela não poderia deixá-la feliz ou zangada, triste ou assustada. Há apenas o vazio naquele olhar.<br /><br />O que exatamente a Guardiã Suprema está pensando? O jovem capitão pensa e pensa, mas não encontra nenhuma resposta.<br /><br />A cacofonia de gaitas de foles elegantes explodindo no ar significa o início do ataque, partindo imediatamente a cortina de neve. E aqueles bravos guerreiros de uniforme azul respondem ao chamado, erguendo suas alabardas uma após a outra e direcionando as pontas para as hordas de monstros alienígenas. Sob a cobertura da artilharia, eles começam a sua investida em direção à morte.<br /><br />Gepard Landau, o que acha disso? O jovem capitão pensa e pensa.<br /><br />\"Lembre-se, Gepard Landau...\"<br />\"Você defenderá Belobog e seu povo a qualquer custo. Você jamais deverá decepcionar o povo que deveria proteger... Nunca traga desonra para o nome Landau!\"<br /><br />Desta vez, o jovem capitão finalmente encontra sua resposta conforme avança para o campo de batalha.",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>80</nobr> de Personagem"
+  }
+ ],
+ "archive": {
+  "cvCn": "马洋",
+  "cvJp": "古川慎",
+  "cvKr": "민승우",
+  "cvEn": "Bryson Baugus",
+  "camp": "Belobog"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "gepard"
+}

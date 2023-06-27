@@ -1,0 +1,497 @@
+{
+ "name": "Um Voto Secreto",
+ "rarity": 4,
+ "descHash": "O garoto sempre conferia se suas luvas e cotoveleiras estavam em bom estado antes de sair.<br />Ele dava mais valor às luvas do que a qualquer outra coisa, pois eram apertadas o bastante para esconder seus segredos.<br />Com essa camada de proteção, ninguém podia ver os curativos em sua mão e o ferimento por trás deles.<br />Ele era tratado como uma pessoa normal, recebido igual a todos.<br /><br />Era só isso que ele queria.",
+ "iconPath": "8dbd150ab2e1b6e0409338b255272350d1c9aae5eb53fbe0eec564e4ccd672ab",
+ "artPath": "7bb19adeb6960f0b1c30a548d92bdc551540db32df1de0537012bb0b5af2c4a2",
+ "mediumIconPath": "4b8458602923704819bc3e6f2452c8ad0fa854344523c4faccff9a24467c9b79",
+ "baseType": {
+  "id": 0,
+  "iconPath": "57e114954f0de32a3762e77aa2fd4f791deb47497337366308c51de1d0f12430",
+  "color": "#FFFFFF",
+  "name": "A Destruição",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "name": "Crédito",
+   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
+   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
+   "purpose": "Moeda Comum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cálice (Grande Mina)",
+    "Recompensas de Missão",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "2901efa774991b0ce2037520ce85ff99af64f37ee6364ffda560278736df6a19",
+   "name": "Distintivo Crinalva",
+   "desc": "Distintivo usado por soldados das Guardas Crinalva. Material bruto usado para aprimoramentos.",
+   "lore": "Está cheio de arranhões da erosão do vento e da neve.<br /><br />\"Em tempos antigos, só tinha uma maneira de um Guarda Crinalva se aposentar: morrendo.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "Planícies Nevadas Distantes: Guardas Crinalva ou outros inimigos",
+    "Corredor de Ecos Atenuados: Habitantes da Sombra do Inverno Eterno ou outros inimigos",
+    "Inimigos do Universo Simulado",
+    "Recompensas de Atribuição",
+    "Troca de Brasas",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "042dc7973ef7c36858a4aa58ef7d32335f528b3c4bc4f0c4ce2e7f401039a7c5",
+   "name": "Insígnia Crinalva",
+   "desc": "Insígnia de patente militar usada pelos capitães da Guarda Crinalva. Material normal usado para aprimoramentos.",
+   "lore": "Pode ser uma prova de heroísmo para se gabar dentro de casa, como pode também ser um amuleto da sorte para proteger você de um tiro.<br /><br />\"Os tempos mudaram.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "Planícies Nevadas Distantes: Guardas Crinalva ou outros inimigos - Nível de Equilíbrio 2+",
+    "Corredor de Ecos Atenuados: Habitantes da Sombra do Inverno Eterno ou outros inimigos - Nível de Equilíbrio 2+",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "635673": {
+   "id": 635673,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1cfcf420c7cd53b503eead070d126b1448cd68bf3f9b0ddca916d10b1747537b",
+   "name": "Lâmina Despedaçada",
+   "desc": "Fragmentos de arma deixados por membros da Legião Antimatéria. Usados para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Destruição</span>.",
+   "lore": "Essa marca representa seu ranque e feitos em nome da Destruição.<br />O mestre desta arma cavalga em um cavalo escarlate para incendiar cidades, para tomar a paz da humanidade e para destruir nações semelhantes a formigueiros.<br /><br />\"O portador desta marca é incumbido de acabar com a paz das nações.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/635673",
+   "comeFrom": [
+    "Cálice (Zona de Armazenamento)"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "Éter Refinado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>6000</nobr> de EXP de Cone de Luz.",
+   "lore": "Uma lata de éter que foi extraída e destilada usando procedimentos especiais.<br /><br />\"O Jardim espera poder recriar uma glória do passado, mas é uma 'glória do passado' selecionada por eles. Você entende?\"",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)",
+    "Salão Esquecido"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "91f62f32ecd1e7b88c9e30002d215b1a5936ac221782a17d2f34837a967ed557",
+   "name": "Éter Condensado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>2.000</nobr> de EXP de Cone de Luz.",
+   "lore": "Lata de éter refinado com técnicas especiais.<br /><br />\"Manuseie com cuidado, não deixe cair nem faça pressão sobre ela. Caso ocorra algum vazamento, consulte o capítulo II do \"Manual de Respostas a Desastres de Vazamentos\" para respostas de emergência.\"",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "554d37978b82c3f38bafee8771f8ab4248a1fe9d4e130bb5711064238666f491",
+   "name": "Éter Espalhado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>500</nobr> de EXP de Cone de Luz.",
+   "lore": "Substância imaginária que não deveria existir. O material básico usado para criar Cones de Luz.<br />As imagens dos Cones de Luz se tornam ainda mais claras quando imbuídas dessa substância.<br /><br />\"Entendi, então esse é o suposto \"Sentimento\" do Jardim da Recordação. É por isso que os Memoriadores conseguem fazer viagens galácticas com lembranças.\"",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "name": "Medalha Crinalva",
+   "desc": "Medalha de honra usada por soldados da Guarda Crinalva concedida por mérito e serviços prestados. Material avançado usado para aprimoramentos.",
+   "lore": "Uma prova de honra concedida àqueles que lutam contra criaturas do Fragmentum, Subterrenos e desastres repentinos.<br />Geralmente seu portador não a carrega no peito, a não ser que esteja dentro de um caixão.<br /><br />\"Lembre-se, jovem Gepard, isso não é um brinquedo: é o destino e o sangue da família Landau.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "Planícies Nevadas Distantes: Guardas Crinalva ou outros inimigos - Nível de Equilíbrio 4+",
+    "Corredor de Ecos Atenuados: Habitantes da Sombra do Inverno Eterno ou outros inimigos - Nível de Equilíbrio 4+",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "836259": {
+   "id": 836259,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "name": "Lâmina Destruidora de Mundos",
+   "desc": "Arma quebrada deixada por membros da Legião Antimatéria. Usada para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Destruição</span>.",
+   "lore": "Esta arma representa o ranque e as conquistas de seu dono em nome da Destruição.<br />O dono desta arma é aquele que chega no fim da guerra para atiçar as brasas que consomem o mundo. Independentemente das glórias do passado ou das bênçãos de suas divindades, este planeta está destinado a voltar às cinzas de onde veio, e murchar nas profundezas do céu estrelado.<br /><br />\"O objetivo do usuário desta arma é purificar o mundo.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/836259",
+   "comeFrom": [
+    "Cálice (Zona de Armazenamento)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  },
+  "920200": {
+   "id": 920200,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1da1734309fa1e0ed5035575293caab81cfa7723f7bf4a81d36d9833d80b36",
+   "name": "Lâmina Inerte",
+   "desc": "Resquícios de armas deixados por membros da Legião Antimatéria. Usados para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Destruição</span>.",
+   "lore": "Essa marca representa seu ranque e feitos em nome da Destruição.<br />O mestre desta arma carrega um forte ódio por todos os seres sencientes. Eles se deleitam no lamento de seres inteligentes como se fossem doces melodias, e derrubam civilizações com milênios de história em um piscar de olhos.<br /><br />\"O portador desta marca é incumbido de acabar com a respiração entre os vivos.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/920200",
+   "comeFrom": [
+    "Cálice (Zona de Armazenamento)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549407,
+     "count": 5
+    }
+   ],
+   "attackBase": 21.6,
+   "attackAdd": 3.24,
+   "hpBase": 48,
+   "hpAdd": 7.2,
+   "defenseBase": 12,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 635673,
+     "count": 3
+    },
+    {
+     "id": 549407,
+     "count": 10
+    }
+   ],
+   "attackBase": 47.52,
+   "attackAdd": 3.24,
+   "hpBase": 105.6,
+   "hpAdd": 7.2,
+   "defenseBase": 26.4,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 920200,
+     "count": 3
+    },
+    {
+     "id": 633348,
+     "count": 6
+    }
+   ],
+   "attackBase": 82.08,
+   "attackAdd": 3.24,
+   "hpBase": 182.4,
+   "hpAdd": 7.2,
+   "defenseBase": 45.6,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 920200,
+     "count": 6
+    },
+    {
+     "id": 633348,
+     "count": 9
+    }
+   ],
+   "attackBase": 116.64,
+   "attackAdd": 3.24,
+   "hpBase": 259.2,
+   "hpAdd": 7.2,
+   "defenseBase": 64.8,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 836259,
+     "count": 4
+    },
+    {
+     "id": 717289,
+     "count": 5
+    }
+   ],
+   "attackBase": 151.2,
+   "attackAdd": 3.24,
+   "hpBase": 336,
+   "hpAdd": 7.2,
+   "defenseBase": 84,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 836259,
+     "count": 8
+    },
+    {
+     "id": 717289,
+     "count": 7
+    }
+   ],
+   "attackBase": 185.76,
+   "attackAdd": 3.24,
+   "hpBase": 412.8,
+   "hpAdd": 7.2,
+   "defenseBase": 103.2,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 220.32,
+   "attackAdd": 3.24,
+   "hpBase": 489.6,
+   "hpAdd": 7.2,
+   "defenseBase": 122.4,
+   "defenseAdd": 1.8
+  }
+ ],
+ "skill": {
+  "id": 21012,
+  "name": "Não Poupe Esforços",
+  "descHash": "Aumenta em <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> o Dano causado pelo usuário. O usuário causa também <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de Dano adicional a inimigos com uma porcentagem de PV superior à do usuário.",
+  "levelData": [
+   {
+    "level": 1,
+    "params": [
+     0.2,
+     0.2
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 2,
+    "params": [
+     0.25,
+     0.25
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 3,
+    "params": [
+     0.3,
+     0.3
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 4,
+    "params": [
+     0.35,
+     0.35
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "level": 5,
+    "params": [
+     0.4,
+     0.4
+    ],
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 50,
+   "2": 80,
+   "3": 140,
+   "4": 210,
+   "5": 300,
+   "6": 400,
+   "7": 510,
+   "8": 640,
+   "9": 780,
+   "10": 930,
+   "11": 1090,
+   "12": 1260,
+   "13": 1460,
+   "14": 1650,
+   "15": 1860,
+   "16": 2080,
+   "17": 2300,
+   "18": 2540,
+   "19": 2790,
+   "20": 2900,
+   "21": 3010,
+   "22": 3130,
+   "23": 3240,
+   "24": 3360,
+   "25": 3490,
+   "26": 3610,
+   "27": 3740,
+   "28": 3860,
+   "29": 3990,
+   "30": 4130,
+   "31": 4260,
+   "32": 4400,
+   "33": 4540,
+   "34": 4680,
+   "35": 4820,
+   "36": 4970,
+   "37": 5110,
+   "38": 5260,
+   "39": 5410,
+   "40": 5560,
+   "41": 6100,
+   "42": 6450,
+   "43": 6810,
+   "44": 7180,
+   "45": 7550,
+   "46": 7930,
+   "47": 8310,
+   "48": 8710,
+   "49": 9110,
+   "50": 9520,
+   "51": 9940,
+   "52": 10350,
+   "53": 10780,
+   "54": 11220,
+   "55": 11660,
+   "56": 12110,
+   "57": 12570,
+   "58": 13030,
+   "59": 13500,
+   "60": 13980,
+   "61": 14630,
+   "62": 15420,
+   "63": 16210,
+   "64": 17010,
+   "65": 17830,
+   "66": 18660,
+   "67": 19500,
+   "68": 20350,
+   "69": 21220,
+   "70": 22100,
+   "71": 24650,
+   "72": 26970,
+   "73": 29330,
+   "74": 31720,
+   "75": 34140,
+   "76": 36600,
+   "77": 39100,
+   "78": 41620,
+   "79": 44180,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "21012"
+}

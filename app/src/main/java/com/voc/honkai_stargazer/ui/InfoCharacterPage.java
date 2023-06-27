@@ -171,6 +171,7 @@ public class InfoCharacterPage {
 
             }
         });
+
         info_vp.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(info_tablayout));
 
         lightcone_list_reload();
@@ -273,7 +274,9 @@ public class InfoCharacterPage {
                 if (!relic_2.equals("") && relic_2 != null){
                     advice_relic_set_2pc_title.setText(context.getString(R.string.relic_2pc)+" ("+item_rss.getLocalNameByName(relic,context)+")");
                     advice_relic_set_4pc_title.setText(context.getString(R.string.relic_2pc)+" ("+item_rss.getLocalNameByName(relic_2,context)+")");
+
                     advice_relic_set_name2.setText(item_rss.getLocalNameByName(relic_2,context));
+                    advice_relic_set_4pc.setText(item_rss.getRelicStatusByName(relic_2,context)[1]);
 
                     advice_relic_set_icon.getLayoutParams().width = (int) (48 * displayMetrics.density);
                     advice_relic_set_icon.getLayoutParams().height = (int) (48 * displayMetrics.density);
