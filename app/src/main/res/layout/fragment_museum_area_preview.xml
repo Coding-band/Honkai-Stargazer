@@ -5,14 +5,13 @@
   -->
 
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="240dp"
     android:layout_height="match_parent"
     android:background="@color/tv_daynight_tint_semi"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="12dp"
     android:scrollbars="none">
 
     <LinearLayout
@@ -38,7 +37,7 @@
                     android:gravity="center"
                     android:text="可獲得經驗值"
                     android:textColor="@color/tv_nightday_tint"
-                    android:textSize="16sp" />
+                    android:textSize="14dp" />
 
                 <TextView
                     android:id="@+id/textView65"
@@ -47,7 +46,7 @@
                     android:gravity="center"
                     android:text="3000"
                     android:textColor="@color/tv_nightday_tint"
-                    android:textSize="24sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/textView66"
@@ -56,7 +55,7 @@
                     android:gravity="center"
                     android:text="展區等級 8"
                     android:textColor="@color/tv_nightday_tint"
-                    android:textSize="16sp" />
+                    android:textSize="14dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -67,14 +66,14 @@
 
                 <TextView
                     android:id="@+id/textView69"
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:layout_gravity="center|right"
                     android:layout_marginBottom="8dp"
                     android:gravity="center"
                     android:text="S"
-                    android:textColor="@color/tv_nightday_tint"
-                    android:textSize="30sp" />
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="24dp" />
 
                 <TextView
                     android:id="@+id/textView70"
@@ -95,8 +94,8 @@
             android:id="@+id/imageView10"
             android:layout_width="match_parent"
             android:layout_height="4dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
             app:srcCompat="@drawable/bg_dot_line" />
 
         <LinearLayout
@@ -104,19 +103,38 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawablePadding="4dp"
-                android:drawableTint="@color/tv_nightday_tint"
-                android:gravity="center|left"
-                android:text="遊覽時間"
-                android:textColor="@color/tv_nightday_tint"
-                android:textSize="14sp"
-                app:drawableLeftCompat="@drawable/round_access_time_filled_24" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/tv_nightday_tint"
+                    android:gravity="center|left"
+                    android:text="遊覽時間"
+                    android:textColor="@color/tv_nightday_tint"
+                    android:textSize="14sp"
+                    app:drawableLeftCompat="@drawable/round_access_time_filled_24" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="100/200"
+                    android:textColor="@color/tv_nightday_tint"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
             <ProgressBar
-                style="@style/Widget.Seekbar.FULL"
+                style="@style/Widget.Seekbar.FULL.GREY"
                 android:layout_width="match_parent"
                 android:layout_height="12dp"
                 android:max="300"
@@ -130,19 +148,38 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawablePadding="4dp"
-                android:drawableTint="@color/tv_nightday_tint"
-                android:gravity="center|left"
-                android:text="推廣價值"
-                android:textColor="@color/tv_nightday_tint"
-                android:textSize="14sp"
-                app:drawableLeftCompat="@drawable/round_insert_drive_file_24" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/tv_nightday_tint"
+                    android:gravity="center|left"
+                    android:text="推廣價值"
+                    android:textColor="@color/tv_nightday_tint"
+                    android:textSize="14sp"
+                    app:drawableLeftCompat="@drawable/round_insert_drive_file_24" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="100/200"
+                    android:textColor="@color/tv_nightday_tint"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
             <ProgressBar
-                style="@style/Widget.Seekbar.FULL"
+                style="@style/Widget.Seekbar.FULL.GREY"
                 android:layout_width="match_parent"
                 android:layout_height="12dp"
                 android:max="300"
@@ -156,19 +193,38 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawablePadding="4dp"
-                android:drawableTint="@color/tv_nightday_tint"
-                android:gravity="center|left"
-                android:text="吸引人流"
-                android:textColor="@color/tv_nightday_tint"
-                android:textSize="14sp"
-                app:drawableLeftCompat="@drawable/round_access_time_filled_24" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/tv_nightday_tint"
+                    android:gravity="center|left"
+                    android:text="吸引人流"
+                    android:textColor="@color/tv_nightday_tint"
+                    android:textSize="14sp"
+                    app:drawableLeftCompat="@drawable/ic_person" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="100/200"
+                    android:textColor="@color/tv_nightday_tint"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
             <ProgressBar
-                style="@style/Widget.Seekbar.FULL"
+                style="@style/Widget.Seekbar.FULL.GREY"
                 android:layout_width="match_parent"
                 android:layout_height="12dp"
                 android:max="300"
@@ -187,57 +243,57 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView11"
-                    android:layout_width="wrap_content"
+                    android:layout_width="48dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:layout_marginRight="4dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:maxWidth="160dp"
-                    android:minWidth="48dp"
+                    android:maxWidth="48dp"
+                    android:minWidth="36dp"
                     app:srcCompat="@drawable/pela_icon" />
 
                 <ImageView
                     android:id="@+id/imageView12"
-                    android:layout_width="wrap_content"
+                    android:layout_width="48dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:layout_marginRight="4dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:maxWidth="160dp"
-                    android:minWidth="48dp"
+                    android:maxWidth="48dp"
+                    android:minWidth="36dp"
                     app:srcCompat="@drawable/pela_icon" />
 
                 <ImageView
                     android:id="@+id/imageView13"
-                    android:layout_width="wrap_content"
+                    android:layout_width="48dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:layout_marginRight="4dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:maxWidth="160dp"
-                    android:minWidth="48dp"
+                    android:maxWidth="48dp"
+                    android:minWidth="36dp"
                     app:srcCompat="@drawable/pela_icon" />
 
                 <ImageView
                     android:id="@+id/imageView14"
-                    android:layout_width="wrap_content"
+                    android:layout_width="48dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:layout_marginRight="4dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:maxWidth="160dp"
-                    android:minWidth="48dp"
-                    android:visibility="gone"
+                    android:maxWidth="48dp"
+                    android:minWidth="36dp"
                     app:srcCompat="@drawable/pela_icon" />
+
             </LinearLayout>
 
             <TextView
@@ -248,8 +304,8 @@
                 android:drawableTint="@color/theme_color_base"
                 android:gravity="center"
                 android:text="更換"
-                android:textColor="@color/tv_nightday_tint"
-                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
                 app:drawableLeftCompat="@drawable/round_rotate_left_24" />
 
         </LinearLayout>

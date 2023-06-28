@@ -16,67 +16,24 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView59"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_margin="16dp"
-            android:background="@drawable/bg_skill_round"
-            android:gravity="center"
-            android:text="1"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_hp" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textView71"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView60"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="經驗值"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:minWidth="64dp" />
-
-                <TextView
-                    android:id="@+id/textView61"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="65536/1048576"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <ProgressBar
-                android:id="@+id/progressBar"
-                style="@style/Widget.Seekbar.FULL.GREY"
-                android:layout_width="match_parent"
-                android:layout_height="12dp"
-                android:max="1048576"
-                android:paddingStart="0dp"
-                android:paddingEnd="0dp"
-                android:progress="65536" />
-
-
-        </LinearLayout>
+            android:gravity="center"
+            android:text="展區升級"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <Space
@@ -121,7 +78,7 @@
         android:layout_margin="12dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:scaleType="fitCenter"
-        android:src="@drawable/round_cancel_24"
+        android:src="@drawable/round_arrow_back_24"
         app:tint="@color/white" />
 
 </LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Project Honkai Stargazer (崩壞•星穹觀星者) was
+  ~ Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
+  ~ Copyright © 2023 Xectorda 版權所有
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/fragment_museum_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/tv_daynight_tint_semi"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/museum_cancel2"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="center"
+                    android:src="@drawable/baseline_arrow_back_ios_new_24"
+                    app:tint="@color/tv_nightday_tint" />
+
+                <TextView
+                    android:id="@+id/textView75"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="館區1"
+                    android:textColor="@color/tv_nightday_tint"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/museum_cancel3"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="center"
+                    android:src="@drawable/baseline_arrow_forward_ios_24"
+                    app:tint="@color/tv_nightday_tint" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/fragment_museum_area_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fadingEdge="horizontal"
+                android:fadingEdgeLength="15dp"
+                android:padding="16dp"
+                android:requiresFadingEdge="horizontal" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:insetTop="8dp"
+                android:insetBottom="8dp"
+                android:minWidth="160dp"
+                android:text="確定" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
