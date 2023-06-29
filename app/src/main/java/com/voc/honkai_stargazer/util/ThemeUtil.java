@@ -25,6 +25,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -114,6 +115,14 @@ public class ThemeUtil {
         for (ViewGroup parentLayout : parentLayouts){
             for (int count = 0; count < parentLayout.getChildCount(); count++){
                 View view = parentLayout.getChildAt(count);
+                if(view instanceof Spinner){
+                    Drawable drawableBG = context.getDrawable(R.drawable.bg_select_list);
+                    Drawable drawablePopup = context.getDrawable(R.drawable.bg_spinner_expand);
+                    drawableBG.setTint(colorMultiply(themedColor,context.getColor(R.color.home_bar_tint),TINT_COMMON,true));
+                    drawablePopup.setTint(colorMultiply(themedColor,context.getColor(R.color.home_bar_tint),TINT_COMMON,true));
+                    ((Spinner) view).setBackground(drawableBG);
+                    ((Spinner) view).setPopupBackgroundDrawable(drawablePopup);
+                }
                 if(view instanceof Switch){
                     Typeface typeface = context.getResources().getFont(R.font.roboto);
                     if (sharedPreferences.getBoolean("isHSRFont", false) == true){
@@ -148,7 +157,11 @@ public class ThemeUtil {
                         typeface = context.getResources().getFont(R.font.hsr_font);
                     }
                     ((TextView) view).setTypeface(typeface);
-                    if (((TextView) view).getCurrentTextColor() == context.getColor(R.color.theme_color_base)){
+
+                    if (((TextView) view).getCurrentTextColor() == context.getColor(R.color.theme_color_on_surface)){
+                        ((TextView) view).setTextColor(colorMultiply(themedColor, (context.getString(R.string.daynight).equals("NIGHT") ? Color.WHITE : Color.BLACK), TINT_CARD, true));
+                    }
+                    else if (((TextView) view).getCurrentTextColor() == context.getColor(R.color.theme_color_base)){
                         ((TextView) view).setTextColor(themedColor);
                     }
                 }

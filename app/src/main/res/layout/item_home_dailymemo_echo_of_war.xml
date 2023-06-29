@@ -34,7 +34,7 @@
                 android:id="@+id/textView53"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Trailblaze Power"
+                android:text="Echo of War"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -45,33 +45,20 @@
 
                 <ImageView
                     android:id="@+id/imageView7"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    app:srcCompat="@drawable/trailblaze_power" />
+                    app:srcCompat="@drawable/ic_echo_of_war" />
 
                 <TextView
                     android:id="@+id/textView54"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="45/180" />
+                    android:text="3/3"
+                    android:textSize="26sp" />
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/textView56"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Time remaindering :" />
-
-            <TextView
-                android:id="@+id/textView57"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:text="8h 10m 31s" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

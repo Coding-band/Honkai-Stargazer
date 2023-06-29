@@ -17,7 +17,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView59"
+            android:id="@+id/museum_lvl"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_margin="16dp"
@@ -56,7 +56,7 @@
                     android:minWidth="64dp" />
 
                 <TextView
-                    android:id="@+id/textView61"
+                    android:id="@+id/museum_exp_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -66,7 +66,7 @@
             </LinearLayout>
 
             <ProgressBar
-                android:id="@+id/progressBar"
+                android:id="@+id/museum_exp_pb"
                 style="@style/Widget.Seekbar.FULL.GREY"
                 android:layout_width="match_parent"
                 android:layout_height="12dp"
@@ -102,7 +102,7 @@
             app:tint="@color/theme_color_base" />
 
         <TextView
-            android:id="@+id/textView63"
+            android:id="@+id/museum_coin_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
@@ -114,7 +114,7 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/museum_cancel"
+        android:id="@+id/museum_exit"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_gravity="center"

@@ -6,27 +6,185 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/rootView"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="@drawable/bg_char_info_card"
-        android:foreground="@drawable/bg_card_kwang"
-        android:orientation="vertical"
-        android:padding="8dp"
-        android:translationZ="4dp">
+        app:cardBackgroundColor="@color/home_list_item_bg"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView53"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Assignments"
-            android:textSize="16sp" />
+            android:foreground="@drawable/bg_card_kwang"
+            android:orientation="vertical"
+            android:padding="8dp">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Assignments"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:srcCompat="@drawable/material_adventure_log" />
+
+                    <ProgressBar
+                        style="@style/Widget.Seekbar.FULL.GREY"
+                        android:layout_width="48dp"
+                        android:layout_height="5dp"
+                        android:max="10"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:progress="10" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center"
+                    android:text="2h 2m 31s" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:srcCompat="@drawable/material_adventure_log" />
+
+                    <ProgressBar
+                        style="@style/Widget.Seekbar.FULL.GREY"
+                        android:layout_width="48dp"
+                        android:layout_height="5dp"
+                        android:max="10"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:progress="2" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center"
+                    android:text="2h 2m 31s" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:srcCompat="@drawable/material_adventure_log" />
+
+                    <ProgressBar
+                        style="@style/Widget.Seekbar.FULL.GREY"
+                        android:layout_width="48dp"
+                        android:layout_height="5dp"
+                        android:max="10"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:progress="8" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center"
+                    android:text="2h 2m 31s" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:srcCompat="@drawable/material_adventure_log" />
+
+                    <ProgressBar
+                        style="@style/Widget.Seekbar.FULL.GREY"
+                        android:layout_width="48dp"
+                        android:layout_height="5dp"
+                        android:max="10"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:progress="7" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:drawableLeft="@drawable/round_check_24"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/tv_daynight_tint"
+                    android:gravity="center"
+                    android:text="@string/home_widget_done" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

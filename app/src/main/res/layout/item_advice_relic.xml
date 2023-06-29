@@ -80,7 +80,7 @@
                 android:layout_marginRight="16dp"
                 android:background="@drawable/bg_skill_round"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/ic_arrow_hide_btn" />
+                app:srcCompat="@drawable/ic_arrow_show_btn" />
 
         </LinearLayout>
 
@@ -90,14 +90,15 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:paddingLeft="8dp"
-            android:paddingRight="8dp">
+            android:paddingRight="8dp"
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/advice_relic_set_2pc_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/relic_2pc"
-                android:textColor="@color/theme_color_base"
+                android:textColor="@color/theme_color_on_surface"
                 android:textSize="16sp" />
 
             <TextView
@@ -115,7 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/relic_4pc"
-                android:textColor="@color/theme_color_base"
+                android:textColor="@color/theme_color_on_surface"
                 android:textSize="16sp" />
 
             <TextView

@@ -120,10 +120,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="4dp"
                 android:text="4800"
                 android:textColor="@color/tv_nightday_tint"
                 android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/coin"
+                app:tint="@color/theme_color_base" />
         </LinearLayout>
 
         <Space
@@ -156,10 +163,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="4dp"
                 android:text="4800"
                 android:textColor="@color/tv_nightday_tint"
                 android:textSize="16sp" />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/coin"
+                app:tint="@color/theme_color_base" />
         </LinearLayout>
 
         <Space

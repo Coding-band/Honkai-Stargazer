@@ -84,7 +84,7 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fadingEdge="horizontal"
                 android:fadingEdgeLength="15dp"
@@ -98,48 +98,324 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="72dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="4dp"
                         android:layout_marginRight="16dp"
+                        android:layout_marginBottom="4dp"
                         android:background="@drawable/bg_char_info_card"
+                        android:minHeight="64dp"
                         android:orientation="horizontal"
                         android:padding="8dp"
-                        android:translationZ="4dp"></LinearLayout>
+                        android:translationZ="4dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="8dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/baseline_museum_24"
+                            app:tint="@color/tv_daynight_tint" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="升級：展區等級 【等級8/14】"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="提升可獲得的振興值上限1200"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="遊覽時間需求+30/推廣價值需求+25/吸引人流需求+20"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0"
+                                android:background="@color/split_line_bg" />
+
+                            <LinearLayout
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:adjustViewBounds="true"
+                                    app:srcCompat="@drawable/coin"
+                                    app:tint="@color/theme_color_base" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="20000"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="64dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="4dp"
                         android:layout_marginRight="16dp"
+                        android:layout_marginBottom="4dp"
                         android:background="@drawable/bg_char_info_card"
+                        android:minHeight="64dp"
                         android:orientation="horizontal"
                         android:padding="8dp"
-                        android:translationZ="4dp"></LinearLayout>
+                        android:translationZ="4dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="8dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/round_access_time_filled_24"
+                            app:tint="@color/tv_daynight_tint" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="升級：遊覽導引 【等級8/22】"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="遊覽時間+10"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0"
+                                android:background="@color/split_line_bg" />
+
+                            <LinearLayout
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:adjustViewBounds="true"
+                                    app:srcCompat="@drawable/coin"
+                                    app:tint="@color/theme_color_base" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1200"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="64dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="4dp"
                         android:layout_marginRight="16dp"
+                        android:layout_marginBottom="4dp"
                         android:background="@drawable/bg_char_info_card"
+                        android:minHeight="64dp"
                         android:orientation="horizontal"
                         android:padding="8dp"
-                        android:translationZ="4dp"></LinearLayout>
+                        android:translationZ="4dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="8dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/round_insert_drive_file_24"
+                            app:tint="@color/tv_daynight_tint" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="升級：推廣素材 【等級8/22】"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="推廣價值+10"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0"
+                                android:background="@color/split_line_bg" />
+
+                            <LinearLayout
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:adjustViewBounds="true"
+                                    app:srcCompat="@drawable/coin"
+                                    app:tint="@color/theme_color_base" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="3000"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="64dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="4dp"
                         android:layout_marginRight="16dp"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="4dp"
                         android:background="@drawable/bg_char_info_card"
+                        android:minHeight="64dp"
                         android:orientation="horizontal"
                         android:padding="8dp"
-                        android:translationZ="4dp"></LinearLayout>
+                        android:translationZ="4dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="8dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/ic_person"
+                            app:tint="@color/tv_daynight_tint" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="升級：遊客宣傳 【等級8/22】"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="吸引人流+10"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0"
+                                android:background="@color/split_line_bg" />
+
+                            <LinearLayout
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:adjustViewBounds="true"
+                                    app:srcCompat="@drawable/coin"
+                                    app:tint="@color/theme_color_base" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="20000"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
                 </LinearLayout>
             </ScrollView>
 

@@ -279,7 +279,7 @@
                         android:layout_marginRight="2dp"
                         android:layout_weight="0"
                         android:gravity="center"
-                        android:text="共獲得經驗值 : "
+                        android:text="共獲得振興值 : "
                         android:textColor="@color/ic_daynight_tint"
                         android:textSize="14sp" />
 
@@ -318,7 +318,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="經驗值"
+                            android:text="振興值"
                             android:textColor="@color/ic_daynight_tint"
                             android:textSize="14sp" />
 
@@ -329,7 +329,7 @@
                             android:minWidth="64dp" />
 
                         <TextView
-                            android:id="@+id/textView61"
+                            android:id="@+id/museum_exp_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center"
@@ -339,7 +339,7 @@
                     </LinearLayout>
 
                     <ProgressBar
-                        android:id="@+id/progressBar"
+                        android:id="@+id/museum_exp_pb"
                         style="@style/Widget.Seekbar.FULL.GREY"
                         android:layout_width="match_parent"
                         android:layout_height="12dp"

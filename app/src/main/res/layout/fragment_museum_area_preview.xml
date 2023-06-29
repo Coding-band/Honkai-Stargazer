@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="可獲得經驗值"
+                    android:text="可獲得振興值"
                     android:textColor="@color/tv_nightday_tint"
                     android:textSize="14dp" />
 
@@ -117,7 +117,7 @@
                     android:text="遊覽時間"
                     android:textColor="@color/tv_nightday_tint"
                     android:textSize="14sp"
-                    app:drawableLeftCompat="@drawable/round_access_time_filled_24" />
+                    app:drawableLeftCompat="@drawable/round_access_time_filled_16" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -137,10 +137,11 @@
                 style="@style/Widget.Seekbar.FULL.GREY"
                 android:layout_width="match_parent"
                 android:layout_height="12dp"
-                android:max="300"
+                android:max="5000"
                 android:paddingStart="0dp"
                 android:paddingEnd="0dp"
-                android:progress="50" />
+                android:progress="300"
+                android:secondaryProgress="100" />
         </LinearLayout>
 
         <LinearLayout
@@ -162,7 +163,7 @@
                     android:text="推廣價值"
                     android:textColor="@color/tv_nightday_tint"
                     android:textSize="14sp"
-                    app:drawableLeftCompat="@drawable/round_insert_drive_file_24" />
+                    app:drawableLeftCompat="@drawable/round_insert_drive_file_16" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -173,7 +174,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center|left"
-                    android:text="100/200"
+                    android:text="100/100"
                     android:textColor="@color/tv_nightday_tint"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -207,7 +208,7 @@
                     android:text="吸引人流"
                     android:textColor="@color/tv_nightday_tint"
                     android:textSize="14sp"
-                    app:drawableLeftCompat="@drawable/ic_person" />
+                    app:drawableLeftCompat="@drawable/ic_person_16" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -218,7 +219,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center|left"
-                    android:text="100/200"
+                    android:text="150/300"
                     android:textColor="@color/tv_nightday_tint"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -230,7 +231,7 @@
                 android:max="300"
                 android:paddingStart="0dp"
                 android:paddingEnd="0dp"
-                android:progress="50" />
+                android:progress="100" />
         </LinearLayout>
 
         <LinearLayout
@@ -268,7 +269,7 @@
                     android:adjustViewBounds="true"
                     android:maxWidth="48dp"
                     android:minWidth="36dp"
-                    app:srcCompat="@drawable/pela_icon" />
+                    app:srcCompat="@drawable/bronya_icon" />
 
                 <ImageView
                     android:id="@+id/imageView13"
@@ -280,7 +281,7 @@
                     android:adjustViewBounds="true"
                     android:maxWidth="48dp"
                     android:minWidth="36dp"
-                    app:srcCompat="@drawable/pela_icon" />
+                    app:srcCompat="@drawable/silver_wolf_icon" />
 
                 <ImageView
                     android:id="@+id/imageView14"
@@ -292,7 +293,7 @@
                     android:adjustViewBounds="true"
                     android:maxWidth="48dp"
                     android:minWidth="36dp"
-                    app:srcCompat="@drawable/pela_icon" />
+                    app:srcCompat="@drawable/asta_icon" />
 
             </LinearLayout>
 
