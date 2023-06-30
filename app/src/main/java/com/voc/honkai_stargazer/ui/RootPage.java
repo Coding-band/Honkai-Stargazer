@@ -15,9 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -34,6 +36,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -55,6 +58,7 @@ import com.voc.honkai_stargazer.R;
 import com.voc.honkai_stargazer.data.FilterPreference;
 import com.voc.honkai_stargazer.data.HSRItem;
 import com.voc.honkai_stargazer.data.HSRItemAdapter;
+import com.voc.honkai_stargazer.data.HomeAdapter;
 import com.voc.honkai_stargazer.util.BillingHelper;
 import com.voc.honkai_stargazer.util.CustomViewPager;
 import com.voc.honkai_stargazer.util.CustomViewPagerAdapter;
@@ -73,6 +77,7 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class RootPage extends AppCompatActivity {
 
@@ -109,6 +114,7 @@ public class RootPage extends AppCompatActivity {
     public static final String TAG = "RootPage";
     ThemeUtil themeUtil ;
     String tmpColor;
+    HomePage homePage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -195,7 +201,7 @@ public class RootPage extends AppCompatActivity {
     }
 
     private void home_init() {
-        HomePage homePage = new HomePage(context,activity, home_home);
+        homePage = new HomePage(context,activity, home_home);
     }
 
     public void root_init(boolean isSetting){
@@ -381,6 +387,7 @@ public class RootPage extends AppCompatActivity {
         LinearLayout setting_material_engine = home_settings.findViewById(R.id.setting_material_engine);
         LinearLayout setting_daynight = home_settings.findViewById(R.id.setting_daynight);
         LinearLayout setting_haptic = home_settings.findViewById(R.id.setting_haptic);
+        LinearLayout setting_home_editor = home_settings.findViewById(R.id.setting_home_editor);
 
         TextView setting_lang_display = home_settings.findViewById(R.id.setting_lang_display);
         TextView setting_material_engine_display = home_settings.findViewById(R.id.setting_material_engine_display);
@@ -694,6 +701,17 @@ public class RootPage extends AppCompatActivity {
             }
         });
 
+        setting_home_editor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (homePage == null){
+                    home_init();
+                }
+                homePage.homeEditor();
+            }
+        });
+
+
         //Donation
         if (billingHelper != null){
             billingHelper.close();
@@ -752,7 +770,6 @@ public class RootPage extends AppCompatActivity {
         });
 
     }
-
     public View.OnClickListener colorListener(
             ImageView color_radio_1,
             ImageView color_radio_2,

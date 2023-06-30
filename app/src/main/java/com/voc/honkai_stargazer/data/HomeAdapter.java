@@ -9,6 +9,7 @@ package com.voc.honkai_stargazer.data;
 import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
 import static com.voc.honkai_stargazer.util.ItemRSS.TYPE_LIGHTCONE;
 
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -18,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -99,6 +101,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder>{
         return new ViewHolder(v, (AdapterView.OnItemClickListener) mListener);
     }
 
+    //https://www.cnblogs.com/Fndroid/p/5657342.html
     @Override
     public void onBindViewHolder(@NonNull HomeAdapter.ViewHolder holder, int position) {
         switch (holder.getItemViewType()){
@@ -120,6 +123,9 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder>{
         itemList = filteredList;
         notifyDataSetChanged();
     }
+    public ArrayList<Integer> getList() {
+        return itemList;
+    }
     @Override
     public int getItemCount() {
         return itemList.size();
@@ -135,7 +141,14 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder>{
         public ViewHolder(View itemView, final AdapterView.OnItemClickListener listener) {
             super(itemView);
 
-
         }
     }
+
+    private void pickUpAnimation(View view) {
+        ObjectAnimator animator = ObjectAnimator.ofFloat(view, "translationZ", 1f, 10f);
+        animator.setInterpolator(new DecelerateInterpolator());
+        animator.setDuration(300);
+        animator.start();
+    }
+
 }

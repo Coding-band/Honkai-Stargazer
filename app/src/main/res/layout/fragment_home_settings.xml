@@ -223,6 +223,29 @@
                 android:textSize="18sp"
                 android:visibility="visible" />
 
+            <LinearLayout
+                android:id="@+id/setting_home_editor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingTop="6dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/home_editor_title"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/textView49"
                 android:layout_width="match_parent"

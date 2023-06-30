@@ -95,7 +95,7 @@ public class MuseumLib {
 
     public long loopAdd(long[] data, int begin, int end){
         long sum = 0;
-        for (int x = begin-1 ; x < end-1 ; x++){
+        for (int x = begin-1 ; x < end ; x++){
             sum += data[x];
         }
         return sum;

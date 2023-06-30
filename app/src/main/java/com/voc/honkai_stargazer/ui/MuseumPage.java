@@ -14,6 +14,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -57,6 +59,9 @@ public class MuseumPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_museum_page);
         context = this;
         activity = this;
@@ -80,9 +85,9 @@ public class MuseumPage extends AppCompatActivity {
             }else {
                 areaUnlock.add(x, false);
             }
-            areaTimeStatus.add(x,65);
-            areaValueStatus.add(x,65);
-            areaPersonStatus.add(x,65);
+            areaTimeStatus.add(x,MuseumLib.itemValueTargetInit);
+            areaValueStatus.add(x,MuseumLib.itemValueTargetInit);
+            areaPersonStatus.add(x,MuseumLib.itemValueTargetInit);
             areaLevelStatus.add(x,1);
         }
 
