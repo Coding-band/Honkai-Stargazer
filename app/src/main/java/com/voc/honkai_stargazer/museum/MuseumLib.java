@@ -17,6 +17,13 @@ public class MuseumLib {
      * 獲得金幣 = 2x獲得振興值
      *  i.e. $540 = 2x (270 振興值)
      */
+    //遊覽時間
+    public static final int TYPE_TIME = 100;
+    public static final int TYPE_VALUE = 101;
+    public static final int TYPE_PERSON = 102;
+    public static final int TYPE_TIME_ADD = 200;
+    public static final int TYPE_VALUE_ADD = 201;
+    public static final int TYPE_PERSON_ADD = 202;
 
     //振興值 最高等級 (等級1 對應 expLvl 1)
     public static final int expMaxLvl = 5;
@@ -78,11 +85,11 @@ public class MuseumLib {
 
 
 
-    public String getRankingFromProgress(int 展區等級, int 遊覽時間,int 推廣價值,int 吸引人流){
+    public String getRankingFromProgress(int 展區ID, int 展區等級, int 遊覽時間,int 推廣價值,int 吸引人流){
         int match = 0;
-        if (遊覽時間 >= (itemValueTargetInit + loopAdd(plusTimeFromArea, 1, 展區等級))){match++;}
-        if (推廣價值 >= (itemValueTargetInit + loopAdd(plusValueFromArea, 1, 展區等級))){match++;}
-        if (吸引人流 >= (itemValueTargetInit + loopAdd(plusPersonFromArea, 1, 展區等級))){match++;}
+        if (遊覽時間 >= (itemValueTargetInit + loopAdd(plusTimeFromArea, 展區ID*3+1, 展區ID*3+1+展區等級))){match++;}
+        if (推廣價值 >= (itemValueTargetInit + loopAdd(plusValueFromArea, 展區ID*3+1, 展區ID*3+1+展區等級))){match++;}
+        if (吸引人流 >= (itemValueTargetInit + loopAdd(plusPersonFromArea, 展區ID*3+1, 展區ID*3+1+展區等級))){match++;}
 
         switch (match){
             case 3 : return "S";
@@ -93,9 +100,33 @@ public class MuseumLib {
         }
     }
 
+    public long getEXPFromProgress(int 展區ID, int 展區等級, int 遊覽時間,int 推廣價值,int 吸引人流){
+        int match = 0;
+        if (遊覽時間 >= (itemValueTargetInit + loopAdd(plusTimeFromArea, 展區ID*3+1, 展區ID*3+1+展區等級))){match++;}
+        if (推廣價值 >= (itemValueTargetInit + loopAdd(plusValueFromArea, 展區ID*3+1, 展區ID*3+1+展區等級))){match++;}
+        if (吸引人流 >= (itemValueTargetInit + loopAdd(plusPersonFromArea, 展區ID*3+1, 展區ID*3+1+展區等級))){match++;}
+
+        switch (match){
+            case 3 : return loopAdd(plusMaxEXPFromArea, 1, 展區ID*3+1+展區等級) * 3;
+            case 2 : return loopAdd(plusMaxEXPFromArea, 1, 展區ID*3+1+展區等級) * 2;
+            case 1 : return loopAdd(plusMaxEXPFromArea, 1, 展區ID*3+1+展區等級) * 1;
+            case 0 : return loopAdd(plusMaxEXPFromArea, 1, 展區ID*3+1+展區等級) * 0;
+            default: return 0;
+        }
+    }
+
+    public long getCurrLvlItemMax(int 展區ID, int 展區等級, int TYPE){
+        switch (TYPE){
+            case TYPE_TIME: return loopAdd(plusTimeFromArea, 展區ID*3+1, 展區ID*3+1+展區等級);
+            case TYPE_VALUE: return loopAdd(plusValueFromArea, 展區ID*3+1, 展區ID*3+1+展區等級);
+            case TYPE_PERSON: return loopAdd(plusPersonFromArea, 展區ID*3+1, 展區ID*3+1+展區等級);
+            default: return 1;
+        }
+    }
+
     public long loopAdd(long[] data, int begin, int end){
         long sum = 0;
-        for (int x = begin-1 ; x < end ; x++){
+        for (int x = begin-1 ; x < end && x < data.length ; x++){
             sum += data[x];
         }
         return sum;

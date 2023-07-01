@@ -69,7 +69,7 @@
                     app:drawableLeftCompat="@drawable/round_insert_drive_file_24" />
 
                 <TextView
-                    android:id="@+id/textView68"
+                    android:id="@+id/museum_target_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -107,46 +107,53 @@
             <include
                 layout="@layout/fragment_museum_area_preview"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView73"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
                     android:gravity="center"
-                    android:text="共獲得經驗值 : "
-                    android:textColor="@color/tv_nightday_tint"
-                    android:textSize="14sp" />
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView74"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
-                    android:gravity="center"
-                    android:text="12300"
-                    android:textColor="@color/tv_nightday_tint"
-                    android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/textView73"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:gravity="center"
+                        android:text="共獲得經驗值 : "
+                        android:textColor="@color/tv_nightday_tint"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/museum_predict_exp_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:gravity="center"
+                        android:text="12300"
+                        android:textColor="@color/tv_nightday_tint"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:insetTop="8dp"
+                    android:insetBottom="8dp"
+                    android:text="開始經營" />
             </LinearLayout>
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:insetTop="8dp"
-                android:insetBottom="8dp"
-                android:text="開始經營" />
         </LinearLayout>
     </LinearLayout>
 

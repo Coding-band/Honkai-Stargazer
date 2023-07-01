@@ -432,9 +432,11 @@ public class InfoCharacterPage {
                         .error(R.drawable.ico_lost_img)
                         .into(advicve_lightcone_img);
                 advicve_lightcone_name.setText(item_rss.getLocalNameByName(item_rss.getLocaleNameByPrydwen(lightcone.getJSONObject(x).getString("cone"), context), context));
-                advicve_lightcone_lvl.setText(String.valueOf(lightconesList.get(lightconesNameList.indexOf(
-                        item_rss.getLocaleNameByPrydwen(lightcone.getJSONObject(x).getString("cone"), context)
-                )).getRare()));
+                if (lightconesNameList.indexOf(item_rss.getLocaleNameByPrydwen(lightcone.getJSONObject(x).getString("cone"), context)) != -1){
+                    advicve_lightcone_lvl.setText(String.valueOf(lightconesList.get(lightconesNameList.indexOf(
+                            item_rss.getLocaleNameByPrydwen(lightcone.getJSONObject(x).getString("cone"), context)
+                    )).getRare()));
+                }
 
                 Drawable drawable = context.getDrawable(R.drawable.ic_rare_star);
                 drawable.setTint(Color.parseColor(sharedPreferences.getString("themedColor","#6750A4")));

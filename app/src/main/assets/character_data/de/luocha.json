@@ -1,35 +1,15 @@
 {
- "name": "Luocha",
  "spRequirement": 100,
- "rarity": 5,
- "descHash": "Dieser Händler aus Übersee trägt stets einen Sarg mit sich herum. Seine medizinischen Kenntnisse sind hervorragend.",
- "iconPath": "4abe429751143578a15ed740c6b73d2ea0b89800e10d096e6b6fde92c21a9ed2",
- "bgPath": "0805c9fee9f5a4eef7e8554b7dd632e989c727ca503bb77770b81d2cc3d35654",
+ "iconPath": "0af8bda232eb6e9639168f31c54f1433e980768cb700dc92fb9db01e4be52099",
+ "bgPath": "9323a14469cf4d9307046b3d608d82199b5d3034ee01cace67ac2e55a15fa039",
  "figPath": "af4ddb0b8dc3a0d1378939480d5069a6ddebe7df995a7b54853584a2d5ba632c",
- "fgPath": "4e5df5e198ab14561de8e180c4a7c6a4c63b61e8d047705f4a02395cee675ca5",
- "artPath": "8e1c7fb178f07aa56c263c4062083b49e95d8ab0ee6d22eba5974f3f0852e6a5",
- "miniIconPath": "55817a6d6a91bb49553ddee399c5489167d633977596e74cb5293bfcca0da751",
+ "fgPath": "f7d48b9bf32fd942ab32274d5a5c21f2830ae443c3eb2a299dc1f7dee397e9e6",
  "splashIconPath": "9a06048a91058e05c686230ab1e474b8ba7adcd3f8f2fa348242539347af42e4",
- "damageType": {
-  "id": 64,
-  "iconPath": "87df7632a4ea2535a7794d3283255fe4f2a80d20e0cf266659a11dbae7549d5b",
-  "color": "#F4D258",
-  "name": "Imaginär",
-  "rarity": 0
- },
- "baseType": {
-  "id": 0,
-  "iconPath": "498249f31cf5142d1e1b5285d73ac93049e853b76d92417a8d1e3691e790abd5",
-  "altIconPath": "dd526e763a520081e78efbb08b0dec9a2b2994d95fbe85569c4627b38019a614",
-  "color": "#FFFFFF",
-  "name": "Der Überfluss",
-  "rarity": 0
- },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
   "id": 7,
-  "iconPath": "352fe395cd8f2422b4d89b486957960b86537f34c4921383c1351aa6e34ee70a",
+  "iconPath": "aa9f5b78e925c15ba26e364ab1a7e053d6678022b7c33c5c7c54fab324216d95",
   "color": "#FFFFFF",
   "rarity": 0
  },
@@ -38,7 +18,7 @@
    "id": 29328,
    "type": 101,
    "purposeId": 11,
-   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "iconPath": "af49f8c10262045a4f9e4740703b52056b5f396b48b99c2d130c22f3dbfa99d9",
    "name": "Credit",
    "desc": "Diese Währung, die von der Interastrale Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
    "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
@@ -55,7 +35,7 @@
    "id": 125435,
    "type": 601,
    "purposeId": 4,
-   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "iconPath": "b0f1cfc56ed708ca47e85bd5f199c02e9c2804f06ed290d904d0118b171f57e5",
    "name": "Spuren des Schicksals",
    "desc": "Fortschrittliches Material zum Hochstufen von Spuren.",
    "lore": "Unzählige Fehlschläge sicherten deinen Sieg und deine kleinen Schritte führten dich an den Wendepunkt des Schicksals.",
@@ -69,11 +49,26 @@
     "Belohnungen für zeitlich begrenzte Aktionen"
    ]
   },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "e4e921f4de5d1ca7628ee1ae03dd74abb5227a8be2d12428213308ebf81a7d04",
+   "name": "Lamento der Wächterin",
+   "desc": "Fortgeschrittenes Material zum Hochstufen von Spuren.",
+   "lore": "Nicht nur die Maske ist beschädigt, auch der Wunsch der Wächterin, die sie trug, wurde verzerrt.<br />Sie wollte ihrem Volk zur Flucht vor dem Immerwinter verhelfen, aber wurde schließlich zu einer Marionette höherer Mächte.<br /><br />„Der Titel der Obersten Wächterin wurde auf Belobog über viele Generationen vererbt. Niemand hat je daran gedacht, dass auch die Wächter selbst Fürsorge und Schutz brauchen.“",
+   "purpose": "Spurenmaterial",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "Echo des Krieges (Immerwinterhügel)"
+   ]
+  },
   "409960": {
    "id": 409960,
    "type": 601,
    "purposeId": 1,
-   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "iconPath": "ccf6a04abba3ee0c642f987df4acbfa23c97875710e72898f807325b14f938d0",
    "name": "Reiseführer",
    "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>20.000</nobr> Figuren-EP.",
    "lore": "Pflichtlektüre für Weltreisende. Auf Knopfdruck beginnt eine angenehme Stimme in der Sprache des Lesers von den legendären Erlebnissen berühmter Abenteurer auf diversen Planeten zu erzählen und ihr gesammeltes Wissen zusammenzufassen.<br /><br />„Die brandneue Reiseführer-Reihe ‚Das Handbuch für die galaktische Küche‘ ist jetzt erhältlich.“<br />„Einsendungen bitte per Telepathie über Synästhesie-Leuchtfeuer ERD<nobr>-23</nobr>θ an das Team der Intelligenzia-Gilde. Flexible Zahlungsoptionen.“",
@@ -89,7 +84,7 @@
    "id": 409961,
    "type": 601,
    "purposeId": 1,
-   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "iconPath": "3be91e7b878ba619cd2887b80d45437c95ca08491547d49be65898de505d6a7a",
    "name": "Abenteuer-Log",
    "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>5.000</nobr> Figuren-EP.",
    "lore": "Eine säuberlich organisierte Sammlung lehrreicher Notizen mit unzähligen Illustrationen und Texten, die diverse Abenteuer vom Anfang bis zum Ende beschreiben, sowie wertvollen Tipps und Überlebenstechniken.<br /><br />„Warum werden die Daten nicht in einer Foto-CD gespeichert? Wäre doch viel praktischer.“<br />„Moderne Technologie ist angesichts von Sternenstürmen und Neuronenfluss-Eruptionen viel empfindlicher, als man denkt. Außerdem hätte der Autor des Buchs sicher gewollt, dass man es auf die einfachste Art liest.“",
@@ -105,7 +100,7 @@
    "id": 409962,
    "type": 601,
    "purposeId": 1,
-   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "iconPath": "986cb8eacfc77a347d7be45f6ba74ecf909ec26ffffd577c9ff6129bdfa93544",
    "name": "Reisebegegnungen",
    "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>1.000</nobr> Figuren-EP.",
    "lore": "Ein unleserlich von Hand geschriebenes Reisetagebuch mit wirren Inhalten. Es nützt dir wenig.<br /><br />„Dan Heng, lies das endlich fertig, damit es in den Müll kann.“",
@@ -121,7 +116,7 @@
    "id": 468391,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "e8d74f9705754fb743acb234866d6e64a1f2354cb71bf2263579546b256a8913",
+   "iconPath": "13ea8e54efb3930b934fb523a1fb7f3cc2793f9ddf94fbbcb3b43013b2c35208",
    "name": "Goldkrone der vergangenen Schatten",
    "desc": "Kopfbedeckung des Zerfallenden Schattens. Material zum Aufstieg der Figuren mit imaginärem Typ.",
    "lore": "Ein Accessoire, das der Schatten eines früheren Wächters zurückließ und das von der Immerwinterstadt erzählt.<br /><br />„Alina die Liebende – ihre Güte war erhaben wie der Himmel und ihre Barmherzigkeit leuchtete hell wie Gold.“",
@@ -137,15 +132,15 @@
    "id": 549503,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "fcb7215a2a17b09cd16362b5e1b398eaaf2fde23a94057c5f961151885a620c5",
-   "name": "Künstliches mechanisches Bauteil",
+   "iconPath": "a9982fbfd0b91bf955e7490167c11c9813a73f915e9665110456d1658daac9b6",
+   "name": "Mechanisches Bauteil",
    "desc": "Teil einer Xianzhou-Maschine. Ein Rohmaterial zur Verstärkung.",
    "lore": "Die Grundlage der mechanischen Künste von Xianzhou. Der kleinste Baustein aller Maschinenteile. Ihn zu zerstören, käme der Zerstörung der Zellstruktur eines Lebewesens gleich.<br /><br />„Die Intelligenzia-Gilde hat ein Kopfgeld von zwei Millionen Credits auf technische Pläne ausgesetzt, mit denen die mechanischen Marionetten der Xianzhou fehlerfrei zerlegt werden können.“<br />„Wenn du Screwllum kennst, dann gehören diese zwei Millionen im Grunde dir ...“",
    "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
    "rarity": 2,
    "rewardPath": "/material/549503",
    "comeFrom": [
-    "Sternhafen: Magische Erfindergeister oder andere Gegner",
+    "Magische Erfindergeister",
     "Universum-Simulation-Gegner",
     "Auftragsbelohnungen",
     "Glut-Tausch",
@@ -156,7 +151,7 @@
    "id": 633444,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "1977002edbf48f44c49d08284ce2681f622e70c447d50de10a8b9491dfcb719c",
+   "iconPath": "70a8938f2ceb297722769c3899bb3657304924c15cafc50fa23390de5eabacbc",
    "name": "Mechanisches zylindrisches Rad",
    "desc": "Teil einer Xianzhou-Maschine. Ein normales Material zur Verstärkung.",
    "lore": "Die verbindenden Komponenten in der Kunst der Xianzhou-Mechanik. Die filigranen und dünnen Zähne der Zahnräder sind so winzig wie Senfkörner, und doch sind sie so miteinander verbunden, dass sie einen komplexen Körper bilden, sodass die Maschine wahrhaftig als lebendig bezeichnet werden kann.<br /><br />„Ihre Form ist harmonisch, eine Parallele zur Natur. Ihre Bewegungen sind zyklisch und spiegeln den Kosmos wider.“",
@@ -164,7 +159,7 @@
    "rarity": 3,
    "rewardPath": "/material/633444",
    "comeFrom": [
-    "Sternhafen: Magische Erfindergeister (Balance-Stufe 2+) oder andere Gegner",
+    "Magische Erfindergeister auf Balance-Stufe 2 oder höher",
     "Omni-Synthesemaschine – Materialsynthese",
     "Universum-Simulation-Gegner",
     "Omni-Synthesemaschine – Materialtausch"
@@ -174,9 +169,9 @@
    "id": 635671,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "6a16c2294ef90c8cb62d61eff8e1fa277eb6fafdd394ce5e157bd9fd4a7bb701",
+   "iconPath": "6128dd36bba1dcd10f490255173adf943c831435b13dc253d91a61463f37e39c",
    "name": "Saat des Überflusses",
-   "desc": "Ein vom Äon des Überflusses gesäter Segenssamen, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad des Überflusses</span> ein wenig hochgestuft werden können.",
+   "desc": "Ein vom Äon des Überflusses gesäter Segenssamen, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad des Überflusses</span> ein wenig hochgestuft werden können.",
    "lore": "Wer sie berührt, wird allmählich von Wunden und Krankheiten geheilt.<br />Die Gebete verzweifelter Menschen, die um den Segen des Lebens bitten, werden immer erhört.<br /><br />„Dein Wunsch sei dir erfüllt.“",
    "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
    "rarity": 2,
@@ -189,7 +184,7 @@
    "id": 717385,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "058379eb2e88612f2b1f78a6c3195c457e124c9b6de602d6dd2fe0b2d17245f3",
+   "iconPath": "45329d01c5eb773414481b5457ac4854e81070b98c21d939da2a973c3c965fbd",
    "name": "Mechanisches Gyro-Herz",
    "desc": "Teil einer Xianzhou-Maschine. Ein fortschrittliches Material zur Verstärkung.",
    "lore": "Das Herzstück der mechanischen Künste der Xianzhou. Die Armillarsphäre kreist und vibriert wie die Essenzen eines Herzens und lässt die Maschine wie ein lebendiges Wesen denken.<br /><br />„Erschrick nicht. Wenn du ihr das Herz wegnimmst, wird er ... sie ... nein, es sein Gefühl verlieren und zu seinem mechanischen Ursprung zurückkehren.“",
@@ -197,7 +192,7 @@
    "rarity": 4,
    "rewardPath": "/material/717385",
    "comeFrom": [
-    "Sternhafen: Magische Erfindergeister (Balance-Stufe 4+) oder andere Gegner",
+    "Magische Erfindergeister auf Balance-Stufe 4 oder höher",
     "Omni-Synthesemaschine – Materialsynthese",
     "Universum-Simulation-Gegner",
     "Omni-Synthesemaschine – Materialtausch"
@@ -207,9 +202,9 @@
    "id": 836257,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "8b56fa357be53126b0284b12903e0bfd41ace9d4dc155711d0297b70563b3bc7",
+   "iconPath": "71dd8f16d472b4b68f3296f67d6421f2b8aab12a6712c56506f336283bd0220c",
    "name": "Blume der Ewigkeit",
-   "desc": "Eine aus dem Spross des Lebens gewachsene wunderschöne Blume, mit der Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad des Überflusses</span> stark hochgestuft werden können.",
+   "desc": "Eine aus dem Spross des Lebens gewachsene wunderschöne Blume, mit der Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad des Überflusses</span> stark hochgestuft werden können.",
    "lore": "Ihr Staubblatt enthält die konzentrierte Kraft des Überflusses, der die Blume ihr ewiges Leben verdankt. Weder Feuer noch Eis noch das unwirtlichste Klima können das Wachstum dieser prachtvollen Lebensform aufhalten.<br />Eines Tages wird sie die Nährstoffe aus den Sternen zehren, Wurzeln im Herzblut der Welt schlagen und niemals vergehen, und ihre Früchte werden das Versprechen der Unsterblichkeit erfüllen.<br /><br />„Über der Leere treibt ein Boot, gewaltiger als jeder Berg. Wer vom Baum der Unsterblichkeit darauf isst, der soll ewig leben.“",
    "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
    "rarity": 4,
@@ -223,9 +218,9 @@
    "id": 920198,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "084dff414a606a7be5ee10de1cda1048d08a87d2dc3587c5e545afb4399e881a",
+   "iconPath": "9a770eaee0f4119cbd5510afe63536ba85cda116f02bf1d0841bba6e565c5cd2",
    "name": "Spross des Lebens",
-   "desc": "Ein der Saat des Überflusses entsprungener Keimling, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Pfad des Überflusses</span> mäßig hochgestuft werden können.",
+   "desc": "Ein der Saat des Überflusses entsprungener Keimling, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad des Überflusses</span> mäßig hochgestuft werden können.",
    "lore": "Strahlende Wärme, Leben und Wachstum gedeihen rund um den Ort, wo er seine Wurzeln schlägt. Karges Ödland verwandelt sich in saftige Grasfelder, verwelkte Pflanzen verjüngen und blühen, und Quellen brechen durch den Boden, um das Land zu befeuchten.<br />Wenn du dich ihm näherst, zucken deine Muskeln und Knochen und breiten sich mit einem unerträglichen Juckreiz aus.<br /><br />„Das Leben ist unermüdlich, wo die Seele gedeiht.“",
    "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
    "rarity": 3,
@@ -234,25 +229,21 @@
     "Blütenkelch (Abgelegener Pass)",
     "Omni-Synthesemaschine – Materialsynthese"
    ]
-  },
-  "985668": {
-   "id": 985668,
-   "type": 601,
-   "purposeId": 4,
-   "iconPath": "91205616cca581bc299d91a1af94a91981d58328675779f8e66ccbaf679e5e94",
-   "name": "Ende des Zerstörers",
-   "desc": "Fortgeschrittenes Material zum Hochstufen von Spuren.",
-   "lore": "Das Herz des Leviathans schlägt nicht mehr, doch sein Verstand lebt weiter, wenn auch nur im Inneren seines Gehäuses. Solange der Deckel geschlossen bleibt, ist der Verstand gleichzeitig lebendig und tot und treibt die Zerstörungsmaschine an.<br /><br />„Die Bestie des Jüngsten Gerichts, ein Ungeheuer aus dem Feuer der Kriegsschmiede. Sie besteht aus den Resten des Leviathans und den klagenden Gebeinen Tausender, und sie sehnt sich danach, das Universum und sich selbst zu zerstören.“",
-   "purpose": "Spurenmaterial",
-   "rarity": 4,
-   "rewardPath": "/material/985668",
-   "comeFrom": [
-    "Echo des Krieges (Versorgungszone)"
-   ]
   }
  },
  "levelData": [
   {
+   "attackBase": 102.96,
+   "attackAdd": 5.148,
+   "hpBase": 174.24,
+   "hpAdd": 8.712,
+   "defenseBase": 49.5,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
    "promotion": 0,
    "maxLevel": 20,
    "cost": [
@@ -264,20 +255,20 @@
      "id": 549503,
      "count": 5
     }
-   ],
-   "attackBase": 95.04,
-   "attackAdd": 4.752,
-   "hpBase": 174.24,
+   ]
+  },
+  {
+   "attackBase": 144.144,
+   "attackAdd": 5.148,
+   "hpBase": 243.936,
    "hpAdd": 8.712,
-   "defenseBase": 59.4,
-   "defenseAdd": 2.97,
+   "defenseBase": 69.3,
+   "defenseAdd": 2.475,
    "crate": 0.05,
    "cdmg": 0.5,
    "aggro": 100,
    "speedBase": 101,
-   "speedAdd": 0
-  },
-  {
+   "speedAdd": 0,
    "promotion": 1,
    "maxLevel": 30,
    "cost": [
@@ -289,20 +280,20 @@
      "id": 549503,
      "count": 10
     }
-   ],
-   "attackBase": 133.056,
-   "attackAdd": 4.752,
-   "hpBase": 243.936,
+   ]
+  },
+  {
+   "attackBase": 185.328,
+   "attackAdd": 5.148,
+   "hpBase": 313.632,
    "hpAdd": 8.712,
-   "defenseBase": 83.16,
-   "defenseAdd": 2.97,
+   "defenseBase": 89.1,
+   "defenseAdd": 2.475,
    "crate": 0.05,
    "cdmg": 0.5,
    "aggro": 100,
    "speedBase": 101,
-   "speedAdd": 0
-  },
-  {
+   "speedAdd": 0,
    "promotion": 2,
    "maxLevel": 40,
    "cost": [
@@ -318,20 +309,20 @@
      "id": 468391,
      "count": 3
     }
-   ],
-   "attackBase": 171.072,
-   "attackAdd": 4.752,
-   "hpBase": 313.632,
+   ]
+  },
+  {
+   "attackBase": 226.512,
+   "attackAdd": 5.148,
+   "hpBase": 383.328,
    "hpAdd": 8.712,
-   "defenseBase": 106.92,
-   "defenseAdd": 2.97,
+   "defenseBase": 108.9,
+   "defenseAdd": 2.475,
    "crate": 0.05,
    "cdmg": 0.5,
    "aggro": 100,
    "speedBase": 101,
-   "speedAdd": 0
-  },
-  {
+   "speedAdd": 0,
    "promotion": 3,
    "maxLevel": 50,
    "cost": [
@@ -347,20 +338,20 @@
      "id": 468391,
      "count": 7
     }
-   ],
-   "attackBase": 209.088,
-   "attackAdd": 4.752,
-   "hpBase": 383.328,
+   ]
+  },
+  {
+   "attackBase": 267.696,
+   "attackAdd": 5.148,
+   "hpBase": 453.024,
    "hpAdd": 8.712,
-   "defenseBase": 130.68,
-   "defenseAdd": 2.97,
+   "defenseBase": 128.7,
+   "defenseAdd": 2.475,
    "crate": 0.05,
    "cdmg": 0.5,
    "aggro": 100,
    "speedBase": 101,
-   "speedAdd": 0
-  },
-  {
+   "speedAdd": 0,
    "promotion": 4,
    "maxLevel": 60,
    "cost": [
@@ -376,20 +367,20 @@
      "id": 468391,
      "count": 20
     }
-   ],
-   "attackBase": 247.104,
-   "attackAdd": 4.752,
-   "hpBase": 453.024,
+   ]
+  },
+  {
+   "attackBase": 308.88,
+   "attackAdd": 5.148,
+   "hpBase": 522.72,
    "hpAdd": 8.712,
-   "defenseBase": 154.44,
-   "defenseAdd": 2.97,
+   "defenseBase": 148.5,
+   "defenseAdd": 2.475,
    "crate": 0.05,
    "cdmg": 0.5,
    "aggro": 100,
    "speedBase": 101,
-   "speedAdd": 0
-  },
-  {
+   "speedAdd": 0,
    "promotion": 5,
    "maxLevel": 70,
    "cost": [
@@ -405,34 +396,23 @@
      "id": 468391,
      "count": 35
     }
-   ],
-   "attackBase": 285.12,
-   "attackAdd": 4.752,
-   "hpBase": 522.72,
-   "hpAdd": 8.712,
-   "defenseBase": 178.2,
-   "defenseAdd": 2.97,
-   "crate": 0.05,
-   "cdmg": 0.5,
-   "aggro": 100,
-   "speedBase": 101,
-   "speedAdd": 0
+   ]
   },
   {
-   "promotion": 6,
-   "maxLevel": 80,
-   "cost": [],
-   "attackBase": 323.136,
-   "attackAdd": 4.752,
+   "attackBase": 350.064,
+   "attackAdd": 5.148,
    "hpBase": 592.416,
    "hpAdd": 8.712,
-   "defenseBase": 201.96,
-   "defenseAdd": 2.97,
+   "defenseBase": 168.3,
+   "defenseAdd": 2.475,
    "crate": 0.05,
    "cdmg": 0.5,
    "aggro": 100,
    "speedBase": 101,
-   "speedAdd": 0
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
   }
  ],
  "ranks": [
@@ -441,9 +421,9 @@
    "iconPath": "",
    "artPath": "eb4ced326ce1d4e20374e21c8fcc79c290def6ac3ab6ae9daaa4cbda99922175",
    "name": "Taufe der Lebenden",
-   "descHash": "Wird nach dem Einsatz der Fertigkeit die LP eines anvisierten Verbündeten vollständig wiederhergestellt, erhält Luocha zusätzlich <nobr>#1[i]</nobr> Pkt. Energie zurück.",
+   "descHash": "Ist das Feld aktiv, wird der ANG aller Verbündeten um <nobr>#1[i]%</nobr> erhöht.",
    "params": [
-    10
+    0.2
    ]
   },
   {
@@ -451,11 +431,12 @@
    "iconPath": "",
    "artPath": "bdb37aa787990bc103c4e1968a6e3bdbc0bf0647011cb526dfc42e75d0a9e1fd",
    "name": "Reine Hingabe",
-   "descHash": "Liegt der LP-Prozentsatz des anvisierten Verbündeten beim Einsatz der Fertigkeit unter <nobr>50</nobr> %, wird Luochas bewirkte Heilung um <nobr>#1[i]%</nobr> erhöht. Liegt der LP-Prozentsatz des anvisierten Verbündeten bei <nobr>50</nobr> % oder höher, gewährt Luocha ihm einen Schild, der SCH in Höhe von <nobr>#2[i]%</nobr> der max. LP des Verbündeten für <nobr>#3[i]</nobr> Rd. absorbieren kann.",
+   "descHash": "Wenn der Effekt der Fertigkeit ausgelöst wird und der LP-Prozentsatz des anvisierten Verbündeten unter <nobr>50</nobr> % liegt, wird Luochas bewirkte Heilung um <nobr>#1[i]%</nobr> erhöht. Liegt der LP-Prozentsatz des anvisierten Verbündeten bei <nobr>50</nobr> % oder höher, gewährt Luocha ihm einen Schild, der für <nobr>#4[i]</nobr> Rd. SCH in Höhe von <nobr>#2[i]%</nobr> von Luochas ANG plus <nobr>#3[i]</nobr> absorbiert.",
    "params": [
     0.3,
-    0.15,
-    1
+    0.18,
+    240,
+    2
    ]
   },
   {
@@ -463,7 +444,7 @@
    "iconPath": "",
    "artPath": "f0180be38a3f7c49571e6b5bfa5565b95042bdceaf92abee9219bece0612a6c1",
    "name": "Ein närrischer Versuch",
-   "descHash": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis zu max. St. <nobr>10</nobr>.",
+   "descHash": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis zu max. St. <nobr>10</nobr>.",
    "params": []
   },
   {
@@ -489,9 +470,11 @@
    "iconPath": "",
    "artPath": "e9b2e3c3c6b3fc5c9d947da05a18ca9f74189d400099f5fe76f1110f1238f9b1",
    "name": "Staub zu Staub",
-   "descHash": "Erhöht den SCH der Widerstand-Reduzierung durch Standardangriff und Ultimate um <nobr>#1[i]%</nobr>.",
+   "descHash": "Beim Einsatz des Ultimates besteht eine feste Chance von <nobr>#1[i]%</nobr>, den WDS aller Typen von allen Gegnern für <nobr>#3[i]</nobr> Rd. um <nobr>#2[i]%</nobr> zu reduzieren.",
    "params": [
-    1
+    1,
+    0.2,
+    2
    ]
   }
  ],
@@ -514,29 +497,32 @@
  ],
  "skills": [
   {
+   "tagHash": "Einzelangriff",
+   "descHash": "Fügt einem anvisierten Gegner imaginären SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Luochas ANG zu.",
+   "ultimateCost": 0,
+   "break": 30,
+   "energy": 20,
    "id": 906493,
    "name": "Dornen des Abgrunds",
-   "tagHash": "Einzelangriff",
-   "descHash": "Fügt einem anvisierten Gegner imaginären SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Luochas ANG zu.",
+   "iconPath": "d5ece77965be7bfbf5e9a09121c5b481fd433ec8b06e2beba0c5fcbb04b611b9",
    "typeDescHash": "Standardangriff",
-   "iconPath": "2f475e3d3cf4b42b3aeb808330f9abc8904d4a4eb29b45fadce6f2dcd0128371",
    "levelReq": 0,
    "promotionReq": 0,
    "levelData": [
     {
-     "level": 1,
      "params": [
       0.5
      ],
+     "level": 1,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 2,
      "params": [
       0.6
      ],
+     "level": 2,
      "levelReq": 0,
      "promotionReq": 2,
      "cost": [
@@ -555,10 +541,10 @@
      ]
     },
     {
-     "level": 3,
      "params": [
       0.7
      ],
+     "level": 3,
      "levelReq": 0,
      "promotionReq": 3,
      "cost": [
@@ -577,10 +563,10 @@
      ]
     },
     {
-     "level": 4,
      "params": [
       0.8
      ],
+     "level": 4,
      "levelReq": 0,
      "promotionReq": 4,
      "cost": [
@@ -599,10 +585,10 @@
      ]
     },
     {
-     "level": 5,
      "params": [
       0.9
      ],
+     "level": 5,
      "levelReq": 0,
      "promotionReq": 5,
      "cost": [
@@ -621,10 +607,10 @@
      ]
     },
     {
-     "level": 6,
      "params": [
       1
      ],
+     "level": 6,
      "levelReq": 0,
      "promotionReq": 6,
      "cost": [
@@ -643,65 +629,67 @@
      ]
     },
     {
-     "level": 7,
      "params": [
       1.1
      ],
+     "level": 7,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 8,
      "params": [
       1.2
      ],
+     "level": 8,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 9,
      "params": [
       1.3
      ],
+     "level": 9,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     }
-   ],
-   "ultimateCost": 0
+   ]
   },
   {
+   "tagHash": "Wiederherstellung",
+   "descHash": "Nach dem Einsatz der Fertigkeit stellt er sofort die LP eines anvisierten Verbündeten um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Luochas ANG plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> wieder her. In der Zwischenzeit erhält Luocha 1 Stapelung „Abgrundblume“.<br />Wenn der LP-Prozentsatz eines beliebigen Verbündeten bei <nobr>#3[i]%</nobr> oder niedriger liegt, wird ein Effekt, der Luochas Fertigkeit entspricht, sofort ausgelöst (ohne dabei Fertigkeitspunkte zu verbrauchen). Dieser Effekt kann nach <nobr>#4[i]</nobr> Rd. erneut ausgelöst werden.",
+   "ultimateCost": 0,
+   "break": 0,
+   "energy": 30,
    "id": 990434,
    "name": "Gebet der Abgrundblume",
-   "tagHash": "Wiederherstellung",
-   "descHash": "Stellt nach dem Einsatz der Fertigkeit LP eines anvisierten Verbündeten sofort um <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Luochas ANG plus <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]</nobr></span> wieder her. Luocha erhält 1-mal „Abgrundblume“.<br />Liegt der LP-Prozentsatz eines beliebigen Verbündeten bei <nobr>#3[i]%</nobr> oder niedriger, setzt Luocha die Fertigkeit sofort 1-mal bei diesem Verbündeten ein, ohne Fertigkeitspunkte zu verbrauchen. Dieser Effekt kann nach <nobr>#4[i]</nobr> Aktionen von Luocha erneut ausgelöst werden, wenn die Bedingung erfüllt ist.",
+   "iconPath": "2a2c699936d3eafcaa63939e541fdb10b7db4ef96c3c6017aabcb3abcbb146fc",
    "typeDescHash": "Fertigkeit",
-   "iconPath": "fb4c3dcb07d70358db2eb9fa5b6caf8e68cca51e1bc6973e05a5df20460b0ccb",
    "levelReq": 0,
    "promotionReq": 0,
    "levelData": [
     {
-     "level": 1,
      "params": [
       0.4,
       200,
       0.5,
       2
      ],
+     "level": 1,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 2,
      "params": [
       0.425,
       320,
       0.5,
       2
      ],
+     "level": 2,
      "levelReq": 0,
      "promotionReq": 1,
      "cost": [
@@ -716,13 +704,13 @@
      ]
     },
     {
-     "level": 3,
      "params": [
       0.45,
       410,
       0.5,
       2
      ],
+     "level": 3,
      "levelReq": 0,
      "promotionReq": 2,
      "cost": [
@@ -741,13 +729,13 @@
      ]
     },
     {
-     "level": 4,
      "params": [
       0.475,
       500,
       0.5,
       2
      ],
+     "level": 4,
      "levelReq": 0,
      "promotionReq": 3,
      "cost": [
@@ -766,13 +754,13 @@
      ]
     },
     {
-     "level": 5,
      "params": [
       0.5,
       560,
       0.5,
       2
      ],
+     "level": 5,
      "levelReq": 0,
      "promotionReq": 4,
      "cost": [
@@ -791,13 +779,13 @@
      ]
     },
     {
-     "level": 6,
      "params": [
       0.52,
       620,
       0.5,
       2
      ],
+     "level": 6,
      "levelReq": 0,
      "promotionReq": 4,
      "cost": [
@@ -816,13 +804,13 @@
      ]
     },
     {
-     "level": 7,
      "params": [
       0.54,
       665,
       0.5,
       2
      ],
+     "level": 7,
      "levelReq": 0,
      "promotionReq": 5,
      "cost": [
@@ -841,13 +829,13 @@
      ]
     },
     {
-     "level": 8,
      "params": [
       0.56,
       710,
       0.5,
       2
      ],
+     "level": 8,
      "levelReq": 0,
      "promotionReq": 5,
      "cost": [
@@ -860,7 +848,7 @@
        "count": 5
       },
       {
-       "id": 985668,
+       "id": 270195,
        "count": 1
       },
       {
@@ -870,13 +858,13 @@
      ]
     },
     {
-     "level": 9,
      "params": [
       0.58,
       755,
       0.5,
       2
      ],
+     "level": 9,
      "levelReq": 0,
      "promotionReq": 6,
      "cost": [
@@ -893,19 +881,19 @@
        "count": 1
       },
       {
-       "id": 985668,
+       "id": 270195,
        "count": 1
       }
      ]
     },
     {
-     "level": 10,
      "params": [
       0.6,
       800,
       0.5,
       2
      ],
+     "level": 10,
      "levelReq": 0,
      "promotionReq": 6,
      "cost": [
@@ -922,392 +910,102 @@
        "count": 1
       },
       {
-       "id": 985668,
+       "id": 270195,
        "count": 1
       }
      ]
     },
     {
-     "level": 11,
      "params": [
       0.62,
       845,
       0.5,
       2
      ],
+     "level": 11,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 12,
      "params": [
       0.64,
       890,
       0.5,
       2
      ],
+     "level": 12,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 13,
      "params": [
       0.66,
       935,
       0.5,
       2
      ],
+     "level": 13,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 14,
      "params": [
       0.68,
       980,
       0.5,
       2
      ],
+     "level": 14,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 15,
      "params": [
       0.7,
       1025,
       0.5,
       2
      ],
+     "level": 15,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     }
-   ],
-   "ultimateCost": 0
+   ]
   },
   {
+   "tagHash": "Flächenangriff",
+   "descHash": "Entfernt <nobr>#2[i]</nobr> <u>Buff</u> von allen Gegnern und fügt ihnen imaginären SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Luochas ANG zu. In der Zwischenzeit erhält Luocha 1 Stapelung „Abgrundblume“.",
+   "ultimateCost": 100,
+   "break": 0,
+   "energy": 5,
    "id": 107079,
    "name": "Todestrieb",
-   "tagHash": "Flächenangriff",
-   "descHash": "Entfernt <nobr>#2[i]</nobr> <u>Buff von Gegnern </u> und fügt allen Gegnern imaginären SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Luochas ANG zu. Luocha erhält 1-fach „Abgrundblume“.",
+   "iconPath": "70be95cd6ae4ee811b2d0ade1bd4ff687e88a534458171839fac4c338f7a4203",
    "typeDescHash": "Ultimate",
-   "iconPath": "03351de5de08dab2c2374e2eb2f344aef864901e3edb1ab93725de1002ab8fd6",
    "levelReq": 0,
    "promotionReq": 0,
    "levelData": [
     {
-     "level": 1,
-     "params": [
-      0.8,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "level": 2,
-     "params": [
-      0.88,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 1,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 2500
-      },
-      {
-       "id": 549503,
-       "count": 3
-      }
-     ]
-    },
-    {
-     "level": 3,
-     "params": [
-      0.96,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 2,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 5000
-      },
-      {
-       "id": 635671,
-       "count": 3
-      },
-      {
-       "id": 549503,
-       "count": 6
-      }
-     ]
-    },
-    {
-     "level": 4,
-     "params": [
-      1.04,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 3,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 10000
-      },
-      {
-       "id": 920198,
-       "count": 3
-      },
-      {
-       "id": 633444,
-       "count": 3
-      }
-     ]
-    },
-    {
-     "level": 5,
-     "params": [
-      1.12,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 4,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 20000
-      },
-      {
-       "id": 920198,
-       "count": 5
-      },
-      {
-       "id": 633444,
-       "count": 4
-      }
-     ]
-    },
-    {
-     "level": 6,
      "params": [
       1.2,
       1
      ],
-     "levelReq": 0,
-     "promotionReq": 4,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 30000
-      },
-      {
-       "id": 920198,
-       "count": 7
-      },
-      {
-       "id": 633444,
-       "count": 6
-      }
-     ]
-    },
-    {
-     "level": 7,
-     "params": [
-      1.3,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 5,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 45000
-      },
-      {
-       "id": 836257,
-       "count": 3
-      },
-      {
-       "id": 717385,
-       "count": 3
-      }
-     ]
-    },
-    {
-     "level": 8,
-     "params": [
-      1.4,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 5,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 80000
-      },
-      {
-       "id": 836257,
-       "count": 5
-      },
-      {
-       "id": 985668,
-       "count": 1
-      },
-      {
-       "id": 717385,
-       "count": 4
-      }
-     ]
-    },
-    {
-     "level": 9,
-     "params": [
-      1.5,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 6,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 160000
-      },
-      {
-       "id": 836257,
-       "count": 8
-      },
-      {
-       "id": 125435,
-       "count": 1
-      },
-      {
-       "id": 985668,
-       "count": 1
-      }
-     ]
-    },
-    {
-     "level": 10,
-     "params": [
-      1.6,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 6,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 300000
-      },
-      {
-       "id": 836257,
-       "count": 14
-      },
-      {
-       "id": 125435,
-       "count": 1
-      },
-      {
-       "id": 985668,
-       "count": 1
-      }
-     ]
-    },
-    {
-     "level": 11,
-     "params": [
-      1.68,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "level": 12,
-     "params": [
-      1.76,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "level": 13,
-     "params": [
-      1.84,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "level": 14,
-     "params": [
-      1.92,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "level": 15,
-     "params": [
-      2,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    }
-   ],
-   "ultimateCost": 100
-  },
-  {
-   "id": 421380,
-   "name": "Zyklus des Lebens",
-   "tagHash": "Wiederherstellung",
-   "descHash": "Wird „Abgrundblume“ <nobr>#1[i]</nobr>-fach gestapelt, verbraucht Luocha alle „Abgrundblumen“, um ein Feld zu erzeugen.<br />Wird ein Gegner innerhalb des Felds von einem Verbündeten angegriffen, erhält der Verbündete unmittelbar LP in Höhe von <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> von Luochas ANG plus <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]</nobr></span> zurück.<br />Das Feld hält <nobr>#3[i]</nobr> Rd. an.",
-   "typeDescHash": "Talent",
-   "iconPath": "86540323b3dd09a99f02d6c1b67618a6a158b38d85d4dbaaf55164cec62f5152",
-   "levelReq": 0,
-   "promotionReq": 0,
-   "levelData": [
-    {
      "level": 1,
-     "params": [
-      2,
-      0.14,
-      2,
-      70
-     ],
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 2,
      "params": [
-      2,
-      0.14875,
-      2,
-      112
+      1.28,
+      1
      ],
+     "level": 2,
      "levelReq": 0,
      "promotionReq": 1,
      "cost": [
@@ -1322,13 +1020,11 @@
      ]
     },
     {
-     "level": 3,
      "params": [
-      2,
-      0.1575,
-      2,
-      143.5
+      1.36,
+      1
      ],
+     "level": 3,
      "levelReq": 0,
      "promotionReq": 2,
      "cost": [
@@ -1347,13 +1043,11 @@
      ]
     },
     {
-     "level": 4,
      "params": [
-      2,
-      0.16625,
-      2,
-      175
+      1.44,
+      1
      ],
+     "level": 4,
      "levelReq": 0,
      "promotionReq": 3,
      "cost": [
@@ -1372,13 +1066,11 @@
      ]
     },
     {
-     "level": 5,
      "params": [
-      2,
-      0.175,
-      2,
-      196
+      1.52,
+      1
      ],
+     "level": 5,
      "levelReq": 0,
      "promotionReq": 4,
      "cost": [
@@ -1397,13 +1089,11 @@
      ]
     },
     {
-     "level": 6,
      "params": [
-      2,
-      0.182,
-      2,
-      217
+      1.6,
+      1
      ],
+     "level": 6,
      "levelReq": 0,
      "promotionReq": 4,
      "cost": [
@@ -1422,13 +1112,11 @@
      ]
     },
     {
-     "level": 7,
      "params": [
-      2,
-      0.189,
-      2,
-      232.75
+      1.7,
+      1
      ],
+     "level": 7,
      "levelReq": 0,
      "promotionReq": 5,
      "cost": [
@@ -1447,13 +1135,11 @@
      ]
     },
     {
-     "level": 8,
      "params": [
-      2,
-      0.196,
-      2,
-      248.5
+      1.8,
+      1
      ],
+     "level": 8,
      "levelReq": 0,
      "promotionReq": 5,
      "cost": [
@@ -1466,7 +1152,7 @@
        "count": 5
       },
       {
-       "id": 985668,
+       "id": 270195,
        "count": 1
       },
       {
@@ -1476,13 +1162,11 @@
      ]
     },
     {
-     "level": 9,
      "params": [
-      2,
-      0.203,
-      2,
-      264.25
+      1.9,
+      1
      ],
+     "level": 9,
      "levelReq": 0,
      "promotionReq": 6,
      "cost": [
@@ -1499,19 +1183,17 @@
        "count": 1
       },
       {
-       "id": 985668,
+       "id": 270195,
        "count": 1
       }
      ]
     },
     {
-     "level": 10,
      "params": [
       2,
-      0.21,
-      2,
-      280
+      1
      ],
+     "level": 10,
      "levelReq": 0,
      "promotionReq": 6,
      "cost": [
@@ -1528,420 +1210,429 @@
        "count": 1
       },
       {
-       "id": 985668,
+       "id": 270195,
        "count": 1
       }
      ]
     },
     {
+     "params": [
+      2.08,
+      1
+     ],
      "level": 11,
-     "params": [
-      2,
-      0.217,
-      2,
-      295.75
-     ],
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
+     "params": [
+      2.16,
+      1
+     ],
      "level": 12,
-     "params": [
-      2,
-      0.224,
-      2,
-      311.5
-     ],
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
+     "params": [
+      2.24,
+      1
+     ],
      "level": 13,
-     "params": [
-      2,
-      0.231,
-      2,
-      327.25
-     ],
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
+     "params": [
+      2.32,
+      1
+     ],
      "level": 14,
-     "params": [
-      2,
-      0.238,
-      2,
-      343
-     ],
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 15,
      "params": [
-      2,
-      0.245,
-      2,
-      358.75
+      2.4,
+      1
      ],
+     "level": 15,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     }
-   ],
-   "ultimateCost": 0
+   ]
   },
   {
-   "id": 621966,
-   "name": "Angriff",
+   "tagHash": "Wiederherstellung",
+   "descHash": "Wird „Abgrundblume“ <nobr>#1[i]</nobr>-fach gestapelt, verbraucht Luocha alle Abgrundblumen, um ein Feld zu erzeugen.<br />Wird ein Gegner innerhalb des Felds von einem Verbündeten angegriffen, werden die LP des Verbündeten unmittelbar um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> von Luochas ANG plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span> wiederhergestellt.<br />Das Feld hält für <nobr>#3[i]</nobr> Rd. an. Ist Luocha handlungsunfähig, verschwindet das Feld.",
+   "ultimateCost": 0,
+   "break": 0,
+   "energy": 0,
+   "id": 421380,
+   "name": "Zyklus des Lebens",
+   "iconPath": "9700e9bd54c76af7278f32204f081744ed478d8f921d7c9ecbc4401b2f7778a5",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2,
+      0.12,
+      2,
+      60
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.1275,
+      2,
+      96
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549503,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.135,
+      2,
+      123
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635671,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.1425,
+      2,
+      150
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920198,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.15,
+      2,
+      168
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920198,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.156,
+      2,
+      186
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920198,
+       "count": 7
+      },
+      {
+       "id": 633444,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.162,
+      2,
+      199.5
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836257,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.168,
+      2,
+      213
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836257,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.174,
+      2,
+      226.5
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836257,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.18,
+      2,
+      240
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836257,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.186,
+      2,
+      253.5
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.192,
+      2,
+      267
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.198,
+      2,
+      280.5
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.204,
+      2,
+      294
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.21,
+      2,
+      307.5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
    "tagHash": "",
    "descHash": "Greift den Gegner an und schwächt nach Kampfeintritt den Widerstand des Ziels gegen den entsprechenden Typ.",
+   "ultimateCost": 0,
+   "break": 30,
+   "energy": 0,
+   "id": 621966,
+   "name": "Angriff",
+   "iconPath": "d5ece77965be7bfbf5e9a09121c5b481fd433ec8b06e2beba0c5fcbb04b611b9",
    "typeDescHash": "",
-   "iconPath": "2f475e3d3cf4b42b3aeb808330f9abc8904d4a4eb29b45fadce6f2dcd0128371",
    "levelReq": 0,
    "promotionReq": 0,
    "levelData": [
     {
-     "level": 1,
      "params": [],
+     "level": 1,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     }
-   ],
-   "ultimateCost": 0
+   ]
   },
   {
+   "tagHash": "Wiederherstellung",
+   "descHash": "Nach dem Einsatz der Technik wird das Talent zu Beginn des nächsten Kampfs sofort ausgelöst.",
+   "ultimateCost": 0,
+   "break": 0,
+   "energy": 0,
    "id": 705907,
    "name": "Gnade eines Narren",
-   "tagHash": "Wiederherstellung",
-   "descHash": "Nach dem Einsatz der Technik wird zu Beginn des nächsten Kampfs das Talent sofort ausgelöst.",
+   "iconPath": "dfe067d0672976584be92237b326a3f90fa5b2d82a5f5dba7e342aeb62f71b04",
    "typeDescHash": "Technik",
-   "iconPath": "be4b84cba47eb1640a4a0b9668e2e7f2b50f8bff288228677f535a5fe8efae65",
    "levelReq": 0,
    "promotionReq": 0,
    "levelData": [
     {
-     "level": 1,
      "params": [],
+     "level": 1,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     }
-   ],
-   "ultimateCost": 0
+   ]
   }
  ],
  "skillTreePoints": [
-  {
-   "id": 1203101,
-   "type": 1,
-   "children": [
-    {
-     "id": 1203202,
-     "type": 2,
-     "children": [
-      {
-       "id": 1203203,
-       "type": 2,
-       "children": [
-        {
-         "id": 1203204,
-         "type": 2,
-         "children": [],
-         "embedBuff": {
-          "id": 343206,
-          "name": "VTD-Verstärkung",
-          "levelReq": 0,
-          "promotionReq": 3,
-          "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
-          "statusList": [
-           {
-            "key": "VTD",
-            "value": 0.05
-           }
-          ],
-          "cost": [
-           {
-            "id": 29328,
-            "count": 10000
-           },
-           {
-            "id": 920198,
-            "count": 3
-           },
-           {
-            "id": 633444,
-            "count": 3
-           }
-          ]
-         }
-        }
-       ],
-       "embedBuff": {
-        "id": 343209,
-        "name": "ANG-Verstärkung",
-        "levelReq": 0,
-        "promotionReq": 3,
-        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
-        "statusList": [
-         {
-          "key": "ANG",
-          "value": 0.04
-         }
-        ],
-        "cost": [
-         {
-          "id": 29328,
-          "count": 10000
-         },
-         {
-          "id": 920198,
-          "count": 3
-         },
-         {
-          "id": 633444,
-          "count": 3
-         }
-        ]
-       }
-      }
-     ],
-     "embedBuff": {
-      "id": 343208,
-      "name": "LP-Verstärkung",
-      "levelReq": 0,
-      "promotionReq": 2,
-      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
-      "statusList": [
-       {
-        "key": "LP",
-        "value": 0.04
-       }
-      ],
-      "cost": [
-       {
-        "id": 29328,
-        "count": 5000
-       },
-       {
-        "id": 635671,
-        "count": 3
-       },
-       {
-        "id": 549503,
-        "count": 6
-       }
-      ]
-     }
-    }
-   ],
-   "embedBonusSkill": {
-    "id": 343112,
-    "name": "Reinigende Wiederbelebung",
-    "descHash": "Entfernt beim Einsatz der Fertigkeit <nobr>#1[i]</nobr> Debuff von einem anvisierten Verbündeten.",
-    "iconPath": "84c6b322919c7e01382cd3e54bce17f2845ea4ae92a4aa19d85af67537d4c7a9",
-    "levelReq": 0,
-    "promotionReq": 2,
-    "levelData": [
-     {
-      "level": 1,
-      "params": [
-       1
-      ],
-      "levelReq": 0,
-      "promotionReq": 2,
-      "cost": [
-       {
-        "id": 29328,
-        "count": 5000
-       },
-       {
-        "id": 635671,
-        "count": 3
-       },
-       {
-        "id": 985668,
-        "count": 1
-       }
-      ]
-     }
-    ],
-    "ultimateCost": 0
-   }
-  },
-  {
-   "id": 1203103,
-   "type": 1,
-   "children": [
-    {
-     "id": 1203208,
-     "type": 2,
-     "children": [],
-     "embedBuff": {
-      "id": 343218,
-      "name": "VTD-Verstärkung",
-      "levelReq": 0,
-      "promotionReq": 6,
-      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
-      "statusList": [
-       {
-        "key": "VTD",
-        "value": 0.075
-       }
-      ],
-      "cost": [
-       {
-        "id": 29328,
-        "count": 160000
-       },
-       {
-        "id": 836257,
-        "count": 8
-       },
-       {
-        "id": 717385,
-        "count": 8
-       }
-      ]
-     }
-    },
-    {
-     "id": 1203209,
-     "type": 2,
-     "children": [],
-     "embedBuff": {
-      "id": 343219,
-      "name": "LP-Verstärkung",
-      "levelReq": 75,
-      "promotionReq": 0,
-      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
-      "statusList": [
-       {
-        "key": "LP",
-        "value": 0.08
-       }
-      ],
-      "cost": [
-       {
-        "id": 29328,
-        "count": 160000
-       },
-       {
-        "id": 836257,
-        "count": 8
-       },
-       {
-        "id": 717385,
-        "count": 8
-       }
-      ]
-     }
-    }
-   ],
-   "embedBonusSkill": {
-    "id": 343114,
-    "name": "Durch das Tal",
-    "descHash": "Der von Luocha durch einen einzelnen Angriff erlittene SCH kann höchstens <nobr>#1[i]%</nobr> seiner max. LP betragen.",
-    "iconPath": "b677fc5e67e3cae49a227e502e7fa7457126c985dd0eb6067c2e99bc961de9e3",
-    "levelReq": 0,
-    "promotionReq": 6,
-    "levelData": [
-     {
-      "level": 1,
-      "params": [
-       0.7
-      ],
-      "levelReq": 0,
-      "promotionReq": 6,
-      "cost": [
-       {
-        "id": 29328,
-        "count": 160000
-       },
-       {
-        "id": 836257,
-        "count": 8
-       },
-       {
-        "id": 125435,
-        "count": 1
-       },
-       {
-        "id": 985668,
-        "count": 1
-       }
-      ]
-     }
-    ],
-    "ultimateCost": 0
-   }
-  },
-  {
-   "id": 1203201,
-   "type": 2,
-   "children": [],
-   "embedBuff": {
-    "id": 343211,
-    "name": "ANG-Verstärkung",
-    "levelReq": 1,
-    "promotionReq": 0,
-    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
-    "statusList": [
-     {
-      "key": "ANG",
-      "value": 0.04
-     }
-    ],
-    "cost": [
-     {
-      "id": 29328,
-      "count": 2500
-     },
-     {
-      "id": 549503,
-      "count": 2
-     }
-    ]
-   }
-  },
-  {
-   "id": 1203210,
-   "type": 2,
-   "children": [],
-   "embedBuff": {
-    "id": 427151,
-    "name": "ANG-Verstärkung",
-    "levelReq": 80,
-    "promotionReq": 0,
-    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
-    "statusList": [
-     {
-      "key": "ANG",
-      "value": 0.08
-     }
-    ],
-    "cost": [
-     {
-      "id": 29328,
-      "count": 160000
-     },
-     {
-      "id": 836257,
-      "count": 8
-     },
-     {
-      "id": 717385,
-      "count": 8
-     }
-    ]
-   }
-  },
   {
    "id": 1203102,
    "type": 1,
@@ -2046,18 +1737,22 @@
     }
    ],
    "embedBonusSkill": {
+    "descHash": "Wenn ein Gegner innerhalb des Felds von einem Verbündeten angegriffen wird, werden die LP aller Verbündeten außer dem Angreifer um <nobr>#1[f1]%</nobr> von Luochas ANG plus <nobr>#2[i]</nobr> wiederhergestellt.",
+    "ultimateCost": 0,
+    "break": 0,
+    "energy": 0,
     "id": 343115,
     "name": "Geheiligt",
-    "descHash": "Erhöht die Chance von WDS gegen Mengenkontrolle-Debuffs um <nobr>#1[i]%</nobr>.",
-    "iconPath": "5c5e0abefb195602e5c44ebb321df623f5873f54b2f3482b219b39d1e10b7891",
+    "iconPath": "604404f448e93e809abe1656473226daef67cb71f64741c03a7a8d12376d33f9",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
      {
-      "level": 1,
       "params": [
-       0.7
+       0.07,
+       93
       ],
+      "level": 1,
       "levelReq": 0,
       "promotionReq": 4,
       "cost": [
@@ -2074,13 +1769,320 @@
         "count": 1
        },
        {
-        "id": 985668,
+        "id": 270195,
         "count": 1
        }
       ]
      }
+    ]
+   }
+  },
+  {
+   "id": 1203103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1203208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 343218,
+      "name": "VTD-Verstärkung",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+      "statusList": [
+       {
+        "key": "VTD",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836257,
+        "count": 8
+       },
+       {
+        "id": 717385,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1203209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 343219,
+      "name": "LP-Verstärkung",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "LP",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836257,
+        "count": 8
+       },
+       {
+        "id": 717385,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Erhöht die Chance von WDS gegen Mengenkontrolle-Debuffs um <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "break": 0,
+    "energy": 0,
+    "id": 343114,
+    "name": "Durch das Tal",
+    "iconPath": "d481f14ffdaad23b2eda12e948803d59c8ab2765ac789c7e4f6a7413ce430dfa",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.7
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836257,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1203101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1203202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1203203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1203204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 343206,
+          "name": "VTD-Verstärkung",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+          "statusList": [
+           {
+            "key": "VTD",
+            "value": 0.05
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920198,
+            "count": 3
+           },
+           {
+            "id": 633444,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 343209,
+        "name": "ANG-Verstärkung",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "ANG",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920198,
+          "count": 3
+         },
+         {
+          "id": 633444,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 343208,
+      "name": "LP-Verstärkung",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "LP",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635671,
+        "count": 3
+       },
+       {
+        "id": 549503,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Wenn der Effekt der Fertigkeit ausgelöst wird, wird <nobr>#1[i]</nobr> Debuff von einem anvisierten Verbündeten entfernt.",
+    "ultimateCost": 0,
+    "break": 0,
+    "energy": 0,
+    "id": 343112,
+    "name": "Reinigende Wiederbelebung",
+    "iconPath": "84c6b322919c7e01382cd3e54bce17f2845ea4ae92a4aa19d85af67537d4c7a9",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635671,
+        "count": 3
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1203201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 343211,
+    "name": "ANG-Verstärkung",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "ANG",
+      "value": 0.04
+     }
     ],
-    "ultimateCost": 0
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549503,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1203210,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 427151,
+    "name": "ANG-Verstärkung",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "ANG",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 160000
+     },
+     {
+      "id": 836257,
+      "count": 8
+     },
+     {
+      "id": 717385,
+      "count": 8
+     }
+    ]
    }
   }
  ],
@@ -2114,9 +2116,402 @@
    }
   ]
  },
- "voiceItems": [],
- "storyItems": [],
- "archive": {},
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Erstes Treffen",
+   "text": "Mein Name ist Luocha, ich bin ein wandernder Händler auf der Durchreise.",
+   "unlockRequirement": "",
+   "cnUrl": "56874cde63ad935df06b196e8791a32c86fa01852f9557f7fff4efd40afba115",
+   "jpUrl": "60dc80216c3fac0bb9af2fc357d0758d476c50b24fc761c9bc5b63abaaaea85e",
+   "enUrl": "8840e0aa6bfd56a04470358eb59d9c8bfab9aece2acc444903246bb0a566d403",
+   "krUrl": "ebc7a6a2ce8741f21967293a187fdea8f96d65a3e07af3362bcea7681b7609dc"
+  },
+  {
+   "id": 2,
+   "title": "Begrüßung",
+   "text": "Wir sind schon früh aufgestanden, um unsere Reise fortzusetzen. Hast du gut geschlafen?",
+   "unlockRequirement": "",
+   "cnUrl": "d39007ea62a4ebd770b49751306b9964ed880fd7f6e06c74ee55dcdcbd9b7e5a",
+   "jpUrl": "3aa46549acb159a6a52add5f453f3084ebfd5cc533ce51a25e020a83f08040b3",
+   "enUrl": "b9fdc146dbc8103a5b42882d15f11ea56a2b4341d0c6fb936c360066324a9e81",
+   "krUrl": "c094ca9f994fa38b3862f2218046ea7d0a0b057a246a4fc5f59b387d03280024"
+  },
+  {
+   "id": 3,
+   "title": "Abschied",
+   "text": "Du solltest dich früh zur Ruhe legen. Ich werde hier bleiben und Wache halten.",
+   "unlockRequirement": "",
+   "cnUrl": "917a09dd5a45b3c3adbb92113c55aec666ec9c10cf504302d276186d10cf7758",
+   "jpUrl": "1f6a1e4843b00b059b355d64f9c8de89a72c1aa61abdc5cc3a3d24de2d2d1dd1",
+   "enUrl": "8da62a326ad47eb4aff27f06a2fad8b21c54968d895c1a73aef36fd23346f1b0",
+   "krUrl": "b408a362b33833f41a9641835eb47569c3f29cc711361651f4e3dcdc5745ed79"
+  },
+  {
+   "id": 4,
+   "title": "Über sich selbst: Wissen der Medizin",
+   "text": "Als fahrender Händler kann ich mich auf niemanden verlassen. Es bietet mir immerhin ein wenig Sicherheit, wenn ich mich selbst retten kann.",
+   "unlockRequirement": "",
+   "cnUrl": "808c8fa0883454d076c0759aa34f58a706133034266505d6b9d8ea1389a55aab",
+   "jpUrl": "a9da8a2874a7662668114bc8c8988b0682f46efb36145fb5ef941d4c1bff14b3",
+   "enUrl": "a0fa6a2ca16a233d3b3c9a6f2a0bd682a03b3882f202527011be891709db3907",
+   "krUrl": "5f045248180d89f8154869232320375695e1b664bee5c88be6c9e4d7a206eb23"
+  },
+  {
+   "id": 5,
+   "title": "Plaudern: Der Sarg",
+   "text": "Der Sarg zieht viel Aufmerksamkeit auf sich. Das hat mir als fahrender Händler sehr geholfen. Alle sind neugierig und stellen mir Fragen über den Sarg. Nachdem ich diese beantwortet habe, ist es erledigt.",
+   "unlockRequirement": "",
+   "cnUrl": "79ab342daaa6276f80005b5a18cf479e5db225a6d2df24d944171b8ac0f6c229",
+   "jpUrl": "ce93a04778cefa5660a473219712624344918cfccdd9c86bb6bd3ef682d156f8",
+   "enUrl": "f914baab2f14db34873661a6a527fef62b7ed4139fbfb493bcf1f96cc9946912",
+   "krUrl": "0690077c6db764e19df940a056cde4a6513a743fd1f5e47df13141bbbf26cd7e"
+  },
+  {
+   "id": 6,
+   "title": "Hobbys",
+   "text": "Es gibt stets Unterschiede zwischen dem, was ich über einen Ort höre, und was ich mit meinen eigenen Augen sehe. Die Unterschiedlichkeit dieser Wahrnehmungen herauszufinden, macht mir großen Spaß.",
+   "unlockRequirement": "",
+   "cnUrl": "8bb1ebb3ca549b45ef6cff3a810e3dfbd268bb11877362ad8a36f5e4cc50c6f7",
+   "jpUrl": "6e371b122f74dd6407f0d68d75e4759a71c5c9983bfcbd8b7b00c798267e6f87",
+   "enUrl": "aeac46cbdcca48499a119008c7371a8b32250b0714bc45b809111fde2601d235",
+   "krUrl": "2e2c85aec5caa3fa6e442c3869666737057381c65d9c2590c76931f1693cc5e3"
+  },
+  {
+   "id": 7,
+   "title": "Ärgernisse",
+   "text": "In schwierigen Situationen ist es nicht wichtig, dass man sich selbst treu bleibt, sondern dass man die entsprechende Rolle findet, die man einnehmen kann ... Ach, das ist aber nur meine Erfahrung.",
+   "unlockRequirement": "",
+   "cnUrl": "e7cc1f0893a20047e2fcb7807516265292b0f63c39d04e620e5b0e297b3e9cea",
+   "jpUrl": "51953ededc6339869f49d47567ceab4501259acf59aeaa6893bdb9343318e543",
+   "enUrl": "172b8f1085641b57282027df48c46a85cfa4072fdeab4e3d514de215e1f14195",
+   "krUrl": "8263844463bccc1222b8ae60c34a345427512142d36856c17b1c8436efac5a34"
+  },
+  {
+   "id": 8,
+   "title": "Etwas Mitteilenswertes",
+   "text": "Die Bedeutsamkeit einer Blume liegt in der Dauer ihrer Blüte und nicht etwa in ihren Blütenblättern, ihrem Duft oder den Samen, die sie hinterlässt.",
+   "unlockRequirement": "",
+   "cnUrl": "42985c92f9857eed5984291598d17eb8a53ce15ba2c37ad7045abcfaf0593705",
+   "jpUrl": "5fd663069acd7b6744e2dfb1f980618501c55e64b23eea2c4dc332b7cbddd911",
+   "enUrl": "72a6b5fc4c615e888a8b741af88a8b19ea4b6406c5af33f539fb374de50534ce",
+   "krUrl": "22eee6e31293b2f37ac2127e717e5aba6a8f55e8b9ae4b126808169fcca6550d"
+  },
+  {
+   "id": 9,
+   "title": "Wissen",
+   "text": "Ich habe lange davon gehört, dass die Einheimischen von Xianzhou ihre Schönheit bewahren können, und das hat sich tatsächlich bewahrheitet. Allerdings hüten sie dieses Geheimnis, indem sie sich in einer Ecke der Galaxie verstecken. Als würden sie auf einem Berg von Reichtum sitzen, ohne ihn zu verprassen ... Das ist aber schade.",
+   "unlockRequirement": "",
+   "cnUrl": "48e6c89216383c466bdc57bb16688af45fedb9ec0814e82e41feb7ff760409db",
+   "jpUrl": "ea46f2335490c884d0e3e57690a97fd4be717d75b56c68c03bf76884fe65c961",
+   "enUrl": "92dd3a296eceff67a5c8d91bd493dacfcad43a08ee38ad6d779ae28ccd35aa63",
+   "krUrl": "d069e9dad91cb8214d3c6174e86e5405ef6043dfa923b875c30906936ed974b2"
+  },
+  {
+   "id": 10,
+   "title": "Über Jing Yuan",
+   "text": "Der General ist nicht nur ein Experte darin, die Absicht anderer Leute zu erkennen, sondern auch ein Meister im Verbergen und Inszenieren. Wenn er beschließt, etwas „vorzuführen“, ist Vorsicht angesagt.",
+   "unlockRequirement": "",
+   "cnUrl": "0d356a395fdf00beebb29965556b7b3089e71aeb541b29f4b4c7d4e07710f531",
+   "jpUrl": "984aa03c7381a6e482e3b5b720521b52eaf1ef3bbadfbfa63ed18b3dbc1fb6ee",
+   "enUrl": "3ee10fcb495a12953172225a45429020c67aef2ad90326ca23f4a9b71db1bbc4",
+   "krUrl": "4fcabb3ae98332f70f39d01968195639f68671adc689992f47cc762558d24906"
+  },
+  {
+   "id": 11,
+   "title": "Über Yanqing",
+   "text": "Oh, du meinst den jungen Knaben, der ständig beim General ist? Ich weiß überhaupt nichts über ihn ...",
+   "unlockRequirement": "",
+   "cnUrl": "8146328af7d5aa3cf20b4c0b20bd2e2ae1acd42415fae8585150dd5bf74e445a",
+   "jpUrl": "e79d915e0f77a433e313f1c3a1fd21b55f7515e305d55135511dc6f585872931",
+   "enUrl": "9eada81f4140aaa52fb6857e858eb335f35dbd041166211029548d0c79d60a53",
+   "krUrl": "5985faf0efbb67afebb2f4c1e10520e5506de1e85cde0932753e286b50e6c821"
+  },
+  {
+   "id": 12,
+   "title": "Über Yukong",
+   "text": "Im Gegensatz zu ihr können nur die wenigsten erkennen, dass sie lediglich ein klitzekleines Senfkorn in dieser unermesslichen Galaxie sind ... Sie hat meinen Respekt verdient.",
+   "unlockRequirement": "",
+   "cnUrl": "e9da515c555d331e22b075aa06e8b751d93846dbcadc69bb8860fd7bb55812aa",
+   "jpUrl": "de9f8f1383901d0ce45236f78b1aefeb6fc6bf01042fab1d7b2e150b28c85beb",
+   "enUrl": "326e299934aa22df0d5493205e842db642a1acea09cd279bf4943da101b56200",
+   "krUrl": "b93553d16423d3687de084801184655c4c91406cf9ac2d00211c1e35631a4c29"
+  },
+  {
+   "id": 13,
+   "title": "Über Tingyun",
+   "text": "Man kann kaum etwas vergessen, was Tingyun sagt. Das sprachliche Talent der Foxianer sollte doch optimal ausgenutzt werden, oder?",
+   "unlockRequirement": "",
+   "cnUrl": "319eb6246b6178e781889db0bc729a5233ebc30910466205c10de9a1fd47cec9",
+   "jpUrl": "2f3eee4ed3091831d031a8b142f06c878b0187ebb7178fbce9d46d0c189bc7d7",
+   "enUrl": "17f2add8bf77dd978017a97b23977bacd81d0da584c91bcfaf90b1a1a3437218",
+   "krUrl": "6caa24e1c0176983bbbccb41dbab931f2d27bcbd21d40f2ca1ce45d5682c2a38"
+  },
+  {
+   "id": 14,
+   "title": "Über Sushang",
+   "text": "Sie ist gutherzig und stets bereit zu helfen. Sie hat mich sogar eingeladen, Tee zu trinken und Geschichtenerzählen zu hören, wenn ich das nächste Mal in Xianzhou bin. Das ganze Geschichtenerzählen-Ding klingt jedoch etwas zeitaufwändig.",
+   "unlockRequirement": "",
+   "cnUrl": "ddc2449b7f9de7d59d8b68754dcffab5e0ccb3d409de9ba02f3b649c37ebbc11",
+   "jpUrl": "1913a53a71e99a576cf52e6786bd3eb13820ab7be7dc6885368fff8f282a7cda",
+   "enUrl": "f67f2929af724427fea00b8f2f18110cddfc1723214c9816a5d6d88365656315",
+   "krUrl": "21a118b20159457ad2b0bffd2413bf106d024ae77bc1f5321e4b61fc551f6ffa"
+  },
+  {
+   "id": 51,
+   "title": "Kampf beginnt: Schwächebruch",
+   "text": "Es ist Zeit, abzurechnen.",
+   "unlockRequirement": "",
+   "cnUrl": "d67e293c6de97dab00db31a73dd9f4b057ceb0973cf4c313386f6b927dede6e5",
+   "jpUrl": "41d0426d6a730f80bc5eccfe7e8dbd3a4acdd866e66bf182f9e94804d7d523c0",
+   "enUrl": "32db94c73ae9ff01413d3a7912512a19356d6db3395c01c486572e8c1fc4ef1f",
+   "krUrl": "5bae5e37681d6ef312e5a9c717393757ccb342b166de325e403d43ebb0f71762"
+  },
+  {
+   "id": 52,
+   "title": "Kampf beginnt: Achtung Gefahr",
+   "text": "Werde nicht übermütig.",
+   "unlockRequirement": "",
+   "cnUrl": "534313af439ddb38e437302ae15e2f3203fb1f677c228040c18af59db51a430d",
+   "jpUrl": "c567fca0db94f1717a1ba2ff574c2890a25389bfe446fca13a80f2e6ce9754b9",
+   "enUrl": "48a96b3d17a014c0010a712fb7ae52b65a70ab72f6ad9e9c53cc82fd8b4b1580",
+   "krUrl": "4efbe8874b2ffae1b1869a631f198b2fcf2cdb72c64a2bff3456dccab64cfd29"
+  },
+  {
+   "id": 53,
+   "title": "Runde beginnt 1",
+   "text": "Jammerschade, du hast dir den falschen Gegner ausgesucht.",
+   "unlockRequirement": "",
+   "cnUrl": "41bde5c253c8b65d654fcceb065d2966a7933bb6046cb2aaaa250b05fae60b8e",
+   "jpUrl": "e5fc7adfe8a75d91119df28729f4b2f963e12b752d7ccf25a1b0dd92c98f1863",
+   "enUrl": "685f8ed13eb26225979f16bada635509b912c984eb1e28f2c3f3efa7b387775f",
+   "krUrl": "f50337f8e10ec0676e90858658b1de2837ebca50bb22abb86db842d1c3df0459"
+  },
+  {
+   "id": 54,
+   "title": "Runde beginnt 2",
+   "text": "Erlaube mir, dich aus dem Verkehr zu ziehen.",
+   "unlockRequirement": "",
+   "cnUrl": "0e297734f061143d34f1f9eb3235148abbf9e12a84b87619097d450a20cf3acd",
+   "jpUrl": "b0bc99f2424f4d9456d0d7d4d30c112d99bc8c46969329c0b874f6844ba82efc",
+   "enUrl": "e8fb6e41340c5159a144fe7fa8c1a59fde4eac0fcbbbe5d53388c39c28f76cd5",
+   "krUrl": "21aa896a5e2180c02491f91c2b69c068c3870cc64bc47504c6951138941cf612"
+  },
+  {
+   "id": 55,
+   "title": "Warten auf Runde",
+   "text": "Auf was warten wir eigentlich?",
+   "unlockRequirement": "",
+   "cnUrl": "2ba93be95212f7cdf5ea39108fef4f1d9694671cac8f28f571347fccda9321f2",
+   "jpUrl": "e1403924878c050c74fed43ff9ce69ea03ff265c3398f8e902cb885f64ca8033",
+   "enUrl": "e44efba284c9051f7cbb2c2852e6072907e04acf4f493137532eb1d91b76461a",
+   "krUrl": "f9261a08f8b12fde42ca562b7e9f855578b54df1a627989d1bf1a764189aa1a4"
+  },
+  {
+   "id": 56,
+   "title": "Standardangriff",
+   "text": "Hmpf.",
+   "unlockRequirement": "",
+   "cnUrl": "a540b20433a5151add73f30a261fa9f541da3fdc12a97cd739d703d29736cf1b",
+   "jpUrl": "9c3d72efbf1f6f68804483f37c282bb9524a64e8df4aa99a4acca523e03cf470",
+   "enUrl": "65107a4530689cabc2648420c36a345790914622bf02c23d4bb7ce96e740a023",
+   "krUrl": "f87779b1a4bc78a24c02af4e851f39eebf81450d9038e55e2f0d89fc29b248f9"
+  },
+  {
+   "id": 57,
+   "title": "Fertigkeit 1",
+   "text": "Blühe!",
+   "unlockRequirement": "",
+   "cnUrl": "524a54ab5f3a853be0cb64c280ea1b5acf0350553999548b962b188fd8894d20",
+   "jpUrl": "0b46232dd3267a3a73a56274c3dc41c1f5f6fc8e10393b086b936ef229ebed77",
+   "enUrl": "9543b9f3e460376bb1e3ede9229eb2d0c2436f5d6ec1999aa4cc272eba9ff430",
+   "krUrl": "5173ef5d8b520f6eed95629035b0fd0318bc0008fe1e944e97aae32a2e8ceddd"
+  },
+  {
+   "id": 58,
+   "title": "Fertigkeit 2",
+   "text": "Empfange die Göttlichkeit!",
+   "unlockRequirement": "",
+   "cnUrl": "6caa497ebabde563fa4da5538db85c310d7f537d443ad0543b9e79367000b52a",
+   "jpUrl": "cec965df1d6cc297fdd2f32a56f268defafbe2e48f4fd2d4e891b48760c4a3a4",
+   "enUrl": "c35b5038d8d2826f57ab1bfad167c2045f3821839370498c490667f4c2012e8c",
+   "krUrl": "6c93b361c6c4b1e70cc703136b7c03552832476cd7699ba66725a4b3e918ecec"
+  },
+  {
+   "id": 59,
+   "title": "Leichten Treffer erlitten",
+   "text": "Nichts Besonderes.",
+   "unlockRequirement": "",
+   "cnUrl": "ad527a80d9a1da90f660136f4f66d9f11fa81345d73110466ad35bed9c7a855a",
+   "jpUrl": "62401fd7775eb4510c1507b79e08ab8c2eb358b4c920025ec41703f64f59814f",
+   "enUrl": "c24f2c44baec5ef76e101e152f11fe36b686c5fa69d35b5e4c44da34a3ad6a82",
+   "krUrl": "8e69d0cbc76cc5390db5c0deb8138b9bfe99a928174e02f29d59564792eb1167"
+  },
+  {
+   "id": 60,
+   "title": "Schweren Treffer erlitten",
+   "text": "Ich habe dich unterschätzt.",
+   "unlockRequirement": "",
+   "cnUrl": "c0c461c78f2fefd49d1d7952611a9146cfa9dea8bfc24d9acc0c71abd430fd7b",
+   "jpUrl": "8ae696afcd1ca68b92a5cb2c9a1e324d3b46c24c7a99dc250f234a74edb83456",
+   "enUrl": "b52173349ac970f7d7220faf059424fd5cc3a9e7204121fcf3847cfa31d25a70",
+   "krUrl": "6d1ee77d9738f701766651aedfd7f4484058d5f86a8af35b613b29e0edfbfc91"
+  },
+  {
+   "id": 61,
+   "title": "Ultimate: Aktivieren",
+   "text": "Ewiger Schlaf ist nicht das Ende ...",
+   "unlockRequirement": "",
+   "cnUrl": "33023401564440ce6eb49b94c902797dfdb0af35defc7acb2683c462aeb717a9",
+   "jpUrl": "033dfa8411d1c74ab0cb5519d455ea13aaa2685f99cb22994f0b1613e26a229d",
+   "enUrl": "f5abc2dfb535d0f7c9e5ccb0442bd42af4c19de797fd613a38cb6f9febdc2ea2",
+   "krUrl": "703eeb8a97016cc53274fc4b057f32fc9572a48f7fea602fe7c5e3edeb7e1d62"
+  },
+  {
+   "id": 62,
+   "title": "Ultimate: Einsetzen",
+   "text": "Die Toten werden zurückkehren!",
+   "unlockRequirement": "",
+   "cnUrl": "95cbfe4e6b47cbce4a4b9046c3b65bfd5bbd0eec32b73572aaf4dffb86ff453b",
+   "jpUrl": "16af0e1652a60e32a479e3aead60b8280ef2b752d589a8cb107a1020c308e8a1",
+   "enUrl": "89cfc0bd02aefb58550625fe43f390dbbe73f385c4f1862cde163709557cdda3",
+   "krUrl": "0e1c4d9ea8f894ffa96ec6ca7db03e4c3db0e9fba2a7d1eaaed5ae59ee593d6c"
+  },
+  {
+   "id": 63,
+   "title": "Talent",
+   "text": "Was du genommen hast, musst du zurückzahlen!",
+   "unlockRequirement": "",
+   "cnUrl": "9ee98bf0737687aa6aea22819c34970900d3be4a32cd02dc98da006be39612dc",
+   "jpUrl": "ab020c6bde81fdcf697067d78ddb3790553fe462e69eca01ea34003db9929cac",
+   "enUrl": "5a862da08c1def0fd34c6170f9bc2fc719cdcdc034b5820bcf666d0942db09af",
+   "krUrl": "4a751ac39d04022ea07dc7d859917350f91b3efd6987cac4e27af730f7aa4680"
+  },
+  {
+   "id": 64,
+   "title": "Handlungsunfähig",
+   "text": "Es kann nicht ... geschehen ...",
+   "unlockRequirement": "",
+   "cnUrl": "34abb5a06b678afa0d4e48bce331a2121d4d395f2a11b5accfa4493f5176922f",
+   "jpUrl": "633615b8dacc906cd79d31eee77e313912217c13039371f1cbc330fa65e7043f",
+   "enUrl": "7f06ab479d3e5d8327c857e594154fb6d621de63da9815a09d607760e5ba86ac",
+   "krUrl": "d955476a31d06815658cc91da7e9d3fb937341c613aab0c9b1356ab53f986c70"
+  },
+  {
+   "id": 65,
+   "title": "Zurück zum Kampf",
+   "text": "Siehst du? Ich bin zurückgekehrt.",
+   "unlockRequirement": "",
+   "cnUrl": "03fa994f0a4d4a6e62de3b8fe5ae86c6f43aca06c9efbe4349c12e3af6bc7780",
+   "jpUrl": "6e1fc13821d339cfee848e150da7cf58202f7826fec87d95590b7e194974488e",
+   "enUrl": "262b8b4c6a7009bbeaa0ea7a94a2e12dac5b4e08b23f69cbf215b647af4ec438",
+   "krUrl": "6fd01f7dc281f808854eb649a9aec5a748c32e9a3fbc164621ad2d8088ddaa4b"
+  },
+  {
+   "id": 66,
+   "title": "LP wiederhergestellt",
+   "text": "Ich fühle mich viel besser.",
+   "unlockRequirement": "",
+   "cnUrl": "cee24ec5d42aa6bd1034bcfa402ed88408ea8b85d29cdbd016d6672d507ed418",
+   "jpUrl": "41ab314713efe383ee1c5bb5853762c2152afd769b27cba8bc553f8d9ef7edd4",
+   "enUrl": "9a1ab5c2241e8a162c92428eed0c95e61b4708374b4c1347ba193b174ef41bb2",
+   "krUrl": "ca0acf2a58cd76bc863a8fa9ee8bef09d88822c6c4c7330108f776378f826105"
+  },
+  {
+   "id": 67,
+   "title": "Technik",
+   "text": "Mal abwarten.",
+   "unlockRequirement": "",
+   "cnUrl": "5e4f7cc234e66b303f2798fe95e04434d7713871275e34c8a3266ad8cf20637e",
+   "jpUrl": "9525fa0487ea4328428574a7ac05928245605f474e2df045ceee8a6aec9216a2",
+   "enUrl": "5586291d99569a6b05e5dea584ac7451f0d5a74befe82b1d893b3d5caee85ea8",
+   "krUrl": "06c84326f7fc3c85c737a2a1305afa15d43b1c119e4de424f765174a697f6d94"
+  },
+  {
+   "id": 68,
+   "title": "Kampf gewonnen",
+   "text": "Ein Moment der Begeisterung, nichts weiter.",
+   "unlockRequirement": "",
+   "cnUrl": "9f5aed23a4c2a49e80d1e4d6fdff5554051410d17927485355d763f375c9d641",
+   "jpUrl": "3e52322b129c1f93235cabe925f5b64032429441c6c71220fb76a271c21332e5",
+   "enUrl": "7ea88be89daf17f20277f794b15a2487f6015cac30900cfa96d97fb9792a40f3",
+   "krUrl": "5cd6e544c33430737e8591b9b49ac250d7157da539f639ac2ffa5fcc643602ac"
+  },
+  {
+   "id": 69,
+   "title": "Schatz öffnen",
+   "text": "Nimm es dir, wenn du magst.",
+   "unlockRequirement": "",
+   "cnUrl": "325ed23e5e338206dc97d190500f442d1785fd486393d271e706e9269bf4c139",
+   "jpUrl": "894da736bb0b9238d4db0050c6a0cfdd3a2cb25243fc1f939241fed55b6dcf2d",
+   "enUrl": "dfa793328b88f795f803d74eee59f6f5ea7cfa702b6aeb0357d2d51ef3e73101",
+   "krUrl": "b9308724f7d27fd30cb371d7774422d1503fea6c8b4efd8dd7e72073255fdd7a"
+  },
+  {
+   "id": 70,
+   "title": "Rätsel gelöst",
+   "text": "Das ist kaum der Rede wert.",
+   "unlockRequirement": "",
+   "cnUrl": "e8ad5d74e005d270e3db1d6ed4ec7b0944c70c1b94691e0e81b2bcf93c648e6a",
+   "jpUrl": "fe8736a7f2305eb1b71227ab7722d71f6e6bbed302ff1abff9509ca63e0577c8",
+   "enUrl": "39f99ff96daecef003a73e190da48a2badbb57c752a59417994d39bb2528d2c8",
+   "krUrl": "5ec6e0ec03e7a6586c71f3dd364311a5496c5cbfe92e319dd10403c0c424219f"
+  },
+  {
+   "id": 71,
+   "title": "Gegner gefunden",
+   "text": "Ärger voraus ... Mach weiter, ich bin bei dir.",
+   "unlockRequirement": "",
+   "cnUrl": "6cbeb31621b0fd777f3d7e549dd4695fa75b9abedf0ee8b8731f3374ff6c6874",
+   "jpUrl": "b7bc149e008a32bbaef5ac7d947c25a3b54840528a9729aa75d50b37efeb44fc",
+   "enUrl": "56ee745cfd05d8734c6f9dfccc69c133116e12cf4ce1fe0f9fa4ac37a56d38fa",
+   "krUrl": "0eec3ca82f304c760c9e84ada8935112261217813b6db4aea8c38eb1641e0970"
+  },
+  {
+   "id": 72,
+   "title": "Zurück zur Stadt",
+   "text": "Für einen Wanderer ist es schwer, in dieser Welt Ruhe zu finden.",
+   "unlockRequirement": "",
+   "cnUrl": "48986f50729fbda09946ea31433d5ab625ef837778e6b007d6e615e12f416ac4",
+   "jpUrl": "0dadc56eba0cee284b826a98dd4131d18d5e6630da1a77cfb2421c2736fcc122",
+   "enUrl": "2308c379cce6089759641ef241ebf00a7f245c15faa6b5c9f8f4e9fbd500858d",
+   "krUrl": "07d7cc065be27939675ffe1cc9dd52dc074ec9bffe6f4c109bf855700d5427b9"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Figurendetails",
+   "text": "Ein attraktiver blonder junger Mann, der einen gewaltigen Sarg auf dem Rücken trägt. <br />Als ein wandernder Händler von hinter dem Himmel geriet er unglücklicherweise in die Stellaron-Krise von der Xianzhou Luofu. <br />Dabei erwies sich seine Kenntnis der Medizin als äußerst nützlich.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Geschichte (Teil 1)",
+   "text": "„Und wer bist du?“<br />„Ein wandernder Händler.“<br />„Was ist der Anlass deiner Einreise?“<br />„Geschäfte.“<br />„Gelobst du, nicht gegen die Gesetze und Vorschriften der Xianzhou-Allianz zu verstoßen, deine Geschäfte in Übereinstimmung mit den Regeln zu führen und nichts zu tun, was über die Visums-Erlaubnis hinausgeht?“<br />„Selbstverständlich befolge ich alle Gesetze.“<br />„Schwörst du, keine illegalen Forschungsarbeiten im Zusammenhang mit Langlebigkeit durchzuführen?“<br />„Ich ... verspreche es.“<br />„Großartig, dann bitte hier unterschreiben.“<br /><br />„Herr Luocha, willkommen in die Xianzhou Luofu.“",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>20</nobr> freigeschaltet"
+  },
+  {
+   "title": "Geschichte (Teil 2)",
+   "text": "„Hey, erinnerst du dich noch an diesen Typen? Er war oft hier und hatte immer eine große Schachtel dabei ...“<br />„Meinst du Luocha?“<br />„Ja, Luocha ... Er ist ein Außenweltler, richtig? Die Art, wie er arbeitet und redet, erinnert an die älteren Xianzhouer. Hat er lange hier gelebt? Andererseits hat er seinen außergewöhnlichen und exotischen Modestil beibehalten ...“<br />„Wer weiß? Möglicherweise liegt es daran, dass sein blondes Haar nicht ganz zum Modestil von Xianzhou passt.“<br /><br />Gelegentlich dachte er an seine Heimat.<br />Die Teufel, die Kirche, die Krankheit ... Das sind keine guten Erinnerungen. Die Leute kletterten in Scharen auf die höchsten Plätze, nur um den Untergang ihrer Stadt zu sehen. <br />Und wenn alles zu Ende geht, wird es Zeugen geben.<br /><br />„Weshalb trägst du noch die Kleidung deiner Heimatwelt?“, fragte jemand.<br />„Es soll mich an den Pfad erinnern, den ich gehen soll, das ist alles“, antwortete Luocha.",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>40</nobr> freigeschaltet"
+  },
+  {
+   "title": "Geschichte (Teil 3)",
+   "text": "Die Einwohner von Xianzhou erkennen Särge nicht.<br />Jedes Mal, wenn Luocha mit dem Sarg auf der Straße auftauchte, schauten ihm neugierige Blicke hinterher.<br />Wenn ihn jemand fragt: „Was ist das eigentlich?“, dann antwortet Luocha vage: „Das ist das Werkzeug für meinen Beruf“.<br /><br />„Handwerkszeug ... Hoffentlich habe ich dich nicht beleidigt.“ Luocha stand auf einem Pavillon im Erhabenen Heiligtum und murrte vor sich hin: „Andererseits ist unsere Beziehung ja auch eine Geschäftsbeziehung, nicht wahr?“<br /><br />Der Sarg antwortete mit Schweigen.",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>60</nobr> freigeschaltet"
+  },
+  {
+   "title": "Geschichte (Teil 4)",
+   "text": "Luocha trug den Sarg auf dem Rücken und begann in die Ferne zu gehen.<br />Der Sarg machte kein Geräusch, er protestierte nicht und hatte auch kein Recht dazu.<br />„Wenn du still bleibst, bist du frei.“<br /><br />Die Vorhänge schlossen sich und er ließ die Schuldgefühle hinter sich.<br />Schuld ist nur eine weitere Waffe, um kontrolliert zu werden, eine Lüge, die man sich selbst erzählt, um an eine „richtige“ Antwort zu glauben.<br />„Was ist so speziell an dir? Ist dein Schmerz bewegender als der anderer Leute?“<br /><br />„Geh nach Xianzhou“, sagte derjenige, der ihm den Sarg gab. „Vergiss dein Versprechen nicht.“<br />„Niemals.“<br /><br />Luocha versprach es, aber im Stillen schwor er sich noch etwas anderes.",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>80</nobr> freigeschaltet"
+  }
+ ],
+ "archive": {
+  "cvCn": "赵路",
+  "cvJp": "石田彰",
+  "cvKr": "신용우",
+  "cvEn": "Craig Lee Thomas",
+  "camp": "Die Xianzhou Luofu"
+ },
  "calculator": {
   "expCost": {
    "1": 200,
@@ -2206,6 +2601,26 @@
    "20000": 409960
   },
   "sCoinId": 29328
+ },
+ "name": "Luocha",
+ "rarity": 5,
+ "descHash": "Dieser Händler aus Übersee trägt stets einen Sarg mit sich herum. Seine medizinischen Kenntnisse sind hervorragend.",
+ "artPath": "66cccaec76eaf25a0961e721b50f6950adc7c799ccac7b09f19928721586767b",
+ "miniIconPath": "149eea07f87426b317ef6272b734b1842c7821f78094b4a59bff99645287446a",
+ "damageType": {
+  "id": 64,
+  "iconPath": "87df7632a4ea2535a7794d3283255fe4f2a80d20e0cf266659a11dbae7549d5b",
+  "color": "#F4D258",
+  "name": "Imaginär",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "c5d73b887b351895b87f5575e153c271fadb177c3ec898ddd33cb7195472aae4",
+  "altIconPath": "0cf5e1c678d986bb8657b04fb2e089916cf9e26223044daac261422689f4c070",
+  "color": "#FFFFFF",
+  "name": "Der Überfluss",
+  "rarity": 0
  },
  "pageId": "luocha"
 }

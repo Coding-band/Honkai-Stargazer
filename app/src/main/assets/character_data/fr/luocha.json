@@ -1,35 +1,15 @@
 {
- "name": "Luocha",
  "spRequirement": 100,
- "rarity": 5,
- "descHash": "Ce marchand étranger venu d'au-delà des mers stellaires ne va nulle part sans son cercueil. Il a d'excellentes compétences médicales.",
- "iconPath": "4abe429751143578a15ed740c6b73d2ea0b89800e10d096e6b6fde92c21a9ed2",
- "bgPath": "0805c9fee9f5a4eef7e8554b7dd632e989c727ca503bb77770b81d2cc3d35654",
+ "iconPath": "0af8bda232eb6e9639168f31c54f1433e980768cb700dc92fb9db01e4be52099",
+ "bgPath": "9323a14469cf4d9307046b3d608d82199b5d3034ee01cace67ac2e55a15fa039",
  "figPath": "af4ddb0b8dc3a0d1378939480d5069a6ddebe7df995a7b54853584a2d5ba632c",
- "fgPath": "4e5df5e198ab14561de8e180c4a7c6a4c63b61e8d047705f4a02395cee675ca5",
- "artPath": "8e1c7fb178f07aa56c263c4062083b49e95d8ab0ee6d22eba5974f3f0852e6a5",
- "miniIconPath": "55817a6d6a91bb49553ddee399c5489167d633977596e74cb5293bfcca0da751",
+ "fgPath": "f7d48b9bf32fd942ab32274d5a5c21f2830ae443c3eb2a299dc1f7dee397e9e6",
  "splashIconPath": "9a06048a91058e05c686230ab1e474b8ba7adcd3f8f2fa348242539347af42e4",
- "damageType": {
-  "id": 64,
-  "iconPath": "87df7632a4ea2535a7794d3283255fe4f2a80d20e0cf266659a11dbae7549d5b",
-  "color": "#F4D258",
-  "name": "Imaginaire",
-  "rarity": 0
- },
- "baseType": {
-  "id": 0,
-  "iconPath": "498249f31cf5142d1e1b5285d73ac93049e853b76d92417a8d1e3691e790abd5",
-  "altIconPath": "dd526e763a520081e78efbb08b0dec9a2b2994d95fbe85569c4627b38019a614",
-  "color": "#FFFFFF",
-  "name": "L'Abondance",
-  "rarity": 0
- },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
   "id": 7,
-  "iconPath": "352fe395cd8f2422b4d89b486957960b86537f34c4921383c1351aa6e34ee70a",
+  "iconPath": "aa9f5b78e925c15ba26e364ab1a7e053d6678022b7c33c5c7c54fab324216d95",
   "color": "#FFFFFF",
   "rarity": 0
  },
@@ -38,7 +18,7 @@
    "id": 29328,
    "type": 101,
    "purposeId": 11,
-   "iconPath": "0e76659bbb3b9d0b1cc6a4e0e8c63a576c7b917f2f740a4b1b8ceab260a8a595",
+   "iconPath": "af49f8c10262045a4f9e4740703b52056b5f396b48b99c2d130c22f3dbfa99d9",
    "name": "Crédits",
    "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
    "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
@@ -55,7 +35,7 @@
    "id": 125435,
    "type": 601,
    "purposeId": 4,
-   "iconPath": "75e6d3c477385eb36716ba1798609b01a9fe10893c1b3e9f9dc81046ad10d9b0",
+   "iconPath": "b0f1cfc56ed708ca47e85bd5f199c02e9c2804f06ed290d904d0118b171f57e5",
    "name": "Voies de la destinée",
    "desc": "Matériau avancé d'amélioration de Traces.",
    "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
@@ -69,11 +49,26 @@
     "Récompense d'événement à durée limitée"
    ]
   },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "e4e921f4de5d1ca7628ee1ae03dd74abb5227a8be2d12428213308ebf81a7d04",
+   "name": "Complainte du gardien",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "Avec ce diadème, le vœu corrompu d'une Gardienne s'est également brisé.<br />Elle cherchait le moyen d'éviter à son peuple le redoutable Hiver éternel, mais a fini par devenir la marionnette d'une conscience qui la dépasse.<br /><br />« Le titre de Gardien suprême s'est transmis de génération en génération chez les dirigeants de Belobog, c'est celui qui prend soin de tous les autres. Nul n'a songé que les Gardiens eux-mêmes pouvaient avoir besoin d'attention et de protection. »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "Écho de la guerre de la Colline de l'Hiver éternel"
+   ]
+  },
   "409960": {
    "id": 409960,
    "type": 601,
    "purposeId": 1,
-   "iconPath": "607961a38d9fe4f935578e9ea7b4de093d68ff8258b0b52c3cd4261e5cd92932",
+   "iconPath": "ccf6a04abba3ee0c642f987df4acbfa23c97875710e72898f807325b14f938d0",
    "name": "Guide du voyageur",
    "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
    "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
@@ -89,7 +84,7 @@
    "id": 409961,
    "type": 601,
    "purposeId": 1,
-   "iconPath": "05ef6659e951dd69d862823c86470487d68c24209400d4391df1f50bbc21ab42",
+   "iconPath": "3be91e7b878ba619cd2887b80d45437c95ca08491547d49be65898de505d6a7a",
    "name": "Journal d'aventure",
    "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
    "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
@@ -105,7 +100,7 @@
    "id": 409962,
    "type": 601,
    "purposeId": 1,
-   "iconPath": "ad5070f0ef2447ee09fb3b0d859ab3c594538eaa58b71a14ffcbd4b2b493c1c5",
+   "iconPath": "986cb8eacfc77a347d7be45f6ba74ecf909ec26ffffd577c9ff6129bdfa93544",
    "name": "Rencontres de voyage",
    "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
    "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
@@ -121,7 +116,7 @@
    "id": 468391,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "e8d74f9705754fb743acb234866d6e64a1f2354cb71bf2263579546b256a8913",
+   "iconPath": "13ea8e54efb3930b934fb523a1fb7f3cc2793f9ddf94fbbcb3b43013b2c35208",
    "name": "Couronne d'or de l'ombre révolue",
    "desc": "Casque d'Ombre en décomposition. Permet l'élévation des personnages de type imaginaire.",
    "lore": "Un accessoire abandonné par l'ombre d'une Gardienne du passé. Il raconte l'histoire de la ville de l'Hiver éternel.<br /><br />« Alina l'aimante... Sa bonté est céleste et sa compassion est d'or. »",
@@ -137,7 +132,7 @@
    "id": 549503,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "fcb7215a2a17b09cd16362b5e1b398eaaf2fde23a94057c5f961151885a620c5",
+   "iconPath": "a9982fbfd0b91bf955e7490167c11c9813a73f915e9665110456d1658daac9b6",
    "name": "Module de l'artifex",
    "desc": "Composant utilisé dans les ingéniosités. Matière première utilisée pour les améliorations.",
    "lore": "La base de la technologie des ingéniosités de Xianzhou. C'est le plus petit composant de toutes les pièces de machine. Le casser reviendrait à détruire la structure cellulaire d'un être vivant.<br /><br />« La Guilde de l'intelligentsia a fixé une prime de deux millions de crédits pour obtenir des plans techniques qui permettraient de démonter parfaitement les marionnettes mécaniques de Xianzhou. »<br />« Si vous connaissez Screwllum, alors ces deux millions sont à vous... »",
@@ -145,18 +140,18 @@
    "rarity": 2,
    "rewardPath": "/material/549503",
    "comeFrom": [
-    "Ingéniosité envoûtée ou autre ennemi du Port Mirétoiles",
-    "Ennemi de l'Univers simulé",
-    "Récompense d'affectation",
+    "Ingéniosité envoûtée",
+    "Ennemis de l'Univers simulé",
+    "Récompenses d'affectation",
     "Échange de braises",
-    "Échange de matériaux de l'Omni-synthétiseur"
+    "Omni-synthétiseur — Échange de matériaux"
    ]
   },
   "633444": {
    "id": 633444,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "1977002edbf48f44c49d08284ce2681f622e70c447d50de10a8b9491dfcb719c",
+   "iconPath": "70a8938f2ceb297722769c3899bb3657304924c15cafc50fa23390de5eabacbc",
    "name": "Roue dentée de l'artifex",
    "desc": "Partie des machines de Xianzhou. Matériau intermédiaire utilisé pour le renforcement.",
    "lore": "Les composants connecteurs de la technologie des ingéniosités de Xianzhou. Les fines dents complexes des roues sont aussi minuscules que des graines de moutarde. Pourtant, elles s'imbriquent pour former un corps complexe, ce qui donne l'illusion que la machine est en vie.<br /><br />« Sa forme est en parfaite harmonie avec la nature, ses mouvements cycliques faisant écho au cosmos. »",
@@ -164,19 +159,19 @@
    "rarity": 3,
    "rewardPath": "/material/633444",
    "comeFrom": [
-    "Ingéniosité envoûtée de niveau d'équilibre 2+ ou autre ennemi du Port Mirétoiles",
+    "Ingéniosité envoûtée au niveau d'équilibre 2 ou supérieur",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Ennemi de l'Univers simulé",
-    "Échange de matériaux de l'Omni-synthétiseur"
+    "Omni-synthétiseur — Échange de matériaux"
    ]
   },
   "635671": {
    "id": 635671,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "6a16c2294ef90c8cb62d61eff8e1fa277eb6fafdd394ce5e157bd9fd4a7bb701",
+   "iconPath": "6128dd36bba1dcd10f490255173adf943c831435b13dc253d91a61463f37e39c",
    "name": "Graine d'abondance",
-   "desc": "Graine de bénédiction semée par l'Aiôn de l'Abondance. Permet d'améliorer légèrement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Abondance</span>.",
+   "desc": "Graine de bénédiction semée par l'Aiôn de l'Abondance. Permet d'améliorer légèrement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abondance</span>.",
    "lore": "Ceux qui la touchent voient lentement disparaître leurs blessures et leurs maux.<br />Ceux qui, frappés de désespoir, appellent de leurs prières les bienfaits de la vie seront toujours entendus.<br /><br />« Tu recevras ce que tu demandes. »",
    "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
    "rarity": 2,
@@ -189,7 +184,7 @@
    "id": 717385,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "058379eb2e88612f2b1f78a6c3195c457e124c9b6de602d6dd2fe0b2d17245f3",
+   "iconPath": "45329d01c5eb773414481b5457ac4854e81070b98c21d939da2a973c3c965fbd",
    "name": "Gyrocœur de l'artifex",
    "desc": "Composant utilisé dans les ingéniosités. Matériau avancé utilisé pour les améliorations.",
    "lore": "Le cœur de la technologie des ingéniosités de Xianzhou. La sphère armillaire tourbillonne et vibre telle l'essence d'un cœur, donnant l'illusion que la machine pense comme un être vivant.<br /><br />« N'ayez pas peur. Lui enlever son cœur la rendrait... le rendrait ?... Non, cela lui ferait perdre toute sensibilité et retourner à ses origines mécaniques. »",
@@ -197,19 +192,19 @@
    "rarity": 4,
    "rewardPath": "/material/717385",
    "comeFrom": [
-    "Ingéniosité envoûtée de niveau d'équilibre 4+ ou autre ennemi du Port Mirétoiles",
+    "Ingéniosité envoûtée au niveau d'équilibre 4 ou supérieur",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Ennemi de l'Univers simulé",
-    "Échange de matériaux de l'Omni-synthétiseur"
+    "Omni-synthétiseur — Échange de matériaux"
    ]
   },
   "836257": {
    "id": 836257,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "8b56fa357be53126b0284b12903e0bfd41ace9d4dc155711d0297b70563b3bc7",
+   "iconPath": "71dd8f16d472b4b68f3296f67d6421f2b8aab12a6712c56506f336283bd0220c",
    "name": "Fleur de l'éternité",
-   "desc": "Une fleur magnifique issue de la Pousse de la vie. Permet d'améliorer considérablement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Abondance</span>.",
+   "desc": "Une fleur magnifique issue de la Pousse de la vie. Permet d'améliorer considérablement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abondance</span>.",
    "lore": "Les étamines contiennent le pouvoir concentré de la Voie de l'Abondance, assurant la vitalité éternelle de la fleur. Ni le feu, ni la glace, ni aucune agression extérieure ne peuvent entraver la croissance de cette magnifique forme de vie.<br />Avec le temps, ses feuilles se nourriront de lumière d'étoile. Ses racines s'enfonceront dans la chair de chaque être de ce monde, toutes connectées, sans jamais périr. Ses fruits rempliront leur promesse d'immortalité.<br /><br />« Il existe des vaisseaux géants qui éclipsent les montagnes et dérivent dans le vide. L'arbre éternel dont les fruits sont synonymes d'immortalité y pousse. »",
    "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
    "rarity": 4,
@@ -223,9 +218,9 @@
    "id": 920198,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "084dff414a606a7be5ee10de1cda1048d08a87d2dc3587c5e545afb4399e881a",
+   "iconPath": "9a770eaee0f4119cbd5510afe63536ba85cda116f02bf1d0841bba6e565c5cd2",
    "name": "Pousse de la vie",
-   "desc": "Une jeune pousse provenant de la Graine d'abondance. Permet d'améliorer modérément les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\">Abondance</span>.",
+   "desc": "Une jeune pousse provenant de la Graine d'abondance. Permet d'améliorer modérément les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abondance</span>.",
    "lore": "Irradiant de chaleur, la vie et la croissance s'épanouissent autour de l'endroit où elle enterre ses racines. Les terres stériles se transforment en champs luxuriants, les plantes fanées rajeunissent et fleurissent, et les sources jaillissent du sol pour humidifier la terre.<br />S'approcher trop près provoque une contraction musculaire et osseuse, qui s'accompagne d'une démangeaison insupportable.<br /><br />« La vie est inépuisable là où l'âme abonde .»",
    "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
    "rarity": 3,
@@ -234,25 +229,21 @@
     "Calice du Col de Backwater",
     "Synthèse de matériaux de l'Omni-synthétiseur"
    ]
-  },
-  "985668": {
-   "id": 985668,
-   "type": 601,
-   "purposeId": 4,
-   "iconPath": "91205616cca581bc299d91a1af94a91981d58328675779f8e66ccbaf679e5e94",
-   "name": "Route finale du destructeur",
-   "desc": "Matériau avancé d'amélioration de Traces.",
-   "lore": "Le cœur du Léviathan a cessé de battre, mais son esprit est toujours vivant, bien que prisonnier d'une boîte. Tant que le couvercle reste fermé, il erre entre deux mondes et alimente le moteur de la destruction.<br /><br />« La Bête du jugement dernier est un fléau fabriqué dans la Forge de la guerre en utilisant les restes d'un Léviathan et les os de la lamentation d'un millier de morts. Il aspire à sa propre destruction et à celle de l'univers. »",
-   "purpose": "Matériau de Trace",
-   "rarity": 4,
-   "rewardPath": "/material/985668",
-   "comeFrom": [
-    "Écho de la guerre de la Zone de ravitaillement"
-   ]
   }
  },
  "levelData": [
   {
+   "attackBase": 102.96,
+   "attackAdd": 5.148,
+   "hpBase": 174.24,
+   "hpAdd": 8.712,
+   "defenseBase": 49.5,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
    "promotion": 0,
    "maxLevel": 20,
    "cost": [
@@ -264,20 +255,20 @@
      "id": 549503,
      "count": 5
     }
-   ],
-   "attackBase": 95.04,
-   "attackAdd": 4.752,
-   "hpBase": 174.24,
+   ]
+  },
+  {
+   "attackBase": 144.144,
+   "attackAdd": 5.148,
+   "hpBase": 243.936,
    "hpAdd": 8.712,
-   "defenseBase": 59.4,
-   "defenseAdd": 2.97,
+   "defenseBase": 69.3,
+   "defenseAdd": 2.475,
    "crate": 0.05,
    "cdmg": 0.5,
    "aggro": 100,
    "speedBase": 101,
-   "speedAdd": 0
-  },
-  {
+   "speedAdd": 0,
    "promotion": 1,
    "maxLevel": 30,
    "cost": [
@@ -289,20 +280,20 @@
      "id": 549503,
      "count": 10
     }
-   ],
-   "attackBase": 133.056,
-   "attackAdd": 4.752,
-   "hpBase": 243.936,
+   ]
+  },
+  {
+   "attackBase": 185.328,
+   "attackAdd": 5.148,
+   "hpBase": 313.632,
    "hpAdd": 8.712,
-   "defenseBase": 83.16,
-   "defenseAdd": 2.97,
+   "defenseBase": 89.1,
+   "defenseAdd": 2.475,
    "crate": 0.05,
    "cdmg": 0.5,
    "aggro": 100,
    "speedBase": 101,
-   "speedAdd": 0
-  },
-  {
+   "speedAdd": 0,
    "promotion": 2,
    "maxLevel": 40,
    "cost": [
@@ -318,20 +309,20 @@
      "id": 468391,
      "count": 3
     }
-   ],
-   "attackBase": 171.072,
-   "attackAdd": 4.752,
-   "hpBase": 313.632,
+   ]
+  },
+  {
+   "attackBase": 226.512,
+   "attackAdd": 5.148,
+   "hpBase": 383.328,
    "hpAdd": 8.712,
-   "defenseBase": 106.92,
-   "defenseAdd": 2.97,
+   "defenseBase": 108.9,
+   "defenseAdd": 2.475,
    "crate": 0.05,
    "cdmg": 0.5,
    "aggro": 100,
    "speedBase": 101,
-   "speedAdd": 0
-  },
-  {
+   "speedAdd": 0,
    "promotion": 3,
    "maxLevel": 50,
    "cost": [
@@ -347,20 +338,20 @@
      "id": 468391,
      "count": 7
     }
-   ],
-   "attackBase": 209.088,
-   "attackAdd": 4.752,
-   "hpBase": 383.328,
+   ]
+  },
+  {
+   "attackBase": 267.696,
+   "attackAdd": 5.148,
+   "hpBase": 453.024,
    "hpAdd": 8.712,
-   "defenseBase": 130.68,
-   "defenseAdd": 2.97,
+   "defenseBase": 128.7,
+   "defenseAdd": 2.475,
    "crate": 0.05,
    "cdmg": 0.5,
    "aggro": 100,
    "speedBase": 101,
-   "speedAdd": 0
-  },
-  {
+   "speedAdd": 0,
    "promotion": 4,
    "maxLevel": 60,
    "cost": [
@@ -376,20 +367,20 @@
      "id": 468391,
      "count": 20
     }
-   ],
-   "attackBase": 247.104,
-   "attackAdd": 4.752,
-   "hpBase": 453.024,
+   ]
+  },
+  {
+   "attackBase": 308.88,
+   "attackAdd": 5.148,
+   "hpBase": 522.72,
    "hpAdd": 8.712,
-   "defenseBase": 154.44,
-   "defenseAdd": 2.97,
+   "defenseBase": 148.5,
+   "defenseAdd": 2.475,
    "crate": 0.05,
    "cdmg": 0.5,
    "aggro": 100,
    "speedBase": 101,
-   "speedAdd": 0
-  },
-  {
+   "speedAdd": 0,
    "promotion": 5,
    "maxLevel": 70,
    "cost": [
@@ -405,34 +396,23 @@
      "id": 468391,
      "count": 35
     }
-   ],
-   "attackBase": 285.12,
-   "attackAdd": 4.752,
-   "hpBase": 522.72,
-   "hpAdd": 8.712,
-   "defenseBase": 178.2,
-   "defenseAdd": 2.97,
-   "crate": 0.05,
-   "cdmg": 0.5,
-   "aggro": 100,
-   "speedBase": 101,
-   "speedAdd": 0
+   ]
   },
   {
-   "promotion": 6,
-   "maxLevel": 80,
-   "cost": [],
-   "attackBase": 323.136,
-   "attackAdd": 4.752,
+   "attackBase": 350.064,
+   "attackAdd": 5.148,
    "hpBase": 592.416,
    "hpAdd": 8.712,
-   "defenseBase": 201.96,
-   "defenseAdd": 2.97,
+   "defenseBase": 168.3,
+   "defenseAdd": 2.475,
    "crate": 0.05,
    "cdmg": 0.5,
    "aggro": 100,
    "speedBase": 101,
-   "speedAdd": 0
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
   }
  ],
  "ranks": [
@@ -441,9 +421,9 @@
    "iconPath": "",
    "artPath": "eb4ced326ce1d4e20374e21c8fcc79c290def6ac3ab6ae9daaa4cbda99922175",
    "name": "Ablution de rapidité",
-   "descHash": "Après avoir utilisé sa compétence, Luocha régénère <nobr>#1[i]</nobr> points d'énergie supplémentaires si les PV de la cible alliée sont totalement restaurés.",
+   "descHash": "Tant que le Champ est actif, l'ATQ de tous les alliés augmente de <nobr>#1[i]%</nobr>.",
    "params": [
-    10
+    0.2
    ]
   },
   {
@@ -451,11 +431,12 @@
    "iconPath": "",
    "artPath": "bdb37aa787990bc103c4e1968a6e3bdbc0bf0647011cb526dfc42e75d0a9e1fd",
    "name": "Cadeau de pureté",
-   "descHash": "Les soins prodigués par Luocha augmentent de <nobr>#1[i]%</nobr> lorsqu'il utilise sa compétence sur une cible alliée qui a moins de <nobr>50</nobr> % de ses PV max. Si les PV de la cible alliée sont supérieurs ou égaux à <nobr>50</nobr> % de ses PV max, Luocha lui accorde un bouclier capable d'absorber des DGT équivalents à <nobr>#2[i]%</nobr> des PV max de la cible alliée pendant <nobr>#3[i]</nobr> tour.",
+   "descHash": "Les soins prodigués par Luocha augmentent de <nobr>#1[i]%</nobr> lorsque sa compétence se déclenche sur une cible alliée qui a moins de <nobr>50</nobr> % de ses PV. Si les PV de la cible alliée sont supérieurs ou égaux à <nobr>50</nobr> %, elle reçoit un bouclier capable d'absorber des DGT équivalents à <nobr>#2[i]%</nobr> de l'ATQ de Luocha + <nobr>#3[i]</nobr> qui dure <nobr>#4[i]</nobr> tours.",
    "params": [
     0.3,
-    0.15,
-    1
+    0.18,
+    240,
+    2
    ]
   },
   {
@@ -489,9 +470,11 @@
    "iconPath": "",
    "artPath": "e9b2e3c3c6b3fc5c9d947da05a18ca9f74189d400099f5fe76f1110f1238f9b1",
    "name": "Retour à la poussière",
-   "descHash": "Les DGT à la robustesse de l'ATQ normale et de l'ultime du personnage augmentent de <nobr>#1[i]%</nobr>.",
+   "descHash": "Il y a <nobr>#1[i]%</nobr> de chances fixes de réduire les RÉS à tous les types de tous les ennemis de <nobr>#2[i]%</nobr> pendant <nobr>#3[i]</nobr> tours lors de l'utilisation de l'ultime.",
    "params": [
-    1
+    1,
+    0.2,
+    2
    ]
   }
  ],
@@ -514,29 +497,32 @@
  ],
  "skills": [
   {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Luocha à un ennemi unique.",
+   "ultimateCost": 0,
+   "break": 30,
+   "energy": 20,
    "id": 906493,
    "name": "Épines de l'abîme",
-   "tagHash": "Cible unique",
-   "descHash": "Inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Luocha à un ennemi unique.",
+   "iconPath": "d5ece77965be7bfbf5e9a09121c5b481fd433ec8b06e2beba0c5fcbb04b611b9",
    "typeDescHash": "ATQ normale",
-   "iconPath": "2f475e3d3cf4b42b3aeb808330f9abc8904d4a4eb29b45fadce6f2dcd0128371",
    "levelReq": 0,
    "promotionReq": 0,
    "levelData": [
     {
-     "level": 1,
      "params": [
       0.5
      ],
+     "level": 1,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 2,
      "params": [
       0.6
      ],
+     "level": 2,
      "levelReq": 0,
      "promotionReq": 2,
      "cost": [
@@ -555,10 +541,10 @@
      ]
     },
     {
-     "level": 3,
      "params": [
       0.7
      ],
+     "level": 3,
      "levelReq": 0,
      "promotionReq": 3,
      "cost": [
@@ -577,10 +563,10 @@
      ]
     },
     {
-     "level": 4,
      "params": [
       0.8
      ],
+     "level": 4,
      "levelReq": 0,
      "promotionReq": 4,
      "cost": [
@@ -599,10 +585,10 @@
      ]
     },
     {
-     "level": 5,
      "params": [
       0.9
      ],
+     "level": 5,
      "levelReq": 0,
      "promotionReq": 5,
      "cost": [
@@ -621,10 +607,10 @@
      ]
     },
     {
-     "level": 6,
      "params": [
       1
      ],
+     "level": 6,
      "levelReq": 0,
      "promotionReq": 6,
      "cost": [
@@ -643,65 +629,67 @@
      ]
     },
     {
-     "level": 7,
      "params": [
       1.1
      ],
+     "level": 7,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 8,
      "params": [
       1.2
      ],
+     "level": 8,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 9,
      "params": [
       1.3
      ],
+     "level": 9,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     }
-   ],
-   "ultimateCost": 0
+   ]
   },
   {
+   "tagHash": "Restauration",
+   "descHash": "Après utilisation de la compétence, restaure immédiatement des PV à une cible alliée à hauteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Luocha + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>. D'autre part, Luocha obtient 1 cumul de Fleur de l'abîme.<br />Lorsque le pourcentage de PV d'un allié devient inférieur ou égal à <nobr>#3[i]%</nobr>, un effet équivalent à celui de la compétence de Luocha est immédiatement déclenché et appliqué une fois à cet allié (sans consommer de points de compétence). Cet effet peut être déclenché à nouveau après <nobr>#4[i]</nobr> tours.",
+   "ultimateCost": 0,
+   "break": 0,
+   "energy": 30,
    "id": 990434,
    "name": "Prière de la Fleur de l'abîme",
-   "tagHash": "Restauration",
-   "descHash": "Après utilisation de la compétence, restaure immédiatement les PV d'un allié unique à hauteur de <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Luocha + <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[i]</nobr></span>. D'autre part, Luocha gagne 1 cumul de Fleur de l'abîme.<br />Lorsque le pourcentage de PV d'un allié est inférieur ou égal à <nobr>#3[i]%</nobr>, Luocha utilise immédiatement sa compétence une fois sur cet allié (sans consommer de points de compétence). Après que Luocha a effectué <nobr>#4[i]</nobr> autres actions, cet effet peut être déclenché à nouveau quand les conditions sont réunies.",
+   "iconPath": "2a2c699936d3eafcaa63939e541fdb10b7db4ef96c3c6017aabcb3abcbb146fc",
    "typeDescHash": "Compétence",
-   "iconPath": "fb4c3dcb07d70358db2eb9fa5b6caf8e68cca51e1bc6973e05a5df20460b0ccb",
    "levelReq": 0,
    "promotionReq": 0,
    "levelData": [
     {
-     "level": 1,
      "params": [
       0.4,
       200,
       0.5,
       2
      ],
+     "level": 1,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 2,
      "params": [
       0.425,
       320,
       0.5,
       2
      ],
+     "level": 2,
      "levelReq": 0,
      "promotionReq": 1,
      "cost": [
@@ -716,13 +704,13 @@
      ]
     },
     {
-     "level": 3,
      "params": [
       0.45,
       410,
       0.5,
       2
      ],
+     "level": 3,
      "levelReq": 0,
      "promotionReq": 2,
      "cost": [
@@ -741,13 +729,13 @@
      ]
     },
     {
-     "level": 4,
      "params": [
       0.475,
       500,
       0.5,
       2
      ],
+     "level": 4,
      "levelReq": 0,
      "promotionReq": 3,
      "cost": [
@@ -766,13 +754,13 @@
      ]
     },
     {
-     "level": 5,
      "params": [
       0.5,
       560,
       0.5,
       2
      ],
+     "level": 5,
      "levelReq": 0,
      "promotionReq": 4,
      "cost": [
@@ -791,13 +779,13 @@
      ]
     },
     {
-     "level": 6,
      "params": [
       0.52,
       620,
       0.5,
       2
      ],
+     "level": 6,
      "levelReq": 0,
      "promotionReq": 4,
      "cost": [
@@ -816,13 +804,13 @@
      ]
     },
     {
-     "level": 7,
      "params": [
       0.54,
       665,
       0.5,
       2
      ],
+     "level": 7,
      "levelReq": 0,
      "promotionReq": 5,
      "cost": [
@@ -841,13 +829,13 @@
      ]
     },
     {
-     "level": 8,
      "params": [
       0.56,
       710,
       0.5,
       2
      ],
+     "level": 8,
      "levelReq": 0,
      "promotionReq": 5,
      "cost": [
@@ -860,7 +848,7 @@
        "count": 5
       },
       {
-       "id": 985668,
+       "id": 270195,
        "count": 1
       },
       {
@@ -870,13 +858,13 @@
      ]
     },
     {
-     "level": 9,
      "params": [
       0.58,
       755,
       0.5,
       2
      ],
+     "level": 9,
      "levelReq": 0,
      "promotionReq": 6,
      "cost": [
@@ -893,19 +881,19 @@
        "count": 1
       },
       {
-       "id": 985668,
+       "id": 270195,
        "count": 1
       }
      ]
     },
     {
-     "level": 10,
      "params": [
       0.6,
       800,
       0.5,
       2
      ],
+     "level": 10,
      "levelReq": 0,
      "promotionReq": 6,
      "cost": [
@@ -922,392 +910,102 @@
        "count": 1
       },
       {
-       "id": 985668,
+       "id": 270195,
        "count": 1
       }
      ]
     },
     {
-     "level": 11,
      "params": [
       0.62,
       845,
       0.5,
       2
      ],
+     "level": 11,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 12,
      "params": [
       0.64,
       890,
       0.5,
       2
      ],
+     "level": 12,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 13,
      "params": [
       0.66,
       935,
       0.5,
       2
      ],
+     "level": 13,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 14,
      "params": [
       0.68,
       980,
       0.5,
       2
      ],
+     "level": 14,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 15,
      "params": [
       0.7,
       1025,
       0.5,
       2
      ],
+     "level": 15,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     }
-   ],
-   "ultimateCost": 0
+   ]
   },
   {
+   "tagHash": "ZdE",
+   "descHash": "Supprime <nobr>#2[i]</nobr> <u>bonus</u> chez tous les ennemis et inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Luocha à tous les ennemis. Luocha gagne 1 cumul de Fleur de l'abîme.",
+   "ultimateCost": 100,
+   "break": 0,
+   "energy": 5,
    "id": 107079,
    "name": "Pulsion de mort",
-   "tagHash": "ZdE",
-   "descHash": "Supprime <nobr>#2[i]</nobr> <u>bonus</u> ennemi et inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Luocha à tous les ennemis. Luocha gagne 1 cumul de Fleur de l'abîme.",
+   "iconPath": "70be95cd6ae4ee811b2d0ade1bd4ff687e88a534458171839fac4c338f7a4203",
    "typeDescHash": "Ultime",
-   "iconPath": "03351de5de08dab2c2374e2eb2f344aef864901e3edb1ab93725de1002ab8fd6",
    "levelReq": 0,
    "promotionReq": 0,
    "levelData": [
     {
-     "level": 1,
-     "params": [
-      0.8,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "level": 2,
-     "params": [
-      0.88,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 1,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 2500
-      },
-      {
-       "id": 549503,
-       "count": 3
-      }
-     ]
-    },
-    {
-     "level": 3,
-     "params": [
-      0.96,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 2,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 5000
-      },
-      {
-       "id": 635671,
-       "count": 3
-      },
-      {
-       "id": 549503,
-       "count": 6
-      }
-     ]
-    },
-    {
-     "level": 4,
-     "params": [
-      1.04,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 3,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 10000
-      },
-      {
-       "id": 920198,
-       "count": 3
-      },
-      {
-       "id": 633444,
-       "count": 3
-      }
-     ]
-    },
-    {
-     "level": 5,
-     "params": [
-      1.12,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 4,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 20000
-      },
-      {
-       "id": 920198,
-       "count": 5
-      },
-      {
-       "id": 633444,
-       "count": 4
-      }
-     ]
-    },
-    {
-     "level": 6,
      "params": [
       1.2,
       1
      ],
-     "levelReq": 0,
-     "promotionReq": 4,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 30000
-      },
-      {
-       "id": 920198,
-       "count": 7
-      },
-      {
-       "id": 633444,
-       "count": 6
-      }
-     ]
-    },
-    {
-     "level": 7,
-     "params": [
-      1.3,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 5,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 45000
-      },
-      {
-       "id": 836257,
-       "count": 3
-      },
-      {
-       "id": 717385,
-       "count": 3
-      }
-     ]
-    },
-    {
-     "level": 8,
-     "params": [
-      1.4,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 5,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 80000
-      },
-      {
-       "id": 836257,
-       "count": 5
-      },
-      {
-       "id": 985668,
-       "count": 1
-      },
-      {
-       "id": 717385,
-       "count": 4
-      }
-     ]
-    },
-    {
-     "level": 9,
-     "params": [
-      1.5,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 6,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 160000
-      },
-      {
-       "id": 836257,
-       "count": 8
-      },
-      {
-       "id": 125435,
-       "count": 1
-      },
-      {
-       "id": 985668,
-       "count": 1
-      }
-     ]
-    },
-    {
-     "level": 10,
-     "params": [
-      1.6,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 6,
-     "cost": [
-      {
-       "id": 29328,
-       "count": 300000
-      },
-      {
-       "id": 836257,
-       "count": 14
-      },
-      {
-       "id": 125435,
-       "count": 1
-      },
-      {
-       "id": 985668,
-       "count": 1
-      }
-     ]
-    },
-    {
-     "level": 11,
-     "params": [
-      1.68,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "level": 12,
-     "params": [
-      1.76,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "level": 13,
-     "params": [
-      1.84,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "level": 14,
-     "params": [
-      1.92,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "level": 15,
-     "params": [
-      2,
-      1
-     ],
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    }
-   ],
-   "ultimateCost": 100
-  },
-  {
-   "id": 421380,
-   "name": "Cycle de la vie",
-   "tagHash": "Restauration",
-   "descHash": "Lorsque le nombre de cumuls de Fleur de l'abîme atteint <nobr>#1[i]</nobr>, Luocha consomme tous les cumuls pour déployer un Champ hostile aux ennemis.<br />Lorsqu'un ennemi situé dans le Champ est attaqué par un allié, ce dernier restaure immédiatement un montant de PV équivalent à <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> de l'ATQ de Luocha + <span style=\"display: inline-block; color: #f29e38ff; text-align:center; font-weight:bold;\"><nobr>#4[i]</nobr></span>.<br />L'effet du Champ dure <nobr>#3[i]</nobr> tours.",
-   "typeDescHash": "Talent",
-   "iconPath": "86540323b3dd09a99f02d6c1b67618a6a158b38d85d4dbaaf55164cec62f5152",
-   "levelReq": 0,
-   "promotionReq": 0,
-   "levelData": [
-    {
      "level": 1,
-     "params": [
-      2,
-      0.14,
-      2,
-      70
-     ],
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 2,
      "params": [
-      2,
-      0.14875,
-      2,
-      112
+      1.28,
+      1
      ],
+     "level": 2,
      "levelReq": 0,
      "promotionReq": 1,
      "cost": [
@@ -1322,13 +1020,11 @@
      ]
     },
     {
-     "level": 3,
      "params": [
-      2,
-      0.1575,
-      2,
-      143.5
+      1.36,
+      1
      ],
+     "level": 3,
      "levelReq": 0,
      "promotionReq": 2,
      "cost": [
@@ -1347,13 +1043,11 @@
      ]
     },
     {
-     "level": 4,
      "params": [
-      2,
-      0.16625,
-      2,
-      175
+      1.44,
+      1
      ],
+     "level": 4,
      "levelReq": 0,
      "promotionReq": 3,
      "cost": [
@@ -1372,13 +1066,11 @@
      ]
     },
     {
-     "level": 5,
      "params": [
-      2,
-      0.175,
-      2,
-      196
+      1.52,
+      1
      ],
+     "level": 5,
      "levelReq": 0,
      "promotionReq": 4,
      "cost": [
@@ -1397,13 +1089,11 @@
      ]
     },
     {
-     "level": 6,
      "params": [
-      2,
-      0.182,
-      2,
-      217
+      1.6,
+      1
      ],
+     "level": 6,
      "levelReq": 0,
      "promotionReq": 4,
      "cost": [
@@ -1422,13 +1112,11 @@
      ]
     },
     {
-     "level": 7,
      "params": [
-      2,
-      0.189,
-      2,
-      232.75
+      1.7,
+      1
      ],
+     "level": 7,
      "levelReq": 0,
      "promotionReq": 5,
      "cost": [
@@ -1447,13 +1135,11 @@
      ]
     },
     {
-     "level": 8,
      "params": [
-      2,
-      0.196,
-      2,
-      248.5
+      1.8,
+      1
      ],
+     "level": 8,
      "levelReq": 0,
      "promotionReq": 5,
      "cost": [
@@ -1466,7 +1152,7 @@
        "count": 5
       },
       {
-       "id": 985668,
+       "id": 270195,
        "count": 1
       },
       {
@@ -1476,13 +1162,11 @@
      ]
     },
     {
-     "level": 9,
      "params": [
-      2,
-      0.203,
-      2,
-      264.25
+      1.9,
+      1
      ],
+     "level": 9,
      "levelReq": 0,
      "promotionReq": 6,
      "cost": [
@@ -1499,19 +1183,17 @@
        "count": 1
       },
       {
-       "id": 985668,
+       "id": 270195,
        "count": 1
       }
      ]
     },
     {
-     "level": 10,
      "params": [
       2,
-      0.21,
-      2,
-      280
+      1
      ],
+     "level": 10,
      "levelReq": 0,
      "promotionReq": 6,
      "cost": [
@@ -1528,420 +1210,429 @@
        "count": 1
       },
       {
-       "id": 985668,
+       "id": 270195,
        "count": 1
       }
      ]
     },
     {
+     "params": [
+      2.08,
+      1
+     ],
      "level": 11,
-     "params": [
-      2,
-      0.217,
-      2,
-      295.75
-     ],
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
+     "params": [
+      2.16,
+      1
+     ],
      "level": 12,
-     "params": [
-      2,
-      0.224,
-      2,
-      311.5
-     ],
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
+     "params": [
+      2.24,
+      1
+     ],
      "level": 13,
-     "params": [
-      2,
-      0.231,
-      2,
-      327.25
-     ],
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
+     "params": [
+      2.32,
+      1
+     ],
      "level": 14,
-     "params": [
-      2,
-      0.238,
-      2,
-      343
-     ],
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     },
     {
-     "level": 15,
      "params": [
-      2,
-      0.245,
-      2,
-      358.75
+      2.4,
+      1
      ],
+     "level": 15,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     }
-   ],
-   "ultimateCost": 0
+   ]
   },
   {
-   "id": 621966,
-   "name": "Attaque",
+   "tagHash": "Restauration",
+   "descHash": "Lorsque le nombre de cumuls de Fleur de l'abîme atteint <nobr>#1[i]</nobr>, Luocha consomme tous les cumuls de Fleur de l'abîme pour déployer un Champ hostile aux ennemis.<br />Lorsqu'un ennemi situé dans le Champ est attaqué par un allié, ce dernier restaure immédiatement un montant de PV équivalent à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> de l'ATQ de Luocha + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span>.<br />L'effet du Champ dure <nobr>#3[i]</nobr> tours. Le Champ se dissipe lorsque Luocha est à terre.",
+   "ultimateCost": 0,
+   "break": 0,
+   "energy": 0,
+   "id": 421380,
+   "name": "Cycle de la vie",
+   "iconPath": "9700e9bd54c76af7278f32204f081744ed478d8f921d7c9ecbc4401b2f7778a5",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2,
+      0.12,
+      2,
+      60
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.1275,
+      2,
+      96
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549503,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.135,
+      2,
+      123
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635671,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.1425,
+      2,
+      150
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920198,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.15,
+      2,
+      168
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920198,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.156,
+      2,
+      186
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920198,
+       "count": 7
+      },
+      {
+       "id": 633444,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.162,
+      2,
+      199.5
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836257,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.168,
+      2,
+      213
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836257,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.174,
+      2,
+      226.5
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836257,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.18,
+      2,
+      240
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836257,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.186,
+      2,
+      253.5
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.192,
+      2,
+      267
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.198,
+      2,
+      280.5
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.204,
+      2,
+      294
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.21,
+      2,
+      307.5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
    "tagHash": "",
    "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
+   "ultimateCost": 0,
+   "break": 30,
+   "energy": 0,
+   "id": 621966,
+   "name": "Attaque",
+   "iconPath": "d5ece77965be7bfbf5e9a09121c5b481fd433ec8b06e2beba0c5fcbb04b611b9",
    "typeDescHash": "",
-   "iconPath": "2f475e3d3cf4b42b3aeb808330f9abc8904d4a4eb29b45fadce6f2dcd0128371",
    "levelReq": 0,
    "promotionReq": 0,
    "levelData": [
     {
-     "level": 1,
      "params": [],
+     "level": 1,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     }
-   ],
-   "ultimateCost": 0
+   ]
   },
   {
-   "id": 705907,
-   "name": "Miséricorde d'un fou",
    "tagHash": "Restauration",
    "descHash": "Après utilisation de la technique, le talent se déclenche immédiatement au début du combat suivant.",
+   "ultimateCost": 0,
+   "break": 0,
+   "energy": 0,
+   "id": 705907,
+   "name": "Miséricorde d'un fou",
+   "iconPath": "dfe067d0672976584be92237b326a3f90fa5b2d82a5f5dba7e342aeb62f71b04",
    "typeDescHash": "Technique",
-   "iconPath": "be4b84cba47eb1640a4a0b9668e2e7f2b50f8bff288228677f535a5fe8efae65",
    "levelReq": 0,
    "promotionReq": 0,
    "levelData": [
     {
-     "level": 1,
      "params": [],
+     "level": 1,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
     }
-   ],
-   "ultimateCost": 0
+   ]
   }
  ],
  "skillTreePoints": [
-  {
-   "id": 1203101,
-   "type": 1,
-   "children": [
-    {
-     "id": 1203202,
-     "type": 2,
-     "children": [
-      {
-       "id": 1203203,
-       "type": 2,
-       "children": [
-        {
-         "id": 1203204,
-         "type": 2,
-         "children": [],
-         "embedBuff": {
-          "id": 343206,
-          "name": "Augmentation de DÉF",
-          "levelReq": 0,
-          "promotionReq": 3,
-          "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
-          "statusList": [
-           {
-            "key": "DÉF",
-            "value": 0.05
-           }
-          ],
-          "cost": [
-           {
-            "id": 29328,
-            "count": 10000
-           },
-           {
-            "id": 920198,
-            "count": 3
-           },
-           {
-            "id": 633444,
-            "count": 3
-           }
-          ]
-         }
-        }
-       ],
-       "embedBuff": {
-        "id": 343209,
-        "name": "Augmentation d'ATQ",
-        "levelReq": 0,
-        "promotionReq": 3,
-        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
-        "statusList": [
-         {
-          "key": "ATQ",
-          "value": 0.04
-         }
-        ],
-        "cost": [
-         {
-          "id": 29328,
-          "count": 10000
-         },
-         {
-          "id": 920198,
-          "count": 3
-         },
-         {
-          "id": 633444,
-          "count": 3
-         }
-        ]
-       }
-      }
-     ],
-     "embedBuff": {
-      "id": 343208,
-      "name": "Augmentation de PV",
-      "levelReq": 0,
-      "promotionReq": 2,
-      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
-      "statusList": [
-       {
-        "key": "PV",
-        "value": 0.04
-       }
-      ],
-      "cost": [
-       {
-        "id": 29328,
-        "count": 5000
-       },
-       {
-        "id": 635671,
-        "count": 3
-       },
-       {
-        "id": 549503,
-        "count": 6
-       }
-      ]
-     }
-    }
-   ],
-   "embedBonusSkill": {
-    "id": 343112,
-    "name": "Renouveau de purification",
-    "descHash": "La compétence supprime également <nobr>#1[i]</nobr> malus de la cible alliée.",
-    "iconPath": "84c6b322919c7e01382cd3e54bce17f2845ea4ae92a4aa19d85af67537d4c7a9",
-    "levelReq": 0,
-    "promotionReq": 2,
-    "levelData": [
-     {
-      "level": 1,
-      "params": [
-       1
-      ],
-      "levelReq": 0,
-      "promotionReq": 2,
-      "cost": [
-       {
-        "id": 29328,
-        "count": 5000
-       },
-       {
-        "id": 635671,
-        "count": 3
-       },
-       {
-        "id": 985668,
-        "count": 1
-       }
-      ]
-     }
-    ],
-    "ultimateCost": 0
-   }
-  },
-  {
-   "id": 1203103,
-   "type": 1,
-   "children": [
-    {
-     "id": 1203208,
-     "type": 2,
-     "children": [],
-     "embedBuff": {
-      "id": 343218,
-      "name": "Augmentation de DÉF",
-      "levelReq": 0,
-      "promotionReq": 6,
-      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
-      "statusList": [
-       {
-        "key": "DÉF",
-        "value": 0.075
-       }
-      ],
-      "cost": [
-       {
-        "id": 29328,
-        "count": 160000
-       },
-       {
-        "id": 836257,
-        "count": 8
-       },
-       {
-        "id": 717385,
-        "count": 8
-       }
-      ]
-     }
-    },
-    {
-     "id": 1203209,
-     "type": 2,
-     "children": [],
-     "embedBuff": {
-      "id": 343219,
-      "name": "Augmentation de PV",
-      "levelReq": 75,
-      "promotionReq": 0,
-      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
-      "statusList": [
-       {
-        "key": "PV",
-        "value": 0.08
-       }
-      ],
-      "cost": [
-       {
-        "id": 29328,
-        "count": 160000
-       },
-       {
-        "id": 836257,
-        "count": 8
-       },
-       {
-        "id": 717385,
-        "count": 8
-       }
-      ]
-     }
-    }
-   ],
-   "embedBonusSkill": {
-    "id": 343114,
-    "name": "À travers la vallée",
-    "descHash": "Les DGT subis par Luocha en une seule attaque ne peuvent pas être supérieurs à <nobr>#1[i]%</nobr> de ses PV max.",
-    "iconPath": "b677fc5e67e3cae49a227e502e7fa7457126c985dd0eb6067c2e99bc961de9e3",
-    "levelReq": 0,
-    "promotionReq": 6,
-    "levelData": [
-     {
-      "level": 1,
-      "params": [
-       0.7
-      ],
-      "levelReq": 0,
-      "promotionReq": 6,
-      "cost": [
-       {
-        "id": 29328,
-        "count": 160000
-       },
-       {
-        "id": 836257,
-        "count": 8
-       },
-       {
-        "id": 125435,
-        "count": 1
-       },
-       {
-        "id": 985668,
-        "count": 1
-       }
-      ]
-     }
-    ],
-    "ultimateCost": 0
-   }
-  },
-  {
-   "id": 1203201,
-   "type": 2,
-   "children": [],
-   "embedBuff": {
-    "id": 343211,
-    "name": "Augmentation d'ATQ",
-    "levelReq": 1,
-    "promotionReq": 0,
-    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
-    "statusList": [
-     {
-      "key": "ATQ",
-      "value": 0.04
-     }
-    ],
-    "cost": [
-     {
-      "id": 29328,
-      "count": 2500
-     },
-     {
-      "id": 549503,
-      "count": 2
-     }
-    ]
-   }
-  },
-  {
-   "id": 1203210,
-   "type": 2,
-   "children": [],
-   "embedBuff": {
-    "id": 427151,
-    "name": "Augmentation d'ATQ",
-    "levelReq": 80,
-    "promotionReq": 0,
-    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
-    "statusList": [
-     {
-      "key": "ATQ",
-      "value": 0.08
-     }
-    ],
-    "cost": [
-     {
-      "id": 29328,
-      "count": 160000
-     },
-     {
-      "id": 836257,
-      "count": 8
-     },
-     {
-      "id": 717385,
-      "count": 8
-     }
-    ]
-   }
-  },
   {
    "id": 1203102,
    "type": 1,
@@ -2046,18 +1737,22 @@
     }
    ],
    "embedBonusSkill": {
+    "descHash": "Lorsqu'un ennemi est attaqué par un allié dans le Champ, tous les alliés (à l'exception de l'attaquant) restaurent un montant de PV équivalent à <nobr>#1[f1]%</nobr> de l'ATQ de Luocha + <nobr>#2[i]</nobr>.",
+    "ultimateCost": 0,
+    "break": 0,
+    "energy": 0,
     "id": 343115,
     "name": "Sanctifié",
-    "descHash": "Les chances de résister aux malus de contrôle augmentent de <nobr>#1[i]%</nobr>.",
-    "iconPath": "5c5e0abefb195602e5c44ebb321df623f5873f54b2f3482b219b39d1e10b7891",
+    "iconPath": "604404f448e93e809abe1656473226daef67cb71f64741c03a7a8d12376d33f9",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
      {
-      "level": 1,
       "params": [
-       0.7
+       0.07,
+       93
       ],
+      "level": 1,
       "levelReq": 0,
       "promotionReq": 4,
       "cost": [
@@ -2074,13 +1769,320 @@
         "count": 1
        },
        {
-        "id": 985668,
+        "id": 270195,
         "count": 1
        }
       ]
      }
+    ]
+   }
+  },
+  {
+   "id": 1203103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1203208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 343218,
+      "name": "Augmentation de DÉF",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+      "statusList": [
+       {
+        "key": "DÉF",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836257,
+        "count": 8
+       },
+       {
+        "id": 717385,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1203209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 343219,
+      "name": "Augmentation de PV",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836257,
+        "count": 8
+       },
+       {
+        "id": 717385,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Les chances de résister aux malus de contrôle augmentent de <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "break": 0,
+    "energy": 0,
+    "id": 343114,
+    "name": "À travers la vallée",
+    "iconPath": "d481f14ffdaad23b2eda12e948803d59c8ab2765ac789c7e4f6a7413ce430dfa",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.7
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836257,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1203101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1203202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1203203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1203204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 343206,
+          "name": "Augmentation de DÉF",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+          "statusList": [
+           {
+            "key": "DÉF",
+            "value": 0.05
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920198,
+            "count": 3
+           },
+           {
+            "id": 633444,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 343209,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920198,
+          "count": 3
+         },
+         {
+          "id": 633444,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 343208,
+      "name": "Augmentation de PV",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635671,
+        "count": 3
+       },
+       {
+        "id": 549503,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Supprime <nobr>#1[i]</nobr> malus d'une cible alliée lorsque l'effet de la compétence se déclenche.",
+    "ultimateCost": 0,
+    "break": 0,
+    "energy": 0,
+    "id": 343112,
+    "name": "Renouveau de purification",
+    "iconPath": "84c6b322919c7e01382cd3e54bce17f2845ea4ae92a4aa19d85af67537d4c7a9",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635671,
+        "count": 3
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1203201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 343211,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.04
+     }
     ],
-    "ultimateCost": 0
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549503,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1203210,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 427151,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 160000
+     },
+     {
+      "id": 836257,
+      "count": 8
+     },
+     {
+      "id": 717385,
+      "count": 8
+     }
+    ]
    }
   }
  ],
@@ -2114,9 +2116,402 @@
    }
   ]
  },
- "voiceItems": [],
- "storyItems": [],
- "archive": {},
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Première rencontre",
+   "text": "Je ne suis qu'un simple marchand itinérant de passage. Mon nom est Luocha.",
+   "unlockRequirement": "",
+   "cnUrl": "56874cde63ad935df06b196e8791a32c86fa01852f9557f7fff4efd40afba115",
+   "jpUrl": "60dc80216c3fac0bb9af2fc357d0758d476c50b24fc761c9bc5b63abaaaea85e",
+   "enUrl": "8840e0aa6bfd56a04470358eb59d9c8bfab9aece2acc444903246bb0a566d403",
+   "krUrl": "ebc7a6a2ce8741f21967293a187fdea8f96d65a3e07af3362bcea7681b7609dc"
+  },
+  {
+   "id": 2,
+   "title": "Salutation",
+   "text": "On s'est levés tôt pour poursuivre notre aventure. Tu as bien dormi la nuit dernière ?",
+   "unlockRequirement": "",
+   "cnUrl": "d39007ea62a4ebd770b49751306b9964ed880fd7f6e06c74ee55dcdcbd9b7e5a",
+   "jpUrl": "3aa46549acb159a6a52add5f453f3084ebfd5cc533ce51a25e020a83f08040b3",
+   "enUrl": "b9fdc146dbc8103a5b42882d15f11ea56a2b4341d0c6fb936c360066324a9e81",
+   "krUrl": "c094ca9f994fa38b3862f2218046ea7d0a0b057a246a4fc5f59b387d03280024"
+  },
+  {
+   "id": 3,
+   "title": "Au revoir",
+   "text": "Couche-toi tôt. Je monte la garde.",
+   "unlockRequirement": "",
+   "cnUrl": "917a09dd5a45b3c3adbb92113c55aec666ec9c10cf504302d276186d10cf7758",
+   "jpUrl": "1f6a1e4843b00b059b355d64f9c8de89a72c1aa61abdc5cc3a3d24de2d2d1dd1",
+   "enUrl": "8da62a326ad47eb4aff27f06a2fad8b21c54968d895c1a73aef36fd23346f1b0",
+   "krUrl": "b408a362b33833f41a9641835eb47569c3f29cc711361651f4e3dcdc5745ed79"
+  },
+  {
+   "id": 4,
+   "title": "Connaître Luocha : Art de la guérison",
+   "text": "En tant que marchand itinérant, je n'ai personne sur qui compter. Alors c'est rassurant de savoir que je peux au moins me sauver moi-même.",
+   "unlockRequirement": "",
+   "cnUrl": "808c8fa0883454d076c0759aa34f58a706133034266505d6b9d8ea1389a55aab",
+   "jpUrl": "a9da8a2874a7662668114bc8c8988b0682f46efb36145fb5ef941d4c1bff14b3",
+   "enUrl": "a0fa6a2ca16a233d3b3c9a6f2a0bd682a03b3882f202527011be891709db3907",
+   "krUrl": "5f045248180d89f8154869232320375695e1b664bee5c88be6c9e4d7a206eb23"
+  },
+  {
+   "id": 5,
+   "title": "Bavardage : Le cercueil",
+   "text": "Le cercueil attire l'attention. Il m'a beaucoup aidé en tant que marchand itinérant. La curiosité pousse les gens à venir me poser des questions à son sujet. En leur répondant, je fais affaire avec eux.",
+   "unlockRequirement": "",
+   "cnUrl": "79ab342daaa6276f80005b5a18cf479e5db225a6d2df24d944171b8ac0f6c229",
+   "jpUrl": "ce93a04778cefa5660a473219712624344918cfccdd9c86bb6bd3ef682d156f8",
+   "enUrl": "f914baab2f14db34873661a6a527fef62b7ed4139fbfb493bcf1f96cc9946912",
+   "krUrl": "0690077c6db764e19df940a056cde4a6513a743fd1f5e47df13141bbbf26cd7e"
+  },
+  {
+   "id": 6,
+   "title": "Passe-temps",
+   "text": "Il y a toujours des différences entre ce qu'on dit sur un lieu et ce qu'on en voit de ses propres yeux. J'adore découvrir la différence par moi-même.",
+   "unlockRequirement": "",
+   "cnUrl": "8bb1ebb3ca549b45ef6cff3a810e3dfbd268bb11877362ad8a36f5e4cc50c6f7",
+   "jpUrl": "6e371b122f74dd6407f0d68d75e4759a71c5c9983bfcbd8b7b00c798267e6f87",
+   "enUrl": "aeac46cbdcca48499a119008c7371a8b32250b0714bc45b809111fde2601d235",
+   "krUrl": "2e2c85aec5caa3fa6e442c3869666737057381c65d9c2590c76931f1693cc5e3"
+  },
+  {
+   "id": 7,
+   "title": "Problèmes",
+   "text": "Dans une situation difficile, peu importe notre vraie personnalité, ce qu'il faut c'est jouer le bon rôle... En tout cas, c'est mon expérience personnelle.",
+   "unlockRequirement": "",
+   "cnUrl": "e7cc1f0893a20047e2fcb7807516265292b0f63c39d04e620e5b0e297b3e9cea",
+   "jpUrl": "51953ededc6339869f49d47567ceab4501259acf59aeaa6893bdb9343318e543",
+   "enUrl": "172b8f1085641b57282027df48c46a85cfa4072fdeab4e3d514de215e1f14195",
+   "krUrl": "8263844463bccc1222b8ae60c34a345427512142d36856c17b1c8436efac5a34"
+  },
+  {
+   "id": 8,
+   "title": "Anecdote",
+   "text": "La signification d'une fleur réside dans la durée de sa floraison, et non dans ses pétales, son arôme ou les graines qu'elle laisse derrière elle.",
+   "unlockRequirement": "",
+   "cnUrl": "42985c92f9857eed5984291598d17eb8a53ce15ba2c37ad7045abcfaf0593705",
+   "jpUrl": "5fd663069acd7b6744e2dfb1f980618501c55e64b23eea2c4dc332b7cbddd911",
+   "enUrl": "72a6b5fc4c615e888a8b741af88a8b19ea4b6406c5af33f539fb374de50534ce",
+   "krUrl": "22eee6e31293b2f37ac2127e717e5aba6a8f55e8b9ae4b126808169fcca6550d"
+  },
+  {
+   "id": 9,
+   "title": "Savoir",
+   "text": "J'ai longtemps entendu dire que les habitants de Xianzhou pouvaient préserver leur beauté, et j'ai constaté que c'était effectivement le cas. Mais, ils gardent ce secret en se cachant dans un coin de la galaxie. C'est comme s'ils étaient assis sur une montagne d'or sans en faire quoi que ce soit... Quel dommage.",
+   "unlockRequirement": "",
+   "cnUrl": "48e6c89216383c466bdc57bb16688af45fedb9ec0814e82e41feb7ff760409db",
+   "jpUrl": "ea46f2335490c884d0e3e57690a97fd4be717d75b56c68c03bf76884fe65c961",
+   "enUrl": "92dd3a296eceff67a5c8d91bd493dacfcad43a08ee38ad6d779ae28ccd35aa63",
+   "krUrl": "d069e9dad91cb8214d3c6174e86e5405ef6043dfa923b875c30906936ed974b2"
+  },
+  {
+   "id": 10,
+   "title": "À propos de Jing Yuan",
+   "text": "Le général arrive à déceler les intentions des gens avec une grande précision, mais il maîtrise également l'art de la dissimulation et de la mise en scène. Il faut se méfier quand il décide de faire une nouvelle représentation.",
+   "unlockRequirement": "",
+   "cnUrl": "0d356a395fdf00beebb29965556b7b3089e71aeb541b29f4b4c7d4e07710f531",
+   "jpUrl": "984aa03c7381a6e482e3b5b720521b52eaf1ef3bbadfbfa63ed18b3dbc1fb6ee",
+   "enUrl": "3ee10fcb495a12953172225a45429020c67aef2ad90326ca23f4a9b71db1bbc4",
+   "krUrl": "4fcabb3ae98332f70f39d01968195639f68671adc689992f47cc762558d24906"
+  },
+  {
+   "id": 11,
+   "title": "À propos de Yanqing",
+   "text": "Oh, tu veux parler du jeune garçon ? Celui qui est toujours avec le général ? Je ne sais rien de lui...",
+   "unlockRequirement": "",
+   "cnUrl": "8146328af7d5aa3cf20b4c0b20bd2e2ae1acd42415fae8585150dd5bf74e445a",
+   "jpUrl": "e79d915e0f77a433e313f1c3a1fd21b55f7515e305d55135511dc6f585872931",
+   "enUrl": "9eada81f4140aaa52fb6857e858eb335f35dbd041166211029548d0c79d60a53",
+   "krUrl": "5985faf0efbb67afebb2f4c1e10520e5506de1e85cde0932753e286b50e6c821"
+  },
+  {
+   "id": 12,
+   "title": "À propos de Yukong",
+   "text": "Peu de gens ont conscience comme elle qu'ils ne sont qu'un grain de sable au milieu de l'immensité de la galaxie... Elle a tout mon respect.",
+   "unlockRequirement": "",
+   "cnUrl": "e9da515c555d331e22b075aa06e8b751d93846dbcadc69bb8860fd7bb55812aa",
+   "jpUrl": "de9f8f1383901d0ce45236f78b1aefeb6fc6bf01042fab1d7b2e150b28c85beb",
+   "enUrl": "326e299934aa22df0d5493205e842db642a1acea09cd279bf4943da101b56200",
+   "krUrl": "b93553d16423d3687de084801184655c4c91406cf9ac2d00211c1e35631a4c29"
+  },
+  {
+   "id": 13,
+   "title": "À propos de Tingyun",
+   "text": "Il est dur d'oublier ce que dit Tingyun. Les Foxiens devraient tirer parti de leur aisance avec les mots, tu ne trouves pas ?",
+   "unlockRequirement": "",
+   "cnUrl": "319eb6246b6178e781889db0bc729a5233ebc30910466205c10de9a1fd47cec9",
+   "jpUrl": "2f3eee4ed3091831d031a8b142f06c878b0187ebb7178fbce9d46d0c189bc7d7",
+   "enUrl": "17f2add8bf77dd978017a97b23977bacd81d0da584c91bcfaf90b1a1a3437218",
+   "krUrl": "6caa24e1c0176983bbbccb41dbab931f2d27bcbd21d40f2ca1ce45d5682c2a38"
+  },
+  {
+   "id": 14,
+   "title": "À propos de Sushang",
+   "text": "Elle est gentille et toujours prête à aider. Elle m'a proposé de prendre le thé et de se raconter des histoires la prochaine fois que je serai à bord du Xianzhou. Je suis un peu sceptique sur les histoires. Cela risque de prendre du temps.",
+   "unlockRequirement": "",
+   "cnUrl": "ddc2449b7f9de7d59d8b68754dcffab5e0ccb3d409de9ba02f3b649c37ebbc11",
+   "jpUrl": "1913a53a71e99a576cf52e6786bd3eb13820ab7be7dc6885368fff8f282a7cda",
+   "enUrl": "f67f2929af724427fea00b8f2f18110cddfc1723214c9816a5d6d88365656315",
+   "krUrl": "21a118b20159457ad2b0bffd2413bf106d024ae77bc1f5321e4b61fc551f6ffa"
+  },
+  {
+   "id": 51,
+   "title": "Rupture de faiblesse en début de combat",
+   "text": "On a des comptes à régler.",
+   "unlockRequirement": "",
+   "cnUrl": "d67e293c6de97dab00db31a73dd9f4b057ceb0973cf4c313386f6b927dede6e5",
+   "jpUrl": "41d0426d6a730f80bc5eccfe7e8dbd3a4acdd866e66bf182f9e94804d7d523c0",
+   "enUrl": "32db94c73ae9ff01413d3a7912512a19356d6db3395c01c486572e8c1fc4ef1f",
+   "krUrl": "5bae5e37681d6ef312e5a9c717393757ccb342b166de325e403d43ebb0f71762"
+  },
+  {
+   "id": 52,
+   "title": "Avertissement de danger en début de combat",
+   "text": "Ne dors pas sur tes lauriers.",
+   "unlockRequirement": "",
+   "cnUrl": "534313af439ddb38e437302ae15e2f3203fb1f677c228040c18af59db51a430d",
+   "jpUrl": "c567fca0db94f1717a1ba2ff574c2890a25389bfe446fca13a80f2e6ce9754b9",
+   "enUrl": "48a96b3d17a014c0010a712fb7ae52b65a70ab72f6ad9e9c53cc82fd8b4b1580",
+   "krUrl": "4efbe8874b2ffae1b1869a631f198b2fcf2cdb72c64a2bff3456dccab64cfd29"
+  },
+  {
+   "id": 53,
+   "title": "Début du tour 1",
+   "text": "C'est dommage. Vous avez mal choisi votre adversaire.",
+   "unlockRequirement": "",
+   "cnUrl": "41bde5c253c8b65d654fcceb065d2966a7933bb6046cb2aaaa250b05fae60b8e",
+   "jpUrl": "e5fc7adfe8a75d91119df28729f4b2f963e12b752d7ccf25a1b0dd92c98f1863",
+   "enUrl": "685f8ed13eb26225979f16bada635509b912c984eb1e28f2c3f3efa7b387775f",
+   "krUrl": "f50337f8e10ec0676e90858658b1de2837ebca50bb22abb86db842d1c3df0459"
+  },
+  {
+   "id": 54,
+   "title": "Début du tour 2",
+   "text": "Permettez-moi de vous raccompagner.",
+   "unlockRequirement": "",
+   "cnUrl": "0e297734f061143d34f1f9eb3235148abbf9e12a84b87619097d450a20cf3acd",
+   "jpUrl": "b0bc99f2424f4d9456d0d7d4d30c112d99bc8c46969329c0b874f6844ba82efc",
+   "enUrl": "e8fb6e41340c5159a144fe7fa8c1a59fde4eac0fcbbbe5d53388c39c28f76cd5",
+   "krUrl": "21aa896a5e2180c02491f91c2b69c068c3870cc64bc47504c6951138941cf612"
+  },
+  {
+   "id": 55,
+   "title": "Tour inactif",
+   "text": "Qu'est-ce qu'on attend ?",
+   "unlockRequirement": "",
+   "cnUrl": "2ba93be95212f7cdf5ea39108fef4f1d9694671cac8f28f571347fccda9321f2",
+   "jpUrl": "e1403924878c050c74fed43ff9ce69ea03ff265c3398f8e902cb885f64ca8033",
+   "enUrl": "e44efba284c9051f7cbb2c2852e6072907e04acf4f493137532eb1d91b76461a",
+   "krUrl": "f9261a08f8b12fde42ca562b7e9f855578b54df1a627989d1bf1a764189aa1a4"
+  },
+  {
+   "id": 56,
+   "title": "ATQ normale",
+   "text": "Hmpf.",
+   "unlockRequirement": "",
+   "cnUrl": "a540b20433a5151add73f30a261fa9f541da3fdc12a97cd739d703d29736cf1b",
+   "jpUrl": "9c3d72efbf1f6f68804483f37c282bb9524a64e8df4aa99a4acca523e03cf470",
+   "enUrl": "65107a4530689cabc2648420c36a345790914622bf02c23d4bb7ce96e740a023",
+   "krUrl": "f87779b1a4bc78a24c02af4e851f39eebf81450d9038e55e2f0d89fc29b248f9"
+  },
+  {
+   "id": 57,
+   "title": "Compétence 1",
+   "text": "Épanouie-toi, Fleur de l'abîme.",
+   "unlockRequirement": "",
+   "cnUrl": "524a54ab5f3a853be0cb64c280ea1b5acf0350553999548b962b188fd8894d20",
+   "jpUrl": "0b46232dd3267a3a73a56274c3dc41c1f5f6fc8e10393b086b936ef229ebed77",
+   "enUrl": "9543b9f3e460376bb1e3ede9229eb2d0c2436f5d6ec1999aa4cc272eba9ff430",
+   "krUrl": "5173ef5d8b520f6eed95629035b0fd0318bc0008fe1e944e97aae32a2e8ceddd"
+  },
+  {
+   "id": 58,
+   "title": "Compétence 2",
+   "text": "Reçois le cadeau divin !",
+   "unlockRequirement": "",
+   "cnUrl": "6caa497ebabde563fa4da5538db85c310d7f537d443ad0543b9e79367000b52a",
+   "jpUrl": "cec965df1d6cc297fdd2f32a56f268defafbe2e48f4fd2d4e891b48760c4a3a4",
+   "enUrl": "c35b5038d8d2826f57ab1bfad167c2045f3821839370498c490667f4c2012e8c",
+   "krUrl": "6c93b361c6c4b1e70cc703136b7c03552832476cd7699ba66725a4b3e918ecec"
+  },
+  {
+   "id": 59,
+   "title": "Attaque légère subie",
+   "text": "Rien de grave.",
+   "unlockRequirement": "",
+   "cnUrl": "ad527a80d9a1da90f660136f4f66d9f11fa81345d73110466ad35bed9c7a855a",
+   "jpUrl": "62401fd7775eb4510c1507b79e08ab8c2eb358b4c920025ec41703f64f59814f",
+   "enUrl": "c24f2c44baec5ef76e101e152f11fe36b686c5fa69d35b5e4c44da34a3ad6a82",
+   "krUrl": "8e69d0cbc76cc5390db5c0deb8138b9bfe99a928174e02f29d59564792eb1167"
+  },
+  {
+   "id": 60,
+   "title": "Attaque lourde subie",
+   "text": "Je t'ai sous-estimé.",
+   "unlockRequirement": "",
+   "cnUrl": "c0c461c78f2fefd49d1d7952611a9146cfa9dea8bfc24d9acc0c71abd430fd7b",
+   "jpUrl": "8ae696afcd1ca68b92a5cb2c9a1e324d3b46c24c7a99dc250f234a74edb83456",
+   "enUrl": "b52173349ac970f7d7220faf059424fd5cc3a9e7204121fcf3847cfa31d25a70",
+   "krUrl": "6d1ee77d9738f701766651aedfd7f4484058d5f86a8af35b613b29e0edfbfc91"
+  },
+  {
+   "id": 61,
+   "title": "Activation de l'ultime",
+   "text": "Le sommeil éternel n'est pas la fin...",
+   "unlockRequirement": "",
+   "cnUrl": "33023401564440ce6eb49b94c902797dfdb0af35defc7acb2683c462aeb717a9",
+   "jpUrl": "033dfa8411d1c74ab0cb5519d455ea13aaa2685f99cb22994f0b1613e26a229d",
+   "enUrl": "f5abc2dfb535d0f7c9e5ccb0442bd42af4c19de797fd613a38cb6f9febdc2ea2",
+   "krUrl": "703eeb8a97016cc53274fc4b057f32fc9572a48f7fea602fe7c5e3edeb7e1d62"
+  },
+  {
+   "id": 62,
+   "title": "Déclenchement de l'ultime",
+   "text": "Les morts reviendront !",
+   "unlockRequirement": "",
+   "cnUrl": "95cbfe4e6b47cbce4a4b9046c3b65bfd5bbd0eec32b73572aaf4dffb86ff453b",
+   "jpUrl": "16af0e1652a60e32a479e3aead60b8280ef2b752d589a8cb107a1020c308e8a1",
+   "enUrl": "89cfc0bd02aefb58550625fe43f390dbbe73f385c4f1862cde163709557cdda3",
+   "krUrl": "0e1c4d9ea8f894ffa96ec6ca7db03e4c3db0e9fba2a7d1eaaed5ae59ee593d6c"
+  },
+  {
+   "id": 63,
+   "title": "Talent",
+   "text": "Ce qui a été pris doit être rendu !",
+   "unlockRequirement": "",
+   "cnUrl": "9ee98bf0737687aa6aea22819c34970900d3be4a32cd02dc98da006be39612dc",
+   "jpUrl": "ab020c6bde81fdcf697067d78ddb3790553fe462e69eca01ea34003db9929cac",
+   "enUrl": "5a862da08c1def0fd34c6170f9bc2fc719cdcdc034b5820bcf666d0942db09af",
+   "krUrl": "4a751ac39d04022ea07dc7d859917350f91b3efd6987cac4e27af730f7aa4680"
+  },
+  {
+   "id": 64,
+   "title": "À terre",
+   "text": "Ça ne peut pas... se passer comme ça...",
+   "unlockRequirement": "",
+   "cnUrl": "34abb5a06b678afa0d4e48bce331a2121d4d395f2a11b5accfa4493f5176922f",
+   "jpUrl": "633615b8dacc906cd79d31eee77e313912217c13039371f1cbc330fa65e7043f",
+   "enUrl": "7f06ab479d3e5d8327c857e594154fb6d621de63da9815a09d607760e5ba86ac",
+   "krUrl": "d955476a31d06815658cc91da7e9d3fb937341c613aab0c9b1356ab53f986c70"
+  },
+  {
+   "id": 65,
+   "title": "Retour au combat",
+   "text": "Vous voyez ? Je suis revenu.",
+   "unlockRequirement": "",
+   "cnUrl": "03fa994f0a4d4a6e62de3b8fe5ae86c6f43aca06c9efbe4349c12e3af6bc7780",
+   "jpUrl": "6e1fc13821d339cfee848e150da7cf58202f7826fec87d95590b7e194974488e",
+   "enUrl": "262b8b4c6a7009bbeaa0ea7a94a2e12dac5b4e08b23f69cbf215b647af4ec438",
+   "krUrl": "6fd01f7dc281f808854eb649a9aec5a748c32e9a3fbc164621ad2d8088ddaa4b"
+  },
+  {
+   "id": 66,
+   "title": "Récupération de santé",
+   "text": "Je me sens beaucoup mieux.",
+   "unlockRequirement": "",
+   "cnUrl": "cee24ec5d42aa6bd1034bcfa402ed88408ea8b85d29cdbd016d6672d507ed418",
+   "jpUrl": "41ab314713efe383ee1c5bb5853762c2152afd769b27cba8bc553f8d9ef7edd4",
+   "enUrl": "9a1ab5c2241e8a162c92428eed0c95e61b4708374b4c1347ba193b174ef41bb2",
+   "krUrl": "ca0acf2a58cd76bc863a8fa9ee8bef09d88822c6c4c7330108f776378f826105"
+  },
+  {
+   "id": 67,
+   "title": "Technique",
+   "text": "Voyons la suite.",
+   "unlockRequirement": "",
+   "cnUrl": "5e4f7cc234e66b303f2798fe95e04434d7713871275e34c8a3266ad8cf20637e",
+   "jpUrl": "9525fa0487ea4328428574a7ac05928245605f474e2df045ceee8a6aec9216a2",
+   "enUrl": "5586291d99569a6b05e5dea584ac7451f0d5a74befe82b1d893b3d5caee85ea8",
+   "krUrl": "06c84326f7fc3c85c737a2a1305afa15d43b1c119e4de424f765174a697f6d94"
+  },
+  {
+   "id": 68,
+   "title": "Combat gagné",
+   "text": "L'euphorie du moment. Rien de plus.",
+   "unlockRequirement": "",
+   "cnUrl": "9f5aed23a4c2a49e80d1e4d6fdff5554051410d17927485355d763f375c9d641",
+   "jpUrl": "3e52322b129c1f93235cabe925f5b64032429441c6c71220fb76a271c21332e5",
+   "enUrl": "7ea88be89daf17f20277f794b15a2487f6015cac30900cfa96d97fb9792a40f3",
+   "krUrl": "5cd6e544c33430737e8591b9b49ac250d7157da539f639ac2ffa5fcc643602ac"
+  },
+  {
+   "id": 69,
+   "title": "Ouverture de coffre au trésor",
+   "text": "Prends-le, si ça te plaît.",
+   "unlockRequirement": "",
+   "cnUrl": "325ed23e5e338206dc97d190500f442d1785fd486393d271e706e9269bf4c139",
+   "jpUrl": "894da736bb0b9238d4db0050c6a0cfdd3a2cb25243fc1f939241fed55b6dcf2d",
+   "enUrl": "dfa793328b88f795f803d74eee59f6f5ea7cfa702b6aeb0357d2d51ef3e73101",
+   "krUrl": "b9308724f7d27fd30cb371d7774422d1503fea6c8b4efd8dd7e72073255fdd7a"
+  },
+  {
+   "id": 70,
+   "title": "Énigme résolue",
+   "text": "C'était trois fois rien.",
+   "unlockRequirement": "",
+   "cnUrl": "e8ad5d74e005d270e3db1d6ed4ec7b0944c70c1b94691e0e81b2bcf93c648e6a",
+   "jpUrl": "fe8736a7f2305eb1b71227ab7722d71f6e6bbed302ff1abff9509ca63e0577c8",
+   "enUrl": "39f99ff96daecef003a73e190da48a2badbb57c752a59417994d39bb2528d2c8",
+   "krUrl": "5ec6e0ec03e7a6586c71f3dd364311a5496c5cbfe92e319dd10403c0c424219f"
+  },
+  {
+   "id": 71,
+   "title": "Cible ennemie trouvée",
+   "text": "Ennuis droit devant... Allez-y. Je vous suis.",
+   "unlockRequirement": "",
+   "cnUrl": "6cbeb31621b0fd777f3d7e549dd4695fa75b9abedf0ee8b8731f3374ff6c6874",
+   "jpUrl": "b7bc149e008a32bbaef5ac7d947c25a3b54840528a9729aa75d50b37efeb44fc",
+   "enUrl": "56ee745cfd05d8734c6f9dfccc69c133116e12cf4ce1fe0f9fa4ac37a56d38fa",
+   "krUrl": "0eec3ca82f304c760c9e84ada8935112261217813b6db4aea8c38eb1641e0970"
+  },
+  {
+   "id": 72,
+   "title": "Retour en ville",
+   "text": "Il est difficile pour un vagabond de trouver le repos dans ce monde.",
+   "unlockRequirement": "",
+   "cnUrl": "48986f50729fbda09946ea31433d5ab625ef837778e6b007d6e615e12f416ac4",
+   "jpUrl": "0dadc56eba0cee284b826a98dd4131d18d5e6630da1a77cfb2421c2736fcc122",
+   "enUrl": "2308c379cce6089759641ef241ebf00a7f245c15faa6b5c9f8f4e9fbd500858d",
+   "krUrl": "07d7cc065be27939675ffe1cc9dd52dc074ec9bffe6f4c109bf855700d5427b9"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Détails du personnage",
+   "text": "Un beau et élégant jeune homme blond qui porte un cercueil géant sur son dos.<br />Alors qu'il voyageait en tant que marchand intergalactique, il a été malencontreusement pris au milieu de la crise du Stellaron à bord du Luofu de Xianzhou.<br />Et c'est ainsi que sa maîtrise de la médecine s'est révélée utile.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Histoire du personnage : Partie I",
+   "text": "« Quel est votre travail ? »<br />« Je suis marchand itinérant. »<br />« Quel est le but de votre visite ? »<br />« Je suis là pour affaires. »<br />« Promettez-vous de ne pas violer les lois et règlements de l'Alliance Xianzhou, de réaliser des activités commerciales en conformité avec la loi et de ne pas exercer d'activités hors du champ d'application du permis de votre visa ? »<br />« Bien sûr. Je respecterai la loi. »<br />« Jurez-vous de ne pas mener de recherches illégales liées à l'immortalité ? »<br />« Je... le promets. »<br />« Très bien, veuillez signer ici. »<br /><br />« Monsieur Luocha, soyez le bienvenu à bord du Luofu de Xianzhou. »",
+   "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie II",
+   "text": "« Hé, tu te souviens de ce type ? Il passait souvent par ici, il portait une énorme boîte... »<br />« Tu parles de Luocha ? »<br />« Ouais, Luocha... C'est un habitant de l'extérieur, pas vrai ? Mais, à son comportement et sa façon de parler, il me fait plus penser à un vieux natif de Xianzhou. Il vit ici depuis longtemps ? Si c'est le cas, il a tout de même gardé un style vestimentaire assez particulier et exotique... »<br />« Qui sait, c'est peut-être parce que ses cheveux blonds ne collent pas avec le style vestimentaire de Xianzhou. »<br /><br />Il lui arrivait de penser à chez lui.<br />Les démons, l'église, la folie... Il n'en gardait aucun bon souvenir.<br />La population se rassemblait en hauteur pour observer la fin tragique de sa ville.<br />Si tout devait s'arrêter, alors il y aurait au moins un témoin.<br /><br />« Pourquoi portez-vous toujours les vêtements de votre monde natal ? », lui demanda-t-on.<br />« Cela me rappelle la voie qu'il faut que je suive. C'est tout. », répondit Luocha.",
+   "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie III",
+   "text": "Les habitants de Xianzhou ne reconnaissent pas les cercueils.<br />Chaque fois que Luocha sortait dans la rue avec le sien, des regards curieux le suivaient.<br />Lorsque quelqu'un lui demandait, « Qu'est-ce que c'est exactement ? »<br />Luocha répliquait vaguement : « C'est mon outil de travail. »<br /><br />« Mon outil de travail... J'espère que ça ne te vexe pas. » Luocha se tenait dans un pavillon du Sanctuaire de l'exaltation, et se murmurait à lui-même : « Notre relation compte comme une relation d'affaires, n'est-ce pas ? »<br /><br />La seule réponse du cercueil fut le silence.",
+   "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie IV",
+   "text": "Luocha hissa le cercueil sur son dos et s'éloigna.<br />Le cercueil n'émit aucun son. Il ne protestait pas, et n'avait pas le droit de protester.<br />« Le silence rend libre. »<br /><br />Le rideau tomba, et il laissa sa culpabilité derrière lui. <br />La culpabilité n'est rien d'autre qu'une autre arme à maîtriser, un mensonge que l'on se raconte pour croire qu'on obtiendra un jour une réponse correcte.<br />« Qu'est-ce que tu as de si spécial ? Ta douleur est-elle plus importante, plus touchante que celle des autres ? »<br /><br />« Va à Xianzhou », dit celui qui lui remit le cercueil. « N'oublie pas ta promesse. »<br />« Jamais. »<br /><br />Luocha avait fait une promesse, mais fit un autre serment en silence.",
+   "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
+  }
+ ],
+ "archive": {
+  "cvCn": "赵路",
+  "cvJp": "石田彰",
+  "cvKr": "신용우",
+  "cvEn": "Craig Lee Thomas",
+  "camp": "Luofu de Xianzhou"
+ },
  "calculator": {
   "expCost": {
    "1": 200,
@@ -2206,6 +2601,26 @@
    "20000": 409960
   },
   "sCoinId": 29328
+ },
+ "name": "Luocha",
+ "rarity": 5,
+ "descHash": "Ce marchand étranger venu d'au-delà des mers stellaires ne va nulle part sans son cercueil. Il a d'excellentes compétences médicales.",
+ "artPath": "66cccaec76eaf25a0961e721b50f6950adc7c799ccac7b09f19928721586767b",
+ "miniIconPath": "149eea07f87426b317ef6272b734b1842c7821f78094b4a59bff99645287446a",
+ "damageType": {
+  "id": 64,
+  "iconPath": "87df7632a4ea2535a7794d3283255fe4f2a80d20e0cf266659a11dbae7549d5b",
+  "color": "#F4D258",
+  "name": "Imaginaire",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "c5d73b887b351895b87f5575e153c271fadb177c3ec898ddd33cb7195472aae4",
+  "altIconPath": "0cf5e1c678d986bb8657b04fb2e089916cf9e26223044daac261422689f4c070",
+  "color": "#FFFFFF",
+  "name": "L'Abondance",
+  "rarity": 0
  },
  "pageId": "luocha"
 }

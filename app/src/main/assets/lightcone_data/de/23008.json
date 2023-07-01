@@ -1,0 +1,504 @@
+{
+ "name": "Echos des Sarges",
+ "rarity": 5,
+ "descHash": "Unter den stillen Blicken weißer Schwertlilien klopft er auf den Sarg.<br />„Manchmal denke ich, ich habe dich unterschätzt, als ich diesen Handel vorgeschlagen habe.“<br />Die einzige Antwort, die er daraufhin erhält, ist ein dorniger Ast, der sich in seine Handfläche bohrt.<br />Trotzdem grinst er und umschließt den Dorn fest mit seiner Hand.<br /><br />„So ist es, in der Tat. Wir beide wollten einander ausnutzen, haben uns aber gegenseitig unterschätzt.“",
+ "iconPath": "eda49b019115e7ef3b5530309a996a6d64a41811b59d9873892478759d122c57",
+ "artPath": "47ab205056357e21458a8975609682dc154d7f0993e12ab905ea5f365ceb78ab",
+ "mediumIconPath": "fff2ecee7e681a225931332d0b2b26800312ad6765da3787238ecb0129a1ab2a",
+ "baseType": {
+  "id": 0,
+  "iconPath": "c5d73b887b351895b87f5575e153c271fadb177c3ec898ddd33cb7195472aae4",
+  "color": "#FFFFFF",
+  "name": "Der Überfluss",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "af49f8c10262045a4f9e4740703b52056b5f396b48b99c2d130c22f3dbfa99d9",
+   "name": "Credit",
+   "desc": "Diese Währung, die von der Interastrale Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
+   "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
+   "purpose": "Gemeinsame Währung",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Blütenkelch (Große Mine)",
+    "Missionsbelohnungen",
+    "Auftragsbelohnungen"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "a9982fbfd0b91bf955e7490167c11c9813a73f915e9665110456d1658daac9b6",
+   "name": "Mechanisches Bauteil",
+   "desc": "Teil einer Xianzhou-Maschine. Ein Rohmaterial zur Verstärkung.",
+   "lore": "Die Grundlage der mechanischen Künste von Xianzhou. Der kleinste Baustein aller Maschinenteile. Ihn zu zerstören, käme der Zerstörung der Zellstruktur eines Lebewesens gleich.<br /><br />„Die Intelligenzia-Gilde hat ein Kopfgeld von zwei Millionen Credits auf technische Pläne ausgesetzt, mit denen die mechanischen Marionetten der Xianzhou fehlerfrei zerlegt werden können.“<br />„Wenn du Screwllum kennst, dann gehören diese zwei Millionen im Grunde dir ...“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "Magische Erfindergeister",
+    "Universum-Simulation-Gegner",
+    "Auftragsbelohnungen",
+    "Glut-Tausch",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "70a8938f2ceb297722769c3899bb3657304924c15cafc50fa23390de5eabacbc",
+   "name": "Mechanisches zylindrisches Rad",
+   "desc": "Teil einer Xianzhou-Maschine. Ein normales Material zur Verstärkung.",
+   "lore": "Die verbindenden Komponenten in der Kunst der Xianzhou-Mechanik. Die filigranen und dünnen Zähne der Zahnräder sind so winzig wie Senfkörner, und doch sind sie so miteinander verbunden, dass sie einen komplexen Körper bilden, sodass die Maschine wahrhaftig als lebendig bezeichnet werden kann.<br /><br />„Ihre Form ist harmonisch, eine Parallele zur Natur. Ihre Bewegungen sind zyklisch und spiegeln den Kosmos wider.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "Magische Erfindergeister auf Balance-Stufe 2 oder höher",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "635671": {
+   "id": 635671,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "6128dd36bba1dcd10f490255173adf943c831435b13dc253d91a61463f37e39c",
+   "name": "Saat des Überflusses",
+   "desc": "Ein vom Äon des Überflusses gesäter Segenssamen, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad des Überflusses</span> ein wenig hochgestuft werden können.",
+   "lore": "Wer sie berührt, wird allmählich von Wunden und Krankheiten geheilt.<br />Die Gebete verzweifelter Menschen, die um den Segen des Lebens bitten, werden immer erhört.<br /><br />„Dein Wunsch sei dir erfüllt.“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/635671",
+   "comeFrom": [
+    "Blütenkelch (Abgelegener Pass)"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "56ab8085d932c0a9521f684246a42bd320b199c3c1a6f3bd54b869c5f294fec9",
+   "name": "Raffinierter Äther",
+   "desc": "Verstärkungsmaterial für Lichtkegel, enthält <nobr>6.000</nobr> Lichtkegel-EP.",
+   "lore": "Ein Behälter mit Äther, der durch ein spezielles Verfahren gereinigt wurde.<br /><br />„Der Garten freut sich darauf, seine frühere Pracht wiederherzustellen. Aber es ist eine ‚frühere Pracht‘, die sie selbst ausgewählt haben. Verstehst du?“",
+   "purpose": "Material zu Lichtkegel-EP",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Blütenkelch (Abgelegener Pass)",
+    "Vergessene Halle"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "1911d7bb4aad22029e82a9b17a0005674864038b6b61e86976ace8277267d9f6",
+   "name": "Verdichteter Äther",
+   "desc": "Verstärkungsmaterial für Lichtkegel, enthält <nobr>2.000</nobr> Lichtkegel-EP.",
+   "lore": "Ein Behälter mit Äther, der durch ein spezielles Verfahren gereinigt wurde.<br /><br />„Behälter mit Vorsicht handhaben, nicht fallen lassen oder unter Druck setzen. Bei Beschädigung oder undichten Stellen bitte Kapitel II der ‚Anweisungen für den Umgang mit Leckagen‘ befolgen.“",
+   "purpose": "Material zu Lichtkegel-EP",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Blütenkelch (Abgelegener Pass)"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "03fc3a9bafdf0f18b1e49a885353ed442420842a2cc373428b242b213d2728fc",
+   "name": "Verdünnter Äther",
+   "desc": "Verstärkungsmaterial für Lichtkegel, enthält <nobr>500</nobr> Lichtkegel-EP.",
+   "lore": "Eine imaginäre Substanz, die eigentlich nicht in der Realität existieren dürfte und als Grundstoff zur Herstellung von Lichtkegeln verwendet wird.<br />Die in Lichtkegeln enthaltenen Bilder werden klarer, wenn sie mit dieser Substanz angereichert werden.<br /><br />„Aha, das ist also die sogenannte ‚Sentiention‘ des Gartens des Gedächtnisses. Kein Wunder, dass die Wahrer der Erinnerungen durch die Galaxie reisen können.“",
+   "purpose": "Material zu Lichtkegel-EP",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Blütenkelch (Abgelegener Pass)",
+    "Auftragsbelohnungen"
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "45329d01c5eb773414481b5457ac4854e81070b98c21d939da2a973c3c965fbd",
+   "name": "Mechanisches Gyro-Herz",
+   "desc": "Teil einer Xianzhou-Maschine. Ein fortschrittliches Material zur Verstärkung.",
+   "lore": "Das Herzstück der mechanischen Künste der Xianzhou. Die Armillarsphäre kreist und vibriert wie die Essenzen eines Herzens und lässt die Maschine wie ein lebendiges Wesen denken.<br /><br />„Erschrick nicht. Wenn du ihr das Herz wegnimmst, wird er ... sie ... nein, es sein Gefühl verlieren und zu seinem mechanischen Ursprung zurückkehren.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "Magische Erfindergeister auf Balance-Stufe 4 oder höher",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "836257": {
+   "id": 836257,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "71dd8f16d472b4b68f3296f67d6421f2b8aab12a6712c56506f336283bd0220c",
+   "name": "Blume der Ewigkeit",
+   "desc": "Eine aus dem Spross des Lebens gewachsene wunderschöne Blume, mit der Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad des Überflusses</span> stark hochgestuft werden können.",
+   "lore": "Ihr Staubblatt enthält die konzentrierte Kraft des Überflusses, der die Blume ihr ewiges Leben verdankt. Weder Feuer noch Eis noch das unwirtlichste Klima können das Wachstum dieser prachtvollen Lebensform aufhalten.<br />Eines Tages wird sie die Nährstoffe aus den Sternen zehren, Wurzeln im Herzblut der Welt schlagen und niemals vergehen, und ihre Früchte werden das Versprechen der Unsterblichkeit erfüllen.<br /><br />„Über der Leere treibt ein Boot, gewaltiger als jeder Berg. Wer vom Baum der Unsterblichkeit darauf isst, der soll ewig leben.“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/836257",
+   "comeFrom": [
+    "Blütenkelch (Abgelegener Pass)",
+    "Omni-Synthesemaschine – Materialsynthese"
+   ]
+  },
+  "920198": {
+   "id": 920198,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "9a770eaee0f4119cbd5510afe63536ba85cda116f02bf1d0841bba6e565c5cd2",
+   "name": "Spross des Lebens",
+   "desc": "Ein der Saat des Überflusses entsprungener Keimling, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad des Überflusses</span> mäßig hochgestuft werden können.",
+   "lore": "Strahlende Wärme, Leben und Wachstum gedeihen rund um den Ort, wo er seine Wurzeln schlägt. Karges Ödland verwandelt sich in saftige Grasfelder, verwelkte Pflanzen verjüngen und blühen, und Quellen brechen durch den Boden, um das Land zu befeuchten.<br />Wenn du dich ihm näherst, zucken deine Muskeln und Knochen und breiten sich mit einem unerträglichen Juckreiz aus.<br /><br />„Das Leben ist unermüdlich, wo die Seele gedeiht.“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/920198",
+   "comeFrom": [
+    "Blütenkelch (Abgelegener Pass)",
+    "Omni-Synthesemaschine – Materialsynthese"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 5000
+    },
+    {
+     "id": 549503,
+     "count": 8
+    }
+   ],
+   "attackBase": 26.4,
+   "attackAdd": 3.96,
+   "hpBase": 52.8,
+   "hpAdd": 7.92,
+   "defenseBase": 18,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 10000
+    },
+    {
+     "id": 635671,
+     "count": 4
+    },
+    {
+     "id": 549503,
+     "count": 12
+    }
+   ],
+   "attackBase": 58.08,
+   "attackAdd": 3.96,
+   "hpBase": 116.16,
+   "hpAdd": 7.92,
+   "defenseBase": 39.6,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 20000
+    },
+    {
+     "id": 920198,
+     "count": 4
+    },
+    {
+     "id": 633444,
+     "count": 8
+    }
+   ],
+   "attackBase": 100.32,
+   "attackAdd": 3.96,
+   "hpBase": 200.64,
+   "hpAdd": 7.92,
+   "defenseBase": 68.4,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 50000
+    },
+    {
+     "id": 920198,
+     "count": 8
+    },
+    {
+     "id": 633444,
+     "count": 12
+    }
+   ],
+   "attackBase": 142.56,
+   "attackAdd": 3.96,
+   "hpBase": 285.12,
+   "hpAdd": 7.92,
+   "defenseBase": 97.2,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 100000
+    },
+    {
+     "id": 836257,
+     "count": 5
+    },
+    {
+     "id": 717385,
+     "count": 6
+    }
+   ],
+   "attackBase": 184.8,
+   "attackAdd": 3.96,
+   "hpBase": 369.6,
+   "hpAdd": 7.92,
+   "defenseBase": 126,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 200000
+    },
+    {
+     "id": 836257,
+     "count": 10
+    },
+    {
+     "id": 717385,
+     "count": 8
+    }
+   ],
+   "attackBase": 227.04,
+   "attackAdd": 3.96,
+   "hpBase": 454.08,
+   "hpAdd": 7.92,
+   "defenseBase": 154.8,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 269.28,
+   "attackAdd": 3.96,
+   "hpBase": 538.56,
+   "hpAdd": 7.92,
+   "defenseBase": 183.6,
+   "defenseAdd": 2.7
+  }
+ ],
+ "skill": {
+  "id": 23008,
+  "name": "Dornen",
+  "descHash": "Erhöht den ANG des Trägers um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. Wenn der Träger angreift, stellt er für jeden verschiedenen getroffenen Gegner <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]</nobr></span> Pkt. Energie wieder her. Jeder Angriff kann auf diese Weise bis zu <nobr>#4[i]</nobr>-mal Energie wiederherstellen. Nach dem Einsatz des Ultimates wird die GES aller Verbündeten für 1 Rd. um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> Pkt. erhöht.",
+  "levelData": [
+   {
+    "params": [
+     0.24,
+     12,
+     3,
+     3
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.28,
+     14,
+     3.5,
+     3
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.32,
+     16,
+     4,
+     3
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.36,
+     18,
+     4.5,
+     3
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.4,
+     20,
+     5,
+     3
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 60,
+   "2": 100,
+   "3": 170,
+   "4": 260,
+   "5": 370,
+   "6": 500,
+   "7": 640,
+   "8": 800,
+   "9": 970,
+   "10": 1160,
+   "11": 1360,
+   "12": 1580,
+   "13": 1820,
+   "14": 2060,
+   "15": 2320,
+   "16": 2600,
+   "17": 2880,
+   "18": 3180,
+   "19": 3490,
+   "20": 3620,
+   "21": 3760,
+   "22": 3910,
+   "23": 4050,
+   "24": 4200,
+   "25": 4360,
+   "26": 4510,
+   "27": 4670,
+   "28": 4830,
+   "29": 4990,
+   "30": 5160,
+   "31": 5330,
+   "32": 5500,
+   "33": 5670,
+   "34": 5850,
+   "35": 6030,
+   "36": 6210,
+   "37": 6390,
+   "38": 6580,
+   "39": 6760,
+   "40": 6950,
+   "41": 7630,
+   "42": 8060,
+   "43": 8510,
+   "44": 8970,
+   "45": 9440,
+   "46": 9910,
+   "47": 10390,
+   "48": 10890,
+   "49": 11390,
+   "50": 11900,
+   "51": 12420,
+   "52": 12940,
+   "53": 13480,
+   "54": 14020,
+   "55": 14580,
+   "56": 15140,
+   "57": 15710,
+   "58": 16290,
+   "59": 16880,
+   "60": 17470,
+   "61": 18290,
+   "62": 19270,
+   "63": 20260,
+   "64": 21260,
+   "65": 22290,
+   "66": 23320,
+   "67": 24370,
+   "68": 25440,
+   "69": 26520,
+   "70": 27620,
+   "71": 30810,
+   "72": 33710,
+   "73": 36660,
+   "74": 39650,
+   "75": 42680,
+   "76": 45750,
+   "77": 48870,
+   "78": 52030,
+   "79": 55230,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "23008"
+}

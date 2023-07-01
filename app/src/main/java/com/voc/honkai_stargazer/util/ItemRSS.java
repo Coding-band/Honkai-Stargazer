@@ -146,14 +146,22 @@ public class ItemRSS {
     }
 
     /**
-     * Update Ver. 1.0.5
+     * Update Ver. 1.1.0
      */
     public int[] getCharByName(String charNameInFile){
         switch (charNameInFile){
+            //Add in 1.2.0
+            case "Kafka" : return new int[]{R.drawable.kafka_icon, R.drawable.kafka_splash, R.drawable.kafka_icon,R.drawable.kafka_eidolon1, R.drawable.kafka_eidolon2, R.drawable.kafka_eidolon3, R.drawable.kafka_eidolon4, R.drawable.kafka_eidolon5, R.drawable.kafka_eidolon6};
+            case "Blade" : return new int[]{R.drawable.blade_icon, R.drawable.blade_splash, R.drawable.blade_icon,R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img};
+
+            //Add in 1.1.0
+            case "Yukong" : return new int[]{R.drawable.yukong_icon, R.drawable.yukong_splash,R.drawable.yukong_fade, R.drawable.yukong_eidolon1, R.drawable.yukong_eidolon2, R.drawable.yukong_eidolon3, R.drawable.yukong_eidolon4, R.drawable.yukong_eidolon5, R.drawable.yukong_eidolon6};
+            case "Luocha" : return new int[]{R.drawable.luocha_icon, R.drawable.luocha_splash,R.drawable.luocha_icon, R.drawable.luocha_eidolon1, R.drawable.luocha_eidolon2, R.drawable.luocha_eidolon3, R.drawable.luocha_eidolon4, R.drawable.luocha_eidolon5, R.drawable.luocha_eidolon6};
+            case "Silver Wolf" : return new int[]{R.drawable.silver_wolf_icon, R.drawable.silver_wolf_splash,R.drawable.silver_wolf_icon, R.drawable.silver_wolf_eidolon1, R.drawable.silver_wolf_eidolon2, R.drawable.silver_wolf_eidolon3, R.drawable.silver_wolf_eidolon4, R.drawable.silver_wolf_eidolon5, R.drawable.silver_wolf_eidolon6};
+
             case "Arlan" : return new int[]{R.drawable.arlan_icon, R.drawable.arlan_splash,R.drawable.arlan_fade, R.drawable.arlan_eidolon1, R.drawable.arlan_eidolon2, R.drawable.arlan_eidolon3, R.drawable.arlan_eidolon4, R.drawable.arlan_eidolon5, R.drawable.arlan_eidolon6};
             case "Asta" : return new int[]{R.drawable.asta_icon, R.drawable.asta_splash,R.drawable.asta_fade, R.drawable.asta_eidolon1, R.drawable.asta_eidolon2, R.drawable.asta_eidolon3, R.drawable.asta_eidolon4, R.drawable.asta_eidolon5, R.drawable.asta_eidolon6};
             case "Bailu" : return new int[]{R.drawable.bailu_icon, R.drawable.bailu_splash, R.drawable.bailu_fade,R.drawable.bailu_eidolon1, R.drawable.bailu_eidolon2, R.drawable.bailu_eidolon3, R.drawable.bailu_eidolon4, R.drawable.bailu_eidolon5, R.drawable.bailu_eidolon6};
-            case "Blade" : return new int[]{R.drawable.blade_icon, R.drawable.blade_splash, R.drawable.blade_icon,R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img, R.drawable.ico_lost_img};
             case "Bronya" : return new int[]{R.drawable.bronya_icon, R.drawable.bronya_splash, R.drawable.bronya_fade,R.drawable.bronya_eidolon1, R.drawable.bronya_eidolon2, R.drawable.bronya_eidolon3, R.drawable.bronya_eidolon4, R.drawable.bronya_eidolon5, R.drawable.bronya_eidolon6};
             case "Clara" : return new int[]{R.drawable.clara_icon, R.drawable.clara_splash, R.drawable.clara_fade,R.drawable.clara_eidolon1, R.drawable.clara_eidolon2, R.drawable.clara_eidolon3, R.drawable.clara_eidolon4, R.drawable.clara_eidolon5, R.drawable.clara_eidolon6};
             case "Dan Heng" : return new int[]{R.drawable.dan_heng_icon, R.drawable.dan_heng_splash,R.drawable.dan_heng_fade, R.drawable.dan_heng_eidolon1, R.drawable.dan_heng_eidolon2, R.drawable.dan_heng_eidolon3, R.drawable.dan_heng_eidolon4, R.drawable.dan_heng_eidolon5, R.drawable.dan_heng_eidolon6};
@@ -162,8 +170,6 @@ public class ItemRSS {
             case "Himeko" : return new int[]{R.drawable.himeko_icon, R.drawable.himeko_splash, R.drawable.himeko_fade,R.drawable.himeko_eidolon1, R.drawable.himeko_eidolon2, R.drawable.himeko_eidolon3, R.drawable.himeko_eidolon4, R.drawable.himeko_eidolon5, R.drawable.himeko_eidolon6};
             case "Hook" : return new int[]{R.drawable.hook_icon, R.drawable.hook_splash, R.drawable.hook_fade,R.drawable.hook_eidolon1, R.drawable.hook_eidolon2, R.drawable.hook_eidolon3, R.drawable.hook_eidolon4, R.drawable.hook_eidolon5, R.drawable.hook_eidolon6};
             case "Jing Yuan" : return new int[]{R.drawable.jing_yuan_icon, R.drawable.jing_yuan_splash, R.drawable.jing_yuan_fade,R.drawable.jing_yuan_eidolon1, R.drawable.jing_yuan_eidolon2, R.drawable.jing_yuan_eidolon3, R.drawable.jing_yuan_eidolon4, R.drawable.jing_yuan_eidolon5, R.drawable.jing_yuan_eidolon6};
-            case "Kafka" : return new int[]{R.drawable.kafka_icon, R.drawable.kafka_splash, R.drawable.kafka_icon,R.drawable.kafka_eidolon1, R.drawable.kafka_eidolon2, R.drawable.kafka_eidolon3, R.drawable.kafka_eidolon4, R.drawable.kafka_eidolon5, R.drawable.kafka_eidolon6};
-            case "Luocha" : return new int[]{R.drawable.luocha_icon, R.drawable.luocha_splash,R.drawable.luocha_icon, R.drawable.luocha_eidolon1, R.drawable.luocha_eidolon2, R.drawable.luocha_eidolon3, R.drawable.luocha_eidolon4, R.drawable.luocha_eidolon5, R.drawable.luocha_eidolon6};
             case "March 7th" : return new int[]{R.drawable.march_7th_icon, R.drawable.march_7th_splash, R.drawable.march_7th_fade, R.drawable.march_7th_eidolon1, R.drawable.march_7th_eidolon2, R.drawable.march_7th_eidolon3, R.drawable.march_7th_eidolon4, R.drawable.march_7th_eidolon5, R.drawable.march_7th_eidolon6};
             case "Natasha" : return new int[]{R.drawable.natasha_icon, R.drawable.natasha_splash,R.drawable.natasha_fade, R.drawable.natasha_eidolon1, R.drawable.natasha_eidolon2, R.drawable.natasha_eidolon3, R.drawable.natasha_eidolon4, R.drawable.natasha_eidolon5, R.drawable.natasha_eidolon6};
             case "Pela" : return new int[]{R.drawable.pela_icon, R.drawable.pela_splash, R.drawable.pela_fade,R.drawable.pela_eidolon1, R.drawable.pela_eidolon2, R.drawable.pela_eidolon3, R.drawable.pela_eidolon4, R.drawable.pela_eidolon5, R.drawable.pela_eidolon6};
@@ -171,26 +177,30 @@ public class ItemRSS {
             case "Sampo" : return new int[]{R.drawable.sampo_icon, R.drawable.sampo_splash,R.drawable.sampo_fade, R.drawable.sampo_eidolon1, R.drawable.sampo_eidolon2, R.drawable.sampo_eidolon3, R.drawable.sampo_eidolon4, R.drawable.sampo_eidolon5, R.drawable.sampo_eidolon6};
             case "Seele" : return new int[]{R.drawable.seele_icon, R.drawable.seele_splash,R.drawable.seele_fade, R.drawable.seele_eidolon1, R.drawable.seele_eidolon2, R.drawable.seele_eidolon3, R.drawable.seele_eidolon4, R.drawable.seele_eidolon5, R.drawable.seele_eidolon6};
             case "Serval" : return new int[]{R.drawable.serval_icon, R.drawable.serval_splash,R.drawable.serval_fade, R.drawable.serval_eidolon1, R.drawable.serval_eidolon2, R.drawable.serval_eidolon3, R.drawable.serval_eidolon4, R.drawable.serval_eidolon5, R.drawable.serval_eidolon6};
-            case "Silver Wolf" : return new int[]{R.drawable.silver_wolf_icon, R.drawable.silver_wolf_splash,R.drawable.silver_wolf_icon, R.drawable.silver_wolf_eidolon1, R.drawable.silver_wolf_eidolon2, R.drawable.silver_wolf_eidolon3, R.drawable.silver_wolf_eidolon4, R.drawable.silver_wolf_eidolon5, R.drawable.silver_wolf_eidolon6};
             case "Sushang" : return new int[]{R.drawable.sushang_icon, R.drawable.sushang_splash,R.drawable.sushang_fade, R.drawable.sushang_eidolon1, R.drawable.sushang_eidolon2, R.drawable.sushang_eidolon3, R.drawable.sushang_eidolon4, R.drawable.sushang_eidolon5, R.drawable.sushang_eidolon6};
             case "Tingyun" : return new int[]{R.drawable.tingyun_icon, R.drawable.tingyun_splash, R.drawable.tingyun_fade,R.drawable.tingyun_eidolon1, R.drawable.tingyun_eidolon2, R.drawable.tingyun_eidolon3, R.drawable.tingyun_eidolon4, R.drawable.tingyun_eidolon5, R.drawable.tingyun_eidolon6};
             case "Welt" : return new int[]{R.drawable.welt_icon, R.drawable.welt_splash,R.drawable.welt_fade, R.drawable.welt_eidolon1, R.drawable.welt_eidolon2, R.drawable.welt_eidolon3, R.drawable.welt_eidolon4, R.drawable.welt_eidolon5, R.drawable.welt_eidolon6};
             case "Yanqing" : return new int[]{R.drawable.yanqing_icon, R.drawable.yanqing_splash,R.drawable.yanqing_fade, R.drawable.yanqing_eidolon1, R.drawable.yanqing_eidolon2, R.drawable.yanqing_eidolon3, R.drawable.yanqing_eidolon4, R.drawable.yanqing_eidolon5, R.drawable.yanqing_eidolon6};
-
 
             default: return new int[]{R.drawable.ico_lost_img, R.drawable.ico_lost_img};
         }
     }
 
     /**
-     * Update Ver. 1.0.5
+     * Update Ver. 1.1.0
      */
     public int[] getLightconeByName(String lightconeNameInFile){
         switch (lightconeNameInFile){
-            case "Amber" : return new int[] {R.drawable.amber, R.drawable.amber_artwork};
-            case "Arrows" : return new int[] {R.drawable.arrows, R.drawable.arrows_artwork};
+            case "Echoes of the Coffin" : return new int[] {R.drawable.echoes_of_the_coffin, R.drawable.echoes_of_the_coffin_artwork};
+
+            //Add in 1.1.0
+            case "Before the Tutorial Mission Starts" : return new int[] {R.drawable.before_the_tutorial_mission_starts, R.drawable.before_the_tutorial_mission_starts_artwork};
+            case "Incessant Rain" : return new int[] {R.drawable.incessant_rain, R.drawable.incessant_rain_artwork};
+
             case "A Secret Vow" : return new int[] {R.drawable.a_secret_vow, R.drawable.a_secret_vow_artwork};
             case "Adversarial" : return new int[] {R.drawable.adversarial, R.drawable.adversarial_artwork};
+            case "Amber" : return new int[] {R.drawable.amber, R.drawable.amber_artwork};
+            case "Arrows" : return new int[] {R.drawable.arrows, R.drawable.arrows_artwork};
             case "Before Dawn" : return new int[] {R.drawable.before_dawn, R.drawable.before_dawn_artwork};
             case "But the Battle Isn't Over" : return new int[] {R.drawable.but_the_battle_isnt_over, R.drawable.but_the_battle_isnt_over_artwork};
             case "Carve the Moon, Weave the Clouds" : return new int[] {R.drawable.carve_the_moon_weave_the_clouds, R.drawable.carve_the_moon_weave_the_clouds_artwork};
@@ -204,7 +214,6 @@ public class ItemRSS {
             case "Day One of My New Life" : return new int[] {R.drawable.day_one_of_my_new_life, R.drawable.day_one_of_my_new_life_artwork};
             case "Defense" : return new int[] {R.drawable.defense, R.drawable.defense_artwork};
             case "Eyes of the Prey" : return new int[] {R.drawable.eyes_of_the_prey, R.drawable.eyes_of_the_prey_artwork};
-            case "Echoes of the Coffin" : return new int[] {R.drawable.echoes_of_the_coffin, R.drawable.echoes_of_the_coffin_artwork};
             case "Fermata" : return new int[] {R.drawable.fermata, R.drawable.fermata_artwork};
             case "Fine Fruit" : return new int[] {R.drawable.fine_fruit, R.drawable.fine_fruit_artwork};
             case "Geniuses' Repose" : return new int[] {R.drawable.geniuses_repose, R.drawable.geniuses_repose_artwork};
@@ -212,7 +221,6 @@ public class ItemRSS {
             case "Hidden Shadow" : return new int[] {R.drawable.hidden_shadow, R.drawable.hidden_shadow_artwork};
             case "In the Name of the World" : return new int[] {R.drawable.in_the_name_of_the_world, R.drawable.in_the_name_of_the_world_artwork};
             case "In the Night" : return new int[] {R.drawable.in_the_night, R.drawable.in_the_night_artwork};
-            case "Incessant Rain" : return new int[] {R.drawable.incessant_rain, R.drawable.incessant_rain_artwork};
             case "Landau's Choice" : return new int[] {R.drawable.landaus_choice, R.drawable.landaus_choice_artwork};
             case "Loop" : return new int[] {R.drawable.loop, R.drawable.loop_artwork};
             case "Make the World Clamor" : return new int[] {R.drawable.make_the_world_clamor, R.drawable.make_the_world_clamor_artwork};
@@ -224,11 +232,10 @@ public class ItemRSS {
             case "Mutual Demise" : return new int[] {R.drawable.mutual_demise, R.drawable.mutual_demise_artwork};
             case "Night on the Milky Way" : return new int[] {R.drawable.night_on_the_milky_way, R.drawable.night_on_the_milky_way_artwork};
             case "Nowhere to Run" : return new int[] {R.drawable.nowhere_to_run, R.drawable.nowhere_to_run_artwork};
-            case "Only Silence Remains" : return new int[] {R.drawable.only_silence_remains, R.drawable.only_silence_remains_artwork};
             case "On the Fall of an Aeon" : return new int[] {R.drawable.on_the_fall_of_an_aeon, R.drawable.on_the_fall_of_an_aeon_artwork};
+            case "Only Silence Remains" : return new int[] {R.drawable.only_silence_remains, R.drawable.only_silence_remains_artwork};
             case "Passkey" : return new int[] {R.drawable.passkey, R.drawable.passkey_artwork};
             case "Past and Future" : return new int[] {R.drawable.past_and_future, R.drawable.past_and_future_artwork};
-            case "Patience Is All You Need" : return new int[] {R.drawable.patience_is_all_you_need, R.drawable.patience_is_all_you_need_artwork};
             case "Perfect Timing" : return new int[] {R.drawable.perfect_timing, R.drawable.perfect_timing_artwork};
             case "Pioneering" : return new int[] {R.drawable.pioneering, R.drawable.pioneering_artwork};
             case "Planetary Rendezvous" : return new int[] {R.drawable.planetary_rendezvous, R.drawable.planetary_rendezvous_artwork};
@@ -248,7 +255,6 @@ public class ItemRSS {
             case "The Birth of the Self" : return new int[] {R.drawable.the_birth_of_the_self, R.drawable.the_birth_of_the_self_artwork};
             case "The Moles Welcome You" : return new int[] {R.drawable.the_moles_welcome_you, R.drawable.the_moles_welcome_you_artwork};
             case "The Seriousness of Breakfast" : return new int[] {R.drawable.the_seriousness_of_breakfast, R.drawable.the_seriousness_of_breakfast_artwork};
-            case "The Unreachable Side" : return new int[] {R.drawable.the_unreachable_side, R.drawable.the_unreachable_side_artwork};
             case "This Is Me!" : return new int[] {R.drawable.this_is_me, R.drawable.this_is_me_artwork};
             case "Time Waits for No One" : return new int[] {R.drawable.time_waits_for_no_one, R.drawable.time_waits_for_no_one_artwork};
             case "Today Is Another Peaceful Day" : return new int[] {R.drawable.today_is_another_peaceful_day, R.drawable.today_is_another_peaceful_day_artwork};
@@ -266,7 +272,7 @@ public class ItemRSS {
     }
 
     /**
-     * Update Ver. 1.0.5
+     * Update Ver. 1.1.0
      */
     public int[] getRelicByName(String relicNameInFile){
         switch (relicNameInFile){
@@ -297,15 +303,15 @@ public class ItemRSS {
 
 
     /**
-     * Update Ver. 1.0.5
+     * Update Ver. 1.1.0
      */
     public String getLocalNameByName(String itemNameInFile, Context context){
         switch (itemNameInFile){
-            // Character
+            //Add in 1.2.0
+
             case "Arlan" : return context.getString(R.string.arlan);
             case "Asta" : return context.getString(R.string.asta);
             case "Bailu" : return context.getString(R.string.bailu);
-            //case "Blade" : return context.getString(R.string.blade);
             case "Bronya" : return context.getString(R.string.bronya);
             case "Clara" : return context.getString(R.string.clara);
             case "Dan Heng" : return context.getString(R.string.dan_heng);
@@ -326,85 +332,11 @@ public class ItemRSS {
             case "Silver Wolf" : return context.getString(R.string.silver_wolf);
             case "Sushang" : return context.getString(R.string.sushang);
             case "Tingyun" : return context.getString(R.string.tingyun);
+            case "Trailblazer" : return context.getString(R.string.trailblazer);
             case "Welt" : return context.getString(R.string.welt);
             case "Yanqing" : return context.getString(R.string.yanqing);
+            case "Yukong" : return context.getString(R.string.yukong);
 
-
-            //Lightcone
-            case "A Secret Vow" : return context.getString(R.string.a_secret_vow);
-            case "Adversarial" : return context.getString(R.string.adversarial);
-            case "Amber" : return context.getString(R.string.amber);
-            case "Arrows" : return context.getString(R.string.arrows);
-            case "Before Dawn" : return context.getString(R.string.before_dawn);
-            case "But the Battle Isn't Over" : return context.getString(R.string.but_the_battle_isnt_over);
-            case "Carve the Moon, Weave the Clouds" : return context.getString(R.string.carve_the_moon_weave_the_clouds);
-            case "Chorus" : return context.getString(R.string.chorus);
-            case "Collapsing Sky" : return context.getString(R.string.collapsing_sky);
-            case "Cornucopia" : return context.getString(R.string.cornucopia);
-            case "Cruising in the Stellar Sea" : return context.getString(R.string.cruising_in_the_stellar_sea);
-            case "Dance! Dance! Dance!" : return context.getString(R.string.dance_dance_dance);
-            case "Darting Arrow" : return context.getString(R.string.darting_arrow);
-            case "Data Bank" : return context.getString(R.string.data_bank);
-            case "Day One of My New Life" : return context.getString(R.string.day_one_of_my_new_life);
-            case "Defense" : return context.getString(R.string.defense);
-            //case "Echoes of the Coffin" : return context.getString(R.string.echoes_of_the_coffin);
-            case "Eyes of the Prey" : return context.getString(R.string.eyes_of_the_prey);
-            case "Fermata" : return context.getString(R.string.fermata);
-            case "Fine Fruit" : return context.getString(R.string.fine_fruit);
-            case "Geniuses' Repose" : return context.getString(R.string.geniuses_repose);
-            case "Good Night and Sleep Well" : return context.getString(R.string.good_night_and_sleep_well);
-            case "Hidden Shadow" : return context.getString(R.string.hidden_shadow);
-            case "In the Name of the World" : return context.getString(R.string.in_the_name_of_the_world);
-            case "In the Night" : return context.getString(R.string.in_the_night);
-            //case "Incessant Rain" : return context.getString(R.string.incessant_rain);
-            case "Landau's Choice" : return context.getString(R.string.landaus_choice);
-            case "Loop" : return context.getString(R.string.loop);
-            case "Make the World Clamor" : return context.getString(R.string.make_the_world_clamor);
-            case "Mediation" : return context.getString(R.string.mediation);
-            case "Memories of the Past" : return context.getString(R.string.memories_of_the_past);
-            case "Meshing Cogs" : return context.getString(R.string.meshing_cogs);
-            case "Moment of Victory" : return context.getString(R.string.moment_of_victory);
-            case "Multiplication" : return context.getString(R.string.multiplication);
-            case "Mutual Demise" : return context.getString(R.string.mutual_demise);
-            case "Night on the Milky Way" : return context.getString(R.string.night_on_the_milky_way);
-            case "Nowhere to Run" : return context.getString(R.string.nowhere_to_run);
-            case "On the Fall of an Aeon" : return context.getString(R.string.on_the_fall_of_an_aeon);
-            case "Only Silence Remains" : return context.getString(R.string.only_silence_remains);
-            case "Passkey" : return context.getString(R.string.passkey);
-            case "Past and Future" : return context.getString(R.string.past_and_future);
-            //case "Patience Is All You Need" : return context.getString(R.string.patience_is_all_you_need);
-            case "Perfect Timing" : return context.getString(R.string.perfect_timing);
-            case "Pioneering" : return context.getString(R.string.pioneering);
-            case "Planetary Rendezvous" : return context.getString(R.string.planetary_rendezvous);
-            case "Post-Op Conversation" : return context.getString(R.string.post_op_conversation);
-            case "Quid Pro Quo" : return context.getString(R.string.quid_pro_quo);
-            case "Resolution Shines As Pearls of Sweat" : return context.getString(R.string.resolution_shines_as_pearls_of_sweat);
-            case "Return to Darkness" : return context.getString(R.string.return_to_darkness);
-            case "River Flows in Spring" : return context.getString(R.string.river_flows_in_spring);
-            case "Sagacity" : return context.getString(R.string.sagacity);
-            case "Shared Feeling" : return context.getString(R.string.shared_feeling);
-            case "Shattered Home" : return context.getString(R.string.shattered_home);
-            case "Sleep Like the Dead" : return context.getString(R.string.sleep_like_the_dead);
-            case "Something Irreplaceable" : return context.getString(R.string.something_irreplaceable);
-            case "Subscribe for More!" : return context.getString(R.string.subscribe_for_more);
-            case "Swordplay" : return context.getString(R.string.swordplay);
-            case "Texture of Memories" : return context.getString(R.string.texture_of_memories);
-            case "The Birth of the Self" : return context.getString(R.string.the_birth_of_the_self);
-            case "The Moles Welcome You" : return context.getString(R.string.the_moles_welcome_you);
-            case "The Seriousness of Breakfast" : return context.getString(R.string.the_seriousness_of_breakfast);
-            //case "The Unreachable Side" : return context.getString(R.string.the_unreachable_side);
-            case "This Is Me!" : return context.getString(R.string.this_is_me);
-            case "Time Waits for No One" : return context.getString(R.string.time_waits_for_no_one);
-            case "Today Is Another Peaceful Day" : return context.getString(R.string.today_is_another_peaceful_day);
-            case "Trend of the Universal Market" : return context.getString(R.string.trend_of_the_universal_market);
-            case "Under the Blue Sky" : return context.getString(R.string.under_the_blue_sky);
-            case "Void" : return context.getString(R.string.void_);
-            case "Warmth Shortens Cold Nights" : return context.getString(R.string.warmth_shortens_cold_nights);
-            case "We Are Wildfire" : return context.getString(R.string.we_are_wildfire);
-            case "We Will Meet Again" : return context.getString(R.string.we_will_meet_again);
-            case "Woof! Walk Time!" : return context.getString(R.string.woof_walk_time);
-
-            //Relic
             case "Band of Sizzling Thunder" : return context.getString(R.string.band_of_sizzling_thunder);
             case "Belobog of the Architects" : return context.getString(R.string.belobog_of_the_architects);
             case "Celestial Differentiator" : return context.getString(R.string.celestial_differentiator);
@@ -426,12 +358,84 @@ public class ItemRSS {
             case "Thief of Shooting Meteor" : return context.getString(R.string.thief_of_shooting_meteor);
             case "Wastelander of Banditry Desert" : return context.getString(R.string.wastelander_of_banditry_desert);
 
+            case "A Secret Vow" : return context.getString(R.string.a_secret_vow);
+            case "Adversarial" : return context.getString(R.string.adversarial);
+            case "Amber" : return context.getString(R.string.amber);
+            case "Arrows" : return context.getString(R.string.arrows);
+            case "Before Dawn" : return context.getString(R.string.before_dawn);
+            case "Before the Tutorial Mission Starts" : return context.getString(R.string.before_the_tutorial_mission_starts);
+            case "But the Battle Isn't Over" : return context.getString(R.string.but_the_battle_isnt_over);
+            case "Carve the Moon, Weave the Clouds" : return context.getString(R.string.carve_the_moon_weave_the_clouds);
+            case "Chorus" : return context.getString(R.string.chorus);
+            case "Collapsing Sky" : return context.getString(R.string.collapsing_sky);
+            case "Cornucopia" : return context.getString(R.string.cornucopia);
+            case "Cruising in the Stellar Sea" : return context.getString(R.string.cruising_in_the_stellar_sea);
+            case "Dance! Dance! Dance!" : return context.getString(R.string.dance_dance_dance);
+            case "Darting Arrow" : return context.getString(R.string.darting_arrow);
+            case "Data Bank" : return context.getString(R.string.data_bank);
+            case "Day One of My New Life" : return context.getString(R.string.day_one_of_my_new_life);
+            case "Defense" : return context.getString(R.string.defense);
+            case "Echoes of the Coffin" : return context.getString(R.string.echoes_of_the_coffin);
+            case "Eyes of the Prey" : return context.getString(R.string.eyes_of_the_prey);
+            case "Fermata" : return context.getString(R.string.fermata);
+            case "Fine Fruit" : return context.getString(R.string.fine_fruit);
+            case "Geniuses' Repose" : return context.getString(R.string.geniuses_repose);
+            case "Good Night and Sleep Well" : return context.getString(R.string.good_night_and_sleep_well);
+            case "Hidden Shadow" : return context.getString(R.string.hidden_shadow);
+            case "In the Name of the World" : return context.getString(R.string.in_the_name_of_the_world);
+            case "In the Night" : return context.getString(R.string.in_the_night);
+            case "Incessant Rain" : return context.getString(R.string.incessant_rain);
+            case "Landau's Choice" : return context.getString(R.string.landaus_choice);
+            case "Loop" : return context.getString(R.string.loop);
+            case "Make the World Clamor" : return context.getString(R.string.make_the_world_clamor);
+            case "Mediation" : return context.getString(R.string.mediation);
+            case "Memories of the Past" : return context.getString(R.string.memories_of_the_past);
+            case "Meshing Cogs" : return context.getString(R.string.meshing_cogs);
+            case "Moment of Victory" : return context.getString(R.string.moment_of_victory);
+            case "Multiplication" : return context.getString(R.string.multiplication);
+            case "Mutual Demise" : return context.getString(R.string.mutual_demise);
+            case "Night on the Milky Way" : return context.getString(R.string.night_on_the_milky_way);
+            case "Nowhere to Run" : return context.getString(R.string.nowhere_to_run);
+            case "On the Fall of an Aeon" : return context.getString(R.string.on_the_fall_of_an_aeon);
+            case "Only Silence Remains" : return context.getString(R.string.only_silence_remains);
+            case "Passkey" : return context.getString(R.string.passkey);
+            case "Past and Future" : return context.getString(R.string.past_and_future);
+            case "Perfect Timing" : return context.getString(R.string.perfect_timing);
+            case "Pioneering" : return context.getString(R.string.pioneering);
+            case "Planetary Rendezvous" : return context.getString(R.string.planetary_rendezvous);
+            case "Post-Op Conversation" : return context.getString(R.string.post_op_conversation);
+            case "Quid Pro Quo" : return context.getString(R.string.quid_pro_quo);
+            case "Resolution Shines As Pearls of Sweat" : return context.getString(R.string.resolution_shines_as_pearls_of_sweat);
+            case "Return to Darkness" : return context.getString(R.string.return_to_darkness);
+            case "River Flows in Spring" : return context.getString(R.string.river_flows_in_spring);
+            case "Sagacity" : return context.getString(R.string.sagacity);
+            case "Shared Feeling" : return context.getString(R.string.shared_feeling);
+            case "Shattered Home" : return context.getString(R.string.shattered_home);
+            case "Sleep Like the Dead" : return context.getString(R.string.sleep_like_the_dead);
+            case "Something Irreplaceable" : return context.getString(R.string.something_irreplaceable);
+            case "Subscribe for More!" : return context.getString(R.string.subscribe_for_more);
+            case "Swordplay" : return context.getString(R.string.swordplay);
+            case "Texture of Memories" : return context.getString(R.string.texture_of_memories);
+            case "The Birth of the Self" : return context.getString(R.string.the_birth_of_the_self);
+            case "The Moles Welcome You" : return context.getString(R.string.the_moles_welcome_you);
+            case "The Seriousness of Breakfast" : return context.getString(R.string.the_seriousness_of_breakfast);
+            case "This Is Me!" : return context.getString(R.string.this_is_me);
+            case "Time Waits for No One" : return context.getString(R.string.time_waits_for_no_one);
+            case "Today Is Another Peaceful Day" : return context.getString(R.string.today_is_another_peaceful_day);
+            case "Trend of the Universal Market" : return context.getString(R.string.trend_of_the_universal_market);
+            case "Under the Blue Sky" : return context.getString(R.string.under_the_blue_sky);
+            case "Void" : return context.getString(R.string.void_);
+            case "Warmth Shortens Cold Nights" : return context.getString(R.string.warmth_shortens_cold_nights);
+            case "We Are Wildfire" : return context.getString(R.string.we_are_wildfire);
+            case "We Will Meet Again" : return context.getString(R.string.we_will_meet_again);
+            case "Woof! Walk Time!" : return context.getString(R.string.woof_walk_time);
+
             default: return itemNameInFile;
         }
     }
 
     /**
-     * Update Ver. 1.0.5
+     * Update Ver. 1.1.0
      * @param name Name of Lightcone in Prydwen
      * @param context Context for using context.getString(...)
      * @return
@@ -444,6 +448,7 @@ public class ItemRSS {
             case "amber": return "Amber";
             case "arrows": return "Arrows";
             case "before-dawn": return "Before Dawn";
+            case "before-the-tutorial-mission-starts": return "Before the Tutorial Mission Starts";
             case "but-the-battle-isnt-over": return "But the Battle Isn't Over";
             case "carve-the-moon-weave-the-clouds": return "Carve the Moon, Weave the Clouds";
             case "chorus": return "Chorus";
