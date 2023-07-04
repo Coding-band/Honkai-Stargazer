@@ -14,9 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HonkaiStargazer">
         <activity
+            android:name=".dev.ScrollingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/Theme.HonkaiStargazer.NoActionBar" />
+        <activity
             android:name=".ui.MuseumPage"
-            android:screenOrientation="landscape"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ui.DevPage"
             android:exported="false" />
@@ -42,7 +47,7 @@
             <!-- ressource file to create -->
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"></meta-data>
+                android:resource="@xml/file_paths" />
         </provider>
     </application>
 

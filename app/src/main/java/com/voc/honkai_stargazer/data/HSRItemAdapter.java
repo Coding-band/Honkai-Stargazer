@@ -262,6 +262,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
         if (json_base != "" && sharedPreferences.getString("grid_"+TYPE,HSRItemAdapter.DEFAULT).equals(ONE_IN_ROW)){
             try {
                 JSONObject jsonObject = new JSONObject(json_base);
+                if (!jsonObject.has("itemReferences")) return;
                 JSONObject itemReferences = jsonObject.getJSONObject("itemReferences");
                 Iterator<String> item_iter = itemReferences.keys();
                 while (item_iter.hasNext()){

@@ -23,12 +23,13 @@
         <item name="android:textColor">@color/tv_daynight_tint</item>
         <item name="switchStyle">@style/Widget.Switch</item>
     </style>
-    <style name="Widget.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
-    </style>
-    <style name="Widget.TabLayout" parent="Widget.Material3.TabLayout">
-    </style>
-    <style name="Widget.TabWidget" parent="@android:style/TextAppearance.Widget.TabWidget">
-    </style>
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Material3.BottomNavigationView"></style>
+
+    <style name="Widget.TabLayout" parent="Widget.Material3.TabLayout"></style>
+
+    <style name="Widget.TabWidget" parent="@android:style/TextAppearance.Widget.TabWidget"></style>
+
     <style name="Widget.Switch" parent="Widget.Material3.CompoundButton.Switch">
         <item name="android:track">@drawable/app_switch_track</item>
         <item name="android:thumb">@drawable/app_switch_thumb</item>
@@ -37,35 +38,40 @@
         <item name="rippleColor">@null</item>
 
     </style>
+
     <style name="Widget.Seekbar" parent="Widget.AppCompat.SeekBar">
         <item name="android:progressDrawable">@drawable/bg_seekbar_line</item>
         <item name="android:background">@drawable/bg_seekbar_bg</item>
         <item name="android:thumbTint">@color/filter_btn_themed</item>
     </style>
+
     <style name="Widget.Seekbar.FULL" parent="Widget.AppCompat.SeekBar">
         <item name="android:progressDrawable">@drawable/bg_seekbar_line</item>
         <item name="android:background">@drawable/bg_seekbar_full_bg</item>
         <item name="android:thumbTint">@color/filter_btn_themed</item>
     </style>
+
     <style name="Widget.Seekbar.FULL.GREY" parent="Widget.AppCompat.SeekBar">
         <item name="android:progressDrawable">@drawable/bg_seekbar_line</item>
         <item name="android:background">@drawable/bg_seekbar_full_bg_grey</item>
         <item name="android:thumbTint">@color/filter_btn_themed</item>
     </style>
+
     <style name="Widget.Seekbar.Discrete" parent="Widget.AppCompat.SeekBar.Discrete">
         <item name="android:progressDrawable">@drawable/bg_seekbar_line</item>
         <item name="android:background">@drawable/bg_seekbar_bg</item>
         <item name="android:thumbTint">@color/filter_btn_themed</item>
     </style>
-    <style name="Widget.Chip.TextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
-    </style>
+
+    <style name="Widget.Chip.TextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget"></style>
+
     <style name="Widget.Chip" parent="Widget.Material3.Chip.Assist">
         <item name="android:textColor">@color/tv_daynight_tint_semi</item>
     </style>
+
     <style name="Widget.ChipGroup" parent="Widget.Material3.ChipGroup">
         <item name="chipSpacingVertical">0dp</item>
     </style>
-
 
 
     <style name="PageDialogStyle_P">
@@ -84,11 +90,11 @@
         <!--背景变暗-->
         <item name="android:backgroundDimEnabled">false</item>
     </style>
+
     <style name="PauseDialogAnimation">
         <item name="android:windowEnterAnimation">@anim/slide_in_left</item>
         <item name="android:windowExitAnimation">@anim/slide_out_left</item>
     </style>
-
 
 
     <style name="FilterDialogStyle_F">
@@ -110,6 +116,7 @@
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:windowSoftInputMode">stateUnchanged</item>
     </style>
+
     <style name="NormalDialogStyle_N">
         <!--对话框背景 -->
         <item name="android:windowBackground">@color/transparent</item>
@@ -129,6 +136,7 @@
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:windowSoftInputMode">stateUnchanged</item>
     </style>
+
     <style name="RadioDialogStyle_R">
         <!--对话框背景 -->
         <item name="android:windowBackground">@color/transparent</item>
@@ -158,5 +166,14 @@
         <item name="android:windowEnterAnimation">@anim/fade_in</item>
         <item name="android:windowExitAnimation">@anim/fade_out</item>
     </style>
+
+    <style name="Theme.HonkaiStargazer.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.HonkaiStargazer.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.HonkaiStargazer.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

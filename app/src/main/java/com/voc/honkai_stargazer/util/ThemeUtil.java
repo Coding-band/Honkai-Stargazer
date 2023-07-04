@@ -23,6 +23,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.Spinner;
@@ -35,6 +36,7 @@ import androidx.core.graphics.ColorUtils;
 import androidx.core.graphics.drawable.DrawableCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.chip.Chip;
 import com.google.android.material.tabs.TabLayout;
 import com.voc.honkai_stargazer.R;
 import com.willy.ratingbar.ScaleRatingBar;
@@ -90,6 +92,17 @@ public class ThemeUtil {
                         themedColor,
                         Color.parseColor("#494949")
                 }
+        );ColorStateList chipList = new ColorStateList(
+                new int[][]{
+                        new int[]{android.R.attr.state_checked},
+                        new int[]{-android.R.attr.state_checked},
+                        new int[]{android.R.attr.state_selected},
+                },
+                new int[] {
+                        colorMultiply(themedColor,context.getColor(R.color.nav_bar_selected_tint),TINT_HEAVY,true),
+                        context.getColor(R.color.tv_nightday_tint),
+                        colorMultiply(themedColor,context.getColor(R.color.nav_bar_selected_tint),TINT_HEAVY,true),
+                }
         );ColorStateList switchList = new ColorStateList(
                 new int[][]{
                         new int[]{android.R.attr.state_checked},
@@ -118,17 +131,25 @@ public class ThemeUtil {
                 if(view instanceof Spinner){
                     Drawable drawableBG = context.getDrawable(R.drawable.bg_select_list);
                     Drawable drawablePopup = context.getDrawable(R.drawable.bg_spinner_expand);
-                    drawableBG.setTint(colorMultiply(themedColor,context.getColor(R.color.home_bar_tint),TINT_COMMON,true));
-                    drawablePopup.setTint(colorMultiply(themedColor,context.getColor(R.color.home_bar_tint),TINT_COMMON,true));
+                    drawableBG.setTint(colorMultiply(themedColor,context.getColor(R.color.home_bar_tint),TINT_COMMON,false));
+                    drawablePopup.setTint(colorMultiply(themedColor,context.getColor(R.color.home_bar_tint),TINT_COMMON,false));
                     ((Spinner) view).setBackground(drawableBG);
                     ((Spinner) view).setPopupBackgroundDrawable(drawablePopup);
+                }
+                if(view instanceof Chip){
+                    Typeface typeface = context.getResources().getFont(R.font.roboto);
+                    if (sharedPreferences.getBoolean("isHSRFont", false) == true){
+                        typeface = context.getResources().getFont(R.font.hsr_font);
+                    }
+                    ((Chip) view).setTypeface(typeface);
+                    ((Chip) view).setChipBackgroundColor(chipList);
                 }
                 if(view instanceof Switch){
                     Typeface typeface = context.getResources().getFont(R.font.roboto);
                     if (sharedPreferences.getBoolean("isHSRFont", false) == true){
                         typeface = context.getResources().getFont(R.font.hsr_font);
                     }
-                    ((TextView) view).setTypeface(typeface);
+                    ((Switch) view).setTypeface(typeface);
                     ((Switch) view).setTrackTintList(switchList);
                 }
                 else if (view instanceof RadioButton){
@@ -136,7 +157,7 @@ public class ThemeUtil {
                     if (sharedPreferences.getBoolean("isHSRFont", false) == true){
                         typeface = context.getResources().getFont(R.font.hsr_font);
                     }
-                    ((TextView) view).setTypeface(typeface);
+                    ((RadioButton) view).setTypeface(typeface);
                     ((RadioButton) view).setButtonTintList(oneColorList);
                 }
                 else if (view instanceof Button){
@@ -215,7 +236,13 @@ public class ThemeUtil {
                 else if (view instanceof SeekBar){
                     ((SeekBar) view).setProgressTintList(ColorStateList.valueOf(themedColor));
                     ((SeekBar) view).setProgressTintMode(PorterDuff.Mode.SRC_IN);
+                    ((SeekBar) view).setBackgroundTintList(ColorStateList.valueOf(colorMultiply(themedColor,context.getColor(R.color.nav_bar_selected_tint),TINT_COMMON,true)));
                     ((SeekBar) view).setThumbTintList(ColorStateList.valueOf(themedColor));
+                }
+                else if (view instanceof ProgressBar){
+                    ((ProgressBar) view).setProgressTintList(ColorStateList.valueOf(themedColor));
+                    ((ProgressBar) view).setBackgroundTintList(ColorStateList.valueOf(colorMultiply(themedColor,context.getColor(R.color.nav_bar_selected_tint),TINT_COMMON,true)));
+                    ((ProgressBar) view).setProgressTintMode(PorterDuff.Mode.SRC_IN);
                 }
                 else if (view instanceof TabLayout){
                     ((TabLayout) view).setSelectedTabIndicatorColor(themedColor);
