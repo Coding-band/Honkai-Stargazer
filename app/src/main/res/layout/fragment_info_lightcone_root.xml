@@ -5,64 +5,37 @@
   ~ Copyright © 2023 Xectorda 版權所有
   -->
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rootView_info_lightcone"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/status_bar_color"
-    tools:context=".ui.InfoCharacterPage">
+    tools:context=".ui.InfoLightconePage">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/fragment_app_bar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:layout_height="wrap_content">
 
-        <ImageButton
-            android:id="@+id/info_back"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_margin="12dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/round_arrow_back_24" />
-
-        <TextView
-            android:id="@+id/info_lightcone_name"
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/fragment_collapsing"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginRight="60dp"
-            android:gravity="center"
-            android:text="SipTik is in There"
-            android:textColor="@color/theme_color_on_surface"
-            android:textSize="20sp" />
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:scrollbars="none"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            app:contentScrim="@color/theme_color_demo"
+            android:minHeight="?attr/actionBarSize"
+            app:collapsedTitleGravity="center"
+            app:titleCollapseMode="scale"
+            app:expandedTitleGravity="left|bottom"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="72dp"
-                android:layout_marginRight="72dp">
+                android:layout_marginRight="72dp"
+                app:layout_collapseMode="parallax">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -126,6 +99,33 @@
                 </androidx.cardview.widget.CardView>
 
             </FrameLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/fragment_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="pin">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -467,6 +467,6 @@
             </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

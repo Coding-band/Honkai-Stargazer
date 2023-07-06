@@ -9,15 +9,11 @@ package com.voc.honkai_stargazer.ui;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
@@ -34,7 +30,6 @@ import org.json.JSONObject;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.ArrayList;
 
 public class DevPage extends AppCompatActivity {
 
@@ -72,6 +67,7 @@ public class DevPage extends AppCompatActivity {
         Button dev_char_advice_btn = findViewById(R.id.dev_char_advice_btn);
         Button dev_expection_btn = findViewById(R.id.dev_expection_btn);
         Button dev_museum_btn = findViewById(R.id.dev_museum_btn);
+        Button dev_scrollview_btn = findViewById(R.id.dev_scrollview_btn);
         Switch dev_siptik_rotate = findViewById(R.id.dev_siptik_rotate);
         Switch setting_shadow_list_item = findViewById(R.id.setting_shadow_list_item);
 
@@ -124,6 +120,15 @@ public class DevPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(activity, MuseumPage.class);
+                startActivity(intent);
+            }
+        });
+
+        //ScrollView
+        dev_scrollview_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, ScrollingActivity.class);
                 startActivity(intent);
             }
         });

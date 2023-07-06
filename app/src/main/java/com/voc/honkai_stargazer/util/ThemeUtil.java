@@ -75,6 +75,16 @@ public class ThemeUtil {
         themedColor = Color.parseColor(sharedPreferences.getString("themedColor","#6750A4"));
         window.setNavigationBarColor(colorMultiply(themedColor,context.getColor(R.color.nav_bar_tint),TINT_COMMON,true));
     }
+
+    @ColorInt
+    public int themeColorMultiplyExport(float TYPE, boolean isAlpha){
+        return colorMultiply(themedColor,context.getColor(R.color.home_bar_tint),TYPE,isAlpha);
+    }
+    @ColorInt
+    public int themeColorExport(){
+        return themedColor;
+    }
+
     public void themeTint(ViewGroup... parentLayouts){
         DisplayMetrics displayMetrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);

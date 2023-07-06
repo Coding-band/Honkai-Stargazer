@@ -7,25 +7,19 @@
 package com.voc.honkai_stargazer.ui;
 
 
-import static android.graphics.Bitmap.Config.ARGB_8888;
 import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
 
+import android.animation.ArgbEvaluator;
+import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Matrix;
-import android.graphics.Paint;
-import android.graphics.Path;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
-import android.graphics.Rect;
-import android.graphics.RectF;
-import android.graphics.drawable.ColorDrawable;
+import android.graphics.Color;
 import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,14 +35,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.core.content.ContextCompat;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.graphics.ColorUtils;
 
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 import com.voc.honkai_stargazer.R;
 import com.voc.honkai_stargazer.data.HSRItem;
 import com.voc.honkai_stargazer.data.MaterialItem;
-import com.voc.honkai_stargazer.dev.HelpTool;
 import com.voc.honkai_stargazer.util.ItemRSS;
 import com.voc.honkai_stargazer.util.LangUtil;
 import com.voc.honkai_stargazer.util.RoundedCornersTransformation;
@@ -82,6 +78,22 @@ public class InfoLightconePage {
 
     ThemeUtil themeUtil;
 
+    AppBarLayout app_bar;
+    Toolbar toolbar;
+    CollapsingToolbarLayout collapsing_toolbar_layout;
+
+
+    private CollapsingToolbarLayoutState state;
+
+    //https://www.youtube.com/watch?v=6UmHGn076To
+    //https://juejin.cn/post/6844903502968258573
+    //https://blog.csdn.net/a553181867/article/details/52871424
+    private enum CollapsingToolbarLayoutState {
+        EXPANDED,
+        COLLAPSED,
+        INTERNEDIATE
+    }
+
     public void setup(Context context, Activity activity, HSRItem hsrItem) {
         this.context = context;
         this.activity = activity;
@@ -96,9 +108,22 @@ public class InfoLightconePage {
         //view.setMinimumHeight((int) (ScreenSizeUtils.getInstance(this).getScreenHeight()));
         Window dialogWindow = dialog.getWindow();
         WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
+        /*
+
+        dialog.getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        );
+
+         */
+        app_bar = view.findViewById(R.id.fragment_app_bar);
+        collapsing_toolbar_layout = view.findViewById(R.id.fragment_collapsing);
+        toolbar = view.findViewById(R.id.fragment_toolbar);
 
         themeUtil = new ThemeUtil(context,activity);
-        themeUtil.navigationSetup(dialogWindow);
         themeUtil.themeTint(
                 view.findViewById(R.id.rootView_info_lightcone)
         );
@@ -108,14 +133,6 @@ public class InfoLightconePage {
         lp.gravity = Gravity.CENTER;
         dialogWindow.setAttributes(lp);
 
-        ImageButton info_back = view.findViewById(R.id.info_back);
-        info_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-
         String LANGUAGE = ItemRSS.initLang(context).getCode();
         //Read JSON from Assests
         String json_base = LoadAssestData(context, "lightcone_data/" + LANGUAGE + "/" + hsrItem.getFileName() + ".json");
@@ -124,10 +141,77 @@ public class InfoLightconePage {
         if (!json_base.equals("")) {
             try {
                 JSONObject jsonObject = new JSONObject(json_base);
-                TextView info_lightcone_name = view.findViewById(R.id.info_lightcone_name);
-                info_lightcone_name.setText(jsonObject.getString("name"));
-                info_lightcone_name.getPaint().setFakeBoldText(true);
+                toolbar.setNavigationIcon(context.getDrawable(R.drawable.round_arrow_back_24));
+                toolbar.setOverflowIcon(context.getDrawable(R.drawable.round_email_24));
+                collapsing_toolbar_layout.setTitle(jsonObject.getString("name"));
+                collapsing_toolbar_layout.setScrimAnimationDuration(500);
+                collapsing_toolbar_layout.setScrimsShown(true);
+                collapsing_toolbar_layout.setExpandedTitleColor(context.getColor(R.color.tv_daynight_tint));
+                collapsing_toolbar_layout.setCollapsedTitleTextColor(context.getColor(R.color.tv_daynight_tint));
+                collapsing_toolbar_layout.setContentScrimColor(themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON,false));
 
+                app_bar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+                    @Override
+                    public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                        if (verticalOffset == 0) {
+                            if (state != CollapsingToolbarLayoutState.EXPANDED) {
+                                state = CollapsingToolbarLayoutState.EXPANDED;//修改状态标记为展开
+                                dialogWindow.setStatusBarColor(context.getColor(R.color.status_bar_color));
+                                //collapsing_toolbar_layout.setTitle("EXPANDED");
+                            }
+                        } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
+                            if (state != CollapsingToolbarLayoutState.COLLAPSED) {
+                                state = CollapsingToolbarLayoutState.COLLAPSED;//修改状态标记为折叠
+                                dialogWindow.setStatusBarColor(themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON,false));
+                                //collapsing_toolbar_layout.setTitle("COLLAPSED");
+                            }
+                        } else {
+                            //PLAN 1
+                            dialogWindow.setStatusBarColor(ColorUtils.blendARGB(context.getColor(R.color.status_bar_color), themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON,false), (((float) Math.abs(verticalOffset)) / ((float) appBarLayout.getTotalScrollRange() - appBarLayout.getMinimumHeight()))));
+
+                            //PLAN 2
+                            /*int colorFrom = themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON,false);
+                            int colorTo = context.getColor(R.color.status_bar_color);
+
+                            if(Math.abs(verticalOffset) >= ((float) appBarLayout.getTotalScrollRange() - (appBarLayout.getMinimumHeight()))) {
+                                if (state == CollapsingToolbarLayoutState.EXPANDED) {
+                                    colorTo = themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON, false);
+                                    colorFrom = context.getColor(R.color.status_bar_color);
+                                } else { //Scroll down
+                                    colorFrom = themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON, false);
+                                    colorTo = context.getColor(R.color.status_bar_color);
+                                }
+
+                                ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
+                                colorAnimation.setDuration(500); // milliseconds
+                                colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+
+                                    @Override
+                                    public void onAnimationUpdate(ValueAnimator animator) {
+                                        dialogWindow.setStatusBarColor((int) animator.getAnimatedValue());
+                                    }
+
+                                });
+                                colorAnimation.start();
+
+
+                                //if (state != CollapsingToolbarLayoutState.INTERNEDIATE) {
+                                //state = CollapsingToolbarLayoutState.INTERNEDIATE;//修改状态标记为中间
+                                //collapsing_toolbar_layout.setTitle("INTERNEDIATE");
+                                //}
+                            }else{
+                                dialogWindow.setStatusBarColor(context.getColor(R.color.status_bar_color));
+                            }
+                            */
+                        }
+                    }
+                });
+                toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v)  {
+                        dialog.dismiss();
+                    }
+                });
                 itemReferences_init(jsonObject);
                 init(jsonObject, view);
 
@@ -142,6 +226,17 @@ public class InfoLightconePage {
             Toast.makeText(context, "[" + LANGUAGE + "] " + hsrItem.getName() + "'s file not exist", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    public static void setWindowFlag(Dialog dialog, final int bits, boolean on) {
+        Window win = dialog.getWindow();
+        WindowManager.LayoutParams winParams = win.getAttributes();
+        if (on) {
+            winParams.flags |= bits;
+        } else {
+            winParams.flags &= ~bits;
+        }
+        win.setAttributes(winParams);
     }
 
     private void init(JSONObject jsonObject, View view) throws JSONException {
@@ -206,7 +301,6 @@ public class InfoLightconePage {
         asc_material_init(info_lightcone_material_ll, jsonObject,-1 );
         asc_material_change(info_lightcone_material_ll, jsonObject, -1);
         asc_status_change(jsonObject, info_lightcone_seekbar, 0, info_lightcone_hp, info_lightcone_atk, info_lightcone_def);
-
 
         info_lightcone_seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override

@@ -4,7 +4,7 @@
  * Copyright © 2023 Xectorda 版權所有
  */
 
-package com.voc.honkai_stargazer.dev;
+package com.voc.honkai_stargazer.ui;
 
 import android.os.Bundle;
 
@@ -17,7 +17,6 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 
-import com.voc.honkai_stargazer.R;
 import com.voc.honkai_stargazer.databinding.ActivityScrollingBinding;
 
 public class ScrollingActivity extends AppCompatActivity {
