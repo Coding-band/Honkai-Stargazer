@@ -7,13 +7,6 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:icon="@drawable/ic_home_icon"
-        android:iconTint="@color/home_bar_icon"
-        android:title="@string/home_home"></item>
-    <item
         android:id="@+id/menu_characters"
         android:icon="@drawable/ic_character_icon"
         android:iconTint="@color/home_bar_icon"
@@ -32,4 +25,12 @@
         android:id="@+id/menu_settings"
         android:icon="@drawable/ic_settings"
         android:title="@string/home_settings"></item>
+    <item
+        android:id="@+id/menu_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/ic_home_icon"
+        android:iconTint="@color/home_bar_icon"
+        android:title="@string/home_home"
+        android:visible="false"></item>
 </menu>

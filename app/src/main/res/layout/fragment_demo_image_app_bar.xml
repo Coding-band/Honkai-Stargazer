@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Project Honkai Stargazer (崩壞•星穹觀星者) was
   ~ Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
   ~ Copyright © 2023 Xectorda 版權所有
   -->
+
 
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -17,33 +17,18 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/fragment_app_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="0dp"
-        app:liftOnScroll="true">
+        android:layout_height="wrap_content">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/fragment_toolbar"
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/fragment_collapsing"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="noScroll"
-            app:title="Welcome"
-            app:titleCentered="true" />
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="8dp">
+            android:layout_height="match_parent"
+            app:contentScrim="@color/theme_color_demo"
+            android:minHeight="?attr/actionBarSize"
+            app:collapsedTitleGravity="center"
+            app:titleCollapseMode="scale"
+            app:expandedTitleGravity="left|bottom"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -114,6 +99,33 @@
                 </androidx.cardview.widget.CardView>
 
             </FrameLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/fragment_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="pin">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -375,26 +387,13 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp">
-
-                        <ImageView
-                            android:id="@+id/imageView12"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_gravity="center|end"
-                            android:layout_marginEnd="4dp"
-                            android:src="@drawable/round_arrow_drop_up_24" />
-
-                        <Spinner
-                            android:id="@+id/server_spinner"
-                            android:layout_width="72dp"
-                            android:layout_height="40dp"
-                            android:background="@drawable/bg_select_list"
-                            android:popupBackground="@drawable/bg_spinner_expand" />
-                    </FrameLayout>
+                    <Spinner
+                        android:id="@+id/server_spinner"
+                        android:layout_width="72dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/bg_select_list"
+                        android:popupBackground="@drawable/bg_spinner_expand" />
 
                     <LinearLayout
                         android:id="@+id/info_select_list"

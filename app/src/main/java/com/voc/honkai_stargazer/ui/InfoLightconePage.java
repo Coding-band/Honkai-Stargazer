@@ -15,9 +15,11 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -40,6 +42,7 @@ import androidx.core.graphics.ColorUtils;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 import com.voc.honkai_stargazer.R;
@@ -47,6 +50,7 @@ import com.voc.honkai_stargazer.data.HSRItem;
 import com.voc.honkai_stargazer.data.MaterialItem;
 import com.voc.honkai_stargazer.util.ItemRSS;
 import com.voc.honkai_stargazer.util.LangUtil;
+import com.voc.honkai_stargazer.util.LogExport;
 import com.voc.honkai_stargazer.util.RoundedCornersTransformation;
 import com.voc.honkai_stargazer.util.ThemeUtil;
 import com.voc.honkai_stargazer.util.VibrateUtil;
@@ -56,6 +60,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -80,6 +88,7 @@ public class InfoLightconePage {
 
     AppBarLayout app_bar;
     Toolbar toolbar;
+    MaterialToolbar materialToolbar;
     CollapsingToolbarLayout collapsing_toolbar_layout;
 
 
@@ -100,6 +109,9 @@ public class InfoLightconePage {
         this.hsrItem = hsrItem;
         item_rss = new ItemRSS();
         sharedPreferences = context.getSharedPreferences("user_info",Context.MODE_PRIVATE);
+        LogExport.init(context);
+
+
 
         final Dialog dialog = new Dialog(context, R.style.PageDialogStyle_P);
         View view = View.inflate(context, R.layout.fragment_info_lightcone_root, null);
@@ -111,6 +123,8 @@ public class InfoLightconePage {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
 
+
+
         /*
 
         dialog.getWindow().setFlags(
@@ -120,8 +134,9 @@ public class InfoLightconePage {
 
          */
         app_bar = view.findViewById(R.id.fragment_app_bar);
-        collapsing_toolbar_layout = view.findViewById(R.id.fragment_collapsing);
-        toolbar = view.findViewById(R.id.fragment_toolbar);
+        //collapsing_toolbar_layout = view.findViewById(R.id.fragment_collapsing);
+        //toolbar = view.findViewById(R.id.fragment_toolbar);
+        materialToolbar = view.findViewById(R.id.fragment_toolbar);
 
         themeUtil = new ThemeUtil(context,activity);
         themeUtil.themeTint(
@@ -141,35 +156,78 @@ public class InfoLightconePage {
         if (!json_base.equals("")) {
             try {
                 JSONObject jsonObject = new JSONObject(json_base);
-                toolbar.setNavigationIcon(context.getDrawable(R.drawable.round_arrow_back_24));
-                toolbar.setOverflowIcon(context.getDrawable(R.drawable.round_email_24));
-                collapsing_toolbar_layout.setTitle(jsonObject.getString("name"));
-                collapsing_toolbar_layout.setScrimAnimationDuration(500);
-                collapsing_toolbar_layout.setScrimsShown(true);
-                collapsing_toolbar_layout.setExpandedTitleColor(context.getColor(R.color.tv_daynight_tint));
-                collapsing_toolbar_layout.setCollapsedTitleTextColor(context.getColor(R.color.tv_daynight_tint));
-                collapsing_toolbar_layout.setContentScrimColor(themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON,false));
+                toolbarSetup(jsonObject.getString("name"), dialogWindow,dialog);
+                //collaspebarSetup(jsonObject.getString("name"), dialogWindow,dialog);
+                itemReferences_init(jsonObject);
+                init(jsonObject, view);
 
-                app_bar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-                    @Override
-                    public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                        if (verticalOffset == 0) {
-                            if (state != CollapsingToolbarLayoutState.EXPANDED) {
-                                state = CollapsingToolbarLayoutState.EXPANDED;//修改状态标记为展开
-                                dialogWindow.setStatusBarColor(context.getColor(R.color.status_bar_color));
-                                //collapsing_toolbar_layout.setTitle("EXPANDED");
-                            }
-                        } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
-                            if (state != CollapsingToolbarLayoutState.COLLAPSED) {
-                                state = CollapsingToolbarLayoutState.COLLAPSED;//修改状态标记为折叠
-                                dialogWindow.setStatusBarColor(themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON,false));
-                                //collapsing_toolbar_layout.setTitle("COLLAPSED");
-                            }
-                        } else {
-                            //PLAN 1
-                            dialogWindow.setStatusBarColor(ColorUtils.blendARGB(context.getColor(R.color.status_bar_color), themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON,false), (((float) Math.abs(verticalOffset)) / ((float) appBarLayout.getTotalScrollRange() - appBarLayout.getMinimumHeight()))));
+                if (!dialog.isShowing()){
+                    dialog.show();
+                }
 
-                            //PLAN 2
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
+        } else {
+            Toast.makeText(context, "[" + LANGUAGE + "] " + hsrItem.getName() + "'s file not exist", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    //https://stackoverflow.com/questions/35354261/collapsingtoolbarlayout-status-bar-scrim-color-doesnt-change
+    //https://stackoverflow.com/questions/71214120/material3-materialtoolbar-disable-coloring-at-scroll
+    private void toolbarSetup(String name, Window dialogWindow, Dialog dialog) {
+        materialToolbar.setTitle(name);
+        materialToolbar.setNavigationIcon(R.drawable.round_arrow_back_24);
+        materialToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)  {
+                dialog.dismiss();
+            }
+        });
+        app_bar.addLiftOnScrollListener(new AppBarLayout.LiftOnScrollListener() {
+            @Override
+            public void onUpdate(float elevation, int backgroundColor) {
+                dialogWindow.setStatusBarColor(backgroundColor);
+            }
+        });
+
+        //collapsing_toolbar_layout.setScrimAnimationDuration(500);
+        //collapsing_toolbar_layout.setScrimsShown(true);
+        //collapsing_toolbar_layout.setContentScrimColor(themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON,false));
+        //collapsing_toolbar_layout.setStatusBarScrimColor(themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON,false));
+    }
+
+    private void collaspebarSetup(String title, Window dialogWindow, Dialog dialog) {
+        toolbar.setNavigationIcon(context.getDrawable(R.drawable.round_arrow_back_24));
+        toolbar.setOverflowIcon(context.getDrawable(R.drawable.round_email_24));
+        collapsing_toolbar_layout.setTitle(title);
+        collapsing_toolbar_layout.setScrimAnimationDuration(500);
+        collapsing_toolbar_layout.setScrimsShown(true);
+        collapsing_toolbar_layout.setExpandedTitleColor(context.getColor(R.color.tv_daynight_tint));
+        collapsing_toolbar_layout.setCollapsedTitleTextColor(context.getColor(R.color.tv_daynight_tint));
+        collapsing_toolbar_layout.setContentScrimColor(themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON,false));
+
+        app_bar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                if (verticalOffset == 0) {
+                    if (state != CollapsingToolbarLayoutState.EXPANDED) {
+                        state = CollapsingToolbarLayoutState.EXPANDED;//修改状态标记为展开
+                        dialogWindow.setStatusBarColor(context.getColor(R.color.status_bar_color));
+                        //collapsing_toolbar_layout.setTitle("EXPANDED");
+                    }
+                } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
+                    if (state != CollapsingToolbarLayoutState.COLLAPSED) {
+                        state = CollapsingToolbarLayoutState.COLLAPSED;//修改状态标记为折叠
+                        dialogWindow.setStatusBarColor(themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON,false));
+                        //collapsing_toolbar_layout.setTitle("COLLAPSED");
+                    }
+                } else {
+                    //PLAN 1
+                    dialogWindow.setStatusBarColor(ColorUtils.blendARGB(context.getColor(R.color.status_bar_color), themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON,false), (((float) Math.abs(verticalOffset)) / ((float) appBarLayout.getTotalScrollRange() - appBarLayout.getMinimumHeight()))));
+
+                    //PLAN 2
                             /*int colorFrom = themeUtil.themeColorMultiplyExport(ThemeUtil.TINT_COMMON,false);
                             int colorTo = context.getColor(R.color.status_bar_color);
 
@@ -203,29 +261,15 @@ public class InfoLightconePage {
                                 dialogWindow.setStatusBarColor(context.getColor(R.color.status_bar_color));
                             }
                             */
-                        }
-                    }
-                });
-                toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v)  {
-                        dialog.dismiss();
-                    }
-                });
-                itemReferences_init(jsonObject);
-                init(jsonObject, view);
-
-                if (!dialog.isShowing()){
-                    dialog.show();
                 }
-
-            } catch (JSONException e) {
-                throw new RuntimeException(e);
             }
-        } else {
-            Toast.makeText(context, "[" + LANGUAGE + "] " + hsrItem.getName() + "'s file not exist", Toast.LENGTH_SHORT).show();
-        }
-
+        });
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)  {
+                dialog.dismiss();
+            }
+        });
     }
 
     public static void setWindowFlag(Dialog dialog, final int bits, boolean on) {

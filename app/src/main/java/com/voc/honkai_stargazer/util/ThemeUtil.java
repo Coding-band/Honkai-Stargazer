@@ -84,7 +84,6 @@ public class ThemeUtil {
     public int themeColorExport(){
         return themedColor;
     }
-
     public void themeTint(ViewGroup... parentLayouts){
         DisplayMetrics displayMetrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);

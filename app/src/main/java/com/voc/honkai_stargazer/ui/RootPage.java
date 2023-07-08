@@ -116,6 +116,8 @@ public class RootPage extends AppCompatActivity {
     String tmpColor;
     HomePage homePage;
 
+    boolean isHomeAvailable = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -201,7 +203,9 @@ public class RootPage extends AppCompatActivity {
     }
 
     private void home_init() {
-        homePage = new HomePage(context,activity, home_home);
+        if (isHomeAvailable){
+            homePage = new HomePage(context,activity, home_home);
+        }
     }
 
     public void root_init(boolean isSetting){
@@ -224,7 +228,7 @@ public class RootPage extends AppCompatActivity {
         themeUtil.navigationSetup(getWindow());
 
         viewPager_List = new ArrayList<View>();
-        viewPager_List.add(home_home);
+        if(isHomeAvailable) {viewPager_List.add(home_home);}
         viewPager_List.add(home_characters);
         viewPager_List.add(home_lightcones);
         viewPager_List.add(home_relics);
@@ -243,7 +247,8 @@ public class RootPage extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                int[] posList = new int[]{R.id.menu_home, R.id.menu_characters, R.id.menu_lightcones, R.id.menu_relics, R.id.menu_settings};
+                int[] posList = new int[]{R.id.menu_characters, R.id.menu_lightcones, R.id.menu_relics, R.id.menu_settings};
+                if(isHomeAvailable) {posList = new int[]{R.id.menu_home, R.id.menu_characters, R.id.menu_lightcones, R.id.menu_relics, R.id.menu_settings};}
                 home_nav.setSelectedItemId(posList[position]);
             }
 
@@ -252,6 +257,7 @@ public class RootPage extends AppCompatActivity {
 
             }
         });
+        int cursor = (isHomeAvailable ? 1 : 0);
         home_nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -261,19 +267,19 @@ public class RootPage extends AppCompatActivity {
                         return true;
                     }
                     case R.id.menu_characters:{
-                        viewPager.setCurrentItem(1);
+                        viewPager.setCurrentItem(cursor);
                         return true;
                     }
                     case R.id.menu_lightcones: {
-                        viewPager.setCurrentItem(2);
+                        viewPager.setCurrentItem(cursor+1);
                         return true;
                     }
                     case R.id.menu_relics:{
-                        viewPager.setCurrentItem(3);
+                        viewPager.setCurrentItem(cursor+2);
                         return true;
                     }
                     case R.id.menu_settings:{
-                        viewPager.setCurrentItem(4);
+                        viewPager.setCurrentItem(cursor+3);
                         return true;
                     }
                 }
@@ -282,7 +288,9 @@ public class RootPage extends AppCompatActivity {
         });
 
         if (isSetting){
-            viewPager.setCurrentItem(4);
+            viewPager.setCurrentItem(cursor+3);
+        }else{
+            viewPager.setCurrentItem(0);
         }
     }
 

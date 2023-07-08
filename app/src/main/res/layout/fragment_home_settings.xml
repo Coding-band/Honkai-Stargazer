@@ -216,6 +216,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                android:checked="true"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:switchPadding="8dp"
@@ -233,7 +234,8 @@
                 android:paddingLeft="16dp"
                 android:paddingTop="6dp"
                 android:paddingRight="16dp"
-                android:paddingBottom="6dp">
+                android:paddingBottom="6dp"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="match_parent"
