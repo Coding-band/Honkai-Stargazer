@@ -1,0 +1,2928 @@
+{
+ "spRequirement": 130,
+ "iconPath": "496415d55483445823d6d04ae6a15953a1a7253eff8cc81a78cf32a67a0edad9",
+ "bgPath": "e04b8ff6a7d4bdbe888953049305067df8d491e0dd4e60c92af83796bdd7254a",
+ "figPath": "d3689674e014898bf5ca671bbdde5c335644ef11b30edce2f86efa7e56b0afe2",
+ "fgPath": "c71a1b6eff720c7ae96ee6f7e054df95f476af2f589097c1ae44579f371e808c",
+ "splashIconPath": "7fffeaec1168919fc26b9b6d7e0e8899494aec38a5fd2e5ad2af3ad6f6f76349",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 1,
+  "iconPath": "618288e8d5b3090ac84a269acad5cb4e22ee3c8d9b8e96af17cd5f240e23e9f9",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "af49f8c10262045a4f9e4740703b52056b5f396b48b99c2d130c22f3dbfa99d9",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬",
+    "エンバー交換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "b0f1cfc56ed708ca47e85bd5f199c02e9c2804f06ed290d904d0118b171f57e5",
+   "name": "運命の足跡",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "幾度の敗北があなたに勝利をもたらし、一歩一歩の前進があなたを運命の転換点へと導いた。",
+   "purpose": "軌跡素材",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」ポイント報酬",
+    "ナナシの勲功",
+    "エンバー交換",
+    "期間限定イベント報酬"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "e23000552918166759cdcf3f7cef87ae31a78cb8ae8f5dcedc0c74a92b68f963",
+   "name": "無窮なる仮身の遺恨",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "いくら肉体を奪っても、願いは叶わない。仙薬を求める人たちのように、それは「壊滅」を恐れる必要のない、永く存在できる体を渇望する。けど同時に、その者は知っている、それは永遠に実現できない迷夢だと。<br /><br />「数え切れないほどの世界が負創神の烈炎に呑まれるのを見てきた、そして妾もその炎の中の一筋であった。妾は其の思うがままに踊る。だが、薪が燃え尽きると炎は消えることも、よく理解している…」",
+   "purpose": "軌跡素材",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "歴戦余韻「鱗淵境」"
+   ]
+  },
+  "267806": {
+   "id": 267806,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "7742b55404dc7a9f0dd7bf8a952f5c3d1ff2a303cd246847c23450b7e10d53f5",
+   "name": "天人の残穢",
+   "desc": "承露天人が残した燃えさし。風属性キャラクターの昇格素材。",
+   "lore": "仙人は世に遺恵をもたらそうとした。だが「豊穣」の恩賜が褪せ、解脱が降臨した刹那にようやく理解した。己は血肉ある凡胎に過ぎず、風を御して飛行することも泡影の如く夢。世に遺したのは、塵と垢だけ。<br /><br />「帝弓の司命よ、私は…あなたを呪います……」",
+   "purpose": "キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/267806",
+   "comeFrom": [
+    "凝結虚影・「丹鼎司」",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ccf6a04abba3ee0c642f987df4acbfa23c97875710e72898f807325b14f938d0",
+   "name": "漫遊指南",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>20000</nobr>獲得できる。",
+   "lore": "世界を渡り歩くためには欠かせない、冒険手引き集。閲覧キーを押すと、電子音声が理解可能な言語で、有名な冒険者たちが様々な世界で体験したことや、彼らが色々な星で得た貴重な知識を語り聞かせてくれる。<br /><br />「漫遊指南最新シリーズ『スペースグルメガイド』が現在発売中。ぜひお買い求めください」<br />「投稿の際は、博識学会共感覚ビーコンのオペレーター<nobr>23</nobr>θにお繋ぎください。原稿料はあなたが普段から利用している方法でお振込みいたします」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "「忘却の庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "3be91e7b878ba619cd2887b80d45437c95ca08491547d49be65898de505d6a7a",
+   "name": "冒険記録",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>5000</nobr>獲得できる。",
+   "lore": "綺麗に装丁された、一目でためになるとわかる冒険日誌。冒険に関する細かい描写、価値のある情報、サバイバル術が書かれている。<br /><br />「なんで数字化してデバイスに保存しないの？持ち歩きやすくなるでしょ」<br />「お前が思っているより、先進技術は恒星嵐や中性子噴出に弱いんだ。なにより、この本の制作者は、最も簡単な方法で人々に読んでもらいたかったんだろう」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "デイリー訓練",
+    "エンバー交換"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "986cb8eacfc77a347d7be45f6ba74ecf909ec26ffffd577c9ff6129bdfa93544",
+   "name": "旅の見聞",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>1000</nobr>獲得できる。",
+   "lore": "旅の出来事を記した日記。字はかすれており、不鮮明。思うままに内容が書かれてあるので、あまり助けにはならないだろう。<br /><br />「読み終わったら早くその紙切れを捨てるのよ、丹恒？」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "依頼報酬"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "267ccbf86fcd7e6264e21ba9757d5aec8711d76e5479326c04b9874a8142cbc5",
+   "name": "永寿の萌芽",
+   "desc": "古の神物が芽生えた幼芽、強化に必要な簡易素材。",
+   "lore": "仙舟の長命種が持つ「無尽形寿」の源、「豊穣」の神跡の残余。幾星霜も前、とある皇帝の長命への妄念が、仙舟艦隊を仙方を求める旅へと促した。<br /><br />「朕は万世の垂化、永延の国祚を欲す。が、天年に尽頭有り、人力に窮限有り。故に、天舟九座遣い、天外へ仙方を求める」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "豊穣の忌み物からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "031003e14c276a2aba3c945ea8ca9e78edba44061b597959f42cc62c1e051542",
+   "name": "永寿の天華",
+   "desc": "古の神物が咲いた花、強化に必要な普通素材。",
+   "lore": "仙舟の長命種が持つ「無尽形寿」の源、「豊穣」の神跡の残余。艱難辛苦を乗り越え、薬を求める舟は天顔を謁見した。神は垂迹し奇跡を降ろす、そして建木が萌芽する。<br /><br />「月に落ちる新蕊、雲外に香る天の華。桂薫が吐納する間、鶴髪も髫に換わる」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "均衡Lv.2に達した後、豊穣の忌み物からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "635673": {
+   "id": 635673,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "cbbb29c7d304051e72058774233100493e76cbb799ddb1b4b45aff45241bd8c6",
+   "name": "破砕の刃切",
+   "desc": "反物質レギオンのメンバーが落とした武器の破片。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "この焼印は階級と「壊滅」の功績を示す。<br />この武器の主は紅の馬にまたがり、都市を燃やし、人々を仲たがいし、国を蟻の巣のように潰した。<br /><br />「この印を持つ者、平和を国々から放逐せよ」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/635673",
+   "comeFrom": [
+    "疑似花萼「収容部分」",
+    "エンバー交換"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "49e8092b088316bbf8ba88b0eb49123c541b4853fc66d62b3c89d6b8303219a0",
+   "name": "永寿の栄枝",
+   "desc": "古の神物の栄枯する枝、強化に必要な高級素材。",
+   "lore": "仙舟の長命種が持つ「無尽形寿」の源、「豊穣」の神跡の残余。三つの災いの後、仙舟は塗炭の苦しみを舐めた。天人が魔に堕ち、苦しみと災厄は絶え間なく生じる。<br /><br />「十王司の律令に基づき、頻繁に魔陰に堕ちる者は判官が捕らえ、幽獄に収監し審断する」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "均衡Lv.4に達した後、豊穣の忌み物からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "836259": {
+   "id": 836259,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "dd9049ebf26b7ffdf52e7edc6cddcc58aae6bf8e0b8d420bc33aade03b6b302f",
+   "name": "浄世の刃切",
+   "desc": "反物質レギオンのメンバーが落とした破れた武器。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "この武器は、持ち主のレギオンでの階級と「壊滅」の功績を示す。<br />この武器の主は戦争の終わり際に登場し、劫火で世界を焼き尽くした。どれだけ神に祝福されていようと、どれだけ輝かしい功績があろうと、その星は燃え尽きた炭のように、星空の暗闇の中、死んでいくだろう。<br /><br />「この印を持つ者、世界を滅掃せよ」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/836259",
+   "comeFrom": [
+    "疑似花萼「収容部分」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  },
+  "920200": {
+   "id": 920200,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "ad883da0dda0d6eebe6f4592fe6e5396962ec669012068894459c5af6e55f25f",
+   "name": "無生の刃切",
+   "desc": "反物質レギオンのメンバーが落とした破れた鍔。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "この焼印は階級と「壊滅」の功績を示す。<br />この武器の主はすべての思考する生物を恨んでいた。彼らは知性ある生物の悲鳴を心地良い楽曲のように堪能し、数千年かけて築いた文明を一晩で滅ぼした。<br /><br />「この印を持つ者、呼吸を衆生から奪い給え」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/920200",
+   "comeFrom": [
+    "疑似花萼「収容部分」",
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 73.92,
+   "attackAdd": 3.696,
+   "hpBase": 184.8,
+   "hpAdd": 9.24,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549504,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 103.488,
+   "attackAdd": 3.696,
+   "hpBase": 258.72,
+   "hpAdd": 9.24,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549504,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 133.056,
+   "attackAdd": 3.696,
+   "hpBase": 332.64,
+   "hpAdd": 9.24,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633445,
+     "count": 6
+    },
+    {
+     "id": 267806,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 162.624,
+   "attackAdd": 3.696,
+   "hpBase": 406.56,
+   "hpAdd": 9.24,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633445,
+     "count": 9
+    },
+    {
+     "id": 267806,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 192.192,
+   "attackAdd": 3.696,
+   "hpBase": 480.48,
+   "hpAdd": 9.24,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717386,
+     "count": 6
+    },
+    {
+     "id": 267806,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 221.76,
+   "attackAdd": 3.696,
+   "hpBase": 554.4,
+   "hpAdd": 9.24,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717386,
+     "count": 9
+    },
+    {
+     "id": 267806,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 251.328,
+   "attackAdd": 3.696,
+   "hpBase": 628.32,
+   "hpAdd": 9.24,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "3a3f585f89a8186f8a396ff72e6aee90e8bd87228523b6dc76e91bde5400e134",
+   "artPath": "2e84afbc002d3b53cbd1fb9b94e81ad435edc089bcf66ee553ba67f1e83fe7fb",
+   "name": "形寿記せし剣身<br />地獄変の如く",
+   "descHash": "指定した敵単体に対する必殺技の与ダメージが、刃の戦闘中失ったHPの累計<nobr>#1[i]%</nobr>分アップする。<br />戦闘中失ったHPの累計のカウントは、刃の最大HPの<nobr>#2[i]%</nobr>を超えず、必殺技を発動した後にリセットされる。",
+   "params": [
+    1.5,
+    0.9
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "3b9c1110d6bc9461f7d22dc1853aa982aafe35d891f880551378c4e696661f2f",
+   "artPath": "70fef19c060eac75cb425c997609ca6691712f0731a0095b3cbeffd335ae7ca0",
+   "name": "支離の旧夢<br />万事が遺恨",
+   "descHash": "刃が「地獄変」状態の時、会心率+<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.15
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "9a81b9cde8125e41457787a8349ea9590cf63cd73edabbafdbe1d9a416916e71",
+   "artPath": "cf8bc2c29e3034ae762a8b96b448fcbb4a23d6372fc7eab4186bdeb782c5dd03",
+   "name": "鍛造されし玄鋼<br />寒光放つ",
+   "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "58496d479994614370b8374c8b5148f3feb7636c663d3b56d89a411d3af96ac7",
+   "artPath": "bd70e5c97cdcc663dd4cf6eade343e021b9b2c54aa9ab51d5431e77880a4cdf2",
+   "name": "冥府の岐路越え<br />回生せし骸",
+   "descHash": "残りHPが<nobr>50%</nobr>を超える状態から、<nobr>50%</nobr>以下になった時、最大HP+<nobr>#1[i]%</nobr>、この効果は最大で<nobr>#2[i]</nobr>層累積できる。",
+   "params": [
+    0.2,
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "ed6ca3d29bcf5300fcfd8265c34f18a70e18783f8672dda87640ec55bc4c1d75",
+   "artPath": "b92e581bf02e462c9e17e72e60e76d36b06b6e30f38df2e1ac416b9ceefaeddf",
+   "name": "十王の大辟<br />懸かり照らす業鏡",
+   "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "5b200b7187bb566800f2b6510b4cd3e46863acc5d4b2c69fc7a61abf2068ac48",
+   "artPath": "4cbde0212579bf91ea08066bac5b3e2e06aecb8a63c0b26a66a2f1d589d289ec",
+   "name": "涸れし魂魄留まりて<br />此の身に戻る",
+   "descHash": "チャージ層数の上限が4層になる。天賦による追加攻撃の与ダメージが、さらに刃の最大HP<nobr>#1[i]%</nobr>分アップする。",
+   "params": [
+    0.5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   581491,
+   234486
+  ],
+  [
+   296964
+  ],
+  [
+   380905
+  ],
+  [
+   866018
+  ],
+  [
+   782077
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体に刃の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与える。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 581491,
+   "name": "支離剣",
+   "iconPath": "6815fac4604272fab762faf7bf4dc9eaab9ef7cad28b6767e53fb141206ee81a",
+   "typeDescHash": "通常攻撃",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "強化",
+   "descHash": "刃のHPを最大HP<nobr>#1[i]%</nobr>分消費して「地獄変」状態に入る。<br />「地獄変」状態では戦闘スキルを発動できず、自身の与ダメージ+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>、通常攻撃「支離剣」が「無間剣樹」に強化される、<nobr>#2[i]</nobr>ターン継続。<br />残りHPが足りない場合、戦闘スキルを発動した時、刃の残りHPが1になる。<br />この戦闘スキルはEPを回復できない。この戦闘スキルを発動した後、ターンは終了しない。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 296964,
+   "name": "地獄変",
+   "iconPath": "ed6ca3d29bcf5300fcfd8265c34f18a70e18783f8672dda87640ec55bc4c1d75",
+   "typeDescHash": "戦闘スキル",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.12
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.148
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.176
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.204
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.232
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.26
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.295
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.33
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.365
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.4
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.428
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.456
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.484
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.512
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.54
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "拡散攻撃",
+   "descHash": "刃の残りHPを最大HPの<nobr>50%</nobr>にし、敵単体に刃の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>+最大HP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>+戦闘中失ったHPの累計<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与え、隣接する敵に刃の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>+最大HP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>+戦闘中失ったHPの累計<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#6[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与える。<br />戦闘中失ったHPの累計のカウントは、刃の最大HPの<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#7[i]%</nobr></span>を超えず、必殺技を発動した後にリセットされる。",
+   "ultimateCost": 130,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 380905,
+   "name": "大辟万死",
+   "iconPath": "230c5e37060d10deb29204b871182542b4291d153af3e8f5348ddc59896016c4",
+   "typeDescHash": "必殺技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.24,
+      0.6,
+      0.096,
+      0.24,
+      0.6,
+      0.24,
+      0.9
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.256,
+      0.64,
+      0.1024,
+      0.256,
+      0.64,
+      0.256,
+      0.9
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.272,
+      0.68,
+      0.1088,
+      0.272,
+      0.68,
+      0.272,
+      0.9
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.288,
+      0.72,
+      0.1152,
+      0.288,
+      0.72,
+      0.288,
+      0.9
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.304,
+      0.76,
+      0.1216,
+      0.304,
+      0.76,
+      0.304,
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.32,
+      0.8,
+      0.128,
+      0.32,
+      0.8,
+      0.32,
+      0.9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.34,
+      0.85,
+      0.13599999,
+      0.34,
+      0.85,
+      0.34,
+      0.9
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.36,
+      0.9,
+      0.144,
+      0.36,
+      0.9,
+      0.36,
+      0.9
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.38,
+      0.95,
+      0.152,
+      0.38,
+      0.95,
+      0.38,
+      0.9
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.4,
+      1,
+      0.16,
+      0.4,
+      1,
+      0.4,
+      0.9
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.416,
+      1.04,
+      0.1664,
+      0.416,
+      1.04,
+      0.416,
+      0.9
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.432,
+      1.08,
+      0.1728,
+      0.432,
+      1.08,
+      0.432,
+      0.9
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.448,
+      1.12,
+      0.1792,
+      0.448,
+      1.12,
+      0.448,
+      0.9
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.464,
+      1.16,
+      0.1856,
+      0.464,
+      1.16,
+      0.464,
+      0.9
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.48,
+      1.2,
+      0.192,
+      0.48,
+      1.2,
+      0.48,
+      0.9
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "全体攻撃",
+   "descHash": "刃がダメージを受ける、またはHPを消費した時、チャージを1層獲得する。チャージは最大で5層累積できる。この効果は攻撃を1回受けるたびに1層まで累積できる。<br />チャージが上限に達した時、敵全体に<u>追加攻撃</u>を1回行い、刃の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>+最大HP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与え、刃の最大HP<nobr>#3[i]%</nobr>分のHPを回復する。追加攻撃を行った後、すべてのチャージを消費する。",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "10",
+   "id": 866018,
+   "name": "倏忽の恩賜",
+   "iconPath": "d5ce368a1106becffd75c5d24b4fb8376735cbcf6ff2960fb9206e79e4b5a843",
+   "typeDescHash": "天賦",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      3,
+      0.22,
+      0.25,
+      0.55
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.242,
+      0.25,
+      0.605
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.264,
+      0.25,
+      0.66
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.286,
+      0.25,
+      0.715
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.308,
+      0.25,
+      0.77
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.33,
+      0.25,
+      0.825
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.3575,
+      0.25,
+      0.89375
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.385,
+      0.25,
+      0.9625
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.4125,
+      0.25,
+      1.03125
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.44,
+      0.25,
+      1.1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.462,
+      0.25,
+      1.155
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.484,
+      0.25,
+      1.21
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.506,
+      0.25,
+      1.265
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.528,
+      0.25,
+      1.32
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.55,
+      0.25,
+      1.375
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "敵を攻撃、戦闘突入後、敵の対応する属性の靭性を削る。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 665432,
+   "name": "攻撃",
+   "iconPath": "6815fac4604272fab762faf7bf4dc9eaab9ef7cad28b6767e53fb141206ee81a",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、刃の最大HP<nobr>#2[i]%</nobr>分のHPを消費し、敵全体に刃の最大HP<nobr>#1[i]%</nobr>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与える。<br />残りHPが足りない場合、秘技を発動した時、刃の残りHPが1になる。",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "0",
+   "id": 782077,
+   "name": "業途風",
+   "iconPath": "7336d5763dfbcc470414d1179ac64cdd37ada793bee850ff12f24849bbd5187f",
+   "typeDescHash": "秘技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.4,
+      0.2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "拡散攻撃",
+   "descHash": "刃のHPを最大HP<nobr>#1[i]%</nobr>分消費し、指定した敵単体に刃の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>+最大HP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与え、隣接する敵に刃の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>+最大HP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与える。<br />残りHPが足りない場合、「無間剣樹」を発動した時、刃の残りHPが1になる。<br />「無間剣樹」はSPを回復できない。",
+   "ultimateCost": 0,
+   "break": "60 + 30/adjacent",
+   "energy": "30",
+   "id": 234486,
+   "name": "無間剣樹",
+   "iconPath": "5c2b02f7fdaed4095ed4af8cebb0e5f06201ca638cbbd217ee8d1fc51de90cfc",
+   "typeDescHash": "通常攻撃",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.1,
+      0.2,
+      0.08,
+      0.5,
+      0.2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.1,
+      0.24,
+      0.096,
+      0.6,
+      0.24
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.28,
+      0.112,
+      0.7,
+      0.28
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.32,
+      0.128,
+      0.8,
+      0.32
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.36,
+      0.144,
+      0.9,
+      0.36
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.4,
+      0.16,
+      1,
+      0.4
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.44,
+      0.176,
+      1.1,
+      0.44
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.1,
+      0.48,
+      0.192,
+      1.2,
+      0.48
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.1,
+      0.52,
+      0.208,
+      1.3,
+      0.52
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1205101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1205202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1205203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1205204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 18204,
+          "name": "効果抵抗強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+          "statusList": [
+           {
+            "key": "効果抵抗",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920200,
+            "count": 3
+           },
+           {
+            "id": 633445,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 18207,
+        "name": "HP強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "HP",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920200,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 18206,
+      "name": "会心率強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+      "statusList": [
+       {
+        "key": "会心率",
+        "value": 0.026999999
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 549504,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "刃の残りHPが<nobr>50%</nobr>以下の時、治癒を受けた時の回復量+<nobr>#1[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 18110,
+    "name": "無尽形寿",
+    "iconPath": "ce2d60eb5c7ac1d54dc6902c7a4ceaf0ac184f6e172beec3b5cede070c25e6cb",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1205103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1205208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1205209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 18217,
+        "name": "会心率強化",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+        "statusList": [
+         {
+          "key": "会心率",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717386,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1205210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 102149,
+        "name": "HP強化",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "HP",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717386,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 18216,
+      "name": "効果抵抗強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+      "statusList": [
+       {
+        "key": "効果抵抗",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "天賦による追加攻撃の与ダメージ+<nobr>#1[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 18112,
+    "name": "壊劫滅亡",
+    "iconPath": "4f3f86ebfb2c17f8c8faa1007312fda69735d49fa387d8e02015beead44d7316",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1205102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1205205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1205206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1205207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 18203,
+          "name": "HP強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+          "statusList": [
+           {
+            "key": "HP",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836259,
+            "count": 3
+           },
+           {
+            "id": 717386,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 18202,
+        "name": "会心率強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+        "statusList": [
+         {
+          "key": "会心率",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836259,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 18205,
+      "name": "HP強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "HP",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 633445,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "「無間剣樹」を発動した後、弱点撃破状態の敵に命中した場合、刃は自身の最大HP<nobr>#1[i]%</nobr>+<nobr>#2[i]</nobr>のHPを回復する。",
+    "ultimateCost": 0,
+    "id": 18113,
+    "name": "百死耐忍",
+    "iconPath": "a24872dda0042b487d4e17222acf83c35f7bd801387505c5dc717ad4facadef9",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.05,
+       100
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1205201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 18209,
+    "name": "HP強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+    "statusList": [
+     {
+      "key": "HP",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "胴体",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "会心率",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "速度",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+   },
+   {
+    "relicTypeHash": "次元界オーブ",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "風属性与ダメージ",
+    "propertyIconPath": "fe44fb655f65017dcad0c260b4dcffe14de4b14816734239c2c60d4624cf8163"
+   },
+   {
+    "relicTypeHash": "連結縄",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "HP",
+    "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初対面",
+   "text": "ふん…俺がお前を知らないのは、お前にとってもいいことだ。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 2,
+   "title": "挨拶",
+   "text": "またお前か？…俺に覚えられると、いいことなんてないぞ。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 3,
+   "title": "お別れ",
+   "text": "ふん、去れ。「魔陰の身」が発作を起こした時は、俺のそばから離れた方がいい。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 4,
+   "title": "自分について・名前",
+   "text": "己を摩耗し、敵を切り裂く、それ即ち兵刃。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 5,
+   "title": "自分について・魔陰の身",
+   "text": "誰もが魔陰を宿している、症状が異なるだけでな。そして、俺の場合はより特別だ——魔陰の影響を受けながらも、寥々たる記憶を持っている。後悔も、憎悪も、懐古や不安さえもだ……",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 6,
+   "title": "自分について・狂魔",
+   "text": "魔陰が発作を起こすと、俺は…フッ…別人になる。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 7,
+   "title": "雑談・星核ハンター",
+   "text": "俺たちは互いの手を借りて、目的を果たしている。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 8,
+   "title": "雑談・不死身",
+   "text": "「今回こそ最期だ」という期待は、肉体が癒える苦痛の中でいつも泡となり消えていく。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 9,
+   "title": "雑談・代価",
+   "text": "…人は5人、代価は3つ——この言葉は、俺の傷口の一つ一つに刻まれている…",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 10,
+   "title": "刃の趣味",
+   "text": "「刃」の存在は、剣を振るう刹那にのみ、暫し消えてなくなる。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 11,
+   "title": "刃の悩み事",
+   "text": "死はいつ訪れる？俺は、それが待ち遠しい。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 12,
+   "title": "シェア",
+   "text": "俺より鋭い武器は数多とある。だが、千回打ち合った後はどうだろうな？",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 13,
+   "title": "見聞",
+   "text": "死した者に恐れはない。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 14,
+   "title": "カフカについて",
+   "text": "魔陰を縛る縄はあの女が持っている。約束の刻が訪れるまで、あの女は決して縄を引くことも、放すこともない。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 16,
+   "title": "銀狼について",
+   "text": "彼女が「ゲーム」と呼ぶ世界では、彼女が諦めない限り死ぬことはない。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 17,
+   "title": "景元について",
+   "text": "奴はずっと…俺たちの中で一番「代価」を弁えていた。だが奴は何も言わず、何もしなかった！",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 18,
+   "title": "丹恒について",
+   "text": "飲月よ…俺たちの業報はいつ訪れる？俺たちが作った借りは、どう返せばいい！",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 19,
+   "title": "鏡流について",
+   "text": "剣を振るう時、体に幻痛が走る——どこが致命の一撃となり、どこが死に至らず苦痛を与えるだけなのか——すべて、あの女の「おかげ」だ！",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 51,
+   "title": "戦闘開始・弱点撃破",
+   "text": "邪魔だ。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 52,
+   "title": "戦闘開始・危険予知",
+   "text": "お前が俺の死か。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 53,
+   "title": "ターン・1",
+   "text": "この剣で、送ってやろう。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 54,
+   "title": "ターン・2",
+   "text": "剣に憐憫など不要だ。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 55,
+   "title": "戦闘中待機",
+   "text": "機を窺いすぎれば、殺気が枯れる。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 56,
+   "title": "強化通常攻撃",
+   "text": "余さず…返そう！",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 57,
+   "title": "戦闘スキル・1",
+   "text": "勢は成した…",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 58,
+   "title": "戦闘スキル・2",
+   "text": "死兆よ…来たれ！",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 59,
+   "title": "攻撃を受ける",
+   "text": "まだ足りない…",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 60,
+   "title": "重撃を受ける",
+   "text": "いい、なかなかだ。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 61,
+   "title": "必殺技・アクティブ",
+   "text": "この佳景、俺には届かぬが…",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 62,
+   "title": "必殺技・発動",
+   "text": "皆を招こう……はぁ！",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 63,
+   "title": "天賦",
+   "text": "彼岸…葬送！",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 64,
+   "title": "戦闘不能",
+   "text": "今度こそ成就するだろうか……",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 65,
+   "title": "戦闘に戻る",
+   "text": "残念だ、まだ生きている。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 66,
+   "title": "HP回復",
+   "text": "余計な。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 67,
+   "title": "戦闘勝利",
+   "text": "切れ味が落ちたようだ。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 68,
+   "title": "戦利品を開ける",
+   "text": "大したものはないな。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 69,
+   "title": "謎解きに成功",
+   "text": "終わったな。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 70,
+   "title": "敵ターゲット発見",
+   "text": "もう少し近づいても構わないぞ。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 71,
+   "title": "町に戻る",
+   "text": "まだやることが残っていたのか？",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "キャラクター詳細",
+   "text": "己が身を顧みず、刃に晒す剣客。本来の名前は不明。<br />「運命の奴隷」に忠誠を誓い、恐ろしいほどの自己治癒力を持つ。<br />彼は古びた剣を使って戦う。ひびが入った刀身は、その体と心のようだ。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "ストーリー・1",
+   "text": "視界は赤黒く染まり、口の中は血生臭く、四肢には力が入らない。<br />——自分は死んだのだろう。<br /><br />「覚えたか？」<br />彼は呆然としながら口を開いた。その声は野生の獣のようだった。<br />喉で鳴っていた声が止まり、冷たく固い物が彼を貫いた。<br />このようなことは、少なくとも千回は繰り返された。<br /><br />実に奇妙なことであった。肉が断裂された時、彼には筋骨が繋がり融合する微かな音が聞こえた。<br />実に奇妙なことであった。身体の内にある化け物に養分を与え、彼はそれをより巨大なものへと成長させようとした。<br />実に奇妙なことであった。彼は生きる信念を失ったが、体は当初の様子に戻った。<br />実に奇妙なことであった。<br /><br />剣が再び身体を貫く前に、彼はそれを掴み、ゆっくりと身体を起こした。<br />「覚えたか？」<br />彼は女の血のように赤い眼を見たが、頭の中は空白であった。<br />——彼は再び刺し貫かれた。<br />「死の感覚を覚えて、奴らにも味わわせるんだ」<br /><br />視界がまた赤黒く染まる。彼は自身を殺す剣を見つめた。その刃は半分砕けている。<br />「起きろ、もう一度お前を殺させてくれ」",
+   "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・2",
+   "text": "視界は赤黒く染まり、口の中は血生臭く、四肢には力が入らない。<br />——自分は死んだのだろう。<br /><br />黒髪の少年は全身を震わせながらも、手に持った槍をしっかりと握った。<br />少年に龍の角は生えておらず、反応も記憶にあるものと比べると、いくらか拙かった——<br />だが、彼があの槍を、あの双眸を見間違えるはずがない。あの湖面のように静かな青緑の下にあるものが、どれだけ残酷なのかを忘れるはずもなかった。<br />傷口が癒え始め、彼は少年を見た。<br />少年は躊躇うことなく、再び槍を振るう——<br /><br />「つまり、こういうことだ」<br />敵を皆殺しにしたのは、貴様だ。<br />愛する者を葬ったのも、貴様だ。<br />故郷を滅ぼしかけたのも、貴様だ。<br /><br />彼は再び倒れる。<br />少年は傷口を抑え、彼の視界から外れるまで後退した。<br />「███、貴様の死期をこの目で確かめる前に、俺たちはまた再会するだろう」",
+   "unlockRequirement": "キャラLv.<nobr>40</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・3",
+   "text": "視界は赤黒く染まり、口の中は血生臭く、四肢には力が入らない。<br />——自分は死んだのだろう。<br /><br />化け物は再び彼を呑み込んだ。しかし今回彼が見ているのは他の者ではない。<br />大きな甲冑は沈黙を保っている。彼はその腕にがっちりと拘束されていた。話しているのはサングラスをしている女だ。<br /><br />「<u>聞いて</u>、私はもう1度君を殺すことができる。じゃないと、君を連れ帰れないもの」<br />彼女の声は優しく、身体の中の化け物も静かになり、話を聞き始めた。<br />「でも、私はそんなことをしたくないわ」<br />女は身をかがめ、彼の耳元で話し始めた。内容は、彼が断われないような取引だった。<br />「何を望んでいる？」<br />「死なない人間がどうやって死ぬのかを、目の当たりにすることより楽しいことはない。『彼』はそう言っているわ」<br /><br />大きな甲冑は彼の腕を離した。「運命」は既に前方にある、彼はこの者たちと共に歩み始めた。<br />「<u>聞いて</u>、刃ちゃん、リラックスしてちょうだい」<br />「<u>聞いて</u>、何も考えなくていいのよ」<br />彼は頷き、女の傍に歩み寄った。彼女は笑っていたが、彼にはその笑顔が悲しそうに見えた。<br />「誰かがこの女の話を聞き終える前に、去ったのかもしれない」そう、彼は考えた。",
+   "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・4",
+   "text": "彼は何も見えなくなった。<br /><br />数十年前、彼は商船と共に仙舟に来て、この地の神工鬼斧に感服したことを思い出した。<br />少年は飲食の時間も惜しんで、自身の霊感を思う存分に発揮し、百もの奇物を鍛造した。その中の4つは非常に有名である。<br /><br />「支離」という名の剣は瑕一つなく、血が光るような色であり、仙舟の最強の剣士だけがこの剣の神髄を引き出すことができる。<br />狐族の少女は窮地の時に、3本の弓を同時に射たが、星槎を運転しながら人々と談笑することを忘れなかった。<br />黒髪に龍の角を持つ男子が、水を操る術で仲間の傷病を癒した次の瞬間、水を槍に纏わせ、敵を刺し貫いた。<br />彼とよく口喧嘩をしていた少年は、この陣刀を見た時、すぐに奪い取り、二度と手放そうとしなかった。<br /><br />今や██は死んだ。最初で唯一の死である。<br />しかし、彼は未だにここにいる。その少年のような頭で考える。永遠に考えている。<br />彼はもう器用に動かなくなった両手について考えた。この両手はもうどんな武器も造り出せない。<br />——だがそれは、彼とは無関係だ。<br />これからは、この身体が唯一の「刃」になるのだから。",
+   "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
+  }
+ ],
+ "archive": {
+  "cvCn": "刘以嘉",
+  "cvJp": "三木眞一郎",
+  "cvKr": "곽윤상",
+  "cvEn": "Daman Mills",
+  "camp": "星核ハンター"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "刃",
+ "rarity": 5,
+ "descHash": "「星核ハンター」のメンバー。己が身を顧みず、刃にさらす剣客。 「運命の奴隷」に仕え、怖ろしい自己回復力を持つ。",
+ "artPath": "08bcfc539e148c57b990427b530fd88545572ba361aa886940cc6b1bca181d4c",
+ "miniIconPath": "8d3a2149c30a2d8cf7ce5fe04eb60112109b795a1f3c3ab9b00686cc2a068e3b",
+ "damageType": {
+  "id": 16,
+  "iconPath": "a77d91df3b1045f9fa66ce1300c4d921c0f89e51135df8208904334e8a0f0b80",
+  "color": "#00FF9C",
+  "name": "風",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "350c43e263450cb79bfb44c59122dd3e2b2e6a80aa3310f4f69c91d7011f6105",
+  "altIconPath": "20478bd2d976a94efdfdc05a59342dc854f07c2ab6e1ef57c098224877a855ce",
+  "color": "#FFFFFF",
+  "name": "壊滅",
+  "rarity": 0
+ },
+ "pageId": "blade"
+}

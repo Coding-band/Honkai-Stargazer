@@ -1,10 +1,10 @@
 {
  "spRequirement": 120,
- "iconPath": "8660d53942dec98330ba5effb600c4e09e799e883d371ee94f101aeb021523f4",
+ "iconPath": "11b1bb275e65fe29cce86f8b27a624e6bc0621f40cc1aa2bcd75b3a8e2e0ddec",
  "bgPath": "c7b975c09f3ddccaf4718b3238110de76aa06a3930638dba2d316b3abddeea6c",
- "figPath": "1d3d7a02929d0282079c45f6a03c614dd06509c9d71ac4aea583d982f2d4a7e0",
+ "figPath": "44c544c344b6e5bf94d58acd5dec7d6a0f6a9e567223511660bf5b6338fc89f4",
  "fgPath": "a582f36c088eccd19338c8e4056349201a7a9bc220866a84e0edc9f5a8f24e80",
- "splashIconPath": "845a9c92bf8f04c56203cf1c5ef52064bf733aaba749e5f43634cd35c9991dca",
+ "splashIconPath": "19c916bc3789c198907ae64821d6094db901649cadfcafb48b55659388a415aa",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Calice de la Grande mine",
     "Récompense de mission",
-    "Récompense d'affectation"
+    "Récompense d'affectation",
+    "Braises immortelles"
    ]
   },
   "67219": {
@@ -94,7 +95,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Calice des Plaines des neiges périphériques",
-    "Entraînement quotidien"
+    "Entraînement quotidien",
+    "Braises immortelles"
    ]
   },
   "409962": {
@@ -162,7 +164,8 @@
    "rarity": 2,
    "rewardPath": "/material/635668",
    "comeFrom": [
-    "Calice de la Zone de ravitaillement"
+    "Calice de la Zone de ravitaillement",
+    "Braises immortelles"
    ]
   },
   "717319": {
@@ -212,7 +215,8 @@
    "rewardPath": "/material/920195",
    "comeFrom": [
     "Calice de la Zone de ravitaillement",
-    "Synthèse de matériaux de l'Omni-synthétiseur"
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Braises immortelles"
    ]
   },
   "985668": {
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "0ac41ef537395d45729d8e184047abd9e32ef4e57793acfb3478023fa7cf6b31",
    "artPath": "c70face58fd3f2ae2779d8af9ae759758a1bd7a982c52693264aa5dffbf08ee0",
    "name": "Souvenir de toi",
    "descHash": "Chaque fois que l'ultime de March 7th gèle une cible, elle régénère <nobr>#1[i]</nobr> points d'énergie.",
@@ -428,8 +432,8 @@
   },
   {
    "id": 2,
-   "iconPath": "",
-   "artPath": "fed9235563c4db1a3a0e4c461ddb81246b59ed06e1e26ade7ddfef933de6a222",
+   "iconPath": "f3759ef3017374085a59c448f396d99e3175a477d91e0f8734f980b87e83aa16",
+   "artPath": "6e385aa57c492ea4cc1ed22751309ead70897e1c3ea76cdb86652e4c0cc8f60f",
    "name": "Souvenir de ça",
    "descHash": "Accorde un bouclier équivalent à <nobr>#1[i]%</nobr> de la DÉF de March 7th + <nobr>#3[i]</nobr> à l'allié dont le pourcentage de PV est le plus faible en entrant en combat, dure <nobr>#2[i]</nobr> tours.",
    "params": [
@@ -440,7 +444,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "1e7d6bf4d4afa7e3a5b1c5d70410759c454eb6581202f15d1262c38658655059",
    "artPath": "12cca20745cad27c6c1be1254c1e9b5df9b8d1e6221213dbd0b94531cc4f255c",
    "name": "Souvenir de tout",
    "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
@@ -448,7 +452,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "b07428922201f5f83d84b1f0d6144eab44d25a2824a672f21b1a095416e54b0a",
    "artPath": "fcd40d1998b7c6923e3f29eaa1d13a81c1f9e7a95c34d7bfc6d33b241c160233",
    "name": "Ne plus jamais abandonner",
    "descHash": "L'effet de contre du talent peut être déclenché 1 fois de plus à chaque tour. Les DGT infligés par le contre augmentent d'un montant équivalent à <nobr>#1[i]%</nobr> de la DÉF de March 7th.",
@@ -466,7 +470,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "262e7f776ca5dd04d238209399e3b7e1ed4f876ee0c8969db8d350e2d76f0be0",
    "artPath": "e7dfe98b1d989f2e959ce3c30f2734766b0311ede109bd2c9df99e8b90ad6c21",
    "name": "Ça se passe comme ça...",
    "descHash": "Les alliés protégés par le bouclier octroyé par la compétence de March 7th restaurent un montant de PV équivalent à <nobr>#1[i]%</nobr> de leurs PV max + <nobr>#2[i]</nobr> au début de chaque tour.",
@@ -498,8 +502,8 @@
    "tagHash": "Cible unique",
    "descHash": "Inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de March 7th à un ennemi unique.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 441021,
    "name": "Flèche du froid glacial",
    "iconPath": "8fe5541f66620cc2a7de7c13ce4aa58f18a4c85547045ee8785fba4b756133f1",
@@ -659,11 +663,11 @@
    "tagHash": "Défense",
    "descHash": "Accorde un bouclier à un allié unique qui absorbe une quantité de DGT équivalente à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de la DÉF de March 7th + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span> pendant <nobr>#2[i]</nobr> tours.<br />Si le pourcentage de PV actuel de l'allié est supérieur ou égal à <nobr>#3[i]%</nobr>, les chances que les ennemis attaquent cet allié augmentent considérablement.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 30,
+   "break": "0",
+   "energy": "30",
    "id": 524962,
    "name": "Par le pouvoir de la mignonnerie",
-   "iconPath": "595548f37abc0f33d03758e454093797af09c7af383810d4f7f484cd82212349",
+   "iconPath": "",
    "typeDescHash": "Compétence",
    "levelReq": 0,
    "promotionReq": 0,
@@ -990,8 +994,8 @@
    "tagHash": "ZdE",
    "descHash": "Inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de March 7th à tous les ennemis. Les ennemis touchés ont <nobr>#2[i]%</nobr> de <u>chances de base</u> d'être gelés pendant <nobr>#3[i]</nobr> tour.<br />Les ennemis gelés ne peuvent pas agir et subissent des DGT de glace <u>additionnels</u> équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> de l'ATQ de March 7th au début de chaque tour.",
    "ultimateCost": 120,
-   "break": 0,
-   "energy": 5,
+   "break": "60/hit",
+   "energy": "5",
    "id": 641607,
    "name": "Cascade glaciale",
    "iconPath": "55ade179edd68bf9776032c65e4347fc240c5fb0a3f4f3a83f3eb8a7a4a19595",
@@ -1306,8 +1310,8 @@
    "tagHash": "Cible unique",
    "descHash": "Lorsqu'un allié bénéficiant d'un bouclier est attaqué par un ennemi, March 7th <u>contre</u> immédiatement, infligeant des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de son ATQ. Cet effet peut être déclenché <nobr>#2[i]</nobr> fois par tour.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 10,
+   "break": "30",
+   "energy": "10",
    "id": 955908,
    "name": "Girl Power",
    "iconPath": "051c25b170f8af3095b6020ea30ad6ecb24527ba9d052c5cf6b70849683dde24",
@@ -1592,8 +1596,8 @@
    "tagHash": "",
    "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 156494,
    "name": "Attaque",
    "iconPath": "8fe5541f66620cc2a7de7c13ce4aa58f18a4c85547045ee8785fba4b756133f1",
@@ -1614,8 +1618,8 @@
    "tagHash": "",
    "descHash": "Attaque immédiatement les ennemis. Il y a <nobr>#1[i]%</nobr> de <u>chances de base</u> de geler un ennemi aléatoire pendant <nobr>#2[i]</nobr> tour après être entré en combat.<br />Un ennemi gelé ne peut pas agir et subit des DGT de glace <u>additionnels</u> équivalents à <nobr>#3[i]%</nobr> de l'ATQ de March 7th au début de chaque tour.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 0,
+   "break": "60",
+   "energy": "0",
    "id": 240435,
    "name": "Beauté glacée",
    "iconPath": "6218868e0d00bcb80a71ac17033f87d96af71755afd85dd7007b9d92df7d458e",
@@ -1743,8 +1747,6 @@
    "embedBonusSkill": {
     "descHash": "Augmente les chances de base de l'ultime de geler les ennemis de <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 877642,
     "name": "Sortilège de glace",
     "iconPath": "4f68b9672c134013190b556a1a98cc7bc5f133f469154126e2381624443393f3",
@@ -1857,8 +1859,6 @@
      "embedBonusSkill": {
       "descHash": "La compétence supprime 1 malus de la cible alliée.",
       "ultimateCost": 0,
-      "break": 0,
-      "energy": 0,
       "id": 877640,
       "name": "Purification",
       "iconPath": "1259a1d60430b175f8053cf0998bfa4da258d88048a4a7433ba2f50b7472ae52",
@@ -1961,8 +1961,6 @@
      "embedBonusSkill": {
       "descHash": "La durée du bouclier généré par la compétence du personnage est prolongée d'<nobr>#1[i]</nobr> tour.",
       "ultimateCost": 0,
-      "break": 0,
-      "energy": 0,
       "id": 877643,
       "name": "Renforcement",
       "iconPath": "01fea7d5e30c789a502db09d89d71f788db21f2a2b1521232e9f0624551fea58",
@@ -2101,8 +2099,8 @@
    {
     "relicTypeHash": "Pieds",
     "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
-    "propertyName": "DÉF",
-    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+    "propertyName": "VIT",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
    },
    {
     "relicTypeHash": "Sphère planaire",

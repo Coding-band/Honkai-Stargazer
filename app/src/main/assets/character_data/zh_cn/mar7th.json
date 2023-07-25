@@ -1,10 +1,10 @@
 {
  "spRequirement": 120,
- "iconPath": "8660d53942dec98330ba5effb600c4e09e799e883d371ee94f101aeb021523f4",
+ "iconPath": "11b1bb275e65fe29cce86f8b27a624e6bc0621f40cc1aa2bcd75b3a8e2e0ddec",
  "bgPath": "c7b975c09f3ddccaf4718b3238110de76aa06a3930638dba2d316b3abddeea6c",
- "figPath": "1d3d7a02929d0282079c45f6a03c614dd06509c9d71ac4aea583d982f2d4a7e0",
+ "figPath": "44c544c344b6e5bf94d58acd5dec7d6a0f6a9e567223511660bf5b6338fc89f4",
  "fgPath": "a582f36c088eccd19338c8e4056349201a7a9bc220866a84e0edc9f5a8f24e80",
- "splashIconPath": "845a9c92bf8f04c56203cf1c5ef52064bf733aaba749e5f43634cd35c9991dca",
+ "splashIconPath": "19c916bc3789c198907ae64821d6094db901649cadfcafb48b55659388a415aa",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "拟造花萼【大矿区】",
     "任务奖励",
-    "委托奖励"
+    "委托奖励",
+    "余烬兑换"
    ]
   },
   "67219": {
@@ -94,7 +95,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "拟造花萼【城郊雪原】",
-    "每日实训"
+    "每日实训",
+    "余烬兑换"
    ]
   },
   "409962": {
@@ -162,7 +164,8 @@
    "rarity": 2,
    "rewardPath": "/material/635668",
    "comeFrom": [
-    "拟造花萼【支援舱段】"
+    "拟造花萼【支援舱段】",
+    "余烬兑换"
    ]
   },
   "717319": {
@@ -212,7 +215,8 @@
    "rewardPath": "/material/920195",
    "comeFrom": [
     "拟造花萼【支援舱段】",
-    "「万能合成机」- 材料合成"
+    "「万能合成机」- 材料合成",
+    "余烬兑换"
    ]
   },
   "985668": {
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "0ac41ef537395d45729d8e184047abd9e32ef4e57793acfb3478023fa7cf6b31",
    "artPath": "c70face58fd3f2ae2779d8af9ae759758a1bd7a982c52693264aa5dffbf08ee0",
    "name": "记忆中的你",
    "descHash": "终结技每冻结1个目标，为三月七恢复<nobr>#1[i]</nobr>点能量。",
@@ -428,8 +432,8 @@
   },
   {
    "id": 2,
-   "iconPath": "",
-   "artPath": "fed9235563c4db1a3a0e4c461ddb81246b59ed06e1e26ade7ddfef933de6a222",
+   "iconPath": "f3759ef3017374085a59c448f396d99e3175a477d91e0f8734f980b87e83aa16",
+   "artPath": "6e385aa57c492ea4cc1ed22751309ead70897e1c3ea76cdb86652e4c0cc8f60f",
    "name": "记忆中的它",
    "descHash": "进入战斗时，为当前生命值百分比最低的我方目标提供等同于三月七<nobr>#1[i]%</nobr>防御力+<nobr>#3[i]</nobr>的护盾，持续<nobr>#2[i]</nobr>回合。",
    "params": [
@@ -440,7 +444,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "1e7d6bf4d4afa7e3a5b1c5d70410759c454eb6581202f15d1262c38658655059",
    "artPath": "12cca20745cad27c6c1be1254c1e9b5df9b8d1e6221213dbd0b94531cc4f255c",
    "name": "记忆中的一切",
    "descHash": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
@@ -448,7 +452,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "b07428922201f5f83d84b1f0d6144eab44d25a2824a672f21b1a095416e54b0a",
    "artPath": "fcd40d1998b7c6923e3f29eaa1d13a81c1f9e7a95c34d7bfc6d33b241c160233",
    "name": "不愿再失去",
    "descHash": "天赋的反击效果每回合可触发的次数增加1次。使反击造成的伤害值提高，提高数值等同于三月七防御力的<nobr>#1[i]%</nobr>。",
@@ -466,7 +470,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "262e7f776ca5dd04d238209399e3b7e1ed4f876ee0c8969db8d350e2d76f0be0",
    "artPath": "e7dfe98b1d989f2e959ce3c30f2734766b0311ede109bd2c9df99e8b90ad6c21",
    "name": "就这样，一直…",
    "descHash": "在战技提供的护盾保护下的我方目标，每回合开始时回复等同于各自<nobr>#1[i]%</nobr>生命上限+<nobr>#2[i]</nobr>的生命值。",
@@ -498,8 +502,8 @@
    "tagHash": "单攻",
    "descHash": "对指定敌方单体造成等同于三月七<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#47C7FD;\">冰</span>属性伤害。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 441021,
    "name": "极寒的弓矢",
    "iconPath": "8fe5541f66620cc2a7de7c13ce4aa58f18a4c85547045ee8785fba4b756133f1",
@@ -659,11 +663,11 @@
    "tagHash": "防御",
    "descHash": "为指定我方单体提供能够抵消等同于三月七<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>防御力+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span>伤害的护盾，持续<nobr>#2[i]</nobr>回合。<br />若该目标当前生命值百分比大于等于<nobr>#3[i]%</nobr>，被敌方攻击的概率大幅提高。",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 30,
+   "break": "0",
+   "energy": "30",
    "id": 524962,
    "name": "可爱即是正义",
-   "iconPath": "595548f37abc0f33d03758e454093797af09c7af383810d4f7f484cd82212349",
+   "iconPath": "",
    "typeDescHash": "战技",
    "levelReq": 0,
    "promotionReq": 0,
@@ -990,8 +994,8 @@
    "tagHash": "群攻",
    "descHash": "对敌方全体造成等同于三月七<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#47C7FD;\">冰</span>属性伤害。受到攻击的敌方目标有<nobr>#2[i]%</nobr><u>基础概率</u>陷入冻结状态，持续<nobr>#3[i]</nobr>回合。<br />冻结状态下，敌方目标不能行动同时每回合开始时受到等同于三月七<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>攻击力的<span style=\"color:#47C7FD;\">冰</span>属性<u>附加伤害</u>。",
    "ultimateCost": 120,
-   "break": 0,
-   "energy": 5,
+   "break": "60/hit",
+   "energy": "5",
    "id": 641607,
    "name": "冰刻箭雨之时",
    "iconPath": "55ade179edd68bf9776032c65e4347fc240c5fb0a3f4f3a83f3eb8a7a4a19595",
@@ -1306,8 +1310,8 @@
    "tagHash": "单攻",
    "descHash": "当持有护盾的我方目标受到敌方目标攻击后，三月七立即向攻击者发起<u>反击</u>，对其造成等同于三月七<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#47C7FD;\">冰</span>属性伤害，该效果每回合可触发<nobr>#2[i]</nobr>次。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 10,
+   "break": "30",
+   "energy": "10",
    "id": 955908,
    "name": "少女的特权",
    "iconPath": "051c25b170f8af3095b6020ea30ad6ecb24527ba9d052c5cf6b70849683dde24",
@@ -1592,8 +1596,8 @@
    "tagHash": "",
    "descHash": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 156494,
    "name": "攻击",
    "iconPath": "8fe5541f66620cc2a7de7c13ce4aa58f18a4c85547045ee8785fba4b756133f1",
@@ -1614,8 +1618,8 @@
    "tagHash": "",
    "descHash": "立即攻击敌人，进入战斗后有<nobr>#1[i]%</nobr>的<u>基础概率</u>使随机敌方单体陷入冻结状态，持续<nobr>#2[i]</nobr>回合。<br />冻结状态下，敌方目标不能行动同时每回合开始时受到等同于三月七<nobr>#3[i]%</nobr>攻击力的<span style=\"color:#47C7FD;\">冰</span>属性<u>附加伤害</u>。",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 0,
+   "break": "60",
+   "energy": "0",
    "id": 240435,
    "name": "冻人的瞬间",
    "iconPath": "6218868e0d00bcb80a71ac17033f87d96af71755afd85dd7007b9d92df7d458e",
@@ -1743,8 +1747,6 @@
    "embedBonusSkill": {
     "descHash": "施放终结技时，冻结敌方目标的基础概率提高<nobr>#1[i]%</nobr>。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 877642,
     "name": "冰咒",
     "iconPath": "4f68b9672c134013190b556a1a98cc7bc5f133f469154126e2381624443393f3",
@@ -1857,8 +1859,6 @@
      "embedBonusSkill": {
       "descHash": "施放战技时，解除指定我方单体的1个负面效果。",
       "ultimateCost": 0,
-      "break": 0,
-      "energy": 0,
       "id": 877640,
       "name": "纯洁",
       "iconPath": "1259a1d60430b175f8053cf0998bfa4da258d88048a4a7433ba2f50b7472ae52",
@@ -1961,8 +1961,6 @@
      "embedBonusSkill": {
       "descHash": "战技提供的护盾持续时间增加<nobr>#1[i]</nobr>回合。",
       "ultimateCost": 0,
-      "break": 0,
-      "energy": 0,
       "id": 877643,
       "name": "加护",
       "iconPath": "01fea7d5e30c789a502db09d89d71f788db21f2a2b1521232e9f0624551fea58",
@@ -2101,8 +2099,8 @@
    {
     "relicTypeHash": "脚部",
     "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
-    "propertyName": "防御力",
-    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+    "propertyName": "速度",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
    },
    {
     "relicTypeHash": "位面球",

@@ -1,7 +1,2593 @@
 {
+ "spRequirement": 120,
+ "iconPath": "f859b7e6883888a5c67f95c0b77ab9022baa8d5b7127c9e69e54c73882a3f5bc",
+ "bgPath": "e59cb1b2d8fce704a5c96c214a3aa66ad9491cba214eeaa1f697ba435562d3f0",
+ "figPath": "698be71de82ccb269c3426b21e0bb482a694b87a68fb64f313f282287f87989b",
+ "fgPath": "e8cc6f17e26dca8f890340de77c9e8ac9f569ba12cc8cf1f9ad59552dec72696",
+ "splashIconPath": "003142928005063f6bc654d1675ee44f6b516b5c67597a1a771ab6cfaa80d25f",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 5,
+  "iconPath": "219d7f753cdf2f5d6b8e5f2e9e80865b38cf3587ca7cbe0d26db6d539dcd3060",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "af49f8c10262045a4f9e4740703b52056b5f396b48b99c2d130c22f3dbfa99d9",
+   "name": "Credit",
+   "desc": "Diese Währung, die von der Interastrale Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
+   "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
+   "purpose": "Gemeinsame Währung",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Blütenkelch (Große Mine)",
+    "Missionsbelohnungen",
+    "Auftragsbelohnungen",
+    "Glut-Tausch"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "b0f1cfc56ed708ca47e85bd5f199c02e9c2804f06ed290d904d0118b171f57e5",
+   "name": "Spuren des Schicksals",
+   "desc": "Fortschrittliches Material zum Hochstufen von Spuren.",
+   "lore": "Unzählige Fehlschläge sicherten deinen Sieg und deine kleinen Schritte führten dich an den Wendepunkt des Schicksals.",
+   "purpose": "Spurenmaterial",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Punktebelohnungen in der Universum-Simulation",
+    "Namenlose Ehre",
+    "Glut-Tausch",
+    "Belohnungen für zeitlich begrenzte Aktionen"
+   ]
+  },
+  "151161": {
+   "id": 151161,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "0e90bc4981e151e0911918ca07ff55d038f82c2fd201a4129191d67d9a56ca76",
+   "name": "Blitzstab des Gestaltenwandlers",
+   "desc": "Ein Holzstab mit einer spitzen Spitze, der vom Jünger des Sanctus Medicus: Gestaltenwandler zurückgelassen wurde. Material zum Aufstieg der Figuren mit Blitz-Typ.",
+   "lore": "Uralten Aufzeichnungen der Xianzhou zufolge beherrschen die Erhobenen Blitz und Wind. Die Jünger des Sanctus Medicus behaupteten, sie wären die Nachfolger der Götter. Ihre Demonstrationen göttlicher Kräfte brachten den Jüngern viele heimliche Anbeter ein. Blitze schlängeln sich um diesen Stab ... Waren die Jünger vielleicht wirklich keine gewöhnlichen Sterblichen?<br /><br />„Der sterbliche Körper ist bloß eine Illusion. Nur jenen, die sich erheben, offenbart sich die Wahrheit.“",
+   "purpose": "Material zum Figurenaufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/151161",
+   "comeFrom": [
+    "Ruhender Schatten: Sternhafen",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "e23000552918166759cdcf3f7cef87ae31a78cb8ae8f5dcedc0c74a92b68f963",
+   "name": "Bedauern des unendlichen Pseudokörpers",
+   "desc": "Hochwertiges Material zum Hochstufen von Spuren",
+   "lore": "Egal, wie viele Körper es auch stiehlt, sein Wunsch bleibt unerfüllt. Ähnlich wie jene, die ein Unsterblichkeitselixier begehren, sehnt auch es sich nach einem unvergänglichen Gefäß – einem Gefäß, das es vermag, ihm die Angst vor der Vernichtung zu nehmen. Doch es weiß sehr wohl, dass dieser Traum niemals in Erfüllung gehen wird.<br /><br />„Ich habe die Feuersbrunst des Verunstalteten unzählige Welten verschlingen sehen und ich war eine seiner Flammen. Während ich jeder seiner Anordnungen Folge geleistet habe, wusste ich genau, dass auch dieses Feuer erlöschen würde, sollte es nichts mehr zu verbrennen geben ...“",
+   "purpose": "Spurenmaterial",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "Echo des Krieges: Schuppenklamm-Seenplatte"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ccf6a04abba3ee0c642f987df4acbfa23c97875710e72898f807325b14f938d0",
+   "name": "Reiseführer",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>20.000</nobr> Figuren-EP.",
+   "lore": "Pflichtlektüre für Weltreisende. Auf Knopfdruck beginnt eine angenehme Stimme in der Sprache des Lesers von den legendären Erlebnissen berühmter Abenteurer auf diversen Planeten zu erzählen und ihr gesammeltes Wissen zusammenzufassen.<br /><br />„Die brandneue Reiseführer-Reihe ‚Das Handbuch für die galaktische Küche‘ ist jetzt erhältlich.“<br />„Einsendungen bitte per Telepathie über Synästhesie-Leuchtfeuer ERD<nobr>-23</nobr>θ an das Team der Intelligenzia-Gilde. Flexible Zahlungsoptionen.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Vergessene Halle"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "3be91e7b878ba619cd2887b80d45437c95ca08491547d49be65898de505d6a7a",
+   "name": "Abenteuer-Log",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>5.000</nobr> Figuren-EP.",
+   "lore": "Eine säuberlich organisierte Sammlung lehrreicher Notizen mit unzähligen Illustrationen und Texten, die diverse Abenteuer vom Anfang bis zum Ende beschreiben, sowie wertvollen Tipps und Überlebenstechniken.<br /><br />„Warum werden die Daten nicht in einer Foto-CD gespeichert? Wäre doch viel praktischer.“<br />„Moderne Technologie ist angesichts von Sternenstürmen und Neuronenfluss-Eruptionen viel empfindlicher, als man denkt. Außerdem hätte der Autor des Buchs sicher gewollt, dass man es auf die einfachste Art liest.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Tägliches Training",
+    "Glut-Tausch"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "986cb8eacfc77a347d7be45f6ba74ecf909ec26ffffd577c9ff6129bdfa93544",
+   "name": "Reisebegegnungen",
+   "desc": "Erfahrungsmaterial für Figuren, enthält <nobr>1.000</nobr> Figuren-EP.",
+   "lore": "Ein unleserlich von Hand geschriebenes Reisetagebuch mit wirren Inhalten. Es nützt dir wenig.<br /><br />„Dan Heng, lies das endlich fertig, damit es in den Müll kann.“",
+   "purpose": "Material zu Figuren-EP",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Auftragsbelohnungen"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "b256558a3cf35b29a5e77a7324f48cb5e93f8fe46b3f7e5052e9e0aed9bc10f9",
+   "name": "Instinkt des Diebes",
+   "desc": "Eine kleine Menge von Antimaterie. Ein Rohmaterial zur Verstärkung.",
+   "lore": "Eine kleine Menge Antimaterie, die aus dem Leeren-Ranger: Plünderer austritt wie die Materialisierung seines zerstörerischen Instinkts.<br /><br />„Sie alle freuen sich auf den Moment der Auslöschung, wenn sie neu geschmiedet werden und mit der gesamten Welt verschmelzen.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "Antimaterie-Legion",
+    "Universum-Simulation-Gegner",
+    "Auftragsbelohnungen",
+    "Glut-Tausch",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "a37da05958d9ef643e353e23b21bf7c7fd29f11504f3d16bb382ec0ecf6b2241",
+   "name": "Ehrgeiz der Verzerrung",
+   "desc": "Eine mittelgroße Menge an Antimaterie. Ein normales Material zur Verstärkung.",
+   "lore": "Eine mittelgroße Menge Antimaterie, die um den Leeren-Ranger: Verzerrer herumschwebt. Die Menge der Materie- und Antimaterieteilchen hat ein gefährliches Verhältnis erreicht ...<br /><br />„Sie alle freuen sich auf den Moment der Auslöschung, wenn sie neu geschmiedet werden und mit der gesamten Welt verschmelzen.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "Antimaterie-Legion auf Balance-Stufe 2 oder höher",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "6502db5082d780dc28897c77116d4c5eb48169a0e53851e06a7c2657d90cd457",
+   "name": "Obsidian der Glanzlosigkeit",
+   "desc": "Ein aus dem All geborgenes Fragment aus Dunkler Materie, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad der Nichtigkeit</span> ein wenig hochgestuft werden können.",
+   "lore": "Was es wirklich ist, ist für alle unergründlich.<br />Wenn du den Splitter berührst, hörst du ein undeutliches Murmeln.<br /><br />„████ ██ █ █“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "Blütenkelch (Große Mine)",
+    "Glut-Tausch"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "318925ae17d42965fdddb53e738c13c0c236cc9ef5112da308ef37a83eafb91b",
+   "name": "Wille des Eroberers",
+   "desc": "Kondensierte Antimaterie. Ein fortschrittliches Material zur Verstärkung.",
+   "lore": "Hochverdichtete Antimaterie im Körper des Leeren-Rangers: Trampler. Der Moment der Auslöschung ist der Fanfarenstoß für die Zerstörung der Zivilisationen.<br /><br />„Sie alle freuen sich auf den Moment der Auslöschung, wenn sie neu geschmiedet werden und mit der gesamten Welt verschmelzen.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "Antimaterie-Legion auf Balance-Stufe 4 oder höher",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "31a61b0ec4c9099529f319a194bb01941ee492504181d295998438acc9420fe1",
+   "name": "Obsidian der Besessenheit",
+   "desc": "Ein aus dem All geborgenes großes Stück Dunkler Materie, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad der Nichtigkeit</span> stark hochgestuft werden können.",
+   "lore": "Wer in dieses Prisma hineinschaut und schwachen Verstandes oder Willens ist, wird für alle Zeit ins Chaos gestürzt.<br /><br />„         “",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "Blütenkelch (Große Mine)",
+    "Omni-Synthesemaschine – Materialsynthese"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "45ee8937d4435f1ef12bea975f3ecdad0de8bb040c92d255fb7bae223596dc37",
+   "name": "Obsidian der Trostlosigkeit",
+   "desc": "Ein aus dem All geborgener Brocken aus Dunkler Materie, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad der Nichtigkeit</span> mäßig hochgestuft werden können.",
+   "lore": "Nichts spiegelt sich in der Oberfläche dieses schwarzen Prismas. Es scheint nicht nur das Licht komplett zu absorbieren, sondern auch die Emotionen seines Trägers, sodass nur Leere zurückbleibt.<br /><br />„...“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "Blütenkelch (Große Mine)",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Glut-Tausch"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 92.4,
+   "attackAdd": 4.62,
+   "hpBase": 147.84,
+   "hpAdd": 7.392,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549437,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 129.36,
+   "attackAdd": 4.62,
+   "hpBase": 206.976,
+   "hpAdd": 7.392,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549437,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 166.32,
+   "attackAdd": 4.62,
+   "hpBase": 266.112,
+   "hpAdd": 7.392,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633378,
+     "count": 6
+    },
+    {
+     "id": 151161,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 203.28,
+   "attackAdd": 4.62,
+   "hpBase": 325.248,
+   "hpAdd": 7.392,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633378,
+     "count": 9
+    },
+    {
+     "id": 151161,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 240.24,
+   "attackAdd": 4.62,
+   "hpBase": 384.384,
+   "hpAdd": 7.392,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717319,
+     "count": 6
+    },
+    {
+     "id": 151161,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 277.2,
+   "attackAdd": 4.62,
+   "hpBase": 443.52,
+   "hpAdd": 7.392,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717319,
+     "count": 9
+    },
+    {
+     "id": 151161,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 314.16,
+   "attackAdd": 4.62,
+   "hpBase": 502.656,
+   "hpAdd": 7.392,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "7f449dc1ae7c6b3f1845e1b2bded595bc6ba718515ff13d7384e3ce904d963eb",
+   "artPath": "1c072f3f7a7cb4f1cd836d820dc081ac068547bfa07da8bc8b514d606fa69dc6",
+   "name": "Da capo",
+   "descHash": "Bei Auslösung eines Folgeangriffs durch das Talent besteht eine Grundchance von <nobr>#1[i]%</nobr>, den erlittenen DoT des Ziels für <nobr>#3[i]</nobr> Rd. um <nobr>#2[i]%</nobr> zu erhöhen.",
+   "params": [
+    1,
+    0.3,
+    2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "340e9cfce792d877f059b435a2656db810128fbec8207f149de95185e301f85a",
+   "artPath": "538224d1bff4ddaa5b3a382b7dec6715f6e203787514ae30fc8580592786c8b9",
+   "name": "Fortississimo",
+   "descHash": "Erhöht den DoT aller Verbündeten um <nobr>#1[i]%</nobr>, wenn Kafka mitkämpft.",
+   "params": [
+    0.25
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "e4fd62301365654039b8c84460ccb16a20ab5cb2faf12a1d9dade23fe08722a1",
+   "artPath": "2b4352d4b216a9cb438cec1e1d26e31cf8eb3bc9ee96180badfb8edfd0dc7458",
+   "name": "Capriccio",
+   "descHash": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis zu max. St. <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "c367c02f826fc424020d408aa0b9c7318c03e96d73b4d4b3b45fb39e6cb89b0d",
+   "artPath": "545978438fe77fd11e96d5d814d0b9e455c834b76876eada4d9f61a0feb0cefb",
+   "name": "Rezitativ",
+   "descHash": "Wenn ein Gegner SCH durch den von Kafka verursachten Schock-Status erleidet, wird die Energie von Kafka zusätzlich um <nobr>#1[i]</nobr> Pkt. wiederhergestellt.",
+   "params": [
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "ed217ccef1e28f7f0bcc337b15c89a5083eaff20cb401df044f77e29a4ab22a3",
+   "artPath": "ad11af38cac6d336542559c17e9f6af943c5bc550c8bbf22c6842f90c48ce575",
+   "name": "Doloroso",
+   "descHash": "Ultimate-Stufe +2 bis zu max. St. <nobr>15</nobr>. Talentstufe +2 bis zu max. St. <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "4bca988620205c3556722def976f5fdcebf6c6fc16023306164d2741398d72fb",
+   "artPath": "0c6de292bbf00c2ec39ab0fa05611237d4691eb84e9fd7048b39a8e6c908559b",
+   "name": "Leggiero",
+   "descHash": "Erhöht den SCH-Multiplikator des Status Schock durch Ultimate, Technik und Folgeangriffe des Talents um <nobr>#1[i]%</nobr> und verlängert den Status Schock um <nobr>#2[i]</nobr> Rd.",
+   "params": [
+    1.56,
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   791017
+  ],
+  [
+   874958
+  ],
+  [
+   958899
+  ],
+  [
+   75544
+  ],
+  [
+   360071
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Einzelangriff",
+   "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Kafkas ANG zu.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 791017,
+   "name": "Mitternächtlicher Tumult",
+   "iconPath": "dba5891f5599c31ae5f38f0b5ba363ad6a3e92a892133b7c306bfa1f2c821680",
+   "typeDescHash": "Standardangriff",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Ausdehnung",
+   "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Kafkas ANG zu und fügt angrenzenden Zielen <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> von Kafkas ANG zu.<br />Befindet der anvisierte Gegner sich momentan unter Einfluss von DoT, so erleidet er sofort zusätzlich SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> des aktuell insgesamt erlittenen DoT.",
+   "ultimateCost": 0,
+   "break": "60 + 30/adjacent",
+   "energy": "30",
+   "id": 874958,
+   "name": "Streichelndes Mondlicht",
+   "iconPath": "e4fd62301365654039b8c84460ccb16a20ab5cb2faf12a1d9dade23fe08722a1",
+   "typeDescHash": "Fertigkeit",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.8,
+      0.6,
+      0.3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.88,
+      0.615,
+      0.33
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.96,
+      0.63,
+      0.36
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.04,
+      0.645,
+      0.39
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.12,
+      0.66,
+      0.42
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      0.675,
+      0.45
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3,
+      0.69375,
+      0.4875
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.4,
+      0.7125,
+      0.525
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      0.73125,
+      0.5625
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.6,
+      0.75,
+      0.6
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.68,
+      0.765,
+      0.63
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.76,
+      0.78,
+      0.66
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.84,
+      0.795,
+      0.69
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.92,
+      0.81,
+      0.72
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.825,
+      0.75
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Flächenangriff",
+   "descHash": "Fügt allen Gegnern <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Kafkas ANG zu und hat eine <u>Grundchance</u> von <nobr>#2[i]%</nobr>, bei betroffenen Gegnern Schock zu verursachen und ihnen unmittelbar SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> des ursprünglichen SCH durch den Status Schock zuzufügen. Der Schock hält <nobr>#3[i]</nobr> Rd. an.<br />Geschockte Gegner erleiden zu Beginn jeder Runde <span style=\"color:#c75de2;\">Blitz</span>-DoT in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> von Kafkas ANG.",
+   "ultimateCost": 120,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 958899,
+   "name": "Dämmerungstriller",
+   "iconPath": "d60a4a8778ee3e234488deb0f1ca6e937028af85aa8762b90ad18c0b8fa63661",
+   "typeDescHash": "Ultimate",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.48,
+      1,
+      2,
+      1.16,
+      0.8
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.512,
+      1,
+      2,
+      1.26875,
+      0.82
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.544,
+      1,
+      2,
+      1.3775,
+      0.84
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.576,
+      1,
+      2,
+      1.48625,
+      0.86
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.608,
+      1,
+      2,
+      1.595,
+      0.88
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.64,
+      1,
+      2,
+      1.758125,
+      0.9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.68,
+      1,
+      2,
+      1.975625,
+      0.925
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.72,
+      1,
+      2,
+      2.2475,
+      0.95
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.76,
+      1,
+      2,
+      2.57375,
+      0.975
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8,
+      1,
+      2,
+      2.9,
+      1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.832,
+      1,
+      2,
+      3.041375,
+      1.02
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.864,
+      1,
+      2,
+      3.18275,
+      1.04
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.896,
+      1,
+      2,
+      3.324125,
+      1.06
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.928,
+      1,
+      2,
+      3.4655,
+      1.08
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.96,
+      1,
+      2,
+      3.606875,
+      1.1
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Einzelangriff",
+   "descHash": "Nach dem Einsatz des Standardangriffs von einem Verbündeten führt Kafka sofort einen <u>Folgeangriff</u> aus und fügt dem Ziel <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Kafkas ANG zu. Es besteht eine Grundchance von <nobr>#2[i]%</nobr>, dem angegriffenen Gegner für <nobr>#3[i]</nobr> Rd. Schock zuzufügen, der dem Status Schock des Ultimates entspricht. Dieser Effekt kann nur 1-mal pro Runde ausgelöst werden.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "10",
+   "id": 75544,
+   "name": "Sanft, aber grausam",
+   "iconPath": "b7e571ccd75c835eb8ba740cd12498197757e39280d777af56aae5d780ac37b2",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.42,
+      1,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.518,
+      1,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.616,
+      1,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.714,
+      1,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.812,
+      1,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.91,
+      1,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.0325,
+      1,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.155,
+      1,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2775,
+      1,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.4,
+      1,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.498,
+      1,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.596,
+      1,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.694,
+      1,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.792,
+      1,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.89,
+      1,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Greift den Gegner an und schwächt nach Kampfeintritt den Widerstand des Ziels gegen den entsprechenden Typ.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 276130,
+   "name": "Angriff",
+   "iconPath": "dba5891f5599c31ae5f38f0b5ba363ad6a3e92a892133b7c306bfa1f2c821680",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Greift alle Gegner innerhalb einer gewissen Reichweite unmittelbar an und fügt nach Kampfeintritt allen Gegnern <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <nobr>#3[i]%</nobr> von Kafkas ANG zu. Es besteht eine <u>Grundchance</u> von <nobr>#1[i]%</nobr>, jedem einzelnen Gegner für <nobr>#2[i]</nobr> Rd. den Status Schock zuzufügen, der dem Status Schock des Ultimates entspricht.",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "0",
+   "id": 360071,
+   "name": "Gnade ist nicht Vergebung",
+   "iconPath": "4ff59879f2d6750e8ebf929cdd9b79f7728a0854cef74af932d08d2dd35dbad6",
+   "typeDescHash": "Technik",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      2,
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1005102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1005205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1005206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1005207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 227729,
+          "name": "ANG-Verstärkung",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+          "statusList": [
+           {
+            "key": "ANG",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836255,
+            "count": 3
+           },
+           {
+            "id": 717319,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 227728,
+        "name": "Effekt-Trefferrate-Erhöhung",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+        "statusList": [
+         {
+          "key": "Effekt-Trefferrate",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836255,
+          "count": 3
+         },
+         {
+          "id": 717319,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 227731,
+      "name": "ANG-Verstärkung",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "ANG",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920196,
+        "count": 5
+       },
+       {
+        "id": 633378,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Wird ein geschockter Gegner besiegt, erhält Kafka zusätzlich <nobr>#1[i]</nobr> Pkt. Energie zurück.",
+    "ultimateCost": 0,
+    "id": 227639,
+    "name": "Plünderung",
+    "iconPath": "290aac94c6909b028b127e12ddeee304fa847430a57bf462c4679aa1a65ac499",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       5
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920196,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1005201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1005210,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 311675,
+      "name": "ANG-Verstärkung",
+      "levelReq": 80,
+      "promotionReq": 0,
+      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "statusList": [
+       {
+        "key": "ANG",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 227735,
+    "name": "ANG-Verstärkung",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "statusList": [
+     {
+      "key": "ANG",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549437,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1005101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1005202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1005203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1005204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 227730,
+          "name": "LP-Verstärkung",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+          "statusList": [
+           {
+            "key": "LP",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920196,
+            "count": 3
+           },
+           {
+            "id": 633378,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 227733,
+        "name": "ANG-Verstärkung",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "statusList": [
+         {
+          "key": "ANG",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920196,
+          "count": 3
+         },
+         {
+          "id": 633378,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 227732,
+      "name": "Effekt-Trefferrate-Erhöhung",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+      "statusList": [
+       {
+        "key": "Effekt-Trefferrate",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635669,
+        "count": 3
+       },
+       {
+        "id": 549437,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Beim Einsatz des Ultimates erleiden Gegner sofort SCH basierend auf allen aktuellen DoT-Debuffs zusätzlich zum SCH durch den Status Schock.",
+    "ultimateCost": 0,
+    "id": 227636,
+    "name": "Folter",
+    "iconPath": "0c8c5ecc2ec4612a291694ac7f8ff5106e6f58cd0ad80079c34363eff9b3f050",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635669,
+        "count": 3
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1005103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1005208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 227742,
+      "name": "LP-Verstärkung",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "LP",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1005209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 227743,
+      "name": "Effekt-Trefferrate-Erhöhung",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+      "statusList": [
+       {
+        "key": "Effekt-Trefferrate",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Erhöht die Grundchance des Status Schock durch Ultimate, Technik und Folgeangriffe des Talents um <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 227638,
+    "name": "Dornen",
+    "iconPath": "c494145800117e94302b258ed4e3f2ca5e821aaca1f3be3bbf6e3adb498bab9a",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.3
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Körper",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "ANG",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+   },
+   {
+    "relicTypeHash": "Füße",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "GES",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+   },
+   {
+    "relicTypeHash": "Planarsphäre",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "Blitz-SCH-Erhöhung",
+    "propertyIconPath": "6acd635b37377d308961b26cf64a7a0ceed4e922bdf0427b620249351796ecd4"
+   },
+   {
+    "relicTypeHash": "Verbindungsseil",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "ANG",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Erstes Treffen",
+   "text": "Hallo, Leute im Astralexpress ... Nun, ihr habt mich erwischt.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 2,
+   "title": "Begrüßung",
+   "text": "Raum und Zeit sind praktisch unendlich, doch kommen wir genau hier und jetzt zusammen. Das ist die Natur des Schicksals. Es schafft Wunder, aber es lässt dich glauben, dass alles nur ein Zufall ist.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 3,
+   "title": "Abschied",
+   "text": "Tschüss. Mal sehen, ob du mich das nächste Mal überraschen kannst.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 4,
+   "title": "Über sich selbst",
+   "text": "Bevor ich mich den Stellaron-Jägern anschloss, begegnete ich aufgrund meiner Arbeit kaum einer Person zweimal.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 5,
+   "title": "Plaudern: Furcht",
+   "text": "Elio sagte, ich sei gut darin, „Angst“ zu erzeugen, auch wenn ich nicht einmal weiß, was das ist.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 6,
+   "title": "Plaudern: Violine",
+   "text": "Das Spielen einer Geige und das Abfeuern einer Waffe erfordert gleichermaßen flexible Finger, aber Kugeln sind gefügiger.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 7,
+   "title": "Hobbys",
+   "text": "Ich liebe Samtmäntel besonders, sie sind so empfindlich und schön, und schwer zu pflegen. Ein klein wenig Nachlässigkeit könnte den Glanz zerstören.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 8,
+   "title": "Ärgernisse",
+   "text": "Die Vergangenheit und die Zukunft sind einander so ähnlich. Sie sind mir gleichgültig.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 9,
+   "title": "Etwas Mitteilenswertes",
+   "text": "Es gibt einen Planeten, zu dem ich jeden Sommer reise, um das Meer zu betrachten. Wenn die Gezeiten am stärksten sind, muss man weit weg vom Ufer stehen. Eines Tages haben sie dann einen langen Steg zur Beobachtung gebaut. Seitdem bin ich nicht mehr dorthin zurückgekehrt.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 10,
+   "title": "Wissen",
+   "text": "Meine Heimatwelt ist einer von vielen Planeten, die von einem Stellaron verändert wurden ... *seufz* Es ist eine Schande, dass ich nicht miterleben konnte, wie sie damals zerfiel.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 11,
+   "title": "Über Silberwolf",
+   "text": "Ich unterhalte mich gerne mit Silberwolf. Für jemanden, der so klein ist, hat sie eine Menge Ideen.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 12,
+   "title": "Über Blade",
+   "text": "Bladie ... Er macht seinem Namen alle Ehre. Es ist ein Vergnügen, ihn kämpfen zu sehen.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 51,
+   "title": "Kampf beginnt: Schwächebruch",
+   "text": "Gefangen im Netz.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 52,
+   "title": "Kampf beginnt: Gefahrenwarnung",
+   "text": "Gerade noch rechtzeitig.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 53,
+   "title": "Runde beginnt 1",
+   "text": "Mache ich sie alle einfach fertig!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 54,
+   "title": "Runde beginnt: 2",
+   "text": "Dieses Gefühl beim Atmen? Vergiss es nicht.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 55,
+   "title": "Warten auf Runde",
+   "text": "Es ist Zeit.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 56,
+   "title": "Standardangriff",
+   "text": "Das wird nicht lange dauern.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 57,
+   "title": "Leicht getroffen",
+   "text": "Das hat nicht weh getan.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 58,
+   "title": "Schwer getroffen",
+   "text": "Nicht schlecht.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 59,
+   "title": "Ultimate: Aktivieren",
+   "text": "Gute Zeiten dauern nie lange.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 60,
+   "title": "Ultimate: Einsetzen",
+   "text": "Es ist an der Zeit, dich zu verabschieden ...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 61,
+   "title": "Talent 1",
+   "text": "Entspann dich.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 62,
+   "title": "Talent 2",
+   "text": "Steh still.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 63,
+   "title": "Handlungsunfähig",
+   "text": "Das ... ist nicht das Ende.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 64,
+   "title": "Zurück zum Kampf",
+   "text": "Oh! Ich lebe noch.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 65,
+   "title": "LP wiederhergestellt",
+   "text": "Vielen Dank, du bist so gut zu mir.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 66,
+   "title": "Technik",
+   "text": "Tut das weh?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 67,
+   "title": "Kampf gewonnen",
+   "text": "Der menschliche Körper ist wunderschön in seiner Zerbrechlichkeit.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 68,
+   "title": "Schatz öffnen",
+   "text": "Wird hilfreich sein.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 69,
+   "title": "Rätsel gelöst",
+   "text": "Gute Arbeit.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 70,
+   "title": "Gegner gefunden",
+   "text": "Hä, sie scheinen sich nicht zu freuen, uns zu sehen ...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 71,
+   "title": "Zurück zur Stadt",
+   "text": "*seufz* Ist das etwa ein Fleck? Ich mag diesen Mantel.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Figurendetails",
+   "text": "Kafkas Eintrag auf der Fahndungsliste der Interastralen Friedenskorporation hat lediglich zwei Punkte – ihren Namen und einen einzigen Satz: „Sammelt gerne Mäntel.“ Über diese Stellaron-Jägerin ist nur wenig bekannt, abgesehen davon, dass sie eines der vertrauenswürdigsten Mitglieder von Elio, „Knecht des Schicksals“ ist.<br />Kafka macht sich an die Arbeit, um die von Elio voraussehende Zukunft zu verwirklichen.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Geschichte (Teil 1)",
+   "text": "„Kafka, weiblich. Stammt aus Neubabylon auf Pteruges-V. Sie ist ein Kernmitglied der Stellaron-Jäger und die Stellvertreterin des ‚Knechts des Schicksals‘. Für folgende Vergehen verantwortlich: Der Überfall auf Pier Point, zweimal; Der Raubüberfall auf Pier Point; Das Verschwinden von Trovys; Die Stellaron-Vorfälle auf Jemorse, Bayjhana, Shilla<nobr>-39</nobr>C, Ulmora, 7-Midville, Loar<nobr>-51</nobr> und Dro’a; Cyberangriffe auf Pier Point, viermal; Cyberangriffe auf den Planeten Screwllum; Cyberangriffe auf die Herta-Raumstation; Die Rebellion von Jepella. Steht im Verdacht, mit den folgenden Vergehen in Verbindung zu stehen: Die Stellaron-Vorfälle auf Sich-Lala, Inupeis, Oun-G7, Zukov, Lidovia, Illily, Attouine, Buhayama.<br />Höchste Fahndungsstufe. Tot oder lebendig.“<br /><align=\"right\">– Gesucht von der Interastralen Friedenskorporation</align>",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>20</nobr> freigeschaltet"
+  },
+  {
+   "title": "Geschichte (Teil 2)",
+   "text": "„... Angesichts der Notwendigkeit, die Ermittlungen zu intensivieren, werden nun die folgenden grundlegenden Informationen über die Verdächtige veröffentlicht: Verdächtige Kafka (Fahndungsnummer: L<nobr>933012000020002010004</nobr>), weiblich, Außenweltlerin, Alter unbekannt; Größe etwa <nobr>170</nobr> Zentimeter, durchschnittliche Statur. Sie wurde mit einer schwarzen ärmellosen Weste, weißem Kragenhemd, eng anliegenden dunklen Shorts, violetten Strumpfhosen und einer Sonnenbrille gesehen.<br />Die Verdächtige wird mit mehreren unnatürlichen Katastrophen in Verbindung gebracht, die sich in der jüngsten Vergangenheit auf der Luofu ereignet haben. Sie ist momentan auf der Flucht und wird auf der Luofu öffentlich gesucht. Alle Abteilungen und Einheiten, die die Verdächtige entdecken, werden gebeten, sich mit den örtlichen Wolkenrittern in Verbindung zu setzen. Bitte fordern Sie die Verdächtige auf, sich selbst zu stellen und kein Risiko einzugehen.“<br /><align=\"right\">– Gesucht von der Luofu (widerrufen)</align>",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>40</nobr> freigeschaltet"
+  },
+  {
+   "title": "Geschichte (Teil 3)",
+   "text": "„... Diese Frau heißt Kafka, eine neue Jägerin, nicht aktenkundig und gehört keiner bestimmten Organisation an. Sie besitzt eine Fähigkeit namens Geistergeflüster, mit der sie andere durch ihre Sprache hypnotisieren und manipulieren kann. Vor kurzem wurde sie in Riverland, Neubabylon, gesehen. Sie wurde gesehen, wie sie mit dem Landesherrn Shilde sprach und mit ihm vor <nobr>143</nobr> Zeugen verschwand. Dann tauchte sie in einem Bekleidungsgeschäft auf und nahm vor 6 Zeugen eine schwarze Weste, zwei weiße Hemden und ein rotes Kleid mit. Später wurde sie von <nobr>28</nobr> Personen in einem alten Musikgeschäft gesehen, wo sie aber nichts kaufte. Bevor sie in der Riverland-Wachstation auftauchte, wurde sie im Zentralpark von <nobr>2695</nobr> Personen gesichtet. Wir fordern Kafkas Kopf, denn ihre Verbrechen dürfen nicht ungestraft bleiben.“<br /><align=\"right\">– Gesucht von den Teufeln von Pteruges-V</align>",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>60</nobr> freigeschaltet"
+  },
+  {
+   "title": "Geschichte (Teil 4)",
+   "text": "„... Geht auf Pteruges-V zu dem verlassenen Gebäude bei den Koordinaten <nobr>135</nobr>:<nobr>7372124</nobr>, <nobr>271</nobr>:<nobr>6372711</nobr>. Geht hinein. Im ersten Stock befindet sich unter der Fensterbank eine ungeöffnete Getränkedose. Nehmt sie mit. Wartet bis Mittwoch <nobr>11</nobr>:<nobr>12</nobr> Uhr und stellt die Dose vor den Eingang des Gebäudes. Kafka wird 2 Minuten später erscheinen. Es kann sein, dass sie stehen bleiben wird, um die Dose zu untersuchen. Nutzt diese Gelegenheit und werft ihr den Ball vor die Füße. Ich übernehme dann und spreche mit ihr ...<br />Es besteht aber auch die Möglichkeit, dass Kafka die Dose ignoriert. In dem Fall werft ihr den Ball einfach weg. Ihr werdet zwar sterben, aber das muss jeder einmal. Ich werde die Zukunft, nach der ihr euch gesehnt habt, verwirklichen.“<br /><align=\"right\">– Gesucht vom Knecht des Schicksals</align>",
+   "unlockRequirement": "Wird auf Figurenstufe <nobr>80</nobr> freigeschaltet"
+  }
+ ],
+ "archive": {
+  "cvCn": "徐慧",
+  "cvJp": "伊藤静",
+  "cvKr": "사문영",
+  "cvEn": "Cheryl Texiera",
+  "camp": "Stellaron-Jäger"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
  "name": "Kafka",
  "rarity": 5,
- "descHash": "Diese ruhige, gefasste und professionell auftretende Schönheit ist Mitglied der Stellaron-Jäger. Sie bereitete Trailblazer mithilfe von Hypnose darauf vor, das Stellaron in sich aufzunehmen. Mag es, shoppen zu gehen und ihre Mäntel zu sortieren.",
+ "descHash": "Diese ruhige, gefasste und professionell auftretende Schönheit ist Mitglied der Stellaron-Jäger. Sie bereitete Trailblazer mithilfe von Geistergeflüster darauf vor, das Stellaron in sich aufzunehmen. Mag es, shoppen zu gehen und ihre Mäntel zu sortieren.",
  "artPath": "c3d9b49fe10e24dd59eeb58ee6f31a1b3c939bc924bdd58ba66d71f676c70b04",
  "miniIconPath": "9dcc998c64c6aedefa5d9507a356bcfa4230077449edba27a6581f4d009c113a",
  "damageType": {

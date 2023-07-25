@@ -69,6 +69,12 @@
                     android:layout_height="wrap_content"
                     android:text="org.json.JSONException: Value {} at 2 of type org.json.JSONObject cannot be converted to JSONArray"
                     android:textColor="@color/tv_nightday_tint" />
+
+                <WebView
+                    android:id="@+id/bug_webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:visibility="gone" />
             </LinearLayout>
         </ScrollView>
 
@@ -104,7 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:text="Email" />
+                android:text="@string/bug_report_btn_report" />
         </FrameLayout>
     </LinearLayout>
 

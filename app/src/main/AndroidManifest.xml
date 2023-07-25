@@ -11,6 +11,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/app_ico"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.HonkaiStargazer">
         <activity
@@ -18,11 +19,6 @@
             android:exported="false"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/Theme.HonkaiStargazer.NoActionBar" />
-        <activity
-            android:name=".AimActivity"
-            android:exported="false"
-            android:label="@string/title_activity_aim"
-            android:theme="@style/Theme.HonkaiStargazer" />
         <activity
             android:name=".ui.MuseumPage"
             android:exported="false"

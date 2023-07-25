@@ -13,6 +13,7 @@ public class HSRItem {
     public String path; //元素
     public int rare = 0; //稀有度
     public String status; //即將推出
+    public String sex; //性別
 
     public double HP;
     public double DEF;
@@ -106,5 +107,13 @@ public class HSRItem {
 
     public void setFileName(String fileName) {
         this.fileName = fileName;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 }

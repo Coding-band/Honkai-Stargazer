@@ -1,10 +1,10 @@
 {
  "spRequirement": 120,
- "iconPath": "e5d864c6ff384fb640739a9e1c73308556b2ad59e3383cf5c55fe2fd9c18ee0b",
+ "iconPath": "15523f3647986fee34b61fe1fa520b566255cf9b4dafa815574791cf761d07bf",
  "bgPath": "3fa1eb9e9ba45969a37027482c706be3aac81ac1d6e4f7982ed5dd67c43016b2",
- "figPath": "c22dfae7568a1d31d238ad50ad01c6226d04d58e8b7346def94044b4f70cdcae",
+ "figPath": "c6593ec959483a23452832dcdf7f927e58906e7719c503d9b5c3b70fbee2bea7",
  "fgPath": "1c3e43f2e29ef9d1c5c4cb9c82a8c061d380003313047fcb76c5a380bd70a9a0",
- "splashIconPath": "055b8bcad58b75e935ef230e8f98214812101765b2106f9051aca37ca7dd2b38",
+ "splashIconPath": "e54404a449506c7e24c245f54dad95b5999e8a802a6eb15684d23c91d15f9c84",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "擬造花萼【大礦區】",
     "任務獎勵",
-    "委託獎勵"
+    "委託獎勵",
+    "餘燼兌換"
    ]
   },
   "125435": {
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "擬造花萼【城郊雪原】",
-    "每日實訓"
+    "每日實訓",
+    "餘燼兌換"
    ]
   },
   "409962": {
@@ -179,7 +181,8 @@
    "rarity": 2,
    "rewardPath": "/material/635670",
    "comeFrom": [
-    "擬造花萼【機械聚落】"
+    "擬造花萼【機械聚落】",
+    "餘燼兌換"
    ]
   },
   "717289": {
@@ -230,7 +233,8 @@
    "rewardPath": "/material/920197",
    "comeFrom": [
     "擬造花萼【機械聚落】",
-    "「萬能合成機」- 材料合成"
+    "「萬能合成機」- 材料合成",
+    "餘燼兌換"
    ]
   }
  },
@@ -421,7 +425,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "371c1538909a55030f5d4f64430454de28bce60e23f45420d6dee614f695bb06",
    "artPath": "f76fc71fe532ff644df5522a6541d5970783fbeeb04c4f11b29fa344e2eb36ae",
    "name": "養精蓄銳",
    "descHash": "施放戰技時，有<nobr>#1[i]%</nobr>固定概率恢復1個戰技點，該效果有1回合的觸發冷卻。",
@@ -431,7 +435,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "54c37b3ac614706a9c27fd758e831ab103d61602727c7328e6269183b2ee0d55",
    "artPath": "43746abe73215a5325802ea470ca97170943c151f38823f0f8d73888c4a08898",
    "name": "快速行軍",
    "descHash": "施放戰技時，被指定的我方目標在行動後速度提高<nobr>#1[i]%</nobr>，持續1回合。",
@@ -441,7 +445,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "d1ba5dc8cc105156c27441c5ad43cfce58688d0cd63f8463cc6719dc800a4c37",
    "artPath": "986959668883d50b9a6632a24d6bc0ce671bea47de2221c48c98389ce76b6152",
    "name": "鼓炮齊鳴",
    "descHash": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
@@ -449,7 +453,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "a91f41a2823a82a9012f83f3fdffd3fb3fc5e5125c8030413ffc91c651fb6d11",
    "artPath": "8a624bd9da254480123bcf3b1ca27f1f89a0f1d04702d8df44094dfc69fe293a",
    "name": "攻其不備",
    "descHash": "我方其他角色對弱點爲風屬性的敵方目標施放普攻後，布洛妮婭立即進行1次追加攻擊，對該目標造成等同於普攻傷害<nobr>#1[i]%</nobr>的風屬性傷害，該效果每回合可觸發1次。",
@@ -459,7 +463,7 @@
   },
   {
    "id": 5,
-   "iconPath": "",
+   "iconPath": "1c0b1d3bbd2b7376e6934f4ae327361d80d54137a5f16ccbe5830eabf235ffe0",
    "artPath": "36052e2484e82b6621315cea8235494fc3fceebfabc62d18efa4842fe214d792",
    "name": "所向克捷",
    "descHash": "戰技等級+2，最多不超過<nobr>15</nobr>級；普攻等級+1，最多不超過<nobr>10</nobr>級。",
@@ -467,7 +471,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "c9baf725a4ad35eac30d423e83adb26f889cd628ff913ecad7e1644f647ca320",
    "artPath": "7e64c42ea80c261f077c7b6ee1fddf7974d68fce70df4ad892b8e6fc37dbfbc6",
    "name": "氣貫長虹",
    "descHash": "戰技對指定我方目標造成的傷害提高效果的持續時間增加<nobr>#1[i]</nobr>回合。",
@@ -498,8 +502,8 @@
    "tagHash": "單攻",
    "descHash": "對指定敵方單體造成等同於布洛妮婭<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#00FF9C;\">風</span>屬性傷害。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 635672,
    "name": "馭風的子彈",
    "iconPath": "71c81ecfb436d5e7f326d39471b3c2f190ec56300a71bd4e1f97640a8dbd3f47",
@@ -659,8 +663,8 @@
    "tagHash": "輔助",
    "descHash": "解除指定我方單體的1個<u>負面效果</u>，並使該目標立即行動，造成的傷害提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>，持續<nobr>#3[i]</nobr>回合。<br />當對自身施放該技能時，無法觸發立即行動效果。",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 30,
+   "break": "0",
+   "energy": "30",
    "id": 920199,
    "name": "作戰再部署",
    "iconPath": "1c0b1d3bbd2b7376e6934f4ae327361d80d54137a5f16ccbe5830eabf235ffe0",
@@ -979,8 +983,8 @@
    "tagHash": "輔助",
    "descHash": "使我方全體攻擊力提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>，同時提高等同於布洛妮婭<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>暴擊傷害+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>的暴擊傷害，持續<nobr>#4[i]</nobr>回合。",
    "ultimateCost": 120,
-   "break": 0,
-   "energy": 5,
+   "break": "0",
+   "energy": "5",
    "id": 836258,
    "name": "貝洛伯格進行曲",
    "iconPath": "97459612506624e7a1ea8dbc485b2fede3ab5c7b5dab887c41594cd6b92bad2f",
@@ -1299,8 +1303,8 @@
    "tagHash": "強化",
    "descHash": "施放普攻後，布洛妮婭的下一次<u>行動提前</u><span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 5,
+   "break": "30",
+   "energy": "5",
    "id": 351145,
    "name": "先人一步",
    "iconPath": "af4b47219312bba33ddc3d06dec20136ae3313551cdaf78be06f76448476e39f",
@@ -1574,8 +1578,8 @@
    "tagHash": "",
    "descHash": "攻擊敵人，進入戰鬥後削弱敵方目標對應屬性韌性。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 551731,
    "name": "攻擊",
    "iconPath": "71c81ecfb436d5e7f326d39471b3c2f190ec56300a71bd4e1f97640a8dbd3f47",
@@ -1596,8 +1600,8 @@
    "tagHash": "輔助",
    "descHash": "使用祕技後，下一次戰鬥開始時使我方全體攻擊力提高<nobr>#1[i]%</nobr>，持續<nobr>#2[i]</nobr>回合。",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 435086,
    "name": "在旗幟下",
    "iconPath": "0e1d0e8ee9e043657c77874148bdd0901db777dc33d3e5dab84437789275bfe4",
@@ -1692,8 +1696,6 @@
    "embedBonusSkill": {
     "descHash": "普攻的暴擊率提高至<nobr>100%</nobr>。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 272877,
     "name": "號令",
     "iconPath": "2092bf49734665b568a478fac87adf54c7b9ad73b553081527308605fe476349",
@@ -1796,8 +1798,6 @@
    "embedBonusSkill": {
     "descHash": "戰鬥開始時，我方全體的防禦力提高<nobr>#2[i]%</nobr>，持續<nobr>#1[i]</nobr>回合。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 272880,
     "name": "陣地",
     "iconPath": "b296f3e7e18add176b9c2d4d7c88919d6a0f589d00f05f672fa369d7317c92d0",
@@ -1939,8 +1939,6 @@
    "embedBonusSkill": {
     "descHash": "布洛妮婭在場時，我方全體造成的傷害提高<nobr>#1[i]%</nobr>。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 272879,
     "name": "軍勢",
     "iconPath": "cee850bc7d23edfcd0e72754f7fa01f4f51d1f0ab52f0f69ed86518550f20553",
@@ -2089,8 +2087,8 @@
    {
     "relicTypeHash": "位面球",
     "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
-    "propertyName": "風屬性傷害提高",
-    "propertyIconPath": "fe44fb655f65017dcad0c260b4dcffe14de4b14816734239c2c60d4624cf8163"
+    "propertyName": "生命值",
+    "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7"
    },
    {
     "relicTypeHash": "連結繩",

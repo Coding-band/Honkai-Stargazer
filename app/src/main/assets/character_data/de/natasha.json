@@ -1,10 +1,10 @@
 {
  "spRequirement": 90,
- "iconPath": "7f01675b4fbd851a25c0344a1941b5ddca526bf2eaaa31eaf659638f7e957e9f",
+ "iconPath": "a335b20a8e91beb32d0b8ed58333c63860a71c3952d2c0ad09c3d2f7743816e3",
  "bgPath": "c2060b8bf30cf3f9ad6da9d0e68044a73dbc562111e6c686ea0f8aab3fff02a6",
- "figPath": "1231fb867d3a4ed02edd8cd58409599036aa8c09d97e4a48c3b8b7cb5c1bb1d4",
+ "figPath": "e8ad1491f88e49d73abed8598620c7595f2742afd8e6c572be4267983e8682ff",
  "fgPath": "ac6c4101946fdd160eb7995c2aff5bed3f3500c0a75f55ecdeaa1a2e3881b981",
- "splashIconPath": "8d749531e40fa03515c5a4e33a7f0c372f07f7f9f420a383dbbce09deff40335",
+ "splashIconPath": "a69755374a059aa5f0cd13eba8890b785e313e83538aa2cf53071c951de1d5e4",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Blütenkelch (Große Mine)",
     "Missionsbelohnungen",
-    "Auftragsbelohnungen"
+    "Auftragsbelohnungen",
+    "Glut-Tausch"
    ]
   },
   "125435": {
@@ -93,7 +94,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Blütenkelch (Äußere Schneewüste)",
-    "Tägliches Training"
+    "Tägliches Training",
+    "Glut-Tausch"
    ]
   },
   "409962": {
@@ -161,7 +163,8 @@
    "rarity": 2,
    "rewardPath": "/material/635671",
    "comeFrom": [
-    "Blütenkelch (Abgelegener Pass)"
+    "Blütenkelch (Abgelegener Pass)",
+    "Glut-Tausch"
    ]
   },
   "717290": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920198",
    "comeFrom": [
     "Blütenkelch (Abgelegener Pass)",
-    "Omni-Synthesemaschine – Materialsynthese"
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Glut-Tausch"
    ]
   }
  },
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "3e67cc1ffeb250a78e47565fb9bccd1f11ac7ab1e43f2a404607d0231807798e",
    "artPath": "2b9bc6bc86209e4c870dfdf01dee811bfccdc2fe2a01f4355768639e75b7bacb",
    "name": "Pharmakologisches Fachwissen",
    "descHash": "Wenn Natashas LP-Prozentsatz nach einem gegnerischen Angriff <nobr>#1[i]%</nobr> oder niedriger ist, heilt sie sich 1-mal und erhält <nobr>#2[i]%</nobr> ihrer max. LP plus <nobr>#3[i]</nobr> zurück. Dieser Effekt kann nur einmal pro Kampf ausgelöst werden.",
@@ -430,7 +434,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "5a8626736e9b9564b7fdc42d9c9fa98d54948a84d4e022f34c75d14b7a56ac38",
    "artPath": "234132c99ec4b09c63418c319c0328bd83435525be8a80be18eb863212db9507",
    "name": "Klinische Forschung",
    "descHash": "Der Ultimate gewährt Verbündeten, deren LP-Prozentsatz <nobr>#1[i]%</nobr> oder niedriger ist, für <nobr>#2[i]</nobr> Rd. kontinuierliche Heilung. Zu Beginn ihrer Runde werden ihre LP um <nobr>#3[i]%</nobr> von Natashas max. LP plus <nobr>#4[i]</nobr> wiederhergestellt.",
@@ -443,7 +447,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "a39c7966698ca938d477824695090dea69cc1d599f17fabffc8ef71ccdb52c78",
    "artPath": "d5523321ddb4158c1e54e36466fe80766e5fae0759e33c621b3a527a17b638d5",
    "name": "Das richtige Heilmittel",
    "descHash": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis zu max. St. <nobr>10</nobr>.",
@@ -451,7 +455,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "9b8e7ac8065b049cb4b1ab91764e8f41b40b2abf4c6fbd5f9beebbbf362b1c70",
    "artPath": "bba675ae9760eb057e6248567d26431c1919537860b7a62f11cd49d9a869f13c",
    "name": "Wundermittel",
    "descHash": "Wird Natasha angegriffen, erhält sie zusätzlich <nobr>#1[i]</nobr> Pkt. Energie zurück.",
@@ -469,7 +473,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "00f0382ba284f173d7015765d7e2cfa7a4aa42ef5061b3bdb025b4c7203a28a4",
    "artPath": "a503aed6f5c4617d93d6130daeebe936c20c5ada444f9c77796a795b5b129f00",
    "name": "Ärztliche Gnade",
    "descHash": "Der Standardangriff verursacht zusätzlichen physischen SCH in Höhe von <nobr>#1[i]%</nobr> von Natashas max. LP.",
@@ -500,8 +504,8 @@
    "tagHash": "Einzelangriff",
    "descHash": "Fügt einem anvisierten Gegner physischen SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Natashas ANG zu.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 985668,
    "name": "Freundliche Fassade",
    "iconPath": "6e18880adb27a24de954eb874a3666208a80ce79d4b31440eb8ddb735436920f",
@@ -661,8 +665,8 @@
    "tagHash": "Wiederherstellung",
    "descHash": "Stellt LP eines anvisierten Verbündeten sofort um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> von Natashas max. LP plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span> wieder her. Stellt außerdem LP des Verbündeten zu Beginn jeder Runde um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> von Natashas max. LP plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]</nobr></span> für <nobr>#3[i]</nobr> Rd. wieder her.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 30,
+   "break": "0",
+   "energy": "30",
    "id": 270195,
    "name": "Lieben, heilen und wählen",
    "iconPath": "a39c7966698ca938d477824695090dea69cc1d599f17fabffc8ef71ccdb52c78",
@@ -992,8 +996,8 @@
    "tagHash": "Wiederherstellung",
    "descHash": "Stellt LP aller Verbündeten sofort um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> von Natashas max. LP plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> wieder her.",
    "ultimateCost": 90,
-   "break": 0,
-   "energy": 5,
+   "break": "0",
+   "energy": "5",
    "id": 186254,
    "name": "Geschenk der Wiedergeburt",
    "iconPath": "e4113b795d199dc145b786aa8df64f9efbca4a4eb48bf2d1b32f570f030e1e6f",
@@ -1278,8 +1282,8 @@
    "tagHash": "Verstärkung",
    "descHash": "Heilt Natasha Verbündete mit LP-Prozentsatz von <nobr>#1[i]%</nobr> oder niedriger, wird die bewirkte Heilung um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> erhöht. Dieser Effekt wirkt auch bei der kontinuierlichen Heilung.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 470781,
    "name": "Innervation",
    "iconPath": "f04c3a92828ecb5b0f575fc618baa17993aae3e1603438fe14a9460bb3512ef9",
@@ -1564,8 +1568,8 @@
    "tagHash": "",
    "descHash": "Greift den Gegner an und schwächt nach Kampfeintritt den Widerstand des Ziels gegen den entsprechenden Typ.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 671367,
    "name": "Angriff",
    "iconPath": "6e18880adb27a24de954eb874a3666208a80ce79d4b31440eb8ddb735436920f",
@@ -1586,8 +1590,8 @@
    "tagHash": "",
    "descHash": "Greift den Gegner unmittelbar an. Fügt nach Kampfeintritt einem zufälligen Gegner physischen SCH in Höhe von <nobr>#4[i]%</nobr> von Natashas ANG zu und verursacht bei allen Gegnern mit einer <u>Grundchance</u> von <nobr>#1[i]%</nobr> Schwächung.<br />Geschwächte Gegner fügen Verbündeten für <nobr>#3[i]</nobr> Rd. <nobr>#2[i]%</nobr> weniger SCH zu.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 0,
+   "break": "60",
+   "energy": "0",
    "id": 554722,
    "name": "Hypnoseforschung",
    "iconPath": "46d2d672cb7b528c46c3b9ec2032528432312cc323aab0005fc8a7d7580e37c9",
@@ -1717,8 +1721,6 @@
    "embedBonusSkill": {
     "descHash": "Entfernt beim Einsatz der Fertigkeit <nobr>#1[i]</nobr> Debuff von einem anvisierten Verbündeten.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 622873,
     "name": "Beruhigung",
     "iconPath": "be7fbf9c9e68e43e4b7840bc7f79852292338e90fc85f70f4eff844257e0a96b",
@@ -1856,8 +1858,6 @@
    "embedBonusSkill": {
     "descHash": "Erhöht Natashas bewirkte Heilung um <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 622876,
     "name": "Heilerin",
     "iconPath": "bda4acf91d1cfe3bf92b88fd779f5b72c6f4175a4ec70654ff3532b8f4db7521",
@@ -1965,8 +1965,6 @@
    "embedBonusSkill": {
     "descHash": "Verlängert die kontinuierliche Heilung durch die Fertigkeit um <nobr>#1[i]</nobr> Rd.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 622875,
     "name": "Genesung",
     "iconPath": "b34419556353e8d0ccf755f3116995088a0832f45a93645b9fcade70dda5e0fc",
@@ -2255,6 +2253,16 @@
    "krUrl": "20718de2eaeae1d17e4cdc44d29bce22647f30a954aa8463912d0c1aadb7cf64"
   },
   {
+   "id": 17,
+   "title": "Über Luka",
+   "text": "Nach außen hin ist der Junge stark, aber in Wirklichkeit hat er Angst, eine Last zu werden. Deshalb trainiert und kämpft er so hart ... Ich hoffe, er kann eines Tages seinen Verstand beruhigen und auf sein Herz hören.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
    "id": 51,
    "title": "Kampf beginnt: Schwächebruch",
    "text": "Es braucht mehr als Medikamente.",
@@ -2266,7 +2274,7 @@
   },
   {
    "id": 52,
-   "title": "Kampf beginnt: Achtung Gefahr",
+   "title": "Kampf beginnt: Gefahrenwarnung",
    "text": "Sei nicht nachlässig.",
    "unlockRequirement": "",
    "cnUrl": "eca4f3eb0aa76695acc650d37635a5c231ab721bb7496b5da643b811c6b8a0c7",

@@ -1,15 +1,15 @@
 {
- "name": "Um Voto Secreto",
+ "name": "秘密の誓い",
  "rarity": 4,
- "descHash": "O garoto sempre conferia se suas luvas e cotoveleiras estavam em bom estado antes de sair.<br />Ele dava mais valor às luvas do que a qualquer outra coisa, pois eram apertadas o bastante para esconder seus segredos.<br />Com essa camada de proteção, ninguém podia ver os curativos em sua mão e o ferimento por trás deles.<br />Ele era tratado como uma pessoa normal, recebido igual a todos.<br /><br />Era só isso que ele queria.",
+ "descHash": "出発する前、少年はいつも肘当てと手袋を細心にチェックする。<br />それは少年のお気に入りの手袋、ぴっちりで、たくさんの秘密を隠せる。<br />こうすると、誰も少年の手に巻いた包帯と、包帯の下にある傷口を見ることができないから。<br />みんな少年を普通の人と思い、普通に挨拶する。<br /><br />それで十分だ。",
  "iconPath": "ee85937ae3075f9ddf39472fc3144f44383b05146d98c685447e1cfc2bfdb13d",
  "artPath": "7bb19adeb6960f0b1c30a548d92bdc551540db32df1de0537012bb0b5af2c4a2",
- "mediumIconPath": "4b8458602923704819bc3e6f2452c8ad0fa854344523c4faccff9a24467c9b79",
+ "mediumIconPath": "765945f2e85c351674d5b2ee5aec8087ed4d43b8ae98121fbe81b7c025ddda18",
  "baseType": {
   "id": 0,
   "iconPath": "350c43e263450cb79bfb44c59122dd3e2b2e6a80aa3310f4f69c91d7011f6105",
   "color": "#FFFFFF",
-  "name": "A Destruição",
+  "name": "壊滅",
   "rarity": 0
  },
  "baseTypeId": 0,
@@ -19,16 +19,17 @@
    "type": 101,
    "purposeId": 11,
    "iconPath": "af49f8c10262045a4f9e4740703b52056b5f396b48b99c2d130c22f3dbfa99d9",
-   "name": "Crédito",
-   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
-   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
-   "purpose": "Moeda Comum",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
    "rarity": 3,
    "rewardPath": "/material/29328",
    "comeFrom": [
-    "Cálice (Grande Mina)",
-    "Recompensas de Missão",
-    "Recompensas de Atribuição"
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬",
+    "エンバー交換"
    ]
   },
   "549407": {
@@ -36,19 +37,19 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "8abbe82cf30035c497648e0c2748308ea8cfd53f863f97e579639cb28b105298",
-   "name": "Distintivo Crinalva",
-   "desc": "Distintivo usado por soldados das Guardas Crinalva. Material bruto usado para aprimoramentos.",
-   "lore": "Está cheio de arranhões da erosão do vento e da neve.<br /><br />\"Em tempos antigos, só tinha uma maneira de um Guarda Crinalva se aposentar: morrendo.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "シルバーメインの釦",
+   "desc": "シルバーメインの兵士が装着する飾りボタン。強化に必要な簡易素材。",
+   "lore": "雨や霜に晒された痕跡がある。<br /><br />「古い時代、シルバーメインには一つだけ引退する方法があった、それは死ぬことである」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 2,
    "rewardPath": "/material/549407",
    "comeFrom": [
-    "Sombrio do Inverno Eterno e Sombra de Incineração",
-    "Guardas Crinalva e Indigentes",
-    "Inimigos do Universo Simulado",
-    "Recompensas de Atribuição",
-    "Troca de Brasas",
-    "Sintetizador Omni — Troca de Material"
+    "永冬の災影、焚火の災影からドロップ",
+    "シルバーメイン、流浪者からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "633348": {
@@ -56,18 +57,18 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "e5af7170577a761afe972e82e7b980c3aed8f051c5cab42f9ade781324e3a0ee",
-   "name": "Insígnia Crinalva",
-   "desc": "Insígnia de patente militar usada pelos capitães da Guarda Crinalva. Material normal usado para aprimoramentos.",
-   "lore": "Pode ser uma prova de heroísmo para se gabar dentro de casa, como pode também ser um amuleto da sorte para proteger você de um tiro.<br /><br />\"Os tempos mudaram.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "シルバーメインの記章",
+   "desc": "シルバーメインの隊長が装着する軍の階級章。強化に必要な普通素材。",
+   "lore": "家族に自慢するための証拠品かもしれないし、幸運にも弾丸を防いだお守りかもしれない。<br /><br />「時代は変わった」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 3,
    "rewardPath": "/material/633348",
    "comeFrom": [
-    "Sombrio do Inverno Eterno e Sombra de Incineração no Nível de Equilíbrio 2 ou superior",
-    "Guardas Crinalva e Indigentes no Nível de Equilíbrio 2 ou superior",
-    "Sintetizador Omni — Síntese de Material",
-    "Inimigos do Universo Simulado",
-    "Sintetizador Omni — Troca de Material"
+    "均衡Lv.2に達した後、永冬の災影、焚火の災影からドロップ",
+    "均衡Lv.2に達した後、シルバーメイン、流浪者からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "635673": {
@@ -75,14 +76,15 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "cbbb29c7d304051e72058774233100493e76cbb799ddb1b4b45aff45241bd8c6",
-   "name": "Lâmina Despedaçada",
-   "desc": "Fragmentos de arma deixados por membros da Legião Antimatéria. Usados para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruição</span>.",
-   "lore": "Essa marca representa seu ranque e feitos em nome da Destruição.<br />O mestre desta arma cavalga em um cavalo escarlate para incendiar cidades, para tomar a paz da humanidade e para destruir nações semelhantes a formigueiros.<br /><br />\"O portador desta marca é incumbido de acabar com a paz das nações.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "破砕の刃切",
+   "desc": "反物質レギオンのメンバーが落とした武器の破片。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "この焼印は階級と「壊滅」の功績を示す。<br />この武器の主は紅の馬にまたがり、都市を燃やし、人々を仲たがいし、国を蟻の巣のように潰した。<br /><br />「この印を持つ者、平和を国々から放逐せよ」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 2,
    "rewardPath": "/material/635673",
    "comeFrom": [
-    "Cálice (Zona de Armazenamento)"
+    "疑似花萼「収容部分」",
+    "エンバー交換"
    ]
   },
   "694487": {
@@ -90,15 +92,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "56ab8085d932c0a9521f684246a42bd320b199c3c1a6f3bd54b869c5f294fec9",
-   "name": "Éter Refinado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>6000</nobr> de EXP de Cone de Luz.",
-   "lore": "Uma lata de éter que foi extraída e destilada usando procedimentos especiais.<br /><br />\"O Jardim espera poder recriar uma glória do passado, mas é uma 'glória do passado' selecionada por eles. Você entende?\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "精製エーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>6000</nobr>獲得できる。",
+   "lore": "特殊な技術で精錬されたエーテル。<br /><br />「ガーデンは昔の輝かしい時代を取り戻そうとしている、だがそれは彼らが選択する『往日の輝き』だ、この意味がわかるか？」",
+   "purpose": "光円錐経験値素材",
    "rarity": 4,
    "rewardPath": "/material/694487",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)",
-    "Salão Esquecido"
+    "疑似花萼「外縁通路」",
+    "「忘却の庭」"
    ]
   },
   "694488": {
@@ -106,14 +108,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "1911d7bb4aad22029e82a9b17a0005674864038b6b61e86976ace8277267d9f6",
-   "name": "Éter Condensado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>2.000</nobr> de EXP de Cone de Luz.",
-   "lore": "Lata de éter refinado com técnicas especiais.<br /><br />\"Manuseie com cuidado, não deixe cair nem faça pressão sobre ela. Caso ocorra algum vazamento, consulte o capítulo II do \"Manual de Respostas a Desastres de Vazamentos\" para respostas de emergência.\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "濃縮エーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>2000</nobr>獲得できる。",
+   "lore": "特殊な技術で精錬されたエーテル。<br /><br />「気を付けて取り扱ってね。潰したり、落としたりしちゃダメよ。万が一、破損して中身が漏れた時は、『流溢災難対応手引き』の第二章に従って処理しなさい」",
+   "purpose": "光円錐経験値素材",
    "rarity": 3,
    "rewardPath": "/material/694488",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)"
+    "疑似花萼「外縁通路」",
+    "エンバー交換"
    ]
   },
   "694489": {
@@ -121,15 +124,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "03fc3a9bafdf0f18b1e49a885353ed442420842a2cc373428b242b213d2728fc",
-   "name": "Éter Espalhado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>500</nobr> de EXP de Cone de Luz.",
-   "lore": "Substância imaginária que não deveria existir. O material básico usado para criar Cones de Luz.<br />As imagens dos Cones de Luz se tornam ainda mais claras quando imbuídas dessa substância.<br /><br />\"Entendi, então esse é o suposto \"Sentimento\" do Jardim da Recordação. É por isso que os Memoriadores conseguem fazer viagens galácticas com lembranças.\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "希薄なエーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>500</nobr>獲得できる。",
+   "lore": "本来、現実には存在しない仮想媒質で、光円錐の基本原料。<br />光円錐に注入することで、中に封じられているイメージがより鮮明になる。<br /><br />「なるほどね～これがガーデン オブ リコレクションの『意質』ってやつ？だからメモキーパーは、記憶を携帯して星間旅行ができるんだね」",
+   "purpose": "光円錐経験値素材",
    "rarity": 2,
    "rewardPath": "/material/694489",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)",
-    "Recompensas de Atribuição"
+    "疑似花萼「外縁通路」",
+    "依頼報酬"
    ]
   },
   "717289": {
@@ -137,18 +140,18 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "2a13761bca99299d5cadb2889b9977aebafaa31fd6c4f8041cb9d671fe838e94",
-   "name": "Medalha Crinalva",
-   "desc": "Medalha de honra usada por soldados da Guarda Crinalva concedida por mérito e serviços prestados. Material avançado usado para aprimoramentos.",
-   "lore": "Uma prova de honra concedida àqueles que lutam contra criaturas do Fragmentum, Subterrenos e desastres repentinos.<br />Geralmente seu portador não a carrega no peito, a não ser que esteja dentro de um caixão.<br /><br />\"Lembre-se, jovem Gepard, isso não é um brinquedo: é o destino e o sangue da família Landau.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "シルバーメインの勲章",
+   "desc": "手柄を立てたシルバーメインが装着する勲章。強化に必要な高級素材。",
+   "lore": "「隙」の魔物、地下民に立ち向かい、災いを乗り越えた後に授与された名誉の証。<br />これは功績者の胸に掲げられることより、その人の棺桶の上に置かれることの方が多い。<br /><br />「それはおもちゃじゃないわ、ジェパード。覚えておいて、これがランドゥー家の使命、ランドゥー家の血なのよ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 4,
    "rewardPath": "/material/717289",
    "comeFrom": [
-    "Sombrio do Inverno Eterno e Sombra de Incineração no Nível de Equilíbrio 4 ou superior",
-    "Guardas Crinalva e Indigentes no Nível de Equilíbrio 4 ou superior",
-    "Sintetizador Omni — Síntese de Material",
-    "Inimigos do Universo Simulado",
-    "Sintetizador Omni — Troca de Material"
+    "均衡Lv.4に達した後、永冬の災影、焚火の災影からドロップ",
+    "均衡Lv.4に達した後、シルバーメイン、流浪者からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "836259": {
@@ -156,15 +159,15 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "dd9049ebf26b7ffdf52e7edc6cddcc58aae6bf8e0b8d420bc33aade03b6b302f",
-   "name": "Lâmina Destruidora de Mundos",
-   "desc": "Arma quebrada deixada por membros da Legião Antimatéria. Usada para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruição</span>.",
-   "lore": "Esta arma representa o ranque e as conquistas de seu dono em nome da Destruição.<br />O dono desta arma é aquele que chega no fim da guerra para atiçar as brasas que consomem o mundo. Independentemente das glórias do passado ou das bênçãos de suas divindades, este planeta está destinado a voltar às cinzas de onde veio, e murchar nas profundezas do céu estrelado.<br /><br />\"O objetivo do usuário desta arma é purificar o mundo.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "浄世の刃切",
+   "desc": "反物質レギオンのメンバーが落とした破れた武器。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "この武器は、持ち主のレギオンでの階級と「壊滅」の功績を示す。<br />この武器の主は戦争の終わり際に登場し、劫火で世界を焼き尽くした。どれだけ神に祝福されていようと、どれだけ輝かしい功績があろうと、その星は燃え尽きた炭のように、星空の暗闇の中、死んでいくだろう。<br /><br />「この印を持つ者、世界を滅掃せよ」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 4,
    "rewardPath": "/material/836259",
    "comeFrom": [
-    "Cálice (Zona de Armazenamento)",
-    "Sintetizador Omni — Síntese de Material"
+    "疑似花萼「収容部分」",
+    "「万能合成マシン」- 素材合成"
    ]
   },
   "920200": {
@@ -172,15 +175,16 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "ad883da0dda0d6eebe6f4592fe6e5396962ec669012068894459c5af6e55f25f",
-   "name": "Lâmina Inerte",
-   "desc": "Resquícios de armas deixados por membros da Legião Antimatéria. Usados para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruição</span>.",
-   "lore": "Essa marca representa seu ranque e feitos em nome da Destruição.<br />O mestre desta arma carrega um forte ódio por todos os seres sencientes. Eles se deleitam no lamento de seres inteligentes como se fossem doces melodias, e derrubam civilizações com milênios de história em um piscar de olhos.<br /><br />\"O portador desta marca é incumbido de acabar com a respiração entre os vivos.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "無生の刃切",
+   "desc": "反物質レギオンのメンバーが落とした破れた鍔。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "この焼印は階級と「壊滅」の功績を示す。<br />この武器の主はすべての思考する生物を恨んでいた。彼らは知性ある生物の悲鳴を心地良い楽曲のように堪能し、数千年かけて築いた文明を一晩で滅ぼした。<br /><br />「この印を持つ者、呼吸を衆生から奪い給え」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 3,
    "rewardPath": "/material/920200",
    "comeFrom": [
-    "Cálice (Zona de Armazenamento)",
-    "Sintetizador Omni — Síntese de Material"
+    "疑似花萼「収容部分」",
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換"
    ]
   }
  },
@@ -339,8 +343,8 @@
  ],
  "skill": {
   "id": 21012,
-  "name": "Não Poupe Esforços",
-  "descHash": "Aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> o Dano causado pelo usuário. O usuário também causa <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de Dano extra a inimigos com uma porcentagem de PV maior ou igual à porcentagem de PV do usuário.",
+  "name": "全身全霊",
+  "descHash": "装備キャラの与ダメージ+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>、残りHP割合が装備キャラ以上の敵に対して、さらに与ダメージ+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>。",
   "levelData": [
    {
     "params": [

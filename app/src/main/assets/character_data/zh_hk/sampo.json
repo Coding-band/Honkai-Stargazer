@@ -1,10 +1,10 @@
 {
  "spRequirement": 120,
- "iconPath": "762da7df054cf7a114b8f04ca48ce82cdf8c0f15fa23ac3b6739808003c7326d",
+ "iconPath": "5d5294b648440faa149071070ae33699785b2b906e917ca65f14b2086ab6d3c4",
  "bgPath": "c8aaf56e7e2aa7cd886e9f95d55bea250d47773383ccb7a7248ddbf31b5b3ed6",
- "figPath": "41c0ea3bd1fd051d0db4486b2a6bae560552f1c3353195293b127c489aa249a8",
+ "figPath": "2b7b2492d7d523baf7f97d52f8ba96ff87e562443c4fe75afcfc97e8c323e4f2",
  "fgPath": "8b5bf910c26dc65c3a1180e025765bee0377a31be63e1a396b5d230a49f943ac",
- "splashIconPath": "6e439dff39727f8f2f7c334bce51980fce8b28a87d88fec654f7b24108b8681c",
+ "splashIconPath": "ca87a878d7a6f187966c366e200b3e500cb31f22455e2d43d11831b6f903f16d",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "擬造花萼【大礦區】",
     "任務獎勵",
-    "委託獎勵"
+    "委託獎勵",
+    "餘燼兌換"
    ]
   },
   "125435": {
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "擬造花萼【城郊雪原】",
-    "每日實訓"
+    "每日實訓",
+    "餘燼兌換"
    ]
   },
   "409962": {
@@ -177,7 +179,8 @@
    "rarity": 2,
    "rewardPath": "/material/635669",
    "comeFrom": [
-    "擬造花萼【大礦區】"
+    "擬造花萼【大礦區】",
+    "餘燼兌換"
    ]
   },
   "717290": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920196",
    "comeFrom": [
     "擬造花萼【大礦區】",
-    "「萬能合成機」- 材料合成"
+    "「萬能合成機」- 材料合成",
+    "餘燼兌換"
    ]
   }
  },
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "9a37f9e723d487da7913c6ed7442af8111da3f1d7fbe1b0187f8e2a52e93b0a3",
    "artPath": "6150faa4e0b1645e2309af7539ab64983cd15cf3fd708ff479876b4f420ea08f",
    "name": "加碼的愛",
    "descHash": "施放戰技時，對敵方隨機單體額外造成<nobr>#1[i]</nobr>次傷害。",
@@ -428,7 +432,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "44efe4d5a6a656cc9c8f78b1721c1cf527acecf559ed1a6658ee502998fb5765",
    "artPath": "3bbdffdf361cbed69736dc1d65f2b6d7715e708b094903a0cdaf9d2cf82b85cb",
    "name": "熱情會傳染",
    "descHash": "風化狀態下的敵方目標被消滅時，使敵方全體有<nobr>#1[i]%</nobr>的基礎概率疊加<nobr>#2[i]</nobr>層等同於天賦的風化狀態。",
@@ -439,7 +443,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "7bfe182a258c7fe6c994becd0f4cc319644011f1b804bd60df1df3288ec42b39",
    "artPath": "8b5ed606803e17e31f37faea7fc48768e5c8ad52faea66926afb222b990af912",
    "name": "大數字！",
    "descHash": "戰技等級+2，最多不超過<nobr>15</nobr>級；普攻等級+1，最多不超過<nobr>10</nobr>級。",
@@ -447,7 +451,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "8ff9b3faafa6166562340b37c692b329cd0d0dd4ee85193308dd902b7e7548be",
    "artPath": "e12c093f2b9d701b3b67058576b782cb2a45c2887e5dc9fa961e17bdb134939d",
    "name": "愛之深，恨之切",
    "descHash": "戰技擊中風化狀態大於等於<nobr>#1[i]</nobr>層的敵方目標時，使其當前承受的風化狀態立即產生相當於原傷害<nobr>#2[i]%</nobr>的傷害。",
@@ -458,7 +462,7 @@
   },
   {
    "id": 5,
-   "iconPath": "",
+   "iconPath": "2f5a088a1ddcdc626cbe61814172a6cb478dd15da26365f0813fa3a61c99d89f",
    "artPath": "7fde87a94f7b016f973ba62dac8312babb2623aefa70224cf88bc19dd04a9092",
    "name": "超大數字！",
    "descHash": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
@@ -466,7 +470,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "16e6ddb492f08ccf590bafdf57cc7006e560807d9b349294fc6ac5e5be96df05",
    "artPath": "9830dbce5369faa6f44e2385b0d0455272fcdb5639917c0739af84913f1873e7",
    "name": "消費升級",
    "descHash": "天賦施加的風化狀態的傷害倍率提高<nobr>#1[i]%</nobr>。",
@@ -497,8 +501,8 @@
    "tagHash": "單攻",
    "descHash": "對指定敵方單體造成等同於桑博<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#00FF9C;\">風</span>屬性傷害。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 849349,
    "name": "酷炫的刀花",
    "iconPath": "e124f432c6d6584df9101416b7c3fbdea275f89c899150ff48c695a329c9f823",
@@ -658,8 +662,8 @@
    "tagHash": "彈射",
    "descHash": "對指定敵方單體造成等同於桑博<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#00FF9C;\">風</span>屬性傷害，並額外造成<nobr>#1[i]</nobr>次傷害，每次傷害對敵方隨機單體造成等同於桑博<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#00FF9C;\">風</span>屬性傷害。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 6,
+   "break": "30/hit",
+   "energy": "6",
    "id": 933290,
    "name": "反覆橫跳的愛",
    "iconPath": "7bfe182a258c7fe6c994becd0f4cc319644011f1b804bd60df1df3288ec42b39",
@@ -944,8 +948,8 @@
    "tagHash": "妨害",
    "descHash": "對敵方全體造成等同於桑博<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#00FF9C;\">風</span>屬性傷害，同時有<nobr>#4[i]%</nobr>的<u>基礎概率</u>使被攻擊的敵方目標受到的持續傷害提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>，持續<nobr>#3[i]</nobr>回合。",
    "ultimateCost": 120,
-   "break": 0,
-   "energy": 5,
+   "break": "0",
+   "energy": "5",
    "id": 49935,
    "name": "驚喜禮盒",
    "iconPath": "c8958a189a2e897573d60a4166b2c3f89c74173ffeda1edec62bedf42d165eb1",
@@ -1260,8 +1264,8 @@
    "tagHash": "強化",
    "descHash": "桑博擊中敵方目標後有<nobr>#1[i]%</nobr>的<u>基礎概率</u>使目標陷入<span style=\"color:#00FF9C;\">風</span>化狀態，持續<nobr>#3[i]</nobr>回合。<br /><span style=\"color:#00FF9C;\">風</span>化狀態下，敵方目標每回合開始時受到等同於桑博<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#00FF9C;\">風</span>屬性持續傷害。<span style=\"color:#00FF9C;\">風</span>化狀態最多疊加<nobr>#4[i]</nobr>層。",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 364236,
    "name": "撕風的匕首",
    "iconPath": "b59c336ba6c2c3c0d7a68c487affaf33fcc401777b222e35e63c1b664b75de4d",
@@ -1576,8 +1580,8 @@
    "tagHash": "",
    "descHash": "攻擊敵人，進入戰鬥後削弱敵方目標對應屬性韌性。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 564822,
    "name": "攻擊",
    "iconPath": "e124f432c6d6584df9101416b7c3fbdea275f89c899150ff48c695a329c9f823",
@@ -1598,8 +1602,8 @@
    "tagHash": "妨害",
    "descHash": "使用祕技後使一定區域內的敵人陷入<nobr>#1[i]</nobr>秒的目盲狀態，目盲狀態下的敵人無法發現我方目標。<br />若主動攻擊陷入目盲狀態的敵人，進入戰鬥時有<nobr>#2[i]%</nobr><u>固定概率</u>使敵方每個單體目標行動延後<nobr>#3[i]%</nobr>。",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 648763,
    "name": "你最閃亮",
    "iconPath": "47d83ca715bf3ed0cc556cbbf750bc5644df38ad4a4a30c4fcbc3ac2277df425",
@@ -1728,8 +1732,6 @@
    "embedBonusSkill": {
     "descHash": "施放終結技時，額外恢復<nobr>#1[i]</nobr>點能量。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 285971,
     "name": "後手",
     "iconPath": "ad61a89bb232a760efd6249c97e7a7ac94bbbd280df52cda7a1427f8ab7f0284",
@@ -1837,8 +1839,6 @@
    "embedBonusSkill": {
     "descHash": "<span style=\"color:#00FF9C;\">風</span>化狀態下的敵方目標對桑博造成的傷害降低<nobr>#1[i]%</nobr>。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 285970,
     "name": "加料",
     "iconPath": "f3807259480abf963c205ba7528c727b26aaf770ffbca65b3b82c28faf2ac197",
@@ -2041,8 +2041,6 @@
    "embedBonusSkill": {
     "descHash": "天賦使敵方陷入<span style=\"color:#00FF9C;\">風</span>化狀態的持續時間延長<nobr>#1[i]</nobr>回合。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 285968,
     "name": "圈套",
     "iconPath": "fcf499c20092da938c118623dec6b09ebb8e0b89e1ec0e4186c478a8444e915b",
@@ -2100,8 +2098,8 @@
    {
     "relicTypeHash": "連結繩",
     "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
-    "propertyName": "能量恢復效率",
-    "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
+    "propertyName": "攻擊力",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
    }
   ]
  },
@@ -2265,6 +2263,16 @@
    "jpUrl": "540ce5eaf18c6e75cff608519c0af7b3c6c6d4434482d372ce8f15ffb08b9a3e",
    "enUrl": "f4a597abaefdae4482e6267f0cec146848eed3cfc8d5e31537ae2e7265bc1b4b",
    "krUrl": "7be4250a8c32029fa399aa408aaa9467965e63d3b4ccd9e63b3c43b7210e55ad"
+  },
+  {
+   "id": 17,
+   "title": "關於盧卡",
+   "text": "你見過他比賽沒有？那小子，可是下層區最大的搖錢樹啊！可惜這樹沒長在老桑博的後院裡……",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
   },
   {
    "id": 51,

@@ -47,7 +47,7 @@ public class LogExport {
         }
         //}
     }
-    public static void bugLog (String className, String functionName, String data, Context context) {
+    public static void bugLog (String className, String functionName, String data, String message, Context context) {
         //if (BuildConfig.FLAVOR.equals("dev") || BuildConfig.FLAVOR.equals("beta")) {
         SharedPreferences sharedPreferences = context.getSharedPreferences("user_info",Context.MODE_PRIVATE);
         String dataFinal =
@@ -58,7 +58,8 @@ public class LogExport {
                         "Android Version : " + String.valueOf(Build.VERSION.SDK_INT) + "\n" +
                         "App Version : " + String.valueOf(BuildConfig.VERSION_NAME) + "\n" +
                         "App Preferences : " + sharedPreferences.getString("curr_lang","N/A") +" | " + sharedPreferences.getString("dayNight","N/A") + "\n" +
-                        "UnixTimeStamp : " + System.currentTimeMillis() + "\n\n";
+                        "UnixTimeStamp : " + System.currentTimeMillis() + "\n" +
+                        "Error Key : " + message + "\n\n";
         String fileHead =
                 "This file was created in " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()) + "\n";
         try {
@@ -73,6 +74,7 @@ public class LogExport {
             dataFinal = dataFinal + data;
             Files.write(Paths.get(file.getPath()), dataFinal.getBytes(), new StandardOpenOption[]{StandardOpenOption.WRITE});
             context.getSharedPreferences("user_info",Context.MODE_PRIVATE).edit().putString("last_bug_report","Log_" + currTime+".txt").apply();
+            context.getSharedPreferences("user_info",Context.MODE_PRIVATE).edit().putString("last_bug_report_error_key",message).apply();
         } catch (IOException e) {
             Log.i("LogExport", e.getMessage());
         }
@@ -80,12 +82,12 @@ public class LogExport {
     }
     public static void special (String data, Context context, String fileName) {
         try {
-            File ext = context.getFilesDir();
-            if (!Files.exists(Paths.get(ext + "/" + BETA_TESTING))) {
-                Files.createFile(Paths.get(ext + "/" + BETA_TESTING));
-                Files.write(Paths.get(ext + "/" + BETA_TESTING), data.getBytes(), new StandardOpenOption[]{StandardOpenOption.APPEND});
+            File ext = context.getExternalMediaDirs()[0];
+            if (!Files.exists(Paths.get(ext + "/" + "honkai_stargazer/" + BETA_TESTING))) {
+                Files.createFile(Paths.get(ext + "/" + "honkai_stargazer/" + BETA_TESTING));
+                Files.write(Paths.get(ext + "/" + "honkai_stargazer/" + BETA_TESTING), data.getBytes(), new StandardOpenOption[]{StandardOpenOption.APPEND});
             }else{
-                Files.write(Paths.get(ext + "/" + fileName), data.getBytes(), new StandardOpenOption[]{StandardOpenOption.APPEND});
+                Files.write(Paths.get(ext + "/" + "honkai_stargazer/" + fileName), data.getBytes(), new StandardOpenOption[]{StandardOpenOption.APPEND});
             }
         } catch (IOException e) {
             Log.i("LogExport", e.getMessage());

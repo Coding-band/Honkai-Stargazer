@@ -49,13 +49,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.chip.Chip;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
-import com.voc.honkai_stargazer.BuildConfig;
 import com.voc.honkai_stargazer.R;
 import com.voc.honkai_stargazer.data.FilterPreference;
 import com.voc.honkai_stargazer.data.HSRItem;
@@ -258,7 +256,7 @@ public class CharAdviceSuggester {
                     StringWriter sw = new StringWriter();
                     PrintWriter pw = new PrintWriter(sw);
                     e.printStackTrace(pw);
-                    LogExport.bugLog(TAG, "save.onClick()", sw.toString(), context);
+                    LogExport.bugLog(TAG, "save.onClick()", sw.toString(), e.getMessage(), context);
                 }
             }
         });
@@ -291,7 +289,7 @@ public class CharAdviceSuggester {
                     StringWriter sw = new StringWriter();
                     PrintWriter pw = new PrintWriter(sw);
                     e.printStackTrace(pw);
-                    LogExport.bugLog(TAG, "email.onClick()", sw.toString(), context);
+                    LogExport.bugLog(TAG, "email.onClick()", sw.toString(), e.getMessage(), context);
                 }
             }
         });
@@ -364,7 +362,7 @@ public class CharAdviceSuggester {
             Transformation transformation = new RoundedCornersTransformation(90, 0);
             switch (TYPE){
                 case TYPE_CHARACTER_TEAM1:
-                case TYPE_CHARACTER_TEAM2: Picasso.get().load(item_rss.getCharByName(selected.get(x).getName())[0]).transform(transformation).fit().into(item_img);break;
+                case TYPE_CHARACTER_TEAM2: Picasso.get().load(item_rss.getCharByName(selected.get(x).getName(),selected.get(x).getSex())[0]).transform(transformation).fit().into(item_img);break;
                 case TYPE_LIGHTCONE: Picasso.get().load(item_rss.getLightconeByName(selected.get(x).getName())[0]).fit().into(item_img);break;
                 case TYPE_RELIC:
                 case TYPE_ORNAMENT: Picasso.get().load(item_rss.getRelicByName(selected.get(x).getName())[0]).fit().into(item_img);break;
@@ -595,7 +593,7 @@ public class CharAdviceSuggester {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "char_list_reload()", sw.toString(), context);
+            LogExport.bugLog(TAG, "char_list_reload()", sw.toString(), e.getMessage(), context);
         }
     }
     private void lightcone_list_reload() {
@@ -629,7 +627,7 @@ public class CharAdviceSuggester {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "lightcone_list_reload()", sw.toString(), context);
+            LogExport.bugLog(TAG, "lightcone_list_reload()", sw.toString(), e.getMessage(), context);
         }
     }
     private void relic_list_reload() {
@@ -665,7 +663,7 @@ public class CharAdviceSuggester {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "relic_list_reload()", sw.toString(), context);
+            LogExport.bugLog(TAG, "relic_list_reload()", sw.toString(), e.getMessage(), context);
         }
     }
     private TextWatcher searchBarHandler(String TYPE, EditText editText){

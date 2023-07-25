@@ -1,10 +1,10 @@
 {
  "spRequirement": 140,
- "iconPath": "56e2db241bd71da55d90de713fd332572a4215c32f50aadde43072436a890a32",
+ "iconPath": "9760b3d8dc2f3ccb3e40e7d828c829c53b229c69811f23bbe56736ebdac7200d",
  "bgPath": "1ad2155f6d696b85d83c65b403a7bbe5774d4c76562164e9af5dad6471a7c976",
- "figPath": "008833eb9b2916ba2c4e9c03fe5dc853887e23e26fa6195ab1e48c691fc460aa",
+ "figPath": "e22d500ff48be42e47f647d8094915b68a2394bec253392c91a5e4264519d3c6",
  "fgPath": "1fd33e126c8d2051b947cf0c7e33ffd6b5a9a365f1ab4b34b22f247ab4c0206b",
- "splashIconPath": "1225c60547f6a6064b72314c5d99ff4e54795beee2fbec04c47fca70f65e0eb3",
+ "splashIconPath": "30eaff12c3ae1b8f5b469fe989853664864d91eb5ede7e22937f858059d10a67",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Calyx (Great Mine)",
     "Mission rewards",
-    "Assignment rewards"
+    "Assignment rewards",
+    "Embers Exchange"
    ]
   },
   "67220": {
@@ -38,7 +39,7 @@
    "iconPath": "a2fa1145ffb36cc314f474ae3921d54fcc1ba1a4b64b1fe18a15e817d1d454ff",
    "name": "Gelid Chitin",
    "desc": "Frosty chitin emitting a cold humming. Can be used for the Ascension of Ice characters.",
-   "lore": "Strange chitin peeled off from an interdimensional creature. Although not freezing cold anymore, it remains trebling, absorbing heat from its surroundings.<br /><br />\"How has no one thought of selling it to worlds where they don't have air conditioners? It works like an air conditioner and sounds as loud as one, too.\"",
+   "lore": "Strange chitin peeled off from an interdimensional creature. Although not freezing cold anymore, it remains trembling, absorbing heat from its surroundings.<br /><br />\"How has no one thought of selling it to worlds where they don't have air conditioners? It works like an air conditioner and sounds as loud as one, too.\"",
    "purpose": "Character Ascension Materials",
    "rarity": 4,
    "rewardPath": "/material/67220",
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Calyx (Outlying Snow Plains)",
-    "Daily Training"
+    "Daily Training",
+    "Embers Exchange"
    ]
   },
   "409962": {
@@ -177,7 +179,8 @@
    "rarity": 2,
    "rewardPath": "/material/635674",
    "comeFrom": [
-    "Calyx (Outlying Snow Plains)"
+    "Calyx (Outlying Snow Plains)",
+    "Embers Exchange"
    ]
   },
   "717319": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920201",
    "comeFrom": [
     "Calyx (Outlying Snow Plains)",
-    "Omni-Synthesizer — Material Synthesis"
+    "Omni-Synthesizer — Material Synthesis",
+    "Embers Exchange"
    ]
   }
  },
@@ -438,7 +442,7 @@
   },
   {
    "id": 3,
-   "iconPath": "16fdca2019309d1d7fb961726bd0181efc12b47243846fb1961598cca82e08cb",
+   "iconPath": "3aa9c022e24a6a7b5b188589f8e02fd86f005bea963c26fcb9e42e8e7f1027a5",
    "artPath": "046d4d065c3f196bb4836d053784e98e3b5b3215e7d7ba06b110d8640eeb1f4f",
    "name": "Sword Savant",
    "descHash": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Basic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
@@ -457,7 +461,7 @@
   },
   {
    "id": 5,
-   "iconPath": "d015b5925332dd37dc90faaf38ab2ac9326d4f9bb26bf946ffd085f0de4715d3",
+   "iconPath": "faf406dce51ed76956c89bc7361edbc336731d6723f6cf88239716ad87a577c7",
    "artPath": "2f321eb6e01bfff4e9c776e2f1e1be0fd3dd76c97d735af829a23b3daf4f6ada",
    "name": "Surging Strife",
    "descHash": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Talent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
@@ -494,11 +498,11 @@
    "tagHash": "Single Target",
    "descHash": "Deals <span style=\"color:#47C7FD;\">Ice</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Yanqing's ATK to a single enemy.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 531503,
    "name": "Frost Thorn",
-   "iconPath": "78c41e808b0a2d01f85b55d2598185f529a8106c3ba58b7c8a15f1454fa3d2be",
+   "iconPath": "eda23bd03b5c4ba5e822df28e2a026899c4e8266db5b03a001273af8738bf92c",
    "typeDescHash": "Basic ATK",
    "levelReq": 0,
    "promotionReq": 0,
@@ -655,11 +659,11 @@
    "tagHash": "Single Target",
    "descHash": "Deals <span style=\"color:#47C7FD;\">Ice</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Yanqing's ATK to a single enemy and activates Soulsteel Sync for 1 turn.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 30,
+   "break": "60",
+   "energy": "30",
    "id": 246976,
    "name": "Darting Ironthorn",
-   "iconPath": "16fdca2019309d1d7fb961726bd0181efc12b47243846fb1961598cca82e08cb",
+   "iconPath": "3aa9c022e24a6a7b5b188589f8e02fd86f005bea963c26fcb9e42e8e7f1027a5",
    "typeDescHash": "Skill",
    "levelReq": 0,
    "promotionReq": 0,
@@ -930,11 +934,11 @@
    "tagHash": "Single Target",
    "descHash": "Increases Yanqing's CRIT Rate by <nobr>#1[i]%</nobr>. When Soulsteel Sync is active, increases Yanqing's CRIT DMG by an extra <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. This <u>buff</u> lasts for one turn. Afterwards, deals <span style=\"color:#47C7FD;\">Ice</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> of Yanqing's ATK to a single enemy.",
    "ultimateCost": 140,
-   "break": 90,
-   "energy": 5,
+   "break": "90",
+   "energy": "5",
    "id": 363621,
    "name": "Amidst the Raining Bliss",
-   "iconPath": "4bf96bc426831906e3228d598d2efffb03b21d7e9c2f1b8f6f939dca0dc8343a",
+   "iconPath": "65bca3c3e825d6d874e9de471d62a550e55b7a0e75f9b356fcedd3e4e891bfab",
    "typeDescHash": "Ultimate",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1235,11 +1239,11 @@
    "tagHash": "Single Target",
    "descHash": "When Soulsteel Sync is active, Yanqing is less likely to be attacked by enemies. Yanqing's CRIT Rate increases by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> and his CRIT DMG increases by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. After Yanqing attacks an enemy, there is a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> <u>fixed chance</u> to perform a <u>follow-up attack</u>, dealing <span style=\"color:#47C7FD;\">Ice</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> of Yanqing's ATK to the enemy, which has a <nobr>#6[i]%</nobr> <u>base chance</u> to Freeze the enemy for 1 turn.<br />The Frozen target cannot take action and receives <u>Additional</u> <span style=\"color:#47C7FD;\">Ice</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> of Yanqing's ATK at the beginning of each turn.<br />When Yanqing receives DMG, the Soulsteel Sync effect will disappear.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 10,
+   "break": "30",
+   "energy": "10",
    "id": 46390,
    "name": "One With the Sword",
-   "iconPath": "faf9bdd5b8e346bc02d4ed9592de49f72d13a29ee5359b002d87f8151bbc49f3",
+   "iconPath": "2ccb1e7567b55ae40f936604526e47d134bff166c2df9bf47c1264439f1cd96b",
    "typeDescHash": "Talent",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1585,11 +1589,11 @@
    "tagHash": "",
    "descHash": "Attack an enemy, and when the battle starts, reduce their Toughness of the corresponding Type.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 878508,
    "name": "Attack",
-   "iconPath": "78c41e808b0a2d01f85b55d2598185f529a8106c3ba58b7c8a15f1454fa3d2be",
+   "iconPath": "eda23bd03b5c4ba5e822df28e2a026899c4e8266db5b03a001273af8738bf92c",
    "typeDescHash": "",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1607,8 +1611,8 @@
    "tagHash": "Enhance",
    "descHash": "After using his Technique, at the start of the next battle, Yanqing deals <nobr>#2[i]%</nobr> more DMG for <nobr>#3[i]</nobr> turn(s) to enemies whose current HP is <nobr>#1[i]%</nobr> or higher.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 962449,
    "name": "The One True Sword",
    "iconPath": "fcd2be4b2aa59e63cf6695bdb806aff85ac5cd4a174a334d9534d9e850d94930",
@@ -1704,11 +1708,9 @@
    "embedBonusSkill": {
     "descHash": "When Yanqing attacks, deals Additional <span style=\"color:#47C7FD;\">Ice</span> DMG equal to <nobr>#1[i]%</nobr> of Yanqing's ATK to enemies with <span style=\"color:#47C7FD;\">Ice</span> Weakness.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 968122,
     "name": "Icing on the Kick",
-    "iconPath": "22cf179a530b447e29f8ef9c3865188acd775ac4ce59a15d65d1faaf363abaa6",
+    "iconPath": "2bfd7990fadbe67d030d93a428e9e585bac1500b72354c40b193dff2123c3dfd",
     "levelReq": 0,
     "promotionReq": 2,
     "levelData": [
@@ -1810,11 +1812,9 @@
    "embedBonusSkill": {
     "descHash": "When Soulsteel Sync is active, Effect RES increases by <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 968125,
     "name": "Frost Favors the Brave",
-    "iconPath": "343d2fdf031738a3a442a85c0ee1caa26b741e4af2218862b1a7c4b5d63b1230",
+    "iconPath": "4b0c59cf22bb2143b78364ad60a697c213bb6611f02666ec656c83c41b9d8a2d",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
@@ -1952,11 +1952,9 @@
    "embedBonusSkill": {
     "descHash": "When a CRIT Hit is triggered, increases SPD by <nobr>#1[i]%</nobr> for <nobr>#2[i]</nobr> turn(s).",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 968124,
     "name": "Gentle Blade",
-    "iconPath": "3c4b5e5795583a6b281d3e54e125e6f795227f24b9725d410ccafe39e758f687",
+    "iconPath": "159df9196d258d347c97cc76288a5f332a5bc3a2b1639d8a53b3c15c4dd351da",
     "levelReq": 0,
     "promotionReq": 6,
     "levelData": [

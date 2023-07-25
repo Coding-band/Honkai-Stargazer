@@ -1,15 +1,15 @@
 {
- "name": "Banco de Dados",
+ "name": "アーカイブ",
  "rarity": 3,
- "descHash": "Uma gota de força condensada pelo próprio tempo. Todos os momentos aparentemente insignificantes se unem para formar o magnífico coro do destino.<br /><br />\"A extinção humana é inevitável, mas a biblioteca sobreviverá: solitária, imóvel e oculta do público. Sua vasta coleção é inútil, porém livre de corrupção.\"",
+ "descHash": "凝縮された時間から得られる希薄な力。一瞬にも満たない刹那が、壮絶な運命を織りなす。<br /><br />「人類はもうすぐ滅びる。しかし図書館は永遠に存在し続ける。青いランプがただ輝き、何も動かず、貴重な蔵書がそこにあり続け、静かで、いつまでも読まれず、そして壊れることもない」",
  "iconPath": "1d242aa7275fb0b336dcb3bedf5f668c7732712497988ebf47e009700c1069f9",
  "artPath": "db3687c0a1bdfbb6086fe6ef2de8705da8df85ba4871bb3ecde863c68f40ab70",
- "mediumIconPath": "f8ee6a95354b8240c1c70244ccbc3df74c78188bd6f96ef9e9a36cae4192f0e8",
+ "mediumIconPath": "66fb9cd73d9e68a68514c07627e38cd787fe5e8f63db37cf886f2ee6a00baaee",
  "baseType": {
   "id": 0,
   "iconPath": "83d5e1a7e63e4a3c977b5796a007c463ca0e00266034e72503a785e19ff55e4c",
   "color": "#FFFFFF",
-  "name": "A Erudição",
+  "name": "知恵",
   "rarity": 0
  },
  "baseTypeId": 0,
@@ -19,16 +19,17 @@
    "type": 101,
    "purposeId": 11,
    "iconPath": "af49f8c10262045a4f9e4740703b52056b5f396b48b99c2d130c22f3dbfa99d9",
-   "name": "Crédito",
-   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
-   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
-   "purpose": "Moeda Comum",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
    "rarity": 3,
    "rewardPath": "/material/29328",
    "comeFrom": [
-    "Cálice (Grande Mina)",
-    "Recompensas de Missão",
-    "Recompensas de Atribuição"
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬",
+    "エンバー交換"
    ]
   },
   "549438": {
@@ -36,18 +37,18 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "db4b4a010830837b4466b526518a25718806ba7c6d91aeead370bb51ac774109",
-   "name": "Núcleo Apagado",
-   "desc": "O coração de um monstro que vaga pelo Fragmentum. Material bruto usado para aprimoramentos.",
-   "lore": "É uma lesão que dá vida ao mal, o impulso para o pecado. É a fonte da distorção do Fragmentum.<br />Um golpe forte fez com que o coração parasse de bater e perdesse o seu brilho.<br /><br />\"Testes preliminares indicam sua hibridez: metade primordial e metade similar a Stellarons.\" — Departamento de Biologia, Sarah Castro.",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "消滅した原核",
+   "desc": "裂界を徘徊するモンスターの心臓。強化に必要な簡易素材。",
+   "lore": "悪性腫瘍の病巣のように、罪を犯す衝動を育てる。これが裂界の歪みの根源である。<br />重い衝撃により、この心臓は鼓動をやめ、輝きを失った。<br /><br />「これは交雑の産物だと初歩的に判断できる。半分が原体、もう半分のデータは星核と酷似している——生物科、サラ・カストラ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 2,
    "rewardPath": "/material/549438",
    "comeFrom": [
-    "Certos Monstros do Fragmentum",
-    "Inimigos do Universo Simulado",
-    "Recompensas de Atribuição",
-    "Troca de Brasas",
-    "Sintetizador Omni — Troca de Material"
+    "一部の裂界造物からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "633379": {
@@ -55,17 +56,17 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "b2e2e1f644af07632c29e36a478b53e1c5109c28609acec12e88364084b2860e",
-   "name": "Núcleo Cintilante",
-   "desc": "O coração de um monstro que vaga pelo Fragmentum. Material normal usado para aprimoramentos.",
-   "lore": "É uma lesão que dá vida ao mal, o impulso para o pecado. É a fonte de distorção do Fragmentum.<br />O coração é cintilante e as veias indicam que ele ainda está batendo.<br /><br />\"Que tipo de monstro é esse? Você percebeu...? É verdade! É o rosto do nosso antigo líder!\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "微かに光る原核",
+   "desc": "裂界を徘徊するモンスターの心臓。強化に必要な普通素材。",
+   "lore": "悪性腫瘍の病巣のように、罪を犯す衝動を育てる。これが裂界の歪みの根源である。<br />この心臓はまだわずかな光を放ち、その筋には未だ生命力が宿っている。<br /><br />「あれは一体どんなモンスターなんだ？お前はあれの顔を見たか——あれは前任の隊長の顔だった、彼の顔だったんだ！」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 3,
    "rewardPath": "/material/633379",
    "comeFrom": [
-    "Certos Monstros do Fragmentum no Nível de Equilíbrio 2 ou superior",
-    "Sintetizador Omni — Síntese de Material",
-    "Inimigos do Universo Simulado",
-    "Sintetizador Omni — Troca de Material"
+    "均衡Lv.2に達した後、一部の裂界造物からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "635675": {
@@ -73,14 +74,15 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "ceab64ff2e8f3856092a677d614b5d6ef37dc03e434129bc7b73d0f9da0ea468",
-   "name": "Chave da Inspiração",
-   "desc": "Uma chave mítica que apareceu nas mãos dos Eruditos Meditativos. Usada para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudição</span>.",
-   "lore": "Ela pode destravar as inspirações ocultas nas profundezas do consciente.<br />Segurar esta chave é como segurar as centelhas que levam ao caminho do avanço.<br /><br />\"Eureka!\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "着想のカギ",
+   "desc": "苦慮している学者の手の中に現れる幻のカギ。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">知恵</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "意識の奥底に封じられた閃きを解き放つことができる。<br />カギを掴んだということは、己の中にある進むべき道を照らす光を掴んだということである。<br /><br />「エウレカ！」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 2,
    "rewardPath": "/material/635675",
    "comeFrom": [
-    "Cálice (Vila dos Rebites)"
+    "疑似花萼「リベットタウン」",
+    "エンバー交換"
    ]
   },
   "694487": {
@@ -88,15 +90,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "56ab8085d932c0a9521f684246a42bd320b199c3c1a6f3bd54b869c5f294fec9",
-   "name": "Éter Refinado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>6000</nobr> de EXP de Cone de Luz.",
-   "lore": "Uma lata de éter que foi extraída e destilada usando procedimentos especiais.<br /><br />\"O Jardim espera poder recriar uma glória do passado, mas é uma 'glória do passado' selecionada por eles. Você entende?\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "精製エーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>6000</nobr>獲得できる。",
+   "lore": "特殊な技術で精錬されたエーテル。<br /><br />「ガーデンは昔の輝かしい時代を取り戻そうとしている、だがそれは彼らが選択する『往日の輝き』だ、この意味がわかるか？」",
+   "purpose": "光円錐経験値素材",
    "rarity": 4,
    "rewardPath": "/material/694487",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)",
-    "Salão Esquecido"
+    "疑似花萼「外縁通路」",
+    "「忘却の庭」"
    ]
   },
   "694488": {
@@ -104,14 +106,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "1911d7bb4aad22029e82a9b17a0005674864038b6b61e86976ace8277267d9f6",
-   "name": "Éter Condensado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>2.000</nobr> de EXP de Cone de Luz.",
-   "lore": "Lata de éter refinado com técnicas especiais.<br /><br />\"Manuseie com cuidado, não deixe cair nem faça pressão sobre ela. Caso ocorra algum vazamento, consulte o capítulo II do \"Manual de Respostas a Desastres de Vazamentos\" para respostas de emergência.\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "濃縮エーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>2000</nobr>獲得できる。",
+   "lore": "特殊な技術で精錬されたエーテル。<br /><br />「気を付けて取り扱ってね。潰したり、落としたりしちゃダメよ。万が一、破損して中身が漏れた時は、『流溢災難対応手引き』の第二章に従って処理しなさい」",
+   "purpose": "光円錐経験値素材",
    "rarity": 3,
    "rewardPath": "/material/694488",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)"
+    "疑似花萼「外縁通路」",
+    "エンバー交換"
    ]
   },
   "694489": {
@@ -119,15 +122,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "03fc3a9bafdf0f18b1e49a885353ed442420842a2cc373428b242b213d2728fc",
-   "name": "Éter Espalhado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>500</nobr> de EXP de Cone de Luz.",
-   "lore": "Substância imaginária que não deveria existir. O material básico usado para criar Cones de Luz.<br />As imagens dos Cones de Luz se tornam ainda mais claras quando imbuídas dessa substância.<br /><br />\"Entendi, então esse é o suposto \"Sentimento\" do Jardim da Recordação. É por isso que os Memoriadores conseguem fazer viagens galácticas com lembranças.\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "希薄なエーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>500</nobr>獲得できる。",
+   "lore": "本来、現実には存在しない仮想媒質で、光円錐の基本原料。<br />光円錐に注入することで、中に封じられているイメージがより鮮明になる。<br /><br />「なるほどね～これがガーデン オブ リコレクションの『意質』ってやつ？だからメモキーパーは、記憶を携帯して星間旅行ができるんだね」",
+   "purpose": "光円錐経験値素材",
    "rarity": 2,
    "rewardPath": "/material/694489",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)",
-    "Recompensas de Atribuição"
+    "疑似花萼「外縁通路」",
+    "依頼報酬"
    ]
   },
   "717320": {
@@ -135,17 +138,17 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "66be483b1cffc88e1b0732cea73a9937a54f183fd4d56bda080f20556ce37492",
-   "name": "Núcleo Contorcido",
-   "desc": "O coração de um monstro que vaga pelo Fragmentum. Material avançado usado para aprimoramentos.",
-   "lore": "É uma lesão que dá vida ao mal, o impulso para o pecado. É a fonte de distorção do Fragmentum.<br />O coração pulsa de forma lenta, com uma força residual suficiente para causar uma nova calamidade. É melhor destruí-lo para evitar problemas futuros.<br /><br />\"É como um câncer...\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "脈動する原核",
+   "desc": "裂界を徘徊するモンスターの心臓。強化に必要な高級素材。",
+   "lore": "悪性腫瘍の病巣のように、罪を犯す衝動を育てる。これが裂界の歪みの根源である。<br />この心臓はまだ緩やかに鼓動している。これに残る力は、いずれ新たな災いを引き起こすだろう。恐怖が再び訪れる前に、不活化処理した方がいい。<br /><br />「まるで癌のようだ……」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 4,
    "rewardPath": "/material/717320",
    "comeFrom": [
-    "Certos Monstros do Fragmentum no Nível de Equilíbrio 4 ou superior",
-    "Sintetizador Omni — Síntese de Material",
-    "Inimigos do Universo Simulado",
-    "Sintetizador Omni — Troca de Material"
+    "均衡Lv.4に達した後、一部の裂界造物からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "836261": {
@@ -153,15 +156,15 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "c8da596b38d65a38a9d8138b4e2658b9a1e93a907da3702bdc9c38029acc442b",
-   "name": "Chave da Sabedoria",
-   "desc": "Uma chave mítica que apareceu nas mãos dos maiores gênios da galáxia. Usada para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudição</span>.",
-   "lore": "Ela é como um convite para os salões do Templo de Nous.<br />Encontrar a porta onde a chave pode ser usada é mais difícil do que obtê-la. Aqueles que entraram nessas portas secretas perceberam imediatamente que é impossível voltar a partir do momento em que pisam do outro lado.<br /><br />\"A Erudição não tem todas as respostas do universo, mas ela ensina a fazer a pergunta certa.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "叡智のカギ",
+   "desc": "宇宙の頂点に立つ天才の手の中に現れるカギ。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">知恵</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "このカギは、持ち主が知恵の神殿の扉を開く権利を得たという証拠である。<br />カギを手にしても、そのカギで開けられる扉を見つける方が大変である。扉の向こうに行った者は、もう振り返る必要がないことを悟るだろう。<br /><br />「知恵は宇宙の真理を教えてくれるわけではないが、どのように疑問を持てばよいかを教えてくれる」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 4,
    "rewardPath": "/material/836261",
    "comeFrom": [
-    "Cálice (Vila dos Rebites)",
-    "Sintetizador Omni — Síntese de Material"
+    "疑似花萼「リベットタウン」",
+    "「万能合成マシン」- 素材合成"
    ]
   },
   "920202": {
@@ -169,15 +172,16 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "d8bf5d6dcdbb34d3c6843e4e2fc80f2ffa9c35df84ea23e29acfda78307bc5d4",
-   "name": "Chave do Conhecimento",
-   "desc": "Uma chave mítica que apareceu nas mãos dos sábios do mundo. Usada para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudição</span>.",
-   "lore": "Ela pode desvendar os mistérios que ligam a verdade do mundo e conceder conhecimento além da compreensão humana.<br />Não importa quanto o portador tente exibir sua chave, pois ninguém, além de si mesmo, pode ver sua forma. Alguns acreditam que isso é um presente dos céus, outros pensam que é um sinal de transtorno mental.<br /><br />\"Eu sonhei com moléculas rodando em círculos, como uma cobra atrás de sua própria cauda. Acordei e percebi que isso era a resposta que eu procurava há muito tempo!\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "啓発のカギ",
+   "desc": "諸界の智者の手の中に現れる幻のカギ。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">知恵</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "真実を封印している錠前を開き、人智ではたどり着けない領域へと到達させる力を持つ。<br />持ち主がどうにかしてカギを見せようとしても、周りの人はカギの存在を認識することができない。ある人はこれを天啓とし、ある人は狂気の兆しとした。<br /><br />「分子が蛇のようにとぐろを巻いている夢を見たんだ。目覚めたときに気付いた、これが私の求めていた答えだと！」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
-    "Cálice (Vila dos Rebites)",
-    "Sintetizador Omni — Síntese de Material"
+    "疑似花萼「リベットタウン」",
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換"
    ]
   }
  },
@@ -336,8 +340,8 @@
  ],
  "skill": {
   "id": 20006,
-  "name": "Aprendizado",
-  "descHash": "Aumenta Dano de Perícia Suprema do usuário em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>.",
+  "name": "博識",
+  "descHash": "装備キャラの必殺技の与ダメージ+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>。",
   "levelData": [
    {
     "params": [

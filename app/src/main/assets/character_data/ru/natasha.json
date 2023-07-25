@@ -1,10 +1,10 @@
 {
  "spRequirement": 90,
- "iconPath": "7f01675b4fbd851a25c0344a1941b5ddca526bf2eaaa31eaf659638f7e957e9f",
+ "iconPath": "a335b20a8e91beb32d0b8ed58333c63860a71c3952d2c0ad09c3d2f7743816e3",
  "bgPath": "c2060b8bf30cf3f9ad6da9d0e68044a73dbc562111e6c686ea0f8aab3fff02a6",
- "figPath": "1231fb867d3a4ed02edd8cd58409599036aa8c09d97e4a48c3b8b7cb5c1bb1d4",
+ "figPath": "e8ad1491f88e49d73abed8598620c7595f2742afd8e6c572be4267983e8682ff",
  "fgPath": "ac6c4101946fdd160eb7995c2aff5bed3f3500c0a75f55ecdeaa1a2e3881b981",
- "splashIconPath": "8d749531e40fa03515c5a4e33a7f0c372f07f7f9f420a383dbbce09deff40335",
+ "splashIconPath": "a69755374a059aa5f0cd13eba8890b785e313e83538aa2cf53071c951de1d5e4",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Большая шахта: Чашелист",
     "Награды миссий",
-    "Награды за поручения"
+    "Награды за поручения",
+    "Неугасаемый пепел"
    ]
   },
   "125435": {
@@ -93,7 +94,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Пригородные снежные поля: Чашелист",
-    "Ежедневная тренировка"
+    "Ежедневная тренировка",
+    "Неугасаемый пепел"
    ]
   },
   "409962": {
@@ -161,7 +163,8 @@
    "rarity": 2,
    "rewardPath": "/material/635671",
    "comeFrom": [
-    "Сточный проход: Чашелист"
+    "Сточный проход: Чашелист",
+    "Неугасаемый пепел"
    ]
   },
   "717290": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920198",
    "comeFrom": [
     "Сточный проход: Чашелист",
-    "Универсальная машина для синтеза: Синтез материалов"
+    "Универсальная машина для синтеза: Синтез материалов",
+    "Неугасаемый пепел"
    ]
   }
  },
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "3e67cc1ffeb250a78e47565fb9bccd1f11ac7ab1e43f2a404607d0231807798e",
    "artPath": "2b9bc6bc86209e4c870dfdf01dee811bfccdc2fe2a01f4355768639e75b7bacb",
    "name": "Фармакологическая экспертиза",
    "descHash": "После атаки противником, если текущее HP ниже или равно <nobr>#1[i]%</nobr>, восстанавливает себе <nobr>#2[i]%</nobr> HP плюс <nobr>#3[i]</nobr> HP. Этот эффект может сработать только 1 раз за бой.",
@@ -430,7 +434,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "5a8626736e9b9564b7fdc42d9c9fa98d54948a84d4e022f34c75d14b7a56ac38",
    "artPath": "234132c99ec4b09c63418c319c0328bd83435525be8a80be18eb863212db9507",
    "name": "Клиническое исследование",
    "descHash": "Использование сверхспособности периодически исцеляет союзника с HP ниже или равным <nobr>#1[i]%</nobr> в течение <nobr>#2[i]</nobr> хода. В начале своего хода этот союзник восстанавливает HP, равное <nobr>#3[i]%</nobr> от макс. HP Наташи плюс <nobr>#4[i]</nobr> HP.",
@@ -443,7 +447,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "a39c7966698ca938d477824695090dea69cc1d599f17fabffc8ef71ccdb52c78",
    "artPath": "d5523321ddb4158c1e54e36466fe80766e5fae0759e33c621b3a527a17b638d5",
    "name": "Назначенное лекарство",
    "descHash": "Уровень навыка повышается на 2, максимальный уровень - <nobr>15</nobr>. Уровень базовой атаки повышается на 1, максимальный уровень - <nobr>10</nobr>.",
@@ -451,7 +455,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "9b8e7ac8065b049cb4b1ab91764e8f41b40b2abf4c6fbd5f9beebbbf362b1c70",
    "artPath": "bba675ae9760eb057e6248567d26431c1919537860b7a62f11cd49d9a869f13c",
    "name": "Чудесное исцеление",
    "descHash": "После атаки противника дополнительно восстанавливает <nobr>#1[i]</nobr> ед. энергии.",
@@ -469,7 +473,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "00f0382ba284f173d7015765d7e2cfa7a4aa42ef5061b3bdb025b4c7203a28a4",
    "artPath": "a503aed6f5c4617d93d6130daeebe936c20c5ada444f9c77796a795b5b129f00",
    "name": "Милосердие лекаря",
    "descHash": "Базовая атака Наташи наносит дополнительный физический урон, равный <nobr>#1[i]%</nobr> от её макс. HP.",
@@ -500,8 +504,8 @@
    "tagHash": "Одиночная атака",
    "descHash": "Наносит выбранному противнику физический урон, равный <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> от силы атаки Наташи.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 985668,
    "name": "Обратная сторона доброты",
    "iconPath": "6e18880adb27a24de954eb874a3666208a80ce79d4b31440eb8ddb735436920f",
@@ -661,8 +665,8 @@
    "tagHash": "Восстановление",
    "descHash": "Восстанавливает HP выбранного союзника, равное <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> от макс. HP Наташи плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span> HP. Также в начале каждого хода этот союзник восстанавливает HP, равное <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> от макс. HP Наташи плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]</nobr></span> HP, в течение <nobr>#3[i]</nobr> ходов.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 30,
+   "break": "0",
+   "energy": "30",
    "id": 270195,
    "name": "Люби, лечи и выбирай",
    "iconPath": "a39c7966698ca938d477824695090dea69cc1d599f17fabffc8ef71ccdb52c78",
@@ -992,8 +996,8 @@
    "tagHash": "Восстановление",
    "descHash": "Восстанавливает HP всех союзников, равное <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> от макс. HP Наташи плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> HP.",
    "ultimateCost": 90,
-   "break": 0,
-   "energy": 5,
+   "break": "0",
+   "energy": "5",
    "id": 186254,
    "name": "Дар возрождения",
    "iconPath": "e4113b795d199dc145b786aa8df64f9efbca4a4eb48bf2d1b32f570f030e1e6f",
@@ -1278,8 +1282,8 @@
    "tagHash": "Усиление",
    "descHash": "Исцеление союзников с HP ниже или равным <nobr>#1[i]%</nobr> повышает исходящее исцеление Наташи на <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Этот эффект также применяется к периодическому исцелению.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 470781,
    "name": "Иннервация",
    "iconPath": "f04c3a92828ecb5b0f575fc618baa17993aae3e1603438fe14a9460bb3512ef9",
@@ -1564,8 +1568,8 @@
    "tagHash": "",
    "descHash": "Атакует противника и после начала боя истощает стойкость соответствующего типа уязвимости противника.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 671367,
    "name": "Атака",
    "iconPath": "6e18880adb27a24de954eb874a3666208a80ce79d4b31440eb8ddb735436920f",
@@ -1584,10 +1588,10 @@
   },
   {
    "tagHash": "",
-   "descHash": "Немедленно атакует противника и после начала боя наносит случайному противнику физический урон, равный <nobr>#4[i]%</nobr> от силы атаки Наташи, и имеет <u>базовый шанс</u> <nobr>#1[i]%</nobr> наложить на всех противников статус Слабость.<br />Противники со статусом Слабость наносят союзникам на <nobr>#2[i]%</nobr> меньше урона в течение <nobr>#3[i]</nobr> хода.",
+   "descHash": "Немедленно атакует противника и после начала боя наносит случайному противнику физический урон, равный <nobr>#4[i]%</nobr> от силы атаки Наташи, и имеет <u>базовый шанс</u> <nobr>#1[i]%</nobr> наложить на всех противников статус Слабость.<br />Противник со статусом Слабость наносит на <nobr>#2[i]%</nobr> меньше урона в течение <nobr>#3[i]</nobr> хода.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 0,
+   "break": "60",
+   "energy": "0",
    "id": 554722,
    "name": "Изучение гипноза",
    "iconPath": "46d2d672cb7b528c46c3b9ec2032528432312cc323aab0005fc8a7d7580e37c9",
@@ -1717,8 +1721,6 @@
    "embedBonusSkill": {
     "descHash": "Использование навыка снимает <nobr>#1[i]</nobr> ослабление с выбранного союзника.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 622873,
     "name": "Успокоение",
     "iconPath": "be7fbf9c9e68e43e4b7840bc7f79852292338e90fc85f70f4eff844257e0a96b",
@@ -1856,8 +1858,6 @@
    "embedBonusSkill": {
     "descHash": "Исходящее исцеление Наташи повышается на <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 622876,
     "name": "Лечение",
     "iconPath": "bda4acf91d1cfe3bf92b88fd779f5b72c6f4175a4ec70654ff3532b8f4db7521",
@@ -1965,8 +1965,6 @@
    "embedBonusSkill": {
     "descHash": "Увеличивает длительность вызванного навыком периодического исцеления на <nobr>#1[i]</nobr> ход.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 622875,
     "name": "Восстановление",
     "iconPath": "b34419556353e8d0ccf755f3116995088a0832f45a93645b9fcade70dda5e0fc",
@@ -2086,7 +2084,7 @@
     "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7"
    },
    {
-    "relicTypeHash": "Соединительная верёвка",
+    "relicTypeHash": "Соединительная вязь",
     "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
     "propertyName": "HP",
     "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7"
@@ -2255,6 +2253,16 @@
    "krUrl": "20718de2eaeae1d17e4cdc44d29bce22647f30a954aa8463912d0c1aadb7cf64"
   },
   {
+   "id": 17,
+   "title": "О Луке...",
+   "text": "Этот мальчишка держится молодцом, но в глубине души он боится стать обузой - вот почему так усердно тренируется и выходит на ринг... Надеюсь, что однажды он остановится и прислушается к своему сердцу.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
    "id": 51,
    "title": "Начало боя: Пробитие уязвимости",
    "text": "Никаких лекарств не хватит.",
@@ -2296,7 +2304,7 @@
   },
   {
    "id": 55,
-   "title": "Пропуск хода",
+   "title": "Ожидание хода",
    "text": "Кажется, я жду уже достаточно давно...",
    "unlockRequirement": "",
    "cnUrl": "14f4fc82cb4cfa95744560522029fea29df821cdbcc4ffd1778657a28fc077b3",

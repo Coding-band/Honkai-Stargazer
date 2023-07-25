@@ -1,10 +1,10 @@
 {
  "spRequirement": 100,
- "iconPath": "dd344d544fad8631709ef0260ec51bc606b21be612e2d55b77087cbbcde3a995",
+ "iconPath": "51d60322aa0c03f444c3547835e0aa48da78961cef14db1d13966ebb2279e4aa",
  "bgPath": "9301edc335bb2ab312fdd41f765aa7e5ca329b732140b138404a03693436a3d6",
- "figPath": "7959b58990a507b73a75b7675c43ea29f4a7f827f000d6a74a2bd1044e683cd8",
+ "figPath": "8c0ebb034878420fa4c30bf05220bf30d04147b22948bbf06158f860b634094f",
  "fgPath": "094bb802b5aa0eaeabf9fb48b6001932fd6c6c790cb3efe78489b6dce06cf78d",
- "splashIconPath": "190e9162d9f4d3b560b2354a2a5196042186a968d6624a16a15a5b2891973fa2",
+ "splashIconPath": "afd48c7970d998c772caf1700f8c3bb9507eb8cf2b3df05865045baeeda235e1",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Большая шахта: Чашелист",
     "Награды миссий",
-    "Награды за поручения"
+    "Награды за поручения",
+    "Неугасаемый пепел"
    ]
   },
   "125435": {
@@ -56,7 +57,7 @@
    "iconPath": "f35663b201c893327da3e5dd27e184a3ef67f4093ffd9c195470145bbe4df409",
    "name": "Электрическая корона тени прошлого",
    "desc": "Головной убор Тени хранительницы. Может использоваться для возвышения электрических персонажей.",
-   "lore": "Аксессуар, оставленный тенью прошлой хранительницы, рассказывающий истории о городе вечнозимья.<br /><br />«Светлана Суровая - её гнев ужасен, как гром, и её возмездие быстро, как молния».",
+   "lore": "Аксессуар, оставленный тенью прошлой хранительницы, рассказывающий истории о городе вечнозимья.<br /><br />«Светлана Стальная Хватка - её гнев ужасен, как гром, и её возмездие быстро, как молния».",
    "purpose": "Материал возвышения персонажа",
    "rarity": 4,
    "rewardPath": "/material/151160",
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Пригородные снежные поля: Чашелист",
-    "Ежедневная тренировка"
+    "Ежедневная тренировка",
+    "Неугасаемый пепел"
    ]
   },
   "409962": {
@@ -177,7 +179,8 @@
    "rarity": 2,
    "rewardPath": "/material/635671",
    "comeFrom": [
-    "Сточный проход: Чашелист"
+    "Сточный проход: Чашелист",
+    "Неугасаемый пепел"
    ]
   },
   "717320": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920198",
    "comeFrom": [
     "Сточный проход: Чашелист",
-    "Универсальная машина для синтеза: Синтез материалов"
+    "Универсальная машина для синтеза: Синтез материалов",
+    "Неугасаемый пепел"
    ]
   }
  },
@@ -439,7 +443,7 @@
   },
   {
    "id": 3,
-   "iconPath": "d783b78448b18593814854783d443c0925f8280990fac71405e553fca0cca66d",
+   "iconPath": "4130f9d6609f28aa425b918db56f8f014165520256afe4009125d3183730cc3c",
    "artPath": "2efec8ee00649a6b88a49d97722597a6a9d7ff19297c2821fb32fd587595020f",
    "name": "Загадочное чудо",
    "descHash": "Уровень навыка повышается на 2, максимальный уровень - <nobr>15</nobr>. Уровень таланта повышается на 2, максимальный уровень - <nobr>15</nobr>.",
@@ -498,11 +502,11 @@
    "tagHash": "Одиночная атака",
    "descHash": "Наносит электрический урон выбранному противнику, равный <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> от силы атаки Байлу.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 231592,
    "name": "Диагностический пинок",
-   "iconPath": "fac40f5b5376912ec748ac97c6d2f83f34a9ac6b3f4f12fdcf97f41d8d3f0bad",
+   "iconPath": "458dc6a064b195b4c1909bdae7b6e62e229be14422c5e7ce2b02e198ef0b6592",
    "typeDescHash": "Базовая атака",
    "levelReq": 0,
    "promotionReq": 0,
@@ -659,11 +663,11 @@
    "tagHash": "Восстановление",
    "descHash": "Восстанавливает выбранному союзнику HP, равное <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> от макс. HP Байлу плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> HP. Затем Байлу исцеляет случайных союзников <nobr>#4[i]</nobr> раза. Эффективность каждого последующего исцеления понижается на <nobr>#3[i]%</nobr>.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 30,
+   "break": "0",
+   "energy": "30",
    "id": 947065,
    "name": "Пение среди облаков",
-   "iconPath": "d783b78448b18593814854783d443c0925f8280990fac71405e553fca0cca66d",
+   "iconPath": "4130f9d6609f28aa425b918db56f8f014165520256afe4009125d3183730cc3c",
    "typeDescHash": "Навык",
    "levelReq": 0,
    "promotionReq": 0,
@@ -979,11 +983,11 @@
    "tagHash": "Восстановление",
    "descHash": "Восстанавливает всем союзникам HP, равное <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> от макс. HP Байлу плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> HP.<br />Байлу накладывает статус Бодрость на союзников, которые ещё не имеют этого статуса. Она также увеличивает длительность статуса Бодрость тех союзников, которые уже имеют этот статус, на 1 ход.<br />Статус Бодрость длится <nobr>#3[i]</nobr> хода. Этот эффект не может складываться.",
    "ultimateCost": 100,
-   "break": 0,
-   "energy": 5,
+   "break": "0",
+   "energy": "5",
    "id": 31006,
    "name": "Скачущий в омуте дракон",
-   "iconPath": "6bd02880061bdc74fe084bf2c3c1beb433b329cb04a0dfa71707ea78175c7384",
+   "iconPath": "9352122108cf9739cc7978540e1d24f3e94d6a429a352f9cff24a277a4732c4d",
    "typeDescHash": "Сверхспособность",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1284,11 +1288,11 @@
    "tagHash": "Восстановление",
    "descHash": "Когда противник атакует союзника со статусом Бодрость, Байлу восстанавливает этому союзнику HP, равное <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> от макс. HP Байлу плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> HP. Этот эффект может сработать до <nobr>#5[i]</nobr> раз.<br />При получении добивающего удара союзник не станет <u>неспособным сражаться</u>. Байлу немедленно восстанавливает этому союзнику HP, равное <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> от макс. HP Байлу плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span> HP. Этот эффект может сработать только 1 раз за бой.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 746479,
    "name": "Успеть помочь всему миру",
-   "iconPath": "0617446412329f34bd3401bef74e9a249a78b7582519fd0fb167f87c6ceaceb8",
+   "iconPath": "da034da6a2d10f3381501defc55cb96fc0cbb737e066ea62d9a84a7f3360101a",
    "typeDescHash": "Талант",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1619,11 +1623,11 @@
    "tagHash": "",
    "descHash": "Атакует противника и после начала боя истощает стойкость соответствующего типа уязвимости противника.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 545893,
    "name": "Атака",
-   "iconPath": "fac40f5b5376912ec748ac97c6d2f83f34a9ac6b3f4f12fdcf97f41d8d3f0bad",
+   "iconPath": "458dc6a064b195b4c1909bdae7b6e62e229be14422c5e7ce2b02e198ef0b6592",
    "typeDescHash": "",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1641,11 +1645,11 @@
    "tagHash": "Восстановление",
    "descHash": "Использование техники накладывает статус Бодрость на всех союзников в начале следующего боя на <nobr>#1[i]</nobr> хода.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 662538,
    "name": "Оздоровительная прогулка",
-   "iconPath": "1e6dfd421b65d8ecda84334a03cd7b6c1f3ca4e4445360965c46cd8e18059cfc",
+   "iconPath": "93a6c28c9316f0690daf43ea2f3ece5344626a316a483b3e355652fe120d653f",
    "typeDescHash": "Техника",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1769,8 +1773,6 @@
    "embedBonusSkill": {
     "descHash": "Когда Байлу исцеляет союзника сверх его макс. HP, макс. HP союзника повышается на <nobr>#1[i]%</nobr> на <nobr>#2[i]</nobr> хода.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 671251,
     "name": "Суть врачевания",
     "iconPath": "44b69d271f4591c8d69c86d4eee45a404a41cbb30b48efa07ba948d503e06d34",
@@ -1909,11 +1911,9 @@
    "embedBonusSkill": {
     "descHash": "Эффект Бодрость может сработать <nobr>#1[i]</nobr> дополнительный раз.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 671252,
-    "name": "Геовены видьядхара",
-    "iconPath": "e8e3f60014882471d455961b50e397a3034f17aed0c50a82f01e99b860d51188",
+    "name": "Драконья кровь видьядхара",
+    "iconPath": "20c2448211439a503d13e0413fc572131acf26629584679bac3996b46d6abcad",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
@@ -2018,11 +2018,9 @@
    "embedBonusSkill": {
     "descHash": "Получаемый персонажами со статусом Бодрость урон понижается на <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 671253,
     "name": "Водное благословение",
-    "iconPath": "fb8f5582e28e8d3f73de7b0201825e2ee2e8d4a8e94393064384de6d6b640663",
+    "iconPath": "eaac4e02eb40395a2642555636a8fd1257fac52acc44c0fa30a7e53bf640f728",
     "levelReq": 0,
     "promotionReq": 6,
     "levelData": [
@@ -2139,7 +2137,7 @@
     "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7"
    },
    {
-    "relicTypeHash": "Соединительная верёвка",
+    "relicTypeHash": "Соединительная вязь",
     "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
     "propertyName": "HP",
     "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7"
@@ -2339,7 +2337,7 @@
   },
   {
    "id": 55,
-   "title": "Пропуск хода",
+   "title": "Ожидание хода",
    "text": "Молча не могу стоять - я хочу всех избивать.",
    "unlockRequirement": "",
    "cnUrl": "d2f3a45b8bae3ae3586eb2c8a8fed14b24a5137c0a75692feaf03d0da187f23a",
@@ -2400,7 +2398,7 @@
   {
    "id": 61,
    "title": "Сверхспособность: Активация",
-   "text": "Пора показать тебе...",
+   "text": "Пора тебе узнать...",
    "unlockRequirement": "",
    "cnUrl": "47d3c3d37855b4749c035ae1a41a613beb77d7e238462c999fb5b4e87ae638b3",
    "jpUrl": "dd755de5584e73ebe2d7bce36a8744d7479f446cb8095bc66834edbcada0fe75",
@@ -2410,7 +2408,7 @@
   {
    "id": 62,
    "title": "Сверхспособность: Применение",
-   "text": "Что указано... в рецепте?",
+   "text": "Вкус снадобья из моей тыквы!",
    "unlockRequirement": "",
    "cnUrl": "91feb086090ba331997b0c80caef146c74f1e97095e885e1c7e6ac79bfc8e103",
    "jpUrl": "e8137d25b223f3e446c4cb6067b1067cf16a14fc5c2e01ab1966f1fdd3ff4f6d",

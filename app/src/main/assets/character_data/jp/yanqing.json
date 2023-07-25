@@ -1,10 +1,10 @@
 {
  "spRequirement": 140,
- "iconPath": "56e2db241bd71da55d90de713fd332572a4215c32f50aadde43072436a890a32",
+ "iconPath": "9760b3d8dc2f3ccb3e40e7d828c829c53b229c69811f23bbe56736ebdac7200d",
  "bgPath": "1ad2155f6d696b85d83c65b403a7bbe5774d4c76562164e9af5dad6471a7c976",
- "figPath": "008833eb9b2916ba2c4e9c03fe5dc853887e23e26fa6195ab1e48c691fc460aa",
+ "figPath": "e22d500ff48be42e47f647d8094915b68a2394bec253392c91a5e4264519d3c6",
  "fgPath": "1fd33e126c8d2051b947cf0c7e33ffd6b5a9a365f1ab4b34b22f247ab4c0206b",
- "splashIconPath": "1225c60547f6a6064b72314c5d99ff4e54795beee2fbec04c47fca70f65e0eb3",
+ "splashIconPath": "30eaff12c3ae1b8f5b469fe989853664864d91eb5ede7e22937f858059d10a67",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "疑似花萼「大鉱区」",
     "クエスト報酬",
-    "依頼報酬"
+    "依頼報酬",
+    "エンバー交換"
    ]
   },
   "67220": {
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "疑似花萼「郊外雪原」",
-    "デイリー訓練"
+    "デイリー訓練",
+    "エンバー交換"
    ]
   },
   "409962": {
@@ -177,7 +179,8 @@
    "rarity": 2,
    "rewardPath": "/material/635674",
    "comeFrom": [
-    "疑似花萼「郊外雪原」"
+    "疑似花萼「郊外雪原」",
+    "エンバー交換"
    ]
   },
   "717319": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920201",
    "comeFrom": [
     "疑似花萼「郊外雪原」",
-    "「万能合成マシン」- 素材合成"
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換"
    ]
   }
  },
@@ -438,7 +442,7 @@
   },
   {
    "id": 3,
-   "iconPath": "16fdca2019309d1d7fb961726bd0181efc12b47243846fb1961598cca82e08cb",
+   "iconPath": "3aa9c022e24a6a7b5b188589f8e02fd86f005bea963c26fcb9e42e8e7f1027a5",
    "artPath": "046d4d065c3f196bb4836d053784e98e3b5b3215e7d7ba06b110d8640eeb1f4f",
    "name": "剣胎",
    "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
@@ -457,7 +461,7 @@
   },
   {
    "id": 5,
-   "iconPath": "d015b5925332dd37dc90faaf38ab2ac9326d4f9bb26bf946ffd085f0de4715d3",
+   "iconPath": "faf406dce51ed76956c89bc7361edbc336731d6723f6cf88239716ad87a577c7",
    "artPath": "2f321eb6e01bfff4e9c776e2f1e1be0fd3dd76c97d735af829a23b3daf4f6ada",
    "name": "武骨",
    "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
@@ -494,11 +498,11 @@
    "tagHash": "単体攻撃",
    "descHash": "指定した敵単体に彦卿の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与える。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 531503,
    "name": "寒光刺す霜鋒",
-   "iconPath": "78c41e808b0a2d01f85b55d2598185f529a8106c3ba58b7c8a15f1454fa3d2be",
+   "iconPath": "eda23bd03b5c4ba5e822df28e2a026899c4e8266db5b03a001273af8738bf92c",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
    "promotionReq": 0,
@@ -655,11 +659,11 @@
    "tagHash": "単体攻撃",
    "descHash": "指定した敵単体に彦卿の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与え、彦卿に「智剣連心」を付与する、1ターン継続。",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 30,
+   "break": "60",
+   "energy": "30",
    "id": 246976,
    "name": "三尺秋水",
-   "iconPath": "16fdca2019309d1d7fb961726bd0181efc12b47243846fb1961598cca82e08cb",
+   "iconPath": "3aa9c022e24a6a7b5b188589f8e02fd86f005bea963c26fcb9e42e8e7f1027a5",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
    "promotionReq": 0,
@@ -930,11 +934,11 @@
    "tagHash": "単体攻撃",
    "descHash": "自身の会心率+<nobr>#1[i]%</nobr>、彦卿に「智剣連心」がある場合、さらに会心ダメージ+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>、<u>バフ</u>は1ターン継続。その後、指定した敵単体に彦卿の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与える。",
    "ultimateCost": 140,
-   "break": 90,
-   "energy": 5,
+   "break": "90",
+   "energy": "5",
    "id": 363621,
    "name": "快雨に戯れる燕",
-   "iconPath": "4bf96bc426831906e3228d598d2efffb03b21d7e9c2f1b8f6f939dca0dc8343a",
+   "iconPath": "65bca3c3e825d6d874e9de471d62a550e55b7a0e75f9b356fcedd3e4e891bfab",
    "typeDescHash": "必殺技",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1235,11 +1239,11 @@
    "tagHash": "単体攻撃",
    "descHash": "彦卿に「智剣連心」がある場合、攻撃を受ける確率ダウン、自身の会心率+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>、会心ダメージ+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>。敵に攻撃を行った後、<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>の<u>固定確率</u>で<u>追加攻撃</u>を行い、敵に彦卿の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与え、<nobr>#6[i]%</nobr>の<u>基礎確率</u>で敵を凍結状態にする、1ターン継続。<br />凍結状態の敵は行動できず、ターンが回ってくるたびに彦卿の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性<u>付加ダメージ</u>を受ける。<br />彦卿がダメージを受けると「智剣連心」が解除される。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 10,
+   "break": "30",
+   "energy": "10",
    "id": 46390,
    "name": "呼影剣",
-   "iconPath": "faf9bdd5b8e346bc02d4ed9592de49f72d13a29ee5359b002d87f8151bbc49f3",
+   "iconPath": "2ccb1e7567b55ae40f936604526e47d134bff166c2df9bf47c1264439f1cd96b",
    "typeDescHash": "天賦",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1585,11 +1589,11 @@
    "tagHash": "",
    "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 878508,
    "name": "攻撃",
-   "iconPath": "78c41e808b0a2d01f85b55d2598185f529a8106c3ba58b7c8a15f1454fa3d2be",
+   "iconPath": "eda23bd03b5c4ba5e822df28e2a026899c4e8266db5b03a001273af8738bf92c",
    "typeDescHash": "",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1607,8 +1611,8 @@
    "tagHash": "強化",
    "descHash": "秘技を使用した後、次の戦闘開始時、残りHPが<nobr>#1[i]%</nobr>以上の敵に対して、彦卿の与ダメージ+<nobr>#2[i]%</nobr>、<nobr>#3[i]</nobr>ターン継続。",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 962449,
    "name": "御剣真訣",
    "iconPath": "fcd2be4b2aa59e63cf6695bdb806aff85ac5cd4a174a334d9534d9e850d94930",
@@ -1704,11 +1708,9 @@
    "embedBonusSkill": {
     "descHash": "攻撃を行った後、<span style=\"color:#47C7FD;\">氷</span>属性の弱点がある敵に、彦卿の攻撃力<nobr>#1[i]%</nobr>分の<span style=\"color:#47C7FD;\">氷</span>属性付加ダメージを与える。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 968122,
     "name": "頒氷",
-    "iconPath": "22cf179a530b447e29f8ef9c3865188acd775ac4ce59a15d65d1faaf363abaa6",
+    "iconPath": "2bfd7990fadbe67d030d93a428e9e585bac1500b72354c40b193dff2123c3dfd",
     "levelReq": 0,
     "promotionReq": 2,
     "levelData": [
@@ -1810,11 +1812,9 @@
    "embedBonusSkill": {
     "descHash": "「智剣連心」がある場合、効果抵抗+<nobr>#1[i]%</nobr>。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 968125,
     "name": "凌霜",
-    "iconPath": "343d2fdf031738a3a442a85c0ee1caa26b741e4af2218862b1a7c4b5d63b1230",
+    "iconPath": "4b0c59cf22bb2143b78364ad60a697c213bb6611f02666ec656c83c41b9d8a2d",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
@@ -1952,11 +1952,9 @@
    "embedBonusSkill": {
     "descHash": "会心が発生した時、速度+<nobr>#1[i]%</nobr>、<nobr>#2[i]</nobr>ターン継続。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 968124,
     "name": "軽呂",
-    "iconPath": "3c4b5e5795583a6b281d3e54e125e6f795227f24b9725d410ccafe39e758f687",
+    "iconPath": "159df9196d258d347c97cc76288a5f332a5bc3a2b1639d8a53b3c15c4dd351da",
     "levelReq": 0,
     "promotionReq": 6,
     "levelData": [

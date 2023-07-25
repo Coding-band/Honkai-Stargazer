@@ -1,10 +1,10 @@
 {
  "spRequirement": 100,
- "iconPath": "dd344d544fad8631709ef0260ec51bc606b21be612e2d55b77087cbbcde3a995",
+ "iconPath": "51d60322aa0c03f444c3547835e0aa48da78961cef14db1d13966ebb2279e4aa",
  "bgPath": "9301edc335bb2ab312fdd41f765aa7e5ca329b732140b138404a03693436a3d6",
- "figPath": "7959b58990a507b73a75b7675c43ea29f4a7f827f000d6a74a2bd1044e683cd8",
+ "figPath": "8c0ebb034878420fa4c30bf05220bf30d04147b22948bbf06158f860b634094f",
  "fgPath": "094bb802b5aa0eaeabf9fb48b6001932fd6c6c790cb3efe78489b6dce06cf78d",
- "splashIconPath": "190e9162d9f4d3b560b2354a2a5196042186a968d6624a16a15a5b2891973fa2",
+ "splashIconPath": "afd48c7970d998c772caf1700f8c3bb9507eb8cf2b3df05865045baeeda235e1",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "疑似花萼「大鉱区」",
     "クエスト報酬",
-    "依頼報酬"
+    "依頼報酬",
+    "エンバー交換"
    ]
   },
   "125435": {
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "疑似花萼「郊外雪原」",
-    "デイリー訓練"
+    "デイリー訓練",
+    "エンバー交換"
    ]
   },
   "409962": {
@@ -177,7 +179,8 @@
    "rarity": 2,
    "rewardPath": "/material/635671",
    "comeFrom": [
-    "疑似花萼「外縁通路」"
+    "疑似花萼「外縁通路」",
+    "エンバー交換"
    ]
   },
   "717320": {
@@ -205,7 +208,7 @@
    "iconPath": "71dd8f16d472b4b68f3296f67d6421f2b8aab12a6712c56506f336283bd0220c",
    "name": "永久の花",
    "desc": "生命の芽から咲いた花。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">豊穣</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
-   "lore": "花蕊には豊穣の力が凝縮されており、枯れることがない。灼熱の地や極寒の地などの劣悪な環境でも、その成長を妨げることはできない。<br />やがてその枝葉は星の光を食べ、根は人々の血肉を土壌とし、すべてが一体となり、不滅の存在になる。その果実は永遠の命を約束してくれる。<br /><br />「龐然と船あり。その勢い、山岳を越え、虚空を行く。そこに不死の樹あり、食せば長寿する」",
+   "lore": "花蕊には豊穣の力が凝縮されており、枯れることがない。灼熱の地や極寒の地などの劣悪な環境でも、その成長を妨げることはできない。<br />やがてその枝葉は星の光を食べ、根は人々の血肉を土壌とし、すべてが一体となり、不滅の存在になる。その果実は永遠の命を約束してくれる。<br /><br />「極大な船があり。その勢い、山岳を越え、虚空を行く。そこに不死の樹あり、食せば長寿する」",
    "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 4,
    "rewardPath": "/material/836257",
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920198",
    "comeFrom": [
     "疑似花萼「外縁通路」",
-    "「万能合成マシン」- 素材合成"
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換"
    ]
   }
  },
@@ -439,7 +443,7 @@
   },
   {
    "id": 3,
-   "iconPath": "d783b78448b18593814854783d443c0925f8280990fac71405e553fca0cca66d",
+   "iconPath": "4130f9d6609f28aa425b918db56f8f014165520256afe4009125d3183730cc3c",
    "artPath": "2efec8ee00649a6b88a49d97722597a6a9d7ff19297c2821fb32fd587595020f",
    "name": "心地安らぐ回春の妙手",
    "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
@@ -498,11 +502,11 @@
    "tagHash": "単体攻撃",
    "descHash": "指定した敵単体に白露の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与える。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 231592,
    "name": "望・聞・問…蹴！",
-   "iconPath": "fac40f5b5376912ec748ac97c6d2f83f34a9ac6b3f4f12fdcf97f41d8d3f0bad",
+   "iconPath": "458dc6a064b195b4c1909bdae7b6e62e229be14422c5e7ce2b02e198ef0b6592",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
    "promotionReq": 0,
@@ -659,11 +663,11 @@
    "tagHash": "回復",
    "descHash": "指定した味方単体のHPを白露の最大HP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>回復し、さらに<nobr>#4[i]</nobr>回、ランダムに味方単体を治癒する。治癒するたびに、次の治癒で回復するHP-<nobr>#3[i]%</nobr>。",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 30,
+   "break": "0",
+   "energy": "30",
    "id": 947065,
    "name": "雲吟乍然、零れる珠露",
-   "iconPath": "d783b78448b18593814854783d443c0925f8280990fac71405e553fca0cca66d",
+   "iconPath": "4130f9d6609f28aa425b918db56f8f014165520256afe4009125d3183730cc3c",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
    "promotionReq": 0,
@@ -979,11 +983,11 @@
    "tagHash": "回復",
    "descHash": "味方全体のHPを白露の最大HP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>回復する。<br />「生生」が付与されていない味方に「生生」を付与する。「生生」が付与されている味方の「生生」の継続時間+1ターン。<br />「生生」は<nobr>#3[i]</nobr>ターン継続でき、効果は累積できない。",
    "ultimateCost": 100,
-   "break": 0,
-   "energy": 5,
+   "break": "0",
+   "energy": "5",
    "id": 31006,
    "name": "雷鳴率いる躍渊の蛟龍",
-   "iconPath": "6bd02880061bdc74fe084bf2c3c1beb433b329cb04a0dfa71707ea78175c7384",
+   "iconPath": "9352122108cf9739cc7978540e1d24f3e94d6a429a352f9cff24a277a4732c4d",
    "typeDescHash": "必殺技",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1284,11 +1288,11 @@
    "tagHash": "回復",
    "descHash": "「生生」を持つ味方が攻撃を受けた後、HPを白露の最大HP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>回復する、この効果は<nobr>#5[i]</nobr>回発動できる。<br />白露以外の味方は、HPが0になる攻撃を受けても<u>戦闘不能状態</u>にならず、白露がその味方を治癒し、白露の最大HP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span>のHPを回復させる。この効果は一度の戦闘で1回発動できる。",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 746479,
    "name": "懸壺済世",
-   "iconPath": "0617446412329f34bd3401bef74e9a249a78b7582519fd0fb167f87c6ceaceb8",
+   "iconPath": "da034da6a2d10f3381501defc55cb96fc0cbb737e066ea62d9a84a7f3360101a",
    "typeDescHash": "天賦",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1619,11 +1623,11 @@
    "tagHash": "",
    "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 545893,
    "name": "攻撃",
-   "iconPath": "fac40f5b5376912ec748ac97c6d2f83f34a9ac6b3f4f12fdcf97f41d8d3f0bad",
+   "iconPath": "458dc6a064b195b4c1909bdae7b6e62e229be14422c5e7ce2b02e198ef0b6592",
    "typeDescHash": "",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1641,11 +1645,11 @@
    "tagHash": "回復",
    "descHash": "秘技を使用した後、次の戦闘開始時、味方全体に「生生」を付与、<nobr>#1[i]</nobr>ターン継続。",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 662538,
    "name": "恙病を払拭せし、徜徉する霊澤",
-   "iconPath": "1e6dfd421b65d8ecda84334a03cd7b6c1f3ca4e4445360965c46cd8e18059cfc",
+   "iconPath": "93a6c28c9316f0690daf43ea2f3ece5344626a316a483b3e355652fe120d653f",
    "typeDescHash": "秘技",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1769,8 +1773,6 @@
    "embedBonusSkill": {
     "descHash": "白露が味方に最大HPを超える治癒を行った時、その味方の最大HP+<nobr>#1[i]%</nobr>、<nobr>#2[i]</nobr>ターン継続。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 671251,
     "name": "岐黄精義",
     "iconPath": "44b69d271f4591c8d69c86d4eee45a404a41cbb30b48efa07ba948d503e06d34",
@@ -1909,11 +1911,9 @@
    "embedBonusSkill": {
     "descHash": "「生生」効果の発動回数+<nobr>#1[i]</nobr>。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 671252,
     "name": "持明の龍脈",
-    "iconPath": "e8e3f60014882471d455961b50e397a3034f17aed0c50a82f01e99b860d51188",
+    "iconPath": "20c2448211439a503d13e0413fc572131acf26629584679bac3996b46d6abcad",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
@@ -2018,11 +2018,9 @@
    "embedBonusSkill": {
     "descHash": "「生生」を付与されたキャラの被ダメージ-<nobr>#1[i]%</nobr>。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 671253,
     "name": "鱗淵の恩沢",
-    "iconPath": "fb8f5582e28e8d3f73de7b0201825e2ee2e8d4a8e94393064384de6d6b640663",
+    "iconPath": "eaac4e02eb40395a2642555636a8fd1257fac52acc44c0fa30a7e53bf640f728",
     "levelReq": 0,
     "promotionReq": 6,
     "levelData": [
@@ -2190,7 +2188,7 @@
   {
    "id": 5,
    "title": "世間話・食事",
-   "text": "昼食は君臣一体にこだわっておる。燻製ハンバーグ2個に、ミルクティー1杯、これぞ心の憂いを癒し、気分を晴れやかにする最良の組み合わせなのじゃ。",
+   "text": "昼食は君臣一体にこだわっておる。燻製ハンバーガー2個にミルクティー1杯、これぞ心の憂いを癒し、気分を晴れやかにする最良の組み合わせなのじゃ。",
    "unlockRequirement": "",
    "cnUrl": "d3a131815d8e7f3499ea27b5fa9115332fbeff6a0a16f1680293e4ff2ab595a0",
    "jpUrl": "3ef86686096d6a98e2fcd674f567de92bf181226569f833fad57872a04339def",

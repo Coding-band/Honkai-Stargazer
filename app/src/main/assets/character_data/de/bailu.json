@@ -1,10 +1,10 @@
 {
  "spRequirement": 100,
- "iconPath": "dd344d544fad8631709ef0260ec51bc606b21be612e2d55b77087cbbcde3a995",
+ "iconPath": "51d60322aa0c03f444c3547835e0aa48da78961cef14db1d13966ebb2279e4aa",
  "bgPath": "9301edc335bb2ab312fdd41f765aa7e5ca329b732140b138404a03693436a3d6",
- "figPath": "7959b58990a507b73a75b7675c43ea29f4a7f827f000d6a74a2bd1044e683cd8",
+ "figPath": "8c0ebb034878420fa4c30bf05220bf30d04147b22948bbf06158f860b634094f",
  "fgPath": "094bb802b5aa0eaeabf9fb48b6001932fd6c6c790cb3efe78489b6dce06cf78d",
- "splashIconPath": "190e9162d9f4d3b560b2354a2a5196042186a968d6624a16a15a5b2891973fa2",
+ "splashIconPath": "afd48c7970d998c772caf1700f8c3bb9507eb8cf2b3df05865045baeeda235e1",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Blütenkelch (Große Mine)",
     "Missionsbelohnungen",
-    "Auftragsbelohnungen"
+    "Auftragsbelohnungen",
+    "Glut-Tausch"
    ]
   },
   "125435": {
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Blütenkelch (Äußere Schneewüste)",
-    "Tägliches Training"
+    "Tägliches Training",
+    "Glut-Tausch"
    ]
   },
   "409962": {
@@ -177,7 +179,8 @@
    "rarity": 2,
    "rewardPath": "/material/635671",
    "comeFrom": [
-    "Blütenkelch (Abgelegener Pass)"
+    "Blütenkelch (Abgelegener Pass)",
+    "Glut-Tausch"
    ]
   },
   "717320": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920198",
    "comeFrom": [
     "Blütenkelch (Abgelegener Pass)",
-    "Omni-Synthesemaschine – Materialsynthese"
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Glut-Tausch"
    ]
   }
  },
@@ -439,7 +443,7 @@
   },
   {
    "id": 3,
-   "iconPath": "d783b78448b18593814854783d443c0925f8280990fac71405e553fca0cca66d",
+   "iconPath": "4130f9d6609f28aa425b918db56f8f014165520256afe4009125d3183730cc3c",
    "artPath": "2efec8ee00649a6b88a49d97722597a6a9d7ff19297c2821fb32fd587595020f",
    "name": "Rätselhaftes Wunder",
    "descHash": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Talentstufe +2 bis zu max. St. <nobr>15</nobr>.",
@@ -498,11 +502,11 @@
    "tagHash": "Einzelangriff",
    "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Bailus ANG zu.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 231592,
    "name": "Diagnosetritt",
-   "iconPath": "fac40f5b5376912ec748ac97c6d2f83f34a9ac6b3f4f12fdcf97f41d8d3f0bad",
+   "iconPath": "458dc6a064b195b4c1909bdae7b6e62e229be14422c5e7ce2b02e198ef0b6592",
    "typeDescHash": "Standardangriff",
    "levelReq": 0,
    "promotionReq": 0,
@@ -659,11 +663,11 @@
    "tagHash": "Wiederherstellung",
    "descHash": "Stellt LP eines anvisierten Verbündeten sofort um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> von Bailus max. LP plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> wieder her. Anschließend heilt Bailu <nobr>#4[i]</nobr>-mal zufällige Verbündete. Nach jeder Heilung werden die wiederhergestellten LP beim nächsten Mal um <nobr>#3[i]%</nobr> reduziert.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 30,
+   "break": "0",
+   "energy": "30",
    "id": 947065,
    "name": "Unter den Wolken singen",
-   "iconPath": "d783b78448b18593814854783d443c0925f8280990fac71405e553fca0cca66d",
+   "iconPath": "4130f9d6609f28aa425b918db56f8f014165520256afe4009125d3183730cc3c",
    "typeDescHash": "Fertigkeit",
    "levelReq": 0,
    "promotionReq": 0,
@@ -979,11 +983,11 @@
    "tagHash": "Wiederherstellung",
    "descHash": "Stellt LP aller Verbündeten sofort um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> von Bailus max. LP plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> wieder her.<br />Verbündete, die noch nicht belebt sind, werden von Bailu belebt. Bei Verbündeten mit Belebung hält die Belebungsdauer 1 weitere Runde lang an.<br />Die „Belebung“ hält bis zu <nobr>#3[i]</nobr> Rd. lang an. Dieser Effekt ist nicht stapelbar.",
    "ultimateCost": 100,
-   "break": 0,
-   "energy": 5,
+   "break": "0",
+   "energy": "5",
    "id": 31006,
    "name": "Sprung des Sumpfdrachen",
-   "iconPath": "6bd02880061bdc74fe084bf2c3c1beb433b329cb04a0dfa71707ea78175c7384",
+   "iconPath": "9352122108cf9739cc7978540e1d24f3e94d6a429a352f9cff24a277a4732c4d",
    "typeDescHash": "Ultimate",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1284,11 +1288,11 @@
    "tagHash": "Wiederherstellung",
    "descHash": "Nachdem ein Verbündeter mit „Belebung“ getroffen worden ist, werden seine LP um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> von Bailus max. LP plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> wiederhergestellt. Dieser Effekt kann <nobr>#5[i]</nobr>-mal ausgelöst werden. <br />Erleidet ein Verbündeter einen Todesstoß, wird dieser nicht <u>handlungsunfähig</u>. Stattdessen heilt Bailu den Verbündeten sofort um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> von Bailus max. LP plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span>. Dieser Effekt kann 1-mal pro Kampf ausgelöst werden.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 746479,
    "name": "Flaschenkürbis voller Elixier",
-   "iconPath": "0617446412329f34bd3401bef74e9a249a78b7582519fd0fb167f87c6ceaceb8",
+   "iconPath": "da034da6a2d10f3381501defc55cb96fc0cbb737e066ea62d9a84a7f3360101a",
    "typeDescHash": "Talent",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1619,11 +1623,11 @@
    "tagHash": "",
    "descHash": "Greift den Gegner an und schwächt nach Kampfeintritt den Widerstand des Ziels gegen den entsprechenden Typ.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 545893,
    "name": "Angriff",
-   "iconPath": "fac40f5b5376912ec748ac97c6d2f83f34a9ac6b3f4f12fdcf97f41d8d3f0bad",
+   "iconPath": "458dc6a064b195b4c1909bdae7b6e62e229be14422c5e7ce2b02e198ef0b6592",
    "typeDescHash": "",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1641,11 +1645,11 @@
    "tagHash": "Wiederherstellung",
    "descHash": "Gewährt nach dem Einsatz der Technik allen Verbündeten zu Beginn des nächsten Kampfes für <nobr>#1[i]</nobr> Rd. „Belebung“.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 662538,
    "name": "Im Regen spazieren",
-   "iconPath": "1e6dfd421b65d8ecda84334a03cd7b6c1f3ca4e4445360965c46cd8e18059cfc",
+   "iconPath": "93a6c28c9316f0690daf43ea2f3ece5344626a316a483b3e355652fe120d653f",
    "typeDescHash": "Technik",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1769,8 +1773,6 @@
    "embedBonusSkill": {
     "descHash": "Erhöht die max. LP des Ziels für <nobr>#2[i]</nobr> Rd. um <nobr>#1[i]%</nobr>, wenn Bailu einen Verbündeten über dessen max. LP hinaus heilt.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 671251,
     "name": "Qihuang-Analekten",
     "iconPath": "44b69d271f4591c8d69c86d4eee45a404a41cbb30b48efa07ba948d503e06d34",
@@ -1909,11 +1911,9 @@
    "embedBonusSkill": {
     "descHash": "Erhöht die Auslösungsanzahl der „Belebung“ um <nobr>#1[i]</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 671252,
     "name": "Vidyadharas Geo-Adern",
-    "iconPath": "e8e3f60014882471d455961b50e397a3034f17aed0c50a82f01e99b860d51188",
+    "iconPath": "20c2448211439a503d13e0413fc572131acf26629584679bac3996b46d6abcad",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
@@ -2018,11 +2018,9 @@
    "embedBonusSkill": {
     "descHash": "Verringert den erlittenen SCH der belebten Figuren um <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 671253,
     "name": "Aquatischer Segen",
-    "iconPath": "fb8f5582e28e8d3f73de7b0201825e2ee2e8d4a8e94393064384de6d6b640663",
+    "iconPath": "eaac4e02eb40395a2642555636a8fd1257fac52acc44c0fa30a7e53bf640f728",
     "levelReq": 0,
     "promotionReq": 6,
     "levelData": [
@@ -2309,7 +2307,7 @@
   },
   {
    "id": 52,
-   "title": "Kampf beginnt: Achtung Gefahr",
+   "title": "Kampf beginnt: Gefahrenwarnung",
    "text": "Hart wie ein Nierenstein.",
    "unlockRequirement": "",
    "cnUrl": "e10185ce7aec28a12a1918230c0be0b4c1de34fba9b7d85c693d5e5df03f8073",

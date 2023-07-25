@@ -1,10 +1,10 @@
 {
  "spRequirement": 100,
- "iconPath": "dd344d544fad8631709ef0260ec51bc606b21be612e2d55b77087cbbcde3a995",
+ "iconPath": "51d60322aa0c03f444c3547835e0aa48da78961cef14db1d13966ebb2279e4aa",
  "bgPath": "9301edc335bb2ab312fdd41f765aa7e5ca329b732140b138404a03693436a3d6",
- "figPath": "7959b58990a507b73a75b7675c43ea29f4a7f827f000d6a74a2bd1044e683cd8",
+ "figPath": "8c0ebb034878420fa4c30bf05220bf30d04147b22948bbf06158f860b634094f",
  "fgPath": "094bb802b5aa0eaeabf9fb48b6001932fd6c6c790cb3efe78489b6dce06cf78d",
- "splashIconPath": "190e9162d9f4d3b560b2354a2a5196042186a968d6624a16a15a5b2891973fa2",
+ "splashIconPath": "afd48c7970d998c772caf1700f8c3bb9507eb8cf2b3df05865045baeeda235e1",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Cálice (Grande Mina)",
     "Recompensas de Missão",
-    "Recompensas de Atribuição"
+    "Recompensas de Atribuição",
+    "Troca de Brasas"
    ]
   },
   "125435": {
@@ -56,7 +57,7 @@
    "iconPath": "f35663b201c893327da3e5dd27e184a3ef67f4093ffd9c195470145bbe4df409",
    "name": "Coroa de Raios de uma Sombra do Passado",
    "desc": "Acessório de cabeça da Sombra Guardiã. Pode ser usado para Ascensão de personagens de Dano de Raio.",
-   "lore": "Acessório deixado para trás pela sombra de uma Guardiã do passado, que contava histórias da cidade de Inverno Eterno.<br /><br />\"Svetlana, a Severa: sua ira é tão aterrorizante quanto um trovão e sua retribuição é tão rápida quanto um raio.\"",
+   "lore": "Acessório deixado para trás pela sombra de um guardião do passado, que contava histórias da cidade de Inverno Eterno.<br /><br />\"Svetlana, o Punho de Ferro: sua ira é tão aterrorizante quanto um trovão e sua retribuição é tão rápida quanto um raio.\"",
    "purpose": "Materiais de Ascensão de Personagem",
    "rarity": 4,
    "rewardPath": "/material/151160",
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Cálice (Planícies Nevadas Distantes)",
-    "Treinamento Diário"
+    "Treinamento Diário",
+    "Troca de Brasas"
    ]
   },
   "409962": {
@@ -177,7 +179,8 @@
    "rarity": 2,
    "rewardPath": "/material/635671",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)"
+    "Cálice (Passagem do Remanso)",
+    "Troca de Brasas"
    ]
   },
   "717320": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920198",
    "comeFrom": [
     "Cálice (Passagem do Remanso)",
-    "Sintetizador Omni — Síntese de Material"
+    "Sintetizador Omni — Síntese de Material",
+    "Troca de Brasas"
    ]
   }
  },
@@ -439,7 +443,7 @@
   },
   {
    "id": 3,
-   "iconPath": "d783b78448b18593814854783d443c0925f8280990fac71405e553fca0cca66d",
+   "iconPath": "4130f9d6609f28aa425b918db56f8f014165520256afe4009125d3183730cc3c",
    "artPath": "2efec8ee00649a6b88a49d97722597a6a9d7ff19297c2821fb32fd587595020f",
    "name": "Opulência Onisciente",
    "descHash": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
@@ -498,11 +502,11 @@
    "tagHash": "Alvo Único",
    "descHash": "Causa Dano de <span style=\"color:#c75de2;\">Raio</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Bailu a um único inimigo.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 231592,
    "name": "Chute de Diagnóstico",
-   "iconPath": "fac40f5b5376912ec748ac97c6d2f83f34a9ac6b3f4f12fdcf97f41d8d3f0bad",
+   "iconPath": "458dc6a064b195b4c1909bdae7b6e62e229be14422c5e7ce2b02e198ef0b6592",
    "typeDescHash": "ATQ Básico",
    "levelReq": 0,
    "promotionReq": 0,
@@ -659,11 +663,11 @@
    "tagHash": "Restauração",
    "descHash": "Cura um aliado em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> dos PV máximos de Bailu + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>. Bailu então cura aliados aleatórios <nobr>#4[i]</nobr> vez(es). Após cada cura, os PV restaurados da próxima cura reduzem em <nobr>#3[i]%</nobr>.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 30,
+   "break": "0",
+   "energy": "30",
    "id": 947065,
    "name": "Cantoria Entre as Nuvens",
-   "iconPath": "d783b78448b18593814854783d443c0925f8280990fac71405e553fca0cca66d",
+   "iconPath": "4130f9d6609f28aa425b918db56f8f014165520256afe4009125d3183730cc3c",
    "typeDescHash": "Perícia",
    "levelReq": 0,
    "promotionReq": 0,
@@ -979,11 +983,11 @@
    "tagHash": "Restauração",
    "descHash": "Cura todos os aliados em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> dos PV máximos de Bailu + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>.<br />Bailu aplica Revigoramento nos aliados que ainda não tiverem Revigoramento. Para os que já possuírem Revigoramento, Bailu estende a sua duração em 1 rodada.<br />O efeito de Revigoramento pode durar por <nobr>#3[i]</nobr> rodada(s). Este efeito não pode acumular.",
    "ultimateCost": 100,
-   "break": 0,
-   "energy": 5,
+   "break": "0",
+   "energy": "5",
    "id": 31006,
    "name": "Trovão Oportuno",
-   "iconPath": "6bd02880061bdc74fe084bf2c3c1beb433b329cb04a0dfa71707ea78175c7384",
+   "iconPath": "9352122108cf9739cc7978540e1d24f3e94d6a429a352f9cff24a277a4732c4d",
    "typeDescHash": "Perícia Suprema",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1282,13 +1286,13 @@
   },
   {
    "tagHash": "Restauração",
-   "descHash": "Depois de um aliado Revigorado ser atingido, restaura <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> dos PV máximos de Bailu + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>. Este efeito pode ser ativado <nobr>#5[i]</nobr> vez(es). Quando um aliado receber um golpe fatal, ele não será <u>derrubado</u>. Bailu o cura imediatamente, curando-o em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> dos PV máximos de Bailu + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span> de PV. Este efeito pode ser ativado uma vez por batalha.",
+   "descHash": "Depois de um aliado Revigorado ser atingido, restaura <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> dos PV máximos de Bailu + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>. Este efeito pode ser ativado <nobr>#5[i]</nobr> vez(es). Quando um aliado receber um golpe fatal, ele não será <u>derrubado</u>. Bailu o cura imediatamente em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> dos PV máximos de Bailu + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span> de PV. Este efeito pode ser ativado uma vez por batalha.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 746479,
    "name": "Cabaça Cheia de Elixir",
-   "iconPath": "0617446412329f34bd3401bef74e9a249a78b7582519fd0fb167f87c6ceaceb8",
+   "iconPath": "da034da6a2d10f3381501defc55cb96fc0cbb737e066ea62d9a84a7f3360101a",
    "typeDescHash": "Talento",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1619,11 +1623,11 @@
    "tagHash": "",
    "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do alvo inimigo.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 545893,
    "name": "Ataque",
-   "iconPath": "fac40f5b5376912ec748ac97c6d2f83f34a9ac6b3f4f12fdcf97f41d8d3f0bad",
+   "iconPath": "458dc6a064b195b4c1909bdae7b6e62e229be14422c5e7ce2b02e198ef0b6592",
    "typeDescHash": "",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1641,11 +1645,11 @@
    "tagHash": "Restauração",
    "descHash": "Após usar sua Técnica, no início da próxima batalha, todos os aliados recebem Revigoramento por <nobr>#1[i]</nobr> rodada(s).",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 662538,
    "name": "Passeio na Chuva",
-   "iconPath": "1e6dfd421b65d8ecda84334a03cd7b6c1f3ca4e4445360965c46cd8e18059cfc",
+   "iconPath": "93a6c28c9316f0690daf43ea2f3ece5344626a316a483b3e355652fe120d653f",
    "typeDescHash": "Técnica",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1769,8 +1773,6 @@
    "embedBonusSkill": {
     "descHash": "Quando Bailu concede uma cura a um aliado-alvo que ultrapasse os PV máximos normais dele, os PV máximos do alvo aumentam em <nobr>#1[i]%</nobr> por <nobr>#2[i]</nobr> rodada(s).",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 671251,
     "name": "Analectos de Qihuang",
     "iconPath": "44b69d271f4591c8d69c86d4eee45a404a41cbb30b48efa07ba948d503e06d34",
@@ -1909,11 +1911,9 @@
    "embedBonusSkill": {
     "descHash": "O Revigoramento pode ser acionado mais <nobr>#1[i]</nobr> vez(es).",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 671252,
     "name": "Linhas de Icor Vidyadhara",
-    "iconPath": "e8e3f60014882471d455961b50e397a3034f17aed0c50a82f01e99b860d51188",
+    "iconPath": "20c2448211439a503d13e0413fc572131acf26629584679bac3996b46d6abcad",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
@@ -2018,11 +2018,9 @@
    "embedBonusSkill": {
     "descHash": "Personagens com Revigoramento recebem <nobr>#1[i]%</nobr> a menos de Dano.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 671253,
     "name": "Bênção Aquática",
-    "iconPath": "fb8f5582e28e8d3f73de7b0201825e2ee2e8d4a8e94393064384de6d6b640663",
+    "iconPath": "eaac4e02eb40395a2642555636a8fd1257fac52acc44c0fa30a7e53bf640f728",
     "levelReq": 0,
     "promotionReq": 6,
     "levelData": [
@@ -2541,7 +2539,7 @@
   },
   {
    "title": "História de Personagem: Parte IV",
-   "text": "Saudações, prezados Preceptores:<br /><br />Calendário Estelar, dia █ do mês █, ████, exame de rotina da dama Bailu, seguem observações concisas:<br /><br />Não houve qualquer mudança física na grande mestra. Ela ainda não atingiu à maturidade. Isso não é algo atípico, pois o crescimento lento é comum entre Vidyadharas. Mais preocupante do que o desenvolvimento corporal lento é o fato de que ela não tem sonhos.<br /><br />Todos os grandes mestres anteriores, depois de receberem a \"Orbe do Abismo\" e a \"Arcana da Transmutação\", vivenciam os eventos das vidas de seus ancestrais dragões através de sonhos. O Departamento de Fontes Profundas é encarregado de transcrever, recontar e tecer comentários a respeito dos sonhos, produzindo uma enorme quantidade de volumes em seus arquivos. Embora esses sonhos tendam a ser fragmentados e de difícil compreensão e interpretação, eles continuam sendo o único modo de nossa espécie se aproximar da Permanência. A dama Bailu, contudo, ainda não teve essa experiência. É evidente que o coração de dragão dela está de alguma forma comprometido, ou a \"Arcana da Transmutação\" não foi totalmente concluída.<br /><br />Além do mais, como a grande mestra já demonstrou seus poderes de evocar raios e comandar as águas, eu instruí um de nossos melhores artesãos a produzir o Pelourinho de Chifre de Dragão para algemar a cauda dela. Temos que prevenir a perda de controle dos seus poderes e uma repetição do desastre que foi a Sedição do Embebidor Lunae.<br /><br />Por fim, nós recebemos uma mensagem do Caelorum Venti do Yaoqing há alguns meses, perguntando sobre as condições da dama Bailu. Eu respondi como de acordo com suas instruções, prezados mestres. Em suma, expliquei que a dama Bailu ainda é jovem e precisa da assistência dos Preceptores. Somente após a cerimônia de maioridade os Preceptores devem agraciá-la com o título de Embebidora Lunae.<br /><br /><align=\"right\">Atenciosamente, Yunyou, auxiliar da grande mestra.</align>",
+   "text": "Saudações, prezados Preceptores:<br /><br />Calendário Estelar, dia █ do mês █, ████, exame de rotina da dama Bailu, seguem observações concisas:<br /><br />Não houve qualquer mudança física na Grande Mestra. Ela ainda não atingiu à maturidade. Isso não é algo atípico, pois o crescimento lento é comum entre Vidyadharas. Mais preocupante do que o desenvolvimento corporal lento é o fato de que ela não tem sonhos.<br /><br />Todos os Grandes Mestres anteriores, depois de receberem a \"Orbe do Abismo\" e a \"Arcana da Transmutação\", vivenciam os eventos das vidas de seus ancestrais dragões através de sonhos. O Departamento de Fontes Profundas é encarregado de transcrever, recontar e tecer comentários a respeito dos sonhos, produzindo uma enorme quantidade de volumes em seus arquivos. Embora esses sonhos tendam a ser fragmentados e de difícil compreensão e interpretação, eles continuam sendo o único modo de nossa espécie se aproximar da Permanência. A dama Bailu, contudo, ainda não teve essa experiência. É evidente que o coração de dragão dela está de alguma forma comprometido, ou a \"Arcana da Transmutação\" não foi totalmente concluída.<br /><br />Além do mais, como a Grande Mestra já demonstrou seus poderes de evocar raios e comandar as águas, eu instruí um de nossos melhores artesãos a produzir o Pelourinho de Chifre de Dragão para algemar a cauda dela. Temos que prevenir a perda de controle dos seus poderes e uma repetição do desastre que foi a Sedição do Embebidor Lunae.<br /><br />Por fim, nós recebemos uma mensagem do Caelorum Venti do Yaoqing há alguns meses, perguntando sobre as condições da dama Bailu. Eu respondi como de acordo com suas instruções, prezados mestres. Em suma, expliquei que a dama Bailu ainda é jovem e precisa da assistência dos Preceptores. Somente após a cerimônia de maioridade os Preceptores devem agraciá-la com o título de Embebidora Lunae.<br /><br /><align=\"right\">Atenciosamente, Yunyou, auxiliar da Grande Mestra.</align>",
    "unlockRequirement": "Desbloqueado no Nível <nobr>80</nobr> de Personagem"
   }
  ],
@@ -2644,7 +2642,7 @@
  },
  "name": "Bailu",
  "rarity": 5,
- "descHash": "A grande mestra dos Vidyadharas, também conhecida como a \"Curandeira\" do Luofu. Ela usa sua ciência medicinal única para tratamentos que só podem ser concedidos à raça dracônica Vidyadhara para salvar vidas.",
+ "descHash": "A Grande Mestra dos Vidyadharas, também conhecida como a \"Curandeira\" do Luofu. Ela usa sua ciência medicinal única para tratamentos que só podem ser concedidos à raça dracônica Vidyadhara para salvar vidas.",
  "artPath": "cdac21a887a7fada97303a1f18143743182fe1f0b3f7f764e1eb1b2f9d58ff0b",
  "miniIconPath": "cb28a0a360f98c674da55eeabfcfa2a4487871cf82e5e2b2e74e8655a164343f",
  "damageType": {

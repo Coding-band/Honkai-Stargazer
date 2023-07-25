@@ -1,10 +1,10 @@
 {
  "spRequirement": 110,
- "iconPath": "b07b0b24ec051c4aa17e5b8beee68d9a5082336e728915ebad0fa2c7b8b63d87",
+ "iconPath": "37152658acf6abd9fd71da2d54818cb65bbc35554787be9019a5cd3e9f0922c4",
  "bgPath": "0df8be489b60311980821df775901944508f9d79e2fa2c27c3e48c899e3d5f21",
- "figPath": "1321d4a8dd502bda698db54d5d93b37b598f2f1aef50daf9064e44541543d1fd",
+ "figPath": "53531e8d3ccaa69533e42b4567781fb59ab9ad65cc2af12c498543cb3feed709",
  "fgPath": "ae227281af9ab96c01429bf1cd1db4a772aebdc261ce1a413598ceb03b4206be",
- "splashIconPath": "eb70d6007bfc888b55dedfad69ec60f61c252d37caf79a2b860a48d6eb275c73",
+ "splashIconPath": "b1677c747e479d78b1968762f3e5741a7365efc12c8c7e6d91b90c96d79af97d",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Blütenkelch (Große Mine)",
     "Missionsbelohnungen",
-    "Auftragsbelohnungen"
+    "Auftragsbelohnungen",
+    "Glut-Tausch"
    ]
   },
   "67219": {
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Blütenkelch (Äußere Schneewüste)",
-    "Tägliches Training"
+    "Tägliches Training",
+    "Glut-Tausch"
    ]
   },
   "409962": {
@@ -177,7 +179,8 @@
    "rarity": 2,
    "rewardPath": "/material/635669",
    "comeFrom": [
-    "Blütenkelch (Große Mine)"
+    "Blütenkelch (Große Mine)",
+    "Glut-Tausch"
    ]
   },
   "717320": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920196",
    "comeFrom": [
     "Blütenkelch (Große Mine)",
-    "Omni-Synthesemaschine – Materialsynthese"
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Glut-Tausch"
    ]
   }
  },
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "4d10b672c11783ff4101fda9c43ed7d38de74a1fafee6f4506d46b1f0f20fcca",
    "artPath": "d4114c037d7a07e42460ad13a395d206a2fba0644a3135f2ab6ce7f1dcce4626",
    "name": "Siegesbericht",
    "descHash": "Wird ein Gegner besiegt, erhält Pela <nobr>#1[i]</nobr> Pkt. Energie zurück.",
@@ -428,7 +432,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "35e2213817de2ba99282fd82490860cfdb9c4e2965f08d9ff130e0e5768d3fbc",
    "artPath": "9eef79ee83210f5a26dd0d64c251ac23d2698ef151a6f08b3ee20cf50781e391",
    "name": "Hartnäckige Ladung",
    "descHash": "Nach Einsatz der Fertigkeit zum Entfernen eines gegnerischen Buffs wird ihre GES für <nobr>#2[i]</nobr> Rd. um <nobr>#1[i]%</nobr> erhöht.",
@@ -440,7 +444,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "0d3e01f93ccf06a98aa5f4b1ceeb0dc137d62fc2197e8d358e9a4609588210bf",
    "artPath": "d637b7565f5ce4298b6e0618378eb540886b90af9ec4e16b50f9854ddd12460c",
    "name": "Unterdrückungskraft",
    "descHash": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis zu max. St. <nobr>10</nobr>.",
@@ -448,7 +452,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "1ad49d3d01c62f4a1bcdb6f946c76fbb3e63b43f7f16b6c06cbbe447f4ce6955",
    "artPath": "eec73281b60086e0ddea088883a3b8f5f2cf0741ebfbba8dc9590307f60399d8",
    "name": "Vollständige Analyse",
    "descHash": "Beim Einsatz der Fertigkeit besteht eine Grundchance von <nobr>#1[i]%</nobr>, den Eis-WDS des Gegners für <nobr>#3[i]</nobr> Rd. um <nobr>#2[i]%</nobr> zu reduzieren.",
@@ -460,7 +464,7 @@
   },
   {
    "id": 5,
-   "iconPath": "",
+   "iconPath": "79c79f5ca8d67d37c4079244995ee7f1d50f0b9263d3595aa07ef31f9ec80529",
    "artPath": "9c3d8c451016d0c7d7f47df0cf39e49611a4f18e7ff2949d3dbde8f63d8b1f57",
    "name": "Absolute Gefährdung",
    "descHash": "Ultimate-Stufe +2 bis zu max. St. <nobr>15</nobr>. Talentstufe +2 bis zu max. St. <nobr>15</nobr>.",
@@ -468,7 +472,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "f6040da82975b6a53bd59fc2d60366bec651c0e1a44f120bae536207258942a6",
    "artPath": "96a98e30c1f65e6175790acdc9f613cccb1d8e380c5931a58edb1365d762cbdb",
    "name": "Schwache Verfolgung",
    "descHash": "Wenn der Gegner nach Pelas Angriff einen Debuff hat, fügt sie ihm zusätzlichen Eis-SCH in Höhe von <nobr>#1[i]%</nobr> von Pelas ANG zu.",
@@ -499,11 +503,11 @@
    "tagHash": "Einzelangriff",
    "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Pelas ANG zu.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 191635,
    "name": "Frostschuss",
-   "iconPath": "09b648297b5d4032e1aa5065bf66bdd16c1f4deec4fdfa34d7e6c290bebedc46",
+   "iconPath": "658f69ef4e9dc5d2071badf50732645dd96e792e08cc89c9d8ef69cfa596ea09",
    "typeDescHash": "Standardangriff",
    "levelReq": 0,
    "promotionReq": 0,
@@ -660,11 +664,11 @@
    "tagHash": "Beeinträchtigung",
    "descHash": "Entfernt <nobr>#2[i]</nobr> <u>Buff</u> des anvisierten Gegners und fügt dem Ziel <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Pelas ANG zu.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 30,
+   "break": "60",
+   "energy": "30",
    "id": 907108,
    "name": "Frostbeule",
-   "iconPath": "dfdeb632f3f06431f9df010eaecbc07589ecc01077eb49f9e32d9d9e5dd858b9",
+   "iconPath": "0d3e01f93ccf06a98aa5f4b1ceeb0dc137d62fc2197e8d358e9a4609588210bf",
    "typeDescHash": "Fertigkeit",
    "levelReq": 0,
    "promotionReq": 0,
@@ -946,11 +950,11 @@
    "tagHash": "Beeinträchtigung",
    "descHash": "Fügt allen Gegnern <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> von Pelas ANG zu und hat eine <u>Grundchance</u> von <nobr>#1[i]%</nobr>, bei jedem Gegner „Universelle Beherrschung“ zu verursachen.<br />Die VTD der Gegner im Status „Universelle Beherrschung“ wird für <nobr>#3[i]</nobr> Rd. um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> reduziert.",
    "ultimateCost": 110,
-   "break": 0,
-   "energy": 5,
+   "break": "0",
+   "energy": "5",
    "id": 23753,
    "name": "Zonenunterdrückung",
-   "iconPath": "a3a0f84194efa75e9cd847140927c649a3bf79a4d3eda95822bd9f06ea521b43",
+   "iconPath": "d0162b1cc8734c2a972536894386cbaafd549838bf0bca4d44c22df672684460",
    "typeDescHash": "Ultimate",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1262,8 +1266,8 @@
    "tagHash": "Unterstützung",
    "descHash": "Wenn der Gegner nach Pelas Angriff einen <u>Debuff</u> hat, stellt Pela zusätzlich <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]</nobr></span> Pkt. Energie wieder her. Dieser Effekt kann nur 1-mal pro Angriff ausgelöst werden.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 508866,
    "name": "Datensammlung",
    "iconPath": "5c556c5f66c285518f869a0b30bc57149912888b9f5cd88852a5b64c9d640f0f",
@@ -1533,11 +1537,11 @@
    "tagHash": "",
    "descHash": "Greift den Gegner an und schwächt nach Kampfeintritt den Widerstand des Ziels gegen den entsprechenden Typ.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 308280,
    "name": "Angriff",
-   "iconPath": "09b648297b5d4032e1aa5065bf66bdd16c1f4deec4fdfa34d7e6c290bebedc46",
+   "iconPath": "658f69ef4e9dc5d2071badf50732645dd96e792e08cc89c9d8ef69cfa596ea09",
    "typeDescHash": "",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1555,11 +1559,11 @@
    "tagHash": "",
    "descHash": "Greift den Gegner unmittelbar an. Fügt nach Kampfeintritt einem zufälligen Gegner <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <nobr>#4[i]%</nobr> von Pelas ANG zu und hat eine <u>Grundchance</u> von <nobr>#1[i]%</nobr>, die VTD aller Gegner für <nobr>#3[i]</nobr> Rd. um <nobr>#2[i]%</nobr> zu reduzieren.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 0,
+   "break": "60",
+   "energy": "0",
    "id": 392221,
    "name": "Präventivschlag",
-   "iconPath": "ac9194c15ad3ff7b3df4060f280afd8be3d6c35eed11af341b1abc0ff9485daf",
+   "iconPath": "98abb97f574748b7e1108ffe0ff89d86af56aff454452cb27ec2d227269f05f1",
    "typeDescHash": "Technik",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1686,11 +1690,9 @@
    "embedBonusSkill": {
     "descHash": "Erhöht den SCH an Gegnern mit Debuff um <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 660958,
     "name": "Schlägerei",
-    "iconPath": "f6e4b4730b4fbb9e78912f1845db6ca208f4b7d88db79e91ffe0f795c5d1bf2c",
+    "iconPath": "e9eaf45e831b1afa440159a3cebed8dd896f014980cdd5fe6aca4045cb7eb2bf",
     "levelReq": 0,
     "promotionReq": 2,
     "levelData": [
@@ -1825,11 +1827,9 @@
    "embedBonusSkill": {
     "descHash": "Erhöht die Effekt-Trefferrate aller Verbündeten um <nobr>#1[i]%</nobr>, wenn Pela mitkämpft.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 660961,
     "name": "Geheimstrategie",
-    "iconPath": "9fb73c131e5e9a0fc7730e2c0c77e9d284825f4070461a5097e61c9a9acafb27",
+    "iconPath": "da43698a419db68992ba1d5dd7853135c2839ac21dbc6f8448fda812eed58e5b",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
@@ -1934,8 +1934,6 @@
    "embedBonusSkill": {
     "descHash": "Erhöht den SCH durch den nächsten Angriff um <nobr>#1[i]%</nobr>, wenn beim Einsatz der Fertigkeit ein Buff entfernt wird.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 660960,
     "name": "Auslöschung",
     "iconPath": "1396b70256f2f00e9349dc7b0c05f9c50144edb5b963f74796dede4eb7482829",
@@ -2196,7 +2194,7 @@
   },
   {
    "id": 52,
-   "title": "Kampf beginnt: Achtung Gefahr",
+   "title": "Kampf beginnt: Gefahrenwarnung",
    "text": "Haben wir immer noch die Oberhand?",
    "unlockRequirement": "",
    "cnUrl": "7fa9d88765192d9ab9f56756c23a4867844e94913c55a72cd8c065787aa529d1",
@@ -2541,7 +2539,7 @@
  },
  "name": "Pela",
  "rarity": 4,
- "descHash": "Eine Verwaltungsoffizierin der Silbermähnen-Wachen. Sie hat eine strenge Art und genießt ein hohes Ansehen bei den anderen Silbermähnen.",
+ "descHash": "Eine Aufklärungsoffizierin der Silbermähnen-Wachen. Sie hat eine strenge Art und genießt ein hohes Ansehen bei den anderen Silbermähnen-Wachen.",
  "artPath": "633b045866f73f160d5cd62f818800ead4df1a7766cb007543dbb38351b3eb3f",
  "miniIconPath": "d95a1936a83486640e4a4beb792960d1066941083d2eba730f85f38dea7b482f",
  "damageType": {

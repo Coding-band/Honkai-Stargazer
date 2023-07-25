@@ -50,7 +50,7 @@ public class IconArrayAdapter extends ArrayAdapter {
         textView.setText(itemRSS.getLocalNameByName(hsrItems.get(position).getName(),context));
         ImageView imageView = (ImageView) row.findViewById(R.id.spinnerImages);
         Picasso.get()
-                .load(itemRSS.getCharByName(hsrItems.get(position).getName())[0])
+                .load(itemRSS.getCharByName(hsrItems.get(position).getName(),hsrItems.get(position).getSex())[0])
                 .fit()
                 .transform(transformation)
                 .into(imageView);

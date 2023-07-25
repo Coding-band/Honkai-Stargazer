@@ -106,6 +106,9 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
     public void onBindViewHolder(@NonNull HSRItemAdapter.ViewHolder holder, int position) {
         HSRItem hsrItem = hsritemList.get(position);
         setAnimation(holder.itemView);
+
+        float imagePercent = 1.0f;
+
         item_rss = new ItemRSS();
         DisplayMetrics displayMetrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
@@ -122,7 +125,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
 
         int ico_rss = R.drawable.ico_lost_img;
         if (TYPE.equals(ItemRSS.TYPE_CHARACTER) || TYPE.equals(ItemRSS.TYPE_CHARACTER_TEAM1) || TYPE.equals(ItemRSS.TYPE_CHARACTER_TEAM2)){
-            ico_rss = item_rss.getCharByName(hsrItem.getName())[(sharedPreferences.getString("grid_"+TYPE,HSRItemAdapter.DEFAULT).equals(THREE_IN_ROW) ? 2 : 0)];
+            ico_rss = item_rss.getCharByName(hsrItem.getName(), hsrItem.getSex())[(sharedPreferences.getString("grid_"+TYPE,HSRItemAdapter.DEFAULT).equals(THREE_IN_ROW) ? 2 : 0)];
             holder.item_element.setVisibility(View.VISIBLE);
             holder.item_element.setImageResource(item_rss.getIconByElement(hsrItem.getElement()));
 
@@ -176,7 +179,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
 
         Picasso.get()
                 .load (ico_rss)
-                .resize((int) img_width, (int) img_height)
+                .resize((int) (img_width*imagePercent), (int) (img_height*imagePercent))
                 .centerCrop()
                 .transform(transformation)
                 .rotate((sharedPreferences.getBoolean("isRotateItemIcon", false) ? 180 :0 ))
@@ -273,15 +276,15 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
 
                     //獵獸之矢
                     if (purposeId == 3 && rare == 2){
-                        Picasso.get().load(item_rss.getMaterialByID(id)).into(holder.item_material_1);
+                        Picasso.get().load(item_rss.getMaterialByID(id)).resize(128,128).into(holder.item_material_1);
                     }
                     //熄滅原核
                     if (purposeId == 7 && rare == 2){
-                        Picasso.get().load(item_rss.getMaterialByID(id)).into(holder.item_material_2);
+                        Picasso.get().load(item_rss.getMaterialByID(id)).resize(128,128).into(holder.item_material_2);
                     }
                     //暴風之眼
                     if (purposeId == 2 && rare == 4){
-                        Picasso.get().load(item_rss.getMaterialByID(id)).into(holder.item_material_3);
+                        Picasso.get().load(item_rss.getMaterialByID(id)).resize(128,128).into(holder.item_material_3);
                     }
 
                 }
@@ -289,7 +292,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
                 StringWriter sw = new StringWriter();
                 PrintWriter pw = new PrintWriter(sw);
                 e.printStackTrace(pw);
-                LogExport.bugLog(TAG, "Read JSON Assest Data", sw.toString(), context);
+                LogExport.bugLog(TAG, "Read JSON Assest Data", sw.toString(),e.getMessage(), context);
             }
         }
     }

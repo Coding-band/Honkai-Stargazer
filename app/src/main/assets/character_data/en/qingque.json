@@ -1,10 +1,10 @@
 {
  "spRequirement": 140,
- "iconPath": "51254b98d01c17936ff478ee71bb89c98a0abaab0f3fbf79ba8d3eed7cdcbb20",
+ "iconPath": "6c798127b50979196f42813638e25017d2e975a6fc41057bfd87d37757c95ad5",
  "bgPath": "b852a4ddd2303d5fb01bb17b38557b752c4feab67e83ca76d3c1bc2119f79581",
- "figPath": "b8941502c247558ae03a258872b341e641a8c3f02fbac30f47246afe02b18b9d",
+ "figPath": "aa7bbf3a7391410ed9985fead84befeac6d12c513fb60e6255ca6df06f35f7c5",
  "fgPath": "57f9ebb533a8af6d7ebc53263914578e939ca8e9686c7ca0d71649092cc09213",
- "splashIconPath": "3a1046dace553ff92a6cc0375fce757d31951f4daa5dce12d15edfdbffc7bbe2",
+ "splashIconPath": "1be34670efb7c87406c9f6edb11ffe1b6539aebd8f6acd87df23c98d463627de",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Calyx (Great Mine)",
     "Mission rewards",
-    "Assignment rewards"
+    "Assignment rewards",
+    "Embers Exchange"
    ]
   },
   "125435": {
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Calyx (Outlying Snow Plains)",
-    "Daily Training"
+    "Daily Training",
+    "Embers Exchange"
    ]
   },
   "409962": {
@@ -177,7 +179,8 @@
    "rarity": 2,
    "rewardPath": "/material/635675",
    "comeFrom": [
-    "Calyx (Rivet Town)"
+    "Calyx (Rivet Town)",
+    "Embers Exchange"
    ]
   },
   "717319": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920202",
    "comeFrom": [
     "Calyx (Rivet Town)",
-    "Omni-Synthesizer — Material Synthesis"
+    "Omni-Synthesizer — Material Synthesis",
+    "Embers Exchange"
    ]
   }
  },
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "8eeba7afae5cd61e17a7c08800270e6334ca22ca931522ccbed88b27c79bae93",
    "artPath": "4b46007f1ae172c169c75ed12cb41c72ddaf8d72b96abb82af014341c3b81d30",
    "name": "Rise Through the Tiles",
    "descHash": "Ultimate deals <nobr>#1[i]%</nobr> more DMG.",
@@ -428,7 +432,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "588f557025166900723261b5c8682ba06f1279da5fd2da2d64569c926f8b1edf",
    "artPath": "fb5ef0eac3e051e882a2fd6ed3b892e8595e6a12231b160e1c4287d24bf16907",
    "name": "Sleep on the Tiles",
    "descHash": "Every time Draw Tile is triggered, Qingque immediately regenerates <nobr>#1[i]</nobr> Energy.",
@@ -438,7 +442,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "07c8d069a1bacd658f4bcb15a9c37ede7f97b1bb24f6ec7efa1a2cdfe4264ada",
    "artPath": "e338d84c01738d3cfd26c286f56d8857a805b5d0a76c035cb78ae91b8dcfe7d5",
    "name": "Read Between the Tiles",
    "descHash": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Talent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
@@ -446,7 +450,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "272c0f5fc7c1aee6342b62233f0f49fbc3e592bbaba1dcf38ae05f383e73f43d",
    "artPath": "373b79b2c24b2e58888ee99ef99d97e91b627f2d1315c4c53e1c03dbd684d89f",
    "name": "Right on the Tiles",
    "descHash": "After this character's Skill is used, there is a <nobr>#1[i]%</nobr> fixed chance to gain Autarky, which lasts until the end of the current turn. <br />With Autarky, using Basic ATK or Enhanced Basic ATK immediately launches 1 follow-up attack on the same target, dealing Quantum DMG equal to <nobr>100%</nobr> of the previous Basic ATK (or Enhanced Basic ATK)'s DMG.",
@@ -456,7 +460,7 @@
   },
   {
    "id": 5,
-   "iconPath": "",
+   "iconPath": "f7b226838162be45185aad445206ade0c28af91ab1adb39fa19101b3308bc411",
    "artPath": "d41854e9ee71200393a122db0e0480227a7f7490a4b88914e522ca2ed04e0a3c",
    "name": "Gambit for the Tiles",
    "descHash": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Basic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
@@ -464,7 +468,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "458c0ab509ac39416419e9f45b97c44253f3e1aa54d025b7c13ab46e08a428ff",
    "artPath": "d8b7db32f329fab7d199e9e268b2182e9367fec59792b33b9da2205385c35235",
    "name": "Prevail Beyond the Tiles",
    "descHash": "Recovers 1 Skill Point after using Enhanced Basic ATK.",
@@ -494,8 +498,8 @@
    "tagHash": "Single Target",
    "descHash": "Tosses 1 jade tile from the suit with the fewest tiles in hand to deal <span style=\"color:#7788ff;\">Quantum</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Qingque's ATK to a single enemy.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 231495,
    "name": "Flower Pick",
    "iconPath": "396133d02c35647181ca18469408714f8189192544173f7d755db22ac2c78825",
@@ -655,8 +659,8 @@
    "tagHash": "Enhance",
    "descHash": "Immediately draws <nobr>#1[i]</nobr> jade tile(s) and increases DMG by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> until the end of the current turn. This effect can stack up to <nobr>#3[i]</nobr> time(s). The turn will not end after this Skill is used.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 946968,
    "name": "A Scoop of Moon",
    "iconPath": "f7b226838162be45185aad445206ade0c28af91ab1adb39fa19101b3308bc411",
@@ -956,8 +960,8 @@
    "tagHash": "AoE",
    "descHash": "Deals <span style=\"color:#7788ff;\">Quantum</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Qingque's ATK to all enemies, and obtains 4 jade tiles of the same suit.",
    "ultimateCost": 140,
-   "break": 0,
-   "energy": 5,
+   "break": "60/hit",
+   "energy": "5",
    "id": 30909,
    "name": "A Quartet? Woo-hoo!",
    "iconPath": "369f61ac524c1ed30bc71a4a575b9017bdaf7a9a0488d28e3106f2d61d010c7e",
@@ -1227,8 +1231,8 @@
    "tagHash": "Enhance",
    "descHash": "When an ally's turn starts, Qingque randomly draws 1 tile from 3 different suits and can hold up to 4 tiles at one time.<br />If Qingque starts her turn with 4 tiles of the same suit, she consumes all tiles to enter the \"Hidden Hand\" state.<br />While in this state, Qingque cannot use her Skill again. At the same time, Qingque's ATK increases by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>, and her Basic ATK \"Flower Pick\" is enhanced, becoming \"Cherry on Top!\" The \"Hidden Hand\" state ends after using \"Cherry on Top!\".",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 746382,
    "name": "Celestial Jade",
    "iconPath": "5aab6396bbe77a62d49a9e5e245cdd3ec31d90367584950f4950ec5aad3d6de5",
@@ -1498,8 +1502,8 @@
    "tagHash": "",
    "descHash": "Attack an enemy, and when the battle starts, reduce their Toughness of the corresponding Type.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 545796,
    "name": "Attack",
    "iconPath": "396133d02c35647181ca18469408714f8189192544173f7d755db22ac2c78825",
@@ -1520,8 +1524,8 @@
    "tagHash": "Enhance",
    "descHash": "After using Technique, Qingque draws <nobr>#1[i]</nobr> jade tile(s) when the battle starts.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 662441,
    "name": "Game Solitaire",
    "iconPath": "5a6ec83a2b61d13ee3a0e2b56ba7c6cef4a2786560499b65707e8bb33fb0600e",
@@ -1544,8 +1548,8 @@
    "tagHash": "Blast",
    "descHash": "Deals <span style=\"color:#7788ff;\">Quantum</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Qingque's ATK to a single enemy, and deals <span style=\"color:#7788ff;\">Quantum</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of Qingque's ATK to enemies adjacent to it.<br />\"Cherry on Top!\" cannot recover Skill Points.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 20,
+   "break": "60 + 30/adjacent",
+   "energy": "20",
    "id": 917194,
    "name": "Cherry on Top!",
    "iconPath": "73ae96fd42e84fc3743b12a2964d346133f4ebbed22a2a88b4e586994416a647",
@@ -1817,8 +1821,6 @@
    "embedBonusSkill": {
     "descHash": "Restores 1 Skill Point when using the Skill. This effect can only be triggered 1 time per battle.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 668114,
     "name": "Tile Battle",
     "iconPath": "86d09f9be82751ee3001542bc045d19459353397521a6dfb51b372afffee9886",
@@ -1953,8 +1955,6 @@
    "embedBonusSkill": {
     "descHash": "Using the Skill increases DMG Boost effect of attacks by an extra <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 668117,
     "name": "Bide Time",
     "iconPath": "bf9d4ecea46e0cfe02824d924a24aca82ec1f48522524f450d77ed64b7a84e8c",
@@ -2062,8 +2062,6 @@
    "embedBonusSkill": {
     "descHash": "Qingque's SPD increases by <nobr>#1[i]%</nobr> for 1 turn after using the Enhanced Basic ATK.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 668116,
     "name": "Winning Hand",
     "iconPath": "1754c646be8fc7ba3ddc0ee59f471818b34df422c15a3d9c539b5596324d3d3c",
@@ -2173,8 +2171,8 @@
    {
     "relicTypeHash": "Feet",
     "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
-    "propertyName": "ATK",
-    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+    "propertyName": "SPD",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
    },
    {
     "relicTypeHash": "Planar Sphere",
@@ -2185,8 +2183,8 @@
    {
     "relicTypeHash": "Link Rope",
     "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
-    "propertyName": "Energy Regeneration Rate",
-    "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
+    "propertyName": "ATK",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
    }
   ]
  },
@@ -2524,7 +2522,7 @@
   {
    "id": 67,
    "title": "Ultimate: Unleash",
-   "text": "Please, please, please, please, please... aaaand ah! Looks like... victory!",
+   "text": "Please, please, please, please, please... ah! Looks like... victory!",
    "unlockRequirement": "",
    "cnUrl": "3c2d5e100bc316e5815b0eea7885fdb97e29770b3a59343fd8d0b1590b26242a",
    "jpUrl": "90237db99bd9f808cff15da5f7a5ca050f5ed2da13d1ede28fd9ab4bba446a8e",

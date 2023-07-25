@@ -1,10 +1,10 @@
 {
  "spRequirement": 110,
- "iconPath": "763bcf5bd4af318313b43fc38c896dc6a248ce2a41c08c38297c258dd099863e",
+ "iconPath": "e225b1f25ff6cb6cd3abd86df8b37cac66f5c7519a06093522e50aa9f97f793c",
  "bgPath": "38781f488d2fcd763f381c59c2ee003e81c9c9bbceeee988f2e4e8f4c29dc2af",
- "figPath": "f0e58b5e5509a7f65791b6ce4d667f5429be8913fd494ac61f4e9b4a6aa11d60",
+ "figPath": "4fae46d9af163086447d3cec15d2f27f5a93e311b7ac735ce50bdb95abb3bcad",
  "fgPath": "2d5c66397469c241cf289cc078ba6f139fd88c09024f47b45fb27b408fffb608",
- "splashIconPath": "80250b40d167ca2ba09fc4120b67d0321c06c47518189354c650728b9337cb1f",
+ "splashIconPath": "1f0651e2531e86d51347d9a0d001a46bf3f8134187f9dfcc25d5644aa541ab7d",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Calyx (Great Mine)",
     "Mission rewards",
-    "Assignment rewards"
+    "Assignment rewards",
+    "Embers Exchange"
    ]
   },
   "125435": {
@@ -93,7 +94,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Calyx (Outlying Snow Plains)",
-    "Daily Training"
+    "Daily Training",
+    "Embers Exchange"
    ]
   },
   "409962": {
@@ -161,7 +163,8 @@
    "rarity": 2,
    "rewardPath": "/material/635673",
    "comeFrom": [
-    "Calyx (Storage zone)"
+    "Calyx (Storage zone)",
+    "Embers Exchange"
    ]
   },
   "717290": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920200",
    "comeFrom": [
     "Calyx (Storage Zone)",
-    "Omni-Synthesizer — Material Synthesis"
+    "Omni-Synthesizer — Material Synthesis",
+    "Embers Exchange"
    ]
   }
  },
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "aae46f0dfd1aef5f59f23bb49c4589c1413ef40a07e8cfa16fb08869142deecb",
    "artPath": "4a7c180ec7c961faee21e24fbc057174789723c19f85add6cf47236cbf8bdd2b",
    "name": "A Tall Figure",
    "descHash": "Using Skill will not remove Marks of Counter on the enemy.",
@@ -426,7 +430,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "f78a52546491b6511009885347270970a522a1b58147bc4447aade85da911298",
    "artPath": "eef148752ed1f5a8d070b4f53dfb1dcd68a9d409c63a538724dd425330b11d8f",
    "name": "A Tight Embrace",
    "descHash": "After using the Ultimate, ATK increases by <nobr>#1[i]%</nobr> for <nobr>#2[i]</nobr> turn(s).",
@@ -437,7 +441,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "c733f760b7c0b9b08cd348e80be013fae237c2712127681e68c58942737dac41",
    "artPath": "4e2c3cf3098eb4b75980adb81c38a07be1474aefe72a4fb56b5316834bded740",
    "name": "Cold Steel Armor",
    "descHash": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Basic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
@@ -445,7 +449,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "38f1c58ee593f576a17b8c70b8dacb9a90d163bce89ebbb1e20b756a9f7ce113",
    "artPath": "bcc5e475f5f14a2cae5a94cc654c301c00027d5444e838265e234d3a93d9217b",
    "name": "Family's Warmth",
    "descHash": "After Clara is hit, the DMG taken by Clara is reduced by <nobr>#1[i]%</nobr>. This effect lasts until the start of her next turn.",
@@ -455,7 +459,7 @@
   },
   {
    "id": 5,
-   "iconPath": "",
+   "iconPath": "127549ebae06ecf63baaadc6a79453223bfc164b848437850cd4e77ae8a277f6",
    "artPath": "c039825cb8396fadd31ba5faf689697494227d463f77f7905dcea398ca74375d",
    "name": "A Small Promise",
    "descHash": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Talent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
@@ -463,7 +467,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "634a7ef535d2caaaa70e226b3467ad06c40f1eccafcf239b0f1aa611e3fdc7e0",
    "artPath": "238257725efa29126a176bf6b02954d76fac8bcef1876390b11bb75c2f8063cf",
    "name": "Long Company",
    "descHash": "After other allies are hit, Svarog also has a <nobr>#1[i]%</nobr> fixed chance to trigger a Counter on the attacker and mark them with a Mark of Counter. When using Ultimate, the number of Enhanced Counters increases by <nobr>#2[i]</nobr>.",
@@ -495,8 +499,8 @@
    "tagHash": "Single Target",
    "descHash": "Deals <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Clara's ATK to a single enemy.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 310670,
    "name": "I Want to Help",
    "iconPath": "a56a8dd217b79ffc2557b9b6ee7ca0e8f9ac596ce78704cfb8572793692a4975",
@@ -656,8 +660,8 @@
    "tagHash": "AoE",
    "descHash": "Deals <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Clara's ATK to all enemies, and additionally deals <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of Clara's ATK to enemies marked by Svarog with a Mark of Counter.<br />All Marks of Counter will be removed after this Skill is used.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 30,
+   "break": "30/hit",
+   "energy": "30",
    "id": 226729,
    "name": "Svarog Watches Over You",
    "iconPath": "c733f760b7c0b9b08cd348e80be013fae237c2712127681e68c58942737dac41",
@@ -946,8 +950,8 @@
    "tagHash": "Enhance",
    "descHash": "After Clara uses Ultimate, DMG dealt to her is reduced by an extra <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>, and she has greatly increased chances of being attacked by enemies for <nobr>#3[i]</nobr> turn(s).<br />In addition, Svarog's <u>Counter</u> is enhanced. When an ally is attacked, Svarog immediately launches a <u>Counter</u>, and its DMG multiplier against the enemy increases by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Enemies adjacent to it take <nobr>50%</nobr> of the DMG dealt to the target enemy. Enhanced <u>Counter(s)</u> can take effect <nobr>#5[i]</nobr> time(s).",
    "ultimateCost": 110,
-   "break": 0,
-   "energy": 5,
+   "break": "0",
+   "energy": "5",
    "id": 110084,
    "name": "Promise, Not Command",
    "iconPath": "ce7af5b7d5ea1e0fea993c2dc6d2b8a4cf06f28372bb0648029ee754469a1e5f",
@@ -1281,8 +1285,8 @@
    "tagHash": "Single Target",
    "descHash": "Under the protection of Svarog, DMG taken by Clara when hit by enemy attacks is reduced by <nobr>#3[i]%</nobr>. Svarog will mark enemies who attack Clara with his Mark of Counter and retaliate with a <u>Counter</u>, dealing <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of Clara's ATK.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 5,
+   "break": "30",
+   "energy": "5",
    "id": 795783,
    "name": "Because We're Family",
    "iconPath": "0cf0ee129cd4db07eb16e4c59da3690937f45cfe6780d6a9949efeb203858819",
@@ -1586,8 +1590,8 @@
    "tagHash": "",
    "descHash": "Attack an enemy, and when the battle starts, reduce their Toughness of the corresponding Type.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 595197,
    "name": "Attack",
    "iconPath": "a56a8dd217b79ffc2557b9b6ee7ca0e8f9ac596ce78704cfb8572793692a4975",
@@ -1608,8 +1612,8 @@
    "tagHash": "",
    "descHash": "Immediately attacks the enemy. Upon entering battle, the chance Clara will be attacked by enemies increases for <nobr>#1[i]</nobr> turn(s).",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 0,
+   "break": "60",
+   "energy": "0",
    "id": 511256,
    "name": "A Small Price for Victory",
    "iconPath": "b2bb21eba04d3fa208a4d8698169257e73af1a7376832b91304e6b8ea8c1825f",
@@ -1737,8 +1741,6 @@
    "embedBonusSkill": {
     "descHash": "When attacked, this character has a <nobr>#1[i]%</nobr> fixed chance to remove a debuff placed on them.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 947875,
     "name": "Kinship",
     "iconPath": "9eb6853e6b9c0df2fa5f3210abcf981350869bfc8a9f6a49001982c1c4052da3",
@@ -1876,8 +1878,6 @@
    "embedBonusSkill": {
     "descHash": "The chance to resist Crowd Control Debuffs increases by <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 947878,
     "name": "Under Protection",
     "iconPath": "84ccd1a22755bb0519affc339f316f793fb22ab86a553f379a236f6399469861",
@@ -2018,8 +2018,6 @@
    "embedBonusSkill": {
     "descHash": "Increases Svarog's Counter DMG by <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 947877,
     "name": "Revenge",
     "iconPath": "89dbcbd906fa02b1cb3ab71ced5a143e2f276cae8703f90411c885e9efbb2e38",
@@ -2109,8 +2107,8 @@
    {
     "relicTypeHash": "Link Rope",
     "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
-    "propertyName": "Break Effect",
-    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+    "propertyName": "Energy Regeneration Rate",
+    "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
    }
   ]
  },
@@ -2244,6 +2242,16 @@
    "jpUrl": "5efbea0338dddd52d8357eaa1157e43c7460161aefad2a6d0cae9e4d975cb7f2",
    "enUrl": "2fe9059415c35c2c7b61e4d0c66dc263e585db75d18948d9eeb3c4071f7b1591",
    "krUrl": "bf9d529b75dc1c0ea252fb8afd842d6b3a7cd70e28b59f1436fc74d59e296381"
+  },
+  {
+   "id": 14,
+   "title": "About Luka",
+   "text": "Luka...? He's nice to people. I know he seems kinda impatient, but he's actually very caring.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
   },
   {
    "id": 51,
@@ -2504,7 +2512,7 @@
   },
   {
    "title": "Character Story: Part III",
-   "text": "\"— Log ██/██/████ AF.\"<br /><br />\"Under Clara's guidance, many vagrants have established settlements around the periphery of the base, and rely on Clara to survive. This behavior does not contravene the orders of the Preservation. However, many of them are trying to enter the Overworld via this base's transport passage. The gates of the base must be sealed tightly to avoid accelerating the demise of Belobog.\"<br /><br />\"Clara has discussed this with me before. She believes locking the gates is an 'incomprehensible' act. I responded with my predicted calculations: By over-committing her resources to the war against the Fragmentum , the Supreme Guardian is accelerating the destruction of the Overworld. Isolation would be the best option for the people of the Underworld — this would buy them more time to try and survive. In the end, Clara finally agreed.\"<br /><br />\"Most humans behave illogically, but Clara doesn't — she is raised by me and grew up among automatons, and her behavior is more based on pure rationality. Her presence may impact predicted calculations of Belobog's demise, but more observations are required.\"",
+   "text": "\"— Log ██/██/████ AF.\"<br /><br />\"Under Clara's guidance, many vagrants have established settlements around the periphery of the base, and rely on Clara to survive. This behavior does not contravene the orders of Preservation. However, many of them are trying to enter the Overworld via this base's transport passage. The gates of the base must be sealed tightly to avoid accelerating the demise of Belobog.\"<br /><br />\"Clara has discussed this with me before. She believes locking the gates is an 'incomprehensible' act. I responded with my predicted calculations: By over-committing her resources to the war against the Fragmentum , the Supreme Guardian is accelerating the destruction of the Overworld. Isolation would be the best option for the people of the Underworld — this would buy them more time to try and survive. In the end, Clara finally agreed.\"<br /><br />\"Most humans behave illogically, but Clara doesn't — she is raised by me and grew up among automatons, and her behavior is more based on pure rationality. Her presence may impact predicted calculations of Belobog's demise, but more observations are required.\"",
    "unlockRequirement": "Unlocked at Character Level <nobr>60</nobr>"
   },
   {

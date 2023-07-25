@@ -1,10 +1,10 @@
 {
  "spRequirement": 120,
- "iconPath": "5b59cf5d4a165ef4118d73b0abfa54a06df8d59a2f7e162fce943423d5fa0e07",
+ "iconPath": "728425bbe4a304ee49741d45fbe20983c9aef56bba15415188be5ebba94b1176",
  "bgPath": "b9c250d3d3bd89e475e1aebb6265270b7c1d15d32c8dcb3cea64dbddeffa4b2b",
- "figPath": "eff07da2a115ab846fb6959503d7dbe125e4681bf89f878f2d5a91213b887bd8",
+ "figPath": "218f12cc063a1ae4019082e0faa0d12380f9f76ddb885fc73deffd5b45b2e509",
  "fgPath": "5fcde1bb45316f4296c71fcf6d08708f631645ae74d827b92776555f8a3d96a9",
- "splashIconPath": "3c65307dfdb5809c5647cce7f01939a514624c14b49cf15f45743ed179ac2258",
+ "splashIconPath": "ff3946ea6ddace62b46bc7382aed2090f7d19e3b632ab22a2544897014594a7b",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Blütenkelch (Große Mine)",
     "Missionsbelohnungen",
-    "Auftragsbelohnungen"
+    "Auftragsbelohnungen",
+    "Glut-Tausch"
    ]
   },
   "125435": {
@@ -93,7 +94,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Blütenkelch (Äußere Schneewüste)",
-    "Tägliches Training"
+    "Tägliches Training",
+    "Glut-Tausch"
    ]
   },
   "409962": {
@@ -161,7 +163,8 @@
    "rarity": 2,
    "rewardPath": "/material/635673",
    "comeFrom": [
-    "Blütenkelch (Lagerzone)"
+    "Blütenkelch (Lagerzone)",
+    "Glut-Tausch"
    ]
   },
   "717290": {
@@ -211,7 +214,8 @@
    "rewardPath": "/material/920200",
    "comeFrom": [
     "Blütenkelch (Lagerzone)",
-    "Omni-Synthesemaschine – Materialsynthese"
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Glut-Tausch"
    ]
   },
   "983278": {
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "161244dd2438c48395990c164f8cc0838b8dbc7ded6b70b657ddf121809c4460",
    "artPath": "dfcc91d9b65dd85c70ebe7f82444f5fb5a45f705e7024b6a232a5a1af3ed081d",
    "name": "Früh zu Bett, früh aus den Federn",
    "descHash": "Die verstärkte Fertigkeit verursacht <nobr>#1[i]%</nobr> mehr SCH.",
@@ -428,7 +432,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "f76f4044dac60bf4485e444a121d899e00e27319d6f769397dd15b49a0c4307a",
    "artPath": "cb04c6c7108c92bbc27625b6d021bb54245de7caf77e5af5217528d055481d1c",
    "name": "Glücklicher Bauch, glücklicher Körper",
    "descHash": "Verlängert die Dauer des durch Fertigkeit verursachten Brennens um <nobr>#1[i]</nobr> Rd.",
@@ -438,7 +442,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "5c78cc30b0589bd54b4729dbffd4b29a1934bec8ecf1d5cb3c72c9f47c8b3250",
    "artPath": "f57d3ad9092b3ce629a98e7bef3435c562abc95eb284e82d3152f45038d508ee",
    "name": "Nicht wählerisch sein, schmeckt alles fein",
    "descHash": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis zu max. St. <nobr>10</nobr>.",
@@ -446,17 +450,17 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "b78b85803a5eec6bd098536cea05a0e520aa5a05d376efed1047044f62524ccb",
    "artPath": "2587938f8f3e384a6220174cb51affdf780ff5e40adef96c30c0d389dbfd033a",
    "name": "Nichts wissen macht auch nichts",
-   "descHash": "Beim Auslösung des Talents besteht eine Grundchance von <nobr>#1[i]%</nobr>, dass angrenzende Ziele des anvisierten Gegners von Brennen betroffen werden, das durch Fertigkeit verursacht wird.",
+   "descHash": "Bei Auslösung des Talents besteht eine Grundchance von <nobr>#1[i]%</nobr>, dass angrenzende Ziele des anvisierten Gegners von Brennen betroffen werden, das durch Fertigkeit verursacht wird.",
    "params": [
     1
    ]
   },
   {
    "id": 5,
-   "iconPath": "",
+   "iconPath": "dafdba03014dc92874db239af33f58dd1b063d646ae122661d84789ea73be24a",
    "artPath": "2fd88b4a3ea0dc42f621494729539cfadab089c0b4d04872be95f5a5ca202ff9",
    "name": "Für den Ruhm der Maulwürfe",
    "descHash": "Ultimate-Stufe +2 bis zu max. St. <nobr>15</nobr>. Talentstufe +2 bis zu max. St. <nobr>15</nobr>.",
@@ -464,7 +468,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "d415d981cf9c78c2e47e8bb6602473d2e02497b49a119a70f30776294571be63",
    "artPath": "254f755fa17d8185aa37f8e134c7170477f7574a1b045f5d9f0a817eaec30530",
    "name": "Immer bereit zum Schlagen und Treten",
    "descHash": "Hook fügt brennenden Gegnern <nobr>#1[i]%</nobr> mehr SCH zu.",
@@ -496,8 +500,8 @@
    "tagHash": "Einzelangriff",
    "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#F84F36;\">Feuer</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Hooks ANG zu.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 935680,
    "name": "Hey! Verbrenn dich nicht!",
    "iconPath": "a5cb78f5a4a459bad26f2a27272a81e3861905d38c5ab1c80360046d68148bf5",
@@ -657,8 +661,8 @@
    "tagHash": "Einzelangriff",
    "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#F84F36;\">Feuer</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Hooks ANG zu und verursacht bei dem Ziel mit einer <u>Grundchance</u> von <nobr>#2[i]%</nobr> für <nobr>#3[i]</nobr> Rd. Brennen.<br />Brennende Gegner erleiden zu Beginn jeder Runde <span style=\"color:#F84F36;\">Feuer</span>-DoT in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> von Hooks ANG.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 30,
+   "break": "60",
+   "energy": "30",
    "id": 252911,
    "name": "Hey! Erinnerst du dich an Hook?",
    "iconPath": "5c78cc30b0589bd54b4729dbffd4b29a1934bec8ecf1d5cb3c72c9f47c8b3250",
@@ -973,8 +977,8 @@
    "tagHash": "Einzelangriff",
    "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#F84F36;\">Feuer</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Hooks ANG zu.<br />Verstärkt nach dem Einsatz des Ultimates die nächste Fertigkeit, die dem anvisierten Gegner sowie angrenzenden Zielen SCH zufügt.",
    "ultimateCost": 120,
-   "break": 90,
-   "energy": 5,
+   "break": "90",
+   "energy": "5",
    "id": 136266,
    "name": "Bumm! Hier kommt das Feuer!",
    "iconPath": "cd0d00b09eb574c4aabf9d3ba714dfa3d2f2dc6701d35bf35ee4b22b934d6702",
@@ -1244,8 +1248,8 @@
    "tagHash": "Verstärkung",
    "descHash": "Beim Angriff gegen brennende Gegner wird <u>zusätzlich</u> <span style=\"color:#F84F36;\">Feuer</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Hooks ANG zugefügt und zusätzlich <nobr>#2[i]</nobr> Pkt. Energie wiederhergestellt.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 651153,
    "name": "Ha! Öl ins Feuer!",
    "iconPath": "7b0455e4c0a47f9031ed651950fc66f87bc90f78214925a46dc9800a951c2824",
@@ -1530,8 +1534,8 @@
    "tagHash": "",
    "descHash": "Greift den Gegner an und schwächt nach Kampfeintritt den Widerstand des Ziels gegen den entsprechenden Typ.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 851739,
    "name": "Angriff",
    "iconPath": "a5cb78f5a4a459bad26f2a27272a81e3861905d38c5ab1c80360046d68148bf5",
@@ -1552,8 +1556,8 @@
    "tagHash": "",
    "descHash": "Greift den Gegner unmittelbar an. Nach Kampfeintritt fügt Hook einem zufälligen Gegner <span style=\"color:#F84F36;\">Feuer</span>-SCH in Höhe von <nobr>#4[i]%</nobr> ihres ANG zu und hat eine <u>Grundchance</u> von <nobr>#1[i]%</nobr>, bei allen Gegnern für <nobr>#3[i]</nobr> Rd. Brennen zu verursachen.<br />Brennende Gegner erleiden zu Beginn jeder Runde <span style=\"color:#F84F36;\">Feuer</span>-DoT in Höhe von <nobr>#2[i]%</nobr> von Hooks ANG.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 0,
+   "break": "60",
+   "energy": "0",
    "id": 767798,
    "name": "Puh! Sieh sich einer das Chaos an!",
    "iconPath": "f4301800f52a84ca204b5caaaa33e5f57e46bdcb4bfcaba247b660aa4fd4110c",
@@ -1579,8 +1583,8 @@
    "tagHash": "Ausdehnung",
    "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#F84F36;\">Feuer</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Hooks ANG zu und verursacht beim Ziel mit einer <u>Grundchance</u> von <nobr>#2[i]%</nobr> für <nobr>#3[i]</nobr> Rd. Brennen. Fügt außerdem angrenzenden Zielen <span style=\"color:#F84F36;\">Feuer</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> von Hooks ANG zu.<br />Brennende Gegner erleiden zu Beginn jeder Runde <span style=\"color:#F84F36;\">Feuer</span>-DoT in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> von Hooks ANG.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 30,
+   "break": "60 + 30/adjacent",
+   "energy": "30",
    "id": 198744,
    "name": "Hey! Erinnerst du dich an Hook?",
    "iconPath": "5c78cc30b0589bd54b4729dbffd4b29a1934bec8ecf1d5cb3c72c9f47c8b3250",
@@ -2014,8 +2018,6 @@
    "embedBonusSkill": {
     "descHash": "Stellt bei Auslösung des Talents LP in Höhe von <nobr>#1[i]%</nobr> von Hooks max. LP wieder her.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 572885,
     "name": "Unschuld",
     "iconPath": "8cbec8db934b56e9db31f97799ee7250c3072feb1f77fa034df516acec1b7f32",
@@ -2153,8 +2155,6 @@
    "embedBonusSkill": {
     "descHash": "Erhöht die Chance von WDS gegen Mengenkontrolle-Debuffs um <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 572888,
     "name": "Naivität",
     "iconPath": "11de557bc9b9951f65d7811df608d63a08d2ff977638148577e19f445c1e0b5f",
@@ -2295,8 +2295,6 @@
    "embedBonusSkill": {
     "descHash": "Zieht nach dem Einsatz des Ultimates Hooks Aktion um <nobr>#2[i]%</nobr> vor und stellt zusätzlich <nobr>#1[i]</nobr> Pkt. Energie wieder her.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 572887,
     "name": "Spiel mit dem Feuer",
     "iconPath": "30f718a8c21719521a55cb285a05db42d93ace0cd3316c9206e6604b67e14954",
@@ -2544,6 +2542,16 @@
    "krUrl": "f066162f81b1117837c3260494668e3d6acd041f9a6ef42c23acac550986055d"
   },
   {
+   "id": 16,
+   "title": "Über Luka",
+   "text": "Luka isst gerne Fleisch, genau wie ich! Deshalb sind wir gute Freunde!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
    "id": 51,
    "title": "Kampf beginnt: Schwächebruch",
    "text": "Du hast noch immer Zeit, aufzugeben!",
@@ -2555,7 +2563,7 @@
   },
   {
    "id": 52,
-   "title": "Kampf beginnt: Achtung Gefahr",
+   "title": "Kampf beginnt: Gefahrenwarnung",
    "text": "N... Niemand schikaniert Hook!",
    "unlockRequirement": "",
    "cnUrl": "45fd349cd8799279c1f43d2a98e370e2fad63021229079256a9284112b6320c0",
@@ -2596,7 +2604,7 @@
   {
    "id": 56,
    "title": "Standardangriff",
-   "text": "Wen nennst du hier klein!?",
+   "text": "Wen nennst du hier klein?!",
    "unlockRequirement": "",
    "cnUrl": "59bdc6ccccdaca86929a675aebb8ad6ebca3226fce17513b0cc5e3e92c1392eb",
    "jpUrl": "47be4a6dae8646a5c29a4564793b17a449bd094bedeee4bd5cf7da63fa9f2135",

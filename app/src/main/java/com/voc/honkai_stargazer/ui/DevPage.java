@@ -20,10 +20,14 @@ import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.google.android.play.core.appupdate.testing.FakeAppUpdateManager;
+import com.google.android.play.core.install.model.AppUpdateType;
 import com.voc.honkai_stargazer.R;
 import com.voc.honkai_stargazer.data.HSRItem;
 import com.voc.honkai_stargazer.dev.CharAdviceSuggester;
+import com.voc.honkai_stargazer.dev.HelpTool;
 import com.voc.honkai_stargazer.util.LogExport;
+import com.voc.honkai_stargazer.util.UpdateUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -68,6 +72,12 @@ public class DevPage extends AppCompatActivity {
         Button dev_expection_btn = findViewById(R.id.dev_expection_btn);
         Button dev_museum_btn = findViewById(R.id.dev_museum_btn);
         Button dev_scrollview_btn = findViewById(R.id.dev_scrollview_btn);
+
+        Button dev_fake_update_1 = findViewById(R.id.dev_fake_update_1);
+        Button dev_fake_update_2 = findViewById(R.id.dev_fake_update_2);
+
+        Button dev_help_tool = findViewById(R.id.dev_help_tool);
+
         Switch dev_siptik_rotate = findViewById(R.id.dev_siptik_rotate);
         Switch setting_shadow_list_item = findViewById(R.id.setting_shadow_list_item);
 
@@ -90,9 +100,10 @@ public class DevPage extends AppCompatActivity {
                     StringWriter sw = new StringWriter();
                     PrintWriter pw = new PrintWriter(sw);
                     e.printStackTrace(pw);
-                    LogExport.bugLog(TAG, "dev_expection_btn.onClick()", sw.toString(), context);
-                    new RuntimeException(e);
+                    LogExport.bugLog(TAG, "dev_expection_btn.onClick()", sw.toString(), e.getMessage(), context);
+
                     Toast.makeText(context, "Please check test log available or not", Toast.LENGTH_SHORT).show();
+                    new RuntimeException(e);
                 }
             }
         });
@@ -133,8 +144,50 @@ public class DevPage extends AppCompatActivity {
             }
         });
 
+        //FakeAppUpdate
+        dev_fake_update_1.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {fake_update_test(AppUpdateType.FLEXIBLE);}});
+        dev_fake_update_2.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {fake_update_test(AppUpdateType.IMMEDIATE);}});
+
+        //HelpTool
+        dev_help_tool.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                HelpTool.trigger_help_tool(context);
+                HelpTool helpTool = new HelpTool();
+                try {
+                    //helpTool.help_tool_export_relic_pc_run(context);
+                    helpTool.help_tool_export_locale_advice(context);
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+                Toast.makeText(context, "Trigged HelpTool.trigger_help_tool", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
-    private void themeChanger() {
+
+    private void fake_update_test(int level) {
+        UpdateUtil updateUtil = new UpdateUtil();
+        updateUtil.init(context,activity);
+
+        FakeAppUpdateManager fakeAppUpdateManager = new FakeAppUpdateManager(context);
+        fakeAppUpdateManager.setUpdateAvailable(33333);
+        fakeAppUpdateManager.setUpdatePriority(4);
+
+        System.out.println("isImmediateFlowVisible ? "+fakeAppUpdateManager.isImmediateFlowVisible());
+
+        fakeAppUpdateManager.userAcceptsUpdate();
+        System.out.println("userAcceptsUpdate");
+
+        fakeAppUpdateManager.downloadStarts();
+        System.out.println("downloadStarts");
+
+        fakeAppUpdateManager.downloadCompletes();
+        System.out.println("downloadCompletes");
+
+        System.out.println("isInstallSplashScreenVisible ? "+fakeAppUpdateManager.isInstallSplashScreenVisible());
+
+
 
     }
 

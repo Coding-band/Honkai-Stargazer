@@ -1,10 +1,10 @@
 {
  "spRequirement": 120,
- "iconPath": "a047bd909fadf0023647485617a3cbc4a267f9d1629aba19c989b65d556c81a4",
+ "iconPath": "20af1fa026ccafd46ca14155f39290d855c20e323ebccae4eca9e14d9bcc3894",
  "bgPath": "369d749694eeef6c0db978c93b1f8cd77ee49332ef5fe4e88be1a4aad36aa49c",
- "figPath": "2487583f9013fbd1cd11c379cafb6428d29bc8ae201330f264a22c9ee838ec4a",
+ "figPath": "5b67a731bf8a3f00d1b4f5ce99a7ff5192c26bf9347b07c8150fa60e331f1730",
  "fgPath": "a34e5dbc96fdb528b5b29508c5c06f02e79ab440294e0abfd830f14047a72273",
- "splashIconPath": "1e4183164345610421b0928f028662a986e3f5dcc1d560d39df4763d717ce3d0",
+ "splashIconPath": "520ca5e3911e5a37d3677bf3f348b6a604878b7216e2a6b169d7889da8e46880",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Calyx (Great Mine)",
     "Mission rewards",
-    "Assignment rewards"
+    "Assignment rewards",
+    "Embers Exchange"
    ]
   },
   "125435": {
@@ -78,7 +79,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Calyx (Outlying Snow Plains)",
-    "Daily Training"
+    "Daily Training",
+    "Embers Exchange"
    ]
   },
   "409962": {
@@ -146,7 +148,8 @@
    "rarity": 2,
    "rewardPath": "/material/635668",
    "comeFrom": [
-    "Calyx (Supply Zone)"
+    "Calyx (Supply Zone)",
+    "Embers Exchange"
    ]
   },
   "717319": {
@@ -212,7 +215,8 @@
    "rewardPath": "/material/920195",
    "comeFrom": [
     "Calyx (Supply Zone)",
-    "Omni-Synthesizer — Material Synthesis"
+    "Omni-Synthesizer — Material Synthesis",
+    "Embers Exchange"
    ]
   },
   "985668": {
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "80b9632f6d7ed84743747b9de4732915eeacad4b5c235fec5dae095ba475cf17",
    "artPath": "e64596f001fc37ef51c078d7ec930d0fb3a15d589ee8ad6228805bdef5afd252",
    "name": "Earth-Shaking Resonance",
    "descHash": "When the Trailblazer uses their Basic ATK, additionally deals Fire DMG equal to <nobr>#1[i]%</nobr> of the Trailblazer's DEF. When the Trailblazer uses their enhanced Basic ATK, additionally deals Fire DMG equal to <nobr>#2[i]%</nobr> of the Trailblazer's DEF.",
@@ -429,7 +433,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "59ba45522643a97286b0a41c65d764259ea78639198dfbaf5c81abf43349d846",
    "artPath": "77bf690fa41ee1f68ea3102d5e7199966133aaafeba796e8e9a1a825000d5d99",
    "name": "Time-Defying Tenacity",
    "descHash": "The Shield applied to all allies from the Trailblazer's Talent will block extra DMG equal to <nobr>#1[i]%</nobr> of the Trailblazer's DEF plus <nobr>#2[i]</nobr>.",
@@ -440,7 +444,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "5a86172d92efc87d4130945f89e9efd75f02b6a591ae8bb1330aa5abfafaa21e",
    "artPath": "9c3684f28b69483d8d90456b08e704aa225afe1ec19bb92d6c2400eee4210317",
    "name": "Trail-Blazing Blueprint",
    "descHash": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Talent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
@@ -448,7 +452,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "3bc0e2b189ef9bb601858a897b58a016d2cb899ebe83f463eb435a58e16bdc94",
    "artPath": "c5fc4d10e733dc986d073687c1e1cac25219d8a029df9c8313ce1524ca090fad",
    "name": "Nation-Building Oath",
    "descHash": "At the start of the battle, immediately gains <nobr>#1[i]</nobr> stack(s) of Magma Will.",
@@ -458,7 +462,7 @@
   },
   {
    "id": 5,
-   "iconPath": "",
+   "iconPath": "c514a084a3388db3c30e78802f2c882882bac254a177eac64bd498df9771583c",
    "artPath": "f971bad331ea8c2df332a715e6e565703b3ac6022f503d39d06627b03ea738fb",
    "name": "Spirit-Warming Flame",
    "descHash": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Basic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
@@ -466,7 +470,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "97916146f6eab19a464c5151732269f07ce4f09dc4539571db762d15ac5d7956",
    "artPath": "487b238c673ae2beba57aa0b79d5b22418e76f93ae93019e8def2b4abc57a234",
    "name": "City-Forging Bulwarks",
    "descHash": "After the Trailblazer uses enhanced Basic ATK or Ultimate, their DEF increases by <nobr>#1[i]%</nobr>. Stacks up to <nobr>#2[i]</nobr> time(s).",
@@ -499,8 +503,8 @@
    "tagHash": "Single Target",
    "descHash": "Deals <span style=\"color:#F84F36;\">Fire</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of the Trailblazer's ATK to a single enemy and gains 1 stack of Magma Will.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 636205,
    "name": "Ice-Breaking Light",
    "iconPath": "70e521f1b664232ea443c7fa16c4032831e867a753a82eb37a7c58c830b2b342",
@@ -660,8 +664,8 @@
    "tagHash": "Defense",
    "descHash": "Increases the Trailblazer's DMG Reduction by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> and gains 1 stack of Magma Will, with a <nobr>#2[i]%</nobr> <u>base chance</u> to Taunt all enemies for <nobr>#3[i]</nobr> turn(s).",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 30,
+   "break": "0",
+   "energy": "30",
    "id": 920732,
    "name": "Ever-Burning Amber",
    "iconPath": "5a86172d92efc87d4130945f89e9efd75f02b6a591ae8bb1330aa5abfafaa21e",
@@ -961,8 +965,8 @@
    "tagHash": "AoE",
    "descHash": "Deals <span style=\"color:#F84F36;\">Fire</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of the Trailblazer's ATK plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of the Trailblazer's DEF to all enemies. The next Basic ATK will be automatically enhanced and does not cost Magma Will.",
    "ultimateCost": 120,
-   "break": 0,
-   "energy": 5,
+   "break": "60/hit",
+   "energy": "5",
    "id": 804087,
    "name": "War-Flaming Lance",
    "iconPath": "98b0c560222e8e5a389529da0a6f0783975cc701ef395df083516272c4387e0d",
@@ -1247,8 +1251,8 @@
    "tagHash": "Enhance",
    "descHash": "Each time the Trailblazer is hit, they gain 1 stack of Magma Will for a max of <nobr>#3[i]</nobr> stack(s).<br />When Magma Will has no fewer than 4 stacks, the Trailblazer's Basic ATK becomes enhanced, dealing DMG to a single enemy and enemies adjacent to it.<br />When the Trailblazer uses Basic ATK, Skill, or Ultimate, apply a Shield to all allies that absorbs DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> of the Trailblazer's DEF plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span>. The Shield lasts for <nobr>#2[i]</nobr> turn(s).",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 88614,
    "name": "Treasure of the Architects",
    "iconPath": "f3f9033a9966a7e775e81e0830d5036f4dba19edf2ebca7494906b08889d63ba",
@@ -1563,8 +1567,8 @@
    "tagHash": "",
    "descHash": "Attack an enemy, and when the battle starts, reduce their Toughness of the corresponding Type.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 289200,
    "name": "Attack",
    "iconPath": "70e521f1b664232ea443c7fa16c4032831e867a753a82eb37a7c58c830b2b342",
@@ -1585,8 +1589,8 @@
    "tagHash": "Defense",
    "descHash": "After using Technique, at the start of the next battle, gains a Shield that absorbs DMG equal to <nobr>#1[i]%</nobr> of the Trailblazer's DEF plus <nobr>#2[i]</nobr> for <nobr>#3[i]</nobr> turn(s).",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 205259,
    "name": "Call of the Guardian",
    "iconPath": "52367b9d814e60d3442d4a4f28833c29d7a99d51be1d4255f59ce97ba69070f2",
@@ -1611,8 +1615,8 @@
    "tagHash": "Blast",
    "descHash": "Consumes 4 stacks of Magma Will to enhance Basic ATK, dealing <span style=\"color:#F84F36;\">Fire</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of the Trailblazer's ATK to a single enemy and <span style=\"color:#F84F36;\">Fire</span> DMG to equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of the Trailblazer's ATK to enemies adjacent to it.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 30,
+   "break": "60 + 30/adjacent",
+   "energy": "30",
    "id": 489786,
    "name": "Ice-Breaking Light",
    "iconPath": "70e521f1b664232ea443c7fa16c4032831e867a753a82eb37a7c58c830b2b342",
@@ -1884,8 +1888,6 @@
    "embedBonusSkill": {
     "descHash": "When the Trailblazer is protected by a Shield at the beginning of the turn, increases their ATK by <nobr>#2[i]%</nobr> and regenerates <nobr>#1[i]</nobr> Energy until the action is over.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 486756,
     "name": "Action Beats Overthinking",
     "iconPath": "be1628b4c503db76ccc2024e11be22c958c8bb06541e53b2a7a17f4b1904835b",
@@ -1999,8 +2001,6 @@
      "embedBonusSkill": {
       "descHash": "After using the Skill, the DMG taken by all allies reduces by <nobr>#2[i]%</nobr> for <nobr>#3[i]</nobr> turn(s).",
       "ultimateCost": 0,
-      "break": 0,
-      "energy": 0,
       "id": 486754,
       "name": "The Strong Defend the Weak",
       "iconPath": "e02c5640cd662910ad806d0811362d39911efd3d551f852d007210a2f2d86193",
@@ -2107,8 +2107,6 @@
      "embedBonusSkill": {
       "descHash": "Using Enhanced Basic ATK restores the Trailblazer's HP by <nobr>#1[i]%</nobr> of their Max HP.",
       "ultimateCost": 0,
-      "break": 0,
-      "energy": 0,
       "id": 486755,
       "name": "Unwavering Gallantry",
       "iconPath": "fd47f3ed78597b0e2b19a68c48480517870e31b5ee6ee00475c2b7526c6c4e3a",
@@ -2247,20 +2245,20 @@
    {
     "relicTypeHash": "Feet",
     "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
-    "propertyName": "DEF",
-    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+    "propertyName": "SPD",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
    },
    {
     "relicTypeHash": "Planar Sphere",
     "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
-    "propertyName": "Fire DMG Boost",
-    "propertyIconPath": "5b7a8da3b4d685c3e9cc470faae12c21e3fd75df90cd8fcfcd6c8f2784c02a3f"
+    "propertyName": "DEF",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
    },
    {
     "relicTypeHash": "Link Rope",
     "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
-    "propertyName": "Break Effect",
-    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+    "propertyName": "DEF",
+    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
    }
   ]
  },
@@ -2307,7 +2305,7 @@
   },
   {
    "id": 5,
-   "title": "Memory: The Destruction",
+   "title": "Memory: Destruction",
    "text": "Just where did the will of Destruction come from? Was it really because of the Stellaron within me...?",
    "unlockRequirement": "Unlocked after completing the Trailblaze Mission \"The Voyage Continues.\"",
    "cnUrl": "83ed69aaf035931b931bf2867e60afd204015b38ee86d8a81f284c28bda880f5",
@@ -2327,7 +2325,7 @@
   },
   {
    "id": 7,
-   "title": "Memory: The Preservation",
+   "title": "Memory: Preservation",
    "text": "The seed of Preservation has always been within Belobog, and I simply re-ignited this city's will to live... That will may be weak, but this was not the time for it to go out.",
    "unlockRequirement": "Unlocked after completing Trailblaze Mission \"Silent Galaxy.\"",
    "cnUrl": "c2afbe821780252fda30f8f302f2c8146b434945b46c995f8a16c6eedce00695",

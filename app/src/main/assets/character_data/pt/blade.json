@@ -1,0 +1,2928 @@
+{
+ "spRequirement": 130,
+ "iconPath": "496415d55483445823d6d04ae6a15953a1a7253eff8cc81a78cf32a67a0edad9",
+ "bgPath": "e04b8ff6a7d4bdbe888953049305067df8d491e0dd4e60c92af83796bdd7254a",
+ "figPath": "d3689674e014898bf5ca671bbdde5c335644ef11b30edce2f86efa7e56b0afe2",
+ "fgPath": "c71a1b6eff720c7ae96ee6f7e054df95f476af2f589097c1ae44579f371e808c",
+ "splashIconPath": "7fffeaec1168919fc26b9b6d7e0e8899494aec38a5fd2e5ad2af3ad6f6f76349",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 1,
+  "iconPath": "618288e8d5b3090ac84a269acad5cb4e22ee3c8d9b8e96af17cd5f240e23e9f9",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "af49f8c10262045a4f9e4740703b52056b5f396b48b99c2d130c22f3dbfa99d9",
+   "name": "Crédito",
+   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
+   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
+   "purpose": "Moeda Comum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cálice (Grande Mina)",
+    "Recompensas de Missão",
+    "Recompensas de Atribuição",
+    "Troca de Brasas"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "b0f1cfc56ed708ca47e85bd5f199c02e9c2804f06ed290d904d0118b171f57e5",
+   "name": "Rastros de Destino",
+   "desc": "Material avançado para subir o nível de Rastros.",
+   "lore": "Sua vitória é garantida por inúmeras falhas, e os pequenos passos que você deu levaram a uma reviravolta do destino.",
+   "purpose": "Materiais de Rastro",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Recompensas de Pontuação do Universo Simulado",
+    "Honra dos Inominados",
+    "Troca de Brasas",
+    "Recompensas de Evento por Tempo Limitado"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "e23000552918166759cdcf3f7cef87ae31a78cb8ae8f5dcedc0c74a92b68f963",
+   "name": "Arrependimento do Ochema Infinito",
+   "desc": "Material avançado para subir o nível de Rastros.",
+   "lore": "Não importa quantos corpos sejam roubados, seus desejos se mantêm incompletos. Como aqueles que buscam os remédios da imortalidade, anseiam por um receptáculo imperecível, um que vai acabar com seu medo da destruição. E ainda assim, sabem que este é um sonho que nunca se realizará.<br /><br />\"Eu vi incontáveis mundos devorados pela conflagração da Mácula, e eu era uma de suas chamas. Eu dancei e rodopiei em seus dedos, perfeitamente ciente que, caso o combustível se esgotasse, este fogo também se extinguiria...\"",
+   "purpose": "Materiais de Rastro",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "Eco da Guerra: Desfiladeiro Escamado Aquático"
+   ]
+  },
+  "267806": {
+   "id": 267806,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "7742b55404dc7a9f0dd7bf8a952f5c3d1ff2a303cd246847c23450b7e10d53f5",
+   "name": "Detritos Ascendentes",
+   "desc": "Restos do Ascendido. Pode ser usado para Ascensão de personagens de Vento.",
+   "lore": "O Ascendido pretendia trazer ao mundo um legado de bondade, mas conforme o dom da Abundância se desvaneceu, a compreensão chegou com a libertação: ele nada mais era do que um mortal de carne e osso. Sua capacidade de atravessar os céus não passava de uma ilusão, e tudo o que restava de sua existência era poeira e sujeira.<br /><br />\"Eu te amaldiçoo, Flecha do Destino...\"",
+   "purpose": "Materiais de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/267806",
+   "comeFrom": [
+    "Sombra Estagnada (Comissão de Alquimia)",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ccf6a04abba3ee0c642f987df4acbfa23c97875710e72898f807325b14f938d0",
+   "name": "Guia do Viajante",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>20.000</nobr> de EXP de Personagem.",
+   "lore": "Leitura obrigatória para explorar o mundo. Pressione o botão \"Ler\" para reproduzir uma voz atraente num idioma que você entenda falando sobre os encontros lendários de aventureiros renomados em diferentes mundos, bem como a sabedoria e o conhecimento precioso que eles acumularam.<br /><br />\"A novíssima série do Guia do Viajante, 'Manual de Gastronomia Galáctica do Chefe', já está disponível para compra.\"<br />\"Para fazer pedidos, envie um sinal de sinestesia para ERD<nobr>-23</nobr>θ e entre em contato com um representante da Guilda de Intelectuais. Temos várias formas de pagamento.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Salão Esquecido"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "3be91e7b878ba619cd2887b80d45437c95ca08491547d49be65898de505d6a7a",
+   "name": "Registro de Aventura",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>5.000</nobr> de EXP de Personagem.",
+   "lore": "Coleção bem-organizada de notas de aventura educacional contendo incontáveis ilustrações e textos com histórias completas, bem como informações valiosas e técnicas de sobrevivência.<br /><br />\"Por que não digitalizamos isso e guardamos em um disco de fotolitografia? Seria muito mais prático.\"<br />\"Tecnologia avançada é muito mais frágil do que você imagina diante de tempestades estelares e erupções de fluxo de neurônios. Além disso, tenho certeza de que o autor deste livro gostaria que as pessoas o lessem da forma mais simples possível.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Treinamento Diário",
+    "Troca de Brasas"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "986cb8eacfc77a347d7be45f6ba74ecf909ec26ffffd577c9ff6129bdfa93544",
+   "name": "Encontros de Viagens",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>1.000</nobr> de EXP de Personagem.",
+   "lore": "Diário de viagem com assuntos aleatórios escritos numa letra feia. Não tem muita utilidade.<br /><br />\"Dan Heng, termine logo de ler isso para jogarmos fora.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "267ccbf86fcd7e6264e21ba9757d5aec8711d76e5479326c04b9874a8142cbc5",
+   "name": "Scionette Imortal",
+   "desc": "Novos e jovens botões brotando de uma construção divina antiga. Material bruto usado para aprimoramentos.",
+   "lore": "A fonte da \"Duração Infinita\" dos macróbios do Xianzhou, resquício da influência do Aeon da Abundância. Inúmeros anos atrás, a cobiça de um soberano pela imortalidade fez com que a frota do Xianzhou zarpasse para o mar do espaço sideral em busca de receitas divinas.<br /><br />\"Nós desejamos viver por eras sem fim e conservar o império por toda a eternidade. Infelizmente, a vida e a capacidade humanas têm limites. Por isso, enviamos nove Navium Astrigers para atravessar os céus em busca de receitas divinas para a imortalidade.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "Abominações da Abundância",
+    "Inimigos do Universo Simulado",
+    "Recompensas de Atribuição",
+    "Troca de Brasas",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "031003e14c276a2aba3c945ea8ca9e78edba44061b597959f42cc62c1e051542",
+   "name": "Floresciaéreo Imortal",
+   "desc": "Novas flores crescendo de dentro de uma construção divina antiga. Material normal usado para aprimoramentos.",
+   "lore": "A fonte da \"Duração Infinita\" dos macróbios do Xianzhou, resquício da influência do Aeon da Abundância. Depois de inúmeras provações, a frota que saiu em busca do remédio da imortalidade conseguiu avistar o semblante do ser celestial. A divindade ofereceu suas bênçãos em forma material, e assim nasceram folhas da Árvore Ambrosiana.<br /><br />\"Novos botões descem à lua, e flores divinas brotam nas nuvens. Breve como a vida de uma flor, a velha madeira volta a ser um pomar jovial.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "Abominações da Abundância no Nível de Equilíbrio 2 ou superior",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "635673": {
+   "id": 635673,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "cbbb29c7d304051e72058774233100493e76cbb799ddb1b4b45aff45241bd8c6",
+   "name": "Lâmina Despedaçada",
+   "desc": "Fragmentos de arma deixados por membros da Legião Antimatéria. Usados para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruição</span>.",
+   "lore": "Essa marca representa seu ranque e feitos em nome da Destruição.<br />O mestre desta arma cavalga em um cavalo escarlate para incendiar cidades, para tomar a paz da humanidade e para destruir nações semelhantes a formigueiros.<br /><br />\"O portador desta marca é incumbido de acabar com a paz das nações.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/635673",
+   "comeFrom": [
+    "Cálice (Zona de Armazenamento)",
+    "Troca de Brasas"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "49e8092b088316bbf8ba88b0eb49123c541b4853fc66d62b3c89d6b8303219a0",
+   "name": "Luminivinha Imortal",
+   "desc": "Vinhas decíduas de uma construção divina antiga. Material avançado usado para aprimoramentos.",
+   "lore": "A fonte da \"Duração Infinita\" dos macróbios do Xianzhou, resquício da influência do Aeon da Abundância. Após os Três Sofrimentos, Xianzhou encontrava-se devastada. O \"Homo Celestinae\" sucumbiu como demônios, e as catástrofes continuaram incessantemente.<br /><br />\"Segundo decreto da Comissão dos Dez Senhores, todos que estiverem próximos de se tornarem marafílicos serão apreendidos pelos juízes infernais e condenados à Prisão de Grilhões.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "Abominações da Abundância no Nível de Equilíbrio 4 ou superior",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "836259": {
+   "id": 836259,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "dd9049ebf26b7ffdf52e7edc6cddcc58aae6bf8e0b8d420bc33aade03b6b302f",
+   "name": "Lâmina Destruidora de Mundos",
+   "desc": "Arma quebrada deixada por membros da Legião Antimatéria. Usada para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruição</span>.",
+   "lore": "Esta arma representa o ranque e as conquistas de seu dono em nome da Destruição.<br />O dono desta arma é aquele que chega no fim da guerra para atiçar as brasas que consomem o mundo. Independentemente das glórias do passado ou das bênçãos de suas divindades, este planeta está destinado a voltar às cinzas de onde veio, e murchar nas profundezas do céu estrelado.<br /><br />\"O objetivo do usuário desta arma é purificar o mundo.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/836259",
+   "comeFrom": [
+    "Cálice (Zona de Armazenamento)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  },
+  "920200": {
+   "id": 920200,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "ad883da0dda0d6eebe6f4592fe6e5396962ec669012068894459c5af6e55f25f",
+   "name": "Lâmina Inerte",
+   "desc": "Resquícios de armas deixados por membros da Legião Antimatéria. Usados para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruição</span>.",
+   "lore": "Essa marca representa seu ranque e feitos em nome da Destruição.<br />O mestre desta arma carrega um forte ódio por todos os seres sencientes. Eles se deleitam no lamento de seres inteligentes como se fossem doces melodias, e derrubam civilizações com milênios de história em um piscar de olhos.<br /><br />\"O portador desta marca é incumbido de acabar com a respiração entre os vivos.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/920200",
+   "comeFrom": [
+    "Cálice (Zona de Armazenamento)",
+    "Sintetizador Omni — Síntese de Material",
+    "Troca de Brasas"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 73.92,
+   "attackAdd": 3.696,
+   "hpBase": 184.8,
+   "hpAdd": 9.24,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549504,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 103.488,
+   "attackAdd": 3.696,
+   "hpBase": 258.72,
+   "hpAdd": 9.24,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549504,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 133.056,
+   "attackAdd": 3.696,
+   "hpBase": 332.64,
+   "hpAdd": 9.24,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633445,
+     "count": 6
+    },
+    {
+     "id": 267806,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 162.624,
+   "attackAdd": 3.696,
+   "hpBase": 406.56,
+   "hpAdd": 9.24,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633445,
+     "count": 9
+    },
+    {
+     "id": 267806,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 192.192,
+   "attackAdd": 3.696,
+   "hpBase": 480.48,
+   "hpAdd": 9.24,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717386,
+     "count": 6
+    },
+    {
+     "id": 267806,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 221.76,
+   "attackAdd": 3.696,
+   "hpBase": 554.4,
+   "hpAdd": 9.24,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717386,
+     "count": 9
+    },
+    {
+     "id": 267806,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 251.328,
+   "attackAdd": 3.696,
+   "hpBase": 628.32,
+   "hpAdd": 9.24,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "3a3f585f89a8186f8a396ff72e6aee90e8bd87228523b6dc76e91bde5400e134",
+   "artPath": "2e84afbc002d3b53cbd1fb9b94e81ad435edc089bcf66ee553ba67f1e83fe7fb",
+   "name": "A Lâmina Corta Mais Fundo no Inferno",
+   "descHash": "A Perícia Suprema de Blade causa Dano aumentado adicional a um único alvo inimigo, com um aumento igual a <nobr>#1[i]%</nobr> dos PV totais que Blade perdeu na batalha atual. O total de PV que Blade perdeu na batalha atual tem um limite de <nobr>#2[i]%</nobr> de seus PV máximos. Este valor será redefinido e reacumulado após usar sua Perícia Suprema.",
+   "params": [
+    1.5,
+    0.9
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "3b9c1110d6bc9461f7d22dc1853aa982aafe35d891f880551378c4e696661f2f",
+   "artPath": "70fef19c060eac75cb425c997609ca6691712f0731a0095b3cbeffd335ae7ca0",
+   "name": "Dez Mil Mágoas de Um Sonho Destruído",
+   "descHash": "Quando Blade está no estado de Paisagem Infernal, sua Chance de CRIT aumenta em <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.15
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "9a81b9cde8125e41457787a8349ea9590cf63cd73edabbafdbe1d9a416916e71",
+   "artPath": "cf8bc2c29e3034ae762a8b96b448fcbb4a23d6372fc7eab4186bdeb782c5dd03",
+   "name": "A Lâmina Temperada Sangra da Tonalidade Mais Gelada",
+   "descHash": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "58496d479994614370b8374c8b5148f3feb7636c663d3b56d89a411d3af96ac7",
+   "artPath": "bd70e5c97cdcc663dd4cf6eade343e021b9b2c54aa9ab51d5431e77880a4cdf2",
+   "name": "Rejeitado pela Morte, Infectado com Vida",
+   "descHash": "Quando os PV atuais de Blade chegam a <nobr>50%</nobr> ou menos de seus PV máximos, aumenta os PV máximos dele em <nobr>#1[i]%</nobr>. Acumula até <nobr>#2[i]</nobr> vez(es).",
+   "params": [
+    0.2,
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "ed6ca3d29bcf5300fcfd8265c34f18a70e18783f8672dda87640ec55bc4c1d75",
+   "artPath": "b92e581bf02e462c9e17e72e60e76d36b06b6e30f38df2e1ac416b9ceefaeddf",
+   "name": "Morte Pelo Olhar dos Dez Senhores",
+   "descHash": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "5b200b7187bb566800f2b6510b4cd3e46863acc5d4b2c69fc7a61abf2068ac48",
+   "artPath": "4cbde0212579bf91ea08066bac5b3e2e06aecb8a63c0b26a66a2f1d589d289ec",
+   "name": "Renascido em uma Casca Vazia",
+   "descHash": "O número máximo de acúmulos de Carga é reduzido para 4. O Dano de um Ataque Extra acionado pelo Talento de Blade é aumentado adicionalmente em <nobr>#1[i]%</nobr> de seus PV máximos.",
+   "params": [
+    0.5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   581491,
+   234486
+  ],
+  [
+   296964
+  ],
+  [
+   380905
+  ],
+  [
+   866018
+  ],
+  [
+   782077
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Alvo Único",
+   "descHash": "Causa <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Blade como Dano de <span style=\"color:#00FF9C;\">Vento</span> a um inimigo-alvo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 581491,
+   "name": "Espada Fragmentada",
+   "iconPath": "6815fac4604272fab762faf7bf4dc9eaab9ef7cad28b6767e53fb141206ee81a",
+   "typeDescHash": "ATQ Básico",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Aprimoramento",
+   "descHash": "Consome PV igual a <nobr>#1[i]%</nobr> dos PV máximos de Blade para entrar no estado de Paisagem Infernal.<br />Enquanto a Paisagem Infernal estiver ativa, a Perícia dele não pode ser usada, seu Dano causado aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> e aprimora o seu ATQ Básico Espada Fragmentada para Floresta de Espadas por <nobr>#2[i]</nobr> rodada(s).<br />Se os PV atuais de Blade não forem suficientes, seus PV serão reduzidos para 1 quando usar esta Perícia.<br />Esta Perícia não regenera Energia. Usar esta Perícia não encerra a rodada atual.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 296964,
+   "name": "Paisagem Infernal",
+   "iconPath": "ed6ca3d29bcf5300fcfd8265c34f18a70e18783f8672dda87640ec55bc4c1d75",
+   "typeDescHash": "Perícia",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.12
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.148
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.176
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.204
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.232
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.26
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.295
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.33
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.365
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.4
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.428
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.456
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.484
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.512
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.54
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Explosão",
+   "descHash": "Define os PV atuais de Blade em <nobr>50%</nobr> de seus PV máximos e causa Dano de <span style=\"color:#00FF9C;\">Vento</span> a um único inimigo igual à somatória de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de seu ATQ, <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de seus PV máximos, e <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> do total de PV que ele perdeu na batalha atual. Ao mesmo tempo, causa Dano de <span style=\"color:#00FF9C;\">Vento</span> aos alvos adjacentes igual à somatória de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> de seu ATQ, <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> de seus PV máximos, e <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#6[i]%</nobr></span> do total de PV que ele perdeu na batalha atual.<br />O total de PV que Blade perdeu na batalha atual tem um limite de <nobr>#7[i]%</nobr> de seus PV máximos. Este valor será redefinido e reacumulado após usar sua Perícia Suprema.",
+   "ultimateCost": 130,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 380905,
+   "name": "Sentença de Morte",
+   "iconPath": "230c5e37060d10deb29204b871182542b4291d153af3e8f5348ddc59896016c4",
+   "typeDescHash": "Perícia Suprema",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.24,
+      0.6,
+      0.096,
+      0.24,
+      0.6,
+      0.24,
+      0.9
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.256,
+      0.64,
+      0.1024,
+      0.256,
+      0.64,
+      0.256,
+      0.9
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.272,
+      0.68,
+      0.1088,
+      0.272,
+      0.68,
+      0.272,
+      0.9
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.288,
+      0.72,
+      0.1152,
+      0.288,
+      0.72,
+      0.288,
+      0.9
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.304,
+      0.76,
+      0.1216,
+      0.304,
+      0.76,
+      0.304,
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.32,
+      0.8,
+      0.128,
+      0.32,
+      0.8,
+      0.32,
+      0.9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.34,
+      0.85,
+      0.13599999,
+      0.34,
+      0.85,
+      0.34,
+      0.9
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.36,
+      0.9,
+      0.144,
+      0.36,
+      0.9,
+      0.36,
+      0.9
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.38,
+      0.95,
+      0.152,
+      0.38,
+      0.95,
+      0.38,
+      0.9
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.4,
+      1,
+      0.16,
+      0.4,
+      1,
+      0.4,
+      0.9
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.416,
+      1.04,
+      0.1664,
+      0.416,
+      1.04,
+      0.416,
+      0.9
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.432,
+      1.08,
+      0.1728,
+      0.432,
+      1.08,
+      0.432,
+      0.9
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.448,
+      1.12,
+      0.1792,
+      0.448,
+      1.12,
+      0.448,
+      0.9
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.464,
+      1.16,
+      0.1856,
+      0.464,
+      1.16,
+      0.464,
+      0.9
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.48,
+      1.2,
+      0.192,
+      0.48,
+      1.2,
+      0.48,
+      0.9
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Área",
+   "descHash": "Quando Blade toma Dano ou consome seus próprios PV, ele ganha 1 acúmulo de Carga, acumulando até 5 vezes. Um máximo de 1 Carga pode ser ganho cada vez que ele for atacado.<br />Quando os acúmulos de Carga chegarem ao máximo, desfere imediatamente um <u>Ataque Extra</u> contra todos os inimigos, causando Dano de <span style=\"color:#00FF9C;\">Vento</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> do ATQ de Blade + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> dos seus PV máximos, enquanto também restaura os PV de Blade em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de seus PV máximos. Todas as Cargas são consumidas após realizar o Ataque Extra.",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "10",
+   "id": 866018,
+   "name": "Presente de Shuhu",
+   "iconPath": "d5ce368a1106becffd75c5d24b4fb8376735cbcf6ff2960fb9206e79e4b5a843",
+   "typeDescHash": "Talento",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      3,
+      0.22,
+      0.25,
+      0.55
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.242,
+      0.25,
+      0.605
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.264,
+      0.25,
+      0.66
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.286,
+      0.25,
+      0.715
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.308,
+      0.25,
+      0.77
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.33,
+      0.25,
+      0.825
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.3575,
+      0.25,
+      0.89375
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.385,
+      0.25,
+      0.9625
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.4125,
+      0.25,
+      1.03125
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.44,
+      0.25,
+      1.1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.462,
+      0.25,
+      1.155
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.484,
+      0.25,
+      1.21
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.506,
+      0.25,
+      1.265
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.528,
+      0.25,
+      1.32
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.55,
+      0.25,
+      1.375
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do alvo inimigo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 665432,
+   "name": "Ataque",
+   "iconPath": "6815fac4604272fab762faf7bf4dc9eaab9ef7cad28b6767e53fb141206ee81a",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Imediatamente ataca o inimigo. Após entrar em combate, consome <nobr>#2[i]%</nobr> dos PV máximos de Blade enquanto causa Dano de <span style=\"color:#00FF9C;\">Vento</span> igual a <nobr>#1[i]%</nobr> dos seus PV máximos a todos os inimigos.<br />Se os PV atuais de Blade forem insuficientes, seus PV serão reduzidos a 1 quando a Técnica é usada.",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "0",
+   "id": 782077,
+   "name": "Vento do Carma",
+   "iconPath": "7336d5763dfbcc470414d1179ac64cdd37ada793bee850ff12f24849bbd5187f",
+   "typeDescHash": "Técnica",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.4,
+      0.2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Explosão",
+   "descHash": "Consome PV igual a <nobr>#1[i]%</nobr> dos PV máximos de Blade e causa Dano de <span style=\"color:#00FF9C;\">Vento</span> igual a soma de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> do seu ATQ + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> dos seus PV máximos a um único inimigo. Além disso, causa Dano de <span style=\"color:#00FF9C;\">Vento</span> igual a soma de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> do ATQ de Blade + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> dos seus PV máximos a alvos adjacentes.<br />Se os PV atuais de Blade forem insuficientes, seus PV serão reduzidos a 1 ao usar Floresta de Espadas.<br />Floresta de Espadas não pode regenerar Pontos de Perícia.",
+   "ultimateCost": 0,
+   "break": "60 + 30/adjacent",
+   "energy": "30",
+   "id": 234486,
+   "name": "Floresta de Espadas",
+   "iconPath": "5c2b02f7fdaed4095ed4af8cebb0e5f06201ca638cbbd217ee8d1fc51de90cfc",
+   "typeDescHash": "ATQ Básico",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.1,
+      0.2,
+      0.08,
+      0.5,
+      0.2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.1,
+      0.24,
+      0.096,
+      0.6,
+      0.24
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.28,
+      0.112,
+      0.7,
+      0.28
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.32,
+      0.128,
+      0.8,
+      0.32
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.36,
+      0.144,
+      0.9,
+      0.36
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.4,
+      0.16,
+      1,
+      0.4
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.44,
+      0.176,
+      1.1,
+      0.44
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.1,
+      0.48,
+      0.192,
+      1.2,
+      0.48
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.1,
+      0.52,
+      0.208,
+      1.3,
+      0.52
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1205101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1205202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1205203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1205204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 18204,
+          "name": "Bônus de RES a Efeito",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+          "statusList": [
+           {
+            "key": "RES a Efeito",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920200,
+            "count": 3
+           },
+           {
+            "id": 633445,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 18207,
+        "name": "Bônus de PV",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "PV",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920200,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 18206,
+      "name": "Bônus de Chance de CRIT",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+      "statusList": [
+       {
+        "key": "Chance de CRIT",
+        "value": 0.026999999
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 549504,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Quando os PV atuais de Blade forem iguais ou inferiores a <nobr>50%</nobr> de seus PV máximos, a Cura Recebida aumenta em <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 18110,
+    "name": "Vita Infinita",
+    "iconPath": "ce2d60eb5c7ac1d54dc6902c7a4ceaf0ac184f6e172beec3b5cede070c25e6cb",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1205103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1205208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1205209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 18217,
+        "name": "Bônus de Chance de CRIT",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+        "statusList": [
+         {
+          "key": "Chance de CRIT",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717386,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1205210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 102149,
+        "name": "Bônus de PV",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "PV",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717386,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 18216,
+      "name": "Bônus de RES a Efeito",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+      "statusList": [
+       {
+        "key": "RES a Efeito",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "O Dano causado por Ataques Extras de Talento aumenta em <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 18112,
+    "name": "Ciclone de Destruição",
+    "iconPath": "4f3f86ebfb2c17f8c8faa1007312fda69735d49fa387d8e02015beead44d7316",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1205102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1205205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1205206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1205207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 18203,
+          "name": "Bônus de PV",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+          "statusList": [
+           {
+            "key": "PV",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836259,
+            "count": 3
+           },
+           {
+            "id": 717386,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 18202,
+        "name": "Bônus de Chance de CRIT",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+        "statusList": [
+         {
+          "key": "Chance de CRIT",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836259,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 18205,
+      "name": "Bônus de PV",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 633445,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Se Blade atingir um inimigo com Quebra de Fraqueza após usar \"Floresta de Espadas\", ele restaura PV igual a <nobr>#1[i]%</nobr> dos seus PV máximos + <nobr>#2[i]</nobr>.",
+    "ultimateCost": 0,
+    "id": 18113,
+    "name": "Mortes Sem Fim",
+    "iconPath": "a24872dda0042b487d4e17222acf83c35f7bd801387505c5dc717ad4facadef9",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.05,
+       100
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1205201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 18209,
+    "name": "Bônus de PV",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+    "statusList": [
+     {
+      "key": "PV",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corpo",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "Chance de CRIT",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "Pés",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "VEL",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+   },
+   {
+    "relicTypeHash": "Esfera Plana",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "Bônus de Dano de Vento",
+    "propertyIconPath": "fe44fb655f65017dcad0c260b4dcffe14de4b14816734239c2c60d4624cf8163"
+   },
+   {
+    "relicTypeHash": "Corda de Ligação",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "PV",
+    "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Primeiro Encontro",
+   "text": "Desbravador/Desbravadora... Eu não te conheço. Considere isso como um bom sinal.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 2,
+   "title": "Cumprimento",
+   "text": "De volta novamente? O destino daqueles que me recordo nunca é bom.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 3,
+   "title": "Despedida",
+   "text": "Vá. Quando a Mara atacar, você não vai querer estar ao meu lado.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 4,
+   "title": "Sobre si: Nome",
+   "text": "Reduzir alguém aos pedaços; rasgar seus inimigos. Esse é o poder de uma lâmina.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 5,
+   "title": "Sobre si: Marafílico",
+   "text": "Somos, de maneiras diferentes, todos marafílicos, mas a minha situação é incomum. Embora a Mara me persiga, tais memórias raramente surgem na minha mente, sejam elas de remorso, ódio, medo ou até de reflexões.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 6,
+   "title": "Sobre si: Demônios",
+   "text": "Quando a Mara ataca, eu me transformo em... algo a mais.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 7,
+   "title": "Conversa: Caçadores de Stellaron",
+   "text": "Quando nos unimos, alcançamos nossos objetivos.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 8,
+   "title": "Conversa: Imortalidade",
+   "text": "A esperança de que \"esta será a última vez\" sempre desaparece na amargura da cura da carne.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 9,
+   "title": "Conversa: Sacrifício",
+   "text": "De cinco pessoas, três devem pagar um preço... Estas palavras estão marcadas em cada uma das minhas feridas...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 10,
+   "title": "Passatempos do Blade",
+   "text": "Apenas nos breve momentos de sua empunhadura é que uma lâmina pode realmente desaparecer.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 11,
+   "title": "Aborrecimentos do Blade",
+   "text": "Quando a morte virá me buscar? Minha paciência está se esgotando.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 12,
+   "title": "Uma Curiosidade",
+   "text": "Existem inúmeras armas mais afiadas que a minha, mas, após milhares de combates, de que isso adianta?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 13,
+   "title": "Conhecimento",
+   "text": "Os mortos não conhecem o medo.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 14,
+   "title": "Sobre a Kafka",
+   "text": "A amarra de Mara está presa firmemente junto a ela. Ela não vai puxá-la antes do tempo determinado, mas também não irá soltá-la.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 16,
+   "title": "Sobre a Loba Prateada",
+   "text": "Dentro do mundo que chama de \"jogo\", ela jamais irá desistir ou se entregar para a morte.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 17,
+   "title": "Sobre o Jing Yuan",
+   "text": "Ele sempre... sempre entendeu o preço a se pagar melhor do que qualquer um de nós, apesar disso, ele nunca argumentou, nunca fez nada!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 18,
+   "title": "Sobre o Dan Heng",
+   "text": "Embebidor Lunae... Quando será a nossa vingança? Quando nosso débito poderá ser pago?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 19,
+   "title": "Sobre a Jingliu",
+   "text": "Enquanto ela brandia sua espada, eu sentia dores fantasmagóricas surgindo em todas as partes do meu corpo... tudo por causa dela!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 51,
+   "title": "Início da Batalha: Quebra de Fraqueza",
+   "text": "Você está me atrapalhando.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 52,
+   "title": "Início da Batalha: Alerta de Perigo",
+   "text": "Quais as surpresas que você traz?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 53,
+   "title": "Começa a Rodada 1",
+   "text": "Vou acabar com você através da minha espada.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 54,
+   "title": "Começa a Rodada 2",
+   "text": "O gume da lâmina não conhece a misericórdia.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 55,
+   "title": "Rodada Ociosa",
+   "text": "Aguardando a drenagem de vigor.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 56,
+   "title": "Aprimorar ATQ Básico",
+   "text": "Compense... a perda!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 57,
+   "title": "Perícia 1",
+   "text": "O combate... está decidido!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 58,
+   "title": "Perícia 2",
+   "text": "Seu fim... se aproxima!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 59,
+   "title": "Ao Receber um Ataque Leve",
+   "text": "Muito fraco...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 60,
+   "title": "Ao Receber um Ataque Pesado",
+   "text": "Muito bem.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 61,
+   "title": "Perícia Suprema: Ativar",
+   "text": "Aquele paraíso pode ser inalcançável para mim...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 62,
+   "title": "Perícia Suprema: Liberar",
+   "text": "Aproveite por mim... Hunf!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 63,
+   "title": "Talento",
+   "text": "Um vale... só para você!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 64,
+   "title": "Ao Ficar Fora de Combate",
+   "text": "Há uma chance...?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 65,
+   "title": "Ao Voltar à Batalha",
+   "text": "Eu estou vivo? *suspiro*",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 66,
+   "title": "Recuperação de Energia",
+   "text": "Desnecessário.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 67,
+   "title": "Ao Vencer uma Batalha",
+   "text": "Esta espada precisa ser afiada.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 68,
+   "title": "Abrindo Tesouro",
+   "text": "Isso é tudo.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 69,
+   "title": "Enigma Solucionado",
+   "text": "Pronto.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 70,
+   "title": "Alvo Inimigo Encontrado",
+   "text": "Podemos nos aproximar.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 71,
+   "title": "Voltando à Cidade",
+   "text": "Há outros problemas?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Detalhes de Personagem",
+   "text": "Um espadachim que abandonou seu corpo para se tornar a própria lâmina. Nome de batismo desconhecido.<br />Jura lealdade aos \"Servos do Destino\" e possui uma aterrorizante habilidade de cura.<br />Blade empunha uma espada antiga repleta de rachaduras, igual ao seu corpo e sua mente.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "História de Personagem: Parte I",
+   "text": "Tudo o que ele conseguia ver eram manchas carmesim. Tudo o que ele conseguia sentir era o gosto de ferro em sua boca. Seus membros não respondiam.<br />— provavelmente, ele estava morto.<br /><br />\"Você se lembra?\"<br />Ele moveu os lábios, perdido, sua voz tão áspera quanto o grunhido de uma besta.<br />O som vindo de sua garganta foi interrompido quando um objeto frio e firme atravessou seu peito.<br />De novo e de novo, isso se repetiu milhares de vezes.<br /><br />Era maravilhoso. Quando as fibras musculares se abriram, ele conseguia ouvir o som sutil dos tendões se reconectando.<br />Uma maravilha! O monstro em seu corpo se alimentava, mas ele faria-o crescer até se tornar uma fera gigantesca.<br />Maravilhoso... Ele não desejava mais viver, mas seu corpo se regenerava sem qualquer consideração pelas suas vontades.<br />Simplesmente... maravilhoso.<br /><br />Antes que a espada perfurasse seu corpo mais uma vez, ele a segurou com as próprias mãos e lentamente se pôs de pé.<br />\"E agora, você se lembra?\"<br />Seus olhos encontraram os olhos vermelhos da mulher, sua mente ainda vazia.<br />A lâmina o atravessou mais uma vez.<br />\"Lembre-se da sensação da morte, e leve-a até eles.\"<br /><br />As manchas vermelhas retornaram à sua visão. Ele encarou a espada que tirava sua vida. A lâmina partida em duas estava no chão.<br />\"Levante-se, e permita-me matá-lo mais uma vez.\"",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>20</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte II",
+   "text": "Tudo o que ele conseguia ver eram manchas carmesim. Tudo o que ele conseguia sentir era o gosto de ferro em sua boca. Seus membros não respondiam.<br />— provavelmente, ele estava morto.<br /><br />O jovem rapaz de cabelos escuros tremia violentamente, mas a lança ainda seguia firme em suas mãos.<br />Ele não tinha nenhum chifre de dragão, e sua reação era um pouco menos madura do que ele lembrava...<br />Mas ele nunca esqueceria esta lança e estes olhos repletos de crueldade, explodindo por debaixo daquele espelho de calmaria esmeralda.<br />Suas feridas estavam se curando, e seu olhar trêmulo voltou a focar no garoto.<br />Sem hesitar, o jovem brandiu sua lança novamente...<br /><br />\"É isto.\"<br />Aquele que não tem misericórdia de seus inimigos - é você.<br />Aquele que enterrou seu amor sozinho - é você.<br />E também, aquele que destruiu o mundo de onde veio - é você.<br /><br />Ele caiu novamente.<br />O adolescente pressionou as palmas contra as feridas dele e recuou, até que não estivesse mais no campo de visão do homem.<br />\"Antes que eu possa presenciar a sua morte, nos encontraremos de novo, ███.\"",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>40</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte III",
+   "text": "Tudo o que ele conseguia ver eram manchas carmesim. Tudo o que ele conseguia sentir era o gosto de ferro em sua boca. Seus membros não respondiam.<br />— provavelmente, ele estava morto.<br /><br />O monstro o engoliu novamente, mas desta vez, seu inimigo não era outra pessoa.<br />A imponente armadura não se moveu. Ele estava preso no firme enlace daquele par de braços. Quem falava era uma mulher usando óculos de sol.<br /><br />\"<u>Escute</u>, eu sempre posso te matar de novo, caso contrário não consigo trazê-lo de volta.\"<br />A voz dela era muito gentil, e até mesmo o monstro dentro dele parou para escutá-la.<br />\"Mas eu não quero.\"<br />A mulher se debruçou e sussurrou algo em seu ouvido. Era uma ótima oferta, uma que ele não poderia recusar.<br />\"O que você quer?\"<br />\"Existe algo mais satisfatório do que ver algo imortal finalmente morrer? É isso que \"ele\" disse\".<br /><br />A armadura gigante afrouxou seus braços. O \"Destino\" estava logo adiante, e ele partiria com os outros.<br />\"<u>Escute</u>, Bladezinho.\"<br />\"<u>Relaxe</u>, não pense em nada.\" Ele balançou a cabeça em um sinal afirmativo. A mulher caminhou até o seu lado, sorridente. Porém, ele achou que o sorriso dela era bastante triste.<br />\"Talvez ela tenha sido abandonada antes que pudessem ouvir ela até o fim,\" ele pensou.",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>60</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte IV",
+   "text": "Ele já não conseguia enxergar nada.<br /><br />Ele lembrou que há muitas décadas visitou o Xianzhou em uma nave comercial e ficou impressionado com o local.<br />A obsessão era tanta ao ponto de ele se esquecer de comer ou beber. Ele usou sua inspiração como se não houvesse tempo suficiente no mundo e forjou centenas de maravilhas, quatro entre elas eram as mais famosas.<br /><br />A espada que levava o nome de Espada Fragmentada era perfeita, seu corpo escuro exibia um brilho sangrento. Apenas o melhor espadachim do Xianzhou conseguia demonstrar o verdadeiro significado desta lâmina.<br />A garota Vulpe já disparou três flechas de uma vez com seu arco recurvado em uma situação desafiadora, enquanto continuava a navegar o esquife estelar e rir com os outros.<br />O homem de cabelos pretos e chifres de dragão usava suas habilidades de manipulação de água para curar seus aliados e vincular o elemento em sua lança para destruir os inimigos.<br />Tinha também o garoto que vivia implicando com ele. Porém, no momento em que viu a Alabarda Devastadora, o garoto tomou posse da arma, jurando nunca mais se separar dela.<br /><br />Agora, ██ havia morrido. Sua primeira, e única, morte.<br />No entanto, ele ainda estava aqui, sua mente trabalhando e pensando, para todo o sempre.<br />Ele pensou em suas mãos, que já não eram mais habilidosas. Mãos que jamais forjariam outra arma.<br />Mas nada daquilo importava para ele.<br />Desse momento em diante, aquele corpo seria a única Lâmina que ele precisaria.",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>80</nobr> de Personagem"
+  }
+ ],
+ "archive": {
+  "cvCn": "刘以嘉",
+  "cvJp": "三木眞一郎",
+  "cvKr": "곽윤상",
+  "cvEn": "Daman Mills",
+  "camp": "Caçadores de Stellaron"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Blade",
+ "rarity": 5,
+ "descHash": "Membro dos Caçadores de Stellaron e espadachim que abandonou sua lâmina. Jura lealdade ao \"Servo do Destino\" e possui uma habilidade de autocura aterrorizante.",
+ "artPath": "08bcfc539e148c57b990427b530fd88545572ba361aa886940cc6b1bca181d4c",
+ "miniIconPath": "8d3a2149c30a2d8cf7ce5fe04eb60112109b795a1f3c3ab9b00686cc2a068e3b",
+ "damageType": {
+  "id": 16,
+  "iconPath": "a77d91df3b1045f9fa66ce1300c4d921c0f89e51135df8208904334e8a0f0b80",
+  "color": "#00FF9C",
+  "name": "Vento",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "350c43e263450cb79bfb44c59122dd3e2b2e6a80aa3310f4f69c91d7011f6105",
+  "altIconPath": "20478bd2d976a94efdfdc05a59342dc854f07c2ab6e1ef57c098224877a855ce",
+  "color": "#FFFFFF",
+  "name": "A Destruição",
+  "rarity": 0
+ },
+ "pageId": "blade"
+}

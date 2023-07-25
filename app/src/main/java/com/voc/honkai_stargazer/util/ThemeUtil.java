@@ -63,7 +63,7 @@ public class ThemeUtil {
     private Activity activity;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
-    int themedColor = Color.parseColor("#009688");
+    int themedColor = Color.parseColor(COLOR_2);
     public ThemeUtil(Context context, Activity activity){
         this.context = context;
         this.activity = activity;
@@ -72,7 +72,7 @@ public class ThemeUtil {
     }
 
     public void navigationSetup(Window window){
-        themedColor = Color.parseColor(sharedPreferences.getString("themedColor","#6750A4"));
+        themedColor = Color.parseColor(sharedPreferences.getString("themedColor",COLOR_2));
         window.setNavigationBarColor(colorMultiply(themedColor,context.getColor(R.color.nav_bar_tint),TINT_COMMON,true));
     }
 

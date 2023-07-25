@@ -1,10 +1,10 @@
 {
  "spRequirement": 140,
- "iconPath": "56e2db241bd71da55d90de713fd332572a4215c32f50aadde43072436a890a32",
+ "iconPath": "9760b3d8dc2f3ccb3e40e7d828c829c53b229c69811f23bbe56736ebdac7200d",
  "bgPath": "1ad2155f6d696b85d83c65b403a7bbe5774d4c76562164e9af5dad6471a7c976",
- "figPath": "008833eb9b2916ba2c4e9c03fe5dc853887e23e26fa6195ab1e48c691fc460aa",
+ "figPath": "e22d500ff48be42e47f647d8094915b68a2394bec253392c91a5e4264519d3c6",
  "fgPath": "1fd33e126c8d2051b947cf0c7e33ffd6b5a9a365f1ab4b34b22f247ab4c0206b",
- "splashIconPath": "1225c60547f6a6064b72314c5d99ff4e54795beee2fbec04c47fca70f65e0eb3",
+ "splashIconPath": "30eaff12c3ae1b8f5b469fe989853664864d91eb5ede7e22937f858059d10a67",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Большая шахта: Чашелист",
     "Награды миссий",
-    "Награды за поручения"
+    "Награды за поручения",
+    "Неугасаемый пепел"
    ]
   },
   "67220": {
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Пригородные снежные поля: Чашелист",
-    "Ежедневная тренировка"
+    "Ежедневная тренировка",
+    "Неугасаемый пепел"
    ]
   },
   "409962": {
@@ -154,7 +156,7 @@
    "iconPath": "a37da05958d9ef643e353e23b21bf7c7fd29f11504f3d16bb382ec0ecf6b2241",
    "name": "Искажённые амбиции",
    "desc": "Умеренное количество антиматерии. Обычный материал для усиления.",
-   "lore": "Умеренное количество антиматерии, плавающее вокруг Рейнджеров пустоты: Исказителей, она сохраняет хрупкий баланс между частицами и античастицами.<br /><br />«Они хотят увидеть, как горит мир, чтобы слиться с ним в пламени».",
+   "lore": "Некоторое количество антиматерии, плавающее вокруг Рейнджеров пустоты: Исказителей. Так сохраняется хрупкий баланс между частицами и античастицами.<br /><br />«Они хотят увидеть, как горит мир, чтобы слиться с ним в пламени».",
    "purpose": "Материал Следов<br />Материал возвышения персонажа",
    "rarity": 3,
    "rewardPath": "/material/633378",
@@ -177,7 +179,8 @@
    "rarity": 2,
    "rewardPath": "/material/635674",
    "comeFrom": [
-    "Пригородные снежные поля: Чашелист"
+    "Пригородные снежные поля: Чашелист",
+    "Неугасаемый пепел"
    ]
   },
   "717319": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920201",
    "comeFrom": [
     "Пригородные снежные поля: Чашелист",
-    "Универсальная машина для синтеза: Синтез материалов"
+    "Универсальная машина для синтеза: Синтез материалов",
+    "Неугасаемый пепел"
    ]
   }
  },
@@ -438,7 +442,7 @@
   },
   {
    "id": 3,
-   "iconPath": "16fdca2019309d1d7fb961726bd0181efc12b47243846fb1961598cca82e08cb",
+   "iconPath": "3aa9c022e24a6a7b5b188589f8e02fd86f005bea963c26fcb9e42e8e7f1027a5",
    "artPath": "046d4d065c3f196bb4836d053784e98e3b5b3215e7d7ba06b110d8640eeb1f4f",
    "name": "Одарённый мечник",
    "descHash": "Уровень навыка повышается на 2, максимальный уровень - <nobr>15</nobr>. Уровень базовой атаки повышается на 1, максимальный уровень - <nobr>10</nobr>.",
@@ -457,7 +461,7 @@
   },
   {
    "id": 5,
-   "iconPath": "d015b5925332dd37dc90faaf38ab2ac9326d4f9bb26bf946ffd085f0de4715d3",
+   "iconPath": "faf406dce51ed76956c89bc7361edbc336731d6723f6cf88239716ad87a577c7",
    "artPath": "2f321eb6e01bfff4e9c776e2f1e1be0fd3dd76c97d735af829a23b3daf4f6ada",
    "name": "Военное призвание",
    "descHash": "Уровень сверхспособности повышается на 2, максимальный уровень - <nobr>15</nobr>. Уровень таланта повышается на 2, максимальный уровень - <nobr>15</nobr>.",
@@ -494,11 +498,11 @@
    "tagHash": "Одиночная атака",
    "descHash": "Наносит выбранному противнику ледяной урон, равный <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> от силы атаки Яньцина.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 531503,
    "name": "Леденящий блеск холодного лезвия",
-   "iconPath": "78c41e808b0a2d01f85b55d2598185f529a8106c3ba58b7c8a15f1454fa3d2be",
+   "iconPath": "eda23bd03b5c4ba5e822df28e2a026899c4e8266db5b03a001273af8738bf92c",
    "typeDescHash": "Базовая атака",
    "levelReq": 0,
    "promotionReq": 0,
@@ -655,11 +659,11 @@
    "tagHash": "Одиночная атака",
    "descHash": "Наносит выбранному противнику ледяной урон, равный <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> от силы атаки Яньцина, и активирует Эмпатическую связь на 1 ход.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 30,
+   "break": "60",
+   "energy": "30",
    "id": 246976,
    "name": "Прицельное метание меча",
-   "iconPath": "16fdca2019309d1d7fb961726bd0181efc12b47243846fb1961598cca82e08cb",
+   "iconPath": "3aa9c022e24a6a7b5b188589f8e02fd86f005bea963c26fcb9e42e8e7f1027a5",
    "typeDescHash": "Навык",
    "levelReq": 0,
    "promotionReq": 0,
@@ -930,11 +934,11 @@
    "tagHash": "Одиночная атака",
    "descHash": "Повышает крит. шанс Яньцина на <nobr>#1[i]%</nobr>. Когда активна Эмпатическая связь, крит. урон Яньцина повышается на доп. <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Эти <u>усиления</u> длятся 1 ход, после чего Яньцин наносит выбранному противнику ледяной урон, равный <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> от своей силы атаки.",
    "ultimateCost": 140,
-   "break": 90,
-   "energy": 5,
+   "break": "90",
+   "energy": "5",
    "id": 363621,
    "name": "Погоня за ласточкой дождя",
-   "iconPath": "4bf96bc426831906e3228d598d2efffb03b21d7e9c2f1b8f6f939dca0dc8343a",
+   "iconPath": "65bca3c3e825d6d874e9de471d62a550e55b7a0e75f9b356fcedd3e4e891bfab",
    "typeDescHash": "Сверхспособность",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1235,11 +1239,11 @@
    "tagHash": "Одиночная атака",
    "descHash": "Когда активна Эмпатическая связь, Яньцин с меньшей вероятностью будет атакован противником. Крит. шанс Яньцина повышается на <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>, а его крит. урон повышается на <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. После того, как Яньцин атакует противника, он имеет <u>фиксированный шанс</u> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> выполнить <u>бонус-атаку</u>, которая наносит цели ледяной урон, равный <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> от силы атаки Яньцина, и имеет <u>базовый шанс</u> <nobr>#6[i]%</nobr> наложить на цель статус Заморозка на 1 ход.<br />Противник со статусом Заморозка не может совершать действий и будет получать <u>дополнительный ледяной урон</u>, равный <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> от силы атаки Яньцина, в начале каждого хода.<br />Когда Яньцин получает урон, эффект Эмпатической связи исчезает.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 10,
+   "break": "30",
+   "energy": "10",
    "id": 46390,
    "name": "Заточенный компаньон",
-   "iconPath": "faf9bdd5b8e346bc02d4ed9592de49f72d13a29ee5359b002d87f8151bbc49f3",
+   "iconPath": "2ccb1e7567b55ae40f936604526e47d134bff166c2df9bf47c1264439f1cd96b",
    "typeDescHash": "Талант",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1585,11 +1589,11 @@
    "tagHash": "",
    "descHash": "Атакует противника и после начала боя истощает стойкость соответствующего типа уязвимости противника.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 878508,
    "name": "Атака",
-   "iconPath": "78c41e808b0a2d01f85b55d2598185f529a8106c3ba58b7c8a15f1454fa3d2be",
+   "iconPath": "eda23bd03b5c4ba5e822df28e2a026899c4e8266db5b03a001273af8738bf92c",
    "typeDescHash": "",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1607,8 +1611,8 @@
    "tagHash": "Усиление",
    "descHash": "Использование техники повышает урон Яньцина в следующем бою, наносимый целям, HP которых выше или равно <nobr>#1[i]%</nobr>, на <nobr>#2[i]%</nobr> на <nobr>#3[i]</nobr> хода.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 962449,
    "name": "Искусный фехтовальщик",
    "iconPath": "fcd2be4b2aa59e63cf6695bdb806aff85ac5cd4a174a334d9534d9e850d94930",
@@ -1704,11 +1708,9 @@
    "embedBonusSkill": {
     "descHash": "Атака наносит противникам с ледяной уязвимостью дополнительный ледяной урон, равный <nobr>#1[i]%</nobr> от силы атаки Яньцина.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 968122,
     "name": "Ледяная благодать",
-    "iconPath": "22cf179a530b447e29f8ef9c3865188acd775ac4ce59a15d65d1faaf363abaa6",
+    "iconPath": "2bfd7990fadbe67d030d93a428e9e585bac1500b72354c40b193dff2123c3dfd",
     "levelReq": 0,
     "promotionReq": 2,
     "levelData": [
@@ -1810,11 +1812,9 @@
    "embedBonusSkill": {
     "descHash": "Когда активна Эмпатическая связь, сопротивление эффектам повышается на <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 968125,
     "name": "Превозмогая морозы",
-    "iconPath": "343d2fdf031738a3a442a85c0ee1caa26b741e4af2218862b1a7c4b5d63b1230",
+    "iconPath": "4b0c59cf22bb2143b78364ad60a697c213bb6611f02666ec656c83c41b9d8a2d",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
@@ -1952,11 +1952,9 @@
    "embedBonusSkill": {
     "descHash": "Крит. попадание повышает скорость на <nobr>#1[i]%</nobr> на <nobr>#2[i]</nobr> хода.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 968124,
     "name": "Степная сталь",
-    "iconPath": "3c4b5e5795583a6b281d3e54e125e6f795227f24b9725d410ccafe39e758f687",
+    "iconPath": "159df9196d258d347c97cc76288a5f332a5bc3a2b1639d8a53b3c15c4dd351da",
     "levelReq": 0,
     "promotionReq": 6,
     "levelData": [
@@ -2106,7 +2104,7 @@
     "propertyIconPath": "61fabc866a9c5c20a0ae994d2d92a286ce89872e01eb8e1a772e28eaa9260177"
    },
    {
-    "relicTypeHash": "Соединительная верёвка",
+    "relicTypeHash": "Соединительная вязь",
     "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
     "propertyName": "Скорость восстановления энергии",
     "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
@@ -2316,7 +2314,7 @@
   },
   {
    "id": 55,
-   "title": "Пропуск хода",
+   "title": "Ожидание хода",
    "text": "Меч словно вода - не может оставаться неподвижным.",
    "unlockRequirement": "",
    "cnUrl": "30da97ca887a36174bcdaee12fcda38c81a4c2f4f22b804d6049b76de3f7baf1",

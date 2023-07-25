@@ -1,15 +1,15 @@
 {
- "name": "Somos Fogo Vivo",
+ "name": "我ら地炎",
  "rarity": 4,
- "descHash": "Ela está acostumada com as pessoas perdendo seus lares.<br />E ela se acostumou com as pessoas perdendo suas vidas.<br />Mas chorar sozinha era inútil.<br /><br />\"Vista este lenço vermelho, e então compartilharemos a dor um do outro.\"<br />\"Nós somos família. Nós somos a Fogo Vivo.\"<br /><br />No momento em que aquele par de mãos grandes tocou a sua cabeça, ela não conseguiu mais conter suas lágrimas.",
+ "descHash": "彼女は慣れた、人々が故郷を失うのを、<br />人々が命を失うのを、<br />でも一人の時は、泣いても無駄。<br /><br />「この赤いスカーフを着けて、互いの痛みを分かち合おう」<br />「俺たちは家族…俺たちは、地炎だ」<br /><br />大きな掌が彼女の頭をなでる、彼女はようやく、我慢できずに涙をこぼした。",
  "iconPath": "5c7b142d48ab8e98c11a86c460aca68536ebe4fafeb2e97060f726fb260cf90f",
  "artPath": "83903d047a4a0607d5ec417c94b31c608f58b8df575400063667cbd83cf04d5e",
- "mediumIconPath": "51430a9a47245bd74fd8991c6c32701fef9d7b79def19d71d442e1047e862735",
+ "mediumIconPath": "8f86c2ba23d907c9cd6a18c0495653f54abdf85f53d42eb1cbfb6c41a610fe95",
  "baseType": {
   "id": 0,
   "iconPath": "e7d44128c2422e3516f8412ee75974d59c27762adbbddeb5ac0663a951db99b1",
   "color": "#FFFFFF",
-  "name": "A Preservação",
+  "name": "存護",
   "rarity": 0
  },
  "baseTypeId": 0,
@@ -19,16 +19,17 @@
    "type": 101,
    "purposeId": 11,
    "iconPath": "af49f8c10262045a4f9e4740703b52056b5f396b48b99c2d130c22f3dbfa99d9",
-   "name": "Crédito",
-   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
-   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
-   "purpose": "Moeda Comum",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
    "rarity": 3,
    "rewardPath": "/material/29328",
    "comeFrom": [
-    "Cálice (Grande Mina)",
-    "Recompensas de Missão",
-    "Recompensas de Atribuição"
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬",
+    "エンバー交換"
    ]
   },
   "549408": {
@@ -36,18 +37,18 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "7611366f7b3e71bd4b1eddf74cd0589941afe12e4af50e46e2c5faa4290e189e",
-   "name": "Peça Antiga",
-   "desc": "Peças mecânicas do Velho Mundo deixadas para trás. Material bruto usado para aprimoramentos.",
-   "lore": "Apesar de seu tamanho, foi moldada e polida de um jeito que, hoje, as pessoas teriam dificuldade de replicar.<br /><br />\"Um parafuso do Velho Mundo é mais forte que uma armadura da atualidade.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "古代パーツ",
+   "desc": "旧世界時代の残留機械のパーツ。強化に必要な簡易素材。",
+   "lore": "いくら小さくとも、現在では再現が困難な技術で鋳造、研磨されている。<br /><br />「旧世界の小さなネジが、我らの鎧よりも頑丈だとは」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 2,
    "rewardPath": "/material/549408",
    "comeFrom": [
-    "Autômatos",
-    "Inimigos do Universo Simulado",
-    "Recompensas de Atribuição",
-    "Troca de Brasas",
-    "Sintetizador Omni — Troca de Material"
+    "自動機兵からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "633349": {
@@ -55,17 +56,17 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "3066320d078375498b310e64107e444343b667691e130afcbe189ba2af568fe5",
-   "name": "Eixo Antigo",
-   "desc": "Eixo mecânico do Velho Mundo deixado para trás. Material normal usado para aprimoramentos.",
-   "lore": "Uma vez desmontado, seus componentes de precisão jamais podem ser montados novamente. Até mesmo os experientes em consertos da Divisão Tecnológica de Belobog pensariam duas vezes antes de tocar nisso.<br /><br />\"Seu imbecil, os Casacos Azuis vão trocar isso apenas por uns enlatados. Leve ao Chefe Svarog e você não vai precisar de comida nem de roupa por um bom tempo.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "古代シャフト",
+   "desc": "旧世界時代の残留機械のシャフト。強化に必要な普通素材。",
+   "lore": "精密に組み立てられた部品。一度分解すると復元することはできない。ベロブルグ技術部の熟練の整備員でも、簡単に手出しはできない。<br /><br />「バカ、これを青鎧に渡したって缶詰何個分だろ？スヴァローグに渡せば、もう衣住食には困らないぜ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 3,
    "rewardPath": "/material/633349",
    "comeFrom": [
-    "Autômatos no Nível de Equilíbrio 2 ou superior",
-    "Sintetizador Omni — Síntese de Material",
-    "Inimigos do Universo Simulado",
-    "Sintetizador Omni — Troca de Material"
+    "均衡Lv.2に達した後、自動機兵からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "635668": {
@@ -73,14 +74,15 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "d161ce50276f00b09b8356dd3c086660d530bcda89b9441b33c13e2501772674",
-   "name": "Resistência de Bronze",
-   "desc": "Um antigo escudo de bronze grosseiro, mas durável. Usado para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Preservação</span>.",
-   "lore": "Lendas antigas contam a história de uma guerra onde humanos esgotaram todos os recursos primitivos, seguindo seus deuses na batalha contra bestas extremamente poderosas.<br />Este escudo é testemunha dessa guerra.<br /><br />\"Não há escolha a não ser pará-los, mesmo que os esforços sejam inúteis.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "青銅の執着",
+   "desc": "青銅で造られた古い手盾。作りは粗いが実用性が高い。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">存護</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "言い伝えによれば、太古に戦乱あり。人々はあらゆる原始的な手段を尽くし、神の下で無敵の獣に立ち向かったという。<br />この盾が、その戦いの見証者。<br /><br />「抵抗に意味はなくても、抵抗を諦めることはない」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 2,
    "rewardPath": "/material/635668",
    "comeFrom": [
-    "Cálice (Zona de Abastecimento)"
+    "疑似花萼「サポート部分」",
+    "エンバー交換"
    ]
   },
   "694487": {
@@ -88,15 +90,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "56ab8085d932c0a9521f684246a42bd320b199c3c1a6f3bd54b869c5f294fec9",
-   "name": "Éter Refinado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>6000</nobr> de EXP de Cone de Luz.",
-   "lore": "Uma lata de éter que foi extraída e destilada usando procedimentos especiais.<br /><br />\"O Jardim espera poder recriar uma glória do passado, mas é uma 'glória do passado' selecionada por eles. Você entende?\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "精製エーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>6000</nobr>獲得できる。",
+   "lore": "特殊な技術で精錬されたエーテル。<br /><br />「ガーデンは昔の輝かしい時代を取り戻そうとしている、だがそれは彼らが選択する『往日の輝き』だ、この意味がわかるか？」",
+   "purpose": "光円錐経験値素材",
    "rarity": 4,
    "rewardPath": "/material/694487",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)",
-    "Salão Esquecido"
+    "疑似花萼「外縁通路」",
+    "「忘却の庭」"
    ]
   },
   "694488": {
@@ -104,14 +106,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "1911d7bb4aad22029e82a9b17a0005674864038b6b61e86976ace8277267d9f6",
-   "name": "Éter Condensado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>2.000</nobr> de EXP de Cone de Luz.",
-   "lore": "Lata de éter refinado com técnicas especiais.<br /><br />\"Manuseie com cuidado, não deixe cair nem faça pressão sobre ela. Caso ocorra algum vazamento, consulte o capítulo II do \"Manual de Respostas a Desastres de Vazamentos\" para respostas de emergência.\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "濃縮エーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>2000</nobr>獲得できる。",
+   "lore": "特殊な技術で精錬されたエーテル。<br /><br />「気を付けて取り扱ってね。潰したり、落としたりしちゃダメよ。万が一、破損して中身が漏れた時は、『流溢災難対応手引き』の第二章に従って処理しなさい」",
+   "purpose": "光円錐経験値素材",
    "rarity": 3,
    "rewardPath": "/material/694488",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)"
+    "疑似花萼「外縁通路」",
+    "エンバー交換"
    ]
   },
   "694489": {
@@ -119,15 +122,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "03fc3a9bafdf0f18b1e49a885353ed442420842a2cc373428b242b213d2728fc",
-   "name": "Éter Espalhado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>500</nobr> de EXP de Cone de Luz.",
-   "lore": "Substância imaginária que não deveria existir. O material básico usado para criar Cones de Luz.<br />As imagens dos Cones de Luz se tornam ainda mais claras quando imbuídas dessa substância.<br /><br />\"Entendi, então esse é o suposto \"Sentimento\" do Jardim da Recordação. É por isso que os Memoriadores conseguem fazer viagens galácticas com lembranças.\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "希薄なエーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>500</nobr>獲得できる。",
+   "lore": "本来、現実には存在しない仮想媒質で、光円錐の基本原料。<br />光円錐に注入することで、中に封じられているイメージがより鮮明になる。<br /><br />「なるほどね～これがガーデン オブ リコレクションの『意質』ってやつ？だからメモキーパーは、記憶を携帯して星間旅行ができるんだね」",
+   "purpose": "光円錐経験値素材",
    "rarity": 2,
    "rewardPath": "/material/694489",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)",
-    "Recompensas de Atribuição"
+    "疑似花萼「外縁通路」",
+    "依頼報酬"
    ]
   },
   "717290": {
@@ -135,17 +138,17 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "f330a9b613a9d07e17442c544c8c44d1cde51e9707b5c49069e8269a991085e1",
-   "name": "Motor Antigo",
-   "desc": "Motor mecânico do Velho Mundo deixado para trás. Material avançado usado para aprimoramentos.",
-   "lore": "Usa Geoessência como a fonte de energia. Quando alimentado, descarrega auroras errantes, em vez de faíscas.<br /><br />\"Somente a Divisão Tecnológica sob comando direto da Guardiã Suprema tem acesso a informações sobre o Velho Mundo. Eu perdi meus privilégios depois que me demitiram.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "古代エンジン",
+   "desc": "旧世界時代の残留機械のエンジン。強化に必要な高級素材。",
+   "lore": "地髄を原動力としている。回転時に火花が散るのではなく、オーロラがゆらゆらと広がる。<br /><br />「大守護者直属の技術部だけに、旧世界の資料を閲覧する権限が与えられてるの。私はね、クビにされたからもう入れないよ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 4,
    "rewardPath": "/material/717290",
    "comeFrom": [
-    "Autômatos no Nível de Equilíbrio 4 ou superior",
-    "Sintetizador Omni — Síntese de Material",
-    "Inimigos do Universo Simulado",
-    "Sintetizador Omni — Troca de Material"
+    "均衡Lv.4に達した後、自動機兵からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "836254": {
@@ -153,15 +156,15 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "7c4ec20ee723c7c2fe02642896f12a600834043762aa65d1e552b3d5a909f017",
-   "name": "Proteção de Âmbar",
-   "desc": "Um escudo incomum imbuído com âmbares extraídos de locais que vão além dos céus. Usado para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Preservação</span>.",
-   "lore": "O portador deste escudo aparentemente é protegido por uma parede invisível, imune a flechas de fogo ou garras robustas.<br />Lendas antigas contam a história de uma guerra onde um herói tribal portando um escudo de bronze lutou contra um Leviatã, junto com guerreiros armados com lanças ardentes.<br />Este escudo é testemunha dessa guerra.<br /><br />\"Não cruze a linha.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "琥珀の堅守",
+   "desc": "奇異な大盾。天空の遥か彼方で採掘した琥珀が散りばめられいる。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">存護</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "この盾を持っている者は、まるで見えない壁に守られているようである。たとえ火の矢であろうと、山の如き巨大な爪であろうと、その持ち主を傷付けられない。<br />言い伝えによれば、太古に戦乱あり。青銅の盾を携えた集落の英雄と、灼熱の槍を握りしめた戦士が肩を並べ、古獣に向かって決死の突撃を行った。<br />この盾が、その戦いの見証者。<br /><br />「限界を超えるな」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 4,
    "rewardPath": "/material/836254",
    "comeFrom": [
-    "Cálice (Zona de Abastecimento)",
-    "Sintetizador Omni — Síntese de Material"
+    "疑似花萼「サポート部分」",
+    "「万能合成マシン」- 素材合成"
    ]
   },
   "920195": {
@@ -169,15 +172,16 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "16d6522d0f5a5796029f90a0fa91e226ff41c581d49d0f35d06f81f8397769ac",
-   "name": "Juramento de Aço",
-   "desc": "Um escudo forjado com a perícia insubstituível de uma liga desconhecida. Usado para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Preservação</span>.",
-   "lore": "Pode até ser um escudo grande, mas é leve como uma pena. Mesmo que receba um ataque poderoso, nenhuma marca é vista na face do escudo.<br />Lendas antigas contam a história de uma guerra onde guerreiros de espíritos elevados empunhavam lanças e escudos radiantes forjados de Aço Congelado para defender uma nação destinada a cair diante da guerra.<br />Este escudo é testemunha dessa guerra.<br /><br />\"Vozes poderosas ecoam: Os inimigos estão diante de nós!\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "寒鉄の誓い",
+   "desc": "未知の合金で造られた盾。その複雑な作りは、再現が困難である。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">存護</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "決して小さくはないのに、軽々と振り回すことができ、攻撃を受けても表面には傷一つ残らない。<br />言い伝えによれば、太古に戦乱あり。戦士たちは灼熱の光線を放つ槍と、寒鉄で造られた盾を手に持ち、陥落する運命にある国を守った。<br />この盾が、その戦いの見証者。<br /><br />「『城下に敵兵来たり！城下に敵兵来たり！』、戦士たちの勇ましい声が聞こえる」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 3,
    "rewardPath": "/material/920195",
    "comeFrom": [
-    "Cálice (Zona de Abastecimento)",
-    "Sintetizador Omni — Síntese de Material"
+    "疑似花萼「サポート部分」",
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換"
    ]
   }
  },
@@ -336,8 +340,8 @@
  ],
  "skill": {
   "id": 21023,
-  "name": "Olhos Lacrimejantes",
-  "descHash": "No início da batalha, diminui o Dano causado a todos os aliados em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> por <nobr>#3[i]</nobr> rodada(s). Ao mesmo tempo, restaura imediatamente os PV de todos os aliados igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> das respectivas diferenças entre os PV máximos de cada personagem e os seus PV atuais.",
+  "name": "袖時雨",
+  "descHash": "戦闘開始時、味方全体の被ダメージ-<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>、<nobr>#3[i]</nobr>ターン継続。味方全体のHPを、それぞれが失ったHP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分回復する。",
   "levelData": [
    {
     "params": [

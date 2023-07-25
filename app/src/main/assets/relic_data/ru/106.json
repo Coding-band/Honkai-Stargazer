@@ -1,12 +1,13 @@
 {
  "name": "Страж снежной метели",
- "iconPath": "5387b9eece909d074da7ce98479d53c957c019f5653ab5cd62071026d78f9440",
- "artPath": "c179bbcf1eb3817291c450556d043c9317394cd90f7fb5bf621c5f0c0161a931",
+ "iconPath": "958e6807fb140ba1f453f39926b0d58891da8168d4621c668c4dd110adf3ad8a",
+ "artPath": "16b495bc954bc29f95e67abc7602a81d016dbf56cae7e846efbc72a6603c1428",
  "rarity": 5,
+ "relicType": 0,
  "embeddedBaseTypes": {
   "0": {
    "id": 0,
-   "iconPath": "0c88f2c3d931255f78ee56e3d6a83a2ba0c277c6344e39b711e2ade65ed05b90",
+   "iconPath": "542d7c0042405517d98d1406e2f794a94c43368ff7e2fe21609a596df47e790c",
    "color": "#FFFFFF",
    "name": "",
    "rarity": 0
@@ -50,21 +51,21 @@
    "id": 6,
    "iconPath": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
    "color": "#FFFFFF",
-   "name": "Соединительная верёвка",
+   "name": "Соединительная вязь",
    "rarity": 0
   }
  },
  "skills": [
   {
    "useNum": 2,
-   "desc": "Снижает получаемый урон на <nobr>#1[i]%</nobr>.",
+   "desc": "Понижает получаемый урон на <nobr>#1[i]%</nobr>.",
    "params": [
     0.08
    ]
   },
   {
    "useNum": 4,
-   "desc": "В начале хода, если значение HP владельца ниже или равно <nobr>#1[i]%</nobr>, немедленно восстанавливает <nobr>#2[i]%</nobr> HP и <nobr>#3[i]</nobr> ед. энергии.",
+   "desc": "В начале хода, если текущее HP владельца ниже или равно <nobr>#1[i]%</nobr>, восстанавливает <nobr>#2[i]%</nobr> HP и <nobr>#3[i]</nobr> ед. энергии владельца.",
    "params": [
     0.5,
     0.08,

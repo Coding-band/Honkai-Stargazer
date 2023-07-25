@@ -11,15 +11,14 @@ import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
 import static com.voc.honkai_stargazer.util.ItemRSS.LoadExtendData;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -30,13 +29,14 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.animation.DecelerateInterpolator;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -58,7 +58,6 @@ import com.voc.honkai_stargazer.R;
 import com.voc.honkai_stargazer.data.FilterPreference;
 import com.voc.honkai_stargazer.data.HSRItem;
 import com.voc.honkai_stargazer.data.HSRItemAdapter;
-import com.voc.honkai_stargazer.data.HomeAdapter;
 import com.voc.honkai_stargazer.util.BillingHelper;
 import com.voc.honkai_stargazer.util.CustomViewPager;
 import com.voc.honkai_stargazer.util.CustomViewPagerAdapter;
@@ -67,6 +66,7 @@ import com.voc.honkai_stargazer.util.LangUtil;
 import com.voc.honkai_stargazer.util.LogExport;
 import com.voc.honkai_stargazer.util.MyItemAnimator;
 import com.voc.honkai_stargazer.util.ThemeUtil;
+import com.voc.honkai_stargazer.util.UpdateUtil;
 import com.voc.honkai_stargazer.util.VibrateUtil;
 
 import org.json.JSONArray;
@@ -77,7 +77,6 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class RootPage extends AppCompatActivity {
 
@@ -107,7 +106,8 @@ public class RootPage extends AppCompatActivity {
     //Character, Lightcone, Relic
     FilterPreference[] filterPreferences = new FilterPreference[]{new FilterPreference(),new FilterPreference(),new FilterPreference()};
 
-    BillingHelper billingHelper;
+    BillingHelper billingHelper = null;
+    UpdateUtil updateUtil = null;
     int trig_time = 0;
     int vibration_lvl = 0;
 
@@ -123,6 +123,7 @@ public class RootPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         context = this;
         activity = this;
+
         sharedPreferences = context.getSharedPreferences("user_info",MODE_PRIVATE);
         editor = sharedPreferences.edit();
         if (sharedPreferences.getString("dayNight",ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM).equals(ThemeUtil.DAYNIGHT_FOLLOW_SYSTEM)) {
@@ -137,6 +138,8 @@ public class RootPage extends AppCompatActivity {
         ItemRSS.initLang(context);
         LogExport.init(context);
         themeUtil = new ThemeUtil(context,activity);
+        updateUtil = new UpdateUtil();
+        updateUtil.init(context,activity);
 
         if (!sharedPreferences.getString("last_bug_report","NONE").equals("NONE")){
             String reportName = sharedPreferences.getString("last_bug_report","NONE");
@@ -153,9 +156,11 @@ public class RootPage extends AppCompatActivity {
             dialogWindow.setAttributes(lp);
 
             String bugReport = LoadExtendData(context, "honkai_stargazer/bugLog/" + reportName);
+            String bugReportKey = sharedPreferences.getString("last_bug_report_error_key","NONE");
             TextView bug_log = view.findViewById(R.id.bug_log);
             bug_log.setText((bugReport.equals("") ? "Empty" : bugReport));
             editor.putString("last_bug_report","NONE").apply();
+            editor.putString("last_bug_report_error_key","NONE").apply();
 
             Button cancel = view.findViewById(R.id.bug_cancel);
             cancel.setOnClickListener(new View.OnClickListener() {
@@ -174,6 +179,7 @@ public class RootPage extends AppCompatActivity {
                     if (dialog.isShowing() && dialog != null){
                         dialog.dismiss();
                     }
+                    //EMAIL
                     Uri path = FileProvider.getUriForFile(activity, ItemRSS.APPLICATION_ID_PROVIDER,new File(context.getExternalMediaDirs()[0]+"/"+"honkai_stargazer/bugLog/" +reportName));
                     Intent i = new Intent(Intent.ACTION_SEND);
                     i.setType("message/rfc822");
@@ -184,6 +190,14 @@ public class RootPage extends AppCompatActivity {
                     if (i.resolveActivity(activity.getPackageManager()) != null) {
                         activity.startActivity(i);
                     }
+
+                    /*
+                    //PHP+PYTHON+SQL
+                    WebView bug_webview = view.findViewById(R.id.bug_webview);
+                    bug_webview.loadUrl(ItemRSS.SERVER_DAILYMEMO_URL+"bugReportPort.php?"+"error_key=\""+bugReportKey+"\"&"+"data=\""+bugReport+"\"");
+                    System.out.println(ItemRSS.SERVER_DAILYMEMO_URL+"bugReportPort.php?"+"error_key=\""+bugReportKey+"\"&"+"data=\""+bugReport+"\"");
+
+                     */
                 }
             });
 
@@ -200,6 +214,25 @@ public class RootPage extends AppCompatActivity {
         relic_init();
         setting_init();
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == UpdateUtil.REQUEST_CODE_UPDATE) {
+            if (resultCode != RESULT_OK) {
+                Log.e(TAG, "onActivityResult: app download failed");
+            }
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (updateUtil != null){
+            updateUtil.unregister();
+        }
     }
 
     private void home_init() {
@@ -636,7 +669,7 @@ public class RootPage extends AppCompatActivity {
                 ImageView color_radio_7 = view.findViewById(R.id.color_radio_7);
                 ImageView color_radio_8 = view.findViewById(R.id.color_radio_8);
 
-                tmpColor = sharedPreferences.getString("themedColor",ThemeUtil.COLOR_1);
+                tmpColor = sharedPreferences.getString("themedColor",ThemeUtil.COLOR_2);
 
                 switch (tmpColor){
                     case ThemeUtil.COLOR_1: color_radio_1.setImageResource(R.drawable.ic_radio_checked);tmpColor = ThemeUtil.COLOR_1;break;
@@ -690,7 +723,7 @@ public class RootPage extends AppCompatActivity {
         });
 
         //Shadow
-        setting_shadow_list_item.setChecked(sharedPreferences.getBoolean("isShadowInListItem", false));
+        setting_shadow_list_item.setChecked(sharedPreferences.getBoolean("isShadowInListItem", true));
         setting_shadow_list_item.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -841,6 +874,7 @@ public class RootPage extends AppCompatActivity {
                 hsrItem.setName(name);
                 hsrItem.setRare(rare);
                 hsrItem.setStatus(status);
+                hsrItem.setSex(sex);
                 hsrItem.setFileName(fileName);
 
                 charactersList.add(hsrItem);
@@ -850,7 +884,7 @@ public class RootPage extends AppCompatActivity {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "char_list_reload", sw.toString(), context);
+            LogExport.bugLog(TAG, "char_list_reload", sw.toString(), e.getMessage(), context);
         }
     }
     private void lightcone_list_reload() {
@@ -885,7 +919,7 @@ public class RootPage extends AppCompatActivity {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "lightcone_list_reload", sw.toString(), context);
+            LogExport.bugLog(TAG, "lightcone_list_reload", sw.toString(), e.getMessage(), context);
         }
     }
     private void relic_list_reload() {
@@ -918,7 +952,7 @@ public class RootPage extends AppCompatActivity {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "relic_list_reload", sw.toString(), context);
+            LogExport.bugLog(TAG, "relic_list_reload", sw.toString(), e.getMessage(), context);
         }
     }
 

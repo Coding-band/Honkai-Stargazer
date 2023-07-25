@@ -1,15 +1,15 @@
 {
- "name": "Au! Hora de Passear!",
+ "name": "ワン！散歩の時間！",
  "rarity": 4,
- "descHash": "Pena que ninguém o viu...<br />Usando o focinho para farejar tudo que é canto e mergulhando num caminho vazio.<br /><br />Pena que ninguém o viu...<br />Retraindo suas garras para colocar a senha e saltar nos braços da liberdade.<br /><br />É sério que ninguém o viu...?<br />Um cão crescido agora consegue passear sozinho pelo espaço!",
+ "descHash": "残念ながら、まだ誰も気づいていない…<br />彼が鼻を鳴らしながらあちこちを嗅ぎまわり、人のいない路地に入り込んでいったのを。<br /><br />残念ながら、まだ誰も気づいていない…<br />彼が爪を収めパスワードを入力し、自由を抱くところを。<br /><br />まだ誰も気づいていないのだろうか…<br />成長した子犬は宇宙を散歩できるのだ！",
  "iconPath": "d26155f4edfc26116014098c4d3abf9995ac3fd780fab752ba43cb03d6774187",
  "artPath": "9a5c027e1f15f31cf1835f9c5914ee2f965feaee6d077b6603946edf14000e08",
- "mediumIconPath": "022329a45a2a9cec5652c24738fafea6f9a6b923af16c874b6bd02579fd6392d",
+ "mediumIconPath": "58120e063ad33a193eb542eed4bd2bef32623f7d6a90bfa315213343d4fa106c",
  "baseType": {
   "id": 0,
   "iconPath": "350c43e263450cb79bfb44c59122dd3e2b2e6a80aa3310f4f69c91d7011f6105",
   "color": "#FFFFFF",
-  "name": "A Destruição",
+  "name": "壊滅",
   "rarity": 0
  },
  "baseTypeId": 0,
@@ -19,16 +19,17 @@
    "type": 101,
    "purposeId": 11,
    "iconPath": "af49f8c10262045a4f9e4740703b52056b5f396b48b99c2d130c22f3dbfa99d9",
-   "name": "Crédito",
-   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
-   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
-   "purpose": "Moeda Comum",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
    "rarity": 3,
    "rewardPath": "/material/29328",
    "comeFrom": [
-    "Cálice (Grande Mina)",
-    "Recompensas de Missão",
-    "Recompensas de Atribuição"
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬",
+    "エンバー交換"
    ]
   },
   "549438": {
@@ -36,18 +37,18 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "db4b4a010830837b4466b526518a25718806ba7c6d91aeead370bb51ac774109",
-   "name": "Núcleo Apagado",
-   "desc": "O coração de um monstro que vaga pelo Fragmentum. Material bruto usado para aprimoramentos.",
-   "lore": "É uma lesão que dá vida ao mal, o impulso para o pecado. É a fonte da distorção do Fragmentum.<br />Um golpe forte fez com que o coração parasse de bater e perdesse o seu brilho.<br /><br />\"Testes preliminares indicam sua hibridez: metade primordial e metade similar a Stellarons.\" — Departamento de Biologia, Sarah Castro.",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "消滅した原核",
+   "desc": "裂界を徘徊するモンスターの心臓。強化に必要な簡易素材。",
+   "lore": "悪性腫瘍の病巣のように、罪を犯す衝動を育てる。これが裂界の歪みの根源である。<br />重い衝撃により、この心臓は鼓動をやめ、輝きを失った。<br /><br />「これは交雑の産物だと初歩的に判断できる。半分が原体、もう半分のデータは星核と酷似している——生物科、サラ・カストラ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 2,
    "rewardPath": "/material/549438",
    "comeFrom": [
-    "Certos Monstros do Fragmentum",
-    "Inimigos do Universo Simulado",
-    "Recompensas de Atribuição",
-    "Troca de Brasas",
-    "Sintetizador Omni — Troca de Material"
+    "一部の裂界造物からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "633379": {
@@ -55,17 +56,17 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "b2e2e1f644af07632c29e36a478b53e1c5109c28609acec12e88364084b2860e",
-   "name": "Núcleo Cintilante",
-   "desc": "O coração de um monstro que vaga pelo Fragmentum. Material normal usado para aprimoramentos.",
-   "lore": "É uma lesão que dá vida ao mal, o impulso para o pecado. É a fonte de distorção do Fragmentum.<br />O coração é cintilante e as veias indicam que ele ainda está batendo.<br /><br />\"Que tipo de monstro é esse? Você percebeu...? É verdade! É o rosto do nosso antigo líder!\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "微かに光る原核",
+   "desc": "裂界を徘徊するモンスターの心臓。強化に必要な普通素材。",
+   "lore": "悪性腫瘍の病巣のように、罪を犯す衝動を育てる。これが裂界の歪みの根源である。<br />この心臓はまだわずかな光を放ち、その筋には未だ生命力が宿っている。<br /><br />「あれは一体どんなモンスターなんだ？お前はあれの顔を見たか——あれは前任の隊長の顔だった、彼の顔だったんだ！」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 3,
    "rewardPath": "/material/633379",
    "comeFrom": [
-    "Certos Monstros do Fragmentum no Nível de Equilíbrio 2 ou superior",
-    "Sintetizador Omni — Síntese de Material",
-    "Inimigos do Universo Simulado",
-    "Sintetizador Omni — Troca de Material"
+    "均衡Lv.2に達した後、一部の裂界造物からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "635673": {
@@ -73,14 +74,15 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "cbbb29c7d304051e72058774233100493e76cbb799ddb1b4b45aff45241bd8c6",
-   "name": "Lâmina Despedaçada",
-   "desc": "Fragmentos de arma deixados por membros da Legião Antimatéria. Usados para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruição</span>.",
-   "lore": "Essa marca representa seu ranque e feitos em nome da Destruição.<br />O mestre desta arma cavalga em um cavalo escarlate para incendiar cidades, para tomar a paz da humanidade e para destruir nações semelhantes a formigueiros.<br /><br />\"O portador desta marca é incumbido de acabar com a paz das nações.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "破砕の刃切",
+   "desc": "反物質レギオンのメンバーが落とした武器の破片。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "この焼印は階級と「壊滅」の功績を示す。<br />この武器の主は紅の馬にまたがり、都市を燃やし、人々を仲たがいし、国を蟻の巣のように潰した。<br /><br />「この印を持つ者、平和を国々から放逐せよ」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 2,
    "rewardPath": "/material/635673",
    "comeFrom": [
-    "Cálice (Zona de Armazenamento)"
+    "疑似花萼「収容部分」",
+    "エンバー交換"
    ]
   },
   "694487": {
@@ -88,15 +90,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "56ab8085d932c0a9521f684246a42bd320b199c3c1a6f3bd54b869c5f294fec9",
-   "name": "Éter Refinado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>6000</nobr> de EXP de Cone de Luz.",
-   "lore": "Uma lata de éter que foi extraída e destilada usando procedimentos especiais.<br /><br />\"O Jardim espera poder recriar uma glória do passado, mas é uma 'glória do passado' selecionada por eles. Você entende?\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "精製エーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>6000</nobr>獲得できる。",
+   "lore": "特殊な技術で精錬されたエーテル。<br /><br />「ガーデンは昔の輝かしい時代を取り戻そうとしている、だがそれは彼らが選択する『往日の輝き』だ、この意味がわかるか？」",
+   "purpose": "光円錐経験値素材",
    "rarity": 4,
    "rewardPath": "/material/694487",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)",
-    "Salão Esquecido"
+    "疑似花萼「外縁通路」",
+    "「忘却の庭」"
    ]
   },
   "694488": {
@@ -104,14 +106,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "1911d7bb4aad22029e82a9b17a0005674864038b6b61e86976ace8277267d9f6",
-   "name": "Éter Condensado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>2.000</nobr> de EXP de Cone de Luz.",
-   "lore": "Lata de éter refinado com técnicas especiais.<br /><br />\"Manuseie com cuidado, não deixe cair nem faça pressão sobre ela. Caso ocorra algum vazamento, consulte o capítulo II do \"Manual de Respostas a Desastres de Vazamentos\" para respostas de emergência.\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "濃縮エーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>2000</nobr>獲得できる。",
+   "lore": "特殊な技術で精錬されたエーテル。<br /><br />「気を付けて取り扱ってね。潰したり、落としたりしちゃダメよ。万が一、破損して中身が漏れた時は、『流溢災難対応手引き』の第二章に従って処理しなさい」",
+   "purpose": "光円錐経験値素材",
    "rarity": 3,
    "rewardPath": "/material/694488",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)"
+    "疑似花萼「外縁通路」",
+    "エンバー交換"
    ]
   },
   "694489": {
@@ -119,15 +122,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "03fc3a9bafdf0f18b1e49a885353ed442420842a2cc373428b242b213d2728fc",
-   "name": "Éter Espalhado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>500</nobr> de EXP de Cone de Luz.",
-   "lore": "Substância imaginária que não deveria existir. O material básico usado para criar Cones de Luz.<br />As imagens dos Cones de Luz se tornam ainda mais claras quando imbuídas dessa substância.<br /><br />\"Entendi, então esse é o suposto \"Sentimento\" do Jardim da Recordação. É por isso que os Memoriadores conseguem fazer viagens galácticas com lembranças.\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "希薄なエーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>500</nobr>獲得できる。",
+   "lore": "本来、現実には存在しない仮想媒質で、光円錐の基本原料。<br />光円錐に注入することで、中に封じられているイメージがより鮮明になる。<br /><br />「なるほどね～これがガーデン オブ リコレクションの『意質』ってやつ？だからメモキーパーは、記憶を携帯して星間旅行ができるんだね」",
+   "purpose": "光円錐経験値素材",
    "rarity": 2,
    "rewardPath": "/material/694489",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)",
-    "Recompensas de Atribuição"
+    "疑似花萼「外縁通路」",
+    "依頼報酬"
    ]
   },
   "717320": {
@@ -135,17 +138,17 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "66be483b1cffc88e1b0732cea73a9937a54f183fd4d56bda080f20556ce37492",
-   "name": "Núcleo Contorcido",
-   "desc": "O coração de um monstro que vaga pelo Fragmentum. Material avançado usado para aprimoramentos.",
-   "lore": "É uma lesão que dá vida ao mal, o impulso para o pecado. É a fonte de distorção do Fragmentum.<br />O coração pulsa de forma lenta, com uma força residual suficiente para causar uma nova calamidade. É melhor destruí-lo para evitar problemas futuros.<br /><br />\"É como um câncer...\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "脈動する原核",
+   "desc": "裂界を徘徊するモンスターの心臓。強化に必要な高級素材。",
+   "lore": "悪性腫瘍の病巣のように、罪を犯す衝動を育てる。これが裂界の歪みの根源である。<br />この心臓はまだ緩やかに鼓動している。これに残る力は、いずれ新たな災いを引き起こすだろう。恐怖が再び訪れる前に、不活化処理した方がいい。<br /><br />「まるで癌のようだ……」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 4,
    "rewardPath": "/material/717320",
    "comeFrom": [
-    "Certos Monstros do Fragmentum no Nível de Equilíbrio 4 ou superior",
-    "Sintetizador Omni — Síntese de Material",
-    "Inimigos do Universo Simulado",
-    "Sintetizador Omni — Troca de Material"
+    "均衡Lv.4に達した後、一部の裂界造物からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "836259": {
@@ -153,15 +156,15 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "dd9049ebf26b7ffdf52e7edc6cddcc58aae6bf8e0b8d420bc33aade03b6b302f",
-   "name": "Lâmina Destruidora de Mundos",
-   "desc": "Arma quebrada deixada por membros da Legião Antimatéria. Usada para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruição</span>.",
-   "lore": "Esta arma representa o ranque e as conquistas de seu dono em nome da Destruição.<br />O dono desta arma é aquele que chega no fim da guerra para atiçar as brasas que consomem o mundo. Independentemente das glórias do passado ou das bênçãos de suas divindades, este planeta está destinado a voltar às cinzas de onde veio, e murchar nas profundezas do céu estrelado.<br /><br />\"O objetivo do usuário desta arma é purificar o mundo.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "浄世の刃切",
+   "desc": "反物質レギオンのメンバーが落とした破れた武器。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "この武器は、持ち主のレギオンでの階級と「壊滅」の功績を示す。<br />この武器の主は戦争の終わり際に登場し、劫火で世界を焼き尽くした。どれだけ神に祝福されていようと、どれだけ輝かしい功績があろうと、その星は燃え尽きた炭のように、星空の暗闇の中、死んでいくだろう。<br /><br />「この印を持つ者、世界を滅掃せよ」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 4,
    "rewardPath": "/material/836259",
    "comeFrom": [
-    "Cálice (Zona de Armazenamento)",
-    "Sintetizador Omni — Síntese de Material"
+    "疑似花萼「収容部分」",
+    "「万能合成マシン」- 素材合成"
    ]
   },
   "920200": {
@@ -169,15 +172,16 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "ad883da0dda0d6eebe6f4592fe6e5396962ec669012068894459c5af6e55f25f",
-   "name": "Lâmina Inerte",
-   "desc": "Resquícios de armas deixados por membros da Legião Antimatéria. Usados para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruição</span>.",
-   "lore": "Essa marca representa seu ranque e feitos em nome da Destruição.<br />O mestre desta arma carrega um forte ódio por todos os seres sencientes. Eles se deleitam no lamento de seres inteligentes como se fossem doces melodias, e derrubam civilizações com milênios de história em um piscar de olhos.<br /><br />\"O portador desta marca é incumbido de acabar com a respiração entre os vivos.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "無生の刃切",
+   "desc": "反物質レギオンのメンバーが落とした破れた鍔。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "この焼印は階級と「壊滅」の功績を示す。<br />この武器の主はすべての思考する生物を恨んでいた。彼らは知性ある生物の悲鳴を心地良い楽曲のように堪能し、数千年かけて築いた文明を一晩で滅ぼした。<br /><br />「この印を持つ者、呼吸を衆生から奪い給え」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 3,
    "rewardPath": "/material/920200",
    "comeFrom": [
-    "Cálice (Zona de Armazenamento)",
-    "Sintetizador Omni — Síntese de Material"
+    "疑似花萼「収容部分」",
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換"
    ]
   }
  },
@@ -336,8 +340,8 @@
  ],
  "skill": {
   "id": 21026,
-  "name": "Corra!",
-  "descHash": "Aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> o ATQ do usuário e aumenta o Dano que ele causa a inimigos sob o status de Queimadura ou Sangramento em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Também se aplica a Dano Contínuo.",
+  "name": "さっさと逃げる",
+  "descHash": "装備キャラの攻撃力+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>、燃焼状態または裂創状態の敵に対する与ダメージ+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>、この効果は持続ダメージにも有効。",
   "levelData": [
    {
     "params": [

@@ -1,10 +1,10 @@
 {
  "spRequirement": 100,
- "iconPath": "90ed6e711c8f28e3ccb490875b7d2443828d24a5dfdcb7ab66d65e6f9cceea45",
+ "iconPath": "684daf4ea4d50237434957743cf6b300245f40da92fa6b92dc2798adf5b17ba9",
  "bgPath": "6ec58e7f30b9e475bc7e2a9fead2c58015b9d8dafebcfeb0d4f040faa19b1947",
- "figPath": "e1621b800d1d24167145dbd903cf2a06a6738e176945dedd106bf30ff302a8f8",
+ "figPath": "c2a98ff53a2555617971d5713be53b8af3091e25c38912e53b977995d2d1624b",
  "fgPath": "1464dae688514fe03e95d00d78e1c84d311419065d665253fc19861fd012af05",
- "splashIconPath": "e07822c72adcb2a0a71907bbfe48f7da04a9e34eda152ecbf8ce6d8ec64e313f",
+ "splashIconPath": "b369d9e9c04a77271a8a6be2bd79fdc591c00c57fde465509a1fe728a2b2f39c",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Calyx (Great Mine)",
     "Mission rewards",
-    "Assignment rewards"
+    "Assignment rewards",
+    "Embers Exchange"
    ]
   },
   "67219": {
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Calyx (Outlying Snow Plains)",
-    "Daily Training"
+    "Daily Training",
+    "Embers Exchange"
    ]
   },
   "409962": {
@@ -179,7 +181,8 @@
    "rarity": 2,
    "rewardPath": "/material/635668",
    "comeFrom": [
-    "Calyx (Supply Zone)"
+    "Calyx (Supply Zone)",
+    "Embers Exchange"
    ]
   },
   "717289": {
@@ -230,7 +233,8 @@
    "rewardPath": "/material/920195",
    "comeFrom": [
     "Calyx (Supply Zone)",
-    "Omni-Synthesizer — Material Synthesis"
+    "Omni-Synthesizer — Material Synthesis",
+    "Embers Exchange"
    ]
   }
  },
@@ -421,7 +425,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "51b85a0aec773d50ead6f69f0b6e956d70083981a2fac6227af72e6909ddb677",
    "artPath": "40ea7e986a0ba510073b959d4bffb40d9e888d3bce8018f15e35ce8c6c194c30",
    "name": "Due Diligence",
    "descHash": "When using Skill, increases the base chance to Freeze target enemy by <nobr>#1[i]%</nobr>.",
@@ -431,7 +435,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "59a624b89ef43cb86d5c384d5fee62495ce2d380c8a0b87c5d8a26539a1a6d6a",
    "artPath": "56b9b0d55a492e92c8e7869e8c87bfda002669772b49f11dbe69f3b41f34da18",
    "name": "Lingering Cold",
    "descHash": "After an enemy Frozen by Skill is unfrozen, their SPD is reduced by <nobr>#1[i]%</nobr> for <nobr>#2[i]</nobr> turn(s).",
@@ -442,7 +446,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "a25da5529562fc96c431f5c40949c94795354461bc6f9bec0f60133d8d1a3b37",
    "artPath": "1b61fa938f72eac53422f79f17b50342e9e8c732e79b23af0027f7b0aacdc7ce",
    "name": "Never Surrender",
    "descHash": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Talent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
@@ -450,7 +454,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "6b565f135c7c8119bb7276250180034301cefa80f5d93534539ed2c6949ef766",
    "artPath": "2ac465e7f349b630aa2b0f442a0ab0e037ad2fbd51b519c65d83f278a8187c39",
    "name": "Faith Moves Mountains",
    "descHash": "When Gepard is in battle, all allies' Effect RES increases by <nobr>#1[i]%</nobr>.",
@@ -460,7 +464,7 @@
   },
   {
    "id": 5,
-   "iconPath": "",
+   "iconPath": "b019a13d800df94a29d24ea36e0e9ef56fa814ef42a45f2e5dd3b89dd4361797",
    "artPath": "ddb303335c81a925f1215123b30ef6a25bb787db4d88b7c90adcc3cad3bb9e61",
    "name": "Cold Iron Fist",
    "descHash": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Basic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
@@ -468,7 +472,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "f5a097459ae851df0294d9157e816755f67997ad4e22a0103eba1552cf2dd01d",
    "artPath": "a6deb836531fc2a96fd05a74cece35d2c4399a497f4a5a71dc41172e36b41821",
    "name": "Unyielding Resolve",
    "descHash": "When his Talent is triggered, Gepard immediately takes action again and restores extra HP equal to <nobr>#1[i]%</nobr> of his Max HP.",
@@ -499,8 +503,8 @@
    "tagHash": "Single Target",
    "descHash": "Deals <span style=\"color:#47C7FD;\">Ice</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Gepard's ATK to a single enemy.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 866633,
    "name": "Fist of Conviction",
    "iconPath": "86f4ab2ddba799691718737ac0d50e86939c71341075dfedff87448a7d119138",
@@ -660,8 +664,8 @@
    "tagHash": "Impair",
    "descHash": "Deals <span style=\"color:#47C7FD;\">Ice</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Gepard's ATK to a single enemy, with a <nobr>#2[i]%</nobr> <u>base chance</u> to Freeze the enemy for <nobr>#3[i]</nobr> turn(s).<br />While Frozen, the enemy cannot take action and will take <u>Additional</u> <span style=\"color:#47C7FD;\">Ice</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> of Gepard's ATK at the beginning of each turn.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 30,
+   "break": "60",
+   "energy": "30",
    "id": 983278,
    "name": "Daunting Smite",
    "iconPath": "b019a13d800df94a29d24ea36e0e9ef56fa814ef42a45f2e5dd3b89dd4361797",
@@ -980,8 +984,8 @@
    "tagHash": "Defense",
    "descHash": "Applies a Shield to all allies, absorbing DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Gepard's DEF plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]</nobr></span> for <nobr>#2[i]</nobr> turn(s).",
    "ultimateCost": 100,
-   "break": 0,
-   "energy": 5,
+   "break": "0",
+   "energy": "5",
    "id": 67219,
    "name": "Enduring Bulwark",
    "iconPath": "c1909a1a7b0f45d66ab7389d1a04384fa9353dc3ee107b5d928105020097ad41",
@@ -1285,8 +1289,8 @@
    "tagHash": "Restore",
    "descHash": "When struck with a killing blow, instead of becoming <u>knocked down</u>, Gepard's HP immediately restores to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of his Max HP. This effect can only trigger once per battle.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 151160,
    "name": "Unyielding Will",
    "iconPath": "a40bef4869899186a858f02ef602213feabe267f01d5cd6792498e13b9e6c8f5",
@@ -1560,8 +1564,8 @@
    "tagHash": "",
    "descHash": "Attack an enemy, and when the battle starts, reduce their Toughness of the corresponding Type.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 351746,
    "name": "Attack",
    "iconPath": "86f4ab2ddba799691718737ac0d50e86939c71341075dfedff87448a7d119138",
@@ -1582,8 +1586,8 @@
    "tagHash": "Defense",
    "descHash": "After Gepard uses his Technique, when the next battle begins, a Shield will be applied to all allies, absorbing DMG equal to <nobr>#1[i]%</nobr> of Gepard's DEF plus <nobr>#3[i]</nobr> for <nobr>#2[i]</nobr> turn(s).",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 468391,
    "name": "Comradery",
    "iconPath": "d077f03c4e71b12749241449629c3becef9b3912d3299ac7e9bfba016aa7c941",
@@ -1711,8 +1715,6 @@
    "embedBonusSkill": {
     "descHash": "Gepard's ATK increases by <nobr>#1[i]%</nobr> of his current DEF. This effect will refresh at the start of each turn.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 303254,
     "name": "Fighting Spirit",
     "iconPath": "2cd5543062f2740d57c143b05ae1d991bd895f75edfd9eb2aeea50cb10fc8750",
@@ -1825,8 +1827,6 @@
      "embedBonusSkill": {
       "descHash": "Gepard has a higher chance to be attacked by enemies.",
       "ultimateCost": 0,
-      "break": 0,
-      "energy": 0,
       "id": 303252,
       "name": "Integrity",
       "iconPath": "2868135c9d13bee8ad2a4e6fa72393cf4c2d8c69534c266dd60130610af518fe",
@@ -1931,8 +1931,6 @@
      "embedBonusSkill": {
       "descHash": "When \"Unyielding Will\" is triggered, Gepard's Energy will be restored to <nobr>100%</nobr>.",
       "ultimateCost": 0,
-      "break": 0,
-      "energy": 0,
       "id": 303255,
       "name": "Commander",
       "iconPath": "6763442330252266961d0d23e21bed264bd719bc788945eeb145a9abfa167df4",
@@ -2069,8 +2067,8 @@
    {
     "relicTypeHash": "Feet",
     "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
-    "propertyName": "DEF",
-    "propertyIconPath": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2"
+    "propertyName": "SPD",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
    },
    {
     "relicTypeHash": "Planar Sphere",

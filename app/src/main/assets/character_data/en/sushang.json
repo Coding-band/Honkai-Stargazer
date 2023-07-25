@@ -1,10 +1,10 @@
 {
  "spRequirement": 120,
- "iconPath": "c25c2711fd2be19411e6cfdd76023d10ec614e522a2853e23412e8f184d8b5d2",
+ "iconPath": "f6ef5d375d72d70ff30fd9c9a5d87afb58f9b017b105e71a7b70ac4e8c3c3c4d",
  "bgPath": "c66f00f6f311152fd856455c62460953d1acb8715f0a905f87ed21f064a40c01",
- "figPath": "6d653a7ba413765cf9d0e6c5f8a61e9e414b78e5a393a84e9c19c6a01d089719",
+ "figPath": "aea81064300721dc0763f903d6fd16988890c85180ffa23e96c5352e3eef109b",
  "fgPath": "6c720a69bd3d08b8ee64d5ad5be6a02d4aaf6c0c8fcd07547e4997d91b6c2bec",
- "splashIconPath": "cbe61d37b5bafc6825db783d9274c1ac4495dbb862e154938622ecdd2102bfc9",
+ "splashIconPath": "dbc723e91eb7a171264935110b79b0ca9e7561925c969582e26c5b21f0de1776",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Calyx (Great Mine)",
     "Mission rewards",
-    "Assignment rewards"
+    "Assignment rewards",
+    "Embers Exchange"
    ]
   },
   "125435": {
@@ -93,7 +94,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Calyx (Outlying Snow Plains)",
-    "Daily Training"
+    "Daily Training",
+    "Embers Exchange"
    ]
   },
   "409962": {
@@ -161,7 +163,8 @@
    "rarity": 2,
    "rewardPath": "/material/635674",
    "comeFrom": [
-    "Calyx (Outlying Snow Plains)"
+    "Calyx (Outlying Snow Plains)",
+    "Embers Exchange"
    ]
   },
   "717385": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920201",
    "comeFrom": [
     "Calyx (Outlying Snow Plains)",
-    "Omni-Synthesizer — Material Synthesis"
+    "Omni-Synthesizer — Material Synthesis",
+    "Embers Exchange"
    ]
   }
  },
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "13e537309d10eb631d9baa38ef108fdc400a0293ac01cb835d0484346977df88",
    "artPath": "dd1924dd4e5230edf45c31b1ae85abb36b7ff226cb72d975e632fdf1cc365abe",
    "name": "Cut With Ease",
    "descHash": "After using Skill against a Weakness Broken enemy, regenerates 1 Skill Point.",
@@ -426,7 +430,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "5c53b90fe3ac994552be00e2f043b92cdd2f356b29936ac20efe821b18c97177",
    "artPath": "af8c0f07a8bfdf6b154fba4599032197ef0d00eae957a7d6cf88093a5d7d4822",
    "name": "Refine in Toil",
    "descHash": "After Sword Stance is triggered, the DMG taken by Sushang is reduced by <nobr>#1[i]%</nobr> for 1 turn.",
@@ -436,7 +440,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "1401ac15866d2138e52256a0fb15176e3f57795971ca463d88ae7721e27e7e53",
    "artPath": "f113125e0223a9159893896a2d03ecd2cfd1e4271a59bb14f7b7f61639108979",
    "name": "Rise From Fame",
    "descHash": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Talent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
@@ -444,7 +448,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "d4778024cdf25c82fb983117147c29bdd78713d4d5436b3c6354a1d55ac09623",
    "artPath": "592467d789aac8420fc842e753c506b60e717ff81a7432736e9713f46f8f4d5a",
    "name": "Cleave With Heart",
    "descHash": "Sushang's Break Effect increases by <nobr>#1[i]%</nobr>.",
@@ -454,7 +458,7 @@
   },
   {
    "id": 5,
-   "iconPath": "",
+   "iconPath": "eb0838257c72cf6c2f0ebfd9093363129d470ffd0382ea107aabe49f75585d0e",
    "artPath": "513b5f985b101300277a702d5f162cef2d6560c8b1948fc6c3aca9bf58ffcfd9",
    "name": "Prevail via Taixu",
    "descHash": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Basic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
@@ -462,7 +466,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "2421916e05bf2d7f816aef377bb3c425f3f4ff5fe4e3a058a54dd2da66f85130",
    "artPath": "b2eddc2d4997dc46e0b48a1c691de4474cc4d9ed7d66c07fdfa650d9a3ee280b",
    "name": "Dwell Like Water",
    "descHash": "Talent's SPD Boost is stackable and can stack up to 2 times. Additionally, after entering battle, Sushang immediately gains 1 stack of her Talent's SPD Boost.",
@@ -491,8 +495,8 @@
    "tagHash": "Single Target",
    "descHash": "Deals <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Sushang's ATK to a single enemy.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 93988,
    "name": "Cloudfencer Art: Starshine",
    "iconPath": "67e231b77b0d05343380cfb12aa110059d6d5b19a9d583aef7e1b39b3d7d974c",
@@ -652,8 +656,8 @@
    "tagHash": "Single Target",
    "descHash": "Deals <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Sushang's ATK to a single enemy. In addition, there is a <nobr>#3[i]%</nobr> chance to trigger Sword Stance on the final hit, dealing <u>Additional</u> <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of Sushang's ATK to the enemy.<br />If the enemy is inflicted with <u>Weakness Break</u>, Sword Stance is guaranteed to trigger.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 30,
+   "break": "60",
+   "energy": "30",
    "id": 378515,
    "name": "Cloudfencer Art: Mountainfall",
    "iconPath": "eb0838257c72cf6c2f0ebfd9093363129d470ffd0382ea107aabe49f75585d0e",
@@ -953,8 +957,8 @@
    "tagHash": "Single Target",
    "descHash": "Deals <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Sushang's ATK to a single enemy target, and she immediately takes action again. In addition, Sushang's ATK increases by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> and using her Skill has 2 extra chances to trigger Sword Stance for <nobr>#2[i]</nobr> turn(s).<br />Sword Stance triggered from the extra chances deals <nobr>#3[i]%</nobr> of the original DMG.",
    "ultimateCost": 120,
-   "break": 90,
-   "energy": 5,
+   "break": "90",
+   "energy": "5",
    "id": 261870,
    "name": "Shape of Taixu: Dawn Herald",
    "iconPath": "a6fe6e4bcd38875e727edb311593d30b65a99908801c2ee857eb3b496a978b9e",
@@ -1269,8 +1273,8 @@
    "tagHash": "Enhance",
    "descHash": "When an enemy has their Weakness Broken on the field, Sushang's SPD increases by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f2]%</nobr></span> for <nobr>#2[i]</nobr> turn(s).",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 579101,
    "name": "Dancing Blade",
    "iconPath": "ad66d8e99892fd4896dccb6e52fa238917005024f4640e2345a7b4d3caca0f87",
@@ -1555,8 +1559,8 @@
    "tagHash": "",
    "descHash": "Attack an enemy, and when the battle starts, reduce their Toughness of the corresponding Type.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 746983,
    "name": "Attack",
    "iconPath": "67e231b77b0d05343380cfb12aa110059d6d5b19a9d583aef7e1b39b3d7d974c",
@@ -1577,8 +1581,8 @@
    "tagHash": "",
    "descHash": "Immediately attacks the enemy. Upon entering battle, Sushang deals <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <nobr>#1[i]%</nobr> of her ATK to all enemies.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 0,
+   "break": "60",
+   "energy": "0",
    "id": 663042,
    "name": "Cloudfencer Art: Warcry",
    "iconPath": "5782e06e2b453d4226a8b427aeedc8e5ae369bd56dc076d6a9a54004b583ad36",
@@ -1672,8 +1676,6 @@
    "embedBonusSkill": {
     "descHash": "When current HP percentage is <nobr>#1[i]%</nobr> or lower, reduces the chance of being attacked by enemies.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 731193,
     "name": "Guileless",
     "iconPath": "5acd037f83ec998ae37aa6953967a72363ba8bd49727b6a959438184d8033fb2",
@@ -1779,8 +1781,6 @@
    "embedBonusSkill": {
     "descHash": "For every Sword Stance triggered, the DMG dealt by Sword Stance increases by <nobr>#1[i]%</nobr>. Stacks up to <nobr>#2[i]</nobr> time(s).",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 731196,
     "name": "Riposte",
     "iconPath": "26b6d7188bbbb978be75351ba3dbcd0ec9f4a345e0013721344dc88567b5879d",
@@ -1922,8 +1922,6 @@
    "embedBonusSkill": {
     "descHash": "After using Basic ATK or Skill, if there are enemies on the field with Weakness Break, Sushang's action is Advanced Forward by <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 731195,
     "name": "Vanquisher",
     "iconPath": "d5b0cee70546ec3dfd1a7c6f3261224c5878d3163b327d0e42078aba1d4fdf0f",

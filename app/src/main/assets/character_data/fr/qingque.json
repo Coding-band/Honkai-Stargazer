@@ -1,10 +1,10 @@
 {
  "spRequirement": 140,
- "iconPath": "51254b98d01c17936ff478ee71bb89c98a0abaab0f3fbf79ba8d3eed7cdcbb20",
+ "iconPath": "6c798127b50979196f42813638e25017d2e975a6fc41057bfd87d37757c95ad5",
  "bgPath": "b852a4ddd2303d5fb01bb17b38557b752c4feab67e83ca76d3c1bc2119f79581",
- "figPath": "b8941502c247558ae03a258872b341e641a8c3f02fbac30f47246afe02b18b9d",
+ "figPath": "aa7bbf3a7391410ed9985fead84befeac6d12c513fb60e6255ca6df06f35f7c5",
  "fgPath": "57f9ebb533a8af6d7ebc53263914578e939ca8e9686c7ca0d71649092cc09213",
- "splashIconPath": "3a1046dace553ff92a6cc0375fce757d31951f4daa5dce12d15edfdbffc7bbe2",
+ "splashIconPath": "1be34670efb7c87406c9f6edb11ffe1b6539aebd8f6acd87df23c98d463627de",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Calice de la Grande mine",
     "Récompense de mission",
-    "Récompense d'affectation"
+    "Récompense d'affectation",
+    "Braises immortelles"
    ]
   },
   "125435": {
@@ -54,7 +55,7 @@
    "type": 601,
    "purposeId": 4,
    "iconPath": "e4e921f4de5d1ca7628ee1ae03dd74abb5227a8be2d12428213308ebf81a7d04",
-   "name": "Complainte du gardien",
+   "name": "Complainte d'une gardienne",
    "desc": "Matériau avancé d'amélioration de Traces.",
    "lore": "Avec ce diadème, le vœu corrompu d'une Gardienne s'est également brisé.<br />Elle cherchait le moyen d'éviter à son peuple le redoutable Hiver éternel, mais a fini par devenir la marionnette d'une conscience qui la dépasse.<br /><br />« Le titre de Gardien suprême s'est transmis de génération en génération chez les dirigeants de Belobog, c'est celui qui prend soin de tous les autres. Nul n'a songé que les Gardiens eux-mêmes pouvaient avoir besoin d'attention et de protection. »",
    "purpose": "Matériau de Trace",
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Calice des Plaines des neiges périphériques",
-    "Entraînement quotidien"
+    "Entraînement quotidien",
+    "Braises immortelles"
    ]
   },
   "409962": {
@@ -177,7 +179,8 @@
    "rarity": 2,
    "rewardPath": "/material/635675",
    "comeFrom": [
-    "Calice de la Ville de Rivet"
+    "Calice de la Ville de Rivet",
+    "Braises immortelles"
    ]
   },
   "717319": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920202",
    "comeFrom": [
     "Calice de la Ville de Rivet",
-    "Synthèse de matériaux de l'Omni-synthétiseur"
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Braises immortelles"
    ]
   }
  },
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "8eeba7afae5cd61e17a7c08800270e6334ca22ca931522ccbed88b27c79bae93",
    "artPath": "4b46007f1ae172c169c75ed12cb41c72ddaf8d72b96abb82af014341c3b81d30",
    "name": "Avènement des tuiles",
    "descHash": "Les DGT de l'ultime augmentent de <nobr>#1[i]%</nobr>.",
@@ -428,7 +432,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "588f557025166900723261b5c8682ba06f1279da5fd2da2d64569c926f8b1edf",
    "artPath": "fb5ef0eac3e051e882a2fd6ed3b892e8595e6a12231b160e1c4287d24bf16907",
    "name": "Repos sur l'échiquier",
    "descHash": "Chaque fois que Qingque pioche une tuile, elle régénère immédiatement <nobr>#1[i]</nobr> point d'énergie.",
@@ -438,7 +442,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "07c8d069a1bacd658f4bcb15a9c37ede7f97b1bb24f6ec7efa1a2cdfe4264ada",
    "artPath": "e338d84c01738d3cfd26c286f56d8857a805b5d0a76c035cb78ae91b8dcfe7d5",
    "name": "Lire entre les tuiles",
    "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
@@ -446,7 +450,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "272c0f5fc7c1aee6342b62233f0f49fbc3e592bbaba1dcf38ae05f383e73f43d",
    "artPath": "373b79b2c24b2e58888ee99ef99d97e91b627f2d1315c4c53e1c03dbd684d89f",
    "name": "Mets de la tuile",
    "descHash": "Après avoir utilisé la compétence, il y a <nobr>#1[i]%</nobr> de chances fixes d'obtenir Autonome, qui dure jusqu'à la fin du tour en cours.<br />Lorsque l'état Autonome est actif, utiliser l'ATQ normale ou l'ATQ normale renforcée lance immédiatement 1 attaque de suivi sur le ou les mêmes cibles, infligeant des DGT quantiques équivalents à <nobr>100</nobr> % des DGT de l'ATQ normale (ou ATQ normale renforcée) précédente.",
@@ -456,7 +460,7 @@
   },
   {
    "id": 5,
-   "iconPath": "",
+   "iconPath": "f7b226838162be45185aad445206ade0c28af91ab1adb39fa19101b3308bc411",
    "artPath": "d41854e9ee71200393a122db0e0480227a7f7490a4b88914e522ca2ed04e0a3c",
    "name": "Tuiles piochées, la chance a tourné",
    "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
@@ -464,7 +468,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "458c0ab509ac39416419e9f45b97c44253f3e1aa54d025b7c13ab46e08a428ff",
    "artPath": "d8b7db32f329fab7d199e9e268b2182e9367fec59792b33b9da2205385c35235",
    "name": "Prête à gagner, dans le calme et la sérénité",
    "descHash": "Récupère 1 point de compétence après utilisation de l'ATQ normale renforcée.",
@@ -494,8 +498,8 @@
    "tagHash": "Cible unique",
    "descHash": "Lance une tuile de jade de la série dont Qingque a le moins de tuiles en main pour infliger des DGT quantiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Qingque à un ennemi unique.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 231495,
    "name": "Bonne pioche",
    "iconPath": "396133d02c35647181ca18469408714f8189192544173f7d755db22ac2c78825",
@@ -655,8 +659,8 @@
    "tagHash": "Renforcement",
    "descHash": "Pioche immédiatement <nobr>#1[i]</nobr> tuiles de jade et augmente les DGT de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> jusqu'à la fin du tour en cours. Cet effet peut être cumulé jusqu'à <nobr>#3[i]</nobr> fois. Le tour ne prend pas fin après l'utilisation de cette compétence.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 946968,
    "name": "Coup de pouce",
    "iconPath": "f7b226838162be45185aad445206ade0c28af91ab1adb39fa19101b3308bc411",
@@ -956,8 +960,8 @@
    "tagHash": "ZdE",
    "descHash": "Inflige des DGT quantiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Qingque à tous les ennemis et accorde 4 tuiles de jade de la même série.",
    "ultimateCost": 140,
-   "break": 0,
-   "energy": 5,
+   "break": "60/hit",
+   "energy": "5",
    "id": 30909,
    "name": "Quatre pungs en main ? Tout va bien !",
    "iconPath": "369f61ac524c1ed30bc71a4a575b9017bdaf7a9a0488d28e3106f2d61d010c7e",
@@ -1227,8 +1231,8 @@
    "tagHash": "Renforcement",
    "descHash": "Qingque pioche 1 tuile au hasard au début du tour de chaque allié, parmi 3 séries différentes et peut posséder jusqu'à 4 tuiles à la fois.<br />Si Qingque commence son tour avec 4 tuiles de la même série, elle les utilise toutes et entre dans l'état « Kong caché ».<br />Dans cet état, Qingque ne peut plus utiliser sa compétence. D'autre part, son ATQ augmente de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> et son ATQ normale « Bonne pioche » est renforcée pour devenir « C'est la tuile ! ». L'état « Kong caché » prend fin après utilisation de « C'est la tuile ! ».",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 746382,
    "name": "Jade céleste",
    "iconPath": "5aab6396bbe77a62d49a9e5e245cdd3ec31d90367584950f4950ec5aad3d6de5",
@@ -1498,8 +1502,8 @@
    "tagHash": "",
    "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 545796,
    "name": "Attaque",
    "iconPath": "396133d02c35647181ca18469408714f8189192544173f7d755db22ac2c78825",
@@ -1520,8 +1524,8 @@
    "tagHash": "Renforcement",
    "descHash": "Après utilisation de la technique, Qingque pioche <nobr>#1[i]</nobr> tuiles de jade en début de combat.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 662441,
    "name": "Accro aux jeux",
    "iconPath": "5a6ec83a2b61d13ee3a0e2b56ba7c6cef4a2786560499b65707e8bb33fb0600e",
@@ -1544,8 +1548,8 @@
    "tagHash": "Propagation",
    "descHash": "Inflige des DGT quantiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Qingque à un ennemi unique et des DGT quantiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de l'ATQ de Qingque aux ennemis adjacents.<br />« C'est la tuile ! » ne permet pas de récupérer de points de compétence.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 20,
+   "break": "60 + 30/adjacent",
+   "energy": "20",
    "id": 917194,
    "name": "C'est la tuile !",
    "iconPath": "73ae96fd42e84fc3743b12a2964d346133f4ebbed22a2a88b4e586994416a647",
@@ -1817,8 +1821,6 @@
    "embedBonusSkill": {
     "descHash": "Récupère 1 point de compétence lorsque le personnage utilise sa compétence. Cet effet ne peut être déclenché qu'1 fois par combat.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 668114,
     "name": "Bataille de tuiles",
     "iconPath": "86d09f9be82751ee3001542bc045d19459353397521a6dfb51b372afffee9886",
@@ -1953,8 +1955,6 @@
    "embedBonusSkill": {
     "descHash": "Utiliser la compétence accroît l'effet d'augmentation de DGT des attaques de <nobr>#1[i]%</nobr> supplémentaires.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 668117,
     "name": "En attente d'une combinaison",
     "iconPath": "bf9d4ecea46e0cfe02824d924a24aca82ec1f48522524f450d77ed64b7a84e8c",
@@ -2062,8 +2062,6 @@
    "embedBonusSkill": {
     "descHash": "La VIT de Qingque augmente de <nobr>#1[i]%</nobr> pendant 1 tour après avoir utilisé l'ATQ normale renforcée.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 668116,
     "name": "Main gagnante",
     "iconPath": "1754c646be8fc7ba3ddc0ee59f471818b34df422c15a3d9c539b5596324d3d3c",
@@ -2173,8 +2171,8 @@
    {
     "relicTypeHash": "Pieds",
     "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
-    "propertyName": "ATQ",
-    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+    "propertyName": "VIT",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
    },
    {
     "relicTypeHash": "Sphère planaire",
@@ -2185,8 +2183,8 @@
    {
     "relicTypeHash": "Corde de liaison",
     "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
-    "propertyName": "Taux de régénération d'énergie",
-    "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
+    "propertyName": "ATQ",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
    }
   ]
  },
@@ -2194,7 +2192,7 @@
   {
    "id": 1,
    "title": "Première rencontre",
-   "text": "Je m'appelle Qingque, je suis divinatrice à la Commission de divination. Tu veux jouer au jade céleste ? D'accord, reviens pendant mes heures de travail.",
+   "text": "Je m'appelle Qingque, je suis divinatrice à la Commission de divination. Tu veux jouer au Jade céleste ? D'accord, reviens pendant mes heures de travail.",
    "unlockRequirement": "",
    "cnUrl": "3888724ba53d87acce8af109c6d82d55ef5d2b78a98530624bc5148182c0fc11",
    "jpUrl": "7c62e9b70d15ab366e226d55ddfa963fea900f6f153f4ccd862e86b3cec0eb58",
@@ -2244,7 +2242,7 @@
   {
    "id": 6,
    "title": "Passe-temps",
-   "text": "Mon supérieur me crie dessus ? Je joue au jade céleste. Trop de travail ? Je joue au jade céleste. Ah, qu'est-ce que je ferais sans le jade céleste !",
+   "text": "Mon supérieur me crie dessus ? Je joue au Jade céleste. Trop de travail ? Je joue au Jade céleste. Ah, qu'est-ce que je ferais sans le Jade céleste !",
    "unlockRequirement": "",
    "cnUrl": "879cfc20b71db68ac768340e5e8f8acfa3ba3b06b6daf092ad3feaa537a4d396",
    "jpUrl": "a42c3896a0eceb4c93b91d77070b2d3ee20aec40c78d647517fea145eed968ca",
@@ -2254,7 +2252,7 @@
   {
    "id": 7,
    "title": "Problèmes",
-   "text": "Je ne peux pas jouer au jade céleste toute seule. Si seulement le jade céleste pouvait tout savoir...",
+   "text": "Je ne peux pas jouer au Jade céleste toute seule. Si seulement le Jade céleste pouvait tout savoir...",
    "unlockRequirement": "",
    "cnUrl": "e5b04a3eeeb445a23932e8d7fb44fd21b5d4e7b139d911d3b03f7eb106882d95",
    "jpUrl": "68540b22702b994663e72e89220c7dcb8d7940fdbdad502729bfcc1b63e50a46",
@@ -2354,7 +2352,7 @@
   {
    "id": 17,
    "title": "À propos de Bailu",
-   "text": "Un jour, pendant une partie endiablée de jade céleste, je me suis tordu le poignet. Un ami m'a conseillé d'aller la voir. J'ai douté au départ, mais juste après avoir rédigé mon ordonnance, elle a sorti un plateau de jade céleste. Elle m'a dit de m'entraîner à empiler les tuiles pour améliorer la souplesse de mon poignet. Naturellement, elle a tout de suite eu mon admiration.",
+   "text": "Un jour, pendant une partie endiablée de Jade céleste, je me suis tordu le poignet. Un ami m'a conseillé d'aller la voir. J'ai douté au départ, mais juste après avoir rédigé mon ordonnance, elle a sorti un plateau de Jade céleste. Elle m'a dit de m'entraîner à empiler les tuiles pour améliorer la souplesse de mon poignet. Naturellement, elle a tout de suite eu mon admiration.",
    "unlockRequirement": "",
    "cnUrl": "e3f9a99c5d5e748caa2ef0cfcc6c5e93da37b758c2145ae584efc8856149621a",
    "jpUrl": "4185b49423f465c1cffdace60984dcc7f2ac387bae2961601478a2655f13ac74",
@@ -2660,7 +2658,7 @@
   },
   {
    "title": "Histoire du personnage : Partie III",
-   "text": "Le jeu du jade céleste était censé exister depuis l'époque de l'Empire antique, mais il s'était volatilisé pendant la longue période de dérive interstellaire de l'Alliance Xianzhou. Grâce à un divinateur anonyme de la Commission de divination, les règles furent assemblées à nouveau et ramenées au Xianzhou des temps modernes, où la population eut la chance d'accéder à ce jeu de tuiles époustouflant basé sur l'astrophysique et les phénomènes célestes.<br /><br />Bien sûr, les règles seules ne suffisaient pas. C'est pourquoi le divinateur a utilisé les plans de ses archives comme appât, afin d'attirer ses proches collègues de la Commission de l'artisanat pour qu'ils fabriquent des tuiles de jade céleste ainsi qu'un plateau. La fonctionnalité du mélange automatique des tuiles était intégrée à ces plateaux et se démocratisa rapidement dans la salle de jeux Planche Quatra.<br /><br />De nos jours, le jade céleste est l'un des jeux les plus populaires à bord du Luofu de Xianzhou. La divinatrice plaisante parfois à ce sujet dans les échanges épistolaires qu'elle entretient avec son compagnon artisan : à l'origine, elle destinait ce jeu à son plaisir personnel, et non à conquérir le cœur de millions de personnes à Xianzhou. Tout cela n'est que le fruit du hasard.<br /><br />« Ma foi, ce n'est pas une mauvaise chose. »<br />« Après tout, si je peux utiliser ce jeu cérébral pour me détendre tranquillement, alors pourquoi m'en priver ? »",
+   "text": "Le jeu du Jade céleste était censé exister depuis l'époque de l'Empire antique, mais il s'était volatilisé pendant la longue période de dérive interstellaire de l'Alliance Xianzhou. Grâce à un divinateur anonyme de la Commission de divination, les règles furent assemblées à nouveau et ramenées au Xianzhou des temps modernes, où la population eut la chance d'accéder à ce jeu de tuiles époustouflant basé sur l'astrophysique et les phénomènes célestes.<br /><br />Bien sûr, les règles seules ne suffisaient pas. C'est pourquoi le divinateur a utilisé les plans de ses archives comme appât, afin d'attirer ses proches collègues de la Commission de l'artisanat pour qu'ils fabriquent des tuiles de Jade céleste ainsi qu'un plateau. La fonctionnalité du mélange automatique des tuiles était intégrée à ces plateaux et se démocratisa rapidement dans la salle de jeux Planche Quatra.<br /><br />De nos jours, le Jade céleste est l'un des jeux les plus populaires à bord du Luofu de Xianzhou. La divinatrice plaisante parfois à ce sujet dans les échanges épistolaires qu'elle entretient avec son compagnon artisan : à l'origine, elle destinait ce jeu à son plaisir personnel, et non à conquérir le cœur de millions de personnes à Xianzhou. Tout cela n'est que le fruit du hasard.<br /><br />« Ma foi, ce n'est pas une mauvaise chose. »<br />« Après tout, si je peux utiliser ce jeu cérébral pour me détendre tranquillement, alors pourquoi m'en priver ? »",
    "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
   },
   {

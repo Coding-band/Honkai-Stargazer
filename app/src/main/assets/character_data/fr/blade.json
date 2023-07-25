@@ -1,0 +1,2928 @@
+{
+ "spRequirement": 130,
+ "iconPath": "496415d55483445823d6d04ae6a15953a1a7253eff8cc81a78cf32a67a0edad9",
+ "bgPath": "e04b8ff6a7d4bdbe888953049305067df8d491e0dd4e60c92af83796bdd7254a",
+ "figPath": "d3689674e014898bf5ca671bbdde5c335644ef11b30edce2f86efa7e56b0afe2",
+ "fgPath": "c71a1b6eff720c7ae96ee6f7e054df95f476af2f589097c1ae44579f371e808c",
+ "splashIconPath": "7fffeaec1168919fc26b9b6d7e0e8899494aec38a5fd2e5ad2af3ad6f6f76349",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 1,
+  "iconPath": "618288e8d5b3090ac84a269acad5cb4e22ee3c8d9b8e96af17cd5f240e23e9f9",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "af49f8c10262045a4f9e4740703b52056b5f396b48b99c2d130c22f3dbfa99d9",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Braises immortelles"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "b0f1cfc56ed708ca47e85bd5f199c02e9c2804f06ed290d904d0118b171f57e5",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "e23000552918166759cdcf3f7cef87ae31a78cb8ae8f5dcedc0c74a92b68f963",
+   "name": "Regret de l'ochéma infini",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "Qu'importe le nombre de corps qu'il s'approprie, son insatiabilité ne faiblit pas. À l'instar de ceux vouant leur existence à la recherche des secrets de l'immortalité, il est en quête d'un hôte impérissable, d'une entité qui lui permettra d'éradiquer sa peur de la destruction. Il sait pourtant que cette quête est vaine, car irréalisable.<br /><br />« J'ai vu un nombre incalculable de mondes périr par le feu de la Souillure ; moi qui étais l'une de ses flammes. J'ai dansé au rythme de ses doigts, sachant que si le combustible se consumait, le feu s'éteindrait également... »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "Écho de la guerre : Royaume de l'abysse écailleux"
+   ]
+  },
+  "267806": {
+   "id": 267806,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "7742b55404dc7a9f0dd7bf8a952f5c3d1ff2a303cd246847c23450b7e10d53f5",
+   "name": "Restes de l'Entité transcendantale",
+   "desc": "Vestiges de l'Entité transcendantale. Permet l'élévation des personnages de type vent.",
+   "lore": "À l'origine, l'Entité transcendantale voulait apporter au monde un héritage de bonté, mais au fur et à mesure que le don de l'Abondance s'est estompé, la compréhension et la libération sont arrivées en même temps : il n'était rien de plus qu'un mortel fait de chair et de sang. Sa capacité à traverser les cieux n'était qu'une illusion, et tout ce qui restait de son existence n'était que poussière et débris.<br /><br />« Je te maudis, Seigneur archer de la Destinée... »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/267806",
+   "comeFrom": [
+    "Ombre stagnante (Commission d'alchimie)",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "ccf6a04abba3ee0c642f987df4acbfa23c97875710e72898f807325b14f938d0",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "3be91e7b878ba619cd2887b80d45437c95ca08491547d49be65898de505d6a7a",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Entraînement quotidien",
+    "Braises immortelles"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "986cb8eacfc77a347d7be45f6ba74ecf909ec26ffffd577c9ff6129bdfa93544",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Récompense d'affectation"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "267ccbf86fcd7e6264e21ba9757d5aec8711d76e5479326c04b9874a8142cbc5",
+   "name": "Jeune pousse immortelle",
+   "desc": "Jeune pousse ayant bourgeonné à partir d'une ancienne construction divine. Matériau commun utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Il y a de très nombreuses années, le désir orgueilleux et démesuré d'un souverain pour l'immortalité a mené la flotte de Xianzhou à lever les voiles en direction de la mer cosmique pour y rechercher des remèdes divins.<br /><br />« Nous voulons vivre jusqu'à des temps sans fin et maintenir notre empire pour l'éternité. Malheureusement, la vie humaine prend toujours fin, et les capacités humaines ont leurs limites. Par conséquent, nous avons envoyé neuf Navium Astriger pour naviguer au-delà du ciel, à la recherche des recettes divines de l'immortalité. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "Abominations de l'Abondance",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "031003e14c276a2aba3c945ea8ca9e78edba44061b597959f42cc62c1e051542",
+   "name": "Aérofleur immortelle",
+   "desc": "Nouvelle fleur ayant éclos à partir d'une ancienne construction divine. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Après d'innombrables tentatives, la flotte à la recherche du remède de l'immortalité était capable de contempler le visage de l'être divin. La divinité envoya ses bénédictions sous une forme matérielle, et l'Arbre d'ambroisie étendit ses feuilles.<br /><br />« De nouveaux bourgeons descendirent sur la lune, où des fleurs divines se mirent à pousser entre les nuages. Le temps de la floraison, le vieux bois retrouva sa jeunesse. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "Abominations de l'Abondance au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635673": {
+   "id": 635673,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "cbbb29c7d304051e72058774233100493e76cbb799ddb1b4b45aff45241bd8c6",
+   "name": "Lame brisée",
+   "desc": "Fragments d'arme abandonnés par les membres de la Légion d'antimatière. Permet d'améliorer légèrement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruction</span>.",
+   "lore": "Cette marque représente leur rang et leurs accomplissements au nom de la Destruction.<br />Le maître de cette arme incendie des villes sur le dos de son cheval écarlate. Son but est d'arracher la paix à l'humanité et de faire tomber les nations une à une.<br /><br />« Le porteur de cette marque est chargé de détruire la paix des nations .»",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635673",
+   "comeFrom": [
+    "Calice de la Zone de stockage",
+    "Braises immortelles"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "49e8092b088316bbf8ba88b0eb49123c541b4853fc66d62b3c89d6b8303219a0",
+   "name": "Branche-lumière immortelle",
+   "desc": "Branche à feuilles caduques provenant d'une ancienne construction divine. Matériau avancé utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Après les Trois Souffrances, Xianzhou a été en proie à la dévastation. Les Homo celestinae se sont retrouvés au rang de démons, et les catastrophes se sont enchaînées sans discontinuer.<br /><br />« En vertu du décret de la Commission des dix seigneurs, quiconque sur le point d'être frappé par le mara sera saisi par les juges infernaux et envoyé à la Prison des enchaînés. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "Abominations de l'abondance au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836259": {
+   "id": 836259,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "dd9049ebf26b7ffdf52e7edc6cddcc58aae6bf8e0b8d420bc33aade03b6b302f",
+   "name": "Lame briseuse de monde",
+   "desc": "Arme cassée laissée à l'abandon par les membres de la Légion d'antimatière. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruction</span>.",
+   "lore": "Cette arme représente le rang et les succès accomplis par son propriétaire au nom de la Destruction.<br />Le maître de cette arme est celui qui arrive à la fin de la guerre pour en raviver les braises et consumer le monde. Quelles que soient les gloires du passé ou les bénédictions accordées par les dieux, cette planète est condamnée à redevenir poussière et à s'éteindre dans les profondeurs du ciel étoilé.<br /><br />Le porteur de cette marque a la charge de purifier le monde.",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836259",
+   "comeFrom": [
+    "Calice de la Zone de stockage",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920200": {
+   "id": 920200,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "ad883da0dda0d6eebe6f4592fe6e5396962ec669012068894459c5af6e55f25f",
+   "name": "Lame sans vie",
+   "desc": "Fragments d'arme abandonnés par les membres de la Légion d'antimatière. Permet d'améliorer modérément les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruction</span>.",
+   "lore": "Cette marque représente leur rang et leurs accomplissements au nom de la Destruction.<br />Le maître de cette arme voue une haine féroce à tous les êtres doués de sensibilité. Il se délecte des lamentations des êtres intelligents comme de douces mélodies, et renverse des civilisations millénaires en un clin d'œil.<br /><br />« Le porteur de cette marque a pour mission de couper le souffle des vivants. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920200",
+   "comeFrom": [
+    "Calice de la Zone de stockage",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Braises immortelles"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 73.92,
+   "attackAdd": 3.696,
+   "hpBase": 184.8,
+   "hpAdd": 9.24,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549504,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 103.488,
+   "attackAdd": 3.696,
+   "hpBase": 258.72,
+   "hpAdd": 9.24,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549504,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 133.056,
+   "attackAdd": 3.696,
+   "hpBase": 332.64,
+   "hpAdd": 9.24,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633445,
+     "count": 6
+    },
+    {
+     "id": 267806,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 162.624,
+   "attackAdd": 3.696,
+   "hpBase": 406.56,
+   "hpAdd": 9.24,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633445,
+     "count": 9
+    },
+    {
+     "id": 267806,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 192.192,
+   "attackAdd": 3.696,
+   "hpBase": 480.48,
+   "hpAdd": 9.24,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717386,
+     "count": 6
+    },
+    {
+     "id": 267806,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 221.76,
+   "attackAdd": 3.696,
+   "hpBase": 554.4,
+   "hpAdd": 9.24,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717386,
+     "count": 9
+    },
+    {
+     "id": 267806,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 251.328,
+   "attackAdd": 3.696,
+   "hpBase": 628.32,
+   "hpAdd": 9.24,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 97,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "3a3f585f89a8186f8a396ff72e6aee90e8bd87228523b6dc76e91bde5400e134",
+   "artPath": "2e84afbc002d3b53cbd1fb9b94e81ad435edc089bcf66ee553ba67f1e83fe7fb",
+   "name": "Les lames s'affûtent en enfer",
+   "descHash": "L'ultime de Blade inflige des DGT augmentés à une cible ennemie unique. L'augmentation des DGT est égale à <nobr>#1[i]%</nobr> des PV que Blade a perdus pendant le combat en cours.<br />Le montant des PV perdus est plafonné à <nobr>#2[i]%</nobr> des PV max de Blade. Ce montant est remis à zéro et recommence à s'accumuler après l'utilisation de l'ultime.",
+   "params": [
+    1.5,
+    0.9
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "3b9c1110d6bc9461f7d22dc1853aa982aafe35d891f880551378c4e696661f2f",
+   "artPath": "70fef19c060eac75cb425c997609ca6691712f0731a0095b3cbeffd335ae7ca0",
+   "name": "Dix mille souffrances pour un rêve brisé",
+   "descHash": "Les chances de coup critique de Blade augmentent de <nobr>#1[i]%</nobr> lorsqu'il est dans l'état Vue de l'enfer.",
+   "params": [
+    0.15
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "9a81b9cde8125e41457787a8349ea9590cf63cd73edabbafdbe1d9a416916e71",
+   "artPath": "cf8bc2c29e3034ae762a8b96b448fcbb4a23d6372fc7eab4186bdeb782c5dd03",
+   "name": "Le sang est froid sur les lames endurcies",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "58496d479994614370b8374c8b5148f3feb7636c663d3b56d89a411d3af96ac7",
+   "artPath": "bd70e5c97cdcc663dd4cf6eade343e021b9b2c54aa9ab51d5431e77880a4cdf2",
+   "name": "Rejeté par la mort, infecté par la vie",
+   "descHash": "Lorsque les PV de Blade sont inférieurs ou égaux à <nobr>50</nobr> %, ses PV max augmentent de <nobr>#1[i]%</nobr>. Cumulable jusqu'à <nobr>#2[i]</nobr> fois.",
+   "params": [
+    0.2,
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "ed6ca3d29bcf5300fcfd8265c34f18a70e18783f8672dda87640ec55bc4c1d75",
+   "artPath": "b92e581bf02e462c9e17e72e60e76d36b06b6e30f38df2e1ac416b9ceefaeddf",
+   "name": "Regard mortel des Dix seigneurs",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "5b200b7187bb566800f2b6510b4cd3e46863acc5d4b2c69fc7a61abf2068ac48",
+   "artPath": "4cbde0212579bf91ea08066bac5b3e2e06aecb8a63c0b26a66a2f1d589d289ec",
+   "name": "Revenu dans une coquille vide",
+   "descHash": "Le nombre de cumuls maximum de Charge est réduit à 4. Les DGT de l'attaque de suivi déclenchée par le talent de Blade augmentent d'un montant équivalent à <nobr>#1[i]%</nobr> de ses PV max.",
+   "params": [
+    0.5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   581491,
+   234486
+  ],
+  [
+   296964
+  ],
+  [
+   380905
+  ],
+  [
+   866018
+  ],
+  [
+   782077
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT de vent équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Blade à une cible ennemie.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 581491,
+   "name": "Lame d'éclat",
+   "iconPath": "6815fac4604272fab762faf7bf4dc9eaab9ef7cad28b6767e53fb141206ee81a",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Renforcement",
+   "descHash": "Consomme <nobr>#1[i]%</nobr> des PV max de Blade pour entrer dans l'état Vue de l'enfer.<br />Lorsque l'état Vue de l'enfer est actif, Blade ne peut plus utiliser sa compétence, mais les DGT qu'il inflige augmentent de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>, et son ATQ normale Lame d'éclat se renforce en Forêt de lames pendant <nobr>#2[i]</nobr> tours.<br />Si les PV de Blade sont insuffisants pour utiliser la compétence, ils tombent à 1 après utilisation de la compétence.<br />Cette compétence ne régénère pas l'énergie. Utiliser cette compétence ne met pas fin au tour.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 296964,
+   "name": "Vue de l'enfer",
+   "iconPath": "ed6ca3d29bcf5300fcfd8265c34f18a70e18783f8672dda87640ec55bc4c1d75",
+   "typeDescHash": "Compétence",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.12
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.148
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.176
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.204
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.232
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.26
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.295
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.33
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.365
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.4
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.428
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.456
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.484
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.512
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1,
+      0.54
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Propagation",
+   "descHash": "Les PV de Blade passent à <nobr>50</nobr> % de ses PV max, et il inflige des DGT de vent équivalents à la somme de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de son ATQ, <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de ses PV max, et <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> du total des PV qu'il a perdus au cours du combat à une cible unique, tout en infligeant des DGT de vent équivalents à la somme de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> de son ATQ, <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> de ses PV max, et <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#6[i]%</nobr></span> du total des PV qu'il a perdus au cours du combat aux cibles adjacentes. Le montant des PV qu'il a perdus au cours du combat est plafonné à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#7[i]%</nobr></span> de ses PV max. Ce montant est remis à zéro et recommence à s'accumuler après l'utilisation de l'ultime.",
+   "ultimateCost": 130,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 380905,
+   "name": "Condamnation à mort",
+   "iconPath": "230c5e37060d10deb29204b871182542b4291d153af3e8f5348ddc59896016c4",
+   "typeDescHash": "Ultime",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.24,
+      0.6,
+      0.096,
+      0.24,
+      0.6,
+      0.24,
+      0.9
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.256,
+      0.64,
+      0.1024,
+      0.256,
+      0.64,
+      0.256,
+      0.9
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.272,
+      0.68,
+      0.1088,
+      0.272,
+      0.68,
+      0.272,
+      0.9
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.288,
+      0.72,
+      0.1152,
+      0.288,
+      0.72,
+      0.288,
+      0.9
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.304,
+      0.76,
+      0.1216,
+      0.304,
+      0.76,
+      0.304,
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.32,
+      0.8,
+      0.128,
+      0.32,
+      0.8,
+      0.32,
+      0.9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.34,
+      0.85,
+      0.13599999,
+      0.34,
+      0.85,
+      0.34,
+      0.9
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.36,
+      0.9,
+      0.144,
+      0.36,
+      0.9,
+      0.36,
+      0.9
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.38,
+      0.95,
+      0.152,
+      0.38,
+      0.95,
+      0.38,
+      0.9
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.4,
+      1,
+      0.16,
+      0.4,
+      1,
+      0.4,
+      0.9
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.416,
+      1.04,
+      0.1664,
+      0.416,
+      1.04,
+      0.416,
+      0.9
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.432,
+      1.08,
+      0.1728,
+      0.432,
+      1.08,
+      0.432,
+      0.9
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.448,
+      1.12,
+      0.1792,
+      0.448,
+      1.12,
+      0.448,
+      0.9
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.464,
+      1.16,
+      0.1856,
+      0.464,
+      1.16,
+      0.464,
+      0.9
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.48,
+      1.2,
+      0.192,
+      0.48,
+      1.2,
+      0.48,
+      0.9
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ZdE",
+   "descHash": "Chaque fois que Blade subit des DGT ou consomme ses PV, il gagne 1 cumul de Charge, jusqu'à un maximum de 5 cumuls. Blade ne peut gagner qu'1 cumul de Charge au maximum pour chaque attaque qu'il subit.<br />Lorsque le nombre de cumuls de Charge atteint son maximum, il lance immédiatement une <u>attaque de suivi</u> sur tous les ennemis, infligeant des DGT de vent équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de son ATQ + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> de ses PV max. Blade restaure également <nobr>#3[i]%</nobr> de ses PV max. Toutes les Charges sont consommées après avoir déclenché l'attaque de suivi.",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "10",
+   "id": 866018,
+   "name": "Don de Shuhu",
+   "iconPath": "d5ce368a1106becffd75c5d24b4fb8376735cbcf6ff2960fb9206e79e4b5a843",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      3,
+      0.22,
+      0.25,
+      0.55
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.242,
+      0.25,
+      0.605
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.264,
+      0.25,
+      0.66
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.286,
+      0.25,
+      0.715
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.308,
+      0.25,
+      0.77
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.33,
+      0.25,
+      0.825
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.3575,
+      0.25,
+      0.89375
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.385,
+      0.25,
+      0.9625
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.4125,
+      0.25,
+      1.03125
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.44,
+      0.25,
+      1.1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.462,
+      0.25,
+      1.155
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.484,
+      0.25,
+      1.21
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.506,
+      0.25,
+      1.265
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.528,
+      0.25,
+      1.32
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.55,
+      0.25,
+      1.375
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 665432,
+   "name": "Attaque",
+   "iconPath": "6815fac4604272fab762faf7bf4dc9eaab9ef7cad28b6767e53fb141206ee81a",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Attaque immédiatement les ennemis. Consomme <nobr>#2[i]%</nobr> des PV max de Blade après être entré en combat pour infliger des DGT de vent équivalents à <nobr>#1[i]%</nobr> de ses PV max à tous les ennemis.<br />Si les PV de Blade sont insuffisants, ils tombent à 1 après utilisation de cette technique.",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "0",
+   "id": 782077,
+   "name": "Vent de karma",
+   "iconPath": "7336d5763dfbcc470414d1179ac64cdd37ada793bee850ff12f24849bbd5187f",
+   "typeDescHash": "Technique",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.4,
+      0.2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Propagation",
+   "descHash": "Consomme <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> des PV max de Blade pour infliger des DGT de vent équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de son ATQ + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> de ses PV max à une cible unique. Inflige également des DGT de vent équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de l'ATQ de Blade + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> de ses PV max aux cibles adjacentes. Si les PV de Blade sont insuffisants, ils tombent à 1 après utilisation de Forêt de lames.<br />Forêt de lames ne permet pas de régénérer de points de compétence.",
+   "ultimateCost": 0,
+   "break": "60 + 30/adjacent",
+   "energy": "30",
+   "id": 234486,
+   "name": "Forêt de lames",
+   "iconPath": "5c2b02f7fdaed4095ed4af8cebb0e5f06201ca638cbbd217ee8d1fc51de90cfc",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.1,
+      0.2,
+      0.08,
+      0.5,
+      0.2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.1,
+      0.24,
+      0.096,
+      0.6,
+      0.24
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.28,
+      0.112,
+      0.7,
+      0.28
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.32,
+      0.128,
+      0.8,
+      0.32
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.36,
+      0.144,
+      0.9,
+      0.36
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.4,
+      0.16,
+      1,
+      0.4
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.44,
+      0.176,
+      1.1,
+      0.44
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.1,
+      0.48,
+      0.192,
+      1.2,
+      0.48
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.1,
+      0.52,
+      0.208,
+      1.3,
+      0.52
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1205101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1205202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1205203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1205204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 18204,
+          "name": "Augm. de la RÉS aux effets",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+          "statusList": [
+           {
+            "key": "RÉS aux effets",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920200,
+            "count": 3
+           },
+           {
+            "id": 633445,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 18207,
+        "name": "Augmentation de PV",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "PV",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920200,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 18206,
+      "name": "Augm. des chances de coup critique",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+      "statusList": [
+       {
+        "key": "Chances de coup critique",
+        "value": 0.026999999
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 549504,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Lorsque les PV actuels de Blade sont inférieurs ou égaux à <nobr>50</nobr> %, les soins reçus augmentent de <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 18110,
+    "name": "Ad vitam æternam",
+    "iconPath": "ce2d60eb5c7ac1d54dc6902c7a4ceaf0ac184f6e172beec3b5cede070c25e6cb",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1205103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1205208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1205209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 18217,
+        "name": "Augm. des chances de coup critique",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+        "statusList": [
+         {
+          "key": "Chances de coup critique",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717386,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1205210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 102149,
+        "name": "Augmentation de PV",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+        "statusList": [
+         {
+          "key": "PV",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717386,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 18216,
+      "name": "Augm. de la RÉS aux effets",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+      "statusList": [
+       {
+        "key": "RÉS aux effets",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Les DGT infligés par l'attaque de suivi déclenchée par le talent augmentent de <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 18112,
+    "name": "Cyclone de destruction",
+    "iconPath": "4f3f86ebfb2c17f8c8faa1007312fda69735d49fa387d8e02015beead44d7316",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1205102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1205205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1205206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1205207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 18203,
+          "name": "Augmentation de PV",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+          "statusList": [
+           {
+            "key": "PV",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836259,
+            "count": 3
+           },
+           {
+            "id": 717386,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 18202,
+        "name": "Augm. des chances de coup critique",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96",
+        "statusList": [
+         {
+          "key": "Chances de coup critique",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836259,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 18205,
+      "name": "Augmentation de PV",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 633445,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Lorsque Blade touche un ennemi qui subit une Rupture de faiblesse avec Forêt de lames, il restaure <nobr>#1[i]%</nobr> de ses PV max + <nobr>#2[i]</nobr>.",
+    "ultimateCost": 0,
+    "id": 18113,
+    "name": "Morts sans fin",
+    "iconPath": "a24872dda0042b487d4e17222acf83c35f7bd801387505c5dc717ad4facadef9",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.05,
+       100
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1205201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 18209,
+    "name": "Augmentation de PV",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+    "statusList": [
+     {
+      "key": "PV",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corps",
+    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "propertyName": "Chances de coup critique",
+    "propertyIconPath": "2bf7f8117bb4bac5bac4a4b7866f2bf3c272b526b8d945ece48991383f5f9f96"
+   },
+   {
+    "relicTypeHash": "Pieds",
+    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "propertyName": "VIT",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+   },
+   {
+    "relicTypeHash": "Sphère planaire",
+    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "propertyName": "Augm. des DGT de vent",
+    "propertyIconPath": "fe44fb655f65017dcad0c260b4dcffe14de4b14816734239c2c60d4624cf8163"
+   },
+   {
+    "relicTypeHash": "Corde de liaison",
+    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "propertyName": "PV",
+    "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Première rencontre",
+   "text": "Pionnier/Pionnière... Je ne connais pas ce nom. Considère-toi chanceux/chanceuse.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 2,
+   "title": "Salutation",
+   "text": "Encore toi...? Le destin de ceux dont je me souviens n'est jamais bon.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 3,
+   "title": "Au revoir",
+   "text": "Pars. Il ne vaut mieux pas que tu sois dans les parages quand le mara frappera.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 4,
+   "title": "Connaître Blade : Nom",
+   "text": "Se désagréger tout en déchiquetant ses ennemis, voilà ce à quoi sert une lame.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 5,
+   "title": "Connaître Blade : Victime du mara",
+   "text": "Tout le monde est frappé par le mara de différentes manières, mais ma situation est particulière. Bien que le mara me hante, les souvenirs que j'en ai traversent rarement mon esprit, que ce soit des remords, de la haine, de la peur ou de la réflexion.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 6,
+   "title": "Connaître Blade : Démons",
+   "text": "Quand le mara frappe... Je change complètement.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 7,
+   "title": "Bavardage : Chasseurs de Stellaron",
+   "text": "Ensemble, on atteint nos objectifs.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 8,
+   "title": "Bavardage : Immortalité",
+   "text": "L'espoir que ce soit la dernière fois s'évanouit à chaque guérison amère de la chair.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 9,
+   "title": "Bavardage : Sacrifice",
+   "text": "Parmi cinq personnes, trois doivent payer le prix... Ces mots sont gravés dans chacune de mes blessures...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 10,
+   "title": "Passe-temps",
+   "text": "Ce n'est que pendant les brefs instants où elle virevolte qu'une lame peut disparaître.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 11,
+   "title": "Problèmes",
+   "text": "Quand est-ce que la mort viendra me chercher ? Je perds patience.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 12,
+   "title": "Anecdote",
+   "text": "Il y a de nombreuses armes plus tranchantes que la mienne, mais après des milliers d'affrontements, quelle importance ?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 13,
+   "title": "Connaissances",
+   "text": "Les morts ne connaissent pas la peur.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 14,
+   "title": "À propos de Kafka",
+   "text": "Elle a une forte influence sur le mara. Elle ne s'en servira pas avant le moment prévu, mais elle ne relâchera pas son emprise non plus.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 16,
+   "title": "À propos de Louve d'argent",
+   "text": "Au sein de ce monde qu'elle appelle un « jeu », elle ne renonce jamais, ni ne se plie face à la mort.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 17,
+   "title": "À propos de Jing Yuan",
+   "text": "Il a toujours... Il a toujours été celui d'entre nous qui comprenait le mieux le prix à payer, et pourtant, il n'a jamais rien dit, jamais rien fait !",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 18,
+   "title": "À propos de Dan Heng",
+   "text": "Imbibitor Lunae... Quand notre châtiment viendra-t-il ? Comment allons-nous payer notre dette ?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 19,
+   "title": "À propos de Jingliu",
+   "text": "Lorsqu'elle a brandi son épée, une douleur fantôme a traversé chaque partie de mon corps... Tout cela, c'est à cause d'elle !",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 51,
+   "title": "Rupture de faiblesse en début de combat",
+   "text": "Tu es sur mon chemin.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 52,
+   "title": "Avertissement de danger en début de combat",
+   "text": "Quelles surprises nous attendent ?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 53,
+   "title": "Début du tour 1",
+   "text": "Tu vas goûter à mon épée.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 54,
+   "title": "Début du tour 2",
+   "text": "Le tranchant d'une lame ne connaît pas la pitié.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 55,
+   "title": "Tour inactif",
+   "text": "L'attente draine la vigueur.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 56,
+   "title": "Renforcement de l'ATQ normale",
+   "text": "On a des comptes à régler !",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 57,
+   "title": "Compétence 1",
+   "text": "Le combat... est lancé !",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 58,
+   "title": "Compétence 2",
+   "text": "Ta fin... est proche !",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 59,
+   "title": "Attaque légère subie",
+   "text": "Trop peu...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 60,
+   "title": "Attaque lourde subie",
+   "text": "Bon timing.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 61,
+   "title": "Activation de l'ultime",
+   "text": "Ce paradis m'est inaccessible...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 62,
+   "title": "Déclenchement de l'ultime",
+   "text": "Savoure-le pour moi... Hmpf !",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 63,
+   "title": "Talent",
+   "text": "Un val... où tu t'endormiras !",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 64,
+   "title": "À terre",
+   "text": "Y a-t-il une chance que...?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 65,
+   "title": "Retour au combat",
+   "text": "Je suis en vie ? *soupir*",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 66,
+   "title": "Récupération de santé",
+   "text": "Il ne fallait pas.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 67,
+   "title": "Combat gagné",
+   "text": "Cette épée a besoin d'être aiguisée.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 68,
+   "title": "Ouverture de coffre au trésor",
+   "text": "C'est tout.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 69,
+   "title": "Énigme réussie",
+   "text": "C'est fait.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 70,
+   "title": "Cible ennemie trouvée",
+   "text": "On peut se rapprocher.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 71,
+   "title": "Retour en ville",
+   "text": "Y a-t-il autre chose ?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Détails du personnage",
+   "text": "Un épéiste ayant abandonné son corps pour devenir une lame, nom de naissance inconnu.<br />Il a juré fidélité à « l'Esclave du destin » et possède une capacité d'auto-guérison terrifiante.<br />Blade manie une épée ancienne criblée de fissures, au même titre que son corps et son esprit.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Histoire du personnage : Partie I",
+   "text": "La seule chose que ses sens pouvaient percevoir était une tache pourpre devant les yeux et le goût du fer dans la bouche. Ses membres ne réagissaient plus...<br />— Il devait être mort.<br /><br />« Tu te souviens ? »<br />Il ouvrit la bouche, perdu, sa voix était aussi rauque que celle d'une bête sauvage.<br />Le son émis par sa gorge s'arrêta soudain tandis que l'objet froid et dur pénétrait dans son torse.<br />Encore et encore, cela s'était reproduit des milliers de fois.<br /><br />Quelle merveille. Quand ses fibres musculaires se déchiraient, il pouvait percevoir le son subtil des tendons qui se rejoignaient et se reconnectaient.<br />Quelle émerveillement. Le monstre dans son corps se nourrissait, il voulait le transformer en une bête massive.<br />Quelle merveille. Il avait déjà perdu toute volonté de survivre, et pourtant son corps se régénérait sans aucune considération pour ses envies.<br />Quelle splendeur.<br /><br />Mais avant que l'épée ne transperce sa peau une fois de plus, il la saisit à mains nues et se releva lentement.<br />« Tu te souviens maintenant ? »<br />Il croisa les yeux injectés de sang de la femme, son esprit toujours rempli de vide.<br />Il se retrouva poignardé, une fois de plus.<br />« Souviens-toi de ce qu'est la mort, et apporte-la-leur. »<br /><br />Le pourpre réapparut dans ses yeux. Il fixa l'épée qui l'avait tué, et la lame se brisa en deux.<br />« Lève-toi et laisse-moi te tuer une fois de plus. »",
+   "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie II",
+   "text": "La seule chose que ses sens pouvaient percevoir était une tache pourpre devant les yeux et le goût du fer dans la bouche. Ses membres ne réagissaient plus...<br />— Il devait être mort.<br /><br />L'adolescent aux cheveux noirs frissonna violemment, s'accrochant toujours à la lance qu'il tenait dans les mains.<br />Il n'avait pas de cornes de dragon, et ses réactions étaient légèrement moins matures que dans ses souvenirs...<br />Mais il n'oublierait jamais la lance, ces yeux, la cruauté qui se cachait sous le calme de l'émeraude semblable à un miroir.<br />Ses blessures commencèrent à guérir. Ses iris vacillèrent et trouvèrent à nouveau l'adolescent.<br />Sans hésitation, le garçon fit un nouveau geste avec la lance...<br /><br />« C'est ça. »<br />C'est toi qui n'as aucune pitié pour tes ennemis.<br />Toi qui as enterré sans personne la personne que tu aimais.<br />Toi qui as presque causé la destruction de ta planète natale.<br /><br />Il s'effondra à nouveau.<br />L'adolescent pressa sa main contre ses blessures et recula, jusqu'à ce qu'il ne soit plus dans son champ de vision.<br />« On se recroisera, ███, avant que je n'assiste à ta mort en personne. »",
+   "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie III",
+   "text": "La seule chose que ses sens pouvaient percevoir était une tache pourpre devant les yeux et le goût du fer dans la bouche. Ses membres ne réagissaient plus...<br />— Il devait être mort.<br /><br />Le monstre l'avala à nouveau, mais cette fois, son ennemi n'était pas une autre personne.<br />L'imposante armure resta silencieuse. Il était emprisonné dans ses bras, et c'est la femme aux lunettes de soleil qui se mit à parler.<br /><br />« <u>Écoute</u>, je peux te tuer à nouveau, mais je ne pourrai peut-être pas te ramener. »<br />Sa voix était douce, et même le monstre à l'intérieur de son corps avait fini par se taire pour l'écouter.<br />« Mais je n'en ai pas envie. »<br />La femme se pencha et se mit à lui chuchoter à l'oreille. C'était un marché qu'il ne pouvait pas refuser. <br />« Qu'est-ce que vous voulez ? »<br />« Qu'y a-t-il de plus satisfaisant que d'assister à la mort de ceux qui ne meurent jamais ? Voilà ce qu'\"il\" a dit. »<br /><br />L'armure géante relâcha son emprise. Le destin avait décidé qu'il irait de l'avant, il partirait avec eux.<br />« <u>Écoute</u>, Bladie, détends-toi. »<br />« <u>Écoute</u>, ne pense plus à rien. ». Il acquiesça. La femme s'approcha de lui, souriant. Il trouvait que son sourire avait l'air très triste.<br />« Peut-être que quelqu'un l'a abandonnée sans lui laisser une chance », pensa-t-il.",
+   "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie IV",
+   "text": "Il ne pouvait plus rien voir.<br /><br />Il se souvenait de quand il était arrivé à Xianzhou, il y a des décennies, à bord d'un vaisseau marchand, et comme il avait été impressionné par l'artisanat local.<br />Le jeune homme était obsédé au point d'oublier de manger ou de boire, et dépensait son inspiration comme s'il manquait de temps. Il avait forgé des centaines de merveilles, dont quatre étaient très célèbres.<br /><br />La Lame d'éclat était d'impeccable facture. Son corps d'encre luisait d'une brillance sanguine. Seuls les maîtres épéistes les plus puissants de Xianzhou étaient capables de déterminer la véritable signification de son existence.<br />La fille foxienne avait l'habitude de décocher trois flèches simultanément avec son arc recourbé dans les situations désespérées, tout en continuant à conduire l'astroskiff et à rire avec les autres.<br />L'homme aux cheveux noirs et aux cornes de dragon utilisait ses capacités à manipuler l'eau pour guérir ses alliés, avant d'en imprégner sa lance pour transpercer les lignes ennemies.<br />Il y avait aussi le jeune qui ne cessait de se quereller avec lui. Dès qu'il vit le glaive dévastateur, il le saisit, pour ne jamais s'en séparer.<br /><br />██ avait péri. Une première et unique mort.<br />Mais il était toujours présent, son cerveau de jeune homme s'agitant, réfléchissant, pour l'éternité.<br />Il pensait à ses mains, qui n'avaient plus la même dextérité. Des mains qui ne pouvaient plus forger de lame, créer d'autre arme.<br />— Mais tout cela n'avait pas d'importance.<br />À partir de ce moment, ce corps serait la seule arme dont Blade aurait besoin.",
+   "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
+  }
+ ],
+ "archive": {
+  "cvCn": "刘以嘉",
+  "cvJp": "三木眞一郎",
+  "cvKr": "곽윤상",
+  "cvEn": "Daman Mills",
+  "camp": "Chasseurs de Stellaron"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Blade",
+ "rarity": 5,
+ "descHash": "Membre des Chasseurs de Stellaron, il a abandonné son corps pour devenir une véritable épée. Il a juré fidélité à l'Esclave du destin et possède une capacité d'autoguérison terrifiante.",
+ "artPath": "08bcfc539e148c57b990427b530fd88545572ba361aa886940cc6b1bca181d4c",
+ "miniIconPath": "8d3a2149c30a2d8cf7ce5fe04eb60112109b795a1f3c3ab9b00686cc2a068e3b",
+ "damageType": {
+  "id": 16,
+  "iconPath": "a77d91df3b1045f9fa66ce1300c4d921c0f89e51135df8208904334e8a0f0b80",
+  "color": "#00FF9C",
+  "name": "Vent",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "350c43e263450cb79bfb44c59122dd3e2b2e6a80aa3310f4f69c91d7011f6105",
+  "altIconPath": "20478bd2d976a94efdfdc05a59342dc854f07c2ab6e1ef57c098224877a855ce",
+  "color": "#FFFFFF",
+  "name": "La Destruction",
+  "rarity": 0
+ },
+ "pageId": "blade"
+}

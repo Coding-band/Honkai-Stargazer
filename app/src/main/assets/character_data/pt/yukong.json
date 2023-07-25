@@ -1,10 +1,10 @@
 {
  "spRequirement": 130,
- "iconPath": "88126ff20325cffaf4dbcf1d751dad001b6697aba69846fb833174415e7ce025",
+ "iconPath": "1f1cd84e7a8305b16b6123512c96cb5cb1523628f6849360d810aac6b6e26f52",
  "bgPath": "abadfebf8b7c8f0d62e6850d73154a0beb74556b9900f47e31e3ee0cbe3d5d46",
- "figPath": "8fa65397918dc3dcbb3c0e390e521cbaf184dbeab94455b33b0294600c11185b",
+ "figPath": "c3ae90b1bfb9e4eb4a1de55bcb1f5aeedb1eb6551d7243772be2858a9350dc25",
  "fgPath": "47d38e65dc560652b53af6b633390a86334442d3a7cfc069179171e0f497b418",
- "splashIconPath": "b57a7e5ebc56a6746c13742499c44e32dbb68fd769d4677e06bee16703ed18bd",
+ "splashIconPath": "c00ba1e115b22ae1e578373364175814bc6b3a315c785a88dc9f4412f19d754a",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Cálice (Grande Mina)",
     "Recompensas de Missão",
-    "Recompensas de Atribuição"
+    "Recompensas de Atribuição",
+    "Troca de Brasas"
    ]
   },
   "125435": {
@@ -78,7 +79,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Cálice (Planícies Nevadas Distantes)",
-    "Treinamento Diário"
+    "Treinamento Diário",
+    "Troca de Brasas"
    ]
   },
   "409962": {
@@ -104,7 +106,7 @@
    "iconPath": "13ea8e54efb3930b934fb523a1fb7f3cc2793f9ddf94fbbcb3b43013b2c35208",
    "name": "Coroa de Ouro de uma Sombra do Passado",
    "desc": "Acessório de cabeça da Sombra Decadente. Pode ser usado para Ascensão de personagens de Dano Imaginário.",
-   "lore": "Acessório deixado para trás pela sombra de uma Guardiã do passado, que contava histórias da cidade de Inverno Eterno.<br /><br />\"Alina, a Amável: sua bondade é tão elevada quanto o céu e sua compaixão brilha tanto quanto o ouro.\"",
+   "lore": "Acessório deixado para trás pela sombra de uma Guardiã do passado, que contava histórias da cidade de Inverno Eterno.<br /><br />\"Alina, a Amorosa: sua bondade é tão elevada quanto o céu e sua compaixão brilha tanto quanto o ouro.\"",
    "purpose": "Materiais de Ascensão de Personagem",
    "rarity": 4,
    "rewardPath": "/material/468391",
@@ -162,7 +164,8 @@
    "rarity": 2,
    "rewardPath": "/material/635670",
    "comeFrom": [
-    "Cálice (Assentamento de Robôs)"
+    "Cálice (Assentamento de Robôs)",
+    "Troca de Brasas"
    ]
   },
   "717385": {
@@ -212,7 +215,8 @@
    "rewardPath": "/material/920197",
    "comeFrom": [
     "Cálice (Assentamento de Robôs)",
-    "Sintetizador Omni — Síntese de Material"
+    "Sintetizador Omni — Síntese de Material",
+    "Troca de Brasas"
    ]
   },
   "985668": {
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "c9b0d84d92ef1bb892f14b5bea393f8c827b9e0c761268405c74a00e2f649bf6",
    "artPath": "7dfec361985b08b43a5a646d26008f4e459c9555133c8fabfc70694329df9c94",
    "name": "Marechala Aérea",
    "descHash": "No início da batalha, aumenta a VEL de todos os aliados em <nobr>#1[i]%</nobr> por <nobr>#2[i]</nobr> rodada(s).",
@@ -429,25 +433,25 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "a5deeed4c9ac17d2944f8696d265c9650c3257d1c2c8c67147f0f990e5c8e446",
    "artPath": "114a28b6e9ef0c40c19643c19d2fe602ab3438c152b6c6167f23d18de0a28b7e",
    "name": "Comando Celeste",
-   "descHash": "Quando a energia atual de um aliado é igual ao seu limite de energia, Yukong regenera <nobr>#1[i]</nobr> a mais de energia. Este efeito só pode ser ativado uma vez por aliado. A contagem de ativação é reiniciada após Yukong conjurar sua Perícia Suprema.",
+   "descHash": "Quando a energia atual de um aliado é igual ao seu limite de energia, Yukong regenera <nobr>#1[i]</nobr> de energia adicional. Este efeito só pode ser ativado uma vez para cada aliado. A contagem de ativação é reiniciada após Yukong utilizar sua Perícia Suprema.",
    "params": [
     5
    ]
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "4f7922cc5ed3c0c82971344e0c2611938b4ce3ffa5b702c02eccd6bec22c6ee7",
    "artPath": "fdee72d331b7bf0ac0914972ae9a813a744c70d078da5688859dfb85d70cbb65",
    "name": "Saraivada Torrencial",
-   "descHash": "Nv. de Perícia +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. de ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+   "descHash": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
    "params": []
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "463256654a2a6353042ce925b2bf69db853f3f456aa46c918136d6a39510246a",
    "artPath": "194bbb3dbd67bbed7c87b0082066c156ad8868b4e4dfb585c50ceaad269d019b",
    "name": "Ecos Zefirinos",
    "descHash": "Quando o \"Arco Estrondoso\" está ativado, Yukong causa <nobr>#1[i]%</nobr> a mais de Dano a inimigos.",
@@ -457,15 +461,15 @@
   },
   {
    "id": 5,
-   "iconPath": "",
+   "iconPath": "9ea6b11350a3ecf3119418a95c12891b2d7f7da1227f8b001a170e03925a23fb",
    "artPath": "b81f63bc1b377218f735d67e4354d87285c9071eaa17a627e5c6eeba57f32c7c",
    "name": "Tiro Mortal Majestoso",
-   "descHash": "Nv. de Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. de Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+   "descHash": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
    "params": []
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "21d0b3d950fb430984cb0f86c293ad3c543b992159b2a095f87b2d1ac0b2d803",
    "artPath": "1ab03063934161e456569787dbb00245db7094a97f059311470ba7d9d7152efb",
    "name": "Arco da Trovoada",
    "descHash": "Quando Yukong usa sua Perícia Suprema, ela ganha imediatamente <nobr>#1[i]</nobr> acúmulo(s) de \"Arco Estrondoso\".",
@@ -496,8 +500,8 @@
    "tagHash": "Alvo Único",
    "descHash": "Causa <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Yukong como Dano <span style=\"color:#F4D258;\">Imaginário</span> a um inimigo-alvo.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 256489,
    "name": "Atiradora de Flechas",
    "iconPath": "d6dd121f31c7761091098c50d63fe8e7eece5e7029669c22c2be833f7bd830bd",
@@ -655,10 +659,10 @@
   },
   {
    "tagHash": "Suporte",
-   "descHash": "Obtém <nobr>#1[i]</nobr> acúmulo(s) de \"Arco Estrondoso\" (até um máximo de 2 acúmulos). Quando \"Arco Estrondoso\" está ativo, o ATQ de todos os aliados aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>, e sempre que a rodada de um aliado acaba, Yukong perde 1 acúmulo de \"Arco Estrondoso\".<br />Na rodada na qual Yukong ganha \"Arco Estrondoso\" usando a Perícia, \"Arco Estrondoso\" não será removido.",
+   "descHash": "Obtém <nobr>#1[i]</nobr> acúmulo(s) de \"Arco Estrondoso\" (até um máximo de 2 acúmulos). Quando \"Arco Estrondoso\" está ativo, o ATQ de todos os aliados aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>, e sempre que a rodada de um aliado (incluindo a de Yukong) acaba, Yukong perde 1 acúmulo de \"Arco Estrondoso\".<br />Na rodada na qual Yukong ganha \"Arco Estrondoso\" usando a Perícia, \"Arco Estrondoso\" não será removido.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 30,
+   "break": "0",
+   "energy": "30",
    "id": 340430,
    "name": "Saudação Encorajadora",
    "iconPath": "4f7922cc5ed3c0c82971344e0c2611938b4ce3ffa5b702c02eccd6bec22c6ee7",
@@ -941,10 +945,10 @@
   },
   {
    "tagHash": "Alvo Único",
-   "descHash": "Ao usar sua Perícia Suprema, se o \"Arco Estrondoso\" estiver ativo em Yukong, a Chance de CRIT de todos os aliados aumenta adicionalmente em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> e o Dano CRIT aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>. Ao mesmo tempo, causa Dano <span style=\"color:#F4D258;\">Imaginário</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Yukong a um único inimigo.",
+   "descHash": "Se o \"Arco Estrondoso\" estiver ativo em Yukong quando a sua Perícia Suprema for utilizada, a Chance de CRIT de todos os aliados aumenta adicionalmente em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> e o Dano CRIT aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>. Ao mesmo tempo, causa Dano <span style=\"color:#F4D258;\">Imaginário</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Yukong a um único inimigo.",
    "ultimateCost": 130,
-   "break": 90,
-   "energy": 5,
+   "break": "90",
+   "energy": "5",
    "id": 457075,
    "name": "Mergulho do Falcão",
    "iconPath": "a53886fe67a2b6f98287e63b05569bb529ff697255949270938e687002373401",
@@ -1242,10 +1246,10 @@
   },
   {
    "tagHash": "Aprimoramento",
-   "descHash": "O ATQ Básico causa adicionalmente o Dano <span style=\"color:#F4D258;\">Imaginário</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Yukong, e aumenta o Dano de Redução de Tenacidade deste ataque em <nobr>#2[i]%</nobr>. Este efeito pode ser ativado novamente após <nobr>#3[i]</nobr> rodada(s).",
+   "descHash": "O ATQ Básico causa adicionalmente Dano <span style=\"color:#F4D258;\">Imaginário</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Yukong, e aumenta o Dano de Redução de Tenacidade deste ataque em <nobr>#2[i]%</nobr>. Este efeito pode ser ativado novamente após <nobr>#3[i]</nobr> rodada(s).",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 541016,
    "name": "Sete Camadas, Uma Flecha",
    "iconPath": "dcde10018c77817563868d4551cda3125e92c3320a06201e0daa79def94c81f8",
@@ -1543,10 +1547,10 @@
   },
   {
    "tagHash": "",
-   "descHash": "Após atacar um inimigo e entrar na batalha, a Tenacidade do Tipo do inimigo sofrerá Enfraquecimento.",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do alvo inimigo.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 741602,
    "name": "Ataque",
    "iconPath": "d6dd121f31c7761091098c50d63fe8e7eece5e7029669c22c2be833f7bd830bd",
@@ -1565,10 +1569,10 @@
   },
   {
    "tagHash": "Aprimoramento",
-   "descHash": "Após usar essa Técnica, entra no modo Corrida por <nobr>#1[i]</nobr> segundos. Enquanto estiver correndo, a VEL de Movimento aumenta em <nobr>#2[i]%</nobr>, e Yukong recebe <nobr>#3[i]</nobr> acúmulo(s) de \"Arco Estrondoso\" ao entrar em batalha atacando inimigos.",
+   "descHash": "Após usar sua Técnica, Yukong entra no modo Corrida por <nobr>#1[i]</nobr> segundos. Enquanto estiver no modo Corrida, a VEL de Movimento aumenta em <nobr>#2[i]%</nobr>, e Yukong recebe <nobr>#3[i]</nobr> acúmulo(s) do \"Arco Estrondoso\" ao entrar em batalha atacando inimigos.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 825543,
    "name": "Seguindo o Vento",
    "iconPath": "7fee4f623fa505ccef5b928942de74ad2b0615eb43831ed6697e5762a2183310",
@@ -1591,6 +1595,110 @@
   }
  ],
  "skillTreePoints": [
+  {
+   "id": 1207101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1207202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1207203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 693205,
+        "name": "Bônus de Dano: Imaginário",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "b10a43943e57ac6452d5a3a6d13a98d314da19edcff2fe7de6e53bc2d55a6894",
+        "statusList": [
+         {
+          "key": "Bônus de Dano <span style=\"color:#F4D258;\">Imaginário</span>",
+          "value": 0.032
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920197,
+          "count": 2
+         },
+         {
+          "id": 633444,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 693204,
+      "name": "Bônus de PV",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635670,
+        "count": 2
+       },
+       {
+        "id": 549503,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Yukong pode resistir a 1 aplicação de penalidade por vez. Este efeito pode ser ativado novamente após <nobr>#1[i]</nobr> rodada(s).",
+    "ultimateCost": 0,
+    "id": 693108,
+    "name": "Aqueronte",
+    "iconPath": "c4bf4760b3f07106f3b67337a6126631b844818a9ba3389536dad115bbcf5aa5",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635670,
+        "count": 2
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
   {
    "id": 1207102,
    "type": 1,
@@ -1664,8 +1772,6 @@
    "embedBonusSkill": {
     "descHash": "Quando Yukong está no campo, o Dano <span style=\"color:#F4D258;\">Imaginário</span> causado por todos os aliados aumenta em <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 693111,
     "name": "Mestre do Arco",
     "iconPath": "6cc2a69ae38e504610c28837cc3f361a6a7387a207592fbd4e250ed96d4d1cfd",
@@ -1806,8 +1912,6 @@
    "embedBonusSkill": {
     "descHash": "Quando \"Arco Estrondoso\" está ativo, Yukong regenera <nobr>#1[i]</nobr> de Energia adicional sempre que um aliado age.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 693110,
     "name": "Majestas",
     "iconPath": "521fee47e273e39f0ab459443c4a0165ddf754ae52d06e28d7a3dcf52b15fa57",
@@ -1935,112 +2039,6 @@
      }
     ]
    }
-  },
-  {
-   "id": 1207101,
-   "type": 1,
-   "children": [
-    {
-     "id": 1207202,
-     "type": 2,
-     "children": [
-      {
-       "id": 1207203,
-       "type": 2,
-       "children": [],
-       "embedBuff": {
-        "id": 693205,
-        "name": "Bônus de Dano: Imaginário",
-        "levelReq": 0,
-        "promotionReq": 3,
-        "iconPath": "b10a43943e57ac6452d5a3a6d13a98d314da19edcff2fe7de6e53bc2d55a6894",
-        "statusList": [
-         {
-          "key": "Bônus de Dano <span style=\"color:#F4D258;\">Imaginário</span>",
-          "value": 0.032
-         }
-        ],
-        "cost": [
-         {
-          "id": 29328,
-          "count": 8000
-         },
-         {
-          "id": 920197,
-          "count": 2
-         },
-         {
-          "id": 633444,
-          "count": 2
-         }
-        ]
-       }
-      }
-     ],
-     "embedBuff": {
-      "id": 693204,
-      "name": "Bônus de PV",
-      "levelReq": 0,
-      "promotionReq": 2,
-      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
-      "statusList": [
-       {
-        "key": "PV",
-        "value": 0.04
-       }
-      ],
-      "cost": [
-       {
-        "id": 29328,
-        "count": 4000
-       },
-       {
-        "id": 635670,
-        "count": 2
-       },
-       {
-        "id": 549503,
-        "count": 4
-       }
-      ]
-     }
-    }
-   ],
-   "embedBonusSkill": {
-    "descHash": "Yukong pode resistir a 1 aplicação de penalidade por vez. Este efeito pode ser ativado novamente após <nobr>#1[i]</nobr> rodada(s).",
-    "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
-    "id": 693108,
-    "name": "Aqueronte",
-    "iconPath": "c4bf4760b3f07106f3b67337a6126631b844818a9ba3389536dad115bbcf5aa5",
-    "levelReq": 0,
-    "promotionReq": 2,
-    "levelData": [
-     {
-      "params": [
-       2
-      ],
-      "level": 1,
-      "levelReq": 0,
-      "promotionReq": 2,
-      "cost": [
-       {
-        "id": 29328,
-        "count": 4000
-       },
-       {
-        "id": 635670,
-        "count": 2
-       },
-       {
-        "id": 985668,
-        "count": 1
-       }
-      ]
-     }
-    ]
-   }
   }
  ],
  "relicRecommend": {
@@ -2068,8 +2066,8 @@
    {
     "relicTypeHash": "Corda de Ligação",
     "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
-    "propertyName": "Taxa de Regeneração de Energia",
-    "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
+    "propertyName": "ATQ",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
    }
   ]
  },
@@ -2217,7 +2215,7 @@
   {
    "id": 15,
    "title": "Sobre a Bailu",
-   "text": "Embora a Bailu seja reverenciada como a grande mestra desde o seu nascimento, mesmo sem poder opinar quanto a isso, seu título de Curandeira foi conquistado por meio de sua prática especializada em medicina.",
+   "text": "Embora a Bailu seja reverenciada como a Grande Mestra desde o seu nascimento, mesmo sem poder opinar quanto a isso, seu título de Curandeira foi conquistado por meio de sua prática especializada em medicina.",
    "unlockRequirement": "",
    "cnUrl": "e0588fedf954d150745e82f4fa4aad834dfc9e11268fb61349287bb773d433a9",
    "jpUrl": "bf475a6603ffb78fd5a4c04c686be39db122331b31cdcafeea608e05b61f3fc2",

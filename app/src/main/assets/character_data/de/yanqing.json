@@ -1,10 +1,10 @@
 {
  "spRequirement": 140,
- "iconPath": "56e2db241bd71da55d90de713fd332572a4215c32f50aadde43072436a890a32",
+ "iconPath": "9760b3d8dc2f3ccb3e40e7d828c829c53b229c69811f23bbe56736ebdac7200d",
  "bgPath": "1ad2155f6d696b85d83c65b403a7bbe5774d4c76562164e9af5dad6471a7c976",
- "figPath": "008833eb9b2916ba2c4e9c03fe5dc853887e23e26fa6195ab1e48c691fc460aa",
+ "figPath": "e22d500ff48be42e47f647d8094915b68a2394bec253392c91a5e4264519d3c6",
  "fgPath": "1fd33e126c8d2051b947cf0c7e33ffd6b5a9a365f1ab4b34b22f247ab4c0206b",
- "splashIconPath": "1225c60547f6a6064b72314c5d99ff4e54795beee2fbec04c47fca70f65e0eb3",
+ "splashIconPath": "30eaff12c3ae1b8f5b469fe989853664864d91eb5ede7e22937f858059d10a67",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Blütenkelch (Große Mine)",
     "Missionsbelohnungen",
-    "Auftragsbelohnungen"
+    "Auftragsbelohnungen",
+    "Glut-Tausch"
    ]
   },
   "67220": {
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Blütenkelch (Äußere Schneewüste)",
-    "Tägliches Training"
+    "Tägliches Training",
+    "Glut-Tausch"
    ]
   },
   "409962": {
@@ -154,7 +156,7 @@
    "iconPath": "a37da05958d9ef643e353e23b21bf7c7fd29f11504f3d16bb382ec0ecf6b2241",
    "name": "Ehrgeiz der Verzerrung",
    "desc": "Eine mittelgroße Menge an Antimaterie. Ein normales Material zur Verstärkung.",
-   "lore": "Eine mittelgroße Menge Antimaterie, die um den Leeren-Ranger: Verzerrer herumschwebt. Die Menge der Materie- und Antimaterieteilchen hat ein gefährliches Verhältnis erreicht.<br /><br />„Sie alle freuen sich auf den Moment der Auslöschung, wenn sie neu geschmiedet werden und mit der gesamten Welt verschmelzen.“",
+   "lore": "Eine mittelgroße Menge Antimaterie, die um den Leeren-Ranger: Verzerrer herumschwebt. Die Menge der Materie- und Antimaterieteilchen hat ein gefährliches Verhältnis erreicht ...<br /><br />„Sie alle freuen sich auf den Moment der Auslöschung, wenn sie neu geschmiedet werden und mit der gesamten Welt verschmelzen.“",
    "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
    "rarity": 3,
    "rewardPath": "/material/633378",
@@ -177,7 +179,8 @@
    "rarity": 2,
    "rewardPath": "/material/635674",
    "comeFrom": [
-    "Blütenkelch (Äußere Schneewüste)"
+    "Blütenkelch (Äußere Schneewüste)",
+    "Glut-Tausch"
    ]
   },
   "717319": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920201",
    "comeFrom": [
     "Blütenkelch (Äußere Schneewüste)",
-    "Omni-Synthesemaschine – Materialsynthese"
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Glut-Tausch"
    ]
   }
  },
@@ -438,7 +442,7 @@
   },
   {
    "id": 3,
-   "iconPath": "16fdca2019309d1d7fb961726bd0181efc12b47243846fb1961598cca82e08cb",
+   "iconPath": "3aa9c022e24a6a7b5b188589f8e02fd86f005bea963c26fcb9e42e8e7f1027a5",
    "artPath": "046d4d065c3f196bb4836d053784e98e3b5b3215e7d7ba06b110d8640eeb1f4f",
    "name": "Begabter Schwertkämpfer",
    "descHash": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis zu max. St. <nobr>10</nobr>.",
@@ -457,7 +461,7 @@
   },
   {
    "id": 5,
-   "iconPath": "d015b5925332dd37dc90faaf38ab2ac9326d4f9bb26bf946ffd085f0de4715d3",
+   "iconPath": "faf406dce51ed76956c89bc7361edbc336731d6723f6cf88239716ad87a577c7",
    "artPath": "2f321eb6e01bfff4e9c776e2f1e1be0fd3dd76c97d735af829a23b3daf4f6ada",
    "name": "Zum Kämpfen geboren",
    "descHash": "Ultimate-Stufe +2 bis zu max. St. <nobr>15</nobr>. Talentstufe +2 bis zu max. St. <nobr>15</nobr>.",
@@ -494,11 +498,11 @@
    "tagHash": "Einzelangriff",
    "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Yanqings ANG zu.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 531503,
    "name": "Kaltes Licht, kalte Klinge",
-   "iconPath": "78c41e808b0a2d01f85b55d2598185f529a8106c3ba58b7c8a15f1454fa3d2be",
+   "iconPath": "eda23bd03b5c4ba5e822df28e2a026899c4e8266db5b03a001273af8738bf92c",
    "typeDescHash": "Standardangriff",
    "levelReq": 0,
    "promotionReq": 0,
@@ -655,11 +659,11 @@
    "tagHash": "Einzelangriff",
    "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Yanqings ANG zu und aktiviert für 1 Rd. „Empathische Schwertverbindung“.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 30,
+   "break": "60",
+   "energy": "30",
    "id": 246976,
    "name": "Schwertwurf",
-   "iconPath": "16fdca2019309d1d7fb961726bd0181efc12b47243846fb1961598cca82e08cb",
+   "iconPath": "3aa9c022e24a6a7b5b188589f8e02fd86f005bea963c26fcb9e42e8e7f1027a5",
    "typeDescHash": "Fertigkeit",
    "levelReq": 0,
    "promotionReq": 0,
@@ -930,11 +934,11 @@
    "tagHash": "Einzelangriff",
    "descHash": "Erhöht Yanqings KRIT-Rate um <nobr>#1[i]%</nobr>. Erhöht Yanqings KRIT-SCH bei aktiver „Empathischer Schwertverbindung“ zusätzlich für 1 Rd. um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Der <u>Buff</u> hält 1 Rd. an. Fügt dann einem anvisierten Gegner <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> von Yanqings ANG zu.",
    "ultimateCost": 140,
-   "break": 90,
-   "energy": 5,
+   "break": "90",
+   "energy": "5",
    "id": 363621,
    "name": "Regenreiche Schwalbenjagd",
-   "iconPath": "4bf96bc426831906e3228d598d2efffb03b21d7e9c2f1b8f6f939dca0dc8343a",
+   "iconPath": "65bca3c3e825d6d874e9de471d62a550e55b7a0e75f9b356fcedd3e4e891bfab",
    "typeDescHash": "Ultimate",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1235,11 +1239,11 @@
    "tagHash": "Einzelangriff",
    "descHash": "Ist „Empathische Schwertverbindung“ aktiv, sinkt die Chance, dass Yanqing angegriffen wird. Außerdem wird seine KRIT-Rate um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> und sein KRIT-SCH um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> erhöht. Beim Angriff besteht eine <u>feste Chance</u> von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>, einen <u>Folgeangriff</u> auszuführen, der dem Ziel <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> von Yanqings ANG zufügt und mit einer <u>Grundchance</u> von <nobr>#6[i]%</nobr> für 1 Rd. Gefroren verursacht.<br />Der eingefrorene Gegner ist handlungsunfähig und erleidet zu Beginn jeder Runde <u>zusätzlichen</u> <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> von Yanqings ANG. <br />Wenn Yanqing SCH erleidet, verschwindet die „Empathische Schwertverbindung“.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 10,
+   "break": "30",
+   "energy": "10",
    "id": 46390,
    "name": "Scharfer Gefährte",
-   "iconPath": "faf9bdd5b8e346bc02d4ed9592de49f72d13a29ee5359b002d87f8151bbc49f3",
+   "iconPath": "2ccb1e7567b55ae40f936604526e47d134bff166c2df9bf47c1264439f1cd96b",
    "typeDescHash": "Talent",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1585,11 +1589,11 @@
    "tagHash": "",
    "descHash": "Greift den Gegner an und schwächt nach Kampfeintritt den Widerstand des Ziels gegen den entsprechenden Typ.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 878508,
    "name": "Angriff",
-   "iconPath": "78c41e808b0a2d01f85b55d2598185f529a8106c3ba58b7c8a15f1454fa3d2be",
+   "iconPath": "eda23bd03b5c4ba5e822df28e2a026899c4e8266db5b03a001273af8738bf92c",
    "typeDescHash": "",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1607,8 +1611,8 @@
    "tagHash": "Verstärkung",
    "descHash": "Fügt nach dem Einsatz der Technik Gegnern mit LP-Prozentsatz von <nobr>#1[i]%</nobr> oder höher zu Beginn des nächsten Kampfs <nobr>#2[i]%</nobr> mehr SCH für <nobr>#3[i]</nobr> Rd. zu.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 962449,
    "name": "Meisterfechter",
    "iconPath": "fcd2be4b2aa59e63cf6695bdb806aff85ac5cd4a174a334d9534d9e850d94930",
@@ -1704,11 +1708,9 @@
    "embedBonusSkill": {
     "descHash": "Der Angriff fügt Gegnern mit <span style=\"color:#47C7FD;\">Eis</span>-Schwäche zusätzlich <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <nobr>#1[i]%</nobr> von Yanqings ANG zu.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 968122,
     "name": "Gefrorener Segen",
-    "iconPath": "22cf179a530b447e29f8ef9c3865188acd775ac4ce59a15d65d1faaf363abaa6",
+    "iconPath": "2bfd7990fadbe67d030d93a428e9e585bac1500b72354c40b193dff2123c3dfd",
     "levelReq": 0,
     "promotionReq": 2,
     "levelData": [
@@ -1810,11 +1812,9 @@
    "embedBonusSkill": {
     "descHash": "Erhöht bei „Empathische Schwertverbindung“ den Effekt-WDS um <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 968125,
     "name": "Eisfrost",
-    "iconPath": "343d2fdf031738a3a442a85c0ee1caa26b741e4af2218862b1a7c4b5d63b1230",
+    "iconPath": "4b0c59cf22bb2143b78364ad60a697c213bb6611f02666ec656c83c41b9d8a2d",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
@@ -1952,11 +1952,9 @@
    "embedBonusSkill": {
     "descHash": "Erhöht bei der Auslösung eines kritischen Treffers die GES für <nobr>#2[i]</nobr> Rd. um <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 968124,
     "name": "Sanfte Klinge",
-    "iconPath": "3c4b5e5795583a6b281d3e54e125e6f795227f24b9725d410ccafe39e758f687",
+    "iconPath": "159df9196d258d347c97cc76288a5f332a5bc3a2b1639d8a53b3c15c4dd351da",
     "levelReq": 0,
     "promotionReq": 6,
     "levelData": [
@@ -2286,7 +2284,7 @@
   },
   {
    "id": 52,
-   "title": "Kampf beginnt: Achtung Gefahr",
+   "title": "Kampf beginnt: Gefahrenwarnung",
    "text": "Ein starker Gegner. Hilf mir, mich zu verbessern!",
    "unlockRequirement": "",
    "cnUrl": "9686f306a29bde4aa331baa09df657b84382cf04cecee9f9557b24d0b9c3f27a",

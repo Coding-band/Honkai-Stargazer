@@ -15,7 +15,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -189,7 +188,7 @@ public class InfoCharacterPage {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "Read JSON from Assests - advice", sw.toString(), context);
+            LogExport.bugLog(TAG, "Read JSON from Assests - advice", sw.toString(), e.getMessage(), context);
         }
 
         if (json_base == "" && json_base2 != ""){json_base  =json_base2;}
@@ -216,10 +215,10 @@ public class InfoCharacterPage {
                 StringWriter sw = new StringWriter();
                 PrintWriter pw = new PrintWriter(sw);
                 e.printStackTrace(pw);
-                LogExport.bugLog(TAG, "Read JSON from Assests", sw.toString(), context);
+                LogExport.bugLog(TAG, "Read JSON from Assests", sw.toString(), e.getMessage(), context);
             }
         }else{
-            Toast.makeText(context, "["+LANGUAGE+"] "+hsrItem.getName()+"'s file not exist", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, context.getString(R.string.item_not_available).replace("{%1}",LANGUAGE).replace("{%2}", hsrItem.getFileName()), Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -228,9 +227,10 @@ public class InfoCharacterPage {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
 
-        System.out.println("json_advice : aa"+json_advice+"bb");
         if (json_advice.equals("")){
             info_tablayout.removeTabAt(info_tablayout.getTabCount()-1);
+            viewArrayList.remove(viewArrayList.size()-1);
+            info_vp.setAdapter(new CustomViewPagerAdapter(viewArrayList));
         }else{
             JSONObject jsonAdvice = new JSONObject(json_advice);
 
@@ -505,6 +505,7 @@ public class InfoCharacterPage {
         ArrayList<MaterialItem> materialItemsRefPRE = new ArrayList<>();
         ArrayList<MaterialItem> currency = new ArrayList<>();
         ArrayList<MaterialItem> exp = new ArrayList<>();
+        if (!jsonObject.has("itemReferences")) return;
         JSONObject itemReferences = jsonObject.getJSONObject("itemReferences");
         Iterator<String> item_iter = itemReferences.keys();
         while (item_iter.hasNext()){
@@ -569,7 +570,7 @@ public class InfoCharacterPage {
         TextView intro_desc = info_introducing.findViewById(R.id.intro_desc);
         ScaleRatingBar intro_rare = info_introducing.findViewById(R.id.intro_rare);
 
-        intro_ico.setImageResource(item_rss.getCharByName(hsrItem.getName())[1]);
+        intro_ico.setImageResource(item_rss.getCharByName(hsrItem.getName(),hsrItem.getSex())[1]);
         intro_path_ico.setImageResource(item_rss.getIconByPath(hsrItem.getPath()));
         intro_element_ico.setImageResource(item_rss.getIconByElement(hsrItem.getElement()));
         intro_path_tv.setText(item_rss.getNameByPath(hsrItem.getPath()));
@@ -636,7 +637,7 @@ public class InfoCharacterPage {
                     StringWriter sw = new StringWriter();
                     PrintWriter pw = new PrintWriter(sw);
                     e.printStackTrace(pw);
-                    LogExport.bugLog(TAG, "combat_material_change | combat_status_change", sw.toString(), context);
+                    LogExport.bugLog(TAG, "combat_material_change | combat_status_change", sw.toString(), e.getMessage(), context);
                 }
             }
 
@@ -695,7 +696,7 @@ public class InfoCharacterPage {
                         StringWriter sw = new StringWriter();
                         PrintWriter pw = new PrintWriter(sw);
                         e.printStackTrace(pw);
-                        LogExport.bugLog(TAG, "combat_material_change | combat_desc_change", sw.toString(), context);
+                        LogExport.bugLog(TAG, "combat_material_change | combat_desc_change", sw.toString(), e.getMessage(), context);
                     }
                 }
 
@@ -874,12 +875,12 @@ public class InfoCharacterPage {
         TextView eidolon_desc5 = info_eidolon.findViewById(R.id.eidolon_desc5);
         TextView eidolon_desc6 = info_eidolon.findViewById(R.id.eidolon_desc6);
 
-        eidolon_ico1.setImageResource(item_rss.getCharByName(hsrItem.getName())[3]);
-        eidolon_ico2.setImageResource(item_rss.getCharByName(hsrItem.getName())[4]);
-        eidolon_ico3.setImageResource(item_rss.getCharByName(hsrItem.getName())[5]);
-        eidolon_ico4.setImageResource(item_rss.getCharByName(hsrItem.getName())[6]);
-        eidolon_ico5.setImageResource(item_rss.getCharByName(hsrItem.getName())[7]);
-        eidolon_ico6.setImageResource(item_rss.getCharByName(hsrItem.getName())[8]);
+        eidolon_ico1.setImageResource(item_rss.getCharByName(hsrItem.getName(),hsrItem.getSex())[3]);
+        eidolon_ico2.setImageResource(item_rss.getCharByName(hsrItem.getName(),hsrItem.getSex())[4]);
+        eidolon_ico3.setImageResource(item_rss.getCharByName(hsrItem.getName(),hsrItem.getSex())[5]);
+        eidolon_ico4.setImageResource(item_rss.getCharByName(hsrItem.getName(),hsrItem.getSex())[6]);
+        eidolon_ico5.setImageResource(item_rss.getCharByName(hsrItem.getName(),hsrItem.getSex())[7]);
+        eidolon_ico6.setImageResource(item_rss.getCharByName(hsrItem.getName(),hsrItem.getSex())[8]);
 
         eidolon_name1.setText(ranks.getJSONObject(0).getString("name"));
         eidolon_name2.setText(ranks.getJSONObject(1).getString("name"));
@@ -960,7 +961,7 @@ public class InfoCharacterPage {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "lightcone_list_reload", sw.toString(), context);
+            LogExport.bugLog(TAG, "lightcone_list_reload", sw.toString(), e.getMessage(), context);
         }
     }
 }

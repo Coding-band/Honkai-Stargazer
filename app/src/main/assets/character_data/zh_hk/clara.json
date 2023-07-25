@@ -1,10 +1,10 @@
 {
  "spRequirement": 110,
- "iconPath": "763bcf5bd4af318313b43fc38c896dc6a248ce2a41c08c38297c258dd099863e",
+ "iconPath": "e225b1f25ff6cb6cd3abd86df8b37cac66f5c7519a06093522e50aa9f97f793c",
  "bgPath": "38781f488d2fcd763f381c59c2ee003e81c9c9bbceeee988f2e4e8f4c29dc2af",
- "figPath": "f0e58b5e5509a7f65791b6ce4d667f5429be8913fd494ac61f4e9b4a6aa11d60",
+ "figPath": "4fae46d9af163086447d3cec15d2f27f5a93e311b7ac735ce50bdb95abb3bcad",
  "fgPath": "2d5c66397469c241cf289cc078ba6f139fd88c09024f47b45fb27b408fffb608",
- "splashIconPath": "80250b40d167ca2ba09fc4120b67d0321c06c47518189354c650728b9337cb1f",
+ "splashIconPath": "1f0651e2531e86d51347d9a0d001a46bf3f8134187f9dfcc25d5644aa541ab7d",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "擬造花萼【大礦區】",
     "任務獎勵",
-    "委託獎勵"
+    "委託獎勵",
+    "餘燼兌換"
    ]
   },
   "125435": {
@@ -93,7 +94,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "擬造花萼【城郊雪原】",
-    "每日實訓"
+    "每日實訓",
+    "餘燼兌換"
    ]
   },
   "409962": {
@@ -161,7 +163,8 @@
    "rarity": 2,
    "rewardPath": "/material/635673",
    "comeFrom": [
-    "擬造花萼【收容艙段】"
+    "擬造花萼【收容艙段】",
+    "餘燼兌換"
    ]
   },
   "717290": {
@@ -227,7 +230,8 @@
    "rewardPath": "/material/920200",
    "comeFrom": [
     "擬造花萼【收容艙段】",
-    "「萬能合成機」- 材料合成"
+    "「萬能合成機」- 材料合成",
+    "餘燼兌換"
    ]
   }
  },
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "aae46f0dfd1aef5f59f23bb49c4589c1413ef40a07e8cfa16fb08869142deecb",
    "artPath": "4a7c180ec7c961faee21e24fbc057174789723c19f85add6cf47236cbf8bdd2b",
    "name": "高大的背影",
    "descHash": "施放戰技後，不會清除敵方目標的【反擊標記】。",
@@ -426,7 +430,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "f78a52546491b6511009885347270970a522a1b58147bc4447aade85da911298",
    "artPath": "eef148752ed1f5a8d070b4f53dfb1dcd68a9d409c63a538724dd425330b11d8f",
    "name": "緊緊的擁抱",
    "descHash": "施放終結技後攻擊力提高<nobr>#1[i]%</nobr>，持續<nobr>#2[i]</nobr>回合。",
@@ -437,7 +441,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "c733f760b7c0b9b08cd348e80be013fae237c2712127681e68c58942737dac41",
    "artPath": "4e2c3cf3098eb4b75980adb81c38a07be1474aefe72a4fb56b5316834bded740",
    "name": "冰冷的鋼甲",
    "descHash": "戰技等級+2，最多不超過<nobr>15</nobr>級；普攻等級+1，最多不超過<nobr>10</nobr>級。",
@@ -445,7 +449,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "38f1c58ee593f576a17b8c70b8dacb9a90d163bce89ebbb1e20b756a9f7ce113",
    "artPath": "bcc5e475f5f14a2cae5a94cc654c301c00027d5444e838265e234d3a93d9217b",
    "name": "家人的溫暖",
    "descHash": "受到攻擊後，克拉拉受到的傷害降低<nobr>#1[i]%</nobr>，效果持續到自己的下個回合開始。",
@@ -455,7 +459,7 @@
   },
   {
    "id": 5,
-   "iconPath": "",
+   "iconPath": "127549ebae06ecf63baaadc6a79453223bfc164b848437850cd4e77ae8a277f6",
    "artPath": "c039825cb8396fadd31ba5faf689697494227d463f77f7905dcea398ca74375d",
    "name": "小小的承諾",
    "descHash": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
@@ -463,7 +467,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "634a7ef535d2caaaa70e226b3467ad06c40f1eccafcf239b0f1aa611e3fdc7e0",
    "artPath": "238257725efa29126a176bf6b02954d76fac8bcef1876390b11bb75c2f8063cf",
    "name": "長久的陪伴",
    "descHash": "我方其他目標遭到攻擊後，史瓦羅也有<nobr>#1[i]%</nobr>的固定概率觸發對攻擊者的反擊，並對攻擊目標添加【反擊標記】。施放終結技時，額外增加<nobr>#2[i]</nobr>次強化反擊的次數。",
@@ -495,8 +499,8 @@
    "tagHash": "單攻",
    "descHash": "對指定敵方單體造成等同於克拉拉<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 310670,
    "name": "我也想幫上忙",
    "iconPath": "a56a8dd217b79ffc2557b9b6ee7ca0e8f9ac596ce78704cfb8572793692a4975",
@@ -656,8 +660,8 @@
    "tagHash": "羣攻",
    "descHash": "對敵方全體造成等同於克拉拉<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害，並對所有被史瓦羅標上【反擊標記】的敵方目標額外造成等同於克拉拉<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。<br />戰技施放後所有【反擊標記】失效。",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 30,
+   "break": "30/hit",
+   "energy": "30",
    "id": 226729,
    "name": "史瓦羅在看着你",
    "iconPath": "c733f760b7c0b9b08cd348e80be013fae237c2712127681e68c58942737dac41",
@@ -946,8 +950,8 @@
    "tagHash": "強化",
    "descHash": "施放終結技後克拉拉受到的傷害額外降低<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>且被敵方目標攻擊的概率大幅提高，持續<nobr>#3[i]</nobr>回合。<br />同時史瓦羅的<u>反擊</u>得到強化，當任意我方目標受到攻擊後史瓦羅立即施放<u>反擊</u>，對敵方目標造成的傷害倍率提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>，並對其相鄰目標造成相當於主目標<nobr>50%</nobr>的傷害。強化效果可生效<nobr>#5[i]</nobr>次。",
    "ultimateCost": 110,
-   "break": 0,
-   "energy": 5,
+   "break": "0",
+   "energy": "5",
    "id": 110084,
    "name": "是約定不是命令",
    "iconPath": "ce7af5b7d5ea1e0fea993c2dc6d2b8a4cf06f28372bb0648029ee754469a1e5f",
@@ -1281,8 +1285,8 @@
    "tagHash": "單攻",
    "descHash": "克拉拉在史瓦羅的保護下受到敵方目標攻擊的傷害降低<nobr>#3[i]%</nobr>。攻擊克拉拉的敵方目標會被史瓦羅標上【反擊標記】，並遭到史瓦羅的<u>反擊</u>，對其造成等同於克拉拉<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 5,
+   "break": "30",
+   "energy": "5",
    "id": 795783,
    "name": "因爲我們是家人",
    "iconPath": "0cf0ee129cd4db07eb16e4c59da3690937f45cfe6780d6a9949efeb203858819",
@@ -1586,8 +1590,8 @@
    "tagHash": "",
    "descHash": "攻擊敵人，進入戰鬥後削弱敵方目標對應屬性韌性。",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 595197,
    "name": "攻擊",
    "iconPath": "a56a8dd217b79ffc2557b9b6ee7ca0e8f9ac596ce78704cfb8572793692a4975",
@@ -1608,8 +1612,8 @@
    "tagHash": "",
    "descHash": "立即攻擊敵人，進入戰鬥後克拉拉受到敵方攻擊的概率提高，持續<nobr>#1[i]</nobr>回合。",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 0,
+   "break": "60",
+   "energy": "0",
    "id": 511256,
    "name": "勝利的小小代價",
    "iconPath": "b2bb21eba04d3fa208a4d8698169257e73af1a7376832b91304e6b8ea8c1825f",
@@ -1737,8 +1741,6 @@
    "embedBonusSkill": {
     "descHash": "受到攻擊時有<nobr>#1[i]%</nobr>的固定概率解除自身1個負面效果。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 947875,
     "name": "家人",
     "iconPath": "9eb6853e6b9c0df2fa5f3210abcf981350869bfc8a9f6a49001982c1c4052da3",
@@ -1876,8 +1878,6 @@
    "embedBonusSkill": {
     "descHash": "抵抗控制類負面狀態的概率提高<nobr>#1[i]%</nobr>。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 947878,
     "name": "守護",
     "iconPath": "84ccd1a22755bb0519affc339f316f793fb22ab86a553f379a236f6399469861",
@@ -2018,8 +2018,6 @@
    "embedBonusSkill": {
     "descHash": "史瓦羅的反擊造成的傷害提高<nobr>#1[i]%</nobr>。",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 947877,
     "name": "復仇",
     "iconPath": "89dbcbd906fa02b1cb3ab71ced5a143e2f276cae8703f90411c885e9efbb2e38",
@@ -2109,8 +2107,8 @@
    {
     "relicTypeHash": "連結繩",
     "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
-    "propertyName": "擊破特攻",
-    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+    "propertyName": "能量恢復效率",
+    "propertyIconPath": "fa8f924ec11e6c11cad9d7a54d1db3dc1e9ad5a276eeb58ab17f2395a1b3522c"
    }
   ]
  },
@@ -2244,6 +2242,16 @@
    "jpUrl": "5efbea0338dddd52d8357eaa1157e43c7460161aefad2a6d0cae9e4d975cb7f2",
    "enUrl": "2fe9059415c35c2c7b61e4d0c66dc263e585db75d18948d9eeb3c4071f7b1591",
    "krUrl": "bf9d529b75dc1c0ea252fb8afd842d6b3a7cd70e28b59f1436fc74d59e296381"
+  },
+  {
+   "id": 14,
+   "title": "關於盧卡",
+   "text": "盧卡哥哥…是個很溫柔的人。雖然看上去有些莽撞，但他其實很細心哦。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
   },
   {
    "id": 51,

@@ -1,15 +1,15 @@
 {
- "name": "Chuva Constante",
+ "name": "降りやまぬ雨",
  "rarity": 5,
- "descHash": "Ela deixa a proteção da marquise, abre o guarda-chuva e entre em um beco cantarolando uma melodia alegre.<br />A chuva para pouco tempo depois.<br /><br />Ela coça a cabeça e desbloqueia a tela. Após alguns toques, gotas de chuva começam a cair numa área não maior que a de seu guarda-chuva.<br />O tamborilar das gotas se mistura à música do jogo, formando uma sinfonia calma e relaxante.<br />\"Jogar combina muito com essa chuvinha\".",
+ "descHash": "屋根の下を出たら、傘をさして鼻歌を歌いながら路地の奥にもぐりこむ彼女。<br />しばらくすると、雨が止む。<br /><br />彼女は少し悩む。そしてスクリーンをスライドしたら、頭上のわずかなスペースに、再び雨が滑り込んだ。<br />雨が傘にあたる音とゲームのBGMに、彼女は上機嫌。<br />「やっぱり雨の日にゲームをやるのが一番楽しい」",
  "iconPath": "978dd191d1fbfcc420fa6d784f5a1c6554b11b7fcaa18ed857673dc78f4609f1",
  "artPath": "6ee0a556d447feb45eadfcdd9d94b79832fc4f7e3c6139eee85ce10a6a27d8f2",
- "mediumIconPath": "24956fe97f4092d502e47ec189d570910647a626bb678cb99993baaa6a78d149",
+ "mediumIconPath": "828ef2f97585436b38338719f415cbab920bf83c0708bca208b7d3c40df08b36",
  "baseType": {
   "id": 0,
   "iconPath": "5db81403221d7b8ad7a2ce3064171dcae4c7b92618146e88a08b71d511bd4ae2",
   "color": "#FFFFFF",
-  "name": "A Inexistência",
+  "name": "虚無",
   "rarity": 0
  },
  "baseTypeId": 0,
@@ -19,16 +19,17 @@
    "type": 101,
    "purposeId": 11,
    "iconPath": "af49f8c10262045a4f9e4740703b52056b5f396b48b99c2d130c22f3dbfa99d9",
-   "name": "Crédito",
-   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
-   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
-   "purpose": "Moeda Comum",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
    "rarity": 3,
    "rewardPath": "/material/29328",
    "comeFrom": [
-    "Cálice (Grande Mina)",
-    "Recompensas de Missão",
-    "Recompensas de Atribuição"
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬",
+    "エンバー交換"
    ]
   },
   "549408": {
@@ -36,18 +37,18 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "7611366f7b3e71bd4b1eddf74cd0589941afe12e4af50e46e2c5faa4290e189e",
-   "name": "Peça Antiga",
-   "desc": "Peças mecânicas do Velho Mundo deixadas para trás. Material bruto usado para aprimoramentos.",
-   "lore": "Apesar de seu tamanho, foi moldada e polida de um jeito que, hoje, as pessoas teriam dificuldade de replicar.<br /><br />\"Um parafuso do Velho Mundo é mais forte que uma armadura da atualidade.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "古代パーツ",
+   "desc": "旧世界時代の残留機械のパーツ。強化に必要な簡易素材。",
+   "lore": "いくら小さくとも、現在では再現が困難な技術で鋳造、研磨されている。<br /><br />「旧世界の小さなネジが、我らの鎧よりも頑丈だとは」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 2,
    "rewardPath": "/material/549408",
    "comeFrom": [
-    "Autômatos",
-    "Inimigos do Universo Simulado",
-    "Recompensas de Atribuição",
-    "Troca de Brasas",
-    "Sintetizador Omni — Troca de Material"
+    "自動機兵からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "633349": {
@@ -55,17 +56,17 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "3066320d078375498b310e64107e444343b667691e130afcbe189ba2af568fe5",
-   "name": "Eixo Antigo",
-   "desc": "Eixo mecânico do Velho Mundo deixado para trás. Material normal usado para aprimoramentos.",
-   "lore": "Uma vez desmontado, seus componentes de precisão jamais podem ser montados novamente. Até mesmo os experientes em consertos da Divisão Tecnológica de Belobog pensariam duas vezes antes de tocar nisso.<br /><br />\"Seu imbecil, os Casacos Azuis vão trocar isso apenas por uns enlatados. Leve ao Chefe Svarog e você não vai precisar de comida nem de roupa por um bom tempo.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "古代シャフト",
+   "desc": "旧世界時代の残留機械のシャフト。強化に必要な普通素材。",
+   "lore": "精密に組み立てられた部品。一度分解すると復元することはできない。ベロブルグ技術部の熟練の整備員でも、簡単に手出しはできない。<br /><br />「バカ、これを青鎧に渡したって缶詰何個分だろ？スヴァローグに渡せば、もう衣住食には困らないぜ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 3,
    "rewardPath": "/material/633349",
    "comeFrom": [
-    "Autômatos no Nível de Equilíbrio 2 ou superior",
-    "Sintetizador Omni — Síntese de Material",
-    "Inimigos do Universo Simulado",
-    "Sintetizador Omni — Troca de Material"
+    "均衡Lv.2に達した後、自動機兵からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "635669": {
@@ -73,14 +74,15 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "6502db5082d780dc28897c77116d4c5eb48169a0e53851e06a7c2657d90cd457",
-   "name": "Obsidiana do Temor",
-   "desc": "Um fragmento de matéria escura capturado do vazio. Usado para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Inexistência</span>.",
-   "lore": "Nada pode provar o seu númeno.<br />Toque suavemente para ouvir um murmúrio obscuro do fragmento.<br /><br />\"████ ██ █ ████\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "黯淡な黒曜",
+   "desc": "虚空から得た暗黒物質の一欠片。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚無</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "いかなる方法でも欠片の本体を特定することはできない。<br />軽く触れると、破片から不明瞭な言葉が聞こえてくる。<br /><br />「████ ██ █ █」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 2,
    "rewardPath": "/material/635669",
    "comeFrom": [
-    "Cálice (Grande Mina)"
+    "疑似花萼「大鉱区」",
+    "エンバー交換"
    ]
   },
   "694487": {
@@ -88,15 +90,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "56ab8085d932c0a9521f684246a42bd320b199c3c1a6f3bd54b869c5f294fec9",
-   "name": "Éter Refinado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>6000</nobr> de EXP de Cone de Luz.",
-   "lore": "Uma lata de éter que foi extraída e destilada usando procedimentos especiais.<br /><br />\"O Jardim espera poder recriar uma glória do passado, mas é uma 'glória do passado' selecionada por eles. Você entende?\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "精製エーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>6000</nobr>獲得できる。",
+   "lore": "特殊な技術で精錬されたエーテル。<br /><br />「ガーデンは昔の輝かしい時代を取り戻そうとしている、だがそれは彼らが選択する『往日の輝き』だ、この意味がわかるか？」",
+   "purpose": "光円錐経験値素材",
    "rarity": 4,
    "rewardPath": "/material/694487",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)",
-    "Salão Esquecido"
+    "疑似花萼「外縁通路」",
+    "「忘却の庭」"
    ]
   },
   "694488": {
@@ -104,14 +106,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "1911d7bb4aad22029e82a9b17a0005674864038b6b61e86976ace8277267d9f6",
-   "name": "Éter Condensado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>2.000</nobr> de EXP de Cone de Luz.",
-   "lore": "Lata de éter refinado com técnicas especiais.<br /><br />\"Manuseie com cuidado, não deixe cair nem faça pressão sobre ela. Caso ocorra algum vazamento, consulte o capítulo II do \"Manual de Respostas a Desastres de Vazamentos\" para respostas de emergência.\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "濃縮エーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>2000</nobr>獲得できる。",
+   "lore": "特殊な技術で精錬されたエーテル。<br /><br />「気を付けて取り扱ってね。潰したり、落としたりしちゃダメよ。万が一、破損して中身が漏れた時は、『流溢災難対応手引き』の第二章に従って処理しなさい」",
+   "purpose": "光円錐経験値素材",
    "rarity": 3,
    "rewardPath": "/material/694488",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)"
+    "疑似花萼「外縁通路」",
+    "エンバー交換"
    ]
   },
   "694489": {
@@ -119,15 +122,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "03fc3a9bafdf0f18b1e49a885353ed442420842a2cc373428b242b213d2728fc",
-   "name": "Éter Espalhado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>500</nobr> de EXP de Cone de Luz.",
-   "lore": "Substância imaginária que não deveria existir. O material básico usado para criar Cones de Luz.<br />As imagens dos Cones de Luz se tornam ainda mais claras quando imbuídas dessa substância.<br /><br />\"Entendi, então esse é o suposto \"Sentimento\" do Jardim da Recordação. É por isso que os Memoriadores conseguem fazer viagens galácticas com lembranças.\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "希薄なエーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>500</nobr>獲得できる。",
+   "lore": "本来、現実には存在しない仮想媒質で、光円錐の基本原料。<br />光円錐に注入することで、中に封じられているイメージがより鮮明になる。<br /><br />「なるほどね～これがガーデン オブ リコレクションの『意質』ってやつ？だからメモキーパーは、記憶を携帯して星間旅行ができるんだね」",
+   "purpose": "光円錐経験値素材",
    "rarity": 2,
    "rewardPath": "/material/694489",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)",
-    "Recompensas de Atribuição"
+    "疑似花萼「外縁通路」",
+    "依頼報酬"
    ]
   },
   "717290": {
@@ -135,17 +138,17 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "f330a9b613a9d07e17442c544c8c44d1cde51e9707b5c49069e8269a991085e1",
-   "name": "Motor Antigo",
-   "desc": "Motor mecânico do Velho Mundo deixado para trás. Material avançado usado para aprimoramentos.",
-   "lore": "Usa Geoessência como a fonte de energia. Quando alimentado, descarrega auroras errantes, em vez de faíscas.<br /><br />\"Somente a Divisão Tecnológica sob comando direto da Guardiã Suprema tem acesso a informações sobre o Velho Mundo. Eu perdi meus privilégios depois que me demitiram.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "古代エンジン",
+   "desc": "旧世界時代の残留機械のエンジン。強化に必要な高級素材。",
+   "lore": "地髄を原動力としている。回転時に火花が散るのではなく、オーロラがゆらゆらと広がる。<br /><br />「大守護者直属の技術部だけに、旧世界の資料を閲覧する権限が与えられてるの。私はね、クビにされたからもう入れないよ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 4,
    "rewardPath": "/material/717290",
    "comeFrom": [
-    "Autômatos no Nível de Equilíbrio 4 ou superior",
-    "Sintetizador Omni — Síntese de Material",
-    "Inimigos do Universo Simulado",
-    "Sintetizador Omni — Troca de Material"
+    "均衡Lv.4に達した後、自動機兵からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "836255": {
@@ -153,15 +156,15 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "31a61b0ec4c9099529f319a194bb01941ee492504181d295998438acc9420fe1",
-   "name": "Obsidiana da Obsessão",
-   "desc": "Um pedaço considerável de matéria escura capturado do vazio. Usado para conceder um aumento considerável de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Inexistência</span>.",
-   "lore": "Aqueles que tiverem personalidade e mente fraca passarão a eternidade no caos com apenas um simples vislumbre neste prisma.<br /><br />",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "沈淪せし黒曜",
+   "desc": "虚空から得た完全なる暗黒物質。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚無</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "意思が弱い者は一目見ただけで、永遠に混沌の中に沈み込んでしまう。<br /><br />「         」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 4,
    "rewardPath": "/material/836255",
    "comeFrom": [
-    "Cálice (Grande Mina)",
-    "Sintetizador Omni — Síntese de Material"
+    "疑似花萼「大鉱区」",
+    "「万能合成マシン」- 素材合成"
    ]
   },
   "920196": {
@@ -169,15 +172,16 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "45ee8937d4435f1ef12bea975f3ecdad0de8bb040c92d255fb7bae223596dc37",
-   "name": "Obsidiana da Desolação",
-   "desc": "Um pedaço de matéria escura capturado do vazio. Usado para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Inexistência</span>.",
-   "lore": "Nenhum reflexo pode ser visto na superfície deste prisma preto. Ele não somente suga toda a luz, como parece absorver as emoções de seu portador, deixando apenas uma leve sensação de vazio.<br /><br />\"...\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "虚空の黒曜",
+   "desc": "虚空から得た暗黒物質の一塊。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚無</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "漆黒の側面は如何なる物影をも映さない。光を吸収するだけではなく、手に持った者の感情を奪い、淡々とした虚しさだけを残す。<br /><br />「……」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
-    "Cálice (Grande Mina)",
-    "Sintetizador Omni — Síntese de Material"
+    "疑似花萼「大鉱区」",
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換"
    ]
   }
  },
@@ -336,8 +340,8 @@
  ],
  "skill": {
   "id": 23007,
-  "name": "Miragem da Realidade",
-  "descHash": "Aumenta a Taxa de Acerto de Efeito do usuário em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. Quando o usuário causa Dano a um inimigo com <nobr>#4[i]</nobr> ou mais penalidades no momento, aumenta a Chance de CRIT do usuário em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span>. Depois que o usuário usar o seu ATQ Básico, Perícia, ou Perícia Suprema, existe uma chance-base de <nobr>#2[i]%</nobr> de implantar Código do Éter em um alvo aleatório que ainda não esteja com Código do Éter e que tenha sido atingido pela habilidade. Alvos com Código do Éter recebem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> a mais de Dano por 1 rodada.",
+  "name": "幻影と現実",
+  "descHash": "装備キャラの効果命中+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>。デバフが<nobr>#4[i]</nobr>つ以上ある敵に対して、装備キャラの会心率+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span>。装備キャラが通常攻撃、戦闘スキル、必殺技を発動した後、<nobr>#2[i]%</nobr>の基礎確率で攻撃を受けた敵の中から、「エーテルコード」を付与されてないランダムな敵1体に「エーテルコード」を付与する。「エーテルコード」を付与された敵の被ダメージ+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>、1ターン継続。",
   "levelData": [
    {
     "params": [

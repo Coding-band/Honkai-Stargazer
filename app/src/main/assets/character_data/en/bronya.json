@@ -1,10 +1,10 @@
 {
  "spRequirement": 120,
- "iconPath": "e5d864c6ff384fb640739a9e1c73308556b2ad59e3383cf5c55fe2fd9c18ee0b",
+ "iconPath": "15523f3647986fee34b61fe1fa520b566255cf9b4dafa815574791cf761d07bf",
  "bgPath": "3fa1eb9e9ba45969a37027482c706be3aac81ac1d6e4f7982ed5dd67c43016b2",
- "figPath": "c22dfae7568a1d31d238ad50ad01c6226d04d58e8b7346def94044b4f70cdcae",
+ "figPath": "c6593ec959483a23452832dcdf7f927e58906e7719c503d9b5c3b70fbee2bea7",
  "fgPath": "1c3e43f2e29ef9d1c5c4cb9c82a8c061d380003313047fcb76c5a380bd70a9a0",
- "splashIconPath": "055b8bcad58b75e935ef230e8f98214812101765b2106f9051aca37ca7dd2b38",
+ "splashIconPath": "e54404a449506c7e24c245f54dad95b5999e8a802a6eb15684d23c91d15f9c84",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Calyx (Great Mine)",
     "Mission rewards",
-    "Assignment rewards"
+    "Assignment rewards",
+    "Embers Exchange"
    ]
   },
   "125435": {
@@ -109,7 +110,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Calyx (Outlying Snow Plains)",
-    "Daily Training"
+    "Daily Training",
+    "Embers Exchange"
    ]
   },
   "409962": {
@@ -179,7 +181,8 @@
    "rarity": 2,
    "rewardPath": "/material/635670",
    "comeFrom": [
-    "Calyx (Robot Settlement)"
+    "Calyx (Robot Settlement)",
+    "Embers Exchange"
    ]
   },
   "717289": {
@@ -230,7 +233,8 @@
    "rewardPath": "/material/920197",
    "comeFrom": [
     "Calyx (Robot Settlement)",
-    "Omni-Synthesizer — Material Synthesis"
+    "Omni-Synthesizer — Material Synthesis",
+    "Embers Exchange"
    ]
   }
  },
@@ -421,7 +425,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "371c1538909a55030f5d4f64430454de28bce60e23f45420d6dee614f695bb06",
    "artPath": "f76fc71fe532ff644df5522a6541d5970783fbeeb04c4f11b29fa344e2eb36ae",
    "name": "Hone Your Strength",
    "descHash": "When using Skill, there is a <nobr>#1[i]%</nobr> fixed chance of recovering 1 Skill Point. This effect has a 1-turn cooldown.",
@@ -431,7 +435,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "54c37b3ac614706a9c27fd758e831ab103d61602727c7328e6269183b2ee0d55",
    "artPath": "43746abe73215a5325802ea470ca97170943c151f38823f0f8d73888c4a08898",
    "name": "Quick March",
    "descHash": "When using Skill, the target ally's SPD increases by <nobr>#1[i]%</nobr> after taking action, lasting for 1 turn.",
@@ -441,7 +445,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "d1ba5dc8cc105156c27441c5ad43cfce58688d0cd63f8463cc6719dc800a4c37",
    "artPath": "986959668883d50b9a6632a24d6bc0ce671bea47de2221c48c98389ce76b6152",
    "name": "Bombardment",
    "descHash": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Talent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
@@ -449,7 +453,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "a91f41a2823a82a9012f83f3fdffd3fb3fc5e5125c8030413ffc91c651fb6d11",
    "artPath": "8a624bd9da254480123bcf3b1ca27f1f89a0f1d04702d8df44094dfc69fe293a",
    "name": "Take by Surprise",
    "descHash": "After an ally other than Bronya uses Basic ATK on an enemy with Wind Weakness, Bronya immediately launches a follow-up attack on the target, dealing Wind DMG equal to <nobr>#1[i]%</nobr> of Bronya's Basic ATK DMG. This effect can only be triggered 1 time per turn.",
@@ -459,7 +463,7 @@
   },
   {
    "id": 5,
-   "iconPath": "",
+   "iconPath": "1c0b1d3bbd2b7376e6934f4ae327361d80d54137a5f16ccbe5830eabf235ffe0",
    "artPath": "36052e2484e82b6621315cea8235494fc3fceebfabc62d18efa4842fe214d792",
    "name": "Unstoppable",
    "descHash": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Basic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
@@ -467,7 +471,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "c9baf725a4ad35eac30d423e83adb26f889cd628ff913ecad7e1644f647ca320",
    "artPath": "7e64c42ea80c261f077c7b6ee1fddf7974d68fce70df4ad892b8e6fc37dbfbc6",
    "name": "Piercing Rainbow",
    "descHash": "The duration of the DMG Boost effect placed by the Skill on the target ally increases by <nobr>#1[i]</nobr> turn(s).",
@@ -498,8 +502,8 @@
    "tagHash": "Single Target",
    "descHash": "Deals <span style=\"color:#00FF9C;\">Wind</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Bronya's ATK to a single enemy.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 635672,
    "name": "Windrider Bullet",
    "iconPath": "71c81ecfb436d5e7f326d39471b3c2f190ec56300a71bd4e1f97640a8dbd3f47",
@@ -659,8 +663,8 @@
    "tagHash": "Support",
    "descHash": "Dispels a <u>debuff</u> from a single ally, allows them to immediately take action, and increases their DMG by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> for <nobr>#3[i]</nobr> turn(s).<br />When this Skill is used on Bronya herself, she cannot immediately take action again.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 30,
+   "break": "0",
+   "energy": "30",
    "id": 920199,
    "name": "Combat Redeployment",
    "iconPath": "1c0b1d3bbd2b7376e6934f4ae327361d80d54137a5f16ccbe5830eabf235ffe0",
@@ -979,8 +983,8 @@
    "tagHash": "Support",
    "descHash": "Increases the ATK of all allies by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>, and increases their CRIT DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> of Bronya's CRIT DMG plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> for <nobr>#4[i]</nobr> turn(s).",
    "ultimateCost": 120,
-   "break": 0,
-   "energy": 5,
+   "break": "0",
+   "energy": "5",
    "id": 836258,
    "name": "The Belobog March",
    "iconPath": "97459612506624e7a1ea8dbc485b2fede3ab5c7b5dab887c41594cd6b92bad2f",
@@ -1299,8 +1303,8 @@
    "tagHash": "Enhance",
    "descHash": "After using her Basic ATK, Bronya's next action will be <u>Advanced Forward</u> by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 5,
+   "break": "30",
+   "energy": "5",
    "id": 351145,
    "name": "Leading the Way",
    "iconPath": "af4b47219312bba33ddc3d06dec20136ae3313551cdaf78be06f76448476e39f",
@@ -1574,8 +1578,8 @@
    "tagHash": "",
    "descHash": "Attack an enemy, and when the battle starts, reduce their Toughness of the corresponding Type.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 551731,
    "name": "Attack",
    "iconPath": "71c81ecfb436d5e7f326d39471b3c2f190ec56300a71bd4e1f97640a8dbd3f47",
@@ -1596,8 +1600,8 @@
    "tagHash": "Support",
    "descHash": "After using Bronya's Technique, at the start of the next battle, all allies' ATK increases by <nobr>#1[i]%</nobr> for <nobr>#2[i]</nobr> turn(s).",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 435086,
    "name": "Banner of Command",
    "iconPath": "0e1d0e8ee9e043657c77874148bdd0901db777dc33d3e5dab84437789275bfe4",
@@ -1692,8 +1696,6 @@
    "embedBonusSkill": {
     "descHash": "The CRIT Rate for Basic ATK increases to <nobr>100%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 272877,
     "name": "Command",
     "iconPath": "2092bf49734665b568a478fac87adf54c7b9ad73b553081527308605fe476349",
@@ -1796,8 +1798,6 @@
    "embedBonusSkill": {
     "descHash": "At the start of the battle, all allies' DEF increases by <nobr>#2[i]%</nobr> for <nobr>#1[i]</nobr> turn(s).",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 272880,
     "name": "Battlefield",
     "iconPath": "b296f3e7e18add176b9c2d4d7c88919d6a0f589d00f05f672fa369d7317c92d0",
@@ -1939,8 +1939,6 @@
    "embedBonusSkill": {
     "descHash": "When Bronya is on the field, all allies deal <nobr>#1[i]%</nobr> more DMG.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 272879,
     "name": "Military Might",
     "iconPath": "cee850bc7d23edfcd0e72754f7fa01f4f51d1f0ab52f0f69ed86518550f20553",
@@ -2089,8 +2087,8 @@
    {
     "relicTypeHash": "Planar Sphere",
     "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
-    "propertyName": "Wind DMG Boost",
-    "propertyIconPath": "fe44fb655f65017dcad0c260b4dcffe14de4b14816734239c2c60d4624cf8163"
+    "propertyName": "HP",
+    "propertyIconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7"
    },
    {
     "relicTypeHash": "Link Rope",
@@ -2460,7 +2458,7 @@
   },
   {
    "title": "Character Story: Part I",
-   "text": "She learned to hide her thoughts from an early age. Every day, she'd walk the same paths with the other kids, play the same games, and gossip about the same hobbies. But she never felt taken over by the trivial and bland nature of life — she'd sit on a grey stone bench every time she was alone, looking up at the sky and imagining a perfect and complete sky unobstructed by that flat disc.<br /><br />She could see the laborers dripping with sweat as they toil, the pressure of survival crushing their passion for life. Seeing the tired but earnest look in their eyes, she slipped into a quagmire of confusion: Is life really destined to be like this? Just as the vastness of the sky was dissected by that monstrous steel disc, perhaps the freedom she yearned for was also destined to be incomplete.<br /><br />She struggled to break free from this quagmire, silently recording the ideals that she'd come to implement in her life on that dusty stone road.<br /><br />\"Make the world a better place.\"",
+   "text": "She learned to hide her thoughts from an early age. Every day, she'd walk the same paths with the other kids, play the same games, and gossip about the same hobbies. But she never felt taken over by the trivial and bland nature of life — she'd sit on a gray stone bench every time she was alone, looking up at the sky and imagining a perfect and complete sky unobstructed by that flat disc.<br /><br />She could see the laborers dripping with sweat as they toil, the pressure of survival crushing their passion for life. Seeing the tired but earnest look in their eyes, she slipped into a quagmire of confusion: Is life really destined to be like this? Just as the vastness of the sky was dissected by that monstrous steel disc, perhaps the freedom she yearned for was also destined to be incomplete.<br /><br />She struggled to break free from this quagmire, silently recording the ideals that she'd come to implement in her life on that dusty stone road.<br /><br />\"Make the world a better place.\"",
    "unlockRequirement": "Unlocked at Character Level <nobr>20</nobr>"
   },
   {

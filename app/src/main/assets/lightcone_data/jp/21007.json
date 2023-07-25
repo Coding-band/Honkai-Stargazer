@@ -1,15 +1,15 @@
 {
- "name": "Sentimento Compartilhado",
+ "name": "同じ気持ち",
  "rarity": 4,
- "descHash": "Quando a médica a encontrou toda ferida, a menina estava agarrada a uma máquina que já não funcionava mais, carregando toda variedade de peças no bolso.<br />Ela levou a menina direto para sua clínica e tratou os ferimentos.<br />Gotas de suor escorriam lentamente nas bochechas da menina, mas ela permaneceu em silêncio, as mãos inquietas mexendo na máquina.<br />Para a médica, o modo como a menina parecia apegada à máquina era similar a como ela mesma se apegava a seus pacientes que precisavam de ajuda.<br />Assim, em vez de tentar confortá-la ou avisar para tomar mais cuidado, a médica só sentou ao seu lado e lhe deu um momento de paz.",
+ "descHash": "医者が女の子を見つけた時、彼女は傷つきながらも停止した機械を抱きしめていた、そのポケットには漁ってきた色んなパーツが詰められていた。<br />彼女は急いで女の子を診療所に連れ帰り、傷口を処理した。<br />汗粒が頬を流れ落ちる。女の子は声を上げず、ただ手を動かす。<br />医者は分かっている、今女の子の目にはあの機械しかない、自分が治療を待つ患者を見る時のように。<br />だから彼女は慰めることもなければ、今後注意するよう言い聞かせることもしなかった。ただ女の子の隣で静かに付き添ってあげた。",
  "iconPath": "8b2d056ef4b6cb5b693565c4c516a3a7833b2104ee85deb9b3e0dae6088f8ca6",
  "artPath": "3c897a6bdce14a9e86153af6470d02b67fa3c4533ba4b5d72a945c0ce3c56544",
- "mediumIconPath": "9b82b0ecc1da73d4e184f6b613e318590c17a8cf9899bf385172ecda55f6cfcb",
+ "mediumIconPath": "4fe3c1140508b736fa034ab868e3c98e23a34e71f11fdf025c627d52cc47a841",
  "baseType": {
   "id": 0,
   "iconPath": "c5d73b887b351895b87f5575e153c271fadb177c3ec898ddd33cb7195472aae4",
   "color": "#FFFFFF",
-  "name": "A Abundância",
+  "name": "豊穣",
   "rarity": 0
  },
  "baseTypeId": 0,
@@ -19,16 +19,17 @@
    "type": 101,
    "purposeId": 11,
    "iconPath": "af49f8c10262045a4f9e4740703b52056b5f396b48b99c2d130c22f3dbfa99d9",
-   "name": "Crédito",
-   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
-   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
-   "purpose": "Moeda Comum",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
    "rarity": 3,
    "rewardPath": "/material/29328",
    "comeFrom": [
-    "Cálice (Grande Mina)",
-    "Recompensas de Missão",
-    "Recompensas de Atribuição"
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬",
+    "エンバー交換"
    ]
   },
   "549503": {
@@ -36,18 +37,18 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "a9982fbfd0b91bf955e7490167c11c9813a73f915e9665110456d1658daac9b6",
-   "name": "Módulo de Artífice",
-   "desc": "Componentes usados nas criações de Engenho do Xianzhou. Material bruto usado para o aprimoramento.",
-   "lore": "A base da tecnologia de Engenho do Xianzhou, sendo o menor componente de todas as peças de máquinas. Tentar parti-lo seria o equivalente a destruir a estrutura celular de um ser vivo.<br /><br />\"A Guilda de Intelectuais oferece uma recompensa de dois milhões de créditos por planos técnicos capazes de desmontar com perfeição os MechAutômatos do Xianzhou.\"<br />\"Se você conhece o Screwllum, então esses dois milhões basicamente já têm dono...\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "工造機関",
+   "desc": "仙舟機巧の部品、強化に必要な簡易素材。",
+   "lore": "仙舟機巧術の基礎。機巧部品の最小構成単位、分解する時は生物の細胞構造を破壊しているように見える。<br /><br />「博識学会は<nobr>200</nobr>万信用ポイントで、仙舟の傀儡を傷つけずに解体する技術案を懸賞する」<br />「スクリューガムと知り合いなら、この<nobr>200</nobr>万はタダも同然……」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 2,
    "rewardPath": "/material/549503",
    "comeFrom": [
-    "Magi-Engenhos",
-    "Inimigos do Universo Simulado",
-    "Recompensas de Atribuição",
-    "Troca de Brasas",
-    "Sintetizador Omni — Troca de Material"
+    "入魔機巧からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材置換"
    ]
   },
   "633444": {
@@ -55,17 +56,17 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "70a8938f2ceb297722769c3899bb3657304924c15cafc50fa23390de5eabacbc",
-   "name": "Engrenagem de Artífices",
-   "desc": "Peças das máquinas do Xianzhou. Material normal usado para aprimoramentos.",
-   "lore": "Componentes conectores usados na tecnologia de Engenho do Xianzhou. Os dentes finos e intrincados das engrenagens são do tamanho de sementes de mostarda, mas se interconectam de modo a formar um corpo complexo, fazendo com que a máquina pareça um ser vivo.<br /><br />\"Sua forma é harmônica, um paralelo com a natureza. Seus movimentos são cíclicos, refletindo o cosmo.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "工造迴輪",
+   "desc": "仙舟機巧の部品、強化に必要な普通素材。",
+   "lore": "仙舟機巧術の連結部品。塵のように小さな歯車が緻密に繋がり、複雑な機体を形成し、機械に命を吹き込む。<br /><br />「その形は天を模し、円を成す。その動きは道を倣い、廻を成す」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 3,
    "rewardPath": "/material/633444",
    "comeFrom": [
-    "Magi-Engenhos no Nível de Equilíbrio 2 ou superior",
-    "Sintetizador Omni — Síntese de Material",
-    "Inimigos do Universo Simulado",
-    "Sintetizador Omni — Troca de Material"
+    "均衡Lv.2に達した後、入魔機巧からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "635671": {
@@ -73,14 +74,15 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "6128dd36bba1dcd10f490255173adf943c831435b13dc253d91a61463f37e39c",
-   "name": "Semente da Abundância",
-   "desc": "Uma semente de bênção semeada pelo Aeon da Abundância. Usada para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abundância</span>.",
-   "lore": "Aqueles que têm contato com esta semente são curados vagarosamente de suas doenças e ferimentos.<br />As pessoas que pedem a bênção da vida em desespero sempre terão suas orações atendidas.<br /><br />\"Você terá tudo que pedir.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "豊穣の種",
+   "desc": "豊穣の神が蒔いた祝福の種。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">豊穣</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "種に触れると、どんな傷や病でも段々と治癒される。<br />絶望の中で人生の祝福を祈る者には、必ず神の慈悲が与えられる。<br /><br />「求めれば、必ず与えられる」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 2,
    "rewardPath": "/material/635671",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)"
+    "疑似花萼「外縁通路」",
+    "エンバー交換"
    ]
   },
   "694487": {
@@ -88,15 +90,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "56ab8085d932c0a9521f684246a42bd320b199c3c1a6f3bd54b869c5f294fec9",
-   "name": "Éter Refinado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>6000</nobr> de EXP de Cone de Luz.",
-   "lore": "Uma lata de éter que foi extraída e destilada usando procedimentos especiais.<br /><br />\"O Jardim espera poder recriar uma glória do passado, mas é uma 'glória do passado' selecionada por eles. Você entende?\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "精製エーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>6000</nobr>獲得できる。",
+   "lore": "特殊な技術で精錬されたエーテル。<br /><br />「ガーデンは昔の輝かしい時代を取り戻そうとしている、だがそれは彼らが選択する『往日の輝き』だ、この意味がわかるか？」",
+   "purpose": "光円錐経験値素材",
    "rarity": 4,
    "rewardPath": "/material/694487",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)",
-    "Salão Esquecido"
+    "疑似花萼「外縁通路」",
+    "「忘却の庭」"
    ]
   },
   "694488": {
@@ -104,14 +106,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "1911d7bb4aad22029e82a9b17a0005674864038b6b61e86976ace8277267d9f6",
-   "name": "Éter Condensado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>2.000</nobr> de EXP de Cone de Luz.",
-   "lore": "Lata de éter refinado com técnicas especiais.<br /><br />\"Manuseie com cuidado, não deixe cair nem faça pressão sobre ela. Caso ocorra algum vazamento, consulte o capítulo II do \"Manual de Respostas a Desastres de Vazamentos\" para respostas de emergência.\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "濃縮エーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>2000</nobr>獲得できる。",
+   "lore": "特殊な技術で精錬されたエーテル。<br /><br />「気を付けて取り扱ってね。潰したり、落としたりしちゃダメよ。万が一、破損して中身が漏れた時は、『流溢災難対応手引き』の第二章に従って処理しなさい」",
+   "purpose": "光円錐経験値素材",
    "rarity": 3,
    "rewardPath": "/material/694488",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)"
+    "疑似花萼「外縁通路」",
+    "エンバー交換"
    ]
   },
   "694489": {
@@ -119,15 +122,15 @@
    "type": 601,
    "purposeId": 5,
    "iconPath": "03fc3a9bafdf0f18b1e49a885353ed442420842a2cc373428b242b213d2728fc",
-   "name": "Éter Espalhado",
-   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>500</nobr> de EXP de Cone de Luz.",
-   "lore": "Substância imaginária que não deveria existir. O material básico usado para criar Cones de Luz.<br />As imagens dos Cones de Luz se tornam ainda mais claras quando imbuídas dessa substância.<br /><br />\"Entendi, então esse é o suposto \"Sentimento\" do Jardim da Recordação. É por isso que os Memoriadores conseguem fazer viagens galácticas com lembranças.\"",
-   "purpose": "Material de EXP de Cone de Luz",
+   "name": "希薄なエーテル",
+   "desc": "光円錐強化素材、光円錐経験値を<nobr>500</nobr>獲得できる。",
+   "lore": "本来、現実には存在しない仮想媒質で、光円錐の基本原料。<br />光円錐に注入することで、中に封じられているイメージがより鮮明になる。<br /><br />「なるほどね～これがガーデン オブ リコレクションの『意質』ってやつ？だからメモキーパーは、記憶を携帯して星間旅行ができるんだね」",
+   "purpose": "光円錐経験値素材",
    "rarity": 2,
    "rewardPath": "/material/694489",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)",
-    "Recompensas de Atribuição"
+    "疑似花萼「外縁通路」",
+    "依頼報酬"
    ]
   },
   "717385": {
@@ -135,17 +138,17 @@
    "type": 601,
    "purposeId": 7,
    "iconPath": "45329d01c5eb773414481b5457ac4854e81070b98c21d939da2a973c3c965fbd",
-   "name": "Coração de Giro de Artífices",
-   "desc": "Componentes usados nas criações de Engenho do Xianzhou. Material bruto usado para o aprimoramento.",
-   "lore": "O núcleo da tecnologia de Engenho do Xianzhou. A esfera armilar revolve e vibra como a essência de um coração, tornando a máquina pensante como um ser vivo.<br /><br />\"Não se assuste. Tirar o coração faria com que ele... ou seria ela...? Faria com que este ser perdesse a consciência e retornasse à sua essência mecânica.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "name": "工造渾心",
+   "desc": "仙舟機巧の部品、強化に必要な高級素材。",
+   "lore": "仙舟機巧術の中枢。渾儀は心臓のように脈動し、機械に生き物の如く思考を与える。<br /><br />「怖がる必要はありません。心を取り外せば、彼…彼女？いや、其は心智を失い、無機質の塊に戻ります」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 4,
    "rewardPath": "/material/717385",
    "comeFrom": [
-    "Magi-Engenhos no Nível de Equilíbrio 4 ou superior",
-    "Sintetizador Omni — Síntese de Material",
-    "Inimigos do Universo Simulado",
-    "Sintetizador Omni — Troca de Material"
+    "均衡Lv.4に達した後、入魔機巧からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
    ]
   },
   "836257": {
@@ -153,15 +156,15 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "71dd8f16d472b4b68f3296f67d6421f2b8aab12a6712c56506f336283bd0220c",
-   "name": "Flor da Eternidade",
-   "desc": "Uma bela flor desabrochada do Broto da Vida. Usada para conceder um aumento considerável de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abundância</span>.",
-   "lore": "O estame contém uma quantidade concentrada do poder do Caminho da Abundância, garantindo a vitalidade duradoura da flor. Nenhum fogo, gelo ou qualquer ambiente hostil pode impedir o crescimento desta forma de vida incrível.<br />Com o tempo, suas folhas se alimentarão da luz das estrelas. Suas raízes se enterrarão na carne de todos os seres deste mundo, todos conectados, nunca perecendo. Seus frutos cumprirão a promessa da imortalidade.<br /><br />\"Existem navios gigantes, atravessando montanhas, flutuando no vazio. Sobre eles cresce a árvore imortal. Seu consumo concede a imortalidade.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "永久の花",
+   "desc": "生命の芽から咲いた花。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">豊穣</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "花蕊には豊穣の力が凝縮されており、枯れることがない。灼熱の地や極寒の地などの劣悪な環境でも、その成長を妨げることはできない。<br />やがてその枝葉は星の光を食べ、根は人々の血肉を土壌とし、すべてが一体となり、不滅の存在になる。その果実は永遠の命を約束してくれる。<br /><br />「極大な船があり。その勢い、山岳を越え、虚空を行く。そこに不死の樹あり、食せば長寿する」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 4,
    "rewardPath": "/material/836257",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)",
-    "Sintetizador Omni — Síntese de Material"
+    "疑似花萼「外縁通路」",
+    "「万能合成マシン」- 素材合成"
    ]
   },
   "920198": {
@@ -169,15 +172,16 @@
    "type": 601,
    "purposeId": 3,
    "iconPath": "9a770eaee0f4119cbd5510afe63536ba85cda116f02bf1d0841bba6e565c5cd2",
-   "name": "Broto da Vida",
-   "desc": "Um brotinho que surgiu da Semente da Abundância. Usado para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abundância</span>.",
-   "lore": "Irradiando calor, a vida floresce ao redor do local onde afunda suas raízes. Desertos inférteis se transformam em exuberantes campos de relva, planta ressecadas rejuvenescem e desabrocham e fontes surgem do chão para umidificar a terra.<br />À medida que você se aproxima, seus músculos e ossos se contraem e se propagam com uma coceira insuportável.<br /><br />\"A vida é infalível onde a alma abunda.\"",
-   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "name": "生命の芽",
+   "desc": "豊穣の種から生えた芽。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">豊穣</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "仄かな温かさが周りに伝わり、周囲には草木が生い茂る。荒廃した砂漠は肥沃な土壌へと変わり、枯れた植物は瑞々しさを取り戻し、大地からは清らかな泉が湧き出る。<br />この芽に近付くと血肉が意思を持ったように蠢き、耐えがたい痒みに襲われる。<br /><br />「凡胎育みし場所、生生と尽かず」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
    "rarity": 3,
    "rewardPath": "/material/920198",
    "comeFrom": [
-    "Cálice (Passagem do Remanso)",
-    "Sintetizador Omni — Síntese de Material"
+    "疑似花萼「外縁通路」",
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換"
    ]
   }
  },
@@ -336,8 +340,8 @@
  ],
  "skill": {
   "id": 21007,
-  "name": "Cura e Reparação",
-  "descHash": "Aumenta a Cura Realizada do usuário em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. Ao usar uma Perícia, regenera <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> de Energia para todos os aliados.",
+  "name": "ケアとメンテ",
+  "descHash": "装備キャラの治癒量+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>。装備キャラが戦闘スキルを発動した時、味方全体のEPを<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>回復する。",
   "levelData": [
    {
     "params": [

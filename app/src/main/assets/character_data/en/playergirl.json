@@ -1,10 +1,10 @@
 {
  "spRequirement": 120,
- "iconPath": "a793e674a0f7cf44b6ec2498953d5527950c70c2d856da176e8bfa2e086496f6",
+ "iconPath": "55062ef1a50d252f1e2ff0f9930c60afc52f6890bb0da10971c350121c1d3ae8",
  "bgPath": "53e5021a3948edb4e3f09f562128ec8036a29dd232c9a84cccb96381a07cdd21",
- "figPath": "cfdfdb1165287c6184983b7a6fe922b7e2888a4b18fa5d82c0f0b2496ecdb5cb",
+ "figPath": "550a36df25a89366a09b85e201c9d8b725a70bb520ad1a3fe99bc3545d1c87e4",
  "fgPath": "",
- "splashIconPath": "1b9ea28de9d7ad65ed5c152fce7c744a2f2461d4fae4fd0fd9d662348a96631d",
+ "splashIconPath": "7aaadefe0d98d516d39d9d7ed20b57a020c58a9468b6d8c9cc165da433e2d5f6",
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -28,7 +28,8 @@
    "comeFrom": [
     "Calyx (Great Mine)",
     "Mission rewards",
-    "Assignment rewards"
+    "Assignment rewards",
+    "Embers Exchange"
    ]
   },
   "125435": {
@@ -78,7 +79,8 @@
    "rewardPath": "/material/409961",
    "comeFrom": [
     "Calyx (Outlying Snow Plains)",
-    "Daily Training"
+    "Daily Training",
+    "Embers Exchange"
    ]
   },
   "409962": {
@@ -146,7 +148,8 @@
    "rarity": 2,
    "rewardPath": "/material/635673",
    "comeFrom": [
-    "Calyx (Storage zone)"
+    "Calyx (Storage zone)",
+    "Embers Exchange"
    ]
   },
   "717319": {
@@ -212,7 +215,8 @@
    "rewardPath": "/material/920200",
    "comeFrom": [
     "Calyx (Storage Zone)",
-    "Omni-Synthesizer — Material Synthesis"
+    "Omni-Synthesizer — Material Synthesis",
+    "Embers Exchange"
    ]
   },
   "985668": {
@@ -418,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "",
+   "iconPath": "e5d7549a28296bbd4bb0e00a12550a9d82184b1cfb15a585612d522996ebfbae",
    "artPath": "e64596f001fc37ef51c078d7ec930d0fb3a15d589ee8ad6228805bdef5afd252",
    "name": "A Falling Star",
    "descHash": "When enemies are defeated due to the Trailblazer's Ultimate, the Trailblazer regenerates <nobr>#1[i]</nobr> extra Energy. This effect can only be triggered once per attack.",
@@ -428,7 +432,7 @@
   },
   {
    "id": 2,
-   "iconPath": "",
+   "iconPath": "283edf5db1b576b43b7cd6ecda6140ad73ea318ce260ca7db6f899f430d64d35",
    "artPath": "77bf690fa41ee1f68ea3102d5e7199966133aaafeba796e8e9a1a825000d5d99",
    "name": "An Unwilling Host",
    "descHash": "Attacking enemies with Physical Weakness restores the Trailblazer's HP equal to <nobr>#1[i]%</nobr> of the Trailblazer's ATK.",
@@ -438,7 +442,7 @@
   },
   {
    "id": 3,
-   "iconPath": "",
+   "iconPath": "757e36a10f05bffaadb295beabf6687469ff8484b1a917ecb88a33cac2db6c3d",
    "artPath": "9c3684f28b69483d8d90456b08e704aa225afe1ec19bb92d6c2400eee4210317",
    "name": "A Leading Whisper",
    "descHash": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Talent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
@@ -446,7 +450,7 @@
   },
   {
    "id": 4,
-   "iconPath": "",
+   "iconPath": "9400d053b31085cb37b43f994f89097bb7743e083aa4a6219236312c9d3e7921",
    "artPath": "c5fc4d10e733dc986d073687c1e1cac25219d8a029df9c8313ce1524ca090fad",
    "name": "A Destructing Glance",
    "descHash": "When attacking an enemy with Weakness Break, CRIT Rate is increased by <nobr>#1[i]%</nobr>.",
@@ -456,7 +460,7 @@
   },
   {
    "id": 5,
-   "iconPath": "",
+   "iconPath": "9efa158e6a3bbb789416cda8c01f5f602c2eba04f320f2721170bdb043b1f17a",
    "artPath": "f971bad331ea8c2df332a715e6e565703b3ac6022f503d39d06627b03ea738fb",
    "name": "A Surviving Hope",
    "descHash": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Basic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
@@ -464,7 +468,7 @@
   },
   {
    "id": 6,
-   "iconPath": "",
+   "iconPath": "c898419ae7027fc99fd92fc9677a090f470b5f00861d367a211e9a2653219251",
    "artPath": "487b238c673ae2beba57aa0b79d5b22418e76f93ae93019e8def2b4abc57a234",
    "name": "A Trailblazing Will",
    "descHash": "The Trailblazer's Talent is also triggered when they defeat an enemy.",
@@ -497,8 +501,8 @@
    "tagHash": "Single Target",
    "descHash": "Deals <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of the Trailblazer's ATK to a single enemy.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 20,
+   "break": "30",
+   "energy": "20",
    "id": 611211,
    "name": "Farewell Hit",
    "iconPath": "a837b6c6a70b2e60b6b835073aa5914fb27d1fc4b875bbcc77e271640e68d05a",
@@ -658,8 +662,8 @@
    "tagHash": "Blast",
    "descHash": "Deals <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of the Trailblazer's ATK to a single enemy and enemies adjacent to it.",
    "ultimateCost": 0,
-   "break": 60,
-   "energy": 30,
+   "break": "60 + 30/adjacent",
+   "energy": "30",
    "id": 494566,
    "name": "RIP Home Run",
    "iconPath": "757e36a10f05bffaadb295beabf6687469ff8484b1a917ecb88a33cac2db6c3d",
@@ -929,8 +933,8 @@
    "tagHash": "Enhance",
    "descHash": "Choose between two attack modes to deliver a full strike.<br />Blowout: Farewell Hit deals <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of the Trailblazer's ATK to a single enemy.<br />Blowout: RIP Home Run deals <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of the Trailblazer's ATK to a single enemy, and <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> of the Trailblazer's ATK to enemies adjacent to it.",
    "ultimateCost": 120,
-   "break": 0,
-   "energy": 5,
+   "break": "0",
+   "energy": "5",
    "id": 410625,
    "name": "Stardust Ace",
    "iconPath": "41a885cd6780f16e562086becf14093bd57c5f523fe31136a2d2dabf752100d8",
@@ -1230,8 +1234,8 @@
    "tagHash": "Enhance",
    "descHash": "Each time after this character inflicts Weakness Break on an enemy, ATK increases by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. This effect stacks up to <nobr>#2[i]</nobr> time(s).",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 326684,
    "name": "Perfect Pickoff",
    "iconPath": "69a5f892c526ae538016ceaf567c1bc473656921b0f155f5d282f91d9f8340d5",
@@ -1516,8 +1520,8 @@
    "tagHash": "",
    "descHash": "Attack an enemy, and when the battle starts, reduce their Toughness of the corresponding Type.",
    "ultimateCost": 0,
-   "break": 30,
-   "energy": 0,
+   "break": "30",
+   "energy": "0",
    "id": 126098,
    "name": "Attack",
    "iconPath": "a837b6c6a70b2e60b6b835073aa5914fb27d1fc4b875bbcc77e271640e68d05a",
@@ -1538,8 +1542,8 @@
    "tagHash": "Restore",
    "descHash": "Immediately heals all allies for <nobr>#1[i]%</nobr> of their respective Max HP after using this Technique.",
    "ultimateCost": 0,
-   "break": 0,
-   "energy": 0,
+   "break": "0",
+   "energy": "0",
    "id": 42157,
    "name": "Immortal Third Strike",
    "iconPath": "507acbda38f50922f91ce4fd10ec62796d8ecbdc324a41ec3e4cdfa80b4f7a1e",
@@ -1562,8 +1566,8 @@
    "tagHash": "Single Target",
    "descHash": "Deals <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of the Trailblazer's ATK to a single enemy.",
    "ultimateCost": 120,
-   "break": 90,
-   "energy": 5,
+   "break": "90",
+   "energy": "5",
    "id": 464792,
    "name": "Blowout: Farewell Hit",
    "iconPath": "e790568d6547087adb422a8c61010ba178879b87311381293018001dee120d53",
@@ -1833,8 +1837,8 @@
    "tagHash": "Blast",
    "descHash": "Deals <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Trailblazer's ATK to a single enemy and <span style=\"color:#FFFFFF;\">Physical</span> DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of Trailblazer's ATK to enemies adjacent to it.",
    "ultimateCost": 120,
-   "break": 60,
-   "energy": 5,
+   "break": "60/hit",
+   "energy": "5",
    "id": 380851,
    "name": "Blowout: RIP Home Run",
    "iconPath": "1274c945f2135966474f490430d92f0185ff92ef5b3b4e0fb9e99ff15fc80320",
@@ -2223,8 +2227,6 @@
    "embedBonusSkill": {
     "descHash": "At the start of the battle, immediately regenerates <nobr>#1[i]</nobr> Energy.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 494464,
     "name": "Ready for Battle",
     "iconPath": "c89cda28e50097a1c1101cd4c560c0d680ed440b469f53a19815691fdcc3d6c0",
@@ -2362,8 +2364,6 @@
    "embedBonusSkill": {
     "descHash": "Each Talent stack increases the Trailblazer's DEF by <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 494465,
     "name": "Perseverance",
     "iconPath": "a035ccd65285b5487de2fa3bb759670bcffb2158309a24749e23805b67413100",
@@ -2504,8 +2504,6 @@
    "embedBonusSkill": {
     "descHash": "When using Skill or Ultimate \"Blowout: RIP Home Run\", DMG dealt to the target enemy is increased by <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
-    "break": 0,
-    "energy": 0,
     "id": 494466,
     "name": "Fighting Will",
     "iconPath": "f7ec0fad09b1e54ef8212181a21b8a44f1633f88e8d3da5810740a905b061c3f",
@@ -2583,8 +2581,8 @@
    {
     "relicTypeHash": "Feet",
     "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
-    "propertyName": "ATK",
-    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+    "propertyName": "SPD",
+    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
    },
    {
     "relicTypeHash": "Planar Sphere",
@@ -2595,8 +2593,8 @@
    {
     "relicTypeHash": "Link Rope",
     "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
-    "propertyName": "Break Effect",
-    "propertyIconPath": "4257bbe654915c92a2c225fff13903a55234709c75e020c142a60f948217a867"
+    "propertyName": "ATK",
+    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
    }
   ]
  },
@@ -2643,7 +2641,7 @@
   },
   {
    "id": 5,
-   "title": "Memory: The Destruction",
+   "title": "Memory: Destruction",
    "text": "Just where did the will of Destruction come from? Was it really because of the Stellaron within me...?",
    "unlockRequirement": "Unlocked after completing the Trailblaze Mission \"The Voyage Continues.\"",
    "cnUrl": "83ed69aaf035931b931bf2867e60afd204015b38ee86d8a81f284c28bda880f5",
@@ -2663,7 +2661,7 @@
   },
   {
    "id": 7,
-   "title": "Memory: The Preservation",
+   "title": "Memory: Preservation",
    "text": "The seed of Preservation has always been within Belobog, and I simply re-ignited this city's will to live... That will may be weak, but this was not the time for it to go out.",
    "unlockRequirement": "Unlocked after completing Trailblaze Mission \"Silent Galaxy.\"",
    "cnUrl": "c2afbe821780252fda30f8f302f2c8146b434945b46c995f8a16c6eedce00695",

@@ -169,7 +169,7 @@ public class InfoLightconePage {
                 throw new RuntimeException(e);
             }
         } else {
-            Toast.makeText(context, "[" + LANGUAGE + "] " + hsrItem.getName() + "'s file not exist", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, context.getString(R.string.item_not_available).replace("{%1}",LANGUAGE).replace("{%2}", hsrItem.getFileName()), Toast.LENGTH_SHORT).show();
         }
 
     }
