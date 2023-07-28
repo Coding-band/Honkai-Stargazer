@@ -256,7 +256,7 @@ public class CharAdviceSuggester {
                     StringWriter sw = new StringWriter();
                     PrintWriter pw = new PrintWriter(sw);
                     e.printStackTrace(pw);
-                    LogExport.bugLog(TAG, "save.onClick()", sw.toString(), e.getMessage(), context);
+                    LogExport.bugLog(TAG, "save.onClick()", sw.toString(), e.getMessage(), context,LogExport.MODE_SERVER);
                 }
             }
         });
@@ -289,7 +289,7 @@ public class CharAdviceSuggester {
                     StringWriter sw = new StringWriter();
                     PrintWriter pw = new PrintWriter(sw);
                     e.printStackTrace(pw);
-                    LogExport.bugLog(TAG, "email.onClick()", sw.toString(), e.getMessage(), context);
+                    LogExport.bugLog(TAG, "email.onClick()", sw.toString(), e.getMessage(), context, LogExport.MODE_SERVER);
                 }
             }
         });
@@ -593,7 +593,7 @@ public class CharAdviceSuggester {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "char_list_reload()", sw.toString(), e.getMessage(), context);
+            LogExport.bugLog(TAG, "char_list_reload()", sw.toString(), e.getMessage(), context, LogExport.MODE_SERVER);
         }
     }
     private void lightcone_list_reload() {
@@ -627,7 +627,7 @@ public class CharAdviceSuggester {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "lightcone_list_reload()", sw.toString(), e.getMessage(), context);
+            LogExport.bugLog(TAG, "lightcone_list_reload()", sw.toString(), e.getMessage(), context, LogExport.MODE_SERVER);
         }
     }
     private void relic_list_reload() {
@@ -663,7 +663,7 @@ public class CharAdviceSuggester {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "relic_list_reload()", sw.toString(), e.getMessage(), context);
+            LogExport.bugLog(TAG, "relic_list_reload()", sw.toString(), e.getMessage(), context, LogExport.MODE_SERVER);
         }
     }
     private TextWatcher searchBarHandler(String TYPE, EditText editText){

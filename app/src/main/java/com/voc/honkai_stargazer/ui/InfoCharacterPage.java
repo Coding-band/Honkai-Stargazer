@@ -188,7 +188,7 @@ public class InfoCharacterPage {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "Read JSON from Assests - advice", sw.toString(), e.getMessage(), context);
+            LogExport.bugLog(TAG, "Read JSON from Assests - advice", sw.toString(), e.getMessage(), context, LogExport.MODE_SERVER);
         }
 
         if (json_base == "" && json_base2 != ""){json_base  =json_base2;}
@@ -215,7 +215,7 @@ public class InfoCharacterPage {
                 StringWriter sw = new StringWriter();
                 PrintWriter pw = new PrintWriter(sw);
                 e.printStackTrace(pw);
-                LogExport.bugLog(TAG, "Read JSON from Assests", sw.toString(), e.getMessage(), context);
+                LogExport.bugLog(TAG, "Read JSON from Assests", sw.toString(), e.getMessage(), context, LogExport.MODE_SERVER);
             }
         }else{
             Toast.makeText(context, context.getString(R.string.item_not_available).replace("{%1}",LANGUAGE).replace("{%2}", hsrItem.getFileName()), Toast.LENGTH_SHORT).show();
@@ -637,7 +637,7 @@ public class InfoCharacterPage {
                     StringWriter sw = new StringWriter();
                     PrintWriter pw = new PrintWriter(sw);
                     e.printStackTrace(pw);
-                    LogExport.bugLog(TAG, "combat_material_change | combat_status_change", sw.toString(), e.getMessage(), context);
+                    LogExport.bugLog(TAG, "combat_material_change | combat_status_change", sw.toString(), e.getMessage(), context, LogExport.MODE_SERVER);
                 }
             }
 
@@ -696,7 +696,7 @@ public class InfoCharacterPage {
                         StringWriter sw = new StringWriter();
                         PrintWriter pw = new PrintWriter(sw);
                         e.printStackTrace(pw);
-                        LogExport.bugLog(TAG, "combat_material_change | combat_desc_change", sw.toString(), e.getMessage(), context);
+                        LogExport.bugLog(TAG, "combat_material_change | combat_desc_change", sw.toString(), e.getMessage(), context, LogExport.MODE_SERVER);
                     }
                 }
 
@@ -961,7 +961,7 @@ public class InfoCharacterPage {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "lightcone_list_reload", sw.toString(), e.getMessage(), context);
+            LogExport.bugLog(TAG, "lightcone_list_reload", sw.toString(), e.getMessage(), context, LogExport.MODE_SERVER);
         }
     }
 }

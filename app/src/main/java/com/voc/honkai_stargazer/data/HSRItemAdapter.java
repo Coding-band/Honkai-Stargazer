@@ -292,7 +292,7 @@ public class HSRItemAdapter extends RecyclerView.Adapter<HSRItemAdapter.ViewHold
                 StringWriter sw = new StringWriter();
                 PrintWriter pw = new PrintWriter(sw);
                 e.printStackTrace(pw);
-                LogExport.bugLog(TAG, "Read JSON Assest Data", sw.toString(),e.getMessage(), context);
+                LogExport.bugLog(TAG, "Read JSON Assest Data", sw.toString(),e.getMessage(), context,LogExport.MODE_SERVER);
             }
         }
     }

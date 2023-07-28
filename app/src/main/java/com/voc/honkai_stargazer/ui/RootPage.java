@@ -25,6 +25,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -36,7 +37,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -74,9 +74,15 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class RootPage extends AppCompatActivity {
 
@@ -141,71 +147,7 @@ public class RootPage extends AppCompatActivity {
         updateUtil = new UpdateUtil();
         updateUtil.init(context,activity);
 
-        if (!sharedPreferences.getString("last_bug_report","NONE").equals("NONE")){
-            String reportName = sharedPreferences.getString("last_bug_report","NONE");
-            final Dialog dialog = new Dialog(context, R.style.NormalDialogStyle_N);
-            View view = View.inflate(context, R.layout.fragment_dialog_bug, null);
-            dialog.setContentView(view);
-            dialog.setCanceledOnTouchOutside(true);
-            Window dialogWindow = dialog.getWindow();
-            WindowManager.LayoutParams lp = dialogWindow.getAttributes();
-
-            lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-            lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
-            lp.gravity = Gravity.CENTER;
-            dialogWindow.setAttributes(lp);
-
-            String bugReport = LoadExtendData(context, "honkai_stargazer/bugLog/" + reportName);
-            String bugReportKey = sharedPreferences.getString("last_bug_report_error_key","NONE");
-            TextView bug_log = view.findViewById(R.id.bug_log);
-            bug_log.setText((bugReport.equals("") ? "Empty" : bugReport));
-            editor.putString("last_bug_report","NONE").apply();
-            editor.putString("last_bug_report_error_key","NONE").apply();
-
-            Button cancel = view.findViewById(R.id.bug_cancel);
-            cancel.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (dialog.isShowing() && dialog != null){
-                        dialog.dismiss();
-                    }
-                }
-            });
-
-            Button email = view.findViewById(R.id.bug_email);
-            email.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (dialog.isShowing() && dialog != null){
-                        dialog.dismiss();
-                    }
-                    //EMAIL
-                    Uri path = FileProvider.getUriForFile(activity, ItemRSS.APPLICATION_ID_PROVIDER,new File(context.getExternalMediaDirs()[0]+"/"+"honkai_stargazer/bugLog/" +reportName));
-                    Intent i = new Intent(Intent.ACTION_SEND);
-                    i.setType("message/rfc822");
-                    i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"xectorda@gmail.com"});
-                    i.putExtra(Intent.EXTRA_SUBJECT, "[Honkai Stargazer - BUG REPORT]");
-                    i.putExtra(Intent.EXTRA_TEXT   , "This is an auto-generate Email from Honkai Stargazer app, with an appendix of bug issue.");
-                    i.putExtra(Intent.EXTRA_STREAM, path);
-                    if (i.resolveActivity(activity.getPackageManager()) != null) {
-                        activity.startActivity(i);
-                    }
-
-                    /*
-                    //PHP+PYTHON+SQL
-                    WebView bug_webview = view.findViewById(R.id.bug_webview);
-                    bug_webview.loadUrl(ItemRSS.SERVER_DAILYMEMO_URL+"bugReportPort.php?"+"error_key=\""+bugReportKey+"\"&"+"data=\""+bugReport+"\"");
-                    System.out.println(ItemRSS.SERVER_DAILYMEMO_URL+"bugReportPort.php?"+"error_key=\""+bugReportKey+"\"&"+"data=\""+bugReport+"\"");
-
-                     */
-                }
-            });
-
-
-            if (dialog != null && !dialog.isShowing()){
-                dialog.show();
-            }
-        }
+        LogExport.checkHasBugLog(context,sharedPreferences,activity);
 
         root_init(false);
         home_init();
@@ -884,7 +826,7 @@ public class RootPage extends AppCompatActivity {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "char_list_reload", sw.toString(), e.getMessage(), context);
+            LogExport.bugLog(TAG, "char_list_reload", sw.toString(), e.getMessage(), context, LogExport.MODE_SERVER);
         }
     }
     private void lightcone_list_reload() {
@@ -919,7 +861,7 @@ public class RootPage extends AppCompatActivity {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "lightcone_list_reload", sw.toString(), e.getMessage(), context);
+            LogExport.bugLog(TAG, "lightcone_list_reload", sw.toString(), e.getMessage(), context, LogExport.MODE_SERVER);
         }
     }
     private void relic_list_reload() {
@@ -952,7 +894,7 @@ public class RootPage extends AppCompatActivity {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
-            LogExport.bugLog(TAG, "relic_list_reload", sw.toString(), e.getMessage(), context);
+            LogExport.bugLog(TAG, "relic_list_reload", sw.toString(), e.getMessage(), context, LogExport.MODE_SERVER);
         }
     }
 

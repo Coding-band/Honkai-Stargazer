@@ -100,10 +100,9 @@ public class DevPage extends AppCompatActivity {
                     StringWriter sw = new StringWriter();
                     PrintWriter pw = new PrintWriter(sw);
                     e.printStackTrace(pw);
-                    LogExport.bugLog(TAG, "dev_expection_btn.onClick()", sw.toString(), e.getMessage(), context);
+                    LogExport.bugLog(TAG, "dev_expection_btn.onClick()", sw.toString(), e.getMessage(), context,LogExport.MODE_SERVER);
 
                     Toast.makeText(context, "Please check test log available or not", Toast.LENGTH_SHORT).show();
-                    new RuntimeException(e);
                 }
             }
         });

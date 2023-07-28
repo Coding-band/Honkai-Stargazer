@@ -51,7 +51,7 @@ public class UpdateUtil {
                     StringWriter sw = new StringWriter();
                     PrintWriter pw = new PrintWriter(sw);
                     e.printStackTrace(pw);
-                    LogExport.bugLog(TAG, "appUpdateManager -> AppUpdateType.FLEXIBLE", sw.toString(), e.getMessage(), context);
+                    LogExport.bugLog(TAG, "appUpdateManager -> AppUpdateType.FLEXIBLE", sw.toString(), e.getMessage(), context, LogExport.MODE_SERVER);
                 }
 
             } else if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
@@ -65,7 +65,7 @@ public class UpdateUtil {
                     StringWriter sw = new StringWriter();
                     PrintWriter pw = new PrintWriter(sw);
                     e.printStackTrace(pw);
-                    LogExport.bugLog(TAG, "appUpdateManager -> AppUpdateType.IMMEDIATE", sw.toString(), e.getMessage(), context);
+                    LogExport.bugLog(TAG, "appUpdateManager -> AppUpdateType.IMMEDIATE", sw.toString(), e.getMessage(), context, LogExport.MODE_SERVER);
                 }
 
             } else if (appUpdateInfo.installStatus() == InstallStatus.DOWNLOADED){
