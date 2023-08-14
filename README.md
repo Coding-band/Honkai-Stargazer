@@ -37,7 +37,7 @@ We are trying to develop it to simplify workflow and improve user experience
 
 ## We need you !
 ### Translator 
-- If you want to help us on translating, feel free to join us through <a href="https://crowdin.com/project/genshin-spirit/invite?h=1a48d2590d5cb9d681e9911a446cb8ea1801823">Crowdin</a> ~
+- If you want to help us on translating, feel free to join us through <a href="https://crowdin.com/project/genshin-spirit/invite?h=a5b551bd4396ec965a65c8a9a29260401802677">Crowdin</a> ~
 - If you want to translate new language, you may directly DM Voc-夜芷冰 (vocaloid2048)
 
 ### Developer
