@@ -1,0 +1,513 @@
+{
+ "name": "Elle a déjà fermé les yeux",
+ "rarity": 5,
+ "descHash": "La douleur au milieu de son front ne disparaîtra jamais, mais ce n'est qu'une fraction de ce qu'elle a vécu.<br />Elle pensait pouvoir tout prévoir, jusqu'à la perte de ceux qui comptaient réellement pour elle.<br />Désormais, elle « voit » que les temps et le monde changent...<br />Mais elle a déjà fermé les yeux parce que l'avenir est déjà écrit... dans le « troisième œil ».",
+ "iconPath": "738916d4154e53671c899524b501f726ff9da77041ed29f428aa821ebde5dfad",
+ "artPath": "a1241647f3fad264f0d3d9e76c8e17ca9b0614f0e7c22622aabce4c26cda2faf",
+ "mediumIconPath": "b215489b6cb096e0efd43761017eed47d0a536d9d72f357fff1ab5e32b80639a",
+ "baseType": {
+  "id": 0,
+  "iconPath": "e7d44128c2422e3516f8412ee75974d59c27762adbbddeb5ac0663a951db99b1",
+  "color": "#FFFFFF",
+  "name": "La Préservation",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "af49f8c10262045a4f9e4740703b52056b5f396b48b99c2d130c22f3dbfa99d9",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Braises immortelles"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "a9982fbfd0b91bf955e7490167c11c9813a73f915e9665110456d1658daac9b6",
+   "name": "Module artisanal",
+   "desc": "Composant utilisé dans les ingéniosités. Matière première utilisée pour les améliorations.",
+   "lore": "La base de la technologie des ingéniosités de Xianzhou. C'est le plus petit composant de toutes les pièces de machine. Le casser reviendrait à détruire la structure cellulaire d'un être vivant.<br /><br />« La Guilde de l'intelligentsia a fixé une prime de deux millions de crédits pour obtenir des plans techniques qui permettraient de démonter parfaitement les marionnettes mécaniques de Xianzhou. »<br />« Si vous connaissez Screwllum, alors ces deux millions sont à vous... »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "Ingéniosité envoûtée",
+    "Ennemis de l'Univers simulé",
+    "Récompenses d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "70a8938f2ceb297722769c3899bb3657304924c15cafc50fa23390de5eabacbc",
+   "name": "Roue dentée artisanale",
+   "desc": "Partie des machines de Xianzhou. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "Les composants connecteurs de la technologie des ingéniosités de Xianzhou. Les fines dents complexes des roues sont aussi minuscules que des graines de moutarde. Pourtant, elles s'imbriquent pour former un corps complexe, ce qui donne l'illusion que la machine est en vie.<br /><br />« Sa forme est en parfaite harmonie avec la nature, ses mouvements cycliques faisant écho au cosmos. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "Ingéniosité envoûtée au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635668": {
+   "id": 635668,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "d161ce50276f00b09b8356dd3c086660d530bcda89b9441b33c13e2501772674",
+   "name": "Endurance de bronze",
+   "desc": "Bouclier de bronze, grossier mais résistant. Permet d'améliorer légèrement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Préservation</span>.",
+   "lore": "De vieilles légendes racontent comment les humains épuisèrent toutes les méthodes primitives pour suivre les dieux au combat, face à des monstres incroyablement puissants.<br />Ce bouclier en fut le témoin.<br /><br />« Nous n'avons d'autre choix que d'y mettre un terme, quand bien même nos efforts seraient futiles. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635668",
+   "comeFrom": [
+    "Calice de la Zone de ravitaillement",
+    "Braises immortelles"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "56ab8085d932c0a9521f684246a42bd320b199c3c1a6f3bd54b869c5f294fec9",
+   "name": "Éther purifié",
+   "desc": "Matériau de renforcement de cône de lumière. Confère 6 <nobr>000</nobr> points d'EXP de cône de lumière.",
+   "lore": "Une bouteille d'éther raffiné par des procédés spéciaux.<br /><br />« Le Jardin se félicite de recréer une gloire passée, mais c'est une \"gloire passée\" qu'ils ont choisie. Tu comprends ? »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Salle oubliée"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "1911d7bb4aad22029e82a9b17a0005674864038b6b61e86976ace8277267d9f6",
+   "name": "Éther condensé",
+   "desc": "Matériau de renforcement de cône de lumière. Confère 2 <nobr>000</nobr> points d'EXP de cône de lumière.",
+   "lore": "Une bouteille d'éther raffiné par des procédés spéciaux.<br /><br />« À manier avec précaution, ne pas faire tomber, ne pas appliquer de pression. En cas de dommage ou de fuite, se référer au chapitre II du \"Manuel de prise en charge des désastres\" pour une solution d'urgence. »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Braises immortelles"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "03fc3a9bafdf0f18b1e49a885353ed442420842a2cc373428b242b213d2728fc",
+   "name": "Éther dilué",
+   "desc": "Matériau de renforcement de cône de lumière. Confère <nobr>500</nobr> points d'EXP de cône de lumière.",
+   "lore": "Substance imaginaire qui ne devrait pas exister dans le monde réel. Il s'agit du matériau de base pour fabriquer les cônes de lumière.<br />Les images des cônes de lumière sont plus nettes avec cette substance.<br /><br />« Je vois... Alors c'est ça la « Sentiention » du Jardin de la mémoire. Pas étonnant que les protecteurs de la mémoire puissent embarquer pour des voyages cosmiques avec des souvenirs. »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Récompense d'affectation"
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "45329d01c5eb773414481b5457ac4854e81070b98c21d939da2a973c3c965fbd",
+   "name": "Gyrocœur artisanal",
+   "desc": "Composant utilisé dans les ingéniosités. Matériau avancé utilisé pour les améliorations.",
+   "lore": "Le cœur de la technologie des ingéniosités de Xianzhou. La sphère armillaire tourbillonne et vibre telle l'essence d'un cœur, donnant l'illusion que la machine pense comme un être vivant.<br /><br />« N'ayez pas peur. Lui enlever son cœur la rendrait... le rendrait ?... Non, cela lui ferait perdre toute sensibilité et retourner à ses origines mécaniques. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "Ingéniosité envoûtée au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836254": {
+   "id": 836254,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "7c4ec20ee723c7c2fe02642896f12a600834043762aa65d1e552b3d5a909f017",
+   "name": "Protection d'ambre",
+   "desc": "Bouclier unique, incrusté de fragments d'ambre venus de mines au-delà du ciel. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Préservation</span>.",
+   "lore": "Le porteur de ce bouclier est protégé par un mur invisible, qui repousse aussi bien les flèches de feu que les griffes les plus gigantesques.<br />De vieilles légendes parlent d'une guerre au cours de laquelle le héros d'une tribu sonna la charge équipé d'un bouclier de bronze aux côtés de guerriers armés de lances de feu pour affronter un Léviathan.<br />Ce bouclier en fut le témoin.<br /><br />« Ne dépassez pas cette ligne. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836254",
+   "comeFrom": [
+    "Calice de la Zone de ravitaillement",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920195": {
+   "id": 920195,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "16d6522d0f5a5796029f90a0fa91e226ff41c581d49d0f35d06f81f8397769ac",
+   "name": "Serment d'acier",
+   "desc": "Bouclier résultant d'une maîtrise inégalée d'un alliage inconnu. Permet d'améliorer modérément les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Préservation</span>.",
+   "lore": "Ce grand bouclier aussi léger qu'une plume est pourtant capable d'arrêter les attaques les plus lourdes sans montrer la moindre égratignure.<br />De vieilles légendes parlent d'une guerre au cours de laquelle de fougueux guerriers armés de lances capables d'émettre des rayons mortels et de boucliers en givracier défendirent une nation condamnée à disparaître.<br />Ce bouclier en fut le témoin.<br /><br />« De puissantes voix retentissent : l'ennemi est à nos portes ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920195",
+   "comeFrom": [
+    "Calice de la Zone de ravitaillement",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Braises immortelles"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 5000
+    },
+    {
+     "id": 549503,
+     "count": 8
+    }
+   ],
+   "attackBase": 19.2,
+   "attackAdd": 2.88,
+   "hpBase": 57.6,
+   "hpAdd": 8.64,
+   "defenseBase": 24,
+   "defenseAdd": 3.6
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 10000
+    },
+    {
+     "id": 635668,
+     "count": 4
+    },
+    {
+     "id": 549503,
+     "count": 12
+    }
+   ],
+   "attackBase": 42.24,
+   "attackAdd": 2.88,
+   "hpBase": 126.72,
+   "hpAdd": 8.64,
+   "defenseBase": 52.8,
+   "defenseAdd": 3.6
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 20000
+    },
+    {
+     "id": 920195,
+     "count": 4
+    },
+    {
+     "id": 633444,
+     "count": 8
+    }
+   ],
+   "attackBase": 72.96,
+   "attackAdd": 2.88,
+   "hpBase": 218.88,
+   "hpAdd": 8.64,
+   "defenseBase": 91.2,
+   "defenseAdd": 3.6
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 50000
+    },
+    {
+     "id": 920195,
+     "count": 8
+    },
+    {
+     "id": 633444,
+     "count": 12
+    }
+   ],
+   "attackBase": 103.68,
+   "attackAdd": 2.88,
+   "hpBase": 311.04,
+   "hpAdd": 8.64,
+   "defenseBase": 129.6,
+   "defenseAdd": 3.6
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 100000
+    },
+    {
+     "id": 836254,
+     "count": 5
+    },
+    {
+     "id": 717385,
+     "count": 6
+    }
+   ],
+   "attackBase": 134.4,
+   "attackAdd": 2.88,
+   "hpBase": 403.2,
+   "hpAdd": 8.64,
+   "defenseBase": 168,
+   "defenseAdd": 3.6
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 200000
+    },
+    {
+     "id": 836254,
+     "count": 10
+    },
+    {
+     "id": 717385,
+     "count": 8
+    }
+   ],
+   "attackBase": 165.12,
+   "attackAdd": 2.88,
+   "hpBase": 495.36,
+   "hpAdd": 8.64,
+   "defenseBase": 206.4,
+   "defenseAdd": 3.6
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 195.84,
+   "attackAdd": 2.88,
+   "hpBase": 587.52,
+   "hpAdd": 8.64,
+   "defenseBase": 244.8,
+   "defenseAdd": 3.6
+  }
+ ],
+ "skill": {
+  "id": 23011,
+  "name": "Vision",
+  "descHash": "Augmente les PV max du porteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> et le taux de régénération d'énergie de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>. Lorsque les PV du porteur sont réduits, les DGT infligés par tous les alliés augmentent de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> pendant <nobr>#5[i]</nobr> tours.<br />Au début de chaque vague, chaque allié récupère un montant de PV équivalent à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de ses PV perdus.",
+  "levelData": [
+   {
+    "params": [
+     0.24,
+     0.09,
+     0.8,
+     0.12,
+     2
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.28,
+     0.105,
+     0.85,
+     0.14,
+     2
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.32,
+     0.12,
+     0.9,
+     0.16,
+     2
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.36,
+     0.135,
+     0.95,
+     0.18,
+     2
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.4,
+     0.15,
+     1,
+     0.2,
+     2
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 60,
+   "2": 100,
+   "3": 170,
+   "4": 260,
+   "5": 370,
+   "6": 500,
+   "7": 640,
+   "8": 800,
+   "9": 970,
+   "10": 1160,
+   "11": 1360,
+   "12": 1580,
+   "13": 1820,
+   "14": 2060,
+   "15": 2320,
+   "16": 2600,
+   "17": 2880,
+   "18": 3180,
+   "19": 3490,
+   "20": 3620,
+   "21": 3760,
+   "22": 3910,
+   "23": 4050,
+   "24": 4200,
+   "25": 4360,
+   "26": 4510,
+   "27": 4670,
+   "28": 4830,
+   "29": 4990,
+   "30": 5160,
+   "31": 5330,
+   "32": 5500,
+   "33": 5670,
+   "34": 5850,
+   "35": 6030,
+   "36": 6210,
+   "37": 6390,
+   "38": 6580,
+   "39": 6760,
+   "40": 6950,
+   "41": 7630,
+   "42": 8060,
+   "43": 8510,
+   "44": 8970,
+   "45": 9440,
+   "46": 9910,
+   "47": 10390,
+   "48": 10890,
+   "49": 11390,
+   "50": 11900,
+   "51": 12420,
+   "52": 12940,
+   "53": 13480,
+   "54": 14020,
+   "55": 14580,
+   "56": 15140,
+   "57": 15710,
+   "58": 16290,
+   "59": 16880,
+   "60": 17470,
+   "61": 18290,
+   "62": 19270,
+   "63": 20260,
+   "64": 21260,
+   "65": 22290,
+   "66": 23320,
+   "67": 24370,
+   "68": 25440,
+   "69": 26520,
+   "70": 27620,
+   "71": 30810,
+   "72": 33710,
+   "73": 36660,
+   "74": 39650,
+   "75": 42680,
+   "76": 45750,
+   "77": 48870,
+   "78": 52030,
+   "79": 55230,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "23011"
+}

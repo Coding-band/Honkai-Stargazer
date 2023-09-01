@@ -149,7 +149,7 @@ public class ItemRSS {
     }
 
     /**
-     * Update Ver. 1.2.0
+     * Update Ver. 1.3.0
      * This is a special edition for Trailblazer(s)
      */
     public int[] getTrailblazerByName(String charNameInFile, String... option){
@@ -179,14 +179,19 @@ public class ItemRSS {
 
 
     /**
-     * Update Ver. 1.2.0
-     * https://hsr.honeyhunterworld.com/img/item/luka-item_icon_avatar.webp?x11252
+     * Update Ver. 1.3.0
+     * https://hsr.honeyhunterworld.com/img/item/fu-xuan-item_icon_avatar.webp?x11252
      */
     public int[] getCharByName(String charNameInFile, String... option){
         if (charNameInFile.contains("Trailblazer")){
             return getTrailblazerByName(charNameInFile,option);
         }
         switch (charNameInFile){
+            //Add in 1.3.0
+            case "Dan Heng • Imbibitor Lunae" : return new int[]{R.drawable.dan_heng_il_icon, R.drawable.dan_heng_il_splash, R.drawable.dan_heng_il_fade,R.drawable.dan_heng_il_eidolon1, R.drawable.dan_heng_il_eidolon2, R.drawable.dan_heng_eidolon3, R.drawable.dan_heng_il_eidolon4, R.drawable.dan_heng_il_eidolon5, R.drawable.dan_heng_il_eidolon6};
+            case "Fu Xuan" : return new int[]{R.drawable.fu_xuan_icon, R.drawable.fu_xuan_splash, R.drawable.fu_xuan_fade,R.drawable.fu_xuan_eidolon1, R.drawable.fu_xuan_eidolon2, R.drawable.fu_xuan_eidolon3, R.drawable.fu_xuan_eidolon4, R.drawable.fu_xuan_eidolon5, R.drawable.fu_xuan_eidolon6};
+            case "Lynx" : return new int[]{R.drawable.lynx_icon, R.drawable.lynx_splash, R.drawable.lynx_fade,R.drawable.lynx_eidolon1, R.drawable.lynx_eidolon2, R.drawable.lynx_eidolon3, R.drawable.lynx_eidolon4, R.drawable.lynx_eidolon5, R.drawable.lynx_eidolon6};
+
             //Add in 1.2.0
             case "Luka" : return new int[]{R.drawable.luka_icon, R.drawable.luka_splash, R.drawable.luka_fade,R.drawable.luka_eidolon1, R.drawable.luka_eidolon2, R.drawable.luka_eidolon3, R.drawable.luka_eidolon4, R.drawable.luka_eidolon5, R.drawable.luka_eidolon6};
             case "Kafka" : return new int[]{R.drawable.kafka_icon, R.drawable.kafka_splash, R.drawable.kafka_fade,R.drawable.kafka_eidolon1, R.drawable.kafka_eidolon2, R.drawable.kafka_eidolon3, R.drawable.kafka_eidolon4, R.drawable.kafka_eidolon5, R.drawable.kafka_eidolon6};
@@ -225,14 +230,18 @@ public class ItemRSS {
     }
 
     /**
-     * Update Ver. 1.2.0
+     * Update Ver. 1.3.0
      */
     public int[] getLightconeByName(String lightconeNameInFile){
         switch (lightconeNameInFile){
+            //Add in 1.3.0
+            case "She Already Shut Her Eyes" : return new int[] {R.drawable.she_already_shut_her_eyes, R.drawable.she_already_shut_her_eyes_artwork};
+            case "Brighter Than the Sun" : return new int[] {R.drawable.brighter_than_the_sun, R.drawable.brighter_than_the_sun_artwork};
+            case "Solitary Healing" : return new int[] {R.drawable.solitary_healing, R.drawable.solitary_healing_artwork};
+
             //Add in 1.2.0
             case "The Unreachable Side" : return new int[] {R.drawable.the_unreachable_side, R.drawable.the_unreachable_side_artwork};
             case "Patience Is All You Need" : return new int[] {R.drawable.patience_is_all_you_need, R.drawable.patience_is_all_you_need_artwork};
-
 
             //Add in 1.1.0
             case "Before the Tutorial Mission Starts" : return new int[] {R.drawable.before_the_tutorial_mission_starts, R.drawable.before_the_tutorial_mission_starts_artwork};
@@ -314,7 +323,7 @@ public class ItemRSS {
     }
 
     /**
-     * Update Ver. 1.2.0
+     * Update Ver. 1.3.0
      */
     public int[] getRelicByName(String relicNameInFile){
         switch (relicNameInFile){
@@ -351,10 +360,18 @@ public class ItemRSS {
 
 
     /**
-     * Update Ver. 1.2.0
+     * Update Ver. 1.3.0
      */
     public String getLocalNameByName(String itemNameInFile, Context context){
         switch (itemNameInFile){
+            //Add in 1.3.0
+            case "Dan Heng • Imbibitor Lunae" : return context.getString(R.string.dan_heng_imbibitor_lunae);
+            case "Fu Xuan" : return context.getString(R.string.fu_xuan);
+            case "Lynx" : return context.getString(R.string.lynx);
+            case "She Already Shut Her Eyes" : return context.getString(R.string.brighter_than_the_sun);
+            case "Brighter Than the Sun" : return context.getString(R.string.brighter_than_the_sun);
+            case "Solitary Healing" : return context.getString(R.string.solitary_healing);
+
             //Add in 1.2.0
             case "Luka" : return context.getString(R.string.luka);
             case "Blade" : return context.getString(R.string.blade);
@@ -495,13 +512,18 @@ public class ItemRSS {
     }
 
     /**
-     * Update Ver. 1.2.0
+     * Update Ver. 1.3.0
      * @param name Name of Lightcone in Prydwen
      * @param context Context for using context.getString(...)
      * @return
      */
     public String getLocaleNameByPrydwen(String name, Context context){
         switch (name){
+            //Add in 1.3.0
+            case "she-already-shut-her-eyes": return "She Already Shut Her Eyes";
+            case "brighter-than-the-sun": return "Brighter Than the Sun";
+            case "solitary-healing": return "Solitary Healing";
+
             //Add in 1.2.0
             case "patience-is-all-you-need": return "Patience Is All You Need";
             case "the-unreachable-side": return "The Unreachable Side";
@@ -584,6 +606,11 @@ public class ItemRSS {
 
     public int[] getCharSkillByName(String charNameInFile){
         switch (charNameInFile){
+            //Add in 1.3.0
+            case "Dan Heng • Imbibitor Lunae" : return new int[]{R.drawable.dan_heng_il_skill1, R.drawable.dan_heng_il_skill2, R.drawable.dan_heng_il_skill3, R.drawable.dan_heng_il_skill4, R.drawable.dan_heng_il_skill6};
+            case "Fu Xuan" : return new int[]{R.drawable.fu_xuan_skill1, R.drawable.fu_xuan_skill2, R.drawable.fu_xuan_skill3, R.drawable.fu_xuan_skill4, R.drawable.fu_xuan_skill6};
+            case "Lynx" : return new int[]{R.drawable.lynx_skill1, R.drawable.lynx_skill2, R.drawable.lynx_skill3, R.drawable.lynx_skill4, R.drawable.lynx_skill6};
+
             //Add in 1.2.0
             case "Kafka" : return new int[]{R.drawable.kafka_skill1, R.drawable.kafka_skill2, R.drawable.kafka_skill3, R.drawable.kafka_skill4, R.drawable.kafka_skill6};
             case "Blade" : return new int[]{R.drawable.blade_skill1, R.drawable.blade_skill2, R.drawable.blade_skill3, R.drawable.blade_skill4, R.drawable.blade_skill6};
@@ -626,6 +653,12 @@ public class ItemRSS {
 
     public int getMaterialByID(int materialID){
         switch (materialID){
+            //Add in 1.3.0
+            case 351747 : return R.drawable.material_nail_of_the_ape;
+            case 468392 : return R.drawable.material_suppressing_edict;
+            case 717385 : return R.drawable.material_artifexs_gyreheart;
+            case 717386 : return R.drawable.material_immortal_lumintwig;
+
             case 125435 : return R.drawable.material_tracks_of_destiny;
             case 151160 : return R.drawable.material_lightning_crown_of_the_past_shadow;
             case 151161 : return R.drawable.material_shape_shifters_lightning_staff;
@@ -664,8 +697,6 @@ public class ItemRSS {
             case 717290 : return R.drawable.material_ancient_engine;
             case 717319 : return R.drawable.material_conquerors_will;
             case 717320 : return R.drawable.material_squirming_core;
-            case 717385 : return R.drawable.material_artifexs_gyreheart;
-            case 717386 : return R.drawable.material_immortal_lumintwig;
             case 782692 : return R.drawable.material_enigmatic_ectostella;
             case 836254 : return R.drawable.material_safeguard_of_amber;
             case 836255 : return R.drawable.material_obsidian_of_obsession;

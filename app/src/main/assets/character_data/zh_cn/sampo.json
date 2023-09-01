@@ -422,7 +422,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "9a37f9e723d487da7913c6ed7442af8111da3f1d7fbe1b0187f8e2a52e93b0a3",
+   "iconPath": "71e251a5ee089bec82a4dc68bf205c9861726351005b98ffa1b61b66c66d4d4b",
    "artPath": "6150faa4e0b1645e2309af7539ab64983cd15cf3fd708ff479876b4f420ea08f",
    "name": "加码的爱",
    "descHash": "施放战技时，对敌方随机单体额外造成<nobr>#1[i]</nobr>次伤害。",
@@ -432,7 +432,7 @@
   },
   {
    "id": 2,
-   "iconPath": "44efe4d5a6a656cc9c8f78b1721c1cf527acecf559ed1a6658ee502998fb5765",
+   "iconPath": "4bf505f9901007bb561392e8bc2ab8c28b07cfc3b820b1db604205ed81674694",
    "artPath": "3bbdffdf361cbed69736dc1d65f2b6d7715e708b094903a0cdaf9d2cf82b85cb",
    "name": "热情会传染",
    "descHash": "风化状态下的敌方目标被消灭时，使敌方全体有<nobr>#1[i]%</nobr>的基础概率叠加<nobr>#2[i]</nobr>层等同于天赋的风化状态。",
@@ -443,7 +443,7 @@
   },
   {
    "id": 3,
-   "iconPath": "7bfe182a258c7fe6c994becd0f4cc319644011f1b804bd60df1df3288ec42b39",
+   "iconPath": "e8ba9eb8afa9a76e7232b38ed0d1933a6f921b176464dd11034805a7fefbbb03",
    "artPath": "8b5ed606803e17e31f37faea7fc48768e5c8ad52faea66926afb222b990af912",
    "name": "大数字！",
    "descHash": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
@@ -451,7 +451,7 @@
   },
   {
    "id": 4,
-   "iconPath": "8ff9b3faafa6166562340b37c692b329cd0d0dd4ee85193308dd902b7e7548be",
+   "iconPath": "a8405379a82b12007e928a280e036a9a0e94e7c331a91993ccb064d3288efb4b",
    "artPath": "e12c093f2b9d701b3b67058576b782cb2a45c2887e5dc9fa961e17bdb134939d",
    "name": "爱之深，恨之切",
    "descHash": "战技击中风化状态大于等于<nobr>#1[i]</nobr>层的敌方目标时，使其当前承受的风化状态立即产生相当于原伤害<nobr>#2[i]%</nobr>的伤害。",
@@ -462,7 +462,7 @@
   },
   {
    "id": 5,
-   "iconPath": "2f5a088a1ddcdc626cbe61814172a6cb478dd15da26365f0813fa3a61c99d89f",
+   "iconPath": "c91fbef1687be784ecfa34e846c4af09878b4a93dbcb55e6df54590bdd710cde",
    "artPath": "7fde87a94f7b016f973ba62dac8312babb2623aefa70224cf88bc19dd04a9092",
    "name": "超大数字！",
    "descHash": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
@@ -470,7 +470,7 @@
   },
   {
    "id": 6,
-   "iconPath": "16e6ddb492f08ccf590bafdf57cc7006e560807d9b349294fc6ac5e5be96df05",
+   "iconPath": "c16d4f5d3636cb6e536966d0b4203e4fec3eb8a3002c58daa7d39f40e5a06215",
    "artPath": "9830dbce5369faa6f44e2385b0d0455272fcdb5639917c0739af84913f1873e7",
    "name": "消费升级",
    "descHash": "天赋施加的风化状态的伤害倍率提高<nobr>#1[i]%</nobr>。",
@@ -505,7 +505,7 @@
    "energy": "20",
    "id": 849349,
    "name": "酷炫的刀花",
-   "iconPath": "e124f432c6d6584df9101416b7c3fbdea275f89c899150ff48c695a329c9f823",
+   "iconPath": "94358bfd8093636ae20f6f11233e5dd15a98245e08b96f4e620e9a01db938fca",
    "typeDescHash": "普攻",
    "levelReq": 0,
    "promotionReq": 0,
@@ -662,11 +662,11 @@
    "tagHash": "弹射",
    "descHash": "对指定敌方单体造成等同于桑博<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻击力的<span style=\"color:#00FF9C;\">风</span>属性伤害，并额外造成<nobr>#1[i]</nobr>次伤害，每次伤害对敌方随机单体造成等同于桑博<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻击力的<span style=\"color:#00FF9C;\">风</span>属性伤害。",
    "ultimateCost": 0,
-   "break": "30/hit",
-   "energy": "6",
+   "break": "30 + 15/subsequent",
+   "energy": "6/hit",
    "id": 933290,
    "name": "反复横跳的爱",
-   "iconPath": "7bfe182a258c7fe6c994becd0f4cc319644011f1b804bd60df1df3288ec42b39",
+   "iconPath": "e8ba9eb8afa9a76e7232b38ed0d1933a6f921b176464dd11034805a7fefbbb03",
    "typeDescHash": "战技",
    "levelReq": 0,
    "promotionReq": 0,
@@ -952,7 +952,7 @@
    "energy": "5",
    "id": 49935,
    "name": "惊喜礼盒",
-   "iconPath": "c8958a189a2e897573d60a4166b2c3f89c74173ffeda1edec62bedf42d165eb1",
+   "iconPath": "f466dacd8763e365b7bf0df63d5e00052bce576ff556573f8b1d12db90dceed4",
    "typeDescHash": "终结技",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1268,7 +1268,7 @@
    "energy": "0",
    "id": 364236,
    "name": "撕风的匕首",
-   "iconPath": "b59c336ba6c2c3c0d7a68c487affaf33fcc401777b222e35e63c1b664b75de4d",
+   "iconPath": "770cc7fda294e8fa227ed6435a252e1f17ad9aa4a3838994537a87d0734eebe5",
    "typeDescHash": "天赋",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1584,7 +1584,7 @@
    "energy": "0",
    "id": 564822,
    "name": "攻击",
-   "iconPath": "e124f432c6d6584df9101416b7c3fbdea275f89c899150ff48c695a329c9f823",
+   "iconPath": "94358bfd8093636ae20f6f11233e5dd15a98245e08b96f4e620e9a01db938fca",
    "typeDescHash": "",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1606,7 +1606,7 @@
    "energy": "0",
    "id": 648763,
    "name": "你最闪亮",
-   "iconPath": "47d83ca715bf3ed0cc556cbbf750bc5644df38ad4a4a30c4fcbc3ac2277df425",
+   "iconPath": "20c5a485a67f5376f956dd00f6f0eb68be93345f4f8ba989399f81d8fdbf034a",
    "typeDescHash": "秘技",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1647,7 +1647,7 @@
           "name": "攻击强化",
           "levelReq": 0,
           "promotionReq": 5,
-          "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+          "iconPath": "11848b5b4ba9b6a548e2c13c290d25bce203cba9f39efbb047def3246676588a",
           "statusList": [
            {
             "key": "攻击力",
@@ -1676,7 +1676,7 @@
         "name": "效果命中强化",
         "levelReq": 0,
         "promotionReq": 5,
-        "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+        "iconPath": "a4419414be14711f08e6bb2fa30b4e3e92a18f25f2d5c8507bc0be8e06a4a707",
         "statusList": [
          {
           "key": "效果命中",
@@ -1705,7 +1705,7 @@
       "name": "攻击强化",
       "levelReq": 0,
       "promotionReq": 4,
-      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "iconPath": "11848b5b4ba9b6a548e2c13c290d25bce203cba9f39efbb047def3246676588a",
       "statusList": [
        {
         "key": "攻击力",
@@ -1734,7 +1734,7 @@
     "ultimateCost": 0,
     "id": 285971,
     "name": "后手",
-    "iconPath": "ad61a89bb232a760efd6249c97e7a7ac94bbbd280df52cda7a1427f8ab7f0284",
+    "iconPath": "05a536846c2ff4ef5e9b4bfb56d88ca982c2cabf465c6b34986e75db27fe2f3d",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
@@ -1780,7 +1780,7 @@
       "name": "效果抵抗强化",
       "levelReq": 0,
       "promotionReq": 6,
-      "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+      "iconPath": "6d25c4db54cfeedca2e387e29d6fa8e849138caa2d268a124ad133c276ee09e9",
       "statusList": [
        {
         "key": "效果抵抗",
@@ -1812,7 +1812,7 @@
       "name": "效果命中强化",
       "levelReq": 75,
       "promotionReq": 0,
-      "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+      "iconPath": "a4419414be14711f08e6bb2fa30b4e3e92a18f25f2d5c8507bc0be8e06a4a707",
       "statusList": [
        {
         "key": "效果命中",
@@ -1841,7 +1841,7 @@
     "ultimateCost": 0,
     "id": 285970,
     "name": "加料",
-    "iconPath": "f3807259480abf963c205ba7528c727b26aaf770ffbca65b3b82c28faf2ac197",
+    "iconPath": "689ffaae57513cd66163dceac380bdb7b3dce5127d3f43b050a73a7edac4ec02",
     "levelReq": 0,
     "promotionReq": 6,
     "levelData": [
@@ -1887,7 +1887,7 @@
       "name": "攻击强化",
       "levelReq": 80,
       "promotionReq": 0,
-      "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+      "iconPath": "11848b5b4ba9b6a548e2c13c290d25bce203cba9f39efbb047def3246676588a",
       "statusList": [
        {
         "key": "攻击力",
@@ -1916,7 +1916,7 @@
     "name": "攻击强化",
     "levelReq": 1,
     "promotionReq": 0,
-    "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "iconPath": "11848b5b4ba9b6a548e2c13c290d25bce203cba9f39efbb047def3246676588a",
     "statusList": [
      {
       "key": "攻击力",
@@ -1956,7 +1956,7 @@
           "name": "效果抵抗强化",
           "levelReq": 0,
           "promotionReq": 3,
-          "iconPath": "5e0ea9beeaea4aebaec6fa80218757c7123e5d8d63565bc255c08d6af87ebc7e",
+          "iconPath": "6d25c4db54cfeedca2e387e29d6fa8e849138caa2d268a124ad133c276ee09e9",
           "statusList": [
            {
             "key": "效果抵抗",
@@ -1985,7 +1985,7 @@
         "name": "攻击强化",
         "levelReq": 0,
         "promotionReq": 3,
-        "iconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+        "iconPath": "11848b5b4ba9b6a548e2c13c290d25bce203cba9f39efbb047def3246676588a",
         "statusList": [
          {
           "key": "攻击力",
@@ -2014,7 +2014,7 @@
       "name": "效果命中强化",
       "levelReq": 0,
       "promotionReq": 2,
-      "iconPath": "6cee422fdfafd9cab8ce9f5a86a717d069964985d2e079d359713385c93d67fb",
+      "iconPath": "a4419414be14711f08e6bb2fa30b4e3e92a18f25f2d5c8507bc0be8e06a4a707",
       "statusList": [
        {
         "key": "效果命中",
@@ -2043,7 +2043,7 @@
     "ultimateCost": 0,
     "id": 285968,
     "name": "圈套",
-    "iconPath": "fcf499c20092da938c118623dec6b09ebb8e0b89e1ec0e4186c478a8444e915b",
+    "iconPath": "2a8a76bfdd18fda232fc8e7efea9dd7c0dc936aa46bbd01f53363c0d630d282e",
     "levelReq": 0,
     "promotionReq": 2,
     "levelData": [
@@ -2079,27 +2079,27 @@
   "props": [
    {
     "relicTypeHash": "躯干",
-    "relicTypeIcon": "87a68da58f5ca7f656d3ebf27bc84c5c32aafd164f2406af6b95c0e46277496b",
+    "relicTypeIcon": "cc0016299f47ce045182aeeb947abbbc2528593abd9053c6697cf978086f2583",
     "propertyName": "攻击力",
-    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+    "propertyIconPath": "11848b5b4ba9b6a548e2c13c290d25bce203cba9f39efbb047def3246676588a"
    },
    {
     "relicTypeHash": "脚部",
-    "relicTypeIcon": "5d8394f899a9cc41333630a3475d525b65c4a7cf59d16cdc4ac0acccc082259c",
+    "relicTypeIcon": "95fdf56be02ea7dcfca4b56c7f7246bd8f2f89f86db48565b05131950bb4123c",
     "propertyName": "速度",
-    "propertyIconPath": "2483a985b6f7a2c277835369c71181b7f70d5f25238745319b6328780100a3fd"
+    "propertyIconPath": "abea4e0260c6729b4e5996f87a0906ed6b35ef6a8e26af1c9f2e7a0825205b7d"
    },
    {
     "relicTypeHash": "位面球",
-    "relicTypeIcon": "fd22786ef5ef0aee8953005c423739fe85fd85b16b82a3f7f18910499a4368b5",
+    "relicTypeIcon": "158b2031c86243f437784d13355c0b5c369d3c5bfe8b09dc3ac32a2f7d279a83",
     "propertyName": "风属性伤害提高",
-    "propertyIconPath": "fe44fb655f65017dcad0c260b4dcffe14de4b14816734239c2c60d4624cf8163"
+    "propertyIconPath": "07606264109a0077da33ca3ab560aee9344572c6fc93aa019a93afca91d18b50"
    },
    {
     "relicTypeHash": "连结绳",
-    "relicTypeIcon": "245bb6e30915d9ab6a042e37499ad3a0b0d022208a5fee05417b7cd3c088e357",
+    "relicTypeIcon": "4147506c4e224b02bc146df5a8407cb086698facb1ac38ca3b8dcc844a1cc582",
     "propertyName": "攻击力",
-    "propertyIconPath": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5"
+    "propertyIconPath": "11848b5b4ba9b6a548e2c13c290d25bce203cba9f39efbb047def3246676588a"
    }
   ]
  },
@@ -2269,34 +2269,14 @@
    "title": "关于卢卡",
    "text": "你见过他比赛没有？那小子，可是下层区最大的摇钱树啊！可惜这树没长在老桑博的后院里……",
    "unlockRequirement": "",
-   "cnUrl": "",
-   "jpUrl": "",
-   "enUrl": "",
-   "krUrl": ""
+   "cnUrl": "1d902eeb4a0cfd35e6ca82e1da93e62f703751e68b8147e11908fb02455fe69c",
+   "jpUrl": "6d32403303c28890b17885055dde560516457ba133315b1c7cb21650275d2af8",
+   "enUrl": "8327d2d02ddb1d24ee25ce42af3cee8158c1988be25f952d096fb97dd96e1327",
+   "krUrl": "7b23f1bd4d2b126f02f8056f7a899e0ff44e7d9c2d1d46867744dd6510378e78"
   },
   {
    "id": 51,
    "title": "战斗开始•弱点击破",
-   "text": "我桑博一向关照朋友。",
-   "unlockRequirement": "",
-   "cnUrl": "5cfca2bedb00b64133865a99b4238edb1c2bf254ab21f8d6c46a34dd237d7fbe",
-   "jpUrl": "a92f80ae2fb40965741c0d8af44c8394e5cfbce4b2f25edf8b19926a7b3e80bb",
-   "enUrl": "4d4660dd2702ca68f23e7f5c9fe307e2bb8b29921f02af86d1261754842619c3",
-   "krUrl": "617cce199f79d9f7543a4d3fca8c7920f48447dba33db434b6c4384f3d1cc4fe"
-  },
-  {
-   "id": 52,
-   "title": "战斗开始•危险预警",
-   "text": "又有生意上门了。",
-   "unlockRequirement": "",
-   "cnUrl": "4494162f40865cb1b437aba0bb9fa1f40232a8b31eca25c390451f2248f236c5",
-   "jpUrl": "2a614f089edf4dc3d31f5efc29e0339785e23e3356376ff15eb8c76a2155c1f0",
-   "enUrl": "ea265a126befaf43ce06e0347a44d224fda9355fe892fff8f84dfd111c27d4e9",
-   "krUrl": "9428494b4c758438ec3e21fd8dd2622223c886c310de993e6f3e575ad38603f8"
-  },
-  {
-   "id": 53,
-   "title": "回合开始•一",
    "text": "权当找点乐子喽。",
    "unlockRequirement": "",
    "cnUrl": "f8bf9d19b8b0521116d0d57559a6929782a78660efc96b739185db12f9637e77",
@@ -2305,14 +2285,34 @@
    "krUrl": "201b4f3691c7d5d5a4c777ebb90058b16a5ddac2540dc3eae107525be90605fa"
   },
   {
-   "id": 54,
-   "title": "回合开始•二",
+   "id": 52,
+   "title": "战斗开始•危险预警",
    "text": "越强越好啊，合我胃口。",
    "unlockRequirement": "",
    "cnUrl": "735703cb0757a8c89c2520c8268c88c6cc15658c1762b9c470ee1fdbf4c238aa",
    "jpUrl": "196c9c249f6c0ba47a432dc257688575c6a0b87d40972e341e7db77dfa750230",
    "enUrl": "ab44909c63113a368f1359a0913fe900ebf743529336c16e3c9dd2dca9ba81c3",
    "krUrl": "916561b875bb23c147b36b4aafd5a590d2066f3c648f69792c2cb827b8a0e245"
+  },
+  {
+   "id": 53,
+   "title": "回合开始•一",
+   "text": "我桑博一向关照朋友。",
+   "unlockRequirement": "",
+   "cnUrl": "5cfca2bedb00b64133865a99b4238edb1c2bf254ab21f8d6c46a34dd237d7fbe",
+   "jpUrl": "a92f80ae2fb40965741c0d8af44c8394e5cfbce4b2f25edf8b19926a7b3e80bb",
+   "enUrl": "4d4660dd2702ca68f23e7f5c9fe307e2bb8b29921f02af86d1261754842619c3",
+   "krUrl": "617cce199f79d9f7543a4d3fca8c7920f48447dba33db434b6c4384f3d1cc4fe"
+  },
+  {
+   "id": 54,
+   "title": "回合开始•二",
+   "text": "又有生意上门了。",
+   "unlockRequirement": "",
+   "cnUrl": "4494162f40865cb1b437aba0bb9fa1f40232a8b31eca25c390451f2248f236c5",
+   "jpUrl": "2a614f089edf4dc3d31f5efc29e0339785e23e3356376ff15eb8c76a2155c1f0",
+   "enUrl": "ea265a126befaf43ce06e0347a44d224fda9355fe892fff8f84dfd111c27d4e9",
+   "krUrl": "9428494b4c758438ec3e21fd8dd2622223c886c310de993e6f3e575ad38603f8"
   },
   {
    "id": 55,
@@ -2596,7 +2596,7 @@
  "miniIconPath": "b096164e9f304ebffc75f15f8e165b326647b5ee63792ab6e414a1144543ea62",
  "damageType": {
   "id": 16,
-  "iconPath": "a77d91df3b1045f9fa66ce1300c4d921c0f89e51135df8208904334e8a0f0b80",
+  "iconPath": "dbd44a8770bed121e1baf4627272cd41d0407fb84213a40541ad9898b1033006",
   "color": "#00FF9C",
   "name": "风",
   "rarity": 0
