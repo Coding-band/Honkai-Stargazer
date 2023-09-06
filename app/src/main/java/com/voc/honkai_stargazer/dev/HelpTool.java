@@ -235,7 +235,7 @@ public class HelpTool {
             JSONArray array = new JSONArray(json_base2);
             for (int i = 0; i < array.length(); i++) {
                 JSONObject object = array.getJSONObject(i);
-                String urlName = object.getString("name").toLowerCase().replace(" ","-").replace("(","").replace(")","");
+                String urlName = object.getString("name").replace("Dan Heng • ","").toLowerCase().replace(" ","-").replace("(","").replace(")","");
                 //if (!matchRequirement(object,VERSION_CHECK)){return;}
                 new JsonTask().execute("https://www.prydwen.gg/page-data/star-rail/characters/"+urlName+"/page-data.json",object.getString("name"),object.getString("fileName"));
             }
