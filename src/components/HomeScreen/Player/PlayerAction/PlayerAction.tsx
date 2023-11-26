@@ -8,7 +8,7 @@ export default function PlayerAction() {
   const [isPress, setIsPress] = useState(false);
 
   return (
-    <View>
+    <View className="z-50">
       <MoreBtn
         onPress={() => {
           setIsPress(!isPress);
