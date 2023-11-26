@@ -28,9 +28,33 @@ export default function MenuItemLarge({
               <Stop offset="0" stopColor="#222222" />
               <Stop offset="1" stopColor="#222222" stopOpacity="0" />
             </LinearGradient>
+            <LinearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+              <Stop offset="0%" stopColor="rgba(255, 255, 255, 0.10)" />
+              <Stop offset="100%" stopColor="rgba(255, 255, 255, 0.10)" />
+            </LinearGradient>
+            <LinearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+              <Stop offset="0%" stopColor="rgba(34, 34, 34, 0.60)" />
+              <Stop offset="100%" stopColor="rgba(34, 34, 34, 0.00)" />
+            </LinearGradient>
           </Defs>
 
           {/* Rectangles */}
+          <Rect
+            x="0"
+            y="0"
+            width={width}
+            height={height}
+            fill="url(#grad1)"
+            fillOpacity="0.1"
+          />
+          <Rect
+            x="0"
+            y="0"
+            width={width}
+            height={height}
+            fill="url(#grad2)"
+            fillOpacity="0.1"
+          />
           <Rect
             x="0"
             y="0"
