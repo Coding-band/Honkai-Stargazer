@@ -4,6 +4,7 @@ import {
   Pressable,
   Text,
   TouchableNativeFeedback,
+  TouchableOpacity,
   View,
 } from "react-native";
 
@@ -13,7 +14,7 @@ type Props = {
 
 export default function MoreBtn(props: Props) {
   return (
-    <TouchableNativeFeedback onPress={props.onPress}>
+    <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
       <View
         className="w-[45px] h-[23px] bg-[#dddddd] rounded-[49px] flex justify-center items-center"
         style={{
@@ -30,6 +31,6 @@ export default function MoreBtn(props: Props) {
           <View className="left-[10px] absolute w-[3px] h-[3px] top-0 bg-[#1e1e1e] rounded-[1.5px]" />
         </View>
       </View>
-    </TouchableNativeFeedback>
+    </TouchableOpacity>
   );
 }

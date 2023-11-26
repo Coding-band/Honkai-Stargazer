@@ -51,10 +51,10 @@ export default function Menu() {
   return (
     <View
       style={{
-        height: Dimensions.get("screen").height - 310,
+        height: Dimensions.get("window").height - 309,
       }}
     >
-      <ScrollView>
+      <ScrollView bounces>
         <View
           onLayout={onLayout}
           className={cn("w-full pt-3 px-5 pb-5")}
@@ -107,7 +107,7 @@ export default function Menu() {
             height={menuItemSize.height}
             Icon={Planet}
           >
-            2700/3500
+            270/350
           </MenuItem>
           <MenuItemLarge
             width={menuItemLargeSize.width}
@@ -173,7 +173,7 @@ export default function Menu() {
             未来卡池
           </MenuItem>
           {/*  */}
-          <MenuItem
+          {/* <MenuItem
             width={menuItemSize.width}
             height={menuItemSize.height}
             Icon={Person}
@@ -284,7 +284,7 @@ export default function Menu() {
             Icon={ClockClockwise}
           >
             未来卡池
-          </MenuItem>
+          </MenuItem> */}
         </View>
       </ScrollView>
     </View>

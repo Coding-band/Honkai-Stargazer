@@ -3,22 +3,23 @@ import { View } from "react-native";
 
 export default function PlayerLevel() {
   const [flag, setFlag] = useState<"LEFT" | "RIGHT">("LEFT");
-  const [level, setLevel] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setLevel((prevLevel) => {
-        const newLevel = flag === "LEFT" ? prevLevel + 3 : prevLevel - 3;
-        if (newLevel > 250) {
-          setFlag("RIGHT");
-        } else if (newLevel < 0) {
-          setFlag("LEFT");
-        }
-        return newLevel;
-      });
-    }, 8);
+  const [level, setLevel] = useState(260);
 
-    return () => clearInterval(interval); // 清除定時器
-  }, [flag]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setLevel((prevLevel) => {
+  //       const newLevel = flag === "LEFT" ? prevLevel + 3 : prevLevel - 3;
+  //       if (newLevel > 250) {
+  //         setFlag("RIGHT");
+  //       } else if (newLevel < 0) {
+  //         setFlag("LEFT");
+  //       }
+  //       return newLevel;
+  //     });
+  //   }, 8);
+
+  //   return () => clearInterval(interval); // 清除定時器
+  // }, [flag]);
 
   return (
     <View style={{ flexDirection: "row" }} className="h-1">

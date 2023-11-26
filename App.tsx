@@ -8,8 +8,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./src/screens/HomeScreen";
-import { Image } from "expo-image";
-import { blurhash } from "./src/constant/Image";
+import { ClickOutsideProvider } from "react-native-click-outside";
 
 // SplashScreen.preventAutoHideAsync();
 
@@ -31,20 +30,22 @@ export default function App() {
   const Stack = createNativeStackNavigator();
 
   return (
-    <View
-      className="flex-1"
-      // onLayout={onLayoutRootView}
-    >
-      <StatusBar hidden/>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Home"
-            component={HomeScreen}
-            options={{ headerShown: false }}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </View>
+    <ClickOutsideProvider>
+      <View
+        className="flex-1"
+        // onLayout={onLayoutRootView}
+      >
+        <StatusBar hidden />
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              name="Home"
+              component={HomeScreen}
+              options={{ headerShown: false }}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </View>
+    </ClickOutsideProvider>
   );
 }

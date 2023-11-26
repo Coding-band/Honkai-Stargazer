@@ -1,8 +1,8 @@
 import React from "react";
-import { Text, TouchableNativeFeedback, View } from "react-native";
-import Svg, { Defs, LinearGradient, Stop, Rect } from "react-native-svg";
-import { BlurView } from "expo-blur";
+import { Text, TouchableNativeFeedback, TouchableOpacity, View } from "react-native";
+import { Shadow } from "react-native-shadow-2";
 import { LinearGradient as LinearGradientExpo } from "expo-linear-gradient";
+import { BlurView } from "expo-blur";
 
 export default function MenuItem({
   children,
@@ -16,102 +16,38 @@ export default function MenuItem({
   height: number;
 }) {
   return (
-    <View
-      style={{
-        shadowColor: "#000000", // 阴影颜色
-        shadowOffset: { width: 0, height: 4 }, // 阴影偏移
-        shadowOpacity: 0.25, // 阴影透明度
-        shadowRadius: 16, // 模糊半径
-        elevation: 16, // 仅用于Android，与阴影相关的视图提升
-      }}
-    >
-      <TouchableNativeFeedback>
-        <View>
-          <Svg
-            width={width}
-            height={height}
-            viewBox={`0 0 ${width} ${height}`}
-            fill="none"
-          >
-            {/* LinearGradient definition */}
-            <Defs>
-              <LinearGradient
-                id="paint0_linear"
-                x1="56"
-                y1="12"
-                x2="56"
-                y2="92"
-              >
-                <Stop offset="0" stopColor="#222222" />
-                <Stop offset="1" stopColor="#222222" stopOpacity="0" />
-              </LinearGradient>
-              <LinearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-                <Stop offset="0%" stopColor="rgba(255, 255, 255, 0.10)" />
-                <Stop offset="100%" stopColor="rgba(255, 255, 255, 0.10)" />
-              </LinearGradient>
-              <LinearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
-                <Stop offset="0%" stopColor="rgba(34, 34, 34, 0.60)" />
-                <Stop offset="100%" stopColor="rgba(34, 34, 34, 0.00)" />
-              </LinearGradient>
-            </Defs>
-
-            {/* Rectangles */}
-            <Rect
-              x="0"
-              y="0"
-              width={width}
-              height={height}
-              fill="url(#grad1)"
-              fillOpacity="0.1"
-            />
-            <Rect
-              x="0"
-              y="0"
-              width={width}
-              height={height}
-              fill="url(#grad2)"
-              fillOpacity="0.1"
-            />
-            <Rect
-              x="0"
-              y="0"
-              width={width}
-              height={height}
-              rx="4"
-              fill="url(#paint0_linear)"
-              fillOpacity="0.6"
-            />
-            <Rect
-              x="0"
-              y="0"
-              width={width}
-              height={height}
-              rx="4"
-              fill="white"
-              fillOpacity="0.1"
-            />
-            <Rect
-              x="0.75"
-              y="0.75"
-              width={width - 1.5}
-              height={height - 1.5}
-              rx="3.25"
-              stroke="#907C54"
-              strokeOpacity="0.4"
-              strokeWidth="1.5"
-            />
-          </Svg>
-          <View
-            className="absolute top-[15px]"
-            style={{ alignItems: "center", width, height }}
-          >
-            <View style={{ gap: 7, alignItems: "center" }}>
-              {Icon && <Icon weight="fill" size={32} color="white" />}
-              <Text className="text-[14px] text-white">{children}</Text>
+    <Shadow offset={[0, 4]} distance={6} startColor="#00000025">
+      <TouchableOpacity activeOpacity={0.65}>
+        <View
+          style={{
+            width,
+            height,
+            backgroundColor: "#FFFFFF10",
+            borderRadius: 4,
+            overflow: "hidden",
+            borderWidth: 1.5,
+            borderColor: "#907C5480",
+          }}
+        >
+          <BlurView intensity={40}>
+            <LinearGradientExpo
+              style={{ width, height, opacity: 0.6 }}
+              colors={["#222222", "#22222200"]}
+            ></LinearGradientExpo>
+            <View
+              className="absolute top-[15px]"
+              style={{ alignItems: "center", width, height }}
+            >
+              <View style={{ gap: 7, alignItems: "center" }}>
+                {Icon && <Icon weight="fill" size={32} color="white" />}
+                <Text className="text-[14px] text-white text-center">
+                  {children}
+                </Text>
+              </View>
             </View>
-          </View>
+          </BlurView>
         </View>
-      </TouchableNativeFeedback>
-    </View>
+      </TouchableOpacity>
+    </Shadow>
   );
 }

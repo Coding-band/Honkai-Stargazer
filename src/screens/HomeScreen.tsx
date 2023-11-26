@@ -19,15 +19,19 @@ export default function HomeScreen() {
     <View className="flex-1">
       <ImageBackground
         className="absolute w-full h-full"
+        // 把背景關掉
         source={require("../../assets/images/test-bg.png")}
-        placeholder={blurhash}
+        // placeholder={blurhash}
         contentFit="cover"
       >
-        <View className={cn("w-full pt-8 px-5", "flex flex-col gap-3")}>
+        <View
+          className={cn("w-full pt-8 px-5")}
+          style={{ gap: 12, alignItems: "flex-start" }}
+        >
           {/* uuid */}
           <UUID />
           {/* player */}
-          <View style={{ flexDirection: "column", gap: 12 }}>
+          <View className="w-full" style={{ flexDirection: "column", gap: 12, }}>
             <View
               style={{ justifyContent: "space-between", flexDirection: "row" }}
             >
@@ -62,25 +66,25 @@ export default function HomeScreen() {
             <PlayerLevel />
           </View>
         </View>
-        <LinearGradient
+        {/* <LinearGradient
           // Background Linear Gradient
           colors={["rgba(0, 0, 0, 0.20) 0%", "rgba(0, 0, 0, 0.80) 100%"]}
           className="w-full"
           style={{ flex: 1 }}
-        >
-          <Menu />
-          <Tabbar>
-            <Tab>
-              <Person color="white" size={32} weight="fill" />
-            </Tab>
-            <Tab>
-              <Sword color="white" size={32} weight="fill" />
-            </Tab>
-            <Tab>
-              <MathOperations color="white" size={32} weight="fill" />
-            </Tab>
-          </Tabbar>
-        </LinearGradient>
+        > */}
+        <Menu />
+        <Tabbar>
+          <Tab>
+            <Person color="white" size={32} weight="fill" />
+          </Tab>
+          <Tab>
+            <Sword color="white" size={32} weight="fill" />
+          </Tab>
+          <Tab>
+            <MathOperations color="white" size={32} weight="fill" />
+          </Tab>
+        </Tabbar>
+        {/* </LinearGradient> */}
       </ImageBackground>
     </View>
   );
