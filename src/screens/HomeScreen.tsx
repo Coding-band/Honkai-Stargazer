@@ -1,6 +1,6 @@
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
-import { Text, View } from "react-native";
+import { Dimensions, Text, View } from "react-native";
 import { Image, ImageBackground } from "expo-image";
 import { blurhash } from "../constant/Image";
 import { cn } from "../utils/cn";
@@ -16,14 +16,19 @@ import PlayerLevel from "../components/HomeScreen/Player/PlayerLevel/PlayerLevel
 
 export default function HomeScreen() {
   return (
-    <View className="flex-1">
+    <View style={{ flex: 1, backgroundColor: "white" }}>
       <ImageBackground
         className="absolute w-full h-full"
         // 把背景關掉
         source={require("../../assets/images/test-bg.png")}
         // placeholder={blurhash}
         contentFit="cover"
-      >
+      />
+      <LinearGradient
+        className="absolute w-full h-full"
+        colors={["#00000050", "#00000040"]}
+      />
+      <View className="absolute w-full h-full">
         <View
           className={cn("w-full pt-8 px-5")}
           style={{ gap: 12, alignItems: "flex-start" }}
@@ -31,9 +36,12 @@ export default function HomeScreen() {
           {/* uuid */}
           <UUID />
           {/* player */}
-          <View className="w-full" style={{ flexDirection: "column", gap: 12, }}>
+          <View className="w-full" style={{ flexDirection: "column", gap: 12 }}>
             <View
-              style={{ justifyContent: "space-between", flexDirection: "row" }}
+              style={{
+                justifyContent: "space-between",
+                flexDirection: "row",
+              }}
             >
               <View style={{ flexDirection: "row" }}>
                 <PlayerAvator />
@@ -66,26 +74,26 @@ export default function HomeScreen() {
             <PlayerLevel />
           </View>
         </View>
-        {/* <LinearGradient
+        <LinearGradient
           // Background Linear Gradient
           colors={["rgba(0, 0, 0, 0.20) 0%", "rgba(0, 0, 0, 0.80) 100%"]}
           className="w-full"
           style={{ flex: 1 }}
-        > */}
-        <Menu />
-        <Tabbar>
-          <Tab>
-            <Person color="white" size={32} weight="fill" />
-          </Tab>
-          <Tab>
-            <Sword color="white" size={32} weight="fill" />
-          </Tab>
-          <Tab>
-            <MathOperations color="white" size={32} weight="fill" />
-          </Tab>
-        </Tabbar>
-        {/* </LinearGradient> */}
-      </ImageBackground>
+        >
+          <Menu />
+          <Tabbar>
+            <Tab>
+              <Person color="white" size={32} weight="fill" />
+            </Tab>
+            <Tab>
+              <Sword color="white" size={32} weight="fill" />
+            </Tab>
+            <Tab>
+              <MathOperations color="white" size={32} weight="fill" />
+            </Tab>
+          </Tabbar>
+        </LinearGradient>
+      </View>
     </View>
   );
 }
