@@ -22,10 +22,12 @@ import {
 } from "phosphor-react-native";
 import MenuItemLarge from "./MenuItemLarge/MenuItemLarge";
 import { Dimensions } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Menu() {
-  const [layout, setLayout] = useState({ width: 0, height: 0 });
+  const navigation = useNavigation();
 
+  const [layout, setLayout] = useState({ width: 0, height: 0 });
   const [menuItemSize, setMenuItemSize] = useState({ width: 0, height: 0 });
   const [menuItemLargeSize, setMenuItemLargeSize] = useState({
     width: 0,
@@ -34,7 +36,7 @@ export default function Menu() {
 
   useEffect(() => {
     setMenuItemSize({
-      width: (layout.width -72) / 4,
+      width: (layout.width - 72) / 4,
       height: (((layout.width - 72) / 4) * 9) / 8,
     });
     setMenuItemLargeSize({
@@ -51,7 +53,7 @@ export default function Menu() {
   return (
     <View
       style={{
-        height: Dimensions.get("window").height - 298,
+        height: Dimensions.get("window").height - 301,
       }}
     >
       <ScrollView bounces>
@@ -61,6 +63,10 @@ export default function Menu() {
           style={{ flexDirection: "row", flexWrap: "wrap", gap: 13 }}
         >
           <MenuItem
+            onPress={() => {
+              // @ts-ignore
+              navigation.navigate("Character");
+            }}
             width={menuItemSize.width}
             height={menuItemSize.height}
             Icon={Person}

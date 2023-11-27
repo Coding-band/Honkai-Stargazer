@@ -9,6 +9,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./src/screens/HomeScreen";
 import { ClickOutsideProvider } from "react-native-click-outside";
+import CharacterScreen from "./src/screens/CharacterScreen";
 
 // SplashScreen.preventAutoHideAsync();
 
@@ -34,17 +35,19 @@ export default function App() {
 
   return (
     <ClickOutsideProvider>
-      <View
-        className="flex-1"
-        onLayout={onLayoutRootView}
-      >
+      <View className="flex-1" onLayout={onLayoutRootView}>
         <StatusBar hidden />
         <NavigationContainer>
-          <Stack.Navigator>
+          <Stack.Navigator screenOptions={{ animation: "fade" }}>
             <Stack.Screen
               name="Home"
               component={HomeScreen}
               options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Character"
+              component={CharacterScreen}
+              options={{ headerTitle: "角色列表" }}
             />
           </Stack.Navigator>
         </NavigationContainer>

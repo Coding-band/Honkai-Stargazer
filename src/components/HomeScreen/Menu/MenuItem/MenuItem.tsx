@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  GestureResponderEvent,
   Text,
   TouchableNativeFeedback,
   TouchableOpacity,
@@ -14,15 +15,17 @@ export default function MenuItem({
   Icon,
   width,
   height,
+  onPress,
 }: {
   children: any;
   Icon: any;
   width: number;
   height: number;
+  onPress?: (e: GestureResponderEvent) => void;
 }) {
   return (
     <Shadow offset={[0, 4]} distance={6} startColor="#00000025">
-      <TouchableOpacity activeOpacity={0.65}>
+      <TouchableOpacity onPress={onPress} activeOpacity={0.65}>
         <View
           style={{
             width,

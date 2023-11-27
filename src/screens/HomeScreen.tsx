@@ -13,6 +13,7 @@ import Tabbar from "../components/HomeScreen/Tabbar/Tabbar";
 import Tab from "../components/HomeScreen/Tabbar/Tab/Tab";
 import { MathOperations, Person, Sword } from "phosphor-react-native";
 import PlayerLevelBar from "../components/HomeScreen/Player/PlayerLevelBar/PlayerLevelBar";
+import Player from "../components/HomeScreen/Player/Player";
 
 export default function HomeScreen() {
   return (
@@ -29,55 +30,7 @@ export default function HomeScreen() {
         colors={["#00000050", "#00000040"]}
       />
       <View className="absolute w-full h-full">
-        <View
-          className={cn("w-full pt-8 px-4")}
-          style={{ gap: 12, alignItems: "flex-start" }}
-        >
-          {/* uuid */}
-          <UUID />
-          {/* player */}
-          <View className="w-full" style={{ flexDirection: "column", gap: 12 }}>
-            <View
-              style={{
-                justifyContent: "space-between",
-                flexDirection: "row",
-                alignItems: "flex-end",
-              }}
-            >
-              <View style={{ flexDirection: "row" }}>
-                <PlayerAvator />
-                <View>
-                  <Text className="text-white text-xl font-medium mb-2">
-                    2O48
-                  </Text>
-                  <View className="flex flex-row gap-1">
-                    <View className="w-[30px] h-[30px] bg-[#D9D9D9] border-2 border-[#D3D3D3] rounded-full" />
-                    <View className="w-[30px] h-[30px] bg-[#D9D9D9] border-2 border-[#D3D3D3] rounded-full" />
-                    <View className="w-[30px] h-[30px] bg-[#D9D9D9] border-2 border-[#D3D3D3] rounded-full" />
-                  </View>
-                </View>
-              </View>
-              <View
-                style={{
-                  flexDirection: "column",
-                  gap: 20,
-                  alignItems: "flex-end",
-                }}
-              >
-                <PlayerAction />
-                <View>
-                  <Text
-                    style={{ fontFamily: "HY75" }}
-                    className="text-[#DBC291] text-[14px] font-medium"
-                  >
-                    开拓等级 58
-                  </Text>
-                </View>
-              </View>
-            </View>
-            <PlayerLevelBar />
-          </View>
-        </View>
+        <Player />
         <LinearGradient
           // Background Linear Gradient
           colors={["rgba(0, 0, 0, 0.20) 0%", "rgba(0, 0, 0, 0.80) 100%"]}
