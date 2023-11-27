@@ -13,19 +13,22 @@ import { ClickOutsideProvider } from "react-native-click-outside";
 // SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  // const [fontsLoaded] = useFonts({
-  //   NotoSansSC: require("./assets/fonts/NotoSansSC-Regular.ttf"),
-  // });
+  const [fontsLoaded] = useFonts({
+    NotoSansSC: require("./assets/fonts/NotoSansSC-Regular.ttf"),
+    HY55: require("./assets/fonts/HYRunYuan-55W.ttf"),
+    HY65: require("./assets/fonts/HYRunYuan-65W.ttf"),
+    HY75: require("./assets/fonts/HYRunYuan-75W.ttf"),
+  });
 
-  // const onLayoutRootView = useCallback(async () => {
-  //   if (fontsLoaded) {
-  //     await SplashScreen.hideAsync();
-  //   }
-  // }, [fontsLoaded]);
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
 
-  // if (!fontsLoaded) {
-  //   return null;
-  // }
+  if (!fontsLoaded) {
+    return null;
+  }
 
   const Stack = createNativeStackNavigator();
 
@@ -33,7 +36,7 @@ export default function App() {
     <ClickOutsideProvider>
       <View
         className="flex-1"
-        // onLayout={onLayoutRootView}
+        onLayout={onLayoutRootView}
       >
         <StatusBar hidden />
         <NavigationContainer>

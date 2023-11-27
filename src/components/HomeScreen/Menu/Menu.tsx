@@ -34,12 +34,12 @@ export default function Menu() {
 
   useEffect(() => {
     setMenuItemSize({
-      width: (layout.width - 88) / 4,
-      height: (((layout.width - 88) / 4) * 9) / 8,
+      width: (layout.width -80) / 4,
+      height: (((layout.width - 80) / 4) * 9) / 8,
     });
     setMenuItemLargeSize({
-      width: (((((layout.width - 88) / 4) * 9) / 8) * 172) / 90,
-      height: (((layout.width - 88) / 4) * 9) / 8,
+      width: (((((layout.width - 80) / 4) * 9) / 8) * 172) / 90,
+      height: (((layout.width - 80) / 4) * 9) / 8,
     });
   }, [layout]);
 

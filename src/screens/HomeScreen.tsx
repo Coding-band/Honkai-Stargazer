@@ -12,7 +12,7 @@ import Menu from "../components/HomeScreen/Menu/Menu";
 import Tabbar from "../components/HomeScreen/Tabbar/Tabbar";
 import Tab from "../components/HomeScreen/Tabbar/Tab/Tab";
 import { MathOperations, Person, Sword } from "phosphor-react-native";
-import PlayerLevel from "../components/HomeScreen/Player/PlayerLevel/PlayerLevel";
+import PlayerLevelBar from "../components/HomeScreen/Player/PlayerLevelBar/PlayerLevelBar";
 
 export default function HomeScreen() {
   return (
@@ -41,6 +41,7 @@ export default function HomeScreen() {
               style={{
                 justifyContent: "space-between",
                 flexDirection: "row",
+                alignItems:"flex-end",
               }}
             >
               <View style={{ flexDirection: "row" }}>
@@ -71,7 +72,7 @@ export default function HomeScreen() {
                 </View>
               </View>
             </View>
-            <PlayerLevel />
+            <PlayerLevelBar />
           </View>
         </View>
         <LinearGradient

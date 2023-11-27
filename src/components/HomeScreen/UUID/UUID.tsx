@@ -4,7 +4,7 @@ import { Text, View } from "react-native";
 export default function UUID() {
   return (
     <View
-      className="ml-2 p-2 rounded-[50px]"
+      className="ml-[-4px] p-2 rounded-[50px]"
       style={{
         justifyContent: "center",
         alignItems: "center",
