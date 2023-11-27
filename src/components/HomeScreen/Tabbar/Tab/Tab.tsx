@@ -24,7 +24,7 @@ export default function Tab({ children }: { children: any }) {
             borderColor: "#907C5480",
           }}
         >
-          <BlurView intensity={20}>
+          <BlurView intensity={30}>
             <LinearGradientExpo
               style={{ width: 80, height: 80, opacity: 0.6 }}
               colors={["#222222", "#22222200"]}
