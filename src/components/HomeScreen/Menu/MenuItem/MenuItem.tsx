@@ -2,13 +2,13 @@ import React from "react";
 import {
   GestureResponderEvent,
   Text,
-  TouchableNativeFeedback,
   TouchableOpacity,
   View,
 } from "react-native";
 import { Shadow } from "react-native-shadow-2";
 import { LinearGradient as LinearGradientExpo } from "expo-linear-gradient";
 import { BlurView } from "expo-blur";
+import { Platform } from "react-native";
 
 export default function MenuItem({
   children,
@@ -37,26 +37,49 @@ export default function MenuItem({
             borderColor: "#907C5480",
           }}
         >
-          {/* <BlurView intensity={40} tint="light"> */}
-          <LinearGradientExpo
-            style={{ width, height, opacity: 0.6 }}
-            colors={["#222222", "#22222200"]}
-          ></LinearGradientExpo>
-          <View
-            className="absolute top-[15px]"
-            style={{ alignItems: "center", width, height }}
-          >
-            <View style={{ gap: 7, alignItems: "center" }}>
-              {Icon && <Icon weight="fill" size={32} color="white" />}
-              <Text
-                style={{ fontFamily: "HY65" }}
-                className="text-[14px] text-white text-center"
+          {Platform.OS === "ios" ? (
+            <BlurView intensity={20} tint="light">
+              <LinearGradientExpo
+                style={{ width, height, opacity: 0.6 }}
+                colors={["#222222", "#22222200"]}
+              ></LinearGradientExpo>
+              <View
+                className="absolute top-[15px]"
+                style={{ alignItems: "center", width, height }}
               >
-                {children}
-              </Text>
-            </View>
-          </View>
-          {/* </BlurView> */}
+                <View style={{ gap: 7, alignItems: "center" }}>
+                  {Icon && <Icon weight="fill" size={32} color="white" />}
+                  <Text
+                    style={{ fontFamily: "HY65" }}
+                    className="text-[14px] text-white text-center"
+                  >
+                    {children}
+                  </Text>
+                </View>
+              </View>
+            </BlurView>
+          ) : (
+            <>
+              <LinearGradientExpo
+                style={{ width, height, opacity: 0.6 }}
+                colors={["#222222", "#22222200"]}
+              ></LinearGradientExpo>
+              <View
+                className="absolute top-[15px]"
+                style={{ alignItems: "center", width, height }}
+              >
+                <View style={{ gap: 7, alignItems: "center" }}>
+                  {Icon && <Icon weight="fill" size={32} color="white" />}
+                  <Text
+                    style={{ fontFamily: "HY65" }}
+                    className="text-[14px] text-white text-center"
+                  >
+                    {children}
+                  </Text>
+                </View>
+              </View>
+            </>
+          )}
         </View>
       </TouchableOpacity>
     </Shadow>

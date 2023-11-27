@@ -40,7 +40,7 @@ export default function Menu() {
       height: (((layout.width - 72) / 4) * 9) / 8,
     });
     setMenuItemLargeSize({
-      width: (((((layout.width - 72) / 4) * 9) / 8) * 172) / 90,
+      width: ((layout.width - 72) / 4) * 2 + 13,
       height: (((layout.width - 72) / 4) * 9) / 8,
     });
   }, [layout]);
@@ -53,10 +53,10 @@ export default function Menu() {
   return (
     <View
       style={{
-        height: Dimensions.get("window").height - 301,
+        height: Dimensions.get("window").height - 298,
       }}
     >
-      <ScrollView bounces>
+      <ScrollView>
         <View
           onLayout={onLayout}
           className={cn("w-full pt-3 px-4 pb-5")}
@@ -179,7 +179,7 @@ export default function Menu() {
             未来卡池
           </MenuItem>
           {/*  */}
-          {/* <MenuItem
+          <MenuItem
             width={menuItemSize.width}
             height={menuItemSize.height}
             Icon={Person}
@@ -290,7 +290,7 @@ export default function Menu() {
             Icon={ClockClockwise}
           >
             未来卡池
-          </MenuItem> */}
+          </MenuItem>
         </View>
       </ScrollView>
     </View>

@@ -1,10 +1,10 @@
 import React from "react";
-import { View } from "react-native";
+import { SafeAreaView, View } from "react-native";
 import { cn } from "../../../utils/cn";
 
 export default function Tabbar({ children }: { children: any }) {
   return (
-    <View className={cn("absolute bottom-0", "w-full h-[130px]")}>
+    <SafeAreaView className={cn("absolute bottom-0", "w-full h-[130px]")}>
       <View className="h-[1px] w-full px-4">
         <View
           className="w-full h-full"
@@ -22,6 +22,6 @@ export default function Tabbar({ children }: { children: any }) {
       >
         {children}
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
