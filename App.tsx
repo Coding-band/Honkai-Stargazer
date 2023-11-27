@@ -1,7 +1,7 @@
 import "./app.d";
 
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Platform, StyleSheet, Text, View } from "react-native";
 import { useFonts } from "expo-font";
 import { useCallback } from "react";
 import * as SplashScreen from "expo-splash-screen";
@@ -38,7 +38,11 @@ export default function App() {
       <View className="flex-1" onLayout={onLayoutRootView}>
         <StatusBar hidden />
         <NavigationContainer>
-          <Stack.Navigator screenOptions={{ animation: "fade" }}>
+          <Stack.Navigator
+            screenOptions={{
+              animation: Platform.OS === "ios" ? "fade" : "default",
+            }}
+          >
             <Stack.Screen
               name="Home"
               component={HomeScreen}
