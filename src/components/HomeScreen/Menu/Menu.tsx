@@ -34,12 +34,12 @@ export default function Menu() {
 
   useEffect(() => {
     setMenuItemSize({
-      width: (layout.width -80) / 4,
-      height: (((layout.width - 80) / 4) * 9) / 8,
+      width: (layout.width -72) / 4,
+      height: (((layout.width - 72) / 4) * 9) / 8,
     });
     setMenuItemLargeSize({
-      width: (((((layout.width - 80) / 4) * 9) / 8) * 172) / 90,
-      height: (((layout.width - 80) / 4) * 9) / 8,
+      width: (((((layout.width - 72) / 4) * 9) / 8) * 172) / 90,
+      height: (((layout.width - 72) / 4) * 9) / 8,
     });
   }, [layout]);
 
@@ -57,7 +57,7 @@ export default function Menu() {
       <ScrollView bounces>
         <View
           onLayout={onLayout}
-          className={cn("w-full pt-3 px-5 pb-5")}
+          className={cn("w-full pt-3 px-4 pb-5")}
           style={{ flexDirection: "row", flexWrap: "wrap", gap: 13 }}
         >
           <MenuItem

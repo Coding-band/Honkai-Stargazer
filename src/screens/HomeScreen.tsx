@@ -30,7 +30,7 @@ export default function HomeScreen() {
       />
       <View className="absolute w-full h-full">
         <View
-          className={cn("w-full pt-8 px-5")}
+          className={cn("w-full pt-8 px-4")}
           style={{ gap: 12, alignItems: "flex-start" }}
         >
           {/* uuid */}
@@ -41,7 +41,7 @@ export default function HomeScreen() {
               style={{
                 justifyContent: "space-between",
                 flexDirection: "row",
-                alignItems:"flex-end",
+                alignItems: "flex-end",
               }}
             >
               <View style={{ flexDirection: "row" }}>
@@ -66,7 +66,10 @@ export default function HomeScreen() {
               >
                 <PlayerAction />
                 <View>
-                  <Text className="text-[#DBC291] text-[14px] font-medium">
+                  <Text
+                    style={{ fontFamily: "HY75" }}
+                    className="text-[#DBC291] text-[14px] font-medium"
+                  >
                     开拓等级 58
                   </Text>
                 </View>

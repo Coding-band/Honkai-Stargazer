@@ -1,5 +1,10 @@
 import React from "react";
-import { Text, TouchableNativeFeedback, TouchableOpacity, View } from "react-native";
+import {
+  Text,
+  TouchableNativeFeedback,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { Shadow } from "react-native-shadow-2";
 import { LinearGradient as LinearGradientExpo } from "expo-linear-gradient";
 import { BlurView } from "expo-blur";
@@ -29,23 +34,26 @@ export default function MenuItem({
             borderColor: "#907C5480",
           }}
         >
-          <BlurView intensity={40}>
-            <LinearGradientExpo
-              style={{ width, height, opacity: 0.6 }}
-              colors={["#222222", "#22222200"]}
-            ></LinearGradientExpo>
-            <View
-              className="absolute top-[15px]"
-              style={{ alignItems: "center", width, height }}
-            >
-              <View style={{ gap: 7, alignItems: "center" }}>
-                {Icon && <Icon weight="fill" size={32} color="white" />}
-                <Text className="text-[14px] text-white text-center">
-                  {children}
-                </Text>
-              </View>
+          {/* <BlurView intensity={40} tint="light"> */}
+          <LinearGradientExpo
+            style={{ width, height, opacity: 0.6 }}
+            colors={["#222222", "#22222200"]}
+          ></LinearGradientExpo>
+          <View
+            className="absolute top-[15px]"
+            style={{ alignItems: "center", width, height }}
+          >
+            <View style={{ gap: 7, alignItems: "center" }}>
+              {Icon && <Icon weight="fill" size={32} color="white" />}
+              <Text
+                style={{ fontFamily: "HY65" }}
+                className="text-[14px] text-white text-center"
+              >
+                {children}
+              </Text>
             </View>
-          </BlurView>
+          </View>
+          {/* </BlurView> */}
         </View>
       </TouchableOpacity>
     </Shadow>
