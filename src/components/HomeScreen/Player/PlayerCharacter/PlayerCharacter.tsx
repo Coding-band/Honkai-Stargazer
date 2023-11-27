@@ -1,14 +1,22 @@
 import { View, Text } from "react-native";
 import React from "react";
+import genRanHex from "../../../../utils/genRanHex";
+
+const ranHexs = [
+  [genRanHex(6), genRanHex(6)],
+  [genRanHex(6), genRanHex(6)],
+  [genRanHex(6), genRanHex(6)],
+];
 
 export default function PlayerCharacter() {
   return (
     <View className="flex flex-row gap-1">
-      <View className="w-[30px] h-[30px] bg-[#D9D9D9] border-2 border-[#D3D3D3] rounded-full" />
-      <View
-        className="w-[30px] h-[30px] bg-[#D9D9D9] border-2 border-[#D3D3D3] rounded-full"
-      />
-      <View className="w-[30px] h-[30px] bg-[#D9D9D9] border-2 border-[#D3D3D3] rounded-full" />
+      {ranHexs.map(([bg, bd]) => (
+        <View
+          className="w-[30px] h-[30px] border-2 rounded-full"
+          style={{ backgroundColor: "#" + bg, borderColor: "#" + bd }}
+        />
+      ))}
     </View>
   );
 }
