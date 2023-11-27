@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Platform,
   Text,
@@ -21,6 +21,14 @@ export default function MenuItemLarge({
   width: number;
   height: number;
 }) {
+  const [intensity, setIntensity] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIntensity(20);
+    }, 300);
+  }, []);
+
   return (
     <Shadow offset={[0, 4]} distance={6} startColor="#00000025">
       <TouchableOpacity activeOpacity={0.65}>
@@ -36,7 +44,7 @@ export default function MenuItemLarge({
           }}
         >
           {Platform.OS === "ios" ? (
-            <BlurView intensity={20} tint="light">
+            <BlurView intensity={intensity} tint="light">
               <LinearGradientExpo
                 style={{ width, height, opacity: 0.6 }}
                 colors={["#222222", "#22222200"]}
