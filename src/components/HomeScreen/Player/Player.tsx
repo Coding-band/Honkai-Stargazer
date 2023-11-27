@@ -10,7 +10,7 @@ import PlayerCharacter from "./PlayerCharacter/PlayerCharacter";
 export default function Player() {
   return (
     <View
-      className={cn("w-full pt-8 px-4")}
+      className={cn("w-full pt-8 px-4 z-50")}
       style={{ gap: 12, alignItems: "flex-start" }}
     >
       {/* uuid */}
@@ -18,6 +18,7 @@ export default function Player() {
       {/* player details */}
       <View className="w-full" style={{ flexDirection: "column", gap: 12 }}>
         <View
+        className="z-50"
           style={{
             justifyContent: "space-between",
             flexDirection: "row",
