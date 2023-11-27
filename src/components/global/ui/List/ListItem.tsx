@@ -1,25 +1,23 @@
-import { Text,View } from "react-native";
+import { Text, View } from "react-native";
+import { Shadow } from "react-native-shadow-2";
 
 export default function ListItem({ children }: { children: string }) {
   return (
-    <View
-      className="w-[140px] h-[34px] bg-[#dddddd] rounded-[17px]"
-      style={{ justifyContent: "center", alignItems: "center" }}
-    >
+    <Shadow offset={[0, 4]}>
       <View
-        className="w-[134px] h-[28px] rounded-[49px] border border-solid border-[#0000001a]"
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          shadowColor: "#000",
-          shadowOffset: { width: 0, height: 4 },
-          shadowOpacity: 0.4,
-          shadowRadius: 16,
-          elevation: 16,
-        }}
+        className="w-[140px] h-[34px] bg-[#dddddd] rounded-[17px]"
+        style={{ justifyContent: "center", alignItems: "center" }}
       >
-        <Text>{children}</Text>
+        <View
+          className="w-[134px] h-[28px] rounded-[49px] border border-solid border-[#0000001a]"
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Text>{children}</Text>
+        </View>
       </View>
-    </View>
+    </Shadow>
   );
 }
