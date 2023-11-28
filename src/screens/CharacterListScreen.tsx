@@ -4,9 +4,9 @@ import { ImageBackground } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/layout/Header";
 import { StatusBar } from "expo-status-bar";
-import CharList from "../components/CharacterScreen/CharList/CharList";
-import CharAction from "../components/CharacterScreen/CharAction/CharAction";
+import CharAction from "../components/CharacterListScreen/CharAction/CharAction";
 import { SCREENS } from "../constant/screens";
+import CharList from "../components/CharacterListScreen/CharList/CharList";
 
 export default function CharacterListScreen() {
   return (

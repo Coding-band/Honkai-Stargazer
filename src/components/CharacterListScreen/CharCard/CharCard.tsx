@@ -8,7 +8,7 @@ import React from "react";
 import { Shadow } from "react-native-shadow-2";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image, ImageSource } from "expo-image";
-import { cn } from "../../../../utils/cn";
+import { cn } from "../../../utils/cn";
 
 type Props = {
   image?:
@@ -44,7 +44,11 @@ export default function CharCard(props: Props) {
             //   style={animation}
             className={cn("w-20 h-[102px]")}
           >
-            <Image style={{ width: 80, height: 80 }} source={props.image} />
+            <Image
+              transition={200}
+              style={{ width: 80, height: 80 }}
+              source={props.image}
+            />
             <View
               className="bg-[#222222]"
               style={{

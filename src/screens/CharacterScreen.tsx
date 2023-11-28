@@ -7,6 +7,8 @@ import Header from "../components/global/layout/Header";
 import { SCREENS } from "../constant/screens";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { ParamList } from "../types/navigation";
+import Character from "../components/CharacterScreen/Character/Character";
+import CharAction from "../components/CharacterScreen/Character/CharAction/CharAction";
 
 export default function CharacterScreen() {
   const route = useRoute<RouteProp<ParamList, "Character">>();
@@ -26,7 +28,10 @@ export default function CharacterScreen() {
         className="absolute w-full h-full"
         colors={["#00000080", "#00000020"]}
       />
-      <Header Icon={SCREENS.CharacterPage.icon}>{route.params.name}</Header>
+      <Header leftBtn="back" Icon={SCREENS.CharacterPage.icon}>
+        {route.params.name}
+      </Header>
+      <Character />
       <LinearGradient
         className="w-full h-[400px] absolute bottom-0"
         colors={["#00000000", "#000000"]}

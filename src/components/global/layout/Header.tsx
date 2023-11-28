@@ -6,9 +6,13 @@ import React from "react";
 import { Pressable, Text, View } from "react-native";
 import { Shadow } from "react-native-shadow-2";
 
+const CloseBtn = require("../../../../assets/icons/Close.svg");
+const BackBtn = require("../../../../assets/icons/Back.svg");
+
 type Props = {
   Icon: (e: IconProps) => React.JSX.Element;
   children: string;
+  leftBtn?: "close" | "back";
 };
 
 export default function Header(props: Props) {
@@ -28,57 +32,57 @@ export default function Header(props: Props) {
         intensity={20}
         tint="dark"
       >
-      <Shadow
-        style={{ width: "100%", height: 110 }}
-        distance={20}
-        startColor={"rgba(0, 0, 0, 0.25)"}
-      >
-        <View
-          className="w-full h-[110px]"
-          style={{
-            backgroundColor: "rgba(255, 255, 255, 0.20)",
-          }}
+        <Shadow
+          style={{ width: "100%", height: 110 }}
+          distance={20}
+          startColor={"rgba(0, 0, 0, 0.25)"}
         >
-          {/* 左邊叉叉 */}
-          <Pressable
-            onPress={handleClose}
-            className="absolute left-[17px] bottom-[19px] z-50"
-          >
-            <Image
-              style={{ width: 40, height: 40 }}
-              source={require("../../../../assets/icons/Close.svg")}
-            />
-          </Pressable>
-          {/* 中間主體 */}
           <View
-            className="pb-3"
+            className="w-full h-[110px]"
             style={{
-              flex: 1,
-              alignItems: "center",
-              justifyContent: "flex-end",
-              gap: 4,
+              backgroundColor: "rgba(255, 255, 255, 0.20)",
             }}
           >
-            <Icon size={32} color="white" weight="fill" />
-            <View
-              style={{ flexDirection: "row", alignItems: "center", gap: 13 }}
+            {/* 左邊叉叉 */}
+            <Pressable
+              onPress={handleClose}
+              className="absolute left-[17px] bottom-[19px] z-50"
             >
+              <Image
+                style={{ width: 40, height: 40 }}
+                source={props.leftBtn === "back" ? BackBtn : CloseBtn}
+              />
+            </Pressable>
+            {/* 中間主體 */}
+            <View
+              className="pb-3"
+              style={{
+                flex: 1,
+                alignItems: "center",
+                justifyContent: "flex-end",
+                gap: 4,
+              }}
+            >
+              <Icon size={32} color="white" weight="fill" />
               <View
-                style={{ backgroundColor: "#ffffff40", height: 2, width: 50 }}
-              ></View>
-              <Text
-                className="text-white text-[16px]"
-                style={{ fontFamily: "HY65" }}
+                style={{ flexDirection: "row", alignItems: "center", gap: 13 }}
               >
-                {props.children}
-              </Text>
-              <View
-                style={{ backgroundColor: "#ffffff40", height: 2, width: 50 }}
-              ></View>
+                <View
+                  style={{ backgroundColor: "#ffffff40", height: 2, width: 50 }}
+                ></View>
+                <Text
+                  className="text-white text-[16px]"
+                  style={{ fontFamily: "HY65" }}
+                >
+                  {props.children}
+                </Text>
+                <View
+                  style={{ backgroundColor: "#ffffff40", height: 2, width: 50 }}
+                ></View>
+              </View>
             </View>
           </View>
-        </View>
-      </Shadow>
+        </Shadow>
       </BlurView>
     </View>
   );
