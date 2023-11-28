@@ -65,7 +65,7 @@ export default function Menu() {
           <MenuItem
             onPress={() => {
               // @ts-ignore
-              navigation.navigate("Character", { Icon: Person });
+              navigation.navigate("Character");
             }}
             width={menuItemSize.width}
             height={menuItemSize.height}

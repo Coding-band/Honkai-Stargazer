@@ -17,7 +17,8 @@ export default function Header(props: Props) {
   const navigation = useNavigation();
 
   const handleClose = () => {
-    navigation.goBack();
+    // @ts-ignore
+    navigation.navigate("Home");
   };
 
   return (

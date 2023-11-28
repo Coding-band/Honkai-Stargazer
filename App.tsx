@@ -35,12 +35,12 @@ export default function App() {
 
   return (
     <ClickOutsideProvider>
-      <View className="flex-1" onLayout={onLayoutRootView}>
+      <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
         {/* <StatusBar hidden /> */}
         <NavigationContainer>
           <Stack.Navigator
             screenOptions={{
-              animation: Platform.OS === "ios" ? "fade" : "default",
+              animation: "none",
             }}
           >
             <Stack.Screen

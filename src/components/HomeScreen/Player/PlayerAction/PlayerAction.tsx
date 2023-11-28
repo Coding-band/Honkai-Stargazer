@@ -24,15 +24,9 @@ export default function PlayerAction() {
       {isPress && (
         <View className="absolute right-0 top-8">
           <List>
-            <TouchableOpacity activeOpacity={0.65}>
-              <ListItem>账号管理</ListItem>
-            </TouchableOpacity>
-            <TouchableOpacity activeOpacity={0.65}>
-              <ListItem>编辑首页</ListItem>
-            </TouchableOpacity>
-            <TouchableOpacity activeOpacity={0.65}>
-              <ListItem>设置</ListItem>
-            </TouchableOpacity>
+            <ListItem>账号管理</ListItem>
+            <ListItem>编辑首页</ListItem>
+            <ListItem>设置</ListItem>
           </List>
         </View>
       )}

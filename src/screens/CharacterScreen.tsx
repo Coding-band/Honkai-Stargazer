@@ -9,12 +9,10 @@ import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/layout/Header";
 import { StatusBar } from "expo-status-bar";
 import CharList from "../components/CharacterScreen/CharList/CharList";
+import { Person } from "phosphor-react-native";
+import CharAction from "../components/CharacterScreen/CharAction/CharAction";
 
 export default function CharacterScreen() {
-  const route = useRoute<RouteProp<ParamList, "Character">>();
-
-  const HeaderIcon = route?.params?.Icon;
-
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
@@ -30,8 +28,13 @@ export default function CharacterScreen() {
         className="absolute w-full h-full"
         colors={["#00000080", "#00000020"]}
       />
-      <Header Icon={HeaderIcon}>角色列表</Header>
+      <Header Icon={Person}>角色列表</Header>
       <CharList />
+      <CharAction />
+      <LinearGradient
+        className="w-full h-[177px] absolute bottom-0"
+        colors={["#00000000", "#000000"]}
+      />
     </View>
   );
 }

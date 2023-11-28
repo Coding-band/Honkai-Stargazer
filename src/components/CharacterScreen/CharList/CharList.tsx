@@ -96,7 +96,7 @@ export default function CharList() {
 
   return (
     <View
-      style={{ width: "100%", height: Dimensions.get("window").height - 140 }}
+      style={{ width: "100%", height: Dimensions.get("window").height - 76 }}
       className="p-[17px]"
     >
       <ScrollView>
