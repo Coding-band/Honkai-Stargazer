@@ -14,10 +14,12 @@ import Tab from "../components/HomeScreen/Tabbar/Tab/Tab";
 import { MathOperations, Person, Sword } from "phosphor-react-native";
 import PlayerLevelBar from "../components/HomeScreen/Player/PlayerLevelBar/PlayerLevelBar";
 import Player from "../components/HomeScreen/Player/Player";
+import { StatusBar } from "expo-status-bar";
 
 export default function HomeScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
+      <StatusBar style="dark" />
       <ImageBackground
         className="absolute w-full h-full"
         // 把背景關掉
@@ -38,17 +40,7 @@ export default function HomeScreen() {
           style={{ flex: 1 }}
         >
           <Menu />
-          <Tabbar>
-            <Tab>
-              <Person color="white" size={32} weight="fill" />
-            </Tab>
-            <Tab>
-              <Sword color="white" size={32} weight="fill" />
-            </Tab>
-            <Tab>
-              <MathOperations color="white" size={32} weight="fill" />
-            </Tab>
-          </Tabbar>
+          <Tabbar/>
         </LinearGradient>
       </View>
     </View>

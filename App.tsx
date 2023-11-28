@@ -36,7 +36,7 @@ export default function App() {
   return (
     <ClickOutsideProvider>
       <View className="flex-1" onLayout={onLayoutRootView}>
-        <StatusBar hidden />
+        {/* <StatusBar hidden /> */}
         <NavigationContainer>
           <Stack.Navigator
             screenOptions={{
@@ -51,7 +51,7 @@ export default function App() {
             <Stack.Screen
               name="Character"
               component={CharacterScreen}
-              options={{ headerTitle: "角色列表" }}
+              options={{ headerShown: false }}
             />
           </Stack.Navigator>
         </NavigationContainer>

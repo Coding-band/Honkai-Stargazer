@@ -9,9 +9,9 @@ export default function PlayerLevelBar() {
     const interval = setInterval(() => {
       setLevel((prevLevel) => {
         const newLevel = flag === "LEFT" ? prevLevel + 3 : prevLevel - 3;
-        if (newLevel > 250) {
+        if (newLevel > 300) {
           setFlag("RIGHT");
-        } else if (newLevel < 0) {
+        } else if (newLevel < 100) {
           setFlag("LEFT");
         }
         return newLevel;
