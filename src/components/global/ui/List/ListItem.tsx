@@ -16,7 +16,7 @@ export default function ListItem({ children }: { children: string }) {
               alignItems: "center",
             }}
           >
-            <Text>{children}</Text>
+            <Text className="text-[14px] font-[HY55]">{children}</Text>
           </View>
         </View>
       </Shadow>
