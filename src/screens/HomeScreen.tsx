@@ -1,18 +1,9 @@
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
-import { Dimensions, Text, View } from "react-native";
-import { Image, ImageBackground } from "expo-image";
-import { blurhash } from "../constant/Image";
-import { cn } from "../utils/cn";
-import UUID from "../components/HomeScreen/UUID/UUID";
-import PlayerAvator from "../components/HomeScreen/Player/PlayerAvator/PlayerAvator";
-import MoreBtn from "../components/global/ui/MoreBtn/MoreBtn";
-import PlayerAction from "../components/HomeScreen/Player/PlayerAction/PlayerAction";
+import { View } from "react-native";
+import { ImageBackground } from "expo-image";
 import Menu from "../components/HomeScreen/Menu/Menu";
 import Tabbar from "../components/HomeScreen/Tabbar/Tabbar";
-import Tab from "../components/HomeScreen/Tabbar/Tab/Tab";
-import { MathOperations, Person, Sword } from "phosphor-react-native";
-import PlayerLevelBar from "../components/HomeScreen/Player/PlayerLevelBar/PlayerLevelBar";
 import Player from "../components/HomeScreen/Player/Player";
 import { StatusBar } from "expo-status-bar";
 

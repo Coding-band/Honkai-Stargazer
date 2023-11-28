@@ -16,6 +16,7 @@ type Props = {
     | null
     | undefined;
   stars: 4 | 5;
+  name: string;
 };
 
 export default function CharCard(props: Props) {
@@ -48,7 +49,9 @@ export default function CharCard(props: Props) {
                 alignItems: "center",
               }}
             >
-              <Text className="text-white font-[HY65] text-[12px]">镜流</Text>
+              <Text className="text-white font-[HY65] text-[12px]">
+                {props.name}
+              </Text>
             </View>
           </AnimatedView>
         </LinearGradient>

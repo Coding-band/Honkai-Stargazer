@@ -23,6 +23,7 @@ import {
 import MenuItemLarge from "./MenuItemLarge/MenuItemLarge";
 import { Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { SCREENS } from "../../../constant/screens";
 
 export default function Menu() {
   const navigation = useNavigation();
@@ -65,13 +66,13 @@ export default function Menu() {
           <MenuItem
             onPress={() => {
               // @ts-ignore
-              navigation.navigate("Character");
+              navigation.navigate(SCREENS.CharacterListPage.id);
             }}
             width={menuItemSize.width}
             height={menuItemSize.height}
-            Icon={Person}
+            Icon={SCREENS.CharacterListPage.icon}
           >
-            角色
+            {SCREENS.CharacterListPage.shortName}
           </MenuItem>
           <MenuItem
             width={menuItemSize.width}
