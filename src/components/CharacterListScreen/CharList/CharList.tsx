@@ -50,7 +50,7 @@ export default function CharList() {
               onPress={() => {
                 // @ts-ignore
                 navigation.navigate(SCREENS.CharacterPage.id, {
-                  name: item.name,
+                  id: 0,
                 });
               }}
               image={item.image}

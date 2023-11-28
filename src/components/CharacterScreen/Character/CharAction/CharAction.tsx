@@ -2,11 +2,15 @@ import { View, Text } from "react-native";
 import React from "react";
 import Button from "../../../global/ui/Button/Button";
 import { Image } from "expo-image";
+import { cn } from "../../../../utils/cn";
 
 export default function CharAction() {
   return (
     <View
-      className="w-full h-[46px] absolute bottom-0 z-50 mb-[37px]"
+      className={cn(
+        "w-full h-[83px] pb-[37px]",
+        "absolute bottom-0 z-50",
+      )}
       style={{
         justifyContent: "center",
         alignItems: "center",

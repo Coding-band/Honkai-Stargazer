@@ -1,6 +1,4 @@
 import "./app.d";
-
-import { StatusBar } from "expo-status-bar";
 import { Platform, StyleSheet, Text, View } from "react-native";
 import { useFonts } from "expo-font";
 import { useCallback } from "react";
@@ -12,6 +10,7 @@ import { ClickOutsideProvider } from "react-native-click-outside";
 import CharacterListScreen from "./src/screens/CharacterListScreen";
 import { SCREENS } from "./src/constant/screens";
 import CharacterScreen from "./src/screens/CharacterScreen";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 // SplashScreen.preventAutoHideAsync();
 
@@ -36,33 +35,35 @@ export default function App() {
   const Stack = createNativeStackNavigator();
 
   return (
-    <ClickOutsideProvider>
-      <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-        {/* <StatusBar hidden /> */}
-        <NavigationContainer>
-          <Stack.Navigator
-            screenOptions={{
-              animation: "none",
-            }}
-          >
-            <Stack.Screen
-              name={SCREENS.HomePage.id}
-              component={HomeScreen}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name={SCREENS.CharacterListPage.id}
-              component={CharacterListScreen}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name={SCREENS.CharacterPage.id}
-              component={CharacterScreen}
-              options={{ headerShown: false }}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </View>
-    </ClickOutsideProvider>
+    <GestureHandlerRootView style={{flex:1}}>
+      <ClickOutsideProvider>
+        <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+          {/* <StatusBar hidden /> */}
+          <NavigationContainer>
+            <Stack.Navigator
+              screenOptions={{
+                animation: Platform.OS === "ios" ? "slide_from_right" : "none",
+              }}
+            >
+              <Stack.Screen
+                name={SCREENS.HomePage.id}
+                component={HomeScreen}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name={SCREENS.CharacterListPage.id}
+                component={CharacterListScreen}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name={SCREENS.CharacterPage.id}
+                component={CharacterScreen}
+                options={{ headerShown: false }}
+              />
+            </Stack.Navigator>
+          </NavigationContainer>
+        </View>
+      </ClickOutsideProvider>
+    </GestureHandlerRootView>
   );
 }

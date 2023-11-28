@@ -74,7 +74,7 @@ export default function Header(props: Props) {
                   className="text-white text-[16px]"
                   style={{ fontFamily: "HY65" }}
                 >
-                  {props.children}
+                  {props.children || ""}
                 </Text>
                 <View
                   style={{ backgroundColor: "#ffffff40", height: 2, width: 50 }}
