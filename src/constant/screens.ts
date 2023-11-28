@@ -13,4 +13,10 @@ export const SCREENS = {
     shortName: "角色",
     icon: Person,
   },
+  CharacterPage: {
+    id: "Character",
+    name: "角色",
+    shortName: "",
+    icon: Person,
+  },
 };

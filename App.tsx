@@ -10,6 +10,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./src/screens/HomeScreen";
 import { ClickOutsideProvider } from "react-native-click-outside";
 import CharacterListScreen from "./src/screens/CharacterListScreen";
+import { SCREENS } from "./src/constant/screens";
+import CharacterScreen from "./src/screens/CharacterScreen";
 
 // SplashScreen.preventAutoHideAsync();
 
@@ -44,13 +46,18 @@ export default function App() {
             }}
           >
             <Stack.Screen
-              name="Home"
+              name={SCREENS.HomePage.id}
               component={HomeScreen}
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="CharacterList"
+              name={SCREENS.CharacterListPage.id}
               component={CharacterListScreen}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name={SCREENS.CharacterPage.id}
+              component={CharacterScreen}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

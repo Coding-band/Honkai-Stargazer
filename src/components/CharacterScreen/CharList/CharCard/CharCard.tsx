@@ -1,4 +1,9 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  GestureResponderEvent,
+} from "react-native";
 import React from "react";
 import { Shadow } from "react-native-shadow-2";
 import { LinearGradient } from "expo-linear-gradient";
@@ -16,13 +21,14 @@ type Props = {
     | undefined;
   stars: 4 | 5;
   name: string;
+  onPress?: (e: GestureResponderEvent) => void;
 };
 
 export default function CharCard(props: Props) {
   //   const animation = useSpring({ from: { opacity: 0.25 }, to: { opacity: 1 } });
 
   return (
-    <TouchableOpacity activeOpacity={0.65}>
+    <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
       <Shadow distance={6} offset={[4, 4]} startColor="#00000025">
         <LinearGradient
           style={{

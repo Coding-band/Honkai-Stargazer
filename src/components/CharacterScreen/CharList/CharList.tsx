@@ -3,6 +3,8 @@ import { ScrollView, View } from "react-native";
 
 import CharCard from "./CharCard/CharCard";
 import { map } from "lodash";
+import { SCREENS } from "../../../constant/screens";
+import { useNavigation } from "@react-navigation/native";
 
 const testImage1 = require("../../../../assets/images/test-charlist-img-1.png");
 const testImage2 = require("../../../../assets/images/test-charlist-img-2.png");
@@ -18,15 +20,16 @@ const DATA_SET = [
 ];
 
 export default function CharList() {
+  const navigation = useNavigation();
+
   const [DATA, SetDATA] = useState<any>([]);
 
   useEffect(() => {
-      const result = [];
-      for (let i = 0; i < 30; i++) {
-        result.push(DATA_SET[Math.floor(Math.random() * DATA_SET.length)]);
-      }
-      SetDATA(result);
-  
+    const result = [];
+    for (let i = 0; i < 30; i++) {
+      result.push(DATA_SET[Math.floor(Math.random() * DATA_SET.length)]);
+    }
+    SetDATA(result);
   }, []);
 
   return (
@@ -44,6 +47,12 @@ export default function CharList() {
           {map(DATA, (item, i) => (
             <CharCard
               key={i}
+              onPress={() => {
+                // @ts-ignore
+                navigation.navigate(SCREENS.CharacterPage.id, {
+                  name: item.name,
+                });
+              }}
               image={item.image}
               stars={item.star}
               name={item.name}
