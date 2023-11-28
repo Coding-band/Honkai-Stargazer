@@ -1,0 +1,2719 @@
+{
+ "spRequirement": 120,
+ "iconPath": "ee794f57f01e4db9a6cbcd754a79d06c55884da5aaeb99cf01eb5e68ef971fd9",
+ "bgPath": "864f837899e9248a5865f6147a4677102c6ca356c851fdd940673cd7b34bd647",
+ "figPath": "cf30b038cd1c866d1680c1e6c5da78695f3b6381f4f0f972b1ed2645dbf0ba0e",
+ "fgPath": "da74e4e5b5127c8a5d1d5f60272f0832ab90ffce68baa4c54f2f8e48db1855fe",
+ "splashIconPath": "d865c2226e88755c525fb64665fbf95823000e8a34b563c4bf0009b697e34980",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 5,
+  "iconPath": "4b4b5f13f6588e7fb1c030c28f9b9b67a7a8c4bab77c05e38d5c9f64eb0d99e7",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédito",
+   "desc": "Divisa que utiliza la Corporación para la Paz Interastral para sus cuentas con los clientes y que se acepta en todas partes como moneda de los viajes espaciales.",
+   "lore": "\"La gente corre, se pelea y comercia por algo que no son más que números en una terminal, pero lo que es verdaderamente valioso no se puede comprar\".",
+   "purpose": "Moneda común",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cáliz de la mina principal",
+    "Recompensa de misión",
+    "Recompensa de encargo",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Huellas del destino",
+   "desc": "Material avanzado de mejora para los Rastros.",
+   "lore": "Un fracaso tras otro garantiza la victoria final. Un paso tras otro acaba llevándote al punto de inflexión de tu destino.",
+   "purpose": "Material de Rastros",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Recompensa de puntos del Universo Simulado",
+    "Honor anónimo",
+    "Canjeo de Ascuas",
+    "Recompensa de evento de duración limitada"
+   ]
+  },
+  "151161": {
+   "id": 151161,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "6b4243b69df9f37fab4f6cda60edc49711505bf5c2ce0b517d6272be5df311df",
+   "name": "Báculo del Cambiaformas",
+   "desc": "Báculo de madera acabado en punta que pertenecía a un Cambiaformas de los Discípulos de Sanctus Medicus. Material de ascensión para los personajes de tipo Rayo.",
+   "lore": "Según los textos antiguos de Xianzhou, quienes logran la ascensión pueden invocar rayos y controlar el viento. Los Discípulos de Sanctus Medicus aseguran haber heredado la sabiduría de los dioses y, gracias a sus poderes divinos, reunieron a una gran cantidad de seguidores en secreto. Alrededor del báculo serpentean varios rayos, ¿serán la prueba de que los Discípulos realmente no eran meros mortales?<br /><br />\"El cuerpo mortal no es más que una ilusión. La verdad solo se revela a quienes ascienden\".",
+   "purpose": "Material de ascensión de personaje",
+   "rarity": 4,
+   "rewardPath": "/material/151161",
+   "comeFrom": [
+    "Sombra paralizada del Puerto Miraestrellas",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "d75aec8e75227549d536ef57980f65a2b081b9665d06cd1a02a5bafa6c688f63",
+   "name": "Arrepentimiento del eterno vehículo del alma",
+   "desc": "Material avanzado de mejora para los Rastros.",
+   "lore": "No importa cuántos cuerpos capture, sigue sin conseguir lo que quiere. Al igual que quienes buscar el elixir de la inmortalidad, ansía un cuerpo que pueda vivir para siempre y que no necesite temer a la destrucción, pero es consciente de que esto no es más que un sueño inalcanzable.<br /><br />\"He visto muchos mundos devorados por las llamas del Imperfecto; yo antes era una de esas llamas. Danzaba a una señal de su dedo, pero en el fondo sabía que el fuego termina extinguiéndose cuando se acaba la madera...\".",
+   "purpose": "Material de Rastros",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "Ecos de la guerra del Desfiladero de Escamas"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "Guía del espíritu viajero",
+   "desc": "Material de experiencia para personajes. Otorga <nobr>20</nobr> <nobr>000</nobr> pts. de EXP.",
+   "lore": "Lectura indispensable para la exploración. Pulsa el botón Leer y una voz atractiva empezará a hablar en un idioma que entiendes y te contará las vivencias legendarias de aventureros famosos de distintos mundos, así como los valiosos conocimientos que adquirieron.<br /><br />\"El nuevo volumen de la serie Guía del espíritu viajero, titulado «Manual de gastronomía intergaláctica», saldrá a la venta muy pronto\".<br />\"Para enviar un artículo, conéctese a la baliza sinestésica ERD<nobr>-23</nobr>θ y contacte con un representante de la Sociedad del Conocimiento. Puede elegir la forma de pago más conveniente para usted\".",
+   "purpose": "Material de EXP de personaje",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Cáliz de las llanuras nevadas de las afueras",
+    "Salón olvidado"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "Registro de aventuras",
+   "desc": "Material de experiencia para personajes. Otorga <nobr>5000</nobr> pts. de EXP.",
+   "lore": "Colección de notas instructivas muy bien ordenadas. Contiene numerosas ilustraciones y textos que describen aventuras de principio a fin, así como información valiosa y técnicas de supervivencia.<br /><br />\"¿Por qué no lo digitalizan y lo guardan en un disco fotolítico? Sería mucho más práctico\".<br />\"La tecnología avanzada es mucho más frágil de lo que crees cuando tienes que enfrentarte a tormentas estelares o erupciones de neutrones. Además, seguro que quien escribió este libro quería que la gente lo leyera de la forma más sencilla posible\".",
+   "purpose": "Material de EXP de personaje",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Cáliz de las llanuras nevadas de las afueras",
+    "Entrenamiento diario",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "Noticias del viaje",
+   "desc": "Material de experiencia para personajes. Otorga <nobr>1000</nobr> pts. de EXP.",
+   "lore": "Diario de viaje con una caligrafía ilegible y un contenido completamente aleatorio, por lo que no te sirve de mucho.<br /><br />\"Dan Heng, acaba ya de leerlo y luego tíralo\".",
+   "purpose": "Material de EXP de personaje",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Cáliz de las llanuras nevadas de las afueras",
+    "Recompensa de encargo"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "15365d10ed38771d99d247bc228b03787e29972cc714a655a9b8feef3031505e",
+   "name": "Instinto del ladrón",
+   "desc": "Pequeña cantidad de antimateria. Material simple que se usa en la potenciación.",
+   "lore": "Pequeña cantidad de antimateria que emana de los Saqueadores del Vacío, como si fuera la materialización de la destrucción.<br /><br />\"Quieren ver arder el mundo, para saltar al fuego y morir con él\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "De la Legión Antimateria",
+    "De enemigos en el Universo Simulado",
+    "Recompensa de encargo",
+    "Canjeo de Ascuas",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3cd4c92ff44d695595377ffc6c0896d6839775f6014e96daf679b256bc0d19cf",
+   "name": "Ambición distorsionada",
+   "desc": "Cantidad moderada de antimateria. Material corriente que se usa en la potenciación.",
+   "lore": "Cantidad moderada de antimateria que flota alrededor de los Distorsionadores del Vacío. Mantiene un delicado equilibrio entre las partículas positivas y las negativas.<br /><br />\"Quieren ver arder el mundo, para saltar al fuego y morir con él\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "De la Legión Antimateria (nivel de Equilibrio 2)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "De enemigos en el Universo Simulado",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bb7670872389d870154ac70d1b29dee2d6c123f558951c6f914f1d9a70c28382",
+   "name": "Obsidiana lúgubre",
+   "desc": "Fragmento de materia oscura obtenido en el vacío. Sirve para mejorar ligeramente los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilidad</span>.",
+   "lore": "Noúmeno que no se puede verificar de ninguna forma.<br />Al rozarlo emite un murmullo ininteligible.<br /><br />\"████ ██ █ █\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "Cáliz de la mina principal",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3c858c8ff4df238403e5443f57850367e4164a62efb508ce359db9c5b7474a19",
+   "name": "Voluntad de conquista",
+   "desc": "Antimateria condensada. Material avanzado que se usa en la potenciación.",
+   "lore": "Antimateria muy condensada presente en el cuerpo de los Aplastadores del Vacío. El momento de la aniquilación es el toque de corneta para la destrucción de una civilización.<br /><br />\"Quieren ver arder el mundo, para saltar al fuego y morir con él\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "De la Legión Antimateria (nivel de Equilibrio 4)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "De enemigos en el Universo Simulado",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "name": "Obsidiana de la obsesión",
+   "desc": "Trozo grande de materia oscura obtenido en el vacío. Sirve para mejorar en gran medida los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilidad</span>.",
+   "lore": "A quienes tienen una voluntad débil les bastará una mirada a este prisma para pasar la eternidad en el caos.<br /><br />\"       \".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "Cáliz de la mina principal",
+    "Máquina sintetizadora multiusos - Síntesis de materiales"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1a896480b5f6ee84644db112069845e85930f6dbc0f428a3f8a6de2b187702af",
+   "name": "Obsidiana del vacío",
+   "desc": "Trozo de materia oscura obtenido en el vacío. Sirve para mejorar moderadamente los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilidad</span>.",
+   "lore": "Su superficie oscura no refleja absolutamente nada. No solo absorbe la luz, sino que parece apropiarse de las emociones de su portador y dejar solo una sensación de vacío.<br /><br />\"...\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "Cáliz de la mina principal",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "Canjeo de Ascuas"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 92.4,
+   "attackAdd": 4.62,
+   "hpBase": 147.84,
+   "hpAdd": 7.392,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549437,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 129.36,
+   "attackAdd": 4.62,
+   "hpBase": 206.976,
+   "hpAdd": 7.392,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549437,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 166.32,
+   "attackAdd": 4.62,
+   "hpBase": 266.112,
+   "hpAdd": 7.392,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633378,
+     "count": 6
+    },
+    {
+     "id": 151161,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 203.28,
+   "attackAdd": 4.62,
+   "hpBase": 325.248,
+   "hpAdd": 7.392,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633378,
+     "count": 9
+    },
+    {
+     "id": 151161,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 240.24,
+   "attackAdd": 4.62,
+   "hpBase": 384.384,
+   "hpAdd": 7.392,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717319,
+     "count": 6
+    },
+    {
+     "id": 151161,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 277.2,
+   "attackAdd": 4.62,
+   "hpBase": 443.52,
+   "hpAdd": 7.392,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717319,
+     "count": 9
+    },
+    {
+     "id": 151161,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 314.16,
+   "attackAdd": 4.62,
+   "hpBase": 502.656,
+   "hpAdd": 7.392,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "7610e43046fd1ab7c530ac657ab34c99502293c22c60de45c444cb56f40d6a5c",
+   "artPath": "c5f7e55b2cbdc20eb1cdd1a225d3956fa93f0205660c5bfa2f97932b12a5d923",
+   "name": "Da capo",
+   "descHash": "Cuando el talento activa un ataque adicional, hay un <nobr>#1[i]%</nobr> de probabilidad base de que el Daño con el tiempo que recibe el objetivo aumente en un <nobr>#2[i]%</nobr> durante <nobr>#3[i]</nobr> turnos.",
+   "params": [
+    1,
+    0.3,
+    2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "37cc78cca858c618860e55be81bbf773d6950f672da4bbb17c0666db08802737",
+   "artPath": "6dbec52f9c550b1fdfbc12e0c82f7b6b7b1a95be3839d4dd1ec18cde3a5a44b3",
+   "name": "Fortississimo",
+   "descHash": "Cuando Kafka está en la batalla, el Daño con el tiempo que infligen todos los aliados aumenta en un <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.25
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "9e40e1b9a4cc5365fd99fb3b1d37e3e8a104857c0252fface2df70787fd90160",
+   "artPath": "ca058387ee280b323835272dc5b5afbf117c16a58dd459374d121cafa9ee8fb1",
+   "name": "Capriccio",
+   "descHash": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "0ba3c102e6edb5907b06376e565252807e7e14e455a5cefaedc3c91e0831ecd1",
+   "artPath": "53e789fd19d59cca230ee61c594204d8be32d47ee76db100b730dd01fcf8862c",
+   "name": "Recitativo",
+   "descHash": "Cuando el objetivo recibe daño del estado de Electrocución provocado por Kafka, Kafka recupera <nobr>#1[i]</nobr> pts. de energía adicionales.",
+   "params": [
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "232b85366216ebb26c201fa31d85f8264a0b65a3861f8674ce6416db38428d8a",
+   "artPath": "dc8b360ca87223d09fed5b5179a76e9b3538c9833d9a194e483bcb86e908ba34",
+   "name": "Doloroso",
+   "descHash": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "d2c68d9a3d651e68287510f2d2a0efc3cc68453c0882c3bd50ccdefd293bc21c",
+   "artPath": "8e93113a0010e2bb31593f3ab64c383cf5799aa1079307dd248b46cecfa667df",
+   "name": "Leggiero",
+   "descHash": "El multiplicador de daño de la Electrocución que inflige la habilidad definitiva, la técnica o el ataque adicional del talento aumenta en un <nobr>#1[i]%</nobr> y la duración de Electrocución se alarga en <nobr>#2[i]</nobr> turno.",
+   "params": [
+    1.56,
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   791017
+  ],
+  [
+   874958
+  ],
+  [
+   958899
+  ],
+  [
+   75544
+  ],
+  [
+   360071
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "ATQ individual",
+   "descHash": "Inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> del ATQ de Kafka como Daño de <span style=\"color:#c75de2;\">Rayo</span> a un enemigo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 791017,
+   "name": "Tumulto a medianoche",
+   "iconPath": "cfa32b1b01a986da6fec75c2ab814df14846a6f8f2e123193eaf567ec188966f",
+   "typeDescHash": "ATQ básico",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Ráfaga",
+   "descHash": "Kafka inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de su ATQ como Daño de <span style=\"color:#c75de2;\">Rayo</span> a un enemigo y un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de su ATQ como Daño de <span style=\"color:#c75de2;\">Rayo</span> a los enemigos adyacentes.<br />Si el objetivo principal está afectado por estados de Daño con el tiempo, todos los efectos de Daño con el tiempo que tenga producen inmediatamente un daño equivalente al <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de su daño original.",
+   "ultimateCost": 0,
+   "break": "60 + 30/adjacent",
+   "energy": "30",
+   "id": 874958,
+   "name": "Luna acariciadora",
+   "iconPath": "9e40e1b9a4cc5365fd99fb3b1d37e3e8a104857c0252fface2df70787fd90160",
+   "typeDescHash": "Habilidad básica",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.8,
+      0.6,
+      0.3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.88,
+      0.615,
+      0.33
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.96,
+      0.63,
+      0.36
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.04,
+      0.645,
+      0.39
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.12,
+      0.66,
+      0.42
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      0.675,
+      0.45
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3,
+      0.69375,
+      0.4875
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.4,
+      0.7125,
+      0.525
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      0.73125,
+      0.5625
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.6,
+      0.75,
+      0.6
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.68,
+      0.765,
+      0.63
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.76,
+      0.78,
+      0.66
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.84,
+      0.795,
+      0.69
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.92,
+      0.81,
+      0.72
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.825,
+      0.75
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ATQ AdE",
+   "descHash": "Inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> del ATQ de Kafka como Daño de <span style=\"color:#c75de2;\">Rayo</span> a todos los enemigos y tiene una <u>probabilidad base</u> del <nobr>#2[i]%</nobr> de afectar con Electrocución a los enemigos atacados durante <nobr>#3[i]</nobr> turnos y hacer que reciban inmediatamente un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> del daño original de Electrocución recibido.<br />Los enemigos electrocutados reciben un Daño de <span style=\"color:#c75de2;\">Rayo</span> con el tiempo equivalente al <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> del ATQ de Kafka al comienzo de cada turno.",
+   "ultimateCost": 120,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 958899,
+   "name": "Gorjeo del ocaso",
+   "iconPath": "2aa38eeefd18ea9c6064f2ccaa6caeed1a34eae498fd8490598b2efdf6c456d7",
+   "typeDescHash": "Habilidad definitiva",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.48,
+      1,
+      2,
+      1.16,
+      0.8
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.512,
+      1,
+      2,
+      1.26875,
+      0.82
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.544,
+      1,
+      2,
+      1.3775,
+      0.84
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.576,
+      1,
+      2,
+      1.48625,
+      0.86
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.608,
+      1,
+      2,
+      1.595,
+      0.88
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.64,
+      1,
+      2,
+      1.758125,
+      0.9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.68,
+      1,
+      2,
+      1.975625,
+      0.925
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.72,
+      1,
+      2,
+      2.2475,
+      0.95
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.76,
+      1,
+      2,
+      2.57375,
+      0.975
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8,
+      1,
+      2,
+      2.9,
+      1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.832,
+      1,
+      2,
+      3.041375,
+      1.02
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.864,
+      1,
+      2,
+      3.18275,
+      1.04
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.896,
+      1,
+      2,
+      3.324125,
+      1.06
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.928,
+      1,
+      2,
+      3.4655,
+      1.08
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.96,
+      1,
+      2,
+      3.606875,
+      1.1
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ATQ individual",
+   "descHash": "Cuando un aliado de Kafka usa su ATQ básico contra un enemigo, Kafka lanza inmediatamente un <u>ataque adicional</u> que inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de su ATQ como Daño de <span style=\"color:#c75de2;\">Rayo</span> a ese objetivo y tiene un <nobr>#2[i]%</nobr> de <u>probabilidad base</u> de afectarlo con una Electrocución equivalente a la de la habilidad definitiva durante <nobr>#3[i]</nobr> turnos. Este efecto solo puede activarse 1 vez por turno.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "10",
+   "id": 75544,
+   "name": "Dulce pero cruel",
+   "iconPath": "da717ed4fb45a197f446a0094935a58476ad5acd13aafae2a4a659101cd98e18",
+   "typeDescHash": "Talento",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.42,
+      1,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.518,
+      1,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.616,
+      1,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.714,
+      1,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.812,
+      1,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.91,
+      1,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.0325,
+      1,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.155,
+      1,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2775,
+      1,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.4,
+      1,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.498,
+      1,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.596,
+      1,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.694,
+      1,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.792,
+      1,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.89,
+      1,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Ataca a un enemigo y, tras entrar en combate, consume la Firmeza del tipo correspondiente del enemigo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 276130,
+   "name": "Ataque",
+   "iconPath": "cfa32b1b01a986da6fec75c2ab814df14846a6f8f2e123193eaf567ec188966f",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Ataca inmediatamente a todos los enemigos de un área determinada y entra en combate. Inflige un <nobr>#3[i]%</nobr> del ATQ de Kafka como Daño de <span style=\"color:#c75de2;\">Rayo</span> a todos los enemigos. Además, cada enemigo tiene una <u>probabilidad base</u> del <nobr>#1[i]%</nobr> de ser afectado por una Electrocución equivalente a la de la habilidad definitiva durante <nobr>#2[i]</nobr> turnos.",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "0",
+   "id": 360071,
+   "name": "La clemencia no es perdón",
+   "iconPath": "4d7df18581361c0aa2aace058bf5fbaa6644508693804fe2524c6e537a0b8bca",
+   "typeDescHash": "Técnica",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      2,
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1005101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1005202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1005203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1005204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 227730,
+          "name": "Bonificación de PV",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+          "statusList": [
+           {
+            "key": "PV",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920196,
+            "count": 3
+           },
+           {
+            "id": 633378,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 227733,
+        "name": "Bonificación de ATQ",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920196,
+          "count": 3
+         },
+         {
+          "id": 633378,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 227732,
+      "name": "Bonificación de acierto de efecto",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+      "statusList": [
+       {
+        "key": "Acierto de efecto",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635669,
+        "count": 3
+       },
+       {
+        "id": 549437,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Al usar la habilidad definitiva, los enemigos pasan de recibir el daño provocado por el estado de Electrocución a recibir daño de todos los estados negativos de Daño con el tiempo que tengan en ese momento.",
+    "ultimateCost": 0,
+    "id": 227636,
+    "name": "Tortura",
+    "iconPath": "4317f6de0bda7a6c519e687667f36f572590bd7326c5602a1bb26a61abc3c8cb",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635669,
+        "count": 3
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1005102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1005205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1005206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1005207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 227729,
+          "name": "Bonificación de ATQ",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+          "statusList": [
+           {
+            "key": "ATQ",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836255,
+            "count": 3
+           },
+           {
+            "id": 717319,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 227728,
+        "name": "Bonificación de acierto de efecto",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+        "statusList": [
+         {
+          "key": "Acierto de efecto",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836255,
+          "count": 3
+         },
+         {
+          "id": 717319,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 227731,
+      "name": "Bonificación de ATQ",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920196,
+        "count": 5
+       },
+       {
+        "id": 633378,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Cuando se elimina a un enemigo afectado por Electrocución, Kafka recupera <nobr>#1[i]</nobr> pts. de energía adicionales.",
+    "ultimateCost": 0,
+    "id": 227639,
+    "name": "Saqueo",
+    "iconPath": "f8299ac4c99aa8fd2a9b72d4cb0dbddc48e66c41777374c96493f44dbe246ad8",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       5
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920196,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1005103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1005208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 227742,
+      "name": "Bonificación de PV",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1005209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 227743,
+      "name": "Bonificación de acierto de efecto",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+      "statusList": [
+       {
+        "key": "Acierto de efecto",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "La probabilidad base de que la habilidad definitiva, la técnica o el ataque adicional del talento afecte con Electrocución a los enemigos aumenta en un <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 227638,
+    "name": "Espinas",
+    "iconPath": "9c41a64ca78a92462966705d8958ac7c6911c7b261eba18cc8ce04e4b618fdaf",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.3
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1005201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1005210,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 311675,
+      "name": "Bonificación de ATQ",
+      "levelReq": 80,
+      "promotionReq": 0,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 227735,
+    "name": "Bonificación de ATQ",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549437,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Torso",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "ATQ",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   },
+   {
+    "relicTypeHash": "Piernas",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "VEL",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Esfera de plano",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "Aumento de Daño de Rayo",
+    "propertyIconPath": "dbf8a033f78ebfe4765472b27aa0e7d3838d36f8f15868c49a3433ccca9ef1aa"
+   },
+   {
+    "relicTypeHash": "Cuerda de unión",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "ATQ",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Primer encuentro",
+   "text": "Hola, pasajera/o del Expreso Astral... Está bien, me descubriste.",
+   "unlockRequirement": "",
+   "cnUrl": "cf0805d6c7d4fe900aef2e218d8853009202ccd6ecd677c61fa12611d34d6529",
+   "jpUrl": "3e60030c7d7b3c328ebd974ecdfe0dcf764b932bf0ef235d9f0fdbf46ba40360",
+   "enUrl": "2d0bca8990898667c8ef4413081a55b257be1d40836b02735b0e77855cd01a50",
+   "krUrl": "299a4618ddf147409877432042ba8c819fdf0730df4bf87584f72c23f5ff48e4"
+  },
+  {
+   "id": 2,
+   "title": "Saludo",
+   "text": "El espacio y el tiempo son prácticamente infinitos y, sin embargo, tú y yo estamos juntas/os aquí y ahora. Esa es la naturaleza del destino: crea un milagro, pero te convence de que fue un accidente.",
+   "unlockRequirement": "",
+   "cnUrl": "db2b12890e76b0c38507d8d89556adbe6cea8ad0bccd1b9f91d3e8e7dbf91137",
+   "jpUrl": "11c65bf7eea83236864134fe6095bae95db3b122565c5a31f1b83136c35cae7f",
+   "enUrl": "38a885c9af52008babbaaeb753b119577ac5eff7a1a3373a88ebe320633560ff",
+   "krUrl": "870b659878ba91b9c3834888d11cc05ca547862c287c83c5878b816bbeb05b1a"
+  },
+  {
+   "id": 3,
+   "title": "Despedida",
+   "text": "Hasta la vista, Trazacaminos. A ver si puedes sorprenderme la próxima vez.",
+   "unlockRequirement": "",
+   "cnUrl": "7ee71eedc2a4537198cafc0f7be9fda0f52c44862a21630a4a955cd1d7aa3067",
+   "jpUrl": "6ec7f69635c13c81a6d36e6be731cf1f89b781a8c4f9386dd143d0465a1fc802",
+   "enUrl": "4b6271fbab4e4b97ed863d22782ca887fd43f6e6a8cba1aa9fe63154ad0d4d51",
+   "krUrl": "bc2fd337f587e691acb05f572f359f29ad3d5c86166e96241638d9e8f237efc4"
+  },
+  {
+   "id": 4,
+   "title": "Acerca de sí misma",
+   "text": "Antes de unirme a los Cazadores de Estelaron, casi nunca veía a la misma persona dos veces, debido a la naturaleza de mi trabajo.",
+   "unlockRequirement": "",
+   "cnUrl": "66f419a6005d350213691140f94351e0a8e9b5211dbb910c977099af8c294194",
+   "jpUrl": "365536ad3056309cf084c2603eef2041fbf874bbf799f40166a4d50b72b8eeb0",
+   "enUrl": "139fb3a0afcb1e98ad7d7ec66050ba08e4b2585fa59d25e52eb4983fe284cd3b",
+   "krUrl": "62f49bd697d2bfe2629e59618a4d3c263009264d26de0891b513dc23629c8a88"
+  },
+  {
+   "id": 5,
+   "title": "Conversación: miedo",
+   "text": "Elio dijo que se me da bien infundir \"miedo\", aunque no sé lo que es eso.",
+   "unlockRequirement": "",
+   "cnUrl": "5f337f727b1c1455a86825ef0b6b0a5d18609c2f2f42c70eb5ed73c71bada2f8",
+   "jpUrl": "dd0a91561e768c69f10117574c6c528501bab04b55b16b5a6ba3a9e0ffe6519e",
+   "enUrl": "92327f3b29805f3eca41b3257a8bdbad6d4baf0cefeb9adadcef179dd469f96f",
+   "krUrl": "04100945e64bb897043fd09caa384f93d524597a5d637473d9a92a921ce7cd94"
+  },
+  {
+   "id": 6,
+   "title": "Conversación: violín",
+   "text": "Tanto para tocar el violín como para disparar un arma se necesitan dedos flexibles, aunque las balas son más obedientes.",
+   "unlockRequirement": "",
+   "cnUrl": "9f0f8f698d4aba3de211986012cd12092497e25d23ac09f5046da69aafdc004f",
+   "jpUrl": "98cc9d8619c1bb8694ee30a8fdda102528315a7e732337a9a095727bf4f3507f",
+   "enUrl": "c632a44f8b86ee55135c8e47976e46de28ca2ef53efed289df76ef7ec046cf93",
+   "krUrl": "c83e6682d7f76f9f032b43df60bcd85c1f62e44efad9a1ef618ff30f5c7d4175"
+  },
+  {
+   "id": 7,
+   "title": "Aficiones",
+   "text": "Me gustan mucho los abrigos de terciopelo, por lo bellos y frágiles que son. Son difíciles de conservar, porque al más mínimo descuido, pierden su brillo.",
+   "unlockRequirement": "",
+   "cnUrl": "c1471d70ddb78a86ddc4efc28e1683f0776681ed3f11dd822db52198ff4d92c1",
+   "jpUrl": "7cc73dd901cbf4a2a677f6be357ea638bbf61e13180a0265c5b7cfb3d353cda3",
+   "enUrl": "e15a81b5fb6e532ce48dd478cfdcb89e814efb56b1d6e4689e7ee02e8d316fe2",
+   "krUrl": "f9d13da024edfc05934e05945b56b29009b045a4854942dd1517695d992032d8"
+  },
+  {
+   "id": 8,
+   "title": "Molestias",
+   "text": "El pasado y el futuro son demasiado parecidos. No me suscitan interés.",
+   "unlockRequirement": "",
+   "cnUrl": "8af5942a6d0e0a8a6c1907f5b33332841c6fdcf1120fb438bdb6e2aedae76ab7",
+   "jpUrl": "ef67fbec2b8a78617a3f1e937a1e9e52b77aeb367a04f9f78bfb5f766d31e53c",
+   "enUrl": "796dbc7389c7a4e9ad5b5794d0bb915e1d1b3023adabb2f48aba1e1581500cf1",
+   "krUrl": "845f91154dde781dec58de91505ecf22fc0038c0625b1960cc8c316c4ae4dd89"
+  },
+  {
+   "id": 9,
+   "title": "Algo que compartir",
+   "text": "Hay un planeta al que iba todos los veranos para ver el mar. En esa estación las mareas son más fuertes y tienes que quedarte en la orilla, muy lejos. Pero un año construyeron un largo muelle de observación y no volví a ir.",
+   "unlockRequirement": "",
+   "cnUrl": "751edc19b01e0898386876a3c4f8cbe3beb1fc251ed69223ecf2fd2a8a401df8",
+   "jpUrl": "9b4ea8f2b883798d3f1a93f22786e2c763e9dbf80611b0515f3f2ef38d7c5dab",
+   "enUrl": "20d7ee22ccaf4a4ec3fdb4a92ff0ad39c12d100e913b019695110455e8d5f38d",
+   "krUrl": "845ba49fa00ee95ee42a492a83b4b52678ccc2977359566dcbc55ed26c3b34ab"
+  },
+  {
+   "id": 10,
+   "title": "Un dato",
+   "text": "Mi planeta natal es uno de los muchos que cambió debido a un Estelaron. Ay, es una pena, pero no pude presenciar cuánto cayó en aquel momento.",
+   "unlockRequirement": "",
+   "cnUrl": "c2bf2131fb3368c0dd357f6a837cd56897c3d52aa3e81430a67486d51ddd6a18",
+   "jpUrl": "ea2f6a623b1568fcac043ceebb036b5fa86ddd4ec122128917e03d64c5e9f45c",
+   "enUrl": "faa655dd62b475bab4529a7a5471c9c3ea28ff867a9e9af14bd2910cf4307c76",
+   "krUrl": "9b43daa6c96c6908316b218b29a22518bbb4e49f1291dbc949c1554b0f9558d5"
+  },
+  {
+   "id": 11,
+   "title": "Acerca de Silver Wolf",
+   "text": "Me gusta conversar con Silver Wolf. Para ser tan pequeña, tiene muchas ideas.",
+   "unlockRequirement": "",
+   "cnUrl": "c1ece0072f3d73bda4a7914d517024fe0f25e7f281174128b28389327ab26e9c",
+   "jpUrl": "3e9c71171a33bb57462c6f35bc3db6b4d09c82964cd557c0b0315288b566a0c8",
+   "enUrl": "073b60704e59228747f70f6750af8e5f7181f022be0f4ad3e5bcbf782d04d80a",
+   "krUrl": "caafae9157166b79bab6ca53d706dae87dace8fe015609c54222c230f4c7caeb"
+  },
+  {
+   "id": 12,
+   "title": "Acerca de Blade",
+   "text": "Bladie hace honor a su nombre: sus combates son un espectáculo digno de ver.",
+   "unlockRequirement": "",
+   "cnUrl": "427b31d5391c83195a80301ae31a8668cbf3cd6ebe304508f676197a7839eebb",
+   "jpUrl": "2ed5f19b3ab3cf07cb044b6d0098c3cc77da3b152dd2ef84f21f4606de68b193",
+   "enUrl": "7e87ca4730c61882d696638edbe119e2c777c146077773311d6f7d4b79cd66a8",
+   "krUrl": "ef263d2508973e8854cf0dcc9272c9c6b6991970b7058cb08383d029dbb72a18"
+  },
+  {
+   "id": 13,
+   "title": "Activación de Eidolon",
+   "text": "Nadie puede entender completamente los pensamientos de otro... Ni siquiera tú o yo.",
+   "unlockRequirement": "",
+   "cnUrl": "4d644f3f22fe47425ed20cc4e94a5f6c434c8608398f61087174f7eb75f80e0f",
+   "jpUrl": "865bcfd89fac8b0f282789b89d8b08529414f83d99c6c9afcd63b6334314a646",
+   "enUrl": "3250c561394c8ffd2a93b9b5afb6b5da81aa88388728b19504f99198e854d27d",
+   "krUrl": "0b7162401e392b664d24be204ff1549e9007afe823a4eb95ac404ceb0a48eb7f"
+  },
+  {
+   "id": 14,
+   "title": "Ascensión de personaje",
+   "text": "Si el destino no puede impulsarme, seré yo quien empuje al destino.",
+   "unlockRequirement": "",
+   "cnUrl": "cd9b0721b3c352138d8617f51ac0cf674506a2a04cc10f3b4c48e02f3201cc83",
+   "jpUrl": "a5cebbf7e6838be7c235074d232944b82614c5ee58a37f2ab9d8533ba47e1ec2",
+   "enUrl": "05f0e26d1edc4b212aeb0f271faa9de1cd8cb500e44429bce2fc508bf3015d12",
+   "krUrl": "e876daa2cac6e14be3ce4bae6c24bd04ab1e6acb45f4c4d013916660c7f66a00"
+  },
+  {
+   "id": 15,
+   "title": "Nivel máximo alcanzado",
+   "text": "Es difícil volver a ponerse en marcha una vez que te detienes, ¿no crees?",
+   "unlockRequirement": "",
+   "cnUrl": "81a12dd7ad9fd787ed452902ba546bb60b7f18b68aab4396dd3ab00a03953580",
+   "jpUrl": "5e5b0e2bbb3489dc1519cd57428ef4d68a4193c124050e900470ca18fbeaf9b4",
+   "enUrl": "aa830361e269a31ce7734c231b752da28c05f9c1bff5ad883caf7bf46557d4fd",
+   "krUrl": "873e14d004e3d4baa4b6f19f1c8ea05321bdb5e630c9a42479400ab806ab6641"
+  },
+  {
+   "id": 16,
+   "title": "Activación de Rastro",
+   "text": "El camino hacia el futuro empieza aquí.",
+   "unlockRequirement": "",
+   "cnUrl": "43d98d16078491c05de403935e4793dbd07a5e69c6e1ab395369977e1662b5ff",
+   "jpUrl": "8c958215f7b12095c4f45d10ecc4fcd2d0a3bc29c7d9319d7390fad170613d23",
+   "enUrl": "107d04f4c6ba79779855166fe07c6caa52bd7e0e5331d7e696f9e542b113d9f0",
+   "krUrl": "bc2c83cee3533d8a1d1977583d96d398f05d43b28f61ce1535569314861199a5"
+  },
+  {
+   "id": 17,
+   "title": "Miembro del equipo: Trazacaminos",
+   "text": "Trazacaminos, nos volvemos a encontrar.",
+   "unlockRequirement": "",
+   "cnUrl": "d8e63dffa0a5ac947ca890fcd947e138dc6e2ce3287981d26e2968974dae38df",
+   "jpUrl": "b6947d931dace26c3a8aa2088a02a7319946c4db77d0907648f6a911396ffaf9",
+   "enUrl": "4fffb0d150cbde1bf8052f0774cd311c1faea445ee1320dd01d31e00291f139b",
+   "krUrl": "549083a5aa6646b88e98b75be40964464b96a6ff7ee7b386fee65e51395b8d11"
+  },
+  {
+   "id": 18,
+   "title": "Miembro del equipo: Silver Wolf",
+   "text": "Saltémonos las formalidades, Silver Wolf. Siempre estoy dispuesta a montar un espectáculo.",
+   "unlockRequirement": "",
+   "cnUrl": "02481193835390e3d94580a773b289bd428895178a3601469392d2e77b4f5df0",
+   "jpUrl": "3897b6ec64a777b99ec8490ed5eea0591cd986e0c6d93d4a274059023e39366d",
+   "enUrl": "5e719c850e47104fcf54f0a8d5d5107e090f704e539b116c811070298cdc8c62",
+   "krUrl": "1bb941dfec977bf625a857cc690e96669f108f62fbea5551c80cdd3755012512"
+  },
+  {
+   "id": 19,
+   "title": "Miembro del equipo: Blade",
+   "text": "La caza te llama, Bladie. ¿Estás listo?",
+   "unlockRequirement": "",
+   "cnUrl": "7918ad47b90c36f41d0a077725ca3185c4e37f4c40a3544d193b4f1e67e462e3",
+   "jpUrl": "66f094df77acf6f39ec5d245b0a02fe90cbb0919cc3a706541abedb4fdf0f45b",
+   "enUrl": "6f44ca0d16eb18dad6970b391beb8f493d3da66b3c014812fffdaedbc246c31c",
+   "krUrl": "07a177dbe884310baf11eb6d60418aa1fb984feb4e6d19fa36531a29da57198e"
+  },
+  {
+   "id": 20,
+   "title": "Miembro del equipo: Himeko",
+   "text": "Oh, la tripulación del Expreso. Parece que uniremos nuestras fuerzas muy a menudo, ¿no?",
+   "unlockRequirement": "",
+   "cnUrl": "2a62ee797203f6e4f651145eb239c3e6a2bc48a5560b649c975c31117d322f3e",
+   "jpUrl": "b6241ba29e3dd24ad344ec44a43b42fd67c5f02bc12229cca080685bfcc4fb5c",
+   "enUrl": "7af4a5c42c77237b9279c82d4c0639b74ede39421d9409f2d3aee8618f94c21a",
+   "krUrl": "3cd169b94aab6b98a1ec7d35883d5c2677bd64badd633547734a6e63e79adb29"
+  },
+  {
+   "id": 51,
+   "title": "Comienzo de la batalla: Ruptura de Debilidad",
+   "text": "Te atrapé en la red.",
+   "unlockRequirement": "",
+   "cnUrl": "fe02e379ebc0c3b163e6ddce19a0f7a96f3811f29a48a2b08bfd63ffadd12724",
+   "jpUrl": "25c6954566bdde88a1baa015c40e8405b3626a7b424eda61d22ac9537d0faa90",
+   "enUrl": "f52f29c3bbc9a775ea14104272590bc61ff053a92f87721876245e9de46d3b5a",
+   "krUrl": "13dd232004a4c2960860ca347f8b43522ed5d53c786bacef6d240dca45e2bb67"
+  },
+  {
+   "id": 52,
+   "title": "Comienzo de la batalla: alerta de peligro",
+   "text": "Justo a tiempo.",
+   "unlockRequirement": "",
+   "cnUrl": "af52daf3f3bad30dd6f2f4c9db6310d837896319d70da382283510cb817c2423",
+   "jpUrl": "4d0c987cf3ecf5aac728422369f4606cdb568167c9aca11dc55f2458d9fec07a",
+   "enUrl": "ca65214f84a18ea9ccf3ecf4d74c624e76205cc8cc061dbfae27fcce283daef1",
+   "krUrl": "f6aed845c8a2832291c86a09765456f7400c3733d6c69db1c99058126e07cbe4"
+  },
+  {
+   "id": 53,
+   "title": "Comienzo del turno 1",
+   "text": "Pues acabaré con todos.",
+   "unlockRequirement": "",
+   "cnUrl": "5ef47d0800f3ba8ad613a3dc73f7428ccba3dd667d8882e1e3d4cf059c75ad6c",
+   "jpUrl": "2f17fa35e21ea19c3870bb6e9b52653564832f515bc34127d0f3262b1202e2fe",
+   "enUrl": "c90ab8c8ce35eaf56448016869454af68e3cc083eb3c8fba26797446efb9d2e3",
+   "krUrl": "6ff5760e3ac2c69804934d9c8d95c1c2ca8614a4af06514b9da4231da427701c"
+  },
+  {
+   "id": 54,
+   "title": "Comienzo del turno 2",
+   "text": "¿Esa sensación de respirar? No la olvides.",
+   "unlockRequirement": "",
+   "cnUrl": "dcd80facd7163e2b6c546e656d2a23bc8111801092b5e20c8fed7e83f7cfc4f3",
+   "jpUrl": "866e7eee28f14814ab196c86b9d9fed8768cec2eca1103781c224dc229c45080",
+   "enUrl": "e1655a87512379bdbb9bd138c214a9fc483b87f518be71e0356be498b8f64928",
+   "krUrl": "a77c4d10c8e26901026d22564f285dc05d14f8e4847c6ea076a73d0ab28bfa15"
+  },
+  {
+   "id": 55,
+   "title": "En espera",
+   "text": "Hora de avanzar.",
+   "unlockRequirement": "",
+   "cnUrl": "462194608c28d6f7d583fd3eb3b919a13d399c053539ccd03148073aed5ba5d5",
+   "jpUrl": "77f7bdc3078250908416cc14dee4237b11708d0b880e209b8c91d46556caf0ba",
+   "enUrl": "3fd264373ec4b9c303b7ce715bb5f9b11c6b558214f0bc0d5a5b83fe10f6b09f",
+   "krUrl": "af246c3c5d69fdfa547f782da7d4035fcd9802361c500a6a46224c5550842767"
+  },
+  {
+   "id": 56,
+   "title": "ATQ básico",
+   "text": "Esto no llevará mucho tiempo.",
+   "unlockRequirement": "",
+   "cnUrl": "aa61ed2ca380376a3954ec9189fd60385ffc1660a31f8b5156bbc7df9be0c4ac",
+   "jpUrl": "5b0694c915fac35542f36f39ad4743bec0b8b38ecdae72b751200739fff8d965",
+   "enUrl": "077c64eaaf35ef4978d89e7ee998584e6e2e2c6799876854bf78e7b23c6c4197",
+   "krUrl": "174751713de9cb94b007bbf98e199203dbf0af7e00e7064685e274f3528cb44b"
+  },
+  {
+   "id": 57,
+   "title": "Al recibir un ataque ligero",
+   "text": "No dolió.",
+   "unlockRequirement": "",
+   "cnUrl": "bf637423da1e327342ecda0a3625141d5ec7f44d329f9ada15a67ca2cb82294d",
+   "jpUrl": "b284e2058e33df63f96524a47294292b20e67d62c95c5a337a883b3988c312f0",
+   "enUrl": "2bbdd2636ae543252d7cd8cc379515670617ba21a3e1c11cbd912fedd2fbf9b3",
+   "krUrl": "ac68983866c9e13aae5b7a45a772aadcff804b0e9122635aa84492fa3c7fa9b4"
+  },
+  {
+   "id": 58,
+   "title": "Al recibir un ataque fuerte",
+   "text": "Nada... mal.",
+   "unlockRequirement": "",
+   "cnUrl": "db4b31574617e0946ffd7a6398c52f84544b1fd971434cc7559b2eb2c4403b1e",
+   "jpUrl": "46b3dd7385cb438d44d75a99e58ffee74c0562a174f5839ea1d45cfb72a771f0",
+   "enUrl": "23e03a9770649b6029a560fa0ae6853188190a73f88bbd375ef4d619c4385947",
+   "krUrl": "07a9663d3914a14ae4b27c7af42461e87cb845097b0686b1ebb01e8ef566e27c"
+  },
+  {
+   "id": 59,
+   "title": "Habilidad definitiva: activación",
+   "text": "Los buenos momentos no duran para siempre.",
+   "unlockRequirement": "",
+   "cnUrl": "4c7fb090d99714d0ae891d81d031adc5c07ba64d838e04c388af0b51c573e4d6",
+   "jpUrl": "73142fe3b85180ae4f6cb6cb749f3c1adc5017358cf2aaaeaa57dca551e2afd4",
+   "enUrl": "63762edfb1b3e44a0b2d9cc1720d90847828187e2d99950be414896867d06402",
+   "krUrl": "c7176eb65ae79cdfb8c77e1723cc3b16901f82b26c32b3fa5b280dd6c655844d"
+  },
+  {
+   "id": 60,
+   "title": "Habilidad definitiva: lanzamiento",
+   "text": "Es hora de decir adiós...",
+   "unlockRequirement": "",
+   "cnUrl": "8b9339a492b48b3a179cb828c9049fcbc5bb09883c282e16a1c4e03174bb546b",
+   "jpUrl": "b9a8076971f68a20ffe018c96a6abc1bfbe0abcd0da1d272ce711d014d5c1909",
+   "enUrl": "0ca38fe37f641fd5ec3e482ae575ed8a585d3dcd36d0af04a7550299494fc913",
+   "krUrl": "201cf0240ec5884a2a631a0c2881f2124a486cf2a474d1c8e6b999a94d6867f7"
+  },
+  {
+   "id": 61,
+   "title": "Talento 1",
+   "text": "Relájate.",
+   "unlockRequirement": "",
+   "cnUrl": "4a91ed350bf2d08ebc3592ec8fb6fe04a42f523b21b49e8b526a7dfef2094bf8",
+   "jpUrl": "f5edc1b93b0fbbbe2e8cd70be0682c292238f909539390aaaf4e070da9902a36",
+   "enUrl": "bcaf329711fbd126d5b8742da42dc60f4255ccd0032032986a9d08e4e0139b8d",
+   "krUrl": "9788f6399919d0aac868dbdb9a5f3c3c5457492097e9e8c70b20622534551b15"
+  },
+  {
+   "id": 62,
+   "title": "Talento 2",
+   "text": "No te muevas.",
+   "unlockRequirement": "",
+   "cnUrl": "2ffccc7d33e79ec9fe4be7c33c5a250ba575b63eccfeee18294934552abf0fba",
+   "jpUrl": "c28aab25ef462ed1ce78aca19e36c4f15e3e83a389652e501b66062276a7ac8d",
+   "enUrl": "673121587e9e088a39a32690f4d1ff083b0d64480e8e9492aacc241ec79c7759",
+   "krUrl": "9f90770f8fa0488a4eb75bd303a103fbeb9fe15b7ceac9634846141ec37f261b"
+  },
+  {
+   "id": 63,
+   "title": "Fuera de combate",
+   "text": "Este... no es el final.",
+   "unlockRequirement": "",
+   "cnUrl": "0e43685caa628ff03874bc679351466761d49d4cf89403484771dd68c9d7bcb7",
+   "jpUrl": "7e91822bd3bd1f74096e7525aab94e84ccd0a0fb621396d8ee9ddffe9625bf9c",
+   "enUrl": "b8faa92b500224c26404c65ecb83d05302588faf3f3d025a6a82193de42b8621",
+   "krUrl": "4eeb46dd90e651ab985de72bb947b56cef0caff54e86e3a7055c6507f7b10ecd"
+  },
+  {
+   "id": 64,
+   "title": "Retorno a la batalla",
+   "text": "¡Oh! Sigo viva.",
+   "unlockRequirement": "",
+   "cnUrl": "2725e194e8f8dc76dc13e6d3bfdb151f0d3fd27ff08cc767c844d2245794469e",
+   "jpUrl": "2d56c16362920a2555a7a061cd8c757846879535376c6f1d9aff5da35e39b5c6",
+   "enUrl": "e69248327a11284ed165a49a39f343680c767fab3c12f5569887730b0f6ac513",
+   "krUrl": "dfd9bf996989b14a8101cf04ded9ee0c493c5e655f018d8bab4342b0d2902fe9"
+  },
+  {
+   "id": 65,
+   "title": "Regeneración de PV",
+   "text": "Gracias, te portas muy bien conmigo.",
+   "unlockRequirement": "",
+   "cnUrl": "0ff9f7c40195c204854411bfbc5c5ffbf5c87ebd85ce892fd55cc729d8ae8e2e",
+   "jpUrl": "8a1b79b9b3035459ef476eec5f7c7d5c51811a61835eab35443ddfe2a5e4b73a",
+   "enUrl": "cd278b264a3bd6f6ab68f19cc0e8063115d93ecc636897d6c422e6e1ac7cbe01",
+   "krUrl": "1ed77fdabd2af481e185eaad1d63afe0a0a22bfb72ed4d845fd5efca1d653d29"
+  },
+  {
+   "id": 66,
+   "title": "Técnica",
+   "text": "¿Duele?",
+   "unlockRequirement": "",
+   "cnUrl": "1c3df94fd1a0c3565da031079ffb157df4dfbd2827965fc2665e3f5c13d3c888",
+   "jpUrl": "cf45c5b853f2366bbb291dd0da57fe97519793e60e98981edda9103db970a0bd",
+   "enUrl": "c3b95e666d28db34144fc5debabd442cd2a2cb50fbeafd66684d61f57eda4b84",
+   "krUrl": "6015743c419ef48803a0c8f08c12f96fa82d684131a55d229776b10e5bd58067"
+  },
+  {
+   "id": 67,
+   "title": "Victoria",
+   "text": "El cuerpo humano es bello en su fragilidad.",
+   "unlockRequirement": "",
+   "cnUrl": "4e6de60e4b993489aa9bb66cefac492034bdbd3e0a2631bfaff4209e243e4a07",
+   "jpUrl": "493117f373d42d198d5b2897a25abb491750752957a1631d2b13207606ce8da3",
+   "enUrl": "0569fd09fe11fce9fe588fd250a167f5e362e82f690f44959fc841f2e61c50ee",
+   "krUrl": "07e12598698ff373bc752662a58bc3b53e0be22eb31484c56281013863c9beb3"
+  },
+  {
+   "id": 68,
+   "title": "Al abrir un tesoro 1",
+   "text": "Hummm... Esto nos servirá.",
+   "unlockRequirement": "",
+   "cnUrl": "27f019bf840b2c45212991cf4533c1956c45c7dacc590b1e9ece0578172513ab",
+   "jpUrl": "cd35ae49baba769efe67218f2b7d50d560bbae57bb4596e0c293613453ce2dab",
+   "enUrl": "2a665d4f151da3b390439b1f87e2202bcbf05864f062b62efed4a7d4f11a94b3",
+   "krUrl": "19b81d825e69a782f3c21030933722ec36ff5dc5007f73369b150b0b727bd733"
+  },
+  {
+   "id": 72,
+   "title": "Al abrir un tesoro 2",
+   "text": "No es ninguna sorpresa.",
+   "unlockRequirement": "",
+   "cnUrl": "3a461ed3f4d48864ee7bf10a6c3fb9e46cac1115a1a62fc128d61da307e3b33f",
+   "jpUrl": "046cf7b7e741c5180132c52c1d4275ad4863cdf674b2ecdd9328461853e8e21c",
+   "enUrl": "3dae10e3b76b5e688d641ae518275daf585ea19d49e47aceb432aec6696aa4c6",
+   "krUrl": "30f11116f165c4148c3a2544fb9ed6023c72fc8f10bbdf3a4a61a33720289a61"
+  },
+  {
+   "id": 73,
+   "title": "Al abrir un tesoro valioso",
+   "text": "¿Te gusta lo que ves? A mí también.",
+   "unlockRequirement": "",
+   "cnUrl": "ff420d970ad4b82192a0b255e250b36822be2cb6a8ecc12dd6de338173119fbf",
+   "jpUrl": "d85ca96a0ff5f9884bc92cd380c88857dc6a803d3745c43c8062fa3e6c9f4880",
+   "enUrl": "94d9c6c4a50449f9a25ac8f91d350b6f6df0068650fb25d7b9f1d03a3bd3a02d",
+   "krUrl": "7c13e8b5d0f3675057f674c023ec7ad84424583176395fea531a06b6669cded6"
+  },
+  {
+   "id": 69,
+   "title": "Al resolver un acertijo 1",
+   "text": "Buen trabajo.",
+   "unlockRequirement": "",
+   "cnUrl": "8cd8a3574f45fc4a4ceeb75e84d517ed93619124566bd1e979a89c9db977b422",
+   "jpUrl": "8ba0d72dd506d8bac635789534f15f1780bd08dbc4d47ac4f81ef378f7ecb229",
+   "enUrl": "094b6bf860143d5ef9c6ce6dd37041dea0ba2e39b365e2f273bc4907219bc617",
+   "krUrl": "ee9a1ea501eebcbfd00216720d493afc551c821f23032504f7c85c6b62c0337f"
+  },
+  {
+   "id": 74,
+   "title": "Al resolver un acertijo 2",
+   "text": "Impresionante. ¿Quieres un premio?",
+   "unlockRequirement": "",
+   "cnUrl": "eca45468594a1a13b3f29cc380084ab08cf75ef3ac9c33c512880cf1813c2a34",
+   "jpUrl": "994eebd409a2e33761147fde938a63d2e39961031b70bb2924ec85973f506932",
+   "enUrl": "1f13236a29d3d3c389b0e007f5306d5ebe92dd04add6d5b4ff3667e6547a5406",
+   "krUrl": "9d71ffaa1140fe4b1d69e1df43060b1f3a5eeb4d7aad7e34d55ceb229f08aca1"
+  },
+  {
+   "id": 70,
+   "title": "Objetivo enemigo encontrado",
+   "text": "¿Eh? No parecen muy contentos de vernos...",
+   "unlockRequirement": "",
+   "cnUrl": "25a26db930d37a8d0e4a10501cc458716474d0906f482b5381e8ddd58f5a27fb",
+   "jpUrl": "f164960a914a4fa71566efe086ddd62cc0d3f46617b5b61a09a4b5a810bb25c5",
+   "enUrl": "028a7ea5f423ab7ef6e14c9df31be033d4eb9b895da1264ac5692fcfc1b353b9",
+   "krUrl": "fd0a68c068839db9d21b288179cabc3b01373176ce3df2d90c3b073de223c130"
+  },
+  {
+   "id": 71,
+   "title": "Al regresar a la ciudad",
+   "text": "Ay, ¿eso es una mancha? Me gusta mucho este abrigo.",
+   "unlockRequirement": "",
+   "cnUrl": "cae4b7ca471fe4e8aba518231f6139e5fad68bafd076d01171f4cc4029afa0bf",
+   "jpUrl": "980ded0302051c03fd222ad918556ea226106d17f6385a248befac73c81a7a17",
+   "enUrl": "97accc9333748e46ee1238411750596d5f4af134ec4fb5ec30b89a014749f17e",
+   "krUrl": "96efc1b22c21f66c7bfd9c1b4224557e4be21c07ae222dc4f7b1fef17d7eb02c"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Detalles del personaje",
+   "text": "Kafka aparece en la lista de más buscados de la Corporación para la Paz Interastral, pero su entrada solo contiene dos datos: su nombre y la frase \"Le gusta coleccionar abrigos\". Apenas se sabe nada sobre esta Cazadora de Estelaron, aparte de que es una de las colaboradoras más cercanas de Elio, el Esclavo del Destino.<br />Para alcanzar el futuro previsto por Elio, Kafka se pone en marcha.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Historia del personaje I",
+   "text": "\"Kafka, mujer humana oriunda de Pteruges-V: Nueva Babilonia. Miembro principal de los Cazadores de Estelaron, segunda al mando del Esclavo del Destino. Culpable de los siguientes delitos: invasión de Pier Point, dos cargos; robo en Pier Point; desaparición del sistema estelar Trovys; los incidentes relacionados con el Estelaron de Jemorse, Bayjhana, Shilla<nobr>-39</nobr>C, Ulmora, 7-Midville, Loar<nobr>-51</nobr> y Dro'a; ciberataques contra Pier Point, cuatro cargos; ciberataques contra el planeta Tornillia; ciberataques contra la Estación Espacial Herta; la rebelión de Jepella. Se sospecha que está relacionada con las siguientes infracciones: los incidentes relacionados con el Estelaron de Sich-Lala, Inupeis, Oun-G7, Zukov, Lidovia, Illily, Attouine y Buhayama.<br />Nivel de búsqueda: el más alto. Viva o muerta\".<br /><align=\"right\">Orden de captura de la Corporación para la Paz Interastral.</align>",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>20</nobr> de personaje."
+  },
+  {
+   "title": "Historia del personaje II",
+   "text": "\"... Debido a las necesidades urgentes de investigación, se publica a continuación la información básica de la sospechosa. Sospechosa: Kafka (número de serie de búsqueda: L<nobr>933012000020002010004</nobr>). Mujer, foránea, de edad desconocida, de una altura aproximada de <nobr>170</nobr> cm y complexión normal. Fue vista por última vez con una chaqueta negra sin mangas y una camisa blanca con cuello, unos pantalones cortos oscuros ajustados, medias moradas y lentes de sol.<br />Se ha informado que la sospechosa está involucrada en múltiples catástrofes no naturales que han tenido lugar en el Luofu en los últimos días. Actualmente, se encuentra en paradero desconocido y la buscan las autoridades del Luofu. Se insta a cualquier unidad o persona que haya visto a la sospechosa a que se ponga en contacto con los Nimbocaballeros locales. Por favor, exhorte a la sospechosa a que se entregue y a que no se arriesgue en su intento de salirse con la suya\".<br /><align=\"right\">Orden de captura del Luofu (revocada)</align>",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>40</nobr> de personaje."
+  },
+  {
+   "title": "Historia del personaje III",
+   "text": "\"... Esa mujer se llama Kafka, es una nueva cazadora. No figura ningún tipo de información en su expediente. No pertenece a ninguna organización en particular. Tiene una habilidad llamada Encantadora de espíritus que le permite hipnotizar y manipular con sus palabras. Recientemente, apareció en Riverland, Nueva Babilonia, donde fue vista comunicándose con su jefe, Shilde. Ambos se dieron a la fuga, según atestiguan <nobr>143</nobr> personas. Más adelante, se la vio en una tienda de ropa, donde robó una chaqueta negra, dos camisas blancas y un vestido rojo, de acuerdo con el testimonio de 6 personas. Después de eso, <nobr>28</nobr> testigos la vieron en una tienda de discos de vinilo, donde no compró nada. Antes de aparecer en el puesto de guardia de Riverland, fue vista en el parque central, en un momento en el que había <nobr>2695</nobr> ciudadanos presentes. Queremos la cabeza de Kafka, sus crímenes no pueden quedar impunes\".<br /><align=\"right\">Orden de captura de los Demonios de Pteruges-V</align>",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>60</nobr> de personaje."
+  },
+  {
+   "title": "Historia del personaje IV",
+   "text": "\"... Vayan a Pteruges-V y localicen un edificio abandonado en las coordenadas <nobr>135</nobr>:<nobr>7372124</nobr>, <nobr>271</nobr>:<nobr>6372711</nobr>. Entren. Hay una lata de bebida sin abrir debajo del alféizar de la ventana en el primer piso. Tómenla. Esperen hasta las <nobr>11</nobr>:<nobr>12</nobr> de la mañana del miércoles y coloquen la lata en la entrada del edificio. Kafka aparecerá 2 minutos después. Es posible que se detenga a mirar la lata con atención. Aprovechen esa oportunidad para lanzarle la pelota a los pies. Luego, yo me encargaré y hablaré con ella.<br />La otra posibilidad es que Kafka ignore la lata. En ese caso, simplemente lancen la pelota. Morirán, pero a todos nos llegará la muerte en algún momento. Me encargaré de hacer realidad el futuro que anhelaban\".<br /><align=\"right\">Orden de captura del Esclavo del Destino</align>",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>80</nobr> de personaje."
+  }
+ ],
+ "archive": {
+  "cvCn": "徐慧",
+  "cvJp": "伊藤静",
+  "cvKr": "사문영",
+  "cvEn": "Cheryl Texiera",
+  "camp": "Cazadores de Estelaron"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Kafka",
+ "rarity": 5,
+ "descHash": "Miembro de los Cazadores de Estelaron. Una amante de la moda muy estilosa y profesional. Utilizó el encantamiento Encantadora de espíritus para que Trazacaminos absorbiera el Estelaron. Le gusta comprar y ordenar sus abrigos.",
+ "artPath": "46ef898f976e66cdf8e6e04b5950171e155e368ca58a119c194e44e146fd1752",
+ "miniIconPath": "075f07546de6a4c1d3169c999fd5a6cbd99dfc8d36edd1ba49d12d45dfb872a5",
+ "damageType": {
+  "id": 8,
+  "iconPath": "aec46e1b5be764fe83cac85e30f5832729012baa6a30bb8d91c82348d8a1b4d6",
+  "color": "#8872F1",
+  "name": "Rayo",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "96c3b8dd457b98955d440531986a23d509f705c13d7aa794d1e97bcfd03d5701",
+  "altIconPath": "b55d340138ed77756cd939d0d9ee2103a5398f999202c1ed19d092ac87333155",
+  "color": "#FFFFFF",
+  "name": "Nihilidad",
+  "rarity": 0
+ },
+ "pageId": "kafka"
+}

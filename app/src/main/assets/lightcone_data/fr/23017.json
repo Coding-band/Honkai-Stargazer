@@ -1,0 +1,513 @@
+{
+ "name": "Nuit de l'épouvante",
+ "rarity": 5,
+ "descHash": "La jeune fille se cache derrière la porte, sans oser faire un pas de plus.<br />Son cœur s'emballe, peut-être parce que l'objectif de ce soir est déjà à sa portée.<br />« Je n'ai pas peur, je n'ai pas peur, je n'ai pas peur... »<br />Dans les ténèbres, un cri perçant fait voler le silence en éclats.<br /><br />La jeune fille, tremblotante, agrippe « l'arme », sans encore oser s'approcher de la « cible ».<br />« Il n'y a pas de quoi avoir p—p—peur ! »<br /><br />Derrière elle, la queue en a assez et s'illumine soudain.<br />« Dépêche-toi un peu. Tu reçois une livraison, c'est tout ! »",
+ "iconPath": "27e7b75ed6301305f8807626ec3109e11942d162d7f83d8385b92d713bc1337a",
+ "artPath": "9b6e941e01cd6d0d4e62cbc3ed303d24ca4cf9753c1e3b9b1985509493a1dc19",
+ "mediumIconPath": "6f85c265878c350a4e22f61db1a527b2f171cc072d6e411f58e6d0149a12bcf6",
+ "baseType": {
+  "id": 0,
+  "iconPath": "81e58cfdc0c8a9a026c2c3111a6bdf663d572fa71524907b004fc5eb7f34fade",
+  "color": "#FFFFFF",
+  "name": "L'Abondance",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Braises immortelles"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "71d58f084522c87e93327e3e7fc1db8fb4abb65e9989b163d4a348c9a3761329",
+   "name": "Jeune pousse immortelle",
+   "desc": "Jeune pousse ayant bourgeonné à partir d'une ancienne construction divine. Matériau commun utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Il y a de très nombreuses années, le désir orgueilleux et démesuré d'un souverain pour l'immortalité a mené la flotte de Xianzhou à lever les voiles en direction de la mer cosmique pour y rechercher des remèdes divins.<br /><br />« Nous voulons vivre jusqu'à des temps sans fin et maintenir notre empire pour l'éternité. Malheureusement, la vie humaine prend toujours fin, et les capacités humaines ont leurs limites. Par conséquent, nous avons envoyé neuf Navium Astriger pour naviguer au-delà du ciel, à la recherche des recettes divines de l'immortalité. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "Abominations de l'Abondance",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "c3cb2e5eb5390586c537d03d1de632b1aa59c49a3cc32f24d68672d2f97fb1e5",
+   "name": "Aérofleur immortelle",
+   "desc": "Nouvelle fleur ayant éclos à partir d'une ancienne construction divine. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Après d'innombrables tentatives, la flotte à la recherche du remède de l'immortalité était capable de contempler le visage de l'être divin. La divinité envoya ses bénédictions sous une forme matérielle, et l'Arbre d'ambroisie étendit ses feuilles.<br /><br />« De nouveaux bourgeons descendirent sur la lune, où des fleurs divines se mirent à pousser entre les nuages. Le temps de la floraison, le vieux bois retrouva sa jeunesse. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "Abominations de l'Abondance au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635671": {
+   "id": 635671,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1b0a1a8ab4a806daac48e2e5de6c69a9a1aad87f950c5a4c92c9513dd9d6b9",
+   "name": "Graine d'abondance",
+   "desc": "Graine de bénédiction semée par l'Aiôn de l'Abondance. Permet d'améliorer légèrement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abondance</span>.",
+   "lore": "Ceux qui la touchent voient lentement disparaître leurs blessures et leurs maux.<br />Ceux qui, frappés de désespoir, appellent de leurs prières les bienfaits de la vie seront toujours entendus.<br /><br />« Tu recevras ce que tu demandes. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635671",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Braises immortelles"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "Éther purifié",
+   "desc": "Matériau de renforcement de cône de lumière. Confère 6 <nobr>000</nobr> points d'EXP de cône de lumière.",
+   "lore": "Une bouteille d'éther raffiné par des procédés spéciaux.<br /><br />« Le Jardin se félicite de recréer une gloire passée, mais c'est une \"gloire passée\" qu'ils ont choisie. Tu comprends ? »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Salle oubliée"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "name": "Éther condensé",
+   "desc": "Matériau de renforcement de cône de lumière. Confère 2 <nobr>000</nobr> points d'EXP de cône de lumière.",
+   "lore": "Une bouteille d'éther raffiné par des procédés spéciaux.<br /><br />« À manier avec précaution, ne pas faire tomber, ne pas appliquer de pression. En cas de dommage ou de fuite, se référer au chapitre II du \"Manuel de prise en charge des désastres\" pour une solution d'urgence. »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Braises immortelles"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d4e3585911d6f71b87b47ced1a2f6e0b0f77dbdc8615650896e77bae87361afd",
+   "name": "Éther dilué",
+   "desc": "Matériau de renforcement de cône de lumière. Confère <nobr>500</nobr> points d'EXP de cône de lumière.",
+   "lore": "Substance imaginaire qui ne devrait pas exister dans le monde réel. Il s'agit du matériau de base pour fabriquer les cônes de lumière.<br />Les images des cônes de lumière sont plus nettes avec cette substance.<br /><br />« Je vois... Alors c'est ça la « mémorine » du Jardin de la mémoire. Pas étonnant que les protecteurs de la mémoire puissent embarquer pour des voyages galactiques avec des souvenirs. »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Récompense d'affectation"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5708b196a8af89740ced588d98dc414c791d209879957fb0bc8644cc2dc84adb",
+   "name": "Branche-lumière immortelle",
+   "desc": "Branche à feuilles caduques provenant d'une ancienne construction divine. Matériau avancé utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Après les Trois Souffrances, Xianzhou a été en proie à la dévastation. Les Homo celestinae se sont retrouvés au rang de démons, et les catastrophes se sont enchaînées sans discontinuer.<br /><br />« En vertu du décret de la Commission des dix seigneurs, quiconque sur le point d'être frappé par le mara sera saisi par les juges infernaux et envoyé à la Prison des enchaînés. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "Abominations de l'Abondance au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836257": {
+   "id": 836257,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e08699257c4a96a135b4467fd8eba3917d5734b2c943ac631d2a39ae3c4ccb37",
+   "name": "Fleur de l'éternité",
+   "desc": "Une fleur magnifique issue de la Pousse de la vie. Permet d'améliorer considérablement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abondance</span>.",
+   "lore": "Les étamines contiennent le pouvoir concentré de la Voie de l'Abondance, assurant la vitalité éternelle de la fleur. Ni le feu, ni la glace, ni aucune agression extérieure ne peuvent entraver la croissance de cette magnifique forme de vie.<br />Avec le temps, ses feuilles se nourriront de lumière d'étoile. Ses racines s'enfonceront dans la chair de chaque être de ce monde, toutes connectées, sans jamais périr. Ses fruits rempliront leur promesse d'immortalité.<br /><br />« Il existe des vaisseaux géants qui éclipsent les montagnes et dérivent dans le vide. L'arbre éternel dont les fruits sont synonymes d'immortalité y pousse. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836257",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920198": {
+   "id": 920198,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "ed9df14a2fe247f4667c3573aa6eb1f367c5435d4c699eadef89c51e4d42d084",
+   "name": "Pousse de la vie",
+   "desc": "Une jeune pousse provenant de la Graine d'abondance. Permet d'améliorer modérément les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abondance</span>.",
+   "lore": "Irradiant de chaleur, la vie et la croissance s'épanouissent autour de l'endroit où elle enterre ses racines. Les terres stériles se transforment en champs luxuriants, les plantes fanées rajeunissent et fleurissent, et les sources jaillissent du sol pour humidifier la terre.<br />S'approcher trop près provoque une contraction musculaire et osseuse, qui s'accompagne d'une démangeaison insupportable.<br /><br />« La vie est inépuisable là où l'âme abonde .»",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920198",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Braises immortelles"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 5000
+    },
+    {
+     "id": 549504,
+     "count": 8
+    }
+   ],
+   "attackBase": 21.6,
+   "attackAdd": 3.24,
+   "hpBase": 52.8,
+   "hpAdd": 7.92,
+   "defenseBase": 24,
+   "defenseAdd": 3.6
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 10000
+    },
+    {
+     "id": 635671,
+     "count": 4
+    },
+    {
+     "id": 549504,
+     "count": 12
+    }
+   ],
+   "attackBase": 47.52,
+   "attackAdd": 3.24,
+   "hpBase": 116.16,
+   "hpAdd": 7.92,
+   "defenseBase": 52.8,
+   "defenseAdd": 3.6
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 20000
+    },
+    {
+     "id": 920198,
+     "count": 4
+    },
+    {
+     "id": 633445,
+     "count": 8
+    }
+   ],
+   "attackBase": 82.08,
+   "attackAdd": 3.24,
+   "hpBase": 200.64,
+   "hpAdd": 7.92,
+   "defenseBase": 91.2,
+   "defenseAdd": 3.6
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 50000
+    },
+    {
+     "id": 920198,
+     "count": 8
+    },
+    {
+     "id": 633445,
+     "count": 12
+    }
+   ],
+   "attackBase": 116.64,
+   "attackAdd": 3.24,
+   "hpBase": 285.12,
+   "hpAdd": 7.92,
+   "defenseBase": 129.6,
+   "defenseAdd": 3.6
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 100000
+    },
+    {
+     "id": 836257,
+     "count": 5
+    },
+    {
+     "id": 717386,
+     "count": 6
+    }
+   ],
+   "attackBase": 151.2,
+   "attackAdd": 3.24,
+   "hpBase": 369.6,
+   "hpAdd": 7.92,
+   "defenseBase": 168,
+   "defenseAdd": 3.6
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 200000
+    },
+    {
+     "id": 836257,
+     "count": 10
+    },
+    {
+     "id": 717386,
+     "count": 8
+    }
+   ],
+   "attackBase": 185.76,
+   "attackAdd": 3.24,
+   "hpBase": 454.08,
+   "hpAdd": 7.92,
+   "defenseBase": 206.4,
+   "defenseAdd": 3.6
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 220.32,
+   "attackAdd": 3.24,
+   "hpBase": 538.56,
+   "hpAdd": 7.92,
+   "defenseBase": 244.8,
+   "defenseAdd": 3.6
+  }
+ ],
+ "skill": {
+  "id": 23017,
+  "name": "On respire profondément",
+  "descHash": "Augmente le taux de régénération d'énergie du porteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. Lorsqu'un allié utilise son ultime, le porteur restaure <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> des PV max de l'allié qui a le moins de PV en pourcentage. Quand le porteur prodigue des soins à l'allié, augmente l'ATQ de l'allié soigné de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>. Cet effet peut être cumulé jusqu'à <nobr>#4[i]</nobr> fois et dure <nobr>#5[i]</nobr> tours.",
+  "levelData": [
+   {
+    "params": [
+     0.12,
+     0.1,
+     0.024,
+     5,
+     2
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.14,
+     0.11,
+     0.027999999,
+     5,
+     2
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.16,
+     0.12,
+     0.032,
+     5,
+     2
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.18,
+     0.13,
+     0.036,
+     5,
+     2
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.2,
+     0.14,
+     0.04,
+     5,
+     2
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 60,
+   "2": 100,
+   "3": 170,
+   "4": 260,
+   "5": 370,
+   "6": 500,
+   "7": 640,
+   "8": 800,
+   "9": 970,
+   "10": 1160,
+   "11": 1360,
+   "12": 1580,
+   "13": 1820,
+   "14": 2060,
+   "15": 2320,
+   "16": 2600,
+   "17": 2880,
+   "18": 3180,
+   "19": 3490,
+   "20": 3620,
+   "21": 3760,
+   "22": 3910,
+   "23": 4050,
+   "24": 4200,
+   "25": 4360,
+   "26": 4510,
+   "27": 4670,
+   "28": 4830,
+   "29": 4990,
+   "30": 5160,
+   "31": 5330,
+   "32": 5500,
+   "33": 5670,
+   "34": 5850,
+   "35": 6030,
+   "36": 6210,
+   "37": 6390,
+   "38": 6580,
+   "39": 6760,
+   "40": 6950,
+   "41": 7630,
+   "42": 8060,
+   "43": 8510,
+   "44": 8970,
+   "45": 9440,
+   "46": 9910,
+   "47": 10390,
+   "48": 10890,
+   "49": 11390,
+   "50": 11900,
+   "51": 12420,
+   "52": 12940,
+   "53": 13480,
+   "54": 14020,
+   "55": 14580,
+   "56": 15140,
+   "57": 15710,
+   "58": 16290,
+   "59": 16880,
+   "60": 17470,
+   "61": 18290,
+   "62": 19270,
+   "63": 20260,
+   "64": 21260,
+   "65": 22290,
+   "66": 23320,
+   "67": 24370,
+   "68": 25440,
+   "69": 26520,
+   "70": 27620,
+   "71": 30810,
+   "72": 33710,
+   "73": 36660,
+   "74": 39650,
+   "75": 42680,
+   "76": 45750,
+   "77": 48870,
+   "78": 52030,
+   "79": 55230,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "23017"
+}

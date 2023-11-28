@@ -1,0 +1,2788 @@
+{
+ "spRequirement": 120,
+ "iconPath": "bfca71a4e030ff72e1ebcbfbb4bfaff1ba1a2ba5f1a8ca5846979a7feb074355",
+ "bgPath": "74d29c414c238aadc0a6726b91ac52f05b12cad1d03f3e76497f5dbf7a072255",
+ "figPath": "03202aa8ae3ca82a8a204d1384431900333b721175d3f1b3363a4476de67f9c9",
+ "fgPath": "dbff69729db723a480db55f9386c5106c6d83c55e3e5175ae931a8ee501d9e16",
+ "splashIconPath": "605920a2f76d6169efa5b0748727046b1134a292ab21c9bd0f7c15a987b8ea7b",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 5,
+  "iconPath": "4b4b5f13f6588e7fb1c030c28f9b9b67a7a8c4bab77c05e38d5c9f64eb0d99e7",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "信用點",
+   "desc": "星際和平公司與客戶結算時使用的貨幣，如今已成爲太空旅行的硬通貨。",
+   "lore": "「人們奔波、爭鬥、貿易，爲的不過是個終端裏顯示的數字。但真正珍貴之物，公司的數字是買不到的。」",
+   "purpose": "通用貨幣",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "任務獎勵",
+    "委託獎勵",
+    "餘燼兌換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "命運的足跡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "一次又一次的敗北成就了你的勝利，一步又一步的前進讓你抵達了命運的拐點。",
+   "purpose": "行跡材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」積分獎勵",
+    "無名勳禮",
+    "餘燼兌換",
+    "限時活動獎勵"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "d75aec8e75227549d536ef57980f65a2b081b9665d06cd1a02a5bafa6c688f63",
+   "name": "無窮假身的遺恨",
+   "desc": "行跡升級的高階素材。",
+   "lore": "無論奪取多少肉身，它都無法如願以償。就像那些尋求仙藥的人一樣，它渴望一具長存的軀殼，不必再畏怖「毀滅」。它知道，這是永難企及的迷夢。<br /><br />「我曾見過無數世界被負創神的烈焰吞噬，我曾是這些烈焰中的一朵。我隨祂的指尖舞蹈，卻深知若柴薪燃盡，火焰也將熄滅…」",
+   "purpose": "行跡材料",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "歷戰餘響【鱗淵境】"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "漫遊指南",
+   "desc": "角色的經驗材料，可以獲得<nobr>20000</nobr>點角色經驗。",
+   "lore": "跨越諸界必備的冒險叢書。按下閱讀鍵，充滿磁性的聲音將以你能聽懂的語言講述知名冒險家們在不同世界間的傳奇經歷，以及他們在各個星球上獲得的珍貴智慧。<br /><br />「漫遊指南全新書系《星際美食烹飪導覽》開售在即，敬請支持。」<br />「投稿請接入博識學會聯覺信標<nobr>23</nobr>θ聯絡員，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色經驗材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "「忘卻之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "冒險記錄",
+   "desc": "角色的經驗材料，可以獲得<nobr>5000</nobr>點角色經驗。",
+   "lore": "裝訂嚴整，一看就頗有教育意義的冒險札記。圖文並茂地描述了冒險行動的始末、有價值的信息和生存相關的技巧。<br /><br />「幹嘛不數據化放進光刻片裡？便攜多了。」<br />「面對恆星風暴和中子流噴發時，高科技比你想象的還要脆弱。何況，製作這本書的人一定希望人們用最簡單的方式閱讀它。」",
+   "purpose": "角色經驗材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "每日實訓",
+    "餘燼兌換"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "旅情見聞",
+   "desc": "角色的經驗材料，可以獲得<nobr>1000</nobr>點角色經驗。",
+   "lore": "記錄旅途見聞的日誌，字跡漫漶不清，內容隨心所欲，對你並沒有太大的幫助。<br /><br />「看完了就趕緊把這堆廢紙處理掉吧，丹恆？」",
+   "purpose": "角色經驗材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "委託獎勵"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "fcb7215a2a17b09cd16362b5e1b398eaaf2fde23a94057c5f961151885a620c5",
+   "name": "工造機杼",
+   "desc": "仙舟機巧的部件。強化所需的簡單材料。",
+   "lore": "仙舟機巧術的基礎。機巧零件最小的單位，拆開它就像在破壞生物的細胞結構。<br /><br />「博識學會以兩百萬信用點懸賞無損拆解仙舟偃偶的技術方案。」<br />「如果你認識螺絲咕姆，這兩百萬簡直白給……」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "入魔機巧掉落",
+    "「模擬宇宙」中敵方掉落",
+    "委託獎勵",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "1977002edbf48f44c49d08284ce2681f622e70c447d50de10a8b9491dfcb719c",
+   "name": "工造迴輪",
+   "desc": "仙舟機巧的部件。強化所需的普通材料。",
+   "lore": "仙舟機巧術的連接件。細密勾連的輪齒微如芥子，卻連綴成複雜的機體，令機械靈動如生命。<br /><br />「其形圓融，取法乎天。其動往復，取法乎道。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "突破至均衡等級2後，入魔機巧掉落",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bb7670872389d870154ac70d1b29dee2d6c123f558951c6f914f1d9a70c28382",
+   "name": "黯淡黑曜",
+   "desc": "一片自虛空中捕獲的黑質。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "任何手段都無法驗明它的本體。<br />輕輕觸碰，從碎片中傳來不明的囈語。<br /><br />「████ ██ █ █」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "餘燼兌換"
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "058379eb2e88612f2b1f78a6c3195c457e124c9b6de602d6dd2fe0b2d17245f3",
+   "name": "工造渾心",
+   "desc": "仙舟機巧的部件。強化所需的高級材料。",
+   "lore": "仙舟機巧術的中樞。渾儀猶如心竅般翻滾脈動，令機械如活物般思考。<br /><br />「大人勿驚。拆去其心，便能令他…唔，她？不，令它失卻靈智，還形金石。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "突破至均衡等級4後，入魔機巧掉落",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "name": "沉淪黑曜",
+   "desc": "一整塊自虛空中捕獲的黑質。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "意志薄弱之人只是向其棱面送去一瞥，便會在混沌中永世沉淪。<br /><br />「         」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "「萬能合成機」- 材料合成"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1a896480b5f6ee84644db112069845e85930f6dbc0f428a3f8a6de2b187702af",
+   "name": "虛空黑曜",
+   "desc": "一塊自虛空中捕獲的黑質。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "漆黑的棱面上甚至反射不出任何倒影。它不僅吸收着光，似乎還奪走了持有者的情緒起伏，只留下淡淡的空洞感。<br /><br />「……」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "「萬能合成機」- 材料合成",
+    "餘燼兌換"
+   ]
+  },
+  "983279": {
+   "id": 983279,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "55bcce254e138352f3c76b766dd86d2126f754645ec44a273bcfd98ba5f3d832",
+   "name": "過熱鋼刃",
+   "desc": "熾燃徘徊者折斷的刀刃，火屬性角色的晉升素材。",
+   "lore": "銀鬃鐵衛間偶爾會進行一場比鬥——在規定時間內帶回怪物殘軀的一部分。這些碎刃想必就是某場比試的戰利品。<br /><br />「我千真萬確親眼所見，傑帕德頭兒一拳轟碎了那傢伙滾燙的鋼刀，然後徒手握着它搠進了那個冰胖子的肚腹裏，給它暖了暖心。」",
+   "purpose": "角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/983279",
+   "comeFrom": [
+    "凝滯虛影【大礦區】",
+    "「萬能合成機」- 材料置換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 79.2,
+   "attackAdd": 3.96,
+   "hpBase": 120,
+   "hpAdd": 6,
+   "defenseBase": 60,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549503,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "attackBase": 110.88,
+   "attackAdd": 3.96,
+   "hpBase": 168,
+   "hpAdd": 6,
+   "defenseBase": 84,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549503,
+     "count": 8
+    }
+   ]
+  },
+  {
+   "attackBase": 142.56,
+   "attackAdd": 3.96,
+   "hpBase": 216,
+   "hpAdd": 6,
+   "defenseBase": 108,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633444,
+     "count": 5
+    },
+    {
+     "id": 983279,
+     "count": 2
+    }
+   ]
+  },
+  {
+   "attackBase": 174.24,
+   "attackAdd": 3.96,
+   "hpBase": 264,
+   "hpAdd": 6,
+   "defenseBase": 132,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633444,
+     "count": 8
+    },
+    {
+     "id": 983279,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 205.92,
+   "attackAdd": 3.96,
+   "hpBase": 312,
+   "hpAdd": 6,
+   "defenseBase": 156,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717385,
+     "count": 5
+    },
+    {
+     "id": 983279,
+     "count": 15
+    }
+   ]
+  },
+  {
+   "attackBase": 237.6,
+   "attackAdd": 3.96,
+   "hpBase": 360,
+   "hpAdd": 6,
+   "defenseBase": 180,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717385,
+     "count": 7
+    },
+    {
+     "id": 983279,
+     "count": 28
+    }
+   ]
+  },
+  {
+   "attackBase": 269.28,
+   "attackAdd": 3.96,
+   "hpBase": 408,
+   "hpAdd": 6,
+   "defenseBase": 204,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "f41bbd642ad5580dbffb0c92dca92abbc6307baa46798f546ae1b86779d9f379",
+   "artPath": "c7830f37a3a6ae7a0c728bfade0c5e6edc6fd69f9709ed1e64b2c411cf3d3d76",
+   "name": "倒立吃麵條",
+   "descHash": "施放戰技時，有<nobr>#1[i]%</nobr>的基礎概率使受到攻擊的敵方目標效果抵抗降低<nobr>#2[i]%</nobr>，持續<nobr>#3[i]</nobr>回合。",
+   "params": [
+    1,
+    0.1,
+    2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "163ea72eaeed324e05bcc8658302598d2e2a61ba29b6f68e3d467520a9be972b",
+   "artPath": "236fcc770096e7a514826a58fa58ed3b958e8faea5b96b6847375ee0b26eba56",
+   "name": "刷牙吹口哨",
+   "descHash": "當敵方目標處於灼燒狀態時，桂乃芬的普攻與戰技對其施加的灼燒狀態的傷害倍率提升<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.4
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "2ba11bc0a60bc3baada5f44a5ab1ec2ac1d75f27319c07d07f06b615bd42fdc3",
+   "artPath": "cd0d2cf9cb746d314318c87b21d1adec9682a188eef3d9488ec439cf34db0d6f",
+   "name": "胸口碎大石",
+   "descHash": "戰技等級+2，最多不超過<nobr>15</nobr>級，普攻等級+1，最多不超過<nobr>10</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "91b440651bd67c2778f6aadf0175549ca09cd5716b4043647bd66e1bf318133e",
+   "artPath": "177418017893a590cc8282c8691f46bda1a573aa9f601a92b9683eebfb2ce9a7",
+   "name": "金槍鎖咽喉",
+   "descHash": "桂乃芬施加的灼燒狀態每觸發一次傷害，使自身恢復<nobr>#1[i]</nobr>點能量。",
+   "params": [
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "9d86534e9f6e06eeb332f01cfe0615fc522e3f77f3f4024b439efccec9265236",
+   "artPath": "76ddc4a55395d4c29e5f57d3e413c2586b61c4219061f3845ac1c2aeff8ffc86",
+   "name": "吞劍通脊背",
+   "descHash": "終結技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "0f4a5547608908692449ba0ba024485ed9e64f1eeb075a93c61354cb4b13ca90",
+   "artPath": "2c061f7d6fe3c9f5d9d36626800f97b9ce3bcd01f851eb2cc921d34d062cd436",
+   "name": "徒手接子彈",
+   "descHash": "使【吞火】的可疊加層數增加<nobr>#1[i]</nobr>層。",
+   "params": [
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   69091
+  ],
+  [
+   985150
+  ],
+  [
+   868505
+  ],
+  [
+   784564
+  ],
+  [
+   500037
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於桂乃芬<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#F84F36;\">火</span>屬性傷害。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 69091,
+   "name": "劈頭滿堂彩",
+   "iconPath": "8fc43c9f9296e551faa01b1957582f7ce2abdc4c1b0f8a545db56f28f2a25869",
+   "typeDescHash": "普攻",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "擴散",
+   "descHash": "對指定敵方單體造成等同於桂乃芬<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#F84F36;\">火</span>屬性傷害，並對相鄰目標造成等同於桂乃芬<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#F84F36;\">火</span>屬性傷害，有<nobr>#3[i]%</nobr>的<u>基礎概率</u>使目標與相鄰目標陷入灼燒狀態。灼燒狀態下，敵方目標每回合開始時受到等同於桂乃芬<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>攻擊力的<span style=\"color:#F84F36;\">火</span>屬性持續傷害，持續<nobr>#5[i]</nobr>回合。",
+   "ultimateCost": 0,
+   "break": "60 + 30/adjacent",
+   "energy": "30",
+   "id": 985150,
+   "name": "迎面開門紅",
+   "iconPath": "2ba11bc0a60bc3baada5f44a5ab1ec2ac1d75f27319c07d07f06b615bd42fdc3",
+   "typeDescHash": "戰技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.6,
+      0.2,
+      1,
+      0.83904,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.66,
+      0.22,
+      1,
+      0.92298,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.72,
+      0.24,
+      1,
+      1.00692,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.78,
+      0.26,
+      1,
+      1.09086,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.84,
+      0.28,
+      1,
+      1.1748,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9,
+      0.3,
+      1,
+      1.30071,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920196,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975,
+      0.325,
+      1,
+      1.46859,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      0.35,
+      1,
+      1.67844,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836255,
+       "count": 4
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125,
+      0.375,
+      1,
+      1.93026,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      0.4,
+      1,
+      2.18208,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836255,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.26,
+      0.42,
+      1,
+      2.291202,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.32,
+      0.44,
+      1,
+      2.400324,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.38,
+      0.46,
+      1,
+      2.509446,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.44,
+      0.48,
+      1,
+      2.618568,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.5,
+      0.5,
+      1,
+      2.72769,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "羣攻",
+   "descHash": "對敵方全體造成等同於桂乃芬<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>攻擊力的<span style=\"color:#F84F36;\">火</span>屬性傷害，若目標處於灼燒狀態，使其當前承受的灼燒狀態立即產生相當於原傷害<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>的傷害。",
+   "ultimateCost": 120,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 868505,
+   "name": "給您來段看家戲",
+   "iconPath": "2821670ea81411578acf03bc11762a45b4a40d87926f4e6432b242114fbf00a0",
+   "typeDescHash": "終結技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.72,
+      0.72
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.768,
+      0.74
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.816,
+      0.76
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.864,
+      0.78
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.912,
+      0.8
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.96,
+      0.82
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920196,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1.02,
+      0.845
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.08,
+      0.87
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836255,
+       "count": 4
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.14,
+      0.895
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      0.92
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836255,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.248,
+      0.94
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.296,
+      0.96
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.344,
+      0.98
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.392,
+      1
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.44,
+      1.02
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "妨害",
+   "descHash": "桂乃芬在場時，敵方受到的灼燒狀態觸發傷害後，有<nobr>#1[i]%</nobr>的<u>基礎概率</u>陷入【吞<span style=\"color:#F84F36;\">火</span>】狀態，【吞<span style=\"color:#F84F36;\">火</span>】狀態下敵方目標受到的傷害提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span>，持續<nobr>#5[i]</nobr>回合，最多疊加<nobr>#6[i]</nobr>層。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 784564,
+   "name": "古來君子養藝人",
+   "iconPath": "894fe422124fea99f111a43484c30d02b72b0fe80359afdab4c8cc486b757c71",
+   "typeDescHash": "天賦",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.04,
+      3,
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.043,
+      3,
+      3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.046,
+      3,
+      3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.049,
+      3,
+      3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.052,
+      3,
+      3
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.055,
+      3,
+      3
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920196,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.05875,
+      3,
+      3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.0625,
+      3,
+      3
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836255,
+       "count": 4
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.06625,
+      3,
+      3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.07,
+      3,
+      3
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836255,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.073,
+      3,
+      3
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.076,
+      3,
+      3
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.078999996,
+      3,
+      3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.082,
+      3,
+      3
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.085,
+      3,
+      3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "攻擊敵人，進入戰鬥後削弱敵方目標對應屬性韌性。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 583978,
+   "name": "攻擊",
+   "iconPath": "8fc43c9f9296e551faa01b1957582f7ce2abdc4c1b0f8a545db56f28f2a25869",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "立即攻擊敵人，進入戰鬥後造成<nobr>#2[i]</nobr>次傷害，每次傷害對敵方隨機單體造成等同於桂乃芬<nobr>#1[i]%</nobr>攻擊力的<span style=\"color:#F84F36;\">火</span>屬性傷害並有<nobr>#3[i]%</nobr>的<u>基礎概率</u>使目標陷入【吞<span style=\"color:#F84F36;\">火</span>】狀態。",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "0",
+   "id": 500037,
+   "name": "耍耍把式賣賣藝",
+   "iconPath": "e02c7599d344d26f03a8bcb2700b1758f30279081ba3d9efdac89ad15a6df9af",
+   "typeDescHash": "祕技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5,
+      4,
+      1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1210101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1210202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1210203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1210204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 709494,
+          "name": "效果命中強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+          "statusList": [
+           {
+            "key": "效果命中",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 920196,
+            "count": 2
+           },
+           {
+            "id": 633444,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 709495,
+        "name": "傷害強化•火",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#F84F36;\">火</span>屬性傷害提高",
+          "value": 0.032
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920196,
+          "count": 2
+         },
+         {
+          "id": 633444,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 709496,
+      "name": "擊破強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+      "statusList": [
+       {
+        "key": "擊破特攻",
+        "value": 0.053
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635669,
+        "count": 2
+       },
+       {
+        "id": 549503,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "普攻有<nobr>#1[i]%</nobr>的基礎概率使敵方目標陷入與戰技相同的灼燒狀態。",
+    "ultimateCost": 0,
+    "id": 709336,
+    "name": "緣竿",
+    "iconPath": "579d1750093b000ad0c80cacbdcfa532f67faf53a838f016e72f4cada8f586bc",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.8
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635669,
+        "count": 2
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1210102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1210205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1210206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1210207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 709491,
+          "name": "傷害強化•火",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4",
+          "statusList": [
+           {
+            "key": "<span style=\"color:#F84F36;\">火</span>屬性傷害提高",
+            "value": 0.048
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 836255,
+            "count": 2
+           },
+           {
+            "id": 717385,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 709492,
+        "name": "擊破強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+        "statusList": [
+         {
+          "key": "擊破特攻",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836255,
+          "count": 2
+         },
+         {
+          "id": 717385,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 709493,
+      "name": "傷害強化•火",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#F84F36;\">火</span>屬性傷害提高",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920196,
+        "count": 4
+       },
+       {
+        "id": 633444,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "戰鬥開始時，桂乃芬的行動提前<nobr>#1[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 709337,
+    "name": "投狹",
+    "iconPath": "4e73be586856eb5c82fcb71bfb5725e769c9376ec2fb6abab89c49704cb7b2c3",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.25
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920196,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1210103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1210208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 709506,
+      "name": "效果命中強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+      "statusList": [
+       {
+        "key": "效果命中",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 717385,
+        "count": 6
+       }
+      ]
+     }
+    },
+    {
+     "id": 1210209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 709505,
+      "name": "擊破強化",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+      "statusList": [
+       {
+        "key": "擊破特攻",
+        "value": 0.107
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 717385,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "對陷入灼燒狀態的敵方目標造成的傷害提高<nobr>#1[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 709338,
+    "name": "逾鋒",
+    "iconPath": "f59e8e9be419da5cce1f8eb030d8db9a794e4bd5132c1ab5c8a958937247b6eb",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1210201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1210210,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 592853,
+      "name": "傷害強化•火",
+      "levelReq": 80,
+      "promotionReq": 0,
+      "iconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#F84F36;\">火</span>屬性傷害提高",
+        "value": 0.064
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 717385,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 709497,
+    "name": "傷害強化•火",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4",
+    "statusList": [
+     {
+      "key": "<span style=\"color:#F84F36;\">火</span>屬性傷害提高",
+      "value": 0.032
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549503,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "軀幹",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "攻擊力",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   },
+   {
+    "relicTypeHash": "腳部",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "速度",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "位面球",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "火屬性傷害提高",
+    "propertyIconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4"
+   },
+   {
+    "relicTypeHash": "連結繩",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "攻擊力",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初次見面",
+   "text": "我叫桂乃芬！桂爲嘉木，乃者「是」也，芬即芳香，是不是好聽又好記？我平時在長樂天這邊撂地雜耍，有空記得來看表演哦～",
+   "unlockRequirement": "",
+   "cnUrl": "25a3d0ae879cff28c04aac1db4b17506df6346e70bc0d314a26b89b7d1dcfd50",
+   "jpUrl": "1a59781c8b10d82d50336407570d4736d2c0d474c6987f1f1450bac90884d732",
+   "enUrl": "f6818f10d84e79cfabe7090a16af9374a23597d555261d0eaa7aef5dccd8d981",
+   "krUrl": "0c1e31ccf8c5b03cd52a1578dfd52ab5e4f85514ee5f5303e5644c36e72d35fb"
+  },
+  {
+   "id": 2,
+   "title": "問候",
+   "text": "哎呀呀，怎麼感覺好久沒見到你了？什麼？昨天才見過我？嗐——一日不見，如隔三秋！",
+   "unlockRequirement": "",
+   "cnUrl": "703efb6bbc8b31c9911a39edb6d3fc4c5c270ad1f00e06405b1ed78985b13a0c",
+   "jpUrl": "d58881438e9b208c67d729928020ec02e4d16052b042f269517d34a62b4ed8d6",
+   "enUrl": "7ec26f7db8748779f5320b2f3c4110922c52aa4f7418e81f4525edf27a5faad9",
+   "krUrl": "77e91b1dd251099f2ee806c58b917c75b88b7d39c0b50a9527364ef820a5d9d4"
+  },
+  {
+   "id": 3,
+   "title": "道別",
+   "text": "下回見！我給你留着第一排的位置。雖然咱們撂地擺攤也談不上什麼「第一排」吧……",
+   "unlockRequirement": "",
+   "cnUrl": "7f05a40d7eee2c3517436c3c8dc394aaf16d0201e50dc54a625dea343c6fda4e",
+   "jpUrl": "1caa21c8e5b81ae2634fb4a3c345dc0a257347d8cc0efb4be69e0fc1a4242077",
+   "enUrl": "7560b470feacecd73b19168666ad319dc7ef9a73e412a088800b95187e3df914",
+   "krUrl": "3f9a6d09223c4d6d42c80985b37fe5cb9d934f220b901207f5ec01231c6f341e"
+  },
+  {
+   "id": 4,
+   "title": "關於自己•名字",
+   "text": "我本名叫做「格妮薇兒」，桂乃芬是裳裳給我起的仙舟名字。你問裳裳是誰？就是雲騎軍的素裳呀，我閨蜜，你認識不？",
+   "unlockRequirement": "",
+   "cnUrl": "17355b8321c3b6a4c32a21c05b050d47026e6df2c97080dd89849eec62887add",
+   "jpUrl": "e7e3466e41dcf99be644826cdf3c473dbe72e8245bd3dc474f21723031330d7e",
+   "enUrl": "548bb96e2a4da3090eae76cbf943ff1ffdde3dd4fa62bf4ce05007ae4bdf8904",
+   "krUrl": "db8ff74059f902f41ae64b84b7acf7bd70c1efa1556b2334222ee5bd3b8a5322"
+  },
+  {
+   "id": 5,
+   "title": "關於自己•家人",
+   "text": "我家十幾口兄弟姐妹呢！有個哥哥叫郎世樂，也在羅浮上討生活，不過他好像還是更喜歡別人喊他「蘭斯洛特」。",
+   "unlockRequirement": "",
+   "cnUrl": "3480a772d9783a0254a52583ab6a86234a2993ab0e4eb06c9e1b821bd6d9104f",
+   "jpUrl": "2af2f19aa2113105a911e02bee56fb3215a5e89eef80909f07def23c00524c95",
+   "enUrl": "55f5fceec917efea4253b91ba0464de76c9f61fc98888ea11f064de2acc2494d",
+   "krUrl": "c3a1554d950580b2c3dbdd151ab5225c917fb036fa07b8c3156f04cc88e48940"
+  },
+  {
+   "id": 6,
+   "title": "閒談•雜耍",
+   "text": "我這身本事都是跟着街上的兄弟們學的。原本是打算混口飯喫，誰曾想最近開始混得風生水起了，你說氣人不氣人？嘿嘿。",
+   "unlockRequirement": "",
+   "cnUrl": "f0aa78ff06cf8ad46c2b1028732b261b6ce281e3cb19f59c91fd87544b9b1db8",
+   "jpUrl": "e7de6872db861fb7e69fcdfd71944b19822671dabeb48286faec2b8f7b1bd81c",
+   "enUrl": "ec4c485d739b9be45a6610ea92f458da1075d113bc5ef1dcba7cf175d24851eb",
+   "krUrl": "d6d3eb245e6999e2a65dba6e1843386caf87d132e3a52bf86d15f173b2a66bab"
+  },
+  {
+   "id": 7,
+   "title": "閒談•數來寶",
+   "text": "小妹初到貴寶地，耍耍把式賣賣藝。仨瓜倆棗不嫌少，千金一擲顯情義。閒言碎語不要講，給您來段看家戲！",
+   "unlockRequirement": "",
+   "cnUrl": "9d46b4c79d4ef11ae44346348087acfe0bd0658a425446a76fdcceff2ff7393b",
+   "jpUrl": "b5e94eab699d9fa0bc550de36b0e409fcb6fe57ff7253bbdd0bb48477dc4f128",
+   "enUrl": "f00ddfc7f53ede0ca20500a5c87bf88e90a89a5909e1936e43eab42d3a34ddf9",
+   "krUrl": "448b0b63a534caaa60df26b17e0bf05bcb24f25194d71796aeac6d0d64d9bcf8"
+  },
+  {
+   "id": 8,
+   "title": "愛好",
+   "text": "你不覺得仙舟人的詩詞歌賦都超級美好嗎？之前我找裳裳教我寫詩，她三個月憋出了四個字…我想我大概是學不會了。",
+   "unlockRequirement": "",
+   "cnUrl": "a8a234f8368e87fa33d9f27b393703c060f1c4a1d1001872c78e5351ef4f495d",
+   "jpUrl": "804228fc61fdfbaa98f6772864314c4ba12b6055c0bc6a782b1c72854cb56991",
+   "enUrl": "c4119cd4ae0ed596b9d1e79f3020ab4fba53107e76be9e26b114395cb84f273a",
+   "krUrl": "f126bdf7e4ee866ab6f0aed43c28f317e7b3b855c8aacd3d543056b7886b64bb"
+  },
+  {
+   "id": 9,
+   "title": "煩惱•一",
+   "text": "羅浮上有很多好喫的，可是表演雜耍又要保持身材輕盈…真是自古忠孝難兩全啊！啊？這俗語不是這麼用的麼？",
+   "unlockRequirement": "",
+   "cnUrl": "814d0829005a6cff4b4bf529206088fa1740eede93385137d6a0b3f4fb84c28f",
+   "jpUrl": "9e9ea46105bb4b7f880fa8aa3c697f84155c4ff7f47e3d358d1e9e0f35499cab",
+   "enUrl": "3a809ea0af99eb0e33a485bd79646b143b26e743efb7b179190749aa8fdd617c",
+   "krUrl": "130f59069fe8920016adb6fb9159bd9c3882e9286fb925a7aa9793bfe6bafb30"
+  },
+  {
+   "id": 10,
+   "title": "煩惱•二",
+   "text": "裳裳一直喊我「小桂子」，這本來沒什麼…但我最近發現，連街上的兄弟們也開始喊我「小桂子」，甚至觀衆都開始喊我「小桂子」…以後不會沒人記得我叫桂乃芬了吧！",
+   "unlockRequirement": "",
+   "cnUrl": "e665304cf2163e2eff9ceb5c8f0ba64d15daf813988641aa02fb2219db133e44",
+   "jpUrl": "12ffdf4a7583c904e3c0bd67d83d9c983cb6697b29d1f2e290e18b809721b46a",
+   "enUrl": "8099cfea1e4b057f3f5ceeb2566c5c9c7fef79aebf4d33c991e49ec7581792e4",
+   "krUrl": "a6f1056e55f7f7d0440e4a1f53ab9f387db954e989b4f5e6904729c66768f3ef"
+  },
+  {
+   "id": 11,
+   "title": "分享",
+   "text": "在仙舟的尺度之下，咱們短生種可真像是白駒過隙一樣——不過也正因如此，咱們才更應該把握當下呀！",
+   "unlockRequirement": "",
+   "cnUrl": "39f7c825c4f3583693763c18699dc26e4a127847262222a2a0782393ec0f4e7b",
+   "jpUrl": "606555b8d4f6e66a64569cada5f9a4e9332676452745176eef0c81cb6c9d550b",
+   "enUrl": "c75ee19832b50f8d0e007b3aabf88a7ef9358c69434f168cd524e259beb151b5",
+   "krUrl": "7c127630a4595779ce076c6e51da1ec12700ec4a5bacf90cbe1ac88fe582a1a4"
+  },
+  {
+   "id": 12,
+   "title": "見聞",
+   "text": "長樂天有兩個說相聲的，阿往和阿來。這兩個人還蠻熱心腸的，幫我潤色了好多文案，比如開演前的數來寶之類的。",
+   "unlockRequirement": "",
+   "cnUrl": "a10d72f2b9754ee3745cd642d7a5c8574600ed3dda08c7eb6ffd3704d91ffb09",
+   "jpUrl": "3a3f7f746bf075223322502e14a0270df67cfd1256852d5e491545a37f78ebd5",
+   "enUrl": "ef383fb1aa62c30cace7f2d96ee7cf7e536e560bf7f948517ab06fb5df739cbd",
+   "krUrl": "c9f3123a4d7bdd4006c30f8b797edc6ad34431edb7a038c40046cb1683c9d0ce"
+  },
+  {
+   "id": 13,
+   "title": "關於素裳",
+   "text": "裳裳是我最好的朋友。在羅浮，除了那些街上的兄弟，就屬她和我認識得最久。我之前還想拉着她結拜來着，可惜她不樂意。",
+   "unlockRequirement": "",
+   "cnUrl": "051a5afa338f8727ece90a61342bab4d60375ac1fc8fa8a20a53c10e36c0c80d",
+   "jpUrl": "e3b47e841be340a1a8ecda1d7664cfebc34280c70148a5edb72e1ead56b15bb0",
+   "enUrl": "277d11e59646c1f4f90802b2d79e6e4606410028ff7d091513779281000e1ed6",
+   "krUrl": "13e571771090d2da08c577a5dc1f4f473e477ca571bbf722dc7455c6d155cf4b"
+  },
+  {
+   "id": 14,
+   "title": "關於景元",
+   "text": "我聽說將軍大人對這些街頭曲藝頗有興趣？真希望有機會能去神策府裏演一場，那我可就聲名大噪了。",
+   "unlockRequirement": "",
+   "cnUrl": "e84ea66783760649c0af524e4fc0fa698ecf6860d6ce1a75a91e9377550a4e95",
+   "jpUrl": "a33fb8e9dcd3999fea5755d0c4870edb076fe2dd65577b6e555c141e79fe373e",
+   "enUrl": "81561de2c40768d28cf9a74982f86cd9d3d04b49f72d687fc5b9cd8edcd5f36a",
+   "krUrl": "42a5bd5a9ce130aa8da3f9f1d187561105204b0dbb3e4d6f8e3666027f48d721"
+  },
+  {
+   "id": 15,
+   "title": "關於彥卿",
+   "text": "雖然沒和將軍大人聊過天，我倒是和他那個侍衛打過交道。當時他問我是不是「用劍之人」，我呀，當場就給他表演了一個吞劍！",
+   "unlockRequirement": "",
+   "cnUrl": "11f890a8aa7a0a5f4592d916f5cfa3f99540e13252599aa40e7f9cd8ffd31c5f",
+   "jpUrl": "a3a542d786493ff4ff4e3988d10a84dc22bfac8c2add16f63bb8f035e7db8dc4",
+   "enUrl": "475f3db98853a5beb4585924734dce118d070606eeaeb37537910a69ee1bba39",
+   "krUrl": "7509b690641c0c32e40d38a619c965ff6bfa4cce1277662a15f1ea92fa96426a"
+  },
+  {
+   "id": 16,
+   "title": "關於青雀",
+   "text": "青雀經常在長樂天打牌，有時候打累了就來看我雜耍。我現在能從她的臉色裏看出她當天的勝負——桃紅就是贏了，鐵青就是輸了，煞白就是領導來抓她了。",
+   "unlockRequirement": "",
+   "cnUrl": "bf6886f60426e1857ff3e0771089e6245fffd5ad85d4c21a816a660eac29a875",
+   "jpUrl": "d74e1755af1296d6e710e03e1778df4abe0898c3ceccd2deb68b085d1d440c37",
+   "enUrl": "c98fec56b1651a4739d0eb7b1055c5a23ec16dca056b3727f3982998f67f2183",
+   "krUrl": "3a9d274ceb8a91fda19de5e12f2cdadf68a38d08b2b344acd38b08e7de59a3a2"
+  },
+  {
+   "id": 17,
+   "title": "關於藿藿",
+   "text": "藿藿笑起來多可愛呀，我的表演可不會讓人害怕，就是讓人快樂的表演，真想看她多笑笑~",
+   "unlockRequirement": "完成開拓續聞「狐夢」後解鎖",
+   "cnUrl": "372ddc7a299b5f4e77e337b356ef8cbe724f2028e24cd51e2adcc7d482572c5f",
+   "jpUrl": "cffee7450589798c1639dee5d11713d5fabe73e625277a1df883544b93abc23e",
+   "enUrl": "83a32c3ecd94858da4c1877be379c82f92df28d63914a5ed6d43670650fc3fe7",
+   "krUrl": "4c8cce807e478645b51d75f3d9ac0bc3ba8ee7c76fffe470c6ac52fc44cd1bfc"
+  },
+  {
+   "id": 18,
+   "title": "星魂激活",
+   "text": "生活呀，就是忙忙碌碌；人生呢，還要慢慢體會~",
+   "unlockRequirement": "",
+   "cnUrl": "3782d4eb46c11cf31ec24f765023745e23086548af90239674564e4aed038ec2",
+   "jpUrl": "350208e8d9c8d8a362ec23705f77f4c5ad73013b015e4d851fd35676252517ba",
+   "enUrl": "6dc4f40f73c1cbc4396740e629560867d73d36cd8cb2574bc4b0355b009cc995",
+   "krUrl": "4b3c805c324b43b902ed97c7a98348953ce56659b2d19203ad07d2cea49d18a5"
+  },
+  {
+   "id": 19,
+   "title": "角色晉階",
+   "text": "拇指點點，好運連連~",
+   "unlockRequirement": "",
+   "cnUrl": "2487e047e02091f2894bb2950facf509aed5476fc8f8858b7deb24c6f6914037",
+   "jpUrl": "7c71b87461ab86f493b56040cba14f72d30f7e475c70c8a113b85608870a4bfc",
+   "enUrl": "9532d379fa2f84dea34ed4d3f1724a049958235bc33794817f2b1c0f39505107",
+   "krUrl": "4e8d72fa962e4ac6c8c54b22da72e8ffd86957ef81214f8b1f476aa11a4fe96b"
+  },
+  {
+   "id": 20,
+   "title": "角色滿級",
+   "text": "新人新氣象——說的就是我吧！",
+   "unlockRequirement": "",
+   "cnUrl": "e3e801e6ad64c8a2d5bfdc33b3fcde33ec8b9dbadd7d2f74ddfe1eb51a389099",
+   "jpUrl": "8fcb3b18fe1dfeae025e780aff06df1573f996cf1602e5d3a69e4d7576d29645",
+   "enUrl": "bb61577c6672716b5646eeb0b945bba1202f86ff749a59536ab3acec69434a95",
+   "krUrl": "61b08a599da06ae075088a4b26ab6787b1fb6985a3c2a1c8b0254f00b6805219"
+  },
+  {
+   "id": 21,
+   "title": "行跡激活",
+   "text": "技多不壓身，功到自然成~",
+   "unlockRequirement": "",
+   "cnUrl": "c711755e7bb75c92ae77e36ff4e79865378b5a447790f17a4446503648e77b94",
+   "jpUrl": "46c4c17c4898cd26bce40da8a91689a33aa1d0c27dd7577ae5100c39c3641f06",
+   "enUrl": "fa729fddfad78016622feb707c3fa2366f9dd001941ec02ab9da4e7997c956d0",
+   "krUrl": "a142ade29796349750bf8ca8790313cfb65fb5d394b2e8293acdbdafe65b4be2"
+  },
+  {
+   "id": 22,
+   "title": "隊伍編成•開拓者",
+   "text": "嘿呀，開拓者，看我最近的直播了嗎，老精彩了！",
+   "unlockRequirement": "",
+   "cnUrl": "0f1dca3437e58a6cca7b393032d9203f7e5695271387ca0ed8f43257b515a76f",
+   "jpUrl": "3f40fddfb6924a2a3fe5e36a5702bfebbbfc1ed1ef384bddd7a0e82e780da62b",
+   "enUrl": "b8c3574064fc834ce2f2611c6f4f844e6c14d0428152a9962e1531abb21ed094",
+   "krUrl": "a0360d572d5a088df0ae4f2a6ce5a661293c9420cc39fadf7883f12b1f18987d"
+  },
+  {
+   "id": 23,
+   "title": "隊伍編成•素裳",
+   "text": "裳裳！這場就等你來和我搭夥登臺，觀衆老爺們可喜歡啦~",
+   "unlockRequirement": "",
+   "cnUrl": "37408a1cffe102954fa16bd744400335b070bfae4d24e44e0a4b0f62585ade57",
+   "jpUrl": "9edd8f926835ed73627b2048efb5f39f0449df2723e8958a826c75b5dfb7d874",
+   "enUrl": "807f63f521dc4d350cba04936db7cc60a96f4882441841e64a679519718f1eea",
+   "krUrl": "87ac344ad8a245dd2403aa95a347e4bf64fb615831bfc7f95efea99edbf0e3e1"
+  },
+  {
+   "id": 24,
+   "title": "隊伍編成•彥卿",
+   "text": "哎小侍衛，要看吞劍不？我這兩天又琢磨出花活了！",
+   "unlockRequirement": "",
+   "cnUrl": "28c29c0ae351971a2dddd34e88d9322d71ad399e9414b74835bb876b44a4ff22",
+   "jpUrl": "876b7916e63d3de98578502933e562ce8bc95aff62a405c019daae5aa483ba64",
+   "enUrl": "db083eab313a43292fe54a85c4a52e44498ca92ea4675171187824464b8fe8af",
+   "krUrl": "0b01cc22dc647f96c4b75cddd791568ef75730a2b11d6ff98cd78983265305ba"
+  },
+  {
+   "id": 25,
+   "title": "隊伍編成•青雀",
+   "text": "呦，青雀你今兒看着可真喜慶，贏牌了這是？",
+   "unlockRequirement": "",
+   "cnUrl": "9e6b9425078904b43b35bb36aadf1df883725adf21fa359670997d2f579147f2",
+   "jpUrl": "727c633497c519253977ba721f51a3e96aaefd01dbaa3538ba25efaa20609930",
+   "enUrl": "4e0d34621bd14d1748fc87d3b69d31f1df96980a90634d51a38973a92ad7363b",
+   "krUrl": "6735a8c5a6cf06613b3d1faee63bfae6220f80e4eb1761e00418082c0a4088ef"
+  },
+  {
+   "id": 26,
+   "title": "隊伍編成•藿藿",
+   "text": "藿藿你也湊近點看看唄，這火又燒不到你~",
+   "unlockRequirement": "",
+   "cnUrl": "c6bd4c6c1894a1a7b34b43b6ffa1e338db559a1bf781486acdd636620eaeb686",
+   "jpUrl": "ed3c963f95b6fb10b20f4d414d46c27d116fa50bd40a7b3aa8f28d988eda1134",
+   "enUrl": "b381125391e785b4625b3e8dce0db67ab8d1fa4baee7ae465be1d8670a4248bc",
+   "krUrl": "d52cd6c51b32bf832acd8eb4a83e1ecf976dc15fb23fc447736c1055c27ad999"
+  },
+  {
+   "id": 51,
+   "title": "戰鬥開始•弱點擊破",
+   "text": "哎呦，您可別放水。",
+   "unlockRequirement": "",
+   "cnUrl": "81755c04e103b1832bc2fd57e497ae0e36e396d46d3912dd23327e3f2cfda5ad",
+   "jpUrl": "dfd5516d533296cf5eed0635c44b0f9728adac25b414f9a6deb57bcc8b68d5ca",
+   "enUrl": "aafc3e33d6bfbd48ca9bad7429cb7ee700ac1b9d2e98c9338c0fc54c0ab9e5f6",
+   "krUrl": "7226f48fb6eee775accf1bc1453249fabed74eb510153a968674af407d6378f7"
+  },
+  {
+   "id": 52,
+   "title": "戰鬥開始•危險預警",
+   "text": "慌什麼，來的都是客！",
+   "unlockRequirement": "",
+   "cnUrl": "1e4c57960a6fded19df52880cc981330c6d19d0323a5ebaf526463583fedfdce",
+   "jpUrl": "103896e4fc49b3288204e91d551daf76fdcd96e1bf197825c794cbffe6bcb512",
+   "enUrl": "1b66accfba8125aee272dcfdc0d4dc5a5f0f1d2c6bed9bbcdb008b32580d073c",
+   "krUrl": "e3d8d192a215772cda04c1fbd695582b1677116b3834d846a6351b07665216e0"
+  },
+  {
+   "id": 53,
+   "title": "回合開始•一",
+   "text": "有錢的捧個錢場。",
+   "unlockRequirement": "",
+   "cnUrl": "2aac72bd11c2d0877a69fe45c95e35697dd5f2ecae03f5e7a184902fc2993f12",
+   "jpUrl": "66648838cf3f97e9991cfc77b45910247958dcab3eab53be9958ecb194e8d0d3",
+   "enUrl": "bbfd22a6fb43fedb9d43185d7ba6a8abfb97a6b31dd499f574c8388e888dc3ce",
+   "krUrl": "bef24aa5a5f0d729ff93c03187a3b68d48512a0b80ce521b8050e6f56321852d"
+  },
+  {
+   "id": 54,
+   "title": "回合開始•二",
+   "text": "沒錢的下次一定！",
+   "unlockRequirement": "",
+   "cnUrl": "7f1b5c497e97b505a7d5dae661ada09f18e7dc3c34babe6ffc9e9edfa70e5f6a",
+   "jpUrl": "3b2a6d7ba5cb890441d3308c30f5bfac022c6eb9f410175e66ff0595c24d309d",
+   "enUrl": "e18b6166c4a5b09fd618874fc16b7d04559d39f434765eddf3b92323ceccd978",
+   "krUrl": "cab5468ceb5d8755792a764a43ab801b4dfd26fa7f2448cfe72a0103c1f42d11"
+  },
+  {
+   "id": 55,
+   "title": "回合待機",
+   "text": "別閒着呀，閒着誰給咱賞錢啊！",
+   "unlockRequirement": "",
+   "cnUrl": "30076acccb6c9408aab80096e07b6ba25afafd9ca0a307c5d9c0fd9f608127f0",
+   "jpUrl": "c864772b3538b3e3ed1b3bbc912da804b9ce808c61a76465226efe4aca824bf7",
+   "enUrl": "cbff399f4a0a3b054d883c952da02e5eaff79069799db2ca7a77792f12687e01",
+   "krUrl": "46be283851e3584028450d332ae9ea392c660fa87723f11e6d6462e3ab7ca54d"
+  },
+  {
+   "id": 56,
+   "title": "普攻",
+   "text": "恭喜發財！",
+   "unlockRequirement": "",
+   "cnUrl": "d046b7756e5badb74c5ea31ba60702a7ac0761ca1ec5949d5b992acdf12a8110",
+   "jpUrl": "45517302db76b33051390418762a3fb10cc5f84c67f085443ef1bbdf3438a237",
+   "enUrl": "84c741c64ba56a3db1063a07e47fbe866070c33b0e2c940193eefff08746690d",
+   "krUrl": "dd89697c75cb5dbca4c3e84f5aefb47f6df65a9880a8259a180b489084f3946c"
+  },
+  {
+   "id": 57,
+   "title": "戰技",
+   "text": "花開富貴！",
+   "unlockRequirement": "",
+   "cnUrl": "7cd7d819eef8fd60893135c7cdb945e9224f926f12f231698ea812ff096ad98a",
+   "jpUrl": "ea9c8703daa1babbc5433660f2afba06e6c9ed9d616354d6c22ccc75bc83d177",
+   "enUrl": "f30907e76541f62d4cdcfcb2943f9d168f09f3b9c0f7680ba5cbbb1652262324",
+   "krUrl": "3184125e706d90f3ec46e1f1ad1fe05d0e75a4035d3c581dd5533a2d50fbed3b"
+  },
+  {
+   "id": 58,
+   "title": "輕受擊",
+   "text": "幸虧我練過…",
+   "unlockRequirement": "",
+   "cnUrl": "79adbd2c391e28268cdf3e63200c20c5a8fb2caecbcb3e4ef183a8be6a26c655",
+   "jpUrl": "53c4309516a46e0252ca882d25306b025d36b36a1aa54d50108f07de85943ec9",
+   "enUrl": "8c7ab6fd699ddff8b6ef1cf04bbdf9ace2c4e388635443fd9554982700964967",
+   "krUrl": "13f57ceb0d5f4c53d4e8687d6495f00b75cdeadb5feebbd030a7ff533ea99887"
+  },
+  {
+   "id": 59,
+   "title": "重受擊",
+   "text": "還來勁了啊你！",
+   "unlockRequirement": "",
+   "cnUrl": "9d176f88487df4761e269fd6624dfc14128c66fe9fb9ece8a0b39939806659c1",
+   "jpUrl": "1c78f00229cb0d56bf00a14e61839ee8f7e315569028cea50ee1c89fa9b259ab",
+   "enUrl": "daf6f12bf5f2ba9951fa6415a9f0806295636fb7adfd49566b283679ecacfc99",
+   "krUrl": "c9954b7b58b26698a8543731f6e6e53cc48e74fd03fcaafe737d7934cd978a43"
+  },
+  {
+   "id": 60,
+   "title": "終結技•激活",
+   "text": "瞧一瞧看一看了哎！",
+   "unlockRequirement": "",
+   "cnUrl": "c3834c5f6d4bb67eccdda161d285e1cfd087355b3c5132a1969031a59cb32abe",
+   "jpUrl": "ee55aa4bfc3fa6682f9a7ef99200ce6c9f2cb0c4ef3b8180fcecfa3154fc8d6b",
+   "enUrl": "677424b5d0a211c873d342b554f2af7649d3ead3cfa7d251a479b2ec066126a9",
+   "krUrl": "a0f602db6df46beda1b9c0c5b0b6475842dbb4cbcad0235060d5bdd65effaba5"
+  },
+  {
+   "id": 61,
+   "title": "終結技•施放",
+   "text": "機會難得，給您拜個早年吧！",
+   "unlockRequirement": "",
+   "cnUrl": "7cce76185d9627840a3a6fea245c07188368f24e2a671d238ef40926d137a56f",
+   "jpUrl": "102c79a6dc46949fa97b17b65c32df99ea7b884434629b98c3c77d3fe70fe999",
+   "enUrl": "07e42e6f2ecd81e906c438510d68f32ca57d2f390a59a22fb72a0c236ef9b15f",
+   "krUrl": "87a10dc19b546d0965e22dc0b7050d12109755124eb8ac85abf96b5dec9e59f2"
+  },
+  {
+   "id": 62,
+   "title": "無法戰鬥",
+   "text": "哎呀，演砸了…",
+   "unlockRequirement": "",
+   "cnUrl": "994799b4287549d05659be06f7b254a6df5501cf6ef2e95162873190d7ec5a8d",
+   "jpUrl": "7b71450a7a9dd4e7cb713ee4114b87f028bc530911e07c98d3a27383954d8c5f",
+   "enUrl": "721dac5e83ee8ef4eb3f9db2116d0a43cc7cc655ed01e04d6e18294cb21cad6f",
+   "krUrl": "65f056b72583631518239972c72f311bb1f7ab9c77dbe5495328a70fda0e68f2"
+  },
+  {
+   "id": 63,
+   "title": "重回戰鬥",
+   "text": "給您來個返場小段兒！",
+   "unlockRequirement": "",
+   "cnUrl": "767be3098c8c7af3a92d2dddd87a5b4f2499b6aa3e6cfff6e8a589e7e70c7812",
+   "jpUrl": "7b2f5a1e32bce2a85675fa0540193779019075514f09319cbd1d6fcb66e1d2f5",
+   "enUrl": "cb8415d19330dbe04e4340f07b4a69ab84202556c0bc3d9b33c6b7949f04721e",
+   "krUrl": "5f25250510dfe9e0f85611f3ec95f23242754bfdd3b36feb26c464a05b611dbc"
+  },
+  {
+   "id": 64,
+   "title": "回復生命",
+   "text": "走你！",
+   "unlockRequirement": "",
+   "cnUrl": "6cce564ff186fc326162f01ace5450c8a8c378609c9b792de99caec850c00d1f",
+   "jpUrl": "e7850369f98688f747aaec2715c5592a02ab893b1937ca8d782c8d6cf5fab286",
+   "enUrl": "2b1a033598f53a70b8240e1793d47818ae113c1b59bf29d2685f07a0bb689b7c",
+   "krUrl": "0b4de5ee2601c83af356baca43fb817e7567005350f7d5659c79c6ec12576aae"
+  },
+  {
+   "id": 65,
+   "title": "祕技",
+   "text": "先暖個場！",
+   "unlockRequirement": "",
+   "cnUrl": "6f9bd3f323549f6ffc3983a4c982551b6d1b00d98a890646a28eb022c3fc7961",
+   "jpUrl": "9cc00236515d263fc764c1479322dbba71355496aa149e87181f268ee91b72e9",
+   "enUrl": "487eb333dc9693a55cbd987f507777887d8db15c44d896ff9582b3c8184d7e47",
+   "krUrl": "3b3e0f9cf8097133c223844a964aa7cdda8912d08d01d2420a708cbd44aa5cfb"
+  },
+  {
+   "id": 66,
+   "title": "戰鬥勝利",
+   "text": "本次演出大獲成功！",
+   "unlockRequirement": "",
+   "cnUrl": "ccb8da7bbe453ddf230a03881959cc09a5555b659d0af21ae7f59c2b196a4eeb",
+   "jpUrl": "75a011c70555ee93475138ef5247fe389f6b5e9123ae4f8fd80bd232fafd8773",
+   "enUrl": "fd1871cd17fe55489bb60f639cd5a36c97920c063bbbfb2c6ca6d1455931fbef",
+   "krUrl": "98e34d2c01101be7b3658a4383b3f21be3d2551401d18204b1e585fda51f91fe"
+  },
+  {
+   "id": 67,
+   "title": "開啓戰利品•一",
+   "text": "哦喲喲，還有意外收穫！",
+   "unlockRequirement": "",
+   "cnUrl": "c1d16cfb5e9e735b9ce80adac1668f7c41e7a3b24bc93f121ff09b2bf0598eca",
+   "jpUrl": "5d0333d0ef8625f155efc66df6219d574e49564a338d4cdd9bf472844d2d3e58",
+   "enUrl": "d2c2820058103e699de36fc3ff972c6bf6831725ee1da9c6a5552e66ccbc9a10",
+   "krUrl": "3189a913f200e799308c30f570c0e5851480968db5d4ba02d9602916dcbbfd3b"
+  },
+  {
+   "id": 68,
+   "title": "開啓戰利品•二",
+   "text": "趕快收賞錢啦！",
+   "unlockRequirement": "",
+   "cnUrl": "64d2a7749d00c797b6cc6c49c2c964bb5d24041e5f02d1b48d72068c60b47135",
+   "jpUrl": "968abf23b3d2947e2ae65903c021ae2f8e1c57263a0ee936c5d9f52a0e060d52",
+   "enUrl": "adde56d1eb05f8eaffa10d879878260ed494aba251db041c568beefd67898c70",
+   "krUrl": "35eb5ea1216a69048b8412a98f5fd8c5687011d98d5fcb3e0c36019de1dd1398"
+  },
+  {
+   "id": 69,
+   "title": "開啓貴重戰利品",
+   "text": "恭喜賀喜，上上喜咯！",
+   "unlockRequirement": "",
+   "cnUrl": "778fa56941866328140995730b0a50322e363b7529f21384c64836b7d52d7702",
+   "jpUrl": "9750cb41d5db02ee565c256cf6903a28a7b21a5133c47452fd9c00cd107f9825",
+   "enUrl": "6850d472c6c248c8857c10ce7c6b0afbdb79a24a34d61cd8bce788599f8da9c3",
+   "krUrl": "1f2a560758cef566eb97ae464d082ec8d75df6be214eec94110ef2ca4e440ff5"
+  },
+  {
+   "id": 70,
+   "title": "解謎成功•一",
+   "text": "手腳靈活，頭腦聰明~",
+   "unlockRequirement": "",
+   "cnUrl": "20bf6230d61b986d531b02d95e0bbdbbb80bc53a93436e69363c49907a5ff9cf",
+   "jpUrl": "471586e00bd242cb9ac1eb20cdb08bc9c2cdb3daf22cddc42f6efd76fd41a65b",
+   "enUrl": "2039d14e1754f4705512378465b53eee238b259c4af968dad3154b85659ae7b9",
+   "krUrl": "e5b3d6862dd98bd0153902247ba25044c80b55a79e5959ab558f3c25cdb066b5"
+  },
+  {
+   "id": 71,
+   "title": "解謎成功•二",
+   "text": "想知道竅門？不告訴你~",
+   "unlockRequirement": "",
+   "cnUrl": "7cb6da3d3fae83f77c90159241885c918fe6fdb4287fcb21fb856ac03e4d20df",
+   "jpUrl": "af4291bc677af5781bb0ec2d03faf5234c406ec49e36b5059f5a5206191fbad2",
+   "enUrl": "5661082c5ff0ebcda47d7a0a3de8494a16d6cc6a63293747612811e162774f49",
+   "krUrl": "0ee9f7970ad0f5f7b81df08d801c6cea982193f3b675fd979c7769eae07b3abc"
+  },
+  {
+   "id": 72,
+   "title": "發現敵方目標",
+   "text": "呃，前面那位，非得去惹它嗎？",
+   "unlockRequirement": "",
+   "cnUrl": "e17e76216629005606d96ac65f33c8b7e8e2ddadd276973deb228f6276fcde0a",
+   "jpUrl": "4e0871a1ff1b62c64c9f5a8b98fbb2283cc857bea52992bb194a1372cd7b49b9",
+   "enUrl": "9d2f828674baadc252ff96526f724de864617bd5b9fc6ecfa05157d023f4b85d",
+   "krUrl": "4cc8c2472c2fae0b97e98720373037b5fd9a9b347a02fe7fe3ab48d5d428657a"
+  },
+  {
+   "id": 73,
+   "title": "返回城鎮",
+   "text": "熱鬧的地方客人才多呢。",
+   "unlockRequirement": "",
+   "cnUrl": "737232671abe2500e28cc8b853bba742d1fe7f1edbd9aef7712efad63868defd",
+   "jpUrl": "c01dfb892cb15b438b258a22a97970671f078bdfa40ee02565b465440cca2f0b",
+   "enUrl": "b70a7d85a581fd892d18c884d84be120e565a6e8fbf58aecb68431d71cfb5cc3",
+   "krUrl": "1081be86e0348c546f2720d4cd4ade2bd06f91c2526e8e527dfa876213ec0a19"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "角色詳情",
+   "text": "因機緣巧合留在仙舟的化外民，如今是熱情爛漫的街頭藝人。<br />本名「格妮薇兒」，「桂乃芬」是好友素裳爲她起的仙舟名。<br />面對「羅浮」的全新人生，憑着對仙舟文化的熱愛，桂乃芬很快學到了安身立命的一技之長——倒立吃麵條、胸口碎大石、徒手接子彈等等。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "角色故事·一",
+   "text": "餵～餵～聽得清嗎？家人們晚上好！歡迎來到小桂子的直播間～<br /> <br />感謝「大呲花_<nobr>49886</nobr>」的醒目留言！「小桂子怎麼又半個月不開播，是不是擺了？」這怎麼可能嘛！小桂子最近線下的事情有點點多，確實好久沒開播了，對不起啦～最近線下遇到的事情還蠻有趣的，有機會再講給你們聽。<br /> <br />今天嘛，就和直播間標題說的那樣——「曲藝之夜！小桂子獻唱仙舟曲藝！」<br /> <br />總之呢，最近感覺雜技這玩意兒可能還是更適合線下，所以小桂子打算試試搞一些曲藝直播，今天這次就當做試水了～各位要是喜歡的話，記得點點關注、點點轉發，打賞禮物可以參與直播間抽獎哦！<br /> <br />感謝「奶粉粉粉」的醒目留言！粉粉，好久不見啦～「沒關係，小桂子直播什麼我都愛看。」粉粉太捧場了！獎勵你今天不看完直播不許走！麼麼～<br /> <br />咳咳…等我調一下聲音設置…一二三四五上山打老虎…好嘞，那麼接下來就要開嗓了！這次的數來寶，可是小桂子自己寫的唱詞哦～<br /> <br />……<br /> <br />許久未回這金人巷，此地方，百廢俱興變了樣。<br />有的玩意兒變了樣，也有的美景一如往常。<br />街坊四鄰都硬朗，父老鄉親是滿面的紅光。<br />今日難得這快板兒響，請列位賓朋賞個光。<br />歡呼喝彩多捧場，扔幾個巡鏑讓我開個張。<br />今兒不講，神君蕩寇掃洪荒，也不講，帝弓神矢斷穹桑。<br />講一講，這金人巷裡好姑娘，小桂子我何處來又何處往。<br /> <br />……",
+   "unlockRequirement": "角色等級<nobr>20</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·二",
+   "text": "對年幼的格妮薇兒來說，她的整個世界就是護國公府邸和大宅前繁榮的街市。<br /> <br />老師們說，她的家族歷史悠久、聲名顯赫，這幢府邸也足有幾個琥珀紀的歷史。但歲月似乎未曾在上面留下分毫的痕跡，它仿佛獨立於時間的法則，將這家人庇護在永恆的平靜與美好之中。<br /> <br />父親要求長兄、二哥和長姐接受政治教育，他希望能將這顆星球的未來交給他們中的某一位。至于格妮薇兒和其他弟弟妹妹…父親只希望他們能在這個安寧的樂園中，度過平靜幸福的一生。<br /> <br />格妮薇兒愛父親。在面對政敵時，他像刺尾蟒一樣可怕；但面對女兒時，他又像極了一隻龐大又溫暖的山嶽絨兔。<br /> <br />在她的記憶中，父親願意爲她做任何事，甚至肯在她盛大的生日會上，扮演被女英雄格妮薇兒斬殺的地靈。要知道，這種權臣家孩子的生日會，可是會有政敵到場的——爲了讓她開心，父親根本不在乎落人口實。<br /> <br />後來，格妮薇兒長大了一些。她開始聽到一些風言風語——父親架空王權、謀害忠良、貪得無厭…她願意相信這些都是政敵的謊言，但她知道這些並不都是謊言。<br /> <br />但很快，這些就都不再重要了。<br /> <br />反物質軍團大舉入侵，父親率軍守護王都，寸土不讓。死訊傳來時，格妮薇兒暈倒了。再次醒來時，她已被塞進了一艘飛艇。弟弟妹妹們在身邊抽泣，長兄和長姐被繩子捆得嚴嚴實實，二哥無奈地說：「先別給他們倆鬆綁啊，他們不肯逃的。」<br /> <br />格妮薇兒望向舷窗外，母親身披戎裝，背對着逐漸升空的飛艇，指揮着不願坐以待斃的家丁。在稍遠一些的地方，虛卒們正在拆毀護國公府邸。在更遠一些的地方，整條街都在燃燒，焦黑的屍體像泥土似地散落各處。<br /> <br />對年幼的格妮薇兒來說，她的整個世界被人從銀河中抹除了。<br /> <br />……<br /> <br />我本來自那域外的朝廷卡美洛，有着兄弟姐妹一十二個。<br />日子本是平安又喜樂，怎料得那燼滅禍祖造作了兵禍。<br />父母親操起幹戈抗敵報國，也無奈軍團勢如破竹我家亡國破。<br />長兄帶着弟妹幾個東漂西泊，流落到公司的礦星上傍人籬落。<br />爭搶些殘羹冷炙草間求活，也免不得風急天高牛衣病臥。<br />長兄本是個苦勞人，色厲膽薄，終被人逼成了草寇，銀海翻波。<br />他只劫商旅從不打家劫舍，人都說他是草莽的英雄濟貧扶弱。<br />他帶着那數百個窮鬼成羣結夥，佔山爲王將我們弟妹養活。<br /> <br />……",
+   "unlockRequirement": "角色等級<nobr>40</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·三",
+   "text": "小時候，父親總告訴格妮薇兒，人應當體面地活着。可誰又能在「洪堡特-σ」上體面地活着呢？<br /> <br />那是個荒蕪的行星。原始的藻類、真菌和地衣維繫着它勉強能支撐動物生存的大氣環境，而在那些堅強繁衍的原生物種中，幾乎沒有哪一種是對人類沒有威脅的。<br /> <br />如果星際和平公司沒有發現這顆行星所蘊含的礦產，應該也不會有人想要移居到這裡。<br /> <br />格妮薇兒在這顆貧瘠的星球上，度過了整個少女的時代。<br /> <br />她很擅長交朋友，與其他小孩子關係很好。窮苦人的兒子、流亡者的女兒、爛賭鬼的弟弟、殺人犯的妹妹…格妮薇兒並不在乎出身，畢竟無論他們出身於何種家庭，在這顆星球上，都同樣不一定能活到明天。<br /> <br />公司對此處的看管並不嚴格。除卻那些身負債務或罪案的倒黴蛋，只要交夠了應繳的稅款，公司並不會限制工人的自由。只不過，繳清了稅款之後，他們甚至未必有餘錢去鎮上的酒吧喝上一杯。<br /> <br />在故鄉時，父親是一家人最堅實的依靠。如今父親和故鄉都已不在，照護一家人的責任，就落到了唯一的年長者——「石牆騎士」身上。在逃離家園時，母親強硬地讓這位忠誠的老騎士與孩子們一同逃離，自己則留在故土，陪伴荒原的最後一縷塵埃。<br /> <br />老騎士曾是父親最親密的玩伴，而後是父親最勇敢的戰友，再來是父親最忠誠的家臣，現在…他成了孩子們的另一位「父親」。直到最後，格妮薇兒都沒能記住他的真名實姓，她更熟悉騎士的另一個名字——石牆叔叔。<br /> <br />十幾個飢餓的孩子，使本就捉襟見肘的經濟狀況雪上加霜。在某一夜的爭吵過後，石牆勉強同意讓三個哥哥姐姐同自己一起下礦，但無論格妮薇兒怎麼哀求，他也不肯讓她同行。<br /> <br />一個個夜晚過去，他變得蒼老、憔悴，肺部充滿難以癒合的創傷，脊椎再也無法像過去那樣挺拔，曾揮舞着動力錘虎虎生風的雙手如今扭曲到難以拿穩湯匙。<br /> <br />不久後，他死了。<br /> <br />石牆倒塌了，倒在黎明到來前，沒有發出一絲聲響。像沙灘上的城堡在潮汐漲落之間消退，像冬日的枯枝在風中輕輕墜地，像註定要到來的結局。<br /> <br />而石牆之外，是只有風雨冰霜的世界。<br /> <br />哥哥們變成星際海盜，是那之後不久的事。格妮薇兒能喫飽飯了，可她也隱約感到，自己進一步違背了父親的訓誡，走向了更加不體面的人生。<br /> <br />所以，當公司的士兵們給格妮薇兒戴上手銬，和弟弟妹妹們一起移交給雲騎軍的時候，她長舒了一口氣。<br /> <br />人們都說仙舟人特別善良，她想，雲騎軍一定願意讓我們一家體面地死在一起。<br /> <br />……<br /> <br />誰曾想長兄他一時昏了頭，竟劫了艘商船它來自仙舟。<br />仙舟人剛直嫉惡如仇，有雷霆的手段似風馳雨驟。<br />長兄他被人剿了匪，降心俯首，只求軍爺對我們弟妹高抬貴手。<br />剿匪的軍爺亦是宅心仁厚，將我全家都請回了仙舟。<br />寬仁了我家長兄的一顆人頭，更爲了我弟妹的生計苦苦籌謀。<br />弟妹們進了學宮識文斷字，咱這兒的悠姐對我把本事傳授。<br />長兄勸我學完了本事高飛遠走，可知恩不報非讓人說我不如禽獸。<br />誰曾想在這金人巷我把能耐展露，從貧苦的兒女到如今那是名利雙收。<br /> <br />……",
+   "unlockRequirement": "角色等級<nobr>60</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·四",
+   "text": "「不好意思不好意思，路上遇到有人受傷，耽誤了點時間…啊，小桂子你還在唱啊，那我閉嘴。」<br /> <br />「哎！裳裳來了！給大家介紹一下，這是咱們今天的驚喜嘉賓！雲騎軍的天才新人——素裳姑娘！來，家人們，把『歡迎素裳姑娘』打在公屏上～」<br /> <br />「大…大家好，我是素裳…什麼『天才新人』啦！不要擅自給我加戲，這要讓我們領導知道了，非擠兌死我不可。」<br /> <br />「裳裳先稍微等一下啊，我這數來寶還差最後一段。你來的正好，這段剛巧是關於你的～」<br /> <br />……<br /> <br />再後來遇到了惡漢對我別具心腸，幸而有女俠出手對他一頓棍棒。<br />那位問：哪位女俠有如此的膽量，那正是我後來知心的摯友李素裳。<br />自此後羅浮之上我不必獨來獨往，多了位女俠做我的狐朋狗黨。<br />更何況有列位觀衆滿堂，時時盼着我吹拉彈唱，<br />只演一段列位絕不買賬，山呼海嘯地要我返場。<br />但小桂子的故事實在又臭又長，不講個一年半載我可退不了場，<br />今天這段不如現在到此收場，欲知後事如何，咱們來日再講。<br /> <br />……<br /> <br />「好聽好聽，家人們快給小桂子鼓鼓掌！就是這個英雄事跡我怎麼沒有印象了？」<br /> <br />「西衍先生說，大家比較喜歡這樣英雄救美式的邂逅，所以我才這麼寫的。你要是不喜歡…感謝『擼貓令使<nobr>8190</nobr>』刷的諦聽風暴！老闆大氣！」<br /> <br />「老闆大氣！…怎麼寫都沒關係啦！反正你寫的東西都挺有意思的。」<br /> <br />「好的，那裳裳現在也終於『裳裳來遲』，可以給家人們展示我們準備已久的雙人共演了～來，裳裳，墜子琴遞給我一下，小桂子來唱一段《騰驍斬大蛇》！」<br /> <br />「這段可不好演啊。」<br /> <br />「是呀，懂行的人肯定知道啊，這《騰驍斬大蛇》，有彈有唱有打鬥，一個人可演不了。」<br /> <br />「所以才叫我過來嘛！那要怎麼演呢？」<br /> <br />「很簡單呀～我呢，今天就演這位前代羅浮將軍騰驍，定國安邦、英武非凡。」<br /> <br />「那我呢？」<br /> <br />「你來演這個被斬的大蛇——小小蛇妖哪裡跑，喫～我～一～劍～」<br /> <br />「唉喲疼…桂乃芬！我跟你拼了！」",
+   "unlockRequirement": "角色等級<nobr>80</nobr>解鎖"
+  }
+ ],
+ "archive": {
+  "cvCn": "小敢",
+  "cvJp": "直田姫奈",
+  "cvKr": "김수영",
+  "cvEn": "Morgan Lauré",
+  "camp": "仙舟「羅浮」"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "桂乃芬",
+ "rarity": 4,
+ "descHash": "客居仙舟「羅浮」的行爲藝術家——或者說，街頭藝人。 在三餐溫飽之餘，追逐着自己在羅浮的新生活。",
+ "artPath": "2532ab2916b23d6a7d0af1848850b0eaa75253ff0349ea9bf403e28a649f1aca",
+ "miniIconPath": "90cf1c5c0614da53386f8258d95f292d74d8cc5dad7823f9de826c7c1212f919",
+ "damageType": {
+  "id": 2,
+  "iconPath": "bd8329d02d7ecfee2a1f565e89cf3bf7bf6aaa60bea29cec2b4f7192626a0311",
+  "color": "#F84F36",
+  "name": "火",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "96c3b8dd457b98955d440531986a23d509f705c13d7aa794d1e97bcfd03d5701",
+  "altIconPath": "b55d340138ed77756cd939d0d9ee2103a5398f999202c1ed19d092ac87333155",
+  "color": "#FFFFFF",
+  "name": "虛無",
+  "rarity": 0
+ },
+ "pageId": "guinaifen"
+}

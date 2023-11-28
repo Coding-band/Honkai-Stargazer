@@ -1,0 +1,3025 @@
+{
+ "spRequirement": 180,
+ "iconPath": "40744974ebfc3d3ae6a1ef9a4aa112e0f758ccadd23c3eaa883d1ec79889864f",
+ "bgPath": "5016f3293243864d458d10034f5ca8698e6f96bc8349a1008483c07ff679b39f",
+ "figPath": "0efdba7a6a3e16f57991a816e5dd2ba42248ff128724ca1c5c45699c7cefb61e",
+ "fgPath": "fbb9ff14d6fae5f662a6cdd7c380903fd586d6e92bf31349e6585a6b88106b51",
+ "splashIconPath": "6a2515e350a0bc09d0800289873e343eaab33566c026dd4f390598f3a290ab68",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 3,
+  "iconPath": "4ee4d46a01c45f662c4a193c5823f29be35cc4c19ba38ea2fd6f35a00a053d46",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Braises immortelles"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "d75aec8e75227549d536ef57980f65a2b081b9665d06cd1a02a5bafa6c688f63",
+   "name": "Regret de l'ochéma infini",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "Qu'importe le nombre de corps qu'il s'approprie, son insatiabilité ne faiblit pas. À l'instar de ceux vouant leur existence à la recherche des secrets de l'immortalité, il est en quête d'un hôte impérissable, d'une entité qui lui permettra d'éradiquer sa peur de la destruction. Il sait pourtant que cette quête est vaine, car irréalisable.<br /><br />« J'ai vu un nombre incalculable de mondes périr par le feu de la Souillure ; moi qui étais l'une de ses flammes. J'ai dansé au rythme de ses doigts, sachant que si le combustible se consumait, le feu s'éteindrait également... »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "Écho de la guerre : Royaume de l'abysse écailleux"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Entraînement quotidien",
+    "Braises immortelles"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Récompense d'affectation"
+   ]
+  },
+  "549438": {
+   "id": 549438,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5eb86757b6878dd09f969ed2d9e75af43eac2565bd49fdbe391f716e5adca101",
+   "name": "Noyau éteint",
+   "desc": "Le cœur d'un monstre errant dans le Fragmentum. Matériau commun utilisé pour le renforcement.",
+   "lore": "C'est une lésion qui engendre le mal, la pulsion du péché. C'est la source de la distorsion du Fragmentum.<br />Un coup puissant a fait cesser de battre ce cœur et lui a fait perdre son éclat.<br /><br />« Les tests préliminaires indiquent qu'il s'agit d'un genre d'hybride : une moitié est primitive, et l'autre est très similaire aux Stellarons. » — Département de biologie, Sarah Castro",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549438",
+   "comeFrom": [
+    "Certains monstres du Fragmentum",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633379": {
+   "id": 633379,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4886a5629723505540ba6d02fac7f264a3164458f4194796470c1826138ba105",
+   "name": "Noyau brillant",
+   "desc": "Le cœur d'un monstre errant dans le Fragmentum. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "C'est une lésion qui engendre le mal, la pulsion du péché. C'est la source de la distorsion du Fragmentum.<br />Son cœur brillant et les veines qu'il porte indiquent qu'il est toujours en vie.<br /><br />« De quel monstre s'agit-il ? Tu as vu... Son visage ! C'est celui de notre ancien chef ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633379",
+   "comeFrom": [
+    "Certains monstres du Fragmentum au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635675": {
+   "id": 635675,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "5d1c50902cff0d2be1eb952d08078e3134c231cdf0c9142c1ef475ec07c42b50",
+   "name": "Clé de l'inspiration",
+   "desc": "Clé mythique conservée par les érudits méditatifs. Permet d'améliorer légèrement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Érudition</span>.",
+   "lore": "Elle est capable de débloquer des inspirations enfouies au plus profond de la conscience.<br />S'emparer de la clé, c'est saisir les braises de la pensée qui éclairent la voie à suivre.<br /><br />« Eurêka ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635675",
+   "comeFrom": [
+    "Calice de la Ville de Rivet",
+    "Braises immortelles"
+   ]
+  },
+  "717320": {
+   "id": 717320,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "f32ca1d67c0e385f701d450cae1c5dea41f334e31d61eb331d4be4dc7551c378",
+   "name": "Noyau des méandres",
+   "desc": "Le cœur d'un monstre errant dans le Fragmentum. Matériau avancé utilisé pour le renforcement.",
+   "lore": "C'est une lésion qui engendre le mal, la pulsion du péché. C'est la source de la distorsion du Fragmentum.<br />Le cœur bat lentement, mais la force qui lui reste est suffisamment puissante pour causer une nouvelle calamité. Il vaut mieux le détruire, afin d'éviter d'autres problèmes.<br /><br />« C'est comme un cancer... »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717320",
+   "comeFrom": [
+    "Certains monstres du Fragmentum au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836261": {
+   "id": 836261,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "name": "Clé de la sagesse",
+   "desc": "Clé mythique conservée par les plus grands prodiges de l'univers. Permet d'améliorer considérablement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Érudition</span>.",
+   "lore": "C'est la preuve d'une invitation aux salles du temple de Sagesse.<br />Trouver la porte qu'elle ouvre s'avère être une tâche bien plus ardue que d'obtenir la clé elle-même. Ceux qui franchissent les portes comprendront rapidement l'impossibilité de revenir en arrière.<br /><br />« L'Érudition n'apporte pas les réponses à l'univers, mais elle vous apprend à poser les bonnes questions. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836261",
+   "comeFrom": [
+    "Calice de la Ville de Rivet",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "866634": {
+   "id": 866634,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "0288ce1317f6e86958cc4c89a9dc75fc32c4294074a8e0ad8d93b521e327c00c",
+   "name": "Jeton de l'au-delà",
+   "desc": "Arme de l'Envoyée spectrale aurumaton. Permet l'élévation des personnages de type physique.",
+   "lore": "Il s'agit non seulement d'une arme utilisée par les messagers de la Commission des dix seigneurs pour contenir le mara et les abominations, mais également de leur laissez-passer. Aucune autorité du royaume des mortels n'a d'emprise sur eux.<br /><br />« Messagers de l'au-delà, émissaires du royaume des morts qui détiennent les ordres d'arrestation, sans pardon pour ceux qui ont transgressé les règles. »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/866634",
+   "comeFrom": [
+    "Ombre stagnante (Jardin de vulpeflâne)",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920202": {
+   "id": 920202,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "489f5c80b6f0de258e076634803c9540b0504c32e55f556748095c334780289d",
+   "name": "Clé de la connaissance",
+   "desc": "Clé mythique conservée par les sages des mondes. Permet d'améliorer modérément les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Érudition</span>.",
+   "lore": "Elle est capable de dévoiler les mystères du monde et accorde des connaissances dépassant l'entendement humain.<br />Quand bien même le porteur tenterait de se vanter de la posséder, lui seul en verra la forme physique. Certains pensent qu'il s'agit d'un cadeau du ciel, tandis que d'autres y voient un signe de maladie mentale.<br /><br />« J'ai rêvé de molécules s'enroulant en boucle, tel un serpent se mordant la queue. Je me suis réveillé et j'ai compris que c'était là la réponse que je cherchais depuis tout ce temps ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920202",
+   "comeFrom": [
+    "Calice de la Ville de Rivet",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Braises immortelles"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 100.32,
+   "attackAdd": 5.016,
+   "hpBase": 142.56,
+   "hpAdd": 7.128,
+   "defenseBase": 49.5,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549438,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 140.448,
+   "attackAdd": 5.016,
+   "hpBase": 199.584,
+   "hpAdd": 7.128,
+   "defenseBase": 69.3,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549438,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 180.576,
+   "attackAdd": 5.016,
+   "hpBase": 256.608,
+   "hpAdd": 7.128,
+   "defenseBase": 89.1,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633379,
+     "count": 6
+    },
+    {
+     "id": 866634,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 220.704,
+   "attackAdd": 5.016,
+   "hpBase": 313.632,
+   "hpAdd": 7.128,
+   "defenseBase": 108.9,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633379,
+     "count": 9
+    },
+    {
+     "id": 866634,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 260.832,
+   "attackAdd": 5.016,
+   "hpBase": 370.656,
+   "hpAdd": 7.128,
+   "defenseBase": 128.7,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717320,
+     "count": 6
+    },
+    {
+     "id": 866634,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 300.96,
+   "attackAdd": 5.016,
+   "hpBase": 427.68,
+   "hpAdd": 7.128,
+   "defenseBase": 148.5,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717320,
+     "count": 9
+    },
+    {
+     "id": 866634,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 341.088,
+   "attackAdd": 5.016,
+   "hpBase": 484.704,
+   "hpAdd": 7.128,
+   "defenseBase": 168.3,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "85b75665518bffdc2ab15f1f39e6d702f2b8d8d7ebb6de323be5da82968d7c90",
+   "artPath": "80eff63c2f6c4d9c4061e95652a02e5358d8cdb06b2a1a198078ba82296bef12",
+   "name": "Imperfection au royaume de l'esthétisme",
+   "descHash": "Chaque cumul d'Ascension augmente les DGT critiques de <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.04
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "fddb7edbf23fd35dfed1e58bf956556f2d43ec795848750effed4d16d7506e9e",
+   "artPath": "69c28965b048104da100fc411b22dcb1e99fbe8b94c92f3c1ffb4eaaeaf41653",
+   "name": "Humilité de l'agate",
+   "descHash": "L'ATQ du personnage augmente de <nobr>#2[i]%</nobr> pendant <nobr>#3[i]</nobr> tour lorsque vous utilisez l'ultime avec <nobr>#1[i]</nobr> ennemis ou plus sur le champ de bataille.",
+   "params": [
+    3,
+    0.4,
+    1
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "e117121d14c83d81d952fcddc31c979c1b7ac86d7b4744d67c36958a023b9fd4",
+   "artPath": "8f3572b1ea7a7a96282fd7737ed3265eb99e71884240e390a43ee33c1a5bbc6e",
+   "name": "Gloire du chemin d'épines",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "e06e927e59f218d20b990d7abac8fbc8fb761844320cf1af09d43a8ac7c59f01",
+   "artPath": "391bff4c0ed4a9e09188615717d271f180083e192a4108420afd76faba8f8233",
+   "name": "Dévotion des trompettes de la guerre",
+   "descHash": "Le personnage gagne <nobr>#1[i]</nobr> cumuls d'Ascension en début de combat, et le nombre de cumuls maximum de l'effet de son talent augmente de <nobr>#2[i]</nobr>.",
+   "params": [
+    2,
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "af7c4919d82eb1790d85b56d336f3e2aef11ab7cb6af87ea0ae57971ce0fa8d5",
+   "artPath": "ca323018dc911deb6097ff0e2d08531d5cd5da74674d5d2ed3b646166ee8035e",
+   "name": "Merveille de l'univers",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "828474225c829fe183f168090e43a50ecbd213adb798ce0eeace070cc450060b",
+   "artPath": "28d483781cbf0141f15ed08167b6dfb280fb4e12534a75c6f19624360899b405",
+   "name": "Resplendissance",
+   "descHash": "L'ultime ignore <nobr>#1[i]%</nobr> de la DÉF de la cible ennemie.",
+   "params": [
+    0.3
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   14813
+  ],
+  [
+   98754
+  ],
+  [
+   182695,
+   529701
+  ],
+  [
+   529700
+  ],
+  [
+   814227
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ d'Argenti à une cible ennemie unique.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 14813,
+   "name": "Fragrance fugace",
+   "iconPath": "81a7ec08e127d5ff0dbf19aea3f35a9484db6e48dd52c1374999b1b973cf609c",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549438,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633379,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 717320,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ZdE",
+   "descHash": "Inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ d'Argenti à tous les ennemis.",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "30",
+   "id": 98754,
+   "name": "Épines de la justice",
+   "iconPath": "e117121d14c83d81d952fcddc31c979c1b7ac86d7b4744d67c36958a023b9fd4",
+   "typeDescHash": "Compétence",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.6
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.66
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549438,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.72
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549438,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.78
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.84
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633379,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633379,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.26
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.32
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.38
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.44
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ZdE",
+   "descHash": "Consomme <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> points d'énergie et inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ d'Argenti à tous les ennemis.",
+   "ultimateCost": 90,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 182695,
+   "name": "Beauté infinie du jardin des roses",
+   "iconPath": "d70baf577f0bed1537ac4ff8670b5a86adfbadcd9f0cb168f84a95facdf29d9f",
+   "typeDescHash": "Ultime",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.96,
+      90
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.024,
+      90
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549438,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.088,
+      90
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549438,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.152,
+      90
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.216,
+      90
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633379,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.28,
+      90
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633379,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.36,
+      90
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.44,
+      90
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.52,
+      90
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.6,
+      90
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.664,
+      90
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.728,
+      90
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.792,
+      90
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.856,
+      90
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.92,
+      90
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Renforcement",
+   "descHash": "Quand Argenti utilise son ATQ normale, sa compétence ou son ultime, chaque ennemi touché lui permet de régénérer <nobr>#1[i]</nobr> points d'énergie et lui accorde un cumul d'Ascension, ce qui augmente de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> ses chances de coup critique. Cet effet peut être cumulé jusqu'à <nobr>#3[i]</nobr> fois.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 529700,
+   "name": "Objet de convoitise",
+   "iconPath": "da05494dd982b071597705e20e978727f66d92463a52d72f34e65bfbc7e4ff9a",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      3,
+      0.01,
+      10
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.0115,
+      10
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549438,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.013,
+      10
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549438,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.0145,
+      10
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.015999999,
+      10
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633379,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.0175,
+      10
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633379,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.019375,
+      10
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.02125,
+      10
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.023125,
+      10
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.025,
+      10
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.0265,
+      10
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.027999999,
+      10
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.0295,
+      10
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.031,
+      10
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.0325,
+      10
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Réduit la robustesse de l'ennemi au type correspondant en entrant en combat après l'avoir attaqué.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 730286,
+   "name": "Attaque",
+   "iconPath": "81a7ec08e127d5ff0dbf19aea3f35a9484db6e48dd52c1374999b1b973cf609c",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Incapacitation",
+   "descHash": "Après utilisation de la technique d'Argenti, les ennemis situés dans une zone définie subissent Hébété pendant <nobr>#1[i]</nobr> secondes. Les ennemis hébétés ne peuvent pas attaquer votre équipe.<br />Initier un combat en attaquant un ennemi hébété inflige des DGT équivalents à <nobr>#2[i]%</nobr> de l'ATQ d'Argenti à tous les ennemis en début de combat et régénère son énergie de <nobr>#3[i]</nobr> points.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 814227,
+   "name": "Manifeste de la vertu",
+   "iconPath": "d4f83ece0a07177e46416c0ce2ca3050ad74749a65135c53a6d2dae4d7c99201",
+   "typeDescHash": "Technique",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      10,
+      0.8,
+      15
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ZdE",
+   "descHash": "Consomme <nobr>#4[i]</nobr> points d'énergie, inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ d'Argenti à tous les ennemis et inflige des DGT <nobr>#2[i]</nobr> fois supplémentaires à un ennemi aléatoire, infligeant à chaque fois des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de l'ATQ d'Argenti.",
+   "ultimateCost": 180,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 529701,
+   "name": "En mon propre jardin",
+   "iconPath": "5540c12e2af9385082fd0cb23a69ac3b284c04c3962c57796209173a2d8e4fa5",
+   "typeDescHash": "Ultime",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.68,
+      6,
+      0.57,
+      180
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.792,
+      6,
+      0.608,
+      180
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549438,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.904,
+      6,
+      0.646,
+      180
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549438,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2.016,
+      6,
+      0.684,
+      180
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.128,
+      6,
+      0.722,
+      180
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633379,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.24,
+      6,
+      0.76,
+      180
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633379,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2.38,
+      6,
+      0.8075,
+      180
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.52,
+      6,
+      0.855,
+      180
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.66,
+      6,
+      0.9025,
+      180
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.8,
+      6,
+      0.95,
+      180
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.912,
+      6,
+      0.988,
+      180
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.024,
+      6,
+      1.026,
+      180
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.136,
+      6,
+      1.064,
+      180
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.248,
+      6,
+      1.102,
+      180
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.36,
+      6,
+      1.14,
+      180
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1302101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1302202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1302203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 451529,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920202,
+          "count": 3
+         },
+         {
+          "id": 633379,
+          "count": 3
+         }
+        ]
+       }
+      },
+      {
+       "id": 1302204,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 451526,
+        "name": "Augmentation de PV",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+        "statusList": [
+         {
+          "key": "PV",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920202,
+          "count": 3
+         },
+         {
+          "id": 633379,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 451528,
+      "name": "Augmentation des DGT physiques",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "17a936e642ddc644dbb666c4a1279dd2386321a74cf73b0332a33c7f209c2176",
+      "statusList": [
+       {
+        "key": "Augm. des DGT physiques",
+        "value": 0.032
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635675,
+        "count": 3
+       },
+       {
+        "id": 549438,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Obtient immédiatement <nobr>#1[i]</nobr> cumul d'Ascension en début de tour.",
+    "ultimateCost": 0,
+    "id": 451432,
+    "name": "Piété",
+    "iconPath": "14df1d0194262159b3ab1945ff834c163a6e376e3ba67e7478eb3d0f0a3d6e2b",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635675,
+        "count": 3
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1302103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1302208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 451538,
+      "name": "Augmentation de PV",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 717320,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1302209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 451539,
+      "name": "Augmentation des DGT physiques",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "17a936e642ddc644dbb666c4a1279dd2386321a74cf73b0332a33c7f209c2176",
+      "statusList": [
+       {
+        "key": "Augm. des DGT physiques",
+        "value": 0.064
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 717320,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Inflige <nobr>#2[i]%</nobr> de DGT supplémentaires aux ennemis dont le pourcentage de PV est inférieur ou égal à <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 451434,
+    "name": "Courage",
+    "iconPath": "ba5300051602aa757b817aff94f4affc958723d4fb2dd6522d3fd1b6c1277152",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.5,
+       0.15
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1302201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 451531,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549438,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1302210,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 535471,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 160000
+     },
+     {
+      "id": 836261,
+      "count": 8
+     },
+     {
+      "id": 717320,
+      "count": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": 1302102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1302205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1302206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 451524,
+        "name": "Augmentation des DGT physiques",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "17a936e642ddc644dbb666c4a1279dd2386321a74cf73b0332a33c7f209c2176",
+        "statusList": [
+         {
+          "key": "Augm. des DGT physiques",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836261,
+          "count": 3
+         },
+         {
+          "id": 717320,
+          "count": 3
+         }
+        ]
+       }
+      },
+      {
+       "id": 1302207,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 451525,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836261,
+          "count": 3
+         },
+         {
+          "id": 717320,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 451527,
+      "name": "Augmentation d'ATQ",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920202,
+        "count": 5
+       },
+       {
+        "id": 633379,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Le personnage régénère immédiatement <nobr>#1[i]</nobr> points d'énergie lorsque les cibles ennemies entrent en combat.",
+    "ultimateCost": 0,
+    "id": 451435,
+    "name": "Générosité",
+    "iconPath": "7d12385288e858f8bdce9ead7806f22dccbbd49e5e68c85491dc0e414329c326",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920202,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corps",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "Chances de coup critique",
+    "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8"
+   },
+   {
+    "relicTypeHash": "Pieds",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "VIT",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Sphère planaire",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "Augm. des DGT physiques",
+    "propertyIconPath": "17a936e642ddc644dbb666c4a1279dd2386321a74cf73b0332a33c7f209c2176"
+   },
+   {
+    "relicTypeHash": "Corde de liaison",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "ATQ",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Première rencontre",
+   "text": "Je m'appelle Argenti, j'appartiens aux Chevaliers de la Beauté. Que cette rose symbolise mes salutations les plus sincères.",
+   "unlockRequirement": "",
+   "cnUrl": "01e961d24ea0bf29b38e9ec730f4e651b3b3917da7ae0e941354c53f3528ca92",
+   "jpUrl": "95e0788a39840a2ed7a0a476baf2218f7f7819cfda1bf9eb466429ae840a703c",
+   "enUrl": "1d01da62e745f5f8b74cfbeae741f5ab5a531b09269735b49479d59ad204e521",
+   "krUrl": "a84cdac845fa81ae3f382c29ec619f855a54892d39bffe5716f777b76664ac37"
+  },
+  {
+   "id": 2,
+   "title": "Salutation",
+   "text": "Si d'aventure le malheur s'abat sur vous, n'hésitez pas à faire appel à moi. Je vous protègerai.",
+   "unlockRequirement": "",
+   "cnUrl": "63b37e79019a61afcc3acac364535e0edbddef47451306b5d78cc35135e74c32",
+   "jpUrl": "13748d2f899bfc007196f76339c7fb55a0e100ed6bc387862d3b03eba40150b2",
+   "enUrl": "96d7a3d211b47bb52e042349695256520945f7ba2f25e4006e32b87f6f817270",
+   "krUrl": "e161ede147d44ef8f95e5c5b2c86d9e0dcaa6e563ae84ae09b81cda0f7946eb2"
+  },
+  {
+   "id": 3,
+   "title": "Au revoir",
+   "text": "Veuillez me pardonner, c'est ici que nos chemins se séparent. C'est mon devoir et mon destin de traverser l'univers en solitaire. Je suis sûr que nos chemins se recroiseront quelque part.",
+   "unlockRequirement": "",
+   "cnUrl": "b50be91a11427202bd269e2f78e54b0e66fee4b515a9c4323bd945f66ce8122f",
+   "jpUrl": "bac771d9d25652da40df2dfb6825a788483892707cebbebe47e2221449512ee4",
+   "enUrl": "a379548d4716e7049832284a28cd8559beb39680d3fae32ec0457ceebde5f400",
+   "krUrl": "e585833fa1c0fd1126464defe97772d36e18ccbbef6e08c8626505b1638ac260"
+  },
+  {
+   "id": 4,
+   "title": "Connaître Argenti : Origines",
+   "text": "Je fais partie de la Garde d'honneur parmi les Chevaliers de la Beauté. On nous reconnaît à nos armures finement ciselées.",
+   "unlockRequirement": "",
+   "cnUrl": "06c6a683ce251f712771f879ed7e64d7f6e6832de40db6deb5756642f6cc8071",
+   "jpUrl": "a9ed859074f5472bdeca155ade0d21ee2722f5dc2802701122f2932890d1f212",
+   "enUrl": "c81ad0dfa67b9f020b1b84c45bc169180ba0d31091800a468a49d397f3e329f6",
+   "krUrl": "122695a8c00bf12249514d72fc90142866e6f673bf805fae7fb8438d0ffdf83d"
+  },
+  {
+   "id": 5,
+   "title": "Bavardage : Les Chevaliers de la Beauté",
+   "text": "Les Chevaliers ont tendance à voyager seuls pour promouvoir la grâce de la Déesse dans tous les recoins de l'univers. Cependant, nous suivons tous le même code de la chevalerie.",
+   "unlockRequirement": "",
+   "cnUrl": "bf75816022e4aa334fd522695c90b9ca2f92ddfff4d434e779e00f3332dded2a",
+   "jpUrl": "d493ec09896f44c9fe57e6a18415c12566ccc17db13a8a13dc9e584ceaa335b9",
+   "enUrl": "74ea6afc168d4aec8e3f4de4c2adb490ee195ce742ad794fea46a4319832c7e2",
+   "krUrl": "67c7943bb0a663069b1693775c3043b6595eb8cd806e941a3f7b0a17f345c6cf"
+  },
+  {
+   "id": 6,
+   "title": "Bavardage : Le vaisseau spatial « Perle du cosmos »",
+   "text": "Mon vaisseau s'appelle la Perle du cosmos. J'avoue qu'elle demande pas mal d'entretien. Je n'aurais peut-être pas dû ajouter ces motfis compliqués sur le fuselage...",
+   "unlockRequirement": "",
+   "cnUrl": "f66fdd9dad020f3a549c4ce68097a69ce4bcb88251c6feae55006b46ca9baf4a",
+   "jpUrl": "8df8569dc2150dd6827761a92303980b67f0b4cddd9548be4edb1c61df35ab20",
+   "enUrl": "4562359f2d6619b042791d68b94e300b28446f313c2aab9a8e5038079fc62f44",
+   "krUrl": "80c2d790adea66abd1a6a16db95087a26c76c4c77ed393ea00337ff252df8831"
+  },
+  {
+   "id": 7,
+   "title": "Passe-temps",
+   "text": "J'ai une préférence pour les pains avec une croûte épaisse, comme ça, je peux les couper en tranches avec ma lance et les emporter avec moi. C'est indispensable pendant les longs voyages.",
+   "unlockRequirement": "",
+   "cnUrl": "72ad20fb1dfb068acdd06f9c7a011285520d519bb0e28cd0b8f573524aaeaa5e",
+   "jpUrl": "b6f7c68b8f6bd1de7401a65257497e5be5543ca04df67774d1914e538a97f5b5",
+   "enUrl": "f964a5958390de72b6e776e0f8519f46787d3af02e727ddf8086595a58da7a19",
+   "krUrl": "cf11b64d8f73e1562ae31a24b31d4cfa727e84d481f94f3067b91dddf43456e4"
+  },
+  {
+   "id": 8,
+   "title": "Problèmes",
+   "text": "L'éventail de divertissements et de délices culinaires proposés par la CPI est impressionnant. Mais j'ai souvent du mal à m'y repérer. J'espère qu'un jour, un expert pourra m'aiguiller.",
+   "unlockRequirement": "",
+   "cnUrl": "e428f7ce06fdcf839ffd4b83c9efa5dd21b246f485723960b54b6ee34bcd7e66",
+   "jpUrl": "7ec4f0080c50abac68f7e260b36b19576d288aa4c7b304077acf920e374afd4f",
+   "enUrl": "91888a14ccf8c714c73ee667151c3a929fff365a4c547ec29810316a0a21459d",
+   "krUrl": "a262c47250c447a2039f6a4a7f06c0c71c4046640f727426576532feee1948b2"
+  },
+  {
+   "id": 9,
+   "title": "Anecdote",
+   "text": "J'ai entendu dire que sur une certaine planète, les guerriers utilisaient des pages de livre sur des membres artificiels pour en extraire les connaissances directement dans leur système nerveux. Cela me fascine et force mon admiration.",
+   "unlockRequirement": "",
+   "cnUrl": "33f225a68f71431f4c116daa796d31165611e9f68f1bf6ade3c3c1de0cee8980",
+   "jpUrl": "7673b924ab7b2cdc3b77d481faccb7e5885ff26dd6c89a5b2142dcc349b4f133",
+   "enUrl": "dbadcced8baf379962ac5138e418363d6efaec6508d97c109a7493cf9adec416",
+   "krUrl": "581fed30bb99420f48025749c63677b974fde0ae4f0d46a1b7e870f39491a716"
+  },
+  {
+   "id": 10,
+   "title": "Connaissances",
+   "text": "Tu as déjà entendu parler d'une planète où la notion de laideur n'existe pas ? Encore plus curieux, les gens n'y ont même pas la notion de beauté...",
+   "unlockRequirement": "",
+   "cnUrl": "0bb54f1c347023182eb65dbdaa5217efda6195f9fee409029762acd3af965e2b",
+   "jpUrl": "a1471ed79cac9d665794ab8d33267592bfb5eea89d6bb0af966672a4aba9e0cb",
+   "enUrl": "9dbfb1c4f62729bd568de1c16379b542305dc4b3a9285f0bb697e77d59c252c7",
+   "krUrl": "41a4840db77f29592d83b6644a1c286f3a47b7f3b16cd6596ce001384e8e152a"
+  },
+  {
+   "id": 11,
+   "title": "À propos de March 7th",
+   "text": "Mademoiselle March a le cœur pur. Une telle pureté est rare et précieuse. Trop nombreux sont ceux qui sont fondamentalement vulgaires, aveuglés par l'appât du gain et adeptes de la flatterie. J'aimerais souligner davantage ma sympathie et mon estime envers les personnes comme elle.",
+   "unlockRequirement": "Débloqué après avoir terminé la mission de compagnon « Nuit des hallucinations cosmiques »",
+   "cnUrl": "5ce06851f0b4cf8d71f0fa1e7207fa93eed09728017316cc18718ce987584b24",
+   "jpUrl": "6b6e07517550d96e966924d28e2b7fb0455e9252d862446391180e76655b22c1",
+   "enUrl": "a8669922393c2731b3772dcea7fcb13e19260f9b5d9a3a6071d58cf6cb87493d",
+   "krUrl": "c305684615ac19984fa7e3bf334ef24f02feb2464520e3c5ecfe9db1f617e184"
+  },
+  {
+   "id": 12,
+   "title": "À propos de Himeko",
+   "text": "L'esprit de cette dame est d'une noblesse admirable. Malgré les défis et les difficultés inhérentes à la Voie du Pionnier, elle a conservé sa grâce et sa bravoure, des qualités que j'admire profondément. Ce sont justement ces qualités que j'espère incarner face au mal.",
+   "unlockRequirement": "Débloqué après avoir terminé la mission de compagnon « Nuit des hallucinations cosmiques »",
+   "cnUrl": "09bb7dd975fda5ad79bd92000f4cd3135a6aff0e0b7aaae0c832e662340efc2b",
+   "jpUrl": "6b7e343d014b51f128d5aabbfb2cb280c7b494837ab6f73817ad198032dc5834",
+   "enUrl": "6b190524cdae787dbe0c30d3c93c90a67025344d21280a04bde52f8af61d7aee",
+   "krUrl": "2493d5efdd297d3d9400ab6e230bd18f519340730dff64d5bd032965a2431a1d"
+  },
+  {
+   "id": 13,
+   "title": "À propos de Dan Heng",
+   "text": "Bien que monsieur Dan Heng soit méfiant, sa conduite reste infailliblement honorable. Et les exigences qu'il s'impose à lui-même sont aussi stricte que le code de la chevalerie. Je dois dire qu'il possède une forme unique de beauté.",
+   "unlockRequirement": "Débloqué après avoir terminé la mission de compagnon « Nuit des hallucinations cosmiques »",
+   "cnUrl": "7341e12b5884f24029735e9c9fd7cebf2973f26cccf0f9211add08e619d880c2",
+   "jpUrl": "537e32b64d81df7e3834c9a4ff8be7e7f12c8881a546862459889184d2785882",
+   "enUrl": "cbec8741c2044874ad99ad14e7cd96556cf087cd6fcaca5e5047e4064cfda204",
+   "krUrl": "f625b0253076bd355b7e19ea0043a8ec5892977a9a6ee4ba600466c00981580e"
+  },
+  {
+   "id": 14,
+   "title": "À propos de Welt",
+   "text": "Malgré les épreuves qu'il a traversées, monsieur Yang écoute toujours son cœur et sait encore profiter des petites joies du quotidien. C'est un homme dont j'admire la sagesse et la maturité.",
+   "unlockRequirement": "Débloqué après avoir terminé la mission de compagnon « Nuit des hallucinations cosmiques »",
+   "cnUrl": "5960044b356ba1255cb92101ddf734a9b1c77dba2f1a2f8ab86682eb088aa4f9",
+   "jpUrl": "42b0e58eefee366d11558b5934328c4af9609fd6f531c25fadca829e09cc5870",
+   "enUrl": "e70f82d0eca5983028a7230ba8ac9b1408ef63825c92a2f6fb0cd6962ad32fdf",
+   "krUrl": "a732a5ad21cfc23933491def8d6bb9c629086ebd34471537fdb0dc30743ae543"
+  },
+  {
+   "id": 15,
+   "title": "À propos de Pom-Pom",
+   "text": "Une boule de poils tout à fait fascinante. Je l'imagine parfaitement perché sur l'épaule d'un chevalier, tel un symbole de son honneur.",
+   "unlockRequirement": "Débloqué après avoir terminé la mission de compagnon « Nuit des hallucinations cosmiques »",
+   "cnUrl": "964b01a0c48da13d174098aee8e112673fcf6b2145afcc613a3dc0c597c367e2",
+   "jpUrl": "83105fd947f7825eb07a935c07c01637b74f8a2931d0c22586a12077ad68dd3b",
+   "enUrl": "fa27c90f9760645596c0685c74edffcccd6fc046bf2de42c778fba76d0fa61f5",
+   "krUrl": "7ad0a837e5623aacb4ab1f2349eea8b541253bb5cc70bc9201e8f4422ca6ab8a"
+  },
+  {
+   "id": 16,
+   "title": "À propos du Wubbabou",
+   "text": "Haha, quelle petite créature adorable.",
+   "unlockRequirement": "Débloqué après avoir terminé la mission de compagnon « Nuit des hallucinations cosmiques »",
+   "cnUrl": "30c6591b3a413d57f746a302db7cd7cbe60ca9620a88b49ab47de94032919820",
+   "jpUrl": "9e3d55e3622780c3c6ca4b9b3ef322d9751fb9c10b828a0402f4fd21222dca9b",
+   "enUrl": "e6c5a5e9467c9a096968db381fae2c6d72fee43e0207e7b0a7345fc5f3150f53",
+   "krUrl": "2f459668134174abd3ee6361b053be17c25b80525ad90ac520d722367dde73d2"
+  },
+  {
+   "id": 17,
+   "title": "À propos de Pionnier/Pionnière",
+   "text": "La personnalité que Pionnier/Pionnière dévoile est toujours aussi fascinante que le jour où nous nous sommes rencontrés.",
+   "unlockRequirement": "Débloqué après avoir terminé la mission de compagnon « Nuit des hallucinations cosmiques »",
+   "cnUrl": "ccc7ddcc5bdd7f894c7bd3f3a2e982906bfc2dcde1734884ba93e73d8a853b57",
+   "jpUrl": "ecb509ee0f1684fbd8b0ed075789356674caa878fb1611cce0c6f244ad2f7294",
+   "enUrl": "f19803f13412f6f72f7f782d3bbe28e2676655d644a44aff34cfa99af7a1b956",
+   "krUrl": "481c67aa74ee27e2433209ad4e657dce55cfe8286532f1d10cc37753507fea73"
+  },
+  {
+   "id": 18,
+   "title": "Activation d'Eidolon",
+   "text": "La Beauté est universelle. Elle existe dans tout ce qui est à notre portée et au-delà des confins de la galaxie.",
+   "unlockRequirement": "",
+   "cnUrl": "3acc9563d7bf58d0cc9f074612e649324bfc21e3c4ea269c689c4aa8bc55b73d",
+   "jpUrl": "6fae5b10797d3f0bb108c74edcb3aa11f4efc3734b86cf099043cb3eefd00f63",
+   "enUrl": "2139d0aa6eccbaa81797ff8e146b74e4d7af22f9b82b082f9b833c2a5439ba63",
+   "krUrl": "3c038389fc4d63133d4b0fa6f7e2ac12e92bbe61431c72b239a72e9a04f39470"
+  },
+  {
+   "id": 19,
+   "title": "Élévation de personnage",
+   "text": "Un pas assuré à la fois, on ne craint pas de tomber dans la décadence.",
+   "unlockRequirement": "",
+   "cnUrl": "1ad9674c69709583f24fe2e65cd4ff8c03762a7a1b0b270e30ce3141273d6f07",
+   "jpUrl": "4387f3f401f703b945fe85aef656014ae4a1b27c15be8ca200e6e822984e3d24",
+   "enUrl": "0040679646eb38346e7f30c03b65781b837008ec491e879a7c9a1e8bb5cccaef",
+   "krUrl": "2d82c6a38aa7a31547a81dafd1d40e4c89e36cc7b10261840f0a09375ef45773"
+  },
+  {
+   "id": 20,
+   "title": "Niveau max atteint",
+   "text": "J'ai fait le serment de promouvoir l'illustre nom de la Beauté dans tout l'univers, jusqu'à mon dernier souffle.",
+   "unlockRequirement": "",
+   "cnUrl": "ade65ef2f2076449d049a62dd6d28c5a3588d0503188cff389436c719e7a8a16",
+   "jpUrl": "d51e9b0f12e909b38664531faaec369b49920202c0a4ba535c0252ec23220211",
+   "enUrl": "d4cc6bec87a3bc265a088797e9636d6265986a6bd1bd759b8716ac4c7cbf32c9",
+   "krUrl": "a75ea39cc60e3f689aa97c2680c766033286b74187817f2fc908575493d25188"
+  },
+  {
+   "id": 21,
+   "title": "Activation de Trace",
+   "text": "Nous avons beau suivre des voies différentes en tant que chevaliers, nous nous retrouverons tous à la fin.",
+   "unlockRequirement": "",
+   "cnUrl": "f2fe6c5a56e86d6994913d02019746fa9d9b50f8584efb701ba1fa783d5548b1",
+   "jpUrl": "1b11bf94515d10fd23b536010c5dbcb75bed984a68c4b30713f9a4b9af49df43",
+   "enUrl": "bbf6dc6d81c87bc757a45128d1758b8586aaccda010abcdda69580ff294273f2",
+   "krUrl": "730b7290d3484b1a0fc2e1cd632ca74650e6eeeac2254fe62b51b587dc4ef4d5"
+  },
+  {
+   "id": 22,
+   "title": "Rejoint l'équipe avec Pionnier/Pionnière",
+   "text": "C'est un grand honneur de me tenir aux côté d'une âme aussi noble que la vôtre, Pionnier/Pionnière.",
+   "unlockRequirement": "",
+   "cnUrl": "dc90b28a84d5c0908b3bdb84c8801f60a1f2666e88900c3bfc9362a385a8e09f",
+   "jpUrl": "1406f757b27105174b1107bdcce64fad85a823405706f4914098fdf572f995ee",
+   "enUrl": "ad2676247b36abdd85cde26a70ceded2d6efbee1ec3dada8d310dca5150490f3",
+   "krUrl": "e921060042b2311a8d8a5a95e1c0beadeea45a90cd5927e4c14c431e7b2b9043"
+  },
+  {
+   "id": 23,
+   "title": "Rejoint l'équipe avec March 7th",
+   "text": "Mademoiselle March, permettez-moi d'utiliser mon humble pouvoir pour dissiper les ténèbres !",
+   "unlockRequirement": "",
+   "cnUrl": "eeb7cbb4887d99cdcc9c44bc8a760730ea4f4f6cf63f1426f469d5559105518a",
+   "jpUrl": "a95cbef307257106722026100d0559c88fcf78ebab0573828d95a8208949f7f1",
+   "enUrl": "f88cd241fd8bbd6f5df12cadbd0838902956d878abd6d92c50ed05e7cff25e51",
+   "krUrl": "ead0bcd037899dbe147c4695ac22502b6be08588785dc679bd3968d1cb0cdbcf"
+  },
+  {
+   "id": 24,
+   "title": "Rejoint l'équipe avec Dan Heng",
+   "text": "Le combat est un affrontement de l'esprit, Dan Heng. C'est un honneur de me battre à vos côtés.",
+   "unlockRequirement": "",
+   "cnUrl": "7d5fec977ea4a86cef0d8ddca1e8d674e0884e8dbd86f70ac5eb5cc9d171f9fa",
+   "jpUrl": "07dfd465faf231894a880adbf4e0dc31b0ee59d133b2915db475dc4e4c90ee9c",
+   "enUrl": "fa4405db37db2a72c4edb3fa5acd557b480f2e2a364d0e38debab2b4bc89201a",
+   "krUrl": "0d59252ddb683f969142627522308c19dca6b6ddee46239dcd28ecf5b8711bab"
+  },
+  {
+   "id": 25,
+   "title": "Rejoint l'équipe avec Himeko",
+   "text": "Madame Himeko, les étoiles semblent briller encore plus fort partout où votre bravoure se manifeste.",
+   "unlockRequirement": "",
+   "cnUrl": "ebc65ac4fe9fc5888c4e47b6af651b2a7c1d1e85a13969cdd5db94c2c1cbc8ad",
+   "jpUrl": "2268af3a5f884e67574553c3f5be0cba05d8e30aa7405a5c97fae5fdf1d0e216",
+   "enUrl": "84ca01f164119d83dd5697dd8b91d7362a7d8d6417587c353b7c2d99dea62401",
+   "krUrl": "b3b558b9f25ede534815af6abe9b8206d31ab08c630a45abb21f2a12c1d50078"
+  },
+  {
+   "id": 26,
+   "title": "Rejoint l'équipe avec Welt",
+   "text": "Accordez-moi votre aide, Monsieur Yang. J'ai besoin de votre ingéniosité et de votre clairvoyance.",
+   "unlockRequirement": "",
+   "cnUrl": "2956b317b110b547502f15b3b21c4067327f70fa36ad949ae7d2fc6e6e9d134d",
+   "jpUrl": "f1240d38da4922ec28c00f105bd37027ea190886debd7e006a6c73814e132a04",
+   "enUrl": "934fa5d9105055ea69a321aab2667309fdeaf4bde1b1f36d4d8aa8679727147a",
+   "krUrl": "8c059ba3e776b6a9ffce6c125134215ce86b2f16e953e75ce9ff504e69e60ed2"
+  },
+  {
+   "id": 51,
+   "title": "Rupture de faiblesse en début de combat",
+   "text": "Choisis la voie du bien.",
+   "unlockRequirement": "",
+   "cnUrl": "47d8816c0d859541aec1f88452f1bf80adff935af9875f16f0c776652ceee975",
+   "jpUrl": "3f8f98dda0cfd48c9882077c04779876a22bb8319a868e2e23ba44b4068917f4",
+   "enUrl": "3db95a831aa8dabf7e341da5e8c07383b1af6ca25056b675074ff8330a4587d2",
+   "krUrl": "c33b513b7da7ec64c6ae39cd7330d8a9d03984e1a0dbe13fef18000d39b13356"
+  },
+  {
+   "id": 52,
+   "title": "Avertissement de danger en début de combat",
+   "text": "Ce n'est qu'un mauvais moment à passer.",
+   "unlockRequirement": "",
+   "cnUrl": "55a377c3769f748368c03e786ba94595cd526924188bd573cff25329dac86ffe",
+   "jpUrl": "1a3ca077996c7689f39f79ea082e8725d1eddce591e26f5fb3bc0500fb4618d3",
+   "enUrl": "9fcddf42f85ca2a6fbadd742c642f5c1a346164ccec688fbadebca8111caa167",
+   "krUrl": "e4fa24cb0b8f1ad4ebe1d54bf0469d8e17c0f1f715e06d8756263a47c2484942"
+  },
+  {
+   "id": 53,
+   "title": "Début du tour 1",
+   "text": "Je le jure au nom de la rose solitaire.",
+   "unlockRequirement": "",
+   "cnUrl": "607cc005f0bb29da6c040bd55d096c2d9b2e92af68c455b08f2fbc1dffb84327",
+   "jpUrl": "ea346209948aa62d6048294116ad5f95f8590fc412afdd051c51f62b574ade0f",
+   "enUrl": "5b7d8dd6dc3780cb58082f45a908f48f38ca02ba1b17b5900a724c8acba71ead",
+   "krUrl": "e1e3b2acf6461fc51f6454d2322799a3ff6308ad072431e74dee6c01d7d3ba1d"
+  },
+  {
+   "id": 54,
+   "title": "Début du tour 2",
+   "text": "C'est mon devoir de Chevalier qui me guide.",
+   "unlockRequirement": "",
+   "cnUrl": "8ccc5a5a1f1ea2f42e981cde6cd7e3155063c7dcd9a4be6cdecc5b173f86ac76",
+   "jpUrl": "82a0d8ce1cfbbd9714e18582b79bc526a9dde7cf9af3e22f64b0a2dbf0e7eb18",
+   "enUrl": "76e791ea1ea33e10454a2e09c38e6eae2b595bdc230ab27ba8d7f168a96cb9d3",
+   "krUrl": "57123998455182cf8b9724ccb0c8a8449f1ff24861244f21f53a05ba1f51e9ca"
+  },
+  {
+   "id": 55,
+   "title": "Tour inactif",
+   "text": "Que cherchent des yeux ceux qui vagabondent ?",
+   "unlockRequirement": "",
+   "cnUrl": "375f61381a295ef24fa9ff5c5d9eca057bbe0b8614af8bd64873232938f14fd2",
+   "jpUrl": "b5ad0abba1077ab161068b00d0b3e13ec42ede012e009f7fd1f499b69b64df60",
+   "enUrl": "cf917cf73adc1f7c083975ea01e6b117ba838423c222f085f7ce27ea7bbb39b5",
+   "krUrl": "7c097ac94e6818d4391cbfa8ce5e0e5a65f49a2b99af0481f7abf6eab47238cd"
+  },
+  {
+   "id": 56,
+   "title": "Compétence 1",
+   "text": "La Beauté... est éternelle.",
+   "unlockRequirement": "",
+   "cnUrl": "7025dc5adafaa485ae982f88bbd059c4d48fd3cebb4aa2478cf8d74117085dce",
+   "jpUrl": "2e68542537d9d314ec9dbbdc8c9b571f2612e2e0a4547f4fccd73086b9f28167",
+   "enUrl": "03de7f6deda18c5ce43ca8ac60090918f9841b2e424b9dad0b6b7723651d56b8",
+   "krUrl": "5b1a84d48d4023b9cd5253cf42764eac648dcd13a59867fb02d8f157833ac51f"
+  },
+  {
+   "id": 57,
+   "title": "Compétence 2",
+   "text": "À bas... la vilenie.",
+   "unlockRequirement": "",
+   "cnUrl": "8b0b6fdc07c14586bf4f9b21fc8936ceee92811db29a64ee36d77a883709bf49",
+   "jpUrl": "3779d9c9473b1ff6b00c92def4b6138b5111380e1d83434ef39b9cbe40a64438",
+   "enUrl": "fabceec8432c74bedf1cb6dcc2e21f1e0463b7a93206de7428695bce0661028d",
+   "krUrl": "60afa59a1f76b502177c60e483a62e1daaf19984c8d6b7743466223610f2287e"
+  },
+  {
+   "id": 58,
+   "title": "Attaque légère subie",
+   "text": "Ce n'est rien.",
+   "unlockRequirement": "",
+   "cnUrl": "687f280e5bd9cda8469f352c1585ef841fb370542346c5a4cc646c28b7f9309f",
+   "jpUrl": "516c10231dd3fadbc70b74eff1be33420fe5c639cfd8d7b651caa0dd7502867e",
+   "enUrl": "1c24c8c47b8700afa89380a68862911be5873af9e5c0c769234a712495ae3cf8",
+   "krUrl": "46554be40b81aa48910ddd0a4317c3d3306a93299f4a0b47aff8b66982529580"
+  },
+  {
+   "id": 59,
+   "title": "Attaque lourde subie",
+   "text": "Un test...",
+   "unlockRequirement": "",
+   "cnUrl": "121978cca2705ecdc509ac4cfcd028c7f9cd65b1e3f314398389bf58066bd69a",
+   "jpUrl": "92172bd2868b7026faca1f60ad7e5d4fcda191667d69358c1c5313fc23dabadb",
+   "enUrl": "1ea417ae002c07921cd6a31abffe253755c35d8ee231e0949ecfb9fdac3d0819",
+   "krUrl": "345902310cef748a3c2e9afd3b8f7a0dd3e077da075d1cd749c7d1dba36fdc5a"
+  },
+  {
+   "id": 60,
+   "title": "Activation de l'ultime",
+   "text": "Je reverrai la lumière...",
+   "unlockRequirement": "",
+   "cnUrl": "2d84c79e3719cdabef4a735ab6a08cc2c0478aebbb6ea75c2c469c48dedc6cc7",
+   "jpUrl": "aad63ed72222903344fb2c42473609add01b348dfe6f1c74e659ccd2cd2a85a7",
+   "enUrl": "1f71f8597ac5265567f21fa6aa0a0b36e02b96497e8fa6e3b69f8e7117eff049",
+   "krUrl": "fc9f6601d5735d752d665e416719ac3328a2234375814dac2e5bff61c4234f1c"
+  },
+  {
+   "id": 61,
+   "title": "Déclenchement de l'ultime",
+   "text": "... Je protégerai la beauté dans tout l'univers.",
+   "unlockRequirement": "",
+   "cnUrl": "685da2a62ea93d51cdb909c486951fd30f6199ad544808e88e30f64fceff280e",
+   "jpUrl": "0c671e7c1ed0d2be079c482c243591ec2b941f280c127fd1eec7f13706ccdb68",
+   "enUrl": "56a73551ec41710a9d43390ca7e873b83a7f5206bd48924cfc92edee3c8f3921",
+   "krUrl": "e4883f661c260ee47ed6f0541fea10bec31d3a04967d43b5e3d2ee8767dfb8e3"
+  },
+  {
+   "id": 62,
+   "title": "Déclenchement de l'ultime renforcé",
+   "text": "... Pour Idrila.",
+   "unlockRequirement": "",
+   "cnUrl": "f77525a3d95bcc51a3b1d8db6afd381188f99e58ad402cb16ab125cb3789feb4",
+   "jpUrl": "472957784acd00d5d378eda619d2fd08ff3f7a4866ada184a095487b2bdcba4f",
+   "enUrl": "d0981ffef937dca5a49fa5a90227a1574e4b297d8f723bb06e00b7523d8dab45",
+   "krUrl": "fa65029c23c84e454ff87d2a1aa6798410d13d8181d8266e9af82c3428ec03d0"
+  },
+  {
+   "id": 63,
+   "title": "À terre",
+   "text": "Je... n'ai pas pu la trouver...",
+   "unlockRequirement": "",
+   "cnUrl": "99327fe246c287de4c004385f6cc4232bbc684ca87a8498a5c4e3e1682458271",
+   "jpUrl": "674e908dc8e798d119bc5ae5fbe7ce43484a426dfec78bd709f3b5a57746650f",
+   "enUrl": "d09860cf32865c942978d2bb6de74c7afa0ec724cf1e73a517e388a1e04dac0c",
+   "krUrl": "3d2040fe61c200078f3e86123832e3badf509bd95eaca6fff6b397e38c32c932"
+  },
+  {
+   "id": 64,
+   "title": "Retour au combat",
+   "text": "Ma foi est inébranlable.",
+   "unlockRequirement": "",
+   "cnUrl": "fb1bb62af8a0bfe5afa9c542d1f69dbef7dac8f57fe1d4eb26a6156a0622a4ba",
+   "jpUrl": "a092b1d7a0d4109bcdf2b9d4e2c65b0b1441eed82a47aa197c380e051a829ddc",
+   "enUrl": "921ce3e4a912c7242e04c22b60873fa5a5e51a8bd4d0c5d0cded333669e10399",
+   "krUrl": "f6576fb6190aad29a7c412e1ed8e6ed19d54fcef14724eaa13d3c8a9cbdf4ef7"
+  },
+  {
+   "id": 65,
+   "title": "Récupération de santé",
+   "text": "Vous avez toute ma gratitude.",
+   "unlockRequirement": "",
+   "cnUrl": "44776f16c6f756196d23776fc4472f0aa4267fee7e73fc5d9863515f9e724a30",
+   "jpUrl": "ea64d219949160b4325fe3c2a2cc6050727a021f974834fc2acbb3bbb22f9996",
+   "enUrl": "4555b7b093cc8e649c8238ab740fee5f52ae9926a75cc34010ad8d40ac759fb1",
+   "krUrl": "5eea4297fff6d73ed098bf042ba2d749832531a6b41443f2635428b2fa04b6bf"
+  },
+  {
+   "id": 66,
+   "title": "Technique",
+   "text": "La gloire avant tout.",
+   "unlockRequirement": "",
+   "cnUrl": "dbe8d067e231cc613088573ef7240fe839dd2c2e11c0ee90180814b6c4fd5933",
+   "jpUrl": "2c39f2ba77a3416514a0e210de248a5b4eea54945d48dd329fc539ecdb9cc33d",
+   "enUrl": "df1c177a63b0238ab09d48f2c53701c395ab9b24a5c6b87f911a7aac756eb442",
+   "krUrl": "cbf09b5969e867669b981a70f15772d1d04f331eb0fad55f9a2ae794b7f12a24"
+  },
+  {
+   "id": 67,
+   "title": "Combat gagné",
+   "text": "Les ténèbres s'arrêtent ici.",
+   "unlockRequirement": "",
+   "cnUrl": "2ec2c78ee478432e56020e209941016e15aedb95376ccf75f300fb30cbb6763d",
+   "jpUrl": "164c000bd4d13f2793d65a1a7af8b0ed0c2ca42d714145da6359fb6d62b9c59e",
+   "enUrl": "4863b4d0b2aad15739b400e7db04b5ca302170b3d2c74aa177ebc000f4693c3f",
+   "krUrl": "01f4c447878f97b49a0be57dcd6ec2b1ee236d3bfa74fbea1acb5ae85acd08a1"
+  },
+  {
+   "id": 68,
+   "title": "Ouverture de coffre au trésor 1",
+   "text": "Oh ? J'aime les surprises.",
+   "unlockRequirement": "",
+   "cnUrl": "5085bf6a2f1e63f5826f464f7d03ec8c36889a03abf22af866e11dfa74cd25f1",
+   "jpUrl": "7b02fcaff3e5d819c3fe231d960bcd1f20e2ce86ee1c45d4bea2273fe76923b2",
+   "enUrl": "3307bb2781036d436315144d9a316dbc455c272edeede8a5343e630ede8ec455",
+   "krUrl": "7de4a86787b16b3b689f77a969198080c955aca0836f4852a5914fe7165fd74a"
+  },
+  {
+   "id": 69,
+   "title": "Ouverture de coffre au trésor 2",
+   "text": "Je vous offre le parfum captivant de la rose.",
+   "unlockRequirement": "",
+   "cnUrl": "e37a6865d4e57482f153009e5330d4b4d6150fe74fffb2fe0f50b0e12e7bb2fc",
+   "jpUrl": "e64013bb8ab49ba1a10f444b6b0bb201963384893e6b1499e47f4770723e49d0",
+   "enUrl": "ab14ba7ad4031651465b6c4a5feb2b56a37f9f431251baa838f97ff51ed2bcf2",
+   "krUrl": "0b32af5d5dbe05d71b04dd5e0f8d81830a6ce958ef67e452b94d2ff41e2a9e66"
+  },
+  {
+   "id": 70,
+   "title": "Ouverture de coffre précieux",
+   "text": "Une beauté éblouissante qui captive l'âme et le cœur...",
+   "unlockRequirement": "",
+   "cnUrl": "4554e4a4af7b15642d90f61a23197695e90d725147c45359c2850238294f3f3b",
+   "jpUrl": "fc070de5faa5d54a3b65d54479897cdb72adef898d10d1d25272873fb2554ff2",
+   "enUrl": "919ba72b297b14cd3525a914236003a0404fc532156ff5242a6a1d7f5bc43a45",
+   "krUrl": "9c8914207a3fa32e455ab7802e67503fcd2d6002bb870a7a4c9a5c29869d4018"
+  },
+  {
+   "id": 71,
+   "title": "Énigme réussie 1",
+   "text": "Sage décision.",
+   "unlockRequirement": "",
+   "cnUrl": "d4c70df926c83f90748a2e83ce943e02cf62fd5c549cbea544e7d463094e8098",
+   "jpUrl": "87786b11089f80a29d47b631294742a56b085b3cfc8c87226158502ebe08a5ca",
+   "enUrl": "a7f1d2c9c599d36d608ad2140339577c976f16cb4def92ab37cc98fe84ef5138",
+   "krUrl": "5673523e53974eec95396441c7f6b1231301f73e84dba28e409d057165aa1e2c"
+  },
+  {
+   "id": 72,
+   "title": "Énigme réussie 2",
+   "text": "N'ayez crainte, c'est moi qui endosserai la responsabilité.",
+   "unlockRequirement": "",
+   "cnUrl": "cbdf5651cd4b41696f3356a1e252ec5f0fc1e953a5ea2716ebf60b8583a4ec87",
+   "jpUrl": "909e78c43ab8dee428553d13f4bea6e10f2f2256152c3bff382ad62760c839bf",
+   "enUrl": "066ebf8de1e5ef19585cf91e84b77e0f7a2469ba3f53e3b3e90d6fc3056f47fb",
+   "krUrl": "059c578a82e2b552d01c320d4ec08a503c6c079be746c7475eee24b02d557166"
+  },
+  {
+   "id": 73,
+   "title": "Cible ennemie trouvée",
+   "text": "Et si on mettait vos compétences à l'épreuve ?",
+   "unlockRequirement": "",
+   "cnUrl": "50dfe936caf69bcc6caa0c7240e11268506d4475d00bc0655683b6a155ccee27",
+   "jpUrl": "78457d4eb4b22e8a70748ddc231e59add3b360ccbe8930b545937bee422c56a9",
+   "enUrl": "09a8a1086f431be6588992643632ada056754576ad230560b799ae671e6127b1",
+   "krUrl": "4f43494073b23d40eb7aa09dbb073276378634569a16e281ca0404ddde88ab3e"
+  },
+  {
+   "id": 74,
+   "title": "Retour en ville",
+   "text": "Ce vent familier... Cela me rappelle de doux souvenirs.",
+   "unlockRequirement": "",
+   "cnUrl": "7181e072f481a57b22ee5e124ac7b7a921d41db97a0cda10924409f1424ac415",
+   "jpUrl": "b91086833c59a3775711325980a6a29b211a08f9aa5cab2a5aab680dc5b478ef",
+   "enUrl": "2824232597b9f3d78a51fe1fa59c73617b7e8ccfbf394684e38a68576d53d28c",
+   "krUrl": "6064b1f16ac97ec3af9a00d9eb15f45c215c985e0ab55341f506c2be686202c7"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Détails du personnage",
+   "text": "Un modèle chez les Chevaliers de la Beauté.<br />Il incarne droiture et honneur et il est doté d'une noblesse admirable. Errant seul dans le cosmos, il adhère de tout son cœur aux principes de la Beauté.<br />Faire respecter l'honneur de la beauté dans l'univers a été le devoir sacré d'Argenti. Depuis le début, il l'a rempli avec piété et avec une foi inébranlable.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Histoire du personnage : Partie I",
+   "text": "Sa ville natale était ravagée par la guerre depuis des années et les souvenirs de sa petite enfance étaient entachés par l'horreur des bains de sang et par les bombardements incessants. Dans tout ce chaos, il chercha refuge sous terre et, par hasard, découvrit un ocarina sous une tuile de pierre.<br />Les mains tremblantes, il tenta de tirer une mélodie de l'instrument.<br />Néanmoins, sa « musique » se révéla catastrophique.<br /><br />Pourtant, les notes éthérées produites par l'ocarina devinrent son sanctuaire spirituel, vers lequel il s'évadait de la dure réalité.<br /><br />Avec le temps, les parties de la mélodie se sont effacées de sa mémoire pour se transformer en un moment mystérieux et insaisissable. Ce n'est que des années plus tard, au cours d'une tournée de barde, que les mélodies de son passé ont refait surface quand il a sauvé un enfant des flammes de la guerre et qu'il a reçu un ocarina précieux en témoignage de gratitude.<br />Tenant le délicat instrument entre ses mains, il a examiné sa facture noble et parfaite. À nouveau, les mélodies de son enfance ont retenti, et avec elles un flot d'émotions et de souvenirs.<br />Toutefois, sa « musique » était toujours catastrophique.<br /><br />« Je suis trop maladroit pour maîtriser cet instrument... »<br />murmura-t-il en se dévalorisant. Pourtant, après un long moment de contemplation, un courage déterminé s'empara de lui. Il décida d'essayer à nouveau de créer une mélodie.<br />La musique ne changea pas, mais cette fois-ci, il rit de bon cœur.<br /><br />« Malgré l'interprétation horrible, je l'aime. Je trouve cette musique belle. »<br />Rangeant avec précaution son ocarina, il reprit son périple sans hésitation.",
+   "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie II",
+   "text": "Après avoir quitté sa ville natale, il entra en apprentissage chez un maître âgé.<br />Outre l'entraînement du corps et de l'esprit, il écoutait souvent les contes de son maître à propos des temps révolus. Des histoires de beauté transcendante et phénomènes mystiques dont avaient été témoins les ménestrels.<br /><br />« C'était un monde imprégné d'ambre, drapé dans une immobilité tranquille, où chaque être versait des larmes pour les superbes merveilles cachées sous sa surface. »<br />« D'après la rumeur, Idrila fera son retour triomphant dans l'univers au cours de l'insaisissable treizième mois, après un périple couvrant les nombreux cycles des treize ères de l'Ambre. »<br /><br />Jour après jour, son maître lui transmettait l'essence de la beauté. Il apprit à dépasser la simple récitation poétique et à embrasser la dévotion comme l'incarnation de la beauté, respectant sincèrement sa philosophie.<br /><br />Il comprit que la beauté n'était pas qu'un code à suivre, mais une façon de vivre, la raison d'être d'un chevalier.<br /><br />Néanmoins, son maître quitta ce monde sans avoir eu le temps de lui léguer toutes ses connaissances. Il reprit son voyage seul comme il l'avait fait quand il avait quitté son pays natal, méditant sur son existence. Au lieu de se lamenter sur sa solitude, il concentra ses efforts sur le fait de devenir un véritable chevalier.<br /><br />Durant son séjour dans une ancienne cité, il travailla à restaurer ses rues en ruine.<br />Il extermina des montres cauchemardesques et à l'arrivée du printemps, les lapins gambadaient à nouveau dans les bois.<br />Il bénéficia brièvement de la compagnie d'un autre chevalier, qui affirmait que son armure avait été bénie par la déesse.<br /><br />« Faire don de son âme signifie que chaque rencontre peut être la dernière, et que pourtant il n'est jamais question de reculer. »<br />« Imprégnez-vous de ces mots d'encouragement, mon cher ami. »<br /><br />Il contempla sa lance, souillée par les innombrables batailles menées au nom de la Beauté.<br />Avec une déférence solennelle, il essuya chaque marque, testament de son odyssée infatigable à la poursuite de la Beauté.",
+   "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie III",
+   "text": "Depuis qu'il s'est lancé sur la Voie de la Beauté, une voie ascétique, il a fait face à de nombreuses épreuves. Certaines sous forme de prières, d'autres sous forme d'occasions de se repentir et d'autres encore sous la forme du murmure des trois tentations diaboliques.<br /><br />Sans peur, il s'est confronté à ces tentations armé de sa lance inflexible et de son esprit inébranlable. À chaque victoire, la faiblesse, la cupidité et l'impureté ont été balayées dans le néant. Il a laissé son âme et sa vie entre les mains de l'Aiôn de la Beauté.<br /><br />Les murmures des trois tentations diaboliques prenaient la forme de divers désirs humains dans le brouillard de confusion.<br />Certains consistaient à poursuivre le profit et la vulgarité en s'adonnant éhontément au péché, d'autres manifestaient le désir de pouvoir en cédant à la séduction, d'autres l'esprit de conquête et l'abandon aux plaisirs terrestres.<br />Il s'agissait d'éroder le désir de repentir, pour en faire une banalité.<br /><br />Sur le champ de bataille, son sang se déversait en même temps que son honneur, chaque gouttelette se mêlant à sa longue chevelure. Sa lance restait inflexible, à ses côtés, bénie par la divinité pour rester à jamais tranchante.<br />Les échos de son maître estimé et de ses camarades persistaient comme des murmures à ses oreilles. Sa lance ne céderait jamais, à moins que son maître ne mette genou à terre.<br /><br />Couvert de sang, à la limite de s'évanouir, il discerna enfin un faible murmure qui semblait venir d'une source inconnue.<br /><br />« Vous autres, Chevaliers de la Beauté, êtes les ennemis de l'infamie et combattez pour la gloire.<br />À chaque victoire, vous devrez êtres confrontés à vous-mêmes et à la noirceur de vos cœurs. »<br /><br />« Félicitations ! Vous avez triomphé de l'Épreuve de réflexion, une fois de plus. »",
+   "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie IV",
+   "text": "Les chevaliers adoptent des attitudes différentes face à leur poursuite de la Beauté.<br />Certains vivent en accord avec leurs convictions toute leur vie, d'autres remettent constamment en question leurs croyances et luttent avec le désespoir de les changer.<br />Certains ont été décorés et se battent sur le champ de bataille, tandis que d'autres se jugent indignes, faisant partie des « laids » et incapables d'endosser l'habit de la beauté.<br /><br />La constante est que tous cherchent désespérément la véritable identité d'Idrila à travers l'univers.<br />C'est pourquoi il a juré de rester humble, compatissant et juste, et n'a jamais brisé son serment.<br />« Des malades ! Les Chevaliers de la Beauté sont une bande de malades ! »<br /><br />Lorsque la rumeur de la chute d'Idrila s'est répandue à travers le cosmos, leur perplexité n'a fait que prendre de l'ampleur.<br />Le doute a commencé à se mêler à la piété et la folie au rire.<br />Les notions d'honneur, de réputation et d'infamie se sont évanouies dans le néant.<br /><br />C'est ce qui a marqué la fin de tout.<br /><br />Quand il a enfin rencontré son ancien camarade, il a découvert un chevalier qui s'était transformé en fanatique, perdu dans sa poursuite aveugle du pouvoir.<br />L'ancien héros qui avait manié une arme légendaire et vaincu le dévoreur du ciel avait régressé à l'état de bête. Son armure s'était transformée en peau écailleuse, celle du béhémoth qu'il avait abattu, son arme en griffes et en crocs inflexibles, et son sang en une flamme visqueuse et agitée. Ses yeux, autrefois pleins de sagesse, brûlaient désormais d'une sauvagerie sans bornes. La voix qui l'avait jadis appelé « mon cher ami » était réduite à un sifflement strident.<br /><br />Les paroles prononcées pendant l'épreuve étaient devenues la prophétie d'une fin imminente.<br />Lui aussi... tomberait-il entre les griffes du mal ?",
+   "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
+  }
+ ],
+ "archive": {
+  "cvCn": "梁达伟",
+  "cvJp": "立花慎之介",
+  "cvKr": "최승훈",
+  "cvEn": "Adam Michael Gold",
+  "camp": "Chevaliers de la Beauté"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Argenti",
+ "rarity": 5,
+ "descHash": "Un chevalier des Chevaliers de la Beauté, dont la quête pieuse est de retrouver l'Aiôn disparu, Idrila la Beauté. Franc et candide, il erre à travers l'espace, défendant les vertus prônées par Idrila.",
+ "artPath": "6c804977de23b574e08b45a1dd1fa4f11ff66ea0f23ebfded42906fa9386d47e",
+ "miniIconPath": "b8b9eb745b1949f108d32c7248e1a7c6046be294909fea2823657f2f51f48c2b",
+ "damageType": {
+  "id": 1,
+  "iconPath": "9b77aa4b13a80228e6db8023c086a6dd43ffe89e318aa52e790528beb4e5ea20",
+  "color": "#FFFFFF",
+  "name": "Physique",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "a1916e75aa6a99295aa01786a946ae601da457b578603446740cbe30bc5fba5a",
+  "altIconPath": "01710b94c5c1a7c525cfaedc0ea8f32901c99aa71a28896a16d52656c3ce3654",
+  "color": "#FFFFFF",
+  "name": "L'Érudition",
+  "rarity": 0
+ },
+ "pageId": "argenti"
+}
