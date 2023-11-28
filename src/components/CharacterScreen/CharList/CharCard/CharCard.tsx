@@ -4,7 +4,6 @@ import { Shadow } from "react-native-shadow-2";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image, ImageSource } from "expo-image";
 import { cn } from "../../../../utils/cn";
-import { useSpring, animated } from "@react-spring/native";
 
 type Props = {
   image?:
@@ -35,7 +34,7 @@ export default function CharCard(props: Props) {
             props.stars === 5 ? ["#905A52", "#C8A471"] : ["#404165", "#9763CE"]
           }
         >
-          <AnimatedView
+          <View
             //   style={animation}
             className={cn("w-20 h-[102px]")}
           >
@@ -53,11 +52,9 @@ export default function CharCard(props: Props) {
                 {props.name}
               </Text>
             </View>
-          </AnimatedView>
+          </View>
         </LinearGradient>
       </Shadow>
     </TouchableOpacity>
   );
 }
-
-const AnimatedView = animated(View);

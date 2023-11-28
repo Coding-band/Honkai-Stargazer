@@ -21,40 +21,13 @@ export default function CharList() {
   const [DATA, SetDATA] = useState<any>([]);
 
   useEffect(() => {
-    if (DATA.length < 60) {
-      const i = setInterval(() => {
-        SetDATA([
-          ...DATA,
-          ...[
-            [DATA_SET[Math.floor(Math.random() * DATA_SET.length)]],
-            [
-              DATA_SET[Math.floor(Math.random() * DATA_SET.length)],
-              DATA_SET[Math.floor(Math.random() * DATA_SET.length)],
-            ],
-            [
-              DATA_SET[Math.floor(Math.random() * DATA_SET.length)],
-              DATA_SET[Math.floor(Math.random() * DATA_SET.length)],
-              DATA_SET[Math.floor(Math.random() * DATA_SET.length)],
-              DATA_SET[Math.floor(Math.random() * DATA_SET.length)],
-            ],
-          ][Math.floor(Math.random() * 3)],
-        ]);
-      }, 80);
-      return () => {
-        clearInterval(i);
-      };
-    }
-
-    // setTimeout(() => {
-    //   const result = [];
-
-    //   for (let i = 0; i < 30; i++) {
-    //     result.push(DATA_SET[Math.floor(Math.random() * DATA_SET.length)]);
-    //   }
-
-    //   SetDATA(result);
-    // });
-  }, [DATA]);
+      const result = [];
+      for (let i = 0; i < 30; i++) {
+        result.push(DATA_SET[Math.floor(Math.random() * DATA_SET.length)]);
+      }
+      SetDATA(result);
+  
+  }, []);
 
   return (
     <View style={{ width: "100%" }} className="p-[17px]">
