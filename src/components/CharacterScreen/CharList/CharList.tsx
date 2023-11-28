@@ -95,13 +95,11 @@ export default function CharList() {
   }, []);
 
   return (
-    <View
-      style={{ width: "100%", height: Dimensions.get("window").height - 76 }}
-      className="p-[17px]"
-    >
+    <View style={{ width: "100%" }} className="p-[17px]">
       <ScrollView>
         <View
           style={{
+            paddingVertical: 110,
             flexDirection: "row",
             flexWrap: "wrap",
             gap: 12,

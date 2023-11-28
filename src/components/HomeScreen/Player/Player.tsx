@@ -45,7 +45,7 @@ export default function Player() {
                 style={{ fontFamily: "HY75" }}
                 className="text-[#DBC291] text-[14px] font-medium"
               >
-                开拓等级 58
+                开拓等级 69
               </Text>
             </View>
           </View>

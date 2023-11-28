@@ -18,60 +18,68 @@ export default function Header(props: Props) {
 
   const handleClose = () => {
     // @ts-ignore
-    navigation.navigate("Home");
+    navigation.goBack();
   };
 
   return (
-    // <BlurView style={{ height: 110, width: "100%" }} intensity={10} tint="light">
-    <Shadow
-      style={{ width: "100%", height: 110 }}
-      distance={20}
-      startColor={"rgba(0, 0, 0, 0.25)"}
-    >
-      <View
-        className="w-full h-[110px]"
-        style={{
-          backgroundColor: "rgba(255, 255, 255, 0.20)",
-        }}
+    <View style={{ position: "absolute", width: "100%", zIndex: 50 }}>
+      <BlurView
+        style={{ height: 110, width: "100%" }}
+        intensity={20}
+        tint="dark"
       >
-        {/* 左邊叉叉 */}
-        <Pressable
-          onPress={handleClose}
-          className="absolute left-[17px] bottom-[19px] z-50"
-        >
-          <Image
-            style={{ width: 40, height: 40 }}
-            source={require("../../../../assets/icons/Close.svg")}
-          />
-        </Pressable>
-        {/* 中間主體 */}
+      <Shadow
+        style={{ width: "100%", height: 110 }}
+        distance={20}
+        startColor={"rgba(0, 0, 0, 0.25)"}
+      >
         <View
-          className="pb-3"
+          className="w-full h-[110px]"
           style={{
-            flex: 1,
-            alignItems: "center",
-            justifyContent: "flex-end",
-            gap: 4,
+            backgroundColor: "rgba(255, 255, 255, 0.20)",
           }}
         >
-          <Icon size={32} color="white" weight="fill" />
-          <View style={{ flexDirection: "row", alignItems: "center", gap: 13 }}>
+          {/* 左邊叉叉 */}
+          <Pressable
+            onPress={handleClose}
+            className="absolute left-[17px] bottom-[19px] z-50"
+          >
+            <Image
+              style={{ width: 40, height: 40 }}
+              source={require("../../../../assets/icons/Close.svg")}
+            />
+          </Pressable>
+          {/* 中間主體 */}
+          <View
+            className="pb-3"
+            style={{
+              flex: 1,
+              alignItems: "center",
+              justifyContent: "flex-end",
+              gap: 4,
+            }}
+          >
+            <Icon size={32} color="white" weight="fill" />
             <View
-              style={{ backgroundColor: "#ffffff40", height: 2, width: 50 }}
-            ></View>
-            <Text
-              className="text-white text-[16px]"
-              style={{ fontFamily: "HY65" }}
+              style={{ flexDirection: "row", alignItems: "center", gap: 13 }}
             >
-              {props.children}
-            </Text>
-            <View
-              style={{ backgroundColor: "#ffffff40", height: 2, width: 50 }}
-            ></View>
+              <View
+                style={{ backgroundColor: "#ffffff40", height: 2, width: 50 }}
+              ></View>
+              <Text
+                className="text-white text-[16px]"
+                style={{ fontFamily: "HY65" }}
+              >
+                {props.children}
+              </Text>
+              <View
+                style={{ backgroundColor: "#ffffff40", height: 2, width: 50 }}
+              ></View>
+            </View>
           </View>
         </View>
-      </View>
-    </Shadow>
-    // </BlurView>
+      </Shadow>
+      </BlurView>
+    </View>
   );
 }
