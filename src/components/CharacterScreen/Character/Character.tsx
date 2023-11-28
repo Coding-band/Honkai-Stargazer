@@ -44,7 +44,7 @@ export default function Character() {
           )}
         </ScrollView>
       </View>
-      <CharAction />
+      {scrollForMore || <CharAction />}
     </View>
   );
 }
