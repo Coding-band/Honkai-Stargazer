@@ -8,7 +8,7 @@ import React from "react";
 import { Shadow } from "react-native-shadow-2";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image, ImageSource } from "expo-image";
-import { cn } from "../../../utils/cn";
+import { cn } from "../../../../utils/cn";
 
 type Props = {
   image?:
@@ -19,7 +19,7 @@ type Props = {
     | ImageSource[]
     | null
     | undefined;
-  stars: 4 | 5;
+  star: 4 | 5;
   name: string;
   onPress?: (e: GestureResponderEvent) => void;
 };
@@ -37,7 +37,7 @@ export default function CharCard(props: Props) {
             overflow: "hidden",
           }}
           colors={
-            props.stars === 5 ? ["#905A52", "#C8A471"] : ["#404165", "#9763CE"]
+            props.star === 5 ? ["#905A52", "#C8A471"] : ["#404165", "#9763CE"]
           }
         >
           <View

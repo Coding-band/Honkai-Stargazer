@@ -5,6 +5,12 @@ import CharAction from "./CharAction/CharAction";
 import CharacterContext from "../../../context/CharacterContext";
 import CharInfo from "./CharInfo/CharInfo";
 import CharAttribute from "./CharAttribute/CharAttribute";
+import CharMaterialList from "./CharMaterialList/CharMaterialList";
+import CharTrace from "./CharTrace/CharTrace";
+import CharStory from "./CharStory/CharStory";
+import CharSuggestTeam from "./CharSuggestTeam/CharSuggestTeam";
+import CharSuggestRelics from "./CharSuggestRelics/CharSuggestRelics";
+import CharSuggestLightCone from "./CharSuggestLightCone/CharSuggestLightCone";
 
 export default function Character() {
   const charData = useContext(CharacterContext);
@@ -19,7 +25,7 @@ export default function Character() {
         source={charData?.imageFull}
       />
       <View
-        className="absolute w-full p-[30px] z-50"
+        className="absolute w-full p-[24px] z-50"
         style={{
           height: Dimensions.get("window").height - 40,
         }}
@@ -34,17 +40,19 @@ export default function Character() {
           }}
         >
           <CharInfo />
-          {scrollForMore ? (
-            <>
-              <CharAttribute />
-            </>
-          ) : (
-            // Placeholder
-            <View className="w-full h-[400px]"></View>
-          )}
+          <View style={{ opacity: scrollForMore ? 1 : 0 }}>
+            <CharAttribute />
+            <CharMaterialList />
+            <CharTrace />
+            <CharSuggestLightCone />
+            <CharSuggestRelics />
+            <CharSuggestTeam />
+            <CharStory />
+            <View className="pb-[150px]" />
+          </View>
         </ScrollView>
       </View>
-      {scrollForMore || <CharAction />}
+      <CharAction show={!scrollForMore} />
     </View>
   );
 }
