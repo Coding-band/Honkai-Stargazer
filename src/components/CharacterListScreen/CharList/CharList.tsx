@@ -5,7 +5,8 @@ import { map } from "lodash";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
 import characterList from "../../../../data/character_data/character_list.json";
-import * as character_list_map from "../../../../data/character_data/character_list_map";
+import * as character_list_map from "../../../../data/character_data/character_list_map/character_list_map";
+import * as images_map from "../../../../assets/images/images_map/images_map";
 
 /*
 const testImage1 = require("../../../../assets/images/test-charlist-img-1.png");
@@ -29,8 +30,9 @@ let DATA_SET = [
 
 const charListData = characterList.map((char) => ({
   // @ts-ignore
-  name: character_list_map.ZH_HK[char.name]?.name || "",
+  name: character_list_map.ZH_HK[char.name]?.name || char.name,
   rare: char.rare,
+  image: images_map.Chacracter[char.name]?.icon,
 }));
 
 export default function CharList() {
