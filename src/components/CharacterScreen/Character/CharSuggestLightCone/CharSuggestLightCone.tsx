@@ -1,6 +1,6 @@
 import { Sword } from "phosphor-react-native";
 import CharPageHeading from "../../../global/layout/CharPageHeading";
-import { View } from "react-native";
+import { ScrollView, View } from "react-native";
 import LightConeCard from "../../../global/layout/LightConeCard/LightConeCard";
 
 const testImage1 = require("../../../../../assets/images/test-light-cone-1.png");
@@ -17,18 +17,20 @@ export default function CharSuggestLightCone() {
   return (
     <View style={{ alignItems: "center" }}>
       <CharPageHeading Icon={Sword}>推荐光锥</CharPageHeading>
-      <View
-        style={{
-          flexDirection: "row",
-          flexWrap: "wrap",
-          columnGap: 8,
-        }}
-      >
-        {testData.map((l, i) => (
-          // @ts-ignore
-          <LightConeCard key={i} {...l} />
-        ))}
-      </View>
+      <ScrollView horizontal>
+        <View
+          style={{
+            flexDirection: "row",
+            flexWrap: "wrap",
+            columnGap: 8,
+          }}
+        >
+          {testData.map((l, i) => (
+            // @ts-ignore
+            <LightConeCard key={i} {...l} />
+          ))}
+        </View>
+      </ScrollView>
     </View>
   );
 }

@@ -31,7 +31,9 @@ export default function Character() {
         }}
       >
         <ScrollView
+          scrollEventThrottle={16}
           onScroll={(e) => {
+            console.log(1);
             if (e.nativeEvent.contentOffset.y > 0) {
               setScrollForMore(true);
             } else {

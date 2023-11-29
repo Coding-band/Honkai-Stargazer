@@ -14,6 +14,7 @@ import CharacterContext from "../context/CharacterContext";
 
 import charList from "../../data/character_data/character_list.json";
 import * as charListMap from "../../data/character_data/character_list_map/character_list_map";
+import * as imagesMap from "../../assets/images/images_map/images_map";
 
 export default function CharacterScreen() {
   const route = useRoute<RouteProp<ParamList, "Character">>();
@@ -30,6 +31,8 @@ export default function CharacterScreen() {
       path: charListMap.ZH_HK[charId]?.baseType?.name,
       combatType: charListMap.ZH_HK[charId]?.damageType?.name,
       location: charListMap.ZH_HK[charId]?.archive?.camp,
+      // @ts-ignore
+      imageFull: imagesMap.Chacracter[charId]?.imageFull,
     });
     setShowMain(true);
   }, []);
