@@ -15,7 +15,7 @@ const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 
 export default function CharAttribute() {
   const [attrFromLevel, setAttrFromLevel] = useState(0);
-  const [attrToLevel, setAttrToLevel] = useState(7);
+  const [attrToLevel, setAttrToLevel] = useState(8);
 
   return (
     <View style={{ alignItems: "center" }}>

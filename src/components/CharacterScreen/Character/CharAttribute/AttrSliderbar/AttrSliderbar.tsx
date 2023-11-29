@@ -17,7 +17,7 @@ type Props = {
 
 export default function AttrSliderbar(props: Props) {
   // 定義每個點的 X 位置
-  const points = [0, 22, 57, 92, 130, 162, 200, 235]; // 根据您的布局调整这些值
+  const points = [0, 22, 57, 92, 130, 162, 200, 235,260]; // 根据您的布局调整这些值
 
   const positionX = useSharedValue(points[props.value]);
   const transitionX = useSharedValue(0);
@@ -26,7 +26,7 @@ export default function AttrSliderbar(props: Props) {
     let computedX = positionX.value + transitionX.value;
 
     if (computedX < 0) computedX = 0;
-    else if (computedX > 255) computedX = 255;
+    else if (computedX > 260) computedX = 260;
 
     return { left: computedX };
   });
