@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ScrollView, View } from "react-native";
 
-import CharCard from "../CharCard/CharCard";
+import CharCard from "../../global/layout/CharCard/CharCard";
 import { map } from "lodash";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
@@ -53,9 +53,7 @@ export default function CharList() {
                   id: 0,
                 });
               }}
-              image={item.image}
-              stars={item.star}
-              name={item.name}
+              {...item}
             />
           ))}
         </View>

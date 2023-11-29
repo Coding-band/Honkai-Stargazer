@@ -3,11 +3,13 @@ import { View, Text } from "react-native";
 import { Info } from "phosphor-react-native";
 import AttrSliderbar from "./AttrSliderbar/AttrSliderbar";
 import { Image } from "expo-image";
+import CharPageHeading from "../../../global/layout/CharPageHeading";
 
 const HPIcon = require("../../../../../assets/icons/HP.png");
 const STRIcon = require("../../../../../assets/icons/STR.png");
 const DEFIcon = require("../../../../../assets/icons/DEF.png");
 const DEXIcon = require("../../../../../assets/icons/DEX.png");
+const ELIcon = require("../../../../../assets/icons/EL.png");
 
 const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 
@@ -16,24 +18,8 @@ export default function CharAttribute() {
   const [attrToLevel, setAttrToLevel] = useState(7);
 
   return (
-    <View className="pb-[150px]" style={{ alignItems: "center" }}>
-      <View className="py-[30px]" style={{ alignItems: "center" }}>
-        <Info size={32} color="white" />
-        <View style={{ flexDirection: "row", alignItems: "center", gap: 13 }}>
-          <View
-            style={{ backgroundColor: "#ffffff40", height: 2, width: 50 }}
-          ></View>
-          <Text
-            className="text-white text-[16px]"
-            style={{ fontFamily: "HY65" }}
-          >
-            基础属性
-          </Text>
-          <View
-            style={{ backgroundColor: "#ffffff40", height: 2, width: 50 }}
-          ></View>
-        </View>
-      </View>
+    <View style={{ alignItems: "center" }}>
+      <CharPageHeading Icon={Info}>基础属性</CharPageHeading>
       {/* 等級 - 起點 */}
       <View
         className="w-full"
@@ -90,6 +76,10 @@ export default function CharAttribute() {
           <Image className="w-6 h-6" source={DEXIcon} />
           <Text className="text-white text-[16px] font-medium">115</Text>
         </View>
+        {/* <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <Image className="w-6 h-6" source={ELIcon} />
+          <Text className="text-white text-[16px] font-medium">120</Text>
+        </View> */}
       </View>
     </View>
   );
