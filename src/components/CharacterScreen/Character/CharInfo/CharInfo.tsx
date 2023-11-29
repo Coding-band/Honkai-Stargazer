@@ -1,18 +1,16 @@
-import { View, Text, Dimensions } from 'react-native'
-import React, { useContext } from 'react'
-import CharacterContext from '../../../../context/CharacterContext';
-import CharStars from './CharStars/CharStars';
-import { Image } from 'expo-image';
+import { View, Text, Dimensions } from "react-native";
+import React, { useContext } from "react";
+import CharacterContext from "../../../../context/CharacterContext";
+import CharStars from "./CharStars/CharStars";
+import { Image } from "expo-image";
 
 const testPath = require("../../../../../assets/images/test-path.png");
 const testCompatType = require("../../../../../assets/images/test-combat-type.png");
 
-
 export default function CharInfo() {
- 
-    const charData = useContext(CharacterContext)
- 
-    return (
+  const charData = useContext(CharacterContext);
+
+  return (
     <View
       style={{
         paddingTop: Dimensions.get("window").height - 350,
@@ -23,7 +21,7 @@ export default function CharInfo() {
         <Text className="text-[32px] font-[HY65] text-white">
           {charData?.name}
         </Text>
-        <CharStars count={charData?.stars || 5} />
+        <CharStars count={charData?.rare || 5} />
       </View>
       <View
         style={{

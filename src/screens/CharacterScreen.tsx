@@ -1,5 +1,5 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { View } from "react-native";
+import React, { useEffect, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { ImageBackground } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
@@ -7,20 +7,32 @@ import Header from "../components/global/layout/Header";
 import { SCREENS } from "../constant/screens";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { ParamList } from "../types/navigation";
-import Character from "../components/CharacterScreen/Character/Character";
+import CharacterMain from "../components/CharacterScreen/Character/Character";
 import { filter } from "lodash";
-import CharacterType from "../types/Character";
+import { CharacterName, Character } from "../types/character";
 import CharacterContext from "../context/CharacterContext";
-import characterList from "../../data/character_data/character_list.json";
+
+import charList from "../../data/character_data/character_list.json";
+import * as charListMap from "../../data/character_data/character_list_map/character_list_map";
 
 export default function CharacterScreen() {
   const route = useRoute<RouteProp<ParamList, "Character">>();
-  const charName = route.params.name;
-  // @ts-ignore
-  const charData: CharacterType = filter(
-    characterList,
-    (char) => char?.name === charName
-  )[0];
+  const charId = route.params.id as CharacterName;
+
+  const [charData, setCharData] = useState<Character>({});
+  const [showMain, setShowMain] = useState(false);
+
+  useEffect(() => {
+    const charDataJson = filter(charList, (char) => char?.name === charId)[0];
+    setCharData({
+      name: charListMap.ZH_HK[charId]?.name,
+      rare: charDataJson?.rare,
+      path: charListMap.ZH_HK[charId]?.baseType?.name,
+      combatType: charListMap.ZH_HK[charId]?.damageType?.name,
+      location: charListMap.ZH_HK[charId]?.archive?.camp,
+    });
+    setShowMain(true);
+  }, []);
 
   return (
     <CharacterContext.Provider value={charData}>
@@ -41,7 +53,7 @@ export default function CharacterScreen() {
         <Header leftBtn="back" Icon={SCREENS.CharacterPage.icon}>
           {charData?.name || ""}
         </Header>
-        <Character />
+        {showMain && <CharacterMain />}
         <LinearGradient
           className="w-full h-[400px] absolute bottom-0"
           colors={["#00000000", "#000000"]}

@@ -1,8 +1,6 @@
 import { createContext } from "react";
-import Character from "../types/Character";
+import { Character } from "../types/character";
 
-type CharacterContextType = Character | null;
+const CharacterContext = createContext<Character | null>(null);
 
-const CharacterContext = createContext<CharacterContextType>(null);
-
-export default CharacterContext
+export default CharacterContext;

@@ -6,7 +6,7 @@ import { Image } from "expo-image";
 const StarIcon = require("../../../../../../assets/icons/Star.svg");
 
 type Props = {
-  count: 4 | 5;
+  count: number;
 };
 
 export default function CharStars(props: Props) {

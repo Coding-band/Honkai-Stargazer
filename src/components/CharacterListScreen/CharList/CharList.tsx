@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ScrollView, View } from "react-native";
 import CharCard from "../../global/layout/CharCard/CharCard";
 import { map } from "lodash";
@@ -7,6 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 import characterList from "../../../../data/character_data/character_list.json";
 import * as character_list_map from "../../../../data/character_data/character_list_map/character_list_map";
 import * as images_map from "../../../../assets/images/images_map/images_map";
+import { CharacterCard, CharacterName } from "../../../types/character";
 
 /*
 const testImage1 = require("../../../../assets/images/test-charlist-img-1.png");
@@ -28,15 +29,23 @@ let DATA_SET = [
 ];
 */
 
-const charListData = characterList.map((char) => ({
-  // @ts-ignore
-  name: character_list_map.ZH_HK[char.name]?.name || char.name,
-  rare: char.rare,
-  image: images_map.Chacracter[char.name]?.icon,
-}));
-
 export default function CharList() {
   const navigation = useNavigation();
+
+  const [charCardListData, setCharCardListData] = useState<CharacterCard[]>();
+
+  useEffect(() => {
+    setCharCardListData(
+      characterList.map((char) => ({
+        id: char.name,
+        name:
+          character_list_map.ZH_HK[char.name as CharacterName]?.name ||
+          char.name,
+        rare: char.rare,
+        image: images_map.Chacracter[char.name as CharacterName]?.icon,
+      }))
+    );
+  }, []);
 
   return (
     <View style={{ width: "100%" }} className="p-[17px]">
@@ -50,13 +59,13 @@ export default function CharList() {
             justifyContent: "center",
           }}
         >
-          {map(charListData, (item, i) => (
+          {map(charCardListData, (item, i) => (
             <CharCard
               key={i}
               onPress={() => {
                 // @ts-ignore
                 navigation.navigate(SCREENS.CharacterPage.id, {
-                  name: item?.name,
+                  id: item?.id,
                 });
               }}
               {...item}
