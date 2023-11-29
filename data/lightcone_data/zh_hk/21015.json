@@ -1,0 +1,503 @@
+{
+ "name": "決心如汗珠般閃耀",
+ "rarity": 4,
+ "descHash": "拳檯燈光閃耀，<br />卻閃耀不過從背脊間滑落的汗珠。<br /><br />他早已決心用自己的雙拳守護重要的人們。<br />而給予他決心的，也正是他們<br />——不管是臺上臺下，都站在他的背後。",
+ "iconPath": "2a5e0aca15170c4b6843b0342510231cea9bbf57adbc2aef205e2a279f6337ff",
+ "artPath": "64933796ab1bd0f2d536ab2ecf165e46fdf31f5c5b5c1571f988d367da979aaa",
+ "mediumIconPath": "d2e60c97a441cf8bfa823bbd25d849f4527f214200ed4de5bd840739751bb4a7",
+ "baseType": {
+  "id": 0,
+  "iconPath": "96c3b8dd457b98955d440531986a23d509f705c13d7aa794d1e97bcfd03d5701",
+  "color": "#FFFFFF",
+  "name": "虛無",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "信用點",
+   "desc": "星際和平公司與客戶結算時使用的貨幣，如今已成爲太空旅行的硬通貨。",
+   "lore": "「人們奔波、爭鬥、貿易，爲的不過是個終端裏顯示的數字。但真正珍貴之物，公司的數字是買不到的。」",
+   "purpose": "通用貨幣",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "任務獎勵",
+    "委託獎勵",
+    "餘燼兌換"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "fcb7215a2a17b09cd16362b5e1b398eaaf2fde23a94057c5f961151885a620c5",
+   "name": "工造機杼",
+   "desc": "仙舟機巧的部件。強化所需的簡單材料。",
+   "lore": "仙舟機巧術的基礎。機巧零件最小的單位，拆開它就像在破壞生物的細胞結構。<br /><br />「博識學會以兩百萬信用點懸賞無損拆解仙舟偃偶的技術方案。」<br />「如果你認識螺絲咕姆，這兩百萬簡直白給……」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "入魔機巧掉落",
+    "「模擬宇宙」中敵方掉落",
+    "委託獎勵",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "1977002edbf48f44c49d08284ce2681f622e70c447d50de10a8b9491dfcb719c",
+   "name": "工造迴輪",
+   "desc": "仙舟機巧的部件。強化所需的普通材料。",
+   "lore": "仙舟機巧術的連接件。細密勾連的輪齒微如芥子，卻連綴成複雜的機體，令機械靈動如生命。<br /><br />「其形圓融，取法乎天。其動往復，取法乎道。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "突破至均衡等級2後，入魔機巧掉落",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bb7670872389d870154ac70d1b29dee2d6c123f558951c6f914f1d9a70c28382",
+   "name": "黯淡黑曜",
+   "desc": "一片自虛空中捕獲的黑質。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "任何手段都無法驗明它的本體。<br />輕輕觸碰，從碎片中傳來不明的囈語。<br /><br />「████ ██ █ █」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "餘燼兌換"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "提純以太",
+   "desc": "光錐的強化材料，可以獲得<nobr>6000</nobr>點光錐經驗。",
+   "lore": "一罐經由特殊技術精煉而成的以太。<br /><br />「憶庭盼望重現往日的輝煌，但那是由他們所選擇的『往日輝煌』，明白嗎？」",
+   "purpose": "光錐經驗材料",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "擬造花萼【邊緣通路】",
+    "「忘卻之庭」"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "name": "凝縮以太",
+   "desc": "光錐的強化材料，可以獲得<nobr>2000</nobr>點光錐經驗。",
+   "lore": "一罐經由特殊技術精煉而成的以太。<br /><br />「小心輕放，勿壓勿摔。破損泄漏後請參照《流溢災難應對手冊》第二章內容進行災後處置。」",
+   "purpose": "光錐經驗材料",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "擬造花萼【邊緣通路】",
+    "餘燼兌換"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d4e3585911d6f71b87b47ced1a2f6e0b0f77dbdc8615650896e77bae87361afd",
+   "name": "稀薄以太",
+   "desc": "光錐的強化材料，可以獲得<nobr>500</nobr>點光錐經驗。",
+   "lore": "本不應存在於現實的假想介質，創造光錐的基本原料。<br />將之注入光錐，能令封裝其中的事象更爲清晰。<br /><br />「原來如此，流光憶庭的『憶質』就是這東西，怪不得憶者能攜帶記憶進行星際旅行。」",
+   "purpose": "光錐經驗材料",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "擬造花萼【邊緣通路】",
+    "委託獎勵"
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "058379eb2e88612f2b1f78a6c3195c457e124c9b6de602d6dd2fe0b2d17245f3",
+   "name": "工造渾心",
+   "desc": "仙舟機巧的部件。強化所需的高級材料。",
+   "lore": "仙舟機巧術的中樞。渾儀猶如心竅般翻滾脈動，令機械如活物般思考。<br /><br />「大人勿驚。拆去其心，便能令他…唔，她？不，令它失卻靈智，還形金石。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "突破至均衡等級4後，入魔機巧掉落",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "name": "沉淪黑曜",
+   "desc": "一整塊自虛空中捕獲的黑質。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "意志薄弱之人只是向其棱面送去一瞥，便會在混沌中永世沉淪。<br /><br />「         」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "「萬能合成機」- 材料合成"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1a896480b5f6ee84644db112069845e85930f6dbc0f428a3f8a6de2b187702af",
+   "name": "虛空黑曜",
+   "desc": "一塊自虛空中捕獲的黑質。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "漆黑的棱面上甚至反射不出任何倒影。它不僅吸收着光，似乎還奪走了持有者的情緒起伏，只留下淡淡的空洞感。<br /><br />「……」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "「萬能合成機」- 材料合成",
+    "餘燼兌換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549503,
+     "count": 5
+    }
+   ],
+   "attackBase": 21.6,
+   "attackAdd": 3.24,
+   "hpBase": 43.2,
+   "hpAdd": 6.48,
+   "defenseBase": 15,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 635669,
+     "count": 3
+    },
+    {
+     "id": 549503,
+     "count": 10
+    }
+   ],
+   "attackBase": 47.52,
+   "attackAdd": 3.24,
+   "hpBase": 95.04,
+   "hpAdd": 6.48,
+   "defenseBase": 33,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 920196,
+     "count": 3
+    },
+    {
+     "id": 633444,
+     "count": 6
+    }
+   ],
+   "attackBase": 82.08,
+   "attackAdd": 3.24,
+   "hpBase": 164.16,
+   "hpAdd": 6.48,
+   "defenseBase": 57,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 920196,
+     "count": 6
+    },
+    {
+     "id": 633444,
+     "count": 9
+    }
+   ],
+   "attackBase": 116.64,
+   "attackAdd": 3.24,
+   "hpBase": 233.28,
+   "hpAdd": 6.48,
+   "defenseBase": 81,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 836255,
+     "count": 4
+    },
+    {
+     "id": 717385,
+     "count": 5
+    }
+   ],
+   "attackBase": 151.2,
+   "attackAdd": 3.24,
+   "hpBase": 302.4,
+   "hpAdd": 6.48,
+   "defenseBase": 105,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 836255,
+     "count": 8
+    },
+    {
+     "id": 717385,
+     "count": 7
+    }
+   ],
+   "attackBase": 185.76,
+   "attackAdd": 3.24,
+   "hpBase": 371.52,
+   "hpAdd": 6.48,
+   "defenseBase": 129,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 220.32,
+   "attackAdd": 3.24,
+   "hpBase": 440.64,
+   "hpAdd": 6.48,
+   "defenseBase": 153,
+   "defenseAdd": 2.25
+  }
+ ],
+ "skill": {
+  "id": 21015,
+  "name": "回眸",
+  "descHash": "當裝備者擊中敵方目標時，如果該目標不處於【攻陷】狀態，則有<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>的基礎概率使其陷入【攻陷】狀態。【攻陷】狀態下的敵方目標防禦力降低<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>，持續<nobr>#3[i]</nobr>回合。",
+  "levelData": [
+   {
+    "params": [
+     0.6,
+     0.12,
+     1
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.7,
+     0.13,
+     1
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.8,
+     0.14,
+     1
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.9,
+     0.15,
+     1
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     1,
+     0.16,
+     1
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 50,
+   "2": 80,
+   "3": 140,
+   "4": 210,
+   "5": 300,
+   "6": 400,
+   "7": 510,
+   "8": 640,
+   "9": 780,
+   "10": 930,
+   "11": 1090,
+   "12": 1260,
+   "13": 1460,
+   "14": 1650,
+   "15": 1860,
+   "16": 2080,
+   "17": 2300,
+   "18": 2540,
+   "19": 2790,
+   "20": 2900,
+   "21": 3010,
+   "22": 3130,
+   "23": 3240,
+   "24": 3360,
+   "25": 3490,
+   "26": 3610,
+   "27": 3740,
+   "28": 3860,
+   "29": 3990,
+   "30": 4130,
+   "31": 4260,
+   "32": 4400,
+   "33": 4540,
+   "34": 4680,
+   "35": 4820,
+   "36": 4970,
+   "37": 5110,
+   "38": 5260,
+   "39": 5410,
+   "40": 5560,
+   "41": 6100,
+   "42": 6450,
+   "43": 6810,
+   "44": 7180,
+   "45": 7550,
+   "46": 7930,
+   "47": 8310,
+   "48": 8710,
+   "49": 9110,
+   "50": 9520,
+   "51": 9940,
+   "52": 10350,
+   "53": 10780,
+   "54": 11220,
+   "55": 11660,
+   "56": 12110,
+   "57": 12570,
+   "58": 13030,
+   "59": 13500,
+   "60": 13980,
+   "61": 14630,
+   "62": 15420,
+   "63": 16210,
+   "64": 17010,
+   "65": 17830,
+   "66": 18660,
+   "67": 19500,
+   "68": 20350,
+   "69": 21220,
+   "70": 22100,
+   "71": 24650,
+   "72": 26970,
+   "73": 29330,
+   "74": 31720,
+   "75": 34140,
+   "76": 36600,
+   "77": 39100,
+   "78": 41620,
+   "79": 44180,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "21015"
+}

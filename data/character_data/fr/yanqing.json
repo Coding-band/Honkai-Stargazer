@@ -1,0 +1,2791 @@
+{
+ "spRequirement": 140,
+ "iconPath": "0063c1e41293ebf22000b5099c0824ad41a8b371fdadeb2bf819e939bc93dd81",
+ "bgPath": "fc1717c75b624406911059f99c2832da35bc16a0f6e10a3610bc2857a8073655",
+ "figPath": "76de921d5cb178f3e18cc793bb75e77c1d82c491b2b8a55eab76a1ace5fc111c",
+ "fgPath": "e5f9d287afdd963882c0d711ff35014b1fe809075483b204d6bf72830c00bba0",
+ "splashIconPath": "5385996ae4e46fb5f82ec4a7bf675a140fdd3621b5ebf4da3737b9ccb1569484",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 2,
+  "iconPath": "db0b64061159f4acfb6a3034911f3b42572d0d8d51723ca888b8ce49b06961c5",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Braises immortelles"
+   ]
+  },
+  "67220": {
+   "id": 67220,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "454d7cc126855797ffe9e381f1c4516d3fa988feafd6ed05db41cfe55b21f309",
+   "name": "Chitine gelée",
+   "desc": "Chitine de givre qui émet un froid murmure. Permet l'élévation des personnages de type glace.",
+   "lore": "Étrange chitine prélevée sur une créature interdimensionnelle. Elle n'est plus aussi froide, mais elle frémit encore en absorbant la chaleur environnante.<br /><br />« Pourquoi personne n'a-t-il encore pensé à la vendre aux mondes dépourvus de climatiseurs ? Elle est d'ailleurs tout aussi bruyante. »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/67220",
+   "comeFrom": [
+    "Ombre stagnante de Passenuage",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "e45d41312c347a0e92a83719307e7cad0367aa98023d7b4627daa452423892ca",
+   "name": "Complainte d'une gardienne",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "Avec ce diadème, le vœu corrompu d'une Gardienne s'est également brisé.<br />Elle cherchait le moyen d'éviter à son peuple le redoutable Hiver éternel, mais a fini par devenir la marionnette d'une conscience qui la dépasse.<br /><br />« Le titre de Gardien suprême s'est transmis de génération en génération chez les dirigeants de Belobog, c'est celui qui prend soin de tous les autres. Nul n'a songé que les Gardiens eux-mêmes pouvaient avoir besoin d'attention et de protection. »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "Écho de la guerre de la Colline de l'Hiver éternel"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Entraînement quotidien",
+    "Braises immortelles"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Récompense d'affectation"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "15365d10ed38771d99d247bc228b03787e29972cc714a655a9b8feef3031505e",
+   "name": "Instinct de pilleur",
+   "desc": "Une petite quantité d'antimatière. Matériau commun utilisé pour le renforcement.",
+   "lore": "Petite quantité d'antimatière qui émane d'un Reaver des Rangers du néant, telle la matérialisation de son instinct destructeur.<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "Légion d'antimatière",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3cd4c92ff44d695595377ffc6c0896d6839775f6014e96daf679b256bc0d19cf",
+   "name": "Ambition d'usurpateur",
+   "desc": "Une quantité modérée d'antimatière. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "Quantité modérée d'antimatière qui flotte autour d'un Distorseur des Rangers du néant. La quantité de particules de matière et d'antimatière a atteint un niveau dangereux...<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "Légion d'antimatière au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635674": {
+   "id": 635674,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bbfb88036f821da503753ae4189da74a1586b0b7ee8ec0f234bbf9fb53474d01",
+   "name": "Flèche du chasseur de bêtes",
+   "desc": "Pointe de flèche forgée à partir de givracier par les artisans de Xianzhou. Permet d'améliorer légèrement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Chasse</span>.",
+   "lore": "Cadeau que les parents offrent à leurs enfants lorsque ces derniers tuent leur première proie, lors de la cérémonie de passage à la majorité. Il symbolise les succès à venir, aussi sûrs que la flèche qui file en direction de sa cible.<br /><br />« Puissent la flèche à ta taille et l'épée dans ton fourreau t'être fidèles et toujours trouver leur cible. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635674",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Braises immortelles"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3c858c8ff4df238403e5443f57850367e4164a62efb508ce359db9c5b7474a19",
+   "name": "Volonté de conquérant",
+   "desc": "Antimatière condensée. Matériau avancé utilisé pour le renforcement.",
+   "lore": "Antimatière hautement condensée dans le corps d'un Piétineur des Rangers du néant. Le moment de l'oblitération est l'appel à la destruction des civilisations.<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "Légion d'antimatière au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836260": {
+   "id": 836260,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "f0bb6fd4143f707987f651fa21b81257202d038949944fa22d7615ad342d5bfa",
+   "name": "Flèche du chasseur d'étoiles",
+   "desc": "Fragment de la Flèche de lumière briseuse de ciel tirée par le Seigneur archer de la Destinée. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Chasse</span>.",
+   "lore": "Les ruines d'une construction divine que les humains ordinaires ont rarement la chance de contempler. Quelle est donc la force capable de faire exploser des étoiles à des années-lumière ? L'humanité ne peut qu'imaginer la puissance de la Flèche de lumière d'après les cendres qu'elle a laissées dans son sillage.<br />Seul le Maître de la fournaise, chef des artisans de Xianzhou, peut forger à nouveau ces éclats pour ceux qui en sont dignes.<br /><br />« La mort d'une étoile brillera de mille feux pour les siècles à venir. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836260",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920201": {
+   "id": 920201,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "fdcef4e7b19d0d08fb9ea878b30e08be44286d0a6273f29c89a77c6e17ad9572",
+   "name": "Flèche du tueur de démons",
+   "desc": "Pointe de flèche forgée à partir d'essence de stellaris par les artisans de Xianzhou. Permet d'améliorer modérément les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Chasse</span>.",
+   "lore": "Une flèche plus fine qu'un doigt. Elle peut être utilisée à l'aide d'une arbalète électromagnétique ou d'un arc thermique. Sa puissance est telle qu'elle peut pénétrer les carapaces robustes des abominations en un seul coup.<br /><br />« Le banni céleste arrive de loin, après avoir parcouru de grandes distances entre les océans d'étoiles. Similaires à l'averse, les flèches s'abattent sur un casque reflétant l'éclat de la lune. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920201",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Braises immortelles"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 92.4,
+   "attackAdd": 4.62,
+   "hpBase": 121.44,
+   "hpAdd": 6.072,
+   "defenseBase": 56.1,
+   "defenseAdd": 2.805,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 109,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549437,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 129.36,
+   "attackAdd": 4.62,
+   "hpBase": 170.016,
+   "hpAdd": 6.072,
+   "defenseBase": 78.54,
+   "defenseAdd": 2.805,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 109,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549437,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 166.32,
+   "attackAdd": 4.62,
+   "hpBase": 218.592,
+   "hpAdd": 6.072,
+   "defenseBase": 100.98,
+   "defenseAdd": 2.805,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 109,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633378,
+     "count": 6
+    },
+    {
+     "id": 67220,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 203.28,
+   "attackAdd": 4.62,
+   "hpBase": 267.168,
+   "hpAdd": 6.072,
+   "defenseBase": 123.42,
+   "defenseAdd": 2.805,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 109,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633378,
+     "count": 9
+    },
+    {
+     "id": 67220,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 240.24,
+   "attackAdd": 4.62,
+   "hpBase": 315.744,
+   "hpAdd": 6.072,
+   "defenseBase": 145.86,
+   "defenseAdd": 2.805,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 109,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717319,
+     "count": 6
+    },
+    {
+     "id": 67220,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 277.2,
+   "attackAdd": 4.62,
+   "hpBase": 364.32,
+   "hpAdd": 6.072,
+   "defenseBase": 168.3,
+   "defenseAdd": 2.805,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 109,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717319,
+     "count": 9
+    },
+    {
+     "id": 67220,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 314.16,
+   "attackAdd": 4.62,
+   "hpBase": 412.896,
+   "hpAdd": 6.072,
+   "defenseBase": 190.74,
+   "defenseAdd": 2.805,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 109,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "f9eaa0582da07fcd608878ff3ee071ce76d9ecdb392065265bb12bb75c0a3bd1",
+   "artPath": "aae7fb72cb8c4d75e4c2a55f65a346b086c161b0016f5f36458397330a1cf697",
+   "name": "Coupe franche",
+   "descHash": "Lorsque Yanqing attaque un ennemi gelé, il inflige des DGT de glace additionnels équivalents à <nobr>#1[i]%</nobr> de son ATQ.",
+   "params": [
+    0.6
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "6187d0c45f9c109de064ddd8b9080bc4f5097bb03a89381d748f5ccf30cf1cb0",
+   "artPath": "d7894245784c94cda1047e4a50e050a283665de78239a391ce3012729145df8b",
+   "name": "Transe du guerrier",
+   "descHash": "Lorsque Osmose avec l'acier est active, le taux de régénération d'énergie augmente de <nobr>#1[i]%</nobr> supplémentaires.",
+   "params": [
+    0.1
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "16fdca2019309d1d7fb961726bd0181efc12b47243846fb1961598cca82e08cb",
+   "artPath": "4b21565dd297078e368eb5d7520204b23e41f4e7afc5c835432bc2c52b63e757",
+   "name": "Épéiste de génie",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "2accadbe5e8633796b0ed93f88674d3338f0701eb052930e7373ea350d885edb",
+   "artPath": "362072fb6864174279223173310f94c4b7d9fd364ace09d7e521797898523043",
+   "name": "Froid pénétrant",
+   "descHash": "Lorsque les PV actuels du personnage sont supérieurs ou égaux à <nobr>#1[i]%</nobr>, sa PÉN de RÉS à la glace augmente de <nobr>#2[i]%</nobr>.",
+   "params": [
+    0.8,
+    0.12
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "d015b5925332dd37dc90faaf38ab2ac9326d4f9bb26bf946ffd085f0de4715d3",
+   "artPath": "d3fafda780a06b2a106d21e3b86f0be5dceedbbd3007bdbc4db78d60b326e51f",
+   "name": "Lutte sans répit",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "3edec4fb4df3ef51c4a38e961934f1d3ba92e2c9fa5276fa8fadc888ecbc17a9",
+   "artPath": "277864872cd071d4ad081a8eb44eeaf6f76b2a67e8964d6825e4d11caa95faed",
+   "name": "Combattant habile",
+   "descHash": "Si les bonus accordés par Osmose avec l'acier ou l'ultime sont actifs au moment où un ennemi est vaincu, la durée de ces bonus est prolongée d'1 tour.",
+   "params": []
+  }
+ ],
+ "skillGrouping": [
+  [
+   531503
+  ],
+  [
+   246976
+  ],
+  [
+   363621
+  ],
+  [
+   46390
+  ],
+  [
+   962449
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Yanqing à un ennemi unique.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 531503,
+   "name": "Épine de givre",
+   "iconPath": "78c41e808b0a2d01f85b55d2598185f529a8106c3ba58b7c8a15f1454fa3d2be",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Yanqing à un ennemi unique et active Osmose avec l'acier pendant 1 tour.",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "30",
+   "id": 246976,
+   "name": "Salve d'aiguillons",
+   "iconPath": "16fdca2019309d1d7fb961726bd0181efc12b47243846fb1961598cca82e08cb",
+   "typeDescHash": "Compétence",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.21
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.32
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.43
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.54
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.65
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920201,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.7875
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.925
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836260,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.0625
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836260,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.31
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.42
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.53
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.64
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.75
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Augmente les chances de coup critique de Yanqing de <nobr>#1[i]%</nobr>. Si Osmose avec l'acier est active, augmente les DGT critiques de Yanqing de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> supplémentaires. Ce <u>bonus</u> dure 1 tour avant d'infliger des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de l'ATQ de Yanqing à un ennemi unique.",
+   "ultimateCost": 140,
+   "break": "90",
+   "energy": "5",
+   "id": 363621,
+   "name": "Béatitude au milieu de l'averse",
+   "iconPath": "4bf96bc426831906e3228d598d2efffb03b21d7e9c2f1b8f6f939dca0dc8343a",
+   "typeDescHash": "Ultime",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.6,
+      0.3,
+      2.1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6,
+      0.32,
+      2.24
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      0.34,
+      2.38
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      0.36,
+      2.52
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      0.38,
+      2.66
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      0.4,
+      2.8
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920201,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      0.425,
+      2.975
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      0.45,
+      3.15
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836260,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      0.475,
+      3.325
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      0.5,
+      3.5
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836260,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      0.52,
+      3.64
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6,
+      0.54,
+      3.78
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6,
+      0.56,
+      3.92
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6,
+      0.58,
+      4.06
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6,
+      0.6,
+      4.2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Lorsque Osmose avec l'acier est active, Yanqing est moins susceptible d'être attaqué par des ennemis. Ses chances de coup critique augmentent de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> et ses DGT critiques de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Lorsque Yanqing attaque un ennemi, il a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de <u>chances fixes</u> de lancer une <u>attaque de suivi</u>, infligeant des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> de son ATQ à l'ennemi, avec <nobr>#6[i]%</nobr> de <u>chances de base</u> de le geler pendant 1 tour.<br />La cible gelée ne peut pas agir et subit des DGT de glace <u>additionnels</u> équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> de l'ATQ de Yanqing au début de chaque tour.<br />Lorsque Yanqing subit des DGT, l'effet Osmose avec l'acier disparaît.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "10",
+   "id": 46390,
+   "name": "Connexion avec la lame",
+   "iconPath": "faf9bdd5b8e346bc02d4ed9592de49f72d13a29ee5359b002d87f8151bbc49f3",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.15,
+      0.15,
+      0.5,
+      0.25,
+      0.25,
+      0.65
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.155,
+      0.165,
+      0.51,
+      0.275,
+      0.275,
+      0.65
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.16,
+      0.18,
+      0.52,
+      0.3,
+      0.3,
+      0.65
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.165,
+      0.195,
+      0.53,
+      0.325,
+      0.325,
+      0.65
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.17,
+      0.21,
+      0.54,
+      0.35,
+      0.35,
+      0.65
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.175,
+      0.225,
+      0.55,
+      0.375,
+      0.375,
+      0.65
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920201,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.18125,
+      0.24375,
+      0.5625,
+      0.40625,
+      0.40625,
+      0.65
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1875,
+      0.2625,
+      0.575,
+      0.4375,
+      0.4375,
+      0.65
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836260,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.19375,
+      0.28125,
+      0.5875,
+      0.46875,
+      0.46875,
+      0.65
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.2,
+      0.3,
+      0.6,
+      0.5,
+      0.5,
+      0.65
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836260,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.205,
+      0.315,
+      0.61,
+      0.525,
+      0.525,
+      0.65
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.21,
+      0.33,
+      0.62,
+      0.55,
+      0.55,
+      0.65
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.215,
+      0.345,
+      0.63,
+      0.575,
+      0.575,
+      0.65
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.22,
+      0.36,
+      0.64,
+      0.6,
+      0.6,
+      0.65
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.225,
+      0.375,
+      0.65,
+      0.625,
+      0.625,
+      0.65
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Réduit la robustesse de l'ennemi au type correspondant en entrant en combat après l'avoir attaqué.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 878508,
+   "name": "Attaque",
+   "iconPath": "78c41e808b0a2d01f85b55d2598185f529a8106c3ba58b7c8a15f1454fa3d2be",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Renforcement",
+   "descHash": "Après utilisation de sa technique, les DGT de Yanqing augmentent de <nobr>#2[i]%</nobr> pendant <nobr>#3[i]</nobr> tours contre les ennemis dont les PV sont supérieurs ou égaux à <nobr>#1[i]%</nobr> au début du combat suivant.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 962449,
+   "name": "La seule et unique lame",
+   "iconPath": "fcd2be4b2aa59e63cf6695bdb806aff85ac5cd4a174a334d9534d9e850d94930",
+   "typeDescHash": "Technique",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5,
+      0.3,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1209101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1209202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1209203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 968219,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920201,
+          "count": 3
+         },
+         {
+          "id": 633378,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 968218,
+      "name": "Augmentation des DGT de glace",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "873bd0d39d583fadfc1427c8fbe603df5c14370368804e2dfebb4f447910174b",
+      "statusList": [
+       {
+        "key": "Augm. des DGT de glace",
+        "value": 0.032
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635674,
+        "count": 3
+       },
+       {
+        "id": 549437,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Lorsque Yanqing attaque, il inflige des DGT de glace additionnels équivalents à <nobr>#1[i]%</nobr> de son ATQ aux ennemis qui ont une Faiblesse à la glace.",
+    "ultimateCost": 0,
+    "id": 968122,
+    "name": "La cerise sur le couteau",
+    "iconPath": "22cf179a530b447e29f8ef9c3865188acd775ac4ce59a15d65d1faaf363abaa6",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.3
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635674,
+        "count": 3
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1209102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1209205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1209206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 968214,
+        "name": "Augmentation des DGT de glace",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "873bd0d39d583fadfc1427c8fbe603df5c14370368804e2dfebb4f447910174b",
+        "statusList": [
+         {
+          "key": "Augm. des DGT de glace",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836260,
+          "count": 3
+         },
+         {
+          "id": 717319,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 968217,
+      "name": "Augmentation d'ATQ",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920201,
+        "count": 5
+       },
+       {
+        "id": 633378,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Lorsque Osmose avec l'acier est active, la RÉS aux effets augmente de <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 968125,
+    "name": "La glace sourit aux audacieux",
+    "iconPath": "343d2fdf031738a3a442a85c0ee1caa26b741e4af2218862b1a7c4b5d63b1230",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920201,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1209103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1209208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1209209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 968229,
+        "name": "Augmentation des DGT de glace",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "873bd0d39d583fadfc1427c8fbe603df5c14370368804e2dfebb4f447910174b",
+        "statusList": [
+         {
+          "key": "Augm. des DGT de glace",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836260,
+          "count": 8
+         },
+         {
+          "id": 717319,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1209210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 84865,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836260,
+          "count": 8
+         },
+         {
+          "id": 717319,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 968228,
+      "name": "Augmentation de PV",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836260,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "En cas de coup critique, la VIT augmente de <nobr>#1[i]%</nobr> pendant <nobr>#2[i]</nobr> tours.",
+    "ultimateCost": 0,
+    "id": 968124,
+    "name": "Lame rapide",
+    "iconPath": "3c4b5e5795583a6b281d3e54e125e6f795227f24b9725d410ccafe39e758f687",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.1,
+       2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836260,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1209201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 968221,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549437,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1209204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 968216,
+    "name": "Augmentation de PV",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+    "statusList": [
+     {
+      "key": "PV",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 10000
+     },
+     {
+      "id": 920201,
+      "count": 3
+     },
+     {
+      "id": 633378,
+      "count": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": 1209207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 968215,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.06
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 45000
+     },
+     {
+      "id": 836260,
+      "count": 3
+     },
+     {
+      "id": 717319,
+      "count": 3
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corps",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "DGT CRIT",
+    "propertyIconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609"
+   },
+   {
+    "relicTypeHash": "Pieds",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "VIT",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Sphère planaire",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "Augm. des DGT de glace",
+    "propertyIconPath": "873bd0d39d583fadfc1427c8fbe603df5c14370368804e2dfebb4f447910174b"
+   },
+   {
+    "relicTypeHash": "Corde de liaison",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "ATQ",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Première rencontre",
+   "text": "Yanqing, lieutenant des Chevaliers des nuages du Luofu, au rapport ! Si tu as du temps libre, Pionnier/Pionnière, tu veux venir t'entraîner avec moi ? Ne t'en fais pas, je ne te ferai pas de cadeaux.",
+   "unlockRequirement": "",
+   "cnUrl": "8116e128044cbccceee6c5ba76ef88613118b40f431bb7e032df774c5e02eb8d",
+   "jpUrl": "f872414535b69e94d76c4ebd9647fa3f094a3329e5cead57dfb4b76ec3b34cf2",
+   "enUrl": "d1a69c7be752b8b0e7af34024304ada585612d3376fc9b1e521187799a0b1a21",
+   "krUrl": "25c6df5915fea5e5ec5ab0a65f94cc9fbfa45d06612027f718d0c170ce72c5b5"
+  },
+  {
+   "id": 2,
+   "title": "Salutation",
+   "text": "Quel genre d'entraînement à l'épée veux-tu suivre aujourd'hui ? Tu veux que je t'accompagne ?",
+   "unlockRequirement": "",
+   "cnUrl": "a2e77eec8310cb41a375ba479c390f0d6f0f71e3231138537546a8ea7d7f7d8f",
+   "jpUrl": "f2eef89480056ccdaf4b912bc3fbdab5843b24ec2f1c40b22e495456c8b337c5",
+   "enUrl": "95e15ef0693965598ceb48b1261f48d047a8c81d62430ad2a727d32ea1cef483",
+   "krUrl": "4d67cd1f009fb0fdf7ba45919d576f19145d949d00c44d6d702ff46496f2a420"
+  },
+  {
+   "id": 3,
+   "title": "Au revoir",
+   "text": "L'épée doit retourner à son fourreau... À demain !",
+   "unlockRequirement": "",
+   "cnUrl": "ab055d5bd38f6a1c13c03ae5a3e205c88e3bd55f5e7a81c8fe8d1c7159d7ef36",
+   "jpUrl": "44861747fe69387ac7ad40e25cfc8a25195a1ca50466e1115b971c2be50faa39",
+   "enUrl": "aabee501d3bf32a7193075c9feb693bfeb9367b638ce5d3fc4ccb6f71451da69",
+   "krUrl": "aef9d9e3e0acbe94252131ded9b760fd483065f3a1338db7a2b9f2e316c0edd8"
+  },
+  {
+   "id": 4,
+   "title": "Connaître Yanqing : Adversaires",
+   "text": "Il n'y a plus d'adversaires à ma hauteur à bord du Luofu, mais quelque part, parmi les étoiles... il y a peut-être encore quelqu'un.",
+   "unlockRequirement": "",
+   "cnUrl": "20ddbb7bf7d2d8420699ded664d1d55bbed3ef92513398194ce253a5687f9a36",
+   "jpUrl": "9570b8cd92f5a74c969d72c81447537967c708160b7dd964d116df9abc73e98c",
+   "enUrl": "259fe774574c21b255995fdbffad679580d8fb9d2dfb89b4c7a6bd60caa5b2cf",
+   "krUrl": "0f1dcb14e8196154d25c003577e044599bf2a6b3ca4ad8e18806fe5657d9f8bd"
+  },
+  {
+   "id": 5,
+   "title": "Bavardage : Épées de la Commission de l'artisanat",
+   "text": "Je pourrais parler toute la journée des épées de la Commission de l'artisanat. J'en achète toujours deux par modèle : une pour le champ de bataille et l'autre pour ma collection... Mais je suis souvent à court d'argent en fin de mois. Je suis sûr que le général m'achètera à manger si je l'embête un peu...",
+   "unlockRequirement": "",
+   "cnUrl": "03f8dce40aafdd0bfec7f6c6a5654aca70425fbd566f9fb2419e8e0f2686ba60",
+   "jpUrl": "31d22a4169cf9e64ad52ff1349a7964192e979cf4d0dcdd5b4dead23fa907ff0",
+   "enUrl": "db4c6ce95b889193c2b82d1b17dafce7aeb03d6e1b0b5f3e67a5b2c0ddf8b2e6",
+   "krUrl": "1e9c3db65673a433f581574f9d48d5758ce1316300c821d31447b276a4930bed"
+  },
+  {
+   "id": 6,
+   "title": "Bavardage : Champion de l'épée",
+   "text": "Si je n'ai pas encore obtenu le titre de Champion de l'épée, ça signifie que je dois encore m'entraîner, mais le général pense que je dois juste être patient... *soupir* ... Qu'est-ce qui me manque exactement par rapport à ce Champion de l'épée...",
+   "unlockRequirement": "",
+   "cnUrl": "0689a2e295c2bb7ae19fa0bb36d17ede53ec81064a0e7f90323c02cba2752e34",
+   "jpUrl": "c1d0df1dbafc896aa9b5ca963dc99f811b59458c1e3d5dc5bf54a5ac7cc468ed",
+   "enUrl": "6f66af973a733747299940e2007b08fac043de4eaa8faaacc07798dabf36249b",
+   "krUrl": "cc2dc3f5935ae46de7c5d579286c53a05dbe0fc72d9075cb86d1d3349ef50f34"
+  },
+  {
+   "id": 7,
+   "title": "Passe-temps",
+   "text": "Quand j'achète une nouvelle épée, je passe encore plus de temps à choisir le fourreau. Est-ce que je le prends en bois de poirier noir, ou en soie ? Avec une décoration en forme de dragon ou de tigre ? Et la pointe, ainsi que la plaque décorative... Quel bonheur de choisir chaque élément !",
+   "unlockRequirement": "",
+   "cnUrl": "99b6a73e32b68269b9f97fb4af6d149c44b6cdef433aef2e968f98db9e215e82",
+   "jpUrl": "fd1b8b5dee0b92fe67df0051afb35efd4cdb563dbc94837094200c1469897a6a",
+   "enUrl": "af45371625a385397a9dc72facb8843158ed1a0f8afaac944d03103847c4bc94",
+   "krUrl": "070b7d6616b9b1a7922136a2dc0b17ec0d9324a8e82881d92298d9c002c39b72"
+  },
+  {
+   "id": 8,
+   "title": "Problèmes",
+   "text": "Parfois, je trouve plusieurs fourreaux pour une même épée, et je les achète tous. Pourtant, une épée ne peut aller que dans un seul fourreau...",
+   "unlockRequirement": "",
+   "cnUrl": "79e6899ef05cd8592e08fe4e55b565bd0cc0b0741b1beb980e2fa61b7ef4c14d",
+   "jpUrl": "02f2328a634a8dc2ad48739367ef0061ac71284b6205b975b750ba591e1f1d89",
+   "enUrl": "84cd2b88a1ebddee54c71f06a61b7325a7490d307269a579140b67e283a3fbc3",
+   "krUrl": "8425cad4734f122dfc53e0b722cfa6ac7fb90a9234bfc659d5ef8907e3cb4994"
+  },
+  {
+   "id": 9,
+   "title": "Anecdote",
+   "text": "« Quand on a déjà marqué l'histoire, que faire ensuite ? » J'ai posé cette question au général, mais il m'a dit qu'il ne pouvait pas répondre, car il n'avait jamais voulu devenir général. D'après lui, je devrais répondre à cette question moi-même. Hmm...",
+   "unlockRequirement": "",
+   "cnUrl": "bf98a6eef0ecc41da49cfd3037c9af8bcd2791579d8d6dd1adf709543efde9fb",
+   "jpUrl": "8b9acabd1f14f4d8ef631ede1cc6a89f6f5899963fd56559dcfffcd3bec026da",
+   "enUrl": "c03185cfe108791cc4e8ceb672be6a51a38d128d8c2873979005dc902cd19cb2",
+   "krUrl": "a3def2f96f9993a587f3777b243030fd2636e2c342cf02e6970f359445848d37"
+  },
+  {
+   "id": 10,
+   "title": "Connaissances",
+   "text": "Comme les autres vaisseaux Xianzhou, le Luofu organise une compétition martiale stellaire pour tester la force des Chevaliers des nuages. Le vainqueur obtient le titre de Champion de l'épée !",
+   "unlockRequirement": "",
+   "cnUrl": "cbe39629dfd2667a3844a2934d4f259b7bf714dd877f63446bd48fcd3129301f",
+   "jpUrl": "8c3414d1c6cb1b2ffae0edd9615d82dbf3337b6872a23376374a3bbaf077fce7",
+   "enUrl": "9ac8259f79de0f7d7a45b035bc2161ade891826006ef5addcd3746582a22c69a",
+   "krUrl": "c81055f2ec204e53d9f81f0224ba8d0d3ce601a310b7f12b43ec699bd8749f14"
+  },
+  {
+   "id": 11,
+   "title": "À propos de Jing Yuan",
+   "text": "Le général n'a pas besoin de faire ses preuves au combat quand je suis dans les parages. Puisqu'il reconnaît ma force, je dois l'aider à alléger son fardeau autant que possible !",
+   "unlockRequirement": "",
+   "cnUrl": "5fabf3bef9d297fba751cb08e06949454e9ca57df8395f26b05e7903dd042fbf",
+   "jpUrl": "c7f49ffc54b4dc217c67aa90c88e175667ea7b5aa9343fc9032d224f39c129ee",
+   "enUrl": "d9f3cb0b15e4e8eab868ad0541d62fd3d5f9708f86c551b1a2947b232e6ac875",
+   "krUrl": "6e5c0df0b6536bc68392433535dbc58b6cce5170b8d2bdc8c51f8f0652409793"
+  },
+  {
+   "id": 12,
+   "title": "À propos de Tingyun",
+   "text": "Tingyun me demande de rédiger la présentation des épées quand elle doit en ajouter à son codex de marchandises.",
+   "unlockRequirement": "",
+   "cnUrl": "e9dbd014bddbfe51f45577e8e9f67b656a435d8aaecbd4f4c67ced496e842097",
+   "jpUrl": "8116709e1e635bf6495eda3b079d01d4f57b628cb5483ed07d12ea0c2d9cb666",
+   "enUrl": "4dc8b4a798af6f01e43664fd5033fed5551fe3679931e87dd7841666cf9e6a0d",
+   "krUrl": "2294f2bf19b0e45b03f69c504ba9ff49dc34b70d1e229f7bf1dd0c7e52b7bc0e"
+  },
+  {
+   "id": 13,
+   "title": "À propos de Sushang",
+   "text": "Sushang a une bonne épée, mais une bonne épée n'est pas nécessairement facile à utiliser. Il faut la manier avec une puissance décuplée pour qu'elle offre des résultats acceptables.",
+   "unlockRequirement": "",
+   "cnUrl": "c93ea5e197bd4a3a2f1ebc9c1f3a33ab08bda6af9206b4cbbcdf1a02a8524040",
+   "jpUrl": "14d390f00f31e1922d047bc92c05dfa75d1f09616c243389f8e1ef0e4bba4dd7",
+   "enUrl": "4c7074a62103c44a5e8a73157417b90c8f14e109e85724975cd5ac163b753b3d",
+   "krUrl": "e5c18d739be8161e8d357c0397b3885510de6c80d58b707bd02177747848c8b9"
+  },
+  {
+   "id": 14,
+   "title": "À propos de Yukong",
+   "text": "Je suis allé à la Commission du ciel, une fois et j'ai vu madame Yukong fixer la cible en cuir pendant un long moment. Elle n'a pas décoché la moindre flèche ce jour-là, mais son esprit a probablement tiré mille fois.",
+   "unlockRequirement": "",
+   "cnUrl": "cc53cf4fba458944bdf607743fe2d1aa6b6a21312ec83257f178728c61920477",
+   "jpUrl": "477cfd92d94ee3244f1c8fdda2690440fa272cfc0e28c27dcbbf0adcf05e4ea8",
+   "enUrl": "7b0c2fa9c7e4f9ede16bc1d6fd5a8158ad0b97b7f0e26c7a7901d11842dc20a3",
+   "krUrl": "2193a54c63f989d6de58d76a34972774c9bf9a4371dff9b71a513a0a83e217d3"
+  },
+  {
+   "id": 15,
+   "title": "À propos de Fu Xuan",
+   "text": "Alors comme ça, la divinatrice Fu veut devenir général... Eh bien, pour commencer, elle ferait bien de s'arranger pour que tout le monde ne s'endorme pas dès qu'elle ouvre la bouche.",
+   "unlockRequirement": "",
+   "cnUrl": "c14ad592bd1d8e873ab98ae1995f0eb1d77ab303241411ebf1d6ea8030397747",
+   "jpUrl": "51668f8307727d8a2729f709812be04bd2f6ed1343d640208ae199c25192fec2",
+   "enUrl": "107d16f0b38104f2efacf878b97c08a07e0e1d9eb5dcaa61b2a7e868818772a7",
+   "krUrl": "399ad214cec945341a4af4f8b5fa0568c88ff921bbafa7002dd4a7e16e77e7ab"
+  },
+  {
+   "id": 16,
+   "title": "À propos de Luocha",
+   "text": "Au début, je pensais qu'il utilisait ce cercueil comme arme. Ça me paraît bizarre... Il faut que je trouve un moyen de l'affronter pour qu'il me montre de quoi il est vraiment capable...",
+   "unlockRequirement": "",
+   "cnUrl": "460e9584513d6cee28536a43bf9e4110531bfa6dd08244ccfee554dd83b37794",
+   "jpUrl": "fe195a82a3374f1184678ffa0156b8ccf710969e37d4d285da871bcee155f109",
+   "enUrl": "222c6327c8b546555890f945cb4b92f8747e4a5b50f042f8a98d7bd1f70b79fe",
+   "krUrl": "a84b718a48e23d7dda2ca8df4c6baf80ff210fa50f5e4c450cca1444a6a54d68"
+  },
+  {
+   "id": 17,
+   "title": "À propos de Jingliu",
+   "text": "J'ai longtemps pensé qu'il n'y avait qu'une seule façon de maîtriser l'épée... mais le général, Jingliu et moi-même avons tous pris des chemins différents.",
+   "unlockRequirement": "Débloqué après avoir terminé la mission de compagnon « Les nuages s'estompent sans laisser de trace »",
+   "cnUrl": "454b4970b65a170432c58af9126b6f00fa042bb6dc65509f2a6cda9fea04f0f0",
+   "jpUrl": "eea668cfe345b32544182247d9065fa02c3734e1b28be4a1af3d5d883375f6e0",
+   "enUrl": "3aa9cd44a4144d377457daa535aac33708ba19d68acb9fad09eed0669517c908",
+   "krUrl": "1441b96348555e651535a59389ceaef727007849a30de42eedfd1a8435adbf57"
+  },
+  {
+   "id": 18,
+   "title": "À propos de Dan Heng",
+   "text": "Quand j'ai affronté Dan Heng, sa maîtrise de la lance était quasiment parfaite... mais il avait l'air complètement indifférent à cet art. Peut-être que pour lui, ce n'est qu'un moyen d'atteindre ses objectifs ?",
+   "unlockRequirement": "Débloqué après avoir terminé la mission pionnière « À l'heure où blanchit le Luofu ».",
+   "cnUrl": "1be27e6276911d44a3b05f206bb043f9877bd98cf1ea1915d35c902702b41894",
+   "jpUrl": "b71bcdcf54b5ca18ed3efd90ffbd01d26906a7b5ed385fb5666caf47ce56cfec",
+   "enUrl": "8812e443c4ca3dca6cd645b087544636a3469115bbd6b8038c5a2ebff5277aa1",
+   "krUrl": "f997b72aaeecef6ce2f1964466332adaadd9b8d061dcc023d7c6d60ed0056bbc"
+  },
+  {
+   "id": 19,
+   "title": "À propos de Blade",
+   "text": "Il est capable de percevoir le moindre mouvement d'une épée avant même qu'elle ne bouge... Serai-je un jour capable de le battre en m'appuyant uniquement sur ma technique à l'épée ?",
+   "unlockRequirement": "Débloqué après avoir terminé la mission pionnière « À l'heure où blanchit le Luofu ».",
+   "cnUrl": "2d13deed2229accb9dbd8f9e284109f42a8a88ec884fb7e8728cad2ea063af70",
+   "jpUrl": "e13c816eba7a0fb3752b20d4daebc41780ecca996bec7bea8928e8952027e37d",
+   "enUrl": "66bfe83f676b74e7a03bf8b07ceb88aed7c165f711097b521063df9b45fda32c",
+   "krUrl": "8fa36fcfa96d2dd0767d3756c6e656be4f098ec0d020328dc050a09ba932006b"
+  },
+  {
+   "id": 20,
+   "title": "À propos de Guinaifen",
+   "text": "Je me souviens d'elle... Un jour, elle portait une épée somptueuse, et j'ai tenté d'entamer la conversation. C'est alors qu'elle a avalé son épée jusqu'à la garde ! À ce jour, j'ignore encore de quelle école d'épéistes lui vient cette technique...",
+   "unlockRequirement": "",
+   "cnUrl": "fd277dc098d64811f876d5f71240e082c6224a44089c73e346d09345fb4c4e6a",
+   "jpUrl": "5f3d09d8491440fd470efed934f06052b5df3e6c8ca5cdcdfcdb5a76687a1633",
+   "enUrl": "d649e07e5a611965e58cfd2ac381636653b854cd13a46a18b8b4b9a3341f95ec",
+   "krUrl": "e7f9fccc9af6c5169de2f4db7d94a88f85cc9546bcf501790c4af70cd362355e"
+  },
+  {
+   "id": 21,
+   "title": "Activation d'Eidolon",
+   "text": "On dirait que les étoiles brillent davantage...",
+   "unlockRequirement": "",
+   "cnUrl": "14c74fb97d0cdfca279f985eb72a24dd956c38fd68fab2ac2fabadcee4f13dfe",
+   "jpUrl": "d9572f098b9b58b3f8c0fc25fa2cca28727a6c0471e1782f49bc17d2e885bce4",
+   "enUrl": "d29801c24d4aff2bcd752e9864346365f47f1a62b302ad45dacd233897e8a2a7",
+   "krUrl": "d05ce108c309d33d2d73496441bdc612714ff7a176785cd85f38a6bedf7a3184"
+  },
+  {
+   "id": 22,
+   "title": "Élévation de personnage",
+   "text": "Combien de batailles encore avant d'atteindre mes rêves ?",
+   "unlockRequirement": "",
+   "cnUrl": "150bc6b6e143862efae70f0e897ad1bd3c6395bce286321ba282f81ed83afca5",
+   "jpUrl": "883e9040b0520ce30b8d3738ee49f5de9816bbbf65bbff1ba2670e78abeafd64",
+   "enUrl": "7b98e3028f6b8fdfe4c2017b2508c765f5deeb4a3e51eedf6caccffa02200d36",
+   "krUrl": "c81e1a12ecb94b8a67dcc7aa3202583a9b9588e68f00932bc2f2357ace575dd3"
+  },
+  {
+   "id": 23,
+   "title": "Niveau max atteint",
+   "text": "Je suis prêt. Il est temps de tester mes compétences à l'épée.",
+   "unlockRequirement": "",
+   "cnUrl": "358cfe26a941921a5c2a8cef5e4f8f4f14b0f1dfe008a10d79e1931ee171d20b",
+   "jpUrl": "f3acb4014f846a4035d3da1e67ba5c0e71809b250eeee008401e0221f2b14109",
+   "enUrl": "ba5623531a3d73edb7cc813d3f0a676a03830b1b8d0f18549b6758a3b88dc859",
+   "krUrl": "e7916ea99434dd391311ccaa253614dcacea1b0c880fadbb718c86be06fe5462"
+  },
+  {
+   "id": 24,
+   "title": "Activation de Trace",
+   "text": "« Il a un avenir prometteur ». Si j'avais reçu un strale chaque fois que j'ai entendu cette phrase...",
+   "unlockRequirement": "",
+   "cnUrl": "4983ce08d7ea4d5cf554f6d58183bfe7dd29c0f39604d88b217d58f4544bde74",
+   "jpUrl": "b31cfb6fb308ac18f4a44dfce7b0f989116499cd69e4ad5637d86d0e0d66b78f",
+   "enUrl": "390e4cd7a08dfe9638c92d28028f80e712bce6b933d958bf1fb251ea3dc8355b",
+   "krUrl": "65c1df9e5e445e301a1e7a5c588a4d96e82c8c7dfbd440fd488aa3122fbb1405"
+  },
+  {
+   "id": 25,
+   "title": "Rejoint l'équipe avec Jing Yuan",
+   "text": "Bien reçu, Général.",
+   "unlockRequirement": "",
+   "cnUrl": "33e0a821034b3b6da336d8bf0fbf6dc87c51119887e1c5310db15d85e2b89fc2",
+   "jpUrl": "685ee2d63a5d6f85be9af2295511499b07ba75124bab10bf2726a32c89ce7372",
+   "enUrl": "19fc724bbe5709dcaa6452c7c88173c4ee488ac40d203600aec8dfc3a24eddc4",
+   "krUrl": "21d2296d3b5872b6bfea71862a4aa49b82f0fb9f5525d7a905af4267c448b6a6"
+  },
+  {
+   "id": 26,
+   "title": "Rejoint l'équipe avec Fu Xuan",
+   "text": "Qu'est-ce que vous prévoyez pour la prochaine bataille, Maîtresse de la divination ?",
+   "unlockRequirement": "",
+   "cnUrl": "af4944d405e51687fdb9b41d35b018966989363106044a2eeffea3516cda41b5",
+   "jpUrl": "728e3c4d16e89a109504a7ad0c356f3063b5c95777ba0a225cde1526b2410837",
+   "enUrl": "49968416f6658e3307acef4fe010cb9754bf4023ca7ba5f478f1b3a9f1a32b76",
+   "krUrl": "b18f583a6864b0cb20fd6bb2e06230561c420cedc6b2836a77c5a7177bf184a4"
+  },
+  {
+   "id": 27,
+   "title": "Rejoint l'équipe avec Sushang",
+   "text": "En rangs, Chevaliers des nuages !",
+   "unlockRequirement": "",
+   "cnUrl": "bd44a88a3848b3b76f3d62f91ccf741c74ad186a3ddca326ee74ac095662e310",
+   "jpUrl": "3e138eae91c33318f2a48051a9b9300fc142006179985801dbe437219cf07305",
+   "enUrl": "dc43ed6c9f3f34a2543665e4d63874dca4dda0712d244fba60ddcbc5263d757a",
+   "krUrl": "82cd25d16e80e6cdd4013d147f78f2fe14abd22599ffa4350f1f3d2a74c816fe"
+  },
+  {
+   "id": 28,
+   "title": "Rejoint l'équipe avec Dan Heng",
+   "text": "Suis-je suffisamment doué à l'épée pour qu'il m'apprenne des techniques ?",
+   "unlockRequirement": "",
+   "cnUrl": "28ba49a23096d548ac8f6bb6c40fdf841badeaef124a142b3b7e6dfae5a39d24",
+   "jpUrl": "ad0fdeb3a39082990504c16b86e15114406311e803d8cde06b2b162d47b0de40",
+   "enUrl": "03e918900e8613540f2320b404fb3ed00f26600e0f7efe395c821c28275676c1",
+   "krUrl": "f480ae99609364c3b367c1db00715239be7565f2f78e163e94328dedec335dbf"
+  },
+  {
+   "id": 29,
+   "title": "Rejoint l'équipe avec Dan Heng • Imbibitor Lunae",
+   "text": "Suis-je suffisamment doué à l'épée pour qu'il m'apprenne des techniques ?",
+   "unlockRequirement": "",
+   "cnUrl": "350803fd6ff7eb8269c382371c49b968d6962b4cd57db1b230a49490a2bad4cc",
+   "jpUrl": "985ab690acc5eff57feee749eac63fec7de980aaff155f6f33e3b41dc2bca1c9",
+   "enUrl": "6c211869976a0167695eef63ca2a744251c8a79a9c3f6f392d5974af64d78208",
+   "krUrl": "d1fd63b020045611a9de89692e9406c92489e95db14a40684c5a1786f67ad687"
+  },
+  {
+   "id": 30,
+   "title": "Rejoint l'équipe avec Blade",
+   "text": "Tu as de la chance, le général t'a laissé tranquille.",
+   "unlockRequirement": "",
+   "cnUrl": "6bda165558d66c8cead3221828ba5880f159c313370ba7f092efcc7c6827112a",
+   "jpUrl": "e5e27fc4a335c8b430d6ee32d1d09b183cc6d4d175adc97b67e12fcd4a33b320",
+   "enUrl": "14fc60ce565b8e3bb9ef6e00b60f34bfc097d31ec74d9c614cff6b30bc851932",
+   "krUrl": "eda34e61691e8d32bae89c1e441fb248873c80b67376fc175427a09e69d7f942"
+  },
+  {
+   "id": 51,
+   "title": "Rupture de faiblesse en début de combat",
+   "text": "Mmh, ce n'est pas n'importe quel ennemi.",
+   "unlockRequirement": "",
+   "cnUrl": "9a6665ec905997bdd9338c1320746cc8162a0985a2c9a621590241f79c0cac4b",
+   "jpUrl": "2a4befb60abf5123fbc093b6ecf551401ea37c943933df692d2ee3b752126d94",
+   "enUrl": "f1adf3ddff4881c3d9b47f50387bdc4e8ac90c34e77d9044e2d7b5b10f6b66c0",
+   "krUrl": "1df94003575dabfe5e7657d3ad5a74e563ab7baba260e3a72eccb79aaac12fc2"
+  },
+  {
+   "id": 52,
+   "title": "Avertissement de danger en début de combat",
+   "text": "C'est un adversaire de taille. C'est bon pour moi !",
+   "unlockRequirement": "",
+   "cnUrl": "9686f306a29bde4aa331baa09df657b84382cf04cecee9f9557b24d0b9c3f27a",
+   "jpUrl": "3110b38cba13c11fb4507283e58a9af1b55f05becd4929cd9fd6f94f0b1d1327",
+   "enUrl": "58ed7dd9bfc332ad12dcb324b03321035210938cedae265b085826ee8e7e76cf",
+   "krUrl": "12b9a0e89c325ccad75d92121a480271c088a33a14c656fa2424c25fc0b871d1"
+  },
+  {
+   "id": 53,
+   "title": "Début du tour 1",
+   "text": "Alors, combien de mes mouvements tu pourras bloquer ?",
+   "unlockRequirement": "",
+   "cnUrl": "bce31897bc334a00d224a613df5f2075a2baf0aa9dd88aa3073b1a7c99a3174f",
+   "jpUrl": "9bd84996b0b1b2a8bc46334610f29a5cb7ad1af4a9fc67064c2ee3402914fbe1",
+   "enUrl": "bab9975795b9d4aa6204f59d477bafd4053a21eb9070c7e4f0bbac1485b71298",
+   "krUrl": "c1d78bebbc2732f71c27853e941d9d017d28773ebe747bb73cf615a756d56704"
+  },
+  {
+   "id": 54,
+   "title": "Début du tour 2",
+   "text": "C'est le moment de sortir le grand jeu !",
+   "unlockRequirement": "",
+   "cnUrl": "0023f314a514c8f27ca5b22b449540543af77c65b4d320e2334d9b9c2d6bca08",
+   "jpUrl": "991653daa90d03621a8847b1477f320768d93e5ef8516564c6a91ed14c2adc4f",
+   "enUrl": "6d58fba254dc5a47c21082c7b718e1cac69182f4f0ea09aaba008ebdc8e64169",
+   "krUrl": "bf8d83c21ee57a3ec43a76c05d269027c4787929bff5ce56748b79e7387996f9"
+  },
+  {
+   "id": 55,
+   "title": "Tour inactif",
+   "text": "L'épée est comme l'eau, elle ne peut pas rester immobile.",
+   "unlockRequirement": "",
+   "cnUrl": "30da97ca887a36174bcdaee12fcda38c81a4c2f4f22b804d6049b76de3f7baf1",
+   "jpUrl": "8ba4d4fda9548833069c7427133f78c885a05f3afc81a4cc5770cfd60547387d",
+   "enUrl": "8ed5b9b0ec6ec88eb2daac0286179d52530e8cb5b68b3a80185a61dca59a5a9a",
+   "krUrl": "6208a2b40365bc1e1b2b35464418dd23e354a4c30cd7b49b45a24b1c719d3574"
+  },
+  {
+   "id": 56,
+   "title": "Compétence 1",
+   "text": "Vole, mon épée !",
+   "unlockRequirement": "",
+   "cnUrl": "2472aca3db2cf316258adaccbb005581d02daf8ccc56714dd074e9228a7aced9",
+   "jpUrl": "be759e6ff7b406da7d3c7733e0d97e1dcaa6daf6a3963d6efafbf82fdf5097b6",
+   "enUrl": "422ed6436f17f3328ec9acb3c81ba0cb366589c3d3f94dc66edc115b88689ad5",
+   "krUrl": "7e835f1e49d172bd173443520ab67371ebf801535c3ba2f0429d4c090a1a8e30"
+  },
+  {
+   "id": 57,
+   "title": "Compétence 2",
+   "text": "Attaque... avec le cœur !",
+   "unlockRequirement": "",
+   "cnUrl": "1a5dc1f4726eb9507090afa283cb3d42ccdbf1ab8012f3e13aeeb3451296c79a",
+   "jpUrl": "8921701873385ee6380010ab04cd2e90445c3bfc26783c41db1053c7e8f39a65",
+   "enUrl": "f41b2651f61d04b90eb23cbf74e3a7ddd5cbea0ab16f8e979133f8de7b60fe0e",
+   "krUrl": "5284197fea767643676b667c832e8f86288e92e149b22740999e7ed07a17ceec"
+  },
+  {
+   "id": 58,
+   "title": "Attaque légère subie",
+   "text": "Comment...?",
+   "unlockRequirement": "",
+   "cnUrl": "e2c74fd9dbb44cfb608c7a899f39f767506abad4ffd5848fb302409907426f16",
+   "jpUrl": "d70049c41477e95c8a10328e11812fe9c0f593efc5604587d5b4c84ee236a7ae",
+   "enUrl": "4b47e75d3192d13482e3db55f8bda1893297e4de8a4eee617b5a8aca176c7c4d",
+   "krUrl": "986e1d0a10a352a84f27c91a5362b965be3fa19bd626f1ff7488b2ba5cad183f"
+  },
+  {
+   "id": 59,
+   "title": "Attaque lourde subie",
+   "text": "Impressionnant.",
+   "unlockRequirement": "",
+   "cnUrl": "d2f75c5e69d95672a1413555822728c3ef603f4a067052002ecd6183e9db69b4",
+   "jpUrl": "15d81708164726a2527f89b6aca52a83b06ed2a0cb3a13c8814a2ee8264cf676",
+   "enUrl": "4710b7d79d5815f89b3f7af5225ae50c2262c59d3d4831fc554cf8d29e6b5f69",
+   "krUrl": "3461b18a6cdcd0f976ea0d1a5da20ea4e704b8aaf731ef0cd6dc270e0be889fa"
+  },
+  {
+   "id": 60,
+   "title": "Activation de l'ultime",
+   "text": "L'entraînement est terminé.",
+   "unlockRequirement": "",
+   "cnUrl": "70d96033364d8412b9b2f065b16e9ed2b50910e05e53573686a0e752e237eea1",
+   "jpUrl": "0bca112f30facbca7112cd39c2af47efbf3f11d3ed1064154afadb410969bbf1",
+   "enUrl": "513f50d2439b51dd9cf6080f5ba5155d3c21167bb78e8765e39aee71d1123ea4",
+   "krUrl": "2fb86ae3f3013f265de5b6f61be9f9d3617e73d2801259a3910e48fe70386f08"
+  },
+  {
+   "id": 61,
+   "title": "Déclenchement de l'ultime",
+   "text": "Épées, venez à moi !",
+   "unlockRequirement": "",
+   "cnUrl": "6329cf48de802c997a485dcf98de8354c4bd78822873f5081171c73f60368b90",
+   "jpUrl": "2f4db07edf101abdf108c3b7451162ae8e6b95a7f3ab2fb8c8f82970e9c33059",
+   "enUrl": "cdee3517400e8fae5dc9855df44b5803398aefbe09dd9875a91a012f462c15e0",
+   "krUrl": "b7d3b709bed6de77a3c86f9b394feafe2e06d593c1c8034cc5dd49aa28da5d47"
+  },
+  {
+   "id": 62,
+   "title": "À terre",
+   "text": "J'ai déshonoré... la lame...",
+   "unlockRequirement": "",
+   "cnUrl": "a787af8e1222bc39bfb1e30b7b83f961e233ab54392d70187e26d52130a98ffa",
+   "jpUrl": "2a193bc9c8168339ca1618e609c3fb76b6287d797fd81860c636fe9cd2273dbf",
+   "enUrl": "b2b09e8e7d9891a7966d2f571a890efb0737a689ba7c998fc9ed566d9133f0bd",
+   "krUrl": "2992dc0218388118f722476ab2f9a2fc26b95725d0f87ce0720431e2d975f97f"
+  },
+  {
+   "id": 63,
+   "title": "Retour au combat",
+   "text": "Je ne sous-estimerai pas l'ennemi deux fois.",
+   "unlockRequirement": "",
+   "cnUrl": "f4c1c29feb07abb1efbd2dfca28e4aa4e1225856eda4e9fb026bff39a700f260",
+   "jpUrl": "e556fdf96a039e295146a25d34a07618cef5cbef2cdb5fdb1ead08396c1f2692",
+   "enUrl": "d38b56cc8a32f55d1c8e1bef0c7c67fc00f665f9a41110d564413c1d739adff7",
+   "krUrl": "31e9ab87aced6ba54ea7ff4002840b5ff0ab00748c26d6d59fc7388bc037be80"
+  },
+  {
+   "id": 64,
+   "title": "Récupération de santé",
+   "text": "Je peux reprendre mon souffle.",
+   "unlockRequirement": "",
+   "cnUrl": "e4a154da09acc1c98f960be2b7a2aebde75cb75d855d729aedc6fc8c2aad1e21",
+   "jpUrl": "2f2e47fc2bbadaabee349fdcb60d25c28b0059caee381e8a7d86900a5173c953",
+   "enUrl": "83fedbfe3d2a1ff5c30fb48dab6c15a2918a9aa04b881310dbdd38f4c39ae640",
+   "krUrl": "0a6fca5ff09930c7a6d402dca51d256fb457c4279ac53087de88c62a278ef2dc"
+  },
+  {
+   "id": 65,
+   "title": "Technique",
+   "text": "La chance a tourné.",
+   "unlockRequirement": "",
+   "cnUrl": "a4ef1c1baf3da05c06ceb5bb51693f0ae90d294b0ab4df774d35373c397c3e49",
+   "jpUrl": "3161080ed87538460325e91fcb1fc8e179bca50dc41d2075fb906a8ec5f92cf4",
+   "enUrl": "d9d9b2b87c4e1bf6f834bb49f16885b3acf15636ed6223200712eee9cf57affc",
+   "krUrl": "8268df13e5a43c2ca4663c7cf41d078755ed89e2ef2387841d5d9b8efb4b1b8d"
+  },
+  {
+   "id": 66,
+   "title": "Combat gagné",
+   "text": "La lame est victorieuse !",
+   "unlockRequirement": "",
+   "cnUrl": "d135f910247043da6cac9a12eef67f7cb46df343c914b5a2faa6e3fa1a46ef6c",
+   "jpUrl": "505bd20d5975a9c5d9b6693c19a148bc754dc2c035bf8d188cc4c816fa05fc34",
+   "enUrl": "5853ff71379cd441151e2b0d20967d11eaf203ec3c58d4b61aff8de4af8b9612",
+   "krUrl": "b526c834cdc6a5f2c04794eda613c59885a7263a929e77ad9b5623581569105c"
+  },
+  {
+   "id": 67,
+   "title": "Ouverture de coffre au trésor 1",
+   "text": "Ça fera de l'argent de poche.",
+   "unlockRequirement": "",
+   "cnUrl": "f809965de01ead294980138c110e8c4a3f16b784b2c4cdcf00f5ead6198c523d",
+   "jpUrl": "26e5507bb35fea966da369cd9263fedcdcf7b2814f037a9bbccb9cf232210a40",
+   "enUrl": "7e7ce6a1bccd1dd465a52175a2f951e68e6667056096bd097d56fe47cb9ff0f6",
+   "krUrl": "4cf6921cc0e8c3838d6e927433958cdf71ab29d4943fd4a865ae1fc1c91d7581"
+  },
+  {
+   "id": 71,
+   "title": "Ouverture de coffre au trésor 2",
+   "text": "Encore un peu et je pourrai m'acheter une nouvelle épée !",
+   "unlockRequirement": "",
+   "cnUrl": "53af904572d6b2799933701d6f6e882eda4f46520219c7ce8fdc75967fd2d20e",
+   "jpUrl": "d23239e7e51a09926affcf10a5d0e0e9fe71b4d424f66391100311f1ac03e461",
+   "enUrl": "6647e2222e98b967e4bd82160973f53f39f3a5c2759af989e4ca2dbb240bb069",
+   "krUrl": "78af6d096878033830cf94e6d26c61124330a49884e2eeaf89807cc2614a9bec"
+  },
+  {
+   "id": 72,
+   "title": "Ouverture de coffre précieux",
+   "text": "Je n'aurai pas besoin de harceler le général pendant un moment !",
+   "unlockRequirement": "",
+   "cnUrl": "6e8de7a16dbe960fe57d462fbb6a0efea17d556b9449b43b48515e63ccc91b8d",
+   "jpUrl": "65d5fd8a68b768f84c3096feb51a7cb4426e05bd44a155fae68d5bcb6347657c",
+   "enUrl": "45929d7940251b3c1aef842841eaa3ef7e7efcc864498ca3b441ab2b59ded67f",
+   "krUrl": "4cf82139d8bd225515a9042e967d15a8cb89d578b49b89e05a3e489a1041ddd3"
+  },
+  {
+   "id": 68,
+   "title": "Énigme réussie 1",
+   "text": "Cooool.",
+   "unlockRequirement": "",
+   "cnUrl": "9d8171b5084cb5e8f8d10280edce6fc6cc9d782d768b21a62089c388dfc82f85",
+   "jpUrl": "fb32ff9197c352383a54d8f686389392b39b332f2b31801e9d056c92452cc650",
+   "enUrl": "fb30ca6d019dcb2b3668e62084f5d4fc9134a2b87e3c649ebb8843008b31cc05",
+   "krUrl": "475fdc9af31f5f9d7f69ce43de663e03790afb7e74f293b654231269d75f888e"
+  },
+  {
+   "id": 73,
+   "title": "Énigme réussie 2",
+   "text": "Ça a marché ! Laisse-moi essayer la prochaine fois !",
+   "unlockRequirement": "",
+   "cnUrl": "3385b9f23ad87e9004b27b399b16f335b795541fd72ef88a3d7d362fb4935dc7",
+   "jpUrl": "60fabd4f3afffd41c377015534183c2d15081335ec500431bdc286d4e40c3aad",
+   "enUrl": "a2c27c42f7b03065e54d1050281a8045af033dc0f873a81bba7fe2ba1088fc81",
+   "krUrl": "d836c7ebf6b3e5a6276b888927cdb0910cfb846c3f8b6e707aad2e5948070b07"
+  },
+  {
+   "id": 69,
+   "title": "Cible ennemie trouvée",
+   "text": "Allons dire bonjour !",
+   "unlockRequirement": "",
+   "cnUrl": "6eb755c20ae0cad99ab9c99e29d6e8d12549a5c9b6bc384f6311cfe808bc7ac9",
+   "jpUrl": "8e838d7450681e01d12af54f31f594932261d1262d75bd975d6c7498ca6ae623",
+   "enUrl": "dc39ed6221e873dd1fd0de978863a489182b6e3275e5331da15acfa476d957f7",
+   "krUrl": "b0f82a439571da3c6d36d8c6edcfffadb95358f8662ad628e2b94dc64fbca445"
+  },
+  {
+   "id": 70,
+   "title": "Retour en ville",
+   "text": "Je me demande si je vais trouver des épées rares...",
+   "unlockRequirement": "",
+   "cnUrl": "71d3df03b55706e3c6895955e26cf3dfa4b2e2a2906fffc35d59edfe2b9e9496",
+   "jpUrl": "bd6066b9641eebef0e0051e019ce13089e0017658c7016ee9a4a126180e1509d",
+   "enUrl": "e5e3828b1da7146b0c6ae52b0939fdc66c48aa0ddddf01344dcadb47d53d7b7c",
+   "krUrl": "04243b27e7d2a3648a3905ea98e700b47e15f59946cc7164fb672a3144f4ab84"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Détails du personnage",
+   "text": "Le fougueux lieutenant du Luofu de Xianzhou, mais également sa plus fine lame.<br />Il est né pour manier l'épée et en est obsédé. Dès que Yanqing a une épée dans la main, personne n'ose sous-estimer ce jeune génie.<br />La seule chose qui puisse émousser le tranchant de sa précieuse lame semble être le temps.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Histoire du personnage : Partie I",
+   "text": "Plus jeune lieutenant de l'histoire des Chevaliers des nuages, serviteur du général Jing Yuan, collectionneur d'épées antiques de la Commission de l'artisanat... Avec tous ces titres prometteurs, et les rumeurs qui entourent cet enfant prodige, on peine à croire qu'il s'agit toujours d'un enfant.<br /><br />D'aussi loin qu'il se rappelle, Yanqing a toujours suivi Jing Yuan comme son ombre, aidant le Siège de la clairvoyance divine a résoudre ses problèmes. En retour, Jing Yuan lui a appris l'art de l'épée et l'art de la guerre. Après des années d'entraînement, l'esprit de Yanqing est aussi vif et affuté que l'épée immaculée qu'il porte.<br /><br />D'après les exercices de combat des Chevaliers des nuages, contrôler simultanément six dagues dans les airs est une technique que même les instructeurs ne pouvaient pas maîtriser en un siècle. L'expression convenue parmi les habitants de Xianzhou pour décrire les talents militaires de Yanqing est « un épéiste surdoué né pour combattre. »",
+   "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie II",
+   "text": "Les annales militaires des Chevaliers des nuages racontent comment Jing Yuan a découvert le jeune garçon et a défendu sa position contre l'opinion publique, avant de l'incorporer dans les forces armées. Cependant, la lignée familiale de Yanqing a été classée comme étant inconnue.<br /><br />La plupart des officiers montrent des talents militaires dès leur enfance. Pendant des millénaires, de nombreux individus exceptionnels sont sortis du rang pendant la Chasse. En ce qui concerne Yanqing, il a été chargé d'une mission militaire avant même sa majorité. Une « folie du général », d'après certains.<br /><br />Mais sur le champ de bataille, les débuts de ce génie ont été plus qu'explosifs, et les critiques se sont tues rapidement.<br /><br />Alors qu'il chassait près d'une étoile lointaine, la colossale créature mécanique Gardevent créée par les Peuples de l'Abondance se mit à pulvériser les forces de défense comme des fourmis. Ce jeune garçon lui fit face, réclama sa destruction et mit l'ennemi en déroute jusqu'à la victoire.<br /><br />Pour ce qui est de ses succès suivants : il a brisé la formation du Loup dévoreur des Borissiens avec l'aide de Jing Yuan, décapité trois Seigneurs du terrier, et combattu sauvagement les Texalitis, jusqu'à couler leur toute puissante flotte Attrape-nuage... Cela ne représente qu'une petite note en bas de page dans les annales de son vaillant jeu d'épée.",
+   "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie III",
+   "text": "Si vous demandez à Yanqing quels sont ses centres d'intérêt à part le combat à l'épée, il vous répondra simplement...<br /><br />« Les centres d'intérêt ne font qu'altérer la vitesse de mon épée ! »<br /><br />Comme un enfant fasciné par ses jouets, il dépense sans compter pour s'offrir la plupart des lames fabriquées par la Commission de l'artisanat, des épées volantes contrôlées par le qi, des dagues pour le combat rapproché, des épées souples pouvant être courbées et ajustées... Il connaît chaque spécificité et fonction des différentes épées comme les doigts de la main. Il lui arrive même d'acheter les lames en double, l'une pour le combat, l'autre pour sa collection. À la fin de chaque mois, ses économies sont catastrophiques et il doit quémander de la nourriture et des produits de première nécessité auprès du général.<br /><br />C'est tout naturel pour les adolescents d'aimer les épées. Mais un rêve particulier scintille et danse au milieu des épées de Xianzhou de sa collection :<br /><br />Devenir le meilleur du Luofu... Non, le meilleur de tous les vaisseaux Xianzhou, obtenir le titre de Champion de l'épée du Luofu, ou même obtenir le titre d'Épéiste suprême de l'Alliance. <br /><br />Depuis la Rébellion de l'Imbibitor Lunae, cela fait des siècles que le poste de Champion de l'épée des Chevaliers des nuages du Luofu est vacant. Non pas parce que personne ne le revendique, mais pour une raison bien plus embarrassante :<br /><br />L'ancienne Championne de l'épée, une guerrière de légende décorée de <nobr>13</nobr> distinctions, a violé les lois célestes, entraînant la suppression de son nom du cosmos. Même le titre prestigieux qu'elle portait est devenu un sujet sensible.<br /><br />Mais pour cet adolescent remarquable, il est temps de tourner la page des annales de l'histoire et d'écrire un nouveau chapitre.",
+   "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie IV",
+   "text": "« Combat #123 : Yanqing ; Jing Yuan. »<br />« Général, ça suffit ! Je suis épuisé... »<br />« Je croyais que tu étais sûr de rester invaincu tant que tu aurais une épée dans les mains ? »<br />« Quel serviteur prendrait les armes contre la personne qu'il a voué de protéger ? Et si accidentellement je... »<br />« Si ton épée était aussi rapide que ta langue, j'aurais déjà perdu. Je vais garder une main dans le dos. Maintenant, dépêche-toi ! »<br />« Non non, vos deux mains, c'est mieux ! Ou peut-être pouvez-vous envisager de ne pas utiliser le Seigneur de la foudre ? »<br />« Tu penses gérer ça comme à la Commission du ciel et t'en sortir avec ton baratin ? Mmmh, laisse-moi réfléchir... »<br />« Aha, une ouverture ! Regardez ça ! »<br />« Je le savais. Riposte ! »<br />« Aïe aïe aïe, et mince ! J'attendais de placer mon coup depuis des lustres. »<br />« En amour comme à la guerre, tous les coups sont permis, et les attaques furtives sont une bonne idée. Dommage que ton épée soit si voyante. C'est ça qu'on appelle la « fougue de la jeunesse ? »<br />« Général, c'est reparti ! Cette fois-ci, je vais essayer d'être aussi discret que possible... »<br /><br />Jing Yuan a consacré beaucoup de temps et d'énergie à élever Yanqing. Selon certains, c'était pour former son héritier. Selon d'autres, il le gardait auprès de lui pour s'en servir comme d'une arme secrète. Jing Yuan n'a jamais apporté d'explication.<br /><br />Yanqing est devenu un combattant inégalé à bord du Luofu de Xianzhou et ses compétences n'ont fait que s'affiner. Jing Yuan a progressivement commencé à réfléchir à des moyens de contenir l'ardeur de Yanqing, pour le remettre à sa place sans l'offusquer.<br /><br />Trop solide, ça casse, trop affuté ça s'émousse : plus qu'un simple tranchant, une épée a également besoin d'un fourreau pour la retenir. D'après Jing Yuan, Yanqing a grandi excessivement vite, au-delà de ses espérances. Yanqing n'a plus besoin de gagner en force, mais il doit apprendre à se contenir ; une aptitude qui ne s'acquiert qu'avec le temps.",
+   "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
+  }
+ ],
+ "archive": {
+  "cvCn": "喵酱",
+  "cvJp": "井上麻里奈",
+  "cvKr": "이새아",
+  "cvEn": "Amber May",
+  "camp": "Luofu de Xianzhou"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Yanqing",
+ "rarity": 5,
+ "descHash": "Serviteur du général Jing Yuan. Un épéiste talentueux qui n'a même pas atteint sa majorité. Lorsque Yanqing a son épée en main, personne ne lui arrive à la cheville.",
+ "artPath": "87a167bc36b9137d33292c052f45da99e6d3542e52d429333f862b31081ed782",
+ "miniIconPath": "9b5157d386417cf7351aa08c175c994b4ff4f1fdc4974a7efff9e385016b1c96",
+ "damageType": {
+  "id": 4,
+  "iconPath": "c7ca3cbdcd5d26fbfad374f97d58d9152b5a398a5e5bf6d441a29041251fa779",
+  "color": "#47C7FD",
+  "name": "Glace",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "948d90296adc5203a105a16be892d9e4d5e83c93df11abf59a8ad4321e37fbb8",
+  "altIconPath": "38241d858c120d8a55f36eaab92a34690a7d9add4f3e36383dabf27f5d3f5f55",
+  "color": "#FFFFFF",
+  "name": "La Chasse",
+  "rarity": 0
+ },
+ "pageId": "yanqing"
+}

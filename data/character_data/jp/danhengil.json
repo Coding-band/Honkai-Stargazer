@@ -1,0 +1,3246 @@
+{
+ "spRequirement": 140,
+ "iconPath": "6088d9faf3d3c1b4b681e8c39dcb5810b6d776024a0a29084e0411cb9c81ca23",
+ "bgPath": "da0bd339fec9edd543c46943e7dcf5f73816b9e079ab84f4a0160f456392b8a0",
+ "figPath": "52aec202da563787391a99586664498c6a3355dad1cf26183916512a49c9f23c",
+ "fgPath": "",
+ "splashIconPath": "07d3394fad5697918e143035fd63058702c813709af0d8f20cda5e3e5e1ba419",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 1,
+  "iconPath": "db6e0535800ce9a3dd926342c0481644831ce68b6b6add1f64a6a7fd01922095",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬",
+    "エンバー交換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "運命の足跡",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "幾度の敗北があなたに勝利をもたらし、一歩一歩の前進があなたを運命の転換点へと導いた。",
+   "purpose": "軌跡素材",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」ポイント報酬",
+    "ナナシの勲功",
+    "エンバー交換",
+    "期間限定イベント報酬"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "d75aec8e75227549d536ef57980f65a2b081b9665d06cd1a02a5bafa6c688f63",
+   "name": "無窮なる仮身の遺恨",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "いくら肉体を奪っても、願いは叶わない。仙薬を求める人たちのように、それは「壊滅」を恐れる必要のない、永く存在できる体を渇望する。けど同時に、その者は知っている、それは永遠に実現できない迷夢だと。<br /><br />「数え切れないほどの世界が負創神の烈炎に呑まれるのを見てきた、そして妾もその炎の中の一筋であった。妾は其の思うがままに踊る。だが、薪が燃え尽きると炎は消えることも、よく理解している…」",
+   "purpose": "軌跡素材",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "歴戦余韻「鱗淵境」"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "漫遊指南",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>20000</nobr>獲得できる。",
+   "lore": "世界を渡り歩くためには欠かせない、冒険手引き集。閲覧キーを押すと、電子音声が理解可能な言語で、有名な冒険者たちが様々な世界で体験したことや、彼らが色々な星で得た貴重な知識を語り聞かせてくれる。<br /><br />「漫遊指南最新シリーズ『スペースグルメガイド』が現在発売中。ぜひお買い求めください」<br />「投稿の際は、博識学会共感覚ビーコンのオペレーター<nobr>23</nobr>θにお繋ぎください。原稿料はあなたが普段から利用している方法でお振込みいたします」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "「忘却の庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "冒険記録",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>5000</nobr>獲得できる。",
+   "lore": "綺麗に装丁された、一目でためになるとわかる冒険日誌。冒険に関する細かい描写、価値のある情報、サバイバル術が書かれている。<br /><br />「なんで数字化してデバイスに保存しないの？持ち歩きやすくなるでしょ」<br />「お前が思っているより、先進技術は恒星嵐や中性子噴出に弱いんだ。なにより、この本の制作者は、最も簡単な方法で人々に読んでもらいたかったんだろう」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "デイリー訓練",
+    "エンバー交換"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "旅の見聞",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>1000</nobr>獲得できる。",
+   "lore": "旅の出来事を記した日記。字はかすれており、不鮮明。思うままに内容が書かれてあるので、あまり助けにはならないだろう。<br /><br />「読み終わったら早くその紙切れを捨てるのよ、丹恒？」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "依頼報酬"
+   ]
+  },
+  "468392": {
+   "id": 468392,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "35258f875be15df6ee5fa2630842849695cf2a6cb8d14a74063043a6ba4258dc",
+   "name": "霊鎮めの勅符",
+   "desc": "仙舟の機巧の部品。虚数属性キャラクターの昇格素材。",
+   "lore": "噂によれば、ルパートが無機生命体の災禍を引き起こした後、仙舟の金人もそれに影響を受け反乱を起こし、殺戮の限りを尽くしたという。似たような災禍が再び起きないよう、職人たちは呪符で金人の思考能力を奪うことにした。<br /><br />「こいつが急に暴れ出すなんて…いったい何をした？」<br />「何もしてない！あ…あの呪符を拭いただけだ」",
+   "purpose": "キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/468392",
+   "comeFrom": [
+    "凝結虚影・「工造司」",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "71d58f084522c87e93327e3e7fc1db8fb4abb65e9989b163d4a348c9a3761329",
+   "name": "永寿の萌芽",
+   "desc": "古の神物が芽生えた幼芽、強化に必要な簡易素材。",
+   "lore": "仙舟の長命種が持つ「無尽形寿」の源、「豊穣」の神跡の残余。幾星霜も前、とある皇帝の長命への妄念が、仙舟艦隊を仙方を求める旅へと促した。<br /><br />「朕は万世の垂化、永延の国祚を欲す。が、天年に尽頭有り、人力に窮限有り。故に、天舟九座遣い、天外へ仙方を求める」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "豊穣の忌み物からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "c3cb2e5eb5390586c537d03d1de632b1aa59c49a3cc32f24d68672d2f97fb1e5",
+   "name": "永寿の天華",
+   "desc": "古の神物が咲いた花、強化に必要な普通素材。",
+   "lore": "仙舟の長命種が持つ「無尽形寿」の源、「豊穣」の神跡の残余。艱難辛苦を乗り越え、薬を求める舟は天顔を謁見した。神は垂迹し奇跡を降ろす、そして建木が萌芽する。<br /><br />「月に落ちる新蕊、雲外に香る天の華。桂薫が吐納する間、鶴髪も髫に換わる」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "均衡Lv.2に達した後、豊穣の忌み物からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "635673": {
+   "id": 635673,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "9fe7d5d3bec56787a53e9acfa89161bc0599ba7b6a3a0d95eb60863ff6dcd006",
+   "name": "破砕の刃切",
+   "desc": "反物質レギオンのメンバーが落とした武器の破片。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "この焼印は階級と「壊滅」の功績を示す。<br />この武器の主は紅の馬にまたがり、都市を燃やし、人々を仲たがいし、国を蟻の巣のように潰した。<br /><br />「この印を持つ者、平和を国々から放逐せよ」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/635673",
+   "comeFrom": [
+    "疑似花萼「収容部分」",
+    "エンバー交換"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5708b196a8af89740ced588d98dc414c791d209879957fb0bc8644cc2dc84adb",
+   "name": "永寿の栄枝",
+   "desc": "古の神物の栄枯する枝、強化に必要な高級素材。",
+   "lore": "仙舟の長命種が持つ「無尽形寿」の源、「豊穣」の神跡の残余。三つの災いの後、仙舟は塗炭の苦しみを舐めた。天人が魔に堕ち、苦しみと災厄は絶え間なく生じる。<br /><br />「十王司の律令に基づき、頻繁に魔陰に堕ちる者は判官が捕らえ、幽獄に収監し審断する」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "均衡Lv.4に達した後、豊穣の忌み物からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "836259": {
+   "id": 836259,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "name": "浄世の刃切",
+   "desc": "反物質レギオンのメンバーが落とした破れた武器。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "この武器は、持ち主のレギオンでの階級と「壊滅」の功績を示す。<br />この武器の主は戦争の終わり際に登場し、劫火で世界を焼き尽くした。どれだけ神に祝福されていようと、どれだけ輝かしい功績があろうと、その星は燃え尽きた炭のように、星空の暗闇の中、死んでいくだろう。<br /><br />「この印を持つ者、世界を滅掃せよ」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/836259",
+   "comeFrom": [
+    "疑似花萼「収容部分」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  },
+  "920200": {
+   "id": 920200,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e8f74ef086a603eed69945d0872fbbc9776145890808104be58b4d30dca2d7a",
+   "name": "無生の刃切",
+   "desc": "反物質レギオンのメンバーが落とした破れた鍔。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">壊滅</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "この焼印は階級と「壊滅」の功績を示す。<br />この武器の主はすべての思考する生物を恨んでいた。彼らは知性ある生物の悲鳴を心地良い楽曲のように堪能し、数千年かけて築いた文明を一晩で滅ぼした。<br /><br />「この印を持つ者、呼吸を衆生から奪い給え」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/920200",
+   "comeFrom": [
+    "疑似花萼「収容部分」",
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 95.04,
+   "attackAdd": 4.752,
+   "hpBase": 168.96,
+   "hpAdd": 8.448,
+   "defenseBase": 49.5,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549504,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 133.056,
+   "attackAdd": 4.752,
+   "hpBase": 236.544,
+   "hpAdd": 8.448,
+   "defenseBase": 69.3,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549504,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 171.072,
+   "attackAdd": 4.752,
+   "hpBase": 304.128,
+   "hpAdd": 8.448,
+   "defenseBase": 89.1,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633445,
+     "count": 6
+    },
+    {
+     "id": 468392,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 209.088,
+   "attackAdd": 4.752,
+   "hpBase": 371.712,
+   "hpAdd": 8.448,
+   "defenseBase": 108.9,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633445,
+     "count": 9
+    },
+    {
+     "id": 468392,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 247.104,
+   "attackAdd": 4.752,
+   "hpBase": 439.296,
+   "hpAdd": 8.448,
+   "defenseBase": 128.7,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717386,
+     "count": 6
+    },
+    {
+     "id": 468392,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 285.12,
+   "attackAdd": 4.752,
+   "hpBase": 506.88,
+   "hpAdd": 8.448,
+   "defenseBase": 148.5,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717386,
+     "count": 9
+    },
+    {
+     "id": 468392,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 323.136,
+   "attackAdd": 4.752,
+   "hpBase": 574.464,
+   "hpAdd": 8.448,
+   "defenseBase": 168.3,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "ab0114ea2d31d4e1494024249317e4eeeeb128753e010f21c4e327aee5dd1f6f",
+   "artPath": "d76cca358abc845699042faea8e08c73763423fe23c552e06bceb3590c0054fb",
+   "name": "九天",
+   "descHash": "「亢心」の累積可能層数+<nobr>#1[i]</nobr>。1段の攻撃を行うたび、さらに「亢心」を1層獲得する。",
+   "params": [
+    4
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "4d3a69c706a8fe520805dc4c55375afb2281c31175c5f178b77aeaadb1233044",
+   "artPath": "f576316aa3dbb216936b5c4a030947a5d33c460e8ef5794e64bbd52bc42481a0",
+   "name": "九旒",
+   "descHash": "必殺技を発動した後、丹恒・飲月の行動順が<nobr>100%</nobr>早まり、さらに「逆鱗」を1獲得する。",
+   "params": []
+  },
+  {
+   "id": 3,
+   "iconPath": "d39565301666723b7fa5b0defe5045be399d45c3c8e34a02b5db49b414c8281f",
+   "artPath": "7c204ddee5483a41bff402777c3740710c6df491415aed9c4b17d6330fa69e4b",
+   "name": "雲旗",
+   "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "ed1c9576eedc0c96e4ab02cd291259a15d965b8441da289516ca0df91655820f",
+   "artPath": "4670c0e7eb7feb27975225166ae6538f4c4712d98aebb15b096cb119a3d50e9d",
+   "name": "嘲風",
+   "descHash": "「叱咤」のバフ効果が、自身の次のターンが終了するまで継続するようになる。",
+   "params": []
+  },
+  {
+   "id": 5,
+   "iconPath": "2406eef7fd43f8b82b7e1d5428e478987fa67d66aa7ca8dd964cc5c7673ae1ce",
+   "artPath": "b4eee5f5a36dc9b5d63d224ee4c94de889319425733c65904ed2528101a3e33c",
+   "name": "凌雲",
+   "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "0c5061c1d31df4230917a1c9a1785607985651c96a5181c9cd5dc263123e33ff",
+   "artPath": "0288c21ebb78f0341da9f7cecdc26e453a629c6224ec61dc34b192fba93ff5fb",
+   "name": "黄龍",
+   "descHash": "丹恒・飲月以外の味方が必殺技を発動した後、丹恒・飲月が発動する次の「躍動せし耀鱗」の虚数属性耐性貫通+<nobr>#1[i]%</nobr>。この効果は最大で<nobr>#2[i]</nobr>層累積できる。",
+   "params": [
+    0.2,
+    3
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   906590,
+   559585,
+   822648,
+   990530
+  ],
+  [
+   990531
+  ],
+  [
+   107176
+  ],
+  [
+   421477
+  ],
+  [
+   706004
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "単体攻撃",
+   "descHash": "2段の攻撃を行い、指定した敵単体に丹恒・飲月の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F4D258;\">虚数</span>属性ダメージを与える。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 906590,
+   "name": "水華",
+   "iconPath": "5097b54b66fb6c29350db36df2b3a9853823b128979a6091f20f972cc37af895",
+   "typeDescHash": "通常攻撃",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "強化",
+   "descHash": "このスキルは通常攻撃を強化できる。このスキルを使用してもSPは消費されず、戦闘スキルを発動したとも見なされない。強化通常攻撃を行った後に、SPが消費される。通常攻撃は最大で3回まで強化できる。<br />1回強化、「水華」が「瞬華」に強化される。<br />2回強化、「水華」が「天矢陰」に強化される。<br />3回強化、「水華」が「躍動せし耀鱗」に強化される。<br />「天矢陰」または「躍動せし耀鱗」を発動した時、4段目以降の攻撃の前に、それぞれ「叱咤」を1層獲得し、丹恒・飲月の会心ダメージ+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>。この効果は最大で<nobr>#2[i]</nobr>層累積でき、自身のターンが終了するまで継続。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 990531,
+   "name": "龍力自在",
+   "iconPath": "d39565301666723b7fa5b0defe5045be399d45c3c8e34a02b5db49b414c8281f",
+   "typeDescHash": "戦闘スキル",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.06,
+      4
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.066,
+      4
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.072,
+      4
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.078,
+      4
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.084,
+      4
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.09,
+      4
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.0975,
+      4
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.105,
+      4
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1125,
+      4
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.12,
+      4
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.126,
+      4
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.132,
+      4
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.138,
+      4
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.144,
+      4
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.15,
+      4
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "拡散攻撃",
+   "descHash": "3段の攻撃を行い、指定した敵単体に丹恒・飲月の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F4D258;\">虚数</span>属性ダメージを与え、隣接する敵に丹恒・飲月の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分の<span style=\"color:#F4D258;\">虚数</span>属性ダメージを与える。自身は「逆鱗」を<nobr>#3[i]</nobr>獲得する。<br />「逆鱗」は最大で<nobr>#4[i]</nobr>まで所持でき、丹恒・飲月のSPの代わりとして消費できる。また、「逆鱗」の消費はSP消費と見なされる。",
+   "ultimateCost": 140,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 107176,
+   "name": "傲睨せし蒼龍、世を濯ぐ劫水",
+   "iconPath": "e4f662a94f8812134c8d08048ff4a0a5da51b937b4e2fce6310366591d1aaacf",
+   "typeDescHash": "必殺技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.8,
+      0.84,
+      2,
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.92,
+      0.896,
+      2,
+      3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.04,
+      0.952,
+      2,
+      3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2.16,
+      1.008,
+      2,
+      3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.28,
+      1.064,
+      2,
+      3
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.4,
+      1.12,
+      2,
+      3
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2.55,
+      1.19,
+      2,
+      3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.7,
+      1.26,
+      2,
+      3
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.85,
+      1.33,
+      2,
+      3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      1.4,
+      2,
+      3
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3.12,
+      1.456,
+      2,
+      3
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.24,
+      1.512,
+      2,
+      3
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.36,
+      1.568,
+      2,
+      3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.48,
+      1.624,
+      2,
+      3
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.6,
+      1.68,
+      2,
+      3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "強化",
+   "descHash": "丹恒・飲月は1段の攻撃を行うたびに「亢心」を1層獲得する。「亢心」1層につき自身の与ダメージ+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>、この効果は最大で<nobr>#2[i]</nobr>層獲得できる。「亢心」の効果は自身のターンが終了するまで継続。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 421477,
+   "name": "亢心",
+   "iconPath": "5378630a4eaf0523f831958a12e4e40f91e20cbed3f14ad5ce19081c610c1450",
+   "typeDescHash": "天賦",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.05,
+      6
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.055,
+      6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.06,
+      6
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.065,
+      6
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.07,
+      6
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.075,
+      6
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.08125,
+      6
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.0875,
+      6
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.09375,
+      6
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      6
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.105,
+      6
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.11,
+      6
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.115,
+      6
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.12,
+      6
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.125,
+      6
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 622063,
+   "name": "攻撃",
+   "iconPath": "5097b54b66fb6c29350db36df2b3a9853823b128979a6091f20f972cc37af895",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "強化",
+   "descHash": "秘技を使用した後、<nobr>#2[i]</nobr>秒間継続する「遊龍」状態に入る。「遊龍」状態で攻撃すると、素早く前方に一定距離移動し、触れた敵を攻撃する。その間、敵のすべての攻撃を防げる。「遊龍」状態で敵を先制攻撃して戦闘に入った後、敵全体に丹恒・飲月の攻撃力<nobr>#3[i]%</nobr>分の<span style=\"color:#F4D258;\">虚数</span>属性ダメージを与え、自身は「逆鱗」を<nobr>#1[i]</nobr>獲得する。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 706004,
+   "name": "掣空、虹の如し",
+   "iconPath": "a84db1f3a94fc92c2f173b931533383a179d668028819f26f500665775655365",
+   "typeDescHash": "秘技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      20,
+      1.2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "単体攻撃",
+   "descHash": "3段の攻撃を行い、指定した敵単体に丹恒・飲月の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F4D258;\">虚数</span>属性ダメージを与える。",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "30",
+   "id": 559585,
+   "name": "瞬華",
+   "iconPath": "4726312144a4925502caac451742b285a7b821ca3567e76b1d8e933f7939f053",
+   "typeDescHash": "通常攻撃",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.56
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.82
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.08
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.34
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.6
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.86
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.12
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.38
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "キャンセル",
+   "descHash": "強化をキャンセルする。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 676230,
+   "name": "キャンセル",
+   "iconPath": "dee2c18ee503ef7dcea480c55215c60b8a773e034aa42a41577be072d616e4fb",
+   "typeDescHash": "戦闘スキル",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "拡散攻撃",
+   "descHash": "5段の攻撃を行い、指定した敵単体に丹恒・飲月の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F4D258;\">虚数</span>属性ダメージを与える。4段目以降の攻撃は隣接する敵にも丹恒・飲月の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分の<span style=\"color:#F4D258;\">虚数</span>属性ダメージを与える。",
+   "ultimateCost": 0,
+   "break": "90 + 30/adjacent",
+   "energy": "35",
+   "id": 822648,
+   "name": "天矢陰",
+   "iconPath": "a7033c9d41a2603b1ac912419c377c4a6592f9b6705f92a5ea89b70e4f9ad707",
+   "typeDescHash": "通常攻撃",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.9,
+      0.3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.28,
+      0.36
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2.66,
+      0.42
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3.04,
+      0.48
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3.42,
+      0.54
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3.8,
+      0.6
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      4.18,
+      0.66
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      4.56,
+      0.72
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      4.94,
+      0.78
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "拡散攻撃",
+   "descHash": "7段の攻撃を行い、指定した敵単体に丹恒・飲月の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F4D258;\">虚数</span>属性ダメージを与える。4段目以降の攻撃は隣接する敵にも丹恒・飲月の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分の<span style=\"color:#F4D258;\">虚数</span>属性ダメージを与える。",
+   "ultimateCost": 0,
+   "break": "120 + 60/adjacent",
+   "energy": "40",
+   "id": 990530,
+   "name": "躍動せし耀鱗",
+   "iconPath": "af6eab41b731b6869aaa39aff133e7557ce4be7c7e9906d5d539ad7533c93c6b",
+   "typeDescHash": "通常攻撃",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2.5,
+      0.9
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      1.08
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      3.5,
+      1.26
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      4,
+      1.44
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      4.5,
+      1.62
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      5,
+      1.8
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      5.5,
+      1.98
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      6,
+      2.16
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      6.5,
+      2.34
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1213101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1213202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1213203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1213204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 346407,
+          "name": "HP強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+          "statusList": [
+           {
+            "key": "HP",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920200,
+            "count": 3
+           },
+           {
+            "id": 633445,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 346408,
+        "name": "ダメージ強化・虚数",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "939478539b7b35b55ee48b2e19d6994455dec3403493edcc082140d3a061b14e",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#F4D258;\">虚数</span>属性与ダメージ",
+          "value": 0.032
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920200,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 346409,
+      "name": "会心率強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+      "statusList": [
+       {
+        "key": "会心率",
+        "value": 0.026999999
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 549504,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "戦闘開始時、EPを<nobr>#1[i]</nobr>回復する。",
+    "ultimateCost": 0,
+    "id": 346249,
+    "name": "伏辰",
+    "iconPath": "7e28a941f02142693cc2be44d7296c0651a4624c28d76e80eb7907389b09748a",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       15
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1213102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1213205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1213206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1213207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 346404,
+          "name": "ダメージ強化・虚数",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "939478539b7b35b55ee48b2e19d6994455dec3403493edcc082140d3a061b14e",
+          "statusList": [
+           {
+            "key": "<span style=\"color:#F4D258;\">虚数</span>属性与ダメージ",
+            "value": 0.048
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836259,
+            "count": 3
+           },
+           {
+            "id": 717386,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 346405,
+        "name": "会心率強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "会心率",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836259,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 346406,
+      "name": "ダメージ強化・虚数",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "939478539b7b35b55ee48b2e19d6994455dec3403493edcc082140d3a061b14e",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#F4D258;\">虚数</span>属性与ダメージ",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 633445,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "行動制限系デバフを抵抗する確率+<nobr>#1[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 346250,
+    "name": "修禹",
+    "iconPath": "102103210866b056403894ecf78771220aad6ceb2fcc91ecde5a153a81b2b38b",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.35
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1213103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1213208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1213209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 346418,
+        "name": "会心率強化",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "会心率",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717386,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1213210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 430352,
+        "name": "ダメージ強化・虚数",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "939478539b7b35b55ee48b2e19d6994455dec3403493edcc082140d3a061b14e",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#F4D258;\">虚数</span>属性与ダメージ",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717386,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 346419,
+      "name": "HP強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "HP",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "<span style=\"color:#F4D258;\">虚数</span>属性が弱点の敵にダメージを与える時、会心ダメージ+<nobr>#1[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 346251,
+    "name": "啓蟄",
+    "iconPath": "15ea7e3ad7d689dbcb5b95387fedd411a968093b2f5aeab521e710716e227c5d",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.24
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1213201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 346410,
+    "name": "ダメージ強化・虚数",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "939478539b7b35b55ee48b2e19d6994455dec3403493edcc082140d3a061b14e",
+    "statusList": [
+     {
+      "key": "<span style=\"color:#F4D258;\">虚数</span>属性与ダメージ",
+      "value": 0.032
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "胴体",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "会心率",
+    "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "速度",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "次元界オーブ",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "虚数属性与ダメージ",
+    "propertyIconPath": "939478539b7b35b55ee48b2e19d6994455dec3403493edcc082140d3a061b14e"
+   },
+   {
+    "relicTypeHash": "連結縄",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "攻撃力",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初対面",
+   "text": "これが俺の本来の姿、持明族の姿だ…心配する必要はない。俺は依然として丹恒であり、持明族の末裔であり、ナナシビトでもある。",
+   "unlockRequirement": "",
+   "cnUrl": "cef6fb2a564dd3e6ade2febcc23299b817f36c6279018aaf0cd597577b1d1d34",
+   "jpUrl": "35be6d93cbae26eb13d848cf7826b5aafa376d972a7ff7e5111051fe255b8799",
+   "enUrl": "c6c73f7e410c0680b6f031e633c7ccd5b986aec4984a0b256db45720265dc93f",
+   "krUrl": "ceb7740ba24d57775e47382868ff9c44ca0ce4c554d93f576061cf4ee1c97075"
+  },
+  {
+   "id": 2,
+   "title": "挨拶",
+   "text": "アーカイブによれば、持明族は礼儀として、誰かに会った際は手を上げて額に当てる挨拶をするそうだ。俺たちは…それに倣う必要はない。",
+   "unlockRequirement": "",
+   "cnUrl": "9f6eac1432858b7f1ea10185f42718c40a9cb8ce34cc780426a0105aa4ec3980",
+   "jpUrl": "c0e5dc4ecaebef401de620d736194c166ada971d994ebfb3af46185b925e3522",
+   "enUrl": "4725209eca2c0ae8bacbe8ca46032f9912d8bb8e9ac85a2ea5b64db179b18eec",
+   "krUrl": "bd9ad1f4f252a4a77b87727db44bfee470f525621855b41ef6ddee1b52454558"
+  },
+  {
+   "id": 3,
+   "title": "お別れ",
+   "text": "もう寝る時間だ、俺は夜更かしはしない。お前がいい夢を見られるよう祈っている。",
+   "unlockRequirement": "",
+   "cnUrl": "6a1d283654d4d25a55c24694e9889255ea26131e9a6685b815270fe1efa43c03",
+   "jpUrl": "3c8345a677213110aa00eff6cba4e14394b0b5bf8bdb40d01bc9ab3fe822aa3d",
+   "enUrl": "4a0d4ccf8ac11556b4c2e67b15ac718669d3f6c27a7b49fb0cd90b247135ce0c",
+   "krUrl": "5cb743369b3533cb3acbcbd3272a16d78174625ae0e0da98f398f7e919ca1040"
+  },
+  {
+   "id": 4,
+   "title": "自分について・前世",
+   "text": "前世のことは見知らぬ影のようで、はっきりとは見えないが、ずっと俺について回っていた。この感覚は上手く言葉にできない。だが、俺が誰の影でもないということは断言できる。",
+   "unlockRequirement": "",
+   "cnUrl": "bebbe17bcf19b69384aeb52569e6d22d8c8018252bb45a1c09b1ec93a74824be",
+   "jpUrl": "32163661e71c7e00771635902114944be6288038a669b329865754ca3846d829",
+   "enUrl": "cb21dac2ae4a35c4562b2632c01e2946a87d4d0de69a63e50f29849c34f8d9ed",
+   "krUrl": "e5b5a6bcda61fa35bc9f0328a6019e5660325f2292abe8b48fa27dbe28b3ec11"
+  },
+  {
+   "id": 5,
+   "title": "世間話・追放",
+   "text": "あの永久追放の命令は、俺に対する特赦のようだった…なにしろ、俺は今ここにいる。そうだろう？",
+   "unlockRequirement": "",
+   "cnUrl": "7c6af2b1ff1280f7fd1a0b77a588f340584f063ca5f5b61311093fe2a77330ec",
+   "jpUrl": "d328eedba1d691546dccdec2224afa3e5e404304c35917fc3d577f14ce10bf0f",
+   "enUrl": "1f36d88c81d0a1803050055efa2dc279b297e15a66a7b2125db821772aa14ab7",
+   "krUrl": "4cf179f73490d218f1d447d37f193538d69cadeae13cc664d26253ff95476eef"
+  },
+  {
+   "id": 6,
+   "title": "世間話・撃雲",
+   "text": "この槍を造った者とは、まだ決着がついていない。",
+   "unlockRequirement": "",
+   "cnUrl": "3fab8934a23e1de4b664df5165943e60d84c4ceefa69c55af2c5efdbd3d5fffe",
+   "jpUrl": "36e3eee30e7154507b139c4c6995ff1e5e1e7407e23958e8bec73979a4abe1a8",
+   "enUrl": "fc99205681439ef398e0fb64ae603036fae13d04f9a584fbb0cdad9cd41404a7",
+   "krUrl": "6f1789f6ace7ac1315f81ffaea76891889ac87c223d2c82741e9f72496fefd82"
+  },
+  {
+   "id": 7,
+   "title": "趣味",
+   "text": "幽囚獄にいた頃、長い時間と過去から逃げることができるのは、読書をしている時だけだった。",
+   "unlockRequirement": "",
+   "cnUrl": "8d5af3bca5d74c71b1e8357a6670a355e13dc6ee98fae5e1a92a38634e4e4898",
+   "jpUrl": "21f01db1fca4e761d24ecb33adaac43e0f41e66774204c8189484b4f3b0f4ec7",
+   "enUrl": "d6890ec37a4ce7465d3045fc97008204d3529147ce8ca4f2b008794fe857c401",
+   "krUrl": "000fe85d03495bca2d21a096d0bea9e53e012888087db674b01ce84f237a56b3"
+  },
+  {
+   "id": 8,
+   "title": "悩み事",
+   "text": "飲月君の功罪について俺から言うことはない。機会さえあれば、彼の名を捨てたいところだが…この力を使った結果は俺が背負うしかない。",
+   "unlockRequirement": "",
+   "cnUrl": "f2fb665ddd48b23db30709404675d36fc85f872ab4937ff98be9f6397181ad8e",
+   "jpUrl": "d45ccfe4dc80e0cf1730be710262791c7934b1d0ea4f05e7ac7aed5f58748330",
+   "enUrl": "c2c4849bc8f7a94bd07bc2f6d14cb26430d49d0fde9a4cd4160582d24104225f",
+   "krUrl": "5235b553fe35ef39c28fbdfc0129e5a379610855c46e0e79236b9793cc4e001b"
+  },
+  {
+   "id": 9,
+   "title": "シェア",
+   "text": "どの仙舟にいる持明族も「不朽」の龍祖の恩恵を受けている。羅浮の持明族は水を操り、雨を降らせる「雲吟」という奇術を使うことができるんだ。",
+   "unlockRequirement": "",
+   "cnUrl": "8197998aa33d85baf3f49ba07f04ccdc92ebe51f48a3863e32beccd30e8abce8",
+   "jpUrl": "7fca3d78dd7360962114ca1ba932c8952ead687647b3db5f6f6b2a686ceae183",
+   "enUrl": "ce0c2fe2409e2a3ee02821965421a29e61ab99928f3cec598163dd8355ac7c07",
+   "krUrl": "449d41fa778508a8a431f5a86ac9a11bfc1d72c4fbe678565d7c3a7f53e5b2d2"
+  },
+  {
+   "id": 10,
+   "title": "見聞",
+   "text": "「建木」が切られて<nobr>1000</nobr>年は経つというのに、今も朽ちることなく残っている。豊穣の民に何か変わった動きがあるとすれば、きっと「建木」に関係があるのだろう。",
+   "unlockRequirement": "",
+   "cnUrl": "3693d054928f46612b7b31f8a274dc9c3c5fdb5ede0c9018802a01718204b5e8",
+   "jpUrl": "f2b1b0451fe6b4c692c0e0f1208f365080b7ac0a9245b714fd8e8628d1c24d94",
+   "enUrl": "0dbced7685a72697234b9cb793e3b0c54af27e691d9c488de5dbb5e62c3dca84",
+   "krUrl": "0be327293cacafad2103698c8b55a0fdf2d756e44c9f566530423439b391dcba"
+  },
+  {
+   "id": 11,
+   "title": "景元について",
+   "text": "将軍は時々、俺を旧友だと思っているようだ。残念だが…その期待に応えることはできない。",
+   "unlockRequirement": "",
+   "cnUrl": "a660463f2367788b0da8be840fc9c64bd1bd312a42cb6c5d80e6b10962701f7f",
+   "jpUrl": "c607cd92a66b7a8b9edaa6b0a4ba403f448bb84e3cc05874820c257fdc9294cc",
+   "enUrl": "5c309f79cd65896b148913b09b9450ef7a4d05af1a02141358ec1186e495edc2",
+   "krUrl": "de64fc3bbe36a6352639fd6b5e1018572b1e3d14af195dbc4a61d2a9fa12e89e"
+  },
+  {
+   "id": 12,
+   "title": "白露について",
+   "text": "龍尊の伝承が完成していないせいで、彼女は苦境に立たされた…だが幸いなことに、彼女には他人に翻弄されないだけの活力がある。",
+   "unlockRequirement": "",
+   "cnUrl": "8a77821e2fd52806a9358b89248ed73372510beb1d1ab29d34101d14f0fe2e4d",
+   "jpUrl": "1c3e7b5e1482e028b39eb414b97ded44680186ac8a47db86921c13744388e0f2",
+   "enUrl": "d9a61f8b12cb9fd10695127b8fec724467ecdc3a8cf7e967c7fd6a87e407fd91",
+   "krUrl": "4afc3da00b9e9472f1aaa16cf0904f5dbcf6e0047beb5000b411082c52b30862"
+  },
+  {
+   "id": 13,
+   "title": "彦卿について",
+   "text": "あの若い剣士は目つきも腕前も素晴らしいが、彼と剣の腕を比べるつもりはない。",
+   "unlockRequirement": "",
+   "cnUrl": "1529c5ccaac989363a293f1988ae7dafb4bb475089e0a7a2ac7ab6e965c8ead2",
+   "jpUrl": "3df262505ca9d92cfd5e18ab7e075c2b4cd12061642607202710d6cdd0a5e3da",
+   "enUrl": "853dbf6b71eb809756c8de03cbe2046d21aae04e5225486d2d2a1cc3f8f7db86",
+   "krUrl": "564e9bc2d66f81bd176aad2d954e135c5c6b8b855be8533e0a118a4ff8466bae"
+  },
+  {
+   "id": 14,
+   "title": "刃について",
+   "text": "彼が求めるものを、俺は持っていない……",
+   "unlockRequirement": "",
+   "cnUrl": "54a484be6ebbeecaf94879fd00add5065d68b7a7d00a079434dbe62f5bc492e5",
+   "jpUrl": "33ceb58549656e3c44144956015504bf1c97a67139a9d02c2f374c84a675ccbd",
+   "enUrl": "e89ce70df584a754ad27fb34e87ce6af1ca75ba9f0aa15aaae0d084e50184f1e",
+   "krUrl": "9a4a434b568b3ba043229c6afc2a2ab705294129f2525799ebcfd06ceddb5ddc"
+  },
+  {
+   "id": 15,
+   "title": "星魂覚醒",
+   "text": "思い出では選択できない。いずれにせよ、俺の過去は変わらない。",
+   "unlockRequirement": "",
+   "cnUrl": "33dfc07cf1d8a73cbdb2519ea13b2c314911cb0ff4bdfc2ca3b55d7681f918e9",
+   "jpUrl": "f77ba531dac604d663c45f7c4539432cf99133405c2ec326d0959f61e2ee5639",
+   "enUrl": "89c0d08bed5f7461737ed88a9a149a1aea2c07c09015a1ae880606848ee7d5ee",
+   "krUrl": "40359e6527704df0cfb31460462ac37b697036af3ba60706db8866d7d5cd0094"
+  },
+  {
+   "id": 16,
+   "title": "キャラクター昇格",
+   "text": "この胸で騒ぐ力にも、活路を与える必要がある。",
+   "unlockRequirement": "",
+   "cnUrl": "4f2309b807c5bac46576bb19d8681d96f4f8e5462d31e6105f7d029910432d18",
+   "jpUrl": "851c0788bf68acff11e49690fde730bb27655cab86806bdeb1193301833ea0e9",
+   "enUrl": "65753b8395ca399c91d133e6089a2d4fbddcf85fdaed9ae985eda7c382d576cf",
+   "krUrl": "34424d91d9197b785e0c8542e2c1cd6ca37ce36f203dbd37760bda14ae6f7eb5"
+  },
+  {
+   "id": 17,
+   "title": "レベルMax",
+   "text": "未来を知ることはできないが…「選択」はできる。",
+   "unlockRequirement": "",
+   "cnUrl": "c06d501656424daebf757b73590a77bec4e7013884063d61adf3e95ce05103a9",
+   "jpUrl": "76ec6b6ede1a589f5f33496783be3d88f9e9a6c45e798073f803bfc68922b6c1",
+   "enUrl": "8845cc0a6a878b962aa799e86f51e67425214dd172402728c84da749ed3d840d",
+   "krUrl": "2dce8f03e1100713f4f7255d7966638a1eaca852dac4fdb734a46f94366c3632"
+  },
+  {
+   "id": 18,
+   "title": "軌跡覚醒",
+   "text": "俺がこの力の代償を引き受けよう。",
+   "unlockRequirement": "",
+   "cnUrl": "782c657128f88c26492405483223b1643833fe1efcf677d52ae1bc729cf17abf",
+   "jpUrl": "55c56231f25d1c854416cca82fb95414113dbbd8a6a1e718da7ad67ad1c39ae5",
+   "enUrl": "ef937d24891613ea63fb0f503b042f1ac6c3456197c467175214a56da36952d1",
+   "krUrl": "ba4856e9550362469d00f0ff6df4ad9371066699ba1ee70671a9d79a22e62484"
+  },
+  {
+   "id": 19,
+   "title": "パーティ編成・開拓者",
+   "text": "動く時は気をつけるんだ。俺がいるから安心しろ。",
+   "unlockRequirement": "",
+   "cnUrl": "de3cfd45cd1ec3248ff405a51365a586253efa1b633d36ae00e36ba5db060c02",
+   "jpUrl": "f888cfdc49d905a03254cbf2b3a634e0bbeb1c35df6a3b013e1c248524fa2c83",
+   "enUrl": "34c7e76a823fe6ddab2622329f4d9c570f38de5d8affe57ae5dce4400631c753",
+   "krUrl": "0a34214030289a4cf24710eab0c6881b45e28ee86d2dc077de79c445f676fe54"
+  },
+  {
+   "id": 20,
+   "title": "パーティ編成・三月なのか",
+   "text": "三月…何でもない、どうせ言っても聞かないからな。",
+   "unlockRequirement": "",
+   "cnUrl": "928c81bfe7df26dab2ecbb67c34badf4e22f2f1fce46ee33bab61beecd5b9213",
+   "jpUrl": "f7f950991527e3ec5c5f31bf9ac7cfa4a96b63ac86cc84e8ca5001da6e3bdbd2",
+   "enUrl": "4856166318337db758c0f9143ad5975365f7d0471b7b8baf2ab2b9a04f62034a",
+   "krUrl": "f3439678d4e6688d45956d73e4185969a3f56ddbe636ab5ca5f551ec30c2145f"
+  },
+  {
+   "id": 21,
+   "title": "パーティ編成・姫子",
+   "text": "姫子さん、いつものように、俺に任せてほしい。",
+   "unlockRequirement": "",
+   "cnUrl": "45e894b87e39c17801073644710bfbcf8f65853cb893f9311e12ec5fc6ac650a",
+   "jpUrl": "08bc42683489b5748ae1d6f3564b5307f04373287252e0b7248462dbb02ad32e",
+   "enUrl": "81b60db44c6dc3c9182365fe11709a5a81683016da0a89dca31960d901e64013",
+   "krUrl": "ca4e406fab242d6f04299ce29b0fa1ed64b4f0769987976903b17e5394b2e856"
+  },
+  {
+   "id": 22,
+   "title": "パーティ編成・ヴェルト",
+   "text": "ヴェルトさん、ご教示を。俺も自分の考えを正直に伝える。",
+   "unlockRequirement": "",
+   "cnUrl": "d3dda140487207064211c17efd4bcbe736995c2211c148c3f7b51a352a5572a6",
+   "jpUrl": "78773b2b8d68bd006f0b4949ebb91790b005f1ebb84cb428c582995e33e01ef1",
+   "enUrl": "fa9f491a8070c43ec23779a072dea29d14d734ab881988c290c25c981bce747d",
+   "krUrl": "4ef52a03f594d83ef076b3b458a409b83eddba84f47a5fe63636af89ef14e715"
+  },
+  {
+   "id": 23,
+   "title": "パーティ編成・景元",
+   "text": "将軍、お会いできて光栄だ。",
+   "unlockRequirement": "",
+   "cnUrl": "a687db5d4f1ce91e5bf2fbecbd19e1c6100ae122bf76e0bab6e5b33284f764ff",
+   "jpUrl": "2464039fe15e822593c2603986d9a9c390a0a7bb5a10203f78cc86e296f81c3f",
+   "enUrl": "7e891aec8b29b451d10fd896362cae75993c75eff805360478878e3d82e5cc56",
+   "krUrl": "8abbeab06be92386f65edd99ddf74a0c3488bb48cb44136ad0011f0105558fa4"
+  },
+  {
+   "id": 24,
+   "title": "パーティ編成・刃",
+   "text": "もう一度警告だ。お前は…俺の仲間に近づくな。",
+   "unlockRequirement": "",
+   "cnUrl": "f9c21c155fdb77f3943e1250daf88ac61e6003db9f9580cafacf0c337bb26f1a",
+   "jpUrl": "3de3fd9a975003cfb769bdfaee64d9e590f22a64b8ada5a1e439e1e6173abd47",
+   "enUrl": "108b16509d9b74138e061b3aaaf11ec8292551bd894718042860b91a3966e913",
+   "krUrl": "100a81aab9399090740007f65c9a88a2deca9fd7420db2821d2cbee9fcc8dc6c"
+  },
+  {
+   "id": 51,
+   "title": "戦闘開始・弱点撃破",
+   "text": "飛花落葉の世なり。",
+   "unlockRequirement": "",
+   "cnUrl": "bf9a5e01ad9682e7e42bb7d91c0a22f5cb38211e62a1016fd5d483a703e092c5",
+   "jpUrl": "db15ae850de75435edd14351de48894d4675023f59ea1bc552ac7d741234f16a",
+   "enUrl": "5791e18e48953a0952a2507ec0b74c30cd5ff74600638ab8f8fd78cd11053952",
+   "krUrl": "1e820914bf157114285de3b49deb041a301d4473cc8bc63360add03b59d37d77"
+  },
+  {
+   "id": 52,
+   "title": "戦闘開始・危険予知",
+   "text": "怯えることはない。",
+   "unlockRequirement": "",
+   "cnUrl": "b7033b546c9d0953a7a737ba173000ff9446a8ba6da8ab1e4870b683901916ca",
+   "jpUrl": "7f3f8ac3566301f758c87a4bd12e152909f8eec304f3c4291fd79d2acf7553ab",
+   "enUrl": "31e7dc3b00d8b8ee71b99508df945eb30de6c3cdeebf7e66e4ee85993c955cc3",
+   "krUrl": "67e3d9be7334242f55a4343004e4f510a844f0e0d99488ff9de6e21cdd8aae52"
+  },
+  {
+   "id": 53,
+   "title": "ターン・1",
+   "text": "この力が、騒いでいる…",
+   "unlockRequirement": "",
+   "cnUrl": "503b3d17057c869a0cf5ca6ea5bfc2b859e0e7e7438e13f521befe56461759fd",
+   "jpUrl": "cb8dc04f395fedad19648af635efb41720504fcf0205acd6e337648de83816ac",
+   "enUrl": "47eae125e19d26872e3048964ff53448c6ac99a7237a0863789ad94c738d38b3",
+   "krUrl": "a31ce35f173c604994b877b04352738060ebb4af1f75e233cfcbe7e3a8399af2"
+  },
+  {
+   "id": 54,
+   "title": "ターン・2",
+   "text": "この力を…使うつもりはなかった。",
+   "unlockRequirement": "",
+   "cnUrl": "f04b9165ddd76ea0dd55811f497ff8bdf3dbec73726457f2cdd9a2590203eda7",
+   "jpUrl": "772b8acb81869dcb73ac784e52197c4119bbadfd597e2cbde71ff5e886b6a8e3",
+   "enUrl": "c2c7186116def088d6259144424eb2496cffdbb8d74f750000ee34c0138a8d45",
+   "krUrl": "6c31d1ca21c9cec1beabba967278d135f32d75d47ad65fcc38d8ecb840398acd"
+  },
+  {
+   "id": 55,
+   "title": "戦闘中待機",
+   "text": "戦陣において、気を散らすのは忌むべきだ。",
+   "unlockRequirement": "",
+   "cnUrl": "14e0c2cafa629d60193e1fa85f1208c3d118cf3532600bf1af56fe523eda9ac1",
+   "jpUrl": "a27a9cb10595aa15675a86a98e0f577273dba075a88dde127bddb458a279180f",
+   "enUrl": "785e16e7a1b31c36b88d344a84f2fe4dece5d1fabaef6cdb702e99a78a2d88f8",
+   "krUrl": "649795e5723096abc27f90112fca1b17018be1d1d04a6444bf9448095156fdd4"
+  },
+  {
+   "id": 56,
+   "title": "強化通常攻撃2",
+   "text": "隙だらけだ。",
+   "unlockRequirement": "",
+   "cnUrl": "e9f4d49ee167866db8d3179ddf6eee0eba7ca72af4b5b783bd027a4f53f0972c",
+   "jpUrl": "64f5656b20d394bb53a48420eba02cb09c5a22a875287e051d735951f463a66a",
+   "enUrl": "8a80e7c316bf9d4d0ed2a9ca72dd998bb53393b0896548714cd804c58742db3d",
+   "krUrl": "9dd0668ac78ec8a8ae7f9c2f07468e162ea9cc21bdf5fb5b8ba821b69ee29ddd"
+  },
+  {
+   "id": 57,
+   "title": "強化通常攻撃3・使用",
+   "text": "天洪の荒波…",
+   "unlockRequirement": "",
+   "cnUrl": "7b42ca70267596023526012153a246380c01f9a9900bb66d130b80af7e7ff6bc",
+   "jpUrl": "cbcd48ea656e7e091816ac11f64371d22c32753a77bb76adfa2b018889dd2ad5",
+   "enUrl": "a0d54499d7272081b3943f7451c5cb008454640d2569cfcb9e0b1fa79f3aa1c6",
+   "krUrl": "45e13554472b12ae26a1c633e84013a32abc3ca590caae6a5a35aec4f6fe43e2"
+  },
+  {
+   "id": 58,
+   "title": "強化通常攻撃3・発動・1",
+   "text": "霄龍、いでよ！",
+   "unlockRequirement": "",
+   "cnUrl": "3259c4ab036eb146a22be31ade008d9f834ff4a6ab9c3b8ca2130e2879f05b3f",
+   "jpUrl": "edc16926ec8622a7ea5bbff6595623e2ac6baa30a1d3e773f37f06d32bd07a5b",
+   "enUrl": "9c8942a80b8b8d488e5a3ac39896010621e59f427f76d81a413fb1c524867d43",
+   "krUrl": "f534e35a61d9a5bc598ed84dc56740b0177eef6bf2947254f0a65c453efcaab9"
+  },
+  {
+   "id": 59,
+   "title": "強化通常攻撃3・発動・2",
+   "text": "さあ、蛟龍よ、呑め！",
+   "unlockRequirement": "",
+   "cnUrl": "62194d080e51f0924269a46c39c8ee4280246327480c4cc2f0373697b143f2a7",
+   "jpUrl": "7f66697d6da498fe9b1377ccbe1f73a69ba7b22f9578250fb511541cca4b1216",
+   "enUrl": "ea1829a34a1c73696a004f80d8b918e7577e5c6709049acb70643e92d8c1028a",
+   "krUrl": "f8c86d3cc2cba20d0696a80070b750af9f13bd17094cf8561a2e2145a7ca3ed8"
+  },
+  {
+   "id": 60,
+   "title": "攻撃を受ける",
+   "text": "構わない。",
+   "unlockRequirement": "",
+   "cnUrl": "e13b957abf68f76ac59cd2e7f05474d00c5654e62b794170fa16522d7b7bd28a",
+   "jpUrl": "3954f7b85a364ff5f5de1cda8ee703cdd1efc52b3ea659993e15cffeed0a305f",
+   "enUrl": "7b95be7e16cc9745953fbe61757314f329039203a349379aeb199376fc8a68b3",
+   "krUrl": "ee46ffdb8807dd22e77b6e206e409c3f09363f0ddd3e598f5f2343ef48d980ed"
+  },
+  {
+   "id": 61,
+   "title": "重撃を受ける",
+   "text": "千慮の一失か。",
+   "unlockRequirement": "",
+   "cnUrl": "140969dd881ba5a159dc86d2732b4bb9e3cdb9bdeba2514286b4a8cf2e67f469",
+   "jpUrl": "06c050b4c0525ba5d39ce6751dac1d1cf11fb1d74fb4face66c3a14b5ce0a7aa",
+   "enUrl": "48fcec164a4467f4dbc8e62358e78355e88ff84e49078f26cdc4354f7c679622",
+   "krUrl": "864dc4f9c5486ed943b5301ab16411ff592982175999e683e6e2afd55e209a6c"
+  },
+  {
+   "id": 62,
+   "title": "必殺技・アクティブ",
+   "text": "潜鱗は顕現した。",
+   "unlockRequirement": "",
+   "cnUrl": "76ca63b9b76f8638a1154bc183c5ca7d8a95c5024c399b024b1024bef3c1f21c",
+   "jpUrl": "8b557170b3d8078890d3deb98ad3c6c82466227804076a867bf2b38a918a58de",
+   "enUrl": "cdcbec614ed51d58b9162e8e6ee390282b80bc77f64904a70c37654bd56fa27d",
+   "krUrl": "23557f7f52011cf61de5961c755f7db316c683713044ecde7a1219f53253be92"
+  },
+  {
+   "id": 63,
+   "title": "必殺技・発動",
+   "text": "洞天隠月…蒼龍よ、世を濯がん！",
+   "unlockRequirement": "",
+   "cnUrl": "e54a5b91eb61f626392b633a2882f21312cb14738d384e63204c5864c88d4157",
+   "jpUrl": "c07d817abd239ccf36fa4dfe81d230d00125a0dd78c0f944c75c085163f030b5",
+   "enUrl": "3e5c497512e1337e422198f79138c7cd4838fd3ee171ab6c135603e4a1bd6066",
+   "krUrl": "d1e1184a8e802351b6fa8c55dad1206aaa74966c7f40f8e04bb6b384e0bfc707"
+  },
+  {
+   "id": 64,
+   "title": "戦闘不能",
+   "text": "今は…まだ。",
+   "unlockRequirement": "",
+   "cnUrl": "c58144b7a524b62003fe6d507f55ffd497e23b2888108c19b5bf42e7af55fd2e",
+   "jpUrl": "050c049ba22424fa1b934d5c7054824afef4df79ae3f13d4610b769a3f7c48a6",
+   "enUrl": "809d61f1d7e6ead4c8d65b0428c0c8394e503284299b4f6b64f5798b9807b878",
+   "krUrl": "0ea0c6fc8a55de093102f498ef53dbd0f41f3b6b635ca54d68db57e4e64a7c7c"
+  },
+  {
+   "id": 65,
+   "title": "戦闘に戻る",
+   "text": "龍は…戻ってくる。",
+   "unlockRequirement": "",
+   "cnUrl": "24c3ae0bdaff03459f28c491c2a809b5414fbe6785b0a04ca7ea1f362b356244",
+   "jpUrl": "35d41a79a282f84e613bb6a130e522e01942e69c93a1df0781235400abb04871",
+   "enUrl": "edf2448ea73e2d3d4be880e81f33945909f58d2f4cd6dcbab2677190a276b12f",
+   "krUrl": "e2f5f723dafb217901ffa0c17e263c732a9e08c90d0c32222fe89bd6a548d7a3"
+  },
+  {
+   "id": 66,
+   "title": "HP回復",
+   "text": "緊張は不要だ。",
+   "unlockRequirement": "",
+   "cnUrl": "cd071b155940b7f5f9fb81d7be5a50edca64118cfa8321a9e5e75c75b5b132b0",
+   "jpUrl": "33be3dfa185a5bc15fd02c9e092bb82aa94e0c08809124fcd8ae4f35085165ff",
+   "enUrl": "903900d273484105ca4d5583807a15a91b829d3cbcedabbb55a5b712576a48e2",
+   "krUrl": "d8e6c169e9752f5ed6039c182c81a0660c15795e17d5301709409c89c0ceb804"
+  },
+  {
+   "id": 67,
+   "title": "秘技",
+   "text": "雲吟…御水。",
+   "unlockRequirement": "",
+   "cnUrl": "833b2a9d34338f84bcdd7c4f25cc591694c7dced71dd397a1a1d301e69e3b744",
+   "jpUrl": "b21f9f8b27a66b0b27ade406c27e1c1527206b67fa53b7accc4afa533cf7766b",
+   "enUrl": "849a79ae4f8f1239581b6bc3de4df26541f210552d7f68b48d47497babb6808c",
+   "krUrl": "f00c07631e3bbea0f674949ede63f32e90ae5742c1a15d49a986040a7c276d84"
+  },
+  {
+   "id": 68,
+   "title": "戦闘勝利",
+   "text": "どんな結果であろうと、俺が背負う。",
+   "unlockRequirement": "",
+   "cnUrl": "402920b30e2671da1a4ab14bafac7412ce0beaef419c6f7c88adb9eb9ed9d37a",
+   "jpUrl": "f7953fdcf581a208e03e7c29b62adca9ab2321cbdb63e31adcf9f4ed2ee30d9e",
+   "enUrl": "3d0a3d16e23cb8e19270e5fdfc44142d2a2ef9a799c6c2255c0e002baed1ca25",
+   "krUrl": "30a1c53393c64ccb6d5bbb8ed4322fca0dae36b615415dd7d4a7412c8a0a1e43"
+  },
+  {
+   "id": 69,
+   "title": "戦利品を開ける・1",
+   "text": "全部お前のでいい。",
+   "unlockRequirement": "",
+   "cnUrl": "f8632b251a72e14f477aa77ede13e80d03219451f65ea62fc8cfc71c1b9b68e7",
+   "jpUrl": "60d646adf7b1d8c175a21f5ae6b9095c5a525482b8268804d064dfae05c6ae87",
+   "enUrl": "4a53a2b72a517a1defe821c4a984fbebed2882a70172a1f5ce69a342e44ce910",
+   "krUrl": "c3f48b10371ee8ee2779855bb6867ce09f6ac6e30bc2d575181e546b2ad60eb6"
+  },
+  {
+   "id": 73,
+   "title": "戦利品を開ける・2",
+   "text": "お前の役に立つかもしれないな。",
+   "unlockRequirement": "",
+   "cnUrl": "a91718b0de015e5e8b60e6d8d3f6094e7df4be6119559b41858d689b816e55a2",
+   "jpUrl": "b092226e2952fd58dadcac546faff0f8aa6629504aae29c4cf1f63af48228aa4",
+   "enUrl": "d1ea6e232964660904c6e4ef54e54524b5a6104b150bf373328d4c1ae5e05f7b",
+   "krUrl": "fb25d52b506dd83ac0c631023c6d7262e45421c83e7e49e53c3107ed41c54545"
+  },
+  {
+   "id": 74,
+   "title": "貴重な戦利品を開ける",
+   "text": "上等品と言えるだろう。",
+   "unlockRequirement": "",
+   "cnUrl": "2ffdbe2637bf75735e3686b8f4289d36d6031aa61293cfafc09b2ae1e488190e",
+   "jpUrl": "c02f0c56a19e362aeb8ee5d79f50743397cd5168822ac38bc96f53f511929d41",
+   "enUrl": "81ffd94a2733c674a16c0e0a06050ace4ebabab62cd632daa358dfa8d1279ab1",
+   "krUrl": "119abb0b6e1b00e2e500e3d3fe516a7fc7a3f31d2a6987e821093e8f56a79687"
+  },
+  {
+   "id": 70,
+   "title": "謎解きに成功・1",
+   "text": "これでいい。",
+   "unlockRequirement": "",
+   "cnUrl": "d8883f65535cb535068e0e3c33357d8ee35c96ce09bd611b44f4f85866419c69",
+   "jpUrl": "1ac5268f406255732b2741636ad8e3250dee0938c01de947e51dd9758c0e7c1e",
+   "enUrl": "5bb04d31b90b20fdbd4de975613661cd80ae67979c339baae3aa64faebccf416",
+   "krUrl": "ec84efd05b2d3e403a422016c09d1625053d3f448695a2cb36dbaa51deec3e26"
+  },
+  {
+   "id": 75,
+   "title": "謎解きに成功・2",
+   "text": "奇術にはそれぞれ価値がある。",
+   "unlockRequirement": "",
+   "cnUrl": "9c9de99651779feb1cd2b56752331d9bbe9012d8ee0f13e1d1bfb36e83596473",
+   "jpUrl": "e6eec889288fb526593ab8a762ff9d89e240bf4b3500de6ee5aed24549e27707",
+   "enUrl": "7e1a3de14ab6f36650b0fc6aa3a37500263215faeebf97aeeb2513f14e23bb46",
+   "krUrl": "867b825db65e5fc74ef775817f44f1ca1f6bf7bdc526b8c89691be174bfb7f39"
+  },
+  {
+   "id": 71,
+   "title": "敵ターゲット発見",
+   "text": "慎重にな、けど怯えることはない。",
+   "unlockRequirement": "",
+   "cnUrl": "e080ed0a460e92e77941ccab5d8c749ffaae519de46429cb5fe3f7da6ddb57f1",
+   "jpUrl": "8b8aac3462b2a62c8155e433ff182dc5a2f5c4713d2072bf25f5b1307f85cbd0",
+   "enUrl": "81f16db9f5062b8e4406030d33ea2fe24627bf114cc376b82bb0a65243906c4a",
+   "krUrl": "168526dac4cbaa54eb52c8aaf78a28fa197ac27b7b627664ca491aa8c9aa2636"
+  },
+  {
+   "id": 72,
+   "title": "町に戻る",
+   "text": "すべてが昨日のことのように映る…",
+   "unlockRequirement": "",
+   "cnUrl": "44da8255da15ee515479135642b206a37140b1a0e93b7fc5dc6ba3494a09d781",
+   "jpUrl": "b97653fd7b88c80945aabaf50668a59e2a4ff66fcf53b98f9c8563c5e15f6d80",
+   "enUrl": "7cc40433485ba67be8d09a37d560cc793cf24585e8200afb3d05c92ab87c9422",
+   "krUrl": "c253409db8e5dabe2bff67b1b407a38ca36c68baf99ffd2661c5a79c7d481ba4"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "キャラクター詳細",
+   "text": "丹恒は前世である「飲月君」が残した力を受け入れ、持明族としての真の姿を顕した。<br />崢嶸たる角冠を受け継いだ以上、咎人の功罪もすべて受け継がなければならない。<br />しかし、最初から最後まで、彼が「彼」であったことはない。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "ストーリー・1",
+   "text": "光のない幽闇の中、彼は持明の卵に還り、波と夢の間を漂う。<br /><br />彼は自分が祭壇に立ち、舞い、吟じる夢を見た。歌謡や所作は表象に過ぎず、両目から放たれる光と血脈の中で渦巻く嵐こそが真髄である。彼は手当たり次第に鱗淵境に霧のような波涛を呼び、燥狂の「龍」を巨木に鎮めた。長吟が天に登り霧散する——これで鱗淵境は次の数百年も静寂を保つだろう。彼の使命もこれで終わりを告げた。<br /><br />礼を終えて振り返ると、離れていく石段の上に、華服を着た龍の角を持つ尊者たちが立っていた。彼らは鏡に映った影のように微かな差をつけながら、1人、また1人と袖を躍らせ、後ろを向き、この場から立ち去ろうとする。数え切れないほどの人々が天梯となり、果てしない虚空に向かって伸びていく。それらの顔は、朝起きた時に必ず鏡の中で出会う人物の——彼の顔だった。<br /><br />いや、違う。あれは初代龍尊の顔だ。彼は苦笑しながら、手のひらで自身の五官を覆った。その仮面を剥ぎ取り、真の主に返せないか試しているようだったが——<br /><br />彼にはできない。",
+   "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・2",
+   "text": "光のない幽闇の中、彼は持明の卵に還り、波と夢の間を漂う。<br /><br />彼は自分が神の如く戦場に臨む夢を見た。雲に懸かっている自分にとって、軍陣は蟻のように小さく、雲車と星槎は火に向かって飛ぶ虫のように見える。これが凡人の命…これが龍の視点なのか？一抹の驕りが湧き上がり、彼に冷たい殺意を抱かせる。彼は咄嗟に、共に戦い、共に楽しんだ仲間たちに視線を向けた。<br /><br />疾駆する飛行士は隊列など気にも留めずに、勢いのまま射撃を行い、烈火を装填した矢を突進する歩離の兵士に向かって降らせている。<br /><br />星槎の進行方向には、単身先陣を切る白髪の剣士がいた。刃が舞い、戦場に剣光が走る。その切先はあまりにも鋭く、彼女の同僚でさえ肩を並べて戦う勇気がないのか、ただ後ろから支援しているだけだ。<br /><br />いつもは彼と談笑している雲騎驍衛も、この時ばかりはのんびりとした空気を引き締め、陣刀を持ち、軍士と共に側面から攻めてくる歩離人を迎撃する。<br /><br />本陣の後方では、軍属の職人たちが巨大な金人を調整している。あの傲慢な匠も、今頃は大忙しで整備に当たっていることだろう——この数十メートルはある兵器は、器獣に対抗するための切り札だ。<br /><br />そして、彼は当時の将軍騰驍に目を向けた。騰驍は帝弓の化身の如く、金色の雷霆を身に纏い、己の幻影で敵の戦獣軍陣を耕すように蹂躙している……<br /><br />陣形を崩された歩離軍が逃げていく。彼は理解した、今こそ己に課せられた使命を全うする時なのだと。彼は自身の意識を嵐と雹に溶け込ませる。雷は彼の代わりに咆哮を上げ、津波は彼の代わりに怒り狂う。彼は雲に懸かったまま、深淵に飲み込まれていく敵を、そして背後にある地を、数多くの人類それから持明族と狐族を見た。彼らは永遠に戦場に残り、もう二度と故郷を目にすることができない。<br /><br />龍心は彼に、世界がまた塵を払っただけに過ぎないと告げる。戦争は代価が伴う、生命はいつか再生する——龍の血族も持明族だけではない。しかし心は、痛む。彼と一緒に戦った仲間と同じように温かな同胞のために、もっと生きられたかもしれないのに、もう二度とは故郷に戻れなくなった凡人のために痛んだ。",
+   "unlockRequirement": "キャラLv.<nobr>40</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・3",
+   "text": "光のない幽闇の中、彼は持明の卵に還り、波と夢の間を漂う。<br /><br />夢で彼は自分が海を割き、宮殿跡の奥深くを訪れ、亡き友の残した血を埋葬したり、長らく誕生していなかった新生を創造したりした——この2つのことは本来一体で、長らく実践できなかった渇望で、巨龍の心を挫いた最後の要素かもしれない。職人は剣を手に彼を護衛し、既に満身創痍であった。彼は決意するよう自分を促す。<br /><br />「倏忽は死に…俺たちは勝った。しかし、あと何度勝てる？俺たちはあと何度こんな代価を払う必要があるんだ？」<br />「建木を見ろ。まだ生きている。建木がそびえ立つ限り、化け物どもは…何度でも押し寄せて来るだろうな。仙舟人、狐族それから持明族と忌み物の戦いは永遠に終わらないんだ」<br />「そう、俺たちは何も特別ではない。俺たちの命は何かのために犠牲になり、あるいは死ぬ…でも全部、俺たちの選択だ。彼女がお前と鏡流を救うと選択したように…彼女がもっと大勢の人を生かすと選択したのと同じようにな！」<br /><br />戦争、そして戦争で失われた命、そのどれもが自分と同じように呼吸をしていた人だったのだ。<br />彼はその人たちの顔を思い出し、疲れたように目を閉じ、そして決心した。<br />「もし、機会があるのなら…我らも彼女を、そして大勢の人を生かす選択をするだろう。<br />——持明族には自らの救いの道がある。余はそれを試そう」<br /><br />夢の中の夢、身の外の化身。彼は自我を失いかける前の瞬間に戻ると、化龍した自分が変幻自在の血肉の影と戦う様子を冷たい目で見つめる。死の淵の幻覚の中で、神の使いは怪しくも美しい景色を彼に見せた。星辰は赤血球のように蠢きながら歌い、宇宙は肉と欲望の深淵に堕ちる。龍心は懸命に拍動し、爪牙を奮い立たせ、怒りを爆発させる——しかし、どんなに強大な力であろうと、生命は生命の神が遣わした使者には抗えない。<br /><br />そして、1隻の星槎が矢のようにすべてを貫いた。彼は少女が廃墟の中から必死に這い出て、絶対的に暗い「太陽」を掲げたのを見た。永遠にも感じられる瞬間の中、彼女の手が消え、顔が消え、全身が消えていく——その物体は周囲にあるものすべてを粉に変えた。もちろん、あの少女のことも。<br /><br />千切れた数本の髪と数滴の血が地面に落ちる。彼女が存在したことを証明できる痕跡は、これしか残っていない。",
+   "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・4",
+   "text": "光のない幽闇の中、彼は持明の卵に還り、波と夢の間を漂う。<br /><br />彼は夢を見た。鎖龍針を体に打ち込まれ、珊瑚金で作られた鎖で固く縛られ、幽囚獄に吊るされる夢を。長老たちが入れ替わり立ち代わり訪れては、妙法の真相と龍心の在処を彼に尋ねる。彼は沈黙するだけだった。<br /><br />彼は夢を見た。判官たちが自分の前で判決文を読み上げ、大辟入滅を宣告する夢を。彼は沈黙するだけだった。<br /><br />彼は夢を見た。白髪の雲騎驍衛が彼の見舞いに訪れ、斡旋の結果を伝える夢を。持明たちは彼が死ぬことも、去ることも許さない。彼は沈黙するだけだった。<br /><br />彼は夢を見た。それは仲間と再び杯を上げ、共に酒を楽しむ夢だった。<br />彼は夢を見た。それは自分が卵に戻り、別の人物に生まれ変わる夢だった。<br /><br />彼は多くの夢を見た。まるで永遠に終わることのない、「自我」という幻戯を見ているかのようだった。<br /><br />幻戯の後に続くのは、より鮮明でありながら手の届かない虚像。<br /><br />彼は見た、追放される自分を。彼は見た、ある列車に乗り込む自分を。彼は見た、遥か遠い星空に向かって、一度も振り返らずに走っていく自分を。",
+   "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
+  }
+ ],
+ "archive": {
+  "cvCn": "李春胤",
+  "cvJp": "伊東健人",
+  "cvKr": "김혜성",
+  "cvEn": "Nicholas Leung",
+  "camp": "仙舟「羅浮」"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "丹恒・飲月",
+ "rarity": 5,
+ "descHash": "持明族としての丹恒の本相、その前世である「飲月君」が残した力。 崢嶸たる角冠を受け継いだ以上、咎人の功罪をすべて受け継がなければならない。",
+ "artPath": "1da84366f148a413ba7df51a846a32ad0e188505cb119b55c2ee96f19b85a7a4",
+ "miniIconPath": "f293b86948b99fb50719e3c28ac17544bc51cc554a3754c2d073f436c53db6d7",
+ "damageType": {
+  "id": 64,
+  "iconPath": "91b47b558df75f608b0a8aa93f35fd2063ed789ec25cbcc7bee926c60fba7ab1",
+  "color": "#F4D258",
+  "name": "虚数",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "673136d8ba64c836e77a0084380bccea317250a93f866ddfcb0d64682b543970",
+  "altIconPath": "9093f5a5aa958c0fe5a14267d9fe5101a95a033e08898ba40b35994c1a3a8d81",
+  "color": "#FFFFFF",
+  "name": "壊滅",
+  "rarity": 0
+ },
+ "pageId": "danhengil"
+}

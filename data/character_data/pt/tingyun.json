@@ -1,0 +1,2728 @@
+{
+ "spRequirement": 130,
+ "iconPath": "66ae61322a6280ae954c573a7d55f3041b562419f0643c27d7568577673b26fd",
+ "bgPath": "1e0e3f602bf76aa319f38cdaaafadca415673c96189f37e22e309009e140a071",
+ "figPath": "2a48af52d36e930a80fea4f99e2a331ff4a6aa0af2918fa78be049ddff911803",
+ "fgPath": "58d0fa2f28bf9a077d7159bb47c13693246972aeb34f6fcb47382e5bd7eda96b",
+ "splashIconPath": "5783094adf4d188a7bb78f083c9cb67d933f3409af2bd627f292ba1ce3be200b",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 4,
+  "iconPath": "55d5339b99655abd5d47c976596bebf22e6e522614fef628f7c875606f3e1abd",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédito",
+   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
+   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
+   "purpose": "Moeda Comum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cálice (Grande Mina)",
+    "Recompensas de Missão",
+    "Recompensas de Atribuição",
+    "Troca de Brasas"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Rastros de Destino",
+   "desc": "Material avançado para subir o nível de Rastros.",
+   "lore": "Sua vitória é garantida por inúmeras falhas, e os pequenos passos que você deu levaram a uma reviravolta do destino.",
+   "purpose": "Materiais de Rastro",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Recompensas de Pontuação do Universo Simulado",
+    "Honra dos Inominados",
+    "Troca de Brasas",
+    "Recompensas de Evento por Tempo Limitado"
+   ]
+  },
+  "151160": {
+   "id": 151160,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "f4e0301b109ba0ab0b633a7186df88a0fa0be8a70edf33c88539672e514bbc8c",
+   "name": "Coroa de Raios de uma Sombra do Passado",
+   "desc": "Acessório de cabeça da Sombra Guardiã. Pode ser usado para Ascensão de personagens de Dano de Raio.",
+   "lore": "Acessório deixado para trás pela sombra de um guardião do passado, que contava histórias da cidade de Inverno Eterno.<br /><br />\"Svetlana, o Punho de Ferro: sua ira é tão aterrorizante quanto um trovão e sua retribuição é tão rápida quanto um raio.\"",
+   "purpose": "Materiais de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/151160",
+   "comeFrom": [
+    "Sombra Estagnada (Corredor de Ecos Atenuados)",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "Guia do Viajante",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>20.000</nobr> de EXP de Personagem.",
+   "lore": "Leitura obrigatória para explorar o mundo. Pressione o botão \"Ler\" para reproduzir uma voz atraente num idioma que você entenda falando sobre os encontros lendários de aventureiros renomados em diferentes mundos, bem como a sabedoria e o conhecimento precioso que eles acumularam.<br /><br />\"A novíssima série do Guia do Viajante, 'Manual de Gastronomia Galáctica do Chefe', já está disponível para compra.\"<br />\"Para fazer pedidos, envie um sinal de sinestesia para ERD<nobr>-23</nobr>θ e entre em contato com um representante da Guilda de Intelectuais. Temos várias formas de pagamento.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Salão Esquecido"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "Registro de Aventura",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>5.000</nobr> de EXP de Personagem.",
+   "lore": "Coleção bem-organizada de notas de aventura educacional contendo incontáveis ilustrações e textos com histórias completas, bem como informações valiosas e técnicas de sobrevivência.<br /><br />\"Por que não digitalizamos isso e guardamos em um disco de fotolitografia? Seria muito mais prático.\"<br />\"Tecnologia avançada é muito mais frágil do que você imagina diante de tempestades estelares e erupções de fluxo de neurônios. Além disso, tenho certeza de que o autor deste livro gostaria que as pessoas o lessem da forma mais simples possível.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Treinamento Diário",
+    "Troca de Brasas"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "Encontros de Viagens",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>1.000</nobr> de EXP de Personagem.",
+   "lore": "Diário de viagem com assuntos aleatórios escritos numa letra feia. Não tem muita utilidade.<br /><br />\"Dan Heng, termine logo de ler isso para jogarmos fora.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "71d58f084522c87e93327e3e7fc1db8fb4abb65e9989b163d4a348c9a3761329",
+   "name": "Scionette Imortal",
+   "desc": "Novos e jovens botões brotando de uma construção divina antiga. Material bruto usado para aprimoramentos.",
+   "lore": "A fonte da \"Duração Infinita\" dos macróbios do Xianzhou, resquício da influência do Aeon da Abundância. Inúmeros anos atrás, a cobiça de um soberano pela imortalidade fez com que a frota do Xianzhou zarpasse para o mar do espaço sideral em busca de receitas divinas.<br /><br />\"Nós desejamos viver por eras sem fim e conservar o império por toda a eternidade. Infelizmente, a vida e a capacidade humanas têm limites. Por isso, enviamos nove Navium Astrigers para atravessar os céus em busca de receitas divinas para a imortalidade.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "Abominações da Abundância",
+    "Inimigos do Universo Simulado",
+    "Recompensas de Atribuição",
+    "Troca de Brasas",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "c3cb2e5eb5390586c537d03d1de632b1aa59c49a3cc32f24d68672d2f97fb1e5",
+   "name": "Floresciaéreo Imortal",
+   "desc": "Novas flores crescendo de dentro de uma construção divina antiga. Material normal usado para aprimoramentos.",
+   "lore": "A fonte da \"Duração Infinita\" dos macróbios do Xianzhou, resquício da influência do Aeon da Abundância. Depois de inúmeras provações, a frota que saiu em busca do remédio da imortalidade conseguiu avistar o semblante do ser celestial. A divindade ofereceu suas bênçãos em forma material, e assim nasceram folhas da Árvore Ambrosiana.<br /><br />\"Novos botões descem à lua, e flores divinas brotam nas nuvens. Breve como a vida de uma flor, a velha madeira volta a ser um pomar jovial.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "Abominações da Abundância no Nível de Equilíbrio 2 ou superior",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "635670": {
+   "id": 635670,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a096383d62b9e5432fbf9a9674cc41041077b151d3473e44509d684eaaccd9bd",
+   "name": "Melodia Harmônica",
+   "desc": "Uma caixa de música compacta de fabricação desconhecida. Usada para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonia</span>.",
+   "lore": "Toca uma melodia relaxante e gentil.<br />Embora seja uma melodia simplista, qualquer pessoa com o menor conhecimento de música consegue notar a maestria do compositor dessa peça.<br /><br />\"Segure a mão dos seus familiares e dance!\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/635670",
+   "comeFrom": [
+    "Cálice (Assentamento de Robôs)",
+    "Troca de Brasas"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5708b196a8af89740ced588d98dc414c791d209879957fb0bc8644cc2dc84adb",
+   "name": "Luminivinha Imortal",
+   "desc": "Vinhas decíduas de uma construção divina antiga. Material avançado usado para aprimoramentos.",
+   "lore": "A fonte da \"Duração Infinita\" dos macróbios do Xianzhou, resquício da influência do Aeon da Abundância. Após os Três Sofrimentos, Xianzhou encontrava-se devastada. O \"Homo Celestinae\" sucumbiu como demônios, e as catástrofes continuaram incessantemente.<br /><br />\"Segundo decreto da Comissão dos Dez Senhores, todos que estiverem próximos de se tornarem marafílicos serão apreendidos pelos juízes infernais e condenados à Prisão de Grilhões.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "Abominações da Abundância no Nível de Equilíbrio 4 ou superior",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "836256": {
+   "id": 836256,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "b423fcc0ae34c8c3b30d0a461af31176b161d5a83f3615756c8f8a91f04ac474",
+   "name": "Sinfonia Stellaris",
+   "desc": "Uma caixa de música com estruturas complexas de fabricação desconhecida. Usada para conceder um aumento considerável de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonia</span>.",
+   "lore": "Toca uma sinfonia cósmica poderosa.<br /><br />\"Alguns astrônomos acreditam que as revoluções das esferas celestes funcionam da mesma forma que estruturas mecânicas complexas. As notas agradáveis emitidas durante os movimentos das estrelas são conhecidas como Harmonia das Esferas Celestes.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/836256",
+   "comeFrom": [
+    "Cálice (Assentamento de Robôs)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  },
+  "920197": {
+   "id": 920197,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "b5aa737b728156387ef4ddce10e0a541deb24993d58c4f2eca0aac0ed4301ea8",
+   "name": "Hino Ancestral",
+   "desc": "Uma caixa de música de fabricação desconhecida. Usada para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonia</span>.",
+   "lore": "Toca um hino cantado por uma pequena banda.<br />Através de sua letra, é impossível saber quem o hino homenageia.<br /><br />\"A penúria é o julgamento do Grande, a riqueza é a graça!\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/920197",
+   "comeFrom": [
+    "Cálice (Assentamento de Robôs)",
+    "Sintetizador Omni — Síntese de Material",
+    "Troca de Brasas"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "c92e008415ed578b02aeeebec3e4303f0e6c56d05fab48f2cfd79469b64f222b",
+   "name": "Rota Final do Destruidor",
+   "desc": "Material avançado para subir o nível de Rastros.",
+   "lore": "O coração do Leviatã parou de bater, mas sua mente continua viva apesar de estar dentro de uma caixa. Contanto que a tampa esteja fechada, sua mente continuará viva e morta ao mesmo tempo, impulsionando o núcleo da destruição.<br /><br />\"Besta do Fim dos Mundos, uma praga criada na Forja da Guerra usando ossos de milhares de mortos e o que foi deixado por um Leviatã. Ela anseia pela destruição do universo e de si mesma.\"",
+   "purpose": "Materiais de Rastro",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "Eco da Guerra (Zona de Abastecimento)"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 72,
+   "attackAdd": 3.6,
+   "hpBase": 115.2,
+   "hpAdd": 5.76,
+   "defenseBase": 54,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 112,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549504,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "attackBase": 100.8,
+   "attackAdd": 3.6,
+   "hpBase": 161.28,
+   "hpAdd": 5.76,
+   "defenseBase": 75.6,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 112,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549504,
+     "count": 8
+    }
+   ]
+  },
+  {
+   "attackBase": 129.6,
+   "attackAdd": 3.6,
+   "hpBase": 207.36,
+   "hpAdd": 5.76,
+   "defenseBase": 97.2,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 112,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633445,
+     "count": 5
+    },
+    {
+     "id": 151160,
+     "count": 2
+    }
+   ]
+  },
+  {
+   "attackBase": 158.4,
+   "attackAdd": 3.6,
+   "hpBase": 253.44,
+   "hpAdd": 5.76,
+   "defenseBase": 118.8,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 112,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633445,
+     "count": 8
+    },
+    {
+     "id": 151160,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 187.2,
+   "attackAdd": 3.6,
+   "hpBase": 299.52,
+   "hpAdd": 5.76,
+   "defenseBase": 140.4,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 112,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717386,
+     "count": 5
+    },
+    {
+     "id": 151160,
+     "count": 15
+    }
+   ]
+  },
+  {
+   "attackBase": 216,
+   "attackAdd": 3.6,
+   "hpBase": 345.6,
+   "hpAdd": 5.76,
+   "defenseBase": 162,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 112,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717386,
+     "count": 7
+    },
+    {
+     "id": 151160,
+     "count": 28
+    }
+   ]
+  },
+  {
+   "attackBase": 244.8,
+   "attackAdd": 3.6,
+   "hpBase": 391.68,
+   "hpAdd": 5.76,
+   "defenseBase": 183.6,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 112,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "af2150b7236c07e7c65bcdba6160b499b3fc5df8226b4ace1c4a1b8093628895",
+   "artPath": "6fd92f469f6d9b67ff389ab1b263e9f85388e1c5f875b34486e4084761d75eed",
+   "name": "A Sorte Sorri com Bondade",
+   "descHash": "Após usar a Perícia Suprema, o aliado com Bênção ganha <nobr>#1[i]%</nobr> de aumento de VEL por 1 rodada.",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "a00436f8879bb633abf0bd2be9744453ac0b8d8fcd09a8f98a2c29f35c47f9a3",
+   "artPath": "7a793c4720c5f94277793cfa3c2f6ec2e4a77ae1b23230ba523ed1670ea18771",
+   "name": "Dá os Ganhos, Ganha o que Dá",
+   "descHash": "O aliado com Bênção regenera <nobr>#1[i]</nobr> de Energia após derrotar um inimigo. Esse efeito só pode ser ativado uma vez por rodada.",
+   "params": [
+    5
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "7dc03c5d2f36cd6c9efe463cdeb8e9a8b1974d4b4135e6acc6d5087ccffee56b",
+   "artPath": "84834bc723790c34c49e88e15d168efc49c12477d7ebbc6d3a1638664f9693fe",
+   "name": "Legado de Alcíone",
+   "descHash": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "3592cd4b5bf7bb8a0edf1459daaa4db67daa04012c0025bad3a2f275ed7b3d58",
+   "artPath": "425322277bad08025b5534236618c2f8d92c64a12d5edf3e7a4e0fc38185fbf0",
+   "name": "Versatilidade Jovial",
+   "descHash": "O multiplicador de Dano concedido pela Bênção aumenta em <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "32d80fb68eda8605e921ad7e10cea78eebc45132871e976896dcf3eb9a28d683",
+   "artPath": "30eb17171b36bff2a2b518632da74701b2fe8c9ddd01eac35593f5b23a39a81e",
+   "name": "Astúcia Tranquila",
+   "descHash": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "d0240ade7b8b6d2bb6d995652ff06237d57282c6edc6213ba2b11d2006c9227d",
+   "artPath": "21257c28dc79f838adf8745c31222c2fa173583a43276ab408c9eee245df9a79",
+   "name": "A Paz Traz Riqueza a Todos",
+   "descHash": "A Perícia Suprema regenera mais <nobr>#1[i]</nobr> de Energia para o aliado-alvo.",
+   "params": [
+    10
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   743992
+  ],
+  [
+   28519
+  ],
+  [
+   944578
+  ],
+  [
+   459465
+  ],
+  [
+   543406
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Alvo Único",
+   "descHash": "Tingyun causa Dano de <span style=\"color:#c75de2;\">Raio</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de seu ATQ a um único inimigo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 743992,
+   "name": "Expulsão",
+   "iconPath": "7736dcff21e2b2ad49740a17e5e74af8ac4ba0aa3e287f16f589cfa43bbeadcf",
+   "typeDescHash": "ATQ Básico",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635670,
+       "count": 2
+      },
+      {
+       "id": 549504,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920197,
+       "count": 2
+      },
+      {
+       "id": 633445,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920197,
+       "count": 4
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836256,
+       "count": 2
+      },
+      {
+       "id": 717386,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836256,
+       "count": 6
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Suporte",
+   "descHash": "Concede Bênção a um único aliado e aumenta o ATQ dele em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>, até o máximo de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> do ATQ atual de Tingyun.<br />Quando o aliado com Bênção ataca, ele causa <u>Dano Adicional</u> de <span style=\"color:#c75de2;\">Raio</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ daquele aliado 1 vez.<br />A Bênção dura por <nobr>#3[i]</nobr> rodada(s) e só tem efeito no último aliado a receber a Perícia de Tingyun.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 28519,
+   "name": "Melodia Calmante",
+   "iconPath": "32d80fb68eda8605e921ad7e10cea78eebc45132871e976896dcf3eb9a28d683",
+   "typeDescHash": "Perícia",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.2,
+      0.25,
+      3,
+      0.15
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.22,
+      0.275,
+      3,
+      0.16
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549504,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.24,
+      0.3,
+      3,
+      0.17
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635670,
+       "count": 2
+      },
+      {
+       "id": 549504,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.26,
+      0.325,
+      3,
+      0.18
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920197,
+       "count": 2
+      },
+      {
+       "id": 633445,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.28,
+      0.35,
+      3,
+      0.19
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920197,
+       "count": 4
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      0.375,
+      3,
+      0.2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920197,
+       "count": 6
+      },
+      {
+       "id": 633445,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.325,
+      0.40625,
+      3,
+      0.2125
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836256,
+       "count": 2
+      },
+      {
+       "id": 717386,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.35,
+      0.4375,
+      3,
+      0.225
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836256,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.375,
+      0.46875,
+      3,
+      0.2375
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836256,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.4,
+      0.5,
+      3,
+      0.25
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836256,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.42,
+      0.525,
+      3,
+      0.26
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.44,
+      0.55,
+      3,
+      0.27
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.46,
+      0.575,
+      3,
+      0.28
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.48,
+      0.6,
+      3,
+      0.29
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.5,
+      0.625,
+      3,
+      0.3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Suporte",
+   "descHash": "Regenera <nobr>#1[i]</nobr> de Energia de um aliado e aumenta o Dano dele em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> por <nobr>#2[i]</nobr> rodada(s).",
+   "ultimateCost": 130,
+   "break": "0",
+   "energy": "5",
+   "id": 944578,
+   "name": "Em Meio às Nuvens Alegres",
+   "iconPath": "1d9df3ead7787c9aa107b49b886accda15462fa076b907f9ea5d98b555a39858",
+   "typeDescHash": "Perícia Suprema",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      50,
+      2,
+      0.2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      50,
+      2,
+      0.23
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549504,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      50,
+      2,
+      0.26
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635670,
+       "count": 2
+      },
+      {
+       "id": 549504,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      50,
+      2,
+      0.29
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920197,
+       "count": 2
+      },
+      {
+       "id": 633445,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      50,
+      2,
+      0.32
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920197,
+       "count": 4
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      50,
+      2,
+      0.35
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920197,
+       "count": 6
+      },
+      {
+       "id": 633445,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      50,
+      2,
+      0.3875
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836256,
+       "count": 2
+      },
+      {
+       "id": 717386,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      50,
+      2,
+      0.425
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836256,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      50,
+      2,
+      0.4625
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836256,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      50,
+      2,
+      0.5
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836256,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      50,
+      2,
+      0.53
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      50,
+      2,
+      0.56
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      50,
+      2,
+      0.59
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      50,
+      2,
+      0.62
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      50,
+      2,
+      0.65
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Aprimoramento",
+   "descHash": "Quando um inimigo é atacado por Tingyun, o aliado com Bênção causa imediatamente <u>Dano de <span style=\"color:#c75de2;\">Raio</span> Adicional</u> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ daquele aliado ao mesmo inimigo.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 459465,
+   "name": "Tornafagulha Violeta",
+   "iconPath": "3ac125c4f6f3206bf6cb385a4ba16cd34431c90ddf3e77eb0fd1cb5560632d4c",
+   "typeDescHash": "Talento",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.33
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549504,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.36
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635670,
+       "count": 2
+      },
+      {
+       "id": 549504,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.39
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920197,
+       "count": 2
+      },
+      {
+       "id": 633445,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.42
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920197,
+       "count": 4
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.45
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920197,
+       "count": 6
+      },
+      {
+       "id": 633445,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.4875
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836256,
+       "count": 2
+      },
+      {
+       "id": 717386,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.525
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836256,
+       "count": 4
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5625
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836256,
+       "count": 6
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836256,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.63
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.66
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.69
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.72
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.75
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do inimigo-alvo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 660051,
+   "name": "Ataque",
+   "iconPath": "7736dcff21e2b2ad49740a17e5e74af8ac4ba0aa3e287f16f589cfa43bbeadcf",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Suporte",
+   "descHash": "Tingyun regenera <nobr>#1[i]</nobr> de Energia imediatamente após usar sua Técnica.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 543406,
+   "name": "Brisa Suave",
+   "iconPath": "ea07cb0b3cc8b6025b50b631348f23c9faceec1d5af47d8cca800bda5d1ed28d",
+   "typeDescHash": "Técnica",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      50
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1202101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1202202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1202203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 381294,
+        "name": "Bônus de ATQ",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920197,
+          "count": 2
+         },
+         {
+          "id": 633445,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 381293,
+      "name": "Bônus de DEF",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+      "statusList": [
+       {
+        "key": "DEF",
+        "value": 0.05
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635670,
+        "count": 2
+       },
+       {
+        "id": 549504,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Aumenta em <nobr>#1[i]%</nobr> a VEL de Tingyun por 1 rodada após usar a Perícia.",
+    "ultimateCost": 0,
+    "id": 381197,
+    "name": "Jovialidade Nutrida",
+    "iconPath": "de410f146774f38af8683bd8ad85b07b09bde7fe276a237e3c502355ba5a7ef3",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635670,
+        "count": 2
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1202103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1202208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1202209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 381304,
+        "name": "Bônus de DEF",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+        "statusList": [
+         {
+          "key": "DEF",
+          "value": 0.1
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836256,
+          "count": 6
+         },
+         {
+          "id": 717386,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1202210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 264650,
+        "name": "Bônus de ATQ",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836256,
+          "count": 6
+         },
+         {
+          "id": 717386,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 381303,
+      "name": "Bônus de Dano: Raio",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "dbf8a033f78ebfe4765472b27aa0e7d3838d36f8f15868c49a3433ccca9ef1aa",
+      "statusList": [
+       {
+        "key": "Bônus de Dano de <span style=\"color:#c75de2;\">Raio</span>",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836256,
+        "count": 6
+       },
+       {
+        "id": 717386,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Tingyun regenera imediatamente <nobr>#1[i]</nobr> de Energia no início de sua rodada.",
+    "ultimateCost": 0,
+    "id": 381199,
+    "name": "Passagem Jubilante",
+    "iconPath": "0be59c24e1f33ea5b394072c40f8596ce7544784c0ca7787ec794f4779829e4e",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       5
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836256,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1202201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1202204,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 381291,
+      "name": "Bônus de Dano: Raio",
+      "levelReq": 0,
+      "promotionReq": 3,
+      "iconPath": "dbf8a033f78ebfe4765472b27aa0e7d3838d36f8f15868c49a3433ccca9ef1aa",
+      "statusList": [
+       {
+        "key": "Bônus de Dano de <span style=\"color:#c75de2;\">Raio</span>",
+        "value": 0.032
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 8000
+       },
+       {
+        "id": 920197,
+        "count": 2
+       },
+       {
+        "id": 633445,
+        "count": 2
+       }
+      ]
+     }
+    },
+    {
+     "id": 1202207,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 381290,
+      "name": "Bônus de ATQ",
+      "levelReq": 0,
+      "promotionReq": 5,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 36000
+       },
+       {
+        "id": 836256,
+        "count": 2
+       },
+       {
+        "id": 717386,
+        "count": 2
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 381296,
+    "name": "Bônus de ATQ",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1202102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1202205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1202206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 381289,
+        "name": "Bônus de DEF",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+        "statusList": [
+         {
+          "key": "DEF",
+          "value": 0.075
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836256,
+          "count": 2
+         },
+         {
+          "id": 717386,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 381292,
+      "name": "Bônus de ATQ",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920197,
+        "count": 4
+       },
+       {
+        "id": 633445,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Aumenta em <nobr>#1[i]%</nobr> o Dano do ATQ Básico.",
+    "ultimateCost": 0,
+    "id": 381200,
+    "name": "Subjugar de Joelhos",
+    "iconPath": "62059cf0a7af9fcd5c8fe2141eb4926f6ca4a3844a3c2832bfa281674872d1e7",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.4
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920197,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corpo",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "ATQ",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   },
+   {
+    "relicTypeHash": "Pés",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "VEL",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Esfera Plana",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "ATQ",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   },
+   {
+    "relicTypeHash": "Corda de Ligação",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "Taxa de Regeneração de Energia",
+    "propertyIconPath": "75627c696d3e9763c0b4feeb4a8e2baf594ac73214c6227b3a125c032be090c8"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Primeiro Encontro",
+   "text": "Meu nome é Tingyun e sou a amoraxadora da guilda de comerciantes da Comissão de Exploração do Céu do Luofu. Peço que cuide de mim, por favor.",
+   "unlockRequirement": "",
+   "cnUrl": "1f41f2e83a8284ee215185f340effb14ac36e517b514fefcfc42860748848056",
+   "jpUrl": "f7d600cdeaf0d78e5355b4d21676942906469045d61106e9fe24a0dd2cfbc187",
+   "enUrl": "acef7b119565dea0f0fff623e981216cfd09d1fb4a2ccbc86d459f837c8c293a",
+   "krUrl": "fc73781bb68a0a0351626712d8fe05c181f89a9d9ab7ec03140ff7d0e8f26bf3"
+  },
+  {
+   "id": 2,
+   "title": "Cumprimento",
+   "text": "Onde você vai? Me leve com você.",
+   "unlockRequirement": "",
+   "cnUrl": "0fa74f28dbcd2d22166b6dc0b953bce41f38a01520371de86abfac947c0de535",
+   "jpUrl": "8f353c35ebe8c431a91aed23b6e8eec1affe96958e0d967c8f7efe6323ecf2a3",
+   "enUrl": "1650f121a2634a464deddc9c1db29d9d8e49ce459af79bbd9191ec5917855b4a",
+   "krUrl": "8488df27a1d51e2affaa08985a86f1f263a44822f6c9cb5947d5500f9f1d964d"
+  },
+  {
+   "id": 3,
+   "title": "Despedida",
+   "text": "Ah, já está tarde e até a minha cauda está caída. Sinto muito, vou me retirar...",
+   "unlockRequirement": "",
+   "cnUrl": "7cc90285f413ea30818f26cddfbd12d1b0ca49e5084406d0462a965fedd24f5c",
+   "jpUrl": "db6e270a6021e2152e2f066f3df26dd87ca1404324043a1cbab1f4b9d60caea5",
+   "enUrl": "22fc9160b418241043119bb2b89c3b2eaa8090b5559e150735e3a9e4d79a9e06",
+   "krUrl": "c6621ff9da36996e32e792fa58ce8cb085954acef73b90fed4446c2295f04576"
+  },
+  {
+   "id": 4,
+   "title": "Sobre Si: Cauda",
+   "text": "Cuidar da cauda antes de dormir é importante. Você precisa de um pente de madeira de buxo. Depois, é só aplicar um pouco de bálsamo nas raízes dos pelos, enrolar a cauda em Seda das Nuvens e ir dormir. Assim, minha cauda ficará fofa e felpuda no dia seguinte. Viu?",
+   "unlockRequirement": "",
+   "cnUrl": "7440f1261adae596e01fb5fa85b82693e93b0de65719823799ee90050df93855",
+   "jpUrl": "dc5f9deb4cc38eef2a3a3bd4bb2acc1a465ada17a37dc712a7e4212330dd08a4",
+   "enUrl": "c43a2ed354f237991ddae905bbcd1c53fb80babcdb30e56a8b3b4afb27e50d5c",
+   "krUrl": "b983a2e1236d20bc02f1179ec043c5eea718c3cb00c4366cd7ad713f8441b678"
+  },
+  {
+   "id": 5,
+   "title": "Sobre Si: Bracelete de Jade",
+   "text": "Este bracelete não é uma antiguidade, mas o jade era tão verde e puro que eu paguei um artesão para fazê-lo. Sinceramente, é mais difícil achar algo para mim do que para minha loja. Além de ser bom, o item também tem que ser do meu gosto.",
+   "unlockRequirement": "",
+   "cnUrl": "e87ba254c8a177a5d14760c68d9b29f8cec395b6774267c8b434a564d35e2aab",
+   "jpUrl": "77a929773ef305c05fd03a571a7ea919bd12bb1fd97f5ec15acd6290b428ca67",
+   "enUrl": "5247a496be7ddb509c79cab4613dc2d0153b6042738dfd4e9cc0900dc1333244",
+   "krUrl": "07d013bc157d7ec49d7fb5ac5e8b6079776fa5c2888d1f5ee785a8705921436e"
+  },
+  {
+   "id": 6,
+   "title": "Bate-papo: Negócios",
+   "text": "A paz é imprescindível nos negócios. É melhor trabalhar com pessoas fáceis de convencer. Se for lidar com alguém que não seja assim, abanar a pessoa com seus leques para ela se acalmar um pouco funciona super bem.",
+   "unlockRequirement": "",
+   "cnUrl": "7b0634e17d813de1093dcafc9a43b213895735bfac9eae6c75dab8b0c32f1bf9",
+   "jpUrl": "fd6bfd331d6e47f2020f14e3ce091a96cd855a890d09d37c6df15f443d4fefaa",
+   "enUrl": "8b1b4def495c593855da83a4b0bd9c47f79da1d66b0da8c0bb752d9d132d3f32",
+   "krUrl": "02d4b11b4e2727141f05910c5114f0e2efc9419995ab7c27cb32cfb6ed8f004f"
+  },
+  {
+   "id": 7,
+   "title": "Bate-papo: Embaixadora de Negócios",
+   "text": "Sempre que saio, escrevo uma carta e deixo ela trancada em uma gaveta da minha loja. Se eu voltar, queimo a carta. Se não... ela servirá para que os outros se lembrem de mim.",
+   "unlockRequirement": "",
+   "cnUrl": "a03d874112ba8b2610d1f68645b15713dcddd519fb50c78634e689fcfcf2ee01",
+   "jpUrl": "008c5c6ae1bcd2836850b71105c1146cec91ea36c5dadaf984e59b3f3cda8b2f",
+   "enUrl": "7435197224eea997ce5f6182a1ba7d88e4e996f1e95a01d426f17f843aa96c01",
+   "krUrl": "b428ddcdb425f1dd32b0a3f6faaf59da55d8f20c6a334cb6d46662568ad94708"
+  },
+  {
+   "id": 8,
+   "title": "Hobbies",
+   "text": "Quando tenho tempo, vou ao Chá Insone bem de noitinha. Se eu quiser companhia, converso com os outros clientes de lá. Se quiser me divertir, eu assisto às pessoas tomando chá e jogando dados para praticar minha percepção sobre as pessoas. É bem divertido.",
+   "unlockRequirement": "",
+   "cnUrl": "09a67c2488022d0c8f14d75bf802ddafa2dfd145a07220422dac8334ef78e155",
+   "jpUrl": "10474ee0c2ce7d3ce67004f2d5e14fab6a8387527654cde5f4e40c7d95a6d5a6",
+   "enUrl": "fe6b2072746c13eb29a09fad02f2b91691866243c423be6a5cea861b88a7a812",
+   "krUrl": "a07d4be57bfae72c1ca943a583522c41825d11065c29691ec596385b3e649f00"
+  },
+  {
+   "id": 9,
+   "title": "Irritações",
+   "text": "A Comissão de Exploração do Céu é cheia de pessoas nobres. Apesar de eu admirá-las, eu não consigo agir da mesma forma... Sou muito melhor falando palavras bonitas e fazendo uma cena...",
+   "unlockRequirement": "",
+   "cnUrl": "6dadf79ac3cec267087c341b732e57107264cb21407614a4b42840602067fbef",
+   "jpUrl": "caadf93aaec0ff14e50428316155ad68c2686b8628c3e9c85acdedc47161c0a1",
+   "enUrl": "8f86485f2db292a9db0ad4bf30d95d24efc338e6748b91cbc84d59014c9b28c7",
+   "krUrl": "b9d0d8a9ace6fdc553a571f9f6ec21536eec141f0d9c18a7c9399b8e877119a2"
+  },
+  {
+   "id": 10,
+   "title": "Uma Curiosidade",
+   "text": "O Âmbar Celeste dobrou de preço para ajudar o Lorde da Preservação. Mas depende da vontade da Corporação se isso será uma boa ou má notícia para os mundos ricos em minério...",
+   "unlockRequirement": "",
+   "cnUrl": "8227555c46cbaf254307401cb63bcff3fcaad7918103d857a89d66a0cc743106",
+   "jpUrl": "b115e55a75a8a5c6373b3a323f28e682b2950717d3f48e5ea6e364cfdf771e4e",
+   "enUrl": "4a629a31211f1634e7e24e04ea9186c4f2953d9a6021724808c4f70b76bd6e0d",
+   "krUrl": "75b775de81da1f6682fe4bd37c4696c2eb82d0a6fa2f4313c5e37b9792f21094"
+  },
+  {
+   "id": 11,
+   "title": "Conhecimento",
+   "text": "A maioria das formas de vida que vi com as Chamas Silvantes tem uma origem e uma razão de existir. As criaturas com quem não se pode se comunicar são as mais assustadoras, pois isso significa que elas conquistam sem precisar usar palavras...",
+   "unlockRequirement": "",
+   "cnUrl": "679756c45464a9513315d74605797c3c4c5d2734a4c26d329a412c7e0c630b3b",
+   "jpUrl": "eb65f04c742e00eab32903a93f4855b328d9ff8c15a228635ba3a6184373afdd",
+   "enUrl": "3621f7611080b025264a5535fab321513681c00136b7acedba33c9fa1f80b04c",
+   "krUrl": "b045b6b9d7812d60c36e199d142d1585c31968f62d813decfcf802940b6fefae"
+  },
+  {
+   "id": 12,
+   "title": "Sobre o Jing Yuan",
+   "text": "O general é um verdadeiro mestre quando se trata de ter grande retorno com pouco esforço. Não consigo chegar aos pés dele nesse sentido.",
+   "unlockRequirement": "",
+   "cnUrl": "46665b6e040a65ebbe7e2a3464a21f7cd2af7a39936aaf3548c766a5641a8f80",
+   "jpUrl": "73e644fa55ec8516c8738d984d9f60b3900841125e034df07cfdb0fd7655dbb8",
+   "enUrl": "2e7d0b2f345e5f65744fbbde961ee86029d8a7d2b0a3ec45ce2254b29bc33d24",
+   "krUrl": "79914c710ceccc68a7668bed90a11d5a4e3105f113d28ea674089e73b81800b1"
+  },
+  {
+   "id": 13,
+   "title": "Sobre o Yanqing",
+   "text": "Uma vez dei a ele alguns itens que achei que eram raros, e aquela criança me agradeceu com respeito e aceitou o presente. Depois eu o vi bem animado escolhendo espadas na Comissão de Artesanato... Hehe, as crianças são criaturinhas muito espertas.",
+   "unlockRequirement": "",
+   "cnUrl": "92309998d9ea5f0f63cdea3dc5bc104215cda3f0a371bba4f2904ec97fc41d8d",
+   "jpUrl": "ced0ccdf60c1ceb9748d261ca0ae41d85120d97187d64cfdcbb182cc43a9f79a",
+   "enUrl": "0743e0123236b7004f13a424b6aae81a3cbe0804916cd72480c985cd39e2be80",
+   "krUrl": "616fc2266c4ff5b0e76b071a50290866df2dd5b86434e2989a4bae03f8cfe900"
+  },
+  {
+   "id": 14,
+   "title": "Sobre a Yukong",
+   "text": "Seja pilotando esquifes estelares ou liderando a Comissão de Exploração do Céu, a madame Yukong sempre está presente no percurso do Xianzhou. Ainda tenho muito a aprender como piloto.",
+   "unlockRequirement": "",
+   "cnUrl": "a61917108e701e4b4dbaf7594bb82bbc0718f6c8fb5a3e2336fe2406df6198fd",
+   "jpUrl": "d9efcac04091748da3888892a02bb1e9a7eaab22317d9631d7e429b5f39917db",
+   "enUrl": "565021ac4fa4425eefe48eddd854c5987098552c4581cb6a8885e2ecde60853a",
+   "krUrl": "caf7f52d909358eb978cd963a40dab15fa447564da3f53d6119c1d328da6fc04"
+  },
+  {
+   "id": 15,
+   "title": "Sobre o Luocha",
+   "text": "Um empresário de além do céu? E que nem está nos registros das Chamas Silvantes... Que estranho, por que não me lembro dele?",
+   "unlockRequirement": "",
+   "cnUrl": "c263d358fefca2ad873d3620470204dc51c5657b767b7860ec1f27ed2d433431",
+   "jpUrl": "437d01210811bd319377a431fa93cf5aa07de706aa1aad96dbff2ca1a7279fa7",
+   "enUrl": "06e8c82c7dc53977622b82350222ac8d4b8743f43843e00a0fd2a5e8c3daaec4",
+   "krUrl": "28b18ad13505cf37378484a93326d719488aa7408e5f197e70fb5959ea155b5e"
+  },
+  {
+   "id": 16,
+   "title": "Sobre a Sushang",
+   "text": "Sushang é muito gentil e vem à minha loja todos os dias para perguntar \"Está com dificuldades nos negócios? Eu vou te ajudar!\" ou \"Alguém está causando problemas na sua loja? Eu vou te ajudar!\"...",
+   "unlockRequirement": "",
+   "cnUrl": "7b4495d1745e5f06527dcd9d5776ea436bdaaa89e9c0db05c3fb3aa70d445951",
+   "jpUrl": "1a1b42ce79c03b048e28f0d574229f1cb63847c52f8609df223faf8f24a21abd",
+   "enUrl": "b14277661cd4687b8af0bb249e4ab9cbff5577f2edce5755a9cf347dabb9a010",
+   "krUrl": "921cb5addc6bb53e05ec1574a2d7fb411a9b5be70833977c97b866a7f08653f7"
+  },
+  {
+   "id": 17,
+   "title": "Sobre a Bailu",
+   "text": "A dama Bailu tem mãos pequenas, mas é muito habilidosa... Sempre que retorno ao Luofu, preciso passar lá para receber uma massagem.",
+   "unlockRequirement": "",
+   "cnUrl": "f3917c441fa2afd3fa62fe1c2cd2ac9e3d599682bd3f7e7ee365515d54b9ea19",
+   "jpUrl": "9ac372da87003ceacda1680e422bdcfeb5ea7bb035c6808757bb22e8d7ba04ab",
+   "enUrl": "980e65e706290129755892f3cb5c229cec1f66a1dd16b5e127e8c5c90b6b7d53",
+   "krUrl": "33287d719f8bbd5ec5e6e75b25e41e93d2cf623276eb5114e42a6e6430038e3b"
+  },
+  {
+   "id": 18,
+   "title": "Sobre a Qingque",
+   "text": "Eu só achava que ela era uma cliente assídua do salão de jogos, mas soube recentemente que ela é uma profetisa da Comissão de Divinação... Os profetas não estão ocupados demais? Como ela tem tempo para ir ao salão?",
+   "unlockRequirement": "",
+   "cnUrl": "a8b9e66f840bc32a80205511cdbec48b481a2a6705d8dd2fc107a7cc54435c86",
+   "jpUrl": "cd6b88ce1215f9eed20fcf53f943d72971640ab4d3616306697a80b4c92cc441",
+   "enUrl": "c69c532965f2e16b6f97de51f0e8d68dc51591add9068cd5df83fcec408c252a",
+   "krUrl": "bca5449673d2aae8586f171c8db488a8e4682063b0a3d4f7d7fc904dd97b73c4"
+  },
+  {
+   "id": 19,
+   "title": "Sobre a Fu Xuan",
+   "text": "A mestra profetisa tem um tom rígido, mas o que ela fala faz sentido. Sendo bastante sincera, os sermões dela são inesquecíveis...",
+   "unlockRequirement": "",
+   "cnUrl": "bc74ff4de5c08cb4c93c4160cec2bb7700c153dd318b3fbffd5fb6bc1802cba7",
+   "jpUrl": "4904bf1393d4f073cc53561966e50ba624795d22239b251b0342b8e24c22766c",
+   "enUrl": "d8560e367b051b846470d2ed1ed28f15daf6666cbd0b3e8cf3a9c3483e4266f5",
+   "krUrl": "5bd14808e446beea06d3210f88e46567842c5b9b8347f72c0855d67e4df543b2"
+  },
+  {
+   "id": 20,
+   "title": "Sobre a Mengming",
+   "text": "Hoje em dia, Mengming toma conta de tudo dentro e fora da casa de chá. As pessoas dizem que \"Vulpes nasceram para fazer negócios\", mas, na prática, a coisa é mais difícil.",
+   "unlockRequirement": "",
+   "cnUrl": "d3748c5123b7f851a73fd0da59f52eac37fdd53cd3fa4ae46d5c3ded6a2dba27",
+   "jpUrl": "4f826fc31100253611acf04a710cd0bec580994f680ac7f7f663901e78cbb4c2",
+   "enUrl": "092430ed01c99ff9fb426a0a97e111655f037eda79c60b3316363261953983a7",
+   "krUrl": "428974b7902d2644b2806729d9cdf2eb839d530c955fc90fbb843b337ce5b307"
+  },
+  {
+   "id": 21,
+   "title": "Ativação de Eidolon",
+   "text": "Ah, uma visita! Deixa eu te mostrar um pouco da hospitalidade local.",
+   "unlockRequirement": "",
+   "cnUrl": "7773c8bf94ad97c6e1d99a3740f46eceb2b5adb47b37f2de74de6bf925a598d6",
+   "jpUrl": "e8819273fd70cf1e45c6a71446dcedc2e4650d083e4af6466ff0bb63eab76b74",
+   "enUrl": "42a538570ab04927535d7be7e51a0607b812decec228b157360f93a1dad8359e",
+   "krUrl": "babf1223f7d657c3785d0fa890e2dd12ce9d74d50990af18691f1f0d1d56d730"
+  },
+  {
+   "id": 22,
+   "title": "Ascensão de Personagem",
+   "text": "Vejo um futuro cheio de potencial.",
+   "unlockRequirement": "",
+   "cnUrl": "1a4101f66d7effefd86ba74d545ad4c72d3f4e2fd1d45b1ef2d4983ecc1bb983",
+   "jpUrl": "3898e6a32148c5479642d2a202c1fb5bba09740705c948f71aa9205502870cae",
+   "enUrl": "aab6b3fd27058a05b5f747e7ff60df4bea30ab339cb1cbfc06c5358cb1b9976d",
+   "krUrl": "2251711a00bf955f3c70497e5785d9c0cd3c5bcadbb16a6a0821d9322044b66d"
+  },
+  {
+   "id": 23,
+   "title": "Nível Máximo Alcançado",
+   "text": "Pode confiar que eu vou dar o meu melhor.",
+   "unlockRequirement": "",
+   "cnUrl": "004cdbb021b3163be09dc6b88e1140fe348a498da6e1b7f28384776495967c8f",
+   "jpUrl": "220137b9a61481a04e9e6c1b9ac9cf76d8f2438095f4932d6c5439e017514c55",
+   "enUrl": "5dbfadb0093b8e5f37c175c5260f225e3202c450a53aa82f38b5c3f2fd14fae8",
+   "krUrl": "cecab6e0efcf12d5a1234f1d022a4a24f0dde14e32c07a5c00f49c69761e037b"
+  },
+  {
+   "id": 24,
+   "title": "Ativação de Rastro",
+   "text": "Esse universo vasto tem tantos mundos que ainda vou explorar...",
+   "unlockRequirement": "",
+   "cnUrl": "e9262e4296fa207b23b8add8c6d92523ef7148dedf7afd87c350f99125499435",
+   "jpUrl": "b1c47350e84d166e62355c8cd34f93341bf5376e011fa5db09ef38ecb0c9940c",
+   "enUrl": "ff6926bdec0e2bb9cc6a2550a0ab1241ad0ef8d0e455030dd4acee260cef5a91",
+   "krUrl": "f82c114d1dfa3e835724f7c1aa38746e9d67b9b432c96f24fd17d621cad95012"
+  },
+  {
+   "id": 25,
+   "title": "Entrou na Equipe com Yukong",
+   "text": "Madame Yukong, permita-me lidar com as negociações. Eu consigo ganhar um tempo para a gente.",
+   "unlockRequirement": "",
+   "cnUrl": "9b2d8d94290f86c69c6294c773b5f2d0d424649e881ea10c7f268754b527f5e9",
+   "jpUrl": "a764e783d7565ee9bc6f5b262745a4afef1118bd3a7de24e450f12c01ced4166",
+   "enUrl": "6af02922b14d55bbb34d44ce5f2ebe60ab1d5ee179f71d7e7b47b9e24cfd4dcd",
+   "krUrl": "de8c7c176f233fca77f4403cb9b5d77db1904e75d032cb7179fb8b356f71d330"
+  },
+  {
+   "id": 26,
+   "title": "Entrou na Equipe com Jing Yuan",
+   "text": "As pessoas costumam esquecer que o general é corajoso, mas também astuto.",
+   "unlockRequirement": "",
+   "cnUrl": "52c66c6f4f93cc2d3707bfd66614b99d01317dec40555c107135f274d57f5a65",
+   "jpUrl": "3498200ad84a7d7e93529621c9403f39cadaa3ad026acf67dc3d0c208081db7e",
+   "enUrl": "4a7e60a61a043290c95bc55c77f37896bf3ba8b91eb15598f9acdf9cdb8e334d",
+   "krUrl": "09566902e0ec34820de60a670a4803893ca08eaf449f9df9e95ea7631fc64e59"
+  },
+  {
+   "id": 27,
+   "title": "Entrou na Equipe com Bailu",
+   "text": "Sua bondade de sempre não passou despercebida. Permita-me retribuir uma parte dela, dama Bailu.",
+   "unlockRequirement": "",
+   "cnUrl": "f03c1f6cfe9757269702c878cee0d6c34014ee1b135e10510ff87be96afbd325",
+   "jpUrl": "8b674675a0e2597782145d03b793ce06eabc42669015877a71699ed1bcbeba0a",
+   "enUrl": "2bab43500d2455fa729451320ec5fa30c23d115c86e64730071b13c45bd2764a",
+   "krUrl": "e2c33dacb333e528161800415e3b5b201457617af133a8812628dd3e317ee0eb"
+  },
+  {
+   "id": 51,
+   "title": "Início da Batalha: Quebra de Fraqueza",
+   "text": "Aproveite o momento!",
+   "unlockRequirement": "",
+   "cnUrl": "ebda165281b9f590a38d2d8de0777ac83ff83694dceb393f07b7d454e844a269",
+   "jpUrl": "a7cb1b2c104de8cbc8dcdf3f7042eb630b0c3a4ab7e906f5315917c2e33e953f",
+   "enUrl": "b81af6cdcb6442a036930dddb30c80bdc2b82456e86870d6cabff0b2118ceb01",
+   "krUrl": "fe16f1bb48ce50bbc0fbe78ffca3f5b1460591ebc79cf899b39705909f200a43"
+  },
+  {
+   "id": 52,
+   "title": "Início da Batalha: Alerta de Perigo",
+   "text": "Bem, estamos com problemas agora.",
+   "unlockRequirement": "",
+   "cnUrl": "0da16d8a65ad0fc292889da7cc4f506a4323c27051062ac893a3f7c68c18beda",
+   "jpUrl": "14c7a2ca3d71c245d77714075ab3a6646ac4cfa646bc01764caeffa23df586d9",
+   "enUrl": "8953be63ee4c257af379bf450b5cd81990409f7917453d7e427a09222151e643",
+   "krUrl": "2bf9f5d15641473620a279b4959388cd0ed41a802cb74ec8ec07bc1a8c657ac6"
+  },
+  {
+   "id": 53,
+   "title": "Começo de Rodada - 1",
+   "text": "Clientes são sempre bem-vindos.",
+   "unlockRequirement": "",
+   "cnUrl": "ce9441f47ea4cd614c9a75c3ed018cc611437e8787ef65abe382508ffa03203c",
+   "jpUrl": "eb240611d2f72cc5cc8d324a22532a3206e28176de34496d10390eb7c542f32e",
+   "enUrl": "8dad9aa8d134ca1dbb31cc2ddb8ed71b0a4d33659b781fd1f33b10417e57dcec",
+   "krUrl": "522406bcb0769f16f3e6d0503e8c5d8f1a0b456c8bb65878a6b863f0bcf93595"
+  },
+  {
+   "id": 54,
+   "title": "Começo de Rodada - 2",
+   "text": "Vamos ser amigos?",
+   "unlockRequirement": "",
+   "cnUrl": "f6143eef2cddc860af39bf44d26c94d09e009a3b7ec8552d6f5ed16ecc4fe1b2",
+   "jpUrl": "23495e3789be286285fcc1fdf6ae1cf7a30703aaa952503ad4b39ea18c9b6d75",
+   "enUrl": "43df01cdbc1e379c6c596957ca9fd3e41b78a553663a435dca3af9b62b5230a6",
+   "krUrl": "e12dc93752ab67be02aec6b6c2915f7ae463f3015d26a9dbbce998eadab9fde9"
+  },
+  {
+   "id": 55,
+   "title": "Rodada Ociosa",
+   "text": "Nós deveríamos ter atacado ontem!",
+   "unlockRequirement": "",
+   "cnUrl": "4cecd394c914ba9efbc49ddee642ff60eadba34749477b510f97743d261ab865",
+   "jpUrl": "67af32ebb66645f362499c6c5c53fcd0ea283110229c170ccf31644d1aa26895",
+   "enUrl": "da50045ef1c58a356efb9f5c20ecf7b801a6a36a1f7a6c05cce13c5a1ba1ee76",
+   "krUrl": "c4ddd9279ea26d98df3369ced25c5f6f678f0b916a7917c7e12791524e76f04b"
+  },
+  {
+   "id": 56,
+   "title": "ATQ Básico",
+   "text": "Relaxe.",
+   "unlockRequirement": "",
+   "cnUrl": "f8f76d3117ac74ecf3b9116b8fcc2a40bfab30fbb0cee5a791c56323905c1e5e",
+   "jpUrl": "02b567fb4cd86672ee491c207784e46f4153e5fa66595b1b77c12b386ecc0388",
+   "enUrl": "ffde2b287ddc6efc073528c342e540afaa011d6f63ac8a1f37b04243855f739f",
+   "krUrl": "fc98e41e008986d69c92d5f2db77dc5c6fba60c1e76687f2ba6410aa639b4678"
+  },
+  {
+   "id": 57,
+   "title": "Perícia 1",
+   "text": "Males, desapareçam!",
+   "unlockRequirement": "",
+   "cnUrl": "9e7be6e5c1f92354d617b68a4f58ccc7a8e2110de5d4dff3eae2993936b3faea",
+   "jpUrl": "39b6e9d663cce9c0948daebeb41935d1f543610b37a44c7374e81ada3333f1c0",
+   "enUrl": "266c5766cdfbda585406608e5943669d75554d96ff522b2e781b858de5210c3f",
+   "krUrl": "6418646e5c392cd11bae424b5d524b859a4f45608a13312609b918153f10093c"
+  },
+  {
+   "id": 58,
+   "title": "Perícia 2",
+   "text": "Tudo de bom!",
+   "unlockRequirement": "",
+   "cnUrl": "69b4413b4f09d909e899d8bebfbfa25a141b067cd9194a490823ce4ab06fca23",
+   "jpUrl": "29368c20cbbfba991403dd2c9c32306f5eea4102add12f0a81cd6306eb06420f",
+   "enUrl": "9003b1efc017d63b3413ecbc9f357b0210d466180692d64fa0454aab7af09e95",
+   "krUrl": "056decc0f416147cd25be762d802aaadbda9a3addf90dd5cd26a02c035189e95"
+  },
+  {
+   "id": 59,
+   "title": "Ao Receber um Ataque Leve",
+   "text": "Podemos conversar...?",
+   "unlockRequirement": "",
+   "cnUrl": "7e23ecbc8fc81080297f7724fecc234c6ef6d713e59b21d08ebfdda50ecb1200",
+   "jpUrl": "49ecd23e4a8ff4bd78c1d17d43188e8d300d08a346604551911e6bd0b9ee8f1e",
+   "enUrl": "155b4694d11903c0e1c6d62ee9a61daaa33c1e43392a69e9ceebdb77cf091163",
+   "krUrl": "6772751ebe0fdea85dbc70d198fccd03b4dddce532010a4f731548d58aea618d"
+  },
+  {
+   "id": 60,
+   "title": "Ao Receber um Ataque Pesado",
+   "text": "Hunf, você vai pagar por isso.",
+   "unlockRequirement": "",
+   "cnUrl": "7091057e708da2f6b224255da559d33843ea626e4b284e6f8f1d16cc299e1c83",
+   "jpUrl": "bff2be1d605b61ea1e930b4d427f4925435077807e8a41e653f42e84eee564d1",
+   "enUrl": "76da17645511f80a65a6da0794d7549cd6eb7ea1fabb69033c5303e1f3f20ed7",
+   "krUrl": "301195cdba3b8886a218ea4e829538beae51c337eed1b2a8241d67a13f22a02c"
+  },
+  {
+   "id": 61,
+   "title": "Perícia Suprema: Ativar",
+   "text": "Mil maravilhas para melhorar o seu humor!",
+   "unlockRequirement": "",
+   "cnUrl": "eb5a1c9f5f413b3f7aa48d7408178f5db3cfd74e373bb53dfb99d5e119efdacb",
+   "jpUrl": "6accafdaa962d10f13a6eedd74fc5efb4a2a5b05966c8902b0c7753113cf38b6",
+   "enUrl": "a9e37987c92b3ce1d069966742d221393547abe4a54fbb28d8812bb0d945e8c4",
+   "krUrl": "54045a40cd1c0ef7c4939522df0da1d62950d317513c9fd8fc85d11fb9bc1264"
+  },
+  {
+   "id": 62,
+   "title": "Perícia Suprema: Liberar",
+   "text": "Bons presságios! Lutemos como um!",
+   "unlockRequirement": "",
+   "cnUrl": "bf0638ecf78d693ee95f42e16646a60a67c415083ab1590c33f687b5162a8378",
+   "jpUrl": "6e50a603375054ee9ee0546d223ad767bed71583ef6c77cfd53d5f24f0421721",
+   "enUrl": "4164ea97ac1bd3d1cb1e8cbec3452e598984187226c854e86e29981b9505ca8c",
+   "krUrl": "8371809629c4c629e59d4e7ac996be282a21efd76808c0aae22a23c7f47412d6"
+  },
+  {
+   "id": 63,
+   "title": "Ao Ficar Fora de Combate",
+   "text": "Não é o meu... dia de sorte.",
+   "unlockRequirement": "",
+   "cnUrl": "9271306ce510d04b478b8d261f41ef0fb6e7ea6ff3620ddea2a28aa2fb575c5c",
+   "jpUrl": "78604a9da8fa23fb0d7e1d6cbefb65a6187eb6f54700ab33b4fe7b0fd4d3603c",
+   "enUrl": "3c8b0517b712a5aedfd326300f9e494e67942f41e61810958637f4e46a1bd987",
+   "krUrl": "d0aed9030c83f460ed5f7bdd7418c512f44823da4e0d5b6bcd4e1d1095c99ad5"
+  },
+  {
+   "id": 64,
+   "title": "Ao Voltar à Batalha",
+   "text": "Precisa de uma mãozinha?",
+   "unlockRequirement": "",
+   "cnUrl": "a94fd33902d9986e6960e3a8ca653d8fd282eb6e1caf09c87855c53e472253f3",
+   "jpUrl": "84d32685090de665f89575f9294e93e2ca04f37e09836474f997009f355967ab",
+   "enUrl": "e5d242c9623ee620206fd174b69a477d6478a44def8f597988ba7521d03af157",
+   "krUrl": "5fec196b1c459ca1e5fa5b854e8be1e3754d1f5fcd6bffac51c4c0887ea46427"
+  },
+  {
+   "id": 65,
+   "title": "Ao Recuperar PV",
+   "text": "Antes tarde do que nunca!",
+   "unlockRequirement": "",
+   "cnUrl": "115ba01803f6d2e00a779cdd77dbb86ff591fa64c2a5bbc7b84660d6e5758974",
+   "jpUrl": "4f14ab3ddf9e4df2e1caf390cc5d81bfef139c5c730d26698835ca534fb1b406",
+   "enUrl": "1be7e807ec461890be0bdea2af4ce01ab500325996a5688e0eb73e73ba538c6b",
+   "krUrl": "ff1b87f08b5131af652e7f8f6e464137761e16c7b7cb576b90031678c5e06b20"
+  },
+  {
+   "id": 66,
+   "title": "Técnica",
+   "text": "Hora de esfriar a cabeça!",
+   "unlockRequirement": "",
+   "cnUrl": "6a4542887eb4015d9b067fad84cf823e36e4b9801d83528d0456248d0aeab113",
+   "jpUrl": "2589f45bcec678d005a43d862529c9603c72d611f865d0e6533406a724119826",
+   "enUrl": "99905300e0c4d82a77113e8dec90ebb0c7c5dd18743885039c0f6a8dfa380c8d",
+   "krUrl": "0e2096354785a95b4f460149ccf14ccf1359532135aa65857b5a787be771bbb6"
+  },
+  {
+   "id": 67,
+   "title": "Ao Vencer uma Batalha",
+   "text": "Nós fazemos um belo de um time.",
+   "unlockRequirement": "",
+   "cnUrl": "08a7b433a5fc551b44985f96a258113e5486aa2e87f2035e73596ad47a91046d",
+   "jpUrl": "c9273d79661ac49b76ffec8b9099c49d4aba38fc6d01b51c296a91a445eb803c",
+   "enUrl": "52ade6e432d24e7dc9bd8730f66bd359c689e90390b61939a3228566662e6b42",
+   "krUrl": "3ee1a204d15bdf225c607a3a43e1f6088695f74bc2f579387159a8e9db431a7e"
+  },
+  {
+   "id": 68,
+   "title": "Abrindo Tesouro 1",
+   "text": "Isso vale um bom dinheiro.",
+   "unlockRequirement": "",
+   "cnUrl": "b2f42e330753560102700eb15081c66473b1347ccdeee2a0a3b9b0c837d9b20f",
+   "jpUrl": "550e0c1a12109b6cb8984cd2d2cd93fb9670f744b8d85f828ac6f8fe9a125801",
+   "enUrl": "fcd110d77496ba4807d9443f6d479a77df2267135c915e7da3df07dc0a8c9be0",
+   "krUrl": "b4eebb6f5c73fead0605f0994bda417e7be4e4fab0b30a58d08005d5234bc6f4"
+  },
+  {
+   "id": 72,
+   "title": "Abrindo Tesouro 2",
+   "text": "Eu adoro isso.",
+   "unlockRequirement": "",
+   "cnUrl": "7fe62e63c45639b57ec347d8fb0b8d92aa0f911876c48fdc024a4814616d2164",
+   "jpUrl": "bff134e48bff61c9d9542030b308997a4a4dd2c0aa502b00f3e421e48119c18e",
+   "enUrl": "124c768438e5e3137e630c9fa33260916996b0e032d1111bc1c337d91824eb9b",
+   "krUrl": "305682b35dff62e6a286bab191f06dd9341debd82577bac0abc6e14e2c9e3da8"
+  },
+  {
+   "id": 73,
+   "title": "Abrindo Tesouro Precioso",
+   "text": "Que golpe de sorte!",
+   "unlockRequirement": "",
+   "cnUrl": "0703009837bfc14a551838979083942a0a3224da2cdf12e1ee8833415fa1b328",
+   "jpUrl": "44e4268559206751dfca11623c49d66b7ca8aba5779c78b0faab4a3c585caf96",
+   "enUrl": "73bd2d6747996fb6f8e408ed1b6205a8c219b2d98fe2681ef00a26201de50945",
+   "krUrl": "5a17f2eef02599a1c100887c048c22b9140d69a3815fcdedcd50eee8439f308f"
+  },
+  {
+   "id": 69,
+   "title": "Enigma Solucionado 1",
+   "text": "Mamão com açúcar!",
+   "unlockRequirement": "",
+   "cnUrl": "2400b947e0b0631a4ca194d23099e82c29688b26906787099f82afd6f906125d",
+   "jpUrl": "ef996f3ea23a99f9f7211cbb1059c965b2dc4eb3e43b6288351c654872ed678f",
+   "enUrl": "59db173a7d6ab01f56b884e7846defd4617e6cf01ec62076bdea59b20b725d4c",
+   "krUrl": "9c9b1799146911e48a1052fe49cd75cd96436b8ad75d5f3100aa36702f566456"
+  },
+  {
+   "id": 74,
+   "title": "Enigma Solucionado 2",
+   "text": "Tudo graças à sua orientação, benfeitora/benfeitor.",
+   "unlockRequirement": "",
+   "cnUrl": "213ca4ab209c0c37a1500a68fbb7979df5fa62d4f4651a302cc605fe9e1421e6",
+   "jpUrl": "49527f1c51f9d9df505d66940fa6a23a41f9119465f84bfd4f137ce114190573",
+   "enUrl": "4d3091fe6a4b60b063bca21ccac6c0b56418d0a77a7b9fe8b939eb8b434cf7a7",
+   "krUrl": "7e370bcbfef39f5172a6609e673cca14131069582c86f98315208fa2b827bd3a"
+  },
+  {
+   "id": 70,
+   "title": "Alvo Inimigo Encontrado",
+   "text": "Esse aí é durão...",
+   "unlockRequirement": "",
+   "cnUrl": "1f9d7178d38911156954919ed17ae4785b40b11a78bab47c95499ec368f89798",
+   "jpUrl": "504c6415ca9aaa334ac7940fe7018a248650689bedced24fa80e37fcb5c5c784",
+   "enUrl": "f618daec23da2cbedc69843b6298eaf9d8ddac7b15e4e6aa647076e38ee7a08d",
+   "krUrl": "9d9b8adf9eec6df78bec686e5f7642260456b4a4ae428a05b2743f5ac0f6fa50"
+  },
+  {
+   "id": 71,
+   "title": "Voltando à Cidade",
+   "text": "Precisa ir para algum lugar? Eu sou a sua melhor guia!",
+   "unlockRequirement": "",
+   "cnUrl": "affe29faf095d7df501ae7ae7a212bff02be853612cab76898d0b2036b557289",
+   "jpUrl": "273fcafe04b3b4a60ff8dd276d62510f4256fe33178f44288ee7ced53379cca2",
+   "enUrl": "b46e5d2d0abf9f982a8a10e314caf30e39063efa73da0a0fac96c7baabf94eb3",
+   "krUrl": "6b2f58dd18fb321f99744e101347542094294e6b19b369b76cbcae5b9ea88dc2"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Detalhes de Personagem",
+   "text": "Tingyun, uma menina Vulpe de língua afiada, e é a representante principal das Chamas Silvantes, uma guilda de comerciantes aprovada oficialmente pela Comissão de Exploração do Céu.<br />Ela domina tão bem as palavras que costuma deixar seu público ansioso por mais de seus contos cativantes. Graças ao resultado de sua supervisão, as feiras do Xianzhou se tornaram famosas pelo cosmos.<br />Seu lema é \"Faça o seu melhor para evitar conflitos quando possível e convença quem pode ser convencido.\"",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "História de Personagem: Parte I",
+   "text": "Há um ditado que diz: \"Vulpes nasceram para os negócios.\" Basta passar um breve momento no Chá Insone para confirmar este fato.<br /><br />\"Tem algo que você não sabe\", diz a mulher Vulpe, balançando seu requintado leque de ossos enquanto olha para o homem cético à sua frente, \"Diferentes tipos de solo criam tipos específicos de vida. Se as sementes de Cítrico Arenoso, da Confederação da Água Amarga, são transplantadas nos solos sagrados de Vonwacq, elas darão laranjas doces. Isso se dá naturalmente devido aos solos férteis e equilibrados de Vonwacq. E se os alevins de Peixes-Pescadores de Thalassa forem introduzidos ao meu mundo e cultivados pelos Vidyadharas no Desfiladeiro Escamado Aquático, eles podem dobrar de tamanho e chegar a mais de um metro de comprimento.\"<br /><br />\"O mais recente plano das Chamas Silvantes é selecionar minuciosamente as espécies com potencial comercial e distribuí-las em esquifes estelares, garantindo um transporte seguro. Dentro de um mês, você receberá de volta o primeiro lote de mercadorias. Esses produtos podem adicionar ao glamour do Palácio de Cristal no fundo do abismo Thalassano, e ainda podem se tornar produtos de venda únicos da sua nação.\"<br /><br />O homem com guelras expele algumas bolhas, e isso representa um acordo ligeiramente reticente em sua cultura. Então, sua laringe profere sílabas admiráveis: \"Pensei que as Chamas Silvantes fossem comerciantes especulativos envolvidos em arbitragem. Vocês estão planejando mudar a situação atual na indústria de logística, onde a CPI reina suprema? Me diga, quanto vocês querem?\"<br /><br />\"Para serviços de ida e volta, ficamos com noventa porcento. Os agentes só passam o produto de uma mão para à outra. Ou melhor, de uma nadadeira para a outra. É como diz o ditado: \"Negócios de verdade não visam lucro\". Somente beneficiando os outros é que podemos esperar beneficiar a nós mesmos. Contanto que o Senhor do Abismo no Palácio de Cristal esteja de acordo, eu gostaria de fazer um contra... *Ahem*, digo... uma parceria permanente. O que me diz?\"<br /><br />Naquele dia, Tingyun não só fechou negócio, como também formou uma nova amizade para a Aliança.",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>20</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte II",
+   "text": "Tingyun sempre foi diferente dos demais.<br /><br />Vulpes são sinônimo de velocidade e vivacidade. Seus reflexos extremamente rápidos e sentidos aguçados resultaram nisso, o que também torna Vulpes mais jovens bastante atrevidos e animados. Mas Tingyun? Esta garota de orelhas pontudas carrega sempre um ar de doçura. Ela não apenas não incomoda aqueles que acabou de conhecer, como consegue manter a calma quando alguém a incomoda. Com um sorriso inocente e uma voz suave, ela até pediria para que essa pessoa parasse...<br /><br />Não é difícil entender as diferenças na natureza humana. Mas se comparada a seus colegas Vulpes que já estavam virando suas casas do avesso, Tingyun nunca fora boa em combate, e isso foi uma frustração para seus pais, já que ambos serviram ao exército na Comissão de Exploração do Céu. Percebendo que a garota não seguiria no ramo da família, os dois resolveram deixar o preconceito de lado e deixar sua filha florescer livremente...<br /><br />O resultado disso foi o nascimento de uma nova e reluzente estrela do comércio a bordo do Luofu do Xianzhou. Com sua personalidade acolhedora e habilidades talentosas, a garota Vulpe conseguiu concluir missões de comércio em dezesseis planetas diferentes, além de ter renovado mais um contrato bilateral com a CPI. O famoso festival do comércio do Xianzhou, conhecido como a Grande Feira, também se tornou uma festa popular sob os cuidados dela.",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>40</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte III",
+   "text": "Quanto ao leque reticulado de seis dobras que Tingyun porta, é um Engenho muito conhecido feito pela Comissão de Artesanato.<br /><br />A maioria dos comerciantes porta armas para se defenderem durante as viagens, mas Tingyun é uma exceção. Ela se recusa a equipar qualquer arma que não combine com seu estilo, como lâminas, lanças, espadas e alabardas, que embora fortes, carecem de graciosidade. Ela também considera dardos e agulhas ocultáveis como um elemento tóxico e indigno.<br /><br />Após muito pensar, Tingyun acabou escolhendo este leque reticulado. Nas palavras dela própria, eis o porquê:<br /><br />\"Comerciantes prezam a paz acima de tudo. Portar uma arma desonra as amizades e é muito ruim para os negócios.\"<br /><br />\"Meu leque é diferente de uma arma. Eu posso usá-lo para refrescar tanto a mim quanto a um cliente desagradável. Ter uma boa conversa é muito melhor, mas se as coisas não correrem bem...\"<br /><br />\"... Daí só preciso abanar com mais força e refrescar a mente dele até ele ver que não estou para brincadeira!\"",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>60</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte IV",
+   "text": "Contudo, se um dia Tingyun quiser ser promovida a mestra timoneira, sua personalidade solícita deixará de ser um ponto força para se tornar uma pedra em seu caminho. Afinal de contas, a Comissão de Exploração do Céu sempre foi comandada por exímios pilotos, todos eles guerreiros batizados nas chamas da guerra. Enquanto isso, Tingyun não leva jeito para pilotar um esquife estelar, e muito menos para matar. Essa é a principal diferença entre ela e a atual mestra timoneira da Comissão de Exploração do Céu, Yukong.<br /><br />Além disso, Yukong já planejou passar o futuro à Tingyun, mas Tingyun não sabe se está realmente qualificada a aceitar.<br /><br />Para ela, Yukong não era apenas uma superiora confiável ou um porto seguro durante uma crise. Em seu coração, Yukong também era uma espécie de ídolo glorioso. Ela via Yukong como alguém em quem confiar de corpo e alma, como uma luz que a guiava. Ela queria agarrar o esplendor dessa estrela, mas percebeu que podia apenas persegui-la das sombras, desesperada. Até que um dia, a estrela solitária lhe disse:<br /><br />\"Os tempos estão mudando. O Xianzhou está mudando. Um dia, esta embarcação gigante ficará exausta de um céu cheio de sangue e da guerra. Quando essa hora chegar, a Comissão de Exploração do Céu será o seu palco.\"<br /><br />Tingyun não sabia o quanto daquilo era uma mera piada, mas guardou cada uma daquelas palavras em um envelope e o trancou no fundo de uma gaveta de sua loja. Ela estava determinada a jamais esquecer aquilo.<br /><br />\"Mesmo que eu não possa batalhar, ainda há uma chance de demonstrar a minha força\", diz a garota Vulpe a si mesma. O Luofu está atualmente ancorado em órbita, passando por reformas após uma campanha contra as abominações. O comércio próspero se torna o pano de fundo desta Era.<br /><br />Compreendendo as expectativas que Yukong tinha para ela, Tingyun decola para além dos céus, buscando mais alianças e amizades.<br /><br />\"Quando se trata de quem é a melhor timoneira do Luofu, as pessoas vão citar a madame Yukong sem pestanejar. Mas na minha opinião...\"<br />\"Minha exímia oratória também é capaz de dirigir esta embarcação, não acha?\"",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>80</nobr> de Personagem"
+  }
+ ],
+ "archive": {
+  "cvCn": "蒋丽",
+  "cvJp": "高田憂希",
+  "cvKr": "이명호",
+  "cvEn": "Laci Morgan",
+  "camp": "O Luofu do Xianzhou"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Tingyun",
+ "rarity": 4,
+ "descHash": "Amoraxadora da Comissão de Exploração do Céu do Luofu do Xianzhou. Ela viaja com representantes comerciais, forjando alianças e relações de comércio com muitos mundos.",
+ "artPath": "85c66cb308c861adce1cf3584e9c8300650ace766692207455051ccbc51d529c",
+ "miniIconPath": "022c9f1b888c7ca0286cdfc82d671f0b938e3fe5b3d93d2e5ba9ab3d09fa90b9",
+ "damageType": {
+  "id": 8,
+  "iconPath": "aec46e1b5be764fe83cac85e30f5832729012baa6a30bb8d91c82348d8a1b4d6",
+  "color": "#8872F1",
+  "name": "Raio",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "fd3dc153082117a49b1d8eb7d166dd32d65d636463e15c604b583d5945a4ca69",
+  "altIconPath": "691e6c36e7f71344352e4ed80941938d7dc5722b23cef7a18f7fa8722d8c0523",
+  "color": "#FFFFFF",
+  "name": "A Harmonia",
+  "rarity": 0
+ },
+ "pageId": "tingyun"
+}

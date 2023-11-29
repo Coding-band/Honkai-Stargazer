@@ -1,0 +1,2766 @@
+{
+ "spRequirement": 110,
+ "iconPath": "98475d8b2f36be2aa569debc687806de5bbbbb1efe3cf14699924074b4ca2299",
+ "bgPath": "9144184ac22a31508f638c4330909cbbfde90e8f3e72e9e648b98dee961fe471",
+ "figPath": "a5b9411ae745b6a64d252f845f3671f5933a9d60209a7b5ee9f4330c3185cc01",
+ "fgPath": "f3f176d248ac5ef99dda5e34f524db570bd79cd1cea423dc99fe0756e2667fcf",
+ "splashIconPath": "803f68e09a5c5f60ba8039a38f98af15738db1a6d405e7da55c2bd87f591dc66",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 5,
+  "iconPath": "4b4b5f13f6588e7fb1c030c28f9b9b67a7a8c4bab77c05e38d5c9f64eb0d99e7",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "信用点",
+   "desc": "星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。",
+   "lore": "「人们奔波、争斗、贸易，为的不过是个终端里显示的数字。但真正珍贵之物，公司的数字是买不到的。」",
+   "purpose": "通用货币",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "拟造花萼【大矿区】",
+    "任务奖励",
+    "委托奖励",
+    "余烬兑换"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "命运的足迹",
+   "desc": "行迹升级的高阶素材。",
+   "lore": "一次又一次的败北成就了你的胜利，一步又一步的前进让你抵达了命运的拐点。",
+   "purpose": "行迹材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模拟宇宙」积分奖励",
+    "无名勋礼",
+    "余烬兑换",
+    "限时活动奖励"
+   ]
+  },
+  "351746": {
+   "id": 351746,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "559c24ffae40e390bfec262f621e30b0b209f6d487b122f6bc54b0e7dada8353",
+   "name": "虚幻铸铁",
+   "desc": "虚卒•践踏者的蹄铁，量子属性角色的晋升素材。",
+   "lore": "反物质军团麾下的践踏者在毁灭后有极低概率留下这种蹄铁。没有观测者时，它会在有/无两种状态间波动。<br /><br />「这个实验的名字？就叫践踏者的蹄铁……」",
+   "purpose": "角色晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/351746",
+   "comeFrom": [
+    "凝滞虚影【基座舱段】",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "漫游指南",
+   "desc": "角色的经验材料，可以获得<nobr>20000</nobr>点角色经验。",
+   "lore": "跨越诸界必备的冒险丛书。按下阅读键，充满磁性的声音将以你能听懂的语言讲述知名冒险家们在不同世界间的传奇经历，以及他们在各个星球上获得的珍贵智慧。<br /><br />「漫游指南全新书系《星际美食烹饪导览》开售在即，敬请支持。」<br />「投稿请接入博识学会联觉信标<nobr>23</nobr>θ联络员，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色经验材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "「忘却之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "冒险记录",
+   "desc": "角色的经验材料，可以获得<nobr>5000</nobr>点角色经验。",
+   "lore": "装订严整，一看就颇有教育意义的冒险札记。图文并茂地描述了冒险行动的始末、有价值的信息和生存相关的技巧。<br /><br />「干嘛不数据化放进光刻片里？便携多了。」<br />「面对恒星风暴和中子流喷发时，高科技比你想象的还要脆弱。何况，制作这本书的人一定希望人们用最简单的方式阅读它。」",
+   "purpose": "角色经验材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "每日实训",
+    "余烬兑换"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "旅情见闻",
+   "desc": "角色的经验材料，可以获得<nobr>1000</nobr>点角色经验。",
+   "lore": "记录旅途见闻的日志，字迹漫漶不清，内容随心所欲，对你并没有太大的帮助。<br /><br />「看完了就赶紧把这堆废纸处理掉吧，丹恒？」",
+   "purpose": "角色经验材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "委托奖励"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "28d0ba947e29fa63210d8ae2c432cb80339f98427c8655a9ca050184f69c4819",
+   "name": "古代零件",
+   "desc": "旧世界时代遗留的机器零件。强化所需的简单材料。",
+   "lore": "尽管体积微不足道，却以如今的人们难以重现的技术铸造打磨而成。<br /><br />「旧世界的一颗小螺丝都比我们的盔甲结实。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "自动机兵掉落",
+    "「模拟宇宙」中敌方掉落",
+    "委托奖励",
+    "余烬兑换",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "7089e982e18575f3824ab28ae0e91f40c8214edf6253a7162142bdc7fc0acdbe",
+   "name": "古代转轴",
+   "desc": "旧世界时代遗留的机器传动轴。强化所需的普通材料。",
+   "lore": "精密结合的机件一旦拆开就再也无法复原，即便贝洛伯格技术部的维修老手也不敢轻易动它。<br /><br />「笨蛋，这东西交给蓝甲人才值几个罐头？拿去给史瓦罗大佬，保你吃穿不愁。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "突破至均衡等级2后，自动机兵掉落",
+    "「万能合成机」- 材料合成",
+    "「模拟宇宙」中敌方掉落",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bb7670872389d870154ac70d1b29dee2d6c123f558951c6f914f1d9a70c28382",
+   "name": "黯淡黑曜",
+   "desc": "一片自虚空中捕获的黑质。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚无</span>角色的命途行迹。",
+   "lore": "任何手段都无法验明它的本体。<br />轻轻触碰，从碎片中传来不明的呓语。<br /><br />「████ ██ █ █」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "拟造花萼【大矿区】",
+    "余烬兑换"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "name": "古代引擎",
+   "desc": "旧世界时代遗留的机器引擎。强化所需的高级材料。",
+   "lore": "以地髓为能源注入动力，运转时喷燃的并非火星，而是游走的极光。<br /><br />「只有大守护者直属的技术部有权调阅旧世界的资料，我嘛，被开除后就进不去啦。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "突破至均衡等级4后，自动机兵掉落",
+    "「万能合成机」- 材料合成",
+    "「模拟宇宙」中敌方掉落",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "name": "沉沦黑曜",
+   "desc": "一整块自虚空中捕获的黑质。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚无</span>角色的命途行迹。",
+   "lore": "意志薄弱之人只是向其棱面送去一瞥，便会在混沌中永世沉沦。<br /><br />「         」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "拟造花萼【大矿区】",
+    "「万能合成机」- 材料合成"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1a896480b5f6ee84644db112069845e85930f6dbc0f428a3f8a6de2b187702af",
+   "name": "虚空黑曜",
+   "desc": "一块自虚空中捕获的黑质。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚无</span>角色的命途行迹。",
+   "lore": "漆黑的棱面上甚至反射不出任何倒影。它不仅吸收着光，似乎还夺走了持有者的情绪起伏，只留下淡淡的空洞感。<br /><br />「……」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "拟造花萼【大矿区】",
+    "「万能合成机」- 材料合成",
+    "余烬兑换"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "c92e008415ed578b02aeeebec3e4303f0e6c56d05fab48f2cfd79469b64f222b",
+   "name": "毁灭者的末路",
+   "desc": "行迹升级的高阶素材。",
+   "lore": "古兽的身躯虽已销殒，匣中却还囚禁着尚未死灭的意志。但只要无人打开这个匣子，它的意志就处于存在与不存在的叠加态，驱动着毁灭的引擎运行下去。<br /><br />「末日兽，战争熔炉以古兽残片为基万骸哀怨为引铸炼而成的灾厄——贯彻毁灭的同时亦渴求着自身的消亡。」",
+   "purpose": "行迹材料",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "历战余响【支援舱段】"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 87.12,
+   "attackAdd": 4.356,
+   "hpBase": 142.56,
+   "hpAdd": 7.128,
+   "defenseBase": 62.7,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 107,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549408,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 121.968,
+   "attackAdd": 4.356,
+   "hpBase": 199.584,
+   "hpAdd": 7.128,
+   "defenseBase": 87.78,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 107,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549408,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 156.816,
+   "attackAdd": 4.356,
+   "hpBase": 256.608,
+   "hpAdd": 7.128,
+   "defenseBase": 112.86,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 107,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633349,
+     "count": 6
+    },
+    {
+     "id": 351746,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 191.664,
+   "attackAdd": 4.356,
+   "hpBase": 313.632,
+   "hpAdd": 7.128,
+   "defenseBase": 137.94,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 107,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633349,
+     "count": 9
+    },
+    {
+     "id": 351746,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 226.512,
+   "attackAdd": 4.356,
+   "hpBase": 370.656,
+   "hpAdd": 7.128,
+   "defenseBase": 163.02,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 107,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717290,
+     "count": 6
+    },
+    {
+     "id": 351746,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 261.36,
+   "attackAdd": 4.356,
+   "hpBase": 427.68,
+   "hpAdd": 7.128,
+   "defenseBase": 188.1,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 107,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717290,
+     "count": 9
+    },
+    {
+     "id": 351746,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 296.208,
+   "attackAdd": 4.356,
+   "hpBase": 484.704,
+   "hpAdd": 7.128,
+   "defenseBase": 213.18,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 107,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "2706b6248923d2d3a579890455fe9278df67e8a854446731be0d2fa6dc001595",
+   "artPath": "01c5b22ed6f3c1c67ebdec702b9e5fd1315ea83efaf040b56266e296e12458d9",
+   "name": "社会工程",
+   "descHash": "施放终结技攻击敌方目标后，目标每有1个负面效果，银狼恢复<nobr>#1[i]</nobr>点能量。该效果在每次终结技攻击中最多生效<nobr>#2[i]</nobr>次。",
+   "params": [
+    7,
+    5
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "1e73c559e571f40f2439afd6b4dc35ceee360a7797d3e57464319310a7763fd8",
+   "artPath": "0e3b60bc8e7482763c55df4186a316b8d13e11e05b1e5e5ab05eae1c15df24f2",
+   "name": "僵尸网络",
+   "descHash": "在敌方目标进入战斗时，使其效果抵抗降低<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "05bc2c2ef5d8ad3e83ef8600166356ecdacb11a5182ece92b75a85bb135e0821",
+   "artPath": "fbe8d6b257b2a572ea095952a527664ffa8f9d47ca068abcb59154fd1e314fc5",
+   "name": "攻击载荷",
+   "descHash": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "38df9c497f1a1bb93098e843d4c52cf14eaf18de1f4c7b7e2ec3fd31fa1970d4",
+   "artPath": "e0ec82ced9cb0454ba0ac75656fe885909ff052dda2060e81ecc5fd04947de3d",
+   "name": "反弹端口",
+   "descHash": "施放终结技攻击敌方目标后，目标每有1个负面效果，则额外造成等同于银狼<nobr>#1[i]%</nobr>攻击力的量子属性附加伤害。该效果在每次终结技攻击中最多触发<nobr>#2[i]</nobr>次。",
+   "params": [
+    0.2,
+    5
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "b194bb56ff1e41803fc5e18e3d332ddbd3aeb7633432202ea041f8b429de2b5c",
+   "artPath": "92a9cc2f629ce0d70f8ca20645f197244654e788656bdb56ea8f94c4ed31f2fc",
+   "name": "暴力破解",
+   "descHash": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "c5ee942470900b4dbe9df02b06229c12eab558d2f63811672df8e4e39914872d",
+   "artPath": "5dd6bba54e167aa1922d1416ebc44f4370b612b1ec5cead1b9ba7f203881f867",
+   "name": "重叠网络",
+   "descHash": "敌方目标每有1个负面效果，银狼对其造成的伤害提高<nobr>#1[i]%</nobr>，最多提高<nobr>#2[i]%</nobr>。",
+   "params": [
+    0.2,
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   953518
+  ],
+  [
+   836873
+  ],
+  [
+   752932
+  ],
+  [
+   438631
+  ],
+  [
+   121400
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "单攻",
+   "descHash": "对指定敌方单体造成等同于银狼<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#7788ff;\">量子</span>属性伤害。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 953518,
+   "name": "|系统警告|",
+   "iconPath": "7539d9706143752c2dba35857a7f1811ced1a10dee2fad44c49b06c5369fe5e7",
+   "typeDescHash": "普攻",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "妨害",
+   "descHash": "有<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>的<u>基础概率</u>为指定敌方单体目标添加1个场上我方目标持有属性的弱点，且该弱点对应属性的抗性降低<nobr>#4[i]%</nobr>，持续<nobr>#3[i]</nobr>回合。若添加的是敌方目标原有属性的弱点，则不会触发对应属性的抗性降低效果。<br />单个敌方目标仅能被银狼添加1个弱点，当银狼对其再次添加弱点时，仅保留最新添加的弱点。<br />有<nobr>#5[i]%</nobr>的<u>基础概率</u>额外使该目标的全属性抗性降低<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#6[f1]%</nobr></span>，持续<nobr>#7[i]</nobr>回合。<br />对该目标造成等同于银狼<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#7788ff;\">量子</span>属性伤害。",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "30",
+   "id": 836873,
+   "name": "是否允许更改？",
+   "iconPath": "05bc2c2ef5d8ad3e83ef8600166356ecdacb11a5182ece92b75a85bb135e0821",
+   "typeDescHash": "战技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.98,
+      0.75,
+      2,
+      0.2,
+      1,
+      0.075,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.078,
+      0.76,
+      2,
+      0.2,
+      1,
+      0.0775,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.176,
+      0.77,
+      2,
+      0.2,
+      1,
+      0.08,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.274,
+      0.78,
+      2,
+      0.2,
+      1,
+      0.0825,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.372,
+      0.79,
+      2,
+      0.2,
+      1,
+      0.085,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.47,
+      0.8,
+      2,
+      0.2,
+      1,
+      0.0875,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5925,
+      0.8125,
+      2,
+      0.2,
+      1,
+      0.090625,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.715,
+      0.825,
+      2,
+      0.2,
+      1,
+      0.09375,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.8375,
+      0.8375,
+      2,
+      0.2,
+      1,
+      0.096875,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.96,
+      0.85,
+      2,
+      0.2,
+      1,
+      0.1,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.058,
+      0.86,
+      2,
+      0.2,
+      1,
+      0.1025,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.156,
+      0.87,
+      2,
+      0.2,
+      1,
+      0.105,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.254,
+      0.88,
+      2,
+      0.2,
+      1,
+      0.1075,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.352,
+      0.89,
+      2,
+      0.2,
+      1,
+      0.11,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.45,
+      0.9,
+      2,
+      0.2,
+      1,
+      0.1125,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "妨害",
+   "descHash": "有<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>的<u>基础概率</u>使指定敌方单体防御力降低<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>，持续<nobr>#4[i]</nobr>回合，同时对该目标造成等同于银狼<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#7788ff;\">量子</span>属性伤害。",
+   "ultimateCost": 110,
+   "break": "90",
+   "energy": "5",
+   "id": 752932,
+   "name": "|账号已封禁|",
+   "iconPath": "b57215068b315c5086593aae889cd62279ae3faded5d7a9148cc4ad4d264b1cf",
+   "typeDescHash": "终结技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2.28,
+      0.85,
+      0.36,
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.432,
+      0.865,
+      0.369,
+      3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.584,
+      0.88,
+      0.378,
+      3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2.736,
+      0.895,
+      0.387,
+      3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.888,
+      0.91,
+      0.396,
+      3
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3.04,
+      0.925,
+      0.405,
+      3
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      3.23,
+      0.94375,
+      0.41625,
+      3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3.42,
+      0.9625,
+      0.4275,
+      3
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3.61,
+      0.98125,
+      0.43875,
+      3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3.8,
+      1,
+      0.45,
+      3
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3.952,
+      1.015,
+      0.459,
+      3
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      4.104,
+      1.03,
+      0.468,
+      3
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      4.256,
+      1.045,
+      0.477,
+      3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      4.408,
+      1.06,
+      0.486,
+      3
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      4.56,
+      1.075,
+      0.495,
+      3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "妨害",
+   "descHash": "银狼能够制造：攻击力降低<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>、防御力降低<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>、速度降低<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>3种【缺陷】。<br />银狼每次施放攻击后有<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>的<u>基础概率</u>给受到攻击的敌方目标植入1个随机【缺陷】，持续<nobr>#5[i]</nobr>回合。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 438631,
+   "name": "等待程序响应…",
+   "iconPath": "ca47e90f2f0762714347eabf48ef3eba3e1fd23e5a56972e5b50f75b610e1685",
+   "typeDescHash": "天赋",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.05,
+      0.04,
+      0.03,
+      0.6,
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.055,
+      0.044,
+      0.033,
+      0.612,
+      3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.06,
+      0.048,
+      0.036,
+      0.624,
+      3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.065,
+      0.052,
+      0.039,
+      0.636,
+      3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.07,
+      0.055999998,
+      0.042,
+      0.648,
+      3
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.075,
+      0.06,
+      0.044999998,
+      0.66,
+      3
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.08125,
+      0.065,
+      0.048750002,
+      0.675,
+      3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.0875,
+      0.07,
+      0.052500002,
+      0.69,
+      3
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.09375,
+      0.075,
+      0.05625,
+      0.705,
+      3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      0.08,
+      0.06,
+      0.72,
+      3
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.105,
+      0.084,
+      0.063,
+      0.732,
+      3
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.11,
+      0.088,
+      0.066,
+      0.744,
+      3
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.115,
+      0.092,
+      0.069,
+      0.756,
+      3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.12,
+      0.096,
+      0.072,
+      0.768,
+      3
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.125,
+      0.1,
+      0.075,
+      0.78,
+      3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 238045,
+   "name": "攻击",
+   "iconPath": "7539d9706143752c2dba35857a7f1811ced1a10dee2fad44c49b06c5369fe5e7",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "立即攻击敌人，进入战斗后对敌方全体造成等同于银狼<nobr>#1[i]%</nobr>攻击力的<span style=\"color:#7788ff;\">量子</span>属性伤害，并无视弱点属性削减敌方全体的韧性，击破弱点时，触发<span style=\"color:#7788ff;\">量子</span>属性的弱点击破效果。",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "0",
+   "id": 121400,
+   "name": "|强制结束进程|",
+   "iconPath": "789453c5b8afc1579f5e72926c6e018bb1fff06f792313cffab3f9622af01f5d",
+   "typeDescHash": "秘技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.8
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1006201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1006210,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 474176,
+      "name": "攻击强化",
+      "levelReq": 80,
+      "promotionReq": 0,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "攻击力",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717290,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 590822,
+    "name": "攻击强化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "攻击力",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549408,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1006101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1006202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1006203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1006204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 590817,
+          "name": "伤害强化•量子",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "e7c7e4e052302779e7dab274aa39aedc08e59eed4e5e507174ee47aaef770e2a",
+          "statusList": [
+           {
+            "key": "<span style=\"color:#7788ff;\">量子</span>属性伤害提高",
+            "value": 0.032
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920196,
+            "count": 3
+           },
+           {
+            "id": 633349,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 590820,
+        "name": "攻击强化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "攻击力",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920196,
+          "count": 3
+         },
+         {
+          "id": 633349,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 590819,
+      "name": "效果命中强化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+      "statusList": [
+       {
+        "key": "效果命中",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635669,
+        "count": 3
+       },
+       {
+        "id": 549408,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "【缺陷】的持续时间增加<nobr>#1[i]</nobr>回合。每当有敌方目标的弱点被击破时，银狼有<nobr>#2[i]%</nobr>的基础概率对该目标植入1个随机【缺陷】。",
+    "ultimateCost": 0,
+    "id": 590723,
+    "name": "生成",
+    "iconPath": "151a7b398ff0d18e9a3c0691f7927a450c1b054ce2ed05732a26f6e215eed5dc",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       1,
+       0.65
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635669,
+        "count": 3
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1006102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1006205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1006206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1006207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 590816,
+          "name": "攻击强化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+          "statusList": [
+           {
+            "key": "攻击力",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836255,
+            "count": 3
+           },
+           {
+            "id": 717290,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 590815,
+        "name": "效果命中强化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+        "statusList": [
+         {
+          "key": "效果命中",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836255,
+          "count": 3
+         },
+         {
+          "id": 717290,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 590818,
+      "name": "攻击强化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "攻击力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920196,
+        "count": 5
+       },
+       {
+        "id": 633349,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "施放战技时，为敌方目标添加的弱点持续时间增加<nobr>#1[i]</nobr>回合。",
+    "ultimateCost": 0,
+    "id": 590726,
+    "name": "注入",
+    "iconPath": "9392a7a841485248cd0e9c8e2c5287a3acc0ff92773a545d82611d965ef3b644",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920196,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1006103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1006208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 590829,
+      "name": "伤害强化•量子",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "e7c7e4e052302779e7dab274aa39aedc08e59eed4e5e507174ee47aaef770e2a",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#7788ff;\">量子</span>属性伤害提高",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717290,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1006209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 590830,
+      "name": "效果命中强化",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+      "statusList": [
+       {
+        "key": "效果命中",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717290,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "施放战技时，若敌方目标的负面效果数量大于等于<nobr>#1[i]</nobr>个，则战技使目标全属性抗性降低的效果额外降低<nobr>#2[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 590725,
+    "name": "旁注",
+    "iconPath": "ccb8468df98bd88b3de5a36d70ad5bb624a54664ee1ba10c460ea5c9aa56db7f",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       3,
+       0.03
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "躯干",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "效果命中",
+    "propertyIconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "速度",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "位面球",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "量子属性伤害提高",
+    "propertyIconPath": "e7c7e4e052302779e7dab274aa39aedc08e59eed4e5e507174ee47aaef770e2a"
+   },
+   {
+    "relicTypeHash": "连结绳",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "能量恢复效率",
+    "propertyIconPath": "75627c696d3e9763c0b4feeb4a8e2baf594ac73214c6227b3a125c032be090c8"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初次见面",
+   "text": "哟，开拓者，感觉你挺不错的呀，那颗星核对你没什么影响吗？",
+   "unlockRequirement": "",
+   "cnUrl": "a5cb61b0d4d1e06c72286483294c8e9b3ee6bab89c38ab22c487b66b2671d29d",
+   "jpUrl": "8e0e28b42ac6c945a1cf3e903c0c028432b56de64f64f7ffa6ed2cd45682d684",
+   "enUrl": "d2fe791e2637ec50f334a866d22a6e731829b953f0506aaeba9fb54237120dd2",
+   "krUrl": "0a7c44947c29dda797b3223b8434550857c2e83f059acfd7ac53be2287e24dc2"
+  },
+  {
+   "id": 2,
+   "title": "问候",
+   "text": "今天也上线啦？",
+   "unlockRequirement": "",
+   "cnUrl": "b86f910dbf0f7d162de633885aed58194bf8d79435e0160fe748aba60dc9be0e",
+   "jpUrl": "4f4eddfa22e6578a3ff603e4981a8db6f0a7ac997e13972e88368f89b97cef4b",
+   "enUrl": "cebf3cf076daeadf298b1716e522a37163098c96df1b417ce140fed9d65d150d",
+   "krUrl": "1e2c5cc63a1983fe6ee836b8aea2b6411a5468b5c112f75c80e3159e038cc09e"
+  },
+  {
+   "id": 3,
+   "title": "道别",
+   "text": "该做的事都做完了么？好，别睡下了才想起来日常没做，拜拜。",
+   "unlockRequirement": "",
+   "cnUrl": "5fae87f6dd19023a8a9874f433eb7c909ccf5f5e23894898abd6b89d06c7fccd",
+   "jpUrl": "208824f3c43ff94bdcf6d94c9d535b844aefa808df0fdbbdd17493a9ccaf52e8",
+   "enUrl": "b4ed064bb0624460004d585fa000af2705a552bda67a114f9eef990f9ba47e08",
+   "krUrl": "8b4bc91375b0d1e5125945568a1bfe53e295b9944a24cb5ccc621020056528ed"
+  },
+  {
+   "id": 4,
+   "title": "关于自己•名字",
+   "text": "就是游戏账号名，开拓者你不也是？",
+   "unlockRequirement": "",
+   "cnUrl": "caaf1a5e84ed0749e5713aea0e94a2cafd2d1b5ca3ca0292f283aaf9ffa3c884",
+   "jpUrl": "a41e75026100b3374e3a333f45eed961b6bf4337c6ef1bb582a76123bde2c47d",
+   "enUrl": "ad345120b91b24092656049ec3d62a66e3a43de3f8becea0cca6cd6090719d06",
+   "krUrl": "b7ce0a9df32a1f7838e39ded0dbde84430b16053d449b9b40681ff4a0c0c176e"
+  },
+  {
+   "id": 5,
+   "title": "闲谈•宇宙",
+   "text": "想给这个宇宙多加些玩法，每天都跑图，不无聊么？",
+   "unlockRequirement": "",
+   "cnUrl": "c604905a6234562e1d4fa5cdfd72c26dc2e17b496996536f9e29fa5d8fd61a9c",
+   "jpUrl": "d36e31a0fbadbb0ec6fab81ef75426948730ffc75f851b2a23e2bf236dcb6f62",
+   "enUrl": "8c3bcc394e47d4efcd352fbfcd8fbd2d8fd1698912af4938cf55c2ab1b4254f1",
+   "krUrl": "1667225f251dd4b7ad427e9a3e53609f7d54790c89cff4ccd38d5ceb5aee6679"
+  },
+  {
+   "id": 6,
+   "title": "闲谈•普罗米修斯",
+   "text": "普罗米修斯搭载了四个模块，「朋友」是最会说话的…「朋友是缘，永远珍惜。为我们的友谊，干杯！」",
+   "unlockRequirement": "",
+   "cnUrl": "14ac9673fac1aeb4ec27d5265fe6854623b124f1a85267ffc04dad98a9075b1b",
+   "jpUrl": "881b7b470f6dc69985912287ea353f238d2d78955049473c86ce635cd9aa131c",
+   "enUrl": "694a5eebb25b76d497411bfde88b1873a57784a9e78e41f22a6af9e03aff9e73",
+   "krUrl": "f5b13cc924e24a744ce03e227229e486e893851d09e2a2a5831cda84a3271e61"
+  },
+  {
+   "id": 7,
+   "title": "爱好",
+   "text": "把头埋在抱枕里午睡和捏可爱的东西。",
+   "unlockRequirement": "",
+   "cnUrl": "ee4248270cacfc2f03886becb76a30e775af7fe88f11e000d168789892f4496d",
+   "jpUrl": "c3223d339d600ba632b745223f50bde39ce449cf1f58417cc8b5ac7d199fd13e",
+   "enUrl": "77dca687f3de0d6ea9306ef8690fde27a025424e60edd2201e0bf13a9e5d796e",
+   "krUrl": "66009bd8607f4325416f06ad843f1bcf551d44bf5e28bd1464c742be303c4a5f"
+  },
+  {
+   "id": 8,
+   "title": "烦恼",
+   "text": "不能开小号，艾利欧也不行。",
+   "unlockRequirement": "",
+   "cnUrl": "17b35bdce77d775a8d97c756a1987bf83ecb90ca79f0c6ef5980649ecce1803c",
+   "jpUrl": "7d1182726961a59c6f6d0c3addcdfbe66aa4cb46569dd46ee984dd953d150459",
+   "enUrl": "df100d7f442d451dc90a09ecdfb9021cc588712fa5bff317571416ab278fdb01",
+   "krUrl": "cf2c4f02d90cacb89d1e3cbf5a0d0ec5dd9dcc43570cb8a3dd9eb35317d1c25c"
+  },
+  {
+   "id": 9,
+   "title": "分享",
+   "text": "骇入空间站的时候，我随手改了下螺丝咕姆的画像，不过…最后还是改回去了。",
+   "unlockRequirement": "",
+   "cnUrl": "6ee18ed2cf1e13ba291dc16b896f2b2562b5addc670deedf53deab80b73fdcca",
+   "jpUrl": "5ed1eb8f3d0839c10b43e5e52f999fbb1f21abe344601d891b22ce9c828bbf64",
+   "enUrl": "a73fee2eda1ffa03683d8c781983552a7a8c3c975a0fbdbf27d70542f21cac48",
+   "krUrl": "07a862da8a08b9e982d649bcaab541aa20f380486663a72f88b464fd87ec5c34"
+  },
+  {
+   "id": 10,
+   "title": "见闻",
+   "text": "我喜欢的游戏总在同一天更新版本，他们是约好了么？",
+   "unlockRequirement": "",
+   "cnUrl": "e69df3ae180a14045133c57f7f60375e740309937d26d212e1514bd6925f549f",
+   "jpUrl": "99401a0240c64c631bd2cf3b33e604e0f52c71ad9923f9b36c310561c78b8630",
+   "enUrl": "dc4a986fc5d3a5db1d0eee4ed25b71a7e800d1c6aa796432236df22f2724f9a7",
+   "krUrl": "44b97a1d6fd32a5d775386b6398f5108930a950037e53528173b3025065c704c"
+  },
+  {
+   "id": 11,
+   "title": "关于卡芙卡",
+   "text": "在「无视规则」这一点上，卡芙卡和我很有共鸣。",
+   "unlockRequirement": "",
+   "cnUrl": "bec3fbc05b1b5e2f22a6d9866b6762e5e350f6b0317d074dfa3d28bfd7117e04",
+   "jpUrl": "b92a7aeb522bae563794876b7d9b92bd9bbbc9ef5e3f62df2b33b2485c845839",
+   "enUrl": "ac8a2418c4436852c3cb0d1ad5d41a567319ac76049c9d5020e3fb8e77600483",
+   "krUrl": "d881432b9fbbb86419354f4a136559a529e727ef2704251a14a53c0a5bd46a1f"
+  },
+  {
+   "id": 12,
+   "title": "关于刃",
+   "text": "说好等手伤痊愈了就一起打游戏，结果他的手就一直没好过。",
+   "unlockRequirement": "",
+   "cnUrl": "04a879194ab62a2a39b4b092785cac24c5bc2f502da2dfeae284140914c9a071",
+   "jpUrl": "53f80a7b3670ca0b5918259f76104658f61a69f8e9cc0ba4d569164b369b70c3",
+   "enUrl": "0c990e5d03f25a72f3693f673742d9f14026dcb6139ebde7d346763aeb2448cf",
+   "krUrl": "08e03cad4d4f064735c27361756d79caac3029238d8b39addbd039dc2f4d5b11"
+  },
+  {
+   "id": 13,
+   "title": "关于螺丝咕姆",
+   "text": "每次都要我主动出击，这个家伙是完全不会被激怒的对吧？",
+   "unlockRequirement": "完成同行任务「朋克洛德精神」后解锁",
+   "cnUrl": "a3e079c653e08fbb1426cb034a751873ed66cdf165427128bdd220b7bf42a5e2",
+   "jpUrl": "205e550444398df1ef5017e0bd96d4022e7b69ad489dfbadcde934998c6462de",
+   "enUrl": "8b3784e202370af909a74b708ce11dfa7b722295db145d06ac31e050b5c9745c",
+   "krUrl": "62fbfd0866c7e1a616e3112103c57d7e9412c72b026c861cb9488667c0134de9"
+  },
+  {
+   "id": 14,
+   "title": "星魂激活",
+   "text": "嚯，开个金手指。",
+   "unlockRequirement": "",
+   "cnUrl": "285d8ad7923e383f06d751c92e666d67dd36aa3fdd01945b482bea57216096ac",
+   "jpUrl": "464d1ab4f9c3d2434f16b1fa6449f78d0de7a2bc63a05d4a245cbd9860613f73",
+   "enUrl": "4a56e8cd8868bb7a733c0dd503cab6e64ce9106d44be77c6c5c1bd957a43903a",
+   "krUrl": "cffefdea883791775efb50a26057e0f6a25772f8b10176918c9244eafc2c3117"
+  },
+  {
+   "id": 15,
+   "title": "角色晋阶",
+   "text": "保持这个状态，继续按，不要停。",
+   "unlockRequirement": "",
+   "cnUrl": "9fe0a34dbb4fb2c93087b31fa0ac627a597f078840c9155450d1388243b76427",
+   "jpUrl": "dfdc6e2c4dae0cbd2b4425f64d716b67073c86d3ed0df7a91a76558999ea4a4d",
+   "enUrl": "b5eaf13e792c4390ee912709765b7a88ca19645dd629d0d4a80a67ab0758bc20",
+   "krUrl": "655b85cb093ebfc4edc38c1565b7f9d4844197873d3d09ebdba4678107d9e3f2"
+  },
+  {
+   "id": 16,
+   "title": "角色满级",
+   "text": "等级拉满了？未来一片光明呀。",
+   "unlockRequirement": "",
+   "cnUrl": "87fb1928d45d0914411061b67b9b9fa66765935bfeb5e6a6e025ef8f987b758b",
+   "jpUrl": "020158acef6e33ee2ac5a05910242f7df0b761a471dee6c8463215ebceb25222",
+   "enUrl": "eaf5e6dd1b1acdbce3e846694aceb07193424923583749e69c91afadeb57492c",
+   "krUrl": "998ad516443c1f7216e3abfa5c63df2262eb6bb994abbad9589f8d2f606949d4"
+  },
+  {
+   "id": 17,
+   "title": "行迹激活",
+   "text": "重要的不是数值，是体验，是操作！",
+   "unlockRequirement": "",
+   "cnUrl": "8f9fd8871d6ead12662e51a1b4135c3ba02ca392deea27287e56a1d5f039b061",
+   "jpUrl": "5d66225187ef6e590cc200d75cf9164a4cd98f12ecab79d4d43182fcfb2b141b",
+   "enUrl": "4c586baf9377b0ce07d4840a12b3b50f0f68d1ee5f30c9606ab9996ce2b771ff",
+   "krUrl": "22255b595f54adb27d6da7b68704897a8092e9f428645e5bda9a0187bcb9aec6"
+  },
+  {
+   "id": 18,
+   "title": "队伍编成•卡芙卡",
+   "text": "卡芙卡，「剧本」上没写的段落，我就自由发挥喽？",
+   "unlockRequirement": "",
+   "cnUrl": "80184c9152cfebbbaadbd7f3035aff392910edb1f6ba7df09edf5a4758a8daea",
+   "jpUrl": "2599aa204db9cd33d7282161d4dcd883aa5241ab175938bec8a052412d4c2e46",
+   "enUrl": "66aaa85a7cd0c61083185254a2e51ae354c4f0cb5a6994fe592b32929a6999c2",
+   "krUrl": "fcd901a5bc1d71b082547e0415718c0b7a73a3054218711a47b9b413d65523f5"
+  },
+  {
+   "id": 19,
+   "title": "队伍编成•刃",
+   "text": "求你了，说句话吧…「剧本」上没写不许聊天。",
+   "unlockRequirement": "",
+   "cnUrl": "5d922d9c35dff038408159692dec63978a5a55536922715317723b4640b1b4f1",
+   "jpUrl": "3e7f2d3ad86e1ab9880cc0f0f3a671008d1118945efba2d8674daf70ab37951f",
+   "enUrl": "f54c1d68ae4cae82ca0a4b1cfb837b86c1b5f245b78613dd4dd9a86ff56a23c0",
+   "krUrl": "9fc7e62afda37173db33c7577b7b6effa1cf9bb1331dfb29fb558ab11703e221"
+  },
+  {
+   "id": 51,
+   "title": "战斗开始•弱点击破",
+   "text": "这么快就上钩了。",
+   "unlockRequirement": "",
+   "cnUrl": "b9dcdfd0468c00b771a418eabf7eeaafa73d09a160ce60ce390f2f1a12e83323",
+   "jpUrl": "4ef21f3ddd88b3cb4c125b3b07a631b930da4b9d56c0f432d70116effb6e0eb4",
+   "enUrl": "07ad6b91a027e9c930987e1c95f7e4930f397dc61e06bcc83397c184de360b5d",
+   "krUrl": "9ad615a715d2e42559152652f5e5cd23bd5813d39d37117c8463c4eda4ae9fa1"
+  },
+  {
+   "id": 52,
+   "title": "战斗开始•危险预警",
+   "text": "好像有点棘手。",
+   "unlockRequirement": "",
+   "cnUrl": "0e211716885a853e858f9565bea12297a6d0d66f6fbb5a9c0815923c2a135b3a",
+   "jpUrl": "4b31f6856d1df0eaa8d52314ae1c5831b463fdf7a228ee6fb6bbc6ba1d3ab32b",
+   "enUrl": "f4c1f552a681572ebf8e92f04c03c47c6bedbcc5b7e31769255f70ad7bc90b00",
+   "krUrl": "604268880f5749b5f5a96c0e37b777dee85b70d2d73caaf0ccbd16ed8f1aa525"
+  },
+  {
+   "id": 53,
+   "title": "回合开始•一",
+   "text": "这次能让我玩得开心点么？",
+   "unlockRequirement": "",
+   "cnUrl": "8911d7b16e0901b432d6e269619193b746074a28875642e04c7d57c909bf334a",
+   "jpUrl": "f19db7761c31ebe34bf86297e0db3a193b88e7fdcd9fcd9d483a11ebc802c8f9",
+   "enUrl": "79b8b8d6ca888d3dbf2a0d3fe6c50c899c771ce3ade12566a12fc98bf53afb2c",
+   "krUrl": "4a886e7e824565eab3dc201c5329f59a2536180a0add18452a56cc379e651827"
+  },
+  {
+   "id": 54,
+   "title": "回合开始•二",
+   "text": "哟，敌人刷新了呀。",
+   "unlockRequirement": "",
+   "cnUrl": "94f695fc6f83d1c7bfb2053223886fa8efa628289d598a132395ad3da0b9ddca",
+   "jpUrl": "774179fed1579dfa60b7a8dc002b611daf95b3ec00705ad7e5be85a4235be1ae",
+   "enUrl": "df265d5421b1ecdf4895eb294d40783d53b55c496221be34e739162d1ee869ed",
+   "krUrl": "2f52e5b7ce42e616127aaca071c2981ac6ea5789accfb2b88c4e298c8d43c1d1"
+  },
+  {
+   "id": 55,
+   "title": "回合待机",
+   "text": "…忘了还有副本要刷，快点搞定吧。",
+   "unlockRequirement": "",
+   "cnUrl": "c006c6aa9e9d1f9ebae678d9711135e95aaca07248bfc76dd61f29922d9c3b14",
+   "jpUrl": "e4a1826e8cab908f2546b0cf4a150ca9758e35c39879987eaf0ccad412e96044",
+   "enUrl": "5879dbbb034191f39ef5d6999089326d95f224912e5b14062fdb7de4931649a3",
+   "krUrl": "732387fa34a82f006ad92f223e007e31bb58ea77163146f79d87aaace8fdef9e"
+  },
+  {
+   "id": 56,
+   "title": "战技",
+   "text": "来点刺激的。",
+   "unlockRequirement": "",
+   "cnUrl": "ed3773c570c8292dedf042461d2ba4f6ada96a299cf174d1253775cb3d9306ea",
+   "jpUrl": "f411d6648f59e70df2e9ce1dce76d1780ac4704dab9ae690745d64ffb5c0490b",
+   "enUrl": "875d6376aa211952e48bf35fc0c689d437ccdece2358ee078230b105ec3ca98b",
+   "krUrl": "f1e2c8f0a4bd4d41ef296961acb1fe4a0a3e68fba7bf8ea6657205ccbd5950b9"
+  },
+  {
+   "id": 57,
+   "title": "轻受击",
+   "text": "嗯？",
+   "unlockRequirement": "",
+   "cnUrl": "3b1514a568b4fa145d01a253b96d292f2da6fb9fdfc1c44677ba4df9267ed2d9",
+   "jpUrl": "e53f8664fb78bd23fc6142ce53cabd360dddcb5d8ef22dac8e7f9d6517d02c0e",
+   "enUrl": "1622cfc9732f560cce46f19aa78bef971f32afa17fb0b0c0bcd862f231c9d238",
+   "krUrl": "25a993ef8761694104579ee0b3db2d24b83e7c73bcc9e4e4f1d18bb196743781"
+  },
+  {
+   "id": 58,
+   "title": "重受击",
+   "text": "不好。",
+   "unlockRequirement": "",
+   "cnUrl": "06acf485e5a965275156455136bd8053e55683fbb734cd9e0e347c8e1e9e16fc",
+   "jpUrl": "830ab21a03ad629aa7a9423d9152765c0d44c1295bdc5fa1da68bdc13ed14663",
+   "enUrl": "6237ffa6fab0cf73e844d3e11a879cd72d6f2910624b1ae322fcf6fe7563204f",
+   "krUrl": "fd5575d50a446838daea1cc8b4e64b05feb9e9be1e478e0e7f6271ac68c9381c"
+  },
+  {
+   "id": 59,
+   "title": "终结技•激活",
+   "text": "战斗体验该优化了。",
+   "unlockRequirement": "",
+   "cnUrl": "a42830d6c0f41e551efa84f797899efec29489df61d424b35dc91b8fa865c041",
+   "jpUrl": "da5f09c8e6a3d73a6841d6ad2c6e272d39e0c70d6110066f0bd1823691b0423d",
+   "enUrl": "ea75a057779681c6accc62cad3edfd500e25993ccc706d0298402ad1a5860bc8",
+   "krUrl": "c08394a0e589604457e4d8141b4f7b2bc640c8cd272e96b893433538f64c781b"
+  },
+  {
+   "id": 60,
+   "title": "终结技•施放",
+   "text": "哼，就这速度？太慢了！",
+   "unlockRequirement": "",
+   "cnUrl": "2fe4f57a38ddca03d739c77a444ea45aa32eb6f136794fbabb82b0a7180ba27c",
+   "jpUrl": "c3aac6969e1491ebc969df64f4e69d46523fe99506da62a00976985abab1c39f",
+   "enUrl": "ee7cbb4561005d44da5e461fbfc8c85897c81c7ee0dc240417db371e9060fd29",
+   "krUrl": "0237a7bd28061ed03be6e37ee1d5ebbf4512b507559d87d17ab168ad8ce4a2e8"
+  },
+  {
+   "id": 61,
+   "title": "无法战斗",
+   "text": "我…",
+   "unlockRequirement": "",
+   "cnUrl": "1b0181c18c3f6f4808c821d7151f46deaea178718a298ea771a766bbed3cd92d",
+   "jpUrl": "45a06fcf81538bea22c6e6a0f5df81119ff9363f881c647be30e3ad355e300ef",
+   "enUrl": "10a484850deee65405faabdc9d4258b6d1174c2bd7a506d1636d6729b412a7d1",
+   "krUrl": "2fc291c7e1c8efbad1b348c73583ca51c8ec4d9fe29a77e63f23d44ca6953278"
+  },
+  {
+   "id": 62,
+   "title": "重回战斗",
+   "text": "耶，重开一局。",
+   "unlockRequirement": "",
+   "cnUrl": "c8b3ccdd39654b163ea91fddf7cd3e02834db3a87c97785349677be706dd400b",
+   "jpUrl": "f3b549f34a9d2185e85e72713e161f3a65244e9cde517575e9388f463c3a9569",
+   "enUrl": "8f781be6c9c3cb72ffcebf07b777e2f6103f05593b13fe0db7ee67e0e4b5dbe2",
+   "krUrl": "822fd1fbe99fb94eafa9761fc468cf07ef14c9b3662761475810278fe35dcf96"
+  },
+  {
+   "id": 63,
+   "title": "回复生命",
+   "text": "奶得不错。",
+   "unlockRequirement": "",
+   "cnUrl": "4396ae53a1822b553d464582e39e4fab031cc7bb6b85d1deb29ebd6a58b6e9df",
+   "jpUrl": "739cbe373a78c0efce88b151c17f8b274852d5a7c41a8b6647bf3fc74e34fffa",
+   "enUrl": "eedf1a887fef0d69f1c54f2816a28687b45def89b0873afd8010bfdeba984728",
+   "krUrl": "2a393d23728b54f31384bf059dd4a1b8fc23b289423ab6c70bf40167c29e8a76"
+  },
+  {
+   "id": 64,
+   "title": "秘技",
+   "text": "百分百弱点击破。",
+   "unlockRequirement": "",
+   "cnUrl": "31537431e2432116dd379a0454843a39e5e712bc653ea2a91a0fb2c3ae071aed",
+   "jpUrl": "37d9abcc05713057d50f96029d95b6b95e7798200b00d3413c2e869f95b3dcd4",
+   "enUrl": "3d409729dd47ccbd2383e7d48497210902183d0ba522e8258844ee0770679a5f",
+   "krUrl": "204eade60ac183fc09e835275fbfa38525a22f070f69d89a65f632dedcd8084e"
+  },
+  {
+   "id": 65,
+   "title": "战斗胜利",
+   "text": "好，等加强了再来打一次。",
+   "unlockRequirement": "",
+   "cnUrl": "2f6ec72df235fca20dc6a07de61a8a0feb42c2e9b880501c6c0d674a4e0be6c7",
+   "jpUrl": "1a17323fed56c38695b9cf271e0b1bcefabd7cdb888d0fbfaec00ad0679f57e1",
+   "enUrl": "ce33ba9850290113fb12c332691de9a7c34f17707243020a68b21bfbb0e0275c",
+   "krUrl": "1ef461396aa7b9a00d4ec32f5dfdfbeca696069eaf68c558dd79fd7d5fb21781"
+  },
+  {
+   "id": 66,
+   "title": "开启战利品•一",
+   "text": "小气，也不多给点。",
+   "unlockRequirement": "",
+   "cnUrl": "7c1385a8053b0d3460e18f2d086672d03ff8fd333e8a239015ca43b7a1a2eb1b",
+   "jpUrl": "072b99e5eafa6bf60914e06b097d81590268a2cda92f8c313c76a569117fd0d6",
+   "enUrl": "e6afc0550d29931605a9bd9a7f335df16f1f5e29bf34127de4906de427c1708e",
+   "krUrl": "8a8cf6622c1f8b326d0c3ebf34f0092c532bf93c6f108a971725c64b8835a010"
+  },
+  {
+   "id": 70,
+   "title": "开启战利品•二",
+   "text": "哇，真是没想到呢！",
+   "unlockRequirement": "",
+   "cnUrl": "8913b6e4f47c9e249d00b14d9ae2cdbd4a722c0de7b8b2d69955f68a18d51232",
+   "jpUrl": "70ca68e8e26e781ccf454fb73ef119a470852b87485a35433e947ce696690269",
+   "enUrl": "2c8f1b9a0894d4b6561b2ce9a3e96ab089b1b9503c902d655abc23b8d0d02478",
+   "krUrl": "11ce1b2a829ac5e1d594bc4f134ad8f07dd31978c6c21d330549b29e46892ae0"
+  },
+  {
+   "id": 71,
+   "title": "开启贵重战利品",
+   "text": "这才像样。",
+   "unlockRequirement": "",
+   "cnUrl": "e73694d6ec10e02a2131f71cc945fab2fa77cb6e048509c90a4653cbf3f2823c",
+   "jpUrl": "e975cb217d7e575d0f52d1ec7897f99e48ab675edaf1138cf732bae53ea4286c",
+   "enUrl": "59abf7f507231f1fb30402b5e8ff210ea3ad062d2ad9ed1f221de3471c05cfd8",
+   "krUrl": "a701cb356d916b40fd20860a7f4fdd1e01cf957e82c5298a715b59a71530c2cd"
+  },
+  {
+   "id": 67,
+   "title": "解谜成功•一",
+   "text": "什么时候有新玩法？",
+   "unlockRequirement": "",
+   "cnUrl": "63a37f176862db8d55799a54f368da705efadfe2ee0cc92680df4f401be8971d",
+   "jpUrl": "dbe74d7d44d9c18b6817fddb151a123d5bf2cceb68693fea93637b98d81ecc02",
+   "enUrl": "074f42f0b25d07fe7abce68c84fa67517dcad3610aaa0aeab2bfef5f8d106ead",
+   "krUrl": "6c4d8b636a8f5b68da9970f9bd82613656b70fc029b6c267ed9b0eebf1536c3a"
+  },
+  {
+   "id": 72,
+   "title": "解谜成功•二",
+   "text": "嗯，手速还行。",
+   "unlockRequirement": "",
+   "cnUrl": "252d66768470b0cd9ae8332bd3c218713985c9a8f3fe242fb92a9eee58b5b7db",
+   "jpUrl": "2e084f7b8ebe4fd3a3b0645a2eaee42c850dcf8a03038c2bd7433f074aa6e364",
+   "enUrl": "3a8f9e9fe9499fa5dfb334593de2c911f5984ab23f05d29f5aa8f00b8587d642",
+   "krUrl": "fe954bb500e27406d8b19c8b9d12d1157337b937c054683c8f3953cfa1c936d6"
+  },
+  {
+   "id": 68,
+   "title": "发现敌方目标",
+   "text": "准备好就开始吧。",
+   "unlockRequirement": "",
+   "cnUrl": "345242deeec786ebacc7b4af118be490976298e4e8ce0ba4e34d1f37880b7da7",
+   "jpUrl": "8310776a5bc9a765f21101db8c0fe96358a89ba03353b4673e097e232d7c7e0b",
+   "enUrl": "1b82b08e5fe173065314e0a61fe425e7118c5cc48981f2ef473ffe11cfbe0008",
+   "krUrl": "e600f7478d737403f19cadb278db58bfadbc9cd21bc7240cb0f694f623b1634c"
+  },
+  {
+   "id": 69,
+   "title": "返回城镇",
+   "text": "该下线了…啊不对，搞错了。",
+   "unlockRequirement": "",
+   "cnUrl": "e3c361e6aeaefb4194c43f2fdcdd2d01a0a4331f95d26bbc2525e82600e493e8",
+   "jpUrl": "de1406cc20ac32a62d61abcf4f4e1fb82fe5a81d9dcd726ebf64eb4c5a20e6f1",
+   "enUrl": "4ba89db4eedacdba64261603176f52b69c3784fc6d3f0d9978daf1407fc6e1dd",
+   "krUrl": "a65ac17680feb74c4fcb26eb05f8641a907ae5c719ef4c86fbfd987c499d587d"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "角色详情",
+   "text": "将宇宙视为游戏的超级骇客。 <br />无论怎样棘手的防御系统，银狼都能轻松破解。她与「天才俱乐部」螺丝咕姆的数据攻防战，现已成为骇客界的传说。 <br />宇宙中还有多少亟待攻破的关卡？银狼对此十分期待。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "角色故事·一",
+   "text": "她玩着摇杆，日复一日。 <br />只有一个员工的快餐店，用地下室改装的街机厅，几台陈旧的游戏机，这就是她的童年。 <br /> <br />她没有合法的名字，没有身份编号，只有女主人给她取的昵称。 <br />她也没有朋友，但她并不孤单。 <br />她喜欢《波恩》：两条横线，一个光点，最简单的击球游戏，她能玩上一整天。 <br />她喜欢《战轮<nobr>32</nobr>》：点阵绘成的星空中，八个迥异的色块，规则只有一条——成为第一，不论方法。 <br />她喜欢《几何战争》，喜欢《奥德修斯》，喜欢《星际猎豹》：这些游戏的得分记录上，满是顾客们留下的天文数字。 <br /> <br />她玩着摇杆，日复一日。 <br />直到有一天，所有的记录上只剩下一个人的名字。 <br /> <br />于是她放下摇杆，回头望向空空荡荡的地下室。 <br />在这里歇息的人很多，但留下来的却很少。 <br />从这里离开的人很多，但再回来的却很少。 <br />她眨眨眼，关掉了屏幕。 <br /> <br />那晚，快餐店唯一的员工和女主人告别，成为了下一个离开的人。 <br />名为「地下室」的游戏，在这一天结束了。",
+   "unlockRequirement": "角色等级<nobr>20</nobr>解锁"
+  },
+  {
+   "title": "角色故事·二",
+   "text": "她一路向西，穿过大荒野，来到废品山。<br />她想给自己找点活干，却因独来独往而四处碰壁。<br />在朋克洛德，人们从来都是搭伙做事，独行的人，大多混不下去。<br /><br />没有办法，她只能给自己造些虚拟的同伴。<br />第一个人叫「朋友」，理所当然，它就该叫这名字。<br />第二个人叫「魔王」，源自她在街头看见的海报，在她的想象中，它是一位失语的军人。<br />她忽然觉得这个团队有些和睦，缺乏一点真实，便给第三个人取名「打工仔」，给第四个人取名「奴隶」。<br />最后一个人叫「幼儿园同学」——没什么原因，她实在是创意枯竭了。犹豫再三后，她干脆从名单上划掉了这个人。<br />她把这些「同伴」存储在一把智能武器里，这样她就能在中间人面前，煞有介事地介绍自己庞大的团队。<br /><br />她得到了第一份工作，如愿以偿——它的风险同报酬一样难以想象。<br />或许她的包装太过真实，令人信以为真；又或许他们只是想看看这位新人的表演，无论是死是活。<br /><br />在朋克洛德，人们从来都是搭伙做事，独行的人，大多混不下去。<br />所以混出头的那些，最后都成了传奇。<br /><br />二十四个系统时后，她从炉渣帮的据点里走了出来——独自一人，走的正门。<br />中间人沉默半晌，看了看她，又抬头看了看天空，最后转过身，把一箱金块扔在地上。<br />名为「废品山」的游戏，在这一天结束了。",
+   "unlockRequirement": "角色等级<nobr>40</nobr>解锁"
+  },
+  {
+   "title": "角色故事·三",
+   "text": "她站在虹霓都市最高的大厦顶端，从这里可以望见她出生的地方。 <br />只有一个员工的快餐店，用地下室改装的街机厅，几台陈旧的游戏机，她记得，这就是她的童年。 <br /> <br />她记得自己喜欢《波恩》：两条横线，一个光点，最简单的击球游戏，她能玩上一整天。 <br />恰如此时此刻，无人机群的红光遍布夜空，连缀成线。它们一片一片向她袭来，又一片一片轰然坠地。 <br /> <br />她记得自己喜欢《战轮<nobr>32</nobr>》：点阵绘成的星空中，八个迥异的色块，规则只有一条——成为第一，不论方法。 <br />恰如此时此刻，各异的色彩将网络空间一分为八，来自各个组织的人们在广场上攒动，为了同一个目标——抓住「银狼」，不计代价。 <br /> <br />她记得自己喜欢《几何战争》，喜欢《奥德修斯》，喜欢《星际猎豹》：那些游戏的得分记录上，满是不可追及的天文数字。 <br />恰如此时——哦不，只有这个不太一样…… <br />不可追及。哈，什么是「不可追及」？ <br /> <br />她站在虹霓都市最高的大厦顶端，从这里可以望见她出生的地方。 <br />她站得太高，以致身边容不下第二个人。 <br />但她还要抬起头，往更高的地方看去，她看见星空就在那里，近在咫尺，又遥不可及。 <br /> <br />「好无聊啊。」 <br />名为「虹霓都市」的游戏，在这一天结束了。",
+   "unlockRequirement": "角色等级<nobr>60</nobr>解锁"
+  },
+  {
+   "title": "角色故事·四",
+   "text": "她站在椅子上，擦着街机屏幕，打着圈，一遍又一遍，像是要擦掉每一粒灰尘。 <br />她回到了那家快餐店，那间地下室。她打开门，一切一如既往，女主人为她保留了所有的布置。 <br /> <br />粉色的灯光洒落在屏幕上，像是城市里的霓虹，让她想起那一夜看见的星空。 <br />她不是第一个登上那座大厦顶端的人，也不是第一个眺望那片星空的人。 <br />她知道「零号」的故事，网络战争年代最伟大的骇客、最可怕的玩家，他引起了第一次全球网络瘫痪，只为将星际和平公司的押送船叫来自家门口。 <br />她又想起「先哲」，以太编辑技术的创造者，以死者为自己命名的怪人。为了离开星球，他甘愿抛弃肉身，攻入黑域，成为一个在星际互联网络中永远徘徊的幽灵。 <br />她想起「石剑」，废品山的骄傲，他反抗绿洲区的故事在大荒野家喻户晓，有人说他最后追随巡海游侠而去，在银河中继续挥洒叛逆的火花。 <br />还有他的挚爱「孪蛇」，绿洲区的红人。她的去向众说纷纭，人们只知出身没能阻止她和石剑走到一起，银河却让他们最终分道扬镳。 <br /> <br />在朋克洛德，所有被称作「传奇」的骇客都走向了同一个终点。 <br />而身为如今的传奇，她知道自己也已来到那扇门前。 <br /> <br />哒、哒…她听见头顶传来脚步声，逐渐靠近、靠近…… <br />一个人、两个人、三个人、四个人。 <br />一个男人、一个女人、一个铁皮人，还有…… <br />她坐下来，转过身，看向空空荡荡的地下室，看向门边的那个人—— <br /> <br />「我加入。」 <br />名为「朋克洛德」的游戏，在这一天结束了。",
+   "unlockRequirement": "角色等级<nobr>80</nobr>解锁"
+  }
+ ],
+ "archive": {
+  "cvCn": "Hanser",
+  "cvJp": "阿澄佳奈",
+  "cvKr": "장미",
+  "cvEn": "Melissa Fahn",
+  "camp": "星核猎手"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "银狼",
+ "rarity": 5,
+ "descHash": "「星核猎手」的成员，骇客高手。 将宇宙视作大型沉浸式模拟游戏，玩乐其中。 掌握了能够修改现实数据的「以太编辑」。",
+ "artPath": "c865d7f877607b9925b942d2dad683349189c28efa9a0f91d6ab94e87cce9188",
+ "miniIconPath": "fe293ff4f1852fcf071d5c99577f9acf33d81291cfc04a49b84f35565d9ff18d",
+ "damageType": {
+  "id": 32,
+  "iconPath": "ddae115334fb14959c5e24b70a5b165c431afc32f9fcf84d4b50e5e0e15bcc1f",
+  "color": "#1C29BA",
+  "name": "量子",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "96c3b8dd457b98955d440531986a23d509f705c13d7aa794d1e97bcfd03d5701",
+  "altIconPath": "b55d340138ed77756cd939d0d9ee2103a5398f999202c1ed19d092ac87333155",
+  "color": "#FFFFFF",
+  "name": "虚无",
+  "rarity": 0
+ },
+ "pageId": "silverwolf"
+}

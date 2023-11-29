@@ -1,0 +1,2873 @@
+{
+ "spRequirement": 140,
+ "iconPath": "83c240648aaaea3962c2617d6fa0b0d11c7666484cfd54d741f52a76b17f9502",
+ "bgPath": "10019ac670509e7249482177fddc4913458d0905da35fbb7b24d748b9747a595",
+ "figPath": "9fba5ffc6f98a5945fc313a346149e3fbb30f4cee07aa62958f4bcb07fe9be6e",
+ "fgPath": "88da67c16aee25124851a5db1a9b94a3b30db57b4b6b803a1711d414b679a5b7",
+ "splashIconPath": "cc64d2fca5ca92ac5bbc6ae1f2d5426303bd271cace702195598ce23d22cda88",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 7,
+  "iconPath": "232bc80b207d7be892c4e0c41ea43b44080e51373e3c4f6f0f2f9e0eb4e03194",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Braises immortelles"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "d75aec8e75227549d536ef57980f65a2b081b9665d06cd1a02a5bafa6c688f63",
+   "name": "Regret de l'ochéma infini",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "Qu'importe le nombre de corps qu'il s'approprie, son insatiabilité ne faiblit pas. À l'instar de ceux vouant leur existence à la recherche des secrets de l'immortalité, il est en quête d'un hôte impérissable, d'une entité qui lui permettra d'éradiquer sa peur de la destruction. Il sait pourtant que cette quête est vaine, car irréalisable.<br /><br />« J'ai vu un nombre incalculable de mondes périr par le feu de la Souillure ; moi qui étais l'une de ses flammes. J'ai dansé au rythme de ses doigts, sachant que si le combustible se consumait, le feu s'éteindrait également... »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "Écho de la guerre : Royaume de l'abysse écailleux"
+   ]
+  },
+  "267806": {
+   "id": 267806,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "601351497d621b30e711bdbfa2a58b50ccafd6d77022ac7c3e06ad11f984a7be",
+   "name": "Restes de l'Entité transcendantale",
+   "desc": "Vestiges de l'Entité transcendantale. Permet l'élévation des personnages de type vent.",
+   "lore": "À l'origine, l'Entité transcendantale voulait apporter au monde un héritage de bonté, mais au fur et à mesure que le don de l'Abondance s'est estompé, la compréhension et la libération sont arrivées en même temps : il n'était rien de plus qu'un mortel fait de chair et de sang. Sa capacité à traverser les cieux n'était qu'une illusion, et tout ce qui restait de son existence n'était que poussière et débris.<br /><br />« Je te maudis, Seigneur archer de la Destinée... »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/267806",
+   "comeFrom": [
+    "Ombre stagnante (Commission d'alchimie)",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Entraînement quotidien",
+    "Braises immortelles"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Récompense d'affectation"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "71d58f084522c87e93327e3e7fc1db8fb4abb65e9989b163d4a348c9a3761329",
+   "name": "Jeune pousse immortelle",
+   "desc": "Jeune pousse ayant bourgeonné à partir d'une ancienne construction divine. Matériau commun utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Il y a de très nombreuses années, le désir orgueilleux et démesuré d'un souverain pour l'immortalité a mené la flotte de Xianzhou à lever les voiles en direction de la mer cosmique pour y rechercher des remèdes divins.<br /><br />« Nous voulons vivre jusqu'à des temps sans fin et maintenir notre empire pour l'éternité. Malheureusement, la vie humaine prend toujours fin, et les capacités humaines ont leurs limites. Par conséquent, nous avons envoyé neuf Navium Astriger pour naviguer au-delà du ciel, à la recherche des recettes divines de l'immortalité. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "Abominations de l'Abondance",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "c3cb2e5eb5390586c537d03d1de632b1aa59c49a3cc32f24d68672d2f97fb1e5",
+   "name": "Aérofleur immortelle",
+   "desc": "Nouvelle fleur ayant éclos à partir d'une ancienne construction divine. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Après d'innombrables tentatives, la flotte à la recherche du remède de l'immortalité était capable de contempler le visage de l'être divin. La divinité envoya ses bénédictions sous une forme matérielle, et l'Arbre d'ambroisie étendit ses feuilles.<br /><br />« De nouveaux bourgeons descendirent sur la lune, où des fleurs divines se mirent à pousser entre les nuages. Le temps de la floraison, le vieux bois retrouva sa jeunesse. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "Abominations de l'Abondance au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635671": {
+   "id": 635671,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1b0a1a8ab4a806daac48e2e5de6c69a9a1aad87f950c5a4c92c9513dd9d6b9",
+   "name": "Graine d'abondance",
+   "desc": "Graine de bénédiction semée par l'Aiôn de l'Abondance. Permet d'améliorer légèrement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abondance</span>.",
+   "lore": "Ceux qui la touchent voient lentement disparaître leurs blessures et leurs maux.<br />Ceux qui, frappés de désespoir, appellent de leurs prières les bienfaits de la vie seront toujours entendus.<br /><br />« Tu recevras ce que tu demandes. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635671",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Braises immortelles"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5708b196a8af89740ced588d98dc414c791d209879957fb0bc8644cc2dc84adb",
+   "name": "Branche-lumière immortelle",
+   "desc": "Branche à feuilles caduques provenant d'une ancienne construction divine. Matériau avancé utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Après les Trois Souffrances, Xianzhou a été en proie à la dévastation. Les Homo celestinae se sont retrouvés au rang de démons, et les catastrophes se sont enchaînées sans discontinuer.<br /><br />« En vertu du décret de la Commission des dix seigneurs, quiconque sur le point d'être frappé par le mara sera saisi par les juges infernaux et envoyé à la Prison des enchaînés. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "Abominations de l'Abondance au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836257": {
+   "id": 836257,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e08699257c4a96a135b4467fd8eba3917d5734b2c943ac631d2a39ae3c4ccb37",
+   "name": "Fleur de l'éternité",
+   "desc": "Une fleur magnifique issue de la Pousse de la vie. Permet d'améliorer considérablement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abondance</span>.",
+   "lore": "Les étamines contiennent le pouvoir concentré de la Voie de l'Abondance, assurant la vitalité éternelle de la fleur. Ni le feu, ni la glace, ni aucune agression extérieure ne peuvent entraver la croissance de cette magnifique forme de vie.<br />Avec le temps, ses feuilles se nourriront de lumière d'étoile. Ses racines s'enfonceront dans la chair de chaque être de ce monde, toutes connectées, sans jamais périr. Ses fruits rempliront leur promesse d'immortalité.<br /><br />« Il existe des vaisseaux géants qui éclipsent les montagnes et dérivent dans le vide. L'arbre éternel dont les fruits sont synonymes d'immortalité y pousse. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836257",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920198": {
+   "id": 920198,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "ed9df14a2fe247f4667c3573aa6eb1f367c5435d4c699eadef89c51e4d42d084",
+   "name": "Pousse de la vie",
+   "desc": "Une jeune pousse provenant de la Graine d'abondance. Permet d'améliorer modérément les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abondance</span>.",
+   "lore": "Irradiant de chaleur, la vie et la croissance s'épanouissent autour de l'endroit où elle enterre ses racines. Les terres stériles se transforment en champs luxuriants, les plantes fanées rajeunissent et fleurissent, et les sources jaillissent du sol pour humidifier la terre.<br />S'approcher trop près provoque une contraction musculaire et osseuse, qui s'accompagne d'une démangeaison insupportable.<br /><br />« La vie est inépuisable là où l'âme abonde .»",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920198",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Braises immortelles"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 81.84,
+   "attackAdd": 4.092,
+   "hpBase": 184.8,
+   "hpAdd": 9.24,
+   "defenseBase": 69.3,
+   "defenseAdd": 3.465,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549504,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 114.576,
+   "attackAdd": 4.092,
+   "hpBase": 258.72,
+   "hpAdd": 9.24,
+   "defenseBase": 97.02,
+   "defenseAdd": 3.465,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549504,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 147.312,
+   "attackAdd": 4.092,
+   "hpBase": 332.64,
+   "hpAdd": 9.24,
+   "defenseBase": 124.74,
+   "defenseAdd": 3.465,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633445,
+     "count": 6
+    },
+    {
+     "id": 267806,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 180.048,
+   "attackAdd": 4.092,
+   "hpBase": 406.56,
+   "hpAdd": 9.24,
+   "defenseBase": 152.46,
+   "defenseAdd": 3.465,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633445,
+     "count": 9
+    },
+    {
+     "id": 267806,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 212.784,
+   "attackAdd": 4.092,
+   "hpBase": 480.48,
+   "hpAdd": 9.24,
+   "defenseBase": 180.18,
+   "defenseAdd": 3.465,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717386,
+     "count": 6
+    },
+    {
+     "id": 267806,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 245.52,
+   "attackAdd": 4.092,
+   "hpBase": 554.4,
+   "hpAdd": 9.24,
+   "defenseBase": 207.9,
+   "defenseAdd": 3.465,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717386,
+     "count": 9
+    },
+    {
+     "id": 267806,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 278.256,
+   "attackAdd": 4.092,
+   "hpBase": 628.32,
+   "hpAdd": 9.24,
+   "defenseBase": 235.62,
+   "defenseAdd": 3.465,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "e882efb3258dd174be23855de7f2fdbef93cd8d95445e89827b382ba739f8590",
+   "artPath": "00f304d39f355367706448db9d536eb7d05b415d6ab9ad5eca3f537ef848a56b",
+   "name": "Abri maudit possédé",
+   "descHash": "Augmente de <nobr>#2[i]</nobr> tour la durée de l'effet Intervention divine du talent. Lorsque Huohuo bénéficie d'Intervention divine, la VIT de tous les alliés augmente de <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.12,
+    1
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "8b8d1de86d526a2a998851f08dca2c54c6c149df027a87262b17dc6df32c87ab",
+   "artPath": "c9155db948dbb10d3fd7cef63a7ecf270aaeb9dd839c6207585535762aecafa5",
+   "name": "Queue de l'esprit scellée",
+   "descHash": "Si Huohuo bénéficie d'Intervention divine alors qu'un allié subit un coup fatal, l'allié ne tombe par à terre, et restaure immédiatement des PV à hauteur de <nobr>#1[i]%</nobr> de ses PV max, ce qui réduit la durée d'Intervention divine de 1 tour. Cet effet ne peut être déclenché que <nobr>#2[i]</nobr> fois par combat.",
+   "params": [
+    0.5,
+    2
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "d571692c2c9229bf212f175c29412dc07a22f5e8f30b1a8e425481a9efe17f8a",
+   "artPath": "6d512107365788b72c2fead4f9fc61bc1a957a2d8310266777db4969e5821327",
+   "name": "Malédiction à laquelle les papillons ont cédé",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "03102f90f06597d78fdbf1bb95a2e95ae8e0080a4dc1f4bf135b142e465fb27d",
+   "artPath": "a389c4103a1594a9d58b88f68f2ea3caf54a0d6525d4296dbee27f3aa105748b",
+   "name": "Cœurs qui s'emballent mais pourtant liés",
+   "descHash": "Les soins prodigués à une cible alliée par la compétence ou le talent de Huohuo gagnent en efficacité plus les PV de la cible sont bas. L'augmentation maximale de l'efficacité des soins prodigués par Huohuo est de <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.8
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "614f48868252e027d68eae2daeca9e55ed41c0b0abfbb0d96bbab7aee7717241",
+   "artPath": "bbb899f8ac28ecac1c1aba38184c349cb9cb8c563cde262899cd8c1910845ef1",
+   "name": "Mandatée par décret, maux évincés",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "2fd3ae089534f264beb4ccb192ff1ca75e55191b5dd85a43f47417553bc92954",
+   "artPath": "cc157be8e253ea17937932b8efc0853451d93d77828102c2a1b09cd1526f2a7b",
+   "name": "Destins en osmose à jamais",
+   "descHash": "Lorsque Huohuo soigne une cible alliée, les DGT de la cible alliée augmentent de <nobr>#1[i]%</nobr> pendant <nobr>#2[i]</nobr> tours.",
+   "params": [
+    0.5,
+    2
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   256586
+  ],
+  [
+   340527
+  ],
+  [
+   457172
+  ],
+  [
+   541113
+  ],
+  [
+   825640
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT de vent équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> des PV max de Huohuo à une cible ennemie.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 256586,
+   "name": "Bannière de tempête",
+   "iconPath": "d3bd9602a90b1667c25ccb98ca80c350aa453e1bba3f53a87876b8a2fbf9ac47",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.25
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635671,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.35
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920198,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.4
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920198,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.45
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836257,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836257,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.55
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Restauration",
+   "descHash": "Dissipe <nobr>#5[i]</nobr> <u>malus</u> d'une cible alliée unique et lui rend immédiatement un montant de PV équivalent à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> des PV max de Huohuo + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>. Restaure également aux alliés adjacents à la cible un montant de PV équivalent à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> des PV max de Huohuo + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span>.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 340527,
+   "name": "Talisman de protection",
+   "iconPath": "614f48868252e027d68eae2daeca9e55ed41c0b0abfbb0d96bbab7aee7717241",
+   "typeDescHash": "Compétence",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.14,
+      140,
+      0.112,
+      112,
+      1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.14875,
+      224,
+      0.119,
+      179.2,
+      1
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1575,
+      287,
+      0.126,
+      229.6,
+      1
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635671,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.16625,
+      350,
+      0.133,
+      280,
+      1
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920198,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.175,
+      392,
+      0.14,
+      313.6,
+      1
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920198,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.182,
+      434,
+      0.1456,
+      347.2,
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920198,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.189,
+      465.5,
+      0.1512,
+      372.4,
+      1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836257,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.196,
+      497,
+      0.1568,
+      397.6,
+      1
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836257,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.203,
+      528.5,
+      0.1624,
+      422.8,
+      1
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836257,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.21,
+      560,
+      0.168,
+      448,
+      1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836257,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.217,
+      591.5,
+      0.1736,
+      473.2,
+      1
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.224,
+      623,
+      0.1792,
+      498.4,
+      1
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.231,
+      654.5,
+      0.1848,
+      523.6,
+      1
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.238,
+      686,
+      0.1904,
+      548.8,
+      1
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.245,
+      717.5,
+      0.196,
+      574,
+      1
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Soutien",
+   "descHash": "Régénère des points d'énergie de tous les alliés, hormis Huohuo, à hauteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> de leur énergie max respective. Augmente aussi leur ATQ de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> pendant <nobr>#3[i]</nobr> tours.",
+   "ultimateCost": 140,
+   "break": "0",
+   "energy": "5",
+   "id": 457172,
+   "name": "Domination spirituelle de Plumeau",
+   "iconPath": "5c03bd81e4db7c557b33d8d634e790c74d134bbaa62f2d1c7bec085dbeadfe3d",
+   "typeDescHash": "Ultime",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.15,
+      0.24,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.155,
+      0.256,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.16,
+      0.272,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635671,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.165,
+      0.288,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920198,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.17,
+      0.304,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920198,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.175,
+      0.32,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920198,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.18125,
+      0.34,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836257,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1875,
+      0.36,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836257,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.19375,
+      0.38,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836257,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.2,
+      0.4,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836257,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.205,
+      0.416,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.21,
+      0.432,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.215,
+      0.448,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.22,
+      0.464,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.225,
+      0.48,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Restauration",
+   "descHash": "Huohuo obtient Intervention divine pendant <nobr>#1[i]</nobr> tours après avoir utilisé sa compétence. Ce décompte est réduit de 1 au début de chaque tour de Huohuo. Si Huohuo bénéficie d'Intervention divine au début du tour d'un allié ou lorsqu'un allié utilise un ultime, restaure les PV de cet allié à hauteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> des PV max de Huohuo + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]</nobr></span>. Aussi, soigne une fois tous les alliés dont les PV sont inférieurs ou égaux à <nobr>#6[i]%</nobr> de leurs PV max.<br />Quand Intervention divine se déclenche pour soigner un allié, dissipe <nobr>#2[i]</nobr> <u>malus</u> dont souffre cet allié. Cet effet peut être déclenché <nobr>#7[i]</nobr> fois. Utiliser la compétence réinitialise le décompte.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 541113,
+   "name": "Connexion métaphysique éthérée",
+   "iconPath": "1ae20e232e9880f3b53d6a72bf7d6f6df88cf8f098a7146dc13b104a5340a9a9",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2,
+      1,
+      0.03,
+      0,
+      30,
+      0.5,
+      6
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      1,
+      0.031875,
+      0,
+      48,
+      0.5,
+      6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      1,
+      0.03375,
+      0,
+      61.5,
+      0.5,
+      6
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635671,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      1,
+      0.035625,
+      0,
+      75,
+      0.5,
+      6
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920198,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      1,
+      0.0375,
+      0,
+      84,
+      0.5,
+      6
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920198,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      1,
+      0.039,
+      0,
+      93,
+      0.5,
+      6
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920198,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      1,
+      0.0405,
+      0,
+      99.75,
+      0.5,
+      6
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836257,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      1,
+      0.042,
+      0,
+      106.5,
+      0.5,
+      6
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836257,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      1,
+      0.0435,
+      0,
+      113.25,
+      0.5,
+      6
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836257,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      1,
+      0.044999998,
+      0,
+      120,
+      0.5,
+      6
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836257,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      1,
+      0.0465,
+      0,
+      126.75,
+      0.5,
+      6
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      1,
+      0.048,
+      0,
+      133.5,
+      0.5,
+      6
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      1,
+      0.0495,
+      0,
+      140.25,
+      0.5,
+      6
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      1,
+      0.051,
+      0,
+      147,
+      0.5,
+      6
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      1,
+      0.052500002,
+      0,
+      153.75,
+      0.5,
+      6
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Réduit la robustesse de l'ennemi au type correspondant en entrant en combat après l'avoir attaqué.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 741699,
+   "name": "Attaque",
+   "iconPath": "d3bd9602a90b1667c25ccb98ca80c350aa453e1bba3f53a87876b8a2fbf9ac47",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Incapacitation",
+   "descHash": "Huohuo terrorise les ennemis à proximité et leur inflige l'état Frappé par l'horreur. Les ennemis frappés par l'horreur fuient Huohuo pendant <nobr>#4[i]</nobr> secondes. Il y a <nobr>#1[i]%</nobr> de <u>chances de base</u> de réduire l'ATQ de chacun d'entre eux de <nobr>#2[i]%</nobr> pendant <nobr>#3[i]</nobr> tours après être entré en combat avec des ennemis frappés par l'horreur.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 825640,
+   "name": "Répression du mal",
+   "iconPath": "84af450dd138dcef343a1ff5399b0934d35b4fd3ac943f995acd2cd2b5e03841",
+   "typeDescHash": "Technique",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      0.25,
+      2,
+      10
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1217102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1217205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1217206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1217207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 696400,
+          "name": "Augmentation de PV",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+          "statusList": [
+           {
+            "key": "PV",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836257,
+            "count": 3
+           },
+           {
+            "id": 717386,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 696401,
+        "name": "Augmentation de la RÉS aux effets",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+        "statusList": [
+         {
+          "key": "RÉS aux effets",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836257,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 696402,
+      "name": "Augmentation de PV",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920198,
+        "count": 5
+       },
+       {
+        "id": 633445,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Les chances de résister aux malus de contrôle augmentent de <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 696246,
+    "name": "Maudite",
+    "iconPath": "2499f1ce338e175aedcb5298215c519b95953ac6624bc7be9e3ee498fd596b36",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.35
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920198,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1217103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1217208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 696415,
+      "name": "Augmentation de VIT",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079",
+      "statusList": [
+       {
+        "key": "VIT",
+        "value": 3,
+        "int": true
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836257,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1217209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 696414,
+      "name": "Augmentation de la RÉS aux effets",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+      "statusList": [
+       {
+        "key": "RÉS aux effets",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836257,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Lorsque le talent de Huohuo se déclenche pour soigner des alliés, elle régénère aussi <nobr>#1[i]</nobr> point d'énergie.",
+    "ultimateCost": 0,
+    "id": 696247,
+    "name": "Stressée",
+    "iconPath": "86dadcfba8b47fafe8c7428df28203d35ccdce8c3d27befed8137c86d6e925d4",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836257,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1217201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 696406,
+    "name": "Augmentation de PV",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+    "statusList": [
+     {
+      "key": "PV",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1217210,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 780348,
+    "name": "Augmentation de PV",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+    "statusList": [
+     {
+      "key": "PV",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 160000
+     },
+     {
+      "id": 836257,
+      "count": 8
+     },
+     {
+      "id": 717386,
+      "count": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": 1217101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1217202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1217203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1217204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 696403,
+          "name": "Augmentation de VIT",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079",
+          "statusList": [
+           {
+            "key": "VIT",
+            "value": 2,
+            "int": true
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920198,
+            "count": 3
+           },
+           {
+            "id": 633445,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 696404,
+        "name": "Augmentation de PV",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+        "statusList": [
+         {
+          "key": "PV",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920198,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 696405,
+      "name": "Augmentation de la RÉS aux effets",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+      "statusList": [
+       {
+        "key": "RÉS aux effets",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635671,
+        "count": 3
+       },
+       {
+        "id": 549504,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Huohuo obtient Intervention divine pendant <nobr>#1[i]</nobr> tour en début de combat.",
+    "ultimateCost": 0,
+    "id": 696245,
+    "name": "Paralysée",
+    "iconPath": "cfe6e841f8154d7c422a68e7d703b843ae8a3509bcd6377530d288647d68b193",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635671,
+        "count": 3
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corps",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "Augm. des soins prodigués",
+    "propertyIconPath": "57726150eaa27c675743fe08b88bd04575a0e76b5014dcfbc073c105aa1c7e44"
+   },
+   {
+    "relicTypeHash": "Pieds",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "VIT",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Sphère planaire",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "PV",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "Corde de liaison",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "Taux de régénération d'énergie",
+    "propertyIconPath": "75627c696d3e9763c0b4feeb4a8e2baf594ac73214c6227b3a125c032be090c8"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Première rencontre",
+   "text": "Huohuo : Bonjour, je m'appelle Huohuo. Je viens d'être nommée juge à la Commission des dix seigneurs. Hmm... Qu'est-ce que je peux dire d'autre...<br />Plumeau : Ahem... Euh, salut ? Tu n'as pas oublié de présenter l'Héliobe le plus célèbre de tous les temps ?<br />Huohuo : Ah, mais oui, Plumeau ! Lui, c'est Plumeau !",
+   "unlockRequirement": "",
+   "cnUrl": "594f567a37896700cc958167beb69220f3506d7906222ffe72d754c084ba9db7",
+   "jpUrl": "5f4c237a7d791293c5801e0258be5bb934241a5ba9c2c6b92033d902acf591da",
+   "enUrl": "e434b62d11b4e8627d906abf77dfc3bce46c588560da30f9533c56f7caf5c82a",
+   "krUrl": "5cb1204dc9ea9e38a6df6215d60905940fe5fe788ab420e3692f7c260e58aad0"
+  },
+  {
+   "id": 2,
+   "title": "Salutation",
+   "text": "Huohuo : S—Salut ! Je veux dire... Je crois que je vais partir. À—À plus...<br />Plumeau : La prochaine fois, dis simplement « Salut » pas « À plus » !",
+   "unlockRequirement": "",
+   "cnUrl": "22947c3fe2ceba6e5da508a0f187d45f30c1136e374046c6b68448331c58c9e7",
+   "jpUrl": "1e2c16afaec24f8ee6492ea659673d5ccbe3df1303f9c0480e297bba247804ab",
+   "enUrl": "6b0405e48fadb7273ab3e4a8c268540a1341161bc69046b4b3624f399aaa7ccb",
+   "krUrl": "c0f2863feabb1977623ebb7dc4283274f5b4ae5e3fccf4c99bcc4061e28ad649"
+  },
+  {
+   "id": 3,
+   "title": "Au revoir",
+   "text": "C—C'est enfin l'heure de rentrer. J'espère que personne ne me remarquera.",
+   "unlockRequirement": "",
+   "cnUrl": "cb5f41dc15ce9f6aed94e82dc741a278016613f62723fb60fb47b652a33e7b40",
+   "jpUrl": "16e1b3d3c6f815c7e6e35159ba6828f43499421082255acd9ac529c220c64588",
+   "enUrl": "2e0369ae846f83c8cffdb2cdd70e63ba5732992e33081d4dcd154c1b5f623fc5",
+   "krUrl": "88a1042f8c1a446b0abb08e810edc30905a6b0edd7b2e53bccc4f507bb7742c1"
+  },
+  {
+   "id": 4,
+   "title": "Connaître Huohuo : Travail",
+   "text": "J—J'ai essayé de refuser ce poste... C'est tellement injuste. Demander à une héliophobe de chasser les Héliobes en compagnie d'un Héliobe ? *soupir* Ils m'ont dit que c'était pour « vaincre ma peur »...",
+   "unlockRequirement": "",
+   "cnUrl": "6bd46f25cb18a183121cdc39552452b3c5cba028e93fe4c9e6d0d0be62d24b0b",
+   "jpUrl": "3a8d3d2ca8d95517024cce999b0ba2d59cd54f7377e1e32d03b091045b2bb9e0",
+   "enUrl": "08a5bee47a2656111c757767045d3869cde23a09a169cb3ae7e06b21b2961be1",
+   "krUrl": "ba0b067cae64fb5a3139afc02d206489db5d660ba9259c487affc22be0b84356"
+  },
+  {
+   "id": 5,
+   "title": "Connaître Huohuo : Queue",
+   "text": "Huohuo : J'ai perdu ma queue pendant une attaque d'Héliobes. J'ai failli perdre tout le reste aussi. J'ai eu de la chance que la Commission des dix seigneurs scelle le démon dans ma queue avant qu'il ait le temps de me dévorer...<br />Plumeau : Ce n'est pas ma faute si les Foxiens ont des queues aussi succulentes... Mais maintenant que je suis moi-même une queue, je me rends compte que toutes sortes de créatures veulent me manger au petit-déjeuner !",
+   "unlockRequirement": "",
+   "cnUrl": "0e25ad485b8322f72eaaed466999c75b2db90ac6e73b6ea6bc236d942ddf6ed7",
+   "jpUrl": "f5f29e8a7391fc9126a4077495087ca530e5416a06bd942b33e9111cd1d698a1",
+   "enUrl": "f2b0196eb4be4f504ffe6c9bf14f7d77cbd6182b5e34c00259450e4a24b99e3a",
+   "krUrl": "cf6bd6bbcffda4e273d5d98c2e151609f49c57e5aa1cfcb6f04070dcf93a9546"
+  },
+  {
+   "id": 6,
+   "title": "Bavardage : Drapeau",
+   "text": "Je peux utiliser ce drapeau pour chasser les démons... Mais c'est surtout pratique pour signaler que je me rends...",
+   "unlockRequirement": "",
+   "cnUrl": "63a63faecab68cbcb75ab1145a6f9199e5ca3c34e1bd0663fc08fbd0e18fae91",
+   "jpUrl": "756ec0fc1fa5735b888fbc8776b55f68deb2f207c5b0c61d985648dc96a6c96e",
+   "enUrl": "79c96c7a8c90ba01957569528a1f41a7fd502812fe652ba9014b148316448928",
+   "krUrl": "e4b4b44a58025232a80ccf1a044bffc94ad90eb4c1d0efc3f997b7d73df007a7"
+  },
+  {
+   "id": 7,
+   "title": "Bavardage : Poupée en papier",
+   "text": "Huohuo : Je fais des poupées en papier dès que j'en ai l'occasion. Avec tous ces amis dans les parages, je n'ai peur de rien...<br />Plumeau : Ne recommence pas avec ça ! Ces machins me donnent les chocottes. Rien que d'imaginer tomber nez-à-nez avec une de ces poupées souriantes au milieu de la nuit...",
+   "unlockRequirement": "",
+   "cnUrl": "c4dc7deb2ffc54836f6206f97af6b0b08117662296f4b117fa39630f77d51656",
+   "jpUrl": "5e62bf90124c2afc6c8a72d11db6e3a811bf72f37fc44e597a4ae416e3c33541",
+   "enUrl": "02ec620e8408d1fdf6c24acbcf682b06e981c5593f3f82dfcf156f324cce47cc",
+   "krUrl": "1129b2585f1030befe53653c7e1a01df75cbfd951c42a256a2ec27c3ffb1719e"
+  },
+  {
+   "id": 8,
+   "title": "Passe-temps",
+   "text": "Je m'entraîne à devenir plus courageuse en regardant des comédies d'horreur la nuit. Quand ça devient effrayant, je rigole comme ça pour tromper la peur... Héhéhéhéhéhé ! Mouais...",
+   "unlockRequirement": "",
+   "cnUrl": "7054739cad355ce4d9f5b70dc4ff19b7cbc5fbfae9310738693a9a86571a7146",
+   "jpUrl": "171b9538855e3ddb9682eafcde1e96cc7b29b975e10a8035a7acfb78ce4f2f02",
+   "enUrl": "039c0a0af2c82589759b300c4ed9b8a848680d29f76633de8f34cb0daf83c6e9",
+   "krUrl": "bb2282c2f05a32be2bffde50a99979566c5a1d88248d47faf1a8744baffc5448"
+  },
+  {
+   "id": 9,
+   "title": "Problèmes",
+   "text": "Huohuo : La propriétaire du Bronze miroitant a dit que j'avais le chic pour attirer le mauvais sort. J—J'ai une vague idée du pourquoi...<br />Plumeau : Apparemment, c'est moi la « vague idée ». Même si c'est vrai, je n'ai rien à voir avec ton don pour trébucher sans raison.",
+   "unlockRequirement": "",
+   "cnUrl": "e2f4c3bf8033c97a3e46f4ae28b349fea316f89dbd0333667726e489057ab253",
+   "jpUrl": "da4cc084aac4ae887d7d370995d527ec10e39b2edde0496be107f3c628f2914a",
+   "enUrl": "6fc4d64d2c3ec3818167fba0440b464e124fbe7301edb7b4a988995592bcb921",
+   "krUrl": "9de401c911e1065d097b8d6e5c17eb9deddb8e0e28faac4090d56ced0e867218"
+  },
+  {
+   "id": 10,
+   "title": "Anecdote",
+   "text": "Mon passe-temps ? Ce que j'aime faire, c'est trouver un endroit calme au Havre des astroskiffs et regarder les allers et venues des vaisseaux... Mes collègues disent que c'est une bonne manière de traiter l'insomnie... B—Bref, tu devrais essayer un jour.",
+   "unlockRequirement": "",
+   "cnUrl": "2cf8c82287c07f62f012c3b3796a33e1088a0d9873debf147fb2d08627eb4c2d",
+   "jpUrl": "e16a1311bdb8a19dcec1bb4df9e64928f0ed03a9777020b7c600136576004906",
+   "enUrl": "b9e9412760c8a7acb777969e190dab9ec18ea09ec02661b77c546b5f61818f7c",
+   "krUrl": "d08234b0b12a311bcbad04925366c7c735aaeebb89cb1385a58cb4e4bf99c341"
+  },
+  {
+   "id": 11,
+   "title": "Connaissances",
+   "text": "J'ai entendu dire que de nombreux Héliobes étaient enfermés dans le Fourneau de la création de la Commission de l'artisanat, mais qu'ils s'étaient tous échappés lorsque celui-ci s'est brisé... C'est pour cette raison que j'ai autant de travail...",
+   "unlockRequirement": "",
+   "cnUrl": "363cd9ce8a59e58f7141a312726db7ee08ee5ac0e9d358cdc3e5407a42665839",
+   "jpUrl": "b5fe709fe3411184afccefdebfd2b1999cdfc13fea749af926a61be968754e69",
+   "enUrl": "ebb092d89fe75e925244ed8de67105b53cc9501f97bb9a57bb13b274161d04ae",
+   "krUrl": "6eee5616729f4d0310f21d10b4fa142e1742e49b39065932d50b36e19f33cfc4"
+  },
+  {
+   "id": 12,
+   "title": "À propos de Guinaifen",
+   "text": "Guigui ? Elle possède en elle énormément d'énergie yang, ce qui lui permet d'éviter facilement le mauvais œil. Même ma queue ne dit rien quand elle est dans les parages. Le seul inconvénient étant que je dois hausser la voix si je veux me faire entendre quand elle est là...",
+   "unlockRequirement": "",
+   "cnUrl": "9e5d098e1056affcb3f2365b82f174c8cadbc4605eaa6a22309b18464401b9f4",
+   "jpUrl": "e77238be612429ed7e4006ad9c3fb34396cdbb402bdf94eb0e685ba5b128d2f4",
+   "enUrl": "8093e0fb71a1e328b7e58dcd19d68ef4989d5d5dac05ebf7a9a4e492ae130791",
+   "krUrl": "8a8269d1894e311c15a03c5093f4c3f464ba03d51fe72843e433dee100ad7fde"
+  },
+  {
+   "id": 13,
+   "title": "À propos de Xueyi",
+   "text": "Huohuo : La juge marionnette ? J'avais vraiment peur d'elle au début... mais quand Plumeau l'a menacée, elle n'a pas bougé d'un cil. Madame Xueyi est incroyable, j'aimerais vraiment lui ressembler un jour...<br />Plumeau : Incroyable ?! On verra si elle aura toujours ce sourire sur les lèvres quand je réduirai la Commission des dix seigneurs en cendres !",
+   "unlockRequirement": "",
+   "cnUrl": "14311d475606f904a0e219414e2f2c0f5f2a5ead745f109a8a06320702a47e19",
+   "jpUrl": "e59e2d6028981ddda3357b65f0cb9361c6d106de7fb974d474bab4864a88b65c",
+   "enUrl": "cee5acd3d743aeee846fc139e36027568fd8ee0a6bcf58719dadc6ec7923fa61",
+   "krUrl": "7e2df0418e656f1d8a68aafa308e606f57ce2f7206c6f0e121135fb1acc9855d"
+  },
+  {
+   "id": 14,
+   "title": "À propos de Hanya",
+   "text": "Pour faire la différence entre les deux sœurs, je l'ai surnommée la juge bavarde... Elle n'en sait rien, rassure-moi ?!",
+   "unlockRequirement": "",
+   "cnUrl": "826a90d0d02e88b4227e4f1ddc0a84393102b9e45d6df6426d8a520b201121d9",
+   "jpUrl": "c3886d230ddeb61ca407938e96ada569440a9779ff9731c3e09e986f4021588b",
+   "enUrl": "cbb81424f9297ceda5a7391159114fc8fc01f82855a2bc19050042bbfb938f7a",
+   "krUrl": "dadc5afec84c0ffa4e6b04a85276036970f8b2ea83bc5091de46ec84a0b97aba"
+  },
+  {
+   "id": 15,
+   "title": "À propos de Qingque",
+   "text": "On dirait que Qingque est toujours en pause. Quand je me détends, elle se détend aussi. Et quand je suis noyée sous le travail, devine quoi...? Elle se détend encore ! J'imagine qu'il n'y a pas beaucoup de travail à la Commission de divination...",
+   "unlockRequirement": "",
+   "cnUrl": "c8d11a53a238de322d0ec819f239b703f76cadd1e578c782a9d52dc703e19c6a",
+   "jpUrl": "3777f9a60b25f121ca18909591e40adaa73c462ba53ade83a1259235f7aa12ba",
+   "enUrl": "58281491d5bf363307584020677b666a6320ccdcfbf987fd217074d8a40f5efe",
+   "krUrl": "651016bb99416a50f7301a8f2d9eba93ae3ac78c944f97eb36e7b36c0c65c4fa"
+  },
+  {
+   "id": 16,
+   "title": "À propos de Plumeau",
+   "text": "Huohuo : Être plus courageuse ? D'habitude, j'ai juste envie de m'enfuir... Mais à chaque fois, monsieur Plumeau me renvoie directement sous le nez des ennemis. *soupir* Il ne peut pas me laisser tranquille...?<br />Plumeau : Hmpf ! Rien ne me ferait plus plaisir ! Si tu te fais gober toute crue, je serai enfin libre !",
+   "unlockRequirement": "",
+   "cnUrl": "671072b3879951f0da4e0a6e0c5abc78b3b4fef06011774efc86b3acf53883a5",
+   "jpUrl": "a7a04f0af9dc34e7c821cc04e5116f04b57888aebe2c7c41f50c97fa0d67bf4b",
+   "enUrl": "49e26517bfef33944857bea468ac4ac1a1dd71340b5a7f52bf1b0cba1573284f",
+   "krUrl": "6f887189501b355b1c1cbca96b72ac1943d7ab4924947659e4c933a03d67ef1a"
+  },
+  {
+   "id": 17,
+   "title": "À propos de Jing Yuan",
+   "text": "On dit qu'on peut chasser le mal avec un portrait du général. J'ai essayé, mais... ça ne sert à rien... J—Je parle du portrait, hein, pas du général. Je n'aurais pas dû croire à ces superstitions ridicules.",
+   "unlockRequirement": "",
+   "cnUrl": "8842c109754626c24b0f9e15ea2b1f6a6772fa6ddf4a29fff7c882ab0ae8d311",
+   "jpUrl": "f1b8a023546fd67fdf63b341f5ba092fe361019ef85e4ee68918e9cf469d425f",
+   "enUrl": "170a7b3694ec807844a445b36831c6f81b8007a1fafb2a14f1b9f24b1b856c44",
+   "krUrl": "338057b3974ce543e22216a83abbbe41fc6e455f7762e050cf19d3f866a78259"
+  },
+  {
+   "id": 18,
+   "title": "À propos de Bailu",
+   "text": "Je me demande si la fille-dragon vend des « cachets de courage »... Sinon, des « cachets pour faire le mort » feront l'affaire...",
+   "unlockRequirement": "",
+   "cnUrl": "79349168eddb9a06e9f34361e2465493456e745da4503976dbb0fa7ea05c290a",
+   "jpUrl": "e70f88c924859e5df4151a9a4a1f590e1a3067ac92bf9e83f3fc913c5e5ddd93",
+   "enUrl": "1808779d84e2a231a5ee2c01bcbcfb1c07eb416e9f9df3fd42449b7cc99f4c1b",
+   "krUrl": "9f5c97fbfd2d1fb1eaf565a7e4d690385d2eda9e2ff6f20cc1ba5ee23880b698"
+  },
+  {
+   "id": 19,
+   "title": "À propos de Yukong",
+   "text": "Comment ça se fait que madame Yukong respire l'autorité et pas moi ? On est toutes les deux des Foxiennes, pourtant. En fait... Je sais très bien pourquoi, mais je ne peux m'empêcher d'être un peu jalouse.",
+   "unlockRequirement": "",
+   "cnUrl": "2d558a399213d79a05fb664737a5e444e50514b6c576028cbe5e1079bfdc7f42",
+   "jpUrl": "d6d1df5604c171e0e973dc678ee092374359d9e8f298cd00667c81bf321d80dc",
+   "enUrl": "77a41b390b95f1df3ea4d2e26ce8f14f1cac9b1751712a9e5a52f7acbeeb7d1f",
+   "krUrl": "f6f18a9657f1080f3d349475c33a84f692b9d1f152aafb8e2b95c10e978506e4"
+  },
+  {
+   "id": 20,
+   "title": "À propos de Sushang",
+   "text": "En fait, on s'est rencontrées il y a assez longtemps. J'étais à l'extérieur pour profiter du calme, et elle m'a traînée jusqu'aux portes de la Commission du maintien de l'ordre. Elle m'a confondue avec une personne disparue...",
+   "unlockRequirement": "Débloqué après avoir terminé la continuité pionnière « Rêve foxien »",
+   "cnUrl": "170b7e39379556c4a553197d7cd8d8e560f54aad8bfed547a301372c64ed1d7d",
+   "jpUrl": "1a8d4bd049a328cdf96e7a0f018031fde7a3c9ba61949f22abaebbfbf9ffc394",
+   "enUrl": "7d7bb63ede86ec2062239d63a5278ad6604e67ecaf4b9c77a34f883128f2d0e7",
+   "krUrl": "e169982bd911f36f402206a9e0023c93271194d8e872d479d19482768c01930e"
+  },
+  {
+   "id": 21,
+   "title": "Activation d'Eidolon",
+   "text": "C'est donc ça la vie d'une maudite...",
+   "unlockRequirement": "",
+   "cnUrl": "edd5cd5f286432b3af5a61dd8ac4da0f716a6c8e1345bf100566a6544ad2527c",
+   "jpUrl": "dfafb458370cbff6402e95a633afb7a3eaf7fe74b48442731b6fe578948349a1",
+   "enUrl": "450742806d85f7d957e3ff715699fc921d82247312d77130ab06226fc31ddb53",
+   "krUrl": "5e4dbef188cd8d4740691ff29e2d4aeb0efff98d547adac129ea0038b7b073fb"
+  },
+  {
+   "id": 22,
+   "title": "Élévation de personnage",
+   "text": "Une promotion ? Encore ? C'est une bonne ou une mauvaise nouvelle ?",
+   "unlockRequirement": "",
+   "cnUrl": "246c2279a51cb93826ab60ff4162d6c5f177e3904633512eb5515865521bbd3b",
+   "jpUrl": "aadb58004f452dee62577f7fe09a3f9f8d1581bd44b190fd8a7257b768febf55",
+   "enUrl": "39380c5d251192868fd20b0458d8be08e8dfc1f29d515bb0ce6cc38b0199cfdb",
+   "krUrl": "1e0a26dbfb52a0f90cc318dd9c541e0e49e1b7209290421d25921f93cebb6602"
+  },
+  {
+   "id": 23,
+   "title": "Niveau max atteint",
+   "text": "J—Je vais devoir passer ma vie à la Commission des dix seigneurs...?",
+   "unlockRequirement": "",
+   "cnUrl": "5da01f21471a5973c047230c6d1caa20d2bd43f7f9e36c01fb8e699b08a951dd",
+   "jpUrl": "254167105646532be32e945440cf3156111e8cf4a6d7989d95cfb382d7a5d349",
+   "enUrl": "0c8f57f798f3eb3c88bf6fba8e369ca5f680efcae599e0a5a430b9adc1ebea03",
+   "krUrl": "e4283e34e2d274eebdcaa5d10172e1d34842a91f032bd0cc6b4834bdc20681d9"
+  },
+  {
+   "id": 24,
+   "title": "Activation de Trace",
+   "text": "Ça existe un remède-miracle pour les exorcismes ?",
+   "unlockRequirement": "",
+   "cnUrl": "6a623d6fe5756dc203adeda619217ecf12bd57ef35e03ee09ba2b38bc5cfa93f",
+   "jpUrl": "d8dd4be2ce4cf918b54304ad1717302a9259db9e42b5f3119e8be261e2227a15",
+   "enUrl": "ec338906e96a2fcd4979122a12dac338277380423398d193dce6dc529f17a724",
+   "krUrl": "efa714d8404a5497ebd25bc7dfda07ae79992a2684f77c66a5fb89159c0c4ecb"
+  },
+  {
+   "id": 25,
+   "title": "Rejoint l'équipe avec Hanya",
+   "text": "Madame Hanya, vous aussi vous n'avez pas pu dormir cette nuit ? Si je peux faire quelque chose pour vous, n'hésitez pas...",
+   "unlockRequirement": "",
+   "cnUrl": "1bfd5b56a186cd783cebd96a5fe5f2eaa3da117ddfd1c291ca1c885f566355bc",
+   "jpUrl": "9bad8a30c264dc22fbe91214c68cc0dc06810ba25ecbc291d34f4a84931e53e8",
+   "enUrl": "6eadff237e96186cd3e6a3e57a8aea992b06b273e36c431807f1937cf26cc022",
+   "krUrl": "0707f7d7bac4bd0e2a50f88febef7aafce25b0d9dc5acd9bda21619b1ad947bd"
+  },
+  {
+   "id": 26,
+   "title": "Rejoint l'équipe avec Guinaifen",
+   "text": "Toi d'abord Guigui ! J—Je serai juste derrière toi...",
+   "unlockRequirement": "",
+   "cnUrl": "f06e49098caf78cbe4366b600fe1c465817d910fec2310729eb54022f58ed03e",
+   "jpUrl": "11cf78ec0ef796243d242f6e4d46c95a2a68196ce2e47f0005faf8fae8418861",
+   "enUrl": "d265206d5164aed88d09bdbf72bee43c1ba1c175d9cf6fe252110c7ed367ea75",
+   "krUrl": "20d9fd004ce756151087a28cf66919571b966e3ab063e43730a8ccc535609163"
+  },
+  {
+   "id": 27,
+   "title": "Rejoint l'équipe avec Sushang",
+   "text": "Sushang, attends une minute. Laisse-moi te donner ce talisman...",
+   "unlockRequirement": "",
+   "cnUrl": "427c49ef75d6da88d32422af33abd0ee8415775be1c328b8b244acd4af7c4023",
+   "jpUrl": "dffa634273d00076e865156277365e8611ec1f7759453210b0a7afff2b503cae",
+   "enUrl": "f4f472e6ef95a55a950968951f147093f8374e3d1eb0c4afddb122f3b81a5c36",
+   "krUrl": "7c78324f04e6c9be8b4468a94b517b6072ed141dfad7e7c09a3b9406d7454b11"
+  },
+  {
+   "id": 51,
+   "title": "Rupture de faiblesse en début de combat",
+   "text": "Huohuo : Peut-être que je peux le faire aussi...",
+   "unlockRequirement": "",
+   "cnUrl": "e567914d9d9fda2b8caa54b823c6a44b66c18e4413081d845b03482a9873e337",
+   "jpUrl": "9e70b72e5a5efc8e24371b6c0b77a077dadbf76583dc39c85931e172b4ab6462",
+   "enUrl": "f6bce09c7caa9f55ded153f3b2b129410188f9370397f986da8a6bff0c2893e3",
+   "krUrl": "22e2356d9e36595b8d18d6ca2ff2547ba1f2727b8998f3be9bd00f351e8e302e"
+  },
+  {
+   "id": 52,
+   "title": "Avertissement de danger en début de combat",
+   "text": "Huohuo : J—Je crois que je ne vais pas y arriver...<br />Plumeau : Je suis là, de quoi tu as peur ?",
+   "unlockRequirement": "",
+   "cnUrl": "bdf60cfdb78cd2e388b45eb947c2fbb2c190254932074f06326d7a4d2a2739f9",
+   "jpUrl": "a029891f71756a60aab4ff0e42a16abc592b8124376d2c0456ede8bdcaaee8f4",
+   "enUrl": "d2d293dc6401d2edc4fe445f73fc50e1922693d06d11e71f62cceba843e0cf84",
+   "krUrl": "29ee73a151c86db783c1db5c97008e8b4389440709152683b340fb96347f9357"
+  },
+  {
+   "id": 53,
+   "title": "Début du tour 1",
+   "text": "Huohuo : O—On doit vraiment se battre ?<br />Plumeau : Bien sûr que oui !",
+   "unlockRequirement": "",
+   "cnUrl": "6afa1fda2273ecaa33379a878b7442414eab611e78bb3ed3042c500246c05567",
+   "jpUrl": "f4a621529402d21656d2d9fdac5626c3f7ad87ae62b922371a8206173cfc9d6c",
+   "enUrl": "790fc7c046cab814fbcf228544bb9dbc84ddd0ff7859b25624b7511b310266cd",
+   "krUrl": "ea88f500df71d8091cb168b418465e099896a574cc1b0d5d879a63db3e0471ba"
+  },
+  {
+   "id": 54,
+   "title": "Début du tour 2",
+   "text": "Huohuo : Je vais encore ralentir tout le monde...",
+   "unlockRequirement": "",
+   "cnUrl": "3236b358234485a892b4d88791815ef23725aa985b293b3b0f5a81be020fc6f7",
+   "jpUrl": "e5e5fd6653e968ce0664cf03c755448f149f87c4582318b631cc66fa80eee730",
+   "enUrl": "ae58442894abb35bbfa9bb386d2cd4561660418b530ce8ca30d955aa619ef31d",
+   "krUrl": "f0dc26749f5b2edf45eb4953f89003db3d45c6e2c0cc59c99ac7c98f03facf09"
+  },
+  {
+   "id": 55,
+   "title": "Attaque normale 1",
+   "text": "Plumeau : Attaque-les.<br />Huohuo : Ahhhhhh— !",
+   "unlockRequirement": "",
+   "cnUrl": "d265997ba959eb52dcfce98f977295d4c4e4583281bfaf7e7cfed24531a7712f",
+   "jpUrl": "5150481c156c23287a40b1c650d28f1d46ed4307f15a0bb3134521c82e134fc5",
+   "enUrl": "0803b4a6d47276abc6ae9820e96fb36304cd1a867810fdf39ac1c2f540f4a21b",
+   "krUrl": "7c6013827c3c9b85232b6842339971284bb56ac32dfaa6e6122c256806cdcc1a"
+  },
+  {
+   "id": 56,
+   "title": "Attaque normale 2",
+   "text": "Huohuo : Ahh— ! À l'aide !",
+   "unlockRequirement": "",
+   "cnUrl": "4fecc39120b5d2f18e0d5d7760d6b467e66c31b540f381ef0b0d13fea4b6de15",
+   "jpUrl": "56d55e8f80440b583259d534fdf7ecce97a2f0f9e490fec0ac964e83a478b05e",
+   "enUrl": "0d445f1bb00b9ff8f88be6aa5b20abe361f29647968d1b660f51be7c362ec7f0",
+   "krUrl": "2aa00bd5021aed38cd23cf1853a553742b3d6c49c98b31c81c686ac4d81f98af"
+  },
+  {
+   "id": 57,
+   "title": "Tour inactif",
+   "text": "Plumeau : Idiote ! On ne peut pas faire le mort debout !<br />Huohuo : Chut...",
+   "unlockRequirement": "",
+   "cnUrl": "cfaafa519c37f3da9de182b24d588c2fb5d0f7f9184be32938a07bef47cf5942",
+   "jpUrl": "de178b64d2f4b0e0b41138df39a2b9179d893ea65ce7381e23a5371754076665",
+   "enUrl": "d943d40c72c6f8f0fb9fb67ecbbb1dfd2417629c38c09302f967679c9c19731a",
+   "krUrl": "8b639dbae01c2033581144181b54ebbca9e5413fb45d240761814cb7de8f8caa"
+  },
+  {
+   "id": 58,
+   "title": "Compétence 1",
+   "text": "Huohuo : Démons... Allez-vous-en...",
+   "unlockRequirement": "",
+   "cnUrl": "c00514eac971baf05117f1415b1b7f9219fa743735b6c0e3f9c8fa7dc4f9ea1b",
+   "jpUrl": "5079ff8763024a49045f8b58ae2179a0bb0def3895e9792e1dcc450b46ad4d51",
+   "enUrl": "ab578c41f825735018eb197b934b57f1169b7f9f744af10c67213674702d6129",
+   "krUrl": "7d1f72b1fa6f7aefdf789d38c6e4c41bdb853ec78345eaeea48ba2a696077f4e"
+  },
+  {
+   "id": 59,
+   "title": "Compétence 2",
+   "text": "Huohuo : Donnez-moi... la force...",
+   "unlockRequirement": "",
+   "cnUrl": "d0f21f55f93b5c7426d9f0c299c5f87c5f19866ff9823da014326a407c45bf40",
+   "jpUrl": "f34bd9499a9d34c52104957d6f69d61066faa85cacff4177215056e475bcf155",
+   "enUrl": "d7248214ef5ce5f51c4ee67445e85d3d79170afdb9d407296bbfe722809d3f64",
+   "krUrl": "9c614c9681d44e3b23fb3e6ed5d4b16f309c9d25e72f557d6fbf9288cd67e5a8"
+  },
+  {
+   "id": 60,
+   "title": "Attaque légère subie",
+   "text": "Huohuo : *gémissement* Aoutch...",
+   "unlockRequirement": "",
+   "cnUrl": "b2c567ade0941d5c8cd8686d1661421f88a5df87132ff0292a2868075427c104",
+   "jpUrl": "d56cc3617f658736f838d81edc233788081a998d0d55eb0a2143b02069658c97",
+   "enUrl": "e695e325fc449c1b21c97257cb8812c9581e1e5c555ca9f9aecafa0dcd27d248",
+   "krUrl": "d83347c27f36c6e1941e437cc5e162761251cd84593b580f73995c5e814951d9"
+  },
+  {
+   "id": 61,
+   "title": "Attaque lourde subie 1",
+   "text": "Huohuo : À l'aide, Plumeau !",
+   "unlockRequirement": "",
+   "cnUrl": "cf14255a8ff48dc2c8e10823a17b7401cc3fd53fc3f58f76c1937d49c53eb7f4",
+   "jpUrl": "e3644c3f32fcef79f1d2f4b123f15522ce5bcad5e6207122a53d6924a2f6b3ce",
+   "enUrl": "2a524a4aa31464c8d11b7f7c5bf477a00f440da5644ffb9a993f5c77a63d4285",
+   "krUrl": "65e66c48821b3768e6e44a771cd126627bd2b9e323e4a8f68b50ea8749deda89"
+  },
+  {
+   "id": 62,
+   "title": "Attaque lourde subie 2",
+   "text": "Plumeau : Tu oses m'attaquer ?!",
+   "unlockRequirement": "",
+   "cnUrl": "703531807cd1a6ce8a045fb25880fd46bb90f48c8fe409a1a285363362a30328",
+   "jpUrl": "0f3366a4a9542a51d40d07a4761cff28a76bb6b4a8c876725f92d3cff5de655c",
+   "enUrl": "3e47162701dfb6b47c7ab43030c26986e70f744bb580b2beee4de022888c0c3e",
+   "krUrl": "b01a5f230aecfd90323b3e0ac5cb68e2e88d6b61cf93c029a93568c40fa08cc3"
+  },
+  {
+   "id": 63,
+   "title": "Activation de l'ultime",
+   "text": "Huohuo : N—Ne t'approche pas plus près...",
+   "unlockRequirement": "",
+   "cnUrl": "39ae69b61aa0bf742889b4af2c297b4ee9b565642f68f46fb8f2870acae2bdd6",
+   "jpUrl": "ed34f306ef0cb54bdc2c42d3c85bfa512ccc2a49d807594a4159cbd56793aa1b",
+   "enUrl": "323c0763c108aa70213c7e5471389357674fe63857c35f26d436e8dae90413cd",
+   "krUrl": "f9b690363c2f0660feffc406b1fd62e705908c7139a84464b301c2d67dd8d68b"
+  },
+  {
+   "id": 64,
+   "title": "Déclenchement de l'ultime",
+   "text": "Plumeau : écartez vous, bande d'amateurs...<br />Vauriens ou diables, je vous écraserai",
+   "unlockRequirement": "",
+   "cnUrl": "937c2aae1dd37517e62b8da95b0319d8d3718dfbe07446f973cb801964209c8c",
+   "jpUrl": "d07a89fd263b03d496fe38fd48bad60485eec2f4c43a9a758efa52be0cad4373",
+   "enUrl": "e075391634b9e3a45667acdf71a60a190d8b02b445b8dfa6467edbaf04eee807",
+   "krUrl": "fcf4867098094566efd193213b049be286bd9cccf99c7e5a690a0a93bb83dbb0"
+  },
+  {
+   "id": 65,
+   "title": "À terre",
+   "text": "Huohuo : Je... me rends...",
+   "unlockRequirement": "",
+   "cnUrl": "a096a2fa9c6040c72f86bf0a2163b7da79839a107fbb8fd3e2326d7fcfaaae8d",
+   "jpUrl": "157051b28545062dd6675c94951063566486b3a1140d8ef75b23f321a5aaf76a",
+   "enUrl": "cb84ea24409bbb23c46d84e325cc31810a68059368508b75b44838f6b3ada754",
+   "krUrl": "7fe50813945fd014f1d058fd811a78b5b5a07ab1c33f94ea2bae979ea3216266"
+  },
+  {
+   "id": 66,
+   "title": "Retour au combat",
+   "text": "Huohuo : C'est pas terminé ?",
+   "unlockRequirement": "",
+   "cnUrl": "baf74aa1d4f0fd519d77b8224e0c072f5b618d5741c8daffe6bf1847d0ecf02e",
+   "jpUrl": "a0e61e26eab40b7e59700b49db856239fa4e89ed2f8c3bc3397187b42f3905e3",
+   "enUrl": "1523153e95390791fd89d4931e8fa28b9960da3a45d42e9c9f04bc9a29f51276",
+   "krUrl": "6c8a195134b71a7e3e8587ac5afa6dc19453e9d4b46b35391f9e03490bcd8d3a"
+  },
+  {
+   "id": 67,
+   "title": "Récupération de santé",
+   "text": "Huohuo : Merci, merci !",
+   "unlockRequirement": "",
+   "cnUrl": "154593638c7d6fccbd35b8ea4e8cf0de133c9000334370f1154abb03fe08a3d0",
+   "jpUrl": "5728f346fcf8acff651d2297addef187c4efd99db126d228828037e2cd2a35c2",
+   "enUrl": "a946f44d17b0ec18d391cd2e098100d15b36c90ec3106568953c7a94aa8218c8",
+   "krUrl": "53b5917a9ac5dae2f00eb7ad28baafb96ff507107633f4eb69400cff2a16ce08"
+  },
+  {
+   "id": 68,
+   "title": "Technique",
+   "text": "Plumeau : Va-t'en—<br />Huohuo : Oh...",
+   "unlockRequirement": "",
+   "cnUrl": "955c7f06687e8e45a0db02a5f4b38363641817d89283a51bd33e43a28d9eaadb",
+   "jpUrl": "1eba55fac1b9fb521935af59c7baa640edecb0e020d51c56260d9c192d665784",
+   "enUrl": "771d83a715989e2cb689c156b39883046e5de08795106a9bf59a703a941ad47a",
+   "krUrl": "724599cea068aadb1282ecc127bab0a7c85b50216bd06c93b0fcb4c8ce584f08"
+  },
+  {
+   "id": 69,
+   "title": "Combat gagné",
+   "text": "Huohuo : J'ai gagné ? J'ai gagné ?!<br />Plumeau : Tu pourrais me remercier.",
+   "unlockRequirement": "",
+   "cnUrl": "b59350489ff9e891a2197688a214d0d4da9067c9a82773ab27b3cee01faddb6b",
+   "jpUrl": "9a4b0bb27166a8b39d2af0f23429e3cfa7aa39401d0d858a7d522a5b8e5d9c84",
+   "enUrl": "d796f94c735c854b9881c763a7d832aadbe5765d6c450728ae5d941947486b42",
+   "krUrl": "75b35a1ea267875043f41a8ef7271be932cba2d68a292b5bfc23a032d7a398e4"
+  },
+  {
+   "id": 70,
+   "title": "Ouverture de coffre au trésor 1",
+   "text": "Huohuo : Ouah~ Je peux le garder ?",
+   "unlockRequirement": "",
+   "cnUrl": "8dee6f84f974fa16de7703202ee0a54f5c7ae1ba92c229eb62a0dea708688630",
+   "jpUrl": "89c977d563792971685d1e389f359359f0c8f4e9c68050201e08dd4dbab30750",
+   "enUrl": "eb358fabc3171326212616e276d626e2f3099b0f701e099ad384f7fc27c5047f",
+   "krUrl": "92b2f79dae5714036432281e4d0b5d39ed8dbd697e5562f5ce87d8dd484b4c2b"
+  },
+  {
+   "id": 71,
+   "title": "Ouverture de coffre au trésor 2",
+   "text": "Huohuo : Je ne m'attendais pas à trouver ça ici...",
+   "unlockRequirement": "",
+   "cnUrl": "9ca21fce2a6af8044750a70e5b28bcebcca8d624f212027eb4973637e052743f",
+   "jpUrl": "b55533fd2a1544c6ca4d30c5e592e2cde74197e399e1ec8b918d2946359133b2",
+   "enUrl": "959a032ceea13fe7a1d55ff1198abb87235d47a3b593e166879ca4a837491e7e",
+   "krUrl": "baba4673c7d44fc4236481c89fa69330d87c72182cb4b31d728968be25911711"
+  },
+  {
+   "id": 72,
+   "title": "Ouverture de coffre précieux",
+   "text": "Huohuo : Je ferais mieux de signaler ce que j'ai trouvé, non...?<br />Plumeau : C'est toi qui l'as trouvé, c'est à toi maintenant !",
+   "unlockRequirement": "",
+   "cnUrl": "5af72cfdaee723b1a25f0762d6f1bee2cf4d2813383ac693d758a28400f3290a",
+   "jpUrl": "2eb7acedd9e51e98f3416c118bb73b2e419e9f7fc9366586005358fe8c9f42c4",
+   "enUrl": "2c70555f72e6c5c95d6cc6d7fb6ec309a4a3d7ec8db3ceabdc9496a2011db64a",
+   "krUrl": "b587bcc8cd8c77fb187cc950e0ce597d31fe7e5df049cf1a0bf7506f2f2c87ae"
+  },
+  {
+   "id": 73,
+   "title": "Énigme réussie 1",
+   "text": "Huohuo : J—Je suis plutôt forte à ce jeu là.",
+   "unlockRequirement": "",
+   "cnUrl": "e29ec6b552b6b46b5613d68094754b0034821ac5d9ee5ac84930713453c276d9",
+   "jpUrl": "9186e4dbbf9c2553c42aa7367a1e54bfc9cd1c27214c8bb2df0c5f371626f488",
+   "enUrl": "5b5c1cd1c208e52cdc25dff7fa936b5c923f12ef44b61b49675c4b2834ed052d",
+   "krUrl": "b92f8acc22ac25a6628400b8d862cb7a1899eedf396ef197209f270862342245"
+  },
+  {
+   "id": 74,
+   "title": "Énigme réussie 2",
+   "text": "Huohuo : Hmm ? C—C'est moi qui ai fait ça ?<br />Plumeau : Suivant.",
+   "unlockRequirement": "",
+   "cnUrl": "d43e8b7334daa27e6947250f6e404f6cf174e5d58a160d2bd454c434d5aac7d7",
+   "jpUrl": "5032d3d875b2b664d06fc4b5e28104655ea783ae4bf376d45cc4e2bddb3a5011",
+   "enUrl": "6c29dac1834aaa9e68c84f2a202659d9c4ef600bf5a7052e05e9a870dc69d3ab",
+   "krUrl": "f3f8913f1f5fb8d1f3b823070de9087ec924588b6c80187ce9a69a44bcaa97d5"
+  },
+  {
+   "id": 75,
+   "title": "Cible ennemie trouvée",
+   "text": "Huohuo : Je suis invisible, je suis invisible...<br />Plumeau : Hé, imbécile, regarde par ici !",
+   "unlockRequirement": "",
+   "cnUrl": "6d7345e9accddbbedd8a287410004a3cdcb85f96611eaaba44c402f9ee63d36d",
+   "jpUrl": "8023063f109dff42c09dabbbb1e5fe7dae448479caa63183155ae5373fb8c439",
+   "enUrl": "59849c13172531a720cfca21fd69dff3c382bc70dde5b30ac5df8807ddd5501b",
+   "krUrl": "076c91cc31c200c2600f24a7556f993c80615ddb4cc609483dd98414e14f766a"
+  },
+  {
+   "id": 76,
+   "title": "Retour en ville",
+   "text": "Huohuo : Qu'est-ce que c'est paisible ici...<br />Plumeau : Ouaf !",
+   "unlockRequirement": "",
+   "cnUrl": "7d879945aa994d7da3b48c61a5241c71b9e7284dd8cf4d6ace825aa36533425e",
+   "jpUrl": "386b1a71d8b8b4d88cf1820b453404adda3455bcab0055d9e5f055cecbb52d6b",
+   "enUrl": "8acb9e9f88c40ca2e6a4073aa126a42f7a1cc54d0a2733f21e0e556309f37d20",
+   "krUrl": "b34356ee199d01cc7a3027a4b0a41a0d91e7790968cf2915fadb4a4fca0ec54d"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Détails du personnage",
+   "text": "La Foxienne, faible et fragile, est une juge novice à la Commission des dix seigneurs, responsable de la capture d'entités maléfiques.<br />Les juges ont scellé un Héliobe nommé « Plumeau » dans sa queue, ce qui fait d'elle une fille « maudite » qui a tendance à attirer les mauvais esprits.<br />Si elle tremble à la vue des êtres maléfiques, c'est pourtant à elle que revient la tâche de les exorciser.<br />Elle a beau avoir conscience de son incompétence, elle n'arrive pas à trouver le courage de démissionner et poursuit son travail malgré la peur.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Histoire du personnage : Partie I",
+   "text": "Quand Huohuo s'éveille à la Commission des dix seigneurs, ce n'est pas ce cadre nouveau qui la frappe, mais l'atmosphère effroyable qui règne autour d'elle.<br /><br />Percevant son malaise, la juge aux cheveux blancs lui parle avec douceur.<br /><br />« Dis-moi, petite fille, comment as-tu rencontré ce feu ? »<br />« Il était au bord de la route et sur le point de s'éteindre, alors j'ai... j'ai voulu l'aider. »<br />« Tu as donc mis ce feu sur ta queue ? Pourquoi avoir fait cela ? »<br />« Je... Je ne sais pas... Tout s'est passé si vite... Je suis vraiment désolée. »<br />« Inutile de t'excuser, douce enfant. Cependant, tu devrais rester sous notre garde à partir de maintenant. »<br />« M—Merci, Madame. »<br />« Appelle-moi Hanya. »<br />« Merci, madame Hanya. Je... Je m'appelle Huohuo. »<br /><br />Les pensées de la juge nommée Hanya remontèrent plusieurs jours en arrière.<br /><br />La Commission des dix seigneurs avait reçu un appel de détresse, et elle s'était chargée de localiser la jeune Foxienne sur le point de se faire dévorer par un Héliobe. Hanya n'était pas parvenue à repousser l'Héliobe sans mettre en danger la vie de Huohuo. Finalement, elle avait dû se résoudre à sceller l'Héliobe dans la queue de la fillette. Une chance que l'Héliobe ait commencé par attaquer la queue, sans quoi Hanya n'aurait pas pu sauver l'enfant.<br /><br />« Ai-je pris la bonne décision ? »<br />Hanya réfléchissait à voix haute.",
+   "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie II",
+   "text": "Aussi colérique et arrogant soit-il, l'Héliobe était ouvert à la discussion. Il ne pouvait tolérer les sanglots et autres lamentations de Huohuo, et ne comprenait pas vraiment comment les Foxiens sociabilisaient. Par exemple, il lui était impossible de donner du sens à l'ostracisation perpétrait par les camarades de classe de la jeune fille pour la seule raison que « sa queue était en feu ».<br /><br />- Toi ! Arrache ce talisman !<br />- Non ! Madame Hanya a dit qu'il ne fallait arracher le talisman sous aucun prétexte...<br />- T'as entendu ce qu'ils ont dit ? Comment osent-il se moquer de moi ? Jamais je n'ai été humilié de la sorte !<br />- Non... ils ne se moquent pas de toi... ils se moquent de moi...<br />- Alors il te revient de leur apprendre une bonne leçon. Je ne t'adresserai plus la parole si tu ne me venges pas.<br />- M—Mais... mais j'ai peur...<br />- Bon d'accord, très bien. Tu sais quoi ? Respire un bon coup, fais le vide dans ton esprit et ne pense à rien. Je vais m'occuper de ce problème pour toi.<br />- M—Mais... madame Hanya a dit que... l'on ne devait pas toucher au talisman...<br />- Ne t'en fais pas. Tu n'as qu'à suivre mes instructions.<br /><br />... Lorsqu'elle reprit connaissance, la légende de la « démone possédée » circulait déjà.<br /><br />Après cet incident, Huohuo chercha à découvrir le passé de l'Héliobe. Des siècles auparavant, un Héliobe nommé Ignamar fut vaincu par un général du Luofu avant d'être réduit en plusieurs fragments et enfermé dans le Fourneau de la création. Ce fragment en particulier, représentation de l'arrogance d'Ignamar, s'échappa, se refusa à prendre possession de quoi que ce soit, et prit la décision de vagabonder des siècles durant... jusqu'à ce que Huohuo l'aperçoive dans un état d'extrême fatigue.<br /><br />« Je t'appellerai donc \"Plumeau\", pour ne pas trop éveiller les soupçons... »<br />L'Héliobe ne répondit pas, son silence résonnant comme un accord implicite .",
+   "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie III",
+   "text": "Quand Huohuo fut emmenée par la Commission des dix seigneurs, les juges voulaient avant tout s'assurer que Plumeau ne causerait aucun ennui.<br /><br />C'est à mesure que Huohuo s'est familiarisée avec son métier de passeuse d'âme qu'elle a acquis des connaissances à propos des mauvais esprits que répertorie la commission.<br /><br />« Madame Xueyi ! Qu—Qu'est-ce que vous avez pensé des talismans que j'ai préparé la dernière fois ? »<br />« Ils étaient formidables. Très efficaces contre les Esprits astraux. »<br />« Haha, ravie de l'apprendre. J'avais peur qu'ils ne fonctionnent pas bien. »<br />« Pourquoi ne pas les avoir testés toi-même ? »<br />« Oh non... J'ai bien trop peur... »<br />« Tu sais, Huohuo, la plupart des mauvais esprits sont en fait des créatures extraterrestres ou des êtres malveillants, qui existent sous différentes formes. »<br />« Je sais ce qu'ils sont, mais ils me font peur, Madame Xueyi. Je ne suis peut-être pas faites pour ce travail... »<br />« Tu es la seule à pouvoir répondre à cette question. »<br /><br />Huohuo gérait mal sa timidité. Elle peinait à rassembler le courage nécessaire pour affronter les mauvais esprits.<br /><br />Elle décida un jour de regarder des films d'horreur jusque tard dans la nuit afin de s'endurcir, mais elle en retira surtout des cernes. Elle investit dans les derniers outils d'exorcisme à la mode pour être plus efficace, mais y perdit surtout tout son argent. Plumeau se moquait de sa démarche futile, trouvant toujours un sarcasme ou une pique à lui lancer.<br /><br />« Honnêtement, Plumeau est le plus terrifiant de tous... »<br />Cependant, aux yeux de Xueyi, cela faisait bien longtemps que Huohuo ne craignait plus Plumeau.",
+   "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie IV",
+   "text": "Auparavant, Plumeau était semblable à tout autre Héliobe, et son but était de dévorer Huohuo afin de s'emparer de son nom et de son identité, et de lui voler ses désirs et toutes ses émotions.<br /><br />Au fil du temps, Plumeau s'est mis à apprécier d'être témoin de la frustration de Huohuo face à ses échecs. « Je ne suis pas pressé de la dévorer, après tout. Ce n'est pas comme si elle pouvait m'échapper. »<br /><br />« Plumeau ! Plumeau ! À l'aide ! »<br />« Ce n'est pas mon problème. Qu'est-ce que tu disais avant ? Ah oui, que tu dois \"gérer toute seule\". Eh bien, c'est l'occasion d'essayer ça ! »<br />« Non ! Je gérerai seule la prochaine fois ! Je t'en prie, aide-moi ! »<br />« Tu sais que si tu meurs, je serai libre ? Mais... allez, j'aime finir ce que j'ai commencé. Je ne partirai pas avant de t'avoir dévorée. »<br />« Tu es une juge de la Commission des dix seigneurs, mais tu as négligé tes devoirs et permis à ces monstres de saccager Xianzhou. Quelle honte... Hé ! Qu'est-ce qui se passe ici ? Je suis le seul à pouvoir la sermonner ! »<br />« Grrraaah ! »<br />« Ah, tu veux régler ça à la dure ? Tu l'auras voulu ! »<br /><br />Depuis que Huohuo est possédée par Plumeau, les mauvais esprits la recherchent avidement, comme des papillons attirés par une flamme.<br /><br />Huohuo reproche sans cesse à Plumeau son titre de « maudite » et Plumeau trouve qu'il est parfois frustrant d'avoir Huohuo pour hôte. Néanmoins, les années ont passé et Plumeau n'a jamais touché le moindre cheveu de Huohuo. Même si Plumeau l'aide chaque fois qu'elle est à bout, il n'a jamais témoigné du moindre soupçon d'amitié.<br /><br />« Envoyée par les Dix seigneurs, Huohuo, la passeuse d'âme a été extraordinairement efficace durant son mandat et a prouvé sa fiabilité lors de tâches cruciales. Elle est par conséquent promue au poste de Juge. »<br />La Commission des dix seigneurs a décrété sa promotion, et c'est ainsi que Huohuo a entamé son nouveau mandat en tant que juge stagiaire.",
+   "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
+  }
+ ],
+ "archive": {
+  "cvCn": "葛子瑞&刘北辰",
+  "cvJp": "長縄まりあ&平林剛",
+  "cvKr": "김채린&한복현",
+  "cvEn": "Courtney Lin & Adam Michael Gold",
+  "camp": "Luofu de Xianzhou"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Huohuo",
+ "rarity": 5,
+ "descHash": "Juge en formation de la Commission des dix seigneurs du Luofu possédée par un Héliobe. Jeune Foxienne timide et craintive, elle assume la responsabilité difficile de capturer les mauvais esprits malgré sa peur des phénomènes étranges.",
+ "artPath": "d556bfcf6533827111c56e4e96fcacd4eea5a1c5c1bdd1089a327b1850b0206d",
+ "miniIconPath": "0a86097a9c85901fed42e206aa0ec9f71424c3964b094f026a6988abdacb91b3",
+ "damageType": {
+  "id": 16,
+  "iconPath": "2f3d2fba0ee9442f1c51cf42a91af6f9ece3f19168237fd3963d352e508791c7",
+  "color": "#00FF9C",
+  "name": "Vent",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "81e58cfdc0c8a9a026c2c3111a6bdf663d572fa71524907b004fc5eb7f34fade",
+  "altIconPath": "c825fa86e9a217db6e704916b2d5aeb22c5733b2776a0ea16c558c29e6c5c92c",
+  "color": "#FFFFFF",
+  "name": "L'Abondance",
+  "rarity": 0
+ },
+ "pageId": "huohuo"
+}

@@ -1,0 +1,498 @@
+{
+ "name": "Vacío",
+ "rarity": 3,
+ "descHash": "Un extraño poder condensado a partir del tiempo. Verdaderamente, son todos los momentos insignificantes los que tejen un destino maravilloso.<br /><br />\"Contempló el vacío, que era como un sol oscuro que se eleva al final de todas las cosas. Como una boca que tiene la respuesta a todas las preguntas, dijo: ███ █ ███ ██. Esta respuesta no se podía expresar en ningún idioma humano, pero todo el mundo la entendió\".",
+ "iconPath": "f5d1528db063cc6807a430221ce043a9adc327e5b0cb567415c94c0c06bbf47f",
+ "artPath": "dac0d0bca52d04a428e2ed87157cf818be76215e29e9a407c566c59cf2def123",
+ "mediumIconPath": "baf493a2d24c31d0b88f4c84a8514fe534810c6bc4acbcadb31b7b5f9de27847",
+ "baseType": {
+  "id": 0,
+  "iconPath": "96c3b8dd457b98955d440531986a23d509f705c13d7aa794d1e97bcfd03d5701",
+  "color": "#FFFFFF",
+  "name": "Nihilidad",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédito",
+   "desc": "Divisa que utiliza la Corporación para la Paz Interastral para sus cuentas con los clientes y que se acepta en todas partes como moneda de los viajes espaciales.",
+   "lore": "\"La gente corre, se pelea y comercia por algo que no son más que números en una terminal, pero lo que es verdaderamente valioso no se puede comprar\".",
+   "purpose": "Moneda común",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cáliz de la mina principal",
+    "Recompensa de misión",
+    "Recompensa de encargo",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "28d0ba947e29fa63210d8ae2c432cb80339f98427c8655a9ca050184f69c4819",
+   "name": "Componente antiguo",
+   "desc": "Componente de maquinaria procedente del viejo mundo. Material simple que se usa en la potenciación.",
+   "lore": "A pesar de su pequeño tamaño, se fabricó y se pulió de una forma que hoy en día sería difícil de replicar.<br /><br />\"Un tornillito del viejo mundo es más resistente que nuestra armadura\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "De Autómatas",
+    "De enemigos en el Universo Simulado",
+    "Recompensa de encargo",
+    "Canjeo de Ascuas",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "7089e982e18575f3824ab28ae0e91f40c8214edf6253a7162142bdc7fc0acdbe",
+   "name": "Eje antiguo",
+   "desc": "Eje de maquinaria procedente del viejo mundo. Material corriente que se usa en la potenciación.",
+   "lore": "Una vez desmontados, los componentes de precisión no pueden volver a ensamblarse. Incluso los veteranos de mantenimiento de la División de Tecnología de Belobog se lo pensarían mucho antes de tocarlos.<br /><br />\"Idiota, los azules no te darán más que unas latas de comida por esto. Llévaselo al jefe Svarog y no tendrás que preocuparte por la ropa y la comida durante una buena temporada\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "De autómatas (nivel de Equilibrio 2)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "De enemigos en el Universo Simulado",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bb7670872389d870154ac70d1b29dee2d6c123f558951c6f914f1d9a70c28382",
+   "name": "Obsidiana lúgubre",
+   "desc": "Fragmento de materia oscura obtenido en el vacío. Sirve para mejorar ligeramente los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilidad</span>.",
+   "lore": "Noúmeno que no se puede verificar de ninguna forma.<br />Al rozarlo emite un murmullo ininteligible.<br /><br />\"████ ██ █ █\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "Cáliz de la mina principal",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "Éter refinado",
+   "desc": "Material de mejora para los conos de luz. Otorga <nobr>6000</nobr> pts. de EXP de cono de luz.",
+   "lore": "Un bote de éter extraído y destilado usando un proceso especial.<br /><br />\"El Jardín desea recrear una gloria pasada, pero una que elijan ellos, ¿lo entiendes?\".",
+   "purpose": "Material de EXP de conos de luz",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Cáliz del Paso del Remanso",
+    "Salón olvidado"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "name": "Éter condensado",
+   "desc": "Material de mejora para los conos de luz. Otorga <nobr>2000</nobr> pts. de EXP de cono de luz.",
+   "lore": "Recipiente con éter procesado mediante una técnica especial.<br /><br />\"Transpórtese con cuidado. No debe caerse al suelo ni recibir presión. Si se produce un daño o una fuga, consulte el capítulo II del «Manual de respuesta a los accidentes de fuga»\".",
+   "purpose": "Material de EXP de conos de luz",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Cáliz del Paso del Remanso",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d4e3585911d6f71b87b47ced1a2f6e0b0f77dbdc8615650896e77bae87361afd",
+   "name": "Éter disperso",
+   "desc": "Material de mejora para los conos de luz. Otorga <nobr>500</nobr> pts. de EXP de cono de luz.",
+   "lore": "Sustancia imaginaria que no debería existir en la realidad. Es el material básico para crear conos de luz.<br />Al inyectar esta sustancia en el cono de luz, las imágenes que contienen se vuelven más nítidas.<br /><br />\"Oh, así que esto es la materia consciente del Jardín de los Recuerdos. No me extraña que los Guardamemorias se lleven recuerdos en sus viajes galácticos\".",
+   "purpose": "Material de EXP de conos de luz",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Cáliz del Paso del Remanso",
+    "Recompensa de encargo"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "name": "Motor antiguo",
+   "desc": "Motor de maquinaria procedente del viejo mundo. Material avanzado que se usa en la potenciación.",
+   "lore": "Utiliza geomédula como fuente de energía. Al encenderse, en vez de chispas, se producen auroras boreales.<br /><br />\"Solo la División de Tecnología, que depende directamente de la Guardiana, puede acceder a información relacionada con el viejo mundo. Yo perdí mis privilegios cuando me despidieron\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "De autómatas (nivel de Equilibrio 4)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "De enemigos en el Universo Simulado",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "name": "Obsidiana de la obsesión",
+   "desc": "Trozo grande de materia oscura obtenido en el vacío. Sirve para mejorar en gran medida los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilidad</span>.",
+   "lore": "A quienes tienen una voluntad débil les bastará una mirada a este prisma para pasar la eternidad en el caos.<br /><br />\"       \".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "Cáliz de la mina principal",
+    "Máquina sintetizadora multiusos - Síntesis de materiales"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1a896480b5f6ee84644db112069845e85930f6dbc0f428a3f8a6de2b187702af",
+   "name": "Obsidiana del vacío",
+   "desc": "Trozo de materia oscura obtenido en el vacío. Sirve para mejorar moderadamente los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilidad</span>.",
+   "lore": "Su superficie oscura no refleja absolutamente nada. No solo absorbe la luz, sino que parece apropiarse de las emociones de su portador y dejar solo una sensación de vacío.<br /><br />\"...\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "Cáliz de la mina principal",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "Canjeo de Ascuas"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3000
+    },
+    {
+     "id": 549408,
+     "count": 4
+    }
+   ],
+   "attackBase": 14.4,
+   "attackAdd": 2.16,
+   "hpBase": 38.4,
+   "hpAdd": 5.76,
+   "defenseBase": 12,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6000
+    },
+    {
+     "id": 635669,
+     "count": 2
+    },
+    {
+     "id": 549408,
+     "count": 8
+    }
+   ],
+   "attackBase": 31.68,
+   "attackAdd": 2.16,
+   "hpBase": 84.48,
+   "hpAdd": 5.76,
+   "defenseBase": 26.4,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12000
+    },
+    {
+     "id": 920196,
+     "count": 2
+    },
+    {
+     "id": 633349,
+     "count": 4
+    }
+   ],
+   "attackBase": 54.72,
+   "attackAdd": 2.16,
+   "hpBase": 145.92,
+   "hpAdd": 5.76,
+   "defenseBase": 45.6,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 30000
+    },
+    {
+     "id": 920196,
+     "count": 4
+    },
+    {
+     "id": 633349,
+     "count": 6
+    }
+   ],
+   "attackBase": 77.76,
+   "attackAdd": 2.16,
+   "hpBase": 207.36,
+   "hpAdd": 5.76,
+   "defenseBase": 64.8,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 60000
+    },
+    {
+     "id": 836255,
+     "count": 3
+    },
+    {
+     "id": 717290,
+     "count": 3
+    }
+   ],
+   "attackBase": 100.8,
+   "attackAdd": 2.16,
+   "hpBase": 268.8,
+   "hpAdd": 5.76,
+   "defenseBase": 84,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 120000
+    },
+    {
+     "id": 836255,
+     "count": 6
+    },
+    {
+     "id": 717290,
+     "count": 5
+    }
+   ],
+   "attackBase": 123.84,
+   "attackAdd": 2.16,
+   "hpBase": 330.24,
+   "hpAdd": 5.76,
+   "defenseBase": 103.2,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 146.88,
+   "attackAdd": 2.16,
+   "hpBase": 391.68,
+   "hpAdd": 5.76,
+   "defenseBase": 122.4,
+   "defenseAdd": 1.8
+  }
+ ],
+ "skill": {
+  "id": 20004,
+  "name": "Caída",
+  "descHash": "Al comenzar la batalla, el acierto de efecto del portador aumenta en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> durante <nobr>#2[i]</nobr> turnos.",
+  "levelData": [
+   {
+    "params": [
+     0.2,
+     3
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.25,
+     3
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.3,
+     3
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.35,
+     3
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.4,
+     3
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 40,
+   "2": 60,
+   "3": 100,
+   "4": 160,
+   "5": 220,
+   "6": 300,
+   "7": 380,
+   "8": 480,
+   "9": 580,
+   "10": 700,
+   "11": 820,
+   "12": 950,
+   "13": 1090,
+   "14": 1240,
+   "15": 1390,
+   "16": 1560,
+   "17": 1730,
+   "18": 1910,
+   "19": 2090,
+   "20": 2170,
+   "21": 2260,
+   "22": 2350,
+   "23": 2430,
+   "24": 2520,
+   "25": 2620,
+   "26": 2710,
+   "27": 2800,
+   "28": 2900,
+   "29": 2990,
+   "30": 3100,
+   "31": 3200,
+   "32": 3300,
+   "33": 3400,
+   "34": 3510,
+   "35": 3620,
+   "36": 3730,
+   "37": 3830,
+   "38": 3950,
+   "39": 4060,
+   "40": 4170,
+   "41": 4580,
+   "42": 4840,
+   "43": 5110,
+   "44": 5380,
+   "45": 5660,
+   "46": 5950,
+   "47": 6230,
+   "48": 6530,
+   "49": 6830,
+   "50": 7140,
+   "51": 7450,
+   "52": 7760,
+   "53": 8090,
+   "54": 8410,
+   "55": 8750,
+   "56": 9080,
+   "57": 9430,
+   "58": 9770,
+   "59": 10130,
+   "60": 10480,
+   "61": 10970,
+   "62": 11560,
+   "63": 12160,
+   "64": 12760,
+   "65": 13370,
+   "66": 13990,
+   "67": 14620,
+   "68": 15260,
+   "69": 15910,
+   "70": 16570,
+   "71": 18490,
+   "72": 20230,
+   "73": 22000,
+   "74": 23790,
+   "75": 25610,
+   "76": 27450,
+   "77": 29320,
+   "78": 31220,
+   "79": 33140,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "20004"
+}

@@ -1,0 +1,496 @@
+{
+ "name": "Cornucopia",
+ "rarity": 3,
+ "descHash": "Un extraño poder condensado a partir del tiempo. Verdaderamente, son todos los momentos insignificantes los que tejen un destino maravilloso.<br /><br />\"La vida es la existencia de un orden más allá de cierto umbral. Su nacimiento es la respuesta final a un universo en un silencio de muerte. Así se declara el final de una era caótica\".",
+ "iconPath": "0709e04483a44797857323afe7a2937c250ef0bc67164ac00b2e55cc2804e0d7",
+ "artPath": "1ac5748fef600fbc58e048a4bc10c4876a460bac6433acbfb90208012aacb447",
+ "mediumIconPath": "989d9b80229026fe89a071b6bcfc2e93c9c1c3c26c6c40df03e968314a485a08",
+ "baseType": {
+  "id": 0,
+  "iconPath": "81e58cfdc0c8a9a026c2c3111a6bdf663d572fa71524907b004fc5eb7f34fade",
+  "color": "#FFFFFF",
+  "name": "Abundancia",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédito",
+   "desc": "Divisa que utiliza la Corporación para la Paz Interastral para sus cuentas con los clientes y que se acepta en todas partes como moneda de los viajes espaciales.",
+   "lore": "\"La gente corre, se pelea y comercia por algo que no son más que números en una terminal, pero lo que es verdaderamente valioso no se puede comprar\".",
+   "purpose": "Moneda común",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cáliz de la mina principal",
+    "Recompensa de misión",
+    "Recompensa de encargo",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "d5bfc95d74fab56f9c9be440028051ed2a9e02f4ee968c8d3db170d5b55dd931",
+   "name": "Pin del guardia",
+   "desc": "Pin que llevan los soldados de la Guardia Crinargenta. Material simple que se usa en la potenciación.",
+   "lore": "Un soldado veterano tiene muchas cicatrices de guerra.<br /><br />\"En la antigüedad, los Guardias Crinargenta solo se podían retirar si morían\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "De Sombras del Siempreinvierno y Sombras de la Incineración",
+    "De Guardias Crinargenta y vagabundos",
+    "De enemigos en el Universo Simulado",
+    "Recompensa de encargo",
+    "Canjeo de Ascuas",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5be2ad896306c15eb63529806cc7e0175b2c2111e3a6f175accb00a85cf9b90e",
+   "name": "Insignia del guardia",
+   "desc": "Insignia de rango que llevan los líderes de escuadrón de la Guardia Crinargenta. Material corriente que se usa en la potenciación.",
+   "lore": "Podría ser una prueba de valor con la que presumir ante tu familia, o un amuleto de la suerte que te salve de una bala.<br /><br />\"Ahora son otros tiempos\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "De Sombras del Siempreinvierno y Sombras de la Incineración (nivel de Equilibrio 2)",
+    "De Guardias Crinargenta y vagabundos (nivel de Equilibrio 2)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "De enemigos en el Universo Simulado",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "635671": {
+   "id": 635671,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1b0a1a8ab4a806daac48e2e5de6c69a9a1aad87f950c5a4c92c9513dd9d6b9",
+   "name": "Semilla de la abundancia",
+   "desc": "Semilla de bendición plantada por la Abundancia. Sirve para mejorar ligeramente los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abundancia</span>.",
+   "lore": "Quienes la tocan ven cómo sus heridas y enfermedades van curándose lentamente.<br />Quienes rezan y piden, desesperados, la bendición de la vida, siempre recibirán respuesta a sus plegarias.<br /><br />\"Se te otorgará lo que pides\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 2,
+   "rewardPath": "/material/635671",
+   "comeFrom": [
+    "Cáliz del Paso del Remanso",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "Éter refinado",
+   "desc": "Material de mejora para los conos de luz. Otorga <nobr>6000</nobr> pts. de EXP de cono de luz.",
+   "lore": "Un bote de éter extraído y destilado usando un proceso especial.<br /><br />\"El Jardín desea recrear una gloria pasada, pero una que elijan ellos, ¿lo entiendes?\".",
+   "purpose": "Material de EXP de conos de luz",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Cáliz del Paso del Remanso",
+    "Salón olvidado"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "name": "Éter condensado",
+   "desc": "Material de mejora para los conos de luz. Otorga <nobr>2000</nobr> pts. de EXP de cono de luz.",
+   "lore": "Recipiente con éter procesado mediante una técnica especial.<br /><br />\"Transpórtese con cuidado. No debe caerse al suelo ni recibir presión. Si se produce un daño o una fuga, consulte el capítulo II del «Manual de respuesta a los accidentes de fuga»\".",
+   "purpose": "Material de EXP de conos de luz",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Cáliz del Paso del Remanso",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d4e3585911d6f71b87b47ced1a2f6e0b0f77dbdc8615650896e77bae87361afd",
+   "name": "Éter disperso",
+   "desc": "Material de mejora para los conos de luz. Otorga <nobr>500</nobr> pts. de EXP de cono de luz.",
+   "lore": "Sustancia imaginaria que no debería existir en la realidad. Es el material básico para crear conos de luz.<br />Al inyectar esta sustancia en el cono de luz, las imágenes que contienen se vuelven más nítidas.<br /><br />\"Oh, así que esto es la materia consciente del Jardín de los Recuerdos. No me extraña que los Guardamemorias se lleven recuerdos en sus viajes galácticos\".",
+   "purpose": "Material de EXP de conos de luz",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Cáliz del Paso del Remanso",
+    "Recompensa de encargo"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "name": "Medalla del guardia",
+   "desc": "Medalla de honor que llevan los soldados condecorados de la Guardia Crinargenta. Material avanzado que se usa en la potenciación.",
+   "lore": "Honor que se concede a quienes luchan contra los monstruos de la fisura, la gente del subsuelo y las desgracias repentinas.<br />Normalmente no se pone en el pecho del destinatario, sino encima de su ataúd.<br /><br />\"Recuerda, pequeño Gepard, esto no es un juguete. Es el destino y la sangre de la familia Landau\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "De Sombras del Siempreinvierno y Sombras de la Incineración (nivel de Equilibrio 4)",
+    "De Guardias Crinargenta y vagabundos (nivel de Equilibrio 4)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "De enemigos en el Universo Simulado",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "836257": {
+   "id": 836257,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e08699257c4a96a135b4467fd8eba3917d5734b2c943ac631d2a39ae3c4ccb37",
+   "name": "Flor de la eternidad",
+   "desc": "Hermosa flor del brote de la vida. Sirve para mejorar en gran medida los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abundancia</span>.",
+   "lore": "El pistilo de la flor contiene una cantidad concentrada del poder de la Abundancia, por lo que nunca se marchitará. Sigue creciendo incluso en medio del fuego, el hielo o cualquier otra condición adversa.<br />Algún día, sus hojas se alimentarán de los nutrientes de las estrellas y enraizará en la carne del mundo. Así será inmortal e indestructible, y sus frutos serán la respuesta a las promesas de la inmortalidad.<br /><br />\"La canoa gigante, más magnífica que una montaña, flota en el vacío. En ella hay un árbol inmortal, y quien come de él obtiene la vida eterna\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 4,
+   "rewardPath": "/material/836257",
+   "comeFrom": [
+    "Cáliz del Paso del Remanso",
+    "Máquina sintetizadora multiusos - Síntesis de materiales"
+   ]
+  },
+  "920198": {
+   "id": 920198,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "ed9df14a2fe247f4667c3573aa6eb1f367c5435d4c699eadef89c51e4d42d084",
+   "name": "Brote de la vida",
+   "desc": "Brote de la semilla de la abundancia. Sirve para mejorar moderadamente los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abundancia</span>.",
+   "lore": "Irradia calidez y los alrededores del lugar donde están sus raíces son un hervidero de vida. Los páramos yermos se convierten en praderas de verde hierba, las plantas secas renacen y florecen y del suelo brotan manantiales que humedecen la tierra.<br />Al acercarte, tus músculos y tendones comienzan a retorcerse y a crecer, y una picazón insoportable se extiende por tu cuerpo.<br /><br />\"La vida no fracasa nunca cuando el alma abunda\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 3,
+   "rewardPath": "/material/920198",
+   "comeFrom": [
+    "Cáliz del Paso del Remanso",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "Canjeo de Ascuas"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3000
+    },
+    {
+     "id": 549407,
+     "count": 4
+    }
+   ],
+   "attackBase": 12,
+   "attackAdd": 1.8,
+   "hpBase": 43.2,
+   "hpAdd": 6.48,
+   "defenseBase": 12,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6000
+    },
+    {
+     "id": 635671,
+     "count": 2
+    },
+    {
+     "id": 549407,
+     "count": 8
+    }
+   ],
+   "attackBase": 26.4,
+   "attackAdd": 1.8,
+   "hpBase": 95.04,
+   "hpAdd": 6.48,
+   "defenseBase": 26.4,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12000
+    },
+    {
+     "id": 920198,
+     "count": 2
+    },
+    {
+     "id": 633348,
+     "count": 4
+    }
+   ],
+   "attackBase": 45.6,
+   "attackAdd": 1.8,
+   "hpBase": 164.16,
+   "hpAdd": 6.48,
+   "defenseBase": 45.6,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 30000
+    },
+    {
+     "id": 920198,
+     "count": 4
+    },
+    {
+     "id": 633348,
+     "count": 6
+    }
+   ],
+   "attackBase": 64.8,
+   "attackAdd": 1.8,
+   "hpBase": 233.28,
+   "hpAdd": 6.48,
+   "defenseBase": 64.8,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 60000
+    },
+    {
+     "id": 836257,
+     "count": 3
+    },
+    {
+     "id": 717289,
+     "count": 3
+    }
+   ],
+   "attackBase": 84,
+   "attackAdd": 1.8,
+   "hpBase": 302.4,
+   "hpAdd": 6.48,
+   "defenseBase": 84,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 120000
+    },
+    {
+     "id": 836257,
+     "count": 6
+    },
+    {
+     "id": 717289,
+     "count": 5
+    }
+   ],
+   "attackBase": 103.2,
+   "attackAdd": 1.8,
+   "hpBase": 371.52,
+   "hpAdd": 6.48,
+   "defenseBase": 103.2,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 122.4,
+   "attackAdd": 1.8,
+   "hpBase": 440.64,
+   "hpAdd": 6.48,
+   "defenseBase": 122.4,
+   "defenseAdd": 1.8
+  }
+ ],
+ "skill": {
+  "id": 20001,
+  "name": "Prosperidad",
+  "descHash": "Cuando el portador usa la habilidad básica o la habilidad definitiva, su curación realizada aumenta en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>.",
+  "levelData": [
+   {
+    "params": [
+     0.12
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.15
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.18
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.21
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.24
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 40,
+   "2": 60,
+   "3": 100,
+   "4": 160,
+   "5": 220,
+   "6": 300,
+   "7": 380,
+   "8": 480,
+   "9": 580,
+   "10": 700,
+   "11": 820,
+   "12": 950,
+   "13": 1090,
+   "14": 1240,
+   "15": 1390,
+   "16": 1560,
+   "17": 1730,
+   "18": 1910,
+   "19": 2090,
+   "20": 2170,
+   "21": 2260,
+   "22": 2350,
+   "23": 2430,
+   "24": 2520,
+   "25": 2620,
+   "26": 2710,
+   "27": 2800,
+   "28": 2900,
+   "29": 2990,
+   "30": 3100,
+   "31": 3200,
+   "32": 3300,
+   "33": 3400,
+   "34": 3510,
+   "35": 3620,
+   "36": 3730,
+   "37": 3830,
+   "38": 3950,
+   "39": 4060,
+   "40": 4170,
+   "41": 4580,
+   "42": 4840,
+   "43": 5110,
+   "44": 5380,
+   "45": 5660,
+   "46": 5950,
+   "47": 6230,
+   "48": 6530,
+   "49": 6830,
+   "50": 7140,
+   "51": 7450,
+   "52": 7760,
+   "53": 8090,
+   "54": 8410,
+   "55": 8750,
+   "56": 9080,
+   "57": 9430,
+   "58": 9770,
+   "59": 10130,
+   "60": 10480,
+   "61": 10970,
+   "62": 11560,
+   "63": 12160,
+   "64": 12760,
+   "65": 13370,
+   "66": 13990,
+   "67": 14620,
+   "68": 15260,
+   "69": 15910,
+   "70": 16570,
+   "71": 18490,
+   "72": 20230,
+   "73": 22000,
+   "74": 23790,
+   "75": 25610,
+   "76": 27450,
+   "77": 29320,
+   "78": 31220,
+   "79": 33140,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "20001"
+}

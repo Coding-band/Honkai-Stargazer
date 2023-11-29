@@ -1,0 +1,2764 @@
+{
+ "spRequirement": 100,
+ "iconPath": "0cb56c510a9bb92002dce472ba8ef9b4a64e8052f84f86269209d9991951f5a6",
+ "bgPath": "5986fd23be9958a3a67e358855348aba653c0abbaf99417f1b6c6649208202d8",
+ "figPath": "8095125b1386302ee5cc69330519ceaa2633a4ee258af08a7b81dc358184f434",
+ "fgPath": "059cdf4ec1eab9c4a8825c49f4b58d40771de7a63af005c59e1b3df04f51f40b",
+ "splashIconPath": "6822455c0a99b390bc06cf51b668e540037871a57795dba58518d99689e71425",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 7,
+  "iconPath": "232bc80b207d7be892c4e0c41ea43b44080e51373e3c4f6f0f2f9e0eb4e03194",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "信用点",
+   "desc": "星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。",
+   "lore": "「人们奔波、争斗、贸易，为的不过是个终端里显示的数字。但真正珍贵之物，公司的数字是买不到的。」",
+   "purpose": "通用货币",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "拟造花萼【大矿区】",
+    "任务奖励",
+    "委托奖励",
+    "余烬兑换"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "命运的足迹",
+   "desc": "行迹升级的高阶素材。",
+   "lore": "一次又一次的败北成就了你的胜利，一步又一步的前进让你抵达了命运的拐点。",
+   "purpose": "行迹材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模拟宇宙」积分奖励",
+    "无名勋礼",
+    "余烬兑换",
+    "限时活动奖励"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "e45d41312c347a0e92a83719307e7cad0367aa98023d7b4627daa452423892ca",
+   "name": "守护者的悲愿",
+   "desc": "行迹升级的高阶素材。",
+   "lore": "与这副面甲一同破碎的，还有一位守护者扭曲的愿望。<br />她渴望在永冬末日中为子民开辟前路，却最终沦为了更恢宏的意志所操纵的傀儡。<br /><br />「大守护者，贝洛伯格统治者世代传承的头衔，看顾所有子民的人——人们并不知道，她们无人看顾，无人守护。」",
+   "purpose": "行迹材料",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "历战余响【永冬岭】"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "漫游指南",
+   "desc": "角色的经验材料，可以获得<nobr>20000</nobr>点角色经验。",
+   "lore": "跨越诸界必备的冒险丛书。按下阅读键，充满磁性的声音将以你能听懂的语言讲述知名冒险家们在不同世界间的传奇经历，以及他们在各个星球上获得的珍贵智慧。<br /><br />「漫游指南全新书系《星际美食烹饪导览》开售在即，敬请支持。」<br />「投稿请接入博识学会联觉信标<nobr>23</nobr>θ联络员，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色经验材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "「忘却之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "冒险记录",
+   "desc": "角色的经验材料，可以获得<nobr>5000</nobr>点角色经验。",
+   "lore": "装订严整，一看就颇有教育意义的冒险札记。图文并茂地描述了冒险行动的始末、有价值的信息和生存相关的技巧。<br /><br />「干嘛不数据化放进光刻片里？便携多了。」<br />「面对恒星风暴和中子流喷发时，高科技比你想象的还要脆弱。何况，制作这本书的人一定希望人们用最简单的方式阅读它。」",
+   "purpose": "角色经验材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "每日实训",
+    "余烬兑换"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "旅情见闻",
+   "desc": "角色的经验材料，可以获得<nobr>1000</nobr>点角色经验。",
+   "lore": "记录旅途见闻的日志，字迹漫漶不清，内容随心所欲，对你并没有太大的帮助。<br /><br />「看完了就赶紧把这堆废纸处理掉吧，丹恒？」",
+   "purpose": "角色经验材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "委托奖励"
+   ]
+  },
+  "468391": {
+   "id": 468391,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "e8d74f9705754fb743acb234866d6e64a1f2354cb71bf2263579546b256a8913",
+   "name": "往日之影的金饰",
+   "desc": "蚕食者之影佩戴的头饰，虚数属性角色的晋升素材。",
+   "lore": "往昔守护者的身影消散后残留的饰物，仿佛在掌心中诉说着永冬之城的过去。<br /><br />「慈母阿丽娜——她的慈爱广博如深空，她的仁善闪耀如黄金。」",
+   "purpose": "角色晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/468391",
+   "comeFrom": [
+    "凝滞虚影【边缘通路】",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "fcb7215a2a17b09cd16362b5e1b398eaaf2fde23a94057c5f961151885a620c5",
+   "name": "工造机杼",
+   "desc": "仙舟机巧的部件。强化所需的简单材料。",
+   "lore": "仙舟机巧术的基础。机巧零件最小的单位，拆开它就像在破坏生物的细胞结构。<br /><br />「博识学会以两百万信用点悬赏无损拆解仙舟偃偶的技术方案。」<br />「如果你认识螺丝咕姆，这两百万简直白给……」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "入魔机巧掉落",
+    "「模拟宇宙」中敌方掉落",
+    "委托奖励",
+    "余烬兑换",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "1977002edbf48f44c49d08284ce2681f622e70c447d50de10a8b9491dfcb719c",
+   "name": "工造迴轮",
+   "desc": "仙舟机巧的部件。强化所需的普通材料。",
+   "lore": "仙舟机巧术的连接件。细密勾连的轮齿微如芥子，却连缀成复杂的机体，令机械灵动如生命。<br /><br />「其形圆融，取法乎天。其动往复，取法乎道。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "突破至均衡等级2后，入魔机巧掉落",
+    "「万能合成机」- 材料合成",
+    "「模拟宇宙」中敌方掉落",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "635671": {
+   "id": 635671,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1b0a1a8ab4a806daac48e2e5de6c69a9a1aad87f950c5a4c92c9513dd9d6b9",
+   "name": "丰饶之种",
+   "desc": "丰饶之神撒下的赐福种子。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">丰饶</span>角色的命途行迹。",
+   "lore": "接触到它的人，伤口和疾病会缓缓治愈。<br />于绝望中祈求生命赐福的人们，总能获得垂怜。<br /><br />「令诸所求，必有所得。」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 2,
+   "rewardPath": "/material/635671",
+   "comeFrom": [
+    "拟造花萼【边缘通路】",
+    "余烬兑换"
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "058379eb2e88612f2b1f78a6c3195c457e124c9b6de602d6dd2fe0b2d17245f3",
+   "name": "工造浑心",
+   "desc": "仙舟机巧的部件。强化所需的高级材料。",
+   "lore": "仙舟机巧术的中枢。浑仪犹如心窍般翻滚脉动，令机械如活物般思考。<br /><br />「大人勿惊。拆去其心，便能令他…唔，她？不，令它失却灵智，还形金石。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "突破至均衡等级4后，入魔机巧掉落",
+    "「万能合成机」- 材料合成",
+    "「模拟宇宙」中敌方掉落",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "836257": {
+   "id": 836257,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e08699257c4a96a135b4467fd8eba3917d5734b2c943ac631d2a39ae3c4ccb37",
+   "name": "永恒之花",
+   "desc": "由生命之芽结出的美丽花朵。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">丰饶</span>角色的命途行迹。",
+   "lore": "花蕊中凝结了丰饶之力，永远不会凋零。无论将之置于火焰、冰霜或是诸般恶境中，也不能稍抑其生长的势头。<br />假以时日，其枝叶将以星光为食；其根系将以众生血肉为壤，连结一体，不死不灭；其果实将是兑现永生的承诺。<br /><br />「有庞然舟舸，势逾山岳，凌虚浮行。上有不死树，食之乃寿。」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/836257",
+   "comeFrom": [
+    "拟造花萼【边缘通路】",
+    "「万能合成机」- 材料合成"
+   ]
+  },
+  "920198": {
+   "id": 920198,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "ed9df14a2fe247f4667c3573aa6eb1f367c5435d4c699eadef89c51e4d42d084",
+   "name": "生命之芽",
+   "desc": "自丰饶之种中冒尖的嫩芽。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">丰饶</span>角色的命途行迹。",
+   "lore": "散发着阵阵暖意，其扎根处周遭的环境繁密茂盛。荒圮的废土化为沃壤，枯死的植被再度抽长生花，清泉裂土而出汩汩奔流。<br />靠近它，你的筋骨仿佛自有生命，开始蠕动增生，奇痒难耐。<br /><br />「凡胎育化，生生不竭。」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 3,
+   "rewardPath": "/material/920198",
+   "comeFrom": [
+    "拟造花萼【边缘通路】",
+    "「万能合成机」- 材料合成",
+    "余烬兑换"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 102.96,
+   "attackAdd": 5.148,
+   "hpBase": 174.24,
+   "hpAdd": 8.712,
+   "defenseBase": 49.5,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549503,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 144.144,
+   "attackAdd": 5.148,
+   "hpBase": 243.936,
+   "hpAdd": 8.712,
+   "defenseBase": 69.3,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549503,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 185.328,
+   "attackAdd": 5.148,
+   "hpBase": 313.632,
+   "hpAdd": 8.712,
+   "defenseBase": 89.1,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633444,
+     "count": 6
+    },
+    {
+     "id": 468391,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 226.512,
+   "attackAdd": 5.148,
+   "hpBase": 383.328,
+   "hpAdd": 8.712,
+   "defenseBase": 108.9,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633444,
+     "count": 9
+    },
+    {
+     "id": 468391,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 267.696,
+   "attackAdd": 5.148,
+   "hpBase": 453.024,
+   "hpAdd": 8.712,
+   "defenseBase": 128.7,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717385,
+     "count": 6
+    },
+    {
+     "id": 468391,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 308.88,
+   "attackAdd": 5.148,
+   "hpBase": 522.72,
+   "hpAdd": 8.712,
+   "defenseBase": 148.5,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717385,
+     "count": 9
+    },
+    {
+     "id": 468391,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 350.064,
+   "attackAdd": 5.148,
+   "hpBase": 592.416,
+   "hpAdd": 8.712,
+   "defenseBase": 168.3,
+   "defenseAdd": 2.475,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "d2507ea9c2e9643d603310500489a0306930550c71bf7e87c5c18e6dd76c75cf",
+   "artPath": "5512eb8a88233b499cf99dc9b3dd1d7ad360a96b4bcc60e0c9ef52fb9adec685",
+   "name": "濯洗生者",
+   "descHash": "结界生效时我方全体攻击力提高<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "471567f145711957f3278d6cb5e737231f9b34716a31d0410618d655ff78570c",
+   "artPath": "593e496141eb2a513f0ac091b9fd8db46bde0d0cd2c04ef875ea52843148a2de",
+   "name": "净庭赐礼",
+   "descHash": "触发战技效果时，若指定我方目标当前生命值百分比小于<nobr>50%</nobr>，则罗刹提供的治疗量提高<nobr>#1[i]%</nobr>；若指定我方目标当前生命值百分比大于等于<nobr>50%</nobr>，则为其提供能够抵消等同于罗刹<nobr>#2[i]%</nobr>攻击力+<nobr>#3[i]</nobr>伤害的护盾，持续<nobr>#4[i]</nobr>回合。",
+   "params": [
+    0.3,
+    0.18,
+    240,
+    2
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "425aa73abcfd4742b38b091fd3e454c0b7f6b9e43e7ea4dbe82176eecd858ae1",
+   "artPath": "904925cd697685f303cf4cc2cea5b37df894571c20a727f55e38527ea68bd4ce",
+   "name": "愚人试探",
+   "descHash": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "f439af006113f0ee25bdde71cc5a24c2f5ac48f86bf7e24a836b8fc789c40286",
+   "artPath": "cc315b9e7bc77e4c484d5f33908411b4ab43dda29bb779493f7e6f95462b413b",
+   "name": "荆冠审判",
+   "descHash": "结界生效时使敌方目标陷入虚弱状态，造成的伤害降低<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.12
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "5bf38c7dd7d41ada7135d82f36d85e4cacb7fdf95a3ac8b310c7ae51f369c814",
+   "artPath": "8dd9c1e9e1452977105c316c78856445c0c6511f0d2c25b0389fc6c4a6ee5e1f",
+   "name": "受难之痕",
+   "descHash": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "0d80e385e207c140efabf788c696329cf7377002358d3e3994bf7822a8decc0b",
+   "artPath": "d2b11e65833bd329b587760d179af0a2211b2164d40ef90db836485e76fc2952",
+   "name": "皆归尘土",
+   "descHash": "施放终结技时，有<nobr>#1[i]%</nobr>固定概率使敌方全体全属性抗性降低<nobr>#2[i]%</nobr>，持续<nobr>#3[i]</nobr>回合。",
+   "params": [
+    1,
+    0.2,
+    2
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   906493
+  ],
+  [
+   990434
+  ],
+  [
+   107079
+  ],
+  [
+   421380
+  ],
+  [
+   705907
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "单攻",
+   "descHash": "对指定敌方单体造成等同于罗刹<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#F4D258;\">虚数</span>属性伤害。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 906493,
+   "name": "黑渊的棘刺",
+   "iconPath": "3f6989274a6bb1d7f6f15a6d99bcb4fe8f5e6d56e199bbc0f575057ce49014b7",
+   "typeDescHash": "普攻",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635671,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920198,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920198,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836257,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836257,
+       "count": 8
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "回复",
+   "descHash": "施放战技后立即为指定我方单体回复等同于罗刹<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>的生命值，并使罗刹获得1层【白花之刻】。<br />当我方任意单体当前生命值百分比小于等于<nobr>#3[i]%</nobr>时，罗刹会立即对其触发1次等同于战技的效果，此次触发不消耗战技点。该效果在<nobr>#4[i]</nobr>回合后可再次触发。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 990434,
+   "name": "白花的祈望",
+   "iconPath": "425aa73abcfd4742b38b091fd3e454c0b7f6b9e43e7ea4dbe82176eecd858ae1",
+   "typeDescHash": "战技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.4,
+      200,
+      0.5,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.425,
+      320,
+      0.5,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549503,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.45,
+      410,
+      0.5,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635671,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.475,
+      500,
+      0.5,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920198,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5,
+      560,
+      0.5,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920198,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.52,
+      620,
+      0.5,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920198,
+       "count": 7
+      },
+      {
+       "id": 633444,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.54,
+      665,
+      0.5,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836257,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.56,
+      710,
+      0.5,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836257,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.58,
+      755,
+      0.5,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836257,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      800,
+      0.5,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836257,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.62,
+      845,
+      0.5,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.64,
+      890,
+      0.5,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.66,
+      935,
+      0.5,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.68,
+      980,
+      0.5,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.7,
+      1025,
+      0.5,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "群攻",
+   "descHash": "解除敌方全体<nobr>#2[i]</nobr>个<u>增益效果</u>，并对敌方全体造成等同于罗刹<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#F4D258;\">虚数</span>属性伤害，同时使罗刹获得1层【白花之刻】。",
+   "ultimateCost": 100,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 107079,
+   "name": "归葬的遂愿",
+   "iconPath": "e50431b849252f2b35e72413014753ce3a28b5022534897a88135a9b46390bb9",
+   "typeDescHash": "终结技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.2,
+      1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.28,
+      1
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549503,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.36,
+      1
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635671,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.44,
+      1
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920198,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.52,
+      1
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920198,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.6,
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920198,
+       "count": 7
+      },
+      {
+       "id": 633444,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.7,
+      1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836257,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.8,
+      1
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836257,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.9,
+      1
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836257,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836257,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.08,
+      1
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.16,
+      1
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.24,
+      1
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.32,
+      1
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.4,
+      1
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "回复",
+   "descHash": "当【白花之刻】达到<nobr>#1[i]</nobr>层时，罗刹会消耗全部【白花之刻】展开结界。<br />处于结界中的任意敌方目标受到攻击后，施放攻击的我方目标立即回复等同于罗刹<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>攻击力+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span>的生命值。<br />结界效果持续<nobr>#3[i]</nobr>回合。当罗刹陷入<u>无法战斗状态</u>时，结界也会被解除。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 421380,
+   "name": "生息的轮转",
+   "iconPath": "095e0e023199d3288b9ddbb95e86c39360912cfacc6e9d910702dd61587398bd",
+   "typeDescHash": "天赋",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2,
+      0.12,
+      2,
+      60
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.1275,
+      2,
+      96
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549503,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.135,
+      2,
+      123
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635671,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.1425,
+      2,
+      150
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920198,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.15,
+      2,
+      168
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920198,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.156,
+      2,
+      186
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920198,
+       "count": 7
+      },
+      {
+       "id": 633444,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.162,
+      2,
+      199.5
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836257,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.168,
+      2,
+      213
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836257,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.174,
+      2,
+      226.5
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836257,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.18,
+      2,
+      240
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836257,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.186,
+      2,
+      253.5
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.192,
+      2,
+      267
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.198,
+      2,
+      280.5
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.204,
+      2,
+      294
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.21,
+      2,
+      307.5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 621966,
+   "name": "攻击",
+   "iconPath": "3f6989274a6bb1d7f6f15a6d99bcb4fe8f5e6d56e199bbc0f575057ce49014b7",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "回复",
+   "descHash": "使用秘技后，下一次战斗开始时立即触发天赋。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 705907,
+   "name": "愚者的悲悯",
+   "iconPath": "6f8e33ace151be6a36883c4573f8b0d91adc0671ff0893597c37e9d71a1e3cb5",
+   "typeDescHash": "秘技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1203101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1203202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1203203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1203204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 343206,
+          "name": "防御强化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+          "statusList": [
+           {
+            "key": "防御力",
+            "value": 0.05
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920198,
+            "count": 3
+           },
+           {
+            "id": 633444,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 343209,
+        "name": "攻击强化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "攻击力",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920198,
+          "count": 3
+         },
+         {
+          "id": 633444,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 343208,
+      "name": "生命强化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "生命值",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635671,
+        "count": 3
+       },
+       {
+        "id": 549503,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "触发战技效果时，解除指定我方单体的<nobr>#1[i]</nobr>个负面效果。",
+    "ultimateCost": 0,
+    "id": 343112,
+    "name": "浸池苏生",
+    "iconPath": "347254f98849df5eb5dffde122e5b9f99d3b851535fe3f1f2bb1ed5fbc3db3c1",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635671,
+        "count": 3
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1203201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 343211,
+    "name": "攻击强化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "攻击力",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549503,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1203210,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 427151,
+    "name": "攻击强化",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "攻击力",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 160000
+     },
+     {
+      "id": 836257,
+      "count": 8
+     },
+     {
+      "id": 717385,
+      "count": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": 1203102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1203205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1203206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1203207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 343205,
+          "name": "攻击强化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+          "statusList": [
+           {
+            "key": "攻击力",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836257,
+            "count": 3
+           },
+           {
+            "id": 717385,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 343204,
+        "name": "生命强化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+        "statusList": [
+         {
+          "key": "生命值",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836257,
+          "count": 3
+         },
+         {
+          "id": 717385,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 343207,
+      "name": "攻击强化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "攻击力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920198,
+        "count": 5
+       },
+       {
+        "id": 633444,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "处于结界中的任意敌方目标受到我方攻击后，除攻击者外的我方目标也会回复等同于罗刹<nobr>#1[f1]%</nobr>攻击力+<nobr>#2[i]</nobr>的生命值。",
+    "ultimateCost": 0,
+    "id": 343115,
+    "name": "浇灌尘身",
+    "iconPath": "f23e8629d856f4243741d5ed167d1d4527f70121b98fe29fb8d97496b120d08b",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.07,
+       93
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920198,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1203103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1203208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 343218,
+      "name": "防御强化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+      "statusList": [
+       {
+        "key": "防御力",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836257,
+        "count": 8
+       },
+       {
+        "id": 717385,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1203209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 343219,
+      "name": "生命强化",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "生命值",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836257,
+        "count": 8
+       },
+       {
+        "id": 717385,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "抵抗控制类负面状态的概率提高<nobr>#1[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 343114,
+    "name": "行过幽谷",
+    "iconPath": "da732eec4303fd6b7f09c776b80f77d702c0dfe46b063d0d710ec54047a122b6",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.7
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836257,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "躯干",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "治疗量加成",
+    "propertyIconPath": "57726150eaa27c675743fe08b88bd04575a0e76b5014dcfbc073c105aa1c7e44"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "速度",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "位面球",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "攻击力",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   },
+   {
+    "relicTypeHash": "连结绳",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "攻击力",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初次见面",
+   "text": "在下是路经此处的行商，叫我「罗刹」便可。",
+   "unlockRequirement": "",
+   "cnUrl": "56874cde63ad935df06b196e8791a32c86fa01852f9557f7fff4efd40afba115",
+   "jpUrl": "60dc80216c3fac0bb9af2fc357d0758d476c50b24fc761c9bc5b63abaaaea85e",
+   "enUrl": "8840e0aa6bfd56a04470358eb59d9c8bfab9aece2acc444903246bb0a566d403",
+   "krUrl": "ebc7a6a2ce8741f21967293a187fdea8f96d65a3e07af3362bcea7681b7609dc"
+  },
+  {
+   "id": 2,
+   "title": "问候",
+   "text": "起早赶路，昨晚睡得可好？",
+   "unlockRequirement": "",
+   "cnUrl": "d39007ea62a4ebd770b49751306b9964ed880fd7f6e06c74ee55dcdcbd9b7e5a",
+   "jpUrl": "3aa46549acb159a6a52add5f453f3084ebfd5cc533ce51a25e020a83f08040b3",
+   "enUrl": "b9fdc146dbc8103a5b42882d15f11ea56a2b4341d0c6fb936c360066324a9e81",
+   "krUrl": "c094ca9f994fa38b3862f2218046ea7d0a0b057a246a4fc5f59b387d03280024"
+  },
+  {
+   "id": 3,
+   "title": "道别",
+   "text": "早些歇息吧，此处有我守着。",
+   "unlockRequirement": "",
+   "cnUrl": "917a09dd5a45b3c3adbb92113c55aec666ec9c10cf504302d276186d10cf7758",
+   "jpUrl": "1f6a1e4843b00b059b355d64f9c8de89a72c1aa61abdc5cc3a3d24de2d2d1dd1",
+   "enUrl": "8da62a326ad47eb4aff27f06a2fad8b21c54968d895c1a73aef36fd23346f1b0",
+   "krUrl": "b408a362b33833f41a9641835eb47569c3f29cc711361651f4e3dcdc5745ed79"
+  },
+  {
+   "id": 4,
+   "title": "关于自己•医术",
+   "text": "行商在外，无依无靠，懂些自救的手法，心里多少有个底。",
+   "unlockRequirement": "",
+   "cnUrl": "808c8fa0883454d076c0759aa34f58a706133034266505d6b9d8ea1389a55aab",
+   "jpUrl": "a9da8a2874a7662668114bc8c8988b0682f46efb36145fb5ef941d4c1bff14b3",
+   "enUrl": "a0fa6a2ca16a233d3b3c9a6f2a0bd682a03b3882f202527011be891709db3907",
+   "krUrl": "5f045248180d89f8154869232320375695e1b664bee5c88be6c9e4d7a206eb23"
+  },
+  {
+   "id": 5,
+   "title": "闲谈•棺柩",
+   "text": "棺柩引人瞩目，在下身为行商，受了它不少关照。各位对这具棺柩颇为好奇，总要问我一问，这一问一答间，生意就做成了。",
+   "unlockRequirement": "",
+   "cnUrl": "79ab342daaa6276f80005b5a18cf479e5db225a6d2df24d944171b8ac0f6c229",
+   "jpUrl": "ce93a04778cefa5660a473219712624344918cfccdd9c86bb6bd3ef682d156f8",
+   "enUrl": "f914baab2f14db34873661a6a527fef62b7ed4139fbfb493bcf1f96cc9946912",
+   "krUrl": "0690077c6db764e19df940a056cde4a6513a743fd1f5e47df13141bbbf26cd7e"
+  },
+  {
+   "id": 6,
+   "title": "爱好",
+   "text": "各地的人情风土，读到的总和看到的不太一样，分辨其中差异，便是乐趣所在。",
+   "unlockRequirement": "",
+   "cnUrl": "8bb1ebb3ca549b45ef6cff3a810e3dfbd268bb11877362ad8a36f5e4cc50c6f7",
+   "jpUrl": "6e371b122f74dd6407f0d68d75e4759a71c5c9983bfcbd8b7b00c798267e6f87",
+   "enUrl": "aeac46cbdcca48499a119008c7371a8b32250b0714bc45b809111fde2601d235",
+   "krUrl": "2e2c85aec5caa3fa6e442c3869666737057381c65d9c2590c76931f1693cc5e3"
+  },
+  {
+   "id": 7,
+   "title": "烦恼",
+   "text": "万一被卷入了麻烦事，自己的真心如何并不重要，重要的是如何找到适合自己扮演的角色…哎，经验之谈。",
+   "unlockRequirement": "",
+   "cnUrl": "e7cc1f0893a20047e2fcb7807516265292b0f63c39d04e620e5b0e297b3e9cea",
+   "jpUrl": "51953ededc6339869f49d47567ceab4501259acf59aeaa6893bdb9343318e543",
+   "enUrl": "172b8f1085641b57282027df48c46a85cfa4072fdeab4e3d514de215e1f14195",
+   "krUrl": "8263844463bccc1222b8ae60c34a345427512142d36856c17b1c8436efac5a34"
+  },
+  {
+   "id": 8,
+   "title": "分享",
+   "text": "花的意义是花期本身，而非花瓣、香气或是洒下的种子。",
+   "unlockRequirement": "",
+   "cnUrl": "42985c92f9857eed5984291598d17eb8a53ce15ba2c37ad7045abcfaf0593705",
+   "jpUrl": "5fd663069acd7b6744e2dfb1f980618501c55e64b23eea2c4dc332b7cbddd911",
+   "enUrl": "72a6b5fc4c615e888a8b741af88a8b19ea4b6406c5af33f539fb374de50534ce",
+   "krUrl": "22eee6e31293b2f37ac2127e717e5aba6a8f55e8b9ae4b126808169fcca6550d"
+  },
+  {
+   "id": 9,
+   "title": "见闻",
+   "text": "久闻仙舟天人驻颜有术，一见之下果然不假。只是他们为了紧守此秘，避居银河一隅，如同空坐宝山而无所取…可惜啊可惜。",
+   "unlockRequirement": "",
+   "cnUrl": "48e6c89216383c466bdc57bb16688af45fedb9ec0814e82e41feb7ff760409db",
+   "jpUrl": "ea46f2335490c884d0e3e57690a97fd4be717d75b56c68c03bf76884fe65c961",
+   "enUrl": "92dd3a296eceff67a5c8d91bd493dacfcad43a08ee38ad6d779ae28ccd35aa63",
+   "krUrl": "d069e9dad91cb8214d3c6174e86e5405ef6043dfa923b875c30906936ed974b2"
+  },
+  {
+   "id": 10,
+   "title": "关于景元",
+   "text": "将军不仅擅长洞察人心，还深谙「藏」和「露」的艺术，当他「露」出些什么时，便要小心了。",
+   "unlockRequirement": "",
+   "cnUrl": "0d356a395fdf00beebb29965556b7b3089e71aeb541b29f4b4c7d4e07710f531",
+   "jpUrl": "984aa03c7381a6e482e3b5b720521b52eaf1ef3bbadfbfa63ed18b3dbc1fb6ee",
+   "enUrl": "3ee10fcb495a12953172225a45429020c67aef2ad90326ca23f4a9b71db1bbc4",
+   "krUrl": "4fcabb3ae98332f70f39d01968195639f68671adc689992f47cc762558d24906"
+  },
+  {
+   "id": 11,
+   "title": "关于彦卿",
+   "text": "哦，是将军身旁那位机敏的小公子吧？没什么印象……",
+   "unlockRequirement": "",
+   "cnUrl": "8146328af7d5aa3cf20b4c0b20bd2e2ae1acd42415fae8585150dd5bf74e445a",
+   "jpUrl": "e79d915e0f77a433e313f1c3a1fd21b55f7515e305d55135511dc6f585872931",
+   "enUrl": "9eada81f4140aaa52fb6857e858eb335f35dbd041166211029548d0c79d60a53",
+   "krUrl": "5985faf0efbb67afebb2f4c1e10520e5506de1e85cde0932753e286b50e6c821"
+  },
+  {
+   "id": 12,
+   "title": "关于驭空",
+   "text": "少有人能像她这般，看清自己终究不过是银海中的一粟…值得敬佩。",
+   "unlockRequirement": "",
+   "cnUrl": "e9da515c555d331e22b075aa06e8b751d93846dbcadc69bb8860fd7bb55812aa",
+   "jpUrl": "de9f8f1383901d0ce45236f78b1aefeb6fc6bf01042fab1d7b2e150b28c85beb",
+   "enUrl": "326e299934aa22df0d5493205e842db642a1acea09cd279bf4943da101b56200",
+   "krUrl": "b93553d16423d3687de084801184655c4c91406cf9ac2d00211c1e35631a4c29"
+  },
+  {
+   "id": 13,
+   "title": "关于停云",
+   "text": "无论停云姑娘说什么，都没法让听者置之脑后。狐人能言的特点，就该巧加利用，不是么？",
+   "unlockRequirement": "",
+   "cnUrl": "319eb6246b6178e781889db0bc729a5233ebc30910466205c10de9a1fd47cec9",
+   "jpUrl": "2f3eee4ed3091831d031a8b142f06c878b0187ebb7178fbce9d46d0c189bc7d7",
+   "enUrl": "17f2add8bf77dd978017a97b23977bacd81d0da584c91bcfaf90b1a1a3437218",
+   "krUrl": "6caa24e1c0176983bbbccb41dbab931f2d27bcbd21d40f2ca1ce45d5682c2a38"
+  },
+  {
+   "id": 14,
+   "title": "关于素裳",
+   "text": "是个热心肠的好姑娘，还叫我再来仙舟时找她喝茶听书…听书还是算了罢，太耗时间。",
+   "unlockRequirement": "",
+   "cnUrl": "ddc2449b7f9de7d59d8b68754dcffab5e0ccb3d409de9ba02f3b649c37ebbc11",
+   "jpUrl": "1913a53a71e99a576cf52e6786bd3eb13820ab7be7dc6885368fff8f282a7cda",
+   "enUrl": "f67f2929af724427fea00b8f2f18110cddfc1723214c9816a5d6d88365656315",
+   "krUrl": "21a118b20159457ad2b0bffd2413bf106d024ae77bc1f5321e4b61fc551f6ffa"
+  },
+  {
+   "id": 15,
+   "title": "关于镜流",
+   "text": "她心中的那把剑，早已劈开了天地。但掌握了那样的力量，她也不再是一介剑士了。",
+   "unlockRequirement": "完成开拓任务「安灵布奠，天清路远」后解锁",
+   "cnUrl": "2c2d37d69f156fba5c11c916decda33298e508bce8ebc2445d5fa537f3a0dd44",
+   "jpUrl": "f6a0e5100058469c4f0b74e0f3790c9b844e02eddfb5084ee775f3137117cd66",
+   "enUrl": "d1a02832cc73a201e85fba23d49ada332ef2702a715dcd043257dcc0c17d9aad",
+   "krUrl": "33bcb2108f9e9207eae27e0151b20a2cfbf864230b696dbec9408e75df8ca173"
+  },
+  {
+   "id": 16,
+   "title": "星魂激活",
+   "text": "星光之下，并无新事。但托你的福，我有了全新的体悟。",
+   "unlockRequirement": "",
+   "cnUrl": "74cf9c4a79a33a59a0a1d79c20c41bf3a97cde4b091ec7e6f2f86795f355afd7",
+   "jpUrl": "f14f87ed2f3c79a0a504e7e2082cd7a37721e9c8113a7a2c839ac1e8d50510a7",
+   "enUrl": "fc8c4c73ac1a27b54f54d641cb79ca883f462693482b3d836f7f1be1b4c75fd7",
+   "krUrl": "5645d67bc92e60ecf015a69a82fd934e450bcd2ec07e3949178419b8541b5369"
+  },
+  {
+   "id": 17,
+   "title": "角色晋阶",
+   "text": "花朵自种子长成，需要几分时间，几分耐心。",
+   "unlockRequirement": "",
+   "cnUrl": "f744b128273afcaa7fd71175936f90aaaebd565380f16d6dadfdb9ee8923a686",
+   "jpUrl": "d1e7ff057f748c868b25c4163b9ca4d7931d7b48ca7c81d93df81baf8ceab54c",
+   "enUrl": "00d1998730c4efb21213ad892e468099381b92acaa52582a82b77ac1ca1f2f37",
+   "krUrl": "94bdd7d7836584ea9050591f4b8db22119efb1efb6b999832eb7dd6b44ae49d6"
+  },
+  {
+   "id": 18,
+   "title": "角色满级",
+   "text": "人类的成长固然微不足道，但却比神的不动完满更为可喜。",
+   "unlockRequirement": "",
+   "cnUrl": "05a3ef27b131194844936cc39f0a29084f4f2efe8b8f291b12e694a8449c5437",
+   "jpUrl": "d7f7fbba4c5336622556b51a94360fa53a5ab1e4d8ea9b0645f308fb119f919c",
+   "enUrl": "771e98c80f0d2460abff7b21bf8a9a4a26bfd949950e67da6d44e58589be9a74",
+   "krUrl": "1d1cba349ddd63982c66420500e157f910fb431308df7a30e4d1be6c3136a736"
+  },
+  {
+   "id": 19,
+   "title": "行迹激活",
+   "text": "已有之事，必将再来。我的足迹不会因此停驻。",
+   "unlockRequirement": "",
+   "cnUrl": "0db94afde7b9f00a8f5ab168fea5768d1f340c25b64044f1d2a98a92a4f1712b",
+   "jpUrl": "3c71bbc3c766fca25f66d7ebdacf7b1d85b73f197fc59868e02a4b94bd8af022",
+   "enUrl": "c95eb57dd4487892e584fa715d79b4d556d6fca038ad0d475bbd1c3b884ad40e",
+   "krUrl": "c42cdb4b0b0d0cdbab912aeabdd1f078eec8f67fd1f60b46452442b3150713e6"
+  },
+  {
+   "id": 20,
+   "title": "队伍编成•素裳",
+   "text": "素裳姑娘，我不谙刀兵，还有劳你多多费心了。",
+   "unlockRequirement": "",
+   "cnUrl": "a891d44b09413287e1404f1088e1afcc909f35caaae6bb69c8d8dc20363aac9d",
+   "jpUrl": "8aeb053594b93c682559a44eacb68cd7cd703b934db888097e56fbae99424b74",
+   "enUrl": "2e9c3053db45ae0846405eee847ef4703f20efce61531e6c8b94fe9493699266",
+   "krUrl": "7ff8aadcfd592b27e8c3514d272f300f3a8da5f05fd4f9d0cf57083f2f1f2c05"
+  },
+  {
+   "id": 21,
+   "title": "队伍编成•景元",
+   "text": "将军是想让我展露几手，还是藏匿几手？",
+   "unlockRequirement": "",
+   "cnUrl": "c357c5a0d3eebc9e9d1efc9b0bead8482b9528a71487b22ef9cc02277ef69846",
+   "jpUrl": "11bcf197a3f6c248313b9018b384cd671f5df8d4096539b6a20cf106a909b1e0",
+   "enUrl": "f4e7f64a1db63cc9e7169fb1087ed92453c39feacc1374789e1891d84b4263f0",
+   "krUrl": "5ab3d118b23580a093b4a82de6987a65be6cca1e724d45dbb6b543e647d2e42c"
+  },
+  {
+   "id": 22,
+   "title": "队伍编成•镜流",
+   "text": "能令你动剑的对手，想必不简单哪。",
+   "unlockRequirement": "",
+   "cnUrl": "13e7719ff9ce4dd3ea016616f58052fe97b81fa054e3a5f879145c89cb0860a1",
+   "jpUrl": "8c05db79bf1d57cfe8cdc88023bcda6b90715c630a1d2876dbb6a26d12bfa0cd",
+   "enUrl": "b79cd2fcc8938324e023981f49241503b9dc70104ccf29d02362592c1a65d68d",
+   "krUrl": "07be53d1f89776e57e537cdd195fdcb1724c7b268c572524a0c5c27cb800e1d8"
+  },
+  {
+   "id": 23,
+   "title": "队伍编成•丹恒",
+   "text": "这次又要与你同行片刻了。",
+   "unlockRequirement": "",
+   "cnUrl": "ebdadcf70f9299718669f5ecf7f3a4af996d0e9f2e879c896f4fa941560626d6",
+   "jpUrl": "e286b29b3a12b8e0f3db18affea9024fb53f52bd667e5f30e1805de70259a24d",
+   "enUrl": "78b25cff6790d26628eac14359ec2a0f9a322621d631d6075678d7aa6de9951b",
+   "krUrl": "50b0a107d7a6e92c47a43e85fe8304690f9b6f35484ad373113b076ea80379f1"
+  },
+  {
+   "id": 24,
+   "title": "队伍编成•丹恒•饮月",
+   "text": "这次又要与你同行片刻了…对吧，饮月君？",
+   "unlockRequirement": "",
+   "cnUrl": "6d8f74db76793d38a9f022db470733eed1ff727278feeb972cbb991c88b24a7e",
+   "jpUrl": "c2479021bd30787667fe1ad92fc7262bad469702b5ad39d2f38987d52b392648",
+   "enUrl": "e18b873ff07422b74d62819b1fcfe6ffc2c7d700c4162f278eb2d535fa9c0735",
+   "krUrl": "fe7b1c247759a77578eddb30301e210ac175a675977b51fb4c78a2ae8530abf1"
+  },
+  {
+   "id": 25,
+   "title": "队伍编成•刃",
+   "text": "可惜，不死之人所求的葬仪，我无法替你实现。",
+   "unlockRequirement": "",
+   "cnUrl": "0048dc9594c41f0cb9626efc364a0d0794bdbfc1a26f36f543d7900cbede5707",
+   "jpUrl": "c4724e76c5acc8a3d1a35d54b442370446ca4df6fc17c34141fcab42c5b7c0eb",
+   "enUrl": "8058693ca924ea685f992af7289c0e7b776e62a3f5d1c7eed220d13d5db16411",
+   "krUrl": "5e19187ee89ba1020635a35cc15125f1956c2b3487d22555a63a5eeb7da12460"
+  },
+  {
+   "id": 51,
+   "title": "战斗开始•弱点击破",
+   "text": "清算的时刻到了。",
+   "unlockRequirement": "",
+   "cnUrl": "d67e293c6de97dab00db31a73dd9f4b057ceb0973cf4c313386f6b927dede6e5",
+   "jpUrl": "41d0426d6a730f80bc5eccfe7e8dbd3a4acdd866e66bf182f9e94804d7d523c0",
+   "enUrl": "32db94c73ae9ff01413d3a7912512a19356d6db3395c01c486572e8c1fc4ef1f",
+   "krUrl": "5bae5e37681d6ef312e5a9c717393757ccb342b166de325e403d43ebb0f71762"
+  },
+  {
+   "id": 52,
+   "title": "战斗开始•危险预警",
+   "text": "不能松懈。",
+   "unlockRequirement": "",
+   "cnUrl": "534313af439ddb38e437302ae15e2f3203fb1f677c228040c18af59db51a430d",
+   "jpUrl": "c567fca0db94f1717a1ba2ff574c2890a25389bfe446fca13a80f2e6ce9754b9",
+   "enUrl": "48a96b3d17a014c0010a712fb7ae52b65a70ab72f6ad9e9c53cc82fd8b4b1580",
+   "krUrl": "4efbe8874b2ffae1b1869a631f198b2fcf2cdb72c64a2bff3456dccab64cfd29"
+  },
+  {
+   "id": 53,
+   "title": "回合开始•一",
+   "text": "可惜，你们选错了对手。",
+   "unlockRequirement": "",
+   "cnUrl": "41bde5c253c8b65d654fcceb065d2966a7933bb6046cb2aaaa250b05fae60b8e",
+   "jpUrl": "e5fc7adfe8a75d91119df28729f4b2f963e12b752d7ccf25a1b0dd92c98f1863",
+   "enUrl": "685f8ed13eb26225979f16bada635509b912c984eb1e28f2c3f3efa7b387775f",
+   "krUrl": "f50337f8e10ec0676e90858658b1de2837ebca50bb22abb86db842d1c3df0459"
+  },
+  {
+   "id": 54,
+   "title": "回合开始•二",
+   "text": "我来为你送行。",
+   "unlockRequirement": "",
+   "cnUrl": "0e297734f061143d34f1f9eb3235148abbf9e12a84b87619097d450a20cf3acd",
+   "jpUrl": "b0bc99f2424f4d9456d0d7d4d30c112d99bc8c46969329c0b874f6844ba82efc",
+   "enUrl": "e8fb6e41340c5159a144fe7fa8c1a59fde4eac0fcbbbe5d53388c39c28f76cd5",
+   "krUrl": "21aa896a5e2180c02491f91c2b69c068c3870cc64bc47504c6951138941cf612"
+  },
+  {
+   "id": 55,
+   "title": "回合待机",
+   "text": "还在犹豫什么？",
+   "unlockRequirement": "",
+   "cnUrl": "2ba93be95212f7cdf5ea39108fef4f1d9694671cac8f28f571347fccda9321f2",
+   "jpUrl": "e1403924878c050c74fed43ff9ce69ea03ff265c3398f8e902cb885f64ca8033",
+   "enUrl": "e44efba284c9051f7cbb2c2852e6072907e04acf4f493137532eb1d91b76461a",
+   "krUrl": "f9261a08f8b12fde42ca562b7e9f855578b54df1a627989d1bf1a764189aa1a4"
+  },
+  {
+   "id": 56,
+   "title": "普攻",
+   "text": "哼。",
+   "unlockRequirement": "",
+   "cnUrl": "a540b20433a5151add73f30a261fa9f541da3fdc12a97cd739d703d29736cf1b",
+   "jpUrl": "9c3d72efbf1f6f68804483f37c282bb9524a64e8df4aa99a4acca523e03cf470",
+   "enUrl": "65107a4530689cabc2648420c36a345790914622bf02c23d4bb7ce96e740a023",
+   "krUrl": "f87779b1a4bc78a24c02af4e851f39eebf81450d9038e55e2f0d89fc29b248f9"
+  },
+  {
+   "id": 57,
+   "title": "战技•一",
+   "text": "白花盛放！",
+   "unlockRequirement": "",
+   "cnUrl": "524a54ab5f3a853be0cb64c280ea1b5acf0350553999548b962b188fd8894d20",
+   "jpUrl": "0b46232dd3267a3a73a56274c3dc41c1f5f6fc8e10393b086b936ef229ebed77",
+   "enUrl": "9543b9f3e460376bb1e3ede9229eb2d0c2436f5d6ec1999aa4cc272eba9ff430",
+   "krUrl": "5173ef5d8b520f6eed95629035b0fd0318bc0008fe1e944e97aae32a2e8ceddd"
+  },
+  {
+   "id": 58,
+   "title": "战技•二",
+   "text": "领受天赐！",
+   "unlockRequirement": "",
+   "cnUrl": "6caa497ebabde563fa4da5538db85c310d7f537d443ad0543b9e79367000b52a",
+   "jpUrl": "cec965df1d6cc297fdd2f32a56f268defafbe2e48f4fd2d4e891b48760c4a3a4",
+   "enUrl": "c35b5038d8d2826f57ab1bfad167c2045f3821839370498c490667f4c2012e8c",
+   "krUrl": "6c93b361c6c4b1e70cc703136b7c03552832476cd7699ba66725a4b3e918ecec"
+  },
+  {
+   "id": 59,
+   "title": "轻受击",
+   "text": "还好，没事。",
+   "unlockRequirement": "",
+   "cnUrl": "ad527a80d9a1da90f660136f4f66d9f11fa81345d73110466ad35bed9c7a855a",
+   "jpUrl": "62401fd7775eb4510c1507b79e08ab8c2eb358b4c920025ec41703f64f59814f",
+   "enUrl": "c24f2c44baec5ef76e101e152f11fe36b686c5fa69d35b5e4c44da34a3ad6a82",
+   "krUrl": "8e69d0cbc76cc5390db5c0deb8138b9bfe99a928174e02f29d59564792eb1167"
+  },
+  {
+   "id": 60,
+   "title": "重受击",
+   "text": "小看你了。",
+   "unlockRequirement": "",
+   "cnUrl": "c0c461c78f2fefd49d1d7952611a9146cfa9dea8bfc24d9acc0c71abd430fd7b",
+   "jpUrl": "8ae696afcd1ca68b92a5cb2c9a1e324d3b46c24c7a99dc250f234a74edb83456",
+   "enUrl": "b52173349ac970f7d7220faf059424fd5cc3a9e7204121fcf3847cfa31d25a70",
+   "krUrl": "6d1ee77d9738f701766651aedfd7f4484058d5f86a8af35b613b29e0edfbfc91"
+  },
+  {
+   "id": 61,
+   "title": "终结技•激活",
+   "text": "永眠非终焉……",
+   "unlockRequirement": "",
+   "cnUrl": "33023401564440ce6eb49b94c902797dfdb0af35defc7acb2683c462aeb717a9",
+   "jpUrl": "033dfa8411d1c74ab0cb5519d455ea13aaa2685f99cb22994f0b1613e26a229d",
+   "enUrl": "f5abc2dfb535d0f7c9e5ccb0442bd42af4c19de797fd613a38cb6f9febdc2ea2",
+   "krUrl": "703eeb8a97016cc53274fc4b057f32fc9572a48f7fea602fe7c5e3edeb7e1d62"
+  },
+  {
+   "id": 62,
+   "title": "终结技•施放",
+   "text": "逝者将再临！",
+   "unlockRequirement": "",
+   "cnUrl": "95cbfe4e6b47cbce4a4b9046c3b65bfd5bbd0eec32b73572aaf4dffb86ff453b",
+   "jpUrl": "16af0e1652a60e32a479e3aead60b8280ef2b752d589a8cb107a1020c308e8a1",
+   "enUrl": "89cfc0bd02aefb58550625fe43f390dbbe73f385c4f1862cde163709557cdda3",
+   "krUrl": "0e1c4d9ea8f894ffa96ec6ca7db03e4c3db0e9fba2a7d1eaaed5ae59ee593d6c"
+  },
+  {
+   "id": 63,
+   "title": "天赋",
+   "text": "凡夺取的，必将偿还！",
+   "unlockRequirement": "",
+   "cnUrl": "9ee98bf0737687aa6aea22819c34970900d3be4a32cd02dc98da006be39612dc",
+   "jpUrl": "ab020c6bde81fdcf697067d78ddb3790553fe462e69eca01ea34003db9929cac",
+   "enUrl": "5a862da08c1def0fd34c6170f9bc2fc719cdcdc034b5820bcf666d0942db09af",
+   "krUrl": "4a751ac39d04022ea07dc7d859917350f91b3efd6987cac4e27af730f7aa4680"
+  },
+  {
+   "id": 64,
+   "title": "无法战斗",
+   "text": "没能…实现啊……",
+   "unlockRequirement": "",
+   "cnUrl": "34abb5a06b678afa0d4e48bce331a2121d4d395f2a11b5accfa4493f5176922f",
+   "jpUrl": "633615b8dacc906cd79d31eee77e313912217c13039371f1cbc330fa65e7043f",
+   "enUrl": "7f06ab479d3e5d8327c857e594154fb6d621de63da9815a09d607760e5ba86ac",
+   "krUrl": "d955476a31d06815658cc91da7e9d3fb937341c613aab0c9b1356ab53f986c70"
+  },
+  {
+   "id": 65,
+   "title": "重回战斗",
+   "text": "你看，这不就回来了么。",
+   "unlockRequirement": "",
+   "cnUrl": "03fa994f0a4d4a6e62de3b8fe5ae86c6f43aca06c9efbe4349c12e3af6bc7780",
+   "jpUrl": "6e1fc13821d339cfee848e150da7cf58202f7826fec87d95590b7e194974488e",
+   "enUrl": "262b8b4c6a7009bbeaa0ea7a94a2e12dac5b4e08b23f69cbf215b647af4ec438",
+   "krUrl": "6fd01f7dc281f808854eb649a9aec5a748c32e9a3fbc164621ad2d8088ddaa4b"
+  },
+  {
+   "id": 66,
+   "title": "回复生命",
+   "text": "感觉好多了。",
+   "unlockRequirement": "",
+   "cnUrl": "cee24ec5d42aa6bd1034bcfa402ed88408ea8b85d29cdbd016d6672d507ed418",
+   "jpUrl": "41ab314713efe383ee1c5bb5853762c2152afd769b27cba8bc553f8d9ef7edd4",
+   "enUrl": "9a1ab5c2241e8a162c92428eed0c95e61b4708374b4c1347ba193b174ef41bb2",
+   "krUrl": "ca0acf2a58cd76bc863a8fa9ee8bef09d88822c6c4c7330108f776378f826105"
+  },
+  {
+   "id": 67,
+   "title": "秘技",
+   "text": "拭目以待吧。",
+   "unlockRequirement": "",
+   "cnUrl": "5e4f7cc234e66b303f2798fe95e04434d7713871275e34c8a3266ad8cf20637e",
+   "jpUrl": "9525fa0487ea4328428574a7ac05928245605f474e2df045ceee8a6aec9216a2",
+   "enUrl": "5586291d99569a6b05e5dea584ac7451f0d5a74befe82b1d893b3d5caee85ea8",
+   "krUrl": "06c84326f7fc3c85c737a2a1305afa15d43b1c119e4de424f765174a697f6d94"
+  },
+  {
+   "id": 68,
+   "title": "战斗胜利",
+   "text": "不过是一时兴起罢了。",
+   "unlockRequirement": "",
+   "cnUrl": "9f5aed23a4c2a49e80d1e4d6fdff5554051410d17927485355d763f375c9d641",
+   "jpUrl": "3e52322b129c1f93235cabe925f5b64032429441c6c71220fb76a271c21332e5",
+   "enUrl": "7ea88be89daf17f20277f794b15a2487f6015cac30900cfa96d97fb9792a40f3",
+   "krUrl": "5cd6e544c33430737e8591b9b49ac250d7157da539f639ac2ffa5fcc643602ac"
+  },
+  {
+   "id": 69,
+   "title": "开启战利品•一",
+   "text": "喜欢便拿去吧。",
+   "unlockRequirement": "",
+   "cnUrl": "325ed23e5e338206dc97d190500f442d1785fd486393d271e706e9269bf4c139",
+   "jpUrl": "894da736bb0b9238d4db0050c6a0cfdd3a2cb25243fc1f939241fed55b6dcf2d",
+   "enUrl": "dfa793328b88f795f803d74eee59f6f5ea7cfa702b6aeb0357d2d51ef3e73101",
+   "krUrl": "b9308724f7d27fd30cb371d7774422d1503fea6c8b4efd8dd7e72073255fdd7a"
+  },
+  {
+   "id": 73,
+   "title": "开启战利品•二",
+   "text": "收集也是一种乐趣。",
+   "unlockRequirement": "",
+   "cnUrl": "0999b9a7f531eb808acd8a029f320e81c0c758ce49660afd14a5c1d609584769",
+   "jpUrl": "6648df7ddfff7958259b8742102b0174858d3dcdd86329c8c034641318860670",
+   "enUrl": "df8ea3b9151ad90653a57feb53793de5e1eb6c69a2502084479368a98df1f5dd",
+   "krUrl": "9fe16270fe593470ef7deeb3aee8fe1782d6e7ae85370b62a4aea8d9473b1812"
+  },
+  {
+   "id": 74,
+   "title": "开启贵重战利品",
+   "text": "是上佳的商品。",
+   "unlockRequirement": "",
+   "cnUrl": "8866bf81a43d997acd3dcf7fcd7322ed45882df57afea8c977f0ca516d4cebac",
+   "jpUrl": "9df869016530519fdc5838f527c303f2895968486c4f4205bef8682641450bd2",
+   "enUrl": "b2b768928063c848c4cdf7de86e7aeeb087e330aa05899a85675f6fd05967ba0",
+   "krUrl": "65c971b76c028d9af64c64a394369f00d3f4aabdfd236928c0b6b408d1c9a6de"
+  },
+  {
+   "id": 70,
+   "title": "解谜成功•一",
+   "text": "不值一提的小伎俩。",
+   "unlockRequirement": "",
+   "cnUrl": "e8ad5d74e005d270e3db1d6ed4ec7b0944c70c1b94691e0e81b2bcf93c648e6a",
+   "jpUrl": "fe8736a7f2305eb1b71227ab7722d71f6e6bbed302ff1abff9509ca63e0577c8",
+   "enUrl": "39f99ff96daecef003a73e190da48a2badbb57c752a59417994d39bb2528d2c8",
+   "krUrl": "5ec6e0ec03e7a6586c71f3dd364311a5496c5cbfe92e319dd10403c0c424219f"
+  },
+  {
+   "id": 75,
+   "title": "解谜成功•二",
+   "text": "在外行商，多少得会一些。",
+   "unlockRequirement": "",
+   "cnUrl": "a4187464d929aff1344ae94ab13e35413a3751158c390551f3b9ab2c310e5acc",
+   "jpUrl": "8158afcfee1e116e6ee43a098d44e5608ab5ceca98439064c8f2cb2b3e3cea41",
+   "enUrl": "3449c6944135eba8b38348edb66c1a042f360a4c3836935ba7f44f9e128e5fd1",
+   "krUrl": "c95108735fa1655686d1a85c2efdb26009e38f52025158bc5edc7389c96b0ef5"
+  },
+  {
+   "id": 71,
+   "title": "发现敌方目标",
+   "text": "大敌当前，有我在，就按你的想法来。",
+   "unlockRequirement": "",
+   "cnUrl": "6cbeb31621b0fd777f3d7e549dd4695fa75b9abedf0ee8b8731f3374ff6c6874",
+   "jpUrl": "b7bc149e008a32bbaef5ac7d947c25a3b54840528a9729aa75d50b37efeb44fc",
+   "enUrl": "56ee745cfd05d8734c6f9dfccc69c133116e12cf4ce1fe0f9fa4ac37a56d38fa",
+   "krUrl": "0eec3ca82f304c760c9e84ada8935112261217813b6db4aea8c38eb1641e0970"
+  },
+  {
+   "id": 72,
+   "title": "返回城镇",
+   "text": "飘摇世间，又何来落脚之处？",
+   "unlockRequirement": "",
+   "cnUrl": "48986f50729fbda09946ea31433d5ab625ef837778e6b007d6e615e12f416ac4",
+   "jpUrl": "0dadc56eba0cee284b826a98dd4131d18d5e6630da1a77cfb2421c2736fcc122",
+   "enUrl": "2308c379cce6089759641ef241ebf00a7f245c15faa6b5c9f8f4e9fbd500858d",
+   "krUrl": "07d7cc065be27939675ffe1cc9dd52dc074ec9bffe6f4c109bf855700d5427b9"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "角色详情",
+   "text": "金发俊雅的年轻人，背着巨大的棺椁。 <br />身为天外行商的他，不幸被卷入仙舟「罗浮」的星核危机。 <br />一手精湛医术莫名有了用武之地。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "角色故事·一",
+   "text": "「您的身份是？」 <br />「行商。」 <br />「您的入境目的是？」 <br />「商业活动。」 <br />「您是否愿意承诺：不违反仙舟联盟律法、依法依规进行商业活动、不进行签证许可范围外的活动？」 <br />「当然。我承诺。」 <br />「您是否愿意承诺：不进行任何与『长生』有关的非法研究？」 <br />「嗯…我承诺。」 <br />「很好，请在这里签字。」 <br />  <br />「罗刹先生，欢迎来到仙舟『罗浮』。」",
+   "unlockRequirement": "角色等级<nobr>20</nobr>解锁"
+  },
+  {
+   "title": "角色故事·二",
+   "text": "「哎，你还记得那个人吗？常来我们家光顾，背着个大箱子的……」 <br />「您是说罗刹？」 <br />「对，罗刹…应该是化外民？但感觉这人说话办事的作风，都特别像老派的仙舟人，应该在这生活了挺久吧？但他偏偏一直穿着风格那么独特的域外服饰…」 <br />「谁知道呢？大概是因为他那头金发和仙舟的服饰有些不搭吧。」 <br />  <br />他偶尔会想起故乡。 <br />恶魔、教会、疯病…那不是什么美好的回忆。 <br />人们成群结队地攀上高处，以便更清楚地观看自己的城市是如何毁灭的。 <br />如果一切必须终结，那至少需要目击者，需要一双眼睛。 <br />  <br />「你为何还穿着故乡的服饰？」谁人问道。 <br />「它提醒我应保守的道路，仅此而已。」罗刹答道。",
+   "unlockRequirement": "角色等级<nobr>40</nobr>解锁"
+  },
+  {
+   "title": "角色故事·三",
+   "text": "仙舟人不认得棺椁。 <br />每当罗刹带着棺材出现在街上时，都会引来好奇的目光。 <br />如果有人问罗刹：「这东西究竟是什么？」 <br />罗刹总会搪塞道：「这是我做生意的用具。」 <br />  <br />「『做生意的用具』…希望我没有冒犯到你，」罗刹站在长乐天的亭台上，漫不经心地说道，「不过你我之间的关系，倒也算是一桩生意，不是吗？」 <br />  <br />棺材以沉默作答。",
+   "unlockRequirement": "角色等级<nobr>60</nobr>解锁"
+  },
+  {
+   "title": "角色故事·四",
+   "text": "罗刹背上棺材，前往远方。 <br />棺材没有发出声响，它并未抗议，也没有抗议的权利。 <br />「你不说话时，便是自由的。」 <br />  <br />大幕升起，他将罪恶抛向身后。 <br />罪恶不过是另一种被操纵的武器，欺骗自己相信能得到一个正确的答案。 <br />「而你有何不同？你的痛苦，为什么就会比其他人的更有价值、更能打动人么？」 <br />  <br />「去仙舟吧。」那将棺材交给他的说道，「勿忘你的誓言。」 <br />「永世不忘。」 <br />  <br />说着，罗刹却在心里立下了另一个誓言。",
+   "unlockRequirement": "角色等级<nobr>80</nobr>解锁"
+  }
+ ],
+ "archive": {
+  "cvCn": "赵路",
+  "cvJp": "石田彰",
+  "cvKr": "신용우",
+  "cvEn": "Craig Lee Thomas",
+  "camp": "仙舟「罗浮」"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "罗刹",
+ "rarity": 5,
+ "descHash": "随身携带着棺椁，自天之外海而来的化外行商。 医术精湛。",
+ "artPath": "d3cf545d05cc41aba752df251deab8b5285ed7c3fabdca4f943a5e6b9118e999",
+ "miniIconPath": "0e81df15dffd85559e6c53ab2fc58e092e68d368a2d7b2d7431347637ec263e9",
+ "damageType": {
+  "id": 64,
+  "iconPath": "91b47b558df75f608b0a8aa93f35fd2063ed789ec25cbcc7bee926c60fba7ab1",
+  "color": "#F4D258",
+  "name": "虚数",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "81e58cfdc0c8a9a026c2c3111a6bdf663d572fa71524907b004fc5eb7f34fade",
+  "altIconPath": "c825fa86e9a217db6e704916b2d5aeb22c5733b2776a0ea16c558c29e6c5c92c",
+  "color": "#FFFFFF",
+  "name": "丰饶",
+  "rarity": 0
+ },
+ "pageId": "luocha"
+}

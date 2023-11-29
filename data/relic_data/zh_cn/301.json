@@ -1,0 +1,1564 @@
+{
+ "name": "太空封印站",
+ "iconPath": "ca8385acd7f0038398e7fef1c82cc631bb86cd1a4af53c8c9dc647542a0a1b67",
+ "artPath": "c847c4722058b2b870ea636e057217c687a75228e9f3cf9c7e97ca5f739fe553",
+ "rarity": 5,
+ "relicType": 0,
+ "embeddedBaseTypes": {
+  "0": {
+   "id": 0,
+   "iconPath": "0c88f2c3d931255f78ee56e3d6a83a2ba0c277c6344e39b711e2ade65ed05b90",
+   "color": "#FFFFFF",
+   "name": "",
+   "rarity": 0
+  },
+  "1": {
+   "id": 1,
+   "iconPath": "eed633d4e063e41a268cfecfee53412c53c1db009cc8e9b9482be7f00b3bf3a3",
+   "color": "#FFFFFF",
+   "name": "头部",
+   "rarity": 0
+  },
+  "2": {
+   "id": 2,
+   "iconPath": "beb19181e1b42ca4a13970f2296be38ee1ed1ee749ef13f213bb60377c497cfd",
+   "color": "#FFFFFF",
+   "name": "手部",
+   "rarity": 0
+  },
+  "3": {
+   "id": 3,
+   "iconPath": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+   "color": "#FFFFFF",
+   "name": "躯干",
+   "rarity": 0
+  },
+  "4": {
+   "id": 4,
+   "iconPath": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+   "color": "#FFFFFF",
+   "name": "脚部",
+   "rarity": 0
+  },
+  "5": {
+   "id": 5,
+   "iconPath": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+   "color": "#FFFFFF",
+   "name": "位面球",
+   "rarity": 0
+  },
+  "6": {
+   "id": 6,
+   "iconPath": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+   "color": "#FFFFFF",
+   "name": "连结绳",
+   "rarity": 0
+  }
+ },
+ "skills": [
+  {
+   "useNum": 2,
+   "desc": "使装备者的攻击力提高<nobr>#1[i]%</nobr>。当装备者的速度大于等于<nobr>#2[i]</nobr>时，攻击力额外提高<nobr>#3[i]%</nobr>。",
+   "params": [
+    0.12,
+    120,
+    0.12
+   ]
+  }
+ ],
+ "pieces": {
+  "5": {
+   "name": "「黑塔」的空间站点",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "419c114164e649b1a83032dcb1f586d49333dcfcc5f8f300130d91ec62b4da40",
+   "baseTypeText": "位面球",
+   "loreTitle": "「黑塔」的空间站点",
+   "miniLore": "位面封装的是「黑塔」空间站，它停靠在湛蓝星上空，沿着既定轨道缓缓漂流，寂静的银河像是本书卷等待翻阅。",
+   "lore": "黑塔女士曾一度为遍历星域的藏品发愁，数量巨大、封装不易，本人更是不愿打理。<br /><br />热情慷慨的星际和平公司随即提出方案，封存智慧与秘密的空间站「黑塔」便由此诞生。站内上下围绕藏品制定详尽的收容措施，力求「于清晰合理之中包罗万象」。现象被特殊容器收纳，奇物被奇物条目规范——大千藏品被分门别类，封藏于站内深处以供研究。<br /><br />随即公司提出共同探索繁星奥秘的倡议，求新探异的学者们纷纷进驻站点，开展学问。<br /><br />科员们大多仰慕黑塔女士，誓愿践行星空理想，探寻寰宇间繁星低语的秘密。他们探秘星空生命的疆域，明辩义理争论的正义，概拓星河原野的风貌，破解宗仪典祀的玄秘，践行格物致知的精神…秉承「传历智识」之理念，从事着自由而广阔的研究。<br /><br />但空间站进入航道后便自行其是，黑塔女士鲜少露面。公司此时才发现，站内满是科员的日常，而天才不见踪影。<br /><br />不同舱段的光照很难让人感到时间流逝，只有在倦怠的生活气息中，可以窥探到一丝痕迹。常有为藏品争论不休的三两干员，随着时间推移扭打一起；也有负责安保人士缺席日常巡逻，躲在行军床上小憩；年长的科员们向后辈讲起过往恋爱经历，伪装成临时杂工的大人物等待着下次转机…研究之余这里亦是生活，望向舷外便知，繁星沿途同行。<br /><br />虽行止有限，科员们仍会以浪漫的方式提起空间站内的庶务生活：星河是隽永的诗篇，「黑塔」空间站正徐徐地翻开书卷。",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#FFFFFF;\">物理</span>属性伤害提高",
+       "propertyIconPath": "17a936e642ddc644dbb666c4a1279dd2386321a74cf73b0332a33c7f209c2176",
+       "isPercent": true,
+       "baseValue": 0.024883,
+       "levelAdd": 0.008709,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#F84F36;\">火</span>属性伤害提高",
+       "propertyIconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4",
+       "isPercent": true,
+       "baseValue": 0.024883,
+       "levelAdd": 0.008709,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#47C7FD;\">冰</span>属性伤害提高",
+       "propertyIconPath": "873bd0d39d583fadfc1427c8fbe603df5c14370368804e2dfebb4f447910174b",
+       "isPercent": true,
+       "baseValue": 0.024883,
+       "levelAdd": 0.008709,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#c75de2;\">雷</span>属性伤害提高",
+       "propertyIconPath": "dbf8a033f78ebfe4765472b27aa0e7d3838d36f8f15868c49a3433ccca9ef1aa",
+       "isPercent": true,
+       "baseValue": 0.024883,
+       "levelAdd": 0.008709,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#00FF9C;\">风</span>属性伤害提高",
+       "propertyIconPath": "6ed4c20b424ce99fc080b98f339acbf6535738e14c8d8e649ec3e1e286b348fa",
+       "isPercent": true,
+       "baseValue": 0.024883,
+       "levelAdd": 0.008709,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#7788ff;\">量子</span>属性伤害提高",
+       "propertyIconPath": "e7c7e4e052302779e7dab274aa39aedc08e59eed4e5e507174ee47aaef770e2a",
+       "isPercent": true,
+       "baseValue": 0.024883,
+       "levelAdd": 0.008709,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#F4D258;\">虚数</span>属性伤害提高",
+       "propertyIconPath": "939478539b7b35b55ee48b2e19d6994455dec3403493edcc082140d3a061b14e",
+       "isPercent": true,
+       "baseValue": 0.024883,
+       "levelAdd": 0.008709,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击率",
+       "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击伤害",
+       "propertyIconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果命中",
+       "propertyIconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果抵抗",
+       "propertyIconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "击破特攻",
+       "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#FFFFFF;\">物理</span>属性伤害提高",
+       "propertyIconPath": "17a936e642ddc644dbb666c4a1279dd2386321a74cf73b0332a33c7f209c2176",
+       "isPercent": true,
+       "baseValue": 0.037325,
+       "levelAdd": 0.013064001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#F84F36;\">火</span>属性伤害提高",
+       "propertyIconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4",
+       "isPercent": true,
+       "baseValue": 0.037325,
+       "levelAdd": 0.013064001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#47C7FD;\">冰</span>属性伤害提高",
+       "propertyIconPath": "873bd0d39d583fadfc1427c8fbe603df5c14370368804e2dfebb4f447910174b",
+       "isPercent": true,
+       "baseValue": 0.037325,
+       "levelAdd": 0.013064001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#c75de2;\">雷</span>属性伤害提高",
+       "propertyIconPath": "dbf8a033f78ebfe4765472b27aa0e7d3838d36f8f15868c49a3433ccca9ef1aa",
+       "isPercent": true,
+       "baseValue": 0.037325,
+       "levelAdd": 0.013064001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#00FF9C;\">风</span>属性伤害提高",
+       "propertyIconPath": "6ed4c20b424ce99fc080b98f339acbf6535738e14c8d8e649ec3e1e286b348fa",
+       "isPercent": true,
+       "baseValue": 0.037325,
+       "levelAdd": 0.013064001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#7788ff;\">量子</span>属性伤害提高",
+       "propertyIconPath": "e7c7e4e052302779e7dab274aa39aedc08e59eed4e5e507174ee47aaef770e2a",
+       "isPercent": true,
+       "baseValue": 0.037325,
+       "levelAdd": 0.013064001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#F4D258;\">虚数</span>属性伤害提高",
+       "propertyIconPath": "939478539b7b35b55ee48b2e19d6994455dec3403493edcc082140d3a061b14e",
+       "isPercent": true,
+       "baseValue": 0.037325,
+       "levelAdd": 0.013064001,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击率",
+       "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击伤害",
+       "propertyIconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果命中",
+       "propertyIconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果抵抗",
+       "propertyIconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "击破特攻",
+       "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#FFFFFF;\">物理</span>属性伤害提高",
+       "propertyIconPath": "17a936e642ddc644dbb666c4a1279dd2386321a74cf73b0332a33c7f209c2176",
+       "isPercent": true,
+       "baseValue": 0.049766,
+       "levelAdd": 0.017418,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#F84F36;\">火</span>属性伤害提高",
+       "propertyIconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4",
+       "isPercent": true,
+       "baseValue": 0.049766,
+       "levelAdd": 0.017418,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#47C7FD;\">冰</span>属性伤害提高",
+       "propertyIconPath": "873bd0d39d583fadfc1427c8fbe603df5c14370368804e2dfebb4f447910174b",
+       "isPercent": true,
+       "baseValue": 0.049766,
+       "levelAdd": 0.017418,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#c75de2;\">雷</span>属性伤害提高",
+       "propertyIconPath": "dbf8a033f78ebfe4765472b27aa0e7d3838d36f8f15868c49a3433ccca9ef1aa",
+       "isPercent": true,
+       "baseValue": 0.049766,
+       "levelAdd": 0.017418,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#00FF9C;\">风</span>属性伤害提高",
+       "propertyIconPath": "6ed4c20b424ce99fc080b98f339acbf6535738e14c8d8e649ec3e1e286b348fa",
+       "isPercent": true,
+       "baseValue": 0.049766,
+       "levelAdd": 0.017418,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#7788ff;\">量子</span>属性伤害提高",
+       "propertyIconPath": "e7c7e4e052302779e7dab274aa39aedc08e59eed4e5e507174ee47aaef770e2a",
+       "isPercent": true,
+       "baseValue": 0.049766,
+       "levelAdd": 0.017418,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#F4D258;\">虚数</span>属性伤害提高",
+       "propertyIconPath": "939478539b7b35b55ee48b2e19d6994455dec3403493edcc082140d3a061b14e",
+       "isPercent": true,
+       "baseValue": 0.049766,
+       "levelAdd": 0.017418,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击率",
+       "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击伤害",
+       "propertyIconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果命中",
+       "propertyIconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果抵抗",
+       "propertyIconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "击破特攻",
+       "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#FFFFFF;\">物理</span>属性伤害提高",
+       "propertyIconPath": "17a936e642ddc644dbb666c4a1279dd2386321a74cf73b0332a33c7f209c2176",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#F84F36;\">火</span>属性伤害提高",
+       "propertyIconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#47C7FD;\">冰</span>属性伤害提高",
+       "propertyIconPath": "873bd0d39d583fadfc1427c8fbe603df5c14370368804e2dfebb4f447910174b",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#c75de2;\">雷</span>属性伤害提高",
+       "propertyIconPath": "dbf8a033f78ebfe4765472b27aa0e7d3838d36f8f15868c49a3433ccca9ef1aa",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#00FF9C;\">风</span>属性伤害提高",
+       "propertyIconPath": "6ed4c20b424ce99fc080b98f339acbf6535738e14c8d8e649ec3e1e286b348fa",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#7788ff;\">量子</span>属性伤害提高",
+       "propertyIconPath": "e7c7e4e052302779e7dab274aa39aedc08e59eed4e5e507174ee47aaef770e2a",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "<span style=\"color:#F4D258;\">虚数</span>属性伤害提高",
+       "propertyIconPath": "939478539b7b35b55ee48b2e19d6994455dec3403493edcc082140d3a061b14e",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击率",
+       "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击伤害",
+       "propertyIconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果命中",
+       "propertyIconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果抵抗",
+       "propertyIconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "击破特攻",
+       "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "6": {
+   "name": "「黑塔」的漫历轨迹",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "cb7278c55442ff186d55ba60f8e815ba6cf35ec5986a1de1feee95b1e5fef973",
+   "baseTypeText": "连结绳",
+   "loreTitle": "「黑塔」的漫历轨迹",
+   "miniLore": "「黑塔」空间站建立起那一刻，黑塔女士便失去了兴致。它在湛蓝星上空保持着第一宇宙速度，在卫星轨道上留下环绕的轨迹。",
+   "lore": "「黑塔」空间站因为其真正主人黑塔女士，经历了无数危机，也渡过了无数危机。<br /><br />满载着全宇宙中最奇异的藏品，就像是垂涎欲滴的肥猪置于饥饿食客的眼前，从来都不是安全的。仅凭公司招募的防卫科员、略显先进的防御系统，空间站还不足以承受来自星间的歹意…黑塔女士预先调遣，空间站留下一道优雅弧线，让谋划已久的太空阴谋来不及上演就已匆匆结束。<br /><br />至于逢凶化吉的情报本事，则被本人轻描淡写地描述为「将别人看书的时间用在了泡咖啡上」。<br /><br />比起意欲窃取藏品的盗贼、目的不明的各式派系，空间站最主要的威胁仍然来自其主人自身。她要是突发奇想，空间站便即刻遭殃。拟态恒星湮灭的奇物、暗星系碰撞的畸变引力场…黑塔女士趁着兴致，将各式藏品收集起来；实际到手后，她又常常失去兴致，再也不予问津。<br /><br />因此，尽管「黑塔」在深空中不言不语，其珍藏的各形态危机却像柄重锋宝剑悬于头顶。<br /><br />上级科员们对危险的现状早已熟稔于心，深知「秘密藏于危险之中」的道理。他们严格守护高度机密，切实按照标准执行收容，将危险隐没于平静之中…在空间站的茶水间里，他们是插科打诨的朋友；在空间站的收容舱深处，他们是技巧娴熟的专家，在这里，秘密将始终是秘密。<br /><br />在湛蓝星的近地轨道上，空间站一如既往地运行着，正如在冰湖表面上推出一枚砾石，它将依旧平缓滑行，悄无声息。",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "击破特攻",
+       "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "能量恢复效率",
+       "propertyIconPath": "75627c696d3e9763c0b4feeb4a8e2baf594ac73214c6227b3a125c032be090c8",
+       "isPercent": true,
+       "baseValue": 0.012442,
+       "levelAdd": 0.0043550003,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击率",
+       "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击伤害",
+       "propertyIconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果命中",
+       "propertyIconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果抵抗",
+       "propertyIconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "击破特攻",
+       "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "击破特攻",
+       "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "能量恢复效率",
+       "propertyIconPath": "75627c696d3e9763c0b4feeb4a8e2baf594ac73214c6227b3a125c032be090c8",
+       "isPercent": true,
+       "baseValue": 0.018662,
+       "levelAdd": 0.0065320004,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击率",
+       "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击伤害",
+       "propertyIconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果命中",
+       "propertyIconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果抵抗",
+       "propertyIconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "击破特攻",
+       "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "击破特攻",
+       "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+       "isPercent": true,
+       "baseValue": 0.082944,
+       "levelAdd": 0.029029999,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "能量恢复效率",
+       "propertyIconPath": "75627c696d3e9763c0b4feeb4a8e2baf594ac73214c6227b3a125c032be090c8",
+       "isPercent": true,
+       "baseValue": 0.024883,
+       "levelAdd": 0.008709,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击率",
+       "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击伤害",
+       "propertyIconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果命中",
+       "propertyIconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果抵抗",
+       "propertyIconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "击破特攻",
+       "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "击破特攻",
+       "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+       "isPercent": true,
+       "baseValue": 0.10368,
+       "levelAdd": 0.036288,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "能量恢复效率",
+       "propertyIconPath": "75627c696d3e9763c0b4feeb4a8e2baf594ac73214c6227b3a125c032be090c8",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.010886001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "生命值",
+       "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "攻击力",
+       "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "防御力",
+       "propertyIconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "速度",
+       "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击率",
+       "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "暴击伤害",
+       "propertyIconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果命中",
+       "propertyIconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "效果抵抗",
+       "propertyIconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "击破特攻",
+       "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  }
+ },
+ "pageId": "301"
+}

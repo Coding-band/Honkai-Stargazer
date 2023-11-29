@@ -1,0 +1,503 @@
+{
+ "name": "Nuages taillés dans la lune",
+ "rarity": 4,
+ "descHash": "Il était tombé immédiatement sous le charme de ce vase doré qu'il s'apprêtait à acquérir, mais la Foxienne l'attira à part pour lui chuchoter :<br />« Revenez cette nuit, cher bienfaiteur. Vous vous déciderez à ce moment. »<br /><br />Il revint une fois la nuit tombée.<br />La même Foxienne lui ouvrit la porte et lui sourit.<br />« Suivez-moi, je vous prie. »<br /><br />Le clair de lune se reflétait sur la plaque gravée.<br />Le relief irrégulier des pétales que l'artisan avait tracés laissait contempler toute sa splendeur. Impossible d'admirer tous ces détails sans le clair de lune.<br /><br />Il se souvint enfin pourquoi cet objet s'appelait « Nuages taillés dans la lune ».",
+ "iconPath": "2231dc02cfa73dc8b4e1bd0c437fc0176c3f06248da6cb9ea2f01da8aa9f0dde",
+ "artPath": "3e55e1c9c2852df224ba6f6938905f2a5efcd4670a2a661b8ffaa23a77767755",
+ "mediumIconPath": "559c448f1c57c1318f54a1087818863cb5ced9cc0de05ea8e455f795a0b193e3",
+ "baseType": {
+  "id": 0,
+  "iconPath": "fd3dc153082117a49b1d8eb7d166dd32d65d636463e15c604b583d5945a4ca69",
+  "color": "#FFFFFF",
+  "name": "L'Harmonie",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Braises immortelles"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "15365d10ed38771d99d247bc228b03787e29972cc714a655a9b8feef3031505e",
+   "name": "Instinct de pilleur",
+   "desc": "Une petite quantité d'antimatière. Matériau commun utilisé pour le renforcement.",
+   "lore": "Petite quantité d'antimatière qui émane d'un Reaver des Rangers du néant, telle la matérialisation de son instinct destructeur.<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "Légion d'antimatière",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3cd4c92ff44d695595377ffc6c0896d6839775f6014e96daf679b256bc0d19cf",
+   "name": "Ambition d'usurpateur",
+   "desc": "Une quantité modérée d'antimatière. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "Quantité modérée d'antimatière qui flotte autour d'un Distorseur des Rangers du néant. La quantité de particules de matière et d'antimatière a atteint un niveau dangereux...<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "Légion d'antimatière au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635670": {
+   "id": 635670,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a096383d62b9e5432fbf9a9674cc41041077b151d3473e44509d684eaaccd9bd",
+   "name": "Accord harmonique",
+   "desc": "Boîte à musique compacte, fabriquée par un inconnu. Permet d'améliorer légèrement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonie</span>.",
+   "lore": "Joue un air joyeux et apaisant.<br />S'il semble simple, n'importe quel amateur de musique verra la maîtrise du compositeur de cet air.<br /><br />« Prends la main de ta Famille et danse ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635670",
+   "comeFrom": [
+    "Calice de la Colonie de robots",
+    "Braises immortelles"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "Éther purifié",
+   "desc": "Matériau de renforcement de cône de lumière. Confère 6 <nobr>000</nobr> points d'EXP de cône de lumière.",
+   "lore": "Une bouteille d'éther raffiné par des procédés spéciaux.<br /><br />« Le Jardin se félicite de recréer une gloire passée, mais c'est une \"gloire passée\" qu'ils ont choisie. Tu comprends ? »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Salle oubliée"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "name": "Éther condensé",
+   "desc": "Matériau de renforcement de cône de lumière. Confère 2 <nobr>000</nobr> points d'EXP de cône de lumière.",
+   "lore": "Une bouteille d'éther raffiné par des procédés spéciaux.<br /><br />« À manier avec précaution, ne pas faire tomber, ne pas appliquer de pression. En cas de dommage ou de fuite, se référer au chapitre II du \"Manuel de prise en charge des désastres\" pour une solution d'urgence. »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Braises immortelles"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d4e3585911d6f71b87b47ced1a2f6e0b0f77dbdc8615650896e77bae87361afd",
+   "name": "Éther dilué",
+   "desc": "Matériau de renforcement de cône de lumière. Confère <nobr>500</nobr> points d'EXP de cône de lumière.",
+   "lore": "Substance imaginaire qui ne devrait pas exister dans le monde réel. Il s'agit du matériau de base pour fabriquer les cônes de lumière.<br />Les images des cônes de lumière sont plus nettes avec cette substance.<br /><br />« Je vois... Alors c'est ça la « mémorine » du Jardin de la mémoire. Pas étonnant que les protecteurs de la mémoire puissent embarquer pour des voyages galactiques avec des souvenirs. »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Récompense d'affectation"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3c858c8ff4df238403e5443f57850367e4164a62efb508ce359db9c5b7474a19",
+   "name": "Volonté de conquérant",
+   "desc": "Antimatière condensée. Matériau avancé utilisé pour le renforcement.",
+   "lore": "Antimatière hautement condensée dans le corps d'un Piétineur des Rangers du néant. Le moment de l'oblitération est l'appel à la destruction des civilisations.<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "Légion d'antimatière au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836256": {
+   "id": 836256,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "b423fcc0ae34c8c3b30d0a461af31176b161d5a83f3615756c8f8a91f04ac474",
+   "name": "Symphonie de stellaris",
+   "desc": "Boîte à musique complexe, fabriquée par un inconnu. Permet d'améliorer considérablement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonie</span>.",
+   "lore": "Joue une puissante symphonie spatiale.<br /><br />« Certains astronomes pensent que les révolutions des sphères célestes fonctionnent de la même manière que des structures mécaniques complexes. Les notes, aussi claires que le cristal, émises par le mouvement des étoiles ont été baptisées \"Harmonie des sphères célestes\". »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836256",
+   "comeFrom": [
+    "Calice de la Colonie de robots",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920197": {
+   "id": 920197,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "b5aa737b728156387ef4ddce10e0a541deb24993d58c4f2eca0aac0ed4301ea8",
+   "name": "Hymne ancestral",
+   "desc": "Boîte à musique, fabriquée par un inconnu. Permet d'améliorer modérément les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonie</span>.",
+   "lore": "Joue un hymne chanté par un petit groupe.<br />Il est impossible de savoir à qui s'adresse cet hymne.<br /><br />« Misère, épreuve du Très haut ! Richesse, grâce du Très haut ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920197",
+   "comeFrom": [
+    "Calice de la Colonie de robots",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Braises immortelles"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549437,
+     "count": 5
+    }
+   ],
+   "attackBase": 21.6,
+   "attackAdd": 3.24,
+   "hpBase": 43.2,
+   "hpAdd": 6.48,
+   "defenseBase": 15,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 635670,
+     "count": 3
+    },
+    {
+     "id": 549437,
+     "count": 10
+    }
+   ],
+   "attackBase": 47.52,
+   "attackAdd": 3.24,
+   "hpBase": 95.04,
+   "hpAdd": 6.48,
+   "defenseBase": 33,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 920197,
+     "count": 3
+    },
+    {
+     "id": 633378,
+     "count": 6
+    }
+   ],
+   "attackBase": 82.08,
+   "attackAdd": 3.24,
+   "hpBase": 164.16,
+   "hpAdd": 6.48,
+   "defenseBase": 57,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 920197,
+     "count": 6
+    },
+    {
+     "id": 633378,
+     "count": 9
+    }
+   ],
+   "attackBase": 116.64,
+   "attackAdd": 3.24,
+   "hpBase": 233.28,
+   "hpAdd": 6.48,
+   "defenseBase": 81,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 836256,
+     "count": 4
+    },
+    {
+     "id": 717319,
+     "count": 5
+    }
+   ],
+   "attackBase": 151.2,
+   "attackAdd": 3.24,
+   "hpBase": 302.4,
+   "hpAdd": 6.48,
+   "defenseBase": 105,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 836256,
+     "count": 8
+    },
+    {
+     "id": 717319,
+     "count": 7
+    }
+   ],
+   "attackBase": 185.76,
+   "attackAdd": 3.24,
+   "hpBase": 371.52,
+   "hpAdd": 6.48,
+   "defenseBase": 129,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 220.32,
+   "attackAdd": 3.24,
+   "hpBase": 440.64,
+   "hpAdd": 6.48,
+   "defenseBase": 153,
+   "defenseAdd": 2.25
+  }
+ ],
+ "skill": {
+  "id": 21032,
+  "name": "Secret",
+  "descHash": "L'un des effets suivants s'applique aléatoirement en début de combat et à chaque fois que le tour du porteur commence : l'ATQ de tous les alliés augmente de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>, les DGT critiques de tous les alliés augmentent de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> ou le taux de régénération d'énergie de tous les alliés augmente de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>. L'effet appliqué ne peut pas être identique au précédent et le remplace. L'effet appliqué est supprimé lorsque le porteur est à terre. Les effets du même type ne se cumulent pas.",
+  "levelData": [
+   {
+    "params": [
+     0.1,
+     0.12,
+     0.06
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.125,
+     0.15,
+     0.075
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.15,
+     0.18,
+     0.09
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.175,
+     0.21,
+     0.105
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.2,
+     0.24,
+     0.12
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 50,
+   "2": 80,
+   "3": 140,
+   "4": 210,
+   "5": 300,
+   "6": 400,
+   "7": 510,
+   "8": 640,
+   "9": 780,
+   "10": 930,
+   "11": 1090,
+   "12": 1260,
+   "13": 1460,
+   "14": 1650,
+   "15": 1860,
+   "16": 2080,
+   "17": 2300,
+   "18": 2540,
+   "19": 2790,
+   "20": 2900,
+   "21": 3010,
+   "22": 3130,
+   "23": 3240,
+   "24": 3360,
+   "25": 3490,
+   "26": 3610,
+   "27": 3740,
+   "28": 3860,
+   "29": 3990,
+   "30": 4130,
+   "31": 4260,
+   "32": 4400,
+   "33": 4540,
+   "34": 4680,
+   "35": 4820,
+   "36": 4970,
+   "37": 5110,
+   "38": 5260,
+   "39": 5410,
+   "40": 5560,
+   "41": 6100,
+   "42": 6450,
+   "43": 6810,
+   "44": 7180,
+   "45": 7550,
+   "46": 7930,
+   "47": 8310,
+   "48": 8710,
+   "49": 9110,
+   "50": 9520,
+   "51": 9940,
+   "52": 10350,
+   "53": 10780,
+   "54": 11220,
+   "55": 11660,
+   "56": 12110,
+   "57": 12570,
+   "58": 13030,
+   "59": 13500,
+   "60": 13980,
+   "61": 14630,
+   "62": 15420,
+   "63": 16210,
+   "64": 17010,
+   "65": 17830,
+   "66": 18660,
+   "67": 19500,
+   "68": 20350,
+   "69": 21220,
+   "70": 22100,
+   "71": 24650,
+   "72": 26970,
+   "73": 29330,
+   "74": 31720,
+   "75": 34140,
+   "76": 36600,
+   "77": 39100,
+   "78": 41620,
+   "79": 44180,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "21032"
+}

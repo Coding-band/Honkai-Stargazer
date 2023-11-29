@@ -1,0 +1,496 @@
+{
+ "name": "Roues d'engrenage",
+ "rarity": 3,
+ "descHash": "Un soupçon de force condensé par le temps lui-même. Tous les instants en apparence insignifiants se regroupent pour former le magnifique chœur du destin.<br /><br />« L'harmonie est atteinte lorsque chacun fait sa part au milieu du brouhaha des machines. »",
+ "iconPath": "f0f074dbaff160169361b0ba27d8a9eacc3ad04d417011404733dc92f869eaf6",
+ "artPath": "d328288857d900899d7ea56b827c8b6c5da052ecc2b0be6cfe0d71ce238dd755",
+ "mediumIconPath": "55e3ab8543ff1151b5c8a481e6f964f8f9c171b11d49090367a216b6a5066de8",
+ "baseType": {
+  "id": 0,
+  "iconPath": "fd3dc153082117a49b1d8eb7d166dd32d65d636463e15c604b583d5945a4ca69",
+  "color": "#FFFFFF",
+  "name": "L'Harmonie",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Braises immortelles"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "d5bfc95d74fab56f9c9be440028051ed2a9e02f4ee968c8d3db170d5b55dd931",
+   "name": "Badge de la crinière d'argent",
+   "desc": "Badge porté par les soldats de la Garde de la crinière d'argent. Matériau commun utilisé pour le renforcement.",
+   "lore": "Il est criblé d'éraflures dues à l'érosion causée par le vent et la neige.<br /><br />« Dans l'ancien temps, il n'y avait qu'un seul moyen pour les Gardes de la crinière d'argent de partir à la retraite : la mort. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "Marcheur de l'ombre de l'Hiver éternel et Marcheur de l'ombre de l'Incinération",
+    "Gardes de la crinière d'argent et vagabonds",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5be2ad896306c15eb63529806cc7e0175b2c2111e3a6f175accb00a85cf9b90e",
+   "name": "Insigne de la crinière d'argent",
+   "desc": "Insigne militaire porté par les capitaines de la Garde de la crinière d'argent. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "Il s'agit peut-être d'une preuve d'héroïsme qui permet de se vanter auprès de sa famille. Ou peut-être qu'il s'agit d'un porte-bonheur qui peut protéger d'une balle.<br /><br />« Les temps ont changé. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "Marcheur de l'ombre d'Hiver éternel et Marcheur de l'ombre de l'Incinération au niveau d'équilibre 2 ou supérieur",
+    "Gardes de la crinière d'argent et vagabonds au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635670": {
+   "id": 635670,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a096383d62b9e5432fbf9a9674cc41041077b151d3473e44509d684eaaccd9bd",
+   "name": "Accord harmonique",
+   "desc": "Boîte à musique compacte, fabriquée par un inconnu. Permet d'améliorer légèrement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonie</span>.",
+   "lore": "Joue un air joyeux et apaisant.<br />S'il semble simple, n'importe quel amateur de musique verra la maîtrise du compositeur de cet air.<br /><br />« Prends la main de ta Famille et danse ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635670",
+   "comeFrom": [
+    "Calice de la Colonie de robots",
+    "Braises immortelles"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "Éther purifié",
+   "desc": "Matériau de renforcement de cône de lumière. Confère 6 <nobr>000</nobr> points d'EXP de cône de lumière.",
+   "lore": "Une bouteille d'éther raffiné par des procédés spéciaux.<br /><br />« Le Jardin se félicite de recréer une gloire passée, mais c'est une \"gloire passée\" qu'ils ont choisie. Tu comprends ? »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Salle oubliée"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "name": "Éther condensé",
+   "desc": "Matériau de renforcement de cône de lumière. Confère 2 <nobr>000</nobr> points d'EXP de cône de lumière.",
+   "lore": "Une bouteille d'éther raffiné par des procédés spéciaux.<br /><br />« À manier avec précaution, ne pas faire tomber, ne pas appliquer de pression. En cas de dommage ou de fuite, se référer au chapitre II du \"Manuel de prise en charge des désastres\" pour une solution d'urgence. »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Braises immortelles"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d4e3585911d6f71b87b47ced1a2f6e0b0f77dbdc8615650896e77bae87361afd",
+   "name": "Éther dilué",
+   "desc": "Matériau de renforcement de cône de lumière. Confère <nobr>500</nobr> points d'EXP de cône de lumière.",
+   "lore": "Substance imaginaire qui ne devrait pas exister dans le monde réel. Il s'agit du matériau de base pour fabriquer les cônes de lumière.<br />Les images des cônes de lumière sont plus nettes avec cette substance.<br /><br />« Je vois... Alors c'est ça la « mémorine » du Jardin de la mémoire. Pas étonnant que les protecteurs de la mémoire puissent embarquer pour des voyages galactiques avec des souvenirs. »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Récompense d'affectation"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "name": "Médaille de la crinière d'argent",
+   "desc": "Médaille d'honneur portée par les soldats de la Garde de la crinière d'argent ayant servi de façon courageuse et méritante. Matériau avancé utilisé pour le renforcement.",
+   "lore": "Une marque d'honneur décernée à ceux qui ont combattu les créatures du Fragmentum, les habitants du Souterrain, et les catastrophes soudaines.<br />Elle est plus souvent placée sur le cercueil qu'épinglée sur la poitrine de son propriétaire.<br /><br />« Rappelle-toi, jeune Gepard. Ceci n'est pas un jouet : c'est le destin et le sang de la famille Landau. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "Marcheur de l'ombre d'Hiver éternel et Marcheur de l'ombre de l'Incinération au niveau d'équilibre 4 ou supérieur",
+    "Gardes de la crinière d'argent et vagabonds au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836256": {
+   "id": 836256,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "b423fcc0ae34c8c3b30d0a461af31176b161d5a83f3615756c8f8a91f04ac474",
+   "name": "Symphonie de stellaris",
+   "desc": "Boîte à musique complexe, fabriquée par un inconnu. Permet d'améliorer considérablement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonie</span>.",
+   "lore": "Joue une puissante symphonie spatiale.<br /><br />« Certains astronomes pensent que les révolutions des sphères célestes fonctionnent de la même manière que des structures mécaniques complexes. Les notes, aussi claires que le cristal, émises par le mouvement des étoiles ont été baptisées \"Harmonie des sphères célestes\". »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836256",
+   "comeFrom": [
+    "Calice de la Colonie de robots",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920197": {
+   "id": 920197,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "b5aa737b728156387ef4ddce10e0a541deb24993d58c4f2eca0aac0ed4301ea8",
+   "name": "Hymne ancestral",
+   "desc": "Boîte à musique, fabriquée par un inconnu. Permet d'améliorer modérément les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonie</span>.",
+   "lore": "Joue un hymne chanté par un petit groupe.<br />Il est impossible de savoir à qui s'adresse cet hymne.<br /><br />« Misère, épreuve du Très haut ! Richesse, grâce du Très haut ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920197",
+   "comeFrom": [
+    "Calice de la Colonie de robots",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Braises immortelles"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3000
+    },
+    {
+     "id": 549407,
+     "count": 4
+    }
+   ],
+   "attackBase": 14.4,
+   "attackAdd": 2.16,
+   "hpBase": 38.4,
+   "hpAdd": 5.76,
+   "defenseBase": 12,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6000
+    },
+    {
+     "id": 635670,
+     "count": 2
+    },
+    {
+     "id": 549407,
+     "count": 8
+    }
+   ],
+   "attackBase": 31.68,
+   "attackAdd": 2.16,
+   "hpBase": 84.48,
+   "hpAdd": 5.76,
+   "defenseBase": 26.4,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12000
+    },
+    {
+     "id": 920197,
+     "count": 2
+    },
+    {
+     "id": 633348,
+     "count": 4
+    }
+   ],
+   "attackBase": 54.72,
+   "attackAdd": 2.16,
+   "hpBase": 145.92,
+   "hpAdd": 5.76,
+   "defenseBase": 45.6,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 30000
+    },
+    {
+     "id": 920197,
+     "count": 4
+    },
+    {
+     "id": 633348,
+     "count": 6
+    }
+   ],
+   "attackBase": 77.76,
+   "attackAdd": 2.16,
+   "hpBase": 207.36,
+   "hpAdd": 5.76,
+   "defenseBase": 64.8,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 60000
+    },
+    {
+     "id": 836256,
+     "count": 3
+    },
+    {
+     "id": 717289,
+     "count": 3
+    }
+   ],
+   "attackBase": 100.8,
+   "attackAdd": 2.16,
+   "hpBase": 268.8,
+   "hpAdd": 5.76,
+   "defenseBase": 84,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 120000
+    },
+    {
+     "id": 836256,
+     "count": 6
+    },
+    {
+     "id": 717289,
+     "count": 5
+    }
+   ],
+   "attackBase": 123.84,
+   "attackAdd": 2.16,
+   "hpBase": 330.24,
+   "hpAdd": 5.76,
+   "defenseBase": 103.2,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 146.88,
+   "attackAdd": 2.16,
+   "hpBase": 391.68,
+   "hpAdd": 5.76,
+   "defenseBase": 122.4,
+   "defenseAdd": 1.8
+  }
+ ],
+ "skill": {
+  "id": 20012,
+  "name": "Triomphe de la fluidité",
+  "descHash": "Régénère <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]</nobr></span> points d'énergie supplémentaires lorsque le porteur attaque ou qu'il est touché. Cet effet ne peut pas être déclenché plus d'une fois par tour.",
+  "levelData": [
+   {
+    "params": [
+     4
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     5
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     6
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     7
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     8
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 40,
+   "2": 60,
+   "3": 100,
+   "4": 160,
+   "5": 220,
+   "6": 300,
+   "7": 380,
+   "8": 480,
+   "9": 580,
+   "10": 700,
+   "11": 820,
+   "12": 950,
+   "13": 1090,
+   "14": 1240,
+   "15": 1390,
+   "16": 1560,
+   "17": 1730,
+   "18": 1910,
+   "19": 2090,
+   "20": 2170,
+   "21": 2260,
+   "22": 2350,
+   "23": 2430,
+   "24": 2520,
+   "25": 2620,
+   "26": 2710,
+   "27": 2800,
+   "28": 2900,
+   "29": 2990,
+   "30": 3100,
+   "31": 3200,
+   "32": 3300,
+   "33": 3400,
+   "34": 3510,
+   "35": 3620,
+   "36": 3730,
+   "37": 3830,
+   "38": 3950,
+   "39": 4060,
+   "40": 4170,
+   "41": 4580,
+   "42": 4840,
+   "43": 5110,
+   "44": 5380,
+   "45": 5660,
+   "46": 5950,
+   "47": 6230,
+   "48": 6530,
+   "49": 6830,
+   "50": 7140,
+   "51": 7450,
+   "52": 7760,
+   "53": 8090,
+   "54": 8410,
+   "55": 8750,
+   "56": 9080,
+   "57": 9430,
+   "58": 9770,
+   "59": 10130,
+   "60": 10480,
+   "61": 10970,
+   "62": 11560,
+   "63": 12160,
+   "64": 12760,
+   "65": 13370,
+   "66": 13990,
+   "67": 14620,
+   "68": 15260,
+   "69": 15910,
+   "70": 16570,
+   "71": 18490,
+   "72": 20230,
+   "73": 22000,
+   "74": 23790,
+   "75": 25610,
+   "76": 27450,
+   "77": 29320,
+   "78": 31220,
+   "79": 33140,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "20012"
+}

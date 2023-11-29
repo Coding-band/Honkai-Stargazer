@@ -1,0 +1,503 @@
+{
+ "name": "Meu Próprio Nascimento",
+ "rarity": 4,
+ "descHash": "A princípio, a pose era a mesma do retrato anterior.<br />Olhando para aquele rosto idêntico ao seu, ela estava convencida de que não era ela.<br /><br />\"Impossível. Como podem dois retratos serem exatamente iguais?\"<br /><br />Ela fez alguns ajustes nas articulações, abriu os olhos e tornou os dedos mais macios.<br />Parecia feliz depois de todas as mudanças.<br /><br />\"Completamente diferente de ontem, está mais parecida comigo hoje.\"",
+ "iconPath": "8771b9ecf8f96f5b7d5c51043bd2e40f0f8b6d85107207f5b947dd0a1d54e6ea",
+ "artPath": "e9e9d09bda90449eb412ac7e8bbe890b831db167063d9a21cc1782480d75160d",
+ "mediumIconPath": "13d4c54387c12b260859de11e8d7a741da87c97c59768c2ba474be9ee665aae5",
+ "baseType": {
+  "id": 0,
+  "iconPath": "a1916e75aa6a99295aa01786a946ae601da457b578603446740cbe30bc5fba5a",
+  "color": "#FFFFFF",
+  "name": "A Erudição",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédito",
+   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
+   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
+   "purpose": "Moeda Comum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cálice (Grande Mina)",
+    "Recompensas de Missão",
+    "Recompensas de Atribuição",
+    "Troca de Brasas"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "28d0ba947e29fa63210d8ae2c432cb80339f98427c8655a9ca050184f69c4819",
+   "name": "Peça Antiga",
+   "desc": "Peças mecânicas do Velho Mundo deixadas para trás. Material bruto usado para aprimoramentos.",
+   "lore": "Apesar de seu tamanho, foi moldada e polida de um jeito que, hoje, as pessoas teriam dificuldade de replicar.<br /><br />\"Um parafuso do Velho Mundo é mais forte que uma armadura da atualidade.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "Autômatos",
+    "Inimigos do Universo Simulado",
+    "Recompensas de Atribuição",
+    "Troca de Brasas",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "7089e982e18575f3824ab28ae0e91f40c8214edf6253a7162142bdc7fc0acdbe",
+   "name": "Eixo Antigo",
+   "desc": "Eixo mecânico do Velho Mundo deixado para trás. Material normal usado para aprimoramentos.",
+   "lore": "Uma vez desmontado, seus componentes de precisão jamais podem ser montados novamente. Até mesmo os experientes em consertos da Divisão Tecnológica de Belobog pensariam duas vezes antes de tocar nisso.<br /><br />\"Seu imbecil, os Casacos Azuis vão trocar isso apenas por uns enlatados. Leve ao Chefe Svarog e você não vai precisar de comida nem de roupa por um bom tempo.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "Autômatos no Nível de Equilíbrio 2 ou superior",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "635675": {
+   "id": 635675,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "5d1c50902cff0d2be1eb952d08078e3134c231cdf0c9142c1ef475ec07c42b50",
+   "name": "Chave da Inspiração",
+   "desc": "Uma chave mítica que apareceu nas mãos dos Eruditos Meditativos. Usada para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudição</span>.",
+   "lore": "Ela pode destravar as inspirações ocultas nas profundezas do consciente.<br />Segurar esta chave é como segurar as centelhas que levam ao caminho do avanço.<br /><br />\"Eureka!\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/635675",
+   "comeFrom": [
+    "Cálice (Vila dos Rebites)",
+    "Troca de Brasas"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "Éter Refinado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>6000</nobr> de EXP de Cone de Luz.",
+   "lore": "Uma lata de éter que foi extraída e destilada usando procedimentos especiais.<br /><br />\"O Jardim espera poder recriar uma glória do passado, mas é uma 'glória do passado' selecionada por eles. Você entende?\"",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)",
+    "Salão Esquecido"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "name": "Éter Condensado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>2.000</nobr> de EXP de Cone de Luz.",
+   "lore": "Lata de éter refinado com técnicas especiais.<br /><br />\"Manuseie com cuidado, não deixe cair nem faça pressão sobre ela. Caso ocorra algum vazamento, consulte o capítulo II do \"Manual de Respostas a Desastres de Vazamentos\" para respostas de emergência.\"",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)",
+    "Troca de Brasas"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d4e3585911d6f71b87b47ced1a2f6e0b0f77dbdc8615650896e77bae87361afd",
+   "name": "Éter Espalhado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>500</nobr> de EXP de Cone de Luz.",
+   "lore": "Substância imaginária que não deveria existir. O material básico usado para criar Cones de Luz.<br />As imagens dos Cones de Luz se tornam ainda mais claras quando imbuídas dessa substância.<br /><br />\"Entendi, então essa é a suposta 'memória' do Jardim da Recordação. É por isso que os Memoriadores conseguem fazer viagens galácticas com lembranças\".",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "name": "Motor Antigo",
+   "desc": "Motor mecânico do Velho Mundo deixado para trás. Material avançado usado para aprimoramentos.",
+   "lore": "Usa Geoessência como a fonte de energia. Quando alimentado, descarrega auroras errantes, em vez de faíscas.<br /><br />\"Somente a Divisão Tecnológica sob comando direto da Guardiã Suprema tem acesso a informações sobre o Velho Mundo. Eu perdi meus privilégios depois que me demitiram.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "Autômatos no Nível de Equilíbrio 4 ou superior",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "836261": {
+   "id": 836261,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "name": "Chave da Sabedoria",
+   "desc": "Uma chave mítica que apareceu nas mãos dos maiores gênios do cosmos. Usada para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudição</span>.",
+   "lore": "Ela é como um convite para os salões do Templo de Nous.<br />Encontrar a porta onde a chave pode ser usada é mais difícil do que obtê-la. Aqueles que entraram nessas portas secretas perceberam imediatamente que é impossível voltar a partir do momento em que pisam do outro lado.<br /><br />\"A Erudição não tem todas as respostas do universo, mas ela ensina a fazer a pergunta certa.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/836261",
+   "comeFrom": [
+    "Cálice (Vila dos Rebites)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  },
+  "920202": {
+   "id": 920202,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "489f5c80b6f0de258e076634803c9540b0504c32e55f556748095c334780289d",
+   "name": "Chave do Conhecimento",
+   "desc": "Uma chave mítica que apareceu nas mãos dos sábios do mundo. Usada para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudição</span>.",
+   "lore": "Ela pode desvendar os mistérios que ligam a verdade do mundo e conceder conhecimento além da compreensão humana.<br />Não importa quanto o portador tente exibir sua chave, pois ninguém, além de si mesmo, pode ver sua forma. Alguns acreditam que isso é um presente dos céus, outros pensam que é um sinal de transtorno mental.<br /><br />\"Eu sonhei com moléculas rodando em círculos, como uma cobra atrás de sua própria cauda. Acordei e percebi que isso era a resposta que eu procurava há muito tempo!\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/920202",
+   "comeFrom": [
+    "Cálice (Vila dos Rebites)",
+    "Sintetizador Omni — Síntese de Material",
+    "Troca de Brasas"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549408,
+     "count": 5
+    }
+   ],
+   "attackBase": 21.6,
+   "attackAdd": 3.24,
+   "hpBase": 43.2,
+   "hpAdd": 6.48,
+   "defenseBase": 15,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 635675,
+     "count": 3
+    },
+    {
+     "id": 549408,
+     "count": 10
+    }
+   ],
+   "attackBase": 47.52,
+   "attackAdd": 3.24,
+   "hpBase": 95.04,
+   "hpAdd": 6.48,
+   "defenseBase": 33,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 920202,
+     "count": 3
+    },
+    {
+     "id": 633349,
+     "count": 6
+    }
+   ],
+   "attackBase": 82.08,
+   "attackAdd": 3.24,
+   "hpBase": 164.16,
+   "hpAdd": 6.48,
+   "defenseBase": 57,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 920202,
+     "count": 6
+    },
+    {
+     "id": 633349,
+     "count": 9
+    }
+   ],
+   "attackBase": 116.64,
+   "attackAdd": 3.24,
+   "hpBase": 233.28,
+   "hpAdd": 6.48,
+   "defenseBase": 81,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 836261,
+     "count": 4
+    },
+    {
+     "id": 717290,
+     "count": 5
+    }
+   ],
+   "attackBase": 151.2,
+   "attackAdd": 3.24,
+   "hpBase": 302.4,
+   "hpAdd": 6.48,
+   "defenseBase": 105,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 836261,
+     "count": 8
+    },
+    {
+     "id": 717290,
+     "count": 7
+    }
+   ],
+   "attackBase": 185.76,
+   "attackAdd": 3.24,
+   "hpBase": 371.52,
+   "hpAdd": 6.48,
+   "defenseBase": 129,
+   "defenseAdd": 2.25
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 220.32,
+   "attackAdd": 3.24,
+   "hpBase": 440.64,
+   "hpAdd": 6.48,
+   "defenseBase": 153,
+   "defenseAdd": 2.25
+  }
+ ],
+ "skill": {
+  "id": 21006,
+  "name": "A Donzela no Retrato",
+  "descHash": "Aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> o Dano causado por Ataques Extras do usuário. Se os PV atuais do inimigo-alvo estiverem abaixo ou iguais a <nobr>#2[i]%</nobr> dos PV máximos, aumenta em mais <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> o Dano causado por Ataques Extras.",
+  "levelData": [
+   {
+    "params": [
+     0.24,
+     0.5,
+     0.24
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.3,
+     0.5,
+     0.3
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.36,
+     0.5,
+     0.36
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.42,
+     0.5,
+     0.42
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.48,
+     0.5,
+     0.48
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 50,
+   "2": 80,
+   "3": 140,
+   "4": 210,
+   "5": 300,
+   "6": 400,
+   "7": 510,
+   "8": 640,
+   "9": 780,
+   "10": 930,
+   "11": 1090,
+   "12": 1260,
+   "13": 1460,
+   "14": 1650,
+   "15": 1860,
+   "16": 2080,
+   "17": 2300,
+   "18": 2540,
+   "19": 2790,
+   "20": 2900,
+   "21": 3010,
+   "22": 3130,
+   "23": 3240,
+   "24": 3360,
+   "25": 3490,
+   "26": 3610,
+   "27": 3740,
+   "28": 3860,
+   "29": 3990,
+   "30": 4130,
+   "31": 4260,
+   "32": 4400,
+   "33": 4540,
+   "34": 4680,
+   "35": 4820,
+   "36": 4970,
+   "37": 5110,
+   "38": 5260,
+   "39": 5410,
+   "40": 5560,
+   "41": 6100,
+   "42": 6450,
+   "43": 6810,
+   "44": 7180,
+   "45": 7550,
+   "46": 7930,
+   "47": 8310,
+   "48": 8710,
+   "49": 9110,
+   "50": 9520,
+   "51": 9940,
+   "52": 10350,
+   "53": 10780,
+   "54": 11220,
+   "55": 11660,
+   "56": 12110,
+   "57": 12570,
+   "58": 13030,
+   "59": 13500,
+   "60": 13980,
+   "61": 14630,
+   "62": 15420,
+   "63": 16210,
+   "64": 17010,
+   "65": 17830,
+   "66": 18660,
+   "67": 19500,
+   "68": 20350,
+   "69": 21220,
+   "70": 22100,
+   "71": 24650,
+   "72": 26970,
+   "73": 29330,
+   "74": 31720,
+   "75": 34140,
+   "76": 36600,
+   "77": 39100,
+   "78": 41620,
+   "79": 44180,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "21006"
+}

@@ -1,0 +1,2806 @@
+{
+ "spRequirement": 135,
+ "iconPath": "dde4e1862a972c97fae0aa51693ee227ae1a275136a82932151b4b362537e4a6",
+ "bgPath": "8702d1c143eeddc6c1fe762a975dfe8439b71e7cff8c028fac712aa34ad1e9ab",
+ "figPath": "bc8aaecc4e7a06ba4e8184fab558688b82f7a2b2d23b4fe9fc40a42fbe3d6d11",
+ "fgPath": "5782d497b24d4d9c8c7e5fcb12ff19da6ac3d8e75d0b468ce4715eca579eaf83",
+ "splashIconPath": "a085446e3039645f6e5a6f0904bfcda179300dcbbdc0d89a41bfa701824e14ac",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 6,
+  "iconPath": "2f9b8d95db5ea4e06c3c53c68bf0a3a270c39d2ead73a93311dd8a39d364cfbf",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬",
+    "エンバー交換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "運命の足跡",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "幾度の敗北があなたに勝利をもたらし、一歩一歩の前進があなたを運命の転換点へと導いた。",
+   "purpose": "軌跡素材",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」ポイント報酬",
+    "ナナシの勲功",
+    "エンバー交換",
+    "期間限定イベント報酬"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "d75aec8e75227549d536ef57980f65a2b081b9665d06cd1a02a5bafa6c688f63",
+   "name": "無窮なる仮身の遺恨",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "いくら肉体を奪っても、願いは叶わない。仙薬を求める人たちのように、それは「壊滅」を恐れる必要のない、永く存在できる体を渇望する。けど同時に、その者は知っている、それは永遠に実現できない迷夢だと。<br /><br />「数え切れないほどの世界が負創神の烈炎に呑まれるのを見てきた、そして妾もその炎の中の一筋であった。妾は其の思うがままに踊る。だが、薪が燃え尽きると炎は消えることも、よく理解している…」",
+   "purpose": "軌跡素材",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "歴戦余韻「鱗淵境」"
+   ]
+  },
+  "351747": {
+   "id": 351747,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "ffced65cf845699b4e8eb80c2b0ede29eb8bd919f5f9902b7f68a1ef93903908",
+   "name": "蒼猿の釘",
+   "desc": "豊穣の霊獣の残余。量子属性キャラクターの昇格素材。",
+   "lore": "「霊獣」と「忌み物」の差は名前だけである。飼い慣らされたものは霊獣、災いを呼ぶ制御不能なものは忌み物と呼ばれる。この長右の身体に打たれた釘は、永久に霊獣であることを保証するものだ。<br /><br />「命を奉ずることこそ蒔者の義務。魁首様がこの釘をあなたの身体に打ち込めば、大人しく話を聞くしかなくなるだろう？」",
+   "purpose": "キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/351747",
+   "comeFrom": [
+    "凝結虚影「鱗淵境」",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "漫遊指南",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>20000</nobr>獲得できる。",
+   "lore": "世界を渡り歩くためには欠かせない、冒険手引き集。閲覧キーを押すと、電子音声が理解可能な言語で、有名な冒険者たちが様々な世界で体験したことや、彼らが色々な星で得た貴重な知識を語り聞かせてくれる。<br /><br />「漫遊指南最新シリーズ『スペースグルメガイド』が現在発売中。ぜひお買い求めください」<br />「投稿の際は、博識学会共感覚ビーコンのオペレーター<nobr>23</nobr>θにお繋ぎください。原稿料はあなたが普段から利用している方法でお振込みいたします」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "「忘却の庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "冒険記録",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>5000</nobr>獲得できる。",
+   "lore": "綺麗に装丁された、一目でためになるとわかる冒険日誌。冒険に関する細かい描写、価値のある情報、サバイバル術が書かれている。<br /><br />「なんで数字化してデバイスに保存しないの？持ち歩きやすくなるでしょ」<br />「お前が思っているより、先進技術は恒星嵐や中性子噴出に弱いんだ。なにより、この本の制作者は、最も簡単な方法で人々に読んでもらいたかったんだろう」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "デイリー訓練",
+    "エンバー交換"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "旅の見聞",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>1000</nobr>獲得できる。",
+   "lore": "旅の出来事を記した日記。字はかすれており、不鮮明。思うままに内容が書かれてあるので、あまり助けにはならないだろう。<br /><br />「読み終わったら早くその紙切れを捨てるのよ、丹恒？」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "依頼報酬"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "fcb7215a2a17b09cd16362b5e1b398eaaf2fde23a94057c5f961151885a620c5",
+   "name": "工造機関",
+   "desc": "仙舟機巧の部品、強化に必要な簡易素材。",
+   "lore": "仙舟機巧術の基礎。機巧部品の最小構成単位、分解する時は生物の細胞構造を破壊しているように見える。<br /><br />「博識学会は<nobr>200</nobr>万信用ポイントで、仙舟の傀儡を傷つけずに解体する技術案を懸賞する」<br />「スクリューガムと知り合いなら、この<nobr>200</nobr>万はタダも同然……」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "入魔機巧からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "1977002edbf48f44c49d08284ce2681f622e70c447d50de10a8b9491dfcb719c",
+   "name": "工造迴輪",
+   "desc": "仙舟機巧の部品、強化に必要な普通素材。",
+   "lore": "仙舟機巧術の連結部品。塵のように小さな歯車が緻密に繋がり、複雑な機体を形成し、機械に命を吹き込む。<br /><br />「その形は天を模し、円を成す。その動きは道を倣い、廻を成す」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "均衡Lv.2に達した後、入魔機巧からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "635668": {
+   "id": 635668,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "61f6a6c6b61eb719a275169312c34e1791499cffa9fa1ab2f5390cfca20da279",
+   "name": "青銅の執着",
+   "desc": "青銅で造られた古い手盾。作りは粗いが実用性が高い。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">存護</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "言い伝えによれば、太古に戦乱あり。人々はあらゆる原始的な手段を尽くし、神の下で無敵の獣に立ち向かったという。<br />この盾が、その戦いの見証者。<br /><br />「抵抗に意味はなくても、抵抗を諦めることはない」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/635668",
+   "comeFrom": [
+    "疑似花萼「サポート部分」",
+    "エンバー交換"
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "058379eb2e88612f2b1f78a6c3195c457e124c9b6de602d6dd2fe0b2d17245f3",
+   "name": "工造渾心",
+   "desc": "仙舟機巧の部品、強化に必要な高級素材。",
+   "lore": "仙舟機巧術の中枢。渾儀は心臓のように脈動し、機械に生き物の如く思考を与える。<br /><br />「怖がる必要はありません。心を取り外せば、彼…彼女？いや、其は心智を失い、無機質の塊に戻ります」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "均衡Lv.4に達した後、入魔機巧からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "836254": {
+   "id": 836254,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1313f4b8549d0b129fb33fcd3745a87a8030d13fc8c28159f0dd2868a203ac2f",
+   "name": "琥珀の堅守",
+   "desc": "奇異な大盾。天空の遥か彼方で採掘した琥珀が散りばめられいる。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">存護</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "この盾を持っている者は、まるで見えない壁に守られているようである。たとえ火の矢であろうと、山の如き巨大な爪であろうと、その持ち主を傷付けられない。<br />言い伝えによれば、太古に戦乱あり。青銅の盾を携えた集落の英雄と、灼熱の槍を握りしめた戦士が肩を並べ、古獣に向かって決死の突撃を行った。<br />この盾が、その戦いの見証者。<br /><br />「限界を超えるな」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/836254",
+   "comeFrom": [
+    "疑似花萼「サポート部分」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  },
+  "920195": {
+   "id": 920195,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "76967cbdb14e8ef8141d315093566ebc0554c20923de99cd1e1b30cbb799758d",
+   "name": "寒鉄の誓い",
+   "desc": "未知の合金で造られた盾。その複雑な作りは、再現が困難である。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">存護</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "決して小さくはないのに、軽々と振り回すことができ、攻撃を受けても表面には傷一つ残らない。<br />言い伝えによれば、太古に戦乱あり。戦士たちは灼熱の光線を放つ槍と、寒鉄で造られた盾を手に持ち、陥落する運命にある国を守った。<br />この盾が、その戦いの見証者。<br /><br />「『城下に敵兵来たり！城下に敵兵来たり！』、戦士たちの勇ましい声が聞こえる」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/920195",
+   "comeFrom": [
+    "疑似花萼「サポート部分」",
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 63.36,
+   "attackAdd": 3.168,
+   "hpBase": 200.64,
+   "hpAdd": 10.032,
+   "defenseBase": 82.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549503,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 88.704,
+   "attackAdd": 3.168,
+   "hpBase": 280.896,
+   "hpAdd": 10.032,
+   "defenseBase": 115.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549503,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 114.048,
+   "attackAdd": 3.168,
+   "hpBase": 361.152,
+   "hpAdd": 10.032,
+   "defenseBase": 148.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633444,
+     "count": 6
+    },
+    {
+     "id": 351747,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 139.392,
+   "attackAdd": 3.168,
+   "hpBase": 441.408,
+   "hpAdd": 10.032,
+   "defenseBase": 181.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633444,
+     "count": 9
+    },
+    {
+     "id": 351747,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 164.736,
+   "attackAdd": 3.168,
+   "hpBase": 521.664,
+   "hpAdd": 10.032,
+   "defenseBase": 214.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717385,
+     "count": 6
+    },
+    {
+     "id": 351747,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 190.08,
+   "attackAdd": 3.168,
+   "hpBase": 601.92,
+   "hpAdd": 10.032,
+   "defenseBase": 247.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717385,
+     "count": 9
+    },
+    {
+     "id": 351747,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 215.424,
+   "attackAdd": 3.168,
+   "hpBase": 682.176,
+   "hpAdd": 10.032,
+   "defenseBase": 280.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "e84bca43e60fb74515931428dd97bd2701c8587d680bb8768f300a25f921c070",
+   "artPath": "36eececf71891e64617a7d11d45d188ef0a90a326d07eb64468c63e7a6f33f88",
+   "name": "司危",
+   "descHash": "「鑑知」状態の味方の会心ダメージ+<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.3
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "1d26adebbf753d7d467665b37332e7636cadaaab42ce66a7025d88fc2689c235",
+   "artPath": "59359faeb74ff3439e21baea9a285c832d8416a7fc8824d0393a389017406192",
+   "name": "柔兆",
+   "descHash": "「窮観の陣」が起動している時、味方がHPが0になるダメージを受けても、今回の行動でHPが0になるダメージを受けたすべての味方は戦闘不能状態にならず、自身の最大HP<nobr>#1[i]%</nobr>分のHPを回復する。この効果は一度の戦闘で1回まで発動できる。",
+   "params": [
+    0.7
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "5bb5ede170b7ad8983fe5ec5e1d7e445e2885379ab0d118531dee786bcec1c68",
+   "artPath": "f008abaa2ad53ff81fc4f5f052482837276c7fe11c9970b67a0485ddb4b18778",
+   "name": "直符",
+   "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "c4d5c06eccfe3d0b35850806ddb9a4f302375d12b8daba5282ce0e30e41ecb1e",
+   "artPath": "0bc12bfd982a0db9e25596dca5b6829079cda551587aeb984f4e53e2867b7e10",
+   "name": "格澤",
+   "descHash": "「窮観の陣」の中にいる符玄以外の味方が攻撃を受けた後、符玄はEPを<nobr>#1[i]</nobr>回復する。",
+   "params": [
+    5
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "8165fb90d2a5d5ac271c5092c934a8aa15fa7b3bf3087af18d0b6493801faa63",
+   "artPath": "139c997ee76f8508b948aba431248d205b10e107e3980f34768dc46e45e3be55",
+   "name": "計神",
+   "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "8345f31a9d1599e5371a7dcdbeecd61d882fb8e0d5d02e16e9c00cbd3c08925e",
+   "artPath": "5cc4182c9ea511a19f5049f85ce23f2ef5b186dec9571fb0a98aa50f936a05fc",
+   "name": "種陵",
+   "descHash": "「窮観の陣」が起動している時、味方全体が戦闘中失った累計HPをカウントする。符玄の必殺技の与ダメージが、戦闘中失った累計HP<nobr>#1[i]%</nobr>分アップする。<br />戦闘中失った累計HPのカウントは、符玄の最大HPの<nobr>#2[i]%</nobr>を超えず、必殺技を発動した後にリセットされる。",
+   "params": [
+    2,
+    1.2
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   369002
+  ],
+  [
+   285061
+  ],
+  [
+   168416
+  ],
+  [
+   84475
+  ],
+  [
+   799948
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体に符玄の最大HPの<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#7788ff;\">量子</span>属性ダメージを与える。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 369002,
+   "name": "始撃歳星",
+   "iconPath": "729ee1d6c3297a886fa785430abe4b639cd79132df98acee3525034fd2f90048",
+   "typeDescHash": "通常攻撃",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.25
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.35
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.4
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.45
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.55
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "防御",
+   "descHash": "「窮観の陣」を起動し、符玄以外の味方が受ける、バリアに防がれる前のダメージの<nobr>#1[i]%</nobr>を符玄が<u>分担</u>する、<nobr>#3[i]</nobr>ターン継続。<br />「窮観の陣」の中にいる味方全体は「鑑知」を得る。「鑑知」状態の味方の最大HPが、符玄の最大HPの<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span>分アップし、会心率+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[f1]%</nobr></span>。<br />符玄が<u>戦闘不能状態</u>になった時、「窮観の陣」は解除される。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 285061,
+   "name": "太微の行棋、影示す霊台",
+   "iconPath": "5bb5ede170b7ad8983fe5ec5e1d7e445e2885379ab0d118531dee786bcec1c68",
+   "typeDescHash": "戦闘スキル",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.03,
+      0.06
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.033,
+      0.066
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549503,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.036,
+      0.072
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.039,
+      0.078
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.042,
+      0.084
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.044999998,
+      0.09
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633444,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.048750002,
+      0.0975
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.052500002,
+      0.105
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.05625,
+      0.1125
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.06,
+      0.12
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.063,
+      0.126
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.066,
+      0.132
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.069,
+      0.138
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.072,
+      0.144
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.075,
+      0.15
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "全体攻撃",
+   "descHash": "敵全体に符玄の最大HPの<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#7788ff;\">量子</span>属性ダメージを与え、天賦によるHP回復の発動回数+1。",
+   "ultimateCost": 135,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 168416,
+   "name": "天律大衍、歴劫帰一",
+   "iconPath": "2b0f58ff82979d0bc6d17afe01ed0e6f6f2ffa538a71e145d5bf1277fb20b859",
+   "typeDescHash": "必殺技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.6
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.64
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549503,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.68
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.72
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.76
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633444,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.85
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.95
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.04
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.08
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.12
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.16
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "回復",
+   "descHash": "符玄が戦闘可能状態の時、味方全体に「避邪」を付与する。「避邪」状態の味方の被ダメージ-<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>。<br />符玄の残りHP割合が<nobr>#2[i]%</nobr>以下になった時、自身の失ったHP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>分のHPを回復する。HPが0になる攻撃を受けた時、この効果は発動できない。この効果の初期の発動可能回数は1回、最大で2回まで累積できる。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 84475,
+   "name": "乾坤清夷、一陽来復",
+   "iconPath": "3736c5a320fba00aa787c377706d5b09655f7e0e2936af52bcd48dee62f2e46b",
+   "typeDescHash": "天賦",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.1,
+      0.5,
+      0.8
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.108,
+      0.5,
+      0.81
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549503,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.116,
+      0.5,
+      0.82
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.124,
+      0.5,
+      0.83
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.132,
+      0.5,
+      0.84
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.14,
+      0.5,
+      0.85
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633444,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.15,
+      0.5,
+      0.8625
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.16,
+      0.5,
+      0.875
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.17,
+      0.5,
+      0.8875
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.18,
+      0.5,
+      0.9
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.188,
+      0.5,
+      0.91
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.196,
+      0.5,
+      0.92
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.204,
+      0.5,
+      0.93
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.212,
+      0.5,
+      0.94
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.22,
+      0.5,
+      0.95
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 883889,
+   "name": "攻撃",
+   "iconPath": "729ee1d6c3297a886fa785430abe4b639cd79132df98acee3525034fd2f90048",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "防御",
+   "descHash": "秘技を使用した後、味方全体は<nobr>#1[i]</nobr>秒間継続するバリアを獲得する。このバリアは敵のすべての攻撃を防ぎ、敵の攻撃を受けても戦闘に入らない。バリア継続期間中、戦闘に入る時、符玄は自動で「窮観の陣」を起動する、<nobr>#2[i]</nobr>ターン継続。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 799948,
+   "name": "否泰記す四郭固",
+   "iconPath": "ad4195e8af7b7c5ff9e4ee74d3140de164d5622398766ebab403fb473ab3d89d",
+   "typeDescHash": "秘技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      20,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1208103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1208208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1208209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 6314,
+        "name": "HP強化",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+        "statusList": [
+         {
+          "key": "HP",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836254,
+          "count": 8
+         },
+         {
+          "id": 717385,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1208210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 922364,
+        "name": "会心率強化",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "会心率",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836254,
+          "count": 8
+         },
+         {
+          "id": 717385,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 6313,
+      "name": "効果抵抗強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+      "statusList": [
+       {
+        "key": "効果抵抗",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836254,
+        "count": 8
+       },
+       {
+        "id": 717385,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "「窮観の陣」が起動している時、敵が味方に行動制限系デバフを付与する場合、味方全体がその行動中に付与されるすべての行動制限系デバフを抵抗する。この効果は1回まで発動できる。再度「窮観の陣」を起動すると、発動可能回数がリセットされる。",
+    "ultimateCost": 0,
+    "id": 6209,
+    "name": "六壬神課",
+    "iconPath": "d167afa6ae6e36433b5c33b434cacf1b0be2e217d2f65886ea3d9d17403ec53e",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836254,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1208201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1208101,
+     "type": 1,
+     "children": [
+      {
+       "id": 1208202,
+       "type": 2,
+       "children": [
+        {
+         "id": 1208203,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 6304,
+          "name": "会心率強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+          "statusList": [
+           {
+            "key": "会心率",
+            "value": 0.026999999
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920195,
+            "count": 3
+           },
+           {
+            "id": 633444,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 6303,
+        "name": "HP強化",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+        "statusList": [
+         {
+          "key": "HP",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 5000
+         },
+         {
+          "id": 635668,
+          "count": 3
+         },
+         {
+          "id": 549503,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "descHash": "「窮観の陣」が起動している時、符玄が戦闘スキルを発動すると、さらにEPを<nobr>#1[i]</nobr>回復する。",
+      "ultimateCost": 0,
+      "id": 6207,
+      "name": "太乙神数",
+      "iconPath": "9745554b6afe5d263fa7f0407b23d1efc0d9fb45b9d41b3027b4c60f14eb96bb",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "levelData": [
+       {
+        "params": [
+         20
+        ],
+        "level": 1,
+        "levelReq": 0,
+        "promotionReq": 2,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 5000
+         },
+         {
+          "id": 635668,
+          "count": 3
+         },
+         {
+          "id": 186254,
+          "count": 1
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": 1208102,
+     "type": 1,
+     "children": [
+      {
+       "id": 1208205,
+       "type": 2,
+       "children": [
+        {
+         "id": 1208206,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 6299,
+          "name": "HP強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+          "statusList": [
+           {
+            "key": "HP",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836254,
+            "count": 3
+           },
+           {
+            "id": 717385,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 6302,
+        "name": "会心率強化",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "会心率",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 20000
+         },
+         {
+          "id": 920195,
+          "count": 5
+         },
+         {
+          "id": 633444,
+          "count": 4
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "descHash": "必殺技を発動した時、符玄以外の味方のHPを、符玄の最大HPの<nobr>#1[i]%</nobr>分+<nobr>#2[i]</nobr>回復する。",
+      "ultimateCost": 0,
+      "id": 6210,
+      "name": "奇門遁甲",
+      "iconPath": "7b37b3b7fd5b2e1d40dbcc0127ca45084f9d3861c504c31db8ff55bf03a06076",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "levelData": [
+       {
+        "params": [
+         0.05,
+         133
+        ],
+        "level": 1,
+        "levelReq": 0,
+        "promotionReq": 4,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 20000
+         },
+         {
+          "id": 920195,
+          "count": 5
+         },
+         {
+          "id": 125435,
+          "count": 1
+         },
+         {
+          "id": 186254,
+          "count": 1
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 6306,
+    "name": "会心率強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+    "statusList": [
+     {
+      "key": "会心率",
+      "value": 0.026999999
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549503,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1208204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 6301,
+    "name": "効果抵抗強化",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+    "statusList": [
+     {
+      "key": "効果抵抗",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 10000
+     },
+     {
+      "id": 920195,
+      "count": 3
+     },
+     {
+      "id": 633444,
+      "count": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": 1208207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 6300,
+    "name": "会心率強化",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+    "statusList": [
+     {
+      "key": "会心率",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 45000
+     },
+     {
+      "id": 836254,
+      "count": 3
+     },
+     {
+      "id": 717385,
+      "count": 3
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "胴体",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "HP",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "速度",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "次元界オーブ",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "HP",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "連結縄",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "EP回復効率",
+    "propertyIconPath": "75627c696d3e9763c0b4feeb4a8e2baf594ac73214c6227b3a125c032be090c8"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初対面",
+   "text": "私は羅浮の<ruby>太卜司<rt>タイボクシ</rt></ruby>の長、<ruby>符玄<rt>フゲン</rt></ruby>。はじめまして——いいえ、久しぶりと言うべきかしら…私は法眼を通して、すでにおまえとの初対面を<nobr>22</nobr>回経験しているから。",
+   "unlockRequirement": "",
+   "cnUrl": "f61fc8453a5bc9d4221eb3ef08bdc838c18ce9303d6902646efdb88858fc4273",
+   "jpUrl": "479293d6f5b929a90bb87302afd3dfe0d441c718ea805132bdcfe2cbb23740e3",
+   "enUrl": "70d671f80d59853afff0cdefb884d93cd5938cf054919658820b71cd27da7aba",
+   "krUrl": "fc7400cd0552812d3d1b73fe87fb99c19c07a6cf4d6f75ce06384aa675609b0f"
+  },
+  {
+   "id": 2,
+   "title": "挨拶",
+   "text": "珍客ね、吉凶を占って欲しいのかしら？驚く必要はないわ。おまえが来ることは、すでに卦象でわかっていたもの。",
+   "unlockRequirement": "",
+   "cnUrl": "8bb5ff7f815c6c77f7e177343fedfbe1c2b2be2d01595652cb10ff0f2a26668e",
+   "jpUrl": "ba8791a7cb08ad803ac1ff7312f3b31bdfbdecc46fbe8546abd9b8bb62070fe0",
+   "enUrl": "3b08d73f420dbdef491812c09460278a9c94e276d3dd797972092dccd6f41320",
+   "krUrl": "5e89fda4a8a5c74e489fcc3109b8a14f2d69d01cb1aef25c6e5d0823b4192fc9"
+  },
+  {
+   "id": 3,
+   "title": "お別れ",
+   "text": "もう行くの？私は忙しいから、遠くまで見送りはしないわ。",
+   "unlockRequirement": "",
+   "cnUrl": "13224bad3db3061e03f1c6f0d79a9752e43b5fb1f2fea9e141dcf4c8437ffa9d",
+   "jpUrl": "4b773084d019fa2958fa53d5feea93d5a81c5f5c454404658b27064b98d1ddd9",
+   "enUrl": "67bd380c00f82d77b616286633ff68ce32f20b8ddbf01e5c812ad5a4e5482e49",
+   "krUrl": "a51919ca094244eb5fc62673bd93175268aa2dac18f9ae569a96aa5d69c02cd5"
+  },
+  {
+   "id": 4,
+   "title": "自分について・卜者",
+   "text": "誰もが私を「遺漏なき法眼」と称するけど、私はそうは思わない。占卜は万能ではないでしょう？私は卜者であって、神託を説く預言者ではないの。",
+   "unlockRequirement": "",
+   "cnUrl": "1f3c5bf872ae9982738868623efcda0911c68918dbed252fc8288c1d82c854c4",
+   "jpUrl": "042da0aa2636992f1367114749eb20fd96ae0dabc71205f7c7360f6b04437fb1",
+   "enUrl": "c8f146d7be69ca8aa019c313f5fcd4b565035777ccb048bd7264e6b5ace77e5c",
+   "krUrl": "711e84b74fbe7de461b6be163823767b42a28ea4c8bbb8871fdda63c9d1af1e8"
+  },
+  {
+   "id": 5,
+   "title": "世間話・第三の目",
+   "text": "この額にある眼は天外を漫遊していた時に得たもので、ヌースの重宝よ。これは私が周囲の変化を洞察するのを助け、多くの可能性を視せてくれる。ヌースの絶対的な信条では「知識は苦痛と引き換えに得るべきである」とされているから、この法眼は永遠の刑具と言えるわね……",
+   "unlockRequirement": "",
+   "cnUrl": "6b26a1832f0772f8eb076bbbfd1625f1a2cbf1868bfdf746762f4bc69bdf8ca0",
+   "jpUrl": "e68f641561978ca5e08c166a65d52ef75d881e1fc07dd93e4b88606258c5b2ff",
+   "enUrl": "7904a4f5938707d0ce364c6a34304e5d2e895dc95ef54bab46de8a1e2e065987",
+   "krUrl": "c651809e5d8495d02a1fdde3d8541af69adcc827f05e15ae83b9b2e72adc2976"
+  },
+  {
+   "id": 6,
+   "title": "世間話・窮観の陣",
+   "text": "卜者たちは、この陣で先に起きる変化を知る。星の海を漂う羅浮にとって、なくてはならない存在なの。ただ…時々、これが私たちの進路や多くの可能性を閉ざしているのではないかと思うことがあるわ。",
+   "unlockRequirement": "",
+   "cnUrl": "098452c9b723d033cc271cf0e6e6ecece7a59a09f06ea1e58669109227b106e5",
+   "jpUrl": "d3075430c07a380416eea954cda21fa0a69f766bddd08f9b5492822886ca52ed",
+   "enUrl": "6e9d3b0c18a24bba42cdeaad6b3f7c87323b512e3acacc7c0d27d0919426eb0d",
+   "krUrl": "09b46e9f39cd169a1044ae2a7db55a20c33994fa47485f1fe8ab62ffdf2ea019"
+  },
+  {
+   "id": 7,
+   "title": "世間話・仕事",
+   "text": "今朝の占いでは、変動は坎、離の間、変数が多いと出ていた…ふう、公務も残業もしないほうがいいなんて、本当に何もできないじゃない。",
+   "unlockRequirement": "",
+   "cnUrl": "2ca8ea831e0f1f71896263a9c913bdf7fcaf0bfb46e8855cd2a26f914c36c911",
+   "jpUrl": "d243f35c03461d9082ed01e4e8fb1428d7782e9b94a60515216686f1511ce9e2",
+   "enUrl": "267bea11fcfdaaae9885a54e903bfdc427ad6892ca79055f4946dfea8c2e9047",
+   "krUrl": "870f419564723473c36295a4c09a41e51c6a157f80e670c42f74877b4ce66cba"
+  },
+  {
+   "id": 8,
+   "title": "趣味",
+   "text": "太陽が昇る前から働く時は、少し時間を作って龍女が特別に配合した薬茶を飲むようにしているわ——これでもかというほど砂糖を加えて一気に飲むと、気力が湧いてきて、計算で消費したエネルギーを補うのにちょうどいいの。",
+   "unlockRequirement": "",
+   "cnUrl": "efe27566ad5f38830bb40ca19e6c4676cdadd2fcbb7e01f674f400a97f3857ff",
+   "jpUrl": "18f4f3710e9d38ec22502f2b19f2d9867500805c79a23464b3bc4ab33f14bb54",
+   "enUrl": "caa15b3e4f7bfc608047ee8adbc929c23cdc2008ba267b71da5671660af69158",
+   "krUrl": "c937328805d891c7bc2d2a6e4187019cddefa4f7d7adfa2f94edd955d82cdb88"
+  },
+  {
+   "id": 9,
+   "title": "悩み事",
+   "text": "私は見識が広く、色々な書物を網羅しているから、どうしても話している時に言葉を引用してしまうの。そのせいか、粗探しが好きな人が「人の言葉を喋れ」と言ってくるのよね…ふん。",
+   "unlockRequirement": "",
+   "cnUrl": "87133e15b1f1d843734984bf5fdc301456a9632867f32e174dc38023dc6ebda6",
+   "jpUrl": "014db8bb60ee35982f96ccc3f9f9b8704a2d1c787513cf80be85b2ae910876fe",
+   "enUrl": "89948f4a88828935727553e2b411e1ac3be9e9446fc1e39e190230d2c604f5a3",
+   "krUrl": "5ec6329f24d195f63954e4a01f518d2227576acee4f08e012f810a92a82031c6"
+  },
+  {
+   "id": 10,
+   "title": "シェア",
+   "text": "太卜司の<ruby>不文律<rt>ふぶんりつ</rt></ruby>である「占うべきではない3つのもの」の中に、「不義を占わず」というのがある。宝くじや相場の変動について聞かれても、答えるつもりはないわ。",
+   "unlockRequirement": "",
+   "cnUrl": "f15647707f917e980a1c6e8aa83cf18ef59eefcf5ced9cff56e990883523275b",
+   "jpUrl": "bbe8d092a573a873c779daf7200c39108e917607319aba88780f32079616a1b5",
+   "enUrl": "45715f40d64d88ce684d187883388b1a1500205f241cc2a755f3a0ab054c56e7",
+   "krUrl": "e7242a63c46653eadd8c9f5f9084542a30dbd2359219e7e7fdd9650ace0b7238"
+  },
+  {
+   "id": 11,
+   "title": "見聞・1",
+   "text": "同盟は帝弓の啓示に従い、<ruby>寿禍の王<rt>寿瘟禍祖</rt></ruby>を巡狩しているけれど…どの仙舟にも「豊穣の仙跡」と呼ばれる星神の造物が残っている。羅浮の多くの洞天には、私たちを長命にした「建木」が封印されているわ。",
+   "unlockRequirement": "",
+   "cnUrl": "0117e134429feb74a978f923ff1462961d54de8a5032e0f61084aa2a5bc46344",
+   "jpUrl": "2af5b39147932a0ccb4183767e69e1eb0a91adf03af688ec249336fc190deefc",
+   "enUrl": "ccb70e69647cd650309fa0df3e7449cdd73cd78f3e52523a09bd4df39428fed4",
+   "krUrl": "11cff6c23e86396f3728d448b301b59f1db746ed15c280719ee2b9388eb5cc36"
+  },
+  {
+   "id": 12,
+   "title": "見聞・2",
+   "text": "仙舟玉殿は太卜司制度発祥の地。観星士や卜者といった賢者が集まり、同盟のために方略を決め、星を観察する。かつて、あそこで「<ruby>息壌<rt>ソクジョウ</rt></ruby>」の胎石を——「息壌」玉兆技術の根源を見たことがあるわ。",
+   "unlockRequirement": "",
+   "cnUrl": "4b359fe0e5128bf9bd550dd3114ec22f54e767d5971dcc4e260f618dd8cdb085",
+   "jpUrl": "521f77659924bade107c6db20e8bb4e9375395d9f75771c2ad3fb748a7a32b80",
+   "enUrl": "27a398b1bcf24ad9bc2a43578bf81ff5f5c588d40b64cab248a5577682dc52c8",
+   "krUrl": "713f28daf89447b39b70f5839e6d84f7163b058c769248d9a7d3097bb0119cfa"
+  },
+  {
+   "id": 13,
+   "title": "見聞・3",
+   "text": "仙舟<ruby>朱明<rt>シュメイ</rt></ruby>のエンジンの中心には、命の宿った炎が眠っていると言われているわ。それは、かつて仙舟が大敵とみなしていた生物で、人々が「<ruby>火皇<rt>カコウ</rt></ruby>」と呼んでいたもの。朱明の職人は、あらゆる手段を講じて「それ」を炉の中に閉じ込め、その力を使って色々な武器を鋳造したの。",
+   "unlockRequirement": "",
+   "cnUrl": "9a7c780142ac3c4cfd51d7c535d47875882048784032923c78d8d6b855cd81d6",
+   "jpUrl": "ef1df06e838d8220d6757ede5908b9709afe230ca0253ef87f19bcd43297c912",
+   "enUrl": "0c066f436160e64ea8c8b0747d2e358f03f5a3eeb56cf70df9771e45e1b2e4e4",
+   "krUrl": "619a0360892beddf2e2edcf8a4d65f9a445a8342a55396fd00ac576a62da990d"
+  },
+  {
+   "id": 14,
+   "title": "景元について",
+   "text": "ふん。これまで将軍は<nobr>122</nobr>回、私を後任の将軍に推薦することを承諾したわ。そのうちの<nobr>121</nobr>回は私が何らかの貢献をしたり、策を出したりした後のことで、適当にあしらうように「うん」と言っていた。そして最後の1回の時、彼が一定の間隔で頷くものだから、よく見てみたら…ただ居眠りをしているだけだったのよ……",
+   "unlockRequirement": "",
+   "cnUrl": "7992c7e301ff041ba227d6c7047e8632e056d59e50c62e4bbbe055e4da0e6e5b",
+   "jpUrl": "d01c6d73df9b30c5b3a413ebff95b0d3a47baa71944d64f0ab2890be21424bda",
+   "enUrl": "bc7fd1d5ffd69f53725965e72cbfc4326f453b0424d5b9ac504b5f50e08b42d7",
+   "krUrl": "3c4bb3471e4c737e14d9de4ec36e0236bf05f756ea5e86526e45d3d266ead422"
+  },
+  {
+   "id": 15,
+   "title": "青雀について",
+   "text": "太卜司には怠け者が多いけど、彼女はサボることにおいて我が道を行っているわね。そろそろ経験をまとめた法門とか出して、新しい宗派を開きそう。時々、彼女は私の占いから逃れているのではないかと疑ってしまうわ……",
+   "unlockRequirement": "",
+   "cnUrl": "b36686951a4e4e188159e4eb203f5184ebd7876b71951d32f79cb60670561320",
+   "jpUrl": "1137a8ccfd32b2d992be7e5570b010a2c080078b0fea20107a70779e712df388",
+   "enUrl": "a6b6489e418b153aa7a5baef1344486ecfb42b1e74e181aa1b9733e792ba1100",
+   "krUrl": "22a71b7eb27bc5910e96c4773da8641c0200d28aa3cec2022ee47f0153044a8a"
+  },
+  {
+   "id": 16,
+   "title": "白露について",
+   "text": "龍女が配合してくれる薬茶の中には、虚弱を改善したり、栄養の欠乏を補ったりする秘密の成分が入っていると思っていたけど…後になってから、彼女が砂糖を多めに入れていただけだと気付いたの。人に合わせて薬を処方する、さすがは丹鼎司が力を入れて育成している天才ね。",
+   "unlockRequirement": "",
+   "cnUrl": "f9bc6ae384dcaeff6ade838e0bda54d92f8c4e727af20a51a374a3b9782c54b5",
+   "jpUrl": "d86624240f77b282fd5cb7b282bb4699170aa8ffc57f0d6bcf420cc7b2d66394",
+   "enUrl": "a9d179aafb9ae46db75c51e1c37cb113b0d6ccb4bd754956e0b83392e569be54",
+   "krUrl": "342760aefb4b6591f7087f70f6910edcca782ac4372acb6fbdbe9d04f6e7ca83"
+  },
+  {
+   "id": 17,
+   "title": "彦卿について",
+   "text": "将軍と話をしている時に少しでも言葉遣いを間違えると、毎回あの子供が私のことを睨んでくるの。でも法眼で視るまでもなく、彼が私に武力を行使する可能性は低いから、好きにさせているわ。",
+   "unlockRequirement": "",
+   "cnUrl": "3abf1d478626d03c2412438dded8fbc348c55ab09007a23842a7e113b856df64",
+   "jpUrl": "d2b35ad4f546424dbe5e16173d0f7c8ca031f6c32e24f7630289d3ed47770c8d",
+   "enUrl": "ecd0911f56352bf86aad6ea4fb1461773b1f511b28a4c2faaadb6b839534bdea",
+   "krUrl": "713fef932dcd848d586ad131c4a84aaec07b0bb1d0c4281738ab52810db474bb"
+  },
+  {
+   "id": 18,
+   "title": "停雲について",
+   "text": "天舶司が管轄する商団にはそれぞれの長所がある。停雲が率いる「<ruby>鳴火<rt>ナルビ</rt></ruby>」商団は、ありふれた物の中から価値ある物を見つけるのが上手いと聞いたわ。万物に秘められた可能性を見出すという点では、占いの道に通じるものがあるわね。",
+   "unlockRequirement": "",
+   "cnUrl": "4b812ea0193f6b5f2dc5162fe7ef08befdc3a4f98b1b120aa02ab191e59b6078",
+   "jpUrl": "588bdb6069ca3be4a0a1519b3b0c40aee03ab8423440b067bba27336efbbe7e6",
+   "enUrl": "36a3f67f114ef4cea02a341a9f0177becaa290924824efbcda2356ea40d82c42",
+   "krUrl": "bccb0c8a4b65de80a4a014aa7ba298e1945d398a2d9bea6a5057ebc0ce41a1b2"
+  },
+  {
+   "id": 19,
+   "title": "開拓者について",
+   "text": "可能性が分岐した様々な虚像、運命を歩む者にあるべき流れ…それが彼女/彼からは感じられない。本当に奇妙だわ……",
+   "unlockRequirement": "",
+   "cnUrl": "6771cf6cd9fa195dd7529e0d98c50db0b5fe5cd9e0e942316ccdc640e3fe6574",
+   "jpUrl": "61ca645861659aec631f61f396bc167325c2819768aff0dae7ee0f349719dc9a",
+   "enUrl": "b72d1c0ec2383c686b9e5a0abd5ef8a4ba1a365c7b27cf6a1f88bf55ed599606",
+   "krUrl": "bda1329e3571f3d5558ceb92fcdd398adc1085c401a4b4a84d055acfe6636ae4"
+  },
+  {
+   "id": 20,
+   "title": "三月なのかについて",
+   "text": "一般的に、運命の流れは未来へと向かっている。でも、彼女のものは過去へと流れている…過去は彼女にとっていいもの？それとも悪いものかしら……",
+   "unlockRequirement": "同行クエスト「全て追憶」クリア後に解放",
+   "cnUrl": "6820001e1d889f86c7f6c244569364a58991852b8cdd5897dee00bcdaa59605b",
+   "jpUrl": "bfc938109b9963133b69a7e6a8f5c2a317c430ddc4448b9f8b487805aa25b468",
+   "enUrl": "d1cf9656b9f3fda96674e6aeaad618c81051378dead6b4ca115914067970bddb",
+   "krUrl": "46fc1a778d67ce33ef2d4f21ffc0ea5fad62c37f59c063f1be8ccb2cea3ccecb"
+  },
+  {
+   "id": 21,
+   "title": "フォフォについて",
+   "text": "あの子は臆病だけど、多くの者が彼女を褒めているのを耳にするわ…私があのように力を手に入れることができれば、苦心と労力をだいぶ減らせるはず…いえ、なんでもないわ。",
+   "unlockRequirement": "",
+   "cnUrl": "39fa63bcaaa79be0a1cd5a89d8c28d8774fb7c5f8ff236161b7dfbe59b18067c",
+   "jpUrl": "5f56bad666759afcc0cb44f89b429bd1b74431203fca0991b55e02616fd5ff97",
+   "enUrl": "6975b3c6dcafa3ba893d17687d226bd618d43fc579f5e40713d31fa49b39b767",
+   "krUrl": "79b976325dfe933000b431247951f5e653480cf3ada5c136561f9b89159a0db4"
+  },
+  {
+   "id": 22,
+   "title": "星魂覚醒",
+   "text": "一飲一啄、定めにあらざるなし。",
+   "unlockRequirement": "",
+   "cnUrl": "98eea903517411bbe9c3de9c539d045fb3f71a8a76f55fe1c42cfaa774433b77",
+   "jpUrl": "24663878979c68a90e4fd89d58b6ec78ae95f5e70cda6d1f4a7bff1f158818f2",
+   "enUrl": "2e71be25d3035169fc0da7983d24c969a9ce84745a739f5464ec793478feed31",
+   "krUrl": "96a02a615a1521bccbbe2c18c3834c7a2d150603fd760d936dee6f850b07c8ce"
+  },
+  {
+   "id": 23,
+   "title": "キャラクター昇格",
+   "text": "元亨利貞、すべては順調よ。",
+   "unlockRequirement": "",
+   "cnUrl": "7d7aa2aa069cbd95eb41f322c024ac9469481e920fb145cfb6a2a050f65566e9",
+   "jpUrl": "4abac7e3bc09b81105fbcd0c9c547c3e542dffedfb18db3f49af965357c60b3f",
+   "enUrl": "761c06d98b32f8432bf99bdb6ef742cf74ff3bc83884424b89f157832104bb2e",
+   "krUrl": "01155fc5fd31b5782c5c70b19775f97fa48c7b9d923395ede5ff85db151208ed"
+  },
+  {
+   "id": 24,
+   "title": "レベルMax",
+   "text": "私を「遺漏なき法眼」と言うには、遠く及ばないわ…",
+   "unlockRequirement": "",
+   "cnUrl": "f5267c5f196ff2456c5bea580fbe950662585d756e4a846f2714f3d5a9b0b093",
+   "jpUrl": "2e9e9a2973abb7a6379f16def8c21a5393417f517bccaa74e64ebb9a4437ff02",
+   "enUrl": "8e2c2fec3aec90d4cc701720994bfb94c3c171e1eb912a26c596d502f3ebb61d",
+   "krUrl": "fc761165f985670172d706a680140ee60c608792e45646d0c2fc2bf89fd97dab"
+  },
+  {
+   "id": 25,
+   "title": "軌跡覚醒",
+   "text": "この一歩は、吉と出るかしら、凶と出るかしら？",
+   "unlockRequirement": "",
+   "cnUrl": "af4092bb3ede518cc5a329f6299afaf1b761fe7c3474a69e5f8f0ba4632a2173",
+   "jpUrl": "74adf571e4433c1e72ecf83d9b23399e69a8bf225a781657ea72709d6685beea",
+   "enUrl": "86c89256a578029f9c794fb89a43b04cfe7797bd0302d3d53c5e883f4e919ab3",
+   "krUrl": "d03b0ac61b9428cf08af07dbc8e3710bf7313eab311b332352a5b89a0316dec4"
+  },
+  {
+   "id": 26,
+   "title": "パーティ編成・開拓者",
+   "text": "「奇兵」がいるから、必ずすべてが順調に進むわ。",
+   "unlockRequirement": "",
+   "cnUrl": "38fccfcdbf6967c8212ea171b75659d3bcc73cf149e15a043018ebef63488541",
+   "jpUrl": "3067f344a7a0b99f9af6d97cc86e4cdcf74daf18e7f4eac88b81375fecb14d91",
+   "enUrl": "6798151bb445254928c2532b1ec59a3eab0bcfd9d7300d0ee418fadb5b4b4319",
+   "krUrl": "3a9ecd0c0fb9d7868ab392580c9f1a6f4b2d7e8a7977c13909c02af560ed3df1"
+  },
+  {
+   "id": 27,
+   "title": "パーティ編成・景元",
+   "text": "将軍が戦場に出るなら、私が占う必要はないわね。",
+   "unlockRequirement": "",
+   "cnUrl": "b8d8a72eaaa41e4cd1f9c592bc60fcd65785f0b8f356707bc31c7f4e15125778",
+   "jpUrl": "044a2bdfb119977f72d4e07e66d572374a68f2fc93bc184dd71542bb75d9ac11",
+   "enUrl": "059c2d088fc877f2484280bf7e0ed89c1061c7e4fb8b6f58e026af1ae3c1b8c9",
+   "krUrl": "bb9606cf1d65335e374780e36bb0dbd39385d34af2550a7fa79fd7ca7b022df3"
+  },
+  {
+   "id": 28,
+   "title": "パーティ編成・青雀",
+   "text": "青雀？書庫にいないから、ここで待っていたのよ。",
+   "unlockRequirement": "",
+   "cnUrl": "24b41819bcb49989e9571cfe56ac3f806bb8cae1fe991f8de4209b83807a7f3c",
+   "jpUrl": "31bf1edb911a78855373fa7ad0de6fb6d276850d3f8c170fbf4fd22782df46b9",
+   "enUrl": "500e97c8df2265df194d93ab0a222ef329b2c7b9eff0f3c050d67e9cc681cca2",
+   "krUrl": "02f4c0f913460decaa0e98c5419dc81928f34d0ee0021ad0a7deb2bb9ebac780"
+  },
+  {
+   "id": 29,
+   "title": "パーティ編成・彦卿",
+   "text": "武芸はおまえが、謀略は私が、将軍に少し勝る。2人で将軍と勝負してみるのはどう？",
+   "unlockRequirement": "",
+   "cnUrl": "b634dfa5ec58719a0881f50494c8ca5d4ff5e8124d3e6b153bc1f6f69d770aeb",
+   "jpUrl": "d3166f57812377ae33fb81b068c855f1f3e5396c31b2e1ed48b4c748c91937d9",
+   "enUrl": "390bbe0204177cc8ac28bd7e36f70b07c295ec36c52abdc327fd32ffa3583257",
+   "krUrl": "47ac3cdb84ccb500086591b73bd952af187ac644f92ea49292a4e516adafb2b5"
+  },
+  {
+   "id": 30,
+   "title": "パーティ編成・白露",
+   "text": "白露殿がいるなら、病の心配は不要ね。",
+   "unlockRequirement": "",
+   "cnUrl": "20889aab0b5adcaea298eb896bec19093c28169ae4ff54a732399d4ca8308cab",
+   "jpUrl": "82bc0e6006ce099c2a0ce0e105e969162291127c10a2b33873d2835cbf66ca1f",
+   "enUrl": "e7a965017a685129dde4e30caf1bf89919b784413ad3595a5a5fb4e0b7f8f759",
+   "krUrl": "ea352ca0a88f4d3617a5e8fd0fb16e3e62465501e097062cf1c4aebc806328a8"
+  },
+  {
+   "id": 51,
+   "title": "戦闘開始・弱点撃破",
+   "text": "事は己で成す、不利などない。",
+   "unlockRequirement": "",
+   "cnUrl": "d1f98f62ad81624cfe5d24f89b16a17c5005e033e56975fe177616feac4a9214",
+   "jpUrl": "11a6c800155a25dbaa01036c60e7350f063341c22d909d627920dda9eb84c774",
+   "enUrl": "e20cafb19339ab895114610f7e25e4c068f641e5c34ee6fb3137299ce9354f89",
+   "krUrl": "e5e9791682d03b1755444b483c530aebd0318e49c11cf773c296e6f6b6770c52"
+  },
+  {
+   "id": 52,
+   "title": "戦闘開始・危険予知",
+   "text": "測り難きは風雲、行先は淵の水…",
+   "unlockRequirement": "",
+   "cnUrl": "c410a317bdd5cab0c43f51eb733fee99bee0bdc9128b23974e61be5fe39a2d17",
+   "jpUrl": "4d566683005bd33721aa100d3fee38b93c89da0d7defd0a47f8c0cb640efe101",
+   "enUrl": "18bf0e9c5f0117516ddba3e971dc3e705bdb1c4ca12d2822d3274d0453ce4a5c",
+   "krUrl": "80923efe5b7c953d2f34b78787bbf126ca329773c67e3066d5cf56d9415fba98"
+  },
+  {
+   "id": 53,
+   "title": "ターン・1",
+   "text": "法眼を以て視るべし…",
+   "unlockRequirement": "",
+   "cnUrl": "abf422d6cf28c74c87a691da83a7eaa8f6274ee798803feb2a9f627babf84aed",
+   "jpUrl": "b6ef1353ead3cba9d3567edb7b77fe9e4c62c91b8024171e1cc28e7507dd71c9",
+   "enUrl": "8f357debd931457874127724c44c755b01b09f5a5f6809b8f38bc2a95780c281",
+   "krUrl": "75e459e89057f38f605539723af6d1c026b43fddf167b0152f13c50574da03e8"
+  },
+  {
+   "id": 54,
+   "title": "ターン・2",
+   "text": "先に占ってみましょう。",
+   "unlockRequirement": "",
+   "cnUrl": "01aa4cf2acd990f27ce783db09ece4f8094e1ab60dd07096b5bc6ee75216ba05",
+   "jpUrl": "966d690880fbbaae45eebad0ee3a1b0e0aff507285348fc154d089febf9fe798",
+   "enUrl": "5ec506d0d643184d533f3763c113ae8504d3a266a663aef9029bc4623e40daf2",
+   "krUrl": "9981f65c046ab833ed9b105c1d1027c9fd8f54acb37fc8fa254a40bfb4fb8f7e"
+  },
+  {
+   "id": 55,
+   "title": "戦闘中待機",
+   "text": "断に当たって断ぜざれば、必ずや其の乱を受く。",
+   "unlockRequirement": "",
+   "cnUrl": "a8e91e1c83b34a92e7c0acf1679b026e555d535c29877971106f8565183d3b39",
+   "jpUrl": "ea2b3ec0f958520c820fe9c2110c7560d8e4b36f2fc6933bf573544c2849d77c",
+   "enUrl": "54a1df2069ff4ba111069437fb2a5517224b51b0cbf69a51b28027ec82b06db1",
+   "krUrl": "e7359368424e77b59c17a29fc394764862bd605abe6cee5020ebe7916711dc9c"
+  },
+  {
+   "id": 56,
+   "title": "通常攻撃・1",
+   "text": "<ruby>極数<rt>ごくすう</rt></ruby>、<ruby>知来<rt>ちらい</rt></ruby>！",
+   "unlockRequirement": "",
+   "cnUrl": "42f41d3afd01fd18e5e9ba47643b4509ac35aa0bc2d41057645b13bdb865742a",
+   "jpUrl": "c844c97139b145f008b4d6991b91d0ab4d564213662205838a3042c08e7e594d",
+   "enUrl": "e0f9991f2a8b8c4da9ebe8915691dd3a1f65e5d0bd4718f2988fcb21951dbdf4",
+   "krUrl": "69b398111fa0f1001d9460cdb749e1582907000e246436ae31ff46da98f90e8f"
+  },
+  {
+   "id": 57,
+   "title": "通常攻撃・2",
+   "text": "<ruby>成象<rt>せいしょう</rt></ruby>、<ruby>効法<rt>こうほう</rt></ruby>！",
+   "unlockRequirement": "",
+   "cnUrl": "407483b98cc00a2106fef96646d470d1522802c426d5a8dc7a4fbd7820f3db70",
+   "jpUrl": "cfa56db56fca6aa6c7ec264ba69b00520ad4d56f38798a7b241332c554760309",
+   "enUrl": "905b0717ac78c09814f8cfbb3540983403ab4bfc8d9bd7e8a7bc61394d7dc3df",
+   "krUrl": "2e78c8b5b5786e980a5cb49e99eb75f92926340b409eb18dc767e1955b1c2b94"
+  },
+  {
+   "id": 58,
+   "title": "戦闘スキル・1",
+   "text": "<ruby>相与一体<rt>そうよいったい</rt></ruby>。",
+   "unlockRequirement": "",
+   "cnUrl": "ac123080960ce5f2d6aef845eeeb5f573292d3ccfaa874bd86cbe135c1c7ebdc",
+   "jpUrl": "ffcd965594060d79ff0283142ca9c0d4e5c874c3bde3bcc660f2b9211aa14bf7",
+   "enUrl": "ac63ef81008a62d1c5298b11f47321bf12cecf940b1dd8e205c9e94e4bfdc64e",
+   "krUrl": "75e4913d9c7edbd2faf4fe5e8d3c63272547d53734a0ea50084eae3b084cc7b7"
+  },
+  {
+   "id": 59,
+   "title": "戦闘スキル・2",
+   "text": "<ruby>上下象易<rt>しょうかしょうい</rt></ruby>。",
+   "unlockRequirement": "",
+   "cnUrl": "46b7c5e083fc7344f11fa2481e13a4f8e2af8bfb1cd84b4b7a20bc611dc30f34",
+   "jpUrl": "725f79075c6124ab94715a694de6e6e23631bf98f97920d55a34487799c62320",
+   "enUrl": "a9c60cb92a631ff98c1e36ed2e2041e1fb0037fee230ec4075c20c24b75c34d4",
+   "krUrl": "aeabfd44c15477999d058e5923b569dd39c1d7b6246a237f4624a5a71f38c3db"
+  },
+  {
+   "id": 60,
+   "title": "攻撃を受ける",
+   "text": "小難に過ぎないわ。",
+   "unlockRequirement": "",
+   "cnUrl": "55e76e2d950f9a64f85c214f042f1ef1bbc3da3841d5e799800c1a7ae97ded8c",
+   "jpUrl": "9a2b46b6f7ebd1628224fcdf4291149335479dd60659cb71e14a6e42327a77c2",
+   "enUrl": "2a30892c9db1c2cc332cd069ab17c13c230ea91b98498d67d24728319f063416",
+   "krUrl": "1b71cf774ec7cba714ebf13f48998060980a7fc772b51021cc5b36caab774376"
+  },
+  {
+   "id": 61,
+   "title": "重撃を受ける",
+   "text": "きょ、凶が出た…",
+   "unlockRequirement": "",
+   "cnUrl": "05f1b57ac0383b57773d099cf4a5081acef30729efcc0f7d2e12f18491768498",
+   "jpUrl": "95dd5baa78bae91b1942872fd314213cfecc04be462eb97132a6852931605a4e",
+   "enUrl": "0aa580d7ee01a058fcbbd8fcd83b66a5286974e1dd90bec6b2be78e2c3fe8be6",
+   "krUrl": "9cb745da463a6aa8980320a63d85faaa1bd571d8e75924c66877d96c21a1d6bb"
+  },
+  {
+   "id": 62,
+   "title": "必殺技・アクティブ",
+   "text": "世の万物に法理あり…",
+   "unlockRequirement": "",
+   "cnUrl": "bec56b18f22696dacda49fdbebb070c052b13d3080133e085493f6523d3c5af8",
+   "jpUrl": "cdae8adf7da637306b076e9ceca556c68de1ca2f27161ce01a6d39c0b18966dd",
+   "enUrl": "d4ee019b30131bd1e2c5c5444b9552b8c5524b02c9846c1a415d79b166e05a03",
+   "krUrl": "6b0b4acc3ef0da3ef81541ad1649d39b4ade2e35ddb3aaf3c1d62192f008ba12"
+  },
+  {
+   "id": 63,
+   "title": "必殺技・発動",
+   "text": "換斗移星、人事を、成す！",
+   "unlockRequirement": "",
+   "cnUrl": "655f87eb93710cc07aa605fcf673f7d019dc9c37ebc0efa5381c4e01bf98a3c3",
+   "jpUrl": "0971fdfd4c55696f33fcea0f5af5ccdadbe5d773ed67754e6662d2962f8daf40",
+   "enUrl": "e83c49029acc280a6cfb25de80176e44abca46b1c4357a68de2768b5b38b0529",
+   "krUrl": "f592098909acfae0487e2480f787f6e6a6b6b1a35343b2c1bc52e51920f7df00"
+  },
+  {
+   "id": 64,
+   "title": "天賦",
+   "text": "陰陽転換、生々流転。",
+   "unlockRequirement": "",
+   "cnUrl": "524d1e0d40134b45cab23a96bc29239ae9f6d2e22e736cb2ab87ed1db3170706",
+   "jpUrl": "42d5706e70ddc5a7f9f78bef4eb1dd8ede051220e83dd8fa78c8bf9677903f03",
+   "enUrl": "697b3a07fb8a0ae3279e28604944b0b5cc4f475319937da783b5fb4afd7cd01e",
+   "krUrl": "546955dac2a7a51efddc7c4104a1c1c4be0d6f89bdb38c14bdbaddd97815be88"
+  },
+  {
+   "id": 65,
+   "title": "戦闘不能",
+   "text": "これも…運命…",
+   "unlockRequirement": "",
+   "cnUrl": "8d564c9e12aca03c25fc5fcb4e7c3d74e5e5aa7184018208f09d8589fcbf1ec1",
+   "jpUrl": "cc3a737978c73c56bfc066ee9053495d2d6003cbf32c4fac5c5976a8a20ee88a",
+   "enUrl": "3617466a2f606b50f65d80f780748c3a37c6e2795d292bc848acd7ba302fcdf9",
+   "krUrl": "3b148c59af63fb75c54ee3f034092f95c8e1f93db6f204e5211bf457115528f0"
+  },
+  {
+   "id": 66,
+   "title": "戦闘に戻る",
+   "text": "<ruby>一陽来復<rt>いちようらいふく</rt></ruby>ね。",
+   "unlockRequirement": "",
+   "cnUrl": "36f5e6f55b5a2cf8fb13dc954c81e9921f8fb71f9b10af0707de6c1174f4f032",
+   "jpUrl": "ad4e9e3e51813b41eb5dea9d9ce3169455d781775b910765633b7986bdc83f60",
+   "enUrl": "615e1fd70e38683353e841fd86ca47ed872d346f8488e9f147b6f55dac8bc600",
+   "krUrl": "e4ddb0715f8ef2dd62b39a4941721aca5568dbcfb707bd9f088902ed4a7e2f13"
+  },
+  {
+   "id": 67,
+   "title": "HP回復",
+   "text": "<ruby>有無相通<rt>うむあいつう</rt></ruby>ずる、妙策だわ。",
+   "unlockRequirement": "",
+   "cnUrl": "9951424198ce595a253686a78a6200bd75527e87a4c6435b7ce3ff59ef8ca00f",
+   "jpUrl": "50e0498c43d2ab8cd3469473201d98c201bb2bb73e17e4a83b4d1748f4aa6ccd",
+   "enUrl": "52576dd5c031ee68fa4b4dc17f9afdea1318b59a689045a5dffd8fbe5ed282d2",
+   "krUrl": "55d28f6dab4910167c107e19a4d9958987398120842dd438a8f703cb5b8acfc6"
+  },
+  {
+   "id": 68,
+   "title": "秘技",
+   "text": "<ruby>顛撲不破<rt>てんぼくふは</rt></ruby>。",
+   "unlockRequirement": "",
+   "cnUrl": "5d7c64511f378df5a447740e60dd85df8387d8193303bc2d05e1fb23165a1a77",
+   "jpUrl": "b49c217a84abda375a5c7840f57e4b281317cc7c8d0079fa37dbf47a263471fc",
+   "enUrl": "0751620ad41736a7523fbf882df675820e9493d07957b0433173cb2f3aacf42b",
+   "krUrl": "e80e4da100521590112deadd64f478fb335b84373cf0108afaff9af9cc9c74ef"
+  },
+  {
+   "id": 69,
+   "title": "戦闘勝利",
+   "text": "卜算は有為無常なり。",
+   "unlockRequirement": "",
+   "cnUrl": "dbe881f10c0285e9263b7688283dd859f1dafa084671e650bfff431e0cd5cf69",
+   "jpUrl": "937247427804022db5045faf7bb90e3599e55ef630e42dc768e755fadfcd6f5d",
+   "enUrl": "8e245bf79d3c29d8e3fb71fc0bb35996e84641a528906272f832bdde10ad5624",
+   "krUrl": "de5e874f6d86eb1cb71f4e92d02dff6f55547dd4fac977037858bf30a5661435"
+  },
+  {
+   "id": 70,
+   "title": "戦利品を開ける・1",
+   "text": "私の望み通りね。",
+   "unlockRequirement": "",
+   "cnUrl": "5618e41058b0192ff35febce9c4af91df0194a560edcd64484d2de67ddb62ee0",
+   "jpUrl": "d161c1bad5751dd66b28415b50a439423757a6c7379b90ac0e487b9574f8f852",
+   "enUrl": "f0adbdd3d3f301ab454f3fb2890bef50f5266c1013bd8ba53cf12fdd625a3a79",
+   "krUrl": "bdf9ee61411b342e273059997fc9d11accccf395b6193ab7b79889bf24bfdb18"
+  },
+  {
+   "id": 74,
+   "title": "戦利品を開ける・2",
+   "text": "卦象のうちよ。",
+   "unlockRequirement": "",
+   "cnUrl": "daa111ba11aca90d06ecc42f3c137a9d0cae4da738eba8aebe44381e861e9d44",
+   "jpUrl": "bada01227f0e445fabce0388d5f679966792b3dac43cb9372583e319036a0b79",
+   "enUrl": "b1433e1206d390c80b97ef8a9714c7b573d2150b20fec80d28af0f53d10260c3",
+   "krUrl": "51280c4d8e79d1e61a20734e8761553fa3e2d730c58b135875a5828ecd411024"
+  },
+  {
+   "id": 75,
+   "title": "貴重な戦利品を開ける",
+   "text": "…これはあぶく銭で、多く得るべきではないわ。",
+   "unlockRequirement": "",
+   "cnUrl": "94c1cdcf62502409a6a28887f874c47b8ef924f9352fc63368282be2b433e399",
+   "jpUrl": "b4ef01487e8d96a3ea00c93566347804ab085eb08246cd143b5444c4e0d67bde",
+   "enUrl": "a0a2803ca0a7e680183b62d2a24f34c085e97d557ffe6cbfd15162b876deba94",
+   "krUrl": "4f725fa333663578cbc1eb2a09669e3c4ed712cf920dae398168feed386d50cd"
+  },
+  {
+   "id": 71,
+   "title": "謎解きに成功・1",
+   "text": "行いて余力あらば、ね。",
+   "unlockRequirement": "",
+   "cnUrl": "03adab884390ccfd98cc027bfbba2ed0c5f63e9d578b700e24246e02f9aaec83",
+   "jpUrl": "648fbde7db34d7a0ec33db7aff157ddb0a317d0f68d246ef6b10489a2341968c",
+   "enUrl": "fea40520da9eaa47d5ee749518b2b68837e420312e5d7ba2097e12de08eda177",
+   "krUrl": "8278c3d4860546a19eb77f25b481e5796144ec9d7a37516c2b2f6b444c7f1ee2"
+  },
+  {
+   "id": 76,
+   "title": "謎解きに成功・2",
+   "text": "古書にはとっくに記述があるわ。",
+   "unlockRequirement": "",
+   "cnUrl": "bd5f3f360424368b351e66888b51fcd7e38bece3027de56639a6f2e5c0050528",
+   "jpUrl": "a08b2bffe3438ff93c75a1347432793b95983aa7406b3578ed53ed7e28b829eb",
+   "enUrl": "7d404312f41ad19f58334c56d3b9c4ed8a1c05069e4734e9a9b8f66fae37bddd",
+   "krUrl": "c4e39ab5d39d7c2a78649ac1a121d03f3abb64f2a6ae7f5295d665d35ed667e2"
+  },
+  {
+   "id": 72,
+   "title": "敵ターゲット発見",
+   "text": "慎始敬終よ。",
+   "unlockRequirement": "",
+   "cnUrl": "f6ed4810df5360ab31eb3a5a38f4d16078c751869eefd9269dff4efe4722726e",
+   "jpUrl": "a2588b730dde873a0432d8193015c105b8a4848d3ccdc6ee16fec378d12314e7",
+   "enUrl": "7264026f85b1bc50ac7f7cd19dcf853d546fd468862c33b66d5ad4b521df946c",
+   "krUrl": "c2f6236d56e4b0a40efa43138e9260276f615507ccf822fc9e42438932118667"
+  },
+  {
+   "id": 73,
+   "title": "町に戻る",
+   "text": "卦象が定まらない、綿密な計画を練らなければ。",
+   "unlockRequirement": "",
+   "cnUrl": "e3dd7b03b481d5683e9bb3c8aa7a450625cbbb56efde6f294c2c9383d6e6c7c6",
+   "jpUrl": "dc77f4c466aad44f3652e12875a174a59d682897b953f08a538d73ac910b44f3",
+   "enUrl": "51464f9243531d4180f7e99a5d107e4d51f6b73c32ac6ed8c5424c98623fb603",
+   "krUrl": "d383c4bb64e6f55e121f2d125c4debab3c92cf4f851be6bdb025a170c7981f54"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "キャラクター詳細",
+   "text": "仙舟「羅浮」太卜司の長、自信に溢れたまっすぐな知者。<br />第三の目と窮観の陣を用いて仙舟の航路を占い、物事の吉凶を予見する。自分がしたすべての事が「最善策」であると固く信じている。<br />符玄は将軍が約束した「座を譲る」日を待ち続けているが…どうやら、この日はまだ遠いらしい。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "ストーリー・1",
+   "text": "どれだけの年月が過ぎようと、符玄は自分が「ライブラリー」に入る許可を与えられ、質問を投げかけた日のことを覚えている。<br /><br />「君は何を考えている？」杖をついたサングラス姿の盲目の老人は、ただ静かに彼女の返事を待っている。<br /><br />「選択ができる瞬間は…すべて定められたものなのか？それとも、あの瞬間に、もっと正確に、あと万分の一でも正確に占うことができたなら、私は正しい選択をして、彼らを引き止められたのだろうか？」少女は半分目を閉じていて、問いかけているようにも、答えているようにも見えた。<br /><br />「私たちは常に、己の足跡が作り上げた迷路の中心に立っている」。盲目の老人はそっと杖をついた。「私には答えを教えられない。私が与えられるのは、問題…そして問題を見るための眼界だけだ。君がここまで来て私に求めるものも、きっと答えではないだろう」<br /><br />「なら『目』を貰えるかしら。運命は定められたものなのか、1人の卜者として、もっとはっきりと見たいの」<br /><br />「君の望むままに。だが、仙舟人の肉体は長存するもの…私が与える『目』を受け入れることは、永遠の苦痛を受け入れることを意味する。それは知識を得るための道具というより…むしろ『刑具』に近い」<br /><br />「それなら遍知天君の信条にも合っているわね——知識は苦痛を経て手に入れるもの。私は未来の選択で同じ過ちを繰り返したくはない」<br /><br />……<br /><br />「目」を授かる時、彼女は昏昧の中で過去を見た。<br /><br />正座して読書に励む幼い自分の姿。愛おしそうに彼女の頭を撫でながら、その聡明さを誇らしげに褒める父の姿。仙舟「玉殿」の観星士世家として、符氏一族の歴史がいかに素晴らしいかを語る家の年長者の姿。そして、彼女の輝かしい未来を占うため、準備を進める卜者たちの姿——彼女は、やがて「太卜」の座に就くらしい。<br /><br />「これが私の未来？」<br /><br />「一飲一啄、前定に非ざるは莫し。これが君の宿命だ。占卜の結果はすでに太卜竟天様に上程した。彼は君のために自ら講義をすると言っている…これは大きな福運だ」<br /><br />すべての過去が確率の霧の中で重なり合い、夢か真か分別できない。それは意識の縁で変化を続け、数え切れないほどの未来に展延していく。彼女は無数の瞬間を必死に見極めながら、自分が正式に卜者になる日を探し求めた。",
+   "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・2",
+   "text": "その日、仙舟「玉殿」の瞰雲鏡の下で、符玄は師と対面した。しかし、彼女は目の前にいる人物が、一族の者たちが神人として崇める太卜であることなど、にわかには信じられなかった。その男はやや古くなった飛行士の短褐を身に纏い、無作法にも足を伸ばして地面に座ったまま、投影陣列の中で変幻交錯する光の点をじっと見つめている。<br /><br />「末学符玄、ご挨拶に参りました」。少し躊躇いながら、少女は口を開いた。<br /><br />男は視線を動かすことなく、彼女に図を見るよう手で合図を送る。その時、符玄は彼の手が木製の機巧であることに気がついた。「玉殿の鳴珂衛がタラサの防衛に着き、曜青艦隊の忌み物の殲滅に協力している。君も聞いたことがあるだろう？だが、彼らはこの戦いには勝てない」<br /><br />「え？曜青艦隊は武勇に優れ、敵うものはいないと言われております。戦報によれば、我が軍の人数と戦艦は歩離猟群の倍はある。それでも敗れると仰るのですか？」<br /><br />「いい質問だ。君は簡単にあきらめる生徒ではないようだな」、男は立ち上がり、服についた埃を払った。「運命を知っていても、それに屈することなく、数多の可能性の中で最善の選択を模索する…これは卜者として正しいことだ。しかし、いくら選択しても運命は目の前の1本道しかない、という時もある。占卜が終わった時、凶と大凶、この2つの結果しか残されていない場合、君はどうする？」<br /><br />「…両方の害を比較して、少しでも軽いほうを選ぶ。占卜学で一番最初に習ったことです」<br /><br />「人間の眼界では、両者の軽重を量ることができない場合は？」そう言いながら、男はこちらに振り向いた。<br /><br />「今回の占いは、新たに構築された陣法『十方光映法界』によって推演されたもの。その結果は2つ、仙舟「曜青」の鶴羽衛を借りるか、仙舟「方壺」の玄珠衛を借りるかだ。鶴羽衛を取った場合、その兵力に頼って一時的に強攻することはできるが、その後の勝利はない。玄珠衛を取った場合、遠方にいる方壺の協力を得るため、6ヶ月は戦を長引かせることになってしまう。その間も敵の反撃に耐え続けなければならないが、援軍が来るまで持ちこたえることができれば、勝利の可能性はある」<br /><br />「彼らは前者を選んだのですね」<br /><br />「そうだ。卜算の結果はあくまで参考であって、将軍の代わりに決断することはできない。彼は目の前の損害を小さくする方法を選んだ。だが、僕も間違ってはいない。これは定められた結果なんだ」<br /><br />「兵書の『倍あれば戦う』原則に沿うのであれば、曜青の軍を呼ぶことも下策ではないでしょう。そもそも、この世に定められたことなどありません。それなのに、なぜ太卜様は必然だと断定するような言い方ができるのですか？」<br /><br />「この世に定められたことはない？」、男は大きくため息をついた。「僕もそう思っていた…占いの結果が出た時、計算が間違っていたのではないかと疑ったが、改めて推演しても結果に変化はなかった。だから、僕は自分で証明を求めることにしたんだ」<br /><br />「この数週間、僕はタラサに行き、忌み物と戦い、現地の水居者文明の信頼を得た。そして、驚くべき情報を手に入れた…月の干渉を受け、1ヶ月後にはタラサ人が『悪魔の潮』と呼ぶ大潮が始まる」<br /><br />「方壺持明の雲吟師の助けがなければ、その劣悪な環境で敵と戦い続けることは叶わない。この情報は如何なる博物誌にも、軍の資料にも載っていない…余計な真似をしてソレを証明しようとした結果、僕は自分の手を失った」<br /><br />男は苦笑しながら、木製の手を挙げて左右に振った。「時には、運命の道は1つしかないこともある。すべては運命に定められているんだ」<br /><br />「ああ、そうだ。僕のことを太卜と呼ぶ必要はない、今日からは『師匠』と呼んでくれ」",
+   "unlockRequirement": "キャラLv.<nobr>40</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・3",
+   "text": "玉殿の太卜司で、彼女は人生で最も楽しい時間を過ごした。宿命と自由意志、陣法推演と人の選択…占卜に関連するありとあらゆる問題について、少女は師匠と論争を繰り広げた。これは弁論のような言い争いではなく、師弟であり、友でもある2人の競い合いのようなものだ。最終的に、少女と師匠は大半の問題について意見を一致させたが、2人の間には避けては通れない相違があった——<br /><br />ヌースに演算経籍を求めてから、仙舟「玉殿」の太卜司は数百年の歳月をかけ、解読を実現した。そのため、玉殿は仙舟一を誇る占卜陣法を構築することができた。玉殿の卜者たちは皆、それを誇りに思っている。しかし符玄から見れば、これは仙舟人の未来を陣法が定めた道に縛り付けただけに過ぎない。<br /><br />人々は陣法が示した未来は必ず実現すると信じ込み、名ばかりの置き物になることを選んだ。卜者は陣法の囚人となり、吉時に出かけ、凶時に立ち止まり、その日に適した事や適さない事に注意を払い、すべてを占卜の結果通りに進める。<br /><br />「陣法に明日お前は死ぬと告げられたら、私は自害しなければならないのですか？それなら、占うも占わないも同じことでしょう？」<br /><br />「僕たちは自分が天命を歩んでいることを知っている。それが違いだ。そして、これこそが太卜司の制度を創設した玄曜祖師が追い求めた至上の道でもある<br /><br />「陣法の助けがあれば、卜者たちはただひたすら敬虔に信じ、啓示に準じて1つ1つ選択をするだけでいい——たとえそれが信じられないようなものでも、艱難辛苦を伴うものであってもね。そのすべてが、いずれ僕たち仙舟の求める偉業を達成させてくれるだろう。寿瘟禍祖を取り除き、世間から寿禍の苦しみを消し去るという偉業を」男の表情は、まるで悟りを開いた覚者のように、堂々としていて穏やかだった。彼は符玄を見て言った。「僕が君の命数を知って、弟子にしたように」<br /><br />私の才能のためではない？私の一族の人脈のためでもない？ただ予言を実現させるためだけに？まさか…そんなの馬鹿げてる！符玄の胸に怒りの波が押し寄せ、彼女は一瞬言葉を失った。<br /><br />「知っているか？『十方光映法界』に問いかけ、卦象を解読した後、僕は君の手によって自分の運命が断絶されると確信したんだ。それでも僕は依然として君を弟子にして、仙舟『玉殿』の太卜の座を受け継いでくれる日を待つことにした。なぜなら、すべては運命に定められているからだ」<br /><br />運命に定められている？彼の運命は、私によって断たれる？<br /><br />仙舟がまだ三劫時代にいるような言い方だ。彼女が太卜の座を狙い、師を手に掛けることも厭わない逆徒のような言い方だ。この大馬鹿師匠め！<br /><br />「ならば、私は…それを現実にはさせません！」<br /><br />少女は彼の心智を、技巧を、人柄を、卜者としてのすべてを尊敬していた。ただ1つだけ受け入れられなかったのは、運命を覗く卜者でありながら、彼が宿命論の深淵に甘んじて堕落し、それを当然だと思っていることだ。<br /><br />そこで符玄は一族の制止を振り切り、すべての妨害を無視して、半ば自己追放に近い形で仙舟「玉殿」から逃げ出した。彼女はより自由な雰囲気のある羅浮の太卜司に入り、そこで占卜に没頭した。仙舟「玉殿」を離れるだけでは足りない。あの予言が誰かの馬鹿げた妄想でしかないことを、彼女は己の手で証明しようとしたのである。",
+   "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・4",
+   "text": "それから百年が過ぎた頃、再び戦が起こった。卜官である符玄は命を受け、休むことなく占卜を続けていた。豊穣の大軍が三度結成され、仙舟「方壺」を強襲した。玉殿と羅浮は方壺からそう遠くない場所にいるため、救援の責任から逃れることは許されない。卜算の結果によると、全力で迎撃すれば、参戦した仙舟の軍隊はいずれも大敗を喫することになるが——守勢に徹すれば、挽回の余地はある。<br /><br />だが、その転機がどこにあるのか、それを卦象は示さなかった。符玄は推演を繰り返したが、窮観の陣の結果は変わらない。<br /><br />「失敗を選択する者はいない」。卜者にできることは、すべてここにある。符玄は利害を陳述すると、卜算の結果を神策府に報告した。方壺を侵犯する豊穣連合軍の兵力は非常に強大で、守勢を取るだけでは足りないと、帝弓天将は合議を経て決断した。想定内の結果だ。羅浮と玉殿の雲騎軍は敵を迎え撃ち、曜青の部隊が駆けつけるまでの時間を稼がなければならない。<br /><br />その日、符玄は投影沙盤を通して援軍の敗北を見届けた。歩離人は天を覆うほどの艦隊と器獣だけでなく、いにしえの伝説に登場する活性化惑星「計都蜃楼」を呼び寄せたのだ。その邪星は方壺に落ち、そこに住まうすべての命に終末をもたらそうとしている——仙舟「蒼城」の覆滅の惨劇のように。人々は邪星の降臨を見ていることしかできない。<br /><br />卜者にできることは本当にこれだけなのだろうか？焦りと怒りの中で、符玄の中に極めて大胆な考えが浮かぶ。「景元将軍に会わせて！」<br /><br />将軍に会った彼女は、自身の考えを陳述した。目下の雲騎軍の力では、もはや勝機はない。唯一の転機があるとすれば、それは帝弓の垂迹を顕現させることであると。<br /><br />意外なことに、この冒涜とも取れる非合理的な考えを述べ終えた後、目の前にいる疲れた顔をした将軍は、特に嘲笑する様子もなく、ただ頭を縦に振った。「君はどうしたい？」<br /><br />「仙舟『玉殿』には同盟の観星第一重器、瞰雲鏡があります。この装置は観測だけでなく、外部に信号を送ることもできる…つまり、船を使って瞰雲鏡を方壺に運び、帝弓の光矢が最後に出現した場所に向けて助けを求めるのです。今すぐ動けば、あの惑星が墜ちる前に事態を好転させられるかもしれません」<br /><br />「帝弓が降臨する唯一の兆しと、それがもたらすであろう結果を…君はわかっている。そうだろう？」<br /><br />「はい。本件の提案者として、私自ら戦場に赴き、策を実行しましょう」、少女は険しい顔で言った。自分の案が突拍子もないものだということは、彼女自身も理解している。<br /><br />「君の建言に感謝する。だが危機に瀕した時は、六御が心をひとつにして立ち向かうべきだ。それに、君にはその装置を操作する権限がない。この作戦によって事態の収集がつかなくなった時は、私が提言者として全責任を負う。符玄殿、君は何も心配しなくていい」<br /><br />去っていく将軍の後ろ姿を眺めながら、符玄は不意に「六御が心をひとつにして立ち向かう」という意味を理解した。瞰雲鏡の全権限を持ち、さらには帝弓の勅命を解読する形で信号を送ることのできる人物は——<br /><br />玉殿の太卜、ただ1人。<br /><br />……<br /><br />「これが、君が『眼界』を求めた理由か？君の夢を読み取った……」<br /><br />少女は目を閉じたままだったが、周囲の世界が霧から実体に凝縮されていくのが見えた。すべての可能性は消え去り、明確で間違いのない唯一の選択だけが残っている。<br /><br />「それは夢じゃない。今の私を形作った、私の過去よ」<br />「彼は間違っていなかった…運命の道は、常に1本しかない」",
+   "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
+  }
+ ],
+ "archive": {
+  "cvCn": "花玲",
+  "cvJp": "伊藤美来",
+  "cvKr": "이지현",
+  "cvEn": "Sarah Wiedenheft",
+  "camp": "仙舟「羅浮」"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "符玄",
+ "rarity": 5,
+ "descHash": "仙舟「羅浮」太卜司の長。 第三の目と窮観の陣を用いて、仙舟の航路を占い、物事の吉凶を予見する。",
+ "artPath": "8fe7cd896a1fdd7ad7bf9457a9e0345d1db773070411605979051b6052bc885b",
+ "miniIconPath": "cd27ca15774d3ea63723e47c9add72c53193fed3a64a6f1d2be3ff54ecb0184b",
+ "damageType": {
+  "id": 32,
+  "iconPath": "ddae115334fb14959c5e24b70a5b165c431afc32f9fcf84d4b50e5e0e15bcc1f",
+  "color": "#1C29BA",
+  "name": "量子",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "861828026682b63234f31903ec91d9fd670122ea792feb297a8c59c5e7686ea1",
+  "altIconPath": "5d97226f1d4519fb25bedac479e51193f581f3e353eaf4c13d37fc874cd28f7a",
+  "color": "#FFFFFF",
+  "name": "存護",
+  "rarity": 0
+ },
+ "pageId": "fuxuan"
+}

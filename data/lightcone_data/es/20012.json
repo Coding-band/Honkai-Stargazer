@@ -1,0 +1,496 @@
+{
+ "name": "Rueda mecánica",
+ "rarity": 3,
+ "descHash": "Un extraño poder condensado a partir del tiempo. Verdaderamente, son todos los momentos insignificantes los que tejen un destino maravilloso.<br /><br />\"No existe un sonido más armonioso que este. Cada uno ocupa su lugar y la enorme máquina comienza a moverse\".",
+ "iconPath": "f0f074dbaff160169361b0ba27d8a9eacc3ad04d417011404733dc92f869eaf6",
+ "artPath": "d328288857d900899d7ea56b827c8b6c5da052ecc2b0be6cfe0d71ce238dd755",
+ "mediumIconPath": "55e3ab8543ff1151b5c8a481e6f964f8f9c171b11d49090367a216b6a5066de8",
+ "baseType": {
+  "id": 0,
+  "iconPath": "fd3dc153082117a49b1d8eb7d166dd32d65d636463e15c604b583d5945a4ca69",
+  "color": "#FFFFFF",
+  "name": "Armonía",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédito",
+   "desc": "Divisa que utiliza la Corporación para la Paz Interastral para sus cuentas con los clientes y que se acepta en todas partes como moneda de los viajes espaciales.",
+   "lore": "\"La gente corre, se pelea y comercia por algo que no son más que números en una terminal, pero lo que es verdaderamente valioso no se puede comprar\".",
+   "purpose": "Moneda común",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cáliz de la mina principal",
+    "Recompensa de misión",
+    "Recompensa de encargo",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "d5bfc95d74fab56f9c9be440028051ed2a9e02f4ee968c8d3db170d5b55dd931",
+   "name": "Pin del guardia",
+   "desc": "Pin que llevan los soldados de la Guardia Crinargenta. Material simple que se usa en la potenciación.",
+   "lore": "Un soldado veterano tiene muchas cicatrices de guerra.<br /><br />\"En la antigüedad, los Guardias Crinargenta solo se podían retirar si morían\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "De Sombras del Siempreinvierno y Sombras de la Incineración",
+    "De Guardias Crinargenta y vagabundos",
+    "De enemigos en el Universo Simulado",
+    "Recompensa de encargo",
+    "Canjeo de Ascuas",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5be2ad896306c15eb63529806cc7e0175b2c2111e3a6f175accb00a85cf9b90e",
+   "name": "Insignia del guardia",
+   "desc": "Insignia de rango que llevan los líderes de escuadrón de la Guardia Crinargenta. Material corriente que se usa en la potenciación.",
+   "lore": "Podría ser una prueba de valor con la que presumir ante tu familia, o un amuleto de la suerte que te salve de una bala.<br /><br />\"Ahora son otros tiempos\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "De Sombras del Siempreinvierno y Sombras de la Incineración (nivel de Equilibrio 2)",
+    "De Guardias Crinargenta y vagabundos (nivel de Equilibrio 2)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "De enemigos en el Universo Simulado",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "635670": {
+   "id": 635670,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a096383d62b9e5432fbf9a9674cc41041077b151d3473e44509d684eaaccd9bd",
+   "name": "Melodía armónica",
+   "desc": "Pequeña caja de música hecha por un artesano desconocido. Sirve para mejorar ligeramente los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Armonía</span>.",
+   "lore": "Reproduce una melodía alegre y relajante.<br />Aunque sea muy sencilla, cualquiera que entienda un poco de música se da cuenta de que el compositor es un genio.<br /><br />\"¡Toma a tu amor de la mano y bailen juntos!\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 2,
+   "rewardPath": "/material/635670",
+   "comeFrom": [
+    "Cáliz del asentamiento robot",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "Éter refinado",
+   "desc": "Material de mejora para los conos de luz. Otorga <nobr>6000</nobr> pts. de EXP de cono de luz.",
+   "lore": "Un bote de éter extraído y destilado usando un proceso especial.<br /><br />\"El Jardín desea recrear una gloria pasada, pero una que elijan ellos, ¿lo entiendes?\".",
+   "purpose": "Material de EXP de conos de luz",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Cáliz del Paso del Remanso",
+    "Salón olvidado"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "name": "Éter condensado",
+   "desc": "Material de mejora para los conos de luz. Otorga <nobr>2000</nobr> pts. de EXP de cono de luz.",
+   "lore": "Recipiente con éter procesado mediante una técnica especial.<br /><br />\"Transpórtese con cuidado. No debe caerse al suelo ni recibir presión. Si se produce un daño o una fuga, consulte el capítulo II del «Manual de respuesta a los accidentes de fuga»\".",
+   "purpose": "Material de EXP de conos de luz",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Cáliz del Paso del Remanso",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d4e3585911d6f71b87b47ced1a2f6e0b0f77dbdc8615650896e77bae87361afd",
+   "name": "Éter disperso",
+   "desc": "Material de mejora para los conos de luz. Otorga <nobr>500</nobr> pts. de EXP de cono de luz.",
+   "lore": "Sustancia imaginaria que no debería existir en la realidad. Es el material básico para crear conos de luz.<br />Al inyectar esta sustancia en el cono de luz, las imágenes que contienen se vuelven más nítidas.<br /><br />\"Oh, así que esto es la materia consciente del Jardín de los Recuerdos. No me extraña que los Guardamemorias se lleven recuerdos en sus viajes galácticos\".",
+   "purpose": "Material de EXP de conos de luz",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Cáliz del Paso del Remanso",
+    "Recompensa de encargo"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "name": "Medalla del guardia",
+   "desc": "Medalla de honor que llevan los soldados condecorados de la Guardia Crinargenta. Material avanzado que se usa en la potenciación.",
+   "lore": "Honor que se concede a quienes luchan contra los monstruos de la fisura, la gente del subsuelo y las desgracias repentinas.<br />Normalmente no se pone en el pecho del destinatario, sino encima de su ataúd.<br /><br />\"Recuerda, pequeño Gepard, esto no es un juguete. Es el destino y la sangre de la familia Landau\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "De Sombras del Siempreinvierno y Sombras de la Incineración (nivel de Equilibrio 4)",
+    "De Guardias Crinargenta y vagabundos (nivel de Equilibrio 4)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "De enemigos en el Universo Simulado",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "836256": {
+   "id": 836256,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "b423fcc0ae34c8c3b30d0a461af31176b161d5a83f3615756c8f8a91f04ac474",
+   "name": "Opus Stellaris",
+   "desc": "Caja de música con una estructura muy intrincada hecha por un artesano desconocido. Sirve para mejorar en gran medida los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Armonía</span>.",
+   "lore": "Reproduce una increíble sinfonía galáctica.<br /><br />\"Algunos astrónomos creen que el movimiento de las esferas celestes funciona igual que una estructura mecánica compleja. Las agradables notas que los astros emiten cuando se mueven se conocen como la 'armonía de las esferas celestes'\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 4,
+   "rewardPath": "/material/836256",
+   "comeFrom": [
+    "Cáliz del asentamiento robot",
+    "Máquina sintetizadora multiusos - Síntesis de materiales"
+   ]
+  },
+  "920197": {
+   "id": 920197,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "b5aa737b728156387ef4ddce10e0a541deb24993d58c4f2eca0aac0ed4301ea8",
+   "name": "Himno del acervo",
+   "desc": "Caja de música hecha por un artesano desconocido. Sirve para mejorar moderadamente los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Armonía</span>.",
+   "lore": "Reproduce un himno que canta una pequeña banda de música.<br />Es imposible averiguar a quién se está alabando en la letra.<br /><br />\"¡Penuria, penitencia de la Grandiosa! ¡Riqueza, gracia de la Grandiosa!\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 3,
+   "rewardPath": "/material/920197",
+   "comeFrom": [
+    "Cáliz del asentamiento robot",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "Canjeo de Ascuas"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3000
+    },
+    {
+     "id": 549407,
+     "count": 4
+    }
+   ],
+   "attackBase": 14.4,
+   "attackAdd": 2.16,
+   "hpBase": 38.4,
+   "hpAdd": 5.76,
+   "defenseBase": 12,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6000
+    },
+    {
+     "id": 635670,
+     "count": 2
+    },
+    {
+     "id": 549407,
+     "count": 8
+    }
+   ],
+   "attackBase": 31.68,
+   "attackAdd": 2.16,
+   "hpBase": 84.48,
+   "hpAdd": 5.76,
+   "defenseBase": 26.4,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12000
+    },
+    {
+     "id": 920197,
+     "count": 2
+    },
+    {
+     "id": 633348,
+     "count": 4
+    }
+   ],
+   "attackBase": 54.72,
+   "attackAdd": 2.16,
+   "hpBase": 145.92,
+   "hpAdd": 5.76,
+   "defenseBase": 45.6,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 30000
+    },
+    {
+     "id": 920197,
+     "count": 4
+    },
+    {
+     "id": 633348,
+     "count": 6
+    }
+   ],
+   "attackBase": 77.76,
+   "attackAdd": 2.16,
+   "hpBase": 207.36,
+   "hpAdd": 5.76,
+   "defenseBase": 64.8,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 60000
+    },
+    {
+     "id": 836256,
+     "count": 3
+    },
+    {
+     "id": 717289,
+     "count": 3
+    }
+   ],
+   "attackBase": 100.8,
+   "attackAdd": 2.16,
+   "hpBase": 268.8,
+   "hpAdd": 5.76,
+   "defenseBase": 84,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 120000
+    },
+    {
+     "id": 836256,
+     "count": 6
+    },
+    {
+     "id": 717289,
+     "count": 5
+    }
+   ],
+   "attackBase": 123.84,
+   "attackAdd": 2.16,
+   "hpBase": 330.24,
+   "hpAdd": 5.76,
+   "defenseBase": 103.2,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 146.88,
+   "attackAdd": 2.16,
+   "hpBase": 391.68,
+   "hpAdd": 5.76,
+   "defenseBase": 122.4,
+   "defenseAdd": 1.8
+  }
+ ],
+ "skill": {
+  "id": 20012,
+  "name": "Triunfo rápido",
+  "descHash": "Tras atacar o recibir un golpe, el portador recupera <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]</nobr></span> pts. de energía adicionales. Este efecto solo se puede activar una vez por turno.",
+  "levelData": [
+   {
+    "params": [
+     4
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     5
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     6
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     7
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     8
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 40,
+   "2": 60,
+   "3": 100,
+   "4": 160,
+   "5": 220,
+   "6": 300,
+   "7": 380,
+   "8": 480,
+   "9": 580,
+   "10": 700,
+   "11": 820,
+   "12": 950,
+   "13": 1090,
+   "14": 1240,
+   "15": 1390,
+   "16": 1560,
+   "17": 1730,
+   "18": 1910,
+   "19": 2090,
+   "20": 2170,
+   "21": 2260,
+   "22": 2350,
+   "23": 2430,
+   "24": 2520,
+   "25": 2620,
+   "26": 2710,
+   "27": 2800,
+   "28": 2900,
+   "29": 2990,
+   "30": 3100,
+   "31": 3200,
+   "32": 3300,
+   "33": 3400,
+   "34": 3510,
+   "35": 3620,
+   "36": 3730,
+   "37": 3830,
+   "38": 3950,
+   "39": 4060,
+   "40": 4170,
+   "41": 4580,
+   "42": 4840,
+   "43": 5110,
+   "44": 5380,
+   "45": 5660,
+   "46": 5950,
+   "47": 6230,
+   "48": 6530,
+   "49": 6830,
+   "50": 7140,
+   "51": 7450,
+   "52": 7760,
+   "53": 8090,
+   "54": 8410,
+   "55": 8750,
+   "56": 9080,
+   "57": 9430,
+   "58": 9770,
+   "59": 10130,
+   "60": 10480,
+   "61": 10970,
+   "62": 11560,
+   "63": 12160,
+   "64": 12760,
+   "65": 13370,
+   "66": 13990,
+   "67": 14620,
+   "68": 15260,
+   "69": 15910,
+   "70": 16570,
+   "71": 18490,
+   "72": 20230,
+   "73": 22000,
+   "74": 23790,
+   "75": 25610,
+   "76": 27450,
+   "77": 29320,
+   "78": 31220,
+   "79": 33140,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "20012"
+}

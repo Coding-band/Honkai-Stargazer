@@ -1,0 +1,508 @@
+{
+ "name": "Cura Solitária",
+ "rarity": 5,
+ "descHash": "Coisas moldadas pelas mãos secretas sem forma e incorpóreas.<br />Na totalidade do vazio, ainda existe um sonho repentino.<br />Aqueles que cortejam a destruição colherão frutos da ruína, enquanto os que clamam pela vida sobreviverão.<br />Aquele que for extinto ainda pode soltar faíscas, e aquele que já secou pode ser preenchido novamente.<br />Na compaixão pela salvação do caos, o elixir nutre as sombras.<br />Com as costas voltadas para a escuridão entre as estrelas, o conteúdo deste frasco só pode ser contido em vão.<br /><br />\"Por mais paradoxais que sejam esses saberes, neles brilha a totalidade do nosso orgulho\".",
+ "iconPath": "6e5e4f4c292530bfa0a68938aa63849874843e9eaa5c374e0901bc7d01b46f80",
+ "artPath": "314435f9ecf17421fb3b03bd51a7824b63d74beb3d685f88dbec26ba1321c9d5",
+ "mediumIconPath": "6fdeef3308e91629a31c029c067b565253a7a8234565120feb50fbdfc6f1e2e3",
+ "baseType": {
+  "id": 0,
+  "iconPath": "96c3b8dd457b98955d440531986a23d509f705c13d7aa794d1e97bcfd03d5701",
+  "color": "#FFFFFF",
+  "name": "A Inexistência",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédito",
+   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
+   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
+   "purpose": "Moeda Comum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cálice (Grande Mina)",
+    "Recompensas de Missão",
+    "Recompensas de Atribuição",
+    "Troca de Brasas"
+   ]
+  },
+  "549438": {
+   "id": 549438,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5eb86757b6878dd09f969ed2d9e75af43eac2565bd49fdbe391f716e5adca101",
+   "name": "Núcleo Apagado",
+   "desc": "O coração de um monstro que vaga pelo Fragmentum. Material bruto usado para aprimoramentos.",
+   "lore": "É uma lesão que dá vida ao mal, o impulso para o pecado. É a fonte da distorção do Fragmentum.<br />Um golpe forte fez com que o coração parasse de bater e perdesse o seu brilho.<br /><br />\"Testes preliminares indicam sua hibridez: metade primordial e metade similar a Stellarons.\" — Departamento de Biologia, Sarah Castro.",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/549438",
+   "comeFrom": [
+    "Certos Monstros do Fragmentum",
+    "Inimigos do Universo Simulado",
+    "Recompensas de Atribuição",
+    "Troca de Brasas",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "633379": {
+   "id": 633379,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4886a5629723505540ba6d02fac7f264a3164458f4194796470c1826138ba105",
+   "name": "Núcleo Cintilante",
+   "desc": "O coração de um monstro que vaga pelo Fragmentum. Material normal usado para aprimoramentos.",
+   "lore": "É uma lesão que dá vida ao mal, o impulso para o pecado. É a fonte de distorção do Fragmentum.<br />O coração é cintilante e as veias indicam que ele ainda está batendo.<br /><br />\"Que tipo de monstro é esse? Você percebeu...? É verdade! É o rosto do nosso antigo líder!\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/633379",
+   "comeFrom": [
+    "Certos Monstros do Fragmentum no Nível de Equilíbrio 2 ou superior",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bb7670872389d870154ac70d1b29dee2d6c123f558951c6f914f1d9a70c28382",
+   "name": "Obsidiana do Temor",
+   "desc": "Um fragmento de matéria escura capturado do vazio. Usado para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Inexistência</span>.",
+   "lore": "Nada pode provar o seu númeno.<br />Toque suavemente para ouvir um murmúrio obscuro do fragmento.<br /><br />\"████ ██ █ ████\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "Cálice (Grande Mina)",
+    "Troca de Brasas"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "Éter Refinado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>6000</nobr> de EXP de Cone de Luz.",
+   "lore": "Uma lata de éter que foi extraída e destilada usando procedimentos especiais.<br /><br />\"O Jardim espera poder recriar uma glória do passado, mas é uma 'glória do passado' selecionada por eles. Você entende?\"",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)",
+    "Salão Esquecido"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "name": "Éter Condensado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>2.000</nobr> de EXP de Cone de Luz.",
+   "lore": "Lata de éter refinado com técnicas especiais.<br /><br />\"Manuseie com cuidado, não deixe cair nem faça pressão sobre ela. Caso ocorra algum vazamento, consulte o capítulo II do \"Manual de Respostas a Desastres de Vazamentos\" para respostas de emergência.\"",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)",
+    "Troca de Brasas"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d4e3585911d6f71b87b47ced1a2f6e0b0f77dbdc8615650896e77bae87361afd",
+   "name": "Éter Espalhado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>500</nobr> de EXP de Cone de Luz.",
+   "lore": "Substância imaginária que não deveria existir. O material básico usado para criar Cones de Luz.<br />As imagens dos Cones de Luz se tornam ainda mais claras quando imbuídas dessa substância.<br /><br />\"Entendi, então essa é a suposta 'memória' do Jardim da Recordação. É por isso que os Memoriadores conseguem fazer viagens galácticas com lembranças\".",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "717320": {
+   "id": 717320,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "f32ca1d67c0e385f701d450cae1c5dea41f334e31d61eb331d4be4dc7551c378",
+   "name": "Núcleo Contorcido",
+   "desc": "O coração de um monstro que vaga pelo Fragmentum. Material avançado usado para aprimoramentos.",
+   "lore": "É uma lesão que dá vida ao mal, o impulso para o pecado. É a fonte de distorção do Fragmentum.<br />O coração pulsa de forma lenta, com uma força residual suficiente para causar uma nova calamidade. É melhor destruí-lo para evitar problemas futuros.<br /><br />\"É como um câncer...\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/717320",
+   "comeFrom": [
+    "Certos Monstros do Fragmentum no Nível de Equilíbrio 4 ou superior",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "name": "Obsidiana da Obsessão",
+   "desc": "Um pedaço considerável de matéria escura capturado do vazio. Usado para conceder um aumento considerável de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Inexistência</span>.",
+   "lore": "Aqueles que tiverem personalidade e mente fraca passarão a eternidade no caos com apenas um simples vislumbre neste prisma.<br /><br />",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "Cálice (Grande Mina)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1a896480b5f6ee84644db112069845e85930f6dbc0f428a3f8a6de2b187702af",
+   "name": "Obsidiana da Desolação",
+   "desc": "Um pedaço de matéria escura capturado do vazio. Usado para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Inexistência</span>.",
+   "lore": "Nenhum reflexo pode ser visto na superfície deste prisma preto. Ele não somente suga toda a luz, como parece absorver as emoções de seu portador, deixando apenas uma leve sensação de vazio.<br /><br />\"...\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "Cálice (Grande Mina)",
+    "Sintetizador Omni — Síntese de Material",
+    "Troca de Brasas"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 5000
+    },
+    {
+     "id": 549438,
+     "count": 8
+    }
+   ],
+   "attackBase": 24,
+   "attackAdd": 3.6,
+   "hpBase": 48,
+   "hpAdd": 7.2,
+   "defenseBase": 18,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 10000
+    },
+    {
+     "id": 635669,
+     "count": 4
+    },
+    {
+     "id": 549438,
+     "count": 12
+    }
+   ],
+   "attackBase": 52.8,
+   "attackAdd": 3.6,
+   "hpBase": 105.6,
+   "hpAdd": 7.2,
+   "defenseBase": 39.6,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 20000
+    },
+    {
+     "id": 920196,
+     "count": 4
+    },
+    {
+     "id": 633379,
+     "count": 8
+    }
+   ],
+   "attackBase": 91.2,
+   "attackAdd": 3.6,
+   "hpBase": 182.4,
+   "hpAdd": 7.2,
+   "defenseBase": 68.4,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 50000
+    },
+    {
+     "id": 920196,
+     "count": 8
+    },
+    {
+     "id": 633379,
+     "count": 12
+    }
+   ],
+   "attackBase": 129.6,
+   "attackAdd": 3.6,
+   "hpBase": 259.2,
+   "hpAdd": 7.2,
+   "defenseBase": 97.2,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 100000
+    },
+    {
+     "id": 836255,
+     "count": 5
+    },
+    {
+     "id": 717320,
+     "count": 6
+    }
+   ],
+   "attackBase": 168,
+   "attackAdd": 3.6,
+   "hpBase": 336,
+   "hpAdd": 7.2,
+   "defenseBase": 126,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 200000
+    },
+    {
+     "id": 836255,
+     "count": 10
+    },
+    {
+     "id": 717320,
+     "count": 8
+    }
+   ],
+   "attackBase": 206.4,
+   "attackAdd": 3.6,
+   "hpBase": 412.8,
+   "hpAdd": 7.2,
+   "defenseBase": 154.8,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 244.8,
+   "attackAdd": 3.6,
+   "hpBase": 489.6,
+   "hpAdd": 7.2,
+   "defenseBase": 183.6,
+   "defenseAdd": 2.7
+  }
+ ],
+ "skill": {
+  "id": 24003,
+  "name": "Elixir do Caos",
+  "descHash": "Aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> o Efeito de Quebra do usuário. Quando o usuário usa sua Perícia Suprema, aumenta o Dano Contínuo causado pelo usuário em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> durando por <nobr>#3[i]</nobr> rodada(s). Quando o inimigo-alvo sofrendo com o Dano Contínuo imposto pelo usuário é derrotado, regenera <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]</nobr></span> de Energia para o usuário.",
+  "levelData": [
+   {
+    "params": [
+     0.2,
+     0.24,
+     2,
+     4
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.25,
+     0.3,
+     2,
+     4.5
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.3,
+     0.36,
+     2,
+     5
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.35,
+     0.42,
+     2,
+     5.5
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.4,
+     0.48,
+     2,
+     6
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 60,
+   "2": 100,
+   "3": 170,
+   "4": 260,
+   "5": 370,
+   "6": 500,
+   "7": 640,
+   "8": 800,
+   "9": 970,
+   "10": 1160,
+   "11": 1360,
+   "12": 1580,
+   "13": 1820,
+   "14": 2060,
+   "15": 2320,
+   "16": 2600,
+   "17": 2880,
+   "18": 3180,
+   "19": 3490,
+   "20": 3620,
+   "21": 3760,
+   "22": 3910,
+   "23": 4050,
+   "24": 4200,
+   "25": 4360,
+   "26": 4510,
+   "27": 4670,
+   "28": 4830,
+   "29": 4990,
+   "30": 5160,
+   "31": 5330,
+   "32": 5500,
+   "33": 5670,
+   "34": 5850,
+   "35": 6030,
+   "36": 6210,
+   "37": 6390,
+   "38": 6580,
+   "39": 6760,
+   "40": 6950,
+   "41": 7630,
+   "42": 8060,
+   "43": 8510,
+   "44": 8970,
+   "45": 9440,
+   "46": 9910,
+   "47": 10390,
+   "48": 10890,
+   "49": 11390,
+   "50": 11900,
+   "51": 12420,
+   "52": 12940,
+   "53": 13480,
+   "54": 14020,
+   "55": 14580,
+   "56": 15140,
+   "57": 15710,
+   "58": 16290,
+   "59": 16880,
+   "60": 17470,
+   "61": 18290,
+   "62": 19270,
+   "63": 20260,
+   "64": 21260,
+   "65": 22290,
+   "66": 23320,
+   "67": 24370,
+   "68": 25440,
+   "69": 26520,
+   "70": 27620,
+   "71": 30810,
+   "72": 33710,
+   "73": 36660,
+   "74": 39650,
+   "75": 42680,
+   "76": 45750,
+   "77": 48870,
+   "78": 52030,
+   "79": 55230,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "24003"
+}

@@ -1,0 +1,2933 @@
+{
+ "spRequirement": 130,
+ "iconPath": "964fad345ab51a77077bce75f248ebb94290df59eece5f4b2d109e6a50eae854",
+ "bgPath": "9419a32b582ef1eb2a0faef3d124ea5d74a867b68750f83dfe59e4d842f7755e",
+ "figPath": "9ff20160eb39efc5f0f23e473927ebcae01569778e3f034f188b235bd7ad8882",
+ "fgPath": "aba3637a8e66db326b42c44e71e6bba4dd2ba96e662edb708247fb52f8e8cab8",
+ "splashIconPath": "fdf330bc98ab6718546e7efb6addcfb4c338cac08bc3546e64593b0874e008a5",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 5,
+  "iconPath": "4b4b5f13f6588e7fb1c030c28f9b9b67a7a8c4bab77c05e38d5c9f64eb0d99e7",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "信用點",
+   "desc": "星際和平公司與客戶結算時使用的貨幣，如今已成爲太空旅行的硬通貨。",
+   "lore": "「人們奔波、爭鬥、貿易，爲的不過是個終端裏顯示的數字。但真正珍貴之物，公司的數字是買不到的。」",
+   "purpose": "通用貨幣",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "任務獎勵",
+    "委託獎勵",
+    "餘燼兌換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "命運的足跡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "一次又一次的敗北成就了你的勝利，一步又一步的前進讓你抵達了命運的拐點。",
+   "purpose": "行跡材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」積分獎勵",
+    "無名勳禮",
+    "餘燼兌換",
+    "限時活動獎勵"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "d75aec8e75227549d536ef57980f65a2b081b9665d06cd1a02a5bafa6c688f63",
+   "name": "無窮假身的遺恨",
+   "desc": "行跡升級的高階素材。",
+   "lore": "無論奪取多少肉身，它都無法如願以償。就像那些尋求仙藥的人一樣，它渴望一具長存的軀殼，不必再畏怖「毀滅」。它知道，這是永難企及的迷夢。<br /><br />「我曾見過無數世界被負創神的烈焰吞噬，我曾是這些烈焰中的一朵。我隨祂的指尖舞蹈，卻深知若柴薪燃盡，火焰也將熄滅…」",
+   "purpose": "行跡材料",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "歷戰餘響【鱗淵境】"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "漫遊指南",
+   "desc": "角色的經驗材料，可以獲得<nobr>20000</nobr>點角色經驗。",
+   "lore": "跨越諸界必備的冒險叢書。按下閱讀鍵，充滿磁性的聲音將以你能聽懂的語言講述知名冒險家們在不同世界間的傳奇經歷，以及他們在各個星球上獲得的珍貴智慧。<br /><br />「漫遊指南全新書系《星際美食烹飪導覽》開售在即，敬請支持。」<br />「投稿請接入博識學會聯覺信標<nobr>23</nobr>θ聯絡員，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色經驗材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "「忘卻之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "冒險記錄",
+   "desc": "角色的經驗材料，可以獲得<nobr>5000</nobr>點角色經驗。",
+   "lore": "裝訂嚴整，一看就頗有教育意義的冒險札記。圖文並茂地描述了冒險行動的始末、有價值的信息和生存相關的技巧。<br /><br />「幹嘛不數據化放進光刻片裡？便攜多了。」<br />「面對恆星風暴和中子流噴發時，高科技比你想象的還要脆弱。何況，製作這本書的人一定希望人們用最簡單的方式閱讀它。」",
+   "purpose": "角色經驗材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "每日實訓",
+    "餘燼兌換"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "旅情見聞",
+   "desc": "角色的經驗材料，可以獲得<nobr>1000</nobr>點角色經驗。",
+   "lore": "記錄旅途見聞的日誌，字跡漫漶不清，內容隨心所欲，對你並沒有太大的幫助。<br /><br />「看完了就趕緊把這堆廢紙處理掉吧，丹恆？」",
+   "purpose": "角色經驗材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "委託獎勵"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "28d0ba947e29fa63210d8ae2c432cb80339f98427c8655a9ca050184f69c4819",
+   "name": "古代零件",
+   "desc": "舊世界時代遺留的機器零件。強化所需的簡單材料。",
+   "lore": "儘管體積微不足道，卻以如今的人們難以重現的技術鑄造打磨而成。<br /><br />「舊世界的一顆小螺絲都比我們的盔甲結實。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "自動機兵掉落",
+    "「模擬宇宙」中敵方掉落",
+    "委託獎勵",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "7089e982e18575f3824ab28ae0e91f40c8214edf6253a7162142bdc7fc0acdbe",
+   "name": "古代轉軸",
+   "desc": "舊世界時代遺留的機器傳動軸。強化所需的普通材料。",
+   "lore": "精密結合的機件一旦拆開就再也無法復原，即便貝洛伯格技術部的維修老手也不敢輕易動它。<br /><br />「笨蛋，這東西交給藍甲人才值幾個罐頭？拿去給史瓦羅大佬，保你喫穿不愁。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "突破至均衡等級2後，自動機兵掉落",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bb7670872389d870154ac70d1b29dee2d6c123f558951c6f914f1d9a70c28382",
+   "name": "黯淡黑曜",
+   "desc": "一片自虛空中捕獲的黑質。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "任何手段都無法驗明它的本體。<br />輕輕觸碰，從碎片中傳來不明的囈語。<br /><br />「████ ██ █ █」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "餘燼兌換"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "name": "古代引擎",
+   "desc": "舊世界時代遺留的機器引擎。強化所需的高級材料。",
+   "lore": "以地髓爲能源注入動力，運轉時噴燃的並非火星，而是遊走的極光。<br /><br />「只有大守護者直屬的技術部有權調閱舊世界的資料，我嘛，被開除後就進不去啦。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "突破至均衡等級4後，自動機兵掉落",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "name": "沉淪黑曜",
+   "desc": "一整塊自虛空中捕獲的黑質。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "意志薄弱之人只是向其棱面送去一瞥，便會在混沌中永世沉淪。<br /><br />「         」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "「萬能合成機」- 材料合成"
+   ]
+  },
+  "866633": {
+   "id": 866633,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "d97cb9072570df0b85725f8a0783d22e500c3e06e49b7fbc8dd485e7ba1b9516",
+   "name": "鐵狼碎齒",
+   "desc": "自動機兵遺留的零碎鋸齒，物理屬性角色的晉升素材。",
+   "lore": "據說築城者曾經的冶金技術能打造出切開磐巖的鏈鋸。這樣巧妙的工藝如今已無法復現。<br /><br />「史瓦羅大佬說那刃片薄得能切進分子間的空隙…分子是什麼玩意兒？」",
+   "purpose": "角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/866633",
+   "comeFrom": [
+    "凝滯虛影【大礦區】",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1a896480b5f6ee84644db112069845e85930f6dbc0f428a3f8a6de2b187702af",
+   "name": "虛空黑曜",
+   "desc": "一塊自虛空中捕獲的黑質。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "漆黑的棱面上甚至反射不出任何倒影。它不僅吸收着光，似乎還奪走了持有者的情緒起伏，只留下淡淡的空洞感。<br /><br />「……」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "「萬能合成機」- 材料合成",
+    "餘燼兌換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 79.2,
+   "attackAdd": 3.96,
+   "hpBase": 124.8,
+   "hpAdd": 6.24,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549408,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "attackBase": 110.88,
+   "attackAdd": 3.96,
+   "hpBase": 174.72,
+   "hpAdd": 6.24,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549408,
+     "count": 8
+    }
+   ]
+  },
+  {
+   "attackBase": 142.56,
+   "attackAdd": 3.96,
+   "hpBase": 224.64,
+   "hpAdd": 6.24,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633349,
+     "count": 5
+    },
+    {
+     "id": 866633,
+     "count": 2
+    }
+   ]
+  },
+  {
+   "attackBase": 174.24,
+   "attackAdd": 3.96,
+   "hpBase": 274.56,
+   "hpAdd": 6.24,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633349,
+     "count": 8
+    },
+    {
+     "id": 866633,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 205.92,
+   "attackAdd": 3.96,
+   "hpBase": 324.48,
+   "hpAdd": 6.24,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717290,
+     "count": 5
+    },
+    {
+     "id": 866633,
+     "count": 15
+    }
+   ]
+  },
+  {
+   "attackBase": 237.6,
+   "attackAdd": 3.96,
+   "hpBase": 374.4,
+   "hpAdd": 6.24,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717290,
+     "count": 7
+    },
+    {
+     "id": 866633,
+     "count": 28
+    }
+   ]
+  },
+  {
+   "attackBase": 269.28,
+   "attackAdd": 3.96,
+   "hpBase": 424.32,
+   "hpAdd": 6.24,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "9509a0d0c46329d06b67da2d0868ba0045525119c07e7b11190953b1ee5f3578",
+   "artPath": "5a5381f1c7107078f44b65f56a73bfc69289ae3fb6fb53759971aedf257ac892",
+   "name": "爭鬥不休",
+   "descHash": "當盧卡行動時，若指定的敵方目標處於裂傷狀態，盧卡造成的傷害提高<nobr>#1[i]%</nobr>，持續<nobr>#2[i]</nobr>回合。",
+   "params": [
+    0.15,
+    2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "d96424db1840818e479621d8730d7a798769f3922ac106440a1b81bae21ab45e",
+   "artPath": "17fa85cb27d8b83e1d231443f9c6a09884c8db2c1f34b86d782288139fc19e2b",
+   "name": "敵弱，我強",
+   "descHash": "若戰技擊中的敵方目標弱點爲物理屬性，獲得<nobr>#1[i]</nobr>層【鬥志】。",
+   "params": [
+    1
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "dd39a4fb8d18a453fc877a01c7a89e4126bfefad868e263facfde53121cd5f16",
+   "artPath": "67541b99e67b7f1ae279d828d3db6bb645b6e4458e247a9992e7ab63c2453125",
+   "name": "爲擂臺而生",
+   "descHash": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "e64195b558b267cea8dd42a8e24ce137975bac58998df87f53e277b1fe17e456",
+   "artPath": "2a59bdd9eb75e763d622b8637fe181500a11bc1186171649ca0274c736d9fbf4",
+   "name": "百折不回",
+   "descHash": "每獲得1層【鬥志】，攻擊力提高<nobr>#1[i]%</nobr>，該效果最多疊加<nobr>#2[i]</nobr>層。",
+   "params": [
+    0.05,
+    4
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "862d2c3e280bcd884c5f7533141c464a172108c3fa49bea15b318f31b0153e0f",
+   "artPath": "28556fabc7726ab02aec538f56d529070c13a531f0faf5e9c47b3edff197b35f",
+   "name": "地火之魂",
+   "descHash": "終結技等級+2，最多不超過<nobr>15</nobr>級；普攻等級+1，最多不超過<nobr>10</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "37c0393387db01d08db8c7aeb7ae7b9c03bf6c9ce6688a144eac2b1a60e10ea2",
+   "artPath": "112e5db03f7fce5a6a93f31243edb581328512ee83bb0c6cb0a14a25de13d47a",
+   "name": "冠軍應得的喝彩",
+   "descHash": "施放強化普攻的【碎天拳】擊中陷入裂傷狀態下的敵方目標後，本次強化普攻使用的【直衝拳】每施放過1段攻擊，則額外使其當前承受的裂傷狀態立即產生1次相當於原傷害<nobr>#1[i]%</nobr>的傷害。",
+   "params": [
+    0.08
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   635769,
+   489350
+  ],
+  [
+   920296
+  ],
+  [
+   836355
+  ],
+  [
+   351242
+  ],
+  [
+   435183
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於盧卡<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 635769,
+   "name": "直衝拳",
+   "iconPath": "6eb28c318c387d7f55a682758bf50504ccbbf2fe5be3e1532a115af67449cc14",
+   "typeDescHash": "普攻",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於盧卡<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害，隨後有<nobr>#2[i]%</nobr>的<u>基礎概率</u>使目標陷入裂傷狀態，持續<nobr>#5[i]</nobr>回合。<br />裂傷狀態下，敵方目標每回合開始時受到等同於自身<nobr>#3[f1]%</nobr>生命上限的<span style=\"color:#FFFFFF;\">物理</span>屬性持續傷害，最多不超過盧卡攻擊力的<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>。",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "30",
+   "id": 920296,
+   "name": "裂傷拳",
+   "iconPath": "dd39a4fb8d18a453fc877a01c7a89e4126bfefad868e263facfde53121cd5f16",
+   "typeDescHash": "戰技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.6,
+      1,
+      0.24,
+      1.3,
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.66,
+      1,
+      0.24,
+      1.43,
+      3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549408,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.72,
+      1,
+      0.24,
+      1.56,
+      3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.78,
+      1,
+      0.24,
+      1.69,
+      3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.84,
+      1,
+      0.24,
+      1.82,
+      3
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9,
+      1,
+      0.24,
+      2.015,
+      3
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920196,
+       "count": 6
+      },
+      {
+       "id": 633349,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975,
+      1,
+      0.24,
+      2.275,
+      3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      1,
+      0.24,
+      2.6,
+      3
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836255,
+       "count": 4
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125,
+      1,
+      0.24,
+      2.99,
+      3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      1,
+      0.24,
+      3.38,
+      3
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836255,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.26,
+      1,
+      0.24,
+      3.549,
+      3
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.32,
+      1,
+      0.24,
+      3.718,
+      3
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.38,
+      1,
+      0.24,
+      3.887,
+      3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.44,
+      1,
+      0.24,
+      4.056,
+      3
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.5,
+      1,
+      0.24,
+      4.225,
+      3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "單攻",
+   "descHash": "獲得<nobr>#5[i]</nobr>層【鬥志】，並有<nobr>#2[i]%</nobr>的<u>基礎概率</u>使指定敵方單體受到的傷害提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>，持續<nobr>#4[i]</nobr>回合，隨後對該目標造成等同於盧卡<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。",
+   "ultimateCost": 130,
+   "break": "90",
+   "energy": "5",
+   "id": 836355,
+   "name": "制勝一擊",
+   "iconPath": "a48bdef051125f0b3ec5904bcefe881301cfe40c0da25bc0192fab38e8bdac0e",
+   "typeDescHash": "終結技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.98,
+      1,
+      0.12,
+      3,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.112,
+      1,
+      0.128,
+      3,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549408,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2.244,
+      1,
+      0.13599999,
+      3,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.376,
+      1,
+      0.144,
+      3,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2.508,
+      1,
+      0.152,
+      3,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.64,
+      1,
+      0.16,
+      3,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920196,
+       "count": 6
+      },
+      {
+       "id": 633349,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      2.805,
+      1,
+      0.17,
+      3,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2.97,
+      1,
+      0.18,
+      3,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836255,
+       "count": 4
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3.135,
+      1,
+      0.19,
+      3,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3.3,
+      1,
+      0.2,
+      3,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836255,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3.432,
+      1,
+      0.208,
+      3,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.564,
+      1,
+      0.216,
+      3,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.696,
+      1,
+      0.224,
+      3,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.828,
+      1,
+      0.232,
+      3,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.96,
+      1,
+      0.24,
+      3,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "強化",
+   "descHash": "盧卡在施放普攻【直衝拳】和戰技【裂傷拳】後，獲得<nobr>#1[i]</nobr>層【鬥志】，最多可持有4層【鬥志】。當持有的【鬥志】大於等於2層時，普攻【直衝拳】強化爲【直衝碎天拳】。當強化普攻的【碎天拳】擊中陷入裂傷狀態下的敵方目標後，則使其當前承受的裂傷狀態立即產生1次相當於原傷害<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>的傷害。戰鬥開始時，盧卡持有1層【鬥志】。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 351242,
+   "name": "火花四濺",
+   "iconPath": "86d3d9f0f50bca42466c173ab30f17c96849e70c9b92194418ec8c47932e61b4",
+   "typeDescHash": "天賦",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      0.68
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0.697
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549408,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.714
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.731
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.748
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.765
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920196,
+       "count": 6
+      },
+      {
+       "id": 633349,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.78625
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.8075
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836255,
+       "count": 4
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.82875
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.85
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836255,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.867
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0.884
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0.901
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0.918
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0.935
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "攻擊敵人，進入戰鬥後削弱敵方目標對應屬性韌性。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 551828,
+   "name": "攻擊",
+   "iconPath": "6eb28c318c387d7f55a682758bf50504ccbbf2fe5be3e1532a115af67449cc14",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "立即攻擊敵人，進入戰鬥後對敵方隨機單體造成等同於盧卡<nobr>#1[i]%</nobr>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害，並有<nobr>#2[i]%</nobr>的<u>基礎概率</u>使目標陷入與戰技相同的裂傷狀態。隨後盧卡額外獲得1層【鬥志】。",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "0",
+   "id": 435183,
+   "name": "搶先者",
+   "iconPath": "804427f617c545af919c159e8597d042adfa239c0137a152033c15014832f985",
+   "typeDescHash": "祕技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5,
+      1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "單攻",
+   "descHash": "消耗2層【鬥志】，先使用【直衝拳】施放3段攻擊，每段攻擊對指定敵方單體造成等同於盧卡<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。<br />再使用【碎天拳】施放1段攻擊，對指定敵方單體造成等同於盧卡<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#FFFFFF;\">物理</span>屬性傷害。",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "20",
+   "id": 489350,
+   "name": "直衝碎天拳",
+   "iconPath": "ef4834b4376e7e0cb506ae96ed9e9919aaa9d4a70dce10fd1cbf14ab16108825",
+   "typeDescHash": "普攻",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.1,
+      0.4
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.12,
+      0.48
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.14,
+      0.56
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.16,
+      0.64
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.18,
+      0.72
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.2,
+      0.8
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.22,
+      0.88
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.24,
+      0.96
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.26,
+      1.04
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1111101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1111202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1111203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1111204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 276172,
+          "name": "防禦強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+          "statusList": [
+           {
+            "key": "防禦力",
+            "value": 0.05
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 920196,
+            "count": 2
+           },
+           {
+            "id": 633349,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 276173,
+        "name": "攻擊強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "攻擊力",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920196,
+          "count": 2
+         },
+         {
+          "id": 633349,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 276174,
+      "name": "效果命中強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+      "statusList": [
+       {
+        "key": "效果命中",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635669,
+        "count": 2
+       },
+       {
+        "id": 549408,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "施放戰技時，立即解除敵方目標<nobr>#1[i]</nobr>個增益效果。",
+    "ultimateCost": 0,
+    "id": 276014,
+    "name": "動能過載",
+    "iconPath": "d3bf6d7b8f4c0cccb27431503124277dd6d3e4323ff802450232f35d294f47cf",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635669,
+        "count": 2
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1111102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1111205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1111206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1111207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 276169,
+          "name": "攻擊強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+          "statusList": [
+           {
+            "key": "攻擊力",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 836255,
+            "count": 2
+           },
+           {
+            "id": 717290,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 276170,
+        "name": "效果命中強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+        "statusList": [
+         {
+          "key": "效果命中",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836255,
+          "count": 2
+         },
+         {
+          "id": 717290,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 276171,
+      "name": "攻擊強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "攻擊力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920196,
+        "count": 4
+       },
+       {
+        "id": 633349,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "每獲得1層【鬥志】，額外恢復<nobr>#1[i]</nobr>點能量。",
+    "ultimateCost": 0,
+    "id": 276015,
+    "name": "循環制動",
+    "iconPath": "41cf01a51ef2d2d9e945c677d241303c27849824cd4b8bc319b028adc934ee8a",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       3
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920196,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1111103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1111208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 276184,
+      "name": "防禦強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+      "statusList": [
+       {
+        "key": "防禦力",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 717290,
+        "count": 6
+       }
+      ]
+     }
+    },
+    {
+     "id": 1111209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 276183,
+      "name": "效果命中強化",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+      "statusList": [
+       {
+        "key": "效果命中",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 717290,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "施放強化普攻時，【直衝拳】的每1段攻擊都有<nobr>#1[i]%</nobr>的固定概率使盧卡額外施放1段攻擊。此效果對額外施放的攻擊不會生效。",
+    "ultimateCost": 0,
+    "id": 276016,
+    "name": "粉碎鬥志",
+    "iconPath": "fe74e88e91585660dc9f357e35fe3cbc57ee9850ae932d0f8c93e955520cf0b4",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.5
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1111201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1111210,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 192235,
+      "name": "攻擊強化",
+      "levelReq": 80,
+      "promotionReq": 0,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "攻擊力",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 717290,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 276175,
+    "name": "攻擊強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "攻擊力",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549408,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "軀幹",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "攻擊力",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   },
+   {
+    "relicTypeHash": "腳部",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "速度",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "位面球",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "物理屬性傷害提高",
+    "propertyIconPath": "17a936e642ddc644dbb666c4a1279dd2386321a74cf73b0332a33c7f209c2176"
+   },
+   {
+    "relicTypeHash": "連結繩",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "攻擊力",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初次見面",
+   "text": "喲，你好！我叫盧卡，是「地火」的成員。打擊惡棍，守護鎮民——這就是我每天的工作。",
+   "unlockRequirement": "",
+   "cnUrl": "4651b689c24f91012249ec8d01fb8bd72e8513df95ab342d6a112c33ad5905e4",
+   "jpUrl": "6307e5e77ead3bd991dec51133159af6d5299f0690ec4c8e8474562d3959a9b8",
+   "enUrl": "c6cff409ca9ffa5f60bc8249d428c2a92425145daa0598a3a0a1ed1a10c47035",
+   "krUrl": "e4fab9cea9a1f424fa4610f8f76a01c5c3854abec19e998e94c08c21ac2d25d4"
+  },
+  {
+   "id": 2,
+   "title": "問候",
+   "text": "比賽要開始了？好！我先熱熱身。",
+   "unlockRequirement": "",
+   "cnUrl": "c5a75f08e544834526ad44f20ae381d9790a1725257262cb0be8e0a383508ccf",
+   "jpUrl": "cab4e978d0a21a333a43d0eb67084598d14ee78a93a3cecebb77960e92f89a12",
+   "enUrl": "461ca409241ecddef65dba89734a3518ed2a52f8bb5a8b966f6576d263f9416c",
+   "krUrl": "d2fbd2805923372fa144f51aee54fd7342309e0b7330f42c8c00eda2dfe27795"
+  },
+  {
+   "id": 3,
+   "title": "道別",
+   "text": "想歇一會兒？去吧！偷偷告訴你，冠軍的祕訣就是趁着別人休息的時候刻苦訓練。",
+   "unlockRequirement": "",
+   "cnUrl": "f3fe24cf01e470905ecf359138ff09dde47d63d3bea39d5df016c7a2f3a6c470",
+   "jpUrl": "593574546067203811b3faee71dd71e5d47c2e1b498a5a73a79944ea8615d8c7",
+   "enUrl": "daa4062587840c4aeb038366088a0240f61211db1295645e2c340238133d5a89",
+   "krUrl": "614bb253c82307f2679130f4fd8bbe03053a867c32872227a33ede02f8177cfe"
+  },
+  {
+   "id": 4,
+   "title": "關於自己",
+   "text": "搏擊不是因爲我喜歡暴力，拿冠軍也不是爲了和誰炫耀…我只是覺得這地下的惡棍太多，得給孩子們立個好榜樣。",
+   "unlockRequirement": "",
+   "cnUrl": "6c27b6ee9216c0b90961187d5b0f5b9ca1f51ae60a85fdaa14ab2154a7f29178",
+   "jpUrl": "f741212ad963f97e9070fe33fca141c32e5c6eb2a1850656dddd9464d1afc444",
+   "enUrl": "100494cd628319c72db1634e5d03fa46e5f585ed34acc0b197b4ed7ff478ff95",
+   "krUrl": "cbd5920b090d8df8e447bf8cfa6ef9be2cf4bb72cbf9b30d7967c59f5874f6c5"
+  },
+  {
+   "id": 5,
+   "title": "閒談•義手",
+   "text": "師傅說過：不要太惦記自己失去了什麼；多想想自己得到了些什麼。每次看到這隻義手，我總能回憶起這句話。",
+   "unlockRequirement": "",
+   "cnUrl": "90266960d0da1e056a0beadb06dfb498c4c00b30d399ed8e6a50afff557aa8b3",
+   "jpUrl": "03bf4206e6319302dd81e68034a79969ff943839fd3e890b0a2bdd745fcec841",
+   "enUrl": "530d968f56c40e288052e32cd04ca789bb812a7b31f7a018e6ff86bcb171cc10",
+   "krUrl": "a46e213fbcb448c33c6c99a88945e6029c41cef748d96e51b47b7833a87b996b"
+  },
+  {
+   "id": 6,
+   "title": "閒談•上層區",
+   "text": "上層？沒什麼興趣。當然，除非那裡有值得我挑戰的高手…或者需要被制裁的混球。",
+   "unlockRequirement": "",
+   "cnUrl": "1cdce7aa3aa101919b7e2aaa00af0b11ee1b3949ffd7c250b204e05731d85004",
+   "jpUrl": "5d9a2ffd5b2bb28a1b3a0312c8e732f179218dde507d872d10788132837e9e3b",
+   "enUrl": "a1c3a399a4ce5e2d5377e0dc670ddaf16a4b5d6129ca18209762d05ae62ebcb9",
+   "krUrl": "33a95e9b2e4f4ebc3d09c43e5240282fed3def08286e9f25d849715a66e87dd6"
+  },
+  {
+   "id": 7,
+   "title": "愛好",
+   "text": "搏擊俱樂部流行一句話：「誰把你揍得最慘，就和誰做朋友」——喔，怪不得大家都想和我做朋友！",
+   "unlockRequirement": "",
+   "cnUrl": "b6f1d02f7a95dfb0cda60e65490dfee746bfc91b6e84171ef2ca7da56686d321",
+   "jpUrl": "608501012ddaf1847419be9c7fd4a936cc908b60e87b681830dd58a74e63d03c",
+   "enUrl": "7b96cbd76d3a979c58da98042bc6c798e46d0c6c9f1c848da2f5e5b7fb4634d1",
+   "krUrl": "11c3f124f66abbfab346e5b0aa93e408c780a55da5de371f101c895b1636d856"
+  },
+  {
+   "id": 8,
+   "title": "煩惱",
+   "text": "蔬菜…蘑菇…可惡，憑什麼滅絕的不是這些玩意啊？",
+   "unlockRequirement": "",
+   "cnUrl": "f76fb166b01c105b39f99ad1a7c435733640158654ea15f6debf2b243b702374",
+   "jpUrl": "ab7ee87a2cde100da2c668f5f2d03edc16696723e7332416f0d6d0b48b6c491d",
+   "enUrl": "29a3593aef9c466bfddf4a8a0501b868a7b3164aea6aac7e910babfff2642e6e",
+   "krUrl": "4121f2bb60d01384cdcff953f46b9a5348ef9b7d1cfa93840531fa7f6758ca25"
+  },
+  {
+   "id": 9,
+   "title": "分享",
+   "text": "聽說了嗎？下層區的三大特產：地髓，沒良心的礦頭，還有盧卡沙包大的拳頭！",
+   "unlockRequirement": "",
+   "cnUrl": "13d1c1875e2c47123b38ccd784d5b9bd6288d3933dc9937cc1544d4416c4bcbf",
+   "jpUrl": "5c8b1d90e5fff75088495aa41eb996afa9541cf447a36ff9e9610d1f63ce6977",
+   "enUrl": "d455823ee2a7127360abc1418404b9120e5e0d21ce9497ab0365201f74b95572",
+   "krUrl": "c6392292778cb9bf9e4349ffa62996ec56bc59f22fd2e461ce004b7cad1399be"
+  },
+  {
+   "id": 10,
+   "title": "見聞",
+   "text": "有時候我也會覺得不可思議，居然會有人甘願打一輩子的鐵，敲一輩子的礦…我懂，不是每個人都有資格談夢想。但要是沒有它…我恐怕撐不到今天。",
+   "unlockRequirement": "",
+   "cnUrl": "4bad047eff70ad2b998e5d826dd9b7f118edb932e662dd84f03e430de0aa854d",
+   "jpUrl": "306641b8b8f1c5e67265caec892a653af12e2e943a02f0e34661d817a8b38df0",
+   "enUrl": "c92b9986e469cd8751b9ec2a00500ea7abdde3fe70238326036f9aea889aae19",
+   "krUrl": "a6bbba847c57651626ebaaff710cbbb22ee2b4ee03c873fbdf76f85ed07219b7"
+  },
+  {
+   "id": 11,
+   "title": "關于娜塔莎",
+   "text": "要是沒有什麼嚴重的傷病，我儘量不去打擾娜塔莎大姐頭。需要她幫助的人太多，我不想因爲自己的馬虎大意拖累他們。",
+   "unlockRequirement": "",
+   "cnUrl": "9ba0c1410040beb0b64bea713c57ab668be0c5a196b6d7b9be48a2b49fbb5ac2",
+   "jpUrl": "f8884d629e4a7998e7a1bdde14f5ab5e6061087b469e97e52186fd8ed2db8dba",
+   "enUrl": "9bb5d4303d929beb7bec9b03ffea6ea7ca962a3fedaf7093635c93792d321652",
+   "krUrl": "5c3c48e4540cec62b2ca24fbdbe2b25d4fa80bb2c3f600a2afd10b87ed49605a"
+  },
+  {
+   "id": 12,
+   "title": "關於希兒",
+   "text": "希兒啊…該怎麼慫恿她參加擂臺賽呢？以她的實力，拿個冠軍肯定輕輕鬆鬆——除非遇上我，哈！",
+   "unlockRequirement": "",
+   "cnUrl": "4f51cf1973f4ccdb2380e0cd5e601f3cc83dfe685b77e3358fcda5ba20430e13",
+   "jpUrl": "bb0faabf8bf2e969473c569633dedc04324acca1929fccc9826c0aa9bea4ab06",
+   "enUrl": "192c02e07dbe374601cdd23d9ba8b88405a7c52f9ef4605936fa718b493280e0",
+   "krUrl": "389ad6bf9e6dc9d9da94e1076253b4194c6f5798a6a2a238f6fe072f60d48c25"
+  },
+  {
+   "id": 13,
+   "title": "關於史瓦羅",
+   "text": "得找機會和那個大鐵疙瘩比劃比劃…掰手腕。幹嘛？我又不傻，肌肉再結實也扛不住大炮啊？",
+   "unlockRequirement": "",
+   "cnUrl": "43d077cc8a5046a9c09f7e63df1577e22550b65224c924dca0611e87f15aea17",
+   "jpUrl": "94d4170e98fb24ce21c3ff9d2aac40c61a7118ab425a76765a3f9defa6151bd6",
+   "enUrl": "cbd41ce05262d1617b8b08a3a4222ac4739135a2d1a367c575d97d945d0027e3",
+   "krUrl": "5b0438579aab6eb3b7aa4d5b298c0f18a4770b59df308c27e7787d4e366af8d8"
+  },
+  {
+   "id": 14,
+   "title": "關於桑博",
+   "text": "我不需要什麼經紀人，再說了…會給自己取「深藍帥哥」這種外號的傢伙，我壓根信不過。",
+   "unlockRequirement": "",
+   "cnUrl": "48099b097695228e9885c0fcc7064f8fc92309ed4bde55c1e83542a246a086ee",
+   "jpUrl": "30f6591f58b60bf0fcb356236030759328e0f84fb0838998858e7bdb4bf403e9",
+   "enUrl": "709b2ba1249741c53a1a665e25808c491f566d497c0ff326f028f4df984e3e9f",
+   "krUrl": "5adc6e6240be77de915835a1c6d56ef558ccec8f61499febbe91e7c98f1807cd"
+  },
+  {
+   "id": 15,
+   "title": "關於虎克",
+   "text": "大家都說虎克淘氣過頭了，但我反而覺得她是個能幹的好孩子。呃…證據嘛，沒有——純憑感覺，畢竟我也是鼴鼠黨榮譽隊員啊！",
+   "unlockRequirement": "",
+   "cnUrl": "0ce489ab4293a3920c56909724d71e807ee8664acaa565a1234cb0a08df57b6e",
+   "jpUrl": "61bcb00abbc7b45d3e1acf32a7792b080a4aa34241a3232850c24ff03730e526",
+   "enUrl": "c220bd9cbcc652f8e68c44fe088d6dbee4bcdfa534df1b51ffc2e2bf6155fd7d",
+   "krUrl": "33c4bc5c6af02deb2bda70fa878cd91aa9972f9e382ca3fbda951613f41d5caa"
+  },
+  {
+   "id": 16,
+   "title": "關於奧列格",
+   "text": "…啊，沒什麼。我只是在想，自己還得修煉多久才能打贏奧列格師傅。在他徹底變成沒用的老頭之前，我一定要完成這個目標。",
+   "unlockRequirement": "",
+   "cnUrl": "d1b0445923ad1c3020f85f64c3194ba3feedd6ccb30bc84f8d44a64f78cac34a",
+   "jpUrl": "6290c2adabd1dcc6e1c3bbb4fa4a12650e91ddfbb61123f1af173daa39966b03",
+   "enUrl": "28b336ab2e1f8af56aa4c8dda9067e7467e55ff005017f01931ee7899a8e827c",
+   "krUrl": "008300f5de4acc525f4bf8314962d4eda4f78b8d593e68651f3e0b2f2e44fc72"
+  },
+  {
+   "id": 17,
+   "title": "星魂激活",
+   "text": "這種感覺…沸騰起來了！",
+   "unlockRequirement": "",
+   "cnUrl": "629b9e7e0d3c810daafd031953a0532629c6fe9411561a246e9d3b927d7e419a",
+   "jpUrl": "8d8bbde6f284d4be3880f55a09d800a5ac1a36b1ea00c6c2dfde3946542c7fc7",
+   "enUrl": "21cf257528d06e51cfae3cb0282f268da852d9659f249d9b0c53fb411dd5a6bd",
+   "krUrl": "8da25e6b1736c96c2b033740fd8b4d22e12b40998b0c061f27717cb1b2c56783"
+  },
+  {
+   "id": 18,
+   "title": "角色晉階",
+   "text": "每日一練？不夠，加練！",
+   "unlockRequirement": "",
+   "cnUrl": "3cb012ed0bafa64ccb8c74393faeed512ebbf8cbfab5eb0889f31e02ced6e902",
+   "jpUrl": "e21ed55ff114e4f985c9905a93484b41495549dbcc92a7163f98f8368e9de153",
+   "enUrl": "f0303c74c31f188c49039ed47c56783ae77138c009619f09da5770991840405f",
+   "krUrl": "3b7aa347e9da261e6f0f3666f8398b62f737d375f9a33c8ae9bb4546d755744d"
+  },
+  {
+   "id": 19,
+   "title": "角色滿級",
+   "text": "這就是我的極限？哈，怎麼可能！",
+   "unlockRequirement": "",
+   "cnUrl": "7454734cf6db09141aeffdc2541b49165100ca6f65f501395dda7e8e624dffbd",
+   "jpUrl": "335fa1179faf7533a3dc595d6d889e79ceff7c3d9943dc35959a77739f660cf3",
+   "enUrl": "111e6615abeb50114882cbbe137f5b5ed854c44b0ae8e81d29a8558bb7238291",
+   "krUrl": "34a2c7ff3752857251de03aab04ab80e6c1c92e1e93bb225e039df94dec3860d"
+  },
+  {
+   "id": 20,
+   "title": "行跡激活",
+   "text": "實用的技術，不錯！",
+   "unlockRequirement": "",
+   "cnUrl": "84427927dc2743f2b6bfe59b6b5dd4284c27f091304a94d4e1d2307c8ed49739",
+   "jpUrl": "434970b7e81b2508910ce3be27262e1dd032b8dc68cf6b0f2767e06f931a3395",
+   "enUrl": "0da6eac3ed70def349f99d4374c4c37ff99b8981b836d6702da9d8bed7e5b375",
+   "krUrl": "ac6c61218ef0d7c2eb3aaaa7a6ef1899eaa86b03884bac5aaeb54a45c431ef65"
+  },
+  {
+   "id": 21,
+   "title": "隊伍編成•希兒",
+   "text": "希兒！咱倆合作，沒有打不贏的架。",
+   "unlockRequirement": "",
+   "cnUrl": "7a3aa8486a5d05c230fe4ddb90e1dff4cfe1a8973c362e22a81f55b7d60fedaa",
+   "jpUrl": "2c6bca12b64d935a5a1de99bd4c683da5d0328ab4858f204f4abd6524b4409dd",
+   "enUrl": "7eee011bb4f47ac156e4b215498b503922ab5d40dbc64eff124896eb4edc51f4",
+   "krUrl": "66b07dda5948dd9424330ecd6b9dca281bfa2e7a759c38cc6bce2d35c2b554d4"
+  },
+  {
+   "id": 22,
+   "title": "隊伍編成•娜塔莎",
+   "text": "別擔心，醫生！我不會在擂臺上倒下。",
+   "unlockRequirement": "",
+   "cnUrl": "8cf5a95fa62d51b6311f716a4129e26d788fb9c6f7be8ae1a6d82e3dd0666e71",
+   "jpUrl": "aa6c4dc3a3c132d81382dcdd232e0775e0f353cc962be3316b1ad13b2aa009ab",
+   "enUrl": "26c53d8547acc2164bd121f34eb74315f79fe48d1ed9adebef7347cff48a20e9",
+   "krUrl": "3371d617418272c7b2795b45512309053c57d0805a9a0ad9e01c7151c5fa6211"
+  },
+  {
+   "id": 23,
+   "title": "隊伍編成•虎克",
+   "text": "虎克，不多喫點肉，當心長不高喔！",
+   "unlockRequirement": "",
+   "cnUrl": "f4058155cec1dda9ad318cd7270528b92b253955f00ade2eb303a35ab7d542b9",
+   "jpUrl": "9cc011062d4ada2cdf0a21aaec8bde6ee25db97c4a945af75d034dcca4036f5e",
+   "enUrl": "a8e145020c5950f33caefef7318948803209285dccd9e9c0de61ea48b0c19df2",
+   "krUrl": "2b886cf8c7cca516ebfaa020da73af1091e7d8086aa2cb5e2c7716b5f860d484"
+  },
+  {
+   "id": 24,
+   "title": "隊伍編成•克拉拉",
+   "text": "讓史瓦羅先生也教我幾招吧，克拉拉？",
+   "unlockRequirement": "",
+   "cnUrl": "fe9a706355d77fe0a604a0c14818ff4a35433c9b116f8c30afa2661dbc445c77",
+   "jpUrl": "a95d16f1562202068f6021523758f8a1a446b006774a70fc89337bc3bf2c5a9a",
+   "enUrl": "85cacdadbd5e65a012d3cf16fdfa0a3abe02499ce2eea63a70b40ad8f3270d31",
+   "krUrl": "66546d3fedd8c1d38ada4cbe588cbbc249843bca6e991bc940de1b2bd573b5bb"
+  },
+  {
+   "id": 51,
+   "title": "戰鬥開始•弱點擊破",
+   "text": "怎樣？要認輸嗎？！",
+   "unlockRequirement": "",
+   "cnUrl": "05279e7f0e22e654af515cfef098a403fa726b30861d93a683d34d3f55f35609",
+   "jpUrl": "244d528ac8a791b1552d3beabd990ee0e35a927691d078cd2e71c6bb3b577d8c",
+   "enUrl": "919340e116fc2c64f90a13aca251fe9783561df298b60c8b02b912ef3bda00bc",
+   "krUrl": "1dbbe6290f8016a0f7f58cc92dda8bd778df7110413f3c0ab98e20d93cd8a752"
+  },
+  {
+   "id": 52,
+   "title": "戰鬥開始•危險預警",
+   "text": "現在才開始！",
+   "unlockRequirement": "",
+   "cnUrl": "bf282e57e3a88f01916437cb82487bbd3421a89f021ac67b481dcef610b53757",
+   "jpUrl": "ee6eaec0d7ed7ee0b2a057e4ca19de199ef378d2ef18ad97e2ecd46c67dbb29b",
+   "enUrl": "cc3cac8f05f4e0b1a2ef75f463e924361336785370d049e687b393b18bb7949d",
+   "krUrl": "b5c13890df3ad9917d73da6e6a5d309eeaf283c83a687c28c29fa575826ba1f7"
+  },
+  {
+   "id": 53,
+   "title": "回合開始•一",
+   "text": "對付你，一拳就夠了！",
+   "unlockRequirement": "",
+   "cnUrl": "a37334a2a4d466551f30dbbe19eb9e0f33cc28c85fcc8318a3f78c8aad0aa44a",
+   "jpUrl": "3de82ac6681f302cfa6073b32bc16c53b2f0b129692a893f7a389c9fa3ada1e7",
+   "enUrl": "661a73ae4e8115c086195c1b18f0af4274283e94985d176838d267aa229ca19c",
+   "krUrl": "fc360baf54f4f170dc425373729a1ca472ebe0cf754587297a39bd6575ef50a9"
+  },
+  {
+   "id": 54,
+   "title": "回合開始•二",
+   "text": "哈，不過是條雜魚！",
+   "unlockRequirement": "",
+   "cnUrl": "39f7e26d1942081fd9d176a1d36f592808957b97b75b31a5d35719d89973527b",
+   "jpUrl": "6318fba8afc23a3cd625179dfd90c5bacee3d2c1dab11cdb6ba5d5cbd49fe1fa",
+   "enUrl": "70629b44c438ddfafc6d605adcdb7b3cc652d62f2238d26bfa01883ef6a0a7cc",
+   "krUrl": "1a981353689acb85b738fb323647dcdaeb518974319cd69d570fe897a473f579"
+  },
+  {
+   "id": 55,
+   "title": "回合待機",
+   "text": "再不出拳就晚了，夥計。",
+   "unlockRequirement": "",
+   "cnUrl": "24209c2ca1ba36644496a546c3a48c99520e980a1cee843760d6a016f9cf5801",
+   "jpUrl": "076c9a45e7cf22987b6db3a594dbe44a4637f9f288e2e7dbefecdec931f94fd6",
+   "enUrl": "bc019b4c92d38b361f0ab4b9ecaa3403b1dc9088b1b0df54f43df98d6d0a83fb",
+   "krUrl": "2f526ad5ce141a31b5fb890147160e6a730f0a04a16aa5f56c7761ddf89aaef2"
+  },
+  {
+   "id": 56,
+   "title": "強化普攻",
+   "text": "這一拳——送你回家！",
+   "unlockRequirement": "",
+   "cnUrl": "b4256d8b9129377fb7b2e14a1f8220c2e096fcad6c86b7a7604548a71fc3cc68",
+   "jpUrl": "e2381ca4ced9e10d5046959d5216d81259dfdbe81c6672b9a6dfeb84dbe20e6a",
+   "enUrl": "1cc8fed404aa9f48bf317f23237c1663a5776958f9a58f9278b0cc0f5b5b1a62",
+   "krUrl": "76076b36d9dd49b0b18ed8c958f31439cde7f4283c80e30bd84d33de41b91bbb"
+  },
+  {
+   "id": 57,
+   "title": "戰技•一",
+   "text": "很囂張嘛！",
+   "unlockRequirement": "",
+   "cnUrl": "7fd7c37fcc07e09abcaa6bce495d1694fb5c92e6866f4c4d7aecaed86629388c",
+   "jpUrl": "abcb7e1eb1050bbb5a55f927f7b237ac21c17825e7c7b1f9a2d644a9b388227c",
+   "enUrl": "e54cca0d93e7f65002aaa96ab237c0d243899c557e46864baa2d864322391705",
+   "krUrl": "c1842edb749b4dd24b9b242560e11c86deaa1919e4f5809c9e7b14f535ea9529"
+  },
+  {
+   "id": 58,
+   "title": "戰技•二",
+   "text": "別走神了！",
+   "unlockRequirement": "",
+   "cnUrl": "6946798fd76ed99ccd7f443bfcd438343a2407f5335f9910f541c6bce45338cf",
+   "jpUrl": "47dd8d282b1ea9d27563d1c81adfb1175ea6672e40449979610f967ed287f546",
+   "enUrl": "675512585155c2366255356493ba86c689a62b2be7c1d0f766de859502495fbd",
+   "krUrl": "e2e5ce384e71cba5d4685a16525849d96eee572088afe3cdc876b4a8526cb101"
+  },
+  {
+   "id": 59,
+   "title": "輕受擊",
+   "text": "…小意思！",
+   "unlockRequirement": "",
+   "cnUrl": "91752d95744e10ab02b8d5279e6133826b3d0ebc1e97008c80c27c208a85d1d5",
+   "jpUrl": "294ce850b18f4700ec82637bd92061edfb95737de6c58dbe794ae4d73fbb8ae5",
+   "enUrl": "2280af96b059da3be824ec05bef4cdb6759aa9523ffdaf084f43a19f41a4444f",
+   "krUrl": "3325aeaf2dca2dde31641915ea846e62187fda14ac65815f2e928b56a50b42d6"
+  },
+  {
+   "id": 60,
+   "title": "重受擊",
+   "text": "…有點意思！",
+   "unlockRequirement": "",
+   "cnUrl": "75486925dea4cc0cedc3861af22f9bea03914d34893e4241d6fc163f8116773d",
+   "jpUrl": "d517a70c1965a662a26f4728e972b5a4537d79b17fa87d64ff087caeeb788975",
+   "enUrl": "f7e9cb5a893d79ad035f89e6aaa93af46a51a7ae85dad6c331395c4d28ae325e",
+   "krUrl": "ab240e5e9565d55d526eab556140c3a97ba668a5ca24e69260162d89262975b5"
+  },
+  {
+   "id": 61,
+   "title": "終結技•激活",
+   "text": "歡呼聲在哪兒？",
+   "unlockRequirement": "",
+   "cnUrl": "5e150410c7f73aeb1dec468eab1c397e41419455a9cabdb7ca57f01bf5288533",
+   "jpUrl": "b2a4dc815db6856184fd2169a382edc7979f1dab1eec30ddc157e7241e831f42",
+   "enUrl": "89fd03ca1aa4e030bd01044c6142ec29875e8b625d6ee2fb5607f7f63ff9f812",
+   "krUrl": "c4321716b3edd6def17f0561523af0599fd0e6690fe81f9ecab067606de973b5"
+  },
+  {
+   "id": 62,
+   "title": "終結技•施放",
+   "text": "值得我認真起來的對手…見識下火花四濺吧！",
+   "unlockRequirement": "",
+   "cnUrl": "276f7a94f63105c41bb7c49d5942b6ccb250050f8fc2e105db6b57207487da0f",
+   "jpUrl": "19394c1516651dc8a79f4392669908d06fddb92670eaa7cd54f02d70e3f54fc5",
+   "enUrl": "e30283d25ed1b3599aecabd586256c2a774c337d2e36631a3b0ec1e4355ad6fb",
+   "krUrl": "3fcf51bd6cc7aa57e5ed307487a6aeb3460c1578706128a9c5f213b1a4ceedfa"
+  },
+  {
+   "id": 63,
+   "title": "無法戰鬥",
+   "text": "不能這麼狼狽……",
+   "unlockRequirement": "",
+   "cnUrl": "ca67bf95c6a2ae83f096373d9a2c00986f31bbd023ec4d7490c3b4089a2155c4",
+   "jpUrl": "e3b68cec35789e8102da571f71d3cef551d1ef44fb8dc3522be05a805014e064",
+   "enUrl": "a3f9d15260391c84132529b3bdaab79a08ea150d7df840b031e603c6cea75eab",
+   "krUrl": "6fff741af7465cb1de634c90e8fe02d1783d4766156100bb6c5288b68f1ed7b1"
+  },
+  {
+   "id": 64,
+   "title": "重回戰鬥",
+   "text": "盧卡返場！",
+   "unlockRequirement": "",
+   "cnUrl": "ef533fe56b07d4665ada8c4a18926de2e300e6baf069936dfc3ef52fe9577244",
+   "jpUrl": "8f16ee4db372e1a0b69d45158ae281be3152a23fddf279136321119ed2bbbcd0",
+   "enUrl": "10f22a60bb1f49e3d260d3431823085fa0ade04f896f0574125a5f991eba5614",
+   "krUrl": "42ee55e7cfdb1e58b0804941b8aced4a4b7474979a3f32847d26ab597b5b5a36"
+  },
+  {
+   "id": 65,
+   "title": "回復生命",
+   "text": "背後就交給你了！",
+   "unlockRequirement": "",
+   "cnUrl": "0f73c06b1820a44b8bdf071e02271b87fa88d42e1fec11c65e4150b691c2a001",
+   "jpUrl": "d3812bcd7c13b2d54ef7e1e8f180b36dbdb28bdcf1635b2a45b999a1f176c127",
+   "enUrl": "90ed94d264576ccea5b80f205d09e5923e314e080b4b47e7f8a95449043992aa",
+   "krUrl": "fd1c8212ac4088522b6094f6f0d8a651f23cb8b4c539cdb02a82b19ff2e15275"
+  },
+  {
+   "id": 66,
+   "title": "祕技",
+   "text": "先發制人！",
+   "unlockRequirement": "",
+   "cnUrl": "a1e6a901124ff90dce5df1b9c551b01dabdc07b5fb8ba2eba15ba1299f0cd1f1",
+   "jpUrl": "594f8277006f9235bd71c0b94c7bf12f07bc9704e2e50697786afd67fc59ee33",
+   "enUrl": "7aa0fc3a32d725df914c5a3aec9fc27a7e50bbd41655a7dc162953d15a46683e",
+   "krUrl": "95ffef8db940f46255d670c449d53f28f7b30c447f33bb26552c4237d60722a5"
+  },
+  {
+   "id": 67,
+   "title": "戰鬥勝利",
+   "text": "知道冠軍的含金量了嗎？",
+   "unlockRequirement": "",
+   "cnUrl": "83f31d251114f4ebd798156987fb9d5fdfead1f3616f7c7d37aa82424f54a2a0",
+   "jpUrl": "7654b4417378f1410ea352ed626293218e2f47cabff33b0e2b0ca7b88fc98db1",
+   "enUrl": "97d72c7a8f68bbe838728ebab406e5da1708471cf1bbda98755192e9c11c8801",
+   "krUrl": "65ce1eb76360c8921bd9ae27b98038b6096ea8f86554d42d887d8501d83c4915"
+  },
+  {
+   "id": 68,
+   "title": "開啓戰利品•一",
+   "text": "嚯，還有意外驚喜？",
+   "unlockRequirement": "",
+   "cnUrl": "8b38fde986481724e6dbc15ed63fdabb2c7dac13e7f9006a2f761a46924dae22",
+   "jpUrl": "bd3e62a56d4b540f4d8cd4405e8d5c00fb9d8a3e047cd51df861feaa44a46e8d",
+   "enUrl": "5a28d90b9dc6826147f4f1fb42867903e268f0ae9fb244c507dbcb3768187cb8",
+   "krUrl": "1b040abdb68d8d08223a073ecb7bff5a411854144293d47d43921c55606074bf"
+  },
+  {
+   "id": 72,
+   "title": "開啓戰利品•二",
+   "text": "啊？就只有這點嗎？",
+   "unlockRequirement": "",
+   "cnUrl": "79c44c1c2dfc28c7c4b4f1c1c061e94f8bd656e6cdb93abe01414964cb2d8122",
+   "jpUrl": "46e4de2c1118c670c86a1e7bb07176de97a2e42cb17e1557e97b1f7ea88de9bf",
+   "enUrl": "d6ae104c5fe8955aed3b92e153e03ff9ebe2a461c66f7e14d7556fb6c103503a",
+   "krUrl": "f39abf7fe163f7d2d6bc2aa77b04630bb5be0816b66e65c73972d303a0111ea6"
+  },
+  {
+   "id": 73,
+   "title": "開啓貴重戰利品",
+   "text": "這次賺大了！",
+   "unlockRequirement": "",
+   "cnUrl": "2cc4c91151c901e928821ec77c334b2de030b322d24594210c7f027081ce7e82",
+   "jpUrl": "ccc233f522540fa419d3da81563ffe0709ee5ca7acdb95dbfd08006cc612f474",
+   "enUrl": "a5597422c3b0bd65787b13ce00c1f9e713499d5b54ff597aac079313a9b7ce11",
+   "krUrl": "b6e980d8eaee11e13e0ee18d2cb0687b63f17fce6dbdafefb3d224ff484d4e35"
+  },
+  {
+   "id": 69,
+   "title": "解謎成功•一",
+   "text": "四肢發達，頭腦也不簡單。",
+   "unlockRequirement": "",
+   "cnUrl": "5eb0235644dc9680b096d1965bf1b006109b2bbae975ac8b94a6c346daa897a3",
+   "jpUrl": "466fdbef1788cd1cc2b076383187a460a0d4c01f07786fb1843997268bc56ec0",
+   "enUrl": "90fe05dae7d1ee61c43d06ef980d1b61a11989b5b9b850e886cb2f4085ddfb27",
+   "krUrl": "0ac749c19e40485fcfa37ab6b4a1e6d1576c894895d3d4fcc01da0d497de816a"
+  },
+  {
+   "id": 74,
+   "title": "解謎成功•二",
+   "text": "嗯，還不賴！",
+   "unlockRequirement": "",
+   "cnUrl": "336d8c7395863fcd3e18ebe13932f2c855292024a8ba8adb60ae7139e906abd8",
+   "jpUrl": "fca71800ee1252bb7e9ec385a04c482d701c2ac0e8acedb9d2d3115a03328b6f",
+   "enUrl": "874373ab56674e4cf288908d2fef73680e1e3e43d1cdc27afbae888bae2f494f",
+   "krUrl": "332767979d509c824d3a05b985b6df594ee8a62dc20021babcc07990755c6c20"
+  },
+  {
+   "id": 70,
+   "title": "發現敵方目標",
+   "text": "哈，開胃菜來了！",
+   "unlockRequirement": "",
+   "cnUrl": "d691c065e3c946c90d67c03e3240a7a16dbc4c16b6eae966a92cd881a7bc9581",
+   "jpUrl": "0a530aed0741d35707db6e8e9882acca6e73a2d262a7c335353a57166357cb97",
+   "enUrl": "4a5b263f7ef2eb7a3a5ccf45a502bb456c0fb8ba27638e3b9e9f8ee467ce2dd7",
+   "krUrl": "90aa53b9e5f9455012f578f133e330e6ba852ad5bc4e1fe10e0226a38d80e635"
+  },
+  {
+   "id": 71,
+   "title": "返回城鎮",
+   "text": "想找地方躺一會兒，放鬆一下。",
+   "unlockRequirement": "",
+   "cnUrl": "dcadc87583cb18db4fb799117ed6a4b6bba3e71e216ca8f1fa6ab8edd5fd0b4e",
+   "jpUrl": "60e183b86e05d58f0821276623bf0f9bd16416b66d81a276469115d2b874751d",
+   "enUrl": "f68aedd71e0cc9fa049d95089945aa305c0999351c11d5a980eef8fea822bead",
+   "krUrl": "4a3b5674ac9266f49d27b319f764b970917624afebada32cd57c7ba4dbf888d6"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "角色詳情",
+   "text": "樂觀陽光、不拘小節的機械臂自由格鬥家，「地火」成員之一。<br />從拳臺到戰場，從拳擊手到戰士，盧卡用這份力量去守護下層區的人們。<br />正因爲自己曾經體會過絕望，所以他更渴望將希望帶給其他人。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "角色故事·一",
+   "text": "他掄起鋼錘，一遍又一遍。<br /><br />火花在眼前綻開，金屬碰撞的聲音蓋過了肌肉和關節扭動時發出的悶響。少年的身高還不足以夠到鐵櫃頂層的工具，但他揮動鋼錘的力道已經可以媲美最嫺熟的工匠。<br /><br />腳下的這方店鋪就是他生活的全部。父親蹲坐在店門前，反覆擦拭着鏽跡斑斑的門牌。偶爾，他會躺在硬邦邦的牀上，幻想自己的未來——但無論他的精神漫遊至何處，父親的背影總會在思緒的盡頭出現。<br /><br />一陣腳步聲傳來，他暫時放下了手中的活計。父親站起身來，厚實、但有些佝僂的身形透出一絲恭維。又是「地火」的那夥人——自熔錘鎮戒嚴以來，他們就經常光臨這間工匠鋪，各類武器的需求訂單也增長了不少。<br /><br />少年想着心事，眼神偶然與領頭的那位老主顧相撞。他皮膚黝黑，身姿挺拔，原本犀利的目光在瞥到自己的瞬間柔和了下來。他向着少年微微點頭。<br /><br />「奧列格頭兒，歡迎！今天有什麼需要嗎？」<br />「別着急，師傅。今天我只是想來找你聊聊，」他指向盧卡，「聊聊有關你兒子的事。」",
+   "unlockRequirement": "角色等級<nobr>20</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·二",
+   "text": "周圍火光四起，瀰漫的煙塵擾亂了他的視線，嘶吼和慘叫不斷傳入耳中。機油和血液的氣味混雜着襲來，盧卡強忍住嘔吐的欲望。<br /><br />第一次揮出標準的直拳時，奧列格師父臉上的笑意讓他備受鼓舞。然而，親身體會過前線的殘酷之後，他再也沒能尋回那股溫暖的心流。每次列隊，他都會打暗中觀察戰友們的表情——從一張張臉孔上讀出的不安反而能稍稍平復他的慌張。<br /><br />一陣尖叫將盧卡拉回了現實。他衝向聲音傳來的方向，看到一個無助的孩子被怪物逼到了角落。本能策動他飛身一躍，擋在了利斧與孩子脆弱的身軀之間。<br /><br />身後傳來一聲巨響。盧卡一手抱緊驚慌失措的男孩，緩緩轉過頭來。畸形的怪物癱倒在地，似乎是被戰場上的流彈擊中了要害。<br /><br />「謝…謝謝哥哥……」<br /><br />「怎麼樣？你沒事吧？」<br /><br />「哥哥…你…你的手……」<br /><br />他順着孩子的手指望向自己的右臂——本應連接着上臂的肩袖處只剩下一截隨風飄擺的碎布。碎布之下，血流如注。<br /><br />但在疼痛奪走他的意識之前，那股暖流重新湧進了他的心房。",
+   "unlockRequirement": "角色等級<nobr>40</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·三",
+   "text": "第一次參加擂臺賽，盧卡倒在了決賽場上。<br /><br />「哈哈哈，沒用的廢物！這就是弱肉強食的世界——你這種貨色，不配出現在我眼前！」<br /><br />盧卡沒有在意那份羞辱。決賽的對手是鎮上出名的惡棍，出手陰狠毒辣。如果註定要靠這些陰險的路數才能奪得冠軍——他心想——什麼破金腰帶，不要也罷。<br /><br />第二天晚上，他在俱樂部的轉角看到幾個孩子。其中一個身形瘦小的男孩痛苦地蜷在地上，遍體鱗傷。圍在他身邊的大孩子們趾高氣昂，神情得意。<br /><br />「哈哈哈，沒用的廢物！」領頭的惡霸指着受傷的男孩，「這就是弱肉強食的世界——你不配出現在我眼前！」<br /><br />從那時起，他發誓要成爲下層區的冠軍——用他自己的方式，堂堂正正。",
+   "unlockRequirement": "角色等級<nobr>60</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·四",
+   "text": "「今天就練到這兒吧。來，小子，坐。」<br /><br />「…這就完事了？我還想着今天加練幾組呢！」<br /><br />「你小子，別逞能了。趕緊過來！」<br /><br />「哈哈哈，來了來了！」<br /><br />「小子——我問你個問題，你老實回答。」<br /><br />「哦？這是啥，師徒交心環節？你問唄，師父。」<br /><br />「我問你，打拳這件事——你是打心底喜歡嗎？」<br /><br />「哈哈哈，怎麼突然問這個？當然喜歡了！要不然，我能在你身邊堅持這麼久？」<br /><br />「你小子，別抖機靈！認真回答，聽見沒有？」<br /><br />「這麼嚴肅啊…行吧。非要掏心窩子地說…也算不上那麼喜歡吧。」<br /><br />「…嗯，總算聽到句實話。那我問你…如果有一天，下層區不再需要『地火』的保護了…你還會繼續練拳嗎？」<br /><br />「唔，我想想啊…應該會吧？」<br /><br />「爲什麼？你站上拳臺從來不是爲了贏什麼金腰帶，別以爲我沒看出來。如果下層真的能太平下來…你還有揮拳的理由嗎？」<br /><br />「師父，你以前說過吧？不管什麼年代都有惡人。哪怕裂界的怪物都死絕了，人和人之間也會因爲些雞毛蒜皮的小事爭個你死我活。」<br /><br />「嗯…我好像是說過這話。」<br /><br />「只要這世界上還有惡人，只要還有善良的人需要保護——」盧卡站起身來，「——我就會繼續揮拳！」",
+   "unlockRequirement": "角色等級<nobr>80</nobr>解鎖"
+  }
+ ],
+ "archive": {
+  "cvCn": "蕭翟",
+  "cvJp": "梶原嶽人",
+  "cvKr": "이주승",
+  "cvEn": "Howard Wang",
+  "camp": "貝洛伯格"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "盧卡",
+ "rarity": 4,
+ "descHash": "貝洛伯格下層區的冠軍拳手，「地火」的得力幹將之一。 搏擊俱樂部的蟬聯冠軍，以自身的熱情激勵着下層區有夢想的孩子們。",
+ "artPath": "a2a6e54f7946dbeec94a0dac84412ac6f535a541ada19ee99d244196fcf5e14f",
+ "miniIconPath": "61b8b675bd32da196574175aa1f21165e79196dd77afb6436717fb4089383b2b",
+ "damageType": {
+  "id": 1,
+  "iconPath": "9b77aa4b13a80228e6db8023c086a6dd43ffe89e318aa52e790528beb4e5ea20",
+  "color": "#FFFFFF",
+  "name": "物理",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "96c3b8dd457b98955d440531986a23d509f705c13d7aa794d1e97bcfd03d5701",
+  "altIconPath": "b55d340138ed77756cd939d0d9ee2103a5398f999202c1ed19d092ac87333155",
+  "color": "#FFFFFF",
+  "name": "虛無",
+  "rarity": 0
+ },
+ "pageId": "luka"
+}

@@ -1,0 +1,2802 @@
+{
+ "spRequirement": 130,
+ "iconPath": "b4d627a4e2394752ff7e005684cdc313e161854dedc29e8bfda608936acaa7cf",
+ "bgPath": "27cbf0b1d447f56fb2e67dec45e6eeb0273be6d58a001224fd1f76ea3d676287",
+ "figPath": "f0d10346873e80911f55ed14ed19f8d7ad0b6602aa560eb7e38923ed7a02f30f",
+ "fgPath": "04d6bcc33d0353d0143b61ab552916eecac0a1baee3e1e6c1606449c78562590",
+ "splashIconPath": "72da6f1b2fae6c3fced8b6356875784d9bdfe1e28c20d7ae1026c5ce9d142cf4",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 3,
+  "iconPath": "4ee4d46a01c45f662c4a193c5823f29be35cc4c19ba38ea2fd6f35a00a053d46",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédito",
+   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
+   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
+   "purpose": "Moeda Comum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cálice (Grande Mina)",
+    "Recompensas de Missão",
+    "Recompensas de Atribuição",
+    "Troca de Brasas"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Rastros de Destino",
+   "desc": "Material avançado para subir o nível de Rastros.",
+   "lore": "Sua vitória é garantida por inúmeras falhas, e os pequenos passos que você deu levaram a uma reviravolta do destino.",
+   "purpose": "Materiais de Rastro",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Recompensas de Pontuação do Universo Simulado",
+    "Honra dos Inominados",
+    "Troca de Brasas",
+    "Recompensas de Evento por Tempo Limitado"
+   ]
+  },
+  "151161": {
+   "id": 151161,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "6b4243b69df9f37fab4f6cda60edc49711505bf5c2ce0b517d6272be5df311df",
+   "name": "Bastão de Raio de Transformador",
+   "desc": "Um cajado de madeira com uma ponta afiada. Ele pertenceu a um transformador dos Discípulos do Sanctus Medicus. Pode ser usado para a Ascensão de personagens de Dano de Raio.",
+   "lore": "De acordo com os registros antigos do Xianzhou, aqueles que ascenderam podem evocar o raio e comandar o vento. Os Discípulos do Sanctus Medicus alegaram que herdaram a profecia dos deuses. Ao demonstrar seus poderes divinos, os discípulos reuniram um grande número de adoradores em segredo. Ramificações de raios que englobam esses cajados. Será que os discípulos realmente não são meros mortais?<br /><br />\"O corpo mortal é apenas ilusão. A verdade só é revelada àqueles que escolheram ascender.\"",
+   "purpose": "Materiais de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/151161",
+   "comeFrom": [
+    "Sombra Estagnada (Porto Estelarium)",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "Guia do Viajante",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>20.000</nobr> de EXP de Personagem.",
+   "lore": "Leitura obrigatória para explorar o mundo. Pressione o botão \"Ler\" para reproduzir uma voz atraente num idioma que você entenda falando sobre os encontros lendários de aventureiros renomados em diferentes mundos, bem como a sabedoria e o conhecimento precioso que eles acumularam.<br /><br />\"A novíssima série do Guia do Viajante, 'Manual de Gastronomia Galáctica do Chefe', já está disponível para compra.\"<br />\"Para fazer pedidos, envie um sinal de sinestesia para ERD<nobr>-23</nobr>θ e entre em contato com um representante da Guilda de Intelectuais. Temos várias formas de pagamento.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Salão Esquecido"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "Registro de Aventura",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>5.000</nobr> de EXP de Personagem.",
+   "lore": "Coleção bem-organizada de notas de aventura educacional contendo incontáveis ilustrações e textos com histórias completas, bem como informações valiosas e técnicas de sobrevivência.<br /><br />\"Por que não digitalizamos isso e guardamos em um disco de fotolitografia? Seria muito mais prático.\"<br />\"Tecnologia avançada é muito mais frágil do que você imagina diante de tempestades estelares e erupções de fluxo de neurônios. Além disso, tenho certeza de que o autor deste livro gostaria que as pessoas o lessem da forma mais simples possível.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Treinamento Diário",
+    "Troca de Brasas"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "Encontros de Viagens",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>1.000</nobr> de EXP de Personagem.",
+   "lore": "Diário de viagem com assuntos aleatórios escritos numa letra feia. Não tem muita utilidade.<br /><br />\"Dan Heng, termine logo de ler isso para jogarmos fora.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "71d58f084522c87e93327e3e7fc1db8fb4abb65e9989b163d4a348c9a3761329",
+   "name": "Scionette Imortal",
+   "desc": "Novos e jovens botões brotando de uma construção divina antiga. Material bruto usado para aprimoramentos.",
+   "lore": "A fonte da \"Duração Infinita\" dos macróbios do Xianzhou, resquício da influência do Aeon da Abundância. Inúmeros anos atrás, a cobiça de um soberano pela imortalidade fez com que a frota do Xianzhou zarpasse para o mar do espaço sideral em busca de receitas divinas.<br /><br />\"Nós desejamos viver por eras sem fim e conservar o império por toda a eternidade. Infelizmente, a vida e a capacidade humanas têm limites. Por isso, enviamos nove Navium Astrigers para atravessar os céus em busca de receitas divinas para a imortalidade.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "Abominações da Abundância",
+    "Inimigos do Universo Simulado",
+    "Recompensas de Atribuição",
+    "Troca de Brasas",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "c3cb2e5eb5390586c537d03d1de632b1aa59c49a3cc32f24d68672d2f97fb1e5",
+   "name": "Floresciaéreo Imortal",
+   "desc": "Novas flores crescendo de dentro de uma construção divina antiga. Material normal usado para aprimoramentos.",
+   "lore": "A fonte da \"Duração Infinita\" dos macróbios do Xianzhou, resquício da influência do Aeon da Abundância. Depois de inúmeras provações, a frota que saiu em busca do remédio da imortalidade conseguiu avistar o semblante do ser celestial. A divindade ofereceu suas bênçãos em forma material, e assim nasceram folhas da Árvore Ambrosiana.<br /><br />\"Novos botões descem à lua, e flores divinas brotam nas nuvens. Breve como a vida de uma flor, a velha madeira volta a ser um pomar jovial.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "Abominações da Abundância no Nível de Equilíbrio 2 ou superior",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "635675": {
+   "id": 635675,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "5d1c50902cff0d2be1eb952d08078e3134c231cdf0c9142c1ef475ec07c42b50",
+   "name": "Chave da Inspiração",
+   "desc": "Uma chave mítica que apareceu nas mãos dos Eruditos Meditativos. Usada para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudição</span>.",
+   "lore": "Ela pode destravar as inspirações ocultas nas profundezas do consciente.<br />Segurar esta chave é como segurar as centelhas que levam ao caminho do avanço.<br /><br />\"Eureka!\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/635675",
+   "comeFrom": [
+    "Cálice (Vila dos Rebites)",
+    "Troca de Brasas"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5708b196a8af89740ced588d98dc414c791d209879957fb0bc8644cc2dc84adb",
+   "name": "Luminivinha Imortal",
+   "desc": "Vinhas decíduas de uma construção divina antiga. Material avançado usado para aprimoramentos.",
+   "lore": "A fonte da \"Duração Infinita\" dos macróbios do Xianzhou, resquício da influência do Aeon da Abundância. Após os Três Sofrimentos, Xianzhou encontrava-se devastada. O \"Homo Celestinae\" sucumbiu como demônios, e as catástrofes continuaram incessantemente.<br /><br />\"Segundo decreto da Comissão dos Dez Senhores, todos que estiverem próximos de se tornarem marafílicos serão apreendidos pelos juízes infernais e condenados à Prisão de Grilhões.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "Abominações da Abundância no Nível de Equilíbrio 4 ou superior",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "836261": {
+   "id": 836261,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "name": "Chave da Sabedoria",
+   "desc": "Uma chave mítica que apareceu nas mãos dos maiores gênios do cosmos. Usada para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudição</span>.",
+   "lore": "Ela é como um convite para os salões do Templo de Nous.<br />Encontrar a porta onde a chave pode ser usada é mais difícil do que obtê-la. Aqueles que entraram nessas portas secretas perceberam imediatamente que é impossível voltar a partir do momento em que pisam do outro lado.<br /><br />\"A Erudição não tem todas as respostas do universo, mas ela ensina a fazer a pergunta certa.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/836261",
+   "comeFrom": [
+    "Cálice (Vila dos Rebites)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  },
+  "920202": {
+   "id": 920202,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "489f5c80b6f0de258e076634803c9540b0504c32e55f556748095c334780289d",
+   "name": "Chave do Conhecimento",
+   "desc": "Uma chave mítica que apareceu nas mãos dos sábios do mundo. Usada para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudição</span>.",
+   "lore": "Ela pode desvendar os mistérios que ligam a verdade do mundo e conceder conhecimento além da compreensão humana.<br />Não importa quanto o portador tente exibir sua chave, pois ninguém, além de si mesmo, pode ver sua forma. Alguns acreditam que isso é um presente dos céus, outros pensam que é um sinal de transtorno mental.<br /><br />\"Eu sonhei com moléculas rodando em círculos, como uma cobra atrás de sua própria cauda. Acordei e percebi que isso era a resposta que eu procurava há muito tempo!\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/920202",
+   "comeFrom": [
+    "Cálice (Vila dos Rebites)",
+    "Sintetizador Omni — Síntese de Material",
+    "Troca de Brasas"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "c92e008415ed578b02aeeebec3e4303f0e6c56d05fab48f2cfd79469b64f222b",
+   "name": "Rota Final do Destruidor",
+   "desc": "Material avançado para subir o nível de Rastros.",
+   "lore": "O coração do Leviatã parou de bater, mas sua mente continua viva apesar de estar dentro de uma caixa. Contanto que a tampa esteja fechada, sua mente continuará viva e morta ao mesmo tempo, impulsionando o núcleo da destruição.<br /><br />\"Besta do Fim dos Mundos, uma praga criada na Forja da Guerra usando ossos de milhares de mortos e o que foi deixado por um Leviatã. Ela anseia pela destruição do universo e de si mesma.\"",
+   "purpose": "Materiais de Rastro",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "Eco da Guerra (Zona de Abastecimento)"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 95.04,
+   "attackAdd": 4.752,
+   "hpBase": 158.4,
+   "hpAdd": 7.92,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549504,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 133.056,
+   "attackAdd": 4.752,
+   "hpBase": 221.76,
+   "hpAdd": 7.92,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549504,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 171.072,
+   "attackAdd": 4.752,
+   "hpBase": 285.12,
+   "hpAdd": 7.92,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633445,
+     "count": 6
+    },
+    {
+     "id": 151161,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 209.088,
+   "attackAdd": 4.752,
+   "hpBase": 348.48,
+   "hpAdd": 7.92,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633445,
+     "count": 9
+    },
+    {
+     "id": 151161,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 247.104,
+   "attackAdd": 4.752,
+   "hpBase": 411.84,
+   "hpAdd": 7.92,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717386,
+     "count": 6
+    },
+    {
+     "id": 151161,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 285.12,
+   "attackAdd": 4.752,
+   "hpBase": 475.2,
+   "hpAdd": 7.92,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717386,
+     "count": 9
+    },
+    {
+     "id": 151161,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 323.136,
+   "attackAdd": 4.752,
+   "hpBase": 538.56,
+   "hpAdd": 7.92,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "04475d40bc18954b6975a52aeb9282029bc5c391cb36ff31430d13982d9faebe",
+   "artPath": "51098e816bb35f83c4d0c3f02e36847b308a366746745013c28941304049cc3f",
+   "name": "Corte, Mares Partidos",
+   "descHash": "Quando o Senhor dos Raios ataca, o multiplicador de Dano nos inimigos adjacentes ao inimigo-alvo aumenta em uma quantidade extra igual a <nobr>#1[i]%</nobr> do multiplicador de Dano contra o inimigo-alvo.",
+   "params": [
+    0.25
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "1ada2903de22f2211cd7ccc29b6f1d13cb32c853c2f204b0d98e950f18c05fe7",
+   "artPath": "8d02f2fa030804a7410f8f4c0a5c3a21b3366f270f50df1056a2fd16e902eb9d",
+   "name": "Golpe, Céus Esmagados",
+   "descHash": "Depois que o Senhor dos Raios age, o Dano causado pelo ATQ Básico, a Perícia e a Perícia Suprema de Jing Yuan aumentam em <nobr>#1[i]%</nobr> por <nobr>#2[i]</nobr> rodada(s).",
+   "params": [
+    0.2,
+    2
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "c285ee548496215a285ac813e29e5d66263c9ce37bd30bface67a35dd34607be",
+   "artPath": "008d32c21ea127793484562895a96f6c6316996b554ccfe07cefa105b06d0492",
+   "name": "Ataque, Sóis Subjulgados",
+   "descHash": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "2b10749c72e213cf02be698dbeeffae1e10ea29442682e2ed7630900cb0bba92",
+   "artPath": "a8ecbfee2b5ed1aee477fc5f41a76a7a49ada94e77550f648f00eea927e0ad64",
+   "name": "Giro, Estrelas Cercadas",
+   "descHash": "A cada golpe do Senhor dos Raios quando ele age, Jing Yuan regenera <nobr>#1[i]</nobr> de Energia.",
+   "params": [
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "1b59f0150af03906f13b88e96a1c77db707657af42d5c1b65039e43da4cdee4d",
+   "artPath": "d0a29a14f59556ac7a6ce6d5145e6d46df907776b9af70a6d840828effc03788",
+   "name": "Marcha, Bens Saqueados",
+   "descHash": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "74e9240d790270802b8ce168fcdc3b530c87b633c2c520a85f6dd979454afe8a",
+   "artPath": "dbaf33bf9cbd2477edf3676e9e13e239f4931131296edd74a2d97f5dc7de0aa6",
+   "name": "Varrer, Almas Ceifadas",
+   "descHash": "Cada golpe lançado pelo Senhor dos Raios ao agir tornará o inimigo-alvo Vulnerável.<br />Quando Vulneráveis, inimigos recebem <nobr>#1[i]%</nobr> a mais de Dano até o final da rodada atual do Senhor dos Raios, acumulando em até <nobr>#2[i]</nobr> vez(es).",
+   "params": [
+    0.12,
+    3
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   418990
+  ],
+  [
+   302345
+  ],
+  [
+   218404
+  ],
+  [
+   904103
+  ],
+  [
+   619576
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Alvo Único",
+   "descHash": "Jing Yuan causa Dano de <span style=\"color:#c75de2;\">Raio</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de seu ATQ a um único inimigo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 418990,
+   "name": "Fulgor Radiante",
+   "iconPath": "b6954d6ac16ac304f5fc55cc023277a83508be464cf4ac03ff3ba4829269748d",
+   "typeDescHash": "ATQ Básico",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Área",
+   "descHash": "Causa Dano de <span style=\"color:#c75de2;\">Raio</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Jing Yuan a todos os inimigos e aumenta os Golpes por Ação do Senhor dos <span style=\"color:#c75de2;\">Raio</span>s em <nobr>#2[i]</nobr> na próxima rodada.",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "30",
+   "id": 302345,
+   "name": "Zênite Rompido",
+   "iconPath": "1b59f0150af03906f13b88e96a1c77db707657af42d5c1b65039e43da4cdee4d",
+   "typeDescHash": "Perícia",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.55,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.75,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8125,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.875,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9375,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.1,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.15,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.25,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Área",
+   "descHash": "Causa Dano de <span style=\"color:#c75de2;\">Raio</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Jing Yuan a todos os inimigos e aumenta os Golpes por Ação do Senhor dos <span style=\"color:#c75de2;\">Raio</span>s em <nobr>#2[i]</nobr> na próxima rodada.",
+   "ultimateCost": 130,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 218404,
+   "name": "Portador da Luz",
+   "iconPath": "f589a3e14c6b894a3eda53b8bfd80e2fffabaeae6994e3d4843d1763f4cf0c5a",
+   "typeDescHash": "Perícia Suprema",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.2,
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.28,
+      3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.36,
+      3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.44,
+      3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.52,
+      3
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.6,
+      3
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.7,
+      3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.8,
+      3
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.9,
+      3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      3
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.08,
+      3
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.16,
+      3
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.24,
+      3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.32,
+      3
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.4,
+      3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Rebote",
+   "descHash": "Invoca o Senhor dos <span style=\"color:#c75de2;\">Raio</span>s no início da batalha. O Senhor dos <span style=\"color:#c75de2;\">Raio</span>s tem <nobr>#1[i]</nobr> de VEL base e <nobr>#4[i]</nobr> Golpes por Ação base. Quando o Senhor dos <span style=\"color:#c75de2;\">Raio</span>s age, seus golpes são considerados <u>Ataques Extras</u>, com cada golpe do Senhor dos <span style=\"color:#c75de2;\">Raio</span>s causando Dano de <span style=\"color:#c75de2;\">Raio</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> do ATQ de Jing Yuan em um único inimigo aleatório, e inimigos adjacentes a ele também recebem Dano de <span style=\"color:#c75de2;\">Raio</span> igual a <nobr>#5[i]%</nobr> do Dano causado no inimigo-alvo.<br />Os Golpes por Ação do Senhor dos <span style=\"color:#c75de2;\">Raio</span>s podem atingir o máximo de <nobr>#6[i]</nobr>. Toda vez que os Golpes por Ação do Senhor dos <span style=\"color:#c75de2;\">Raio</span>s aumentam em 1, sua VEL aumenta em <nobr>#3[i]</nobr>. Ao fim da ação do Senhor dos <span style=\"color:#c75de2;\">Raio</span>s, a sua VEL e Golpes por Ação voltam aos valores base. <br />Quando Jing Yuan é <u>derrubado</u>, o Senhor dos <span style=\"color:#c75de2;\">Raio</span>s desaparecerá.<br />Quando Jing Yuan é afetado por penalidades de <u>Controle Negativo</u>, o Senhor dos <span style=\"color:#c75de2;\">Raio</span>s será incapaz de agir.",
+   "ultimateCost": 0,
+   "break": "15/hit",
+   "energy": "0/hit",
+   "id": 904103,
+   "name": "Prana Extirpado",
+   "iconPath": "de9b7e9c4bdb6d5fb13a0aafd24f4d74e2a7fef68ae8dbf59cd9a4ab5645dd8c",
+   "typeDescHash": "Talento",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      60,
+      0.33,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      60,
+      0.363,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.396,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.429,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.462,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.495,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.53625,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.5775,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.61875,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.66,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.693,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      60,
+      0.726,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      60,
+      0.759,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      60,
+      0.792,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      60,
+      0.825,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do inimigo-alvo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 703517,
+   "name": "Ataque",
+   "iconPath": "b6954d6ac16ac304f5fc55cc023277a83508be464cf4ac03ff3ba4829269748d",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Aprimoramento",
+   "descHash": "Depois a Técnica ser utilizada, os Golpes por Ataque do Senhor dos <span style=\"color:#c75de2;\">Raio</span>s na primeira rodada aumenta em <nobr>#1[i]</nobr> no início da próxima batalha.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 619576,
+   "name": "Invocação de Espírito",
+   "iconPath": "e56a46919cbd28cb5ddffb61cc13197430180cec1b0c5bf4ead105b87770cb6b",
+   "typeDescHash": "Técnica",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1204201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 56294,
+    "name": "Bônus de ATQ",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1204210,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 939648,
+    "name": "Bônus de ATQ",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 160000
+     },
+     {
+      "id": 836261,
+      "count": 8
+     },
+     {
+      "id": 717386,
+      "count": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": 1204101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1204202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1204203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 56292,
+        "name": "Bônus de ATQ",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920202,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      },
+      {
+       "id": 1204204,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 56289,
+        "name": "Bônus de DEF",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+        "statusList": [
+         {
+          "key": "DEF",
+          "value": 0.05
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920202,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 56291,
+      "name": "Bônus de Chance de CRIT",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+      "statusList": [
+       {
+        "key": "Chance de CRIT",
+        "value": 0.026999999
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635675,
+        "count": 3
+       },
+       {
+        "id": 549504,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Se os Golpes por Ação do Senhor dos <span style=\"color:#c75de2;\">Raio</span>s forem maiores ou iguais a <nobr>#1[i]</nobr> na próxima rodada, o Dano CRIT dele aumenta em <nobr>#2[i]%</nobr> pela próxima rodada.",
+    "ultimateCost": 0,
+    "id": 56195,
+    "name": "Esmagamento de Batalha",
+    "iconPath": "7518a35e95f3a9b244e048e744b7d6d10f87192160f12ad7bbbd8aeb3d9cc862",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       6,
+       0.25
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635675,
+        "count": 3
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1204102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1204205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1204206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 56287,
+        "name": "Bônus de Chance de CRIT",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "Chance de CRIT",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836261,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      },
+      {
+       "id": 1204207,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 56288,
+        "name": "Bônus de ATQ",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836261,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 56290,
+      "name": "Bônus de ATQ",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920202,
+        "count": 5
+       },
+       {
+        "id": 633445,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "No início da batalha, regenera <nobr>#1[i]</nobr> de Energia imediatamente.",
+    "ultimateCost": 0,
+    "id": 56198,
+    "name": "Providência da Sabedoria",
+    "iconPath": "d4ecbe2512f31bdcd45f4610a1839aca0f2fcc4e00d4d91fd17cb55781aa9940",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       15
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920202,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1204103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1204208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 56301,
+      "name": "Bônus de DEF",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+      "statusList": [
+       {
+        "key": "DEF",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1204209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 56302,
+      "name": "Bônus de Chance de CRIT",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+      "statusList": [
+       {
+        "key": "Chance de CRIT",
+        "value": 0.053
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Após a Perícia ser utilizada, a Chance de CRIT aumenta em <nobr>#1[i]%</nobr> por <nobr>#2[i]</nobr> rodada(s).",
+    "ultimateCost": 0,
+    "id": 56197,
+    "name": "Marechal da Guerra",
+    "iconPath": "54b5df05ec88bfa8fdade822ba3875555c872f78a5e73973971b2c36ca795ada",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.1,
+       2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corpo",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "Chance de CRIT",
+    "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8"
+   },
+   {
+    "relicTypeHash": "Pés",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "VEL",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Esfera Plana",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "Bônus de Dano de Raio",
+    "propertyIconPath": "dbf8a033f78ebfe4765472b27aa0e7d3838d36f8f15868c49a3433ccca9ef1aa"
+   },
+   {
+    "relicTypeHash": "Corda de Ligação",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "ATQ",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Primeiro Encontro",
+   "text": "Me chamo Jing Yuan e sou o general dos Cavaleiros das Nuvens do Luofu. Não precisa de formalidade. \"General\" é um título passageiro, e você pode me chamar apenas de Jing Yuan.",
+   "unlockRequirement": "",
+   "cnUrl": "80d0a57a5541f52c6136a7ce385ab5e994e5c7200f34b9c5810859bde312d4d2",
+   "jpUrl": "d47eab6829d2a8f087407bc0a81f2d4b212814d5a728011d83459d0472536c04",
+   "enUrl": "d6a0312d94219eb39d66482df0134b46a8c9d5517eaef37a592483ac8677c490",
+   "krUrl": "1c7bbada75bf893af9d06adaaed0e1d8295eea999d2e0d9273e87a6215e95746"
+  },
+  {
+   "id": 2,
+   "title": "Cumprimento",
+   "text": "Ah, você está aqui. Se tiver alguma história interessante das suas viagens, compartilhe comigo.",
+   "unlockRequirement": "",
+   "cnUrl": "2452db280f98bcabb400cba770790dd9f04f55811054f9b5edcb926055ad5935",
+   "jpUrl": "a3fe4b904443f02abedae504ee947980e43d28dce8c44310bdef2743f3576cf2",
+   "enUrl": "2d9d7b1fb4347849c959483a77e9d914fe9645a926f8fe9143cb4746cc898011",
+   "krUrl": "75748fc90f638dcac46c608f39a6bc35cd2c335655155a8d8727203534a3affd"
+  },
+  {
+   "id": 3,
+   "title": "Despedida",
+   "text": "Hmm, tenha um bom descanso... Sinto muito. Ainda há muito trabalho a ser feito e eu não posso te levar até a porta.",
+   "unlockRequirement": "",
+   "cnUrl": "5c104dc3d7ec3331451e1e0ba1c899999401731de8c92fab5c4b4591be74888a",
+   "jpUrl": "b952ca9d2e0daea05f2fb4adb331f1107b4580fb0060db4d741cf89e9deb0460",
+   "enUrl": "c3989de287f1917e4bb92c1ce5b18d4acdb5ecc4abe3a0b5023ecc992828d96a",
+   "krUrl": "c5c856f9f218806126c2ace59483e7627bf05696610876ee6ff3d28abd9aa433"
+  },
+  {
+   "id": 4,
+   "title": "Sobre Si",
+   "text": "Meus antigos inimigos já morreram ou foram presos, e meus antigos amigos estão há muito tempo espalhados por aí. Agora que parei para pensar, eu realmente estou velho...",
+   "unlockRequirement": "",
+   "cnUrl": "300c01ac711da4db6a21263f4ee3042a68ad3b7541702025267ce1fa82836566",
+   "jpUrl": "b2566e824ee7ea6cdf3ae2fe3e825d3051c4304eafb34a875a0e536fbadd611a",
+   "enUrl": "d12bd1d15144e93457ddb5e428336ed90f919fb460bbad3614da0a5fa88a0158",
+   "krUrl": "9e251b9d0bd099f27f548febbe2c9c713a1fe8244e288b6d3730f47ab0ce4565"
+  },
+  {
+   "id": 5,
+   "title": "Bate-papo: Xadrez",
+   "text": "Um mestre no xadrez não faz uso de movimentos chamativos. O público vive querendo que uma jogada genial mude tudo, mas nunca se preocupa quando toda a situação está levando a uma derrota.",
+   "unlockRequirement": "",
+   "cnUrl": "1cc8c4fb237f07882e3c0ff6edc0695a0f5b1ce5151aec5036ee943a663669e9",
+   "jpUrl": "db544670756f74b97243d565da49a3a146eb747644d1d0f8d7a57a2eb97fb029",
+   "enUrl": "c9a07b05e242e31c317df4bf213b8055da690c01ed38f256f3bf5073fea4a1c3",
+   "krUrl": "55de126e46b4fa6262ad73c801b6cc200c07d785960fb633b7af4f88553ff5e0"
+  },
+  {
+   "id": 6,
+   "title": "Bate-papo: O Luofu",
+   "text": "Vejo que forasteiros gostam de chamar o Luofu do Xianzhou apenas do Xianzhou, mas... o Luofu não é Xianzhou. O Luofu é apenas ele mesmo, nada mais.",
+   "unlockRequirement": "",
+   "cnUrl": "3865316d2d22d07131e759d2c0bc2712062540ee9af6da3e9486eda6a63fadc7",
+   "jpUrl": "c9fe48fb247124197bbbc6b92b2ccde52eb844ef94a5b693e0cc731e22f2f9b6",
+   "enUrl": "eab1197b7707f5c491191ac30487abfca6f5bf1a5397cb3087376401be161259",
+   "krUrl": "ea90c2986d8f131c715111e3ba96518fe935d6f2aabb9da3d31a777ca4e7da9b"
+  },
+  {
+   "id": 7,
+   "title": "Hobbies",
+   "text": "Meditar com os olhos fechados tem se tornado mais difícil com o passar do tempo.",
+   "unlockRequirement": "",
+   "cnUrl": "6ec0e830f620e160b70bd9e9bd28c4ab2c8cbb4d034640cd5447c96d97aea1b6",
+   "jpUrl": "ca7b1669c12762f704e1bdbb75a5ca34da4dc712a93a983f52f426827ef65ce6",
+   "enUrl": "d62243f05d9575fa79b30f90ec523b5dced65f0fa04d3243cd8b041efac43668",
+   "krUrl": "f4ce9549daf0f19f65ed3ffbdfdddc172e573865c20cb3aa7d21b11a974c0b24"
+  },
+  {
+   "id": 8,
+   "title": "Irritações",
+   "text": "Por toda a minha vida, tive medo dos problemas. Existem problemas mais e menos sérios, distantes ou próximos. É preciso planejar, se preparar, entre outras coisas que requerem esforço...",
+   "unlockRequirement": "",
+   "cnUrl": "7d324a7219ad836c38a8ed78a102fd281dc2ab88b99a248ba78856ac6775bab1",
+   "jpUrl": "0a1f866568dcdf7543c255eea76b94c4b074a2fd92a5ba071c2672daa87259e2",
+   "enUrl": "2f05fd623660d1602a83e129e4877f6550dd8fb8dfe11d946d3b8a7173523f82",
+   "krUrl": "2014d5825713a158fb5dbecd005ec3cecde8cd912bfb637b399811dd1724a909"
+  },
+  {
+   "id": 9,
+   "title": "Uma Curiosidade",
+   "text": "O espírito se chama Senhor do Trovão Empunhador de Raios e Esmagador de Espíritos. É um nome que li em um texto antigo, mas é muito longo para lembrar. Por isso eu o abrevio como Senhor... do Trovão.",
+   "unlockRequirement": "",
+   "cnUrl": "c537fd08e758ef5957ec946e344f2fd1f1a5adfc696f6ec58c4fd6d9e003f1ef",
+   "jpUrl": "2da39e09e7a584061b8163d162546291cabd34d1f4e111ce0deda1599aa97c84",
+   "enUrl": "a9735b666ea282e65100e8931c39307f87cc2d45a7d9f530d5a1717616618e43",
+   "krUrl": "5891c71d3edb9ebee07b94ef993abf930ac0fac845497da0e491f1682db28f46"
+  },
+  {
+   "id": 10,
+   "title": "Conhecimento",
+   "text": "Eu vivi preso a tarefas do dia-a-dia por anos. Eu não vejo diversão em nada ao meu redor e estou me tornando uma pessoa chata. Se eu precisar falar de algo interessante, vou contar sobre meus encontros com viajantes espaciais como você.",
+   "unlockRequirement": "",
+   "cnUrl": "872ada57c0b00f76f73bb3a7383c156207eab6a5e2bdf94461653ab6e80bc8ec",
+   "jpUrl": "0e55c1215e220ad458ae7c86e87fb10f5e6fd7f2a8a28faf97a132e4dfa9e176",
+   "enUrl": "9bc426f72860e5637f62ae1dfc4d29968daef068b0d88efa2e40992a31c2513b",
+   "krUrl": "70e8c394ebd21265b8558895ac63b323ae131cc0793cc193f9e40f697d203337"
+  },
+  {
+   "id": 11,
+   "title": "Sobre o Yanqing",
+   "text": "Se você o tratar como criança, ele vai tentar agir como adulto. Se o tratar como adulto, ele vai mostrar o temperamento de uma criança.",
+   "unlockRequirement": "",
+   "cnUrl": "c3326ddac6da7e1d905996c05bd95a5d146948d59768963f2911acb42a0daa5b",
+   "jpUrl": "1d1e7ed1216eccda57b24d5c9f7f978f6a51a4eeed7e5f538a21cbb5c61dc6ef",
+   "enUrl": "a5525651791027d928d37473e9cbde516dc58188b1bb4a9f9b4b3df657152662",
+   "krUrl": "af6421bdc3f4ae4c5872a34dd17cceb2b102188d811e49a218370b7f010e85b3"
+  },
+  {
+   "id": 12,
+   "title": "Sobre a Fu Xuan",
+   "text": "Eu sei o que passa na cabeça da Fu Xuan, por isso devo fazê-la esperar. Se ela for paciente o bastante, então chegará a hora certa.",
+   "unlockRequirement": "",
+   "cnUrl": "e43e67c82a391b2b22ada506afefa29de704842df2f83714e885453699b6abb3",
+   "jpUrl": "9bc686af3b9bbd6b1bf22d0fdff4a55c9de9cf356e2ceb21cebf8f749bfbc5e4",
+   "enUrl": "4aebcb66e940f4d79e68019996da501385c388fbe3994ed4813c412abb143bd2",
+   "krUrl": "321f4194f32cdc19e521ffb6ee4d08e658eaf9bd7fe32700d2fed4239d17b4db"
+  },
+  {
+   "id": 13,
+   "title": "Sobre a Yukong",
+   "text": "Todos acreditam que a mestra timoneira Yukong se aposentou... Mas não sabem que ela escolheu um caminho ainda mais difícil depois que deixou os amados céus para trás.",
+   "unlockRequirement": "",
+   "cnUrl": "2ae80aae77930e53aa32ffcdafc35c1ffaa9ca85bd99cccab886db5aeb60fecc",
+   "jpUrl": "27155476f35911f500af0550142fed4174d6d485dceba11016b6e8b994d96fb6",
+   "enUrl": "24168c5cf5ddbe076c2e3a1876f878491c5303202bc41d16cc6df6e6d6899485",
+   "krUrl": "b469a0891190fcbf2b749e31292928c4b56bb983a0782ad1e20b1394cf886783"
+  },
+  {
+   "id": 14,
+   "title": "Sobre a Tingyun",
+   "text": "O comércio do Xianzhou é tão movimentando graças à forma que amoraxadoras como a Tingyun se entrosam com forasteiros.",
+   "unlockRequirement": "",
+   "cnUrl": "9ac4ef22d307ce33419e2a5be24a7b0322212253c17ad64074e233741c59b39b",
+   "jpUrl": "8fbe00b17a9e332e6c15240e98f45bf77f896913bcbd9a9fa897bffacd721fb5",
+   "enUrl": "cd1672dd0ebdd704eaadd6ca38d7b16bfc7367141fe2fb6302663648444d4513",
+   "krUrl": "42a23a9dd556d5f1528fad52ab4c384d4e052e50446bf4e17eca9f65a8ae4a1c"
+  },
+  {
+   "id": 15,
+   "title": "Sobre o Luocha",
+   "text": "Eu já vi muitos comerciantes na minha vida, mas você não acha que os que fazem as coisas sem pressa, que nem ele, são muito raros?",
+   "unlockRequirement": "",
+   "cnUrl": "c311f1c4ec7b4779228e4dd24643521aa85f5ca100ca28d7783e0fed2adf4c3f",
+   "jpUrl": "1dd5c54139d3d1f818575045d479c77fae1e42c19004f9b701460d114150b35d",
+   "enUrl": "c38d788ad5fe328aa34d73e8a6f769ae5d6e538fd7fd3f78a588c9ad93955ca0",
+   "krUrl": "d380fee36725ae9f798437ff8e348afb6391b382cb0ee4d518820bb93008994e"
+  },
+  {
+   "id": 16,
+   "title": "Sobre a Sushang",
+   "text": "Aquela nova recruta despreocupada dos Cavaleiros das Nuvens, huh... Eu já fui como ela no passado, mas já faz muito tempo.",
+   "unlockRequirement": "",
+   "cnUrl": "5fd08c58370919154f00545bb114c45eb6bda9e6389148f6e3c58594e2b3083f",
+   "jpUrl": "2b43008b11cfa5255b6e314f67654a15a03c4428cc14938c86ed365b7990b9ca",
+   "enUrl": "ef214f59320e82262d061e8968557e1f91462db2eff7e84e284c8cb25c47d156",
+   "krUrl": "2b429a409cdb8e286e0000190c776179d8ca223489b435973bb493b0b933cf6a"
+  },
+  {
+   "id": 17,
+   "title": "Sobre a Bailu",
+   "text": "É difícil ser a Grande Mestra dos Vidyadharas... Espero que ela fique bem na vida atual.",
+   "unlockRequirement": "",
+   "cnUrl": "e5a4a0411b78025c8ae519b3313cedba69165735ba09bc89512d55dc1e926b66",
+   "jpUrl": "95f1383a63e25ffba40375671e77b8e972e6ad64ddbee4d54f70142c44e68a22",
+   "enUrl": "562c71b4b42d597987f08c358451a29f9bbd4469fae2d029b8b8ccd2bd4a10ea",
+   "krUrl": "673855766357fd0ecb3dcc5939d7b62b9f01db588966b764361e48b67df8d38d"
+  },
+  {
+   "id": 18,
+   "title": "Sobre a Jingliu",
+   "text": "Ela me ensinou tudo sobre lâminas, mas nunca nos tornamos próximos... *suspiro* Em uma noite sem fim, não há nada mais próximo que a lua brilhante, que nunca desce do céu.",
+   "unlockRequirement": "",
+   "cnUrl": "b076be3fb86e19a1c6cafef2f7c0bdd09119ac5ee9068f29c2441fd405893552",
+   "jpUrl": "0296cf16daf09fc870b007e35ce9575ea0838f86810a4467b42645d52ac41be6",
+   "enUrl": "0bce97771eba2a84e0b8386ef6ac6a7d5fb79ed7a84776334733b833d1168937",
+   "krUrl": "e6895184e4873a6e2646b3c0d9748cd892b537f6dd5c042675a2f53a217e89f5"
+  },
+  {
+   "id": 19,
+   "title": "Sobre o Blade",
+   "text": "Meu trabalho seria facilitado se ele se esquecesse de tudo.",
+   "unlockRequirement": "",
+   "cnUrl": "b1c9132a928cf06cd45f31bea8e8516066c88027983fb990d195d050efd729f6",
+   "jpUrl": "7ace274a8b6774b9343a90d82b99844135e2f15c2a650a1b29ce133f8cc3a960",
+   "enUrl": "088c084664d8aafca6ebc253d06a31206dd360f343ba660d1ae0409b23ce7fc2",
+   "krUrl": "a825168872acba4cdf8f548143fa6de5f622e6ddbf7dae70961fe2a796d77e8a"
+  },
+  {
+   "id": 20,
+   "title": "Sobre o Dan Heng",
+   "text": "Estou ciente que aquele que eu queria encontrar... agora não passa de uma memória. Mas isso provavelmente é o melhor para ele.",
+   "unlockRequirement": "Desbloqueia após concluir a Missão de Desbravamento \"Um Dragão Galante, Seu Oceano Distante\"",
+   "cnUrl": "3e36786e0c47f193ad932f7ccd67d98f5829ecc11f06850cba704c636ae32c25",
+   "jpUrl": "2c6a384ca2779a017b3fff2605adbf99c611bf4a386dce0a22dc1324f28da77e",
+   "enUrl": "db061174847b18f4c40e0ff269d1cb62545d7a818953fcf2498c9737387a984c",
+   "krUrl": "e4f96e0ac9bfc10c81f2d91e1ea543ea7ef7d0909aaf27edeb8cd927fb4df89d"
+  },
+  {
+   "id": 21,
+   "title": "Sobre a Tripulação",
+   "text": "O escalão cromático da Procissão das Nuvens partiu mais uma vez, e a conexão renovada de todos os mundos é iminente. Isso é ótimo para a Aliança... mas agora que a ferrovia estelar está livre, como agirão os inimigos e demônios antes presos naqueles confins remotos? ...Seja como for, é um problema para outro dia.",
+   "unlockRequirement": "Desbloqueia após concluir a Missão de Desbravamento \"Uma Oferta Fúnebre e Um Longo Caminho pela Frente\"",
+   "cnUrl": "45fe92e5fabcf81bf38fdefe5b84077ab46864e574b0f27667b5dfeb8e6e1d0c",
+   "jpUrl": "2ef11a3c9d7b496f685737a4e527f81ce5251763da40d028e1b18fe6a05721ae",
+   "enUrl": "027ec4bf99363ea4b8660d333276491e859a3ff050794d7abc6696de43f40c41",
+   "krUrl": "58b7606c3c4a6dd8f00ae970cec3de697d04736cff0e43ce1c87018daf24f57a"
+  },
+  {
+   "id": 22,
+   "title": "Sobre a Comissão dos Dez Senhores",
+   "text": "Uma espada sem a bainha nada mais é do que uma arma letal. A Comissão dos Dez Senhores é a bainha que reina em nossas longas vidas, o jugo que se liga a nós e a lei pela qual nossos méritos e pecados são julgados.",
+   "unlockRequirement": "Desbloqueia após concluir a Missão de Desbravamento \"Uma Oferta Fúnebre e Um Longo Caminho pela Frente\"",
+   "cnUrl": "291405f796358b13e4bfae2de4381738f2c065f22fc729da1be957a7c759b937",
+   "jpUrl": "9929472359289234c2bb7c08fc2e15d55b8b5ea2b619f609bb851237c5126e13",
+   "enUrl": "c4800afd8fdb114b243ec3c341696d87f7f9adffa81f6b97d8c5eb6ecb7477d4",
+   "krUrl": "b93c1a1813a4137e536d462b31dd61d95730fdff8d7e2b4b784458e9489e3d0b"
+  },
+  {
+   "id": 23,
+   "title": "Ativação de Eidolon",
+   "text": "Esses dias foram deixados para trás com a passagem do tempo.",
+   "unlockRequirement": "",
+   "cnUrl": "77607fcd74b2911bdf06f9a99c78a50bdccf0f6dd685042afcf2421e1be18b00",
+   "jpUrl": "5003fb86a07ea2d432a842f12358a1ee3de2e0d3192777fda28f69ee37a4dd05",
+   "enUrl": "dcb7b81d7b1ddb4537cda3cae008789868018fc0542866974675ca39c2cf24c8",
+   "krUrl": "829da4ee83e1292ebf30fecede39f94e8c0de0b5e076034b02e0ea670f62e1bb"
+  },
+  {
+   "id": 24,
+   "title": "Ascensão de Personagem",
+   "text": "Eu sempre mantenho minha mente afiada, pois as vidas dos Cavaleiros das Nuvens dependem das minhas decisões.",
+   "unlockRequirement": "",
+   "cnUrl": "0f395dab42e35ce7255c1ab4e013d14ec2a55fbf4d40d611dd4426f8dd876558",
+   "jpUrl": "7ced69bf884013bef7e50197f7439f21244c602fc77307b26e97675e473f4045",
+   "enUrl": "b8b6c565562a2bc27b0811f2c5a997e86c6102430f8858f29e4778a7623b5183",
+   "krUrl": "10f53f34c2ca69681683f873b50190c6ac877b8686574179e99a24cfc74f931b"
+  },
+  {
+   "id": 25,
+   "title": "Nível Máximo Alcançado",
+   "text": "Quando quiser ir rápido, vá sozinha/sozinho. Quando quiser ir longe, vá acompanhada/acompanhado.",
+   "unlockRequirement": "",
+   "cnUrl": "f2a217cf768ed9e52db4ad851d7316f412dac055d136a7f35daeeddb48ed82a2",
+   "jpUrl": "fbc32bee8dcb7d5ce3343f2860f63200281f7cabec97c0f64d9e4211658df3ae",
+   "enUrl": "3d6c10f843d2cd7ae98f7f1753669d4234d6d46ac857b85f2c2704225b251d45",
+   "krUrl": "1357c18f5291eac0e9d6089a6a3eb8d4d6f715482335a70fa53557280aa7d368"
+  },
+  {
+   "id": 26,
+   "title": "Ativação de Rastro",
+   "text": "O céu é um tabuleiro de xadrez, e os movimentos que fazemos entre as estrelas forjam um destino cósmico.",
+   "unlockRequirement": "",
+   "cnUrl": "a7a851b31f9ba46a7afd53a8fb1242338cf553a5316345e23ffa257f5bc2a446",
+   "jpUrl": "28ad6bba1f12306604f8c4b92a7ab0ec19de5f05d72fa551e8202c1251877bb9",
+   "enUrl": "428dbdfcf8db3bb6551916a5a77865ae59708fcad3b278c0a19872e604e10e31",
+   "krUrl": "8368cd06ab7b9e994f123ba5d51903b2ad8da07b96df0f890f8a62406809a246"
+  },
+  {
+   "id": 27,
+   "title": "Entrou na Equipe com Yanqing",
+   "text": "Lembre-se, Yanqing: pense antes de agir.",
+   "unlockRequirement": "",
+   "cnUrl": "52d75a0deae41ac80f8d14e35a3540bf927396b9e5637f51bc6ada35df502409",
+   "jpUrl": "13408fb1cd0d4bfcc24d39cdd414dc3d78f61bec6bc86113594b36c77202b28c",
+   "enUrl": "8008bdd05543488cc0b858c1b60c12475cd4f6f08304d895b80e6410a8789440",
+   "krUrl": "85092b387fa8f815d271f8a934e6f8b07529ad35a8d56154a76c3679cee4dae4"
+  },
+  {
+   "id": 28,
+   "title": "Entrou na Equipe com Fu Xuan",
+   "text": "Forneça uma análise da situação, mestra profetisa.",
+   "unlockRequirement": "",
+   "cnUrl": "327058301c5bc4b9a72181bbe0a6683cdce5e7ccd639df96cd19fb7580f99fec",
+   "jpUrl": "b2473151940e1ef8fc3bc182ab2a2238a9c3482cebc71fe84ec83ed758b49b0e",
+   "enUrl": "ffe376bd9aa100ea165476978fa8b1754e87dfe31e376e19d2a233829df22638",
+   "krUrl": "193f18dbf072f2e84f73dfea3dd3f58c22abb15fffc236133ec1c9d29cdda2ab"
+  },
+  {
+   "id": 29,
+   "title": "Entrou na Equipe com Jingliu",
+   "text": "Há quanto tempo... Mestra.",
+   "unlockRequirement": "",
+   "cnUrl": "01fcc59457ae06a6d43222be62f0c56c3eb74fd46773bfcb7ec8dc34afbb8329",
+   "jpUrl": "57fd42d4a13bdaa7a798d51e2219f05a1a7ba6fcfa639c2c156cc3172f138a0c",
+   "enUrl": "3e5916e8551093a29177dbb6800f6719655abec2a7766bc8edfdd20b8dbe1e83",
+   "krUrl": "bfca5bc7c601a75aca79dbcd2ecd583deca35af7018b9e71f5c48d5377d21319"
+  },
+  {
+   "id": 30,
+   "title": "Entrou na Equipe com Dan Heng - Embebidor Lunae",
+   "text": "O que passou, passou... mas, às vezes, eu queria que as coisas tivessem sido diferentes.",
+   "unlockRequirement": "",
+   "cnUrl": "75b6cd89395992509a0cbd2ca68be9bb53c62894a6dc8e99bb2a7403f7c17ea9",
+   "jpUrl": "92aef2713f19f18f53c163cabd9e6b96b51bef99011771dda017a9f53e4b12c3",
+   "enUrl": "a4e8845df3f0d5334518e242f03820636138144e4fd7986578fc017bf3e9b26e",
+   "krUrl": "8d580a8068a6082ac9cfba292f27dc257f1693da392a4a85a2f9a063bf2c43f2"
+  },
+  {
+   "id": 31,
+   "title": "Entrou na Equipe com Blade",
+   "text": "Não é sábio descansar o martelo e sacar a espada.",
+   "unlockRequirement": "",
+   "cnUrl": "71d3bcaf62f4a6628afa6a0b69cc5ad741ad1268c3ed8df93232d02a9e116495",
+   "jpUrl": "f8b5ce562a7e979d358b241e9808b5171847ce76317a75204eb79cee0e10eb7e",
+   "enUrl": "66a17e2174f4dbac46e0b62e629960db6b795d5765184982ce88bd94f8583cb3",
+   "krUrl": "5fb4de40e8b62516cab6a5e99fe640553a1e2e195feb8946eaa28401001311a9"
+  },
+  {
+   "id": 51,
+   "title": "Início da Batalha: Quebra de Fraqueza",
+   "text": "Uma conclusão precipitada.",
+   "unlockRequirement": "",
+   "cnUrl": "29fe58ea2e115008c5cd3eaa1d728262c026df583996fd0f8aba6a9af34646f6",
+   "jpUrl": "574efda4ecbd07bf10c7254240b1593d7b9647cfb8530712a9875d59b0740c46",
+   "enUrl": "b1b1e5ec77150fd661f67072718cd7805788c3a91e13086e215dad9e6b954ff6",
+   "krUrl": "f91a1f9d2009094fc517edcf51b870301736a596a2274a6d6bb03ef13141cc1e"
+  },
+  {
+   "id": 52,
+   "title": "Início da Batalha: Alerta de Perigo",
+   "text": "Um bom oponente.",
+   "unlockRequirement": "",
+   "cnUrl": "997066220069156d9bdefbdba5d35c627719a7348b05fbc387c755d7bfcffcc3",
+   "jpUrl": "ef570d2cec1a7069d1932e4b1cf712df2cc835cf4bf4ca1a95a37e0e4a57f956",
+   "enUrl": "58d779346cf187a45f6823e9148764f9f43748123b160b86d7747170ae7f3275",
+   "krUrl": "828476e0da62fd72700d6dbfd66050616d17d5a438579e571ebbd0a75e835ac2"
+  },
+  {
+   "id": 53,
+   "title": "Começo de Rodada - 1",
+   "text": "Siga o meu comando.",
+   "unlockRequirement": "",
+   "cnUrl": "22514a1916d7976d809f40d4221595081ef791f90753c11359955467a103410a",
+   "jpUrl": "5dc9f592d281dd00847e33d5e453edc42444aea57760cc5877713717e668c050",
+   "enUrl": "cc64c567b4d891225364cb077a9b18d82f300414493ee4ad1ee2843a79916ef0",
+   "krUrl": "43facbc325aa364e45e19de2724d6ddea60efb1140cce0c6094638f80f6b0829"
+  },
+  {
+   "id": 54,
+   "title": "Começo de Rodada - 2",
+   "text": "Não há tempo a perder.",
+   "unlockRequirement": "",
+   "cnUrl": "7f01b59c26fd96f7d3ffe681118ac8df878b1d2dc7e15f1df1ab6d79e0364e84",
+   "jpUrl": "b2a40f1f3227e493b9fcf03affc13136d9762f2ca0bc87fe94203eb3cbda3a2c",
+   "enUrl": "7493d6fe900bf9395844f3a63d526eb576bd0e407c5e56507026414321b19868",
+   "krUrl": "485c9afb1cca6731cc74f0df237e208790373921fa08a033d994dc0c87388f42"
+  },
+  {
+   "id": 55,
+   "title": "Rodada Ociosa",
+   "text": "Tome o tempo que for necessário, mas não o desperdice.",
+   "unlockRequirement": "",
+   "cnUrl": "aaa6775966a89dec8bff6c17b67ffd811f1e76469967196a772e76810489982b",
+   "jpUrl": "949f6ac53d9bed0f9f069f591cfed4842482f72286a6d084dba665abaac677b2",
+   "enUrl": "f8e5980f0f6ef17732d7b18803684ba9b61d5676b08d3655e7be5605b9358df9",
+   "krUrl": "d97a5168d471706b0dbed2eaf4e4e8912b1ac28e07b35482ca0348eea7632404"
+  },
+  {
+   "id": 56,
+   "title": "Perícia 1",
+   "text": "O conflito é impiedoso!",
+   "unlockRequirement": "",
+   "cnUrl": "6a91cbf54ffa5d17db547991ff48fa068d59e5e5f68536e0b3194223db27039f",
+   "jpUrl": "e6fb50f5405737d1f519ca8e493f2faa276e91067eff7a70587af40e5fa0c396",
+   "enUrl": "cee49447a34025a8be5814b0f3b79ffb9aa6c276792257e59cb66f954df383b1",
+   "krUrl": "f93285182250ed3cfaa6ec3a42a0c60f0f9238358c2ee278f386b2953a8f4a17"
+  },
+  {
+   "id": 57,
+   "title": "Perícia 2",
+   "text": "Ouça esse trovão!",
+   "unlockRequirement": "",
+   "cnUrl": "d65a7cf543457e54b4ac91a5071cc8308d5bcb30e25c9a0460a2d36bf5744ba9",
+   "jpUrl": "c6aa8110429bd32e38bec6b4891944bd8812d91d92cfc4185f4bccdd21837963",
+   "enUrl": "9a18f36bef874682dfbe7a8d93480bf33754caed92d7e2f47b81736b0e150836",
+   "krUrl": "a64eecfdc876b0b04b04af77666e957f1b0e9c87c10b10300f2f7274799da7de"
+  },
+  {
+   "id": 58,
+   "title": "Ao Receber um Ataque Leve",
+   "text": "Isso é tudo?",
+   "unlockRequirement": "",
+   "cnUrl": "a5f21ba8d38c343872b62df5cb32c4180205c8ae2123f3fd3993055e4e840ce6",
+   "jpUrl": "960f1fff49a8b1c9f0248e84be5d022e9df863d22fd68efce95732da0b4d534f",
+   "enUrl": "5b59699166ba56a3144d512d08def356d850c4773ae9d7a5274642f9df26d811",
+   "krUrl": "392f6f7b5934ee57dcb04a2b60e4fc54c5a12112d0b4afdc7e60e7eb480530e0"
+  },
+  {
+   "id": 59,
+   "title": "Ao Receber um Ataque Pesado",
+   "text": "Trivial.",
+   "unlockRequirement": "",
+   "cnUrl": "9a996b3a93b7a587ef1405438452ffbaee2601665fdbffc68a903fe5f28e6314",
+   "jpUrl": "db71454eedca6d69503a97f22c99adae403ee510b6af66eff82f89a4b36bf0b1",
+   "enUrl": "77e2dc20ae431b947668b980ff05230cd4d49720ec1744e2a6fb41f45d31301d",
+   "krUrl": "88047e9449da01f5f49ea1c34fb6b429d95d699c94db95acde8dba8ba1c7e892"
+  },
+  {
+   "id": 60,
+   "title": "Perícia Suprema: Ativar",
+   "text": "Hora de um golpe de mestre.",
+   "unlockRequirement": "",
+   "cnUrl": "ad00c8076882fce1d125f7d9688963c86d9e8f008e4b706e0ed243510f1b4ac9",
+   "jpUrl": "1627d1d4f704dab56d85ae12065c0034416f7c76dc6a20441fd9fc1859f46384",
+   "enUrl": "c63ea91f74ab06783ce647bf8c2aeef54f798e9667e04b7f4494af344b3d746f",
+   "krUrl": "6c036d8cdd4d52d36710564f5898a4c80cbbc8abe6b632f40e37561a346b939b"
+  },
+  {
+   "id": 61,
+   "title": "Perícia Suprema: Liberar",
+   "text": "Espírito radiante, ouça a mim. Não tenha piedade!",
+   "unlockRequirement": "",
+   "cnUrl": "52ff0e8ff4d7a25d17f5982eb495ee28c6e95e81c546d55df0b60b88e3cfde5a",
+   "jpUrl": "97637db2ab7b00b83620183d5430e411a3e30f20dff4101dbc88dd43b8addf7b",
+   "enUrl": "321a8fc6350a4fa5f7273e5d94db97c80e583977edc5393ee146cc76d7500021",
+   "krUrl": "542ed17139b7a7c2f0432c738966d67ff664be8ff90d2cd3a79ab6fdd1855bc3"
+  },
+  {
+   "id": 62,
+   "title": "Ao Ficar Fora de Combate",
+   "text": "Muito tempo na retaguarda...",
+   "unlockRequirement": "",
+   "cnUrl": "d79fcb97a0e82d456aa64c3ca8697af18788ae8f8abdee5e3825d3537d5a6fb1",
+   "jpUrl": "f21c96acb7f54b1a0da20f9c7b4741e082de5ada1e5d584c84191746000b9868",
+   "enUrl": "357d8279efc83226051f810b481ec28e21df66ae6ad127654f812e1894a71255",
+   "krUrl": "91276f344d170046e5a63fc63af227526819560ba22d45db27d2a5cc27e71b39"
+  },
+  {
+   "id": 63,
+   "title": "Ao Voltar à Batalha",
+   "text": "É bom estar de volta.",
+   "unlockRequirement": "",
+   "cnUrl": "c6716b4c4b28ce17345cf7cda1579a1861f9b272eed69d291ceb3a428303ee1f",
+   "jpUrl": "d2fd7e5b3ed0e26150da4ed3eb5bc350cdd39e4f0cc3042f9db176deb13f5956",
+   "enUrl": "907e8ab8e05f0daa071ccfbc8279716baf9560a2a52d4a38f75dd7aa5a46c2d7",
+   "krUrl": "fe49c7e9236c936fcd2b60b739c1c2f8e163854045d70800c095c04257287ce1"
+  },
+  {
+   "id": 64,
+   "title": "Ao Recuperar PV",
+   "text": "Muito obrigado.",
+   "unlockRequirement": "",
+   "cnUrl": "446f2d7a0a29c74ccbf05df477c33db87f1843dccc8d585b73f602f8857aed8f",
+   "jpUrl": "540f157551e65bacd0b462537165944ff7d574c9616b3a6b2d96fdcab6fdc968",
+   "enUrl": "84b6db3bf84316ba544f0a8dcbcf9fd1463a17d55e4d8f093e966143aab7ae2c",
+   "krUrl": "e0c2460e81101f6af7b1abc2284ba0e42b3cb5540516649631e16aa59fe6dce9"
+  },
+  {
+   "id": 65,
+   "title": "Técnica",
+   "text": "Eu ordeno!",
+   "unlockRequirement": "",
+   "cnUrl": "a6f1d5bca54520a6f2ca4e0d4c3ddf413d9daa73bf23a6cfd3bf56178a0fb9ce",
+   "jpUrl": "6773e99bd0ecdcd2ffb8bb2c12c3bfd34718cd71a324c85b554cfdfda016123f",
+   "enUrl": "d03658e1032acff701b870d19143a3af4dc52f67720131a920f7b78668218cec",
+   "krUrl": "1a1752618240b6e85e6bf64c63dbae5e1fe028d57edba1a434e6dfb8b8eecab6"
+  },
+  {
+   "id": 66,
+   "title": "Ao Vencer uma Batalha",
+   "text": "Batalhas são como partidas de xadrez. Não existem duas iguais.",
+   "unlockRequirement": "",
+   "cnUrl": "c37ab813ebbfa08e846d004028aa6984f27f4cec2a091e31f6fca2403b07ed97",
+   "jpUrl": "9e23e499664374f6ffec234f997bfc9a28134f08f83c78e8055dee7159d67276",
+   "enUrl": "4c80fe100cf64f3a9a8ea7f05cbde2dbf7a850e1b8329299ed7ab295edf89cba",
+   "krUrl": "7e8e39591f3cc6bcb524347f0531562dc21fa8f06b52738ca087a7c4e0df584e"
+  },
+  {
+   "id": 67,
+   "title": "Abrindo Tesouro 1",
+   "text": "Um diamante bruto.",
+   "unlockRequirement": "",
+   "cnUrl": "cd17cedf83139db16be1354fbe61483f3ee235fc3e5bd5e65f1f55d366b6736b",
+   "jpUrl": "c3c7c184eadd751c91d120d5fa82b656c9b608106b0e0f80f7e5b4a47e0a20a2",
+   "enUrl": "fde84e61d92f9abe8512b2e9e191aa712e568f532f5054badf8e1b1344efe7bc",
+   "krUrl": "eba4fd2048c3cd00f74b409f9b282c84c1043b87bcd666a2bd6f1cf0f9a85d03"
+  },
+  {
+   "id": 71,
+   "title": "Abrindo Tesouro 2",
+   "text": "Ah! Que surpresa agradável.",
+   "unlockRequirement": "",
+   "cnUrl": "c7ec96bbf12cb560f0dd6311782509894a77fdc5d840797aee1f7625cc76b226",
+   "jpUrl": "38f542d774feb587353d3d908aff1b15f32e5035a51ab68abe77875b027ed1a1",
+   "enUrl": "8022827d8e39d672b6a0fbff3aa070715df6c5a3f4d176de04a704e047127346",
+   "krUrl": "6825f47c1fdd6105b8a4d1f49ccd6400934f64f1c549b207122f286a931264f1"
+  },
+  {
+   "id": 72,
+   "title": "Abrindo Tesouro Precioso",
+   "text": "Faz mais sentido você manter uma descoberta rara como essa.",
+   "unlockRequirement": "",
+   "cnUrl": "9a3101f13eb35c715a51ca61a57a9ff5a40b0f61001e358acbca8087c6f490e4",
+   "jpUrl": "b074b36f3f6aa27a87c8fd096665b7d420191f596937b2fc25f80b6e3551edcb",
+   "enUrl": "279bdf5cc70cf0184c132ae4fc98ced532281f6630dbb8280632f2e7d7042dab",
+   "krUrl": "aa62a776ce0fd974ee7b36827e783fc3badabfae3fe9a14a5e1ff3a7984d4402"
+  },
+  {
+   "id": 68,
+   "title": "Enigma Solucionado 1",
+   "text": "Isso foi mais trabalhoso do que parecia.",
+   "unlockRequirement": "",
+   "cnUrl": "6185ac875a00323eea9e4ad7fd482b98dc32831b92d658e8b75b80f391624ab8",
+   "jpUrl": "4dc2f103c508c74ad14da27bca3b2c71565f7efc73558250a4a6775a01112d5a",
+   "enUrl": "b631903684fde233babef813fcfda15d1fd8746a2d4fed4a49d4281fff122a70",
+   "krUrl": "c99b9234916885363dcbead9a8c3b1678600dc450d756450ab747c5511d898fc"
+  },
+  {
+   "id": 73,
+   "title": "Enigma Solucionado 2",
+   "text": "Esses mecanismos funcionam de formas intrigantes.",
+   "unlockRequirement": "",
+   "cnUrl": "3cfb5666228f026b71a9703a78d73341a631ba27f98f389da1de9658f18050e9",
+   "jpUrl": "c41e9ffc6931a361c1dc25086e295175b8b9b2c781551952efb6c32e970013ab",
+   "enUrl": "32baf77e73e5fc6f7b9518fe172cd4a999e0ae2dadad13f25a1f0746dfb96db7",
+   "krUrl": "fd5200a2d8e27e11585ba56e4caa0f168c6941eec681c496ba0d96efc8490976"
+  },
+  {
+   "id": 69,
+   "title": "Alvo Inimigo Encontrado",
+   "text": "Quando estiver enfrentando um exército, aguarde o momento e ataque na hora certa.",
+   "unlockRequirement": "",
+   "cnUrl": "4b0a852a366f13707da4c104747120a75f6380acc5900ee6e7adddf4595b14f1",
+   "jpUrl": "65d7398ea5b381e3b2cdfea91606254d983ea38517a33ffd59f50bb0d2bd1ce8",
+   "enUrl": "c28bc2e0e196405d857c4c3e562c6efdc64ff1ccf02df7e5086adfa61e7b2a6f",
+   "krUrl": "6355a3b965f6e14ad4a333026677e232422e934f80e091f1721b5bfeb244c0cd"
+  },
+  {
+   "id": 70,
+   "title": "Voltando à Cidade",
+   "text": "Algumas partidas de xadrez vão ajudar a passar o tempo.",
+   "unlockRequirement": "",
+   "cnUrl": "336f5e8bbd37070a334db05e73f0c33c6aaf683419d9ea3f3a8f33964fd40206",
+   "jpUrl": "0674ee014c3496b8c5bb374764453ddbd6c5ca52d1ce6ef63c7d1742054e2bf2",
+   "enUrl": "4cb4793856a0751491e73209cd45c4d6455ef0aef295948b1e835bce68963cf0",
+   "krUrl": "e92ff45a35a96665280bf7ce2bf7ee6d87df3b6376234f1005febe5a6a0254e2"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Detalhes de Personagem",
+   "text": "A Presciência Divina, um dos Sete Árbitros-Generais da Aliança Xianzhou. Apesar de sua aparência ser a de alguém indolente, ele é mais meticuloso do que aparenta. Ele não considera que salvar uma situação à beira do desastre seja uma demonstração de sabedoria, deste modo, ele é exigente com os afazeres rotineiros para evitar quaisquer problemas em potencial. Por conta de seu cuidadoso gerenciamento, o Xianzhou tem gozado de muitos anos de paz, a postura aparentemente preguiçosa de Jing Yuan lhe concedeu a alcunha de \"General Dorminhoco\".",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "História de Personagem: Parte I",
+   "text": "\"Mestra profetisa, por que usamos um tabuleiro quadrado no xadrez estelar se as peças são redondas?\"<br />\"Talvez seja baseado no céu redondo e na terra quadrada? Civilizações antigas acreditavam que a terra era plana. Este conjunto foi inspirado na antiga época dos estados-nações e das conquistas imperiais, acima de um único planeta, logo é quadrado. Quanto às peças... As pessoas na época acreditavam que o céu era um domo, e as peças do xadrez se moviam como as estrelas naquele domo que reflete as vidas dos humanos. É por isso que as pessoas sob o céu também são vistas com formas arredondadas.\" <br />\"Não, não. Isso está errado.\"<br />\"Eu já previ as suas próximas quarenta e oito jogadas. Jing Yuan, se quer me distrair com perguntas, prefiro que você pare.\"<br />\"Ah, como é que pode suspeitar de tal malícia?\"<br />\"Não me interrompa. Continue falando.\"<br />\"É verdade que o xadrez é uma metáfora que descreve a condição humana. As regras da guerra estão claramente estabelecidas, com ações fixas para cada peça: avançar, recuar e saltar. Avançar ou recuar, sempre de maneira ordenada, é por isso que o tabuleiro é quadrado nessa ordem. Quanto às peças, os sábios dizem que \"usam o intelecto com sutileza e suavidade\". Como cada peça representa indivíduos sencientes, elas são circulares.\"<br />\"As origens do xadrez estelar são abordadas no 'Recolhimento das Pérolas de Verdura'. Eu leio muito, Jing Yuan... Por que você está mentindo tão descaradamente para mim?!\"<br />\"Cavaleiro das Nuvens vai para C3, tomando o seu Rei. Você perdeu, dama Fu.\"<br />\"Espere aí! Como eu não vi isso em minhas predições? C-Calma, quero ver essa jogada outra vez.\"<br />\"Peças de xadrez são como pessoas. Cada uma tem sua própria senciência. No tabuleiro, não há volta. Como alguém poderia voltar ao passado? Haha, como a chefe de uma Comissão pode ser tão má perdedora?\".",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>20</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte II",
+   "text": "De uma aliança que abrange seis poderosas naves Xianzhouitas, os Cavaleiros das Nuvens emergiram das cinzas da Catástrofe Flamejante. Eles fizeram um juramento de defender as naves do Xianzhou e seguir o decreto da Caça da Flecha do Destino, uma tradição mantida até hoje. Apesar da incrível longevidade dos macróbios, a natureza da guerra fez com que poucos generais conseguissem passar a marca dos cem anos após terem assumido o cargo. Não tem tanto a ver com o destino, mas sim com tradição. Por serem defensores armados do Xianzhou contra as abominações, os generais devem não só assumir os planejamentos e expedições, como também liderar suas tropas em batalha. Em meio aos diversos nomes apagados de maneira cruel e rápida dos anais da história, a Presciência Divina Jing Yuan, líder dos Cavaleiros das Nuvens do Luofu do Xianzhou, se destaca dos outros com seu reinado centenário. Sob sua sábia estratégia, os Cavaleiros das Nuvens do Luofu se tornaram reconhecidos pela Aliança, alcançando um recorde exemplar. Ainda que existam aqueles que reclamem que ele teme tanto o combate que raramente recorre às armas, continua sendo um fato que seu intelecto é tão competente e habilidoso quanto a ponta da espada mais afiada quando se trata de resolver problemas espinhosos.",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>40</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte III",
+   "text": "Um dos boatos mais recorrentes que circulam hoje em dia afirma que a família de Jing Yuan serviu a Comissão de Manutenção do Reino por gerações.<br /><br />A tradição Vulpe de \"escolher\" o próprio futuro dita que os pais devem colocar vários objetos e brinquedos ao redor do bebê e fazê-lo escolher sua futura carreira ao escolher um objeto. Os pais de Jing Yuan esperavam que ele herdasse o manto de erudito ou oficial na Comissão de Manutenção do Reino, mas Jing Yuan pegou a espada de brinquedo.<br /><br />Parece que tal \"escolha\" de fato prediz o futuro. Após ter se formado na academia, Jing Yuan se juntou aos Cavaleiros das Nuvens, contra a vontade de sua família, para fugir de uma vida tediosa.<br /><br />Sua primeira expedição está gravada no registro de batalha oficial dos Cavaleiros das Nuvens. O Navis Astriger que levava as tropas teve que fazer uma aterrissagem forçada em um planeta oceânico, infestado de abominações. Macróbios conhecidos como Águas-Vivas Titereiras controlaram a mente dos Cavaleiros das Nuvens, subindo a bordo e quase convertendo a nave em uma colmeia alienígena. Jing Yuan rapidamente se deu conta da crise e identificou os requisitos para a possessão das Águas-Vivas Titereiras, e então criou um método para ir contra elas. O restante da tripulação eventualmente passou pelo teste dos inimigos e amigos quase idênticos, derrotou os verdadeiros inimigos e retornou para casa em segurança.<br /><br />A vitória, sem o derramamento de sangue, fez com que os generais dos Cavaleiros das Nuvens notassem a coragem de Jing Yuan. Após retornar ao Xianzhou, Jing Yuan demonstrou suas habilidades, o que o levou a ser indicado para um cargo importante entre os Cavaleiros.<br /><br />Suas abordagens práticas e perspicazes por diversas vezes proporcionaram surpresas inesquecíveis aos seus superiores, e dores de cabeça também. No fim, Jing Yuan foi convidado a entrar na equipe da antiga Campeã da Espada do Luofu, e assim nasceu a lenda do Quinteto das Nuvens.",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>60</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte IV",
+   "text": "Tornando-se a lenda mais famosa na história do Xianzhou, os cinco heróis do Quinteto das Nuvens se reuniram para lutar lado a lado. Seus feitos beiravam o infinito: expulsaram os Borisins invadindo Thalassa. Destruíram a aliança entre Houyhnhnms e Tece-Asas no Eixo da Abundância. Chegaram até mesmo a resgatar o Yuque do Xianzhou e derrotar o planeta senciente de Miragem Ketu, preservando os olhos da aliança para que continuassem a observar as estrelas...<br /><br />Todavia, nem mesmo todas as conquistas deles foram párea para a crueldade da época. O Quinteto das Nuvens se desfez em pouco menos de cem anos. Conforme as guerras diminuíram, as naves principais passaram a seguir por caminhos distintos, e o Luofu começou a patrulhar as rotas de comércio cósmico em busca de suprimentos e suporte para a Aliança.<br /><br />Antigas amizades se dispersaram ao vento, e inimigos foram capturados ou mortos. Restam apenas lembranças. Os generais caídos não têm que suportar tamanho tormento, mas os que sobrevivem não contam com essa sorte, por mais que desejem, e não importa a quantidade surpreendente de inimigos derrotados, pois o tempo sempre reduzirá a força das pessoas aos poucos, enquanto ainda poupa sua vida de forma cruel, deixando-as acovardadas em um canto, ressentindo sua própria impotência.<br /><br />Apenas os verdadeiros sábios são capazes de manter a cabeça erguida frente ao inimigo implacável chamado tempo.",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>80</nobr> de Personagem"
+  }
+ ],
+ "archive": {
+  "cvCn": "孙晔",
+  "cvJp": "小野大輔",
+  "cvKr": "류승곤",
+  "cvEn": "Alejandro Saab",
+  "camp": "O Luofu do Xianzhou"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Jing Yuan",
+ "rarity": 5,
+ "descHash": "A Presciência Divina, um dos Sete Árbitros-Generais da Aliança Xianzhou, comanda os Cavaleiros das Nuvens do Luofu do Xianzhou. Pupilo do último Campeão da Espada do Luofu, mas não é exatamente conhecido por suas proezas marciais.",
+ "artPath": "2468f9d23227268aad36db7e5da6c119433cdd4ae8c4c138c0bd13c7de748b92",
+ "miniIconPath": "91c54e75e5105d155170fd0a6a2d111676ec6bd37d287c3e4c30647e7b3b442e",
+ "damageType": {
+  "id": 8,
+  "iconPath": "aec46e1b5be764fe83cac85e30f5832729012baa6a30bb8d91c82348d8a1b4d6",
+  "color": "#8872F1",
+  "name": "Raio",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "a1916e75aa6a99295aa01786a946ae601da457b578603446740cbe30bc5fba5a",
+  "altIconPath": "01710b94c5c1a7c525cfaedc0ea8f32901c99aa71a28896a16d52656c3ce3654",
+  "color": "#FFFFFF",
+  "name": "A Erudição",
+  "rarity": 0
+ },
+ "pageId": "jingyuan"
+}

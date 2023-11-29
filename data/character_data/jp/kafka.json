@@ -1,0 +1,2719 @@
+{
+ "spRequirement": 120,
+ "iconPath": "ee794f57f01e4db9a6cbcd754a79d06c55884da5aaeb99cf01eb5e68ef971fd9",
+ "bgPath": "864f837899e9248a5865f6147a4677102c6ca356c851fdd940673cd7b34bd647",
+ "figPath": "cf30b038cd1c866d1680c1e6c5da78695f3b6381f4f0f972b1ed2645dbf0ba0e",
+ "fgPath": "da74e4e5b5127c8a5d1d5f60272f0832ab90ffce68baa4c54f2f8e48db1855fe",
+ "splashIconPath": "d865c2226e88755c525fb64665fbf95823000e8a34b563c4bf0009b697e34980",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 5,
+  "iconPath": "4b4b5f13f6588e7fb1c030c28f9b9b67a7a8c4bab77c05e38d5c9f64eb0d99e7",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬",
+    "エンバー交換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "運命の足跡",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "幾度の敗北があなたに勝利をもたらし、一歩一歩の前進があなたを運命の転換点へと導いた。",
+   "purpose": "軌跡素材",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」ポイント報酬",
+    "ナナシの勲功",
+    "エンバー交換",
+    "期間限定イベント報酬"
+   ]
+  },
+  "151161": {
+   "id": 151161,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "6b4243b69df9f37fab4f6cda60edc49711505bf5c2ce0b517d6272be5df311df",
+   "name": "鍛錬者の雷枝",
+   "desc": "薬王秘伝・鍛錬者が残した槍の穂先。雷属性キャラクターの昇格素材。",
+   "lore": "仙舟の古い記録によると、修行を積んだ者は雷を呼び、風を従えることができるという。「薬王秘伝」は自身を仙道の伝承者だと偽り、かつての仙人の痕跡をちらつかせ、こっそりと信者を集めていた。この枝に残る稲妻は、その言葉が真実であることを証明しているようである。<br /><br />「凡胎皮相は幻化、我執を勘破して方に真実が顕れる」",
+   "purpose": "キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/151161",
+   "comeFrom": [
+    "凝結虚影「廻星港」",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "d75aec8e75227549d536ef57980f65a2b081b9665d06cd1a02a5bafa6c688f63",
+   "name": "無窮なる仮身の遺恨",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "いくら肉体を奪っても、願いは叶わない。仙薬を求める人たちのように、それは「壊滅」を恐れる必要のない、永く存在できる体を渇望する。けど同時に、その者は知っている、それは永遠に実現できない迷夢だと。<br /><br />「数え切れないほどの世界が負創神の烈炎に呑まれるのを見てきた、そして妾もその炎の中の一筋であった。妾は其の思うがままに踊る。だが、薪が燃え尽きると炎は消えることも、よく理解している…」",
+   "purpose": "軌跡素材",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "歴戦余韻「鱗淵境」"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "漫遊指南",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>20000</nobr>獲得できる。",
+   "lore": "世界を渡り歩くためには欠かせない、冒険手引き集。閲覧キーを押すと、電子音声が理解可能な言語で、有名な冒険者たちが様々な世界で体験したことや、彼らが色々な星で得た貴重な知識を語り聞かせてくれる。<br /><br />「漫遊指南最新シリーズ『スペースグルメガイド』が現在発売中。ぜひお買い求めください」<br />「投稿の際は、博識学会共感覚ビーコンのオペレーター<nobr>23</nobr>θにお繋ぎください。原稿料はあなたが普段から利用している方法でお振込みいたします」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "「忘却の庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "冒険記録",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>5000</nobr>獲得できる。",
+   "lore": "綺麗に装丁された、一目でためになるとわかる冒険日誌。冒険に関する細かい描写、価値のある情報、サバイバル術が書かれている。<br /><br />「なんで数字化してデバイスに保存しないの？持ち歩きやすくなるでしょ」<br />「お前が思っているより、先進技術は恒星嵐や中性子噴出に弱いんだ。なにより、この本の制作者は、最も簡単な方法で人々に読んでもらいたかったんだろう」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "デイリー訓練",
+    "エンバー交換"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "旅の見聞",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>1000</nobr>獲得できる。",
+   "lore": "旅の出来事を記した日記。字はかすれており、不鮮明。思うままに内容が書かれてあるので、あまり助けにはならないだろう。<br /><br />「読み終わったら早くその紙切れを捨てるのよ、丹恒？」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "依頼報酬"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "15365d10ed38771d99d247bc228b03787e29972cc714a655a9b8feef3031505e",
+   "name": "略奪の本能",
+   "desc": "微弱な反物質、強化に必要な簡易素材。",
+   "lore": "ヴォイドレンジャー・略奪の体内から散逸する微弱な反物質、まるで破壊本能の具現化。<br /><br />「彼らは湮滅の刻を待ち望み、世界と共に鍛錬され、一体化しようとしている」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "反物質レギオンからドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3cd4c92ff44d695595377ffc6c0896d6839775f6014e96daf679b256bc0d19cf",
+   "name": "改ざんの野心",
+   "desc": "希薄な反物質、強化に必要な普通素材。",
+   "lore": "ヴォイドレンジャー・改ざんの周辺に浮かぶ希薄な反物質、粒子と反粒子がここで危険な均衡を成す。<br /><br />「彼らは湮滅の刻を待ち望み、世界と共に鍛錬され、一体化しようとしている」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "均衡Lv.2に達した後、反物質レギオンからドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bb7670872389d870154ac70d1b29dee2d6c123f558951c6f914f1d9a70c28382",
+   "name": "黯淡な黒曜",
+   "desc": "虚空から得た暗黒物質の一欠片。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚無</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "いかなる方法でも欠片の本体を特定することはできない。<br />軽く触れると、破片から不明瞭な言葉が聞こえてくる。<br /><br />「████ ██ █ █」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "エンバー交換"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3c858c8ff4df238403e5443f57850367e4164a62efb508ce359db9c5b7474a19",
+   "name": "踏みにじる意志",
+   "desc": "凝縮された反物質、強化に必要な高級素材。",
+   "lore": "ヴォイドレンジャー・蹂躙の体内で高度に凝縮された反物質、湮滅の刻が文明の壊滅を告げる。<br /><br />「彼らは湮滅の刻を待ち望み、世界と共に鍛錬され、一体化しようとしている」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "均衡Lv.4に達した後、反物質レギオンからドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "name": "沈淪せし黒曜",
+   "desc": "虚空から得た完全なる暗黒物質。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚無</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "意思が弱い者は一目見ただけで、永遠に混沌の中に沈み込んでしまう。<br /><br />「         」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1a896480b5f6ee84644db112069845e85930f6dbc0f428a3f8a6de2b187702af",
+   "name": "虚空の黒曜",
+   "desc": "虚空から得た暗黒物質の一塊。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚無</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "漆黒の側面は如何なる物影をも映さない。光を吸収するだけではなく、手に持った者の感情を奪い、淡々とした虚しさだけを残す。<br /><br />「……」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 92.4,
+   "attackAdd": 4.62,
+   "hpBase": 147.84,
+   "hpAdd": 7.392,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549437,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 129.36,
+   "attackAdd": 4.62,
+   "hpBase": 206.976,
+   "hpAdd": 7.392,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549437,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 166.32,
+   "attackAdd": 4.62,
+   "hpBase": 266.112,
+   "hpAdd": 7.392,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633378,
+     "count": 6
+    },
+    {
+     "id": 151161,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 203.28,
+   "attackAdd": 4.62,
+   "hpBase": 325.248,
+   "hpAdd": 7.392,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633378,
+     "count": 9
+    },
+    {
+     "id": 151161,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 240.24,
+   "attackAdd": 4.62,
+   "hpBase": 384.384,
+   "hpAdd": 7.392,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717319,
+     "count": 6
+    },
+    {
+     "id": 151161,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 277.2,
+   "attackAdd": 4.62,
+   "hpBase": 443.52,
+   "hpAdd": 7.392,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717319,
+     "count": 9
+    },
+    {
+     "id": 151161,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 314.16,
+   "attackAdd": 4.62,
+   "hpBase": 502.656,
+   "hpAdd": 7.392,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "7610e43046fd1ab7c530ac657ab34c99502293c22c60de45c444cb56f40d6a5c",
+   "artPath": "c5f7e55b2cbdc20eb1cdd1a225d3956fa93f0205660c5bfa2f97932b12a5d923",
+   "name": "無窮に動く！無窮に",
+   "descHash": "天賦効果により追加攻撃を行った時、<nobr>#1[i]%</nobr>の基礎確率でターゲットの持続被ダメージ+<nobr>#2[i]%</nobr>、<nobr>#3[i]</nobr>ターン継続。",
+   "params": [
+    1,
+    0.3,
+    2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "37cc78cca858c618860e55be81bbf773d6950f672da4bbb17c0666db08802737",
+   "artPath": "6dbec52f9c550b1fdfbc12e0c82f7b6b7b1a95be3839d4dd1ec18cde3a5a44b3",
+   "name": "狂想者の嗚咽",
+   "descHash": "カフカがフィールド上にいる時、味方全体の持続与ダメージ+<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.25
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "9e40e1b9a4cc5365fd99fb3b1d37e3e8a104857c0252fface2df70787fd90160",
+   "artPath": "ca058387ee280b323835272dc5b5afbf117c16a58dd459374d121cafa9ee8fb1",
+   "name": "即興の賛美",
+   "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "0ba3c102e6edb5907b06376e565252807e7e14e455a5cefaedc3c91e0831ecd1",
+   "artPath": "53e789fd19d59cca230ee61c594204d8be32d47ee76db100b730dd01fcf8862c",
+   "name": "この叙唱を",
+   "descHash": "カフカが敵に付与した感電状態がダメージを発生する時、カフカのEPをさらに<nobr>#1[i]</nobr>回復する。",
+   "params": [
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "232b85366216ebb26c201fa31d85f8264a0b65a3861f8674ce6416db38428d8a",
+   "artPath": "dc8b360ca87223d09fed5b5179a76e9b3538c9833d9a194e483bcb86e908ba34",
+   "name": "今晩だけの奏鳴",
+   "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "d2c68d9a3d651e68287510f2d2a0efc3cc68453c0882c3bd50ccdefd293bc21c",
+   "artPath": "8e93113a0010e2bb31593f3ab64c383cf5799aa1079307dd248b46cecfa667df",
+   "name": "回る、静かに",
+   "descHash": "必殺技、秘技、天賦による追加攻撃が敵に付与する感電状態のダメージ倍率+<nobr>#1[i]%</nobr>、感電状態の継続時間+<nobr>#2[i]</nobr>ターン。",
+   "params": [
+    1.56,
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   791017
+  ],
+  [
+   874958
+  ],
+  [
+   958899
+  ],
+  [
+   75544
+  ],
+  [
+   360071
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体にカフカの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与える。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 791017,
+   "name": "止まない夜の喧騒",
+   "iconPath": "cfa32b1b01a986da6fec75c2ab814df14846a6f8f2e123193eaf567ec188966f",
+   "typeDescHash": "通常攻撃",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "拡散攻撃",
+   "descHash": "指定した敵単体にカフカの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与え、隣接する敵にカフカの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与える。<br />指定した敵が持続ダメージ状態である場合、付与された全持続ダメージ状態が、本来のダメージ<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分のダメージを発生する。",
+   "ultimateCost": 0,
+   "break": "60 + 30/adjacent",
+   "energy": "30",
+   "id": 874958,
+   "name": "月明かりが撫でる連綿",
+   "iconPath": "9e40e1b9a4cc5365fd99fb3b1d37e3e8a104857c0252fface2df70787fd90160",
+   "typeDescHash": "戦闘スキル",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.8,
+      0.6,
+      0.3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.88,
+      0.615,
+      0.33
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.96,
+      0.63,
+      0.36
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.04,
+      0.645,
+      0.39
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.12,
+      0.66,
+      0.42
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      0.675,
+      0.45
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3,
+      0.69375,
+      0.4875
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.4,
+      0.7125,
+      0.525
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      0.73125,
+      0.5625
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.6,
+      0.75,
+      0.6
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.68,
+      0.765,
+      0.63
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.76,
+      0.78,
+      0.66
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.84,
+      0.795,
+      0.69
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.92,
+      0.81,
+      0.72
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.825,
+      0.75
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "全体攻撃",
+   "descHash": "敵全体にカフカの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与え、<nobr>#2[i]%</nobr>の<u>基礎確率</u>で攻撃を受けた敵を感電状態にし、付与された感電状態が本来のダメージ<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span>分のダメージを発生する。感電状態は<nobr>#3[i]</nobr>ターン継続。<br />感電状態の敵はターンが回ってくるたびに、カフカの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性持続ダメージを受ける。",
+   "ultimateCost": 120,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 958899,
+   "name": "悲劇最果ての顫音",
+   "iconPath": "2aa38eeefd18ea9c6064f2ccaa6caeed1a34eae498fd8490598b2efdf6c456d7",
+   "typeDescHash": "必殺技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.48,
+      1,
+      2,
+      1.16,
+      0.8
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.512,
+      1,
+      2,
+      1.26875,
+      0.82
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.544,
+      1,
+      2,
+      1.3775,
+      0.84
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.576,
+      1,
+      2,
+      1.48625,
+      0.86
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.608,
+      1,
+      2,
+      1.595,
+      0.88
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.64,
+      1,
+      2,
+      1.758125,
+      0.9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.68,
+      1,
+      2,
+      1.975625,
+      0.925
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.72,
+      1,
+      2,
+      2.2475,
+      0.95
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.76,
+      1,
+      2,
+      2.57375,
+      0.975
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8,
+      1,
+      2,
+      2.9,
+      1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.832,
+      1,
+      2,
+      3.041375,
+      1.02
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.864,
+      1,
+      2,
+      3.18275,
+      1.04
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.896,
+      1,
+      2,
+      3.324125,
+      1.06
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.928,
+      1,
+      2,
+      3.4655,
+      1.08
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.96,
+      1,
+      2,
+      3.606875,
+      1.1
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "単体攻撃",
+   "descHash": "カフカ以外の味方が敵に通常攻撃を行った後、カフカは<u>追加攻撃</u>を行い、その敵にカフカの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与え、<nobr>#2[i]%</nobr>の<u>基礎確率</u>で攻撃を受けた敵を必殺技が与えるものと同じ感電状態にする、<nobr>#3[i]</nobr>ターン継続。この効果はターンが回って来るたびに1回まで発動できる。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "10",
+   "id": 75544,
+   "name": "優しさもまた残酷",
+   "iconPath": "da717ed4fb45a197f446a0094935a58476ad5acd13aafae2a4a659101cd98e18",
+   "typeDescHash": "天賦",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.42,
+      1,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.518,
+      1,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.616,
+      1,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.714,
+      1,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.812,
+      1,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.91,
+      1,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.0325,
+      1,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.155,
+      1,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2775,
+      1,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.4,
+      1,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.498,
+      1,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.596,
+      1,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.694,
+      1,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.792,
+      1,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.89,
+      1,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 276130,
+   "name": "攻撃",
+   "iconPath": "cfa32b1b01a986da6fec75c2ab814df14846a6f8f2e123193eaf567ec188966f",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "一定範囲内のすべての敵を攻撃。戦闘に入った後、敵全体にカフカの攻撃力<nobr>#3[i]%</nobr>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与え、<nobr>#1[i]%</nobr>の<u>基礎確率</u>で敵単体それぞれを、必殺技が与えるものと同じ感電状態にする、<nobr>#2[i]</nobr>ターン継続。",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "0",
+   "id": 360071,
+   "name": "許しは慈悲に非ず",
+   "iconPath": "4d7df18581361c0aa2aace058bf5fbaa6644508693804fe2524c6e537a0b8bca",
+   "typeDescHash": "秘技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      2,
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1005101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1005202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1005203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1005204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 227730,
+          "name": "HP強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+          "statusList": [
+           {
+            "key": "HP",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920196,
+            "count": 3
+           },
+           {
+            "id": 633378,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 227733,
+        "name": "攻撃強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "攻撃力",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920196,
+          "count": 3
+         },
+         {
+          "id": 633378,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 227732,
+      "name": "効果命中強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+      "statusList": [
+       {
+        "key": "効果命中",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635669,
+        "count": 3
+       },
+       {
+        "id": 549437,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "必殺技を発動した時、敵は「付与された感電状態がダメージを発生する」から「付与されたすべての持続ダメージ系デバフがダメージを発生する」に変更される。",
+    "ultimateCost": 0,
+    "id": 227636,
+    "name": "苛み",
+    "iconPath": "4317f6de0bda7a6c519e687667f36f572590bd7326c5602a1bb26a61abc3c8cb",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635669,
+        "count": 3
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1005102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1005205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1005206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1005207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 227729,
+          "name": "攻撃強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+          "statusList": [
+           {
+            "key": "攻撃力",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836255,
+            "count": 3
+           },
+           {
+            "id": 717319,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 227728,
+        "name": "効果命中強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+        "statusList": [
+         {
+          "key": "効果命中",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836255,
+          "count": 3
+         },
+         {
+          "id": 717319,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 227731,
+      "name": "攻撃強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "攻撃力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920196,
+        "count": 5
+       },
+       {
+        "id": 633378,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "感電状態の敵が倒された時、カフカはさらにEPを<nobr>#1[i]</nobr>回復する。",
+    "ultimateCost": 0,
+    "id": 227639,
+    "name": "略奪",
+    "iconPath": "f8299ac4c99aa8fd2a9b72d4cb0dbddc48e66c41777374c96493f44dbe246ad8",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       5
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920196,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1005103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1005208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 227742,
+      "name": "HP強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "HP",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1005209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 227743,
+      "name": "効果命中強化",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+      "statusList": [
+       {
+        "key": "効果命中",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "必殺技、秘技、天賦による追加攻撃が敵に感電状態を付与する基礎確率+<nobr>#1[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 227638,
+    "name": "いばら",
+    "iconPath": "9c41a64ca78a92462966705d8958ac7c6911c7b261eba18cc8ce04e4b618fdaf",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.3
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1005201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1005210,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 311675,
+      "name": "攻撃強化",
+      "levelReq": 80,
+      "promotionReq": 0,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "攻撃力",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 227735,
+    "name": "攻撃強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "攻撃力",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549437,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "胴体",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "攻撃力",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "速度",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "次元界オーブ",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "雷属性与ダメージ",
+    "propertyIconPath": "dbf8a033f78ebfe4765472b27aa0e7d3838d36f8f15868c49a3433ccca9ef1aa"
+   },
+   {
+    "relicTypeHash": "連結縄",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "攻撃力",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初対面",
+   "text": "ハーイ～、列車の…皆さん。はぁ、捕まった。",
+   "unlockRequirement": "",
+   "cnUrl": "cf0805d6c7d4fe900aef2e218d8853009202ccd6ecd677c61fa12611d34d6529",
+   "jpUrl": "3e60030c7d7b3c328ebd974ecdfe0dcf764b932bf0ef235d9f0fdbf46ba40360",
+   "enUrl": "2d0bca8990898667c8ef4413081a55b257be1d40836b02735b0e77855cd01a50",
+   "krUrl": "299a4618ddf147409877432042ba8c819fdf0730df4bf87584f72c23f5ff48e4"
+  },
+  {
+   "id": 2,
+   "title": "挨拶",
+   "text": "ほぼ無限の時間、ほぼ無限の空間の中で、私たちは同時に同じ場所にいる。「運命」とはこういうことよ。奇跡を創造しながらも、君にそれが偶然であると思わせるの。",
+   "unlockRequirement": "",
+   "cnUrl": "db2b12890e76b0c38507d8d89556adbe6cea8ad0bccd1b9f91d3e8e7dbf91137",
+   "jpUrl": "11c65bf7eea83236864134fe6095bae95db3b122565c5a31f1b83136c35cae7f",
+   "enUrl": "38a885c9af52008babbaaeb753b119577ac5eff7a1a3373a88ebe320633560ff",
+   "krUrl": "870b659878ba91b9c3834888d11cc05ca547862c287c83c5878b816bbeb05b1a"
+  },
+  {
+   "id": 3,
+   "title": "お別れ",
+   "text": "バイバイ、開拓者。次こそ私を驚かすことができるといいわね。",
+   "unlockRequirement": "",
+   "cnUrl": "7ee71eedc2a4537198cafc0f7be9fda0f52c44862a21630a4a955cd1d7aa3067",
+   "jpUrl": "6ec7f69635c13c81a6d36e6be731cf1f89b781a8c4f9386dd143d0465a1fc802",
+   "enUrl": "4b6271fbab4e4b97ed863d22782ca887fd43f6e6a8cba1aa9fe63154ad0d4d51",
+   "krUrl": "bc2fd337f587e691acb05f572f359f29ad3d5c86166e96241638d9e8f237efc4"
+  },
+  {
+   "id": 4,
+   "title": "自分について",
+   "text": "星核ハンターになる前は、仕事で同じ人に2度会うことは滅多になかったわ。",
+   "unlockRequirement": "",
+   "cnUrl": "66f419a6005d350213691140f94351e0a8e9b5211dbb910c977099af8c294194",
+   "jpUrl": "365536ad3056309cf084c2603eef2041fbf874bbf799f40166a4d50b72b8eeb0",
+   "enUrl": "139fb3a0afcb1e98ad7d7ec66050ba08e4b2585fa59d25e52eb4983fe284cd3b",
+   "krUrl": "62f49bd697d2bfe2629e59618a4d3c263009264d26de0891b513dc23629c8a88"
+  },
+  {
+   "id": 5,
+   "title": "世間話・恐怖",
+   "text": "エリオは私のことを、「恐怖」を作り出すのが得意だと言ってたわ。私はそれについて何も知らないのに。",
+   "unlockRequirement": "",
+   "cnUrl": "5f337f727b1c1455a86825ef0b6b0a5d18609c2f2f42c70eb5ed73c71bada2f8",
+   "jpUrl": "dd0a91561e768c69f10117574c6c528501bab04b55b16b5a6ba3a9e0ffe6519e",
+   "enUrl": "92327f3b29805f3eca41b3257a8bdbad6d4baf0cefeb9adadcef179dd469f96f",
+   "krUrl": "04100945e64bb897043fd09caa384f93d524597a5d637473d9a92a921ce7cd94"
+  },
+  {
+   "id": 6,
+   "title": "世間話・バイオリン",
+   "text": "バイオリンの演奏は、銃を撃つ時のように指先の器用さを問われるけど、弾丸のほうが素直なのよ。",
+   "unlockRequirement": "",
+   "cnUrl": "9f0f8f698d4aba3de211986012cd12092497e25d23ac09f5046da69aafdc004f",
+   "jpUrl": "98cc9d8619c1bb8694ee30a8fdda102528315a7e732337a9a095727bf4f3507f",
+   "enUrl": "c632a44f8b86ee55135c8e47976e46de28ca2ef53efed289df76ef7ec046cf93",
+   "krUrl": "c83e6682d7f76f9f032b43df60bcd85c1f62e44efad9a1ef618ff30f5c7d4175"
+  },
+  {
+   "id": 7,
+   "title": "趣味",
+   "text": "ベルベットのコートが1番好きよ。脆く美しいけど、手入れが難しく、ちょっとした不注意で光沢が損なわれてしまうから。",
+   "unlockRequirement": "",
+   "cnUrl": "c1471d70ddb78a86ddc4efc28e1683f0776681ed3f11dd822db52198ff4d92c1",
+   "jpUrl": "7cc73dd901cbf4a2a677f6be357ea638bbf61e13180a0265c5b7cfb3d353cda3",
+   "enUrl": "e15a81b5fb6e532ce48dd478cfdcb89e814efb56b1d6e4689e7ee02e8d316fe2",
+   "krUrl": "f9d13da024edfc05934e05945b56b29009b045a4854942dd1517695d992032d8"
+  },
+  {
+   "id": 8,
+   "title": "悩み事",
+   "text": "過去は未来と似ているけど、少しも興味が持てないのよね。",
+   "unlockRequirement": "",
+   "cnUrl": "8af5942a6d0e0a8a6c1907f5b33332841c6fdcf1120fb438bdb6e2aedae76ab7",
+   "jpUrl": "ef67fbec2b8a78617a3f1e937a1e9e52b77aeb367a04f9f78bfb5f766d31e53c",
+   "enUrl": "796dbc7389c7a4e9ad5b5794d0bb915e1d1b3023adabb2f48aba1e1581500cf1",
+   "krUrl": "845f91154dde781dec58de91505ecf22fc0038c0625b1960cc8c316c4ae4dd89"
+  },
+  {
+   "id": 9,
+   "title": "シェア",
+   "text": "毎年夏になると、海を見に行く惑星があったの。潮の流れが最も強い時期で、岸から遠く離れた場所にしか立つことができなかった。でもある年に行ったら、海に長い長い景色を楽しむ為の橋が架けられていたわ。それからはもう行ってないの。",
+   "unlockRequirement": "",
+   "cnUrl": "751edc19b01e0898386876a3c4f8cbe3beb1fc251ed69223ecf2fd2a8a401df8",
+   "jpUrl": "9b4ea8f2b883798d3f1a93f22786e2c763e9dbf80611b0515f3f2ef38d7c5dab",
+   "enUrl": "20d7ee22ccaf4a4ec3fdb4a92ff0ad39c12d100e913b019695110455e8d5f38d",
+   "krUrl": "845ba49fa00ee95ee42a492a83b4b52678ccc2977359566dcbc55ed26c3b34ab"
+  },
+  {
+   "id": 10,
+   "title": "見聞",
+   "text": "「星核」のせいで変わり果てた世界…私の故郷もそのうちの1つよ。あの時代が堕落していく様を目にすることができなかったのは残念だわ。",
+   "unlockRequirement": "",
+   "cnUrl": "c2bf2131fb3368c0dd357f6a837cd56897c3d52aa3e81430a67486d51ddd6a18",
+   "jpUrl": "ea2f6a623b1568fcac043ceebb036b5fa86ddd4ec122128917e03d64c5e9f45c",
+   "enUrl": "faa655dd62b475bab4529a7a5471c9c3ea28ff867a9e9af14bd2910cf4307c76",
+   "krUrl": "9b43daa6c96c6908316b218b29a22518bbb4e49f1291dbc949c1554b0f9558d5"
+  },
+  {
+   "id": 11,
+   "title": "銀狼について",
+   "text": "銀狼とお喋りするのは好きよ。彼女はおチビちゃんだけど、色んなアイデアを持っているもの。",
+   "unlockRequirement": "",
+   "cnUrl": "c1ece0072f3d73bda4a7914d517024fe0f25e7f281174128b28389327ab26e9c",
+   "jpUrl": "3e9c71171a33bb57462c6f35bc3db6b4d09c82964cd557c0b0315288b566a0c8",
+   "enUrl": "073b60704e59228747f70f6750af8e5f7181f022be0f4ad3e5bcbf782d04d80a",
+   "krUrl": "caafae9157166b79bab6ca53d706dae87dace8fe015609c54222c230f4c7caeb"
+  },
+  {
+   "id": 12,
+   "title": "刃について",
+   "text": "刃…名は体を表す。彼の戦い方は美しく、見ていると心が震えるわ。",
+   "unlockRequirement": "",
+   "cnUrl": "427b31d5391c83195a80301ae31a8668cbf3cd6ebe304508f676197a7839eebb",
+   "jpUrl": "2ed5f19b3ab3cf07cb044b6d0098c3cc77da3b152dd2ef84f21f4606de68b193",
+   "enUrl": "7e87ca4730c61882d696638edbe119e2c777c146077773311d6f7d4b79cd66a8",
+   "krUrl": "ef263d2508973e8854cf0dcc9272c9c6b6991970b7058cb08383d029dbb72a18"
+  },
+  {
+   "id": 13,
+   "title": "星魂覚醒",
+   "text": "誰も他人を理解することはできない…君と私も例外じゃないわ。",
+   "unlockRequirement": "",
+   "cnUrl": "4d644f3f22fe47425ed20cc4e94a5f6c434c8608398f61087174f7eb75f80e0f",
+   "jpUrl": "865bcfd89fac8b0f282789b89d8b08529414f83d99c6c9afcd63b6334314a646",
+   "enUrl": "3250c561394c8ffd2a93b9b5afb6b5da81aa88388728b19504f99198e854d27d",
+   "krUrl": "0b7162401e392b664d24be204ff1549e9007afe823a4eb95ac404ceb0a48eb7f"
+  },
+  {
+   "id": 14,
+   "title": "キャラクター昇格",
+   "text": "もし運命が私を推し進められないのなら、私が運命を推し進める。",
+   "unlockRequirement": "",
+   "cnUrl": "cd9b0721b3c352138d8617f51ac0cf674506a2a04cc10f3b4c48e02f3201cc83",
+   "jpUrl": "a5cebbf7e6838be7c235074d232944b82614c5ee58a37f2ab9d8533ba47e1ec2",
+   "enUrl": "05f0e26d1edc4b212aeb0f271faa9de1cd8cb500e44429bce2fc508bf3015d12",
+   "krUrl": "e876daa2cac6e14be3ce4bae6c24bd04ab1e6acb45f4c4d013916660c7f66a00"
+  },
+  {
+   "id": 15,
+   "title": "レベルMax",
+   "text": "…一度止まると、続けるのは難しいわよ？",
+   "unlockRequirement": "",
+   "cnUrl": "81a12dd7ad9fd787ed452902ba546bb60b7f18b68aab4396dd3ab00a03953580",
+   "jpUrl": "5e5b0e2bbb3489dc1519cd57428ef4d68a4193c124050e900470ca18fbeaf9b4",
+   "enUrl": "aa830361e269a31ce7734c231b752da28c05f9c1bff5ad883caf7bf46557d4fd",
+   "krUrl": "873e14d004e3d4baa4b6f19f1c8ea05321bdb5e630c9a42479400ab806ab6641"
+  },
+  {
+   "id": 16,
+   "title": "軌跡覚醒",
+   "text": "一歩、二歩…「未来」への道は足元にある。",
+   "unlockRequirement": "",
+   "cnUrl": "43d98d16078491c05de403935e4793dbd07a5e69c6e1ab395369977e1662b5ff",
+   "jpUrl": "8c958215f7b12095c4f45d10ecc4fcd2d0a3bc29c7d9319d7390fad170613d23",
+   "enUrl": "107d04f4c6ba79779855166fe07c6caa52bd7e0e5331d7e696f9e542b113d9f0",
+   "krUrl": "bc2c83cee3533d8a1d1977583d96d398f05d43b28f61ce1535569314861199a5"
+  },
+  {
+   "id": 17,
+   "title": "パーティ編成・開拓者",
+   "text": "開拓者、また会ったわね。",
+   "unlockRequirement": "",
+   "cnUrl": "d8e63dffa0a5ac947ca890fcd947e138dc6e2ce3287981d26e2968974dae38df",
+   "jpUrl": "b6947d931dace26c3a8aa2088a02a7319946c4db77d0907648f6a911396ffaf9",
+   "enUrl": "4fffb0d150cbde1bf8052f0774cd311c1faea445ee1320dd01d31e00291f139b",
+   "krUrl": "549083a5aa6646b88e98b75be40964464b96a6ff7ee7b386fee65e51395b8d11"
+  },
+  {
+   "id": 18,
+   "title": "パーティ編成・銀狼",
+   "text": "銀狼、協力要請は不要よ。即興演奏をしましょ。",
+   "unlockRequirement": "",
+   "cnUrl": "02481193835390e3d94580a773b289bd428895178a3601469392d2e77b4f5df0",
+   "jpUrl": "3897b6ec64a777b99ec8490ed5eea0591cd986e0c6d93d4a274059023e39366d",
+   "enUrl": "5e719c850e47104fcf54f0a8d5d5107e090f704e539b116c811070298cdc8c62",
+   "krUrl": "1bb941dfec977bf625a857cc690e96669f108f62fbea5551c80cdd3755012512"
+  },
+  {
+   "id": 19,
+   "title": "パーティ編成・刃",
+   "text": "刃ちゃん、「狩り」の準備はできたかしら？",
+   "unlockRequirement": "",
+   "cnUrl": "7918ad47b90c36f41d0a077725ca3185c4e37f4c40a3544d193b4f1e67e462e3",
+   "jpUrl": "66f094df77acf6f39ec5d245b0a02fe90cbb0919cc3a706541abedb4fdf0f45b",
+   "enUrl": "6f44ca0d16eb18dad6970b391beb8f493d3da66b3c014812fffdaedbc246c31c",
+   "krUrl": "07a177dbe884310baf11eb6d60418aa1fb984feb4e6d19fa36531a29da57198e"
+  },
+  {
+   "id": 20,
+   "title": "パーティ編成・姫子",
+   "text": "あら。列車と私たちが手を組む機会があるなんて。",
+   "unlockRequirement": "",
+   "cnUrl": "2a62ee797203f6e4f651145eb239c3e6a2bc48a5560b649c975c31117d322f3e",
+   "jpUrl": "b6241ba29e3dd24ad344ec44a43b42fd67c5f02bc12229cca080685bfcc4fb5c",
+   "enUrl": "7af4a5c42c77237b9279c82d4c0639b74ede39421d9409f2d3aee8618f94c21a",
+   "krUrl": "3cd169b94aab6b98a1ec7d35883d5c2677bd64badd633547734a6e63e79adb29"
+  },
+  {
+   "id": 51,
+   "title": "戦闘開始・弱点撃破",
+   "text": "チェックメイト。",
+   "unlockRequirement": "",
+   "cnUrl": "fe02e379ebc0c3b163e6ddce19a0f7a96f3811f29a48a2b08bfd63ffadd12724",
+   "jpUrl": "25c6954566bdde88a1baa015c40e8405b3626a7b424eda61d22ac9537d0faa90",
+   "enUrl": "f52f29c3bbc9a775ea14104272590bc61ff053a92f87721876245e9de46d3b5a",
+   "krUrl": "13dd232004a4c2960860ca347f8b43522ed5d53c786bacef6d240dca45e2bb67"
+  },
+  {
+   "id": 52,
+   "title": "戦闘開始・危険予知",
+   "text": "いいところにきたわね。",
+   "unlockRequirement": "",
+   "cnUrl": "af52daf3f3bad30dd6f2f4c9db6310d837896319d70da382283510cb817c2423",
+   "jpUrl": "4d0c987cf3ecf5aac728422369f4606cdb568167c9aca11dc55f2458d9fec07a",
+   "enUrl": "ca65214f84a18ea9ccf3ecf4d74c624e76205cc8cc061dbfae27fcce283daef1",
+   "krUrl": "f6aed845c8a2832291c86a09765456f7400c3733d6c69db1c99058126e07cbe4"
+  },
+  {
+   "id": 53,
+   "title": "ターン・1",
+   "text": "皆殺しにしてあげる。",
+   "unlockRequirement": "",
+   "cnUrl": "5ef47d0800f3ba8ad613a3dc73f7428ccba3dd667d8882e1e3d4cf059c75ad6c",
+   "jpUrl": "2f17fa35e21ea19c3870bb6e9b52653564832f515bc34127d0f3262b1202e2fe",
+   "enUrl": "c90ab8c8ce35eaf56448016869454af68e3cc083eb3c8fba26797446efb9d2e3",
+   "krUrl": "6ff5760e3ac2c69804934d9c8d95c1c2ca8614a4af06514b9da4231da427701c"
+  },
+  {
+   "id": 54,
+   "title": "ターン・2",
+   "text": "呼吸するその感覚、覚えておいて。",
+   "unlockRequirement": "",
+   "cnUrl": "dcd80facd7163e2b6c546e656d2a23bc8111801092b5e20c8fed7e83f7cfc4f3",
+   "jpUrl": "866e7eee28f14814ab196c86b9d9fed8768cec2eca1103781c224dc229c45080",
+   "enUrl": "e1655a87512379bdbb9bd138c214a9fc483b87f518be71e0356be498b8f64928",
+   "krUrl": "a77c4d10c8e26901026d22564f285dc05d14f8e4847c6ea076a73d0ab28bfa15"
+  },
+  {
+   "id": 55,
+   "title": "戦闘中待機",
+   "text": "早く終わらせましょ。",
+   "unlockRequirement": "",
+   "cnUrl": "462194608c28d6f7d583fd3eb3b919a13d399c053539ccd03148073aed5ba5d5",
+   "jpUrl": "77f7bdc3078250908416cc14dee4237b11708d0b880e209b8c91d46556caf0ba",
+   "enUrl": "3fd264373ec4b9c303b7ce715bb5f9b11c6b558214f0bc0d5a5b83fe10f6b09f",
+   "krUrl": "af246c3c5d69fdfa547f782da7d4035fcd9802361c500a6a46224c5550842767"
+  },
+  {
+   "id": 56,
+   "title": "通常攻撃",
+   "text": "一瞬よ。",
+   "unlockRequirement": "",
+   "cnUrl": "aa61ed2ca380376a3954ec9189fd60385ffc1660a31f8b5156bbc7df9be0c4ac",
+   "jpUrl": "5b0694c915fac35542f36f39ad4743bec0b8b38ecdae72b751200739fff8d965",
+   "enUrl": "077c64eaaf35ef4978d89e7ee998584e6e2e2c6799876854bf78e7b23c6c4197",
+   "krUrl": "174751713de9cb94b007bbf98e199203dbf0af7e00e7064685e274f3528cb44b"
+  },
+  {
+   "id": 57,
+   "title": "攻撃を受ける",
+   "text": "痛くないわ。",
+   "unlockRequirement": "",
+   "cnUrl": "bf637423da1e327342ecda0a3625141d5ec7f44d329f9ada15a67ca2cb82294d",
+   "jpUrl": "b284e2058e33df63f96524a47294292b20e67d62c95c5a337a883b3988c312f0",
+   "enUrl": "2bbdd2636ae543252d7cd8cc379515670617ba21a3e1c11cbd912fedd2fbf9b3",
+   "krUrl": "ac68983866c9e13aae5b7a45a772aadcff804b0e9122635aa84492fa3c7fa9b4"
+  },
+  {
+   "id": 58,
+   "title": "重撃を受ける",
+   "text": "面白い。",
+   "unlockRequirement": "",
+   "cnUrl": "db4b31574617e0946ffd7a6398c52f84544b1fd971434cc7559b2eb2c4403b1e",
+   "jpUrl": "46b3dd7385cb438d44d75a99e58ffee74c0562a174f5839ea1d45cfb72a771f0",
+   "enUrl": "23e03a9770649b6029a560fa0ae6853188190a73f88bbd375ef4d619c4385947",
+   "krUrl": "07a9663d3914a14ae4b27c7af42461e87cb845097b0686b1ebb01e8ef566e27c"
+  },
+  {
+   "id": 59,
+   "title": "必殺技・アクティブ",
+   "text": "素晴らしい時は…やがて過ぎ去る。",
+   "unlockRequirement": "",
+   "cnUrl": "4c7fb090d99714d0ae891d81d031adc5c07ba64d838e04c388af0b51c573e4d6",
+   "jpUrl": "73142fe3b85180ae4f6cb6cb749f3c1adc5017358cf2aaaeaa57dca551e2afd4",
+   "enUrl": "63762edfb1b3e44a0b2d9cc1720d90847828187e2d99950be414896867d06402",
+   "krUrl": "c7176eb65ae79cdfb8c77e1723cc3b16901f82b26c32b3fa5b280dd6c655844d"
+  },
+  {
+   "id": 60,
+   "title": "必殺技・発動",
+   "text": "お別れの時間よ…ポン！",
+   "unlockRequirement": "",
+   "cnUrl": "8b9339a492b48b3a179cb828c9049fcbc5bb09883c282e16a1c4e03174bb546b",
+   "jpUrl": "b9a8076971f68a20ffe018c96a6abc1bfbe0abcd0da1d272ce711d014d5c1909",
+   "enUrl": "0ca38fe37f641fd5ec3e482ae575ed8a585d3dcd36d0af04a7550299494fc913",
+   "krUrl": "201cf0240ec5884a2a631a0c2881f2124a486cf2a474d1c8e6b999a94d6867f7"
+  },
+  {
+   "id": 61,
+   "title": "天賦・1",
+   "text": "落ち着いて。",
+   "unlockRequirement": "",
+   "cnUrl": "4a91ed350bf2d08ebc3592ec8fb6fe04a42f523b21b49e8b526a7dfef2094bf8",
+   "jpUrl": "f5edc1b93b0fbbbe2e8cd70be0682c292238f909539390aaaf4e070da9902a36",
+   "enUrl": "bcaf329711fbd126d5b8742da42dc60f4255ccd0032032986a9d08e4e0139b8d",
+   "krUrl": "9788f6399919d0aac868dbdb9a5f3c3c5457492097e9e8c70b20622534551b15"
+  },
+  {
+   "id": 62,
+   "title": "天賦・2",
+   "text": "ちゃんと立ちなさい。",
+   "unlockRequirement": "",
+   "cnUrl": "2ffccc7d33e79ec9fe4be7c33c5a250ba575b63eccfeee18294934552abf0fba",
+   "jpUrl": "c28aab25ef462ed1ce78aca19e36c4f15e3e83a389652e501b66062276a7ac8d",
+   "enUrl": "673121587e9e088a39a32690f4d1ff083b0d64480e8e9492aacc241ec79c7759",
+   "krUrl": "9f90770f8fa0488a4eb75bd303a103fbeb9fe15b7ceac9634846141ec37f261b"
+  },
+  {
+   "id": 63,
+   "title": "戦闘不能",
+   "text": "これは…終わりじゃない。",
+   "unlockRequirement": "",
+   "cnUrl": "0e43685caa628ff03874bc679351466761d49d4cf89403484771dd68c9d7bcb7",
+   "jpUrl": "7e91822bd3bd1f74096e7525aab94e84ccd0a0fb621396d8ee9ddffe9625bf9c",
+   "enUrl": "b8faa92b500224c26404c65ecb83d05302588faf3f3d025a6a82193de42b8621",
+   "krUrl": "4eeb46dd90e651ab985de72bb947b56cef0caff54e86e3a7055c6507f7b10ecd"
+  },
+  {
+   "id": 64,
+   "title": "戦闘に戻る",
+   "text": "ふふ、まだ生きてるわ。",
+   "unlockRequirement": "",
+   "cnUrl": "2725e194e8f8dc76dc13e6d3bfdb151f0d3fd27ff08cc767c844d2245794469e",
+   "jpUrl": "2d56c16362920a2555a7a061cd8c757846879535376c6f1d9aff5da35e39b5c6",
+   "enUrl": "e69248327a11284ed165a49a39f343680c767fab3c12f5569887730b0f6ac513",
+   "krUrl": "dfd9bf996989b14a8101cf04ded9ee0c493c5e655f018d8bab4342b0d2902fe9"
+  },
+  {
+   "id": 65,
+   "title": "HP回復",
+   "text": "あら、優しいのね。",
+   "unlockRequirement": "",
+   "cnUrl": "0ff9f7c40195c204854411bfbc5c5ffbf5c87ebd85ce892fd55cc729d8ae8e2e",
+   "jpUrl": "8a1b79b9b3035459ef476eec5f7c7d5c51811a61835eab35443ddfe2a5e4b73a",
+   "enUrl": "cd278b264a3bd6f6ab68f19cc0e8063115d93ecc636897d6c422e6e1ac7cbe01",
+   "krUrl": "1ed77fdabd2af481e185eaad1d63afe0a0a22bfb72ed4d845fd5efca1d653d29"
+  },
+  {
+   "id": 66,
+   "title": "秘技",
+   "text": "痛い？",
+   "unlockRequirement": "",
+   "cnUrl": "1c3df94fd1a0c3565da031079ffb157df4dfbd2827965fc2665e3f5c13d3c888",
+   "jpUrl": "cf45c5b853f2366bbb291dd0da57fe97519793e60e98981edda9103db970a0bd",
+   "enUrl": "c3b95e666d28db34144fc5debabd442cd2a2cb50fbeafd66684d61f57eda4b84",
+   "krUrl": "6015743c419ef48803a0c8f08c12f96fa82d684131a55d229776b10e5bd58067"
+  },
+  {
+   "id": 67,
+   "title": "戦闘勝利",
+   "text": "人体はみな、脆いが故に美しい。",
+   "unlockRequirement": "",
+   "cnUrl": "4e6de60e4b993489aa9bb66cefac492034bdbd3e0a2631bfaff4209e243e4a07",
+   "jpUrl": "493117f373d42d198d5b2897a25abb491750752957a1631d2b13207606ce8da3",
+   "enUrl": "0569fd09fe11fce9fe588fd250a167f5e362e82f690f44959fc841f2e61c50ee",
+   "krUrl": "07e12598698ff373bc752662a58bc3b53e0be22eb31484c56281013863c9beb3"
+  },
+  {
+   "id": 68,
+   "title": "戦利品を開ける・1",
+   "text": "使えるわね。",
+   "unlockRequirement": "",
+   "cnUrl": "27f019bf840b2c45212991cf4533c1956c45c7dacc590b1e9ece0578172513ab",
+   "jpUrl": "cd35ae49baba769efe67218f2b7d50d560bbae57bb4596e0c293613453ce2dab",
+   "enUrl": "2a665d4f151da3b390439b1f87e2202bcbf05864f062b62efed4a7d4f11a94b3",
+   "krUrl": "19b81d825e69a782f3c21030933722ec36ff5dc5007f73369b150b0b727bd733"
+  },
+  {
+   "id": 72,
+   "title": "戦利品を開ける・2",
+   "text": "少しも意外じゃないわね。",
+   "unlockRequirement": "",
+   "cnUrl": "3a461ed3f4d48864ee7bf10a6c3fb9e46cac1115a1a62fc128d61da307e3b33f",
+   "jpUrl": "046cf7b7e741c5180132c52c1d4275ad4863cdf674b2ecdd9328461853e8e21c",
+   "enUrl": "3dae10e3b76b5e688d641ae518275daf585ea19d49e47aceb432aec6696aa4c6",
+   "krUrl": "30f11116f165c4148c3a2544fb9ed6023c72fc8f10bbdf3a4a61a33720289a61"
+  },
+  {
+   "id": 73,
+   "title": "貴重な戦利品を開ける",
+   "text": "好きなの？私も好きよ。",
+   "unlockRequirement": "",
+   "cnUrl": "ff420d970ad4b82192a0b255e250b36822be2cb6a8ecc12dd6de338173119fbf",
+   "jpUrl": "d85ca96a0ff5f9884bc92cd380c88857dc6a803d3745c43c8062fa3e6c9f4880",
+   "enUrl": "94d9c6c4a50449f9a25ac8f91d350b6f6df0068650fb25d7b9f1d03a3bd3a02d",
+   "krUrl": "7c13e8b5d0f3675057f674c023ec7ad84424583176395fea531a06b6669cded6"
+  },
+  {
+   "id": 69,
+   "title": "謎解きに成功・1",
+   "text": "よくやったわ。",
+   "unlockRequirement": "",
+   "cnUrl": "8cd8a3574f45fc4a4ceeb75e84d517ed93619124566bd1e979a89c9db977b422",
+   "jpUrl": "8ba0d72dd506d8bac635789534f15f1780bd08dbc4d47ac4f81ef378f7ecb229",
+   "enUrl": "094b6bf860143d5ef9c6ce6dd37041dea0ba2e39b365e2f273bc4907219bc617",
+   "krUrl": "ee9a1ea501eebcbfd00216720d493afc551c821f23032504f7c85c6b62c0337f"
+  },
+  {
+   "id": 74,
+   "title": "謎解きに成功・2",
+   "text": "すごいわね。どんなご褒美が欲しい？",
+   "unlockRequirement": "",
+   "cnUrl": "eca45468594a1a13b3f29cc380084ab08cf75ef3ac9c33c512880cf1813c2a34",
+   "jpUrl": "994eebd409a2e33761147fde938a63d2e39961031b70bb2924ec85973f506932",
+   "enUrl": "1f13236a29d3d3c389b0e007f5306d5ebe92dd04add6d5b4ff3667e6547a5406",
+   "krUrl": "9d71ffaa1140fe4b1d69e1df43060b1f3a5eeb4d7aad7e34d55ceb229f08aca1"
+  },
+  {
+   "id": 70,
+   "title": "敵ターゲット発見",
+   "text": "あら？うずうずしてるようね？",
+   "unlockRequirement": "",
+   "cnUrl": "25a26db930d37a8d0e4a10501cc458716474d0906f482b5381e8ddd58f5a27fb",
+   "jpUrl": "f164960a914a4fa71566efe086ddd62cc0d3f46617b5b61a09a4b5a810bb25c5",
+   "enUrl": "028a7ea5f423ab7ef6e14c9df31be033d4eb9b895da1264ac5692fcfc1b353b9",
+   "krUrl": "fd0a68c068839db9d21b288179cabc3b01373176ce3df2d90c3b073de223c130"
+  },
+  {
+   "id": 71,
+   "title": "町に戻る",
+   "text": "あら、コートが汚れてる。困ったものね。",
+   "unlockRequirement": "",
+   "cnUrl": "cae4b7ca471fe4e8aba518231f6139e5fad68bafd076d01171f4cc4029afa0bf",
+   "jpUrl": "980ded0302051c03fd222ad918556ea226106d17f6385a248befac73c81a7a17",
+   "enUrl": "97accc9333748e46ee1238411750596d5f4af134ec4fb5ec30b89a014749f17e",
+   "krUrl": "96efc1b22c21f66c7bfd9c1b4224557e4be21c07ae222dc4f7b1fef17d7eb02c"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "キャラクター詳細",
+   "text": "スターピースカンパニーの指名手配ファイルには、カフカの名前と「趣味はコートを集めること」としか記されていない。人々がこの星核ハンターについて知っているのは、彼女が「運命の奴隷」エリオの最も信頼する構成員の1人だということだけだ。<br />エリオが予見した「未来」に辿り着くため、カフカは行動を開始する。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "ストーリー・1",
+   "text": "「カフカ。人類女性。プテルゲス-Vの新バビロン出身。星核ハンターのメンバーで『運命の奴隷』の助手。罪状：ピアポイント侵入、計2回。ピアポイント窃盗事件。トロヴェス星系失踪事件。ジェモス、ノースカナ、シーラ<nobr>-39</nobr>C、ウルモラ、七中村、ロー<nobr>-51</nobr>、トロワー星核事件。ピアポイントに対するハッキング攻撃、計4回。スクリュー星に対するハッキング攻撃。『ヘルタ』に対するハッキング攻撃。ヤペラー反逆事件。関与が疑われる罪状：シーツララ、インヌピース、ウェン-G7、祖寇、リタヴィア、イリー、アテューン、ブーハヤマ星核事件。<br />指名手配レベル：最高。生死を問わず」<br /><align=\"right\">——スターピースカンパニーが公表した指名手配書</align>",
+   "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・2",
+   "text": "「…事件の捜査のため、容疑者の基本情報を発表する。容疑者：カフカ（指名手配番号：L<nobr>933012000020002010004</nobr>）女、殊俗の民、年齢不詳。身長およそ<nobr>170</nobr>cm、標準体型、目撃時は黒い外套、中には白いブラウス、黒のタイトなパンツに紫のタイツ、頭には黒いサングラスを着用。<br />同容疑者は近頃発生した人的災害の関連者として通報され、現在逃亡中のため、羅浮全域で指名手配されている。容疑者の拠点または本人を見かけた場合は速やかに雲騎軍に連絡するように。容疑者に伝える。逃げられるとは思わずに、速やかに自首し、重要な情報をこちらに引き渡すように」<br /><align=\"right\">——羅浮が公表した指名手配書（撤回済み）</align>",
+   "unlockRequirement": "キャラLv.<nobr>40</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・3",
+   "text": "「…この女は『カフカ』という。新人ハンターで登録情報がなく、所属組織もない。彼女には『言霊』と呼ばれる能力があり、言語を使って催眠術をかけることができる。前回は新バビロンのリバーランドで姿を現し、大領主シッドと話し合いをしたのち彼を連れ去った。現場にいた人数<nobr>143</nobr>人。その後、オーダーメイド服飾店に行き、黒いコート1着、白いブラウス2着、赤いワンピース1着を受け取った。現場にいた人数6人。その後、中古レコード店に行ったが、何も購入しなかった。現場にいた人数<nobr>28</nobr>人。彼女がリバーランド警備局へ懸賞金をもらいに行く前、最後に目撃されたのは中央公園である。現場にいた人数<nobr>2695</nobr>人。我々は『カフカ』の首を求めている。命の負債にはその血を持って償ってもらうのだ」<br /><align=\"right\">——プテルゲス-Vの悪魔が公表した指名手配書</align>",
+   "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・4",
+   "text": "「…プテルゲス-Vに行くと、<nobr>135</nobr>:<nobr>7372124,271</nobr>:<nobr>6372711</nobr>に廃棄されたビルがある。中に入ると、1階の窓台の下に手つかずの飲料缶がある。それを持って、水曜日の午前<nobr>11</nobr>時<nobr>12</nobr>分まで待ち、缶をビルの入り口に置く。カフカは2分後に現れ、缶を調べる可能性がある。その隙にこのボールを彼女の足元に投げるといい。その後のことは、私が彼女に直接話す。<br />カフカが缶を気にしない可能性もある。その場合は、ボールを投げるだけでいい。君たちは死んでしまう。でも、人は皆、いつか死んでしまうものだ。君たちが欲しい未来を私は現実にしてあげよう」<br /><align=\"right\">——運命の奴隷が公開した指名手配書</align>",
+   "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
+  }
+ ],
+ "archive": {
+  "cvCn": "徐慧",
+  "cvJp": "伊藤静",
+  "cvKr": "사문영",
+  "cvEn": "Cheryl Texiera",
+  "camp": "星核ハンター"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "カフカ",
+ "rarity": 5,
+ "descHash": "「星核ハンター」のメンバーで、どこか余裕のある颯爽とした麗人。 言霊を使い、開拓者が星核を取り込むよう仕向けた。 趣味はコートを買ったり整理したりすること。",
+ "artPath": "46ef898f976e66cdf8e6e04b5950171e155e368ca58a119c194e44e146fd1752",
+ "miniIconPath": "075f07546de6a4c1d3169c999fd5a6cbd99dfc8d36edd1ba49d12d45dfb872a5",
+ "damageType": {
+  "id": 8,
+  "iconPath": "aec46e1b5be764fe83cac85e30f5832729012baa6a30bb8d91c82348d8a1b4d6",
+  "color": "#8872F1",
+  "name": "雷",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "96c3b8dd457b98955d440531986a23d509f705c13d7aa794d1e97bcfd03d5701",
+  "altIconPath": "b55d340138ed77756cd939d0d9ee2103a5398f999202c1ed19d092ac87333155",
+  "color": "#FFFFFF",
+  "name": "虚無",
+  "rarity": 0
+ },
+ "pageId": "kafka"
+}

@@ -5,29 +5,37 @@ import CharCard from "../CharCard/CharCard";
 import { map } from "lodash";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
+import testCharsData from "../../../../data/test-chars-data";
 
+/*
 const testImage1 = require("../../../../assets/images/test-charlist-img-1.png");
 const testImage2 = require("../../../../assets/images/test-charlist-img-2.png");
 const testImage3 = require("../../../../assets/images/test-charlist-img-3.png");
 const testImage4 = require("../../../../assets/images/test-charlist-img-4.png");
 
-const DATA_SET = [
+
+let DATA_SET = [
   { image: testImage1, star: 5, name: "镜流" },
-  { image: testImage2, star: 4, name: "停云" },
-  { image: testImage3, star: 5, name: "刃" },
-  { image: testImage4, star: 5, name: "希儿" },
   // 可以添加更多的元素
 ];
+*/
+
 
 export default function CharList() {
   const navigation = useNavigation();
 
   const [DATA, SetDATA] = useState<any>([]);
 
+  //const charJson = require("../../../../data/character_data/character_list.json")
+
   useEffect(() => {
-    const result = [];
-    for (let i = 0; i < 30; i++) {
-      result.push(DATA_SET[Math.floor(Math.random() * DATA_SET.length)]);
+    let result = [];
+    for (let i = 0; i < testCharsData.length; i++) {
+      result.push({
+        star: testCharsData[i].rare,
+        name: testCharsData[i].name,
+        image: testCharsData[i].image
+      });
     }
     SetDATA(result);
   }, []);

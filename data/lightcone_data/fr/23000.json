@@ -1,0 +1,498 @@
+{
+ "name": "Nuit sur la voie lactée",
+ "rarity": 5,
+ "descHash": "Si tu t'inquiètes de la route à suivre, lève à nouveau les yeux.<br />Quand les étoiles regardent doucement vers le bas, c'est que le cœur s'envole déjà.<br />Chaque pensée, chaque murmure<br />devient une expérience qui jamais ne se perdra.",
+ "iconPath": "7601d94bf50c53c78a4bb835f12392ea7486ed832de2e4504a217ed2bcfef7fa",
+ "artPath": "c13caada0da9aa415ef0318db7758df931155128b0f995f3f9d309d3d54637c1",
+ "mediumIconPath": "fdc524746bcb69d25418ff900bbac9bdb28cdd93af974eaf83299a3368b118d2",
+ "baseType": {
+  "id": 0,
+  "iconPath": "a1916e75aa6a99295aa01786a946ae601da457b578603446740cbe30bc5fba5a",
+  "color": "#FFFFFF",
+  "name": "L'Érudition",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Braises immortelles"
+   ]
+  },
+  "549438": {
+   "id": 549438,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5eb86757b6878dd09f969ed2d9e75af43eac2565bd49fdbe391f716e5adca101",
+   "name": "Noyau éteint",
+   "desc": "Le cœur d'un monstre errant dans le Fragmentum. Matériau commun utilisé pour le renforcement.",
+   "lore": "C'est une lésion qui engendre le mal, la pulsion du péché. C'est la source de la distorsion du Fragmentum.<br />Un coup puissant a fait cesser de battre ce cœur et lui a fait perdre son éclat.<br /><br />« Les tests préliminaires indiquent qu'il s'agit d'un genre d'hybride : une moitié est primitive, et l'autre est très similaire aux Stellarons. » — Département de biologie, Sarah Castro",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549438",
+   "comeFrom": [
+    "Certains monstres du Fragmentum",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633379": {
+   "id": 633379,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4886a5629723505540ba6d02fac7f264a3164458f4194796470c1826138ba105",
+   "name": "Noyau brillant",
+   "desc": "Le cœur d'un monstre errant dans le Fragmentum. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "C'est une lésion qui engendre le mal, la pulsion du péché. C'est la source de la distorsion du Fragmentum.<br />Son cœur brillant et les veines qu'il porte indiquent qu'il est toujours en vie.<br /><br />« De quel monstre s'agit-il ? Tu as vu... Son visage ! C'est celui de notre ancien chef ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633379",
+   "comeFrom": [
+    "Certains monstres du Fragmentum au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635675": {
+   "id": 635675,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "5d1c50902cff0d2be1eb952d08078e3134c231cdf0c9142c1ef475ec07c42b50",
+   "name": "Clé de l'inspiration",
+   "desc": "Clé mythique conservée par les érudits méditatifs. Permet d'améliorer légèrement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Érudition</span>.",
+   "lore": "Elle est capable de débloquer des inspirations enfouies au plus profond de la conscience.<br />S'emparer de la clé, c'est saisir les braises de la pensée qui éclairent la voie à suivre.<br /><br />« Eurêka ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635675",
+   "comeFrom": [
+    "Calice de la Ville de Rivet",
+    "Braises immortelles"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "Éther purifié",
+   "desc": "Matériau de renforcement de cône de lumière. Confère 6 <nobr>000</nobr> points d'EXP de cône de lumière.",
+   "lore": "Une bouteille d'éther raffiné par des procédés spéciaux.<br /><br />« Le Jardin se félicite de recréer une gloire passée, mais c'est une \"gloire passée\" qu'ils ont choisie. Tu comprends ? »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Salle oubliée"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "name": "Éther condensé",
+   "desc": "Matériau de renforcement de cône de lumière. Confère 2 <nobr>000</nobr> points d'EXP de cône de lumière.",
+   "lore": "Une bouteille d'éther raffiné par des procédés spéciaux.<br /><br />« À manier avec précaution, ne pas faire tomber, ne pas appliquer de pression. En cas de dommage ou de fuite, se référer au chapitre II du \"Manuel de prise en charge des désastres\" pour une solution d'urgence. »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Braises immortelles"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d4e3585911d6f71b87b47ced1a2f6e0b0f77dbdc8615650896e77bae87361afd",
+   "name": "Éther dilué",
+   "desc": "Matériau de renforcement de cône de lumière. Confère <nobr>500</nobr> points d'EXP de cône de lumière.",
+   "lore": "Substance imaginaire qui ne devrait pas exister dans le monde réel. Il s'agit du matériau de base pour fabriquer les cônes de lumière.<br />Les images des cônes de lumière sont plus nettes avec cette substance.<br /><br />« Je vois... Alors c'est ça la « mémorine » du Jardin de la mémoire. Pas étonnant que les protecteurs de la mémoire puissent embarquer pour des voyages galactiques avec des souvenirs. »",
+   "purpose": "Matériau d'EXP de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Calice du Col de Backwater",
+    "Récompense d'affectation"
+   ]
+  },
+  "717320": {
+   "id": 717320,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "f32ca1d67c0e385f701d450cae1c5dea41f334e31d61eb331d4be4dc7551c378",
+   "name": "Noyau des méandres",
+   "desc": "Le cœur d'un monstre errant dans le Fragmentum. Matériau avancé utilisé pour le renforcement.",
+   "lore": "C'est une lésion qui engendre le mal, la pulsion du péché. C'est la source de la distorsion du Fragmentum.<br />Le cœur bat lentement, mais la force qui lui reste est suffisamment puissante pour causer une nouvelle calamité. Il vaut mieux le détruire, afin d'éviter d'autres problèmes.<br /><br />« C'est comme un cancer... »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717320",
+   "comeFrom": [
+    "Certains monstres du Fragmentum au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836261": {
+   "id": 836261,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "name": "Clé de la sagesse",
+   "desc": "Clé mythique conservée par les plus grands prodiges de l'univers. Permet d'améliorer considérablement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Érudition</span>.",
+   "lore": "C'est la preuve d'une invitation aux salles du temple de Sagesse.<br />Trouver la porte qu'elle ouvre s'avère être une tâche bien plus ardue que d'obtenir la clé elle-même. Ceux qui franchissent les portes comprendront rapidement l'impossibilité de revenir en arrière.<br /><br />« L'Érudition n'apporte pas les réponses à l'univers, mais elle vous apprend à poser les bonnes questions. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836261",
+   "comeFrom": [
+    "Calice de la Ville de Rivet",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920202": {
+   "id": 920202,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "489f5c80b6f0de258e076634803c9540b0504c32e55f556748095c334780289d",
+   "name": "Clé de la connaissance",
+   "desc": "Clé mythique conservée par les sages des mondes. Permet d'améliorer modérément les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Érudition</span>.",
+   "lore": "Elle est capable de dévoiler les mystères du monde et accorde des connaissances dépassant l'entendement humain.<br />Quand bien même le porteur tenterait de se vanter de la posséder, lui seul en verra la forme physique. Certains pensent qu'il s'agit d'un cadeau du ciel, tandis que d'autres y voient un signe de maladie mentale.<br /><br />« J'ai rêvé de molécules s'enroulant en boucle, tel un serpent se mordant la queue. Je me suis réveillé et j'ai compris que c'était là la réponse que je cherchais depuis tout ce temps ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920202",
+   "comeFrom": [
+    "Calice de la Ville de Rivet",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Braises immortelles"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 5000
+    },
+    {
+     "id": 549438,
+     "count": 8
+    }
+   ],
+   "attackBase": 26.4,
+   "attackAdd": 3.96,
+   "hpBase": 52.8,
+   "hpAdd": 7.92,
+   "defenseBase": 18,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 10000
+    },
+    {
+     "id": 635675,
+     "count": 4
+    },
+    {
+     "id": 549438,
+     "count": 12
+    }
+   ],
+   "attackBase": 58.08,
+   "attackAdd": 3.96,
+   "hpBase": 116.16,
+   "hpAdd": 7.92,
+   "defenseBase": 39.6,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 20000
+    },
+    {
+     "id": 920202,
+     "count": 4
+    },
+    {
+     "id": 633379,
+     "count": 8
+    }
+   ],
+   "attackBase": 100.32,
+   "attackAdd": 3.96,
+   "hpBase": 200.64,
+   "hpAdd": 7.92,
+   "defenseBase": 68.4,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 50000
+    },
+    {
+     "id": 920202,
+     "count": 8
+    },
+    {
+     "id": 633379,
+     "count": 12
+    }
+   ],
+   "attackBase": 142.56,
+   "attackAdd": 3.96,
+   "hpBase": 285.12,
+   "hpAdd": 7.92,
+   "defenseBase": 97.2,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 100000
+    },
+    {
+     "id": 836261,
+     "count": 5
+    },
+    {
+     "id": 717320,
+     "count": 6
+    }
+   ],
+   "attackBase": 184.8,
+   "attackAdd": 3.96,
+   "hpBase": 369.6,
+   "hpAdd": 7.92,
+   "defenseBase": 126,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 200000
+    },
+    {
+     "id": 836261,
+     "count": 10
+    },
+    {
+     "id": 717320,
+     "count": 8
+    }
+   ],
+   "attackBase": 227.04,
+   "attackAdd": 3.96,
+   "hpBase": 454.08,
+   "hpAdd": 7.92,
+   "defenseBase": 154.8,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 269.28,
+   "attackAdd": 3.96,
+   "hpBase": 538.56,
+   "hpAdd": 7.92,
+   "defenseBase": 183.6,
+   "defenseAdd": 2.7
+  }
+ ],
+ "skill": {
+  "id": 23000,
+  "name": "Essaim de météores",
+  "descHash": "Pour chaque ennemi sur le champ de bataille, augmente l'ATQ du porteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> jusqu'à 5 cumuls. Lorsqu'un ennemi est affecté par Rupture de faiblesse, augmente les DGT infligés par le porteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> pendant 1 tour.",
+  "levelData": [
+   {
+    "params": [
+     0.3,
+     0.09
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.35,
+     0.105
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.4,
+     0.12
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.45,
+     0.135
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.5,
+     0.15
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 60,
+   "2": 100,
+   "3": 170,
+   "4": 260,
+   "5": 370,
+   "6": 500,
+   "7": 640,
+   "8": 800,
+   "9": 970,
+   "10": 1160,
+   "11": 1360,
+   "12": 1580,
+   "13": 1820,
+   "14": 2060,
+   "15": 2320,
+   "16": 2600,
+   "17": 2880,
+   "18": 3180,
+   "19": 3490,
+   "20": 3620,
+   "21": 3760,
+   "22": 3910,
+   "23": 4050,
+   "24": 4200,
+   "25": 4360,
+   "26": 4510,
+   "27": 4670,
+   "28": 4830,
+   "29": 4990,
+   "30": 5160,
+   "31": 5330,
+   "32": 5500,
+   "33": 5670,
+   "34": 5850,
+   "35": 6030,
+   "36": 6210,
+   "37": 6390,
+   "38": 6580,
+   "39": 6760,
+   "40": 6950,
+   "41": 7630,
+   "42": 8060,
+   "43": 8510,
+   "44": 8970,
+   "45": 9440,
+   "46": 9910,
+   "47": 10390,
+   "48": 10890,
+   "49": 11390,
+   "50": 11900,
+   "51": 12420,
+   "52": 12940,
+   "53": 13480,
+   "54": 14020,
+   "55": 14580,
+   "56": 15140,
+   "57": 15710,
+   "58": 16290,
+   "59": 16880,
+   "60": 17470,
+   "61": 18290,
+   "62": 19270,
+   "63": 20260,
+   "64": 21260,
+   "65": 22290,
+   "66": 23320,
+   "67": 24370,
+   "68": 25440,
+   "69": 26520,
+   "70": 27620,
+   "71": 30810,
+   "72": 33710,
+   "73": 36660,
+   "74": 39650,
+   "75": 42680,
+   "76": 45750,
+   "77": 48870,
+   "78": 52030,
+   "79": 55230,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "23000"
+}

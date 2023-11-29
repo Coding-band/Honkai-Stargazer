@@ -1,0 +1,513 @@
+{
+ "name": "Na Noite",
+ "rarity": 5,
+ "descHash": "A menina sorri sutilmente.<br />\"Como?\"<br />\"Aqui e agora, eu estou sozinha...\"<br />\"Mas me sinto... rodeada de vida.\"",
+ "iconPath": "fc99e923b5c567da69f0bde4d55944bee4a61f025bfa9926ef775069863e227d",
+ "artPath": "20023d49530f62821d6e826e229581e1471815385597e7d15c67561451907dbd",
+ "mediumIconPath": "928845c361e13bde8484ea3e9610526917c96fe1214a4fae3a4e5d68ea59ab35",
+ "baseType": {
+  "id": 0,
+  "iconPath": "948d90296adc5203a105a16be892d9e4d5e83c93df11abf59a8ad4321e37fbb8",
+  "color": "#FFFFFF",
+  "name": "A Caça",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédito",
+   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
+   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
+   "purpose": "Moeda Comum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cálice (Grande Mina)",
+    "Recompensas de Missão",
+    "Recompensas de Atribuição",
+    "Troca de Brasas"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "15365d10ed38771d99d247bc228b03787e29972cc714a655a9b8feef3031505e",
+   "name": "Instinto de Ladrão",
+   "desc": "Uma pequena quantidade de antimatéria. Material bruto usado para aprimoramentos.",
+   "lore": "Uma pequena quantidade de antimatéria que emana do Guarda-Vazio: Furtador como a materialização de seu instinto destrutivo.<br /><br />\"Eles todos anseiam pelo momento de obliteração, quando serão reforjados e fundidos com o mundo inteiro.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "Legião Antimatéria",
+    "Inimigos do Universo Simulado",
+    "Recompensas de Atribuição",
+    "Troca de Brasas",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3cd4c92ff44d695595377ffc6c0896d6839775f6014e96daf679b256bc0d19cf",
+   "name": "Esquema do Usurpador",
+   "desc": "Uma quantidade moderada de antimatéria. Material normal usado para aprimoramentos.",
+   "lore": "Uma quantidade moderada de antimatéria que paira em torno do Guarda-Vazio: Alterador. As partículas de matéria e antimatéria atingiram um equilíbrio perigoso...<br /><br />\"Eles todos anseiam pelo momento de obliteração, quando serão reforjados e fundidos com o mundo inteiro.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "Legião Antimatéria no Nível de Equilíbrio 2 ou superior",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "635674": {
+   "id": 635674,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bbfb88036f821da503753ae4189da74a1586b0b7ee8ec0f234bbf9fb53474d01",
+   "name": "Flecha de Caça-Feras",
+   "desc": "Ponta de flecha forjada com Aço Congelado pelos artesãos do Xianzhou. Usada para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Caça</span>.",
+   "lore": "Presente que os pais dão às crianças que conseguiram caçar sua primeira presa na cerimônia de maioridade. É uma bênção para que a vida delas seja verdadeira e bem sucedida como uma flecha que se encaminha em direção ao seu alvo.<br /><br />\"Que a flecha em sua cintura e a espada em sua bainha continuem precisas e sempre encontrem o seu alvo.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/635674",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Troca de Brasas"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a5f4de7a7ad08a1676729853622d0e38b14de79b20465aa9c738e6105a8c746d",
+   "name": "Éter Refinado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>6000</nobr> de EXP de Cone de Luz.",
+   "lore": "Uma lata de éter que foi extraída e destilada usando procedimentos especiais.<br /><br />\"O Jardim espera poder recriar uma glória do passado, mas é uma 'glória do passado' selecionada por eles. Você entende?\"",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)",
+    "Salão Esquecido"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "name": "Éter Condensado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>2.000</nobr> de EXP de Cone de Luz.",
+   "lore": "Lata de éter refinado com técnicas especiais.<br /><br />\"Manuseie com cuidado, não deixe cair nem faça pressão sobre ela. Caso ocorra algum vazamento, consulte o capítulo II do \"Manual de Respostas a Desastres de Vazamentos\" para respostas de emergência.\"",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)",
+    "Troca de Brasas"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d4e3585911d6f71b87b47ced1a2f6e0b0f77dbdc8615650896e77bae87361afd",
+   "name": "Éter Espalhado",
+   "desc": "Material de aprimoramento para Cones de Luz. É possível obter <nobr>500</nobr> de EXP de Cone de Luz.",
+   "lore": "Substância imaginária que não deveria existir. O material básico usado para criar Cones de Luz.<br />As imagens dos Cones de Luz se tornam ainda mais claras quando imbuídas dessa substância.<br /><br />\"Entendi, então essa é a suposta 'memória' do Jardim da Recordação. É por isso que os Memoriadores conseguem fazer viagens galácticas com lembranças\".",
+   "purpose": "Material de EXP de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Cálice (Passagem do Remanso)",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3c858c8ff4df238403e5443f57850367e4164a62efb508ce359db9c5b7474a19",
+   "name": "Vontade de Conquistador",
+   "desc": "Antimatéria condensada. Material avançado usado para aprimoramentos.",
+   "lore": "Antimatéria altamente condensada dentro do corpo do Guarda-Vazio: Pisoteador. O momento de obliteração é o soar da trombeta para a destruição das civilizações.<br /><br />\"Eles todos anseiam pelo momento de obliteração, quando serão reforjados e fundidos com o mundo inteiro.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "Legião Antimatéria no Nível de Equilíbrio 4 ou superior",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "836260": {
+   "id": 836260,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "f0bb6fd4143f707987f651fa21b81257202d038949944fa22d7615ad342d5bfa",
+   "name": "Flecha de Caça-Estrela",
+   "desc": "Um fragmento da Flecha Luminosa Devasta-Céu disparada pela Flecha do Destino. Usado para conceder um aumento considerável de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Caça</span>.",
+   "lore": "Os restos de uma construção divina que os humanos comuns raramente podem vislumbrar. Que tipo de força pode fragmentar estrelas que estão a anos-luz? A humanidade pode apenas imaginar o poder da Flecha Luminosa pelas cinzas que ela deixou para trás.<br />Apenas o mestre da fornalha, chefe dos artesãos do Xianzhou, é qualificado para forjar os fragmentos para quem os merecer.<br /><br />\"A morte de uma estrela continua brilhando por eras.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/836260",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  },
+  "920201": {
+   "id": 920201,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "fdcef4e7b19d0d08fb9ea878b30e08be44286d0a6273f29c89a77c6e17ad9572",
+   "name": "Flecha de Caça-Demônio",
+   "desc": "Ponta de flecha forjada com Essência de Stellaris pelos artesãos do Xianzhou. Usada para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Caça</span>.",
+   "lore": "Uma flecha mais fina que a espessura de um dedo. Pode ser utilizada em uma besta eletromagnética ou em um arco teleguiado por temperatura como munição. Seu poder é suficiente para perfurar as grossas couraças das abominações com apenas um acerto.<br /><br />\"O banido celestial chega de longe, depois de percorrer grandes distâncias entre oceanos de estrelas. Uma enxurrada de flechas cai como chuva, atingindo um elmo que reflete o forte brilho da lua.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/920201",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Sintetizador Omni — Síntese de Material",
+    "Troca de Brasas"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 5000
+    },
+    {
+     "id": 549437,
+     "count": 8
+    }
+   ],
+   "attackBase": 26.4,
+   "attackAdd": 3.96,
+   "hpBase": 48,
+   "hpAdd": 7.2,
+   "defenseBase": 21,
+   "defenseAdd": 3.15
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 10000
+    },
+    {
+     "id": 635674,
+     "count": 4
+    },
+    {
+     "id": 549437,
+     "count": 12
+    }
+   ],
+   "attackBase": 58.08,
+   "attackAdd": 3.96,
+   "hpBase": 105.6,
+   "hpAdd": 7.2,
+   "defenseBase": 46.2,
+   "defenseAdd": 3.15
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 20000
+    },
+    {
+     "id": 920201,
+     "count": 4
+    },
+    {
+     "id": 633378,
+     "count": 8
+    }
+   ],
+   "attackBase": 100.32,
+   "attackAdd": 3.96,
+   "hpBase": 182.4,
+   "hpAdd": 7.2,
+   "defenseBase": 79.8,
+   "defenseAdd": 3.15
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 50000
+    },
+    {
+     "id": 920201,
+     "count": 8
+    },
+    {
+     "id": 633378,
+     "count": 12
+    }
+   ],
+   "attackBase": 142.56,
+   "attackAdd": 3.96,
+   "hpBase": 259.2,
+   "hpAdd": 7.2,
+   "defenseBase": 113.4,
+   "defenseAdd": 3.15
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 100000
+    },
+    {
+     "id": 836260,
+     "count": 5
+    },
+    {
+     "id": 717319,
+     "count": 6
+    }
+   ],
+   "attackBase": 184.8,
+   "attackAdd": 3.96,
+   "hpBase": 336,
+   "hpAdd": 7.2,
+   "defenseBase": 147,
+   "defenseAdd": 3.15
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 200000
+    },
+    {
+     "id": 836260,
+     "count": 10
+    },
+    {
+     "id": 717319,
+     "count": 8
+    }
+   ],
+   "attackBase": 227.04,
+   "attackAdd": 3.96,
+   "hpBase": 412.8,
+   "hpAdd": 7.2,
+   "defenseBase": 180.6,
+   "defenseAdd": 3.15
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 269.28,
+   "attackAdd": 3.96,
+   "hpBase": 489.6,
+   "hpAdd": 7.2,
+   "defenseBase": 214.2,
+   "defenseAdd": 3.15
+  }
+ ],
+ "skill": {
+  "id": 23001,
+  "name": "Flores e Borboletas",
+  "descHash": "Aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> a Chance de CRIT do usuário. Enquanto o usuário estiver em batalha, para cada <nobr>#2[i]</nobr> de VEL acima de <nobr>100</nobr>, aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> o Dano do ATQ Básico e da Perícia do usuário, e o Dano CRIT da sua Perícia Suprema aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>. Este efeito acumula até <nobr>#5[i]</nobr> vez(es).",
+  "levelData": [
+   {
+    "params": [
+     0.18,
+     10,
+     0.06,
+     0.12,
+     6
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.21,
+     10,
+     0.07,
+     0.14,
+     6
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.24,
+     10,
+     0.08,
+     0.16,
+     6
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.27,
+     10,
+     0.09,
+     0.18,
+     6
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.3,
+     10,
+     0.1,
+     0.2,
+     6
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 60,
+   "2": 100,
+   "3": 170,
+   "4": 260,
+   "5": 370,
+   "6": 500,
+   "7": 640,
+   "8": 800,
+   "9": 970,
+   "10": 1160,
+   "11": 1360,
+   "12": 1580,
+   "13": 1820,
+   "14": 2060,
+   "15": 2320,
+   "16": 2600,
+   "17": 2880,
+   "18": 3180,
+   "19": 3490,
+   "20": 3620,
+   "21": 3760,
+   "22": 3910,
+   "23": 4050,
+   "24": 4200,
+   "25": 4360,
+   "26": 4510,
+   "27": 4670,
+   "28": 4830,
+   "29": 4990,
+   "30": 5160,
+   "31": 5330,
+   "32": 5500,
+   "33": 5670,
+   "34": 5850,
+   "35": 6030,
+   "36": 6210,
+   "37": 6390,
+   "38": 6580,
+   "39": 6760,
+   "40": 6950,
+   "41": 7630,
+   "42": 8060,
+   "43": 8510,
+   "44": 8970,
+   "45": 9440,
+   "46": 9910,
+   "47": 10390,
+   "48": 10890,
+   "49": 11390,
+   "50": 11900,
+   "51": 12420,
+   "52": 12940,
+   "53": 13480,
+   "54": 14020,
+   "55": 14580,
+   "56": 15140,
+   "57": 15710,
+   "58": 16290,
+   "59": 16880,
+   "60": 17470,
+   "61": 18290,
+   "62": 19270,
+   "63": 20260,
+   "64": 21260,
+   "65": 22290,
+   "66": 23320,
+   "67": 24370,
+   "68": 25440,
+   "69": 26520,
+   "70": 27620,
+   "71": 30810,
+   "72": 33710,
+   "73": 36660,
+   "74": 39650,
+   "75": 42680,
+   "76": 45750,
+   "77": 48870,
+   "78": 52030,
+   "79": 55230,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "23001"
+}
