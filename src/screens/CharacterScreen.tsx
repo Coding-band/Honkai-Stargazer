@@ -9,17 +9,17 @@ import { RouteProp, useRoute } from "@react-navigation/native";
 import { ParamList } from "../types/navigation";
 import Character from "../components/CharacterScreen/Character/Character";
 import { filter } from "lodash";
-import testCharsData from "../../data/test-chars-data";
 import CharacterType from "../types/Character";
 import CharacterContext from "../context/CharacterContext";
+import characterList from "../../data/character_data/character_list.json";
 
 export default function CharacterScreen() {
   const route = useRoute<RouteProp<ParamList, "Character">>();
-  const charId = route.params.id;
+  const charName = route.params.name;
   // @ts-ignore
   const charData: CharacterType = filter(
-    testCharsData,
-    (char) => char.id === charId
+    characterList,
+    (char) => char?.name === charName
   )[0];
 
   return (
@@ -39,7 +39,7 @@ export default function CharacterScreen() {
           colors={["#00000080", "#00000020"]}
         />
         <Header leftBtn="back" Icon={SCREENS.CharacterPage.icon}>
-          {charData.name || ""}
+          {charData?.name || ""}
         </Header>
         <Character />
         <LinearGradient

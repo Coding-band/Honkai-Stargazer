@@ -19,7 +19,7 @@ type Props = {
     | ImageSource[]
     | null
     | undefined;
-  star: 4 | 5;
+  rare: number;
   name: string;
   onPress?: (e: GestureResponderEvent) => void;
 };
@@ -37,7 +37,7 @@ export default function CharCard(props: Props) {
             overflow: "hidden",
           }}
           colors={
-            props.star === 5 ? ["#905A52", "#C8A471"] : ["#404165", "#9763CE"]
+            props.rare === 5 ? ["#905A52", "#C8A471"] : ["#404165", "#9763CE"]
           }
         >
           <View

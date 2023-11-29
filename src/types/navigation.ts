@@ -7,6 +7,6 @@ export type ParamList = {
     Icon: (props: IconProps) => React.JSX.Element;
   };
   Character: {
-    id: number;
+    name: string;
   };
 };

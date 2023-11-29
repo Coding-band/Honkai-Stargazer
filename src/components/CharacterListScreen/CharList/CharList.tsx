@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ScrollView, View } from "react-native";
-
 import CharCard from "../../global/layout/CharCard/CharCard";
 import { map } from "lodash";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
-import testCharsData from "../../../../data/test-chars-data";
+import characterList from "../../../../data/character_data/character_list.json";
+import * as character_list_map from "../../../../data/character_data/character_list_map";
 
 /*
 const testImage1 = require("../../../../assets/images/test-charlist-img-1.png");
@@ -27,25 +27,14 @@ let DATA_SET = [
 ];
 */
 
+const charListData = characterList.map((char) => ({
+  // @ts-ignore
+  name: character_list_map.ZH_HK[char.name]?.name || "",
+  rare: char.rare,
+}));
 
 export default function CharList() {
   const navigation = useNavigation();
-
-  const [DATA, SetDATA] = useState<any>([]);
-
-  //const charJson = require("../../../../data/character_data/character_list.json")
-
-  useEffect(() => {
-    let result = [];
-    for (let i = 0; i < testCharsData.length; i++) {
-      result.push({
-        star: testCharsData[i].rare,
-        name: testCharsData[i].name,
-        image: testCharsData[i].image
-      });
-    }
-    SetDATA(result);
-  }, []);
 
   return (
     <View style={{ width: "100%" }} className="p-[17px]">
@@ -59,13 +48,13 @@ export default function CharList() {
             justifyContent: "center",
           }}
         >
-          {map(DATA, (item, i) => (
+          {map(charListData, (item, i) => (
             <CharCard
               key={i}
               onPress={() => {
                 // @ts-ignore
                 navigation.navigate(SCREENS.CharacterPage.id, {
-                  id: 0,
+                  name: item?.name,
                 });
               }}
               {...item}
