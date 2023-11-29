@@ -10,12 +10,6 @@ import { LinearGradient } from "expo-linear-gradient";
 import { Image, ImageSource } from "expo-image";
 import { cn } from "../../../../utils/cn";
 
-const CardColors = {
-  2: ["#374860", "#3F797C"],
-  3: ["#393A5C", "#497AB8"],
-  4: ["#404165", "#9763CE"],
-};
-
 type Props = {
   image?:
     | string
@@ -25,8 +19,8 @@ type Props = {
     | ImageSource[]
     | null
     | undefined;
-  stars: 2 | 3 | 4;
-  count: number;
+  star: 4 | 5;
+  name: string;
   onPress?: (e: GestureResponderEvent) => void;
 };
 
@@ -42,7 +36,9 @@ export default function LightConeCard(props: Props) {
             borderTopRightRadius: 10,
             overflow: "hidden",
           }}
-          colors={CardColors[props.stars]}
+          colors={
+            props.star === 5 ? ["#905A52", "#C8A471"] : ["#404165", "#9763CE"]
+          }
         >
           <View
             //   style={animation}
@@ -55,12 +51,15 @@ export default function LightConeCard(props: Props) {
           >
             <Image
               transition={200}
-              style={{ width: 70, height: 70 }}
+              style={{ width: 75, height: 75 }}
               source={props.image}
             />
           </View>
         </LinearGradient>
       </Shadow>
+      <View style={{ alignItems: "center" }}>
+        <Text className="text-white text-[12px] font-[HY65]">{props.name}</Text>
+      </View>
     </TouchableOpacity>
   );
 }
