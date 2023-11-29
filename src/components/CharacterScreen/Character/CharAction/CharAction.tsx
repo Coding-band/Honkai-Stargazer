@@ -3,17 +3,20 @@ import React from "react";
 import Button from "../../../global/ui/Button/Button";
 import { Image } from "expo-image";
 import { cn } from "../../../../utils/cn";
+import { useSpring, animated } from "@react-spring/native";
 
 export default function CharAction({ show }: { show: boolean }) {
+  const animation = useSpring({ bottom: show ? 0 : -100 });
+
   return (
-    <View
+    <AnimatedView
       className={cn("w-full h-[83px] pb-[37px]", "absolute bottom-0 z-50")}
       style={{
-        opacity: show ? 1 : 0,
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "row",
         gap: 27,
+        ...animation,
       }}
     >
       <Button width={140} height={46}>
@@ -22,6 +25,8 @@ export default function CharAction({ show }: { show: boolean }) {
       <Button width={140} height={46}>
         <Text className="font-[HY65] text-[16px]">推荐配队</Text>
       </Button>
-    </View>
+    </AnimatedView>
   );
 }
+
+const AnimatedView = animated(View);
