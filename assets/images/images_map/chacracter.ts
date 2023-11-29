@@ -94,7 +94,7 @@ const Character = {
   },
   Seele: {
     icon: require("../../images/seele_icon.webp"),
-    imageFull: require("../../images/seele_image_full.png"),
+    imageFull: require("../../images/seele_full_image.png"),
   },
   Serval: {
     icon: require("../../images/serval_icon.webp"),
