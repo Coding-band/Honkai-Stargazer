@@ -10,21 +10,17 @@ import CharacterContext from "../../../../context/CharacterContext";
 
 type Props = {
   scrollHandler: SharedValue<number>;
+  charContainerHeight: number;
 };
 
 export default function CharImageFull(props: Props) {
   const charData = useContext(CharacterContext);
 
   const imageAnimatedStyles = useAnimatedStyle(() => {
-    if (props.scrollHandler.value > 0) {
-      return {
-        opacity: withSpring(0.3),
-      };
-    } else {
-      return {
-        opacity: withSpring(1),
-      };
-    }
+    const height = props.charContainerHeight;
+    const offsetY = props.scrollHandler.value;
+
+    return { opacity: 1 - (offsetY / height) * 1.7 || 0 };
   });
 
   return (
