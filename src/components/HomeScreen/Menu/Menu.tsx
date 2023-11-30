@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, ScrollView, LayoutChangeEvent } from "react-native";
+import { View, Text, ScrollView, LayoutChangeEvent, Platform } from "react-native";
 import { cn } from "../../../utils/cn";
 import MenuItem from "./MenuItem/MenuItem";
 import {
@@ -55,7 +55,7 @@ export default function Menu() {
   return (
     <View
       style={{
-        height: Dimensions.get("window").height - (130 + 138),
+        height: Dimensions.get("window").height - (Platform.OS === "ios" ? 295 : 268),
       }}
     >
       <ScrollView>
