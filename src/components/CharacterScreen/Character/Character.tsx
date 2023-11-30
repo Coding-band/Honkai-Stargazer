@@ -59,7 +59,7 @@ export default function Character() {
           charContainerHeight={containerHeight}
         />
       </View>
-      <View className="absolute w-full h-full p-[24px] pt-0 z-40">
+      <View className="absolute w-full h-full p-[24px] pt-0 pb-0 z-40">
         <Animated.ScrollView ref={aref}>
           <View onLayout={handleLayout}>
             <CharInfo />

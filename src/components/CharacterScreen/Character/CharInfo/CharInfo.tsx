@@ -13,7 +13,7 @@ export default function CharInfo() {
   return (
     <View
       style={{
-        paddingTop: Dimensions.get("window").height - 200,
+        paddingTop: Dimensions.get("window").height - 220,
         gap: 8,
       }}
     >
