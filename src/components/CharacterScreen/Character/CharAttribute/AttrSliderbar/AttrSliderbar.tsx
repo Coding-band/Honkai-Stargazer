@@ -1,5 +1,5 @@
 import { View, Text } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import { cn } from "../../../../../utils/cn";
 import { BlurView } from "expo-blur";
 import { PanGestureHandler } from "react-native-gesture-handler";
@@ -17,10 +17,14 @@ type Props = {
 
 export default function AttrSliderbar(props: Props) {
   // 定義每個點的 X 位置
-  const points = [0, 22, 57, 92, 130, 162, 200, 235,260]; // 根据您的布局调整这些值
+  const points = [0, 22, 57, 92, 130, 162, 200, 235, 258]; // 根据您的布局调整这些值
 
   const positionX = useSharedValue(points[props.value]);
   const transitionX = useSharedValue(0);
+
+  useEffect(() => {
+    positionX.value = points[props.value];
+  }, [props.value]);
 
   const animatedStyle = useAnimatedStyle(() => {
     let computedX = positionX.value + transitionX.value;
@@ -35,7 +39,6 @@ export default function AttrSliderbar(props: Props) {
     const closest = points.reduce((prev, curr) =>
       Math.abs(curr - x) < Math.abs(prev - x) ? curr : prev
     );
-    positionX.value = closest;
     transitionX.value = 0; // 重置 transitionX
     props.onChange(points.findIndex((v) => v === closest));
   };
@@ -51,14 +54,27 @@ export default function AttrSliderbar(props: Props) {
 
   return (
     <View
-      className={cn(
-        "w-[275px] h-4",
-        "bg-[#ffffff50] rounded-[30px] overflow-hidden"
-      )}
+      className={cn("w-[275px] h-12 my-[-8px]", "overflow-hidden")}
+      style={{ justifyContent: "center" }}
     >
+      <PanGestureHandler onGestureEvent={gestureHandler}>
+        <Animated.View
+          style={[
+            animatedStyle,
+            {
+              justifyContent: "center",
+              alignItems: "center",
+              transform: [{ translateX: -16 }, { translateY: -16 }],
+            },
+          ]}
+          className="z-50 w-12 h-12 rounded-full absolute top-4"
+        >
+          <View className="w-4 h-4 bg-[#FFFFFF] rounded-full absolute"></View>
+        </Animated.View>
+      </PanGestureHandler>
       <BlurView
         intensity={0}
-        className={cn("w-full h-full")}
+        className={cn("w-full h-4 bg-[#ffffff50] rounded-[30px] ")}
         style={{
           flexDirection: "row",
           gap: 32,
@@ -75,17 +91,6 @@ export default function AttrSliderbar(props: Props) {
         <View className="w-1 h-1 bg-[#404165] rounded-full"></View>
         <View className="w-1 h-1 bg-[#404165] rounded-full"></View>
       </BlurView>
-      <PanGestureHandler onGestureEvent={gestureHandler}>
-        <Animated.View
-          style={[
-            animatedStyle,
-            { alignItems: "center", transform: [{ translateX: -16 }] },
-          ]}
-          className="w-12 h-4 rounded-full absolute"
-        >
-          <View className="w-4 h-4 bg-[#FFFFFF] rounded-full absolute"></View>
-        </Animated.View>
-      </PanGestureHandler>
     </View>
   );
 }

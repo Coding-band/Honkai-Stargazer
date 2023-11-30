@@ -14,9 +14,25 @@ const ELIcon = require("../../../../../assets/icons/EL.png");
 const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 
 export default function CharAttribute() {
+  const [lastAttrFromLevel, setLastAttrFromLevel] = useState(0);
+  const [lastAttrToLevel, setLastAttrToLevel] = useState(8);
+
   const [attrFromLevel, setAttrFromLevel] = useState(0);
   const [attrToLevel, setAttrToLevel] = useState(8);
 
+  const handleFromLevelChange = (newLevel: number) => {
+    if (newLevel >= attrToLevel) {
+      return;
+    }
+    setAttrFromLevel(newLevel);
+  };
+
+  const handleToLevelChange = (newLevel: number) => {
+    if (newLevel <= attrFromLevel) {
+      return;
+    }
+    setAttrToLevel(newLevel);
+  };
   return (
     <View style={{ alignItems: "center" }}>
       <CharPageHeading Icon={Info}>基础属性</CharPageHeading>
@@ -34,7 +50,7 @@ export default function CharAttribute() {
           Lv.{attrFromLevel === 0 ? "1" : attrFromLevel * 10}
         </Text>
         {/* 等級滑動欄 */}
-        <AttrSliderbar value={attrFromLevel} onChange={setAttrFromLevel} />
+        <AttrSliderbar value={attrFromLevel} onChange={handleFromLevelChange} />
       </View>
       <Image
         className="w-[10px] h-[10px] my-[5px] ml-[5px]"
@@ -56,7 +72,7 @@ export default function CharAttribute() {
           Lv.{attrToLevel === 0 ? "1" : attrToLevel * 10}
         </Text>
         {/* 等級滑動欄 */}
-        <AttrSliderbar value={attrToLevel} onChange={setAttrToLevel} />
+        <AttrSliderbar value={attrToLevel} onChange={handleToLevelChange} />
       </View>
       {/* 屬性數值 */}
       <View className="mt-4" style={{ flexDirection: "row", gap: 20 }}>
