@@ -3,21 +3,41 @@ import React from "react";
 import Button from "../../../global/ui/Button/Button";
 import { Image } from "expo-image";
 import { cn } from "../../../../utils/cn";
-import { useSpring, animated } from "@react-spring/native";
+import Animated, {
+  SharedValue,
+  useAnimatedStyle,
+  withSpring,
+} from "react-native-reanimated";
 
-export default function CharAction({ show }: { show: boolean }) {
-  const animation = useSpring({ bottom: show ? 0 : -100 });
+type Props = {
+  scrollHandler: SharedValue<number>;
+};
+
+export default function CharAction(props: Props) {
+  const bottomAnimatedStyles = useAnimatedStyle(() => {
+    if (props.scrollHandler.value > 0) {
+      return {
+        opacity: withSpring(0),
+      };
+    } else {
+      return {
+        opacity: withSpring(1),
+      };
+    }
+  });
 
   return (
-    <AnimatedView
-      className={cn("w-full h-[83px] pb-[37px]", "absolute bottom-0 z-50")}
-      style={{
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "row",
-        gap: 27,
-        ...animation,
-      }}
+    <Animated.View
+      className={cn("w-full h-[83px] pb-[37px] z-50", "absolute bottom-0")}
+      style={[
+        bottomAnimatedStyles,
+        {
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "row",
+          gap: 27,
+        },
+      ]}
     >
       <Button width={140} height={46}>
         <Text className="font-[HY65] text-[16px]">推荐装备</Text>
@@ -25,8 +45,6 @@ export default function CharAction({ show }: { show: boolean }) {
       <Button width={140} height={46}>
         <Text className="font-[HY65] text-[16px]">推荐配队</Text>
       </Button>
-    </AnimatedView>
+    </Animated.View>
   );
 }
-
-const AnimatedView = animated(View);

@@ -11,40 +11,42 @@ import CharStory from "./CharStory/CharStory";
 import CharSuggestTeam from "./CharSuggestTeam/CharSuggestTeam";
 import CharSuggestRelics from "./CharSuggestRelics/CharSuggestRelics";
 import CharSuggestLightCone from "./CharSuggestLightCone/CharSuggestLightCone";
-import { useSpring, animated } from "@react-spring/native";
+import Animated, {
+  useAnimatedRef,
+  useAnimatedStyle,
+  useScrollViewOffset,
+  withSpring,
+} from "react-native-reanimated";
+import CharImageFull from "./CharImageFull/CharImageFull";
 
 export default function Character() {
-  const charData = useContext(CharacterContext);
+  const aref = useAnimatedRef<Animated.ScrollView>();
+  const scrollHandler = useScrollViewOffset(aref);
 
-  const [scrollForMore, setScrollForMore] = useState(false);
-  const imageAnimation = useSpring({ opacity: scrollForMore ? 0.3 : 1 });
-  const contentAnimation = useSpring({ opacity: scrollForMore ? 1 : 0 });
+  const contentAnimatedStyles = useAnimatedStyle(() => {
+    if (scrollHandler.value > 0) {
+      return {
+        opacity: withSpring(1),
+      };
+    } else {
+      return {
+        opacity: withSpring(0),
+      };
+    }
+  });
 
   return (
     <View className="absolute bottom-0 w-full" style={{ alignItems: "center" }}>
-      <AnimatedImage
-        transition={200}
-        style={{ width: 300, height: 692, ...imageAnimation }}
-        source={charData?.imageFull}
-      />
+      <CharImageFull scrollHandler={scrollHandler} />
       <View
         className="absolute w-full p-[24px] z-50"
         style={{
           height: Dimensions.get("window").height - 40,
         }}
       >
-        <ScrollView
-          onScroll={(e) => {
-            console.log(1);
-            if (e.nativeEvent.contentOffset.y > 0) {
-              setScrollForMore(true);
-            } else {
-              setScrollForMore(false);
-            }
-          }}
-        >
+        <Animated.ScrollView ref={aref}>
           <CharInfo />
-          <AnimatedView style={{ ...contentAnimation }}>
+          <Animated.View style={contentAnimatedStyles}>
             <CharAttribute />
             <CharMaterialList />
             <CharTrace />
@@ -53,42 +55,11 @@ export default function Character() {
             <CharSuggestTeam />
             <CharStory />
             <View className="pb-[150px]" />
-          </AnimatedView>
-        </ScrollView>
+          </Animated.View>
+        </Animated.ScrollView>
       </View>
-      <CharAction show={!scrollForMore} />
+      <CharAction scrollHandler={scrollHandler} />
     </View>
   );
 }
 
-const AnimatedView = animated(View)
-const AnimatedImage = animated(Image);
-
-// const startY = useSharedValue(0);
-// const scrollY = useSharedValue(0);
-
-// const animatedStyle = useAnimatedStyle(() => {
-//   return {
-//     transform: [
-//       {
-//         translateY: withTiming(scrollY.value, {
-//           duration: 400,
-//           easing: Easing.linear,
-//         }),
-//       },
-//     ],
-//   };
-// });
-
-// const gestureHandler = useAnimatedGestureHandler({
-//   onStart() {
-//     startY.value = scrollY.value;
-//   },
-//   onActive(e) {
-//     scrollY.value = startY.value + e.translationY * 1.6;
-//   },
-//   onEnd() {
-//     // 这里可以加入一些逻辑来决定滚动结束后的行为，比如使用动画平滑地回到起始位置
-//     // scrollY.value = withSpring(0);
-//   },
-// });
