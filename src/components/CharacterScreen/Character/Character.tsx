@@ -73,7 +73,7 @@ export default function Character() {
               <CharSuggestRelics />
               <CharSuggestTeam />
               <CharStory />
-              <View className="pb-[150px]" />
+              <View className="pb-[24px]" />
             </Animated.View>
           </View>
         </Animated.ScrollView>

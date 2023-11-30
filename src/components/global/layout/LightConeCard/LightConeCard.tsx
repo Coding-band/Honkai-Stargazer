@@ -57,7 +57,7 @@ export default function LightConeCard(props: Props) {
           </View>
         </LinearGradient>
       </Shadow>
-      <View style={{ alignItems: "center" }}>
+      <View style={{ alignItems: "center" }} className="pt-1">
         <Text className="text-white text-[12px] font-[HY65]">{props.name}</Text>
       </View>
     </TouchableOpacity>
