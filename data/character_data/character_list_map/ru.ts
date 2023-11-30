@@ -35,7 +35,7 @@ import Sushang from "../ru/sushang.json";
 import Tingyun from "../ru/tingyun.json";
 import Welt from "../ru/welt.json";
 import Yanqing from "../ru/yanqing.json";
-const ZH_HK = {
+const RU = {
   Argenti,
   Huohuo,
   Hanya,
@@ -75,4 +75,4 @@ const ZH_HK = {
   Yanqing,
 };
 
-export default ZH_HK;
+export default RU;

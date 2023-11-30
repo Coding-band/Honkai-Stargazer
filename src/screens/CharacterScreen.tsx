@@ -26,14 +26,14 @@ export default function CharacterScreen() {
   useEffect(() => {
     const charDataJson = filter(charList, (char) => char?.name === charId)[0];
     setCharData({
-      name: charListMap.ZH_HK[charId]?.name,
+      name: charListMap.ZH_CN[charId]?.name,
       rare: charDataJson?.rare,
-      path: charListMap.ZH_HK[charId]?.baseType?.name,
-      combatType: charListMap.ZH_HK[charId]?.damageType?.name,
-      location: charListMap.ZH_HK[charId]?.archive?.camp,
+      path: charListMap.ZH_CN[charId]?.baseType?.name,
+      combatType: charListMap.ZH_CN[charId]?.damageType?.name,
+      location: charListMap.ZH_CN[charId]?.archive?.camp,
       // @ts-ignore
       imageFull: imagesMap.Chacracter[charId]?.imageFull,
-      storyText: charListMap.ZH_HK[charId]?.storyItems[0].text,
+      storyText: charListMap.ZH_CN[charId]?.storyItems[0].text,
     });
     setShowMain(true);
   }, []);

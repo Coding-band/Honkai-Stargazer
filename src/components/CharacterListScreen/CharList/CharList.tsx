@@ -39,7 +39,7 @@ export default function CharList() {
       characterList.map((char) => ({
         id: char.name,
         name:
-          character_list_map.ZH_HK[char.name as CharacterName]?.name ||
+          character_list_map.ZH_CN[char.name as CharacterName]?.name ||
           char.name,
         rare: char.rare,
         image: images_map.Chacracter[char.name as CharacterName]?.icon,
