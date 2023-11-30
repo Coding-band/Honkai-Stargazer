@@ -46,9 +46,8 @@ export default function CharList() {
       }))
     );
   }, []);
-
   return (
-    <View style={{ width: "100%" }} className="p-[17px]">
+    <View style={{ width: "100%" }} className="p-[17px] pb-0 z-30">
       <ScrollView>
         <View
           style={{
@@ -66,6 +65,7 @@ export default function CharList() {
                 // @ts-ignore
                 navigation.navigate(SCREENS.CharacterPage.id, {
                   id: item?.id,
+                  name: item?.name,
                 });
               }}
               {...item}

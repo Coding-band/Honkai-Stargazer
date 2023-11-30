@@ -30,7 +30,7 @@ import CharEidolon from "./CharEidolon/CharEidolon";
 export default function Character() {
   const [containerHeight, setContainerHeight] = useState(0);
   const handleLayout = (event: LayoutChangeEvent) => {
-    const { width, height } = event.nativeEvent.layout;
+    const { height } = event.nativeEvent.layout;
     setContainerHeight(height);
   };
 
@@ -54,7 +54,7 @@ export default function Character() {
       className="absolute bottom-0 w-full h-screen"
       style={{ alignItems: "center" }}
     >
-      <View className="z-30 pt-32">
+      <View className="z-30 mt-28">
         <CharImageFull
           scrollHandler={scrollHandler}
           charContainerHeight={containerHeight}

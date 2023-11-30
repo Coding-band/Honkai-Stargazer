@@ -69,7 +69,7 @@ const Character = {
   },
   Bailu: {
     icon: require("../../images/character_icon/bailu_icon.webp"),
-    imageFull: require("../../images/character_splash/bailu_splash.webp"),
+    imageFull: require("../../images/character_full/bailu_full.webp"),
   },
   Bronya: {
     icon: require("../../images/character_icon/bronya_icon.webp"),
@@ -77,11 +77,11 @@ const Character = {
   },
   Clara: {
     icon: require("../../images/character_icon/clara_icon.webp"),
-    imageFull: require("../../images/character_splash/clara_splash.webp"),
+    imageFull: require("../../images/character_full/clara_full.webp"),
   },
   "Dan Heng": {
     icon: require("../../images/character_icon/dan_heng_icon.webp"),
-    imageFull: require("../../images/character_splash/dan_heng_splash.webp"),
+    imageFull: require("../../images/character_full/dan_heng_full.webp"),
   },
   Gepard: {
     icon: require("../../images/character_icon/gepard_icon.webp"),
@@ -105,7 +105,7 @@ const Character = {
   },
   "March 7th": {
     icon: require("../../images/character_icon/march_7th_icon.webp"),
-    imageFull: require("../../images/character_splash/march_7th_splash.webp"),
+    imageFull: require("../../images/character_full/march_7th_full.webp"),
   },
   Natasha: {
     icon: require("../../images/character_icon/natasha_icon.webp"),

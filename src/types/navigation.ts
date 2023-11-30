@@ -8,5 +8,6 @@ export type ParamList = {
   };
   Character: {
     id: string;
+    name: string;
   };
 };

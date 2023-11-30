@@ -24,13 +24,21 @@ export default function CharacterListScreen() {
         className="absolute w-full h-full"
         colors={["#00000080", "#00000020"]}
       />
+
       <Header Icon={SCREENS.CharacterListPage.icon}>
         {SCREENS.CharacterListPage.name}
       </Header>
-      <CharList />
-      <CharAction />
+      <>
+        <CharList />
+        <CharAction />
+      </>
       <LinearGradient
-        className="w-full h-[177px] absolute bottom-0"
+        pointerEvents="none"
+        className="w-full h-[177px] absolute bottom-0 z-40"
+        colors={["#00000000", "#000000"]}
+      />
+      <LinearGradient
+        className="w-full h-[600px] absolute bottom-0"
         colors={["#00000000", "#000000"]}
       />
     </View>

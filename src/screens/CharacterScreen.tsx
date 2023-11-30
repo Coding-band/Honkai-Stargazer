@@ -19,6 +19,7 @@ import * as imagesMap from "../../assets/images/images_map/images_map";
 export default function CharacterScreen() {
   const route = useRoute<RouteProp<ParamList, "Character">>();
   const charId = route.params.id as CharacterName;
+  const charName = route.params.name;
 
   const [charData, setCharData] = useState<Character>({});
   const [showMain, setShowMain] = useState(false);
@@ -54,12 +55,13 @@ export default function CharacterScreen() {
           className="absolute w-full h-full"
           colors={["#00000080", "#00000020"]}
         />
+
         <Header leftBtn="back" Icon={SCREENS.CharacterPage.icon}>
-          {charData?.name || ""}
+          {charName}
         </Header>
         {showMain && <CharacterMain />}
         <LinearGradient
-          className="w-full h-[400px] absolute bottom-0"
+          className="w-full h-[600px] absolute bottom-0"
           colors={["#00000000", "#000000"]}
         />
       </View>

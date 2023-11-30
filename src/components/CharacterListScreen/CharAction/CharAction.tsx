@@ -10,7 +10,7 @@ const BothSideArrowIcon = require("../../../../assets/icons/BothSideArrow.svg");
 export default function CharAction() {
   return (
     <View
-      className="w-full h-[46px] absolute bottom-0 z-50 mb-[37px]"
+      className="w-full h-[46px] absolute bottom-0 mb-[37px] z-50"
       style={{
         justifyContent: "center",
         alignItems: "center",

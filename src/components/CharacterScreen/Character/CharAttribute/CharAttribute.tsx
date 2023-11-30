@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text } from "react-native";
 import { Info } from "phosphor-react-native";
 import AttrSliderbar from "./AttrSliderbar/AttrSliderbar";

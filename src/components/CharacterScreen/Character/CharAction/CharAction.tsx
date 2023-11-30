@@ -28,7 +28,7 @@ export default function CharAction(props: Props) {
 
   return (
     <Animated.View
-      className={cn("w-full h-[83px] pb-[37px] z-50", "absolute bottom-0")}
+      className={cn("w-full h-[83px] mb-[20px] z-50", "absolute bottom-0")}
       style={[
         bottomAnimatedStyles,
         {
