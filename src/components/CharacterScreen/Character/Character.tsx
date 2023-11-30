@@ -25,6 +25,7 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 import CharImageFull from "./CharImageFull/CharImageFull";
+import CharEidolon from "./CharEidolon/CharEidolon";
 
 export default function Character() {
   const [containerHeight, setContainerHeight] = useState(0);
@@ -67,6 +68,7 @@ export default function Character() {
               <CharAttribute />
               <CharMaterialList />
               <CharTrace />
+              <CharEidolon />
               <CharSuggestLightCone />
               <CharSuggestRelics />
               <CharSuggestTeam />
