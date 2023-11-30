@@ -58,7 +58,7 @@ export default function CharCard(props: Props) {
                 alignItems: "center",
               }}
             >
-              <Text className="text-white font-[HY65] text-[12px]">
+              <Text className="text-white font-[HY65] text-[12px] leading-4">
                 {props.name}
               </Text>
             </View>

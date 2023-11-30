@@ -8,6 +8,7 @@ export type Character = {
   path?: string;
   combatType?: string;
   location?: string;
+  storyText?: string;
 };
 
 export type CharacterCard = {

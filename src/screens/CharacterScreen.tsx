@@ -33,6 +33,7 @@ export default function CharacterScreen() {
       location: charListMap.ZH_HK[charId]?.archive?.camp,
       // @ts-ignore
       imageFull: imagesMap.Chacracter[charId]?.imageFull,
+      storyText: charListMap.ZH_HK[charId]?.storyItems[0].text,
     });
     setShowMain(true);
   }, []);

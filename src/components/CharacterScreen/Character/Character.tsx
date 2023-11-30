@@ -49,17 +49,17 @@ export default function Character() {
   });
 
   return (
-    <View className="absolute bottom-0 w-full" style={{ alignItems: "center" }}>
-      <CharImageFull
-        scrollHandler={scrollHandler}
-        charContainerHeight={containerHeight}
-      />
-      <View
-        className="absolute w-full p-[24px] z-50"
-        style={{
-          height: Dimensions.get("window").height - 40,
-        }}
-      >
+    <View
+      className="absolute bottom-0 w-full h-screen"
+      style={{ alignItems: "center" }}
+    >
+      <View className="z-30 pt-32">
+        <CharImageFull
+          scrollHandler={scrollHandler}
+          charContainerHeight={containerHeight}
+        />
+      </View>
+      <View className="absolute w-full h-full p-[24px] pt-0 z-40">
         <Animated.ScrollView ref={aref}>
           <View onLayout={handleLayout}>
             <CharInfo />
