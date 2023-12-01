@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { ImageBackground } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/layout/Header";
@@ -9,6 +9,10 @@ import { SCREENS } from "../constant/screens";
 import CharList from "../components/CharacterListScreen/CharList/CharList";
 
 export default function CharacterListScreen() {
+  
+  const [installOrder, setInstallOrder] = useState(true);
+  
+
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
@@ -29,8 +33,10 @@ export default function CharacterListScreen() {
         {SCREENS.CharacterListPage.name}
       </Header>
       <>
-        <CharList />
-        <CharAction />
+        <CharList reverse={!installOrder}/>
+        <CharAction onInstallOrderChange={(o)=>{
+          setInstallOrder(o)
+        }} />
       </>
       <LinearGradient
         pointerEvents="none"

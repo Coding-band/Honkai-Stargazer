@@ -1,11 +1,11 @@
 import { View } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { ImageBackground } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/layout/Header";
 import { SCREENS } from "../constant/screens";
-import { RouteProp, useRoute } from "@react-navigation/native";
+import { RouteProp, useRoute, useScrollToTop } from "@react-navigation/native";
 import { ParamList } from "../types/navigation";
 import CharacterMain from "../components/CharacterScreen/Character/Character";
 import { filter } from "lodash";

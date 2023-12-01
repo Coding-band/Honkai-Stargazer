@@ -3,7 +3,8 @@ import { BlurView } from "expo-blur";
 import { Image } from "expo-image";
 import { IconProps } from "phosphor-react-native";
 import React from "react";
-import { Pressable, Text, View } from "react-native";
+import { Pressable, Text, TouchableOpacity, View } from "react-native";
+import { GestureResponderEvent } from "react-native-modal";
 import { Shadow } from "react-native-shadow-2";
 
 const CloseBtn = require("../../../../assets/icons/Close.svg");
@@ -13,6 +14,7 @@ type Props = {
   Icon: (e: IconProps) => React.JSX.Element;
   children: string;
   leftBtn?: "close" | "back";
+  onPress?: (e: GestureResponderEvent) => void;
 };
 
 export default function Header(props: Props) {
@@ -26,7 +28,7 @@ export default function Header(props: Props) {
   };
 
   return (
-    <View style={{ position: "absolute", width: "100%", zIndex: 50 }}>
+    <Pressable onPress={props.onPress} style={{ position: "absolute", width: "100%", zIndex: 50 }}>
       <BlurView
         style={{ height: 110, width: "100%" }}
         intensity={20}
@@ -44,7 +46,7 @@ export default function Header(props: Props) {
             }}
           >
             {/* 左邊叉叉 */}
-            <Pressable
+            <TouchableOpacity
               onPress={handleClose}
               className="absolute left-[17px] bottom-[19px] z-50"
             >
@@ -52,7 +54,7 @@ export default function Header(props: Props) {
                 style={{ width: 40, height: 40 }}
                 source={props.leftBtn === "back" ? BackBtn : CloseBtn}
               />
-            </Pressable>
+            </TouchableOpacity>
             {/* 中間主體 */}
             <View
               className="pb-3"
@@ -84,6 +86,6 @@ export default function Header(props: Props) {
           </View>
         </Shadow>
       </BlurView>
-    </View>
+    </Pressable>
   );
 }

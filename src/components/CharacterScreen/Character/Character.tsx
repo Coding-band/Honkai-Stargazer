@@ -28,7 +28,9 @@ import CharImageFull from "./CharImageFull/CharImageFull";
 import CharEidolon from "./CharEidolon/CharEidolon";
 
 export default function Character() {
+  
   const [containerHeight, setContainerHeight] = useState(0);
+  
   const handleLayout = (event: LayoutChangeEvent) => {
     const { height } = event.nativeEvent.layout;
     setContainerHeight(height);

@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { ScrollView, View } from "react-native";
 import CharCard from "../../global/layout/CharCard/CharCard";
-import { map } from "lodash";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
 import characterList from "../../../../data/character_data/character_list.json";
@@ -29,11 +28,15 @@ let DATA_SET = [
 ];
 */
 
-export default function CharList() {
+type Props = {
+  reverse?: boolean;
+};
+
+export default function CharList(props: Props) {
   const navigation = useNavigation();
 
+  // get characters' data
   const [charCardListData, setCharCardListData] = useState<CharacterCard[]>();
-
   useEffect(() => {
     setCharCardListData(
       characterList.map((char) => ({
@@ -46,6 +49,25 @@ export default function CharList() {
       }))
     );
   }, []);
+
+  const chaCardListJSX = useMemo(
+    () =>
+      charCardListData?.map((item, i) => (
+        <CharCard
+          key={i}
+          onPress={() => {
+            // @ts-ignore
+            navigation.navigate(SCREENS.CharacterPage.id, {
+              id: item?.id,
+              name: item?.name,
+            });
+          }}
+          {...item}
+        />
+      )),
+    [charCardListData]
+  );
+
   return (
     <View style={{ width: "100%" }} className="z-30">
       <ScrollView style={{ padding: 17, paddingBottom: 0 }}>
@@ -58,19 +80,7 @@ export default function CharList() {
             justifyContent: "center",
           }}
         >
-          {map(charCardListData, (item, i) => (
-            <CharCard
-              key={i}
-              onPress={() => {
-                // @ts-ignore
-                navigation.navigate(SCREENS.CharacterPage.id, {
-                  id: item?.id,
-                  name: item?.name,
-                });
-              }}
-              {...item}
-            />
-          ))}
+          {props.reverse ? chaCardListJSX?.slice().reverse() : chaCardListJSX}
         </View>
       </ScrollView>
     </View>
