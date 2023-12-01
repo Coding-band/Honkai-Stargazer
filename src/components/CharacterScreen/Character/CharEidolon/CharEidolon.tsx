@@ -1,43 +1,47 @@
 import { View, Text } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 import CharPageHeading from "../../../global/layout/CharPageHeading";
 import { StarHalf } from "phosphor-react-native";
 import { Image } from "expo-image";
-
-const testEidolon1 = require("../../../../../assets/images/character_eidolon/seele_eidolon1.webp");
-const testEidolon2 = require("../../../../../assets/images/character_eidolon/seele_eidolon2.webp");
-const testEidolon3 = require("../../../../../assets/images/character_eidolon/seele_eidolon3.webp");
-const testEidolon4 = require("../../../../../assets/images/character_eidolon/seele_eidolon4.webp");
-const testEidolon5 = require("../../../../../assets/images/character_eidolon/seele_eidolon5.webp");
-const testEidolon6 = require("../../../../../assets/images/character_eidolon/seele_eidolon6.webp");
-
+import CharacterContext from "../../../../context/CharacterContext";
+import Chacracter from "../../../../../assets/images/images_map/chacracter"
+import { CharacterName } from "../../../../types/character";
 export default function CharEidolon() {
+  const charData = useContext(CharacterContext);
+  //這部分要localeName as CharacterName
+  let charEidolon1 = Chacracter[charData?.name as CharacterName]?.eidolon1;
+  let charEidolon2 = Chacracter[charData?.name as CharacterName]?.eidolon2;
+  let charEidolon3 = Chacracter[charData?.name as CharacterName]?.eidolon3;
+  let charEidolon4 = Chacracter[charData?.name as CharacterName]?.eidolon4;
+  let charEidolon5 = Chacracter[charData?.name as CharacterName]?.eidolon5;
+  let charEidolon6 = Chacracter[charData?.name as CharacterName]?.eidolon6;
+
   return (
     <View style={{ alignItems: "center" }}>
       <CharPageHeading Icon={StarHalf}>星魂</CharPageHeading>
       <View className="w-full h-[280px]">
         <Image
-          source={testEidolon1}
+          source={charEidolon1}
           className="absolute w-[150px] h-[150px] left-[3px] top-[22px] z-30"
         />
         <Image
-          source={testEidolon2}
+          source={charEidolon2}
           className="absolute w-[150px] h-[150px] left-[100px]"
         />
         <Image
-          source={testEidolon3}
+          source={charEidolon3}
           className="absolute w-[150px] h-[150px] left-[185px]"
         />
         <Image
-          source={testEidolon6}
+          source={charEidolon6}
           className="absolute w-[150px] h-[150px] top-[120px] z-20"
         />
         <Image
-          source={testEidolon5}
+          source={charEidolon5}
           className="absolute w-[150px] h-[150px] top-[140px] left-[100px] z-10"
         />
         <Image
-          source={testEidolon4}
+          source={charEidolon4}
           className="absolute w-[150px] h-[150px] top-[114px] left-[200px]"
         />
       </View>
