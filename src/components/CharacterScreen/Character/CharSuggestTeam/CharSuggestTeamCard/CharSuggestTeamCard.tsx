@@ -23,7 +23,7 @@ export default function CharSuggestTeamCard(props: Props) {
         style={{
           opacity: isSelected ? 0 : 1,
           flexDirection: "row",
-          justifyContent: "space-between",
+          gap: 8,
         }}
       >
         {props.team.map((char, i) => (

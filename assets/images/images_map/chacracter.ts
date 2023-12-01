@@ -31,7 +31,7 @@ const Character = {
   },
   Jingliu: {
     icon: require("../../images/character_icon/jingliu_icon.webp"),
-    imageFull: require("../../images/character_splash/jingliu_splash.webp"),
+    imageFull: require("../../images/character_full/jingliu_full.webp"),
     eidolon1: require("../../images/character_eidolon/jingliu_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/jingliu_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/jingliu_eidolon3.webp"),
@@ -41,7 +41,7 @@ const Character = {
   },
   Bailu: {
     icon: require("../../images/character_icon/bailu_icon.webp"),
-    imageFull: require("../../images/character_splash/bailu_splash.webp"),
+    imageFull: require("../../images/character_full/bailu_full.webp"),
     eidolon1: require("../../images/character_eidolon/bailu_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/bailu_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/bailu_eidolon3.webp"),
@@ -110,7 +110,7 @@ const Character = {
     eidolon6: require("../../images/character_eidolon/topaz_eidolon6.webp"),
   },
   Clara: {
-    icon: require("../../images/character_icon/clara_icon.webp"),
+    icon: require("../../images/character_full/clara_full.webp"),
     imageFull: require("../../images/character_splash/clara_splash.webp"),
     eidolon1: require("../../images/character_eidolon/clara_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/clara_eidolon2.webp"),
@@ -131,7 +131,7 @@ const Character = {
   },
   Seele: {
     icon: require("../../images/character_icon/seele_icon.webp"),
-    imageFull: require("../../images/character_splash/seele_splash.webp"),
+    imageFull: require("../../images/character_full/seele_full.png"),
     eidolon1: require("../../images/character_eidolon/seele_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/seele_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/seele_eidolon3.webp"),
@@ -220,7 +220,7 @@ const Character = {
     eidolon6: require("../../images/character_eidolon/yukong_eidolon6.webp"),
   },
   Sushang: {
-    icon: require("../../images/character_icon/sushang_icon.webp"),
+    icon: require("../../images/character_full/sushang_full.png"),
     imageFull: require("../../images/character_splash/sushang_splash.webp"),
     eidolon1: require("../../images/character_eidolon/sushang_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/sushang_eidolon2.webp"),
@@ -241,7 +241,7 @@ const Character = {
   },
   Qingque: {
     icon: require("../../images/character_icon/qingque_icon.webp"),
-    imageFull: require("../../images/character_splash/qingque_splash.webp"),
+    imageFull: require("../../images/character_full/qingque_full.webp"),
     eidolon1: require("../../images/character_eidolon/qingque_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/qingque_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/qingque_eidolon3.webp"),
@@ -351,7 +351,7 @@ const Character = {
   },
   "Dan Heng": {
     icon: require("../../images/character_icon/dan_heng_icon.webp"),
-    imageFull: require("../../images/character_splash/dan_heng_splash.webp"),
+    imageFull: require("../../images/character_full/dan_heng_full.webp"),
     eidolon1: require("../../images/character_eidolon/dan_heng_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/dan_heng_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/dan_heng_eidolon3.webp"),
@@ -361,7 +361,7 @@ const Character = {
   },
   "March 7th": {
     icon: require("../../images/character_icon/march_7th_icon.webp"),
-    imageFull: require("../../images/character_splash/march_7th_splash.webp"),
+    imageFull: require("../../images/character_full/march_7th_full.webp"),
     eidolon1: require("../../images/character_eidolon/march_7th_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/march_7th_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/march_7th_eidolon3.webp"),

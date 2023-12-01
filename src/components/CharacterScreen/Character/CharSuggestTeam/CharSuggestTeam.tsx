@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { ScrollView, View } from "react-native";
 import React from "react";
 import CharPageHeading from "../../../global/layout/CharPageHeading";
 import { Person } from "phosphor-react-native";
@@ -31,7 +31,6 @@ export default function CharSuggestTeam() {
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-between",
           flexWrap: "wrap",
           rowGap: 16,
         }}
