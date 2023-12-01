@@ -1,20 +1,33 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { ExpoImage } from "../../../../../types/image";
 import CharCard from "../../../../global/layout/CharCard/CharCard";
 import { Pressable, View } from "react-native";
 import Modal from "react-native-modal";
 import PopUpCard from "../../../../global/layout/PopUpCard/PopUpCard";
+import { useNavigation } from "@react-navigation/native";
+import CharacterContext from "../../../../../context/CharacterContext";
+import { SCREENS } from "../../../../../constant/screens";
 
 type Props = {
-  team: { image: ExpoImage; rare: number; name: string }[];
+  team: { image: ExpoImage; rare: number; name: string; id: string }[];
 };
 
 export default function CharSuggestTeamCard(props: Props) {
+  const navigation = useNavigation();
+
   const [isSelected, setIsSelected] = useState(false);
 
-  const handlePress = useCallback(() => {
+  const handleTeamPress = useCallback(() => {
     setIsSelected(true);
   }, [isSelected]);
+
+  const handleCharPress = useCallback((charId: string, charName: string) => {
+    // @ts-ignore
+    navigation.push(SCREENS.CharacterPage.id, {
+      id: charId,
+      name: charName,
+    });
+  }, []);
 
   return (
     <View>
@@ -27,7 +40,7 @@ export default function CharSuggestTeamCard(props: Props) {
         }}
       >
         {props.team.map((char, i) => (
-          <CharCard onPress={handlePress} key={i} {...char} />
+          <CharCard onPress={handleTeamPress} key={i} {...char} />
         ))}
       </View>
       <Modal
@@ -56,7 +69,7 @@ export default function CharSuggestTeamCard(props: Props) {
             }}
           >
             {props.team.map((char, i) => (
-              <CharCard onPress={handlePress} key={i} {...char} />
+              <CharCard onPress={handleCharPress} key={i} {...char} />
             ))}
           </View>
           <PopUpCard

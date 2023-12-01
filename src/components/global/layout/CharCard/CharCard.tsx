@@ -11,6 +11,9 @@ import { Image, ImageSource } from "expo-image";
 import { cn } from "../../../../utils/cn";
 
 type Props = {
+  id: string;
+  rare: number;
+  name: string;
   image?:
     | string
     | number
@@ -19,16 +22,19 @@ type Props = {
     | ImageSource[]
     | null
     | undefined;
-  rare: number;
-  name: string;
-  onPress?: (e: GestureResponderEvent) => void;
+  onPress?: (charId: string, charName: string) => void;
 };
 
 export default function CharCard(props: Props) {
   //   const animation = useSpring({ from: { opacity: 0.25 }, to: { opacity: 1 } });
 
   return (
-    <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
+    <TouchableOpacity
+      activeOpacity={0.65}
+      onPress={() => {
+        props.onPress && props.onPress(props.id, props.name);
+      }}
+    >
       {/* <Shadow distance={6} offset={[4, 4]} startColor="#00000025"> */}
       <LinearGradient
         style={{

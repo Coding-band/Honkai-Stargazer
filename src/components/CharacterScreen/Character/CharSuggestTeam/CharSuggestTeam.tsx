@@ -1,26 +1,65 @@
-import { ScrollView, View } from "react-native";
+import { View } from "react-native";
 import React from "react";
 import CharPageHeading from "../../../global/layout/CharPageHeading";
 import { Person } from "phosphor-react-native";
 import CharSuggestTeamCard from "./CharSuggestTeamCard/CharSuggestTeamCard";
 
-const testImage1 = require("../../../../../assets/images/test-charlist-img-1.png");
-const testImage2 = require("../../../../../assets/images/test-charlist-img-2.png");
-const testImage3 = require("../../../../../assets/images/test-charlist-img-3.png");
-const testImage4 = require("../../../../../assets/images/test-charlist-img-4.png");
+import characterList from "../../../../../data/character_data/character_list.json";
+import * as characterListMap from "../../../../../data/character_data/character_list_map/character_list_map";
+import * as imagesMap from "../../../../../assets/images/images_map/images_map";
 
 const testData = [
   [
-    { image: testImage1, rare: 5, name: "镜流" },
-    { image: testImage2, rare: 4, name: "停云" },
-    { image: testImage3, rare: 5, name: "刃" },
-    { image: testImage4, rare: 5, name: "希儿" },
+    {
+      id: "Jing Yuan",
+      rare: characterList.filter((char) => char.name === "Jing Yuan")[0].rare,
+      name: characterListMap.ZH_CN["Jing Yuan"].name,
+      image: imagesMap.Chacracter["Jing Yuan"].icon,
+    },
+    {
+      id: "Hook",
+      rare: characterList.filter((char) => char.name === "Hook")[0].rare,
+      name: characterListMap.ZH_CN["Hook"].name,
+      image: imagesMap.Chacracter["Hook"].icon,
+    },
+    {
+      id: "Pela",
+      rare: characterList.filter((char) => char.name === "Pela")[0].rare,
+      name: characterListMap.ZH_CN["Pela"].name,
+      image: imagesMap.Chacracter["Pela"].icon,
+    },
+    {
+      id: "Seele",
+      rare: characterList.filter((char) => char.name === "Seele")[0].rare,
+      name: characterListMap.ZH_CN["Seele"].name,
+      image: imagesMap.Chacracter["Seele"].icon,
+    },
   ],
   [
-    { image: testImage2, rare: 4, name: "停云" },
-    { image: testImage3, rare: 5, name: "刃" },
-    { image: testImage1, rare: 5, name: "镜流" },
-    { image: testImage4, rare: 5, name: "希儿" },
+    {
+      id: "March 7th",
+      rare: characterList.filter((char) => char.name === "March 7th")[0].rare,
+      name: characterListMap.ZH_CN["March 7th"].name,
+      image: imagesMap.Chacracter["March 7th"].icon,
+    },
+    {
+      id: "Serval",
+      rare: characterList.filter((char) => char.name === "Serval")[0].rare,
+      name: characterListMap.ZH_CN["Serval"].name,
+      image: imagesMap.Chacracter["Serval"].icon,
+    },
+    {
+      id: "Clara",
+      rare: characterList.filter((char) => char.name === "Clara")[0].rare,
+      name: characterListMap.ZH_CN["Clara"].name,
+      image: imagesMap.Chacracter["Clara"].icon,
+    },
+    {
+      id: "Bailu",
+      rare: characterList.filter((char) => char.name === "Bailu")[0].rare,
+      name: characterListMap.ZH_CN["Bailu"].name,
+      image: imagesMap.Chacracter["Bailu"].icon,
+    },
   ],
 ];
 

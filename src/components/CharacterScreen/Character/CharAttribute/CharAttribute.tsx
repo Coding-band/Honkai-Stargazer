@@ -14,9 +14,6 @@ const ELIcon = require("../../../../../assets/icons/EL.png");
 const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 
 export default function CharAttribute() {
-  const [lastAttrFromLevel, setLastAttrFromLevel] = useState(0);
-  const [lastAttrToLevel, setLastAttrToLevel] = useState(8);
-
   const [attrFromLevel, setAttrFromLevel] = useState(0);
   const [attrToLevel, setAttrToLevel] = useState(8);
 
