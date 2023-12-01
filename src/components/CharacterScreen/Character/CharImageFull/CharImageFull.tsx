@@ -31,9 +31,9 @@ export default function CharImageFull(props: Props) {
       {loaded && (
         <Image
           transition={200}
-          style={{ width: 500, height: 690 }}
+          style={{ width: 500, height: 690, transform: [{ scale: 1.2 }] }}
           source={charData?.imageFull}
-          contentFit="contain"
+          contentFit="none"
         />
       )}
     </Animated.View>
