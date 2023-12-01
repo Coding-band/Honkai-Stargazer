@@ -1,6 +1,7 @@
 import { ExpoImage } from "./image";
 
 export type Character = {
+  id?: CharacterName;
   name?: string;
   image?: ExpoImage;
   imageFull?: ExpoImage;

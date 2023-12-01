@@ -35,42 +35,47 @@ export default function MaterialCard(props: Props) {
 
   return (
     <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
-      <Shadow distance={6} offset={[4, 4]} startColor="#00000025">
-        <LinearGradient
+      {/* <Shadow distance={6} offset={[4, 4]} startColor="#00000025"> */}
+      <LinearGradient
+        style={{
+          borderRadius: 4,
+          borderTopRightRadius: 10,
+          overflow: "hidden",
+          shadowOffset: { width: 4, height: 4 },
+          shadowRadius: 8,
+          shadowColor: "#000000",
+          shadowOpacity: 0.25,
+          elevation: 8,
+        }}
+        colors={CardColors[props.stars]}
+      >
+        <View
+          //   style={animation}
           style={{
-            borderRadius: 4,
-            borderTopRightRadius: 10,
-            overflow: "hidden",
+            width: 58,
+            height: 80,
+            alignItems: "center",
           }}
-          colors={CardColors[props.stars]}
         >
+          <Image
+            transition={200}
+            style={{ width: 46, height: 46, marginVertical: 5 }}
+            source={props.image}
+          />
           <View
-            //   style={animation}
+            className="bg-[#222222]"
             style={{
               width: 58,
-              height: 80,
+              height: 20,
+              justifyContent: "center",
               alignItems: "center",
             }}
           >
-            <Image
-              transition={200}
-              style={{ width: 46, height: 46, marginVertical: 5 }}
-              source={props.image}
-            />
-            <View
-              className="bg-[#222222]"
-              style={{
-                width: 58,
-                height: 20,
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Text className="text-white text-[12px]">{props.count}</Text>
-            </View>
+            <Text className="text-white text-[12px]">{props.count}</Text>
           </View>
-        </LinearGradient>
-      </Shadow>
+        </View>
+      </LinearGradient>
+      {/* </Shadow> */}
     </TouchableOpacity>
   );
 }

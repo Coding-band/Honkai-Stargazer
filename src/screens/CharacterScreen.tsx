@@ -27,6 +27,7 @@ export default function CharacterScreen() {
   useEffect(() => {
     const charDataJson = filter(charList, (char) => char?.name === charId)[0];
     setCharData({
+      id: charId,
       name: charListMap.ZH_CN[charId]?.name,
       rare: charDataJson?.rare,
       path: charListMap.ZH_CN[charId]?.baseType?.name,

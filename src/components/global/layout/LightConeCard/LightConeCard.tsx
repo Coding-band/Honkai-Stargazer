@@ -22,34 +22,39 @@ export default function LightConeCard(props: Props) {
 
   return (
     <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
-      <Shadow distance={6} offset={[4, 4]} startColor="#00000025">
-        <LinearGradient
+      {/* <Shadow distance={6} offset={[4, 4]} startColor="#00000025"> */}
+      <LinearGradient
+        style={{
+          borderRadius: 4,
+          borderTopRightRadius: 10,
+          overflow: "hidden",
+          shadowOffset: { width: 4, height: 4 },
+          shadowRadius: 8,
+          shadowColor: "#000000",
+          shadowOpacity: 0.25,
+          elevation: 8,
+        }}
+        colors={
+          props.rare === 5 ? ["#905A52", "#C8A471"] : ["#404165", "#9763CE"]
+        }
+      >
+        <View
+          //   style={animation}
           style={{
-            borderRadius: 4,
-            borderTopRightRadius: 10,
-            overflow: "hidden",
+            width: 80,
+            height: 80,
+            alignItems: "center",
+            justifyContent: "center",
           }}
-          colors={
-            props.rare === 5 ? ["#905A52", "#C8A471"] : ["#404165", "#9763CE"]
-          }
         >
-          <View
-            //   style={animation}
-            style={{
-              width: 80,
-              height: 80,
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Image
-              transition={200}
-              style={{ width: 75, height: 75 }}
-              source={props.image}
-            />
-          </View>
-        </LinearGradient>
-      </Shadow>
+          <Image
+            transition={200}
+            style={{ width: 75, height: 75 }}
+            source={props.image}
+          />
+        </View>
+      </LinearGradient>
+      {/* </Shadow> */}
       <View style={{ alignItems: "center" }} className="pt-1">
         <Text className="text-white text-[12px] font-[HY65]">{props.name}</Text>
       </View>

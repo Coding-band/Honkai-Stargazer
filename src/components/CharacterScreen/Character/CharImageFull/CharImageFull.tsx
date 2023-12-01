@@ -23,7 +23,7 @@ export default function CharImageFull(props: Props) {
     const height = props.charContainerHeight;
     const offsetY = props.scrollHandler.value;
 
-    return { opacity: 1 - (offsetY / height) * 14 || 0 };
+    return { opacity: 1 - (offsetY / height) * 12 || 0 };
   });
 
   return (

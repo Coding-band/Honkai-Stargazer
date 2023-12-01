@@ -1,20 +1,22 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React, { useContext } from "react";
 import CharPageHeading from "../../../global/layout/CharPageHeading";
 import { StarHalf } from "phosphor-react-native";
 import { Image } from "expo-image";
 import CharacterContext from "../../../../context/CharacterContext";
-import Chacracter from "../../../../../assets/images/images_map/chacracter"
+import Chacracter from "../../../../../assets/images/images_map/chacracter";
 import { CharacterName } from "../../../../types/character";
+
 export default function CharEidolon() {
   const charData = useContext(CharacterContext);
+
   //這部分要localeName as CharacterName
-  let charEidolon1 = Chacracter[charData?.name as CharacterName]?.eidolon1;
-  let charEidolon2 = Chacracter[charData?.name as CharacterName]?.eidolon2;
-  let charEidolon3 = Chacracter[charData?.name as CharacterName]?.eidolon3;
-  let charEidolon4 = Chacracter[charData?.name as CharacterName]?.eidolon4;
-  let charEidolon5 = Chacracter[charData?.name as CharacterName]?.eidolon5;
-  let charEidolon6 = Chacracter[charData?.name as CharacterName]?.eidolon6;
+  let charEidolon1 = Chacracter[charData?.id as CharacterName]?.eidolon1;
+  let charEidolon2 = Chacracter[charData?.id as CharacterName]?.eidolon2;
+  let charEidolon3 = Chacracter[charData?.id as CharacterName]?.eidolon3;
+  let charEidolon4 = Chacracter[charData?.id as CharacterName]?.eidolon4;
+  let charEidolon5 = Chacracter[charData?.id as CharacterName]?.eidolon5;
+  let charEidolon6 = Chacracter[charData?.id as CharacterName]?.eidolon6;
 
   return (
     <View style={{ alignItems: "center" }}>

@@ -1,33 +1,24 @@
-import {
-  View,
-  Text,
-  GestureResponderEvent,
-  Pressable,
-} from "react-native";
+import { View, Text, GestureResponderEvent, Pressable } from "react-native";
 import React, { useCallback, useState } from "react";
 import LightConeCard from "../../../../global/layout/LightConeCard/LightConeCard";
 import { ExpoImage } from "../../../../../types/image";
 import Modal from "react-native-modal";
 import { BlurView } from "expo-blur";
 import { Image } from "expo-image";
+import PopUpCard from "../../../../global/layout/PopUpCard/PopUpCard";
 
 type Props = {
   image?: ExpoImage;
   rare: 4 | 5;
   name: string;
-  onPress?: (e: GestureResponderEvent) => void;
 };
 
 export default function CharSuggestLightConeCard(props: Props) {
   const [isSelected, setIsSelected] = useState(false);
 
-  const handlePress = useCallback(
-    (e: GestureResponderEvent) => {
-      props.onPress && props.onPress(e);
-      setIsSelected(true);
-    },
-    [isSelected, props.onPress]
-  );
+  const handlePress = useCallback(() => {
+    setIsSelected(true);
+  }, [isSelected]);
 
   return (
     <View>
@@ -40,6 +31,7 @@ export default function CharSuggestLightConeCard(props: Props) {
         />
       </View>
       <Modal
+        useNativeDriverForBackdrop
         animationIn="fadeInLeft"
         animationOut="fadeOutRight"
         isVisible={isSelected}
@@ -64,34 +56,10 @@ export default function CharSuggestLightConeCard(props: Props) {
               rare={props.rare}
             />
           </View>
-          <BlurView
-            intensity={250}
-            style={{ backgroundColor: "rgba(243, 249, 255, 0.80)" }}
-            className="w-full rounded-[4px] rounded-tr-[24px] overflow-hidden"
-          >
-            <View
-              className="w-full p-4"
-              style={{
-                flexDirection: "row",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <Text className="font-[HY65] text-[20px]">于夜色中</Text>
-              <Image
-                style={{ width: 40, height: 40 }}
-                source={require("../../../../../../assets/icons/CloseBlack.svg")}
-              />
-            </View>
-            <View className="w-full px-4">
-              <View className="w-full h-[2px] bg-[#00000010]"></View>
-            </View>
-            <View>
-              <Text className="text-[#666] text-[14px] font-[HY65] leading-5 px-4 pb-2 pt-3">
-                希儿的限定毕业光锥，提供了非常暴力的输出数值，同时对她的速度有一定要求，推荐副词条中尽量选择带有速度的遗器。
-              </Text>
-            </View>
-          </BlurView>
+          <PopUpCard
+            title="于夜色中"
+            content="希儿的限定毕业光锥，提供了非常暴力的输出数值，同时对她的速度有一定要求，推荐副词条中尽量选择带有速度的遗器。"
+          />
         </Pressable>
       </Modal>
     </View>
