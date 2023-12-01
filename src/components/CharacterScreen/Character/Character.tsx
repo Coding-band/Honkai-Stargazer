@@ -60,8 +60,8 @@ export default function Character() {
           charContainerHeight={containerHeight}
         />
       </View>
-      <View className="absolute w-full h-full p-[24px] pt-0 pb-0 z-40">
-        <Animated.ScrollView ref={aref}>
+      <View className="absolute w-full h-full pt-0 pb-0 z-40">
+        <Animated.ScrollView ref={aref} style={{ padding: 24 }}>
           <View onLayout={handleLayout}>
             <CharInfo />
             <Animated.View style={contentAnimatedStyles}>

@@ -27,6 +27,7 @@ export default function CharSuggestTeamCard(props: Props) {
       id: charId,
       name: charName,
     });
+    setIsSelected(false);
   }, []);
 
   return (
@@ -45,8 +46,8 @@ export default function CharSuggestTeamCard(props: Props) {
       </View>
       <Modal
         useNativeDriverForBackdrop
-        animationIn="zoomIn"
-        animationOut="zoomOut"
+        animationIn="fadeInLeft"
+        animationOut="fadeOutRight"
         isVisible={isSelected}
       >
         <Pressable

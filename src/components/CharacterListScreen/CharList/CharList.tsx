@@ -47,8 +47,8 @@ export default function CharList() {
     );
   }, []);
   return (
-    <View style={{ width: "100%" }} className="p-[17px] pb-0 z-30">
-      <ScrollView>
+    <View style={{ width: "100%" }} className="z-30">
+      <ScrollView style={{ padding: 17, paddingBottom: 0 }}>
         <View
           style={{
             paddingVertical: 110,

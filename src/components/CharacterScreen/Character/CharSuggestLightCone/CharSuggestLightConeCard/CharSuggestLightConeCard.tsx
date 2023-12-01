@@ -32,8 +32,8 @@ export default function CharSuggestLightConeCard(props: Props) {
       </View>
       <Modal
         useNativeDriverForBackdrop
-        animationIn="zoomIn"
-        animationOut="zoomOut"
+        animationIn="fadeInLeft"
+        animationOut="fadeOutRight"
         isVisible={isSelected}
       >
         <Pressable
