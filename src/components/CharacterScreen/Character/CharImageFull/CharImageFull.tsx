@@ -20,10 +20,19 @@ export default function CharImageFull(props: Props) {
   const loaded = useDelayLoad(100);
 
   const imageAnimatedStyles = useAnimatedStyle(() => {
-    const height = props.charContainerHeight;
-    const offsetY = props.scrollHandler.value;
+    // const height = props.charContainerHeight;
+    // const offsetY = props.scrollHandler.value;
 
-    return { opacity: 1 - (offsetY / height) * 12 || 0 };
+    // return { opacity: 1 - (offsetY / height) * 12 || 0 };
+    if (props.scrollHandler.value > 0) {
+      return {
+        opacity: withSpring(0),
+      };
+    } else {
+      return {
+        opacity: withSpring(1),
+      };
+    }
   });
 
   return (
