@@ -11,10 +11,13 @@ import CharacterListScreen from "./src/screens/CharacterListScreen";
 import { SCREENS } from "./src/constant/screens";
 import CharacterScreen from "./src/screens/CharacterScreen";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import * as NavigationBar from "expo-navigation-bar";
 
-// SplashScreen.preventAutoHideAsync();
+SplashScreen.preventAutoHideAsync();
 
 export default function App() {
+  NavigationBar.setBackgroundColorAsync("#00000000");
+
   const [fontsLoaded] = useFonts({
     NotoSansSC: require("./assets/fonts/NotoSansSC-Regular.ttf"),
     HY55: require("./assets/fonts/HYRunYuan-55W.ttf"),
@@ -35,7 +38,7 @@ export default function App() {
   const Stack = createNativeStackNavigator();
 
   return (
-    <GestureHandlerRootView style={{flex:1}}>
+    <GestureHandlerRootView style={{ flex: 1 }}>
       <ClickOutsideProvider>
         <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
           {/* <StatusBar hidden /> */}

@@ -1,16 +1,16 @@
 import { Sword } from "phosphor-react-native";
 import CharPageHeading from "../../../global/layout/CharPageHeading";
 import { ScrollView, View } from "react-native";
-import LightConeCard from "../../../global/layout/LightConeCard/LightConeCard";
+import CharSuggestLightConeCard from "./CharSuggestLightConeCard/CharSuggestLightConeCard";
 
 const testImage1 = require("../../../../../assets/images/test-light-cone-1.png");
 const testImage2 = require("../../../../../assets/images/test-light-cone-2.png");
 
 const testData = [
-  { image: testImage1, star: 5, name: "星海巡航" },
-  { image: testImage2, star: 4, name: "论剑" },
-  { image: testImage1, star: 5, name: "星海巡航" },
-  { image: testImage2, star: 4, name: "论剑" },
+  { image: testImage1, rare: 5, name: "星海巡航" },
+  { image: testImage2, rare: 4, name: "论剑" },
+  { image: testImage1, rare: 5, name: "星海巡航" },
+  { image: testImage2, rare: 4, name: "论剑" },
 ];
 
 export default function CharSuggestLightCone() {
@@ -27,7 +27,7 @@ export default function CharSuggestLightCone() {
         >
           {testData.map((l, i) => (
             // @ts-ignore
-            <LightConeCard key={i} {...l} />
+            <CharSuggestLightConeCard key={i} {...l} />
           ))}
         </View>
       </ScrollView>
