@@ -110,8 +110,8 @@ const Character = {
     eidolon6: require("../../images/character_eidolon/topaz_eidolon6.webp"),
   },
   Clara: {
-    icon: require("../../images/character_full/clara_full.webp"),
-    imageFull: require("../../images/character_splash/clara_splash.webp"),
+    icon: require("../../images/character_icon/clara_icon.webp"),
+    imageFull: require("../../images/character_full/clara_full.webp"),
     eidolon1: require("../../images/character_eidolon/clara_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/clara_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/clara_eidolon3.webp"),
@@ -220,8 +220,8 @@ const Character = {
     eidolon6: require("../../images/character_eidolon/yukong_eidolon6.webp"),
   },
   Sushang: {
-    icon: require("../../images/character_full/sushang_full.png"),
-    imageFull: require("../../images/character_splash/sushang_splash.webp"),
+    icon: require("../../images/character_icon/sushang_icon.webp"),
+    imageFull: require("../../images/character_full/sushang_full.png"),
     eidolon1: require("../../images/character_eidolon/sushang_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/sushang_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/sushang_eidolon3.webp"),
