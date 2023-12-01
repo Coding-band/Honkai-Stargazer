@@ -1,7 +1,7 @@
 import "./app.d";
 import { Platform, StyleSheet, Text, View } from "react-native";
 import { useFonts } from "expo-font";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -16,8 +16,15 @@ import * as NavigationBar from "expo-navigation-bar";
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  NavigationBar.setBackgroundColorAsync("#00000000");
+  useEffect(() => {
+    // 在组件加载后设置导航栏
+    async function setupNavigationBar() {
+      await NavigationBar.setPositionAsync("absolute");
+      await NavigationBar.setBackgroundColorAsync("#00000000");
+    }
 
+    setupNavigationBar();
+  }, []);
   const [fontsLoaded] = useFonts({
     NotoSansSC: require("./assets/fonts/NotoSansSC-Regular.ttf"),
     HY55: require("./assets/fonts/HYRunYuan-55W.ttf"),

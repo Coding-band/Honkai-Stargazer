@@ -3,13 +3,11 @@ import {
   Text,
   GestureResponderEvent,
   Pressable,
-  Dimensions,
 } from "react-native";
 import React, { useCallback, useState } from "react";
 import LightConeCard from "../../../../global/layout/LightConeCard/LightConeCard";
 import { ExpoImage } from "../../../../../types/image";
 import Modal from "react-native-modal";
-import { LinearGradient } from "expo-linear-gradient";
 import { BlurView } from "expo-blur";
 import { Image } from "expo-image";
 
