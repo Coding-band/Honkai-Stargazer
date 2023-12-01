@@ -46,7 +46,7 @@ export default function CharSuggestRelics() {
       <CharPageHeading Icon={BaseballCap}>推荐遗器</CharPageHeading>
       <View
         className="w-full"
-        style={{ flexDirection: "row", justifyContent: "center", gap: 10 }}
+        style={{ flexDirection: "row", justifyContent: "center",gap: 10 }}
       >
         <View style={{ flexDirection: "row", gap: 8 }}>
           <Image
@@ -100,7 +100,7 @@ export default function CharSuggestRelics() {
           />
         </View>
       </View>
-      <View className="w-full mt-4">
+      <View className="w-full mt-[-24px]">
         <View className="w-full">
           <Text className="font-[HY75] text-white text-[16px]">主詞條</Text>
           <View
