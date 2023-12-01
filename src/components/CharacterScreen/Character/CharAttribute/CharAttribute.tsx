@@ -22,6 +22,7 @@ export default function CharAttribute() {
 
   const handleFromLevelChange = (newLevel: number) => {
     if (newLevel >= attrToLevel) {
+      setAttrFromLevel(attrToLevel - 1);
       return;
     }
     setAttrFromLevel(newLevel);
@@ -29,6 +30,7 @@ export default function CharAttribute() {
 
   const handleToLevelChange = (newLevel: number) => {
     if (newLevel <= attrFromLevel) {
+      setAttrToLevel(attrFromLevel + 1);
       return;
     }
     setAttrToLevel(newLevel);

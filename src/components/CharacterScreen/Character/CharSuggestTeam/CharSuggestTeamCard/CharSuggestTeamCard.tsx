@@ -32,8 +32,8 @@ export default function CharSuggestTeamCard(props: Props) {
       </View>
       <Modal
         useNativeDriverForBackdrop
-        animationIn="fadeInLeft"
-        animationOut="fadeOutRight"
+        animationIn="zoomIn"
+        animationOut="zoomOut"
         isVisible={isSelected}
       >
         <Pressable
