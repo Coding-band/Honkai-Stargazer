@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, ScrollView, LayoutChangeEvent, Platform } from "react-native";
+import {
+  View,
+  Text,
+  ScrollView,
+  LayoutChangeEvent,
+  Platform,
+} from "react-native";
 import { cn } from "../../../utils/cn";
 import MenuItem from "./MenuItem/MenuItem";
 import {
@@ -55,7 +61,8 @@ export default function Menu() {
   return (
     <View
       style={{
-        height: Dimensions.get("window").height - (Platform.OS === "ios" ? 295 : 268),
+        height:
+          Dimensions.get("window").height - (Platform.OS === "ios" ? 295 : 268),
       }}
     >
       <ScrollView>
@@ -76,11 +83,15 @@ export default function Menu() {
             {SCREENS.CharacterListPage.shortName}
           </MenuItem>
           <MenuItem
+            onPress={() => {
+              // @ts-ignore
+              navigation.navigate(SCREENS.LightconeListPage.id);
+            }}
             width={menuItemSize.width}
             height={menuItemSize.height}
-            Icon={Sword}
+            Icon={SCREENS.LightconeListPage.icon}
           >
-            光锥
+            {SCREENS.LightconeListPage.shortName}
           </MenuItem>
           <MenuItem
             width={menuItemSize.width}

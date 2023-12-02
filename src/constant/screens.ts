@@ -1,4 +1,4 @@
-import { Person } from "phosphor-react-native";
+import { Person, Sword } from "phosphor-react-native";
 
 export const SCREENS = {
   HomePage: {
@@ -18,5 +18,11 @@ export const SCREENS = {
     name: "角色",
     shortName: "",
     icon: Person,
+  },
+  LightconeListPage: {
+    id: "LightconeList",
+    name: "光锥列表",
+    shortName: "光锥",
+    icon: Sword,
   },
 };

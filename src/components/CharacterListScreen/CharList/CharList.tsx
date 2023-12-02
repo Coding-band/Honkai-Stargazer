@@ -50,7 +50,7 @@ export default function CharList(props: Props) {
     );
   }, []);
 
-  const chaCardListJSX = useMemo(
+  const charCardListJSX = useMemo(
     () =>
       charCardListData?.map((item, i) => (
         <CharCard
@@ -80,7 +80,7 @@ export default function CharList(props: Props) {
             justifyContent: "center",
           }}
         >
-          {props.reverse ? chaCardListJSX?.slice().reverse() : chaCardListJSX}
+          {props.reverse ? charCardListJSX?.slice().reverse() : charCardListJSX}
         </View>
       </ScrollView>
     </View>

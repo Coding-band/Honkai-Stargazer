@@ -1,3 +1,4 @@
+import zh_cn from "./zh_cn";
 import zh_hk from "./zh_hk";
 
 const DE = {};
@@ -7,5 +8,5 @@ const FR = {};
 const JP = {};
 const PT = {};
 const RU = {};
-const ZH_CN = {};
+export const ZH_CN = zh_cn;
 export const ZH_HK = zh_hk;

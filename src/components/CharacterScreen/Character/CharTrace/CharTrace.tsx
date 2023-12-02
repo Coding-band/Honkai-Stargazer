@@ -7,6 +7,9 @@ import { Shadow } from "react-native-shadow-2";
 import { ExpoImage } from "../../../../types/image";
 import { useSpring, animated } from "@react-spring/native";
 import { GestureResponderEvent } from "react-native-modal";
+import Edge from "./TraceItem/Edge";
+import Inner from "./TraceItem/Inner";
+import Outer from "./TraceItem/Outer";
 
 const TestTraceLine = require("../../../../../assets/images/test-trace-line.svg");
 const CritDmgIcon = require("../../../../../assets/images/ui_icon/ic_crit_dmg.webp");
@@ -101,95 +104,3 @@ export default function CharTrace() {
   );
 }
 
-const Edge = ({
-  left,
-  top,
-  icon,
-}: {
-  left: number;
-  top: number;
-  icon: ExpoImage;
-}) => (
-  <View
-    style={{
-      position: "absolute",
-      left,
-      top,
-      justifyContent: "center",
-      alignItems: "center",
-    }}
-    className="w-8 h-8 bg-[#666] rounded-full"
-  >
-    <Image source={icon} className="w-6 h-6" />
-  </View>
-);
-const Outer = ({
-  left,
-  top,
-  icon,
-}: {
-  left: number;
-  top: number;
-  icon: ExpoImage;
-}) => (
-  <View
-    style={{
-      position: "absolute",
-      left,
-      top,
-      justifyContent: "center",
-      alignItems: "center",
-    }}
-    className="w-16 h-16 bg-[#666] rounded-full"
-  >
-    <Image source={icon} className="w-12 h-12" />
-  </View>
-);
-const Inner = ({
-  left,
-  top,
-  icon,
-  selected,
-  onPress,
-}: {
-  left: number;
-  top: number;
-  icon: ExpoImage;
-  selected: boolean;
-  onPress: (e: GestureResponderEvent) => void;
-}) => {
-  const animation = useSpring({
-    borderColor: selected ? "#FCBC62" : "#31B5FF60",
-    config: { tension: 170 * 4 },
-  });
-
-  return (
-    <Pressable
-      onPress={onPress}
-      style={{
-        position: "absolute",
-        left,
-        top,
-      }}
-    >
-      <Shadow
-        style={{ overflow: "hidden", borderRadius: 100 }}
-        distance={4}
-        startColor="#31B5FF60"
-      >
-        <AnimatedView
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            ...animation,
-          }}
-          className="w-[60px] h-[60px] bg-[#333] rounded-full border-2"
-        >
-          <Image source={icon} className="w-9 h-9" />
-        </AnimatedView>
-      </Shadow>
-    </Pressable>
-  );
-};
-
-const AnimatedView = animated(View);

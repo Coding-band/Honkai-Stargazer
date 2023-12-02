@@ -12,7 +12,7 @@ import { ExpoImage } from "../../../../types/image";
 
 type Props = {
   image?: ExpoImage;
-  rare: 4 | 5;
+  rare: number;
   name: string;
   onPress?: (e: GestureResponderEvent) => void;
 };
@@ -24,6 +24,7 @@ export default function LightConeCard(props: Props) {
     <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
       {/* <Shadow distance={6} offset={[4, 4]} startColor="#00000025"> */}
       <LinearGradient
+        className="w-20 h-20"
         style={{
           borderRadius: 4,
           borderTopRightRadius: 10,
@@ -39,10 +40,8 @@ export default function LightConeCard(props: Props) {
         }
       >
         <View
-          //   style={animation}
+          className="w-full h-full"
           style={{
-            width: 80,
-            height: 80,
             alignItems: "center",
             justifyContent: "center",
           }}
@@ -55,8 +54,21 @@ export default function LightConeCard(props: Props) {
         </View>
       </LinearGradient>
       {/* </Shadow> */}
-      <View style={{ alignItems: "center" }} className="pt-1">
-        <Text className="text-white text-[12px] font-[HY65]">{props.name}</Text>
+      <View
+        className="w-20 h-20 pt-1 mb-[-40px]"
+        style={{ alignItems: "center" }}
+      >
+        <Text
+          style={{
+            color: "white",
+            fontSize: 12,
+            fontFamily: "HY65",
+            flexWrap: "wrap", // 允许文本换行
+            textAlign: "center", // 文本居中
+          }}
+        >
+          {props.name}
+        </Text>
       </View>
     </TouchableOpacity>
   );
