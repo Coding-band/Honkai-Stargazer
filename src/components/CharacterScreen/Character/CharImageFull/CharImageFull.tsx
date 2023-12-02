@@ -40,7 +40,7 @@ export default function CharImageFull(props: Props) {
       {loaded && (
         <Image
           transition={200}
-          style={{ width: 500, height: 690, transform: [{ scale: 1.2 }] }}
+          style={{ width: 500, height: 690 }}
           source={charData?.imageFull}
           contentFit="none"
         />

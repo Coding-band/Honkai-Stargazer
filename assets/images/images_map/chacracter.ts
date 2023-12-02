@@ -11,7 +11,7 @@ const Character = {
   },
   Huohuo: {
     icon: require("../../images/character_icon/huohuo_icon.webp"),
-    imageFull: require("../../images/character_splash/huohuo_splash.webp"),
+    imageFull: require("../../images/character_full/huohuo_full.webp"),
     eidolon1: require("../../images/character_eidolon/huohuo_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/huohuo_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/huohuo_eidolon3.webp"),
@@ -51,7 +51,7 @@ const Character = {
   },
   Yanqing: {
     icon: require("../../images/character_icon/yanqing_icon.webp"),
-    imageFull: require("../../images/character_splash/yanqing_splash.webp"),
+    imageFull: require("../../images/character_full/yanqing_full.webp"),
     eidolon1: require("../../images/character_eidolon/yanqing_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/yanqing_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/yanqing_eidolon3.webp"),
@@ -71,7 +71,7 @@ const Character = {
   },
   Blade: {
     icon: require("../../images/character_icon/blade_icon.webp"),
-    imageFull: require("../../images/character_splash/blade_splash.webp"),
+    imageFull: require("../../images/character_full/blade_full.webp"),
     eidolon1: require("../../images/character_eidolon/blade_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/blade_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/blade_eidolon3.webp"),
@@ -121,7 +121,7 @@ const Character = {
   },
   Gepard: {
     icon: require("../../images/character_icon/gepard_icon.webp"),
-    imageFull: require("../../images/character_splash/gepard_splash.webp"),
+    imageFull: require("../../images/character_full/gepard_full.webp"),
     eidolon1: require("../../images/character_eidolon/gepard_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/gepard_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/gepard_eidolon3.webp"),
@@ -141,7 +141,7 @@ const Character = {
   },
   Bronya: {
     icon: require("../../images/character_icon/bronya_icon.webp"),
-    imageFull: require("../../images/character_splash/bronya_splash.webp"),
+    imageFull: require("../../images/character_full/bronya_full.webp"),
     eidolon1: require("../../images/character_eidolon/bronya_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/bronya_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/bronya_eidolon3.webp"),
@@ -151,7 +151,7 @@ const Character = {
   },
   "Silver Wolf": {
     icon: require("../../images/character_icon/silver_wolf_icon.webp"),
-    imageFull: require("../../images/character_splash/silver_wolf_splash.webp"),
+    imageFull: require("../../images/character_full/silver_wolf_full.webp"),
     eidolon1: require("../../images/character_eidolon/silver_wolf_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/silver_wolf_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/silver_wolf_eidolon3.webp"),
@@ -161,7 +161,7 @@ const Character = {
   },
   Kafka: {
     icon: require("../../images/character_icon/kafka_icon.webp"),
-    imageFull: require("../../images/character_splash/kafka_splash.webp"),
+    imageFull: require("../../images/character_full/kafka_full.webp"),
     eidolon1: require("../../images/character_eidolon/kafka_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/kafka_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/kafka_eidolon3.webp"),
@@ -181,7 +181,7 @@ const Character = {
   },
   Himeko: {
     icon: require("../../images/character_icon/himeko_icon.webp"),
-    imageFull: require("../../images/character_splash/himeko_splash.webp"),
+    imageFull: require("../../images/character_full/himeko_full.webp"),
     eidolon1: require("../../images/character_eidolon/himeko_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/himeko_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/himeko_eidolon3.webp"),
@@ -231,7 +231,7 @@ const Character = {
   },
   Tingyun: {
     icon: require("../../images/character_icon/tingyun_icon.webp"),
-    imageFull: require("../../images/character_splash/tingyun_splash.webp"),
+    imageFull: require("../../images/character_full/tingyun_full.webp"),
     eidolon1: require("../../images/character_eidolon/tingyun_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/tingyun_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/tingyun_eidolon3.webp"),
@@ -271,7 +271,7 @@ const Character = {
   },
   Hook: {
     icon: require("../../images/character_icon/hook_icon.webp"),
-    imageFull: require("../../images/character_splash/hook_splash.webp"),
+    imageFull: require("../../images/character_full/hook_full.webp"),
     eidolon1: require("../../images/character_eidolon/hook_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/hook_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/hook_eidolon3.webp"),
@@ -281,7 +281,7 @@ const Character = {
   },
   Sampo: {
     icon: require("../../images/character_icon/sampo_icon.webp"),
-    imageFull: require("../../images/character_splash/sampo_splash.webp"),
+    imageFull: require("../../images/character_full/sampo_full.webp"),
     eidolon1: require("../../images/character_eidolon/sampo_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/sampo_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/sampo_eidolon3.webp"),
@@ -291,7 +291,7 @@ const Character = {
   },
   Pela: {
     icon: require("../../images/character_icon/pela_icon.webp"),
-    imageFull: require("../../images/character_splash/pela_splash.webp"),
+    imageFull: require("../../images/character_full/pela_full.webp"),
     eidolon1: require("../../images/character_eidolon/pela_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/pela_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/pela_eidolon3.webp"),
@@ -301,7 +301,7 @@ const Character = {
   },
   Natasha: {
     icon: require("../../images/character_icon/natasha_icon.webp"),
-    imageFull: require("../../images/character_splash/natasha_splash.webp"),
+    imageFull: require("../../images/character_full/natasha_full.webp"),
     eidolon1: require("../../images/character_eidolon/natasha_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/natasha_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/natasha_eidolon3.webp"),
@@ -311,7 +311,7 @@ const Character = {
   },
   Serval: {
     icon: require("../../images/character_icon/serval_icon.webp"),
-    imageFull: require("../../images/character_splash/serval_splash.webp"),
+    imageFull: require("../../images/character_full/serval_full.webp"),
     eidolon1: require("../../images/character_eidolon/serval_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/serval_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/serval_eidolon3.webp"),
@@ -321,7 +321,7 @@ const Character = {
   },
   Herta: {
     icon: require("../../images/character_icon/herta_icon.webp"),
-    imageFull: require("../../images/character_splash/herta_splash.webp"),
+    imageFull: require("../../images/character_full/herta_full.webp"),
     eidolon1: require("../../images/character_eidolon/herta_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/herta_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/herta_eidolon3.webp"),
@@ -331,7 +331,7 @@ const Character = {
   },
   Asta: {
     icon: require("../../images/character_icon/asta_icon.webp"),
-    imageFull: require("../../images/character_splash/asta_splash.webp"),
+    imageFull: require("../../images/character_full/asta_full.webp"),
     eidolon1: require("../../images/character_eidolon/asta_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/asta_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/asta_eidolon3.webp"),
@@ -341,7 +341,7 @@ const Character = {
   },
   Arlan: {
     icon: require("../../images/character_icon/arlan_icon.webp"),
-    imageFull: require("../../images/character_splash/arlan_splash.webp"),
+    imageFull: require("../../images/character_full/arlan_full.webp"),
     eidolon1: require("../../images/character_eidolon/arlan_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/arlan_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/arlan_eidolon3.webp"),
