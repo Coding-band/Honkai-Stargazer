@@ -1,4 +1,4 @@
-import { View, LayoutChangeEvent } from "react-native";
+import { View, LayoutChangeEvent, Dimensions } from "react-native";
 import React, { useState } from "react";
 import CharAction from "./CharAction/CharAction";
 import CharInfo from "./CharInfo/CharInfo";
@@ -42,10 +42,10 @@ export default function Character() {
 
   return (
     <View
-      className="absolute bottom-0 w-full h-screen"
+      className="absolute bottom-0 w-full h-screen z-30"
       style={{ alignItems: "center" }}
     >
-      <View className="z-30 mt-28">
+      <View className="z-30" style={{marginTop:Dimensions.get("window").height/5}}>
         <CharImageFull
           scrollHandler={scrollHandler}
           charContainerHeight={containerHeight}

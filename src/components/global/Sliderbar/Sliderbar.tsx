@@ -110,6 +110,7 @@ export default function Sliderbar({
             (p, i) =>
               i !== 0 && (
                 <View
+                  key={i}
                   style={{ left: points[i] }}
                   className="absolute w-1 h-1 bg-[#404165] rounded-full"
                 />

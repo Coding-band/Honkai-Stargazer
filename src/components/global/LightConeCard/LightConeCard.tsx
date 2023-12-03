@@ -33,11 +33,6 @@ export default function LightConeCard(props: Props) {
           borderRadius: 4,
           borderTopRightRadius: 10,
           overflow: "hidden",
-          shadowOffset: { width: 4, height: 4 },
-          shadowRadius: 8,
-          shadowColor: props.rare === 5 ? "#C7A37150" : "#9663CC50",
-          shadowOpacity: 0.25,
-          elevation: 8,
         }}
         colors={
           props.rare === 5 ? ["#905A52", "#C8A471"] : ["#404165", "#9763CE"]

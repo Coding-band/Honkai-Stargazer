@@ -25,7 +25,9 @@ export default function App() {
       await NavigationBar.setBackgroundColorAsync("#00000000");
     }
 
-    setupNavigationBar();
+    if (Platform.OS === "android") {
+      setupNavigationBar();
+    }
   }, []);
   const [fontsLoaded] = useFonts({
     NotoSansSC: require("./assets/fonts/NotoSansSC-Regular.ttf"),
@@ -54,7 +56,7 @@ export default function App() {
           <NavigationContainer>
             <Stack.Navigator
               screenOptions={{
-                animation: Platform.OS === "ios" ? "slide_from_right" : "none",
+                animation: Platform.OS === "ios" ? "default" : "none",
               }}
             >
               <Stack.Screen

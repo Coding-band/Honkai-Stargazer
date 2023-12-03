@@ -39,7 +39,7 @@ export default function Lightcone() {
 
   return (
     <View
-      className="absolute bottom-0 w-full h-screen"
+      className="absolute bottom-0 w-full h-screen z-30"
       style={{ alignItems: "center" }}
     >
       <View className="z-30 mt-28">
