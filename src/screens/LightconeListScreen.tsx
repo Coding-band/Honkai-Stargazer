@@ -2,11 +2,11 @@ import { View } from "react-native";
 import React, { useState } from "react";
 import { ImageBackground } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
-import Header from "../components/global/layout/Header";
+import Header from "../components/global/Header/Header";
 import { StatusBar } from "expo-status-bar";
-import CharAction from "../components/CharacterListScreen/CharAction/CharAction";
 import { SCREENS } from "../constant/screens";
 import LcList from "../components/LightconeListScreen/LcList/LcList";
+import LcAction from "../components/LightconeListScreen/LcAction/LcAction";
 
 export default function LightconeListScreen() {
   const [installOrder, setInstallOrder] = useState(true);
@@ -32,7 +32,7 @@ export default function LightconeListScreen() {
       </Header>
       <>
         <LcList reverse={!installOrder} />
-        <CharAction
+        <LcAction
           onInstallOrderChange={(o) => {
             setInstallOrder(o);
           }}

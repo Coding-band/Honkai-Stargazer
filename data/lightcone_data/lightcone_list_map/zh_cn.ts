@@ -162,7 +162,6 @@ const ZH_CN = {
   "Collapsing Sky" : CollapsingSky,
   Cornucopia,
   Arrows,
-
 };
 
 export default ZH_CN;

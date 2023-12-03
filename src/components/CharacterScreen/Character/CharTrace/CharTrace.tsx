@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import React, { useState } from "react";
-import CharPageHeading from "../../../global/layout/CharPageHeading";
+import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { TreeStructure } from "phosphor-react-native";
 import { Image } from "expo-image";
 import Edge from "./TraceItem/Edge";

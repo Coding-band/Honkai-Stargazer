@@ -7,39 +7,37 @@ import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { ParamList } from "../types/navigation";
-import CharacterMain from "../components/CharacterScreen/Character/Character";
+import LightconeMain from "../components/LightconeScreen/Lightcone";
 import { filter } from "lodash";
-import { CharacterName, Character } from "../types/character";
-import CharacterContext from "../context/CharacterContext";
-import charList from "../../data/character_data/character_list.json";
-import * as charListMap from "../../data/character_data/character_list_map/character_list_map";
+import { Lightcone, LightconeName } from "../types/lightcone";
+import LightconeContext from "../context/LightconeContext";
+import lcList from "../../data/lightcone_data/lightcone_list.json";
+import * as lcListMap from "../../data/lightcone_data/lightcone_list_map/lightcone_list_map";
 import * as imagesMap from "../../assets/images/images_map/images_map";
 
-export default function CharacterScreen() {
-  const route = useRoute<RouteProp<ParamList, "Character">>();
-  const charId = route.params.id as CharacterName;
-  const charName = route.params.name;
+export default function LightconeScreen() {
+  const route = useRoute<RouteProp<ParamList, "Lightcone">>();
+  const lcId = route.params.id as LightconeName;
+  const lcName = route.params.name;
 
-  const [charData, setCharData] = useState<Character>({});
+  const [lcData, setLcData] = useState<Lightcone>({});
   const [showMain, setShowMain] = useState(false);
 
   useEffect(() => {
-    const charDataJson = filter(charList, (char) => char?.name === charId)[0];
-    setCharData({
-      id: charId,
-      name: charListMap.ZH_CN[charId]?.name,
-      rare: charDataJson?.rare,
-      path: charListMap.ZH_CN[charId]?.baseType?.name,
-      combatType: charListMap.ZH_CN[charId]?.damageType?.name,
-      location: charListMap.ZH_CN[charId]?.archive?.camp,
-      imageFull: imagesMap.Chacracter[charId]?.imageFull,
-      storyText: charListMap.ZH_CN[charId]?.storyItems[0].text,
+    const lcDataJson = filter(lcList, (lc) => lc?.name === lcId)[0];
+    setLcData({
+      id: lcId,
+      name: lcListMap.ZH_CN[lcId]?.name,
+      rare: lcDataJson?.rare,
+      path: lcListMap.ZH_CN[lcId]?.baseType?.name,
+      imageFull: imagesMap.Lightcone[lcId]?.imageFull,
+      description: lcListMap.ZH_CN[lcId]?.descHash,
     });
     setShowMain(true);
   }, []);
 
   return (
-    <CharacterContext.Provider value={charData}>
+    <LightconeContext.Provider value={lcData}>
       <View style={{ flex: 1, backgroundColor: "white" }}>
         <StatusBar style="dark" />
         <ImageBackground
@@ -55,15 +53,15 @@ export default function CharacterScreen() {
           colors={["#00000080", "#00000020"]}
         />
 
-        <Header leftBtn="back" Icon={SCREENS.CharacterPage.icon}>
-          {charName}
+        <Header leftBtn="back" Icon={SCREENS.LightconeListPage.icon}>
+          {lcName}
         </Header>
-        {showMain && <CharacterMain />}
+        {showMain && <LightconeMain />}
         <LinearGradient
           className="w-full h-[600px] absolute bottom-0"
           colors={["#00000000", "#000000"]}
         />
       </View>
-    </CharacterContext.Provider>
+    </LightconeContext.Provider>
   );
 }

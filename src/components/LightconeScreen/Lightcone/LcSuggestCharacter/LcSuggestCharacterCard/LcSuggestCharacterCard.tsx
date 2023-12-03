@@ -1,19 +1,18 @@
-import { View, Text, GestureResponderEvent, Pressable } from "react-native";
+import { View, Pressable } from "react-native";
 import React, { useCallback, useState } from "react";
-import LightConeCard from "../../../../global/LightConeCard/LightConeCard";
 import { ExpoImage } from "../../../../../types/image";
 import Modal from "react-native-modal";
-import { BlurView } from "expo-blur";
-import { Image } from "expo-image";
 import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
+import CharCard from "../../../../global/CharCard/CharCard";
 
 type Props = {
+  id: string;
   image?: ExpoImage;
   rare: 4 | 5;
   name: string;
 };
 
-export default function CharSuggestLightConeCard(props: Props) {
+export default function LcSuggestCharacterCard(props: Props) {
   const [isSelected, setIsSelected] = useState(false);
 
   const handlePress = useCallback(() => {
@@ -23,8 +22,9 @@ export default function CharSuggestLightConeCard(props: Props) {
   return (
     <View>
       <View style={{ opacity: isSelected ? 0 : 1 }}>
-        <LightConeCard
+        <CharCard
           onPress={handlePress}
+          id={props.id}
           image={props.image}
           name={props.name}
           rare={props.rare}
@@ -49,8 +49,9 @@ export default function CharSuggestLightConeCard(props: Props) {
           }}
         >
           <View style={{ transform: [{ scale: 1.2 }] }}>
-            <LightConeCard
+            <CharCard
               onPress={handlePress}
+              id={props.id}
               image={props.image}
               name={props.name}
               rare={props.rare}

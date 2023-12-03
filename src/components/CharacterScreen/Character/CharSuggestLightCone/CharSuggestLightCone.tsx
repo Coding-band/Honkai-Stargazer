@@ -1,5 +1,5 @@
 import { Sword } from "phosphor-react-native";
-import CharPageHeading from "../../../global/layout/CharPageHeading";
+import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { ScrollView, View } from "react-native";
 import CharSuggestLightConeCard from "./CharSuggestLightConeCard/CharSuggestLightConeCard";
 

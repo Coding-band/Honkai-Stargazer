@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import React, { useEffect } from "react";
-import { cn } from "../../../../../utils/cn";
+import { cn } from "../../../utils/cn";
 import { BlurView } from "expo-blur";
 import { PanGestureHandler } from "react-native-gesture-handler";
 import Animated, {

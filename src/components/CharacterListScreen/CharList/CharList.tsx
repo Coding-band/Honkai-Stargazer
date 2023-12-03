@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { ScrollView, View } from "react-native";
-import CharCard from "../../global/layout/CharCard/CharCard";
+import CharCard from "../../global/CharCard/CharCard";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
 import characterList from "../../../../data/character_data/character_list.json";

@@ -11,7 +11,7 @@ type Props = {
   onInstallOrderChange?: (order: boolean) => void;
 };
 
-export default function CharAction(props: Props) {
+export default function LcAction(props: Props) {
   const [installOrder, setInstallOrder] = useState(true);
 
   useEffect(() => {

@@ -5,15 +5,15 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 import { Image } from "expo-image";
-import CharacterContext from "../../../../context/CharacterContext";
+import LightconeContext from "../../../../context/LightconeContext";
 
 type Props = {
   scrollHandler: SharedValue<number>;
-  charContainerHeight: number;
+  lcContainerHeight: number;
 };
 
-export default function CharImageFull(props: Props) {
-  const charData = useContext(CharacterContext);
+export default function LcImageFull(props: Props) {
+  const lcData = useContext(LightconeContext);
 
   const imageAnimatedStyles = useAnimatedStyle(() => {
     // const height = props.charContainerHeight;
@@ -35,8 +35,8 @@ export default function CharImageFull(props: Props) {
     <Animated.View style={imageAnimatedStyles}>
       <Image
         transition={200}
-        style={{ width: 500, height: 690, transform: [{ scale: 1.2 }] }}
-        source={charData?.imageFull}
+        style={{ width: 500, height: 450 }}
+        source={lcData?.imageFull}
         contentFit="none"
       />
     </Animated.View>

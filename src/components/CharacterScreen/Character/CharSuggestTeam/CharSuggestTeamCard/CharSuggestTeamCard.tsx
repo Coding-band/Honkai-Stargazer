@@ -1,9 +1,9 @@
 import React, { useCallback, useContext, useState } from "react";
 import { ExpoImage } from "../../../../../types/image";
-import CharCard from "../../../../global/layout/CharCard/CharCard";
+import CharCard from "../../../../global/CharCard/CharCard";
 import { Pressable, View } from "react-native";
 import Modal from "react-native-modal";
-import PopUpCard from "../../../../global/layout/PopUpCard/PopUpCard";
+import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
 import { useNavigation } from "@react-navigation/native";
 import CharacterContext from "../../../../../context/CharacterContext";
 import { SCREENS } from "../../../../../constant/screens";

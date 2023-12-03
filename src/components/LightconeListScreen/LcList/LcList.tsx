@@ -7,7 +7,7 @@ import lightconeList from "../../../../data/lightcone_data/lightcone_list.json";
 import * as lightconeListMap from "../../../../data/lightcone_data/lightcone_list_map/lightcone_list_map";
 import * as images_map from "../../../../assets/images/images_map/images_map";
 import { LightconeCard } from "../../../types/lightcone";
-import LightConeCard from "../../global/layout/LightConeCard/LightConeCard";
+import LightConeCard from "../../global/LightConeCard/LightConeCard";
 
 type Props = {
   reverse?: boolean;
@@ -39,7 +39,7 @@ export default function LcList(props: Props) {
           key={i}
           onPress={() => {
             // @ts-ignore
-            navigation.navigate(SCREENS.CharacterPage.id, {
+            navigation.navigate(SCREENS.LightconeScreen.id, {
               id: item?.id,
               name: item?.name,
             });

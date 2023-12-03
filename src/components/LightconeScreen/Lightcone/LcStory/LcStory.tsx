@@ -1,17 +1,17 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React, { useContext } from "react";
 import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { ChatsCircle } from "phosphor-react-native";
-import CharacterContext from "../../../../context/CharacterContext";
 import { HtmlText } from "@e-mine/react-native-html-text";
+import LightconeContext from "../../../../context/LightconeContext";
 
-export default function CharStory() {
-  const charData = useContext(CharacterContext);
+export default function LcStory() {
+  const lcData = useContext(LightconeContext);
   return (
     <View style={{ alignItems: "center" }}>
-      <CharPageHeading Icon={ChatsCircle}>角色故事</CharPageHeading>
+      <CharPageHeading Icon={ChatsCircle}>技能故事</CharPageHeading>
       <HtmlText style={{ lineHeight: 24, color: "white", fontFamily: "HY65" }}>
-        {charData?.storyText || ""}
+        {lcData?.description || ""}
       </HtmlText>
     </View>
   );

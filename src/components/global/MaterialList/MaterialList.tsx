@@ -1,14 +1,14 @@
 import { View, Text, ScrollView } from "react-native";
 import React from "react";
-import MaterialCard from "../../../global/layout/MaterialCard/MaterialCard";
+import MaterialCard from "../MaterialCard/MaterialCard";
 
-const TestMaterial1 = require("../../../../../assets/images/test-material-1.png");
-const TestMaterial2 = require("../../../../../assets/images/test-material-2.png");
-const TestMaterial3 = require("../../../../../assets/images/test-material-3.png");
-const TestMaterial4 = require("../../../../../assets/images/test-material-4.png");
-const TestMaterial5 = require("../../../../../assets/images/test-material-5.png");
+const TestMaterial1 = require("../../../../assets/images/test-material-1.png");
+const TestMaterial2 = require("../../../../assets/images/test-material-2.png");
+const TestMaterial3 = require("../../../../assets/images/test-material-3.png");
+const TestMaterial4 = require("../../../../assets/images/test-material-4.png");
+const TestMaterial5 = require("../../../../assets/images/test-material-5.png");
 
-export default function CharMaterialList() {
+export default function MaterialList() {
   return (
     <ScrollView horizontal className="mt-5">
       <View style={{ flexDirection: "row", gap: 14 }}>

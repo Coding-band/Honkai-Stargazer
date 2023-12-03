@@ -1,8 +1,8 @@
 import { View, Text, ScrollView } from "react-native";
 import React from "react";
-import CharPageHeading from "../../../global/layout/CharPageHeading";
+import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { BaseballCap } from "phosphor-react-native";
-import RelicsCard from "../../../global/layout/RelicsCard/RelicsCard";
+import RelicsCard from "../../../global/RelicsCard/RelicsCard";
 import { Image } from "expo-image";
 
 // Relic 遺器套裝
@@ -46,7 +46,7 @@ export default function CharSuggestRelics() {
       <CharPageHeading Icon={BaseballCap}>推荐遗器</CharPageHeading>
       <View
         className="w-full"
-        style={{ flexDirection: "row", justifyContent: "center",gap: 10 }}
+        style={{ flexDirection: "row", justifyContent: "center", gap: 10 }}
       >
         <View style={{ flexDirection: "row", gap: 8 }}>
           <Image

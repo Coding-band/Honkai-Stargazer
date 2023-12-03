@@ -13,6 +13,7 @@ import CharacterScreen from "./src/screens/CharacterScreen";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import * as NavigationBar from "expo-navigation-bar";
 import LightconeListScreen from "./src/screens/LightconeListScreen";
+import LightconeScreen from "./src/screens/LightconeScreen";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -74,6 +75,11 @@ export default function App() {
               <Stack.Screen
                 name={SCREENS.LightconeListPage.id}
                 component={LightconeListScreen}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name={SCREENS.LightconeScreen.id}
+                component={LightconeScreen}
                 options={{ headerShown: false }}
               />
             </Stack.Navigator>

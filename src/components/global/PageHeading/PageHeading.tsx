@@ -7,7 +7,7 @@ type Props = {
   children: string;
 };
 
-export default function CharPageHeading({ Icon, children }: Props) {
+export default function PageHeading({ Icon, children }: Props) {
   return (
     <View className="py-[30px]" style={{ alignItems: "center" }}>
       <Icon size={32} color="white" />

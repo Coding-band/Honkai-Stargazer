@@ -26,7 +26,7 @@ export default function PopUpCard(props: Props) {
         <Text className="font-[HY65] text-[20px]">{props.title}</Text>
         <Image
           style={{ width: 40, height: 40 }}
-          source={require("../../../../../assets/icons/CloseBlack.svg")}
+          source={require("../../../../assets/icons/CloseBlack.svg")}
         />
       </View>
       <View className="w-full px-4">

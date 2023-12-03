@@ -1,18 +1,15 @@
 import { View, ViewProps } from "react-native";
-import { cn } from "../../../../utils/cn";
+import { cn } from "../../../utils/cn";
 import { omit } from "lodash";
 import { Shadow } from "react-native-shadow-2";
 
 export default function List(props: { children: any } & ViewProps) {
   return (
-    <Shadow >
+    <Shadow>
       <View
-        className={cn(
-          "bg-[#00000099] p-[15px] z-10",
-          props.className || ""
-        )}
+        className={cn("bg-[#00000099] p-[15px] z-10", props.className || "")}
         style={{
-          borderRadius:10,
+          borderRadius: 10,
           gap: 8,
           ...(props.style as object),
         }}

@@ -7,24 +7,36 @@ import {
 import React from "react";
 import { Shadow } from "react-native-shadow-2";
 import { LinearGradient } from "expo-linear-gradient";
-import { Image } from "expo-image";
-import { ExpoImage } from "../../../../types/image";
+import { Image, ImageSource } from "expo-image";
+import { cn } from "../../../utils/cn";
 
 type Props = {
-  image?: ExpoImage;
+  id: string;
   rare: number;
   name: string;
-  onPress?: (e: GestureResponderEvent) => void;
+  image?:
+    | string
+    | number
+    | string[]
+    | ImageSource
+    | ImageSource[]
+    | null
+    | undefined;
+  onPress?: (charId: string, charName: string) => void;
 };
 
-export default function LightConeCard(props: Props) {
+export default function CharCard(props: Props) {
   //   const animation = useSpring({ from: { opacity: 0.25 }, to: { opacity: 1 } });
 
   return (
-    <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
+    <TouchableOpacity
+      activeOpacity={0.65}
+      onPress={() => {
+        props.onPress && props.onPress(props.id, props.name);
+      }}
+    >
       {/* <Shadow distance={6} offset={[4, 4]} startColor="#00000025"> */}
       <LinearGradient
-        className="w-20 h-20"
         style={{
           borderRadius: 4,
           borderTopRightRadius: 10,
@@ -40,36 +52,30 @@ export default function LightConeCard(props: Props) {
         }
       >
         <View
-          className="w-full h-full"
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+          //   style={animation}
+          className={cn("w-20 h-[102px]")}
         >
           <Image
             transition={200}
-            style={{ width: 75, height: 75 }}
+            style={{ width: 80, height: 80 }}
             source={props.image}
           />
+          <View
+            className="bg-[#222222]"
+            style={{
+              width: 80,
+              height: 20,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Text className="text-text2 font-[HY65] text-[12px] leading-4">
+              {props.name}
+            </Text>
+          </View>
         </View>
       </LinearGradient>
       {/* </Shadow> */}
-      <View
-        className="w-20 h-20 pt-1 mb-[-40px]"
-        style={{ alignItems: "center" }}
-      >
-        <Text
-          style={{
-            color: "white",
-            fontSize: 12,
-            fontFamily: "HY65",
-            flexWrap: "wrap", // 允许文本换行
-            textAlign: "center", // 文本居中
-          }}
-        >
-          {props.name}
-        </Text>
-      </View>
     </TouchableOpacity>
   );
 }

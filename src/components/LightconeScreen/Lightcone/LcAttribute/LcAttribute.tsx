@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text } from "react-native";
 import { Info } from "phosphor-react-native";
 import AttrSliderbar from "../../../global/AttrSliderbar/AttrSliderbar";
@@ -10,12 +10,10 @@ import MaterialList from "../../../global/MaterialList/MaterialList";
 const HPIcon = require("../../../../../assets/icons/HP.png");
 const STRIcon = require("../../../../../assets/icons/STR.png");
 const DEFIcon = require("../../../../../assets/icons/DEF.png");
-const DEXIcon = require("../../../../../assets/icons/DEX.png");
-const ELIcon = require("../../../../../assets/icons/EL.png");
 
 const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 
-export default function CharAttribute() {
+export default function LcAttribute() {
   const loaded = useDelayLoad(100);
 
   const [attrFromLevel, setAttrFromLevel] = useState(0);
@@ -99,14 +97,6 @@ export default function CharAttribute() {
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={DEFIcon} />
                 <Text className="text-white text-[16px] font-medium">319</Text>
-              </View>
-              <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={DEXIcon} />
-                <Text className="text-white text-[16px] font-medium">115</Text>
-              </View>
-              <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={ELIcon} />
-                <Text className="text-white text-[16px] font-medium">120</Text>
               </View>
             </View>
           </>

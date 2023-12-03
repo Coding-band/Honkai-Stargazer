@@ -12,7 +12,7 @@ type Props = {
   scrollHandler: SharedValue<number>;
 };
 
-export default function CharAction(props: Props) {
+export default function LcAction(props: Props) {
   const bottomAnimatedStyles = useAnimatedStyle(() => {
     if (props.scrollHandler.value > 0) {
       return {
@@ -39,10 +39,7 @@ export default function CharAction(props: Props) {
       ]}
     >
       <Button width={140} height={46}>
-        <Text className="font-[HY65] text-[16px]">推荐装备</Text>
-      </Button>
-      <Button width={140} height={46}>
-        <Text className="font-[HY65] text-[16px]">推荐配队</Text>
+        <Text className="font-[HY65] text-[16px]">推荐角色</Text>
       </Button>
     </Animated.View>
   );

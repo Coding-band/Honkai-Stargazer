@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { TouchableOpacity, View } from "react-native";
-import MoreBtn from "../../../global/ui/MoreBtn/MoreBtn";
-import List from "../../../global/ui/List/List";
-import ListItem from "../../../global/ui/List/ListItem";
+import MoreBtn from "../../../global/MoreBtn/MoreBtn";
+import List from "../../../global/List/List";
+import ListItem from "../../../global/List/ListItem";
 import { useClickOutside } from "react-native-click-outside";
 
 export default function PlayerAction() {

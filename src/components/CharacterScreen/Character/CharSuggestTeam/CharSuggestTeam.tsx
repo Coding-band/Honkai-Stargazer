@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import React from "react";
-import CharPageHeading from "../../../global/layout/CharPageHeading";
+import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { Person } from "phosphor-react-native";
 import CharSuggestTeamCard from "./CharSuggestTeamCard/CharSuggestTeamCard";
 

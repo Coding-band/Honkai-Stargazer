@@ -8,7 +8,7 @@ import React from "react";
 import { Shadow } from "react-native-shadow-2";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image, ImageSource } from "expo-image";
-import { cn } from "../../../../utils/cn";
+import { cn } from "../../../utils/cn";
 
 const CardColors = {
   2: ["#374860", "#3F797C"],
@@ -71,7 +71,7 @@ export default function MaterialCard(props: Props) {
               alignItems: "center",
             }}
           >
-            <Text className="text-white text-[12px]">{props.count}</Text>
+            <Text className="text-text2 text-[12px]">{props.count}</Text>
           </View>
         </View>
       </LinearGradient>

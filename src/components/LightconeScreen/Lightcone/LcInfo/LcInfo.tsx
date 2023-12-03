@@ -1,13 +1,13 @@
 import { View, Text, Dimensions } from "react-native";
 import React, { useContext } from "react";
-import CharacterContext from "../../../../context/CharacterContext";
-import CharStars from "../../../global/PageStars/PageStars";
+import LcStars from "../../../global/PageStars/PageStars";
 import { Image } from "expo-image";
 import Path from "../../../../../assets/images/images_map/path";
 import CombatType from "../../../../../assets/images/images_map/combatType";
+import LightconeContext from "../../../../context/LightconeContext";
 
-export default function CharInfo() {
-  const charData = useContext(CharacterContext);
+export default function LcInfo() {
+  const lcData = useContext(LightconeContext);
 
   return (
     <View
@@ -18,9 +18,9 @@ export default function CharInfo() {
     >
       <View style={{ gap: 12 }}>
         <Text className="text-[32px] font-[HY65] text-white">
-          {charData?.name}
+          {lcData?.name}
         </Text>
-        <CharStars count={charData?.rare || 5} />
+        <LcStars count={lcData?.rare || 5} />
       </View>
       <View
         style={{
@@ -32,27 +32,18 @@ export default function CharInfo() {
         <View style={{ flexDirection: "row", gap: 26 }}>
           <View style={{ flexDirection: "row", gap: 8 }}>
             <Image
-              source={getPathIcon(charData?.path)}
+              source={getPathIcon(lcData?.path)}
               style={{ width: 24, height: 24 }}
             />
             <Text className="text-[16px] text-white font-[HY65]">
-              {charData?.path}
-            </Text>
-          </View>
-          <View style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
-            <Image
-              source={getCombatIcon(charData?.combatType)}
-              style={{ width: 24, height: 24 }}
-            />
-            <Text className="text-[16px] text-white font-[HY65]">
-              {charData?.combatType}
+              {lcData?.path}
             </Text>
           </View>
         </View>
         <View>
-          <Text className="text-[16px] text-white font-[HY65]">
+          {/* <Text className="text-[16px] text-white font-[HY65]">
             {charData?.location}
-          </Text>
+          </Text> */}
         </View>
       </View>
     </View>

@@ -7,36 +7,24 @@ import {
 import React from "react";
 import { Shadow } from "react-native-shadow-2";
 import { LinearGradient } from "expo-linear-gradient";
-import { Image, ImageSource } from "expo-image";
-import { cn } from "../../../../utils/cn";
+import { Image } from "expo-image";
+import { ExpoImage } from "../../../types/image";
 
 type Props = {
-  id: string;
+  image?: ExpoImage;
   rare: number;
   name: string;
-  image?:
-    | string
-    | number
-    | string[]
-    | ImageSource
-    | ImageSource[]
-    | null
-    | undefined;
-  onPress?: (charId: string, charName: string) => void;
+  onPress?: (e: GestureResponderEvent) => void;
 };
 
-export default function CharCard(props: Props) {
+export default function RelicsCard(props: Props) {
   //   const animation = useSpring({ from: { opacity: 0.25 }, to: { opacity: 1 } });
 
   return (
-    <TouchableOpacity
-      activeOpacity={0.65}
-      onPress={() => {
-        props.onPress && props.onPress(props.id, props.name);
-      }}
-    >
+    <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
       {/* <Shadow distance={6} offset={[4, 4]} startColor="#00000025"> */}
       <LinearGradient
+        className="w-20 h-20"
         style={{
           borderRadius: 4,
           borderTopRightRadius: 10,
@@ -52,30 +40,34 @@ export default function CharCard(props: Props) {
         }
       >
         <View
-          //   style={animation}
-          className={cn("w-20 h-[102px]")}
+          className="w-full h-full"
+          style={{
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
           <Image
             transition={200}
-            style={{ width: 80, height: 80 }}
+            style={{ width: 75, height: 75 }}
             source={props.image}
           />
-          <View
-            className="bg-[#222222]"
-            style={{
-              width: 80,
-              height: 20,
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Text className="text-white font-[HY65] text-[12px] leading-4">
-              {props.name}
-            </Text>
-          </View>
         </View>
       </LinearGradient>
       {/* </Shadow> */}
+      <View
+        className="w-20 h-20 pt-1 mb-[-40px]"
+        style={{ alignItems: "center" }}
+      >
+        <Text
+          className="text-text2 text-[12px] font-[HY65]"
+          style={{
+            flexWrap: "wrap", // 允许文本换行
+            textAlign: "center", // 文本居中
+          }}
+        >
+          {props.name}
+        </Text>
+      </View>
     </TouchableOpacity>
   );
 }
