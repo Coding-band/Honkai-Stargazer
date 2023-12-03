@@ -47,10 +47,13 @@ export default function CharSuggestLightCone() {
             columnGap: 8,
           }}
         >
-          {testData.map((l, i) => (
-            // @ts-ignore
-            <CharSuggestLightConeCard key={i} {...l} />
-          ))}
+          {testData
+            .slice()
+            .sort((d) => 1-d.rare)
+            .map((l, i) => (
+              // @ts-ignore
+              <CharSuggestLightConeCard key={i} {...l} />
+            ))}
         </View>
       </ScrollView>
     </View>

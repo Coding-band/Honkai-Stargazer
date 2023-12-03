@@ -1,4 +1,4 @@
-import { View, LayoutChangeEvent } from "react-native";
+import { View, LayoutChangeEvent, Dimensions } from "react-native";
 import React, { useState } from "react";
 import Animated, {
   useAnimatedRef,

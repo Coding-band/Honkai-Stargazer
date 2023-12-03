@@ -24,7 +24,7 @@ export default function Eidolon4({
   });
 
   const animationZ = useSpring({
-    zIndex: selected ? 50 : 0,
+    zIndex: selected ? 100 : 0,
   });
   
   return (
