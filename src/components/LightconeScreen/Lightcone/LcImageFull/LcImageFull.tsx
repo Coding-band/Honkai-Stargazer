@@ -38,8 +38,8 @@ export default function LcImageFull(props: Props) {
         transition={200}
         style={{
           width: Dimensions.get("window").width,
-          height: (Dimensions.get("window").height * 3) / 4,
-          transform: [{ scale: Platform.OS === "android" ? 1.2 : 1 }],
+          height: (Dimensions.get("window").height * 3) / 5,
+          transform: [{ scale: 1 }],
         }}
         source={lcData?.imageFull}
         contentFit={Platform.OS === "android" ? "none" : "contain"}
