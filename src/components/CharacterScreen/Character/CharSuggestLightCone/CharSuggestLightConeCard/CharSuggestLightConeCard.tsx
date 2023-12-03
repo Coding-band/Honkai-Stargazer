@@ -1,24 +1,36 @@
-import { View, Text, GestureResponderEvent, Pressable } from "react-native";
+import { View, Pressable } from "react-native";
 import React, { useCallback, useState } from "react";
 import LightConeCard from "../../../../global/LightConeCard/LightConeCard";
 import { ExpoImage } from "../../../../../types/image";
 import Modal from "react-native-modal";
-import { BlurView } from "expo-blur";
-import { Image } from "expo-image";
 import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
+import { useNavigation } from "@react-navigation/native";
+import { SCREENS } from "../../../../../constant/screens";
 
 type Props = {
+  id: string;
   image?: ExpoImage;
   rare: 4 | 5;
   name: string;
 };
 
 export default function CharSuggestLightConeCard(props: Props) {
+  const navigation = useNavigation();
+
   const [isSelected, setIsSelected] = useState(false);
 
   const handlePress = useCallback(() => {
     setIsSelected(true);
   }, [isSelected]);
+
+  const handlePopupPress = useCallback(() => {
+    // @ts-ignore
+    navigation.push(SCREENS.LightconeScreen.id, {
+      id: props.id,
+      name: props.name,
+    });
+    setIsSelected(false);
+  }, []);
 
   return (
     <View>
@@ -50,7 +62,7 @@ export default function CharSuggestLightConeCard(props: Props) {
         >
           <View style={{ transform: [{ scale: 1.2 }] }}>
             <LightConeCard
-              onPress={handlePress}
+              onPress={handlePopupPress}
               image={props.image}
               name={props.name}
               rare={props.rare}

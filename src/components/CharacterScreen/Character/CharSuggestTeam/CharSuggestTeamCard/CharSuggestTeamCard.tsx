@@ -1,11 +1,10 @@
-import React, { useCallback, useContext, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { ExpoImage } from "../../../../../types/image";
 import CharCard from "../../../../global/CharCard/CharCard";
 import { Pressable, View } from "react-native";
 import Modal from "react-native-modal";
 import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
 import { useNavigation } from "@react-navigation/native";
-import CharacterContext from "../../../../../context/CharacterContext";
 import { SCREENS } from "../../../../../constant/screens";
 
 type Props = {

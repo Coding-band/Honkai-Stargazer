@@ -3,14 +3,36 @@ import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { ScrollView, View } from "react-native";
 import CharSuggestLightConeCard from "./CharSuggestLightConeCard/CharSuggestLightConeCard";
 
-const testImage1 = require("../../../../../assets/images/test-light-cone-1.png");
-const testImage2 = require("../../../../../assets/images/test-light-cone-2.png");
+import lightconeList from "../../../../../data/lightcone_data/lightcone_list.json";
+import * as lightconeListMap from "../../../../../data/lightcone_data/lightcone_list_map/lightcone_list_map";
+import * as imagesMap from "../../../../../assets/images/images_map/images_map";
 
 const testData = [
-  { image: testImage1, rare: 5, name: "星海巡航" },
-  { image: testImage2, rare: 4, name: "论剑" },
-  { image: testImage1, rare: 5, name: "星海巡航" },
-  { image: testImage2, rare: 4, name: "论剑" },
+  {
+    id: "Shattered Home",
+    rare: lightconeList.filter((char) => char.name === "Shattered Home")[0]
+      .rare,
+    name: lightconeListMap.ZH_CN["Shattered Home"].name,
+    image: imagesMap.Lightcone["Shattered Home"].icon,
+  },
+  {
+    id: "Quid Pro Quo",
+    rare: lightconeList.filter((char) => char.name === "Quid Pro Quo")[0].rare,
+    name: lightconeListMap.ZH_CN["Quid Pro Quo"].name,
+    image: imagesMap.Lightcone["Quid Pro Quo"].icon,
+  },
+  {
+    id: "Fermata",
+    rare: lightconeList.filter((char) => char.name === "Fermata")[0].rare,
+    name: lightconeListMap.ZH_CN["Fermata"].name,
+    image: imagesMap.Lightcone["Fermata"].icon,
+  },
+  {
+    id: "In the Night",
+    rare: lightconeList.filter((char) => char.name === "In the Night")[0].rare,
+    name: lightconeListMap.ZH_CN["In the Night"].name,
+    image: imagesMap.Lightcone["In the Night"].icon,
+  },
 ];
 
 export default function CharSuggestLightCone() {

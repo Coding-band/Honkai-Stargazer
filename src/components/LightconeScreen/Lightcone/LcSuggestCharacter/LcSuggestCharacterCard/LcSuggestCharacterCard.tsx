@@ -4,6 +4,8 @@ import { ExpoImage } from "../../../../../types/image";
 import Modal from "react-native-modal";
 import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
 import CharCard from "../../../../global/CharCard/CharCard";
+import { useNavigation } from "@react-navigation/native";
+import { SCREENS } from "../../../../../constant/screens";
 
 type Props = {
   id: string;
@@ -13,11 +15,22 @@ type Props = {
 };
 
 export default function LcSuggestCharacterCard(props: Props) {
+  const navigation = useNavigation();
+
   const [isSelected, setIsSelected] = useState(false);
 
   const handlePress = useCallback(() => {
     setIsSelected(true);
   }, [isSelected]);
+
+  const handlePopupPress = useCallback(() => {
+    // @ts-ignore
+    navigation.push(SCREENS.CharacterPage.id, {
+      id: props.id,
+      name: props.name,
+    });
+    setIsSelected(false);
+  }, []);
 
   return (
     <View>
@@ -50,7 +63,7 @@ export default function LcSuggestCharacterCard(props: Props) {
         >
           <View style={{ transform: [{ scale: 1.2 }] }}>
             <CharCard
-              onPress={handlePress}
+              onPress={handlePopupPress}
               id={props.id}
               image={props.image}
               name={props.name}

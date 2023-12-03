@@ -7,11 +7,6 @@ import * as characterListMap from "../../../../../data/character_data/character_
 import * as imagesMap from "../../../../../assets/images/images_map/images_map";
 import LcSuggestCharacterCard from "./LcSuggestCharacterCard/LcSuggestCharacterCard";
 
-const testImage1 = require("../../../../../assets/images/character_icon/topaz_icon.webp");
-const testImage2 = require("../../../../../assets/images/character_icon/blade_icon.webp");
-const testImage3 = require("../../../../../assets/images/character_icon/clara_icon.webp");
-const testImage4 = require("../../../../../assets/images/character_icon/gepard_icon.webp");
-
 const testData = [
   {
     id: "March 7th",
