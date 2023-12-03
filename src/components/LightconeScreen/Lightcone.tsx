@@ -44,7 +44,7 @@ export default function Lightcone() {
     >
       <View
         className="z-30"
-        style={{ marginTop: Dimensions.get("window").height / 5 }}
+        style={{ marginTop: Dimensions.get("window").height / 9 }}
       >
         <LcImageFull
           scrollHandler={scrollHandler}

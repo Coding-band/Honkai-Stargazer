@@ -58,7 +58,7 @@ export default function LcList(props: Props) {
             paddingVertical: 110,
             flexDirection: "row",
             flexWrap: "wrap",
-            gap: 12,
+            gap: 11,
             justifyContent: "center",
           }}
         >
