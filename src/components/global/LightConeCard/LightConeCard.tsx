@@ -60,7 +60,7 @@ export default function LightConeCard(props: Props) {
       </LinearGradient>
       {/* </Shadow> */}
       <View
-        className="w-20 h-20 pt-1 mb-[-48px]"
+        className="w-20 h-20 pt-1 mb-[-50px]"
         style={{ alignItems: "center" }}
       >
         <Text

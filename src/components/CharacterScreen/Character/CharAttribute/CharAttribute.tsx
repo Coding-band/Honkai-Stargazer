@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text } from "react-native";
 import { Info } from "phosphor-react-native";
-import AttrSliderbar from "../../../global/AttrSliderbar/AttrSliderbar";
+import AttrSliderbar from "../../../global/Sliderbar/Sliderbar";
 import { Image } from "expo-image";
 import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import useDelayLoad from "../../../../hooks/useDelayLoad";

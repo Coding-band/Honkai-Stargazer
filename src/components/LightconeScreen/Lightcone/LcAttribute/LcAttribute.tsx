@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { View, Text } from "react-native";
 import { Info } from "phosphor-react-native";
-import AttrSliderbar from "../../../global/AttrSliderbar/AttrSliderbar";
+import AttrSliderbar from "../../../global/Sliderbar/Sliderbar";
 import { Image } from "expo-image";
-import CharPageHeading from "../../../global/PageHeading/PageHeading";
+import PageHeading from "../../../global/PageHeading/PageHeading";
 import useDelayLoad from "../../../../hooks/useDelayLoad";
 import MaterialList from "../../../global/MaterialList/MaterialList";
 
@@ -37,7 +37,7 @@ export default function LcAttribute() {
   return (
     <>
       <View style={{ alignItems: "center" }}>
-        <CharPageHeading Icon={Info}>基础属性</CharPageHeading>
+        <PageHeading Icon={Info}>基础属性</PageHeading>
         {loaded && (
           <>
             {/* 等級 - 起點 */}

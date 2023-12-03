@@ -37,7 +37,7 @@ export default function LcImageFull(props: Props) {
         transition={200}
         style={{ width: 500, height: 450 }}
         source={lcData?.imageFull}
-        contentFit="none"
+        contentFit="scale-down"
       />
     </Animated.View>
   );

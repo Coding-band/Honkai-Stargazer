@@ -12,6 +12,7 @@ import LcInfo from "./Lightcone/LcInfo/LcInfo";
 import LcAttribute from "./Lightcone/LcAttribute/LcAttribute";
 import LcStory from "./Lightcone/LcStory/LcStory";
 import LcSuggestCharacter from "./Lightcone/LcSuggestCharacter/LcSuggestCharacter";
+import LcDescription from "./Lightcone/LcDescription/LcDescription";
 
 export default function Lightcone() {
   const [containerHeight, setContainerHeight] = useState(0);
@@ -53,7 +54,7 @@ export default function Lightcone() {
             <LcInfo />
             <Animated.View style={contentAnimatedStyles}>
               <LcAttribute />
-
+              <LcDescription />
               <LcSuggestCharacter />
               <LcStory />
               <View className="pb-[60px]" />

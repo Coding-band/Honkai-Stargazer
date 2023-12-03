@@ -1,5 +1,5 @@
-import { View, Text } from "react-native";
-import React, { useEffect } from "react";
+import { View, Text, LayoutChangeEvent } from "react-native";
+import React, { useCallback, useEffect, useState } from "react";
 import { cn } from "../../../utils/cn";
 import { BlurView } from "expo-blur";
 import { PanGestureHandler } from "react-native-gesture-handler";
@@ -11,28 +11,51 @@ import Animated, {
 } from "react-native-reanimated";
 
 type Props = {
+  point?: number;
+  hasDot?: boolean;
   value: number;
   onChange(v: number): void;
 };
 
-export default function AttrSliderbar(props: Props) {
+export default function Sliderbar({
+  point = 8,
+  hasDot = true,
+  value,
+  onChange,
+}: Props) {
   // 定義每個點的 X 位置
-  const points = [0, 22, 57, 92, 130, 162, 200, 235, 258]; // 根据您的布局调整这些值
+  const [points, setPoints] = useState([0]);
 
-  const positionX = useSharedValue(points[props.value]);
+  const handleLayout = useCallback((event: LayoutChangeEvent) => {
+    const width = event.nativeEvent.layout.width;
+    const span = (width - 16 * (point - 1)) / (point - 1);
+    const points = [0];
+    for (let i = 0; i < 8; i++) {
+      points.push(points[i] + 16 + span);
+    }
+    setPoints(points);
+  }, []);
+
+  const positionX = useSharedValue(points?.[value] || 0);
   const transitionX = useSharedValue(0);
 
   useEffect(() => {
-    positionX.value = points[props.value];
-  }, [props.value]);
+    positionX.value = points[value];
+  }, [value, points]);
 
   const animatedStyle = useAnimatedStyle(() => {
     let computedX = positionX.value + transitionX.value;
 
     if (computedX < 0) computedX = 0;
-    else if (computedX > 260) computedX = 260;
+    else if (computedX > points[point - 1]) computedX = points[point - 1];
 
-    return { left: computedX };
+    if (computedX === 0) {
+      return { left: computedX };
+    } else if (computedX === points[point - 1]) {
+      return { left: computedX - 16 };
+    }
+
+    return { left: computedX - 6 };
   });
 
   const adjustToNearestPoint = (x: any) => {
@@ -40,7 +63,7 @@ export default function AttrSliderbar(props: Props) {
       Math.abs(curr - x) < Math.abs(prev - x) ? curr : prev
     );
     transitionX.value = 0; // 重置 transitionX
-    props.onChange(points.findIndex((v) => v === closest));
+    onChange(points.findIndex((v) => v === closest));
   };
 
   const gestureHandler = useAnimatedGestureHandler({
@@ -54,6 +77,7 @@ export default function AttrSliderbar(props: Props) {
 
   return (
     <View
+      onLayout={handleLayout}
       className={cn("w-[275px] h-12 my-[-8px]", "overflow-hidden")}
       style={{ justifyContent: "center" }}
     >
@@ -77,19 +101,20 @@ export default function AttrSliderbar(props: Props) {
         className={cn("w-full h-4 bg-[#ffffff50] rounded-[30px] ")}
         style={{
           flexDirection: "row",
-          gap: 32,
           alignItems: "center",
           justifyContent: "center",
         }}
       >
-        <View className="w-1 h-1 bg-[#404165] rounded-full"></View>
-        <View className="w-1 h-1 bg-[#404165] rounded-full"></View>
-        <View className="w-1 h-1 bg-[#404165] rounded-full"></View>
-        <View className="w-1 h-1 bg-[#404165] rounded-full"></View>
-        <View className="w-1 h-1 bg-[#404165] rounded-full"></View>
-        <View className="w-1 h-1 bg-[#404165] rounded-full"></View>
-        <View className="w-1 h-1 bg-[#404165] rounded-full"></View>
-        <View className="w-1 h-1 bg-[#404165] rounded-full"></View>
+        {hasDot &&
+          points.map(
+            (p, i) =>
+              i !== 0 && (
+                <View
+                  style={{ left: points[i] }}
+                  className="absolute w-1 h-1 bg-[#404165] rounded-full"
+                />
+              )
+          )}
       </BlurView>
     </View>
   );
