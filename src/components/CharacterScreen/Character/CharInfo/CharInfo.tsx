@@ -3,8 +3,8 @@ import React, { useContext } from "react";
 import CharacterContext from "../../../../context/CharacterContext";
 import CharStars from "../../../global/PageStars/PageStars";
 import { Image } from "expo-image";
-import Path from "../../../../../assets/images/images_map/path";
-import CombatType from "../../../../../assets/images/images_map/combatType";
+import Path from "../../../../../assets/images/@images_map/path";
+import CombatType from "../../../../../assets/images/@images_map/combatType";
 
 export default function CharInfo() {
   const charData = useContext(CharacterContext);

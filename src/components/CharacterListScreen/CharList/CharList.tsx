@@ -4,8 +4,8 @@ import CharCard from "../../global/CharCard/CharCard";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
 import characterList from "../../../../data/character_data/character_list.json";
-import * as character_list_map from "../../../../data/character_data/character_list_map/character_list_map";
-import * as images_map from "../../../../assets/images/images_map/images_map";
+import * as character_list_map from "../../../../data/character_data/@character_list_map/character_list_map";
+import * as images_map from "../../../../assets/images/@images_map/images_map";
 import { CharacterCard, CharacterName } from "../../../types/character";
 
 /*

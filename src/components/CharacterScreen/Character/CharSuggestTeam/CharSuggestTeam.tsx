@@ -5,8 +5,8 @@ import { Person } from "phosphor-react-native";
 import CharSuggestTeamCard from "./CharSuggestTeamCard/CharSuggestTeamCard";
 
 import characterList from "../../../../../data/character_data/character_list.json";
-import * as characterListMap from "../../../../../data/character_data/character_list_map/character_list_map";
-import * as imagesMap from "../../../../../assets/images/images_map/images_map";
+import * as characterListMap from "../../../../../data/character_data/@character_list_map/character_list_map";
+import * as imagesMap from "../../../../../assets/images/@images_map/images_map";
 
 const testData = [
   [

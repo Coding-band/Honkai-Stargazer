@@ -2,7 +2,7 @@ import { View, Text, GestureResponderEvent, Pressable } from "react-native";
 import React, { useContext } from "react";
 import { Image } from "expo-image";
 import CharacterContext from "../../../../../context/CharacterContext";
-import { Chacracter } from "../../../../../../assets/images/images_map/images_map";
+import { Chacracter } from "../../../../../../assets/images/@images_map/images_map";
 import { CharacterName } from "../../../../../types/character";
 import { animated, useSpring } from "@react-spring/native";
 
@@ -20,13 +20,14 @@ export default function Eidolon4({
 
   const animation = useSpring({
     opacity: selected ? 1 : 0,
-    config: { tension: 170 *2, clamp: true },
+    config: { duration: 350, easing: (t) => t * (2 - t) }, // 平滑的缓动函数
   });
 
   const animationZ = useSpring({
-    zIndex: selected ? 100 : 0,
+    zIndex: selected ? 60 : 0,
+    shadowOpacity: selected ? 0.5 : 0, // 添加阴影效果
   });
-  
+
   return (
     <AnimatedPressable
       onPress={onPress}

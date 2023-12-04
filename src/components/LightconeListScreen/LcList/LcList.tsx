@@ -4,8 +4,8 @@ import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
 
 import lightconeList from "../../../../data/lightcone_data/lightcone_list.json";
-import * as lightconeListMap from "../../../../data/lightcone_data/lightcone_list_map/lightcone_list_map";
-import * as images_map from "../../../../assets/images/images_map/images_map";
+import * as lightconeListMap from "../../../../data/lightcone_data/@lightcone_list_map/lightcone_list_map";
+import * as images_map from "../../../../assets/images/@images_map/images_map";
 import { LightconeCard } from "../../../types/lightcone";
 import LightConeCard from "../../global/LightConeCard/LightConeCard";
 

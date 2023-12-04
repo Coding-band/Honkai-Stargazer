@@ -13,6 +13,8 @@ import Animated, {
 type Props = {
   point?: number;
   hasDot?: boolean;
+  width?: number;
+  bgColor?: string;
   value: number;
   onChange(v: number): void;
 };
@@ -22,6 +24,8 @@ export default function Sliderbar({
   hasDot = true,
   value,
   onChange,
+  bgColor,
+  width,
 }: Props) {
   // 定義每個點的 X 位置
   const [points, setPoints] = useState([0]);
@@ -78,8 +82,11 @@ export default function Sliderbar({
   return (
     <View
       onLayout={handleLayout}
-      className={cn("w-[275px] h-12 my-[-8px]", "overflow-hidden")}
-      style={{ justifyContent: "center" }}
+      className={cn("h-12 my-[-8px]", "overflow-hidden")}
+      style={{
+        width: width || 275,
+        justifyContent: "center",
+      }}
     >
       <PanGestureHandler onGestureEvent={gestureHandler}>
         <Animated.View
@@ -98,8 +105,9 @@ export default function Sliderbar({
       </PanGestureHandler>
       <BlurView
         intensity={0}
-        className={cn("w-full h-4 bg-[#ffffff50] rounded-[30px] ")}
+        className={cn("w-full h-4 rounded-[30px] ")}
         style={{
+          backgroundColor: bgColor || "#ffffff50",
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",

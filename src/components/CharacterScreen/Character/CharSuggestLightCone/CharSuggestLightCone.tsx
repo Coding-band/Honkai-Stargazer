@@ -4,8 +4,8 @@ import { ScrollView, View } from "react-native";
 import CharSuggestLightConeCard from "./CharSuggestLightConeCard/CharSuggestLightConeCard";
 
 import lightconeList from "../../../../../data/lightcone_data/lightcone_list.json";
-import * as lightconeListMap from "../../../../../data/lightcone_data/lightcone_list_map/lightcone_list_map";
-import * as imagesMap from "../../../../../assets/images/images_map/images_map";
+import * as lightconeListMap from "../../../../../data/lightcone_data/@lightcone_list_map/lightcone_list_map";
+import * as imagesMap from "../../../../../assets/images/@images_map/images_map";
 
 const testData = [
   {
@@ -49,7 +49,7 @@ export default function CharSuggestLightCone() {
         >
           {testData
             .slice()
-            .sort((d) => 1-d.rare)
+            .sort((d) => 1 - d.rare)
             .map((l, i) => (
               // @ts-ignore
               <CharSuggestLightConeCard key={i} {...l} />

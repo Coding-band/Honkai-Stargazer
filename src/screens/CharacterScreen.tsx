@@ -12,8 +12,10 @@ import { filter } from "lodash";
 import { CharacterName, Character } from "../types/character";
 import CharacterContext from "../context/CharacterContext";
 import charList from "../../data/character_data/character_list.json";
-import * as charListMap from "../../data/character_data/character_list_map/character_list_map";
-import * as imagesMap from "../../assets/images/images_map/images_map";
+import * as charListMap from "../../data/character_data/@character_list_map/character_list_map";
+import * as imagesMap from "../../assets/images/@images_map/images_map";
+import Fixed from "../components/global/Fixed/Fixed";
+import PopUpCard from "../components/global/PopUpCard/PopUpCard";
 
 export default function CharacterScreen() {
   const route = useRoute<RouteProp<ParamList, "Character">>();
@@ -63,6 +65,7 @@ export default function CharacterScreen() {
           className="w-full h-[600px] absolute bottom-0"
           colors={["#00000000", "#000000"]}
         />
+        <Fixed />
       </View>
     </CharacterContext.Provider>
   );

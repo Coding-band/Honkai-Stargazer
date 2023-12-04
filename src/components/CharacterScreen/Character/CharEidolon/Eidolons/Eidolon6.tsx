@@ -1,8 +1,8 @@
-import { View, Text, GestureResponderEvent, Pressable } from "react-native";
+import { GestureResponderEvent, Pressable } from "react-native";
 import React, { useContext } from "react";
 import { Image } from "expo-image";
 import CharacterContext from "../../../../../context/CharacterContext";
-import { Chacracter } from "../../../../../../assets/images/images_map/images_map";
+import { Chacracter } from "../../../../../../assets/images/@images_map/images_map";
 import { CharacterName } from "../../../../../types/character";
 import { animated, useSpring } from "@react-spring/native";
 
@@ -19,12 +19,13 @@ export default function Eidolon6({
   const charEidolon6 = Chacracter[charData?.id as CharacterName]?.eidolon6;
 
   const animation = useSpring({
-    opacity: selected ? 1 : 0,
-    config: { tension: 170 * 2, clamp: true },
+    opacity: selected ? 1 : 0, // 更平滑的透明度过渡
+    config: { duration: 350, easing: (t) => t * (2 - t) }, // 平滑的缓动函数
   });
 
   const animationZ = useSpring({
-    zIndex: selected ? 100 : 40,
+    zIndex: selected ? 60 : 40,
+    shadowOpacity: selected ? 0.5 : 0, // 添加阴影效果
   });
 
   return (

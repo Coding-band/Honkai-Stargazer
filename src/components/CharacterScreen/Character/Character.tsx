@@ -16,6 +16,8 @@ import Animated, {
 } from "react-native-reanimated";
 import CharImageFull from "./CharImageFull/CharImageFull";
 import CharEidolon from "./CharEidolon/CharEidolon";
+import PopUpCard from "../../global/PopUpCard/PopUpCard";
+import Fixed from "../../global/Fixed/Fixed";
 
 export default function Character() {
   const [containerHeight, setContainerHeight] = useState(0);
@@ -45,7 +47,10 @@ export default function Character() {
       className="absolute bottom-0 w-full h-screen z-30"
       style={{ alignItems: "center" }}
     >
-      <View className="z-30" style={{marginTop:Dimensions.get("window").height/5}}>
+      <View
+        className="z-30"
+        style={{ marginTop: Dimensions.get("window").height / 5 }}
+      >
         <CharImageFull
           scrollHandler={scrollHandler}
           charContainerHeight={containerHeight}
