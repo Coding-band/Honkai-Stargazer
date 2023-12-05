@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import { View, Text } from "react-native";
 import { Info } from "phosphor-react-native";
 import AttrSliderbar from "../../../global/Sliderbar/Sliderbar";
@@ -6,6 +6,9 @@ import { Image } from "expo-image";
 import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import useDelayLoad from "../../../../hooks/useDelayLoad";
 import MaterialList from "../../../global/MaterialList/MaterialList";
+import CharacterContext from "../../../../context/CharacterContext";
+import * as charListMap from "../../../../../data/character_data/@character_list_map/character_list_map";
+import { CharacterName } from "../../../../types/character";
 
 const HPIcon = require("../../../../../assets/icons/HP.png");
 const STRIcon = require("../../../../../assets/icons/STR.png");
@@ -17,6 +20,17 @@ const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 
 export default function CharAttribute() {
   const loaded = useDelayLoad(100);
+
+  const charData = useContext(CharacterContext);
+  const charLevelData = useMemo(
+    () => charListMap.ZH_CN[charData?.id as CharacterName].levelData,
+    []
+  );
+
+  const [str, setStr] = useState(0);
+  const [hp, setHp] = useState(0);
+  const [def, setDef] = useState(0);
+  const [dex, setDex] = useState(0);
 
   const [attrFromLevel, setAttrFromLevel] = useState(0);
   const [attrToLevel, setAttrToLevel] = useState(8);
@@ -36,6 +50,18 @@ export default function CharAttribute() {
     }
     setAttrToLevel(newLevel);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      const charCurrentLevelData =
+        charLevelData[attrFromLevel === 7 ? 6 : attrFromLevel];
+      setStr(charCurrentLevelData.attackBase);
+      setHp(charCurrentLevelData.hpBase);
+      setDef(charCurrentLevelData.defenseBase);
+      setDex(charCurrentLevelData.speedBase);
+    });
+  }, [attrFromLevel]);
+
   return (
     <>
       <View style={{ alignItems: "center" }}>
@@ -53,10 +79,11 @@ export default function CharAttribute() {
             >
               {/* 等級 */}
               <Text className="text-white text-[16px] font-medium">
-                Lv.{attrFromLevel === 0 ? "1" : attrFromLevel * 10}
+                Lv.{attrFromLevel * 10 + 1}
               </Text>
               {/* 等級滑動欄 */}
               <AttrSliderbar
+                point={9}
                 value={attrFromLevel}
                 onChange={handleFromLevelChange}
               />
@@ -82,6 +109,7 @@ export default function CharAttribute() {
               </Text>
               {/* 等級滑動欄 */}
               <AttrSliderbar
+                point={9}
                 value={attrToLevel}
                 onChange={handleToLevelChange}
               />
@@ -90,23 +118,36 @@ export default function CharAttribute() {
             <View className="mt-4" style={{ flexDirection: "row", gap: 12 }}>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={HPIcon} />
-                <Text className="text-white text-[16px] font-medium">817</Text>
+                <Text className="text-white text-[16px] font-medium">
+                  {hp.toFixed(0)}
+                </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={STRIcon} />
-                <Text className="text-white text-[16px] font-medium">561</Text>
+                <Text className="text-white text-[16px] font-medium">
+                  {str.toFixed(0)}
+                </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={DEFIcon} />
-                <Text className="text-white text-[16px] font-medium">319</Text>
+                <Text className="text-white text-[16px] font-medium">
+                  {def.toFixed(0)}
+                </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={DEXIcon} />
-                <Text className="text-white text-[16px] font-medium">115</Text>
+                <Text className="text-white text-[16px] font-medium">
+                  {dex.toFixed(0)}
+                </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={ELIcon} />
-                <Text className="text-white text-[16px] font-medium">120</Text>
+                <Text className="text-white text-[16px] font-medium">
+                  {
+                    charListMap.ZH_CN[charData?.id as CharacterName]
+                      .spRequirement
+                  }
+                </Text>
               </View>
             </View>
           </>
