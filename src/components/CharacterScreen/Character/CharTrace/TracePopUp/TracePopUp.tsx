@@ -23,7 +23,9 @@ export default function TracePopUp({ id, onClose }: Props) {
     (skill) => skill.id === (id > 0 && charSkillGrouping[id - 1][0])
   )[0];
 
-  const [skillLevel, setSkillLevel] = useState(6);
+  const [skillLevel, setSkillLevel] = useState(
+    charSkill?.levelData?.length || 0 - 1
+  );
 
   const { setFixed } = useContext(FixedContext)!;
 
@@ -32,7 +34,7 @@ export default function TracePopUp({ id, onClose }: Props) {
       setFixed(null);
     } else {
       setFixed(
-        <View className="w-[350px] mb-[65px]">
+        <View className="w-[350px] mb-8">
           <PopUpCard
             onClose={onClose}
             title={charSkill.name}
@@ -50,7 +52,7 @@ export default function TracePopUp({ id, onClose }: Props) {
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
-                  }}
+                  }} 
                 >
                   <Text className="text-[#DD8200] text-[14px] font-[HY65]">
                     {charSkill.tagHash}
@@ -66,10 +68,10 @@ export default function TracePopUp({ id, onClose }: Props) {
                   }}
                 >
                   <Text className="text-[16px] text-[#222222]">
-                    Lv.{skillLevel + 1}/9
+                    Lv.{skillLevel + 1}/{charSkill?.levelData?.length}
                   </Text>
                   <Sliderbar
-                    point={9}
+                    point={charSkill?.levelData?.length}
                     width={250}
                     bgColor="#00000010"
                     hasDot={false}
