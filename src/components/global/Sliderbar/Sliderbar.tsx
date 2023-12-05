@@ -27,18 +27,22 @@ export default function Sliderbar({
   bgColor,
   width,
 }: Props) {
-  // 定義每個點的 X 位置
+  const [containerWidth, setContainerWidth] = useState(250);
   const [points, setPoints] = useState([0]);
 
   const handleLayout = useCallback((event: LayoutChangeEvent) => {
     const width = event.nativeEvent.layout.width;
-    const span = (width - 16 * (point - 1)) / (point - 1);
+    setContainerWidth(width);
+  }, []);
+
+  useEffect(() => {
+    const span = (containerWidth - 16 * (point - 1)) / (point - 1);
     const points = [0];
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < point-1; i++) {
       points.push(points[i] + 16 + span);
     }
     setPoints(points);
-  }, []);
+  }, [containerWidth, point]);
 
   const positionX = useSharedValue(points?.[value] || 0);
   const transitionX = useSharedValue(0);

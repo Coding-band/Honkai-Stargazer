@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
 import CharacterContext from "../../../../../context/CharacterContext";
 import * as characterListMap from "../../../../../../data/character_data/@character_list_map/character_list_map";
@@ -16,25 +16,28 @@ type Props = {
 };
 
 export default function TracePopUp({ id, onClose }: Props) {
-  const charData = useContext(CharacterContext);
-  const charId = charData?.id as CharacterName;
-  const charSkillGrouping = characterListMap.ZH_CN[charId].skillGrouping;
-  const charSkill = characterListMap.ZH_CN[charId].skills.filter(
-    (skill) => skill.id === (id > 0 && charSkillGrouping[id - 1][0])
-  )[0];
-
-  const [skillLevel, setSkillLevel] = useState(
-    charSkill?.levelData?.length || 0 - 1
-  );
-
   const { setFixed } = useContext(FixedContext)!;
 
+  const charData = useContext(CharacterContext);
+  const charId = charData?.id as CharacterName;
+  const charFullData = useMemo(() => characterListMap.ZH_CN[charId], [charId]);
+  const charSkillGrouping = charFullData.skillGrouping;
+  const charSkill = useMemo(
+    () =>
+      charFullData.skills.filter(
+        (skill) => skill.id === (id > 0 && charSkillGrouping[id - 1][0])
+      )[0],
+    [charFullData, id, charSkillGrouping]
+  );
+
+  const [skillLevel, setSkillLevel] = useState(0);
+
   useEffect(() => {
-    if (id < 1 || id > 6) {
+    if (!charSkill) {
       setFixed(null);
     } else {
       setFixed(
-        <View className="w-[350px] mb-8">
+        <View className="w-[350px] mb-6">
           <PopUpCard
             onClose={onClose}
             title={charSkill.name}
@@ -52,7 +55,7 @@ export default function TracePopUp({ id, onClose }: Props) {
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
-                  }} 
+                  }}
                 >
                   <Text className="text-[#DD8200] text-[14px] font-[HY65]">
                     {charSkill.tagHash}
@@ -68,13 +71,13 @@ export default function TracePopUp({ id, onClose }: Props) {
                   }}
                 >
                   <Text className="text-[16px] text-[#222222]">
-                    Lv.{skillLevel + 1}/{charSkill?.levelData?.length}
+                    Lv.{skillLevel+1}/{charSkill.levelData.length}
                   </Text>
                   <Sliderbar
-                    point={charSkill?.levelData?.length}
+                    point={charSkill.levelData.length}
+                    hasDot={false}
                     width={250}
                     bgColor="#00000010"
-                    hasDot={false}
                     value={skillLevel}
                     onChange={setSkillLevel}
                   />
@@ -96,7 +99,7 @@ export default function TracePopUp({ id, onClose }: Props) {
         </View>
       );
     }
-  }, [charSkill, skillLevel, id]);
+  }, [charSkill, charSkill?.levelData?.length, skillLevel, id]);
 
   return <></>;
 }
