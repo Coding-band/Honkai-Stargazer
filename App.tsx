@@ -1,7 +1,7 @@
 import "./app.d";
-import { Platform, StyleSheet, Text, View } from "react-native";
+import { Platform, View } from "react-native";
 import { useFonts } from "expo-font";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
 import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -14,7 +14,6 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import * as NavigationBar from "expo-navigation-bar";
 import LightconeListScreen from "./src/screens/LightconeListScreen";
 import LightconeScreen from "./src/screens/LightconeScreen";
-import FixedContext from "./src/components/global/Fixed/FixedContext";
 import FixedProvider from "./src/components/global/Fixed/FixedProvider";
 
 SplashScreen.preventAutoHideAsync();
