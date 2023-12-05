@@ -1,14 +1,9 @@
 export default function formatDesc(descHash, params) {
-
-
-  console.log(descHash)
   // 使用正则表达式匹配 #数字[i] 或 #数字[f1]% 的格式
   const regex = /(#\d+\[i\]%?)|(#\d+\[f1\]%?)/g;
 
   // 替换 descHash 中的每个匹配项
   return descHash.replace(regex, (match) => {
-
-    console.log({ match, params })
 
     // 获取占位符中的数字（索引）
     const index = parseInt(match.match(/\d+/)[0]) - 1;
