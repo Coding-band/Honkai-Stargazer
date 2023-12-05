@@ -26,7 +26,7 @@ export default function EidolonPopUp({ id, onClose }: Props) {
       setFixed(null);
     } else {
       setFixed(
-        <View className="w-[350px] mb-8">
+        <View className="w-[350px] mb-6">
           <PopUpCard
             onClose={onClose}
             title={charEidolonRank.name}

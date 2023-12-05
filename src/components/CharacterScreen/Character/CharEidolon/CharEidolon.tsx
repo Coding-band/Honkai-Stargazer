@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { Pressable, View } from "react-native";
 import React, { useState } from "react";
 import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { StarHalf } from "phosphor-react-native";
@@ -14,9 +14,19 @@ import { useClickOutside } from "react-native-click-outside";
 export default function CharEidolon() {
   const [selectedEidolon, setSelectedEidolon] = useState(0);
 
+  const containerRef = useClickOutside<View>(() => {
+    setSelectedEidolon(0);
+  });
+
   return (
     <>
-      <View style={{ alignItems: "center" }}>
+      <Pressable
+        ref={containerRef}
+        onPress={() => {
+          setSelectedEidolon(0);
+        }}
+        style={{ alignItems: "center" }}
+      >
         <CharPageHeading Icon={StarHalf}>星魂</CharPageHeading>
         <View className="w-full h-[280px]">
           <Eidolon1
@@ -56,7 +66,7 @@ export default function CharEidolon() {
             }}
           />
         </View>
-      </View>
+      </Pressable>
       <EidolonPopUp
         id={selectedEidolon}
         onClose={() => {

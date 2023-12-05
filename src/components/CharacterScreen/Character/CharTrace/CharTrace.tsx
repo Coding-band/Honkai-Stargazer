@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { Pressable, View } from "react-native";
 import React, { useState } from "react";
 import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { TreeStructure } from "phosphor-react-native";
@@ -8,6 +8,7 @@ import Inner from "./TraceItem/Inner";
 import Outer from "./TraceItem/Outer";
 import useDelayLoad from "../../../../hooks/useDelayLoad";
 import TracePopUp from "./TracePopUp/TracePopUp";
+import { useClickOutside } from "react-native-click-outside";
 
 const TestTraceLine = require("../../../../../assets/images/test-trace-line.svg");
 const CritDmgIcon = require("../../../../../assets/images/ui_icon/ic_crit_dmg.webp");
@@ -23,14 +24,22 @@ const TestInner4 = require("../../../../../assets/images/test-inner-4.png");
 const TestInner5 = require("../../../../../assets/images/test-inner-5.png");
 
 export default function CharTrace() {
+  const loaded = useDelayLoad(50);
   const [selectedInner, setSelectedInner] = useState(0);
-  const loaded = useDelayLoad(100);
+
+  const containerRef = useClickOutside<View>(() => {
+    setSelectedInner(0);
+  });
 
   return (
     <>
       <View style={{ alignItems: "center" }}>
         <CharPageHeading Icon={TreeStructure}>行迹树</CharPageHeading>
-        <View
+        <Pressable
+          ref={containerRef}
+          onPress={() => {
+            setSelectedInner(0);
+          }}
           style={{
             width: 325,
             height: 404,
@@ -44,6 +53,7 @@ export default function CharTrace() {
           {loaded && (
             <>
               <>
+                <View style={{ position: "absolute", left: 0, top: 0 }} />
                 <Edge left={85} top={16} icon={CritDmgIcon} />
                 <Edge left={150} top={0} icon={DefIcon} />
                 <Edge left={215} top={16} icon={AttackIcon} />
@@ -107,7 +117,7 @@ export default function CharTrace() {
               </>
             </>
           )}
-        </View>
+        </Pressable>
       </View>
       <TracePopUp
         id={selectedInner}
