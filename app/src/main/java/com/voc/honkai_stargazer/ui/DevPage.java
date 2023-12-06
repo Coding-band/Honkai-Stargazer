@@ -151,7 +151,7 @@ public class DevPage extends AppCompatActivity {
         dev_help_tool.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HelpTool.trigger_help_tool(context);
+                new HelpTool().trigger_help_tool(context);
                 HelpTool helpTool = new HelpTool();
                 try {
                     //helpTool.help_tool_export_relic_pc_run(context);

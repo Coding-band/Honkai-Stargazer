@@ -11,7 +11,9 @@ import static com.voc.honkai_stargazer.util.ItemRSS.VERSION_1_2_0;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.voc.honkai_stargazer.util.LangUtil;
 import com.voc.honkai_stargazer.util.LogExport;
@@ -32,6 +34,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 
 public class HelpTool {
@@ -42,13 +45,16 @@ public class HelpTool {
 
     Context context = null;
 
+    ArrayList<String> skillTreePointList = new ArrayList<>();
     public static final String VERSION_CHECK = "VERSION_CHECK";
+    public ArrayList<String> skillTreePointArray = new ArrayList<>();
 
-    public static void trigger_help_tool(Context context){
+    public void trigger_help_tool(Context context){
         String json_base2 = LoadAssestData(context, "character_data/character_list.json");
         try {
             JSONArray array = new JSONArray(json_base2);
             ArrayList<String> materialList = new ArrayList<>();
+            skillTreePointArray = new ArrayList<>();
             /*
             for (int i = 0; i < array.length(); i++) {
                 JSONObject object = array.getJSONObject(i);
@@ -63,6 +69,7 @@ public class HelpTool {
                     HelpTool.help_tool_skill(jsonObject, context);
                 }
             }*/
+/*
 
             for (int i = 0; i < array.length(); i++) {
                 JSONObject object = array.getJSONObject(i);
@@ -77,9 +84,73 @@ public class HelpTool {
                 }
                 //}
             }
+ */
+
+
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject object = array.getJSONObject(i);
+                //Special requirements
+                //if (object.getString("fileName").contains("player")) {
+
+                String json_base = LoadAssestData(context, "character_data/" + "en" + "/" + object.getString("fileName") + ".json");
+                if (!json_base.equals("")) {
+                    JSONObject jsonObject = new JSONObject(json_base);
+                    if (jsonObject.has("skillTreePoints") && !jsonObject.isNull("skillTreePoints") && jsonObject.getJSONArray("skillTreePoints").length() > 0){
+                        skillTree(jsonObject.getJSONArray("skillTreePoints"),object.getString("fileName"),0);
+                    }else {
+                        Toast.makeText(context, "SkillTreeIsNull in "+object.getString("fileName"), Toast.LENGTH_SHORT).show();
+                    }
+                }
+                //}
+            }
+
+            new Handler().postDelayed(() -> {
+                String str_final = "";
+
+                for (String value : skillTreePointArray){
+                    str_final += value +"\n";
+                }
+                LogExport.special(str_final, context, LogExport.BETA_TESTING);
+            },10000);
+
 
         }catch (JSONException e){
             e.printStackTrace();
+        }
+    }
+
+    public void skillTree(JSONArray skillTreePoints, String charName, int level){
+        for (int x = 0 ; x < skillTreePoints.length() ; x++){
+            try{
+                JSONObject jsonObject = skillTreePoints.getJSONObject(x);
+                if (jsonObject.has("embedBonusSkill") && jsonObject.getJSONObject("embedBonusSkill").has("iconPath")){
+                    String iconPath = jsonObject.getJSONObject("embedBonusSkill").getString("iconPath");
+                    boolean isExist = true;
+                    if (!skillTreePointArray.contains(iconPath)) {
+                        skillTreePointArray.add(iconPath);
+                        isExist = false;
+                    }
+                    System.out.println("skillTree ["+charName+"] - LVL"+level+" || "+"["+isExist+"] : "+iconPath);
+
+                }
+
+                if (jsonObject.has("embedBuff") && jsonObject.getJSONObject("embedBuff").has("iconPath")){
+                    String iconPath = jsonObject.getJSONObject("embedBuff").getString("iconPath");
+                    boolean isExist = true;
+                    if (!skillTreePointArray.contains(iconPath)) {
+                        skillTreePointArray.add(iconPath);
+                        isExist = false;
+                    }
+                    System.out.println("skillTree ["+charName+"] - LVL"+level+" || "+"["+isExist+"] : "+iconPath);
+
+                }
+
+                if (jsonObject.has("children")){
+                    skillTree(jsonObject.getJSONArray("children"),charName, level+1);
+                }
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
