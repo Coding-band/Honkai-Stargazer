@@ -9,6 +9,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { Image } from "expo-image";
 import { ExpoImage } from "../../../types/image";
 import { Shadow } from "react-native-shadow-2";
+import { CardColors } from "../../../constant/card";
 
 type Props = {
   image?: ExpoImage;
@@ -34,9 +35,7 @@ export default function LightConeCard(props: Props) {
           borderTopRightRadius: 10,
           overflow: "hidden",
         }}
-        colors={
-          props.rare === 5 ? ["#905A52", "#C8A471"] : ["#404165", "#9763CE"]
-        }
+        colors={CardColors[props.rare as 3 | 4 | 5]}
       >
         <View
           className="w-full h-full"

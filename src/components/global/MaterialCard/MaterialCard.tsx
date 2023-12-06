@@ -8,13 +8,7 @@ import React from "react";
 import { Shadow } from "react-native-shadow-2";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image, ImageSource } from "expo-image";
-import { cn } from "../../../utils/cn";
-
-const CardColors = {
-  2: ["#374860", "#3F797C"],
-  3: ["#393A5C", "#497AB8"],
-  4: ["#404165", "#9763CE"],
-};
+import { CardColors } from "../../../constant/card";
 
 type Props = {
   image?:
