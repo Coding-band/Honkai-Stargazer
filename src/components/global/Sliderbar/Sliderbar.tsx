@@ -20,7 +20,7 @@ type Props = {
 };
 
 export default function Sliderbar({
-  point = 8,
+  point = 9,
   hasDot = true,
   value,
   onChange,
