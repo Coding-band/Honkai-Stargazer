@@ -12,8 +12,8 @@ import { filter } from "lodash";
 import { Lightcone, LightconeName } from "../types/lightcone";
 import LightconeContext from "../context/LightconeContext";
 import lcList from "../../data/lightcone_data/lightcone_list.json";
-import * as lcListMap from "../../data/lightcone_data/@lightcone_data_map/lightcone_data_map";
 import * as imagesMap from "../../assets/images/@images_map/images_map";
+import { getLcFullData } from "../utils/getDataFromMap";
 
 export default function LightconeScreen() {
   const route = useRoute<RouteProp<ParamList, "Lightcone">>();
@@ -25,13 +25,14 @@ export default function LightconeScreen() {
 
   useEffect(() => {
     const lcDataJson = filter(lcList, (lc) => lc?.name === lcId)[0];
+    const lcFullData = getLcFullData(lcId);
     setLcData({
       id: lcId,
-      name: lcListMap.ZH_CN[lcId]?.name,
+      name: lcFullData?.name,
       rare: lcDataJson?.rare,
-      path: lcListMap.ZH_CN[lcId]?.baseType?.name,
+      path: lcFullData?.baseType?.name,
       imageFull: imagesMap.Lightcone[lcId]?.imageFull,
-      description: lcListMap.ZH_CN[lcId]?.descHash,
+      description: lcFullData?.descHash,
     });
     setShowMain(true);
   }, []);

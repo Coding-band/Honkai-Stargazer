@@ -1,10 +1,18 @@
 import { View, Text } from "react-native";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import PageHeading from "../../../global/PageHeading/PageHeading";
 import { Info } from "phosphor-react-native";
 import Sliderbar from "../../../global/Sliderbar/Sliderbar";
+import LightconeContext from "../../../../context/LightconeContext";
+import { getLcFullData } from "../../../../utils/getDataFromMap";
+import formatDesc from "../../../../utils/formatDesc";
+import { HtmlText } from "@e-mine/react-native-html-text";
 
 export default function LcDescription() {
+  const lcData = useContext(LightconeContext);
+  const lcId = lcData?.id!;
+  const lcFullData = getLcFullData(lcId);
+
   const [skillLevel, setSkillLevel] = useState(0);
 
   return (
@@ -12,7 +20,7 @@ export default function LcDescription() {
       <PageHeading Icon={Info}>技能故事</PageHeading>
       <View className="w-full">
         <Text className="text-text font-[HY65] text-[20px] leading-[40px]">
-          花与蝶
+          {lcFullData.skill.name}
         </Text>
         <View
           className="pb-[5px]"
@@ -37,9 +45,15 @@ export default function LcDescription() {
             onChange={setSkillLevel}
           />
         </View>
-        <Text className="text-text2 font-[HY65] text-[14px]">
-          使装备者的暴击率提高18%。当装备者在战斗中速度大于100时，每超过10点，普攻和战技造成的伤害提高6%，同时终结技的暴击伤害提高12%，该效果可叠加6层。
-        </Text>
+        <HtmlText
+          style={{ color: "#DDD", fontFamily: "HY65", fontSize: 14 }}
+          // className="text-text2 font-[HY65] text-[14px]"
+        >
+          {formatDesc(
+            lcFullData.skill.descHash,
+            lcFullData.skill.levelData[skillLevel].params
+          )}
+        </HtmlText>
       </View>
     </View>
   );

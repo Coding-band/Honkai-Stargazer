@@ -12,9 +12,9 @@ import { filter } from "lodash";
 import { CharacterName, Character } from "../types/character";
 import CharacterContext from "../context/CharacterContext";
 import charList from "../../data/character_data/character_list.json";
-import * as charListMap from "../../data/character_data/@character_data_map/character_data_map";
 import * as imagesMap from "../../assets/images/@images_map/images_map";
 import Fixed from "../components/global/Fixed/Fixed";
+import { getCharFullData } from "../utils/getDataFromMap";
 
 export default function CharacterScreen() {
   const route = useRoute<RouteProp<ParamList, "Character">>();
@@ -26,7 +26,7 @@ export default function CharacterScreen() {
 
   useEffect(() => {
     const charDataJson = filter(charList, (char) => char?.name === charId)[0];
-    const charFullData = charListMap.ZH_CN[charId];
+    const charFullData = getCharFullData(charId);
     setCharData({
       id: charId,
       name: charFullData?.name,
