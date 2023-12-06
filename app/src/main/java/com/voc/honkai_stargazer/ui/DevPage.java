@@ -155,7 +155,7 @@ public class DevPage extends AppCompatActivity {
                 HelpTool helpTool = new HelpTool();
                 try {
                     //helpTool.help_tool_export_relic_pc_run(context);
-                    helpTool.help_tool_export_locale_advice(context);
+                    //helpTool.help_tool_export_locale_advice(context);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }

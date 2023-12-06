@@ -29,7 +29,9 @@ public class LangUtil {
         RU(new Locale("ru", "RU"),"ru","Русский"),
         UA(new Locale("uk", "UA"),"ua","Українська"),
         DE(new Locale("de", "DE"),"de","Deutsch"),
-        PT(new Locale("pt", "PT"),"pt","Português");
+        PT(new Locale("pt", "PT"),"pt","Português"),
+        VI(new Locale("vi", "VI"),"vi","tiếng Việt"),
+        ES(new Locale("es", "ES"),"es","Español");
 
         private Locale locale;
         private String code;
@@ -70,6 +72,8 @@ public class LangUtil {
             case ItemRSS.LANG_UA: langType = LangType.UA;break;
             case ItemRSS.LANG_DE: langType = LangType.DE;break;
             case ItemRSS.LANG_PT: langType = LangType.PT;break;
+            case ItemRSS.LANG_VI: langType = LangType.VI;break;
+            case ItemRSS.LANG_ES: langType = LangType.ES;break;
             default:langType = LangType.EN;break;
         }
         return langType;
@@ -95,6 +99,8 @@ public class LangUtil {
             case UA: editor.putString("curr_lang",LangType.UA.getCode()).apply();break;
             case DE: editor.putString("curr_lang",LangType.DE.getCode()).apply();break;
             case PT: editor.putString("curr_lang",LangType.PT.getCode()).apply();break;
+            case VI: editor.putString("curr_lang",LangType.VI.getCode()).apply();break;
+            case ES: editor.putString("curr_lang",LangType.ES.getCode()).apply();break;
             default:
             case EN: editor.putString("curr_lang",LangType.EN.getCode()).apply();break;
         }
@@ -122,6 +128,8 @@ public class LangUtil {
             case UA: editor.putString("curr_lang",LangType.UA.getCode()).apply();break;
             case DE: editor.putString("curr_lang",LangType.DE.getCode()).apply();break;
             case PT: editor.putString("curr_lang",LangType.PT.getCode()).apply();break;
+            case VI: editor.putString("curr_lang",LangType.VI.getCode()).apply();break;
+            case ES: editor.putString("curr_lang",LangType.ES.getCode()).apply();break;
             default:
             case EN: editor.putString("curr_lang",LangType.EN.getCode()).apply();break;
         }

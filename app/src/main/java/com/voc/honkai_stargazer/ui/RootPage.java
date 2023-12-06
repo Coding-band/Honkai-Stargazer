@@ -409,6 +409,8 @@ public class RootPage extends AppCompatActivity {
                 RadioButton setting_lang_ua = view.findViewById(R.id.setting_lang_ua);
                 RadioButton setting_lang_de = view.findViewById(R.id.setting_lang_de);
                 RadioButton setting_lang_pt = view.findViewById(R.id.setting_lang_pt);
+                RadioButton setting_lang_vi = view.findViewById(R.id.setting_lang_vi);
+                RadioButton setting_lang_es = view.findViewById(R.id.setting_lang_es);
                 RadioButton setting_lang_en = view.findViewById(R.id.setting_lang_en);
 
                 switch (sharedPreferences.getString("curr_lang","")){
@@ -420,6 +422,8 @@ public class RootPage extends AppCompatActivity {
                     case ItemRSS.LANG_UA: setting_lang_ua.setChecked(true);break;
                     case ItemRSS.LANG_DE: setting_lang_de.setChecked(true);break;
                     case ItemRSS.LANG_PT: setting_lang_pt.setChecked(true);break;
+                    case ItemRSS.LANG_VI: setting_lang_vi.setChecked(true);break;
+                    case ItemRSS.LANG_ES: setting_lang_es.setChecked(true);break;
                     default:
                     case ItemRSS.LANG_EN: setting_lang_en.setChecked(true);break;
                 }
@@ -437,6 +441,8 @@ public class RootPage extends AppCompatActivity {
                             case R.id.setting_lang_ua: setting_lang_display.setText(LangUtil.LangType.UA.getFullName());LangUtil.getAttachBaseContext(context, LangUtil.LangType.UA);recreate();break;
                             case R.id.setting_lang_de: setting_lang_display.setText(LangUtil.LangType.DE.getFullName());LangUtil.getAttachBaseContext(context, LangUtil.LangType.DE);recreate();break;
                             case R.id.setting_lang_pt: setting_lang_display.setText(LangUtil.LangType.PT.getFullName());LangUtil.getAttachBaseContext(context, LangUtil.LangType.PT);recreate();break;
+                            case R.id.setting_lang_vi: setting_lang_display.setText(LangUtil.LangType.VI.getFullName());LangUtil.getAttachBaseContext(context, LangUtil.LangType.PT);recreate();break;
+                            case R.id.setting_lang_es: setting_lang_display.setText(LangUtil.LangType.ES.getFullName());LangUtil.getAttachBaseContext(context, LangUtil.LangType.PT);recreate();break;
                             default:
                             case R.id.setting_lang_en: setting_lang_display.setText(LangUtil.LangType.EN.getFullName());LangUtil.getAttachBaseContext(context, LangUtil.LangType.EN);recreate();break;
                         }

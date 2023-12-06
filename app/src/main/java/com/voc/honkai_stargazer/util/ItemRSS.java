@@ -41,6 +41,8 @@ public class ItemRSS {
     public static final String LANG_JP = "jp";
     public static final String LANG_DE = "de";
     public static final String LANG_PT = "pt";
+    public static final String LANG_VI = "vi";
+    public static final String LANG_ES = "es";
 
     public static final String ELEMENT_FIRE = "Fire";
     public static final String ELEMENT_ICE = "Ice";
@@ -86,6 +88,9 @@ public class ItemRSS {
     public static final String VERSION_1_0_5 = "1.0.5";
     public static final String VERSION_1_1_0 = "1.1.0";
     public static final String VERSION_1_2_0 = "1.2.0";
+    public static final String VERSION_1_3_0 = "1.3.0";
+    public static final String VERSION_1_4_0 = "1.4.0";
+    public static final String VERSION_1_5_0 = "1.5.0";
 
     public static NumberFormat getNumberFormat() {
         NumberFormat nf = NumberFormat.getNumberInstance();
@@ -179,7 +184,7 @@ public class ItemRSS {
 
 
     /**
-     * Update Ver. 1.3.0
+     * Update Ver. 1.5.0
      * https://hsr.honeyhunterworld.com/img/item/fu-xuan-item_icon_avatar.webp?x11252
      */
     public int[] getCharByName(String charNameInFile, String... option){
@@ -187,6 +192,16 @@ public class ItemRSS {
             return getTrailblazerByName(charNameInFile,option);
         }
         switch (charNameInFile){
+            //Add in 1.5.0
+            case "Argenti" : return new int[]{R.drawable.argenti_icon, R.drawable.argenti_splash, R.drawable.argenti_fade,R.drawable.argenti_eidolon1, R.drawable.argenti_eidolon2, R.drawable.dan_heng_eidolon3, R.drawable.argenti_eidolon4, R.drawable.argenti_eidolon5, R.drawable.argenti_eidolon6};
+            case "Huohuo" : return new int[]{R.drawable.huohuo_icon, R.drawable.huohuo_splash, R.drawable.huohuo_fade,R.drawable.huohuo_eidolon1, R.drawable.huohuo_eidolon2, R.drawable.huohuo_eidolon3, R.drawable.huohuo_eidolon4, R.drawable.huohuo_eidolon5, R.drawable.huohuo_eidolon6};
+            case "Hanya" : return new int[]{R.drawable.hanya_icon, R.drawable.hanya_splash, R.drawable.hanya_fade,R.drawable.hanya_eidolon1, R.drawable.hanya_eidolon2, R.drawable.hanya_eidolon3, R.drawable.hanya_eidolon4, R.drawable.hanya_eidolon5, R.drawable.hanya_eidolon6};
+
+            //Add in 1.4.0
+            case "Jingliu" : return new int[]{R.drawable.jingliu_icon, R.drawable.jingliu_splash, R.drawable.jingliu_fade,R.drawable.jingliu_eidolon1, R.drawable.jingliu_eidolon2, R.drawable.dan_heng_eidolon3, R.drawable.jingliu_eidolon4, R.drawable.jingliu_eidolon5, R.drawable.jingliu_eidolon6};
+            case "Topaz & Numby" : return new int[]{R.drawable.topaz_icon, R.drawable.topaz_splash, R.drawable.topaz_splash,R.drawable.topaz_eidolon1, R.drawable.topaz_eidolon2, R.drawable.topaz_eidolon3, R.drawable.topaz_eidolon4, R.drawable.topaz_eidolon5, R.drawable.topaz_eidolon6};
+            case "Guinaifen" : return new int[]{R.drawable.guinaifen_icon, R.drawable.guinaifen_splash, R.drawable.guinaifen_fade,R.drawable.guinaifen_eidolon1, R.drawable.guinaifen_eidolon2, R.drawable.guinaifen_eidolon3, R.drawable.guinaifen_eidolon4, R.drawable.guinaifen_eidolon5, R.drawable.guinaifen_eidolon6};
+
             //Add in 1.3.0
             case "Dan Heng • Imbibitor Lunae" : return new int[]{R.drawable.dan_heng_il_icon, R.drawable.dan_heng_il_splash, R.drawable.dan_heng_il_fade,R.drawable.dan_heng_il_eidolon1, R.drawable.dan_heng_il_eidolon2, R.drawable.dan_heng_eidolon3, R.drawable.dan_heng_il_eidolon4, R.drawable.dan_heng_il_eidolon5, R.drawable.dan_heng_il_eidolon6};
             case "Fu Xuan" : return new int[]{R.drawable.fu_xuan_icon, R.drawable.fu_xuan_splash, R.drawable.fu_xuan_fade,R.drawable.fu_xuan_eidolon1, R.drawable.fu_xuan_eidolon2, R.drawable.fu_xuan_eidolon3, R.drawable.fu_xuan_eidolon4, R.drawable.fu_xuan_eidolon5, R.drawable.fu_xuan_eidolon6};
@@ -230,10 +245,19 @@ public class ItemRSS {
     }
 
     /**
-     * Update Ver. 1.3.0
+     * Update Ver. 1.5.0
      */
     public int[] getLightconeByName(String lightconeNameInFile){
         switch (lightconeNameInFile){
+            //Add in 1.5.0
+            case "Night of Fright" : return new int[] {R.drawable.night_of_fright, R.drawable.night_of_fright_artwork};
+            case "An Instant Before A Gaze" : return new int[] {R.drawable.an_instant_before_a_gaze, R.drawable.an_instant_before_a_gaze_artwork};
+            case "Hey, Over Here" : return new int[] {R.drawable.hey_over_here, R.drawable.hey_over_here_artwork};
+
+            //Add in 1.4.0
+            case "Worrisome, Blissful" : return new int[] {R.drawable.worrisome_blissful, R.drawable.worrisome_blissful_artwork};
+            case "I Shall Be My Own Sword" : return new int[] {R.drawable.i_shall_be_my_own_sword, R.drawable.i_shall_be_my_own_sword_artwork};
+
             //Add in 1.3.0
             case "She Already Shut Her Eyes" : return new int[] {R.drawable.she_already_shut_her_eyes, R.drawable.she_already_shut_her_eyes_artwork};
             case "Brighter Than the Sun" : return new int[] {R.drawable.brighter_than_the_sun, R.drawable.brighter_than_the_sun_artwork};
@@ -323,10 +347,16 @@ public class ItemRSS {
     }
 
     /**
-     * Update Ver. 1.3.0
+     * Update Ver. 1.5.0
      */
     public int[] getRelicByName(String relicNameInFile){
         switch (relicNameInFile){
+            //Add in 1.5.0
+            case "The Ashblazing Grand Duke" : return new int[] {R.drawable.the_ashblazing_grand_duke_1, R.drawable.the_ashblazing_grand_duke_2, R.drawable.the_ashblazing_grand_duke_3, R.drawable.the_ashblazing_grand_duke_4};
+            case "Prisoner in Deep Confinement" : return new int[] {R.drawable.prisoner_in_deep_confinement_1, R.drawable.prisoner_in_deep_confinement_2, R.drawable.prisoner_in_deep_confinement_3, R.drawable.prisoner_in_deep_confinement_4};
+            case "Firmament Frontline: Glamoth" : return new int[] {R.drawable.firmament_frontline_glamoth_5, R.drawable.firmament_frontline_glamoth_6};
+            case "Penacony, Land of the Dreams" : return new int[] {R.drawable.penacony_land_of_the_dreams_5, R.drawable.penacony_land_of_the_dreams_6};
+
             //Add in 1.2.0
             case "Longevous Disciple" : return new int[] {R.drawable.longevous_disciple_1, R.drawable.longevous_disciple_2, R.drawable.longevous_disciple_3, R.drawable.longevous_disciple_4};
             case "Messenger Traversing Hackerspace" : return new int[] {R.drawable.messenger_traversing_hackerspace_1, R.drawable.messenger_traversing_hackerspace_2, R.drawable.messenger_traversing_hackerspace_3, R.drawable.messenger_traversing_hackerspace_4};
@@ -346,7 +376,7 @@ public class ItemRSS {
             case "Inert Salsotto" : return new int[] {R.drawable.inert_salsotto_5, R.drawable.inert_salsotto_6};
             case "Knight of Purity Palace" : return new int[] {R.drawable.knight_of_purity_palace_1, R.drawable.knight_of_purity_palace_2, R.drawable.knight_of_purity_palace_3, R.drawable.knight_of_purity_palace_4};
             case "Musketeer of Wild Wheat" : return new int[] {R.drawable.musketeer_of_wild_wheat_1, R.drawable.musketeer_of_wild_wheat_2, R.drawable.musketeer_of_wild_wheat_3, R.drawable.musketeer_of_wild_wheat_4};
-            case "Pan-Galactic Commercial Enterprise" : return new int[] {R.drawable.pan_galactic_commercial_enterprise_5, R.drawable.pan_galactic_commercial_enterprise_6};
+            case "Pan-Cosmic Commercial Enterprise" : return new int[] {R.drawable.pan_galactic_commercial_enterprise_5, R.drawable.pan_galactic_commercial_enterprise_6};
             case "Passerby of Wandering Cloud" : return new int[] {R.drawable.passerby_of_wandering_cloud_1, R.drawable.passerby_of_wandering_cloud_2, R.drawable.passerby_of_wandering_cloud_3, R.drawable.passerby_of_wandering_cloud_4};
             case "Space Sealing Station" : return new int[] {R.drawable.space_sealing_station_5, R.drawable.space_sealing_station_6};
             case "Sprightly Vonwacq" : return new int[] {R.drawable.sprightly_vonwacq_5, R.drawable.sprightly_vonwacq_6};
@@ -360,10 +390,29 @@ public class ItemRSS {
 
 
     /**
-     * Update Ver. 1.3.0
+     * Update Ver. 1.5.0
      */
     public String getLocalNameByName(String itemNameInFile, Context context){
         switch (itemNameInFile){
+            //Add in 1.5.0
+            case "Hanya" : return context.getString(R.string.hanya);
+            case "Huohuo" : return context.getString(R.string.huohuo);
+            case "Argenti" : return context.getString(R.string.argenti);
+            case "Night of Fright" : return context.getString(R.string.night_of_fright);
+            case "An Instant Before A Gaze" : return context.getString(R.string.an_instant_before_a_gaze);
+            case "Hey, Over Here" : return context.getString(R.string.hey_over_here);
+            case "The Ashblazing Grand Duke" : return context.getString(R.string.the_ashblazing_grand_duke);
+            case "Prisoner in Deep Confinement" : return context.getString(R.string.prisoner_in_deep_confinement);
+            case "Firmament Frontline: Glamoth" : return context.getString(R.string.firmament_frontline_glamoth);
+            case "Penacony, Land of the Dreams" : return context.getString(R.string.penacony_land_of_the_dreams);
+
+            //Add in 1.4.0
+            case "Topaz & Numby" : return context.getString(R.string.topaz_numby);
+            case "Guinaifen" : return context.getString(R.string.guinaifen);
+            case "Jingliu" : return context.getString(R.string.jingliu);
+            case "I Shall Be My Own Sword" : return context.getString(R.string.i_shall_be_my_own_sword);
+            case "Worrisome, Blissful" : return context.getString(R.string.worrisome_blissful);
+
             //Add in 1.3.0
             case "Dan Heng • Imbibitor Lunae" : return context.getString(R.string.dan_heng_imbibitor_lunae);
             case "Fu Xuan" : return context.getString(R.string.fu_xuan);
@@ -430,7 +479,7 @@ public class ItemRSS {
             case "Inert Salsotto" : return context.getString(R.string.inert_salsotto);
             case "Knight of Purity Palace" : return context.getString(R.string.knight_of_purity_palace);
             case "Musketeer of Wild Wheat" : return context.getString(R.string.musketeer_of_wild_wheat);
-            case "Pan-Galactic Commercial Enterprise" : return context.getString(R.string.pan_galactic_commercial_enterprise);
+            case "Pan-Cosmic Commercial Enterprise" : return context.getString(R.string.pan_cosmic_commercial_enterprise);
             case "Passerby of Wandering Cloud" : return context.getString(R.string.passerby_of_wandering_cloud);
             case "Space Sealing Station" : return context.getString(R.string.space_sealing_station);
             case "Sprightly Vonwacq" : return context.getString(R.string.sprightly_vonwacq);
@@ -512,13 +561,22 @@ public class ItemRSS {
     }
 
     /**
-     * Update Ver. 1.3.0
+     * Update Ver. 1.5.0
      * @param name Name of Lightcone in Prydwen
      * @param context Context for using context.getString(...)
      * @return
      */
     public String getLocaleNameByPrydwen(String name, Context context){
         switch (name){
+            //Add in 1.5.0
+            case "night-of-fright": return "Night of Fright";
+            case "an-instant-before-a-gaze": return "An Instant Before A Gaze";
+            case "hey-over-here": return "Hey, Over Here";
+
+            //Add in 1.4.0
+            case "i-shall-be-my-own-sword": return "I Shall Be My Own Sword";
+            case "worrisome-blissful": return "Worrisome, Blissful";
+
             //Add in 1.3.0
             case "she-already-shut-her-eyes": return "She Already Shut Her Eyes";
             case "brighter-than-the-sun": return "Brighter Than the Sun";
@@ -606,6 +664,16 @@ public class ItemRSS {
 
     public int[] getCharSkillByName(String charNameInFile){
         switch (charNameInFile){
+            //Add in 1.5.0
+            case "Hanya" : return new int[]{R.drawable.hanya_skill1, R.drawable.hanya_skill2, R.drawable.hanya_skill3, R.drawable.hanya_skill4, R.drawable.hanya_skill6};
+            case "Huohuo" : return new int[]{R.drawable.huohuo_skill1, R.drawable.huohuo_skill2, R.drawable.huohuo_skill3, R.drawable.huohuo_skill4, R.drawable.huohuo_skill6};
+            case "Argenti" : return new int[]{R.drawable.argenti_skill1, R.drawable.argenti_skill2, R.drawable.argenti_skill3, R.drawable.argenti_skill4, R.drawable.argenti_skill6};
+
+            //Add in 1.4.0
+            case "Topaz & Numby" : return new int[]{R.drawable.topaz_skill1, R.drawable.topaz_skill2, R.drawable.topaz_skill3, R.drawable.topaz_skill4, R.drawable.topaz_skill6};
+            case "Guinaifen" : return new int[]{R.drawable.guinaifen_skill1, R.drawable.guinaifen_skill2, R.drawable.guinaifen_skill3, R.drawable.guinaifen_skill4, R.drawable.guinaifen_skill6};
+            case "Jingliu" : return new int[]{R.drawable.jingliu_skill1, R.drawable.jingliu_skill2, R.drawable.jingliu_skill3, R.drawable.jingliu_skill4, R.drawable.jingliu_skill6};
+
             //Add in 1.3.0
             case "Dan Heng • Imbibitor Lunae" : return new int[]{R.drawable.dan_heng_il_skill1, R.drawable.dan_heng_il_skill2, R.drawable.dan_heng_il_skill3, R.drawable.dan_heng_il_skill4, R.drawable.dan_heng_il_skill6};
             case "Fu Xuan" : return new int[]{R.drawable.fu_xuan_skill1, R.drawable.fu_xuan_skill2, R.drawable.fu_xuan_skill3, R.drawable.fu_xuan_skill4, R.drawable.fu_xuan_skill6};
@@ -653,68 +721,70 @@ public class ItemRSS {
 
     public int getMaterialByID(int materialID){
         switch (materialID){
-            //Add in 1.3.0
-            case 351747 : return R.drawable.material_nail_of_the_ape;
-            case 468392 : return R.drawable.material_suppressing_edict;
-            case 717385 : return R.drawable.material_artifexs_gyreheart;
-            case 717386 : return R.drawable.material_immortal_lumintwig;
-
-            case 125435 : return R.drawable.material_tracks_of_destiny;
-            case 151160 : return R.drawable.material_lightning_crown_of_the_past_shadow;
-            case 151161 : return R.drawable.material_shape_shifters_lightning_staff;
-            case 186254 : return R.drawable.material_regret_of_infinite_ochema;
-            case 267805 : return R.drawable.material_storm_eye;
-            case 267806 : return R.drawable.material_ascendant_debris;
-            case 270195 : return R.drawable.material_guardians_lament;
+            //Update in 1.5.0
             case 29328 : return R.drawable.material_credit;
-            case 351746 : return R.drawable.material_void_cast_iron;
+            case 125435 : return R.drawable.material_tracks_of_destiny;
+            case 186254 : return R.drawable.material_regret_of_infinite_ochema;
             case 409960 : return R.drawable.material_travelers_guide;
             case 409961 : return R.drawable.material_adventure_log;
             case 409962 : return R.drawable.material_travel_encounters;
-            case 468391 : return R.drawable.material_golden_crown_of_the_past_shadow;
-            case 549407 : return R.drawable.material_silvermane_badge;
-            case 549408 : return R.drawable.material_ancient_part;
-            case 549437 : return R.drawable.material_thiefs_instinct;
             case 549438 : return R.drawable.material_extinguished_core;
-            case 549503 : return R.drawable.material_artifexs_module;
-            case 549504 : return R.drawable.material_immortal_scionette;
-            case 633348 : return R.drawable.material_silvermane_insignia;
-            case 633349 : return R.drawable.material_ancient_spindle;
-            case 633378 : return R.drawable.material_usurpers_scheme;
             case 633379 : return R.drawable.material_glimmering_core;
-            case 633444 : return R.drawable.material_artifexs_cogwheel;
-            case 633445 : return R.drawable.material_immortal_aeroblossom;
-            case 635668 : return R.drawable.material_endurance_of_bronze;
-            case 635669 : return R.drawable.material_obsidian_of_dread;
-            case 635670 : return R.drawable.material_harmonic_tune;
-            case 635671 : return R.drawable.material_seed_of_abundance;
-            case 635673 : return R.drawable.material_shattered_blade;
-            case 635674 : return R.drawable.material_arrow_of_the_beast_hunter;
             case 635675 : return R.drawable.material_key_of_inspiration;
-            case 67219 : return R.drawable.material_horn_of_snow;
-            case 67220 : return R.drawable.material_gelid_chitin;
-            case 717289 : return R.drawable.material_silvermane_medal;
-            case 717290 : return R.drawable.material_ancient_engine;
-            case 717319 : return R.drawable.material_conquerors_will;
             case 717320 : return R.drawable.material_squirming_core;
-            case 782692 : return R.drawable.material_enigmatic_ectostella;
-            case 836254 : return R.drawable.material_safeguard_of_amber;
-            case 836255 : return R.drawable.material_obsidian_of_obsession;
-            case 836256 : return R.drawable.material_stellaris_symphony;
-            case 836257 : return R.drawable.material_flower_of_eternity;
-            case 836259 : return R.drawable.material_worldbreaker_blade;
-            case 836260 : return R.drawable.material_arrow_of_the_starchaser;
             case 836261 : return R.drawable.material_key_of_wisdom;
-            case 866633 : return R.drawable.material_broken_teeth_of_iron_wolf;
-            case 920195 : return R.drawable.material_oath_of_steel;
-            case 920196 : return R.drawable.material_obsidian_of_desolation;
-            case 920197 : return R.drawable.material_ancestral_hymn;
-            case 920198 : return R.drawable.material_sprout_of_life;
-            case 920200 : return R.drawable.material_lifeless_blade;
-            case 920201 : return R.drawable.material_arrow_of_the_demon_slayer;
+            case 866634 : return R.drawable.material_netherworld_token;
             case 920202 : return R.drawable.material_key_of_knowledge;
-            case 983278 : return R.drawable.material_endotherm_chitin;
+            case 267806 : return R.drawable.material_ascendant_debris;
+            case 549504 : return R.drawable.material_immortal_scionette;
+            case 633445 : return R.drawable.material_immortal_aeroblossom;
+            case 635671 : return R.drawable.material_seed_of_abundance;
+            case 717386 : return R.drawable.material_immortal_lumintwig;
+            case 836257 : return R.drawable.material_flower_of_eternity;
+            case 920198 : return R.drawable.material_sprout_of_life;
+            case 549503 : return R.drawable.material_artifexs_module;
+            case 633444 : return R.drawable.material_artifexs_cogwheel;
+            case 635670 : return R.drawable.material_harmonic_tune;
+            case 717385 : return R.drawable.material_artifexs_gyreheart;
+            case 836256 : return R.drawable.material_stellaris_symphony;
+            case 920197 : return R.drawable.material_ancestral_hymn;
+            case 67220 : return R.drawable.material_gelid_chitin;
+            case 635673 : return R.drawable.material_shattered_blade;
+            case 836259 : return R.drawable.material_worldbreaker_blade;
+            case 920200 : return R.drawable.material_lifeless_blade;
+            case 549407 : return R.drawable.material_silvermane_badge;
+            case 633348 : return R.drawable.material_silvermane_insignia;
+            case 635674 : return R.drawable.material_arrow_of_the_beast_hunter;
+            case 717289 : return R.drawable.material_silvermane_medal;
+            case 836260 : return R.drawable.material_arrow_of_the_starchaser;
+            case 920201 : return R.drawable.material_arrow_of_the_demon_slayer;
+            case 983279 : return R.drawable.material_searing_steel_blade;
+            case 635669 : return R.drawable.material_obsidian_of_dread;
+            case 836255 : return R.drawable.material_obsidian_of_obsession;
+            case 920196 : return R.drawable.material_obsidian_of_desolation;
+            case 468392 : return R.drawable.material_suppressing_edict;
+            case 351747 : return R.drawable.material_nail_of_the_ape;
+            case 635668 : return R.drawable.material_endurance_of_bronze;
+            case 836254 : return R.drawable.material_safeguard_of_amber;
+            case 920195 : return R.drawable.material_oath_of_steel;
+            case 151161 : return R.drawable.material_shape_shifters_lightning_staff;
+            case 549437 : return R.drawable.material_thiefs_instinct;
+            case 633378 : return R.drawable.material_usurpers_scheme;
+            case 717319 : return R.drawable.material_conquerors_will;
+            case 549408 : return R.drawable.material_ancient_part;
+            case 633349 : return R.drawable.material_ancient_spindle;
+            case 717290 : return R.drawable.material_ancient_engine;
+            case 866633 : return R.drawable.material_broken_teeth_of_iron_wolf;
+            case 468391 : return R.drawable.material_golden_crown_of_the_past_shadow;
             case 985668 : return R.drawable.material_destroyers_final_road;
+            case 270195 : return R.drawable.material_guardians_lament;
+            case 351746 : return R.drawable.material_void_cast_iron;
+            case 151160 : return R.drawable.material_lightning_crown_of_the_past_shadow;
+            case 983278 : return R.drawable.material_endotherm_chitin;
+            case 267805 : return R.drawable.material_storm_eye;
+            case 67219 : return R.drawable.material_horn_of_snow;
+            case 782692 : return R.drawable.material_enigmatic_ectostella;
+
             default: return R.drawable.ico_lost_img;
         }
     }

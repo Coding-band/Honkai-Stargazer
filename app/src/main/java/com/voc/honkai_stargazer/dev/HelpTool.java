@@ -63,7 +63,7 @@ public class HelpTool {
                     HelpTool.help_tool_skill(jsonObject, context);
                 }
             }*/
-            /*
+
             for (int i = 0; i < array.length(); i++) {
                 JSONObject object = array.getJSONObject(i);
                 //Special requirements
@@ -76,7 +76,7 @@ public class HelpTool {
                     HelpTool.help_tool_material_id(jsonObject,context,materialList);
                 }
                 //}
-            }*/
+            }
 
         }catch (JSONException e){
             e.printStackTrace();
