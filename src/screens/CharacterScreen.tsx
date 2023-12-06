@@ -12,12 +12,12 @@ import { filter } from "lodash";
 import { CharacterName, Character } from "../types/character";
 import CharacterContext from "../context/CharacterContext";
 import charList from "../../data/character_data/character_list.json";
-import * as charListMap from "../../data/character_data/@character_list_map/character_list_map";
+import * as charListMap from "../../data/character_data/@character_data_map/character_data_map";
 import * as imagesMap from "../../assets/images/@images_map/images_map";
 import Fixed from "../components/global/Fixed/Fixed";
 
 export default function CharacterScreen() {
-    const route = useRoute<RouteProp<ParamList, "Character">>();
+  const route = useRoute<RouteProp<ParamList, "Character">>();
   const charId = route.params.id as CharacterName;
   const charName = route.params.name;
 
@@ -35,11 +35,6 @@ export default function CharacterScreen() {
       combatType: charFullData?.damageType?.name,
       location: charFullData?.archive?.camp,
       imageFull: imagesMap.Chacracter[charId]?.imageFull,
-      storyText: charFullData?.storyItems[0].text,
-      levelData: charFullData?.levelData,
-      ranks: charFullData?.ranks,
-      skillGrouping: charFullData?.skillGrouping,
-      skills: charFullData?.skills,
     });
     setShowMain(true);
   }, []);

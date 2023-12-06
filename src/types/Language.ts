@@ -1,3 +1,3 @@
-type Language = "en" | "zh_hk" | "zh_cn";
+type Language = "ZH_HK" | "ZH_CN";
 
 export default Language;

@@ -7,8 +7,8 @@ import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import useDelayLoad from "../../../../hooks/useDelayLoad";
 import MaterialList from "../../../global/MaterialList/MaterialList";
 import CharacterContext from "../../../../context/CharacterContext";
-import * as charListMap from "../../../../../data/character_data/@character_list_map/character_list_map";
 import { CharacterName } from "../../../../types/character";
+import { getCharFullData } from "../../../../utils/getDataFromMap";
 
 const HPIcon = require("../../../../../assets/icons/HP.png");
 const STRIcon = require("../../../../../assets/icons/STR.png");
@@ -22,7 +22,9 @@ export default React.memo(function CharAttribute() {
   const loaded = useDelayLoad(100);
 
   const charData = useContext(CharacterContext);
-  const charLevelData = charData?.levelData;
+  const charId = charData?.id!;
+  const charFullData = getCharFullData(charId);
+  const charLevelData = charFullData?.levelData;
 
   const [str, setStr] = useState(0);
   const [hp, setHp] = useState(0);
@@ -140,10 +142,7 @@ export default React.memo(function CharAttribute() {
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={ELIcon} />
                 <Text className="text-white text-[16px] font-medium">
-                  {
-                    charListMap.ZH_CN[charData?.id as CharacterName]
-                      .spRequirement
-                  }
+                  {charFullData.spRequirement}
                 </Text>
               </View>
             </View>

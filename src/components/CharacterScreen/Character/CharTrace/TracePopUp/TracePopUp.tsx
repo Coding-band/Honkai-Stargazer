@@ -8,6 +8,7 @@ import formatDesc from "../../../../../utils/formatDesc";
 import MaterialList from "../../../../global/MaterialList/MaterialList";
 import Sliderbar from "../../../../global/Sliderbar/Sliderbar";
 import { useNavigation, useRoute } from "@react-navigation/native";
+import { getCharFullData } from "../../../../../utils/getDataFromMap";
 
 type Props = {
   id: number;
@@ -15,24 +16,25 @@ type Props = {
 };
 
 export default React.memo(function TracePopUp({ id, onClose }: Props) {
+  const charData = useContext(CharacterContext);
+  const charId = charData?.id!;
+  const charFullData = getCharFullData(charId);
+  const charSkillGrouping = charFullData?.skillGrouping;
+  const charSkill = useMemo(
+    () =>
+      charFullData?.skills?.filter(
+        (skill) => skill.id === (id > 0 && charSkillGrouping?.[id - 1][0])
+      )[0],
+    [charFullData, id, charSkillGrouping]
+  );
+
+  const [skillLevel, setSkillLevel] = useState(0);
+
+  const { setFixed } = useContext(FixedContext)!;
   const navigation = useNavigation();
   const currentRoute =
     navigation.getState().routes[navigation.getState().routes.length - 1];
   const route = useRoute();
-
-  const { setFixed } = useContext(FixedContext)!;
-
-  const charData = useContext(CharacterContext);
-  const charSkillGrouping = charData?.skillGrouping;
-  const charSkill = useMemo(
-    () =>
-      charData?.skills?.filter(
-        (skill) => skill.id === (id > 0 && charSkillGrouping?.[id - 1][0])
-      )[0],
-    [charData, id, charSkillGrouping]
-  );
-
-  const [skillLevel, setSkillLevel] = useState(0);
 
   useEffect(() => {
     if (!charSkill || currentRoute.key !== route.key) {

@@ -12,7 +12,7 @@ import { filter } from "lodash";
 import { Lightcone, LightconeName } from "../types/lightcone";
 import LightconeContext from "../context/LightconeContext";
 import lcList from "../../data/lightcone_data/lightcone_list.json";
-import * as lcListMap from "../../data/lightcone_data/@lightcone_list_map/lightcone_list_map";
+import * as lcListMap from "../../data/lightcone_data/@lightcone_data_map/lightcone_data_map";
 import * as imagesMap from "../../assets/images/@images_map/images_map";
 
 export default function LightconeScreen() {
