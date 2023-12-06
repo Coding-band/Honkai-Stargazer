@@ -6,6 +6,7 @@ import CharSuggestLightConeCard from "./CharSuggestLightConeCard/CharSuggestLigh
 import lightconeList from "../../../../../data/lightcone_data/lightcone_list.json";
 import * as lightconeListMap from "../../../../../data/lightcone_data/@lightcone_list_map/lightcone_list_map";
 import * as imagesMap from "../../../../../assets/images/@images_map/images_map";
+import React from "react";
 
 const testData = [
   {
@@ -35,7 +36,7 @@ const testData = [
   },
 ];
 
-export default function CharSuggestLightCone() {
+export default React.memo(function CharSuggestLightCone() {
   return (
     <View style={{ alignItems: "center" }}>
       <CharPageHeading Icon={Sword}>推荐光锥</CharPageHeading>
@@ -58,4 +59,4 @@ export default function CharSuggestLightCone() {
       </ScrollView>
     </View>
   );
-}
+});

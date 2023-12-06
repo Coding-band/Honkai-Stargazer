@@ -12,7 +12,7 @@ type Props = {
   scrollHandler: SharedValue<number>;
 };
 
-export default function CharAction(props: Props) {
+export default React.memo(function CharAction(props: Props) {
   const bottomAnimatedStyles = useAnimatedStyle(() => {
     if (props.scrollHandler.value > 0) {
       return {
@@ -46,4 +46,4 @@ export default function CharAction(props: Props) {
       </Button>
     </Animated.View>
   );
-}
+});

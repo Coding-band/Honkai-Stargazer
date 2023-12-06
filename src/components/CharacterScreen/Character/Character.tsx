@@ -16,10 +16,8 @@ import Animated, {
 } from "react-native-reanimated";
 import CharImageFull from "./CharImageFull/CharImageFull";
 import CharEidolon from "./CharEidolon/CharEidolon";
-import PopUpCard from "../../global/PopUpCard/PopUpCard";
-import Fixed from "../../global/Fixed/Fixed";
 
-export default function Character() {
+export default React.memo(function Character() {
   const [containerHeight, setContainerHeight] = useState(0);
 
   const handleLayout = (event: LayoutChangeEvent) => {
@@ -76,4 +74,4 @@ export default function Character() {
       <CharAction scrollHandler={scrollHandler} />
     </View>
   );
-}
+});

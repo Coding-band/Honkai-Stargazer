@@ -6,7 +6,7 @@ import { Image } from "expo-image";
 import Path from "../../../../../assets/images/@images_map/path";
 import CombatType from "../../../../../assets/images/@images_map/combatType";
 
-export default function CharInfo() {
+export default React.memo(function CharInfo() {
   const charData = useContext(CharacterContext);
 
   return (
@@ -57,8 +57,7 @@ export default function CharInfo() {
       </View>
     </View>
   );
-}
-
+});
 function getPathIcon(path: string | undefined) {
   let charPathIcon;
   switch (path) {

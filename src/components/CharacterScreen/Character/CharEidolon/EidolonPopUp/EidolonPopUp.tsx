@@ -7,29 +7,33 @@ import { CharacterName } from "../../../../../types/character";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import FixedContext from "../../../../global/Fixed/FixedContext";
 import formatDesc from "../../../../../utils/formatDesc";
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 type Props = {
   id: number;
   onClose: () => void;
 };
 
-export default function EidolonPopUp({ id, onClose }: Props) {
+export default React.memo(function EidolonPopUp({ id, onClose }: Props) {
+  const navigation = useNavigation();
+  const currentRoute =
+    navigation.getState().routes[navigation.getState().routes.length - 1];
+  const route = useRoute();
+
   const charData = useContext(CharacterContext);
-  const charEidolonRank = characterListMap.ZH_CN[
-    charData?.id as CharacterName
-  ].ranks.filter((rank) => rank.id === id)[0];
+  const charEidolonRank = charData?.ranks?.filter((rank) => rank.id === id)[0];
 
   const { setFixed } = useContext(FixedContext)!;
 
   useEffect(() => {
-    if (id < 1 || id > 6) {
+    if (id < 1 || id > 6 || currentRoute.key != route.key) {
       setFixed(null);
     } else {
       setFixed(
         <View className="w-[350px] mb-6">
           <PopUpCard
             onClose={onClose}
-            title={charEidolonRank.name}
+            title={charEidolonRank?.name || ""}
             content={
               <View className="px-4 py-[18px]" style={{ gap: 3 }}>
                 <Text className="text-[#333] text-[14px] font-[HY65]">
@@ -38,7 +42,10 @@ export default function EidolonPopUp({ id, onClose }: Props) {
                 <HtmlText
                   style={{ fontSize: 14, color: "#666", fontFamily: "HY65" }}
                 >
-                  {formatDesc(charEidolonRank.descHash, charEidolonRank.params)}
+                  {formatDesc(
+                    charEidolonRank?.descHash,
+                    charEidolonRank?.params
+                  )}
                 </HtmlText>
               </View>
             }
@@ -49,4 +56,4 @@ export default function EidolonPopUp({ id, onClose }: Props) {
   }, [charEidolonRank, id]);
 
   return <></>;
-}
+});

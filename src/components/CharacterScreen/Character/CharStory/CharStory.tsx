@@ -5,7 +5,7 @@ import { ChatsCircle } from "phosphor-react-native";
 import CharacterContext from "../../../../context/CharacterContext";
 import { HtmlText } from "@e-mine/react-native-html-text";
 
-export default function CharStory() {
+export default React.memo(function CharStory() {
   const charData = useContext(CharacterContext);
   return (
     <View style={{ alignItems: "center" }}>
@@ -15,4 +15,4 @@ export default function CharStory() {
       </HtmlText>
     </View>
   );
-}
+});

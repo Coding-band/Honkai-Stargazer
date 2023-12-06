@@ -40,7 +40,7 @@ const testMain = [
 ];
 const testSecond = "暴击率，速度，暴击伤害，攻击力";
 
-export default function CharSuggestRelics() {
+export default React.memo(function CharSuggestRelics() {
   return (
     <View style={{ alignItems: "center" }}>
       <CharPageHeading Icon={BaseballCap}>推荐遗器</CharPageHeading>
@@ -148,4 +148,4 @@ export default function CharSuggestRelics() {
       </View>
     </View>
   );
-}
+});

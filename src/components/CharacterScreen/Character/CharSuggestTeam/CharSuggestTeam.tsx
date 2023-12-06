@@ -63,7 +63,7 @@ const testData = [
   ],
 ];
 
-export default function CharSuggestTeam() {
+export default React.memo(function CharSuggestTeam() {
   return (
     <View style={{ alignItems: "center" }}>
       <CharPageHeading Icon={Person}>推荐队伍</CharPageHeading>
@@ -81,4 +81,4 @@ export default function CharSuggestTeam() {
       </View>
     </View>
   );
-}
+});

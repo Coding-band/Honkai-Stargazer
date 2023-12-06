@@ -53,10 +53,10 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ClickOutsideProvider>
-        <FixedProvider>
-          <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-            {/* <StatusBar hidden /> */}
-            <NavigationContainer>
+        <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+          {/* <StatusBar hidden /> */}
+          <NavigationContainer>
+            <FixedProvider>
               <Stack.Navigator
                 screenOptions={{
                   animation: Platform.OS === "ios" ? "default" : "none",
@@ -88,9 +88,9 @@ export default function App() {
                   options={{ headerShown: false }}
                 />
               </Stack.Navigator>
-            </NavigationContainer>
-          </View>
-        </FixedProvider>
+            </FixedProvider>
+          </NavigationContainer>
+        </View>
       </ClickOutsideProvider>
     </GestureHandlerRootView>
   );

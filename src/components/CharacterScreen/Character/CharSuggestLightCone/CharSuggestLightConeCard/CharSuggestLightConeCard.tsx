@@ -14,7 +14,7 @@ type Props = {
   name: string;
 };
 
-export default function CharSuggestLightConeCard(props: Props) {
+export default React.memo(function CharSuggestLightConeCard(props: Props) {
   const navigation = useNavigation();
 
   const [isSelected, setIsSelected] = useState(false);
@@ -76,4 +76,4 @@ export default function CharSuggestLightConeCard(props: Props) {
       </Modal>
     </View>
   );
-}
+});

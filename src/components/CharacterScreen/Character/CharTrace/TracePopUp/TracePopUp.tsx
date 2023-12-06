@@ -2,38 +2,40 @@ import { Text, View } from "react-native";
 import React, { useContext, useEffect, useMemo, useState } from "react";
 import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
 import CharacterContext from "../../../../../context/CharacterContext";
-import * as characterListMap from "../../../../../../data/character_data/@character_list_map/character_list_map";
-import { CharacterName } from "../../../../../types/character";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import FixedContext from "../../../../global/Fixed/FixedContext";
 import formatDesc from "../../../../../utils/formatDesc";
 import MaterialList from "../../../../global/MaterialList/MaterialList";
 import Sliderbar from "../../../../global/Sliderbar/Sliderbar";
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 type Props = {
   id: number;
   onClose: () => void;
 };
 
-export default function TracePopUp({ id, onClose }: Props) {
+export default React.memo(function TracePopUp({ id, onClose }: Props) {
+  const navigation = useNavigation();
+  const currentRoute =
+    navigation.getState().routes[navigation.getState().routes.length - 1];
+  const route = useRoute();
+
   const { setFixed } = useContext(FixedContext)!;
 
   const charData = useContext(CharacterContext);
-  const charId = charData?.id as CharacterName;
-  const charFullData = useMemo(() => characterListMap.ZH_CN[charId], [charId]);
-  const charSkillGrouping = charFullData.skillGrouping;
+  const charSkillGrouping = charData?.skillGrouping;
   const charSkill = useMemo(
     () =>
-      charFullData.skills.filter(
-        (skill) => skill.id === (id > 0 && charSkillGrouping[id - 1][0])
+      charData?.skills?.filter(
+        (skill) => skill.id === (id > 0 && charSkillGrouping?.[id - 1][0])
       )[0],
-    [charFullData, id, charSkillGrouping]
+    [charData, id, charSkillGrouping]
   );
 
   const [skillLevel, setSkillLevel] = useState(0);
 
   useEffect(() => {
-    if (!charSkill) {
+    if (!charSkill || currentRoute.key !== route.key) {
       setFixed(null);
     } else {
       setFixed(
@@ -71,7 +73,7 @@ export default function TracePopUp({ id, onClose }: Props) {
                   }}
                 >
                   <Text className="text-[16px] text-[#222222]">
-                    Lv.{skillLevel+1}/{charSkill.levelData.length}
+                    Lv.{skillLevel + 1}/{charSkill.levelData.length}
                   </Text>
                   <Sliderbar
                     point={charSkill.levelData.length}
@@ -102,4 +104,4 @@ export default function TracePopUp({ id, onClose }: Props) {
   }, [charSkill, charSkill?.levelData?.length, skillLevel, id]);
 
   return <></>;
-}
+});

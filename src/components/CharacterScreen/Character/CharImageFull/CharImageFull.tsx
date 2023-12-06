@@ -13,7 +13,7 @@ type Props = {
   charContainerHeight: number;
 };
 
-export default function CharImageFull(props: Props) {
+export default React.memo(function CharImageFull(props: Props) {
   const charData = useContext(CharacterContext);
 
   const imageAnimatedStyles = useAnimatedStyle(() => {
@@ -46,4 +46,4 @@ export default function CharImageFull(props: Props) {
       />
     </Animated.View>
   );
-}
+});

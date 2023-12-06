@@ -18,14 +18,11 @@ const ELIcon = require("../../../../../assets/icons/EL.png");
 
 const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 
-export default function CharAttribute() {
+export default React.memo(function CharAttribute() {
   const loaded = useDelayLoad(100);
 
   const charData = useContext(CharacterContext);
-  const charLevelData = useMemo(
-    () => charListMap.ZH_CN[charData?.id as CharacterName].levelData,
-    []
-  );
+  const charLevelData = charData?.levelData;
 
   const [str, setStr] = useState(0);
   const [hp, setHp] = useState(0);
@@ -54,11 +51,11 @@ export default function CharAttribute() {
   useEffect(() => {
     setTimeout(() => {
       const charCurrentLevelData =
-        charLevelData[attrFromLevel === 7 ? 6 : attrFromLevel];
-      setStr(charCurrentLevelData.attackBase);
-      setHp(charCurrentLevelData.hpBase);
-      setDef(charCurrentLevelData.defenseBase);
-      setDex(charCurrentLevelData.speedBase);
+        charLevelData?.[attrFromLevel === 7 ? 6 : attrFromLevel];
+      setStr(charCurrentLevelData?.attackBase || 0);
+      setHp(charCurrentLevelData?.hpBase || 0);
+      setDef(charCurrentLevelData?.defenseBase || 0);
+      setDex(charCurrentLevelData?.speedBase || 0);
     });
   }, [attrFromLevel]);
 
@@ -156,4 +153,4 @@ export default function CharAttribute() {
       <MaterialList />
     </>
   );
-}
+});

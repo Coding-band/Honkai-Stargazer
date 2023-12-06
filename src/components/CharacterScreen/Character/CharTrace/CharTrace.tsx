@@ -23,7 +23,7 @@ const TestInner3 = require("../../../../../assets/images/test-inner-3.png");
 const TestInner4 = require("../../../../../assets/images/test-inner-4.png");
 const TestInner5 = require("../../../../../assets/images/test-inner-5.png");
 
-export default function CharTrace() {
+export default React.memo(function CharTrace() {
   const loaded = useDelayLoad(50);
   const [selectedInner, setSelectedInner] = useState(0);
 
@@ -127,4 +127,4 @@ export default function CharTrace() {
       />
     </>
   );
-}
+});

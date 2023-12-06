@@ -10,6 +10,57 @@ export type Character = {
   combatType?: string;
   location?: string;
   storyText?: string;
+  levelData?: {
+    attackBase: number;
+    attackAdd: number;
+    hpBase: number;
+    hpAdd: number;
+    defenseBase: number;
+    defenseAdd: number;
+    crate: number;
+    cdmg: number;
+    aggro: number;
+    speedBase: number;
+    speedAdd: number;
+    promotion: number;
+    maxLevel: number;
+    cost: {
+      id: number;
+      count: number;
+    }[];
+  }[];
+  ranks?: {
+    id: number;
+    iconPath: string;
+    artPath: string;
+    name: string;
+    descHash: string;
+    params: number[];
+  }[];
+  skillGrouping?: number[][];
+  skills?: {
+    tagHash: string;
+    descHash: string;
+    ultimateCost: number;
+    break: string;
+    energy: string;
+    id: number;
+    name: string;
+    iconPath: string;
+    typeDescHash: string;
+    levelReq: number;
+    promotionReq: number;
+    levelData: {
+      params: number[];
+      level: number;
+      levelReq: number;
+      promotionReq: number;
+      cost: {
+        id: number;
+        count: number;
+      }[];
+    }[];
+  }[];
 };
 
 export type CharacterCard = {

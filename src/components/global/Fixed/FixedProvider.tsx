@@ -5,7 +5,12 @@ export const FixedProvider = ({ children }: { children: any }) => {
   const [content, setContent] = useState(null);
 
   return (
-    <FixedContext.Provider value={{ content, setFixed: setContent }}>
+    <FixedContext.Provider
+      value={{
+        content,
+        setFixed: setContent,
+      }}
+    >
       {children}
     </FixedContext.Provider>
   );

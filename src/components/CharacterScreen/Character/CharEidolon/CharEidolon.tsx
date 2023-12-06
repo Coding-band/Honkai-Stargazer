@@ -11,7 +11,7 @@ import Eidolon6 from "./Eidolons/Eidolon6";
 import EidolonPopUp from "./EidolonPopUp/EidolonPopUp";
 import { useClickOutside } from "react-native-click-outside";
 
-export default function CharEidolon() {
+export default React.memo(function CharEidolon() {
   const [selectedEidolon, setSelectedEidolon] = useState(0);
 
   const containerRef = useClickOutside<View>(() => {
@@ -75,4 +75,4 @@ export default function CharEidolon() {
       />
     </>
   );
-}
+});

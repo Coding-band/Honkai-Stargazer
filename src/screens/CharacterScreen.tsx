@@ -5,7 +5,7 @@ import { ImageBackground } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
-import { RouteProp, useRoute } from "@react-navigation/native";
+import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { ParamList } from "../types/navigation";
 import CharacterMain from "../components/CharacterScreen/Character/Character";
 import { filter } from "lodash";
@@ -15,10 +15,9 @@ import charList from "../../data/character_data/character_list.json";
 import * as charListMap from "../../data/character_data/@character_list_map/character_list_map";
 import * as imagesMap from "../../assets/images/@images_map/images_map";
 import Fixed from "../components/global/Fixed/Fixed";
-import PopUpCard from "../components/global/PopUpCard/PopUpCard";
 
 export default function CharacterScreen() {
-  const route = useRoute<RouteProp<ParamList, "Character">>();
+    const route = useRoute<RouteProp<ParamList, "Character">>();
   const charId = route.params.id as CharacterName;
   const charName = route.params.name;
 
@@ -27,15 +26,20 @@ export default function CharacterScreen() {
 
   useEffect(() => {
     const charDataJson = filter(charList, (char) => char?.name === charId)[0];
+    const charFullData = charListMap.ZH_CN[charId];
     setCharData({
       id: charId,
-      name: charListMap.ZH_CN[charId]?.name,
+      name: charFullData?.name,
       rare: charDataJson?.rare,
-      path: charListMap.ZH_CN[charId]?.baseType?.name,
-      combatType: charListMap.ZH_CN[charId]?.damageType?.name,
-      location: charListMap.ZH_CN[charId]?.archive?.camp,
+      path: charFullData?.baseType?.name,
+      combatType: charFullData?.damageType?.name,
+      location: charFullData?.archive?.camp,
       imageFull: imagesMap.Chacracter[charId]?.imageFull,
-      storyText: charListMap.ZH_CN[charId]?.storyItems[0].text,
+      storyText: charFullData?.storyItems[0].text,
+      levelData: charFullData?.levelData,
+      ranks: charFullData?.ranks,
+      skillGrouping: charFullData?.skillGrouping,
+      skills: charFullData?.skills,
     });
     setShowMain(true);
   }, []);
@@ -65,6 +69,7 @@ export default function CharacterScreen() {
           className="w-full h-[600px] absolute bottom-0"
           colors={["#00000000", "#000000"]}
         />
+
         <Fixed />
       </View>
     </CharacterContext.Provider>

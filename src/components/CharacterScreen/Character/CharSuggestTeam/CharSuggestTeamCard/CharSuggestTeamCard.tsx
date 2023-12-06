@@ -11,7 +11,7 @@ type Props = {
   team: { image: ExpoImage; rare: number; name: string; id: string }[];
 };
 
-export default function CharSuggestTeamCard(props: Props) {
+export default React.memo(function CharSuggestTeamCard(props: Props) {
   const navigation = useNavigation();
 
   const [isSelected, setIsSelected] = useState(false);
@@ -80,4 +80,4 @@ export default function CharSuggestTeamCard(props: Props) {
       </Modal>
     </View>
   );
-}
+});

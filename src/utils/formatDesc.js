@@ -1,4 +1,4 @@
-export default function formatDesc(descHash, params) {
+export default function formatDesc(descHash, params=[]) {
   // 使用正则表达式匹配 #数字[i] 或 #数字[f1]% 的格式
   const regex = /(#\d+\[i\]%?)|(#\d+\[f1\]%?)/g;
 
