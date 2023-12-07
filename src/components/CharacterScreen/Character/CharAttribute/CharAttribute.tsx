@@ -78,7 +78,7 @@ export default React.memo(function CharAttribute() {
             >
               {/* 等級 */}
               <Text className="text-white text-[16px] font-medium">
-                Lv.{attrFromLevel * 10 + 1}
+                Lv.{attrFromLevel === 0 ? "1" : attrFromLevel * 10}
               </Text>
               {/* 等級滑動欄 */}
               <AttrSliderbar

@@ -8,6 +8,7 @@ import * as lightconeListMap from "../../../../data/lightcone_data/@lightcone_da
 import * as images_map from "../../../../assets/images/@images_map/images_map";
 import { LightconeCard } from "../../../types/lightcone";
 import LightConeCard from "../../global/LightConeCard/LightConeCard";
+import { Path } from "../../../types/path";
 
 type Props = {
   reverse?: boolean;
@@ -28,6 +29,7 @@ export default function LcList(props: Props) {
         rare: lc.rare,
         // @ts-ignore
         image: images_map.Lightcone[lc.name]?.icon,
+        path: lc.path as Path,
       }))
     );
   }, []);

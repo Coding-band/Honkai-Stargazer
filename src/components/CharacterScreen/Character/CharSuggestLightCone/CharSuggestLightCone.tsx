@@ -14,24 +14,29 @@ const testData = [
       .rare,
     name: lightconeListMap.ZH_CN["Shattered Home"].name,
     image: imagesMap.Lightcone["Shattered Home"].icon,
+    path: lightconeList.filter((char) => char.name === "Shattered Home")[0]
+      .path,
   },
   {
     id: "Quid Pro Quo",
     rare: lightconeList.filter((char) => char.name === "Quid Pro Quo")[0].rare,
     name: lightconeListMap.ZH_CN["Quid Pro Quo"].name,
     image: imagesMap.Lightcone["Quid Pro Quo"].icon,
+    path: lightconeList.filter((char) => char.name === "Quid Pro Quo")[0].path,
   },
   {
     id: "Fermata",
     rare: lightconeList.filter((char) => char.name === "Fermata")[0].rare,
     name: lightconeListMap.ZH_CN["Fermata"].name,
     image: imagesMap.Lightcone["Fermata"].icon,
+    path: lightconeList.filter((char) => char.name === "Fermata")[0].path,
   },
   {
     id: "In the Night",
     rare: lightconeList.filter((char) => char.name === "In the Night")[0].rare,
     name: lightconeListMap.ZH_CN["In the Night"].name,
     image: imagesMap.Lightcone["In the Night"].icon,
+    path: lightconeList.filter((char) => char.name === "In the Night")[0].path,
   },
 ];
 

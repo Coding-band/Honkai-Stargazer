@@ -10,17 +10,18 @@ import { Image } from "expo-image";
 import { ExpoImage } from "../../../types/image";
 import { Shadow } from "react-native-shadow-2";
 import { CardColors } from "../../../constant/card";
+import PathCardIcon from "../PathCardIcon/PathCardIcon";
+import { Path } from "../../../types/path";
 
 type Props = {
   image?: ExpoImage;
   rare: number;
   name: string;
+  path: Path;
   onPress?: (e: GestureResponderEvent) => void;
 };
 
 export default function LightConeCard(props: Props) {
-  //   const animation = useSpring({ from: { opacity: 0.25 }, to: { opacity: 1 } });
-
   return (
     <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
       {/* <Shadow
@@ -44,12 +45,17 @@ export default function LightConeCard(props: Props) {
             justifyContent: "center",
           }}
         >
+          {/* 光錐圖標 */}
           <Image
             transition={200}
             style={{ width: 72, height: 72 }}
             source={props.image}
             contentFit="contain"
           />
+          {/* 命途 & 元素 */}
+          <View className="absolute top-1 left-1">
+            <PathCardIcon value={props.path} />
+          </View>
         </View>
       </LinearGradient>
       {/* </Shadow> */}

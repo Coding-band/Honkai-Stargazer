@@ -6,12 +6,14 @@ import Modal from "react-native-modal";
 import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../../constant/screens";
+import { Path } from "../../../../../types/path";
 
 type Props = {
   id: string;
   image?: ExpoImage;
-  rare: 4 | 5;
+  rare: number;
   name: string;
+  path: Path;
 };
 
 export default React.memo(function CharSuggestLightConeCard(props: Props) {
@@ -35,12 +37,7 @@ export default React.memo(function CharSuggestLightConeCard(props: Props) {
   return (
     <View>
       <View style={{ opacity: isSelected ? 0 : 1 }}>
-        <LightConeCard
-          onPress={handlePress}
-          image={props.image}
-          name={props.name}
-          rare={props.rare}
-        />
+        <LightConeCard onPress={handlePress} {...props} />
       </View>
       <Modal
         useNativeDriverForBackdrop
@@ -61,12 +58,7 @@ export default React.memo(function CharSuggestLightConeCard(props: Props) {
           }}
         >
           <View style={{ transform: [{ scale: 1.2 }] }}>
-            <LightConeCard
-              onPress={handlePopupPress}
-              image={props.image}
-              name={props.name}
-              rare={props.rare}
-            />
+            <LightConeCard onPress={handlePopupPress} {...props} />
           </View>
           <PopUpCard
             title="于夜色中"

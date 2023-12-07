@@ -1,4 +1,5 @@
 import { ExpoImage } from "./image";
+import { Path } from "./path";
 
 export type Lightcone = {
   id?: LightconeName;
@@ -14,6 +15,7 @@ export type LightconeCard = {
   id: string;
   name: string;
   rare: number;
+  path: Path;
   image: ExpoImage;
 };
 
