@@ -25,10 +25,16 @@ export const SCREENS = {
     shortName: "光锥",
     icon: Sword,
   },
-  LightconeScreen: {
+  LightconePage: {
     id: "Lightcone",
     name: "光锥",
     shortName: "",
     icon: Sword,
+  },
+  LoginPage: {
+    id: "Login",
+    name: "",
+    shortName: "",
+    icon: null,
   },
 };

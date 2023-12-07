@@ -10,7 +10,7 @@ import useDelayLoad from "../../../../hooks/useDelayLoad";
 import TracePopUp from "./TracePopUp/TracePopUp";
 import { useClickOutside } from "react-native-click-outside";
 import CharacterContext from "../../../../context/CharacterContext";
-import { getCharFullData } from "../../../../utils/getDataFromMap";
+import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
 
 const TestTraceLine = require("../../../../../assets/images/test-trace-line.svg");
 const CritDmgIcon = require("../../../../../assets/images/ui_icon/ic_crit_dmg.webp");

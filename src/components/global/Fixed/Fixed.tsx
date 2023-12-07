@@ -2,7 +2,6 @@ import { View } from "react-native";
 import React, { memo, useContext, useEffect } from "react";
 import FixedContext from "./FixedContext";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import CharacterContext from "../../../context/CharacterContext";
 
 export default memo(function Fixed() {
   const navigation = useNavigation();

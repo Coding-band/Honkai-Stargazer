@@ -41,7 +41,7 @@ export default function LcList(props: Props) {
           key={i}
           onPress={() => {
             // @ts-ignore
-            navigation.navigate(SCREENS.LightconeScreen.id, {
+            navigation.navigate(SCREENS.LightconePage.id, {
               id: item?.id,
               name: item?.name,
             });

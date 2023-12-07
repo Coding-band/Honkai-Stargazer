@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image, ImageSource } from "expo-image";
-import { cn } from "../../../utils/cn";
+import { cn } from "../../../utils/css/cn";
 import { Path } from "../../../types/path";
 import { CombatType } from "../../../types/combatType";
 import CombatTypeCardIcon from "../CombatTypeCardIcon/CombatTypeCardIcon";

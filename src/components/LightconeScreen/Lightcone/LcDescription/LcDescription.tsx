@@ -4,8 +4,8 @@ import PageHeading from "../../../global/PageHeading/PageHeading";
 import { Info } from "phosphor-react-native";
 import Sliderbar from "../../../global/Sliderbar/Sliderbar";
 import LightconeContext from "../../../../context/LightconeContext";
-import { getLcFullData } from "../../../../utils/getDataFromMap";
-import formatDesc from "../../../../utils/formatDesc";
+import { getLcFullData } from "../../../../utils/dataMap/getDataFromMap";
+import formatDesc from "../../../../utils/format/formatDesc";
 import { HtmlText } from "@e-mine/react-native-html-text";
 
 export default function LcDescription() {

@@ -27,7 +27,7 @@ export default React.memo(function CharSuggestLightConeCard(props: Props) {
 
   const handlePopupPress = useCallback(() => {
     // @ts-ignore
-    navigation.push(SCREENS.LightconeScreen.id, {
+    navigation.push(SCREENS.LightconePage.id, {
       id: props.id,
       name: props.name,
     });

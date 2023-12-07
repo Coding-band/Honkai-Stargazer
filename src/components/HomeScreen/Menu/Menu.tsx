@@ -5,7 +5,7 @@ import {
   LayoutChangeEvent,
   Platform,
 } from "react-native";
-import { cn } from "../../../utils/cn";
+import { cn } from "../../../utils/css/cn";
 import MenuItem from "./MenuItem/MenuItem";
 import {
   BaseballCap,

@@ -14,7 +14,7 @@ import CharacterContext from "../context/CharacterContext";
 import charList from "../../data/character_data/character_list.json";
 import * as imagesMap from "../../assets/images/@images_map/images_map";
 import Fixed from "../components/global/Fixed/Fixed";
-import { getCharFullData } from "../utils/getDataFromMap";
+import { getCharFullData } from "../utils/dataMap/getDataFromMap";
 
 export default function CharacterScreen() {
   const route = useRoute<RouteProp<ParamList, "Character">>();

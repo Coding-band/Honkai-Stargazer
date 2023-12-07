@@ -8,7 +8,7 @@ import useDelayLoad from "../../../../hooks/useDelayLoad";
 import MaterialList from "../../../global/MaterialList/MaterialList";
 import CharacterContext from "../../../../context/CharacterContext";
 import { CharacterName } from "../../../../types/character";
-import { getCharFullData } from "../../../../utils/getDataFromMap";
+import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
 
 const HPIcon = require("../../../../../assets/icons/HP.png");
 const STRIcon = require("../../../../../assets/icons/STR.png");

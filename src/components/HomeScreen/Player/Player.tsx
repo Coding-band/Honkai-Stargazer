@@ -4,7 +4,7 @@ import PlayerAction from "./PlayerAction/PlayerAction";
 import PlayerLevelBar from "./PlayerLevelBar/PlayerLevelBar";
 import UUID from "../UUID/UUID";
 import PlayerAvator from "./PlayerAvator/PlayerAvator";
-import { cn } from "../../../utils/cn";
+import { cn } from "../../../utils/css/cn";
 import PlayerCharacter from "./PlayerCharacter/PlayerCharacter";
 
 export default function Player() {

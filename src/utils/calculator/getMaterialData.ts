@@ -1,6 +1,6 @@
-import { CharacterName } from "../types/character";
-import { LightconeName } from "../types/lightcone";
-import { getCharFullData, getLcFullData } from "./getDataFromMap";
+import { CharacterName } from "../../types/character";
+import { LightconeName } from "../../types/lightcone";
+import { getCharFullData, getLcFullData } from "../dataMap/getDataFromMap";
 
 //* 根據等級取得角色屬性數值
 export function getCharMaterialData(

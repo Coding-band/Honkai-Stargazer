@@ -4,8 +4,12 @@ import MoreBtn from "../../../global/MoreBtn/MoreBtn";
 import List from "../../../global/List/List";
 import ListItem from "../../../global/List/ListItem";
 import { useClickOutside } from "react-native-click-outside";
+import { useNavigation } from "@react-navigation/native";
+import { SCREENS } from "../../../../constant/screens";
 
 export default function PlayerAction() {
+  const navigation = useNavigation();
+
   const [isPress, setIsPress] = useState(false);
 
   const containerRef = useClickOutside<View>(() => {
@@ -26,7 +30,14 @@ export default function PlayerAction() {
         className="absolute right-0 top-8"
       >
         <List>
-          <ListItem>账号管理</ListItem>
+          <ListItem
+            onPress={() => {
+              // @ts-ignore
+              navigation.navigate(SCREENS.LoginPage.id);
+            }}
+          >
+            账号管理
+          </ListItem>
           <ListItem>编辑首页</ListItem>
           <ListItem>设置</ListItem>
         </List>

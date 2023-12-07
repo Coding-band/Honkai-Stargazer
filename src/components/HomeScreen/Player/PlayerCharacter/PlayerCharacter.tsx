@@ -1,6 +1,6 @@
 import { View, Text, Pressable } from "react-native";
 import React, { useState } from "react";
-import genRanHex from "../../../../utils/genRanHex";
+import genRanHex from "../../../../utils/fun/genRanHex";
 import { Image } from "expo-image";
 
 export default function PlayerCharacter() {

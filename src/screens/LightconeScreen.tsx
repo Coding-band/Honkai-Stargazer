@@ -13,7 +13,7 @@ import { Lightcone, LightconeName } from "../types/lightcone";
 import LightconeContext from "../context/LightconeContext";
 import lcList from "../../data/lightcone_data/lightcone_list.json";
 import * as imagesMap from "../../assets/images/@images_map/images_map";
-import { getLcFullData } from "../utils/getDataFromMap";
+import { getLcFullData } from "../utils/dataMap/getDataFromMap";
 
 export default function LightconeScreen() {
   const route = useRoute<RouteProp<ParamList, "Lightcone">>();

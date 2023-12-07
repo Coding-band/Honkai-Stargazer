@@ -1,7 +1,7 @@
 import { Text } from "react-native";
 import React from "react";
 import Button from "../../../global/Button/Button";
-import { cn } from "../../../../utils/cn";
+import { cn } from "../../../../utils/css/cn";
 import Animated, {
   SharedValue,
   useAnimatedStyle,

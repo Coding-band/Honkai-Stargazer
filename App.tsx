@@ -15,6 +15,8 @@ import * as NavigationBar from "expo-navigation-bar";
 import LightconeListScreen from "./src/screens/LightconeListScreen";
 import LightconeScreen from "./src/screens/LightconeScreen";
 import FixedProvider from "./src/components/global/Fixed/FixedProvider";
+import LoginScreen from "./src/screens/LoginScreen";
+import Navigation from "./src/navigation/Navigation";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -48,48 +50,14 @@ export default function App() {
     return null;
   }
 
-  const Stack = createNativeStackNavigator();
-
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ClickOutsideProvider>
         <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
           {/* <StatusBar hidden /> */}
-          <NavigationContainer>
-            <FixedProvider>
-              <Stack.Navigator
-                screenOptions={{
-                  animation: Platform.OS === "ios" ? "default" : "none",
-                }}
-              >
-                <Stack.Screen
-                  name={SCREENS.HomePage.id}
-                  component={HomeScreen}
-                  options={{ headerShown: false }}
-                />
-                <Stack.Screen
-                  name={SCREENS.CharacterListPage.id}
-                  component={CharacterListScreen}
-                  options={{ headerShown: false }}
-                />
-                <Stack.Screen
-                  name={SCREENS.CharacterPage.id}
-                  component={CharacterScreen}
-                  options={{ headerShown: false }}
-                />
-                <Stack.Screen
-                  name={SCREENS.LightconeListPage.id}
-                  component={LightconeListScreen}
-                  options={{ headerShown: false }}
-                />
-                <Stack.Screen
-                  name={SCREENS.LightconeScreen.id}
-                  component={LightconeScreen}
-                  options={{ headerShown: false }}
-                />
-              </Stack.Navigator>
-            </FixedProvider>
-          </NavigationContainer>
+          <FixedProvider>
+            <Navigation />
+          </FixedProvider>
         </View>
       </ClickOutsideProvider>
     </GestureHandlerRootView>

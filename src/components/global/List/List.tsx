@@ -1,5 +1,5 @@
 import { View, ViewProps } from "react-native";
-import { cn } from "../../../utils/cn";
+import { cn } from "../../../utils/css/cn";
 import { omit } from "lodash";
 import { Shadow } from "react-native-shadow-2";
 

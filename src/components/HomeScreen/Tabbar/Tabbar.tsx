@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, View } from "react-native";
-import { cn } from "../../../utils/cn";
+import { cn } from "../../../utils/css/cn";
 import Tab from "./Tab/Tab";
 import { MathOperations, Person, Sword } from "phosphor-react-native";
 
