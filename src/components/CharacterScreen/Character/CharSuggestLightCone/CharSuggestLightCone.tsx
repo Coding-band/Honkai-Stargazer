@@ -44,7 +44,7 @@ export default React.memo(function CharSuggestLightCone() {
   return (
     <View style={{ alignItems: "center" }}>
       <CharPageHeading Icon={Sword}>推荐光锥</CharPageHeading>
-      <ScrollView horizontal>
+      <View>
         <View
           style={{
             flexDirection: "row",
@@ -60,7 +60,7 @@ export default React.memo(function CharSuggestLightCone() {
               <CharSuggestLightConeCard key={i} {...l} />
             ))}
         </View>
-      </ScrollView>
+      </View>
     </View>
   );
 });
