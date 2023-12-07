@@ -7,6 +7,8 @@ import characterList from "../../../../data/character_data/character_list.json";
 import * as character_list_map from "../../../../data/character_data/@character_data_map/character_data_map";
 import * as images_map from "../../../../assets/images/@images_map/images_map";
 import { CharacterCard, CharacterName } from "../../../types/character";
+import { CombatType } from "../../../types/combatType";
+import { Path } from "../../../types/path";
 
 /*
 const testImage1 = require("../../../../assets/images/test-charlist-img-1.png");
@@ -45,6 +47,8 @@ export default function CharList(props: Props) {
           character_list_map.ZH_CN[char.name as CharacterName]?.name ||
           char.name,
         rare: char.rare,
+        combatType: char.element as CombatType,
+        path: char.path as Path,
         image: images_map.Chacracter[char.name as CharacterName]?.icon,
       }))
     );

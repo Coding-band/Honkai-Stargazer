@@ -1,19 +1,19 @@
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  GestureResponderEvent,
-} from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
-import { Shadow } from "react-native-shadow-2";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image, ImageSource } from "expo-image";
 import { cn } from "../../../utils/cn";
+import { Path } from "../../../types/path";
+import { CombatType } from "../../../types/combatType";
+import CombatTypeCardIcon from "../CombatTypeCardIcon/CombatTypeCardIcon";
+import PathCardIcon from "../PathCardIcon/PathCardIcon";
 
 type Props = {
   id: string;
   rare: number;
   name: string;
+  path: Path;
+  combatType: CombatType;
   image?:
     | string
     | number
@@ -55,11 +55,13 @@ export default function CharCard(props: Props) {
           //   style={animation}
           className={cn("w-20 h-[102px]")}
         >
+          {/* 角色頭像 */}
           <Image
             transition={200}
             style={{ width: 80, height: 80 }}
             source={props.image}
           />
+          {/* 角色名稱 */}
           <View
             className="bg-[#222222]"
             style={{
@@ -72,6 +74,14 @@ export default function CharCard(props: Props) {
             <Text className="text-text2 font-[HY65] text-[12px] leading-4">
               {props.name}
             </Text>
+          </View>
+          {/* 命途 & 元素 */}
+          <View
+            className="absolute top-0.5 left-1"
+            style={{ flexDirection: "column", gap: 8 }}
+          >
+            <CombatTypeCardIcon value={props.combatType} />
+            <PathCardIcon value={props.path} />
           </View>
         </View>
       </LinearGradient>

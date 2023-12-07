@@ -1,4 +1,6 @@
+import { CombatType } from "./combatType";
 import { ExpoImage } from "./image";
+import { Path } from "./path";
 
 export type Character = {
   id?: CharacterName;
@@ -15,6 +17,8 @@ export type CharacterCard = {
   id: string;
   name: string;
   rare: number;
+  path: Path;
+  combatType: CombatType;
   image: ExpoImage;
 };
 

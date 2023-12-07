@@ -6,9 +6,18 @@ import Modal from "react-native-modal";
 import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../../constant/screens";
+import { Path } from "../../../../../types/path";
+import { CombatType } from "../../../../../types/combatType";
 
 type Props = {
-  team: { image: ExpoImage; rare: number; name: string; id: string }[];
+  team: {
+    image: ExpoImage;
+    rare: number;
+    name: string;
+    id: string;
+    path: Path;
+    combatType: CombatType;
+  }[];
 };
 
 export default React.memo(function CharSuggestTeamCard(props: Props) {

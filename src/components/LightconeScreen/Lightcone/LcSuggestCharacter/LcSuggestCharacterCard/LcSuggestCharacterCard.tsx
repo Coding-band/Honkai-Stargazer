@@ -6,12 +6,16 @@ import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
 import CharCard from "../../../../global/CharCard/CharCard";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../../constant/screens";
+import { Path } from "../../../../../types/path";
+import { CombatType } from "../../../../../types/combatType";
 
 type Props = {
   id: string;
   image?: ExpoImage;
-  rare: 4 | 5;
+  rare: number;
   name: string;
+  path: Path;
+  combatType: CombatType;
 };
 
 export default function LcSuggestCharacterCard(props: Props) {
@@ -35,13 +39,7 @@ export default function LcSuggestCharacterCard(props: Props) {
   return (
     <View>
       <View style={{ opacity: isSelected ? 0 : 1 }}>
-        <CharCard
-          onPress={handlePress}
-          id={props.id}
-          image={props.image}
-          name={props.name}
-          rare={props.rare}
-        />
+        <CharCard onPress={handlePress} {...props} />
       </View>
       <Modal
         useNativeDriverForBackdrop
@@ -62,13 +60,7 @@ export default function LcSuggestCharacterCard(props: Props) {
           }}
         >
           <View style={{ transform: [{ scale: 1.2 }] }}>
-            <CharCard
-              onPress={handlePopupPress}
-              id={props.id}
-              image={props.image}
-              name={props.name}
-              rare={props.rare}
-            />
+            <CharCard onPress={handlePopupPress} {...props} />
           </View>
           <PopUpCard
             title="于夜色中"
