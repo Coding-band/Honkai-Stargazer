@@ -72,6 +72,7 @@ export default React.memo(function TracePopUp({ id, onClose }: Props) {
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
+                    alignItems:"center",
                   }}
                 >
                   <Text className="text-[16px] text-[#222222]">

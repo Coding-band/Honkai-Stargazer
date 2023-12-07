@@ -2,13 +2,13 @@ import { Text, View } from "react-native";
 import React, { useContext, useEffect } from "react";
 import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
 import CharacterContext from "../../../../../context/CharacterContext";
-import * as characterListMap from "../../../../../../data/character_data/@character_data_map/character_data_map";
-import { CharacterName } from "../../../../../types/character";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import FixedContext from "../../../../global/Fixed/FixedContext";
 import formatDesc from "../../../../../utils/formatDesc";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { getCharFullData } from "../../../../../utils/getDataFromMap";
+import { Shadow } from "react-native-shadow-2";
+import { Image } from "expo-image";
 
 type Props = {
   id: number;
@@ -39,18 +39,31 @@ export default React.memo(function EidolonPopUp({ id, onClose }: Props) {
             onClose={onClose}
             title={charEidolonRank?.name || ""}
             content={
-              <View className="px-4 py-[18px]" style={{ gap: 3 }}>
-                <Text className="text-[#333] text-[14px] font-[HY65]">
-                  星魂{id}
-                </Text>
-                <HtmlText
-                  style={{ fontSize: 14, color: "#666", fontFamily: "HY65" }}
-                >
-                  {formatDesc(
-                    charEidolonRank?.descHash,
-                    charEidolonRank?.params
-                  )}
-                </HtmlText>
+              <View
+                className="px-4 py-[18px]"
+                style={{ flexDirection: "row", gap: 14, alignItems: "center" }}
+              >
+                <Shadow style={{ borderRadius: 100 }} startColor="#31B5FF60">
+                  <View
+                    className="w-[60px] h-[60px] bg-[#333] rounded-full border-2 border-white"
+                    style={{ justifyContent: "center", alignItems: "center" }}
+                  >
+                    {/* <Image source={Rank[charFullData.ranks[id - 1].artPath]} /> */}
+                  </View>
+                </Shadow>
+                <View className="w-[250px]" style={{ gap: 4 }}>
+                  <Text className="text-[#333] text-[14px] font-[HY65]">
+                    星魂{id}
+                  </Text>
+                  <HtmlText
+                    style={{ fontSize: 14, color: "#666", fontFamily: "HY65" }}
+                  >
+                    {formatDesc(
+                      charEidolonRank?.descHash,
+                      charEidolonRank?.params
+                    )}
+                  </HtmlText>
+                </View>
               </View>
             }
           />

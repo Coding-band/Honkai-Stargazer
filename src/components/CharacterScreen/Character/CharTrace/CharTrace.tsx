@@ -1,5 +1,5 @@
 import { Pressable, View } from "react-native";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { TreeStructure } from "phosphor-react-native";
 import { Image } from "expo-image";
@@ -9,6 +9,8 @@ import Outer from "./TraceItem/Outer";
 import useDelayLoad from "../../../../hooks/useDelayLoad";
 import TracePopUp from "./TracePopUp/TracePopUp";
 import { useClickOutside } from "react-native-click-outside";
+import CharacterContext from "../../../../context/CharacterContext";
+import { getCharFullData } from "../../../../utils/getDataFromMap";
 
 const TestTraceLine = require("../../../../../assets/images/test-trace-line.svg");
 const CritDmgIcon = require("../../../../../assets/images/ui_icon/ic_crit_dmg.webp");
@@ -25,6 +27,11 @@ const TestInner5 = require("../../../../../assets/images/test-inner-5.png");
 
 export default React.memo(function CharTrace() {
   const loaded = useDelayLoad(50);
+
+  const charData = useContext(CharacterContext);
+  const charId = charData?.id!;
+  const charFullData = getCharFullData(charId);
+
   const [selectedInner, setSelectedInner] = useState(0);
 
   const containerRef = useClickOutside<View>(() => {
