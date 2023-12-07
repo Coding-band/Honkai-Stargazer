@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  View,
-  ScrollView,
-  LayoutChangeEvent,
-  Platform,
-} from "react-native";
+import { View, ScrollView, LayoutChangeEvent, Platform } from "react-native";
 import { cn } from "../../../utils/css/cn";
 import MenuItem from "./MenuItem/MenuItem";
 import {
@@ -158,9 +153,13 @@ export default function Menu() {
           <MenuItem
             width={menuItemSize.width}
             height={menuItemSize.height}
-            Icon={MapTrifold}
+            Icon={SCREENS.MapPage.icon}
+            onPress={() => {
+              // @ts-ignore
+              navigation.navigate(SCREENS.MapPage.id);
+            }}
           >
-            地图
+            {SCREENS.MapPage.shortName}
           </MenuItem>
           <MenuItem
             width={menuItemSize.width}

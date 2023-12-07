@@ -1,4 +1,4 @@
-import { Person, Sword } from "phosphor-react-native";
+import { MapTrifold, Person, Sword } from "phosphor-react-native";
 
 export const SCREENS = {
   HomePage: {
@@ -30,6 +30,12 @@ export const SCREENS = {
     name: "光锥",
     shortName: "",
     icon: Sword,
+  },
+  MapPage: {
+    id: "Map",
+    name: "Hoyolab 地圖",
+    shortName: "地圖",
+    icon: MapTrifold,
   },
   LoginPage: {
     id: "Login",
