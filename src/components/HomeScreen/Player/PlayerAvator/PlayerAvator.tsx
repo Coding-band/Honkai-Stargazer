@@ -1,10 +1,12 @@
 import { Image } from "expo-image";
 import React, { useEffect, useState } from "react";
 import { Pressable, View } from "react-native";
-
-const testAvatorImage = require("../../../../../assets/images/test-avator.png");
+import useHsrFullData from "../../../../hooks/hoyolab/useHsrFullData";
 
 export default function PlayerAvator() {
+  const playerFullData = useHsrFullData();
+  const avator = playerFullData?.data?.cur_head_icon_url;
+
   const [rotate, setRotate] = useState(0);
   const [flag, setFlag] = useState(false);
 
@@ -14,7 +16,7 @@ export default function PlayerAvator() {
         setRotate(rotate + 5);
       }
     }, 10);
-  }, [rotate,flag]);
+  }, [rotate, flag]);
 
   return (
     <Pressable
@@ -30,7 +32,7 @@ export default function PlayerAvator() {
         style={{ transform: [{ rotate: rotate + "deg" }] }}
       >
         <Image
-          source={testAvatorImage}
+          source={{ uri: avator }}
           className="w-[73px] h-[73px] rounded-full"
           style={{
             backgroundColor: "rgba(144, 124, 84, 0.4)",

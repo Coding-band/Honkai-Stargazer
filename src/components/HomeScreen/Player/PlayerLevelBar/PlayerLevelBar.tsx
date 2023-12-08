@@ -1,29 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { View } from "react-native";
+import useHoyolabGameRecord from "../../../../hooks/hoyolab/useHoyolabGameRecord";
+import useHsrPlayerData from "../../../../hooks/hoyolab/useHsrPlayerData";
 
 export default function PlayerLevelBar() {
-  const [flag, setFlag] = useState<"LEFT" | "RIGHT">("LEFT");
-  const [level, setLevel] = useState(260);
+  const playerData = useHsrPlayerData();
+  const playerLevel = Number(playerData?.level);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setLevel((prevLevel) => {
-  //       const newLevel = flag === "LEFT" ? prevLevel + 3 : prevLevel - 3;
-  //       if (newLevel > 300) {
-  //         setFlag("RIGHT");
-  //       } else if (newLevel < 100) {
-  //         setFlag("LEFT");
-  //       }
-  //       return newLevel;
-  //     });
-  //   }, 8);
-
-  //   return () => clearInterval(interval); // 清除定時器
-  // }, [flag]);
+  const [levelRate, setLevelRate] = useState<number>(0);
+  useEffect(() => {
+    setLevelRate(playerLevel / 70);
+  }, [playerLevel]);
 
   return (
     <View style={{ flexDirection: "row" }} className="h-1">
-      <View style={{ width: level }} className="h-full bg-[#DBC291]" />
+      <View
+        style={{ width: `${levelRate * 100}%` }}
+        className="h-full bg-[#DBC291]"
+      />
       <View className="flex-1 h-full bg-[#666]" />
     </View>
   );

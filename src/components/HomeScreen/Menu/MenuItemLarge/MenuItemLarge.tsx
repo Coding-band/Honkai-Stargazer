@@ -15,11 +15,15 @@ export default function MenuItemLarge({
   Icon,
   width,
   height,
+  title,
+  subtitle,
 }: {
   children: any;
   Icon: any;
   width: number;
   height: number;
+  title?: any;
+  subtitle?: any;
 }) {
   const [intensity, setIntensity] = useState(0);
 
@@ -51,7 +55,13 @@ export default function MenuItemLarge({
               ></LinearGradientExpo>
               <View
                 className="absolute top-[15px]"
-                style={{ alignItems: "center", width, height }}
+                style={{
+                  justifyContent: "center",
+                  flexDirection: "row",
+                  gap: width / 30,
+                  width,
+                  height,
+                }}
               >
                 <View style={{ gap: 7, alignItems: "center" }}>
                   {Icon && <Icon weight="fill" size={32} color="white" />}
@@ -61,6 +71,17 @@ export default function MenuItemLarge({
                   >
                     {children}
                   </Text>
+                </View>
+                <View
+                  style={{
+                    gap: 6,
+                    alignItems: "center",
+                  }}
+                >
+                  <Text className=" text-text text-[16px] font-medium">
+                    {title}
+                  </Text>
+                  <Text className="text-text2 text-[14px]">{subtitle}</Text>
                 </View>
               </View>
             </BlurView>
@@ -72,7 +93,13 @@ export default function MenuItemLarge({
               ></LinearGradientExpo>
               <View
                 className="absolute top-[15px]"
-                style={{ alignItems: "center", width, height }}
+                style={{
+                  justifyContent: "center",
+                  flexDirection: "row",
+                  gap: width / 30,
+                  width,
+                  height,
+                }}
               >
                 <View style={{ gap: 7, alignItems: "center" }}>
                   {Icon && <Icon weight="fill" size={32} color="white" />}
@@ -82,6 +109,17 @@ export default function MenuItemLarge({
                   >
                     {children}
                   </Text>
+                </View>
+                <View
+                  style={{
+                    gap: 6,
+                    alignItems: "center",
+                  }}
+                >
+                  <Text className=" text-text text-[16px] font-medium">
+                    {title}
+                  </Text>
+                  <Text className="text-text2 text-[14px]">{subtitle}</Text>
                 </View>
               </View>
             </>

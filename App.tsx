@@ -8,6 +8,9 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import * as NavigationBar from "expo-navigation-bar";
 import FixedProvider from "./src/components/global/Fixed/FixedProvider";
 import Navigation from "./src/navigation/Navigation";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 SplashScreen.preventAutoHideAsync();
 
@@ -42,15 +45,17 @@ export default function App() {
   }
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <ClickOutsideProvider>
-        <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-          {/* <StatusBar hidden /> */}
-          <FixedProvider>
-            <Navigation />
-          </FixedProvider>
-        </View>
-      </ClickOutsideProvider>
-    </GestureHandlerRootView>
+    <QueryClientProvider client={queryClient}>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <ClickOutsideProvider>
+          <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+            {/* <StatusBar hidden /> */}
+            <FixedProvider>
+              <Navigation />
+            </FixedProvider>
+          </View>
+        </ClickOutsideProvider>
+      </GestureHandlerRootView>
+    </QueryClientProvider>
   );
 }

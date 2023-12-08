@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { View, ScrollView, LayoutChangeEvent, Platform } from "react-native";
+import {
+  View,
+  ScrollView,
+  LayoutChangeEvent,
+  Platform,
+  Text,
+} from "react-native";
 import { cn } from "../../../utils/css/cn";
 import MenuItem from "./MenuItem/MenuItem";
 import {
@@ -23,6 +29,7 @@ import MenuItemLarge from "./MenuItemLarge/MenuItemLarge";
 import { Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../constant/screens";
+import useHsrNote from "../../../hooks/hoyolab/useHsrNote";
 
 const OEPN_LONG_MENU = false;
 
@@ -35,6 +42,8 @@ export default function Menu() {
     width: 0,
     height: 0,
   });
+
+  const playerNote = useHsrNote();
 
   useEffect(() => {
     setMenuItemSize({
@@ -105,6 +114,20 @@ export default function Menu() {
             width={menuItemLargeSize.width}
             height={menuItemLargeSize.height}
             Icon={Moon}
+            title={
+              <>
+                <Text className="text-[24px] leading-[26px]">
+                  {playerNote.data?.current_stamina}
+                </Text>
+                <Text>/{playerNote.data?.max_stamina}</Text>
+              </>
+            }
+            subtitle={
+              <>
+                <Text className="font-[HY65]">今天</Text>
+                <Text>20:15</Text>
+              </>
+            }
           >
             开拓力
           </MenuItemLarge>
@@ -126,6 +149,20 @@ export default function Menu() {
             width={menuItemLargeSize.width}
             height={menuItemLargeSize.height}
             Icon={Users}
+            title={
+              <>
+                <Text className="text-[24px] leading-[26px]">
+                  {playerNote.data?.accepted_epedition_num}
+                </Text>
+                <Text>/{playerNote.data?.total_expedition_num}</Text>
+              </>
+            }
+            subtitle={
+              <>
+                <Text className="font-[HY65]">今天</Text>
+                <Text>20:15</Text>
+              </>
+            }
           >
             派遣委托
           </MenuItemLarge>

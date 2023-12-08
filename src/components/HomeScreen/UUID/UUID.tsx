@@ -1,7 +1,10 @@
 import React from "react";
 import { Text, View } from "react-native";
+import useHsrUUID from "../../../hooks/hoyolab/useHsrUUID";
 
 export default function UUID() {
+  const uuid = useHsrUUID();
+
   return (
     <View
       className="ml-[-4px] p-2 rounded-[50px]"
@@ -11,7 +14,7 @@ export default function UUID() {
         backgroundColor: "rgba(0, 0, 0, 0.3)",
       }}
     >
-      <Text className="text-white">108289390</Text>
+      <Text className="text-white">{uuid}</Text>
     </View>
   );
 }
