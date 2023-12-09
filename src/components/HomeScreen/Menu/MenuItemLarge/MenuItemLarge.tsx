@@ -10,6 +10,7 @@ import { LinearGradient as LinearGradientExpo } from "expo-linear-gradient";
 import { BlurView } from "expo-blur";
 import { Shadow } from "react-native-shadow-2";
 import withBlurView from "../../../../hoc/withBlurView";
+import { GestureResponderEvent } from "react-native";
 
 export default function MenuItemLarge({
   children,
@@ -18,6 +19,7 @@ export default function MenuItemLarge({
   height,
   title,
   subtitle,
+  onPress,
 }: {
   children: any;
   Icon: any;
@@ -25,10 +27,11 @@ export default function MenuItemLarge({
   height: number;
   title?: any;
   subtitle?: any;
+  onPress?: (e: GestureResponderEvent) => void;
 }) {
   return (
     <Shadow offset={[0, 4]} distance={6} startColor="#00000025">
-      <TouchableOpacity activeOpacity={0.65}>
+      <TouchableOpacity onPress={onPress} activeOpacity={0.65}>
         <View
           style={{
             width,
@@ -51,6 +54,7 @@ export default function MenuItemLarge({
                 style={{
                   justifyContent: "center",
                   flexDirection: "row",
+                  gap: 4,
                   width,
                   height,
                 }}
@@ -66,7 +70,7 @@ export default function MenuItemLarge({
                 </View>
                 <View
                   style={{
-                    gap: 6,
+                    gap: 8,
                     alignItems: "center",
                   }}
                 >

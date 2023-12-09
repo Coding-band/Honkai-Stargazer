@@ -1,4 +1,4 @@
-import { MapTrifold, Person, Sword } from "phosphor-react-native";
+import { MapTrifold, Person, Sword, User, Users } from "phosphor-react-native";
 
 export const SCREENS = {
   HomePage: {
@@ -42,5 +42,11 @@ export const SCREENS = {
     name: "",
     shortName: "",
     icon: null,
+  },
+  ExpeditionPage: {
+    id: "Expedition",
+    name: "派遣委托",
+    shortName: "派遣委托",
+    icon: Users,
   },
 };

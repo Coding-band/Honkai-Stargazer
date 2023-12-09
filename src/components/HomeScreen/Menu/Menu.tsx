@@ -148,6 +148,10 @@ export default function Menu() {
             暫無數據
           </MenuItem>
           <MenuItemLarge
+            onPress={() => {
+              // @ts-ignore
+              navigation.navigate(SCREENS.ExpeditionPage.id);
+            }}
             width={menuItemLargeSize.width}
             height={menuItemLargeSize.height}
             Icon={Users}
