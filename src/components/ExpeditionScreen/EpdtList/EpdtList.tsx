@@ -38,8 +38,8 @@ export default function EpdtList() {
             justifyContent: "center",
           }}
         >
-          {epdtList?.map((edpt: any) => (
-            <EpdtListItem {...edpt} />
+          {epdtList?.map((edpt: any, i: number) => (
+            <EpdtListItem key={i} {...edpt} />
           ))}
         </View>
       </ScrollView>

@@ -1,5 +1,5 @@
 export type Material = {
-    id: number;
+    id: string;
     name: string;
     rare: number;
     purposeId: number;
