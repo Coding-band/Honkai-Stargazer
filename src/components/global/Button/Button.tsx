@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { DimensionValue, Text, TouchableOpacity, View } from "react-native";
 import { GestureResponderEvent } from "react-native-modal";
 import { Shadow } from "react-native-shadow-2";
 
@@ -11,8 +11,8 @@ export default function Button({
   hasShadow = true,
 }: {
   children: any;
-  width: number;
-  height: number;
+  width: DimensionValue;
+  height: DimensionValue;
   onPress?: (e: GestureResponderEvent) => void;
   hasShadow?: boolean;
 }) {
@@ -21,7 +21,7 @@ export default function Button({
       {hasShadow ? (
         <Shadow offset={[0, 4]}>
           <View
-            className="bg-[#dddddd] rounded-[49px]"
+            className="bg-[#dddddd] rounded-[49px] p-[3px]"
             style={{
               width,
               height,
@@ -30,10 +30,8 @@ export default function Button({
             }}
           >
             <View
-              className="rounded-[49px] border border-solid border-[#0000001a]"
+              className="rounded-[49px] border border-solid border-[#0000001a] w-full h-full"
               style={{
-                width: width - 6,
-                height: height - 6,
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -44,7 +42,7 @@ export default function Button({
         </Shadow>
       ) : (
         <View
-          className="bg-[#dddddd] rounded-[49px]"
+          className="bg-[#dddddd] rounded-[49px]  p-[3px]"
           style={{
             width,
             height,
@@ -53,10 +51,8 @@ export default function Button({
           }}
         >
           <View
-            className="rounded-[49px] border border-solid border-[#0000001a]"
+            className="rounded-[49px] border border-solid border-[#0000001a] w-full h-full"
             style={{
-              width: width - 6,
-              height: height - 6,
               justifyContent: "center",
               alignItems: "center",
             }}

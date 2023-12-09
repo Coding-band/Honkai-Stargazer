@@ -1,17 +1,21 @@
 import { useQuery } from "react-query";
-import axios from "axios";
 import useHoyolabCookie from "./useHoyolabCookie";
 import useHsrUUID from "./useHsrUUID";
-import generateDS from "../../utils/hoyolab/generateDs";
 import HoyolabRequest from "../../utils/hoyolab/request/hoyolabRequest";
+import { hsrServerId, hsrServer } from "../../constant/hsrServer";
+import useHsrServerChosen from "../../redux/hsrServerChosen/useHsrServerChosen";
 
 const useHsrFullData = () => {
   const { hoyolabCookie } = useHoyolabCookie();
   const HsrUUID = useHsrUUID();
+  const { hsrServerChosen } = useHsrServerChosen();
 
   const { data, isError, error, isLoading, isFetching } = useQuery(
-    ["hsr-full-data", HsrUUID],
-    () => new HoyolabRequest(hoyolabCookie).setDs().send(getUrl(HsrUUID)),
+    ["hsr-full-data", hoyolabCookie, HsrUUID, hsrServerChosen],
+    () =>
+      new HoyolabRequest(hoyolabCookie)
+        .setDs()
+        .send(getUrl(HsrUUID, hsrServerChosen)),
     {
       select(data) {
         return data?.data;
@@ -23,5 +27,5 @@ const useHsrFullData = () => {
 
 export default useHsrFullData;
 
-const getUrl = (uuid: string) =>
-  `https://bbs-api-os.hoyolab.com/game_record/hkrpg/api/index?server=prod_official_asia&role_id=${uuid}`;
+const getUrl = (uuid: string, server: hsrServerId = "asia") =>
+  `https://bbs-api-os.hoyolab.com/game_record/hkrpg/api/index?server=${hsrServer[server]}&role_id=${uuid}`;

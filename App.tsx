@@ -10,6 +10,9 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import FixedProvider from "./src/components/global/Fixed/FixedProvider";
 import Navigation from "./src/navigation/Navigation";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { Provider } from "react-redux";
+import { persistor, store } from "./src/redux/store";
+import { PersistGate } from "redux-persist/integration/react";
 
 // import playground for testing
 import "./playground";
@@ -48,18 +51,22 @@ export default function App() {
   }
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <GestureHandlerRootView style={{ flex: 1 }}>
-        <ClickOutsideProvider>
-          <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-            {/* <StatusBar hidden /> */}
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <QueryClientProvider client={queryClient}>
+          <GestureHandlerRootView style={{ flex: 1 }}>
+            <ClickOutsideProvider>
+              <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+                {/* <StatusBar hidden /> */}
 
-            <FixedProvider>
-              <Navigation />
-            </FixedProvider>
-          </View>
-        </ClickOutsideProvider>
-      </GestureHandlerRootView>
-    </QueryClientProvider>
+                <FixedProvider>
+                  <Navigation />
+                </FixedProvider>
+              </View>
+            </ClickOutsideProvider>
+          </GestureHandlerRootView>
+        </QueryClientProvider>
+      </PersistGate>
+    </Provider>
   );
 }

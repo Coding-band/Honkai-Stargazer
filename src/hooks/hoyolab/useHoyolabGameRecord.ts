@@ -7,7 +7,7 @@ const useHoyolabGameRecord = () => {
   const hoyolabId = hoyolabCookieParse.account_id_v2;
 
   const { data, isError, error, isLoading, isFetching } = useQuery(
-    ["hoyolab-game-record", hoyolabId],
+    ["hoyolab-game-record", hoyolabCookie, hoyolabId],
     () => new HoyolabRequest(hoyolabCookie).send(getUrl(hoyolabId)),
     {
       select(data) {
