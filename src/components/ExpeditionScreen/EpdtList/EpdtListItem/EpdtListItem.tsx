@@ -3,7 +3,10 @@ import React from "react";
 import { BlurView } from "expo-blur";
 import { Shadow } from "react-native-shadow-2";
 import { Image } from "expo-image";
-import formatTime from "../../../../utils/date/formatTime";
+import {
+  formatTimeDuration,
+  formatTimePoint,
+} from "../../../../utils/date/formatTime";
 
 type Props = {
   avatars: string[];
@@ -36,7 +39,7 @@ export default function EpdtListItem(props: Props) {
                   </Text>
                   {/* 剩餘時間 */}
                   <Text className="font-[HY65] text-[13px] text-[#00000060]">
-                    {formatTime(props.remainingTime)}
+                    {formatTimeDuration(props.remainingTime)}
                   </Text>
                 </View>
                 <View
@@ -57,7 +60,7 @@ export default function EpdtListItem(props: Props) {
                   </View>
                   {/* 結束時間 */}
                   <Text className="font-[HY65] text-[13px] text-[#00000060]">
-                    今天18:30
+                    {formatTimePoint(props.remainingTime)}
                   </Text>
                 </View>
               </View>
