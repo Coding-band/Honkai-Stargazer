@@ -21,6 +21,7 @@ export default function EpdtListItem(props: Props) {
   const progressBarAnimation = useSpring({
     from: { width: "0%" },
     to: { width: `${100 - (props.remainingTime / 72000) * 100}%` },
+    delay: 300,
   });
 
   return (
