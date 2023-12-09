@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { View, Text } from "react-native";
 import { Info } from "phosphor-react-native";
 import AttrSliderbar from "../../../global/Sliderbar/Sliderbar";
@@ -6,6 +6,8 @@ import { Image } from "expo-image";
 import PageHeading from "../../../global/PageHeading/PageHeading";
 import useDelayLoad from "../../../../hooks/useDelayLoad";
 import MaterialList from "../../../global/MaterialList/MaterialList";
+import LightconeContext from "../../../../context/LightconeContext";
+import { getLcAttrData } from "../../../../utils/calculator/getAttrData";
 
 const HPIcon = require("../../../../../assets/icons/HP.png");
 const STRIcon = require("../../../../../assets/icons/STR.png");
@@ -16,12 +18,19 @@ const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 export default function LcAttribute() {
   const loaded = useDelayLoad(100);
 
+  const lcData = useContext(LightconeContext);
+  const lcId = lcData?.id!;
+
+  const [str, setStr] = useState(0);
+  const [hp, setHp] = useState(0);
+  const [def, setDef] = useState(0);
+
   const [attrFromLevel, setAttrFromLevel] = useState(0);
   const [attrToLevel, setAttrToLevel] = useState(8);
 
   const handleFromLevelChange = (newLevel: number) => {
     if (newLevel >= attrToLevel) {
-      setAttrFromLevel(attrToLevel - 1);
+      setAttrFromLevel(attrToLevel);
       return;
     }
     setAttrFromLevel(newLevel);
@@ -34,6 +43,21 @@ export default function LcAttribute() {
     }
     setAttrToLevel(newLevel);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setStr(
+        getLcAttrData(lcId, attrFromLevel === 0 ? 1 : attrFromLevel * 10).atk
+      );
+      setHp(
+        getLcAttrData(lcId, attrFromLevel === 0 ? 1 : attrFromLevel * 10).hp
+      );
+      setDef(
+        getLcAttrData(lcId, attrFromLevel === 0 ? 1 : attrFromLevel * 10).def
+      );
+    });
+  }, [attrFromLevel]);
+
   return (
     <>
       <View style={{ alignItems: "center" }}>
@@ -88,15 +112,21 @@ export default function LcAttribute() {
             <View className="mt-4" style={{ flexDirection: "row", gap: 12 }}>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={HPIcon} />
-                <Text className="text-white text-[16px] font-medium">817</Text>
+                <Text className="text-white text-[16px] font-medium">
+                  {str.toFixed(0)}
+                </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={STRIcon} />
-                <Text className="text-white text-[16px] font-medium">561</Text>
+                <Text className="text-white text-[16px] font-medium">
+                  {hp.toFixed(0)}
+                </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={DEFIcon} />
-                <Text className="text-white text-[16px] font-medium">319</Text>
+                <Text className="text-white text-[16px] font-medium">
+                  {def.toFixed(0)}
+                </Text>
               </View>
             </View>
           </>

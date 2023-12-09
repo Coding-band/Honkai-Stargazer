@@ -9,6 +9,7 @@ import MaterialList from "../../../global/MaterialList/MaterialList";
 import CharacterContext from "../../../../context/CharacterContext";
 import { CharacterName } from "../../../../types/character";
 import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
+import { getCharAttrData } from "../../../../utils/calculator/getAttrData";
 
 const HPIcon = require("../../../../../assets/icons/HP.png");
 const STRIcon = require("../../../../../assets/icons/STR.png");
@@ -23,20 +24,19 @@ export default React.memo(function CharAttribute() {
 
   const charData = useContext(CharacterContext);
   const charId = charData?.id!;
-  const charFullData = getCharFullData(charId);
-  const charLevelData = charFullData?.levelData;
 
   const [str, setStr] = useState(0);
   const [hp, setHp] = useState(0);
   const [def, setDef] = useState(0);
   const [dex, setDex] = useState(0);
+  const [eg, setEg] = useState(0);
 
   const [attrFromLevel, setAttrFromLevel] = useState(0);
   const [attrToLevel, setAttrToLevel] = useState(8);
 
   const handleFromLevelChange = (newLevel: number) => {
     if (newLevel >= attrToLevel) {
-      setAttrFromLevel(attrToLevel - 1);
+      setAttrFromLevel(attrToLevel);
       return;
     }
     setAttrFromLevel(newLevel);
@@ -52,12 +52,25 @@ export default React.memo(function CharAttribute() {
 
   useEffect(() => {
     setTimeout(() => {
-      const charCurrentLevelData =
-        charLevelData?.[attrFromLevel === 7 ? 6 : attrFromLevel];
-      setStr(charCurrentLevelData?.attackBase || 0);
-      setHp(charCurrentLevelData?.hpBase || 0);
-      setDef(charCurrentLevelData?.defenseBase || 0);
-      setDex(charCurrentLevelData?.speedBase || 0);
+      setStr(
+        getCharAttrData(charId, attrFromLevel === 0 ? 1 : attrFromLevel * 10)
+          .atk
+      );
+      setHp(
+        getCharAttrData(charId, attrFromLevel === 0 ? 1 : attrFromLevel * 10).hp
+      );
+      setDef(
+        getCharAttrData(charId, attrFromLevel === 0 ? 1 : attrFromLevel * 10)
+          .def
+      );
+      setDex(
+        getCharAttrData(charId, attrFromLevel === 0 ? 1 : attrFromLevel * 10)
+          .speed
+      );
+      setEg(
+        getCharAttrData(charId, attrFromLevel === 0 ? 1 : attrFromLevel * 10)
+          .energy
+      );
     });
   }, [attrFromLevel]);
 
@@ -78,7 +91,7 @@ export default React.memo(function CharAttribute() {
             >
               {/* 等級 */}
               <Text className="text-white text-[16px] font-medium">
-                Lv.{attrFromLevel === 0 ? "1" : attrFromLevel * 10}
+                Lv.{attrFromLevel === 0 ? 1 : attrFromLevel * 10}
               </Text>
               {/* 等級滑動欄 */}
               <AttrSliderbar
@@ -104,7 +117,7 @@ export default React.memo(function CharAttribute() {
             >
               {/* 等級 */}
               <Text className="text-white text-[16px] font-medium">
-                Lv.{attrToLevel === 0 ? "1" : attrToLevel * 10}
+                Lv.{attrToLevel === 0 ? 1 : attrToLevel * 10}
               </Text>
               {/* 等級滑動欄 */}
               <AttrSliderbar
@@ -142,7 +155,7 @@ export default React.memo(function CharAttribute() {
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={ELIcon} />
                 <Text className="text-white text-[16px] font-medium">
-                  {charFullData.spRequirement}
+                  {eg.toFixed(0)}
                 </Text>
               </View>
             </View>
