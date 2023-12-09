@@ -7,6 +7,7 @@ import {
   formatTimeDuration,
   formatTimePoint,
 } from "../../../../utils/date/formatTime";
+import { animated, useSpring } from "@react-spring/native";
 
 type Props = {
   avatars: string[];
@@ -17,6 +18,11 @@ type Props = {
 };
 
 export default function EpdtListItem(props: Props) {
+  const progressBarAnimation = useSpring({
+    from: { width: "0%" },
+    to: { width: `${100 - (props.remainingTime / 72000) * 100}%` },
+  });
+
   return (
     <View className="w-full h-20 rounded-[4px] rounded-tr-[24px] overflow-hidden">
       <TouchableOpacity activeOpacity={0.65}>
@@ -70,13 +76,14 @@ export default function EpdtListItem(props: Props) {
                 className="w-full h-[10px] bg-[#00000025] rounded-[20px] p-0.5"
                 style={{ justifyContent: "center" }}
               >
-                <View
+                <AnimatedView
                   className="h-full bg-[#F3F9FF80] rounded-[20px]"
+                  // @ts-ignore
                   style={{
-                    width: `${100 - (props.remainingTime / 72000) * 100}%`,
                     transform: [{ translateY: -0.3 }],
+                    ...progressBarAnimation,
                   }}
-                ></View>
+                ></AnimatedView>
               </View>
             </View>
           </Shadow>
@@ -85,3 +92,5 @@ export default function EpdtListItem(props: Props) {
     </View>
   );
 }
+
+const AnimatedView = animated(View);
