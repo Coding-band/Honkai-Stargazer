@@ -9,8 +9,7 @@ const Lightcone = {
   },
   "Worrisome, Blissful": {
     icon: require("../../images/lightcone_icon/worrisome_blissful.webp"),
-    // # missing
-    imageFull: require("../../images/lightcone_artwork/warmth_shortens_cold_nights_artwork.webp"),
+    imageFull: require("../../images/lightcone_artwork/worrisome_blissful_artwork.webp"),
   },
   "Brighter Than the Sun": {
     icon: require("../../images/lightcone_icon/brighter_than_the_sun.webp"),
