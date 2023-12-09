@@ -31,7 +31,7 @@ export default function HomeScreen() {
           style={{ flex: 1 }}
         >
           <Menu />
-          <Tabbar/>
+          <Tabbar />
         </LinearGradient>
       </View>
     </View>

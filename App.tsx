@@ -1,11 +1,12 @@
 import "./app.d";
+
 import { Platform, View } from "react-native";
 import { useFonts } from "expo-font";
 import { useCallback, useEffect } from "react";
 import * as SplashScreen from "expo-splash-screen";
+import * as NavigationBar from "expo-navigation-bar";
 import { ClickOutsideProvider } from "react-native-click-outside";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import * as NavigationBar from "expo-navigation-bar";
 import FixedProvider from "./src/components/global/Fixed/FixedProvider";
 import Navigation from "./src/navigation/Navigation";
 import { QueryClient, QueryClientProvider } from "react-query";
@@ -50,9 +51,10 @@ export default function App() {
         <ClickOutsideProvider>
           <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
             {/* <StatusBar hidden /> */}
-            <FixedProvider>
-              <Navigation />
-            </FixedProvider>
+
+              <FixedProvider>
+                <Navigation />
+              </FixedProvider>
           </View>
         </ClickOutsideProvider>
       </GestureHandlerRootView>

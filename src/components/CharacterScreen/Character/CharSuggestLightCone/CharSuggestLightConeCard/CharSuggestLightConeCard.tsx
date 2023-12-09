@@ -41,8 +41,8 @@ export default React.memo(function CharSuggestLightConeCard(props: Props) {
       </View>
       <Modal
         useNativeDriverForBackdrop
-        animationIn="fadeInLeft"
-        animationOut="fadeOutRight"
+        animationIn="fadeIn"
+        animationOut="fadeOut"
         isVisible={isSelected}
       >
         <Pressable

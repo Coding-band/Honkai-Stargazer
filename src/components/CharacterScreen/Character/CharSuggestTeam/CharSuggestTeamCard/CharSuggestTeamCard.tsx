@@ -54,8 +54,8 @@ export default React.memo(function CharSuggestTeamCard(props: Props) {
       </View>
       <Modal
         useNativeDriverForBackdrop
-        animationIn="fadeInLeft"
-        animationOut="fadeOutRight"
+        animationIn="fadeIn"
+        animationOut="fadeOut"
         isVisible={isSelected}
       >
         <Pressable

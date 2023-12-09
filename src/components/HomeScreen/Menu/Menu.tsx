@@ -124,26 +124,28 @@ export default function Menu() {
             }
             subtitle={
               <>
-                <Text className="font-[HY65]">今天</Text>
+                <Text>今天</Text>
                 <Text>20:15</Text>
               </>
             }
           >
             开拓力
           </MenuItemLarge>
+          {/* 每日實訓 */}
           <MenuItem
             width={menuItemSize.width}
             height={menuItemSize.height}
             Icon={Calendar}
           >
-            100/500
+            {playerNote.data?.current_train_score}/
+            {playerNote.data?.max_train_score}
           </MenuItem>
           <MenuItem
             width={menuItemSize.width}
             height={menuItemSize.height}
             Icon={Planet}
           >
-            270/350
+            暫無數據
           </MenuItem>
           <MenuItemLarge
             width={menuItemLargeSize.width}
@@ -159,7 +161,7 @@ export default function Menu() {
             }
             subtitle={
               <>
-                <Text className="font-[HY65]">今天</Text>
+                <Text>今天</Text>
                 <Text>20:15</Text>
               </>
             }

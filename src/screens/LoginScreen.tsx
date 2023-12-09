@@ -3,9 +3,13 @@ import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { ImageBackground } from "expo-image";
 import { WebView } from "react-native-webview";
+import LoginPolicy from "../components/LoginScreen/LoginPolicy/LoginPolicy";
+import useIsLogin from "../hooks/useIsLogin";
 
 export default function LoginScreen() {
   // const [textInput, setTextInput] = useState("");
+
+  const { isLogin } = useIsLogin();
 
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
@@ -24,6 +28,7 @@ export default function LoginScreen() {
           uri: "https://act.hoyolab.com/app/community-game-records-sea/index.html",
         }}
       />
+      {isLogin || <LoginPolicy />}
       {/* <View className="p-2" style={{ gap: 8 }}>
         <Text className="text-black text-[20px] font-[HY65]">
           輸入 Hoyolab Cookie

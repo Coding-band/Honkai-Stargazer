@@ -9,6 +9,7 @@ import { Shadow } from "react-native-shadow-2";
 import { LinearGradient as LinearGradientExpo } from "expo-linear-gradient";
 import { BlurView } from "expo-blur";
 import { Platform } from "react-native";
+import withBlurView from "../../../../hoc/withBlurView";
 
 export default function MenuItem({
   children,
@@ -45,28 +46,7 @@ export default function MenuItem({
             borderColor: "#907C5480",
           }}
         >
-          {Platform.OS === "ios" ? (
-            <BlurView intensity={intensity} tint="light">
-              <LinearGradientExpo
-                style={{ width, height, opacity: 0.6 }}
-                colors={["#222222", "#22222200"]}
-              ></LinearGradientExpo>
-              <View
-                className="absolute top-[15px]"
-                style={{ alignItems: "center", width, height }}
-              >
-                <View style={{ gap: 7, alignItems: "center" }}>
-                  {Icon && <Icon weight="fill" size={32} color="white" />}
-                  <Text
-                    style={{ fontFamily: "HY65" }}
-                    className="text-[14px] text-white text-center"
-                  >
-                    {children}
-                  </Text>
-                </View>
-              </View>
-            </BlurView>
-          ) : (
+          {withBlurView(
             <>
               <LinearGradientExpo
                 style={{ width, height, opacity: 0.6 }}
@@ -86,7 +66,8 @@ export default function MenuItem({
                   </Text>
                 </View>
               </View>
-            </>
+            </>,
+            Platform.OS === "ios"
           )}
         </View>
       </TouchableOpacity>
