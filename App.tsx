@@ -11,8 +11,10 @@ import FixedProvider from "./src/components/global/Fixed/FixedProvider";
 import Navigation from "./src/navigation/Navigation";
 import { QueryClient, QueryClientProvider } from "react-query";
 
-const queryClient = new QueryClient();
+// import playground for testing
+import "./playground";
 
+const queryClient = new QueryClient();
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
@@ -52,9 +54,9 @@ export default function App() {
           <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
             {/* <StatusBar hidden /> */}
 
-              <FixedProvider>
-                <Navigation />
-              </FixedProvider>
+            <FixedProvider>
+              <Navigation />
+            </FixedProvider>
           </View>
         </ClickOutsideProvider>
       </GestureHandlerRootView>
