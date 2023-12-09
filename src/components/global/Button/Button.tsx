@@ -30,7 +30,7 @@ export default function Button({
             }}
           >
             <View
-              className="rounded-[49px] border border-solid border-[#0000001a] w-full h-full"
+              className="rounded-[49px] border border-solid border-[#c7c7c7] w-full h-full"
               style={{
                 justifyContent: "center",
                 alignItems: "center",
@@ -42,7 +42,7 @@ export default function Button({
         </Shadow>
       ) : (
         <View
-          className="bg-[#dddddd] rounded-[49px]  p-[3px]"
+          className="bg-[#dddddd] rounded-[49px] p-[3px]"
           style={{
             width,
             height,
@@ -51,7 +51,7 @@ export default function Button({
           }}
         >
           <View
-            className="rounded-[49px] border border-solid border-[#0000001a] w-full h-full"
+            className="rounded-[49px] border border-[#c7c7c7] w-full h-full"
             style={{
               justifyContent: "center",
               alignItems: "center",

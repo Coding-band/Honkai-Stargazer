@@ -16,7 +16,7 @@ export default function ListItem({
           style={{ justifyContent: "center", alignItems: "center" }}
         >
           <View
-            className="w-[134px] h-[28px] rounded-[49px] border border-solid border-[#0000001a]"
+            className="w-[134px] h-[28px] rounded-[49px] border border-solid border-[#c7c7c7]"
             style={{
               justifyContent: "center",
               alignItems: "center",
