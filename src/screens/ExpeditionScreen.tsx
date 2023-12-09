@@ -5,6 +5,7 @@ import { ImageBackground } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
+import EpdtList from "../components/ExpeditionScreen/EpdtList/EpdtList";
 
 export default function ExpeditionScreen() {
   return (
@@ -26,6 +27,7 @@ export default function ExpeditionScreen() {
       <Header leftBtn="back" Icon={SCREENS.ExpeditionPage.icon}>
         {SCREENS.ExpeditionPage.shortName}
       </Header>
+      <EpdtList />
       <LinearGradient
         className="w-full h-[600px] absolute bottom-0"
         colors={["#00000000", "#000000"]}

@@ -9,7 +9,7 @@ const useHsrNote = () => {
   const { hoyolabCookie } = useHoyolabCookie();
   const HsrUUID = useHsrUUID();
 
-  const { data, isError, error, isLoading, isFetching } = useQuery(
+  const { data, isError, error, isLoading, isFetching, refetch } = useQuery(
     ["hsr-note", HsrUUID],
     () => new HoyolabRequest(hoyolabCookie).setDs().send(getUrl(HsrUUID)),
     {
@@ -18,7 +18,7 @@ const useHsrNote = () => {
       },
     }
   );
-  return { data, isError, error, isLoading, isFetching };
+  return { data, isError, error, isLoading, isFetching, refetch };
 };
 
 export default useHsrNote;
