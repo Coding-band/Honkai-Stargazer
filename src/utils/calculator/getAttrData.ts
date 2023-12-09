@@ -22,6 +22,7 @@ export function getCharAttrData(id: CharacterName, level: number = 1) {
        * aggro : 嘲諷值
        * energy : 大技充能值
       */
+      //記得顯示時候要 **下寫入**
       return {
         hp: charLevelData[x].hpBase + charLevelData[x].hpAdd * (level - levelMin[x]),
         atk: charLevelData[x].attackBase + charLevelData[x].attackAdd * (level - levelMin[x]),
@@ -56,6 +57,7 @@ export function getLcAttrData(id: LightconeName, level: number = 1) {
        * atk : 攻擊力
        * def : 防禦力 
       */
+      //記得顯示時候要 **下寫入**
       return {
         hp: lcLevelData[x].hpBase + lcLevelData[x].hpAdd * (level - levelMin[x]),
         atk: lcLevelData[x].attackBase + lcLevelData[x].attackAdd * (level - levelMin[x]),

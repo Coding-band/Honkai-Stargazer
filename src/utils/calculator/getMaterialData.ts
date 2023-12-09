@@ -53,24 +53,28 @@ export function getCharMaterialData(
   for(let ascLvl = startPointer ; ascLvl < endPointer ; ascLvl++){
     // 突破素材
     for(let x = 0 ; x < charLevelData[ascLvl].cost.length ; x++){
-      materialCount[charLevelData[ascLvl].cost[x].id] += charLevelData[ascLvl].cost[x].count
+      materialCount[charLevelData[ascLvl].cost[x].id] = (materialCount[charLevelData[ascLvl].cost[x].id] === undefined ? 0 : materialCount[charLevelData[ascLvl].cost[x].id]) + charLevelData[ascLvl].cost[x].count
     }
   }
 
   
   //等級經驗 - 必須遵守突破原則
   let tmpEXP = 0
-  for(let lvl = fromLevel ; lvl < toLevel-1 ; lvl++){
+  let tmpCoin = 0
+  for(let lvl = fromLevel ; lvl < toLevel ; lvl++){
     tmpEXP += Number(charFullData.calculator.expCost[lvl])
+    tmpCoin += Number(charFullData.calculator.sCoinId[lvl])
     
-    if(levelMax.includes(lvl)){
-      materialCount[409960] += Math.trunc(tmpEXP / 20000) //紫色
-      materialCount[409961] += Math.trunc((tmpEXP % 20000) / 5000)  //藍色
-      materialCount[409962] += (Math.trunc(((tmpEXP % 20000) % 5000) / 1000) !== (((tmpEXP % 20000) % 5000) / 1000) ? Math.trunc(((tmpEXP % 20000) % 5000) / 1000)+1 : Math.trunc(((tmpEXP % 20000) % 5000) / 1000)) //綠色
+    if(levelMax.includes(lvl+1)){
+      console.log("LVL"+lvl +" : "+tmpEXP)
+      materialCount[409960] = (materialCount[409960] === undefined ? 0 : materialCount[409960]) + Math.trunc(tmpEXP / 20000) //紫色
+      materialCount[409961] = (materialCount[409961] === undefined ? 0 : materialCount[409961]) +  Math.trunc((tmpEXP % 20000) / 5000)  //藍色
+      materialCount[409962] = (materialCount[409962] === undefined ? 0 : materialCount[409962]) +  (Math.trunc(((tmpEXP % 20000) % 5000) / 1000) !== (((tmpEXP % 20000) % 5000) / 1000) ? Math.trunc(((tmpEXP % 20000) % 5000) / 1000)+1 : Math.trunc(((tmpEXP % 20000) % 5000) / 1000)) //綠色
+      //materialCount[29328] = (materialCount[29328] === undefined ? 0 : materialCount[29328]) + 
       tmpEXP = 0;
     }
   }
-
+  
   return materialCount;
 }
 
@@ -112,20 +116,23 @@ export function getLcMaterialData(
   for(let ascLvl = startPointer ; ascLvl < endPointer ; ascLvl++){
     // 突破素材
     for(let x = 0 ; x < lcLevelData[ascLvl].cost.length ; x++){
-      materialCount[lcLevelData[ascLvl].cost[x].id] += lcLevelData[ascLvl].cost[x].count
+      materialCount[lcLevelData[ascLvl].cost[x].id] = (materialCount[lcLevelData[ascLvl].cost[x].id] === undefined ? 0 : materialCount[lcLevelData[ascLvl].cost[x].id]) + lcLevelData[ascLvl].cost[x].count
     }
   }
 
   
   //等級經驗 - 必須遵守突破原則
   let tmpEXP = 0
-  for(let lvl = fromLevel ; lvl < toLevel-1 ; lvl++){
+  let tmpCoin = 0
+  for(let lvl = fromLevel ; lvl < toLevel ; lvl++){
     tmpEXP += Number(lcFullData.calculator.expCost[lvl])
+    tmpCoin += Number(lcFullData.calculator.sCoinId[lvl])
     
-    if(levelMax.includes(lvl)){
-      materialCount[409960] += Math.trunc(tmpEXP / 20000) //紫色
-      materialCount[409961] += Math.trunc((tmpEXP % 20000) / 5000)  //藍色
-      materialCount[409962] += (Math.trunc(((tmpEXP % 20000) % 5000) / 1000) !== (((tmpEXP % 20000) % 5000) / 1000) ? Math.trunc(((tmpEXP % 20000) % 5000) / 1000)+1 : Math.trunc(((tmpEXP % 20000) % 5000) / 1000)) //綠色
+    if(levelMax.includes(lvl+1)){
+      console.log("LVL"+lvl +"  : "+tmpEXP)
+      materialCount[694487] = (materialCount[694487] === undefined ? 0 : materialCount[694487]) + Math.trunc(tmpEXP / 6000) //紫色
+      materialCount[694488] = (materialCount[694488] === undefined ? 0 : materialCount[694488]) +  Math.trunc((tmpEXP % 6000) / 2000)  //藍色
+      materialCount[694489] = (materialCount[694489] === undefined ? 0 : materialCount[694489]) +  (Math.trunc(((tmpEXP % 6000) % 2000) / 500) !== (((tmpEXP % 6000) % 2000) / 500) ? Math.trunc(((tmpEXP % 20000) % 5000) / 1000)+1 : Math.trunc(((tmpEXP % 20000) % 5000) / 1000)) //綠色
       tmpEXP = 0;
     }
   }
