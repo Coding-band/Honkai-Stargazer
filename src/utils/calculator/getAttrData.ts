@@ -2,8 +2,8 @@ import { CharacterName } from "../../types/character";
 import { LightconeName } from "../../types/lightcone";
 import { getCharFullData, getLcFullData } from "../dataMap/getDataFromMap";
 
-  const levelMin = [0,20,30,40,50,60,70]
-  const levelMax = [20,30,40,50,60,70,80]
+const levelMin = [1,20,30,40,50,60,70]
+const levelMax = [20,30,40,50,60,70,80]
 
 //* 根據等級取得角色屬性數值
 export function getCharAttrData(id: CharacterName, level: number = 1) {
