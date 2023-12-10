@@ -1,10 +1,10 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { Server } from "../../../../../../../types/hsrServer";
-import useHsrServerChosen from "../../../../../../../redux/hsrServerChosen/useHsrServerChosen";
+import { Server } from "../../../../../../types/hsrServer";
+import useHsrServerChosen from "../../../../../../redux/hsrServerChosen/useHsrServerChosen";
 import { useNavigation } from "@react-navigation/native";
-import Button from "../../../../../../global/Button/Button";
-import { SCREENS } from "../../../../../../../constant/screens";
+import Button from "../../../../../global/Button/Button";
+import { SCREENS } from "../../../../../../constant/screens";
 
 const hsrServers: Server[] = [
   { id: "asia", name: "Asia", platform: "hoyolab" },

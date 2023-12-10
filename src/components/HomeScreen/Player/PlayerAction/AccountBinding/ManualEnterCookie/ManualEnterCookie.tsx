@@ -1,8 +1,8 @@
 import { View, Text } from "react-native";
 import React, { useState } from "react";
-import Button from "../../../../../../global/Button/Button";
+import Button from "../../../../../global/Button/Button";
 import { TextInput } from "react-native";
-import useHoyolabCookie from "../../../../../../../redux/hoyolabCookie/useHoyolabCookie";
+import useHoyolabCookie from "../../../../../../redux/hoyolabCookie/useHoyolabCookie";
 
 type Props = {
   onCookieSave?: () => void;
@@ -30,8 +30,14 @@ export default function ManualEnterCookie(props: Props) {
         onChangeText={setInputCookie}
         textAlignVertical="top"
         multiline={true}
-        placeholder="請輸入 Cookies 包含 ltuid_v2、ltoken_v2、account_id_v2、cookie_token_v2、account_mid_v2 和 ltmid_v2。"
-        className="w-full h-[280px] bg-[#ffffff50] rounded-[4px] p-4 font-[HY55] leading-5"
+        placeholder={`請輸入 Cookies 包含 ltuid_v2、ltoken_v2、account_id_v2、cookie_token_v2、account_mid_v2 和 ltmid_v2。
+
+
+
+
+注意：此選項主要為開發人員設計。Stargazer 建議您在非不得已的情況下不要使用這一選項，以免增加複雜度。
+`}
+        className="w-full h-[280px] bg-[#ffffff50] rounded-[4px] p-3 font-[HY55] leading-5"
       />
       <Button
         onPress={handleSaveCookie}

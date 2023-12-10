@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {View } from "react-native";
+import { View } from "react-native";
 import MoreBtn from "../../../global/MoreBtn/MoreBtn";
 import List from "../../../global/List/List";
 import ListItem from "../../../global/List/ListItem";
