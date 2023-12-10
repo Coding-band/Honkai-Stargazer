@@ -56,7 +56,11 @@ export default function Navigation() {
           component={MapScreen}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name={SCREENS.LoginPage.id} component={LoginScreen} />
+        <Stack.Screen
+          name={SCREENS.LoginPage.id}
+          component={LoginScreen}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

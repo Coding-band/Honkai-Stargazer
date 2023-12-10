@@ -39,9 +39,9 @@ export const SCREENS = {
   },
   LoginPage: {
     id: "Login",
-    name: "",
+    name: "登入",
     shortName: "",
-    icon: null,
+    icon: User,
   },
   ExpeditionPage: {
     id: "Expedition",

@@ -46,6 +46,7 @@ export default function Menu() {
   const playerNote = useHsrNote();
 
   useEffect(() => {
+    MenuItem;
     setMenuItemSize({
       width: (layout.width - 72) / 4,
       height: (((layout.width - 72) / 4) * 9) / 8,
@@ -115,18 +116,26 @@ export default function Menu() {
             height={menuItemLargeSize.height}
             Icon={Moon}
             title={
-              <>
-                <Text className="text-[24px] leading-[26px]">
-                  {playerNote.data?.current_stamina}
-                </Text>
-                <Text>/{playerNote.data?.max_stamina}</Text>
-              </>
+              playerNote.data ? (
+                <>
+                  <Text className="text-[24px] leading-[26px]">
+                    {playerNote.data?.current_stamina}
+                  </Text>
+                  <Text>/{playerNote.data?.max_stamina}</Text>
+                </>
+              ) : (
+                <></>
+              )
             }
             subtitle={
-              <>
-                <Text>今天</Text>
-                <Text>20:15</Text>
-              </>
+              playerNote.data ? (
+                <>
+                  <Text>今天</Text>
+                  <Text>20:15</Text>
+                </>
+              ) : (
+                <></>
+              )
             }
           >
             开拓力
@@ -137,8 +146,9 @@ export default function Menu() {
             height={menuItemSize.height}
             Icon={Calendar}
           >
-            {playerNote.data?.current_train_score}/
-            {playerNote.data?.max_train_score}
+            {playerNote.data
+              ? `${playerNote.data?.current_train_score}/${playerNote.data?.max_train_score}`
+              : "暫無數據"}
           </MenuItem>
           <MenuItem
             width={menuItemSize.width}
@@ -156,18 +166,26 @@ export default function Menu() {
             height={menuItemLargeSize.height}
             Icon={Users}
             title={
-              <>
-                <Text className="text-[24px] leading-[26px]">
-                  {playerNote.data?.accepted_epedition_num}
-                </Text>
-                <Text>/{playerNote.data?.total_expedition_num}</Text>
-              </>
+              playerNote.data ? (
+                <>
+                  <Text className="text-[24px] leading-[26px]">
+                    {playerNote.data?.accepted_epedition_num}
+                  </Text>
+                  <Text>/{playerNote.data?.total_expedition_num}</Text>
+                </>
+              ) : (
+                <></>
+              )
             }
             subtitle={
-              <>
-                <Text>今天</Text>
-                <Text>20:15</Text>
-              </>
+              playerNote.data ? (
+                <>
+                  <Text>今天</Text>
+                  <Text>20:15</Text>
+                </>
+              ) : (
+                <></>
+              )
             }
           >
             派遣委托

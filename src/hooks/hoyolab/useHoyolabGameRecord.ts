@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import useHoyolabCookie from "./useHoyolabCookie";
+import useHoyolabCookie from "../../redux/hoyolabCookie/useHoyolabCookie";
 import HoyolabRequest from "../../utils/hoyolab/request/hoyolabRequest";
 
 const useHoyolabGameRecord = () => {

@@ -26,8 +26,8 @@ export default function Player() {
           <View style={styles.playerAvatarRow}>
             <PlayerAvator />
             <View>
-              <Text className="text-white text-xl font-medium mb-2">
-                {playerNickName}
+              <Text className="text-white text-xl font-medium font-[HY65] mb-1.5">
+                {playerNickName || "開拓者"}
               </Text>
               <PlayerCharacter />
             </View>
@@ -36,7 +36,7 @@ export default function Player() {
             <PlayerAction />
             <View>
               <Text className="font-[HY75] text-[#DBC291] text-[14px] font-medium">
-                开拓等级 {playerLevel}
+                开拓等级 {playerLevel || "?"}
               </Text>
             </View>
           </View>

@@ -7,14 +7,15 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 // reducers
 
 import { hsrServerChosen } from "./hsrServerChosen/hsrServerChosen.reducer";
+import { hoyolabCookie } from "./hoyolabCookie/hoyolabCookie.reducer";
 
-const reducer = combineReducers({ hsrServerChosen });
+const reducer = combineReducers({ hsrServerChosen, hoyolabCookie });
 
 // persist
 const persistConfig = {
   key: "root",
   storage: AsyncStorage,
-  whitelist: ["hsrServerChosen"],
+  whitelist: ["hsrServerChosen", "hoyolabCookie"],
 };
 
 // @ts-ignore

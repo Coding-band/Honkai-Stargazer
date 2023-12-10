@@ -1,4 +1,4 @@
-import { hsrServerId } from "../../constant/hsrServer";
+import { hsrServerId } from "../../types/hsrServer";
 import { HsrServerChosenAction } from "./hsrServerChosen.types";
 
 export const hsrServerChosen = (
@@ -6,7 +6,7 @@ export const hsrServerChosen = (
   action: HsrServerChosenAction
 ) => {
   let newState = prevSate;
-  if (action.type === "has_server_chosen") {
+  if (action.type === "set_has_server_chosen") {
     newState = action.payload;
     return newState;
   } else {

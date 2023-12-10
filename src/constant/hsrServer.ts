@@ -4,5 +4,3 @@ export const hsrServer = {
   america: "prod_official_usa",
   twhkmo: "prod_official_cht",
 };
-
-export type hsrServerId = "asia" | "europe" | "america" | "twhkmo";

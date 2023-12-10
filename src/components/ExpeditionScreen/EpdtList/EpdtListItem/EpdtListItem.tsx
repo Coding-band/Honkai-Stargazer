@@ -46,7 +46,9 @@ export default function EpdtListItem(props: Props) {
                   </Text>
                   {/* 剩餘時間 */}
                   <Text className="font-[HY65] text-[13px] text-[#00000060]">
-                    {formatTimeDuration(props.remainingTime)}
+                    {props.ongoing === false
+                      ? "已完成"
+                      : formatTimeDuration(props.remainingTime)}
                   </Text>
                 </View>
                 <View

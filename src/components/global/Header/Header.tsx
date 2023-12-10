@@ -15,6 +15,7 @@ type Props = {
   children: string;
   leftBtn?: "close" | "back";
   onPress?: (e: GestureResponderEvent) => void;
+  onBack?: () => void;
 };
 
 export default function Header(props: Props) {
@@ -23,12 +24,16 @@ export default function Header(props: Props) {
   const navigation = useNavigation();
 
   const handleClose = () => {
+    props.onBack && props.onBack();
     // @ts-ignore
     navigation.goBack();
   };
 
   return (
-    <Pressable onPress={props.onPress} style={{ position: "absolute", width: "100%", zIndex: 50 }}>
+    <Pressable
+      onPress={props.onPress}
+      style={{ position: "absolute", width: "100%", zIndex: 50 }}
+    >
       <BlurView
         style={{ height: 110, width: "100%" }}
         intensity={20}

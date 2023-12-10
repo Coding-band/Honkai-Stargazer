@@ -3,10 +3,14 @@ import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { ImageBackground } from "expo-image";
 import { WebView } from "react-native-webview";
-
+import Header from "../components/global/Header/Header";
+import { SCREENS } from "../constant/screens";
+import useHoyolabCookie from "../redux/hoyolabCookie/useHoyolabCookie";
+import { getHoyolabCookieFromCookieManager } from "../utils/hoyolab/hoyolabCookie";
 
 export default function LoginScreen() {
-  // const [textInput, setTextInput] = useState("");
+  const { setHoyolabCookie } = useHoyolabCookie();
+
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
@@ -18,23 +22,25 @@ export default function LoginScreen() {
         contentFit="cover"
         blurRadius={10}
       />
+      <Header
+        onBack={async () => {
+          const cookie = await getHoyolabCookieFromCookieManager();
+          if (cookie) {
+            setHoyolabCookie(cookie);
+          }
+        }}
+        Icon={SCREENS.LoginPage.icon}
+      >
+        {SCREENS.LoginPage.name}
+      </Header>
       <WebView
+        incognito
+        className="mt-[110px]"
         style={{ flex: 1 }}
         source={{
           uri: "https://act.hoyolab.com/app/community-game-records-sea/index.html",
         }}
       />
-      {/* <View className="p-2" style={{ gap: 8 }}>
-        <Text className="text-black text-[20px] font-[HY65]">
-          輸入 Hoyolab Cookie
-        </Text>
-        <TextInput
-          value={textInput}
-          onChangeText={setTextInput}
-          className="p-1 bg-white rounded-lg"
-          placeholder="請輸入 Hoyolab Cookie by 椰子冰"
-        />
-      </View> */}
     </View>
   );
 }

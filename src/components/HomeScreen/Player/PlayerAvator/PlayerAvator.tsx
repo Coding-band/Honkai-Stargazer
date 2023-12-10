@@ -32,7 +32,11 @@ export default function PlayerAvator() {
         style={{ transform: [{ rotate: rotate + "deg" }] }}
       >
         <Image
-          source={{ uri: avator }}
+          source={{
+            uri:
+              avator ||
+              "https://act.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_763646/c86d9128cff46891e47275f3b48b5eeb.png?x-oss-process=image%2Fformat%2Cwebp",
+          }}
           className="w-[73px] h-[73px] rounded-full"
           style={{
             backgroundColor: "rgba(144, 124, 84, 0.4)",

@@ -1,9 +1,10 @@
 import { useQuery } from "react-query";
-import useHoyolabCookie from "./useHoyolabCookie";
+import useHoyolabCookie from "../../redux/hoyolabCookie/useHoyolabCookie";
 import useHsrUUID from "./useHsrUUID";
 import HoyolabRequest from "../../utils/hoyolab/request/hoyolabRequest";
-import { hsrServerId, hsrServer } from "../../constant/hsrServer";
+import { hsrServer } from "../../constant/hsrServer";
 import useHsrServerChosen from "../../redux/hsrServerChosen/useHsrServerChosen";
+import { hsrServerId } from "../../types/hsrServer";
 
 const useHsrFullData = () => {
   const { hoyolabCookie } = useHoyolabCookie();

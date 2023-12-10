@@ -1,4 +1,4 @@
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable, Dimensions } from "react-native";
 import React from "react";
 import ReactNativeModal from "react-native-modal";
 import PopUpCard from "../../../../../global/PopUpCard/PopUpCard";
@@ -23,6 +23,7 @@ export default function LoginPolicy() {
       useNativeDriverForBackdrop
       isVisible={!isAcceptBindingPolicy}
       statusBarTranslucent
+      deviceHeight={Dimensions.get("screen").height}
     >
       <Pressable
         style={{

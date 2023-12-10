@@ -14,7 +14,7 @@ export default function UUID() {
         backgroundColor: "rgba(0, 0, 0, 0.3)",
       }}
     >
-      <Text className="text-white">{uuid}</Text>
+      <Text className="text-white">{uuid || "00000000"}</Text>
     </View>
   );
 }

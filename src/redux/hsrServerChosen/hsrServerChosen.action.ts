@@ -1,11 +1,11 @@
-import { hsrServerId } from "../../constant/hsrServer";
+import { hsrServerId } from "../../types/hsrServer";
 import { HsrServerChosenAction } from "./hsrServerChosen.types";
 
 export const hsrServerChosenaAction = (
   data: hsrServerId
 ): HsrServerChosenAction => {
   return {
-    type: "has_server_chosen",
+    type: "set_has_server_chosen",
     payload: data,
   };
 };

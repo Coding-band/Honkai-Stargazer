@@ -1,6 +1,6 @@
-import { hsrServerId } from "../../constant/hsrServer";
+import { hsrServerId } from "../../types/hsrServer";
 
 export type HsrServerChosenAction = {
-  type: "has_server_chosen";
+  type: "set_has_server_chosen";
   payload: hsrServerId;
 };

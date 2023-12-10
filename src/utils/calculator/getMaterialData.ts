@@ -75,7 +75,6 @@ export function getCharMaterialData(
     tmpCoin += Number(charFullData.calculator.sCoinId[lvl]);
 
     if (levelMax.includes(lvl + 1)) {
-      console.log("LVL" + lvl + " : " + tmpEXP);
       materialCount[409960] =
         (materialCount[409960] === undefined ? 0 : materialCount[409960]) +
         Math.trunc(tmpEXP / 20000); //紫色
@@ -156,7 +155,6 @@ export function getLcMaterialData(
     tmpCoin += Number(lcFullData.calculator.sCoinId[lvl]);
 
     if (levelMax.includes(lvl + 1)) {
-      console.log("LVL" + lvl + "  : " + tmpEXP);
       materialCount[694487] =
         (materialCount[694487] === undefined ? 0 : materialCount[694487]) +
         Math.trunc(tmpEXP / 6000); //紫色

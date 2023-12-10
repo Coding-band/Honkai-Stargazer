@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
-import { hsrServerId } from "../../constant/hsrServer";
+import { hsrServerId } from "../../types/hsrServer";
 import { hsrServerChosenaAction } from "./hsrServerChosen.action";
 
 const useHsrServerChosen = () => {
