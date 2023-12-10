@@ -85,8 +85,10 @@ public class HelpTool {
                 //}
             }
  */
+            help_tool_export_lightcone_icon(context);
 
 
+            /*
             for (int i = 0; i < array.length(); i++) {
                 JSONObject object = array.getJSONObject(i);
                 //Special requirements
@@ -103,7 +105,6 @@ public class HelpTool {
                 }
                 //}
             }
-
             new Handler().postDelayed(() -> {
                 String str_final = "";
 
@@ -112,6 +113,8 @@ public class HelpTool {
                 }
                 LogExport.special(str_final, context, LogExport.BETA_TESTING);
             },10000);
+             */
+
 
 
         }catch (JSONException e){
@@ -289,6 +292,23 @@ public class HelpTool {
             } catch (IOException e) {
                 Log.i("LogExport -> HelpTool", e.getMessage());
             }
+        }
+    }
+
+    public void help_tool_export_lightcone_icon(Context context) throws JSONException {
+        LangUtil.LangType langType = LangUtil.LangType.ZH_HK;
+        String dataInList = LoadAssestData(context, "lightcone_data/lightcone_list.json");
+        if (!dataInList.equals("")){
+            JSONArray array = new JSONArray(dataInList);
+            String dataRelease = "";
+            for (int x = 0 ; x < array.length() ; x ++){
+                if (!array.getJSONObject(x).getString("fileName").isEmpty() && !array.getJSONObject(x).getString("fileName").contains("N/A")){
+                    String dataInRelic = LoadAssestData(context, "lightcone_data/"+langType.getCode()+"/"+array.getJSONObject(x).getString("fileName")+".json");
+                    if (dataInRelic == "") return;
+                    dataRelease += "ren https://cdn.starrailstation.com/assets/"+new JSONObject(dataInRelic).getString("iconPath")+".webp "+array.getJSONObject(x).getString("name").toLowerCase().replace(" ","_").toLowerCase().replace("-","_").replace(",","").replace("!","").replace(":","").replace("'","")+".webp\n";
+                }
+            }
+            LogExport.special(dataRelease, context, LogExport.BETA_TESTING);
         }
     }
 
