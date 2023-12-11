@@ -37,8 +37,10 @@ export default function Listbox(props: Props) {
             <ListboxItem
               key={listboxitem.props.value}
               onPress={() => {
-                props.onChange(listboxitem.props.value);
                 setOpen(false);
+                setTimeout(() => {
+                  props.onChange(listboxitem.props.value);
+                });
               }}
               selected={props.value === listboxitem.props.value}
             >

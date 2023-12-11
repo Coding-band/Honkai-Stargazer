@@ -6,7 +6,7 @@ import { WebView } from "react-native-webview";
 import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import useHoyolabCookie from "../redux/hoyolabCookie/useHoyolabCookie";
-import { getHoyolabCookieFromCookieManager } from "../utils/hoyolab/hoyolabCookie";
+// import { getHoyolabCookieFromCookieManager } from "../utils/hoyolab/hoyolabCookie";
 
 export default function LoginScreen() {
   const { setHoyolabCookie } = useHoyolabCookie();
@@ -24,10 +24,10 @@ export default function LoginScreen() {
       />
       <Header
         onBack={async () => {
-          const cookie = await getHoyolabCookieFromCookieManager();
-          if (cookie) {
-            setHoyolabCookie(cookie);
-          }
+          // const cookie = await getHoyolabCookieFromCookieManager();
+          // if (cookie) {
+          //   setHoyolabCookie(cookie);
+          // }
         }}
         Icon={SCREENS.LoginPage.icon}
       >
