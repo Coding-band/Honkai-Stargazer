@@ -7,6 +7,8 @@ import Button from "../../../../../global/Button/Button";
 import { SCREENS } from "../../../../../../constant/screens";
 
 const hsrServers: Server[] = [
+  // { id: "asia", name: "星穹列车", platform: "miyoushe" },
+  // { id: "asia", name: "无名客", platform: "miyoushe" },
   { id: "asia", name: "Asia", platform: "hoyolab" },
   { id: "europe", name: "Europe", platform: "hoyolab" },
   { id: "america", name: "America", platform: "hoyolab" },
@@ -44,7 +46,7 @@ export default function ToLoginScreen(props: Props) {
           width={"100%"}
           height={46}
         >
-          <Text>{server.name}</Text>
+          <Text className="font-[HY55]">{server.name}</Text>
         </Button>
       ))}
       <Button

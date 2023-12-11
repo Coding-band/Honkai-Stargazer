@@ -2,52 +2,23 @@ import { View, Text, Pressable } from "react-native";
 import React, { useState } from "react";
 import genRanHex from "../../../../utils/fun/genRanHex";
 import { Image } from "expo-image";
+import useHsrCharList from "../../../../hooks/hoyolab/useHsrCharList";
 
 export default function PlayerCharacter() {
-  const [ranHexs, setRanHexs] = useState([
-    [genRanHex(6), genRanHex(6)],
-    [genRanHex(6), genRanHex(6)],
-    [genRanHex(6), genRanHex(6)],
-  ]);
+  
+  const hsrCharList = useHsrCharList();
 
   return (
     <View className="flex flex-row gap-1">
-      <Pressable
-        className="w-[30px] h-[30px] rounded-full"
-        // style={{
-        //   backgroundColor: "#" + ranHexs[0][0],
-        //   borderColor: "#" + ranHexs[0][1],
-        // }}
-      >
-        <Image
-          className="w-full h-full"
-          source={require("../../../../../assets/vocchi.png")}
-        />
-      </Pressable>
-      <Pressable
-        className="w-[30px] h-[30px] rounded-full"
-        // style={{
-        //   backgroundColor: "#" + ranHexs[1][0],
-        //   borderColor: "#" + ranHexs[1][1],
-        // }}
-      >
-        <Image
-          className="w-full h-full"
-          source={require("../../../../../assets/vocchi.png")}
-        />
-      </Pressable>
-      <Pressable
-        className="w-[30px] h-[30px] rounded-full"
-        // style={{
-        //   backgroundColor: "#" + ranHexs[2][0],
-        //   borderColor: "#" + ranHexs[2][1],
-        // }}
-      >
-        <Image
-          className="w-full h-full"
-          source={require("../../../../../assets/vocchi.png")}
-        />
-      </Pressable>
+      {hsrCharList?.slice(0, 3)?.map((char: any, i: number) => (
+        <Pressable
+          key={i}
+          className="w-[30px] h-[30px] bg-[#D9D9D9] rounded-full overflow-hidden"
+          style={{ justifyContent: "center", alignItems: "center" }}
+        >
+          <Image className="w-[26px] h-[26px]" source={{ uri: char.icon }} />
+        </Pressable>
+      ))}
     </View>
   );
 }

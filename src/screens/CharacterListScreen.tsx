@@ -9,8 +9,6 @@ import { SCREENS } from "../constant/screens";
 import CharList from "../components/CharacterListScreen/CharList/CharList";
 
 export default function CharacterListScreen() {
-  const [installOrder, setInstallOrder] = useState(true);
-
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
@@ -31,12 +29,7 @@ export default function CharacterListScreen() {
         {SCREENS.CharacterListPage.name}
       </Header>
       <>
-        <CharList reverse={!installOrder} />
-        <CharAction
-          onInstallOrderChange={(o) => {
-            setInstallOrder(o);
-          }}
-        />
+        <CharList />
       </>
       <LinearGradient
         pointerEvents="none"

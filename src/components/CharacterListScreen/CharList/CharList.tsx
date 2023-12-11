@@ -4,59 +4,153 @@ import CharCard from "../../global/CharCard/CharCard";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
 import characterList from "../../../../data/character_data/character_list.json";
-import * as character_list_map from "../../../../data/character_data/@character_data_map/character_data_map";
 import * as images_map from "../../../../assets/images/@images_map/images_map";
 import { CharacterCard, CharacterName } from "../../../types/character";
 import { CombatType } from "../../../types/combatType";
 import { Path } from "../../../types/path";
+import CharAction from "../CharAction/CharAction";
+import useCharSorting from "../../../redux/characterSorting/useCharSorting";
+import { getCharFullData } from "../../../utils/dataMap/getDataFromMap";
+import { getCharAttrData } from "../../../utils/calculator/getAttrData";
 
-/*
-const testImage1 = require("../../../../assets/images/test-charlist-img-1.png");
-const testImage2 = require("../../../../assets/images/test-charlist-img-2.png");
-const testImage3 = require("../../../../assets/images/test-charlist-img-3.png");
-const testImage4 = require("../../../../assets/images/test-charlist-img-4.png");
-const testImage5 = require("../../../../assets/images/test-charlist-img-5.png");
-const testImage6 = require("../../../../assets/images/test-charlist-img-6.png");
-
-
-let DATA_SET = [
-  { image: testImage1, star: 5, name: "镜流" },
-  { image: testImage2, star: 4, name: "停云" },
-  { image: testImage3, star: 5, name: "刃" },
-  { image: testImage4, star: 5, name: "希儿" },
-  { image: testImage5, star: 5, name: "符玄" },
-  { image: testImage6, star: 5, name: "布洛妮娅" },
-  // 可以添加更多的元素
-];
-*/
-
-type Props = {
-  reverse?: boolean;
-};
-
-export default function CharList(props: Props) {
+export default function CharList() {
   const navigation = useNavigation();
 
   // get characters' data
   const [charCardListData, setCharCardListData] = useState<CharacterCard[]>();
   useEffect(() => {
     setCharCardListData(
-      characterList.map((char) => ({
-        id: char.name,
-        name:
-          character_list_map.ZH_CN[char.name as CharacterName]?.name ||
-          char.name,
-        rare: char.rare,
-        combatType: char.element as CombatType,
-        path: char.path as Path,
-        image: images_map.Chacracter[char.name as CharacterName]?.icon,
-      }))
+      characterList.map((char) => {
+        const charId = char.name as CharacterName;
+        const charFullData = getCharFullData(charId);
+        const charAttrData = getCharAttrData(charId, 80);
+        return {
+          id: charId,
+          name: charFullData?.name || char.name,
+          rare: char.rare,
+          combatType: char.element as CombatType,
+          path: char.path as Path,
+          image: images_map.Chacracter[char.name as CharacterName]?.icon,
+          version: char.version,
+          atk: charAttrData.atk,
+          def: charAttrData.def,
+          hp: charAttrData.hp,
+          energy: charAttrData.energy,
+        };
+      })
     );
   }, []);
 
-  const charCardListJSX = useMemo(
-    () =>
-      charCardListData?.map((item, i) => (
+  const { charSorting } = useCharSorting();
+
+  const charCardListJSX = useMemo(() => {
+    if (charSorting?.id === "rare") {
+      return charCardListData
+        ?.slice()
+        ?.sort((a, b) => b.rare - a.rare)
+        ?.map((item, i) => (
+          <CharCard
+            key={i}
+            onPress={() => {
+              // @ts-ignore
+              navigation.navigate(SCREENS.CharacterPage.id, {
+                id: item?.id,
+                name: item?.name,
+              });
+            }}
+            {...item}
+          />
+        ));
+    } else if (charSorting?.id === "name") {
+      return (
+        charCardListData
+          ?.slice()
+          // @ts-ignore
+          ?.sort((a, b) => b.id < a.id)
+          ?.map((item, i) => (
+            <CharCard
+              key={i}
+              onPress={() => {
+                // @ts-ignore
+                navigation.navigate(SCREENS.CharacterPage.id, {
+                  id: item?.id,
+                  name: item?.name,
+                });
+              }}
+              {...item}
+            />
+          ))
+      );
+    } else if (charSorting?.id === "atk") {
+      return charCardListData
+        ?.slice()
+        ?.sort((a, b) => b.atk - a.atk)
+        ?.map((item, i) => (
+          <CharCard
+            key={i}
+            onPress={() => {
+              // @ts-ignore
+              navigation.navigate(SCREENS.CharacterPage.id, {
+                id: item?.id,
+                name: item?.name,
+              });
+            }}
+            {...item}
+          />
+        ));
+    } else if (charSorting?.id === "def") {
+      return charCardListData
+        ?.slice()
+        ?.sort((a, b) => b.def - a.def)
+        ?.map((item, i) => (
+          <CharCard
+            key={i}
+            onPress={() => {
+              // @ts-ignore
+              navigation.navigate(SCREENS.CharacterPage.id, {
+                id: item?.id,
+                name: item?.name,
+              });
+            }}
+            {...item}
+          />
+        ));
+    } else if (charSorting?.id === "hp") {
+      return charCardListData
+        ?.slice()
+        ?.sort((a, b) => b.hp - a.hp)
+        ?.map((item, i) => (
+          <CharCard
+            key={i}
+            onPress={() => {
+              // @ts-ignore
+              navigation.navigate(SCREENS.CharacterPage.id, {
+                id: item?.id,
+                name: item?.name,
+              });
+            }}
+            {...item}
+          />
+        ));
+    } else if (charSorting?.id === "energy") {
+      return charCardListData
+        ?.slice()
+        ?.sort((a, b) => b.energy - a.energy)
+        ?.map((item, i) => (
+          <CharCard
+            key={i}
+            onPress={() => {
+              // @ts-ignore
+              navigation.navigate(SCREENS.CharacterPage.id, {
+                id: item?.id,
+                name: item?.name,
+              });
+            }}
+            {...item}
+          />
+        ));
+    } else if (charSorting?.id === "time") {
+      return charCardListData?.map((item, i) => (
         <CharCard
           key={i}
           onPress={() => {
@@ -68,25 +162,28 @@ export default function CharList(props: Props) {
           }}
           {...item}
         />
-      )),
-    [charCardListData]
-  );
+      ));
+    }
+  }, [charCardListData, charSorting?.id]);
 
   return (
-    <View style={{ width: "100%" }} className="z-30">
-      <ScrollView style={{ padding: 17, paddingBottom: 0 }}>
-        <View
-          style={{
-            paddingVertical: 110,
-            flexDirection: "row",
-            flexWrap: "wrap",
-            gap: 11,
-            justifyContent: "center",
-          }}
-        >
-          {props.reverse ? charCardListJSX?.slice().reverse() : charCardListJSX}
-        </View>
-      </ScrollView>
-    </View>
+    <>
+      <View style={{ width: "100%" }} className="z-30">
+        <ScrollView style={{ padding: 17, paddingBottom: 0 }}>
+          <View
+            style={{
+              paddingVertical: 110,
+              flexDirection: "row",
+              flexWrap: "wrap",
+              gap: 11,
+              justifyContent: "center",
+            }}
+          >
+            {charCardListJSX}
+          </View>
+        </ScrollView>
+      </View>
+      <CharAction />
+    </>
   );
 }

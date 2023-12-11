@@ -14,12 +14,17 @@ export type Character = {
 };
 
 export type CharacterCard = {
-  id: string;
+  id: CharacterName;
   name: string;
   rare: number;
   path: Path;
   combatType: CombatType;
   image: ExpoImage;
+  version: string;
+  atk: number;
+  def: number;
+  hp: number;
+  energy: number;
 };
 
 export type CharacterName =
