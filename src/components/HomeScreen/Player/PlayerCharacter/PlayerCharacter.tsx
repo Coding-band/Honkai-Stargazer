@@ -10,7 +10,7 @@ export default function PlayerCharacter() {
 
   return (
     <View className="flex flex-row gap-1">
-      {hsrCharList?.slice(0, 3)?.map((char: any, i: number) => (
+      {hsrCharList?.slice(0, 4)?.map((char: any, i: number) => (
         <Pressable
           key={i}
           className="w-[30px] h-[30px] bg-[#D9D9D9] rounded-full overflow-hidden"

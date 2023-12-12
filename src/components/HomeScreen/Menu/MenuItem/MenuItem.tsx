@@ -47,26 +47,31 @@ export default function MenuItem({
           }}
         >
           {withBlurView(
-            <>
+            <View>
               <LinearGradientExpo
                 style={{ width, height, opacity: 0.6 }}
                 colors={["#222222", "#22222200"]}
               ></LinearGradientExpo>
               <View
-                className="absolute top-[15px]"
-                style={{ alignItems: "center", width, height }}
+                className="absolute"
+                style={{
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width,
+                  height,
+                }}
               >
                 <View style={{ gap: 7, alignItems: "center" }}>
                   {Icon && <Icon weight="fill" size={32} color="white" />}
                   <Text
                     style={{ fontFamily: "HY65" }}
-                    className="text-[14px] text-white text-center"
+                    className="text-[14px] text-text2 text-center"
                   >
                     {children}
                   </Text>
                 </View>
               </View>
-            </>,
+            </View>,
             Platform.OS === "ios"
           )}
         </View>

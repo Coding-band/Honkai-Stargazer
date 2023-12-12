@@ -1,13 +1,6 @@
-import React, { useEffect, useState } from "react";
-import {
-  Platform,
-  Text,
-  TouchableNativeFeedback,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import React from "react";
+import { Platform, Text, TouchableOpacity, View } from "react-native";
 import { LinearGradient as LinearGradientExpo } from "expo-linear-gradient";
-import { BlurView } from "expo-blur";
 import { Shadow } from "react-native-shadow-2";
 import withBlurView from "../../../../hoc/withBlurView";
 import { GestureResponderEvent } from "react-native";
@@ -44,36 +37,32 @@ export default function MenuItemLarge({
           }}
         >
           {withBlurView(
-            <>
+            <View>
               <LinearGradientExpo
                 style={{ width, height, opacity: 0.6 }}
                 colors={["#222222", "#22222200"]}
               ></LinearGradientExpo>
               <View
-                className="absolute top-[15px]"
+                className="absolute"
                 style={{
+                  alignItems: "center",
                   justifyContent: "center",
                   flexDirection: "row",
-                  gap: 4,
+                  gap: 6,
                   width,
                   height,
                 }}
               >
-                <View style={{ gap: 7, alignItems: "center" }}>
+                <View style={{ alignItems: "center", gap: 6 }}>
                   {Icon && <Icon weight="fill" size={32} color="white" />}
                   <Text
                     style={{ fontFamily: "HY65" }}
-                    className="text-[14px] text-white text-center"
+                    className="text-[14px] text-text2 text-center"
                   >
                     {children}
                   </Text>
                 </View>
-                <View
-                  style={{
-                    gap: 8,
-                    alignItems: "center",
-                  }}
-                >
+                <View style={{ alignItems: "center", gap: 6 }}>
                   <Text className=" text-text text-[16px] font-medium font-[HY65]">
                     {title}
                   </Text>
@@ -82,7 +71,7 @@ export default function MenuItemLarge({
                   </Text>
                 </View>
               </View>
-            </>,
+            </View>,
             Platform.OS === "ios"
           )}
         </View>
