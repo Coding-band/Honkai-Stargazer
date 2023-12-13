@@ -10,12 +10,14 @@ import { hsrServerChosen } from "./hsrServerChosen/hsrServerChosen.reducer";
 import { hoyolabCookie } from "./hoyolabCookie/hoyolabCookie.reducer";
 import { isAcceptBindingPolicy } from "./isAcceptBindingPolicy/isAcceptBindingPolicy.reducer";
 import { characterSorting } from "./characterSorting/characterSorting.reducer";
+import { characterSortingReverse } from "./characterSortingReverse/characterSortingReverse.reducer";
 
 const reducer = combineReducers({
   hsrServerChosen,
   hoyolabCookie,
   isAcceptBindingPolicy,
   characterSorting,
+  characterSortingReverse,
 });
 
 // persist
@@ -27,6 +29,7 @@ const persistConfig = {
     "hoyolabCookie",
     "isAcceptBindingPolicy",
     "characterSorting",
+    "characterSortingReverse",
   ],
 };
 

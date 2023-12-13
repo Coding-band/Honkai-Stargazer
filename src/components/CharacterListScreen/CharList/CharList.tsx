@@ -12,6 +12,7 @@ import CharAction from "../CharAction/CharAction";
 import useCharSorting from "../../../redux/characterSorting/useCharSorting";
 import { getCharFullData } from "../../../utils/dataMap/getDataFromMap";
 import { getCharAttrData } from "../../../utils/calculator/getAttrData";
+import useCharSortingReverse from "../../../redux/characterSortingReverse/useCharSortingReverse";
 
 export default function CharList() {
   const navigation = useNavigation();
@@ -42,6 +43,7 @@ export default function CharList() {
   }, []);
 
   const { charSorting } = useCharSorting();
+  const { charSortingReverse } = useCharSortingReverse();
 
   const charCardListJSX = useMemo(() => {
     if (charSorting?.id === "rare") {
@@ -179,7 +181,9 @@ export default function CharList() {
               justifyContent: "center",
             }}
           >
-            {charCardListJSX}
+            {charSortingReverse
+              ? charCardListJSX?.slice().reverse()
+              : charCardListJSX}
           </View>
         </ScrollView>
       </View>

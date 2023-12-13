@@ -5,9 +5,15 @@ import SearchBtn from "./SearchBtn/SearchBtn";
 import OrderBtn from "./OrderBtn/OrderBtn";
 import Listbox from "../../global/Listbox/Listbox";
 import useCharSorting from "../../../redux/characterSorting/useCharSorting";
+import useCharSortingReverse from "../../../redux/characterSortingReverse/useCharSortingReverse";
 
 export default function CharAction() {
   const { charSorting, setCharSorting, charSortingList } = useCharSorting();
+  const { setCharSortingReverse, charSortingReverse } = useCharSortingReverse();
+
+  const handleReverse = () => {
+    setCharSortingReverse(!charSortingReverse);
+  };
 
   const handleOrderChange = (v: any) => {
     setCharSorting(v);
@@ -20,7 +26,11 @@ export default function CharAction() {
     >
       <FilterBtn />
       <Listbox
-        button={<OrderBtn>{charSorting?.name || ""}</OrderBtn>}
+        button={
+          <OrderBtn onPressRight={handleReverse}>
+            {charSorting?.name || ""}
+          </OrderBtn>
+        }
         value={charSorting?.id}
         onChange={handleOrderChange}
       >
