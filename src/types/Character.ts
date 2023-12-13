@@ -8,7 +8,9 @@ export type Character = {
   image?: ExpoImage;
   imageFull?: ExpoImage;
   rare?: number;
+  pathId?: Path;
   path?: string;
+  combatTypeId?: CombatType;
   combatType?: string;
   location?: string;
 };

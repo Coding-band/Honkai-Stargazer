@@ -15,6 +15,8 @@ import charList from "../../data/character_data/character_list.json";
 import * as imagesMap from "../../assets/images/@images_map/images_map";
 import Fixed from "../components/global/Fixed/Fixed";
 import { getCharFullData } from "../utils/dataMap/getDataFromMap";
+import { Path } from "../types/path";
+import { CombatType } from "../types/combatType";
 
 export default function CharacterScreen() {
   const route = useRoute<RouteProp<ParamList, "Character">>();
@@ -31,7 +33,9 @@ export default function CharacterScreen() {
       id: charId,
       name: charFullData?.name,
       rare: charDataJson?.rare,
+      pathId: charDataJson.path as Path,
       path: charFullData?.baseType?.name,
+      combatTypeId: charDataJson.element as CombatType,
       combatType: charFullData?.damageType?.name,
       location: charFullData?.archive?.camp,
       imageFull: imagesMap.Chacracter[charId]?.imageFull,

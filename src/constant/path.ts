@@ -8,10 +8,14 @@
     <string name="path_the_preservation">存護</string>
 */
 
-export const Erudition = "Erudition";
-export const Abundance = "Abundance";
-export const Harmony = "Harmony";
-export const Destruction = "Destruction";
-export const Hunt = "Hunt";
-export const Nihility = "Nihility";
-export const Preservation = "Preservation";
+const Path = {
+  Erudition: "Erudition",
+  Abundance: "Abundance",
+  Harmony: "Harmony",
+  Destruction: "Destruction",
+  Hunt: "Hunt",
+  Nihility: "Nihility",
+  Preservation: "Preservation",
+};
+
+export default Path;
