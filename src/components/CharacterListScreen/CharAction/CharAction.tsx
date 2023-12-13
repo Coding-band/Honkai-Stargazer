@@ -27,7 +27,10 @@ export default function CharAction() {
       <FilterBtn />
       <Listbox
         button={
-          <OrderBtn onPressRight={handleReverse}>
+          <OrderBtn
+            onPressReverse={handleReverse}
+            reverse={!!charSortingReverse}
+          >
             {charSorting?.name || ""}
           </OrderBtn>
         }
