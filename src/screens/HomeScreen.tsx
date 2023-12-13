@@ -1,23 +1,33 @@
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
-import { View } from "react-native";
-import { ImageBackground } from "expo-image";
+import { Pressable, View } from "react-native";
 import Menu from "../components/HomeScreen/Menu/Menu";
 import Tabbar from "../components/HomeScreen/Tabbar/Tabbar";
 import Player from "../components/HomeScreen/Player/Player";
 import { StatusBar } from "expo-status-bar";
+import WallPaper from "../components/global/WallPaper/WallPaper";
+import useWallPaper from "../redux/wallPaper/useWallPaper";
 
 export default function HomeScreen() {
+  const { wallPaper, setWallPaper } = useWallPaper();
+
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <Pressable
+      onPress={() => {
+        let WP = `https://act-webstatic.hoyoverse.com/game_record/hkrpg/SpriteOutput/PhoneTheme/Theme/PhoneThemeMain/${
+          Math.floor(Math.random() * 3) + 221000
+        }.png`;
+        while (WP === wallPaper) {
+          WP = `https://act-webstatic.hoyoverse.com/game_record/hkrpg/SpriteOutput/PhoneTheme/Theme/PhoneThemeMain/${
+            Math.floor(Math.random() * 3) + 221000
+          }.png`;
+        }
+        setWallPaper(WP);
+      }}
+      style={{ flex: 1, backgroundColor: "white" }}
+    >
       <StatusBar style="dark" />
-      <ImageBackground
-        className="absolute w-full h-full"
-        // 把背景關掉
-        source={require("../../assets/images/test-bg.png")}
-        // placeholder={blurhash}
-        contentFit="cover"
-      />
+      <WallPaper />
       <LinearGradient
         className="absolute w-full h-full"
         colors={["#00000050", "#00000040"]}
@@ -34,6 +44,6 @@ export default function HomeScreen() {
           <Tabbar />
         </LinearGradient>
       </View>
-    </View>
+    </Pressable>
   );
 }

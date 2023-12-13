@@ -14,6 +14,7 @@ import LightconeContext from "../context/LightconeContext";
 import lcList from "../../data/lightcone_data/lightcone_list.json";
 import * as imagesMap from "../../assets/images/@images_map/images_map";
 import { getLcFullData } from "../utils/dataMap/getDataFromMap";
+import WallPaper from "../components/global/WallPaper/WallPaper";
 
 export default function LightconeScreen() {
   const route = useRoute<RouteProp<ParamList, "Lightcone">>();
@@ -41,14 +42,7 @@ export default function LightconeScreen() {
     <LightconeContext.Provider value={lcData}>
       <View style={{ flex: 1, backgroundColor: "white" }}>
         <StatusBar style="dark" />
-        <ImageBackground
-          className="absolute w-full h-full"
-          // 把背景關掉
-          source={require("../../assets/images/test-bg.png")}
-          // placeholder={blurhash}
-          contentFit="cover"
-          blurRadius={10}
-        />
+        <WallPaper   />
         <LinearGradient
           className="absolute w-full h-full"
           colors={["#00000080", "#00000020"]}

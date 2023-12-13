@@ -6,6 +6,7 @@ import { WebView } from "react-native-webview";
 import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import useHoyolabCookie from "../redux/hoyolabCookie/useHoyolabCookie";
+import WallPaper from "../components/global/WallPaper/WallPaper";
 // import { getHoyolabCookieFromCookieManager } from "../utils/hoyolab/hoyolabCookie";
 
 export default function LoginScreen() {
@@ -14,14 +15,7 @@ export default function LoginScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
-      <ImageBackground
-        className="absolute w-full h-full"
-        // 把背景關掉
-        source={require("../../assets/images/test-bg.png")}
-        // placeholder={blurhash}
-        contentFit="cover"
-        blurRadius={10}
-      />
+      <WallPaper />
       <Header
         onBack={async () => {
           // const cookie = await getHoyolabCookieFromCookieManager();

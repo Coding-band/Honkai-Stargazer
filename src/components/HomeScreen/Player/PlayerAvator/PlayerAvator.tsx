@@ -13,7 +13,7 @@ export default function PlayerAvator() {
   useEffect(() => {
     setTimeout(() => {
       if (flag) {
-        setRotate(rotate + 5);
+        setRotate(rotate + 10);
       }
     }, 10);
   }, [rotate, flag]);

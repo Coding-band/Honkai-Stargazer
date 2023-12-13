@@ -30,6 +30,8 @@ import { Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../constant/screens";
 import useHsrNote from "../../../hooks/hoyolab/useHsrNote";
+import _ from "lodash";
+import { formatTimePoint } from "../../../utils/date/formatTime";
 
 const OEPN_LONG_MENU = false;
 
@@ -129,10 +131,15 @@ export default function Menu() {
             }
             subtitle={
               playerNote.data ? (
-                <>
-                  <Text>今天</Text>
-                  <Text>20:15</Text>
-                </>
+                <Text>
+                  {playerNote.data.current_stamina >= 240
+                    ? "開拓力已滿"
+                    : formatTimePoint(
+                        (playerNote.data.max_stamina -
+                          playerNote.data.current_stamina) *
+                          360
+                      )}
+                </Text>
               ) : (
                 <></>
               )
@@ -179,10 +186,19 @@ export default function Menu() {
             }
             subtitle={
               playerNote.data ? (
-                <>
-                  <Text>今天</Text>
-                  <Text>20:15</Text>
-                </>
+                <Text>
+                  {_.maxBy(
+                    playerNote.data.expeditions,
+                    (e: any) => e.remaining_time
+                  ).remaining_time === 0
+                    ? "已完成"
+                    : formatTimePoint(
+                        _.maxBy(
+                          playerNote.data.expeditions,
+                          (e: any) => e.remaining_time
+                        ).remaining_time
+                      )}
+                </Text>
               ) : (
                 <></>
               )

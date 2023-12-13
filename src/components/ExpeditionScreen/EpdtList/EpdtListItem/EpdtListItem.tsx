@@ -70,7 +70,9 @@ export default function EpdtListItem(props: Props) {
                   </View>
                   {/* 結束時間 */}
                   <Text className="font-[HY65] text-[13px] text-[#00000060]">
-                    {formatTimePoint(props.remainingTime)}
+                    {props.ongoing === false
+                      ? ""
+                      : formatTimePoint(props.remainingTime)}
                   </Text>
                 </View>
               </View>

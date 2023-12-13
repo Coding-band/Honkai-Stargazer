@@ -17,6 +17,7 @@ import Fixed from "../components/global/Fixed/Fixed";
 import { getCharFullData } from "../utils/dataMap/getDataFromMap";
 import { Path } from "../types/path";
 import { CombatType } from "../types/combatType";
+import WallPaper from "../components/global/WallPaper/WallPaper";
 
 export default function CharacterScreen() {
   const route = useRoute<RouteProp<ParamList, "Character">>();
@@ -47,14 +48,7 @@ export default function CharacterScreen() {
     <CharacterContext.Provider value={charData}>
       <View style={{ flex: 1, backgroundColor: "white" }}>
         <StatusBar style="dark" />
-        <ImageBackground
-          className="absolute w-full h-full"
-          // 把背景關掉
-          source={require("../../assets/images/test-bg.png")}
-          // placeholder={blurhash}
-          contentFit="cover"
-          blurRadius={10}
-        />
+        <WallPaper />
         <LinearGradient
           className="absolute w-full h-full"
           colors={["#00000080", "#00000020"]}
