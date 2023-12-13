@@ -27,6 +27,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -85,8 +86,24 @@ public class HelpTool {
                 //}
             }
  */
-            help_tool_export_lightcone_icon(context);
+            //help_tool_export_lightcone_icon(context);
 
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject object = array.getJSONObject(i);
+                //Special requirements
+                //if (object.getString("fileName").contains("player")) {
+
+                String json_base = LoadAssestData(context, "character_data/" + "en" + "/" + object.getString("fileName") + ".json");
+                if (!json_base.equals("")) {
+                    JSONObject jsonObject = new JSONObject(json_base);
+                    if (jsonObject.has("ranks") && !jsonObject.isNull("ranks") && jsonObject.getJSONArray("ranks").length() > 0){
+                        singwan(jsonObject.getJSONArray("ranks"),object.getString("name").toLowerCase().replace(" • ","_").replace("(","").replace(")","").replace(" ","_").replace("_&_numby","").replace("imbibitor_lunae","il"),context);
+                    }else {
+                        Toast.makeText(context, "ranksIsNull in "+object.getString("fileName"), Toast.LENGTH_SHORT).show();
+                    }
+                }
+                //}
+            }
 
             /*
             for (int i = 0; i < array.length(); i++) {
@@ -120,6 +137,21 @@ public class HelpTool {
         }catch (JSONException e){
             e.printStackTrace();
         }
+    }
+
+
+    public void singwan(JSONArray ranks, String charName, Context context){
+        String str_final = "";
+        for(int x = 0 ; x < ranks.length() ; x++){
+            try {
+                if (ranks.getJSONObject(x).has("iconPath")){
+                    str_final += "ren https://cdn.starrailstation.com/assets/"+ranks.getJSONObject(x).getString("iconPath")+".webp\t"+charName+"_soul"+String.valueOf(x+1)+".webp\n";
+                }
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        LogExport.special(str_final, context, LogExport.BETA_TESTING);
     }
 
     public void skillTree(JSONArray skillTreePoints, String charName, int level){
