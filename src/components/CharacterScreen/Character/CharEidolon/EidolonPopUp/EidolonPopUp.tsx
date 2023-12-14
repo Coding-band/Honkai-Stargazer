@@ -9,6 +9,7 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { getCharFullData } from "../../../../../utils/dataMap/getDataFromMap";
 import { Shadow } from "react-native-shadow-2";
 import { Image } from "expo-image";
+import CharacterSoul from "../../../../../../assets/images/@images_map/characterSoul";
 
 type Props = {
   id: number;
@@ -48,7 +49,10 @@ export default React.memo(function EidolonPopUp({ id, onClose }: Props) {
                     className="w-[60px] h-[60px] bg-[#333] rounded-full border-2 border-white"
                     style={{ justifyContent: "center", alignItems: "center" }}
                   >
-                    {/* <Image source={Rank[charFullData.ranks[id - 1].artPath]} /> */}
+                    <Image
+                      className="w-12 h-12"
+                      source={CharacterSoul[charId]["soul" + id]}
+                    />
                   </View>
                 </Shadow>
                 <View className="w-[250px]" style={{ gap: 4 }}>
