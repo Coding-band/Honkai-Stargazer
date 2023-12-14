@@ -32,6 +32,7 @@ const persistConfig = {
     "isAcceptBindingPolicy",
     "characterSorting",
     "characterSortingReverse",
+    "wallPaper",
   ],
 };
 

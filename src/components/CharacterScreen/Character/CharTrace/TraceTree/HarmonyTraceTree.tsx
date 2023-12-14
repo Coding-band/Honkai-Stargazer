@@ -27,7 +27,10 @@ export default function HarmonyTraceTree() {
     setSelectedInner(0);
   });
 
-  const skillTrees = charFullData.skillTreePoints;
+  const skillTrees = charFullData.skillTreePoints
+    .slice()
+    .sort((a, b) => a.id - b.id);
+
   const skillTreeOuter1 = skillTrees[0];
   const skillTreeOuter2 = skillTrees[1];
   const skillTreeOuter3 = skillTrees[2];
@@ -188,9 +191,9 @@ export default function HarmonyTraceTree() {
                 left={132}
                 top={134}
                 icon={CharacterSkillMain[charId].skill4}
-                selected={selectedInner === 2}
+                selected={selectedInner === 4}
                 onPress={() => {
-                  setSelectedInner(2);
+                  setSelectedInner(4);
                 }}
               />
               <Inner
@@ -205,19 +208,19 @@ export default function HarmonyTraceTree() {
               <Inner
                 left={132}
                 top={295}
-                icon={CharacterSkillMain[charId].skill2}
-                selected={selectedInner === 4}
+                icon={CharacterSkillMain[charId].skill6}
+                selected={selectedInner === 5}
                 onPress={() => {
-                  setSelectedInner(4);
+                  setSelectedInner(5);
                 }}
               />
               <Inner
                 left={196}
                 top={142}
-                icon={CharacterSkillMain[charId].skill6}
-                selected={selectedInner === 5}
+                icon={CharacterSkillMain[charId].skill2}
+                selected={selectedInner === 2}
                 onPress={() => {
-                  setSelectedInner(5);
+                  setSelectedInner(2);
                 }}
               />
             </>

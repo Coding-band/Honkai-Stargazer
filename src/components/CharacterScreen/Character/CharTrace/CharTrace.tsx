@@ -8,6 +8,8 @@ import Path from "../../../../constant/path";
 import DestructionTraceTree from "./TraceTree/DestructionTraceTree";
 import HarmonyTraceTree from "./TraceTree/HarmonyTraceTree";
 import EruditionTraceTree from "./TraceTree/EruditionTraceTree";
+import AbundanceTraceTree from "./TraceTree/AbundanceTraceTree";
+import PreservationTraceTree from "./TraceTree/PreservationTraceTree";
 
 export default React.memo(function CharTrace() {
   const charData = useContext(CharacterContext);
@@ -20,6 +22,8 @@ export default React.memo(function CharTrace() {
       {charPathId === "Destruction" && <DestructionTraceTree />}
       {charPathId === "Harmony" && <HarmonyTraceTree />}
       {charPathId === "Erudition" && <EruditionTraceTree />}
+      {charPathId === "Abundance" && <AbundanceTraceTree />}
+      {charPathId === "Preservation" && <PreservationTraceTree />}
     </View>
   );
 });

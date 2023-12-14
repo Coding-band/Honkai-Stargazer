@@ -27,10 +27,13 @@ export default function EruditionTraceTree() {
     setSelectedInner(0);
   });
 
-  const skillTrees = charFullData.skillTreePoints;
-  const skillTreeOuter1 = skillTrees.filter((tree) => tree.type === 1)[0];
-  const skillTreeOuter2 = skillTrees.filter((tree) => tree.type === 1)[1];
-  const skillTreeOuter3 = skillTrees.filter((tree) => tree.type === 1)[2];
+  const skillTrees = charFullData.skillTreePoints
+    .slice()
+    .sort((a, b) => a.id - b.id);
+
+  const skillTreeOuter1 = skillTrees[0];
+  const skillTreeOuter2 = skillTrees[1];
+  const skillTreeOuter3 = skillTrees[2];
   const skillTreeOuter1Edge1 = skillTreeOuter1.children[0];
   const skillTreeOuter1Edge2 = skillTreeOuter1Edge1.children[0];
   const skillTreeOuter1Edge3 = skillTreeOuter1Edge1.children[1];
@@ -39,8 +42,8 @@ export default function EruditionTraceTree() {
   const skillTreeOuter2Edge3 = skillTreeOuter2Edge1.children[1];
   const skillTreeOuter3Edge1 = skillTreeOuter3.children[0];
   const skillTreeOuter3Edge2 = skillTreeOuter3.children[1];
-  const skillTreeOtherEdge1 = skillTrees.filter((tree) => tree.type === 2)[0];
-  const skillTreeOtherEdge2 = skillTrees.filter((tree) => tree.type === 2)[1];
+  const skillTreeOtherEdge1 = skillTrees[3];
+  const skillTreeOtherEdge2 = skillTrees[4];
 
   return (
     <>
@@ -78,10 +81,9 @@ export default function EruditionTraceTree() {
                   CharacterSkillTree[skillTreeOuter3Edge2.embedBuff.iconPath]
                 }
               />
-
               <Edge
-                left={10}
-                top={215}
+                left={0}
+                top={153}
                 icon={
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter1Edge1.embedBuff.iconPath]
@@ -89,20 +91,22 @@ export default function EruditionTraceTree() {
               />
               <Edge
                 left={10}
-                top={95}
+                top={215}
                 icon={
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter1Edge2.embedBuff.iconPath]
                 }
               />
+
               <Edge
-                left={0}
-                top={153}
+                left={10}
+                top={95}
                 icon={
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter1Edge3.embedBuff.iconPath]
                 }
               />
+
               <Edge
                 left={285}
                 top={95}
@@ -185,12 +189,12 @@ export default function EruditionTraceTree() {
                 }}
               />
               <Inner
-                left={214}
-                top={205}
-                icon={CharacterSkillMain[charId].skill2}
-                selected={selectedInner === 2}
+                left={133}
+                top={125}
+                icon={CharacterSkillMain[charId].skill4}
+                selected={selectedInner === 4}
                 onPress={() => {
-                  setSelectedInner(2);
+                  setSelectedInner(4);
                 }}
               />
               <Inner
@@ -202,15 +206,7 @@ export default function EruditionTraceTree() {
                   setSelectedInner(3);
                 }}
               />
-              <Inner
-                left={133}
-                top={125}
-                icon={CharacterSkillMain[charId].skill4}
-                selected={selectedInner === 4}
-                onPress={() => {
-                  setSelectedInner(4);
-                }}
-              />
+
               <Inner
                 left={133}
                 top={344}
@@ -218,6 +214,15 @@ export default function EruditionTraceTree() {
                 selected={selectedInner === 5}
                 onPress={() => {
                   setSelectedInner(5);
+                }}
+              />
+              <Inner
+                left={214}
+                top={205}
+                icon={CharacterSkillMain[charId].skill2}
+                selected={selectedInner === 2}
+                onPress={() => {
+                  setSelectedInner(2);
                 }}
               />
             </>

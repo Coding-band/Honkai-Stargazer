@@ -27,7 +27,10 @@ export default function HuntTraceTree() {
     setSelectedInner(0);
   });
 
-  const skillTrees = charFullData.skillTreePoints;
+  const skillTrees = charFullData.skillTreePoints
+    .slice()
+    .sort((a, b) => a.id - b.id);
+
   const skillTreeOuter1 = skillTrees[0];
   const skillTreeOuter2 = skillTrees[1];
   const skillTreeOuter3 = skillTrees[2];
@@ -87,7 +90,7 @@ export default function HuntTraceTree() {
                 }
               />
               <Edge
-                left={0}
+                left={290}
                 top={120}
                 icon={
                   // @ts-ignore
@@ -95,7 +98,7 @@ export default function HuntTraceTree() {
                 }
               />
               <Edge
-                left={290}
+                left={0}
                 top={120}
                 icon={
                   // @ts-ignore
@@ -187,9 +190,9 @@ export default function HuntTraceTree() {
                 left={136}
                 top={134}
                 icon={CharacterSkillMain[charId].skill4}
-                selected={selectedInner === 2}
+                selected={selectedInner === 4}
                 onPress={() => {
-                  setSelectedInner(2);
+                  setSelectedInner(4);
                 }}
               />
               <Inner
@@ -204,19 +207,19 @@ export default function HuntTraceTree() {
               <Inner
                 left={136}
                 top={295}
-                icon={CharacterSkillMain[charId].skill2}
-                selected={selectedInner === 4}
+                icon={CharacterSkillMain[charId].skill6}
+                selected={selectedInner === 5}
                 onPress={() => {
-                  setSelectedInner(4);
+                  setSelectedInner(5);
                 }}
               />
               <Inner
                 left={214}
                 top={178}
-                icon={CharacterSkillMain[charId].skill6}
-                selected={selectedInner === 5}
+                icon={CharacterSkillMain[charId].skill2}
+                selected={selectedInner === 2}
                 onPress={() => {
-                  setSelectedInner(5);
+                  setSelectedInner(2);
                 }}
               />
             </>

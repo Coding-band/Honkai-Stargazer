@@ -15,11 +15,11 @@ export default function HomeScreen() {
     <Pressable
       onPress={() => {
         let WP = `https://act-webstatic.hoyoverse.com/game_record/hkrpg/SpriteOutput/PhoneTheme/Theme/PhoneThemeMain/${
-          Math.floor(Math.random() * 3) + 221000
+          Math.floor(Math.random() * 4) + 221000
         }.png`;
         while (WP === wallPaper) {
           WP = `https://act-webstatic.hoyoverse.com/game_record/hkrpg/SpriteOutput/PhoneTheme/Theme/PhoneThemeMain/${
-            Math.floor(Math.random() * 3) + 221000
+            Math.floor(Math.random() * 4) + 221000
           }.png`;
         }
         setWallPaper(WP);
