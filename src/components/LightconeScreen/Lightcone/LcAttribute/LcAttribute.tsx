@@ -21,12 +21,22 @@ export default function LcAttribute() {
   const lcData = useContext(LightconeContext);
   const lcId = lcData?.id!;
 
-  const [str, setStr] = useState(0);
-  const [hp, setHp] = useState(0);
-  const [def, setDef] = useState(0);
-
   const [attrFromLevel, setAttrFromLevel] = useState(0);
   const [attrToLevel, setAttrToLevel] = useState(8);
+
+  const [attributes, setAttributes] = useState({
+    atk: 0,
+    hp: 0,
+    def: 0,
+  });
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAttributes(
+        getLcAttrData(lcId, attrFromLevel === 0 ? 1 : attrFromLevel * 10)
+      );
+    });
+  }, [lcId, attrFromLevel]);
 
   const handleFromLevelChange = (newLevel: number) => {
     if (newLevel >= attrToLevel) {
@@ -38,25 +48,11 @@ export default function LcAttribute() {
 
   const handleToLevelChange = (newLevel: number) => {
     if (newLevel <= attrFromLevel) {
-      setAttrToLevel(attrFromLevel + 1);
+      setAttrToLevel(attrFromLevel);
       return;
     }
     setAttrToLevel(newLevel);
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      setStr(
-        getLcAttrData(lcId, attrFromLevel === 0 ? 1 : attrFromLevel * 10).atk
-      );
-      setHp(
-        getLcAttrData(lcId, attrFromLevel === 0 ? 1 : attrFromLevel * 10).hp
-      );
-      setDef(
-        getLcAttrData(lcId, attrFromLevel === 0 ? 1 : attrFromLevel * 10).def
-      );
-    });
-  }, [attrFromLevel]);
 
   return (
     <>
@@ -113,19 +109,19 @@ export default function LcAttribute() {
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={HPIcon} />
                 <Text className="text-white text-[16px] font-medium">
-                  {str.toFixed(0)}
+                  {attributes.hp.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={STRIcon} />
                 <Text className="text-white text-[16px] font-medium">
-                  {hp.toFixed(0)}
+                  {attributes.atk.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={DEFIcon} />
                 <Text className="text-white text-[16px] font-medium">
-                  {def.toFixed(0)}
+                  {attributes.def.toFixed(0)}
                 </Text>
               </View>
             </View>

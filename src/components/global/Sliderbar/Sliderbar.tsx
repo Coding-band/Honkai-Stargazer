@@ -1,4 +1,4 @@
-import { View, Text, LayoutChangeEvent } from "react-native";
+import { View, Text, LayoutChangeEvent, Vibration } from "react-native";
 import React, { useCallback, useEffect, useState } from "react";
 import { cn } from "../../../utils/css/cn";
 import { BlurView } from "expo-blur";
@@ -38,7 +38,7 @@ export default function Sliderbar({
   useEffect(() => {
     const span = (containerWidth - 16 * (point - 1)) / (point - 1);
     const points = [0];
-    for (let i = 0; i < point-1; i++) {
+    for (let i = 0; i < point - 1; i++) {
       points.push(points[i] + 16 + span);
     }
     setPoints(points);
@@ -72,6 +72,7 @@ export default function Sliderbar({
     );
     transitionX.value = 0; // 重置 transitionX
     onChange(points.findIndex((v) => v === closest));
+    Vibration.vibrate(2);
   };
 
   const gestureHandler = useAnimatedGestureHandler({

@@ -1,6 +1,6 @@
-export default function formatDesc(descHash, params=[]) {
+export default function formatDesc(descHash, params = []) {
   // 使用正则表达式匹配 #数字[i] 或 #数字[f1]% 的格式
-  const regex = /(#\d+\[i\]%?)|(#\d+\[f1\]%?)/g;
+  const regex = /(#\d+\[i\]%?)|(#\d+\[f[12]\]%?)/g;
 
   // 替换 descHash 中的每个匹配项
   return descHash.replace(regex, (match) => {
@@ -10,10 +10,10 @@ export default function formatDesc(descHash, params=[]) {
     const param = params[index];
 
     // 根据占位符的类型进行替换
-    if (match.includes("[i]%") || match.includes("[f1]%")) {
+    if (match.includes("[i]%") || match.includes("[f1]%") || match.includes("[f2]%")) {
       // 直接替换为数值（四舍五入到三位小数）
       return `${Math.round((param * 100) * 100) / 100}%`;
-    } else if (match.includes("[i]") || match.includes("[f1]")) {
+    } else if (match.includes("[i]") || match.includes("[f1]") || match.includes("[f2]")) {
       // 替换为百分比形式（四舍五入到一位小数）
       return param
     }

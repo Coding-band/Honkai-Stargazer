@@ -1,6 +1,6 @@
 import { BlurView } from "expo-blur";
 
-const withBlurView = (jsx: React.ReactNode, active: boolean) => {
+const withBlurView = (jsx: React.ReactNode, active: boolean = true) => {
   return active ? (
     <BlurView intensity={20} tint="light">
       {jsx}
@@ -10,4 +10,4 @@ const withBlurView = (jsx: React.ReactNode, active: boolean) => {
   );
 };
 
-export default withBlurView
+export default withBlurView;
