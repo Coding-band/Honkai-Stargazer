@@ -1,10 +1,10 @@
 import { View, Text, Pressable, Touchable, PanResponder } from "react-native";
 import React from "react";
-import Button from "../../../global/Button/Button";
+import Button from "../../../../global/Button/Button";
 import { Image } from "expo-image";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-const BothSideArrowIcon = require("../../../../../assets/icons/BothSideArrow.svg");
+const BothSideArrowIcon = require("../../../../../../assets/icons/BothSideArrow.svg");
 
 export default function OrderBtn({
   children,

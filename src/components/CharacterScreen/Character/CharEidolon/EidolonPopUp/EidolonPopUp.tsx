@@ -51,6 +51,7 @@ export default React.memo(function EidolonPopUp({ id, onClose }: Props) {
                   >
                     <Image
                       className="w-12 h-12"
+                      // @ts-ignore
                       source={CharacterSoul[charId]["soul" + id]}
                     />
                   </View>

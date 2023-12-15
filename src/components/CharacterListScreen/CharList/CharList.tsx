@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ScrollView, View } from "react-native";
 import CharCard from "../../global/CharCard/CharCard";
 import { SCREENS } from "../../../constant/screens";
@@ -13,12 +13,16 @@ import useCharSorting from "../../../redux/characterSorting/useCharSorting";
 import { getCharFullData } from "../../../utils/dataMap/getDataFromMap";
 import { getCharAttrData } from "../../../utils/calculator/getAttrData";
 import useCharSortingReverse from "../../../redux/characterSortingReverse/useCharSortingReverse";
+import useCharFilter from "../../../redux/characterFilter/useCharFilter";
+import combatType from "../../../constant/combatType";
+import _ from "lodash";
+import path from "../../../constant/path";
 
 export default function CharList() {
   const navigation = useNavigation();
 
-  // get characters' data
   const [charCardListData, setCharCardListData] = useState<CharacterCard[]>();
+
   useEffect(() => {
     setCharCardListData(
       characterList.map((char) => {
@@ -44,129 +48,83 @@ export default function CharList() {
 
   const { charSorting } = useCharSorting();
   const { charSortingReverse } = useCharSortingReverse();
+  const { charFilterSelected } = useCharFilter();
 
   const charCardListJSX = useMemo(() => {
-    if (charSorting?.id === "rare") {
-      return charCardListData
-        ?.slice()
-        ?.sort((a, b) => b.rare - a.rare)
-        ?.map((item, i) => (
-          <CharCard
-            key={i}
-            onPress={() => {
-              // @ts-ignore
-              navigation.navigate(SCREENS.CharacterPage.id, {
-                id: item?.id,
-                name: item?.name,
-              });
-            }}
-            {...item}
-          />
-        ));
-    } else if (charSorting?.id === "name") {
-      return (
-        charCardListData
-          ?.slice()
+    const sortData = (charCardListData: CharacterCard[] | undefined) => {
+      type Data = CharacterCard[] | undefined;
+
+      //* 排序
+      const sortStrategies = {
+        rare: (data: Data) => data?.slice()?.sort((a, b) => b.rare - a.rare),
+        // @ts-ignore
+        name: (data: Data) => data?.slice()?.sort((a, b) => b.id < a.id),
+        atk: (data: Data) => data?.slice()?.sort((a, b) => b.atk - a.atk),
+        def: (data: Data) => data?.slice()?.sort((a, b) => b.def - a.def),
+        hp: (data: Data) => data?.slice()?.sort((a, b) => b.hp - a.hp),
+        energy: (data: Data) =>
+          data?.slice()?.sort((a, b) => b.energy - a.energy),
+        time: (data: Data) => data, // No sorting for 'time'
+      };
+      let sortedData =
+        sortStrategies[charSorting?.id || "time"](charCardListData);
+
+      //* 反轉
+      if (charSortingReverse) {
+        sortedData?.reverse();
+      }
+
+      //* 過濾
+
+      // 無選取
+      if (!charFilterSelected?.length) {
+      }
+      // 只選單邊
+      else if (
+        (!!_.intersection(combatType, charFilterSelected).length &&
+          !_.intersection(path, charFilterSelected).length) ||
+        (!_.intersection(combatType, charFilterSelected).length &&
+          !!_.intersection(path, charFilterSelected).length)
+      ) {
+        sortedData = sortedData?.filter(
+          (data) =>
+            charFilterSelected?.includes(data.combatType) ||
+            charFilterSelected?.includes(data.path)
+        );
+      }
+      // 兩邊都選
+      else {
+        sortedData = sortedData?.filter(
+          (data) =>
+            charFilterSelected?.includes(data.combatType) &&
+            charFilterSelected?.includes(data.path)
+        );
+      }
+
+      return sortedData;
+    };
+
+    const sortedData = sortData(charCardListData);
+
+    return sortedData?.map((item, i) => (
+      <CharCard
+        key={i}
+        onPress={() => {
           // @ts-ignore
-          ?.sort((a, b) => b.id < a.id)
-          ?.map((item, i) => (
-            <CharCard
-              key={i}
-              onPress={() => {
-                // @ts-ignore
-                navigation.navigate(SCREENS.CharacterPage.id, {
-                  id: item?.id,
-                  name: item?.name,
-                });
-              }}
-              {...item}
-            />
-          ))
-      );
-    } else if (charSorting?.id === "atk") {
-      return charCardListData
-        ?.slice()
-        ?.sort((a, b) => b.atk - a.atk)
-        ?.map((item, i) => (
-          <CharCard
-            key={i}
-            onPress={() => {
-              // @ts-ignore
-              navigation.navigate(SCREENS.CharacterPage.id, {
-                id: item?.id,
-                name: item?.name,
-              });
-            }}
-            {...item}
-          />
-        ));
-    } else if (charSorting?.id === "def") {
-      return charCardListData
-        ?.slice()
-        ?.sort((a, b) => b.def - a.def)
-        ?.map((item, i) => (
-          <CharCard
-            key={i}
-            onPress={() => {
-              // @ts-ignore
-              navigation.navigate(SCREENS.CharacterPage.id, {
-                id: item?.id,
-                name: item?.name,
-              });
-            }}
-            {...item}
-          />
-        ));
-    } else if (charSorting?.id === "hp") {
-      return charCardListData
-        ?.slice()
-        ?.sort((a, b) => b.hp - a.hp)
-        ?.map((item, i) => (
-          <CharCard
-            key={i}
-            onPress={() => {
-              // @ts-ignore
-              navigation.navigate(SCREENS.CharacterPage.id, {
-                id: item?.id,
-                name: item?.name,
-              });
-            }}
-            {...item}
-          />
-        ));
-    } else if (charSorting?.id === "energy") {
-      return charCardListData
-        ?.slice()
-        ?.sort((a, b) => b.energy - a.energy)
-        ?.map((item, i) => (
-          <CharCard
-            key={i}
-            onPress={() => {
-              // @ts-ignore
-              navigation.navigate(SCREENS.CharacterPage.id, {
-                id: item?.id,
-                name: item?.name,
-              });
-            }}
-            {...item}
-          />
-        ));
-    } else if (charSorting?.id === "time") {
-      return charCardListData?.map((item, i) => (
-        <CharCard
-          key={i}
-          onPress={() => {
-            // @ts-ignore
-            navigation.navigate(SCREENS.CharacterPage.id, {
-              id: item?.id,
-              name: item?.name,
-            });
-          }}
-          {...item}
-        />
-      ));
-    }
-  }, [charCardListData, charSorting?.id]);
+          navigation.navigate(SCREENS.CharacterPage.id, {
+            id: item?.id,
+            name: item?.name,
+          });
+        }}
+        {...item}
+      />
+    ));
+  }, [
+    charCardListData,
+    charSortingReverse,
+    charFilterSelected,
+    charSorting?.id,
+  ]);
 
   return (
     <>
@@ -181,9 +139,7 @@ export default function CharList() {
               justifyContent: "center",
             }}
           >
-            {charSortingReverse
-              ? charCardListJSX?.slice().reverse()
-              : charCardListJSX}
+            {charCardListJSX}
           </View>
         </ScrollView>
       </View>

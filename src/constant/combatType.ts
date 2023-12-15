@@ -8,10 +8,12 @@
     <string name="element_quantum">量子</string>
 */
 
-export const Physical = "Physical";
-export const Wind = "Wind";
-export const Ice = "Ice";
-export const Fire = "Fire";
-export const Lightning = "Lightning";
-export const Quantum = "Quantum";
-export const Imaginary = "Imaginary";
+export default [
+  "Physical",
+  "Wind",
+  "Ice",
+  "Fire",
+  "Lightning",
+  "Quantum",
+  "Imaginary",
+];

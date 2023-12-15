@@ -11,6 +11,7 @@ import { hoyolabCookie } from "./hoyolabCookie/hoyolabCookie.reducer";
 import { isAcceptBindingPolicy } from "./isAcceptBindingPolicy/isAcceptBindingPolicy.reducer";
 import { characterSorting } from "./characterSorting/characterSorting.reducer";
 import { characterSortingReverse } from "./characterSortingReverse/characterSortingReverse.reducer";
+import { characterFilter } from "./characterFilter/characterFilter.reducer";
 import { wallPaper } from "./wallPaper/wallPaper.reducer";
 
 const reducer = combineReducers({
@@ -19,6 +20,7 @@ const reducer = combineReducers({
   isAcceptBindingPolicy,
   characterSorting,
   characterSortingReverse,
+  characterFilter,
   wallPaper,
 });
 
@@ -32,6 +34,7 @@ const persistConfig = {
     "isAcceptBindingPolicy",
     "characterSorting",
     "characterSortingReverse",
+    "characterFilter",
     "wallPaper",
   ],
 };
