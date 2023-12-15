@@ -1,8 +1,8 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React, { useEffect, useState } from "react";
-import { ExpoImage } from "../../../../../../types/image";
+import { ExpoImage } from "../../../../types/image";
 import { Image } from "expo-image";
-import { cn } from "../../../../../../utils/css/cn";
+import { cn } from "../../../../utils/css/cn";
 
 type Props = {
   icon: ExpoImage;
@@ -11,18 +11,20 @@ type Props = {
   onClick: () => void;
 };
 
-const CheckIcon = require("../../../../../../../assets/icons/Check.svg");
+const CheckIcon = require("../../../../../assets/icons/Check.svg");
 
 export default function FilterItem(props: Props) {
   const [selected, setSelected] = useState(props.selected);
-  
+
   useEffect(() => {
     setSelected(props.selected);
   }, [props.selected]);
 
   const handlePress = () => {
     setSelected(!selected);
-    props.onClick();
+    setTimeout(() => {
+      props.onClick();
+    });
   };
 
   return (

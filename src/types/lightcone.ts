@@ -16,6 +16,9 @@ export type LightconeCard = {
   name: string;
   rare: number;
   path: Path;
+  atk: number;
+  def: number;
+  hp: number;
   image: ExpoImage;
 };
 

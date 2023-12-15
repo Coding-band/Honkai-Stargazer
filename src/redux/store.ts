@@ -12,6 +12,9 @@ import { isAcceptBindingPolicy } from "./isAcceptBindingPolicy/isAcceptBindingPo
 import { characterSorting } from "./characterSorting/characterSorting.reducer";
 import { characterSortingReverse } from "./characterSortingReverse/characterSortingReverse.reducer";
 import { characterFilter } from "./characterFilter/characterFilter.reducer";
+import { lightconeSorting } from "./lightconeSorting/lightconeSorting.reducer";
+import { lightconeSortingReverse } from "./lightconeSortingReverse/lightconeSortingReverse.reducer";
+import { lightconeFilter } from "./lightconeFilter/lightconeFilter.reducer";
 import { wallPaper } from "./wallPaper/wallPaper.reducer";
 
 const reducer = combineReducers({
@@ -21,6 +24,9 @@ const reducer = combineReducers({
   characterSorting,
   characterSortingReverse,
   characterFilter,
+  lightconeSorting,
+  lightconeSortingReverse,
+  lightconeFilter,
   wallPaper,
 });
 
@@ -32,9 +38,10 @@ const persistConfig = {
     "hsrServerChosen",
     "hoyolabCookie",
     "isAcceptBindingPolicy",
-    "characterSorting",
-    "characterSortingReverse",
-    "characterFilter",
+    // "characterSorting",
+    // "characterSortingReverse",
+    // "lightconeSorting",
+    // "lightconeSortingReverse",
     "wallPaper",
   ],
 };

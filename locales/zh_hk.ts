@@ -1,0 +1,16 @@
+export const ZH_HK = {
+  Abundance: "豐饒",
+  Destruction: "毀滅",
+  Erudition: "智識",
+  Harmony: "同諧",
+  Hunt: "巡獵",
+  Nihility: "虛無",
+  Preservation: "存謢",
+  Physical: "物理",
+  Wind: "風",
+  Ice: "冰",
+  Fire: "火",
+  Lightning: "雷",
+  Quantum: "量子",
+  Imaginary: "虛數",
+};

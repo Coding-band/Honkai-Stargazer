@@ -21,7 +21,6 @@ const useCharFilter = () => {
     setCharFilter(
       charFilter?.map((item) => ({
         id: item.id,
-        name: item.name,
         selected: v.includes(item.id),
       }))!
     );

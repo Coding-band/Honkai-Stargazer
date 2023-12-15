@@ -8,7 +8,6 @@ export type CharacterFilterAction = {
 
 export type CharacterFilter = {
   id: CharacterFilterType;
-  name: string;
   selected: boolean;
 }[];
 

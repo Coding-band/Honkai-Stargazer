@@ -1,9 +1,9 @@
 import { View, Text } from "react-native";
 import React from "react";
-import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
-import Button from "../../../../global/Button/Button";
+import PopUpCard from "../PopUpCard/PopUpCard";
+import Button from "../Button/Button";
 import FilterItem from "./FilterItem/FilterItem";
-import { ExpoImage } from "../../../../../types/image";
+import { ExpoImage } from "../../../types/image";
 import _ from "lodash";
 
 type Props = {

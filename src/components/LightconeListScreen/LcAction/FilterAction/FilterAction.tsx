@@ -2,9 +2,9 @@ import React, { useMemo, useState } from "react";
 import FilterBtn from "./FilterBtn/FilterBtn";
 import { View } from "react-native";
 import FilterPopUp from "../../../global/FilterPopUp/FilterPopUp";
-import useCharFilter from "../../../../redux/characterFilter/useCharFilter";
 import Path from "../../../../constant/path";
 import PathMap from "../../../../../assets/images/@images_map/path";
+import useLcFilter from "../../../../redux/lightconeFilter/useLcFilter";
 import CombatTypeMap from "../../../../../assets/images/@images_map/combatType";
 import { Path as PathType } from "../../../../types/path";
 import { CombatType as CombatTypeType } from "../../../../types/combatType";
@@ -13,19 +13,18 @@ import { ZH_CN } from "../../../../../locales/zh_cn";
 export default function FilterAction() {
   const [open, setOpen] = useState(false);
 
-  const { charFilter, charFilterSelected, setCharFilterSelected } =
-    useCharFilter();
+  const { lcFilter, lcFilterSelected, setLcFilterSelected } = useLcFilter();
 
-  const charFilterItems = useMemo(
+  const lcFilterItems = useMemo(
     () =>
-      charFilter?.map((item) => ({
+      lcFilter?.map((item) => ({
         value: item.id,
         name: ZH_CN[item.id],
         icon: Path.includes(item.id)
           ? PathMap[item.id as PathType].icon
           : CombatTypeMap[item.id as CombatTypeType].icon,
       })),
-    [charFilter]
+    [lcFilter]
   );
 
   return (
@@ -37,15 +36,15 @@ export default function FilterAction() {
       />
       {open && (
         <FilterPopUp
-          items={charFilterItems!}
-          value={charFilterSelected!}
+          items={lcFilterItems!}
+          value={lcFilterSelected!}
           // @ts-ignore
-          onChange={setCharFilterSelected}
+          onChange={setLcFilterSelected}
           onClose={() => {
             setOpen(false);
           }}
           onReset={() => {
-            setCharFilterSelected([]);
+            setLcFilterSelected([]);
           }}
           onConfirm={() => {
             setOpen(false);
