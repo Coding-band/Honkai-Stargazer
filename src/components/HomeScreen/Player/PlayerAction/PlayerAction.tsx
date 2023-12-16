@@ -5,8 +5,12 @@ import List from "../../../global/List/List";
 import ListItem from "../../../global/List/ListItem";
 import { useClickOutside } from "react-native-click-outside";
 import AccountBinding from "./AccountBinding/AccountBinding";
+import { useNavigation } from "@react-navigation/native";
+import { SCREENS } from "../../../../constant/screens";
 
 export default function PlayerAction() {
+  const navigation = useNavigation();
+
   const [isPress, setIsPress] = useState(false);
   const containerRef = useClickOutside<View>(() => {
     if (isPress) {
@@ -37,7 +41,14 @@ export default function PlayerAction() {
             账号綁定
           </ListItem>
           <ListItem>编辑首页</ListItem>
-          <ListItem>设置</ListItem>
+          <ListItem
+            onPress={() => {
+              // @ts-ignore
+              navigation.navigate(SCREENS.SettingPage.id);
+            }}
+          >
+            设置
+          </ListItem>
         </List>
       </View>
       {isBindingAccount && <AccountBinding />}

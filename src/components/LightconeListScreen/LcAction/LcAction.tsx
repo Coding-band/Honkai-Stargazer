@@ -4,11 +4,8 @@ import OrderAction from "./OrderAction/OrderAction";
 import SearchBtn from "./SearchBtn/SearchBtn";
 import FilterAction from "./FilterAction/FilterAction";
 
-type Props = {
-  onInstallOrderChange?: (order: boolean) => void;
-};
 
-export default function LcAction(props: Props) {
+export default function LcAction() {
   return (
     <View
       className="w-full h-[46px] absolute bottom-0 mb-[37px] z-50"

@@ -102,22 +102,25 @@ export default function LcList() {
 
   return (
     <>
-      <View style={{ width: "100%" }} className="z-30">
-        <ScrollView style={{ padding: 17, paddingBottom: 0 }}>
-          <View
-            style={{
-              paddingVertical: 110,
-              flexDirection: "row",
-              flexWrap: "wrap",
-              gap: 11,
-              justifyContent: "center",
-            }}
-          >
-            {lcCardListJSX}
-          </View>
-        </ScrollView>
-      </View>
-      <LcAction />
+      <ScrollView
+        style={{
+          paddingVertical: 127,
+          paddingHorizontal: 17,
+          paddingBottom: 0,
+        }}
+        className="z-30"
+      >
+        <View
+          style={{
+            flexDirection: "row",
+            flexWrap: "wrap",
+            gap: 11,
+            justifyContent: "center",
+          }}
+        >
+          {lcCardListJSX}
+        </View>
+      </ScrollView>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { ScrollView, View } from "react-native";
 import CharCard from "../../global/CharCard/CharCard";
 import { SCREENS } from "../../../constant/screens";
@@ -8,7 +8,6 @@ import * as images_map from "../../../../assets/images/@images_map/images_map";
 import { CharacterCard, CharacterName } from "../../../types/character";
 import { CombatType } from "../../../types/combatType";
 import { Path } from "../../../types/path";
-import CharAction from "../CharAction/CharAction";
 import useCharSorting from "../../../redux/characterSorting/useCharSorting";
 import { getCharFullData } from "../../../utils/dataMap/getDataFromMap";
 import { getCharAttrData } from "../../../utils/calculator/getAttrData";
@@ -127,23 +126,20 @@ export default function CharList() {
   ]);
 
   return (
-    <>
-      <View style={{ width: "100%" }} className="z-30">
-        <ScrollView style={{ padding: 17, paddingBottom: 0 }}>
-          <View
-            style={{
-              paddingVertical: 110,
-              flexDirection: "row",
-              flexWrap: "wrap",
-              gap: 11,
-              justifyContent: "center",
-            }}
-          >
-            {charCardListJSX}
-          </View>
-        </ScrollView>
+    <ScrollView
+      style={{ paddingVertical: 127, paddingHorizontal: 17, paddingBottom: 0 }}
+      className="z-30"
+    >
+      <View
+        style={{
+          flexDirection: "row",
+          flexWrap: "wrap",
+          gap: 11,
+          justifyContent: "center",
+        }}
+      >
+        {charCardListJSX}
       </View>
-      <CharAction />
-    </>
+    </ScrollView>
   );
 }

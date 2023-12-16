@@ -1,19 +1,14 @@
 import { View } from "react-native";
-import React, { useState } from "react";
-import { ImageBackground } from "expo-image";
+import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
 import { StatusBar } from "expo-status-bar";
 import { SCREENS } from "../constant/screens";
 import LcList from "../components/LightconeListScreen/LcList/LcList";
 import LcAction from "../components/LightconeListScreen/LcAction/LcAction";
-import useWallPaper from "../redux/wallPaper/useWallPaper";
 import WallPaper from "../components/global/WallPaper/WallPaper";
 
 export default function LightconeListScreen() {
-  const { wallPaper } = useWallPaper();
-  const [installOrder, setInstallOrder] = useState(true);
-
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
@@ -27,12 +22,8 @@ export default function LightconeListScreen() {
         {SCREENS.LightconeListPage.name}
       </Header>
       <>
-        <LcList reverse={!installOrder} />
-        <LcAction
-          onInstallOrderChange={(o) => {
-            setInstallOrder(o);
-          }}
-        />
+        <LcList />
+        <LcAction />
       </>
       <LinearGradient
         pointerEvents="none"

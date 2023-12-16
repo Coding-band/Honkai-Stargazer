@@ -1,7 +1,6 @@
 import { View } from "react-native";
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { ImageBackground } from "expo-image";
 import { WebView } from "react-native-webview";
 import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";

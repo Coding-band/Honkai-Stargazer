@@ -4,10 +4,10 @@ import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
-import EpdtList from "../components/ExpeditionScreen/EpdtList/EpdtList";
 import WallPaper from "../components/global/WallPaper/WallPaper";
+import SettingList from "../components/SettingScreen/SettingList/SettingList";
 
-export default function ExpeditionScreen() {
+export default function SettingScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
@@ -17,10 +17,10 @@ export default function ExpeditionScreen() {
         colors={["#00000080", "#00000020"]}
       />
 
-      <Header leftBtn="back" Icon={SCREENS.ExpeditionPage.icon}>
-        {SCREENS.ExpeditionPage.shortName}
+      <Header leftBtn="back" Icon={SCREENS.SettingPage.icon}>
+        {SCREENS.SettingPage.shortName}
       </Header>
-      <EpdtList />
+      <SettingList />
       <LinearGradient
         className="w-full h-[600px] absolute bottom-0"
         colors={["#00000000", "#000000"]}

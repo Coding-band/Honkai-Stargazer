@@ -1,13 +1,12 @@
 import { View } from "react-native";
-import React, { useState } from "react";
-import { ImageBackground } from "expo-image";
+import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
 import { StatusBar } from "expo-status-bar";
-import CharAction from "../components/CharacterListScreen/CharAction/CharAction";
 import { SCREENS } from "../constant/screens";
 import CharList from "../components/CharacterListScreen/CharList/CharList";
 import WallPaper from "../components/global/WallPaper/WallPaper";
+import CharAction from "../components/CharacterListScreen/CharAction/CharAction";
 
 export default function CharacterListScreen() {
   return (
@@ -24,6 +23,7 @@ export default function CharacterListScreen() {
       </Header>
       <>
         <CharList />
+        <CharAction />
       </>
       <LinearGradient
         pointerEvents="none"

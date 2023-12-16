@@ -11,6 +11,7 @@ import LightconeScreen from "../screens/LightconeScreen";
 import LoginScreen from "../screens/LoginScreen";
 import MapScreen from "../screens/MapScreen";
 import ExpeditionScreen from "../screens/ExpeditionScreen";
+import SettingScreen from "../screens/SettingScreen";
 
 export default function Navigation() {
   const Stack = createNativeStackNavigator();
@@ -59,6 +60,11 @@ export default function Navigation() {
         <Stack.Screen
           name={SCREENS.LoginPage.id}
           component={LoginScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.SettingPage.id}
+          component={SettingScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
