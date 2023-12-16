@@ -21,7 +21,7 @@ const Character = {
   },
   "Dan Heng • Imbibitor Lunae": {
     icon: require("../../images/character_icon/dan_heng_il_icon.webp"),
-    imageFull: require("../../images/character_splash/dan_heng_il_splash.webp"),
+    imageFull: require("../../images/character_full/dan_heng_il_full.webp"),
     eidolon1: require("../../images/character_eidolon/dan_heng_il_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/dan_heng_il_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/dan_heng_il_eidolon3.webp"),
@@ -81,7 +81,7 @@ const Character = {
   },
   "Jing Yuan": {
     icon: require("../../images/character_icon/jing_yuan_icon.webp"),
-    imageFull: require("../../images/character_splash/jing_yuan_splash.webp"),
+    imageFull: require("../../images/character_full/jing_yuan_full.webp"),
     eidolon1: require("../../images/character_eidolon/jing_yuan_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/jing_yuan_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/jing_yuan_eidolon3.webp"),
@@ -91,7 +91,7 @@ const Character = {
   },
   Luocha: {
     icon: require("../../images/character_icon/luocha_icon.webp"),
-    imageFull: require("../../images/character_splash/luocha_splash.webp"),
+    imageFull: require("../../images/character_full/luocha_full.webp"),
     eidolon1: require("../../images/character_eidolon/luocha_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/luocha_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/luocha_eidolon3.webp"),
@@ -131,7 +131,7 @@ const Character = {
   },
   Seele: {
     icon: require("../../images/character_icon/seele_icon.webp"),
-    imageFull: require("../../images/character_full/seele_full.png"),
+    imageFull: require("../../images/character_full/seele_full.webp"),
     eidolon1: require("../../images/character_eidolon/seele_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/seele_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/seele_eidolon3.webp"),
@@ -201,7 +201,7 @@ const Character = {
   },
   Guinaifen: {
     icon: require("../../images/character_icon/guinaifen_icon.webp"),
-    imageFull: require("../../images/character_splash/guinaifen_splash.webp"),
+    imageFull: require("../../images/character_full/guinaifen_full.webp"),
     eidolon1: require("../../images/character_eidolon/guinaifen_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/guinaifen_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/guinaifen_eidolon3.webp"),
@@ -211,7 +211,7 @@ const Character = {
   },
   Yukong: {
     icon: require("../../images/character_icon/yukong_icon.webp"),
-    imageFull: require("../../images/character_splash/yukong_splash.webp"),
+    imageFull: require("../../images/character_full/yukong_full.webp"),
     eidolon1: require("../../images/character_eidolon/yukong_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/yukong_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/yukong_eidolon3.webp"),
@@ -251,7 +251,7 @@ const Character = {
   },
   Luka: {
     icon: require("../../images/character_icon/luka_icon.webp"),
-    imageFull: require("../../images/character_splash/luka_splash.webp"),
+    imageFull: require("../../images/character_full/luka_full.webp"),
     eidolon1: require("../../images/character_eidolon/luka_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/luka_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/luka_eidolon3.webp"),
@@ -261,7 +261,7 @@ const Character = {
   },
   Lynx: {
     icon: require("../../images/character_icon/lynx_icon.webp"),
-    imageFull: require("../../images/character_splash/lynx_splash.webp"),
+    imageFull: require("../../images/character_full/lynx_full.webp"),
     eidolon1: require("../../images/character_eidolon/lynx_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/lynx_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/lynx_eidolon3.webp"),
