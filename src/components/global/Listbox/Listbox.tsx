@@ -16,14 +16,13 @@ export default function Listbox(props: Props) {
   const [open, setOpen] = useState(false);
   return (
     <View>
-      <TouchableOpacity activeOpacity={0.65}>
-        <Pressable
-          onPress={() => {
-            setOpen(!open);
-          }}
-        >
-          {props.button}
-        </Pressable>
+      <TouchableOpacity
+        onPress={() => {
+          setOpen(!open);
+        }}
+        activeOpacity={0.65}
+      >
+        {props.button}
       </TouchableOpacity>
       {open && (
         <View
