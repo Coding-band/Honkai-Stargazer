@@ -34,10 +34,9 @@ export default function App() {
     }
   }, []);
   const [fontsLoaded] = useFonts({
-    NotoSansSC: require("./assets/fonts/NotoSansSC-Regular.ttf"),
-    HY55: require("./assets/fonts/HYRunYuan-55W.ttf"),
-    HY65: require("./assets/fonts/HYRunYuan-65W.ttf"),
-    HY75: require("./assets/fonts/HYRunYuan-75W.ttf"),
+    HY55: require("./assets/fonts/MiSans-Regular.ttf"),
+    HY65: require("./assets/fonts/MiSans-Medium.ttf"),
+    HY75: require("./assets/fonts/MiSans-Semibold.ttf"),
   });
 
   const onLayoutRootView = useCallback(async () => {

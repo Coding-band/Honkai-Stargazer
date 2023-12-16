@@ -24,53 +24,68 @@ export default function FilterPopUp(props: Props) {
         content={
           <View className="p-4 pt-0">
             <View className="py-2.5" style={{ flexDirection: "row", gap: 12 }}>
-              {/* 屬性 */}
               <View
                 className="flex-1"
                 style={{
+                  flexDirection: "row",
+                  flexWrap: "wrap",
                   gap: 8,
                 }}
               >
-                {props.items.slice(0, props.items.length / 2).map((item) => (
-                  <FilterItem
-                    key={item.value}
-                    selected={props.value.includes(item.value)}
-                    onClick={() => {
-                      props.onChange(
-                        props.value.includes(item.value)
-                          ? props.value.filter((i) => i !== item.value)
-                          : [...props.value, item.value]
-                      );
-                    }}
-                    icon={item.icon}
-                  >
-                    {item.name}
-                  </FilterItem>
-                ))}
+                {props.items
+                  .slice(
+                    0,
+                    props.items.length % 2 === 0
+                      ? props.items.length / 2
+                      : props.items.length / 2 + 1
+                  )
+                  .map((item) => (
+                    <FilterItem
+                      key={item.value}
+                      selected={props.value.includes(item.value)}
+                      onClick={() => {
+                        props.onChange(
+                          props.value.includes(item.value)
+                            ? props.value.filter((i) => i !== item.value)
+                            : [...props.value, item.value]
+                        );
+                      }}
+                      icon={item.icon}
+                    >
+                      {item.name}
+                    </FilterItem>
+                  ))}
               </View>
-              {/* 命途 */}
               <View
                 className="flex-1"
                 style={{
+                  flexDirection: "row",
+                  flexWrap: "wrap",
                   gap: 8,
                 }}
               >
-                {props.items.slice(props.items.length / 2).map((item) => (
-                  <FilterItem
-                    key={item.value}
-                    selected={props.value.includes(item.value)}
-                    onClick={() => {
-                      props.onChange(
-                        props.value.includes(item.value)
-                          ? props.value.filter((i) => i !== item.value)
-                          : [...props.value, item.value]
-                      );
-                    }}
-                    icon={item.icon}
-                  >
-                    {item.name}
-                  </FilterItem>
-                ))}
+                {props.items
+                  .slice(
+                    props.items.length % 2 === 0
+                      ? props.items.length / 2
+                      : props.items.length / 2 + 1
+                  )
+                  .map((item) => (
+                    <FilterItem
+                      key={item.value}
+                      selected={props.value.includes(item.value)}
+                      onClick={() => {
+                        props.onChange(
+                          props.value.includes(item.value)
+                            ? props.value.filter((i) => i !== item.value)
+                            : [...props.value, item.value]
+                        );
+                      }}
+                      icon={item.icon}
+                    >
+                      {item.name}
+                    </FilterItem>
+                  ))}
               </View>
             </View>
             <View

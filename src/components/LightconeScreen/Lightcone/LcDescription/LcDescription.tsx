@@ -17,7 +17,7 @@ export default function LcDescription() {
 
   return (
     <View style={{ alignItems: "center" }}>
-      <PageHeading Icon={Info}>技能故事</PageHeading>
+      <PageHeading Icon={Info}>技能描述</PageHeading>
       <View className="w-full">
         <Text className="text-text font-[HY65] text-[20px] leading-[40px]">
           {lcFullData.skill.name}

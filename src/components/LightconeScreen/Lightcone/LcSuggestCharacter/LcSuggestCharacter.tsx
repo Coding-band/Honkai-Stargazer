@@ -48,7 +48,7 @@ const testData = [
 export default function LcSuggestCharacter() {
   return (
     <View style={{ alignItems: "center" }}>
-      <PageHeading Icon={Sword}>推荐光锥</PageHeading>
+      <PageHeading Icon={Sword}>推荐角色</PageHeading>
       <ScrollView horizontal>
         <View
           style={{

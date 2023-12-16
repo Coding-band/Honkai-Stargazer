@@ -10,6 +10,8 @@ import Animated, {
 
 type Props = {
   scrollHandler: SharedValue<number>;
+  onLeftClick: () => void;
+  onRightClick: () => void;
 };
 
 export default React.memo(function CharAction(props: Props) {
@@ -38,10 +40,10 @@ export default React.memo(function CharAction(props: Props) {
         },
       ]}
     >
-      <Button width={140} height={46}>
+      <Button onPress={props.onLeftClick} width={140} height={46}>
         <Text className="font-[HY65] text-[16px]">推荐装备</Text>
       </Button>
-      <Button width={140} height={46}>
+      <Button onPress={props.onRightClick} width={140} height={46}>
         <Text className="font-[HY65] text-[16px]">推荐配队</Text>
       </Button>
     </Animated.View>

@@ -10,6 +10,8 @@ import Animated, {
 
 type Props = {
   scrollHandler: SharedValue<number>;
+  onLeftClick?: () => void;
+  onRightClick?: () => void;
 };
 
 export default function LcAction(props: Props) {
@@ -38,7 +40,7 @@ export default function LcAction(props: Props) {
         },
       ]}
     >
-      <Button width={140} height={46}>
+      <Button onPress={props.onLeftClick} width={140} height={46}>
         <Text className="font-[HY65] text-[16px]">推荐角色</Text>
       </Button>
     </Animated.View>

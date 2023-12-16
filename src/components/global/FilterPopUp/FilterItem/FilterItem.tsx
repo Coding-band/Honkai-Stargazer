@@ -31,7 +31,7 @@ export default function FilterItem(props: Props) {
     <TouchableOpacity
       onPress={handlePress}
       activeOpacity={0.65}
-      className="flex-1 h-10 bg-white pl-2 pr-3"
+      className="w-full h-10 bg-white pl-2 pr-3"
       style={{ flexDirection: "row", alignItems: "center", gap: 10 }}
     >
       <Image source={props.icon} className="w-5 h-5" />

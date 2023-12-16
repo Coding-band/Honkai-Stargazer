@@ -17,7 +17,7 @@ export default function PopUpCard(props: Props) {
       className="w-full rounded-[4px] rounded-tr-[24px] overflow-hidden"
     >
       <View
-        className="w-full p-4"
+        className="w-full px-4 py-3"
         style={{
           flexDirection: "row",
           justifyContent: "space-between",

@@ -7,7 +7,7 @@ import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { ParamList } from "../types/navigation";
-import LightconeMain from "../components/LightconeScreen/Lightcone";
+import LightconeMain from "../components/LightconeScreen/Lightcone/Lightcone";
 import { filter } from "lodash";
 import { Lightcone, LightconeName } from "../types/lightcone";
 import LightconeContext from "../context/LightconeContext";
@@ -42,7 +42,7 @@ export default function LightconeScreen() {
     <LightconeContext.Provider value={lcData}>
       <View style={{ flex: 1, backgroundColor: "white" }}>
         <StatusBar style="dark" />
-        <WallPaper   />
+        <WallPaper />
         <LinearGradient
           className="absolute w-full h-full"
           colors={["#00000080", "#00000020"]}

@@ -9,7 +9,7 @@ export default function LcStory() {
   const lcData = useContext(LightconeContext);
   return (
     <View style={{ alignItems: "center" }}>
-      <PageHeading Icon={ChatsCircle}>技能故事</PageHeading>
+      <PageHeading Icon={ChatsCircle}>技能詳情</PageHeading>
       <HtmlText style={{ lineHeight: 24, color: "white", fontFamily: "HY65" }}>
         {lcData?.description || ""}
       </HtmlText>

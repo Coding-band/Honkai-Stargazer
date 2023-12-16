@@ -65,7 +65,16 @@ export default function Lightcone() {
           </View>
         </Animated.ScrollView>
       </View>
-      <LcAction scrollHandler={scrollHandler} />
+      <LcAction
+        onLeftClick={() => {
+          aref?.current?.scrollTo({
+            x: 0,
+            y: 1950,
+            animated: true,
+          });
+        }}
+        scrollHandler={scrollHandler}
+      />
     </View>
   );
 }

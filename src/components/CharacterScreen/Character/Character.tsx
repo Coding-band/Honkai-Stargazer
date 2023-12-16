@@ -71,7 +71,23 @@ export default React.memo(function Character() {
           </View>
         </Animated.ScrollView>
       </View>
-      <CharAction scrollHandler={scrollHandler} />
+      <CharAction
+        onLeftClick={() => {
+          aref?.current?.scrollTo({
+            x: 0,
+            y: 1950,
+            animated: true,
+          });
+        }}
+        onRightClick={() => {
+          aref?.current?.scrollTo({
+            x: 0,
+            y: 3000,
+            animated: true,
+          });
+        }}
+        scrollHandler={scrollHandler}
+      />
     </View>
   );
 });
