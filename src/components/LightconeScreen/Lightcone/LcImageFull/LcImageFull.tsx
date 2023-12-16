@@ -6,7 +6,8 @@ import Animated, {
 } from "react-native-reanimated";
 import { Image } from "expo-image";
 import LightconeContext from "../../../../context/LightconeContext";
-import { Dimensions, Platform } from "react-native";
+import { Dimensions, Platform, View } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
 type Props = {
   scrollHandler: SharedValue<number>;
@@ -34,7 +35,7 @@ export default function LcImageFull(props: Props) {
 
   return (
     <Animated.View style={imageAnimatedStyles}>
-      <Image
+      {/* <Image
         transition={200}
         style={{
           width: Dimensions.get("window").width,
@@ -43,7 +44,21 @@ export default function LcImageFull(props: Props) {
         }}
         source={lcData?.imageFull}
         contentFit={Platform.OS === "android" ? "none" : "contain"}
-      />
+      /> */}
+      <View
+        style={{
+          width: Dimensions.get("window").width,
+          height: (Dimensions.get("window").height * 3) / 5,
+          transform: [{ scale: 0.9 }, { rotate: "5deg" }],
+        }}
+      >
+        <Image
+          transition={200}
+          className="z-40 absolute w-full h-full"
+          source={lcData?.imageFull}
+          contentFit={"contain"}
+        />
+      </View>
     </Animated.View>
   );
 }
