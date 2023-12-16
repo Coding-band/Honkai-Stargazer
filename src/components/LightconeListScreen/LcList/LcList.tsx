@@ -117,6 +117,7 @@ export default function LcList() {
             gap: 11,
             justifyContent: "center",
           }}
+          className="pb-60"
         >
           {lcCardListJSX}
         </View>

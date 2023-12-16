@@ -137,6 +137,7 @@ export default function CharList() {
           gap: 11,
           justifyContent: "center",
         }}
+        className="pb-60"
       >
         {charCardListJSX}
       </View>
