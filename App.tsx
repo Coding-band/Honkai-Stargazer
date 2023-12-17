@@ -13,11 +13,12 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { Provider } from "react-redux";
 import { persistor, store } from "./src/redux/store";
 import { PersistGate } from "redux-persist/integration/react";
+import { RootSiblingParent } from "react-native-root-siblings";
+import TextLanguageProvider from "./src/components/global/TextLanguage/TextLanguageProvider";
+import AppLanguageProvider from "./src/components/global/AppLanguage/AppLanguageProvider";
 
 // import playground for testing
 import "./playground";
-import TextLanguageProvider from "./src/components/global/TextLanguage/TextLanguageProvider";
-import AppLanguageProvider from "./src/components/global/AppLanguage/AppLanguageProvider";
 
 const queryClient = new QueryClient();
 SplashScreen.preventAutoHideAsync();
@@ -56,19 +57,21 @@ export default function App() {
       <PersistGate persistor={persistor}>
         <AppLanguageProvider>
           <TextLanguageProvider>
-            <QueryClientProvider client={queryClient}>
-              <GestureHandlerRootView style={{ flex: 1 }}>
-                <ClickOutsideProvider>
-                  <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-                    {/* <StatusBar hidden /> */}
+            <RootSiblingParent>
+              <QueryClientProvider client={queryClient}>
+                <GestureHandlerRootView style={{ flex: 1 }}>
+                  <ClickOutsideProvider>
+                    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+                      {/* <StatusBar hidden /> */}
 
-                    <FixedProvider>
-                      <Navigation />
-                    </FixedProvider>
-                  </View>
-                </ClickOutsideProvider>
-              </GestureHandlerRootView>
-            </QueryClientProvider>
+                      <FixedProvider>
+                        <Navigation />
+                      </FixedProvider>
+                    </View>
+                  </ClickOutsideProvider>
+                </GestureHandlerRootView>
+              </QueryClientProvider>
+            </RootSiblingParent>
           </TextLanguageProvider>
         </AppLanguageProvider>
       </PersistGate>

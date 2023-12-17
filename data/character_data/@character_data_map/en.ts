@@ -4,7 +4,7 @@ import Hanya from "../en/hanya.json";
 import Jingliu from "../en/jingliu.json";
 import TopazNumby from "../en/topaz.json";
 import Guinaifen from "../en/guinaifen.json";
-import DanHengImbibitorLunae from "../en/danheng.json";
+import DanHengImbibitorLunae from "../en/danhengil.json";
 import FuXuan from "../en/fuxuan.json";
 import Lynx from "../en/lynx.json";
 import Kafka from "../en/kafka.json";

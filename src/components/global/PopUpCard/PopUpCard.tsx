@@ -12,7 +12,7 @@ type Props = {
 export default function PopUpCard(props: Props) {
   return (
     <BlurView
-      intensity={250}
+      intensity={45}
       style={{ backgroundColor: "rgba(243, 249, 255, 0.80)" }}
       className="w-full rounded-[4px] rounded-tr-[24px] overflow-hidden"
     >
