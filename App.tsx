@@ -63,7 +63,6 @@ export default function App() {
                   <ClickOutsideProvider>
                     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
                       {/* <StatusBar hidden /> */}
-
                       <FixedProvider>
                         <Navigation />
                       </FixedProvider>
