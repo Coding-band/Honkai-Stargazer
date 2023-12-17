@@ -16,6 +16,8 @@ import { PersistGate } from "redux-persist/integration/react";
 
 // import playground for testing
 import "./playground";
+import TextLanguageProvider from "./src/components/global/TextLanguage/TextLanguageProvider";
+import AppLanguageProvider from "./src/components/global/AppLanguage/AppLanguageProvider";
 
 const queryClient = new QueryClient();
 SplashScreen.preventAutoHideAsync();
@@ -52,19 +54,23 @@ export default function App() {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-        <QueryClientProvider client={queryClient}>
-          <GestureHandlerRootView style={{ flex: 1 }}>
-            <ClickOutsideProvider>
-              <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-                {/* <StatusBar hidden /> */}
+        <AppLanguageProvider>
+          <TextLanguageProvider>
+            <QueryClientProvider client={queryClient}>
+              <GestureHandlerRootView style={{ flex: 1 }}>
+                <ClickOutsideProvider>
+                  <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+                    {/* <StatusBar hidden /> */}
 
-                <FixedProvider>
-                  <Navigation />
-                </FixedProvider>
-              </View>
-            </ClickOutsideProvider>
-          </GestureHandlerRootView>
-        </QueryClientProvider>
+                    <FixedProvider>
+                      <Navigation />
+                    </FixedProvider>
+                  </View>
+                </ClickOutsideProvider>
+              </GestureHandlerRootView>
+            </QueryClientProvider>
+          </TextLanguageProvider>
+        </AppLanguageProvider>
       </PersistGate>
     </Provider>
   );

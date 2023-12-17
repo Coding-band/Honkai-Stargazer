@@ -9,6 +9,7 @@ import MaterialList from "../../../../global/MaterialList/MaterialList";
 import Sliderbar from "../../../../global/Sliderbar/Sliderbar";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { getCharFullData } from "../../../../../utils/dataMap/getDataFromMap";
+import useCharData from "../../../../../hooks/data/useCharData";
 
 type Props = {
   id: number;
@@ -16,9 +17,8 @@ type Props = {
 };
 
 export default React.memo(function TracePopUp({ id, onClose }: Props) {
-  const charData = useContext(CharacterContext);
-  const charId = charData?.id!;
-  const charFullData = getCharFullData(charId);
+  const { charFullData } = useCharData();
+
   const charSkillGrouping = charFullData?.skillGrouping;
   const charSkill = useMemo(
     () =>
@@ -48,8 +48,12 @@ export default React.memo(function TracePopUp({ id, onClose }: Props) {
             content={
               <View className="px-4 py-[12px]" style={{ gap: 6 }}>
                 <View
-                  className="w-[70px] h-[30px] bg-[#666] rounded-[40px]"
-                  style={{ justifyContent: "center", alignItems: "center" }}
+                  className="px-3 h-[30px] bg-[#666] rounded-[40px]"
+                  style={{
+                    justifyContent: "center",
+                    alignItems: "center",
+                    alignSelf: "flex-start",
+                  }}
                 >
                   <Text className="font-[HY65] text-[14px] text-white">
                     {charSkill.typeDescHash}
@@ -72,7 +76,7 @@ export default React.memo(function TracePopUp({ id, onClose }: Props) {
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
-                    alignItems:"center",
+                    alignItems: "center",
                   }}
                 >
                   <Text className="text-[16px] text-[#222222]">

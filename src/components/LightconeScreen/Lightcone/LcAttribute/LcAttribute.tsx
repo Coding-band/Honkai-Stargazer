@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text } from "react-native";
 import { Info } from "phosphor-react-native";
 import AttrSliderbar from "../../../global/Sliderbar/Sliderbar";
@@ -6,8 +6,8 @@ import { Image } from "expo-image";
 import PageHeading from "../../../global/PageHeading/PageHeading";
 import useDelayLoad from "../../../../hooks/useDelayLoad";
 import MaterialList from "../../../global/MaterialList/MaterialList";
-import LightconeContext from "../../../../context/LightconeContext";
 import { getLcAttrData } from "../../../../utils/calculator/getAttrData";
+import useLcData from "../../../../hooks/data/useLcData";
 
 const HPIcon = require("../../../../../assets/icons/HP.png");
 const STRIcon = require("../../../../../assets/icons/STR.png");
@@ -18,8 +18,7 @@ const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 export default function LcAttribute() {
   const loaded = useDelayLoad(100);
 
-  const lcData = useContext(LightconeContext);
-  const lcId = lcData?.id!;
+  const { lcId } = useLcData();
 
   const [attrFromLevel, setAttrFromLevel] = useState(0);
   const [attrToLevel, setAttrToLevel] = useState(8);

@@ -1,8 +1,11 @@
-import { View, Text, ScrollView } from "react-native";
-import React from "react";
-import { BlurView } from "expo-blur";
+import { View, ScrollView } from "react-native";
+import React, { useState } from "react";
 import SettingGroup from "../SettingGroup/SettingGroup";
-import SettingItem from "../SettingItem/SettingItem";
+import SettingItem from "../SettingGroup/SettingItem/SettingItem";
+import AccountSetting from "./AccountSetting/AccountSetting";
+import LanguageSetting from "./LanguageSetting/LanguageSetting";
+import PersonalSetting from "./PersonalSetting/PersonalSetting";
+import NotificationSetting from "./NotificationSetting/NotificationSetting";
 
 export default function SettingList() {
   return (
@@ -14,33 +17,21 @@ export default function SettingList() {
       }}
       className="z-30 h-screen"
     >
-      <View style={{ gap: 20 }} className="pb-40">
-        <SettingGroup>
-          <SettingItem />
+      <View style={{ gap: 20 }} className="pb-48">
+        <AccountSetting />
+        <LanguageSetting />
+        <PersonalSetting />
+        <NotificationSetting />
+        <SettingGroup title="支持我们">
+          <SettingItem type="navigation" title="捐赠" />
+          <SettingItem type="navigation" title="邀请他人" />
         </SettingGroup>
-        <SettingGroup>
-          <SettingItem />
-          <SettingItem />
+        <SettingGroup title="开发者选项">
+          <SettingItem type="navigation" title="使用Cookies登录" />
         </SettingGroup>
-        <SettingGroup>
-          <SettingItem />
-          <SettingItem />
-          <SettingItem />
-        </SettingGroup>
-        <SettingGroup>
-          <SettingItem />
-          <SettingItem />
-          <SettingItem />
-        </SettingGroup>
-        <SettingGroup>
-          <SettingItem />
-          <SettingItem />
-          <SettingItem />
-        </SettingGroup>
-        <SettingGroup>
-          <SettingItem />
-          <SettingItem />
-          <SettingItem />
+        <SettingGroup title="特別感謝">
+          <SettingItem type="navigation" title="開發人員" />
+          <SettingItem type="navigation" title="開源感謝" />
         </SettingGroup>
       </View>
     </ScrollView>

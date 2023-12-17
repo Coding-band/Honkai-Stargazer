@@ -5,7 +5,7 @@ import { Person } from "phosphor-react-native";
 import CharSuggestTeamCard from "./CharSuggestTeamCard/CharSuggestTeamCard";
 
 import characterList from "../../../../../data/character_data/character_list.json";
-import * as characterListMap from "../../../../../data/character_data/@character_data_map/character_data_map";
+import characterListMap from "../../../../../data/character_data/@character_data_map/character_data_map";
 import * as imagesMap from "../../../../../assets/images/@images_map/images_map";
 
 const testData = [
@@ -13,7 +13,7 @@ const testData = [
     {
       id: "Jing Yuan",
       rare: characterList.filter((char) => char.name === "Jing Yuan")[0].rare,
-      name: characterListMap.ZH_CN["Jing Yuan"].name,
+      name: characterListMap.zh_cn["Jing Yuan"].name,
       image: imagesMap.Chacracter["Jing Yuan"].icon,
       path: characterList.filter((char) => char.name === "Jing Yuan")[0].path,
       combatType: characterList.filter((char) => char.name === "Jing Yuan")[0]
@@ -22,7 +22,7 @@ const testData = [
     {
       id: "Hook",
       rare: characterList.filter((char) => char.name === "Hook")[0].rare,
-      name: characterListMap.ZH_CN["Hook"].name,
+      name: characterListMap.zh_cn["Hook"].name,
       image: imagesMap.Chacracter["Hook"].icon,
       path: characterList.filter((char) => char.name === "Hook")[0].path,
       combatType: characterList.filter((char) => char.name === "Hook")[0]
@@ -31,7 +31,7 @@ const testData = [
     {
       id: "Pela",
       rare: characterList.filter((char) => char.name === "Pela")[0].rare,
-      name: characterListMap.ZH_CN["Pela"].name,
+      name: characterListMap.zh_cn["Pela"].name,
       image: imagesMap.Chacracter["Pela"].icon,
       path: characterList.filter((char) => char.name === "Pela")[0].path,
       combatType: characterList.filter((char) => char.name === "Pela")[0]
@@ -40,7 +40,7 @@ const testData = [
     {
       id: "Seele",
       rare: characterList.filter((char) => char.name === "Seele")[0].rare,
-      name: characterListMap.ZH_CN["Seele"].name,
+      name: characterListMap.zh_cn["Seele"].name,
       image: imagesMap.Chacracter["Seele"].icon,
       path: characterList.filter((char) => char.name === "Seele")[0].path,
       combatType: characterList.filter((char) => char.name === "Seele")[0]
@@ -51,7 +51,7 @@ const testData = [
     {
       id: "March 7th",
       rare: characterList.filter((char) => char.name === "March 7th")[0].rare,
-      name: characterListMap.ZH_CN["March 7th"].name,
+      name: characterListMap.zh_cn["March 7th"].name,
       image: imagesMap.Chacracter["March 7th"].icon,
       path: characterList.filter((char) => char.name === "March 7th")[0].path,
       combatType: characterList.filter((char) => char.name === "March 7th")[0]
@@ -60,7 +60,7 @@ const testData = [
     {
       id: "Serval",
       rare: characterList.filter((char) => char.name === "Serval")[0].rare,
-      name: characterListMap.ZH_CN["Serval"].name,
+      name: characterListMap.zh_cn["Serval"].name,
       image: imagesMap.Chacracter["Serval"].icon,
       path: characterList.filter((char) => char.name === "Serval")[0].path,
       combatType: characterList.filter((char) => char.name === "Serval")[0]
@@ -69,7 +69,7 @@ const testData = [
     {
       id: "Clara",
       rare: characterList.filter((char) => char.name === "Clara")[0].rare,
-      name: characterListMap.ZH_CN["Clara"].name,
+      name: characterListMap.zh_cn["Clara"].name,
       image: imagesMap.Chacracter["Clara"].icon,
       path: characterList.filter((char) => char.name === "Clara")[0].path,
       combatType: characterList.filter((char) => char.name === "Clara")[0]
@@ -78,7 +78,7 @@ const testData = [
     {
       id: "Bailu",
       rare: characterList.filter((char) => char.name === "Bailu")[0].rare,
-      name: characterListMap.ZH_CN["Bailu"].name,
+      name: characterListMap.zh_cn["Bailu"].name,
       image: imagesMap.Chacracter["Bailu"].icon,
       path: characterList.filter((char) => char.name === "Bailu")[0].path,
       combatType: characterList.filter((char) => char.name === "Bailu")[0]

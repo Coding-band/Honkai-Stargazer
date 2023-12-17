@@ -1,15 +1,14 @@
 import { Text, View } from "react-native";
 import React, { useContext, useEffect } from "react";
 import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
-import CharacterContext from "../../../../../context/CharacterContext";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import FixedContext from "../../../../global/Fixed/FixedContext";
 import formatDesc from "../../../../../utils/format/formatDesc";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import { getCharFullData } from "../../../../../utils/dataMap/getDataFromMap";
 import { Shadow } from "react-native-shadow-2";
 import { Image } from "expo-image";
 import CharacterSoul from "../../../../../../assets/images/@images_map/characterSoul";
+import useCharData from "../../../../../hooks/data/useCharData";
 
 type Props = {
   id: number;
@@ -17,9 +16,9 @@ type Props = {
 };
 
 export default React.memo(function EidolonPopUp({ id, onClose }: Props) {
-  const charData = useContext(CharacterContext);
-  const charId = charData?.id!;
-  const charFullData = getCharFullData(charId);
+
+    const { charId, charFullData } = useCharData();
+
   const charEidolonRank = charFullData.ranks?.filter(
     (rank) => rank.id === id
   )[0];

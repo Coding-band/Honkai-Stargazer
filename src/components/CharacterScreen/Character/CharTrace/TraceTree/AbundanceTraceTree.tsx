@@ -37,7 +37,6 @@ export default function AbundanceTraceTree() {
   const skillTreeOuter3Edge1 = skillTreeOuter3.children[0];
   const skillTreeOuter3Edge2 = skillTreeOuter3.children[1];
   const skillTreeOtherEdge1 = skillTrees[3];
-  const skillTreeOtherEdge2 = skillTrees[4];
 
   const [selectedInner, setSelectedInner] = useState(0);
 

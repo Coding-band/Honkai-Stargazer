@@ -5,11 +5,11 @@ import { ChatsCircle } from "phosphor-react-native";
 import CharacterContext from "../../../../context/CharacterContext";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
+import useCharData from "../../../../hooks/data/useCharData";
 
 export default React.memo(function CharStory() {
-  const charData = useContext(CharacterContext);
-  const charId = charData?.id!;
-  const charFullData = getCharFullData(charId);
+  
+  const { charFullData } = useCharData();
 
   return (
     <View style={{ alignItems: "center" }}>

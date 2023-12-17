@@ -18,8 +18,11 @@ import { getCharFullData } from "../utils/dataMap/getDataFromMap";
 import { Path } from "../types/path";
 import { CombatType } from "../types/combatType";
 import WallPaper from "../components/global/WallPaper/WallPaper";
+import useTextLanguage from "../components/global/TextLanguage/useTextLanguage";
 
 export default function CharacterScreen() {
+  const { language: textLanguage } = useTextLanguage();
+
   const route = useRoute<RouteProp<ParamList, "Character">>();
   const charId = route.params.id as CharacterName;
   const charName = route.params.name;
@@ -29,7 +32,7 @@ export default function CharacterScreen() {
 
   useEffect(() => {
     const charDataJson = filter(charList, (char) => char?.name === charId)[0];
-    const charFullData = getCharFullData(charId);
+    const charFullData = getCharFullData(charId, textLanguage);
     setCharData({
       id: charId,
       name: charFullData?.name,

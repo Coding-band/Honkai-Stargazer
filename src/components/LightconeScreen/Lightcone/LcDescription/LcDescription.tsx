@@ -7,12 +7,10 @@ import LightconeContext from "../../../../context/LightconeContext";
 import { getLcFullData } from "../../../../utils/dataMap/getDataFromMap";
 import formatDesc from "../../../../utils/format/formatDesc";
 import { HtmlText } from "@e-mine/react-native-html-text";
+import useLcData from "../../../../hooks/data/useLcData";
 
 export default function LcDescription() {
-  const lcData = useContext(LightconeContext);
-  const lcId = lcData?.id!;
-  const lcFullData = getLcFullData(lcId);
-
+  const { lcFullData } = useLcData();
   const [skillLevel, setSkillLevel] = useState(0);
 
   return (

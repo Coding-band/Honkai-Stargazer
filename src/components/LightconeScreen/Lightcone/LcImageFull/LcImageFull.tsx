@@ -8,6 +8,7 @@ import { Image } from "expo-image";
 import LightconeContext from "../../../../context/LightconeContext";
 import { Dimensions, Platform, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import useLcData from "../../../../hooks/data/useLcData";
 
 type Props = {
   scrollHandler: SharedValue<number>;
@@ -15,7 +16,7 @@ type Props = {
 };
 
 export default function LcImageFull(props: Props) {
-  const lcData = useContext(LightconeContext);
+  const { lcData } = useLcData();
 
   const imageAnimatedStyles = useAnimatedStyle(() => {
     // const height = props.charContainerHeight;

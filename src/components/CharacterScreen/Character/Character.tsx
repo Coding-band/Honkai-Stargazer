@@ -45,15 +45,10 @@ export default React.memo(function Character() {
       className="absolute bottom-0 w-full h-screen z-30"
       style={{ alignItems: "center" }}
     >
-      <View
-        className="z-30"
-        style={{ marginTop: Dimensions.get("window").height / 5 }}
-      >
-        <CharImageFull
-          scrollHandler={scrollHandler}
-          charContainerHeight={containerHeight}
-        />
-      </View>
+      <CharImageFull
+        scrollHandler={scrollHandler}
+        charContainerHeight={containerHeight}
+      />
       <View className="absolute w-full h-full pt-0 pb-0 z-40">
         <Animated.ScrollView ref={aref} style={{ padding: 24 }}>
           <View onLayout={handleLayout}>

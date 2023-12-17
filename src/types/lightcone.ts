@@ -8,7 +8,7 @@ export type Lightcone = {
   imageFull?: ExpoImage;
   rare?: number;
   path?: string;
-  description?: string;
+  pathId?: string;
 };
 
 export type LightconeCard = {

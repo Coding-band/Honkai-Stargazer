@@ -16,9 +16,11 @@ import useCharFilter from "../../../redux/characterFilter/useCharFilter";
 import combatType from "../../../constant/combatType";
 import _ from "lodash";
 import path from "../../../constant/path";
+import useTextLanguage from "../../global/TextLanguage/useTextLanguage";
 
 export default function CharList() {
   const navigation = useNavigation();
+  const { language: textLanguage } = useTextLanguage();
 
   const [charCardListData, setCharCardListData] = useState<CharacterCard[]>();
 
@@ -26,7 +28,7 @@ export default function CharList() {
     setCharCardListData(
       characterList.map((char) => {
         const charId = char.name as CharacterName;
-        const charFullData = getCharFullData(charId);
+        const charFullData = getCharFullData(charId, textLanguage);
         const charAttrData = getCharAttrData(charId, 80);
         return {
           id: charId,

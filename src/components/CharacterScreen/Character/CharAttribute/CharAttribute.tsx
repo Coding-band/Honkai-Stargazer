@@ -7,10 +7,8 @@ import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import useDelayLoad from "../../../../hooks/useDelayLoad";
 import MaterialList from "../../../global/MaterialList/MaterialList";
 import CharacterContext from "../../../../context/CharacterContext";
-import { CharacterName } from "../../../../types/character";
-import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
 import { getCharAttrData } from "../../../../utils/calculator/getAttrData";
-import { getCharMaterialData } from "../../../../utils/calculator/getMaterialData";
+import useCharData from "../../../../hooks/data/useCharData";
 
 const HPIcon = require("../../../../../assets/icons/HP.png");
 const STRIcon = require("../../../../../assets/icons/STR.png");
@@ -24,8 +22,7 @@ const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 export default React.memo(function CharAttribute() {
   const loaded = useDelayLoad(100);
 
-  const charData = useContext(CharacterContext);
-  const charId = charData?.id!;
+  const {charId } = useCharData();
 
   const [attrFromLevel, setAttrFromLevel] = useState(0);
   const [attrToLevel, setAttrToLevel] = useState(8);

@@ -10,9 +10,10 @@ import HarmonyTraceTree from "./TraceTree/HarmonyTraceTree";
 import EruditionTraceTree from "./TraceTree/EruditionTraceTree";
 import AbundanceTraceTree from "./TraceTree/AbundanceTraceTree";
 import PreservationTraceTree from "./TraceTree/PreservationTraceTree";
+import useCharData from "../../../../hooks/data/useCharData";
 
 export default React.memo(function CharTrace() {
-  const charData = useContext(CharacterContext);
+  const { charData } = useCharData();
   const charPathId = charData?.pathId;
 
   return (

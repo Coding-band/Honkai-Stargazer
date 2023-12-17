@@ -2,23 +2,21 @@ import React, { useEffect, useMemo, useState } from "react";
 import { ScrollView, View } from "react-native";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
-
 import lightconeList from "../../../../data/lightcone_data/lightcone_list.json";
-import * as lightconeListMap from "../../../../data/lightcone_data/@lightcone_data_map/lightcone_data_map";
 import * as images_map from "../../../../assets/images/@images_map/images_map";
 import { LightconeCard, LightconeName } from "../../../types/lightcone";
 import LightConeCard from "../../global/LightConeCard/LightConeCard";
 import { Path } from "../../../types/path";
 import { getLcFullData } from "../../../utils/dataMap/getDataFromMap";
 import { getLcAttrData } from "../../../utils/calculator/getAttrData";
-import { CombatType } from "../../../types/combatType";
 import useLcSorting from "../../../redux/lightconeSorting/useLcSorting";
 import useLcSortingReverse from "../../../redux/lightconeSortingReverse/useLcSortingReverse";
 import useLcFilter from "../../../redux/lightconeFilter/useLcFilter";
-import LcAction from "../LcAction/LcAction";
+import useTextLanguage from "../../global/TextLanguage/useTextLanguage";
 
 export default function LcList() {
   const navigation = useNavigation();
+  const { language: textLanguage } = useTextLanguage();
 
   const [lcCardListData, setLcCardListData] = useState<LightconeCard[]>();
 
@@ -26,7 +24,7 @@ export default function LcList() {
     setLcCardListData(
       lightconeList.map((lc) => {
         const lcId = lc.name as LightconeName;
-        const lcFullData = getLcFullData(lcId);
+        const lcFullData = getLcFullData(lcId, textLanguage);
         const lcAttrData = getLcAttrData(lcId, 80);
         return {
           id: lcId,

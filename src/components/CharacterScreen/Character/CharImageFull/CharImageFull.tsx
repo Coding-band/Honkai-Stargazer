@@ -7,6 +7,7 @@ import Animated, {
 import { Image } from "expo-image";
 import CharacterContext from "../../../../context/CharacterContext";
 import { Dimensions, Platform } from "react-native";
+import useCharData from "../../../../hooks/data/useCharData";
 
 type Props = {
   scrollHandler: SharedValue<number>;
@@ -14,7 +15,8 @@ type Props = {
 };
 
 export default React.memo(function CharImageFull(props: Props) {
-  const charData = useContext(CharacterContext);
+ 
+  const {charData}=useCharData();
 
   const imageAnimatedStyles = useAnimatedStyle(() => {
     // const height = props.charContainerHeight;
@@ -33,16 +35,22 @@ export default React.memo(function CharImageFull(props: Props) {
   });
 
   return (
-    <Animated.View style={imageAnimatedStyles}>
+    <Animated.View
+      className="z-30"
+      style={{
+        ...imageAnimatedStyles,
+      }}
+    >
       <Image
         transition={200}
         style={{
           width: Dimensions.get("window").width,
           height: (Dimensions.get("window").height * 3) / 4,
+          marginTop: (Dimensions.get("window").height * 1) / 4 - 60,
           transform: [{ scale: Platform.OS === "android" ? 1.2 : 1 }],
         }}
         source={charData?.imageFull}
-        contentFit={Platform.OS === "android" ? "none" : "contain"}
+        contentFit={"contain"}
       />
     </Animated.View>
   );

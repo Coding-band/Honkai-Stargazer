@@ -14,8 +14,11 @@ import lcList from "../../data/lightcone_data/lightcone_list.json";
 import * as imagesMap from "../../assets/images/@images_map/images_map";
 import { getLcFullData } from "../utils/dataMap/getDataFromMap";
 import WallPaper from "../components/global/WallPaper/WallPaper";
+import useTextLanguage from "../components/global/TextLanguage/useTextLanguage";
 
 export default function LightconeScreen() {
+  const { language: textLanguage } = useTextLanguage();
+
   const route = useRoute<RouteProp<ParamList, "Lightcone">>();
   const lcId = route.params.id as LightconeName;
   const lcName = route.params.name;
@@ -25,14 +28,14 @@ export default function LightconeScreen() {
 
   useEffect(() => {
     const lcDataJson = filter(lcList, (lc) => lc?.name === lcId)[0];
-    const lcFullData = getLcFullData(lcId);
+    const lcFullData = getLcFullData(lcId, textLanguage);
     setLcData({
       id: lcId,
       name: lcFullData?.name,
       rare: lcDataJson?.rare,
       path: lcFullData?.baseType?.name,
+      pathId: lcDataJson.path,
       imageFull: imagesMap.Lightcone[lcId]?.imageFull,
-      description: lcFullData?.descHash,
     });
     setShowMain(true);
   }, []);

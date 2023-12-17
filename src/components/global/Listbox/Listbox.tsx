@@ -1,19 +1,32 @@
-import { View, Text, Pressable } from "react-native";
-import React, { useState } from "react";
+import { View } from "react-native";
+import React, { useLayoutEffect, useState } from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Shadow } from "react-native-shadow-2";
-import { cn } from "../../../utils/css/cn";
+
 import ListboxItem from "./ListboxItem/ListboxItem";
+import { useClickOutside } from "react-native-click-outside";
 
 type Props = {
   button: React.ReactNode;
-  value: any;
-  onChange: (v: any) => void;
+  value?: any;
+  onChange?: (v: any) => void;
+  onOpen?: (v: boolean) => void;
   children: any[];
+  top?: number;
+  bottom?: number;
 };
 
 export default function Listbox(props: Props) {
   const [open, setOpen] = useState(false);
+
+  useLayoutEffect(() => {
+    props.onOpen && props.onOpen(open);
+  }, [open]);
+
+  const ref = useClickOutside<View>(() => {
+    setOpen(false);
+  });
+
   return (
     <View>
       <TouchableOpacity
@@ -26,11 +39,14 @@ export default function Listbox(props: Props) {
       </TouchableOpacity>
       {open && (
         <View
-          className="absolute bottom-[46px] w-full bg-[#DDDDDD]"
+          ref={ref}
+          className="absolute w-full bg-[#DDDDDD]"
           style={{
             shadowColor: "#00000025",
             shadowOffset: { width: 0, height: 4 },
             elevation: 16,
+            top: props.top,
+            bottom: props.bottom,
           }}
         >
           {props.children.map((listboxitem) => (
@@ -39,7 +55,7 @@ export default function Listbox(props: Props) {
               onPress={() => {
                 setOpen(false);
                 setTimeout(() => {
-                  props.onChange(listboxitem.props.value);
+                  props.onChange && props.onChange(listboxitem.props.value);
                 });
               }}
               selected={props.value === listboxitem.props.value}

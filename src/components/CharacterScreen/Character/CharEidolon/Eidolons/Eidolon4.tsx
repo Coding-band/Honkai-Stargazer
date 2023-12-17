@@ -5,6 +5,7 @@ import CharacterContext from "../../../../../context/CharacterContext";
 import { Chacracter } from "../../../../../../assets/images/@images_map/images_map";
 import { CharacterName } from "../../../../../types/character";
 import { animated, useSpring } from "@react-spring/native";
+import useCharData from "../../../../../hooks/data/useCharData";
 
 const eidolonBorder4 = require("../../../../../../assets/images/character_eidolon_border/eidolon_border_4.svg");
 
@@ -15,8 +16,8 @@ export default function Eidolon4({
   selected: boolean;
   onPress: (e: GestureResponderEvent) => void;
 }) {
-  const charData = useContext(CharacterContext);
-  const charEidolon4 = Chacracter[charData?.id as CharacterName]?.eidolon4;
+  const { charId } = useCharData();
+  const charEidolon4 = Chacracter[charId]?.eidolon4;
 
   const animation = useSpring({
     opacity: selected ? 1 : 0,
