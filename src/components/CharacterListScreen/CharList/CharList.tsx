@@ -59,7 +59,16 @@ export default function CharList() {
       const sortStrategies = {
         rare: (data: Data) => data?.slice()?.sort((a, b) => b.rare - a.rare),
         // @ts-ignore
-        name: (data: Data) => data?.slice()?.sort((a, b) => b.id < a.id),
+        name: (data: Data) =>
+          data?.slice()?.sort((a, b) => {
+            if (a.id < b.id) {
+              return -1;
+            }
+            if (a.id > b.id) {
+              return 1;
+            }
+            return 0;
+          }),
         atk: (data: Data) => data?.slice()?.sort((a, b) => b.atk - a.atk),
         def: (data: Data) => data?.slice()?.sort((a, b) => b.def - a.def),
         hp: (data: Data) => data?.slice()?.sort((a, b) => b.hp - a.hp),
