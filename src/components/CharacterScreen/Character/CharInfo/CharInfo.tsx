@@ -12,15 +12,29 @@ export default React.memo(function CharInfo() {
   return (
     <View
       style={{
-        paddingTop: Dimensions.get("window").height - 234,
+        paddingTop: Dimensions.get("window").height - 244,
         gap: 8,
       }}
     >
       <View style={{ gap: 12 }}>
-        <Text className="text-[32px] font-[HY65] text-white">
+        <Text
+          className="text-[32px] font-[HY65] text-white"
+          style={{
+            textShadowOffset: { width: 0, height: 4 },
+            textShadowColor: "#00000025",
+            textShadowRadius: 4,
+          }}
+        >
           {charData?.name}
         </Text>
-        <CharStars count={charData?.rare || 5} />
+        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+          <CharStars count={charData?.rare || 5} />
+          <View>
+            <Text className="text-[16px] text-white font-[HY65]">
+              {charData?.location}
+            </Text>
+          </View>
+        </View>
       </View>
       <View
         style={{
@@ -50,11 +64,6 @@ export default React.memo(function CharInfo() {
               {charData?.combatType}
             </Text>
           </View>
-        </View>
-        <View>
-          <Text className="text-[16px] text-white font-[HY65]">
-            {charData?.location}
-          </Text>
         </View>
       </View>
     </View>

@@ -18,7 +18,7 @@ export default function SettingScreen() {
       />
 
       <Header leftBtn="back" Icon={SCREENS.SettingPage.icon}>
-        {SCREENS.SettingPage.shortName}
+        {SCREENS.SettingPage.name}
       </Header>
       <SettingList />
       <LinearGradient
