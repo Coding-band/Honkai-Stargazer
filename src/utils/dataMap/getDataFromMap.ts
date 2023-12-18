@@ -1,5 +1,5 @@
-import charDataMap from "../../../data/character_data/@character_data_map/character_data_map";
-import lcDataMap from "../../../data/lightcone_data/@lightcone_data_map/lightcone_data_map";
+import charDataMap from "../../../map/character_data_map";
+import lcDataMap from "../../../map/lightcone_data_map";
 import { CharacterName } from "../../types/character";
 import { LightconeName } from "../../types/lightcone";
 import { Language } from "../../types/language";

@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 import Button from "../../../../../global/Button/Button";
 import { HtmlText } from "@e-mine/react-native-html-text";
-import loginPolicyText from "../../../../../../../data/login_policy.json";
+import loginPolicyText from "../../../../../../../data/sg_policy/login_policy.json";
 
 type Props = {
   onAcceptPolicy: () => void;

@@ -9,12 +9,12 @@ import { ParamList } from "../types/navigation";
 import LightconeMain from "../components/LightconeScreen/Lightcone/Lightcone";
 import { filter } from "lodash";
 import { Lightcone, LightconeName } from "../types/lightcone";
-import LightconeContext from "../context/LightconeContext";
+import LightconeContext from "../context/LightconeData/LightconeContext";
 import lcList from "../../data/lightcone_data/lightcone_list.json";
 import * as imagesMap from "../../assets/images/@images_map/images_map";
 import { getLcFullData } from "../utils/dataMap/getDataFromMap";
 import WallPaper from "../components/global/WallPaper/WallPaper";
-import useTextLanguage from "../components/global/TextLanguage/useTextLanguage";
+import useTextLanguage from "../context/TextLanguage/useTextLanguage";
 
 export default function LightconeScreen() {
   const { language: textLanguage } = useTextLanguage();

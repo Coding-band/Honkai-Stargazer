@@ -1,8 +1,8 @@
 import React from "react";
 import SettingGroup from "../../SettingGroup/SettingGroup";
 import SettingItem from "../../SettingGroup/SettingItem/SettingItem";
-import useTextLanguage from "../../../global/TextLanguage/useTextLanguage";
-import useAppLanguage from "../../../global/AppLanguage/useAppLanguage";
+import useTextLanguage from "../../../../context/TextLanguage/useTextLanguage";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
 import {
   AppLanguage,
   Language,
@@ -26,8 +26,6 @@ export default function LanguageSetting() {
 
   const { language: appLanguage, setLanguage: setAppLanguage } =
     useAppLanguage();
-
-    console.log(setAppLanguage);
 
   return (
     <SettingGroup title="語言設置">

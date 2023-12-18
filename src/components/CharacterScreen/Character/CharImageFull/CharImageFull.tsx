@@ -5,9 +5,9 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 import { Image } from "expo-image";
-import CharacterContext from "../../../../context/CharacterContext";
+import CharacterContext from "../../../../context/CharacterData/CharacterContext";
 import { Dimensions, Platform } from "react-native";
-import useCharData from "../../../../hooks/data/useCharData";
+import useCharData from "../../../../context/CharacterData/useCharData";
 
 type Props = {
   scrollHandler: SharedValue<number>;

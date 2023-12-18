@@ -1,7 +1,7 @@
 import { View, Text, Pressable } from "react-native";
 import React, { useContext, useState } from "react";
 import useDelayLoad from "../../../../../hooks/useDelayLoad";
-import CharacterContext from "../../../../../context/CharacterContext";
+import CharacterContext from "../../../../../context/CharacterData/CharacterContext";
 import { getCharFullData } from "../../../../../utils/dataMap/getDataFromMap";
 import { useClickOutside } from "react-native-click-outside";
 import { Image } from "expo-image";

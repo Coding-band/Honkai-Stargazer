@@ -2,7 +2,7 @@ import { Sword } from "phosphor-react-native";
 import PageHeading from "../../../global/PageHeading/PageHeading";
 import { ScrollView, View } from "react-native";
 import characterList from "../../../../../data/character_data/character_list.json";
-import characterListMap from "../../../../../data/character_data/@character_data_map/character_data_map";
+import characterListMap from "../../../../../map/character_data_map";
 import * as imagesMap from "../../../../../assets/images/@images_map/images_map";
 import LcSuggestCharacterCard from "./LcSuggestCharacterCard/LcSuggestCharacterCard";
 

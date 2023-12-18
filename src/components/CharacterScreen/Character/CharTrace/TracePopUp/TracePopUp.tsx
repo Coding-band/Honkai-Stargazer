@@ -1,7 +1,7 @@
 import { Text, View } from "react-native";
 import React, { useContext, useEffect, useMemo, useState } from "react";
 import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
-import CharacterContext from "../../../../../context/CharacterContext";
+import CharacterContext from "../../../../../context/CharacterData/CharacterContext";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import FixedContext from "../../../../global/Fixed/FixedContext";
 import formatDesc from "../../../../../utils/format/formatDesc";
@@ -9,7 +9,7 @@ import MaterialList from "../../../../global/MaterialList/MaterialList";
 import Sliderbar from "../../../../global/Sliderbar/Sliderbar";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { getCharFullData } from "../../../../../utils/dataMap/getDataFromMap";
-import useCharData from "../../../../../hooks/data/useCharData";
+import useCharData from "../../../../../context/CharacterData/useCharData";
 
 type Props = {
   id: number;

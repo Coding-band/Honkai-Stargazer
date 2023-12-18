@@ -3,11 +3,11 @@ import React, { useContext, useState } from "react";
 import PageHeading from "../../../global/PageHeading/PageHeading";
 import { Info } from "phosphor-react-native";
 import Sliderbar from "../../../global/Sliderbar/Sliderbar";
-import LightconeContext from "../../../../context/LightconeContext";
+import LightconeContext from "../../../../context/LightconeData/LightconeContext";
 import { getLcFullData } from "../../../../utils/dataMap/getDataFromMap";
 import formatDesc from "../../../../utils/format/formatDesc";
 import { HtmlText } from "@e-mine/react-native-html-text";
-import useLcData from "../../../../hooks/data/useLcData";
+import useLcData from "../../../../context/LightconeData/useLcData";
 
 export default function LcDescription() {
   const { lcFullData } = useLcData();

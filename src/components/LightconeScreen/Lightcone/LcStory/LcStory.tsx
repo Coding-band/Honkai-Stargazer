@@ -3,8 +3,8 @@ import React, { useContext } from "react";
 import PageHeading from "../../../global/PageHeading/PageHeading";
 import { ChatsCircle } from "phosphor-react-native";
 import { HtmlText } from "@e-mine/react-native-html-text";
-import LightconeContext from "../../../../context/LightconeContext";
-import useLcData from "../../../../hooks/data/useLcData";
+import LightconeContext from "../../../../context/LightconeData/LightconeContext";
+import useLcData from "../../../../context/LightconeData/useLcData";
 
 export default function LcStory() {
   const { lcFullData } = useLcData();

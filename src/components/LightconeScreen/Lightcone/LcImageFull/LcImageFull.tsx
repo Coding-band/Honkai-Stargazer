@@ -5,10 +5,10 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 import { Image } from "expo-image";
-import LightconeContext from "../../../../context/LightconeContext";
+import LightconeContext from "../../../../context/LightconeData/LightconeContext";
 import { Dimensions, Platform, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import useLcData from "../../../../hooks/data/useLcData";
+import useLcData from "../../../../context/LightconeData/useLcData";
 
 type Props = {
   scrollHandler: SharedValue<number>;

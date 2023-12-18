@@ -3,14 +3,14 @@ import React, { useContext } from "react";
 import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { TreeStructure } from "phosphor-react-native";
 import HuntTraceTree from "./TraceTree/HuntTraceTree";
-import CharacterContext from "../../../../context/CharacterContext";
+import CharacterContext from "../../../../context/CharacterData/CharacterContext";
 import Path from "../../../../constant/path";
 import DestructionTraceTree from "./TraceTree/DestructionTraceTree";
 import HarmonyTraceTree from "./TraceTree/HarmonyTraceTree";
 import EruditionTraceTree from "./TraceTree/EruditionTraceTree";
 import AbundanceTraceTree from "./TraceTree/AbundanceTraceTree";
 import PreservationTraceTree from "./TraceTree/PreservationTraceTree";
-import useCharData from "../../../../hooks/data/useCharData";
+import useCharData from "../../../../context/CharacterData/useCharData";
 
 export default React.memo(function CharTrace() {
   const { charData } = useCharData();

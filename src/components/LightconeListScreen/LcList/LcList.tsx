@@ -12,7 +12,7 @@ import { getLcAttrData } from "../../../utils/calculator/getAttrData";
 import useLcSorting from "../../../redux/lightconeSorting/useLcSorting";
 import useLcSortingReverse from "../../../redux/lightconeSortingReverse/useLcSortingReverse";
 import useLcFilter from "../../../redux/lightconeFilter/useLcFilter";
-import useTextLanguage from "../../global/TextLanguage/useTextLanguage";
+import useTextLanguage from "../../../context/TextLanguage/useTextLanguage";
 
 export default function LcList() {
   const navigation = useNavigation();

@@ -1,6 +1,6 @@
 import { View, Text, Pressable } from "react-native";
 import React, { useContext, useState } from "react";
-import CharacterContext from "../../../../../context/CharacterContext";
+import CharacterContext from "../../../../../context/CharacterData/CharacterContext";
 import { getCharFullData } from "../../../../../utils/dataMap/getDataFromMap";
 import { Image } from "expo-image";
 import { useClickOutside } from "react-native-click-outside";

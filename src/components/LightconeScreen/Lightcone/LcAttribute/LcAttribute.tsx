@@ -7,7 +7,7 @@ import PageHeading from "../../../global/PageHeading/PageHeading";
 import useDelayLoad from "../../../../hooks/useDelayLoad";
 import MaterialList from "../../../global/MaterialList/MaterialList";
 import { getLcAttrData } from "../../../../utils/calculator/getAttrData";
-import useLcData from "../../../../hooks/data/useLcData";
+import useLcData from "../../../../context/LightconeData/useLcData";
 
 const HPIcon = require("../../../../../assets/icons/HP.png");
 const STRIcon = require("../../../../../assets/icons/STR.png");

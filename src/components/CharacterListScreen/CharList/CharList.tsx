@@ -16,7 +16,7 @@ import useCharFilter from "../../../redux/characterFilter/useCharFilter";
 import combatType from "../../../constant/combatType";
 import _ from "lodash";
 import path from "../../../constant/path";
-import useTextLanguage from "../../global/TextLanguage/useTextLanguage";
+import useTextLanguage from "../../../context/TextLanguage/useTextLanguage";
 
 export default function CharList() {
   const navigation = useNavigation();

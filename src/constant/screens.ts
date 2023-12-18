@@ -62,4 +62,10 @@ export const SCREENS = {
     shortName: "设置",
     icon: SlidersHorizontal,
   },
+  WallPaperPage: {
+    id: "WallPaper",
+    name: "更换壁纸",
+    shortName: "壁纸",
+    icon: SlidersHorizontal,
+  },
 };

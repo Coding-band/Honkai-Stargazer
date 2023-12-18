@@ -4,8 +4,8 @@ import LcStars from "../../../global/PageStars/PageStars";
 import { Image } from "expo-image";
 import Path from "../../../../../assets/images/@images_map/path";
 import CombatType from "../../../../../assets/images/@images_map/combatType";
-import LightconeContext from "../../../../context/LightconeContext";
-import useLcData from "../../../../hooks/data/useLcData";
+import LightconeContext from "../../../../context/LightconeData/LightconeContext";
+import useLcData from "../../../../context/LightconeData/useLcData";
 
 export default function LcInfo() {
   const { lcData } = useLcData();

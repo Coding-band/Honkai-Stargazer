@@ -6,9 +6,9 @@ import { Image } from "expo-image";
 import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import useDelayLoad from "../../../../hooks/useDelayLoad";
 import MaterialList from "../../../global/MaterialList/MaterialList";
-import CharacterContext from "../../../../context/CharacterContext";
+import CharacterContext from "../../../../context/CharacterData/CharacterContext";
 import { getCharAttrData } from "../../../../utils/calculator/getAttrData";
-import useCharData from "../../../../hooks/data/useCharData";
+import useCharData from "../../../../context/CharacterData/useCharData";
 
 const HPIcon = require("../../../../../assets/icons/HP.png");
 const STRIcon = require("../../../../../assets/icons/STR.png");

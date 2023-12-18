@@ -12,6 +12,7 @@ import LoginScreen from "../screens/LoginScreen";
 import MapScreen from "../screens/MapScreen";
 import ExpeditionScreen from "../screens/ExpeditionScreen";
 import SettingScreen from "../screens/SettingScreen";
+import WallPaperScreen from "../screens/WallPaperScreen";
 
 export default function Navigation() {
   const Stack = createNativeStackNavigator();
@@ -65,6 +66,11 @@ export default function Navigation() {
         <Stack.Screen
           name={SCREENS.SettingPage.id}
           component={SettingScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.WallPaperPage.id}
+          component={WallPaperScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
