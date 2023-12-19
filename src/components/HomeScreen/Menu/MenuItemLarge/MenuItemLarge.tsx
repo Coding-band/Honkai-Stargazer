@@ -72,7 +72,7 @@ export default function MenuItemLarge({
                 </View>
               </View>
             </View>,
-            Platform.OS === "ios"
+            Platform.OS !== "android"
           )}
         </View>
       </TouchableOpacity>

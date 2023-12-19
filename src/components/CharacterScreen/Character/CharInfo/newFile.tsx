@@ -2,8 +2,8 @@ import { View, Text, Dimensions } from "react-native";
 import React from "react";
 import CharStars from "../../../global/PageStars/PageStars";
 import { Image } from "expo-image";
-import Path from "../../../../../assets/images/@images_map/path";
-import CombatType from "../../../../../assets/images/@images_map/combatType";
+import Path from "../../../../../assets/images/images_map/path";
+import CombatType from "../../../../../assets/images/images_map/combatType";
 import useCharData from "../../../../context/CharacterData/useCharData";
 
 export default React.memo(function CharInfo() {

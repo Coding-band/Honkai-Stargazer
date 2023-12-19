@@ -2,7 +2,7 @@ import { GestureResponderEvent, Pressable } from "react-native";
 import React, { useContext } from "react";
 import { Image } from "expo-image";
 import CharacterContext from "../../../../../context/CharacterData/CharacterContext";
-import { Chacracter } from "../../../../../../assets/images/@images_map/images_map";
+import { Chacracter } from "../../../../../../assets/images/images_map";
 import { CharacterName } from "../../../../../types/character";
 import { animated, useSpring } from "@react-spring/native";
 import useCharData from "../../../../../context/CharacterData/useCharData";
@@ -16,7 +16,6 @@ export default function Eidolon6({
   selected: boolean;
   onPress: (e: GestureResponderEvent) => void;
 }) {
-
   const { charId } = useCharData();
   const charEidolon6 = Chacracter[charId]?.eidolon6;
 

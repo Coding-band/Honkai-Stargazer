@@ -4,7 +4,7 @@ import CharCard from "../../global/CharCard/CharCard";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
 import characterList from "../../../../data/character_data/character_list.json";
-import * as images_map from "../../../../assets/images/@images_map/images_map";
+import * as images_map from "../../../../assets/images/images_map";
 import { CharacterCard, CharacterName } from "../../../types/character";
 import { CombatType } from "../../../types/combatType";
 import { Path } from "../../../types/path";
@@ -17,6 +17,7 @@ import combatType from "../../../constant/combatType";
 import _ from "lodash";
 import path from "../../../constant/path";
 import useTextLanguage from "../../../context/TextLanguage/useTextLanguage";
+import useCharacterSearch from "../../../redux/characterSearch/useCharacterSearch";
 
 export default function CharList() {
   const navigation = useNavigation();
@@ -50,6 +51,7 @@ export default function CharList() {
   const { charSorting } = useCharSorting();
   const { charSortingReverse } = useCharSortingReverse();
   const { charFilterSelected } = useCharFilter();
+  const { searchValue } = useCharacterSearch();
 
   const charCardListJSX = useMemo(() => {
     const sortData = (charCardListData: CharacterCard[] | undefined) => {
@@ -81,7 +83,7 @@ export default function CharList() {
 
       //* 反轉
       if (charSortingReverse) {
-        sortedData?.reverse();
+        sortedData = sortedData?.slice()?.reverse();
       }
 
       //* 過濾
@@ -111,6 +113,14 @@ export default function CharList() {
         );
       }
 
+      //* 搜尋
+
+      if (searchValue) {
+        sortedData = sortedData?.filter((data) =>
+          data.name.includes(searchValue)
+        );
+      }
+
       return sortedData;
     };
 
@@ -133,6 +143,7 @@ export default function CharList() {
     charCardListData,
     charSortingReverse,
     charFilterSelected,
+    searchValue,
     charSorting?.id,
   ]);
 

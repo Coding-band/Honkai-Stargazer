@@ -1,7 +1,7 @@
 import { View } from "react-native";
 import React from "react";
 import { Image } from "expo-image";
-import * as ImagesMap from "../../../../assets/images/@images_map/images_map";
+import * as ImagesMap from "../../../../assets/images/images_map";
 import { Path } from "../../../types/path";
 
 export default function PathCardIcon({ value }: { value: Path }) {

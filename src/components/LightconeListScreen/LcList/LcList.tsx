@@ -3,7 +3,7 @@ import { ScrollView, View } from "react-native";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
 import lightconeList from "../../../../data/lightcone_data/lightcone_list.json";
-import * as images_map from "../../../../assets/images/@images_map/images_map";
+import * as images_map from "../../../../assets/images/images_map";
 import { LightconeCard, LightconeName } from "../../../types/lightcone";
 import LightConeCard from "../../global/LightConeCard/LightConeCard";
 import { Path } from "../../../types/path";
@@ -13,6 +13,7 @@ import useLcSorting from "../../../redux/lightconeSorting/useLcSorting";
 import useLcSortingReverse from "../../../redux/lightconeSortingReverse/useLcSortingReverse";
 import useLcFilter from "../../../redux/lightconeFilter/useLcFilter";
 import useTextLanguage from "../../../context/TextLanguage/useTextLanguage";
+import useLightconeSearch from "../../../redux/lightconeSearch/useLightconeSearch";
 
 export default function LcList() {
   const navigation = useNavigation();
@@ -44,6 +45,7 @@ export default function LcList() {
   const { lcSorting } = useLcSorting();
   const { lcSortingReverse } = useLcSortingReverse();
   const { lcFilterSelected } = useLcFilter();
+  const { searchValue } = useLightconeSearch();
 
   const lcCardListJSX = useMemo(() => {
     const sortData = (lcCardListData: LightconeCard[] | undefined) => {
@@ -72,7 +74,7 @@ export default function LcList() {
 
       //* 反轉
       if (lcSortingReverse) {
-        sortedData?.reverse();
+        sortedData = sortedData?.slice()?.reverse();
       }
 
       //* 過濾
@@ -84,6 +86,14 @@ export default function LcList() {
       else {
         sortedData = sortedData?.filter((data) =>
           lcFilterSelected?.includes(data.path)
+        );
+      }
+
+      //* 搜尋
+
+      if (searchValue) {
+        sortedData = sortedData?.filter((data) =>
+          data.name.includes(searchValue)
         );
       }
 
@@ -105,7 +115,13 @@ export default function LcList() {
         {...item}
       />
     ));
-  }, [lcCardListData, lcSortingReverse, lcFilterSelected, lcSorting?.id]);
+  }, [
+    lcCardListData,
+    lcSortingReverse,
+    lcFilterSelected,
+    searchValue,
+    lcSorting?.id,
+  ]);
 
   return (
     <>

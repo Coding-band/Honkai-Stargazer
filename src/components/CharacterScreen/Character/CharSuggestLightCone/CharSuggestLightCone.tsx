@@ -4,7 +4,7 @@ import { ScrollView, View } from "react-native";
 import CharSuggestLightConeCard from "./CharSuggestLightConeCard/CharSuggestLightConeCard";
 import lightconeList from "../../../../../data/lightcone_data/lightcone_list.json";
 import lightconeListMap from "../../../../../map/lightcone_data_map";
-import * as imagesMap from "../../../../../assets/images/@images_map/images_map";
+import * as imagesMap from "../../../../../assets/images/images_map";
 import React from "react";
 
 const testData = [

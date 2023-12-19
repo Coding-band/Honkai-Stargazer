@@ -1,5 +1,12 @@
 import React from "react";
-import { DimensionValue, Text, TouchableOpacity, View } from "react-native";
+import {
+  DimensionValue,
+  StyleProp,
+  Text,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from "react-native";
 import { GestureResponderEvent } from "react-native-modal";
 import { Shadow } from "react-native-shadow-2";
 
@@ -10,6 +17,7 @@ export default function Button({
   onPress,
   hasShadow = true,
   disable = false,
+  style,
 }: {
   children: any;
   width: DimensionValue;
@@ -17,18 +25,22 @@ export default function Button({
   onPress?: (e: GestureResponderEvent) => void;
   hasShadow?: boolean;
   disable?: boolean;
+  style?: StyleProp<ViewStyle>;
 }) {
   return disable ? (
     hasShadow ? (
       <Shadow offset={[0, 4]}>
         <View
           className="bg-[#dddddd] rounded-[49px] p-[3px]"
-          style={{
-            width,
-            height,
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          style={[
+            {
+              width,
+              height,
+              justifyContent: "center",
+              alignItems: "center",
+            },
+            style,
+          ]}
         >
           <View
             className="rounded-[49px] border border-solid border-[#c7c7c7] w-full h-full"
@@ -44,12 +56,15 @@ export default function Button({
     ) : (
       <View
         className="bg-[#dddddd] rounded-[49px] p-[3px]"
-        style={{
-          width,
-          height,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
+        style={[
+          {
+            width,
+            height,
+            justifyContent: "center",
+            alignItems: "center",
+          },
+          style,
+        ]}
       >
         <View
           className="rounded-[49px] border border-[#c7c7c7] w-full h-full"
@@ -68,12 +83,15 @@ export default function Button({
         <Shadow offset={[0, 4]}>
           <View
             className="bg-[#dddddd] rounded-[49px] p-[3px]"
-            style={{
-              width,
-              height,
-              justifyContent: "center",
-              alignItems: "center",
-            }}
+            style={[
+              {
+                width,
+                height,
+                justifyContent: "center",
+                alignItems: "center",
+              },
+              style,
+            ]}
           >
             <View
               className="rounded-[49px] border border-solid border-[#c7c7c7] w-full h-full"
@@ -89,12 +107,15 @@ export default function Button({
       ) : (
         <View
           className="bg-[#dddddd] rounded-[49px] p-[3px]"
-          style={{
-            width,
-            height,
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          style={[
+            {
+              width,
+              height,
+              justifyContent: "center",
+              alignItems: "center",
+            },
+            style,
+          ]}
         >
           <View
             className="rounded-[49px] border border-[#c7c7c7] w-full h-full"

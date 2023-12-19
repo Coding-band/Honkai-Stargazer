@@ -9,8 +9,8 @@ import useDelayLoad from "../../../../../hooks/useDelayLoad";
 import Outer from "../TraceItem/Outer";
 import Inner from "../TraceItem/Inner";
 import TracePopUp from "../TracePopUp/TracePopUp";
-import CharacterSkillTree from "../../../../../../assets/images/@images_map/characterSkillTree";
-import CharacterSkillMain from "../../../../../../assets/images/@images_map/characterSkillMain";
+import CharacterSkillTree from "../../../../../../assets/images/images_map/characterSkillTree";
+import CharacterSkillMain from "../../../../../../assets/images/images_map/characterSkillMain";
 
 const TraceLine = require("../../../../../../assets/images/path_trace_line/erudition_trace_line.svg");
 

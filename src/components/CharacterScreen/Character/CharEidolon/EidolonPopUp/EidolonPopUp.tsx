@@ -7,7 +7,7 @@ import formatDesc from "../../../../../utils/format/formatDesc";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { Shadow } from "react-native-shadow-2";
 import { Image } from "expo-image";
-import CharacterSoul from "../../../../../../assets/images/@images_map/characterSoul";
+import CharacterSoul from "../../../../../../assets/images/images_map/characterSoul";
 import useCharData from "../../../../../context/CharacterData/useCharData";
 
 type Props = {
@@ -16,8 +16,7 @@ type Props = {
 };
 
 export default React.memo(function EidolonPopUp({ id, onClose }: Props) {
-
-    const { charId, charFullData } = useCharData();
+  const { charId, charFullData } = useCharData();
 
   const charEidolonRank = charFullData.ranks?.filter(
     (rank) => rank.id === id

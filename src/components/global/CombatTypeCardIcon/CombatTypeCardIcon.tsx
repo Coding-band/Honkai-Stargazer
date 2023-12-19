@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 import { CombatType } from "../../../types/combatType";
 import { Image } from "expo-image";
-import * as ImagesMap from "../../../../assets/images/@images_map/images_map";
+import * as ImagesMap from "../../../../assets/images/images_map";
 
 export default function CombatTypeCardIcon({ value }: { value: CombatType }) {
   return (

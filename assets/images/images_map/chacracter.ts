@@ -1,7 +1,7 @@
 const Character = {
   Argenti: {
     icon: require("../../images/character_icon/argenti_icon.webp"),
-    imageFull: require("../../images/character_splash/argenti_splash.webp"),
+    imageFull: require("../../images/character_full/argenti_full.webp"),
     eidolon1: require("../../images/character_eidolon/argenti_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/argenti_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/argenti_eidolon3.webp"),
@@ -61,7 +61,7 @@ const Character = {
   },
   "Fu Xuan": {
     icon: require("../../images/character_icon/fu_xuan_icon.webp"),
-    imageFull: require("../../images/character_splash/fu_xuan_splash.webp"),
+    imageFull: require("../../images/character_full/fu_xuan_full.webp"),
     eidolon1: require("../../images/character_eidolon/fu_xuan_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/fu_xuan_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/fu_xuan_eidolon3.webp"),
@@ -101,7 +101,7 @@ const Character = {
   },
   "Topaz & Numby": {
     icon: require("../../images/character_icon/topaz_icon.webp"),
-    imageFull: require("../../images/character_splash/topaz_splash.webp"),
+    imageFull: require("../../images/character_full/topaz_full.webp"),
     eidolon1: require("../../images/character_eidolon/topaz_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/topaz_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/topaz_eidolon3.webp"),
@@ -171,7 +171,7 @@ const Character = {
   },
   Welt: {
     icon: require("../../images/character_icon/welt_icon.webp"),
-    imageFull: require("../../images/character_splash/welt_splash.webp"),
+    imageFull: require("../../images/character_full/welt_full.webp"),
     eidolon1: require("../../images/character_eidolon/welt_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/welt_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/welt_eidolon3.webp"),
@@ -191,7 +191,7 @@ const Character = {
   },
   Hanya: {
     icon: require("../../images/character_icon/hanya_icon.webp"),
-    imageFull: require("../../images/character_splash/hanya_splash.webp"),
+    imageFull: require("../../images/character_full/hanya_full.webp"),
     eidolon1: require("../../images/character_eidolon/hanya_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/hanya_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/hanya_eidolon3.webp"),
@@ -221,7 +221,7 @@ const Character = {
   },
   Sushang: {
     icon: require("../../images/character_icon/sushang_icon.webp"),
-    imageFull: require("../../images/character_full/sushang_full.png"),
+    imageFull: require("../../images/character_full/sushang_full.webp"),
     eidolon1: require("../../images/character_eidolon/sushang_eidolon1.webp"),
     eidolon2: require("../../images/character_eidolon/sushang_eidolon2.webp"),
     eidolon3: require("../../images/character_eidolon/sushang_eidolon3.webp"),

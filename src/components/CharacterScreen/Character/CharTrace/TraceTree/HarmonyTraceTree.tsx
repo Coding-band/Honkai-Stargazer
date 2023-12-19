@@ -8,8 +8,8 @@ import { Image } from "expo-image";
 import Edge from "../TraceItem/Edge";
 import Outer from "../TraceItem/Outer";
 import Inner from "../TraceItem/Inner";
-import CharacterSkillTree from "../../../../../../assets/images/@images_map/characterSkillTree";
-import CharacterSkillMain from "../../../../../../assets/images/@images_map/characterSkillMain";
+import CharacterSkillTree from "../../../../../../assets/images/images_map/characterSkillTree";
+import CharacterSkillMain from "../../../../../../assets/images/images_map/characterSkillMain";
 import TracePopUp from "../TracePopUp/TracePopUp";
 
 const TraceLine = require("../../../../../../assets/images/path_trace_line/harmony_trace_line.svg");

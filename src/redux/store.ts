@@ -16,6 +16,10 @@ import { lightconeSorting } from "./lightconeSorting/lightconeSorting.reducer";
 import { lightconeSortingReverse } from "./lightconeSortingReverse/lightconeSortingReverse.reducer";
 import { lightconeFilter } from "./lightconeFilter/lightconeFilter.reducer";
 import { wallPaper } from "./wallPaper/wallPaper.reducer";
+import { characterSearch } from "./characterSearch/characterSearch.reducer";
+import { characterIsSearching } from "./characterIsSearching/characterIsSearching.reducer";
+import { lightconeSearch } from "./lightconeSearch/lightconeSearch.reducer";
+import { lightconeIsSearching } from "./lightconeIsSearching/lightconeIsSearching.reducer";
 
 const reducer = combineReducers({
   hsrServerChosen,
@@ -28,6 +32,10 @@ const reducer = combineReducers({
   lightconeSortingReverse,
   lightconeFilter,
   wallPaper,
+  characterSearch,
+  characterIsSearching,
+  lightconeSearch,
+  lightconeIsSearching,
 });
 
 // persist

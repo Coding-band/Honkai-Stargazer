@@ -1,4 +1,4 @@
-import { View, Text, Pressable, Touchable, PanResponder } from "react-native";
+import { View, Text } from "react-native";
 import React from "react";
 import Button from "../../../../global/Button/Button";
 import { Image } from "expo-image";
@@ -18,7 +18,6 @@ export default function OrderBtn({
   return (
     <Button width={212} height={46} disable>
       <Text className="font-[HY65] text-[16px]">{children}</Text>
-
       <View className="absolute right-0">
         <TouchableOpacity
           className="w-9 h-9"

@@ -3,7 +3,7 @@ import PageHeading from "../../../global/PageHeading/PageHeading";
 import { ScrollView, View } from "react-native";
 import characterList from "../../../../../data/character_data/character_list.json";
 import characterListMap from "../../../../../map/character_data_map";
-import * as imagesMap from "../../../../../assets/images/@images_map/images_map";
+import * as imagesMap from "../../../../../assets/images/images_map";
 import LcSuggestCharacterCard from "./LcSuggestCharacterCard/LcSuggestCharacterCard";
 
 const testData = [
