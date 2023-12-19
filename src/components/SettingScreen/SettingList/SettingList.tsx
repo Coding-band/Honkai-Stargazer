@@ -6,6 +6,7 @@ import AccountSetting from "./AccountSetting/AccountSetting";
 import LanguageSetting from "./LanguageSetting/LanguageSetting";
 import PersonalSetting from "./PersonalSetting/PersonalSetting";
 import NotificationSetting from "./NotificationSetting/NotificationSetting";
+import SupportSetting from "./SupportSetting/SupportSetting";
 
 export default function SettingList() {
   return (
@@ -22,10 +23,7 @@ export default function SettingList() {
         <LanguageSetting />
         <PersonalSetting />
         <NotificationSetting />
-        <SettingGroup title="支持我们">
-          <SettingItem type="navigation" title="捐赠" />
-          <SettingItem type="navigation" title="邀请他人" />
-        </SettingGroup>
+        <SupportSetting />
         <SettingGroup title="开发者选项">
           <SettingItem type="navigation" title="使用Cookies登录" />
         </SettingGroup>

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { BlurView } from "expo-blur";
 import { Image } from "expo-image";
 import Listbox from "../../../global/Listbox/Listbox";
-import { useClickOutside } from "react-native-click-outside";
 
 const ArrowRight = require("./icons/ArrowRight.svg");
 const ArrowDown = require("./icons/ArrowDown.svg");
