@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import { Info } from "phosphor-react-native";
 import AttrSliderbar from "../../../global/Sliderbar/Sliderbar";
 import { Image } from "expo-image";
 import PageHeading from "../../../global/PageHeading/PageHeading";
 import useDelayLoad from "../../../../hooks/useDelayLoad";
-import MaterialList from "../../../global/MaterialList/MaterialList";
 import { getLcAttrData } from "../../../../utils/calculator/getAttrData";
 import useLcData from "../../../../context/LightconeData/useLcData";
+import { MaterialCount, getLcMaterialData } from "../../../../utils/calculator/getMaterialData";
+import { map } from "lodash";
+import MaterialCard from "../../../global/MaterialCard/MaterialCard";
+import Material from "../../../../../assets/images/images_map/material";
 
 const HPIcon = require("../../../../../assets/icons/HP.png");
 const STRIcon = require("../../../../../assets/icons/STR.png");
@@ -18,7 +21,7 @@ const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 export default function LcAttribute() {
   const loaded = useDelayLoad(100);
 
-  const { lcId } = useLcData();
+  const { lcId, lcFullData } = useLcData();
 
   const [attrFromLevel, setAttrFromLevel] = useState(0);
   const [attrToLevel, setAttrToLevel] = useState(8);
@@ -29,6 +32,8 @@ export default function LcAttribute() {
     def: 0,
   });
 
+  const [materials, setMaterials] = useState<MaterialCount>();
+
   useEffect(() => {
     setTimeout(() => {
       setAttributes(
@@ -36,6 +41,18 @@ export default function LcAttribute() {
       );
     });
   }, [lcId, attrFromLevel]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setMaterials(
+        getLcMaterialData(
+          lcId,
+          attrFromLevel === 0 ? 1 : attrFromLevel * 10,
+          attrToLevel === 0 ? 1 : attrToLevel * 10
+        )
+      );
+    });
+  }, [lcId, attrFromLevel, attrToLevel]);
 
   const handleFromLevelChange = (newLevel: number) => {
     if (newLevel >= attrToLevel) {
@@ -127,7 +144,22 @@ export default function LcAttribute() {
           </>
         )}
       </View>
-      <MaterialList />
+      <ScrollView horizontal className="mt-5">
+        <View style={{ flexDirection: "row", gap: 14 }}>
+          {map(materials, (v, k) => {
+            return (
+              <MaterialCard
+                key={k}
+                count={v}
+                // @ts-ignore
+                stars={lcFullData.itemReferences[k].rarity}
+                // @ts-ignore
+                image={Material[k]}
+              />
+            );
+          })}
+        </View>
+      </ScrollView>
     </>
   );
 }

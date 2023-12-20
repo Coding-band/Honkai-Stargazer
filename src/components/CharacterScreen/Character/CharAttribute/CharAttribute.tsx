@@ -1,28 +1,32 @@
-import React, { useContext, useEffect, useMemo, useState } from "react";
-import { View, Text } from "react-native";
+import React, { useEffect, useState } from "react";
+import { View, Text, ScrollView } from "react-native";
 import { Info } from "phosphor-react-native";
 import AttrSliderbar from "../../../global/Sliderbar/Sliderbar";
 import { Image } from "expo-image";
 import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import useDelayLoad from "../../../../hooks/useDelayLoad";
-import MaterialList from "../../../global/MaterialList/MaterialList";
-import CharacterContext from "../../../../context/CharacterData/CharacterContext";
 import { getCharAttrData } from "../../../../utils/calculator/getAttrData";
 import useCharData from "../../../../context/CharacterData/useCharData";
+import MaterialCard from "../../../global/MaterialCard/MaterialCard";
+import {
+  MaterialCount,
+  getCharMaterialData,
+} from "../../../../utils/calculator/getMaterialData";
+import { map } from "lodash";
+import Material from "../../../../../assets/images/images_map/material";
 
 const HPIcon = require("../../../../../assets/icons/HP.png");
 const STRIcon = require("../../../../../assets/icons/STR.png");
 const DEFIcon = require("../../../../../assets/icons/DEF.png");
 const DEXIcon = require("../../../../../assets/icons/DEX.png");
-const ELIcon = require("../../../../../assets/icons/EL.png");
+// const ELIcon = require("../../../../../assets/icons/EL.png");
 const AggroIcon = require("../../../../../assets/icons/Aggro.png");
-
 const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 
 export default React.memo(function CharAttribute() {
   const loaded = useDelayLoad(100);
 
-  const {charId } = useCharData();
+  const { charId, charFullData } = useCharData();
 
   const [attrFromLevel, setAttrFromLevel] = useState(0);
   const [attrToLevel, setAttrToLevel] = useState(8);
@@ -36,6 +40,8 @@ export default React.memo(function CharAttribute() {
     aggro: 0,
   });
 
+  const [materials, setMaterials] = useState<MaterialCount>();
+
   useEffect(() => {
     setTimeout(() => {
       setAttributes(
@@ -43,6 +49,18 @@ export default React.memo(function CharAttribute() {
       );
     });
   }, [charId, attrFromLevel]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setMaterials(
+        getCharMaterialData(
+          charId,
+          attrFromLevel === 0 ? 1 : attrFromLevel * 10,
+          attrToLevel === 0 ? 1 : attrToLevel * 10
+        )
+      );
+    });
+  }, [charId, attrFromLevel, attrToLevel]);
 
   const handleFromLevelChange = (newLevel: number) => {
     if (newLevel >= attrToLevel) {
@@ -148,7 +166,22 @@ export default React.memo(function CharAttribute() {
           </>
         )}
       </View>
-      <MaterialList />
+      <ScrollView horizontal className="mt-5">
+        <View style={{ flexDirection: "row", gap: 14 }}>
+          {map(materials, (v, k) => {
+            return (
+              <MaterialCard
+                key={k}
+                count={v}
+                // @ts-ignore
+                stars={charFullData.itemReferences[k].rarity}
+                // @ts-ignore
+                image={Material[k]}
+              />
+            );
+          })}
+        </View>
+      </ScrollView>
     </>
   );
 });

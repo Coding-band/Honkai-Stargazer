@@ -10,7 +10,7 @@ type MaterialMap = {
   [id: string]: Material;
 };
 
-type MaterialCount = {
+export type MaterialCount = {
   [id: string]: number;
 };
 
