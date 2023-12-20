@@ -6,6 +6,7 @@ import PopUpCard from "../../../global/PopUpCard/PopUpCard";
 import ReactNativeModal from "react-native-modal";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import Button from "../../../global/Button/Button";
+import TextButton from "../../../global/TextButton/TextButton";
 
 export default function SupportSetting() {
   const [openDonate, setOpenDonate] = useState(false);
@@ -35,37 +36,37 @@ export default function SupportSetting() {
           title="捐赠"
           content={
             <View className="pt-2 py-4 px-4" style={{ gap: 10 }}>
-              <HtmlText>
+              <HtmlText style={{ fontFamily: "HY65" }}>
                 {`感谢您的捐赠，有您的支持我们才能更好地完善本App，所有捐赠都将用于Stargazer的<span style="color:#DD8200;">必要支出</span>和<span style="color:#DD8200;">其他提升</span>。`}
               </HtmlText>
-              <HtmlText>
+              <HtmlText style={{ fontFamily: "HY65" }}>
                 {`进行任意一项捐赠即可<span style="color:#DD8200;">免除所有廣告</span>。`}
               </HtmlText>
               <View style={{ gap: 12 }}>
-                <Button hasShadow={false} width={310} height={46}>
-                  <Text>捐赠$2</Text>
-                </Button>
-                <Button hasShadow={false} width={310} height={46}>
-                  <Text>捐赠$5</Text>
-                </Button>
-                <Button hasShadow={false} width={310} height={46}>
-                  <Text>捐赠$10</Text>
-                </Button>
-                <Button hasShadow={false} width={310} height={46}>
-                  <Text>捐赠$20</Text>
-                </Button>
-                <Button hasShadow={false} width={310} height={46}>
-                  <Text>捐赠$50</Text>
-                </Button>
-                <Button hasShadow={false} width={310} height={46}>
-                  <Text>捐赠$99</Text>
-                </Button>
-                <Button hasShadow={false} width={310} height={46}>
-                  <Text>恢复捐赠</Text>
-                </Button>
-                <Button hasShadow={false} width={310} height={46}>
-                  <Text>所有捐赠名单</Text>
-                </Button>
+                <TextButton hasShadow={false} width={310} height={46}>
+                  捐赠$2
+                </TextButton>
+                <TextButton hasShadow={false} width={310} height={46}>
+                  捐赠$5
+                </TextButton>
+                <TextButton hasShadow={false} width={310} height={46}>
+                  捐赠$10
+                </TextButton>
+                <TextButton hasShadow={false} width={310} height={46}>
+                  捐赠$20
+                </TextButton>
+                <TextButton hasShadow={false} width={310} height={46}>
+                  捐赠$50
+                </TextButton>
+                <TextButton hasShadow={false} width={310} height={46}>
+                  捐赠$99
+                </TextButton>
+                <TextButton hasShadow={false} width={310} height={46}>
+                  恢复捐赠
+                </TextButton>
+                <TextButton hasShadow={false} width={310} height={46}>
+                  所有捐赠名单
+                </TextButton>
               </View>
             </View>
           }
