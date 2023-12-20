@@ -5,6 +5,7 @@ import useHsrServerChosen from "../../../../../../redux/hsrServerChosen/useHsrSe
 import { useNavigation } from "@react-navigation/native";
 import Button from "../../../../../global/Button/Button";
 import { SCREENS } from "../../../../../../constant/screens";
+import TextButton from "../../../../../global/TextButton/TextButton";
 
 const hsrServers: Server[] = [
   // { id: "asia", name: "星穹列车", platform: "miyoushe" },
@@ -37,7 +38,7 @@ export default function ToLoginScreen(props: Props) {
         请选择账号所在服务器。
       </Text>
       {hsrServers.map((server) => (
-        <Button
+        <TextButton
           onPress={() => {
             handleChoseServer(server);
           }}
@@ -46,10 +47,10 @@ export default function ToLoginScreen(props: Props) {
           width={"100%"}
           height={46}
         >
-          <Text className="font-[HY55]">{server.name}</Text>
-        </Button>
+          {server.name}
+        </TextButton>
       ))}
-      <Button
+      <TextButton
         onPress={() => {
           props.onCookieChosen && props.onCookieChosen();
         }}
@@ -57,8 +58,8 @@ export default function ToLoginScreen(props: Props) {
         width={"100%"}
         height={46}
       >
-        <Text className="font-[HY55]">手动设置</Text>
-      </Button>
+        手动设置
+      </TextButton>
     </View>
   );
 }

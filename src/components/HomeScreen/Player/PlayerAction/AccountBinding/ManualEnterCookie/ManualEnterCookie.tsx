@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Button from "../../../../../global/Button/Button";
 import { TextInput } from "react-native";
 import useHoyolabCookie from "../../../../../../redux/hoyolabCookie/useHoyolabCookie";
+import TextButton from "../../../../../global/TextButton/TextButton";
 
 type Props = {
   onCookieSave?: () => void;
@@ -22,9 +23,9 @@ export default function ManualEnterCookie(props: Props) {
       <Text className="text-[14px] font-[HY55] text-black leading-5">
         请选择服务器并粘贴 Cookies。
       </Text>
-      <Button hasShadow={false} width={"100%"} height={46}>
-        <Text className="font-[HY55]">Asia</Text>
-      </Button>
+      <TextButton hasShadow={false} width={"100%"} height={46}>
+        Asia
+      </TextButton>
       <TextInput
         value={inputCookie}
         onChangeText={setInputCookie}
@@ -34,14 +35,14 @@ export default function ManualEnterCookie(props: Props) {
 `}
         className="w-full h-[280px] bg-[#ffffff50] rounded-[4px] p-3 font-[HY55] leading-5"
       />
-      <Button
+      <TextButton
         onPress={handleSaveCookie}
         hasShadow={false}
         width={"100%"}
         height={46}
       >
-        <Text className="font-[HY55]">確定</Text>
-      </Button>
+        確定
+      </TextButton>
     </View>
   );
 }

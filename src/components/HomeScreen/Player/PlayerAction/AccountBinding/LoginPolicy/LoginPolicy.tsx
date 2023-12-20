@@ -3,6 +3,7 @@ import React from "react";
 import Button from "../../../../../global/Button/Button";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import loginPolicyText from "../../../../../../../data/sg_policy/login_policy.json";
+import TextButton from "../../../../../global/TextButton/TextButton";
 
 type Props = {
   onAcceptPolicy: () => void;
@@ -15,14 +16,14 @@ export default function LoginPolicy(props: Props) {
         <HtmlText style={{ color: "#000", fontFamily: "HY55", lineHeight: 20 }}>
           {loginPolicyText.zh_cn}
         </HtmlText>
-        <Button
+        <TextButton
           onPress={props.onAcceptPolicy}
           hasShadow={false}
           width={140}
           height={46}
         >
-          <Text>确定</Text>
-        </Button>
+          确定
+        </TextButton>
       </View>
     </View>
   );
