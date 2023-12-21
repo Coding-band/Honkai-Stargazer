@@ -61,8 +61,13 @@ export default React.memo(function CharSuggestLightConeCard(props: Props) {
             <LightConeCard onPress={handlePopupPress} {...props} />
           </View>
           <PopUpCard
-            title="于夜色中"
-            content="希儿的限定毕业光锥，提供了非常暴力的输出数值，同时对她的速度有一定要求，推荐副词条中尽量选择带有速度的遗器。"
+            title={props.name}
+            content={`暫無資料
+            
+            `}
+            onClose={() => {
+              setIsSelected(false);
+            }}
           />
         </Pressable>
       </Modal>

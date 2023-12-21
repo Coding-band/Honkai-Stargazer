@@ -4,47 +4,35 @@ import { ScrollView, View } from "react-native";
 import CharSuggestLightConeCard from "./CharSuggestLightConeCard/CharSuggestLightConeCard";
 import lightconeList from "../../../../../data/lightcone_data/lightcone_list.json";
 import lightconeListMap from "../../../../../map/lightcone_data_map";
-import * as imagesMap from "../../../../../assets/images/images_map";
 import React from "react";
-
-const testData = [
-  {
-    id: "Shattered Home",
-    rare: lightconeList.filter((char) => char.name === "Shattered Home")[0]
-      .rare,
-    name: lightconeListMap.zh_cn["Shattered Home"].name,
-    image: imagesMap.Lightcone["Shattered Home"].icon,
-    path: lightconeList.filter((char) => char.name === "Shattered Home")[0]
-      .path,
-  },
-  {
-    id: "Quid Pro Quo",
-    rare: lightconeList.filter((char) => char.name === "Quid Pro Quo")[0].rare,
-    name: lightconeListMap.zh_cn["Quid Pro Quo"].name,
-    image: imagesMap.Lightcone["Quid Pro Quo"].icon,
-    path: lightconeList.filter((char) => char.name === "Quid Pro Quo")[0].path,
-  },
-  {
-    id: "Fermata",
-    rare: lightconeList.filter((char) => char.name === "Fermata")[0].rare,
-    name: lightconeListMap.zh_cn["Fermata"].name,
-    image: imagesMap.Lightcone["Fermata"].icon,
-    path: lightconeList.filter((char) => char.name === "Fermata")[0].path,
-  },
-  {
-    id: "In the Night",
-    rare: lightconeList.filter((char) => char.name === "In the Night")[0].rare,
-    name: lightconeListMap.zh_cn["In the Night"].name,
-    image: imagesMap.Lightcone["In the Night"].icon,
-    path: lightconeList.filter((char) => char.name === "In the Night")[0].path,
-  },
-];
+import {
+  getCharAdviceData,
+  getLcFullData,
+} from "../../../../utils/dataMap/getDataFromMap";
+import useCharId from "../../../../context/CharacterData/useCharId";
+import LightconeNameMap from "../../../../../map/lightcone_name_map";
+import { Lightcone } from "../../../../../assets/images/images_map";
+import { LightconeName } from "../../../../types/lightcone";
 
 export default React.memo(function CharSuggestLightCone() {
+  const charId = useCharId();
+  const suggestConesData = getCharAdviceData(charId)?.cones;
+  const suggestCones = suggestConesData?.map((cone) => {
+    // @ts-ignore
+    const lcId: LightconeName = LightconeNameMap[cone.cone];
+    return {
+      id: lcId,
+      rare: lightconeList.filter((lc) => lc.name === lcId)[0]?.rare,
+      name: getLcFullData(lcId)?.name,
+      image: Lightcone[lcId]?.icon,
+      path: lightconeList.filter((lc) => lc.name === lcId)[0]?.path,
+    };
+  });
+
   return (
     <View style={{ alignItems: "center" }}>
       <CharPageHeading Icon={Sword}>推荐光锥</CharPageHeading>
-      <ScrollView>
+      <ScrollView horizontal>
         <View
           style={{
             flexDirection: "row",
@@ -52,9 +40,9 @@ export default React.memo(function CharSuggestLightCone() {
             columnGap: 8,
           }}
         >
-          {testData
-            .slice()
-            .sort((d) => 1 - d.rare)
+          {suggestCones
+            ?.slice()
+            .sort((a,b) => b.rare - a.rare)
             .map((l, i) => (
               // @ts-ignore
               <CharSuggestLightConeCard key={i} {...l} />

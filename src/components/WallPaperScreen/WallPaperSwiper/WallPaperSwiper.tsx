@@ -25,8 +25,8 @@ export default memo(function WallPaperSwiper(props: Props) {
         // @ts-ignore
         scrollViewStyle={styles.wrapper}
       >
-        {props.wallPapers.map((w) => (
-          <View key={w.uri} style={styles.slideContainer}>
+        {props.wallPapers.map((w,k) => (
+          <View key={k} style={styles.slideContainer}>
             <Image style={styles.slide} source={{ uri: w.url }} />
           </View>
         ))}
