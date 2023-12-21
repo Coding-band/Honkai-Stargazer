@@ -9,23 +9,8 @@ import WallPaper from "../components/global/WallPaper/WallPaper";
 import useWallPaper from "../redux/wallPaper/useWallPaper";
 
 export default function HomeScreen() {
-  const { wallPaper, setWallPaper } = useWallPaper();
-
   return (
-    <Pressable
-      onPress={() => {
-        let WP = `https://act-webstatic.hoyoverse.com/game_record/hkrpg/SpriteOutput/PhoneTheme/Theme/PhoneThemeMain/${
-          Math.floor(Math.random() * 4) + 221000
-        }.png`;
-        while (WP === wallPaper) {
-          WP = `https://act-webstatic.hoyoverse.com/game_record/hkrpg/SpriteOutput/PhoneTheme/Theme/PhoneThemeMain/${
-            Math.floor(Math.random() * 4) + 221000
-          }.png`;
-        }
-        setWallPaper(WP);
-      }}
-      style={{ flex: 1, backgroundColor: "white" }}
-    >
+    <Pressable style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
       <WallPaper />
       <LinearGradient

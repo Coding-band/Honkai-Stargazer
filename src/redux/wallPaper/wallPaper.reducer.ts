@@ -1,12 +1,14 @@
+import { wallPapers } from "./wallpapers";
 import { WallPaperAction } from "./wallpaper.types";
 
 export const wallPaper = (
-  prevSate = `https://act-webstatic.hoyoverse.com/game_record/hkrpg/SpriteOutput/PhoneTheme/Theme/PhoneThemeMain/${221000}.png`,
+  prevSate = wallPapers[0],
   action: WallPaperAction
 ) => {
   let newState = prevSate;
   if (action.type === "set_wall_paper") {
-    newState = action.payload;
+    const wpId = action.id;
+    newState = wallPapers.filter((w) => w.id === wpId)[0];
     return newState;
   } else {
     return prevSate;

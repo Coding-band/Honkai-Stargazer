@@ -5,6 +5,7 @@ import SettingItem from "../../SettingGroup/SettingItem/SettingItem";
 import useLocalState from "../../../../hooks/useLocalState";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../constant/screens";
+import useWallPaper from "../../../../redux/wallPaper/useWallPaper";
 
 const fonts = [
   { name: "開", value: true },
@@ -15,6 +16,7 @@ export default function PersonalSetting() {
   const navigation = useNavigation();
 
   const [font, setFont] = useLocalState("use-custom-font", fonts[0].value);
+  const { wallPaper } = useWallPaper();
 
   return (
     <SettingGroup title="個性化">
@@ -28,7 +30,7 @@ export default function PersonalSetting() {
       <SettingItem
         type="navigation"
         title="更换壁纸"
-        content="壁紙一"
+        content={wallPaper?.name}
         onNavigate={() => {
           console.log(1);
           // @ts-ignore

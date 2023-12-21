@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "honkai-stargazer",
-    "slug": "honkai-stargazer",
+    "name": "Stargazer",
+    "slug": "Stargazer",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -32,6 +32,16 @@
       "eas": {
         "projectId": "b9fe7661-b87f-485b-9509-cf28cddfe023"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ]
   }
 }

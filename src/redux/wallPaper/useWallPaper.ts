@@ -1,14 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
 import { wallPaperAction } from "./wallPaper.action";
+import { WallPaper } from "./wallpaper.types";
 
 const useWallPaper = () => {
   const dispatch = useDispatch();
-  const wallPaper = useSelector<RootState, string | undefined>(
+  const wallPaper = useSelector<RootState, WallPaper | undefined>(
     (state) => state.wallPaper
   );
-  const setWallPaper = (v: string) => {
-    dispatch(wallPaperAction(v));
+  const setWallPaper = (wallPaperId: number) => {
+    dispatch(wallPaperAction(wallPaperId));
   };
   return { wallPaper, setWallPaper };
 };

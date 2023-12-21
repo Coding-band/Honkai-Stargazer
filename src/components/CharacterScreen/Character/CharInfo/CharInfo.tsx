@@ -27,7 +27,13 @@ export default React.memo(function CharInfo() {
         >
           {charData?.name}
         </Text>
-        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <CharStars count={charData?.rare || 5} />
           <View>
             <Text className="text-[16px] text-white font-[HY65]">

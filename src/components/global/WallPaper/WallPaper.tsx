@@ -9,7 +9,7 @@ export default function WallPaper() {
     <ImageBackground
       className="absolute w-full h-full -mt-1"
       // 把背景關掉
-      source={{ uri: wallPaper }}
+      source={{ uri: wallPaper?.url }}
       // placeholder={blurhash}
       contentFit="cover"
     />
