@@ -10,6 +10,6 @@ export const getHoyolabCookieFromCookieManager = async () => {
       return cookieUtil.serialize(c.name, c.value);
     }).join("; ");
   });
-  console.log(hoyolabCookie)
+
   return hoyolabCookie;
 };
