@@ -4,7 +4,7 @@ export type Relic = {
   id?: RelicName;
   name?: string;
   image?: ExpoImage;
-  imageFull?: ExpoImage;
+  imageFull?: ExpoImage[];
   rare?: number;
 };
 

@@ -21,4 +21,5 @@ export const wallPapers: WallPaper[] = [
     url: `https://act-webstatic.hoyoverse.com/game_record/hkrpg/SpriteOutput/PhoneTheme/Theme/PhoneThemeMain/221003.png`,
     name: "壁紙四",
   },
+  { id: 5, url: `https://voc2048.com/stargazer2/test-bg.png`, name: "壁紙五" },
 ];

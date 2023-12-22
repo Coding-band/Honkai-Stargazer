@@ -15,6 +15,7 @@ type Props = {
   value?: any;
   onChange?: (v: any) => void;
   onNavigate?: () => void;
+  onOpen?: (v: boolean) => void;
 };
 
 export default function SettingItem(props: Props) {
@@ -31,7 +32,7 @@ export default function SettingItem(props: Props) {
   return (
     // <BlurView tint="dark" intensity={30} className="w-full">
     <View
-      className="w-full h-[41px] bg-[#CCD4DD] border-b border-[#A0A2A4]"
+      className="w-full h-[41px] bg-[#CCD4DD] border-b border-[#A0A2A4] mb-[-20px]"
       style={{ flexDirection: "row", zIndex }}
     >
       <View className="flex-1 h-full px-3" style={{ justifyContent: "center" }}>
@@ -42,7 +43,10 @@ export default function SettingItem(props: Props) {
         <Listbox
           value={props.value}
           onChange={props.onChange}
-          onOpen={handleListboxOpen}
+          onOpen={(v) => {
+            handleListboxOpen(v);
+            props.onOpen && props.onOpen(v);
+          }}
           button={
             <TouchableOpacity activeOpacity={0.35}>
               <View

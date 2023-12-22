@@ -7,50 +7,33 @@ import { SCREENS } from "../constant/screens";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { ParamList } from "../types/navigation";
 import LightconeMain from "../components/LightconeScreen/Lightcone/Lightcone";
-import { filter } from "lodash";
-import { Lightcone, LightconeName } from "../types/lightcone";
-import LightconeContext from "../context/LightconeData/LightconeContext";
-import lcList from "../../data/lightcone_data/lightcone_list.json";
-import * as imagesMap from "../../assets/images/images_map";
-import { getLcFullData } from "../utils/dataMap/getDataFromMap";
+import { LightconeName } from "../types/lightcone";
 import WallPaper from "../components/global/WallPaper/WallPaper";
-import useTextLanguage from "../context/TextLanguage/useTextLanguage";
+import LightconeProvider from "../context/LightconeData/LightconeProvider";
 
 export default function LightconeScreen() {
-  const { language: textLanguage } = useTextLanguage();
-
   const route = useRoute<RouteProp<ParamList, "Lightcone">>();
   const lcId = route.params.id as LightconeName;
   const lcName = route.params.name;
 
-  const [lcData, setLcData] = useState<Lightcone>({});
   const [showMain, setShowMain] = useState(false);
-
   useEffect(() => {
-    const lcDataJson = filter(lcList, (lc) => lc?.name === lcId)[0];
-    const lcFullData = getLcFullData(lcId, textLanguage);
-    setLcData({
-      id: lcId,
-      name: lcFullData?.name,
-      rare: lcDataJson?.rare,
-      path: lcFullData?.baseType?.name,
-      pathId: lcDataJson.path,
-      imageFull: imagesMap.Lightcone[lcId]?.imageFull,
+    setTimeout(() => {
+      setShowMain(true);
     });
-    setShowMain(true);
   }, []);
 
   return (
-    <LightconeContext.Provider value={lcData}>
+    <LightconeProvider lcId={lcId}>
       <View style={{ flex: 1, backgroundColor: "white" }}>
         <StatusBar style="dark" />
-        <WallPaper />
+        <WallPaper isBlur />
         <LinearGradient
           className="absolute w-full h-full"
           colors={["#00000080", "#00000020"]}
         />
 
-        <Header leftBtn="back" Icon={SCREENS.LightconeListPage.icon}>
+        <Header leftBtn="back" Icon={SCREENS.LightconePage.icon}>
           {lcName}
         </Header>
         {showMain && <LightconeMain />}
@@ -59,6 +42,6 @@ export default function LightconeScreen() {
           colors={["#00000000", "#000000"]}
         />
       </View>
-    </LightconeContext.Provider>
+    </LightconeProvider>
   );
 }

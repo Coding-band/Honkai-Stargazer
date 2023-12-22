@@ -1,10 +1,8 @@
 import { View, Text, Dimensions } from "react-native";
-import React, { useContext } from "react";
+import React from "react";
 import LcStars from "../../../global/PageStars/PageStars";
 import { Image } from "expo-image";
 import Path from "../../../../../assets/images/images_map/path";
-import CombatType from "../../../../../assets/images/images_map/combatType";
-import LightconeContext from "../../../../context/LightconeData/LightconeContext";
 import useLcData from "../../../../context/LightconeData/useLcData";
 
 export default function LcInfo() {

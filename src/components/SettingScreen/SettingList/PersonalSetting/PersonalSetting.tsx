@@ -32,7 +32,6 @@ export default function PersonalSetting() {
         title="更换壁纸"
         content={wallPaper?.name}
         onNavigate={() => {
-          console.log(1);
           // @ts-ignore
           navigation.navigate(SCREENS.WallPaperPage.id);
         }}

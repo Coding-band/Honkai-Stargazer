@@ -6,4 +6,5 @@ export type ParamList = {
     name: string;
   };
   Lightcone: { id: string; name: string };
+  Relic: { id: string; name: string };
 };

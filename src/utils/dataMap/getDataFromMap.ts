@@ -2,6 +2,7 @@ import charDataMap from "../../../map/character_data_map";
 import lcDataMap from "../../../map/lightcone_data_map";
 import relicDataMap from "../../../map/relic_data_map";
 import charAdviceMap from "../../../map/character_advice_map";
+import relicPcMap from "../../../map/relic_pc_map";
 import { CharacterName } from "../../types/character";
 import { LightconeName } from "../../types/lightcone";
 import { Language } from "../../types/language";
@@ -30,4 +31,11 @@ export function getRelicFullData(
 
 export function getCharAdviceData(charId: CharacterName) {
   return charAdviceMap[charId];
+}
+
+export function getRelicPcData(
+  relicId: RelicName,
+  language: Language = "zh_cn"
+) {
+  return relicPcMap[language][relicId];
 }

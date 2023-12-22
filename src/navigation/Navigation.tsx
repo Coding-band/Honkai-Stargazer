@@ -14,6 +14,7 @@ import ExpeditionScreen from "../screens/ExpeditionScreen";
 import SettingScreen from "../screens/SettingScreen";
 import WallPaperScreen from "../screens/WallPaperScreen";
 import RelicListScreen from "../screens/RelicListScreen";
+import RelicScreen from "../screens/RelicScreen";
 
 export default function Navigation() {
   const Stack = createNativeStackNavigator();
@@ -52,6 +53,11 @@ export default function Navigation() {
         <Stack.Screen
           name={SCREENS.RelicListPage.id}
           component={RelicListScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.RelicPage.id}
+          component={RelicScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

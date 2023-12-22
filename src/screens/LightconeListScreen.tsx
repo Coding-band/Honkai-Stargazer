@@ -12,7 +12,7 @@ export default function LightconeListScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
-      <WallPaper />
+      <WallPaper isBlur/>
       <LinearGradient
         className="absolute w-full h-full"
         colors={["#00000080", "#00000020"]}

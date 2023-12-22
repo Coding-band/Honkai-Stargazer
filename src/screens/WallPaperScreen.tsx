@@ -11,7 +11,7 @@ export default function WallPaperScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
-      <WallPaper />
+
       <LinearGradient
         className="absolute w-full h-full"
         colors={["#020510", "#001C40"]}

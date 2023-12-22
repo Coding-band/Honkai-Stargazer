@@ -8,11 +8,10 @@ import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
 import useCharData from "../../../../context/CharacterData/useCharData";
 
 export default React.memo(function CharStory() {
-  
   const { charFullData } = useCharData();
 
   return (
-    <View style={{ alignItems: "center" }}>
+    <View>
       <CharPageHeading Icon={ChatsCircle}>角色故事</CharPageHeading>
       <HtmlText style={{ lineHeight: 24, color: "white", fontFamily: "HY65" }}>
         {charFullData.storyItems[0].text || ""}

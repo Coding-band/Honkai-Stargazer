@@ -15,6 +15,8 @@ import { characterFilter } from "./characterFilter/characterFilter.reducer";
 import { lightconeSorting } from "./lightconeSorting/lightconeSorting.reducer";
 import { lightconeSortingReverse } from "./lightconeSortingReverse/lightconeSortingReverse.reducer";
 import { lightconeFilter } from "./lightconeFilter/lightconeFilter.reducer";
+import { relicSearch } from "./relicSearch/relicSearch.reducer";
+import { relicIsSearching } from "./relicIsSearching/relicIsSearching.reducer";
 import { wallPaper } from "./wallPaper/wallPaper.reducer";
 import { characterSearch } from "./characterSearch/characterSearch.reducer";
 import { characterIsSearching } from "./characterIsSearching/characterIsSearching.reducer";
@@ -31,6 +33,8 @@ const reducer = combineReducers({
   lightconeSorting,
   lightconeSortingReverse,
   lightconeFilter,
+  relicSearch,
+  relicIsSearching,
   wallPaper,
   characterSearch,
   characterIsSearching,

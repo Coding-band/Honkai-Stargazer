@@ -28,7 +28,7 @@ export default React.memo(function CharEidolon() {
         style={{ alignItems: "center" }}
       >
         <CharPageHeading Icon={StarHalf}>星魂</CharPageHeading>
-        <View className="w-full h-[280px]">
+        <View className="w-[350px] h-[280px]">
           <Eidolon1
             selected={selectedEidolon === 1}
             onPress={() => {

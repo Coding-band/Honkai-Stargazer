@@ -43,7 +43,8 @@ export default function Listbox(props: Props) {
           className="absolute w-full bg-[#DDDDDD]"
           style={{
             shadowColor: "#00000025",
-            shadowOffset: { width: 0, height: 4 },
+            shadowOffset: { width: 16, height: 4 },
+            shadowRadius: 16,
             elevation: 16,
             top: props.top,
             bottom: props.bottom,

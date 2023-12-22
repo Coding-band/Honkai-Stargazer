@@ -55,7 +55,7 @@ export default function RelicsCard(props: Props) {
       </LinearGradient>
       {/* </Shadow> */}
       <View
-        className="w-20 h-20 pt-1 mb-[-40px]"
+        className="w-20 h-24 pt-1 mb-[-40px]"
         style={{ alignItems: "center" }}
       >
         <Text

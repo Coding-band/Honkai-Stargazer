@@ -15,7 +15,7 @@ export default function PageStars(props: Props) {
       {range(props.count).map((i) => (
         <Image
           key={i}
-          style={{ width: 36, height: 36, marginLeft: -8 }}
+          style={{ width: 40, height: 40, marginLeft: -8 }}
           source={StarIcon}
         />
       ))}

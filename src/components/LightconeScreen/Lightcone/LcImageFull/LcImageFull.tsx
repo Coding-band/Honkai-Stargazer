@@ -1,13 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import Animated, {
   SharedValue,
   useAnimatedStyle,
   withSpring,
 } from "react-native-reanimated";
 import { Image } from "expo-image";
-import LightconeContext from "../../../../context/LightconeData/LightconeContext";
-import { Dimensions, Platform, View } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
+import { Dimensions,View } from "react-native";
 import useLcData from "../../../../context/LightconeData/useLcData";
 
 type Props = {

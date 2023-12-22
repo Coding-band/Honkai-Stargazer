@@ -7,12 +7,13 @@ import { SCREENS } from "../constant/screens";
 
 import WallPaper from "../components/global/WallPaper/WallPaper";
 import RelicList from "../components/RelicListScreen/RelicList/RelicList";
+import RelicAction from "../components/RelicListScreen/RelicAction/RelicAction";
 
 export default function RelicListScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
-      <WallPaper />
+      <WallPaper isBlur />
       <LinearGradient
         className="absolute w-full h-full"
         colors={["#00000080", "#00000020"]}
@@ -23,6 +24,7 @@ export default function RelicListScreen() {
       </Header>
       <>
         <RelicList />
+        <RelicAction />
       </>
       <LinearGradient
         pointerEvents="none"

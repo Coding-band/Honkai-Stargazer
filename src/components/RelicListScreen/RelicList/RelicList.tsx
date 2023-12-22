@@ -7,6 +7,7 @@ import relicList from "../../../../data/relic_data/relic_list.json";
 import Relic from "../../../../assets/images/images_map/relic";
 import { getRelicFullData } from "../../../utils/dataMap/getDataFromMap";
 import RelicsCard from "../../global/RelicsCard/RelicsCard";
+import { SCREENS } from "../../../constant/screens";
 
 export default function RelicList() {
   const navigation = useNavigation();
@@ -42,7 +43,7 @@ export default function RelicList() {
         key={i}
         onPress={() => {
           // @ts-ignore
-          navigation.navigate(SCREENS.LightconePage.id, {
+          navigation.navigate(SCREENS.RelicPage.id, {
             id: item?.id,
             name: item?.name,
           });
