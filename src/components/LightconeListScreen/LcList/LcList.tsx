@@ -16,6 +16,7 @@ import useTextLanguage from "../../../context/TextLanguage/useTextLanguage";
 import useLightconeSearch from "../../../redux/lightconeSearch/useLightconeSearch";
 
 export default function LcList() {
+  
   const navigation = useNavigation();
   const { language: textLanguage } = useTextLanguage();
 
@@ -124,27 +125,25 @@ export default function LcList() {
   ]);
 
   return (
-    <>
-      <ScrollView
+    <ScrollView
+      style={{
+        paddingVertical: 127,
+        paddingHorizontal: 17,
+        paddingBottom: 0,
+      }}
+      className="z-30"
+    >
+      <View
         style={{
-          paddingVertical: 127,
-          paddingHorizontal: 17,
-          paddingBottom: 0,
+          flexDirection: "row",
+          flexWrap: "wrap",
+          columnGap: 11,
+          justifyContent: "center",
         }}
-        className="z-30"
+        className="pb-60"
       >
-        <View
-          style={{
-            flexDirection: "row",
-            flexWrap: "wrap",
-            columnGap: 11,
-            justifyContent: "center",
-          }}
-          className="pb-60"
-        >
-          {lcCardListJSX}
-        </View>
-      </ScrollView>
-    </>
+        {lcCardListJSX}
+      </View>
+    </ScrollView>
   );
 }

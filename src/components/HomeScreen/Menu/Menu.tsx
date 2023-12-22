@@ -100,6 +100,10 @@ export default function Menu() {
             {SCREENS.LightconeListPage.shortName}
           </MenuItem>
           <MenuItem
+            onPress={() => {
+              // @ts-ignore
+              navigation.navigate(SCREENS.RelicListPage.id);
+            }}
             width={menuItemSize.width}
             height={menuItemSize.height}
             Icon={BaseballCap}

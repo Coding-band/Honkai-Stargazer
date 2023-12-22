@@ -1,4 +1,5 @@
 import {
+  BaseballCap,
   MapTrifold,
   Person,
   SlidersHorizontal,
@@ -35,8 +36,20 @@ export const SCREENS = {
   LightconePage: {
     id: "Lightcone",
     name: "光锥",
-    shortName: "",
+    shortName: "光锥",
     icon: Sword,
+  },
+  RelicListPage: {
+    id: "RelicList",
+    name: "遺器列表",
+    shortName: "遺器",
+    icon: BaseballCap,
+  },
+  RelicPage: {
+    id: "Relic",
+    name: "遺器",
+    shortName: "遺器",
+    icon: BaseballCap,
   },
   MapPage: {
     id: "Map",

@@ -53,7 +53,7 @@ export default React.memo(function CharSuggestLightConeCard(props: Props) {
             flex: 1,
             justifyContent: "center",
             alignItems: "center",
-            gap: 24,
+            gap: 12,
             transform: [{ translateY: -32 }],
           }}
         >
