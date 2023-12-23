@@ -1,5 +1,5 @@
 import { View, Text, Dimensions, StyleSheet } from "react-native";
-import React, { memo } from "react";
+import React, { memo, useEffect, useRef } from "react";
 import Swiper from "react-native-swiper";
 import { Image } from "expo-image";
 
@@ -12,9 +12,19 @@ type Props = {
 };
 
 export default memo(function WallPaperSwiper(props: Props) {
+  /**
+   * this solved "onIndexChanged not called, wrong screen rendered"
+   */
+  // @ts-ignore
+  const swiperRef = useRef<React.Element<Swiper>>();
+  useEffect(() => {
+    swiperRef.current?.scrollBy(0);
+  }, []);
+
   return (
     <View className="w-full h-[486px]" style={{ alignItems: "center" }}>
       <Swiper
+        ref={swiperRef}
         index={props.index}
         onIndexChanged={props.onIndexChange}
         loadMinimal={false}
@@ -25,7 +35,7 @@ export default memo(function WallPaperSwiper(props: Props) {
         // @ts-ignore
         scrollViewStyle={styles.wrapper}
       >
-        {props.wallPapers.map((w,k) => (
+        {props.wallPapers.map((w, k) => (
           <View key={k} style={styles.slideContainer}>
             <Image style={styles.slide} source={{ uri: w.url }} />
           </View>

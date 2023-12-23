@@ -14,10 +14,19 @@
       }
     },
     "production": {
-      "channel": "production"
+      "channel": "production",
+      "android": {
+        "buildType": "apk"
+      }
     }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "ios": {
+        "appleId": "vocaloid2048@gmail.com",
+        "ascAppId": "6474837328",
+        "appleTeamId": "M9N34Y7L2C"
+      }
+    }
   }
 }
