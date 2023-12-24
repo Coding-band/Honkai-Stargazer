@@ -51,11 +51,32 @@ public class HelpTool {
     public ArrayList<String> skillTreePointArray = new ArrayList<>();
 
     public void trigger_help_tool(Context context){
-        String json_base2 = LoadAssestData(context, "character_data/character_list.json");
+        String json_base2 = LoadAssestData(context, "relic_data/relic_list.json");
         try {
             JSONArray array = new JSONArray(json_base2);
             ArrayList<String> materialList = new ArrayList<>();
-            skillTreePointArray = new ArrayList<>();
+
+            /* 獲取RELIC PC ICON
+            for (int x =  0 ;x < array.length() ; x++){
+                String data = LoadAssestData(context,"relic_data/en/"+array.getJSONObject(x).getString("fileName")+".json");
+                String name = (array.getJSONObject(x).getString("name"));
+                String iconPath = new JSONObject(data).getString("iconPath");
+                LogExport.special("https://cdn.starrailstation.com/assets/"+iconPath+".webp\t"+name.toLowerCase().replace(" • ","_").replace(":","").replace("(","").replace(")","").replace(" ","_").replace("_&_numby","").replace("imbibitor_lunae","il").replace(",","")+".webp\n", context, LogExport.BETA_TESTING);
+            }
+             */
+
+            for (int x =  0 ;x < array.length() ; x++){
+                String data = LoadAssestData(context,"relic_data/en/"+array.getJSONObject(x).getString("fileName")+".json");
+                String name = (array.getJSONObject(x).getString("name"));
+                JSONObject pieces = new JSONObject(data).getJSONObject("pieces");
+                for (int y = 0  ;y < 7  ;y++){
+                    if (pieces.has(String.valueOf(y))){
+                        LogExport.special("https://cdn.starrailstation.com/assets/"+pieces.getJSONObject(String.valueOf(y)).getString("iconPath")+".webp\t"+name.toLowerCase().replace("-","_").replace(" • ","_").replace(":","").replace("(","").replace(")","").replace(" ","_").replace("_&_numby","").replace(",","").replace("!","").replace("imbibitor_lunae","il").replace(",","")+"_"+String.valueOf(y)+".webp\n", context, LogExport.BETA_TESTING);
+                    }
+                }
+            }
+
+            //skillTreePointArray = new ArrayList<>();
             /*
             for (int i = 0; i < array.length(); i++) {
                 JSONObject object = array.getJSONObject(i);
@@ -88,6 +109,7 @@ public class HelpTool {
  */
             //help_tool_export_lightcone_icon(context);
 
+            /*
             for (int i = 0; i < array.length(); i++) {
                 JSONObject object = array.getJSONObject(i);
                 //Special requirements
@@ -104,6 +126,7 @@ public class HelpTool {
                 }
                 //}
             }
+             */
 
             /*
             for (int i = 0; i < array.length(); i++) {
