@@ -1,4 +1,4 @@
-import { hsrServerId } from "../../types/hsrServer";
+import { hsrServerId } from "../../utils/hoyolab/servers/hsrServer.types";
 import { HsrServerChosenAction } from "./hsrServerChosen.types";
 
 export const hsrServerChosenaAction = (

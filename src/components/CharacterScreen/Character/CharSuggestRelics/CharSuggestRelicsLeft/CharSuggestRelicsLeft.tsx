@@ -40,7 +40,7 @@ export default function CharSuggestRelicsLeft() {
 
   return (
     <View style={{ alignItems: "center", gap: 9 }}>
-      <SelectedIndex max={suggestRelics.length} index={selectedIndex} />
+      <SelectedIndex max={suggestRelics?.length || 0} index={selectedIndex} />
       <View style={{ flexDirection: "row" }}>
         <LeftBtn onPress={handleLeft} />
         <View

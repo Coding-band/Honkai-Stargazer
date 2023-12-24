@@ -59,7 +59,7 @@ export default React.memo(function Character() {
               <CharEidolon />
               <CharSuggestLightCone />
               <CharSuggestRelics />
-              <CharSuggestTeam />
+              {/* <CharSuggestTeam /> */}
               <CharStory />
               <View className="pb-[60px]" />
             </Animated.View>

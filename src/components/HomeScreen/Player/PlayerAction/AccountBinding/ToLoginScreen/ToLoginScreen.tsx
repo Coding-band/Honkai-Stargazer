@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { Server } from "../../../../../../types/hsrServer";
+import { Server } from "../../../../../../utils/hoyolab/servers/hsrServer.types";
 import useHsrServerChosen from "../../../../../../redux/hsrServerChosen/useHsrServerChosen";
 import { useNavigation } from "@react-navigation/native";
 import Button from "../../../../../global/Button/Button";

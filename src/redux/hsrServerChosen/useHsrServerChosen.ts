@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
-import { hsrServerId } from "../../types/hsrServer";
+import { hsrServerId } from "../../utils/hoyolab/servers/hsrServer.types";
 import { hsrServerChosenaAction } from "./hsrServerChosen.action";
 
 const useHsrServerChosen = () => {
