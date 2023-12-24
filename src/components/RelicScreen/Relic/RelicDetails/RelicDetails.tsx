@@ -4,13 +4,13 @@ import PageHeading from "../../../global/PageHeading/PageHeading";
 import { ChatCircle } from "phosphor-react-native";
 import useRelicData from "../../../../context/RelicData/useRelicData";
 import { map } from "lodash";
-import RelicsCard from "../../../global/RelicsCard/RelicsCard";
+import RelicDetailsCard from "./RelicDetailsCard/CharSuggestLightConeCard";
 
 export default function RelicDetails() {
   const { relicData, relicFullData } = useRelicData();
   return (
     <View style={{ alignItems: "center" }}>
-      <PageHeading Icon={ChatCircle}>推荐角色</PageHeading>
+      <PageHeading Icon={ChatCircle}>遗器详情</PageHeading>
       <ScrollView horizontal>
         <View
           style={{
@@ -22,18 +22,22 @@ export default function RelicDetails() {
           {map(relicFullData.pieces, (p: any, k) => {
             if (relicFullData.pageId.startsWith("3")) {
               return (
-                <RelicsCard
+                <RelicDetailsCard
+                  key={k}
                   name={p.name}
                   rare={5}
                   image={relicData?.imageFull?.[Number(k) - 4 - 1]}
+                  description={p.miniLore}
                 />
               );
             } else {
               return (
-                <RelicsCard
+                <RelicDetailsCard
+                  key={k}
                   name={p.name}
                   rare={5}
                   image={relicData?.imageFull?.[Number(k) - 1]}
+                  description={p.miniLore}
                 />
               );
             }

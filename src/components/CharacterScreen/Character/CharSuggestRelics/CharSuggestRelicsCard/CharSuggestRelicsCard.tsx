@@ -8,6 +8,7 @@ import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../../constant/screens";
 import { Path } from "../../../../../types/path";
 import { HtmlText } from "@e-mine/react-native-html-text";
+import RelicsCard from "../../../../global/RelicsCard/RelicsCard";
 
 type Props = {
   id: string;
@@ -15,10 +16,9 @@ type Props = {
   rare: number;
   name: string;
   description: string;
-  path: Path;
 };
 
-export default React.memo(function CharSuggestLightConeCard(props: Props) {
+export default function CharSuggestRelicsCard(props: Props) {
   const navigation = useNavigation();
 
   const [isSelected, setIsSelected] = useState(false);
@@ -29,7 +29,7 @@ export default React.memo(function CharSuggestLightConeCard(props: Props) {
 
   const handlePopupPress = useCallback(() => {
     // @ts-ignore
-    navigation.push(SCREENS.LightconePage.id, {
+    navigation.push(SCREENS.RelicPage.id, {
       id: props.id,
       name: props.name,
     });
@@ -39,7 +39,7 @@ export default React.memo(function CharSuggestLightConeCard(props: Props) {
   return (
     <View>
       <View style={{ opacity: isSelected ? 0 : 1 }}>
-        <LightConeCard onPress={handlePress} {...props} />
+        <RelicsCard onPress={handlePress} {...props} />
       </View>
       <Modal
         useNativeDriverForBackdrop
@@ -60,7 +60,7 @@ export default React.memo(function CharSuggestLightConeCard(props: Props) {
           }}
         >
           <View style={{ transform: [{ scale: 1.2 }] }}>
-            <LightConeCard onPress={handlePopupPress} {...props} />
+            <RelicsCard onPress={handlePopupPress} {...props} />
           </View>
           <PopUpCard
             title={props.name}
@@ -73,4 +73,4 @@ export default React.memo(function CharSuggestLightConeCard(props: Props) {
       </Modal>
     </View>
   );
-});
+}

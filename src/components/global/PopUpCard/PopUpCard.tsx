@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { BlurView } from "expo-blur";
 import { Image } from "expo-image";
+import { HtmlText } from "@e-mine/react-native-html-text";
 
 type Props = {
   title: string;
@@ -41,9 +42,18 @@ export default function PopUpCard(props: Props) {
       </View>
       <View>
         {typeof props.content === "string" ? (
-          <Text className="text-[#666] text-[14px] font-[HY65] leading-5 px-4 pb-2 pt-3">
+          <HtmlText
+            style={{
+              color: "#666",
+              fontSize: 14,
+              fontFamily: "HY65",
+              lineHeight: 20,
+              paddingHorizontal: 16,
+              paddingVertical: 12,
+            }}
+          >
             {props.content}
-          </Text>
+          </HtmlText>
         ) : (
           props.content
         )}

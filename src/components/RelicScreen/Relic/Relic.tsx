@@ -11,6 +11,7 @@ import RelicInfo from "./RelicInfo/RelicInfo";
 import RelicAction from "./RelicAction/RelicAction";
 import RelicDescription from "./RelicDescription/RelicDescription";
 import RelicDetails from "./RelicDetails/RelicDetails";
+import RelicSuggestCharacter from "./RelicSuggestCharacter/RelicSuggestCharacter";
 
 export default function Relic() {
   const [containerHeight, setContainerHeight] = useState(0);
@@ -56,6 +57,7 @@ export default function Relic() {
             <Animated.View style={contentAnimatedStyles}>
               <RelicDescription />
               <RelicDetails />
+              <RelicSuggestCharacter />
               {/* <LcAttribute />
              
               <LcSuggestCharacter />

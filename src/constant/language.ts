@@ -10,4 +10,4 @@ export const Language = {
   jp: "日本語",
 };
 export const TextLanguage: TextLanguageType[] = ["en", "zh_cn", "zh_hk", "jp"];
-export const AppLanguage: AppLanguageType[] = ["zh_cn", "zh_hk"];
+export const AppLanguage: AppLanguageType[] = ["en", "zh_cn", "zh_hk"];

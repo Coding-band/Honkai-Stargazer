@@ -13,17 +13,24 @@ import useCharId from "../../../../context/CharacterData/useCharId";
 import LightconeNameMap from "../../../../../map/lightcone_name_map";
 import { Lightcone } from "../../../../../assets/images/images_map";
 import { LightconeName } from "../../../../types/lightcone";
+import useTextLanguage from "../../../../context/TextLanguage/useTextLanguage";
 
 export default React.memo(function CharSuggestLightCone() {
+
+  const {language:textLanguage} = useTextLanguage();
+
   const charId = useCharId();
   const suggestConesData = getCharAdviceData(charId)?.cones;
   const suggestCones = suggestConesData?.map((cone) => {
     // @ts-ignore
     const lcId: LightconeName = LightconeNameMap[cone.cone];
+    const lcFullData = getLcFullData(lcId, textLanguage);
+
     return {
       id: lcId,
       rare: lightconeList.filter((lc) => lc.name === lcId)[0]?.rare,
-      name: getLcFullData(lcId)?.name,
+      name: lcFullData?.name,
+      description: lcFullData?.descHash,
       image: Lightcone[lcId]?.icon,
       path: lightconeList.filter((lc) => lc.name === lcId)[0]?.path,
     };
@@ -42,7 +49,7 @@ export default React.memo(function CharSuggestLightCone() {
         >
           {suggestCones
             ?.slice()
-            .sort((a,b) => b.rare - a.rare)
+            .sort((a, b) => b.rare - a.rare)
             .map((l, i) => (
               // @ts-ignore
               <CharSuggestLightConeCard key={i} {...l} />

@@ -13,4 +13,12 @@ export const ZH_CN = {
   Lightning: "雷",
   Quantum: "量子",
   Imaginary: "虚数",
+  RelicPropBody: "躯干",
+  RelicPropFeet: "脚部",
+  RelicPropPlanarSphere: "位面球",
+  RelicPropLinkRope: "连结绳",
+  RelicPropBodyShort: "躯干",
+  RelicPropFeetShort: "脚部",
+  RelicPropPlanarSphereShort: "位面球",
+  RelicPropLinkRopeShort: "连结绳",
 };
