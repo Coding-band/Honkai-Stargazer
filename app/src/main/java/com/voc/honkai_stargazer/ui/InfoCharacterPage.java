@@ -418,7 +418,7 @@ public class InfoCharacterPage {
             }
 
             // Lightcone
-            JSONArray lightcone = jsonAdvice.getJSONArray("cones");
+            JSONArray lightcone = jsonAdvice.getJSONArray("conesNew");
             LinearLayout advice_lightcone_ll = info_advice.findViewById(R.id.advice_lightcone_ll);
             for (int x = 0 ; x < lightcone.length() ; x ++){
                 View lightconeItem = View.inflate(context, R.layout.item_advice_lightcone, null);

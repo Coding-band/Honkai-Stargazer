@@ -106,6 +106,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Español" />
+
+                <RadioButton
+                    android:id="@+id/setting_lang_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bahasa Indonesia" />
+
+                <RadioButton
+                    android:id="@+id/setting_lang_kr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="한국어" />
+
+                <RadioButton
+                    android:id="@+id/setting_lang_th"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ภาษาไทย" />
             </RadioGroup>
         </LinearLayout>
     </ScrollView>

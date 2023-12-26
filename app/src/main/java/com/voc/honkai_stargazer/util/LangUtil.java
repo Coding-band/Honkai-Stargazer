@@ -31,7 +31,11 @@ public class LangUtil {
         DE(new Locale("de", "DE"),"de","Deutsch"),
         PT(new Locale("pt", "PT"),"pt","Português"),
         VI(new Locale("vi", "VI"),"vi","tiếng Việt"),
-        ES(new Locale("es", "ES"),"es","Español");
+        ES(new Locale("es", "ES"),"es","Español"),
+        ID(new Locale("in", "ID"),"es","Bahasa Indonesia"),
+        KR(Locale.KOREAN,"kr","한국어"),
+        TH(new Locale("th", "TH"),"es","ภาษาไทย"),
+        ;
 
         private Locale locale;
         private String code;

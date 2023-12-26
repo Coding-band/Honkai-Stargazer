@@ -43,6 +43,9 @@ public class ItemRSS {
     public static final String LANG_PT = "pt";
     public static final String LANG_VI = "vi";
     public static final String LANG_ES = "es";
+    public static final String LANG_ID = "id";
+    public static final String LANG_KR = "kr";
+    public static final String LANG_TH = "th";
 
     public static final String ELEMENT_FIRE = "Fire";
     public static final String ELEMENT_ICE = "Ice";
@@ -83,14 +86,6 @@ public class ItemRSS {
     public static final String APPLICATION_ID_PROVIDER = "com.voc.honkai_stargazer.provider";
     public static final String SERVER_ROOT_URL = "https://voc2048.com/honkai_stargazer/";
     public static final String SERVER_DAILYMEMO_URL = "https://voc2048.com/honkai_stargazer/dailyMemo_1.2/";
-
-    //VERSION
-    public static final String VERSION_1_0_5 = "1.0.5";
-    public static final String VERSION_1_1_0 = "1.1.0";
-    public static final String VERSION_1_2_0 = "1.2.0";
-    public static final String VERSION_1_3_0 = "1.3.0";
-    public static final String VERSION_1_4_0 = "1.4.0";
-    public static final String VERSION_1_5_0 = "1.5.0";
 
     public static NumberFormat getNumberFormat() {
         NumberFormat nf = NumberFormat.getNumberInstance();
@@ -184,7 +179,7 @@ public class ItemRSS {
 
 
     /**
-     * Update Ver. 1.5.0
+     * Update Ver. 1.6.0
      * https://hsr.honeyhunterworld.com/img/item/fu-xuan-item_icon_avatar.webp?x11252
      */
     public int[] getCharByName(String charNameInFile, String... option){
@@ -192,6 +187,11 @@ public class ItemRSS {
             return getTrailblazerByName(charNameInFile,option);
         }
         switch (charNameInFile){
+            //Add in 1.6.0
+            case "Dr. Ratio" : return new int[]{R.drawable.dr_ratio_icon, R.drawable.dr_ratio_splash, R.drawable.dr_ratio_fade,R.drawable.dr_ratio_eidolon1, R.drawable.dr_ratio_eidolon2, R.drawable.dr_ratio_eidolon3, R.drawable.dr_ratio_eidolon4, R.drawable.dr_ratio_eidolon5, R.drawable.dr_ratio_eidolon6};
+            case "Ruan Mei" : return new int[]{R.drawable.ruan_mei_icon, R.drawable.ruan_mei_splash, R.drawable.ruan_mei_fade,R.drawable.ruan_mei_eidolon1, R.drawable.ruan_mei_eidolon2, R.drawable.ruan_mei_eidolon3, R.drawable.ruan_mei_eidolon4, R.drawable.ruan_mei_eidolon5, R.drawable.ruan_mei_eidolon6};
+            case "Xueyi" : return new int[]{R.drawable.xueyi_icon, R.drawable.xueyi_splash, R.drawable.xueyi_fade,R.drawable.xueyi_eidolon1, R.drawable.xueyi_eidolon2, R.drawable.xueyi_eidolon3, R.drawable.xueyi_eidolon4, R.drawable.xueyi_eidolon5, R.drawable.xueyi_eidolon6};
+
             //Add in 1.5.0
             case "Argenti" : return new int[]{R.drawable.argenti_icon, R.drawable.argenti_splash, R.drawable.argenti_fade,R.drawable.argenti_eidolon1, R.drawable.argenti_eidolon2, R.drawable.dan_heng_eidolon3, R.drawable.argenti_eidolon4, R.drawable.argenti_eidolon5, R.drawable.argenti_eidolon6};
             case "Huohuo" : return new int[]{R.drawable.huohuo_icon, R.drawable.huohuo_splash, R.drawable.huohuo_fade,R.drawable.huohuo_eidolon1, R.drawable.huohuo_eidolon2, R.drawable.huohuo_eidolon3, R.drawable.huohuo_eidolon4, R.drawable.huohuo_eidolon5, R.drawable.huohuo_eidolon6};
@@ -245,10 +245,14 @@ public class ItemRSS {
     }
 
     /**
-     * Update Ver. 1.5.0
+     * Update Ver. 1.6.0
      */
     public int[] getLightconeByName(String lightconeNameInFile){
         switch (lightconeNameInFile){
+            //Add in 1.6.0
+            case "Baptism of Pure Thought" : return new int[] {R.drawable.baptism_of_pure_thought, R.drawable.baptism_of_pure_thought_artwork};
+            case "Past Self in Mirror" : return new int[] {R.drawable.past_self_in_mirror, R.drawable.past_self_in_mirror_artwork};
+
             //Add in 1.5.0
             case "Night of Fright" : return new int[] {R.drawable.night_of_fright, R.drawable.night_of_fright_artwork};
             case "An Instant Before A Gaze" : return new int[] {R.drawable.an_instant_before_a_gaze, R.drawable.an_instant_before_a_gaze_artwork};
@@ -347,7 +351,7 @@ public class ItemRSS {
     }
 
     /**
-     * Update Ver. 1.5.0
+     * Update Ver. 1.6.0
      */
     public int[] getRelicByName(String relicNameInFile){
         switch (relicNameInFile){
@@ -390,10 +394,17 @@ public class ItemRSS {
 
 
     /**
-     * Update Ver. 1.5.0
+     * Update Ver. 1.6.0
      */
     public String getLocalNameByName(String itemNameInFile, Context context){
         switch (itemNameInFile){
+            //Add in 1.6.0
+            case "Dr. Ratio" : return context.getString(R.string.dr_ratio);
+            case "Ruan Mei" : return context.getString(R.string.ruan_mei);
+            case "Xueyi" : return context.getString(R.string.xueyi);
+            case "Baptism of Pure Thought" : return context.getString(R.string.baptism_of_pure_thought);
+            case "Past Self in Mirror" : return context.getString(R.string.past_self_in_mirror);
+
             //Add in 1.5.0
             case "Hanya" : return context.getString(R.string.hanya);
             case "Huohuo" : return context.getString(R.string.huohuo);
@@ -561,13 +572,17 @@ public class ItemRSS {
     }
 
     /**
-     * Update Ver. 1.5.0
+     * Update Ver. 1.6.0
      * @param name Name of Lightcone in Prydwen
      * @param context Context for using context.getString(...)
      * @return
      */
     public String getLocaleNameByPrydwen(String name, Context context){
         switch (name){
+            //Add in 1.6.0
+            case "baptism-of-pure-thought": return "Baptism of Pure Thought";
+            case "past-self-in-mirror": return "Past Self in Mirror";
+
             //Add in 1.5.0
             case "night-of-fright": return "Night of Fright";
             case "an-instant-before-a-gaze": return "An Instant Before A Gaze";
@@ -664,6 +679,11 @@ public class ItemRSS {
 
     public int[] getCharSkillByName(String charNameInFile){
         switch (charNameInFile){
+            //Add in 1.6.0
+            case "Dr. Ratio" : return new int[]{R.drawable.dr_ration_skill1, R.drawable.dr_ration_skill2, R.drawable.dr_ration_skill3, R.drawable.dr_ration_skill4, R.drawable.dr_ration_skill6};
+            case "Ruan Mei" : return new int[]{R.drawable.ruan_mei_skill1, R.drawable.ruan_mei_skill2, R.drawable.ruan_mei_skill3, R.drawable.ruan_mei_skill4, R.drawable.ruan_mei_skill6};
+            case "Xueyi" : return new int[]{R.drawable.xueyi_skill1, R.drawable.xueyi_skill2, R.drawable.xueyi_skill3, R.drawable.xueyi_skill4, R.drawable.xueyi_skill6};
+
             //Add in 1.5.0
             case "Hanya" : return new int[]{R.drawable.hanya_skill1, R.drawable.hanya_skill2, R.drawable.hanya_skill3, R.drawable.hanya_skill4, R.drawable.hanya_skill6};
             case "Huohuo" : return new int[]{R.drawable.huohuo_skill1, R.drawable.huohuo_skill2, R.drawable.huohuo_skill3, R.drawable.huohuo_skill4, R.drawable.huohuo_skill6};
@@ -721,6 +741,8 @@ public class ItemRSS {
 
     public int getMaterialByID(int materialID){
         switch (materialID){
+            //Update in 1.6.0
+            case 470781 : return R.drawable.material_past_evils_of_the_borehole_planet_disaster;
             //Update in 1.5.0
             case 29328 : return R.drawable.material_credit;
             case 125435 : return R.drawable.material_tracks_of_destiny;

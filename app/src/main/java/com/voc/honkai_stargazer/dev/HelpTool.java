@@ -7,7 +7,6 @@
 package com.voc.honkai_stargazer.dev;
 
 import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
-import static com.voc.honkai_stargazer.util.ItemRSS.VERSION_1_2_0;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -52,6 +51,7 @@ public class HelpTool {
 
     public void trigger_help_tool(Context context){
         String json_base2 = LoadAssestData(context, "relic_data/relic_list.json");
+        help_tool_export_locale_advice(context);
         try {
             JSONArray array = new JSONArray(json_base2);
             ArrayList<String> materialList = new ArrayList<>();
@@ -65,6 +65,8 @@ public class HelpTool {
             }
              */
 
+            /*
+            EXPORT RELIC EACH PIECE ICON
             for (int x =  0 ;x < array.length() ; x++){
                 String data = LoadAssestData(context,"relic_data/en/"+array.getJSONObject(x).getString("fileName")+".json");
                 String name = (array.getJSONObject(x).getString("name"));
@@ -75,6 +77,8 @@ public class HelpTool {
                     }
                 }
             }
+
+             */
 
             //skillTreePointArray = new ArrayList<>();
             /*
@@ -381,7 +385,7 @@ public class HelpTool {
             JSONArray array = new JSONArray(json_base2);
             for (int i = 0; i < array.length(); i++) {
                 JSONObject object = array.getJSONObject(i);
-                String urlName = object.getString("name").replace("Dan Heng • ","").toLowerCase().replace(" ","-").replace("(","").replace(")","");
+                String urlName = object.getString("name").replace("Dan Heng • ","").replace(".","").replace(" & Numby","").toLowerCase().replace(" ","-").replace("(","").replace(")","");
                 //if (!matchRequirement(object,VERSION_CHECK)){return;}
                 new JsonTask().execute("https://www.prydwen.gg/page-data/star-rail/characters/"+urlName+"/page-data.json",object.getString("name"),object.getString("fileName"));
             }
@@ -393,7 +397,7 @@ public class HelpTool {
     public static boolean matchRequirement(JSONObject object, String requirement){
         try {
             switch (requirement){
-                case VERSION_CHECK : return (object.getString("version").equals(VERSION_1_2_0));
+                case VERSION_CHECK : return (object.getString("version").equals("VERSION_1_2_0"));
             }
         } catch (JSONException e) {
             throw new RuntimeException(e);
@@ -466,19 +470,27 @@ public class HelpTool {
                     JSONArray buildData = null;
                     JSONObject buildDataOBJ = null;
                     JSONArray teams = null;
+                    JSONArray conesNew = null;
                     if (jsonObject.has("result")) jsonTMP = jsonObject.getJSONObject("result");
                     if (jsonTMP.has("data")) jsonTMP = jsonTMP.getJSONObject("data");
                     if (jsonTMP.has("currentUnit")) jsonTMP = jsonTMP.getJSONObject("currentUnit");
                     if (jsonTMP.has("nodes")) jsonARR = jsonTMP.getJSONArray("nodes");
                     if (jsonARR.getJSONObject(0).has("buildData")) buildData = jsonARR.getJSONObject(0).getJSONArray("buildData");
-                    if (jsonARR.getJSONObject(0).has("teams")) {
-                        teams = jsonARR.getJSONObject(0).getJSONArray("teams");
-                        buildData = buildData.put(teams);
-                    }
                     buildDataOBJ = buildData.getJSONObject(0);
+                    if (buildDataOBJ.has("comments")) buildDataOBJ.remove("comments");
+                    if (buildDataOBJ.has("name")) buildDataOBJ.remove("name");
+                    if (jsonARR.getJSONObject(0).has("teams") && !jsonARR.getJSONObject(0).isNull("teams")) {
+                        teams = jsonARR.getJSONObject(0).getJSONArray("teams");
+                        buildDataOBJ = (teams == null ? buildDataOBJ : buildDataOBJ.put("teams",teams));
+                    }
+                    if (jsonARR.getJSONObject(0).has("conesNew") && !jsonARR.getJSONObject(0).isNull("conesNew")) {
+                        if (buildDataOBJ.has("cones")) buildDataOBJ.remove("cones");
+                        conesNew = jsonARR.getJSONObject(0).getJSONArray("conesNew");
+                        buildDataOBJ = (conesNew == null ? buildDataOBJ : buildDataOBJ.put("conesNew",conesNew));
+                    }
                     resultData = (buildDataOBJ != null ? buildDataOBJ.toString() : null);
 
-                    System.out.println(charName+" : "+resultData);
+                    System.out.println(charName+" [XPRR] : "+resultData);
 
                     File ext = context.getFilesDir();
                     System.out.println(ext + "/" + fileName+".json");
@@ -491,7 +503,7 @@ public class HelpTool {
 
                 }
             } catch (JSONException e) {
-                System.out.println(charName+" : []");
+                System.out.println(charName+" : "+e.getMessage());
             } catch (IOException e) {
                 System.out.println(charName+" : I/O ERROR");
             }
