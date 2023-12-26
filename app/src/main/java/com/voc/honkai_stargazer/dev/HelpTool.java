@@ -470,7 +470,8 @@ public class HelpTool {
                     JSONArray buildData = null;
                     JSONObject buildDataOBJ = null;
                     JSONArray teams = null;
-                    JSONArray conesNew = null;
+                    JSONArray conesNew = new JSONArray();
+                    JSONArray conesNewFAKE = new JSONArray();
                     if (jsonObject.has("result")) jsonTMP = jsonObject.getJSONObject("result");
                     if (jsonTMP.has("data")) jsonTMP = jsonTMP.getJSONObject("data");
                     if (jsonTMP.has("currentUnit")) jsonTMP = jsonTMP.getJSONObject("currentUnit");
@@ -485,7 +486,16 @@ public class HelpTool {
                     }
                     if (jsonARR.getJSONObject(0).has("conesNew") && !jsonARR.getJSONObject(0).isNull("conesNew")) {
                         if (buildDataOBJ.has("cones")) buildDataOBJ.remove("cones");
-                        conesNew = jsonARR.getJSONObject(0).getJSONArray("conesNew");
+                        conesNewFAKE = jsonARR.getJSONObject(0).getJSONArray("conesNew");
+                        ArrayList<String> conesNewX = new ArrayList<>();
+                        for(int y = 0 ; y < conesNewFAKE.length()  ;y++){
+                            if (!conesNewFAKE.getJSONObject(y).has("cone") || conesNewFAKE.getJSONObject(y).isNull("cone")) continue;
+                            if (!conesNewX.contains(conesNewFAKE.getJSONObject(y).getString("cone"))){
+                                JSONObject tmp = new JSONObject().put("cone",conesNewFAKE.getJSONObject(y).getString("cone"));
+                                conesNew.put(tmp);
+                                conesNewX.add(conesNewFAKE.getJSONObject(y).getString("cone"));
+                            }
+                        }
                         buildDataOBJ = (conesNew == null ? buildDataOBJ : buildDataOBJ.put("conesNew",conesNew));
                     }
                     resultData = (buildDataOBJ != null ? buildDataOBJ.toString() : null);

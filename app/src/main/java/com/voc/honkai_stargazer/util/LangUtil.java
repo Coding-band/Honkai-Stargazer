@@ -20,6 +20,7 @@ public class LangUtil {
 
     private static LangUtil INSTANCE = null;
 
+    //CHANGE_WHEN_LANG_UPDATE
     public enum LangType{
         EN(Locale.ENGLISH,"en","English"),
         ZH_CN(Locale.SIMPLIFIED_CHINESE,"zh_cn","简体中文"),
@@ -32,9 +33,9 @@ public class LangUtil {
         PT(new Locale("pt", "PT"),"pt","Português"),
         VI(new Locale("vi", "VI"),"vi","tiếng Việt"),
         ES(new Locale("es", "ES"),"es","Español"),
-        ID(new Locale("in", "ID"),"es","Bahasa Indonesia"),
+        ID(new Locale("in"),"id","Bahasa Indonesia"),
         KR(Locale.KOREAN,"kr","한국어"),
-        TH(new Locale("th", "TH"),"es","ภาษาไทย"),
+        TH(new Locale("th"),"th","ภาษาไทย"),
         ;
 
         private Locale locale;
@@ -64,6 +65,7 @@ public class LangUtil {
         return(INSTANCE);
     }
 
+    //CHANGE_WHEN_LANG_UPDATE
     public static LangType getLangTypeByCode(String code){
         LangType langType = LangType.EN;
         switch (code){
@@ -78,6 +80,9 @@ public class LangUtil {
             case ItemRSS.LANG_PT: langType = LangType.PT;break;
             case ItemRSS.LANG_VI: langType = LangType.VI;break;
             case ItemRSS.LANG_ES: langType = LangType.ES;break;
+            case ItemRSS.LANG_ID: langType = LangType.ID;break;
+            case ItemRSS.LANG_KR: langType = LangType.KR;break;
+            case ItemRSS.LANG_TH: langType = LangType.TH;break;
             default:langType = LangType.EN;break;
         }
         return langType;
@@ -92,7 +97,7 @@ public class LangUtil {
 
     public static void updateLocale(Context baseContext, LangType type, Activity activity) {
 
-
+        //CHANGE_WHEN_LANG_UPDATE
         SharedPreferences.Editor editor = baseContext.getSharedPreferences("user_info",Context.MODE_PRIVATE).edit();
         switch (type){
             case ZH_CN: editor.putString("curr_lang",LangType.ZH_CN.getCode()).apply();break;
@@ -105,6 +110,9 @@ public class LangUtil {
             case PT: editor.putString("curr_lang",LangType.PT.getCode()).apply();break;
             case VI: editor.putString("curr_lang",LangType.VI.getCode()).apply();break;
             case ES: editor.putString("curr_lang",LangType.ES.getCode()).apply();break;
+            case ID: editor.putString("curr_lang",LangType.ID.getCode()).apply();break;
+            case KR: editor.putString("curr_lang",LangType.KR.getCode()).apply();break;
+            case TH: editor.putString("curr_lang",LangType.TH.getCode()).apply();break;
             default:
             case EN: editor.putString("curr_lang",LangType.EN.getCode()).apply();break;
         }
@@ -117,6 +125,7 @@ public class LangUtil {
         resources.updateConfiguration(config, resources.getDisplayMetrics());
     }
 
+    //CHANGE_WHEN_LANG_UPDATE
     private static Context updateResources(Context context, LangType type) {
         Resources resources = context.getResources();
         Locale currentLang = type.getLocale();
@@ -134,6 +143,9 @@ public class LangUtil {
             case PT: editor.putString("curr_lang",LangType.PT.getCode()).apply();break;
             case VI: editor.putString("curr_lang",LangType.VI.getCode()).apply();break;
             case ES: editor.putString("curr_lang",LangType.ES.getCode()).apply();break;
+            case ID: editor.putString("curr_lang",LangType.ID.getCode()).apply();break;
+            case KR: editor.putString("curr_lang",LangType.KR.getCode()).apply();break;
+            case TH: editor.putString("curr_lang",LangType.TH.getCode()).apply();break;
             default:
             case EN: editor.putString("curr_lang",LangType.EN.getCode()).apply();break;
         }

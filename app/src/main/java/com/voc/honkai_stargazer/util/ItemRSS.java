@@ -32,6 +32,7 @@ import java.util.Locale;
 
 public class ItemRSS {
 
+    //CHANGE_WHEN_LANG_UPDATE
     public static final String LANG_EN = "en"; //DEFAULT CASE, now for beta test.
     public static final String LANG_ZH_HK = "zh_hk";
     public static final String LANG_ZH_CN = "zh_cn";
