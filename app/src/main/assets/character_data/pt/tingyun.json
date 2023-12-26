@@ -54,7 +54,7 @@
    "id": 151160,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "f4e0301b109ba0ab0b633a7186df88a0fa0be8a70edf33c88539672e514bbc8c",
+   "iconPath": "02cccae71e7d4c33c463175ee672c7eed3f27ddc6406f05a40a18e261fdd9780",
    "name": "Coroa de Raios de uma Sombra do Passado",
    "desc": "Acessório de cabeça da Sombra Guardiã. Pode ser usado para Ascensão de personagens de Dano de Raio.",
    "lore": "Acessório deixado para trás pela sombra de um guardião do passado, que contava histórias da cidade de Inverno Eterno.<br /><br />\"Svetlana, o Punho de Ferro: sua ira é tão aterrorizante quanto um trovão e sua retribuição é tão rápida quanto um raio.\"",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/151160",
    "comeFrom": [
+    "Sombra Estagnada: Corredor de Ecos Atenuados",
     "Sombra Estagnada (Corredor de Ecos Atenuados)",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -165,6 +166,7 @@
    "rewardPath": "/material/635670",
    "comeFrom": [
     "Cálice (Assentamento de Robôs)",
+    "Cálice (Assentamento de Robôs)",
     "Troca de Brasas"
    ]
   },
@@ -199,6 +201,7 @@
    "rewardPath": "/material/836256",
    "comeFrom": [
     "Cálice (Assentamento de Robôs)",
+    "Cálice (Assentamento de Robôs)",
     "Sintetizador Omni — Síntese de Material"
    ]
   },
@@ -214,6 +217,7 @@
    "rarity": 3,
    "rewardPath": "/material/920197",
    "comeFrom": [
+    "Cálice (Assentamento de Robôs)",
     "Cálice (Assentamento de Robôs)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas"
@@ -1546,7 +1550,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do inimigo-alvo.",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do alvo inimigo do Tipo correspondente.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2302,7 +2306,7 @@
   {
    "id": 24,
    "title": "Ativação de Rastro",
-   "text": "Esse universo vasto tem tantos mundos que ainda vou explorar...",
+   "text": "Esse universo vasto tem tantos mundos que eu ainda preciso explorar...",
    "unlockRequirement": "",
    "cnUrl": "e9262e4296fa207b23b8add8c6d92523ef7148dedf7afd87c350f99125499435",
    "jpUrl": "b1c47350e84d166e62355c8cd34f93341bf5376e011fa5db09ef38ecb0c9940c",
@@ -2322,7 +2326,7 @@
   {
    "id": 26,
    "title": "Entrou na Equipe com Jing Yuan",
-   "text": "As pessoas costumam esquecer que o general é corajoso, mas também astuto.",
+   "text": "As pessoas costumam esquecer que a coragem do general é tão grande quanto sua astúcia.",
    "unlockRequirement": "",
    "cnUrl": "52c66c6f4f93cc2d3707bfd66614b99d01317dec40555c107135f274d57f5a65",
    "jpUrl": "3498200ad84a7d7e93529621c9403f39cadaa3ad026acf67dc3d0c208081db7e",
@@ -2401,7 +2405,7 @@
   },
   {
    "id": 57,
-   "title": "Perícia 1",
+   "title": "Perícia - 1",
    "text": "Males, desapareçam!",
    "unlockRequirement": "",
    "cnUrl": "9e7be6e5c1f92354d617b68a4f58ccc7a8e2110de5d4dff3eae2993936b3faea",
@@ -2411,7 +2415,7 @@
   },
   {
    "id": 58,
-   "title": "Perícia 2",
+   "title": "Perícia - 2",
    "text": "Tudo de bom!",
    "unlockRequirement": "",
    "cnUrl": "69b4413b4f09d909e899d8bebfbfa25a141b067cd9194a490823ce4ab06fca23",
@@ -2511,7 +2515,7 @@
   },
   {
    "id": 68,
-   "title": "Abrindo Tesouro 1",
+   "title": "Abrindo Tesouro - 1",
    "text": "Isso vale um bom dinheiro.",
    "unlockRequirement": "",
    "cnUrl": "b2f42e330753560102700eb15081c66473b1347ccdeee2a0a3b9b0c837d9b20f",
@@ -2521,7 +2525,7 @@
   },
   {
    "id": 72,
-   "title": "Abrindo Tesouro 2",
+   "title": "Abrindo Tesouro - 2",
    "text": "Eu adoro isso.",
    "unlockRequirement": "",
    "cnUrl": "7fe62e63c45639b57ec347d8fb0b8d92aa0f911876c48fdc024a4814616d2164",
@@ -2541,7 +2545,7 @@
   },
   {
    "id": 69,
-   "title": "Enigma Solucionado 1",
+   "title": "Enigma Solucionado - 1",
    "text": "Mamão com açúcar!",
    "unlockRequirement": "",
    "cnUrl": "2400b947e0b0631a4ca194d23099e82c29688b26906787099f82afd6f906125d",
@@ -2551,7 +2555,7 @@
   },
   {
    "id": 74,
-   "title": "Enigma Solucionado 2",
+   "title": "Enigma Solucionado - 2",
    "text": "Tudo graças à sua orientação, benfeitora/benfeitor.",
    "unlockRequirement": "",
    "cnUrl": "213ca4ab209c0c37a1500a68fbb7979df5fa62d4f4651a302cc605fe9e1421e6",

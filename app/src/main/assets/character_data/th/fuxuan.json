@@ -1,0 +1,2810 @@
+{
+ "spRequirement": 135,
+ "iconPath": "dde4e1862a972c97fae0aa51693ee227ae1a275136a82932151b4b362537e4a6",
+ "bgPath": "8702d1c143eeddc6c1fe762a975dfe8439b71e7cff8c028fac712aa34ad1e9ab",
+ "figPath": "bc8aaecc4e7a06ba4e8184fab558688b82f7a2b2d23b4fe9fc40a42fbe3d6d11",
+ "fgPath": "608cafb9f4f60293ac28ebcff9fee5920172a0790e4ba62fd9aadfdaccb4b8fc",
+ "splashIconPath": "a085446e3039645f6e5a6f0904bfcda179300dcbbdc0d89a41bfa701824e14ac",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 6,
+  "iconPath": "2f9b8d95db5ea4e06c3c53c68bf0a3a270c39d2ead73a93311dd8a39d364cfbf",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "เครดิต",
+   "desc": "สกุลเงินที่องค์กรสันติภาพแห่งดวงดาวใช้ในการชำระบัญชีแก่ลูกค้า ซึ่งปัจจุบันได้กลายเป็นสกุลเงินหลัก ที่ใช้กันอย่างแพร่หลายสำหรับการเดินทางในอวกาศ",
+   "lore": "\"ผู้คนดิ้นรน ต่อสู้ และแลกเปลี่ยนเพื่อตัวเลขที่แสดงในเทอร์มินัล แต่สิ่งล้ำค่าที่แท้จริงนั้น ไม่สามารถซื้อได้ด้วยตัวเลขจากองค์กร\"",
+   "purpose": "สกุลเงินทั่วไป",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calyx (Great Mine)",
+    "รางวัลภารกิจ",
+    "รางวัลคำขอ",
+    "ร้าน Ember"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Tracks of Destiny",
+   "desc": "วัสดุระดับสูงสำหรับการเพิ่มเลเวล Trace",
+   "lore": "ความพ่ายแพ้ซ้ำแล้วซ้ำเล่าจะนำไปสู่ชัยชนะ ก้าวไปข้างหน้าก้าวแล้วก้าวเล่าจะนำไปสู่จุดเปลี่ยนของโชคชะตา",
+   "purpose": "วัสดุ Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "รางวัลคะแนนสะสม Simulated Universe",
+    "เกียรติยศนิรนาม",
+    "แลกเปลี่ยน Ember",
+    "รางวัลกิจกรรมจำกัดเวลา"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "9794d4b9cee70ded671331e6e9eec06326dcb9428d59540d9960f2a0bbea00e1",
+   "name": "Regret of Infinite Ochema",
+   "desc": "วัสดุระดับสูงสำหรับการเพิ่มเลเวล Trace",
+   "lore": "ไม่ว่าจะอีกกี่ร่างก็ยังไม่สมดั่งใจ เช่นเดียวกับผู้คนที่แสวงหายาวิเศษ มันปรารถนาจะมีร่างกายที่มีชีวิตยืนยาว โดยไม่ต้องกลัวการ \"ทำลายล้าง\" อีกต่อไป มันรู้ว่า นี่เป็นเพียงความเพ้อฝันที่ไม่มีทางเป็นจริง<br /><br />\"ฉันเคยเห็นโลกที่ถูกเปลวไฟของเทพแห่งสามานย์ กลืนกินมานับไม่ถ้วน และฉันก็เคยเป็นหนึ่งในเปลวเพลิงเหล่านั้น ฉันเต้นรำไปตามปลายนิ้วของเขา โดยรู้ดีว่าถ้าฟืนหมดแล้ว ไฟก็จะมอดดับลง...\"",
+   "purpose": "วัสดุ Trace",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "Echo of War: Scalegorge Waterscape"
+   ]
+  },
+  "351747": {
+   "id": 351747,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "2fbc400e2e7d120f87d04bfd3e713bd230496e24e47cc89e25ee139940602dad",
+   "name": "Nail of the Ape",
+   "desc": "เศษซากของ Abundance Sprite วัสดุเลื่อนขั้นของตัวละครประเภทควอนตัม",
+   "lore": "\"Sprite\" และ \"สิ่งชั่วร้าย\" นั้นแตกต่างกันแค่ชื่อ Sprite นั้นทั้งเชื่องและเชื่อฟัง ในขณะที่สิ่งชั่วร้ายนั้น มักจะสร้างความเสียหายและสูญเสียการควบคุม ตะปูที่ฝังอยู่ในร่างของ Malefic Ape เป็นสิ่งที่รับประกันว่ามันจะเป็น Sprite ตลอดไป<br /><br />\"หน้าที่ของสาวกคือต้องเชื่อฟังคำสั่ง หากท่านผู้นำตอกตะปูเข้าไปในร่างกาย ก็จะต้องเชื่อฟังคำสั่งแต่โดยดี\"",
+   "purpose": "วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/351747",
+   "comeFrom": [
+    "Stagnant Shadow: Scalegorge Waterscape",
+    "Stagnant Shadow: Scalegorge Waterscape",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "คู่มือการเดินทาง",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>20000</nobr> หน่วย",
+   "lore": "หนังสือชุดเกี่ยวกับการผจญภัยที่จำเป็นต่อการสำรวจโลก กดปุ่มอ่านเพื่อฟังเสียงที่น่าฟังในภาษาที่คุณเข้าใจ ซึ่งจะบอกเล่าเกี่ยวกับประสบการณ์การผจญภัยในโลกต่างๆ ของเหล่านักผจญภัยที่มีชื่อเสียง รวมถึงภูมิปัญญาอันล้ำค่าที่พวกเขาได้รับจากดาวแต่ละดวงด้วย<br /><br />\"คู่มือการเดินทางชุดใหม่ 'การทำอาหารระหว่างดวงดาว' จะวางจำหน่ายเร็วๆ นี้ โปรดติดตามกันให้ดี\"<br />\"สำหรับการส่งผลงาน โปรดติดต่อกับ Synesthesia Beacon ERD<nobr>-23</nobr>θ เพื่อติดต่อตัวแทนของสถาบันแห่งปัญญา โดยวิธีการจ่ายค่าต้นฉบับนั้น สามารถจัดการได้ตามความสะดวกของคุณ\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "\"Forgotten Hall\""
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "บันทึกการผจญภัย",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>5000</nobr> หน่วย",
+   "lore": "บันทึกการผจญภัยที่ได้รับการจัดการอย่างเป็นระเบียบ และมีคุณค่าต่อการศึกษา ซึ่งประกอบไปด้วยภาพประกอบและข้อความที่เกี่ยวกับการผจญภัยตั้งแต่ต้นจนจบ ตลอดจนข้อมูลที่มีคุณค่าและเทคนิคที่เกี่ยวข้องกับการเอาชีวิตรอด<br /><br />\"ทำไมไม่แปลงข้อมูลใส่ลงไปในดิสก์ล่ะ? สะดวกกว่าตั้งเยอะ\"<br />\"เมื่อเผชิญกับพายุดาว และการปะทุของกระแสนิวตรอนแล้ว เทคโนโลยีขั้นสูงนั้นมีความเปราะบางมากกว่าที่คิด นอกจากนี้ คนทำหนังสือเล่มนี้คงอยากจะให้คนอ่าน สามารถอ่านได้ด้วยวิธีที่ง่ายที่สุด\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "การฝึกประจำวัน",
+    "ร้าน Ember"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "ความรู้จากการเดินทาง",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>1000</nobr> หน่วย",
+   "lore": "ไดอารี่การเดินทางที่เขียนด้วยลายมือสุดยุ่งเหยิงและมีเนื้อหาตามใจชอบ ซึ่งไม่ค่อยมีประโยชน์สำหรับคุณสักเท่าไหร่<br /><br />\"Dan Heng อ่านจบแล้วก็รีบเอากระดาษพวกนี้ไปทิ้งเถอะ\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "รางวัลคำขอ"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "54d4c5dedbef6b70f526e88708669e94b6a214431c0c9ca55edf9b28b3413fcb",
+   "name": "Artifex's Module",
+   "desc": "ชิ้นส่วนของเครื่องจักร Xianzhou วัสดุพื้นฐานที่ใช้สำหรับการเสริมพลัง",
+   "lore": "รากฐานของเทคโนโลยีเครื่องยนต์กลไกของ Xianzhou มันเป็นส่วนประกอบที่เล็กที่สุดในอะไหล่เครื่องจักร การแยกชิ้นส่วนออก ก็เหมือนกับการทำลายโครงสร้างเซลล์ของสิ่งมีชีวิต<br /><br />\"สถาบันแห่งปัญญา จะมอบเงินรางวัลสองล้านเครดิต ให้กับวิธีการทางเทคนิคที่สามารถใช้รื้อถอนหุ่น Xianzhou ได้โดยไม่ก่อให้เกิดความเสียหาย\"<br />\"ถ้าเธอรู้จัก Screwllum ละก็ เงินสองล้านนี้ก็จะได้ไปฟรีๆ เลย...\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "ดรอปจาก Entranced Ingenium",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "รางวัลคำขอ",
+    "แลกเปลี่ยน Ember",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "7b31224c48190eebf224b39e2a9df9477f9c67018bc63cb1b20569e6186041c3",
+   "name": "Artifex's Cogwheel",
+   "desc": "ชิ้นส่วนของเครื่องจักร Xianzhou วัสดุธรรมดาที่ใช้สำหรับการเสริมพลัง",
+   "lore": "ชิ้นส่วนที่ใช้สำหรับเชื่อมต่อในเทคโนโลยีเครื่องยนต์กลไกของ Xianzhou ฟันเฟืองที่เชื่อมต่อกันอย่างประณีตนั้น มีขนาดเล็กพอๆ กับเมล็ดมัสตาร์ด แต่กลับเชื่อมกันเป็นกลไกที่ซับซ้อน ทำให้เครื่องจักรเคลื่อนไหวได้ราวกับมีชีวิต<br /><br />\"รูปร่างของมันกลมกลืน ขนานคู่ไปกับผืนฟ้า การเคลื่อนไหวเวียนวน กึกก้องไปพร้อมกับจักรวาล\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "ดรอปจาก Entranced Ingenium เมื่อระดับความสมดุลถึง Lv.2",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "635668": {
+   "id": 635668,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "61f6a6c6b61eb719a275169312c34e1791499cffa9fa1ab2f5390cfca20da279",
+   "name": "Endurance of Bronze",
+   "desc": "โล่สัมฤทธิ์โบราณที่ดูไม่ประณีตแต่ทนทาน สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">อนุรักษ์</span>ได้เล็กน้อย",
+   "lore": "ตำนานเล่าว่าในสมัยโบราณมีสงครามเกิดขึ้น และผู้คนได้ใช้วิธีการดั้งเดิมทุกอย่าง เพื่อติดตามทวยเทพและต่อสู้กับสัตว์ร้ายที่เกินจะรับมือ<br />โล่นี้เป็นพยานของสงครามครั้งนั้น<br /><br />\"แม้ว่าจะไม่สามารถต้านทานได้ แต่ฉันยังคงพยายามอย่างสุดกำลัง\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 2,
+   "rewardPath": "/material/635668",
+   "comeFrom": [
+    "Calyx (Supply Zone)",
+    "Calyx (Supply Zone)",
+    "ร้าน Ember"
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "fcb869b494268ac2b7320d4a3795736698f3a3c5e9bad9c0182c6e11bd343c55",
+   "name": "Artifex's Gyreheart",
+   "desc": "ชิ้นส่วนของเครื่องจักร Xianzhou วัสดุชั้นสูงที่ใช้สำหรับการเสริมพลัง",
+   "lore": "แกนกลางของเทคโนโลยีเครื่องยนต์กลไกของ Xianzhou วงแหวนดวงดาวจะหมุนวนและสั่นเป็นจังหวะราวกับหัวใจ ทำให้เครื่องจักรมีความคิดเหมือนสิ่งมีชีวิต<br /><br />\"ผู้เป็นใหญ่ตื่นตกใจ จึงแยกชิ้นส่วนจิตใจของมันออก และทำให้เขา... เอ่อ เธอ? ไม่สิ ทำให้มันสูญเสียสติสัมปชัญญะ แล้วกลับคืนสู่การเป็นโลหะดังเดิม\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "ดรอปจาก Entranced Ingenium เมื่อระดับความสมดุลถึง Lv.4",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "836254": {
+   "id": 836254,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "d7b80e02bd0ea7a489366b4ec55dab8aef86c30f28636de55dc1ac64b5e7c2e6",
+   "name": "Safeguard of Amber",
+   "desc": "โล่แปลกประหลาดที่ฝังอำพันสุดหายากเอาไว้ ซึ่งหาได้จากนอกฟากท้องฟ้า สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">อนุรักษ์</span>ได้เป็นอย่างมาก",
+   "lore": "ราวกับว่าผู้ครอบครองโล่นี้จะได้รับการคุ้มครองโดยกำแพงที่มองไม่เห็น ไม่ว่าจะเป็นลูกธนูเพลิงสุดร้อนแรงหรือกรงเล็บที่แหลมคมของภูเขาขนาดใหญ่ ก็ไม่สามารถทำร้ายผู้ที่ครอบครองโล่นี้ได้<br />ตำนานเล่าว่า ในสมัยโบราณ มีสงครามที่ฮีโร่ของชนเผ่าได้ถือโล่สัมฤทธิ์เคียงบ่าเคียงไหล่ ไปกับเหล่านักรบที่ถือหอกเพลิงแผดเผา เพื่อต่อสู้กับ Leviathan<br />โล่นี้เป็นพยานของสงครามครั้งนั้น<br /><br />\"อย่าล้ำเส้นมาโดยเด็ดขาด\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 4,
+   "rewardPath": "/material/836254",
+   "comeFrom": [
+    "Calyx (Supply Zone)",
+    "Calyx (Supply Zone)",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ"
+   ]
+  },
+  "920195": {
+   "id": 920195,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "76967cbdb14e8ef8141d315093566ebc0554c20923de99cd1e1b30cbb799758d",
+   "name": "Oath of Steel",
+   "desc": "โล่ที่หลอมมาจากโลหะผสมที่ไม่เป็นที่รู้จัก เทคนิคการสร้างของมันนั้นยากเกินกว่าที่จะทำซ้ำได้ สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">อนุรักษ์</span>ได้ปานกลาง",
+   "lore": "ถึงแม้จะมีขนาดใหญ่ แต่เมื่อยกขึ้นแล้วช่างเบาราวกับอากาศ และแม้จะถูกโจมตี ก็ไม่ทิ้งรอยขีดข่วนไว้บนโล่แต่อย่างใด<br />ตำนานเล่าว่า ในสมัยโบราณเคยมีสงคราม ที่เหล่านักรบผู้กล้าหาญได้กวัดแกว่งหอกที่แผ่รังสีแห่งความตายที่ร้อนแรงและโล่ที่หลอมมาจาก Frost Steel เพื่อปกป้องดินแดนที่ล่มสลาย<br />โล่นี้เป็นพยานของสงครามครั้งนั้น<br /><br />\"เสียงอันทรงพลังพูดขึ้นว่า 'ศัตรูบุกเข้าเมืองแล้ว' 'ศัตรูบุกเข้าเมืองแล้ว' \"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 3,
+   "rewardPath": "/material/920195",
+   "comeFrom": [
+    "Calyx (Supply Zone)",
+    "Calyx (Supply Zone)",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ร้าน Ember"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 63.36,
+   "attackAdd": 3.168,
+   "hpBase": 200.64,
+   "hpAdd": 10.032,
+   "defenseBase": 82.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549503,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 88.704,
+   "attackAdd": 3.168,
+   "hpBase": 280.896,
+   "hpAdd": 10.032,
+   "defenseBase": 115.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549503,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 114.048,
+   "attackAdd": 3.168,
+   "hpBase": 361.152,
+   "hpAdd": 10.032,
+   "defenseBase": 148.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633444,
+     "count": 6
+    },
+    {
+     "id": 351747,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 139.392,
+   "attackAdd": 3.168,
+   "hpBase": 441.408,
+   "hpAdd": 10.032,
+   "defenseBase": 181.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633444,
+     "count": 9
+    },
+    {
+     "id": 351747,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 164.736,
+   "attackAdd": 3.168,
+   "hpBase": 521.664,
+   "hpAdd": 10.032,
+   "defenseBase": 214.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717385,
+     "count": 6
+    },
+    {
+     "id": 351747,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 190.08,
+   "attackAdd": 3.168,
+   "hpBase": 601.92,
+   "hpAdd": 10.032,
+   "defenseBase": 247.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717385,
+     "count": 9
+    },
+    {
+     "id": 351747,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 215.424,
+   "attackAdd": 3.168,
+   "hpBase": 682.176,
+   "hpAdd": 10.032,
+   "defenseBase": 280.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "f50307ea1b93f7b57bb924de9063a266de3f95d33338ab823d0b859430ac29d2",
+   "artPath": "36eececf71891e64617a7d11d45d188ef0a90a326d07eb64468c63e7a6f33f88",
+   "name": "Dominus Pacis",
+   "descHash": "\"Knowledge\" ทำให้ DMG คริติคอลเพิ่มขึ้น <nobr>#1[i]%</nobr>",
+   "params": [
+    0.3
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "66fa8ffaf53f44e3c25f617b5ffa575b6fc564a99b545ba9e00d04fb1374e234",
+   "artPath": "59359faeb74ff3439e21baea9a285c832d8416a7fc8824d0393a389017406192",
+   "name": "Optimus Felix",
+   "descHash": "เมื่อเปิดใช้งาน \"Matrix of Prescience\" หากเป้าหมายฝ่ายเราได้รับ DMG ที่รุนแรงถึงตาย เป้าหมายฝ่ายเราทั้งหมดที่ได้รับ DMG ร้ายแรงถึงตายในแอ็กชันครั้งนี้ จะไม่ติดสถานะหมดสติ และฟื้นฟู HP <nobr>#1[i]%</nobr> ของ HP สูงสุดของตัวเองทันที โดยเอฟเฟกต์นี้สามารถเกิดได้ 1 ครั้งต่อหนึ่งการต่อสู้",
+   "params": [
+    0.7
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "37ce7f5534d606ca60ec1249ddfb91c7b7926a6e3c589d3a9768810c28912578",
+   "artPath": "f008abaa2ad53ff81fc4f5f052482837276c7fe11c9970b67a0485ddb4b18778",
+   "name": "Apex Nexus",
+   "descHash": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน<br />Lv.<nobr>15</nobr>",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "e0a16baeb26741333ac1738f6039736844ff586a9b4349e811edb0e5570e1ca4",
+   "artPath": "0bc12bfd982a0db9e25596dca5b6829079cda551587aeb984f4e53e2867b7e10",
+   "name": "Fortuna Stellaris",
+   "descHash": "เมื่อเป้าหมายอื่นในฝ่ายเราที่อยู่ภายใต้ Matrix of Prescience ถูกโจมตี Fu Xuan จะฟื้นฟูพลังงาน <nobr>#1[i]</nobr> หน่วย",
+   "params": [
+    5
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "68ae2f6c953932bf94f2868e8878780baee6df8fc1323ab0ecf52d4d35dfbd9b",
+   "artPath": "139c997ee76f8508b948aba431248d205b10e107e3980f34768dc46e45e3be55",
+   "name": "Arbiter Primus",
+   "descHash": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "3a060dab1c49b53c6e0f01d1ce509c826ae0b060feca4cc9d07c571c5cbf7c90",
+   "artPath": "5cc4182c9ea511a19f5049f85ce23f2ef5b186dec9571fb0a98aa50f936a05fc",
+   "name": "Omnia Vita",
+   "descHash": "เมื่อเปิดใช้งาน \"Matrix of Prescience\" จะสะสม HP ที่ฝ่ายเราทั้งหมดเสียไปในการต่อสู้นี้ และท่าไม้ตายของ Fu Xuan จะสร้าง DMG เพิ่มขึ้น โดยค่าที่เพิ่มขึ้นจะเท่ากับ <nobr>#1[i]%</nobr> ของจำนวน HP ที่เสียไปในการต่อสู้นี้<br />โดยจำนวน HP ที่เสียไปในการต่อสู้นี้ จะสะสมได้สูงสุดไม่เกิน <nobr>#2[i]%</nobr> ของ HP สูงสุดของ Fu Xuan โดยจะถูกรีเซ็ตและสะสมใหม่ หลังจากที่ปล่อยท่าไม้ตาย",
+   "params": [
+    2,
+    1.2
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   369002
+  ],
+  [
+   285061
+  ],
+  [
+   168416
+  ],
+  [
+   84475
+  ],
+  [
+   799948
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "โจมตีเดี่ยว",
+   "descHash": "สร้าง DMG <span style=\"color:#7788ff;\">ควอนตัม</span> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ของ HP สูงสุดของ Fu Xuan แก่ศัตรูที่กำหนดหนึ่งตัว",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 369002,
+   "name": "Novaburst",
+   "iconPath": "49cd259f0834592cb171ef821eaee22aa0122678ae4db12e6c8d09bd2afb4a9a",
+   "typeDescHash": "โจมตีปกติ",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.25
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.35
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.4
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.45
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.55
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ป้องกัน",
+   "descHash": "เปิดใช้งาน \"Matrix of Prescience\" และ<u>แบ่ง</u> DMG ให้กับ Fu Xuan <nobr>#1[i]%</nobr> ของ DMG ทั้งหมดที่เพื่อนร่วมทีมของ Fu Xuan ได้รับ ก่อนที่จะถูกโล่ต้านทาน เป็นเวลา <nobr>#3[i]</nobr> เทิร์น<br />ฝ่ายเราทั้งหมดที่อยู่ภายใต้ \"Matrix of Prescience\" จะได้รับสถานะ \"Knowledge\" ซึ่ง HP สูงสุดของเป้าหมายฝ่ายเราที่ติดสถานะ \"Knowledge\" จะเพิ่มขึ้น โดยค่าที่เพิ่มขึ้นจะเท่ากับ <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span> ของ HP สูงสุดของ Fu Xuan และอัตราคริติคอลเพิ่มขึ้น <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[f1]%</nobr></span><br />เมื่อ Fu Xuan <u>หมดสติ</u> Matrix of Prescience ก็จะถูกลบไปด้วย",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 285061,
+   "name": "Known by Stars, Shown by Hearts",
+   "iconPath": "37ce7f5534d606ca60ec1249ddfb91c7b7926a6e3c589d3a9768810c28912578",
+   "typeDescHash": "สกิลต่อสู้",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.03,
+      0.06
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.033,
+      0.066
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549503,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.036,
+      0.072
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.039,
+      0.078
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.042,
+      0.084
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.044999998,
+      0.09
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633444,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.048750002,
+      0.0975
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.052500002,
+      0.105
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.05625,
+      0.1125
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.06,
+      0.12
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.063,
+      0.126
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.066,
+      0.132
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.069,
+      0.138
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.072,
+      0.144
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.075,
+      0.15
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "โจมตีหมู่",
+   "descHash": "สร้าง DMG <span style=\"color:#7788ff;\">ควอนตัม</span> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ของ HP สูงสุดของ Fu Xuan แก่ฝ่ายศัตรูทั้งหมด และได้รับจำนวนการฟื้นฟู HP จากพรสวรรค์ของ Fu Xuan 1 ครั้ง",
+   "ultimateCost": 135,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 168416,
+   "name": "Woes of Many Morphed to One",
+   "iconPath": "c8bdb96b3a7c68b2e1b0cc131001bf963b031b691c034a146b4827b9b841e0bf",
+   "typeDescHash": "ท่าไม้ตาย",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.6
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.64
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549503,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.68
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.72
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.76
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633444,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.85
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.95
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.04
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.08
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.12
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.16
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ฟื้นฟู",
+   "descHash": "เมื่อ Fu Xuan อยู่ในสถานะสามารถต่อสู้ได้ จะเพิ่ม Misfortune Avoidance ให้แก่ฝ่ายเราทั้งหมด โดยเป้าหมายฝ่ายเราที่อยู่ภายใต้สถานะ Misfortune Avoidance จะได้รับ DMG ลดลง <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span><br />เมื่อเปอร์เซ็นต์ HP ปัจจุบันของ Fu Xuan น้อยกว่าหรือเท่ากับ <nobr>#2[i]%</nobr> จะเกิดการฟื้นฟู HP โดยจะทำให้ตัวเองฟื้นฟู HP <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> ของค่า HP ที่สูญเสียไป หากถูกโจมตีจนถึงตาย จะไม่สามารถเกิดเอฟเฟกต์นี้ได้ ทั้งนี้เอฟเฟกต์ดังกล่าว จะสามารถเกิดขึ้นได้ 1 ครั้งตามค่าเริ่มต้น และสามารถเกิดขึ้นได้สูงสุด 2 ครั้ง",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 84475,
+   "name": "Bleak Breeds Bliss",
+   "iconPath": "0a05591ca26680437e8a44cbcc712ba7c5b192e7a087a96b7efd97f8cba82ad5",
+   "typeDescHash": "พรสวรรค์",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.1,
+      0.5,
+      0.8
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.108,
+      0.5,
+      0.81
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549503,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.116,
+      0.5,
+      0.82
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.124,
+      0.5,
+      0.83
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.132,
+      0.5,
+      0.84
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.14,
+      0.5,
+      0.85
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633444,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.15,
+      0.5,
+      0.8625
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.16,
+      0.5,
+      0.875
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.17,
+      0.5,
+      0.8875
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.18,
+      0.5,
+      0.9
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.188,
+      0.5,
+      0.91
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.196,
+      0.5,
+      0.92
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.204,
+      0.5,
+      0.93
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.212,
+      0.5,
+      0.94
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.22,
+      0.5,
+      0.95
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "หลังจากโจมตีศัตรูและเข้าสู่การต่อสู้ จะลดทอนความทนทานของประเภทที่สอดคล้องกับศัตรูเป้าหมาย",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 883889,
+   "name": "Attack",
+   "iconPath": "49cd259f0834592cb171ef821eaee22aa0122678ae4db12e6c8d09bd2afb4a9a",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ป้องกัน",
+   "descHash": "หลังจากใช้เทคนิค ฝ่ายเราทั้งหมดจะได้รับบาเรียเป็นเวลา <nobr>#1[i]</nobr> วินาที โดยบาเรียนี้ สามารถต้านทานการโจมตีทั้งหมดของศัตรู และจะไม่เข้าสู่การต่อสู้ แต่หากเข้าสู่การต่อสู้ ในช่วงเวลาที่มีบาเรียอยู่ Fu Xuan จะเปิดใช้งาน \"Matrix of Prescience\" โดยอัตโนมัติ เป็นเวลา <nobr>#2[i]</nobr> เทิร์น",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 799948,
+   "name": "Of Fortune Comes Fate",
+   "iconPath": "461b5c9acccd4e9619ab7babd4ffa6361176b61f119f9e9e7db12d3e818bcacc",
+   "typeDescHash": "เทคนิค",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      20,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1208103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1208208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1208209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 6314,
+        "name": "เสริม HP",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+        "statusList": [
+         {
+          "key": "HP",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836254,
+          "count": 8
+         },
+         {
+          "id": 717385,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1208210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 922364,
+        "name": "เสริมอัตราคริติคอล",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "อัตราคริติคอล",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836254,
+          "count": 8
+         },
+         {
+          "id": 717385,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 6313,
+      "name": "เสริมการต้านทานสถานะ",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+      "statusList": [
+       {
+        "key": "ต้านทานสถานะ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836254,
+        "count": 8
+       },
+       {
+        "id": 717385,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "เมื่อเปิดใช้งาน \"Matrix of Prescience\" หากศัตรูเป้าหมายปล่อยสถานะ Debuff ประเภทควบคุมใส่ฝ่ายเราแล้ว ฝ่ายเราทั้งหมดจะต้านทานสถานะ Debuff ประเภทควบคุมทั้งหมด ที่ศัตรูเป้าหมายปล่อยในแอ็กชันครั้งนี้ เอฟเฟกต์นี้จะเกิดขึ้นได้ 1 ครั้ง โดยหลังจากเปิดใช้งาน \"Matrix of Prescience\" อีกครั้ง จะรีเฟรชจำนวนการเกิดเอฟเฟกต์นี้",
+    "ultimateCost": 0,
+    "id": 6209,
+    "name": "Liuren, the Sexagenary",
+    "iconPath": "fa9e76d4742c1bc9785bd01d0e62cfeca4c09b8ae0d9f04f162ff8149f5c91c6",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836254,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1208201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1208101,
+     "type": 1,
+     "children": [
+      {
+       "id": 1208202,
+       "type": 2,
+       "children": [
+        {
+         "id": 1208203,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 6304,
+          "name": "เสริมอัตราคริติคอล",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+          "statusList": [
+           {
+            "key": "อัตราคริติคอล",
+            "value": 0.026999999
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920195,
+            "count": 3
+           },
+           {
+            "id": 633444,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 6303,
+        "name": "เสริม HP",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+        "statusList": [
+         {
+          "key": "HP",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 5000
+         },
+         {
+          "id": 635668,
+          "count": 3
+         },
+         {
+          "id": 549503,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "descHash": "เมื่อเปิดใช้งาน \"Matrix of Prescience\" จะฟื้นฟูพลังงานเพิ่มเติม <nobr>#1[i]</nobr> หน่วย เมื่อ Fu Xuan ปล่อยสกิลต่อสู้",
+      "ultimateCost": 0,
+      "id": 6207,
+      "name": "Taiyi, the Macrocosmic",
+      "iconPath": "1b5a53fef3bce17a49eba2c213693d78a51fab2b0e04c34dd8b6b627b9d71d7e",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "levelData": [
+       {
+        "params": [
+         20
+        ],
+        "level": 1,
+        "levelReq": 0,
+        "promotionReq": 2,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 5000
+         },
+         {
+          "id": 635668,
+          "count": 3
+         },
+         {
+          "id": 186254,
+          "count": 1
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": 1208102,
+     "type": 1,
+     "children": [
+      {
+       "id": 1208205,
+       "type": 2,
+       "children": [
+        {
+         "id": 1208206,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 6299,
+          "name": "เสริม HP",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+          "statusList": [
+           {
+            "key": "HP",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836254,
+            "count": 3
+           },
+           {
+            "id": 717385,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 6302,
+        "name": "เสริมอัตราคริติคอล",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "อัตราคริติคอล",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 20000
+         },
+         {
+          "id": 920195,
+          "count": 5
+         },
+         {
+          "id": 633444,
+          "count": 4
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "descHash": "เมื่อปล่อยท่าไม้ตาย จะฟื้นฟู HP ให้กับเป้าหมายอื่นในฝ่ายเราเท่ากับ <nobr>#1[i]%</nobr> ของ HP สูงสุดของ Fu Xuan +<nobr>#2[i]</nobr>",
+      "ultimateCost": 0,
+      "id": 6210,
+      "name": "Dunjia, the Metamystic",
+      "iconPath": "eb37869e471682cb42f1d8fd9027380d96680ff6ed0e5c15aa92befae909a331",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "levelData": [
+       {
+        "params": [
+         0.05,
+         133
+        ],
+        "level": 1,
+        "levelReq": 0,
+        "promotionReq": 4,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 20000
+         },
+         {
+          "id": 920195,
+          "count": 5
+         },
+         {
+          "id": 125435,
+          "count": 1
+         },
+         {
+          "id": 186254,
+          "count": 1
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 6306,
+    "name": "เสริมอัตราคริติคอล",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+    "statusList": [
+     {
+      "key": "อัตราคริติคอล",
+      "value": 0.026999999
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549503,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1208204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 6301,
+    "name": "เสริมการต้านทานสถานะ",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+    "statusList": [
+     {
+      "key": "ต้านทานสถานะ",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 10000
+     },
+     {
+      "id": 920195,
+      "count": 3
+     },
+     {
+      "id": 633444,
+      "count": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": 1208207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 6300,
+    "name": "เสริมอัตราคริติคอล",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+    "statusList": [
+     {
+      "key": "อัตราคริติคอล",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 45000
+     },
+     {
+      "id": 836254,
+      "count": 3
+     },
+     {
+      "id": 717385,
+      "count": 3
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "ลำตัว",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "HP",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "เท้า",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "ความเร็ว",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Planar Sphere",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "HP",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "Link Rope",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "อัตราการฟื้นฟูพลังงาน",
+    "propertyIconPath": "75627c696d3e9763c0b4feeb4a8e2baf594ac73214c6227b3a125c032be090c8"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "พบกันครั้งแรก",
+   "text": "ฉัน Fu Xuan ผู้นำ Divination Commission แห่ง Luofu นี่เป็นการพบกันครั้งแรกของเรา... ไม่สิ ควรต้องบอกว่าพบกันมานานแล้วต่างหาก... เพราะฉันเห็นภาพการพบกันครั้งแรกของเรา ทั้งยี่สิบสองครั้งผ่านดวงตาหยั่งรู้ของฉันหมดแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "f61fc8453a5bc9d4221eb3ef08bdc838c18ce9303d6902646efdb88858fc4273",
+   "jpUrl": "479293d6f5b929a90bb87302afd3dfe0d441c718ea805132bdcfe2cbb23740e3",
+   "enUrl": "70d671f80d59853afff0cdefb884d93cd5938cf054919658820b71cd27da7aba",
+   "krUrl": "fc7400cd0552812d3d1b73fe87fb99c19c07a6cf4d6f75ce06384aa675609b0f"
+  },
+  {
+   "id": 2,
+   "title": "ทักทาย",
+   "text": "แขกคนพิเศษนี่นา อยากจะทำนายดวงชะตาใช่มั้ย? ไม่ต้องแปลกใจหรอก เจตนาที่คุณมา ผลพยากรณ์ได้บอกเอาไว้แต่แรกแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "8bb5ff7f815c6c77f7e177343fedfbe1c2b2be2d01595652cb10ff0f2a26668e",
+   "jpUrl": "ba8791a7cb08ad803ac1ff7312f3b31bdfbdecc46fbe8546abd9b8bb62070fe0",
+   "enUrl": "3b08d73f420dbdef491812c09460278a9c94e276d3dd797972092dccd6f41320",
+   "krUrl": "5e89fda4a8a5c74e489fcc3109b8a14f2d69d01cb1aef25c6e5d0823b4192fc9"
+  },
+  {
+   "id": 3,
+   "title": "บอกลา",
+   "text": "จะไปแล้วเหรอ? พอดีเลย ฉันเองก็ยุ่งมากเหมือนกัน งั้นไม่ส่งล่ะนะ",
+   "unlockRequirement": "",
+   "cnUrl": "13224bad3db3061e03f1c6f0d79a9752e43b5fb1f2fea9e141dcf4c8437ffa9d",
+   "jpUrl": "4b773084d019fa2958fa53d5feea93d5a81c5f5c454404658b27064b98d1ddd9",
+   "enUrl": "67bd380c00f82d77b616286633ff68ce32f20b8ddbf01e5c812ad5a4e5482e49",
+   "krUrl": "a51919ca094244eb5fc62673bd93175268aa2dac18f9ae569a96aa5d69c02cd5"
+  },
+  {
+   "id": 4,
+   "title": "เกี่ยวกับตัวเอง - ผู้พยากรณ์",
+   "text": "ใครๆ ก็บอกว่าฉัน \"มองเห็นทุกสรรพสิ่ง\" แต่ฉันไม่ได้คิดอย่างนั้น ไม่มีคำทำนายใดที่จะแม่นยำไปทั้งหมด ฉันเป็นผู้พยากรณ์ ไม่ใช่ผู้ส่งสารจากเทพเจ้าซะหน่อย",
+   "unlockRequirement": "",
+   "cnUrl": "1f3c5bf872ae9982738868623efcda0911c68918dbed252fc8288c1d82c854c4",
+   "jpUrl": "042da0aa2636992f1367114749eb20fd96ae0dabc71205f7c7360f6b04437fb1",
+   "enUrl": "c8f146d7be69ca8aa019c313f5fcd4b565035777ccb048bd7264e6b5ace77e5c",
+   "krUrl": "711e84b74fbe7de461b6be163823767b42a28ea4c8bbb8871fdda63c9d1af1e8"
+  },
+  {
+   "id": 5,
+   "title": "พูดคุยทั่วไป - ตาที่สาม",
+   "text": "ดวงตากลางหน้าผากนี้ เป็นสมบัติล้ำค่าที่ Nous มอบให้ฉันระหว่างการเดินทางในห้วงอวกาศ มันทำให้ฉันมองเห็นการเปลี่ยนแปลงในโลกภายนอก และเห็นความเป็นไปได้ต่างๆ มากมาย แต่ตามกฎทองของ Nous ที่ว่า \"ความรู้ย่อมแลกมาด้วยความเจ็บปวด\" ดังนั้นความจริงแล้ว ดวงตาหยั่งรู้ก็คือเครื่องทรมานชั่วนิรันดร์...",
+   "unlockRequirement": "",
+   "cnUrl": "6b26a1832f0772f8eb076bbbfd1625f1a2cbf1868bfdf746762f4bc69bdf8ca0",
+   "jpUrl": "e68f641561978ca5e08c166a65d52ef75d881e1fc07dd93e4b88606258c5b2ff",
+   "enUrl": "7904a4f5938707d0ce364c6a34304e5d2e895dc95ef54bab46de8a1e2e065987",
+   "krUrl": "c651809e5d8495d02a1fdde3d8541af69adcc827f05e15ae83b9b2e72adc2976"
+  },
+  {
+   "id": 6,
+   "title": "พูดคุยทั่วไป - Matrix of Prescience",
+   "text": "บรรดาผู้พยากรณ์ล้วนสอดส่องอดีตและหยั่งรู้อนาคตผ่าน Matrix ซึ่ง Luofu ที่ล่องลอยอยู่ในทะเลแห่งดวงดาว ก็ขาดมันไปไม่ได้แม้แต่วันเดียว เพียงแต่... บางครั้งฉันก็คิดว่า มันปิดกั้นความเป็นไปได้ และเส้นทางในอนาคตของเรารึเปล่า?",
+   "unlockRequirement": "",
+   "cnUrl": "098452c9b723d033cc271cf0e6e6ecece7a59a09f06ea1e58669109227b106e5",
+   "jpUrl": "d3075430c07a380416eea954cda21fa0a69f766bddd08f9b5492822886ca52ed",
+   "enUrl": "6e9d3b0c18a24bba42cdeaad6b3f7c87323b512e3acacc7c0d27d0919426eb0d",
+   "krUrl": "09b46e9f39cd169a1044ae2a7db55a20c33994fa47485f1fe8ab62ffdf2ea019"
+  },
+  {
+   "id": 7,
+   "title": "พูดคุยทั่วไป - งาน",
+   "text": "เช้านี้ฉันทำการพยากรณ์ และสังเกตเห็นความผันผวนของตำแหน่งน้ำและไฟ ที่มีตัวแปรอยู่มากมาย... ชิ ผลการทำนายบอกว่า วันนี้ไม่เหมาะจะทำภารกิจของทางการ และไม่ควรทำงานล่วงเวลา ช่างน่าอึดอัดซะจริง",
+   "unlockRequirement": "",
+   "cnUrl": "2ca8ea831e0f1f71896263a9c913bdf7fcaf0bfb46e8855cd2a26f914c36c911",
+   "jpUrl": "d243f35c03461d9082ed01e4e8fb1428d7782e9b94a60515216686f1511ce9e2",
+   "enUrl": "267bea11fcfdaaae9885a54e903bfdc427ad6892ca79055f4946dfea8c2e9047",
+   "krUrl": "870f419564723473c36295a4c09a41e51c6a157f80e670c42f74877b4ce66cba"
+  },
+  {
+   "id": 8,
+   "title": "งานอดิเรก",
+   "text": "หลังจากทำงานมาทั้งคืน ฉันก็อยากดื่มชาสมุนไพรสูตรพิเศษของท่านมังกรสักแก้ว แล้วเติมน้ำตาล น้ำตาล และน้ำตาลลงไปอีก! แค่แก้วเดียวก็สดชื่นทันตาเห็น! มันช่วยชดเชยพลังที่เสียไปในการทำนายได้เป็นอย่างดีเลย",
+   "unlockRequirement": "",
+   "cnUrl": "efe27566ad5f38830bb40ca19e6c4676cdadd2fcbb7e01f674f400a97f3857ff",
+   "jpUrl": "18f4f3710e9d38ec22502f2b19f2d9867500805c79a23464b3bc4ab33f14bb54",
+   "enUrl": "caa15b3e4f7bfc608047ee8adbc929c23cdc2008ba267b71da5671660af69158",
+   "krUrl": "c937328805d891c7bc2d2a6e4187019cddefa4f7d7adfa2f94edd955d82cdb88"
+  },
+  {
+   "id": 9,
+   "title": "เรื่องกลุ้มใจ",
+   "text": "ฉันเป็นคนคงแก่เรียนและชอบอ่านหนังสือ จนบางครั้งก็อดไม่ได้ ที่จะหยิบยกคำพูดมาจากตำรา เลยมักจะมีคนชอบมาจับผิด และบอกให้ฉันช่วย \"พูดจาภาษามนุษย์\" น่ะ... ฮึ",
+   "unlockRequirement": "",
+   "cnUrl": "87133e15b1f1d843734984bf5fdc301456a9632867f32e174dc38023dc6ebda6",
+   "jpUrl": "014db8bb60ee35982f96ccc3f9f9b8704a2d1c787513cf80be85b2ae910876fe",
+   "enUrl": "89948f4a88828935727553e2b411e1ac3be9e9446fc1e39e190230d2c604f5a3",
+   "krUrl": "5ec6329f24d195f63954e4a01f518d2227576acee4f08e012f810a92a82031c6"
+  },
+  {
+   "id": 10,
+   "title": "เรื่องที่อยากจะแบ่งปัน",
+   "text": "ในกฎ \"ข้อห้ามการทำนายสามประการ\" ที่ไม่ได้เขียนเป็นลายลักษณ์อักษรของ Divination Commission นี้ มีข้อที่ระบุไว้ว่า \"ห้ามทำนายโดยไม่เป็นธรรม\" ถ้าจะให้ฉันทำนายเลขลอตเตอรี่ที่ถูกรางวัล ความผันผวนของตลาด หรืออะไรทำนองนั้นล่ะก็ ต้องขออภัยด้วย ฉันคงไม่สามารถทำนายให้ได้",
+   "unlockRequirement": "",
+   "cnUrl": "f15647707f917e980a1c6e8aa83cf18ef59eefcf5ced9cff56e990883523275b",
+   "jpUrl": "bbe8d092a573a873c779daf7200c39108e917607319aba88780f32079616a1b5",
+   "enUrl": "45715f40d64d88ce684d187883388b1a1500205f241cc2a755f3a0ab054c56e7",
+   "krUrl": "e7242a63c46653eadd8c9f5f9084542a30dbd2359219e7e7fdd9650ace0b7238"
+  },
+  {
+   "id": 11,
+   "title": "ความรู้ 1",
+   "text": "แม้สหพันธ์จะทำตามคำสั่งของเทพแห่งคันศร ในการตามล่าพินาศโรคา... แต่จนถึงตอนนี้ บนเรือ Xianzhou ทุกลำก็ยังมีสิ่งที่เทพดาราสร้างขึ้นมา ซึ่งเรียกกันว่า \"ร่องรอยแห่งเฟื่องฟู\" สถิตอยู่ และใจกลางแดนสนธยาทั้งหลายใน Luofu ก็ได้ผนึกไว้ซึ่ง Ambrosial Arbor ที่มอบอายุยืนยาวให้เรา",
+   "unlockRequirement": "",
+   "cnUrl": "0117e134429feb74a978f923ff1462961d54de8a5032e0f61084aa2a5bc46344",
+   "jpUrl": "2af5b39147932a0ccb4183767e69e1eb0a91adf03af688ec249336fc190deefc",
+   "enUrl": "ccb70e69647cd650309fa0df3e7449cdd73cd78f3e52523a09bd4df39428fed4",
+   "krUrl": "11cff6c23e86396f3728d448b301b59f1db746ed15c280719ee2b9388eb5cc36"
+  },
+  {
+   "id": 12,
+   "title": "ความรู้ 2",
+   "text": "Xianzhou Yuque เป็นต้นกำเนิดของ Divination Commission ที่นักดูดาวและผู้พยากรณ์จะมารวมตัวกัน เพื่อสังเกตดวงดาวและวางแผนกลยุทธ์สำหรับสหพันธ์ ฉันเคยเห็นหินแร่ที่ก่อตัวเป็น \"ดินพูนอุดม\" ที่นั่นด้วย ซึ่งนั่นคือที่มาของเทคโนโลยี Jade Abacus",
+   "unlockRequirement": "",
+   "cnUrl": "4b359fe0e5128bf9bd550dd3114ec22f54e767d5971dcc4e260f618dd8cdb085",
+   "jpUrl": "521f77659924bade107c6db20e8bb4e9375395d9f75771c2ad3fb748a7a32b80",
+   "enUrl": "27a398b1bcf24ad9bc2a43578bf81ff5f5c588d40b64cab248a5577682dc52c8",
+   "krUrl": "713f28daf89447b39b70f5839e6d84f7163b058c769248d9a7d3097bb0119cfa"
+  },
+  {
+   "id": 13,
+   "title": "ความรู้ 3",
+   "text": "ว่ากันว่ามีเปลวไฟที่มีชีวิต หลับใหลอยู่ที่ใจกลางเครื่องยนต์ของ Xianzhou Zhuming มันเป็นสิ่งมีชีวิตที่ชาว Xianzhou ในอดีตมองว่าเป็นศัตรูตัวฉกาจ นั่นก็คือ \"Flint Emperor\" หรือที่เรียกอีกอย่างว่า \"ปฐมเพลิง\" โดยช่างฝีมือของ Zhuming พยายามทุกวิถีทางเพื่อขังมันไว้ในเตาหลอม และใช้พลังของมันมาสร้างอาวุธศักดิ์สิทธิ์ต่างๆ",
+   "unlockRequirement": "",
+   "cnUrl": "9a7c780142ac3c4cfd51d7c535d47875882048784032923c78d8d6b855cd81d6",
+   "jpUrl": "ef1df06e838d8220d6757ede5908b9709afe230ca0253ef87f19bcd43297c912",
+   "enUrl": "0c066f436160e64ea8c8b0747d2e358f03f5a3eeb56cf70df9771e45e1b2e4e4",
+   "krUrl": "619a0360892beddf2e2edcf8a4d65f9a445a8342a55396fd00ac576a62da990d"
+  },
+  {
+   "id": 14,
+   "title": "เกี่ยวกับ Jing Yuan",
+   "text": "ฮึ่ม จนถึงตอนนี้ Jing Yuan รับปากฉัน <nobr>122</nobr> ครั้งแล้วว่า จะเสนอชื่อฉันให้รับตำแหน่งนายพล ในจำนวนนี้มีอยู่ <nobr>121</nobr> ครั้ง ที่หลังจากฉันเสนอแผนการไปแล้ว เขาก็ตอบแบบขอไปทีว่า \"อืม\" ส่วนครั้งสุดท้าย ฉันเห็นเขาพยักหน้าเป็นจังหวะด้วย แต่ที่แท้ก็ผล็อยหลับไปซะงั้น...",
+   "unlockRequirement": "",
+   "cnUrl": "7992c7e301ff041ba227d6c7047e8632e056d59e50c62e4bbbe055e4da0e6e5b",
+   "jpUrl": "d01c6d73df9b30c5b3a413ebff95b0d3a47baa71944d64f0ab2890be21424bda",
+   "enUrl": "bc7fd1d5ffd69f53725965e72cbfc4326f453b0424d5b9ac504b5f50e08b42d7",
+   "krUrl": "3c4bb3471e4c737e14d9de4ec36e0236bf05f756ea5e86526e45d3d266ead422"
+  },
+  {
+   "id": 15,
+   "title": "เกี่ยวกับ Qingque",
+   "text": "ใน Divination Commission เต็มไปด้วยคนเกียจคร้าน แต่เธอเป็นคนเดียวที่เชี่ยวชาญด้านการแอบอู้อย่างแท้จริง จนแทบจะรวบรวมเทคนิค เพื่อเอามาเขียนเป็นตำราได้อยู่แล้ว! บางครั้งฉันก็สงสัยนะว่า เธอจะหนีคำทำนายของฉันไปได้มั้ย...",
+   "unlockRequirement": "",
+   "cnUrl": "b36686951a4e4e188159e4eb203f5184ebd7876b71951d32f79cb60670561320",
+   "jpUrl": "1137a8ccfd32b2d992be7e5570b010a2c080078b0fea20107a70779e712df388",
+   "enUrl": "a6b6489e418b153aa7a5baef1344486ecfb42b1e74e181aa1b9733e792ba1100",
+   "krUrl": "22a71b7eb27bc5910e96c4773da8641c0200d28aa3cec2022ee47f0153044a8a"
+  },
+  {
+   "id": 16,
+   "title": "เกี่ยวกับ Bailu",
+   "text": "เดิมทีฉันคิดว่าในชาสมุนไพรที่ท่านมังกรชงให้ จะมีส่วนผสมลับที่ช่วยในการบรรเทาความเหนื่อยล้า จนกระทั่งเวลาผ่านไป ฉันถึงได้รู้ว่าเธอเพียงแค่เติมน้ำตาลลงไปเท่านั้น การจ่ายยาออกมาได้ดีแบบนี้ ก็สมแล้วที่เธอเป็นอัจฉริยะที่ได้รับการฝึกฝนจาก Alchemy Commission!",
+   "unlockRequirement": "",
+   "cnUrl": "f9bc6ae384dcaeff6ade838e0bda54d92f8c4e727af20a51a374a3b9782c54b5",
+   "jpUrl": "d86624240f77b282fd5cb7b282bb4699170aa8ffc57f0d6bcf420cc7b2d66394",
+   "enUrl": "a9d179aafb9ae46db75c51e1c37cb113b0d6ccb4bd754956e0b83392e569be54",
+   "krUrl": "342760aefb4b6591f7087f70f6910edcca782ac4372acb6fbdbe9d04f6e7ca83"
+  },
+  {
+   "id": 17,
+   "title": "เกี่ยวกับ Yanqing",
+   "text": "ทุกครั้งที่ฉันถกเรื่องบางอย่างกับ Jing Yuan พอน้ำเสียงของฉันเริ่มจะเฉยเมย เจ้าหมอนั่นก็จะจ้องเขม็งมาที่ฉัน ถึงไม่ต้องใช้ดวงตาหยั่งรู้ ฉันก็บอกได้ว่า โอกาสที่เขาจะได้ใช้กำลังกับฉันนั้นน้อยมาก ก็เลยปล่อยเขาไป",
+   "unlockRequirement": "",
+   "cnUrl": "3abf1d478626d03c2412438dded8fbc348c55ab09007a23842a7e113b856df64",
+   "jpUrl": "d2b35ad4f546424dbe5e16173d0f7c8ca031f6c32e24f7630289d3ed47770c8d",
+   "enUrl": "ecd0911f56352bf86aad6ea4fb1461773b1f511b28a4c2faaadb6b839534bdea",
+   "krUrl": "713fef932dcd848d586ad131c4a84aaec07b0bb1d0c4281738ab52810db474bb"
+  },
+  {
+   "id": 18,
+   "title": "เกี่ยวกับ Tingyun",
+   "text": "กลุ่มการค้าต่างๆ ที่อยู่ภายใต้ Sky-Faring Commission ล้วนมีจุดแข็งของตัวเอง ฉันเคยได้ยินมาว่า \"Whistling Flames\" ที่นำโดย Tingyun นั้น เชี่ยวชาญในการทำให้สิ่งของธรรมดาๆ มีมูลค่าสูงขึ้น ซึ่งสอดคล้องกับหลักการทำนายที่ว่า มองเห็นความเป็นไปได้ในทุกสิ่ง",
+   "unlockRequirement": "",
+   "cnUrl": "4b812ea0193f6b5f2dc5162fe7ef08befdc3a4f98b1b120aa02ab191e59b6078",
+   "jpUrl": "588bdb6069ca3be4a0a1519b3b0c40aee03ab8423440b067bba27336efbbe7e6",
+   "enUrl": "36a3f67f114ef4cea02a341a9f0177becaa290924824efbcda2356ea40d82c42",
+   "krUrl": "bccb0c8a4b65de80a4a014aa7ba298e1945d398a2d9bea6a5057ebc0ce41a1b2"
+  },
+  {
+   "id": 19,
+   "title": "เกี่ยวกับ ผู้บุกเบิก",
+   "text": "ปกติแล้ว เงาของความเป็นไปได้ในอนาคต และทิศทางของเส้นทางแห่งโชคชะตา ควรจะปรากฏออกมาให้เห็น... แต่ฉันกลับมองไม่เห็นร่องรอยเหล่านั้นบนตัวคุณเลย แปลกมาก...",
+   "unlockRequirement": "",
+   "cnUrl": "6771cf6cd9fa195dd7529e0d98c50db0b5fe5cd9e0e942316ccdc640e3fe6574",
+   "jpUrl": "61ca645861659aec631f61f396bc167325c2819768aff0dae7ee0f349719dc9a",
+   "enUrl": "b72d1c0ec2383c686b9e5a0abd5ef8a4ba1a365c7b27cf6a1f88bf55ed599606",
+   "krUrl": "bda1329e3571f3d5558ceb92fcdd398adc1085c401a4b4a84d055acfe6636ae4"
+  },
+  {
+   "id": 20,
+   "title": "เกี่ยวกับ March 7th",
+   "text": "ทิศทางของโชคชะตานั้น ปกติจะไหลไปยังอนาคต แต่ของเธอคนนั้น กลับไหลย้อนไปในอดีต... อดีตสำหรับเธอ เป็นเรื่องดีหรือเรื่องร้ายกันแน่นะ...",
+   "unlockRequirement": "ปลดล็อกหลังจากสำเร็จภารกิจเพื่อนร่วมทาง \"หวนย้อนความทรงจำ\"",
+   "cnUrl": "6820001e1d889f86c7f6c244569364a58991852b8cdd5897dee00bcdaa59605b",
+   "jpUrl": "bfc938109b9963133b69a7e6a8f5c2a317c430ddc4448b9f8b487805aa25b468",
+   "enUrl": "d1cf9656b9f3fda96674e6aeaad618c81051378dead6b4ca115914067970bddb",
+   "krUrl": "46fc1a778d67ce33ef2d4f21ffc0ea5fad62c37f59c063f1be8ccb2cea3ccecb"
+  },
+  {
+   "id": 21,
+   "title": "เกี่ยวกับ Huohuo",
+   "text": "แม้เด็กคนนี้จะใจเสาะ แต่ได้ยินว่ามีคนชมเธอเยอะเลยนี่นา... ถ้าฉันมีแรงผลักดันแบบนี้บ้าง คงประหยัดแรงใจได้ไม่น้อยทีเดียว... ช่างเถอะๆ",
+   "unlockRequirement": "",
+   "cnUrl": "39fa63bcaaa79be0a1cd5a89d8c28d8774fb7c5f8ff236161b7dfbe59b18067c",
+   "jpUrl": "5f56bad666759afcc0cb44f89b429bd1b74431203fca0991b55e02616fd5ff97",
+   "enUrl": "6975b3c6dcafa3ba893d17687d226bd618d43fc579f5e40713d31fa49b39b767",
+   "krUrl": "79b976325dfe933000b431247951f5e653480cf3ada5c136561f9b89159a0db4"
+  },
+  {
+   "id": 22,
+   "title": "เปิดใช้งาน Eidolon",
+   "text": "ทุกสิ่งทุกอย่าง โชคชะตาได้กำหนดไว้แล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "98eea903517411bbe9c3de9c539d045fb3f71a8a76f55fe1c42cfaa774433b77",
+   "jpUrl": "24663878979c68a90e4fd89d58b6ec78ae95f5e70cda6d1f4a7bff1f158818f2",
+   "enUrl": "2e71be25d3035169fc0da7983d24c969a9ce84745a739f5464ec793478feed31",
+   "krUrl": "96a02a615a1521bccbbe2c18c3834c7a2d150603fd760d936dee6f850b07c8ce"
+  },
+  {
+   "id": 23,
+   "title": "เลื่อนขั้นตัวละคร",
+   "text": "เป็นสิริมงคล สรรพสิ่งย่อมราบรื่น",
+   "unlockRequirement": "",
+   "cnUrl": "7d7aa2aa069cbd95eb41f322c024ac9469481e920fb145cfb6a2a050f65566e9",
+   "jpUrl": "4abac7e3bc09b81105fbcd0c9c547c3e542dffedfb18db3f49af965357c60b3f",
+   "enUrl": "761c06d98b32f8432bf99bdb6ef742cf74ff3bc83884424b89f157832104bb2e",
+   "krUrl": "01155fc5fd31b5782c5c70b19775f97fa48c7b9d923395ede5ff85db151208ed"
+  },
+  {
+   "id": 24,
+   "title": "ตัวละครถึงเลเวลสูงสุด",
+   "text": "ฉันยังห่างไกลจากคำว่า \"มองเห็นทุกสรรพสิ่ง\" อีกเยอะ...",
+   "unlockRequirement": "",
+   "cnUrl": "f5267c5f196ff2456c5bea580fbe950662585d756e4a846f2714f3d5a9b0b093",
+   "jpUrl": "2e9e9a2973abb7a6379f16def8c21a5393417f517bccaa74e64ebb9a4437ff02",
+   "enUrl": "8e2c2fec3aec90d4cc701720994bfb94c3c171e1eb912a26c596d502f3ebb61d",
+   "krUrl": "fc761165f985670172d706a680140ee60c608792e45646d0c2fc2bf89fd97dab"
+  },
+  {
+   "id": 25,
+   "title": "เปิดใช้งาน Trace",
+   "text": "ก้าวนี้ ดีหรือร้ายกันนะ?",
+   "unlockRequirement": "",
+   "cnUrl": "af4092bb3ede518cc5a329f6299afaf1b761fe7c3474a69e5f8f0ba4632a2173",
+   "jpUrl": "74adf571e4433c1e72ecf83d9b23399e69a8bf225a781657ea72709d6685beea",
+   "enUrl": "86c89256a578029f9c794fb89a43b04cfe7797bd0302d3d53c5e883f4e919ab3",
+   "krUrl": "d03b0ac61b9428cf08af07dbc8e3710bf7313eab311b332352a5b89a0316dec4"
+  },
+  {
+   "id": 26,
+   "title": "สมาชิกทีม - ผู้บุกเบิก",
+   "text": "มี \"ไม้เด็ด\" อยู่ ยังไงก็ราบรื่นทุกประการอยู่แล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "38fccfcdbf6967c8212ea171b75659d3bcc73cf149e15a043018ebef63488541",
+   "jpUrl": "3067f344a7a0b99f9af6d97cc86e4cdcf74daf18e7f4eac88b81375fecb14d91",
+   "enUrl": "6798151bb445254928c2532b1ec59a3eab0bcfd9d7300d0ee418fadb5b4b4319",
+   "krUrl": "3a9ecd0c0fb9d7868ab392580c9f1a6f4b2d7e8a7977c13909c02af560ed3df1"
+  },
+  {
+   "id": 27,
+   "title": "สมาชิกทีม - Jing Yuan",
+   "text": "ท่านนายพลออกรบเอง งั้นฉันว่าคงไม่ต้องทำนายผลของศึกนี้แล้วล่ะ...",
+   "unlockRequirement": "",
+   "cnUrl": "b8d8a72eaaa41e4cd1f9c592bc60fcd65785f0b8f356707bc31c7f4e15125778",
+   "jpUrl": "044a2bdfb119977f72d4e07e66d572374a68f2fc93bc184dd71542bb75d9ac11",
+   "enUrl": "059c2d088fc877f2484280bf7e0ed89c1061c7e4fb8b6f58e026af1ae3c1b8c9",
+   "krUrl": "bb9606cf1d65335e374780e36bb0dbd39385d34af2550a7fa79fd7ca7b022df3"
+  },
+  {
+   "id": 28,
+   "title": "สมาชิกทีม - Qingque",
+   "text": "Qingque? อะแฮ่ม! ฉันรู้หรอกว่าเธอไม่อยู่ในคลังหนังสือ เลยมารออยู่ที่นี่พักหนึ่งแล้วน่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "24b41819bcb49989e9571cfe56ac3f806bb8cae1fe991f8de4209b83807a7f3c",
+   "jpUrl": "31bf1edb911a78855373fa7ad0de6fb6d276850d3f8c170fbf4fd22782df46b9",
+   "enUrl": "500e97c8df2265df194d93ab0a222ef329b2c7b9eff0f3c050d67e9cc681cca2",
+   "krUrl": "02f4c0f913460decaa0e98c5419dc81928f34d0ee0021ad0a7deb2bb9ebac780"
+  },
+  {
+   "id": 29,
+   "title": "สมาชิกทีม - Yanqing",
+   "text": "ถ้าว่าด้วยฝีมือการต่อสู้ นายเหนือกว่าท่านนายพลนิดหน่อย แต่ถ้าพูดถึงด้านกลยุทธ์ ฉันจะเหนือกว่าท่านนายพลเล็กน้อย งั้นเราสองคนมาร่วมมือกัน แล้วประลองกับท่านนายพลดูเป็นไง?",
+   "unlockRequirement": "",
+   "cnUrl": "b634dfa5ec58719a0881f50494c8ca5d4ff5e8124d3e6b153bc1f6f69d770aeb",
+   "jpUrl": "d3166f57812377ae33fb81b068c855f1f3e5396c31b2e1ed48b4c748c91937d9",
+   "enUrl": "390bbe0204177cc8ac28bd7e36f70b07c295ec36c52abdc327fd32ffa3583257",
+   "krUrl": "47ac3cdb84ccb500086591b73bd952af187ac644f92ea49292a4e516adafb2b5"
+  },
+  {
+   "id": 30,
+   "title": "สมาชิกทีม - Bailu",
+   "text": "มีท่านมังกรอยู่ ฉันก็ไม่ต้องกลัวภยันตรายใดๆ แล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "20889aab0b5adcaea298eb896bec19093c28169ae4ff54a732399d4ca8308cab",
+   "jpUrl": "82bc0e6006ce099c2a0ce0e105e969162291127c10a2b33873d2835cbf66ca1f",
+   "enUrl": "e7a965017a685129dde4e30caf1bf89919b784413ad3595a5a5fb4e0b7f8f759",
+   "krUrl": "ea352ca0a88f4d3617a5e8fd0fb16e3e62465501e097062cf1c4aebc806328a8"
+  },
+  {
+   "id": 51,
+   "title": "เริ่มการต่อสู้ - ทำลายจุดอ่อน",
+   "text": "ทุกสิ่งมาบรรจบ ประสบความราบรื่น",
+   "unlockRequirement": "",
+   "cnUrl": "d1f98f62ad81624cfe5d24f89b16a17c5005e033e56975fe177616feac4a9214",
+   "jpUrl": "11a6c800155a25dbaa01036c60e7350f063341c22d909d627920dda9eb84c774",
+   "enUrl": "e20cafb19339ab895114610f7e25e4c068f641e5c34ee6fb3137299ce9354f89",
+   "krUrl": "e5e9791682d03b1755444b483c530aebd0318e49c11cf773c296e6f6b6770c52"
+  },
+  {
+   "id": 52,
+   "title": "เริ่มการต่อสู้ - เตือนภัย",
+   "text": "เมฆหมอกยากคาดเดา ดั่งก้าวสู่ห้วงลึก",
+   "unlockRequirement": "",
+   "cnUrl": "c410a317bdd5cab0c43f51eb733fee99bee0bdc9128b23974e61be5fe39a2d17",
+   "jpUrl": "4d566683005bd33721aa100d3fee38b93c89da0d7defd0a47f8c0cb640efe101",
+   "enUrl": "18bf0e9c5f0117516ddba3e971dc3e705bdb1c4ca12d2822d3274d0453ce4a5c",
+   "krUrl": "80923efe5b7c953d2f34b78787bbf126ca329773c67e3066d5cf56d9415fba98"
+  },
+  {
+   "id": 53,
+   "title": "เริ่มเทิร์น 1",
+   "text": "ดวงตาหยั่งรู้มองเห็น...",
+   "unlockRequirement": "",
+   "cnUrl": "abf422d6cf28c74c87a691da83a7eaa8f6274ee798803feb2a9f627babf84aed",
+   "jpUrl": "b6ef1353ead3cba9d3567edb7b77fe9e4c62c91b8024171e1cc28e7507dd71c9",
+   "enUrl": "8f357debd931457874127724c44c755b01b09f5a5f6809b8f38bc2a95780c281",
+   "krUrl": "75e459e89057f38f605539723af6d1c026b43fddf167b0152f13c50574da03e8"
+  },
+  {
+   "id": 54,
+   "title": "เริ่มเทิร์น 2",
+   "text": "ขอฉันทำนายก่อน",
+   "unlockRequirement": "",
+   "cnUrl": "01aa4cf2acd990f27ce783db09ece4f8094e1ab60dd07096b5bc6ee75216ba05",
+   "jpUrl": "966d690880fbbaae45eebad0ee3a1b0e0aff507285348fc154d089febf9fe798",
+   "enUrl": "5ec506d0d643184d533f3763c113ae8504d3a266a663aef9029bc4623e40daf2",
+   "krUrl": "9981f65c046ab833ed9b105c1d1027c9fd8f54acb37fc8fa254a40bfb4fb8f7e"
+  },
+  {
+   "id": 55,
+   "title": "เทิร์นสแตนด์บาย",
+   "text": "ยามต้องลงมือกลับลังเล จักหันเหสู่ความวุ่นวาย",
+   "unlockRequirement": "",
+   "cnUrl": "a8e91e1c83b34a92e7c0acf1679b026e555d535c29877971106f8565183d3b39",
+   "jpUrl": "ea2b3ec0f958520c820fe9c2110c7560d8e4b36f2fc6933bf573544c2849d77c",
+   "enUrl": "54a1df2069ff4ba111069437fb2a5517224b51b0cbf69a51b28027ec82b06db1",
+   "krUrl": "e7359368424e77b59c17a29fc394764862bd605abe6cee5020ebe7916711dc9c"
+  },
+  {
+   "id": 56,
+   "title": "โจมตีปกติ 1",
+   "text": "ด้วยพลังนี้ จงเปิดเผยอนาคต!",
+   "unlockRequirement": "",
+   "cnUrl": "42f41d3afd01fd18e5e9ba47643b4509ac35aa0bc2d41057645b13bdb865742a",
+   "jpUrl": "c844c97139b145f008b4d6991b91d0ab4d564213662205838a3042c08e7e594d",
+   "enUrl": "e0f9991f2a8b8c4da9ebe8915691dd3a1f65e5d0bd4718f2988fcb21951dbdf4",
+   "krUrl": "69b398111fa0f1001d9460cdb749e1582907000e246436ae31ff46da98f90e8f"
+  },
+  {
+   "id": 57,
+   "title": "โจมตีปกติ 2",
+   "text": "ก่อร่างสร้างผล!",
+   "unlockRequirement": "",
+   "cnUrl": "407483b98cc00a2106fef96646d470d1522802c426d5a8dc7a4fbd7820f3db70",
+   "jpUrl": "cfa56db56fca6aa6c7ec264ba69b00520ad4d56f38798a7b241332c554760309",
+   "enUrl": "905b0717ac78c09814f8cfbb3540983403ab4bfc8d9bd7e8a7bc61394d7dc3df",
+   "krUrl": "2e78c8b5b5786e980a5cb49e99eb75f92926340b409eb18dc767e1955b1c2b94"
+  },
+  {
+   "id": 58,
+   "title": "สกิลต่อสู้ 1",
+   "text": "รวมกันเป็นหนึ่ง",
+   "unlockRequirement": "",
+   "cnUrl": "ac123080960ce5f2d6aef845eeeb5f573292d3ccfaa874bd86cbe135c1c7ebdc",
+   "jpUrl": "ffcd965594060d79ff0283142ca9c0d4e5c874c3bde3bcc660f2b9211aa14bf7",
+   "enUrl": "ac63ef81008a62d1c5298b11f47321bf12cecf940b1dd8e205c9e94e4bfdc64e",
+   "krUrl": "75e4913d9c7edbd2faf4fe5e8d3c63272547d53734a0ea50084eae3b084cc7b7"
+  },
+  {
+   "id": 59,
+   "title": "สกิลต่อสู้ 2",
+   "text": "บรรจบและตื่นรู้",
+   "unlockRequirement": "",
+   "cnUrl": "46b7c5e083fc7344f11fa2481e13a4f8e2af8bfb1cd84b4b7a20bc611dc30f34",
+   "jpUrl": "725f79075c6124ab94715a694de6e6e23631bf98f97920d55a34487799c62320",
+   "enUrl": "a9c60cb92a631ff98c1e36ed2e2041e1fb0037fee230ec4075c20c24b75c34d4",
+   "krUrl": "aeabfd44c15477999d058e5923b569dd39c1d7b6246a237f4624a5a71f38c3db"
+  },
+  {
+   "id": 60,
+   "title": "โดนโจมตีเล็กน้อย",
+   "text": "เท่านี้ ถือว่าเล็กน้อย",
+   "unlockRequirement": "",
+   "cnUrl": "55e76e2d950f9a64f85c214f042f1ef1bbc3da3841d5e799800c1a7ae97ded8c",
+   "jpUrl": "9a2b46b6f7ebd1628224fcdf4291149335479dd60659cb71e14a6e42327a77c2",
+   "enUrl": "2a30892c9db1c2cc332cd069ab17c13c230ea91b98498d67d24728319f063416",
+   "krUrl": "1b71cf774ec7cba714ebf13f48998060980a7fc772b51021cc5b36caab774376"
+  },
+  {
+   "id": 61,
+   "title": "โดนโจมตีอย่างรุนแรง",
+   "text": "มะ...มีเคราะห์...",
+   "unlockRequirement": "",
+   "cnUrl": "05f1b57ac0383b57773d099cf4a5081acef30729efcc0f7d2e12f18491768498",
+   "jpUrl": "95dd5baa78bae91b1942872fd314213cfecc04be462eb97132a6852931605a4e",
+   "enUrl": "0aa580d7ee01a058fcbbd8fcd83b66a5286974e1dd90bec6b2be78e2c3fe8be6",
+   "krUrl": "9cb745da463a6aa8980320a63d85faaa1bd571d8e75924c66877d96c21a1d6bb"
+  },
+  {
+   "id": 62,
+   "title": "ท่าไม้ตาย - เปิดใช้งาน",
+   "text": "สรรพสิ่งในโลกล้วนมีกฎเกณฑ์...",
+   "unlockRequirement": "",
+   "cnUrl": "bec56b18f22696dacda49fdbebb070c052b13d3080133e085493f6523d3c5af8",
+   "jpUrl": "cdae8adf7da637306b076e9ceca556c68de1ca2f27161ce01a6d39c0b18966dd",
+   "enUrl": "d4ee019b30131bd1e2c5c5444b9552b8c5524b02c9846c1a415d79b166e05a03",
+   "krUrl": "6b0b4acc3ef0da3ef81541ad1649d39b4ade2e35ddb3aaf3c1d62192f008ba12"
+  },
+  {
+   "id": 63,
+   "title": "ท่าไม้ตาย - ปล่อย",
+   "text": "ทว่าดวงดาราต่างแปรผัน มนุษย์นั้น เป็นผู้สร้างผลสำเร็จ!",
+   "unlockRequirement": "",
+   "cnUrl": "655f87eb93710cc07aa605fcf673f7d019dc9c37ebc0efa5381c4e01bf98a3c3",
+   "jpUrl": "0971fdfd4c55696f33fcea0f5af5ccdadbe5d773ed67754e6662d2962f8daf40",
+   "enUrl": "e83c49029acc280a6cfb25de80176e44abca46b1c4357a68de2768b5b38b0529",
+   "krUrl": "f592098909acfae0487e2480f787f6e6a6b6b1a35343b2c1bc52e51920f7df00"
+  },
+  {
+   "id": 64,
+   "title": "พรสวรรค์",
+   "text": "หยินหยางผันแปร ชีวิตไม่มีสิ้นสุด",
+   "unlockRequirement": "",
+   "cnUrl": "524d1e0d40134b45cab23a96bc29239ae9f6d2e22e736cb2ab87ed1db3170706",
+   "jpUrl": "42d5706e70ddc5a7f9f78bef4eb1dd8ede051220e83dd8fa78c8bf9677903f03",
+   "enUrl": "697b3a07fb8a0ae3279e28604944b0b5cc4f475319937da783b5fb4afd7cd01e",
+   "krUrl": "546955dac2a7a51efddc7c4104a1c1c4be0d6f89bdb38c14bdbaddd97815be88"
+  },
+  {
+   "id": 65,
+   "title": "หมดสติ",
+   "text": "สิ่งนี้ถูกกำหนด...ไว้แล้วหรือ...",
+   "unlockRequirement": "",
+   "cnUrl": "8d564c9e12aca03c25fc5fcb4e7c3d74e5e5aa7184018208f09d8589fcbf1ec1",
+   "jpUrl": "cc3a737978c73c56bfc066ee9053495d2d6003cbf32c4fac5c5976a8a20ee88a",
+   "enUrl": "3617466a2f606b50f65d80f780748c3a37c6e2795d292bc848acd7ba302fcdf9",
+   "krUrl": "3b148c59af63fb75c54ee3f034092f95c8e1f93db6f204e5211bf457115528f0"
+  },
+  {
+   "id": 66,
+   "title": "กลับสู่การต่อสู้",
+   "text": "โชคดีที่หวนคืน",
+   "unlockRequirement": "",
+   "cnUrl": "36f5e6f55b5a2cf8fb13dc954c81e9921f8fb71f9b10af0707de6c1174f4f032",
+   "jpUrl": "ad4e9e3e51813b41eb5dea9d9ce3169455d781775b910765633b7986bdc83f60",
+   "enUrl": "615e1fd70e38683353e841fd86ca47ed872d346f8488e9f147b6f55dac8bc600",
+   "krUrl": "e4ddb0715f8ef2dd62b39a4941721aca5568dbcfb707bd9f088902ed4a7e2f13"
+  },
+  {
+   "id": 67,
+   "title": "ฟื้นฟูพลังชีวิต",
+   "text": "พึ่งพาอาศัยกัน ยอดเยี่ยมเสียจริง",
+   "unlockRequirement": "",
+   "cnUrl": "9951424198ce595a253686a78a6200bd75527e87a4c6435b7ce3ff59ef8ca00f",
+   "jpUrl": "50e0498c43d2ab8cd3469473201d98c201bb2bb73e17e4a83b4d1748f4aa6ccd",
+   "enUrl": "52576dd5c031ee68fa4b4dc17f9afdea1318b59a689045a5dffd8fbe5ed282d2",
+   "krUrl": "55d28f6dab4910167c107e19a4d9958987398120842dd438a8f703cb5b8acfc6"
+  },
+  {
+   "id": 68,
+   "title": "เทคนิค",
+   "text": "อยู่ยั่งยืนยง",
+   "unlockRequirement": "",
+   "cnUrl": "5d7c64511f378df5a447740e60dd85df8387d8193303bc2d05e1fb23165a1a77",
+   "jpUrl": "b49c217a84abda375a5c7840f57e4b281317cc7c8d0079fa37dbf47a263471fc",
+   "enUrl": "0751620ad41736a7523fbf882df675820e9493d07957b0433173cb2f3aacf42b",
+   "krUrl": "e80e4da100521590112deadd64f478fb335b84373cf0108afaff9af9cc9c74ef"
+  },
+  {
+   "id": 69,
+   "title": "ชนะการต่อสู้",
+   "text": "ในการพยากรณ์ ทุกสิ่งย่อมแปรเปลี่ยนได้",
+   "unlockRequirement": "",
+   "cnUrl": "dbe881f10c0285e9263b7688283dd859f1dafa084671e650bfff431e0cd5cf69",
+   "jpUrl": "937247427804022db5045faf7bb90e3599e55ef630e42dc768e755fadfcd6f5d",
+   "enUrl": "8e245bf79d3c29d8e3fb71fc0bb35996e84641a528906272f832bdde10ad5624",
+   "krUrl": "de5e874f6d86eb1cb71f4e92d02dff6f55547dd4fac977037858bf30a5661435"
+  },
+  {
+   "id": 70,
+   "title": "เปิดสมบัติ 1",
+   "text": "อย่างที่ต้องการเลย",
+   "unlockRequirement": "",
+   "cnUrl": "5618e41058b0192ff35febce9c4af91df0194a560edcd64484d2de67ddb62ee0",
+   "jpUrl": "d161c1bad5751dd66b28415b50a439423757a6c7379b90ac0e487b9574f8f852",
+   "enUrl": "f0adbdd3d3f301ab454f3fb2890bef50f5266c1013bd8ba53cf12fdd625a3a79",
+   "krUrl": "bdf9ee61411b342e273059997fc9d11accccf395b6193ab7b79889bf24bfdb18"
+  },
+  {
+   "id": 74,
+   "title": "เปิดสมบัติ 2",
+   "text": "สมดั่งคำทำนาย",
+   "unlockRequirement": "",
+   "cnUrl": "daa111ba11aca90d06ecc42f3c137a9d0cae4da738eba8aebe44381e861e9d44",
+   "jpUrl": "bada01227f0e445fabce0388d5f679966792b3dac43cb9372583e319036a0b79",
+   "enUrl": "b1433e1206d390c80b97ef8a9714c7b573d2150b20fec80d28af0f53d10260c3",
+   "krUrl": "51280c4d8e79d1e61a20734e8761553fa3e2d730c58b135875a5828ecd411024"
+  },
+  {
+   "id": 75,
+   "title": "เปิดสมบัติล้ำค่า",
+   "text": "...นี่เป็นลาภลอย ไม่ควรโลภมาก",
+   "unlockRequirement": "",
+   "cnUrl": "94c1cdcf62502409a6a28887f874c47b8ef924f9352fc63368282be2b433e399",
+   "jpUrl": "b4ef01487e8d96a3ea00c93566347804ab085eb08246cd143b5444c4e0d67bde",
+   "enUrl": "a0a2803ca0a7e680183b62d2a24f34c085e97d557ffe6cbfd15162b876deba94",
+   "krUrl": "4f725fa333663578cbc1eb2a09669e3c4ed712cf920dae398168feed386d50cd"
+  },
+  {
+   "id": 71,
+   "title": "ไขปริศนาสำเร็จ 1",
+   "text": "ยังมีแรงอีกเหลือเฟือ",
+   "unlockRequirement": "",
+   "cnUrl": "03adab884390ccfd98cc027bfbba2ed0c5f63e9d578b700e24246e02f9aaec83",
+   "jpUrl": "648fbde7db34d7a0ec33db7aff157ddb0a317d0f68d246ef6b10489a2341968c",
+   "enUrl": "fea40520da9eaa47d5ee749518b2b68837e420312e5d7ba2097e12de08eda177",
+   "krUrl": "8278c3d4860546a19eb77f25b481e5796144ec9d7a37516c2b2f6b444c7f1ee2"
+  },
+  {
+   "id": 76,
+   "title": "ไขปริศนาสำเร็จ 2",
+   "text": "มีบันทึกอยู่ในตำราโบราณมานานแล้วล่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "bd5f3f360424368b351e66888b51fcd7e38bece3027de56639a6f2e5c0050528",
+   "jpUrl": "a08b2bffe3438ff93c75a1347432793b95983aa7406b3578ed53ed7e28b829eb",
+   "enUrl": "7d404312f41ad19f58334c56d3b9c4ed8a1c05069e4734e9a9b8f66fae37bddd",
+   "krUrl": "c4e39ab5d39d7c2a78649ac1a121d03f3abb64f2a6ae7f5295d665d35ed667e2"
+  },
+  {
+   "id": 72,
+   "title": "พบศัตรูเป้าหมาย",
+   "text": "จงระวังอยู่เสมอ",
+   "unlockRequirement": "",
+   "cnUrl": "f6ed4810df5360ab31eb3a5a38f4d16078c751869eefd9269dff4efe4722726e",
+   "jpUrl": "a2588b730dde873a0432d8193015c105b8a4848d3ccdc6ee16fec378d12314e7",
+   "enUrl": "7264026f85b1bc50ac7f7cd19dcf853d546fd468862c33b66d5ad4b521df946c",
+   "krUrl": "c2f6236d56e4b0a40efa43138e9260276f615507ccf822fc9e42438932118667"
+  },
+  {
+   "id": 73,
+   "title": "กลับเข้าเมือง",
+   "text": "ตำแหน่งทิศทั้งแปดนั้นเปลี่ยนแปลงอยู่เสมอ จำเป็นต้องวางแผนให้ดี",
+   "unlockRequirement": "",
+   "cnUrl": "e3dd7b03b481d5683e9bb3c8aa7a450625cbbb56efde6f294c2c9383d6e6c7c6",
+   "jpUrl": "dc77f4c466aad44f3652e12875a174a59d682897b953f08a538d73ac910b44f3",
+   "enUrl": "51464f9243531d4180f7e99a5d107e4d51f6b73c32ac6ed8c5424c98623fb603",
+   "krUrl": "d383c4bb64e6f55e121f2d125c4debab3c92cf4f851be6bdb025a170c7981f54"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "รายละเอียดตัวละคร",
+   "text": "ผู้นำของ Divination Commission แห่ง Xianzhou \"Luofu\" นักปราชญ์ที่เปี่ยมไปด้วย ความมั่นใจและความซื่อตรง<br />เธอจะใช้ตาที่สามและ Matrix of Prescience มาคำนวณเส้นทางเดินเรือของ Xianzhou และทำนายผลดีร้ายของเรื่องราวต่างๆ โดยเชื่อมั่นว่าทุกสิ่งที่ตนทำนั้นเป็น \"วิธีแก้ไขปัญหาที่ดีที่สุด\"<br />Fu Xuan กำลังเฝ้ารอ \"การสละตำแหน่งแก่ผู้ที่เหมาะสมกว่า\" ตามที่ท่านนายพลเคยให้สัญญาไว้ แต่ก็ดูเหมือนว่า... วันนั้นจะยังอีกยาวไกลนัก",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 1",
+   "text": "หลายปีต่อมา Fu Xuan มักจะหวนนึกถึงวันที่ตนได้รับอนุญาต ให้ก้าวเข้าไปใน \"ห้องสมุด\" เพื่อถามคำถาม<br /><br />\"เธอกำลังคิดอะไรอยู่?\" ผู้อาวุโสตาบอดที่สวมแว่นดำ ถือไม้เท้าเอาไว้ และรอคอยคำตอบจากเธอเงียบๆ<br /><br />\"ทุกชั่วขณะที่สามารถตัดสินใจเลือกได้... ถูกกำหนดเอาไว้ล่วงหน้าแล้วหรือไม่? หรือว่าหากในชั่วขณะนั้น ฉันทำนายได้แม่นยำยิ่งขึ้น แม้จะแม่นยำขึ้นมาเพียงหนึ่งในหมื่นส่วน ฉันก็จะสามารถตัดสินใจได้อย่างถูกต้อง และทำให้พวกเขาไม่จำเป็นต้องจากไปแล้ว ใช่หรือไม่?\" หญิงสาวหลุบตาลงเล็กน้อย ราวกับเอ่ยคำถามที่แฝงไว้ซึ่งคำตอบ<br /><br />\"พวกเราในทุกช่วงเวลา ล้วนยืนอยู่ ณ ใจกลางเขาวงกต ที่ตนได้ทาบรอยเท้าเอาไว้\" ผู้อาวุโสตาบอดเคาะไม้เท้าเบาๆ \"ฉันไม่อาจให้คำตอบ แต่มอบได้เพียงปัญหา... และความสามารถ ที่จะมองเห็นปัญหาเท่านั้น ส่วนสิ่งที่เธอต้องการ และเดินทางมาเพื่อไถ่ถามฉัน คาดว่านั่นก็คงไม่ใช่คำตอบเช่นกัน\"<br /><br />\"ถ้าอย่างนั้นก็มอบ 'ดวงตา' ให้ฉันสิ ไม่ว่าโชคชะตาจะถูกกำหนดไว้แต่แรกหรือไม่ แต่ในฐานะที่เป็นผู้พยากรณ์ ฉันอยากจะมองเห็นมันให้ชัดเจนยิ่งขึ้น\"<br /><br />\"ได้ตามที่เธอปรารถนา ทว่ากายเนื้อของชาว Xianzhou นั้นมีอายุยืนยาว หากรับ \"ดวงตา\" ที่ฉันมอบให้ ก็หมายความว่า ต้องทนรับความเจ็บปวดไปตลอดกาล หากเปรียบเป็นเครื่องมือ มันย่อมเหมือนกับเป็น... 'เครื่องทรมาน' มากกว่า\"<br /><br />\"ก็สอดคล้องกับ ความเชื่อของปัญญาสูงส่งไม่ใช่เหรอ... ที่ความรู้ต้องแลกมาด้วยความเจ็บปวด ฉันไม่ต้องการให้การตัดสินใจในอนาคต เกิดข้อผิดพลาดแบบเดียวกันอีกแล้ว\"<br /><br />...<br /><br />ท่ามกลางความเลือนรางใน \"ดวงตา\" ที่ได้รับมา เธอมองเห็นเรื่องราวในอดีตมากมาย<br /><br />เธอมองเห็นตัวเองในวัยเยาว์ นั่งคุกเข่าและจดจ่อตั้งใจ เธอมองเห็นบิดาแต้มหน้าผากให้ด้วยความรัก แล้วชื่นชมที่เธอเฉลียวฉลาด และมีไหวพริบอย่างภาคภูมิใจ เธอมองเห็นผู้อาวุโส เปิดเผยประวัติศาสตร์อันรุ่งโรจน์ ของตระกูล Fu ในฐานะตระกูลนักดูดาวแห่ง Xianzhou Yuque ให้เธอเห็น เธอมองเห็นเหล่าผู้พยากรณ์จัดพิธีกรรม และทำนายอนาคตอันเจิดจรัสของเธอ... ที่จะได้ก้าวขึ้นสู่ตำแหน่งอันทรงเกียรติ อย่าง \"ผู้พยากรณ์สูงสุด\"<br /><br />\"นี่คืออนาคตของฉันเหรอ?\"<br /><br />\"สรรพชีวิตนั้น ถูกกำหนดชะตาเอาไว้ล่วงหน้าแล้ว และนี่ก็คือโชคชะตาของเธอ ส่วนผลการทำนาย จะถูกส่งไปให้ท่านผู้พยากรณ์สูงสุด Jingtian เขาตกลงว่า จะเป็นผู้สอนวิชาให้กับเธอด้วยตัวเอง นี่ถือเป็นวาสนาอันยิ่งใหญ่ทีเดียว\"<br /><br />อดีตทั้งหมดซ้อนทับเข้าด้วยกัน ท่ามกลางหมอกควันของความน่าจะเป็น ที่แลดูราวกับความฝัน และคล้ายกับความจริง มันแปรเปลี่ยนไปมา อยู่บนขอบเขตของจิตใต้สำนึก แล้วขยายกลายเป็นอนาคตอันไร้ที่สิ้นสุด เธอพยายามสุดกำลังเพื่อแยกแยะ และตามหาวันนั้น ท่ามกลางช่วงเวลาอันกว้างใหญ่ไพศาล วันที่เธอ ได้กลายเป็นผู้พยากรณ์อย่างเป็นทางการ",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>20</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 2",
+   "text": "ในวันนั้น Fu Xuan ได้มาเคารพอาจารย์ภายใต้ Cloudpeer Telescope ของ Xianzhou Yuque แต่เธอกลับไม่อยากเชื่อเลยว่า คนตรงหน้าจะเป็นผู้พยากรณ์สูงสุด ที่เหล่าผู้อาวุโสยกย่องประดุจเทพเซียน ชายผู้นั้นสวมกางเกงนักบินตัวเก่า เขานั่งอยู่บนพื้นด้วยท่าทางไม่มีพิธีรีตอง แล้วเพ่งความสนใจไปยังจุดแสง ที่พัวพันกันอย่างไม่หยุดยั้งในภาพฉาย<br /><br />\"ศิษย์ Fu Xuan คำนับท่านผู้พยากรณ์สูงสุด\" หลังจากลังเลมาพักใหญ่ หญิงสาวก็เอ่ยขึ้น<br /><br />สายตาของชายหนุ่มไม่สั่นไหว เพียงแค่ยกนิ้วขึ้นมา เป็นท่าทางบอกให้เธอมองไปที่ภาพ ซึ่ง Fu Xuan สังเกตเห็นว่ามือของเขา ถูกเปลี่ยนเป็นกลไกไม้เพราะเหตุใดก็ไม่ทราบ \"กองสดับเสียงหยกของ Yuque กำลังวางกำลังป้องกันที่ Thalassa และสนับสนุนกองเรือ Yaoqing เพื่อกำจัดสิ่งชั่วร้าย เธอน่าจะได้ยินข่าวนี้แล้วใช่มั้ย? แต่โชคชะตากำหนดไว้ว่า พวกเขาจะไม่ชนะศึกครั้งนี้นะ\"<br /><br />\"หือ? ผลงานรบของกองเรือ Yaoqing เป็นที่ประจักษ์ ยากนักที่จะมีใครต่อกรได้ และจากรายงานการรบ จำนวนกองกำลังของเราและกองเรือรบนั้น มีมากกว่ากลุ่มไล่ล่าของ Borisin เป็นเท่าตัว แล้วจะโจมตีได้แต่ไม่อาจพิชิตได้อย่างไร?\"<br /><br />\"ถามได้ดี ดูท่าทางเธอจะไม่ใช่ศิษย์ ที่ยอมรับชะตากรรมง่ายๆ สินะ\" ชายหนุ่มลุกขึ้นยืน พลางปัดเศษฝุ่นบนเสื้อผ้า \"ผู้พยากรณ์รู้ชะตาแต่ไม่ยอมรับ ทั้งยังพยายามตามหาตัวเลือกที่ดีที่สุด ท่ามกลางความเป็นไปได้แบบต่างๆ สิ่งนี้ดีมาก แต่บางครั้ง ไม่ว่าเธอจะเลือกยังไง โชคชะตาก็มีเพียงเส้นทางตรงหน้า แค่ทางเดียวเท่านั้น เมื่อพยากรณ์เสร็จสิ้น และตรงหน้าเหลือเพียงผลลัพธ์ ที่แตกต่างกันสองแบบ คือ เคราะห์ร้าย และเคราะห์อันใหญ่หลวงแสนสาหัส เธอจะเลือกยังไง?\"<br /><br />\"...เมื่อเปรียบเทียบอันตราย จากทั้งสองตัวเลือกแล้ว ก็ย่อมต้องเลือกทางที่ส่งผลร้ายน้อยกว่า นี่ก็คือบทเรียนแรก ของศาสตร์การพยากรณ์\"<br /><br />\"แต่ถ้าหากมองด้วยมุมมองของมนุษย์ ที่ไม่อาจรู้หนักรู้เบาได้ล่ะ?\" ชายหนุ่มหันกายมา<br /><br />\"การพยากรณ์ครั้งนี้ถูกทำนายโดย Matrix 'สิบทิศสะท้อนโลกแห่งกฎ' ที่สร้างขึ้นมาใหม่ ซึ่งได้ผลลัพธ์สองแบบคือ ยืมกองวิหคเหินฟ้าจาก Xianzhou Yaoqing หรือโยกย้ายกองมุกนิลกาฬ สองอย่างนี้เลือกได้เพียงหนึ่ง หากเลือกกองวิหคเหินฟ้า ก็จะสามารถอาศัยกำลังทหาร บุกโจมตีได้พักหนึ่ง แต่หลังจากนั้นจะไม่มีโอกาสชนะอีกแล้ว และหากเลือกกองมุกนิลนาฬ ก็จะต้องอดทนต่อระยะห่างระหว่างพื้นที่กับ Fanghu ซึ่งจะทำให้การศึกล่าช้าไปอีกหกเดือน ทั้งยังต้องทนต่อการโจมตีครั้งแล้วครั้งเล่าของศัตรู ยิ่งไม่ต้องพูดถึง การสูญเสียกำลังพลเลยด้วยซ้ำ แต่หากสามารถตั้งรับได้ จนกว่ากำลังเสริมจะมาถึง ก็จะมีโอกาสได้รับชัยชนะ\"<br /><br />\"คิดดูแล้ว พวกเขาคงจะเลือกอย่างแรกกันสินะ\"<br /><br />\"ใช่แล้ว ผลการทำนายสามารถให้คำปรึกษา และแนะนำได้เท่านั้น แต่ไม่อาจตัดสินใจแทนนายพลได้ เขาเลือกวิธีที่ทำให้เกิดการสูญเสียน้อยที่สุด ถึงอย่างนั้นฉันก็ไม่ได้ทำนายผิด เพราะความพ่ายแพ้ครั้งนี้ คือผลลัพธ์ที่โชคชะตากำหนดไว้แล้ว\"<br /><br />\"ตามหลักการในตำราสงคราม ว่าด้วยการทำศึกด้วยกำลังที่เหนือกว่า กำลังทหารที่โยกย้ายมาจาก Yaoqing ก็อาจไม่ใช่ทางเลือกที่แย่ที่สุด อีกอย่าง โลกใบนี้ไม่มีสิ่งใดแน่นอน แล้วท่านผู้พยากรณ์สูงสุด มั่นใจขนาดนี้ได้ยังไงกัน? พูดอย่างกับว่าทุกอย่าง จะต้องเกิดขึ้นจริงอย่างนั้นล่ะ\"<br /><br />\"โลกใบนี้ไม่มีสิ่งใดแน่นอน?\" ชายหนุ่มถอนหายใจอย่างหนักหน่วง \"เดิมทีฉันก็คิดแบบนี้... ตอนได้รับผลการทำนายครั้งแรก ก็คิดว่าต้องมีการคำนวณผิดพลาดแน่ แต่หลังจากทำนายดูอีกครั้ง ผลกลับไม่เปลี่ยนไปเลย ดังนั้นฉันจึงตัดสินใจ ไปดูให้เห็นกับตาในสถานที่จริง\"<br /><br />\"สองสามสัปดาห์ที่ผ่านมา ฉันได้เดินทางลึกเข้าไปใน Thalassa และได้ต่อสู้กับพวกสิ่งชั่วร้าย จนได้รับความไว้วางใจจากอารยธรรมวารีชนของท้องที่ และได้ข้อมูลที่น่าตะลึงมา นั่นก็คือ ภายในหนึ่งเดือน เนื่องจากการรบกวนของดวงจันทร์ คลื่นยักษ์ที่ชาว Thalassa เรียกว่า \"คลื่นน้ำปีศาจ\" ก็จะมาเยือน\"<br /><br />\"หากไม่มีความช่วยเหลือ จากปรมาจารย์ศาสตร์เวทเมฆาแห่งเผ่า Vidyadhara ของ Fanghu ก็ไม่มีใครต่อสู้กับสัตว์ประหลาดต่อไปได้ ภายในสภาพแวดล้อม ที่เลวร้ายแบบนั้นหรอก ข้อมูลนี้ไม่มีอยู่ในบันทึกประวัติศาสตร์ใดๆ ทั้งยังไม่อยู่ในคลังเอกสารของกองทัพด้วย และเพราะฉันทำเกินความจำเป็น เพื่อพิสูจน์ความจริงเรื่องนี้ จึงต้องแลกด้วยมือข้างนี้ยังไงล่ะ\"<br /><br />ชายหนุ่มยิ้มขมขื่น พลางโบกมือที่ทำจากไม้ \"บางครั้ง เส้นทางแห่งโชคชะตา ก็มีเพียงเส้นเดียวมาตลอด ทุกอย่างนั้น ล้วนเป็นสิ่งที่โชคชะตากำหนดไว้แล้ว\"<br /><br />\"จริงสิ เธอไม่จำเป็นต้องเรียกฉันว่า ท่านผู้พยากรณ์สูงสุดหรอก ตั้งแต่นี้เป็นต้นไป เธอควรเรียกฉันว่า 'อาจารย์' ตามที่สมควรได้แล้ว\"",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>40</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 3",
+   "text": "เธอได้ผ่านช่วงเวลาแห่งการศึกษาเล่าเรียน ที่แสนสุขที่สุดในชีวิต ณ Divination Commission แห่ง Yuque ส่วนเรื่องโชคชะตากับเจตจำนงเสรี และการคำนวณของ Matrix กับการตัดสินใจเลือกของมนุษย์นั้น... คำถามทุกอย่างที่เกี่ยวกับเส้นทางแห่งการพยากรณ์นี้ หญิงสาวจำได้ว่า ตนและอาจารย์มักจะถกเถียงกันไม่หยุด นี่ไม่ใช่การแข่งขันปะทะฝีปาก แต่เป็นการประชัน กับผู้ที่เป็นดั่งครูและสหาย สุดท้ายหญิงสาวกับอาจารย์ ก็บรรลุความคิดเดียวกันในที่สุด แต่ทั้งคู่กลับมีปัญหาโลกแตกอย่างหนึ่ง ที่ไม่ว่าอย่างไรก็ไม่อาจสลัดออกไปได้...<br /><br />นับตั้งแต่ Nous มอบคัมภีร์พยากรณ์มาให้ ทางฝ่าย Divination Commission แห่งเรือ Xianzhou Yuque ก็ได้อุทิศเวลาหลายร้อยปี เพื่อตีความและทำความเข้าใจสุดกำลัง จนสร้างออกมาเป็น Matrix สำหรับการพยากรณ์ ที่ได้รับการยกย่องว่า เป็นอันดับหนึ่งในสหพันธ์ เหล่าผู้พยากรณ์แห่ง Yuque ล้วนแต่ภาคภูมิใจเพราะเหตุนี้ แต่ในสายตาของ Fu Xuan นี่เป็นเพียงการนำอนาคตของ Xianzhou ไปผูกติดกับเส้นทางที่ Matrix กำหนดมาให้เท่านั้น<br /><br />เมื่อทุกคนเชื่อว่า สิ่งที่ Matrix แสดงออกมาต้องเป็นความจริง ทางเลือกก็จะกลายเป็นแค่ ของตกแต่งที่เหลือแต่ชื่อเท่านั้น และผู้พยากรณ์ก็ได้กลายเป็นนักโทษของ Matrix โดยที่ไม่มีใครคาดคิด ยามออกเดินทางก็ต้องมีฤกษ์งามยามดี และต้องหยุดทันทีในฤกษ์ที่มีเคราะห์ ในแต่ละวันควรทำสิ่งใดและไม่ควรทำสิ่งใด หรือจะต้องทำอะไรหรือไม่ทำอะไรบ้าง ทุกอย่างเป็นไปตามผลการทำนายทั้งนั้น<br /><br />\"ถ้า Matrix บอกว่าพรุ่งนี้จะถึงวันตายของฉัน ฉันก็ต้องไปหาสักที่ เพื่อจัดการตัวเองงั้นเหรอ? ถ้าเป็นแบบนั้น การทำนายกับไม่ทำนาย มันต่างกันยังไงล่ะ?\"<br /><br />\"แตกต่างกันตรงที่ว่า พวกเรารู้ว่าตัวเองกำลังเดินอยู่บน โชคชะตาที่แจ้งประจักษ์ ซึ่งเป็นหนทางสูงสุดที่ปรมาจารย์ Xuan Yao ผู้ริเริ่มก่อตั้ง Divination Commission แสวงหา\"<br /><br />\"ด้วยความช่วยเหลือจาก Matrix เหล่าผู้พยากรณ์เพียงแค่ต้องเชื่อในศรัทธา แล้วดำเนินรอยตามผลลัพธ์ จากนั้นก็ตัดสินใจเลือกครั้งแล้วครั้งเล่า... แม้ว่าตัวเลือกเหล่านั้นจะเกินความเข้าใจ และยากเย็นแสนเข็ญเพียงใดก็ตาม แต่ในท้ายที่สุดแล้ว ทั้งหมดนี้ก็จะทำให้ Xianzhou บรรลุเป้าหมายอันยิ่งใหญ่ ที่มุ่งมาดปรารถนามาโดยตลอด... นั่นก็คือการกำจัดพินาศโรคา เพื่อทำให้โลกไม่ต้องทนทุกข์กับภัยพิบัติร้ายแรงอีก\" สีหน้าของชายหนุ่มสงบเยือกเย็นราวกับผู้ที่ตระหนักรู้แล้ว เขามองไปยัง Fu Xuan \"ก็เหมือนกับที่ฉันรับเธอมาเป็นศิษย์ หลังจากที่ได้ล่วงรู้ชะตากรรมของเธอน่ะ\"<br /><br />ไม่ใช่เพราะพรสวรรค์ของฉันหรอกเหรอ? และไม่ใช่เพราะเส้นสายของตระกูลด้วย? แค่ทำให้คำทำนายเป็นจริงเท่านั้นเหรอ? นี่...นี่มันจะเหลวไหลเกินไปแล้ว! ความโมโหท่วมท้นจิตใจของ Fu Xuan ทำให้เธอพลันไร้วาจาจะกล่าวไปชั่วขณะ<br /><br />\"เธอรู้ไหม หลังจากที่ขอคำทำนายจาก 'สิบทิศสะท้อนโลกแห่งกฎ' และแปลความหมายออกมาแล้ว ฉันก็แน่ใจว่าชะตากรรมของฉัน จะจบลงด้วยมือของเธอ แต่ฉันก็ยังรับเธอมาเป็นศิษย์ และรอให้เธอมาแทนที่ฉัน เพื่อกลายเป็นผู้พยากรณ์สูงสุดแห่ง Xianzhou Yuque เพราะว่าทั้งหมดนี้ คือสิ่งที่โชคชะตากำหนดไว้แล้ว\"<br /><br />โชคชะตากำหนดไว้แล้ว? โชคชะตาของเขาจะจบลงด้วยมือของฉัน?<br /><br />พูดซะเหมือนกับ Xianzhou ยังอยู่ในยุคภัยพิบัติสามประการ ทำอย่างกับว่า เธอปรารถนาตำแหน่งผู้พยากรณ์สูงสุด และเป็นคนทรยศที่คิดสังหารอาจารย์ โดยไม่เลือกวิธีการอย่างนั้นล่ะ อาจารย์นี่เลอะเลือนชะมัด!<br /><br />\"ฉันน่ะ...ฉันจะไม่มีวันทำให้มันกลายเป็นจริงหรอก!\"<br /><br />หญิงสาวเคารพอาจารย์ทุกอย่าง ในฐานะผู้พยากรณ์คนหนึ่ง: ทั้งจิตใจและปัญญา ความสามารถ ไปจนถึงบุคลิกนิสัย มีเพียงอย่างเดียวก็คือ เขาเป็นผู้พยากรณ์ ที่สามารถล่วงรู้โชคชะตาได้ แต่กลับยอมตกอยู่ใน ก้นบึ้งของความศรัทธาต่อโชคชะตา และมองว่านี่เป็นเรื่องที่สมเหตุสมผลแล้ว<br /><br />ดังนั้น Fu Xuan จึงหนีออกมาจาก Xianzhou Yuque โดยใช้วิธีที่เกือบจะเป็นการเนรเทศตัวเอง โดยไม่สนว่าครอบครัวจะห้ามปรามอย่างไร และจะมีอุปสรรคมากมายแค่ไหน เธอไปยัง Divination Commission แห่ง Luofu ที่มีบรรยากาศอิสระเสรีมากกว่า และอุทิศตนเพื่อการทำนาย เธอไม่ใช่แค่ต้องการอยู่ห่างจาก Xianzhou Yuque ให้ไกลที่สุดเท่านั้น แต่ยังอยากพิสูจน์เป็นการส่วนตัวด้วยว่า คำทำนายนี้ เป็นเพียงความเข้าใจผิดที่ไร้สาระ ของใครบางคนเท่านั้น",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>60</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 4",
+   "text": "หนึ่งร้อยปีผ่านไปอย่างเงียบสงบ สงครามพลันบังเกิดขึ้นอีกครั้ง ผู้คุมการพยากรณ์ Fu Xuan ถูกสั่งให้พยากรณ์โดยไม่หยุดพัก กองทัพสาวกแห่งความเฟื่องฟู ก่อตัวขึ้นเป็นครั้งที่สาม และบุกไปจู่โจม Xianzhou Fanghu ขณะที่เรือ Yuque และ Luofu ก็อยู่ไม่ไกลจาก Xianzhou Fanghu นัก จึงเป็นหน้าที่ที่พวกเขาต้องเคลื่อนกำลังพลไปช่วยเหลือ โดยผลการทำนายบอกว่า หากโจมตีเต็มกำลัง กองทัพ Xianzhou ที่เข้าร่วม ก็จะพบกับความพ่ายแพ้อันน่าอนาจ... แต่ถ้าหากยืนหยัดตั้งหลักป้องกัน ก็จะมีโอกาสพลิกสถานการณ์ได้<br /><br />แต่ผลพยากรณ์ไม่ได้บอกว่า โอกาสพลิกสถานการณ์อยู่ที่ใด Fu Xuan ทำนายซ้ำแล้วซ้ำเล่า จนกระทั่งในการทำนายครั้งที่สาม ผลที่ได้จาก Matrix of Prescience ก็ยังไม่เปลี่ยนแปลง<br /><br />\"ไม่มีใครเลือกความพ่ายแพ้หรอก\" สิ่งที่ผู้พยากรณ์ทำได้ก็ล้วนทำหมดแล้ว Fu Xuan เขียนวิเคราะห์ผลดีผลเสียบนกระดาษ แล้วรายงานผลการทำนายไปยัง Seat of Divine Foresight และก็เป็นอย่างที่คิด ผลลัพธ์ของการหารือ จากนายพลของเทพแห่งคันศรสรุปได้ว่า กองทัพพันธมิตรแห่งเฟื่องฟูที่รุกราน Fanghu มีกำลังมหาศาล จึงไม่อาจเลือกตั้งรับได้เพียงอย่างเดียว กองอัศวิน Cloud Knight ของ Luofu และ Yuque จะต้องเข้าต่อสู้ เพื่อยื้อเวลาให้กองทหารของ Yaoqing มาเสริมได้ทัน<br /><br />ในวันนั้น Fu Xuan จึงได้เห็นความพ่ายแพ้ยับเยิน ของกำลังเสริมจากสหพันธ์ บนโต๊ะทรายโฮโลแกรม พวก Borisin ไม่เพียงนำกองเรือและอสูรจักรกล จำนวนมากมายมหาศาลมาเท่านั้น แต่ยังเรียกดวงดาวมีชีวิต ที่อยู่ในตำนานโบราณอย่าง \"Ketu Mirage\" ออกมาด้วย สิ่งชั่วร้ายนั้นพุ่งไปยัง Fanghu และกำลังจะนำพาหายนะล้างบาง มาสู่ทุกชีวิตที่อยู่บนนั้น ซึ่งจะซ้ำรอยโศกนาฏกรรมทำลายล้างใน Xianzhou Cangcheng และผู้คนก็ทำได้เพียงมองดูมัน พุ่งลงมาหาเท่านั้น<br /><br />สิ่งที่ผู้พยากรณ์ทำได้ มีเพียงเท่านี้จริงๆ เหรอ? ท่ามกลางความวิตกกังวล และความโกรธเกรี้ยว Fu Xuan ก็บังเกิดความคิดใจกล้าขั้นสุดขึ้นมา \"ฉันขอเข้าพบท่านนายพล Jing Yuan!\"<br /><br />หลังจากได้เข้าพบท่านนายพลแล้ว หญิงสาวก็เอ่ยความคิดของตนออกไป ด้วยกำลังพลในตอนนี้ Cloud Knight ไม่มีทางเอาชนะได้แน่ โอกาสเดียวที่เปลี่ยนสถานการณ์ได้ก็คือ ต้องให้ร่องรอยเทพแห่งคันศรปรากฏ<br /><br />สิ่งที่เหนือความคาดหมายของเธอก็คือ หลังจากพูดความคิดที่แสนดูหมิ่นและน่าหัวเราะนี้ออกไป นายพลที่มีท่าทีเหนื่อยล้าตรงหน้า กลับไม่ได้แสดงสีหน้าหัวเราะเยาะเย้ย แต่พยักหน้าให้แทน \"เธอคิดจะทำยังไง?\"<br /><br />\"Xianzhou Yuque มีเครื่องมือสำหรับดูดาวอันดับหนึ่ง มันคือ Cloudpeer Telescope อุปกรณ์ชิ้นนี้ ไม่ใช่แค่สามารถใช้สังเกตการณ์ได้เท่านั้น แต่ยังสามารถส่งสัญญาณ ไปยังภายนอกได้ด้วย... ความหมายของฉันก็คือ ให้ใช้กองเรือเวหาขนย้าย Cloudpeer Telescope ไปยัง Fanghu แล้วส่งสัญญาณขอความช่วยเหลือ ไปยังตำแหน่งสุดท้ายที่ Lux Arrow ของเทพแห่งคันศรอยู่ ทุกวินาทีมีค่า ทุกอย่างยังสามารถพลิกผันได้ ก่อนที่ดาวดวงนั้นจะตกลงไป\"<br /><br />\"เธอคงรู้ดีถึง... สัญญาณหนึ่งเดียวและผลลัพธ์ที่จะตามมา เมื่อเทพแห่งคันศรมาเยือนโลก ใช่มั้ย?\"<br /><br />\"ใช่ ในฐานะผู้ที่เสนอวิธีการนี้ ฉันยินดีไปยังสนามรบ เพื่อดำเนินการเรื่องนี้ด้วยตัวเอง\" สีหน้าของหญิงสาวเคร่งขรึม เธอเข้าใจดีว่าความคิดที่ตนเสนอออกมา มันน่าตกใจแค่ไหน<br /><br />\"ขอบคุณสำหรับคำแนะนำของเธอนะ แต่ในช่วงวิกฤต หกหัวเรือใหญ่ควรจะจัดการอย่างสุดกำลัง ยิ่งไปกว่านั้น เธอก็ไม่ได้รับอนุญาตให้ใช้เครื่องมือนั้นด้วย และถ้าหากสิ่งต่างๆ อยู่เหนือการควบคุมเพราะเหตุนี้ ฉันก็จะลาออกในฐานะผู้ที่ดำเนินการตามข้อเสนอ และรับผิดชอบต่อผลที่ตามมาทุกอย่างเอง หวังว่าคุณ Fu จะไม่ต้องกังวลมากเกินไป\"<br /><br />Fu Xuan มองตามแผ่นหลังของนายพลที่จากไป จู่ๆ ก็พลันได้สติขึ้นมา และตระหนักได้ถึงความหมายของ \"หกหัวเรือใหญ่ ควรจะจัดการอย่างสุดกำลัง\" แล้ว: ผู้ที่มีสิทธิ์ขาดในการใช้ Cloudpeer Telescope และสามารถส่งสัญญาณ ผ่านวิธีการตีความคำบัญชาของเทพแห่งคันศรนั้น...<br /><br />มีเพียงผู้พยากรณ์สูงสุดแห่ง Yuque ผู้เดียว<br /><br />...<br /><br />\"นี่คือความตั้งใจเดิมในการแสวงหา \"ดวงตา\" ของเธออย่างนั้นเหรอ? ฉันอ่านความฝันเหล่านั้นของเธอแล้ว...\"<br /><br />หญิงสาวไม่ได้ลืมตา แต่กลับมองเห็นโลกรอบๆ ที่เปลี่ยนจากหมอกควัน มาเป็นสิ่งที่จับต้องได้ ความเป็นไปได้ทั้งหมดมลายหายไป เหลือไว้เพียงทางเลือกหนึ่งเดียว ที่ชัดเจนแจ่มแจ้ง<br /><br />\"เรื่องพวกนั้นไม่ใช่ฝัน นั่นคืออดีตของฉัน คือทุกสิ่งที่หล่อหลอมฉันขึ้นมา\"<br />\"และสิ่งที่เขาพูดก็ไม่ผิด ความจริงแล้วโชคชะตานั้น มีเพียงเส้นทางเดียวมาโดยตลอด\"",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>80</nobr>"
+  }
+ ],
+ "archive": {
+  "cvCn": "花玲",
+  "cvJp": "伊藤美来",
+  "cvKr": "이지현",
+  "cvEn": "Sarah Wiedenheft",
+  "camp": "Xianzhou \"Luofu\""
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Fu Xuan",
+ "rarity": 5,
+ "descHash": "ผู้นำของ Divination Commission แห่ง Xianzhou \"Luofu\" เธอจะใช้ตาที่สามและ Matrix of Prescience มาคำนวณเส้นทางเดินเรือของ Xianzhou และทำนายผลดีร้ายของเรื่องราวต่างๆ",
+ "artPath": "8fe7cd896a1fdd7ad7bf9457a9e0345d1db773070411605979051b6052bc885b",
+ "miniIconPath": "cd27ca15774d3ea63723e47c9add72c53193fed3a64a6f1d2be3ff54ecb0184b",
+ "damageType": {
+  "id": 32,
+  "iconPath": "ddae115334fb14959c5e24b70a5b165c431afc32f9fcf84d4b50e5e0e15bcc1f",
+  "color": "#1C29BA",
+  "name": "ควอนตัม",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "861828026682b63234f31903ec91d9fd670122ea792feb297a8c59c5e7686ea1",
+  "altIconPath": "5d97226f1d4519fb25bedac479e51193f581f3e353eaf4c13d37fc874cd28f7a",
+  "color": "#FFFFFF",
+  "name": "อนุรักษ์",
+  "rarity": 0
+ },
+ "pageId": "fuxuan"
+}

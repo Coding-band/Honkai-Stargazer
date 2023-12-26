@@ -54,7 +54,7 @@
    "id": 151160,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "f4e0301b109ba0ab0b633a7186df88a0fa0be8a70edf33c88539672e514bbc8c",
+   "iconPath": "02cccae71e7d4c33c463175ee672c7eed3f27ddc6406f05a40a18e261fdd9780",
    "name": "Coroa de Raios de uma Sombra do Passado",
    "desc": "Acessório de cabeça da Sombra Guardiã. Pode ser usado para Ascensão de personagens de Dano de Raio.",
    "lore": "Acessório deixado para trás pela sombra de um guardião do passado, que contava histórias da cidade de Inverno Eterno.<br /><br />\"Svetlana, o Punho de Ferro: sua ira é tão aterrorizante quanto um trovão e sua retribuição é tão rápida quanto um raio.\"",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/151160",
    "comeFrom": [
+    "Sombra Estagnada: Corredor de Ecos Atenuados",
     "Sombra Estagnada (Corredor de Ecos Atenuados)",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -182,6 +183,7 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Cálice (Vila dos Rebites)",
+    "Cálice (Vila dos Rebites)",
     "Troca de Brasas"
    ]
   },
@@ -189,7 +191,7 @@
    "id": 717289,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "iconPath": "e5c567b0d1a069f86d1fa35a17b282346606c69e5f8cab4028224ece84c8ad58",
    "name": "Medalha Crinalva",
    "desc": "Medalha de honra usada por soldados da Guarda Crinalva concedida por mérito e serviços prestados. Material avançado usado para aprimoramentos.",
    "lore": "Uma prova de honra concedida àqueles que lutam contra criaturas do Fragmentum, Subterrenos e desastres repentinos.<br />Geralmente seu portador não a carrega no peito, a não ser que esteja dentro de um caixão.<br /><br />\"Lembre-se, jovem Gepard, isso não é um brinquedo: é o destino e o sangue da família Landau.\"",
@@ -208,7 +210,7 @@
    "id": 836261,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "iconPath": "36e68603fbc67d4b69c02e01d7d5d41a80446ea6c49b1d828b47320f6225825c",
    "name": "Chave da Sabedoria",
    "desc": "Uma chave mítica que apareceu nas mãos dos maiores gênios do cosmos. Usada para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudição</span>.",
    "lore": "Ela é como um convite para os salões do Templo de Nous.<br />Encontrar a porta onde a chave pode ser usada é mais difícil do que obtê-la. Aqueles que entraram nessas portas secretas perceberam imediatamente que é impossível voltar a partir do momento em que pisam do outro lado.<br /><br />\"A Erudição não tem todas as respostas do universo, mas ela ensina a fazer a pergunta certa.\"",
@@ -216,6 +218,7 @@
    "rarity": 4,
    "rewardPath": "/material/836261",
    "comeFrom": [
+    "Cálice (Vila dos Rebites)",
     "Cálice (Vila dos Rebites)",
     "Sintetizador Omni — Síntese de Material"
    ]
@@ -232,6 +235,7 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
+    "Cálice (Vila dos Rebites)",
     "Cálice (Vila dos Rebites)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas"
@@ -1549,7 +1553,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do inimigo-alvo.",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do alvo inimigo do Tipo correspondente.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2247,7 +2251,7 @@
   {
    "id": 18,
    "title": "Ascensão de Personagem",
-   "text": "Ótimo! Eu devia escrever isso na minha próxima canção...",
+   "text": "Ótimo! Eu devia escrever isso na minha próxima música...",
    "unlockRequirement": "",
    "cnUrl": "05df56128954471852431f5e9efea4e30c4a1daf62bab0bf08949f204d03774c",
    "jpUrl": "dd53041f1e6a25ded5e1368ff0ea024da3acf1dd95ed3a0d4fdb878f82d3e6f5",
@@ -2376,7 +2380,7 @@
   },
   {
    "id": 57,
-   "title": "Perícia 1",
+   "title": "Perícia - 1",
    "text": "Acompanhe o meu ritmo!",
    "unlockRequirement": "",
    "cnUrl": "276aced899f0c9c260e6c7db607eccd3c0b345de4559141a17860ac7f7c7897a",
@@ -2386,7 +2390,7 @@
   },
   {
    "id": 58,
-   "title": "Perícia 2",
+   "title": "Perícia - 2",
    "text": "Aumente o volume!",
    "unlockRequirement": "",
    "cnUrl": "02fa85d2704357eb77b7b9ed0e67b95bde7fc0a2333c5627b7356cb12bfb85ed",
@@ -2486,7 +2490,7 @@
   },
   {
    "id": 68,
-   "title": "Abrindo Tesouro 1",
+   "title": "Abrindo Tesouro - 1",
    "text": "Uau! Só coisa boa!",
    "unlockRequirement": "",
    "cnUrl": "f7e2a5c7bed30fc0fe802862509a1860da049c14c290f77d84b4673bda263bb1",
@@ -2496,7 +2500,7 @@
   },
   {
    "id": 72,
-   "title": "Abrindo Tesouro 2",
+   "title": "Abrindo Tesouro - 2",
    "text": "Uau!",
    "unlockRequirement": "",
    "cnUrl": "4af7e3cbdf0bcdd3bc590c86caa4ad482820bbf737080b2495fcc7e6420d2cfa",
@@ -2516,7 +2520,7 @@
   },
   {
    "id": 69,
-   "title": "Enigma Solucionado 1",
+   "title": "Enigma Solucionado - 1",
    "text": "Estou pegando o jeito disso.",
    "unlockRequirement": "",
    "cnUrl": "755cbbfa539091ab107a80f9af547eecb69f5a21b48299bdba8c851bf07b23a3",
@@ -2526,7 +2530,7 @@
   },
   {
    "id": 74,
-   "title": "Enigma Solucionado 2",
+   "title": "Enigma Solucionado - 2",
    "text": "Queria ter tempo para examinar como funciona por dentro!",
    "unlockRequirement": "",
    "cnUrl": "a7aa140aac64ce87f7a067a78b4181eb9ad5f879263cd8f5d2dbfc0de7756530",

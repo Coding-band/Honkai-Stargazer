@@ -164,6 +164,7 @@
    "rewardPath": "/material/635673",
    "comeFrom": [
     "Cálice (Zona de Armazenamento)",
+    "Cálice (Zona de Armazenamento)",
     "Troca de Brasas"
    ]
   },
@@ -171,7 +172,7 @@
    "id": 717290,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
    "name": "Motor Antigo",
    "desc": "Motor mecânico do Velho Mundo deixado para trás. Material avançado usado para aprimoramentos.",
    "lore": "Usa Geoessência como a fonte de energia. Quando alimentado, descarrega auroras errantes, em vez de faíscas.<br /><br />\"Somente a Divisão Tecnológica sob comando direto da Guardiã Suprema tem acesso a informações sobre o Velho Mundo. Eu perdi meus privilégios depois que me demitiram.\"",
@@ -189,7 +190,7 @@
    "id": 836259,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "iconPath": "d9e262af4f143c0b58be9d20f5c04e04a252fb8f05eb675c0996f5b1bc8f6ad5",
    "name": "Lâmina Destruidora de Mundos",
    "desc": "Arma quebrada deixada por membros da Legião Antimatéria. Usada para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruição</span>.",
    "lore": "Esta arma representa o ranque e as conquistas de seu dono em nome da Destruição.<br />O dono desta arma é aquele que chega no fim da guerra para atiçar as brasas que consomem o mundo. Independentemente das glórias do passado ou das bênçãos de suas divindades, este planeta está destinado a voltar às cinzas de onde veio, e murchar nas profundezas do céu estrelado.<br /><br />\"O objetivo do usuário desta arma é purificar o mundo.\"",
@@ -197,6 +198,7 @@
    "rarity": 4,
    "rewardPath": "/material/836259",
    "comeFrom": [
+    "Cálice (Zona de Armazenamento)",
     "Cálice (Zona de Armazenamento)",
     "Sintetizador Omni — Síntese de Material"
    ]
@@ -214,6 +216,7 @@
    "rewardPath": "/material/920200",
    "comeFrom": [
     "Cálice (Zona de Armazenamento)",
+    "Cálice (Zona de Armazenamento)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas"
    ]
@@ -222,7 +225,7 @@
    "id": 983278,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "1f3033f7a0d40ab304f7c4af7eaa7a00cc0b0a1cfd9f7698fcbf0b0b8d9321d5",
+   "iconPath": "bf013025c6d4383e5c48a0fae0598d9b489ed29d4ac675292f31af835075c4a7",
    "name": "Endoderme de Quitina",
    "desc": "Substância quente e translúcida, como se fosse o fogo em estado sólido. Pode ser usada para Ascensão de personagens de Dano de Fogo.",
    "lore": "Quitina estranha que se desprendeu de uma criatura interdimensional. Embora não esteja mais escaldante, ainda emite calor.<br /><br />\"Está frio demais lá fora. Mas com essa gema, acredito que poderá viajar por longas distâncias, até mesmo para procurar cidades com humanos deixados para trás...\"",
@@ -230,6 +233,7 @@
    "rarity": 4,
    "rewardPath": "/material/983278",
    "comeFrom": [
+    "Sombra Estagnada: Zona Restrita da Guarda Crinalva",
     "Sombra Estagnada (Zona Restrita da Guarda Crinalva)",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -1532,7 +1536,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do inimigo-alvo.",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do alvo inimigo do Tipo correspondente.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2703,7 +2707,7 @@
   },
   {
    "id": 57,
-   "title": "Perícia 1",
+   "title": "Perícia - 1",
    "text": "Hehehe... Não esperava por essa, né?",
    "unlockRequirement": "",
    "cnUrl": "483ec3b24289cf85cc30899b7bebad15e6aaeb52676413d5fbc9731ad4fb4f40",
@@ -2713,7 +2717,7 @@
   },
   {
    "id": 58,
-   "title": "Perícia 2",
+   "title": "Perícia - 2",
    "text": "Eu estou aqui... agora pufff, cadê ela?!",
    "unlockRequirement": "",
    "cnUrl": "7258579ec12db08fd4e9d24d4a42a032bccfa77f8420a62ceed600de1dba21e4",
@@ -2813,7 +2817,7 @@
   },
   {
    "id": 68,
-   "title": "Abrindo Tesouro 1",
+   "title": "Abrindo Tesouro - 1",
    "text": "Eba! Vamos levar tudo!",
    "unlockRequirement": "",
    "cnUrl": "605ebe367b3923731bc34ee648c132445028b335ba1827bdcc31a41bb793e46d",
@@ -2823,7 +2827,7 @@
   },
   {
    "id": 72,
-   "title": "Abrindo Tesouro 2",
+   "title": "Abrindo Tesouro - 2",
    "text": "Isso é pra Hook?",
    "unlockRequirement": "",
    "cnUrl": "f31b717af44a37293e87484c6900dd2f94dc93728d96bfacdf5d5c5ca4906bd4",
@@ -2843,7 +2847,7 @@
   },
   {
    "id": 69,
-   "title": "Enigma Solucionado 1",
+   "title": "Enigma Solucionado - 1",
    "text": "Ahn? Eu quero jogar de novo!",
    "unlockRequirement": "",
    "cnUrl": "cd26b81e536c5a9f7fe5770b130c7eeb3efcbdb1531e37124a8e3e2970789942",
@@ -2853,7 +2857,7 @@
   },
   {
    "id": 74,
-   "title": "Enigma Solucionado 2",
+   "title": "Enigma Solucionado - 2",
    "text": "Aha! A Hook consegue fazer isso vendada!",
    "unlockRequirement": "",
    "cnUrl": "e46f0ac6d632d1c3f0f45cf83b9a54e4c537bfbbb82819254f586f6b95257183",

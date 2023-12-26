@@ -54,7 +54,7 @@
    "id": 267805,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "822b1e8c023333b210f71f503cce58516c58ffc4f47c709a4ba4bc03387fdd68",
+   "iconPath": "ec233e43b828d3d0aaa069d3bb911a437404e6a0a34a358cdf134da8ad7fb0fa",
    "name": "Storm Eye",
    "desc": "Arrows belonged to a Stormbringer. Can be used for the Ascension of Wind characters.",
    "lore": "Used to belong to a certain Fragmentum monster modeled after a certain kind of Voidrangers. An arrowhead can be barely seen buried in the center of the vortex.<br /><br />\"Those who perish in the Fragmentum shall rise again where they met their demise.\"",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/267805",
    "comeFrom": [
+    "Stagnant Shadow: Rivet Town",
     "Stagnant Shadow (Rivet Town)",
     "Omni-Synthesizer — Material Exchange"
    ]
@@ -180,6 +181,7 @@
    "rewardPath": "/material/635669",
    "comeFrom": [
     "Calyx (Great Mine)",
+    "Calyx (Great Mine)",
     "Embers Exchange"
    ]
   },
@@ -187,7 +189,7 @@
    "id": 717290,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
    "name": "Ancient Engine",
    "desc": "Mechanical engine left behind from the Old World. Advanced material used for enhancement.",
    "lore": "It uses Geomarrow as the energy source. When powered, it spews wandering auroras, not sparkles.<br /><br />\"Only the Technology Division directly under the Supreme Guardian has access to information regarding the Old World. I lost my privileges after I was fired.\"",
@@ -205,7 +207,7 @@
    "id": 836255,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "iconPath": "34d88252515cd13ab58b6f5aae7329794a4a330a0147e1c5f755c8a2f4444bff",
    "name": "Obsidian of Obsession",
    "desc": "A sizable piece of dark matter captured from the void. Used to level up Traces significantly for <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihility</span> characters.",
    "lore": "The weak-minded and soft-willed will spend their eternity in chaos from just a simple glance into the prism.<br /><br />\"         \"",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/836255",
    "comeFrom": [
+    "Calyx (Great Mine)",
     "Calyx (Great Mine)",
     "Omni-Synthesizer — Material Synthesis"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
+    "Calyx (Great Mine)",
     "Calyx (Great Mine)",
     "Omni-Synthesizer — Material Synthesis",
     "Embers Exchange"
@@ -945,10 +949,10 @@
    ]
   },
   {
-   "tagHash": "Impair",
+   "tagHash": "AoE",
    "descHash": "Deals <span style=\"color:#00FF9C;\">Wind </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Sampo's ATK to all enemies, with a <nobr>#4[i]%</nobr> <u>base chance</u> to increase the targets' DoT taken by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> for <nobr>#3[i]</nobr> turn(s).",
    "ultimateCost": 120,
-   "break": "0",
+   "break": "60/hit",
    "energy": "5",
    "id": 49935,
    "name": "Surprise Present",
@@ -1578,7 +1582,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Attack an enemy, and when the battle starts, reduce their Toughness of the corresponding Type.",
+   "descHash": "Attacks an enemy, and when the battle starts, reduces their Toughness of the corresponding Type.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",

@@ -54,7 +54,7 @@
    "id": 267805,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "822b1e8c023333b210f71f503cce58516c58ffc4f47c709a4ba4bc03387fdd68",
+   "iconPath": "ec233e43b828d3d0aaa069d3bb911a437404e6a0a34a358cdf134da8ad7fb0fa",
    "name": "Ojo del vendaval",
    "desc": "Flecha de un Creavendavales. Material de ascensión para los personajes de tipo Viento.",
    "lore": "Pertenecía a cierto monstruo del Fragmentum inspirado en los soldados del Vacío. En el centro del vórtice se vislumbra una punta de flecha.<br /><br />\"Quienes perecen en el Fragmentum, volverán a nacer en el Fragmentum\".",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/267805",
    "comeFrom": [
+    "Sombra paralizada de Villarremache",
     "Sombra paralizada de Villarremache",
     "Máquina sintetizadora multiusos - Intercambio de material"
    ]
@@ -180,6 +181,7 @@
    "rewardPath": "/material/635669",
    "comeFrom": [
     "Cáliz de la mina principal",
+    "Cáliz de la mina principal",
     "Canjeo de Ascuas"
    ]
   },
@@ -187,7 +189,7 @@
    "id": 717290,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
    "name": "Motor antiguo",
    "desc": "Motor de maquinaria procedente del viejo mundo. Material avanzado que se usa en la potenciación.",
    "lore": "Utiliza geomédula como fuente de energía. Al encenderse, en vez de chispas, se producen auroras boreales.<br /><br />\"Solo la División de Tecnología, que depende directamente de la Guardiana, puede acceder a información relacionada con el viejo mundo. Yo perdí mis privilegios cuando me despidieron\".",
@@ -205,7 +207,7 @@
    "id": 836255,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "iconPath": "34d88252515cd13ab58b6f5aae7329794a4a330a0147e1c5f755c8a2f4444bff",
    "name": "Obsidiana de la obsesión",
    "desc": "Trozo grande de materia oscura obtenido en el vacío. Sirve para mejorar en gran medida los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilidad</span>.",
    "lore": "A quienes tienen una voluntad débil les bastará una mirada a este prisma para pasar la eternidad en el caos.<br /><br />\"       \".",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/836255",
    "comeFrom": [
+    "Cáliz de la mina principal",
     "Cáliz de la mina principal",
     "Máquina sintetizadora multiusos - Síntesis de materiales"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
+    "Cáliz de la mina principal",
     "Cáliz de la mina principal",
     "Máquina sintetizadora multiusos - Síntesis de materiales",
     "Canjeo de Ascuas"
@@ -660,7 +664,7 @@
   },
   {
    "tagHash": "Rebote",
-   "descHash": "Inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> del ATQ de Sampo como Daño de <span style=\"color:#00FF9C;\">Viento</span> a un enemigo. También inflige daño <nobr>#1[i]</nobr> veces más, y cada vez inflige un Daño de <span style=\"color:#00FF9C;\">Viento</span> equivalente al <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> del ATQ de Sampo a un enemigo al azar.",
+   "descHash": "Inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> del ATQ de Sampo como Daño de <span style=\"color:#00FF9C;\">Viento</span> a un enemigo. También inflige daño <nobr>#1[i]</nobr> veces más, y cada vez inflige un Daño de <span style=\"color:#00FF9C;\">Viento</span> equivalente al <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> del ATQ de Sampo a un enemigo al azar.",
    "ultimateCost": 0,
    "break": "30 + 15/subsequent",
    "energy": "6/hit",
@@ -945,10 +949,10 @@
    ]
   },
   {
-   "tagHash": "Alteración",
+   "tagHash": "ATQ AdE",
    "descHash": "Inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> del ATQ de Sampo como Daño de <span style=\"color:#00FF9C;\">Viento</span> a todos los enemigos y tiene una <u>probabilidad base</u> del <nobr>#4[i]%</nobr> de aumentar el Daño con el tiempo que reciben los enemigos atacados en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> durante <nobr>#3[i]</nobr> turnos.",
    "ultimateCost": 120,
-   "break": "0",
+   "break": "60/hit",
    "energy": "5",
    "id": 49935,
    "name": "Regalo sorpresa",

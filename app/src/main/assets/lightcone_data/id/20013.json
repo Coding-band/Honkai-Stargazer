@@ -1,0 +1,496 @@
+{
+ "name": "Passkey",
+ "rarity": 3,
+ "descHash": "Kekuatan langka yang terkondensasi dari waktu. Momen kecil tersebut menjalin takdir yang luar biasa.<br /><br />\"Pengetahuan selalu ada di balik pintu, dan tidak ada yang akan memberikan kuncinya. Barang siapa yang menginginkannya akan memilikinya.\"",
+ "iconPath": "3653cf2d6f8594aff7ac6b259f17f99e2845670e2e33e7e4117e24fb171064e8",
+ "artPath": "f259b37310108184b03a656d972aa9f5dbf442d34c2e13497abf497e9a6839e2",
+ "mediumIconPath": "1b54b51bf133ceff13ed63820901eac7de9f126d8e61e1dea56e8a63594035f9",
+ "baseType": {
+  "id": 0,
+  "iconPath": "a1916e75aa6a99295aa01786a946ae601da457b578603446740cbe30bc5fba5a",
+  "color": "#FFFFFF",
+  "name": "Erudition",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Credit",
+   "desc": "Mata uang yang digunakan saat Interastral Peace Corporation bertransaksi dengan pelanggannya. Kini mata uang ini sudah menjadi mata uang yang umum di perjalanan ruang angkasa.",
+   "lore": "\"Orang-orang berlarian, berkelahi, bertransaksi ... tujuannya cuma untuk angka-angka yang muncul di terminal. Namun benda yang benar-benar berharga tidak dapat dibeli oleh angka-angka perusahaan.\"",
+   "purpose": "Mata uang umum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calyx \"Great Mine\"",
+    "Hadiah Misi",
+    "Hadiah Tugas",
+    "Penukaran Ember"
+   ]
+  },
+  "549438": {
+   "id": 549438,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5eb86757b6878dd09f969ed2d9e75af43eac2565bd49fdbe391f716e5adca101",
+   "name": "Extinguished Core",
+   "desc": "Jantung monster yang berkeliaran di Fragmentum adalah material sederhana yang digunakan untuk peningkatan.",
+   "lore": "Sama seperti luka yang melahirkan kejahatan, dorongan untuk berbuat dosa. Seperti itulah sumber distorsi Fragmentum.<br />Sebuah pukulan keras telah menyebabkan jantung ini berhenti berdetak dan kehilangan kilaunya.<br /><br />\"Tes awal menunjukkan itu semacam hibrida: satu setengah primordial, dan yang lainnya setengahnya adalah sesuatu yang sangat mirip dengan Stellaron.\" — Departemen Biologi, Sarah Castro",
+   "purpose": "Material Trace<br />Material Ascension Karakter",
+   "rarity": 2,
+   "rewardPath": "/material/549438",
+   "comeFrom": [
+    "Dijatuhkan Monster Fragmentum tertentu",
+    "Dijatuhkan musuh di \"Simulated Universe\"",
+    "Hadiah Tugas",
+    "Penukaran Ember",
+    "\"Omni-Synthesizer\" - Pertukaran Material"
+   ]
+  },
+  "633379": {
+   "id": 633379,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4886a5629723505540ba6d02fac7f264a3164458f4194796470c1826138ba105",
+   "name": "Glimmering Core",
+   "desc": "Jantung monster yang berkeliaran di Fragmentum adalah material biasa yang digunakan untuk peningkatan.",
+   "lore": "Sama seperti luka yang melahirkan kejahatan, dorongan untuk berbuat dosa. Seperti itulah sumber distorsi Fragmentum.<br />Jantungnya berkilauan dan pembuluh darahnya menunjukkan bahwa dia masih hidup.<br /><br />\"Monster macam apa ini? Apakah kamu melihatnya... Itu adalah wajah pemimpin kita sebelumnya!\"",
+   "purpose": "Material Trace<br />Material Ascension Karakter",
+   "rarity": 3,
+   "rewardPath": "/material/633379",
+   "comeFrom": [
+    "Dijatuhkan monster Fragmentum tertentu pada Level Equilibrium Lv. 2 atau lebih",
+    "\"Omni-Synthesizer\" - Synthesis Material",
+    "Dijatuhkan musuh di \"Simulated Universe\"",
+    "\"Omni-Synthesizer\" - Pertukaran Material"
+   ]
+  },
+  "635675": {
+   "id": 635675,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "5d1c50902cff0d2be1eb952d08078e3134c231cdf0c9142c1ef475ec07c42b50",
+   "name": "Key of Inspiration",
+   "desc": "Kunci magis yang muncul di tangan cendekiawan. Dapat meningkatkan sedikit level Trace milik karakter <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudition</span>.",
+   "lore": "Dapat membuka inspirasi yang tersegel di kedalaman kesadaran.<br />Menangkap kunci berarti telah menangkap percik api yang berkedip di dalam pikiran, untuk menyinari jalan yang harus dilalui di depan.<br /><br />\"Eureka!\"",
+   "purpose": "Material Trace<br />Material Ascension Light Cone",
+   "rarity": 2,
+   "rewardPath": "/material/635675",
+   "comeFrom": [
+    "Calyx \"Rivet Town\"",
+    "Calyx \"Rivet Town\"",
+    "Penukaran Ember"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "f098da0aef7117b02e1bd2fe0f1117e4a260c6b0563c4c7835ef48b6aee37f81",
+   "name": "Refined Aether",
+   "desc": "Material penguatan Light Cone. Dapat memperoleh <nobr>6.000</nobr> Light Cone EXP.",
+   "lore": "Tabung Aether yang sudah diekstrak serta melalui proses distilasi khusus.<br /><br />\"Garden of Recollection ingin mengembalikan kejayaan masa lalu, tapi yang dimaksud adalah \"kejayaan masa lalu\" yang dipilih oleh mereka. Apa kamu mengerti?\"",
+   "purpose": "Material EXP Light Cone",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Calyx \"Backwater Pass\"",
+    "\"Forgotten Hall\""
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "name": "Condensed Aether",
+   "desc": "Material penguatan Light Cone. Dapat memperoleh <nobr>2.000</nobr> Light Cone EXP.",
+   "lore": "Sekaleng Aether yang disempurnakan melalui teknologi khusus.<br /><br />\"Letakkan dengan hati-hati, jangan sampai tertimpa dan terjatuh. Kalau rusak dan bocor, silakan ikuti Bab 2 \"Manual Penanganan Luapan Bencana\" untuk melakukan penanganan darurat.\"",
+   "purpose": "Material EXP Light Cone",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Calyx \"Backwater Pass\"",
+    "Penukaran Ember"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d4e3585911d6f71b87b47ced1a2f6e0b0f77dbdc8615650896e77bae87361afd",
+   "name": "Sparse Aether",
+   "desc": "Material penguatan Light Cone. Dapat memperoleh <nobr>500</nobr> Light Cone EXP.",
+   "lore": "Medium imajiner yang tidak seharusnya berada di dunia nyata. Merupakan bahan dasar untuk membuat Light Cone.<br />Masukkan benda ini ke Light Cone agar gambar-gambar yang tersegel di dalam dapat menjadi lebih jelas.<br /><br />\"Oh begitu. Jadi ini yang namanya 'Memoria' di Garden of Recollection. Pantas saja para Memokeeper bisa melakukan perjalanan antarbintang sambil membawa kenangan.\"",
+   "purpose": "Material EXP Light Cone",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Calyx \"Backwater Pass\"",
+    "Hadiah Tugas"
+   ]
+  },
+  "717320": {
+   "id": 717320,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "f54699a5eaba1cef67217196db0a1440c1b1c1c5b89179b36b2ebe7331831ea1",
+   "name": "Squirming Core",
+   "desc": "Jantung monster yang berkeliaran di Fragmentum adalah material berkualitas tinggi yang digunakan untuk peningkatan.",
+   "lore": "Sama seperti luka yang melahirkan kejahatan, dorongan untuk berbuat dosa. Seperti itulah sumber distorsi Fragmentum.<br />Jantung berdenyut perlahan, dengan kekuatan sisa yang cukup kuat untuk menyebabkan bencana baru. Cara terbaik adalah menghancurkannya untuk mencegah masalah lebih lanjut.<br /><br />\"Sama seperti kanker ....\"",
+   "purpose": "Material Trace<br />Material Ascension Karakter",
+   "rarity": 4,
+   "rewardPath": "/material/717320",
+   "comeFrom": [
+    "Dijatuhkan monster Fragmentum tertentu pada Level Equilibrium Lv. 4 atau lebih",
+    "\"Omni-Synthesizer\" - Synthesis Material",
+    "Dijatuhkan musuh di \"Simulated Universe\"",
+    "\"Omni-Synthesizer\" - Pertukaran Material"
+   ]
+  },
+  "836261": {
+   "id": 836261,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "36e68603fbc67d4b69c02e01d7d5d41a80446ea6c49b1d828b47320f6225825c",
+   "name": "Key of Wisdom",
+   "desc": "Kunci magis yang muncul di tangan jenius terbaik segalaksi. Dapat meningkatkan banyak level Trace milik karakter <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudition</span>.",
+   "lore": "Ini adalah bukti undangan untuk membuka pintu aula Nous Temple.<br />Kuncinya ada di tangan, tetapi menemukan pintu yang bisa dibuka lebih sulit daripada mendapatkan kuncinya. Mereka yang melewati pintu akan menyadari bahwa begitu mereka masuk, tidak akan ada jalan untuk kembali.<br /><br />\"Kecerdasan tidak dapat memberi tahu kamu jawaban atas alam semesta, tetapi kecerdasan dapat membantu kamu mengetahui cara mengajukan pertanyaan.\"",
+   "purpose": "Material Trace<br />Material Ascension Light Cone",
+   "rarity": 4,
+   "rewardPath": "/material/836261",
+   "comeFrom": [
+    "Calyx \"Rivet Town\"",
+    "Calyx \"Rivet Town\"",
+    "\"Omni-Synthesizer\" - Synthesis Material"
+   ]
+  },
+  "920202": {
+   "id": 920202,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "489f5c80b6f0de258e076634803c9540b0504c32e55f556748095c334780289d",
+   "name": "Key of Knowledge",
+   "desc": "Kunci magis yang muncul di tangan orang bijak di dunia. Dapat meningkatkan level Trace milik karakter <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudition</span> dalam jumlah sedang.",
+   "lore": "Dapat membuka kunci teka-teki yang memenjarakan kebenaran, dan menemukan pencerahan yang sulit dipahami oleh pikiran manusia.<br />Tidak peduli bagaimana pemegangnya menunjukkan bukti, orang-orang di sekitarnya tetap tidak dapat melihat keberadaan kuncinya. Beberapa orang percaya bahwa ini adalah berkah dari langit, dan beberapa orang berpikir bahwa ini adalah pertanda gangguan mental.<br /><br />\"Aku bermimpi kalau molekul-molekul itu melingkar seperti ular, dari ujung ke ujung. Waktu aku bangun, baru aku tersadar, bukankah ini jawaban yang selalu aku cari?\"",
+   "purpose": "Material Trace<br />Material Ascension Light Cone",
+   "rarity": 3,
+   "rewardPath": "/material/920202",
+   "comeFrom": [
+    "Calyx \"Rivet Town\"",
+    "Calyx \"Rivet Town\"",
+    "\"Omni-Synthesizer\" - Synthesis Material",
+    "Penukaran Ember"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3000
+    },
+    {
+     "id": 549438,
+     "count": 4
+    }
+   ],
+   "attackBase": 16.8,
+   "attackAdd": 2.52,
+   "hpBase": 33.6,
+   "hpAdd": 5.04,
+   "defenseBase": 12,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6000
+    },
+    {
+     "id": 635675,
+     "count": 2
+    },
+    {
+     "id": 549438,
+     "count": 8
+    }
+   ],
+   "attackBase": 36.96,
+   "attackAdd": 2.52,
+   "hpBase": 73.92,
+   "hpAdd": 5.04,
+   "defenseBase": 26.4,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12000
+    },
+    {
+     "id": 920202,
+     "count": 2
+    },
+    {
+     "id": 633379,
+     "count": 4
+    }
+   ],
+   "attackBase": 63.84,
+   "attackAdd": 2.52,
+   "hpBase": 127.68,
+   "hpAdd": 5.04,
+   "defenseBase": 45.6,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 30000
+    },
+    {
+     "id": 920202,
+     "count": 4
+    },
+    {
+     "id": 633379,
+     "count": 6
+    }
+   ],
+   "attackBase": 90.72,
+   "attackAdd": 2.52,
+   "hpBase": 181.44,
+   "hpAdd": 5.04,
+   "defenseBase": 64.8,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 60000
+    },
+    {
+     "id": 836261,
+     "count": 3
+    },
+    {
+     "id": 717320,
+     "count": 3
+    }
+   ],
+   "attackBase": 117.6,
+   "attackAdd": 2.52,
+   "hpBase": 235.2,
+   "hpAdd": 5.04,
+   "defenseBase": 84,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 120000
+    },
+    {
+     "id": 836261,
+     "count": 6
+    },
+    {
+     "id": 717320,
+     "count": 5
+    }
+   ],
+   "attackBase": 144.48,
+   "attackAdd": 2.52,
+   "hpBase": 288.96,
+   "hpAdd": 5.04,
+   "defenseBase": 103.2,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 171.36,
+   "attackAdd": 2.52,
+   "hpBase": 342.72,
+   "hpAdd": 5.04,
+   "defenseBase": 122.4,
+   "defenseAdd": 1.8
+  }
+ ],
+ "skill": {
+  "id": 20013,
+  "name": "Epiphany",
+  "descHash": "Memulihkan <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]</nobr></span> Energy tambahan setelah pengguna melancarkan Skill. Efek ini hanya dapat terpicu sekali setiap giliran.",
+  "levelData": [
+   {
+    "params": [
+     8
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     9
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     10
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     11
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     12
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 40,
+   "2": 60,
+   "3": 100,
+   "4": 160,
+   "5": 220,
+   "6": 300,
+   "7": 380,
+   "8": 480,
+   "9": 580,
+   "10": 700,
+   "11": 820,
+   "12": 950,
+   "13": 1090,
+   "14": 1240,
+   "15": 1390,
+   "16": 1560,
+   "17": 1730,
+   "18": 1910,
+   "19": 2090,
+   "20": 2170,
+   "21": 2260,
+   "22": 2350,
+   "23": 2430,
+   "24": 2520,
+   "25": 2620,
+   "26": 2710,
+   "27": 2800,
+   "28": 2900,
+   "29": 2990,
+   "30": 3100,
+   "31": 3200,
+   "32": 3300,
+   "33": 3400,
+   "34": 3510,
+   "35": 3620,
+   "36": 3730,
+   "37": 3830,
+   "38": 3950,
+   "39": 4060,
+   "40": 4170,
+   "41": 4580,
+   "42": 4840,
+   "43": 5110,
+   "44": 5380,
+   "45": 5660,
+   "46": 5950,
+   "47": 6230,
+   "48": 6530,
+   "49": 6830,
+   "50": 7140,
+   "51": 7450,
+   "52": 7760,
+   "53": 8090,
+   "54": 8410,
+   "55": 8750,
+   "56": 9080,
+   "57": 9430,
+   "58": 9770,
+   "59": 10130,
+   "60": 10480,
+   "61": 10970,
+   "62": 11560,
+   "63": 12160,
+   "64": 12760,
+   "65": 13370,
+   "66": 13990,
+   "67": 14620,
+   "68": 15260,
+   "69": 15910,
+   "70": 16570,
+   "71": 18490,
+   "72": 20230,
+   "73": 22000,
+   "74": 23790,
+   "75": 25610,
+   "76": 27450,
+   "77": 29320,
+   "78": 31220,
+   "79": 33140,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "20013"
+}

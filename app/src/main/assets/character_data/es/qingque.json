@@ -3,7 +3,7 @@
  "iconPath": "62bbed3f4fa89607c950e0c37b287cd629c6dc011b81bd99cf3354a4dd3cb55e",
  "bgPath": "95add5fd751106b1eeb03cfcbe017215893f25a2ef09bf7a0c78af53275456a1",
  "figPath": "64b09bba9b3bbdaaccaa720f85047a4a42fd05d52605ef3e96e571d4d8244e6e",
- "fgPath": "1320fa86c14f851ed0bf3c8a0695749918a258aad1b415a894ccc5152e621576",
+ "fgPath": "939573cb980ac84a1ca1ac5e9b4503698ec38a52c4d17a4f300e98499de70b9a",
  "splashIconPath": "72cee71be6fe4de63b6bdecb1a1b69cb95724bc8f3cc89468c68343e5937c7dc",
  "damageTypeId": 0,
  "baseTypeId": 0,
@@ -69,7 +69,7 @@
    "id": 351746,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "559c24ffae40e390bfec262f621e30b0b209f6d487b122f6bc54b0e7dada8353",
+   "iconPath": "2c6914a16ae349627baca5f84218db8fe270ccf2c80246f9b83acf8e72f7f92a",
    "name": "Hierro forjado del Vacío",
    "desc": "Herradura de un Aplastador del Vacío. Material de ascensión para los personajes de tipo Cuántico.",
    "lore": "Cuando un Aplastador de la Legión Antimateria es derrotado, hay una pequeña probabilidad de obtener esta herradura. Cuando nadie mira, pasa regularmente de existir a no existir.<br /><br />\"¿Que cómo se llama este experimento? Herradura del Aplastador...\".",
@@ -77,6 +77,7 @@
    "rarity": 4,
    "rewardPath": "/material/351746",
    "comeFrom": [
+    "Sombra paralizada de la zona de la base",
     "Sombra paralizada de la zona de la base",
     "Máquina sintetizadora multiusos - Intercambio de material"
    ]
@@ -180,6 +181,7 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Cáliz de Villarremache",
+    "Cáliz de Villarremache",
     "Canjeo de Ascuas"
    ]
   },
@@ -205,7 +207,7 @@
    "id": 836261,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "iconPath": "36e68603fbc67d4b69c02e01d7d5d41a80446ea6c49b1d828b47320f6225825c",
    "name": "Llave de la sabiduría",
    "desc": "Llave mítica propiedad de los mejores genios y prodigios de la galaxia. Sirve para mejorar en gran medida los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudición</span>.",
    "lore": "Evidencia de la invitación al Templo de la Erudición.<br />Encontrar la puerta que abre esta llave es mucho más complicado que conseguir la llave. Quieres atraviesan los portones sagrados se dan cuenta inmediatamente de que es imposible regresar una vez que pasas al otro lado.<br /><br />\"La sabiduría no tiene todas las respuestas del universo, pero te enseñará cómo hacer las preguntas adecuadas para obtenerlas\".",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/836261",
    "comeFrom": [
+    "Cáliz de Villarremache",
     "Cáliz de Villarremache",
     "Máquina sintetizadora multiusos - Síntesis de materiales"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
+    "Cáliz de Villarremache",
     "Cáliz de Villarremache",
     "Máquina sintetizadora multiusos - Síntesis de materiales",
     "Canjeo de Ascuas"
@@ -2381,6 +2385,16 @@
   },
   {
    "id": 20,
+   "title": "Acerca de Xueyi",
+   "text": "¿Conoces ese libro, «Un trabajo no apto para marionetas»? No solo lo he leído, también he escrito algunas notas. Lástima que todavía no tengo ni idea de quién lo escribió...",
+   "unlockRequirement": "",
+   "cnUrl": "4cf34daaa01eac2f734f72add53781938921178c653288de3e6e4bc8f01fc75b",
+   "jpUrl": "7cde04abbb2dbafca4945da3e339d89b311962b136bee0f2d371ad5d6137d0b8",
+   "enUrl": "0e846311cb3f235e920d9addad985402acf9b47b73afd7d6053ae7c8d8932c87",
+   "krUrl": "98cf544f2dd2e1148c2ca723b9efb554bccba251dbc658b1d101dd5d93e2d7c3"
+  },
+  {
+   "id": 21,
    "title": "Activación de Eidolon",
    "text": "La vida es como un juego, nunca sabes qué ficha te va a tocar...",
    "unlockRequirement": "",
@@ -2390,7 +2404,7 @@
    "krUrl": "5f437115275e5b81b6b76cc066b65f8f92d0ab75b350c56191334a3ba1e02558"
   },
   {
-   "id": 21,
+   "id": 22,
    "title": "Ascensión de personaje",
    "text": "Cuando la vida son puras obligaciones, el truco está en \"robar\" un poco de tiempo libre, ¿no?",
    "unlockRequirement": "",
@@ -2400,7 +2414,7 @@
    "krUrl": "34e97e41151219f0d17c3c884ed558795636f544fe401554524e7ba6eef0232a"
   },
   {
-   "id": 22,
+   "id": 23,
    "title": "Nivel máximo alcanzado",
    "text": "Tarde o temprano sacarás la ficha que quieres, ¿no?",
    "unlockRequirement": "",
@@ -2410,7 +2424,7 @@
    "krUrl": "57267118e879c89a0a62cf8a6c9c8c08bd5e7f9d3eec3988fb28fa4e74c07890"
   },
   {
-   "id": 23,
+   "id": 24,
    "title": "Activación de Rastro",
    "text": "Cuando se trata del Jade celestial, todo es cuestión de sinergia y suerte.",
    "unlockRequirement": "",
@@ -2420,7 +2434,7 @@
    "krUrl": "984b27267c9902c419e9c79b9fb1c9aa443778f4dd47ae638a6331142793426c"
   },
   {
-   "id": 24,
+   "id": 25,
    "title": "Miembro del equipo: Trazacaminos",
    "text": "Oye, Trazacaminos, ¡tú también estás aquí! Comencemos la partida.",
    "unlockRequirement": "",
@@ -2430,7 +2444,7 @@
    "krUrl": "38158a7008d4783babc4841550ec09873cd607d5751533ee5b814f0e00ef9812"
   },
   {
-   "id": 25,
+   "id": 26,
    "title": "Miembro del equipo: Fu Xuan",
    "text": "Qué raro, ¿cómo sabía la Gran Adivina que estaría aquí?",
    "unlockRequirement": "",
@@ -2440,7 +2454,7 @@
    "krUrl": "86064025fa2abc225e7ce0d8b29d338c2e702b1fc226693c239530e972ad5554"
   },
   {
-   "id": 26,
+   "id": 27,
    "title": "Miembro del equipo: Guinaifen",
    "text": "¿Una actuación gratuita de la Pequeña Gui? ¡No me la pierdo!",
    "unlockRequirement": "",
@@ -2450,9 +2464,9 @@
    "krUrl": "fc03136fe4304b6f8ff100b33860fc5eaf238547ed0ecabd7d4d77baaf391f6f"
   },
   {
-   "id": 27,
+   "id": 28,
    "title": "Miembro del equipo: Yanqing",
-   "text": "Genial, con el genio de Yanqing por aquí, ¡puedo tomármelo con calma!",
+   "text": "Increíble, con el ingenio de Yanqing rondando por aquí, ¡puedo tomármelo con calma!",
    "unlockRequirement": "",
    "cnUrl": "9f8b8818a6a1751ec488e1f580db0c117f5f8b8c59d71460e3af35e55d0b824b",
    "jpUrl": "9cd1b9e6986d428fd5a20584d6fb998e4b9475e523029fd1784f035a4e686dd7",
@@ -2460,7 +2474,7 @@
    "krUrl": "604fb1ee121207d586938d7b56461e6f9c14ebc68e005d381d0de8aa274361eb"
   },
   {
-   "id": 28,
+   "id": 29,
    "title": "Miembro del equipo: Huohuo",
    "text": "No te preocupes, Huohuo, el trabajo se pasa deprisa cuando te diviertes...",
    "unlockRequirement": "",

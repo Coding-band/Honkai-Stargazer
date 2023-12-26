@@ -73,7 +73,7 @@
    "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
    "name": "Journal d'aventure",
    "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
-   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
    "purpose": "Matériau d'EXP de personnage",
    "rarity": 3,
    "rewardPath": "/material/409961",
@@ -106,7 +106,7 @@
    "iconPath": "15365d10ed38771d99d247bc228b03787e29972cc714a655a9b8feef3031505e",
    "name": "Instinct de pilleur",
    "desc": "Une petite quantité d'antimatière. Matériau commun utilisé pour le renforcement.",
-   "lore": "Petite quantité d'antimatière qui émane d'un Reaver des Rangers du néant, telle la matérialisation de son instinct destructeur.<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "lore": "Petite quantité d'antimatière qui émane d'un Reaver des Rangers du néant, telle la matérialisation de son instinct destructeur.<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
    "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
    "rarity": 2,
    "rewardPath": "/material/549437",
@@ -149,6 +149,7 @@
    "rewardPath": "/material/635668",
    "comeFrom": [
     "Calice de la Zone de ravitaillement",
+    "Calice de la Zone de ravitaillement",
     "Braises immortelles"
    ]
   },
@@ -159,7 +160,7 @@
    "iconPath": "3c858c8ff4df238403e5443f57850367e4164a62efb508ce359db9c5b7474a19",
    "name": "Volonté de conquérant",
    "desc": "Antimatière condensée. Matériau avancé utilisé pour le renforcement.",
-   "lore": "Antimatière hautement condensée dans le corps d'un Piétineur des Rangers du néant. Le moment de l'oblitération est l'appel à la destruction des civilisations.<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "lore": "Antimatière hautement condensée dans le corps d'un Piétineur des Rangers du néant. Le moment de l'oblitération est l'appel à la destruction des civilisations.<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
    "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
    "rarity": 4,
    "rewardPath": "/material/717319",
@@ -190,7 +191,7 @@
    "id": 836254,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "1313f4b8549d0b129fb33fcd3745a87a8030d13fc8c28159f0dd2868a203ac2f",
+   "iconPath": "d7b80e02bd0ea7a489366b4ec55dab8aef86c30f28636de55dc1ac64b5e7c2e6",
    "name": "Protection d'ambre",
    "desc": "Bouclier unique, incrusté de fragments d'ambre venus de mines au-delà du ciel. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Préservation</span>.",
    "lore": "Le porteur de ce bouclier est protégé par un mur invisible, qui repousse aussi bien les flèches de feu que les griffes les plus gigantesques.<br />De vieilles légendes parlent d'une guerre au cours de laquelle le héros d'une tribu sonna la charge équipé d'un bouclier de bronze aux côtés de guerriers armés de lances de feu pour affronter un Léviathan.<br />Ce bouclier en fut le témoin.<br /><br />« Ne dépassez pas cette ligne. »",
@@ -198,6 +199,7 @@
    "rarity": 4,
    "rewardPath": "/material/836254",
    "comeFrom": [
+    "Calice de la Zone de ravitaillement",
     "Calice de la Zone de ravitaillement",
     "Synthèse de matériaux de l'Omni-synthétiseur"
    ]
@@ -214,6 +216,7 @@
    "rarity": 3,
    "rewardPath": "/material/920195",
    "comeFrom": [
+    "Calice de la Zone de ravitaillement",
     "Calice de la Zone de ravitaillement",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles"
@@ -1565,7 +1568,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Réduit la robustesse de l'ennemi au type correspondant en entrant en combat après l'avoir attaqué.",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2306,7 +2309,7 @@
   {
    "id": 5,
    "title": "Mémoire : La Destruction",
-   "text": "D'où vient la volonté de Destruction qui est en moi ? Est-ce vraiment à cause du Stellaron...?",
+   "text": "D'où vient la volonté de Destruction qui est en moi ? Est-ce vraiment à cause du Stellaron...?",
    "unlockRequirement": "Débloqué après avoir terminé la mission pionnière « Le voyage continue ».",
    "cnUrl": "83ed69aaf035931b931bf2867e60afd204015b38ee86d8a81f284c28bda880f5",
    "jpUrl": "90226576ea2455d5bfb1ade4fa72ef3e55021f101ac1a9c9a082650504fe6e74",
@@ -2347,7 +2350,7 @@
    "id": 9,
    "title": "Activation d'Eidolon de la Préservation",
    "text": "La valeur d'un choix repose dans la détermination sans faille de celui qui le fait.",
-   "unlockRequirement": "Débloqué après avoir suivi une nouvelle Voie.",
+   "unlockRequirement": "Débloqué après avoir suivi une nouvelle Voie",
    "cnUrl": "8afa31b7e7fd0a1f5a848c483dbf916bb650f8e5bc8b7ab891e9bb86e0e503ee",
    "jpUrl": "8d8e11c1ff1521bc11b47aa48f65ced93274af8c040a258b397eeacf8c3d8ad6",
    "enUrl": "76a0e4993b9be6c91c7b6eac093f9b1aa8e8d8526d38340868fe0b821deb98e9",
@@ -2387,7 +2390,7 @@
    "id": 13,
    "title": "Activation de Trace de la Préservation",
    "text": "La Préservation est déterminée par nos actions.",
-   "unlockRequirement": "Débloqué après avoir suivi une nouvelle Voie.",
+   "unlockRequirement": "Débloqué après avoir suivi une nouvelle Voie",
    "cnUrl": "f203b18a1c4879fba691676d0bf823b814b3f8ccb6fc9b4181b2a4ae9576dd81",
    "jpUrl": "64586dba88fd01ebd3e2deccf4b509e89ca1cfd9334714a24bb7a74ff1f5250a",
    "enUrl": "be43b2e2dcbeeab90c0694c96b01e8b67414b67274eebb9e2501c8c3ab8b38f6",
@@ -2396,7 +2399,7 @@
   {
    "id": 14,
    "title": "Rejoint l'équipe avec March 7th",
-   "text": "March, lance la contre-attaque. J'ai confiance en toi.",
+   "text": "March, mène la contre-attaque. J'ai confiance en toi.",
    "unlockRequirement": "",
    "cnUrl": "872163a26be22a42420bcd02210061ce570ff1e35da3e074ddcff25cfa7c0550",
    "jpUrl": "ba0cebe4b2aa95ed3b9af1f580c075c78df04e6b0ed197b87af35288c073c54d",
@@ -2406,7 +2409,7 @@
   {
    "id": 15,
    "title": "Rejoint l'équipe avec Dan Heng",
-   "text": "Dan Heng, réglons ça en vitesse.",
+   "text": "Dan Heng, réglons ça vite.",
    "unlockRequirement": "",
    "cnUrl": "3b84c3db8059704055c0119353afb2bb8818149a9cb54f8c08b21af3c53544e9",
    "jpUrl": "cf73a5a48a115f5c43d338a6a61fe8b2e113a390d65359f15cd06f5806e68ea9",
@@ -2416,7 +2419,7 @@
   {
    "id": 16,
    "title": "Rejoint l'équipe avec Dan Heng • Imbibitor Lunae",
-   "text": "Comme d'habitude, Dan Heng. Réglons ça en vitesse !",
+   "text": "Comme d'habitude, Dan Heng. Réglons ça vite !",
    "unlockRequirement": "",
    "cnUrl": "48a5820e9f6cb84684263fc064bada87562e0c5835911e0b11eeecdfe9125abf",
    "jpUrl": "48bf4290dfa30a94283f22b4c0d6cd77d314133cc92d5e034cb0c1da7059da4f",
@@ -2486,7 +2489,7 @@
   {
    "id": 105,
    "title": "Tour inactif (Destruction)",
-   "text": "À qui le tour ?",
+   "text": "À qui le tour ?",
    "unlockRequirement": "",
    "cnUrl": "d24f21fb4acf85ed444622163106bbfe164d2eb49950e6bc23a0f87856de9e87",
    "jpUrl": "5ab1194e65068a8e4aaaf8cd02cd3b5e61346ecfed6e3a71edbd8f98ca845150",
@@ -2536,7 +2539,7 @@
   {
    "id": 110,
    "title": "Activation de l'ultime (Destruction)",
-   "text": "Les règles sont faites pour être transgressées !",
+   "text": "Les règles sont faites pour être transgressées !",
    "unlockRequirement": "",
    "cnUrl": "6673b95ce99e547ac348e4693cbdf737c16710423af6dfd6ea50704a2eb5448a",
    "jpUrl": "f8cde983fda86c7c8b6d0ca62fa991e7c0149f102e1cda9897f93cbe42cd9f5d",
@@ -2546,7 +2549,7 @@
   {
    "id": 111,
    "title": "Déclenchement de l'ultime 1 (Destruction)",
-   "text": "Tu sors !",
+   "text": "Tu sors !",
    "unlockRequirement": "",
    "cnUrl": "8846b3cf3150e76360150c98600e462e6e2c94d8096de24bd25e9753178c577e",
    "jpUrl": "f07032fe1bd1b003255717ac45539682cdb79a9d239977dd813d00f24bef1f29",
@@ -2556,7 +2559,7 @@
   {
    "id": 112,
    "title": "Déclenchement de l'ultime 2 (Destruction)",
-   "text": "Ta présence n'est plus la bienvenue !",
+   "text": "Ta présence n'est plus la bienvenue !",
    "unlockRequirement": "",
    "cnUrl": "99050c05fd522202aabdb50769716eed9e5c75d7f3d360ee2a8149df6d8d6173",
    "jpUrl": "32a45bc1647ba51295e175255ca1d7a7fff3a349604e0c8f3862c265ce1d9d3b",
@@ -2566,7 +2569,7 @@
   {
    "id": 113,
    "title": "Déclenchement de l'ultime 3 (Destruction)",
-   "text": "Frappe décisive !",
+   "text": "Frappe décisive !",
    "unlockRequirement": "",
    "cnUrl": "c76f8b3ea3dd0c29420d0add6d90c69d0ce9bffb141293bf0afebb6cc00a25c5",
    "jpUrl": "76376f83533e8da998e118ce627d883d74f0b57fccdcc1e8d696c78ec2874f52",
@@ -2666,7 +2669,7 @@
   {
    "id": 123,
    "title": "ATQ normale (Préservation)",
-   "text": "Jusqu'à la fin !",
+   "text": "Jusqu'à la fin !",
    "unlockRequirement": "Débloqué après avoir suivi une nouvelle Voie.",
    "cnUrl": "a1b6e287628a80f2069dc3dddc738cab526452fb00a631f7f394dc8652eba0b3",
    "jpUrl": "1fa6fb842d9c84cc97af335071ff328937440e444a866056f3db5c7ecb1bd805",
@@ -2676,7 +2679,7 @@
   {
    "id": 124,
    "title": "ATQ normale renforcée (Préservation)",
-   "text": "Fracture !",
+   "text": "Fracture !",
    "unlockRequirement": "Débloqué après avoir suivi une nouvelle Voie.",
    "cnUrl": "a0b5712f2a4b7e96eb3e29c9666578ce07c421e33f9394e3abc25cbc9e8730db",
    "jpUrl": "cadf8a5a03085fd1648d9907333d0078726e0553ef20fc4fa666a30c937933ee",
@@ -2736,7 +2739,7 @@
   {
    "id": 130,
    "title": "Déclenchement de l'ultime (Préservation)",
-   "text": "En avant, lance enflammée !",
+   "text": "En avant, lance enflammée !",
    "unlockRequirement": "Débloqué après avoir suivi une nouvelle Voie.",
    "cnUrl": "413357862c248b0d2267d9b7cb0226670d55492a2251ca9ea90bbfa8abc305ca",
    "jpUrl": "d892efce7549175b0ed41d41f044d996821d1f1cac1dcc77e5d1311b95bda26c",
@@ -2776,7 +2779,7 @@
   {
    "id": 134,
    "title": "Technique (Préservation)",
-   "text": "Par la volonté de la Préservation !",
+   "text": "Par la volonté de la Préservation !",
    "unlockRequirement": "Débloqué après avoir suivi une nouvelle Voie.",
    "cnUrl": "9671b0f84e0282f525002e5b8208821825e28446c70e7c3f16eb4f93cf79874b",
    "jpUrl": "8d94cae70252c9762dc39145305a90faededbb31db372178b40c45d6ea7a7b70",
@@ -2806,7 +2809,7 @@
   {
    "id": 992,
    "title": "Ouverture de coffre au trésor 2",
-   "text": "C'est tout ?",
+   "text": "C'est tout ?",
    "unlockRequirement": "",
    "cnUrl": "012e6dbc0bf4ef2d5dfa1368c464c33df87fdb34fcf8683d884d2737b8382e5a",
    "jpUrl": "1091a3daaa810d229f534123199f388f4de0ad85f9dcded6b66d20369acbe96b",
@@ -2836,7 +2839,7 @@
   {
    "id": 994,
    "title": "Énigme réussie 2",
-   "text": "Pas à ma hauteur !",
+   "text": "Facile !",
    "unlockRequirement": "",
    "cnUrl": "69ab1993ca53bb948fad69ecf8dac17253d4ca7ea2128b331cf3ac2b8f63c34d",
    "jpUrl": "8b8df8de016aaffdfc8c7575df6355259c55cfe2b17e673dc9072c7233010f7a",
@@ -2856,7 +2859,7 @@
   {
    "id": 999,
    "title": "Retour en ville",
-   "text": "Il se fait tard. Où on va maintenant ?",
+   "text": "Il se fait tard. Où on va maintenant ?",
    "unlockRequirement": "",
    "cnUrl": "09e0467f4d8af4ddba42465eb621173350e225f761fb5d30c99c4e38b790e4ce",
    "jpUrl": "ede0aed7f3532d5a3ed6f7425b7bb8d9ae9bc909d534eafb8e70adc58b68bf32",
@@ -2877,7 +2880,7 @@
   },
   {
    "title": "Votre histoire II",
-   "text": "Vous êtes arrivée/arrivé à la « ville de la Préservation ».<br />Derrière le rideau de neige, le vent s'abat telles des lames d'acier, cependant, les braises étincellent.<br />Les terres lointaines ne les entendent pas, et la terre tremble en retour, alors que seules les foules aux nombreuses lamentations bravent le vent.<br /><br />Après avoir combattu des forces ennemies étrangères (le Gel éternel, et l'effondrement de la réalité), la pourriture commence à s'installer dans le fort.<br />Vous essayez de prêter main forte, mais vous ne trouvez qu'abandon.<br />Par le passé, nombreux ont été ceux à vous regarder de haut et à vous rejeter, mais vous avez toujours persévéré et continué à offrir votre aide pour les guider.<br />Ils se soucient davantage de vous et vous portent dans leur cœur. Ils font face à leur souffrance et trouvent des remèdes pour ceux en situation de détresse.<br />Ils finissent tous par vous épauler.<br /><br />Au milieu du gel et des neiges, vous êtes comme un feu protégeant l'âme de ce monde<br />... Même si cela implique de vous brûliez jours et nuits.",
+   "text": "Vous êtes arrivée/arrivé à la « ville de la Préservation ».<br />Derrière le rideau de neige, le vent s'abat telles des lames d'acier, cependant, les braises étincellent.<br />Les terres lointaines ne les entendent pas, et la terre tremble en retour, alors que seules les foules aux nombreuses lamentations bravent le vent.<br /><br />Après avoir combattu des forces ennemies étrangères (le Gel éternel, et l'effondrement de la réalité), la pourriture commence à s'installer dans le fort.<br />Vous essayez de prêter main forte, mais vous ne trouvez qu'abandon.<br />Par le passé, nombreux ont été ceux à vous regarder de haut et à vous rejeter, mais vous avez toujours persévéré et continué à offrir votre aide pour les guider.<br />Ils se soucient davantage de vous et vous portent dans leur cœur. Ils font face à leur souffrance et trouvent des remèdes pour ceux en situation de détresse.<br />Ils finissent tous par vous épauler.<br /><br />Au milieu du gel et des neiges, vous êtes comme un feu protégeant l'âme de ce monde<br />... Même si cela implique de vous brûliez jours et nuits.",
    "unlockRequirement": "Débloqué après avoir terminé la mission pionnière « Galaxie silencieuse »."
   }
  ],

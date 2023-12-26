@@ -54,7 +54,7 @@
    "id": 151161,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "6b4243b69df9f37fab4f6cda60edc49711505bf5c2ce0b517d6272be5df311df",
+   "iconPath": "2ec1fa84daf481a7bef5ee243b4e6b195a84cde88befd531353eeb44bae62a63",
    "name": "Bastão de Raio de Transformador",
    "desc": "Um cajado de madeira com uma ponta afiada. Ele pertenceu a um transformador dos Discípulos do Sanctus Medicus. Pode ser usado para a Ascensão de personagens de Dano de Raio.",
    "lore": "De acordo com os registros antigos do Xianzhou, aqueles que ascenderam podem evocar o raio e comandar o vento. Os Discípulos do Sanctus Medicus alegaram que herdaram a profecia dos deuses. Ao demonstrar seus poderes divinos, os discípulos reuniram um grande número de adoradores em segredo. Ramificações de raios que englobam esses cajados. Será que os discípulos realmente não são meros mortais?<br /><br />\"O corpo mortal é apenas ilusão. A verdade só é revelada àqueles que escolheram ascender.\"",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/151161",
    "comeFrom": [
+    "Sombra Estagnada: Porto Estelarium",
     "Sombra Estagnada (Porto Estelarium)",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -165,6 +166,7 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Cálice (Vila dos Rebites)",
+    "Cálice (Vila dos Rebites)",
     "Troca de Brasas"
    ]
   },
@@ -190,7 +192,7 @@
    "id": 836261,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "iconPath": "36e68603fbc67d4b69c02e01d7d5d41a80446ea6c49b1d828b47320f6225825c",
    "name": "Chave da Sabedoria",
    "desc": "Uma chave mítica que apareceu nas mãos dos maiores gênios do cosmos. Usada para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudição</span>.",
    "lore": "Ela é como um convite para os salões do Templo de Nous.<br />Encontrar a porta onde a chave pode ser usada é mais difícil do que obtê-la. Aqueles que entraram nessas portas secretas perceberam imediatamente que é impossível voltar a partir do momento em que pisam do outro lado.<br /><br />\"A Erudição não tem todas as respostas do universo, mas ela ensina a fazer a pergunta certa.\"",
@@ -198,6 +200,7 @@
    "rarity": 4,
    "rewardPath": "/material/836261",
    "comeFrom": [
+    "Cálice (Vila dos Rebites)",
     "Cálice (Vila dos Rebites)",
     "Sintetizador Omni — Síntese de Material"
    ]
@@ -214,6 +217,7 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
+    "Cálice (Vila dos Rebites)",
     "Cálice (Vila dos Rebites)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas"
@@ -1590,7 +1594,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do inimigo-alvo.",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do alvo inimigo do Tipo correspondente.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2475,7 +2479,7 @@
   },
   {
    "id": 56,
-   "title": "Perícia 1",
+   "title": "Perícia - 1",
    "text": "O conflito é impiedoso!",
    "unlockRequirement": "",
    "cnUrl": "6a91cbf54ffa5d17db547991ff48fa068d59e5e5f68536e0b3194223db27039f",
@@ -2485,7 +2489,7 @@
   },
   {
    "id": 57,
-   "title": "Perícia 2",
+   "title": "Perícia - 2",
    "text": "Ouça esse trovão!",
    "unlockRequirement": "",
    "cnUrl": "d65a7cf543457e54b4ac91a5071cc8308d5bcb30e25c9a0460a2d36bf5744ba9",
@@ -2585,7 +2589,7 @@
   },
   {
    "id": 67,
-   "title": "Abrindo Tesouro 1",
+   "title": "Abrindo Tesouro - 1",
    "text": "Um diamante bruto.",
    "unlockRequirement": "",
    "cnUrl": "cd17cedf83139db16be1354fbe61483f3ee235fc3e5bd5e65f1f55d366b6736b",
@@ -2595,7 +2599,7 @@
   },
   {
    "id": 71,
-   "title": "Abrindo Tesouro 2",
+   "title": "Abrindo Tesouro - 2",
    "text": "Ah! Que surpresa agradável.",
    "unlockRequirement": "",
    "cnUrl": "c7ec96bbf12cb560f0dd6311782509894a77fdc5d840797aee1f7625cc76b226",
@@ -2606,7 +2610,7 @@
   {
    "id": 72,
    "title": "Abrindo Tesouro Precioso",
-   "text": "Faz mais sentido você manter uma descoberta rara como essa.",
+   "text": "Uma coisa rara como esta, é melhor ficar sob seus cuidados.",
    "unlockRequirement": "",
    "cnUrl": "9a3101f13eb35c715a51ca61a57a9ff5a40b0f61001e358acbca8087c6f490e4",
    "jpUrl": "b074b36f3f6aa27a87c8fd096665b7d420191f596937b2fc25f80b6e3551edcb",
@@ -2615,7 +2619,7 @@
   },
   {
    "id": 68,
-   "title": "Enigma Solucionado 1",
+   "title": "Enigma Solucionado - 1",
    "text": "Isso foi mais trabalhoso do que parecia.",
    "unlockRequirement": "",
    "cnUrl": "6185ac875a00323eea9e4ad7fd482b98dc32831b92d658e8b75b80f391624ab8",
@@ -2625,7 +2629,7 @@
   },
   {
    "id": 73,
-   "title": "Enigma Solucionado 2",
+   "title": "Enigma Solucionado - 2",
    "text": "Esses mecanismos funcionam de formas intrigantes.",
    "unlockRequirement": "",
    "cnUrl": "3cfb5666228f026b71a9703a78d73341a631ba27f98f389da1de9658f18050e9",
@@ -2672,7 +2676,7 @@
   },
   {
    "title": "História de Personagem: Parte III",
-   "text": "Um dos boatos mais recorrentes que circulam hoje em dia afirma que a família de Jing Yuan serviu a Comissão de Manutenção do Reino por gerações.<br /><br />A tradição Vulpe de \"escolher\" o próprio futuro dita que os pais devem colocar vários objetos e brinquedos ao redor do bebê e fazê-lo escolher sua futura carreira ao escolher um objeto. Os pais de Jing Yuan esperavam que ele herdasse o manto de erudito ou oficial na Comissão de Manutenção do Reino, mas Jing Yuan pegou a espada de brinquedo.<br /><br />Parece que tal \"escolha\" de fato prediz o futuro. Após ter se formado na academia, Jing Yuan se juntou aos Cavaleiros das Nuvens, contra a vontade de sua família, para fugir de uma vida tediosa.<br /><br />Sua primeira expedição está gravada no registro de batalha oficial dos Cavaleiros das Nuvens. O Navis Astriger que levava as tropas teve que fazer uma aterrissagem forçada em um planeta oceânico, infestado de abominações. Macróbios conhecidos como Águas-Vivas Titereiras controlaram a mente dos Cavaleiros das Nuvens, subindo a bordo e quase convertendo a nave em uma colmeia alienígena. Jing Yuan rapidamente se deu conta da crise e identificou os requisitos para a possessão das Águas-Vivas Titereiras, e então criou um método para ir contra elas. O restante da tripulação eventualmente passou pelo teste dos inimigos e amigos quase idênticos, derrotou os verdadeiros inimigos e retornou para casa em segurança.<br /><br />A vitória, sem o derramamento de sangue, fez com que os generais dos Cavaleiros das Nuvens notassem a coragem de Jing Yuan. Após retornar ao Xianzhou, Jing Yuan demonstrou suas habilidades, o que o levou a ser indicado para um cargo importante entre os Cavaleiros.<br /><br />Suas abordagens práticas e perspicazes por diversas vezes proporcionaram surpresas inesquecíveis aos seus superiores, e dores de cabeça também. No fim, Jing Yuan foi convidado a entrar na equipe da antiga Campeã da Espada do Luofu, e assim nasceu a lenda do Quinteto das Nuvens.",
+   "text": "Um dos boatos mais recorrentes que circulam hoje em dia afirma que a família de Jing Yuan serviu a Comissão de Manutenção do Reino por gerações.<br /><br />A tradição Vulpe de \"escolher\" o próprio futuro dita que os pais devem colocar vários objetos e brinquedos ao redor do bebê e fazê-lo escolher sua futura carreira ao escolher um objeto. Os pais de Jing Yuan esperavam que ele herdasse o manto de erudito ou oficial na Comissão de Manutenção do Reino, mas Jing Yuan pegou a espada de brinquedo.<br /><br />Parece que a previsão do destino de nascença se tornou realidade. Depois de se formar na academia, Jing Yuan se juntou aos Cavaleiros das Nuvens para escapar de uma vida \"típica\", contra os desejos de sua família.<br /><br />Sua primeira expedição está gravada no registro de batalha oficial dos Cavaleiros das Nuvens. O Navis Astriger que levava as tropas teve que fazer uma aterrissagem forçada em um planeta oceânico, infestado de abominações. Macróbios conhecidos como Águas-Vivas Titereiras controlaram a mente dos Cavaleiros das Nuvens, subindo a bordo e quase convertendo a nave em uma colmeia alienígena. Jing Yuan rapidamente se deu conta da crise e identificou os requisitos para a possessão das Águas-Vivas Titereiras, e então criou um método para ir contra elas. O restante da tripulação eventualmente passou pelo teste dos inimigos e amigos quase idênticos, derrotou os verdadeiros inimigos e retornou para casa em segurança.<br /><br />A vitória, sem o derramamento de sangue, fez com que os generais dos Cavaleiros das Nuvens notassem a coragem de Jing Yuan. Após retornar ao Xianzhou, Jing Yuan demonstrou suas habilidades, o que o levou a ser indicado para um cargo importante entre os Cavaleiros.<br /><br />Suas abordagens práticas e perspicazes por diversas vezes proporcionaram surpresas inesquecíveis aos seus superiores, e dores de cabeça também. No fim, Jing Yuan foi convidado a entrar na equipe da antiga Campeã da Espada do Luofu, e assim nasceu a lenda do Quinteto das Nuvens.",
    "unlockRequirement": "Desbloqueado no Nível <nobr>60</nobr> de Personagem"
   },
   {

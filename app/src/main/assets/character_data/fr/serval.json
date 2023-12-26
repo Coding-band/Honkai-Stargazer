@@ -54,7 +54,7 @@
    "id": 151160,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "f4e0301b109ba0ab0b633a7186df88a0fa0be8a70edf33c88539672e514bbc8c",
+   "iconPath": "02cccae71e7d4c33c463175ee672c7eed3f27ddc6406f05a40a18e261fdd9780",
    "name": "Couronne d'éclair de l'ombre révolue",
    "desc": "Casque d'Ombre gardienne. Permet l'élévation des personnages de type foudre.",
    "lore": "Un accessoire abandonné par l'ombre d'une Gardienne du passé. Il raconte l'histoire de la ville de l'Hiver éternel.<br /><br />« Svetlana, le Poing de fer... Sa colère est aussi terrifiante que le tonnerre et son châtiment aussi rapide que l'éclair. »",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/151160",
    "comeFrom": [
+    "Ombre stagnante du Couloir des échos faiblissants",
     "Ombre stagnante du Couloir des échos faiblissants",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -104,7 +105,7 @@
    "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
    "name": "Journal d'aventure",
    "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
-   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
    "purpose": "Matériau d'EXP de personnage",
    "rarity": 3,
    "rewardPath": "/material/409961",
@@ -182,6 +183,7 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Calice de la Ville de Rivet",
+    "Calice de la Ville de Rivet",
     "Braises immortelles"
    ]
   },
@@ -189,7 +191,7 @@
    "id": 717289,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "iconPath": "e5c567b0d1a069f86d1fa35a17b282346606c69e5f8cab4028224ece84c8ad58",
    "name": "Médaille de la crinière d'argent",
    "desc": "Médaille d'honneur portée par les soldats de la Garde de la crinière d'argent ayant servi de façon courageuse et méritante. Matériau avancé utilisé pour le renforcement.",
    "lore": "Une marque d'honneur décernée à ceux qui ont combattu les créatures du Fragmentum, les habitants du Souterrain, et les catastrophes soudaines.<br />Elle est plus souvent placée sur le cercueil qu'épinglée sur la poitrine de son propriétaire.<br /><br />« Rappelle-toi, jeune Gepard. Ceci n'est pas un jouet : c'est le destin et le sang de la famille Landau. »",
@@ -208,7 +210,7 @@
    "id": 836261,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "iconPath": "36e68603fbc67d4b69c02e01d7d5d41a80446ea6c49b1d828b47320f6225825c",
    "name": "Clé de la sagesse",
    "desc": "Clé mythique conservée par les plus grands prodiges de l'univers. Permet d'améliorer considérablement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Érudition</span>.",
    "lore": "C'est la preuve d'une invitation aux salles du temple de Sagesse.<br />Trouver la porte qu'elle ouvre s'avère être une tâche bien plus ardue que d'obtenir la clé elle-même. Ceux qui franchissent les portes comprendront rapidement l'impossibilité de revenir en arrière.<br /><br />« L'Érudition n'apporte pas les réponses à l'univers, mais elle vous apprend à poser les bonnes questions. »",
@@ -216,6 +218,7 @@
    "rarity": 4,
    "rewardPath": "/material/836261",
    "comeFrom": [
+    "Calice de la Ville de Rivet",
     "Calice de la Ville de Rivet",
     "Synthèse de matériaux de l'Omni-synthétiseur"
    ]
@@ -232,6 +235,7 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
+    "Calice de la Ville de Rivet",
     "Calice de la Ville de Rivet",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles"
@@ -1549,7 +1553,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Réduit la robustesse de l'ennemi au type correspondant en entrant en combat après l'avoir attaqué.",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2077,7 +2081,7 @@
   {
    "id": 1,
    "title": "Première rencontre",
-   "text": "Salut, Pionnier/Pionnière. Moi, c'est Serval Landau. Je suis mécanicienne à Belobog. Enfin, c'est mon activité secondaire. Ce que j'aime vraiment, c'est le rock 'n' roll !",
+   "text": "Salut, Pionnier/Pionnière. Moi, c'est Serval Landau. Je suis mécanicienne à Belobog. Enfin, c'est mon activité secondaire. Ce que j'aime vraiment, c'est le rock 'n' roll !",
    "unlockRequirement": "",
    "cnUrl": "d0dd14afe8a71235f947ee2046e73ccf9b3b173a84aa684bc63e907cc653e894",
    "jpUrl": "ae685f8158d9a3072a6702782fb5a42beed458cdf97466cda845c77a73f4ab96",
@@ -2087,7 +2091,7 @@
   {
    "id": 2,
    "title": "Salutation",
-   "text": "Hein ? Tu commences le travail aussi tôt ?",
+   "text": "Hein ? Tu commences le travail aussi tôt ?",
    "unlockRequirement": "",
    "cnUrl": "0f08738f8f491d30e55b72d8716ae3247046344b39368b68e37b53fc32b46cb9",
    "jpUrl": "0a4d49e74807f38bed9bf6fc89d6cfb4386b9bdb767d5be64d586ad91ccbfff4",
@@ -2137,7 +2141,7 @@
   {
    "id": 7,
    "title": "Passe-temps",
-   "text": "Puisque le rock 'n' roll est toute ma vie, je dirais que mon passe-temps est... le travail ? C'est un problème ?",
+   "text": "Puisque le rock 'n' roll est toute ma vie, je dirais que mon passe-temps est... le travail ? C'est un problème ?",
    "unlockRequirement": "",
    "cnUrl": "cf4517d29d2d858456ad440a3de893953e10ac860b238038ca82f51030518e55",
    "jpUrl": "2c67548cffd502852a231f4f30f31056183c09b8ae970708339dda8c4db404c5",
@@ -2147,7 +2151,7 @@
   {
    "id": 8,
    "title": "Problèmes",
-   "text": "On me demande souvent comment mon atelier peut être rentable sans rien vendre. Réveillez-vous, les gens ! Il ne l'est pas !",
+   "text": "On me demande souvent comment mon atelier peut être rentable sans rien vendre. Réveillez-vous, les gens ! Il ne l'est pas !",
    "unlockRequirement": "",
    "cnUrl": "3888d94784a90c1b159e7c06d1018171631a21e73ecfd9ccebca950a49c42763",
    "jpUrl": "c5f7627c4be5da9f8e27fea3e0be93fea5a2c5e2f9f850e617dc7b4a3ee00e0e",
@@ -2167,7 +2171,7 @@
   {
    "id": 10,
    "title": "Connaissances",
-   "text": "Tu crois que Bronya me laissera jouer au Théâtre d'or quand elle deviendra Gardienne suprême ? Je pourrais arranger le spectacle de la Gardienne suprême pour en faire un opéra rock !",
+   "text": "Tu crois que Bronya me laissera jouer au Théâtre d'or quand elle deviendra Gardienne suprême ? Je pourrais arranger le spectacle de la Gardienne suprême pour en faire un opéra rock !",
    "unlockRequirement": "",
    "cnUrl": "fae97bcbe0a632c6934b80227929a6c4547391353321d1c0f0ed1c03e3e28709",
    "jpUrl": "7774c33d8ce0ed5509d65ea5cb70fdb65b187c746e862dbbabdf183e162b82bd",
@@ -2247,7 +2251,7 @@
   {
    "id": 18,
    "title": "Élévation de personnage",
-   "text": "Sympa ! Je devrais l'écrire dans ma prochaine chanson...",
+   "text": "Sympa ! Je devrais l'écrire dans ma prochaine chanson...",
    "unlockRequirement": "",
    "cnUrl": "05df56128954471852431f5e9efea4e30c4a1daf62bab0bf08949f204d03774c",
    "jpUrl": "dd53041f1e6a25ded5e1368ff0ea024da3acf1dd95ed3a0d4fdb878f82d3e6f5",
@@ -2287,7 +2291,7 @@
   {
    "id": 22,
    "title": "Rejoint l'équipe avec Gepard",
-   "text": "*soupir* Encore toi, Geppou ? Laisse-moi m'amuser un peu cette fois.",
+   "text": "*soupir* Encore toi, Geppou ? Laisse-moi m'amuser un peu cette fois.",
    "unlockRequirement": "",
    "cnUrl": "8722d7fa9ecb9abf2e87bb85a1933b941e8a8ce0ce13edd78609b34b03657478",
    "jpUrl": "70c55dac465e6c2122cb9627c921d398531658a6388ae173e88681d17f38d45c",
@@ -2327,7 +2331,7 @@
   {
    "id": 52,
    "title": "Avertissement de danger en début de combat",
-   "text": "Vous êtes là pour gâcher la fête ?",
+   "text": "Vous êtes là pour gâcher la fête ?",
    "unlockRequirement": "",
    "cnUrl": "31fb7a3fa7e425230ca417fbc20991192afa60a79526cf4a40080c2e3ea15b46",
    "jpUrl": "36a872df726ea3d7e05b9eeeaa3f673a4bb6cad9b65b45302a7da0078e33efe0",
@@ -2347,7 +2351,7 @@
   {
    "id": 54,
    "title": "Début du tour 2",
-   "text": "Spéciale dédicace !",
+   "text": "Spéciale dédicace !",
    "unlockRequirement": "",
    "cnUrl": "5eb8144062bb8bb519c3ce23c306d748df695ce00e5831365aa00e12cff844e8",
    "jpUrl": "091eb654baace56f4b7301958606f77ddaada645efee45473fec546b7381f0ef",
@@ -2377,7 +2381,7 @@
   {
    "id": 57,
    "title": "Compétence 1",
-   "text": "Essaie de suivre le rythme !",
+   "text": "Essaie de suivre le rythme !",
    "unlockRequirement": "",
    "cnUrl": "276aced899f0c9c260e6c7db607eccd3c0b345de4559141a17860ac7f7c7897a",
    "jpUrl": "5204f2fec7ac35839ac8fbc4f2711bee2c871a8ca3979242c062cb90ab849ca6",
@@ -2387,7 +2391,7 @@
   {
    "id": 58,
    "title": "Compétence 2",
-   "text": "Montez le son !",
+   "text": "Montez le son !",
    "unlockRequirement": "",
    "cnUrl": "02fa85d2704357eb77b7b9ed0e67b95bde7fc0a2333c5627b7356cb12bfb85ed",
    "jpUrl": "3a56866eca6457f3ca68d85c0944e7e91f44df5fd11d05e8ca46d0c314913c96",
@@ -2417,7 +2421,7 @@
   {
    "id": 61,
    "title": "Activation de l'ultime",
-   "text": "Prêts à lâcher prise ?",
+   "text": "Prêts à lâcher prise ?",
    "unlockRequirement": "",
    "cnUrl": "eecbf019284f2a9d059dd50e3552b51173259e6e9030e96ce5612b32184a740c",
    "jpUrl": "9bf8ccc01962dc393f4416515960734016c9bc242ea99364a64b8b74e4c070ec",
@@ -2427,7 +2431,7 @@
   {
    "id": 62,
    "title": "Déclenchement de l'ultime",
-   "text": "Pour ou contre... ma musique ne laisse pas indifférent !",
+   "text": "Pour ou contre... ma musique ne laisse pas indifférent !",
    "unlockRequirement": "",
    "cnUrl": "c705c96d0e40a84efa79ab7dc50aeb7ee6629d66f105e56bd3ddb71671f43667",
    "jpUrl": "7a76ddcecbc80f06490b5fd953f2a42abbd97fd4c72ef49d04473f1432a96c52",
@@ -2447,7 +2451,7 @@
   {
    "id": 64,
    "title": "Retour au combat",
-   "text": "C'est l'heure du rappel !",
+   "text": "C'est l'heure du rappel !",
    "unlockRequirement": "",
    "cnUrl": "fbb45c76797f9863be520d6f09ed4da35f50b238eed6fe2d65f4367ef85132ae",
    "jpUrl": "0ab60282cab0a72db5f6170222af6a33d5a9541f8d3b5f527e6612757652116c",
@@ -2467,7 +2471,7 @@
   {
    "id": 66,
    "title": "Technique",
-   "text": "Rien n'arrête le rock !",
+   "text": "Rien n'arrête le rock !",
    "unlockRequirement": "",
    "cnUrl": "2436f138fe5ec0ec2809638518c151990aa66daaee015e82ffb65c0f19d11f92",
    "jpUrl": "0047e2287da758b2b20b85fdc33e8cd67edd4a49473ffdd575181f18a5bca802",
@@ -2477,7 +2481,7 @@
   {
    "id": 67,
    "title": "Combat gagné",
-   "text": "C'est que le début !",
+   "text": "C'est que le début !",
    "unlockRequirement": "",
    "cnUrl": "58d343c34ea8647c1ece06213e83a3ed6709cc5df0071db065e609b290dbbde1",
    "jpUrl": "af0e07147600db41b1982b378888f5eaa5e39d8988dbbc8b27505747005d72f1",

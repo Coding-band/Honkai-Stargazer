@@ -1,0 +1,2810 @@
+{
+ "spRequirement": 135,
+ "iconPath": "dde4e1862a972c97fae0aa51693ee227ae1a275136a82932151b4b362537e4a6",
+ "bgPath": "8702d1c143eeddc6c1fe762a975dfe8439b71e7cff8c028fac712aa34ad1e9ab",
+ "figPath": "bc8aaecc4e7a06ba4e8184fab558688b82f7a2b2d23b4fe9fc40a42fbe3d6d11",
+ "fgPath": "608cafb9f4f60293ac28ebcff9fee5920172a0790e4ba62fd9aadfdaccb4b8fc",
+ "splashIconPath": "a085446e3039645f6e5a6f0904bfcda179300dcbbdc0d89a41bfa701824e14ac",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 6,
+  "iconPath": "2f9b8d95db5ea4e06c3c53c68bf0a3a270c39d2ead73a93311dd8a39d364cfbf",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Credit",
+   "desc": "Mata uang yang digunakan saat Interastral Peace Corporation bertransaksi dengan pelanggannya. Kini mata uang ini sudah menjadi mata uang yang umum di perjalanan ruang angkasa.",
+   "lore": "\"Orang-orang berlarian, berkelahi, bertransaksi ... tujuannya cuma untuk angka-angka yang muncul di terminal. Namun benda yang benar-benar berharga tidak dapat dibeli oleh angka-angka perusahaan.\"",
+   "purpose": "Mata uang umum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calyx \"Great Mine\"",
+    "Hadiah Misi",
+    "Hadiah Tugas",
+    "Penukaran Ember"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Tracks of Destiny",
+   "desc": "Material berkualitas tinggi untuk meningkatkan level Trace.",
+   "lore": "Kekalahan demi kekalahan telah membuatmu menang. Langkah demi langkah ke depan telah membawamu tiba di titik balik nasib.",
+   "purpose": "Material Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Hadiah Poin \"Simulated Universe\"",
+    "Kehormatan Tanpa Nama",
+    "Penukaran Ember",
+    "Hadiah Event Waktu Terbatas"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "9794d4b9cee70ded671331e6e9eec06326dcb9428d59540d9960f2a0bbea00e1",
+   "name": "Regret of Infinite Ochema",
+   "desc": "Material berkualitas tinggi untuk meningkatkan level Trace.",
+   "lore": "Tidak peduli berapa banyak tubuh yang dicuri, keinginannya tetap tidak pernah terpuaskan. Sama seperti orang-orang yang mencari ramuan keabadian, dia juga menginginkan cangkang tubuh yang tahan lama, tanpa harus takut pada kehancuran. Dia tahu, kalau hal ini hanyalah mimpi belaka.<br /><br />\"Aku pernah melihat banyak dunia yang ditelan oleh kobaran api The Blemished One, dan aku pernah menjadi bagian dari kobaran itu. Aku menari mengikuti arahan jari-jarinya, tahu jelas kalau kayu bakar sudah terbakar habis, maka kobaran api juga akan padam ....\"",
+   "purpose": "Material Trace",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "Echo of War: Scalegorge Waterscape"
+   ]
+  },
+  "351747": {
+   "id": 351747,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "2fbc400e2e7d120f87d04bfd3e713bd230496e24e47cc89e25ee139940602dad",
+   "name": "Nail of the Ape",
+   "desc": "Sisa-sisa dari Abundance Sprite. Material Ascension untuk karakter Quantum.",
+   "lore": "\"Sprite\" dan \"Abomination\" hanyalah memiliki perbedaan nama. Mereka yang jinak adalah Sprite, sedangkan mereka yang menyebabkan kerusakan dan kehilangan kontrol adalah Abomination. Paku yang tertanam kuat di tubuh Malefic Ape adalah jaminan bahwa ia akan menjadi Sprite selamanya.<br /><br />\"Kewajiban seorang Abdi adalah menjalankan perintah. Jika Master Primus menghunuskan Stealing Nail ke tubuhmu, kamu mau tidak mau harus mematuhi perintah.\"",
+   "purpose": "Material Ascension Karakter",
+   "rarity": 4,
+   "rewardPath": "/material/351747",
+   "comeFrom": [
+    "Stagnant Shadow: Scalegorge Waterscape",
+    "Stagnant Shadow: Scalegorge Waterscape",
+    "Omni-Synthesizer: Pertukaran Material"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "Traveler's Guide",
+   "desc": "Material Experience untuk karakter. Dapat memperoleh <nobr>20.000</nobr> Character EXP.",
+   "lore": "Buku seri yang harus disiapkan saat menjelajahi berbagai dunia. Tekan tombol baca, dan suara magnetik dalam bahasa yang kamu pahami akan menceritakan pengalaman legendaris petualang terkenal di berbagai dunia, serta pengetahuan dan kebijaksanaan berharga yang mereka peroleh di berbagai planet.<br /><br />\"Seri baru Traveler's Guide 'Resep Kuliner Antarbintang' akan segera dijual, ditunggu ya.\"<br />\"Untuk pengiriman, silakan hubungi Synesthesia Beacon ERD<nobr>-230</nobr> untuk terhubung dengan perwakilan Intelligentsia Guild. Pembayaran dapat dilakukan dengan metode apa pun yang praktis untukmu.\"",
+   "purpose": "Material EXP Karakter",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calyx \"Outlying Snow Plains\"",
+    "\"Forgotten Hall\""
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "Adventure Log",
+   "desc": "Material Experience untuk karakter. Dapat memperoleh <nobr>5.000</nobr> Character EXP.",
+   "lore": "Buku catatan petualangan yang dikemas dengan rapi dan terlihat sangat edukasional. Teks dan gambar sama-sama mendeskripsikan awal dan akhir petualangan, informasi berharga, dan kiat-kiat bertahan hidup.<br /><br />\"Kenapa tidak menjadikannya sebagai data dan masukkan ke disk fotolit? Begitu bakal lebih praktis.\"<br />\"Saat menghadapi badai bintang dan letusan aliran neutron, teknologi tinggi akan menjadi jauh lebih rapuh dari yang kamu bayangkan. Ditambah lagi, penulis buku ini pasti ingin orang-orang membacanya dengan cara yang paling sederhana.\"",
+   "purpose": "Material EXP Karakter",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calyx \"Outlying Snow Plains\"",
+    "Pelatihan Harian",
+    "Penukaran Ember"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "Travel Encounters",
+   "desc": "Material Experience untuk karakter. Dapat memperoleh <nobr>1000</nobr> Character EXP.",
+   "lore": "Buku harian yang mencatat segala penemuan di perjalanan. Tulisannya acak-acakan dan isinya juga ditulis sesuka hati. Tidak banyak gunanya untukmu.<br /><br />\"Cepat buang tumpukan kertas ini setelah dibaca ya, Dan Heng?\"",
+   "purpose": "Material EXP Karakter",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calyx \"Outlying Snow Plains\"",
+    "Hadiah Tugas"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "54d4c5dedbef6b70f526e88708669e94b6a214431c0c9ca55edf9b28b3413fcb",
+   "name": "Artifex's Module",
+   "desc": "Bagian dari pembuatan kecerdasan Xianzhou. Material sederhana yang digunakan untuk peningkatan.",
+   "lore": "Dasar dari teknologi kecerdasan Xianzhou. Konstituen terkecil dari semua bagian mesin. Memecahkannya akan sama dengan menghancurkan struktur seluler makhluk hidup.<br /><br />\"Intelligentsia Guild menawarkan hadiah 2 juta Credit untuk solusi teknis yang dapat membongkar boneka mekanik Xianzhou dengan sempurna.\"<br />\"Kalau kamu kenal Screwllum, maka 2 juta ini pada dasarnya adalah milikmu ....\"",
+   "purpose": "Material Trace<br />Material Ascension Karakter",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "Dijatuhkan Entranced Ingenium",
+    "Dijatuhkan musuh di \"Simulated Universe\"",
+    "Hadiah Tugas",
+    "Penukaran Ember",
+    "\"Omni-Synthesizer\" - Pertukaran Material"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "7b31224c48190eebf224b39e2a9df9477f9c67018bc63cb1b20569e6186041c3",
+   "name": "Artifex's Cogwheel",
+   "desc": "Bagian dari pembuatan kecerdasan Xianzhou. Material biasa yang digunakan untuk peningkatan.",
+   "lore": "Benda yang menghubungkan komponen-komponen dalam teknologi kecerdasan Xianzhou. Gigi gerigi yang terhubung dengan halus berukuran kecil seperti biji sesawi, namun saling berhubungan untuk membentuk tubuh yang kompleks, membuat mesin tersebut dapat melewati kehidupan yang sebenarnya.<br /><br />\"Bentuknya terletak dalam harmoni, sejajar dengan alam. Gerakannya berputar, menggemakan kosmos.\"",
+   "purpose": "Material Trace<br />Material Ascension Karakter",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "Dijatuhkan Entranced Ingenium pada Level Equilibrium Lv. 2 atau lebih",
+    "\"Omni-Synthesizer\" - Synthesis Material",
+    "Dijatuhkan musuh di \"Simulated Universe\"",
+    "\"Omni-Synthesizer\" - Pertukaran Material"
+   ]
+  },
+  "635668": {
+   "id": 635668,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "61f6a6c6b61eb719a275169312c34e1791499cffa9fa1ab2f5390cfca20da279",
+   "name": "Endurance of Bronze",
+   "desc": "Perisai tangan kuno yang terbuat dari perunggu. Pembuatannya kasar namun tahan lama. Dapat meningkatkan sedikit level Trace milik karakter <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Preservation</span>.",
+   "lore": "Legenda mengatakan bahwa ada bencana di zaman kuno, dan orang-orang menghabiskan semua cara primitif untuk mengikuti para dewa untuk berperang melawan binatang buas yang tak tertandingi.<br />Perisai ini adalah saksi dari perang itu.<br /><br />\"Meski tak terbendung, aku tetap akan melakukan yang terbaik untuk melawan.\"",
+   "purpose": "Material Trace<br />Material Ascension Light Cone",
+   "rarity": 2,
+   "rewardPath": "/material/635668",
+   "comeFrom": [
+    "Calyx \"Supply Zone\"",
+    "Calyx \"Supply Zone\"",
+    "Penukaran Ember"
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "fcb869b494268ac2b7320d4a3795736698f3a3c5e9bad9c0182c6e11bd343c55",
+   "name": "Artifex's Gyreheart",
+   "desc": "Bagian dari pembuatan kecerdasan Xianzhou. Material kualitas tinggi yang digunakan untuk peningkatan.",
+   "lore": "Inti dari teknologi kecerdasan Xianzhou. Bola dunia bergolak dan bergetar seperti inti hati, membuat mesin itu berpikir seperti makhluk hidup.<br /><br />\"Jangan kaget. Mengambil jantungnya akan membuatnya ... eh, dia? Tidak, membuatnya kehilangan kecerdasannya dan kembali ke sumber mekanisnya.\"",
+   "purpose": "Material Trace<br />Material Ascension Karakter",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "Dijatuhkan Entranced Ingenium pada Level Equilibrium Lv. 4 atau lebih",
+    "\"Omni-Synthesizer\" - Synthesis Material",
+    "Dijatuhkan musuh di \"Simulated Universe\"",
+    "\"Omni-Synthesizer\" - Pertukaran Material"
+   ]
+  },
+  "836254": {
+   "id": 836254,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "d7b80e02bd0ea7a489366b4ec55dab8aef86c30f28636de55dc1ac64b5e7c2e6",
+   "name": "Safeguard of Amber",
+   "desc": "Perisai aneh bertatahkan amber yang dipahat dari langit. Dapat meningkatkan banyak level Trace milik karakter <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Preservation</span>.",
+   "lore": "Pemegang perisai tampaknya dilindungi oleh dinding tak kasat mata, dan tidak ada panah api atau cakar sebesar gunung yang dapat merusaknya.<br />Legenda mengatakan bahwa ada peperangan di zaman kuno. Pahlawan suku yang mengenakan perisai perunggu berdiri berdampingan dengan prajurit yang memegang tombak berapi, menyerang binatang purba sampai mati.<br />Perisai ini adalah saksi bisu dari perang itu.<br /><br />\"Jangan melewati batas.\"",
+   "purpose": "Material Trace<br />Material Ascension Light Cone",
+   "rarity": 4,
+   "rewardPath": "/material/836254",
+   "comeFrom": [
+    "Calyx \"Supply Zone\"",
+    "Calyx \"Supply Zone\"",
+    "\"Omni-Synthesizer\" - Synthesis Material"
+   ]
+  },
+  "920195": {
+   "id": 920195,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "76967cbdb14e8ef8141d315093566ebc0554c20923de99cd1e1b30cbb799758d",
+   "name": "Oath of Steel",
+   "desc": "Perisai yang dibuat dari paduan logam tak diketahui, cara pembuatannya tak tergantikan Dapat meningkatkan level Trace milik karakter <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Preservation</span> dalam jumlah sedang.",
+   "lore": "Meski ukurannya besar, namun terasa ringan saat dilambaikan. Saat menerima pukulan pun, permukaan perisai tidak meninggalkan bekas.<br />Legenda mengatakan bahwa pada saat perang di zaman kuno, para prajurit yang bersemangat memegang tombak dan perisai yang terbuat dari besi dingin untuk melindungi negara terkutuk itu.<br />Perisai ini adalah saksi dari perang itu.<br /><br />\"Para prajurit ada di pintu gerbang!\"",
+   "purpose": "Material Trace<br />Material Ascension Light Cone",
+   "rarity": 3,
+   "rewardPath": "/material/920195",
+   "comeFrom": [
+    "Calyx \"Supply Zone\"",
+    "Calyx \"Supply Zone\"",
+    "\"Omni-Synthesizer\" - Synthesis Material",
+    "Penukaran Ember"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 63.36,
+   "attackAdd": 3.168,
+   "hpBase": 200.64,
+   "hpAdd": 10.032,
+   "defenseBase": 82.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549503,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 88.704,
+   "attackAdd": 3.168,
+   "hpBase": 280.896,
+   "hpAdd": 10.032,
+   "defenseBase": 115.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549503,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 114.048,
+   "attackAdd": 3.168,
+   "hpBase": 361.152,
+   "hpAdd": 10.032,
+   "defenseBase": 148.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633444,
+     "count": 6
+    },
+    {
+     "id": 351747,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 139.392,
+   "attackAdd": 3.168,
+   "hpBase": 441.408,
+   "hpAdd": 10.032,
+   "defenseBase": 181.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633444,
+     "count": 9
+    },
+    {
+     "id": 351747,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 164.736,
+   "attackAdd": 3.168,
+   "hpBase": 521.664,
+   "hpAdd": 10.032,
+   "defenseBase": 214.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717385,
+     "count": 6
+    },
+    {
+     "id": 351747,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 190.08,
+   "attackAdd": 3.168,
+   "hpBase": 601.92,
+   "hpAdd": 10.032,
+   "defenseBase": 247.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717385,
+     "count": 9
+    },
+    {
+     "id": 351747,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 215.424,
+   "attackAdd": 3.168,
+   "hpBase": 682.176,
+   "hpAdd": 10.032,
+   "defenseBase": 280.5,
+   "defenseAdd": 4.125,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 150,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "f50307ea1b93f7b57bb924de9063a266de3f95d33338ab823d0b859430ac29d2",
+   "artPath": "36eececf71891e64617a7d11d45d188ef0a90a326d07eb64468c63e7a6f33f88",
+   "name": "Dominus Pacis",
+   "descHash": "\"Knowledge\" meningkatkan <nobr>#1[i]%</nobr> CRIT DMG.",
+   "params": [
+    0.3
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "66fa8ffaf53f44e3c25f617b5ffa575b6fc564a99b545ba9e00d04fb1374e234",
+   "artPath": "59359faeb74ff3439e21baea9a285c832d8416a7fc8824d0393a389017406192",
+   "name": "Optimus Felix",
+   "descHash": "Saat \"Matrix of Prescience\" aktif, jika ada rekan tim yang menerima serangan mematikan, maka seluruh rekan tim yang menerima serangan mematikan pada aksi kali ini tidak akan gugur, dan akan segera memulihkan HP-nya sebesar <nobr>#1[i]%</nobr> Max HP masing-masing. Efek ini dapat dipicu sekali dalam 1 pertempuran.",
+   "params": [
+    0.7
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "37ce7f5534d606ca60ec1249ddfb91c7b7926a6e3c589d3a9768810c28912578",
+   "artPath": "f008abaa2ad53ff81fc4f5f052482837276c7fe11c9970b67a0485ddb4b18778",
+   "name": "Apex Nexus",
+   "descHash": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "e0a16baeb26741333ac1738f6039736844ff586a9b4349e811edb0e5570e1ca4",
+   "artPath": "0bc12bfd982a0db9e25596dca5b6829079cda551587aeb984f4e53e2867b7e10",
+   "name": "Fortuna Stellaris",
+   "descHash": "Setelah rekan tim lain yang berada dalam efek \"Matrix of Prescience\" terkena serangan, Fu Xuan akan memulihkan <nobr>#1[i]</nobr> Energy.",
+   "params": [
+    5
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "68ae2f6c953932bf94f2868e8878780baee6df8fc1323ab0ecf52d4d35dfbd9b",
+   "artPath": "139c997ee76f8508b948aba431248d205b10e107e3980f34768dc46e45e3be55",
+   "name": "Arbiter Primus",
+   "descHash": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "3a060dab1c49b53c6e0f01d1ce509c826ae0b060feca4cc9d07c571c5cbf7c90",
+   "artPath": "5cc4182c9ea511a19f5049f85ce23f2ef5b186dec9571fb0a98aa50f936a05fc",
+   "name": "Omnia Vita",
+   "descHash": "Saat \"Matrix of Prescience\" aktif, ia akan menghitung akumulasi jumlah HP yang berkurang dari seluruh rekan tim dalam pertempuran kali ini. DMG Ultimate yang diakibatkan Fu Xuan akan meningkat sebesar <nobr>#1[i]%</nobr> dari perhitungan akumulasi jumlah HP seluruh rekan tim yang berkurang di pertempuran kali ini.<br />Jumlah perhitungan akumulasi HP yang berkurang dari seluruh rekan tim tidak dapat melebihi <nobr>#2[i]%</nobr> Max HP Fu Xuan. Setelah melancarkan Ultimate, perhitungan jumlah akumulasi akan direset ulang dan diakumulasi kembali.",
+   "params": [
+    2,
+    1.2
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   369002
+  ],
+  [
+   285061
+  ],
+  [
+   168416
+  ],
+  [
+   84475
+  ],
+  [
+   799948
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Single Target",
+   "descHash": "Mengakibatkan <span style=\"color:#7788ff;\">Quantum</span> DMG sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> Max HP Fu Xuan pada 1 musuh yang ditarget.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 369002,
+   "name": "Novaburst",
+   "iconPath": "49cd259f0834592cb171ef821eaee22aa0122678ae4db12e6c8d09bd2afb4a9a",
+   "typeDescHash": "Basic ATK",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.25
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.35
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.4
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.45
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.55
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Defense",
+   "descHash": "Mengaktifkan \"Matrix of Prescience\". Seluruh rekan tim Fu Xuan akan <u>membagikan</u> <nobr>#1[i]%</nobr> dari semua DMG yang diterima mereka pada Fu Xuan (sebelum DMG ini ditahan oleh efek Shield apa pun) selama <nobr>#3[i]</nobr> giliran.<br />Rekan tim yang terkena pengaruh \"Matrix of Prescience\" akan memperoleh status \"Knowledge\". Rekan tim berstatus \"Knowledge\" akan mendapat peningkatan Max HP sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span> Max HP Fu Xuan, dan peningkatan CRIT Rate sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[f1]%</nobr></span>.<br />Saat Fu Xuan <u>gugur</u>, \"Matrix of Prescience\" juga akan dihapus.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 285061,
+   "name": "Known by Stars, Shown by Hearts",
+   "iconPath": "37ce7f5534d606ca60ec1249ddfb91c7b7926a6e3c589d3a9768810c28912578",
+   "typeDescHash": "Skill",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.03,
+      0.06
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.033,
+      0.066
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549503,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.036,
+      0.072
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.039,
+      0.078
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.042,
+      0.084
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.044999998,
+      0.09
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633444,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.048750002,
+      0.0975
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.052500002,
+      0.105
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.05625,
+      0.1125
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.06,
+      0.12
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.063,
+      0.126
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.066,
+      0.132
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.069,
+      0.138
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.072,
+      0.144
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65,
+      0,
+      3,
+      0.075,
+      0.15
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "AoE",
+   "descHash": "Mengakibatkan <span style=\"color:#7788ff;\">Quantum</span> DMG sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> Max HP Fu Xuan pada seluruh musuh, serta memperoleh 1 kali jumlah kesempatan terpicunya pemulihan HP dari Talent Fu Xuan.",
+   "ultimateCost": 135,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 168416,
+   "name": "Woes of Many Morphed to One",
+   "iconPath": "c8bdb96b3a7c68b2e1b0cc131001bf963b031b691c034a146b4827b9b841e0bf",
+   "typeDescHash": "Ultimate",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.6
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.64
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549503,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.68
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.72
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.76
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633444,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.85
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.95
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.04
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.08
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.12
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.16
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Restore",
+   "descHash": "Saat Fu Xuan berada dalam kondisi siap bertempur (tidak gugur), seluruh rekan tim akan memperoleh \"Misfortune Avoidance\". DMG yang diterima rekan tim berstatus \"Misfortune Avoidance\" akan berkurang <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>.<br />Saat persentase HP Fu Xuan kurang dari atau sama dengan <nobr>#2[i]%</nobr>, pemulihan HP akan terpicu. Efek pemulihan HP ini akan memulihkan HP dirinya sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> jumlah HP dirinya yang sudah berkurang. Efek ini tidak akan terpicu saat menerima serangan mematikan. Efek ini secara default dapat dipicu 1 kali dalam setiap pertempuran, maksimal dapat menyimpan 2 kali jumlah kesempatan terpicu.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 84475,
+   "name": "Bleak Breeds Bliss",
+   "iconPath": "0a05591ca26680437e8a44cbcc712ba7c5b192e7a087a96b7efd97f8cba82ad5",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.1,
+      0.5,
+      0.8
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.108,
+      0.5,
+      0.81
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549503,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.116,
+      0.5,
+      0.82
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635668,
+       "count": 3
+      },
+      {
+       "id": 549503,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.124,
+      0.5,
+      0.83
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920195,
+       "count": 3
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.132,
+      0.5,
+      0.84
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920195,
+       "count": 5
+      },
+      {
+       "id": 633444,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.14,
+      0.5,
+      0.85
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920195,
+       "count": 7
+      },
+      {
+       "id": 633444,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.15,
+      0.5,
+      0.8625
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836254,
+       "count": 3
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.16,
+      0.5,
+      0.875
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836254,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.17,
+      0.5,
+      0.8875
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836254,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.18,
+      0.5,
+      0.9
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836254,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.188,
+      0.5,
+      0.91
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.196,
+      0.5,
+      0.92
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.204,
+      0.5,
+      0.93
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.212,
+      0.5,
+      0.94
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.22,
+      0.5,
+      0.95
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Setelah menyerang musuh dan memasuki pertempuran, mengurangi Toughness target musuh sesuai dengan tipe Toughnessnya.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 883889,
+   "name": "Attack",
+   "iconPath": "49cd259f0834592cb171ef821eaee22aa0122678ae4db12e6c8d09bd2afb4a9a",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Defense",
+   "descHash": "Setelah menggunakan Technique, seluruh rekan tim akan memperoleh Barrier selama <nobr>#1[i]</nobr> detik. Barrier dapat menahan semua serangan musuh dan mencegah rekan tim memasuki pertempuran. Jika memasuki pertempuran saat Barrier aktif, akan mengakibatkan Fu Xuan langsung mengaktifkan \"Matrix of Prescience\" setelah memasuki pertempuran, berlangsung selama <nobr>#2[i]</nobr> giliran.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 799948,
+   "name": "Of Fortune Comes Fate",
+   "iconPath": "461b5c9acccd4e9619ab7babd4ffa6361176b61f119f9e9e7db12d3e818bcacc",
+   "typeDescHash": "Technique",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      20,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1208103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1208208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1208209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 6314,
+        "name": "Peningkatan HP",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+        "statusList": [
+         {
+          "key": "HP",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836254,
+          "count": 8
+         },
+         {
+          "id": 717385,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1208210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 922364,
+        "name": "Peningkatan CRIT Rate",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "CRIT Rate",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836254,
+          "count": 8
+         },
+         {
+          "id": 717385,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 6313,
+      "name": "Peningkatan Effect RES",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+      "statusList": [
+       {
+        "key": "Effect RES",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836254,
+        "count": 8
+       },
+       {
+        "id": 717385,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Saat \"Matrix of Prescience\" aktif, jika target musuh menambahkan status Crowd Control Debuff pada rekan tim, maka seluruh rekan tim akan menahan semua status Crowd Control Debuff yang diberikan oleh target musuh pada aksi kali ini. Efek ini dapat dipicu 1 kali. Jumlah batas terpicu akan di-reset setelah \"Matrix of Prescience\" diaktifkan ulang.",
+    "ultimateCost": 0,
+    "id": 6209,
+    "name": "Liuren, the Sexagenary",
+    "iconPath": "fa9e76d4742c1bc9785bd01d0e62cfeca4c09b8ae0d9f04f162ff8149f5c91c6",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836254,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1208201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1208101,
+     "type": 1,
+     "children": [
+      {
+       "id": 1208202,
+       "type": 2,
+       "children": [
+        {
+         "id": 1208203,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 6304,
+          "name": "Peningkatan CRIT Rate",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+          "statusList": [
+           {
+            "key": "CRIT Rate",
+            "value": 0.026999999
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920195,
+            "count": 3
+           },
+           {
+            "id": 633444,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 6303,
+        "name": "Peningkatan HP",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+        "statusList": [
+         {
+          "key": "HP",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 5000
+         },
+         {
+          "id": 635668,
+          "count": 3
+         },
+         {
+          "id": 549503,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "descHash": "Saat \"Matrix of Prescience\" aktif, Fu Xuan akan memulihkan <nobr>#1[i]</nobr> Energy tambahan saat dirinya melancarkan Skill.",
+      "ultimateCost": 0,
+      "id": 6207,
+      "name": "Taiyi, the Macrocosmic",
+      "iconPath": "1b5a53fef3bce17a49eba2c213693d78a51fab2b0e04c34dd8b6b627b9d71d7e",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "levelData": [
+       {
+        "params": [
+         20
+        ],
+        "level": 1,
+        "levelReq": 0,
+        "promotionReq": 2,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 5000
+         },
+         {
+          "id": 635668,
+          "count": 3
+         },
+         {
+          "id": 186254,
+          "count": 1
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": 1208102,
+     "type": 1,
+     "children": [
+      {
+       "id": 1208205,
+       "type": 2,
+       "children": [
+        {
+         "id": 1208206,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 6299,
+          "name": "Peningkatan HP",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+          "statusList": [
+           {
+            "key": "HP",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836254,
+            "count": 3
+           },
+           {
+            "id": 717385,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 6302,
+        "name": "Peningkatan CRIT Rate",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "CRIT Rate",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 20000
+         },
+         {
+          "id": 920195,
+          "count": 5
+         },
+         {
+          "id": 633444,
+          "count": 4
+         }
+        ]
+       }
+      }
+     ],
+     "embedBonusSkill": {
+      "descHash": "Saat Fu Xuan melancarkan Ultimate, seluruh rekan tim selain dirinya akan memulihkan HP sebesar <nobr>#1[i]%</nobr> Max HP Fu Xuan + <nobr>#2[i]</nobr>.",
+      "ultimateCost": 0,
+      "id": 6210,
+      "name": "Dunjia, the Metamystic",
+      "iconPath": "eb37869e471682cb42f1d8fd9027380d96680ff6ed0e5c15aa92befae909a331",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "levelData": [
+       {
+        "params": [
+         0.05,
+         133
+        ],
+        "level": 1,
+        "levelReq": 0,
+        "promotionReq": 4,
+        "cost": [
+         {
+          "id": 29328,
+          "count": 20000
+         },
+         {
+          "id": 920195,
+          "count": 5
+         },
+         {
+          "id": 125435,
+          "count": 1
+         },
+         {
+          "id": 186254,
+          "count": 1
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 6306,
+    "name": "Peningkatan CRIT Rate",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+    "statusList": [
+     {
+      "key": "CRIT Rate",
+      "value": 0.026999999
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549503,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1208204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 6301,
+    "name": "Peningkatan Effect RES",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+    "statusList": [
+     {
+      "key": "Effect RES",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 10000
+     },
+     {
+      "id": 920195,
+      "count": 3
+     },
+     {
+      "id": 633444,
+      "count": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": 1208207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 6300,
+    "name": "Peningkatan CRIT Rate",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+    "statusList": [
+     {
+      "key": "CRIT Rate",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 45000
+     },
+     {
+      "id": 836254,
+      "count": 3
+     },
+     {
+      "id": 717385,
+      "count": 3
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Badan",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "HP",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "Kaki",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "SPD",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Planar Sphere",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "HP",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "Link Rope",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "Energy Regeneration Rate",
+    "propertyIconPath": "75627c696d3e9763c0b4feeb4a8e2baf594ac73214c6227b3a125c032be090c8"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Pertemuan Pertama",
+   "text": "Aku Fu Xuan, kepala dari Divination Commission. Ini adalah pertemuan pertama kita ... Atau mungkin aku seharusnya bilang — pertemuan pertama kita yang ke<nobr>-22</nobr> ... Melalui Omniscia, aku sudah sering sekali bertemu denganmu untuk yang pertama kalinya ....",
+   "unlockRequirement": "",
+   "cnUrl": "f61fc8453a5bc9d4221eb3ef08bdc838c18ce9303d6902646efdb88858fc4273",
+   "jpUrl": "479293d6f5b929a90bb87302afd3dfe0d441c718ea805132bdcfe2cbb23740e3",
+   "enUrl": "70d671f80d59853afff0cdefb884d93cd5938cf054919658820b71cd27da7aba",
+   "krUrl": "fc7400cd0552812d3d1b73fe87fb99c19c07a6cf4d6f75ce06384aa675609b0f"
+  },
+  {
+   "id": 2,
+   "title": "Menyapa",
+   "text": "Tamu terhormat, apa kamu mau tahu masa depanmu? Tidak perlu kaget — tujuanmu untuk datang sudah diberi tahu duluan oleh heksagram.",
+   "unlockRequirement": "",
+   "cnUrl": "8bb5ff7f815c6c77f7e177343fedfbe1c2b2be2d01595652cb10ff0f2a26668e",
+   "jpUrl": "ba8791a7cb08ad803ac1ff7312f3b31bdfbdecc46fbe8546abd9b8bb62070fe0",
+   "enUrl": "3b08d73f420dbdef491812c09460278a9c94e276d3dd797972092dccd6f41320",
+   "krUrl": "5e89fda4a8a5c74e489fcc3109b8a14f2d69d01cb1aef25c6e5d0823b4192fc9"
+  },
+  {
+   "id": 3,
+   "title": "Berpisah",
+   "text": "Kamu sudah mau pergi? Kebetulan sekali, aku juga masih ada urusan lain ....",
+   "unlockRequirement": "",
+   "cnUrl": "13224bad3db3061e03f1c6f0d79a9752e43b5fb1f2fea9e141dcf4c8437ffa9d",
+   "jpUrl": "4b773084d019fa2958fa53d5feea93d5a81c5f5c454404658b27064b98d1ddd9",
+   "enUrl": "67bd380c00f82d77b616286633ff68ce32f20b8ddbf01e5c812ad5a4e5482e49",
+   "krUrl": "a51919ca094244eb5fc62673bd93175268aa2dac18f9ae569a96aa5d69c02cd5"
+  },
+  {
+   "id": 4,
+   "title": "Tentang Diriku: Diviner",
+   "text": "Orang-orang bilang kalau tidak akan ada yang bisa lepas dari pengawasan Omniscia milikku. Tapi sayangnya, hal itu tidaklah benar. Tidak ada ramalan yang seratus persen akurat. Aku ini Diviner, bukan utusan dari langit.",
+   "unlockRequirement": "",
+   "cnUrl": "1f3c5bf872ae9982738868623efcda0911c68918dbed252fc8288c1d82c854c4",
+   "jpUrl": "042da0aa2636992f1367114749eb20fd96ae0dabc71205f7c7360f6b04437fb1",
+   "enUrl": "c8f146d7be69ca8aa019c313f5fcd4b565035777ccb048bd7264e6b5ace77e5c",
+   "krUrl": "711e84b74fbe7de461b6be163823767b42a28ea4c8bbb8871fdda63c9d1af1e8"
+  },
+  {
+   "id": 5,
+   "title": "Mengobrol: Mata ketiga",
+   "text": "Mata di dahiku ini adalah harta dari langit yang diberikan oleh Nous kepadaku. Berkat mata ini, aku bisa melihat perubahan di dunia luar dan melihat berbagai kemungkinan. Akan tetapi, Nous menekankan bahwa: \"Pengetahuan datang dengan penderitaan sebagai bayarannya\". Di sisi lain, Omniscia ini juga merupakan hukuman abadi ....",
+   "unlockRequirement": "",
+   "cnUrl": "6b26a1832f0772f8eb076bbbfd1625f1a2cbf1868bfdf746762f4bc69bdf8ca0",
+   "jpUrl": "e68f641561978ca5e08c166a65d52ef75d881e1fc07dd93e4b88606258c5b2ff",
+   "enUrl": "7904a4f5938707d0ce364c6a34304e5d2e895dc95ef54bab46de8a1e2e065987",
+   "krUrl": "c651809e5d8495d02a1fdde3d8541af69adcc827f05e15ae83b9b2e72adc2976"
+  },
+  {
+   "id": 6,
+   "title": "Mengobrol: Matrix of Prescience",
+   "text": "Para Diviner melihat masa lalu dan mengetahui masa depan melalui Matrix ini. Luofu yang mengapung di lautan bintang, tidak bisa terlepas darinya. Tapi ... terkadang aku penasaran, apakah ia membatasi masa depan kami dan menyegel jalan kami ke depan?",
+   "unlockRequirement": "",
+   "cnUrl": "098452c9b723d033cc271cf0e6e6ecece7a59a09f06ea1e58669109227b106e5",
+   "jpUrl": "d3075430c07a380416eea954cda21fa0a69f766bddd08f9b5492822886ca52ed",
+   "enUrl": "6e9d3b0c18a24bba42cdeaad6b3f7c87323b512e3acacc7c0d27d0919426eb0d",
+   "krUrl": "09b46e9f39cd169a1044ae2a7db55a20c33994fa47485f1fe8ab62ffdf2ea019"
+  },
+  {
+   "id": 7,
+   "title": "Mengobrol: Pekerjaan",
+   "text": "Pagi tadi aku melakukan pembacaan ramalan. Aku melihat adanya gelombang di antara trigram air dan api, dengan beberapa variabel yang berfluktuasi ... Hasil ramalan mengatakan bahwa sebaiknya hari ini jangan mengadakan urusan resmi dan juga jangan lembur. Huh, membosankan.",
+   "unlockRequirement": "",
+   "cnUrl": "2ca8ea831e0f1f71896263a9c913bdf7fcaf0bfb46e8855cd2a26f914c36c911",
+   "jpUrl": "d243f35c03461d9082ed01e4e8fb1428d7782e9b94a60515216686f1511ce9e2",
+   "enUrl": "267bea11fcfdaaae9885a54e903bfdc427ad6892ca79055f4946dfea8c2e9047",
+   "krUrl": "870f419564723473c36295a4c09a41e51c6a157f80e670c42f74877b4ce66cba"
+  },
+  {
+   "id": 8,
+   "title": "Hobi",
+   "text": "Setelah bekerja semalaman, aku mau minum secangkir teh herbal spesial yang dibuat oleh Nyonya Naga, lalu aku akan tambahkan gula, gula, dan gula! Satu cangkir saja cukup untuk membuatku merasa seperti terlahir kembali! Minuman itu sangat membantuku untuk memulihkan energi yang aku habiskan untuk meramal.",
+   "unlockRequirement": "",
+   "cnUrl": "efe27566ad5f38830bb40ca19e6c4676cdadd2fcbb7e01f674f400a97f3857ff",
+   "jpUrl": "18f4f3710e9d38ec22502f2b19f2d9867500805c79a23464b3bc4ab33f14bb54",
+   "enUrl": "caa15b3e4f7bfc608047ee8adbc929c23cdc2008ba267b71da5671660af69158",
+   "krUrl": "c937328805d891c7bc2d2a6e4187019cddefa4f7d7adfa2f94edd955d82cdb88"
+  },
+  {
+   "id": 9,
+   "title": "Hal yang Memusingkan",
+   "text": "Aku ini sangat terpelajar dan suka membaca, sehingga terkadang aku sering mengambil kutipan klasik saat berbicara. Tapi tetap saja, ada beberapa orang yang bilang kalau aku ini bicara \"bahasa Fu Xuan\". Huh ....",
+   "unlockRequirement": "",
+   "cnUrl": "87133e15b1f1d843734984bf5fdc301456a9632867f32e174dc38023dc6ebda6",
+   "jpUrl": "014db8bb60ee35982f96ccc3f9f9b8704a2d1c787513cf80be85b2ae910876fe",
+   "enUrl": "89948f4a88828935727553e2b411e1ac3be9e9446fc1e39e190230d2c604f5a3",
+   "krUrl": "5ec6329f24d195f63954e4a01f518d2227576acee4f08e012f810a92a82031c6"
+  },
+  {
+   "id": 10,
+   "title": "Curhat",
+   "text": "Salah satu dari peraturan tidak tertulis di Divination Commission adalah \"Tiga Larangan\" — Yang di antaranya adalah \"tidak meramal untuk ketidakjujuran\". Jadi, kalau kamu minta aku untuk meramal nomor lotre, keadaan pasar uang di masa depan, atau hal lain yang sejenisnya, maka maafkan aku kalau aku menolak untuk meramalkannya.",
+   "unlockRequirement": "",
+   "cnUrl": "f15647707f917e980a1c6e8aa83cf18ef59eefcf5ced9cff56e990883523275b",
+   "jpUrl": "bbe8d092a573a873c779daf7200c39108e917607319aba88780f32079616a1b5",
+   "enUrl": "45715f40d64d88ce684d187883388b1a1500205f241cc2a755f3a0ab054c56e7",
+   "krUrl": "e7242a63c46653eadd8c9f5f9084542a30dbd2359219e7e7fdd9650ace0b7238"
+  },
+  {
+   "id": 11,
+   "title": "Rumor 1",
+   "text": "Meskipun Xianzhou Alliance mengikuti perintah Reignbow Arbiter untuk memburu Plagues Author ... Setiap kapal Xianzhou masih memiliki peninggalan Aeon yang dikenal sebagai \"Jejak Abundance\". Pada titik pusat dari banyaknya kawasan di Luofu, ada \"Ambrosial Arbor\" yang memberi kami umur panjang.",
+   "unlockRequirement": "",
+   "cnUrl": "0117e134429feb74a978f923ff1462961d54de8a5032e0f61084aa2a5bc46344",
+   "jpUrl": "2af5b39147932a0ccb4183767e69e1eb0a91adf03af688ec249336fc190deefc",
+   "enUrl": "ccb70e69647cd650309fa0df3e7449cdd73cd78f3e52523a09bd4df39428fed4",
+   "krUrl": "11cff6c23e86396f3728d448b301b59f1db746ed15c280719ee2b9388eb5cc36"
+  },
+  {
+   "id": 12,
+   "title": "Rumor 2",
+   "text": "Xianzhou Yuque adalah tempat awal mula lahirnya Divination Commission, tempat di mana Stargazer dan Diviner berkumpul untuk mengamati bintang dan menyusun rencana untuk Alliance ke depannya. Aku juga sudah pernah melihat sedimen litogenik \"Fallow Earth\" — yang merupakan sumber teknologi Jade Abacus.",
+   "unlockRequirement": "",
+   "cnUrl": "4b359fe0e5128bf9bd550dd3114ec22f54e767d5971dcc4e260f618dd8cdb085",
+   "jpUrl": "521f77659924bade107c6db20e8bb4e9375395d9f75771c2ad3fb748a7a32b80",
+   "enUrl": "27a398b1bcf24ad9bc2a43578bf81ff5f5c588d40b64cab248a5577682dc52c8",
+   "krUrl": "713f28daf89447b39b70f5839e6d84f7163b058c769248d9a7d3097bb0119cfa"
+  },
+  {
+   "id": 13,
+   "title": "Rumor 3",
+   "text": "Katanya, ada api hidup di mesin kapal Xianzhou Zhuming, makhluk yang dianggap sebagai musuh besar oleh Xianzhou di masa lalu — \"Flint Emperor\", atau yang disebut juga sebagai \"Primordial Flame\". Para pengrajin dari Zhuming menggunakan berbagai macam cara untuk mengurungnya di dalam tungku, dan menggunakan kekuatannya untuk menciptakan berbagai senjata suci.",
+   "unlockRequirement": "",
+   "cnUrl": "9a7c780142ac3c4cfd51d7c535d47875882048784032923c78d8d6b855cd81d6",
+   "jpUrl": "ef1df06e838d8220d6757ede5908b9709afe230ca0253ef87f19bcd43297c912",
+   "enUrl": "0c066f436160e64ea8c8b0747d2e358f03f5a3eeb56cf70df9771e45e1b2e4e4",
+   "krUrl": "619a0360892beddf2e2edcf8a4d65f9a445a8342a55396fd00ac576a62da990d"
+  },
+  {
+   "id": 14,
+   "title": "Tentang Jing Yuan",
+   "text": "Ugh, sampai sekarang ini, Jing Yuan sudah berjanji untuk merekomendasikan aku menjadi jenderal dalam <nobr>122</nobr> kesempatan yang berbeda. Dalam <nobr>121</nobr> kesempatan itu, aku menyampaikan argumenku, dan dia cuma menjawab \"mm-hmm\" dengan nada acuh tak acuh. Lalu dalam 1 kesempatan yang lain, aku bicara panjang lebar mengenai alasanku, dan aku melihat dia perlahan tertidur ....",
+   "unlockRequirement": "",
+   "cnUrl": "7992c7e301ff041ba227d6c7047e8632e056d59e50c62e4bbbe055e4da0e6e5b",
+   "jpUrl": "d01c6d73df9b30c5b3a413ebff95b0d3a47baa71944d64f0ab2890be21424bda",
+   "enUrl": "bc7fd1d5ffd69f53725965e72cbfc4326f453b0424d5b9ac504b5f50e08b42d7",
+   "krUrl": "3c4bb3471e4c737e14d9de4ec36e0236bf05f756ea5e86526e45d3d266ead422"
+  },
+  {
+   "id": 15,
+   "title": "Tentang Qingque",
+   "text": "Divination Commission itu penuh dengan pemalas, tapi dia ini satu-satunya orang yang benar-benar menguasai seni bermalas-malasan — dan bahkan berhasil lolos dari konsekuensinya ... Aku rasa dia bahkan bisa menulis buku yang isinya tentang teknik bermalas-malasan! Terkadang aku penasaran, kira-kira dia bisa lolos dari ramalanku atau tidak ya ....",
+   "unlockRequirement": "",
+   "cnUrl": "b36686951a4e4e188159e4eb203f5184ebd7876b71951d32f79cb60670561320",
+   "jpUrl": "1137a8ccfd32b2d992be7e5570b010a2c080078b0fea20107a70779e712df388",
+   "enUrl": "a6b6489e418b153aa7a5baef1344486ecfb42b1e74e181aa1b9733e792ba1100",
+   "krUrl": "22a71b7eb27bc5910e96c4773da8641c0200d28aa3cec2022ee47f0153044a8a"
+  },
+  {
+   "id": 16,
+   "title": "Tentang Bailu",
+   "text": "Selama ini aku kira, teh yang diberi oleh Nyonya Naga itu mengandung bahan rahasia untuk menghilangkan rasa lelah. Tapi ternyata, bahan rahasianya itu cuma ekstra gula saja. Cara yang sangat bijak untuk mengobati rasa lelah, jenius dari Alchemy Commission memang berbeda!",
+   "unlockRequirement": "",
+   "cnUrl": "f9bc6ae384dcaeff6ade838e0bda54d92f8c4e727af20a51a374a3b9782c54b5",
+   "jpUrl": "d86624240f77b282fd5cb7b282bb4699170aa8ffc57f0d6bcf420cc7b2d66394",
+   "enUrl": "a9d179aafb9ae46db75c51e1c37cb113b0d6ccb4bd754956e0b83392e569be54",
+   "krUrl": "342760aefb4b6591f7087f70f6910edcca782ac4372acb6fbdbe9d04f6e7ca83"
+  },
+  {
+   "id": 17,
+   "title": "Tentang Yanqing",
+   "text": "Setiap kali aku berdiskusi panas dengan Jing Yuan dan perkataanku mulai tidak enak didengar, Yanqing pasti akan menatap tajam diriku. Ya memang sih, tanpa perlu pakai Omniscia juga aku bisa tahu kalau peluang anak itu akan menyerangku sangatlah kecil ....",
+   "unlockRequirement": "",
+   "cnUrl": "3abf1d478626d03c2412438dded8fbc348c55ab09007a23842a7e113b856df64",
+   "jpUrl": "d2b35ad4f546424dbe5e16173d0f7c8ca031f6c32e24f7630289d3ed47770c8d",
+   "enUrl": "ecd0911f56352bf86aad6ea4fb1461773b1f511b28a4c2faaadb6b839534bdea",
+   "krUrl": "713fef932dcd848d586ad131c4a84aaec07b0bb1d0c4281738ab52810db474bb"
+  },
+  {
+   "id": 18,
+   "title": "Tentang Tingyun",
+   "text": "Setiap serikat dagang di bawah Sky-Faring Commission memiliki kekuatannya masing-masing. Aku dengar-dengar, katanya \"Whistling Flames\" yang dipimpin Tingyun pintar dalam hal memaksimalkan nilai dari barang-barang yang biasa. Prinsip itu sama dengan ramalan: melihat semua kemungkinan dalam segala hal.",
+   "unlockRequirement": "",
+   "cnUrl": "4b812ea0193f6b5f2dc5162fe7ef08befdc3a4f98b1b120aa02ab191e59b6078",
+   "jpUrl": "588bdb6069ca3be4a0a1519b3b0c40aee03ab8423440b067bba27336efbbe7e6",
+   "enUrl": "36a3f67f114ef4cea02a341a9f0177becaa290924824efbcda2356ea40d82c42",
+   "krUrl": "bccb0c8a4b65de80a4a014aa7ba298e1945d398a2d9bea6a5057ebc0ce41a1b2"
+  },
+  {
+   "id": 19,
+   "title": "Tentang Trailblazer",
+   "text": "Bayangan dari kemungkinan masa depan dan arah dari jalan hidup seseorang biasanya akan terlihat dengan jelas ... Tapi, aku tidak bisa melihat semua jejak itu pada dirimu. Aneh sekali ....",
+   "unlockRequirement": "",
+   "cnUrl": "6771cf6cd9fa195dd7529e0d98c50db0b5fe5cd9e0e942316ccdc640e3fe6574",
+   "jpUrl": "61ca645861659aec631f61f396bc167325c2819768aff0dae7ee0f349719dc9a",
+   "enUrl": "b72d1c0ec2383c686b9e5a0abd5ef8a4ba1a365c7b27cf6a1f88bf55ed599606",
+   "krUrl": "bda1329e3571f3d5558ceb92fcdd398adc1085c401a4b4a84d055acfe6636ae4"
+  },
+  {
+   "id": 20,
+   "title": "Tentang March 7th",
+   "text": "Takdir biasanya mengalir di depan kita menuju masa depan. Tetapi baginya, takdir mengalir ke masa lalu .... Baginya, masa lalu adalah hal baik atau buruk?",
+   "unlockRequirement": "Menyelesaikan Misi Bersama \"Mengenang Penuh\"",
+   "cnUrl": "6820001e1d889f86c7f6c244569364a58991852b8cdd5897dee00bcdaa59605b",
+   "jpUrl": "bfc938109b9963133b69a7e6a8f5c2a317c430ddc4448b9f8b487805aa25b468",
+   "enUrl": "d1cf9656b9f3fda96674e6aeaad618c81051378dead6b4ca115914067970bddb",
+   "krUrl": "46fc1a778d67ce33ef2d4f21ffc0ea5fad62c37f59c063f1be8ccb2cea3ccecb"
+  },
+  {
+   "id": 21,
+   "title": "Tentang Huohuo",
+   "text": "Gadis itu mungkin malu, tapi dia dipuji banyak orang .... Kalau aku bisa memiliki banyak sokongan seperti itu, itu akan meringankan beban pikiranku ....",
+   "unlockRequirement": "",
+   "cnUrl": "39fa63bcaaa79be0a1cd5a89d8c28d8774fb7c5f8ff236161b7dfbe59b18067c",
+   "jpUrl": "5f56bad666759afcc0cb44f89b429bd1b74431203fca0991b55e02616fd5ff97",
+   "enUrl": "6975b3c6dcafa3ba893d17687d226bd618d43fc579f5e40713d31fa49b39b767",
+   "krUrl": "79b976325dfe933000b431247951f5e653480cf3ada5c136561f9b89159a0db4"
+  },
+  {
+   "id": 22,
+   "title": "Eidolon Diaktifkan",
+   "text": "Bukankah setiap suap, setiap tetes sudah ditentukan sebelumnya?",
+   "unlockRequirement": "",
+   "cnUrl": "98eea903517411bbe9c3de9c539d045fb3f71a8a76f55fe1c42cfaa774433b77",
+   "jpUrl": "24663878979c68a90e4fd89d58b6ec78ae95f5e70cda6d1f4a7bff1f158818f2",
+   "enUrl": "2e71be25d3035169fc0da7983d24c969a9ce84745a739f5464ec793478feed31",
+   "krUrl": "96a02a615a1521bccbbe2c18c3834c7a2d150603fd760d936dee6f850b07c8ce"
+  },
+  {
+   "id": 23,
+   "title": "Ascension Karakter",
+   "text": "Dengan dukungan dan keuntungan, hidup bebas dari tekanan.",
+   "unlockRequirement": "",
+   "cnUrl": "7d7aa2aa069cbd95eb41f322c024ac9469481e920fb145cfb6a2a050f65566e9",
+   "jpUrl": "4abac7e3bc09b81105fbcd0c9c547c3e542dffedfb18db3f49af965357c60b3f",
+   "enUrl": "761c06d98b32f8432bf99bdb6ef742cf74ff3bc83884424b89f157832104bb2e",
+   "krUrl": "01155fc5fd31b5782c5c70b19775f97fa48c7b9d923395ede5ff85db151208ed"
+  },
+  {
+   "id": 24,
+   "title": "Level Max Karakter",
+   "text": "Bicara tentang \"melihat segalanya\", perjalananku di depan masih panjang ....",
+   "unlockRequirement": "",
+   "cnUrl": "f5267c5f196ff2456c5bea580fbe950662585d756e4a846f2714f3d5a9b0b093",
+   "jpUrl": "2e9e9a2973abb7a6379f16def8c21a5393417f517bccaa74e64ebb9a4437ff02",
+   "enUrl": "8e2c2fec3aec90d4cc701720994bfb94c3c171e1eb912a26c596d502f3ebb61d",
+   "krUrl": "fc761165f985670172d706a680140ee60c608792e45646d0c2fc2bf89fd97dab"
+  },
+  {
+   "id": 25,
+   "title": "Trace Diaktifkan",
+   "text": "Hmm, ini nasib baik atau nasib buruk?",
+   "unlockRequirement": "",
+   "cnUrl": "af4092bb3ede518cc5a329f6299afaf1b761fe7c3474a69e5f8f0ba4632a2173",
+   "jpUrl": "74adf571e4433c1e72ecf83d9b23399e69a8bf225a781657ea72709d6685beea",
+   "enUrl": "86c89256a578029f9c794fb89a43b04cfe7797bd0302d3d53c5e883f4e919ab3",
+   "krUrl": "d03b0ac61b9428cf08af07dbc8e3710bf7313eab311b332352a5b89a0316dec4"
+  },
+  {
+   "id": 26,
+   "title": "Edit Tim: Trailblazer",
+   "text": "Dengan kamu di sisi kami, kami ditakdirkan untuk menang.",
+   "unlockRequirement": "",
+   "cnUrl": "38fccfcdbf6967c8212ea171b75659d3bcc73cf149e15a043018ebef63488541",
+   "jpUrl": "3067f344a7a0b99f9af6d97cc86e4cdcf74daf18e7f4eac88b81375fecb14d91",
+   "enUrl": "6798151bb445254928c2532b1ec59a3eab0bcfd9d7300d0ee418fadb5b4b4319",
+   "krUrl": "3a9ecd0c0fb9d7868ab392580c9f1a6f4b2d7e8a7977c13909c02af560ed3df1"
+  },
+  {
+   "id": 27,
+   "title": "Edit Tim: Jing Yuan",
+   "text": "Jenderal? Kalau begitu tidak perlu meramalkan hasil pertempuran ini ....",
+   "unlockRequirement": "",
+   "cnUrl": "b8d8a72eaaa41e4cd1f9c592bc60fcd65785f0b8f356707bc31c7f4e15125778",
+   "jpUrl": "044a2bdfb119977f72d4e07e66d572374a68f2fc93bc184dd71542bb75d9ac11",
+   "enUrl": "059c2d088fc877f2484280bf7e0ed89c1061c7e4fb8b6f58e026af1ae3c1b8c9",
+   "krUrl": "bb9606cf1d65335e374780e36bb0dbd39385d34af2550a7fa79fd7ca7b022df3"
+  },
+  {
+   "id": 28,
+   "title": "Edit Tim: Qingque",
+   "text": "Qingque? *Uhuk* Aku tahu kamu tidak ada di perpustakaan. Aku sudah menunggu kamu di sini untuk beberapa waktu.",
+   "unlockRequirement": "",
+   "cnUrl": "24b41819bcb49989e9571cfe56ac3f806bb8cae1fe991f8de4209b83807a7f3c",
+   "jpUrl": "31bf1edb911a78855373fa7ad0de6fb6d276850d3f8c170fbf4fd22782df46b9",
+   "enUrl": "500e97c8df2265df194d93ab0a222ef329b2c7b9eff0f3c050d67e9cc681cca2",
+   "krUrl": "02f4c0f913460decaa0e98c5419dc81928f34d0ee0021ad0a7deb2bb9ebac780"
+  },
+  {
+   "id": 29,
+   "title": "Edit Tim: Yanqing",
+   "text": "Kemampuan bela diri kamu melebihi jenderal, sementara aku melampaui dia dalam strategi. Bagaimana kalau kita bergabung?",
+   "unlockRequirement": "",
+   "cnUrl": "b634dfa5ec58719a0881f50494c8ca5d4ff5e8124d3e6b153bc1f6f69d770aeb",
+   "jpUrl": "d3166f57812377ae33fb81b068c855f1f3e5396c31b2e1ed48b4c748c91937d9",
+   "enUrl": "390bbe0204177cc8ac28bd7e36f70b07c295ec36c52abdc327fd32ffa3583257",
+   "krUrl": "47ac3cdb84ccb500086591b73bd952af187ac644f92ea49292a4e516adafb2b5"
+  },
+  {
+   "id": 30,
+   "title": "Edit Tim: Bailu",
+   "text": "Dengan adanya Nyonya Naga di sini, tidak ada lagi yang perlu kucemaskan.",
+   "unlockRequirement": "",
+   "cnUrl": "20889aab0b5adcaea298eb896bec19093c28169ae4ff54a732399d4ca8308cab",
+   "jpUrl": "82bc0e6006ce099c2a0ce0e105e969162291127c10a2b33873d2835cbf66ca1f",
+   "enUrl": "e7a965017a685129dde4e30caf1bf89919b784413ad3595a5a5fb4e0b7f8f759",
+   "krUrl": "ea352ca0a88f4d3617a5e8fd0fb16e3e62465501e097062cf1c4aebc806328a8"
+  },
+  {
+   "id": 51,
+   "title": "Pertempuran Dimulai: Weakness Break",
+   "text": "Semua hal baik berkumpul menjadi satu.",
+   "unlockRequirement": "",
+   "cnUrl": "d1f98f62ad81624cfe5d24f89b16a17c5005e033e56975fe177616feac4a9214",
+   "jpUrl": "11a6c800155a25dbaa01036c60e7350f063341c22d909d627920dda9eb84c774",
+   "enUrl": "e20cafb19339ab895114610f7e25e4c068f641e5c34ee6fb3137299ce9354f89",
+   "krUrl": "e5e9791682d03b1755444b483c530aebd0318e49c11cf773c296e6f6b6770c52"
+  },
+  {
+   "id": 52,
+   "title": "Pertempuran Dimulai: Peringatan Bahaya",
+   "text": "Keberuntungan kita tertutupi oleh awan ketidakpastian.",
+   "unlockRequirement": "",
+   "cnUrl": "c410a317bdd5cab0c43f51eb733fee99bee0bdc9128b23974e61be5fe39a2d17",
+   "jpUrl": "4d566683005bd33721aa100d3fee38b93c89da0d7defd0a47f8c0cb640efe101",
+   "enUrl": "18bf0e9c5f0117516ddba3e971dc3e705bdb1c4ca12d2822d3274d0453ce4a5c",
+   "krUrl": "80923efe5b7c953d2f34b78787bbf126ca329773c67e3066d5cf56d9415fba98"
+  },
+  {
+   "id": 53,
+   "title": "Giliran Dimulai: 1",
+   "text": "Omniscia sudah melihat isi hatimu ....",
+   "unlockRequirement": "",
+   "cnUrl": "abf422d6cf28c74c87a691da83a7eaa8f6274ee798803feb2a9f627babf84aed",
+   "jpUrl": "b6ef1353ead3cba9d3567edb7b77fe9e4c62c91b8024171e1cc28e7507dd71c9",
+   "enUrl": "8f357debd931457874127724c44c755b01b09f5a5f6809b8f38bc2a95780c281",
+   "krUrl": "75e459e89057f38f605539723af6d1c026b43fddf167b0152f13c50574da03e8"
+  },
+  {
+   "id": 54,
+   "title": "Giliran Dimulai: 2",
+   "text": "Izinkan aku untuk meramal.",
+   "unlockRequirement": "",
+   "cnUrl": "01aa4cf2acd990f27ce783db09ece4f8094e1ab60dd07096b5bc6ee75216ba05",
+   "jpUrl": "966d690880fbbaae45eebad0ee3a1b0e0aff507285348fc154d089febf9fe798",
+   "enUrl": "5ec506d0d643184d533f3763c113ae8504d3a266a663aef9029bc4623e40daf2",
+   "krUrl": "9981f65c046ab833ed9b105c1d1027c9fd8f54acb37fc8fa254a40bfb4fb8f7e"
+  },
+  {
+   "id": 55,
+   "title": "Menunggu Giliran",
+   "text": "Keraguan hanya akan melahirkan kekacauan.",
+   "unlockRequirement": "",
+   "cnUrl": "a8e91e1c83b34a92e7c0acf1679b026e555d535c29877971106f8565183d3b39",
+   "jpUrl": "ea2b3ec0f958520c820fe9c2110c7560d8e4b36f2fc6933bf573544c2849d77c",
+   "enUrl": "54a1df2069ff4ba111069437fb2a5517224b51b0cbf69a51b28027ec82b06db1",
+   "krUrl": "e7359368424e77b59c17a29fc394764862bd605abe6cee5020ebe7916711dc9c"
+  },
+  {
+   "id": 56,
+   "title": "Basic Attack: 1",
+   "text": "Dengan seluruh kekuatanku ... Perlihatkan masa depan!",
+   "unlockRequirement": "",
+   "cnUrl": "42f41d3afd01fd18e5e9ba47643b4509ac35aa0bc2d41057645b13bdb865742a",
+   "jpUrl": "c844c97139b145f008b4d6991b91d0ab4d564213662205838a3042c08e7e594d",
+   "enUrl": "e0f9991f2a8b8c4da9ebe8915691dd3a1f65e5d0bd4718f2988fcb21951dbdf4",
+   "krUrl": "69b398111fa0f1001d9460cdb749e1582907000e246436ae31ff46da98f90e8f"
+  },
+  {
+   "id": 57,
+   "title": "Basic Attack: 2",
+   "text": "Dalam formasi yang selaras!",
+   "unlockRequirement": "",
+   "cnUrl": "407483b98cc00a2106fef96646d470d1522802c426d5a8dc7a4fbd7820f3db70",
+   "jpUrl": "cfa56db56fca6aa6c7ec264ba69b00520ad4d56f38798a7b241332c554760309",
+   "enUrl": "905b0717ac78c09814f8cfbb3540983403ab4bfc8d9bd7e8a7bc61394d7dc3df",
+   "krUrl": "2e78c8b5b5786e980a5cb49e99eb75f92926340b409eb18dc767e1955b1c2b94"
+  },
+  {
+   "id": 58,
+   "title": "Skill: 1",
+   "text": "Bersama menjadi satu.",
+   "unlockRequirement": "",
+   "cnUrl": "ac123080960ce5f2d6aef845eeeb5f573292d3ccfaa874bd86cbe135c1c7ebdc",
+   "jpUrl": "ffcd965594060d79ff0283142ca9c0d4e5c874c3bde3bcc660f2b9211aa14bf7",
+   "enUrl": "ac63ef81008a62d1c5298b11f47321bf12cecf940b1dd8e205c9e94e4bfdc64e",
+   "krUrl": "75e4913d9c7edbd2faf4fe5e8d3c63272547d53734a0ea50084eae3b084cc7b7"
+  },
+  {
+   "id": 59,
+   "title": "Skill: 2",
+   "text": "Bersatu dan bangkit.",
+   "unlockRequirement": "",
+   "cnUrl": "46b7c5e083fc7344f11fa2481e13a4f8e2af8bfb1cd84b4b7a20bc611dc30f34",
+   "jpUrl": "725f79075c6124ab94715a694de6e6e23631bf98f97920d55a34487799c62320",
+   "enUrl": "a9c60cb92a631ff98c1e36ed2e2041e1fb0037fee230ec4075c20c24b75c34d4",
+   "krUrl": "aeabfd44c15477999d058e5923b569dd39c1d7b6246a237f4624a5a71f38c3db"
+  },
+  {
+   "id": 60,
+   "title": "Terkena Serangan Ringan",
+   "text": "Bukan masalah.",
+   "unlockRequirement": "",
+   "cnUrl": "55e76e2d950f9a64f85c214f042f1ef1bbc3da3841d5e799800c1a7ae97ded8c",
+   "jpUrl": "9a2b46b6f7ebd1628224fcdf4291149335479dd60659cb71e14a6e42327a77c2",
+   "enUrl": "2a30892c9db1c2cc332cd069ab17c13c230ea91b98498d67d24728319f063416",
+   "krUrl": "1b71cf774ec7cba714ebf13f48998060980a7fc772b51021cc5b36caab774376"
+  },
+  {
+   "id": 61,
+   "title": "Terkena Serangan Berat",
+   "text": "Si-sial ....",
+   "unlockRequirement": "",
+   "cnUrl": "05f1b57ac0383b57773d099cf4a5081acef30729efcc0f7d2e12f18491768498",
+   "jpUrl": "95dd5baa78bae91b1942872fd314213cfecc04be462eb97132a6852931605a4e",
+   "enUrl": "0aa580d7ee01a058fcbbd8fcd83b66a5286974e1dd90bec6b2be78e2c3fe8be6",
+   "krUrl": "9cb745da463a6aa8980320a63d85faaa1bd571d8e75924c66877d96c21a1d6bb"
+  },
+  {
+   "id": 62,
+   "title": "Ultimate: Aktifkan",
+   "text": "Semua yang ada di dunia ini ada hukumnya masing-masing ....",
+   "unlockRequirement": "",
+   "cnUrl": "bec56b18f22696dacda49fdbebb070c052b13d3080133e085493f6523d3c5af8",
+   "jpUrl": "cdae8adf7da637306b076e9ceca556c68de1ca2f27161ce01a6d39c0b18966dd",
+   "enUrl": "d4ee019b30131bd1e2c5c5444b9552b8c5524b02c9846c1a415d79b166e05a03",
+   "krUrl": "6b0b4acc3ef0da3ef81541ad1649d39b4ade2e35ddb3aaf3c1d62192f008ba12"
+  },
+  {
+   "id": 63,
+   "title": "Ultimate: Pelancaran",
+   "text": "Tapi taktik, konstelasi ... adalah ciptaan manusia!",
+   "unlockRequirement": "",
+   "cnUrl": "655f87eb93710cc07aa605fcf673f7d019dc9c37ebc0efa5381c4e01bf98a3c3",
+   "jpUrl": "0971fdfd4c55696f33fcea0f5af5ccdadbe5d773ed67754e6662d2962f8daf40",
+   "enUrl": "e83c49029acc280a6cfb25de80176e44abca46b1c4357a68de2768b5b38b0529",
+   "krUrl": "f592098909acfae0487e2480f787f6e6a6b6b1a35343b2c1bc52e51920f7df00"
+  },
+  {
+   "id": 64,
+   "title": "Talent",
+   "text": "Yin dan Yang, kehidupan dan kematian.",
+   "unlockRequirement": "",
+   "cnUrl": "524d1e0d40134b45cab23a96bc29239ae9f6d2e22e736cb2ab87ed1db3170706",
+   "jpUrl": "42d5706e70ddc5a7f9f78bef4eb1dd8ede051220e83dd8fa78c8bf9677903f03",
+   "enUrl": "697b3a07fb8a0ae3279e28604944b0b5cc4f475319937da783b5fb4afd7cd01e",
+   "krUrl": "546955dac2a7a51efddc7c4104a1c1c4be0d6f89bdb38c14bdbaddd97815be88"
+  },
+  {
+   "id": 65,
+   "title": "Gugur",
+   "text": "Apa hal ini ... sudah ditentukan oleh takdir ...?",
+   "unlockRequirement": "",
+   "cnUrl": "8d564c9e12aca03c25fc5fcb4e7c3d74e5e5aa7184018208f09d8589fcbf1ec1",
+   "jpUrl": "cc3a737978c73c56bfc066ee9053495d2d6003cbf32c4fac5c5976a8a20ee88a",
+   "enUrl": "3617466a2f606b50f65d80f780748c3a37c6e2795d292bc848acd7ba302fcdf9",
+   "krUrl": "3b148c59af63fb75c54ee3f034092f95c8e1f93db6f204e5211bf457115528f0"
+  },
+  {
+   "id": 66,
+   "title": "Kembali ke Pertempuran",
+   "text": "Keberuntungan pasti akan kembali.",
+   "unlockRequirement": "",
+   "cnUrl": "36f5e6f55b5a2cf8fb13dc954c81e9921f8fb71f9b10af0707de6c1174f4f032",
+   "jpUrl": "ad4e9e3e51813b41eb5dea9d9ce3169455d781775b910765633b7986bdc83f60",
+   "enUrl": "615e1fd70e38683353e841fd86ca47ed872d346f8488e9f147b6f55dac8bc600",
+   "krUrl": "e4ddb0715f8ef2dd62b39a4941721aca5568dbcfb707bd9f088902ed4a7e2f13"
+  },
+  {
+   "id": 67,
+   "title": "HP Pulih",
+   "text": "Timbal balik ... luar biasa.",
+   "unlockRequirement": "",
+   "cnUrl": "9951424198ce595a253686a78a6200bd75527e87a4c6435b7ce3ff59ef8ca00f",
+   "jpUrl": "50e0498c43d2ab8cd3469473201d98c201bb2bb73e17e4a83b4d1748f4aa6ccd",
+   "enUrl": "52576dd5c031ee68fa4b4dc17f9afdea1318b59a689045a5dffd8fbe5ed282d2",
+   "krUrl": "55d28f6dab4910167c107e19a4d9958987398120842dd438a8f703cb5b8acfc6"
+  },
+  {
+   "id": 68,
+   "title": "Technique",
+   "text": "Sempurna.",
+   "unlockRequirement": "",
+   "cnUrl": "5d7c64511f378df5a447740e60dd85df8387d8193303bc2d05e1fb23165a1a77",
+   "jpUrl": "b49c217a84abda375a5c7840f57e4b281317cc7c8d0079fa37dbf47a263471fc",
+   "enUrl": "0751620ad41736a7523fbf882df675820e9493d07957b0433173cb2f3aacf42b",
+   "krUrl": "e80e4da100521590112deadd64f478fb335b84373cf0108afaff9af9cc9c74ef"
+  },
+  {
+   "id": 69,
+   "title": "Menang Pertempuran",
+   "text": "Semua hal selalu berubah dalam ramalan.",
+   "unlockRequirement": "",
+   "cnUrl": "dbe881f10c0285e9263b7688283dd859f1dafa084671e650bfff431e0cd5cf69",
+   "jpUrl": "937247427804022db5045faf7bb90e3599e55ef630e42dc768e755fadfcd6f5d",
+   "enUrl": "8e245bf79d3c29d8e3fb71fc0bb35996e84641a528906272f832bdde10ad5624",
+   "krUrl": "de5e874f6d86eb1cb71f4e92d02dff6f55547dd4fac977037858bf30a5661435"
+  },
+  {
+   "id": 70,
+   "title": "Membuka Peti Harta 1",
+   "text": "Sama seperti yang aku duga.",
+   "unlockRequirement": "",
+   "cnUrl": "5618e41058b0192ff35febce9c4af91df0194a560edcd64484d2de67ddb62ee0",
+   "jpUrl": "d161c1bad5751dd66b28415b50a439423757a6c7379b90ac0e487b9574f8f852",
+   "enUrl": "f0adbdd3d3f301ab454f3fb2890bef50f5266c1013bd8ba53cf12fdd625a3a79",
+   "krUrl": "bdf9ee61411b342e273059997fc9d11accccf395b6193ab7b79889bf24bfdb18"
+  },
+  {
+   "id": 74,
+   "title": "Membuka Peti Harta 2",
+   "text": "Sesuai ramalan.",
+   "unlockRequirement": "",
+   "cnUrl": "daa111ba11aca90d06ecc42f3c137a9d0cae4da738eba8aebe44381e861e9d44",
+   "jpUrl": "bada01227f0e445fabce0388d5f679966792b3dac43cb9372583e319036a0b79",
+   "enUrl": "b1433e1206d390c80b97ef8a9714c7b573d2150b20fec80d28af0f53d10260c3",
+   "krUrl": "51280c4d8e79d1e61a20734e8761553fa3e2d730c58b135875a5828ecd411024"
+  },
+  {
+   "id": 75,
+   "title": "Membuka Peti Harta Berharga",
+   "text": "*Uhuk* Tak terduga. Kita sebaiknya tidak mengambil terlalu banyak ....",
+   "unlockRequirement": "",
+   "cnUrl": "94c1cdcf62502409a6a28887f874c47b8ef924f9352fc63368282be2b433e399",
+   "jpUrl": "b4ef01487e8d96a3ea00c93566347804ab085eb08246cd143b5444c4e0d67bde",
+   "enUrl": "a0a2803ca0a7e680183b62d2a24f34c085e97d557ffe6cbfd15162b876deba94",
+   "krUrl": "4f725fa333663578cbc1eb2a09669e3c4ed712cf920dae398168feed386d50cd"
+  },
+  {
+   "id": 71,
+   "title": "Berhasil Memecahkan Teka-teki 1",
+   "text": "Kasih aku teka-teki yang lainnya dong.",
+   "unlockRequirement": "",
+   "cnUrl": "03adab884390ccfd98cc027bfbba2ed0c5f63e9d578b700e24246e02f9aaec83",
+   "jpUrl": "648fbde7db34d7a0ec33db7aff157ddb0a317d0f68d246ef6b10489a2341968c",
+   "enUrl": "fea40520da9eaa47d5ee749518b2b68837e420312e5d7ba2097e12de08eda177",
+   "krUrl": "8278c3d4860546a19eb77f25b481e5796144ec9d7a37516c2b2f6b444c7f1ee2"
+  },
+  {
+   "id": 76,
+   "title": "Berhasil Memecahkan Teka-teki 2",
+   "text": "Ini sejak lama sudah dicatat dalam teks-teks kuno.",
+   "unlockRequirement": "",
+   "cnUrl": "bd5f3f360424368b351e66888b51fcd7e38bece3027de56639a6f2e5c0050528",
+   "jpUrl": "a08b2bffe3438ff93c75a1347432793b95983aa7406b3578ed53ed7e28b829eb",
+   "enUrl": "7d404312f41ad19f58334c56d3b9c4ed8a1c05069e4734e9a9b8f66fae37bddd",
+   "krUrl": "c4e39ab5d39d7c2a78649ac1a121d03f3abb64f2a6ae7f5295d665d35ed667e2"
+  },
+  {
+   "id": 72,
+   "title": "Menemukan Target Musuh",
+   "text": "Berhati-hatilah — selalu.",
+   "unlockRequirement": "",
+   "cnUrl": "f6ed4810df5360ab31eb3a5a38f4d16078c751869eefd9269dff4efe4722726e",
+   "jpUrl": "a2588b730dde873a0432d8193015c105b8a4848d3ccdc6ee16fec378d12314e7",
+   "enUrl": "7264026f85b1bc50ac7f7cd19dcf853d546fd468862c33b66d5ad4b521df946c",
+   "krUrl": "c2f6236d56e4b0a40efa43138e9260276f615507ccf822fc9e42438932118667"
+  },
+  {
+   "id": 73,
+   "title": "Kembali ke Kota",
+   "text": "Informasi dalam heksagram itu akan selalu mengalir, yang terpenting adalah membuat perencanaan.",
+   "unlockRequirement": "",
+   "cnUrl": "e3dd7b03b481d5683e9bb3c8aa7a450625cbbb56efde6f294c2c9383d6e6c7c6",
+   "jpUrl": "dc77f4c466aad44f3652e12875a174a59d682897b953f08a538d73ac910b44f3",
+   "enUrl": "51464f9243531d4180f7e99a5d107e4d51f6b73c32ac6ed8c5424c98623fb603",
+   "krUrl": "d383c4bb64e6f55e121f2d125c4debab3c92cf4f851be6bdb025a170c7981f54"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Detail Karakter",
+   "text": "Kepala dari Divination Commission Xianzhou \"Luofu\". Orang bijak yang percaya diri dan blak-blakan.<br />Dengan mata ketiga dan keahlian dalam mengurai Matrix of Prescience, Fu Xuan meramalkan jalur pelayaran Xianzhou dan meramalkan peruntungannya. Dia sangat meyakini bahwa apa pun yang dilakukannya adalah \"solusi terbaik\" untuk segala situasi.<br />Fu Xuan menunggu janji sang jenderal untuk \"berhenti dari jabatan dan memberinya kesempatan\", namun tampaknya hari itu belum kunjung tiba ... dan masih jauh.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Kisah Karakter 1",
+   "text": "Setelah bertahun-tahun, Fu Xuan selalu teringat akan saat dirinya mendapat izin untuk masuk ke \"perpustakaan\" dan ditanya.<br /><br />\"Apa yang sedang kamu pikirkan?\" Tanya orang tua buta dengan kacamata hitam. Tangannya menopang tongkat, kepalanya sedikit miring sambil menunggu jawaban dari gadis itu.<br /><br />\"Apakah semua momen ketika kita bisa membuat pilihan ... sudah ditentukan oleh takdir? Atau jika pada saat itu, aku bisa memprediksi lebih akurat, meskipun hanya satu dari sejuta, aku bisa membuat pilihan yang tepat dan mencegah mereka pergi?\" Gadis itu memejamkan setengah matanya, seperti bertanya dan menjawab dirinya sekaligus.<br /><br />\"Setiap saat, kita berdiri di pusat labirin yang kita sendiri langkahi.\" Orang tua buta itu dengan lembut mengetuk-ngetuk tongkatnya. \"Aku tak bisa memberikan jawaban. Aku hanya bisa memberikan pertanyaan ... dan pandangan untuk melihat pertanyaan. Dan dari perjalananmu sejauh ini, yang kamu cari dariku pasti bukanlah jawaban.\"<br /><br />\"Kalau begitu berikan aku 'mata'. Tidak peduli apakah takdir sudah diputuskan dari awal, sebagai Diviner, aku ingin mendapat penglihatan lebih jelas.\"<br /><br />\"Seperti yang kamu harapkan. Tapi tubuh fisik orang Xianzhou akan bertahan. Menerima 'mata' dariku berarti menerima penderitaan yang abadi. Dibandingkan dengan sebuah alat pengetahuan, mata ini lebih seperti 'alat penyiksaan'.\"<br /><br />\"Bukankah ini sejalan dengan prinsip Wisdomwalker? Bahwa pengetahuan diperoleh dari penderitaan? Aku tidak ingin membuat kesalahan yang sama dalam pilihan masa depan.\"<br /><br />....<br /><br />Dalam kebingungan yang mengikuti pemberian \"matanya\", dia menyaksikan banyak kejadian masa lalu.<br /><br />Dia melihat dirinya di masa kecil duduk dengan tegak, tak henti membaca. Dia melihat ayahnya dengan penuh sayang mengetuk keningnya, dengan bangga memuji kecerdasan dan keanggunannya. Dia melihat orang tua menunjukkan kepadanya sejarah gemilang klan Fu sebagai keluarga terhormat Stargazer di Xianzhou Yuque. Dia melihat para Diviner merencanakan dengan hati-hati, meramalkan masa depan yang gemilang baginya — dia akan naik takhta sebagai Master Diviner.<br /><br />\"Ini masa depanku?\"<br /><br />\"Semua hal sudah ditakdirkan dan seharusnya tidak dicari dengan usaha manusia. Ini adalah takdirmu. Hasil ramalan telah disampaikan kepada Master Diviner Jingtian, dan beliau setuju untuk secara pribadi mengawasi studimu. Ini adalah anugerah besar yang telah kamu peroleh.\"<br /><br />Semua masa lalu tumpang tindih dalam kabut probabilitas ... seperti mimpi dan kenyataan, berubah datang dan pergi di tepi kesadaran, membentang menjadi masa depan yang tak terhitung. Dia berusaha sekuat tenaga untuk memilah, dalam momen yang luas ini, mencari hari ketika dia resmi menjadi seorang Diviner.",
+   "unlockRequirement": "Buka Level karakter <nobr>20</nobr>"
+  },
+  {
+   "title": "Kisah Karakter 2",
+   "text": "Pada hari itu, di bawah Cloudpeer Telescope Xianzhou Yuque, Fu Xuan bertemu dengan gurunya. Namun, dia tak dapat memercayai bahwa pria di hadapannya adalah sang Master Diviner yang dihormati para tetua dengan begitu khusus. Pria tersebut mengenakan jaket pilot yang agak tua, duduk di tanah dengan santai, dan dengan penuh konsentrasi menatap pergeseran titik cahaya dalam array proyeksi.<br /><br />\"Murid yang rendah hati, Fu Xuan, memberi salam kepada Master Diviner.\" Setelah ragu sejenak, gadis muda itu membuka mulutnya.<br /><br />Pria itu tidak bergerak sedikit pun, hanya mengacungkan satu jari dan menunjuk ke gambaran. Fu Xuan memperhatikan bahwa tangan pria itu sekarang digantikan dengan perangkat ingenium berbahan kayu, meskipun alasan di balik hal tersebut tidak jelas. \"Pasukan Orbit Fleet Nephjade Yuque sedang bersiap untuk menghadapi serangan di Thalassa, bekerja sama dengan Armada Yaoqing dalam upaya membasmi entitas jahat. Kamu pasti sudah mendengarnya, kan? Namun, nasib telah ditentukan bahwa mereka tidak akan menang dalam pertempuran ini.\"<br /><br />\"Oh? Armada Yaoqing memiliki reputasi yang terhormat dan jarang terkalahkan. Menurut laporan perang, pasukan kita memiliki jumlah personel dan kapal perang yang jauh melebihi kawanan Borisin. Bagaimana mungkin mereka mengalami kegagalan?\"<br /><br />\"Pertanyaan yang bagus. Sepertinya kamu bukan anak magang yang dengan mudah menerima takdir.\" Pria itu berdiri dan menyapu debu dari pakaiannya. \"Diviner mengakui takdir namun tidak selalu menerimanya. Mencoba mencari pilihan terbaik di antara berbagai kemungkinan adalah hal yang patut diacungi jempol. Namun terkadang apa pun yang kamu pilih, takdir hanya menawarkan satu jalan di hadapanmu. Ketika ramalan selesai dan kamu hanya diberikan dua hasil yang berbeda, 'malapetaka' dan 'malapetaka besar,' bagaimana kamu akan memilih?\"<br /><br />\"Ketika dihadapkan pada dua malapetaka, wajar sekali untuk memilih yang lebih ringan. Ini adalah pelajaran pertama dalam ramalan.\"<br /><br />\"Tapi bagaimana kalau kita tidak bisa membedakan ringan dan beratnya malapetaka, dari perspektif manusia?\" Pria itu membalikkan badan.<br /><br />\"Ramalan ini diperoleh melalui perhitungan menggunakan formasi yang baru diatur 'Barier Pantulan Cahaya Deca'. Ada dua hasil: meminjam Pasukan Orbit Crane Feather dari Xianzhou Yaoqing, atau mengalokasikan Pasukan Orbit Crane Feather dari Fanghu. Kamu bisa pilih salah satu. Memilih Pasukan Crane Feather tentu akan memungkinkanmu menggunakan kekuatan militer mereka untuk serangan kuat dalam jangka pendek, tetapi tidak akan ada kesempatan lebih lanjut untuk kemenangan setelahnya. Memilih Pasukan Orbit Ebony Pearl berarti bertahan menghadapi jarak yang luas antara kita dan Fanghu, dan membiarkan konflik berlangsung selama enam bulan. Selama waktu itu, kita juga harus menghadapi beberapa serangan balik dari musuh. Dan tak perlu dikatakan lagi, pasti akan ada korban. Namun, jika mempertahankan posisi defensif sampai bala bantuan tiba, maka kemenangan mungkin terjadi.\"<br /><br />\"Dan sepertinya mereka memilih pilihan yang pertama?\"<br /><br />\"Benar sekali. Hasil ramalan hanya dapat memberikan informasi strategi, tetapi tidak dapat mewakili keputusan sang jenderal. Dia memilih opsi yang menghasilkan kerusakan paling sedikit pada saat ini. Namun aku tidak salah meramal. Kegagalan ini adalah hasil yang ditakdirkan.\"<br /><br />\"Prinsip-prinsip dalam seni perang menyatakan bahwa keunggulan dalam jumlah dapat menguntungkan untuk memulai pertempuran, dan memanggil bantuan Yaoqing mungkin bukan keputusan terburuk. Selain itu, tidak ada yang pasti di dunia ini. Bagaimana Anda bisa begitu yakin, Master Diviner? Bagaimana Anda bisa berbicara seolah-olah semuanya sudah ditakdirkan sebelumnya?\"<br /><br />\"Tidak ada yang pasti di dunia ini?\" Pria itu mendesah berat. \"Awalnya, aku juga berpikir seperti itu. Ketika pertama kali mendapatkan hasil ramalan ini, aku mengira kalau ada kesalahan perhitungan, namun setelah diulang, hasilnya tidak berubah. Jadi aku memutuskan untuk pergi ke medan perang dan menyaksikannya sendiri.\"<br /><br />\"Selama beberapa minggu terakhir, aku mendekam di Thalassa dan berperang melawan Abomination, lalu memenangkan kepercayaan penduduk. Kemudian aku mendapatkan berita mengejutkan: sebulan lagi, gelombang pasang besar yang disebut 'Gelombang Iblis' oleh penduduk Thalassa akan datang.\"<br /><br />\"Tidak ada yang akan bisa terus berperang melawan Abomination dalam kondisi yang begitu dalam tanpa bantuan dari penyihir Cloudhymn Vidyadhara Fanghu. Informasi ini tidak ada dalam catatan sejarah mana pun, juga tidak ada dalam arsip militer kita. Dan untuk memverifikasi informasi yang tidak perlu ini, aku membayar harganya dengan tanganku.\"<br /><br />Pria itu tersenyum pahit sambil mengangkat tangan kayu dan menggoyangkannya sedikit. \"Terkadang, hanya ada satu jalan dalam takdir. Semua telah ditakdirkan.\"<br /><br />\"Oh ya, kamu tidak perlu memanggilku Master Diviner. Mulai hari ini, kamu panggil aku sebagai 'Guru'.\"",
+   "unlockRequirement": "Buka Level karakter <nobr>40</nobr>"
+  },
+  {
+   "title": "Kisah Karakter 3",
+   "text": "Di Yuque, Divination Commission, dia menghabiskan masa belajarnya yang paling bahagia. Tentang takdir dan kehendak bebas, tentang perhitungan formasi dan pertimbangan manusia .... Dalam segala hal yang berkaitan dengan ilmu ramalan dan divinasi, gadis itu ingat bahwa dirinya selalu berdebat tanpa henti dengan gurunya. Ini bukanlah pertikaian keras, melainkan perdebatan dengan seorang guru yang juga sahabat. Meskipun pada sebagian besar masalah, gadis itu dan gurunya akhirnya sepakat, namun ada satu hal yang tak terhindarkan dalam hubungan mereka —<br /><br />Sejak memperoleh buku-buku perhitungan dari Nous, Divination Commission Yuque telah bekerja keras selama berabad-abad untuk memahami dan mewujudkan ilmu perhitungan ini, yang akhirnya membangun formasi matriks divinasi yang terbaik di seluruh aliansi. Para Diviner di Yuque sangat bangga dengan pencapaian ini. Namun bagi Fu Xuan, ini hanya berarti mengunci masa depan orang-orang Xianzhou dalam jalur sempit yang telah ditetapkan oleh formasi matriks tersebut.<br /><br />Ketika orang percaya bahwa apa yang ditunjukkan oleh matriks divinasi pasti akan terjadi, maka pilihan seakan menjadi semacam konsep kosong belaka. Di alam bawah sadar, para Diviner menjadi tawanan dari matriks tersebut, harus mengikuti waktu yang baik untuk melakukan perjalanan, tinggal dan berhenti di waktu malapetaka, mematuhi apa yang ditunjukkan oleh divinasi setiap hari, apa yang harus dan tidak boleh dilakukan.<br /><br />\"Memangnya kalau matriks memberi tahu aku bahwa aku akan mati besok, aku harus segera mengakhiri hidupku sendiri? Kalau begitu, apa bedanya dengan meramal dan tidak?\"<br /><br />\"Perbedaannya terletak pada fakta bahwa kita tahu bahwa kita berjalan di atas rancangan besar takdir. Ini adalah jalan tertinggi yang dikejar oleh pendiri Divination Commission, Grandmaster Xuan Yao.\"<br /><br />\"Dengan bantuan matriks, para Diviner hanya perlu beriman dengan tulus, patuh pada wahyu, dan membuat keputusan demi keputusan — meskipun jika terlihat tidak masuk akal dan sangat sulit. Semua ini pada akhirnya akan membawa Xianzhou menuju pencapaian yang diidamkan — untuk memberantas Plagues Author, meringankan dunia dari penderitaan hidup abadi.\" Ekspresi pria itu seperti seorang yang tercerahkan yang telah menerima wahyu, tampak sangat tenang. Dia melihat Fu Xuan, \"Sama seperti aku menerima kamu sebagai murid, karena aku telah mengetahui jalan hidupmu.\"<br /><br />Bukan demi bakatku? Juga bukan demi koneksi keluargaku? Hanya untuk memenuhi prediksi tertentu? Sungguh tidak masuk akal! Kemarahan memenuhi hati Fu Xuan, dan dia tidak bisa berkata apa-apa untuk sesaat.<br /><br />\"Kamu tahu tidak? Saat menginpresentasikan 'Barier Pantulan Cahaya Deca', setelah membaca heksagram, aku yakin kalau takdirku akan terputus di tanganmu. Tapi aku tetap menerima kamu sebagai muridku dan menunggu kamu menggantikanku menjadi Master Diviner di Xianzhou Yuque. Karena semua ini sudah ditakdirkan.\"<br /><br />Sudah ditakdirkan? Takdir dia akan terputus di tanganku?<br /><br />Bilangnya seperti Xianzhou masih di Era Tiga Kesengsaraan. Seperti dia sangat menginginkan posisi Master Diviner, berencana untuk menggulingkan gurunya dengan segala cara yang diperlukan. Guru yang menyebalkan!<br /><br />\"Sedangkan aku ... aku pasti tidak akan biarkan hal itu terjadi!\"<br /><br />Gadis itu menghormati segala hal tentang gurunya sebagai seorang diviner: pikiran, teknik, bahkan kepribadian. Namun dia hanya tidak bisa menerima fakta bahwa guru, yang seharusnya mampu meramal takdir, malah terjerumus dalam jurang takdir dan menganggapnya sebagai hal yang wajar.<br /><br />Sehingga tanpa menghiraukan desakan keluarganya, tanpa memedulikan semua rintangan, Fu Xuan melarikan diri dari Xianzhou Yuque dengan cara yang hampir seperti pengasingan diri. Dia bergabung dengan Divination Commission Luofu yang lebih bebas, menyerahkan dirinya pada ramalan. Dia bukan hanya ingin menjauh dari Xianzhou Yuque, tetapi juga ingin membuktikan dengan tindakan bahwa ramalan ini hanyalah khayalan yang tidak masuk akal dari seseorang.",
+   "unlockRequirement": "Buka Level karakter <nobr>60</nobr>"
+  },
+  {
+   "title": "Kisah Karakter 4",
+   "text": "Demikianlah seratus tahun berlalu dalam keheningan, dan saat konflik meletus sekali lagi. Sebagai Pengelola Diviner, Diviner Fu Xuan ditugasi dengan perhitungan yang tak henti-hentinya. Pasukan Denizens of Abundance terbentuk sebanyak tiga kali, melancarkan serangan mendadak terhadap Armada Fanghu Vidyadhara. Jarak Xianzhou Yuque, Luofu, dan Fanghu tidak terlalu jauh, dan datang untuk memberikan bantuan adalah suatu kewajiban. Hasil ramalan menunjukkan bahwa jika mereka berusaha sepenuh tenaga untuk melawan serangan tersebut, armada mana pun yang ikut berpartisipasi akan menghadapi kekalahan yang brutal. Namun, bertahan dan mempertahankan posisi bisa memberikan kesempatan untuk membalikkan keadaan.<br /><br />\"Namun, gambaran heksagram tidak menunjukkan peluang perputaran di mana-mana. Fu Xuan mengulangi perhitungan berulang kali, mengambil tindakan dengan hati-hati, tetapi hasil dari pengamatan Matrix of Prescience masih tetap tidak berubah.\"<br /><br />\"Tidak ada orang yang akan memilih kegagalan.\" Semua yang bisa dilakukan oleh Diviner cuma sampai di sini. Fu Xuan dengan jelas menguraikan pro dan kontra di atas kertas, menghadapkan hasil ramalannya kepada Seat of Divine Foresight. Seperti dugaan, hasil dari pertemuan antara Arbiter dan Jenderal menunjukkan bahwa koalisi Abundance yang berkumpul di sekitar Fanghu sangat kuat dan tidak bisa hanya mengandalkan taktik defensif. Pasukan Cloud Knight Luofu dan Yuque harus bersiap untuk bertempur, mencari waktu untuk pasukan Yaoqing yang sedang datang.<br /><br />Pada hari itu, melalui papan pasir proyeksi, Fu Xuan menyaksikan kekalahan yang menghancurkan pasukan bantuan aliansi. Borisin tidak hanya membawa armada dan mechabeast yang menutupi langit, mereka bahkan memanggil \"Ketu Mirage\", Incarnosphere dari legenda kuno. Entitas jahat ini tertarik dengan Fanghu, dengan tekad membawa bencana kehancuran bagi semua kehidupan di atasnya, mengulangi tragedi tenggelamnya Xianzhou Cangcheng. Dan manusia hanya bisa melihat dengan mata terbuka saat entitas ini mendekat.<br /><br />Apakah yang bisa dilakukan Diviner hanya begini saja? Dalam kegelisahan dan kemarahan, timbul gagasan berani dalam pikiran Fu Xuan. \"Aku ingin bertemu dengan Jenderal Jing Yuan!\"<br /><br />Setelah menemui jenderal, gadis itu pun mengungkapkan pendapatnya. Dengan kekuatan Cloud Knight saat ini, mengambil kemenangan adalah hal yang mustahil. Kesempatan satu-satunya adalah membuat Reignbow muncul.<br /><br />Di luar dugaannya, setelah mengucapkan pemikiran yang rasanya seperti penghujatan dan hal yang tidak masuk akal ini, sang jenderal yang terlihat sedikit lelah di hadapannya tidak menunjukkan ekspresi meremehkan apa pun dan malah mengangguk.\"Apa rencanamu?\"<br /><br />\"Xianzhou Yuque memiliki perangkat pengamatan bintang utama di aliansi, Cloudpeer Telescope. Perangkat ini bukan hanya dapat digunakan untuk pengamatan, tetapi juga dapat mengirimkan pesan keluar ... maksudku, kita bisa menggunakan kapal penempur Navis Astriger untuk membawa Cloudpeer Telescope ke Fanghu, dan memohon bantuan dari tempat terakhir Lux Arrow Reignbow. Kalau kita bergerak cepat, sebelum bintang itu jatuh, masih ada peluang untuk mengubah keadaan.\"<br /><br />\"Kamu tahu jelas ... satu-satunya tanda dan kemungkinan konsekuensi dari kedatangan Reignbow ke dunia manusia, bukan?\"<br /><br />\"Ya. Sebagai pencetus rencana ini, aku siap untuk pergi ke medan perang dan melaksanakan tindakan ini.\" Gadis itu tampak serius. Dia sangat menyadari seberapa luar biasa pemikiran yang diajukannya.<br /><br />\"Terima kasih untuk saranmu. Tapi saat krisis tiba, Enam Nakhoda harus bertindak bersama. Selain itu, kamu tidak memiliki izin untuk mengoperasikan alat tersebut. Jika rencana ini berjalan tidak semestinya, aku akan bertanggung jawab atas semua konsekuensinya sebagai orang yang mengajukan saran ini. Jangan terlalu mencemaskannya, Nona Fu.\"<br /><br />Saat melihat sosok jenderal menjauh, Fu Xuan tiba-tiba tersadar, menyadari arti dari \"Enam Nakhoda harus bertindak bersama untuk mengatasi krisis\": orang yang memiliki izin untuk menggunakan Cloudpeer Telescope, bahkan mengirimkan sinyal dengan format keputusan Reignbow —<br /><br />hanyalah Master Diviner Yuque.<br /><br />....<br /><br />\"Inikah tujuanmu mencari 'mata'? Aku melihat mimpi-mimpimu ....\"<br /><br />Gadis itu tidak membuka matanya, namun dia bisa melihat dunia di sekelilingnya yang dari asap terbentuk menjadi substansi. Semua kemungkinan memudar, hanya tersisa pilihan tunggal yang jelas dan pasti.<br /><br />\"Semua itu bukanlah mimpi, melainkan masa lalu yang menjadikan diriku yang sekarang.\"<br />\"Yang dia katakan itu benar. Sebenarnya hanya ada satu jalur yang dimiliki takdir.\"",
+   "unlockRequirement": "Buka Level karakter <nobr>80</nobr>"
+  }
+ ],
+ "archive": {
+  "cvCn": "花玲",
+  "cvJp": "伊藤美来",
+  "cvKr": "이지현",
+  "cvEn": "Sarah Wiedenheft",
+  "camp": "Xianzhou \"Luofu\""
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Fu Xuan",
+ "rarity": 5,
+ "descHash": "Kepala Divination Commission Xianzhou \"Luofu\". Orang yang menggunakan mata ketiga dan Matrix of Prescience untuk meramalkan rute Xianzhou serta hasil dari berbagai peristiwa.",
+ "artPath": "8fe7cd896a1fdd7ad7bf9457a9e0345d1db773070411605979051b6052bc885b",
+ "miniIconPath": "cd27ca15774d3ea63723e47c9add72c53193fed3a64a6f1d2be3ff54ecb0184b",
+ "damageType": {
+  "id": 32,
+  "iconPath": "ddae115334fb14959c5e24b70a5b165c431afc32f9fcf84d4b50e5e0e15bcc1f",
+  "color": "#1C29BA",
+  "name": "Quantum",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "861828026682b63234f31903ec91d9fd670122ea792feb297a8c59c5e7686ea1",
+  "altIconPath": "5d97226f1d4519fb25bedac479e51193f581f3e353eaf4c13d37fc874cd28f7a",
+  "color": "#FFFFFF",
+  "name": "Preservation",
+  "rarity": 0
+ },
+ "pageId": "fuxuan"
+}

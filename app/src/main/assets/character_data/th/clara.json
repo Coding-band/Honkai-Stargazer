@@ -1,0 +1,2746 @@
+{
+ "spRequirement": 110,
+ "iconPath": "14447f3a4f738a9e04f1e6cd0056da1eb7f137fe01f6ee6713bf5d3e1310ce86",
+ "bgPath": "68a77f895a46cc17ae3f9be4e85021dcc521b00ba9e41769681aad4be83343a3",
+ "figPath": "9de29c1f5795128efc19f690289e71d6638bb48c03fd645a5e7818be969c0d17",
+ "fgPath": "7610900abad8e7795a7b89b18adb0412a4b9a4903b81a2088c004f55e7b861cc",
+ "splashIconPath": "f318bce244277814b27f02d3223aae1e8c36af327558bd184b92c41fb3b5b581",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 1,
+  "iconPath": "db6e0535800ce9a3dd926342c0481644831ce68b6b6add1f64a6a7fd01922095",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "เครดิต",
+   "desc": "สกุลเงินที่องค์กรสันติภาพแห่งดวงดาวใช้ในการชำระบัญชีแก่ลูกค้า ซึ่งปัจจุบันได้กลายเป็นสกุลเงินหลัก ที่ใช้กันอย่างแพร่หลายสำหรับการเดินทางในอวกาศ",
+   "lore": "\"ผู้คนดิ้นรน ต่อสู้ และแลกเปลี่ยนเพื่อตัวเลขที่แสดงในเทอร์มินัล แต่สิ่งล้ำค่าที่แท้จริงนั้น ไม่สามารถซื้อได้ด้วยตัวเลขจากองค์กร\"",
+   "purpose": "สกุลเงินทั่วไป",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calyx (Great Mine)",
+    "รางวัลภารกิจ",
+    "รางวัลคำขอ",
+    "ร้าน Ember"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Tracks of Destiny",
+   "desc": "วัสดุระดับสูงสำหรับการเพิ่มเลเวล Trace",
+   "lore": "ความพ่ายแพ้ซ้ำแล้วซ้ำเล่าจะนำไปสู่ชัยชนะ ก้าวไปข้างหน้าก้าวแล้วก้าวเล่าจะนำไปสู่จุดเปลี่ยนของโชคชะตา",
+   "purpose": "วัสดุ Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "รางวัลคะแนนสะสม Simulated Universe",
+    "เกียรติยศนิรนาม",
+    "แลกเปลี่ยน Ember",
+    "รางวัลกิจกรรมจำกัดเวลา"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "e45d41312c347a0e92a83719307e7cad0367aa98023d7b4627daa452423892ca",
+   "name": "Guardian's Lament",
+   "desc": "วัสดุระดับสูงสำหรับการเพิ่มเลเวล Trace",
+   "lore": "สิ่งที่แตกหักเหมือนกับเกราะชุดนี้ก็คือความปรารถนาที่บิดเบี้ยวของผู้พิทักษ์สูงสุดคนหนึ่ง<br />เธอปรารถนาที่จะเปิดเส้นทางที่ปลายสุดของลมหนาวเพื่อผู้คนของเธอ แต่สุดท้าย กลับกลายเป็นหุ่นเชิดที่ถูกควบคุมโดยเจตจำนงที่ใหญ่ยิ่งกว่า<br /><br />\"ผู้พิทักษ์สูงสุดเป็นตำแหน่งของผู้ปกครอง Belobog ที่สืบทอดจากรุ่นสู่รุ่น ผู้ซึ่งคอยดูแลชาวเมืองทุกคน... แต่ชาวเมืองกลับไม่เคยรู้เลยว่า ไม่มีใครคอยดูแลและพิทักษ์พวกเธอบ้างเลย\"",
+   "purpose": "วัสดุ Trace",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "Echo of War (Everwinter Hill)"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "คู่มือการเดินทาง",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>20000</nobr> หน่วย",
+   "lore": "หนังสือชุดเกี่ยวกับการผจญภัยที่จำเป็นต่อการสำรวจโลก กดปุ่มอ่านเพื่อฟังเสียงที่น่าฟังในภาษาที่คุณเข้าใจ ซึ่งจะบอกเล่าเกี่ยวกับประสบการณ์การผจญภัยในโลกต่างๆ ของเหล่านักผจญภัยที่มีชื่อเสียง รวมถึงภูมิปัญญาอันล้ำค่าที่พวกเขาได้รับจากดาวแต่ละดวงด้วย<br /><br />\"คู่มือการเดินทางชุดใหม่ 'การทำอาหารระหว่างดวงดาว' จะวางจำหน่ายเร็วๆ นี้ โปรดติดตามกันให้ดี\"<br />\"สำหรับการส่งผลงาน โปรดติดต่อกับ Synesthesia Beacon ERD<nobr>-23</nobr>θ เพื่อติดต่อตัวแทนของสถาบันแห่งปัญญา โดยวิธีการจ่ายค่าต้นฉบับนั้น สามารถจัดการได้ตามความสะดวกของคุณ\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "\"Forgotten Hall\""
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "บันทึกการผจญภัย",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>5000</nobr> หน่วย",
+   "lore": "บันทึกการผจญภัยที่ได้รับการจัดการอย่างเป็นระเบียบ และมีคุณค่าต่อการศึกษา ซึ่งประกอบไปด้วยภาพประกอบและข้อความที่เกี่ยวกับการผจญภัยตั้งแต่ต้นจนจบ ตลอดจนข้อมูลที่มีคุณค่าและเทคนิคที่เกี่ยวข้องกับการเอาชีวิตรอด<br /><br />\"ทำไมไม่แปลงข้อมูลใส่ลงไปในดิสก์ล่ะ? สะดวกกว่าตั้งเยอะ\"<br />\"เมื่อเผชิญกับพายุดาว และการปะทุของกระแสนิวตรอนแล้ว เทคโนโลยีขั้นสูงนั้นมีความเปราะบางมากกว่าที่คิด นอกจากนี้ คนทำหนังสือเล่มนี้คงอยากจะให้คนอ่าน สามารถอ่านได้ด้วยวิธีที่ง่ายที่สุด\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "การฝึกประจำวัน",
+    "ร้าน Ember"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "ความรู้จากการเดินทาง",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>1000</nobr> หน่วย",
+   "lore": "ไดอารี่การเดินทางที่เขียนด้วยลายมือสุดยุ่งเหยิงและมีเนื้อหาตามใจชอบ ซึ่งไม่ค่อยมีประโยชน์สำหรับคุณสักเท่าไหร่<br /><br />\"Dan Heng อ่านจบแล้วก็รีบเอากระดาษพวกนี้ไปทิ้งเถอะ\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "รางวัลคำขอ"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "28d0ba947e29fa63210d8ae2c432cb80339f98427c8655a9ca050184f69c4819",
+   "name": "Ancient Part",
+   "desc": "ชิ้นส่วนเครื่องจักรที่หลงเหลือมาจากโลกยุคเก่า เป็นวัสดุพื้นฐานที่ใช้สำหรับเสริมพลัง",
+   "lore": "แม้ว่าจะมีขนาดเล็ก แต่กลับถูกสร้างขึ้นด้วยเทคโนโลยีที่คนในยุคปัจจุบันยากจะทำซ้ำขึ้นมาได้<br /><br />\"สกรูตัวเล็กๆ ในโลกยุคเก่านั้นแข็งแกร่งกว่าเกราะของเราเสียอีก\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "ดรอปจาก Automaton",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "รางวัลคำขอ",
+    "แลกเปลี่ยน Ember",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "7089e982e18575f3824ab28ae0e91f40c8214edf6253a7162142bdc7fc0acdbe",
+   "name": "Ancient Spindle",
+   "desc": "เพลาของเครื่องจักรที่หลงเหลือมาจากโลกยุคเก่า เป็นวัสดุธรรมดาที่ใช้สำหรับเสริมพลัง",
+   "lore": "ชิ้นส่วนที่ประกอบเข้าด้วยกันอย่างแม่นยำแล้ว หากถอดออกมาจะไม่สามารถประกอบกลับเข้าไปใหม่ได้อีก แม้แต่ช่างซ่อมผู้ชำนาญในแผนกเทคโนโลยีของ Belobog ก็ยังต้องคิดให้รอบคอบก่อนที่จะแตะต้องมัน<br /><br />\"เจ้าบื้อ เอาของแบบนี้ไปให้เจ้าชุดเกราะสีน้ำเงิน ก็เหมือนกับว่าให้กระป๋องที่ไร้ค่าสองสามอันแค่นั้น เอาไปให้ท่าน Svarog เถอะ รับรองเลยว่าเรื่องกินเรื่องใช้สบายใจหายห่วง\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "ดรอปจาก Automaton เมื่อระดับความสมดุลถึง Lv.2",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "635673": {
+   "id": 635673,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "9fe7d5d3bec56787a53e9acfa89161bc0599ba7b6a3a0d95eb60863ff6dcd006",
+   "name": "Shattered Blade",
+   "desc": "ชิ้นส่วนอาวุธที่สมาชิกของกองทัพ Antimatter ทิ้งเอาไว้ สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">ทำลายล้าง</span>ได้เล็กน้อย",
+   "lore": "ตรานี้แสดงถึงลำดับขั้นและความสำเร็จในนามของการ \"ทำลายล้าง\"<br />เจ้าของอาวุธชิ้นนี้ควบขี่อาชาแดง จุดไฟขึ้นในเมือง ทำให้ผู้คนลุกฮือต่อต้าน และทำให้อาณาจักรล่มสลายราวกับฝูงมดที่แตกกระเจิง<br /><br />\"ผู้ที่ครอบครองตรานี้ ได้รับคำสั่งให้พรากความสงบสุขไปจากแผ่นดิน\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 2,
+   "rewardPath": "/material/635673",
+   "comeFrom": [
+    "Calyx (Storage Zone)",
+    "Calyx (Storage Zone)",
+    "ร้าน Ember"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
+   "name": "Ancient Engine",
+   "desc": "เครื่องยนต์ของจักรกลที่หลงเหลือมาจากโลกยุคเก่า เป็นวัสดุชั้นสูงที่ใช้สำหรับเสริมพลัง",
+   "lore": "มันใช้ Geomarrow เป็นแหล่งพลังงาน เมื่อขับเคลื่อน มันจะไม่ได้เปล่งประกายไฟออกมา แต่เป็นแสงที่กระจัดกระจายไปทั่ว<br /><br />\"มีเพียงแผนกเทคโนโลยีที่อยู่ภายใต้การควบคุมของผู้พิทักษ์สูงสุดโดยตรงเท่านั้น ที่มีสิทธิ์เข้าถึงข้อมูลเกี่ยวกับโลกยุคเก่าได้ ส่วนฉัน หลังจากที่ถูกไล่ออกก็เข้าไม่ได้แล้วน่ะ\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "ดรอปจาก Automaton เมื่อระดับความสมดุลถึง Lv.4",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "836259": {
+   "id": 836259,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "d9e262af4f143c0b58be9d20f5c04e04a252fb8f05eb675c0996f5b1bc8f6ad5",
+   "name": "Worldbreaker Blade",
+   "desc": "อาวุธแตกหักเสียหายที่สมาชิกของกองทัพ Antimatter ทิ้งเอาไว้ สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">ทำลายล้าง</span>ได้เป็นอย่างมาก",
+   "lore": "อาวุธนี้แสดงถึงลำดับขั้นของเจ้าของในกองทัพและความสำเร็จในนามของการ \"ทำลายล้าง\"<br />เจ้าของอาวุธนี้จะปรากฏตัวขึ้น เมื่อสงครามสิ้นสุดลง เพื่อจุดไฟแผดเผาโลก ไม่ว่าทวยเทพจะโปรดปรานแค่ไหน ไม่ว่าจะรุ่งโรจน์สักเพียงใด ดาวดวงนี้ก็ยังถูกลิขิตให้สลายและมืดดับไปในส่วนลึกของท้องฟ้าที่เต็มไปด้วยหมู่ดาว ราวกับถ่านที่มอดดับลง<br /><br />\"ผู้ที่ครอบครองตรานี้ได้รับคำสั่งให้ชำระล้างโลก\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 4,
+   "rewardPath": "/material/836259",
+   "comeFrom": [
+    "Calyx (Storage Zone)",
+    "Calyx (Storage Zone)",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ"
+   ]
+  },
+  "866633": {
+   "id": 866633,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "8e0cd81aa41c7849a5da687f6b40c0b3ccec417ef1924c802b70c03021e69317",
+   "name": "Broken Teeth of Iron Wolf",
+   "desc": "ชิ้นส่วนฟันเลื่อยที่ Automaton ทิ้งเอาไว้ วัสดุเลื่อนขั้นของตัวละครประเภทกายภาพ",
+   "lore": "ว่ากันว่าเทคโนโลยีการผสมโลหะของผู้สร้างเมือง สามารถสร้างเลื่อยไฟฟ้าที่ผ่าแยกหินออกมาได้ แต่ปัจจุบัน งานฝีมือที่ประณีตเช่นนี้ไม่อาจเลียนแบบได้อีกแล้ว<br /><br />\"ท่าน Svarog บอกว่าใบมีดนั้นบางจนตัดถึงช่องว่างระหว่างโมเลกุลได้เลย... ว่าแต่โมเลกุลคืออะไรกันนะ?\"",
+   "purpose": "วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/866633",
+   "comeFrom": [
+    "Stagnant Shadow (Great Mine)",
+    "Stagnant Shadow (Great Mine)",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "920200": {
+   "id": 920200,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e8f74ef086a603eed69945d0872fbbc9776145890808104be58b4d30dca2d7a",
+   "name": "Lifeless Blade",
+   "desc": "เศษอาวุธที่สมาชิกของกองทัพ Antimatter ทิ้งเอาไว้ สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">ทำลายล้าง</span>ได้ปานกลาง",
+   "lore": "ตรานี้แสดงถึงลำดับขั้นและความสำเร็จในนามของการ \"ทำลายล้าง\"<br />เจ้าของอาวุธชิ้นนี้เคยเกลียดชังสิ่งมีชีวิตที่มีความคิดทุกตน พวกเขาฟังเสียงร้องครวญของสิ่งมีชีวิตทรงปัญญา ราวกับฟังบทเพลงเสนาะหู พวกเขาทำให้หอคอยแห่งอารยธรรมหลายพันปี พังทลายลงมาในชั่วข้ามคืน<br /><br />\"ผู้ที่ครอบครองตรานี้ ได้รับคำสั่งให้ช่วงชิงลมหายใจไปจากสิ่งมีชีวิต\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 3,
+   "rewardPath": "/material/920200",
+   "comeFrom": [
+    "Calyx (Storage Zone)",
+    "Calyx (Storage Zone)",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ร้าน Ember"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 100.32,
+   "attackAdd": 5.016,
+   "hpBase": 168.96,
+   "hpAdd": 8.448,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549408,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 140.448,
+   "attackAdd": 5.016,
+   "hpBase": 236.544,
+   "hpAdd": 8.448,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549408,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 180.576,
+   "attackAdd": 5.016,
+   "hpBase": 304.128,
+   "hpAdd": 8.448,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633349,
+     "count": 6
+    },
+    {
+     "id": 866633,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 220.704,
+   "attackAdd": 5.016,
+   "hpBase": 371.712,
+   "hpAdd": 8.448,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633349,
+     "count": 9
+    },
+    {
+     "id": 866633,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 260.832,
+   "attackAdd": 5.016,
+   "hpBase": 439.296,
+   "hpAdd": 8.448,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717290,
+     "count": 6
+    },
+    {
+     "id": 866633,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 300.96,
+   "attackAdd": 5.016,
+   "hpBase": 506.88,
+   "hpAdd": 8.448,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717290,
+     "count": 9
+    },
+    {
+     "id": 866633,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 341.088,
+   "attackAdd": 5.016,
+   "hpBase": 574.464,
+   "hpAdd": 8.448,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 90,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "8f8790969911e36a227127407eed5042025561069e68c7c2f8c784cf5b134191",
+   "artPath": "18276e87b2d50edb4c684a0d95af249e1c771b291c1c4ceb384ca9aab9ca76d2",
+   "name": "A Tall Figure",
+   "descHash": "หลังจากปล่อยสกิลต่อสู้แล้ว จะไม่ลบล้าง \"Mark of Counter\" ของศัตรูเป้าหมาย",
+   "params": []
+  },
+  {
+   "id": 2,
+   "iconPath": "2c711153bf2d3340bde28061813f7771c0114d1eb69cefd4e0e041830046ef03",
+   "artPath": "ed463cafcb7c40c2aa757f672f983b7ea7f1b3f6ab6a039e3804063a628eee73",
+   "name": "A Tight Embrace",
+   "descHash": "หลังจากปล่อยท่าไม้ตายแล้ว ATK จะเพิ่มขึ้น <nobr>#1[i]%</nobr> เป็นเวลา <nobr>#2[i]</nobr> เทิร์น",
+   "params": [
+    0.3,
+    2
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "eef0b42db08a04eb0206a268ebaeca9c1d914e08a7a6e0bf80a563f1a39f311a",
+   "artPath": "9b018463095d0e163de81f3e5d8f3a7f7c75cef08d8e862eb5971c03170e0581",
+   "name": "Cold Steel Armor",
+   "descHash": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "74429e4225b09b243be618a3a6d47c880fae99a9224057a3a052619993149638",
+   "artPath": "48b6e3b95e2d61933c4a6a34aa6c78294443f101c4b2b2272df8d1893602fb9b",
+   "name": "Family's Warmth",
+   "descHash": "หลังจากโดนโจมตีแล้ว Clara จะได้รับ DMG ลดลง <nobr>#1[i]%</nobr> และเอฟเฟกต์นี้จะคงอยู่ จนกว่าจะเริ่มเทิร์นถัดไปของตัวเอง",
+   "params": [
+    0.3
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "04b2e80597267a65bb827f1bc2f27a013bf8c29344df95c64ab59bef6cf139be",
+   "artPath": "58699383ad9d209def0daccb1569e4069e6c0c1cc93430014680bab9ee09671c",
+   "name": "A Small Promise",
+   "descHash": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "7d49497cb07360a36461482dc67406825ef9b82e7d8571387a76d3bf4f129ab6",
+   "artPath": "51972ca775d6782cb457b093ce9c9f258993999262c02d5deecd28947c6f9021",
+   "name": "Long Company",
+   "descHash": "ทุกครั้งที่เป้าหมายอื่นในฝ่ายตัวเองถูกโจมตี Svarog จะมีโอกาสคงที่ <nobr>#1[i]%</nobr> ที่จะโต้กลับผู้โจมตี และทำเครื่องหมาย \"Mark of Counter\" แก่เป้าหมายที่โจมตี เมื่อปล่อยท่าไม้ตาย จะเพิ่มจำนวนเสริมพลังการโต้กลับ อีก <nobr>#2[i]</nobr> ครั้ง",
+   "params": [
+    0.5,
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   310670
+  ],
+  [
+   226729
+  ],
+  [
+   110084
+  ],
+  [
+   795783
+  ],
+  [
+   511256
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "โจมตีเดี่ยว",
+   "descHash": "สร้าง DMG <span style=\"color:#FFFFFF;\">กายภาพ</span> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ของ ATK ของ Clara แก่ศัตรูที่กำหนดหนึ่งตัว",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 310670,
+   "name": "I Want to Help",
+   "iconPath": "55c6a54849e53476c885eb944b41b28a3b07a9e74f7d36644f1e73be30e144ac",
+   "typeDescHash": "โจมตีปกติ",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "โจมตีหมู่",
+   "descHash": "สร้าง DMG <span style=\"color:#FFFFFF;\">กายภาพ</span> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ของ ATK ของ Clara แก่ฝ่ายศัตรูทั้งหมด และสร้าง DMG <span style=\"color:#FFFFFF;\">กายภาพ</span>เพิ่มเติม <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> ของ ATK ของ Clara แก่ศัตรูเป้าหมายที่ถูก Svarog ทำเครื่องหมาย \"Mark of Counter\"<br />โดยหลังจากปล่อยสกิลต่อสู้แล้ว \"Mark of Counter\" ทั้งหมดจะไม่มีผล",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "30",
+   "id": 226729,
+   "name": "Svarog Watches Over You",
+   "iconPath": "eef0b42db08a04eb0206a268ebaeca9c1d914e08a7a6e0bf80a563f1a39f311a",
+   "typeDescHash": "สกิลต่อสู้",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.6,
+      0.6
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.66,
+      0.66
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.72,
+      0.72
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.78,
+      0.78
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.84,
+      0.84
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9,
+      0.9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975,
+      0.975
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      1.05
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125,
+      1.125
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      1.2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.26,
+      1.26
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.32,
+      1.32
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.38,
+      1.38
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.44,
+      1.44
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.5,
+      1.5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "เสริมพลัง",
+   "descHash": "หลังจากใช้ท่าไม้ตาย DMG ที่ Clara ได้รับจะลดลงเพิ่มเติม <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> และโอกาสที่จะถูกศัตรูเป้าหมายโจมตี จะเพิ่มขึ้นอย่างมาก เป็นเวลา <nobr>#3[i]</nobr> เทิร์น<br />ในขณะเดียวกัน <u>การโต้กลับ</u> ของ Svarog ก็จะได้รับการเสริมพลัง เมื่อเป้าหมายใดก็ได้ในฝ่ายตัวเองถูกโจมตี Svarog จะทำ<u>การโต้กลับ</u> ทันที ซึ่งจะสร้างตัวคูณ DMG แก่ศัตรูเป้าหมายเพิ่มขึ้น <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> และสร้าง DMG <nobr>50%</nobr> ของ DMG ที่เป้าหมายหลักได้รับแก่ศัตรูที่อยู่ใกล้เคียงด้วย ซึ่งเอฟเฟกต์เสริมพลังนี้สามารถเกิดขึ้นได้ <nobr>#5[i]</nobr> ครั้ง",
+   "ultimateCost": 110,
+   "break": "0",
+   "energy": "5",
+   "id": 110084,
+   "name": "Promise, Not Command",
+   "iconPath": "f385e041cd5df7c91bb75f0068576f3b713b02014926ac408a58948958d10abc",
+   "typeDescHash": "ท่าไม้ตาย",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      5,
+      0.96,
+      2,
+      0.15,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      5,
+      1.024,
+      2,
+      0.16,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      5,
+      1.088,
+      2,
+      0.17,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      5,
+      1.152,
+      2,
+      0.18,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      5,
+      1.216,
+      2,
+      0.19,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      5,
+      1.28,
+      2,
+      0.2,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      5,
+      1.36,
+      2,
+      0.2125,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      5,
+      1.44,
+      2,
+      0.225,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      5,
+      1.52,
+      2,
+      0.2375,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      5,
+      1.6,
+      2,
+      0.25,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      5,
+      1.664,
+      2,
+      0.26,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      5,
+      1.728,
+      2,
+      0.27,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      5,
+      1.792,
+      2,
+      0.28,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      5,
+      1.856,
+      2,
+      0.29,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      5,
+      1.92,
+      2,
+      0.3,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "โจมตีเดี่ยว",
+   "descHash": "ภายใต้การป้องกันของ Svarog ความเสียหายที่ Clara ได้รับจากการโจมตีของศัตรูเป้าหมายจะลดลง <nobr>#3[i]%</nobr> ศัตรูเป้าหมายที่โจมตี Clara จะถูก Svarog ทำเครื่องหมาย \"Mark of Counter\" และถูก Svarog <u>โต้กลับ</u> โดยจะสร้าง DMG <span style=\"color:#FFFFFF;\">กายภาพ</span> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> ของ ATK ของ Clara แก่เป้าหมายดังกล่าว",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "5",
+   "id": 795783,
+   "name": "Because We're Family",
+   "iconPath": "ebda0aa747e1d90f18218b542e6e17536f052f543f225f221e959505d30abf29",
+   "typeDescHash": "พรสวรรค์",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      0.8,
+      0.1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0.88,
+      0.1
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549408,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.96,
+      0.1
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635673,
+       "count": 3
+      },
+      {
+       "id": 549408,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      1.04,
+      0.1
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920200,
+       "count": 3
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      1.12,
+      0.1
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920200,
+       "count": 5
+      },
+      {
+       "id": 633349,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      1.2,
+      0.1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920200,
+       "count": 7
+      },
+      {
+       "id": 633349,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      1.3,
+      0.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836259,
+       "count": 3
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      1.4,
+      0.1
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836259,
+       "count": 5
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      1.5,
+      0.1
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836259,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      1.6,
+      0.1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836259,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      1.68,
+      0.1
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      1.76,
+      0.1
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      1.84,
+      0.1
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      1.92,
+      0.1
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      2,
+      0.1
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "หลังจากโจมตีศัตรูและเข้าสู่การต่อสู้ จะลดทอนความทนทานของประเภทที่สอดคล้องกับศัตรูเป้าหมาย",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 595197,
+   "name": "Attack",
+   "iconPath": "55c6a54849e53476c885eb944b41b28a3b07a9e74f7d36644f1e73be30e144ac",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "เมื่อโจมตีศัตรูทันทีและเข้าสู่การต่อสู้ จะเพิ่มโอกาสที่ Clara จะถูกศัตรูโจมตีเป็นเวลา <nobr>#1[i]</nobr> เทิร์น",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "0",
+   "id": 511256,
+   "name": "A Small Price for Victory",
+   "iconPath": "77d630d536c58a7d2c6c344ce20df335dc5366d1685e9f35718bcd9508bac383",
+   "typeDescHash": "เทคนิค",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2,
+      5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1107101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1107202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1107203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1107204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 947969,
+          "name": "เสริม HP",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+          "statusList": [
+           {
+            "key": "HP",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920200,
+            "count": 3
+           },
+           {
+            "id": 633349,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 947972,
+        "name": "เสริมการโจมตี",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATK",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920200,
+          "count": 3
+         },
+         {
+          "id": 633349,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 947971,
+      "name": "เสริม DMG - กายภาพ",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "17a936e642ddc644dbb666c4a1279dd2386321a74cf73b0332a33c7f209c2176",
+      "statusList": [
+       {
+        "key": "เพิ่ม DMG <span style=\"color:#FFFFFF;\">กายภาพ</span>",
+        "value": 0.032
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 549408,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "เมื่อถูกโจมตี จะมีโอกาสคงที่ <nobr>#1[i]%</nobr> ที่จะลบเอฟเฟกต์ Debuff ของตัวเอง 1 เอฟเฟกต์",
+    "ultimateCost": 0,
+    "id": 947875,
+    "name": "Kinship",
+    "iconPath": "cc889122f83844dd33a5c8e0bc5ae2efcd1a35140fe1640c6dba5f0710248b09",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.35
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635673,
+        "count": 3
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1107102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1107205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1107206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1107207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 947968,
+          "name": "เสริมการโจมตี",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+          "statusList": [
+           {
+            "key": "ATK",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836259,
+            "count": 3
+           },
+           {
+            "id": 717290,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 947967,
+        "name": "เสริม DMG - กายภาพ",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "17a936e642ddc644dbb666c4a1279dd2386321a74cf73b0332a33c7f209c2176",
+        "statusList": [
+         {
+          "key": "เพิ่ม DMG <span style=\"color:#FFFFFF;\">กายภาพ</span>",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836259,
+          "count": 3
+         },
+         {
+          "id": 717290,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 947970,
+      "name": "เสริมการโจมตี",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "ATK",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 633349,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "โอกาสต้านทานสถานะ Debuff ประเภทควบคุมเพิ่มขึ้น <nobr>#1[i]%</nobr>",
+    "ultimateCost": 0,
+    "id": 947878,
+    "name": "Under Protection",
+    "iconPath": "afdcdb87e7c399296d31a032019db6a9a94a4fc0127d9abd44e5feb81f284f6f",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.35
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920200,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1107103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1107208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1107209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 947982,
+        "name": "เสริม DMG - กายภาพ",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "17a936e642ddc644dbb666c4a1279dd2386321a74cf73b0332a33c7f209c2176",
+        "statusList": [
+         {
+          "key": "เพิ่ม DMG <span style=\"color:#FFFFFF;\">กายภาพ</span>",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717290,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1107210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 864032,
+        "name": "เสริมการโจมตี",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATK",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836259,
+          "count": 8
+         },
+         {
+          "id": 717290,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 947981,
+      "name": "เสริม HP",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "HP",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 717290,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "DMG ที่เกิดจากการโต้กลับของ Svarog เพิ่มขึ้น <nobr>#1[i]%</nobr>",
+    "ultimateCost": 0,
+    "id": 947877,
+    "name": "Revenge",
+    "iconPath": "cc6e05dc0193ad6499bc5a29d44cfbdd6b0d771611d0bfbc1c2f9d949dc423f3",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.3
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836259,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1107201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 947974,
+    "name": "เสริมการโจมตี",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "ATK",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549408,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "ลำตัว",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "อัตราคริติคอล",
+    "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8"
+   },
+   {
+    "relicTypeHash": "เท้า",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "ATK",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   },
+   {
+    "relicTypeHash": "Planar Sphere",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "เพิ่ม DMG กายภาพ",
+    "propertyIconPath": "17a936e642ddc644dbb666c4a1279dd2386321a74cf73b0332a33c7f209c2176"
+   },
+   {
+    "relicTypeHash": "Link Rope",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "อัตราการฟื้นฟูพลังงาน",
+    "propertyIconPath": "75627c696d3e9763c0b4feeb4a8e2baf594ac73214c6227b3a125c032be090c8"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "พบกันครั้งแรก",
+   "text": "Clara: สวัสดี... ฉันชื่อ Clara พี่มาเป็นครอบครัวของฉันได้ไหม... แบบคุณ Svarog น่ะ<br />Svarog: มีฉันอยู่ตรงนี้ ผู้บุกเบิก ก็เป็นครอบครัวของเธอแล้วล่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "14010cbfdb7df931fde8346fccd7573b8eb42a148082f626cc407e48bdf2d95f",
+   "jpUrl": "cba7689810ca26b1b6586abae22502a87039ad6d70e51f87058f9c8341106196",
+   "enUrl": "c0af06f850ea342152a61e685719fb42a6a97c476f2172453fd18a4126d94a70",
+   "krUrl": "55c0449a78f69f0de74c1ce0fabe45a380b56cffa6bd6ca5a4ee45437cb6e8ef"
+  },
+  {
+   "id": 2,
+   "title": "ทักทาย",
+   "text": "วันนี้ก็มาสู้ไปด้วยกันกับ Clara เถอะนะ",
+   "unlockRequirement": "",
+   "cnUrl": "f80164407b8eb941afb061cec6e25a7c1c0975d0d29ca9dcc41eff1e7b06e1b8",
+   "jpUrl": "ff09ade91944647bb51321a4b7a92c4047a2135cf8dffa235af4b3017f646ab3",
+   "enUrl": "99c13b9247c16836082c34b1f629eab06b4a547c6d857ed90bb9f86470e68a47",
+   "krUrl": "d4ca048595fd69be6553fb9ac4b2da41b5cfe30a47f1bf5e006b24b4e881cbda"
+  },
+  {
+   "id": 3,
+   "title": "บอกลา",
+   "text": "Clara ก็ง่วงแล้วเหมือนกัน อยากไปนอนอยู่ในอ้อมแขนของคุณ Svarog สักหน่อย พี่อยากลองดูมั้ยล่ะ?",
+   "unlockRequirement": "",
+   "cnUrl": "3bc4798928677158c4136c930775e33f2310d51ec72feff0508a5055b5fa3730",
+   "jpUrl": "9af3661b65f482d4ecce4c69d5dfa1d81bbb4000b5a07574a8775abba48b0d7e",
+   "enUrl": "2aa83aef1948e5303cbfb2c519e8b122fe8cc902bb40d26bba7cb218d9cf47dd",
+   "krUrl": "96b2250c81fec2de084d56693589d4257e0d9c537b484e3fd6de43b372a5fe9e"
+  },
+  {
+   "id": 4,
+   "title": "เกี่ยวกับตัวเอง - ความทรงจำ",
+   "text": "แม้จะเป็น \"การคำนวณ\" ของคุณ Svarog ก็ยังหนีไม่พ้น \"ความทรงจำ\" ของทุกคน... เพราะงั้น Clara ไม่มีทางลืมทุกคนแน่นอน",
+   "unlockRequirement": "",
+   "cnUrl": "918111b9d327397b037d1ad6fb4a8eeda06e613a4841949719a7ea1587094852",
+   "jpUrl": "81e1a02be385c4110f52c427b0311e9f4760639bd81b14a254adc453d9e0fb78",
+   "enUrl": "28464c3c31ad159a36a1566ec75144321fa184cb113cdd469030ade6a54938c8",
+   "krUrl": "3d872ea739a269895af6545a6fcac91d78c3e9f0ccf17ea4811b0a5b69b5e44b"
+  },
+  {
+   "id": 5,
+   "title": "พูดคุยทั่วไป - เล่นพ่อแม่ลูก",
+   "text": "สมัยก่อนตอนที่เล่นพ่อแม่ลูกน่ะ Clara ให้พวก Perkins ออกไปเชิญแขกมา ผลสุดท้ายก็มีคนตามกลับมาจริงๆ ด้วยล่ะ~",
+   "unlockRequirement": "",
+   "cnUrl": "3c8a3e657e9efc9aa1769f72ef8eac4c2aa21e6e5622005235d34e1711844406",
+   "jpUrl": "d0d92001bb551cc2a2808c1b2757309646e991307fcb5e48d38a1ea1c2770450",
+   "enUrl": "3cebb22488a33f79cfaf9063e84a011b2204ef5aff5e577c7992a1d85877a02b",
+   "krUrl": "a184940fdac59ecb6547662584955f4fd143a6bafc77215db07825f865334d8c"
+  },
+  {
+   "id": 6,
+   "title": "งานอดิเรก",
+   "text": "คลังความทรงจำของคุณ Svarog มีเรื่องน่าสนใจอยู่มากมาย อย่างเช่น \"ภาพยนตร์\"... เหมือนกับมีคนมาร่วมเล่นพ่อแม่ลูกด้วยกันเยอะแยะเลย!",
+   "unlockRequirement": "",
+   "cnUrl": "05fd35b69797a64c52e71ebe9d98012cd54feba2de74c6c51d9974c7fbd21d8f",
+   "jpUrl": "fbe73dde23f926b325098fa5aa9d35ab8f299ca04c6d7c0624dec360b619ee1f",
+   "enUrl": "59649c4b33537324f544124ea3abbf7ee8bc27467e5c89bae25d0451c1d80db6",
+   "krUrl": "a260f22b70cf828a77e12bcf277d854c1f820311fd13c80020ce0bde01941a96"
+  },
+  {
+   "id": 7,
+   "title": "เรื่องกลุ้มใจ",
+   "text": "การจะขอให้คุณ Svarog มาเล่นเลียนแบบ \"ภาพยนตร์\" สักครั้ง เป็นเรื่องที่ยากมากเลยล่ะ เขาชอบเล่นเป็นต้นไม้ไม่ก็ก้อนหิน... คุณ Svarog มาเล่นเป็น \"คุณพ่อ\" ให้ไม่ได้เหรอ...",
+   "unlockRequirement": "",
+   "cnUrl": "dab637a290f20bc1933cc83b8e54ebaaeb2babca6a4d7a2402dbea29163a887b",
+   "jpUrl": "c87812834b0d699705d3635870f8841a0e1ed1632225544d6e254230f8f4305c",
+   "enUrl": "713243353bea2d61d5160b24cb29402579dc279fa54e82bb6e2489595db8229c",
+   "krUrl": "361bf20e56ca7e02b86261061d9dba90534ad31b506fd75ba46758a5d83d2d51"
+  },
+  {
+   "id": 8,
+   "title": "เรื่องที่อยากจะแบ่งปัน",
+   "text": "ถึงแม้บางครั้งพวกเพื่อนๆ หุ่นยนต์ของ Clara จะพูดจาหยาบคายไปบ้าง แต่ก็เป็นเด็กดีที่ไม่พูดโกหกทั้งนั้นเลยนะ",
+   "unlockRequirement": "",
+   "cnUrl": "4150bbf333d112a647bbbdbe3e685666298a6ee43ab320cd7b4600be4e753343",
+   "jpUrl": "7b0784c33d1851d545345f4ab3946d1381c336b62cdaab5947674c4a3dad806e",
+   "enUrl": "5dbc862f58b91cbd2c3d1f8bdcd0b07479b6f8001b8a34553a781821ad9b50c0",
+   "krUrl": "dbb7e4ea20b3ca265386d54b7f5c1671a5ba5a16a7af68c3e35f3f7727a75839"
+  },
+  {
+   "id": 9,
+   "title": "ความรู้",
+   "text": "ตอนที่คุณ Svarog กำลังพักผ่อนอยู่ ร่างกายก็จะส่งเสียงออกมาด้วยล่ะ เหมือนกับ... เหมือนกับกำลังกรนอยู่เลย~",
+   "unlockRequirement": "",
+   "cnUrl": "b9364060a7335c6b14a5480b7d59da74c30de8157e3f275f2d41ef536a81e897",
+   "jpUrl": "13d0d84ca6b5e14dcb896f05135fa925b7a816eb0403a24e3e71656427941360",
+   "enUrl": "27e0a59c10cb4e0ed80a8607dba44e953737910524507a1a98cbf3be0c0d00e8",
+   "krUrl": "24f26bf061ddbe739ce5ca9191b47b822c6b23823304dc25a764aa9b35649d51"
+  },
+  {
+   "id": 10,
+   "title": "เกี่ยวกับ Natasha",
+   "text": "พี่ Natasha บอกว่า Clara ก็เป็นหมอเหมือนกัน แต่เป็นหมอให้เพื่อนหุ่นยนต์น่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "c7b282b166bed942db7d1edaec23e540db42f1250ce8797c6648764206e902bc",
+   "jpUrl": "6407b2a8e480ca9b9772bc70ac79bd48135b546174fc8ef23d98c9e093731d61",
+   "enUrl": "09fcb9f3935f061eb5141c891f9e23e4a3d152433bb7cb11e4e6ea0d42b405a9",
+   "krUrl": "a5d1cfd767c29f457d107ba5582e9430c1cf5102b13c7934343e667c5fe05fcd"
+  },
+  {
+   "id": 11,
+   "title": "เกี่ยวกับ Seele",
+   "text": "มีอยู่ครั้งหนึ่ง ชิ้นส่วนที่ Clara ต้องการติดแน่นอยู่ในก้อนหิน แล้วพี่ Seele ก็มาเห็นเข้าพอดี เลยใช้มือเดียวทุบหินจนแตกเลยล่ะ... Clara ยังไม่ทันได้เอ่ยขอบคุณ พี่เขาก็เดินจากไปซะแล้ว...",
+   "unlockRequirement": "",
+   "cnUrl": "327d009e565b3b5eb0309e70f2ce04c86642897a9a3505db56cb05e254125dcd",
+   "jpUrl": "05b5141c9bf1608113cf0ff69c45daa13066b6cdf1600f1e0d36252f54729f0b",
+   "enUrl": "780a4edd66b8adee7349af865b7c97c4fc78d99fff6238404779357fe1e14ffa",
+   "krUrl": "283a869e49cd098fb4dbf2d02e833076480c5c76d5fafb45cd43e76f2365101e"
+  },
+  {
+   "id": 12,
+   "title": "เกี่ยวกับ Svarog",
+   "text": "อันที่จริง... มือของคุณ Svarog สามารถเป็นเครื่องจักรที่ช่วยเป่าผมให้ Clara ได้ด้วยนะ แถมยังผ่าหินก้อนใหญ่ๆ ให้เป็นโต๊ะกับเก้าอี้เล็กๆ ได้อีกด้วย...",
+   "unlockRequirement": "",
+   "cnUrl": "4486aa6ca921050a48460cd55dd86daa48dda5d7db4e77467540e38329907ec9",
+   "jpUrl": "8e27dba2075271eddc710cb8f80d92dcc0b79e6adb23321f52d89f0e0e5669a3",
+   "enUrl": "8c9bdce6fe7b24805d4c17d75916cb36c0a3c87e3dddf84e0a4f415e1448c510",
+   "krUrl": "4857e75d0fe9bb94913ce33f56bde8ec1bdd051d7bfe9ed8398800205b2c43e6"
+  },
+  {
+   "id": 13,
+   "title": "เกี่ยวกับ Hook",
+   "text": "Hook ชวนให้ฉันเข้าร่วมแก๊งตัวตุ่นด้วย แต่ว่า... ถ้าเกิดต้องเล่นซ่อนหากัน แล้วคุณ Svarog จะทำยังไงล่ะ...",
+   "unlockRequirement": "",
+   "cnUrl": "119ce790d9d6e3e67ff8475b94cade83bb0bb148aef8100b228699351b65923f",
+   "jpUrl": "5efbea0338dddd52d8357eaa1157e43c7460161aefad2a6d0cae9e4d975cb7f2",
+   "enUrl": "2fe9059415c35c2c7b61e4d0c66dc263e585db75d18948d9eeb3c4071f7b1591",
+   "krUrl": "bf9d529b75dc1c0ea252fb8afd842d6b3a7cd70e28b59f1436fc74d59e296381"
+  },
+  {
+   "id": 14,
+   "title": "เกี่ยวกับ Luka",
+   "text": "พี่ Luka...เป็นคนที่อ่อนโยนมากเลยล่ะ ถึงแม้จะดูมุทะลุไปหน่อย แต่จริงๆ แล้วพี่เขาละเอียดอ่อนมากเลยนะ",
+   "unlockRequirement": "",
+   "cnUrl": "fb3cc5ba27bb7087384327f01a669dd2f6b8b1157bc37b63f4bb04ad16af914a",
+   "jpUrl": "f2ba7d6e34190c184a2d13187aedc2c88acb21ae65df37bd03a8664b2c2cd7f2",
+   "enUrl": "1b882b67c6ec661aa059ca5747353fc7f611db05f6d51d724d65387c5bef010c",
+   "krUrl": "86fe068317d8213ee4db185ebb3ad5d7545e47e7a3ce26cb7900faa05374a968"
+  },
+  {
+   "id": 15,
+   "title": "เปิดใช้งาน Eidolon",
+   "text": "อนาคต... จะดีกว่าเดิมใช่มั้ย?",
+   "unlockRequirement": "",
+   "cnUrl": "7da67ad6ee9dbef65f9ed21f8b3b98078c64e8a4a5fa9657fb05bad9cb4ef56a",
+   "jpUrl": "963f820e3a295f96a35fece8cd79d9c529637e0d5a606b0b88fd1d619ed34c83",
+   "enUrl": "082680c8639d292f70e839d1f1951c158e21aa76a0daf984c468d00f05273ed1",
+   "krUrl": "bf34cec3010ebf2aa71c04a92beebc61d1f1912cc5f5b06fd6457d67bd8a608a"
+  },
+  {
+   "id": 16,
+   "title": "เลื่อนขั้นตัวละคร",
+   "text": "Clara เองก็ต้องเก่งขึ้นด้วยเหมือนกัน...! อื้ม!",
+   "unlockRequirement": "",
+   "cnUrl": "2308cd7f325ff5c2265690831aa60f38477252b6d72ceb50020c2fd74390361e",
+   "jpUrl": "d1a0829ee86fc5341317d65e524abc8f64026d1b0cada8c14690f170929261b9",
+   "enUrl": "92d5ee31cb683a5decff4201491dfda85679fe418c191df2a90a6e08fbbccf14",
+   "krUrl": "501e88590e7a569fac91d39ab2aa0144c99c36a64b70ac11e61b017bdc458f45"
+  },
+  {
+   "id": 17,
+   "title": "ตัวละครถึงเลเวลสูงสุด",
+   "text": "การเดินทางของ Clara กับคุณ Svarog เพิ่งจะเริ่มต้นขึ้น...",
+   "unlockRequirement": "",
+   "cnUrl": "20052dd43b53a9b730f277f312c7d08fd761d827f070d924ebd63e420c11ca22",
+   "jpUrl": "6c176998b24b9b7e29c7dcf187b8f6efb4ebd0e255a793adc54cd334f12d0ca2",
+   "enUrl": "1d3b4b9bbf238345ce395911bff05aba31aa19fd0b3a3be4887b81ef14aae253",
+   "krUrl": "780327772c0dc5f7797068dfe855f14c6a1458532850c1af61ca5718bad5d5ac"
+  },
+  {
+   "id": 18,
+   "title": "เปิดใช้งาน Trace",
+   "text": "ในคลังข้อมูลของคุณ Svarog มีหมดทุกอย่างเลยล่ะ...",
+   "unlockRequirement": "",
+   "cnUrl": "e06132b978567e9b0e58e5b73b28549584043364a7943a14137ed1a08d981f7f",
+   "jpUrl": "48a7794dc7ff563bee3a701696bdbe920866207abaecbb6ae2597465ecc8a5c1",
+   "enUrl": "b02086b5a38bdd68fe4b8f09be63fde7bbc1effc040cc265d10de9f2318b88ea",
+   "krUrl": "8d66cdf115fffe981c84b58b4a5b5ad82382cf895c2b35b01dfa2e4bfdafcd26"
+  },
+  {
+   "id": 19,
+   "title": "สมาชิกทีม - Natasha",
+   "text": "พี่ Natasha... เรามาพยายามเพื่อ Underworld ไปด้วยกันเถอะ!",
+   "unlockRequirement": "",
+   "cnUrl": "1c2b805e8914f5c935c80f6bc77845a8384ade9e0f1e03072552da364d96bcc3",
+   "jpUrl": "dc15ddcafcea31e8205320d9755f866f860f90948c56416d064401d059b7995e",
+   "enUrl": "0821dba08e9ab731081463edf7c58f1f2935c362b9b14560de3838442c5537e9",
+   "krUrl": "0bf2e1ac429f5df59718e107856395bf13914ddf6ed909f3b0818c42f90c0ef5"
+  },
+  {
+   "id": 20,
+   "title": "สมาชิกทีม - Hook",
+   "text": "H...Hook ก็อยู่ด้วยเหรอ... Clara จะพยายามไม่เป็นตัวถ่วงนะ!",
+   "unlockRequirement": "",
+   "cnUrl": "0982d9fe8a8fe184e2750b97916de0bd355122c8f9eccda17b47ccb0a1f7522b",
+   "jpUrl": "83f3ac9214a9bfaf3c752be90d8be2ca141bc5712955c883c4f1e43e4d2854e5",
+   "enUrl": "bb99370f6d856d3c5f1cc2a7ad60aebee19364682934d58e7bb51d8801828b3a",
+   "krUrl": "84869b12191d552bb1c866f79035703a726ffdc04d7499bc657b11926ba6710d"
+  },
+  {
+   "id": 21,
+   "title": "สมาชิกทีม - Seele",
+   "text": "นั่นพี่ Seele นี่นา! \"Wildfire\" มาด้วย... ช่วยได้มากจริงๆ!",
+   "unlockRequirement": "",
+   "cnUrl": "f10f32c00ab7c37da5c48761a9faf53a50cf1d896ecf2c2235e5171c799b4318",
+   "jpUrl": "c0b07fe292af1a29b27c55f322fef3a70f5796c7cbc8314e838ba8c96a0b9066",
+   "enUrl": "3c4b36c6daab1ce7fe91fdeeb0febdecc01776c6c0ecdcb2fdab2cb33fc53609",
+   "krUrl": "c7c30b442412b4c7c880581867eb9f5e6247561cf4821143aadef1750d09b9c5"
+  },
+  {
+   "id": 51,
+   "title": "เริ่มการต่อสู้ - ทำลายจุดอ่อน",
+   "text": "Svarog: ระดับภัยคุกคามของเป้าหมายลดลง",
+   "unlockRequirement": "",
+   "cnUrl": "803e42b428b894de1c94407f26ac28bf61072cafb86a2a5df73f3c5b71d83d39",
+   "jpUrl": "fe43f2aa6fc9ce88d4ef5369b1ad65248d4977daeb83a8c5c55b3b0ff30ee80c",
+   "enUrl": "4de6d1dc246a351f5ed49dfa0fd21e561e26502cc61bfcc420b34294d62c9a3b",
+   "krUrl": "9f178215c61f7e2fb695abdfeb8ffbe8431422323bc830f7da1af075f8889000"
+  },
+  {
+   "id": 52,
+   "title": "เริ่มการต่อสู้ - เตือนภัย",
+   "text": "Svarog: ระดับภัยคุกคามของเป้าหมายเพิ่มขึ้น",
+   "unlockRequirement": "",
+   "cnUrl": "6e6b7a13d2ddc995364845b9f5acacdea5f8d7935f178dea3e9ae946f6f15e41",
+   "jpUrl": "33d09141ed76baa2ebfaf281b3b5b529388408525b54389ecc696fc2280dc19a",
+   "enUrl": "e015d198bac4f87642b691918c02d009719588d95ece2c38f3e5e4980d713aaf",
+   "krUrl": "2d429f309e63647695a0a9210a2a2993e6b01e87336c8a353e43a90d4b4c56fc"
+  },
+  {
+   "id": 53,
+   "title": "เริ่มเทิร์น 1",
+   "text": "Clara: Clara ต้องกล้าหาญเข้าไว้...",
+   "unlockRequirement": "",
+   "cnUrl": "2d73309461255967aeb7f440d065bdd4dedfb9fc15426c37d74982870e40dcc6",
+   "jpUrl": "a7a039eb7f072defdbdd071db768c92b3840636e1fa7bb542e4abc2f337c97b2",
+   "enUrl": "2847354345c912654c9227c410536456b4105826640ab50e9b474cc3621d0330",
+   "krUrl": "47249c2a4cad70e4fae82cfc6e8be424527007e812d11c3c094aab93372ca3e6"
+  },
+  {
+   "id": 54,
+   "title": "เริ่มเทิร์น 2",
+   "text": "Clara: ฉะ...ฉันไม่กลัวพวกคุณหรอก!",
+   "unlockRequirement": "",
+   "cnUrl": "8217de1da0ce9f7cb9caf7427fe566fda95c56059a9375599b83e2395da43e0e",
+   "jpUrl": "33fd2c13abfcfc1cdaf535e285bc160c03b7e1709a3fafed4eb267f6732c45dd",
+   "enUrl": "a9c3c707f9b1a9130d7cd008beb02133499e7ea59d925434f8767765b22c0700",
+   "krUrl": "dc6b0709280a2df2528128210295e48927fea31b94dfea9b4e6cb9ef08ba4ab8"
+  },
+  {
+   "id": 55,
+   "title": "เทิร์นสแตนด์บาย",
+   "text": "Clara: จะมัวลังเลไม่ได้แล้ว...",
+   "unlockRequirement": "",
+   "cnUrl": "06c9cdf0ff1cd2027017ae74cfdf464e5fbd20858d28a7f074f36490c2fa0fde",
+   "jpUrl": "d39d03b795fd6c2fdaffb6c4ade1e76f0d5ab5ac04d328d6875c4c6aca22deab",
+   "enUrl": "154e6a04826a946cc40130861463858e6fdc0d319529fa9870c403157e47faa5",
+   "krUrl": "1c78d09dcdb556fd52d18d499043a68a47acf52cf68b22c37c8ab097794e6c0d"
+  },
+  {
+   "id": 56,
+   "title": "โจมตีปกติ 1",
+   "text": "Clara: คุณ Svarog ระวัง!",
+   "unlockRequirement": "",
+   "cnUrl": "57ee0ea8fb0c9906f248f50a22c249ded501c5debca82fd9d69a0ed7dd6af173",
+   "jpUrl": "1ef65f32618d72ac2e3706a2b7b370a5e1e28e48447737e521442743aa0a44f2",
+   "enUrl": "2f6903334e282fe8430537552d568ef9998ecd993998b5d29c5dbb1a0e808ff5",
+   "krUrl": "b156feaaf784ec49c25fa51f6c291aa058db4487ccd1fd279d268856a2555552"
+  },
+  {
+   "id": 57,
+   "title": "โจมตีปกติ 2",
+   "text": "Svarog: กำจัดภัยคุกคาม",
+   "unlockRequirement": "",
+   "cnUrl": "2882588e5532c460a49da944f96dead2c82cd32d2ac04f140f040a6a240ecabf",
+   "jpUrl": "1a92bd88d6a5a1683ceaac26ae177d4439f820f000742d9bc5f4ee4a4a08d549",
+   "enUrl": "6795bf2917d1352094360fc1532332da121aa3c67cac7b09e9a4ad4af3ac4afd",
+   "krUrl": "d9e37835e896c961e7be9dd73d4abe85b81604376afbc5a6761d779711b3ee8b"
+  },
+  {
+   "id": 58,
+   "title": "สกิลต่อสู้ 1",
+   "text": "Svarog: หลบก่อน",
+   "unlockRequirement": "",
+   "cnUrl": "243b53091b0b377bc89a08b53e78bd881a330f4818e2eb97d53dc6e7240535f1",
+   "jpUrl": "88a39d7fb25f0d5e9eeafa07c98d063b3e4f56b510402f2eb4a8b91baa41ca1e",
+   "enUrl": "fbeb95c7026893949763d3ec8cc1328227f39e376a162b3fe871f202cf49d334",
+   "krUrl": "b5589368da840487b024523c47598c73cd7908f936aa91b27329a170d32a5a79"
+  },
+  {
+   "id": 59,
+   "title": "สกิลต่อสู้ 2",
+   "text": "Svarog: เริ่มการกำจัด",
+   "unlockRequirement": "",
+   "cnUrl": "04a2d43b282e53f00498280e63daf9ada72f7f6692ac65405e64c102c15c6d34",
+   "jpUrl": "9c873f35902264fc38db1c3a1faeb100b3ea7d443f5f6e9cb1143012915f9345",
+   "enUrl": "9eaa0e24a982e5d0d9ee4248d01fcf5d84ab2ae8d6f6a11ecea901c5ed5b5947",
+   "krUrl": "adf2e8b998ad6ef90e99539be16ca844d37b6212036aac82987242da55b0b218"
+  },
+  {
+   "id": 60,
+   "title": "โดนโจมตีเล็กน้อย",
+   "text": "Svarog: ไม่เป็นอะไรใช่มั้ย?<br />Clara: ฉันไม่เป็นไร",
+   "unlockRequirement": "",
+   "cnUrl": "11fe3436526e5c0b52989d66522e32094daf8cd14a8d1814d63487f2795d6768",
+   "jpUrl": "fefb55dedc91d06aae53619781b8214d493385c469814105e9c63c3717178499",
+   "enUrl": "6e92a8ac8ed894156e1c4ac7a4ebcbd32e507a4fbd0cc15a6ef83c10f0257999",
+   "krUrl": "7727c3705581044b0582d09ceacbeea6f4a18325596ea6948756582d120835f2"
+  },
+  {
+   "id": 62,
+   "title": "โดนโจมตีอย่างรุนแรง",
+   "text": "Clara: ...เจ็บจังเลย",
+   "unlockRequirement": "",
+   "cnUrl": "8c10820ea89c8cce0df3feb6823e056b4e1fa3676960edc89a8c238ed101e296",
+   "jpUrl": "06a54bdbe524469ea382ed0bd6e96a31eb3a4fd469aef961a8183c9468ee8ce2",
+   "enUrl": "bc94d1ab39a8e3153e3f48261ba0dde5646d05c4e544e19ec5f22104ef5c6104",
+   "krUrl": "ca75f2dba9e94a1ed4b326c1e4896ef502cc890589c8d175e56eb264f71a4938"
+  },
+  {
+   "id": 63,
+   "title": "ท่าไม้ตาย - เปิดใช้งาน",
+   "text": "Clara: ฉันก็อยากปกป้องทุกคนเหมือนกัน...",
+   "unlockRequirement": "",
+   "cnUrl": "0b237132f1d7c9f2028dc0afbcbe160a25d2a6d2b0f63916aa6162f82ad4c2e9",
+   "jpUrl": "1e8d23a4069f7f67ea4c21a15c206def2a80ec90683e9272077e3ea34b97801d",
+   "enUrl": "4f954f7a52dbf340ea6018c4c3b5ebfa0099d75349383088f7d9d77614c4970a",
+   "krUrl": "d3d22e12f8ce5ef28f6de0e1359960ed7d5df7f996abd0210ccaf443f10b6bf4"
+  },
+  {
+   "id": 64,
+   "title": "ท่าไม้ตาย - ปล่อย",
+   "text": "Clara: ช่วยฉันด้วย คุณ Svarog!",
+   "unlockRequirement": "",
+   "cnUrl": "cfc6c307ecdfd8770399107a8c86a19ce88401c58682a172c2a4a41863933aaa",
+   "jpUrl": "0bc50bc69aa805b667d51326b4991e4ca9f3006b05f97c44aea62a072b187151",
+   "enUrl": "621d5843450e7dc321eba31abeda77f04e579aa7c0a9490d8b5fc4d12a7d79e7",
+   "krUrl": "c6a7238f3e9937bc02b6e4f1cf3d3b25eef8b79a0012a4a73a8d31839b022c5b"
+  },
+  {
+   "id": 65,
+   "title": "พรสวรรค์ 1",
+   "text": "Svarog: หลบไป Clara",
+   "unlockRequirement": "",
+   "cnUrl": "c4d52c7f523fb3d9f200a755206774a389cc32c3aa55d3bcd0185113ba3fe572",
+   "jpUrl": "0d3aaf757b405fa59f3bcb51d8dd5b3b4bd2bcc98770140bd22d13c5147a5a1b",
+   "enUrl": "2ca9c923232935c18a74ccf4185f61d985a579ecaa5e9e4453693f5c85f2b466",
+   "krUrl": "001c5b8393539f06e1765cecc344a744b08a9cfcc7dfe585533ff2ec54296e67"
+  },
+  {
+   "id": 66,
+   "title": "พรสวรรค์ 2",
+   "text": "Svarog: ดำเนินการตามคำสั่ง",
+   "unlockRequirement": "",
+   "cnUrl": "e90c6f67ad13509b1c30c9c621fa24b979977d8b0cc9926236c1c09900349360",
+   "jpUrl": "a50cf9e78e6682225b91945fdcb73dfd05e53e9bb3b1ff83af7ed28b93299a93",
+   "enUrl": "b19f41c7d0d7168b3cb58e44add2614ef013dc6acfd2fb6e2e9108c8777d11ab",
+   "krUrl": "a8a70c07a2b810de4202fc9861b8f6252852ca78f28b3e9f5c7fc876a19f4fc4"
+  },
+  {
+   "id": 67,
+   "title": "หมดสติ",
+   "text": "Clara: ทุกคน... ยังโอเคอยู่ใช่มั้ย...",
+   "unlockRequirement": "",
+   "cnUrl": "cb28e41234bf7b6190ab15a8925b7741d8edd8f0a8abd3c5f3495d50db6060c6",
+   "jpUrl": "c49f5f6edee3db22829fe070d28571fc6e1753cb749ef311425112cfbd6625db",
+   "enUrl": "0c81af83fd7a0648fcb44a6abdd66022ac635ec45f46437399f719c72f3086f3",
+   "krUrl": "0411b05d90db0c7f097dbf4c157cfa9688b492a525a6afa03fd06d847d04c929"
+  },
+  {
+   "id": 68,
+   "title": "กลับสู่การต่อสู้",
+   "text": "Clara: ฉันกลับมาแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "b16c9095aad76665c3c6973731197d5632152d3e4542cb77fbf3b6ddfb2c5061",
+   "jpUrl": "f518f643c041507d2d8fd3165f9a83367bae8c5b962a49af6b3c4c83991d8602",
+   "enUrl": "c89c5538cf7a07f3376ca1f56bf2ac1c468c75ed9ddcd6d46b7729161fa41689",
+   "krUrl": "463da66568477f75a1d885d86561e9d1a1ef20ae50399e8e6b83b77ca9d27166"
+  },
+  {
+   "id": 69,
+   "title": "ฟื้นฟูพลังชีวิต",
+   "text": "Clara: ขอบคุณนะ Clara จะไม่มีวันลืมเลย",
+   "unlockRequirement": "",
+   "cnUrl": "9bc9c8844bda1ceb5378ba4303a45a1c7628cbd3cd4e3e46e8c912f5e5a7d796",
+   "jpUrl": "740f0319b469b7f0026e35e28ae844bae088123a6680949ecd53ae4153d26e23",
+   "enUrl": "b50aeedadd69173912b30de7d5a4b4ad8b276d8ecd87d751d1c75069778c30a2",
+   "krUrl": "1cde6817b2ccce50c8730af7c10e0eb491e9c95b0bfd989ca440646dc171f24a"
+  },
+  {
+   "id": 70,
+   "title": "เทคนิค",
+   "text": "Clara: ย๊าาา",
+   "unlockRequirement": "",
+   "cnUrl": "e58af419447ff61dbf96a365d480ce01b821c5a1f1227646a68197a861e5d085",
+   "jpUrl": "a829a7e9130ebc24a544ca4b5c9b69f5259f6ee9f413e263fbdc918a27bbcac4",
+   "enUrl": "cebfd8a639c5e2d69ee201a661deab0a9df5befe7f3ae6b4a68e507c15f5b6b5",
+   "krUrl": "9e2fdddcfe4fc1676ccfc8af64f4fa4ed6accaf0f8ff3e4cf92e2d328ed37b52"
+  },
+  {
+   "id": 71,
+   "title": "ชนะการต่อสู้",
+   "text": "Clara: ไม่รู้ว่าช่วยทุกคนได้บ้างรึเปล่านะ...",
+   "unlockRequirement": "",
+   "cnUrl": "79f3e5ba33a0a96e5c45a65353ed0ebb80b0e8fe2212082d612e117cec15b050",
+   "jpUrl": "2c94a939eb9ef87ca63b75edaf65ef2c04a9365eb4ca41edc0ec4296c6e43efc",
+   "enUrl": "9c409b624234b9895efe1ba6ddbeb07d2c5b58ef57cf131b3703c389b5335180",
+   "krUrl": "5f0b47679780337e3f48c6a33c32d33398e514a959f8af5ad619d012ff4a4231"
+  },
+  {
+   "id": 72,
+   "title": "เปิดสมบัติ 1",
+   "text": "Clara: Clara อยากได้ชิ้นส่วนสำหรับซ่อมแซมเท่านั้น",
+   "unlockRequirement": "",
+   "cnUrl": "2403dc542b17eb5415e7775d9061da5089f1675942a376246f62b8f161ab3e85",
+   "jpUrl": "3f689dfdfa85dd394d9feb391914a458b08af594564c89b70e4ce04663950efa",
+   "enUrl": "ab8997574fe869cb82317d2a55423ae387e101b2dff341542f16ea74f7b0bce0",
+   "krUrl": "8d718b4e839ba070c8d54c50352b2f7a403a72977cf3b58a403a561f5797d48c"
+  },
+  {
+   "id": 76,
+   "title": "เปิดสมบัติ 2",
+   "text": "Clara: ฉะ...ฉันขอรับไว้ได้มั้ย?",
+   "unlockRequirement": "",
+   "cnUrl": "80774effc2854f04f46123f73a303879241f2db4be75dc4c4c77a12ada5e126e",
+   "jpUrl": "83b7aea7b446af5b650fbff0596c60a484b01f6897b0d4d5d13c33fd139c0210",
+   "enUrl": "f09ebf5a9a1e94741d64f80787f3fa11f65892ed351b349ad08e790d26b08b39",
+   "krUrl": "bf5055e566ca542c82d2ef1439a5b79e2e9cc3c6b731234d59a1177383f2ee68"
+  },
+  {
+   "id": 77,
+   "title": "เปิดสมบัติล้ำค่า",
+   "text": "Clara: อะ...อันนี้แพงเกินไปแล้ว!",
+   "unlockRequirement": "",
+   "cnUrl": "f14269e8c0121860c02e4796ba93968d0e862c9b175348dd868e8afdca6d7a42",
+   "jpUrl": "849d21902ae54b7d5cd52cd48f900c266ff1f5511c17e8616ac7dcd7aa65484c",
+   "enUrl": "0208af1895428ef9499a476522703be709fc40359eb3f8bc6e2cd35088112099",
+   "krUrl": "3117d1a096a36a217512497294c707ba0c89886192c3a4a7bb5dfe6241d2cd3a"
+  },
+  {
+   "id": 73,
+   "title": "ไขปริศนาสำเร็จ 1",
+   "text": "Clara: สะ...สำเร็จแล้ว!",
+   "unlockRequirement": "",
+   "cnUrl": "4af2b0bf2eb34fdc88188a00be459449131ff3f0653a13df8f5582a032b190e3",
+   "jpUrl": "2c01776ec7b5af3466d277f9958423a3db8cd4728fdf2f1b5fa5c47676b933d3",
+   "enUrl": "997fc237a0de85cc4b4634b031655fb31766434c2c8556dfafd0096bf456f46a",
+   "krUrl": "f3cbe9ef963a1554113c47e440787ad4db79b3375f09eaec585a74a9cb1d0085"
+  },
+  {
+   "id": 78,
+   "title": "ไขปริศนาสำเร็จ 2",
+   "text": "Clara: Clara... ทำได้ดีใช่มั้ย?",
+   "unlockRequirement": "",
+   "cnUrl": "d3c8ae6527e9ea4c63e4248b3188162b1ee5132d2fbbe333a813ef609c7c0826",
+   "jpUrl": "58270b633d6f6ac25f9c435ddd998026ef4e5439333f00f005c48cfcb6af0465",
+   "enUrl": "8815cb16a255b99824af0549192a7da7bbdee20fdcef1527fb06983785047710",
+   "krUrl": "efffa805c55af6e925aedfd0aafd5fa982d4b477b36fbf09e2d071ef7d84ed10"
+  },
+  {
+   "id": 74,
+   "title": "พบศัตรูเป้าหมาย",
+   "text": "Svarog: เป้าหมายที่มีระดับภัยคุกคามสูงอยู่ข้างหน้า",
+   "unlockRequirement": "",
+   "cnUrl": "95256be6ed53edac747950305473a37d238236b5183c2019da741991eb270153",
+   "jpUrl": "46920b92d7176c5356a3a361bea88e9f5ab47f76e670d3a877c8d7bc23ab78d1",
+   "enUrl": "8049b58b30e80b44a7ae72a1671938cca5c7d0be5f9505ef38c1aff38b2cbe69",
+   "krUrl": "275779a5b30b387480ac7fcd711eaa95fee495f3025c988d63eefd4e967bfde3"
+  },
+  {
+   "id": 75,
+   "title": "กลับเข้าเมือง",
+   "text": "Clara: ไม่เป็นไร คุณ Svarog ที่นี่ปลอดภัยมาก",
+   "unlockRequirement": "",
+   "cnUrl": "986ff259fe3f4eca9e2c1ea0f86889eccbf61e62369704ceb2c8996681a56efd",
+   "jpUrl": "366d29fb0baaf133de58abd949cad985904bd687cb190967c08caf3defc99b09",
+   "enUrl": "eda5e8a8825404d15154f4e780aac0dcba41771669a90d3a3b7a8ecf91aa6588",
+   "krUrl": "272618e7814070d11aa6d7cce810009385bf8b04d9f41ce0a7f59e0cd551bb94"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "รายละเอียดตัวละคร",
+   "text": "เด็กสาวที่ได้หุ่นยนต์คอยเลี้ยงดู มีความเฉลียวฉลาดและความมุ่งมั่นเกินอายุ<br />สำหรับ Clara แล้ว การคำนวณตามหลักเหตุผลของ Svarog คือกฎของโลกที่ไม่มีทางผิดพลาด<br />จนกระทั่งพบว่าผลลัพธ์ที่ได้จาก \"การคำนวณ\" ไม่ได้นำความสุขมาสู่ทุกคนเสมอไป<br />เด็กหญิงที่แสนขี้ขลาดจึงตัดสินใจที่จะยืนหยัดอย่างกล้าหาญ",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 1",
+   "text": "\"...บันทึก ยุคสร้างเมือง วันที่██ เดือน██ ปีที่ ████\"<br /><br />\"พบเด็กผู้หญิง ในบ่อขยะทางตะวันออกเฉียงใต้ของเมือง Boulder\"<br /><br />\"หลังจากการสแกน ไม่พบความเสียหายทางโครงสร้าง หรือความผิดปกติทางร่างกายของเด็ก แต่สภาพจิตใจค่อนข้างไม่มั่นคง โดยปฏิเสธการพูดถึงสถานการณ์ของตัวเอง และมีแนวโน้มที่จะหลีกเลี่ยงอย่างเห็นได้ชัด\"<br />\"พยายามทำการสื่อสารต่อ และได้รับข้อมูลบางส่วนสำเร็จ\"<br />\"เด็กหญิงเริ่มร้องไห้เป็นเวลานานถึง 3 ชั่วโมง 7 นาที\"<br /><br />\"เด็กคนนี้ชื่อ Clara ไม่ทราบประวัติความเป็นมา\"<br />\"สรุป: พากลับมาสังเกตการณ์ที่ฐานลับ และเก็บรวบรวมข้อมูลที่เกี่ยวข้องให้มากขึ้น เพื่อสร้างแผนดูแลจัดการในลำดับถัดไป\"",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>20</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 2",
+   "text": "\"...บันทึก ยุคสร้างเมือง วันที่██ เดือน██ ปีที่ ████\"<br /><br />\"Clara สามารถพูดภาษากลางของ Belobog ได้อย่างชำนาญแล้ว และแสดงออกถึงพรสวรรค์อันโดดเด่นในด้านวิศวกรรมเครื่องกล แต่ Clara ยังคงปฏิเสธที่จะสื่อสารกับมนุษย์คนอื่น การประเมินแสดงให้เห็นว่า แนวโน้มพฤติกรรมเช่นนี้ จะส่งผลเสียต่อการพัฒนาในระยะยาวของ Clara ใน Belobog\"<br /><br />\"ขณะนี้ จะต้องกำหนดแผนการสอนการสื่อสารทางสังคม ที่เหมาะสมให้กับ Clara อย่างเร่งด่วน ระดับความสำคัญอยู่ที่: สูง\"<br /><br />\"...บันทึก ยุคสร้างเมือง วันที่██ เดือน██ ปีที่ ████\"<br /><br />\"Clara สื่อสารกับเพื่อนวัยเดียวกันในเมือง Boulder สำเร็จแล้ว ฝ่ายที่สื่อสารในครั้งนี้มีชื่อว่า Hook ผู้อ้างว่าตนมาจาก 'แก๊งตัวตุ่น' ซึ่งเป็นองค์กรรักษาความสงบเรียบร้อยประจำเมือง Boulder และมีฐานะเป็นหัวหน้าหลัก... ในคลังข้อมูลไม่พบองค์กรนี้ หรือข้อมูลที่เกี่ยวข้องแต่อย่างใด\"<br /><br />\"ในช่วงแรก การพูดคุยสื่อสารของ Clara และ Hook ไม่ค่อยราบรื่นนัก เธอแสดงความเขินอายออกมา แต่อีกฝ่ายก็ใช้ความกระตือรือร้นและความเห็นอกเห็นใจ มาเริ่มต้นการสนทนาได้สำเร็จ ทั้งยังเรียก Clara ว่า 'สมาชิกกิตติมศักดิ์แห่งแก๊งตัวตุ่น' หลังจากสื่อสารจบลง Clara ก็กล่าวถึง Hook ว่าเป็น 'เพื่อนคนแรก' ของเธอ\"<br /><br />\"เรื่องนี้มีความหมายกับ Clara มาก จึงได้จัดบันทึกนี้ไว้ในประเภท 'สำคัญ'\"",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>40</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 3",
+   "text": "\"...บันทึก ยุคสร้างเมือง วันที่██ เดือน██ ปีที่ ████\"<br /><br />\"ภายใต้การชี้นำของ Clara คนพเนจรมากมายก็ได้ก่อตั้งค่ายขึ้นรอบๆ ฐานลับ และประทังชีวิตโดยอาศัยความช่วยเหลือจาก Clara พฤติกรรมนี้ไม่ขัดต่อคำสั่งของ 'อนุรักษ์' แต่มีหลายคนที่พยายามใช้เส้นทางคมนาคมของฐานลับ เพื่อเข้าสู่ Overworld ด้วยเหตุนี้จึงต้องปิดผนึกประตูของฐานลับ เพื่อชะลอการล่มสลายของ Belobog\"<br /><br />\"Clara เคยคุยกับฉันเรื่องนี้: เธอคิดว่าการปิดประตูเป็นสิ่งที่ 'ไม่สามารถเข้าใจได้' ดังนั้น ฉันจึงบอกผลการคำนวณให้เธอรู้: ผู้พิทักษ์สูงสุดทุ่มทรัพยากรให้กับสงครามที่ Fragmentum มากเกินไป ซึ่งพฤติกรรมนี้จะทำให้ Overworld ล่มสลายเร็วขึ้น และการตัดขาดจากที่นั่น ก็เป็นทางเลือกที่ดีที่สุดสำหรับ Underworld... เพื่อที่จะได้ซื้อเวลาอยู่รอดให้กับผู้คนใน Underworld นานขึ้น ซึ่งในท้ายที่สุด Clara ก็เห็นด้วยกับเรื่องนี้\"<br /><br />\"พฤติกรรมของมนุษย์ส่วนใหญ่จะไม่มีตรรกะนัก แต่ Clara ไม่ใช่อย่างนั้น... ฉันเลี้ยงดูเธอจนเติบโตมาท่ามกลาง Automaton ดังนั้นพฤติกรรมทั้งหมดของเธอ จึงมาจากหลักเหตุและผลอย่างแท้จริง และการดำรงอยู่ของเธอ ก็อาจส่งผลต่อผลการคำนวณเกี่ยวกับการล่มสลายของ Belobog ได้ ถึงอย่างนั้น ยังจำเป็นต้องมีการสังเกตต่อไป\"",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>60</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 4",
+   "text": "\"...บันทึก ยุคสร้างเมือง วันที่██ เดือน██ ปีที่ ████\"<br /><br />\"ตั้งแต่เกิดมา ฉันก็ถูกป้อนคำสั่งให้ 'อนุรักษ์' Underworld เอาไว้... ซึ่งฉันจะปฏิบัติตามคำสั่งนี้อย่างเคร่งครัด แม้จะทำได้เพียงยืดเวลาการอยู่รอดของ Underworld ให้นานกว่า Overworld แค่เสี้ยววินาทีก็ตาม หากบรรยายด้วยแนวคิดในวัฒนธรรมดั้งเดิมของ Belobog อาจกล่าวได้ว่า 'ฉันซื่อสัตย์ต่อภารกิจที่ได้รับมอบหมาย โดยไม่มีแม้แต่ข้อสงสัย' ดังนั้น ฉันจึงยึดผลการคำนวณของตัวเองเป็นกฎเหล็ก... ไม่ว่าใครหรือสิ่งใด ก็ไม่อาจทําให้ฉันหวั่นไหวได้...ซึ่งรวมถึง 'ผู้มาเยือน' ด้วย\"<br /><br />\"แต่ท่ามกลางผลการคำนวณมากมาย ฉันก็สังเกตเห็นความเป็นไปได้อย่างหนึ่ง\"<br /><br />\"ในผลการคำนวณนี้ Clara ได้เปลี่ยนแปลงทุกสิ่งของ Belobog ฉันเคยประเมินเธอไว้แบบนี้: 'ส่วนใหญ่พฤติกรรมทั้งหมดของเธอ จะมาจากหลักเหตุและผลอย่างแท้จริง' หากใช้ผลการคำนวณนี้เป็นพื้นฐาน และพิจารณาถึงผลสรุปอีกครั้ง ฉันก็ไม่สามารถมองว่ามันคือข้อผิดพลาดได้ แต่ยอมรับว่ามีความอคติซ่อนอยู่จริง\"<br /><br />\"Clara ได้พิสูจน์ประเด็นหนึ่งในผลการคำนวณครั้งนี้ว่า การมี 'หลักเหตุผลที่แท้จริง' ไม่ใช่กุญแจสำคัญในการเปลี่ยนแปลงสภาพปัจจุบัน แต่เป็น 'ความรู้สึก' ที่จริงใจและกระตือรือร้นของเธอ ที่ทำให้ผลการคำนวณทั้งหมดกลับตาลปัตร และพลิกผันอนาคตที่กำหนดไว้ว่า Belobog ต้องล่มสลาย แต่อย่างไรก็ตาม นอกจากจะมีปัจจัยภายนอกใหม่เข้ามาแทรกแซง ความน่าจะเป็นของผลการคำนวณครั้งนี้จะไม่เกิน <nobr>0.25272%</nobr> จึงควรจัดให้อยู่ในกลุ่มเหตุการณ์ที่มีความเป็นไปได้น้อย และจะหยุดศึกษาผลการคำนวณนี้เป็นการชั่วคราว\"<br /><br />\"ปัจจุบัน ความน่าจะเป็นในการอยู่รอดของ Underworld ยังไม่มีแนวโน้มที่จะเพิ่มขึ้นอย่างเห็นได้ชัดในห้ารอบเวลาที่ผ่านมา จึงประเมินว่าควรชะลอเรื่องนี้ไว้ก่อน แต่ฉันจะยังคงจับตาดูปัจจัยความเสี่ยงที่เกี่ยวข้องต่อไป\"<br /><br />\"ในรอบเวลานี้ ฉันจะจดจ่อไปที่การช่วย Clara ตามหาคนในครอบครัว ถึงแม้ Clara จะบอกอยู่เสมอว่า 'ตนตามหาครอบครัวที่แท้จริงเจอแล้ว' แต่ฉันจะยังคงค้นหาข้อมูลที่เกี่ยวข้องต่อไป เพื่อหาตำแหน่งของครอบครัว Clara ให้พบโดยเร็วที่สุด\"",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>80</nobr>"
+  }
+ ],
+ "archive": {
+  "cvCn": "紫苏九月&王宇航",
+  "cvJp": "日高里菜&安元洋貴",
+  "cvKr": "김예림&최낙윤",
+  "cvEn": "Emily Sun & D.C. Douglas",
+  "camp": "Belobog"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Clara",
+ "rarity": 5,
+ "descHash": "เด็กสาวพเนจรที่อาศัยอยู่กับหุ่นยนต์ เธอเป็นคนเก็บตัว อ่อนโยน และมีจิตใจที่บริสุทธิ์ เธอหวังว่าทุกคนใน Underworld จะเป็นเหมือน \"ครอบครัว\" ของกันและกัน",
+ "artPath": "3d8c8d1e3cc8e410b00c6edb01c25b13f8832205cf77c462275fed70af02b4ca",
+ "miniIconPath": "c0bd56eb715d6fbee0fcedadd5ed52af0e71985cf072eb7606d8030b8d0cd6fb",
+ "damageType": {
+  "id": 1,
+  "iconPath": "9b77aa4b13a80228e6db8023c086a6dd43ffe89e318aa52e790528beb4e5ea20",
+  "color": "#FFFFFF",
+  "name": "กายภาพ",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "673136d8ba64c836e77a0084380bccea317250a93f866ddfcb0d64682b543970",
+  "altIconPath": "9093f5a5aa958c0fe5a14267d9fe5101a95a033e08898ba40b35994c1a3a8d81",
+  "color": "#FFFFFF",
+  "name": "ทำลายล้าง",
+  "rarity": 0
+ },
+ "pageId": "clara"
+}

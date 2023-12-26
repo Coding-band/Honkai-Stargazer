@@ -125,7 +125,7 @@
    "iconPath": "3cd4c92ff44d695595377ffc6c0896d6839775f6014e96daf679b256bc0d19cf",
    "name": "Esquema do Usurpador",
    "desc": "Uma quantidade moderada de antimatéria. Material normal usado para aprimoramentos.",
-   "lore": "Uma quantidade moderada de antimatéria que paira em torno do Guarda-Vazio: Alterador. As partículas de matéria e antimatéria atingiram um equilíbrio perigoso...<br /><br />\"Eles todos anseiam pelo momento de obliteração, quando serão reforjados e fundidos com o mundo inteiro.\"",
+   "lore": "Uma quantidade moderada de antimatéria que paira em torno do Guarda-Vazio: Alterador. As partículas de matéria e antimatéria atingiram um equilíbrio perigoso...<br /><br />\"Eles todos anseiam pelo momento de obliteração, quando serão reforjados e fundidos com o mundo inteiro\".",
    "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
    "rarity": 3,
    "rewardPath": "/material/633378",
@@ -148,6 +148,7 @@
    "rarity": 2,
    "rewardPath": "/material/635668",
    "comeFrom": [
+    "Cálice (Zona de Abastecimento)",
     "Cálice (Zona de Abastecimento)",
     "Troca de Brasas"
    ]
@@ -190,7 +191,7 @@
    "id": 836254,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "1313f4b8549d0b129fb33fcd3745a87a8030d13fc8c28159f0dd2868a203ac2f",
+   "iconPath": "d7b80e02bd0ea7a489366b4ec55dab8aef86c30f28636de55dc1ac64b5e7c2e6",
    "name": "Proteção de Âmbar",
    "desc": "Um escudo incomum imbuído com âmbares extraídos de locais que vão além dos céus. Usado para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Preservação</span>.",
    "lore": "O portador deste escudo aparentemente é protegido por uma parede invisível, imune a flechas de fogo ou garras robustas.<br />Lendas antigas contam a história de uma guerra onde um herói tribal portando um escudo de bronze lutou contra um Leviatã, junto com guerreiros armados com lanças ardentes.<br />Este escudo é testemunha dessa guerra.<br /><br />\"Não cruze a linha.\"",
@@ -198,6 +199,7 @@
    "rarity": 4,
    "rewardPath": "/material/836254",
    "comeFrom": [
+    "Cálice (Zona de Abastecimento)",
     "Cálice (Zona de Abastecimento)",
     "Sintetizador Omni — Síntese de Material"
    ]
@@ -214,6 +216,7 @@
    "rarity": 3,
    "rewardPath": "/material/920195",
    "comeFrom": [
+    "Cálice (Zona de Abastecimento)",
     "Cálice (Zona de Abastecimento)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas"
@@ -1565,7 +1568,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do inimigo-alvo.",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do alvo inimigo do Tipo correspondente.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2347,7 +2350,7 @@
    "id": 9,
    "title": "Ativação de Eidolon da Preservação",
    "text": "O valor da escolha está na determinação inabalável.",
-   "unlockRequirement": "Desbloqueia após trilhar um novo Caminho.",
+   "unlockRequirement": "Desbloqueia após trilhar um novo Caminho",
    "cnUrl": "c141cbba1b7442dc77c3d4e3d82625b617fcada6659ba26aefa2c19ee49ca802",
    "jpUrl": "c3733aa7b3614038b8e37bdead2a323e1ecf5e7aff38b57996cc28c3bc81c5e4",
    "enUrl": "c591752a8f104380f3eb910c736c20157b6527e1c1e888619800d8866aa39914",
@@ -2387,7 +2390,7 @@
    "id": 13,
    "title": "Ativação de Rastro da Preservação",
    "text": "A Preservação é determinada pelas nossas ações.",
-   "unlockRequirement": "Desbloqueia após trilhar um novo Caminho.",
+   "unlockRequirement": "Desbloqueia após trilhar um novo Caminho",
    "cnUrl": "9cdd9d91659815cc0cd5bc17dd5e1a094073b28db9970a6790e3d0df9c9c0dbf",
    "jpUrl": "786e7af73402288db8ec4a48fac022894dc3995d3c34361283f5882179cb104a",
    "enUrl": "c392b5fc51d705f28d2e69c4c062be20d1b13f864a19e44c3a5aef5041210586",
@@ -2406,7 +2409,7 @@
   {
    "id": 15,
    "title": "Entrou na Equipe com Dan Heng",
-   "text": "Dan Heng, vamos agir rápido.",
+   "text": "Dan Heng, vamos acabar rápido com isso.",
    "unlockRequirement": "",
    "cnUrl": "f63e45e54315454c2eb785a30a094eee3ad333b9501f25c60837dd0e3ff89aa4",
    "jpUrl": "04579c68106ae9230521261f80e074d60fe2da20d10c60dec1537600c4c47e3a",
@@ -2416,7 +2419,7 @@
   {
    "id": 16,
    "title": "Entrou na Equipe com Dan Heng - Embebidor Lunae",
-   "text": "Como sempre, Dan Heng, vamos agir rápido!",
+   "text": "Como sempre, Dan Heng, vamos acabar rápido com isso!",
    "unlockRequirement": "",
    "cnUrl": "76484689f930f56b90ada97ed8eebe9e7b58641292a6d2b88b351dc1ae4dce85",
    "jpUrl": "d24c8d11c8dc8462096274178e6accf0497f23495cb0bee108079514a041bd3d",
@@ -2685,7 +2688,7 @@
   },
   {
    "id": 125,
-   "title": "Perícia 1 (A Preservação)",
+   "title": "Perícia - 1 (A Preservação)",
    "text": "Indestrutível.",
    "unlockRequirement": "Desbloqueia após trilhar um novo Caminho.",
    "cnUrl": "6d6e8cea8144c7ef20345fa2be045f29b4e15047e8bc28c3d31be91864290329",
@@ -2695,7 +2698,7 @@
   },
   {
    "id": 126,
-   "title": "Perícia 2 (A Preservação)",
+   "title": "Perícia - 2 (A Preservação)",
    "text": "Defenda os fracos.",
    "unlockRequirement": "Desbloqueia após trilhar um novo Caminho.",
    "cnUrl": "b8195aabc2112b6a3f21edb07892b4bd22e71c166ab8714f5c29abdd25e86254",
@@ -2795,7 +2798,7 @@
   },
   {
    "id": 996,
-   "title": "Abrindo Tesouro 1",
+   "title": "Abrindo Tesouro - 1",
    "text": "Parece bom.",
    "unlockRequirement": "",
    "cnUrl": "750f70e23fd2a80ba7487e519357e75ee6d45fcc9c0757ab8ecb21c5af23fb30",
@@ -2805,7 +2808,7 @@
   },
   {
    "id": 992,
-   "title": "Abrindo Tesouro 2",
+   "title": "Abrindo Tesouro - 2",
    "text": "É só isso?",
    "unlockRequirement": "",
    "cnUrl": "cc848f982c72ad5e4cb18044b1ad9a0b312b6ce1ec3dec40f309328961265da8",
@@ -2825,7 +2828,7 @@
   },
   {
    "id": 997,
-   "title": "Enigma Solucionado 1",
+   "title": "Enigma Solucionado - 1",
    "text": "Então é assim que funciona...",
    "unlockRequirement": "",
    "cnUrl": "4bcf318ae192dbac85d4e362e0dd6a5dc5f3abb362906ec375464c1c59cba7ab",
@@ -2835,7 +2838,7 @@
   },
   {
    "id": 994,
-   "title": "Enigma Solucionado 2",
+   "title": "Enigma Solucionado - 2",
    "text": "Não é páreo para mim!",
    "unlockRequirement": "",
    "cnUrl": "50cb2b573079be884bad8a500301161ded995b300ba869ec4b14ae34b6859ad7",

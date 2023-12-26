@@ -1,0 +1,2792 @@
+{
+ "spRequirement": 120,
+ "iconPath": "bfca71a4e030ff72e1ebcbfbb4bfaff1ba1a2ba5f1a8ca5846979a7feb074355",
+ "bgPath": "2a27f6620a9080f5267d69a7adbda611c42bb63441cd1a3857ee7f9c14edaf94",
+ "figPath": "03202aa8ae3ca82a8a204d1384431900333b721175d3f1b3363a4476de67f9c9",
+ "fgPath": "aa0bdc5240c7a99070ee1a5f69cba8fd6ca5585bafd99e59335828b5746701ec",
+ "splashIconPath": "3f1846fef9b484c4b24825e5db7057b3e7cfe9c2d815a5d586fdf1ab11b5dc7d",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 5,
+  "iconPath": "4b4b5f13f6588e7fb1c030c28f9b9b67a7a8c4bab77c05e38d5c9f64eb0d99e7",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Credit",
+   "desc": "Mata uang yang digunakan saat Interastral Peace Corporation bertransaksi dengan pelanggannya. Kini mata uang ini sudah menjadi mata uang yang umum di perjalanan ruang angkasa.",
+   "lore": "\"Orang-orang berlarian, berkelahi, bertransaksi ... tujuannya cuma untuk angka-angka yang muncul di terminal. Namun benda yang benar-benar berharga tidak dapat dibeli oleh angka-angka perusahaan.\"",
+   "purpose": "Mata uang umum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calyx \"Great Mine\"",
+    "Hadiah Misi",
+    "Hadiah Tugas",
+    "Penukaran Ember"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Tracks of Destiny",
+   "desc": "Material berkualitas tinggi untuk meningkatkan level Trace.",
+   "lore": "Kekalahan demi kekalahan telah membuatmu menang. Langkah demi langkah ke depan telah membawamu tiba di titik balik nasib.",
+   "purpose": "Material Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Hadiah Poin \"Simulated Universe\"",
+    "Kehormatan Tanpa Nama",
+    "Penukaran Ember",
+    "Hadiah Event Waktu Terbatas"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "9794d4b9cee70ded671331e6e9eec06326dcb9428d59540d9960f2a0bbea00e1",
+   "name": "Regret of Infinite Ochema",
+   "desc": "Material berkualitas tinggi untuk meningkatkan level Trace.",
+   "lore": "Tidak peduli berapa banyak tubuh yang dicuri, keinginannya tetap tidak pernah terpuaskan. Sama seperti orang-orang yang mencari ramuan keabadian, dia juga menginginkan cangkang tubuh yang tahan lama, tanpa harus takut pada kehancuran. Dia tahu, kalau hal ini hanyalah mimpi belaka.<br /><br />\"Aku pernah melihat banyak dunia yang ditelan oleh kobaran api The Blemished One, dan aku pernah menjadi bagian dari kobaran itu. Aku menari mengikuti arahan jari-jarinya, tahu jelas kalau kayu bakar sudah terbakar habis, maka kobaran api juga akan padam ....\"",
+   "purpose": "Material Trace",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "Echo of War: Scalegorge Waterscape"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "Traveler's Guide",
+   "desc": "Material Experience untuk karakter. Dapat memperoleh <nobr>20.000</nobr> Character EXP.",
+   "lore": "Buku seri yang harus disiapkan saat menjelajahi berbagai dunia. Tekan tombol baca, dan suara magnetik dalam bahasa yang kamu pahami akan menceritakan pengalaman legendaris petualang terkenal di berbagai dunia, serta pengetahuan dan kebijaksanaan berharga yang mereka peroleh di berbagai planet.<br /><br />\"Seri baru Traveler's Guide 'Resep Kuliner Antarbintang' akan segera dijual, ditunggu ya.\"<br />\"Untuk pengiriman, silakan hubungi Synesthesia Beacon ERD<nobr>-230</nobr> untuk terhubung dengan perwakilan Intelligentsia Guild. Pembayaran dapat dilakukan dengan metode apa pun yang praktis untukmu.\"",
+   "purpose": "Material EXP Karakter",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calyx \"Outlying Snow Plains\"",
+    "\"Forgotten Hall\""
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "Adventure Log",
+   "desc": "Material Experience untuk karakter. Dapat memperoleh <nobr>5.000</nobr> Character EXP.",
+   "lore": "Buku catatan petualangan yang dikemas dengan rapi dan terlihat sangat edukasional. Teks dan gambar sama-sama mendeskripsikan awal dan akhir petualangan, informasi berharga, dan kiat-kiat bertahan hidup.<br /><br />\"Kenapa tidak menjadikannya sebagai data dan masukkan ke disk fotolit? Begitu bakal lebih praktis.\"<br />\"Saat menghadapi badai bintang dan letusan aliran neutron, teknologi tinggi akan menjadi jauh lebih rapuh dari yang kamu bayangkan. Ditambah lagi, penulis buku ini pasti ingin orang-orang membacanya dengan cara yang paling sederhana.\"",
+   "purpose": "Material EXP Karakter",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calyx \"Outlying Snow Plains\"",
+    "Pelatihan Harian",
+    "Penukaran Ember"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "Travel Encounters",
+   "desc": "Material Experience untuk karakter. Dapat memperoleh <nobr>1000</nobr> Character EXP.",
+   "lore": "Buku harian yang mencatat segala penemuan di perjalanan. Tulisannya acak-acakan dan isinya juga ditulis sesuka hati. Tidak banyak gunanya untukmu.<br /><br />\"Cepat buang tumpukan kertas ini setelah dibaca ya, Dan Heng?\"",
+   "purpose": "Material EXP Karakter",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calyx \"Outlying Snow Plains\"",
+    "Hadiah Tugas"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "54d4c5dedbef6b70f526e88708669e94b6a214431c0c9ca55edf9b28b3413fcb",
+   "name": "Artifex's Module",
+   "desc": "Bagian dari pembuatan kecerdasan Xianzhou. Material sederhana yang digunakan untuk peningkatan.",
+   "lore": "Dasar dari teknologi kecerdasan Xianzhou. Konstituen terkecil dari semua bagian mesin. Memecahkannya akan sama dengan menghancurkan struktur seluler makhluk hidup.<br /><br />\"Intelligentsia Guild menawarkan hadiah 2 juta Credit untuk solusi teknis yang dapat membongkar boneka mekanik Xianzhou dengan sempurna.\"<br />\"Kalau kamu kenal Screwllum, maka 2 juta ini pada dasarnya adalah milikmu ....\"",
+   "purpose": "Material Trace<br />Material Ascension Karakter",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "Dijatuhkan Entranced Ingenium",
+    "Dijatuhkan musuh di \"Simulated Universe\"",
+    "Hadiah Tugas",
+    "Penukaran Ember",
+    "\"Omni-Synthesizer\" - Pertukaran Material"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "7b31224c48190eebf224b39e2a9df9477f9c67018bc63cb1b20569e6186041c3",
+   "name": "Artifex's Cogwheel",
+   "desc": "Bagian dari pembuatan kecerdasan Xianzhou. Material biasa yang digunakan untuk peningkatan.",
+   "lore": "Benda yang menghubungkan komponen-komponen dalam teknologi kecerdasan Xianzhou. Gigi gerigi yang terhubung dengan halus berukuran kecil seperti biji sesawi, namun saling berhubungan untuk membentuk tubuh yang kompleks, membuat mesin tersebut dapat melewati kehidupan yang sebenarnya.<br /><br />\"Bentuknya terletak dalam harmoni, sejajar dengan alam. Gerakannya berputar, menggemakan kosmos.\"",
+   "purpose": "Material Trace<br />Material Ascension Karakter",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "Dijatuhkan Entranced Ingenium pada Level Equilibrium Lv. 2 atau lebih",
+    "\"Omni-Synthesizer\" - Synthesis Material",
+    "Dijatuhkan musuh di \"Simulated Universe\"",
+    "\"Omni-Synthesizer\" - Pertukaran Material"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bb7670872389d870154ac70d1b29dee2d6c123f558951c6f914f1d9a70c28382",
+   "name": "Obsidian of Dread",
+   "desc": "Sepotong zat hitam yang ditangkap dari kehampaan. Dapat meningkatkan sedikit level Trace milik karakter <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihility</span>.",
+   "lore": "Cara apa pun tidak dapat membuktikan wujud aslinya.<br />Saat disentuh dengan pelan, terdengar suara gumaman tidak jelas dari pecahan.<br /><br />\"████ ██ █ █\"",
+   "purpose": "Material Trace<br />Material Ascension Light Cone",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "Calyx \"Great Mine\"",
+    "Calyx \"Great Mine\"",
+    "Penukaran Ember"
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "fcb869b494268ac2b7320d4a3795736698f3a3c5e9bad9c0182c6e11bd343c55",
+   "name": "Artifex's Gyreheart",
+   "desc": "Bagian dari pembuatan kecerdasan Xianzhou. Material kualitas tinggi yang digunakan untuk peningkatan.",
+   "lore": "Inti dari teknologi kecerdasan Xianzhou. Bola dunia bergolak dan bergetar seperti inti hati, membuat mesin itu berpikir seperti makhluk hidup.<br /><br />\"Jangan kaget. Mengambil jantungnya akan membuatnya ... eh, dia? Tidak, membuatnya kehilangan kecerdasannya dan kembali ke sumber mekanisnya.\"",
+   "purpose": "Material Trace<br />Material Ascension Karakter",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "Dijatuhkan Entranced Ingenium pada Level Equilibrium Lv. 4 atau lebih",
+    "\"Omni-Synthesizer\" - Synthesis Material",
+    "Dijatuhkan musuh di \"Simulated Universe\"",
+    "\"Omni-Synthesizer\" - Pertukaran Material"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "34d88252515cd13ab58b6f5aae7329794a4a330a0147e1c5f755c8a2f4444bff",
+   "name": "Obsidian of Obsession",
+   "desc": "Sebongkah materi gelap yang diambil dari kehampaan. Dapat meningkatkan banyak level Trace milik karakter <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihility</span>.",
+   "lore": "Orang yang berpikiran lemah akan menghabiskan kekekalan mereka dalam kekacauan hanya dengan melihat sekilas ke prisma.<br /><br />\" \"",
+   "purpose": "Material Trace<br />Material Ascension Light Cone",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "Calyx \"Great Mine\"",
+    "Calyx \"Great Mine\"",
+    "\"Omni-Synthesizer\" - Synthesis Material"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1a896480b5f6ee84644db112069845e85930f6dbc0f428a3f8a6de2b187702af",
+   "name": "Obsidian of Desolation",
+   "desc": "Sepotong materi gelap yang diambil dari kehampaan. Dapat meningkatkan level Trace milik karakter <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihility</span> dalam jumlah sedang.",
+   "lore": "Tidak ada pantulan yang terlihat di permukaan prisma hitam. Benda ini tidak cuma menyerap semua cahaya, tapi juga menyerap emosi pengguna, dan cuma menyisakan rasa kehampaan.<br /><br />\"....\"",
+   "purpose": "Material Trace<br />Material Ascension Light Cone",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "Calyx \"Great Mine\"",
+    "Calyx \"Great Mine\"",
+    "\"Omni-Synthesizer\" - Synthesis Material",
+    "Penukaran Ember"
+   ]
+  },
+  "983279": {
+   "id": 983279,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "4278b6e89e5ce1f3e8f5ee4b3533db325b5adaf4fb9599da1b5c26c01508343e",
+   "name": "Searing Steel Blade",
+   "desc": "Patahan pedang dari Searing Prowler. Dapat digunakan untuk Ascension karakter tipe Fire.",
+   "lore": "Para Silvermane Guard terkadang akan mengadakan pertarungan dalam batas waktu yang ditentukan, mereka membawa kembali sebagian tubuh monster sebagai bukti. Pisau-pisau retak ini kemungkinan merupakan rampasan dari suatu pertarungan.<br /><br />\"Aku lihat dengan mata kepala sendiri, Kapten Gepard menghancurkan pedang baja yang membara itu dengan satu pukulan, lalu dengan tangan kosong, dia menyelipkannya ke perut si gemuk berlapis es itu, menghangatkannya dengan kasih sayang.\"",
+   "purpose": "Material Ascension Karakter",
+   "rarity": 4,
+   "rewardPath": "/material/983279",
+   "comeFrom": [
+    "Stagnant Shadow \"Great Mine\"",
+    "Stagnant Shadow \"Great Mine\"",
+    "\"Omni-Synthesizer\" - Pertukaran Material"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 79.2,
+   "attackAdd": 3.96,
+   "hpBase": 120,
+   "hpAdd": 6,
+   "defenseBase": 60,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549503,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "attackBase": 110.88,
+   "attackAdd": 3.96,
+   "hpBase": 168,
+   "hpAdd": 6,
+   "defenseBase": 84,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549503,
+     "count": 8
+    }
+   ]
+  },
+  {
+   "attackBase": 142.56,
+   "attackAdd": 3.96,
+   "hpBase": 216,
+   "hpAdd": 6,
+   "defenseBase": 108,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633444,
+     "count": 5
+    },
+    {
+     "id": 983279,
+     "count": 2
+    }
+   ]
+  },
+  {
+   "attackBase": 174.24,
+   "attackAdd": 3.96,
+   "hpBase": 264,
+   "hpAdd": 6,
+   "defenseBase": 132,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633444,
+     "count": 8
+    },
+    {
+     "id": 983279,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 205.92,
+   "attackAdd": 3.96,
+   "hpBase": 312,
+   "hpAdd": 6,
+   "defenseBase": 156,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717385,
+     "count": 5
+    },
+    {
+     "id": 983279,
+     "count": 15
+    }
+   ]
+  },
+  {
+   "attackBase": 237.6,
+   "attackAdd": 3.96,
+   "hpBase": 360,
+   "hpAdd": 6,
+   "defenseBase": 180,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717385,
+     "count": 7
+    },
+    {
+     "id": 983279,
+     "count": 28
+    }
+   ]
+  },
+  {
+   "attackBase": 269.28,
+   "attackAdd": 3.96,
+   "hpBase": 408,
+   "hpAdd": 6,
+   "defenseBase": 204,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 106,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "3aa8570476d3d87163f3067a9886c5977396aa663461a08445a01910538c6dae",
+   "artPath": "c7830f37a3a6ae7a0c728bfade0c5e6edc6fd69f9709ed1e64b2c411cf3d3d76",
+   "name": "Slurping Noodles During Handstand",
+   "descHash": "Saat melancarkan Skill, memiliki <nobr>#1[i]%</nobr> peluang dasar untuk mengurangi <nobr>#2[i]%</nobr> Effect RES target musuh yang terkena serangan selama <nobr>#3[i]</nobr> giliran.",
+   "params": [
+    1,
+    0.1,
+    2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "096b877957aeca420cae7a15cd3407871c6c57f289bd6ab6a32d77875dfbabbe",
+   "artPath": "236fcc770096e7a514826a58fa58ed3b958e8faea5b96b6847375ee0b26eba56",
+   "name": "Brushing Teeth While Whistling",
+   "descHash": "Saat target musuh berstatus Burn, Basic Attack dan Skill Guinaifen akan mengakibatkan DMG Multiplier status Burn yang ditambahkan Guinaifen pada target musuh tersebut meningkat <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.4
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "4e8b7bc7193693d41d76743f41ae3cdf411461316839ef1e99b821b4dd3c9ecb",
+   "artPath": "cd0d2cf9cb746d314318c87b21d1adec9682a188eef3d9488ec439cf34db0d6f",
+   "name": "Smashing Boulder on Chest",
+   "descHash": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "c8befe052c570ca5b37930d3f11d4b32b87e6f2c827371061f7a65bc64480f89",
+   "artPath": "177418017893a590cc8282c8691f46bda1a573aa9f601a92b9683eebfb2ce9a7",
+   "name": "Blocking Pike with Neck",
+   "descHash": "Setiap kali status Burn yang diberikan Guinaifen memicu DMG, Guinaifen akan memulihkan <nobr>#1[i]</nobr> Energy.",
+   "params": [
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "9d10546c1bfb019443d3d1f741628f43de17161e6ea6a1f44326fbf19d69d13b",
+   "artPath": "76ddc4a55395d4c29e5f57d3e413c2586b61c4219061f3845ac1c2aeff8ffc86",
+   "name": "Swallowing Sword to Stomach",
+   "descHash": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "c02cfa85c44471bcf4feba0a79f9cb720673830677e780b920561e4777bd0e51",
+   "artPath": "2c061f7d6fe3c9f5d9d36626800f97b9ce3bcd01f851eb2cc921d34d062cd436",
+   "name": "Catching Bullet with Hands",
+   "descHash": "Meningkatkan jumlah batas maksimal lapisan \"Firekiss\" sebanyak <nobr>#1[i]</nobr> lapis.",
+   "params": [
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   69091
+  ],
+  [
+   985150
+  ],
+  [
+   868505
+  ],
+  [
+   784564
+  ],
+  [
+   500037
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Single Target",
+   "descHash": "Mengakibatkan <span style=\"color:#F84F36;\">Fire</span> DMG sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ATK Guinaifen pada 1 musuh yang ditarget.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 69091,
+   "name": "Standing Ovation",
+   "iconPath": "37887d1e3b11ec2750f19062e4b3a74e62ebf246a3c5d0e6a426e6c85acf0f21",
+   "typeDescHash": "Basic ATK",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Blast",
+   "descHash": "Mengakibatkan <span style=\"color:#F84F36;\">Fire</span> DMG sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ATK Guinaifen pada 1 musuh yang ditarget, dan mengakibatkan <span style=\"color:#F84F36;\">Fire</span> DMG sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> ATK Guinaifen pada musuh di sekitar target, memiliki <nobr>#3[i]%</nobr> <u>peluang dasar</u> untuk membuat musuh dan target di sekitarnya memasuki status Burn. Target musuh dengan status Burn akan menerima <span style=\"color:#F84F36;\">Fire</span> DoT sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> ATK Guinaifen setiap saat gilirannya dimulai selama <nobr>#5[i]</nobr> giliran.",
+   "ultimateCost": 0,
+   "break": "60 + 30/adjacent",
+   "energy": "30",
+   "id": 985150,
+   "name": "Blazing Welcome",
+   "iconPath": "4e8b7bc7193693d41d76743f41ae3cdf411461316839ef1e99b821b4dd3c9ecb",
+   "typeDescHash": "Skill",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.6,
+      0.2,
+      1,
+      0.83904,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.66,
+      0.22,
+      1,
+      0.92298,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.72,
+      0.24,
+      1,
+      1.00692,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.78,
+      0.26,
+      1,
+      1.09086,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.84,
+      0.28,
+      1,
+      1.1748,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9,
+      0.3,
+      1,
+      1.30071,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920196,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975,
+      0.325,
+      1,
+      1.46859,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      0.35,
+      1,
+      1.67844,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836255,
+       "count": 4
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125,
+      0.375,
+      1,
+      1.93026,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      0.4,
+      1,
+      2.18208,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836255,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.26,
+      0.42,
+      1,
+      2.291202,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.32,
+      0.44,
+      1,
+      2.400324,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.38,
+      0.46,
+      1,
+      2.509446,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.44,
+      0.48,
+      1,
+      2.618568,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.5,
+      0.5,
+      1,
+      2.72769,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "AoE",
+   "descHash": "Mengakibatkan <span style=\"color:#F84F36;\">Fire</span> DMG sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> ATK Guinaifen pada seluruh musuh. Jika target berstatus Burn, maka status Burn tersebut akan segera mengakibatkan DMG sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> DMG awal.",
+   "ultimateCost": 120,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 868505,
+   "name": "Watch This Showstopper",
+   "iconPath": "893397ac8f21cffa11837a63ad765f9635aa94adfeab7097e463ea4fd78b271a",
+   "typeDescHash": "Ultimate",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.72,
+      0.72
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.768,
+      0.74
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.816,
+      0.76
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.864,
+      0.78
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.912,
+      0.8
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.96,
+      0.82
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920196,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1.02,
+      0.845
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.08,
+      0.87
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836255,
+       "count": 4
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.14,
+      0.895
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      0.92
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836255,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.248,
+      0.94
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.296,
+      0.96
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.344,
+      0.98
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.392,
+      1
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.44,
+      1.02
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Impair",
+   "descHash": "Saat Guinaifen berada di medan pertempuran, setelah status Burn yang diterima musuh memicu DMG, musuh tersebut memiliki <nobr>#1[i]%</nobr> <u>peluang dasar</u> memasuki status \"<span style=\"color:#F84F36;\">Fire</span>kiss\". Saat berstatus \"<span style=\"color:#F84F36;\">Fire</span>kiss\", DMG yang diterima target musuh akan meningkat <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span> selama <nobr>#5[i]</nobr> giliran. Efek ini dapat ditumpuk hingga <nobr>#6[i]</nobr> lapis.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 784564,
+   "name": "PatrAeon Benefits",
+   "iconPath": "bcb293514353d131f0763fce0af17937941d0e00146a5f3e0bb5de8fd5893a97",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.04,
+      3,
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.043,
+      3,
+      3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.046,
+      3,
+      3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635669,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.049,
+      3,
+      3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920196,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.052,
+      3,
+      3
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920196,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.055,
+      3,
+      3
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920196,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.05875,
+      3,
+      3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836255,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.0625,
+      3,
+      3
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836255,
+       "count": 4
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.06625,
+      3,
+      3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836255,
+       "count": 6
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.07,
+      3,
+      3
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836255,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.073,
+      3,
+      3
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.076,
+      3,
+      3
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.078999996,
+      3,
+      3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.082,
+      3,
+      3
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0,
+      0,
+      0.085,
+      3,
+      3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Setelah menyerang musuh dan memasuki pertempuran, mengurangi Toughness target musuh sesuai dengan tipe Toughness-nya.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 583978,
+   "name": "Attack",
+   "iconPath": "37887d1e3b11ec2750f19062e4b3a74e62ebf246a3c5d0e6a426e6c85acf0f21",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Segera menyerang musuh. Setelah memasuki pertempuran, mengakibatkan <nobr>#2[i]</nobr> kali DMG yang masing-masing mengakibatkan <span style=\"color:#F84F36;\">Fire</span> DMG sebesar <nobr>#1[i]%</nobr> ATK Guinaifen pada musuh secara acak, serta memiliki <nobr>#3[i]%</nobr> <u>Peluang Dasar</u> untuk membuat target memasuki status \"<span style=\"color:#F84F36;\">Fire</span>kiss\".",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "0",
+   "id": 500037,
+   "name": "Skill Showcase",
+   "iconPath": "45e02a4969efcef19a31a1996c7eaa24c3226bcc30d564a50ac761226129b799",
+   "typeDescHash": "Technique",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5,
+      4,
+      1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1210101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1210202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1210203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1210204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 709494,
+          "name": "Peningkatan Effect Hit Rate",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+          "statusList": [
+           {
+            "key": "Effect Hit Rate",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 920196,
+            "count": 2
+           },
+           {
+            "id": 633444,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 709495,
+        "name": "Peningkatan DMG: Fire",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#F84F36;\">Fire</span> DMG Meningkat",
+          "value": 0.032
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920196,
+          "count": 2
+         },
+         {
+          "id": 633444,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 709496,
+      "name": "Memperkuat Break",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+      "statusList": [
+       {
+        "key": "Break Effect",
+        "value": 0.053
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635669,
+        "count": 2
+       },
+       {
+        "id": 549503,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Basic Attack memiliki <nobr>#1[i]%</nobr> peluang dasar untuk membuat target musuh memasuki status Burn yang sama dengan Skill.",
+    "ultimateCost": 0,
+    "id": 709336,
+    "name": "High Poles",
+    "iconPath": "b9a5f0a06a62fd4dea99fbbb5b9b9f3c73fc5f89d3533682779d69ff62f62880",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.8
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635669,
+        "count": 2
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1210102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1210205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1210206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1210207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 709491,
+          "name": "Peningkatan DMG: Fire",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4",
+          "statusList": [
+           {
+            "key": "<span style=\"color:#F84F36;\">Fire</span> DMG Meningkat",
+            "value": 0.048
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 836255,
+            "count": 2
+           },
+           {
+            "id": 717385,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 709492,
+        "name": "Memperkuat Break",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+        "statusList": [
+         {
+          "key": "Break Effect",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836255,
+          "count": 2
+         },
+         {
+          "id": 717385,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 709493,
+      "name": "Peningkatan DMG: Fire",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#F84F36;\">Fire</span> DMG Meningkat",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920196,
+        "count": 4
+       },
+       {
+        "id": 633444,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Saat pertempuran dimulai, aksi Guinaifen akan didahulukan sebesar <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 709337,
+    "name": "Bladed Hoop",
+    "iconPath": "c8eba4f2030667438047b6af07f2d3743c3472247e3091dffa2adf40941c38a5",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.25
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920196,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1210103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1210208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 709506,
+      "name": "Peningkatan Effect Hit Rate",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+      "statusList": [
+       {
+        "key": "Effect Hit Rate",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 717385,
+        "count": 6
+       }
+      ]
+     }
+    },
+    {
+     "id": 1210209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 709505,
+      "name": "Memperkuat Break",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+      "statusList": [
+       {
+        "key": "Break Effect",
+        "value": 0.107
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 717385,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Meningkatkan <nobr>#1[i]%</nobr> DMG yang diakibatkan pada target musuh yang berstatus Burn.",
+    "ultimateCost": 0,
+    "id": 709338,
+    "name": "Walking on Knives",
+    "iconPath": "644d777feadc1bbd2e4ef52227202a245eba397e191d7328439e4223ff14c6d3",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1210201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1210210,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 592853,
+      "name": "Peningkatan DMG: Fire",
+      "levelReq": 80,
+      "promotionReq": 0,
+      "iconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#F84F36;\">Fire</span> DMG Meningkat",
+        "value": 0.064
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836255,
+        "count": 6
+       },
+       {
+        "id": 717385,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 709497,
+    "name": "Peningkatan DMG: Fire",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4",
+    "statusList": [
+     {
+      "key": "<span style=\"color:#F84F36;\">Fire</span> DMG Meningkat",
+      "value": 0.032
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549503,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Badan",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "ATK",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   },
+   {
+    "relicTypeHash": "Kaki",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "SPD",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Planar Sphere",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "Fire DMG Meningkat",
+    "propertyIconPath": "a25df6fe10558d9734945a0a4e14f71c30fc486e14d1a79ad6c941712191e9e4"
+   },
+   {
+    "relicTypeHash": "Link Rope",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "ATK",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Pertemuan Pertama",
+   "text": "Namaku Guinaifen! \"Gui\" berarti kayu. \"Nai\" berarti ada, dan \"Fen\" berarti wangi. Mudah diucapkan, bukan? Biasanya aku melakukan pertunjukan juggling (seni akrobatik) di sisi Exalting Sanctum ini. Jangan lupa datang tonton pertunjukan kalau kamu punya kesempatan~",
+   "unlockRequirement": "",
+   "cnUrl": "25a3d0ae879cff28c04aac1db4b17506df6346e70bc0d314a26b89b7d1dcfd50",
+   "jpUrl": "1a59781c8b10d82d50336407570d4736d2c0d474c6987f1f1450bac90884d732",
+   "enUrl": "f6818f10d84e79cfabe7090a16af9374a23597d555261d0eaa7aef5dccd8d981",
+   "krUrl": "0c1e31ccf8c5b03cd52a1578dfd52ab5e4f85514ee5f5303e5644c36e72d35fb"
+  },
+  {
+   "id": 2,
+   "title": "Menyapa",
+   "text": "Astaga, mengapa rasanya seperti sudah lama aku tidak melihat kamu? Apa? Kamu melihatku kemarin? Ah — satu hari tidak melihat kamu terasa seperti tiga tahun!",
+   "unlockRequirement": "",
+   "cnUrl": "703efb6bbc8b31c9911a39edb6d3fc4c5c270ad1f00e06405b1ed78985b13a0c",
+   "jpUrl": "d58881438e9b208c67d729928020ec02e4d16052b042f269517d34a62b4ed8d6",
+   "enUrl": "7ec26f7db8748779f5320b2f3c4110922c52aa4f7418e81f4525edf27a5faad9",
+   "krUrl": "77e91b1dd251099f2ee806c58b917c75b88b7d39c0b50a9527364ef820a5d9d4"
+  },
+  {
+   "id": 3,
+   "title": "Berpisah",
+   "text": "Sampai jumpa lain waktu! Aku akan bantu memesan tempat duduk untuk kamu di barisan depan. Oh, uhh, itu cuma tenda sederhana di luar ruangan sih, \"barisan depan\" terdengar sedikit mewah ....",
+   "unlockRequirement": "",
+   "cnUrl": "7f05a40d7eee2c3517436c3c8dc394aaf16d0201e50dc54a625dea343c6fda4e",
+   "jpUrl": "1caa21c8e5b81ae2634fb4a3c345dc0a257347d8cc0efb4be69e0fc1a4242077",
+   "enUrl": "7560b470feacecd73b19168666ad319dc7ef9a73e412a088800b95187e3df914",
+   "krUrl": "3f9a6d09223c4d6d42c80985b37fe5cb9d934f220b901207f5ec01231c6f341e"
+  },
+  {
+   "id": 4,
+   "title": "Tentang Diriku: Nama",
+   "text": "Nama asliku Guinevere. Guinaifen adalah nama Xianzhou yang diberikan Shangshang untukku. Siapa itu Shangshang, katamu? Dia adalah sahabat terbaikku — Sushang si Cloud Knight. Kamu pernah bertemu dengannya?",
+   "unlockRequirement": "",
+   "cnUrl": "17355b8321c3b6a4c32a21c05b050d47026e6df2c97080dd89849eec62887add",
+   "jpUrl": "e7e3466e41dcf99be644826cdf3c473dbe72e8245bd3dc474f21723031330d7e",
+   "enUrl": "548bb96e2a4da3090eae76cbf943ff1ffdde3dd4fa62bf4ce05007ae4bdf8904",
+   "krUrl": "db8ff74059f902f41ae64b84b7acf7bd70c1efa1556b2334222ee5bd3b8a5322"
+  },
+  {
+   "id": 5,
+   "title": "Tentang Diriku: Keluarga",
+   "text": "Aku punya lebih dari selusin saudara! Salah satunya adalah kakak laki-lakiku — dia juga tinggal di Xianzhou. Nama aslinya adalah Langshile, tetapi sepertinya dia lebih suka dipanggil \"Lancelot\".",
+   "unlockRequirement": "",
+   "cnUrl": "3480a772d9783a0254a52583ab6a86234a2993ab0e4eb06c9e1b821bd6d9104f",
+   "jpUrl": "2af2f19aa2113105a911e02bee56fb3215a5e89eef80909f07def23c00524c95",
+   "enUrl": "55f5fceec917efea4253b91ba0464de76c9f61fc98888ea11f064de2acc2494d",
+   "krUrl": "c3a1554d950580b2c3dbdd151ab5225c917fb036fa07b8c3156f04cc88e48940"
+  },
+  {
+   "id": 6,
+   "title": "Mengobrol: Juggling (Seni Akrobatik)",
+   "text": "Aku belajar keterampilan juggling (akrobatik) di jalanan — kakakku yang mengajariku. Awalnya, ini adalah caraku untuk bertahan hidup. Siapa yang menyangka pertunjukan ini akan menjadi begitu populer? Kadang rasanya seperti takdir sedang mempermainkan kita, hehe.",
+   "unlockRequirement": "",
+   "cnUrl": "f0aa78ff06cf8ad46c2b1028732b261b6ce281e3cb19f59c91fd87544b9b1db8",
+   "jpUrl": "e7de6872db861fb7e69fcdfd71944b19822671dabeb48286faec2b8f7b1bd81c",
+   "enUrl": "ec4c485d739b9be45a6610ea92f458da1075d113bc5ef1dcba7cf175d24851eb",
+   "krUrl": "d6d3eb245e6999e2a65dba6e1843386caf87d132e3a52bf86d15f173b2a66bab"
+  },
+  {
+   "id": 7,
+   "title": "Mengobrol: Doggerel",
+   "text": "Gadis ini tiba di kapal Xianzhou kalian dan mulai beratraksi juggling untuk mendapatkan tip — melon dan kurma bisa jadi hidangan yang sangat enak, tetapi 1 hariku memerlukan setidaknya <nobr>10</nobr> Strale. Jangan membuang waktu untuk obrolan yang sia-sia, karena pertunjukan panggung yang sesungguhnya ada di sini!",
+   "unlockRequirement": "",
+   "cnUrl": "9d46b4c79d4ef11ae44346348087acfe0bd0658a425446a76fdcceff2ff7393b",
+   "jpUrl": "b5e94eab699d9fa0bc550de36b0e409fcb6fe57ff7253bbdd0bb48477dc4f128",
+   "enUrl": "f00ddfc7f53ede0ca20500a5c87bf88e90a89a5909e1936e43eab42d3a34ddf9",
+   "krUrl": "448b0b63a534caaa60df26b17e0bf05bcb24f25194d71796aeac6d0d64d9bcf8"
+  },
+  {
+   "id": 8,
+   "title": "Hobi",
+   "text": "Bukankah puisi dan lagu-lagu dari orang-orang Xianzhou begitu memikat? Suatu kali aku meminta Shangshang untuk mengajariku menulis puisi, dan dia hanya menulis empat kata dalam tiga bulan ... aku rasa aku tidak akan bisa belajar dengan kecepatan seperti ini.",
+   "unlockRequirement": "",
+   "cnUrl": "a8a234f8368e87fa33d9f27b393703c060f1c4a1d1001872c78e5351ef4f495d",
+   "jpUrl": "804228fc61fdfbaa98f6772864314c4ba12b6055c0bc6a782b1c72854cb56991",
+   "enUrl": "c4119cd4ae0ed596b9d1e79f3020ab4fba53107e76be9e26b114395cb84f273a",
+   "krUrl": "f126bdf7e4ee866ab6f0aed43c28f317e7b3b855c8aacd3d543056b7886b64bb"
+  },
+  {
+   "id": 9,
+   "title": "Hal yang Memusingkan 1",
+   "text": "Ada begitu banyak makanan enak di Luofu, tetapi untuk juggling, seseorang harus tetap ringan dan lincah. Bagaimana kata pepatah kuno itu berbunyi ... sepasang kaki tidak bisa berdiri di dua perahu? Sambil menyelam tidak bisa minum air? Sesuatu seperti itu?",
+   "unlockRequirement": "",
+   "cnUrl": "814d0829005a6cff4b4bf529206088fa1740eede93385137d6a0b3f4fb84c28f",
+   "jpUrl": "9e9ea46105bb4b7f880fa8aa3c697f84155c4ff7f47e3d358d1e9e0f35499cab",
+   "enUrl": "3a809ea0af99eb0e33a485bd79646b143b26e743efb7b179190749aa8fdd617c",
+   "krUrl": "130f59069fe8920016adb6fb9159bd9c3882e9286fb925a7aa9793bfe6bafb30"
+  },
+  {
+   "id": 10,
+   "title": "Hal yang Memusingkan 2",
+   "text": "Sushang sejak dulu sudah memanggilku \"Little Gui\", itu tidak masalah bagiku. Tapi akhir-akhir ini aku menyadari kalau saudara-saudaraku di jalanan mulai memanggilku \"Little Gui,\" dan bahkan penonton juga .... Kalau begini, tidak ada yang akan ingat nama asliku lagi!",
+   "unlockRequirement": "",
+   "cnUrl": "e665304cf2163e2eff9ceb5c8f0ba64d15daf813988641aa02fb2219db133e44",
+   "jpUrl": "12ffdf4a7583c904e3c0bd67d83d9c983cb6697b29d1f2e290e18b809721b46a",
+   "enUrl": "8099cfea1e4b057f3f5ceeb2566c5c9c7fef79aebf4d33c991e49ec7581792e4",
+   "krUrl": "a6f1056e55f7f7d0440e4a1f53ab9f387db954e989b4f5e6904729c66768f3ef"
+  },
+  {
+   "id": 11,
+   "title": "Curhat",
+   "text": "Di Xianzhou, spesies berumur pendek seperti kita memiliki keberadaan yang singkat, ada pada satu momen dan hilang pada momen berikutnya. Itulah alasan untuk lebih meraih momen saat kamu masih bisa!",
+   "unlockRequirement": "",
+   "cnUrl": "39f7c825c4f3583693763c18699dc26e4a127847262222a2a0782393ec0f4e7b",
+   "jpUrl": "606555b8d4f6e66a64569cada5f9a4e9332676452745176eef0c81cb6c9d550b",
+   "enUrl": "c75ee19832b50f8d0e007b3aabf88a7ef9358c69434f168cd524e259beb151b5",
+   "krUrl": "7c127630a4595779ce076c6e51da1ec12700ec4a5bacf90cbe1ac88fe582a1a4"
+  },
+  {
+   "id": 12,
+   "title": "Rumor",
+   "text": "Di Exalting Sanctum ada pasangan komedi crosstalk — Dang dan Dut. Mereka adalah sekelompok pemuda yang ramah — mereka membantuku untuk mempercantik banyak bagian dari pertunjukanku. Faktanya, bagian doggerel (pembacaan sajak berima sederhana) dalam pertunjukan itu adalah ide dari mereka.",
+   "unlockRequirement": "",
+   "cnUrl": "a10d72f2b9754ee3745cd642d7a5c8574600ed3dda08c7eb6ffd3704d91ffb09",
+   "jpUrl": "3a3f7f746bf075223322502e14a0270df67cfd1256852d5e491545a37f78ebd5",
+   "enUrl": "ef383fb1aa62c30cace7f2d96ee7cf7e536e560bf7f948517ab06fb5df739cbd",
+   "krUrl": "c9f3123a4d7bdd4006c30f8b797edc6ad34431edb7a038c40046cb1683c9d0ce"
+  },
+  {
+   "id": 13,
+   "title": "Tentang Sushang",
+   "text": "Shangshang itu teman terbaikku. Selain rekan-rekan sesama seniman jalanan, dia merupakan orang yang paling lama kukenal di Luofu. Aku mau jadi kakak adik yang saling bersumpah setia dengannya, tapi sepertinya dia tidak tertarik.",
+   "unlockRequirement": "",
+   "cnUrl": "051a5afa338f8727ece90a61342bab4d60375ac1fc8fa8a20a53c10e36c0c80d",
+   "jpUrl": "e3b47e841be340a1a8ecda1d7664cfebc34280c70148a5edb72e1ead56b15bb0",
+   "enUrl": "277d11e59646c1f4f90802b2d79e6e4606410028ff7d091513779281000e1ed6",
+   "krUrl": "13e571771090d2da08c577a5dc1f4f473e477ca571bbf722dc7455c6d155cf4b"
+  },
+  {
+   "id": 14,
+   "title": "Tentang Jing Yuan",
+   "text": "Kudengar jenderal tertarik dengan pertunjukan musik jalanan ini. Aku harap aku bisa berkesempatan untuk tampil di Seat of Divine Foresight, dengan begitu aku bisa menjadi terkenal.",
+   "unlockRequirement": "",
+   "cnUrl": "e84ea66783760649c0af524e4fc0fa698ecf6860d6ce1a75a91e9377550a4e95",
+   "jpUrl": "a33fb8e9dcd3999fea5755d0c4870edb076fe2dd65577b6e555c141e79fe373e",
+   "enUrl": "81561de2c40768d28cf9a74982f86cd9d3d04b49f72d687fc5b9cd8edcd5f36a",
+   "krUrl": "42a5bd5a9ce130aa8da3f9f1d187561105204b0dbb3e4d6f8e3666027f48d721"
+  },
+  {
+   "id": 15,
+   "title": "Tentang Yanqing",
+   "text": "Aku belum pernah berbicara dengan jenderal, tapi aku pernah bertemu dengan pengiringnya sekali. Dia bertanya apakah aku seorang \"pendekar pedang wanita,\" kamu tahu apa yang kulakukan setelahnya? Aku melakukan pertunjukan menelan pedang tepat di depannya!",
+   "unlockRequirement": "",
+   "cnUrl": "11f890a8aa7a0a5f4592d916f5cfa3f99540e13252599aa40e7f9cd8ffd31c5f",
+   "jpUrl": "a3a542d786493ff4ff4e3988d10a84dc22bfac8c2add16f63bb8f035e7db8dc4",
+   "enUrl": "475f3db98853a5beb4585924734dce118d070606eeaeb37537910a69ee1bba39",
+   "krUrl": "7509b690641c0c32e40d38a619c965ff6bfa4cce1277662a15f1ea92fa96426a"
+  },
+  {
+   "id": 16,
+   "title": "Tentang Qingque",
+   "text": "Qingque suka bermain Celestial Jade di Exalting Sanctum, tetapi kadang dia merasa lelah dan datang untuk melihat aku tampil. Aku bisa tahu dari ekspresinya apakah dia menang atau kalah hari itu — merah berarti menang, pucat berarti kalah, dan sangat pucat berarti bosnya sedang mencarinya.",
+   "unlockRequirement": "",
+   "cnUrl": "bf6886f60426e1857ff3e0771089e6245fffd5ad85d4c21a816a660eac29a875",
+   "jpUrl": "d74e1755af1296d6e710e03e1778df4abe0898c3ceccd2deb68b085d1d440c37",
+   "enUrl": "c98fec56b1651a4739d0eb7b1055c5a23ec16dca056b3727f3982998f67f2183",
+   "krUrl": "3a9d274ceb8a91fda19de5e12f2cdadf68a38d08b2b344acd38b08e7de59a3a2"
+  },
+  {
+   "id": 17,
+   "title": "Tentang Huohuo",
+   "text": "Bukankah tawa Huohuo sangat menggemaskan? Pertunjukan aku bukanlah yang menakutkan, melainkan untuk membangkitkan semangat orang. Aku tak sabar melihat dia tertawa lagi~",
+   "unlockRequirement": "Terbuka setelah menyelesaikan Misi Trailblaze Lanjutan \"Mimpi Foxian\"",
+   "cnUrl": "372ddc7a299b5f4e77e337b356ef8cbe724f2028e24cd51e2adcc7d482572c5f",
+   "jpUrl": "cffee7450589798c1639dee5d11713d5fabe73e625277a1df883544b93abc23e",
+   "enUrl": "83a32c3ecd94858da4c1877be379c82f92df28d63914a5ed6d43670650fc3fe7",
+   "krUrl": "4c8cce807e478645b51d75f3d9ac0bc3ba8ee7c76fffe470c6ac52fc44cd1bfc"
+  },
+  {
+   "id": 18,
+   "title": "Eidolon Diaktifkan",
+   "text": "\"Hidup?\" itu adalah kesibukan besar. Tapi kehidupan? Kehidupan adalah tentang menikmati momen.",
+   "unlockRequirement": "",
+   "cnUrl": "3782d4eb46c11cf31ec24f765023745e23086548af90239674564e4aed038ec2",
+   "jpUrl": "350208e8d9c8d8a362ec23705f77f4c5ad73013b015e4d851fd35676252517ba",
+   "enUrl": "6dc4f40f73c1cbc4396740e629560867d73d36cd8cb2574bc4b0355b009cc995",
+   "krUrl": "4b3c805c324b43b902ed97c7a98348953ce56659b2d19203ad07d2cea49d18a5"
+  },
+  {
+   "id": 19,
+   "title": "Ascension Karakter",
+   "text": "Sebarkan semangat positif itu, dan nantikan keberuntungan mengikuti kamu~",
+   "unlockRequirement": "",
+   "cnUrl": "2487e047e02091f2894bb2950facf509aed5476fc8f8858b7deb24c6f6914037",
+   "jpUrl": "7c71b87461ab86f493b56040cba14f72d30f7e475c70c8a113b85608870a4bfc",
+   "enUrl": "9532d379fa2f84dea34ed4d3f1724a049958235bc33794817f2b1c0f39505107",
+   "krUrl": "4e8d72fa962e4ac6c8c54b22da72e8ffd86957ef81214f8b1f476aa11a4fe96b"
+  },
+  {
+   "id": 20,
+   "title": "Level Max Karakter",
+   "text": "Wajah segar, semangat baru — pasti sedang berbicara tentang diriku!",
+   "unlockRequirement": "",
+   "cnUrl": "e3e801e6ad64c8a2d5bfdc33b3fcde33ec8b9dbadd7d2f74ddfe1eb51a389099",
+   "jpUrl": "8fcb3b18fe1dfeae025e780aff06df1573f996cf1602e5d3a69e4d7576d29645",
+   "enUrl": "bb61577c6672716b5646eeb0b945bba1202f86ff749a59536ab3acec69434a95",
+   "krUrl": "61b08a599da06ae075088a4b26ab6787b1fb6985a3c2a1c8b0254f00b6805219"
+  },
+  {
+   "id": 21,
+   "title": "Trace Diaktifkan",
+   "text": "Semakin banyak yang bisa kamu lakukan, semakin mudah jalan hidupmu~",
+   "unlockRequirement": "",
+   "cnUrl": "c711755e7bb75c92ae77e36ff4e79865378b5a447790f17a4446503648e77b94",
+   "jpUrl": "46c4c17c4898cd26bce40da8a91689a33aa1d0c27dd7577ae5100c39c3641f06",
+   "enUrl": "fa729fddfad78016622feb707c3fa2366f9dd001941ec02ab9da4e7997c956d0",
+   "krUrl": "a142ade29796349750bf8ca8790313cfb65fb5d394b2e8293acdbdafe65b4be2"
+  },
+  {
+   "id": 22,
+   "title": "Edit Tim: Trailblazer",
+   "text": "Trailblazer, apa kamu sudah lihat live streaming terbaru aku? Keren loh!",
+   "unlockRequirement": "",
+   "cnUrl": "0f1dca3437e58a6cca7b393032d9203f7e5695271387ca0ed8f43257b515a76f",
+   "jpUrl": "3f40fddfb6924a2a3fe5e36a5702bfebbbfc1ed1ef384bddd7a0e82e780da62b",
+   "enUrl": "b8c3574064fc834ce2f2611c6f4f844e6c14d0428152a9962e1531abb21ed094",
+   "krUrl": "a0360d572d5a088df0ae4f2a6ce5a661293c9420cc39fadf7883f12b1f18987d"
+  },
+  {
+   "id": 23,
+   "title": "Edit Tim: Sushang",
+   "text": "Sushang! Kita seharusnya bekerja sama secara total untuk pertunjukan ini, para penggemar akan sangat antusias~",
+   "unlockRequirement": "",
+   "cnUrl": "37408a1cffe102954fa16bd744400335b070bfae4d24e44e0a4b0f62585ade57",
+   "jpUrl": "9edd8f926835ed73627b2048efb5f39f0449df2723e8958a826c75b5dfb7d874",
+   "enUrl": "807f63f521dc4d350cba04936db7cc60a96f4882441841e64a679519718f1eea",
+   "krUrl": "87ac344ad8a245dd2403aa95a347e4bf64fb615831bfc7f95efea99edbf0e3e1"
+  },
+  {
+   "id": 24,
+   "title": "Edit Tim: Yanqing",
+   "text": "Hei, yang di situ, mau lihat atraksi menelan pedang? Aku sudah menambahkan trik-trik baru ke pertunjukanku loh!",
+   "unlockRequirement": "",
+   "cnUrl": "28c29c0ae351971a2dddd34e88d9322d71ad399e9414b74835bb876b44a4ff22",
+   "jpUrl": "876b7916e63d3de98578502933e562ce8bc95aff62a405c019daae5aa483ba64",
+   "enUrl": "db083eab313a43292fe54a85c4a52e44498ca92ea4675171187824464b8fe8af",
+   "krUrl": "0b01cc22dc647f96c4b75cddd791568ef75730a2b11d6ff98cd78983265305ba"
+  },
+  {
+   "id": 25,
+   "title": "Edit Tim: Qingque",
+   "text": "Hai Qingque, kamu terlihat ceria, Jade Tilenya berpihak padamu?",
+   "unlockRequirement": "",
+   "cnUrl": "9e6b9425078904b43b35bb36aadf1df883725adf21fa359670997d2f579147f2",
+   "jpUrl": "727c633497c519253977ba721f51a3e96aaefd01dbaa3538ba25efaa20609930",
+   "enUrl": "4e0d34621bd14d1748fc87d3b69d31f1df96980a90634d51a38973a92ad7363b",
+   "krUrl": "6735a8c5a6cf06613b3d1faee63bfae6220f80e4eb1761e00418082c0a4088ef"
+  },
+  {
+   "id": 26,
+   "title": "Edit Tim: Huohuo",
+   "text": "Ayo dekati untuk melihat dengan lebih baik, Huohuo. Jangan khawatir, api tidak akan menggigit, tahu~",
+   "unlockRequirement": "",
+   "cnUrl": "c6bd4c6c1894a1a7b34b43b6ffa1e338db559a1bf781486acdd636620eaeb686",
+   "jpUrl": "ed3c963f95b6fb10b20f4d414d46c27d116fa50bd40a7b3aa8f28d988eda1134",
+   "enUrl": "b381125391e785b4625b3e8dce0db67ab8d1fa4baee7ae465be1d8670a4248bc",
+   "krUrl": "d52cd6c51b32bf832acd8eb4a83e1ecf976dc15fb23fc447736c1055c27ad999"
+  },
+  {
+   "id": 51,
+   "title": "Pertempuran Dimulai: Weakness Break",
+   "text": "Jangan bocorkan rahasianya!",
+   "unlockRequirement": "",
+   "cnUrl": "81755c04e103b1832bc2fd57e497ae0e36e396d46d3912dd23327e3f2cfda5ad",
+   "jpUrl": "dfd5516d533296cf5eed0635c44b0f9728adac25b414f9a6deb57bcc8b68d5ca",
+   "enUrl": "aafc3e33d6bfbd48ca9bad7429cb7ee700ac1b9d2e98c9338c0fc54c0ab9e5f6",
+   "krUrl": "7226f48fb6eee775accf1bc1453249fabed74eb510153a968674af407d6378f7"
+  },
+  {
+   "id": 52,
+   "title": "Pertempuran Dimulai: Peringatan Bahaya",
+   "text": "Ada apa? Semua orang adalah pelanggan!",
+   "unlockRequirement": "",
+   "cnUrl": "1e4c57960a6fded19df52880cc981330c6d19d0323a5ebaf526463583fedfdce",
+   "jpUrl": "103896e4fc49b3288204e91d551daf76fdcd96e1bf197825c794cbffe6bcb512",
+   "enUrl": "1b66accfba8125aee272dcfdc0d4dc5a5f0f1d2c6bed9bbcdb008b32580d073c",
+   "krUrl": "e3d8d192a215772cda04c1fbd695582b1677116b3834d846a6351b07665216e0"
+  },
+  {
+   "id": 53,
+   "title": "Giliran Dimulai: 1",
+   "text": "Keluarkan yang kamu punya!",
+   "unlockRequirement": "",
+   "cnUrl": "2aac72bd11c2d0877a69fe45c95e35697dd5f2ecae03f5e7a184902fc2993f12",
+   "jpUrl": "66648838cf3f97e9991cfc77b45910247958dcab3eab53be9958ecb194e8d0d3",
+   "enUrl": "bbfd22a6fb43fedb9d43185d7ba6a8abfb97a6b31dd499f574c8388e888dc3ce",
+   "krUrl": "bef24aa5a5f0d729ff93c03187a3b68d48512a0b80ce521b8050e6f56321852d"
+  },
+  {
+   "id": 54,
+   "title": "Giliran Dimulai: 2",
+   "text": "Lupa dompetmu? Hmph!",
+   "unlockRequirement": "",
+   "cnUrl": "7f1b5c497e97b505a7d5dae661ada09f18e7dc3c34babe6ffc9e9edfa70e5f6a",
+   "jpUrl": "3b2a6d7ba5cb890441d3308c30f5bfac022c6eb9f410175e66ff0595c24d309d",
+   "enUrl": "e18b6166c4a5b09fd618874fc16b7d04559d39f434765eddf3b92323ceccd978",
+   "krUrl": "cab5468ceb5d8755792a764a43ab801b4dfd26fa7f2448cfe72a0103c1f42d11"
+  },
+  {
+   "id": 55,
+   "title": "Menunggu Giliran",
+   "text": "Tidak ada yang akan membayarmu untuk berdiri diam!",
+   "unlockRequirement": "",
+   "cnUrl": "30076acccb6c9408aab80096e07b6ba25afafd9ca0a307c5d9c0fd9f608127f0",
+   "jpUrl": "c864772b3538b3e3ed1b3bbc912da804b9ce808c61a76465226efe4aca824bf7",
+   "enUrl": "cbff399f4a0a3b054d883c952da02e5eaff79069799db2ca7a77792f12687e01",
+   "krUrl": "46be283851e3584028450d332ae9ea392c660fa87723f11e6d6462e3ab7ca54d"
+  },
+  {
+   "id": 56,
+   "title": "Basic ATK",
+   "text": "Kekayaan dan popularitas!",
+   "unlockRequirement": "",
+   "cnUrl": "d046b7756e5badb74c5ea31ba60702a7ac0761ca1ec5949d5b992acdf12a8110",
+   "jpUrl": "45517302db76b33051390418762a3fb10cc5f84c67f085443ef1bbdf3438a237",
+   "enUrl": "84c741c64ba56a3db1063a07e47fbe866070c33b0e2c940193eefff08746690d",
+   "krUrl": "dd89697c75cb5dbca4c3e84f5aefb47f6df65a9880a8259a180b489084f3946c"
+  },
+  {
+   "id": 57,
+   "title": "Skill",
+   "text": "Kekayaan dan kebijaksanaan!",
+   "unlockRequirement": "",
+   "cnUrl": "7cd7d819eef8fd60893135c7cdb945e9224f926f12f231698ea812ff096ad98a",
+   "jpUrl": "ea9c8703daa1babbc5433660f2afba06e6c9ed9d616354d6c22ccc75bc83d177",
+   "enUrl": "f30907e76541f62d4cdcfcb2943f9d168f09f3b9c0f7680ba5cbbb1652262324",
+   "krUrl": "3184125e706d90f3ec46e1f1ad1fe05d0e75a4035d3c581dd5533a2d50fbed3b"
+  },
+  {
+   "id": 58,
+   "title": "Terkena Serangan Ringan",
+   "text": "Untung aku sudah latihan ....",
+   "unlockRequirement": "",
+   "cnUrl": "79adbd2c391e28268cdf3e63200c20c5a8fb2caecbcb3e4ef183a8be6a26c655",
+   "jpUrl": "53c4309516a46e0252ca882d25306b025d36b36a1aa54d50108f07de85943ec9",
+   "enUrl": "8c7ab6fd699ddff8b6ef1cf04bbdf9ace2c4e388635443fd9554982700964967",
+   "krUrl": "13f57ceb0d5f4c53d4e8687d6495f00b75cdeadb5feebbd030a7ff533ea99887"
+  },
+  {
+   "id": 59,
+   "title": "Terkena Serangan Berat",
+   "text": "Sudah mulai serius nih?",
+   "unlockRequirement": "",
+   "cnUrl": "9d176f88487df4761e269fd6624dfc14128c66fe9fb9ece8a0b39939806659c1",
+   "jpUrl": "1c78f00229cb0d56bf00a14e61839ee8f7e315569028cea50ee1c89fa9b259ab",
+   "enUrl": "daf6f12bf5f2ba9951fa6415a9f0806295636fb7adfd49566b283679ecacfc99",
+   "krUrl": "c9954b7b58b26698a8543731f6e6e53cc48e74fd03fcaafe737d7934cd978a43"
+  },
+  {
+   "id": 60,
+   "title": "Ultimate: Aktifkan",
+   "text": "Ayo datang dan manjakanlah matamu!",
+   "unlockRequirement": "",
+   "cnUrl": "c3834c5f6d4bb67eccdda161d285e1cfd087355b3c5132a1969031a59cb32abe",
+   "jpUrl": "ee55aa4bfc3fa6682f9a7ef99200ce6c9f2cb0c4ef3b8180fcecfa3154fc8d6b",
+   "enUrl": "677424b5d0a211c873d342b554f2af7649d3ead3cfa7d251a479b2ec066126a9",
+   "krUrl": "a0f602db6df46beda1b9c0c5b0b6475842dbb4cbcad0235060d5bdd65effaba5"
+  },
+  {
+   "id": 61,
+   "title": "Ultimate: Pelancaran",
+   "text": "Tidak pernah ada kata terlalu dini ... untuk Tahun Baru yang Bahagia!",
+   "unlockRequirement": "",
+   "cnUrl": "7cce76185d9627840a3a6fea245c07188368f24e2a671d238ef40926d137a56f",
+   "jpUrl": "102c79a6dc46949fa97b17b65c32df99ea7b884434629b98c3c77d3fe70fe999",
+   "enUrl": "07e42e6f2ecd81e906c438510d68f32ca57d2f390a59a22fb72a0c236ef9b15f",
+   "krUrl": "87a10dc19b546d0965e22dc0b7050d12109755124eb8ac85abf96b5dec9e59f2"
+  },
+  {
+   "id": 62,
+   "title": "Gugur",
+   "text": "Aduh, bolanya jatuh ....",
+   "unlockRequirement": "",
+   "cnUrl": "994799b4287549d05659be06f7b254a6df5501cf6ef2e95162873190d7ec5a8d",
+   "jpUrl": "7b71450a7a9dd4e7cb713ee4114b87f028bc530911e07c98d3a27383954d8c5f",
+   "enUrl": "721dac5e83ee8ef4eb3f9db2116d0a43cc7cc655ed01e04d6e18294cb21cad6f",
+   "krUrl": "65f056b72583631518239972c72f311bb1f7ab9c77dbe5495328a70fda0e68f2"
+  },
+  {
+   "id": 63,
+   "title": "Kembali ke Pertempuran",
+   "text": "Pertunjukan harus terus berlanjut!",
+   "unlockRequirement": "",
+   "cnUrl": "767be3098c8c7af3a92d2dddd87a5b4f2499b6aa3e6cfff6e8a589e7e70c7812",
+   "jpUrl": "7b2f5a1e32bce2a85675fa0540193779019075514f09319cbd1d6fcb66e1d2f5",
+   "enUrl": "cb8415d19330dbe04e4340f07b4a69ab84202556c0bc3d9b33c6b7949f04721e",
+   "krUrl": "5f25250510dfe9e0f85611f3ec95f23242754bfdd3b36feb26c464a05b611dbc"
+  },
+  {
+   "id": 64,
+   "title": "HP Pulih",
+   "text": "Mantap!",
+   "unlockRequirement": "",
+   "cnUrl": "6cce564ff186fc326162f01ace5450c8a8c378609c9b792de99caec850c00d1f",
+   "jpUrl": "e7850369f98688f747aaec2715c5592a02ab893b1937ca8d782c8d6cf5fab286",
+   "enUrl": "2b1a033598f53a70b8240e1793d47818ae113c1b59bf29d2685f07a0bb689b7c",
+   "krUrl": "0b4de5ee2601c83af356baca43fb817e7567005350f7d5659c79c6ec12576aae"
+  },
+  {
+   "id": 65,
+   "title": "Technique",
+   "text": "Penonton yang sulit dihibur!",
+   "unlockRequirement": "",
+   "cnUrl": "6f9bd3f323549f6ffc3983a4c982551b6d1b00d98a890646a28eb022c3fc7961",
+   "jpUrl": "9cc00236515d263fc764c1479322dbba71355496aa149e87181f268ee91b72e9",
+   "enUrl": "487eb333dc9693a55cbd987f507777887d8db15c44d896ff9582b3c8184d7e47",
+   "krUrl": "3b3e0f9cf8097133c223844a964aa7cdda8912d08d01d2420a708cbd44aa5cfb"
+  },
+  {
+   "id": 66,
+   "title": "Menang Pertempuran",
+   "text": "Tadi itu adalah pertunjukan yang luar biasa!",
+   "unlockRequirement": "",
+   "cnUrl": "ccb8da7bbe453ddf230a03881959cc09a5555b659d0af21ae7f59c2b196a4eeb",
+   "jpUrl": "75a011c70555ee93475138ef5247fe389f6b5e9123ae4f8fd80bd232fafd8773",
+   "enUrl": "fd1871cd17fe55489bb60f639cd5a36c97920c063bbbfb2c6ca6d1455931fbef",
+   "krUrl": "98e34d2c01101be7b3658a4383b3f21be3d2551401d18204b1e585fda51f91fe"
+  },
+  {
+   "id": 67,
+   "title": "Membuka Peti Harta 1",
+   "text": "Oh, uang tip ekstra!",
+   "unlockRequirement": "",
+   "cnUrl": "c1d16cfb5e9e735b9ce80adac1668f7c41e7a3b24bc93f121ff09b2bf0598eca",
+   "jpUrl": "5d0333d0ef8625f155efc66df6219d574e49564a338d4cdd9bf472844d2d3e58",
+   "enUrl": "d2c2820058103e699de36fc3ff972c6bf6831725ee1da9c6a5552e66ccbc9a10",
+   "krUrl": "3189a913f200e799308c30f570c0e5851480968db5d4ba02d9602916dcbbfd3b"
+  },
+  {
+   "id": 68,
+   "title": "Membuka Peti Harta 2",
+   "text": "Cepat, ambil semuanya!",
+   "unlockRequirement": "",
+   "cnUrl": "64d2a7749d00c797b6cc6c49c2c964bb5d24041e5f02d1b48d72068c60b47135",
+   "jpUrl": "968abf23b3d2947e2ae65903c021ae2f8e1c57263a0ee936c5d9f52a0e060d52",
+   "enUrl": "adde56d1eb05f8eaffa10d879878260ed494aba251db041c568beefd67898c70",
+   "krUrl": "35eb5ea1216a69048b8412a98f5fd8c5687011d98d5fcb3e0c36019de1dd1398"
+  },
+  {
+   "id": 69,
+   "title": "Membuka Peti Harta Berharga",
+   "text": "Wooh, sepertinya kita ketiban durian runtuh!",
+   "unlockRequirement": "",
+   "cnUrl": "778fa56941866328140995730b0a50322e363b7529f21384c64836b7d52d7702",
+   "jpUrl": "9750cb41d5db02ee565c256cf6903a28a7b21a5133c47452fd9c00cd107f9825",
+   "enUrl": "6850d472c6c248c8857c10ce7c6b0afbdb79a24a34d61cd8bce788599f8da9c3",
+   "krUrl": "1f2a560758cef566eb97ae464d082ec8d75df6be214eec94110ef2ca4e440ff5"
+  },
+  {
+   "id": 70,
+   "title": "Berhasil Memecahkan Teka-teki 1",
+   "text": "Berpikir dengan cepat dan bekerja dengan cepat~",
+   "unlockRequirement": "",
+   "cnUrl": "20bf6230d61b986d531b02d95e0bbdbbb80bc53a93436e69363c49907a5ff9cf",
+   "jpUrl": "471586e00bd242cb9ac1eb20cdb08bc9c2cdb3daf22cddc42f6efd76fd41a65b",
+   "enUrl": "2039d14e1754f4705512378465b53eee238b259c4af968dad3154b85659ae7b9",
+   "krUrl": "e5b3d6862dd98bd0153902247ba25044c80b55a79e5959ab558f3c25cdb066b5"
+  },
+  {
+   "id": 71,
+   "title": "Berhasil Memecahkan Teka-teki 2",
+   "text": "Mau tahu rahasianya? Bibir aku terkunci~",
+   "unlockRequirement": "",
+   "cnUrl": "7cb6da3d3fae83f77c90159241885c918fe6fdb4287fcb21fb856ac03e4d20df",
+   "jpUrl": "af4291bc677af5781bb0ec2d03faf5234c406ec49e36b5059f5a5206191fbad2",
+   "enUrl": "5661082c5ff0ebcda47d7a0a3de8494a16d6cc6a63293747612811e162774f49",
+   "krUrl": "0ee9f7970ad0f5f7b81df08d801c6cea982193f3b675fd979c7769eae07b3abc"
+  },
+  {
+   "id": 72,
+   "title": "Menemukan Target Musuh",
+   "text": "Mungkin yang satu ini bukan pelanggan ....",
+   "unlockRequirement": "",
+   "cnUrl": "e17e76216629005606d96ac65f33c8b7e8e2ddadd276973deb228f6276fcde0a",
+   "jpUrl": "4e0871a1ff1b62c64c9f5a8b98fbb2283cc857bea52992bb194a1372cd7b49b9",
+   "enUrl": "9d2f828674baadc252ff96526f724de864617bd5b9fc6ecfa05157d023f4b85d",
+   "krUrl": "4cc8c2472c2fae0b97e98720373037b5fd9a9b347a02fe7fe3ab48d5d428657a"
+  },
+  {
+   "id": 73,
+   "title": "Kembali ke Kota",
+   "text": "Tempat yang ramai berarti bisnis yang lebih ramai.",
+   "unlockRequirement": "",
+   "cnUrl": "737232671abe2500e28cc8b853bba742d1fe7f1edbd9aef7712efad63868defd",
+   "jpUrl": "c01dfb892cb15b438b258a22a97970671f078bdfa40ee02565b465440cca2f0b",
+   "enUrl": "b70a7d85a581fd892d18c884d84be120e565a6e8fbf58aecb68431d71cfb5cc3",
+   "krUrl": "1081be86e0348c546f2720d4cd4ade2bd06f91c2526e8e527dfa876213ec0a19"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Detail Karakter",
+   "text": "Seorang pendatang asing yang secara tidak sengaja berakhir tinggal di Xianzhou. Kini dia menjadi seorang seniman jalanan.<br />Nama aslinya \"Guinevere\", dan \"Guinaifen\" adalah nama ala Xianzhou yang diberikan Sushang untuknya.<br />Menghadapi kehidupan barunya di \"Luofu\" dan mengandalkan kecintaannya pada budaya Xianzhou, Guinaifen berhasil mempelajari keterampilan-keterampilan penting dengan cepat, seperti makan mie terbalik, memecahkan batu besar yang diletakkan di atas dada, menangkap peluru dengan tangan kosong, dan lainnya.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Kisah Karakter 1",
+   "text": "Halo? Halo? Bisa dengar tidak? Selamat malam, keluargaku tercinta! Dan selamat datang di livestream Little Gui~<br /><br />Terima kasih untuk komentar super \"BigFlower_<nobr>49886</nobr>\"! \"Little Gui lagi-lagi tidak siaran selama lebih dari setengah bulan. Kamu tidak mau streaming lagi?\" Tidak mungkinlah! Aku akhir-akhir ini terlalu sibuk di dunia nyata, jadi sudah lama tidak siaran. Maaf ya~ Belakangan ada banyak hal di dunia nyata yang cukup menarik untuk diceritakan. Kalau ada kesempatan, aku akan menceritakannya pada kalian lain kali.<br /><br />Untuk hari ini, sama seperti yang kutulis di judul, hari ini adalah \"Malam Musik! Little Gui Menyanyi Lagu Rakyat Xianzhou!\"<br /><br />Akhir-akhir ini aku merasa akrobatik mungkin lebih cocok untuk acara langsung, jadi aku berencana untuk melakukan beberapa siaran langsung seni pertunjukan. Kali ini kita bisa menganggapnya sebagai percobaan pertama~ Kalau kalian suka, jangan lupa untuk ikuti dan bagikan, serta berikan hadiah ya, karena dengan begitu kalian bisa ikut undian berhadiah di siaran langsung ini!<br /><br />Terima kasih kepada \"MilkPowderPowder\" untuk komentar supernya! Wah, sudah lama tidak berjumpa, \"MilkPowderPowder\"~ \"Tidak masalah, aku suka menonton apa pun yang disiarkan Little Gui.\" Terima kasih untuk dukungannya! Jangan pergi dari siaran ini sampai aku selesai ya! Mwah~!<br /><br />*Uhuk* Izinkan aku menyesuaikan audionya. Satu, dua, tiga, satu, dua, tiga, tes, tes, tes ...! Baik! Sekarang latihan vokal! Aku sudah menulis semua lirik untuk pertunjukan doggerel (pembacaan sajak berima sederhana) malam ini!<br /><br />....<br /><br />Sudah lama tak ke Aurum Alley, sekarang jadi keren padahal dulunya acak brekele!<br />Ada tempat yang berubah jadi tak dikenal, ada juga tempat yang sama seperti masa dulu yang terkenal.<br />Warga-warga sekitar sehat bugar, wajah semua orang bersinar dengan mata berbinar.<br />Jarang-jarang aku menyanyi dengan irama cepat, harap para penonton berikan dukungan yang tepat.<br />Berikan tepuk tangan dan sorakan, lemparkan beberapa Strale untuk pertunjukan.<br />Hari ini kita tidak berkisah tentang perbuatan dewa yang dahsyat, juga tidak membicarakan tentang Reignbow yang melawan pohon Muldrasil yang keramat.<br />Hanya akan berkisah tentang gadis cantik di Aurum Alley hari ini, tempat di mana diriku Little Gui pulang dan pergi.<br /><br />....",
+   "unlockRequirement": "Buka Level karakter <nobr>20</nobr>"
+  },
+  {
+   "title": "Kisah Karakter 2",
+   "text": "Bagi si kecil Guinevere, seluruh dunianya adalah kediaman adipati pengamanan negara dan pasar yang makmur di depan rumah besar tersebut.<br /><br />Para guru mengatakan bahwa keluarganya memiliki sejarah yang panjang dan reputasi yang gemilang, dan kediaman ini memiliki sejarah yang mencapai beberapa Era Amber. Namun, waktu sepertinya tidak pernah meninggalkan jejak di atasnya, seakan-akan ia terpisah dari hukum waktu itu sendiri, melindungi keluarga ini dalam ketenangan dan keindahan yang abadi.<br /><br />Ayahnya meminta kakak tertua, kakak kedua, dan kakak perempuan tertua mengambil pendidikan politik — berharap salah satu dari mereka akan mengambil alih masa depan planet ini. Adapun untuk Guinevere dan adik-adik lainnya ... sang ayah hanya berharap mereka dapat menghabiskan hidup yang tenang dan bahagia di tempat yang damai ini.<br /><br />Guinevere sangat mencintai ayahnya. Ketika berhadapan dengan musuh politik, sang ayah bisa menakutkan seperti seekor ular berduri; tetapi saat berhadapan dengan putrinya, dia menjadi seperti seekor kelinci gunung yang besar berbulu dan hangat.<br /><br />Dalam ingatannya, ayahnya bersedia melakukan apa pun untuknya, bahkan rela berperan sebagai roh tanah yang dibunuh oleh pahlawan wanita Guinevere dalam pesta ulang tahun yang meriah. Pesta ulang tahun anak keturunan pejabat seperti itu mungkin akan dihadiri oleh musuh politik — tetapi demi kebahagiaannya, ayahnya tidak peduli dengan reputasinya.<br /><br />Kemudian, Guinevere tumbuh dewasa. Dia mulai mendengar desas-desus — ayahnya yang memaksa raja menjadi raja boneka, merencanakan pembunuhan terhadap orang-orang jujur, serakah tanpa batas .... Meskipun dia ingin percaya bahwa ini semua adalah kebohongan yang disebarkan musuh politik, namun dia menyadari bahwa tidak semuanya adalah kebohongan.<br /><br />Namun, segera setelah itu, kekhawatiran-kekhawatiran tersebut tidak lagi penting.<br /><br />Tiba-tiba Antimatter Legion secara besar-besaran datang menyerang. Sang ayah memimpin pasukan untuk mempertahankan ibukota dan melawan mereka tanpa kenal lelah. Ketika berita tentang kematian ayahnya datang, Guinevere pingsan. Ketika dia sadar kembali, dia sudah berada di dalam sebuah kapal terbang. Adik-adiknya menangis di sisinya. Kakak laki-laki tertua dan kakak perempuan tertua terikat dengan tali, lalu kakak kedua berkata dengan rasa putus asa, \"Jangan buka ikatan mereka dulu, mereka tidak mau melarikan diri.\"<br /><br />Guinevere menatap keluar dari jendela kapal. Ibunya mengenakan baju perang, berdiri membelakangi kapal yang semakin meninggi ke udara, mengarahkan para pengawal keluarga yang enggan menyerah. Tidak jauh dari situ, pasukan Voidranger sedang merusak kediaman keluarga mereka. Lebih jauh lagi, seluruh jalanan terbakar, jenazah yang hangus tergeletak seperti tumpukan tanah di mana-mana.<br /><br />Bagi Guinevere yang masih kecil, rasanya seakan-akan seluruh dunianya telah dihapus dari alam semesta.<br /><br />....<br /><br />Aku berasal dari istana dunia lain yang bernama Camelot, dan memiliki dua belas saudara.<br />Hari-hari kami awalnya damai dan penuh sukacita, tapi tak disangka Ruin Author membuat kekacauan yang merajalela.<br />Orang tua kami memegang senjata untuk melawan musuh, namun tak bisa menghindari kehancuran dan penaklukan yang disebabkan Legion.<br />Kakak tertua membawa kami bersaudara berkelana ke berbagai tempat, dan akhirnya terdampar di sebuah planet tambang milik IPC.<br />Kami berjuang untuk bertahan hidup dengan mencuri sisa makanan dan mencari perlindungan di tengah gurun, sering kali tak punya tempat tinggal dan tak punya makanan.<br />Kakak tertua dulunya adalah pekerja keras yang teguh dan berani, tetapi akhirnya dipaksa menjadi perampok dan menghadapi berbagai kesulitan hidup.<br />Perampokan yang dilakukannya hanya terhadap kereta dagang. Dia tidak pernah menyerang orang-orang biasa, dan ia dianggap sebagai pahlawan bagi orang miskin dan lemah, yang membagikan rampasannya.<br />Dia memimpin kelompok berisi ratusan orang miskin, mendirikan pangkalan di gunung, dan menyokong kami, adik-adiknya.<br /><br />....",
+   "unlockRequirement": "Buka Level karakter <nobr>40</nobr>"
+  },
+  {
+   "title": "Kisah Karakter 3",
+   "text": "Waktu Guinevere masih kecil, ayahnya selalu memberi tahu bahwa manusia harus hidup dengan martabat. Tapi siapa yang bisa bertahan hidup di \"Hombert-σ\" dengan martabat saja?<br /><br />Planet itu adalah planet tandus. Alga primitif, jamur, dan lumut menjaga habitatnya, yang hanya dengan susah payah mendukung kelangsungan hidup hewan. Di antara spesies endemik yang tangguh itu, hampir semuanya merupakan ancaman bagi manusia.<br /><br />Jika Interastral Peace Corporation tidak menemukan sumber daya mineral di planet ini, kemungkinan tidak akan ada yang berkeinginan untuk pindah ke sini.<br /><br />Guinevere menghabiskan seluruh masa remajanya di planet yang tandus ini.<br /><br />Dia sangat pandai berteman dan berhubungan baik dengan anak-anak lain. Anak orang miskin, anak perempuan pengungsi, adik orang yang suka berjudi, adik perempuan pembunuh ... Guinevere tidak peduli dengan latar belakang mereka, karena pada akhirnya, di planet ini, tidak ada yang dapat memastikan bahwa mereka akan hidup sampai besok.<br /><br />IPC tidak begitu ketat dalam pengawasan di tempat ini. Selain untuk mereka yang memiliki utang atau terlibat dalam kejahatan, asalkan mereka membayar pajak yang seharusnya, IPC tidak akan membatasi kebebasan para pekerja. Hanya saja, setelah membayar pajak, mereka mungkin tidak memiliki uang yang cukup untuk pergi minum di bar kota.<br /><br />Di tanah kelahirannya, sang ayah adalah pendukung paling kokoh bagi keluarga mereka. Namun kini, ayah dan tanah kelahirannya sama-sama telah tiada. Tanggung jawab menjaga keluarga jatuh pada pundak satu-satunya orang tua yang tersisa — \"Kesatria Dinding Batu\". Saat melarikan diri dari rumah, sang ibu dengan tegas memastikan kesatria tua yang setia ini turut melarikan diri bersama anak-anak, sementara dirinya tinggal di tanah kelahiran, menemani debu terakhir di padang gurun.<br /><br />Kesatria tua dulunya adalah teman terdekat sang ayah, kemudian menjadi rekan terbaik sang ayah dalam pertempuran, dan kemudian menjadi pengikut setia sang ayah. Sekarang... beliau telah menjadi \"ayah\" kedua bagi anak-anak. Sampai akhirnya, Guinevere tidak mengingat nama dan identitas aslinya. Beliau lebih akrab dengan nama lain sang kesatria — Paman Dinding Batu.<br /><br />Lebih dari sepuluh anak yang kelaparan, membuat situasi ekonomi yang sudah sulit semakin buruk. Setelah pertengkaran pada suatu malam, Paman Dinding Batu dengan enggan mengizinkan tiga kakak laki-laki dan perempuan untuk pergi ke tambang bersamanya, tetapi tidak peduli seberapa banyak Guinievere merayu, beliau enggan membiarkannya ikut.<br /><br />Malam demi malam berlalu. Paman Dinding Batu menjadi tua, lemah, paru-parunya penuh dengan luka yang sulit disembuhkan. Tulang belakangnya tidak lagi tegak seperti dulu, tangan yang pernah mengayunkan palu dengan perkasa kini bengkok hingga sulit untuk menggenggam sendok dengan mantap.<br /><br />Tak lama kemudian, beliau meninggal.<br /><br />Dinding batu runtuh ... tumbang dalam keheningan sebelum matahari terbit. Seperti istana pasir yang memudar di antara pasang surut, seperti cabang-cabang pohon di musim dingin yang perlahan jatuh dalam angin, seperti akhir yang sudah pasti datang.<br /><br />Dan di luar dinding batu itu adalah dunia yang hanya diisi angin, hujan, dan embun beku.<br /><br />Tidak lama setelah itu, kakak-kakak laki-laki menjadi bajak laut antarbintang. Sekarang Guinevere bisa makan dengan kenyang, namun dia juga merasa bahwa dirinya semakin menjauh dari ajaran ayahnya, menuju jalan yang kurang terhormat dalam hidup.<br /><br />Oleh karena itu, ketika tentara-tentara IPC memasang borgol di tangan Guinevere dan menyerahkannya ke Cloud Knight bersama dengan adik-adiknya, dia merasa sangat lega.<br /><br />Orang-orang bilang bahwa orang-orang Xianzhou sangat baik hati. Pikirnya, Cloud Knight pasti bersedia membiarkan mereka sekeluarga mati bersama dengan martabat.<br /><br />....<br /><br />Siapa yang akan menyangka kakakku yang mungkin panik, akan merampok kapal dagang Xianzhou?<br />Orang-orang Xianzhou dikenal karena integritas dan kebencian mereka terhadap kejahatan, mereka menggunakan metode yang cepat seperti badai petir.<br />Kakakku diusir dari tempat persembunyiannya. Dia menundukkan kepala, memohon pengampunan dari para Knight untuk kami, adik-adiknya.<br />Prajurit yang menyerang perampok pun berbelas kasih dan membawa kami sekeluarga ke Xianzhou.<br />Mereka mengampuni nyawa kakak tertuaku, dan bahkan dengan gigih merencanakan masa depan adik-adikku.<br />Adik-adikku masuk ke akademi, belajar membaca huruf dan keterampilan. Di sinilah Nyonya Yo mengajarkan keahliannya kepadaku.<br />Kakakku mendesakku untuk terbang jauh setelah menyelesaikan pembelajaran keterampilanku. Karena tidak mampu membalas kebaikan akan membuatku lebih rendah dari hewan.<br />Siapa yang bisa menyangka bahwa di Aurum Alley ini, bakatku terungkap, dan aku keluar dari kemiskinan? Gadis yang dulunya miskin sudah memiliki ketenaran dan uang.<br /><br />....",
+   "unlockRequirement": "Buka Level karakter <nobr>60</nobr>"
+  },
+  {
+   "title": "Kisah Karakter 4",
+   "text": "\"Maaf, maaf, kami menemukan seseorang yang terluka di jalan. Kami jadi terlambat. Oh, Little Gui, kamu masih bernyanyi ya? Aku akan tutup mulut.\"<br /><br />\"Hei! Shangshang datang! Mari kuperkenalkan ke semuanya! Ini adalah tamu kejutan kita hari ini! Pendatang baru berbakat dari Cloud Knight — Nona Sushang! Ayo, semua orang, ketik 'Selamat datang Nona Sushang' di obrolan~\"<br /><br />\"Ha-halo semua. Namaku Sushang. Jangat sebut soal \"pendatang baru berbakat\" lagi! Jangan melebih-lebihkan diriku. Kalau sampai kedengaran sama pemimpinku, aku bisa diceramahi habis-habisan.\"<br /><br />\"Tunggu sebentar di sini ya, Shangshang. Doggerel-ku masih perlu diselesaikan sedikit lagi. Kamu datang tepat waktu, karena yang satu ini adalah tentang kamu!\"<br /><br />....<br /><br />Kemudian aku bertemu dengan seorang bandit yang berniat jahat. Untungnya seorang wanita pemberani campur tangan dan memberi pelajaran pada si bejat.<br />Kalian mungkin bertanya, \"Wanita pemberani mana yang memiliki keberanian seperti itu?\" Dia adalah Li Sushang, yang setelahnya menjadi teman baikku.<br />Sejak saat itu, aku tidak perlu pergi sendirian lagi di Luofu. Aku mendapat teman yang merupakan pendekar wanita yang lucu.<br />Ditambah lagi ada banyak penonton bertepuk tangan, terus berharap aku bernyanyi dan memberi peragaan.<br />Hanya tampil satu kali saja tidak akan memuaskan mereka. Mereka akan menuntut encore dengan kegaduhan yang lama mereda.<br />Tapi kisah diriku sangatlah panjang dan tidak menyenangkan. Waktu berhari-hari pun tidak cukup untuk diselesaikan.<br />Untuk saat ini, mari kita akhiri di sini. Kalau mau tahu kelanjutannya, tunggu saja di pertunjukan lain kali.<br /><br />....<br /><br />\"Seru sekali! Mari berikan tepuk tangan yang meriah untuk Little Gui! Tapi ... kenapa aku tidak ingat kisah kepahlawanan ini?\"<br /><br />\"Tuan Xiyan bilang kalau orang-orang lebih menyukai kisah pertemuan pahlawan yang menyelamatkan putri cantik. Karena itulah aku juga menulisnya seperti itu. Kalau kamu tidak suka ... terima kasih untuk 'CatEmanator<nobr>8190</nobr>' untuk hadiah Diting Storm! Terima kasih banyak!\"<br /><br />\"Terima kasih banyak! Cara penulisan itu tidak penting! Yang penting isi tulisanmu itu menarik.\"<br /><br />\"Benar, dan sekarang Shangshang juga datang ke sini untuk pertunjukan 'Menge-Shang-kan'. Kita akhirnya bisa menunjukkan pertunjukan yang sudah lama kami latih. Sini, Shangshang, berikan kordofonnya. Aku, Little Gui, akan menyanyikan 'Teng Xiao Mengalahkan Ular Raksasa'!\"<br /><br />\"Bagian ini sulit ditampilkan.\"<br /><br />\"Benar, orang yang paham pasti tahu akan itu. 'Terbang di Punggung Kuda untuk Mengalahkan Ular Raksasa' perlu adegan menyanyi, musik, dan juga bertarung. Satu orang saja tidak cukup untuk pertunjukannya.\"<br /><br />\"Dan itulah kenapa aku di sini. Jadi mau bagaimana menampilkannya?\"<br /><br />\"Gampang saja. Hari ini aku akan memainkan peran Teng Xiao, jenderal Luofu yang dulu. Dia menegakkan keamanan negara dan penuh keberanian.\"<br /><br />\"Kalau aku?\"<br /><br />\"Kamu akan menjadi ular yang dipotong! Kamu mau lari ke mana, ular licik? Makan pedangkuuu~\"<br /><br />\"Aduh, sakit! Guinaifen! Lihat saja nanti!\"",
+   "unlockRequirement": "Buka Level karakter <nobr>80</nobr>"
+  }
+ ],
+ "archive": {
+  "cvCn": "小敢",
+  "cvJp": "直田姫奈",
+  "cvKr": "김수영",
+  "cvEn": "Morgan Lauré",
+  "camp": "Xianzhou \"Luofu\""
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Guinaifen",
+ "rarity": 4,
+ "descHash": "Seorang seniman pertunjukan yang tinggal di Xianzhou \"Luofu\" — atau lebih tepatnya, seniman jalanan. Selain makan tiga kali sehari, ia juga mengejar kehidupan baru di Luofu.",
+ "artPath": "2532ab2916b23d6a7d0af1848850b0eaa75253ff0349ea9bf403e28a649f1aca",
+ "miniIconPath": "90cf1c5c0614da53386f8258d95f292d74d8cc5dad7823f9de826c7c1212f919",
+ "damageType": {
+  "id": 2,
+  "iconPath": "bd8329d02d7ecfee2a1f565e89cf3bf7bf6aaa60bea29cec2b4f7192626a0311",
+  "color": "#F84F36",
+  "name": "Fire",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "96c3b8dd457b98955d440531986a23d509f705c13d7aa794d1e97bcfd03d5701",
+  "altIconPath": "b55d340138ed77756cd939d0d9ee2103a5398f999202c1ed19d092ac87333155",
+  "color": "#FFFFFF",
+  "name": "Nihility",
+  "rarity": 0
+ },
+ "pageId": "guinaifen"
+}

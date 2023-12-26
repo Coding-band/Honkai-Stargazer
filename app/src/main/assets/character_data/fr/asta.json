@@ -73,7 +73,7 @@
    "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
    "name": "Journal d'aventure",
    "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
-   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
    "purpose": "Matériau d'EXP de personnage",
    "rarity": 3,
    "rewardPath": "/material/409961",
@@ -151,6 +151,7 @@
    "rewardPath": "/material/635670",
    "comeFrom": [
     "Calice de la Colonie de robots",
+    "Calice de la Colonie de robots",
     "Braises immortelles"
    ]
   },
@@ -158,7 +159,7 @@
    "id": 717289,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "iconPath": "e5c567b0d1a069f86d1fa35a17b282346606c69e5f8cab4028224ece84c8ad58",
    "name": "Médaille de la crinière d'argent",
    "desc": "Médaille d'honneur portée par les soldats de la Garde de la crinière d'argent ayant servi de façon courageuse et méritante. Matériau avancé utilisé pour le renforcement.",
    "lore": "Une marque d'honneur décernée à ceux qui ont combattu les créatures du Fragmentum, les habitants du Souterrain, et les catastrophes soudaines.<br />Elle est plus souvent placée sur le cercueil qu'épinglée sur la poitrine de son propriétaire.<br /><br />« Rappelle-toi, jeune Gepard. Ceci n'est pas un jouet : c'est le destin et le sang de la famille Landau. »",
@@ -186,6 +187,7 @@
    "rewardPath": "/material/836256",
    "comeFrom": [
     "Calice de la Colonie de robots",
+    "Calice de la Colonie de robots",
     "Synthèse de matériaux de l'Omni-synthétiseur"
    ]
   },
@@ -202,6 +204,7 @@
    "rewardPath": "/material/920197",
    "comeFrom": [
     "Calice de la Colonie de robots",
+    "Calice de la Colonie de robots",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles"
    ]
@@ -210,7 +213,7 @@
    "id": 983278,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "1f3033f7a0d40ab304f7c4af7eaa7a00cc0b0a1cfd9f7698fcbf0b0b8d9321d5",
+   "iconPath": "bf013025c6d4383e5c48a0fae0598d9b489ed29d4ac675292f31af835075c4a7",
    "name": "Chitine endothermique",
    "desc": "Substance chaude et translucide... On dirait presque du feu devenu solide. Permet l'élévation des personnages de type feu.",
    "lore": "Étrange chitine prélevée sur une créature interdimensionnelle. Elle n'est plus aussi brûlante, mais une chaleur émane encore d'elle.<br /><br />« Il fait trop froid, dehors. Mais avec cette gemme, tu pourras explorer le monde et peut-être trouver des villes où il reste encore des humains... »",
@@ -218,6 +221,7 @@
    "rarity": 4,
    "rewardPath": "/material/983278",
    "comeFrom": [
+    "Ombre stagnante de la Zone réglementée de la Garde de la crinière d'argent",
     "Ombre stagnante de la Zone réglementée de la Garde de la crinière d'argent",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -1518,7 +1522,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Réduit la robustesse de l'ennemi au type correspondant en entrant en combat après l'avoir attaqué.",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2046,7 +2050,7 @@
   {
    "id": 1,
    "title": "Première rencontre",
-   "text": "Salut, Pionnier/Pionnière ! Je m'appelle Asta. Je suis la chercheuse en chef de la Station spatiale Herta. Je te ferai signe quand j'aurai besoin de ton aide... Crois-moi, ça ne manquera pas d'arriver.",
+   "text": "Salut, Pionnier/Pionnière ! Je m'appelle Asta. Je suis la chercheuse en chef de la Station spatiale Herta. Je te ferai signe quand j'aurai besoin de ton aide... Crois-moi, ça ne manquera pas d'arriver.",
    "unlockRequirement": "",
    "cnUrl": "f115c4c352485fec249c14a9b59a32781162d13635fcb55caf477ff299dc46e3",
    "jpUrl": "e1dd9ca90f643ff2ebecd45c2e5f3ae49762f0e0d7cbc10572147e02712b615f",
@@ -2106,7 +2110,7 @@
   {
    "id": 7,
    "title": "Bavardage : Station spatiale",
-   "text": "« La station spatiale n'est ni plus ni moins que le coffre à jouets de Herta. » C'est tout à fait cela. Enfin, c'est de Herta qu'on parle, donc ses jouets sont plutôt dangereux...",
+   "text": "« La station spatiale n'est ni plus ni moins que le coffre à jouets de Herta. » C'est tout à fait cela. Enfin, c'est de Herta qu'on parle, donc ses jouets sont plutôt dangereux...",
    "unlockRequirement": "",
    "cnUrl": "9efc87a8b2688e7eb463b4ccd6d1cff3dce6c3ec7003113a1f3eb9e065045754",
    "jpUrl": "54dd427c665a266718d2bcfacfa70d7b79f05011788379621fef02c7f25309d8",
@@ -2195,6 +2199,16 @@
   },
   {
    "id": 16,
+   "title": "À propos de Ruan Mei",
+   "text": "J'ai demandé à madame Ruan Mei où elle s'était procurée le charme qu'elle avait à sa manche, et quelle ne fut pas ma surprise quand elle m'a dit qu'elle l'avait brodé à la main elle-même. Ma surprise fut tout aussi grande lorsqu'elle m'offrit mon propre charme brodé lors de notre rencontre suivante à bord de la station spatiale. La qualité de son artisanat est aussi brillante que celle de ses articles scientifiques.",
+   "unlockRequirement": "",
+   "cnUrl": "8f2bb0d8e9ca51cef022be87a43ff7ef489120606e5c53bee200bb49ebec97c9",
+   "jpUrl": "da4878223d5ab4e3d8575a6800bdf9ce4fee196682ba7edd14861075104ecb67",
+   "enUrl": "87031914320b607b51bcd402f36dccabd4eda23165caf3d8b74082faff685df7",
+   "krUrl": "da4cf51e431d25c0379fb4d51000251f733f335fe792886c51acde9601d1c5d7"
+  },
+  {
+   "id": 17,
    "title": "Activation d'Eidolon",
    "text": "Chaque étoile est un miracle !",
    "unlockRequirement": "",
@@ -2204,7 +2218,7 @@
    "krUrl": "8f256b1d6f855a4907a537c461445e6416861d38a83011f339e955658e93712a"
   },
   {
-   "id": 17,
+   "id": 18,
    "title": "Élévation de personnage",
    "text": "Plus j'en apprends sur le ciel étoilé et plus j'en suis émerveillée.",
    "unlockRequirement": "",
@@ -2214,7 +2228,7 @@
    "krUrl": "f7225974b4ee60144986971638505e893889e8b1ac61d4ebd30d0ad2711a049d"
   },
   {
-   "id": 18,
+   "id": 19,
    "title": "Niveau max atteint",
    "text": "Objectifs et étoiles sont similaires : on finit toujours par les atteindre.",
    "unlockRequirement": "",
@@ -2224,7 +2238,7 @@
    "krUrl": "10c87bc80747f016e2a48fcc02586c57dd340b66937cd09a3983de12cee80164"
   },
   {
-   "id": 19,
+   "id": 20,
    "title": "Activation de Trace",
    "text": "Un pas de plus vers les galaxies lointaines.",
    "unlockRequirement": "",
@@ -2234,7 +2248,7 @@
    "krUrl": "459ea36d771fd62776b43209967d910fc6d163b43d3b36f1063dda82d5a43e2b"
   },
   {
-   "id": 20,
+   "id": 21,
    "title": "Rejoint l'équipe avec Pionnier/Pionnière",
    "text": "L'Express a été notre bouée de sauvetage. Il est temps de lui rendre la pareille !",
    "unlockRequirement": "",
@@ -2244,7 +2258,7 @@
    "krUrl": "e0aecbc80863fe6fdbada6379f284052b2333ae8c8e444e3b467f801a09f998d"
   },
   {
-   "id": 21,
+   "id": 22,
    "title": "Rejoint l'équipe avec Arlan",
    "text": "Arlan... tu n'as pas à porter ce fardeau seul.",
    "unlockRequirement": "",
@@ -2254,7 +2268,7 @@
    "krUrl": "6acaa060212796f7e495c94c800b34bbab6c72de47e9792b9fdaaaeb4944a21d"
   },
   {
-   "id": 22,
+   "id": 23,
    "title": "Rejoint l'équipe avec Herta",
    "text": "Oh ! C'est madame Herta ? Rien à craindre, alors.",
    "unlockRequirement": "",
@@ -2264,9 +2278,19 @@
    "krUrl": "f6b4452fd58b2bc92b617db6d807997417e3b98843dcee54a298a520f5ae8176"
   },
   {
+   "id": 24,
+   "title": "Rejoint l'équipe avec Topaz",
+   "text": "Topaz, quelle coïncidence ! Je devrais donc considérer ceci comme un voyage d'affaires !",
+   "unlockRequirement": "",
+   "cnUrl": "a2976ef4432f14b66e9bee901925f8045679d390888f6ec20a84f581ed9272a1",
+   "jpUrl": "2805d8b17325f0f2817699d0945f1039878c00e8a8dbe04a20a6d1977495ba73",
+   "enUrl": "ea21fdf6433ec58cec3b542c73199ca24e39010cc0111206a8384b79c9495010",
+   "krUrl": "09849193c190cf97c46b9e2bc3ec046bb60056303837c730a2d5599e4702bd01"
+  },
+  {
    "id": 51,
    "title": "Rupture de faiblesse en début de combat",
-   "text": "Mmh. On a peur ?",
+   "text": "Mmh. On a peur ?",
    "unlockRequirement": "",
    "cnUrl": "dd813e4566da524cb5e0770bcdc176b7f1af4373c302bf7673370d92d44a9adc",
    "jpUrl": "122b666515c2fc31bac76a4345cb868572bc793d305e2b2549e1f32478a2ae0e",
@@ -2286,7 +2310,7 @@
   {
    "id": 53,
    "title": "Début du tour 1",
-   "text": "On a oublié ses manières, hein ?",
+   "text": "On a oublié ses manières, hein ?",
    "unlockRequirement": "",
    "cnUrl": "fad84c07558f6acae014193ccc49991165acce980810750621a95b3a7a46357f",
    "jpUrl": "cda5713a883c0f6cf132422ca406ffb99db2e7a43ef64ac71e8ee7ba429ddcdf",
@@ -2376,7 +2400,7 @@
   {
    "id": 62,
    "title": "Déclenchement de l'ultime",
-   "text": "Oh, secrets des étoiles, accordez à ces pionniers votre bénédiction !",
+   "text": "Oh, secrets des étoiles, accordez à ces pionniers votre bénédiction !",
    "unlockRequirement": "",
    "cnUrl": "906accf2bb64bd68a288cba99b90c52a9df803f708984af6e03c9cab1fdeb02e",
    "jpUrl": "3060da518c03c28994c650eb757b203f797b552f87e6703dec28bc0b120bfe24",
@@ -2396,7 +2420,7 @@
   {
    "id": 64,
    "title": "Retour au combat",
-   "text": "Ça ne compte pas. On recommence !",
+   "text": "Ça ne compte pas. On recommence !",
    "unlockRequirement": "",
    "cnUrl": "a7b909ca63482b7135611fe14ee37ce875c44017cf929137834717360df992db",
    "jpUrl": "bd91c108115cb22a4751646ef13f310c2625fb6f0718af5793efa51299c1aa15",
@@ -2466,7 +2490,7 @@
   {
    "id": 69,
    "title": "Énigme réussie 1",
-   "text": "Il y a du progrès !",
+   "text": "Il y a du progrès !",
    "unlockRequirement": "",
    "cnUrl": "95f0d3c24e96b5b77bf35ac20c63e64501dd5414ae6ba9a1ff556e6fe0d92860",
    "jpUrl": "00df2bc7dc5ddbaf165eb70f1e6ea8314f8b7791c81c2c06f905072ff337c635",
@@ -2496,7 +2520,7 @@
   {
    "id": 71,
    "title": "Retour en ville",
-   "text": "On peut voir les étoiles d'ici aussi ?",
+   "text": "On peut voir les étoiles d'ici aussi ?",
    "unlockRequirement": "",
    "cnUrl": "823acf6cfaef550fea5eaf6665f231875cbf087e01add0718a6c4498a306cbe2",
    "jpUrl": "e60b74eb97b61f92b85afb86b12a1155e1c59d8a318fc4c7f3662b845923b6eb",

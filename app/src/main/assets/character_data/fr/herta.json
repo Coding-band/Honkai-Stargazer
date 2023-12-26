@@ -36,7 +36,7 @@
    "id": 67219,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "03a85f3ccfcb36eb4e371d602e552113e1ada82e6ca848ca9d4f2761f6991e5e",
+   "iconPath": "d74f7384a695f9189837d5b200d8acd883dfe1684806da8c8f68701e841a2bfd",
    "name": "Corne des neiges",
    "desc": "Corne brisée de Rôdeur glacial. Permet l'élévation des personnages de type glace.",
    "lore": "Les Gardes de la crinière d'argent organisaient des concours où le vainqueur devait rapporter une partie du corps d'un monstre dans le temps imparti. Cette corne froide et cassée doit en être un trophée.<br /><br />« Sire Bova, ce n'est pas un bois d'élan, nous ne pouvons pas l'accrocher au-dessus du fourneau à géomoelle. »",
@@ -44,6 +44,7 @@
    "rarity": 4,
    "rewardPath": "/material/67219",
    "comeFrom": [
+    "Ombre stagnante du Couloir des échos faiblissants",
     "Ombre stagnante du Couloir des échos faiblissants",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -89,7 +90,7 @@
    "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
    "name": "Journal d'aventure",
    "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
-   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
    "purpose": "Matériau d'EXP de personnage",
    "rarity": 3,
    "rewardPath": "/material/409961",
@@ -165,6 +166,7 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Calice de la Ville de Rivet",
+    "Calice de la Ville de Rivet",
     "Braises immortelles"
    ]
   },
@@ -172,7 +174,7 @@
    "id": 717320,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "f32ca1d67c0e385f701d450cae1c5dea41f334e31d61eb331d4be4dc7551c378",
+   "iconPath": "f54699a5eaba1cef67217196db0a1440c1b1c1c5b89179b36b2ebe7331831ea1",
    "name": "Noyau des méandres",
    "desc": "Le cœur d'un monstre errant dans le Fragmentum. Matériau avancé utilisé pour le renforcement.",
    "lore": "C'est une lésion qui engendre le mal, la pulsion du péché. C'est la source de la distorsion du Fragmentum.<br />Le cœur bat lentement, mais la force qui lui reste est suffisamment puissante pour causer une nouvelle calamité. Il vaut mieux le détruire, afin d'éviter d'autres problèmes.<br /><br />« C'est comme un cancer... »",
@@ -190,7 +192,7 @@
    "id": 836261,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "iconPath": "36e68603fbc67d4b69c02e01d7d5d41a80446ea6c49b1d828b47320f6225825c",
    "name": "Clé de la sagesse",
    "desc": "Clé mythique conservée par les plus grands prodiges de l'univers. Permet d'améliorer considérablement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Érudition</span>.",
    "lore": "C'est la preuve d'une invitation aux salles du temple de Sagesse.<br />Trouver la porte qu'elle ouvre s'avère être une tâche bien plus ardue que d'obtenir la clé elle-même. Ceux qui franchissent les portes comprendront rapidement l'impossibilité de revenir en arrière.<br /><br />« L'Érudition n'apporte pas les réponses à l'univers, mais elle vous apprend à poser les bonnes questions. »",
@@ -198,6 +200,7 @@
    "rarity": 4,
    "rewardPath": "/material/836261",
    "comeFrom": [
+    "Calice de la Ville de Rivet",
     "Calice de la Ville de Rivet",
     "Synthèse de matériaux de l'Omni-synthétiseur"
    ]
@@ -214,6 +217,7 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
+    "Calice de la Ville de Rivet",
     "Calice de la Ville de Rivet",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles"
@@ -1519,7 +1523,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Réduit la robustesse de l'ennemi au type correspondant en entrant en combat après l'avoir attaqué.",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2044,7 +2048,7 @@
   {
    "id": 1,
    "title": "Première rencontre",
-   "text": "Ici, Herta. Comme je suis occupée, voici le mode de réponse automatique à distance de ma marionnette : Bonjour à tous. J'espère que vous passez une excellente journée. Au revoir.",
+   "text": "Ici, Herta. Comme je suis occupée, voici le mode de réponse automatique à distance de ma marionnette : Bonjour à tous. J'espère que vous passez une excellente journée. Au revoir.",
    "unlockRequirement": "",
    "cnUrl": "45e08284935aa99f4ffba90d35b12b0079b5a8efbb16580a4ad0cd68112f6e80",
    "jpUrl": "cbafec9af27a98439dd3073b46406878ff8e71cdceb21d8102311e41d638939b",
@@ -2074,7 +2078,7 @@
   {
    "id": 4,
    "title": "Connaître Herta : Marionnette",
-   "text": "Qu'en penses-tu ? Elle ressemble à <nobr>70</nobr> % à comment j'étais enfant.",
+   "text": "Qu'en penses-tu ? Elle ressemble à <nobr>70</nobr> % à comment j'étais enfant.",
    "unlockRequirement": "",
    "cnUrl": "cbb72479af429cda9b5dc665f802bb22d4cd1bcc9596dda14a61495b1797116a",
    "jpUrl": "ceaafc3e1b1d2e4f7f4a279689d33afa3ba744fc558b95aaf919e6a712056f7c",
@@ -2104,7 +2108,7 @@
   {
    "id": 7,
    "title": "Bavardage : Visite à un Aiôn",
-   "text": "Pourquoi est-ce que je rends visite à un Aiôn ? Parce que je suis Herta, voilà tout.",
+   "text": "Pourquoi est-ce que je rends visite à un Aiôn ? Parce que je suis Herta, voilà tout.",
    "unlockRequirement": "",
    "cnUrl": "4d9b315c7074f41842de2a9987ee15d066570559d397a89685c3753c361ab614",
    "jpUrl": "290ee1aa796c16265ed0bf28f8b37bbf4ceb4d6835584373a5b4610a9b48557e",
@@ -2183,6 +2187,16 @@
   },
   {
    "id": 15,
+   "title": "À propos de Ruan Mei",
+   "text": "Ruan Mei est irréfutablement le génie des génies. Je ne m'entends pas toujours très bien avec elle, mais mon admiration pour elle est grande... j'espère que c'est réciproque.",
+   "unlockRequirement": "",
+   "cnUrl": "987167665783544986a4e1027d3e6736b21057302b4b14b5d564f326a62dff85",
+   "jpUrl": "3f1c5798965c0d358ea4f5789e4b6c4d965fbfb4f22ff69866d702844ffe9788",
+   "enUrl": "316553f85f11081aeb5bf85bd93b9fed3ba47e5e1eb83706989093fa898ff1f4",
+   "krUrl": "c49cf4222f843b049b9a95f5b48e14457490987b2ecab454ee333b00f2020f39"
+  },
+  {
+   "id": 16,
    "title": "Activation d'Eidolon",
    "text": "Comment définir l'inspiration ? Pff, les milliers d'idées qui me traversent l'esprit à chaque instant.",
    "unlockRequirement": "",
@@ -2192,7 +2206,7 @@
    "krUrl": "ac6150c7dffdd985a57c92e00b2ce854881313502f44296c0c0274fe1091a1a9"
   },
   {
-   "id": 16,
+   "id": 17,
    "title": "Élévation de personnage",
    "text": "Tu appelles ça une mise à jour ?",
    "unlockRequirement": "",
@@ -2202,7 +2216,7 @@
    "krUrl": "ee32fc602579d1a27d40ef53928d84d295158d2d096f81c6dd5613a6a283362c"
   },
   {
-   "id": 17,
+   "id": 18,
    "title": "Niveau max atteint",
    "text": "Enfin. Je m'éclipse. Bye.",
    "unlockRequirement": "",
@@ -2212,7 +2226,7 @@
    "krUrl": "008e16bb763e297af176bfef41581d1e7da21e099b72e3a055ff0d45f808e40e"
   },
   {
-   "id": 18,
+   "id": 19,
    "title": "Activation de Trace",
    "text": "Le bonheur ? Un conseil : n'en attends pas trop d'une marionnette.",
    "unlockRequirement": "",
@@ -2222,7 +2236,7 @@
    "krUrl": "0668aca33befd5b11651a4195b27faec3652bcf727f5131c33bc64e942ebd929"
   },
   {
-   "id": 19,
+   "id": 20,
    "title": "Rejoint l'équipe avec Pionnier/Pionnière",
    "text": "Tu as intérêt à te débrouiller. Mon temps est précieux.",
    "unlockRequirement": "",
@@ -2232,7 +2246,7 @@
    "krUrl": "0ddef21dc1e6526a982adfc2383ac6d659ee366b92b6a26b013549fa35aecae6"
   },
   {
-   "id": 20,
+   "id": 21,
    "title": "Rejoint l'équipe avec Arlan",
    "text": "C'est quoi cette tête ? Je ne vais pas te manger.",
    "unlockRequirement": "",
@@ -2242,7 +2256,7 @@
    "krUrl": "73bc72b628b29d652e6af775cb84f59b6c1f2efaa777d0be9ba287a955ede708"
   },
   {
-   "id": 21,
+   "id": 22,
    "title": "Rejoint l'équipe avec Asta",
    "text": "Asta ! Voilà la clef. Bon, j'y vais. Bye.",
    "unlockRequirement": "",
@@ -2252,7 +2266,7 @@
    "krUrl": "04977f97581aeac688901458457bcdb924e422df988c997b4d2622d2ccb2d750"
   },
   {
-   "id": 22,
+   "id": 23,
    "title": "Rejoint l'équipe avec Himeko",
    "text": "Comme d'habitude, si tu trouves du nouveau, laisse-moi d'abord y jeter un œil.",
    "unlockRequirement": "",
@@ -2260,6 +2274,16 @@
    "jpUrl": "57c49bcbdbb69c542800e0e130e90e961340c1ba8559ccbf859503657ac326dc",
    "enUrl": "a16193f50c5b39ddfc6e3b6e2c5678ca3f249b73fc76113adb9f793157074440",
    "krUrl": "7cab0f4584cb10b59d2decd5c000b446e465ccaf723e77c98a5ed07745e4cfe8"
+  },
+  {
+   "id": 24,
+   "title": "Rejoint l'équipe avec Ruan Mei",
+   "text": "Il m'est rare de te voir en dehors de l'Univers simulé. À qui va-t-on faire passer des tests aujourd'hui ?",
+   "unlockRequirement": "",
+   "cnUrl": "d5e609c843d2f48c0f778e3caa541ad112b01c54fe5eeb914a6973b642b5105d",
+   "jpUrl": "928040dbc1849376d3758b69412ca7efe8f49d57717fb3f60b1d2686333368e6",
+   "enUrl": "50d296f95736aee63692480b0b2886b238e3fd31747e68e8afb4ac8c55d1e632",
+   "krUrl": "d554233e18818e9bb31515bbcdfb11540d2e5dba17ae8e31bfeb3c5378a21f5d"
   },
   {
    "id": 51,
@@ -2294,7 +2318,7 @@
   {
    "id": 54,
    "title": "Début du tour 2",
-   "text": "Tu dois être honoré de me rencontrer, n'est-ce pas ?",
+   "text": "Tu dois être honoré de me rencontrer, n'est-ce pas ?",
    "unlockRequirement": "",
    "cnUrl": "41d99adfcfc8ae5df8bab18a8bbdf573a5520302dfa892861e8e100679503a27",
    "jpUrl": "62af482f1f2eaa2c05a13c8164b88c3d0de6033f87cf441ee33723f33ea1bc0f",
@@ -2324,7 +2348,7 @@
   {
    "id": 57,
    "title": "Compétence",
-   "text": "Tu pourrais faire moins de bruit !?",
+   "text": "Tu pourrais faire moins de bruit !?",
    "unlockRequirement": "",
    "cnUrl": "ea97e841ba81807a110e57294f238e8460295f3aca267a944c5649d586ddd59c",
    "jpUrl": "316e01caeaeefb1b5ad19092ab25d74949ba87d694deb158fc10960f599c1b54",
@@ -2344,7 +2368,7 @@
   {
    "id": 59,
    "title": "Attaque lourde subie",
-   "text": "Je craque !",
+   "text": "Je craque !",
    "unlockRequirement": "",
    "cnUrl": "8d409c38cb86541f2446a8f52acc777d3856b59e6439a2c88e2d7494b5fc1a8d",
    "jpUrl": "b6c3b8b6a1ff767be011c8f08ba4247b52eafa9d722fb8e25f153119eec95496",
@@ -2354,7 +2378,7 @@
   {
    "id": 60,
    "title": "Activation de l'ultime",
-   "text": "Est-ce que tu sais au moins qui je suis ?",
+   "text": "Est-ce que tu sais au moins qui je suis ?",
    "unlockRequirement": "",
    "cnUrl": "71edb94b81a717d04e62e308962455826a465429de8b1d8e57b030d9703c2486",
    "jpUrl": "fae9e147593eb1c6a634d7336db6cfe946df59779f4715cad2168a2844b5e0c1",
@@ -2434,7 +2458,7 @@
   {
    "id": 68,
    "title": "Combat gagné",
-   "text": "Comment je vais faire pour rattraper le temps perdu !",
+   "text": "Comment je vais faire pour rattraper le temps perdu !",
    "unlockRequirement": "",
    "cnUrl": "23a013584b9d584606e12d6a39106f66887fa0ede57823771320c49fe5282fb3",
    "jpUrl": "fd42fbaae73671e7b992414165d09332fd5ee599882119aa767d9c3cd785aa20",
@@ -2484,7 +2508,7 @@
   {
    "id": 75,
    "title": "Énigme réussie 2",
-   "text": "Je peux faire ça les yeux fermés.",
+   "text": "Je peux faire ça en dormant.",
    "unlockRequirement": "",
    "cnUrl": "c63b6c9411db6cf33150a12bfc92455e148de0e8252b010f2c4703cfd1c78408",
    "jpUrl": "c92be693f9b936b2b46ced02146a07eccc35416ea0bcd2ebbca5d46928d43bf1",
@@ -2504,7 +2528,7 @@
   {
    "id": 72,
    "title": "Retour en ville",
-   "text": "Il y a quelque d'intéressant ici ? J'ai un doute.",
+   "text": "Il y a quelque d'intéressant ici ? J'ai un doute.",
    "unlockRequirement": "",
    "cnUrl": "3ad1cfb5888d99d70225bafc7bcbb753f01fff6c1458d29f0ea1ef86bbd01465",
    "jpUrl": "407ee5cfab291a0c70e320d5c140efc957c1b1156aaf218f79529131bfdb2e27",
@@ -2515,7 +2539,7 @@
  "storyItems": [
   {
    "title": "Détails du personnage",
-   "text": "La véritable cheffe de la Station spatiale Herta.<br />En tant qu'humaine disposant du QI le plus élevé de la planète bleue, elle ne fait que ce qui l'intéresse et laisse tomber tout projet dès qu'il l'ennuie, le meilleur exemple étant la station spatiale.<br />Elle apparaît généralement sous la forme d'une marionnette télécommandée.<br />« Elle ressemble à <nobr>70</nobr> % à comment j'étais enfant. » — Herta",
+   "text": "La véritable cheffe de la Station spatiale Herta.<br />En tant qu'humaine disposant du QI le plus élevé de la Planète bleue, elle ne fait que ce qui l'intéresse et laisse tomber tout projet dès qu'il l'ennuie, le meilleur exemple étant la station spatiale.<br />Elle apparaît généralement sous la forme d'une marionnette télécommandée.<br />« Elle ressemble à <nobr>70</nobr> % à comment j'étais enfant. » — Herta",
    "unlockRequirement": ""
   },
   {

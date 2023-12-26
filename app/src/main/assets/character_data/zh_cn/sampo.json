@@ -54,7 +54,7 @@
    "id": 267805,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "822b1e8c023333b210f71f503cce58516c58ffc4f47c709a4ba4bc03387fdd68",
+   "iconPath": "ec233e43b828d3d0aaa069d3bb911a437404e6a0a34a358cdf134da8ad7fb0fa",
    "name": "暴风之眼",
    "desc": "兴风者残留的箭簇，风属性角色的晋升素材。",
    "lore": "裂界创造的以某种虚卒为原型的怪物所留，螺旋气流的中心，一截箭簇隐约可见。<br /><br />「于裂界销殒者，必将于裂界重生。」",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/267805",
    "comeFrom": [
+    "凝滞虚影【铆钉镇】",
     "凝滞虚影【铆钉镇】",
     "「万能合成机」- 材料置换"
    ]
@@ -180,6 +181,7 @@
    "rewardPath": "/material/635669",
    "comeFrom": [
     "拟造花萼【大矿区】",
+    "拟造花萼【大矿区】",
     "余烬兑换"
    ]
   },
@@ -187,7 +189,7 @@
    "id": 717290,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
    "name": "古代引擎",
    "desc": "旧世界时代遗留的机器引擎。强化所需的高级材料。",
    "lore": "以地髓为能源注入动力，运转时喷燃的并非火星，而是游走的极光。<br /><br />「只有大守护者直属的技术部有权调阅旧世界的资料，我嘛，被开除后就进不去啦。」",
@@ -205,7 +207,7 @@
    "id": 836255,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "iconPath": "34d88252515cd13ab58b6f5aae7329794a4a330a0147e1c5f755c8a2f4444bff",
    "name": "沉沦黑曜",
    "desc": "一整块自虚空中捕获的黑质。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚无</span>角色的命途行迹。",
    "lore": "意志薄弱之人只是向其棱面送去一瞥，便会在混沌中永世沉沦。<br /><br />「         」",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/836255",
    "comeFrom": [
+    "拟造花萼【大矿区】",
     "拟造花萼【大矿区】",
     "「万能合成机」- 材料合成"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
+    "拟造花萼【大矿区】",
     "拟造花萼【大矿区】",
     "「万能合成机」- 材料合成",
     "余烬兑换"
@@ -945,10 +949,10 @@
    ]
   },
   {
-   "tagHash": "妨害",
+   "tagHash": "群攻",
    "descHash": "对敌方全体造成等同于桑博<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻击力的<span style=\"color:#00FF9C;\">风</span>属性伤害，同时有<nobr>#4[i]%</nobr>的<u>基础概率</u>使被攻击的敌方目标受到的持续伤害提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>，持续<nobr>#3[i]</nobr>回合。",
    "ultimateCost": 120,
-   "break": "0",
+   "break": "60/hit",
    "energy": "5",
    "id": 49935,
    "name": "惊喜礼盒",

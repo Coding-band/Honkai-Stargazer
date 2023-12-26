@@ -1,0 +1,2734 @@
+{
+ "spRequirement": 130,
+ "iconPath": "a110f7ce165092b278e3ef1e731e78a47931080ee5f564a9c901908d06b0659f",
+ "bgPath": "821b229f48e7404128d1b56674ccb67f3eb9f9be3a7fc1ae2fa0dddcdb45972d",
+ "figPath": "eff7b6d76515ae26b67689c99444da326c9de6283dcdb62c6faf4ba2b62325f7",
+ "fgPath": "",
+ "splashIconPath": "8f3ea34da7021264f1f952d1dbf435b2cda6bc7feddfb68fd91ac7ab53386f1f",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 4,
+  "iconPath": "55d5339b99655abd5d47c976596bebf22e6e522614fef628f7c875606f3e1abd",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédito",
+   "desc": "Esta moeda, usada pela Corporação da Paz Interastral para acertar contas com seus clientes, agora é amplamente aceita como moeda para viagens espaciais.",
+   "lore": "\"As pessoas lutam e negociam tanto apenas por números em um terminal, mas o que é precioso de verdade não pode ser comprado.\"",
+   "purpose": "Moeda Comum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cálice (Grande Mina)",
+    "Recompensas de Missão",
+    "Recompensas de Atribuição",
+    "Troca de Brasas"
+   ]
+  },
+  "67220": {
+   "id": 67220,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "771ee2d52c420b86a334eedd637788b8610e891840f00c21c696bcbadc754ef6",
+   "name": "Quitina Gélida",
+   "desc": "Quitina gelada que emite um barulho gélido. Pode ser usada para Ascensão de personagens de Dano de Gelo.",
+   "lore": "Quitina estranha que se desprendeu de uma criatura interdimensional. Embora não esteja mais congelada, ela continua tremendo, absorvendo calor ao seu redor.<br /><br />\"Como ninguém nunca pensou em vender isso para mundos onde não há ar-condicionado? Ela parece com um, inclusive no barulho.\"",
+   "purpose": "Materiais de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/67220",
+   "comeFrom": [
+    "Sombra Estagnada: Vau-Nuvem",
+    "Sombra Estagnada (Vau-Nuvem)",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Rastros de Destino",
+   "desc": "Material avançado para subir o nível de Rastros.",
+   "lore": "Sua vitória é garantida por inúmeras falhas, e os pequenos passos que você deu levaram a uma reviravolta do destino.",
+   "purpose": "Materiais de Rastro",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Recompensas de Pontuação do Universo Simulado",
+    "Honra dos Inominados",
+    "Troca de Brasas",
+    "Recompensas de Evento por Tempo Limitado"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "Guia do Viajante",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>20.000</nobr> de EXP de Personagem.",
+   "lore": "Leitura obrigatória para explorar o mundo. Pressione o botão \"Ler\" para reproduzir uma voz atraente num idioma que você entenda falando sobre os encontros lendários de aventureiros renomados em diferentes mundos, bem como a sabedoria e o conhecimento precioso que eles acumularam.<br /><br />\"A novíssima série do Guia do Viajante, 'Manual de Gastronomia Galáctica do Chefe', já está disponível para compra.\"<br />\"Para fazer pedidos, envie um sinal de sinestesia para ERD<nobr>-23</nobr>θ e entre em contato com um representante da Guilda de Intelectuais. Temos várias formas de pagamento.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Salão Esquecido"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "Registro de Aventura",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>5.000</nobr> de EXP de Personagem.",
+   "lore": "Coleção bem-organizada de notas de aventura educacional contendo incontáveis ilustrações e textos com histórias completas, bem como informações valiosas e técnicas de sobrevivência.<br /><br />\"Por que não digitalizamos isso e guardamos em um disco de fotolitografia? Seria muito mais prático.\"<br />\"Tecnologia avançada é muito mais frágil do que você imagina diante de tempestades estelares e erupções de fluxo de neurônios. Além disso, tenho certeza de que o autor deste livro gostaria que as pessoas o lessem da forma mais simples possível.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Treinamento Diário",
+    "Troca de Brasas"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "Encontros de Viagens",
+   "desc": "Material de experiência para personagens. É possível obter <nobr>1.000</nobr> de EXP de Personagem.",
+   "lore": "Diário de viagem com assuntos aleatórios escritos numa letra feia. Não tem muita utilidade.<br /><br />\"Dan Heng, termine logo de ler isso para jogarmos fora.\"",
+   "purpose": "Material de EXP de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Cálice (Planícies Nevadas Distantes)",
+    "Recompensas de Atribuição"
+   ]
+  },
+  "470781": {
+   "id": 470781,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "c63b922af281d49c4d1e5ee84aa4a5cb7027e4a16e96fe8f683c9f50a4bcb921",
+   "name": "Males Passados do Desastre do Planeta da Perfuração",
+   "desc": "Material avançado para subir o nível de Rastros.",
+   "lore": "Como uma descendente criada pessoalmente pelo Monarca Insectorum, seu único desejo é expandir o tamanho de seu povo. Ele usa flechas gigantes para coletar planetas para seu ninho, gerando inúmeros descendentes incansavelmente, e destruindo incontáveis criaturas até o momento de sua morte. <br /><br />\"No planeta quebrado, os corais gigantes bloquearam o céu, e inúmeros insetos derramaram da crosta do planeta. O besouro levantou este novo ninho e o entregou como um presente para o Monarca Insectorum... Que esse horror só exista em registros históricos e nunca mais apareça.\"",
+   "purpose": "Materiais de Rastro",
+   "rarity": 4,
+   "rewardPath": "/material/470781",
+   "comeFrom": [
+    "Eco da Guerra (Zona de Reclusão)"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "71d58f084522c87e93327e3e7fc1db8fb4abb65e9989b163d4a348c9a3761329",
+   "name": "Scionette Imortal",
+   "desc": "Novos e jovens botões brotando de uma construção divina antiga. Material bruto usado para aprimoramentos.",
+   "lore": "A fonte da \"Duração Infinita\" dos macróbios do Xianzhou, resquício da influência do Aeon da Abundância. Inúmeros anos atrás, a cobiça de um soberano pela imortalidade fez com que a frota do Xianzhou zarpasse para o mar do espaço sideral em busca de receitas divinas.<br /><br />\"Nós desejamos viver por eras sem fim e conservar o império por toda a eternidade. Infelizmente, a vida e a capacidade humanas têm limites. Por isso, enviamos nove Navium Astrigers para atravessar os céus em busca de receitas divinas para a imortalidade.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "Abominações da Abundância",
+    "Inimigos do Universo Simulado",
+    "Recompensas de Atribuição",
+    "Troca de Brasas",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "c3cb2e5eb5390586c537d03d1de632b1aa59c49a3cc32f24d68672d2f97fb1e5",
+   "name": "Floresciaéreo Imortal",
+   "desc": "Novas flores crescendo de dentro de uma construção divina antiga. Material normal usado para aprimoramentos.",
+   "lore": "A fonte da \"Duração Infinita\" dos macróbios do Xianzhou, resquício da influência do Aeon da Abundância. Depois de inúmeras provações, a frota que saiu em busca do remédio da imortalidade conseguiu avistar o semblante do ser celestial. A divindade ofereceu suas bênçãos em forma material, e assim nasceram folhas da Árvore Ambrosiana.<br /><br />\"Novos botões descem à lua, e flores divinas brotam nas nuvens. Breve como a vida de uma flor, a velha madeira volta a ser um pomar jovial.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "Abominações da Abundância no Nível de Equilíbrio 2 ou superior",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "635670": {
+   "id": 635670,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a096383d62b9e5432fbf9a9674cc41041077b151d3473e44509d684eaaccd9bd",
+   "name": "Melodia Harmônica",
+   "desc": "Uma caixa de música compacta de fabricação desconhecida. Usada para conceder um aumento sutil de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonia</span>.",
+   "lore": "Toca uma melodia relaxante e gentil.<br />Embora seja uma melodia simplista, qualquer pessoa com o menor conhecimento de música consegue notar a maestria do compositor dessa peça.<br /><br />\"Segure a mão dos seus familiares e dance!\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 2,
+   "rewardPath": "/material/635670",
+   "comeFrom": [
+    "Cálice (Assentamento de Robôs)",
+    "Cálice (Assentamento de Robôs)",
+    "Troca de Brasas"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5708b196a8af89740ced588d98dc414c791d209879957fb0bc8644cc2dc84adb",
+   "name": "Luminivinha Imortal",
+   "desc": "Vinhas decíduas de uma construção divina antiga. Material avançado usado para aprimoramentos.",
+   "lore": "A fonte da \"Duração Infinita\" dos macróbios do Xianzhou, resquício da influência do Aeon da Abundância. Após os Três Sofrimentos, Xianzhou encontrava-se devastada. O \"Homo Celestinae\" sucumbiu como demônios, e as catástrofes continuaram incessantemente.<br /><br />\"Segundo decreto da Comissão dos Dez Senhores, todos que estiverem próximos de se tornarem marafílicos serão apreendidos pelos juízes infernais e condenados à Prisão de Grilhões.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Personagem",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "Abominações da Abundância no Nível de Equilíbrio 4 ou superior",
+    "Sintetizador Omni — Síntese de Material",
+    "Inimigos do Universo Simulado",
+    "Sintetizador Omni — Troca de Material"
+   ]
+  },
+  "836256": {
+   "id": 836256,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "b423fcc0ae34c8c3b30d0a461af31176b161d5a83f3615756c8f8a91f04ac474",
+   "name": "Sinfonia Stellaris",
+   "desc": "Uma caixa de música com estruturas complexas de fabricação desconhecida. Usada para conceder um aumento considerável de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonia</span>.",
+   "lore": "Toca uma sinfonia cósmica poderosa.<br /><br />\"Alguns astrônomos acreditam que as revoluções das esferas celestes funcionam da mesma forma que estruturas mecânicas complexas. As notas agradáveis emitidas durante os movimentos das estrelas são conhecidas como Harmonia das Esferas Celestes.\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 4,
+   "rewardPath": "/material/836256",
+   "comeFrom": [
+    "Cálice (Assentamento de Robôs)",
+    "Cálice (Assentamento de Robôs)",
+    "Sintetizador Omni — Síntese de Material"
+   ]
+  },
+  "920197": {
+   "id": 920197,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "b5aa737b728156387ef4ddce10e0a541deb24993d58c4f2eca0aac0ed4301ea8",
+   "name": "Hino Ancestral",
+   "desc": "Uma caixa de música de fabricação desconhecida. Usada para conceder um aumento moderado de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonia</span>.",
+   "lore": "Toca um hino cantado por uma pequena banda.<br />Através de sua letra, é impossível saber quem o hino homenageia.<br /><br />\"A penúria é o julgamento do Grande, a riqueza é a graça!\"",
+   "purpose": "Material de Rastros<br />Material de Ascensão de Cone de Luz",
+   "rarity": 3,
+   "rewardPath": "/material/920197",
+   "comeFrom": [
+    "Cálice (Assentamento de Robôs)",
+    "Cálice (Assentamento de Robôs)",
+    "Sintetizador Omni — Síntese de Material",
+    "Troca de Brasas"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 89.76,
+   "attackAdd": 4.488,
+   "hpBase": 147.84,
+   "hpAdd": 7.392,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 104,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549504,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 125.664,
+   "attackAdd": 4.488,
+   "hpBase": 206.976,
+   "hpAdd": 7.392,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 104,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549504,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 161.568,
+   "attackAdd": 4.488,
+   "hpBase": 266.112,
+   "hpAdd": 7.392,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 104,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633445,
+     "count": 6
+    },
+    {
+     "id": 67220,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 197.472,
+   "attackAdd": 4.488,
+   "hpBase": 325.248,
+   "hpAdd": 7.392,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 104,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633445,
+     "count": 9
+    },
+    {
+     "id": 67220,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 233.376,
+   "attackAdd": 4.488,
+   "hpBase": 384.384,
+   "hpAdd": 7.392,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 104,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717386,
+     "count": 6
+    },
+    {
+     "id": 67220,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 269.28,
+   "attackAdd": 4.488,
+   "hpBase": 443.52,
+   "hpAdd": 7.392,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 104,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717386,
+     "count": 9
+    },
+    {
+     "id": 67220,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 305.184,
+   "attackAdd": 4.488,
+   "hpBase": 502.656,
+   "hpAdd": 7.392,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 104,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "e7667bb741d6b72c3689e14b89513ca15f3b468978f35248372d11a128770735",
+   "artPath": "a4d8bf28c7f50ad70cf75ce9699b32661b8aec93c60b9c1af23f3e62b4da5745",
+   "name": "Bordado Neurônico",
+   "descHash": "Quando o campo da Perícia Suprema é instalado, o Dano causado por todos os aliados ignora <nobr>#1[i]%</nobr> da DEF do alvo.",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "eb278b83c909643b92cc0c935e24d056b9113a2e10ee3df9143caf46d771a915",
+   "artPath": "4ba328435c18e967d1241531b4f8b22f5d661385cfbd0638e8b02439199d728e",
+   "name": "Passeio Pela Relva",
+   "descHash": "Com Ruan Mei no campo, todos os aliados aumentam seus ATQs em <nobr>#1[i]%</nobr> ao causar Dano a inimigos com Quebra de Fraqueza.",
+   "params": [
+    0.4
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "54faf72f6548ed6b4eb83c1d9db6e815c8a00fe47cfdc2091629af2d3cbe1425",
+   "artPath": "1e5a2d5b0f459cdb97efc3742ffb8b82d2a1b11f9a1b2f50a1557c85c9ad79f4",
+   "name": "Pirueta Viridescente",
+   "descHash": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "8bf0491ce99b29eb3e14ed2f63a96829fe2ce94bd01eb050beb7df33c563945b",
+   "artPath": "9ac664b89f0ce9f49c190b348ca3315b67cf5d52962f2e0f410c846876e7c1f0",
+   "name": "Chatoyant Éclat",
+   "descHash": "Quando um inimigo-alvo sofrer de Quebra de Fraqueza, o Efeito de Quebra de Ruan Mei aumenta em <nobr>#1[i]%</nobr> por <nobr>#2[i]</nobr> rodada(s).",
+   "params": [
+    1,
+    3
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "98268c06444f6181a49696a04c08683ce541a4a5b9dfaebcb9aef8e1f35507ef",
+   "artPath": "c2a7527aa76bda0d0d73b5638dec0f6e02927a69afb410d27ecaa799990d8fb2",
+   "name": "Presilha Lânguida",
+   "descHash": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "bbd09d8f606fb3c0a403e3cc45be3d88f53384aef0710ab49e71df4bb36acd7d",
+   "artPath": "aa28f8b1d9300d340bd6fa0e231eb64fcd876d4013a7ff7c6ccc31998583dfbf",
+   "name": "Cascada de Lenços",
+   "descHash": "Estende a duração do campo da Perícia Suprema por <nobr>#1[i]</nobr> rodada(s). O multiplicador do Dano de Quebra do Talento aumenta adicionalmente em <nobr>#2[i]%</nobr>.",
+   "params": [
+    1,
+    2
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   101144
+  ],
+  [
+   385671
+  ],
+  [
+   301730
+  ],
+  [
+   816617
+  ],
+  [
+   933262
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Alvo Único",
+   "descHash": "Causa Dano de <span style=\"color:#47C7FD;\">Gelo</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Ruan Mei a um único inimigo-alvo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 101144,
+   "name": "Fios de Perfume",
+   "iconPath": "6d993ced97e2bc1aa71b284a8633c5d34fab352465c2a0131f83de0c2ec69a2a",
+   "typeDescHash": "ATQ Básico",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635670,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920197,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920197,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836256,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836256,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Suporte",
+   "descHash": "Após usar sua Perícia, Ruan Mei ganha Tom Acima, durando por <nobr>#3[i]</nobr> rodada(s). Essa duração diminui em 1 no início da rodada de Ruan Mei. Quando Ruan Mei possui Tom Acima, o Dano de todos os aliados é aumentado em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> e a Eficiência de Quebra de Fraqueza deles aumenta em <nobr>#2[i]%</nobr>.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 385671,
+   "name": "Cordas Cantam Lentos Sons",
+   "iconPath": "98268c06444f6181a49696a04c08683ce541a4a5b9dfaebcb9aef8e1f35507ef",
+   "typeDescHash": "Perícia",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.16,
+      0.5,
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.176,
+      0.5,
+      3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.192,
+      0.5,
+      3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635670,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.208,
+      0.5,
+      3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920197,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.224,
+      0.5,
+      3
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920197,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.24,
+      0.5,
+      3
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920197,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.26,
+      0.5,
+      3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836256,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.28,
+      0.5,
+      3
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836256,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      0.5,
+      3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836256,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.32,
+      0.5,
+      3
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836256,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.336,
+      0.5,
+      3
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.352,
+      0.5,
+      3
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.368,
+      0.5,
+      3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.384,
+      0.5,
+      3
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.4,
+      0.5,
+      3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Suporte",
+   "descHash": "Ruan Mei implanta um campo que dura por <nobr>#2[i]</nobr> rodadas. A duração do campo diminui em 1 no início da rodada dela.<br />Enquanto estiver dentro do campo, a PEN de RES a Todos os Tipos de todos os aliados aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> e os ataques deles aplicam Reflorescer da Ameixa aos inimigos atingidos.<br />Quando esses inimigos tentam se recuperar da Quebra de Fraqueza, Reflorescer da Ameixa é ativado, estendendo a duração da sua Quebra de Fraqueza, atrasando sua ação em uma quantidade igual a <nobr>#3[i]%</nobr> do Efeito de Quebra de Ruan Mei + <nobr>#4[i]%</nobr>, e causando Dano de Quebra igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> do Dano de Quebra de <span style=\"color:#47C7FD;\">Gelo</span> de Ruan Mei.<br />Reflorescer da Ameixa não pode ser aplicado novamente aos inimigos-alvo até eles se recuperarem da Quebra de Fraqueza.",
+   "ultimateCost": 130,
+   "break": "0",
+   "energy": "5",
+   "id": 301730,
+   "name": "Pétalas na Corrente, Repouso Indolente",
+   "iconPath": "714f509cc85b5aaf8cbf471e1b9807bccc356e00d3a5935d3672234896b31fba",
+   "typeDescHash": "Perícia Suprema",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.15,
+      2,
+      0.2,
+      0.1,
+      0.3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.16,
+      2,
+      0.2,
+      0.1,
+      0.32
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.17,
+      2,
+      0.2,
+      0.1,
+      0.34
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635670,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.18,
+      2,
+      0.2,
+      0.1,
+      0.36
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920197,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.19,
+      2,
+      0.2,
+      0.1,
+      0.38
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920197,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.2,
+      2,
+      0.2,
+      0.1,
+      0.4
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920197,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.2125,
+      2,
+      0.2,
+      0.1,
+      0.425
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836256,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.225,
+      2,
+      0.2,
+      0.1,
+      0.45
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836256,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.2375,
+      2,
+      0.2,
+      0.1,
+      0.475
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836256,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.25,
+      2,
+      0.2,
+      0.1,
+      0.5
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836256,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.26,
+      2,
+      0.2,
+      0.1,
+      0.52
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.27,
+      2,
+      0.2,
+      0.1,
+      0.54
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.28,
+      2,
+      0.2,
+      0.1,
+      0.56
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.29,
+      2,
+      0.2,
+      0.1,
+      0.58
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      2,
+      0.2,
+      0.1,
+      0.6
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Suporte",
+   "descHash": "Aumenta a VEL em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> para a equipe (excluindo este personagem). Quando os aliados aplicam Quebra de Fraqueza a um inimigo-alvo, Ruan Mei causa Dano de Quebra a esse inimigo igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> de seu Dano de Quebra de <span style=\"color:#47C7FD;\">Gelo</span>.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 816617,
+   "name": "Hélice Somatotípica",
+   "iconPath": "a19cab568e544e41501ac2296913db2fa8c7bd3160dc1c2bfecc2f3486cc0971",
+   "typeDescHash": "Talento",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.08,
+      0.6
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.082,
+      0.66
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.084,
+      0.72
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635670,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.086,
+      0.78
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920197,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.088,
+      0.84
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920197,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.09,
+      0.9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920197,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.0925,
+      0.975
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836256,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.095,
+      1.05
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836256,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.0975,
+      1.125
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836256,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      1.2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836256,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.102,
+      1.26
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.104,
+      1.32
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.106,
+      1.38
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.108,
+      1.44
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.11,
+      1.5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do inimigo-alvo do Tipo correspondente.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 17203,
+   "name": "Ataque",
+   "iconPath": "6d993ced97e2bc1aa71b284a8633c5d34fab352465c2a0131f83de0c2ec69a2a",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Aprimoramento",
+   "descHash": "Depois de usar a Técnica, ganha Serenata de Seda. No início da próxima batalha, ativa automaticamente a Perícia <nobr>#1[i]</nobr> vez(es) sem consumir Pontos de Perícia.<br />No Universo Simulado, quando Ruan Mei possuir Serenata de Seda, a equipe atacando inimigos será considerada como se sempre estivesse atacando sua Fraqueza para entrar em batalha, e este ataque pode reduzir a Tenacidade de todos os inimigos independente dos Tipos de Fraqueza. Ao aplicar Quebra de Fraqueza, ativa o Efeito de Quebra de Fraqueza correspondente ao Tipo do atacante. Para cada Bênção em posse (até <nobr>#4[i]</nobr> Bênçãos), adicionalmente aumenta o Dano de Redução de Tenacidade deste ataque em <nobr>#2[i]%</nobr>. Após aplicar a Quebra de Fraqueza a um inimigo-alvo, causa adicionalmente Dano de Quebra igual a <nobr>#3[i]%</nobr> do Dano de Quebra de <span style=\"color:#47C7FD;\">Gelo</span> de Ruan Mei ao inimigo-alvo.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 933262,
+   "name": "Serenata de Seda",
+   "iconPath": "7a506fb66f8417e7f05c75c5f03915100d58154654a0dc5799e6fe15aad149c1",
+   "typeDescHash": "Técnica",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      1,
+      1,
+      20
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1303101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1303202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1303203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 738446,
+        "name": "Aprimoramento de Quebra",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+        "statusList": [
+         {
+          "key": "Efeito de Quebra",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920197,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 738445,
+      "name": "Bônus de DEF",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+      "statusList": [
+       {
+        "key": "DEF",
+        "value": 0.05
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635670,
+        "count": 3
+       },
+       {
+        "id": 549504,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Aumenta o Efeito de Quebra em <nobr>#1[i]%</nobr> para todos os aliados.",
+    "ultimateCost": 0,
+    "id": 738349,
+    "name": "Respiração Inerte",
+    "iconPath": "cc5233c8e003f6cfc7c5ed92bd8f8762dbc9478a23ea89278784eb9a2cbfb55d",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635670,
+        "count": 3
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1303102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1303205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1303206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 738441,
+        "name": "Bônus de DEF",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+        "statusList": [
+         {
+          "key": "DEF",
+          "value": 0.075
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836256,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 738444,
+      "name": "Aprimoramento de Quebra",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+      "statusList": [
+       {
+        "key": "Efeito de Quebra",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920197,
+        "count": 5
+       },
+       {
+        "id": 633445,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Ruan Mei regenera <nobr>#1[i]</nobr> de Energia ao início da sua rodada.",
+    "ultimateCost": 0,
+    "id": 738352,
+    "name": "Dias Mínguam, Pensamentos Crescem",
+    "iconPath": "e52fb957be6849e04a30acaeef77d9bf13cfd55244547a21c8646ba531faeb75",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       5
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920197,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1303103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1303208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1303209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 738456,
+        "name": "Bônus de DEF",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+        "statusList": [
+         {
+          "key": "DEF",
+          "value": 0.1
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836256,
+          "count": 8
+         },
+         {
+          "id": 717386,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1303210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 654506,
+        "name": "Aprimoramento de Quebra",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+        "statusList": [
+         {
+          "key": "Efeito de Quebra",
+          "value": 0.107
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836256,
+          "count": 8
+         },
+         {
+          "id": 717386,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 738455,
+      "name": "Bônus de VEL",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079",
+      "statusList": [
+       {
+        "key": "VEL",
+        "value": 3,
+        "int": true
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836256,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Em batalha, para cada <nobr>#2[i]%</nobr> do Efeito de Quebra de Ruan Mei que exceda <nobr>#1[i]%</nobr>, sua Perícia aumenta adicionalmente o Dano dos aliados em <nobr>#3[i]%</nobr>, até um máximo de <nobr>#4[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 738351,
+    "name": "Luz de Velas em Águas Tranquilas",
+    "iconPath": "9af110e59ce59796bc35c3922d031764009955552c2af345cd6c782e58caf233",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       1.2,
+       0.1,
+       0.06,
+       0.36
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836256,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1303201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1303204,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 738443,
+      "name": "Bônus de VEL",
+      "levelReq": 0,
+      "promotionReq": 3,
+      "iconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079",
+      "statusList": [
+       {
+        "key": "VEL",
+        "value": 2,
+        "int": true
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 10000
+       },
+       {
+        "id": 920197,
+        "count": 3
+       },
+       {
+        "id": 633445,
+        "count": 3
+       }
+      ]
+     }
+    },
+    {
+     "id": 1303207,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 738442,
+      "name": "Aprimoramento de Quebra",
+      "levelReq": 0,
+      "promotionReq": 5,
+      "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+      "statusList": [
+       {
+        "key": "Efeito de Quebra",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 45000
+       },
+       {
+        "id": 836256,
+        "count": 3
+       },
+       {
+        "id": 717386,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 738448,
+    "name": "Aprimoramento de Quebra",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+    "statusList": [
+     {
+      "key": "Efeito de Quebra",
+      "value": 0.053
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corpo",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "PV",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "Pés",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "VEL",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Esfera Plana",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "PV",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "Corda de Ligação",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "Efeito de Quebra",
+    "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Primeiro Encontro",
+   "text": "Meu nome é Ruan Mei. Quando for dizer meu nome, por favor, não ligue as sílabas umas nas outras.",
+   "unlockRequirement": "",
+   "cnUrl": "7834dd8b030cb16c57aff017548773558a91b28057bd986c5393545ec96fd432",
+   "jpUrl": "159bf02d774726e20d093e14b1f75a5c61febb8ecdff794981cebab9f48e8d93",
+   "enUrl": "63f4afc64ddec38868018dad2282ea1a574210ffeb326c87068a0005ef8d28ee",
+   "krUrl": "5cdf416d956ffe9360e9bff2bf6d105f7d31ec26fb76795e728efc322763c85e"
+  },
+  {
+   "id": 2,
+   "title": "Cumprimento",
+   "text": "Quer sobremesa? As ameixas usadas nesta receita acabaram de ser amassadas. Eu fiquei horas na fila.",
+   "unlockRequirement": "",
+   "cnUrl": "783006060249e6b84fb8cd48d1b2be61f40c9741bca7b0cec58d79d6505d080d",
+   "jpUrl": "e8f6014131d364d09afe7d7eb59fa5c039d73282b31ff63125fc3aa4729d76f9",
+   "enUrl": "cc41e31f4bebc8c2d88c077b890ed8afcf62d6416486493dee8b7a8873574f65",
+   "krUrl": "339d1c3828b295877a324ca8793796c29cf6a006a0488c1ba8db7bccf91da237"
+  },
+  {
+   "id": 3,
+   "title": "Despedida",
+   "text": "Se você encontrar uma boa amostra de pesquisa, por favor, me avise. Até lá.",
+   "unlockRequirement": "",
+   "cnUrl": "dccd32f26eafef1230290836e6d1ff355cbdedb43ee1c2722ec4876a9a54f135",
+   "jpUrl": "465f73f4d1c2a7d5598e056a7bac60231faaa8ec539a3c1d065e194ab82974c0",
+   "enUrl": "1d835440382daea44be77dfcd29945eb846d6afbdbef811671034f3ca9548adf",
+   "krUrl": "29f03f7dc71f1ab300fb0e75a4360f195d966999c5123cfa47f28510eb1c9244"
+  },
+  {
+   "id": 4,
+   "title": "Sobre Si: Origem",
+   "text": "Depois de chamar a atenção de Nous, eu deixei minha cidade natal e comecei minha pesquisa sobre a origem da vida em um canto secreto do universo... por favor, não me pergunte onde.",
+   "unlockRequirement": "",
+   "cnUrl": "6c76b20c713bef0c60c5661ddf0de0cfe74ea87a15142e479920d3226a4209a7",
+   "jpUrl": "ee10721f1bfcd5c4cbb26fbf97a7a86c48b5aa3f38976811b98f61e652d620f8",
+   "enUrl": "32ee5b15b153fbb1ee6deda28f6384449bb5494e6858297b7254291f499333a2",
+   "krUrl": "dcc414a2905dcfcac43fe14dbe0dbafc372dfedb935d15d187ae4457805ed3bf"
+  },
+  {
+   "id": 5,
+   "title": "Sobre Si: Nome",
+   "text": "No grande tecido da vida, ambos os pais são iguais, e, portanto, meu nome combina os sobrenomes de ambos meus pais.",
+   "unlockRequirement": "",
+   "cnUrl": "160f09a4d0581b75115810569a2995e8fc6dea05c021d7541aa484057ab5503b",
+   "jpUrl": "292cc6e4149ba82b6cc84e151847bd795b6c81e5fe5a72f57133c7f20a5b505e",
+   "enUrl": "ee584d73deeb17b7ec25aa046691c7448f9eaa1c270e737216879c77c567677d",
+   "krUrl": "606f48fa8be0a2127da749dffcda77a4a8785672d9353b6fabfb871592f5628c"
+  },
+  {
+   "id": 6,
+   "title": "Bate-papo: Sociedade de Gênios",
+   "text": "Você não precisa se esforçar para escutar a fofoca vindo da Sociedade de Gênios... \"Cientista Louca\". Vou encarar isso como um elogio.",
+   "unlockRequirement": "",
+   "cnUrl": "afc9467a9b7e65a2e5ac2f32372315e760282f110135c09903ddf1ded9fd46a8",
+   "jpUrl": "4bc08a265f949d6a7ccb65c8fa02251911d6e850e92909427aea127d7618f822",
+   "enUrl": "62d8575dcebf8bcb2f20fd3f227896321ce045381e98902d59836337f97852be",
+   "krUrl": "8becf1d38bac8e561c84ca14b2b1ec2f6f67b6d57734438c63f948003e0fa9a5"
+  },
+  {
+   "id": 7,
+   "title": "Hobbies: Degustação de Confeitaria",
+   "text": "Como alguém com um paladar sensível, eu só preciso de uma pequena mordida para julgar o sabor de uma sobremesa. Eu prefiro ingredientes sazonais, como frutas frescas, flores e ervas. Fatias impecáveis de vida preservada dentro de uma sobremesa. Esses ingredientes fornecem a melhor resposta de dopamina que a comida tem a oferecer.",
+   "unlockRequirement": "",
+   "cnUrl": "59a726519dd537dc5315e59049645d659a299c462a1cb3872d5ccdd8da461d0d",
+   "jpUrl": "b61bff9bcf9f87be5f643a93d963e278d0208e93f8d0db13645d942df357f6ad",
+   "enUrl": "6e28e6dbc01ef64500b841f789c0460b7be0e2c43ff562c95f9e5985215dfd99",
+   "krUrl": "73e6ffc9bd246035836cd06bba13a06bc80cd73b65040ff8f03e6f5ad03059e5"
+  },
+  {
+   "id": 8,
+   "title": "Hobbies: ópera",
+   "text": "Eu nunca consegui me aprofundar em música moderna de verdade, mas eu acho ópera encantadora. O tempo passa como um rio sempre que eu escuto às cordas e às vozes em uma apresentação de ópera.",
+   "unlockRequirement": "",
+   "cnUrl": "1788266dce217a127b91f7ad756c46f37d0a47a0cffdc853952d2b45706785e5",
+   "jpUrl": "d2c9df71efa4129c42ecdeebfbd4b6edebe41b72027eda52dbe05102a8430054",
+   "enUrl": "2a39a4c5a91ad9c9eac20c8100bd62fdeda11dee53710dc19ad3a661c853e8f5",
+   "krUrl": "293498ccf474354412fde4ee9941977486750ea9c7b65c54f3bc4fe5f361a8fe"
+  },
+  {
+   "id": 9,
+   "title": "Irritações: conversar",
+   "text": "A redundância das palavras e as restrições da comunicação verbal geram muito barulho vazio. Isso me entristece...",
+   "unlockRequirement": "",
+   "cnUrl": "60b0f105515e7c6190fd01108dea317ed830aa775a02e66861d02a237b4eb863",
+   "jpUrl": "74ac5345358cb5034e6990ca836ed9c1ba7456da202bfde190f0c7f902b54d0c",
+   "enUrl": "5ef8d51093c7fd3548b06c1063cbbb8ebb453e99c5f69d9ff49cd19babab6112",
+   "krUrl": "b07356c1aec48a1ea4002b3000e6794a49781d36b15ea2411d93e2a5da74ac2a"
+  },
+  {
+   "id": 10,
+   "title": "Algo a compartilhar: técnicas de bordado",
+   "text": "O sentimento do bordado é similar ao de desenvolver uma cultura no laboratório. Um bom controle do pulso, o ângulo correto e comprometimento total.",
+   "unlockRequirement": "",
+   "cnUrl": "3c8bd6d44a18685ac041f451f2dc9194c39a775e504a802ecee900a627de0dc1",
+   "jpUrl": "c651c43e33e3025ec0936cc4da6596d7681efb9b541fe4c9d8b27cb078469940",
+   "enUrl": "9a279a57506e2bf6f9efa57af4dc902d12dd9876853387a142ff869ebdb2306a",
+   "krUrl": "37572870e650017e1d1d4846fbb2adee7628f9ce407a8b31940e2e285daaaa93"
+  },
+  {
+   "id": 11,
+   "title": "Conhecimento: o auge da vida",
+   "text": "Nós podemos acelerar ou postergar a chegada da morte, mas a vida sempre definhará. Ainda que um dia venhamos a ser reduzidos a partículas, nós ainda podemos alçar voos mais altos.",
+   "unlockRequirement": "",
+   "cnUrl": "a799d196c39a38d43c61191e2c3606657345f4c5b195ea0a6bf8a0c5aa45cb96",
+   "jpUrl": "0da0674bbf4f77ce242c51593111dc57085cc80e4f71be4d2aa7bcce7b263b3a",
+   "enUrl": "5a0a44a8e1fe21dde2b4e0c4780db3650c20f97022dfd40ccc42bb1239d787bc",
+   "krUrl": "0a487d174da1c81101072a3df006c01c7fa7495f71464141f49d9f178ddc3d08"
+  },
+  {
+   "id": 12,
+   "title": "Conhecimento: pesquisa racional",
+   "text": "Os humanos superestimam a infalibilidade da lógica, e ao se apoiarem demais à razão, eles podem se tornar escravos de suas emoções. A ciência nasce do fanatismo, é um presente.",
+   "unlockRequirement": "",
+   "cnUrl": "88515c75f23bfbe0ceb708c4bb0fa4c2dffd698317e954c7034f7d0c43fa1b4d",
+   "jpUrl": "cb3382ebd371e06a18d5abd552642035efdce8f2b454079ea4fba28241995cd4",
+   "enUrl": "3282bac33eeacea4f0524a488e06f6ccefd36ccdd16ed2b3503977bf458db8ee",
+   "krUrl": "aeef3d9cd9f73cea49843af5637f81d66803c8b1b7851477531338df721e7af3"
+  },
+  {
+   "id": 13,
+   "title": "Sobre a Herta",
+   "text": "Algumas pessoas podem achar a personalidade dela insuportável, eu consigo entender o sentimento, mas eu apenas não ligo. Claro, a Herta também sabe disso, então eu aceitei o convite dela.",
+   "unlockRequirement": "",
+   "cnUrl": "aa8b2e3e0128ebdcb890e847babe0b57c14ed328991b5cbc4581083207c4932c",
+   "jpUrl": "e57dcbdc7120a6b8731889790c992f92e1b1fda70fb5f5df0db5dbc3f6559ccd",
+   "enUrl": "10444bfb843500ee5c9ad6bd8f56952a5da4bff309e540aab9f36715abe185ef",
+   "krUrl": "6de655f141fb52d7714b3a4ed141d93e3890c13304f0d896d9dbee3cd0eb72b1"
+  },
+  {
+   "id": 14,
+   "title": "Sobre o Screwllum",
+   "text": "O Screwllum e eu temos entendimentos muito diferentes da vida, mas eu não acho que ele percebe isso. Por sorte, nossa comunicação é limitada aos assuntos relacionados ao Universo Simulado.",
+   "unlockRequirement": "",
+   "cnUrl": "bf4e0e3f28476c1213330875afa91ff4ba7958e93f723ac4bde0cc887105e288",
+   "jpUrl": "865e614759d255f50582699614d3bdbd4150f33e33a6408e7f7cd92ba4ba35fd",
+   "enUrl": "03e29fdf6a755002fb016995ce625cf9925cb3da8f92a14d3754b77fe4db006a",
+   "krUrl": "8f7d3344248336ae8c5076c6745ecf48db8b4613d3b62ba740ae5024c05d4031"
+  },
+  {
+   "id": 15,
+   "title": "Sobre o Stephen",
+   "text": "Coloque uma sobremesa de melancia no escritório da Herta e o Stephen com certeza vai aparecer. Lembre-se, os de abóbora não o atraem, esses são para espantá-lo.",
+   "unlockRequirement": "",
+   "cnUrl": "14be4878b2f94cf3e4be4f323ed66ebd7157ed4df9c23f56988861f14c61001d",
+   "jpUrl": "691c4067a71dfea9f569c614736630ecac382083eec4ea22f571cb84da0b4e1f",
+   "enUrl": "e326f09aaf9ac0b4ca75f56ad7553397d3cf30f3a9b571bc877af53fa352d6fc",
+   "krUrl": "dc3a48f974e540bd288a9657ce5135a3a5c4a828b872ccb4a338c5fea90ced3e"
+  },
+  {
+   "id": 16,
+   "title": "Ativação de Eidolon",
+   "text": "Os momentos passados da vida podem mesmo ser restaurados para como eram antes?",
+   "unlockRequirement": "",
+   "cnUrl": "d090a1a1f9480b6f51c50fc1a6318f9b089d88bbfc8388fba5d41e1b40aeeb42",
+   "jpUrl": "6866cc18b11dc0e177db0928fbb123ac47cbe789d1d86f47021b1419acd1b3d8",
+   "enUrl": "83bc4d27cead2aa51430555e43946a64d1608947f3fc1e66b77e512585551d53",
+   "krUrl": "99f3e3e47b568b03eb787665f017af4a60bd16c9a83718fce51e0af93f787ac7"
+  },
+  {
+   "id": 17,
+   "title": "Ascensão de Personagem",
+   "text": "A pesquisa está progredindo a velocidades astronômicas.",
+   "unlockRequirement": "",
+   "cnUrl": "9a383483a2be340683565bb99458b5a8cfe522656a19d6e4d9ab9b9e1ed12649",
+   "jpUrl": "fc7f022e62b91e57018ad49ad8f50668920cd8fe513021492f6ba76c67b301c1",
+   "enUrl": "c70d34fc241aee731e92c8549523137e3399b55227b0f356af3905785b1eb46a",
+   "krUrl": "9a3795b09a3d850bd0616d4b3bafcf39ff9e7436da6f419ff275b986c3860c2e"
+  },
+  {
+   "id": 18,
+   "title": "Nível Máximo Alcançado",
+   "text": "Infelizmente, o mistério dos Aeons continua sem solução.",
+   "unlockRequirement": "",
+   "cnUrl": "5f48afa5900300a861f3a88cc6de28e146dc3993d6e94b500848616b2cc0a80f",
+   "jpUrl": "0b14da7989e473d30b0321aa5f95925dcf56926a0e906d0756f26f46de837f06",
+   "enUrl": "617ec6e2a806639106d3762f0fae39682aac7b1eac924e4d443a371fe554c25f",
+   "krUrl": "df65cc43f80d44761b82331a993eb5275e165b1e86b12feeab7b0dbba1a4cedd"
+  },
+  {
+   "id": 19,
+   "title": "Ativação de Rastro",
+   "text": "Cada respiração é uma percepção de si.",
+   "unlockRequirement": "",
+   "cnUrl": "75a5e2df7f918b346192e608bfbcfefcf0763958fbfc104938a58ae8c95781e9",
+   "jpUrl": "df89b22de84af77bbd58083b7cc899a6453bf5a90d50ccbaf99906285927d2d7",
+   "enUrl": "d1e0ec2a49be5ceefb0538538f0320e9c05e419c5b5eec8412d55315b5091257",
+   "krUrl": "bcb88d10552480419c739f97bd7e78c9a94ec0478c49b6f6b509a8274ee72b7d"
+  },
+  {
+   "id": 20,
+   "title": "Entrou na Equipe com Desbravador/Desbravadora",
+   "text": "É você de novo, Desbravador/Desbravadora. Como sempre, tem uma recompensa por bom comportamento.",
+   "unlockRequirement": "",
+   "cnUrl": "7110cdd6ff08c054f15990ac0c2d8820ca8f483b001e1c9689cc17d46c20beb9",
+   "jpUrl": "f3aca4c25d2b34cb831958fad4cedb07697b7aed89d679b7fc0b362c9ab074d6",
+   "enUrl": "ebfc6c7908c9142c4a862267d1cab823b937037ebba1ec3b646f511ffc1c8bdd",
+   "krUrl": "f9a0df6ea63e9f01e871bd25e83eb19b8a962c6f13606cb1d17f3052fa9cc10a"
+  },
+  {
+   "id": 21,
+   "title": "Entrou na Equipe com Herta",
+   "text": "Se esse fosse o Universo Simulado, eu estaria à sua mercê, mas essa é a vida real.",
+   "unlockRequirement": "",
+   "cnUrl": "c64c10bc53c13fb7d6ffff0c3523c5806ab75645621c366837f5103dab2887d3",
+   "jpUrl": "1b1a80a1473d12f024f182c841df8d2e261dd8d42b07708c89c0d0eedbbac2d5",
+   "enUrl": "bfb2366e38fc17e251ce53329dc5ff9f268bef1a975ed78bbd1a802d29489659",
+   "krUrl": "69b8958cf03e9314bc5b96209f5de6049888595c221df54fb6abf2d73e02510b"
+  },
+  {
+   "id": 51,
+   "title": "Início da Batalha: Quebra de Fraqueza",
+   "text": "Uma imagem de graça e elegância.",
+   "unlockRequirement": "",
+   "cnUrl": "e733c899b74fdad6ae8852be6b7b0c8bb54222939be9af8a8819abb5c62257db",
+   "jpUrl": "ceb0d75cab982c80a5d235fad1d7bb0ade189bc34d1ecbd202c8292006c420fe",
+   "enUrl": "b8694c537556f51057a61036fcf3757c1ae7171380ebf5c70085940005f81d6e",
+   "krUrl": "7ed7405ad468c05f51b4301f4a2f9698588e006ad8d4fe8e4eee5d8d4d6f06f3"
+  },
+  {
+   "id": 52,
+   "title": "Início da Batalha: Alerta de Perigo",
+   "text": "O que temos aqui?",
+   "unlockRequirement": "",
+   "cnUrl": "484c7a7a17d87fdb11087754d76bbbe2c5d969c2450740a6d1bea141f9ffc126",
+   "jpUrl": "1ca0a7da6f5dfa09d12477ae33fbb01f729303c7fc498e326b2b977c6725c0aa",
+   "enUrl": "e73887c7b7d45f912c7c1480324c887137c44df2cfda6141cbbc75cc4db36d13",
+   "krUrl": "5579cd523815ab0d7c20e0a25cdd146470d5a3a79e57f2aa8591dcf7e7f0e4c0"
+  },
+  {
+   "id": 53,
+   "title": "Começo de Rodada - 1",
+   "text": "Você tem um certo valor acadêmico, eu suponho...",
+   "unlockRequirement": "",
+   "cnUrl": "656c3bc78cb5b648944b44af5dae30de9e1a33885032af99e49884faf1d230de",
+   "jpUrl": "96784e81ea8eef8b919201f8914d1399798b38ec5e1f5cdaa4e80fc2cef88053",
+   "enUrl": "e23333b45f1479e77008030e5e5d97f2711213f2f456e5e102bfa1edd321d18f",
+   "krUrl": "309b2319eaf32a016a3be0d8dfa53e6b48a454b9cae79d4bf129f8e923480887"
+  },
+  {
+   "id": 54,
+   "title": "Começo de Rodada - 2",
+   "text": "A vida é mais do que apenas respirar.",
+   "unlockRequirement": "",
+   "cnUrl": "f9b33cc65667232da0f99b6ccbf4df0f4a625e104594521029d620e527b2ba56",
+   "jpUrl": "6bb8cba6188995e8e567ccee237a4953e537142a53053e154122bf2f8a722eef",
+   "enUrl": "b7f0c974f8f8c6a78dce766e1b5139edf9d677e9a20caaf59f0733fb36c06ae2",
+   "krUrl": "8c45fc58a519b11c15d4740c37702004fe810f12a1790f6b4f884a0ce3713942"
+  },
+  {
+   "id": 55,
+   "title": "Rodada Ociosa",
+   "text": "A espera significa mudança.",
+   "unlockRequirement": "",
+   "cnUrl": "73bf8308ee2a2e9894fa0b734a7acc4c418455b67a4b9c3e2a169aaae3d2ea80",
+   "jpUrl": "441d84a7f27b7edbfdf41b6e01bc728de24e667d1a569bdd41f08872dad989c2",
+   "enUrl": "be02f417482f2ea86b31769e3c280f3dff8b6074804f268425c8cce566d41187",
+   "krUrl": "2f67f35e113821e9ec2198ca13d78c93874bc83bd749745fdc5d5425ed387840"
+  },
+  {
+   "id": 56,
+   "title": "Perícia - 1",
+   "text": "Melodia eterna.",
+   "unlockRequirement": "",
+   "cnUrl": "d70990ddc9ff9223bd13dbf0af916a9fcc62e85063de7547b75f51bcda6d9b84",
+   "jpUrl": "09e4e9c4d040c9c7a53fc10bb80393bf36cb85f808bf325abe784a02e1e1b335",
+   "enUrl": "b186c688dab421c2960a563ebffa4945a40eed60f3236537b2268abf51ce509a",
+   "krUrl": "7d4b905b02989103693851325dd458cc9657d1c496897e8c8c861fd4346676f0"
+  },
+  {
+   "id": 57,
+   "title": "Perícia - 2",
+   "text": "Todas as coisas são uma só.",
+   "unlockRequirement": "",
+   "cnUrl": "0b8869d0b38dd9c04b014312a7195b16b0ba324051cd39b10fc7af2db2270261",
+   "jpUrl": "0c08cc21fab5addff8836212e94310889dc26a8a5b8c04f58f82cf02b3a14fec",
+   "enUrl": "4bf1d61e631e6b8dc2658231ffcde129f70cd4af45872d45bd7ef6f052bc0d79",
+   "krUrl": "0b255908c51538bcd4a97ef16d5245ea4b897ff1dd09e9d9f2498c19197c8d3f"
+  },
+  {
+   "id": 58,
+   "title": "Ataque Básico - 1",
+   "text": "Você vai servir.",
+   "unlockRequirement": "",
+   "cnUrl": "8e5a501e956de4a7ec0c2821a2514f9de1aee3e7906adbde34c72b4f0b636ff8",
+   "jpUrl": "88db22ef406cbbd63fc8fd8195a99aa7c0e857e878d84ff22945652c2619fc3e",
+   "enUrl": "7774068b7b9b12d271bf064b724350740300eb08d3a0e62cde2f72a368a035d7",
+   "krUrl": "36d24e7b8b6de71ccf8ee7ecd0f2f1338e5391318411c5612ca02ff930620e9c"
+  },
+  {
+   "id": 59,
+   "title": "Ataque Básico - 2",
+   "text": "Preste atenção.",
+   "unlockRequirement": "",
+   "cnUrl": "65b010b068898b5cd82165dfbfd0ff05cb91a257ddf67da56c67bcfc52d6e3de",
+   "jpUrl": "1b012e4645f525d0911d649afca0869c06b266f07e77a78a525e97b70366cd6e",
+   "enUrl": "da86f697334503b11167519771938d1f960595d7925fbc0c6d3d193203aad09f",
+   "krUrl": "1c06097c807fdc35747f3d3977bff01437aaebba60d24bb9ee805e8371c98930"
+  },
+  {
+   "id": 60,
+   "title": "Ao Receber um Ataque Leve",
+   "text": "Está se divertindo?",
+   "unlockRequirement": "",
+   "cnUrl": "6fca163cd8f03682c7352c93db1fbd6cb689e260ffe9e44a6cfd09cb6ce38901",
+   "jpUrl": "3b9596fcb106c0aad3825968947bbe1fd7afe4e657f6ade20c62355ef0843222",
+   "enUrl": "ef20f1e94e38c08da304c9d45103a737d809fce499ea6ca0e63b6a4244ed3a94",
+   "krUrl": "73d0317c79b7b765d7810aba1dfee253b39653aa2744f4ba73a5a774be505b79"
+  },
+  {
+   "id": 61,
+   "title": "Ao Receber um Ataque Pesado",
+   "text": "Fique longe.",
+   "unlockRequirement": "",
+   "cnUrl": "feaed1f0966f7de854edea5296fd42038eda069efd6046fce90b1392d9cb8420",
+   "jpUrl": "702a8ae1f9126764b0dd4b30228f580bc8f15409a0d1cbad5067437046d20da5",
+   "enUrl": "f10c657e525d4a85a46933c1637386a5db2234ff06e2e83500bb1bbde2332220",
+   "krUrl": "6995a8c17d3d59953d3cbad1ff57e9b4622f7518f5a21d5c26244dfcf892a964"
+  },
+  {
+   "id": 62,
+   "title": "Perícia Suprema: Ativar",
+   "text": "Todas as pétalas no jardim da vida...",
+   "unlockRequirement": "",
+   "cnUrl": "f95d2706bf3aae0ccdfed58c617530ad36ad4b8f0961270f75fc6084a49bf582",
+   "jpUrl": "42c42c28bc85d03d3a0fa4de0eba0cc27aa88eed2b09828318f32f82d2ab26d2",
+   "enUrl": "7fa7baa32e08e4a666733ccaf1e5d924344d63b40f461370eabdfc2daddf7f54",
+   "krUrl": "548db56d7ebb427e68c0d171c59d1e9c5f740671bb75a20bccaa94e895a7d142"
+  },
+  {
+   "id": 63,
+   "title": "Perícia Suprema: Liberar",
+   "text": "Serão varridas... pelos ventos do tempo.",
+   "unlockRequirement": "",
+   "cnUrl": "3ed256f9de8f0fab379b8cf49f2103cae9d83fb8eb82157dc85f7dfac39e7087",
+   "jpUrl": "11080579ce8c97e85235c8f97d90ef8f9b46313b4426843dcde46dd1074f2189",
+   "enUrl": "861247ed28232c8fa934befe1cf1e5abb478d749634cc516134f5a67d64c9992",
+   "krUrl": "5bf24307468529c8c43db81d0325ed64990e1100b2252bd1bfdaddf07a958f5e"
+  },
+  {
+   "id": 64,
+   "title": "Ao Ficar Fora de Combate",
+   "text": "Ainda... sem respostas...",
+   "unlockRequirement": "",
+   "cnUrl": "be59aa9c974e9c3a18ea37b11287b9aa8f70cd89d9fc4433fc134d522253be9c",
+   "jpUrl": "d0b616b84300a23a5ad062c87617497f64f6486392017b3156e6a003fe70d8f4",
+   "enUrl": "1de7f5a77ef0a28d910ee6964d68f4e456b4a364bf5409611cb1eb2ff45c9afe",
+   "krUrl": "089d4a32cda4c2b870a0ac5f2e2e184109c58ed6dd18ad549b7fd2e99293252b"
+  },
+  {
+   "id": 65,
+   "title": "Ao Voltar à Batalha",
+   "text": "Vamos continuar.",
+   "unlockRequirement": "",
+   "cnUrl": "e4474a84cf5891f9cd68bf56906abb090bd8f89dd4981d88036f7a057ddda9e1",
+   "jpUrl": "188aac2a3fe2c73b96b02372acab5a9b7dd3dbf774e12b76362b6d090c907ec2",
+   "enUrl": "df03a226c2514b9b980fa8dc8851d36b47e7e7b597234bc36310ad0bdc921c04",
+   "krUrl": "d97aadb6640efd7b4074fc300d3e4880b27282a6001f3b29ba29a075996cbb52"
+  },
+  {
+   "id": 66,
+   "title": "Ao Recuperar PV",
+   "text": "Então, esse é o calor da vida...",
+   "unlockRequirement": "",
+   "cnUrl": "6e6b606d8129fe8d8a54fa23b18d8ffbb8e221c823979e56a8a9bd34b5ae02a2",
+   "jpUrl": "71f006e0bc01e18873bb964d3c3a4d92bcf52af67e151788835d5bfbe9fb0ebc",
+   "enUrl": "c1e4895281fcb265dd3ef7bce168a2069f56459390822bea8e2951e4cd25700b",
+   "krUrl": "9ef2eb1b985ac737ccb69866212fec50fe8ffacec459e49c72b31f32a3cfc466"
+  },
+  {
+   "id": 67,
+   "title": "Técnica",
+   "text": "O som perdura.",
+   "unlockRequirement": "",
+   "cnUrl": "62f3e9702b49462aa8fefd7bc93719f429e5ddc72b5ebdda8ce392106f6d0718",
+   "jpUrl": "2dce61f30975bd610e4b39b40d4c8a5a46ffe16907d5dc7a81bad4fcac3f1c37",
+   "enUrl": "f1bdf0e374d6163558e4b1239d5965b50776a58890fbd9ca3d268d1a073c3dfd",
+   "krUrl": "c0835d35898558451e6e9324b2951dcb8eea12b388a192644215db180de23c43"
+  },
+  {
+   "id": 68,
+   "title": "Ao Vencer uma Batalha",
+   "text": "Vida... uma verdadeira maravilha.",
+   "unlockRequirement": "",
+   "cnUrl": "acfaab192457d82f0b6c78b718c31d2f3981d1ae7483628585e08e52938d0bb8",
+   "jpUrl": "99eba797f20a3f650dcf2dbb46f811c1153b608d82e39bc8374d08615fcca1e6",
+   "enUrl": "dca510b3bbc2f57ae37fa421531400e6031efdd5e0dc4e7c7adea9fdc4ae68e7",
+   "krUrl": "52295fa3f50eb029a9bebc5f2ea75d32823c046607c2e67984045ea9d4006a56"
+  },
+  {
+   "id": 69,
+   "title": "Abrindo Tesouro - 1",
+   "text": "Alguns designs decorativos não sumiriam do nada.",
+   "unlockRequirement": "",
+   "cnUrl": "d6d42d74b456adf49a63b4988231f39dd37715113e278c28e1924487beaf3bc4",
+   "jpUrl": "1b5206c10e81781e5568e999fece5573af7016132ecb58293429cd2101359e22",
+   "enUrl": "bb8d6a46023058b5cf803ce26c52406a4137cb27072f2c53b6c180f36534df64",
+   "krUrl": "d34fc318715b8e4f432b2b7f572fc945cd43cc1388f0a0ebcdcea403fff7c4e3"
+  },
+  {
+   "id": 70,
+   "title": "Abrindo Tesouro - 2",
+   "text": "Isso pode ser útil.",
+   "unlockRequirement": "",
+   "cnUrl": "55b1629ee0895cfd1a7f0c2d398edd8c48a8ac3e4e221c0968473a2fa4b9f2dd",
+   "jpUrl": "63c953d718bf5e412ea8aded48dac8ecf403e9bf271cfe823211f725d87b0c6b",
+   "enUrl": "439b2e42e939719df93b26b5cdaf7beaa140cf31d87d3deb650545bf47fd41fc",
+   "krUrl": "59706881754e0049f7c10552859feb7b49190bb364510ba5d4fc578900e7509d"
+  },
+  {
+   "id": 71,
+   "title": "Abrindo Tesouro Precioso",
+   "text": "Oh? Melhor que o esperado...",
+   "unlockRequirement": "",
+   "cnUrl": "10215ac7f1017d688a2c423acf2f85a9a7b9c87499be7b2c15888f84d55c38c5",
+   "jpUrl": "df530bbf05e4cd60a3afcb7ebae1dbd99f3c338fde60e0b8bba49666138fdffa",
+   "enUrl": "672c9b9a32b5b0712eefd9b001bce076827b1032852a6909b76824c9ef16d5ff",
+   "krUrl": "7ba6d1d3c309bd5a115959d95b588f4750091dc5f4214489928e9707e99cc8c5"
+  },
+  {
+   "id": 72,
+   "title": "Enigma Solucionado - 1",
+   "text": "Eles chamam isso de enigma?",
+   "unlockRequirement": "",
+   "cnUrl": "8d04a22676ac23fc6618be1c5295ed4718bfc1aeecbe2ffe05fcc5706f0cc92d",
+   "jpUrl": "dfdccbb9f6403444c47e4abfe75f77d3a90a621e938feeaf18d520c13e23c349",
+   "enUrl": "a4b77aa438b16c828b9349e1e05bf03c4f1058a7b6ca06890a1789e3f36a987f",
+   "krUrl": "e4ac392f5988b7d0973a0c2e7f7ce48750f4cee624f5aad548ac0753cd266a76"
+  },
+  {
+   "id": 73,
+   "title": "Enigma Solucionado - 2",
+   "text": "Uma solução simples, é só isso que é necessário.",
+   "unlockRequirement": "",
+   "cnUrl": "cf48c14ee7a30a703e974120f0d4cbcc2de9df44c1c8f91c176e89d2818f5780",
+   "jpUrl": "331083cdc32a2739c768866e99a064eb4bb60eb90708c915bac79ba2c90f4d25",
+   "enUrl": "a30d2472a43be5e1fb579a7a5102eeb1a0feaf76533af39905abe52a9b99d1f2",
+   "krUrl": "f4decb8b0475e18acf4844fe9da02966705bf0ad88562ea31ecce062e10f1250"
+  },
+  {
+   "id": 74,
+   "title": "Inimigo-alvo Encontrado",
+   "text": "Hmm? Eu me pergunto o que é isso?",
+   "unlockRequirement": "",
+   "cnUrl": "76c6ad3247b470972723985735268a1072ec547532e0ab97d0374a08a4787e48",
+   "jpUrl": "c557059980bbba10c2939edf314d0fd0efa9dbb80fd5a3a3fa49817ad8f53110",
+   "enUrl": "e74087a17e40b9fbc3bdb4a32d98b24281c7f489cede0c487601e063f9de5296",
+   "krUrl": "51e1c593cd1fc05e2222eb09d043ea53fe116c051cefb740119ec4819ef0fa2b"
+  },
+  {
+   "id": 75,
+   "title": "Voltando à Cidade",
+   "text": "Descanse um pouco, é hora de chá e bolos.",
+   "unlockRequirement": "",
+   "cnUrl": "371fac15092c106cb7abfeac0286362df1df17bfea29cd0183a3ffe6897629f9",
+   "jpUrl": "0962e42c0771412ddb084882a185bb008085dfe292af1d31ae0c64fed3a713ac",
+   "enUrl": "f58b0c70725a948aff753abd90f800ff18fc2279ee4d89a7f48575a5defad735",
+   "krUrl": "eb63aef14aeda281cb1fb4a567c0794cb4961d9be5648577f44bb617c6f9eddb"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Detalhes de Personagem",
+   "text": "Uma erudita de temperamento requintado, membro n.º <nobr>81</nobr> da ilustre Sociedade de Gênios e especialista em ciências biológicas.<br />Ela recebeu a atenção de Nous com seu talento e perseverança, e começou sua pesquisa sobre a origem da vida num lugar secreto do universo.<br />Posteriormente, ela foi convidada por Herta para colaborar com Screwllum e Stephen no Universo Simulado.<br />Em segredo, ela gosta muito de teatro tradicional e sobremesas, além de também ter muito interesse em bordado.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "História de Personagem: Parte I",
+   "text": "Durante sua infância, desde muito cedo ela foi exposta à ciência por sua mãe, que era uma \"cientista\".<br /><br />Sua vida sua pequena casa com sua família de entusiastas da ciência foi repleta de amor. Assim, não demorou muito para ela perceber que havia pequenas diferenças no \"amor\", cada tipo com um aroma diferente.<br /><br />Sua avó de cabelos prateados era fã de teatro tradicional e dos cantos e melodias dessas apresentações, enquanto seu pai usava um par de botas grandes e peludas.<br />Seus pais se amavam, mas discutiam ocasionalmente.<br />Ela era uma garota impassível que cometia erros o tempo todo, mas que também era perdoada o tempo todo.<br /><br />\"Eu era mais próxima da minha tia Arlice do que de outros familiares, ela sempre me dava lanchinhos. O amor dela era incrível.\"<br /><br />Em pouco tempo, a garotinha aprendeu a ser teimosa. O que ela entendia como \"amor\" se libertou da fórmula ensinada em livros.<br />Conforme ela crescia, sua mãe ficava mais rigorosa com ela. Juntas, elas davam um passo de cada vez num vasto planeta glacial.<br />A garota ofegou e parou no caminho, observando atentamente as fantásticas e encantadoras \"formas de vida\" enterradas sob as geleiras. Pelo menos, o que costumavam ser formas de vida.<br /><br />Sempre que ela chegava em casa depois das explorações científicas, era hora das \"recompensas\".<br />Quando ela dava uma mordida num bolo, o aroma delicioso se prendia ao céu de sua boca. Sua ansiedade insignificante sempre dava um cheiro convidativo à pesquisa da mãe.<br /><br />Começando pelo seu lar, um planeta abençoado pela Abundância, elas embarcaram em uma nave de pesquisa e partiram para novos mundos.<br />Cercada de bombas de luz, lenços de seda, laços e bordados, a garota abraçou a alegria entre \"formas de vida\" criadas por dados ascendentes em espiral.<br /><br />\"A-Ruan, depois de comer Qingtuan, você tem que lavar bem os dedos antes de ir para a bancada do laboratório.\"",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>20</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte II",
+   "text": "Ela estava vestida totalmente de preto em uma roupa de luto no funeral de seus pais. Como sempre, seu cabelo estava bem preso. Sua expressão estava oculta por trás de suas madeixas negras.<br /><br />Ela não derramou uma única lágrima.<br /><br />Com o cair da noite, camadas de padrões geométricos formados por espirais de dados apareceram na tela do laboratório. Elas alternavam, se expandiam e fluíam com o som de músicas de teatro tradicional. Depois de descartar camadas de padrões, o segredo que ela criou e protegeu com tanto cuidado foi revelado: seus pais com os olhos fechados. Os rostos indiferentes como se estivessem dormindo.<br /><br />\"Que decepção. Eles não conseguiram manter a promessa para a vovó.\"<br /><br />\"E eu também não consegui protegê-los como prometi.\"<br /><br />\"Somente a ciência... nunca decepciona ninguém\", disse ela.<br /><br />Querendo que seus pais fossem iguais, ela parou de usar seu antigo apelido e se deu um novo nome, pegando partes dos sobrenomes de seus pais.<br /><br />Desde então, sempre que alguém perguntava sobre seu \"lar\", a confusão invadia momentaneamente seu olhar. Parece que ela esquecia tudo.<br />Neste estado, ela começou a trabalhar muito em seus cálculos. Estava tão dedicada à pesquisa que não comia com frequência. Quando se concentrava, podia passar dias e noites trabalhando na pesquisa sem dormir e ela só adormecia quando chegava ao seu limite.<br /><br />Logo, ela começou a contar apenas com o brilho fraco dos vaga-lumes para continuar sua pesquisa todas as noites. Quanto menos ela pensava nas leis da vida, mais rápido ela avançava. Ela desconsiderou totalmente as fórmulas, e depois começou a ignorar o significado da vida. Ela apenas observava, com o auxílio de suas mãos, segurava as informações nas palmas para senti-las e continuava a preparar novas leis para as espécies.<br /><br />Como resultado, as samambaias e as flores em seu laboratório floresceram ainda mais. Elas cresciam a uma velocidade visível ao olho humano e preenchiam todo o espaço do laboratório. Entre as flores e as folhas, havia o semblante sereno e inerte de seus pais, formado pela junção das \"informações\".<br /><br />Quando seus \"pais\" adormecidos estavam prestes a abrir os olhos... ela já quase destruíra as leis da evolução biológica que existiam em todo o planeta, mas ela continuou avançando em direção ao seu objetivo.<br />Apenas quando ela pausou sua pesquisa e olhou para o céu foi que ela percebeu o olhar da Erudição que havia descido sobre ela.",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>40</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte III",
+   "text": "Após receber o olhar de Nous, ela saiu de casa e passou a viver uma vida reclusa.<br /><br />Ninguém sabia o que ela havia perguntado a Nous, mas, depois daquele incidente, ela se tornou ainda mais apática e impassiva e se envolveu muito mais em sua pesquisa. Ela só estudava a natureza fundamental da \"vida\".<br /><br />Uma variedade de \"formas de vida\" maior passou a existir a partir de sua invenção.<br />Algumas formas de vida \"ardentes\" se tornaram chamas que crepitaram e ondularam sob seus pés. Às vezes, ela sentia que era o próprio fogo.<br />Alguns seres de \"fluido\" se tornaram luz líquida que envolveu seus pulsos finos. Às vezes, ela sentia que era a própria luz.<br />Algumas coisas vivas, inventadas pelo \"conhecimento\", tentavam desenvolver seus próprios pensamentos, consciência e emoções. Às vezes, elas choravam, gargalhavam e lamentavam, todas fundidas ao corpo dela.<br /><br />Mas ela não as sentia.<br />Afinal, a vida só existe por um período curto de tempo. Elas nasciam e morriam, apenas o experimento dela era a única constante.<br /><br />Ocasionalmente, sua \"pesquisa\" casual impactava as escolas de biologia. Sua \"pesquisa\" transformou muitos planetas. Baleias voadoras, cervos submarinos, flores temerosas e árvores com um vasto sistema de raízes... Suas criações já estavam além do escopo da experiência e imaginação compreensíveis para vidas orgânicas.<br /><br />Ela continuou buscando um entendimento mais profundo da \"vida\", se aproximando ainda mais de Nous e de seu olhar inesquecível.<br /><br />Aeons... Que tipo de seres eles são? Eles também são formas de vida?<br /><br />Enquanto seus estudos \"inovadores\" ganhavam fama na comunidade acadêmica cósmica, as pessoas tentavam interferir em sua vida como uma pessoa reclusa.<br />Ela se virou para olhar a carta da Sociedade de Gênios em cima da mesa e, mais uma vez, jogou-a na lixeira.",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>60</nobr> de Personagem"
+  },
+  {
+   "title": "História de Personagem: Parte IV",
+   "text": "Ela vive com um excêntrico fanático por ciência de uma pequena cidade, uma forma de vida inorgânica e uma marionete. Eles se deliciam com o chá da tarde e colaboram com as pesquisas. Eles também brigam alto e dão risadinhas de vez em quando.<br /><br />Quando ela os conheceu? Ela não consegue se lembrar, mas foi em um projeto no qual ela foi forçada a participar, isso é certo. Com tranquilidade, ela saboreia o bolo. Ela se tornou parte disso apenas pelos \"Aeons\" simulados, que valem seu tempo e esforço.<br /><br />Eles são dignos do tempo dela... mas não valem o esforço de ter que socializar.<br /><br />\"Sociedade de Gênios? Eu não me importo.\"<br /><br />\"Esse é um sentimento estranho e instintivo. Aquela que se chama 'Herta' se parece muito comigo. Quer dizer... num nível mais profundo.\"<br /><br />Ela tem certeza de que não cometerá outro erro. O motivo disso é porque ela já não confia em mais ninguém, então ela não sofrerá mais uma decepção e... não decepcionará ninguém.<br />Qual é a essência fundamental da \"vida\"? Onde a \"vida\" termina?<br />As respostas realmente existem?<br /><br />Não é possível discernir nenhum traço de emoção em seu rosto imperturbável e silencioso. No entanto, seu cabelo está esvoaçante com o calor da fervura e do vapor, e suas pálpebras estão levemente vermelhas. Ela está gostando disso.<br /><br />Somente a palavra \"Aeon\" é capaz de alvoroçar seu coração. Tudo mais no universo é mera distração.<br /><br />Que interessante.<br />Na \"incubadora\", uma \"vida\" nutrida pela \"panela de arroz\" surgiu em perfeição. O método com o qual a vida é criada é milagroso.<br />Que romântico.<br />Ela sabe melhor do que qualquer pessoa o preço que se deve pagar para estudar os Aeons... mas ela não se importa. Ela sabe! Ela pode até mesmo... se tornar...!?<br /><br />Chegou a hora certa... A atualização do \"projeto\" está prestes a começar.<br /><br />Ela se vira e vai embora.<br />Sem o conhecimento da menina, a avó dela sempre a observou pelo monitor, dia após dia, por anos a fio.<br /><br />\"A-Ruan... Minha A-Ruan. Quando finalmente nos encontrarmos novamente, seria...?\"",
+   "unlockRequirement": "Desbloqueado no Nível <nobr>80</nobr> de Personagem"
+  }
+ ],
+ "archive": {
+  "cvCn": "张文",
+  "cvJp": "大西沙織",
+  "cvKr": "윤여진",
+  "cvEn": "Emi Lo",
+  "camp": "Estação Espacial Herta"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Ruan Mei",
+ "rarity": 5,
+ "descHash": "Uma membro da Sociedade de Gênios e especialista em ciências da vida. Ela se uniu à Herta e aos outros para desenvolver o Universo Simulado.",
+ "artPath": "12bc32c42a748316c7707c4511b2bde3e8efbe5bda0bb54179e801e523f32b2d",
+ "miniIconPath": "f904196665ebaca96739350a72a9e797fd1fc0c5992c1ce557a560e7376368a3",
+ "damageType": {
+  "id": 4,
+  "iconPath": "c7ca3cbdcd5d26fbfad374f97d58d9152b5a398a5e5bf6d441a29041251fa779",
+  "color": "#47C7FD",
+  "name": "Gelo",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "fd3dc153082117a49b1d8eb7d166dd32d65d636463e15c604b583d5945a4ca69",
+  "altIconPath": "691e6c36e7f71344352e4ed80941938d7dc5722b23cef7a18f7fa8722d8c0523",
+  "color": "#FFFFFF",
+  "name": "A Harmonia",
+  "rarity": 0
+ },
+ "pageId": "ruanmei"
+}

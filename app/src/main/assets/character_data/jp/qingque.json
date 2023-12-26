@@ -3,7 +3,7 @@
  "iconPath": "62bbed3f4fa89607c950e0c37b287cd629c6dc011b81bd99cf3354a4dd3cb55e",
  "bgPath": "95add5fd751106b1eeb03cfcbe017215893f25a2ef09bf7a0c78af53275456a1",
  "figPath": "64b09bba9b3bbdaaccaa720f85047a4a42fd05d52605ef3e96e571d4d8244e6e",
- "fgPath": "1320fa86c14f851ed0bf3c8a0695749918a258aad1b415a894ccc5152e621576",
+ "fgPath": "939573cb980ac84a1ca1ac5e9b4503698ec38a52c4d17a4f300e98499de70b9a",
  "splashIconPath": "72cee71be6fe4de63b6bdecb1a1b69cb95724bc8f3cc89468c68343e5937c7dc",
  "damageTypeId": 0,
  "baseTypeId": 0,
@@ -69,7 +69,7 @@
    "id": 351746,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "559c24ffae40e390bfec262f621e30b0b209f6d487b122f6bc54b0e7dada8353",
+   "iconPath": "2c6914a16ae349627baca5f84218db8fe270ccf2c80246f9b83acf8e72f7f92a",
    "name": "虚幻鋳鉄",
    "desc": "ヴォイドレンジャー・蹂躙の蹄鉄。量子属性キャラクターの昇格素材。",
    "lore": "反物質レギオンの配下にあるヴォイドレンジャー・蹂躙が倒された後、稀にこのような蹄鉄を残すことがある。観測者がいない時、蹄鉄は有と無の2つの状態の間を揺れ動く。<br /><br />「この実験の名前？『ヴォイドレンジャー・蹂躙の蹄鉄』だけど……」",
@@ -77,6 +77,7 @@
    "rarity": 4,
    "rewardPath": "/material/351746",
    "comeFrom": [
+    "凝結虚影「ベース部分」",
     "凝結虚影「ベース部分」",
     "「万能合成マシン」- 素材交換"
    ]
@@ -156,7 +157,7 @@
    "iconPath": "3cd4c92ff44d695595377ffc6c0896d6839775f6014e96daf679b256bc0d19cf",
    "name": "改ざんの野心",
    "desc": "希薄な反物質、強化に必要な普通素材。",
-   "lore": "ヴォイドレンジャー・改ざんの周辺に浮かぶ希薄な反物質、粒子と反粒子がここで危険な均衡を成す。<br /><br />「彼らは湮滅の刻を待ち望み、世界と共に鍛錬され、一体化しようとしている」",
+   "lore": "ヴォイドレンジャー・改ざんの周辺に浮かぶ希薄な反物質、粒子と反粒子がここで危険な均衡を保っている。<br /><br />「彼らは消滅の瞬間を待ち望み、鍛錬され、世界と同化する」",
    "purpose": "軌跡素材 <br />キャラクター昇格素材",
    "rarity": 3,
    "rewardPath": "/material/633378",
@@ -179,6 +180,7 @@
    "rarity": 2,
    "rewardPath": "/material/635675",
    "comeFrom": [
+    "疑似花萼「リベットタウン」",
     "疑似花萼「リベットタウン」",
     "エンバー交換"
    ]
@@ -205,7 +207,7 @@
    "id": 836261,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "iconPath": "36e68603fbc67d4b69c02e01d7d5d41a80446ea6c49b1d828b47320f6225825c",
    "name": "叡智のカギ",
    "desc": "宇宙の頂点に立つ天才の手の中に現れるカギ。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">知恵</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
    "lore": "このカギは、持ち主が知恵の神殿の扉を開く権利を得たという証拠である。<br />カギを手にしても、そのカギで開けられる扉を見つける方が大変である。扉の向こうに行った者は、もう振り返る必要がないことを悟るだろう。<br /><br />「知恵は宇宙の真理を教えてくれるわけではないが、どのように疑問を持てばよいかを教えてくれる」",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/836261",
    "comeFrom": [
+    "疑似花萼「リベットタウン」",
     "疑似花萼「リベットタウン」",
     "「万能合成マシン」- 素材合成"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
+    "疑似花萼「リベットタウン」",
     "疑似花萼「リベットタウン」",
     "「万能合成マシン」- 素材合成",
     "エンバー交換"
@@ -2381,6 +2385,16 @@
   },
   {
    "id": 20,
+   "title": "雪衣について",
+   "text": "『人形には向かない職業』って本、読んだだけじゃなくて、感想を書き込んだこともあるよ。でも、残念なことに、今になっても作者がわからないんだよね……",
+   "unlockRequirement": "",
+   "cnUrl": "4cf34daaa01eac2f734f72add53781938921178c653288de3e6e4bc8f01fc75b",
+   "jpUrl": "7cde04abbb2dbafca4945da3e339d89b311962b136bee0f2d371ad5d6137d0b8",
+   "enUrl": "0e846311cb3f235e920d9addad985402acf9b47b73afd7d6053ae7c8d8932c87",
+   "krUrl": "98cf544f2dd2e1148c2ca723b9efb554bccba251dbc658b1d101dd5d93e2d7c3"
+  },
+  {
+   "id": 21,
    "title": "星魂覚醒",
    "text": "人生のどの瞬間も、牌を出す時みたいにハラハラでドキドキだよ。",
    "unlockRequirement": "",
@@ -2390,7 +2404,7 @@
    "krUrl": "5f437115275e5b81b6b76cc066b65f8f92d0ab75b350c56191334a3ba1e02558"
   },
   {
-   "id": 21,
+   "id": 22,
    "title": "キャラクター昇格",
    "text": "<ruby>忙裡偸閑<rt>ぼうりとうかん</rt></ruby>。重要なのは「偸む」ことだよ。",
    "unlockRequirement": "",
@@ -2400,7 +2414,7 @@
    "krUrl": "34e97e41151219f0d17c3c884ed558795636f544fe401554524e7ba6eef0232a"
   },
   {
-   "id": 22,
+   "id": 23,
    "title": "レベルMax",
    "text": "おお、時間が経てば欲しい牌が来るものだね。",
    "unlockRequirement": "",
@@ -2410,7 +2424,7 @@
    "krUrl": "57267118e879c89a0a62cf8a6c9c8c08bd5e7f9d3eec3988fb28fa4e74c07890"
   },
   {
-   "id": 23,
+   "id": 24,
    "title": "軌跡覚醒",
    "text": "牌に良し悪しはない、運があるかどうかだよ。",
    "unlockRequirement": "",
@@ -2420,7 +2434,7 @@
    "krUrl": "984b27267c9902c419e9c79b9fb1c9aa443778f4dd47ae638a6331142793426c"
   },
   {
-   "id": 24,
+   "id": 25,
    "title": "パーティ編成・開拓者",
    "text": "開拓者！あなたもいたんだ。一局遊ばない？",
    "unlockRequirement": "",
@@ -2430,7 +2444,7 @@
    "krUrl": "38158a7008d4783babc4841550ec09873cd607d5751533ee5b814f0e00ef9812"
   },
   {
-   "id": 25,
+   "id": 26,
    "title": "パーティ編成・符玄",
    "text": "なんで太卜様は私がここにいるって卜算できたの？",
    "unlockRequirement": "",
@@ -2440,7 +2454,7 @@
    "krUrl": "86064025fa2abc225e7ce0d8b29d338c2e702b1fc226693c239530e972ad5554"
   },
   {
-   "id": 26,
+   "id": 27,
    "title": "パーティ編成・桂乃芬",
    "text": "無料でけいちゃんの芸を観られる機会は逃さないよ。",
    "unlockRequirement": "",
@@ -2450,7 +2464,7 @@
    "krUrl": "fc03136fe4304b6f8ff100b33860fc5eaf238547ed0ecabd7d4d77baaf391f6f"
   },
   {
-   "id": 27,
+   "id": 28,
    "title": "パーティ編成・彦卿",
    "text": "よし、彦卿みたいな天才がいれば、サボれる！",
    "unlockRequirement": "",
@@ -2460,7 +2474,7 @@
    "krUrl": "604fb1ee121207d586938d7b56461e6f9c14ebc68e005d381d0de8aa274361eb"
   },
   {
-   "id": 28,
+   "id": 29,
    "title": "パーティ編成・フォフォ",
    "text": "フォフォ、大丈夫。仕事は目をつぶれば一瞬だよ。",
    "unlockRequirement": "",

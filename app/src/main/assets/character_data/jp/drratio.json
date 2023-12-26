@@ -1,0 +1,2675 @@
+{
+ "spRequirement": 140,
+ "iconPath": "19e3cc6daf8379022eea1bdd0ddf7ce8ec99eb130915f1bc1dde19eddf68f213",
+ "bgPath": "4a876afb27e69d9ffdbe3e1f9d6cb5179b3077d77a635f0551ffec75d5ebd946",
+ "figPath": "b9cd0755cc37be59d507282cbea2fb33aeff4f61d89ccedf767e9521375ad3ed",
+ "fgPath": "0aa2c84e1570f008260d4b8a963b629e70ed115a769e190c557fa940260e4506",
+ "splashIconPath": "82c23430f77a01e460ad46b1fd2d072d78afd213b8b5aa7786ef59a3aa1b68bc",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 2,
+  "iconPath": "db0b64061159f4acfb6a3034911f3b42572d0d8d51723ca888b8ce49b06961c5",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "クエスト報酬",
+    "依頼報酬",
+    "エンバー交換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "運命の足跡",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "幾度の敗北があなたに勝利をもたらし、一歩一歩の前進があなたを運命の転換点へと導いた。",
+   "purpose": "軌跡素材",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」ポイント報酬",
+    "ナナシの勲功",
+    "エンバー交換",
+    "期間限定イベント報酬"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "漫遊指南",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>20000</nobr>獲得できる。",
+   "lore": "世界を渡り歩くためには欠かせない、冒険手引き集。閲覧キーを押すと、電子音声が理解可能な言語で、有名な冒険者たちが様々な世界で体験したことや、彼らが色々な星で得た貴重な知識を語り聞かせてくれる。<br /><br />「漫遊指南最新シリーズ『スペースグルメガイド』が現在発売中。ぜひお買い求めください」<br />「投稿の際は、博識学会共感覚ビーコンのオペレーター<nobr>23</nobr>θにお繋ぎください。原稿料はあなたが普段から利用している方法でお振込みいたします」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "「忘却の庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "冒険記録",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>5000</nobr>獲得できる。",
+   "lore": "綺麗に装丁された、一目でためになるとわかる冒険日誌。冒険に関する細かい描写、価値のある情報、サバイバル術が書かれている。<br /><br />「なんで数字化してデバイスに保存しないの？持ち歩きやすくなるでしょ」<br />「お前が思っているより、先進技術は恒星嵐や中性子噴出に弱いんだ。なにより、この本の制作者は、最も簡単な方法で人々に読んでもらいたかったんだろう」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "デイリー訓練",
+    "エンバー交換"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "旅の見聞",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>1000</nobr>獲得できる。",
+   "lore": "旅の出来事を記した日記。字はかすれており、不鮮明。思うままに内容が書かれてあるので、あまり助けにはならないだろう。<br /><br />「読み終わったら早くその紙切れを捨てるのよ、丹恒？」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "依頼報酬"
+   ]
+  },
+  "468392": {
+   "id": 468392,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "fde5283543d2c56dbc6fa50e20ee2cd2a34a0ec0d0b3d2c1df1af003e36f8174",
+   "name": "霊鎮めの勅符",
+   "desc": "仙舟の機巧の部品。虚数属性キャラクターの昇格素材。",
+   "lore": "噂によれば、ルパートが無機生命体の災禍を引き起こした後、仙舟の金人もそれに影響を受け反乱を起こし、殺戮の限りを尽くしたという。似たような災禍が再び起きないよう、職人たちは呪符で金人の思考能力を奪うことにした。<br /><br />「こいつが急に暴れ出すなんて…いったい何をした？」<br />「何もしてない！あ…あの呪符を拭いただけだ」",
+   "purpose": "キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/468392",
+   "comeFrom": [
+    "凝結虚影「工造司」",
+    "凝結虚影・「工造司」",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "470781": {
+   "id": 470781,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "c63b922af281d49c4d1e5ee84aa4a5cb7027e4a16e96fe8f683c9f50a4bcb921",
+   "name": "星を蝕む古の悪",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "蟲の王が自ら繁殖させた子孫。唯一の望みは群れを広げることである。巨大な鎌で星を刈り取って巣とし、最期の瞬間まで子孫を育て、多くの生命に害をなした。<br /><br />「砕けた星では、巨大なイナゴが空を覆い、虫の群れが地面から這い出した。クワガタはこの新しい巣を蟲の王に献上した…この悲劇が歴史の記録上だけに存在するものとし、二度と繰り返されないことを願って」",
+   "purpose": "軌跡素材",
+   "rarity": 4,
+   "rewardPath": "/material/470781",
+   "comeFrom": [
+    "歴戦余韻「封鎖部分」"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "15365d10ed38771d99d247bc228b03787e29972cc714a655a9b8feef3031505e",
+   "name": "略奪の本能",
+   "desc": "微弱な反物質、強化に必要な簡易素材。",
+   "lore": "ヴォイドレンジャー・略奪の体内から散逸する微弱な反物質、まるで破壊本能の具現化。<br /><br />「彼らは湮滅の刻を待ち望み、世界と共に鍛錬され、一体化しようとしている」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "反物質レギオンからドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3cd4c92ff44d695595377ffc6c0896d6839775f6014e96daf679b256bc0d19cf",
+   "name": "改ざんの野心",
+   "desc": "希薄な反物質、強化に必要な普通素材。",
+   "lore": "ヴォイドレンジャー・改ざんの周辺に浮かぶ希薄な反物質、粒子と反粒子がここで危険な均衡を保っている。<br /><br />「彼らは消滅の瞬間を待ち望み、鍛錬され、世界と同化する」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "均衡Lv.2に達した後、反物質レギオンからドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "635674": {
+   "id": 635674,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bbfb88036f821da503753ae4189da74a1586b0b7ee8ec0f234bbf9fb53474d01",
+   "name": "狩獣の矢",
+   "desc": "仙舟の匠が星間寒鉄を鍛えて作った矢じり。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">巡狩</span>の運命を歩むキャラクターの軌跡を小幅アップできる。",
+   "lore": "成人の儀の際、人生初の獲物を狩った少年少女に、彼らが人生の目標を成就できるように願った両親から贈られるもの。<br /><br />「腰の弓が、匣の剣が、埃に蝕まれぬように」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/635674",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "疑似花萼「郊外雪原」",
+    "エンバー交換"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3c858c8ff4df238403e5443f57850367e4164a62efb508ce359db9c5b7474a19",
+   "name": "踏みにじる意志",
+   "desc": "凝縮された反物質、強化に必要な高級素材。",
+   "lore": "ヴォイドレンジャー・蹂躙の体内で高度に凝縮された反物質、湮滅の刻が文明の壊滅を告げる。<br /><br />「彼らは湮滅の刻を待ち望み、世界と共に鍛錬され、一体化しようとしている」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "均衡Lv.4に達した後、反物質レギオンからドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "836260": {
+   "id": 836260,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "567e2625dad62dc022ca7b71109c76754e7fc5cc2ac9daa5debb5c65282743ab",
+   "name": "逐星の矢",
+   "desc": "帝弓の司命が放った傾天の光矢の破片。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">巡狩</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
+   "lore": "縁がなければ見ることのできない神の痕。光年を超えて星を砕く一撃。人々は、光の矢が残した残響からその力を想像することしかできない。<br />仙舟の匠の頭「百冶」だけに、その欠片を鍛え、蓋世の功績を残した大英雄に贈与する資格がある。<br /><br />「星を裂きて天を傾げる、万古を照らす光」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/836260",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "疑似花萼「郊外雪原」",
+    "「万能合成マシン」- 素材合成"
+   ]
+  },
+  "920201": {
+   "id": 920201,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "fdcef4e7b19d0d08fb9ea878b30e08be44286d0a6273f29c89a77c6e17ad9572",
+   "name": "屠魔の矢",
+   "desc": "仙舟の匠が星辰玉を使い、丹精を込めて鍛え上げた矢じり。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">巡狩</span>の運命を歩むキャラクターの軌跡を中幅アップできる。",
+   "lore": "指よりも少し細いの矢じり、電磁気クロスボウかサーマルボウの弾薬として使われる。金石のように硬い忌み物の殻を一撃で貫けるほどの強度。<br /><br />「天上の謫仙来られ、舟に乗りて星海を渡る。飛矢、疾雨を射落とし、明るき兜が白月を照らす」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/920201",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "疑似花萼「郊外雪原」",
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 105.6,
+   "attackAdd": 5.28,
+   "hpBase": 142.56,
+   "hpAdd": 7.128,
+   "defenseBase": 62.7,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549437,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 147.84,
+   "attackAdd": 5.28,
+   "hpBase": 199.584,
+   "hpAdd": 7.128,
+   "defenseBase": 87.78,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549437,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 190.08,
+   "attackAdd": 5.28,
+   "hpBase": 256.608,
+   "hpAdd": 7.128,
+   "defenseBase": 112.86,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633378,
+     "count": 6
+    },
+    {
+     "id": 468392,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 232.32,
+   "attackAdd": 5.28,
+   "hpBase": 313.632,
+   "hpAdd": 7.128,
+   "defenseBase": 137.94,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633378,
+     "count": 9
+    },
+    {
+     "id": 468392,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 274.56,
+   "attackAdd": 5.28,
+   "hpBase": 370.656,
+   "hpAdd": 7.128,
+   "defenseBase": 163.02,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717319,
+     "count": 6
+    },
+    {
+     "id": 468392,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 316.8,
+   "attackAdd": 5.28,
+   "hpBase": 427.68,
+   "hpAdd": 7.128,
+   "defenseBase": 188.1,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717319,
+     "count": 9
+    },
+    {
+     "id": 468392,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 359.04,
+   "attackAdd": 5.28,
+   "hpBase": 484.704,
+   "hpAdd": 7.128,
+   "defenseBase": 213.18,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "3cfcd006d85f4b1750df7c7ad5526fdb8a2214115c1a59a10f739abfc88302df",
+   "artPath": "1576cea61557abca4a92048ff95788d211b7bcfe0471e092972e00aacd802bbd",
+   "name": "傲慢は災いを生む",
+   "descHash": "軌跡「帰納」の累積可能層数+<nobr>#1[i]</nobr>。戦闘開始時、「帰納」を<nobr>#2[i]</nobr>層獲得する。先に軌跡「帰納」を覚醒する必要あり。",
+   "params": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "70d8a85463a4cf8ce17e8705ec9f46bdc08190b160ccf269283aebd7650e5d02",
+   "artPath": "94a2ab7e7760517858aaa7c22958191f6c428b39ee8337887c855754f4d5debc",
+   "name": "微を顕にして幽を闡く",
+   "descHash": "天賦の追加攻撃が命中した時、敵にあるデバフ1つにつき、さらにDr.レイシオの攻撃力<nobr>#1[i]%</nobr>の虚数属性付加ダメージを与える。この効果は1回の追加攻撃で<nobr>#2[i]</nobr>回まで発動できる。",
+   "params": [
+    0.2,
+    4
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "2409d9ad4b6853e86443b4fafebba642cfa2c504b0fa17594e46104febb10082",
+   "artPath": "cc2f7bc687c5085154b65c9f3bad00b849895308d3ee3b9fe524faf474a60249",
+   "name": "己を知れ",
+   "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "58c364ef223c9ab38de6694d2043f02a66bfd0c279a4dcdc6081485cccbb929f",
+   "artPath": "1e5360bef5f6e8d55d75958172fe0b0b611da5024376e8184fb3cea5d2c310e4",
+   "name": "無知は愚者を造る",
+   "descHash": "天賦を発動する時、さらにDr.レイシオのEPを<nobr>#1[i]</nobr>回復する。",
+   "params": [
+    15
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "c43ce8e213f0ca060250af12f2f9415478beda05cb9ecaa43ae203d65818802f",
+   "artPath": "e7ccd7fbee6dd4957bdd639b61c840ef414e62652e67f9d4c62d0ea33f6a2d1c",
+   "name": "櫂なき舟に海は渡れず",
+   "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "9dea70a7206d217e43f07c1cd405bb47842108b409eba5b5c50a4dd650ed0fd1",
+   "artPath": "1c89d3ea4d2366f29186d7aee0b59a1176ccc67d5312451b1713b33872468565",
+   "name": "ただ真理のみが永遠",
+   "descHash": "「智者の短慮」の効果の発動可能回数+<nobr>#1[i]</nobr>。天賦の追加攻撃の与ダメージ+<nobr>#2[i]%</nobr>。",
+   "params": [
+    1,
+    0.5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   776142
+  ],
+  [
+   692201
+  ],
+  [
+   575556
+  ],
+  [
+   261255
+  ],
+  [
+   976728
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体にDr.レイシオの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F4D258;\">虚数</span>属性ダメージを与える。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 776142,
+   "name": "知識は力なり",
+   "iconPath": "1ee6f4e45c1714cd62c0f5b90b99e54d613fc4fbca74e5446df469cbf48a5aa0",
+   "typeDescHash": "通常攻撃",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体にDr.レイシオの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F4D258;\">虚数</span>属性ダメージを与える。",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "30",
+   "id": 692201,
+   "name": "産婆術",
+   "iconPath": "c43ce8e213f0ca060250af12f2f9415478beda05cb9ecaa43ae203d65818802f",
+   "typeDescHash": "戦闘スキル",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.75
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.825
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920201,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.21875
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3125
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836260,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.40625
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836260,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.575
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.65
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.725
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.8
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.875
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体にDr.レイシオの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F4D258;\">虚数</span>属性ダメージを与え、「智者の短慮」を付与する。Dr.レイシオ以外の味方が「智者の短慮」を持つ敵に攻撃を行う時、Dr.レイシオはその敵に天賦の<u>追加攻撃</u>を1回行う。<br />「智者の短慮」の効果は<nobr>#2[i]</nobr>回まで発動でき、Dr.レイシオの必殺技の最後のターゲットにのみ効果を発揮する。必殺技を発動した後にこの効果の発動可能回数がリセットされる。",
+   "ultimateCost": 140,
+   "break": "90",
+   "energy": "5",
+   "id": 575556,
+   "name": "三段階のパラドックス",
+   "iconPath": "3d635536196be48334f20ed220849228c898c24e03afa2f26d5a6cec4bf1194b",
+   "typeDescHash": "必殺技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.44,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.536,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.632,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.728,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.824,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.92,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920201,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2.04,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.16,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836260,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.28,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.4,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836260,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.496,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.592,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.688,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.784,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.88,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "単体攻撃",
+   "descHash": "戦闘スキルを発動する時、<nobr>#2[i]%</nobr>の<u>固定確率</u>でターゲットに<u>追加攻撃</u>を1回行い、Dr.レイシオの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F4D258;\">虚数</span>属性ダメージを与える。敵にあるデバフ1つにつき、<u>追加攻撃</u>を行う<u>固定確率</u>+<nobr>#3[i]%</nobr>。<u>追加攻撃</u>を行う前にターゲットが倒された場合、ランダムな敵単体に<u>追加攻撃</u>を行う。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "5",
+   "id": 261255,
+   "name": "我思う、故に我あり",
+   "iconPath": "85ec3d9fcc3b56e406330fa5823fbc3a3c24d1c5af070425b204e24a5fbe5b15",
+   "typeDescHash": "天賦",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.35,
+      0.4,
+      0.2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.485,
+      0.4,
+      0.2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.62,
+      0.4,
+      0.2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.755,
+      0.4,
+      0.2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.89,
+      0.4,
+      0.2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.025,
+      0.4,
+      0.2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920201,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2.19375,
+      0.4,
+      0.2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.3625,
+      0.4,
+      0.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836260,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.53125,
+      0.4,
+      0.2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.7,
+      0.4,
+      0.2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836260,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.835,
+      0.4,
+      0.2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.97,
+      0.4,
+      0.2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.105,
+      0.4,
+      0.2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.24,
+      0.4,
+      0.2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.375,
+      0.4,
+      0.2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 60669,
+   "name": "攻撃",
+   "iconPath": "1ee6f4e45c1714cd62c0f5b90b99e54d613fc4fbca74e5446df469cbf48a5aa0",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "妨害",
+   "descHash": "秘技を使用した後、<nobr>#1[i]</nobr>秒間継続する敵を挑発できる特殊領域を作り出す。特殊領域内の敵と戦闘に入った後、<nobr>#2[i]%</nobr>の<u>基礎確率</u>で敵それぞれの速度-<nobr>#3[i]%</nobr>、<nobr>#4[i]</nobr>ターン継続。味方が作り出した領域は1つまで存在できる。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 976728,
+   "name": "偶像の誕生",
+   "iconPath": "34480c0f2400b7efb64f9336bcdbedb365ca850999fa8ef4f9e09e7de34fb443",
+   "typeDescHash": "秘技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      10,
+      1,
+      0.15,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1305102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1305205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1305206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 413439,
+        "name": "会心率強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "会心率",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836260,
+          "count": 3
+         },
+         {
+          "id": 717319,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 413442,
+      "name": "攻撃強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "攻撃力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920201,
+        "count": 5
+       },
+       {
+        "id": 633378,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "戦闘スキルを発動した後、<nobr>#1[i]%</nobr>の基礎確率で攻撃を受けた敵の効果抵抗-<nobr>#2[i]%</nobr>、<nobr>#3[i]</nobr>ターン継続。",
+    "ultimateCost": 0,
+    "id": 413350,
+    "name": "演繹",
+    "iconPath": "b9952c496d29e0fbfdf92e772518aec6a1acca081bd41ebaf3e0f279d9910656",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       1,
+       0.1,
+       2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920201,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 413446,
+    "name": "攻撃強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "攻撃力",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549437,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 413441,
+    "name": "防御強化",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+    "statusList": [
+     {
+      "key": "防御力",
+      "value": 0.05
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 10000
+     },
+     {
+      "id": 920201,
+      "count": 3
+     },
+     {
+      "id": 633378,
+      "count": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 413440,
+    "name": "攻撃強化",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "攻撃力",
+      "value": 0.06
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 45000
+     },
+     {
+      "id": 836260,
+      "count": 3
+     },
+     {
+      "id": 717319,
+      "count": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1305202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1305203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 413444,
+        "name": "攻撃強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "攻撃力",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920201,
+          "count": 3
+         },
+         {
+          "id": 633378,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 413443,
+      "name": "会心率強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+      "statusList": [
+       {
+        "key": "会心率",
+        "value": 0.026999999
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635674,
+        "count": 3
+       },
+       {
+        "id": 549437,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "戦闘スキルを発動する時、ターゲットにあるデバフ1つにつき、Dr.レイシオの会心率+<nobr>#1[f1]%</nobr>、会心ダメージ+<nobr>#2[i]%</nobr>、最大で<nobr>#3[i]</nobr>層累積できる。",
+    "ultimateCost": 0,
+    "id": 413347,
+    "name": "帰納",
+    "iconPath": "3a4064faf82f3c142814472f1aece5516a905fab40ddb0cd18fc6be7cca0bafa",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.025,
+       0.05,
+       6
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635674,
+        "count": 3
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1305208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1305210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 329504,
+        "name": "攻撃強化",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "攻撃力",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836260,
+          "count": 8
+         },
+         {
+          "id": 717319,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1305209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 413454,
+        "name": "会心率強化",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "会心率",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836260,
+          "count": 8
+         },
+         {
+          "id": 717319,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 413453,
+      "name": "防御強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+      "statusList": [
+       {
+        "key": "防御力",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836260,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "ダメージを与える時、敵にあるデバフが<nobr>#1[i]</nobr>つ以上の場合、デバフ1つにつき、その敵に対するDr.レイシオの与ダメージ+<nobr>#2[i]%</nobr>、最大で+<nobr>#3[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 413349,
+    "name": "推論",
+    "iconPath": "2fa5a9d80d2cd803da826471d9d1e6a772d49cad6a803e37a944f726deca227e",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       3,
+       0.1,
+       0.5
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836260,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "胴体",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "会心ダメージ",
+    "propertyIconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "速度",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "次元界オーブ",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "虚数属性与ダメージ",
+    "propertyIconPath": "939478539b7b35b55ee48b2e19d6994455dec3403493edcc082140d3a061b14e"
+   },
+   {
+    "relicTypeHash": "連結縄",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "攻撃力",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初対面",
+   "text": "ベリタス・レイシオだ。博識学会の学者、教師、そして一介の凡人でもある。もしいつか君の頭に「愚鈍」の症状が現れた時は、僕のことを——「Dr.レイシオ」と呼ぶがいい。",
+   "unlockRequirement": "",
+   "cnUrl": "d93715cb8d43ba4cf435c2df98d4163bb687568f326ddd0ff80a807538b67547",
+   "jpUrl": "8929b7899e59ae5c34e0c7c4a0fbd668c348b5022d75e05c9223e605f7956235",
+   "enUrl": "5c7115da6a1f2cf2494db54f117b6f9b8cfddb848e8d62f7360f9cdc316a73ef",
+   "krUrl": "235de7d8b7ed2aaf92f7de599effd98004972b4848334d8c652aa35b404d8ae3"
+  },
+  {
+   "id": 2,
+   "title": "挨拶",
+   "text": "何か悩んでいるようだが、トラブルか？なるほど——せいぜい自分で解決法を考えるんだな。",
+   "unlockRequirement": "",
+   "cnUrl": "af8c8d85604139f4b703293b792586cb8d2161c35fbdbd9a878ab4d1bed23322",
+   "jpUrl": "11d654160118f2a1bcdfeaab5b71b3487fe76a9c53b3cc46666cdf63e72460e3",
+   "enUrl": "8c6ade3ce7fd19347cd130b787710608f04c24cd5e7cf8a360e2639bcc3da25d",
+   "krUrl": "9a7528958db73a8162c31afc8c68730fa711e618f1c3a9c362a99eb14ce302d8"
+  },
+  {
+   "id": 3,
+   "title": "お別れ",
+   "text": "また1日が過ぎた。まだトラブルが解決していないとしたら、それは君自身に問題があるんじゃないか？",
+   "unlockRequirement": "",
+   "cnUrl": "00d096285627f02a492da63a4537888c3f6fd768dd97718a5fff130179c8c0c0",
+   "jpUrl": "ac5eb12c1b8b69e417c06d67c5656a7ff38228e8d0e3941cf3f59354b0363e0f",
+   "enUrl": "f7957939c5fc35b5bfe9280128ca8bf0c0a6be96c63ed7d418ccd30f2e6aa57f",
+   "krUrl": "3ddd7aaacd613bac19c4f646274cf9bf886f873fde0ccb7a2c0d5dcffc69f955"
+  },
+  {
+   "id": 4,
+   "title": "自分について・かぶりもの",
+   "text": "第一に、被り物をすると五感が遮断され、何の干渉も受けずに思考することができる。第二に、僕はアホを視界に入れたくない。ふん、まあ、アホどもも僕を見たくはないだろうが。",
+   "unlockRequirement": "",
+   "cnUrl": "26e257e8b022a45755e43e6bc1d86a0c0fdd29cdb91fc3d0a6ba46c5d880206d",
+   "jpUrl": "3c0fca3acf66ace2869413f810bd8ed838e97369ba0961f1cccd82e88f5023d9",
+   "enUrl": "b323f509856e54483ce3c19a2a592374dce66930167c2723759b63fae43b982e",
+   "krUrl": "f7c468609c1047836d8637da4fd7b6e36312c059d801beb2ee55a6d451179904"
+  },
+  {
+   "id": 5,
+   "title": "自分について・本当の顔",
+   "text": "教学や治療に役立つのなら、別に素顔を晒しても構わない。だが経験上、大抵は役に立たないどころか、害になるだけだ。",
+   "unlockRequirement": "",
+   "cnUrl": "50a75d978ed8ec6f4a4dd02b2388a7931df1be27e942f718a63d503fab2bc4e2",
+   "jpUrl": "966054845b0226a008c55d59bf9d5b0cd6205d6c228272a8e53784b9227bc731",
+   "enUrl": "2c004f1885e3d16d18c95ee8f0cae3e5ab51761665ef607f21e2cc20c37af2e5",
+   "krUrl": "ca1abd2b8b9650f67c790e9827c66c7d4f5e8be293045dde4ccc360916c7a70d"
+  },
+  {
+   "id": 6,
+   "title": "世間話・博識学会",
+   "text": "博識学会は知識の売り手と見なされることが多いが、値段を決める権利はいつだって買い手にある。耳を傾ける人がいてこそ、知識は伝播と流通を始め、価格が設定されるんだ。",
+   "unlockRequirement": "",
+   "cnUrl": "d18467fc9f137d505fb75a901120782178f4183d5c50da5b7b4a680fe82797b8",
+   "jpUrl": "24bdba259e5c43db031b27a76ba24788f23d01423dc910b395c1fd8ca4fbf1cb",
+   "enUrl": "4269b5d74ba93d6755a21e1137e53234a2fb2cb7dd51bc41920e9adfc4f55d89",
+   "krUrl": "fcd847421dc51b8a29e7e97b154ca35a12e7ab1a5da1b0268fbc0e5ddb26ecfb"
+  },
+  {
+   "id": 7,
+   "title": "世間話・天才クラブ",
+   "text": "彼らは真理に身を捧げた…と言っても過言じゃないだろう。なぜなら、彼らの行いはすべて「ヌース」のためだからな。",
+   "unlockRequirement": "",
+   "cnUrl": "b092abf43cb0fd9754f6901f40bb16b175d329ca46af9c4c01d4d9fbde7cb9a5",
+   "jpUrl": "ce1450eeab6763395a737e12f2a622632a796b09eee0bdbe0a25077917f78f31",
+   "enUrl": "e84418b585287bea3ac03530e5e4776b64695fa671603ddb2f984add1345be79",
+   "krUrl": "ed97721def67ac651bf058764aa9669ef120306f675445cb429506656bd4acce"
+  },
+  {
+   "id": 8,
+   "title": "趣味",
+   "text": "僕は本とバスタブから離れられない。特に前者だ。人は頭の中に汚らわしいものが詰まっていると、体も綺麗にならないからな。",
+   "unlockRequirement": "",
+   "cnUrl": "64719bc4b75fb40e3fa1539755a6e82df3a6847c5e66d36815679af207e77c5c",
+   "jpUrl": "fa66af4d4bb4d4e2536dd00de62f9e41f443d9d0b87a71d718ee3ccae50da331",
+   "enUrl": "fd07df916deb3b699b5956f75ebefca474feb83747ea071704c01d45e6093574",
+   "krUrl": "f0dfd1e0177179215947e1928c4c65bb7203bb34651620bd10d0162967fdad61"
+  },
+  {
+   "id": 9,
+   "title": "悩み事",
+   "text": "アホには「アホ」とは何かを説明することさえできないんだ。",
+   "unlockRequirement": "",
+   "cnUrl": "2f9f2b3361f41de9f899024dc9abfc2c782e182a336732ae96f6b8720b832275",
+   "jpUrl": "7451609e28a89df32b52141bf14774bedf88cd08d9e6fc95c517406e91190903",
+   "enUrl": "f74c71266232f9d18625811f53af43ffdbd791a5dac6330db845b767cfa73edf",
+   "krUrl": "cb8e96105c62a1c620f01867aa659b2302a0247137b1192a48cc5c72d3041de8"
+  },
+  {
+   "id": 10,
+   "title": "シェア",
+   "text": "質問する前に少し考えてみろ…答えは最初から決まっているんじゃないか？そういう質問は口に出さないでおいたほうが皆のためだ。",
+   "unlockRequirement": "",
+   "cnUrl": "c49613fc67331b9a704b9e74a44c12c73f87583a3f8592eac4d3a0b0bed34eca",
+   "jpUrl": "996a91790d7ca28bfaeedb7765b7d6f6904fea3e05ddf86236f2d78e45dabfd7",
+   "enUrl": "1897b479023a797bec4fdbec712514bbca51cad33e52db42a5b0ecee49d18550",
+   "krUrl": "3c4b55f1f2e4e75051394359c34ff11ed253091863eb82bce54c694fc9db160a"
+  },
+  {
+   "id": 11,
+   "title": "見聞",
+   "text": "真理の素晴らしい点は、誰にも理解されなくても変わったりしないところだな。僕も同じだ。",
+   "unlockRequirement": "",
+   "cnUrl": "0bb7aac586d37563fb82a4ad2a440e657f4abe71402980a7bb0e6121fd3ffef3",
+   "jpUrl": "8de910e34488ce096e9a7c7d2e34e6d52f301361acfbfe2731c158041d8a5360",
+   "enUrl": "94de438045d40e81d976113177d35baf3e24d7db124b4fe97a0537e8b008e15b",
+   "krUrl": "950c3530c7c2fe76f40acec83cb8b215769ec87a7a25ce1725e23a92a185a8ec"
+  },
+  {
+   "id": 12,
+   "title": "ヘルタについて",
+   "text": "ヘルタは最も典型的な天才だ——天賦の才の持ち主で、傍若無人。彼女の才知は疑っていないが、その才知は他者にとって役に立たないものだと思っている。",
+   "unlockRequirement": "",
+   "cnUrl": "df4bbd7c21329bbc2a806565c64a6187ea3c0954434c80d5dc2c212058a03be1",
+   "jpUrl": "b364986566995a1596cdd054a3de7822262726219014d4ab294808bc671163f1",
+   "enUrl": "40953628ee6b940b74e2360a31aefdbf892035e57cf20723fc75a12a5be82a90",
+   "krUrl": "c1749a5a0ae09cfd6a67ef65a3a719a3542c50e6411e37f3027777a73725b72b"
+  },
+  {
+   "id": 13,
+   "title": "スクリューガムについて",
+   "text": "彼は自身の領域内で新たな法則を作ろうとしている。僕は彼のようなタイプは天才ではなく——帝王と呼びたい。",
+   "unlockRequirement": "",
+   "cnUrl": "85b5802e8beeec31bc631f91157bea52677a594c9ce1759679caca5e06f4b774",
+   "jpUrl": "0f1fb026f578090f4805bafe5e154c5c36db640585f9587f2530843f3f139014",
+   "enUrl": "6a0b4a950973480cc70efcc13ca3d3ecd08ac720d7858eca473deaa21cf4e0d9",
+   "krUrl": "bae7c345b5bef235cab6f249e6ceea76af05c699cea1d5d4374a3d5bb1672a2a"
+  },
+  {
+   "id": 14,
+   "title": "ルアン・メェイについて",
+   "text": "どれだけの人が彼女の「隠者」という自称に誤魔化されているんだろうな。僕から見れば、彼女が探求しようとしているのは生命だけに留まらない——刮目して待つといい。彼女こそ、天才クラブの真の野心家だ。",
+   "unlockRequirement": "",
+   "cnUrl": "5fb83be767f81868778f2b44d410e78cae8dea5e536afc05acc5534ad7e22eac",
+   "jpUrl": "7f7e1c6b3ebba3603d2c77b185f27e441b1d047beaacc62fd0d614ffa91fc395",
+   "enUrl": "92ff2d09be5ae6929813fbf52036845ec00aa5f3f01919457860bb1693da0b20",
+   "krUrl": "0b812cbc099643a8f2ddd94e4ad84f50ceae61999d8e3ca1c624f7b045a4f638"
+  },
+  {
+   "id": 15,
+   "title": "星魂覚醒",
+   "text": "僕たちは思考する以外に自己を認識する手段を持たない。",
+   "unlockRequirement": "",
+   "cnUrl": "8065bc65b7f4e8b47e28a5c0ae46bf585dab97674dced457bb36f4716eeccd60",
+   "jpUrl": "3b461c63129e5e1f9e9cca4fb5b2ae1d0f518dc446f0bb627e03c0417853060a",
+   "enUrl": "a57603620dbe9f46539189bf44d990f8e804a5b2bfdc36f2e344ec66eae943b9",
+   "krUrl": "fd15283ad946a30dacae9d86e62fa9e9a2db0507b97eb452ead503f95b5c6777"
+  },
+  {
+   "id": 16,
+   "title": "キャラクター昇格",
+   "text": "進歩が早ければ早いほど、犯した過ちも多いということだ。",
+   "unlockRequirement": "",
+   "cnUrl": "8b40a86747347df073b6632d3536f2fe490b58efe0017359ddbd80be6552010c",
+   "jpUrl": "07e79f3f6be1b32ada3ff4ca28a6f30edf89b686cb50f912a9f7f91cadbffc10",
+   "enUrl": "f2432d9df7e35980cd350814296d79adbd917e34b88ac33b0abe0eec05d46bc8",
+   "krUrl": "2729a29ed4574c4e7a717b3f11ab32307d1e7fe0b6bd94bc2de60c921affc49d"
+  },
+  {
+   "id": 17,
+   "title": "レベルMax",
+   "text": "今の僕でもヌースに認められていないのだから、これからも認められることはないだろう。",
+   "unlockRequirement": "",
+   "cnUrl": "6363101a57b54585963cf9cad3b8176b5a09f6ca1805135dae1c991530382eb3",
+   "jpUrl": "d359f354f40d6227cdb4bb9d35081f39fcfdd504a7ae8e2af3b4729a3bd32d8b",
+   "enUrl": "2f8d7038719a74db27edc1c3956d40c1465ed82797e590cbe3767e3087912592",
+   "krUrl": "ba2403f5eb0762bdb360e6f1ed41f0599505e999b7a79a065e0b2b41226157fd"
+  },
+  {
+   "id": 18,
+   "title": "軌跡覚醒",
+   "text": "他人と同じ選択をしても、君なら異なる結果が得られるだろうな。",
+   "unlockRequirement": "",
+   "cnUrl": "c2857f1eba9bead66c0ecd1cf4daf88db1656a8cca08fb5511a32ab12b0567ce",
+   "jpUrl": "0495d3c8b3909d2b1f3c3ed403834ec89589e914f7f0e025d4d63ebdd7342d58",
+   "enUrl": "2d978f5991778ae851347c6bf14d10dc909dddb00bf9da03f6d8c90ebb694a2b",
+   "krUrl": "253cf37eadc6380cd08ca5b33c8cda457ff29486c3d2966dea25397a73d37bcc"
+  },
+  {
+   "id": 19,
+   "title": "パーティ編成・ヘルタ",
+   "text": "天才に蔑まれても、凡人は自分を信じることができるのか？",
+   "unlockRequirement": "",
+   "cnUrl": "0981284f593bb0f34a94417c348bc8baedccf81074a309797075dfba9954da49",
+   "jpUrl": "7eeb1fdc81fd13633b2389f86e80a599b86aae937f29e159868a0ab67c3d02f4",
+   "enUrl": "6acecbe5cb59f3d1462fb6c7016de566ff13c1e451e7d08b29c46374431b80eb",
+   "krUrl": "fd0875988ce1dfb6785de1707ef291a1aaebe09ce3ac4c0e9d721379e3543332"
+  },
+  {
+   "id": 20,
+   "title": "パーティ編成・ルアン・メェイ",
+   "text": "生命の本能を管理して煽ることに関しては…君のほうが詳しいだろう。",
+   "unlockRequirement": "",
+   "cnUrl": "fe5da9d7ec556d66445c55821c0c53b400597159dda2c4666cf268b3376fd1fa",
+   "jpUrl": "ecceecb9747e06e7f6686b44e15e531a2e4dd1c507dd64940304d8de0327e0d5",
+   "enUrl": "4b859c4bb9987678119cfca45fb327fb0fd05f3d64dbf3f91d598872d93b5f02",
+   "krUrl": "0edfd82cf86c7f31981ef9e4ea6fa93c5c6c561b6c6422e1c4024a6debd27a20"
+  },
+  {
+   "id": 51,
+   "title": "戦闘開始・弱点撃破",
+   "text": "もう限界か？",
+   "unlockRequirement": "",
+   "cnUrl": "040cb11e06bebec104c5b4f73c7b8d80aa789ba3130fad8c9ce2abf422a59907",
+   "jpUrl": "928189a5e1b32fa95ae6e5b10082fe5485b7429b4cb3f3f621b7f870046e894d",
+   "enUrl": "82a15ae3faae6cac3d48be86c5c9288206f677c2ec7f89980d342d7c3c3d11a2",
+   "krUrl": "eab6da049ac5ee8b11a09238c177811e540f32cde46a141b701e5c05721a0ba0"
+  },
+  {
+   "id": 52,
+   "title": "戦闘開始・危険予知",
+   "text": "厳しく指導したほうがよさそうだな？",
+   "unlockRequirement": "",
+   "cnUrl": "0e93c89baf9376d5fb3886893233d40e96e6302c217383fdb78a50c4b7b351e7",
+   "jpUrl": "d4492eca3eff84bcf09d960d9bd0aabfc7dc656cd05fb9210471a2d29a9cc93c",
+   "enUrl": "4f3f771908b8c9dd8b208a8d81cd65ab87b74a4389bea6ea8829d4e465436f6d",
+   "krUrl": "8fc84f4286f1d35c8473dd53dcf34f4343c04b3920b1ae537a3ec13dabdaa33f"
+  },
+  {
+   "id": 53,
+   "title": "ターン・1",
+   "text": "僕が質問する番だ。",
+   "unlockRequirement": "",
+   "cnUrl": "5456df82d93724b924931a6801f5a6565f89dacadc5bc5aaa22064652f4a87ab",
+   "jpUrl": "ec1346a4f8802605ddbcf0dfa7570864c718271c7b23a0f01137853a07ae9d9d",
+   "enUrl": "4a57a133c6d2bae25bf70fe291ae995dc92c3639e201534079863a8f861c29ca",
+   "krUrl": "4335f81c32f3696271a56fc7b4757c197a8ab69234a1d8a4e5baa8f7e9e718da"
+  },
+  {
+   "id": 54,
+   "title": "ターン・2",
+   "text": "君たちの回答を楽しみにしている。",
+   "unlockRequirement": "",
+   "cnUrl": "477847e16e63a6b1987b3be8c57b0e3175b856c2bd8d31ad490db2350ff80f7b",
+   "jpUrl": "59e5258f75544d620d5ecafa679d40d413506a8c8803f50135671cdfb1d8a3f7",
+   "enUrl": "60b09ebbabeb267ef0e013ac2f0ef58f91067222b8f1a0e17f31d965ed587ce4",
+   "krUrl": "477dbcdac37d486822e963df028342a362bf594e3490518368b0c364f8336725"
+  },
+  {
+   "id": 55,
+   "title": "戦闘中待機",
+   "text": "焦るな、よく考えてから決めるんだ。",
+   "unlockRequirement": "",
+   "cnUrl": "9409f9df62134de2113a84a61eaf53cd9ddc2ceb773690372b13d9e185aae946",
+   "jpUrl": "9e78473497c446f9dcf1c0aec927ee4d5e55a3421c3e5403f7fe51315aa92c58",
+   "enUrl": "9b9edbf3edba4b3c6e4640d01ed3662140870bc93fea680f710de8136c12e375",
+   "krUrl": "aad7e343dfbd2cdf48d3e4867f13dc3288ef36dad213221d2d67447187fd4bd3"
+  },
+  {
+   "id": 56,
+   "title": "戦闘スキル・1",
+   "text": "これに答えてみろ。",
+   "unlockRequirement": "",
+   "cnUrl": "5ad40c92c2a4c2ef731fe94ce651b902d620e71b86f8ca71c8bfa958cc9b8701",
+   "jpUrl": "79042f1419ddb1aec79b924e91d174da39afd872a4114bb6c0c9ed11364a5020",
+   "enUrl": "d2e1fe77c146c3398f0d92d2adcf02401d45623517e54904b4f10b85daf7b747",
+   "krUrl": "a8dbf2aa675791f4ecb47c2ac3efb4f4c07c36e2df7819582a55875b931f97a3"
+  },
+  {
+   "id": 57,
+   "title": "戦闘スキル・2",
+   "text": "思考を止めてはいけない。",
+   "unlockRequirement": "",
+   "cnUrl": "87a549ebfaf21f79437c114725761d1438f8fd08f487946400dba5ad16caf4d1",
+   "jpUrl": "ae701780913a25699515de74b2b08dd0e995c35e67d38fdf07502a48b668308f",
+   "enUrl": "b9ab3eb5dd5c893b6d41d118940b47b4f58fa448f17017ae5ec3e8c33ef570e4",
+   "krUrl": "ffcda5dfbf347be966e2130c8e9475c7aba434e1b694cedaafee48a610a6faea"
+  },
+  {
+   "id": 58,
+   "title": "通常攻撃",
+   "text": "頭を働かせろ！",
+   "unlockRequirement": "",
+   "cnUrl": "34b6cefe38f301605a2ac30ec395e198c277642aef9f11307b80116b7af31fb7",
+   "jpUrl": "097376acf1a3044f99df1bbae558ecd4e82e8b9ebe0026ef85b21c3c281b936e",
+   "enUrl": "a21e1a6df9d80c0b5ec24595ffdc15f4bd4bd4d0fc5f9b44192be085a17b69e2",
+   "krUrl": "897c58e8b0cdd9fa4583cabeae4f629070de016a6d1cd8ba6b59352cb02a57c7"
+  },
+  {
+   "id": 59,
+   "title": "攻撃を受ける",
+   "text": "少しは弁えろ！",
+   "unlockRequirement": "",
+   "cnUrl": "48aebd9c1084ffc487457fe392a7e8a8ec7b8af5c9da79d1b0a74c0c9a5b9422",
+   "jpUrl": "52a7e3b4f1703b9e1185bc35554f4e11f9d824e7ed4497ce8f8facfaea5c64bb",
+   "enUrl": "02abb39a72cfecee409713eb53913af351f480674741b2d69b72e35099131c30",
+   "krUrl": "6c66c386385295aac140d5c37da4470b6868690d2b23c3d9cc994606012bf13e"
+  },
+  {
+   "id": 60,
+   "title": "重撃を受ける",
+   "text": "愚の骨頂だな！",
+   "unlockRequirement": "",
+   "cnUrl": "726d89323f5595b198a49d2de3479d6a88a34e04f7c0847703da8f065e5f7e39",
+   "jpUrl": "6a2f8bdad1247b7b458f32a6f3a5b5b1a5b250dbb52c5e486d8034dc5e23920d",
+   "enUrl": "24676f036194ad6b72feede6ad65e68a847bdda7a21454446343d4a29998ff1a",
+   "krUrl": "027f381a3a0616b6fa88a2ebfb7b95293fa096ae8fedb0360ed45773174a3ede"
+  },
+  {
+   "id": 61,
+   "title": "必殺技・アクティブ",
+   "text": "存在とは感知されること——",
+   "unlockRequirement": "",
+   "cnUrl": "7c01879cd5eb07a2873383b5bd3bd32c02366218ce387fe1d08eab658497e162",
+   "jpUrl": "b0f604935be7fcfa153680e132ca8fc3c1de3d1a1d339b797130117c5b1dd3f8",
+   "enUrl": "9bf3b1b17ffaf17947f5045f0fd5a4a8b2b97177754af8d3e854a84ba15fa365",
+   "krUrl": "7f4871b3f79737fd1ef3a808b615592d38bce3b4c3472fc0d7e685e1f8adae97"
+  },
+  {
+   "id": 62,
+   "title": "必殺技・発動",
+   "text": "知識こそは万物の尺度、真理を探り尽くし、<ruby>誤謬<rt>ごびゅう</rt></ruby>を根絶する。",
+   "unlockRequirement": "",
+   "cnUrl": "86837030b4f622150a12d73788aee216835d08fb0ed926d71133aaccfebaf7c0",
+   "jpUrl": "1a6951e23a87ff838f757cb5f5631b282f8dd6426762cfa28af7aa888bf9f24e",
+   "enUrl": "1b12fe2ce20ce00d8524d1b11636e5026f4809762a1e1c8865dc19704f35fb90",
+   "krUrl": "a4db1da03aebae30e91bce11d89cc168eb10b7c0998daf9362a8894d6bcd15fb"
+  },
+  {
+   "id": 63,
+   "title": "天賦・1",
+   "text": "0点だ、次！",
+   "unlockRequirement": "",
+   "cnUrl": "0553bb8e79544f85b5e216ea1d35510c87177faf9bb229a12366d01127837475",
+   "jpUrl": "e80acf75880c4f670bd1e46256faa66b1488f71cf67b0954130826b3651f0c7e",
+   "enUrl": "bc72637445ecd68b2ea03e9cf2e7b9510c0646d2471e34c857bebc5c1bb4c53f",
+   "krUrl": "b874f2e58440f21664c11cca6c5fafb2d9d565405bc445d8282cbfc94f7aca5b"
+  },
+  {
+   "id": 64,
+   "title": "天賦・2",
+   "text": "マイナスだ、うせろ！",
+   "unlockRequirement": "",
+   "cnUrl": "b175da105a2de2f4fa705955eeaca8b57e89d1af8171027df25fc9806a1820b9",
+   "jpUrl": "6bc97052fd887631c76922a42a5b8f63ab59a0a08a14503fe4ccceb5d37e4746",
+   "enUrl": "1242c89e0016d7e0ecd878d8467432cb30311fc4871f572898ca013af2fa3ecd",
+   "krUrl": "b9bbec965fd77efeeaf4a8e9b6d5aefd6a5e3b98b1be5975f704ee24fe7c3d16"
+  },
+  {
+   "id": 65,
+   "title": "戦闘不能",
+   "text": "「凡人」か…ふっ…",
+   "unlockRequirement": "",
+   "cnUrl": "c2111e8242d83abac56f4012fb048bd6f2c77f00554c2d90e78c5b2cc96019a8",
+   "jpUrl": "5acefe91ca2412c5a9a0d77c3ad887b1c6d430cdb90ab059a5e8401af7aedacd",
+   "enUrl": "63080c829844d149046afb2096ddce110c755a076ee1ceb6aa5071b807381a88",
+   "krUrl": "56d3a74354087cdd517aa5f12e3885d123bd60b5185f8868e5b4d60f8b07615a"
+  },
+  {
+   "id": 66,
+   "title": "戦闘に戻る",
+   "text": "よくやった、プラス<nobr>10</nobr>点。",
+   "unlockRequirement": "",
+   "cnUrl": "de9e3a148a4cfa04adb2d8a29de665a85c6e272110f69a02cb251b4453370e3d",
+   "jpUrl": "471d7aaba8d43ac4cd08891eba31ce9b14971b61e4fd6cb56fd229910e60ad3e",
+   "enUrl": "e457a3b615452cb824ecbfb54ba502e4f765bc75c6de74341239b27a18f92b7b",
+   "krUrl": "3ef615b371c9ede4f1054592abff5c5ab149450778d35d53b8a1e8d1d7e88532"
+  },
+  {
+   "id": 67,
+   "title": "HP回復",
+   "text": "悪くない、プラス5点。",
+   "unlockRequirement": "",
+   "cnUrl": "66cfbd7b3f995669eafff87631b35b842514c0802e70e2d8d71ac624168bc51a",
+   "jpUrl": "684d5e2c44ba4fe58766a27e6cdb41ed630fe87ccedb1d30ecec06b1d694281f",
+   "enUrl": "4afc1a7002ecec55c83c6f2e7390bcf87486de730e801a428fd202d77662f32a",
+   "krUrl": "9975d522ef810f1da1ce2fed228b97cb3bbb14fc217be9035fc67876be09fe41"
+  },
+  {
+   "id": 68,
+   "title": "秘技",
+   "text": "ようこそ、凡人のステージへ。",
+   "unlockRequirement": "",
+   "cnUrl": "446d6217b2a640cbf88dbe62b3af4b2792a4b9451d8c00fdb923033879e900a2",
+   "jpUrl": "d476306c0a69bc058d1be5ea75a599555f4981c024af05ed7c884f4294019b82",
+   "enUrl": "8f05fdfe7a565701b4c2c84b028ceaf77e2fb3641dd91ca1da669ef12294e0a6",
+   "krUrl": "e6a316b4fe74181f9584ceed136b81ca418fa32291d119ec5cce9e1938b2ddc4"
+  },
+  {
+   "id": 69,
+   "title": "戦闘勝利",
+   "text": "計算通りだ。",
+   "unlockRequirement": "",
+   "cnUrl": "6e9d066c78a6a772a09b82f743884dd977befbcf686744359ca3f924c9d20ec3",
+   "jpUrl": "84dfb4189b2946b6c705403e3f223f7b3bc3e27bd5a2144fbe87cf7a7d2e531c",
+   "enUrl": "af367ac18b8704e00053b5052436e4b15a57181235f1e0c4f2b0f5175208f41a",
+   "krUrl": "bf5e55339ad51e1a516d31847a93a4449b58d9cb431f4856b0e8a7f5f3c3693c"
+  },
+  {
+   "id": 70,
+   "title": "戦利品を開ける・1",
+   "text": "知識は世俗から遠ざけるべきだと？…ふん。",
+   "unlockRequirement": "",
+   "cnUrl": "dfa3bce810d8f734fbc65b4e59f9f0d4f90b5a0ffc0b7e49d465c16d159ecb69",
+   "jpUrl": "9a8cdadb857902e7ae871c034717ecd8126473341e4e1b0a329a50575d483228",
+   "enUrl": "647a006bdfc9e38cc0b0ecec4ba319ec0aa78f4e7ca198a04eb10917bebe34b0",
+   "krUrl": "991d793b6862e5f0f5e668e5af17283874cedc1e9304ec6c0c0d4d30588869e8"
+  },
+  {
+   "id": 71,
+   "title": "戦利品を開ける・2",
+   "text": "富は真理の妨げではなく、助けとなるものだ。",
+   "unlockRequirement": "",
+   "cnUrl": "5c9659730863f552724404b457f766bd968184c6180808364fe802dd6bc6320f",
+   "jpUrl": "520fa442854becf4fafb2a8188ad44db4e365ba296ff208ff8d0507a57280936",
+   "enUrl": "048009629b13b4045d010fc2f411d48b00ba54fb6aaaf31a143fbe3cb7a63fc8",
+   "krUrl": "7a60cb905972cab518b47b0f8523a162c981aa0c56c54e184469f5628ee4c331"
+  },
+  {
+   "id": 72,
+   "title": "貴重な戦利品を開ける",
+   "text": "「凡人」として、ありがたくいただこう。",
+   "unlockRequirement": "",
+   "cnUrl": "283e8d0d0313df0a0b1ea43b40e218b9fcc1819685ebad0b7d596b951272523d",
+   "jpUrl": "eaf7d6c182275f4ae3a3b5022e8dde9a3a1dee815a4251677cf4c028ab366ef3",
+   "enUrl": "1c39e1ea6da266c272e81652ed3e5498f8cbc40353a2c9387366b2a5b173e917",
+   "krUrl": "accea3fe5778c1afd9fc9cf8c02b5d7374649d5af9049026c57eb0305d049fa8"
+  },
+  {
+   "id": 73,
+   "title": "謎解きに成功・1",
+   "text": "まさに…「神技」だな。",
+   "unlockRequirement": "",
+   "cnUrl": "0125199b4410ede1de9ba21d4786efa3a14a3f518905ff4a8d2c6fd26bb01bf5",
+   "jpUrl": "31acc319368b0f48e7d9d86f912c61a0d2949d1c7882bd1b932f99673534a53e",
+   "enUrl": "bacbcb13e8e05e05978a406bbc5405bf4e93652765e8192ba146069fedf38160",
+   "krUrl": "a59349ef15313892031b00efbd85de82fb1727e1a222d7ddc46b363c276dd663"
+  },
+  {
+   "id": 74,
+   "title": "謎解きに成功・2",
+   "text": "知育玩具にしては、悪くない。",
+   "unlockRequirement": "",
+   "cnUrl": "c9a8e8f2ef55e9ae73c228cfabb072ae964be0c2ae64e0f0e0ab78adc48c8b85",
+   "jpUrl": "dc9acb4555836bc7b31beb56f1044b365ebd210bd48a1df37cd89f40a76ce9cd",
+   "enUrl": "356c20113da3c4293f6e08a574c29886dee8aa7c01030a5d63b48c4b8081fe1a",
+   "krUrl": "448aa44fdfacd0b5792f82c09862540371b66922a377f64621c5a55ad80237ec"
+  },
+  {
+   "id": 75,
+   "title": "敵ターゲット発見",
+   "text": "人は「分を弁える」ことを学ぶべきだ。",
+   "unlockRequirement": "",
+   "cnUrl": "bab1d722830958b06dc4e6e266fedf9888f4215724737f52c9372821b25db0b6",
+   "jpUrl": "9d3ea1726e61f9fa91aaab1ae4165da06ab63d93b98da734f805852787aef359",
+   "enUrl": "49e4a1fd6946f57ca91a251a375dae239954e5dd9cf6dee89eb10ddf553f8a3b",
+   "krUrl": "af2125d9462c89c14eadf17778a96b5d7527a9401d4f3114625a0f8e058cc5e2"
+  },
+  {
+   "id": 76,
+   "title": "町に戻る",
+   "text": "人生を浪費する準備はいいか？",
+   "unlockRequirement": "",
+   "cnUrl": "b55089aa1f05481940c068cb35e3b84c0cd0ca5dbfa22d85cf7590aefbd678cc",
+   "jpUrl": "c4f175b106f656f236863b5796ef05a5b68114bbca2514208ccc12ecd41134de",
+   "enUrl": "954d9f379a71a47dc16b6bf4f1eebfcdffaf42e3e842dae01bd7df4af809812d",
+   "krUrl": "5440b337314fedc21ff266e90138a4ba2ec2cef90874bbc292cdeb0e0a051522"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "キャラクター詳細",
+   "text": "率直的で自意識が高い博識学会の学者。いつも奇妙な石膏の頭部像で顔を隠している。<br />幼い頃から人並み外れた才知を発揮しているが、今は「凡人」を自称している。<br />知恵と創造力は天才だけのものではないと信じており、「愚鈍」という名の病を治すため、全宇宙に知識を広めることに尽力している。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "ストーリー・1",
+   "text": "「真理の医者」を自称するベリタス・レイシオという人物については、彼の研究と同じように議論が絶えない。レイシオの故郷では、少なくとも彼の伝説的な逸話を描いたドキュメンタリーが8本、彼に関する回顧録が<nobr>10</nobr>部発表されており、彼に対する評論は多く存在するのだが、十分な説得力を持つ見解が示されたことはなかった。その穴を埋めるため、筆者は自らDr.レイシオの成長に影響を与えたというロンド教授を訪ねることにした。教授は高齢で言葉を発するのは難しかったが、筆者がDr.レイシオの名前を出した時は興奮を抑えられないようだった。筆者は教授の家族と学生の協力を得て、黄ばんではいるが非常に保存状態のいい推薦状を手に入れることができた。<br /><br /> 「<br />第一真理大学採用委員会 御中<br /><br />私は銀河自由大学数学科の名誉教授、ロンドと申します。才能と教育を重んじるという貴校の評判を聞き、レイシオという学生に貴校への進学を推薦したいと思っております。レイシオは現在高校生ですが、数学、物理、さらには哲学に至るまで、その習得度は多くの一般大学の学位取得条件を遥かに凌駕しています。<br /><br />私が指導していた時、彼は予想を遥かに上回るスピードで数式の方程式を解いてみせました。私が受け持っていたクラスの大学生は、それらの概念を理解することすらできなかったというのに。好奇心から、私は彼に「ロンドの予想」の手稿を渡しました。この方程式の提起者である私ですら証明できなかったものです。そして日夜討論を重ねた彼は、見事かつ驚くべき発想で、一気に最後の論証まで終わらせました。これに関する論文は近いうちに発表されるので、私の言葉は嘘ではないとわかっていただけるでしょう。<br /><br />日々交流する中で、レイシオは非凡な感受性、好奇心、創造力を見せてくれました。彼は毎朝早く起きてトレーニングをした後、知識の海に飛び込むことを日課としています。もしかすると、レイシオは世間一般が想像する天才のイメージに誰よりも合っているかもしれません。彼には激情があり、深みがあり、情熱があり…天性の資質があるのですから。<br /><br />地元の学校では、これ以上レベルの高い課程は受けられないため、貴校がレイシオを受け入れてくださることを切に願っております。私は私の名誉を以って、彼ならこの時代の限界を超えるような成果を収め、銀河で名高い貴校にさらなる栄光をもたらすことができると保証しましょう。<br /><br /><br />ロンド<br />哲人暦██年██月██日<br />」<br /><br />——『知識は特権である：Dr.レイシオを解き明かす』p.9",
+   "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・2",
+   "text": "8つ目の博士号を取得した後、Dr.レイシオは第一真理大学で2琥珀紀にわたり空席となっていた第一級名誉学位までもを取得した——何年経っても、これは大学の歴史の中で比類のない偉業であり、今後達成できる者は現れないだろう。この頃、Dr.レイシオはすでに社会の風雲児となっていたが、彼の周りにいた学友や師には違った見解があるようだ。筆者は以下の貴重な電子資料を入手することに成功した。<br /><br />「<br /><b>キャンパスハイライト：</b><br /><b>1. 第一級名誉学位授与 ベリタス・レイシオ</b><br />閲覧数（<nobr>2500</nobr>）コメント（<nobr>145</nobr>）<br />詳細：<br />本校で2琥珀紀にわたり空席となっていた第一級名誉学位がベリタス・レイシオに授与される。これは生物学、医学、自然神学、哲学、数学、物理学、工学などの分野における彼の卓越した貢献が認められたためである。また、惑星エネルギー問題においても優れた功績を収めたため、ベリタス・レイシオには直接教授の資格を与えるものとする。<br /><br /><b>ヴェリッタ-数学系教授</b>：<br />おめでとう、レイシオ！彼の努力と知恵はすべての栄誉に相応しい！彼が考え事に集中するために、被り物をして外界から自分を遮断していたことを覚えている。そんなことができる人間、この世に何人いるだろうか？私は短い間レイシオに勉学を教えていたことがあるが、実際には私が教えたことよりも、私がレイシオから得た学びのほうが多い。レイシオはその誠実さと率直さで第一真理大学に新たな息吹をもたらしてくれた。私たちは彼に感謝すべきだ！<br />グッド（<nobr>1000</nobr>+）バッド（2）<br /><b>哲学系ならず者</b>：<br />これで天才クラブに入れないのか？<br />グッド（<nobr>850</nobr>）バッド（5）<br /><b>物理は優雅なり</b>：<br />どっかの議員の息子が、レイシオが教授助手してた授業を受けてた時、レイシオに賄賂渡してテストパスさせてもらおうと思ったら、クソほど罵倒されて教室から放り出されたんだって。そう、本当に物理的に「放り出し」たんだ…まさに神みたいな男だよ……<br />グッド（<nobr>550</nobr>）バッド（<nobr>112</nobr>）<br /><b>基金を買った養分</b>：<br />あの人の授業受けたことあるけど全然わからんかった。最後まで頑張って0点だったンゴwwwマイナスじゃなくてよかったンゴ……<br />グッド（<nobr>448</nobr>）バッド（<nobr>37</nobr>）<br /><b>天国の観光者</b>：<br />あいつに泣かされた奴はグッドボタンを押せええ！<br />グッド（<nobr>330</nobr>）バッド（<nobr>110</nobr>）<br /><b>猫には耐えられぬ</b>：<br />お風呂入る時も被り物を取らないって聞いたんだけど<br />グッド（<nobr>220</nobr>）バッド（<nobr>10</nobr>）<br /><b>ついて来い！</b>：<br />こいつ別に大したことないだろ。俺だって頑張れば……<br />グッド（1）バッド（<nobr>1000</nobr>）<br />……<br />おすすめスレッド：<br />2. #ベリタス・レイシオが8つの博士号を取得<br />3. #ベリタス・レイシオ、大学の教科書に掲載される<br />4. #ベリタス・レイシオは狂人か？<br />」<br /><br />統計によると、Dr.レイシオは合計で<nobr>52</nobr>の科目で教鞭を執っており、その教え方は厳しく、複雑で難しいことで知られ、単位を取得できた学生は全体の3%ほどしかいないらしい。しかし最後まで耐え抜いた学生は、そのほとんどが何らかの分野の専門家になっている。<br />……<br />——『知識は特権である：Dr.レイシオを解き明かす』p.<nobr>82</nobr>",
+   "unlockRequirement": "キャラLv.<nobr>40</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・3",
+   "text": "世間はDr.レイシオが何も言っていなくても、彼は天才クラブに入りたがっているものだと考えていた。しかし、レイシオが世間から見たら驚くべき成果を挙げても、ヌースが反応することはなかった。この話は長い間、学術界隈でよく討論される謎となっている。筆者はDr.レイシオの学術補佐であるマルガリータ氏から貴重な証言を得ることができた。<br /><br />「レイシオ先生が天才クラブのことを話題に出したことはありません。でも、1つだけ今でも覚えていることがあります…あれは私がレイシオ先生の学術補佐を担当していた時のこと。私の主な仕事は銀河各地から届く手紙を処理したり、彼と外部との間に立って仲介役をしたりすることでした」 <br /><br />「その日、私はスターピースカンパニーからの手紙を受け取りました。たしか…レイシオ先生が長年研究していた対天体兵器の試射に成功した時だったかと。カンパニーの招待は私から見ても丁重なものでした。なので、興奮しながら先生に手紙を渡したのですが…先生は何も言ってくれなくて。それは石膏頭越しでもわかるほどの重い沈黙でした。そして、彼は礼儀正しく私に外に出るよう言いつけたんです。私が言われた通りに部屋の外に出てドアを閉めると、その瞬間、彼の重々しい溜め息と自嘲するような笑い声が聞こえてきました。これは推測ですが、先生は…もう自分は天才クラブには入れないと判断したのかもしれません……」 <br /><br />「その後のことは、あなたも知っているでしょう。でも私からすれば、先生は本物の天才で…彼の創造は多くの世界を前進させました。医者として宇宙を癒やそうとする学者は、あのお高くとまった天才たちよりも価値がないというのでしょうか？……すみません、少し感情的になってしまいました。今の部分は削除してください。」 <br /><br />Dr.レイシオの支持者の中には、マルガリータ氏のように悔しい思いをしている人が少なくない。そういった人々は、天才クラブがDr.レイシオのような人物を迎え入れなかったのは、一種の「天才」の奇行と偏執の表れだと考えているようだ。<br /><br />——『知識は特権である：Dr.レイシオを解き明かす』p.<nobr>150</nobr>",
+   "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・4",
+   "text": "多くの人はDr.レイシオが博識学会に入った後、学会の掲げる現実的で、平和で、素朴な学術環境に馴染むために、以前のような鋭さは抑えるものだと思っていた。しかし筆者としては、Dr.レイシオはやはりあのDr.レイシオだったと書かずにはいられない。以下は内部記録の原文を抜粋したものである。<br /><br /> 「<br />答弁者：ベリタス・レイシオ<br />テーマ：認識論理<br />委員会主席：ロッセーゼ<br />記録者：マリーヴェ<br />答弁記録：<br />ロッセーゼ：『レイシオ先生、ご説明ありがとうございました。あなたの論文は素晴らしいものでした。では皆さん、質問を始めてください』<br />会場は静まり返っている。<br />ロッセーゼ：『では…私から始めましょう』<br />ロッセーゼ：『先生の主要な観点には賛成なのですが、詳細の一部については、まだあまり理解できていません』<br />ベリタス・レイシオ：『誰かに賛同されるたびに、自分は間違いを犯したのだと思ってしまうな……』<br />ロッセーゼ：『私の質問は、なぜ先生は知識を特権だと考えているのか？ということです』<br />ベリタス・レイシオ：『ロッセーゼ教授、その質問をするということは、君が僕の論文をまったく理解していないだけでなく、僕が運用している導出方法についても理解できていないということを意味する』<br />ベリタス・レイシオ：『だが、君は簡単に答えるための例を提供してくれた。君が僕の考えを理解できないのは、知識が誰にでも享受できるものではないということを証明している』<br />ベリタス・レイシオ：『愚鈍は難病だ。ならば、それを根絶して宇宙を治療することが学者の責務だ』<br />ベリタス・レイシオは演壇に上がり、人々に向かって言い放った。『だから諸君、アホを見て見ぬふりするのはマナーではなく、道徳性に欠ける世間の習慣に過ぎない。知識を伝播するためには、まず人に自分はアホだとわからせる必要がある。もちろん、学会の学者も自身を平等に扱うべきだ』<br />ロッセーゼは肩をすくめて苦笑する。<br />……<br />ベリタス・レイシオは騒然とした空気の中で退場した。<br />答弁評価：情熱的な手が冷たい剣を握っている。これこそベリタス・レイシオに最も相応しい評価といえるだろう。ベリタス・レイシオは論理、情熱、そして批評芸術を結び付け、我々に無知に立ち向かう思想家の卓越した思考と行動を見せてくれた。レイシオ先生の加入は博識学会に莫大な利益をもたらしてくれるだろう。<br />答弁委員会の意見：全員一致で通過<br />」<br /><br />博識学会の中には「凡人院」なる組織が存在するという噂がある。そして、その謎の組織には学会で最も優れた頭脳が集まっていると言われている。Dr.レイシオが「凡人」を自称することは、この噂を裏付けるようなものだった。彼と天才クラブの関係を考えると、この名前からは色々なことを想像してしまう。凡人は天才の対義語であり、多くの努力と対価を支払うことで、ようやく後者の後塵を拝することができる。Dr.レイシオは凡人を自称しているが、それは一種の委縮なのだろうか？それとも嘲笑、もしくは宣戦布告なのだろうか？いずれにしても、彼は知識を以って思想の病を治療することに固執している。それは「真理の医者」という称号に恥じないものである。<br />……<br /><br />——『知識は特権である：Dr.レイシオを解き明かす』p.<nobr>230</nobr>",
+   "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
+  }
+ ],
+ "archive": {
+  "cvCn": "桑毓泽",
+  "cvJp": "武内駿輔",
+  "cvKr": "이동훈",
+  "cvEn": "Jordan Paul Haro",
+  "camp": "博識学会"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Dr.レイシオ",
+ "rarity": 5,
+ "descHash": "博識学会の学者。  変わった性格をしていて、毒舌だが立ち振る舞いはエレガントである。 奇異な石膏頭の下の容貌は意外にも美しい。",
+ "artPath": "a712666aad99860f914168469bd722ca1b7f7b2e39c59b8f75344d80e8f70981",
+ "miniIconPath": "56556c3ee22a170b2c536ffd126ea250057e12d0cef9c71885a79e503e5d5b0f",
+ "damageType": {
+  "id": 64,
+  "iconPath": "91b47b558df75f608b0a8aa93f35fd2063ed789ec25cbcc7bee926c60fba7ab1",
+  "color": "#F4D258",
+  "name": "虚数",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "948d90296adc5203a105a16be892d9e4d5e83c93df11abf59a8ad4321e37fbb8",
+  "altIconPath": "38241d858c120d8a55f36eaab92a34690a7d9add4f3e36383dabf27f5d3f5f55",
+  "color": "#FFFFFF",
+  "name": "巡狩",
+  "rarity": 0
+ },
+ "pageId": "drratio"
+}

@@ -88,7 +88,7 @@
    "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
    "name": "Journal d'aventure",
    "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
-   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
    "purpose": "Matériau d'EXP de personnage",
    "rarity": 3,
    "rewardPath": "/material/409961",
@@ -164,6 +164,7 @@
    "rewardPath": "/material/635673",
    "comeFrom": [
     "Calice de la Zone de stockage",
+    "Calice de la Zone de stockage",
     "Braises immortelles"
    ]
   },
@@ -171,7 +172,7 @@
    "id": 717290,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
    "name": "Ancien moteur",
    "desc": "Moteur mécanique provenant de l'Ancien monde. Matériau avancé utilisé pour le renforcement.",
    "lore": "Il utilise de la géomoelle comme source d'énergie. Lorsqu'il est alimenté, il crache des aurores vagabondes, et non des étincelles.<br /><br />« Il n'y a que la Division technologique directement rattachée à la Gardienne suprême qui a accès aux informations concernant l'Ancien monde. J'ai perdu mes accès quand on m'a mise à la porte. »",
@@ -189,7 +190,7 @@
    "id": 836259,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "iconPath": "d9e262af4f143c0b58be9d20f5c04e04a252fb8f05eb675c0996f5b1bc8f6ad5",
    "name": "Lame briseuse de monde",
    "desc": "Arme cassée laissée à l'abandon par les membres de la Légion d'antimatière. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruction</span>.",
    "lore": "Cette arme représente le rang et les succès accomplis par son propriétaire au nom de la Destruction.<br />Le maître de cette arme est celui qui arrive à la fin de la guerre pour en raviver les braises et consumer le monde. Quelles que soient les gloires du passé ou les bénédictions accordées par les dieux, cette planète est condamnée à redevenir poussière et à s'éteindre dans les profondeurs du ciel étoilé.<br /><br />Le porteur de cette marque a la charge de purifier le monde.",
@@ -197,6 +198,7 @@
    "rarity": 4,
    "rewardPath": "/material/836259",
    "comeFrom": [
+    "Calice de la Zone de stockage",
     "Calice de la Zone de stockage",
     "Synthèse de matériaux de l'Omni-synthétiseur"
    ]
@@ -214,6 +216,7 @@
    "rewardPath": "/material/920200",
    "comeFrom": [
     "Calice de la Zone de stockage",
+    "Calice de la Zone de stockage",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles"
    ]
@@ -222,7 +225,7 @@
    "id": 983278,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "1f3033f7a0d40ab304f7c4af7eaa7a00cc0b0a1cfd9f7698fcbf0b0b8d9321d5",
+   "iconPath": "bf013025c6d4383e5c48a0fae0598d9b489ed29d4ac675292f31af835075c4a7",
    "name": "Chitine endothermique",
    "desc": "Substance chaude et translucide... On dirait presque du feu devenu solide. Permet l'élévation des personnages de type feu.",
    "lore": "Étrange chitine prélevée sur une créature interdimensionnelle. Elle n'est plus aussi brûlante, mais une chaleur émane encore d'elle.<br /><br />« Il fait trop froid, dehors. Mais avec cette gemme, tu pourras explorer le monde et peut-être trouver des villes où il reste encore des humains... »",
@@ -230,6 +233,7 @@
    "rarity": 4,
    "rewardPath": "/material/983278",
    "comeFrom": [
+    "Ombre stagnante de la Zone réglementée de la Garde de la crinière d'argent",
     "Ombre stagnante de la Zone réglementée de la Garde de la crinière d'argent",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -1532,7 +1536,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Réduit la robustesse de l'ennemi au type correspondant en entrant en combat après l'avoir attaqué.",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2434,7 +2438,7 @@
   {
    "id": 5,
    "title": "Bavardage : Membres des Taupes",
-   "text": "Haha ! Sous mon commandement, on a recruté Julian aux mille visages, Luka Bras-d'Acier et l'Enfant rusée ! Tout le monde nous a rejoints !",
+   "text": "Haha ! Sous mon commandement, on a recruté Julian aux mille visages, Luka Bras-d'Acier et l'Enfant rusée ! Tout le monde nous a rejoints !",
    "unlockRequirement": "",
    "cnUrl": "9458bd7f503aba262970795a61b6edfb415937585a3957232cd70b486366b257",
    "jpUrl": "6a411454250cb2d6b982097b9d4f929da95ae2417c8a6c3466c3c26c267b6616",
@@ -2454,7 +2458,7 @@
   {
    "id": 7,
    "title": "Problèmes",
-   "text": "Certaines personnes disent que quand on s'inquiète trop, notre tête devient super lourde. Dis, ça risque pas de m'empêcher de grandir, hein ? ....",
+   "text": "Certaines personnes disent que quand on s'inquiète trop, notre tête devient super lourde. Dis, ça risque pas de m'empêcher de grandir, hein ? ....",
    "unlockRequirement": "",
    "cnUrl": "efa518fbda0d55a3b25e7bc9226c36f4e623793b8b987afa0b5c60d75cbfcedc",
    "jpUrl": "53b4b5a51e59dc563bd9f80f01e024f400129ab0eced7b69ce8d2a926b397f80",
@@ -2464,7 +2468,7 @@
   {
    "id": 8,
    "title": "Anecdote",
-   "text": "Les adultes arrêtent pas de répéter des phrases du genre « tu comprendras quand tu seras grande », mais j'ai entendu dire qu'on oublie des trucs quand on devient grand ! Tu me crois pas ? On va bien voir qui sait le plus de choses !",
+   "text": "Les adultes arrêtent pas de répéter des phrases du genre « tu comprendras quand tu seras grande », mais j'ai entendu dire qu'on oublie des trucs quand on devient grand ! Tu me crois pas ? On va bien voir qui sait le plus de choses !",
    "unlockRequirement": "",
    "cnUrl": "580d05e7f2a466193b98964630c4c35097bd68e95dc414457c5364750de96fad",
    "jpUrl": "114c1015e76d7b762ba68fe52616a2e66395449645299aa23069aff94e3668bf",
@@ -2534,7 +2538,7 @@
   {
    "id": 15,
    "title": "À propos de Fersman",
-   "text": "J'adore mon papa ! Un jour, je vais déterrer un gros trésor, et avec ça, je lui construirai une super grande maison !",
+   "text": "J'adore mon papa ! Un jour, je vais déterrer un gros trésor, et avec ça, je lui construirai une super grande maison !",
    "unlockRequirement": "",
    "cnUrl": "703fa65ab1f188b4aee065c8ffda857bc0d961e6976204934a8f21ae3a3655f5",
    "jpUrl": "5f275d2b9fab4a1509611b24e6e466d4985f8369a7112acb84d0093d47ddc994",
@@ -2554,7 +2558,7 @@
   {
    "id": 17,
    "title": "Activation d'Eidolon",
-   "text": "Je suis prête à trouver d'autres trésors !",
+   "text": "Je suis prête à trouver le prochain trésor !",
    "unlockRequirement": "",
    "cnUrl": "83975774911628f126f50b65959a452721ee24b6f87e51f318607e942b4025f2",
    "jpUrl": "5cc5d0846652026a94acbd71f232d7907e19182c9998bf8c385ab9e1df5093a5",
@@ -2654,7 +2658,7 @@
   {
    "id": 52,
    "title": "Avertissement de danger en début de combat",
-   "text": "P—Personne ne me fait peur !",
+   "text": "P—Personne ne me fait peur !",
    "unlockRequirement": "",
    "cnUrl": "45fd349cd8799279c1f43d2a98e370e2fad63021229079256a9284112b6320c0",
    "jpUrl": "b152e1bec2e3b3553ffe452860df2d0c22442a55736be310fcc58fe367278ace",
@@ -2674,7 +2678,7 @@
   {
    "id": 54,
    "title": "Début du tour 2",
-   "text": "En rang, bande de méchants !",
+   "text": "En rang, bande de méchants !",
    "unlockRequirement": "",
    "cnUrl": "c40146c78e2b9c0c2c575cab81042197e1bc4209bce6259b18717dfa9318e771",
    "jpUrl": "22fce4a185bfc85baaaf437065b13014e4bd0a50847baa8a4b79fa9bf3d75b1d",
@@ -2684,7 +2688,7 @@
   {
    "id": 55,
    "title": "Tour inactif",
-   "text": "Hé ! Fais pas comme si j'existais pas !",
+   "text": "Hé ! Fais pas comme si j'existais pas !",
    "unlockRequirement": "",
    "cnUrl": "2dcc031e6ff3c5fa4bdb2f7be67ca52a90cef3ad98936f857880b53bdbd41303",
    "jpUrl": "6c0959565a53a35a4a291d5675e162ee87e4b5cfa869a3a41b375ee90cd7073e",
@@ -2704,7 +2708,7 @@
   {
    "id": 57,
    "title": "Compétence 1",
-   "text": "Héhé... Tu ne t'attendais pas à ça, pas vrai ?",
+   "text": "Héhé... Tu ne t'attendais pas à ça, pas vrai ?",
    "unlockRequirement": "",
    "cnUrl": "483ec3b24289cf85cc30899b7bebad15e6aaeb52676413d5fbc9731ad4fb4f40",
    "jpUrl": "d3a96fa13b5d105ad1037dbf1830323172de26ccd13487932b7d580f0f440fc2",
@@ -2724,7 +2728,7 @@
   {
    "id": 59,
    "title": "Attaque légère subie",
-   "text": "Tu m'as tapée !",
+   "text": "Tu m'as tapée !",
    "unlockRequirement": "",
    "cnUrl": "203766daf4cab69c563dc9eb50d65dcafedb8c6e9c86a7ac10b1cf8ebf1e88a6",
    "jpUrl": "9e60d5f61d4d252b23275502268ca7d372e157be7c79037322e1b8469c97e302",
@@ -2734,7 +2738,7 @@
   {
    "id": 60,
    "title": "Attaque lourde subie",
-   "text": "Ça fait mal !",
+   "text": "Ça fait mal !",
    "unlockRequirement": "",
    "cnUrl": "8035c6dbd80cd1e573d6534cedb2001073bd372836da05ce27835cbd1a065be0",
    "jpUrl": "29280007e12748d01afccebe747e6d3474a79619ab198bf949be2fa1cd3e44ac",
@@ -2754,7 +2758,7 @@
   {
    "id": 62,
    "title": "Déclenchement de l'ultime",
-   "text": "La Grande Hook de la nuit noire est arrivée. Laissez passer... Laissez passer... Ouuouuuh~ BANG !",
+   "text": "La Grande Hook de la nuit noire est arrivée. Laissez passer... Laissez passer... Ouuouuuh~ BANG !",
    "unlockRequirement": "",
    "cnUrl": "0177ab959cadfe9dd662e80fd23d24d1412c49e29d4bcad63f4000c78006e48e",
    "jpUrl": "b2c739aff16f95e80770de69661058842170e8e4fadcf6464e34b7b9123da472",
@@ -2774,7 +2778,7 @@
   {
    "id": 64,
    "title": "Retour au combat",
-   "text": "Mmh, qu'est-ce que vous feriez sans moi ?",
+   "text": "Mmh, qu'est-ce que vous feriez sans moi ?",
    "unlockRequirement": "",
    "cnUrl": "84fdf653fffe199d0998aec4d2a6a5e10ab232614b6de23a824e85657025d441",
    "jpUrl": "73b9afe94a7f3f1eef7c0208e12509aecc85177efeca07760563f9e88d9837aa",
@@ -2784,7 +2788,7 @@
   {
    "id": 65,
    "title": "Récupération de santé",
-   "text": "Tu es quelqu'un de bien !",
+   "text": "Tu es quelqu'un de bien !",
    "unlockRequirement": "",
    "cnUrl": "d96ab493868d6cf292cad8c629dee5c8eb985b5f0bbe5f5ec75ccba1686f4267",
    "jpUrl": "407dd810bc1e528bfb07ce0f043d22b38c6309decfe17fdef11c436d30ff9836",
@@ -2794,7 +2798,7 @@
   {
    "id": 66,
    "title": "Technique",
-   "text": "Hahahaha !",
+   "text": "Hahahaha !",
    "unlockRequirement": "",
    "cnUrl": "2fb2f15a06b629711a2ebbd19e7b979cc7ed913d1ca9486c815b8fd86629bb71",
    "jpUrl": "1d6f99cea17bb3ce1871a615a099f1733130029d3220d2ca858f5a8c295ea7c0",
@@ -2844,7 +2848,7 @@
   {
    "id": 69,
    "title": "Énigme réussie 1",
-   "text": "Euh ? Je veux encore jouer !",
+   "text": "Euh ? Je veux encore jouer !",
    "unlockRequirement": "",
    "cnUrl": "cd26b81e536c5a9f7fe5770b130c7eeb3efcbdb1531e37124a8e3e2970789942",
    "jpUrl": "ac51d5ff2aec78a4b129bfcfb8466f7c7552fd2f5702c2dd003d6b1d2f24f48a",
@@ -2854,7 +2858,7 @@
   {
    "id": 74,
    "title": "Énigme réussie 2",
-   "text": "Ha ! Je pourrais faire ça les yeux fermés.",
+   "text": "Ha ! Je pourrais faire ça les yeux fermés.",
    "unlockRequirement": "",
    "cnUrl": "e46f0ac6d632d1c3f0f45cf83b9a54e4c537bfbbb82819254f586f6b95257183",
    "jpUrl": "37af7ec7aed00da468b23ed7bae70bdbda100eb687de84fd6e09c964d3e91874",
