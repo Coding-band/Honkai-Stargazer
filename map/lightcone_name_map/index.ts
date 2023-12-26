@@ -1,4 +1,8 @@
 const LightconeName = {
+  //Add in 1.6.0
+  "baptism-of-pure-thought": "Baptism of Pure Thought",
+  "past-self-in-mirror": "Past Self in Mirror",
+
   //Add in 1.5.0
   "night-of-fright": "Night of Fright",
   "an-instant-before-a-gaze": "An Instant Before A Gaze",

@@ -1,0 +1,2806 @@
+{
+ "spRequirement": 130,
+ "iconPath": "b4d627a4e2394752ff7e005684cdc313e161854dedc29e8bfda608936acaa7cf",
+ "bgPath": "27cbf0b1d447f56fb2e67dec45e6eeb0273be6d58a001224fd1f76ea3d676287",
+ "figPath": "f0d10346873e80911f55ed14ed19f8d7ad0b6602aa560eb7e38923ed7a02f30f",
+ "fgPath": "04d6bcc33d0353d0143b61ab552916eecac0a1baee3e1e6c1606449c78562590",
+ "splashIconPath": "72da6f1b2fae6c3fced8b6356875784d9bdfe1e28c20d7ae1026c5ce9d142cf4",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 3,
+  "iconPath": "4ee4d46a01c45f662c4a193c5823f29be35cc4c19ba38ea2fd6f35a00a053d46",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "เครดิต",
+   "desc": "สกุลเงินที่องค์กรสันติภาพแห่งดวงดาวใช้ในการชำระบัญชีแก่ลูกค้า ซึ่งปัจจุบันได้กลายเป็นสกุลเงินหลัก ที่ใช้กันอย่างแพร่หลายสำหรับการเดินทางในอวกาศ",
+   "lore": "\"ผู้คนดิ้นรน ต่อสู้ และแลกเปลี่ยนเพื่อตัวเลขที่แสดงในเทอร์มินัล แต่สิ่งล้ำค่าที่แท้จริงนั้น ไม่สามารถซื้อได้ด้วยตัวเลขจากองค์กร\"",
+   "purpose": "สกุลเงินทั่วไป",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calyx (Great Mine)",
+    "รางวัลภารกิจ",
+    "รางวัลคำขอ",
+    "ร้าน Ember"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Tracks of Destiny",
+   "desc": "วัสดุระดับสูงสำหรับการเพิ่มเลเวล Trace",
+   "lore": "ความพ่ายแพ้ซ้ำแล้วซ้ำเล่าจะนำไปสู่ชัยชนะ ก้าวไปข้างหน้าก้าวแล้วก้าวเล่าจะนำไปสู่จุดเปลี่ยนของโชคชะตา",
+   "purpose": "วัสดุ Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "รางวัลคะแนนสะสม Simulated Universe",
+    "เกียรติยศนิรนาม",
+    "แลกเปลี่ยน Ember",
+    "รางวัลกิจกรรมจำกัดเวลา"
+   ]
+  },
+  "151161": {
+   "id": 151161,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "2ec1fa84daf481a7bef5ee243b4e6b195a84cde88befd531353eeb44bae62a63",
+   "name": "Shape Shifter's Lightning Staff",
+   "desc": "กิ่งไม้ปลายแหลมที่ Shape Shifter จาก Disciples of Sanctus Medicus ทิ้งเอาไว้ วัสดุเลื่อนขั้นของตัวละครประเภทสายฟ้า",
+   "lore": "ตามบันทึกโบราณของ Xianzhou ผู้ที่สำเร็จการฝึกตนสามารถเรียกสายฟ้าและสั่งการสายลมได้ \"Disciples of Sanctus Medicus\" อ้างว่าตนสืบทอดเส้นทางสู่อมตะ และแอบรวบรวมผู้ศรัทธามากมายโดยการแสดงพลังของร่องรอยแห่งเทพ บนกิ่งไม้นี้มีเสียงสายฟ้าอื้ออึงอยู่ ราวกับจะพิสูจน์ว่าคำพูดของพวกเขาไม่ใช่เรื่องโกหก<br /><br />\"ร่างกายมนุษย์คือมายา ความจริงจะตีแผ่ออกมาต่อหน้าผู้รู้แจ้ง\"",
+   "purpose": "วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/151161",
+   "comeFrom": [
+    "Stagnant Shadow (Stargazer Navalia)",
+    "Stagnant Shadow (Stargazer Navalia)",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "คู่มือการเดินทาง",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>20000</nobr> หน่วย",
+   "lore": "หนังสือชุดเกี่ยวกับการผจญภัยที่จำเป็นต่อการสำรวจโลก กดปุ่มอ่านเพื่อฟังเสียงที่น่าฟังในภาษาที่คุณเข้าใจ ซึ่งจะบอกเล่าเกี่ยวกับประสบการณ์การผจญภัยในโลกต่างๆ ของเหล่านักผจญภัยที่มีชื่อเสียง รวมถึงภูมิปัญญาอันล้ำค่าที่พวกเขาได้รับจากดาวแต่ละดวงด้วย<br /><br />\"คู่มือการเดินทางชุดใหม่ 'การทำอาหารระหว่างดวงดาว' จะวางจำหน่ายเร็วๆ นี้ โปรดติดตามกันให้ดี\"<br />\"สำหรับการส่งผลงาน โปรดติดต่อกับ Synesthesia Beacon ERD<nobr>-23</nobr>θ เพื่อติดต่อตัวแทนของสถาบันแห่งปัญญา โดยวิธีการจ่ายค่าต้นฉบับนั้น สามารถจัดการได้ตามความสะดวกของคุณ\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "\"Forgotten Hall\""
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "บันทึกการผจญภัย",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>5000</nobr> หน่วย",
+   "lore": "บันทึกการผจญภัยที่ได้รับการจัดการอย่างเป็นระเบียบ และมีคุณค่าต่อการศึกษา ซึ่งประกอบไปด้วยภาพประกอบและข้อความที่เกี่ยวกับการผจญภัยตั้งแต่ต้นจนจบ ตลอดจนข้อมูลที่มีคุณค่าและเทคนิคที่เกี่ยวข้องกับการเอาชีวิตรอด<br /><br />\"ทำไมไม่แปลงข้อมูลใส่ลงไปในดิสก์ล่ะ? สะดวกกว่าตั้งเยอะ\"<br />\"เมื่อเผชิญกับพายุดาว และการปะทุของกระแสนิวตรอนแล้ว เทคโนโลยีขั้นสูงนั้นมีความเปราะบางมากกว่าที่คิด นอกจากนี้ คนทำหนังสือเล่มนี้คงอยากจะให้คนอ่าน สามารถอ่านได้ด้วยวิธีที่ง่ายที่สุด\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "การฝึกประจำวัน",
+    "ร้าน Ember"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "ความรู้จากการเดินทาง",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>1000</nobr> หน่วย",
+   "lore": "ไดอารี่การเดินทางที่เขียนด้วยลายมือสุดยุ่งเหยิงและมีเนื้อหาตามใจชอบ ซึ่งไม่ค่อยมีประโยชน์สำหรับคุณสักเท่าไหร่<br /><br />\"Dan Heng อ่านจบแล้วก็รีบเอากระดาษพวกนี้ไปทิ้งเถอะ\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "รางวัลคำขอ"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "71d58f084522c87e93327e3e7fc1db8fb4abb65e9989b163d4a348c9a3761329",
+   "name": "Immortal Scionette",
+   "desc": "ต้นอ่อนจากการแตกหน่อของสิ่งศักดิ์สิทธิ์โบราณ วัสดุพื้นฐานที่ใช้สำหรับการเสริมพลัง",
+   "lore": "ที่มาของ \"อายุขัยที่ไม่สิ้นสุด\" ในเผ่าพันธุ์ที่มีอายุยืนยาวของ Xianzhou ก็คือเศษเสี้ยวอภินิหารจากเทพดาราแห่งความ \"เฟื่องฟู\" ในอดีตอันแสนเนิ่นนาน ความหลงผิดต่อชีวิตอมตะของจักรพรรดิองค์หนึ่ง ได้ทำให้กองเรือ Xianzhou ต้องเดินทางเข้าสู่ทะเลดวงดาวนอกฝั่งฟ้า เพื่อตามหายาแห่งความอมตะ<br /><br />\"เราปรารถนาชีวิตชั่วนิรันดร์ และต้องการให้อาณาจักรคงอยู่ตลอดกาล เพราะเป็นเรื่องน่าเศร้าที่วันเวลามีจำกัด และกำลังคนมีที่สิ้นสุด จึงได้ส่งเรือประจัญบานเก้าลำทะยานไปสู่นอกฟากฟ้า เพื่อตามหายาแห่งความอมตะ\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "ดรอปจากสิ่งชั่วร้ายจากความเฟื่องฟู",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "รางวัลคำขอ",
+    "แลกเปลี่ยน Ember",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "c3cb2e5eb5390586c537d03d1de632b1aa59c49a3cc32f24d68672d2f97fb1e5",
+   "name": "Immortal Aeroblossom",
+   "desc": "ดอกไม้ที่เบ่งบานขึ้นจากสิ่งศักดิ์สิทธิ์โบราณ วัสดุธรรมดาที่ใช้สำหรับเสริมพลัง",
+   "lore": "ที่มาของ \"อายุขัยที่ไม่สิ้นสุด\" ในเผ่าพันธุ์ที่มีอายุยืนยาวของ Xianzhou ก็คือเศษเสี้ยวอภินิหารจากเทพดาราแห่งความ \"เฟื่องฟู\" หลังจากผ่านการล้มลุกคลุกคลานมานับไม่ถ้วน ในที่สุดกองเรือที่ตามหายาแห่งความเป็นอมตะ ก็สามารถมองเห็นใบหน้าของเทพได้ เทพผู้ศักดิ์สิทธิ์ผู้นั้นประทานพรมาในรูปแบบวัตถุ และแล้ว Ambrosial Arbor ก็ได้แตกใบออกมา<br /><br />\"ดอกตูมร่วงลงสู่จันทรา บุปผาศักดิ์สิทธิ์ส่งกลิ่นหอมในมวลเมฆา ชั่วพริบตาที่ดอกไม้ผลิบาน ไม้เก่าแก่นั้นก็ได้กลับมาอ่อนวัยอีกครา\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "ดรอปจากสิ่งชั่วร้ายจากความเฟื่องฟู เมื่อระดับความสมดุลถึง Lv.2",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "635675": {
+   "id": 635675,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "5d1c50902cff0d2be1eb952d08078e3134c231cdf0c9142c1ef475ec07c42b50",
+   "name": "Key of Inspiration",
+   "desc": "กุญแจวิเศษที่ตกอยู่ในมือของนักวิชาการผู้ใคร่รู้ สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">ปัญญา</span>ได้เล็กน้อย",
+   "lore": "มันสามารถปลดล็อกแรงบันดาลใจที่ซ่อนอยู่ในส่วนลึกของจิตสำนึก<br />การคว้ากุญแจได้เป็นเหมือนการจุดประกายไฟในห้วงความคิด เพื่อส่องสว่างเส้นทางในเบื้องหน้า<br /><br />\"Eureka!\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 2,
+   "rewardPath": "/material/635675",
+   "comeFrom": [
+    "Calyx (Rivet Town)",
+    "Calyx (Rivet Town)",
+    "ร้าน Ember"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5708b196a8af89740ced588d98dc414c791d209879957fb0bc8644cc2dc84adb",
+   "name": "Immortal Lumintwig",
+   "desc": "กิ่งก้านผลัดใบที่เกิดจากสิ่งศักดิ์สิทธิ์โบราณ วัสดุชั้นสูงที่ใช้สำหรับเสริมพลัง",
+   "lore": "ที่มาของ \"อายุขัยที่ไม่สิ้นสุด\" ในเผ่าพันธุ์ที่มีอายุยืนยาวของ Xianzhou ก็คือเศษเสี้ยวอภินิหารจากเทพดาราแห่งความ \"เฟื่องฟู\" หลังจากหายนะสามประการผ่านไป Xianzhou ก็จมอยู่ในเถ้าถ่าน ผู้มีชีวิตนิรันดร์ตกลงสู่ด้านมืด ก่อเกิดซึ่งความทุกข์ไร้ที่สิ้นสุด<br /><br />\"Ten-Lords Commission ออกกฎ ผู้ใดที่ใกล้จะกลายเป็น Mara-Struck จะถูกนำตัวไปขัง เพื่อรอการพิพากษา\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "ดรอปจากสิ่งชั่วร้ายจากความเฟื่องฟู เมื่อระดับความสมดุลถึง Lv.4",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "836261": {
+   "id": 836261,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "36e68603fbc67d4b69c02e01d7d5d41a80446ea6c49b1d828b47320f6225825c",
+   "name": "Key of Wisdom",
+   "desc": "กุญแจวิเศษที่ตกอยู่ในมือของอัจฉริยะผู้ยิ่งใหญ่ที่สุดในกาแล็กซี สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">ปัญญา</span>ได้เป็นอย่างมาก",
+   "lore": "กุญแจนี้เป็นหลักฐานของผู้ที่ได้รับเชิญ ที่จะสามารถเปิดประตูสู่โถงแห่งปัญญาได้<br />แม้ว่าจะมีกุญแจอยู่ในมือ แต่การหาประตูที่มันสามารถเปิดได้นั้น ยากกว่าการได้กุญแจมาเสียอีก บรรดาผู้ที่ก้าวเข้าไปในประตูศักดิ์สิทธิ์ได้ ต่างก็รู้ในทันทีว่า เมื่อก้าวข้ามไปอีกฝั่งแล้ว จะไม่สามารถหวนกลับได้อีก<br /><br />\"ความรู้ไม่สามารถบอกถึงคำตอบของจักรวาล แต่ความรู้สอนให้เรารู้จักการถาม\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 4,
+   "rewardPath": "/material/836261",
+   "comeFrom": [
+    "Calyx (Rivet Town)",
+    "Calyx (Rivet Town)",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ"
+   ]
+  },
+  "920202": {
+   "id": 920202,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "489f5c80b6f0de258e076634803c9540b0504c32e55f556748095c334780289d",
+   "name": "Key of Knowledge",
+   "desc": "กุญแจวิเศษที่ตกอยู่ในมือของนักปราชญ์ สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">ปัญญา</span>ได้ปานกลาง",
+   "lore": "กุญแจไขปริศนาที่เปิดผนึกความจริง และค้นพบปัญญาที่เกินกว่ามนุษย์จะหยั่งถึงได้<br />ไม่ว่าผู้ครอบครองจะพยายามพิสูจน์แค่ไหน แต่ก็ไม่มีใครมองเห็นรูปร่างของกุญแจนอกจากตัวเขาเอง บางคนเชื่อว่ามันเป็นของขวัญจากสวรรค์ ในขณะที่บางคนคิดว่ามันเป็นสัญญาณของความผิดปกติทางจิต<br /><br />\"ฉันฝันถึงโมเลกุลที่ขดเหมือนงูจับหางตัวเอง พอตื่นขึ้นมาก็พบว่านี่คือคำตอบที่ฉันตามหามาตลอดนั่นเอง\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 3,
+   "rewardPath": "/material/920202",
+   "comeFrom": [
+    "Calyx (Rivet Town)",
+    "Calyx (Rivet Town)",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ร้าน Ember"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "c92e008415ed578b02aeeebec3e4303f0e6c56d05fab48f2cfd79469b64f222b",
+   "name": "Destroyer's Final Road",
+   "desc": "วัสดุระดับสูงสำหรับการเพิ่มเลเวล Trace",
+   "lore": "แม้ว่าร่างกายของ Leviathan จะพังทลายไปแล้ว แต่ในกล่องยังคงกักขังเจตจำนงที่ยังไม่เสื่อมสลาย แต่ตราบใดที่ไม่มีใครเปิดกล่องนี้ได้ เจตจำนงของมันก็จะอยู่ในสถานะซ้อนทับระหว่างการดำรงอยู่และการไม่มีจริง แล้วคอยขับเคลื่อนเครื่องยนต์ที่ถูกทำลายให้ทำงานต่อไปได้<br /><br />\"Doomsday Beast เป็นหายนะที่เกิดขึ้นจากการหลอมรวมใน Warforge โดยใช้ชิ้นส่วนของ Leviathan และความเศร้าโศกในกระดูกของทุกสรรพสิ่ง... ขณะที่ปฏิบัติการทำลายล้างอยู่นั้น มันก็โหยหาความตายของตัวมันเองเช่นกัน\"",
+   "purpose": "วัสดุ Trace",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "Echo of War (Supply Zone)"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 95.04,
+   "attackAdd": 4.752,
+   "hpBase": 158.4,
+   "hpAdd": 7.92,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549504,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 133.056,
+   "attackAdd": 4.752,
+   "hpBase": 221.76,
+   "hpAdd": 7.92,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549504,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 171.072,
+   "attackAdd": 4.752,
+   "hpBase": 285.12,
+   "hpAdd": 7.92,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633445,
+     "count": 6
+    },
+    {
+     "id": 151161,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 209.088,
+   "attackAdd": 4.752,
+   "hpBase": 348.48,
+   "hpAdd": 7.92,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633445,
+     "count": 9
+    },
+    {
+     "id": 151161,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 247.104,
+   "attackAdd": 4.752,
+   "hpBase": 411.84,
+   "hpAdd": 7.92,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717386,
+     "count": 6
+    },
+    {
+     "id": 151161,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 285.12,
+   "attackAdd": 4.752,
+   "hpBase": 475.2,
+   "hpAdd": 7.92,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717386,
+     "count": 9
+    },
+    {
+     "id": 151161,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 323.136,
+   "attackAdd": 4.752,
+   "hpBase": 538.56,
+   "hpAdd": 7.92,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 99,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "04475d40bc18954b6975a52aeb9282029bc5c391cb36ff31430d13982d9faebe",
+   "artPath": "51098e816bb35f83c4d0c3f02e36847b308a366746745013c28941304049cc3f",
+   "name": "Slash, Seas Split",
+   "descHash": "เมื่อ \"Lightning-Lord\" ทำการโจมตี ตัวคูณ DMG ของเป้าหมาย ที่อยู่ใกล้เคียงกับศัตรูที่กำหนด จะเพิ่มขึ้นอีก <nobr>#1[i]%</nobr> ของตัวคูณ DMG ของศัตรูเป้าหมายหลัก",
+   "params": [
+    0.25
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "1ada2903de22f2211cd7ccc29b6f1d13cb32c853c2f204b0d98e950f18c05fe7",
+   "artPath": "8d02f2fa030804a7410f8f4c0a5c3a21b3366f270f50df1056a2fd16e902eb9d",
+   "name": "Swing, Skies Squashed",
+   "descHash": "หลังจาก \"Lightning-Lord\" แอ็กชัน การโจมตีปกติ, สกิลต่อสู้, และท่าไม้ตายของ Jing Yuan จะสร้าง DMG เพิ่มขึ้น <nobr>#1[i]%</nobr> เป็นเวลา <nobr>#2[i]</nobr> เทิร์น",
+   "params": [
+    0.2,
+    2
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "c285ee548496215a285ac813e29e5d66263c9ce37bd30bface67a35dd34607be",
+   "artPath": "008d32c21ea127793484562895a96f6c6316996b554ccfe07cefa105b06d0492",
+   "name": "Strike, Suns Subdued",
+   "descHash": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "2b10749c72e213cf02be698dbeeffae1e10ea29442682e2ed7630900cb0bba92",
+   "artPath": "a8ecbfee2b5ed1aee477fc5f41a76a7a49ada94e77550f648f00eea927e0ad64",
+   "name": "Spin, Stars Sieged",
+   "descHash": "ทุกครั้งที่ \"Lightning-Lord\" ทำการโจมตี Jing Yuan จะฟื้นฟูพลังงาน <nobr>#1[i]</nobr> หน่วย",
+   "params": [
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "1b59f0150af03906f13b88e96a1c77db707657af42d5c1b65039e43da4cdee4d",
+   "artPath": "d0a29a14f59556ac7a6ce6d5145e6d46df907776b9af70a6d840828effc03788",
+   "name": "Stride, Spoils Seized",
+   "descHash": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "74e9240d790270802b8ce168fcdc3b530c87b633c2c520a85f6dd979454afe8a",
+   "artPath": "dbaf33bf9cbd2477edf3676e9e13e239f4931131296edd74a2d97f5dc7de0aa6",
+   "name": "Sweep, Souls Slain",
+   "descHash": "หลังจากการโจมตีแต่ละครั้งของ \"Lightning-Lord\" จะทำให้ศัตรูเป้าหมายที่กำหนด ติดสถานะเปราะบางเพิ่มเติม<br />ศัตรูเป้าหมายที่ติดสถานะเปราะบาง จะได้รับ DMG เพิ่มขึ้น <nobr>#1[i]%</nobr> จนกว่าจะสิ้นสุดเทิร์นปัจจุบันของ \"Lightning-Lord\" โดยสามารถซ้อนทับได้สูงสุด <nobr>#2[i]</nobr> ชั้น",
+   "params": [
+    0.12,
+    3
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   418990
+  ],
+  [
+   302345
+  ],
+  [
+   218404
+  ],
+  [
+   904103
+  ],
+  [
+   619576
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "โจมตีเดี่ยว",
+   "descHash": "สร้าง DMG <span style=\"color:#c75de2;\">สายฟ้า</span> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ของ ATK ของ Jing Yuan แก่ศัตรูที่กำหนดหนึ่งตัว",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 418990,
+   "name": "Glistening Light",
+   "iconPath": "b6954d6ac16ac304f5fc55cc023277a83508be464cf4ac03ff3ba4829269748d",
+   "typeDescHash": "โจมตีปกติ",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "โจมตีหมู่",
+   "descHash": "สร้าง DMG <span style=\"color:#c75de2;\">สายฟ้า</span> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ของ ATK ของ Jing Yuan แก่ศัตรูทั้งหมด พร้อมทั้งเพิ่มจำนวนการโจมตีในเทิร์นถัดไปของ \"Lightning-Lord\" <nobr>#2[i]</nobr> ครั้ง",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "30",
+   "id": 302345,
+   "name": "Rifting Zenith",
+   "iconPath": "1b59f0150af03906f13b88e96a1c77db707657af42d5c1b65039e43da4cdee4d",
+   "typeDescHash": "สกิลต่อสู้",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.55,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.75,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8125,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.875,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9375,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.1,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.15,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.25,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "โจมตีหมู่",
+   "descHash": "สร้าง DMG <span style=\"color:#c75de2;\">สายฟ้า</span> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ของ ATK ของ Jing Yuan แก่ศัตรูทั้งหมด พร้อมทั้งเพิ่มจำนวนการโจมตีในเทิร์นถัดไปของ \"Lightning-Lord\" <nobr>#2[i]</nobr> ครั้ง",
+   "ultimateCost": 130,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 218404,
+   "name": "Lightbringer",
+   "iconPath": "f589a3e14c6b894a3eda53b8bfd80e2fffabaeae6994e3d4843d1763f4cf0c5a",
+   "typeDescHash": "ท่าไม้ตาย",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.2,
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.28,
+      3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.36,
+      3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.44,
+      3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.52,
+      3
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.6,
+      3
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.7,
+      3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.8,
+      3
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.9,
+      3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      3
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.08,
+      3
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.16,
+      3
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.24,
+      3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.32,
+      3
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.4,
+      3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "จู่โจม",
+   "descHash": "เมื่ออัญเชิญ \"Lightning-Lord\" ออกมาในช่วงเริ่มต้นการต่อสู้ \"Lightning-Lord\" จะมีความเร็วเริ่มต้น <nobr>#1[i]</nobr> หน่วย และจำนวนการโจมตี <nobr>#4[i]</nobr> ครั้ง เมื่อแอ็กชันและทำการ<u>โจมตีต่อเนื่อง</u> การโจมตีแต่ละครั้งจะสุ่มสร้าง DMG <span style=\"color:#c75de2;\">สายฟ้า</span> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> ของ ATK ของ Jing Yuan แก่ศัตรูหนึ่งตัว พร้อมทั้งสร้าง DMG <span style=\"color:#c75de2;\">สายฟ้า</span> <nobr>#5[i]%</nobr> ของ DMG ที่เกิดกับเป้าหมายหลัก แก่ศัตรูที่อยู่ใกล้เคียงกับเป้าหมายด้วย<br />จำนวนการโจมตีของ Lightning-Lord สะสมได้สูงสุดถึง <nobr>#6[i]</nobr> ครั้ง และทุกครั้งที่จำนวนการโจมตีของ \"Lightning-Lord\" เพิ่มขึ้น 1 ครั้ง ความเร็วจะเพิ่มขึ้น <nobr>#3[i]</nobr> หน่วย หลังจากจบการแอ็กชัน ความเร็วและจำนวนการโจมตีจะฟื้นกลับคืนสู่ค่าเริ่มต้น<br />หาก Jing Yuan <u>หมดสติ</u> แล้ว \"Lightning-Lord\" จะหายไป<br />เมื่อ Jing Yuan ได้รับผลกระทบจาก<u>สถานะ Debuff ประเภทควบคุม</u> \"Lightning-Lord\" จะไม่สามารถแอ็กชันได้",
+   "ultimateCost": 0,
+   "break": "15/hit",
+   "energy": "0/hit",
+   "id": 904103,
+   "name": "Prana Extirpated",
+   "iconPath": "de9b7e9c4bdb6d5fb13a0aafd24f4d74e2a7fef68ae8dbf59cd9a4ab5645dd8c",
+   "typeDescHash": "พรสวรรค์",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      60,
+      0.33,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      60,
+      0.363,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.396,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.429,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.462,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.495,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.53625,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.5775,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.61875,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.66,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      60,
+      0.693,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      60,
+      0.726,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      60,
+      0.759,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      60,
+      0.792,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      60,
+      0.825,
+      10,
+      3,
+      0.25,
+      10
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "หลังจากโจมตีศัตรูและเข้าสู่การต่อสู้ จะลดทอนความทนทานของประเภทที่สอดคล้องกับศัตรูเป้าหมาย",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 703517,
+   "name": "Attack",
+   "iconPath": "b6954d6ac16ac304f5fc55cc023277a83508be464cf4ac03ff3ba4829269748d",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "เสริมพลัง",
+   "descHash": "หลังจากที่ใช้เทคนิคแล้ว เมื่อเริ่มการต่อสู้ครั้งต่อไป จำนวนการโจมตีของ \"Lightning-Lord\" ในเทิร์นที่ 1 จะเพิ่มขึ้น <nobr>#1[i]</nobr> ครั้ง",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 619576,
+   "name": "Spirit Invocation",
+   "iconPath": "e56a46919cbd28cb5ddffb61cc13197430180cec1b0c5bf4ead105b87770cb6b",
+   "typeDescHash": "เทคนิค",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1204201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 56294,
+    "name": "เสริมการโจมตี",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "ATK",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1204210,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 939648,
+    "name": "เสริมการโจมตี",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "ATK",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 160000
+     },
+     {
+      "id": 836261,
+      "count": 8
+     },
+     {
+      "id": 717386,
+      "count": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": 1204101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1204202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1204203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 56292,
+        "name": "เสริมการโจมตี",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATK",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920202,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      },
+      {
+       "id": 1204204,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 56289,
+        "name": "เสริมการป้องกัน",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+        "statusList": [
+         {
+          "key": "DEF",
+          "value": 0.05
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920202,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 56291,
+      "name": "เสริมอัตราคริติคอล",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+      "statusList": [
+       {
+        "key": "อัตราคริติคอล",
+        "value": 0.026999999
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635675,
+        "count": 3
+       },
+       {
+        "id": 549504,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "หากจำนวนการโจมตีในเทิร์นถัดไปของ \"Lightning-Lord\" มากกว่าหรือเท่ากับ <nobr>#1[i]</nobr> ครั้ง DMG คริติคอลในเทิร์นถัดไปของ \"Lightning-Lord\" จะเพิ่มขึ้น <nobr>#2[i]%</nobr>",
+    "ultimateCost": 0,
+    "id": 56195,
+    "name": "Battalia Crush",
+    "iconPath": "7518a35e95f3a9b244e048e744b7d6d10f87192160f12ad7bbbd8aeb3d9cc862",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       6,
+       0.25
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635675,
+        "count": 3
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1204102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1204205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1204206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 56287,
+        "name": "เสริมอัตราคริติคอล",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "อัตราคริติคอล",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836261,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      },
+      {
+       "id": 1204207,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 56288,
+        "name": "เสริมการโจมตี",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATK",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836261,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 56290,
+      "name": "เสริมการโจมตี",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "ATK",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920202,
+        "count": 5
+       },
+       {
+        "id": 633445,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "เมื่อเริ่มต้นการต่อสู้ จะฟื้นฟูพลังงาน <nobr>#1[i]</nobr> หน่วยทันที",
+    "ultimateCost": 0,
+    "id": 56198,
+    "name": "Savant Providence",
+    "iconPath": "d4ecbe2512f31bdcd45f4610a1839aca0f2fcc4e00d4d91fd17cb55781aa9940",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       15
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920202,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1204103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1204208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 56301,
+      "name": "เสริมการป้องกัน",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+      "statusList": [
+       {
+        "key": "DEF",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1204209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 56302,
+      "name": "เสริมอัตราคริติคอล",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+      "statusList": [
+       {
+        "key": "อัตราคริติคอล",
+        "value": 0.053
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "หลังจากปล่อยสกิลต่อสู้ อัตราคริติคอลจะเพิ่มขึ้น <nobr>#1[i]%</nobr> เป็นเวลา <nobr>#2[i]</nobr> เทิร์น",
+    "ultimateCost": 0,
+    "id": 56197,
+    "name": "War Marshal",
+    "iconPath": "54b5df05ec88bfa8fdade822ba3875555c872f78a5e73973971b2c36ca795ada",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.1,
+       2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "ลำตัว",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "อัตราคริติคอล",
+    "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8"
+   },
+   {
+    "relicTypeHash": "เท้า",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "ความเร็ว",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Planar Sphere",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "เพิ่ม DMG สายฟ้า",
+    "propertyIconPath": "dbf8a033f78ebfe4765472b27aa0e7d3838d36f8f15868c49a3433ccca9ef1aa"
+   },
+   {
+    "relicTypeHash": "Link Rope",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "ATK",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "พบกันครั้งแรก",
+   "text": "ฉันคือ Jing Yuan นายพลของ Cloud Knight แห่ง \"Luofu\" ไม่ต้องสำรวมขนาดนั้นหรอก \"นายพล\" ก็แค่ตำแหน่งชั่วคราวเท่านั้น เรียกฉันว่า Jing Yuan ก็พอ",
+   "unlockRequirement": "",
+   "cnUrl": "80d0a57a5541f52c6136a7ce385ab5e994e5c7200f34b9c5810859bde312d4d2",
+   "jpUrl": "d47eab6829d2a8f087407bc0a81f2d4b212814d5a728011d83459d0472536c04",
+   "enUrl": "d6a0312d94219eb39d66482df0134b46a8c9d5517eaef37a592483ac8677c490",
+   "krUrl": "1c7bbada75bf893af9d06adaaed0e1d8295eea999d2e0d9273e87a6215e95746"
+  },
+  {
+   "id": 2,
+   "title": "ทักทาย",
+   "text": "มาแล้วเหรอ ถ้ามีเรื่องราวการเดินทางอะไรที่น่าสนใจ ก็มาเล่าให้ฉันฟังได้นะ",
+   "unlockRequirement": "",
+   "cnUrl": "2452db280f98bcabb400cba770790dd9f04f55811054f9b5edcb926055ad5935",
+   "jpUrl": "a3fe4b904443f02abedae504ee947980e43d28dce8c44310bdef2743f3576cf2",
+   "enUrl": "2d9d7b1fb4347849c959483a77e9d914fe9645a926f8fe9143cb4746cc898011",
+   "krUrl": "75748fc90f638dcac46c608f39a6bc35cd2c335655155a8d8727203534a3affd"
+  },
+  {
+   "id": 3,
+   "title": "บอกลา",
+   "text": "อืม เธอ/นายพักผ่อนเถอะ... ฉันยังมีงานบางอย่างที่ต้องจัดการ ขอโทษด้วยที่ไม่สามารถไปส่งได้",
+   "unlockRequirement": "",
+   "cnUrl": "5c104dc3d7ec3331451e1e0ba1c899999401731de8c92fab5c4b4591be74888a",
+   "jpUrl": "b952ca9d2e0daea05f2fb4adb331f1107b4580fb0060db4d741cf89e9deb0460",
+   "enUrl": "c3989de287f1917e4bb92c1ce5b18d4acdb5ecc4abe3a0b5023ecc992828d96a",
+   "krUrl": "c5c856f9f218806126c2ace59483e7627bf05696610876ee6ff3d28abd9aa433"
+  },
+  {
+   "id": 4,
+   "title": "เกี่ยวกับตัวเอง",
+   "text": "ศัตรูในอดีตบ้างก็ถูกจับ บ้างก็จากไป เพื่อนเก่าทั้งหลาย ต่างก็กระจัดกระจายไปตามสายลม พอคิดแบบนี้แล้ว ฉันก็ถือเป็น \"คนแก่\" คนหนึ่งเลยนะเนี่ย...",
+   "unlockRequirement": "",
+   "cnUrl": "300c01ac711da4db6a21263f4ee3042a68ad3b7541702025267ce1fa82836566",
+   "jpUrl": "b2566e824ee7ea6cdf3ae2fe3e825d3051c4304eafb34a875a0e536fbadd611a",
+   "enUrl": "d12bd1d15144e93457ddb5e428336ed90f919fb460bbad3614da0a5fa88a0158",
+   "krUrl": "9e251b9d0bd099f27f548febbe2c9c713a1fe8244e288b6d3730f47ab0ce4565"
+  },
+  {
+   "id": 5,
+   "title": "พูดคุยทั่วไป - เดินหมาก",
+   "text": "ผู้เล่นหมากที่เก่งกาจนั้นไม่มีเทคนิคล้ำเลิศใดๆ ผู้คนมักจะพากันตื่นเต้นกับฝีมืออันเฉียบคม ที่สามารถพลิกสถานการณ์ได้ โดยไม่สนใจถึงสถานการณ์โดยรวม",
+   "unlockRequirement": "",
+   "cnUrl": "1cc8c4fb237f07882e3c0ff6edc0695a0f5b1ce5151aec5036ee943a663669e9",
+   "jpUrl": "db544670756f74b97243d565da49a3a146eb747644d1d0f8d7a57a2eb97fb029",
+   "enUrl": "c9a07b05e242e31c317df4bf213b8055da690c01ed38f256f3bf5073fea4a1c3",
+   "krUrl": "55de126e46b4fa6262ad73c801b6cc200c07d785960fb633b7af4f88553ff5e0"
+  },
+  {
+   "id": 6,
+   "title": "พูดคุยทั่วไป - Luofu",
+   "text": "บางทีชาวต่างแดนอาจจะชินกับการเรียก \"Luofu\" ว่า Xianzhou แต่ความจริงแล้ว... \"Luofu\" ไม่ใช่ Xianzhou นะ \"Luofu\" ก็คือ \"Luofu\"",
+   "unlockRequirement": "",
+   "cnUrl": "3865316d2d22d07131e759d2c0bc2712062540ee9af6da3e9486eda6a63fadc7",
+   "jpUrl": "c9fe48fb247124197bbbc6b92b2ccde52eb844ef94a5b693e0cc731e22f2f9b6",
+   "enUrl": "eab1197b7707f5c491191ac30487abfca6f5bf1a5397cb3087376401be161259",
+   "krUrl": "ea90c2986d8f131c715111e3ba96518fe935d6f2aabb9da3d31a777ca4e7da9b"
+  },
+  {
+   "id": 7,
+   "title": "งานอดิเรก",
+   "text": "การหลับตาพักผ่อนจิตใจ พอเวลาผ่านไป เรื่องนี้ดันทำยากขึ้นซะงั้น",
+   "unlockRequirement": "",
+   "cnUrl": "6ec0e830f620e160b70bd9e9bd28c4ab2c8cbb4d034640cd5447c96d97aea1b6",
+   "jpUrl": "ca7b1669c12762f704e1bdbb75a5ca34da4dc712a93a983f52f426827ef65ce6",
+   "enUrl": "d62243f05d9575fa79b30f90ec523b5dced65f0fa04d3243cd8b041efac43668",
+   "krUrl": "f4ce9549daf0f19f65ed3ffbdfdddc172e573865c20cb3aa7d21b11a974c0b24"
+  },
+  {
+   "id": 8,
+   "title": "เรื่องกลุ้มใจ",
+   "text": "ในชีวิตนี้ฉันกลัวเรื่องยุ่งยากที่สุดแล้ว มันไม่ได้ถูกแบ่งเป็นเรื่องใหญ่หรือเล็กเท่านั้นนะ แต่ยังแบ่งเป็นเรื่องใกล้ตัวหรือไกลตัวอีกด้วย จากนั้นจะวางแผนจัดการยังไง นี่ก็ต้องมานั่งปวดหัวคิดอีก...",
+   "unlockRequirement": "",
+   "cnUrl": "7d324a7219ad836c38a8ed78a102fd281dc2ab88b99a248ba78856ac6775bab1",
+   "jpUrl": "0a1f866568dcdf7543c255eea76b94c4b074a2fd92a5ba071c2672daa87259e2",
+   "enUrl": "2f05fd623660d1602a83e129e4877f6550dd8fb8dfe11d946d3b8a7173523f82",
+   "krUrl": "2014d5825713a158fb5dbecd005ec3cecde8cd912bfb637b399811dd1724a909"
+  },
+  {
+   "id": 9,
+   "title": "เรื่องที่อยากจะแบ่งปัน",
+   "text": "จิตวิญญาณผู้ยิ่งใหญ่ท่านนี้ถูกเรียกว่า \"ท่านเทพศักดิ์สิทธิ์ผู้ขี่อสนีบาตกวาดล้างปีศาจและเทพผู้โสมม\" ฉันอ่านเจอชื่อนี้ในหนังสือโบราณ แต่ยาวเกินไปจนจำไม่ไหว ก็เลยตัดออกไปนิดหน่อย แล้วได้ชื่อย่อมาว่า \"เทพ...อสนีบาต\"",
+   "unlockRequirement": "",
+   "cnUrl": "c537fd08e758ef5957ec946e344f2fd1f1a5adfc696f6ec58c4fd6d9e003f1ef",
+   "jpUrl": "2da39e09e7a584061b8163d162546291cabd34d1f4e111ce0deda1599aa97c84",
+   "enUrl": "a9735b666ea282e65100e8931c39307f87cc2d45a7d9f530d5a1717616618e43",
+   "krUrl": "5891c71d3edb9ebee07b94ef993abf930ac0fac845497da0e491f1682db28f46"
+  },
+  {
+   "id": 10,
+   "title": "ความรู้",
+   "text": "ฉันถูกงานต่างๆ ในโลกพันธนาการมาหลายปีแล้ว ไม่ใช่แค่รู้สึกชินชากับสิ่งต่างๆ รอบตัวเท่านั้น แต่ฉันยังกลายเป็นคนน่าเบื่อด้วย และถ้าให้พูดถึงเรื่องที่น่าสนใจ ก็ต้องเป็นการได้พบคนที่เดินทางมาจากต่างแดนอย่างเธอ/นายไงล่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "872ada57c0b00f76f73bb3a7383c156207eab6a5e2bdf94461653ab6e80bc8ec",
+   "jpUrl": "0e55c1215e220ad458ae7c86e87fb10f5e6fd7f2a8a28faf97a132e4dfa9e176",
+   "enUrl": "9bc426f72860e5637f62ae1dfc4d29968daef068b0d88efa2e40992a31c2513b",
+   "krUrl": "70e8c394ebd21265b8558895ac63b323ae131cc0793cc193f9e40f697d203337"
+  },
+  {
+   "id": 11,
+   "title": "เกี่ยวกับ Yanqing",
+   "text": "ถ้าปฏิบัติกับเขาเหมือนเป็นเด็ก เขาก็จะทำตัวเหมือนผู้ใหญ่ แต่ถ้าปฏิบัติกับเขาเหมือนเป็นผู้ใหญ่ เขาก็จะแสดงนิสัยแบบเด็กๆ ออกมา",
+   "unlockRequirement": "",
+   "cnUrl": "c3326ddac6da7e1d905996c05bd95a5d146948d59768963f2911acb42a0daa5b",
+   "jpUrl": "1d1e7ed1216eccda57b24d5c9f7f978f6a51a4eeed7e5f538a21cbb5c61dc6ef",
+   "enUrl": "a5525651791027d928d37473e9cbde516dc58188b1bb4a9f9b4b3df657152662",
+   "krUrl": "af6421bdc3f4ae4c5872a34dd17cceb2b102188d811e49a218370b7f010e85b3"
+  },
+  {
+   "id": 12,
+   "title": "เกี่ยวกับ Fu Xuan",
+   "text": "ฉันรู้ความต้องการในใจของ Fu Xuan ดี ก็เลยต้องให้เธอรอสักหน่อย และถ้าเธออดทนรอได้ เวลานั้นก็จะมาถึงเอง",
+   "unlockRequirement": "",
+   "cnUrl": "e43e67c82a391b2b22ada506afefa29de704842df2f83714e885453699b6abb3",
+   "jpUrl": "9bc686af3b9bbd6b1bf22d0fdff4a55c9de9cf356e2ceb21cebf8f749bfbc5e4",
+   "enUrl": "4aebcb66e940f4d79e68019996da501385c388fbe3994ed4813c412abb143bd2",
+   "krUrl": "321f4194f32cdc19e521ffb6ee4d08e658eaf9bd7fe32700d2fed4239d17b4db"
+  },
+  {
+   "id": 13,
+   "title": "เกี่ยวกับ Yukong",
+   "text": "ผู้คนคิดว่าผู้บังคับการ Yukong เกษียณแล้ว... แต่กลับไม่รู้หรอกว่า หลังจากปล่อยสิ่งที่รักอย่างการโบยบินไป เธอกลับเลือกเส้นทางอื่นที่ลำบากยิ่งกว่าเสียอีก",
+   "unlockRequirement": "",
+   "cnUrl": "2ae80aae77930e53aa32ffcdafc35c1ffaa9ca85bd99cccab886db5aeb60fecc",
+   "jpUrl": "27155476f35911f500af0550142fed4174d6d485dceba11016b6e8b994d96fb6",
+   "enUrl": "24168c5cf5ddbe076c2e3a1876f878491c5303202bc41d16cc6df6e6d6899485",
+   "krUrl": "b469a0891190fcbf2b749e31292928c4b56bb983a0782ad1e20b1394cf886783"
+  },
+  {
+   "id": 14,
+   "title": "เกี่ยวกับ Tingyun",
+   "text": "เพราะมีผู้แทนแบบคุณ Tingyun ที่คอยเป็นตัวกลางในการเจรจา การค้าใน Xianzhou ก็เลยรุ่งเรืองแบบทุกวันนี้ไงล่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "9ac4ef22d307ce33419e2a5be24a7b0322212253c17ad64074e233741c59b39b",
+   "jpUrl": "8fbe00b17a9e332e6c15240e98f45bf77f896913bcbd9a9fa897bffacd721fb5",
+   "enUrl": "cd1672dd0ebdd704eaadd6ca38d7b16bfc7367141fe2fb6302663648444d4513",
+   "krUrl": "42a23a9dd556d5f1528fad52ab4c384d4e052e50446bf4e17eca9f65a8ae4a1c"
+  },
+  {
+   "id": 15,
+   "title": "เกี่ยวกับ Luocha",
+   "text": "ฉันก็เคยเจอพ่อค้ามาเยอะนะ แต่เธอ/นายไม่รู้สึกเหรอว่า พ่อค้าที่ไม่กระตือรือร้นกับการทำธุรกิจแบบเขา มีน้อยมากเลยนะ",
+   "unlockRequirement": "",
+   "cnUrl": "c311f1c4ec7b4779228e4dd24643521aa85f5ca100ca28d7783e0fed2adf4c3f",
+   "jpUrl": "1dd5c54139d3d1f818575045d479c77fae1e42c19004f9b701460d114150b35d",
+   "enUrl": "c38d788ad5fe328aa34d73e8a6f769ae5d6e538fd7fd3f78a588c9ad93955ca0",
+   "krUrl": "d380fee36725ae9f798437ff8e348afb6391b382cb0ee4d518820bb93008994e"
+  },
+  {
+   "id": 16,
+   "title": "เกี่ยวกับ Sushang",
+   "text": "Cloud Knight คนใหม่ที่ไร้ห่วงไร้กังวลคนนั้นนี่เอง... ฉันก็เคยมีช่วงเวลาแบบนั้นเหมือนกัน ถึงจะผ่านมานานมากแล้วก็เถอะ",
+   "unlockRequirement": "",
+   "cnUrl": "5fd08c58370919154f00545bb114c45eb6bda9e6389148f6e3c58594e2b3083f",
+   "jpUrl": "2b43008b11cfa5255b6e314f67654a15a03c4428cc14938c86ed365b7990b9ca",
+   "enUrl": "ef214f59320e82262d061e8968557e1f91462db2eff7e84e284c8cb25c47d156",
+   "krUrl": "2b429a409cdb8e286e0000190c776179d8ca223489b435973bb493b0b933cf6a"
+  },
+  {
+   "id": 17,
+   "title": "เกี่ยวกับ Bailu",
+   "text": "ตำแหน่งผู้ทรงเกียรติแห่งเผ่า Vidyadhara เป็นกันไม่ง่ายเลย... หวังว่าชีวิตนี้ของเธอจะสุขสงบดีนะ",
+   "unlockRequirement": "",
+   "cnUrl": "e5a4a0411b78025c8ae519b3313cedba69165735ba09bc89512d55dc1e926b66",
+   "jpUrl": "95f1383a63e25ffba40375671e77b8e972e6ad64ddbee4d54f70142c44e68a22",
+   "enUrl": "562c71b4b42d597987f08c358451a29f9bbd4469fae2d029b8b8ccd2bd4a10ea",
+   "krUrl": "673855766357fd0ecb3dcc5939d7b62b9f01db588966b764361e48b67df8d38d"
+  },
+  {
+   "id": 18,
+   "title": "เกี่ยวกับ Jingliu",
+   "text": "เธอสอนทักษะดาบให้ฉัน แต่เราไม่เคยสนิทสนมกันเลย... ในค่ำคืนอันไร้ที่สิ้นสุด จะมีใครที่สนิทสนมกับเราไปกว่าแสงจันทร์กลางนภา ที่ลอยเด่นอยู่ตลอดมากันล่ะ?",
+   "unlockRequirement": "",
+   "cnUrl": "b076be3fb86e19a1c6cafef2f7c0bdd09119ac5ee9068f29c2441fd405893552",
+   "jpUrl": "0296cf16daf09fc870b007e35ce9575ea0838f86810a4467b42645d52ac41be6",
+   "enUrl": "0bce97771eba2a84e0b8386ef6ac6a7d5fb79ed7a84776334733b833d1168937",
+   "krUrl": "e6895184e4873a6e2646b3c0d9748cd892b537f6dd5c042675a2f53a217e89f5"
+  },
+  {
+   "id": 19,
+   "title": "เกี่ยวกับ Blade",
+   "text": "ถ้าเขาจำอะไรไม่ได้เลย มันคงจะง่ายกว่าสำหรับฉัน",
+   "unlockRequirement": "",
+   "cnUrl": "b1c9132a928cf06cd45f31bea8e8516066c88027983fb990d195d050efd729f6",
+   "jpUrl": "7ace274a8b6774b9343a90d82b99844135e2f15c2a650a1b29ce133f8cc3a960",
+   "enUrl": "088c084664d8aafca6ebc253d06a31206dd360f343ba660d1ae0409b23ce7fc2",
+   "krUrl": "a825168872acba4cdf8f548143fa6de5f622e6ddbf7dae70961fe2a796d77e8a"
+  },
+  {
+   "id": 20,
+   "title": "เกี่ยวกับ Dan Heng",
+   "text": "ฉันเข้าใจ คนที่ฉันเฝ้าตามหา... ไม่อยู่อีกแล้ว เขาอยู่แค่ในความทรงจำของฉันเท่านั้น แบบนี้ก็เป็นเรื่องดีสำหรับ \"เขา\" แล้วล่ะ",
+   "unlockRequirement": "ปลดล็อกหลังจากเสร็จสิ้นภารกิจบุกเบิก \"มังกรที่อาจหาญ แลก้นบึ้งที่เลือนราง\"",
+   "cnUrl": "3e36786e0c47f193ad932f7ccd67d98f5829ecc11f06850cba704c636ae32c25",
+   "jpUrl": "2c6a384ca2779a017b3fff2605adbf99c611bf4a386dce0a22dc1324f28da77e",
+   "enUrl": "db061174847b18f4c40e0ff269d1cb62545d7a818953fcf2498c9737387a984c",
+   "krUrl": "e4f96e0ac9bfc10c81f2d91e1ea543ea7ef7d0909aaf27edeb8cd927fb4df89d"
+  },
+  {
+   "id": 21,
+   "title": "เกี่ยวกับทีมขบวนรถไฟ",
+   "text": "รถไฟประกายรุ้งของสูงส่งท่องเมฆาเริ่มออกเดินทาง เพื่อเชื่อมต่อโลกอีกครั้ง นี่เป็นข่าวดีสำหรับสหพันธ์ แต่เมื่อรางแห่งดวงดาวเชื่อมเข้าหากันแล้ว เหล่าปีศาจร้ายที่เคยอยู่ในมุมอันห่างไกล จะเคลื่อนไหวยังไงกันบ้างล่ะ? ...เฮ้อ ไว้ค่อยปวดหัวกันวันหลังเถอะ",
+   "unlockRequirement": "ปลดล็อกหลังจากสำเร็จภารกิจบุกเบิก \"น้อมส่งวิญญาณ ในหนทางอันแสนไกล\"",
+   "cnUrl": "45fe92e5fabcf81bf38fdefe5b84077ab46864e574b0f27667b5dfeb8e6e1d0c",
+   "jpUrl": "2ef11a3c9d7b496f685737a4e527f81ce5251763da40d028e1b18fe6a05721ae",
+   "enUrl": "027ec4bf99363ea4b8660d333276491e859a3ff050794d7abc6696de43f40c41",
+   "krUrl": "58b7606c3c4a6dd8f00ae970cec3de697d04736cff0e43ce1c87018daf24f57a"
+  },
+  {
+   "id": 22,
+   "title": "เกี่ยวกับ Ten-Lords Commission",
+   "text": "ดาบที่ไร้ฝัก ก็เป็นเพียงอาวุธทำร้ายคนเท่านั้น Ten-Lords Commission คือฝักที่ควบคุมชีวิตอันยืนยาว คือตรวนที่ผูกมัด และเป็นข้อกฎหมายที่ตัดสินความผิดชอบชั่วดีของพวกเรา",
+   "unlockRequirement": "ปลดล็อกหลังจากสำเร็จภารกิจบุกเบิก \"น้อมส่งวิญญาณ ในหนทางอันแสนไกล\"",
+   "cnUrl": "291405f796358b13e4bfae2de4381738f2c065f22fc729da1be957a7c759b937",
+   "jpUrl": "9929472359289234c2bb7c08fc2e15d55b8b5ea2b619f609bb851237c5126e13",
+   "enUrl": "c4800afd8fdb114b243ec3c341696d87f7f9adffa81f6b97d8c5eb6ecb7477d4",
+   "krUrl": "b93c1a1813a4137e536d462b31dd61d95730fdff8d7e2b4b784458e9489e3d0b"
+  },
+  {
+   "id": 23,
+   "title": "เปิดใช้งาน Eidolon",
+   "text": "วันเวลาเหล่านั้น เป็นเหมือนแสงมายาที่ไม่อาจย้อนกลับได้",
+   "unlockRequirement": "",
+   "cnUrl": "77607fcd74b2911bdf06f9a99c78a50bdccf0f6dd685042afcf2421e1be18b00",
+   "jpUrl": "5003fb86a07ea2d432a842f12358a1ee3de2e0d3192777fda28f69ee37a4dd05",
+   "enUrl": "dcb7b81d7b1ddb4537cda3cae008789868018fc0542866974675ca39c2cf24c8",
+   "krUrl": "829da4ee83e1292ebf30fecede39f94e8c0de0b5e076034b02e0ea670f62e1bb"
+  },
+  {
+   "id": 24,
+   "title": "เลื่อนขั้นตัวละคร",
+   "text": "ในฐานะนายพลที่มี Cloud Knight อยู่ใต้อาณัติ ฉันไม่สามารถละเลยได้แม้แต่วันเดียว",
+   "unlockRequirement": "",
+   "cnUrl": "0f395dab42e35ce7255c1ab4e013d14ec2a55fbf4d40d611dd4426f8dd876558",
+   "jpUrl": "7ced69bf884013bef7e50197f7439f21244c602fc77307b26e97675e473f4045",
+   "enUrl": "b8b6c565562a2bc27b0811f2c5a997e86c6102430f8858f29e4778a7623b5183",
+   "krUrl": "10f53f34c2ca69681683f873b50190c6ac877b8686574179e99a24cfc74f931b"
+  },
+  {
+   "id": 25,
+   "title": "ตัวละครถึงเลเวลสูงสุด",
+   "text": "กำลังของคนแค่คนเดียวย่อมมีขีดจำกัด เมื่อเดินมาถึงทางตัน ก็ต้องหาวิธีใหม่",
+   "unlockRequirement": "",
+   "cnUrl": "f2a217cf768ed9e52db4ad851d7316f412dac055d136a7f35daeeddb48ed82a2",
+   "jpUrl": "fbc32bee8dcb7d5ce3343f2860f63200281f7cabec97c0f64d9e4211658df3ae",
+   "enUrl": "3d6c10f843d2cd7ae98f7f1753669d4234d6d46ac857b85f2c2704225b251d45",
+   "krUrl": "1357c18f5291eac0e9d6089a6a3eb8d4d6f715482335a70fa53557280aa7d368"
+  },
+  {
+   "id": 26,
+   "title": "เปิดใช้งาน Trace",
+   "text": "ในจักรวาลที่มีดวงดาวกระจายดั่งหมากล้อม แต่ละก้าวที่เดินนั้นคือทางเลือก และทางเลือก จะเป็นตัวกำหนดโชคชะตา",
+   "unlockRequirement": "",
+   "cnUrl": "a7a851b31f9ba46a7afd53a8fb1242338cf553a5316345e23ffa257f5bc2a446",
+   "jpUrl": "28ad6bba1f12306604f8c4b92a7ab0ec19de5f05d72fa551e8202c1251877bb9",
+   "enUrl": "428dbdfcf8db3bb6551916a5a77865ae59708fcad3b278c0a19872e604e10e31",
+   "krUrl": "8368cd06ab7b9e994f123ba5d51903b2ad8da07b96df0f890f8a62406809a246"
+  },
+  {
+   "id": 27,
+   "title": "สมาชิกทีม - Yanqing",
+   "text": "Yanqing จำไว้ว่าอย่าใจร้อนและทำอะไรผลีผลามเป็นอันขาด",
+   "unlockRequirement": "",
+   "cnUrl": "52d75a0deae41ac80f8d14e35a3540bf927396b9e5637f51bc6ada35df502409",
+   "jpUrl": "13408fb1cd0d4bfcc24d39cdd414dc3d78f61bec6bc86113594b36c77202b28c",
+   "enUrl": "8008bdd05543488cc0b858c1b60c12475cd4f6f08304d895b80e6410a8789440",
+   "krUrl": "85092b387fa8f815d271f8a934e6f8b07529ad35a8d56154a76c3679cee4dae4"
+  },
+  {
+   "id": 28,
+   "title": "สมาชิกทีม - Fu Xuan",
+   "text": "เมื่อเผชิญหน้ากับศัตรู จะเดินหน้าหรือถอยหลัง ก็ต้องอาศัยคุณ Fu ให้ทำนายดูแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "327058301c5bc4b9a72181bbe0a6683cdce5e7ccd639df96cd19fb7580f99fec",
+   "jpUrl": "b2473151940e1ef8fc3bc182ab2a2238a9c3482cebc71fe84ec83ed758b49b0e",
+   "enUrl": "ffe376bd9aa100ea165476978fa8b1754e87dfe31e376e19d2a233829df22638",
+   "krUrl": "193f18dbf072f2e84f73dfea3dd3f58c22abb15fffc236133ec1c9d29cdda2ab"
+  },
+  {
+   "id": 29,
+   "title": "สมาชิกทีม - Jingliu",
+   "text": "ไม่ได้เจอกันนานเลย... ท่านอาจารย์",
+   "unlockRequirement": "",
+   "cnUrl": "01fcc59457ae06a6d43222be62f0c56c3eb74fd46773bfcb7ec8dc34afbb8329",
+   "jpUrl": "57fd42d4a13bdaa7a798d51e2219f05a1a7ba6fcfa639c2c156cc3172f138a0c",
+   "enUrl": "3e5916e8551093a29177dbb6800f6719655abec2a7766bc8edfdd20b8dbe1e83",
+   "krUrl": "bfca5bc7c601a75aca79dbcd2ecd583deca35af7018b9e71f5c48d5377d21319"
+  },
+  {
+   "id": 30,
+   "title": "สมาชิกทีม - Dan Heng - จ้าวยลจันทรา",
+   "text": "เรื่องในอดีตจบไปแล้ว แต่ภาพในตอนนี้ ก็ทำให้อดรู้สึกเศร้าใจไม่ได้",
+   "unlockRequirement": "",
+   "cnUrl": "75b6cd89395992509a0cbd2ca68be9bb53c62894a6dc8e99bb2a7403f7c17ea9",
+   "jpUrl": "92aef2713f19f18f53c163cabd9e6b96b51bef99011771dda017a9f53e4b12c3",
+   "enUrl": "a4e8845df3f0d5334518e242f03820636138144e4fd7986578fc017bf3e9b26e",
+   "krUrl": "8d580a8068a6082ac9cfba292f27dc257f1693da392a4a85a2f9a063bf2c43f2"
+  },
+  {
+   "id": 31,
+   "title": "สมาชิกทีม - Blade",
+   "text": "ไม่คิดเลยว่านายจะเลิกจับค้อนแล้วมาฝึกดาบ... เฮ้อ น่าเสียดายที่ดาบหักนั้นยากจะทำให้เป็นเหมือนเดิม และหนทางแห่งกรรม ก็ยากจะหวนคืนได้",
+   "unlockRequirement": "",
+   "cnUrl": "71d3bcaf62f4a6628afa6a0b69cc5ad741ad1268c3ed8df93232d02a9e116495",
+   "jpUrl": "f8b5ce562a7e979d358b241e9808b5171847ce76317a75204eb79cee0e10eb7e",
+   "enUrl": "66a17e2174f4dbac46e0b62e629960db6b795d5765184982ce88bd94f8583cb3",
+   "krUrl": "5fb4de40e8b62516cab6a5e99fe640553a1e2e195feb8946eaa28401001311a9"
+  },
+  {
+   "id": 51,
+   "title": "เริ่มการต่อสู้ - ทำลายจุดอ่อน",
+   "text": "ช่องโหว่โผล่มาเต็มไปหมด",
+   "unlockRequirement": "",
+   "cnUrl": "29fe58ea2e115008c5cd3eaa1d728262c026df583996fd0f8aba6a9af34646f6",
+   "jpUrl": "574efda4ecbd07bf10c7254240b1593d7b9647cfb8530712a9875d59b0740c46",
+   "enUrl": "b1b1e5ec77150fd661f67072718cd7805788c3a91e13086e215dad9e6b954ff6",
+   "krUrl": "f91a1f9d2009094fc517edcf51b870301736a596a2274a6d6bb03ef13141cc1e"
+  },
+  {
+   "id": 52,
+   "title": "เริ่มการต่อสู้ - เตือนภัย",
+   "text": "เจอคู่ต่อสู้ที่มีฝีมือพอๆ กันเข้าซะแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "997066220069156d9bdefbdba5d35c627719a7348b05fbc387c755d7bfcffcc3",
+   "jpUrl": "ef570d2cec1a7069d1932e4b1cf712df2cc835cf4bf4ca1a95a37e0e4a57f956",
+   "enUrl": "58d779346cf187a45f6823e9148764f9f43748123b160b86d7747170ae7f3275",
+   "krUrl": "828476e0da62fd72700d6dbfd66050616d17d5a438579e571ebbd0a75e835ac2"
+  },
+  {
+   "id": 53,
+   "title": "เริ่มเทิร์น 1",
+   "text": "บุกตามฉันมาเลย",
+   "unlockRequirement": "",
+   "cnUrl": "22514a1916d7976d809f40d4221595081ef791f90753c11359955467a103410a",
+   "jpUrl": "5dc9f592d281dd00847e33d5e453edc42444aea57760cc5877713717e668c050",
+   "enUrl": "cc64c567b4d891225364cb077a9b18d82f300414493ee4ad1ee2843a79916ef0",
+   "krUrl": "43facbc325aa364e45e19de2724d6ddea60efb1140cce0c6094638f80f6b0829"
+  },
+  {
+   "id": 54,
+   "title": "เริ่มเทิร์น 2",
+   "text": "เวลาไม่คอยใคร",
+   "unlockRequirement": "",
+   "cnUrl": "7f01b59c26fd96f7d3ffe681118ac8df878b1d2dc7e15f1df1ab6d79e0364e84",
+   "jpUrl": "b2a40f1f3227e493b9fcf03affc13136d9762f2ca0bc87fe94203eb3cbda3a2c",
+   "enUrl": "7493d6fe900bf9395844f3a63d526eb576bd0e407c5e56507026414321b19868",
+   "krUrl": "485c9afb1cca6731cc74f0df237e208790373921fa08a033d994dc0c87388f42"
+  },
+  {
+   "id": 55,
+   "title": "เทิร์นสแตนด์บาย",
+   "text": "ทหารจะคอยโอกาสเพื่อลงมือ ไม่ใช่รออยู่เฉยๆ",
+   "unlockRequirement": "",
+   "cnUrl": "aaa6775966a89dec8bff6c17b67ffd811f1e76469967196a772e76810489982b",
+   "jpUrl": "949f6ac53d9bed0f9f069f591cfed4842482f72286a6d084dba665abaac677b2",
+   "enUrl": "f8e5980f0f6ef17732d7b18803684ba9b61d5676b08d3655e7be5605b9358df9",
+   "krUrl": "d97a5168d471706b0dbed2eaf4e4e8912b1ac28e07b35482ca0348eea7632404"
+  },
+  {
+   "id": 56,
+   "title": "สกิลต่อสู้ 1",
+   "text": "สงครามนั้นไร้ปรานี!",
+   "unlockRequirement": "",
+   "cnUrl": "6a91cbf54ffa5d17db547991ff48fa068d59e5e5f68536e0b3194223db27039f",
+   "jpUrl": "e6fb50f5405737d1f519ca8e493f2faa276e91067eff7a70587af40e5fa0c396",
+   "enUrl": "cee49447a34025a8be5814b0f3b79ffb9aa6c276792257e59cb66f954df383b1",
+   "krUrl": "f93285182250ed3cfaa6ec3a42a0c60f0f9238358c2ee278f386b2953a8f4a17"
+  },
+  {
+   "id": 57,
+   "title": "สกิลต่อสู้ 2",
+   "text": "สายฟ้า สะเทือนก้อง!",
+   "unlockRequirement": "",
+   "cnUrl": "d65a7cf543457e54b4ac91a5071cc8308d5bcb30e25c9a0460a2d36bf5744ba9",
+   "jpUrl": "c6aa8110429bd32e38bec6b4891944bd8812d91d92cfc4185f4bccdd21837963",
+   "enUrl": "9a18f36bef874682dfbe7a8d93480bf33754caed92d7e2f47b81736b0e150836",
+   "krUrl": "a64eecfdc876b0b04b04af77666e957f1b0e9c87c10b10300f2f7274799da7de"
+  },
+  {
+   "id": 58,
+   "title": "โดนโจมตีเล็กน้อย",
+   "text": "ก็ไม่เท่าไหร่",
+   "unlockRequirement": "",
+   "cnUrl": "a5f21ba8d38c343872b62df5cb32c4180205c8ae2123f3fd3993055e4e840ce6",
+   "jpUrl": "960f1fff49a8b1c9f0248e84be5d022e9df863d22fd68efce95732da0b4d534f",
+   "enUrl": "5b59699166ba56a3144d512d08def356d850c4773ae9d7a5274642f9df26d811",
+   "krUrl": "392f6f7b5934ee57dcb04a2b60e4fc54c5a12112d0b4afdc7e60e7eb480530e0"
+  },
+  {
+   "id": 59,
+   "title": "โดนโจมตีอย่างรุนแรง",
+   "text": "ก็แค่เจ็บนิดเดียว",
+   "unlockRequirement": "",
+   "cnUrl": "9a996b3a93b7a587ef1405438452ffbaee2601665fdbffc68a903fe5f28e6314",
+   "jpUrl": "db71454eedca6d69503a97f22c99adae403ee510b6af66eff82f89a4b36bf0b1",
+   "enUrl": "77e2dc20ae431b947668b980ff05230cd4d49720ec1744e2a6fb41f45d31301d",
+   "krUrl": "88047e9449da01f5f49ea1c34fb6b429d95d699c94db95acde8dba8ba1c7e892"
+  },
+  {
+   "id": 60,
+   "title": "ท่าไม้ตาย - เปิดใช้งาน",
+   "text": "ได้เวลาใช้ไม้เด็ดแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "ad00c8076882fce1d125f7d9688963c86d9e8f008e4b706e0ed243510f1b4ac9",
+   "jpUrl": "1627d1d4f704dab56d85ae12065c0034416f7c76dc6a20441fd9fc1859f46384",
+   "enUrl": "c63ea91f74ab06783ce647bf8c2aeef54f798e9667e04b7f4494af344b3d746f",
+   "krUrl": "6c036d8cdd4d52d36710564f5898a4c80cbbc8abe6b632f40e37561a346b939b"
+  },
+  {
+   "id": 61,
+   "title": "ท่าไม้ตาย - ปล่อย",
+   "text": "จิตวิญญาณอันเจิดจรัส จงฟังคำสั่งการ สังหารไม่ละเว้น!",
+   "unlockRequirement": "",
+   "cnUrl": "52ff0e8ff4d7a25d17f5982eb495ee28c6e95e81c546d55df0b60b88e3cfde5a",
+   "jpUrl": "97637db2ab7b00b83620183d5430e411a3e30f20dff4101dbc88dd43b8addf7b",
+   "enUrl": "321a8fc6350a4fa5f7273e5d94db97c80e583977edc5393ee146cc76d7500021",
+   "krUrl": "542ed17139b7a7c2f0432c738966d67ff664be8ff90d2cd3a79ab6fdd1855bc3"
+  },
+  {
+   "id": 62,
+   "title": "หมดสติ",
+   "text": "ห่างหายจากสนามรบไปนานสินะ...",
+   "unlockRequirement": "",
+   "cnUrl": "d79fcb97a0e82d456aa64c3ca8697af18788ae8f8abdee5e3825d3537d5a6fb1",
+   "jpUrl": "f21c96acb7f54b1a0da20f9c7b4741e082de5ada1e5d584c84191746000b9868",
+   "enUrl": "357d8279efc83226051f810b481ec28e21df66ae6ad127654f812e1894a71255",
+   "krUrl": "91276f344d170046e5a63fc63af227526819560ba22d45db27d2a5cc27e71b39"
+  },
+  {
+   "id": 63,
+   "title": "กลับสู่การต่อสู้",
+   "text": "รู้สึกดีจริงๆ ที่ได้กลับสู่สนามรบอีกครั้ง",
+   "unlockRequirement": "",
+   "cnUrl": "c6716b4c4b28ce17345cf7cda1579a1861f9b272eed69d291ceb3a428303ee1f",
+   "jpUrl": "d2fd7e5b3ed0e26150da4ed3eb5bc350cdd39e4f0cc3042f9db176deb13f5956",
+   "enUrl": "907e8ab8e05f0daa071ccfbc8279716baf9560a2a52d4a38f75dd7aa5a46c2d7",
+   "krUrl": "fe49c7e9236c936fcd2b60b739c1c2f8e163854045d70800c095c04257287ce1"
+  },
+  {
+   "id": 64,
+   "title": "ฟื้นฟูพลังชีวิต",
+   "text": "ขอบคุณมาก",
+   "unlockRequirement": "",
+   "cnUrl": "446f2d7a0a29c74ccbf05df477c33db87f1843dccc8d585b73f602f8857aed8f",
+   "jpUrl": "540f157551e65bacd0b462537165944ff7d574c9616b3a6b2d96fdcab6fdc968",
+   "enUrl": "84b6db3bf84316ba544f0a8dcbcf9fd1463a17d55e4d8f093e966143aab7ae2c",
+   "krUrl": "e0c2460e81101f6af7b1abc2284ba0e42b3cb5540516649631e16aa59fe6dce9"
+  },
+  {
+   "id": 65,
+   "title": "เทคนิค",
+   "text": "จงปฏิบัติตามคำสั่ง",
+   "unlockRequirement": "",
+   "cnUrl": "a6f1d5bca54520a6f2ca4e0d4c3ddf413d9daa73bf23a6cfd3bf56178a0fb9ce",
+   "jpUrl": "6773e99bd0ecdcd2ffb8bb2c12c3bfd34718cd71a324c85b554cfdfda016123f",
+   "enUrl": "d03658e1032acff701b870d19143a3af4dc52f67720131a920f7b78668218cec",
+   "krUrl": "1a1752618240b6e85e6bf64c63dbae5e1fe028d57edba1a434e6dfb8b8eecab6"
+  },
+  {
+   "id": 66,
+   "title": "ชนะการต่อสู้",
+   "text": "สงครามก็เหมือนหมากรุก ทุกตาล้วนไม่เหมือนเดิม",
+   "unlockRequirement": "",
+   "cnUrl": "c37ab813ebbfa08e846d004028aa6984f27f4cec2a091e31f6fca2403b07ed97",
+   "jpUrl": "9e23e499664374f6ffec234f997bfc9a28134f08f83c78e8055dee7159d67276",
+   "enUrl": "4c80fe100cf64f3a9a8ea7f05cbde2dbf7a850e1b8329299ed7ab295edf89cba",
+   "krUrl": "7e8e39591f3cc6bcb524347f0531562dc21fa8f06b52738ca087a7c4e0df584e"
+  },
+  {
+   "id": 67,
+   "title": "เปิดสมบัติ 1",
+   "text": "เพชรในตม",
+   "unlockRequirement": "",
+   "cnUrl": "cd17cedf83139db16be1354fbe61483f3ee235fc3e5bd5e65f1f55d366b6736b",
+   "jpUrl": "c3c7c184eadd751c91d120d5fa82b656c9b608106b0e0f80f7e5b4a47e0a20a2",
+   "enUrl": "fde84e61d92f9abe8512b2e9e191aa712e568f532f5054badf8e1b1344efe7bc",
+   "krUrl": "eba4fd2048c3cd00f74b409f9b282c84c1043b87bcd666a2bd6f1cf0f9a85d03"
+  },
+  {
+   "id": 71,
+   "title": "เปิดสมบัติ 2",
+   "text": "โอ้? ใช้ได้เลยๆ",
+   "unlockRequirement": "",
+   "cnUrl": "c7ec96bbf12cb560f0dd6311782509894a77fdc5d840797aee1f7625cc76b226",
+   "jpUrl": "38f542d774feb587353d3d908aff1b15f32e5035a51ab68abe77875b027ed1a1",
+   "enUrl": "8022827d8e39d672b6a0fbff3aa070715df6c5a3f4d176de04a704e047127346",
+   "krUrl": "6825f47c1fdd6105b8a4d1f49ccd6400934f64f1c549b207122f286a931264f1"
+  },
+  {
+   "id": 72,
+   "title": "เปิดสมบัติล้ำค่า",
+   "text": "ของหายากแบบนี้ เธอ/นายเก็บไว้เถอะ",
+   "unlockRequirement": "",
+   "cnUrl": "9a3101f13eb35c715a51ca61a57a9ff5a40b0f61001e358acbca8087c6f490e4",
+   "jpUrl": "b074b36f3f6aa27a87c8fd096665b7d420191f596937b2fc25f80b6e3551edcb",
+   "enUrl": "279bdf5cc70cf0184c132ae4fc98ced532281f6630dbb8280632f2e7d7042dab",
+   "krUrl": "aa62a776ce0fd974ee7b36827e783fc3badabfae3fe9a14a5e1ff3a7984d4402"
+  },
+  {
+   "id": 68,
+   "title": "ไขปริศนาสำเร็จ 1",
+   "text": "ที่แท้ก็มีความลึกลับแบบนี้เองสินะ",
+   "unlockRequirement": "",
+   "cnUrl": "6185ac875a00323eea9e4ad7fd482b98dc32831b92d658e8b75b80f391624ab8",
+   "jpUrl": "4dc2f103c508c74ad14da27bca3b2c71565f7efc73558250a4a6775a01112d5a",
+   "enUrl": "b631903684fde233babef813fcfda15d1fd8746a2d4fed4a49d4281fff122a70",
+   "krUrl": "c99b9234916885363dcbead9a8c3b1678600dc450d756450ab747c5511d898fc"
+  },
+  {
+   "id": 73,
+   "title": "ไขปริศนาสำเร็จ 2",
+   "text": "วิชากลไกแบบนี้ น่าสนใจดีนะ",
+   "unlockRequirement": "",
+   "cnUrl": "3cfb5666228f026b71a9703a78d73341a631ba27f98f389da1de9658f18050e9",
+   "jpUrl": "c41e9ffc6931a361c1dc25086e295175b8b9b2c781551952efb6c32e970013ab",
+   "enUrl": "32baf77e73e5fc6f7b9518fe172cd4a999e0ae2dadad13f25a1f0746dfb96db7",
+   "krUrl": "fd5200a2d8e27e11585ba56e4caa0f168c6941eec681c496ba0d96efc8490976"
+  },
+  {
+   "id": 69,
+   "title": "พบศัตรูเป้าหมาย",
+   "text": "เมื่อเผชิญหน้ากับกองทัพ จะต้องรอจังหวะเข้าโจมตี",
+   "unlockRequirement": "",
+   "cnUrl": "4b0a852a366f13707da4c104747120a75f6380acc5900ee6e7adddf4595b14f1",
+   "jpUrl": "65d7398ea5b381e3b2cdfea91606254d983ea38517a33ffd59f50bb0d2bd1ce8",
+   "enUrl": "c28bc2e0e196405d857c4c3e562c6efdc64ff1ccf02df7e5086adfa61e7b2a6f",
+   "krUrl": "6355a3b965f6e14ad4a333026677e232422e934f80e091f1721b5bfeb244c0cd"
+  },
+  {
+   "id": 70,
+   "title": "กลับเข้าเมือง",
+   "text": "หมากรุกสักสองสามตา ก็ช่วยฆ่าเวลาได้นะ",
+   "unlockRequirement": "",
+   "cnUrl": "336f5e8bbd37070a334db05e73f0c33c6aaf683419d9ea3f3a8f33964fd40206",
+   "jpUrl": "0674ee014c3496b8c5bb374764453ddbd6c5ca52d1ce6ef63c7d1742054e2bf2",
+   "enUrl": "4cb4793856a0751491e73209cd45c4d6455ef0aef295948b1e835bce68963cf0",
+   "krUrl": "e92ff45a35a96665280bf7ce2bf7ee6d87df3b6376234f1005febe5a6a0254e2"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "รายละเอียดตัวละคร",
+   "text": "\"นายพล Divine Foresight\" คือหนึ่งในเจ็ดนายพลของเทพแห่งคันศร ภายนอกอาจจะดูเกียจคร้าน แต่ภายในกลับเป็นคนที่ละเอียดรอบคอบ เขาไม่ได้มองว่าการกอบกู้วิกฤติ เป็นการแสดงถึงสติปัญญา ดังนั้นเขาจึงพยายามทำทุกสิ่งอย่างสุดความสามารถ เพื่อหลีกเลี่ยงปัญหาที่อาจจะเกิดขึ้นได้ เนื่องจากการจัดการที่แสนจะรอบคอบของเขา Xianzhou จึงอยู่อย่างสงบสุขมาเป็นเวลานาน และด้วยท่าทางที่ดูเกียจคร้าน Jing Yuan จึงได้รับฉายาว่า \"นายพลผู้หลับใหล\"",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 1",
+   "text": "\"รบกวนขอคำชี้แนะจากท่านผู้พยากรณ์สูงสุดสักหน่อย ทำไมกระดานหมากรุกดารกะถึงเป็นสี่เหลี่ยม แต่ตัวหมากกลับเป็นทรงกลมล่ะ?\"<br />\"สร้างเลียนแบบหลักการฟ้ากลมดินเหลี่ยมล่ะมั้ง? ก่อนที่อารยธรรมโบราณจะมีการพัฒนา มีความเชื่อว่าพื้นดินราบเรียบ และหมากรุกก็เลียนแบบการแย่งชิงอำนาจระหว่างดินแดนต่างๆ ดังนั้นเรื่องราวการรวมแผ่นดินเป็นหนึ่งในสมัยโบราณ ก็เลยออกมาเป็นกระดานหมากรุกทรงสี่เหลี่ยมยังไงล่ะ ส่วนตัวหมาก... คนสมัยนั้นเชื่อว่าท้องฟ้ามีลักษณะกลมเหมือนหลังคาทรงโค้ง และตัวหมากก็เลียนแบบการเคลื่อนที่ของดวงดาวที่ส่องสะท้อนถึงชีวิตของผู้คน ก็เลยมีลักษณะเป็นทรงกลมไปด้วยไงล่ะ\"<br />\"ไม่ใช่สิ\"<br />\"ฉันทำนายการเดินหมาก <nobr>48</nobr> ตาต่อจากนี้ไว้หมดแล้วล่ะ Jing Yuan ถ้าคุณคิดจะใช้คำถามมาก่อกวนให้ฉันเสียสมาธิ ฉันว่าคุณรีบหยุดความคิดนั้นไว้จะดีกว่า\"<br />\"เฮ้อ ทำไมเธอสงสัยฉันโดยไม่มีเหตุผลอย่างนั้นล่ะ?\"<br />\"ไม่ขัดจังหวะแล้วก็ได้ เชิญพูดต่อเลย\"<br />\"ก็อย่างที่เธอบอกนั่นแหละ เกมหมากรุกก็คือการเปรียบเทียบถึงมนุษย์ กติกาการรบก็กำหนดไว้ชัดเจนว่าแต่ละฝ่ายนั้นเดินหมากได้จำกัด มีแค่เดินหน้า ถอยหลัง หรือกระโดดข้ามเท่านั้น พอเคลื่อนไหวได้แค่แบบนี้ กระดานก็เลยเป็นทรงสี่เหลี่ยม ส่วนตัวหมากนั้น นักปราชญ์โบราณกล่าวไว้ว่า 'จงใช้สติปัญญาดั่งวงกลม' และแต่ละฝ่ายต่างก็มีความฉลาดในแบบของตัวเอง หมากรุกจึงมีลักษณะเป็นทรงกลม\"<br />\"ในหนังสือเรื่อง 'หยกทรายลอยละล่อง' ได้กล่าวถึงที่มาของหมากรุกดารกะเอาไว้แล้ว Jing Yuan ฉันอ่านหนังสือมาเยอะ คุณอย่ามาหลอกฉันหน่อยเลย!\"<br />\"รถศึกเดินจากช่องสามทางซ้ายไปที่ช่องสี่ กินแม่ทัพเรียบ เธอแพ้แล้วล่ะ Fu Xuan\"<br />\"ดะ...เดี๋ยวสิ! ทำไมในนิมิตเมื่อกี้ถึงไม่เห็นตาเลยนี้ล่ะ? ยะ...ย้อนกลับไปเดินมาใหม่ซิ\"<br />\"หมากรุกก็มีความคิดเหมือนมนุษย์นั่นแหละ เมื่อเดินหมากแล้วย่อมไม่อาจเปลี่ยนใจ จะย้อนกลับไปเล่นใหม่ได้ที่ไหนล่ะ? ฮ่าฮ่า เป็นถึงหัวหน้าหน่วยงาน แต่ไม่รู้จักยอมรับความผิดพลาดได้ยังไงกัน?\"",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>20</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 2",
+   "text": "กองอัศวิน Cloud Knight ที่ถือกำเนิดขึ้นหลังจากจบสงครามภัยพิบัติไฟ เป็นหน่วยงานที่มีอำนาจครอบคลุม Xianzhou ทั้งหกลำ พวกเขาได้ให้คำสัตย์สาบานว่าจะปกป้อง Xianzhou และปฏิบัติตามคำบัญชาแห่งการ \"ล่าสังหาร\" ของเทพแห่งคันศรสืบมาจนถึงทุกวันนี้ แม้ว่าอายุขัยของเผ่าพันธุ์อายุยืนยาว จะยาวนานจนน่าเหลือเชื่อ แต่ท่ามกลางสงครามนองเลือด กลับมีนายพลของ Cloud Knight น้อยคนนักที่จะสามารถอยู่รอดได้ถึงร้อยปีหลังจากดำรงตำแหน่ง แทนที่จะบอกว่ามันคือชะตากรรม สู้บอกว่ามันคือธรรมเนียมอย่างหนึ่งจะเหมาะกว่า ในฐานะที่เป็นผู้คุ้มกัน Xianzhou และคอยปราบปรามกองกำลังติดอาวุธของพวกสิ่งชั่วร้าย นอกจากนายพลจะมีหน้าที่เคลื่อนพลและคิดกลยุทธ์แล้ว ยังต้องเป็นผู้นำในการต่อสู้อีกด้วย ท่ามกลางบันทึกมากมายที่ถูกตัดให้สั้นลงอย่างโหดร้าย Jing Yuan \"นายพล Divine Foresight\" ผู้รับผิดชอบควบคุม กองอัศวิน Cloud Knight แห่ง Luofu กลับโดดเด่นเหนือใคร เขาปกครองกองทัพให้อยู่รอดปลอดภัยมาหลายร้อยปีแล้ว เพราะแผนกลยุทธ์เชิงรุกของเขา Cloud Knight แห่ง Luofu จึงมีชื่อเสียงโด่งดังไปทั่วทั้งสหพันธ์ และสร้างผลงานอันน่าทึ่งได้สำเร็จ แม้จะมีคนตำหนิว่าเขากลัวการสู้รบ และน้อยนักที่จะหยิบจับอาวุธ แต่ก็ต้องยอมรับว่า สติปัญญาของเขาแก้ปัญหายากๆ ได้ดีไม่แพ้ดาบที่คมกริบเลยทีเดียว",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>40</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 3",
+   "text": "หนึ่งในบรรดาข่าวลือที่แพร่หลายมากที่สุดในปัจจุบันก็คือ Jing Yuan เกิดในตระกูลที่ทำงานใน Realm-Keeping Commission มาหลายชั่วอายุคน<br /><br />ตามธรรมเนียม \"พิธีทดสอบ\" ที่สืบทอดมาจากมนุษย์จิ้งจอก ผู้ปกครองจะวางของเล่นและสิ่งของต่างๆ ไว้รอบตัวเด็ก และให้เด็กเลือกหยิบมาเพื่อทำนายอนาคต เดิมทีพ่อแม่ของเด็กคาดหวังให้ลูกเลือกเสื้อคลุม เพื่อที่จะได้เป็นนักวิชาการหรือเจ้าหน้าที่ของ Realm-Keeping Commission แต่ Jing Yuan กลับเลือกหยิบดาบของเล่น<br /><br />และดูเหมือนว่า \"พิธีทดสอบ\" จะทำนายอนาคตได้จริงๆ หลังจบการศึกษาจากโรงเรียน Jing Yuan ก็เข้าร่วมกองอัศวิน Cloud Knight โดยไม่สนใจคำคัดค้านของครอบครัว เพื่อที่จะหลีกหนีจากชีวิตที่ถูกคาดหวังไว้มากเกินไป<br /><br />ในคลังเอกสารการรบของกองอัศวิน Cloud Knight มีบันทึกเกี่ยวกับการรบครั้งแรก ในสมัยที่เขายังเป็นเพียงพลทหารของ Cloud Knight อยู่ด้วย เรือรบที่ขนส่งกองทหาร ต้องลงจอดฉุกเฉินที่ดวงดาวมหาสมุทรแห่งหนึ่ง ที่นี่ปนเปื้อนสิ่งชั่วร้ายอย่างรุนแรงมาก เผ่าพันธุ์อายุยืนยาวสายพันธุ์ใหม่ที่มีชื่อว่า \"Puppeteer Jellyfish\" ได้ครอบงำจิตใจของอัศวิน Cloud Knight และแฝงตัวเข้ามาในกองเรือ พวกมันเกือบจะเปลี่ยนเรือรบลำนี้ให้เป็นรังได้สำเร็จอยู่แล้ว แต่ Jing Yuan ก็สังเกตเห็นถึงอันตรายได้ทัน และหาเงื่อนไขการควบคุมของ Puppeteer Jellyfish และวิธีรับมือได้อย่างรวดเร็ว ในที่สุดลูกเรือที่เหลือก็ผ่านการทดสอบแยกแยะมิตรศัตรู เอาชนะคู่ต่อสู้ และกลับบ้านเกิดได้อย่างปลอดภัย<br /><br />ในสงครามที่แทบจะไม่เสียเลือดเสียเนื้อครั้งนี้ ทำให้เหล่านายพลของ Cloud Knight มองเห็นความสามารถของ Jing Yuan หลังจากเดินทางกลับมายัง Xianzhou แล้ว Jing Yuan ก็ได้แสดงพรสวรรค์ในกองอัศวิน Cloud Knight ให้เป็นที่ประจักษ์ จนได้รับตำแหน่งสำคัญ<br /><br />ไหวพริบในการรับมือกับสถานการณ์ และแนวความคิดที่นำไปใช้ได้จริงของเขา ทำให้เหล่าหัวหน้าพากันปวดเศียรเวียนเกล้า และลืมไม่ลงหลายต่อหลายครั้ง จนเมื่อได้รับคำเชิญจากอดีตปรมาจารย์ดาบแห่ง Luofu... Jing Yuan จึงได้เข้าร่วมทำงานในทีมของเขา และเริ่มต้นเส้นทางแห่งตำนาน \"ห้าผู้กล้าเหนือเมฆา\" ในที่สุด",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>60</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 4",
+   "text": "ตำนานอันเลื่องชื่อในประวัติศาสตร์ของ Xianzhou มีที่มาจากห้าผู้กล้าแห่งกองอัศวิน Cloud Knight ของ Xianzhou ที่ร่วมมือกันสู้รบจนถูกขนานนามว่า \"ห้าผู้กล้าเหนือเมฆา\" พวกเขาทั้งห้าสร้างผลงานอันยิ่งใหญ่ไว้ในประวัติศาสตร์มากมาย ไม่ว่าจะเป็น: การขับไล่กองเรือ Borisin ที่บุกโจมตี Thalassa, ทำลายความร่วมมือกันระหว่างเผ่า Houyhnhnm และ Wingweaver ในกองทัพพันธมิตรแห่งเฟื่องฟู, ไปจนถึงสลายการปิดล้อม Xianzhou Yuque และพิชิตดวงดาวมีชีวิตอย่าง \"Ketu Mirage\" จนปกป้องดวงตาแห่งสหพันธ์ที่จับจ้องไปยังทะเลแห่งดวงดาวไว้ได้...<br /><br />แม้ว่าพวกเขาจะสร้างผลงานไว้มากมาย แต่สุดท้ายก็เอาชนะกาลเวลาไม่ได้อยู่ดี \"ห้าผู้กล้าเหนือเมฆา\" รวมตัวกันเป็นเวลาสั้นๆ ไม่ถึงร้อยปีก็แยกย้ายกันไป เมื่อเกิดสงครามน้อยลง เรือใหญ่แต่ละลำของ Xianzhou ต่างก็แล่นไปตามเส้นทางของตน เช่นเดียวกับที่ Luofu เริ่มแล่นไปบนเส้นทางการค้าในกาแล็กซี เพื่อแสวงหาเสบียงและพันธมิตรให้กับสหพันธ์<br /><br />ศัตรูในอดีตบ้างก็ถูกจับ บ้างก็ตกตาย เพื่อนเก่าทั้งหลาย ต่างก็กระจัดกระจายไปตามสายลม หลงเหลือไว้เพียงความทรงจำ นายพลที่ล้มหายตายจากไม่ต้องมาทนทุกข์ทรมานแบบนี้ แต่นายพลที่ยังอยู่ กลับต้องเผชิญหน้ากับทุกสิ่ง: ไม่ว่าจะเคยวาดฝันถึงภาพอันยิ่งใหญ่เพียงใด และไม่ว่าจะเคยเอาชนะศัตรูที่แข็งแกร่งราวกับเทพเจ้ามามากเท่าใด เวลาก็มักจะทยอยถอดเขี้ยวเล็บของตนออกทีละชิ้นๆ แต่กลับไม่ยอมสังหารกัน ปล่อยให้ตนเกลียดชังความไร้พลังอำนาจของตัวเอง อยู่ที่ซอกมุมหนึ่งเรื่อยไป<br /><br />และมีเพียงผู้ทรงปัญญาที่แท้จริงเท่านั้น ที่จะสามารถหยัดยืนอย่างภาคภูมิ ต่อหน้าคู่ต่อสู้ที่ไม่เคยแพ้พ่ายผู้ใดอย่างกาลเวลาได้",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>80</nobr>"
+  }
+ ],
+ "archive": {
+  "cvCn": "孙晔",
+  "cvJp": "小野大輔",
+  "cvKr": "류승곤",
+  "cvEn": "Alejandro Saab",
+  "camp": "Xianzhou \"Luofu\""
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Jing Yuan",
+ "rarity": 5,
+ "descHash": "\"นายพล Divine Foresight\" หนึ่งในเจ็ดนายพล ของเทพแห่งคันศรของสหพันธ์ Xianzhou ผู้รับผิดชอบควบคุม กองอัศวิน Cloud Knight แห่ง Luofu ลูกศิษย์ของปรมาจารย์ดาบ \"Luofu\" รุ่นก่อน แต่ไม่ได้มีชื่อเสียงด้านการต่อสู้",
+ "artPath": "2468f9d23227268aad36db7e5da6c119433cdd4ae8c4c138c0bd13c7de748b92",
+ "miniIconPath": "91c54e75e5105d155170fd0a6a2d111676ec6bd37d287c3e4c30647e7b3b442e",
+ "damageType": {
+  "id": 8,
+  "iconPath": "aec46e1b5be764fe83cac85e30f5832729012baa6a30bb8d91c82348d8a1b4d6",
+  "color": "#8872F1",
+  "name": "สายฟ้า",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "a1916e75aa6a99295aa01786a946ae601da457b578603446740cbe30bc5fba5a",
+  "altIconPath": "01710b94c5c1a7c525cfaedc0ea8f32901c99aa71a28896a16d52656c3ce3654",
+  "color": "#FFFFFF",
+  "name": "ปัญญา",
+  "rarity": 0
+ },
+ "pageId": "jingyuan"
+}

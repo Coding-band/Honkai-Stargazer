@@ -54,7 +54,7 @@
    "id": 267805,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "822b1e8c023333b210f71f503cce58516c58ffc4f47c709a4ba4bc03387fdd68",
+   "iconPath": "ec233e43b828d3d0aaa069d3bb911a437404e6a0a34a358cdf134da8ad7fb0fa",
    "name": "Œil de la tempête",
    "desc": "Flèche de Portefoudre. Permet l'élévation des personnages de type vent.",
    "lore": "Appartenait jadis à un monstre du Fragmentum conçu sur le modèle d'un certain type de Rangers du néant. On aperçoit à peine la pointe d'une flèche au centre du vortex.<br /><br />« Ceux qui périssent dans le Fragmentum se relèveront là où ils sont tombés. »",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/267805",
    "comeFrom": [
+    "Ombre stagnante de la Ville de Rivet",
     "Ombre stagnante de la Ville de Rivet",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -104,7 +105,7 @@
    "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
    "name": "Journal d'aventure",
    "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
-   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
    "purpose": "Matériau d'EXP de personnage",
    "rarity": 3,
    "rewardPath": "/material/409961",
@@ -180,6 +181,7 @@
    "rewardPath": "/material/635669",
    "comeFrom": [
     "Calice de la Grande mine",
+    "Calice de la Grande mine",
     "Braises immortelles"
    ]
   },
@@ -187,7 +189,7 @@
    "id": 717290,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
    "name": "Ancien moteur",
    "desc": "Moteur mécanique provenant de l'Ancien monde. Matériau avancé utilisé pour le renforcement.",
    "lore": "Il utilise de la géomoelle comme source d'énergie. Lorsqu'il est alimenté, il crache des aurores vagabondes, et non des étincelles.<br /><br />« Il n'y a que la Division technologique directement rattachée à la Gardienne suprême qui a accès aux informations concernant l'Ancien monde. J'ai perdu mes accès quand on m'a mise à la porte. »",
@@ -205,7 +207,7 @@
    "id": 836255,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "iconPath": "34d88252515cd13ab58b6f5aae7329794a4a330a0147e1c5f755c8a2f4444bff",
    "name": "Obsidienne d'obsession",
    "desc": "Beau fragment de matière noire capturé dans le vide. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilité</span>.",
    "lore": "Un simple regard dans le prisme enverra les faibles d'esprit et les moins déterminés dans le chaos pour l'éternité.<br /><br />«           »",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/836255",
    "comeFrom": [
+    "Calice de la Grande mine",
     "Calice de la Grande mine",
     "Synthèse de matériaux de l'Omni-synthétiseur"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
+    "Calice de la Grande mine",
     "Calice de la Grande mine",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles"
@@ -945,10 +949,10 @@
    ]
   },
   {
-   "tagHash": "Incapacitation",
+   "tagHash": "ZdE",
    "descHash": "Inflige des DGT de vent équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Sampo à tous les ennemis, avec <nobr>#4[i]%</nobr> de <u>chances de base</u> d'augmenter les dégâts sur la durée subis par les cibles de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> pendant <nobr>#3[i]</nobr> tours.",
    "ultimateCost": 120,
-   "break": "0",
+   "break": "60/hit",
    "energy": "5",
    "id": 49935,
    "name": "Cadeau surprise",
@@ -1578,7 +1582,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Réduit la robustesse de l'ennemi au type correspondant en entrant en combat après l'avoir attaqué.",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2107,7 +2111,7 @@
   {
    "id": 1,
    "title": "Première rencontre",
-   "text": "Salut, Pionnier/Pionnière ! Tu sais, avec Sampo Koski à tes côtés, tu es en compagnie d'un homme d'affaires, d'un chaperon et d'un orateur qui résoudra tous tes problèmes, le tout à la fois ! Plutôt pas mal, hein ?",
+   "text": "Salut, Pionnier/Pionnière ! Tu sais, avec Sampo Koski à tes côtés, tu es en compagnie d'un homme d'affaires, d'un chaperon et d'un orateur qui résoudra tous tes problèmes, le tout à la fois ! Plutôt pas mal, hein ?",
    "unlockRequirement": "",
    "cnUrl": "09963ac540efd7233b997527b6c7112b569ab5bac322f0f8a50633571b19c5cc",
    "jpUrl": "f33541e54fd27fdd0f05766af2a67afdad6fa2520375e8f6e99886ead6eaf0f3",
@@ -2367,7 +2371,7 @@
   {
    "id": 52,
    "title": "Avertissement de danger en début de combat",
-   "text": "Bien ! Plus c'est fort, mieux c'est.",
+   "text": "Bien ! Plus c'est fort, mieux c'est.",
    "unlockRequirement": "",
    "cnUrl": "735703cb0757a8c89c2520c8268c88c6cc15658c1762b9c470ee1fdbf4c238aa",
    "jpUrl": "196c9c249f6c0ba47a432dc257688575c6a0b87d40972e341e7db77dfa750230",
@@ -2397,7 +2401,7 @@
   {
    "id": 55,
    "title": "Tour inactif",
-   "text": "Est-ce qu'on peut enfin sortir l'artillerie lourde ?",
+   "text": "Est-ce qu'on peut enfin sortir l'artillerie lourde ?",
    "unlockRequirement": "",
    "cnUrl": "ba60acadbecaea251bb5ac075b47f03a01a4af18d6ab067c283098cbe54adf6a",
    "jpUrl": "a75e75ecea2818d51355d28b44b4060e73cecd1b96d407a82f2bd9eef60d04c9",
@@ -2407,7 +2411,7 @@
   {
    "id": 56,
    "title": "Compétence",
-   "text": "Essayez donc ça pour voir ?",
+   "text": "Essayez donc ça pour voir ?",
    "unlockRequirement": "",
    "cnUrl": "63f56c833d58df435f7f111eebe8e8a35046a76c251c117428e1a65353d555eb",
    "jpUrl": "2c47a57523ed0a3505797b04a0263cf4076ede2b9fecb497632f132729e97e27",
@@ -2427,7 +2431,7 @@
   {
    "id": 58,
    "title": "Attaque lourde subie",
-   "text": "Hé ! Pas le visage !",
+   "text": "Hé ! Pas le visage !",
    "unlockRequirement": "",
    "cnUrl": "2cc242925d32b5b1522d05c1192451509808e2d345c2966a7f5266079e9f2350",
    "jpUrl": "b2e5615a1f902ab681c45d8482b4724ced09678bd91228e38a0a5a1c875a0029",
@@ -2437,7 +2441,7 @@
   {
    "id": 59,
    "title": "Activation de l'ultime",
-   "text": "Qu'est-ce que vous attendez ?",
+   "text": "Qu'est-ce que vous attendez ?",
    "unlockRequirement": "",
    "cnUrl": "3b69c7e262fdf0875792d13e83df3b5369cc16342dcf62d6d6d09d5c7bc032e4",
    "jpUrl": "8411052d7457958b4df20a1b54c40dcaf9deb41e70876cac0965e7fc43ea1391",
@@ -2467,7 +2471,7 @@
   {
    "id": 62,
    "title": "Retour au combat",
-   "text": "Échange de bons procédés !",
+   "text": "Échange de bons procédés !",
    "unlockRequirement": "",
    "cnUrl": "0564a9bfcdaa042f7c6cf80d7a032ccdde89df44fb6e44a326bf06da2edfaaa2",
    "jpUrl": "c33c8ffade1077afb9161f711db83d77ad7e0c344453ac25aa513a2ee2706e89",
@@ -2497,7 +2501,7 @@
   {
    "id": 65,
    "title": "Combat gagné",
-   "text": "Comment voulez-vous gagner sans prendre de risque ?",
+   "text": "Comment voulez-vous gagner sans prendre de risque ?",
    "unlockRequirement": "",
    "cnUrl": "52febe5be41ca81dfc5b1248fd48ff2fd4dfe921d02f301f6925bc4978b1d630",
    "jpUrl": "4ea4aa10f107ccefd2c7827e57d8eb50d9c51a338cd0e002ad6c83a2976e9bd4",
@@ -2598,7 +2602,7 @@
   },
   {
    "title": "Histoire du personnage : Partie IV",
-   "text": "« Bonjour, Madame, j'espère que je ne vous dérange pas. »<br /><br />« Qui êtes-vous ? Pourquoi les Gardes de la crinière d'argent frappent-ils à ma porte à une heure aussi matinale ? »<br /><br />« Excusez-moi, Madame. Nous effectuons des recherches dans tous les immeubles comme exigé par les Architectes. »<br /><br />« Euh... des recherches ? Que cherchez-vous exactement ? Je n'ai rien, moi... »<br /><br />« S'il vous plaît, ne vous emportez pas, Madame. Nous n'avons rien contre vous. Tous les habitants seront interrogés. »<br /><br />« Est-ce que... Est-ce que quelque chose de grave vient de se produire ? »<br /><br />« Faites-nous confiance. Tout se passera bien si vous coopérez. Ma question est simple : avez-vous des perruques chez vous ? »<br /><br />« Quoi... Des perruques ? Non, pas de perruques ici. Comme vous pouvez le voir, mes cheveux sont naturellement magnifiques... Pourquoi cette question ? »<br /><br />« Vous êtes sûre ? Réfléchissez encore. Les Gardes de la crinière d'argent ont reçu l'ordre de rassembler toutes les perruques de Belobog. Tout résistance pourrait entraîner de graves conséquences... »<br /><br />« Non, j'en suis certaine. Vous ne trouverez aucune perruque ici. Si vous ne me croyez pas, entrez et vérifiez par vous-même. »<br /><br />« Ah, ce ne sera pas nécessaire. Je vous crois. Au revoir, Mad... »<br /><br />« ... Attendez une minute. Puis-je savoir ce qui se passe ? »<br /><br />« Oh, bien sûr. Ces derniers temps, un voleur déguisé en femme s'est glissé jusqu'ici dans le Surmonde et escroque les gens. Cette personne est extrêmement rusée et change souvent d'apparence. Les Gardes de la crinière d'argent n'ont pas été en mesure de localiser ce délinquant. Visiblement, le ministre de la Sécurité était furieux lors du briefing d'hier, et a ordonné la saisie de toutes les perruques de la ville... »<br /><br />« C'est vrai ? Quel scandale ! »<br /><br />« Je vais être franc avec vous : nous ressentons tous la même chose. Nous devons poursuivre nos recherches, alors je ne vous dérangerai pas plus longtemps... En vous souhaitant une bonne journée, madame Poisson. »",
+   "text": "« Bonjour, Madame, j'espère que je ne vous dérange pas. »<br /><br />« Qui êtes-vous ? Pourquoi les Gardes de la crinière d'argent frappent-ils à ma porte à une heure aussi matinale ? »<br /><br />« Excusez-moi, Madame. Nous effectuons des recherches dans tous les immeubles comme exigé par les Architectes. »<br /><br />« Euh... des recherches ? Que cherchez-vous exactement ? Je n'ai rien, moi... »<br /><br />« S'il vous plaît, ne vous emportez pas, Madame. Nous n'avons rien contre vous. Tous les habitants seront interrogés. »<br /><br />« Est-ce que... Est-ce que quelque chose de grave vient de se produire ? »<br /><br />« Faites-nous confiance. Tout se passera bien si vous coopérez. Ma question est simple : avez-vous des perruques chez vous ? »<br /><br />« Quoi... Des perruques ? Non, pas de perruques ici. Comme vous pouvez le voir, mes cheveux sont naturellement magnifiques... Pourquoi cette question ? »<br /><br />« Vous êtes sûre ? Réfléchissez encore. Les Gardes de la crinière d'argent ont reçu l'ordre de rassembler toutes les perruques de Belobog. Tout résistance pourrait entraîner de graves conséquences... »<br /><br />« Non, j'en suis certaine. Vous ne trouverez aucune perruque ici. Si vous ne me croyez pas, entrez et vérifiez par vous-même. »<br /><br />« Ah, ce ne sera pas nécessaire. Je vous crois. Au revoir, Mad... »<br /><br />« ... Attendez une minute. Puis-je savoir ce qui se passe ? »<br /><br />« Oh, bien sûr. Ces derniers temps, un voleur déguisé en femme s'est glissé jusqu'ici dans le Surmonde et escroque les gens. Cette personne est extrêmement rusée et change souvent d'apparence. Les Gardes de la crinière d'argent n'ont pas été en mesure de localiser ce délinquant. Visiblement, le ministre de la Sécurité était furieux lors du briefing d'hier, et a ordonné la saisie de toutes les perruques de la ville... »<br /><br />« C'est vrai ? Quel scandale ! »<br /><br />« Je vais être franc avec vous : nous ressentons tous la même chose. Nous devons poursuivre nos recherches, alors je ne vous dérangerai pas plus longtemps... En vous souhaitant une bonne journée, madame Poisson. »",
    "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
   }
  ],

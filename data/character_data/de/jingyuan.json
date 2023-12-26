@@ -54,7 +54,7 @@
    "id": 151161,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "6b4243b69df9f37fab4f6cda60edc49711505bf5c2ce0b517d6272be5df311df",
+   "iconPath": "2ec1fa84daf481a7bef5ee243b4e6b195a84cde88befd531353eeb44bae62a63",
    "name": "Blitzstab des Gestaltenwandlers",
    "desc": "Ein Holzstab mit einer spitzen Spitze, der vom Jünger des Sanctus Medicus: Gestaltenwandler zurückgelassen wurde. Material zum Aufstieg der Figuren mit Blitz-Typ.",
    "lore": "Uralten Aufzeichnungen der Xianzhou zufolge beherrschen die Erhobenen Blitz und Wind. Die Jünger des Sanctus Medicus behaupteten, sie wären die Nachfolger der Götter. Ihre Demonstrationen göttlicher Kräfte brachten den Jüngern viele heimliche Anbeter ein. Blitze schlängeln sich um diesen Stab ... Waren die Jünger vielleicht wirklich keine gewöhnlichen Sterblichen?<br /><br />„Der sterbliche Körper ist bloß eine Illusion. Nur jenen, die sich erheben, offenbart sich die Wahrheit.“",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/151161",
    "comeFrom": [
+    "Ruhender Schatten (Sternhafen)",
     "Ruhender Schatten: Sternhafen",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -165,6 +166,7 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Blütenkelch (Nietstadt)",
+    "Blütenkelch (Nietstadt)",
     "Glut-Tausch"
    ]
   },
@@ -190,7 +192,7 @@
    "id": 836261,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "iconPath": "36e68603fbc67d4b69c02e01d7d5d41a80446ea6c49b1d828b47320f6225825c",
    "name": "Schlüssel der Weisheit",
    "desc": "Ein mythischer Schlüssel aus den Händen der größten Ausnahmetalente der Galaxie, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad der Gelehrsamkeit</span> stark hochgestuft werden können.",
    "lore": "Gilt als Beweis für eine Einladung in den Nous-Tempel.<br />An den Schlüssel zu gelangen ist nicht halb so schwierig wie die Tür zu finden, zu der er gehört. Wer durch die heiligen Pforten tritt, erkennt sofort, dass es kein Zurück gibt, wenn man erst einen Fuß auf die andere Seite gesetzt hat.<br /><br />„Wissen gibt uns nicht alle Antworten im Universum, aber es befähigt uns dazu, die richtigen Fragen zu stellen.“",
@@ -198,6 +200,7 @@
    "rarity": 4,
    "rewardPath": "/material/836261",
    "comeFrom": [
+    "Blütenkelch (Nietstadt)",
     "Blütenkelch (Nietstadt)",
     "Omni-Synthesemaschine – Materialsynthese"
    ]
@@ -214,6 +217,7 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
+    "Blütenkelch (Nietstadt)",
     "Blütenkelch (Nietstadt)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Glut-Tausch"
@@ -1240,7 +1244,7 @@
   },
   {
    "tagHash": "Abprallung",
-   "descHash": "Beschwört den <span style=\"color:#c75de2;\">Blitz</span>-Lord beim Kampfeintritt. Er hat eine GES von <nobr>#1[i]</nobr> und eine Trefferzahl von <nobr>#4[i]</nobr>. Seine Angriffe werden als <u>Folgeangriffe</u> gewertet. Jeder Treffer des <span style=\"color:#c75de2;\">Blitz</span>-Lords fügt einem zufälligen Gegner <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> von Jing Yuans ANG zu und fügt angrenzenden Zielen <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <nobr>#5[i]%</nobr> des am anvisierten Ziel verursachten SCH zu.<br />Die Trefferzahl des <span style=\"color:#c75de2;\">Blitz</span>-Lords ist bis zu max. <nobr>#6[i]</nobr> stapelbar und die GES des <span style=\"color:#c75de2;\">Blitz</span>-Lords erhöht sich um <nobr>#3[i]</nobr> für jeden zusätzlichen Treffer. Nach dem Ende der Aktion werden die GES und die Trefferzahl des <span style=\"color:#c75de2;\">Blitz</span>-Lords zurückgesetzt.<br />Ist Jing Yuan <u>handlungsunfähig</u>, verschwindet der <span style=\"color:#c75de2;\">Blitz</span>-Lord.<br />Steht Jing Yuan unter dem Einfluss von <u>Mengenkontrolle-Debuffs</u>, kann der <span style=\"color:#c75de2;\">Blitz</span>-Lord auch keine Aktion ausführen.",
+   "descHash": "Beschwört den <span style=\"color:#c75de2;\">Blitz</span>-Lord beim Kampfeintritt. Er hat eine GES von <nobr>#1[i]</nobr> und eine Trefferzahl von <nobr>#4[i]</nobr>. Seine Angriffe werden als <u>Folgeangriffe</u> gewertet. Jeder Treffer des <span style=\"color:#c75de2;\">Blitz</span>-Lords fügt einem zufälligen Gegner <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> von Jing Yuans ANG zu und fügt angrenzenden Zielen <span style=\"color:#c75de2;\">Blitz</span>-SCH in Höhe von <nobr>#5[i]%</nobr> des am anvisierten Ziel verursachten SCH zu.<br />Die Trefferzahl des <span style=\"color:#c75de2;\">Blitz</span>-Lords ist bis zu max. <nobr>#6[i]</nobr>-fach stapelbar und die GES des <span style=\"color:#c75de2;\">Blitz</span>-Lords erhöht sich um <nobr>#3[i]</nobr> für jeden zusätzlichen Treffer. Nach dem Ende der Aktion werden die GES und die Trefferzahl des <span style=\"color:#c75de2;\">Blitz</span>-Lords zurückgesetzt.<br />Ist Jing Yuan <u>handlungsunfähig</u>, verschwindet der <span style=\"color:#c75de2;\">Blitz</span>-Lord.<br />Steht Jing Yuan unter dem Einfluss von <u>Mengenkontrolle-Debuffs</u>, kann der <span style=\"color:#c75de2;\">Blitz</span>-Lord auch keine Aktion ausführen.",
    "ultimateCost": 0,
    "break": "15/hit",
    "energy": "0/hit",

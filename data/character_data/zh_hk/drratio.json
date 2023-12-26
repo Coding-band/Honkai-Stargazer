@@ -1,0 +1,2675 @@
+{
+ "spRequirement": 140,
+ "iconPath": "19e3cc6daf8379022eea1bdd0ddf7ce8ec99eb130915f1bc1dde19eddf68f213",
+ "bgPath": "4a876afb27e69d9ffdbe3e1f9d6cb5179b3077d77a635f0551ffec75d5ebd946",
+ "figPath": "b9cd0755cc37be59d507282cbea2fb33aeff4f61d89ccedf767e9521375ad3ed",
+ "fgPath": "0aa2c84e1570f008260d4b8a963b629e70ed115a769e190c557fa940260e4506",
+ "splashIconPath": "82c23430f77a01e460ad46b1fd2d072d78afd213b8b5aa7786ef59a3aa1b68bc",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 2,
+  "iconPath": "db0b64061159f4acfb6a3034911f3b42572d0d8d51723ca888b8ce49b06961c5",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "信用點",
+   "desc": "星際和平公司與客戶結算時使用的貨幣，如今已成爲太空旅行的硬通貨。",
+   "lore": "「人們奔波、爭鬥、貿易，爲的不過是個終端裏顯示的數字。但真正珍貴之物，公司的數字是買不到的。」",
+   "purpose": "通用貨幣",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "任務獎勵",
+    "委託獎勵",
+    "餘燼兌換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "命運的足跡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "一次又一次的敗北成就了你的勝利，一步又一步的前進讓你抵達了命運的拐點。",
+   "purpose": "行跡材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」積分獎勵",
+    "無名勳禮",
+    "餘燼兌換",
+    "限時活動獎勵"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "漫遊指南",
+   "desc": "角色的經驗材料，可以獲得<nobr>20000</nobr>點角色經驗。",
+   "lore": "跨越諸界必備的冒險叢書。按下閱讀鍵，充滿磁性的聲音將以你能聽懂的語言講述知名冒險家們在不同世界間的傳奇經歷，以及他們在各個星球上獲得的珍貴智慧。<br /><br />「漫遊指南全新書系《星際美食烹飪導覽》開售在即，敬請支持。」<br />「投稿請接入博識學會聯覺信標<nobr>23</nobr>θ聯絡員，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色經驗材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "「忘卻之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "冒險記錄",
+   "desc": "角色的經驗材料，可以獲得<nobr>5000</nobr>點角色經驗。",
+   "lore": "裝訂嚴整，一看就頗有教育意義的冒險札記。圖文並茂地描述了冒險行動的始末、有價值的信息和生存相關的技巧。<br /><br />「幹嘛不數據化放進光刻片裡？便攜多了。」<br />「面對恆星風暴和中子流噴發時，高科技比你想象的還要脆弱。何況，製作這本書的人一定希望人們用最簡單的方式閱讀它。」",
+   "purpose": "角色經驗材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "每日實訓",
+    "餘燼兌換"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "旅情見聞",
+   "desc": "角色的經驗材料，可以獲得<nobr>1000</nobr>點角色經驗。",
+   "lore": "記錄旅途見聞的日誌，字跡漫漶不清，內容隨心所欲，對你並沒有太大的幫助。<br /><br />「看完了就趕緊把這堆廢紙處理掉吧，丹恆？」",
+   "purpose": "角色經驗材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "委託獎勵"
+   ]
+  },
+  "468392": {
+   "id": 468392,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "fde5283543d2c56dbc6fa50e20ee2cd2a34a0ec0d0b3d2c1df1af003e36f8174",
+   "name": "鎮靈敕符",
+   "desc": "仙舟機巧術的部件，虛數屬性角色的晉升素材。",
+   "lore": "傳言在魯珀特掀起無機生物的災禍後，仙舟金人也隨之叛亂，大開殺戒。爲了保證禍亂不再復起，匠人們以符籙施加禁錮，奪走了金人的思考能力。<br /><br />「你到底做了什麼讓這傢伙發起瘋來？」<br />「我也沒幹什麼啊！就是…把那道金符擦了擦。」",
+   "purpose": "角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/468392",
+   "comeFrom": [
+    "凝滯虛影【工造司】",
+    "凝滯虛影【工造司】",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "470781": {
+   "id": 470781,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "c63b922af281d49c4d1e5ee84aa4a5cb7027e4a16e96fe8f683c9f50a4bcb921",
+   "name": "蛀星孕災的舊惡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "作爲蟲皇親自繁育的子嗣，它的唯一欲望便是擴張族羣。它以巨鐮收割星體爲巢，不倦培育無窮子孫，塗炭萬千生靈，直至隕落一刻。<br /><br />「破碎星球之上，巨蝗遮蔽天空，羣蟲湧出地殼。鍬甲將這顆新巢穴舉起，向它的蟲皇獻禮…願此番慘狀只存於史料中，永不復現。」",
+   "purpose": "行跡材料",
+   "rarity": 4,
+   "rewardPath": "/material/470781",
+   "comeFrom": [
+    "歷戰餘響【禁閉艙段】"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "15365d10ed38771d99d247bc228b03787e29972cc714a655a9b8feef3031505e",
+   "name": "掠奪的本能",
+   "desc": "微弱的反物質，強化所需的簡單材料。",
+   "lore": "由虛卒•掠奪者體內逸散出的微弱反物質，如同破壞本能的具現化。<br /><br />「它們都在期許着湮滅之刻，與世界一同煉鑄、同化。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "反物質軍團掉落",
+    "「模擬宇宙」中敵方掉落",
+    "委託獎勵",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3cd4c92ff44d695595377ffc6c0896d6839775f6014e96daf679b256bc0d19cf",
+   "name": "篡改的野心",
+   "desc": "稀薄的反物質，強化所需的普通材料。",
+   "lore": "漂浮在虛卒•篡改者周身的稀薄反物質，正反粒子於此達成了危險的平衡。<br /><br />「它們都在期許着湮滅之刻，與世界一同煉鑄、同化。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "突破至均衡等級2後，反物質軍團掉落",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "635674": {
+   "id": 635674,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bbfb88036f821da503753ae4189da74a1586b0b7ee8ec0f234bbf9fb53474d01",
+   "name": "獵獸之矢",
+   "desc": "仙舟匠人以星間寒鐵鍛造的箭頭。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">巡獵</span>角色的命途行跡。",
+   "lore": "在行成年禮時，父母們將它贈予狩獵了人生中第一頭獵物的少年少女們，期許他們的生命如離弦之矢，終能中的。<br /><br />「願腰間箭，匣中劍，不空蠹。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/635674",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【城郊雪原】",
+    "餘燼兌換"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3c858c8ff4df238403e5443f57850367e4164a62efb508ce359db9c5b7474a19",
+   "name": "踐踏的意志",
+   "desc": "凝縮的反物質，強化所需的高級材料。",
+   "lore": "虛卒•踐踏者體內高度凝縮的反物質，湮滅之刻正是文明毀滅的號角。<br /><br />「它們都在期許着湮滅之刻，與世界一同煉鑄、同化。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "突破至均衡等級4後，反物質軍團掉落",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "836260": {
+   "id": 836260,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "567e2625dad62dc022ca7b71109c76754e7fc5cc2ac9daa5debb5c65282743ab",
+   "name": "逐星之矢",
+   "desc": "帝弓司命射出的傾天光矢的碎片。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">巡獵</span>角色的命途行跡。",
+   "lore": "無緣不可目睹的神跡殘餘。超逸光年，擊破天星，人們只能從光矢留下的餘燼中追想其力量。<br />也只有仙舟的工匠首領百冶才有資格將碎片重鑄，贈予功業蓋世的大英雄。<br /><br />「星裂天傾，光昭萬古。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/836260",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【城郊雪原】",
+    "「萬能合成機」- 材料合成"
+   ]
+  },
+  "920201": {
+   "id": 920201,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "fdcef4e7b19d0d08fb9ea878b30e08be44286d0a6273f29c89a77c6e17ad9572",
+   "name": "屠魔之矢",
+   "desc": "仙舟匠人以星辰天瑛精心鑄造的箭頭。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">巡獵</span>角色的命途行跡。",
+   "lore": "闊不盈一指的鋒鏑，裝入電磁弩或是熱尋弓作爲飛矢彈藥，其力道足以一擊貫穿孽物們堅如金石的軀殼。<br /><br />「天上謫仙來，乘槎渡星海。飛矢墜疾雨，明盔映月白。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/920201",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【城郊雪原】",
+    "「萬能合成機」- 材料合成",
+    "餘燼兌換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 105.6,
+   "attackAdd": 5.28,
+   "hpBase": 142.56,
+   "hpAdd": 7.128,
+   "defenseBase": 62.7,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549437,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 147.84,
+   "attackAdd": 5.28,
+   "hpBase": 199.584,
+   "hpAdd": 7.128,
+   "defenseBase": 87.78,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549437,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 190.08,
+   "attackAdd": 5.28,
+   "hpBase": 256.608,
+   "hpAdd": 7.128,
+   "defenseBase": 112.86,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633378,
+     "count": 6
+    },
+    {
+     "id": 468392,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 232.32,
+   "attackAdd": 5.28,
+   "hpBase": 313.632,
+   "hpAdd": 7.128,
+   "defenseBase": 137.94,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633378,
+     "count": 9
+    },
+    {
+     "id": 468392,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 274.56,
+   "attackAdd": 5.28,
+   "hpBase": 370.656,
+   "hpAdd": 7.128,
+   "defenseBase": 163.02,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717319,
+     "count": 6
+    },
+    {
+     "id": 468392,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 316.8,
+   "attackAdd": 5.28,
+   "hpBase": 427.68,
+   "hpAdd": 7.128,
+   "defenseBase": 188.1,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717319,
+     "count": 9
+    },
+    {
+     "id": 468392,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 359.04,
+   "attackAdd": 5.28,
+   "hpBase": 484.704,
+   "hpAdd": 7.128,
+   "defenseBase": 213.18,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "3cfcd006d85f4b1750df7c7ad5526fdb8a2214115c1a59a10f739abfc88302df",
+   "artPath": "1576cea61557abca4a92048ff95788d211b7bcfe0471e092972e00aacd802bbd",
+   "name": "倨傲生禍患",
+   "descHash": "行跡【歸納】的疊加層數上限提高<nobr>#1[i]</nobr>層。戰鬥開始時，立即獲得<nobr>#2[i]</nobr>層【歸納】。需要先解鎖行跡【歸納】。",
+   "params": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "70d8a85463a4cf8ce17e8705ec9f46bdc08190b160ccf269283aebd7650e5d02",
+   "artPath": "94a2ab7e7760517858aaa7c22958191f6c428b39ee8337887c855754f4d5debc",
+   "name": "顯微而闡幽",
+   "descHash": "天賦的追加攻擊擊中目標時，目標每有1個負面效果，則額外造成等同於真理醫生<nobr>#1[i]%</nobr>攻擊力的虛數屬性附加傷害。該效果在每次追加攻擊中最多觸發<nobr>#2[i]</nobr>次。",
+   "params": [
+    0.2,
+    4
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "2409d9ad4b6853e86443b4fafebba642cfa2c504b0fa17594e46104febb10082",
+   "artPath": "cc2f7bc687c5085154b65c9f3bad00b849895308d3ee3b9fe524faf474a60249",
+   "name": "認識你自己",
+   "descHash": "終結技等級+2，最多不超過<nobr>15</nobr>級；普攻等級+1，最多不超過<nobr>10</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "58c364ef223c9ab38de6694d2043f02a66bfd0c279a4dcdc6081485cccbb929f",
+   "artPath": "1e5360bef5f6e8d55d75958172fe0b0b611da5024376e8184fb3cea5d2c310e4",
+   "name": "盲目造癡愚",
+   "descHash": "觸發天賦時，真理醫生額外恢復<nobr>#1[i]</nobr>點能量。",
+   "params": [
+    15
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "c43ce8e213f0ca060250af12f2f9415478beda05cb9ecaa43ae203d65818802f",
+   "artPath": "e7ccd7fbee6dd4957bdd639b61c840ef414e62652e67f9d4c62d0ea33f6a2d1c",
+   "name": "海闊舟無楫",
+   "descHash": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "9dea70a7206d217e43f07c1cd405bb47842108b409eba5b5c50a4dd650ed0fd1",
+   "artPath": "1c89d3ea4d2366f29186d7aee0b59a1176ccc67d5312451b1713b33872468565",
+   "name": "永恆唯真理",
+   "descHash": "【智者的短見】的觸發效果額外增加<nobr>#1[i]</nobr>次，天賦的追加攻擊造成的傷害提高<nobr>#2[i]%</nobr>。",
+   "params": [
+    1,
+    0.5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   776142
+  ],
+  [
+   692201
+  ],
+  [
+   575556
+  ],
+  [
+   261255
+  ],
+  [
+   976728
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於真理醫生<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#F4D258;\">虛數</span>屬性傷害。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 776142,
+   "name": "知識就是力量",
+   "iconPath": "1ee6f4e45c1714cd62c0f5b90b99e54d613fc4fbca74e5446df469cbf48a5aa0",
+   "typeDescHash": "普攻",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於真理醫生<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#F4D258;\">虛數</span>屬性傷害。",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "30",
+   "id": 692201,
+   "name": "精神助產術",
+   "iconPath": "c43ce8e213f0ca060250af12f2f9415478beda05cb9ecaa43ae203d65818802f",
+   "typeDescHash": "戰技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.75
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.825
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920201,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.21875
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3125
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836260,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.40625
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836260,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.575
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.65
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.725
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.8
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.875
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於真理醫生<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#F4D258;\">虛數</span>屬性傷害，並附上【智者的短見】。真理醫生的隊友攻擊持有【智者的短見】的目標時，真理醫生對該目標發動1次天賦的<u>追加攻擊</u>。<br />【智者的短見】效果最多觸發<nobr>#2[i]</nobr>次且僅對真理醫生終結技最新施放的目標生效。施放終結技後重置該效果觸發次數。",
+   "ultimateCost": 140,
+   "break": "90",
+   "energy": "5",
+   "id": 575556,
+   "name": "三段悖論",
+   "iconPath": "3d635536196be48334f20ed220849228c898c24e03afa2f26d5a6cec4bf1194b",
+   "typeDescHash": "終結技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.44,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.536,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.632,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.728,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.824,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.92,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920201,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2.04,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.16,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836260,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.28,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.4,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836260,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.496,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.592,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.688,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.784,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.88,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "單攻",
+   "descHash": "施放戰技時，有<nobr>#2[i]%</nobr>的<u>固定概率</u>對該目標發動1次<u>追加攻擊</u>，造成等同於真理醫生<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#F4D258;\">虛數</span>屬性傷害。目標每有1個負面效果，<u>追加攻擊</u>發動的<u>固定概率</u>提高<nobr>#3[i]%</nobr>。若<u>追加攻擊</u>施放前目標被消滅則對敵方隨機單體發動<u>追加攻擊</u>。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "5",
+   "id": 261255,
+   "name": "我思故我在",
+   "iconPath": "85ec3d9fcc3b56e406330fa5823fbc3a3c24d1c5af070425b204e24a5fbe5b15",
+   "typeDescHash": "天賦",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.35,
+      0.4,
+      0.2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.485,
+      0.4,
+      0.2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.62,
+      0.4,
+      0.2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.755,
+      0.4,
+      0.2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.89,
+      0.4,
+      0.2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.025,
+      0.4,
+      0.2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920201,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2.19375,
+      0.4,
+      0.2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.3625,
+      0.4,
+      0.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836260,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.53125,
+      0.4,
+      0.2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.7,
+      0.4,
+      0.2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836260,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.835,
+      0.4,
+      0.2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.97,
+      0.4,
+      0.2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.105,
+      0.4,
+      0.2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.24,
+      0.4,
+      0.2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.375,
+      0.4,
+      0.2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "攻擊敵人，進入戰鬥後削弱敵方目標對應屬性韌性。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 60669,
+   "name": "攻擊",
+   "iconPath": "1ee6f4e45c1714cd62c0f5b90b99e54d613fc4fbca74e5446df469cbf48a5aa0",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "妨害",
+   "descHash": "使用祕技後，製造一個特殊領域嘲諷附近敵人，持續<nobr>#1[i]</nobr>秒。與處於特殊領域內的敵人進入戰鬥後，有<nobr>#2[i]%</nobr><u>基礎概率</u>使敵方每個單體目標速度降低<nobr>#3[i]%</nobr>，持續<nobr>#4[i]</nobr>回合。我方製造的領域效果最多存在1個。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 976728,
+   "name": "偶像塑造",
+   "iconPath": "34480c0f2400b7efb64f9336bcdbedb365ca850999fa8ef4f9e09e7de34fb443",
+   "typeDescHash": "祕技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      10,
+      1,
+      0.15,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1305102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1305205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1305206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 413439,
+        "name": "暴擊率強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "暴擊率",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836260,
+          "count": 3
+         },
+         {
+          "id": 717319,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 413442,
+      "name": "攻擊強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "攻擊力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920201,
+        "count": 5
+       },
+       {
+        "id": 633378,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "施放戰技攻擊敵方目標後，有<nobr>#1[i]%</nobr>的基礎概率使受到攻擊的敵方目標效果抵抗降低<nobr>#2[i]%</nobr>，持續<nobr>#3[i]</nobr>回合。",
+    "ultimateCost": 0,
+    "id": 413350,
+    "name": "演繹",
+    "iconPath": "b9952c496d29e0fbfdf92e772518aec6a1acca081bd41ebaf3e0f279d9910656",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       1,
+       0.1,
+       2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920201,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 413446,
+    "name": "攻擊強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "攻擊力",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549437,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 413441,
+    "name": "防禦強化",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+    "statusList": [
+     {
+      "key": "防禦力",
+      "value": 0.05
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 10000
+     },
+     {
+      "id": 920201,
+      "count": 3
+     },
+     {
+      "id": 633378,
+      "count": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 413440,
+    "name": "攻擊強化",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "攻擊力",
+      "value": 0.06
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 45000
+     },
+     {
+      "id": 836260,
+      "count": 3
+     },
+     {
+      "id": 717319,
+      "count": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1305202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1305203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 413444,
+        "name": "攻擊強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "攻擊力",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920201,
+          "count": 3
+         },
+         {
+          "id": 633378,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 413443,
+      "name": "暴擊率強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+      "statusList": [
+       {
+        "key": "暴擊率",
+        "value": 0.026999999
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635674,
+        "count": 3
+       },
+       {
+        "id": 549437,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "施放戰技時，目標每有1個負面效果，真理醫生暴擊率提高<nobr>#1[f1]%</nobr>、暴擊傷害提高<nobr>#2[i]%</nobr>，該效果最多疊加<nobr>#3[i]</nobr>層。",
+    "ultimateCost": 0,
+    "id": 413347,
+    "name": "歸納",
+    "iconPath": "3a4064faf82f3c142814472f1aece5516a905fab40ddb0cd18fc6be7cca0bafa",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.025,
+       0.05,
+       6
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635674,
+        "count": 3
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1305208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1305210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 329504,
+        "name": "攻擊強化",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "攻擊力",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836260,
+          "count": 8
+         },
+         {
+          "id": 717319,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1305209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 413454,
+        "name": "暴擊率強化",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "暴擊率",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836260,
+          "count": 8
+         },
+         {
+          "id": 717319,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 413453,
+      "name": "防禦強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+      "statusList": [
+       {
+        "key": "防禦力",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836260,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "造成傷害時，若目標負面狀態大於等於<nobr>#1[i]</nobr>個，目標每有1個負面效果，真理醫生對其造成的傷害提高<nobr>#2[i]%</nobr>，最多提高<nobr>#3[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 413349,
+    "name": "推理",
+    "iconPath": "2fa5a9d80d2cd803da826471d9d1e6a772d49cad6a803e37a944f726deca227e",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       3,
+       0.1,
+       0.5
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836260,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "軀幹",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "暴擊傷害",
+    "propertyIconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609"
+   },
+   {
+    "relicTypeHash": "腳部",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "速度",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "位面球",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "虛數屬性傷害提高",
+    "propertyIconPath": "939478539b7b35b55ee48b2e19d6994455dec3403493edcc082140d3a061b14e"
+   },
+   {
+    "relicTypeHash": "連結繩",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "攻擊力",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初次見面",
+   "text": "我是維裏塔斯•拉帝奧，博識學會的學者和老師，也是一介庸人。如果有一天，你的腦袋出現了「愚鈍」的症狀，屆時請稱呼我爲——「真理醫生」。",
+   "unlockRequirement": "",
+   "cnUrl": "d93715cb8d43ba4cf435c2df98d4163bb687568f326ddd0ff80a807538b67547",
+   "jpUrl": "8929b7899e59ae5c34e0c7c4a0fbd668c348b5022d75e05c9223e605f7956235",
+   "enUrl": "5c7115da6a1f2cf2494db54f117b6f9b8cfddb848e8d62f7360f9cdc316a73ef",
+   "krUrl": "235de7d8b7ed2aaf92f7de599effd98004972b4848334d8c652aa35b404d8ae3"
+  },
+  {
+   "id": 2,
+   "title": "問候",
+   "text": "很苦惱的樣子啊，遇到麻煩了？既然如此——你自己想辦法吧。",
+   "unlockRequirement": "",
+   "cnUrl": "af8c8d85604139f4b703293b792586cb8d2161c35fbdbd9a878ab4d1bed23322",
+   "jpUrl": "11d654160118f2a1bcdfeaab5b71b3487fe76a9c53b3cc46666cdf63e72460e3",
+   "enUrl": "8c6ade3ce7fd19347cd130b787710608f04c24cd5e7cf8a360e2639bcc3da25d",
+   "krUrl": "9a7528958db73a8162c31afc8c68730fa711e618f1c3a9c362a99eb14ce302d8"
+  },
+  {
+   "id": 3,
+   "title": "道別",
+   "text": "又一天過去了，如果你的問題還沒解決，有沒有可能是你自己的問題？",
+   "unlockRequirement": "",
+   "cnUrl": "00d096285627f02a492da63a4537888c3f6fd768dd97718a5fff130179c8c0c0",
+   "jpUrl": "ac5eb12c1b8b69e417c06d67c5656a7ff38228e8d0e3941cf3f59354b0363e0f",
+   "enUrl": "f7957939c5fc35b5bfe9280128ca8bf0c0a6be96c63ed7d418ccd30f2e6aa57f",
+   "krUrl": "3ddd7aaacd613bac19c4f646274cf9bf886f873fde0ccb7a2c0d5dcffc69f955"
+  },
+  {
+   "id": 4,
+   "title": "關於自己•頭套",
+   "text": "第一，戴上頭套，隔絕五感，我可以不受幹擾地進行思考；第二，我見不得蠢材，當然，他們也不想見我。",
+   "unlockRequirement": "",
+   "cnUrl": "26e257e8b022a45755e43e6bc1d86a0c0fdd29cdb91fc3d0a6ba46c5d880206d",
+   "jpUrl": "3c0fca3acf66ace2869413f810bd8ed838e97369ba0961f1cccd82e88f5023d9",
+   "enUrl": "b323f509856e54483ce3c19a2a592374dce66930167c2723759b63fae43b982e",
+   "krUrl": "f7c468609c1047836d8637da4fd7b6e36312c059d801beb2ee55a6d451179904"
+  },
+  {
+   "id": 5,
+   "title": "關於自己•真容",
+   "text": "如果有助於教學與診療，我不介意露出自己的真容。但就經驗來看，多半有害無益。",
+   "unlockRequirement": "",
+   "cnUrl": "50a75d978ed8ec6f4a4dd02b2388a7931df1be27e942f718a63d503fab2bc4e2",
+   "jpUrl": "966054845b0226a008c55d59bf9d5b0cd6205d6c228272a8e53784b9227bc731",
+   "enUrl": "2c004f1885e3d16d18c95ee8f0cae3e5ab51761665ef607f21e2cc20c37af2e5",
+   "krUrl": "ca1abd2b8b9650f67c790e9827c66c7d4f5e8be293045dde4ccc360916c7a70d"
+  },
+  {
+   "id": 6,
+   "title": "閒談•博識學會",
+   "text": "博識學會常被視作知識的賣家，但定價的權利始終在買家手上。有人願意聆聽，知識得以傳播與流通，價格便會產生。",
+   "unlockRequirement": "",
+   "cnUrl": "d18467fc9f137d505fb75a901120782178f4183d5c50da5b7b4a680fe82797b8",
+   "jpUrl": "24bdba259e5c43db031b27a76ba24788f23d01423dc910b395c1fd8ca4fbf1cb",
+   "enUrl": "4269b5d74ba93d6755a21e1137e53234a2fb2cb7dd51bc41920e9adfc4f55d89",
+   "krUrl": "fcd847421dc51b8a29e7e97b154ca35a12e7ab1a5da1b0268fbc0e5ddb26ecfb"
+  },
+  {
+   "id": 7,
+   "title": "閒談•天才俱樂部",
+   "text": "他們將自己奉獻給了真理…這麼說也沒錯，畢竟他們的一切所爲都是爲了「博識尊」。",
+   "unlockRequirement": "",
+   "cnUrl": "b092abf43cb0fd9754f6901f40bb16b175d329ca46af9c4c01d4d9fbde7cb9a5",
+   "jpUrl": "ce1450eeab6763395a737e12f2a622632a796b09eee0bdbe0a25077917f78f31",
+   "enUrl": "e84418b585287bea3ac03530e5e4776b64695fa671603ddb2f984add1345be79",
+   "krUrl": "ed97721def67ac651bf058764aa9669ef120306f675445cb429506656bd4acce"
+  },
+  {
+   "id": 8,
+   "title": "愛好",
+   "text": "我離不開書籍和浴缸，尤其是前者。當一個人的腦袋被髒東西塞滿，身體也乾淨不到哪裡去。",
+   "unlockRequirement": "",
+   "cnUrl": "64719bc4b75fb40e3fa1539755a6e82df3a6847c5e66d36815679af207e77c5c",
+   "jpUrl": "fa66af4d4bb4d4e2536dd00de62f9e41f443d9d0b87a71d718ee3ccae50da331",
+   "enUrl": "fd07df916deb3b699b5956f75ebefca474feb83747ea071704c01d45e6093574",
+   "krUrl": "f0dfd1e0177179215947e1928c4c65bb7203bb34651620bd10d0162967fdad61"
+  },
+  {
+   "id": 9,
+   "title": "煩惱",
+   "text": "我甚至無法和一個蠢材解釋何爲「蠢材」。",
+   "unlockRequirement": "",
+   "cnUrl": "2f9f2b3361f41de9f899024dc9abfc2c782e182a336732ae96f6b8720b832275",
+   "jpUrl": "7451609e28a89df32b52141bf14774bedf88cd08d9e6fc95c517406e91190903",
+   "enUrl": "f74c71266232f9d18625811f53af43ffdbd791a5dac6330db845b767cfa73edf",
+   "krUrl": "cb8e96105c62a1c620f01867aa659b2302a0247137b1192a48cc5c72d3041de8"
+  },
+  {
+   "id": 10,
+   "title": "分享",
+   "text": "提問前不如先想一想，你的答案是不是已經先於問題確定？這種問題不問出口，對大家都好。",
+   "unlockRequirement": "",
+   "cnUrl": "c49613fc67331b9a704b9e74a44c12c73f87583a3f8592eac4d3a0b0bed34eca",
+   "jpUrl": "996a91790d7ca28bfaeedb7765b7d6f6904fea3e05ddf86236f2d78e45dabfd7",
+   "enUrl": "1897b479023a797bec4fdbec712514bbca51cad33e52db42a5b0ecee49d18550",
+   "krUrl": "3c4b55f1f2e4e75051394359c34ff11ed253091863eb82bce54c694fc9db160a"
+  },
+  {
+   "id": 11,
+   "title": "見聞",
+   "text": "真理的美妙之處在於，即使沒人理解它，它也不會改變。我本人也是如此。",
+   "unlockRequirement": "",
+   "cnUrl": "0bb7aac586d37563fb82a4ad2a440e657f4abe71402980a7bb0e6121fd3ffef3",
+   "jpUrl": "8de910e34488ce096e9a7c7d2e34e6d52f301361acfbfe2731c158041d8a5360",
+   "enUrl": "94de438045d40e81d976113177d35baf3e24d7db124b4fe97a0537e8b008e15b",
+   "krUrl": "950c3530c7c2fe76f40acec83cb8b215769ec87a7a25ce1725e23a92a185a8ec"
+  },
+  {
+   "id": 12,
+   "title": "關於黑塔",
+   "text": "黑塔是最典型的天才——天縱奇材，目中無人。我毫不懷疑她的才智，但我懷疑她的才智對他人並無幫助。",
+   "unlockRequirement": "",
+   "cnUrl": "df4bbd7c21329bbc2a806565c64a6187ea3c0954434c80d5dc2c212058a03be1",
+   "jpUrl": "b364986566995a1596cdd054a3de7822262726219014d4ab294808bc671163f1",
+   "enUrl": "40953628ee6b940b74e2360a31aefdbf892035e57cf20723fc75a12a5be82a90",
+   "krUrl": "c1749a5a0ae09cfd6a67ef65a3a719a3542c50e6411e37f3027777a73725b72b"
+  },
+  {
+   "id": 13,
+   "title": "關於螺絲咕姆",
+   "text": "在他的領域內，螺絲咕姆正試圖建立新的法則，比起天才，我更願意稱呼這樣的人爲——君王。",
+   "unlockRequirement": "",
+   "cnUrl": "85b5802e8beeec31bc631f91157bea52677a594c9ce1759679caca5e06f4b774",
+   "jpUrl": "0f1fb026f578090f4805bafe5e154c5c36db640585f9587f2530843f3f139014",
+   "enUrl": "6a0b4a950973480cc70efcc13ca3d3ecd08ac720d7858eca473deaa21cf4e0d9",
+   "krUrl": "bae7c345b5bef235cab6f249e6ceea76af05c699cea1d5d4374a3d5bb1672a2a"
+  },
+  {
+   "id": 14,
+   "title": "關於阮•梅",
+   "text": "多少人被她「隱士」的自稱所蒙蔽？在我看來，她想要探究的遠不止生命——拭目以待吧，她才是天才俱樂部真正的野心家。",
+   "unlockRequirement": "",
+   "cnUrl": "5fb83be767f81868778f2b44d410e78cae8dea5e536afc05acc5534ad7e22eac",
+   "jpUrl": "7f7e1c6b3ebba3603d2c77b185f27e441b1d047beaacc62fd0d614ffa91fc395",
+   "enUrl": "92ff2d09be5ae6929813fbf52036845ec00aa5f3f01919457860bb1693da0b20",
+   "krUrl": "0b812cbc099643a8f2ddd94e4ad84f50ceae61999d8e3ca1c624f7b045a4f638"
+  },
+  {
+   "id": 15,
+   "title": "星魂激活",
+   "text": "除了通過思維，我們不具備認識自己的其他手段。",
+   "unlockRequirement": "",
+   "cnUrl": "8065bc65b7f4e8b47e28a5c0ae46bf585dab97674dced457bb36f4716eeccd60",
+   "jpUrl": "3b461c63129e5e1f9e9cca4fb5b2ae1d0f518dc446f0bb627e03c0417853060a",
+   "enUrl": "a57603620dbe9f46539189bf44d990f8e804a5b2bfdc36f2e344ec66eae943b9",
+   "krUrl": "fd15283ad946a30dacae9d86e62fa9e9a2db0507b97eb452ead503f95b5c6777"
+  },
+  {
+   "id": 16,
+   "title": "角色晉階",
+   "text": "進步越快，說明犯過的錯誤越多。",
+   "unlockRequirement": "",
+   "cnUrl": "8b40a86747347df073b6632d3536f2fe490b58efe0017359ddbd80be6552010c",
+   "jpUrl": "07e79f3f6be1b32ada3ff4ca28a6f30edf89b686cb50f912a9f7f91cadbffc10",
+   "enUrl": "f2432d9df7e35980cd350814296d79adbd917e34b88ac33b0abe0eec05d46bc8",
+   "krUrl": "2729a29ed4574c4e7a717b3f11ab32307d1e7fe0b6bd94bc2de60c921affc49d"
+  },
+  {
+   "id": 17,
+   "title": "角色滿級",
+   "text": "既然如今的我依舊不受博識尊的賞識，有理由相信未來的我也不會。",
+   "unlockRequirement": "",
+   "cnUrl": "6363101a57b54585963cf9cad3b8176b5a09f6ca1805135dae1c991530382eb3",
+   "jpUrl": "d359f354f40d6227cdb4bb9d35081f39fcfdd504a7ae8e2af3b4729a3bd32d8b",
+   "enUrl": "2f8d7038719a74db27edc1c3956d40c1465ed82797e590cbe3767e3087912592",
+   "krUrl": "ba2403f5eb0762bdb360e6f1ed41f0599505e999b7a79a065e0b2b41226157fd"
+  },
+  {
+   "id": 18,
+   "title": "行跡激活",
+   "text": "選擇和別人做一樣的事，你一定會得到一個完全不一樣的結果。",
+   "unlockRequirement": "",
+   "cnUrl": "c2857f1eba9bead66c0ecd1cf4daf88db1656a8cca08fb5511a32ab12b0567ce",
+   "jpUrl": "0495d3c8b3909d2b1f3c3ed403834ec89589e914f7f0e025d4d63ebdd7342d58",
+   "enUrl": "2d978f5991778ae851347c6bf14d10dc909dddb00bf9da03f6d8c90ebb694a2b",
+   "krUrl": "253cf37eadc6380cd08ca5b33c8cda457ff29486c3d2966dea25397a73d37bcc"
+  },
+  {
+   "id": 19,
+   "title": "隊伍編成•黑塔",
+   "text": "在天才的蔑視下，凡人還能做到相信自己嗎？",
+   "unlockRequirement": "",
+   "cnUrl": "0981284f593bb0f34a94417c348bc8baedccf81074a309797075dfba9954da49",
+   "jpUrl": "7eeb1fdc81fd13633b2389f86e80a599b86aae937f29e159868a0ab67c3d02f4",
+   "enUrl": "6acecbe5cb59f3d1462fb6c7016de566ff13c1e451e7d08b29c46374431b80eb",
+   "krUrl": "fd0875988ce1dfb6785de1707ef291a1aaebe09ce3ac4c0e9d721379e3543332"
+  },
+  {
+   "id": 20,
+   "title": "隊伍編成•阮•梅",
+   "text": "論及調度和激發生命的本能…你應該比我更懂吧？",
+   "unlockRequirement": "",
+   "cnUrl": "fe5da9d7ec556d66445c55821c0c53b400597159dda2c4666cf268b3376fd1fa",
+   "jpUrl": "ecceecb9747e06e7f6686b44e15e531a2e4dd1c507dd64940304d8de0327e0d5",
+   "enUrl": "4b859c4bb9987678119cfca45fb327fb0fd05f3d64dbf3f91d598872d93b5f02",
+   "krUrl": "0edfd82cf86c7f31981ef9e4ea6fa93c5c6c561b6c6422e1c4024a6debd27a20"
+  },
+  {
+   "id": 51,
+   "title": "戰鬥開始•弱點擊破",
+   "text": "這就破防了？",
+   "unlockRequirement": "",
+   "cnUrl": "040cb11e06bebec104c5b4f73c7b8d80aa789ba3130fad8c9ce2abf422a59907",
+   "jpUrl": "928189a5e1b32fa95ae6e5b10082fe5485b7429b4cb3f3f621b7f870046e894d",
+   "enUrl": "82a15ae3faae6cac3d48be86c5c9288206f677c2ec7f89980d342d7c3c3d11a2",
+   "krUrl": "eab6da049ac5ee8b11a09238c177811e540f32cde46a141b701e5c05721a0ba0"
+  },
+  {
+   "id": 52,
+   "title": "戰鬥開始•危險預警",
+   "text": "需要…一些嚴厲的教導麼？",
+   "unlockRequirement": "",
+   "cnUrl": "0e93c89baf9376d5fb3886893233d40e96e6302c217383fdb78a50c4b7b351e7",
+   "jpUrl": "d4492eca3eff84bcf09d960d9bd0aabfc7dc656cd05fb9210471a2d29a9cc93c",
+   "enUrl": "4f3f771908b8c9dd8b208a8d81cd65ab87b74a4389bea6ea8829d4e465436f6d",
+   "krUrl": "8fc84f4286f1d35c8473dd53dcf34f4343c04b3920b1ae537a3ec13dabdaa33f"
+  },
+  {
+   "id": 53,
+   "title": "回合開始•一",
+   "text": "由我提問了。",
+   "unlockRequirement": "",
+   "cnUrl": "5456df82d93724b924931a6801f5a6565f89dacadc5bc5aaa22064652f4a87ab",
+   "jpUrl": "ec1346a4f8802605ddbcf0dfa7570864c718271c7b23a0f01137853a07ae9d9d",
+   "enUrl": "4a57a133c6d2bae25bf70fe291ae995dc92c3639e201534079863a8f861c29ca",
+   "krUrl": "4335f81c32f3696271a56fc7b4757c197a8ab69234a1d8a4e5baa8f7e9e718da"
+  },
+  {
+   "id": 54,
+   "title": "回合開始•二",
+   "text": "期待各位的應答。",
+   "unlockRequirement": "",
+   "cnUrl": "477847e16e63a6b1987b3be8c57b0e3175b856c2bd8d31ad490db2350ff80f7b",
+   "jpUrl": "59e5258f75544d620d5ecafa679d40d413506a8c8803f50135671cdfb1d8a3f7",
+   "enUrl": "60b09ebbabeb267ef0e013ac2f0ef58f91067222b8f1a0e17f31d965ed587ce4",
+   "krUrl": "477dbcdac37d486822e963df028342a362bf594e3490518368b0c364f8336725"
+  },
+  {
+   "id": 55,
+   "title": "回合待機",
+   "text": "切勿心急，想明白再做決定。",
+   "unlockRequirement": "",
+   "cnUrl": "9409f9df62134de2113a84a61eaf53cd9ddc2ceb773690372b13d9e185aae946",
+   "jpUrl": "9e78473497c446f9dcf1c0aec927ee4d5e55a3421c3e5403f7fe51315aa92c58",
+   "enUrl": "9b9edbf3edba4b3c6e4640d01ed3662140870bc93fea680f710de8136c12e375",
+   "krUrl": "aad7e343dfbd2cdf48d3e4867f13dc3288ef36dad213221d2d67447187fd4bd3"
+  },
+  {
+   "id": 56,
+   "title": "戰技•一",
+   "text": "讓我來考考你。",
+   "unlockRequirement": "",
+   "cnUrl": "5ad40c92c2a4c2ef731fe94ce651b902d620e71b86f8ca71c8bfa958cc9b8701",
+   "jpUrl": "79042f1419ddb1aec79b924e91d174da39afd872a4114bb6c0c9ed11364a5020",
+   "enUrl": "d2e1fe77c146c3398f0d92d2adcf02401d45623517e54904b4f10b85daf7b747",
+   "krUrl": "a8dbf2aa675791f4ecb47c2ac3efb4f4c07c36e2df7819582a55875b931f97a3"
+  },
+  {
+   "id": 57,
+   "title": "戰技•二",
+   "text": "不能停止思考。",
+   "unlockRequirement": "",
+   "cnUrl": "87a549ebfaf21f79437c114725761d1438f8fd08f487946400dba5ad16caf4d1",
+   "jpUrl": "ae701780913a25699515de74b2b08dd0e995c35e67d38fdf07502a48b668308f",
+   "enUrl": "b9ab3eb5dd5c893b6d41d118940b47b4f58fa448f17017ae5ec3e8c33ef570e4",
+   "krUrl": "ffcda5dfbf347be966e2130c8e9475c7aba434e1b694cedaafee48a610a6faea"
+  },
+  {
+   "id": 58,
+   "title": "普攻",
+   "text": "動動腦子！",
+   "unlockRequirement": "",
+   "cnUrl": "34b6cefe38f301605a2ac30ec395e198c277642aef9f11307b80116b7af31fb7",
+   "jpUrl": "097376acf1a3044f99df1bbae558ecd4e82e8b9ebe0026ef85b21c3c281b936e",
+   "enUrl": "a21e1a6df9d80c0b5ec24595ffdc15f4bd4bd4d0fc5f9b44192be085a17b69e2",
+   "krUrl": "897c58e8b0cdd9fa4583cabeae4f629070de016a6d1cd8ba6b59352cb02a57c7"
+  },
+  {
+   "id": 59,
+   "title": "輕受擊",
+   "text": "沒輕沒重！",
+   "unlockRequirement": "",
+   "cnUrl": "48aebd9c1084ffc487457fe392a7e8a8ec7b8af5c9da79d1b0a74c0c9a5b9422",
+   "jpUrl": "52a7e3b4f1703b9e1185bc35554f4e11f9d824e7ed4497ce8f8facfaea5c64bb",
+   "enUrl": "02abb39a72cfecee409713eb53913af351f480674741b2d69b72e35099131c30",
+   "krUrl": "6c66c386385295aac140d5c37da4470b6868690d2b23c3d9cc994606012bf13e"
+  },
+  {
+   "id": 60,
+   "title": "重受擊",
+   "text": "愚不可及！",
+   "unlockRequirement": "",
+   "cnUrl": "726d89323f5595b198a49d2de3479d6a88a34e04f7c0847703da8f065e5f7e39",
+   "jpUrl": "6a2f8bdad1247b7b458f32a6f3a5b5b1a5b250dbb52c5e486d8034dc5e23920d",
+   "enUrl": "24676f036194ad6b72feede6ad65e68a847bdda7a21454446343d4a29998ff1a",
+   "krUrl": "027f381a3a0616b6fa88a2ebfb7b95293fa096ae8fedb0360ed45773174a3ede"
+  },
+  {
+   "id": 61,
+   "title": "終結技•激活",
+   "text": "存在即被感知——",
+   "unlockRequirement": "",
+   "cnUrl": "7c01879cd5eb07a2873383b5bd3bd32c02366218ce387fe1d08eab658497e162",
+   "jpUrl": "b0f604935be7fcfa153680e132ca8fc3c1de3d1a1d339b797130117c5b1dd3f8",
+   "enUrl": "9bf3b1b17ffaf17947f5045f0fd5a4a8b2b97177754af8d3e854a84ba15fa365",
+   "krUrl": "7f4871b3f79737fd1ef3a808b615592d38bce3b4c3472fc0d7e685e1f8adae97"
+  },
+  {
+   "id": 62,
+   "title": "終結技•施放",
+   "text": "知識既爲萬物尺度，定將窮盡真理、根除謬誤。",
+   "unlockRequirement": "",
+   "cnUrl": "86837030b4f622150a12d73788aee216835d08fb0ed926d71133aaccfebaf7c0",
+   "jpUrl": "1a6951e23a87ff838f757cb5f5631b282f8dd6426762cfa28af7aa888bf9f24e",
+   "enUrl": "1b12fe2ce20ce00d8524d1b11636e5026f4809762a1e1c8865dc19704f35fb90",
+   "krUrl": "a4db1da03aebae30e91bce11d89cc168eb10b7c0998daf9362a8894d6bcd15fb"
+  },
+  {
+   "id": 63,
+   "title": "天賦•一",
+   "text": "零分，下一個！",
+   "unlockRequirement": "",
+   "cnUrl": "0553bb8e79544f85b5e216ea1d35510c87177faf9bb229a12366d01127837475",
+   "jpUrl": "e80acf75880c4f670bd1e46256faa66b1488f71cf67b0954130826b3651f0c7e",
+   "enUrl": "bc72637445ecd68b2ea03e9cf2e7b9510c0646d2471e34c857bebc5c1bb4c53f",
+   "krUrl": "b874f2e58440f21664c11cca6c5fafb2d9d565405bc445d8282cbfc94f7aca5b"
+  },
+  {
+   "id": 64,
+   "title": "天賦•二",
+   "text": "負分，給我滾！",
+   "unlockRequirement": "",
+   "cnUrl": "b175da105a2de2f4fa705955eeaca8b57e89d1af8171027df25fc9806a1820b9",
+   "jpUrl": "6bc97052fd887631c76922a42a5b8f63ab59a0a08a14503fe4ccceb5d37e4746",
+   "enUrl": "1242c89e0016d7e0ecd878d8467432cb30311fc4871f572898ca013af2fa3ecd",
+   "krUrl": "b9bbec965fd77efeeaf4a8e9b6d5aefd6a5e3b98b1be5975f704ee24fe7c3d16"
+  },
+  {
+   "id": 65,
+   "title": "無法戰鬥",
+   "text": "「庸人」麼…呵……",
+   "unlockRequirement": "",
+   "cnUrl": "c2111e8242d83abac56f4012fb048bd6f2c77f00554c2d90e78c5b2cc96019a8",
+   "jpUrl": "5acefe91ca2412c5a9a0d77c3ad887b1c6d430cdb90ab059a5e8401af7aedacd",
+   "enUrl": "63080c829844d149046afb2096ddce110c755a076ee1ceb6aa5071b807381a88",
+   "krUrl": "56d3a74354087cdd517aa5f12e3885d123bd60b5185f8868e5b4d60f8b07615a"
+  },
+  {
+   "id": 66,
+   "title": "重回戰鬥",
+   "text": "做得好，加十分。",
+   "unlockRequirement": "",
+   "cnUrl": "de9e3a148a4cfa04adb2d8a29de665a85c6e272110f69a02cb251b4453370e3d",
+   "jpUrl": "471d7aaba8d43ac4cd08891eba31ce9b14971b61e4fd6cb56fd229910e60ad3e",
+   "enUrl": "e457a3b615452cb824ecbfb54ba502e4f765bc75c6de74341239b27a18f92b7b",
+   "krUrl": "3ef615b371c9ede4f1054592abff5c5ab149450778d35d53b8a1e8d1d7e88532"
+  },
+  {
+   "id": 67,
+   "title": "回復生命",
+   "text": "不錯，加五分。",
+   "unlockRequirement": "",
+   "cnUrl": "66cfbd7b3f995669eafff87631b35b842514c0802e70e2d8d71ac624168bc51a",
+   "jpUrl": "684d5e2c44ba4fe58766a27e6cdb41ed630fe87ccedb1d30ecec06b1d694281f",
+   "enUrl": "4afc1a7002ecec55c83c6f2e7390bcf87486de730e801a428fd202d77662f32a",
+   "krUrl": "9975d522ef810f1da1ce2fed228b97cb3bbb14fc217be9035fc67876be09fe41"
+  },
+  {
+   "id": 68,
+   "title": "祕技",
+   "text": "敬請欣賞，庸人的劇場。",
+   "unlockRequirement": "",
+   "cnUrl": "446d6217b2a640cbf88dbe62b3af4b2792a4b9451d8c00fdb923033879e900a2",
+   "jpUrl": "d476306c0a69bc058d1be5ea75a599555f4981c024af05ed7c884f4294019b82",
+   "enUrl": "8f05fdfe7a565701b4c2c84b028ceaf77e2fb3641dd91ca1da669ef12294e0a6",
+   "krUrl": "e6a316b4fe74181f9584ceed136b81ca418fa32291d119ec5cce9e1938b2ddc4"
+  },
+  {
+   "id": 69,
+   "title": "戰鬥勝利",
+   "text": "計算之中的結果。",
+   "unlockRequirement": "",
+   "cnUrl": "6e9d066c78a6a772a09b82f743884dd977befbcf686744359ca3f924c9d20ec3",
+   "jpUrl": "84dfb4189b2946b6c705403e3f223f7b3bc3e27bd5a2144fbe87cf7a7d2e531c",
+   "enUrl": "af367ac18b8704e00053b5052436e4b15a57181235f1e0c4f2b0f5175208f41a",
+   "krUrl": "bf5e55339ad51e1a516d31847a93a4449b58d9cb431f4856b0e8a7f5f3c3693c"
+  },
+  {
+   "id": 70,
+   "title": "開啓戰利品•一",
+   "text": "誰說知識必須遠離世俗？",
+   "unlockRequirement": "",
+   "cnUrl": "dfa3bce810d8f734fbc65b4e59f9f0d4f90b5a0ffc0b7e49d465c16d159ecb69",
+   "jpUrl": "9a8cdadb857902e7ae871c034717ecd8126473341e4e1b0a329a50575d483228",
+   "enUrl": "647a006bdfc9e38cc0b0ecec4ba319ec0aa78f4e7ca198a04eb10917bebe34b0",
+   "krUrl": "991d793b6862e5f0f5e668e5af17283874cedc1e9304ec6c0c0d4d30588869e8"
+  },
+  {
+   "id": 71,
+   "title": "開啓戰利品•二",
+   "text": "財富並非真理的阻礙，而應成爲助力。",
+   "unlockRequirement": "",
+   "cnUrl": "5c9659730863f552724404b457f766bd968184c6180808364fe802dd6bc6320f",
+   "jpUrl": "520fa442854becf4fafb2a8188ad44db4e365ba296ff208ff8d0507a57280936",
+   "enUrl": "048009629b13b4045d010fc2f411d48b00ba54fb6aaaf31a143fbe3cb7a63fc8",
+   "krUrl": "7a60cb905972cab518b47b0f8523a162c981aa0c56c54e184469f5628ee4c331"
+  },
+  {
+   "id": 72,
+   "title": "開啓貴重戰利品",
+   "text": "身爲「庸人」，我笑納了。",
+   "unlockRequirement": "",
+   "cnUrl": "283e8d0d0313df0a0b1ea43b40e218b9fcc1819685ebad0b7d596b951272523d",
+   "jpUrl": "eaf7d6c182275f4ae3a3b5022e8dde9a3a1dee815a4251677cf4c028ab366ef3",
+   "enUrl": "1c39e1ea6da266c272e81652ed3e5498f8cbc40353a2c9387366b2a5b173e917",
+   "krUrl": "accea3fe5778c1afd9fc9cf8c02b5d7374649d5af9049026c57eb0305d049fa8"
+  },
+  {
+   "id": 73,
+   "title": "解謎成功•一",
+   "text": "可真是…「巧奪天工」。",
+   "unlockRequirement": "",
+   "cnUrl": "0125199b4410ede1de9ba21d4786efa3a14a3f518905ff4a8d2c6fd26bb01bf5",
+   "jpUrl": "31acc319368b0f48e7d9d86f912c61a0d2949d1c7882bd1b932f99673534a53e",
+   "enUrl": "bacbcb13e8e05e05978a406bbc5405bf4e93652765e8192ba146069fedf38160",
+   "krUrl": "a59349ef15313892031b00efbd85de82fb1727e1a222d7ddc46b363c276dd663"
+  },
+  {
+   "id": 74,
+   "title": "解謎成功•二",
+   "text": "以益智玩具的標準，還不錯。",
+   "unlockRequirement": "",
+   "cnUrl": "c9a8e8f2ef55e9ae73c228cfabb072ae964be0c2ae64e0f0e0ab78adc48c8b85",
+   "jpUrl": "dc9acb4555836bc7b31beb56f1044b365ebd210bd48a1df37cd89f40a76ce9cd",
+   "enUrl": "356c20113da3c4293f6e08a574c29886dee8aa7c01030a5d63b48c4b8081fe1a",
+   "krUrl": "448aa44fdfacd0b5792f82c09862540371b66922a377f64621c5a55ad80237ec"
+  },
+  {
+   "id": 75,
+   "title": "發現敵方目標",
+   "text": "人要學會「認識自己」。",
+   "unlockRequirement": "",
+   "cnUrl": "bab1d722830958b06dc4e6e266fedf9888f4215724737f52c9372821b25db0b6",
+   "jpUrl": "9d3ea1726e61f9fa91aaab1ae4165da06ab63d93b98da734f805852787aef359",
+   "enUrl": "49e4a1fd6946f57ca91a251a375dae239954e5dd9cf6dee89eb10ddf553f8a3b",
+   "krUrl": "af2125d9462c89c14eadf17778a96b5d7527a9401d4f3114625a0f8e058cc5e2"
+  },
+  {
+   "id": 76,
+   "title": "返回城鎮",
+   "text": "準備好浪費人生了嗎？",
+   "unlockRequirement": "",
+   "cnUrl": "b55089aa1f05481940c068cb35e3b84c0cd0ca5dbfa22d85cf7590aefbd678cc",
+   "jpUrl": "c4f175b106f656f236863b5796ef05a5b68114bbca2514208ccc12ecd41134de",
+   "enUrl": "954d9f379a71a47dc16b6bf4f1eebfcdffaf42e3e842dae01bd7df4af809812d",
+   "krUrl": "5440b337314fedc21ff266e90138a4ba2ec2cef90874bbc292cdeb0e0a051522"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "角色詳情",
+   "text": "直率而自我的博識學會學者，常以奇怪的石膏頭雕遮蔽面容。<br />自幼便展露出過人的才智，如今卻以「庸人」自居。<br />堅信智慧與創造力並不爲天才獨有，致力於向全宇宙傳播知識，醫治名爲愚鈍的頑疾。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "角色故事·一",
+   "text": "關於那位自稱「真理醫生」的維裏塔斯•拉帝奧，其人如他的研究一般充滿爭議。在拉帝奧的故鄉，至少有八部講述他傳奇事跡的紀錄片，十幾部關於他的回憶錄，可評論衆多，卻沒有足夠有說服力的觀點。爲填補空缺，筆者親自前往，拜訪了對拉帝奧的成長有重要影響的榮德教授。榮德教授年事已高，已無法正常言語，卻在筆者提起拉帝奧姓名時難掩激動之情。在其家人和學生的協助下，筆者拿到一封泛黃卻保存完好的推薦信。<br /><br /> 「<br />尊敬的第一真理大學錄取委員會：<br /><br />我是銀河自由大學的數學系榮休教授榮德。素聞貴校愛才重教之名，我想推薦一位名爲拉帝奧的學生來貴校攻讀學位。雖然拉帝奧目前只是一位中學生，但其在數學、物理、乃至哲學上的思想已遠超一般大學的本科要求。<br /><br />教學期間，拉帝奧以遠超預期的速度解開了複雜的數學方程。與此同時，我班上的本科生甚至無法理解那些概念。出於好奇，我私下與他分享了一份關於榮德猜想的手稿。雖然我是這一猜想的提出者，但我始終無法將其證明。在經過日日夜夜的討論後，他提出了一個美妙且驚人的巧思， 一舉完成了最後的論證。該論文近期即將刊發，屆時您就能明白我所言並非虛假。<br /><br />在這段時間的相處中，拉帝奧展現出了非凡的感知力、好奇心與創造力。他每日早早地起來鍛煉，隨後便一頭扎進知識的海洋。他也許是最符合普世觀念中天才形象的人，激情、深刻、熱烈和…天生的強勢。<br /><br />限於當地學校無法開展更高水平的科學課程，我衷心希望貴校能夠接納拉帝奧就讀。我以我的名譽保證，他一定會取得超越這個時代的成就，爲貴校享譽銀河的學術聲譽再添榮光。<br /><br />致以最好的祝願，<br />榮德<br />哲人歷██年██月██日<br />」<br /><br />——摘自《智慧之爲特權：解密真理醫生》第九頁",
+   "unlockRequirement": "角色等級<nobr>20</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·二",
+   "text": "在取得第八個博士學位後，拉帝奧獲得了第一真理大學空缺兩個琥珀紀的一等榮譽學位——即使在多年以後，這依然是校史上前無古人、想必也後無來者的成就。此時拉帝奧早已成爲社會風雲人物，但他身邊的師友卻有着多種看法。筆者得到了一份珍貴的電子資料：<br /><br />「<br /><b>校園熱點：</b><br /><b>1、#一等榮譽學位授予維裏塔斯•拉帝奧#</b><br />閱讀（<nobr>2500</nobr>）評論（<nobr>145</nobr>）<br />詳情：<br />本校空缺兩個琥珀紀的一等榮譽學位即將授予維裏塔斯•拉帝奧，以表彰其在生物學、醫學、自然神學、哲學、數學、物理學、工程學等領域的傑出貢獻。因其在星球能源課題上的卓越表現，維裏塔斯•拉帝奧將直接獲得任教資格。<br /><br /><b>維立塔-數學系教授</b>：<br />恭喜拉帝奧！他的勤奮與智慧配得上一切榮譽！還記得他爲了能夠更專注地思考，選擇戴上頭套，隔絕外界的一切幹擾。這世上又有多少人能做到呢？我雖然教過拉帝奧一段時間，但實際上我從拉帝奧身上學到的，恐怕比我教給他的更多。拉帝奧以其誠實和直率爲第一真理大學帶來了全新的空氣，我們應當感謝他！<br />贊成（<nobr>1000</nobr>+）反對（2）<br /><b>哲學系小混子</b>：<br />這還不進天才俱樂部？<br />贊成（<nobr>850</nobr>）反對（5）<br /><b>物理是優美的</b>：<br />據說某個議員的兒子來上拉帝奧的助教課，把錢扔在拉帝奧的身上讓他幫他矇混過關，結果被拉帝奧大罵一頓後扔出了教室，你沒聽錯，是「扔」…真是神一般的男人……<br />贊成（<nobr>550</nobr>）反對（<nobr>112</nobr>）<br /><b>買基金的韭菜</b>：<br />上過他的助教課，完全聽不懂，堅持到最後，勉強拿了個0分，幸好不是負的……<br />贊成（<nobr>448</nobr>）反對（<nobr>37</nobr>）<br /><b>在天國旅遊的人</b>：<br />被他罵哭過的人都給我點讚！<br />贊成（<nobr>330</nobr>）反對（<nobr>110</nobr>）<br /><b>貓聽完都死了</b>：<br />聽說他洗浴時也不摘頭套？<br />贊成（<nobr>220</nobr>）反對（<nobr>10</nobr>）<br /><b>跟着哥走</b>：<br />也還好吧？要是我努力一下我也行……<br />贊成（1）反對（<nobr>1000</nobr>）<br />……<br />你可能還喜歡：<br />2、#維裏塔斯•拉帝奧獲得第八個博士學位#<br />3、#維裏塔斯•拉帝奧登上大學課本#<br />4、#維裏塔斯•拉帝奧是瘋子嗎？#<br />」<br /><br />據統計，拉帝奧任教共開設五十二門課程，教學風格以嚴厲、繁難著稱，結課率不超過3%，而那些堅持到最後的學生幾乎都成了某個領域的專家學者。<br />……<br />——摘自《智慧之爲特權：解密真理醫生》第八十二頁",
+   "unlockRequirement": "角色等級<nobr>40</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·三",
+   "text": "外界普遍猜測，拉帝奧渴望加入天才俱樂部，儘管他本人對此毫無回應。然而無論拉帝奧做出何種在普世看來可堪驚人的成就，博識尊從未有所反應，久而久之，此事便成爲一樁學術圈津津樂道的懸案。筆者與拉帝奧曾經的學術助理瑪格麗特取得了聯繫，得到了一些寶貴的證言。<br /><br />「拉帝奧先生從未和我提起過天才俱樂部，但有一件事，我到現在還記得…那是我爲拉帝奧先生擔任學術助理的時候。我的主要工作就是收發來自銀河各地的信件，並處理他與外界接觸的相關事宜。」 <br /><br />「那一天，我收到了星際和平公司的信件。時間大概是…拉帝奧先生研究多年的對星武器試射成功的時候。我能看出來，公司的邀請很鄭重，我激動地把它交給拉帝奧先生，可先生他…他卻什麼都沒說。即便隔着頭雕，我都能感到深深的沉默。他很有禮貌地請我離開，在關上房門的瞬間，我聽到了沉重的嘆息和自嘲的笑聲…我猜，也許是他判斷自己再也進不了天才俱樂部了吧……」 <br /><br />「那之後的故事，你都知道了。但在我看來，先生就是真正的天才，他的創造讓許多世界得以進步向前。難道當一名醫治宇宙的學者，就註定沒有孤芳自賞的天才價值高嗎…抱歉，我有些激動了，這句話就請刪掉吧。」 <br /><br />筆者觀察到，在真理醫生的支持者當中，像瑪格麗特這樣抱有惋惜之情的人不在少數。在他們看來，俱樂部沒有吸納拉帝奧這樣的人，亦是一種「天才」怪異與偏執的表現。<br /><br />——摘自《智慧之爲特權：解密真理醫生》第一百五十頁",
+   "unlockRequirement": "角色等級<nobr>60</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·四",
+   "text": "許多人認爲拉帝奧加入博識學會後，會一改從前的鋒芒，以適應學會講求實際、平和樸實的學術環境。但筆者不得不說，拉帝奧還是那個拉帝奧。以下是筆者節錄的內部記錄原文：<br /><br /> 「<br />答辯人：維裏塔斯•拉帝奧<br />題目：邏輯知識論<br />委員會主席：羅塞思<br />記錄人：莫裏微<br />答辯實錄：<br />羅塞思：『拉帝奧先生，您的論文十分精彩，感謝您的講解。現在，有請聽衆提問。』<br />現場一片沉寂。<br />羅塞思：『那…拉帝奧先生，我先來吧。』<br />羅塞思：『我非常贊成你的主要觀點，但對其中一個細節，我依然有些不解。』<br />維裏塔斯•拉帝奧：『每次別人贊同我的時候，我都覺得自己一定錯了。』<br />羅塞思：『我的問題是，爲何您會認爲知識是一種特權？』<br />維裏塔斯•拉帝奧：『尊敬的羅塞思教授，您問出這樣的問題，就代表您根本沒有讀懂我的論文，也並不理解我運用的推導方法。』<br />維裏塔斯•拉帝奧：『但若要簡單回答，您倒是提供了一個現成的例子。您無法理解我的觀點，正恰恰說明知識並非人人都能享有。』<br />維裏塔斯•拉帝奧：『倘若愚鈍是一種頑疾，學者的職責便是將其根除，醫治宇宙。』<br />維裏塔斯•拉帝奧走向講臺，面向衆人：『所以諸位，對他人的愚蠢視而不見，並非禮儀，而是一種缺德的世故。若要傳播知識，必先讓人理解自身的愚蠢。當然，學會的學者對自己也應當一視同仁。』<br />羅塞思聳肩苦笑。<br />……<br />維裏塔斯•拉帝奧在一片譁然中退場。<br />答辯評語：激情的手握住冰冷的劍，這或許是對維裏塔斯•拉帝奧先生最形象的評語。維裏塔斯•拉帝奧將邏輯、狂熱與批評藝術結合在一起，向我們展現了一個卓越的思想家面對無知的思考與行動。我們堅信，拉帝奧先生的加入會爲博識學會帶來莫大的益處。<br />答辯委員會意見：一致通過。<br />」<br /><br />博識學會內部素有「庸衆院」的傳聞，據稱這一神祕組織匯集了學會的最強大腦。而拉帝奧以「庸人」自居，仿佛無形中印證了這一流言。聯想到他和天才俱樂部的糾葛，這個名字總令人浮想聯翩。庸人作爲天才的反義詞，往往要付出巨大的努力和代價才能追及後者的轍跡。拉帝奧自稱庸人，到底是一種退縮，還是一種嘲諷，抑或是一種宣戰？但無論如何，他以知識治療思想之病的執着，無愧於「真理醫生」之名。<br />……<br /><br />——摘自《智慧之爲特權：解密真理醫生》第二百三十頁",
+   "unlockRequirement": "角色等級<nobr>80</nobr>解鎖"
+  }
+ ],
+ "archive": {
+  "cvCn": "桑毓澤",
+  "cvJp": "武內駿輔",
+  "cvKr": "이동훈",
+  "cvEn": "Jordan Paul Haro",
+  "camp": "博識學會"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "真理醫生",
+ "rarity": 5,
+ "descHash": "博識學會學者。 性情古怪、言辭刻薄卻又風度偏偏。 奇異石膏頭雕下的面容似乎出人意料的俊美。",
+ "artPath": "a712666aad99860f914168469bd722ca1b7f7b2e39c59b8f75344d80e8f70981",
+ "miniIconPath": "56556c3ee22a170b2c536ffd126ea250057e12d0cef9c71885a79e503e5d5b0f",
+ "damageType": {
+  "id": 64,
+  "iconPath": "91b47b558df75f608b0a8aa93f35fd2063ed789ec25cbcc7bee926c60fba7ab1",
+  "color": "#F4D258",
+  "name": "虛數",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "948d90296adc5203a105a16be892d9e4d5e83c93df11abf59a8ad4321e37fbb8",
+  "altIconPath": "38241d858c120d8a55f36eaab92a34690a7d9add4f3e36383dabf27f5d3f5f55",
+  "color": "#FFFFFF",
+  "name": "巡獵",
+  "rarity": 0
+ },
+ "pageId": "drratio"
+}

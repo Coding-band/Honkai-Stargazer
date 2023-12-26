@@ -4,6 +4,29 @@
  */
 
 const CharacterSkillMain = {
+  //add in 1.6.0
+  "Dr. Ratio": {
+    skill1: require("../../images/character_skill/dr_ratio_skill1.webp"),
+    skill2: require("../../images/character_skill/dr_ratio_skill2.webp"),
+    skill3: require("../../images/character_skill/dr_ratio_skill3.webp"),
+    skill4: require("../../images/character_skill/dr_ratio_skill4.webp"),
+    skill6: require("../../images/character_skill/dr_ratio_skill6.webp"),
+  },
+  "Ruan Mei": {
+    skill1: require("../../images/character_skill/ruan_mei_skill1.webp"),
+    skill2: require("../../images/character_skill/ruan_mei_skill2.webp"),
+    skill3: require("../../images/character_skill/ruan_mei_skill3.webp"),
+    skill4: require("../../images/character_skill/ruan_mei_skill4.webp"),
+    skill6: require("../../images/character_skill/ruan_mei_skill6.webp"),
+  },
+  Xueyi: {
+    skill1: require("../../images/character_skill/xueyi_skill1.webp"),
+    skill2: require("../../images/character_skill/xueyi_skill2.webp"),
+    skill3: require("../../images/character_skill/xueyi_skill3.webp"),
+    skill4: require("../../images/character_skill/xueyi_skill4.webp"),
+    skill6: require("../../images/character_skill/xueyi_skill6.webp"),
+  },
+
   Argenti: {
     skill1: require("../../images/character_skill/argenti_skill1.webp"),
     skill2: require("../../images/character_skill/argenti_skill2.webp"),

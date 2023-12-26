@@ -54,7 +54,7 @@
    "id": 267805,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "822b1e8c023333b210f71f503cce58516c58ffc4f47c709a4ba4bc03387fdd68",
+   "iconPath": "ec233e43b828d3d0aaa069d3bb911a437404e6a0a34a358cdf134da8ad7fb0fa",
    "name": "Sturmauge",
    "desc": "Pfeile eines Sturmbringers. Material zum Aufstieg der Figuren mit Wind-Typ.",
    "lore": "Gehörte einst einem gewissen Fragmentum-Monster, das einer bestimmten Sorte Leeren-Ranger nachempfunden war. Inmitten des Wirbels hat sich kaum sichtbar eine Pfeilspitze eingegraben.<br /><br />„Diejenigen, die im Fragmentum untergehen, werden an dem Ort wieder auftauchen, wo sie der Tod erwartet.“",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/267805",
    "comeFrom": [
+    "Ruhender Schatten (Nietstadt)",
     "Ruhender Schatten (Nietstadt)",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -180,6 +181,7 @@
    "rewardPath": "/material/635669",
    "comeFrom": [
     "Blütenkelch (Große Mine)",
+    "Blütenkelch (Große Mine)",
     "Glut-Tausch"
    ]
   },
@@ -187,7 +189,7 @@
    "id": 717290,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
    "name": "Uraltes Triebwerk",
    "desc": "Ein zurückgelassener Triebwerk aus der Alten Welt. Ein fortschrittliches Material zur Verstärkung.",
    "lore": "Es nutzt Geomark als Energiequelle. Wenn es mit Energie versorgt wird, spuckt es wandernde Polarlichter, keine Funken.<br /><br />„Nur die Technologieabteilung, die direkt der Obersten Wächterin untersteht, hat Zugang zu Informationen über die Alte Welt. Ich habe meine Privilegien verloren, nachdem ich gefeuert wurde.“",
@@ -205,7 +207,7 @@
    "id": 836255,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "iconPath": "34d88252515cd13ab58b6f5aae7329794a4a330a0147e1c5f755c8a2f4444bff",
    "name": "Obsidian der Besessenheit",
    "desc": "Ein aus dem All geborgenes großes Stück Dunkler Materie, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad der Nichtigkeit</span> stark hochgestuft werden können.",
    "lore": "Wer in dieses Prisma hineinschaut und schwachen Verstandes oder Willens ist, wird für alle Zeit ins Chaos gestürzt.<br /><br />„         “",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/836255",
    "comeFrom": [
+    "Blütenkelch (Große Mine)",
     "Blütenkelch (Große Mine)",
     "Omni-Synthesemaschine – Materialsynthese"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
+    "Blütenkelch (Große Mine)",
     "Blütenkelch (Große Mine)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Glut-Tausch"
@@ -945,10 +949,10 @@
    ]
   },
   {
-   "tagHash": "Beeinträchtigung",
+   "tagHash": "Flächenangriff",
    "descHash": "Fügt allen Gegnern <span style=\"color:#00FF9C;\">Wind</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Sampos ANG zu und hat eine <u>Grundchance</u> von <nobr>#4[i]%</nobr>, den erlittenen DoT des Ziels für <nobr>#3[i]</nobr> Rd. um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> zu erhöhen.",
    "ultimateCost": 120,
-   "break": "0",
+   "break": "60/hit",
    "energy": "5",
    "id": 49935,
    "name": "Überraschungsgeschenk",
@@ -2117,7 +2121,7 @@
   {
    "id": 2,
    "title": "Begrüßung",
-   "text": "Also, was ist dieses Mal die Aufgabe? Wenn du das Geld hast, habe ich die ... Kein Geld? Kein Problem! Haha, sag einfach Bescheid, Kumpel ...",
+   "text": "Also, was ist dieses Mal die Aufgabe? Wenn du das Geld hast, habe ich die ... Kein Geld? Kein Problem! Haha, sag einfach Bescheid, Kumpel ...",
    "unlockRequirement": "",
    "cnUrl": "c89efc9bcf9abb4f5884675ac28d8509f0cb62b7a26e31467028ab65965b5847",
    "jpUrl": "a49d22d07f648a9bffd8933df3b514a408d6b3c033017d3cad39262b868e60d5",
@@ -2137,7 +2141,7 @@
   {
    "id": 4,
    "title": "Über sich selbst",
-   "text": "Ich? Ich bin nur ein unkomplizierter Kerl, der sich um den kleinen Mann kümmert – kostenlos, wie ich hinzufügen möchte –, der irgendwie in die Angelegenheiten aller anderen hineingezogen wird, ohne etwas vorzuweisen zu haben! Wie ich schon sagte, ich bin ein ruhiger Typ.",
+   "text": "Ich? Ich bin nur ein unkomplizierter Kerl, der sich um den kleinen Mann kümmert – kostenlos, wie ich hinzufügen möchte –, der irgendwie in die Angelegenheiten aller anderen hineingezogen wird, ohne etwas vorzuweisen zu haben! Wie ich schon sagte, ich bin ein ruhiger Typ.",
    "unlockRequirement": "",
    "cnUrl": "53e81e36aaa2c4b4e1deab183a59041a9a437eeeafd8239e6b6038e2511c96cc",
    "jpUrl": "818661abe86134045e2f8ddf0b0a3980dcadf2ea0ea62dc71d528a3cf8571011",
@@ -2187,7 +2191,7 @@
   {
    "id": 9,
    "title": "Wissen",
-   "text": "Kommt schon, wie seid ihr mitten in der Schneewüste gelandet? Mit einem UFO? Lasst mich raten, ihr habt den Zug genommen, haha. Aber mal im Ernst ...",
+   "text": "Kommt schon, wie seid ihr mitten in der Schneewüste gelandet? Mit einem UFO? Lasst mich raten, ihr habt den Zug genommen, haha. Aber mal im Ernst ...",
    "unlockRequirement": "",
    "cnUrl": "657f3f713bb6eace3301e9a3bcf658660354a9e38635e7090a32ab0e3edf94a8",
    "jpUrl": "ca3796a9c7d10f9c2819f4b9b4dfdb1e56b8b8b9ee85089c9d2f9c650e8770e3",
@@ -2247,7 +2251,7 @@
   {
    "id": 15,
    "title": "Über Serval",
-   "text": "Wir waren mal gute Kumpel, aber jetzt ... Sagen wir einfach, ihr Bruder hat ein schlechtes Wort für mich eingelegt.",
+   "text": "Wir waren mal gute Kumpel, aber jetzt ... Sagen wir einfach, ihr Bruder hat ein schlechtes Wort für mich eingelegt.",
    "unlockRequirement": "",
    "cnUrl": "df46dd0d848b652b7ab9d7b244bf83c25b0a19156b7f7629c8f5e669e9d0867b",
    "jpUrl": "2760ca7c947abe7c83f539024595b773dc79b7488985ff7a166667d352232918",

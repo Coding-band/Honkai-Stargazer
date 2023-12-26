@@ -1,4 +1,7 @@
 const Material = {
+	//add in 1.6.0
+	470781 : require("../../images/material_icon/material_past_evils_of_the_borehole_planet_disaster.webp"),
+	
 	29328 : require("../../images/material_icon/material_credit.webp"),
 	125435 : require("../../images/material_icon/material_tracks_of_destiny.webp"),
 	186254 : require("../../images/material_icon/material_regret_of_infinite_ochema.webp"),

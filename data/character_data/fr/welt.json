@@ -73,7 +73,7 @@
    "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
    "name": "Journal d'aventure",
    "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
-   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
    "purpose": "Matériau d'EXP de personnage",
    "rarity": 3,
    "rewardPath": "/material/409961",
@@ -103,7 +103,7 @@
    "id": 468391,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "e8d74f9705754fb743acb234866d6e64a1f2354cb71bf2263579546b256a8913",
+   "iconPath": "136670876f348477c67386d9e545f587913faf2a699b983d967b670be1c1a35c",
    "name": "Couronne d'or de l'ombre révolue",
    "desc": "Casque d'Ombre en décomposition. Permet l'élévation des personnages de type imaginaire.",
    "lore": "Un accessoire abandonné par l'ombre d'une Gardienne du passé. Il raconte l'histoire de la ville de l'Hiver éternel.<br /><br />« Alina la Bienveillante... Sa bonté est céleste et sa compassion est d'or. »",
@@ -111,6 +111,7 @@
    "rarity": 4,
    "rewardPath": "/material/468391",
    "comeFrom": [
+    "Ombre stagnante du Col de Backwater",
     "Ombre stagnante du Col de Backwater",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -167,6 +168,7 @@
    "rewardPath": "/material/635669",
    "comeFrom": [
     "Calice de la Grande mine",
+    "Calice de la Grande mine",
     "Braises immortelles"
    ]
   },
@@ -174,7 +176,7 @@
    "id": 717289,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "iconPath": "e5c567b0d1a069f86d1fa35a17b282346606c69e5f8cab4028224ece84c8ad58",
    "name": "Médaille de la crinière d'argent",
    "desc": "Médaille d'honneur portée par les soldats de la Garde de la crinière d'argent ayant servi de façon courageuse et méritante. Matériau avancé utilisé pour le renforcement.",
    "lore": "Une marque d'honneur décernée à ceux qui ont combattu les créatures du Fragmentum, les habitants du Souterrain, et les catastrophes soudaines.<br />Elle est plus souvent placée sur le cercueil qu'épinglée sur la poitrine de son propriétaire.<br /><br />« Rappelle-toi, jeune Gepard. Ceci n'est pas un jouet : c'est le destin et le sang de la famille Landau. »",
@@ -193,7 +195,7 @@
    "id": 836255,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "iconPath": "34d88252515cd13ab58b6f5aae7329794a4a330a0147e1c5f755c8a2f4444bff",
    "name": "Obsidienne d'obsession",
    "desc": "Beau fragment de matière noire capturé dans le vide. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilité</span>.",
    "lore": "Un simple regard dans le prisme enverra les faibles d'esprit et les moins déterminés dans le chaos pour l'éternité.<br /><br />«           »",
@@ -201,6 +203,7 @@
    "rarity": 4,
    "rewardPath": "/material/836255",
    "comeFrom": [
+    "Calice de la Grande mine",
     "Calice de la Grande mine",
     "Synthèse de matériaux de l'Omni-synthétiseur"
    ]
@@ -217,6 +220,7 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
+    "Calice de la Grande mine",
     "Calice de la Grande mine",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles"
@@ -1576,7 +1580,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Réduit la robustesse de l'ennemi au type correspondant en entrant en combat après l'avoir attaqué.",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -1730,7 +1734,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Lors de l'utilisation de l'ultime, il y a <nobr>#1[i]%</nobr> de chances de base d'augmenter les DGT subis par les cibles de <nobr>#2[i]%</nobr> pendant <nobr>#3[i]</nobr> tours.",
+    "descHash": "Il y a <nobr>#1[i]%</nobr> de chances de base d'augmenter les DGT subis par les cibles de <nobr>#2[i]%</nobr> pendant <nobr>#3[i]</nobr> tours lors de l'utilisation de l'ultime.",
     "ultimateCost": 0,
     "id": 233017,
     "name": "Acharnement",
@@ -2199,7 +2203,7 @@
   {
    "id": 10,
    "title": "Connaissances",
-   "text": "Tu sais comment les disciples de Qlipoth la Préservation sont devenus la Corporation pour la Paix Interastrale ? L'Aiôn voulait construire un mur, alors l'humanité s'est mise en quête de matériaux de construction pour marcher sur les traces de Qlipoth... Quand on y pense, c'est amusant.",
+   "text": "Tu sais comment les disciples de Qlipoth la Préservation sont devenus la Corporation pour la Paix Interastrale ? L'Aiôn voulait construire un mur, alors l'humanité s'est mise en quête de matériaux de construction pour marcher sur les traces de Qlipoth... Quand on y pense, c'est amusant.",
    "unlockRequirement": "",
    "cnUrl": "af1d9c1124be288b98121e0a09f9116f9b95946f7f945d62b7192a24276b4a50",
    "jpUrl": "6d22e4a34099c89ae4b1f2d6103853b9500a92c36175821a228272abc21357db",
@@ -2209,7 +2213,7 @@
   {
    "id": 11,
    "title": "À propos de March 7th",
-   "text": "March est très curieuse et me demande toujours de prendre des poses de combat. D'après elle, je m'en sors assez bien. Tu es du même avis ? Hum...",
+   "text": "March est très curieuse et me demande toujours de prendre des poses de combat. D'après elle, je m'en sors assez bien. Tu es du même avis ? Hum...",
    "unlockRequirement": "",
    "cnUrl": "9f057cade67443063e916f39b0fb9b28b5529375716e0bbe89d358b88ada9975",
    "jpUrl": "ab5562b67d3909d14cb2562043c577641e087e7eb608a3d508428a9d06832a0e",
@@ -2329,7 +2333,7 @@
   {
    "id": 23,
    "title": "Rejoint l'équipe avec Dan Heng • Imbibitor Lunae",
-   "text": "Je suis rassuré de t'avoir à mes côtés, Dan Heng. Mais... bon, je n'en dirai pas plus.",
+   "text": "Je suis rassuré de t'avoir à mes côtés, Dan Heng. Mais... Bon, j'arrête de t'embêter.",
    "unlockRequirement": "",
    "cnUrl": "912bd32feb1a4649eca7ad843cdd4ad77dca6fb12716e0c8876b815daaa0de23",
    "jpUrl": "45b70fc417929ecc652777d7a234109fe0933d151f99ab8612f85954686ec992",
@@ -2419,7 +2423,7 @@
   {
    "id": 58,
    "title": "Compétence 2",
-   "text": "Je ne vous ferai pas de cadeaux !",
+   "text": "Je ne vous ferai pas de cadeaux !",
    "unlockRequirement": "",
    "cnUrl": "bda9e403dd8ef59f3979d9adbbfb33cdfbcde74c7f071ed218e34819cf12e451",
    "jpUrl": "ea8c8b0e32dd91d408a6b16b08bc3ddf15c1197fe79f770bf2ad58191ddb9999",

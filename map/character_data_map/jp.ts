@@ -36,7 +36,17 @@ import Tingyun from "../../data/character_data/jp/tingyun.json";
 import Welt from "../../data/character_data/jp/welt.json";
 import Yanqing from "../../data/character_data/jp/yanqing.json";
 
+//add in 1.6.0
+import DrRatio from "../../data/character_data/jp/drratio.json";
+import RuanMei from "../../data/character_data/jp/ruanmei.json";
+import Xueyi from "../../data/character_data/jp/xueyi.json";
+
 const JP = {
+  //add in 1.6.0
+  DrRatio,
+  RuanMei,
+  Xueyi,
+
   Argenti,
   Huohuo,
   Hanya,

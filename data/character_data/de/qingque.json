@@ -3,7 +3,7 @@
  "iconPath": "62bbed3f4fa89607c950e0c37b287cd629c6dc011b81bd99cf3354a4dd3cb55e",
  "bgPath": "95add5fd751106b1eeb03cfcbe017215893f25a2ef09bf7a0c78af53275456a1",
  "figPath": "64b09bba9b3bbdaaccaa720f85047a4a42fd05d52605ef3e96e571d4d8244e6e",
- "fgPath": "1320fa86c14f851ed0bf3c8a0695749918a258aad1b415a894ccc5152e621576",
+ "fgPath": "939573cb980ac84a1ca1ac5e9b4503698ec38a52c4d17a4f300e98499de70b9a",
  "splashIconPath": "72cee71be6fe4de63b6bdecb1a1b69cb95724bc8f3cc89468c68343e5937c7dc",
  "damageTypeId": 0,
  "baseTypeId": 0,
@@ -69,7 +69,7 @@
    "id": 351746,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "559c24ffae40e390bfec262f621e30b0b209f6d487b122f6bc54b0e7dada8353",
+   "iconPath": "2c6914a16ae349627baca5f84218db8fe270ccf2c80246f9b83acf8e72f7f92a",
    "name": "Leerengeformtes Eisen",
    "desc": "Hufeisen von einem Leeren-Ranger: Trampler. Material zum Aufstieg der Figuren mit Quanten-Typ.",
    "lore": "Dieses seltene Hufeisen zeugt vom Sieg über einen Trampler der Antimaterie-Legion. Wenn niemand hinsieht, verschwindet es aus der Realität, nur um kurz darauf wieder aufzutauchen.<br /><br />„Der Name des Experiments? Einfach nur ‚Hufeisen des Tramplers‘ ...“",
@@ -77,6 +77,7 @@
    "rarity": 4,
    "rewardPath": "/material/351746",
    "comeFrom": [
+    "Ruhender Schatten (Basiszone)",
     "Ruhender Schatten (Basiszone)",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -180,6 +181,7 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Blütenkelch (Nietstadt)",
+    "Blütenkelch (Nietstadt)",
     "Glut-Tausch"
    ]
   },
@@ -205,7 +207,7 @@
    "id": 836261,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "iconPath": "36e68603fbc67d4b69c02e01d7d5d41a80446ea6c49b1d828b47320f6225825c",
    "name": "Schlüssel der Weisheit",
    "desc": "Ein mythischer Schlüssel aus den Händen der größten Ausnahmetalente der Galaxie, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad der Gelehrsamkeit</span> stark hochgestuft werden können.",
    "lore": "Gilt als Beweis für eine Einladung in den Nous-Tempel.<br />An den Schlüssel zu gelangen ist nicht halb so schwierig wie die Tür zu finden, zu der er gehört. Wer durch die heiligen Pforten tritt, erkennt sofort, dass es kein Zurück gibt, wenn man erst einen Fuß auf die andere Seite gesetzt hat.<br /><br />„Wissen gibt uns nicht alle Antworten im Universum, aber es befähigt uns dazu, die richtigen Fragen zu stellen.“",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/836261",
    "comeFrom": [
+    "Blütenkelch (Nietstadt)",
     "Blütenkelch (Nietstadt)",
     "Omni-Synthesemaschine – Materialsynthese"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
+    "Blütenkelch (Nietstadt)",
     "Blütenkelch (Nietstadt)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Glut-Tausch"
@@ -2381,7 +2385,17 @@
   },
   {
    "id": 20,
-   "title": "Eidolon-Aktivierung",
+   "title": "Über Xueyi",
+   "text": "Kennst du das Buch „Ein ungeeigneter Job für Marionetten“? Ich habe es nicht nur gelesen, sondern mir dazu sogar Notizen gemacht. Schade, dass ich immer noch keine Ahnung habe, wer es geschrieben hat ...",
+   "unlockRequirement": "",
+   "cnUrl": "4cf34daaa01eac2f734f72add53781938921178c653288de3e6e4bc8f01fc75b",
+   "jpUrl": "7cde04abbb2dbafca4945da3e339d89b311962b136bee0f2d371ad5d6137d0b8",
+   "enUrl": "0e846311cb3f235e920d9addad985402acf9b47b73afd7d6053ae7c8d8932c87",
+   "krUrl": "98cf544f2dd2e1148c2ca723b9efb554bccba251dbc658b1d101dd5d93e2d7c3"
+  },
+  {
+   "id": 21,
+   "title": "Eidolon aktiviert",
    "text": "Das Leben ist wie ein Kartenspiel. Man weiß nie, was als nächstes kommt.",
    "unlockRequirement": "",
    "cnUrl": "a5fe3c66f8f2de6e8a111fcaf98455aeb653bb19f501a707ad9ccc8441b4c83a",
@@ -2390,7 +2404,7 @@
    "krUrl": "5f437115275e5b81b6b76cc066b65f8f92d0ab75b350c56191334a3ba1e02558"
   },
   {
-   "id": 21,
+   "id": 22,
    "title": "Figurenaufstieg",
    "text": "Wenn im Leben viel los ist, muss man sich ein bisschen Auszeit „stehlen“, oder?",
    "unlockRequirement": "",
@@ -2400,7 +2414,7 @@
    "krUrl": "34e97e41151219f0d17c3c884ed558795636f544fe401554524e7ba6eef0232a"
   },
   {
-   "id": 22,
+   "id": 23,
    "title": "Höchststufe erreicht",
    "text": "Früher oder später wirst du den richtigen Spielstein ziehen, oder?",
    "unlockRequirement": "",
@@ -2410,8 +2424,8 @@
    "krUrl": "57267118e879c89a0a62cf8a6c9c8c08bd5e7f9d3eec3988fb28fa4e74c07890"
   },
   {
-   "id": 23,
-   "title": "Spur-Aktivierung",
+   "id": 24,
+   "title": "Spur aktiviert",
    "text": "Bei Himmlische Jade geht es vor allem um Synergie und Glück.",
    "unlockRequirement": "",
    "cnUrl": "ee83dfe86aa12f141a00a61f91757a21c278e072e2b2efcdb0046d3e9b156c8a",
@@ -2420,7 +2434,7 @@
    "krUrl": "984b27267c9902c419e9c79b9fb1c9aa443778f4dd47ae638a6331142793426c"
   },
   {
-   "id": 24,
+   "id": 25,
    "title": "Teammitglied: Trailblazer",
    "text": "Hey ... Trailblazer, du bist ja auch hier! Dann fangen wir mal mit dem Spiel an ...",
    "unlockRequirement": "",
@@ -2430,7 +2444,7 @@
    "krUrl": "38158a7008d4783babc4841550ec09873cd607d5751533ee5b814f0e00ef9812"
   },
   {
-   "id": 25,
+   "id": 26,
    "title": "Teammitglied: Fu Xuan",
    "text": "Komisch. Wie hat die Höchste Wahrsagerin herausgefunden, dass ich hier sein würde?",
    "unlockRequirement": "",
@@ -2440,7 +2454,7 @@
    "krUrl": "86064025fa2abc225e7ce0d8b29d338c2e702b1fc226693c239530e972ad5554"
   },
   {
-   "id": 26,
+   "id": 27,
    "title": "Teammitglied: Guinaifen",
    "text": "Ein kostenloser Auftritt von der kleinen Gui? Das lass ich mir auf keinen Fall entgehen ...",
    "unlockRequirement": "",
@@ -2450,7 +2464,7 @@
    "krUrl": "fc03136fe4304b6f8ff100b33860fc5eaf238547ed0ecabd7d4d77baaf391f6f"
   },
   {
-   "id": 27,
+   "id": 28,
    "title": "Teammitglied: Yanqing",
    "text": "Toll! Wenn ein Genie wie Yanqing in der Nähe ist, kann ich mich eine Weile zurücklehnen!",
    "unlockRequirement": "",
@@ -2460,7 +2474,7 @@
    "krUrl": "604fb1ee121207d586938d7b56461e6f9c14ebc68e005d381d0de8aa274361eb"
   },
   {
-   "id": 28,
+   "id": 29,
    "title": "Teammitglied: Huohuo",
    "text": "Keine Panik, Huohuo, der Arbeitstag vergeht wie im Flug, wenn man Spaß hat ...",
    "unlockRequirement": "",

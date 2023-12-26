@@ -1,0 +1,2755 @@
+{
+ "spRequirement": 100,
+ "iconPath": "afe8a2144149b6471090e8b144d3b91e8481c1e5d87e597e6f87a46e715c0544",
+ "bgPath": "1df7e65eb4fdf58129687933e6ea13bef8606a14678032f4e38a2fa79ad20a83",
+ "figPath": "16675b83758d6f800f40263a474d4904bd318b76a49487131f08d45e4b6791fc",
+ "fgPath": "cf6114cacb12907786e934848f6d9e474618a12f0bd2f4a6afa8527b92cfa69e",
+ "splashIconPath": "b32d5a8078f427207704521da532db7dfa0fd0d5a4dfd6b33410320b7f9da73a",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 7,
+  "iconPath": "232bc80b207d7be892c4e0c41ea43b44080e51373e3c4f6f0f2f9e0eb4e03194",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Credit",
+   "desc": "Mata uang yang digunakan saat Interastral Peace Corporation bertransaksi dengan pelanggannya. Kini mata uang ini sudah menjadi mata uang yang umum di perjalanan ruang angkasa.",
+   "lore": "\"Orang-orang berlarian, berkelahi, bertransaksi ... tujuannya cuma untuk angka-angka yang muncul di terminal. Namun benda yang benar-benar berharga tidak dapat dibeli oleh angka-angka perusahaan.\"",
+   "purpose": "Mata uang umum",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calyx \"Great Mine\"",
+    "Hadiah Misi",
+    "Hadiah Tugas",
+    "Penukaran Ember"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Tracks of Destiny",
+   "desc": "Material berkualitas tinggi untuk meningkatkan level Trace.",
+   "lore": "Kekalahan demi kekalahan telah membuatmu menang. Langkah demi langkah ke depan telah membawamu tiba di titik balik nasib.",
+   "purpose": "Material Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Hadiah Poin \"Simulated Universe\"",
+    "Kehormatan Tanpa Nama",
+    "Penukaran Ember",
+    "Hadiah Event Waktu Terbatas"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "9794d4b9cee70ded671331e6e9eec06326dcb9428d59540d9960f2a0bbea00e1",
+   "name": "Regret of Infinite Ochema",
+   "desc": "Material berkualitas tinggi untuk meningkatkan level Trace.",
+   "lore": "Tidak peduli berapa banyak tubuh yang dicuri, keinginannya tetap tidak pernah terpuaskan. Sama seperti orang-orang yang mencari ramuan keabadian, dia juga menginginkan cangkang tubuh yang tahan lama, tanpa harus takut pada kehancuran. Dia tahu, kalau hal ini hanyalah mimpi belaka.<br /><br />\"Aku pernah melihat banyak dunia yang ditelan oleh kobaran api The Blemished One, dan aku pernah menjadi bagian dari kobaran itu. Aku menari mengikuti arahan jari-jarinya, tahu jelas kalau kayu bakar sudah terbakar habis, maka kobaran api juga akan padam ....\"",
+   "purpose": "Material Trace",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "Echo of War: Scalegorge Waterscape"
+   ]
+  },
+  "351747": {
+   "id": 351747,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "2fbc400e2e7d120f87d04bfd3e713bd230496e24e47cc89e25ee139940602dad",
+   "name": "Nail of the Ape",
+   "desc": "Sisa-sisa dari Abundance Sprite. Material Ascension untuk karakter Quantum.",
+   "lore": "\"Sprite\" dan \"Abomination\" hanyalah memiliki perbedaan nama. Mereka yang jinak adalah Sprite, sedangkan mereka yang menyebabkan kerusakan dan kehilangan kontrol adalah Abomination. Paku yang tertanam kuat di tubuh Malefic Ape adalah jaminan bahwa ia akan menjadi Sprite selamanya.<br /><br />\"Kewajiban seorang Abdi adalah menjalankan perintah. Jika Master Primus menghunuskan Stealing Nail ke tubuhmu, kamu mau tidak mau harus mematuhi perintah.\"",
+   "purpose": "Material Ascension Karakter",
+   "rarity": 4,
+   "rewardPath": "/material/351747",
+   "comeFrom": [
+    "Stagnant Shadow: Scalegorge Waterscape",
+    "Stagnant Shadow: Scalegorge Waterscape",
+    "Omni-Synthesizer: Pertukaran Material"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "Traveler's Guide",
+   "desc": "Material Experience untuk karakter. Dapat memperoleh <nobr>20.000</nobr> Character EXP.",
+   "lore": "Buku seri yang harus disiapkan saat menjelajahi berbagai dunia. Tekan tombol baca, dan suara magnetik dalam bahasa yang kamu pahami akan menceritakan pengalaman legendaris petualang terkenal di berbagai dunia, serta pengetahuan dan kebijaksanaan berharga yang mereka peroleh di berbagai planet.<br /><br />\"Seri baru Traveler's Guide 'Resep Kuliner Antarbintang' akan segera dijual, ditunggu ya.\"<br />\"Untuk pengiriman, silakan hubungi Synesthesia Beacon ERD<nobr>-230</nobr> untuk terhubung dengan perwakilan Intelligentsia Guild. Pembayaran dapat dilakukan dengan metode apa pun yang praktis untukmu.\"",
+   "purpose": "Material EXP Karakter",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calyx \"Outlying Snow Plains\"",
+    "\"Forgotten Hall\""
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "Adventure Log",
+   "desc": "Material Experience untuk karakter. Dapat memperoleh <nobr>5.000</nobr> Character EXP.",
+   "lore": "Buku catatan petualangan yang dikemas dengan rapi dan terlihat sangat edukasional. Teks dan gambar sama-sama mendeskripsikan awal dan akhir petualangan, informasi berharga, dan kiat-kiat bertahan hidup.<br /><br />\"Kenapa tidak menjadikannya sebagai data dan masukkan ke disk fotolit? Begitu bakal lebih praktis.\"<br />\"Saat menghadapi badai bintang dan letusan aliran neutron, teknologi tinggi akan menjadi jauh lebih rapuh dari yang kamu bayangkan. Ditambah lagi, penulis buku ini pasti ingin orang-orang membacanya dengan cara yang paling sederhana.\"",
+   "purpose": "Material EXP Karakter",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calyx \"Outlying Snow Plains\"",
+    "Pelatihan Harian",
+    "Penukaran Ember"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "Travel Encounters",
+   "desc": "Material Experience untuk karakter. Dapat memperoleh <nobr>1000</nobr> Character EXP.",
+   "lore": "Buku harian yang mencatat segala penemuan di perjalanan. Tulisannya acak-acakan dan isinya juga ditulis sesuka hati. Tidak banyak gunanya untukmu.<br /><br />\"Cepat buang tumpukan kertas ini setelah dibaca ya, Dan Heng?\"",
+   "purpose": "Material EXP Karakter",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calyx \"Outlying Snow Plains\"",
+    "Hadiah Tugas"
+   ]
+  },
+  "549438": {
+   "id": 549438,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5eb86757b6878dd09f969ed2d9e75af43eac2565bd49fdbe391f716e5adca101",
+   "name": "Extinguished Core",
+   "desc": "Jantung monster yang berkeliaran di Fragmentum adalah material sederhana yang digunakan untuk peningkatan.",
+   "lore": "Sama seperti luka yang melahirkan kejahatan, dorongan untuk berbuat dosa. Seperti itulah sumber distorsi Fragmentum.<br />Sebuah pukulan keras telah menyebabkan jantung ini berhenti berdetak dan kehilangan kilaunya.<br /><br />\"Tes awal menunjukkan itu semacam hibrida: satu setengah primordial, dan yang lainnya setengahnya adalah sesuatu yang sangat mirip dengan Stellaron.\" — Departemen Biologi, Sarah Castro",
+   "purpose": "Material Trace<br />Material Ascension Karakter",
+   "rarity": 2,
+   "rewardPath": "/material/549438",
+   "comeFrom": [
+    "Dijatuhkan Monster Fragmentum tertentu",
+    "Dijatuhkan musuh di \"Simulated Universe\"",
+    "Hadiah Tugas",
+    "Penukaran Ember",
+    "\"Omni-Synthesizer\" - Pertukaran Material"
+   ]
+  },
+  "633379": {
+   "id": 633379,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4886a5629723505540ba6d02fac7f264a3164458f4194796470c1826138ba105",
+   "name": "Glimmering Core",
+   "desc": "Jantung monster yang berkeliaran di Fragmentum adalah material biasa yang digunakan untuk peningkatan.",
+   "lore": "Sama seperti luka yang melahirkan kejahatan, dorongan untuk berbuat dosa. Seperti itulah sumber distorsi Fragmentum.<br />Jantungnya berkilauan dan pembuluh darahnya menunjukkan bahwa dia masih hidup.<br /><br />\"Monster macam apa ini? Apakah kamu melihatnya... Itu adalah wajah pemimpin kita sebelumnya!\"",
+   "purpose": "Material Trace<br />Material Ascension Karakter",
+   "rarity": 3,
+   "rewardPath": "/material/633379",
+   "comeFrom": [
+    "Dijatuhkan monster Fragmentum tertentu pada Level Equilibrium Lv. 2 atau lebih",
+    "\"Omni-Synthesizer\" - Synthesis Material",
+    "Dijatuhkan musuh di \"Simulated Universe\"",
+    "\"Omni-Synthesizer\" - Pertukaran Material"
+   ]
+  },
+  "635671": {
+   "id": 635671,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1b0a1a8ab4a806daac48e2e5de6c69a9a1aad87f950c5a4c92c9513dd9d6b9",
+   "name": "Seed of Abundance",
+   "desc": "Bibit berkat yang disebarkan dewa Abundance. Dapat meningkatkan sedikit level Trace milik karakter <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abundance</span>.",
+   "lore": "Luka dan penyakit orang yang menyentuhnya akan sembuh.<br />Orang-orang yang memohon berkat kehidupan dalam keputusasaan akan mendapat jawabannya.<br /><br />\"Yang kamu minta, akan kamu dapatkan.\"",
+   "purpose": "Material Trace<br />Material Ascension Light Cone",
+   "rarity": 2,
+   "rewardPath": "/material/635671",
+   "comeFrom": [
+    "Calyx \"Backwater Pass\"",
+    "Calyx \"Backwater Pass\"",
+    "Penukaran Ember"
+   ]
+  },
+  "717320": {
+   "id": 717320,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "f54699a5eaba1cef67217196db0a1440c1b1c1c5b89179b36b2ebe7331831ea1",
+   "name": "Squirming Core",
+   "desc": "Jantung monster yang berkeliaran di Fragmentum adalah material berkualitas tinggi yang digunakan untuk peningkatan.",
+   "lore": "Sama seperti luka yang melahirkan kejahatan, dorongan untuk berbuat dosa. Seperti itulah sumber distorsi Fragmentum.<br />Jantung berdenyut perlahan, dengan kekuatan sisa yang cukup kuat untuk menyebabkan bencana baru. Cara terbaik adalah menghancurkannya untuk mencegah masalah lebih lanjut.<br /><br />\"Sama seperti kanker ....\"",
+   "purpose": "Material Trace<br />Material Ascension Karakter",
+   "rarity": 4,
+   "rewardPath": "/material/717320",
+   "comeFrom": [
+    "Dijatuhkan monster Fragmentum tertentu pada Level Equilibrium Lv. 4 atau lebih",
+    "\"Omni-Synthesizer\" - Synthesis Material",
+    "Dijatuhkan musuh di \"Simulated Universe\"",
+    "\"Omni-Synthesizer\" - Pertukaran Material"
+   ]
+  },
+  "836257": {
+   "id": 836257,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e08699257c4a96a135b4467fd8eba3917d5734b2c943ac631d2a39ae3c4ccb37",
+   "name": "Flower of Eternity",
+   "desc": "Bunga cantik yang mekar dari Sprout of Life. Dapat meningkatkan banyak level Trace milik karakter <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abundance</span>.",
+   "lore": "Benang sari yang mengandung jumlah kekuatan Abundance yang terkonsentrasi, memastikan vitalitas bunga yang abadi. Tidak ada api, es, atau lingkungan keras apa pun yang dapat menghalangi pertumbuhan bentuk kehidupan yang luar biasa ini.<br />Suatu hari ia akan memakan nutrisi bintang-bintang dan berakar di daging dunia dan tidak pernah binasa, melahirkan buah sebagai jawaban atas janji-janji keabadian.<br /><br />\"Sampan raksasa menutupi kemegahan pegunungan dan melayang di atas kehampaan. Mengonsumsi pohon keabadian di atasnya menjanjikan keabadian.\"",
+   "purpose": "Material Trace<br />Material Ascension Light Cone",
+   "rarity": 4,
+   "rewardPath": "/material/836257",
+   "comeFrom": [
+    "Calyx \"Backwater Pass\"",
+    "Calyx \"Backwater Pass\"",
+    "\"Omni-Synthesizer\" - Synthesis Material"
+   ]
+  },
+  "920198": {
+   "id": 920198,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "ed9df14a2fe247f4667c3573aa6eb1f367c5435d4c699eadef89c51e4d42d084",
+   "name": "Sprout of Life",
+   "desc": "Tunas muda yang muncul dari Seed of Abundance. Dapat meningkatkan level Trace milik karakter <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abundance</span> dalam jumlah sedang.",
+   "lore": "Kehangatan yang memancar keluar, kehidupan dan pertumbuhan yang tumbuh subur di sekitar tempat dia berakar. Lahan tandus berubah menjadi padang rumput yang subur, tumbuh-tumbuhan yang mati menumbuhkan bunga umur panjang lagi, dan mata air yang jernih menyembur keluar dari dalam tanah untuk melembabkan tanah.<br />Saat kamu semakin dekat dengannya, otot dan tulangmu berkedut dan menyebar dengan rasa menggeliat yang tidak tertahankan.<br /><br />\"Hidup tidak pernah gagal di tempat jiwa berkelimpahan.\"",
+   "purpose": "Material Trace<br />Material Ascension Light Cone",
+   "rarity": 3,
+   "rewardPath": "/material/920198",
+   "comeFrom": [
+    "Calyx \"Backwater Pass\"",
+    "Calyx \"Backwater Pass\"",
+    "\"Omni-Synthesizer\" - Synthesis Material",
+    "Penukaran Ember"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 67.2,
+   "attackAdd": 3.36,
+   "hpBase": 144,
+   "hpAdd": 7.2,
+   "defenseBase": 75,
+   "defenseAdd": 3.75,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549438,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "attackBase": 94.08,
+   "attackAdd": 3.36,
+   "hpBase": 201.6,
+   "hpAdd": 7.2,
+   "defenseBase": 105,
+   "defenseAdd": 3.75,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549438,
+     "count": 8
+    }
+   ]
+  },
+  {
+   "attackBase": 120.96,
+   "attackAdd": 3.36,
+   "hpBase": 259.2,
+   "hpAdd": 7.2,
+   "defenseBase": 135,
+   "defenseAdd": 3.75,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633379,
+     "count": 5
+    },
+    {
+     "id": 351747,
+     "count": 2
+    }
+   ]
+  },
+  {
+   "attackBase": 147.84,
+   "attackAdd": 3.36,
+   "hpBase": 316.8,
+   "hpAdd": 7.2,
+   "defenseBase": 165,
+   "defenseAdd": 3.75,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633379,
+     "count": 8
+    },
+    {
+     "id": 351747,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 174.72,
+   "attackAdd": 3.36,
+   "hpBase": 374.4,
+   "hpAdd": 7.2,
+   "defenseBase": 195,
+   "defenseAdd": 3.75,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717320,
+     "count": 5
+    },
+    {
+     "id": 351747,
+     "count": 15
+    }
+   ]
+  },
+  {
+   "attackBase": 201.6,
+   "attackAdd": 3.36,
+   "hpBase": 432,
+   "hpAdd": 7.2,
+   "defenseBase": 225,
+   "defenseAdd": 3.75,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717320,
+     "count": 7
+    },
+    {
+     "id": 351747,
+     "count": 28
+    }
+   ]
+  },
+  {
+   "attackBase": 228.48,
+   "attackAdd": 3.36,
+   "hpBase": 489.6,
+   "hpAdd": 7.2,
+   "defenseBase": 255,
+   "defenseAdd": 3.75,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 100,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "30dc59c296630e7f601b14e36d3468f820e7f2a6b9504224c921e3c5bd3b3754",
+   "artPath": "4bb621a41769d72813a24092703352abe0b5c3bd266bfc9b977a87b7b366e35a",
+   "name": "Morning of Snow Hike",
+   "descHash": "Saat memberi pemulihan pada rekan tim dengan persentase HP kurang dari atau sama dengan <nobr>#1[i]%</nobr>, Outgoing Healing Lynx akan meningkat <nobr>#2[i]%</nobr>. Efek ini juga berlaku untuk pemulihan berkelanjutan.",
+   "params": [
+    0.5,
+    0.2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "cde835957e0fc6e2931a9b73cd9c2fd1b08d664380a2958485071b7d76ee1a95",
+   "artPath": "70fec0aeafa4f63017f2fbf649ac31130d511f9450f1040f47514c5ee49358a5",
+   "name": "Noon of Portable Furnace",
+   "descHash": "Target yang memiliki \"Survival Response\" dapat menahan <nobr>#1[i]</nobr> kali efek Debuff yang dilancarkan padanya.",
+   "params": [
+    1
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "af4e41014864a8f554e377fa20b54a0d26f1cbb0b1032e210818014c3c25a29d",
+   "artPath": "17bd5bff3d7d8523c41f0526615f7ed47857dc69ec59473ee916841ec0118d60",
+   "name": "Afternoon of Avalanche Beacon",
+   "descHash": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "256edcaec4bb88c4bd917e000967e6c689cc6f3ff7bfb73bfb1f25f3a2bcf23f",
+   "artPath": "7c7d5ebe559a8277fb93e4e125204eee335e0b21e526216ea1885ca7cdc809b3",
+   "name": "Dusk of Warm Campfire",
+   "descHash": "Saat target mendapatkan \"Survival Response\", ATK target tersebut akan meningkat sebesar <nobr>#1[f1]%</nobr> Max HP Lynx selama <nobr>#2[i]</nobr> giliran.",
+   "params": [
+    0.03,
+    1
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "d48de11fffb18287b3aa13e4bd8fe6553398ca48d32ff0750c7655f1f8b383a1",
+   "artPath": "6e13b927794e8d258aad40f390b013685783e864fd0e58eb1d9cdd80d28bf721",
+   "name": "Night of Aurora Tea",
+   "descHash": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "b44b11c617adf20402294ffd32af532c8bb0ff375731a1b274a8c7ccadbd1f13",
+   "artPath": "a67a9d5c91e11a11a402b5ed9764a222818988298ecd2b4e2eb070f8ec35392a",
+   "name": "Dawn of Explorers' Chart",
+   "descHash": "Peningkatan Max HP dari \"Survival Response\" akan meningkat lagi sebesar <nobr>#1[f1]%</nobr> Max HP Lynx, serta meningkatkan Effect RES sebesar <nobr>#2[i]%</nobr>.",
+   "params": [
+    0.06,
+    0.3
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   549438
+  ],
+  [
+   633379
+  ],
+  [
+   717320
+  ],
+  [
+   64325
+  ],
+  [
+   348852
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Single Target",
+   "descHash": "Mengakibatkan <span style=\"color:#7788ff;\">Quantum</span> DMG sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> Max HP diri sendiri pada 1 musuh yang ditarget.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 549438,
+   "name": "Ice Crampon Technique",
+   "iconPath": "603656ddf07dd9a588057d833ca4ab325b300d922e908398141ff756502dfa89",
+   "typeDescHash": "Basic ATK",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.25
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635671,
+       "count": 2
+      },
+      {
+       "id": 549438,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.35
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920198,
+       "count": 2
+      },
+      {
+       "id": 633379,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.4
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920198,
+       "count": 4
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.45
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836257,
+       "count": 2
+      },
+      {
+       "id": 717320,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836257,
+       "count": 6
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.55
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.65
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Restore",
+   "descHash": "Memberikan \"Survival Response\" pada 1 rekan tim yang ditargetkan dan meningkatkan Max HP-nya sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> Max HP Lynx + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>. Jika rekan tersebut adalah karakter dengan Path \"Destruction\" atau \"Preservation\", maka peluang rekan tersebut untuk diserang musuh akan meningkat pesat. \"Survival Response\" berlangsung selama <nobr>#3[i]</nobr> giliran.<br />Memulihkan HP rekan tersebut sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span> Max HP Lynx + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]</nobr></span>.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 633379,
+   "name": "Salted Camping Cans",
+   "iconPath": "af4e41014864a8f554e377fa20b54a0d26f1cbb0b1032e210818014c3c25a29d",
+   "typeDescHash": "Skill",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.05,
+      50,
+      2,
+      0.08,
+      80,
+      5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.052500002,
+      80,
+      2,
+      0.085,
+      128,
+      5
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549438,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.055,
+      102.5,
+      2,
+      0.09,
+      164,
+      5
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635671,
+       "count": 2
+      },
+      {
+       "id": 549438,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.0575,
+      125,
+      2,
+      0.095,
+      200,
+      5
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920198,
+       "count": 2
+      },
+      {
+       "id": 633379,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.06,
+      140,
+      2,
+      0.1,
+      224,
+      5
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920198,
+       "count": 4
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.0625,
+      155,
+      2,
+      0.104,
+      248,
+      5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920198,
+       "count": 6
+      },
+      {
+       "id": 633379,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.065625,
+      166.25,
+      2,
+      0.108,
+      266,
+      5
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836257,
+       "count": 2
+      },
+      {
+       "id": 717320,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.06875,
+      177.5,
+      2,
+      0.112,
+      284,
+      5
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836257,
+       "count": 4
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.071875,
+      188.75,
+      2,
+      0.116,
+      302,
+      5
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836257,
+       "count": 6
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.075,
+      200,
+      2,
+      0.12,
+      320,
+      5
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836257,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.0775,
+      211.25,
+      2,
+      0.124,
+      338,
+      5
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.08,
+      222.5,
+      2,
+      0.128,
+      356,
+      5
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.0825,
+      233.75,
+      2,
+      0.132,
+      374,
+      5
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.085,
+      245,
+      2,
+      0.13599999,
+      392,
+      5
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.0875,
+      256.25,
+      2,
+      0.14,
+      410,
+      5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Restore",
+   "descHash": "Menghapus masing-masing <nobr>#1[i]</nobr> efek <u>Debuff</u> dari seluruh rekan tim, serta segera memulihkan HP seluruh rekan tim sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> Max HP Lynx + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]</nobr></span>.",
+   "ultimateCost": 100,
+   "break": "0",
+   "energy": "5",
+   "id": 717320,
+   "name": "Snowfield First Aid",
+   "iconPath": "e6a580862d64d80ff288666e6ac46fe5a2473eaa28c8f99d9c793d66e8a395c8",
+   "typeDescHash": "Ultimate",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      0.09,
+      90
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0.095625,
+      144
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549438,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.10125,
+      184.5
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635671,
+       "count": 2
+      },
+      {
+       "id": 549438,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.106875,
+      225
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920198,
+       "count": 2
+      },
+      {
+       "id": 633379,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.1125,
+      252
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920198,
+       "count": 4
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.117,
+      279
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920198,
+       "count": 6
+      },
+      {
+       "id": 633379,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.1215,
+      299.25
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836257,
+       "count": 2
+      },
+      {
+       "id": 717320,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.126,
+      319.5
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836257,
+       "count": 4
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.1305,
+      339.75
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836257,
+       "count": 6
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.135,
+      360
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836257,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.1395,
+      380.25
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0.144,
+      400.5
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0.1485,
+      420.75
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0.153,
+      441
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0.1575,
+      461.25
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Restore",
+   "descHash": "Saat Lynx melancarkan Skill atau Ultimate, rekan tim yang dijadikan target Skill atau Ultimate Lynx akan mendapatkan efek pemulihan berkelanjutan selama <nobr>#1[i]</nobr> giliran. Saat setiap giliran target dimulai, HP-nya akan pulih sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> Max HP Lynx + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]</nobr></span>. Jika target memiliki \"Survival Response\", maka efek pemulihan berkelanjutan akan meningkat sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span> Max HP Lynx + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]</nobr></span>.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 64325,
+   "name": "Outdoor Survival Experience",
+   "iconPath": "da096924ee0966742e1240b06753c856428920832fdcdd19572152ab89b95c93",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2,
+      0.024,
+      24,
+      0.03,
+      30
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.0255,
+      38.4,
+      0.031875,
+      48
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549438,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.026999999,
+      49.2,
+      0.03375,
+      61.5
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635671,
+       "count": 2
+      },
+      {
+       "id": 549438,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.0285,
+      60,
+      0.035625,
+      75
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920198,
+       "count": 2
+      },
+      {
+       "id": 633379,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.03,
+      67.2,
+      0.0375,
+      84
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920198,
+       "count": 4
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.0312,
+      74.4,
+      0.039,
+      93
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920198,
+       "count": 6
+      },
+      {
+       "id": 633379,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.0324,
+      79.8,
+      0.0405,
+      99.75
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836257,
+       "count": 2
+      },
+      {
+       "id": 717320,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.0336,
+      85.2,
+      0.042,
+      106.5
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836257,
+       "count": 4
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.0348,
+      90.6,
+      0.0435,
+      113.25
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836257,
+       "count": 6
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.036,
+      96,
+      0.044999998,
+      120
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836257,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.0372,
+      101.4,
+      0.0465,
+      126.75
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.038399998,
+      106.8,
+      0.048,
+      133.5
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.0396,
+      112.2,
+      0.0495,
+      140.25
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.0408,
+      117.6,
+      0.051,
+      147
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.042,
+      123,
+      0.052500002,
+      153.75
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Single Target",
+   "descHash": "Setelah menyerang musuh dan memasuki pertempuran, mengurangi Toughness target musuh sesuai dengan tipe Toughnessnya.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 232207,
+   "name": "Attack",
+   "iconPath": "603656ddf07dd9a588057d833ca4ab325b300d922e908398141ff756502dfa89",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Restore",
+   "descHash": "Setelah menggunakan Technique, seluruh rekan tim akan mendapatkan efek pemulihan berkelanjutan dari Talent Lynx saat pertempuran berikutnya dimulai, berlangsung selama <nobr>#1[i]</nobr> giliran.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 348852,
+   "name": "Chocolate Energy Bar",
+   "iconPath": "a1622fd01ca7300836bfc5a3fecdddcdb3718d022713c14f1510053e5d35cc2d",
+   "typeDescHash": "Technique",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1110101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1110202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1110203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1110204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 989255,
+          "name": "Peningkatan Effect RES",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+          "statusList": [
+           {
+            "key": "Effect RES",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 920198,
+            "count": 2
+           },
+           {
+            "id": 633379,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 989256,
+        "name": "Peningkatan HP",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+        "statusList": [
+         {
+          "key": "HP",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920198,
+          "count": 2
+         },
+         {
+          "id": 633379,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 989257,
+      "name": "Peningkatan DEF",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+      "statusList": [
+       {
+        "key": "DEF",
+        "value": 0.05
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635671,
+        "count": 2
+       },
+       {
+        "id": 549438,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Saat target berstatus \"Survival Response\" terkena serangan, Lynx akan segera memulihkan <nobr>#1[i]</nobr> Energy.",
+    "ultimateCost": 0,
+    "id": 989097,
+    "name": "Advance Surveying",
+    "iconPath": "cf2dab40787d337430371068a4ade324526bb8000f6ed81e3bb8b5f8b7b65b68",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635671,
+        "count": 2
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1110102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1110205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1110206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1110207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 989252,
+          "name": "Peningkatan HP",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+          "statusList": [
+           {
+            "key": "HP",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 836257,
+            "count": 2
+           },
+           {
+            "id": 717320,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 989253,
+        "name": "Peningkatan DEF",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+        "statusList": [
+         {
+          "key": "DEF",
+          "value": 0.075
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836257,
+          "count": 2
+         },
+         {
+          "id": 717320,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 989254,
+      "name": "Peningkatan HP",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "HP",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920198,
+        "count": 4
+       },
+       {
+        "id": 633379,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Meningkatkan <nobr>#1[i]%</nobr> peluang untuk menahan Crowd Control Debuff.",
+    "ultimateCost": 0,
+    "id": 989098,
+    "name": "Exploration Techniques",
+    "iconPath": "d280aec2ce5c52edab49d4cd02f61665d7041836dea5d2b1e8a81b83513cf7f4",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.35
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920198,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1110103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1110208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 989267,
+      "name": "Peningkatan Effect RES",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+      "statusList": [
+       {
+        "key": "Effect RES",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836257,
+        "count": 6
+       },
+       {
+        "id": 717320,
+        "count": 6
+       }
+      ]
+     }
+    },
+    {
+     "id": 1110209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 989266,
+      "name": "Peningkatan DEF",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+      "statusList": [
+       {
+        "key": "DEF",
+        "value": 0.1
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836257,
+        "count": 6
+       },
+       {
+        "id": 717320,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Efek pemulihan berkelanjutan dari Talent diperpanjang <nobr>#1[i]</nobr> giliran.",
+    "ultimateCost": 0,
+    "id": 989099,
+    "name": "Survival in the Extreme",
+    "iconPath": "d79e638f84b0988cbcb95a8e8912e65248f8381f0e2d6b31303f598fa15e1c20",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836257,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1110201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 989258,
+    "name": "Peningkatan HP",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+    "statusList": [
+     {
+      "key": "HP",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549438,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1110210,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 73200,
+    "name": "Peningkatan HP",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+    "statusList": [
+     {
+      "key": "HP",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 128000
+     },
+     {
+      "id": 836257,
+      "count": 6
+     },
+     {
+      "id": 717320,
+      "count": 6
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Badan",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "Outgoing Healing Boost",
+    "propertyIconPath": "57726150eaa27c675743fe08b88bd04575a0e76b5014dcfbc073c105aa1c7e44"
+   },
+   {
+    "relicTypeHash": "Kaki",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "SPD",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Planar Sphere",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "HP",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "Link Rope",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "HP",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Pertemuan Pertama",
+   "text": "*Huff* Jadi ... namaku Lynx, aku anggota dari tim peneliti ilmiah Snow Plains Belobog. Untuk hal-hal terkait dengan pekerjaan, tolong hubungi aku di jam kerja. Kalau di luar itu ... aku tidak akan balas. Kurang lebih begitu, dadah.",
+   "unlockRequirement": "",
+   "cnUrl": "285c4ca3d0a134489594d8448c19f0d1228bce399e20ebbc6ab33140f55a3491",
+   "jpUrl": "55d68fd2db2da94133bec5e70871fc07cf471126dc0512a9435672415bad40db",
+   "enUrl": "494d6a3b4017896db416fb45830bfac6f5fee7ecf664dc7119b4e3ae6141cc1d",
+   "krUrl": "db7a58a47c999a808b2fb7c6426208b76d4b099ef05462c4e1b9e5b4ec1d0515"
+  },
+  {
+   "id": 2,
+   "title": "Menyapa",
+   "text": "Hm ... Kantong tidur, matras anti-lembap ... Oke, sudah siap semua, waktunya berangkat.",
+   "unlockRequirement": "",
+   "cnUrl": "13a23aa20e641b9d87aa168e707e5e00f6faaae293be47b0fcabd11b79ed0a28",
+   "jpUrl": "772916ccc11fa02b796b5361d5f846430fa1a6c240dbb5d5f1432ca9f60d0e16",
+   "enUrl": "74bd088f8c5fea02d690335859b7cc05e750510793c04a3cd01578a79b8c5cc8",
+   "krUrl": "d4aa9f18299c7b730ba1e15db71ac790f2c77ea6a6c71db983db009ba274a910"
+  },
+  {
+   "id": 3,
+   "title": "Berpisah",
+   "text": "Hmm, sepertinya aku akan membuat kemah di sini. Kira-kira malam ini bisa melihat aurora tidak ya ....",
+   "unlockRequirement": "",
+   "cnUrl": "9f687a236ec8d7f85dd35141410fe832b730b66ebe7819e0e97390f2fb994fd8",
+   "jpUrl": "07c2f6ff24c9056a2693eb07bce15b92d7b0778a8ac811446586857d53eaeb25",
+   "enUrl": "f8b2c587ca71f9ad2212c3918208ce6d721c5f3e9c4a5004dc56b08cd0b13487",
+   "krUrl": "599cc48f072ac7fef7eef92749a0e17ddd9999f60f78d446d4a868206419a2a5"
+  },
+  {
+   "id": 4,
+   "title": "Tentang Diriku",
+   "text": "Di keluarga Landau, semua hal itu sangat sederhana: Kalau kamu mau melakukan sesuatu, maka lakukanlah. Aku mau melihat Snow Plains, jadi aku bergabung dengan tim peneliti ... Ya, sesederhana itu.",
+   "unlockRequirement": "",
+   "cnUrl": "f0003421e82e9b69f39d59631b2faefea4e66f7bad69928c71c0929c89ee1595",
+   "jpUrl": "5333142a36a8822668e7dc0e11f16aba6adfdbdac50c67390e0fec39d5fbeca6",
+   "enUrl": "0022e92762ff3dddcc9067ae49a35dffa3a9fdcfd07694187956784e91254541",
+   "krUrl": "c7c17daefb841b2b8caa0f8367f89ac78ce47a209a5ed5212fa299ecb360ae1e"
+  },
+  {
+   "id": 5,
+   "title": "Mengobrol: Bertualang Sendirian",
+   "text": "Tidak ada yang perlu dicemaskan kalau kamu sudah siap. Kamu seharusnya cemas pada mereka yang belum siap. Oh, kamu cemas karena aku pergi sendirian? Ah ... pergi sendirian itu lebih baik loh.",
+   "unlockRequirement": "",
+   "cnUrl": "a539f9b10c214e73afd0dbc4a33c10c5874e4918bd6956e7869e5d010daad631",
+   "jpUrl": "23934249cd1b0679fd8fe259da26a46f8806b0892123190b5a2657dab25908c0",
+   "enUrl": "4e1919cfd542d11b56e90f2e2bcf8915ebddbc80670541488e892ba38081c046",
+   "krUrl": "21f65dec9c07daa30e7ce3146b515c07862b4fce33f5e6baf5fc57296bd1cb19"
+  },
+  {
+   "id": 6,
+   "title": "Hobi",
+   "text": "Menjelajahi Snow Plains ... Tentu saja akan ada berbagai rintangan selama prosesnya. Akan tetapi, menyelesaikan semua rintangan itu justru merupakan bagian yang menyenangkan.",
+   "unlockRequirement": "",
+   "cnUrl": "a991c7d262cb9de397647674e46a3c78b4a4218489e5738945385abcd3542feb",
+   "jpUrl": "b50e7bba7db7821bae6bc1b3e9edce63a579abe1a7de808bd221bd77a040078d",
+   "enUrl": "35689dcac223e2ab1285958b2e4887543ddc00c9c84dcf6cad3d818dd12c7169",
+   "krUrl": "5c1cef570f10de6567a28740d59481b1c4fad28e6a75c38aa0035aced2cef007"
+  },
+  {
+   "id": 7,
+   "title": "Hal yang Memusingkan",
+   "text": "Rasanya repot banget setiap kali bicara dengan orang lain dan berusaha untuk memahami apa yang mereka maksud ... *Huff* Setidaknya kalau aku bicara dengan Pela, aku tidak perlu banyak berpikir ....",
+   "unlockRequirement": "",
+   "cnUrl": "e315769544c2c7aff48fee867393283e697845e8b039d42ceea759d90b9eb63f",
+   "jpUrl": "45874d7731f16e5d0db7de00e2a9b926f40c3f4fbb54d5d1b9a92ae4f0bfca28",
+   "enUrl": "83967b8f0e46ae8961ea0c3690e69ddfd1e9160a59c0ef3034e355e0c84e9342",
+   "krUrl": "416e64d8e85934b7c55f6df2c012d8a293228a3d3b7880e707d34c0bb473eb20"
+  },
+  {
+   "id": 8,
+   "title": "Curhat",
+   "text": "Hati-hati dengan angin gunung di Kandor Valley — Angin gunung di sana biasanya pertanda badai salju akan datang. Dan ingat, jangan pernah tinggal di lembah pada malam hari.",
+   "unlockRequirement": "",
+   "cnUrl": "39d69eb6142c1a574b6916b52c1133bbecbb3e6fea82ffba8f92e92ff1574a0a",
+   "jpUrl": "949940767960feeefbbacb4830edbf4a44c5e6752c100bb1de63c9cf9122f0a9",
+   "enUrl": "e43fd2583e8f5bb46d0503a5309304f0f15caffc1848648ef8c540c0e74ebc63",
+   "krUrl": "78816635ed15f99c46d5745696ba595a610267368869d42975de9ced60f24841"
+  },
+  {
+   "id": 9,
+   "title": "Rumor",
+   "text": "Semua yang berada di luar Belobog terkubur oleh salju, termasuk semua sejarah dari Old World. Tapi kalau kita bisa membawa itu semua kembali dengan cara menjelajahi Snow Plains, maka pilihannya sangatlah sederhana: Lakukan saja.",
+   "unlockRequirement": "",
+   "cnUrl": "2e5cfd795d15ec4f3eb2581e6702f82fc08c24ea10201061e0bc333c586af0c3",
+   "jpUrl": "459184292c9ac59d6930e94c8a2d452533bde3bbc41bf3895fd033a10281b9b6",
+   "enUrl": "c2f2f2a3539c6c18843f2f2865158debc4987da186f05ffa63dd7c4871394c37",
+   "krUrl": "d083065becaabbe8245e036dd160e7db77ffe37da7668fa892e84b81c30980c1"
+  },
+  {
+   "id": 10,
+   "title": "Tentang Bronya",
+   "text": "Nona Bronya pasti lelah ya, karena dia harus berurusan dengan banyak orang setiap harinya.",
+   "unlockRequirement": "",
+   "cnUrl": "f0741cdf01192911d639be0cf72956ce65339656ce66e3dccb0ccce9c642129b",
+   "jpUrl": "b8363a431f8da23dfef845a6b6bab8da40f7a74df8a6db72f0c70345c35d9cae",
+   "enUrl": "f786b353a240cb063e747a517c109df73d9a89d41e45200ad071cd073c1c890a",
+   "krUrl": "22760a04847693d8d19db4d734d8afb5590d5dc042f6fa20555dda717dee01d3"
+  },
+  {
+   "id": 11,
+   "title": "Tentang Serval",
+   "text": "Sejujurnya aku sangat mengagumi dia, dia punya banyak talenta ... Tolong jangan bilang-bilang soal ini ke dia ya.",
+   "unlockRequirement": "",
+   "cnUrl": "0bad44cb5d4da6ba25d0a64fddeff2fced692f14b343529dcbec11b8896ec85d",
+   "jpUrl": "ddfd750daf0bf38440a3bfadb5cfd906a4ad17ae4de10bbc3380d69d7bbafc82",
+   "enUrl": "3e3fe79ffe4d1ebc13b9b3eaf97450a1c4c5c1f9c672b4909077e6d50b115fb6",
+   "krUrl": "c9275b1c41aa4e2ff0c4f2781e7d78e467d589c3e7abc86adbca0efa472a24c1"
+  },
+  {
+   "id": 12,
+   "title": "Tentang Gepard",
+   "text": "Kak Gepard itu orangnya hebat dan sangat bisa diandalkan ... Akan lebih baik lagi kalau dia bisa jangan terlalu mencemaskan diriku.",
+   "unlockRequirement": "",
+   "cnUrl": "4d923d1d13795a888c21e847a690fbed1b14996653ac587d2378766863df1f08",
+   "jpUrl": "455c8f4a9c2290f2dec4f0224035a64dc1e47ddbd01795a26f112de30658d5a6",
+   "enUrl": "507d4d5415b794dce70d4f9ecfb900d6855578f79d8555adc0135bb8687cf917",
+   "krUrl": "5205913b4e744ebe7267a6b3d84318bdbf2a64ca33d0ae11cf857d39c798284d"
+  },
+  {
+   "id": 13,
+   "title": "Tentang Pela",
+   "text": "Ada banyak hal yang cuma Pela yang bisa mengerti ... Hehe.",
+   "unlockRequirement": "",
+   "cnUrl": "fa7a40eb119d3344f2a0468d64fb40ba3e57072b92e90ec889587f7312a70a31",
+   "jpUrl": "3d3c1a127a6198b26f0f312fd67d28e4de792f4274db3c40a6d7ebc8511d1cfc",
+   "enUrl": "97d670eeeb6d44e1325583ce90caadbf89641081c6cff637065d2090245dec35",
+   "krUrl": "bdbcf8a7dbb9012ca0627584f6533832c1c2eb49a923fae243c0df7c1797eb4c"
+  },
+  {
+   "id": 14,
+   "title": "Tentang Sampo",
+   "text": "Sepertinya dia ini kriminal yang sedang dicari oleh kak Gepard ya, tapi sepertinya aku sering lihat dia di Snow Plains ... Ah! Apa jangan-jangan dia itu manusia gua Belobog yang legendaris!?",
+   "unlockRequirement": "",
+   "cnUrl": "2029dd41a6ebb675a77290051bf288a549e184fa8fc7464a3a2bfd70b10545f0",
+   "jpUrl": "ec8cd71a6a25d16370a803cc71d807c30ddda4b4896759f66daf27a228803786",
+   "enUrl": "b295ccd1b17891ac97631040cd450e8fda1ec8ecfb9e8367934db4d7ae476f85",
+   "krUrl": "2f7d762da22393ed700142cf0651825b94dc13a4db53c1dbbb5ffe8a0200b877"
+  },
+  {
+   "id": 15,
+   "title": "Eidolon Diaktifkan",
+   "text": "Semua orang butuh waktu sendirian ....",
+   "unlockRequirement": "",
+   "cnUrl": "3a221f1564330a9e7bfb6ff3c1beeea53745457d507e3becbb402987c1ba39b5",
+   "jpUrl": "2df5d473673eaf730eacecff372bfc8713ffe383d8a15a1fe1b433fcaf87f2e6",
+   "enUrl": "2ff1d186b0edcb1f8a3e9dfb8d3c0c075502b3e1a250d63017b1ad291bb345b3",
+   "krUrl": "370eba9bdc40adc858db01dd9e4681d35134fef45b227f3bb460924cb78e04d9"
+  },
+  {
+   "id": 16,
+   "title": "Ascension Karakter",
+   "text": "Senangnya bisa menguasai teknik bertahan hidup yang baru ....",
+   "unlockRequirement": "",
+   "cnUrl": "d48b88d149e1408ce1d76e28dabc664b915766a7a37ff1d57e6e0bbc39befd20",
+   "jpUrl": "fff5f6f50635697ab77d9623bdce30b9ccd587d08164ae2b9a39c689816564ff",
+   "enUrl": "a4d929d4f689de3491047f6958276941b78cb363d51e47c692fab19c878cddf4",
+   "krUrl": "04d21aff988e29a6a6623e93812616ee0f10140e58c627ddc8badb5251d212d3"
+  },
+  {
+   "id": 17,
+   "title": "Level Max Karakter",
+   "text": "Bahkan Snow Plains sendiri memiliki ujung ....",
+   "unlockRequirement": "",
+   "cnUrl": "c0f9facf7fa74bab0b3805da462ba423aa43940117800b9fd84eb64d442a9619",
+   "jpUrl": "43bcae5eba17552713e40637487f0a8eccdc9dc8a58de7a7e7f16981f5cefe87",
+   "enUrl": "a59d344b95c6cec15827c2eddabd57766b1675937325c02d78953b4a174905ea",
+   "krUrl": "1b64cd9c8c2b7a9d5538901112a87e60aa7f2d5b35a7f8f931090edfb080159a"
+  },
+  {
+   "id": 18,
+   "title": "Trace Diaktifkan",
+   "text": "Bagus! Aku akan mencobanya di ekspedisiku yang berikutnya.",
+   "unlockRequirement": "",
+   "cnUrl": "ff088400e0011d00173e343e30afc51095df8d3616d4625b1f2263a53d1a6c27",
+   "jpUrl": "c8905ac894225bc26a5f39b4d0433daa233f57bf4d6438b4e954d236fdad5111",
+   "enUrl": "a1045c8c310e8500ae1fc8459e14830a8a2e6d9b08caf43cc09b6e569a841b1a",
+   "krUrl": "1f0b5691fd951d7fa13db793e072fbab8d07b5265a68a31de2790a586d2ed572"
+  },
+  {
+   "id": 19,
+   "title": "Edit Tim: Pela",
+   "text": "Berteriaklah kalau kamu menemui masalah, Pela.",
+   "unlockRequirement": "",
+   "cnUrl": "3ecbebf2d48b2259df902bde2c74c8fd8f689b608d11cc1764392e4312e5e972",
+   "jpUrl": "b90094d8aebfa7a33d09da17e6851a70b30a3a572ae58fc8cf372faf522b74a9",
+   "enUrl": "382b0a4177d5fbdfb986b2ebb7df6da8054c23e60aa1eab57606266139a57500",
+   "krUrl": "484b8a074b8ebf5a23fe9cbeab796c7b4ab32c207a8b206eaf6ae6e37b8dd20f"
+  },
+  {
+   "id": 20,
+   "title": "Edit Tim: Serval",
+   "text": "Aku tidak pernah menyangka bisa bertarung bersamamu, Kak ....",
+   "unlockRequirement": "",
+   "cnUrl": "84efd7433c700eda86e52c4cf6955e62212bb7397ec57febd99ab3ae4636164f",
+   "jpUrl": "12468e501aee218ff0ffdc41d7a1429f1aaa1d040bd7e2f318f813f494a380de",
+   "enUrl": "f19820a8e3a271db023d45854b0c2afae2d3bf0f610510ab3ea3e1e28491274a",
+   "krUrl": "adb4abc80d0660afa20e7a1905ca1ae7927c3a543a90a1e25f30c20c1d791690"
+  },
+  {
+   "id": 21,
+   "title": "Edit Tim: Gepard",
+   "text": "Jangan menahanku terus, Kak Gepard! Aku bukan anak kecil lagi ....",
+   "unlockRequirement": "",
+   "cnUrl": "a04f67a0d652e2408bef3efdd061d815740272cd26cb2f5506e6c69c8d1331aa",
+   "jpUrl": "e7859784b3c856565e735bbf7c74b9fd5e7546d7a64af8f8381bad79a4d7d64b",
+   "enUrl": "a13c3b1a769cae5d54ce08f4ad93abd271059aea95ca1f6c6f8a4e30d092ace1",
+   "krUrl": "13c6345b27dbc8b893c8cb6dea610796aa0a814ebaa78f17eecc7de7c8d1e646"
+  },
+  {
+   "id": 51,
+   "title": "Pertempuran Dimulai: Weakness Break",
+   "text": "Sempurna, sekarang kesempatanku.",
+   "unlockRequirement": "",
+   "cnUrl": "2d21ab795ad02993a5215789c9db322a3e090fa4b68b3059f3b389ceb85ba7ff",
+   "jpUrl": "4ae4dbf5f3057df9080a3820e78ed19f0070c3af5725b7dbcc434e39f8cc3391",
+   "enUrl": "ed99a272b33e9b9341f4bc90b9ece253c30a75da9daf3df8904ea2a6547abdfc",
+   "krUrl": "148bf340006d5832a36ccefdeef79c63679b0d1907f6f015a0708cc0a5fdac00"
+  },
+  {
+   "id": 52,
+   "title": "Pertempuran Dimulai: Peringatan Bahaya",
+   "text": "Tenanglah, Lynx ....",
+   "unlockRequirement": "",
+   "cnUrl": "d8c77332fc75bfa2d7dd25d5f1f66abeea86cd112778bda678b457e7957cc7ce",
+   "jpUrl": "be3b3c33c4eecacc3f312919e8d880d297d56f4e039503eb2271c83da9c67894",
+   "enUrl": "9dfd60e2541bb3d30eae60d2dd6a179b2cd26911f51647ec0bb139ca630bbe92",
+   "krUrl": "bd4ce04a6610fe05e9a8ce805c0ee1fd52a59a05ad02205649ed4b9490a266eb"
+  },
+  {
+   "id": 53,
+   "title": "Giliran Dimulai: 1",
+   "text": "Memulai penelitian.",
+   "unlockRequirement": "",
+   "cnUrl": "db651b0ee84fd5a4f79ed452219e138c67d1a71acf5797d4739e0fb727baf26b",
+   "jpUrl": "33048b2d280cb55b1b988e41fabacdbfd05443af28dc240693e49c3277654a7a",
+   "enUrl": "0243866b4f49d30811353e880aa416363050b4b7a66dc94e803b9580fda15968",
+   "krUrl": "da3af1917881f844979b9f78412f199d4562bb22d034556f316b6c65626468a0"
+  },
+  {
+   "id": 54,
+   "title": "Giliran Dimulai: 2",
+   "text": "Target sampel terlihat, bersiap untuk mengumpulkan data.",
+   "unlockRequirement": "",
+   "cnUrl": "1da89fe3e57c1b039f19f8e77413c00a6ec45090d793e0e93451ed677a0dda89",
+   "jpUrl": "2da90995a279362eac0450018053fc147d16bb427e95792b8c69b2a5b7067e1e",
+   "enUrl": "72e7a143f1a20b255be30aa920fad44b6edba01fca0ac52c2c2e66b767830217",
+   "krUrl": "b156a24828b42639a3a74416cf7a93abf7a069b03721dd549833e79b5f3963ea"
+  },
+  {
+   "id": 55,
+   "title": "Menunggu Giliran",
+   "text": "Seharusnya aku membawa kursi ya ....",
+   "unlockRequirement": "",
+   "cnUrl": "2e1552c0b97ab4b3c7ff39c76431009c87fb60969e4d2e1b7343f961a74005c8",
+   "jpUrl": "7783692d0c087824d0fec97d14a1abf43cc0b6e98f2dbb90efa19cd12e67c423",
+   "enUrl": "18e78c890c13483235a599237f77518247f4fe871793526e60fd161e6c9bb183",
+   "krUrl": "abbac3079c6d539a4934545748ac3818b7ee9efb206c30dc75d47854615d1451"
+  },
+  {
+   "id": 56,
+   "title": "Basic Attack",
+   "text": "Permisi, numpang lewat.",
+   "unlockRequirement": "",
+   "cnUrl": "fd560a3b528594f0b5df67079fb21896678d4a7a5708ef2e43ad525c995e24ff",
+   "jpUrl": "223ead3a45252613d875d7dee1ba4982deeebd7cf9335e05c72e465a2fc6b841",
+   "enUrl": "a841b36da8fd0cb389bcfb96b2ca8c9a072be83886ca352124133b3db261c280",
+   "krUrl": "f86aa05f584b5d85007d110ac4267321f641731f34235b5ecdbf47018e25d2ed"
+  },
+  {
+   "id": 57,
+   "title": "Skill: 1",
+   "text": "Tenangkan diri, tarik napas.",
+   "unlockRequirement": "",
+   "cnUrl": "208f8f5cf3e294df6e825a4d72f5cd90248188bfadd6638fa63a33784d6e869a",
+   "jpUrl": "f3e726a73427498770c5acc96c836a52800f23f2e77c1b85299fefb2f7508f4c",
+   "enUrl": "f4ede056558a4b7f8d5cbf05c7b6b1ff585f5a1fb53461cf617c7789a12c8851",
+   "krUrl": "52975e7f13ddeb5e208174abb42b5ba235fa8ff3bbb0f7eeda67b2d2661f353c"
+  },
+  {
+   "id": 58,
+   "title": "Skill: 2",
+   "text": "Waktunya untuk sesuatu yang gurih.",
+   "unlockRequirement": "",
+   "cnUrl": "a148ec660d88faefac8d30f2a2066658829568fd5a5729c82bc94002f0aeb4ab",
+   "jpUrl": "38fb5900d4c79dbfc577e3a8bd5f31a6af5fc29443229a96db96db3e6a9666b6",
+   "enUrl": "862a010116235e38afe2f73ef90b6ca8ee057c83dfa2681a4a98fc529dd4501c",
+   "krUrl": "89db29dede022ffec6204e7f131d17b7f3d64bf908318a23aba668e174bcca87"
+  },
+  {
+   "id": 59,
+   "title": "Terkena Serangan Ringan",
+   "text": "Ugh, sepertinya sesuatu menggigitku ....",
+   "unlockRequirement": "",
+   "cnUrl": "516f6945a4593adeafebe37dcc3a55d6776fff60819a07ea14eed5f935b80bff",
+   "jpUrl": "67e99dcc0b6eb6c60966e765cbc3e281018b84203cbbeefcc76c36167a211280",
+   "enUrl": "8c90525ed87747985502eaefdf809281935c6975f1df933698e5caf4c26ad2eb",
+   "krUrl": "a5149a9a1af45903b0b60f5a148d48b5351d743402fdf9e5c08e199f325618b0"
+  },
+  {
+   "id": 60,
+   "title": "Terkena Serangan Berat",
+   "text": "Aku harus segera menghentikan pendarahannya.",
+   "unlockRequirement": "",
+   "cnUrl": "ee1c3da0e996d5e8e220c9f48ee021fb6efe8e045cebc57fc169c3c69ce3fe0a",
+   "jpUrl": "ef6b970aa92ebfd1830902a516b4bb7c0618f6a7e3e4223946879cb4d5d5bef0",
+   "enUrl": "7a3f72b7c1aec6b91cd370a92e61d848ab4701238e0823d54bb1d18874062694",
+   "krUrl": "f9659658f71c0b4deccf14df06c1671f50d6d54d63542591e331d1b251ee61b8"
+  },
+  {
+   "id": 61,
+   "title": "Ultimate: Aktifkan",
+   "text": "Demi pergi ke tempat yang jauh ....",
+   "unlockRequirement": "",
+   "cnUrl": "8360376ca3466cf75b87ed3e5af8d785f3d768b8a910227e4991b2e230f43451",
+   "jpUrl": "b2dfaececc33ee3a3dad3a2075f664dd6794fdb4628f682bb1bfe2a3951ffc0e",
+   "enUrl": "afef5437f2db97e254e07dcdba8cd9ce1ded0d1ded5d73b30d326d879990f956",
+   "krUrl": "3c6848804655c5aa4371065d2aa08f3f97d9b5629063b5f7576a9f65fdf4da10"
+  },
+  {
+   "id": 62,
+   "title": "Ultimate: Pelancaran",
+   "text": "Entah apa pun caranya, aku akan coba semuanya!",
+   "unlockRequirement": "",
+   "cnUrl": "edb9e7c09e28eebb78e1c04419174a70004cd9440d3411c337ff0dd3cb06eb1e",
+   "jpUrl": "9dfdb0b15193bf140bd9643107308c8651868881add6febf2a55c3f106368c75",
+   "enUrl": "360f9e0bda0c035f5c2f4b6965b354fef58aa1b32775da4535f98b84678cc638",
+   "krUrl": "8fcbfc48aa4de10921962f2cd51eb99cdf11d5e7e40a4c76105f3ff29301cae8"
+  },
+  {
+   "id": 63,
+   "title": "Gugur",
+   "text": "Kakak ....",
+   "unlockRequirement": "",
+   "cnUrl": "f8e06533da94705ace93ed57e5f9afbb396dd67035007345ba599f057452edfc",
+   "jpUrl": "340e4dec7bd609f0e1848ae703f1578a373990a823ab472ca61a71ff002a6e57",
+   "enUrl": "a5092dafeb5ba2ec3a4e38ae44bc009b9b746a1b47ef481530c01576cf456468",
+   "krUrl": "256c9b73db8aa0078756bc1569592a91bb43c59baa599cbefaac62cc6158fac3"
+  },
+  {
+   "id": 64,
+   "title": "Kembali ke Pertempuran",
+   "text": "Ayo kita mulai lagi.",
+   "unlockRequirement": "",
+   "cnUrl": "a6531ec2de56c8bad08d853452d5e3086cf73cf6e3cb81009fed26d6fe666527",
+   "jpUrl": "f569ebf9f2d89eedd09141666585b18deec04d9a773d71457f3f1b1a3ef34743",
+   "enUrl": "1acad9478d245c96543b992b2b8227dacb9b286284b58123be7421070c2fa106",
+   "krUrl": "8f1501189344af59745548436e1b1ee5b0463c8d5a59d7ee01926c50d7017458"
+  },
+  {
+   "id": 65,
+   "title": "HP Pulih",
+   "text": "Waktunya pas banget.",
+   "unlockRequirement": "",
+   "cnUrl": "3faf93283b6ea874bb3aacc6f34ff4e540741f3273e1298d611a8123782c808f",
+   "jpUrl": "9977864e686ea43e78ed629359265810ae4dacb5ba4d3349df502639776d3e2d",
+   "enUrl": "c63d7a6bc7162d2c5c75d67f51f0f2d8fdfe9b716792f3aed40a73a499d5d112",
+   "krUrl": "c92d5ec66d01fe540644b36874060b9a3e5c769bcc5aaf82ea66d1fe97c80a7c"
+  },
+  {
+   "id": 66,
+   "title": "Menang Pertempuran",
+   "text": "Setiap langkah merupakan bagian dari petualangan.",
+   "unlockRequirement": "",
+   "cnUrl": "5a4086b0aeea87cf6e230a867c5c493b0d1fded0876d6be23cdcfe2a38d1b07f",
+   "jpUrl": "ced47f754f5bd3cc5a20857375bed3537e6b169ce2e8f00d344686866c00a6db",
+   "enUrl": "55debf797ef9ecd757e847124eef68aa1726e2a9535b2fd26288136d1beebf1f",
+   "krUrl": "11ce1f5cca96f4733e21584184a70f789bc7993fb1b2cadce0341ec2ce52c8b6"
+  },
+  {
+   "id": 67,
+   "title": "Membuka Peti Harta 1",
+   "text": "Sepertinya akan berguna, masukkan ke dalam tas!",
+   "unlockRequirement": "",
+   "cnUrl": "34ed402efdc93c5e444517f6a5bb0f0f04d8bf7f6db7729ba89eeb6816710d77",
+   "jpUrl": "68f74a3a9131338944b1f8a476892edcc87e45c850516a0cc7f479269bc623df",
+   "enUrl": "cc22ebdd7aba31ac60c6d514d952549464c116f1ccdb920fc0b1f70c450df339",
+   "krUrl": "927aeeaddcf3d0414f8ebc58f8dcd72a0823d32b14bdcf500c67fadbd550d5f5"
+  },
+  {
+   "id": 71,
+   "title": "Membuka Peti Harta 2",
+   "text": "Kalau bisa muat di ranselku, aku akan membawanya.",
+   "unlockRequirement": "",
+   "cnUrl": "42294d86b11cf4a49e58bb7846a75724325e978960a7888a62ead03f8c73b592",
+   "jpUrl": "eaaec1fa967d144c15a9a700ae0a8323ab4f308fc244fb7cd34da9c1b1d08c2a",
+   "enUrl": "ba1abeaaed3ba6b6803cbc76c68efb3435b6b59a875a4cfd4a3c04828953878e",
+   "krUrl": "47ea5b6fabbea3e3bdbe256c116415758f1bb020dfaf091d4f9e0b7e048f889e"
+  },
+  {
+   "id": 72,
+   "title": "Membuka Peti Harta Berharga",
+   "text": "Aku tidak punya tempat untuk semua ini ....",
+   "unlockRequirement": "",
+   "cnUrl": "bfb54708fce9acb887e4c9d0ccc0318e58d394bd9a70f367922c41751cabbdc1",
+   "jpUrl": "1d9597a79702eff7d1eded131829e10454addb2ef75ff5c11d6494592fc6a778",
+   "enUrl": "7dac082b75f8fde665e9517a3c4f09e8193765b796396656fd38ef92963b7ebd",
+   "krUrl": "2cfa90243a3da072e799789a66101921b219c672503f028c659550e1d57f9b1e"
+  },
+  {
+   "id": 68,
+   "title": "Berhasil Memecahkan Teka-teki 1",
+   "text": "Salah satu teknik bertahan hidup yang sangat berguna.",
+   "unlockRequirement": "",
+   "cnUrl": "e8f9fcf7f0e82835cf49918292d70a3ea05cbd6ac36b060be94307f5f207598d",
+   "jpUrl": "eafe58370ccb98c5aed1034818a454e29d79f511fdf54cee5a95540ef6745a01",
+   "enUrl": "cdbca7d0fcb5ac6c2d24fbe125087cb7ebf391a950658de960a1a856cbb9420c",
+   "krUrl": "803a71497403b350909663e1c0c4789b55a50974b8926504d733f254ca6717eb"
+  },
+  {
+   "id": 73,
+   "title": "Berhasil Memecahkan Teka-teki 2",
+   "text": "Jadi begitu ya cara kerjanya ....",
+   "unlockRequirement": "",
+   "cnUrl": "a6b806194f7391c8655cde614c5a320f975025f24090cc75dfba24a370806e78",
+   "jpUrl": "3df83765a3cfeb8e12706c8d098ed1c0783a25f64bb8acf11df6bd8fe8ed2a83",
+   "enUrl": "c556686add91db1e974c70c988a1e03ec0dced90ed8e5a4986cca62dad24e84c",
+   "krUrl": "dc5185bf4c5cfba299b4274a01d15920a795041b0b3a039fac6be5f7a2b570d3"
+  },
+  {
+   "id": 69,
+   "title": "Menemukan Target Musuh",
+   "text": "Sepertinya jalan ini juga agak sulit untuk dilalui ....",
+   "unlockRequirement": "",
+   "cnUrl": "304720382a530808de1a3faeeb9fccf5bd7d430b94a7577adc1bfd0eede13a98",
+   "jpUrl": "70729ac44f2bc2e6780f4b585f8f1f851ee2d08afd58d2fbb0d9f25512193a52",
+   "enUrl": "0de6360ebda9c6a8c6f37d8063bf602e77a4e6b0722f6fd3e76ff1e7165bfeeb",
+   "krUrl": "9452a38457cd193480ff8d28f5c0951f513638854dcb2b17d514835387b6331e"
+  },
+  {
+   "id": 70,
+   "title": "Kembali ke Kota",
+   "text": "Beristirahatlah selagi bisa untuk memulihkan tenagamu.",
+   "unlockRequirement": "",
+   "cnUrl": "358d9d2e6008a9473dafcfc4854ae6d3a42158b8b3f7d26b3770492c91feab6a",
+   "jpUrl": "aae2763040ff5b2d475fe814176cdf85678955444dd93d6bc600dd42d41abc67",
+   "enUrl": "dda6c3953c88831e11d456cf239ebda6beec4bae362310498846e4b915bde44f",
+   "krUrl": "b3f1873acdb04b195423b2703adeec7d2bce96dde531e1bdd2d4aa8326df4385"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Detail Karakter",
+   "text": "Putri bungsu keluarga Landau dan penjelajah alam terbaik Belobog.<br />Dia memang terlihat malas, tapi sebenarnya kemampuannya dalam melaksanakan sesuatu sangat kuat. Aura \"manusia dilarang mendekat\" yang dipancarkan olehnya cuma untuk menghindari interaksi sosial yang tidak diperlukan.<br />Tentang bagaimana cara mendefinisikan interaksi sosial yang tidak diperlukan: \"Hmm ... bukannya semua interaksi sosial memang tidak penting?\"",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Kisah Karakter 1",
+   "text": "Pemandangan di Snow Plains terasa begitu jauh dari keseharian di Belobog — jauh hingga gadis itu hanya bisa melihatnya dalam mimpi.<br /><br />Dalam kesehariannya belajar, dia selalu membaca di buku sejarah tentang betapa luas dan beragamnya dunia sebelum Kebekuan Abadi terjadi. Namun saat Lynx bertanya kepada guru-gurunya tentang detail yang lebih spesifik, mereka akan selalu merespons dengan ekspresi putus asa, \"Sayang sekali, jawabannya hanya ada di kedalaman Snow Plains ....\"<br /><br />Selama pelajaran geografi, Lynx sering mendengar gurunya menggambarkan fenomena langit yang aneh yang disebut \"aurora\". Dia membayangkan bagaimana pita cahaya tersebut pasti berwarna-warni dan selalu berubah-ubah. Namun ketika Lynx bertanya kepada guru mengapa dia tidak bisa mengamati aurora di dalam kota, guru selalu menjawab dengan ekspresi tak berdaya, \"Sayang sekali, aurora hanya dapat terlihat di kedalaman Snow Plains ....\"<br /><br />Terhadap tempat yang begitu jauh itu, gadis itu selalu tidak bisa memperoleh jawaban yang diinginkannya.<br /><br />Namun asumsikan jika gurunya benar, jika jawaban untuk semua masalah memang tersembunyi di Snow Plains ....<br /><br />Bukankah cukup dengan pergi menyaksikan kedalaman Snow Plains bisa menjawab segalanya?<br /><br />\"Jadi ... aku mau pergi ke kedalaman Snow Plains dan melihat-lihat!\"<br />\"Hah?\"<br />\"Apa?\"",
+   "unlockRequirement": "Buka Level karakter <nobr>20</nobr>"
+  },
+  {
+   "title": "Kisah Karakter 2",
+   "text": "\"Lynx, kamu tahu kan di luar Belobog itu dingin ....\"<br /><br />\"Tidak masalah kok, Kak Gepard. Baju tebal dan penghangat sudah kubawa.\"<br /><br />\"Tapi Snow Plains sangat berbahaya. Bukan cuma cuacanya yang sangat ekstrem, tapi masih ada bermacam-macam monster yang mengerikan ...\"<br /><br />\"Tidak masalah kok. Kalian tidak perlu cemas. Aku sudah pernah ke sana berkali-kali bersama dengan pasukan patroli. Aku bisa mengatasi mereka.\"<br /><br />\"Tunggu, kapan kamu ke sana?\"<br /><br />\"Err ....\"<br /><br />\"*Huff* Kak Serval, kamu coba tolong bujuk Lynx juga.\"<br /><br />\"Hah? Lynx mau ngapain ya terserah dia. Lynx begitu berpendirian, aku sebagai kakaknya sangat bangga padanya ....\"<br /><br />\"Hehe, terima kasih Kak.\"<br /><br />\"Tapi, Gepard juga benar. Kamu pergi sendirian akan sangat berbahaya. Kamu harus waspada akan keselamatan sendiri, dan jangan memaksa diri. Sini, ambil barang-barang ini ....\"<br /><br />\"Apa ini?\"<br /><br />\"Ini adalah pick panjat gunung 'Vanguard' yang kamu bilang mau kamu beli bulan lalu. Tapi kakak memodifikasinya sedikit, kujamin fungsinya jadi lebih bagus. Lalu, ini ada papan ski 'Pathfinder' seri baru yang dibeli kakak Gepard. Oh, dan ada lagi botol minum ini. Edisi peringatan ulang tahun Goethe Hotel. Tali bahunya sudah kusesuaikan dengan ukuranmu, dan aku sudah menambahkan dekorasi. Dan ada juga energy bar dan kaleng makanan untuk mengisi energi ....\"<br /><br />\"Eh, kan kamu janji tidak bakal kasih tahu dia soal papan ski?\"<br /><br />\"Duh, mau sampai kapan kamu gengsi begini? Dasar tidak seru!\"<br />\"Lynxy, kamu harus manfaatkan barang-barang ini sebaik-baiknya. Lindungi diri baik-baik. Kamu paham? Janji kelingking!\"<br /><br />\"Ya, janji!\"",
+   "unlockRequirement": "Buka Level karakter <nobr>40</nobr>"
+  },
+  {
+   "title": "Kisah Karakter 3",
+   "text": "\"Lynxy? Kamu sudah sampai?\" Terdengar suara notifikasi yang nyaring dari ponsel seorang gadis.<br /><br />Lynx melihat pesan datang dengan gambar profil yang akrab. Dia tidak terburu-buru membalasnya. Dia mengembuskan napas ke arah lensa kamera, dan dengan sembarangan membersihkan kameranya yang dipenuhi puing-puing es dengan sarung tangan.<br /><br />Kondisi lensa kameranya masih bagus. Dia mengangkat ponselnya, dan memotret langit malam yang jarang terlihat di dalam tembok Belobog — tanpa angin, tanpa salju, tanpa awan, hanya langit luas seperti kain beludru hitam yang dihiasi bintang-bintang bercahaya.<br /><br />Klik. Lalu, terkirim.<br /><br />Sinyal sepertinya kurang bagus. Udara membeku di ketinggian. Tidak ada suara di antara salju dan gelap malam. Tidak lama kemudian, suara lonceng berdentang lagi — ternyata itu adalah melodi dari naskah yang baru saja diselesaikan oleh seorang gadis: gunung, malam, langit berbintang.<br /><br />Lynx tersenyum, mengarahkan kamera ke tenda yang bergerak seperti napas dalam angin sepoi-sepoi, kemudian menekan tombol kamera lagi. Klik, dan kirim.<br /><br />Ding. Layar ponsel menyala lagi. Kali ini tampak meja kerja seorang gadis, dengan naskah dan kuas yang tersebar di bawah cahaya redup.<br /><br />Klik. Kursi kemah dan selimut berbulu kesukaan Lynx.<br />Ding. Segelas susu hangat.<br /><br />Klik. Segelas teh yang mendidih.<br />Ding. Sebuah lampu meja besi dan album foto favorit sang gadis.<br /><br />Klik. Kantong tidur yang hangat.<br />Ding. Selimut yang berantakan.<br /><br />Klik. Pemandangan matahari terbenam berwarna emas di puncak gunung yang menghadap Belobog.<br />Ding. Jalan di Administrative District yang diterangi oleh cahaya lembut di luar jendela apartemen.<br /><br />Klik.<br />Yang terakhir adalah aurora yang tiba-tiba muncul di langit malam, bergerak dengan gemilang.<br />Ding.<br />Sebuah emoji lucu mengikuti — Lynx tahu, gadis itu akan mengirim emoji ini ketika merasa iri.<br /><br />Karena itu, dia juga memilih balasan dari galeri gambar dengan hati-hati —<br /><br />\"Begini sudah cukup.\" Mereka mengerti satu sama lain tanpa perlu diucapkan.",
+   "unlockRequirement": "Buka Level karakter <nobr>60</nobr>"
+  },
+  {
+   "title": "Kisah Karakter 4",
+   "text": "\"Kenapa Lynx memilih menjadi anggota tim penelitian di daerah kutub?\"<br /><br />Teman dekat Lynx pernah mengajukan pertanyaan seperti ini kepadanya. Pada saat itu, dia tidak memiliki jawaban yang jelas, dan pertanyaan yang terasa seperti lelucon itu hanya dibiarkan begitu saja.<br /><br />Namun setelah itu, Lynx juga telah berulang kali merenungkan jawaban untuk pertanyaan ini secara pribadi. Mungkin dia tertarik pada peradaban purba Belobog atau geografi alamnya? Atau dia ingin menghindari interaksi sosial yang tak terhindarkan di dalam kota yang dikelilingi salju? Atau mungkin ....<br /><br />Tapi mungkin bahkan gadis itu sendiri tidak menyadari: bagi Lynx, urusan keluarga Landau sebenarnya cukup sederhana.<br /><br />\"Kalau kamu mau melakukan sesuatu, maka lakukanlah.\"<br /><br />Kakak perempuannya terpikat oleh hobi sendiri, dan akhirnya menjadi pemilik workshop mesin dan pemain musik Rock 'n' Roll. Sementara kakak laki-lakinya bertekad melindungi Belobog, kemudian bergabung dengan Silvermane Guard, dan sekarang menjadi seorang kapten yang terkenal.<br /><br />Jadi, Lynx tiba-tiba mengumumkan ke keluarganya, \"Aku ingin pergi ke kedalaman Snow Plains!\" Ya, sesederhana itu.<br /><br />Hanya karena dingin jadi tidak bisa pergi? Maka persiapkanlah diri dengan baik untuk menghadapi suhu rendah.<br />Hanya karena berbahaya jadi tidak bisa pergi? Maka lakukanlah pelatihan bertahan hidup dengan baik.<br />Hanya karena belum ada yang melakukannya, tidak bisa dilakukan? Maka Lynx akan melakukannya.<br /><br />\"Karena ... pergi dari titik awal hingga ke tujuan. Bukannya sesederhana itu?\"",
+   "unlockRequirement": "Buka Level karakter <nobr>80</nobr>"
+  }
+ ],
+ "archive": {
+  "cvCn": "米糊",
+  "cvJp": "照井春佳",
+  "cvKr": "이은조",
+  "cvEn": "Risa Mei",
+  "camp": "Belobog"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Lynx",
+ "rarity": 4,
+ "descHash": "Penjelajah dataran salju dari Belobog, adik terkecil dari Landau bersaudara. Tenang dan sangat berenergi. Sering pergi menjelajahi dataran salju sendirian.",
+ "artPath": "a360a27b0fe1bae71d3b63d67fe185a0122aade3bb500653e6ea342191cb3bb1",
+ "miniIconPath": "6f0aa3e86761d87561839bcfbed69a6f9ded18f72cd7a5b5506425aa2530d4a9",
+ "damageType": {
+  "id": 32,
+  "iconPath": "ddae115334fb14959c5e24b70a5b165c431afc32f9fcf84d4b50e5e0e15bcc1f",
+  "color": "#1C29BA",
+  "name": "Quantum",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "81e58cfdc0c8a9a026c2c3111a6bdf663d572fa71524907b004fc5eb7f34fade",
+  "altIconPath": "c825fa86e9a217db6e704916b2d5aeb22c5733b2776a0ea16c558c29e6c5c92c",
+  "color": "#FFFFFF",
+  "name": "Abundance",
+  "rarity": 0
+ },
+ "pageId": "lynx"
+}

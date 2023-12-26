@@ -118,7 +118,7 @@
    "id": 468391,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "e8d74f9705754fb743acb234866d6e64a1f2354cb71bf2263579546b256a8913",
+   "iconPath": "136670876f348477c67386d9e545f587913faf2a699b983d967b670be1c1a35c",
    "name": "Coroa de Ouro de uma Sombra do Passado",
    "desc": "Acessório de cabeça da Sombra Decadente. Pode ser usado para Ascensão de personagens de Dano Imaginário.",
    "lore": "Acessório deixado para trás pela sombra de uma Guardiã do passado, que contava histórias da cidade de Inverno Eterno.<br /><br />\"Alina, a Amorosa: sua bondade é tão elevada quanto o céu e sua compaixão brilha tanto quanto o ouro.\"",
@@ -126,6 +126,7 @@
    "rarity": 4,
    "rewardPath": "/material/468391",
    "comeFrom": [
+    "Sombra Estagnada: Passagem do Remanso",
     "Sombra Estagnada (Passagem do Remanso)",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -134,7 +135,7 @@
    "id": 549503,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "fcb7215a2a17b09cd16362b5e1b398eaaf2fde23a94057c5f961151885a620c5",
+   "iconPath": "54d4c5dedbef6b70f526e88708669e94b6a214431c0c9ca55edf9b28b3413fcb",
    "name": "Módulo de Artífice",
    "desc": "Componentes usados nas criações de Engenho do Xianzhou. Material bruto usado para o aprimoramento.",
    "lore": "A base da tecnologia de Engenho do Xianzhou, sendo o menor componente de todas as peças de máquinas. Tentar parti-lo seria o equivalente a destruir a estrutura celular de um ser vivo.<br /><br />\"A Guilda de Intelectuais oferece uma recompensa de dois milhões de créditos por planos técnicos capazes de desmontar com perfeição os MechAutômatos do Xianzhou.\"<br />\"Se você conhece o Screwllum, então esses dois milhões basicamente já têm dono...\"",
@@ -153,7 +154,7 @@
    "id": 633444,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "1977002edbf48f44c49d08284ce2681f622e70c447d50de10a8b9491dfcb719c",
+   "iconPath": "7b31224c48190eebf224b39e2a9df9477f9c67018bc63cb1b20569e6186041c3",
    "name": "Engrenagem de Artífices",
    "desc": "Peças das máquinas do Xianzhou. Material normal usado para aprimoramentos.",
    "lore": "Componentes conectores usados na tecnologia de Engenho do Xianzhou. Os dentes finos e intrincados das engrenagens são do tamanho de sementes de mostarda, mas se interconectam de modo a formar um corpo complexo, fazendo com que a máquina pareça um ser vivo.<br /><br />\"Sua forma é harmônica, um paralelo com a natureza. Seus movimentos são cíclicos, refletindo o cosmo.\"",
@@ -180,6 +181,7 @@
    "rewardPath": "/material/635671",
    "comeFrom": [
     "Cálice (Passagem do Remanso)",
+    "Cálice (Passagem do Remanso)",
     "Troca de Brasas"
    ]
   },
@@ -187,7 +189,7 @@
    "id": 717385,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "058379eb2e88612f2b1f78a6c3195c457e124c9b6de602d6dd2fe0b2d17245f3",
+   "iconPath": "fcb869b494268ac2b7320d4a3795736698f3a3c5e9bad9c0182c6e11bd343c55",
    "name": "Coração de Giro de Artífices",
    "desc": "Componentes usados nas criações de Engenho do Xianzhou. Material bruto usado para o aprimoramento.",
    "lore": "O núcleo da tecnologia de Engenho do Xianzhou. A esfera armilar revolve e vibra como a essência de um coração, tornando a máquina pensante como um ser vivo.<br /><br />\"Não se assuste. Tirar o coração faria com que ele... ou seria ela...? Faria com que este ser perdesse a consciência e retornasse à sua essência mecânica.\"",
@@ -214,6 +216,7 @@
    "rewardPath": "/material/836257",
    "comeFrom": [
     "Cálice (Passagem do Remanso)",
+    "Cálice (Passagem do Remanso)",
     "Sintetizador Omni — Síntese de Material"
    ]
   },
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920198",
    "comeFrom": [
+    "Cálice (Passagem do Remanso)",
     "Cálice (Passagem do Remanso)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas"
@@ -1593,7 +1597,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do inimigo-alvo.",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do alvo inimigo do Tipo correspondente.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2427,7 +2431,7 @@
   },
   {
    "id": 57,
-   "title": "Perícia 1",
+   "title": "Perícia - 1",
    "text": "Flor do Abismo, desabrochar.",
    "unlockRequirement": "",
    "cnUrl": "524a54ab5f3a853be0cb64c280ea1b5acf0350553999548b962b188fd8894d20",
@@ -2437,7 +2441,7 @@
   },
   {
    "id": 58,
-   "title": "Perícia 2",
+   "title": "Perícia - 2",
    "text": "Receba a divindade!",
    "unlockRequirement": "",
    "cnUrl": "6caa497ebabde563fa4da5538db85c310d7f537d443ad0543b9e79367000b52a",
@@ -2547,7 +2551,7 @@
   },
   {
    "id": 69,
-   "title": "Abrindo Tesouro 1",
+   "title": "Abrindo Tesouro - 1",
    "text": "Tome isso, se for do seu agrado.",
    "unlockRequirement": "",
    "cnUrl": "325ed23e5e338206dc97d190500f442d1785fd486393d271e706e9269bf4c139",
@@ -2557,7 +2561,7 @@
   },
   {
    "id": 73,
-   "title": "Abrindo Tesouro 2",
+   "title": "Abrindo Tesouro - 2",
    "text": "O prazer de coletar.",
    "unlockRequirement": "",
    "cnUrl": "0999b9a7f531eb808acd8a029f320e81c0c758ce49660afd14a5c1d609584769",
@@ -2577,7 +2581,7 @@
   },
   {
    "id": 70,
-   "title": "Enigma Solucionado 1",
+   "title": "Enigma Solucionado - 1",
    "text": "Quase irrelevante.",
    "unlockRequirement": "",
    "cnUrl": "e8ad5d74e005d270e3db1d6ed4ec7b0944c70c1b94691e0e81b2bcf93c648e6a",
@@ -2587,7 +2591,7 @@
   },
   {
    "id": 75,
-   "title": "Enigma Solucionado 2",
+   "title": "Enigma Solucionado - 2",
    "text": "Um comerciante itinerante precisa de conhecimento de quebra-cabeças.",
    "unlockRequirement": "",
    "cnUrl": "a4187464d929aff1344ae94ab13e35413a3751158c390551f3b9ab2c310e5acc",

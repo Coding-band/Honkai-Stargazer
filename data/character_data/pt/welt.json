@@ -103,7 +103,7 @@
    "id": 468391,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "e8d74f9705754fb743acb234866d6e64a1f2354cb71bf2263579546b256a8913",
+   "iconPath": "136670876f348477c67386d9e545f587913faf2a699b983d967b670be1c1a35c",
    "name": "Coroa de Ouro de uma Sombra do Passado",
    "desc": "Acessório de cabeça da Sombra Decadente. Pode ser usado para Ascensão de personagens de Dano Imaginário.",
    "lore": "Acessório deixado para trás pela sombra de uma Guardiã do passado, que contava histórias da cidade de Inverno Eterno.<br /><br />\"Alina, a Amorosa: sua bondade é tão elevada quanto o céu e sua compaixão brilha tanto quanto o ouro.\"",
@@ -111,6 +111,7 @@
    "rarity": 4,
    "rewardPath": "/material/468391",
    "comeFrom": [
+    "Sombra Estagnada: Passagem do Remanso",
     "Sombra Estagnada (Passagem do Remanso)",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -167,6 +168,7 @@
    "rewardPath": "/material/635669",
    "comeFrom": [
     "Cálice (Grande Mina)",
+    "Cálice (Grande Mina)",
     "Troca de Brasas"
    ]
   },
@@ -174,7 +176,7 @@
    "id": 717289,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "iconPath": "e5c567b0d1a069f86d1fa35a17b282346606c69e5f8cab4028224ece84c8ad58",
    "name": "Medalha Crinalva",
    "desc": "Medalha de honra usada por soldados da Guarda Crinalva concedida por mérito e serviços prestados. Material avançado usado para aprimoramentos.",
    "lore": "Uma prova de honra concedida àqueles que lutam contra criaturas do Fragmentum, Subterrenos e desastres repentinos.<br />Geralmente seu portador não a carrega no peito, a não ser que esteja dentro de um caixão.<br /><br />\"Lembre-se, jovem Gepard, isso não é um brinquedo: é o destino e o sangue da família Landau.\"",
@@ -193,7 +195,7 @@
    "id": 836255,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "iconPath": "34d88252515cd13ab58b6f5aae7329794a4a330a0147e1c5f755c8a2f4444bff",
    "name": "Obsidiana da Obsessão",
    "desc": "Um pedaço considerável de matéria escura capturado do vazio. Usado para conceder um aumento considerável de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Inexistência</span>.",
    "lore": "Aqueles que tiverem personalidade e mente fraca passarão a eternidade no caos com apenas um simples vislumbre neste prisma.<br /><br />",
@@ -201,6 +203,7 @@
    "rarity": 4,
    "rewardPath": "/material/836255",
    "comeFrom": [
+    "Cálice (Grande Mina)",
     "Cálice (Grande Mina)",
     "Sintetizador Omni — Síntese de Material"
    ]
@@ -217,6 +220,7 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
+    "Cálice (Grande Mina)",
     "Cálice (Grande Mina)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas"
@@ -1576,7 +1580,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do inimigo-alvo.",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do alvo inimigo do Tipo correspondente.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2408,7 +2412,7 @@
   },
   {
    "id": 57,
-   "title": "Perícia 1",
+   "title": "Perícia - 1",
    "text": "Relaxe seu corpo e sua mente.",
    "unlockRequirement": "",
    "cnUrl": "27beeb7d6807bcbe3c4635b8cefda62e3af3795673af2114b53c9418914551e0",
@@ -2418,7 +2422,7 @@
   },
   {
    "id": 58,
-   "title": "Perícia 2",
+   "title": "Perícia - 2",
    "text": "Não vou pegar leve com você!",
    "unlockRequirement": "",
    "cnUrl": "bda9e403dd8ef59f3979d9adbbfb33cdfbcde74c7f071ed218e34819cf12e451",
@@ -2518,7 +2522,7 @@
   },
   {
    "id": 68,
-   "title": "Abrindo Tesouro 1",
+   "title": "Abrindo Tesouro - 1",
    "text": "Interessante.",
    "unlockRequirement": "",
    "cnUrl": "9cbf78ce83e6bbacafe9d29313402e39d86a66c1f5e784319e9e3c25e7ebfce2",
@@ -2528,7 +2532,7 @@
   },
   {
    "id": 72,
-   "title": "Abrindo Tesouro 2",
+   "title": "Abrindo Tesouro - 2",
    "text": "Isso definitivamente será útil.",
    "unlockRequirement": "",
    "cnUrl": "7d46c98cf450649d696df698d456b01ad0397b46c0fa50df08276371aed89587",
@@ -2548,7 +2552,7 @@
   },
   {
    "id": 69,
-   "title": "Enigma Solucionado 1",
+   "title": "Enigma Solucionado - 1",
    "text": "Bem pensado.",
    "unlockRequirement": "",
    "cnUrl": "c7189d1fdc0e4e8852c5c8db182125517c4de48ac209f8b7d3a13e3ea0483fae",
@@ -2558,7 +2562,7 @@
   },
   {
    "id": 74,
-   "title": "Enigma Solucionado 2",
+   "title": "Enigma Solucionado - 2",
    "text": "Isso sim é talento.",
    "unlockRequirement": "",
    "cnUrl": "4174030dea30de60ada3fa782686273fd1125048199dd52d7caa88ab4b7794b4",

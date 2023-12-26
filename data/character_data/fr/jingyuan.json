@@ -54,7 +54,7 @@
    "id": 151161,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "6b4243b69df9f37fab4f6cda60edc49711505bf5c2ce0b517d6272be5df311df",
+   "iconPath": "2ec1fa84daf481a7bef5ee243b4e6b195a84cde88befd531353eeb44bae62a63",
    "name": "Bâton de foudre du métamorphe",
    "desc": "Morceau de bois au bout pointu. Il appartenait à un métamorphe des Disciples du Sanctus Medicus. Permet l'élévation des personnages de type foudre.",
    "lore": "D'après les anciens écrits de Xianzhou, ceux qui ont connu l'élévation peuvent invoquer la foudre et commander le vent. Les Disciples du Sanctus Medicus prétendaient être les héritiers de la voie des dieux. En démontrant un pouvoir divin, ils ont secrètement attiré de nombreux fidèles. Des éclairs s'enroulent autour de ce bâton en bois... Se pourrait-il que les Disciples soient plus que de simples mortels ?<br /><br />« L'enveloppe mortelle n'est qu'illusion. La vérité n'apparaît qu'à ceux qui choisissent de s'élever. »",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/151161",
    "comeFrom": [
+    "Ombre stagnante du Port Mirétoiles",
     "Ombre stagnante du Port Mirétoiles",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -89,7 +90,7 @@
    "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
    "name": "Journal d'aventure",
    "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
-   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
    "purpose": "Matériau d'EXP de personnage",
    "rarity": 3,
    "rewardPath": "/material/409961",
@@ -165,6 +166,7 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Calice de la Ville de Rivet",
+    "Calice de la Ville de Rivet",
     "Braises immortelles"
    ]
   },
@@ -190,7 +192,7 @@
    "id": 836261,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "iconPath": "36e68603fbc67d4b69c02e01d7d5d41a80446ea6c49b1d828b47320f6225825c",
    "name": "Clé de la sagesse",
    "desc": "Clé mythique conservée par les plus grands prodiges de l'univers. Permet d'améliorer considérablement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Érudition</span>.",
    "lore": "C'est la preuve d'une invitation aux salles du temple de Sagesse.<br />Trouver la porte qu'elle ouvre s'avère être une tâche bien plus ardue que d'obtenir la clé elle-même. Ceux qui franchissent les portes comprendront rapidement l'impossibilité de revenir en arrière.<br /><br />« L'Érudition n'apporte pas les réponses à l'univers, mais elle vous apprend à poser les bonnes questions. »",
@@ -198,6 +200,7 @@
    "rarity": 4,
    "rewardPath": "/material/836261",
    "comeFrom": [
+    "Calice de la Ville de Rivet",
     "Calice de la Ville de Rivet",
     "Synthèse de matériaux de l'Omni-synthétiseur"
    ]
@@ -214,6 +217,7 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
+    "Calice de la Ville de Rivet",
     "Calice de la Ville de Rivet",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles"
@@ -1590,7 +1594,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Réduit la robustesse de l'ennemi au type correspondant en entrant en combat après l'avoir attaqué.",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2476,7 +2480,7 @@
   {
    "id": 56,
    "title": "Compétence 1",
-   "text": "Le combat est impitoyable !",
+   "text": "Le combat est impitoyable !",
    "unlockRequirement": "",
    "cnUrl": "6a91cbf54ffa5d17db547991ff48fa068d59e5e5f68536e0b3194223db27039f",
    "jpUrl": "e6fb50f5405737d1f519ca8e493f2faa276e91067eff7a70587af40e5fa0c396",
@@ -2486,7 +2490,7 @@
   {
    "id": 57,
    "title": "Compétence 2",
-   "text": "Écoutez ce tonnerre !",
+   "text": "Écoutez ce tonnerre !",
    "unlockRequirement": "",
    "cnUrl": "d65a7cf543457e54b4ac91a5071cc8308d5bcb30e25c9a0460a2d36bf5744ba9",
    "jpUrl": "c6aa8110429bd32e38bec6b4891944bd8812d91d92cfc4185f4bccdd21837963",
@@ -2496,7 +2500,7 @@
   {
    "id": 58,
    "title": "Attaque légère subie",
-   "text": "C'est tout ?",
+   "text": "C'est tout ?",
    "unlockRequirement": "",
    "cnUrl": "a5f21ba8d38c343872b62df5cb32c4180205c8ae2123f3fd3993055e4e840ce6",
    "jpUrl": "960f1fff49a8b1c9f0248e84be5d022e9df863d22fd68efce95732da0b4d534f",
@@ -2672,7 +2676,7 @@
   },
   {
    "title": "Histoire du personnage : Partie III",
-   "text": "L'une des rumeurs les plus tendance du moment raconte que la famille de Jing Yuan sert la Commission du maintien de l'ordre depuis des générations.<br /><br />D'après la tradition foxienne qui consiste à laisser un nouveau-né « choisir » son futur, les parents disposent divers objets et jouets autour du bébé et lui en font attraper un pour que celui-ci choisisse sa future carrière. Les parents de Jing Yuan espéraient le voir choisir la voie d'un érudit ou d'un intendant de la Commission du maintien de l'ordre, mais Jing Yuan prit le jouet en forme d'épée.<br /><br />Il semblerait que le « choix » puisse prédire le destin de l'enfant. Après avoir obtenu son diplôme à l'académie, Jing Yuan rejoignit les Chevaliers des nuages contre l'avis de sa famille, dans le but d'échapper à une vie d'ennui.<br /><br />Sa première expédition a été consignée dans le registre des batailles des Chevaliers des nuages. Le Navis Astriger qui emmenait les troupes avait été forcé d'atterrir sur une planète océanique infestée d'abominations. Une espèce à longue espérance de vie appelée Méduse manipulatrice s'est emparée de l'esprit des Chevaliers des nuages, embarquant à bord du vaisseau et le transformant presque en son propre repaire. Ayant rapidement pris conscience de la crise, Jing Yuan a identifié in extremis ce dont la Méduse manipulatrice avait besoin pour contrôler les esprits, puis a mis au point un plan pour l'en empêcher. La menace a été neutralisée. Le reste de l'équipage a retrouvé ses esprits, terrassé les véritables ennemis et est rentré sain et sauf.<br /><br />Cette victoire sans verser le sang a démontré le courage de Jing Yuan aux généraux des Chevaliers des nuages. Lors de son retour à Xianzhou, Jing Yuan était devenu une figure de premier plan et a été nommé à un poste important.<br /><br />Sa vivacité d'esprit et son pragmatisme surprenaient sans cesse ses supérieurs, et leur donnaient aussi la migraine. Finalement, Jing Yuan a été invité par la précédente Championne de l'épée du Luofu à rejoindre son équipe. C'est ainsi que la légende du Quintet de haut-nuage est née.",
+   "text": "L'une des rumeurs les plus tendance du moment raconte que la famille de Jing Yuan sert la Commission du maintien de l'ordre depuis des générations.<br /><br />D'après la tradition foxienne qui consiste à laisser un nouveau-né « choisir » son futur, les parents disposent divers objets et jouets autour du bébé et lui en font attraper un pour que celui-ci choisisse sa future carrière. Les parents de Jing Yuan espéraient le voir choisir la voie d'un érudit ou d'un intendant de la Commission du maintien de l'ordre, mais Jing Yuan prit le jouet en forme d'épée.<br /><br />Il semblerait que la cérémonie du destin du berceau ait été prémonitoire. Après avoir obtenu son diplôme à l'académie, Jing Yuan a rejoint les Chevaliers des nuages contre l'avis de sa famille, dans le but d'échapper à une vie « ordinaire ».<br /><br />Sa première expédition a été consignée dans le registre des batailles des Chevaliers des nuages. Le Navis Astriger qui emmenait les troupes avait été forcé d'atterrir sur une planète océanique infestée d'abominations. Une espèce à longue espérance de vie appelée Méduse manipulatrice s'est emparée de l'esprit des Chevaliers des nuages, embarquant à bord du vaisseau et le transformant presque en son propre repaire. Ayant rapidement pris conscience de la crise, Jing Yuan a identifié in extremis ce dont la Méduse manipulatrice avait besoin pour contrôler les esprits, puis a mis au point un plan pour l'en empêcher. La menace a été neutralisée. Le reste de l'équipage a retrouvé ses esprits, terrassé les véritables ennemis et est rentré sain et sauf.<br /><br />Cette victoire sans sang déversé démontra le courage de Jing Yuan aux généraux des Chevaliers des nuages. Lorsqu'il rentra à Xianzhou, Jing Yuan était devenu une figure de premier plan et fut nommé à un poste important.<br /><br />Sa vivacité d'esprit et son pragmatisme surprenaient sans cesse ses supérieurs, et leur donnaient aussi la migraine. Finalement, Jing Yuan a été invité par la précédente Championne de l'épée du Luofu à rejoindre son équipe. C'est ainsi que la légende du Quintet de haut-nuage est née.",
    "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
   },
   {

@@ -88,7 +88,7 @@
    "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
    "name": "Journal d'aventure",
    "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
-   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
    "purpose": "Matériau d'EXP de personnage",
    "rarity": 3,
    "rewardPath": "/material/409961",
@@ -164,6 +164,7 @@
    "rewardPath": "/material/635671",
    "comeFrom": [
     "Calice du Col de Backwater",
+    "Calice du Col de Backwater",
     "Braises immortelles"
    ]
   },
@@ -171,7 +172,7 @@
    "id": 717290,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
    "name": "Ancien moteur",
    "desc": "Moteur mécanique provenant de l'Ancien monde. Matériau avancé utilisé pour le renforcement.",
    "lore": "Il utilise de la géomoelle comme source d'énergie. Lorsqu'il est alimenté, il crache des aurores vagabondes, et non des étincelles.<br /><br />« Il n'y a que la Division technologique directement rattachée à la Gardienne suprême qui a accès aux informations concernant l'Ancien monde. J'ai perdu mes accès quand on m'a mise à la porte. »",
@@ -198,6 +199,7 @@
    "rewardPath": "/material/836257",
    "comeFrom": [
     "Calice du Col de Backwater",
+    "Calice du Col de Backwater",
     "Synthèse de matériaux de l'Omni-synthétiseur"
    ]
   },
@@ -205,7 +207,7 @@
    "id": 866633,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "d97cb9072570df0b85725f8a0783d22e500c3e06e49b7fbc8dd485e7ba1b9516",
+   "iconPath": "8e0cd81aa41c7849a5da687f6b40c0b3ccec417ef1924c802b70c03021e69317",
    "name": "Dents brisées du loup de fer",
    "desc": "Dents de scie abandonnées par des automates. Permet l'élévation des personnages de type physique.",
    "lore": "On dit que les techniques de fonderie développées par les Architectes leur permettaient de créer des tronçonneuses capables de fendre des rochers géants. Ces techniques ont depuis longtemps été oubliées.<br /><br />« Le boss Svarog dit que sa lame est tellement fine qu'elle peut couper l'espace entre les molécules... C'est quoi des molécules ? »",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/866633",
    "comeFrom": [
+    "Ombre stagnante de la Grande mine",
     "Ombre stagnante de la Grande mine",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920198",
    "comeFrom": [
+    "Calice du Col de Backwater",
     "Calice du Col de Backwater",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles"
@@ -422,7 +426,7 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "7094c1e0e46405d5930f11527f9d362832d676f6e1e440ebe5cf7a00539c2c94",
+   "iconPath": "445e66a993c1459eaaccec4923f70bb5fd3f068bf9f3a59fd034ba8c22317575",
    "artPath": "4928cb2b99f590502375c74ddc082fbfb24efa16539a9e6070448929ca03d964",
    "name": "Expertise en pharmacologie",
    "descHash": "Après avoir subi une attaque, si le pourcentage de PV actuel du personnage est inférieur ou égal à <nobr>#1[i]%</nobr>, il se soigne 1 fois pour restaurer un montant de PV équivalent à <nobr>#2[i]%</nobr> de ses PV max + <nobr>#3[i]</nobr>. Cet effet ne peut être déclenché qu'1 fois par combat.",
@@ -434,7 +438,7 @@
   },
   {
    "id": 2,
-   "iconPath": "9c83371aded35ad174f5c06e674928761a6e1da2d1959ed797d8843de104cb4b",
+   "iconPath": "c5562bcfe021cd918787ef7014451186f7427fd01d759673ab13144d540fcfc4",
    "artPath": "dafdaea0804797033a9c98a281bf869bb5569dc789940b0e0ccb6d110a7f2ed8",
    "name": "Recherche clinique",
    "descHash": "Lorsque Natasha utilise son ultime, accorde des soins continus aux alliés dont le pourcentage de PV est inférieur ou égal à <nobr>#1[i]%</nobr> pendant <nobr>#2[i]</nobr> tour. Au début de leur tour, ils récupèrent un montant de PV équivalent à <nobr>#3[i]%</nobr> des PV max de Natasha + <nobr>#4[i]</nobr>.",
@@ -447,7 +451,7 @@
   },
   {
    "id": 3,
-   "iconPath": "56ad8b63102a8009f8138c0f1b8eb298e3877b8c7ba7be21a95fcd41f77688e8",
+   "iconPath": "09de68730e478f4785d187aa737a0efd0e40bd1e584bb012fb0601572b0b52a9",
    "artPath": "36e6732f294fbc68bf05d7a62c9f6caaf4895b3d1312580db5a2ef07b1534958",
    "name": "Le bon remède",
    "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
@@ -455,7 +459,7 @@
   },
   {
    "id": 4,
-   "iconPath": "2babd080914aee8a160632df179686a6100b99f3fbd7dd05f2b4131ccd6bb523",
+   "iconPath": "5218db9b3bfaf42dfe957a52c322c8c38b12057195c76f5654e39dfed680e547",
    "artPath": "8aa3a667412bc36a78b3d989b8bfb7dbc662520e155b0f456de02ae70fb9b6bc",
    "name": "Remède miracle",
    "descHash": "Régénère <nobr>#1[i]</nobr> points d'énergie supplémentaires après avoir été attaqué.",
@@ -465,7 +469,7 @@
   },
   {
    "id": 5,
-   "iconPath": "dec00bef1fdbe920bd1924eebda1fba7a7e2b5dee30115860a606624213a1759",
+   "iconPath": "c56186a62771793cd6e189807d0f0ec7d54e9dc2e568da6a7cd0a60e2d4eaf7b",
    "artPath": "0241f0c53255e855d31cb665934e43063a91b1ec685de9e7e9ad706183dc1255",
    "name": "Traitement préventif",
    "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
@@ -473,7 +477,7 @@
   },
   {
    "id": 6,
-   "iconPath": "4f7d89d7d86a21dd3ac0d3d44095bde6f04d928f95d446f53684d30bdf7d88cd",
+   "iconPath": "d6ec8f1e7c3f0efb0847587430ccc9dfe44145a931d217161b6f7154eabbb486",
    "artPath": "b0286bf2b8429da5cb4ae258e1f97ca03d3a88bf2d3026a200a90c7a488d852d",
    "name": "Grâce du docteur",
    "descHash": "L'ATQ normale de Natasha inflige des DGT physiques supplémentaires équivalents à <nobr>#1[i]%</nobr> de ses PV max.",
@@ -508,7 +512,7 @@
    "energy": "20",
    "id": 985668,
    "name": "Derrière la bonté",
-   "iconPath": "febb56e38e3680b2a572e708367f5a9f834cde68e6a2eb8e641209504c4b80d3",
+   "iconPath": "48a3eaaaa191b82da86acc834d52dfbb74074d0e4fe077a29a0a5530c0931bd2",
    "typeDescHash": "ATQ normale",
    "levelReq": 0,
    "promotionReq": 0,
@@ -669,7 +673,7 @@
    "energy": "30",
    "id": 270195,
    "name": "Aimer, guérir et choisir",
-   "iconPath": "56ad8b63102a8009f8138c0f1b8eb298e3877b8c7ba7be21a95fcd41f77688e8",
+   "iconPath": "09de68730e478f4785d187aa737a0efd0e40bd1e584bb012fb0601572b0b52a9",
    "typeDescHash": "Compétence",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1000,7 +1004,7 @@
    "energy": "5",
    "id": 186254,
    "name": "Cadeau de la renaissance",
-   "iconPath": "e75f01dba0a17b827ccadf6f8cd24b4fe448d086abd32dd1dfc864f1672d1fa8",
+   "iconPath": "1cb543dc9626059a9027a5b02422d1d230c5434c530e2aff69f41ef863d020d9",
    "typeDescHash": "Ultime",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1286,7 +1290,7 @@
    "energy": "0",
    "id": 470781,
    "name": "Innervation",
-   "iconPath": "7eac24e337da0adb6f6a2a2f52e802bf06e7d0a72be6afc04444763585791f2a",
+   "iconPath": "747fceb12c4769a0cfb689b7544e28b040866894f989ad617e7a683727cac969",
    "typeDescHash": "Talent",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1566,13 +1570,13 @@
   },
   {
    "tagHash": "",
-   "descHash": "Réduit la robustesse de l'ennemi au type correspondant en entrant en combat après l'avoir attaqué.",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
    "id": 671367,
    "name": "Attaque",
-   "iconPath": "febb56e38e3680b2a572e708367f5a9f834cde68e6a2eb8e641209504c4b80d3",
+   "iconPath": "48a3eaaaa191b82da86acc834d52dfbb74074d0e4fe077a29a0a5530c0931bd2",
    "typeDescHash": "",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1594,7 +1598,7 @@
    "energy": "0",
    "id": 554722,
    "name": "Recherche sur l'hypnose",
-   "iconPath": "06cb6600e16924c5bdd408d4a1eb90bde0b57cf62535954537b3a2e01fd69e04",
+   "iconPath": "e52e65c79484434a0cfcfe8b55601a29d2d16a5761548a687cdece10de4c09a9",
    "typeDescHash": "Technique",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1723,7 +1727,7 @@
     "ultimateCost": 0,
     "id": 622873,
     "name": "Apaisement",
-    "iconPath": "67283b294f375c351587b8900176e46c1953be44f23fc1482927847722d7fd4f",
+    "iconPath": "713e196edb61df5ea290efb8253f45480d7913d3c18da925c8ebb0b623146217",
     "levelReq": 0,
     "promotionReq": 2,
     "levelData": [
@@ -1860,7 +1864,7 @@
     "ultimateCost": 0,
     "id": 622876,
     "name": "Guérisseuse",
-    "iconPath": "0e05f9f1636f593e83316ff7271a36ba8d1e633d32d963060a33ee126565ede9",
+    "iconPath": "351e32f4b70cbea61ebfd33746653054c313e4e04f797d40fee57f1c49138aa0",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
@@ -1967,7 +1971,7 @@
     "ultimateCost": 0,
     "id": 622875,
     "name": "Convalescence",
-    "iconPath": "56b59d5866c91913a9904b25c053c481aa140480ae06052e29119b51a6b9aca8",
+    "iconPath": "34a98bf8da56d683c4286f76686094741b0eb82d4424753884b52aeedf6cdb25",
     "levelReq": 0,
     "promotionReq": 6,
     "levelData": [
@@ -2315,7 +2319,7 @@
   {
    "id": 23,
    "title": "Rejoint l'équipe avec Hook",
-   "text": "Tu aurais de la place pour une « vieille sorcière », Hook ?",
+   "text": "Tu aurais de la place pour une « vieille sorcière », Hook ?",
    "unlockRequirement": "",
    "cnUrl": "f56049efab8d32d036c689cb42100710ed9f0d56235683fac79ae9ce1e727af3",
    "jpUrl": "61aaf077a5a349a39a916825e19eca768eeceebd7bfcaa64e28a8b76791f93b8",
@@ -2425,7 +2429,7 @@
   {
    "id": 59,
    "title": "Compétence 1",
-   "text": "Et voilà pour vous !",
+   "text": "Et voilà pour vous !",
    "unlockRequirement": "",
    "cnUrl": "7459d6a717ba74f1b5a38532143dae0c1e772273e26faede1cf426e4afd55a9d",
    "jpUrl": "9869ea9e646e8861fae7978a035d6877dd74d03234dd5139226629081a5068e3",
@@ -2555,7 +2559,7 @@
   {
    "id": 75,
    "title": "Ouverture de coffre précieux",
-   "text": "Ça nous sera utile un bon moment.",
+   "text": "Ça va nous faire un moment.",
    "unlockRequirement": "",
    "cnUrl": "507a311cdfc1f33e7619998e7e7e22ce1a254915cca0c283e792c835b65dd0fd",
    "jpUrl": "fb05c832e4bcf37a0b16fb41e57e2db9e01b48cd44f71a3a2f8f6e2601f40b5d",

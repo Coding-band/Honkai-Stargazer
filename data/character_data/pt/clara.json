@@ -164,6 +164,7 @@
    "rewardPath": "/material/635673",
    "comeFrom": [
     "Cálice (Zona de Armazenamento)",
+    "Cálice (Zona de Armazenamento)",
     "Troca de Brasas"
    ]
   },
@@ -171,7 +172,7 @@
    "id": 717290,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
    "name": "Motor Antigo",
    "desc": "Motor mecânico do Velho Mundo deixado para trás. Material avançado usado para aprimoramentos.",
    "lore": "Usa Geoessência como a fonte de energia. Quando alimentado, descarrega auroras errantes, em vez de faíscas.<br /><br />\"Somente a Divisão Tecnológica sob comando direto da Guardiã Suprema tem acesso a informações sobre o Velho Mundo. Eu perdi meus privilégios depois que me demitiram.\"",
@@ -189,7 +190,7 @@
    "id": 836259,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "iconPath": "d9e262af4f143c0b58be9d20f5c04e04a252fb8f05eb675c0996f5b1bc8f6ad5",
    "name": "Lâmina Destruidora de Mundos",
    "desc": "Arma quebrada deixada por membros da Legião Antimatéria. Usada para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruição</span>.",
    "lore": "Esta arma representa o ranque e as conquistas de seu dono em nome da Destruição.<br />O dono desta arma é aquele que chega no fim da guerra para atiçar as brasas que consomem o mundo. Independentemente das glórias do passado ou das bênçãos de suas divindades, este planeta está destinado a voltar às cinzas de onde veio, e murchar nas profundezas do céu estrelado.<br /><br />\"O objetivo do usuário desta arma é purificar o mundo.\"",
@@ -198,6 +199,7 @@
    "rewardPath": "/material/836259",
    "comeFrom": [
     "Cálice (Zona de Armazenamento)",
+    "Cálice (Zona de Armazenamento)",
     "Sintetizador Omni — Síntese de Material"
    ]
   },
@@ -205,7 +207,7 @@
    "id": 866633,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "d97cb9072570df0b85725f8a0783d22e500c3e06e49b7fbc8dd485e7ba1b9516",
+   "iconPath": "8e0cd81aa41c7849a5da687f6b40c0b3ccec417ef1924c802b70c03021e69317",
    "name": "Dentes Quebrados do Lobo de Ferro",
    "desc": "Dente de serra fragmentado deixado por autômatos. Pode ser usado para Ascensão de personagens do tipo Físico.",
    "lore": "Dizem que as técnicas de fundição dos Arquitetos permitem fazer motosserras resistentes o suficiente para dividir rochas ao meio. Tais técnicas foram deixadas para trás há muito tempo.<br /><br />\"O chefe Svarog diz que sua lâmina é tão afiada que pode cortar o espaço exato entre duas moléculas... Mas o que são moléculas?\"",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/866633",
    "comeFrom": [
+    "Sombra Estagnada: Grande Mina",
     "Sombra Estagnada (Grande Mina)",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920200",
    "comeFrom": [
+    "Cálice (Zona de Armazenamento)",
     "Cálice (Zona de Armazenamento)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas"
@@ -1588,7 +1592,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do inimigo-alvo.",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do alvo inimigo do Tipo correspondente.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2306,7 +2310,7 @@
   {
    "id": 20,
    "title": "Entrou na Equipe com Hook",
-   "text": "A H-Hook, está aqui também? Eu não vou te decepcionar!",
+   "text": "H-Hook, você também está aqui? Eu não vou te decepcionar!",
    "unlockRequirement": "",
    "cnUrl": "0982d9fe8a8fe184e2750b97916de0bd355122c8f9eccda17b47ccb0a1f7522b",
    "jpUrl": "83f3ac9214a9bfaf3c752be90d8be2ca141bc5712955c883c4f1e43e4d2854e5",
@@ -2316,7 +2320,7 @@
   {
    "id": 21,
    "title": "Entrou na Equipe com Seele",
-   "text": "Senhorita Seele! Com a Fogo Vivo aqui... ninguém pode nos parar!",
+   "text": "Senhorita Seele! Com a Fogo Vivo aqui... nada pode nos parar!",
    "unlockRequirement": "",
    "cnUrl": "f10f32c00ab7c37da5c48761a9faf53a50cf1d896ecf2c2235e5171c799b4318",
    "jpUrl": "c0b07fe292af1a29b27c55f322fef3a70f5796c7cbc8314e838ba8c96a0b9066",
@@ -2375,7 +2379,7 @@
   },
   {
    "id": 56,
-   "title": "Ataque Básico 1",
+   "title": "Ataque Básico - 1",
    "text": "Clara: Cuidado, Sr. Svarog!",
    "unlockRequirement": "",
    "cnUrl": "57ee0ea8fb0c9906f248f50a22c249ded501c5debca82fd9d69a0ed7dd6af173",
@@ -2385,7 +2389,7 @@
   },
   {
    "id": 57,
-   "title": "Ataque Básico 2",
+   "title": "Ataque Básico - 2",
    "text": "Svarog: Eliminando ameaça.",
    "unlockRequirement": "",
    "cnUrl": "2882588e5532c460a49da944f96dead2c82cd32d2ac04f140f040a6a240ecabf",
@@ -2395,7 +2399,7 @@
   },
   {
    "id": 58,
-   "title": "Perícia 1",
+   "title": "Perícia - 1",
    "text": "Svarog: Esconda-se.",
    "unlockRequirement": "",
    "cnUrl": "243b53091b0b377bc89a08b53e78bd881a330f4818e2eb97d53dc6e7240535f1",
@@ -2405,7 +2409,7 @@
   },
   {
    "id": 59,
-   "title": "Perícia 2",
+   "title": "Perícia - 2",
    "text": "Svarog: Iniciando aniquilação.",
    "unlockRequirement": "",
    "cnUrl": "04a2d43b282e53f00498280e63daf9ada72f7f6692ac65405e64c102c15c6d34",
@@ -2525,7 +2529,7 @@
   },
   {
    "id": 72,
-   "title": "Abrindo Tesouro 1",
+   "title": "Abrindo Tesouro - 1",
    "text": "Clara: Se você achar componentes... posso ficar com eles?",
    "unlockRequirement": "",
    "cnUrl": "2403dc542b17eb5415e7775d9061da5089f1675942a376246f62b8f161ab3e85",
@@ -2535,8 +2539,8 @@
   },
   {
    "id": 76,
-   "title": "Abrindo Tesouro 2",
-   "text": "Clara: P-Posso pegar também?",
+   "title": "Abrindo Tesouro - 2",
+   "text": "Clara: P-Posso pegar um pouco?",
    "unlockRequirement": "",
    "cnUrl": "80774effc2854f04f46123f73a303879241f2db4be75dc4c4c77a12ada5e126e",
    "jpUrl": "83b7aea7b446af5b650fbff0596c60a484b01f6897b0d4d5d13c33fd139c0210",
@@ -2555,7 +2559,7 @@
   },
   {
    "id": 73,
-   "title": "Enigma Solucionado 1",
+   "title": "Enigma Solucionado - 1",
    "text": "Clara: N-nós conseguimos!",
    "unlockRequirement": "",
    "cnUrl": "4af2b0bf2eb34fdc88188a00be459449131ff3f0653a13df8f5582a032b190e3",
@@ -2565,7 +2569,7 @@
   },
   {
    "id": 78,
-   "title": "Enigma Solucionado 2",
+   "title": "Enigma Solucionado - 2",
    "text": "Clara: Espero ter ido bem...",
    "unlockRequirement": "",
    "cnUrl": "d3c8ae6527e9ea4c63e4248b3188162b1ee5132d2fbbe333a813ef609c7c0826",

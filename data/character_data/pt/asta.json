@@ -151,6 +151,7 @@
    "rewardPath": "/material/635670",
    "comeFrom": [
     "Cálice (Assentamento de Robôs)",
+    "Cálice (Assentamento de Robôs)",
     "Troca de Brasas"
    ]
   },
@@ -158,7 +159,7 @@
    "id": 717289,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "ec7d9dcb72593120a29744b7c2741fc2cf9d247469b89988c274ef108dc56b38",
+   "iconPath": "e5c567b0d1a069f86d1fa35a17b282346606c69e5f8cab4028224ece84c8ad58",
    "name": "Medalha Crinalva",
    "desc": "Medalha de honra usada por soldados da Guarda Crinalva concedida por mérito e serviços prestados. Material avançado usado para aprimoramentos.",
    "lore": "Uma prova de honra concedida àqueles que lutam contra criaturas do Fragmentum, Subterrenos e desastres repentinos.<br />Geralmente seu portador não a carrega no peito, a não ser que esteja dentro de um caixão.<br /><br />\"Lembre-se, jovem Gepard, isso não é um brinquedo: é o destino e o sangue da família Landau.\"",
@@ -186,6 +187,7 @@
    "rewardPath": "/material/836256",
    "comeFrom": [
     "Cálice (Assentamento de Robôs)",
+    "Cálice (Assentamento de Robôs)",
     "Sintetizador Omni — Síntese de Material"
    ]
   },
@@ -202,6 +204,7 @@
    "rewardPath": "/material/920197",
    "comeFrom": [
     "Cálice (Assentamento de Robôs)",
+    "Cálice (Assentamento de Robôs)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas"
    ]
@@ -210,7 +213,7 @@
    "id": 983278,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "1f3033f7a0d40ab304f7c4af7eaa7a00cc0b0a1cfd9f7698fcbf0b0b8d9321d5",
+   "iconPath": "bf013025c6d4383e5c48a0fae0598d9b489ed29d4ac675292f31af835075c4a7",
    "name": "Endoderme de Quitina",
    "desc": "Substância quente e translúcida, como se fosse o fogo em estado sólido. Pode ser usada para Ascensão de personagens de Dano de Fogo.",
    "lore": "Quitina estranha que se desprendeu de uma criatura interdimensional. Embora não esteja mais escaldante, ainda emite calor.<br /><br />\"Está frio demais lá fora. Mas com essa gema, acredito que poderá viajar por longas distâncias, até mesmo para procurar cidades com humanos deixados para trás...\"",
@@ -218,6 +221,7 @@
    "rarity": 4,
    "rewardPath": "/material/983278",
    "comeFrom": [
+    "Sombra Estagnada: Zona Restrita da Guarda Crinalva",
     "Sombra Estagnada (Zona Restrita da Guarda Crinalva)",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -1217,7 +1221,7 @@
   },
   {
    "tagHash": "Suporte",
-   "descHash": "Ganha 1 acúmulo de Carga para cada inimigo diferente que Asta atingir, além de um acúmulo extra se o inimigo atingido tiver Fraqueza de <span style=\"color:#F84F36;\">Fogo</span>.<br />Para cada acúmulo de Carga que Asta tiver, aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> o ATQ de todos os aliados, até <nobr>#2[i]</nobr> vez(es).<br />A partir da segunda rodada, reduz em <nobr>#3[i]</nobr> a contagem de acúmulos de Carga de Asta no início de cada rodada.",
+   "descHash": "Ganha 1 acúmulo de Carga para cada inimigo diferente que Asta atingir, além de um acúmulo extra se o inimigo atingido tiver Fraqueza contra <span style=\"color:#F84F36;\">Fogo</span>.<br />Para cada acúmulo de Carga que Asta tiver, aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> o ATQ de todos os aliados, até <nobr>#2[i]</nobr> vez(es).<br />A partir da segunda rodada, reduz em <nobr>#3[i]</nobr> a contagem de acúmulos de Carga de Asta no início de cada rodada.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1518,7 +1522,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do inimigo-alvo.",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do alvo inimigo do Tipo correspondente.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2195,6 +2199,16 @@
   },
   {
    "id": 16,
+   "title": "Sobre a Ruan Mei",
+   "text": "Eu perguntei à Srta. Ruan Mei onde eu poderia comprar um amuleto igual ao que ela tem na manga, mas eu fiquei surpresa ao descobrir que foi ela mesma que bordou. Eu fiquei igualmente surpresa quando ela me deu um amuleto artesanal na próxima vez que ela veio à Estação Espacial. A habilidade de artesanato dela, assim como seus trabalhos de pesquisa, é realmente incrível.",
+   "unlockRequirement": "",
+   "cnUrl": "8f2bb0d8e9ca51cef022be87a43ff7ef489120606e5c53bee200bb49ebec97c9",
+   "jpUrl": "da4878223d5ab4e3d8575a6800bdf9ce4fee196682ba7edd14861075104ecb67",
+   "enUrl": "87031914320b607b51bcd402f36dccabd4eda23165caf3d8b74082faff685df7",
+   "krUrl": "da4cf51e431d25c0379fb4d51000251f733f335fe792886c51acde9601d1c5d7"
+  },
+  {
+   "id": 17,
    "title": "Ativação de Eidolon",
    "text": "Toda estrela é um milagre!",
    "unlockRequirement": "",
@@ -2204,7 +2218,7 @@
    "krUrl": "8f256b1d6f855a4907a537c461445e6416861d38a83011f339e955658e93712a"
   },
   {
-   "id": 17,
+   "id": 18,
    "title": "Ascensão de Personagem",
    "text": "Quanto mais aprendo sobre o assunto, mais eu amo o céu estrelado.",
    "unlockRequirement": "",
@@ -2214,7 +2228,7 @@
    "krUrl": "f7225974b4ee60144986971638505e893889e8b1ac61d4ebd30d0ad2711a049d"
   },
   {
-   "id": 18,
+   "id": 19,
    "title": "Nível Máximo Alcançado",
    "text": "Objetivos são como as estrelas. Um dia, os alcançaremos.",
    "unlockRequirement": "",
@@ -2224,7 +2238,7 @@
    "krUrl": "10c87bc80747f016e2a48fcc02586c57dd340b66937cd09a3983de12cee80164"
   },
   {
-   "id": 19,
+   "id": 20,
    "title": "Ativação de Rastro",
    "text": "Outro passo mais perto dos mundos distantes.",
    "unlockRequirement": "",
@@ -2234,7 +2248,7 @@
    "krUrl": "459ea36d771fd62776b43209967d910fc6d163b43d3b36f1063dda82d5a43e2b"
   },
   {
-   "id": 20,
+   "id": 21,
    "title": "Entrou na Equipe com Desbravador/Desbravadora",
    "text": "O Expresso tem nos salvado sempre. É hora de retribuir o favor!",
    "unlockRequirement": "",
@@ -2244,7 +2258,7 @@
    "krUrl": "e0aecbc80863fe6fdbada6379f284052b2333ae8c8e444e3b467f801a09f998d"
   },
   {
-   "id": 21,
+   "id": 22,
    "title": "Entrou na Equipe com Arlan",
    "text": "Arlan... não carregue o peso sozinho.",
    "unlockRequirement": "",
@@ -2254,7 +2268,7 @@
    "krUrl": "6acaa060212796f7e495c94c800b34bbab6c72de47e9792b9fdaaaeb4944a21d"
   },
   {
-   "id": 22,
+   "id": 23,
    "title": "Entrou na Equipe com Herta",
    "text": "Ah! Madame Herta? Não temos nada com o que nos preocupar.",
    "unlockRequirement": "",
@@ -2262,6 +2276,16 @@
    "jpUrl": "cf2b4251501f2bfc1d80f96b7e01005b004e3c59babce3f7b656f739960eb056",
    "enUrl": "bb45e7a4b293e57ade5ea6920fe871255b122f375dec6e3481c6894ffdd10b9f",
    "krUrl": "f6b4452fd58b2bc92b617db6d807997417e3b98843dcee54a298a520f5ae8176"
+  },
+  {
+   "id": 24,
+   "title": "Entrou na Equipe com Topaz",
+   "text": "Topaz, que coincidência! Acho que eu devo encarar isso como uma viagem de negócios!",
+   "unlockRequirement": "",
+   "cnUrl": "a2976ef4432f14b66e9bee901925f8045679d390888f6ec20a84f581ed9272a1",
+   "jpUrl": "2805d8b17325f0f2817699d0945f1039878c00e8a8dbe04a20a6d1977495ba73",
+   "enUrl": "ea21fdf6433ec58cec3b542c73199ca24e39010cc0111206a8384b79c9495010",
+   "krUrl": "09849193c190cf97c46b9e2bc3ec046bb60056303837c730a2d5599e4702bd01"
   },
   {
    "id": 51,
@@ -2325,7 +2349,7 @@
   },
   {
    "id": 57,
-   "title": "Perícia 1",
+   "title": "Perícia - 1",
    "text": "Quem está com sorte hoje?",
    "unlockRequirement": "",
    "cnUrl": "2002cf5dfea2c257853bc99ac6b71e24a43a9c5893a4649fa48d6c8bc5af1e5f",
@@ -2335,7 +2359,7 @@
   },
   {
    "id": 58,
-   "title": "Perícia 2",
+   "title": "Perícia - 2",
    "text": "Um presente das estrelas!",
    "unlockRequirement": "",
    "cnUrl": "d9a515cee52c0ccfc7c3ddb405757706b29ccee5b96eeb44770d1c12b119515f",
@@ -2435,7 +2459,7 @@
   },
   {
    "id": 68,
-   "title": "Abrindo Tesouro 1",
+   "title": "Abrindo Tesouro - 1",
    "text": "Será que eu já tenho isso?",
    "unlockRequirement": "",
    "cnUrl": "862723297afdccd5af430a42b292b8a124e24a14074f912825adc941fd176e47",
@@ -2445,8 +2469,8 @@
   },
   {
    "id": 72,
-   "title": "Abrindo Tesouro 2",
-   "text": "Espero que goste!",
+   "title": "Abrindo Tesouro - 2",
+   "text": "Espero que você goste!",
    "unlockRequirement": "",
    "cnUrl": "9e20d1c588b5a8d047eada068a94930ac604e157599af35bcbaa4b1ee4c729e8",
    "jpUrl": "9b756e9c1461e35180fc5ea4cdc654dff9c822606ae34fa016023f081bd7c821",
@@ -2465,7 +2489,7 @@
   },
   {
    "id": 69,
-   "title": "Enigma Solucionado 1",
+   "title": "Enigma Solucionado - 1",
    "text": "Progresso!",
    "unlockRequirement": "",
    "cnUrl": "95f0d3c24e96b5b77bf35ac20c63e64501dd5414ae6ba9a1ff556e6fe0d92860",
@@ -2475,8 +2499,8 @@
   },
   {
    "id": 74,
-   "title": "Enigma Solucionado 2",
-   "text": "Faz um tempo que não trabalho em um desses!",
+   "title": "Enigma Solucionado - 2",
+   "text": "Faz um tempo que eu não trabalho em um desses!",
    "unlockRequirement": "",
    "cnUrl": "1f3f75a777401dd649adc96ad76e0e6d48742ba7afcffe2cfa97ddae50ce0084",
    "jpUrl": "6f5227b67ade34bf06d195157cb0dd56977cb270cda1b35901495a05e3ab5113",

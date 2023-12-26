@@ -35,7 +35,18 @@ import Sushang from "../../data/character_data/ru/sushang.json";
 import Tingyun from "../../data/character_data/ru/tingyun.json";
 import Welt from "../../data/character_data/ru/welt.json";
 import Yanqing from "../../data/character_data/ru/yanqing.json";
+
+//add in 1.6.0
+import DrRatio from "../../data/character_data/ru/drratio.json";
+import RuanMei from "../../data/character_data/ru/ruanmei.json";
+import Xueyi from "../../data/character_data/ru/xueyi.json";
+
 const RU = {
+  //add in 1.6.0
+  DrRatio,
+  RuanMei,
+  Xueyi,
+
   Argenti,
   Huohuo,
   Hanya,

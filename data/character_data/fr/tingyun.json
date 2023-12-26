@@ -54,7 +54,7 @@
    "id": 151160,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "f4e0301b109ba0ab0b633a7186df88a0fa0be8a70edf33c88539672e514bbc8c",
+   "iconPath": "02cccae71e7d4c33c463175ee672c7eed3f27ddc6406f05a40a18e261fdd9780",
    "name": "Couronne d'éclair de l'ombre révolue",
    "desc": "Casque d'Ombre gardienne. Permet l'élévation des personnages de type foudre.",
    "lore": "Un accessoire abandonné par l'ombre d'une Gardienne du passé. Il raconte l'histoire de la ville de l'Hiver éternel.<br /><br />« Svetlana, le Poing de fer... Sa colère est aussi terrifiante que le tonnerre et son châtiment aussi rapide que l'éclair. »",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/151160",
    "comeFrom": [
+    "Ombre stagnante du Couloir des échos faiblissants",
     "Ombre stagnante du Couloir des échos faiblissants",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -89,7 +90,7 @@
    "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
    "name": "Journal d'aventure",
    "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
-   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
    "purpose": "Matériau d'EXP de personnage",
    "rarity": 3,
    "rewardPath": "/material/409961",
@@ -165,6 +166,7 @@
    "rewardPath": "/material/635670",
    "comeFrom": [
     "Calice de la Colonie de robots",
+    "Calice de la Colonie de robots",
     "Braises immortelles"
    ]
   },
@@ -199,6 +201,7 @@
    "rewardPath": "/material/836256",
    "comeFrom": [
     "Calice de la Colonie de robots",
+    "Calice de la Colonie de robots",
     "Synthèse de matériaux de l'Omni-synthétiseur"
    ]
   },
@@ -214,6 +217,7 @@
    "rarity": 3,
    "rewardPath": "/material/920197",
    "comeFrom": [
+    "Calice de la Colonie de robots",
     "Calice de la Colonie de robots",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles"
@@ -471,7 +475,7 @@
    "iconPath": "d0240ade7b8b6d2bb6d995652ff06237d57282c6edc6213ba2b11d2006c9227d",
    "artPath": "21257c28dc79f838adf8745c31222c2fa173583a43276ab408c9eee245df9a79",
    "name": "Paix et richesse pour tous",
-   "descHash": "L'ultime régénère <nobr>#1[i]</nobr> points d'énergie supplémentaires à la cible alliée.",
+   "descHash": "L'ultime régénère <nobr>#1[i]</nobr> points d'énergie supplémentaires à la cible alliée.",
    "params": [
     10
    ]
@@ -1546,7 +1550,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Réduit la robustesse de l'ennemi au type correspondant en entrant en combat après l'avoir attaqué.",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -1663,7 +1667,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "La VIT de Tingyun augmente de <nobr>#1[i]%</nobr> pendant 1 tour après utilisation de sa compétence.",
+    "descHash": "La VIT de Tingyun augmente de <nobr>#1[i]%</nobr> pendant 1 tour après utilisation de sa compétence.",
     "ultimateCost": 0,
     "id": 381197,
     "name": "Jovialité nourrie",
@@ -1799,7 +1803,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Tingyun régénère immédiatement <nobr>#1[i]</nobr> points d'énergie au début de son tour.",
+    "descHash": "Tingyun régénère immédiatement <nobr>#1[i]</nobr> points d'énergie au début de son tour.",
     "ultimateCost": 0,
     "id": 381199,
     "name": "Passage jubilatoire",
@@ -2342,7 +2346,7 @@
   {
    "id": 51,
    "title": "Rupture de faiblesse en début de combat",
-   "text": "Profite de l'instant !",
+   "text": "Profite de l'instant !",
    "unlockRequirement": "",
    "cnUrl": "ebda165281b9f590a38d2d8de0777ac83ff83694dceb393f07b7d454e844a269",
    "jpUrl": "a7cb1b2c104de8cbc8dcdf3f7042eb630b0c3a4ab7e906f5315917c2e33e953f",
@@ -2382,7 +2386,7 @@
   {
    "id": 55,
    "title": "Tour inactif",
-   "text": "On aurait déjà dû attaquer !",
+   "text": "On aurait déjà dû attaquer !",
    "unlockRequirement": "",
    "cnUrl": "4cecd394c914ba9efbc49ddee642ff60eadba34749477b510f97743d261ab865",
    "jpUrl": "67af32ebb66645f362499c6c5c53fcd0ea283110229c170ccf31644d1aa26895",
@@ -2412,7 +2416,7 @@
   {
    "id": 58,
    "title": "Compétence 2",
-   "text": "Tous mes vœux !",
+   "text": "Tous mes vœux !",
    "unlockRequirement": "",
    "cnUrl": "69b4413b4f09d909e899d8bebfbfa25a141b067cd9194a490823ce4ab06fca23",
    "jpUrl": "29368c20cbbfba991403dd2c9c32306f5eea4102add12f0a81cd6306eb06420f",
@@ -2452,7 +2456,7 @@
   {
    "id": 62,
    "title": "Déclenchement de l'ultime",
-   "text": "Bons présages, unissons nos forces !",
+   "text": "Bons présages, unissons nos forces !",
    "unlockRequirement": "",
    "cnUrl": "bf0638ecf78d693ee95f42e16646a60a67c415083ab1590c33f687b5162a8378",
    "jpUrl": "6e50a603375054ee9ee0546d223ad767bed71583ef6c77cfd53d5f24f0421721",
@@ -2522,7 +2526,7 @@
   {
    "id": 72,
    "title": "Ouverture de coffre au trésor 2",
-   "text": "Cela me convient.",
+   "text": "Ça me convient.",
    "unlockRequirement": "",
    "cnUrl": "7fe62e63c45639b57ec347d8fb0b8d92aa0f911876c48fdc024a4814616d2164",
    "jpUrl": "bff134e48bff61c9d9542030b308997a4a4dd2c0aa502b00f3e421e48119c18e",
@@ -2532,7 +2536,7 @@
   {
    "id": 73,
    "title": "Ouverture de coffre précieux",
-   "text": "Quel coup de chance !",
+   "text": "Quel coup de chance !",
    "unlockRequirement": "",
    "cnUrl": "0703009837bfc14a551838979083942a0a3224da2cdf12e1ee8833415fa1b328",
    "jpUrl": "44e4268559206751dfca11623c49d66b7ca8aba5779c78b0faab4a3c585caf96",
@@ -2572,7 +2576,7 @@
   {
    "id": 71,
    "title": "Retour en ville",
-   "text": "Tu as des endroits à visiter ? Laisse-moi être ton guide !",
+   "text": "Tu as des endroits à visiter ? Laisse-moi être ton guide !",
    "unlockRequirement": "",
    "cnUrl": "affe29faf095d7df501ae7ae7a212bff02be853612cab76898d0b2036b557289",
    "jpUrl": "273fcafe04b3b4a60ff8dd276d62510f4256fe33178f44288ee7ced53379cca2",

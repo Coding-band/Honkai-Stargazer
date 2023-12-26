@@ -1,6 +1,6 @@
-// import Argenti from "../advice/argenti.json";
+ import Argenti from "../../data/character_data/advice/argenti.json";
 import Huohuo from "../../data/character_data/advice/huohuo.json";
-// import Hanya from "../advice/hanya.json";
+ import Hanya from "../../data/character_data/advice/hanya.json";
 import Jingliu from "../../data/character_data/advice/jingliu.json";
 import TopazNumby from "../../data/character_data/advice/topaz.json";
 import Guinaifen from "../../data/character_data/advice/guinaifen.json";
@@ -37,9 +37,14 @@ import Welt from "../../data/character_data/advice/welt.json";
 import Yanqing from "../../data/character_data/advice/yanqing.json";
 
 const advice = {
-  Argenti: null,
+  //add in 1.6.0
+  "Dr. Ratio": null,
+  "Ruan Mei": null,
+  Xueyi: null,
+
+  Argenti,
   Huohuo,
-  Hanya: null,
+  Hanya,
   Jingliu,
   "Topaz & Numby": TopazNumby,
   Guinaifen,

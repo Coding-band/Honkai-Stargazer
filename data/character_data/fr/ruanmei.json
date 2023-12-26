@@ -1,0 +1,2734 @@
+{
+ "spRequirement": 130,
+ "iconPath": "a110f7ce165092b278e3ef1e731e78a47931080ee5f564a9c901908d06b0659f",
+ "bgPath": "821b229f48e7404128d1b56674ccb67f3eb9f9be3a7fc1ae2fa0dddcdb45972d",
+ "figPath": "eff7b6d76515ae26b67689c99444da326c9de6283dcdb62c6faf4ba2b62325f7",
+ "fgPath": "",
+ "splashIconPath": "8f3ea34da7021264f1f952d1dbf435b2cda6bc7feddfb68fd91ac7ab53386f1f",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 4,
+  "iconPath": "55d5339b99655abd5d47c976596bebf22e6e522614fef628f7c875606f3e1abd",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Braises immortelles"
+   ]
+  },
+  "67220": {
+   "id": 67220,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "771ee2d52c420b86a334eedd637788b8610e891840f00c21c696bcbadc754ef6",
+   "name": "Chitine gelée",
+   "desc": "Chitine de givre qui émet un froid murmure. Permet l'élévation des personnages de type glace.",
+   "lore": "Étrange chitine prélevée sur une créature interdimensionnelle. Elle n'est plus aussi froide, mais elle frémit encore en absorbant la chaleur environnante.<br /><br />« Pourquoi personne n'a-t-il encore pensé à la vendre aux mondes dépourvus de climatiseurs ? Elle est d'ailleurs tout aussi bruyante. »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/67220",
+   "comeFrom": [
+    "Ombre stagnante de Passenuage",
+    "Ombre stagnante de Passenuage",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Entraînement quotidien",
+    "Braises immortelles"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Récompense d'affectation"
+   ]
+  },
+  "470781": {
+   "id": 470781,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "c63b922af281d49c4d1e5ee84aa4a5cb7027e4a16e96fe8f683c9f50a4bcb921",
+   "name": "Ancienne rancune du Désastre de l'ennui",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "En tant que descendant direct de l'Imperator Insectorum, son seul désir est de densifier la population des siens. Avec ses faux géantes, il décime d'innombrables créatures et récolte les cultures des planètes pour son nid, dans lequel il élève sa progéniture dans un flux continu jusqu'à sa mort.<br /><br />« Sur la planète brisée, des sauterelles géantes ont noirci le ciel, et de la croûte terrestre se déverse une nuée d'insectes. Le coléoptère a bâti ce nouveau nid et le présente en cadeau à l'Imperator Insectorum... Puisse cette horreur marquer l'histoire et ses écrits, puisse-t-elle ne jamais se reproduire. »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/470781",
+   "comeFrom": [
+    "Écho de la guerre de la Zone d'isolement"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "71d58f084522c87e93327e3e7fc1db8fb4abb65e9989b163d4a348c9a3761329",
+   "name": "Jeune pousse immortelle",
+   "desc": "Jeune pousse ayant bourgeonné à partir d'une ancienne construction divine. Matériau commun utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Il y a de très nombreuses années, le désir orgueilleux et démesuré d'un souverain pour l'immortalité a mené la flotte de Xianzhou à lever les voiles en direction de la mer cosmique pour y rechercher des remèdes divins.<br /><br />« Nous voulons vivre jusqu'à des temps sans fin et maintenir notre empire pour l'éternité. Malheureusement, la vie humaine prend toujours fin, et les capacités humaines ont leurs limites. Par conséquent, nous avons envoyé neuf Navium Astriger pour naviguer au-delà du ciel, à la recherche des recettes divines de l'immortalité. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "Abominations de l'Abondance",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "c3cb2e5eb5390586c537d03d1de632b1aa59c49a3cc32f24d68672d2f97fb1e5",
+   "name": "Aérofleur immortelle",
+   "desc": "Nouvelle fleur ayant éclos à partir d'une ancienne construction divine. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Après d'innombrables tentatives, la flotte à la recherche du remède de l'immortalité était capable de contempler le visage de l'être divin. La divinité envoya ses bénédictions sous une forme matérielle, et l'Arbre d'ambroisie étendit ses feuilles.<br /><br />« De nouveaux bourgeons descendirent sur la lune, où des fleurs divines se mirent à pousser entre les nuages. Le temps de la floraison, le vieux bois retrouva sa jeunesse. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "Abominations de l'Abondance au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635670": {
+   "id": 635670,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a096383d62b9e5432fbf9a9674cc41041077b151d3473e44509d684eaaccd9bd",
+   "name": "Accord harmonique",
+   "desc": "Boîte à musique compacte, fabriquée par un inconnu. Permet d'améliorer légèrement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonie</span>.",
+   "lore": "Joue un air joyeux et apaisant.<br />S'il semble simple, n'importe quel amateur de musique verra la maîtrise du compositeur de cet air.<br /><br />« Prends la main de ta Famille et danse ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635670",
+   "comeFrom": [
+    "Calice de la Colonie de robots",
+    "Calice de la Colonie de robots",
+    "Braises immortelles"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5708b196a8af89740ced588d98dc414c791d209879957fb0bc8644cc2dc84adb",
+   "name": "Branche-lumière immortelle",
+   "desc": "Branche à feuilles caduques provenant d'une ancienne construction divine. Matériau avancé utilisé pour le renforcement.",
+   "lore": "La source de la « vie éternelle » des espèces à longue espérance de vie de Xianzhou. Les vestiges de l'influence de l'Aiôn de l'Abondance. Après les Trois Souffrances, Xianzhou a été en proie à la dévastation. Les Homo celestinae se sont retrouvés au rang de démons, et les catastrophes se sont enchaînées sans discontinuer.<br /><br />« En vertu du décret de la Commission des dix seigneurs, quiconque sur le point d'être frappé par le mara sera saisi par les juges infernaux et envoyé à la Prison des enchaînés. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "Abominations de l'Abondance au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836256": {
+   "id": 836256,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "b423fcc0ae34c8c3b30d0a461af31176b161d5a83f3615756c8f8a91f04ac474",
+   "name": "Symphonie de stellaris",
+   "desc": "Boîte à musique complexe, fabriquée par un inconnu. Permet d'améliorer considérablement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonie</span>.",
+   "lore": "Joue une puissante symphonie spatiale.<br /><br />« Certains astronomes pensent que les révolutions des sphères célestes fonctionnent de la même manière que des structures mécaniques complexes. Les notes, aussi claires que le cristal, émises par le mouvement des étoiles ont été baptisées \"Harmonie des sphères célestes\". »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836256",
+   "comeFrom": [
+    "Calice de la Colonie de robots",
+    "Calice de la Colonie de robots",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920197": {
+   "id": 920197,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "b5aa737b728156387ef4ddce10e0a541deb24993d58c4f2eca0aac0ed4301ea8",
+   "name": "Hymne ancestral",
+   "desc": "Boîte à musique, fabriquée par un inconnu. Permet d'améliorer modérément les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Harmonie</span>.",
+   "lore": "Joue un hymne chanté par un petit groupe.<br />Il est impossible de savoir à qui s'adresse cet hymne.<br /><br />« Misère, épreuve du Très haut ! Richesse, grâce du Très haut ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920197",
+   "comeFrom": [
+    "Calice de la Colonie de robots",
+    "Calice de la Colonie de robots",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Braises immortelles"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 89.76,
+   "attackAdd": 4.488,
+   "hpBase": 147.84,
+   "hpAdd": 7.392,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 104,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549504,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 125.664,
+   "attackAdd": 4.488,
+   "hpBase": 206.976,
+   "hpAdd": 7.392,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 104,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549504,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 161.568,
+   "attackAdd": 4.488,
+   "hpBase": 266.112,
+   "hpAdd": 7.392,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 104,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633445,
+     "count": 6
+    },
+    {
+     "id": 67220,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 197.472,
+   "attackAdd": 4.488,
+   "hpBase": 325.248,
+   "hpAdd": 7.392,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 104,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633445,
+     "count": 9
+    },
+    {
+     "id": 67220,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 233.376,
+   "attackAdd": 4.488,
+   "hpBase": 384.384,
+   "hpAdd": 7.392,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 104,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717386,
+     "count": 6
+    },
+    {
+     "id": 67220,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 269.28,
+   "attackAdd": 4.488,
+   "hpBase": 443.52,
+   "hpAdd": 7.392,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 104,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717386,
+     "count": 9
+    },
+    {
+     "id": 67220,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 305.184,
+   "attackAdd": 4.488,
+   "hpBase": 502.656,
+   "hpAdd": 7.392,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 104,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "e7667bb741d6b72c3689e14b89513ca15f3b468978f35248372d11a128770735",
+   "artPath": "a4d8bf28c7f50ad70cf75ce9699b32661b8aec93c60b9c1af23f3e62b4da5745",
+   "name": "Schéma neuronal",
+   "descHash": "Lorsque que le champ généré par l'ultime est déployé, les DGT infligés par tous les alliés ignorent <nobr>#1[i]%</nobr> de la DÉF des cibles.",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "eb278b83c909643b92cc0c935e24d056b9113a2e10ee3df9143caf46d771a915",
+   "artPath": "4ba328435c18e967d1241531b4f8b22f5d661385cfbd0638e8b02439199d728e",
+   "name": "Promenade au bord des roseaux",
+   "descHash": "Lorsque Ruan Mei est sur le champ de bataille, l'ATQ de tous les alliés augmente de <nobr>#1[i]%</nobr> lorsqu'ils infligent des DGT à des ennemis en état de Rupture de faiblesse.",
+   "params": [
+    0.4
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "54faf72f6548ed6b4eb83c1d9db6e815c8a00fe47cfdc2091629af2d3cbe1425",
+   "artPath": "1e5a2d5b0f459cdb97efc3742ffb8b82d2a1b11f9a1b2f50a1557c85c9ad79f4",
+   "name": "Virevolte viridescente",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "8bf0491ce99b29eb3e14ed2f63a96829fe2ce94bd01eb050beb7df33c563945b",
+   "artPath": "9ac664b89f0ce9f49c190b348ca3315b67cf5d52962f2e0f410c846876e7c1f0",
+   "name": "Éclat chatoyant",
+   "descHash": "L'effet de Rupture de Ruan Mei augmente de <nobr>#1[i]%</nobr> pendant <nobr>#2[i]</nobr> tours en cas de Rupture de faiblesse d'une cible ennemie.",
+   "params": [
+    1,
+    3
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "98268c06444f6181a49696a04c08683ce541a4a5b9dfaebcb9aef8e1f35507ef",
+   "artPath": "c2a7527aa76bda0d0d73b5638dec0f6e02927a69afb410d27ecaa799990d8fb2",
+   "name": "Barrette de languissement",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "bbd09d8f606fb3c0a403e3cc45be3d88f53384aef0710ab49e71df4bb36acd7d",
+   "artPath": "aa28f8b1d9300d340bd6fa0e231eb64fcd876d4013a7ff7c6ccc31998583dfbf",
+   "name": "Cascade de rubans",
+   "descHash": "Prolonge la durée du champ généré par l'ultime de <nobr>#1[i]</nobr> tour. D'autre part, le multiplicateur des DGT de rupture du talent augmente de <nobr>#2[i]%</nobr>.",
+   "params": [
+    1,
+    2
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   101144
+  ],
+  [
+   385671
+  ],
+  [
+   301730
+  ],
+  [
+   816617
+  ],
+  [
+   933262
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Ruan Mei à une cible unique.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 101144,
+   "name": "Parfum entêtant",
+   "iconPath": "6d993ced97e2bc1aa71b284a8633c5d34fab352465c2a0131f83de0c2ec69a2a",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635670,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920197,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920197,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836256,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836256,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Soutien",
+   "descHash": "Ruan Mei gagne Tonalité après avoir utilisé sa compétence, pour une durée de <nobr>#3[i]</nobr> tours. Cette durée diminue de 1 au début du tour de Ruan Mei. Les DGT de tous les alliés augmentent de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> lorsque Ruan Mei bénéficie de Tonalité et leur efficacité de Rupture de faiblesse de <nobr>#2[i]%</nobr>.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 385671,
+   "name": "Chant lancinant des cordes",
+   "iconPath": "98268c06444f6181a49696a04c08683ce541a4a5b9dfaebcb9aef8e1f35507ef",
+   "typeDescHash": "Compétence",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.16,
+      0.5,
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.176,
+      0.5,
+      3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.192,
+      0.5,
+      3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635670,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.208,
+      0.5,
+      3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920197,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.224,
+      0.5,
+      3
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920197,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.24,
+      0.5,
+      3
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920197,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.26,
+      0.5,
+      3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836256,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.28,
+      0.5,
+      3
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836256,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      0.5,
+      3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836256,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.32,
+      0.5,
+      3
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836256,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.336,
+      0.5,
+      3
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.352,
+      0.5,
+      3
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.368,
+      0.5,
+      3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.384,
+      0.5,
+      3
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.4,
+      0.5,
+      3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Soutien",
+   "descHash": "Ruan Mei déploie un champ qui dure <nobr>#2[i]</nobr> tours. La durée de ce champ diminue de 1 au début de son tour.<br />La PÉN de RÉS à tous les types de tous les alliés augmente de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> lorsqu'ils se trouvent à l'intérieur du champ et leurs attaques appliquent Floraison incomplète aux ennemis touchés.<br />Floraison incomplète se déclenche lorsque ces ennemis tentent de se rétablir d'une Rupture de faiblesse, ce qui prolonge la durée de leur état de Rupture de faiblesse et retarde leur action à hauteur de <nobr>#3[i]%</nobr> de l'effet de Rupture de Ruan Mei + <nobr>#4[i]%</nobr>, tout en infligeant des DGT de rupture équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> des DGT de rupture de glace de Ruan Mei.<br />Les cibles ennemies ne peuvent pas subir à nouveau Floraison incomplète tant qu'elles n'ont pas récupéré de l'état de Rupture de faiblesse.",
+   "ultimateCost": 130,
+   "break": "0",
+   "energy": "5",
+   "id": 301730,
+   "name": "Ondée de pétales",
+   "iconPath": "714f509cc85b5aaf8cbf471e1b9807bccc356e00d3a5935d3672234896b31fba",
+   "typeDescHash": "Ultime",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.15,
+      2,
+      0.2,
+      0.1,
+      0.3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.16,
+      2,
+      0.2,
+      0.1,
+      0.32
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.17,
+      2,
+      0.2,
+      0.1,
+      0.34
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635670,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.18,
+      2,
+      0.2,
+      0.1,
+      0.36
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920197,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.19,
+      2,
+      0.2,
+      0.1,
+      0.38
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920197,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.2,
+      2,
+      0.2,
+      0.1,
+      0.4
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920197,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.2125,
+      2,
+      0.2,
+      0.1,
+      0.425
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836256,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.225,
+      2,
+      0.2,
+      0.1,
+      0.45
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836256,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.2375,
+      2,
+      0.2,
+      0.1,
+      0.475
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836256,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.25,
+      2,
+      0.2,
+      0.1,
+      0.5
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836256,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.26,
+      2,
+      0.2,
+      0.1,
+      0.52
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.27,
+      2,
+      0.2,
+      0.1,
+      0.54
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.28,
+      2,
+      0.2,
+      0.1,
+      0.56
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.29,
+      2,
+      0.2,
+      0.1,
+      0.58
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      2,
+      0.2,
+      0.1,
+      0.6
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Soutien",
+   "descHash": "Augmente de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> la VIT de toute l'équipe (à l'exception de ce personnage). Lorsqu'un allié inflige une Rupture de faiblesse à une cible ennemie, Ruan Mei inflige des DGT de rupture équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> de ses DGT de rupture de glace à cette cible.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 816617,
+   "name": "Spirale fractale",
+   "iconPath": "a19cab568e544e41501ac2296913db2fa8c7bd3160dc1c2bfecc2f3486cc0971",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.08,
+      0.6
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.082,
+      0.66
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.084,
+      0.72
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635670,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.086,
+      0.78
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920197,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.088,
+      0.84
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920197,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.09,
+      0.9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920197,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.0925,
+      0.975
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836256,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.095,
+      1.05
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836256,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.0975,
+      1.125
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836256,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1,
+      1.2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836256,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.102,
+      1.26
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.104,
+      1.32
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.106,
+      1.38
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.108,
+      1.44
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.11,
+      1.5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 17203,
+   "name": "Attaque",
+   "iconPath": "6d993ced97e2bc1aa71b284a8633c5d34fab352465c2a0131f83de0c2ec69a2a",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Renforcement",
+   "descHash": "Obtient Sérénade de soie après avoir utilisé la technique. Déclenche automatiquement la compétence sans utiliser de point de compétence <nobr>#1[i]</nobr> fois au début du combat suivant.<br />Dans l'Univers simulé, lorsque Ruan Mei bénéficie de Sérénade de soie et que l'équipe attaque activement une cible ennemie, la Faiblesse de l'ennemi est toujours considérée comme ayant été attaquée pour entrer en combat, et cette attaque peut réduire la robustesse de tous les ennemis quel que soit leur type de faiblesse. Lorsque vous infligez une Rupture de faiblesse, vous déclenchez l'effet de Rupture correspondant au type de faiblesse de l'assaillant. Augmente les DGT à la robustesse de cette attaque de <nobr>#2[i]%</nobr> pour chaque bénédiction possédée, jusqu'à <nobr>#4[i]</nobr> bénédictions. D'autre part, inflige à l'ennemi des DGT de rupture équivalents à <nobr>#3[i]%</nobr> des DGT de rupture de glace de Ruan Mei si cette attaque provoque une Rupture de faiblesse à un ennemi.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 933262,
+   "name": "Sérénade de soie",
+   "iconPath": "7a506fb66f8417e7f05c75c5f03915100d58154654a0dc5799e6fe15aad149c1",
+   "typeDescHash": "Technique",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      1,
+      1,
+      20
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1303101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1303202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1303203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 738446,
+        "name": "Renforcement de Rupture",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+        "statusList": [
+         {
+          "key": "Effet de Rupture",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920197,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 738445,
+      "name": "Augmentation de DÉF",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+      "statusList": [
+       {
+        "key": "DÉF",
+        "value": 0.05
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635670,
+        "count": 3
+       },
+       {
+        "id": 549504,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Augmente de <nobr>#1[i]%</nobr> l'effet de Rupture de tous les alliés.",
+    "ultimateCost": 0,
+    "id": 738349,
+    "name": "Respiration inerte",
+    "iconPath": "cc5233c8e003f6cfc7c5ed92bd8f8762dbc9478a23ea89278784eb9a2cbfb55d",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635670,
+        "count": 3
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1303102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1303205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1303206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 738441,
+        "name": "Augmentation de DÉF",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+        "statusList": [
+         {
+          "key": "DÉF",
+          "value": 0.075
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836256,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 738444,
+      "name": "Renforcement de Rupture",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+      "statusList": [
+       {
+        "key": "Effet de Rupture",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920197,
+        "count": 5
+       },
+       {
+        "id": 633445,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Ruan Mei régénère <nobr>#1[i]</nobr> points d'énergie au début de son tour.",
+    "ultimateCost": 0,
+    "id": 738352,
+    "name": "Rêveries du temps qui passe",
+    "iconPath": "e52fb957be6849e04a30acaeef77d9bf13cfd55244547a21c8646ba531faeb75",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       5
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920197,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1303103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1303208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1303209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 738456,
+        "name": "Augmentation de DÉF",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+        "statusList": [
+         {
+          "key": "DÉF",
+          "value": 0.1
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836256,
+          "count": 8
+         },
+         {
+          "id": 717386,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1303210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 654506,
+        "name": "Renforcement de Rupture",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+        "statusList": [
+         {
+          "key": "Effet de Rupture",
+          "value": 0.107
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836256,
+          "count": 8
+         },
+         {
+          "id": 717386,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 738455,
+      "name": "Augmentation de VIT",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079",
+      "statusList": [
+       {
+        "key": "VIT",
+        "value": 3,
+        "int": true
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836256,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "En combat, pour chaque <nobr>#2[i]%</nobr> d'effet de Rupture de Ruan Mei qui dépasse <nobr>#1[i]%</nobr>, la compétence de Ruan Mei augmente les DGT de tous les alliés de <nobr>#3[i]%</nobr> supplémentaires, jusqu'à un maximum de <nobr>#4[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 738351,
+    "name": "Bougie sur les flots",
+    "iconPath": "9af110e59ce59796bc35c3922d031764009955552c2af345cd6c782e58caf233",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       1.2,
+       0.1,
+       0.06,
+       0.36
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836256,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1303201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1303204,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 738443,
+      "name": "Augmentation de VIT",
+      "levelReq": 0,
+      "promotionReq": 3,
+      "iconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079",
+      "statusList": [
+       {
+        "key": "VIT",
+        "value": 2,
+        "int": true
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 10000
+       },
+       {
+        "id": 920197,
+        "count": 3
+       },
+       {
+        "id": 633445,
+        "count": 3
+       }
+      ]
+     }
+    },
+    {
+     "id": 1303207,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 738442,
+      "name": "Renforcement de Rupture",
+      "levelReq": 0,
+      "promotionReq": 5,
+      "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+      "statusList": [
+       {
+        "key": "Effet de Rupture",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 45000
+       },
+       {
+        "id": 836256,
+        "count": 3
+       },
+       {
+        "id": 717386,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 738448,
+    "name": "Renforcement de Rupture",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+    "statusList": [
+     {
+      "key": "Effet de Rupture",
+      "value": 0.053
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corps",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "PV",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "Pieds",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "VIT",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Sphère planaire",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "PV",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "Corde de liaison",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "Effet de Rupture",
+    "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Première rencontre",
+   "text": "Mon nom est Ruan Mei. Marque bien un temps d'arrêt entre les deux parties de mon nom, je te prie.",
+   "unlockRequirement": "",
+   "cnUrl": "7834dd8b030cb16c57aff017548773558a91b28057bd986c5393545ec96fd432",
+   "jpUrl": "159bf02d774726e20d093e14b1f75a5c61febb8ecdff794981cebab9f48e8d93",
+   "enUrl": "63f4afc64ddec38868018dad2282ea1a574210ffeb326c87068a0005ef8d28ee",
+   "krUrl": "5cdf416d956ffe9360e9bff2bf6d105f7d31ec26fb76795e728efc322763c85e"
+  },
+  {
+   "id": 2,
+   "title": "Salutation",
+   "text": "Envie d'une pâtisserie ? Les prunes utilisées dans cette recette sont fraîchement macérées. J'ai dû faire la queue pendant des heures.",
+   "unlockRequirement": "",
+   "cnUrl": "783006060249e6b84fb8cd48d1b2be61f40c9741bca7b0cec58d79d6505d080d",
+   "jpUrl": "e8f6014131d364d09afe7d7eb59fa5c039d73282b31ff63125fc3aa4729d76f9",
+   "enUrl": "cc41e31f4bebc8c2d88c077b890ed8afcf62d6416486493dee8b7a8873574f65",
+   "krUrl": "339d1c3828b295877a324ca8793796c29cf6a006a0488c1ba8db7bccf91da237"
+  },
+  {
+   "id": 3,
+   "title": "Au revoir",
+   "text": "Si tu trouves des échantillons de recherche intéressants, fais-le-moi savoir. On se reverra à ce moment-là.",
+   "unlockRequirement": "",
+   "cnUrl": "dccd32f26eafef1230290836e6d1ff355cbdedb43ee1c2722ec4876a9a54f135",
+   "jpUrl": "465f73f4d1c2a7d5598e056a7bac60231faaa8ec539a3c1d065e194ab82974c0",
+   "enUrl": "1d835440382daea44be77dfcd29945eb846d6afbdbef811671034f3ca9548adf",
+   "krUrl": "29f03f7dc71f1ab300fb0e75a4360f195d966999c5123cfa47f28510eb1c9244"
+  },
+  {
+   "id": 4,
+   "title": "Connaître Ruan Mei : Origines",
+   "text": "Après avoir attiré l'attention de Sagesse, j'ai quitté ma ville natale et commencé mes recherches sur l'origine de la vie dans un recoin caché de l'univers... je t'en prie, ne me demande pas où est cet endroit.",
+   "unlockRequirement": "",
+   "cnUrl": "6c76b20c713bef0c60c5661ddf0de0cfe74ea87a15142e479920d3226a4209a7",
+   "jpUrl": "ee10721f1bfcd5c4cbb26fbf97a7a86c48b5aa3f38976811b98f61e652d620f8",
+   "enUrl": "32ee5b15b153fbb1ee6deda28f6384449bb5494e6858297b7254291f499333a2",
+   "krUrl": "dcc414a2905dcfcac43fe14dbe0dbafc372dfedb935d15d187ae4457805ed3bf"
+  },
+  {
+   "id": 5,
+   "title": "Connaître Ruan Mei : Nom",
+   "text": "D'après le grand schéma de la vie, les deux parents sont égaux, c'est pourquoi mon nom combine le nom de famille de chacun de mes deux parents.",
+   "unlockRequirement": "",
+   "cnUrl": "160f09a4d0581b75115810569a2995e8fc6dea05c021d7541aa484057ab5503b",
+   "jpUrl": "292cc6e4149ba82b6cc84e151847bd795b6c81e5fe5a72f57133c7f20a5b505e",
+   "enUrl": "ee584d73deeb17b7ec25aa046691c7448f9eaa1c270e737216879c77c567677d",
+   "krUrl": "606f48fa8be0a2127da749dffcda77a4a8785672d9353b6fabfb871592f5628c"
+  },
+  {
+   "id": 6,
+   "title": "Bavardage : Société des génies",
+   "text": "Pas besoin de tendre l'oreille pour entendre les rumeurs qui proviennent de la Société des génies. Savante folle, qu'ils disent. Je prends ça pour un compliment.",
+   "unlockRequirement": "",
+   "cnUrl": "afc9467a9b7e65a2e5ac2f32372315e760282f110135c09903ddf1ded9fd46a8",
+   "jpUrl": "4bc08a265f949d6a7ccb65c8fa02251911d6e850e92909427aea127d7618f822",
+   "enUrl": "62d8575dcebf8bcb2f20fd3f227896321ce045381e98902d59836337f97852be",
+   "krUrl": "8becf1d38bac8e561c84ca14b2b1ec2f6f67b6d57734438c63f948003e0fa9a5"
+  },
+  {
+   "id": 7,
+   "title": "Passe-temps : Dégustation de pâtisseries",
+   "text": "Mon palais délicat me permet d'apprécier les saveurs d'une pâtisserie d'une seule bouchée. J'ai une préférence pour les ingrédients de saison comme les fruits frais, les fleurs et les herbes. La vie à l'état pur préservée dans de la pâte, voilà le meilleur apport en dopamine possible.",
+   "unlockRequirement": "",
+   "cnUrl": "59a726519dd537dc5315e59049645d659a299c462a1cb3872d5ccdd8da461d0d",
+   "jpUrl": "b61bff9bcf9f87be5f643a93d963e278d0208e93f8d0db13645d942df357f6ad",
+   "enUrl": "6e28e6dbc01ef64500b841f789c0460b7be0e2c43ff562c95f9e5985215dfd99",
+   "krUrl": "73e6ffc9bd246035836cd06bba13a06bc80cd73b65040ff8f03e6f5ad03059e5"
+  },
+  {
+   "id": 8,
+   "title": "Passe-temps : Opéra",
+   "text": "Je n'ai jamais vraiment pu apprécier la musique moderne, mais l'opéra m'enchante. Le temps suspend son vol lorsque j'écoute les performances vocales et instrumentales.",
+   "unlockRequirement": "",
+   "cnUrl": "1788266dce217a127b91f7ad756c46f37d0a47a0cffdc853952d2b45706785e5",
+   "jpUrl": "d2c9df71efa4129c42ecdeebfbd4b6edebe41b72027eda52dbe05102a8430054",
+   "enUrl": "2a39a4c5a91ad9c9eac20c8100bd62fdeda11dee53710dc19ad3a661c853e8f5",
+   "krUrl": "293498ccf474354412fde4ee9941977486750ea9c7b65c54f3bc4fe5f361a8fe"
+  },
+  {
+   "id": 9,
+   "title": "Problèmes : Taciturne",
+   "text": "La redondance des mots et les restrictions de la communication verbale créent beaucoup de confusion. Ça m'attriste...",
+   "unlockRequirement": "",
+   "cnUrl": "60b0f105515e7c6190fd01108dea317ed830aa775a02e66861d02a237b4eb863",
+   "jpUrl": "74ac5345358cb5034e6990ca836ed9c1ba7456da202bfde190f0c7f902b54d0c",
+   "enUrl": "5ef8d51093c7fd3548b06c1063cbbb8ebb453e99c5f69d9ff49cd19babab6112",
+   "krUrl": "b07356c1aec48a1ea4002b3000e6794a49781d36b15ea2411d93e2a5da74ac2a"
+  },
+  {
+   "id": 10,
+   "title": "Anecdote : Technique de broderie",
+   "text": "La broderie et la culture en laboratoire nécessitent les mêmes qualités : contrôle minutieux du poignet, angle précis et concentration totale.",
+   "unlockRequirement": "",
+   "cnUrl": "3c8bd6d44a18685ac041f451f2dc9194c39a775e504a802ecee900a627de0dc1",
+   "jpUrl": "c651c43e33e3025ec0936cc4da6596d7681efb9b541fe4c9d8b27cb078469940",
+   "enUrl": "9a279a57506e2bf6f9efa57af4dc902d12dd9876853387a142ff869ebdb2306a",
+   "krUrl": "37572870e650017e1d1d4846fbb2adee7628f9ce407a8b31940e2e285daaaa93"
+  },
+  {
+   "id": 11,
+   "title": "Connaissances : Dépassement de soi",
+   "text": "Il est peut-être possible d'accélérer ou de retarder l'arrivée de la mort, mais la vie s'éteindra toujours. Même si nous finirons tous par redevenir poussière un jour, nous pouvons toujours atteindre de nouveaux sommets.",
+   "unlockRequirement": "",
+   "cnUrl": "a799d196c39a38d43c61191e2c3606657345f4c5b195ea0a6bf8a0c5aa45cb96",
+   "jpUrl": "0da0674bbf4f77ce242c51593111dc57085cc80e4f71be4d2aa7bcce7b263b3a",
+   "enUrl": "5a0a44a8e1fe21dde2b4e0c4780db3650c20f97022dfd40ccc42bb1239d787bc",
+   "krUrl": "0a487d174da1c81101072a3df006c01c7fa7495f71464141f49d9f178ddc3d08"
+  },
+  {
+   "id": 12,
+   "title": "Connaissances : Recherches rationnelles",
+   "text": "Les humains surestiment l'infaillibilité de la logique, et deviennent esclaves de leurs émotions en se raccrochant à la raison. La science est un don né du fanatisme.",
+   "unlockRequirement": "",
+   "cnUrl": "88515c75f23bfbe0ceb708c4bb0fa4c2dffd698317e954c7034f7d0c43fa1b4d",
+   "jpUrl": "cb3382ebd371e06a18d5abd552642035efdce8f2b454079ea4fba28241995cd4",
+   "enUrl": "3282bac33eeacea4f0524a488e06f6ccefd36ccdd16ed2b3503977bf458db8ee",
+   "krUrl": "aeef3d9cd9f73cea49843af5637f81d66803c8b1b7851477531338df721e7af3"
+  },
+  {
+   "id": 13,
+   "title": "À propos de Herta",
+   "text": "Certains peuvent la trouver insupportable, ce que je peux comprendre, mais je m'en moque. Bien évidemment, Herta en a également conscience, c'est pourquoi j'ai accepté son invitation.",
+   "unlockRequirement": "",
+   "cnUrl": "aa8b2e3e0128ebdcb890e847babe0b57c14ed328991b5cbc4581083207c4932c",
+   "jpUrl": "e57dcbdc7120a6b8731889790c992f92e1b1fda70fb5f5df0db5dbc3f6559ccd",
+   "enUrl": "10444bfb843500ee5c9ad6bd8f56952a5da4bff309e540aab9f36715abe185ef",
+   "krUrl": "6de655f141fb52d7714b3a4ed141d93e3890c13304f0d896d9dbee3cd0eb72b1"
+  },
+  {
+   "id": 14,
+   "title": "À propos de Screwllum",
+   "text": "Screwllum et moi avons une compréhension diamétralement opposée de la vie, mais je crois qu'il ne s'en rend pas compte. Heureusement, nos échanges se limitent aux sujets de l'Univers simulé.",
+   "unlockRequirement": "",
+   "cnUrl": "bf4e0e3f28476c1213330875afa91ff4ba7958e93f723ac4bde0cc887105e288",
+   "jpUrl": "865e614759d255f50582699614d3bdbd4150f33e33a6408e7f7cd92ba4ba35fd",
+   "enUrl": "03e29fdf6a755002fb016995ce625cf9925cb3da8f92a14d3754b77fe4db006a",
+   "krUrl": "8f7d3344248336ae8c5076c6745ecf48db8b4613d3b62ba740ae5024c05d4031"
+  },
+  {
+   "id": 15,
+   "title": "À propos de Stephen",
+   "text": "Dépose un parfait à la pastèque dans le Bureau de Herta, et Stephen est sûr d'apparaître. Et n'oublie pas, il n'aime pas ceux à la citrouille ; on les utilise pour le garder à distance.",
+   "unlockRequirement": "",
+   "cnUrl": "14be4878b2f94cf3e4be4f323ed66ebd7157ed4df9c23f56988861f14c61001d",
+   "jpUrl": "691c4067a71dfea9f569c614736630ecac382083eec4ea22f571cb84da0b4e1f",
+   "enUrl": "e326f09aaf9ac0b4ca75f56ad7553397d3cf30f3a9b571bc877af53fa352d6fc",
+   "krUrl": "dc3a48f974e540bd288a9657ce5135a3a5c4a828b872ccb4a338c5fea90ced3e"
+  },
+  {
+   "id": 16,
+   "title": "Activation d'Eidolon",
+   "text": "Les instants passés peuvent-ils vraiment être restaurés comme ils étaient ?",
+   "unlockRequirement": "",
+   "cnUrl": "d090a1a1f9480b6f51c50fc1a6318f9b089d88bbfc8388fba5d41e1b40aeeb42",
+   "jpUrl": "6866cc18b11dc0e177db0928fbb123ac47cbe789d1d86f47021b1419acd1b3d8",
+   "enUrl": "83bc4d27cead2aa51430555e43946a64d1608947f3fc1e66b77e512585551d53",
+   "krUrl": "99f3e3e47b568b03eb787665f017af4a60bd16c9a83718fce51e0af93f787ac7"
+  },
+  {
+   "id": 17,
+   "title": "Élévation de personnage",
+   "text": "Les recherches avancent à une vitesse astronomique.",
+   "unlockRequirement": "",
+   "cnUrl": "9a383483a2be340683565bb99458b5a8cfe522656a19d6e4d9ab9b9e1ed12649",
+   "jpUrl": "fc7f022e62b91e57018ad49ad8f50668920cd8fe513021492f6ba76c67b301c1",
+   "enUrl": "c70d34fc241aee731e92c8549523137e3399b55227b0f356af3905785b1eb46a",
+   "krUrl": "9a3795b09a3d850bd0616d4b3bafcf39ff9e7436da6f419ff275b986c3860c2e"
+  },
+  {
+   "id": 18,
+   "title": "Niveau max atteint",
+   "text": "Malheureusement, le mystère des Aiôns reste encore entier.",
+   "unlockRequirement": "",
+   "cnUrl": "5f48afa5900300a861f3a88cc6de28e146dc3993d6e94b500848616b2cc0a80f",
+   "jpUrl": "0b14da7989e473d30b0321aa5f95925dcf56926a0e906d0756f26f46de837f06",
+   "enUrl": "617ec6e2a806639106d3762f0fae39682aac7b1eac924e4d443a371fe554c25f",
+   "krUrl": "df65cc43f80d44761b82331a993eb5275e165b1e86b12feeab7b0dbba1a4cedd"
+  },
+  {
+   "id": 19,
+   "title": "Activation de Trace",
+   "text": "Chaque respiration que l'on prend est une perception de soi.",
+   "unlockRequirement": "",
+   "cnUrl": "75a5e2df7f918b346192e608bfbcfefcf0763958fbfc104938a58ae8c95781e9",
+   "jpUrl": "df89b22de84af77bbd58083b7cc899a6453bf5a90d50ccbaf99906285927d2d7",
+   "enUrl": "d1e0ec2a49be5ceefb0538538f0320e9c05e419c5b5eec8412d55315b5091257",
+   "krUrl": "bcb88d10552480419c739f97bd7e78c9a94ec0478c49b6f6b509a8274ee72b7d"
+  },
+  {
+   "id": 20,
+   "title": "Rejoint l'équipe avec Pionnier/Pionnière",
+   "text": "Pionnier/Pionnière, te revoilà. Comme toujours, les bons comportements sont récompensés.",
+   "unlockRequirement": "",
+   "cnUrl": "7110cdd6ff08c054f15990ac0c2d8820ca8f483b001e1c9689cc17d46c20beb9",
+   "jpUrl": "f3aca4c25d2b34cb831958fad4cedb07697b7aed89d679b7fc0b362c9ab074d6",
+   "enUrl": "ebfc6c7908c9142c4a862267d1cab823b937037ebba1ec3b646f511ffc1c8bdd",
+   "krUrl": "f9a0df6ea63e9f01e871bd25e83eb19b8a962c6f13606cb1d17f3052fa9cc10a"
+  },
+  {
+   "id": 21,
+   "title": "Rejoint l'équipe avec Herta",
+   "text": "Si c'était l'Univers simulé, je serais à ta merci, mais c'est la vraie vie.",
+   "unlockRequirement": "",
+   "cnUrl": "c64c10bc53c13fb7d6ffff0c3523c5806ab75645621c366837f5103dab2887d3",
+   "jpUrl": "1b1a80a1473d12f024f182c841df8d2e261dd8d42b07708c89c0d0eedbbac2d5",
+   "enUrl": "bfb2366e38fc17e251ce53329dc5ff9f268bef1a975ed78bbd1a802d29489659",
+   "krUrl": "69b8958cf03e9314bc5b96209f5de6049888595c221df54fb6abf2d73e02510b"
+  },
+  {
+   "id": 51,
+   "title": "Rupture de faiblesse en début de combat",
+   "text": "Une vision de grâce et d'élégance.",
+   "unlockRequirement": "",
+   "cnUrl": "e733c899b74fdad6ae8852be6b7b0c8bb54222939be9af8a8819abb5c62257db",
+   "jpUrl": "ceb0d75cab982c80a5d235fad1d7bb0ade189bc34d1ecbd202c8292006c420fe",
+   "enUrl": "b8694c537556f51057a61036fcf3757c1ae7171380ebf5c70085940005f81d6e",
+   "krUrl": "7ed7405ad468c05f51b4301f4a2f9698588e006ad8d4fe8e4eee5d8d4d6f06f3"
+  },
+  {
+   "id": 52,
+   "title": "Avertissement de danger en début de combat",
+   "text": "Qu'avons-nous là ?",
+   "unlockRequirement": "",
+   "cnUrl": "484c7a7a17d87fdb11087754d76bbbe2c5d969c2450740a6d1bea141f9ffc126",
+   "jpUrl": "1ca0a7da6f5dfa09d12477ae33fbb01f729303c7fc498e326b2b977c6725c0aa",
+   "enUrl": "e73887c7b7d45f912c7c1480324c887137c44df2cfda6141cbbc75cc4db36d13",
+   "krUrl": "5579cd523815ab0d7c20e0a25cdd146470d5a3a79e57f2aa8591dcf7e7f0e4c0"
+  },
+  {
+   "id": 53,
+   "title": "Début du tour 1",
+   "text": "Je suppose qu'on peut y trouver une certaine valeur académique...",
+   "unlockRequirement": "",
+   "cnUrl": "656c3bc78cb5b648944b44af5dae30de9e1a33885032af99e49884faf1d230de",
+   "jpUrl": "96784e81ea8eef8b919201f8914d1399798b38ec5e1f5cdaa4e80fc2cef88053",
+   "enUrl": "e23333b45f1479e77008030e5e5d97f2711213f2f456e5e102bfa1edd321d18f",
+   "krUrl": "309b2319eaf32a016a3be0d8dfa53e6b48a454b9cae79d4bf129f8e923480887"
+  },
+  {
+   "id": 54,
+   "title": "Début du tour 2",
+   "text": "La vie ne se résume pas à respirer.",
+   "unlockRequirement": "",
+   "cnUrl": "f9b33cc65667232da0f99b6ccbf4df0f4a625e104594521029d620e527b2ba56",
+   "jpUrl": "6bb8cba6188995e8e567ccee237a4953e537142a53053e154122bf2f8a722eef",
+   "enUrl": "b7f0c974f8f8c6a78dce766e1b5139edf9d677e9a20caaf59f0733fb36c06ae2",
+   "krUrl": "8c45fc58a519b11c15d4740c37702004fe810f12a1790f6b4f884a0ce3713942"
+  },
+  {
+   "id": 55,
+   "title": "Tour inactif",
+   "text": "Attendre signifie changer.",
+   "unlockRequirement": "",
+   "cnUrl": "73bf8308ee2a2e9894fa0b734a7acc4c418455b67a4b9c3e2a169aaae3d2ea80",
+   "jpUrl": "441d84a7f27b7edbfdf41b6e01bc728de24e667d1a569bdd41f08872dad989c2",
+   "enUrl": "be02f417482f2ea86b31769e3c280f3dff8b6074804f268425c8cce566d41187",
+   "krUrl": "2f67f35e113821e9ec2198ca13d78c93874bc83bd749745fdc5d5425ed387840"
+  },
+  {
+   "id": 56,
+   "title": "Compétence 1",
+   "text": "Éternelle mélodie.",
+   "unlockRequirement": "",
+   "cnUrl": "d70990ddc9ff9223bd13dbf0af916a9fcc62e85063de7547b75f51bcda6d9b84",
+   "jpUrl": "09e4e9c4d040c9c7a53fc10bb80393bf36cb85f808bf325abe784a02e1e1b335",
+   "enUrl": "b186c688dab421c2960a563ebffa4945a40eed60f3236537b2268abf51ce509a",
+   "krUrl": "7d4b905b02989103693851325dd458cc9657d1c496897e8c8c861fd4346676f0"
+  },
+  {
+   "id": 57,
+   "title": "Compétence 2",
+   "text": "Tout est unité.",
+   "unlockRequirement": "",
+   "cnUrl": "0b8869d0b38dd9c04b014312a7195b16b0ba324051cd39b10fc7af2db2270261",
+   "jpUrl": "0c08cc21fab5addff8836212e94310889dc26a8a5b8c04f58f82cf02b3a14fec",
+   "enUrl": "4bf1d61e631e6b8dc2658231ffcde129f70cd4af45872d45bd7ef6f052bc0d79",
+   "krUrl": "0b255908c51538bcd4a97ef16d5245ea4b897ff1dd09e9d9f2498c19197c8d3f"
+  },
+  {
+   "id": 58,
+   "title": "ATQ normale 1",
+   "text": "Tu feras l'affaire.",
+   "unlockRequirement": "",
+   "cnUrl": "8e5a501e956de4a7ec0c2821a2514f9de1aee3e7906adbde34c72b4f0b636ff8",
+   "jpUrl": "88db22ef406cbbd63fc8fd8195a99aa7c0e857e878d84ff22945652c2619fc3e",
+   "enUrl": "7774068b7b9b12d271bf064b724350740300eb08d3a0e62cde2f72a368a035d7",
+   "krUrl": "36d24e7b8b6de71ccf8ee7ecd0f2f1338e5391318411c5612ca02ff930620e9c"
+  },
+  {
+   "id": 59,
+   "title": "ATQ normale 2",
+   "text": "Fais attention.",
+   "unlockRequirement": "",
+   "cnUrl": "65b010b068898b5cd82165dfbfd0ff05cb91a257ddf67da56c67bcfc52d6e3de",
+   "jpUrl": "1b012e4645f525d0911d649afca0869c06b266f07e77a78a525e97b70366cd6e",
+   "enUrl": "da86f697334503b11167519771938d1f960595d7925fbc0c6d3d193203aad09f",
+   "krUrl": "1c06097c807fdc35747f3d3977bff01437aaebba60d24bb9ee805e8371c98930"
+  },
+  {
+   "id": 60,
+   "title": "Attaque légère subie",
+   "text": "On s'amuse ?",
+   "unlockRequirement": "",
+   "cnUrl": "6fca163cd8f03682c7352c93db1fbd6cb689e260ffe9e44a6cfd09cb6ce38901",
+   "jpUrl": "3b9596fcb106c0aad3825968947bbe1fd7afe4e657f6ade20c62355ef0843222",
+   "enUrl": "ef20f1e94e38c08da304c9d45103a737d809fce499ea6ca0e63b6a4244ed3a94",
+   "krUrl": "73d0317c79b7b765d7810aba1dfee253b39653aa2744f4ba73a5a774be505b79"
+  },
+  {
+   "id": 61,
+   "title": "Attaque lourde subie",
+   "text": "Ne vous approchez pas.",
+   "unlockRequirement": "",
+   "cnUrl": "feaed1f0966f7de854edea5296fd42038eda069efd6046fce90b1392d9cb8420",
+   "jpUrl": "702a8ae1f9126764b0dd4b30228f580bc8f15409a0d1cbad5067437046d20da5",
+   "enUrl": "f10c657e525d4a85a46933c1637386a5db2234ff06e2e83500bb1bbde2332220",
+   "krUrl": "6995a8c17d3d59953d3cbad1ff57e9b4622f7518f5a21d5c26244dfcf892a964"
+  },
+  {
+   "id": 62,
+   "title": "Activation de l'ultime",
+   "text": "Chaque pétale du jardin de la vie...",
+   "unlockRequirement": "",
+   "cnUrl": "f95d2706bf3aae0ccdfed58c617530ad36ad4b8f0961270f75fc6084a49bf582",
+   "jpUrl": "42c42c28bc85d03d3a0fa4de0eba0cc27aa88eed2b09828318f32f82d2ab26d2",
+   "enUrl": "7fa7baa32e08e4a666733ccaf1e5d924344d63b40f461370eabdfc2daddf7f54",
+   "krUrl": "548db56d7ebb427e68c0d171c59d1e9c5f740671bb75a20bccaa94e895a7d142"
+  },
+  {
+   "id": 63,
+   "title": "Déclenchement de l'ultime",
+   "text": "Sera balayé... par le vent du temps.",
+   "unlockRequirement": "",
+   "cnUrl": "3ed256f9de8f0fab379b8cf49f2103cae9d83fb8eb82157dc85f7dfac39e7087",
+   "jpUrl": "11080579ce8c97e85235c8f97d90ef8f9b46313b4426843dcde46dd1074f2189",
+   "enUrl": "861247ed28232c8fa934befe1cf1e5abb478d749634cc516134f5a67d64c9992",
+   "krUrl": "5bf24307468529c8c43db81d0325ed64990e1100b2252bd1bfdaddf07a958f5e"
+  },
+  {
+   "id": 64,
+   "title": "À terre",
+   "text": "Toujours pas... de réponse...",
+   "unlockRequirement": "",
+   "cnUrl": "be59aa9c974e9c3a18ea37b11287b9aa8f70cd89d9fc4433fc134d522253be9c",
+   "jpUrl": "d0b616b84300a23a5ad062c87617497f64f6486392017b3156e6a003fe70d8f4",
+   "enUrl": "1de7f5a77ef0a28d910ee6964d68f4e456b4a364bf5409611cb1eb2ff45c9afe",
+   "krUrl": "089d4a32cda4c2b870a0ac5f2e2e184109c58ed6dd18ad549b7fd2e99293252b"
+  },
+  {
+   "id": 65,
+   "title": "Retour au combat",
+   "text": "Continuons.",
+   "unlockRequirement": "",
+   "cnUrl": "e4474a84cf5891f9cd68bf56906abb090bd8f89dd4981d88036f7a057ddda9e1",
+   "jpUrl": "188aac2a3fe2c73b96b02372acab5a9b7dd3dbf774e12b76362b6d090c907ec2",
+   "enUrl": "df03a226c2514b9b980fa8dc8851d36b47e7e7b597234bc36310ad0bdc921c04",
+   "krUrl": "d97aadb6640efd7b4074fc300d3e4880b27282a6001f3b29ba29a075996cbb52"
+  },
+  {
+   "id": 66,
+   "title": "Récupération de santé",
+   "text": "C'est donc ça la chaleur de l'existence...",
+   "unlockRequirement": "",
+   "cnUrl": "6e6b606d8129fe8d8a54fa23b18d8ffbb8e221c823979e56a8a9bd34b5ae02a2",
+   "jpUrl": "71f006e0bc01e18873bb964d3c3a4d92bcf52af67e151788835d5bfbe9fb0ebc",
+   "enUrl": "c1e4895281fcb265dd3ef7bce168a2069f56459390822bea8e2951e4cd25700b",
+   "krUrl": "9ef2eb1b985ac737ccb69866212fec50fe8ffacec459e49c72b31f32a3cfc466"
+  },
+  {
+   "id": 67,
+   "title": "Technique",
+   "text": "Le son persiste.",
+   "unlockRequirement": "",
+   "cnUrl": "62f3e9702b49462aa8fefd7bc93719f429e5ddc72b5ebdda8ce392106f6d0718",
+   "jpUrl": "2dce61f30975bd610e4b39b40d4c8a5a46ffe16907d5dc7a81bad4fcac3f1c37",
+   "enUrl": "f1bdf0e374d6163558e4b1239d5965b50776a58890fbd9ca3d268d1a073c3dfd",
+   "krUrl": "c0835d35898558451e6e9324b2951dcb8eea12b388a192644215db180de23c43"
+  },
+  {
+   "id": 68,
+   "title": "Combat gagné",
+   "text": "La vie... est une véritable merveille.",
+   "unlockRequirement": "",
+   "cnUrl": "acfaab192457d82f0b6c78b718c31d2f3981d1ae7483628585e08e52938d0bb8",
+   "jpUrl": "99eba797f20a3f650dcf2dbb46f811c1153b608d82e39bc8374d08615fcca1e6",
+   "enUrl": "dca510b3bbc2f57ae37fa421531400e6031efdd5e0dc4e7c7adea9fdc4ae68e7",
+   "krUrl": "52295fa3f50eb029a9bebc5f2ea75d32823c046607c2e67984045ea9d4006a56"
+  },
+  {
+   "id": 69,
+   "title": "Ouverture de coffre au trésor 1",
+   "text": "La présentation laisse à désirer.",
+   "unlockRequirement": "",
+   "cnUrl": "d6d42d74b456adf49a63b4988231f39dd37715113e278c28e1924487beaf3bc4",
+   "jpUrl": "1b5206c10e81781e5568e999fece5573af7016132ecb58293429cd2101359e22",
+   "enUrl": "bb8d6a46023058b5cf803ce26c52406a4137cb27072f2c53b6c180f36534df64",
+   "krUrl": "d34fc318715b8e4f432b2b7f572fc945cd43cc1388f0a0ebcdcea403fff7c4e3"
+  },
+  {
+   "id": 70,
+   "title": "Ouverture de coffre au trésor 2",
+   "text": "Ça pourrait s'avérer utile.",
+   "unlockRequirement": "",
+   "cnUrl": "55b1629ee0895cfd1a7f0c2d398edd8c48a8ac3e4e221c0968473a2fa4b9f2dd",
+   "jpUrl": "63c953d718bf5e412ea8aded48dac8ecf403e9bf271cfe823211f725d87b0c6b",
+   "enUrl": "439b2e42e939719df93b26b5cdaf7beaa140cf31d87d3deb650545bf47fd41fc",
+   "krUrl": "59706881754e0049f7c10552859feb7b49190bb364510ba5d4fc578900e7509d"
+  },
+  {
+   "id": 71,
+   "title": "Ouverture de coffre précieux",
+   "text": "Oh ? Mieux que prévu...",
+   "unlockRequirement": "",
+   "cnUrl": "10215ac7f1017d688a2c423acf2f85a9a7b9c87499be7b2c15888f84d55c38c5",
+   "jpUrl": "df530bbf05e4cd60a3afcb7ebae1dbd99f3c338fde60e0b8bba49666138fdffa",
+   "enUrl": "672c9b9a32b5b0712eefd9b001bce076827b1032852a6909b76824c9ef16d5ff",
+   "krUrl": "7ba6d1d3c309bd5a115959d95b588f4750091dc5f4214489928e9707e99cc8c5"
+  },
+  {
+   "id": 72,
+   "title": "Énigme réussie 1",
+   "text": "Ils osent appeler ça une énigme ?",
+   "unlockRequirement": "",
+   "cnUrl": "8d04a22676ac23fc6618be1c5295ed4718bfc1aeecbe2ffe05fcc5706f0cc92d",
+   "jpUrl": "dfdccbb9f6403444c47e4abfe75f77d3a90a621e938feeaf18d520c13e23c349",
+   "enUrl": "a4b77aa438b16c828b9349e1e05bf03c4f1058a7b6ca06890a1789e3f36a987f",
+   "krUrl": "e4ac392f5988b7d0973a0c2e7f7ce48750f4cee624f5aad548ac0753cd266a76"
+  },
+  {
+   "id": 73,
+   "title": "Énigme réussie 2",
+   "text": "Une solution simple, c'est tout.",
+   "unlockRequirement": "",
+   "cnUrl": "cf48c14ee7a30a703e974120f0d4cbcc2de9df44c1c8f91c176e89d2818f5780",
+   "jpUrl": "331083cdc32a2739c768866e99a064eb4bb60eb90708c915bac79ba2c90f4d25",
+   "enUrl": "a30d2472a43be5e1fb579a7a5102eeb1a0feaf76533af39905abe52a9b99d1f2",
+   "krUrl": "f4decb8b0475e18acf4844fe9da02966705bf0ad88562ea31ecce062e10f1250"
+  },
+  {
+   "id": 74,
+   "title": "Cible ennemie trouvée",
+   "text": "Hmmm ? Je me demande ce que c'est ?",
+   "unlockRequirement": "",
+   "cnUrl": "76c6ad3247b470972723985735268a1072ec547532e0ab97d0374a08a4787e48",
+   "jpUrl": "c557059980bbba10c2939edf314d0fd0efa9dbb80fd5a3a3fa49817ad8f53110",
+   "enUrl": "e74087a17e40b9fbc3bdb4a32d98b24281c7f489cede0c487601e063f9de5296",
+   "krUrl": "51e1c593cd1fc05e2222eb09d043ea53fe116c051cefb740119ec4819ef0fa2b"
+  },
+  {
+   "id": 75,
+   "title": "Retour en ville",
+   "text": "Repose-toi, c'est l'heure du thé et des gâteaux.",
+   "unlockRequirement": "",
+   "cnUrl": "371fac15092c106cb7abfeac0286362df1df17bfea29cd0183a3ffe6897629f9",
+   "jpUrl": "0962e42c0771412ddb084882a185bb008085dfe292af1d31ae0c64fed3a713ac",
+   "enUrl": "f58b0c70725a948aff753abd90f800ff18fc2279ee4d89a7f48575a5defad735",
+   "krUrl": "eb63aef14aeda281cb1fb4a567c0794cb4961d9be5648577f44bb617c6f9eddb"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Détails du personnage",
+   "text": "Une érudite à l'immaculé tempérament. Membre n° <nobr>81</nobr> de l'illustre Société des génies et experte en science de la vie.<br />Elle a attiré l'attention de Sagesse grâce à son talent et à sa persévérance à toute épreuve, avant de commencer à étudier les origines de la vie dans un recoin isolé de l'univers.<br />C'est dans cette optique qu'elle a été invitée par Herta à collaborer avec Screwllum et Stephen afin de développer l'Univers simulé.<br />Elle aime secrètement le théâtre traditionnel et les desserts, et s'intéresse de près à l'art de la broderie.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Histoire du personnage : Partie I",
+   "text": "Elle a été exposée aux sciences dès sa prime enfance par sa mère qui était aussi « scientifique ».<br /><br />La vie était douce dans sa petite maison entourée d'amoureux des sciences, et elle comprit rapidement que l'amour pouvait avoir différentes formes.<br /><br />Sa grand-mère aux cheveux gris adorait le théâtre traditionnel, pour ses fredonnements et ses gazouillements. Son père, lui, ne quittait jamais ses grandes bottes fourrées.<br />Ses parents s'aimaient, ce qui ne les empêchait pas de se disputer de temps en temps.<br />C'était une enfant impassible et dont on pardonnait tout le temps les erreurs.<br /><br />« J'étais plus proche de ma tante Arlice, car elle m'achetait des friandises. C'était la meilleure. »<br /><br />La jeune fille se montra rapidement entêtée. Sa définition de l'amour différait largement de ce qu'elle trouvait dans les livres.<br />En grandissant, sa mère devint plus sévère avec elle. Ensemble, elles arpentaient péniblement une vaste planète gelée.<br />La fillette poussa un cri et s'arrêta au milieu du chemin, observant les « formes de vie » fantastiques et enchanteresses piégées sous la glace, ou du moins, ce qu'il en restait.<br /><br />Un jour, alors qu'elle rentrait d'une de ces expéditions scientifiques, elle reçut une « récompense ».<br />Lorsqu'elle goûta une petite bouchée du gâteau, son parfum délicieux emplit instantanément son palais. Son impatience donnait aux recherches de sa mère une odeur alléchante.<br /><br />Quittant leur terre d'origine, une planète bénie par l'Abondance, elles prirent un vaisseau pour partir explorer d'autres mondes.<br />Entourée par les grenades aveuglantes, les foulards de soie, les rubans et les broderies, la fillette baignait dans la joie au milieu des « formes de vie » créées par les spirales de données.<br /><br />« A-Ruan, quand tu auras fini ton gâteau, lave-toi bien les mains avant de revenir à la table de travail. »",
+   "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie II",
+   "text": "Elle était vêtue de noire lors des funérailles de ses parents. Comme d'habitude, ses cheveux étaient impeccablement noués. Son expression était masquée derrière les mèches qui encadraient son visage.<br /><br />Elle ne versa pas une seule larme.<br /><br />À la nuit tombée, plusieurs couches de motifs géométriques constitués de spirales de données apparurent sur l'écran du laboratoire. Elles variaient, grandissaient, au rythme des mélodies du théâtre traditionnel. Après avoir écarté les couches de motifs, elle découvrit un secret conçu et défendu avec le plus grand soin : ses parents, les yeux fermés. Leurs visages étaient de marbre, comme s'ils dormaient.<br /><br />« Quelle déception. Ils n'ont pas tenu la promesse qu'ils ont faite à Grand-mère.<br /><br />Et moi, je n'ai pas tenu ma promesse de les protéger quoi qu'il arrive.<br /><br />Seule la science... ne déçoit jamais », dit-elle.<br /><br />Afin d'honorer ses deux parents de manière équitable, elle cessa d'utiliser son prénom et s'attribua un nouveau nom, union des noms de ses parents.<br /><br />Depuis ce jour, dès que quelqu'un l'interrogeait sur son monde d'origine, ses yeux se remplissaient de confusion. Elle semblait avoir tout oublié.<br />C'est dans cet état qu'elle a commencé à travailler sans relâche à de nouveaux calculs. Elle était tellement absorbée dans ses recherches qu'elle ne mangeait plus régulièrement. Une fois lancée, elle pouvait passer des nuits et des jours à travailler sans jamais s'arrêter, si ce n'est pour s'assoupir quelques instants une fois ses limites atteintes.<br /><br />Bientôt, elle ne put compter que sur la lueur des lucioles pour récolter ses résultats chaque nuit. Plus elle semblait oublier les lois fondamentales de la vie, plus elle progressait vite. Elle négligeait les formules, et finit par ignorer totalement le sens de la vie. Elle se contentait d'observer, d'évaluer, de tenir les données entre ses mains pour mieux les sentir, avant de mettre en place de nouvelles lois régissant les espèces.<br /><br />Les fougères et les fleurs qu'elle faisait pousser dans son laboratoire s'épanouissaient toujours plus. Elles grandissaient à vue d'œil et finirent par emplir tout l'espace de son laboratoire. Entre les pétales et les feuilles se trouvait toujours l'image sereine et impassible de ses parents, formée par l'agrégat de « données ».<br /><br />Alors que ses « parents » endormis étaient sur le point d'ouvrir les yeux, elle avait déjà détruit toutes les lois existantes en matière d'évolution biologique sur cette planète, sans pour autant cesser d'avancer vers son objectif.<br />Ce n'est qu'au moment où elle leva les yeux de ses travaux pour observer le ciel qu'elle remarqua le regard de l'Érudition porté sur elle.",
+   "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie III",
+   "text": "Après avoir reçu le regard de Sagesse, elle quitta sa demeure pour entamer une vie d'hermite.<br /><br />Nul ne sait ce qu'elle a demandé à Sagesse, mais après cet événement, elle est devenue encore plus apathique et impassible, et toujours plus absorbée par ses recherches. Ses travaux ne portaient plus que sur la nature fondamentale de la « vie ».<br /><br />Une grande variété de « formes de vie » ont vu le jour entre ses mains.<br />Certaines formes de vie « brûlantes » devinrent des flammes qui glissaient sous ses pieds, lui donnant parfois l'impression qu'elle était devenue feu.<br />Certains êtres « fluides » devinrent une lumière liquide capable de couler le long de ses poignets, lui donnant l'impression d'être devenue lumière.<br />Certains objets animés créés par son savoir tentaient de développer leurs propres pensées, leur conscience et leurs émotions. Ils pouvaient crier, s'esclaffer ou gémir. Et tout cela se fondait dans son corps.<br /><br />Mais elle ne pouvait pas les ressentir.<br />La vie est éphémère, après tout. Tout être naît et meurt en un instant, tandis que ses expériences persistent.<br /><br />Parfois, ses « recherches » impulsives ébranlaient l'ensemble du système biologique. Elles transformaient des planètes. Des baleines volantes, des biches pouvant nager, des fleurs craintives et des arbres au système racinaire gigantesque... Ses créations dépassaient le cadre du possible et de l'imaginable en matière de vie organique.<br /><br />Elle travaillait toujours plus dur à la compréhension de la « vie » afin de se rapprocher plus encore de Sagesse et de son regard gravé en elle.<br /><br />Les Aiôns... Quel genre d'êtres sont-ils ? Sont-ils une forme de vie à part ?<br /><br />Alors que ses travaux révolutionnaires faisaient parler dans toute la communauté scientifique intergalactique, chacun s'employait à lui faire quitter sa vie de recluse.<br />Elle regarda à nouveau la lettre de la Société des génies posée sur son bureau et, cette fois encore, elle la jeta à la poubelle.",
+   "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie IV",
+   "text": "Elle vivait entourée d'un fan de science excentrique venu d'une petite bourgade, d'une forme de vie non organique et d'une fille marionnette. Ils partageaient le thé en sa compagnie l'après-midi et l'aidaient dans ses travaux, se chamaillant parfois bruyamment et d'autres s'amusant.<br /><br />Quand est-ce qu'ils s'étaient rencontrés ? Elle ne s'en souvenait plus, seulement que c'était pour un projet. Elle se souvenait avoir été contrainte. Elle mâchait son gâteau, imperturpable. Elle n'était là que pour les « Aiôns » simulés, qui étaient dignes de son temps et de ses efforts.<br /><br />Elle voulait bien y consacrer son temps... mais ces efforts de sociabilisation étaient au-dessus de ses forces.<br /><br />« La Société des génies ? Ça ne m'intéresse pas.<br /><br />C'est un sentiment étrange, instinctif. Cette femme nommée \"Herta\" me ressemble un peu. Enfin... si on creuse bien. »<br /><br />Elle ne commettrait plus d'erreur. Elle ne faisait plus confiance à personne, elle ne serait donc plus jamais déçue et... elle ne décevrait plus personne non plus.<br />En quoi consiste l'essence fondamentale de la « vie »... Où se termine la « vie » ?<br />Existe-t-il des réponses à ces questions ?<br /><br />Aucune trace d'émotion n'apparaissait sur son visage impassible et fermé. Pourtant, ses cheveux s'agitaient sous la chaleur et la vapeur, et ses yeux étaient rougis... Elle aimait ce qu'elle faisait.<br /><br />Seul le mot « Aiôn » pouvait encore créer un pincement dans son cœur. Tout le reste n'était que simple distraction.<br /><br />Intéressant.<br />Dans l'« incubateur », une « vie » couvée par le « cuiseur à riz » s'était formée à la perfection. Cette méthode de création de la vie était un miracle.<br />Comme c'est romantique.<br />Elle connaissait mieux que quiconque le prix à payer pour étudier les Aiôns... mais elle s'en moquait. Elle savait ! Elle pourrait même devenir...?!<br /><br />Le moment était idéal... La mise à jour du « projet » allait bientôt commencer.<br /><br />Elle se retourna et s'en alla.<br />Sans qu'elle ne le sache, sa grand-mère avait toujours veillé sur elle à travers l'écran, jour après jour, pendant toutes ces années.<br /><br />«  A-Ruan... Ma petite A-Ruan. Quand nous nous reverrons, je me demande si...? »",
+   "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
+  }
+ ],
+ "archive": {
+  "cvCn": "张文钰",
+  "cvJp": "大西沙織",
+  "cvKr": "윤여진",
+  "cvEn": "Emi Lo",
+  "camp": "Station spatiale Herta"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Ruan Mei",
+ "rarity": 5,
+ "descHash": "Une membre de la Société des génies experte en sciences de la vie. Elle a collaboré avec Herta et d'autres génies pour développer l'Univers simulé.",
+ "artPath": "12bc32c42a748316c7707c4511b2bde3e8efbe5bda0bb54179e801e523f32b2d",
+ "miniIconPath": "f904196665ebaca96739350a72a9e797fd1fc0c5992c1ce557a560e7376368a3",
+ "damageType": {
+  "id": 4,
+  "iconPath": "c7ca3cbdcd5d26fbfad374f97d58d9152b5a398a5e5bf6d441a29041251fa779",
+  "color": "#47C7FD",
+  "name": "Glace",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "fd3dc153082117a49b1d8eb7d166dd32d65d636463e15c604b583d5945a4ca69",
+  "altIconPath": "691e6c36e7f71344352e4ed80941938d7dc5722b23cef7a18f7fa8722d8c0523",
+  "color": "#FFFFFF",
+  "name": "L'Harmonie",
+  "rarity": 0
+ },
+ "pageId": "ruanmei"
+}

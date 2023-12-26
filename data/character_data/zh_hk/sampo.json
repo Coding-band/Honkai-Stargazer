@@ -54,7 +54,7 @@
    "id": 267805,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "822b1e8c023333b210f71f503cce58516c58ffc4f47c709a4ba4bc03387fdd68",
+   "iconPath": "ec233e43b828d3d0aaa069d3bb911a437404e6a0a34a358cdf134da8ad7fb0fa",
    "name": "暴風之眼",
    "desc": "興風者殘留的箭簇，風屬性角色的晉升素材。",
    "lore": "裂界創造的以某種虛卒爲原型的怪物所留，螺旋氣流的中心，一截箭簇隱約可見。<br /><br />「於裂界銷殞者，必將於裂界重生。」",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/267805",
    "comeFrom": [
+    "凝滯虛影【鉚釘鎮】",
     "凝滯虛影【鉚釘鎮】",
     "「萬能合成機」- 材料置換"
    ]
@@ -180,6 +181,7 @@
    "rewardPath": "/material/635669",
    "comeFrom": [
     "擬造花萼【大礦區】",
+    "擬造花萼【大礦區】",
     "餘燼兌換"
    ]
   },
@@ -187,7 +189,7 @@
    "id": 717290,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
    "name": "古代引擎",
    "desc": "舊世界時代遺留的機器引擎。強化所需的高級材料。",
    "lore": "以地髓爲能源注入動力，運轉時噴燃的並非火星，而是遊走的極光。<br /><br />「只有大守護者直屬的技術部有權調閱舊世界的資料，我嘛，被開除後就進不去啦。」",
@@ -205,7 +207,7 @@
    "id": 836255,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "iconPath": "34d88252515cd13ab58b6f5aae7329794a4a330a0147e1c5f755c8a2f4444bff",
    "name": "沉淪黑曜",
    "desc": "一整塊自虛空中捕獲的黑質。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
    "lore": "意志薄弱之人只是向其棱面送去一瞥，便會在混沌中永世沉淪。<br /><br />「         」",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/836255",
    "comeFrom": [
+    "擬造花萼【大礦區】",
     "擬造花萼【大礦區】",
     "「萬能合成機」- 材料合成"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
+    "擬造花萼【大礦區】",
     "擬造花萼【大礦區】",
     "「萬能合成機」- 材料合成",
     "餘燼兌換"
@@ -945,10 +949,10 @@
    ]
   },
   {
-   "tagHash": "妨害",
+   "tagHash": "羣攻",
    "descHash": "對敵方全體造成等同於桑博<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#00FF9C;\">風</span>屬性傷害，同時有<nobr>#4[i]%</nobr>的<u>基礎概率</u>使被攻擊的敵方目標受到的持續傷害提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>，持續<nobr>#3[i]</nobr>回合。",
    "ultimateCost": 120,
-   "break": "0",
+   "break": "60/hit",
    "energy": "5",
    "id": 49935,
    "name": "驚喜禮盒",

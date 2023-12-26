@@ -36,7 +36,17 @@ import Tingyun from "../../data/character_data/de/tingyun.json";
 import Welt from "../../data/character_data/de/welt.json";
 import Yanqing from "../../data/character_data/de/yanqing.json";
 
+//add in 1.6.0
+import DrRatio from "../../data/character_data/de/drratio.json";
+import RuanMei from "../../data/character_data/de/ruanmei.json";
+import Xueyi from "../../data/character_data/de/xueyi.json";
+
 const DE = {
+  //add in 1.6.0
+  DrRatio,
+  RuanMei,
+  Xueyi,
+
   Argenti,
   Huohuo,
   Hanya,

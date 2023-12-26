@@ -1,0 +1,2755 @@
+{
+ "spRequirement": 90,
+ "iconPath": "ddaf67c017050fb73e24d2636fceb073708b1472e737f8bd261e4a02a1a5c1cc",
+ "bgPath": "63d96a479ca0678e98bb314d5c857d2ec3f4f621bf820992b7717c0b4684810b",
+ "figPath": "8a5513aef90767839602fae2824f35c020d5831a036d83684f9e7b3de5b6083f",
+ "fgPath": "dd6b26da2d98027b38640d36e62de5d423e1765fafe17f500a94dc2100445b76",
+ "splashIconPath": "0f2de12d43d1157a2a586285d70c245d3303f950006aca0855bad6fa2d03e79e",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 7,
+  "iconPath": "232bc80b207d7be892c4e0c41ea43b44080e51373e3c4f6f0f2f9e0eb4e03194",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "เครดิต",
+   "desc": "สกุลเงินที่องค์กรสันติภาพแห่งดวงดาวใช้ในการชำระบัญชีแก่ลูกค้า ซึ่งปัจจุบันได้กลายเป็นสกุลเงินหลัก ที่ใช้กันอย่างแพร่หลายสำหรับการเดินทางในอวกาศ",
+   "lore": "\"ผู้คนดิ้นรน ต่อสู้ และแลกเปลี่ยนเพื่อตัวเลขที่แสดงในเทอร์มินัล แต่สิ่งล้ำค่าที่แท้จริงนั้น ไม่สามารถซื้อได้ด้วยตัวเลขจากองค์กร\"",
+   "purpose": "สกุลเงินทั่วไป",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calyx (Great Mine)",
+    "รางวัลภารกิจ",
+    "รางวัลคำขอ",
+    "ร้าน Ember"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Tracks of Destiny",
+   "desc": "วัสดุระดับสูงสำหรับการเพิ่มเลเวล Trace",
+   "lore": "ความพ่ายแพ้ซ้ำแล้วซ้ำเล่าจะนำไปสู่ชัยชนะ ก้าวไปข้างหน้าก้าวแล้วก้าวเล่าจะนำไปสู่จุดเปลี่ยนของโชคชะตา",
+   "purpose": "วัสดุ Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "รางวัลคะแนนสะสม Simulated Universe",
+    "เกียรติยศนิรนาม",
+    "แลกเปลี่ยน Ember",
+    "รางวัลกิจกรรมจำกัดเวลา"
+   ]
+  },
+  "270195": {
+   "id": 270195,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "e45d41312c347a0e92a83719307e7cad0367aa98023d7b4627daa452423892ca",
+   "name": "Guardian's Lament",
+   "desc": "วัสดุระดับสูงสำหรับการเพิ่มเลเวล Trace",
+   "lore": "สิ่งที่แตกหักเหมือนกับเกราะชุดนี้ก็คือความปรารถนาที่บิดเบี้ยวของผู้พิทักษ์สูงสุดคนหนึ่ง<br />เธอปรารถนาที่จะเปิดเส้นทางที่ปลายสุดของลมหนาวเพื่อผู้คนของเธอ แต่สุดท้าย กลับกลายเป็นหุ่นเชิดที่ถูกควบคุมโดยเจตจำนงที่ใหญ่ยิ่งกว่า<br /><br />\"ผู้พิทักษ์สูงสุดเป็นตำแหน่งของผู้ปกครอง Belobog ที่สืบทอดจากรุ่นสู่รุ่น ผู้ซึ่งคอยดูแลชาวเมืองทุกคน... แต่ชาวเมืองกลับไม่เคยรู้เลยว่า ไม่มีใครคอยดูแลและพิทักษ์พวกเธอบ้างเลย\"",
+   "purpose": "วัสดุ Trace",
+   "rarity": 4,
+   "rewardPath": "/material/270195",
+   "comeFrom": [
+    "Echo of War (Everwinter Hill)"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "คู่มือการเดินทาง",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>20000</nobr> หน่วย",
+   "lore": "หนังสือชุดเกี่ยวกับการผจญภัยที่จำเป็นต่อการสำรวจโลก กดปุ่มอ่านเพื่อฟังเสียงที่น่าฟังในภาษาที่คุณเข้าใจ ซึ่งจะบอกเล่าเกี่ยวกับประสบการณ์การผจญภัยในโลกต่างๆ ของเหล่านักผจญภัยที่มีชื่อเสียง รวมถึงภูมิปัญญาอันล้ำค่าที่พวกเขาได้รับจากดาวแต่ละดวงด้วย<br /><br />\"คู่มือการเดินทางชุดใหม่ 'การทำอาหารระหว่างดวงดาว' จะวางจำหน่ายเร็วๆ นี้ โปรดติดตามกันให้ดี\"<br />\"สำหรับการส่งผลงาน โปรดติดต่อกับ Synesthesia Beacon ERD<nobr>-23</nobr>θ เพื่อติดต่อตัวแทนของสถาบันแห่งปัญญา โดยวิธีการจ่ายค่าต้นฉบับนั้น สามารถจัดการได้ตามความสะดวกของคุณ\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "\"Forgotten Hall\""
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "บันทึกการผจญภัย",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>5000</nobr> หน่วย",
+   "lore": "บันทึกการผจญภัยที่ได้รับการจัดการอย่างเป็นระเบียบ และมีคุณค่าต่อการศึกษา ซึ่งประกอบไปด้วยภาพประกอบและข้อความที่เกี่ยวกับการผจญภัยตั้งแต่ต้นจนจบ ตลอดจนข้อมูลที่มีคุณค่าและเทคนิคที่เกี่ยวข้องกับการเอาชีวิตรอด<br /><br />\"ทำไมไม่แปลงข้อมูลใส่ลงไปในดิสก์ล่ะ? สะดวกกว่าตั้งเยอะ\"<br />\"เมื่อเผชิญกับพายุดาว และการปะทุของกระแสนิวตรอนแล้ว เทคโนโลยีขั้นสูงนั้นมีความเปราะบางมากกว่าที่คิด นอกจากนี้ คนทำหนังสือเล่มนี้คงอยากจะให้คนอ่าน สามารถอ่านได้ด้วยวิธีที่ง่ายที่สุด\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "การฝึกประจำวัน",
+    "ร้าน Ember"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "ความรู้จากการเดินทาง",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>1000</nobr> หน่วย",
+   "lore": "ไดอารี่การเดินทางที่เขียนด้วยลายมือสุดยุ่งเหยิงและมีเนื้อหาตามใจชอบ ซึ่งไม่ค่อยมีประโยชน์สำหรับคุณสักเท่าไหร่<br /><br />\"Dan Heng อ่านจบแล้วก็รีบเอากระดาษพวกนี้ไปทิ้งเถอะ\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "รางวัลคำขอ"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "28d0ba947e29fa63210d8ae2c432cb80339f98427c8655a9ca050184f69c4819",
+   "name": "Ancient Part",
+   "desc": "ชิ้นส่วนเครื่องจักรที่หลงเหลือมาจากโลกยุคเก่า เป็นวัสดุพื้นฐานที่ใช้สำหรับเสริมพลัง",
+   "lore": "แม้ว่าจะมีขนาดเล็ก แต่กลับถูกสร้างขึ้นด้วยเทคโนโลยีที่คนในยุคปัจจุบันยากจะทำซ้ำขึ้นมาได้<br /><br />\"สกรูตัวเล็กๆ ในโลกยุคเก่านั้นแข็งแกร่งกว่าเกราะของเราเสียอีก\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "ดรอปจาก Automaton",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "รางวัลคำขอ",
+    "แลกเปลี่ยน Ember",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "7089e982e18575f3824ab28ae0e91f40c8214edf6253a7162142bdc7fc0acdbe",
+   "name": "Ancient Spindle",
+   "desc": "เพลาของเครื่องจักรที่หลงเหลือมาจากโลกยุคเก่า เป็นวัสดุธรรมดาที่ใช้สำหรับเสริมพลัง",
+   "lore": "ชิ้นส่วนที่ประกอบเข้าด้วยกันอย่างแม่นยำแล้ว หากถอดออกมาจะไม่สามารถประกอบกลับเข้าไปใหม่ได้อีก แม้แต่ช่างซ่อมผู้ชำนาญในแผนกเทคโนโลยีของ Belobog ก็ยังต้องคิดให้รอบคอบก่อนที่จะแตะต้องมัน<br /><br />\"เจ้าบื้อ เอาของแบบนี้ไปให้เจ้าชุดเกราะสีน้ำเงิน ก็เหมือนกับว่าให้กระป๋องที่ไร้ค่าสองสามอันแค่นั้น เอาไปให้ท่าน Svarog เถอะ รับรองเลยว่าเรื่องกินเรื่องใช้สบายใจหายห่วง\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "ดรอปจาก Automaton เมื่อระดับความสมดุลถึง Lv.2",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "635671": {
+   "id": 635671,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "8e1b0a1a8ab4a806daac48e2e5de6c69a9a1aad87f950c5a4c92c9513dd9d6b9",
+   "name": "Seed of Abundance",
+   "desc": "เมล็ดพันธุ์แห่งพรที่เทพดาราแห่งความเฟื่องฟูได้หว่านเอาไว้ สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">เฟื่องฟู</span>ได้เล็กน้อย",
+   "lore": "ผู้ที่สัมผัสมันจะค่อยๆ ได้รับการรักษาบาดแผลและโรคต่างๆ<br />ผู้คนที่สวดอ้อนวอนขอพรให้กับชีวิตในขณะที่สิ้นหวัง มักจะได้รับความเมตตาอยู่เสมอ<br /><br />\"คุณย่อมได้รับในทุกสิ่งที่เอ่ยขอ\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 2,
+   "rewardPath": "/material/635671",
+   "comeFrom": [
+    "Calyx (Backwater Pass)",
+    "Calyx (Backwater Pass)",
+    "ร้าน Ember"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
+   "name": "Ancient Engine",
+   "desc": "เครื่องยนต์ของจักรกลที่หลงเหลือมาจากโลกยุคเก่า เป็นวัสดุชั้นสูงที่ใช้สำหรับเสริมพลัง",
+   "lore": "มันใช้ Geomarrow เป็นแหล่งพลังงาน เมื่อขับเคลื่อน มันจะไม่ได้เปล่งประกายไฟออกมา แต่เป็นแสงที่กระจัดกระจายไปทั่ว<br /><br />\"มีเพียงแผนกเทคโนโลยีที่อยู่ภายใต้การควบคุมของผู้พิทักษ์สูงสุดโดยตรงเท่านั้น ที่มีสิทธิ์เข้าถึงข้อมูลเกี่ยวกับโลกยุคเก่าได้ ส่วนฉัน หลังจากที่ถูกไล่ออกก็เข้าไม่ได้แล้วน่ะ\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "ดรอปจาก Automaton เมื่อระดับความสมดุลถึง Lv.4",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "836257": {
+   "id": 836257,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "e08699257c4a96a135b4467fd8eba3917d5734b2c943ac631d2a39ae3c4ccb37",
+   "name": "Flower of Eternity",
+   "desc": "ดอกไม้สุดงดงามที่เบ่งบานออกมาจาก Sprout of Life สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">เฟื่องฟู</span>ได้เป็นอย่างมาก",
+   "lore": "เกสรที่มีพลังแห่งความเฟื่องฟูควบแน่นอยู่ และจะไม่จางหายตลอดไป แม้จะอยู่ท่ามกลางเปลวไฟ น้ำแข็ง หรือสภาพแวดล้อมที่รุนแรง ก็ไม่สามารถขัดขวางการเจริญเติบโตของสิ่งมีชีวิตที่งดงามนี้ได้<br />เมื่อเวลานั้นมาถึง กิ่งก้านของมันจะใช้แสงจากดวงดาวเป็นอาหาร และส่วนรากจะใช้เลือดเนื้อของสิ่งมีชีวิตเป็นดิน จากนั้นจึงรวมร่างกันเป็นหนึ่ง และกลายเป็นอมตะ<br /><br />\"เรือขนาดใหญ่ที่แล่นข้ามผ่านภูเขาและล่องลอยเหนือความว่างเปล่า หากได้กินต้นไม้อมตะที่อยู่บนนั้น จะทำให้ชีวิตกลายเป็นนิรันดร์\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 4,
+   "rewardPath": "/material/836257",
+   "comeFrom": [
+    "Calyx (Backwater Pass)",
+    "Calyx (Backwater Pass)",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ"
+   ]
+  },
+  "866633": {
+   "id": 866633,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "8e0cd81aa41c7849a5da687f6b40c0b3ccec417ef1924c802b70c03021e69317",
+   "name": "Broken Teeth of Iron Wolf",
+   "desc": "ชิ้นส่วนฟันเลื่อยที่ Automaton ทิ้งเอาไว้ วัสดุเลื่อนขั้นของตัวละครประเภทกายภาพ",
+   "lore": "ว่ากันว่าเทคโนโลยีการผสมโลหะของผู้สร้างเมือง สามารถสร้างเลื่อยไฟฟ้าที่ผ่าแยกหินออกมาได้ แต่ปัจจุบัน งานฝีมือที่ประณีตเช่นนี้ไม่อาจเลียนแบบได้อีกแล้ว<br /><br />\"ท่าน Svarog บอกว่าใบมีดนั้นบางจนตัดถึงช่องว่างระหว่างโมเลกุลได้เลย... ว่าแต่โมเลกุลคืออะไรกันนะ?\"",
+   "purpose": "วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/866633",
+   "comeFrom": [
+    "Stagnant Shadow (Great Mine)",
+    "Stagnant Shadow (Great Mine)",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "920198": {
+   "id": 920198,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "ed9df14a2fe247f4667c3573aa6eb1f367c5435d4c699eadef89c51e4d42d084",
+   "name": "Sprout of Life",
+   "desc": "ต้นกล้าที่โผล่ออกมาจาก Seed of Abundance สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">เฟื่องฟู</span>ได้ปานกลาง",
+   "lore": "มันแผ่ไออุ่นออกมา สภาพแวดล้อมรอบบริเวณที่มันหยั่งราก ล้วนอุดมไปด้วยสีเขียวขจี พื้นที่รกร้างกลายเป็นดินอุดมสมบูรณ์ ต้นไม้ที่แห้งตายฟื้นคืนชีพและผลิดอกออกผล น้ำพุใสหลั่งไหลออกมาจากผิวดิน<br />เมื่อเข้าไปใกล้ กล้ามเนื้อและกระดูกของคุณ ก็ราวกับมีชีวิตเป็นของตัวเอง พวกมันเริ่มดิ้นพล่านและเพิ่มพูนขึ้นมา จนเกิดเป็นอาการคันยิบที่ยากจะทานทน<br /><br />\"ชีวิตยืนยง ทุกชาติภพไม่วางวาย\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 3,
+   "rewardPath": "/material/920198",
+   "comeFrom": [
+    "Calyx (Backwater Pass)",
+    "Calyx (Backwater Pass)",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ร้าน Ember"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 64.8,
+   "attackAdd": 3.24,
+   "hpBase": 158.4,
+   "hpAdd": 7.92,
+   "defenseBase": 69,
+   "defenseAdd": 3.45,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549408,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "attackBase": 90.72,
+   "attackAdd": 3.24,
+   "hpBase": 221.76,
+   "hpAdd": 7.92,
+   "defenseBase": 96.6,
+   "defenseAdd": 3.45,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549408,
+     "count": 8
+    }
+   ]
+  },
+  {
+   "attackBase": 116.64,
+   "attackAdd": 3.24,
+   "hpBase": 285.12,
+   "hpAdd": 7.92,
+   "defenseBase": 124.2,
+   "defenseAdd": 3.45,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633349,
+     "count": 5
+    },
+    {
+     "id": 866633,
+     "count": 2
+    }
+   ]
+  },
+  {
+   "attackBase": 142.56,
+   "attackAdd": 3.24,
+   "hpBase": 348.48,
+   "hpAdd": 7.92,
+   "defenseBase": 151.8,
+   "defenseAdd": 3.45,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633349,
+     "count": 8
+    },
+    {
+     "id": 866633,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 168.48,
+   "attackAdd": 3.24,
+   "hpBase": 411.84,
+   "hpAdd": 7.92,
+   "defenseBase": 179.4,
+   "defenseAdd": 3.45,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717290,
+     "count": 5
+    },
+    {
+     "id": 866633,
+     "count": 15
+    }
+   ]
+  },
+  {
+   "attackBase": 194.4,
+   "attackAdd": 3.24,
+   "hpBase": 475.2,
+   "hpAdd": 7.92,
+   "defenseBase": 207,
+   "defenseAdd": 3.45,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717290,
+     "count": 7
+    },
+    {
+     "id": 866633,
+     "count": 28
+    }
+   ]
+  },
+  {
+   "attackBase": 220.32,
+   "attackAdd": 3.24,
+   "hpBase": 538.56,
+   "hpAdd": 7.92,
+   "defenseBase": 234.6,
+   "defenseAdd": 3.45,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "445e66a993c1459eaaccec4923f70bb5fd3f068bf9f3a59fd034ba8c22317575",
+   "artPath": "4928cb2b99f590502375c74ddc082fbfb24efa16539a9e6070448929ca03d964",
+   "name": "Pharmacology Expertise",
+   "descHash": "หลังจากที่ถูกโจมตี หากเปอร์เซ็นต์ HP ปัจจุบันเท่ากับหรือน้อยกว่า <nobr>#1[i]%</nobr> จะรักษาตัวเอง 1 ครั้ง และฟื้นฟู HP <nobr>#2[i]%</nobr> ของ HP สูงสุดของตัวเอง +<nobr>#3[i]</nobr> โดยเอฟเฟกต์นี้จะเกิดได้แค่ 1 ครั้ง ต่อการต่อสู้",
+   "params": [
+    0.3,
+    0.15,
+    400
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "c5562bcfe021cd918787ef7014451186f7427fd01d759673ab13144d540fcfc4",
+   "artPath": "dafdaea0804797033a9c98a281bf869bb5569dc789940b0e0ccb6d110a7f2ed8",
+   "name": "Clinical Research",
+   "descHash": "เมื่อใช้ท่าไม้ตาย จะเพิ่มเอฟเฟกต์การรักษาต่อเนื่อง ให้กับเป้าหมายฝ่ายตัวเองที่มีเปอร์เซ็นต์ HP ปัจจุบันเท่ากับหรือน้อยกว่า <nobr>#1[i]%</nobr> เป็นเวลา <nobr>#2[i]</nobr> เทิร์น และจะฟื้นฟู HP <nobr>#3[i]%</nobr> ของ HP สูงสุดของ Natasha +<nobr>#4[i]</nobr> เมื่อเริ่มต้นเทิร์นของเป้าหมายด้วย",
+   "params": [
+    0.3,
+    1,
+    0.06,
+    160
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "09de68730e478f4785d187aa737a0efd0e40bd1e584bb012fb0601572b0b52a9",
+   "artPath": "36e6732f294fbc68bf05d7a62c9f6caaf4895b3d1312580db5a2ef07b1534958",
+   "name": "The Right Cure",
+   "descHash": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "5218db9b3bfaf42dfe957a52c322c8c38b12057195c76f5654e39dfed680e547",
+   "artPath": "8aa3a667412bc36a78b3d989b8bfb7dbc662520e155b0f456de02ae70fb9b6bc",
+   "name": "Miracle Cure",
+   "descHash": "หลังจากถูกโจมตีแล้ว จะฟื้นฟูพลังงานเพิ่มเติม <nobr>#1[i]</nobr> หน่วย",
+   "params": [
+    5
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "c56186a62771793cd6e189807d0f0ec7d54e9dc2e568da6a7cd0a60e2d4eaf7b",
+   "artPath": "0241f0c53255e855d31cb665934e43063a91b1ec685de9e7e9ad706183dc1255",
+   "name": "Preventive Treatment",
+   "descHash": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "d6ec8f1e7c3f0efb0847587430ccc9dfe44145a931d217161b6f7154eabbb486",
+   "artPath": "b0286bf2b8429da5cb4ae258e1f97ca03d3a88bf2d3026a200a90c7a488d852d",
+   "name": "Doctor's Grace",
+   "descHash": "เมื่อใช้การโจมตีปกติ จะสร้าง DMG กายภาพเพิ่มเติม <nobr>#1[i]%</nobr> ของ HP สูงสุดของ Natasha",
+   "params": [
+    0.4
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   985668
+  ],
+  [
+   270195
+  ],
+  [
+   186254
+  ],
+  [
+   470781
+  ],
+  [
+   554722
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "โจมตีเดี่ยว",
+   "descHash": "สร้าง DMG <span style=\"color:#FFFFFF;\">กายภาพ</span> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ของ ATK ของ Natasha แก่ศัตรูที่กำหนดหนึ่งตัว",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 985668,
+   "name": "Behind the Kindness",
+   "iconPath": "48a3eaaaa191b82da86acc834d52dfbb74074d0e4fe077a29a0a5530c0931bd2",
+   "typeDescHash": "โจมตีปกติ",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635671,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920198,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920198,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836257,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836257,
+       "count": 6
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ฟื้นฟู",
+   "descHash": "ฟื้นฟู HP แก่ฝ่ายตัวเองที่กำหนดหนึ่งตัว <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> ของ HP สูงสุดของ Natasha +<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span> ทันที พร้อมทั้งฟื้นฟู HP <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> ของ HP สูงสุดของ Natasha +<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]</nobr></span> เมื่อเป้าหมายเริ่มต้นในแต่ละเทิร์น เป็นเวลา <nobr>#3[i]</nobr> เทิร์น",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 270195,
+   "name": "Love, Heal, and Choose",
+   "iconPath": "09de68730e478f4785d187aa737a0efd0e40bd1e584bb012fb0601572b0b52a9",
+   "typeDescHash": "สกิลต่อสู้",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.07,
+      0.048,
+      2,
+      70,
+      48
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.074375,
+      0.051,
+      2,
+      112,
+      76.8
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549408,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.07875,
+      0.054,
+      2,
+      143.5,
+      98.4
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635671,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.083125,
+      0.057,
+      2,
+      175,
+      120
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920198,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.0875,
+      0.06,
+      2,
+      196,
+      134.4
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920198,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.091,
+      0.0624,
+      2,
+      217,
+      148.8
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920198,
+       "count": 6
+      },
+      {
+       "id": 633349,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.0945,
+      0.0648,
+      2,
+      232.75,
+      159.6
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836257,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.098,
+      0.0672,
+      2,
+      248.5,
+      170.4
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836257,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1015,
+      0.0696,
+      2,
+      264.25,
+      181.2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836257,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.105,
+      0.072,
+      2,
+      280,
+      192
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836257,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1085,
+      0.0744,
+      2,
+      295.75,
+      202.8
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.112,
+      0.0768,
+      2,
+      311.5,
+      213.6
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.1155,
+      0.0792,
+      2,
+      327.25,
+      224.4
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.119,
+      0.0816,
+      2,
+      343,
+      235.2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.1225,
+      0.084,
+      2,
+      358.75,
+      246
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ฟื้นฟู",
+   "descHash": "ฟื้นฟู HP ให้กับฝ่ายตัวเองทั้งหมด <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> ของ HP สูงสุดของ Natasha +<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>",
+   "ultimateCost": 90,
+   "break": "0",
+   "energy": "5",
+   "id": 186254,
+   "name": "Gift of Rebirth",
+   "iconPath": "1cb543dc9626059a9027a5b02422d1d230c5434c530e2aff69f41ef863d020d9",
+   "typeDescHash": "ท่าไม้ตาย",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.092,
+      92
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.09775,
+      147.2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549408,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1035,
+      188.6
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635671,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.10925,
+      230
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920198,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.115,
+      257.6
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920198,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1196,
+      285.2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920198,
+       "count": 6
+      },
+      {
+       "id": 633349,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1242,
+      305.9
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836257,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1288,
+      326.6
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836257,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1334,
+      347.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836257,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.138,
+      368
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836257,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1426,
+      388.7
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.1472,
+      409.4
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.1518,
+      430.1
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.1564,
+      450.8
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.161,
+      471.5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "เสริมพลัง",
+   "descHash": "เมื่อทำการรักษาเป้าหมายฝ่ายตัวเอง ที่มีเปอร์เซ็นต์ HP ปัจจุบันเท่ากับหรือน้อยกว่า <nobr>#1[i]%</nobr> ปริมาณการรักษาของ Natasha จะเพิ่มขึ้น <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> และเอฟเฟกต์นี้ยังมีผลกับเอฟเฟกต์การรักษาต่อเนื่องด้วย",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 470781,
+   "name": "Innervation",
+   "iconPath": "747fceb12c4769a0cfb689b7544e28b040866894f989ad617e7a683727cac969",
+   "typeDescHash": "พรสวรรค์",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.3,
+      0.25
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      0.275
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549408,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      0.3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635671,
+       "count": 2
+      },
+      {
+       "id": 549408,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      0.325
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920198,
+       "count": 2
+      },
+      {
+       "id": 633349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      0.35
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920198,
+       "count": 4
+      },
+      {
+       "id": 633349,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      0.375
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920198,
+       "count": 6
+      },
+      {
+       "id": 633349,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      0.40625
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836257,
+       "count": 2
+      },
+      {
+       "id": 717290,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      0.4375
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836257,
+       "count": 4
+      },
+      {
+       "id": 270195,
+       "count": 1
+      },
+      {
+       "id": 717290,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      0.46875
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836257,
+       "count": 6
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      0.5
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836257,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      0.525
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      0.55
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      0.575
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      0.6
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      0.625
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "หลังจากโจมตีศัตรูและเข้าสู่การต่อสู้ จะลดทอนความทนทานของประเภทที่สอดคล้องกับศัตรูเป้าหมาย",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 671367,
+   "name": "Attack",
+   "iconPath": "48a3eaaaa191b82da86acc834d52dfbb74074d0e4fe077a29a0a5530c0931bd2",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "เมื่อโจมตีศัตรูทันทีและเข้าสู่การต่อสู้ จะสุ่มสร้าง DMG <span style=\"color:#FFFFFF;\">กายภาพ</span> <nobr>#4[i]%</nobr> ของ ATK ของ Natasha แก่ศัตรูหนึ่งตัว และจะมี<u>โอกาสพื้นฐาน</u> <nobr>#1[i]%</nobr> ที่จะทำให้ศัตรูแต่ละตัวติดสถานะอ่อนแอ<br />ศัตรูเป้าหมายที่ติดสถานะอ่อนแอจะสร้าง DMG ต่อฝ่ายเราลดลง <nobr>#2[i]%</nobr> เป็นเวลา <nobr>#3[i]</nobr> เทิร์น",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "0",
+   "id": 554722,
+   "name": "Hypnosis Research",
+   "iconPath": "e52e65c79484434a0cfcfe8b55601a29d2d16a5761548a687cdece10de4c09a9",
+   "typeDescHash": "เทคนิค",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      0.3,
+      1,
+      0.8
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1105101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1105202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1105203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1105204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 622967,
+          "name": "เสริมการป้องกัน",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+          "statusList": [
+           {
+            "key": "DEF",
+            "value": 0.05
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 920198,
+            "count": 2
+           },
+           {
+            "id": 633349,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 622970,
+        "name": "เสริม HP",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+        "statusList": [
+         {
+          "key": "HP",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920198,
+          "count": 2
+         },
+         {
+          "id": 633349,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 622969,
+      "name": "เสริมการต้านทานสถานะ",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+      "statusList": [
+       {
+        "key": "ต้านทานสถานะ",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635671,
+        "count": 2
+       },
+       {
+        "id": 549408,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "เมื่อปล่อยสกิลต่อสู้ จะลบเอฟเฟกต์ Debuff <nobr>#1[i]</nobr> เอฟเฟกต์ ของฝ่ายตัวเองที่กำหนดหนึ่งตัว",
+    "ultimateCost": 0,
+    "id": 622873,
+    "name": "Soothe",
+    "iconPath": "713e196edb61df5ea290efb8253f45480d7913d3c18da925c8ebb0b623146217",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635671,
+        "count": 2
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1105102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1105205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1105206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1105207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 622966,
+          "name": "เสริม HP",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+          "statusList": [
+           {
+            "key": "HP",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 836257,
+            "count": 2
+           },
+           {
+            "id": 717290,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 622965,
+        "name": "เสริมการต้านทานสถานะ",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+        "statusList": [
+         {
+          "key": "ต้านทานสถานะ",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836257,
+          "count": 2
+         },
+         {
+          "id": 717290,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 622968,
+      "name": "เสริม HP",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "HP",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920198,
+        "count": 4
+       },
+       {
+        "id": 633349,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "ปริมาณการรักษาของ Natasha เพิ่มขึ้น <nobr>#1[i]%</nobr>",
+    "ultimateCost": 0,
+    "id": 622876,
+    "name": "Healer",
+    "iconPath": "351e32f4b70cbea61ebfd33746653054c313e4e04f797d40fee57f1c49138aa0",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920198,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1105103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1105208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 622979,
+      "name": "เสริมการป้องกัน",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+      "statusList": [
+       {
+        "key": "DEF",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836257,
+        "count": 6
+       },
+       {
+        "id": 717290,
+        "count": 6
+       }
+      ]
+     }
+    },
+    {
+     "id": 1105209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 622980,
+      "name": "เสริมการต้านทานสถานะ",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+      "statusList": [
+       {
+        "key": "ต้านทานสถานะ",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836257,
+        "count": 6
+       },
+       {
+        "id": 717290,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "การปล่อยสกิลต่อสู้ จะช่วยขยายระยะเวลาการฟื้นฟูต่อเนื่อง เป็นเวลา <nobr>#1[i]</nobr> เทิร์น",
+    "ultimateCost": 0,
+    "id": 622875,
+    "name": "Recuperation",
+    "iconPath": "34a98bf8da56d683c4286f76686094741b0eb82d4424753884b52aeedf6cdb25",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836257,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 270195,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1105201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 622972,
+    "name": "เสริม HP",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+    "statusList": [
+     {
+      "key": "HP",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549408,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1105210,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 506326,
+    "name": "เสริม HP",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+    "statusList": [
+     {
+      "key": "HP",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 128000
+     },
+     {
+      "id": 836257,
+      "count": 6
+     },
+     {
+      "id": 717290,
+      "count": 6
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "ลำตัว",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "เพิ่มปริมาณการรักษา",
+    "propertyIconPath": "57726150eaa27c675743fe08b88bd04575a0e76b5014dcfbc073c105aa1c7e44"
+   },
+   {
+    "relicTypeHash": "เท้า",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "ความเร็ว",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Planar Sphere",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "HP",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "Link Rope",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "HP",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "พบกันครั้งแรก",
+   "text": "สวัสดี ฉันชื่อ Natasha เป็นหมอใน Underworld ของ Belobog เธอ/นายไม่สบายตรงไหนเหรอ? มานั่งนี่สิ ขอฉันตรวจดูหน่อย",
+   "unlockRequirement": "",
+   "cnUrl": "640216e534c2f0b4b9284d8465fbb91012a0d89b899fcbb7e84f120d200a58e1",
+   "jpUrl": "b4d2bd3472536bb108deb495fabbe23257c27364ebf6ecd7cc46e1f20b83a6ef",
+   "enUrl": "ee052517d2e00a5baa606273bb81774afeb3a9f0b47f0fd5418818ab2020bb85",
+   "krUrl": "04dd6c4d51991a54eacb6e041c302d97d1caf3b5f49e62d90922451d5022c79b"
+  },
+  {
+   "id": 2,
+   "title": "ทักทาย",
+   "text": "วันนี้ฉันอยู่เวร... แต่นั่นไม่ได้หมายความว่าจะมาตามอำเภอใจได้นะ",
+   "unlockRequirement": "",
+   "cnUrl": "0152c9c5c20be3a05cf40949b0084e6f29dba7144ac7a9ffc2509d9fc231e2fc",
+   "jpUrl": "9487ff8df93b6ed1b699c4017ceaf02a4fefebb8c3ee8ec3d5af00c296eb8b95",
+   "enUrl": "6ac6b47b692b8f9b6a18c1ba58749a75831f2b767952af87127370546051154e",
+   "krUrl": "eb3453baad3a0b7535d1b13de312ef69a35fea577b53917d53da6bec54da0c79"
+  },
+  {
+   "id": 3,
+   "title": "บอกลา",
+   "text": "วันนี้ก็เป็นวันที่ดีนะ",
+   "unlockRequirement": "",
+   "cnUrl": "ec9ec1c1ad24390f65ae54134922e75f637a6be2d7a4218c0ab06840402ec2f4",
+   "jpUrl": "06f0e6af800787804ff2ffb0c43315395d86294081639f7dfc789bfbed42090d",
+   "enUrl": "744fb5d9075e480110fc230226eb7e96615c175f4eb35dc653e1e5629525bd9e",
+   "krUrl": "bc0cc2a05edd2ffbab647e7628e468617fa4758f97418eac8891926632a59303"
+  },
+  {
+   "id": 4,
+   "title": "เกี่ยวกับตัวเอง",
+   "text": "คนไข้มีมาทุกแบบเลยล่ะ ฉันก็ต้องรับมือกับพวกเขาด้วยใบหน้าที่แตกต่างกัน บางคนต้องใช้ความอ่อนโยน บางคนก็ต้องให้ใจร้าย เพราะไม่ยอมจริงจังกับอาการของตัวเองเลย... และการจ่ายยาให้ตรงตามอาการก็เป็นหน้าที่ของหมอด้วยเช่นกัน",
+   "unlockRequirement": "",
+   "cnUrl": "65afb1b219c78628598b8e2c576157011d2738cfa2149c282092af92d49afdef",
+   "jpUrl": "339da676d677c3a29773d814fa04794912edf1c3df13ae3cd2aff05a612527a5",
+   "enUrl": "1f3e73fd27dd9aadc4dab2a608c27891820623b5a0d5d17900f439d57a6276c3",
+   "krUrl": "bc67b1a60083fe5a79fcf96002d4c17d2c58b62bdf3285fc274cc92445cfb15c"
+  },
+  {
+   "id": 5,
+   "title": "พูดคุยทั่วไป - ยา",
+   "text": "ยาไม่ใช่แค่สิ่งที่บอกอาการเจ็บป่วยของคนไข้หรอกนะ แต่ยังแสดงถึงความปรารถนาและความต้องการของพวกเขาด้วย",
+   "unlockRequirement": "",
+   "cnUrl": "44be5086377ef5a01674df5480a70a94192a95047113101b7f6d980b591db418",
+   "jpUrl": "331979d8ede98f452cbdd71517c99e5f1df7f4944052ac6630b5a7ed02ba3f1f",
+   "enUrl": "9cf2f0be1130cf5e4a73a8e8491df60dcdc64669a0e4885fc842a8b1d200b0b6",
+   "krUrl": "b736c80dcceb0f1caffebc27c72c902124cda429fa14e785cf61c7b8e6c4e6b2"
+  },
+  {
+   "id": 6,
+   "title": "พูดคุยทั่วไป - Wildfire",
+   "text": "เหตุผลที่ทุกคนเข้าร่วม \"Wildfire\" ก็เพื่อตัวเอง เพื่อเด็กข้างบ้านที่เสียแม่ไปทั้งที่ยังไม่หย่านม และเพื่อคนชราผู้ร่อนเร่อยู่ข้างถนนเท่านั้นล่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "6ba4bed92d1afb09430308f04cfad7154aff77dd6cea1e1d62c6161ffcbcbceb",
+   "jpUrl": "148146e37625f7cea952d8a7c1b28b765c242dbcdfc9837d464df7d8b3984f66",
+   "enUrl": "ae958ed86a39791a8f19644ffa446dd755698d169ea343e851b4f3c229668ed6",
+   "krUrl": "5e6f76b8e95e580ee5b303e0bd44f8bd4e5a67ab9c95ba47cf6d2533ad396158"
+  },
+  {
+   "id": 7,
+   "title": "งานอดิเรก",
+   "text": "บางครั้งฉันก็จะใช้ตุ๊กตาหมีตัวเล็กๆ มาฝึกเย็บแผลแบบเมื่อสมัยก่อนน่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "635d19ba7c406ebcdbdea748473709bf7568eed79d52860cb5ec160af12c4ed2",
+   "jpUrl": "09a8c2de532e35cebe4f5f77633d2db6c879bbe82467693d945e006d1bba1ca4",
+   "enUrl": "bc3e5417ff64752e247fd2a61ebd0fd13d2dd48affdc733944c9d8af6a341b8f",
+   "krUrl": "4305edf8328b2fc1fe7da9a71d53f72cde6bbfb0f737b6e713f5007feb56333a"
+  },
+  {
+   "id": 8,
+   "title": "เรื่องกลุ้มใจ",
+   "text": "ผู้คนที่เมืองด้านล่างชินกับการมองหาความสุขในความทุกข์กันแล้วล่ะ ฉันเลยต้องเตือนตัวเองอยู่เสมอว่า พวกเรากำลังใช้ชีวิตในแบบที่ตัวเองต้องการอยู่รึเปล่า?",
+   "unlockRequirement": "",
+   "cnUrl": "a224dd3955a9dbe9a9bf35ee7a7ce46ad91a8f68d1aa65cc2d78e624e36598c1",
+   "jpUrl": "38a001a60f4163497cfde8a5952293a77a504fa09ac56bcbcc79a0c412a0f3ff",
+   "enUrl": "3130df707091dec5b3d905fc6fd6428799d53d133e340592f469920202aa0c0d",
+   "krUrl": "acfb35651ed9bdb1d758047b65b936b49430b0cbb21bc35c8986efb3c49cccce"
+  },
+  {
+   "id": 9,
+   "title": "เรื่องที่อยากจะแบ่งปัน",
+   "text": "มนุษย์คือสิ่งมีชีวิตที่แสวงหาอิสรภาพ หากมองไม่เห็นท้องฟ้านานเกินไป ก็อาจจะป่วยได้... ป่วยทางใจน่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "fff4fbf3b46cbde336f382057c5d38776b30ce6a1f169a82c890bcc3a31c5e96",
+   "jpUrl": "e15418aabc67340541ca8e24bd795efd41b81f50e8fe3b36ec37f9ab50f9e082",
+   "enUrl": "d50139005f6d0ba37b2fc5266c909d0963cfc66cdab962400192472d89dd5846",
+   "krUrl": "1b0a1f8e64e5407d07460d0e7ce4561f6c6a1d220befac61949722496b9f5823"
+  },
+  {
+   "id": 10,
+   "title": "ความรู้",
+   "text": "ตอนที่พวกคนงานต้องไปทำเหมือง คลินิกก็จะเป็นกึ่งๆ สถานรับเลี้ยงเด็ก... ซึ่งฉันเป็นคนเรียกให้พวกเด็กๆ มาที่นี่เองแหละ บางทีมันอาจจะเป็นฉันมากกว่าที่ต้องพึ่งพวกเขา",
+   "unlockRequirement": "",
+   "cnUrl": "d2135f9fe5e58000e966b0ff06bd74dfa07a66ec825573065c4275a3e0870607",
+   "jpUrl": "747c0d863f13b8c40d4d895f54f89b35600cada9ef5953de29b4a9cbbded72f6",
+   "enUrl": "15612f9d6a24068d34a904dcb2ba32ee69697e4a0baa56f124fb41c55249053e",
+   "krUrl": "c2d75c49caf1eec0b0e651c7b2e38c493561912df2b584dd530cbb3dabf31a81"
+  },
+  {
+   "id": 11,
+   "title": "เกี่ยวกับ Seele",
+   "text": "Seele เป็นผู้ใหญ่ที่พึ่งพาตัวเองได้นานแล้วล่ะ ฉันจะปฏิบัติกับเขาเหมือนเด็กๆ ไม่ได้อีกแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "a25179709c83e4027f3ba35cf14001c302c3fb3ab4ad64593b48cd39aa7d8f4c",
+   "jpUrl": "4c5cbe5e2735411c5a9268e273163d33185c353b64a0b5be3c18dbd1e2a3b41a",
+   "enUrl": "a714e66e544112480db4f89c02bba7a745109e25f40e2889b94d8fdbcab5fe32",
+   "krUrl": "e77567a39a7e59eb6779af5d667195ec12ada331ec1af4885e990ce77326bf47"
+  },
+  {
+   "id": 12,
+   "title": "เกี่ยวกับ Clara",
+   "text": "ได้ยินว่าช่วงนี้เธอช่วยดูแลคนพเนจรที่บาดเจ็บด้วยนี่ เก่งจังเลยน้า... ตอนที่ฉันเพิ่งเจอกับ Clara แม้ว่าเธอจะเปลี่ยนชิ้นส่วนของหุ่นยนต์ได้อย่างชำนาญ แต่กลับปล่อยให้แผลของตัวเองอักเสบ ฉันเห็นแล้วปวดใจมากเลย",
+   "unlockRequirement": "",
+   "cnUrl": "e74a1ed8e86db339936107bc6baf779bc8c08f190e84abf9e6af197ccbe4fc22",
+   "jpUrl": "3616206e05be82a981c1b8635425d45e46e931b5c6ed23fc82abe744b21523a5",
+   "enUrl": "eebf580f7e6c5f9db53706258437baa57089350bc997a05e1cb5a43b5cf310e9",
+   "krUrl": "33817d81d094e25746732abd28f4ed03d557bd0b46cc669d0ba1127816a19f68"
+  },
+  {
+   "id": 13,
+   "title": "เกี่ยวกับ Svarog",
+   "text": "สิ่งที่ Svarog ปกป้องก็คือ \"มนุษย์\" แต่เขาไม่สนหรอกว่า \"มนุษย์\" คิดอะไรอยู่",
+   "unlockRequirement": "",
+   "cnUrl": "ab263fa402cc9579e72f9090339848ec0df20dad9107fe5dfff07a0418f4a6b6",
+   "jpUrl": "1ba89df65f5e9a76e18d8f18fc7bbb7f82020110fff38fd396e5d493b7e0e8a4",
+   "enUrl": "9757c36475676320ae39a6b6cb24a87f97ebda4d06cbcccf7e602d84f1285ff9",
+   "krUrl": "6f20a5469c1c7b0b8b9f2a741b300e845283561857122d856954023ec3a4bece"
+  },
+  {
+   "id": 14,
+   "title": "เกี่ยวกับ Sampo",
+   "text": "จากที่ฉันรู้เกี่ยวกับ Sampo สิ่งที่เขาไม่ชอบที่สุดก็คือการติดหนี้บุญคุณ และจะต้องหาทางตอบแทนคืนให้ได้... เรื่องบุญคุณเนี่ย ยิ่งปล่อยให้ผ่านไปนานมากเท่าไหร่ มันก็ยิ่งประเมินค่าได้ยากขึ้นเท่านั้น",
+   "unlockRequirement": "",
+   "cnUrl": "6366d4b730096b05dcb97eb4a3f36e6faf6b9af141da61abf7ac1540af30eb63",
+   "jpUrl": "7aac7a3bd03d8c1888086d2680d1e806262bf5f8651961943c12f3794d4964aa",
+   "enUrl": "3837bf00b15d70778e868ba13a08ba519bd3e2024c172c40fc729f93b1b9f482",
+   "krUrl": "0813152905de6932631df222bbc87fa4d08c5ff10c80dd146481cdbfe09671db"
+  },
+  {
+   "id": 15,
+   "title": "เกี่ยวกับ Hook",
+   "text": "บางครั้งฉันก็จะยืนอยู่ที่หน้าประตูคลินิก แล้วมองเธอโหวกเหวกโวยวายอยู่ข้างนอก แค่นี้ฉันก็หายเหนื่อยแล้วล่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "e7c6895fc983e69fbf7e9fe5418be211c8c61e11a0d1f37c27950a394e425ded",
+   "jpUrl": "fe71ddaa7b07b2f2e544e28770429fcc9aa9012e103a6566f43086d4a8aebfdc",
+   "enUrl": "040797f6eab41265f111311342b10b2a0ed11d4116a521d9cc5299e50a0e1997",
+   "krUrl": "72980ebb9d6b07d42b96c627b5ec40057020045b0496a8a7ae29b173567ca994"
+  },
+  {
+   "id": 16,
+   "title": "เกี่ยวกับ Oleg",
+   "text": "พวกเรามาจาก Overworld เหมือนกัน ดังนั้นเลยอยากจะย้อนเวลากลับไปยัง \"อดีต\" ...ตอนที่ Belobog ยังไม่มีการแบ่ง \"ด้านบนด้านล่าง\"",
+   "unlockRequirement": "ปลดล็อกหลังจากเสร็จสิ้นภารกิจบุกเบิก \"หวนคืน\"",
+   "cnUrl": "11c88a49b8ed3456e12e809fb689ea79cc723c36035a30d4d72d897fac7cf6ab",
+   "jpUrl": "b55bbe03d048ad25a986361305e1ee73b8560dea7cdd0574d490fa18c73bc4ef",
+   "enUrl": "5960e927f8c7ff469ac576b08a99b6d44fe4766e68e36aeae30fa8934764eb29",
+   "krUrl": "20718de2eaeae1d17e4cdc44d29bce22647f30a954aa8463912d0c1aadb7cf64"
+  },
+  {
+   "id": 17,
+   "title": "เกี่ยวกับ Luka",
+   "text": "เด็กคนนั้นภายนอกดูเข้มแข็ง แต่ความจริงแล้ว เขากลัวว่าตัวเองจะกลายเป็นภาระมากๆ เลยล่ะ ดังนั้นเขาถึงได้ฝึกฝนและต่อสู้อย่างหนักขนาดนั้น... หวังว่าสักวันนึง เขาจะสงบจิตใจ แล้วฟังเสียงของตัวเองบ้างนะ",
+   "unlockRequirement": "",
+   "cnUrl": "ab556f13b33eeb8f3d674143ccc0840e37e3694619c63299f2854a0570b492f3",
+   "jpUrl": "bc5185f7137794cae9558151d42096aaa83b96c01929f82f28d27ba22a682037",
+   "enUrl": "053df0f208a70cee48aee1ce5a75134764d03bec4d14c134022cd13c831411dc",
+   "krUrl": "33987764511eeabe35b588b71e02a3a4bb81515283645ce0049778ccb6601f9b"
+  },
+  {
+   "id": 18,
+   "title": "เปิดใช้งาน Eidolon",
+   "text": "พลังนี้สามารถช่วยชีวิตผู้คนได้มากขึ้น",
+   "unlockRequirement": "",
+   "cnUrl": "411497125398dcc1850bae67d9b2f5aa7ca5b0c633f599453c748f2b93053525",
+   "jpUrl": "5bb87a57658b7ff434946f2e27c3095ae103684fdbc24ab35fe5f527148d2710",
+   "enUrl": "36e7831257da665091e3ae9d5175488a471493065fcda16831b25051d58ef9c7",
+   "krUrl": "11e8bfb658f950447da4d5fa61ceb722784b9a25f83b29e0046b2e815bd37b62"
+  },
+  {
+   "id": 19,
+   "title": "เลื่อนขั้นตัวละคร",
+   "text": "ฝีมือทางการแพทย์พัฒนาขึ้นอีกแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "63bfc90339832e56d97e852788ba20e3928d058e6a838acc2cbe31fd1a583a30",
+   "jpUrl": "b462d9bbd9b00bba9d0b7d487ba931c3eba537745abfb7c76fd32cf6eb1c98b2",
+   "enUrl": "df46ae96308c7b2a9a0230eed9cbfb7b2c07b101c3737b8e8ca77567ff12c673",
+   "krUrl": "f70e3e09120fb4a97f4bb1efc36f3915203fee6e649868fc12dbf64910bd473e"
+  },
+  {
+   "id": 20,
+   "title": "ตัวละครถึงเลเวลสูงสุด",
+   "text": "ฉันจะไม่ทำให้ความหวังนี้ต้องสูญเปล่า",
+   "unlockRequirement": "",
+   "cnUrl": "b5f6c65ba1fdb95172cad25af189cac8f2d12155cc740bb3d9a3cec379a17913",
+   "jpUrl": "18a3ba106f6b60cf178b42e8f27d3a0070ea99c4defd882cb4d8460c3bef053e",
+   "enUrl": "5e79caaadc8fc839b37cf203834e69460fd4dc157e0d3c6da47c2d7fd522ee8f",
+   "krUrl": "bf9a37cafb31cf3a8d5d6586cd7e22096d69f147841fc16b710b00bfcaf516e6"
+  },
+  {
+   "id": 21,
+   "title": "เปิดใช้งาน Trace",
+   "text": "เป็นการเลือกที่ฉลาดมาก",
+   "unlockRequirement": "",
+   "cnUrl": "816c29cad60a9147d87783e18bf07a2103ce4e1ac6f6eabd3cd6d80c7cdcb36e",
+   "jpUrl": "f0ba155800866d839c81740c396b9951a3959a2d962da383eb6fcf8318289d1e",
+   "enUrl": "986a6aa3f4b9745805b25cf08a3028a854d5fa43d7c80b4069311fb2d3cdc4a0",
+   "krUrl": "c5dd72d9b54042e20b26e1157665486518f080b00f80cf4fb90c85a0bb219dbd"
+  },
+  {
+   "id": 22,
+   "title": "สมาชิกทีม - Seele",
+   "text": "แผลครั้งก่อนหายดีรึยัง Seele?",
+   "unlockRequirement": "",
+   "cnUrl": "0a8ee037ef4e309425a20653be61c1aa9f27a7d4c570085ae17b85b2cf91ccbb",
+   "jpUrl": "d970a2549f1de3e3e25f28a52623dac10864545cb4ba88186401488912b0d23d",
+   "enUrl": "a801bca028f3671747de5206e2dad069beaaf9632ffae7daa2b9f0c08ce5ab8e",
+   "krUrl": "fa3d82e86259cf8a6a9c660988d2602b29222cbb219bd98b61290131631a4514"
+  },
+  {
+   "id": 23,
+   "title": "สมาชิกทีม - Hook",
+   "text": "คงต้องโชว์ฝีมือของ \"แม่มด\" ให้เธอดูหน่อยแล้วล่ะมั้ง Hook",
+   "unlockRequirement": "",
+   "cnUrl": "f56049efab8d32d036c689cb42100710ed9f0d56235683fac79ae9ce1e727af3",
+   "jpUrl": "61aaf077a5a349a39a916825e19eca768eeceebd7bfcaa64e28a8b76791f93b8",
+   "enUrl": "feddd25cb491f951d89f10633b6cc0397b2601d69059cb40e1cefb87a7604e0f",
+   "krUrl": "80ea23bd31b0b6622a489c2b93825430cce435f64380f0bbc0366afe4dd6e39e"
+  },
+  {
+   "id": 24,
+   "title": "สมาชิกทีม - Sampo",
+   "text": "อย่าลืมล่ะว่า มีคนคอยจับตาดูการกระทำของนายอยู่ทุกฝีก้าว",
+   "unlockRequirement": "",
+   "cnUrl": "a2ae8407a09b69118cb4d42f670c32dfd3fca83dcadf9c8a2ce505c8ba55a2c2",
+   "jpUrl": "5308e58db7fefff378317bc5e3baca1cb6348a3f498332319b8a482de1025e5b",
+   "enUrl": "ac3a2dd857b38ceed3b2d202a4085b21f9eda7f76f6e64fcc678a542183bbb25",
+   "krUrl": "04e26011c0562ce1355c82354d68cda4f8247204bfa59391bae78cb0069706f2"
+  },
+  {
+   "id": 25,
+   "title": "สมาชิกทีม - Luka",
+   "text": "ดูแลสุขภาพของตัวเองหน่อยเถอะ Luka",
+   "unlockRequirement": "",
+   "cnUrl": "8d6ea0e6ed247a6db1091f7c5f296f932848fbe1d2f784002cf68a86af1a85fc",
+   "jpUrl": "f110eda61821d5941e4235c4352c99d54f37e3642c8c197a169b2010222aae6b",
+   "enUrl": "f8e034bcafaa6c5fbcb84d85c0e1a0032ac566a0eea09fe0122db23a1a75e287",
+   "krUrl": "df09cc398022054d8f8925d831b30f4708a575fb43fa4d311c1b34b2dc1eefde"
+  },
+  {
+   "id": 51,
+   "title": "เริ่มการต่อสู้ - ทำลายจุดอ่อน",
+   "text": "หมดทางช่วยเหลือแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "dcf3d8cd50dc6b26579eb9785c01abd178763c2cc66f3506b44fe6f2db4ca528",
+   "jpUrl": "7141d0b31222c0b2519b0ce5aea6bec77c2cd117239cd42963bef857e1e1bc72",
+   "enUrl": "0ef0000d6981717ca7e08b3eb02cb67cba4f32b679afa18fa1a2dc4615000909",
+   "krUrl": "d6fc3b757f5d50ba80dedf1375956a70af3046b6c1002487de47fc8d62c63586"
+  },
+  {
+   "id": 52,
+   "title": "เริ่มการต่อสู้ - เตือนภัย",
+   "text": "ห้ามประมาท",
+   "unlockRequirement": "",
+   "cnUrl": "eca4f3eb0aa76695acc650d37635a5c231ab721bb7496b5da643b811c6b8a0c7",
+   "jpUrl": "6e7d08220a05c534c4e60293102e68524cbc8d70155569d6078bd9bfa33d465a",
+   "enUrl": "9aff38cfeb91abc15c346e7527c2b29d86664d5549b4fd726ab1f021a49b42a9",
+   "krUrl": "c8e8a3e87851f066cb05136d038665b76ff3d8291fa27db2e76f17733e76f736"
+  },
+  {
+   "id": 53,
+   "title": "เริ่มเทิร์น 1",
+   "text": "เด็กที่ไม่เชื่อฟังเป็นเด็กไม่ดี",
+   "unlockRequirement": "",
+   "cnUrl": "9e15dd272a0537dface10f5cf18091573a2da76cfc3280f556a309ae5a78930f",
+   "jpUrl": "2fd8e30c322872ef69d1a57c1ce4402d7804df299698cd0ca25ef0919f69bb19",
+   "enUrl": "b1d0ff4c4f5a897207f926c87b128fa930d62fbe432c86be60e8b5be8174653a",
+   "krUrl": "112c9e79a6b425e6539b7e8b7e6e464b7c9cfd2d90cbc069604d05a2994822c8"
+  },
+  {
+   "id": 54,
+   "title": "เริ่มเทิร์น 2",
+   "text": "จะฉีดยาล่ะนะ",
+   "unlockRequirement": "",
+   "cnUrl": "c2d1ccf6612705b7cd2898399658415887e610d3f9ae3372d6730d6aecd39dbc",
+   "jpUrl": "63ab0e4bada84cf46d9778740ed4b9ace892a63a4e67d801fa2ed8f907e020d4",
+   "enUrl": "447c3e660cbfaf45c8ae4090998a458480dbc1cb5ff8aea1e113ea01d758eae0",
+   "krUrl": "829a674e185ca33db8dd3a8ee3ab2a4df9cc5b83c17bcd7f440d8f3ae8b6f4b3"
+  },
+  {
+   "id": 55,
+   "title": "เทิร์นสแตนด์บาย",
+   "text": "ดูเหมือนจะรอนานมากเลยนะ...",
+   "unlockRequirement": "",
+   "cnUrl": "14f4fc82cb4cfa95744560522029fea29df821cdbcc4ffd1778657a28fc077b3",
+   "jpUrl": "080123e4a46040d743231fc8e1b087704d98dac13ed2d4211bf3e0604f6b4f64",
+   "enUrl": "ed36692fb7cfa0bd7c18dc3382557352026603ce3cccb1e06f3caf82cae9f2a5",
+   "krUrl": "31f86608c30db5af07e3c72e81ffe3239ab368c0d97bd449a2f4bcf8ad6cf6d2"
+  },
+  {
+   "id": 56,
+   "title": "โจมตีปกติ 1",
+   "text": "ป่วยหนักนะเนี่ย",
+   "unlockRequirement": "",
+   "cnUrl": "c02b4da0c4cca65b8d4bbf205d8ab00e8e1607ee524ce7a25e3431751367a0a5",
+   "jpUrl": "03c395e36581db0bd67a072e926cef23819988666df151e75eb8a0a0060b2729",
+   "enUrl": "d44d683aa64a76908439452919a2a3e92404a05455371643b9886cc45a65130b",
+   "krUrl": "4a5d9a75a1e03cc29f4c65d0916ec5a0172458da5a4b315c5ab289a28687c63a"
+  },
+  {
+   "id": 57,
+   "title": "โจมตีปกติ 2",
+   "text": "ลองสัมผัสแรงปะทะของชีวิตซะสิ",
+   "unlockRequirement": "",
+   "cnUrl": "a43fed8b21dfcf13ebe9d633f8a4e2d714160e2b1f88cc96a044d8103886ca88",
+   "jpUrl": "b1dd46eaa0180b199d6333243f1cf4c484f1a16b443fa9baa06935ca8431565b",
+   "enUrl": "72565f292af5d53d7e7e43b586776af0b401764ed9cf7798a51f2431c8e28dd9",
+   "krUrl": "8960a377c449f483c4589231d29e335460ddd27f5e2f5e0bbfacbeab3b139a72"
+  },
+  {
+   "id": 58,
+   "title": "โจมตีปกติ 3",
+   "text": "หลับซะเถอะ",
+   "unlockRequirement": "",
+   "cnUrl": "aaed949cdc1f9e30d53414322d589e6ae1807d1dec001ca8175662adccbff3ae",
+   "jpUrl": "01b71515ad18e8dc12f2792f5d8ba4c70e15e9a2ae64f771eecd7a54350e0c85",
+   "enUrl": "547c3e490c24203f38c6c209716a4e0ea792f55b7bc900ed25af6603a721179b",
+   "krUrl": "4d736db0c5e9ce6c7a97b63c16f3d1ca506aa01b86f18c65ba543e5b33b9f8c9"
+  },
+  {
+   "id": 59,
+   "title": "สกิลต่อสู้ 1",
+   "text": "กินยาซะ",
+   "unlockRequirement": "",
+   "cnUrl": "7459d6a717ba74f1b5a38532143dae0c1e772273e26faede1cf426e4afd55a9d",
+   "jpUrl": "9869ea9e646e8861fae7978a035d6877dd74d03234dd5139226629081a5068e3",
+   "enUrl": "737ccf858afe8daca22d1ae06454dee5db61beebab42e5033d32aef97142d919",
+   "krUrl": "8225717eb4576b1b906a3f9472ee442b182011ad7c84ebde2572a074e759596f"
+  },
+  {
+   "id": 60,
+   "title": "สกิลต่อสู้ 2",
+   "text": "ไม่เจ็บแล้วสินะ",
+   "unlockRequirement": "",
+   "cnUrl": "f105aefac6c2754ea05365de9f0ecda9761e35a726500f7e324d97878a5d2e58",
+   "jpUrl": "804b6119ce4fa4d17b2418bf68267955c96478cec000db5e27da1973fcee8515",
+   "enUrl": "67cb6729182c1a48275d5d7a0846bd968768b8b48b7a81be0ff2f144d8bd8a0f",
+   "krUrl": "78791f02a6949f8f9b22ba2e095918a43527793a31bea7ca7a68954119e5416b"
+  },
+  {
+   "id": 61,
+   "title": "โดนโจมตีเล็กน้อย",
+   "text": "ฉันไม่เป็นไร",
+   "unlockRequirement": "",
+   "cnUrl": "a2cc5688ceeb4559ad9a3308630f119740af3a7b8ece80beefa6da96522566c3",
+   "jpUrl": "70758d3dd42ec20a82e05399181bbd32a5612f80234cc2147fbe81964a8dad67",
+   "enUrl": "3274fbf81bda84d1542bbd7b1ea14dde156c18931f379a9f928aec336f5935d8",
+   "krUrl": "8e536112b52d2f0580510a7dc9e2a281fe2de42be2651f2c054551f91b1fe5df"
+  },
+  {
+   "id": 62,
+   "title": "โดนโจมตีอย่างรุนแรง",
+   "text": "เจ็บจัง...",
+   "unlockRequirement": "",
+   "cnUrl": "7882a7a2fc79f28a6585b8a71829b6e6323eccc1a3372b5072e52c4aa68da797",
+   "jpUrl": "4309e14f12e9749eb33542e0015f4fc6d4e7547487536ecd41852d232ec2aef7",
+   "enUrl": "65b6536c0a0fe14de54cec0f4849a18f219f849bc4ed5eb1be9cc152c2e81908",
+   "krUrl": "b2e3dc1648d3838e148cd8a5c7d4a24ac01083a94e167e13ab45f4a777cadb7b"
+  },
+  {
+   "id": 63,
+   "title": "ท่าไม้ตาย - เปิดใช้งาน",
+   "text": "ดูเหมือนจะทันเวลาสินะ",
+   "unlockRequirement": "",
+   "cnUrl": "61a4ef3c62e4e3eee4e63b349c1c9bc9451e20521368849260780c09f9e226df",
+   "jpUrl": "91f50b229db80a60806dca2b419ec5de78ff0995a3b218afb2d770b49922f63e",
+   "enUrl": "9815bc4bf890fd44c8697285dc1192b40536a1cad6445f9a0a39d7f85deed29d",
+   "krUrl": "2b0059d155f3a45c99735241236a5fbe020edbfc129d92f2c74d95596f146e30"
+  },
+  {
+   "id": 64,
+   "title": "ท่าไม้ตาย - ปล่อย",
+   "text": "แค่น้ำใจเล็กๆ น้อยๆ น่ะ อย่าใส่ใจเลย",
+   "unlockRequirement": "",
+   "cnUrl": "7266ce0aa60a3c10ead9865bec53d9c65083ae673889ffc2db8f137af99b20ea",
+   "jpUrl": "ac5210f275617463573a87ce42c9a9a3b63e52488b231bff80057d3baab45fe0",
+   "enUrl": "f4567375c38fa09c976aefc5aa7f1e4b1a343b55c0a13a757a6ce694b1e1a288",
+   "krUrl": "540bb28b9a1106eca20063f44e906b9173bed5611560905b73bb3b39c67df29b"
+  },
+  {
+   "id": 65,
+   "title": "หมดสติ",
+   "text": "ฉันเป็น...หมอนะ...",
+   "unlockRequirement": "",
+   "cnUrl": "85464899bddfa3273617202c11b972598527d91c8bbac8644846341216e0ddcf",
+   "jpUrl": "8da74e84dcd089cf00ccdb66b1e2a4a7926dd77462fdf17cc6cb56351d558e03",
+   "enUrl": "79bf44b63e466b6965dccec5746a928a4398d214182ad9bdc95aa2e2279e9291",
+   "krUrl": "c405eeee90aa5d6178788f6e3952b5cfd8d67fc8917c66db293e17f72f9e576f"
+  },
+  {
+   "id": 66,
+   "title": "กลับสู่การต่อสู้",
+   "text": "ฉันมียาเหลือเฟือเลยล่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "99955abe785561b37593c47187b491f3fad20ec26e74a5edab97f584716e5401",
+   "jpUrl": "248a1a6e34d13f76b1e82a4ebc17e656fdfa8cbd22adf091c9b2bcab30f3f99e",
+   "enUrl": "731d13e35d21f484156d6ffedafd872d66a412bc3e05c593915c51f5b7037482",
+   "krUrl": "64f0b5a289acf72dd105dd49d9ba71f216f2d7de8c9f2e9e7e8bd08b4090a87a"
+  },
+  {
+   "id": 67,
+   "title": "ฟื้นฟูพลังชีวิต",
+   "text": "ฉันจะระวัง",
+   "unlockRequirement": "",
+   "cnUrl": "a2f5f9c900288057d18f38f30683888ec454ae620b2e4ad2f644609a581cdee7",
+   "jpUrl": "a284c08debb2bed303e287a5182fe52ca2e6c547d850a65b476fee81b21c31bf",
+   "enUrl": "654816d9209784020427c19330bb8d14028e6bd5d075d3aee68fb82abb503d53",
+   "krUrl": "1a9ba564a9f6d12a202e051c65ae8a3d14abeff62c7f759210743135ccbb63e1"
+  },
+  {
+   "id": 68,
+   "title": "เทคนิค",
+   "text": "เจอตัวแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "55d00379caa8c13572212f6012f69394ee3df5314d93bf0aa931a2fe7cef3390",
+   "jpUrl": "1456444328bbc86a2e1c562becb658f2287c7817da05d5b204f6915194d1ea99",
+   "enUrl": "4c92426d1681dda60e58af3d04a29f7da02131cbf9560fcb755716a6b31770f6",
+   "krUrl": "eaa25970d7b364986be010e482cf00748a32a560ea2b05a7b9d6dcc9534e5a9c"
+  },
+  {
+   "id": 69,
+   "title": "ชนะการต่อสู้",
+   "text": "เป็นการผ่าตัดที่ยอดเยี่ยมมาก",
+   "unlockRequirement": "",
+   "cnUrl": "70f612bb4dd7f9e538ca351322190748a47b732ad45519574e88acda7a3f17ad",
+   "jpUrl": "a2d3d6bc050b75a02384b3c4e7551525457bb1507689be39170a6a7f92577d94",
+   "enUrl": "80853ae7af2b611bbc0055c55e509269ca20c82ea874f05326c1a99610a60c5d",
+   "krUrl": "464e2d9762fdd570b3e778e78e9859b3419501abb26ad21dd276415237876d1d"
+  },
+  {
+   "id": 70,
+   "title": "เปิดสมบัติ 1",
+   "text": "ถ้าเป็นยา ยังไงก็ได้ใช้อยู่แล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "e8a9e858b2f1c37d3dc24c37738dd6c227e45d9053f6058458b294b55737e244",
+   "jpUrl": "50b30ccbfdd81281b8f8d72d7cf46435680550cd1613ce97374fc16d19f30220",
+   "enUrl": "4ec351fa4c9dc910557c54a50200ce1ccb057c8bdafd32b5051401ee77f618b3",
+   "krUrl": "3a61475286709671e5ccc74a3cbaa9625a65a74b19cc78a56eac67718af96b8e"
+  },
+  {
+   "id": 74,
+   "title": "เปิดสมบัติ 2",
+   "text": "ฉันเอาแค่อันนี้ก็พอแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "ae6869098a17eab9c0b83408542cd0306dc1c7635fb78b34d1c69dff9e650670",
+   "jpUrl": "5b57164243a54a378ed96d04dba406de4f5e0a67099264200c817eb669f7b6b2",
+   "enUrl": "25640d1c860880bfce2f88faf98c3391eb6df3128db20d1805d6238025c16d44",
+   "krUrl": "849d633b05bed4a3931da0bf011a1951ab9196796d20dac8b40b6b034ed473bc"
+  },
+  {
+   "id": 75,
+   "title": "เปิดสมบัติล้ำค่า",
+   "text": "เท่านี้ เสบียงก็พอแล้วล่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "507a311cdfc1f33e7619998e7e7e22ce1a254915cca0c283e792c835b65dd0fd",
+   "jpUrl": "fb05c832e4bcf37a0b16fb41e57e2db9e01b48cd44f71a3a2f8f6e2601f40b5d",
+   "enUrl": "ca52d96d8a23a02bd4c6d549f04694e9f8d1cde2f0d533d1693417aaa8a0b5c6",
+   "krUrl": "3db9264284af4c8013bfa15e9f6ad861992c2791b5487d8269d003b725ae3795"
+  },
+  {
+   "id": 71,
+   "title": "ไขปริศนาสำเร็จ 1",
+   "text": "อืม สมองใช้การได้ดีทีเดียว",
+   "unlockRequirement": "",
+   "cnUrl": "8d64fe15e25956a424c56bc9247566ef7d93723004b8d363e1be23a3325e5f11",
+   "jpUrl": "467ac2ccbf3b1dd605c6921d5160907f39af31016e843783a92f6fc447a2f90c",
+   "enUrl": "57e4d0653ec11bdf5c9fd9b74b6aed3d6dd2d0389d1cfe5aa8f8e25f5cc0d4cf",
+   "krUrl": "c5a21767ac8486ce94a5ab35db04048873ca9b55235050291a7524358110969a"
+  },
+  {
+   "id": 76,
+   "title": "ไขปริศนาสำเร็จ 2",
+   "text": "เป็นเกมเล็กๆ ที่ไม่เลวเลยนะ~",
+   "unlockRequirement": "",
+   "cnUrl": "55f2df5992341f008bb7f96ad8807fefd579fdd6a76666cee8a65114e0a2daf4",
+   "jpUrl": "fbc2a8dfd1b59d0aa400bb90c50e9809152232a7cfa24e69993f6f2b0aa7a376",
+   "enUrl": "c1be1510532df1727b07034849a095ce24a3668f1cd90e4a80cf44286feffb62",
+   "krUrl": "46795dcb800e006f4bdb131c6a54e8b4a9f14d409b7dd101a3f7e1b3a5b175dd"
+  },
+  {
+   "id": 72,
+   "title": "พบศัตรูเป้าหมาย",
+   "text": "ถ้าจะเอาชนะพวกเขา ก็ต้องเตรียมตัวให้ดี",
+   "unlockRequirement": "",
+   "cnUrl": "89e2acde435ce1966d6be69acf80153e8d3ff1e54c92c5cb88ed962ba3a5c8f2",
+   "jpUrl": "71e11f2351659987237e5af1201d8c727d74bad486c64fddcc5312504bd77b7c",
+   "enUrl": "77d7ac35e15b02b0e9e6407636d38889e9831f0a57bbce2621f7ae0f5bed597f",
+   "krUrl": "b7557f40cb5f5548d2f4cff448ad6aa71c4b297965203ca4ec1d9ec507a6064e"
+  },
+  {
+   "id": 73,
+   "title": "กลับเข้าเมือง",
+   "text": "เมื่อถึงเวลาพักผ่อนก็ควรพักผ่อนให้เต็มที่",
+   "unlockRequirement": "",
+   "cnUrl": "babe7b3246494a18e18d9996d47df0f9e6b481b2778247d71aaef5f55753bd5a",
+   "jpUrl": "0512e2e1cfc7b825e8caee86f39c257ff96688621a6f3d1f29381bddb9f21cd5",
+   "enUrl": "51d06e864d4ec10f439d0a4d8ed8949a65b8c08b43a0c4bdd871efbc0c1699fd",
+   "krUrl": "56dc57172b1b65bdfa266f875d0e19a1b857612a0b130902990726f92d2899cc"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "รายละเอียดตัวละคร",
+   "text": "คุณหมอผู้เข้มงวด และมักจะมีรอยยิ้มที่เดาใจยากอยู่เสมอ<br />ใน Underworld ที่ขาดแคลนทรัพยากรทางการแพทย์ Natasha ผู้ซึ่งเป็นหมอที่มีอยู่เพียงไม่กี่คน จึงต้องดูแลคนทุกเพศทุกวัยในเมืองด้านล่าง<br />แม้แต่ Hook ที่แก่นเซี้ยวที่สุดก็ยังเรียกเธอว่า \"พี่ Natasha\" อย่างเชื่อฟัง",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 1",
+   "text": "\"เร็วเข้า กดตรงนี้เอาไว้! กดแรงๆ ห้ามเลือดเอาไว้!\"<br /><br />Natasha ส่งสายตาลนลานให้กับพี่ชาย ตรงหน้าเธอมีชายที่พันผ้าพันแผลไว้ทั้งตัวนอนอยู่ ร่างกายของเขากระตุกและบิดไปมา เพราะความเจ็บปวดอย่างรุนแรง ทั้งยังพึมพำคำพูดที่ฟังไม่ได้ศัพท์ออกมา<br /><br />\"...มัวชักช้าอะไรอยู่? กดไว้เร็วเข้า!\"<br /><br />คำสั่งของพี่ชายแฝงไว้ด้วยความโมโห และ...เด็กสาวก็มีความรู้สึกไวพอที่จะสัมผัสได้...ความผิดหวังเล็กๆ จากเขา... Natasha จับแขนขวาของชายคนนั้นเอาไว้อย่างลนลาน แล้วกดสำลีห้ามเลือดที่แปะไว้ที่หัวไหล่ด้วยแรงทั้งหมด<br /><br />ชายที่บาดเจ็บครวญครางด้วยความเจ็บปวด แต่ก่อนที่พี่ชายจะออกคำสั่ง เธอจะผ่อนแรงไม่ได้เด็ดขาด<br /><br />ไม่รู้ว่าผ่านไปนานแค่ไหน ผู้บาดเจ็บตรงหน้าก็หยุดหายใจลงแล้ว เธอมองไปที่ร่างอันไร้วิญญาณด้วยท่าทางนิ่งงัน<br /><br />\"เธอทำเต็มที่แล้วล่ะ\" พี่ชายพูดด้วยน้ำเสียงเย็นชาดังเดิม \"พักสักหน่อยเถอะ ยังมีคนเจ็บรออยู่อีก\"<br /><br />เธอพลิกฝ่ามือสีแดงกลับมา นิ้วมือนั้นแข็งทื่อไปแล้ว กลิ่นคาวเลือดก็พุ่งเข้ามาแตะจมูก Natasha ปล่อยให้กลิ่นนั้นก่อกวนจิตใจของตนต่อไป... เธอรู้ว่าถ้าจะเดินอยู่บนเส้นทางนี้ ตนก็ต้องทำใจให้ชินไปกับมัน",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>20</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 2",
+   "text": "\"ยอดเยี่ยม...ยังยอดเยี่ยมเหมือนเดิม\" ศาสตราจารย์ได้พลิกกระดาษตรงหน้าไปมา แล้วเอ่ยพึมพำว่า \"ดูจากผลคะแนนและผลงานด้านคลินิกของเธอ... ไม่ว่าจะไปที่โรงพยาบาลหรือกองทัพ เธอก็จะต้องโดดเด่นกว่าใครแน่นอน\"<br /><br />Natasha รู้สึกเหมือนหัวใจถูกบีบ นิ้วทั้งสิบเกร็งขึ้นมาอย่างไม่รู้ตัว ศาสตราจารย์สัมผัสได้ถึงภาษากายของเธอ<br /><br />\"เป็นอะไรเหรอ? เธออยากพูดอะไรหรือเปล่า\"<br /><br />Natasha ปรับสีหน้าใหม่... เธออยากจะบอกถึงการตัดสินใจของตัวเอง ด้วยท่าทีที่เต็มไปด้วยความเชื่อมั่น<br /><br />\"ศาสตราจารย์ ฉันอยากกลับไปที่ Underworld ถ้าอยู่ที่นั่น ฉันจะสามารถช่วยผู้คนได้มากกว่า\"<br /><br />หญิงสูงวัยชะงักไปครู่หนึ่ง แล้วค่อยๆ จับแว่นของตัวเอง จากนั้นเธอก็ก้มหน้าลง แล้วเริ่มอ่านข้อมูลที่ถืออยู่ในมือ<br /><br />\"อย่างนี้นี่เอง เหมือนกับที่แม่ของเธอพูดไว้ไม่มีผิด... ถ้างั้นก็ขอให้เธอประสบความสำเร็จนะ Natasha\"<br /><br />Natasha ลุกขึ้นยืนแล้วโค้งคำนับด้วยท่าทางเคร่งขรึม ครั้งสุดท้ายที่เธอเดินผ่านทางเดินสีขาวบริสุทธิ์ของสถาบันการแพทย์ Belobog ในใจของเธอนั้นเต็มไปด้วยความแน่วแน่",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>40</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 3",
+   "text": "ถึง คุณพ่อคุณแม่ที่เคารพรัก:<br /><br />ช่วงนี้สบายดีมั้ย?<br /><br />ขอโทษด้วยที่หนูตอบจดหมายช้า ช่วงนี้ที่ Underworld เกิดเหตุวุ่นวายอยู่บ่อยๆ ในสถานเลี้ยงเด็กกำพร้าเลยมีคนเจ็บอยู่เต็มไปหมด หนูแทบจะไม่มีเวลาว่างไปทำอย่างอื่น นอกจากการช่วยรักษาคนด้วยซ้ำ และยังต้องส่งเด็กที่อายุค่อนข้างน้อย ไปอยู่กับครอบครัวอุปการะในเมืองด้วย เพราะหนูไม่อยากให้พวกเขาต้องมาเห็นสภาพย่ำแย่ในสถานเลี้ยงเด็กกำพร้าเลย<br /><br />ส่วนเรื่องที่พ่อกับแม่ถามมาก่อนหน้านี้... หนูได้ยินข่าวแล้ว ได้ยินว่าผู้พิทักษ์สูงสุดกำลังจะประกาศคำสั่งปิดกั้น Overworld กับ Underworld หนูเข้าใจความกังวลของพ่อกับแม่ดี แต่หนูคิดว่า ในเวลาแบบนี้หนูไม่สามารถทอดทิ้งคนใน Underworld ไปได้ หนูอยากจะใช้กำลังอันน้อยนิดของตัวเอง มาช่วยปลอบใจผู้คนในช่วงที่น่าหวาดหวั่นแบบนี้น่ะ<br /><br />โชคดีที่หนูรู้ว่าพ่อกับแม่ จะต้องเคารพการตัดสินใจของหนูแน่ หนูจำได้ว่า ตอนที่เพิ่งเรียนจบจากสถาบันการแพทย์ คุณพ่อเคยพูดไว้ว่า \"ถ้าคนคนหนึ่งเลือกเส้นทางการเป็นหมอ เพราะอยากมีหน้าที่การงานที่มีหน้ามีตา... สักวันหนึ่ง เขาจะต้องเสียใจกับการเลือกของตัวเอง\" หนูคิดว่า ตอนนี้หนูเข้าใจความหมายของประโยคนี้ มากขึ้นกว่าแต่ก่อนแล้วล่ะ<br /><br />กว่าจะได้เจอหน้ากันอีกที ก็ไม่รู้ต้องรอถึงเมื่อไร หนูหวังว่าพ่อกับแม่จะมีสุขภาพแข็งแรง และมีความสุขเสมอนะ หนูโตเป็นผู้ใหญ่แล้ว สามารถดูแลตัวเองได้แล้ว พ่อกับแม่ไม่ต้องเป็นห่วงหรอก<br /><br /><align=\"right\">จาก ลูกสาวที่รัก</align><br /><align=\"right\">Natasha</align>",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>60</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 4",
+   "text": "ผู้ชายที่นอนอยู่บนเตียง มีสีผิวค่อนข้างคล้ำ และอายุประมาณห้าสิบปี กล้ามเนื้อของเขาดูแข็งแกร่งและชัดเจนเหมือนรูปสลัก แต่ตอนนี้กลับถูกรอยแผล และคราบเลือดมากมายบดบังไว้ เขาหอบหายใจหนักหน่วง แผ่นอกเคลื่อนไหวขึ้นลงอย่างรุนแรง... ชีวิตของเขากำลังแขวนอยู่บนเส้นด้าย<br /><br />สายตาของ Natasha กวาดมองร่างกายของผู้บาดเจ็บอย่างรวดเร็ว เพื่อหาบาดแผลที่อาจพรากลมหายใจสุดท้ายของเขาไป และไม่นานเธอก็เห็นบาดแผลที่อยู่ด้านซ้ายของท้องน้อย ปากแผลไม่ใหญ่มาก แต่กลับมีเลือดไหลทะลักไม่หยุด อาจถูกของมีคมแทงเข้าไปถึงอวัยวะภายในก็ได้<br /><br />เธอสวมถุงมือการแพทย์คู่ใหม่ แล้วดึงผ้าพันแผลม้วนใหญ่มาจากราวที่อยู่ข้างๆ เธอพันแผลบริเวณท้องของคนเจ็บอย่างคล่องแคล่ว แล้วออกแรงรัดให้แน่น จากนั้นก็เริ่มกดบริเวณที่มีเลือดไหลออกมาไม่หยุด เลือดสีแดงเข้มซึมออกมาบนผ้าพันแผล แต่ Natasha ยังคงรักษาจังหวะการกดให้คงที่ และไม่ลนลานแม้แต่นิด<br /><br />หลังจากผ่านไปครู่หนึ่ง ลมหายใจของชายคนนี้ก็ไม่หนักหน่วงอีกต่อไป อาการเกร็งบนใบหน้าก็ผ่อนคลายลงด้วย Natasha รู้ว่าคนเจ็บได้พ้นขีดอันตรายแล้ว และตอนนี้ก็กำลังหลับอยู่<br /><br />เธอค่อยๆ ถอดถุงมือออก แล้วยืนพิงหน้าต่างของคลินิกเพื่อพักผ่อนเล็กน้อย<br /><br />\"อย่าเพิ่งตายไปซะล่ะ Oleg...\"<br /><br />เธอมองไปยังเตียงผู้ป่วยแล้วเอ่ยพึมพำ<br /><br />\"...ยังมีภารกิจอีกมากมาย ที่รอให้เราไปทำอยู่นะ\"",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>80</nobr>"
+  }
+ ],
+ "archive": {
+  "cvCn": "秦紫翼",
+  "cvJp": "内山夕実",
+  "cvKr": "강은애",
+  "cvEn": "Elizabeth Maxwell",
+  "camp": "Belobog"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Natasha",
+ "rarity": 4,
+ "descHash": "คุณหมอของ Underworld แห่งเมือง Belobog และยังเป็นผู้ดูแลเด็กๆ อีกด้วย ภายใต้บุคลิกที่ดูเป็นมิตรและอ่อนโยนนั้น เธอยังมีด้านอันตรายที่ซ่อนอยู่",
+ "artPath": "c8b0dd59b5081d24b987ac634322f8ade49e8d3332278503ec84454cb13a1d90",
+ "miniIconPath": "007a94d11a3cbe2a3472015ab98bb476f8d614c3ad8bf416945099bfacb1dc3b",
+ "damageType": {
+  "id": 1,
+  "iconPath": "9b77aa4b13a80228e6db8023c086a6dd43ffe89e318aa52e790528beb4e5ea20",
+  "color": "#FFFFFF",
+  "name": "กายภาพ",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "81e58cfdc0c8a9a026c2c3111a6bdf663d572fa71524907b004fc5eb7f34fade",
+  "altIconPath": "c825fa86e9a217db6e704916b2d5aeb22c5733b2776a0ea16c558c29e6c5c92c",
+  "color": "#FFFFFF",
+  "name": "เฟื่องฟู",
+  "rarity": 0
+ },
+ "pageId": "natasha"
+}

@@ -3,7 +3,7 @@
  "iconPath": "62bbed3f4fa89607c950e0c37b287cd629c6dc011b81bd99cf3354a4dd3cb55e",
  "bgPath": "95add5fd751106b1eeb03cfcbe017215893f25a2ef09bf7a0c78af53275456a1",
  "figPath": "64b09bba9b3bbdaaccaa720f85047a4a42fd05d52605ef3e96e571d4d8244e6e",
- "fgPath": "1320fa86c14f851ed0bf3c8a0695749918a258aad1b415a894ccc5152e621576",
+ "fgPath": "939573cb980ac84a1ca1ac5e9b4503698ec38a52c4d17a4f300e98499de70b9a",
  "splashIconPath": "72cee71be6fe4de63b6bdecb1a1b69cb95724bc8f3cc89468c68343e5937c7dc",
  "damageTypeId": 0,
  "baseTypeId": 0,
@@ -69,7 +69,7 @@
    "id": 351746,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "559c24ffae40e390bfec262f621e30b0b209f6d487b122f6bc54b0e7dada8353",
+   "iconPath": "2c6914a16ae349627baca5f84218db8fe270ccf2c80246f9b83acf8e72f7f92a",
    "name": "Void Cast Iron",
    "desc": "Horseshoe of a Voidranger: Trampler. Can be used for the Ascension of Quantum characters.",
    "lore": "Rare horseshoe obtained when a Trampler of the Antimatter Legion is defeated. When no one is observing, it pops in and out of existence.<br /><br />\"The name of the experiment? It's just called \"Horseshoe of the Trampler\"... \"",
@@ -77,6 +77,7 @@
    "rarity": 4,
    "rewardPath": "/material/351746",
    "comeFrom": [
+    "Stagnant Shadow: Base Zone",
     "Stagnant Shadow (Base Zone)",
     "Omni-Synthesizer — Material Exchange"
    ]
@@ -180,6 +181,7 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Calyx (Rivet Town)",
+    "Calyx (Rivet Town)",
     "Embers Exchange"
    ]
   },
@@ -205,7 +207,7 @@
    "id": 836261,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "iconPath": "36e68603fbc67d4b69c02e01d7d5d41a80446ea6c49b1d828b47320f6225825c",
    "name": "Key of Wisdom",
    "desc": "A mythical key that appears in the hands of the greatest prodigies of the cosmos. Used to level up Traces significantly for <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Erudition</span> characters.",
    "lore": "This is the proof of invitation to the halls of the Nous Temple.<br />Finding the door of which this key opens is a far more arduous task than obtaining the key itself. Those who pass through the doors will immediately realize the impossibility of returning to this side.<br /><br />\"The Erudition does not have answers to the universe, but it will teach you how to ask the right questions.\"",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/836261",
    "comeFrom": [
+    "Calyx (Rivet Town)",
     "Calyx (Rivet Town)",
     "Omni-Synthesizer — Material Synthesis"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
+    "Calyx (Rivet Town)",
     "Calyx (Rivet Town)",
     "Omni-Synthesizer — Material Synthesis",
     "Embers Exchange"
@@ -1500,7 +1504,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Attack an enemy, and when the battle starts, reduce their Toughness of the corresponding Type.",
+   "descHash": "Attacks an enemy, and when the battle starts, reduces their Toughness of the corresponding Type.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2381,6 +2385,16 @@
   },
   {
    "id": 20,
+   "title": "About Xueyi",
+   "text": "You know that book \"An Unsuitable Job for A Puppet?\" I didn't just read it, I even scribbled down some notes. Shame, though, I still don't have a clue who wrote it...",
+   "unlockRequirement": "",
+   "cnUrl": "4cf34daaa01eac2f734f72add53781938921178c653288de3e6e4bc8f01fc75b",
+   "jpUrl": "7cde04abbb2dbafca4945da3e339d89b311962b136bee0f2d371ad5d6137d0b8",
+   "enUrl": "0e846311cb3f235e920d9addad985402acf9b47b73afd7d6053ae7c8d8932c87",
+   "krUrl": "98cf544f2dd2e1148c2ca723b9efb554bccba251dbc658b1d101dd5d93e2d7c3"
+  },
+  {
+   "id": 21,
    "title": "Eidolon Activation",
    "text": "Life's just like a game of tiles, you never know what's gonna come up next~",
    "unlockRequirement": "",
@@ -2390,7 +2404,7 @@
    "krUrl": "5f437115275e5b81b6b76cc066b65f8f92d0ab75b350c56191334a3ba1e02558"
   },
   {
-   "id": 21,
+   "id": 22,
    "title": "Character Ascension",
    "text": "When life's all go, the trick is to \"steal\" a bit of downtime, right?",
    "unlockRequirement": "",
@@ -2400,7 +2414,7 @@
    "krUrl": "34e97e41151219f0d17c3c884ed558795636f544fe401554524e7ba6eef0232a"
   },
   {
-   "id": 22,
+   "id": 23,
    "title": "Max Level Reached",
    "text": "You're bound to draw the tile you want sooner or later, right?",
    "unlockRequirement": "",
@@ -2410,7 +2424,7 @@
    "krUrl": "57267118e879c89a0a62cf8a6c9c8c08bd5e7f9d3eec3988fb28fa4e74c07890"
   },
   {
-   "id": 23,
+   "id": 24,
    "title": "Trace Activation",
    "text": "When it comes to Celestial Jade, it's all about synergy and luck.",
    "unlockRequirement": "",
@@ -2420,7 +2434,7 @@
    "krUrl": "984b27267c9902c419e9c79b9fb1c9aa443778f4dd47ae638a6331142793426c"
   },
   {
-   "id": 24,
+   "id": 25,
    "title": "Added to Team With Trailblazer",
    "text": "Hey... Trailblazer, you're here, too! Let's get this game going~",
    "unlockRequirement": "",
@@ -2430,7 +2444,7 @@
    "krUrl": "38158a7008d4783babc4841550ec09873cd607d5751533ee5b814f0e00ef9812"
   },
   {
-   "id": 25,
+   "id": 26,
    "title": "Added to Team With Fu Xuan",
    "text": "Weird, how'd the Master Diviner figure out I'd be here?",
    "unlockRequirement": "",
@@ -2440,7 +2454,7 @@
    "krUrl": "86064025fa2abc225e7ce0d8b29d338c2e702b1fc226693c239530e972ad5554"
   },
   {
-   "id": 26,
+   "id": 27,
    "title": "Added to Team With Guinaifen",
    "text": "A free performance by Little Gui? There's no way I'm missing that~",
    "unlockRequirement": "",
@@ -2450,7 +2464,7 @@
    "krUrl": "fc03136fe4304b6f8ff100b33860fc5eaf238547ed0ecabd7d4d77baaf391f6f"
   },
   {
-   "id": 27,
+   "id": 28,
    "title": "Added to Team With Yanqing",
    "text": "Awesome, with a genius like Yanqing around, I can take it easy for a while!",
    "unlockRequirement": "",
@@ -2460,7 +2474,7 @@
    "krUrl": "604fb1ee121207d586938d7b56461e6f9c14ebc68e005d381d0de8aa274361eb"
   },
   {
-   "id": 28,
+   "id": 29,
    "title": "Added to Team With Huohuo",
    "text": "No need to worry, Huohuo, the workday zips by when you're having fun~",
    "unlockRequirement": "",

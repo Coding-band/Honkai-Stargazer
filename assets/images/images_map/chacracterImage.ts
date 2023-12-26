@@ -1,4 +1,21 @@
 const CharacterImage = {
+	//add in 1.6.0
+	"Dr. Ratio" : {
+		icon: require("../../images/character_icon/dr_ratio_icon.webp"),
+		imageSplash: require("../../images/character_splash/dr_ratio_splash.webp"),
+		imageFull: require("../../images/character_splash/dr_ratio_splash.webp"),
+	},
+	"Ruan Mei" : {
+		icon: require("../../images/character_icon/ruan_mei_icon.webp"),
+		imageSplash: require("../../images/character_splash/ruan_mei_splash.webp"),
+		imageFull: require("../../images/character_splash/ruan_mei_splash.webp"),
+	},
+	Xueyi : {
+		icon: require("../../images/character_icon/xueyi_icon.webp"),
+		imageSplash: require("../../images/character_splash/xueyi_splash.webp"),
+		imageFull: require("../../images/character_splash/xueyi_splash.webp"),
+	},
+
 	Argenti : {
 		icon: require("../../images/character_icon/argenti_icon.webp"),
 		imageSplash: require("../../images/character_splash/argenti_splash.webp"),

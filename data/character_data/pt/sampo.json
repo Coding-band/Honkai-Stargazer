@@ -54,7 +54,7 @@
    "id": 267805,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "822b1e8c023333b210f71f503cce58516c58ffc4f47c709a4ba4bc03387fdd68",
+   "iconPath": "ec233e43b828d3d0aaa069d3bb911a437404e6a0a34a358cdf134da8ad7fb0fa",
    "name": "Olho Tempestuoso",
    "desc": "Flechas pertencentes a um Chama-tempestades. Podem ser usados para Ascensão de personagens de Dano de Vento.",
    "lore": "Costumava pertencer a um certo monstro do Fragmentum modelado para um certo tipo de Guarda-Vazio. Uma ponta de flecha mal pode ser vista enterrada no centro de um vórtice.<br /><br />\"Aqueles que perecem no Fragmentum se levantarão novamente onde enfrentaram sua morte.\"",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/267805",
    "comeFrom": [
+    "Sombra Estagnada: Vila dos Rebites",
     "Sombra Estagnada (Vila dos Rebites)",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -180,6 +181,7 @@
    "rewardPath": "/material/635669",
    "comeFrom": [
     "Cálice (Grande Mina)",
+    "Cálice (Grande Mina)",
     "Troca de Brasas"
    ]
   },
@@ -187,7 +189,7 @@
    "id": 717290,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
    "name": "Motor Antigo",
    "desc": "Motor mecânico do Velho Mundo deixado para trás. Material avançado usado para aprimoramentos.",
    "lore": "Usa Geoessência como a fonte de energia. Quando alimentado, descarrega auroras errantes, em vez de faíscas.<br /><br />\"Somente a Divisão Tecnológica sob comando direto da Guardiã Suprema tem acesso a informações sobre o Velho Mundo. Eu perdi meus privilégios depois que me demitiram.\"",
@@ -205,7 +207,7 @@
    "id": 836255,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "iconPath": "34d88252515cd13ab58b6f5aae7329794a4a330a0147e1c5f755c8a2f4444bff",
    "name": "Obsidiana da Obsessão",
    "desc": "Um pedaço considerável de matéria escura capturado do vazio. Usado para conceder um aumento considerável de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Inexistência</span>.",
    "lore": "Aqueles que tiverem personalidade e mente fraca passarão a eternidade no caos com apenas um simples vislumbre neste prisma.<br /><br />",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/836255",
    "comeFrom": [
+    "Cálice (Grande Mina)",
     "Cálice (Grande Mina)",
     "Sintetizador Omni — Síntese de Material"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
+    "Cálice (Grande Mina)",
     "Cálice (Grande Mina)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas"
@@ -945,10 +949,10 @@
    ]
   },
   {
-   "tagHash": "Incapacitação",
+   "tagHash": "Área",
    "descHash": "Causa Dano de <span style=\"color:#00FF9C;\">Vento</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Sampo a todos os inimigos, com <nobr>#4[i]%</nobr> de <u>chance-base</u> de aumentar o Dano Contínuo recebido pelo alvo em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> por <nobr>#3[i]</nobr> rodada(s).",
    "ultimateCost": 120,
-   "break": "0",
+   "break": "60/hit",
    "energy": "5",
    "id": 49935,
    "name": "Presente Surpresa",
@@ -1578,7 +1582,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do inimigo-alvo.",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do alvo inimigo do Tipo correspondente.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2317,7 +2321,7 @@
   {
    "id": 22,
    "title": "Entrou na Equipe com Natasha",
-   "text": "Senhorita Natasha! Eu pensei que estava te devendo uma...",
+   "text": "Senhorita Natasha! Eu achei que te devia um favor...",
    "unlockRequirement": "",
    "cnUrl": "f1a40baf7735af399b949156a153e19a05f7e7313596d975fc9ef4ab8421ac90",
    "jpUrl": "126fe99d7584fdc0a9b77aeec30ad7699e2d320427176617181dbe7b29a79e47",
@@ -2327,7 +2331,7 @@
   {
    "id": 23,
    "title": "Entrou na Equipe com Hook",
-   "text": "Hook? *suspiro* Parece que vamos precisar subir o tom.",
+   "text": "Hook? *suspiro* Acho que a gente vai subir o nível.",
    "unlockRequirement": "",
    "cnUrl": "98e1efd5ecc84f4b42e0e85f1686efb8b425706a9fb081e2f2f77aaf0b441401",
    "jpUrl": "ac372ef95319a36da5371c1659356022e12d98a03e078a4c239440ef5f3ca4d0",
@@ -2337,7 +2341,7 @@
   {
    "id": 24,
    "title": "Entrou na Equipe com Seele",
-   "text": "Não se preocupe, Senhorita Seele! Eu vou proteger você!",
+   "text": "Não se preocupe, senhorita Seele! Eu vou proteger você!",
    "unlockRequirement": "",
    "cnUrl": "2fa4445c038abacb6328541138323b8b75f45c095b10f6bab27f0ada14bf45c8",
    "jpUrl": "543a6edbfb6b2f9f2bc8a1a531292bf2a7e2b355436bd2669a52ffc1322d648a",
@@ -2506,7 +2510,7 @@
   },
   {
    "id": 66,
-   "title": "Abrindo Tesouro 1",
+   "title": "Abrindo Tesouro - 1",
    "text": "Não tem grana?",
    "unlockRequirement": "",
    "cnUrl": "1a3ba5d35c4e4b515ff38d01c23ef761c90a702db5ef48bc411343c15287eaeb",
@@ -2516,7 +2520,7 @@
   },
   {
    "id": 70,
-   "title": "Abrindo Tesouro 2",
+   "title": "Abrindo Tesouro - 2",
    "text": "Você gosta? Pode ficar para você!",
    "unlockRequirement": "",
    "cnUrl": "aec3efe1a4045187f5576bbeb6640b068dcbaebbcd732abc1b7c9c57e8af219b",
@@ -2527,7 +2531,7 @@
   {
    "id": 71,
    "title": "Abrindo Tesouro Precioso",
-   "text": "Ah! Isso aí é ótimo! Deixe eu dar uma olhada.",
+   "text": "Ah! Isso aí é ótimo! Deixa eu dar uma olhada.",
    "unlockRequirement": "",
    "cnUrl": "874f6fb3fc627709acd83ff1c5f1566f6847a149d76866579b6ad0704984fc01",
    "jpUrl": "0016c29b7fe67eacae4acb5a45562099aab37c2b8f41ae0d26e27ccf37744d2f",
@@ -2536,7 +2540,7 @@
   },
   {
    "id": 67,
-   "title": "Enigma Solucionado 1",
+   "title": "Enigma Solucionado - 1",
    "text": "Ei! Muito bem!",
    "unlockRequirement": "",
    "cnUrl": "17979111c35fe847013b6aa0dd734377253bd6aca0953463c7b1ba402156cfce",
@@ -2546,7 +2550,7 @@
   },
   {
    "id": 72,
-   "title": "Enigma Solucionado 2",
+   "title": "Enigma Solucionado - 2",
    "text": "Solucionar os problemas das pessoas é minha especialidade!",
    "unlockRequirement": "",
    "cnUrl": "e430201d246a19fb2a005419f9f24e8485ecf1b7e816045180618428d7df1f41",

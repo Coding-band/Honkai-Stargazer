@@ -1,0 +1,2675 @@
+{
+ "spRequirement": 140,
+ "iconPath": "19e3cc6daf8379022eea1bdd0ddf7ce8ec99eb130915f1bc1dde19eddf68f213",
+ "bgPath": "4a876afb27e69d9ffdbe3e1f9d6cb5179b3077d77a635f0551ffec75d5ebd946",
+ "figPath": "b9cd0755cc37be59d507282cbea2fb33aeff4f61d89ccedf767e9521375ad3ed",
+ "fgPath": "0aa2c84e1570f008260d4b8a963b629e70ed115a769e190c557fa940260e4506",
+ "splashIconPath": "82c23430f77a01e460ad46b1fd2d072d78afd213b8b5aa7786ef59a3aa1b68bc",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 2,
+  "iconPath": "db0b64061159f4acfb6a3034911f3b42572d0d8d51723ca888b8ce49b06961c5",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Braises immortelles"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Entraînement quotidien",
+    "Braises immortelles"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Récompense d'affectation"
+   ]
+  },
+  "468392": {
+   "id": 468392,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "fde5283543d2c56dbc6fa50e20ee2cd2a34a0ec0d0b3d2c1df1af003e36f8174",
+   "name": "Décret de censure",
+   "desc": "Pièce détachée utilisée pour la technologie d'ingéniosités de Xianzhou. Permet l'élévation des personnages de type imaginaire.",
+   "lore": "Lorsque Rubert libéra le fléau de la vie inorganique, les aurumatons de Xianzhou se rebellèrent également et s'adonnèrent à un massacre sans pitié. Afin de s'assurer que cette catastrophe ne refasse pas surface, les artisans les condamnèrent à la servitude à l'aide de talismans, qui privèrent les aurumatons de la capacité de penser.<br /><br />« Qu'as-tu bien pu faire pour te mettre cette machine à dos ? »<br />« Je n'ai rien fait du tout ! Je... J'ai juste un peu nettoyé son talisman doré. »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/468392",
+   "comeFrom": [
+    "Ombre stagnante de la Commission de l'artisanat",
+    "Ombre stagnante de la Commission de l'artisanat",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "470781": {
+   "id": 470781,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "c63b922af281d49c4d1e5ee84aa4a5cb7027e4a16e96fe8f683c9f50a4bcb921",
+   "name": "Ancienne rancune du Désastre de l'ennui",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "En tant que descendant direct de l'Imperator Insectorum, son seul désir est de densifier la population des siens. Avec ses faux géantes, il décime d'innombrables créatures et récolte les cultures des planètes pour son nid, dans lequel il élève sa progéniture dans un flux continu jusqu'à sa mort.<br /><br />« Sur la planète brisée, des sauterelles géantes ont noirci le ciel, et de la croûte terrestre se déverse une nuée d'insectes. Le coléoptère a bâti ce nouveau nid et le présente en cadeau à l'Imperator Insectorum... Puisse cette horreur marquer l'histoire et ses écrits, puisse-t-elle ne jamais se reproduire. »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/470781",
+   "comeFrom": [
+    "Écho de la guerre de la Zone d'isolement"
+   ]
+  },
+  "549437": {
+   "id": 549437,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "15365d10ed38771d99d247bc228b03787e29972cc714a655a9b8feef3031505e",
+   "name": "Instinct de pilleur",
+   "desc": "Une petite quantité d'antimatière. Matériau commun utilisé pour le renforcement.",
+   "lore": "Petite quantité d'antimatière qui émane d'un Reaver des Rangers du néant, telle la matérialisation de son instinct destructeur.<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549437",
+   "comeFrom": [
+    "Légion d'antimatière",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633378": {
+   "id": 633378,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3cd4c92ff44d695595377ffc6c0896d6839775f6014e96daf679b256bc0d19cf",
+   "name": "Ambition d'usurpateur",
+   "desc": "Une quantité modérée d'antimatière. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "Quantité modérée d'antimatière qui flotte autour d'un Distorseur des Rangers du néant. La quantité de particules de matière et d'antimatière a atteint un niveau dangereux...<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633378",
+   "comeFrom": [
+    "Légion d'antimatière au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635674": {
+   "id": 635674,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bbfb88036f821da503753ae4189da74a1586b0b7ee8ec0f234bbf9fb53474d01",
+   "name": "Flèche du chasseur de bêtes",
+   "desc": "Pointe de flèche forgée à partir de givracier par les artisans de Xianzhou. Permet d'améliorer légèrement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Chasse</span>.",
+   "lore": "Cadeau que les parents offrent à leurs enfants lorsque ces derniers tuent leur première proie, lors de la cérémonie de passage à la majorité. Il symbolise les succès à venir, aussi sûrs que la flèche qui file en direction de sa cible.<br /><br />« Puissent la flèche à ta taille et l'épée dans ton fourreau t'être fidèles et toujours trouver leur cible. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635674",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice des Plaines des neiges périphériques",
+    "Braises immortelles"
+   ]
+  },
+  "717319": {
+   "id": 717319,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "3c858c8ff4df238403e5443f57850367e4164a62efb508ce359db9c5b7474a19",
+   "name": "Volonté de conquérant",
+   "desc": "Antimatière condensée. Matériau avancé utilisé pour le renforcement.",
+   "lore": "Antimatière hautement condensée dans le corps d'un Piétineur des Rangers du néant. Le moment de l'oblitération est l'appel à la destruction des civilisations.<br /><br />« Ils attendent tous avec impatience le moment de l'oblitération, où ils seront remodelés et fusionnés avec le monde entier. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717319",
+   "comeFrom": [
+    "Légion d'antimatière au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836260": {
+   "id": 836260,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "567e2625dad62dc022ca7b71109c76754e7fc5cc2ac9daa5debb5c65282743ab",
+   "name": "Flèche du chasseur d'étoiles",
+   "desc": "Fragment de la Flèche de lumière briseuse de ciel tirée par le Seigneur archer de la Destinée. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Chasse</span>.",
+   "lore": "Les ruines d'une construction divine que les humains ordinaires ont rarement la chance de contempler. Quelle est donc la force capable de faire exploser des étoiles à des années-lumière ? L'humanité ne peut qu'imaginer la puissance de la Flèche de lumière d'après les cendres qu'elle a laissées dans son sillage.<br />Seul le Maître de la fournaise, chef des artisans de Xianzhou, peut forger à nouveau ces éclats pour ceux qui en sont dignes.<br /><br />« La mort d'une étoile brillera de mille feux pour les siècles à venir. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836260",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice des Plaines des neiges périphériques",
+    "Synthèse de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920201": {
+   "id": 920201,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "fdcef4e7b19d0d08fb9ea878b30e08be44286d0a6273f29c89a77c6e17ad9572",
+   "name": "Flèche du tueur de démons",
+   "desc": "Pointe de flèche forgée à partir d'essence de stellaris par les artisans de Xianzhou. Permet d'améliorer modérément les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Chasse</span>.",
+   "lore": "Une flèche plus fine qu'un doigt. Elle peut être utilisée à l'aide d'une arbalète électromagnétique ou d'un arc thermique. Sa puissance est telle qu'elle peut pénétrer les carapaces robustes des abominations en un seul coup.<br /><br />« Le banni céleste arrive de loin, après avoir parcouru de grandes distances entre les océans d'étoiles. Similaires à l'averse, les flèches s'abattent sur un casque reflétant l'éclat de la lune. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920201",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice des Plaines des neiges périphériques",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Braises immortelles"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 105.6,
+   "attackAdd": 5.28,
+   "hpBase": 142.56,
+   "hpAdd": 7.128,
+   "defenseBase": 62.7,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549437,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 147.84,
+   "attackAdd": 5.28,
+   "hpBase": 199.584,
+   "hpAdd": 7.128,
+   "defenseBase": 87.78,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549437,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 190.08,
+   "attackAdd": 5.28,
+   "hpBase": 256.608,
+   "hpAdd": 7.128,
+   "defenseBase": 112.86,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633378,
+     "count": 6
+    },
+    {
+     "id": 468392,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 232.32,
+   "attackAdd": 5.28,
+   "hpBase": 313.632,
+   "hpAdd": 7.128,
+   "defenseBase": 137.94,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633378,
+     "count": 9
+    },
+    {
+     "id": 468392,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 274.56,
+   "attackAdd": 5.28,
+   "hpBase": 370.656,
+   "hpAdd": 7.128,
+   "defenseBase": 163.02,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717319,
+     "count": 6
+    },
+    {
+     "id": 468392,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 316.8,
+   "attackAdd": 5.28,
+   "hpBase": 427.68,
+   "hpAdd": 7.128,
+   "defenseBase": 188.1,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717319,
+     "count": 9
+    },
+    {
+     "id": 468392,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 359.04,
+   "attackAdd": 5.28,
+   "hpBase": 484.704,
+   "hpAdd": 7.128,
+   "defenseBase": 213.18,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 103,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "3cfcd006d85f4b1750df7c7ad5526fdb8a2214115c1a59a10f739abfc88302df",
+   "artPath": "1576cea61557abca4a92048ff95788d211b7bcfe0471e092972e00aacd802bbd",
+   "name": "L'arrogance engendre le malheur",
+   "descHash": "Le nombre maximum de cumuls pour le bonus de Trace « Synthèse » augmente de <nobr>#1[i]</nobr>. Vous gagnez immédiatement <nobr>#2[i]</nobr> cumuls de Synthèse en début de combat. Nécessite le déblocage de Synthèse.",
+   "params": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "70d8a85463a4cf8ce17e8705ec9f46bdc08190b160ccf269283aebd7650e5d02",
+   "artPath": "94a2ab7e7760517858aaa7c22958191f6c428b39ee8337887c855754f4d5debc",
+   "name": "Le diable est dans les détails",
+   "descHash": "Lorsque l'attaque de suivi de son talent touche une cible, cette dernière subit des DGT imaginaires supplémentaires équivalents à <nobr>#1[i]%</nobr> de l'ATQ de Dr Ratio pour chaque malus qui lui est appliqué. Cet effet peut être déclenché un maximum de <nobr>#2[i]</nobr> fois durant chaque attaque de suivi.",
+   "params": [
+    0.2,
+    4
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "2409d9ad4b6853e86443b4fafebba642cfa2c504b0fa17594e46104febb10082",
+   "artPath": "cc2f7bc687c5085154b65c9f3bad00b849895308d3ee3b9fe524faf474a60249",
+   "name": "Connais-toi toi-même",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "58c364ef223c9ab38de6694d2043f02a66bfd0c279a4dcdc6081485cccbb929f",
+   "artPath": "1e5360bef5f6e8d55d75958172fe0b0b611da5024376e8184fb3cea5d2c310e4",
+   "name": "L'ignorance est aveugle",
+   "descHash": "Régénère <nobr>#1[i]</nobr> points d'énergie supplémentaires pour Dr Ratio lorsque son talent se déclenche.",
+   "params": [
+    15
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "c43ce8e213f0ca060250af12f2f9415478beda05cb9ecaa43ae203d65818802f",
+   "artPath": "e7ccd7fbee6dd4957bdd639b61c840ef414e62652e67f9d4c62d0ea33f6a2d1c",
+   "name": "Sic Itur Ad Astra",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "9dea70a7206d217e43f07c1cd405bb47842108b409eba5b5c50a4dd650ed0fd1",
+   "artPath": "1c89d3ea4d2366f29186d7aee0b59a1176ccc67d5312451b1713b33872468565",
+   "name": "Vincit Omnia Veritas",
+   "descHash": "Augmente de <nobr>#1[i]</nobr> le nombre de déclenchements de Folie du sage. Les DGT infligés par l'attaque de suivi du talent augmentent de <nobr>#2[i]%</nobr>.",
+   "params": [
+    1,
+    0.5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   776142
+  ],
+  [
+   692201
+  ],
+  [
+   575556
+  ],
+  [
+   261255
+  ],
+  [
+   976728
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Dr Ratio à une cible unique.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 776142,
+   "name": "Puissance de l'esprit",
+   "iconPath": "1ee6f4e45c1714cd62c0f5b90b99e54d613fc4fbca74e5446df469cbf48a5aa0",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Dr Ratio à une cible unique.",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "30",
+   "id": 692201,
+   "name": "Déclic intellectuel",
+   "iconPath": "c43ce8e213f0ca060250af12f2f9415478beda05cb9ecaa43ae203d65818802f",
+   "typeDescHash": "Compétence",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.75
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.825
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920201,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.21875
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3125
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836260,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.40625
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836260,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.575
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.65
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.725
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.8
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.875
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Dr Ratio à une cible ennemie unique et applique Folie du sage. Lorsque les alliés de Dr Ratio attaquent une cible affectée par Folie du sage, Dr Ratio lui inflige l'<u>attaque de suivi</u> de son talent une fois.<br />Folie du sage peut être déclenchée jusqu'à <nobr>#2[i]</nobr> fois et n'affecte que la cible la plus récente de l'ultime de Dr Ratio. Le nombre de déclenchements est réinitialisé après que Dr Ratio utilise son ultime.",
+   "ultimateCost": 140,
+   "break": "90",
+   "energy": "5",
+   "id": 575556,
+   "name": "Paradoxe du syllogisme",
+   "iconPath": "3d635536196be48334f20ed220849228c898c24e03afa2f26d5a6cec4bf1194b",
+   "typeDescHash": "Ultime",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.44,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.536,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.632,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.728,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.824,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.92,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920201,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2.04,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.16,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836260,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.28,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.4,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836260,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.496,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.592,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.688,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.784,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.88,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Dr Ratio a <nobr>#2[i]%</nobr> de <u>chances fixes</u> de déclencher 1 <u>attaque de suivi</u> contre sa cible lorsqu'il utilise sa compétence, lui infligeant des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Dr Ratio. Les <u>chances fixes</u> de déclencher l'<u>attaque de suivi</u> augmentent de <nobr>#3[i]%</nobr> pour chaque malus appliqué à la cible ennemie. L'<u>attaque de suivi</u> est lancée sur un autre ennemi aléatoire si la cible ennemie est vaincue avant que l'<u>attaque de suivi</u> ne soit déclenchée.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "5",
+   "id": 261255,
+   "name": "Cogito, Ergo Sum",
+   "iconPath": "85ec3d9fcc3b56e406330fa5823fbc3a3c24d1c5af070425b204e24a5fbe5b15",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.35,
+      0.4,
+      0.2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.485,
+      0.4,
+      0.2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549437,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.62,
+      0.4,
+      0.2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635674,
+       "count": 3
+      },
+      {
+       "id": 549437,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.755,
+      0.4,
+      0.2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920201,
+       "count": 3
+      },
+      {
+       "id": 633378,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.89,
+      0.4,
+      0.2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920201,
+       "count": 5
+      },
+      {
+       "id": 633378,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.025,
+      0.4,
+      0.2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920201,
+       "count": 7
+      },
+      {
+       "id": 633378,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2.19375,
+      0.4,
+      0.2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836260,
+       "count": 3
+      },
+      {
+       "id": 717319,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.3625,
+      0.4,
+      0.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836260,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717319,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.53125,
+      0.4,
+      0.2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836260,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.7,
+      0.4,
+      0.2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836260,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.835,
+      0.4,
+      0.2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.97,
+      0.4,
+      0.2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.105,
+      0.4,
+      0.2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.24,
+      0.4,
+      0.2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.375,
+      0.4,
+      0.2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 60669,
+   "name": "Attaque",
+   "iconPath": "1ee6f4e45c1714cd62c0f5b90b99e54d613fc4fbca74e5446df469cbf48a5aa0",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Incapacitation",
+   "descHash": "Crée une dimension spéciale qui provoque les ennemis proches pendant <nobr>#1[i]</nobr> secondes après avoir utilisé la technique. Il y a <nobr>#2[i]%</nobr> de <u>chances de base</u> de réduire la VIT des ennemis de <nobr>#3[i]%</nobr> pendant <nobr>#4[i]</nobr> tours en engageant le combat avec des ennemis dans la dimension. Il ne peut exister qu'1 dimension créée par les alliés à la fois.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 976728,
+   "name": "Fascination façonnée",
+   "iconPath": "34480c0f2400b7efb64f9336bcdbedb365ca850999fa8ef4f9e09e7de34fb443",
+   "typeDescHash": "Technique",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      10,
+      1,
+      0.15,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1305102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1305205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1305206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 413439,
+        "name": "Augmentation des chances de coup critique",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "Chances de coup critique",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836260,
+          "count": 3
+         },
+         {
+          "id": 717319,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 413442,
+      "name": "Augmentation d'ATQ",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920201,
+        "count": 5
+       },
+       {
+        "id": 633378,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Lorsque la compétence est utilisée pour attaquer une cible ennemie, il y a <nobr>#1[i]%</nobr> de chances de base de réduire la RÉS aux effets de la cible attaquée de <nobr>#2[i]%</nobr> pendant <nobr>#3[i]</nobr> tours.",
+    "ultimateCost": 0,
+    "id": 413350,
+    "name": "Inférence",
+    "iconPath": "b9952c496d29e0fbfdf92e772518aec6a1acca081bd41ebaf3e0f279d9910656",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       1,
+       0.1,
+       2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920201,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 413446,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549437,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305204,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 413441,
+    "name": "Augmentation de DÉF",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+    "statusList": [
+     {
+      "key": "DÉF",
+      "value": 0.05
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 10000
+     },
+     {
+      "id": 920201,
+      "count": 3
+     },
+     {
+      "id": 633378,
+      "count": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305207,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 413440,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.06
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 45000
+     },
+     {
+      "id": 836260,
+      "count": 3
+     },
+     {
+      "id": 717319,
+      "count": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1305202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1305203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 413444,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920201,
+          "count": 3
+         },
+         {
+          "id": 633378,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 413443,
+      "name": "Augmentation des chances de coup critique",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+      "statusList": [
+       {
+        "key": "Chances de coup critique",
+        "value": 0.026999999
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635674,
+        "count": 3
+       },
+       {
+        "id": 549437,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Lorsque Dr Ratio utilise sa compétence, ses chances de coup critique augmentent de <nobr>#1[f1]%</nobr> et ses DGT critiques de <nobr>#2[i]%</nobr> pour chaque malus sur la cible. Cet effet peut être cumulé jusqu'à <nobr>#3[i]</nobr> fois.",
+    "ultimateCost": 0,
+    "id": 413347,
+    "name": "Synthèse",
+    "iconPath": "3a4064faf82f3c142814472f1aece5516a905fab40ddb0cd18fc6be7cca0bafa",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.025,
+       0.05,
+       6
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635674,
+        "count": 3
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1305103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1305208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1305210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 329504,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836260,
+          "count": 8
+         },
+         {
+          "id": 717319,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1305209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 413454,
+        "name": "Augmentation des chances de coup critique",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+        "statusList": [
+         {
+          "key": "Chances de coup critique",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 836260,
+          "count": 8
+         },
+         {
+          "id": 717319,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 413453,
+      "name": "Augmentation de DÉF",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+      "statusList": [
+       {
+        "key": "DÉF",
+        "value": 0.075
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836260,
+        "count": 8
+       },
+       {
+        "id": 717319,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Lorsque Dr Ratio inflige des DGT à une cible ayant au moins <nobr>#1[i]</nobr> malus, les DGT infligés par Dr Ratio à cette cible augmentent de <nobr>#2[i]%</nobr> pour chaque malus appliqué à la cible, jusqu'à une augmentation maximale de <nobr>#3[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 413349,
+    "name": "Déduction",
+    "iconPath": "2fa5a9d80d2cd803da826471d9d1e6a772d49cad6a803e37a944f726deca227e",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       3,
+       0.1,
+       0.5
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836260,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corps",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "DGT CRIT",
+    "propertyIconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609"
+   },
+   {
+    "relicTypeHash": "Pieds",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "VIT",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Sphère planaire",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "Augm. des DGT imaginaires",
+    "propertyIconPath": "939478539b7b35b55ee48b2e19d6994455dec3403493edcc082140d3a061b14e"
+   },
+   {
+    "relicTypeHash": "Corde de liaison",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "ATQ",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Première rencontre",
+   "text": "Je suis le Dr Ratio, un savant et enseignant de la Guilde de l'intelligentsia, et l'un des Indigents. Si un jour votre cerveau présente des signes de ralentissement, appelez le docteur.",
+   "unlockRequirement": "",
+   "cnUrl": "d93715cb8d43ba4cf435c2df98d4163bb687568f326ddd0ff80a807538b67547",
+   "jpUrl": "8929b7899e59ae5c34e0c7c4a0fbd668c348b5022d75e05c9223e605f7956235",
+   "enUrl": "5c7115da6a1f2cf2494db54f117b6f9b8cfddb848e8d62f7360f9cdc316a73ef",
+   "krUrl": "235de7d8b7ed2aaf92f7de599effd98004972b4848334d8c652aa35b404d8ae3"
+  },
+  {
+   "id": 2,
+   "title": "Salutation",
+   "text": "Tu as l'air inquiète/inquiet. Quelque chose te tracasse ? Si c'est le cas, tu peux t'en occuper seule/seul.",
+   "unlockRequirement": "",
+   "cnUrl": "af8c8d85604139f4b703293b792586cb8d2161c35fbdbd9a878ab4d1bed23322",
+   "jpUrl": "11d654160118f2a1bcdfeaab5b71b3487fe76a9c53b3cc46666cdf63e72460e3",
+   "enUrl": "8c6ade3ce7fd19347cd130b787710608f04c24cd5e7cf8a360e2639bcc3da25d",
+   "krUrl": "9a7528958db73a8162c31afc8c68730fa711e618f1c3a9c362a99eb14ce302d8"
+  },
+  {
+   "id": 3,
+   "title": "Au revoir",
+   "text": "Un autre jour s'est écoulé. Si ton problème n'a pas encore été résolu, le fait que le problème vienne de toi est une possibilité.",
+   "unlockRequirement": "",
+   "cnUrl": "00d096285627f02a492da63a4537888c3f6fd768dd97718a5fff130179c8c0c0",
+   "jpUrl": "ac5eb12c1b8b69e417c06d67c5656a7ff38228e8d0e3941cf3f59354b0363e0f",
+   "enUrl": "f7957939c5fc35b5bfe9280128ca8bf0c0a6be96c63ed7d418ccd30f2e6aa57f",
+   "krUrl": "3ddd7aaacd613bac19c4f646274cf9bf886f873fde0ccb7a2c0d5dcffc69f955"
+  },
+  {
+   "id": 4,
+   "title": "Connaître Dr Ratio : Masque",
+   "text": "Tout d'abord, coiffé de mon couvre-chef, et dépourvu de mes cinq sens, je peux penser sans interférence. Et puis, je n'ai pas à voir la tête des idiots. Bien évidemment, eux non plus ne veulent pas me voir.",
+   "unlockRequirement": "",
+   "cnUrl": "26e257e8b022a45755e43e6bc1d86a0c0fdd29cdb91fc3d0a6ba46c5d880206d",
+   "jpUrl": "3c0fca3acf66ace2869413f810bd8ed838e97369ba0961f1cccd82e88f5023d9",
+   "enUrl": "b323f509856e54483ce3c19a2a592374dce66930167c2723759b63fae43b982e",
+   "krUrl": "f7c468609c1047836d8637da4fd7b6e36312c059d801beb2ee55a6d451179904"
+  },
+  {
+   "id": 5,
+   "title": "Connaître Dr Ratio : Véritable apparence",
+   "text": "Je n'ai pas de problème à révéler ma véritable identité pour aider mes étudiants et mes patients. Néanmoins, selon mon expérience personnelle, ça s'avère souvent contre-productif.",
+   "unlockRequirement": "",
+   "cnUrl": "50a75d978ed8ec6f4a4dd02b2388a7931df1be27e942f718a63d503fab2bc4e2",
+   "jpUrl": "966054845b0226a008c55d59bf9d5b0cd6205d6c228272a8e53784b9227bc731",
+   "enUrl": "2c004f1885e3d16d18c95ee8f0cae3e5ab51761665ef607f21e2cc20c37af2e5",
+   "krUrl": "ca1abd2b8b9650f67c790e9827c66c7d4f5e8be293045dde4ccc360916c7a70d"
+  },
+  {
+   "id": 6,
+   "title": "Bavardage : Guilde de l'intelligentsia",
+   "text": "La Guilde de l'intelligentsia est souvent perçue comme un commerce de connaissance, mais il revient toujours aux acheteurs de déterminer son prix. Lorsqu'une personne décide d'écouter l'information qui circule et se répand, un prix est déterminé.",
+   "unlockRequirement": "",
+   "cnUrl": "d18467fc9f137d505fb75a901120782178f4183d5c50da5b7b4a680fe82797b8",
+   "jpUrl": "24bdba259e5c43db031b27a76ba24788f23d01423dc910b395c1fd8ca4fbf1cb",
+   "enUrl": "4269b5d74ba93d6755a21e1137e53234a2fb2cb7dd51bc41920e9adfc4f55d89",
+   "krUrl": "fcd847421dc51b8a29e7e97b154ca35a12e7ab1a5da1b0268fbc0e5ddb26ecfb"
+  },
+  {
+   "id": 7,
+   "title": "Bavardage : Société des génies",
+   "text": "Ils se dévouent à la vérité... c'est tout à fait exact. Après tout, l'entièreté de leur existence est dédiée à Sagesse.",
+   "unlockRequirement": "",
+   "cnUrl": "b092abf43cb0fd9754f6901f40bb16b175d329ca46af9c4c01d4d9fbde7cb9a5",
+   "jpUrl": "ce1450eeab6763395a737e12f2a622632a796b09eee0bdbe0a25077917f78f31",
+   "enUrl": "e84418b585287bea3ac03530e5e4776b64695fa671603ddb2f984add1345be79",
+   "krUrl": "ed97721def67ac651bf058764aa9669ef120306f675445cb429506656bd4acce"
+  },
+  {
+   "id": 8,
+   "title": "Passe-temps",
+   "text": "Il m'est impossible de quitter les livres et les baignoires, surtout les baignoires. Lorsque l'esprit est sale, le corps l'est tout autant.",
+   "unlockRequirement": "",
+   "cnUrl": "64719bc4b75fb40e3fa1539755a6e82df3a6847c5e66d36815679af207e77c5c",
+   "jpUrl": "fa66af4d4bb4d4e2536dd00de62f9e41f443d9d0b87a71d718ee3ccae50da331",
+   "enUrl": "fd07df916deb3b699b5956f75ebefca474feb83747ea071704c01d45e6093574",
+   "krUrl": "f0dfd1e0177179215947e1928c4c65bb7203bb34651620bd10d0162967fdad61"
+  },
+  {
+   "id": 9,
+   "title": "Problèmes",
+   "text": "La chose la plus exacerbante avec l'idiotie, c'est qu'il est impossible de l'expliquer aux idiots.",
+   "unlockRequirement": "",
+   "cnUrl": "2f9f2b3361f41de9f899024dc9abfc2c782e182a336732ae96f6b8720b832275",
+   "jpUrl": "7451609e28a89df32b52141bf14774bedf88cd08d9e6fc95c517406e91190903",
+   "enUrl": "f74c71266232f9d18625811f53af43ffdbd791a5dac6330db845b767cfa73edf",
+   "krUrl": "cb8e96105c62a1c620f01867aa659b2302a0247137b1192a48cc5c72d3041de8"
+  },
+  {
+   "id": 10,
+   "title": "Anecdote",
+   "text": "Avant de poser une question, pourquoi ne pas chercher si la réponse a déjà été donnée ? Pour le bien de tous, il est préférable de ne pas poser ce genre de questions.",
+   "unlockRequirement": "",
+   "cnUrl": "c49613fc67331b9a704b9e74a44c12c73f87583a3f8592eac4d3a0b0bed34eca",
+   "jpUrl": "996a91790d7ca28bfaeedb7765b7d6f6904fea3e05ddf86236f2d78e45dabfd7",
+   "enUrl": "1897b479023a797bec4fdbec712514bbca51cad33e52db42a5b0ecee49d18550",
+   "krUrl": "3c4b55f1f2e4e75051394359c34ff11ed253091863eb82bce54c694fc9db160a"
+  },
+  {
+   "id": 11,
+   "title": "Connaissances",
+   "text": "La beauté de la vérité repose dans son immuabilité, même lorsque personne ne la comprend. Enfin, c'est ma vérité, du moins.",
+   "unlockRequirement": "",
+   "cnUrl": "0bb7aac586d37563fb82a4ad2a440e657f4abe71402980a7bb0e6121fd3ffef3",
+   "jpUrl": "8de910e34488ce096e9a7c7d2e34e6d52f301361acfbfe2731c158041d8a5360",
+   "enUrl": "94de438045d40e81d976113177d35baf3e24d7db124b4fe97a0537e8b008e15b",
+   "krUrl": "950c3530c7c2fe76f40acec83cb8b215769ec87a7a25ce1725e23a92a185a8ec"
+  },
+  {
+   "id": 12,
+   "title": "À propos de Herta",
+   "text": "Herta représente la quintessence du génie : une merveille naturelle qui se pense sans égal. Je ne doute pas de ses talents, mais je ne sais pas s'ils sont toujours utiles aux autres.",
+   "unlockRequirement": "",
+   "cnUrl": "df4bbd7c21329bbc2a806565c64a6187ea3c0954434c80d5dc2c212058a03be1",
+   "jpUrl": "b364986566995a1596cdd054a3de7822262726219014d4ab294808bc671163f1",
+   "enUrl": "40953628ee6b940b74e2360a31aefdbf892035e57cf20723fc75a12a5be82a90",
+   "krUrl": "c1749a5a0ae09cfd6a67ef65a3a719a3542c50e6411e37f3027777a73725b72b"
+  },
+  {
+   "id": 13,
+   "title": "À propos de Screwllum",
+   "text": "Dans son domaine, Screwllum essaie d'établir de nouvelles lois. Je préfère appeler ce genre d'individu des monarques, et non des génies.",
+   "unlockRequirement": "",
+   "cnUrl": "85b5802e8beeec31bc631f91157bea52677a594c9ce1759679caca5e06f4b774",
+   "jpUrl": "0f1fb026f578090f4805bafe5e154c5c36db640585f9587f2530843f3f139014",
+   "enUrl": "6a0b4a950973480cc70efcc13ca3d3ecd08ac720d7858eca473deaa21cf4e0d9",
+   "krUrl": "bae7c345b5bef235cab6f249e6ceea76af05c699cea1d5d4374a3d5bb1672a2a"
+  },
+  {
+   "id": 14,
+   "title": "À propos de Ruan Mei",
+   "text": "Combien de personnes ont été dupées par son numéro de génie hermétique devenu célèbre ? J'ai l'impression qu'elle veut explorer bien plus que l'existence. Tu verras... La membre de la Société des génies mue par de grandes ambitions, c'est elle.",
+   "unlockRequirement": "",
+   "cnUrl": "5fb83be767f81868778f2b44d410e78cae8dea5e536afc05acc5534ad7e22eac",
+   "jpUrl": "7f7e1c6b3ebba3603d2c77b185f27e441b1d047beaacc62fd0d614ffa91fc395",
+   "enUrl": "92ff2d09be5ae6929813fbf52036845ec00aa5f3f01919457860bb1693da0b20",
+   "krUrl": "0b812cbc099643a8f2ddd94e4ad84f50ceae61999d8e3ca1c624f7b045a4f638"
+  },
+  {
+   "id": 15,
+   "title": "Activation d'Eidolon",
+   "text": "La pensée est le seul outil d'apprentissage de soi.",
+   "unlockRequirement": "",
+   "cnUrl": "8065bc65b7f4e8b47e28a5c0ae46bf585dab97674dced457bb36f4716eeccd60",
+   "jpUrl": "3b461c63129e5e1f9e9cca4fb5b2ae1d0f518dc446f0bb627e03c0417853060a",
+   "enUrl": "a57603620dbe9f46539189bf44d990f8e804a5b2bfdc36f2e344ec66eae943b9",
+   "krUrl": "fd15283ad946a30dacae9d86e62fa9e9a2db0507b97eb452ead503f95b5c6777"
+  },
+  {
+   "id": 16,
+   "title": "Élévation de personnage",
+   "text": "Plus le progrès est rapide, plus la marge d'erreurs est grande.",
+   "unlockRequirement": "",
+   "cnUrl": "8b40a86747347df073b6632d3536f2fe490b58efe0017359ddbd80be6552010c",
+   "jpUrl": "07e79f3f6be1b32ada3ff4ca28a6f30edf89b686cb50f912a9f7f91cadbffc10",
+   "enUrl": "f2432d9df7e35980cd350814296d79adbd917e34b88ac33b0abe0eec05d46bc8",
+   "krUrl": "2729a29ed4574c4e7a717b3f11ab32307d1e7fe0b6bd94bc2de60c921affc49d"
+  },
+  {
+   "id": 17,
+   "title": "Niveau max atteint",
+   "text": "Si je n'ai pas encore obtenu la reconnaissance de Sagesse, alors il est raisonnable de penser que je ne l'aurai jamais.",
+   "unlockRequirement": "",
+   "cnUrl": "6363101a57b54585963cf9cad3b8176b5a09f6ca1805135dae1c991530382eb3",
+   "jpUrl": "d359f354f40d6227cdb4bb9d35081f39fcfdd504a7ae8e2af3b4729a3bd32d8b",
+   "enUrl": "2f8d7038719a74db27edc1c3956d40c1465ed82797e590cbe3767e3087912592",
+   "krUrl": "ba2403f5eb0762bdb360e6f1ed41f0599505e999b7a79a065e0b2b41226157fd"
+  },
+  {
+   "id": 18,
+   "title": "Activation de Trace",
+   "text": "Tu peux choisir de faire comme tout le monde, mais le résultat sera pour sûr totalement différent.",
+   "unlockRequirement": "",
+   "cnUrl": "c2857f1eba9bead66c0ecd1cf4daf88db1656a8cca08fb5511a32ab12b0567ce",
+   "jpUrl": "0495d3c8b3909d2b1f3c3ed403834ec89589e914f7f0e025d4d63ebdd7342d58",
+   "enUrl": "2d978f5991778ae851347c6bf14d10dc909dddb00bf9da03f6d8c90ebb694a2b",
+   "krUrl": "253cf37eadc6380cd08ca5b33c8cda457ff29486c3d2966dea25397a73d37bcc"
+  },
+  {
+   "id": 19,
+   "title": "Rejoint l'équipe avec Herta",
+   "text": "Un homme ordinaire peut-il encore croire en lui après avoir été méprisé par un génie ?",
+   "unlockRequirement": "",
+   "cnUrl": "0981284f593bb0f34a94417c348bc8baedccf81074a309797075dfba9954da49",
+   "jpUrl": "7eeb1fdc81fd13633b2389f86e80a599b86aae937f29e159868a0ab67c3d02f4",
+   "enUrl": "6acecbe5cb59f3d1462fb6c7016de566ff13c1e451e7d08b29c46374431b80eb",
+   "krUrl": "fd0875988ce1dfb6785de1707ef291a1aaebe09ce3ac4c0e9d721379e3543332"
+  },
+  {
+   "id": 20,
+   "title": "Rejoint l'équipe avec Ruan Mei",
+   "text": "Maîtriser et tempérer l'instinct de l'existence... tu en sais plus que moi à ce sujet.",
+   "unlockRequirement": "",
+   "cnUrl": "fe5da9d7ec556d66445c55821c0c53b400597159dda2c4666cf268b3376fd1fa",
+   "jpUrl": "ecceecb9747e06e7f6686b44e15e531a2e4dd1c507dd64940304d8de0327e0d5",
+   "enUrl": "4b859c4bb9987678119cfca45fb327fb0fd05f3d64dbf3f91d598872d93b5f02",
+   "krUrl": "0edfd82cf86c7f31981ef9e4ea6fa93c5c6c561b6c6422e1c4024a6debd27a20"
+  },
+  {
+   "id": 51,
+   "title": "Rupture de faiblesse en début de combat",
+   "text": "Vous appelez ça une défense ?",
+   "unlockRequirement": "",
+   "cnUrl": "040cb11e06bebec104c5b4f73c7b8d80aa789ba3130fad8c9ce2abf422a59907",
+   "jpUrl": "928189a5e1b32fa95ae6e5b10082fe5485b7429b4cb3f3f621b7f870046e894d",
+   "enUrl": "82a15ae3faae6cac3d48be86c5c9288206f677c2ec7f89980d342d7c3c3d11a2",
+   "krUrl": "eab6da049ac5ee8b11a09238c177811e540f32cde46a141b701e5c05721a0ba0"
+  },
+  {
+   "id": 52,
+   "title": "Avertissement de danger en début de combat",
+   "text": "Dois-je... donner une leçon ?",
+   "unlockRequirement": "",
+   "cnUrl": "0e93c89baf9376d5fb3886893233d40e96e6302c217383fdb78a50c4b7b351e7",
+   "jpUrl": "d4492eca3eff84bcf09d960d9bd0aabfc7dc656cd05fb9210471a2d29a9cc93c",
+   "enUrl": "4f3f771908b8c9dd8b208a8d81cd65ab87b74a4389bea6ea8829d4e465436f6d",
+   "krUrl": "8fc84f4286f1d35c8473dd53dcf34f4343c04b3920b1ae537a3ec13dabdaa33f"
+  },
+  {
+   "id": 53,
+   "title": "Début du tour 1",
+   "text": "C'est moi qui pose les questions.",
+   "unlockRequirement": "",
+   "cnUrl": "5456df82d93724b924931a6801f5a6565f89dacadc5bc5aaa22064652f4a87ab",
+   "jpUrl": "ec1346a4f8802605ddbcf0dfa7570864c718271c7b23a0f01137853a07ae9d9d",
+   "enUrl": "4a57a133c6d2bae25bf70fe291ae995dc92c3639e201534079863a8f861c29ca",
+   "krUrl": "4335f81c32f3696271a56fc7b4757c197a8ab69234a1d8a4e5baa8f7e9e718da"
+  },
+  {
+   "id": 54,
+   "title": "Début du tour 2",
+   "text": "Vous avez des réponses ?",
+   "unlockRequirement": "",
+   "cnUrl": "477847e16e63a6b1987b3be8c57b0e3175b856c2bd8d31ad490db2350ff80f7b",
+   "jpUrl": "59e5258f75544d620d5ecafa679d40d413506a8c8803f50135671cdfb1d8a3f7",
+   "enUrl": "60b09ebbabeb267ef0e013ac2f0ef58f91067222b8f1a0e17f31d965ed587ce4",
+   "krUrl": "477dbcdac37d486822e963df028342a362bf594e3490518368b0c364f8336725"
+  },
+  {
+   "id": 55,
+   "title": "Tour inactif",
+   "text": "Pas la peine de se précipiter. La patience est la clé du succès.",
+   "unlockRequirement": "",
+   "cnUrl": "9409f9df62134de2113a84a61eaf53cd9ddc2ceb773690372b13d9e185aae946",
+   "jpUrl": "9e78473497c446f9dcf1c0aec927ee4d5e55a3421c3e5403f7fe51315aa92c58",
+   "enUrl": "9b9edbf3edba4b3c6e4640d01ed3662140870bc93fea680f710de8136c12e375",
+   "krUrl": "aad7e343dfbd2cdf48d3e4867f13dc3288ef36dad213221d2d67447187fd4bd3"
+  },
+  {
+   "id": 56,
+   "title": "Compétence 1",
+   "text": "Faisons un test de connaissances.",
+   "unlockRequirement": "",
+   "cnUrl": "5ad40c92c2a4c2ef731fe94ce651b902d620e71b86f8ca71c8bfa958cc9b8701",
+   "jpUrl": "79042f1419ddb1aec79b924e91d174da39afd872a4114bb6c0c9ed11364a5020",
+   "enUrl": "d2e1fe77c146c3398f0d92d2adcf02401d45623517e54904b4f10b85daf7b747",
+   "krUrl": "a8dbf2aa675791f4ecb47c2ac3efb4f4c07c36e2df7819582a55875b931f97a3"
+  },
+  {
+   "id": 57,
+   "title": "Compétence 2",
+   "text": "Il ne faut jamais arrêter de penser.",
+   "unlockRequirement": "",
+   "cnUrl": "87a549ebfaf21f79437c114725761d1438f8fd08f487946400dba5ad16caf4d1",
+   "jpUrl": "ae701780913a25699515de74b2b08dd0e995c35e67d38fdf07502a48b668308f",
+   "enUrl": "b9ab3eb5dd5c893b6d41d118940b47b4f58fa448f17017ae5ec3e8c33ef570e4",
+   "krUrl": "ffcda5dfbf347be966e2130c8e9475c7aba434e1b694cedaafee48a610a6faea"
+  },
+  {
+   "id": 58,
+   "title": "ATQ normale",
+   "text": "Il faut faire fonctionner sa matière grise !",
+   "unlockRequirement": "",
+   "cnUrl": "34b6cefe38f301605a2ac30ec395e198c277642aef9f11307b80116b7af31fb7",
+   "jpUrl": "097376acf1a3044f99df1bbae558ecd4e82e8b9ebe0026ef85b21c3c281b936e",
+   "enUrl": "a21e1a6df9d80c0b5ec24595ffdc15f4bd4bd4d0fc5f9b44192be085a17b69e2",
+   "krUrl": "897c58e8b0cdd9fa4583cabeae4f629070de016a6d1cd8ba6b59352cb02a57c7"
+  },
+  {
+   "id": 59,
+   "title": "Attaque légère subie",
+   "text": "Médiocre !",
+   "unlockRequirement": "",
+   "cnUrl": "48aebd9c1084ffc487457fe392a7e8a8ec7b8af5c9da79d1b0a74c0c9a5b9422",
+   "jpUrl": "52a7e3b4f1703b9e1185bc35554f4e11f9d824e7ed4497ce8f8facfaea5c64bb",
+   "enUrl": "02abb39a72cfecee409713eb53913af351f480674741b2d69b72e35099131c30",
+   "krUrl": "6c66c386385295aac140d5c37da4470b6868690d2b23c3d9cc994606012bf13e"
+  },
+  {
+   "id": 60,
+   "title": "Attaque lourde subie",
+   "text": "Imbécile !",
+   "unlockRequirement": "",
+   "cnUrl": "726d89323f5595b198a49d2de3479d6a88a34e04f7c0847703da8f065e5f7e39",
+   "jpUrl": "6a2f8bdad1247b7b458f32a6f3a5b5b1a5b250dbb52c5e486d8034dc5e23920d",
+   "enUrl": "24676f036194ad6b72feede6ad65e68a847bdda7a21454446343d4a29998ff1a",
+   "krUrl": "027f381a3a0616b6fa88a2ebfb7b95293fa096ae8fedb0360ed45773174a3ede"
+  },
+  {
+   "id": 61,
+   "title": "Activation de l'ultime",
+   "text": "Esse est percipi...",
+   "unlockRequirement": "",
+   "cnUrl": "7c01879cd5eb07a2873383b5bd3bd32c02366218ce387fe1d08eab658497e162",
+   "jpUrl": "b0f604935be7fcfa153680e132ca8fc3c1de3d1a1d339b797130117c5b1dd3f8",
+   "enUrl": "9bf3b1b17ffaf17947f5045f0fd5a4a8b2b97177754af8d3e854a84ba15fa365",
+   "krUrl": "7f4871b3f79737fd1ef3a808b615592d38bce3b4c3472fc0d7e685e1f8adae97"
+  },
+  {
+   "id": 62,
+   "title": "Déclenchement de l'ultime",
+   "text": "La connaissance est la mesure de toute chose. Elle révèle la vérité... et l'erreur.",
+   "unlockRequirement": "",
+   "cnUrl": "86837030b4f622150a12d73788aee216835d08fb0ed926d71133aaccfebaf7c0",
+   "jpUrl": "1a6951e23a87ff838f757cb5f5631b282f8dd6426762cfa28af7aa888bf9f24e",
+   "enUrl": "1b12fe2ce20ce00d8524d1b11636e5026f4809762a1e1c8865dc19704f35fb90",
+   "krUrl": "a4db1da03aebae30e91bce11d89cc168eb10b7c0998daf9362a8894d6bcd15fb"
+  },
+  {
+   "id": 63,
+   "title": "Talent 1",
+   "text": "Zéro point... au suivant !",
+   "unlockRequirement": "",
+   "cnUrl": "0553bb8e79544f85b5e216ea1d35510c87177faf9bb229a12366d01127837475",
+   "jpUrl": "e80acf75880c4f670bd1e46256faa66b1488f71cf67b0954130826b3651f0c7e",
+   "enUrl": "bc72637445ecd68b2ea03e9cf2e7b9510c0646d2471e34c857bebc5c1bb4c53f",
+   "krUrl": "b874f2e58440f21664c11cca6c5fafb2d9d565405bc445d8282cbfc94f7aca5b"
+  },
+  {
+   "id": 64,
+   "title": "Talent 2",
+   "text": "Échec... Oust !",
+   "unlockRequirement": "",
+   "cnUrl": "b175da105a2de2f4fa705955eeaca8b57e89d1af8171027df25fc9806a1820b9",
+   "jpUrl": "6bc97052fd887631c76922a42a5b8f63ab59a0a08a14503fe4ccceb5d37e4746",
+   "enUrl": "1242c89e0016d7e0ecd878d8467432cb30311fc4871f572898ca013af2fa3ecd",
+   "krUrl": "b9bbec965fd77efeeaf4a8e9b6d5aefd6a5e3b98b1be5975f704ee24fe7c3d16"
+  },
+  {
+   "id": 65,
+   "title": "À terre",
+   "text": "Pure médiocrité...",
+   "unlockRequirement": "",
+   "cnUrl": "c2111e8242d83abac56f4012fb048bd6f2c77f00554c2d90e78c5b2cc96019a8",
+   "jpUrl": "5acefe91ca2412c5a9a0d77c3ad887b1c6d430cdb90ab059a5e8401af7aedacd",
+   "enUrl": "63080c829844d149046afb2096ddce110c755a076ee1ceb6aa5071b807381a88",
+   "krUrl": "56d3a74354087cdd517aa5f12e3885d123bd60b5185f8868e5b4d60f8b07615a"
+  },
+  {
+   "id": 66,
+   "title": "Retour au combat",
+   "text": "Bien joué... dix points.",
+   "unlockRequirement": "",
+   "cnUrl": "de9e3a148a4cfa04adb2d8a29de665a85c6e272110f69a02cb251b4453370e3d",
+   "jpUrl": "471d7aaba8d43ac4cd08891eba31ce9b14971b61e4fd6cb56fd229910e60ad3e",
+   "enUrl": "e457a3b615452cb824ecbfb54ba502e4f765bc75c6de74341239b27a18f92b7b",
+   "krUrl": "3ef615b371c9ede4f1054592abff5c5ab149450778d35d53b8a1e8d1d7e88532"
+  },
+  {
+   "id": 67,
+   "title": "Récupération de santé",
+   "text": "Pas mal... cinq points.",
+   "unlockRequirement": "",
+   "cnUrl": "66cfbd7b3f995669eafff87631b35b842514c0802e70e2d8d71ac624168bc51a",
+   "jpUrl": "684d5e2c44ba4fe58766a27e6cdb41ed630fe87ccedb1d30ecec06b1d694281f",
+   "enUrl": "4afc1a7002ecec55c83c6f2e7390bcf87486de730e801a428fd202d77662f32a",
+   "krUrl": "9975d522ef810f1da1ce2fed228b97cb3bbb14fc217be9035fc67876be09fe41"
+  },
+  {
+   "id": 68,
+   "title": "Technique",
+   "text": "Pour le théâtre de la médiocrité.",
+   "unlockRequirement": "",
+   "cnUrl": "446d6217b2a640cbf88dbe62b3af4b2792a4b9451d8c00fdb923033879e900a2",
+   "jpUrl": "d476306c0a69bc058d1be5ea75a599555f4981c024af05ed7c884f4294019b82",
+   "enUrl": "8f05fdfe7a565701b4c2c84b028ceaf77e2fb3641dd91ca1da669ef12294e0a6",
+   "krUrl": "e6a316b4fe74181f9584ceed136b81ca418fa32291d119ec5cce9e1938b2ddc4"
+  },
+  {
+   "id": 69,
+   "title": "Combat gagné",
+   "text": "Exactement comme je l'avais prévu.",
+   "unlockRequirement": "",
+   "cnUrl": "6e9d066c78a6a772a09b82f743884dd977befbcf686744359ca3f924c9d20ec3",
+   "jpUrl": "84dfb4189b2946b6c705403e3f223f7b3bc3e27bd5a2144fbe87cf7a7d2e531c",
+   "enUrl": "af367ac18b8704e00053b5052436e4b15a57181235f1e0c4f2b0f5175208f41a",
+   "krUrl": "bf5e55339ad51e1a516d31847a93a4449b58d9cb431f4856b0e8a7f5f3c3693c"
+  },
+  {
+   "id": 70,
+   "title": "Ouverture de coffre au trésor 1",
+   "text": "Depuis quand la connaissance et la richesse sont mutuellement exclusives ?",
+   "unlockRequirement": "",
+   "cnUrl": "dfa3bce810d8f734fbc65b4e59f9f0d4f90b5a0ffc0b7e49d465c16d159ecb69",
+   "jpUrl": "9a8cdadb857902e7ae871c034717ecd8126473341e4e1b0a329a50575d483228",
+   "enUrl": "647a006bdfc9e38cc0b0ecec4ba319ec0aa78f4e7ca198a04eb10917bebe34b0",
+   "krUrl": "991d793b6862e5f0f5e668e5af17283874cedc1e9304ec6c0c0d4d30588869e8"
+  },
+  {
+   "id": 71,
+   "title": "Ouverture de coffre au trésor 2",
+   "text": "La richesse ne devrait pas être un obstacle à la poursuite de la vérité.",
+   "unlockRequirement": "",
+   "cnUrl": "5c9659730863f552724404b457f766bd968184c6180808364fe802dd6bc6320f",
+   "jpUrl": "520fa442854becf4fafb2a8188ad44db4e365ba296ff208ff8d0507a57280936",
+   "enUrl": "048009629b13b4045d010fc2f411d48b00ba54fb6aaaf31a143fbe3cb7a63fc8",
+   "krUrl": "7a60cb905972cab518b47b0f8523a162c981aa0c56c54e184469f5628ee4c331"
+  },
+  {
+   "id": 72,
+   "title": "Ouverture de coffre précieux",
+   "text": "Je l'accepte, comme le ferait n'importe qui.",
+   "unlockRequirement": "",
+   "cnUrl": "283e8d0d0313df0a0b1ea43b40e218b9fcc1819685ebad0b7d596b951272523d",
+   "jpUrl": "eaf7d6c182275f4ae3a3b5022e8dde9a3a1dee815a4251677cf4c028ab366ef3",
+   "enUrl": "1c39e1ea6da266c272e81652ed3e5498f8cbc40353a2c9387366b2a5b173e917",
+   "krUrl": "accea3fe5778c1afd9fc9cf8c02b5d7374649d5af9049026c57eb0305d049fa8"
+  },
+  {
+   "id": 73,
+   "title": "Énigme réussie 1",
+   "text": "Aucun génie là-dedans...",
+   "unlockRequirement": "",
+   "cnUrl": "0125199b4410ede1de9ba21d4786efa3a14a3f518905ff4a8d2c6fd26bb01bf5",
+   "jpUrl": "31acc319368b0f48e7d9d86f912c61a0d2949d1c7882bd1b932f99673534a53e",
+   "enUrl": "bacbcb13e8e05e05978a406bbc5405bf4e93652765e8192ba146069fedf38160",
+   "krUrl": "a59349ef15313892031b00efbd85de82fb1727e1a222d7ddc46b363c276dd663"
+  },
+  {
+   "id": 74,
+   "title": "Énigme réussie 2",
+   "text": "Une épreuve intellectuelle intéressante.",
+   "unlockRequirement": "",
+   "cnUrl": "c9a8e8f2ef55e9ae73c228cfabb072ae964be0c2ae64e0f0e0ab78adc48c8b85",
+   "jpUrl": "dc9acb4555836bc7b31beb56f1044b365ebd210bd48a1df37cd89f40a76ce9cd",
+   "enUrl": "356c20113da3c4293f6e08a574c29886dee8aa7c01030a5d63b48c4b8081fe1a",
+   "krUrl": "448aa44fdfacd0b5792f82c09862540371b66922a377f64621c5a55ad80237ec"
+  },
+  {
+   "id": 75,
+   "title": "Cible ennemie trouvée",
+   "text": "Il faut apprendre à se connaître avant de connaître l'ennemi.",
+   "unlockRequirement": "",
+   "cnUrl": "bab1d722830958b06dc4e6e266fedf9888f4215724737f52c9372821b25db0b6",
+   "jpUrl": "9d3ea1726e61f9fa91aaab1ae4165da06ab63d93b98da734f805852787aef359",
+   "enUrl": "49e4a1fd6946f57ca91a251a375dae239954e5dd9cf6dee89eb10ddf553f8a3b",
+   "krUrl": "af2125d9462c89c14eadf17778a96b5d7527a9401d4f3114625a0f8e058cc5e2"
+  },
+  {
+   "id": 76,
+   "title": "Retour en ville",
+   "text": "Prêt/Prête à réduire ton espérance de vie à zéro ?",
+   "unlockRequirement": "",
+   "cnUrl": "b55089aa1f05481940c068cb35e3b84c0cd0ca5dbfa22d85cf7590aefbd678cc",
+   "jpUrl": "c4f175b106f656f236863b5796ef05a5b68114bbca2514208ccc12ecd41134de",
+   "enUrl": "954d9f379a71a47dc16b6bf4f1eebfcdffaf42e3e842dae01bd7df4af809812d",
+   "krUrl": "5440b337314fedc21ff266e90138a4ba2ec2cef90874bbc292cdeb0e0a051522"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Détails du personnage",
+   "text": "Un membre de la Guilde de l'intelligentsia direct et assuré, qui se cache souvent derrière une étrange sculpture en plâtre.<br />Il fait preuve d'une intelligence et d'un talent rares depuis son plus jeune âge, et pourtant se décrit comme « Indigent ».<br />Convaincu que l'intelligence et la créativité sont à la portée de tous, il veut répandre le savoir à travers tout l'univers pour guérir cette maladie chronique que l'on appelle l'ignorance.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Histoire du personnage : Partie I",
+   "text": "Veritas Ratio, ou « Dr Ratio » comme il se nomme lui-même, est un personnage aussi controversé que ses travaux. Au moins huit documentaires sur la vie et l'œuvre légendaire de Ratio ont vu le jour sur la planète d'origine du génie, en plus d'une dizaine de biographies. Les commentaires sont donc nombreux, mais aucun ne délivre un point de vue convaincant. Afin de combler ce manque, j'ai rendu visite au professeur Rond, connu pour avoir eu un impact majeur sur la vie du jeune Ratio. Le professeur a eu du mal à s'exprimer en raison de son grand âge, mais n'a pas pu contenir sa joie à l'évocation du nom de Ratio. Grâce à l'aide de sa famille et de ses étudiants, j'ai pu obtenir une lettre de recommandation jaunie, mais toujours en bon état.<br /><br /><br />« À l'attention du respecté comité d'admission de l'université de Veritas Prime :<br /><br />Mon nom est Rond, je suis professeur émérite du département de mathématiques à l'université intergalactique libre. Votre institution étant réputée pour valoriser les talents et l'éducation, j'aimerais recommander un étudiant du nom de Ratio afin qu'il poursuive ses études dans votre université. Bien que Ratio fréquente encore le lycée à l'heure actuelle, son niveau en mathématique, en physique et en philosophie dépasse largement celui d'un diplômé de première année de bon nombre d'universités.<br /><br />Sous ma tutelle, Ratio a su résoudre des équations mathématiques complexes avec une rapidité stupéfiante. Les élèves de ma classe peinent à seulement appréhender ces notions qu'il maîtrise. Par curiosité, je lui ai fourni à titre privé l'ébauche d'une équation appelée Conjecture de Rond. Bien que j'en sois à l'origine, je ne suis jamais parvenu à la résoudre. Après plusieurs jours de discussion, Ratio m'a soumis une idée aussi brillante qu'inventive afin de démontrer la valeur de cette équation. Un article sera publié d'ici peu, il vous prouvera que je dis la vérité.<br /><br />Ratio a toujours fait preuve d'une attention, d'une curiosité et d'une créativité extraordinaires en ma présence. Il se lève chaque matin pour pratiquer une activité physique avant de plonger directement dans le grand bain du savoir. Il est sans doute la définition même d'un génie : passionné, profond, enthousiaste et indubitablement supérieur.<br /><br />En raison du manque de cursus scientifiques suffisamment avancés dans nos établissements régionaux, j'espère que votre très estimée institution saura accueillir Ratio. Je me porte garant de sa réussite et suis prêt à parier ma réputation qu'il accomplira des prouesses qui transcenderont cette ère et couronneront de gloire votre célèbre université.<br /><br />Sincèrement,<br />Rond<br />██ ██ ██, calendrier philosophique<br /><br />Extrait de Le privilège de la sagesse : déchiffrage du Dr Ratio, page 9",
+   "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie II",
+   "text": "Après avoir obtenu son huitième doctorat, Ratio reçut le Diplôme d'excellence qui n'avait pas été décerné depuis deux ères de l'Ambre à l'université de Veritas Prime. Après toutes ces années, son exploit est inégalé dans l'histoire de l'université et devrait le rester pendant encore plusieurs générations. Si à ce moment-là, Ratio était une figure incontournable de la société civile, les opinions de ses professeurs et de ses pairs à son sujet divergeaient. Voici une copie électronique de certaines informations précieuses que j'ai pu récolter :<br /><br />« <br /><b>Actualités du campus :</b><br /><b>1. #Diplôme d'excellence décerné à Veritas Ratio#</b><br />Vues (<nobr>2500</nobr>), Commentaires (<nobr>145</nobr>)<br />Détails :<br />Le Diplôme d'excellence non décerné depuis deux ères de l'ambre par notre université sera bientôt remis à Veritas Ratio en reconnaissance de ses travaux exceptionnels dans les champs de la biologie, de la médecine, de la théologie naturelle, de la philosophie, des mathématiques, de la physique et de l'ingénierie. Pour sa contribution remarquable au domaine des sources d'énergie de cette planète, Veritas Ratio est admis de plein droit comme professeur.<br /><br /><b>Professeur Velita, Département des mathématiques</b> :<br />Félicitations à Ratio ! Ses efforts et son intelligence lui valent tous les honneurs ! Vous vous souvenez de l'époque où il portait un casque pour éviter toute distraction et se concentrer uniquement sur ses pensées ? Qui d'autre aurait eu autant de succès ? Ratio a fait partie de mes étudiants, mais je dois avouer qu'il m'a appris plus que je ne lui ai transmis. De par son honnêteté et sa franchise, c'était un souffle d'air frais pour l'université. Nous devrions tous lui en être reconnaissants !<br />D'accord (plus de <nobr>1000</nobr>), pas d'accord (2)<br /><b>Étudiant de philosophie paresseux</b><br />Est-ce qu'il ne devrait pas déjà faire partie de la Société des génies ?<br />D'accord (<nobr>850</nobr>), pas d'accord (5)<br /><b>La physique c'est magnifique</b><br />Il paraît qu'à l'époque où Ratio était assistant pédagogique, le fils d'un député suivait ses cours et a essayé de lui graisser la patte pour obtenir une bonne note. Ratio lui serait tombé dessus et l'aurait jeté hors de sa classe. Vous avez bien lu, il l'aurait littéralement jeté dehors... Quel homme !<br />D'accord (<nobr>550</nobr>), pas d'accord (<nobr>112</nobr>)<br /><b>Étudiant recalé</b><br />J'ai suivi un de ses cours par le passé. Je ne comprenais rien à ce qu'il racontait. J'ai tenu jusqu'au bout et obtenu un 0. Je m'estime heureux de ne pas avoir eu une note négative...<br />D'accord (<nobr>448</nobr>), pas d'accord (<nobr>37</nobr>)<br /><b>Voyageur céleste</b><br />Aimez mon post s'il vous a déjà passé un savon et fait pleurer !<br />D'accord (<nobr>330</nobr>), pas d'accord (<nobr>110</nobr>)<br /><b>Chat mourant</b><br />Il paraît qu'il garde son casque sous la douche, c'est vrai ?<br />D'accord (<nobr>220</nobr>), pas d'accord (<nobr>10</nobr>)<br /><b>Suivez mon modèle</b><br />Il n'est pas si génial que ça, si ? Je pourrais en faire autant si je travaillais plus...<br />D'accord (1), pas d'accord (<nobr>1000</nobr>)<br />...<br />Articles qui pourraient vous intéresser :<br />2. #8e doctorat pour Ratio#<br />3. #Mentions de Ratio dans les manuels scolaires#<br />4. #Veritas Ratio est-il fou ?#<br />\"<br /><br />D'après les statistiques, Ratio a donné <nobr>52</nobr> cours pendant sa carrière d'enseignant. Ils étaient réputés difficiles et le taux d'achèvement ne dépassait pas les 3 %. La quasi-totalité des étudiants allés au terme sont devenus des experts dans un domaine ou un autre.<br />...<br />Extrait de l'ouvrage Le privilège de la sagesse : déchiffrage du Dr Ratio, page <nobr>82</nobr>",
+   "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie III",
+   "text": "On suppose que Ratio aimerait rejoindre la Société des génies, mais il ne s'est jamais exprimé sur le sujet. Ses exploits sont spectaculaires aux yeux des gens ordinaires, mais Sagesse reste impassible en ce qui le concerne. Ce mystère fait beaucoup parler au sein de la communauté académique. J'ai contacté Margaret, une ancienne assistante de Ratio, et recueilli son précieux témoignage.<br /><br />— Monsieur Ratio ne m'a jamais parlé de la Société des génies, mais aujourd'hui encore, je me souviens d'un jour en particulier... À l'époque, j'étais l'assistante académique de monsieur Ratio. Je m'occupais surtout de sa correspondance avec tout le cosmos et de ses interactions avec le monde extérieur.<br /><br />Un jour, j'ai reçu une lettre envoyée par la Corporation de Paix Interastrale. Il me semble que c'était... pendant les tirs d'essai réussis de l'arme anti-planétaire sur laquelle monsieur Ratio avait travaillé pendant des années. L'invitation avait clairement un caractère solennel, alors je me suis empressée de la donner à monsieur Ratio. Cependant, il n'a rien dit. Son silence m'a paru pesant, même à travers son casque. Il s'est contenté de me demander poliment de sortir. Au moment même où j'ai fermé la porte, j'ai entendu un long soupir suivi d'un rire chargé d'autodérision... comme s'il avait réalisé qu'il ne serait jamais accepté dans la Société des génies.<br /><br />Tout le monde connaît la suite. Selon moi, monsieur Ratio est un génie à part entière. Ses inventions ont permis à bien des planètes de faire un bond en avant. Un érudit guérissant l'univers serait moins important qu'un génie qui ne sort jamais de sa tour d'ivoire ? Pardon, je m'emporte. Oubliez ce que je viens de dire.<br /><br />Je constate que bon nombre des partisans du Dr Ratio partagent l'avis de Margaret. Selon eux, le fait que la Société n'accepte pas Ratio est une preuve de l'excentricité et de l'étroitesse d'esprit de ces « génies ».<br /><br />Extrait de l'ouvrage Le privilège de la sagesse : déchiffrage du Dr Ratio, page <nobr>150</nobr>",
+   "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie IV",
+   "text": "Les gens pensent qu'en rejoignant la Guilde de l'intelligentsia, Ratio devra prendre sur lui-même pour s'adapter à l'environnement académique simpliste et pragmatique de la Guilde. Néanmoins, Ratio reste qui il est. Voici un passage transcrit par mes soins, extrait des archives internes :<br /><br />« <br />Candidat : Veritas Ratio<br />Sujet : épistémologie logique<br />Président du comité : Roseth<br />Transcripteur : Morriway<br />Transcription de l'échange :<br />Roseth : Monsieur Ratio, votre ouvrage est remarquable. Merci pour votre présentation. À présent, passons aux questions.<br />Personne ne s'exprime.<br />Roseth : Très bien, je vais ouvrir la marche.<br />Roseth : J'adhère à votre point de vue général, mais un détail me chiffonne.<br />Veritas Ratio : J'ai toujours l'impression d'être dans l'erreur quand quelqu'un se dit d'accord avec moi.<br />Roseth : Voici ma question : pourquoi pensez-vous que le savoir est un privilège ?<br />Veritas Ratio : Cher professeur Roseth, votre question laisse entendre que vous n'avez pas compris le contenu de mon ouvrage, ni les méthodes de déduction employées.<br />Veritas Ratio : En somme, vous seriez un parfait exemple. Votre incapacité à comprendre mes idées indique clairement que le savoir n'est pas pour tout le monde.<br />Veritas Ratio : Si l'ignorance est une affection, il en va du devoir des érudits de l'éradiquer et de guérir l'univers.<br />Veritas Ratio s'avance vers l'estrade et fait face à la foule. Veritas Ratio : Mesdames et messieurs, fermer les yeux devant la folie d'autrui ne relève pas de la bienséance, mais de la cruauté de ce monde. Si nous voulons partager le savoir, nous devons d'abord aider les gens à voir cette folie. Il en va de même pour les érudits de la Guilde.<br />Roseth hausse les épaules et sourit amèrement.<br />...<br />Un vacarme accompagne la sortie de Veritas Ratio.<br />Remarque : une main passionnée tenant une épée de glace, c'est certainement le meilleur moyen de décrire monsieur Veritas Ratio. En alliant la logique, la passion et l'art de la critique, Ratio nous démontre comment un grand penseur voit l'ignorance et comment il réagit face à elle. Nous estimons que l'inclusion de monsieur Veritas Ratio sera extrêmement bénéfique à la Guilde de l'intelligentsia.<br />Décision du comité : accord à l'unanimité.<br /> »<br /><br />Au sein de la Guilde de l'intelligentsia, il existerait un « Conseil des Indigents », une organisation mystérieuse regroupant les esprits les plus brillants de la Guilde. Le fait que Ratio se proclame « Indigent » semble confirmer la rumeur. Le nom de l'organisation semble peu anodin lorsque l'on connaît le passif entre Ratio et la Société des génies. Contrairement aux génies, les indigents doivent généralement redoubler d'efforts et de sacrifices pour arriver au même niveau. Lorsque Ratio se décrit comme quelqu'un d'indigent, est-ce un acte de soumission, un pied de nez ou une déclaration de guerre ? Quoi qu'il en soit, la détermination de monsieur Ratio à guérir les esprits malades grâce au savoir n'est plus à prouver.<br />...<br /><br />Extrait de l'ouvrage Le privilège de la sagesse : déchiffrage du Dr Ratio, page <nobr>230</nobr>",
+   "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
+  }
+ ],
+ "archive": {
+  "cvCn": "桑毓泽",
+  "cvJp": "武内駿輔",
+  "cvKr": "이동훈",
+  "cvEn": "Jordan Paul Haro",
+  "camp": "Guilde de l'intelligentsia"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Dr Ratio",
+ "rarity": 5,
+ "descHash": "Membre de la Guilde de l'intelligentsia. D'un tempérament excentrique, incisif, mais toujours élégant. Le visage derrière l'étrange masque de plâtre ne manque pourtant pas de charmes.",
+ "artPath": "a712666aad99860f914168469bd722ca1b7f7b2e39c59b8f75344d80e8f70981",
+ "miniIconPath": "56556c3ee22a170b2c536ffd126ea250057e12d0cef9c71885a79e503e5d5b0f",
+ "damageType": {
+  "id": 64,
+  "iconPath": "91b47b558df75f608b0a8aa93f35fd2063ed789ec25cbcc7bee926c60fba7ab1",
+  "color": "#F4D258",
+  "name": "Imaginaire",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "948d90296adc5203a105a16be892d9e4d5e83c93df11abf59a8ad4321e37fbb8",
+  "altIconPath": "38241d858c120d8a55f36eaab92a34690a7d9add4f3e36383dabf27f5d3f5f55",
+  "color": "#FFFFFF",
+  "name": "La Chasse",
+  "rarity": 0
+ },
+ "pageId": "drratio"
+}

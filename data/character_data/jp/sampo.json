@@ -54,7 +54,7 @@
    "id": 267805,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "822b1e8c023333b210f71f503cce58516c58ffc4f47c709a4ba4bc03387fdd68",
+   "iconPath": "ec233e43b828d3d0aaa069d3bb911a437404e6a0a34a358cdf134da8ad7fb0fa",
    "name": "暴風の眼",
    "desc": "ストームが残した矢じり。風属性キャラクターの昇格素材。",
    "lore": "裂界が、ある種のヴォイドレンジャーを模して創ったモンスターが残したもの。螺旋気流の中心に、微かに矢じりが見える。<br /><br />「裂界で死んだ者は、裂界で蘇る」",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/267805",
    "comeFrom": [
+    "凝結虚影「リベットタウン」",
     "凝結虚影「リベットタウン」",
     "「万能合成マシン」- 素材交換"
    ]
@@ -180,6 +181,7 @@
    "rewardPath": "/material/635669",
    "comeFrom": [
     "疑似花萼「大鉱区」",
+    "疑似花萼「大鉱区」",
     "エンバー交換"
    ]
   },
@@ -187,7 +189,7 @@
    "id": 717290,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
    "name": "古代エンジン",
    "desc": "旧世界時代の残留機械のエンジン。強化に必要な高級素材。",
    "lore": "地髄を原動力としている。回転時に火花が散るのではなく、オーロラがゆらゆらと広がる。<br /><br />「大守護者直属の技術部だけに、旧世界の資料を閲覧する権限が与えられてるの。私はね、クビにされたからもう入れないよ」",
@@ -205,7 +207,7 @@
    "id": 836255,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "328bab8dd4185cff98748182d80e550a23f12b7288da5caa228cc8407cea56df",
+   "iconPath": "34d88252515cd13ab58b6f5aae7329794a4a330a0147e1c5f755c8a2f4444bff",
    "name": "沈淪せし黒曜",
    "desc": "虚空から得た完全なる暗黒物質。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚無</span>の運命を歩むキャラクターの軌跡を大幅アップできる。",
    "lore": "意思が弱い者は一目見ただけで、永遠に混沌の中に沈み込んでしまう。<br /><br />「         」",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/836255",
    "comeFrom": [
+    "疑似花萼「大鉱区」",
     "疑似花萼「大鉱区」",
     "「万能合成マシン」- 素材合成"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
+    "疑似花萼「大鉱区」",
     "疑似花萼「大鉱区」",
     "「万能合成マシン」- 素材合成",
     "エンバー交換"
@@ -945,10 +949,10 @@
    ]
   },
   {
-   "tagHash": "妨害",
+   "tagHash": "全体攻撃",
    "descHash": "敵全体にサンポの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与え、<nobr>#4[i]%</nobr>の<u>基礎確率</u>で攻撃を受けた敵の持続被ダメージ+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>、<nobr>#3[i]</nobr>ターン継続。",
    "ultimateCost": 120,
-   "break": "0",
+   "break": "60/hit",
    "energy": "5",
    "id": 49935,
    "name": "サプライズボックス",

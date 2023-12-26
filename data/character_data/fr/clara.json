@@ -88,7 +88,7 @@
    "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
    "name": "Journal d'aventure",
    "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
-   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
    "purpose": "Matériau d'EXP de personnage",
    "rarity": 3,
    "rewardPath": "/material/409961",
@@ -164,6 +164,7 @@
    "rewardPath": "/material/635673",
    "comeFrom": [
     "Calice de la Zone de stockage",
+    "Calice de la Zone de stockage",
     "Braises immortelles"
    ]
   },
@@ -171,7 +172,7 @@
    "id": 717290,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "70ecbc31091590eedbe7999413b138778e67af4ce3797e4e47860fa6b5867fbe",
+   "iconPath": "4ef8700321d72ae07d3b931df6b9f6567d87f4035e2afed42d53e7c53aa09ceb",
    "name": "Ancien moteur",
    "desc": "Moteur mécanique provenant de l'Ancien monde. Matériau avancé utilisé pour le renforcement.",
    "lore": "Il utilise de la géomoelle comme source d'énergie. Lorsqu'il est alimenté, il crache des aurores vagabondes, et non des étincelles.<br /><br />« Il n'y a que la Division technologique directement rattachée à la Gardienne suprême qui a accès aux informations concernant l'Ancien monde. J'ai perdu mes accès quand on m'a mise à la porte. »",
@@ -189,7 +190,7 @@
    "id": 836259,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "iconPath": "d9e262af4f143c0b58be9d20f5c04e04a252fb8f05eb675c0996f5b1bc8f6ad5",
    "name": "Lame briseuse de monde",
    "desc": "Arme cassée laissée à l'abandon par les membres de la Légion d'antimatière. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruction</span>.",
    "lore": "Cette arme représente le rang et les succès accomplis par son propriétaire au nom de la Destruction.<br />Le maître de cette arme est celui qui arrive à la fin de la guerre pour en raviver les braises et consumer le monde. Quelles que soient les gloires du passé ou les bénédictions accordées par les dieux, cette planète est condamnée à redevenir poussière et à s'éteindre dans les profondeurs du ciel étoilé.<br /><br />Le porteur de cette marque a la charge de purifier le monde.",
@@ -198,6 +199,7 @@
    "rewardPath": "/material/836259",
    "comeFrom": [
     "Calice de la Zone de stockage",
+    "Calice de la Zone de stockage",
     "Synthèse de matériaux de l'Omni-synthétiseur"
    ]
   },
@@ -205,7 +207,7 @@
    "id": 866633,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "d97cb9072570df0b85725f8a0783d22e500c3e06e49b7fbc8dd485e7ba1b9516",
+   "iconPath": "8e0cd81aa41c7849a5da687f6b40c0b3ccec417ef1924c802b70c03021e69317",
    "name": "Dents brisées du loup de fer",
    "desc": "Dents de scie abandonnées par des automates. Permet l'élévation des personnages de type physique.",
    "lore": "On dit que les techniques de fonderie développées par les Architectes leur permettaient de créer des tronçonneuses capables de fendre des rochers géants. Ces techniques ont depuis longtemps été oubliées.<br /><br />« Le boss Svarog dit que sa lame est tellement fine qu'elle peut couper l'espace entre les molécules... C'est quoi des molécules ? »",
@@ -213,6 +215,7 @@
    "rarity": 4,
    "rewardPath": "/material/866633",
    "comeFrom": [
+    "Ombre stagnante de la Grande mine",
     "Ombre stagnante de la Grande mine",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -229,6 +232,7 @@
    "rarity": 3,
    "rewardPath": "/material/920200",
    "comeFrom": [
+    "Calice de la Zone de stockage",
     "Calice de la Zone de stockage",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles"
@@ -1588,7 +1592,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Réduit la robustesse de l'ennemi au type correspondant en entrant en combat après l'avoir attaqué.",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2126,7 +2130,7 @@
   {
    "id": 2,
    "title": "Salutation",
-   "text": "Continuons à faire du bon travail aujourd'hui !",
+   "text": "Continuons à faire du bon travail aujourd'hui !",
    "unlockRequirement": "",
    "cnUrl": "f80164407b8eb941afb061cec6e25a7c1c0975d0d29ca9dcc41eff1e7b06e1b8",
    "jpUrl": "ff09ade91944647bb51321a4b7a92c4047a2135cf8dffa235af4b3017f646ab3",
@@ -2155,8 +2159,8 @@
   },
   {
    "id": 5,
-   "title": "Bavardage : Jeu dans la cabane",
-   "text": "Une fois, je jouais dans ma cabane, j'ai demandé à Perkins d'aller ouvrir la porte, et il y avait vraiment quelqu'un derrière !",
+   "title": "Bavardage : Jeu dans la cabane",
+   "text": "Une fois, je jouais dans ma cabane, j'ai demandé à Perkins d'aller ouvrir la porte, et il y avait vraiment quelqu'un derrière !",
    "unlockRequirement": "",
    "cnUrl": "3c8a3e657e9efc9aa1769f72ef8eac4c2aa21e6e5622005235d34e1711844406",
    "jpUrl": "d0d92001bb551cc2a2808c1b2757309646e991307fcb5e48d38a1ea1c2770450",
@@ -2166,7 +2170,7 @@
   {
    "id": 6,
    "title": "Passe-temps",
-   "text": "Il y a plein de choses intéressantes dans la banque de mémoire de monsieur Svarog, comme... des films ! C'est comme regarder plein de gens jouer dans leur cabane ensemble !",
+   "text": "Il y a plein de choses intéressantes dans la banque de mémoire de monsieur Svarog, comme... des films ! C'est comme regarder plein de gens jouer dans leur cabane ensemble !",
    "unlockRequirement": "",
    "cnUrl": "05fd35b69797a64c52e71ebe9d98012cd54feba2de74c6c51d9974c7fbd21d8f",
    "jpUrl": "fbe73dde23f926b325098fa5aa9d35ab8f299ca04c6d7c0624dec360b619ee1f",
@@ -2226,7 +2230,7 @@
   {
    "id": 12,
    "title": "À propos de Svarog",
-   "text": "Tu savais que les mains de monsieur Svarog pouvaient se transformer en machine capable de me sécher les cheveux ? Elles peuvent aussi tailler de grosses roches pour en faire des petites tables et des chaises...",
+   "text": "Tu savais que les mains de monsieur Svarog pouvaient se transformer en machine capable de me sécher les cheveux ? Elles peuvent aussi tailler de grosses roches pour en faire des petites tables et des chaises...",
    "unlockRequirement": "",
    "cnUrl": "4486aa6ca921050a48460cd55dd86daa48dda5d7db4e77467540e38329907ec9",
    "jpUrl": "8e27dba2075271eddc710cb8f80d92dcc0b79e6adb23321f52d89f0e0e5669a3",
@@ -2346,7 +2350,7 @@
   {
    "id": 53,
    "title": "Début du tour 1",
-   "text": "Clara : Je dois être courageuse...",
+   "text": "Clara : Je dois être courageuse...",
    "unlockRequirement": "",
    "cnUrl": "2d73309461255967aeb7f440d065bdd4dedfb9fc15426c37d74982870e40dcc6",
    "jpUrl": "a7a039eb7f072defdbdd071db768c92b3840636e1fa7bb542e4abc2f337c97b2",
@@ -2426,7 +2430,7 @@
   {
    "id": 62,
    "title": "Attaque lourde subie",
-   "text": "Clara : ... Aïe.",
+   "text": "Clara : ... Aïe.",
    "unlockRequirement": "",
    "cnUrl": "8c10820ea89c8cce0df3feb6823e056b4e1fa3676960edc89a8c238ed101e296",
    "jpUrl": "06a54bdbe524469ea382ed0bd6e96a31eb3a4fd469aef961a8183c9468ee8ce2",
@@ -2526,7 +2530,7 @@
   {
    "id": 72,
    "title": "Ouverture de coffre au trésor 1",
-   "text": "Clara : Si tu trouves des composants... Je pourrais les prendre ?",
+   "text": "Clara : Si tu trouves des composants... Je pourrais les prendre ?",
    "unlockRequirement": "",
    "cnUrl": "2403dc542b17eb5415e7775d9061da5089f1675942a376246f62b8f161ab3e85",
    "jpUrl": "3f689dfdfa85dd394d9feb391914a458b08af594564c89b70e4ce04663950efa",
@@ -2566,7 +2570,7 @@
   {
    "id": 78,
    "title": "Énigme réussie 2",
-   "text": "Clara : J'espère que j'ai bien fait...",
+   "text": "Clara : J'espère que je me suis bien débrouillée...",
    "unlockRequirement": "",
    "cnUrl": "d3c8ae6527e9ea4c63e4248b3188162b1ee5132d2fbbe333a813ef609c7c0826",
    "jpUrl": "58270b633d6f6ac25f9c435ddd998026ef4e5439333f00f005c48cfcb6af0465",

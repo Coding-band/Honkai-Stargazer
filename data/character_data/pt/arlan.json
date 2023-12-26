@@ -54,7 +54,7 @@
    "id": 151160,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "f4e0301b109ba0ab0b633a7186df88a0fa0be8a70edf33c88539672e514bbc8c",
+   "iconPath": "02cccae71e7d4c33c463175ee672c7eed3f27ddc6406f05a40a18e261fdd9780",
    "name": "Coroa de Raios de uma Sombra do Passado",
    "desc": "Acessório de cabeça da Sombra Guardiã. Pode ser usado para Ascensão de personagens de Dano de Raio.",
    "lore": "Acessório deixado para trás pela sombra de um guardião do passado, que contava histórias da cidade de Inverno Eterno.<br /><br />\"Svetlana, o Punho de Ferro: sua ira é tão aterrorizante quanto um trovão e sua retribuição é tão rápida quanto um raio.\"",
@@ -62,6 +62,7 @@
    "rarity": 4,
    "rewardPath": "/material/151160",
    "comeFrom": [
+    "Sombra Estagnada: Corredor de Ecos Atenuados",
     "Sombra Estagnada (Corredor de Ecos Atenuados)",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -165,6 +166,7 @@
    "rewardPath": "/material/635673",
    "comeFrom": [
     "Cálice (Zona de Armazenamento)",
+    "Cálice (Zona de Armazenamento)",
     "Troca de Brasas"
    ]
   },
@@ -172,7 +174,7 @@
    "id": 717320,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "f32ca1d67c0e385f701d450cae1c5dea41f334e31d61eb331d4be4dc7551c378",
+   "iconPath": "f54699a5eaba1cef67217196db0a1440c1b1c1c5b89179b36b2ebe7331831ea1",
    "name": "Núcleo Contorcido",
    "desc": "O coração de um monstro que vaga pelo Fragmentum. Material avançado usado para aprimoramentos.",
    "lore": "É uma lesão que dá vida ao mal, o impulso para o pecado. É a fonte de distorção do Fragmentum.<br />O coração pulsa de forma lenta, com uma força residual suficiente para causar uma nova calamidade. É melhor destruí-lo para evitar problemas futuros.<br /><br />\"É como um câncer...\"",
@@ -190,7 +192,7 @@
    "id": 836259,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "e50443a4312313a9e0eac79179944cf272f37c4a395e09c74f76542b13531122",
+   "iconPath": "d9e262af4f143c0b58be9d20f5c04e04a252fb8f05eb675c0996f5b1bc8f6ad5",
    "name": "Lâmina Destruidora de Mundos",
    "desc": "Arma quebrada deixada por membros da Legião Antimatéria. Usada para conceder um aumento significativo de nível de Rastros de personagens da <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Destruição</span>.",
    "lore": "Esta arma representa o ranque e as conquistas de seu dono em nome da Destruição.<br />O dono desta arma é aquele que chega no fim da guerra para atiçar as brasas que consomem o mundo. Independentemente das glórias do passado ou das bênçãos de suas divindades, este planeta está destinado a voltar às cinzas de onde veio, e murchar nas profundezas do céu estrelado.<br /><br />\"O objetivo do usuário desta arma é purificar o mundo.\"",
@@ -198,6 +200,7 @@
    "rarity": 4,
    "rewardPath": "/material/836259",
    "comeFrom": [
+    "Cálice (Zona de Armazenamento)",
     "Cálice (Zona de Armazenamento)",
     "Sintetizador Omni — Síntese de Material"
    ]
@@ -214,6 +217,7 @@
    "rarity": 3,
    "rewardPath": "/material/920200",
    "comeFrom": [
+    "Cálice (Zona de Armazenamento)",
     "Cálice (Zona de Armazenamento)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas"
@@ -1500,7 +1504,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do Tipo correspondente do inimigo-alvo.",
+   "descHash": "Ataca um inimigo, e, quando a batalha começa, reduz a Tenacidade do alvo inimigo do Tipo correspondente.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -2188,7 +2192,7 @@
   {
    "id": 17,
    "title": "Entrou na Equipe com Asta",
-   "text": "Deixe a luta pra mim, dama Asta.",
+   "text": "Deixe a luta para mim, dama Asta.",
    "unlockRequirement": "",
    "cnUrl": "cf7fe19712faf8e66a531147a1b41980d1f0c44352c7df8a9de28a61f93fb8c7",
    "jpUrl": "f32ec899f279ecffb23cb72023f1cf22ddd8dcbc7adcf69eaf597121aa301790",
@@ -2257,7 +2261,7 @@
   },
   {
    "id": 56,
-   "title": "Perícia 1",
+   "title": "Perícia - 1",
    "text": "Como quiser.",
    "unlockRequirement": "",
    "cnUrl": "99914cc0740f21351cfac8d7e40e6ec6684b56e3c7831bb5dd3ef1c3687b5a59",
@@ -2267,7 +2271,7 @@
   },
   {
    "id": 57,
-   "title": "Perícia 2",
+   "title": "Perícia - 2",
    "text": "Silêncio.",
    "unlockRequirement": "",
    "cnUrl": "97eedc41088c610d89a6ae1db8c18823a9754a694683d61879fa87adbb07ea33",
@@ -2367,7 +2371,7 @@
   },
   {
    "id": 67,
-   "title": "Abrindo Tesouro 1",
+   "title": "Abrindo Tesouro - 1",
    "text": "Pode ficar com isso.",
    "unlockRequirement": "",
    "cnUrl": "17ef4e52a8d6f6e54e0870e66301373b7c1a868c146b76e832453aa4ca1cf6a7",
@@ -2377,7 +2381,7 @@
   },
   {
    "id": 71,
-   "title": "Abrindo Tesouro 2",
+   "title": "Abrindo Tesouro - 2",
    "text": "Acho que vi essas coisas no nosso inventário...",
    "unlockRequirement": "",
    "cnUrl": "a0a5720f02f500b3bcf06160de48cfc4d216e4af6b7e4e219f22d95c6c86330e",
@@ -2397,7 +2401,7 @@
   },
   {
    "id": 68,
-   "title": "Enigma Solucionado 1",
+   "title": "Enigma Solucionado - 1",
    "text": "Isso vai servir.",
    "unlockRequirement": "",
    "cnUrl": "f521944d9c4a7df9624e1283d9c10f152041992f3f556417f02cd5c9a972fd5f",
@@ -2407,8 +2411,8 @@
   },
   {
    "id": 73,
-   "title": "Enigma Solucionado 2",
-   "text": "Foi igual aos meus dias no Departamento de Segurança.",
+   "title": "Enigma Solucionado - 2",
+   "text": "Igual aos meus dias no Departamento de Segurança.",
    "unlockRequirement": "",
    "cnUrl": "44875227b40215928e4e81c1394dd9fb7d5b7375be9d29d8cccb193d9a14da2a",
    "jpUrl": "efe740ef9d15b77bb51480ea35ffae05a520f9cd2efce030fc2f440bc561ba5d",

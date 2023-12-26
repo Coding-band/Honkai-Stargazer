@@ -80,7 +80,15 @@ import CollapsingSky from "../../data/lightcone_data/es/20002.json";
 import Cornucopia from "../../data/lightcone_data/es/20001.json";
 import Arrows from "../../data/lightcone_data/es/20000.json";
 
+//add in 1.6.0
+import BaptismofPureThought from "../../data/lightcone_data/es/23020.json";
+import PastSelfinMirror from "../../data/lightcone_data/es/23019.json";
+
 const ES = {
+  //add in 1.6.0
+  "Baptism of Pure Thought": BaptismofPureThought,
+  "Past Self in Mirror": PastSelfinMirror,
+  
   "An Instant Before A Gaze": AnInstantBeforeAGaze,
   "Night of Fright": NightofFright,
   "Worrisome, Blissful": WorrisomeBlissful,

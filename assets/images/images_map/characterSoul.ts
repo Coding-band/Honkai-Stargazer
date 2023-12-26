@@ -4,7 +4,52 @@
  */
 
 const CharacterSoul = {
-  Argenti : {
+	//add in 1.6.0
+	"Dr. Ratio":{
+		eidolon1: require("../../images/character_eidolon/dr_ratio_eidolon1.webp"),
+		eidolon2: require("../../images/character_eidolon/dr_ratio_eidolon2.webp"),
+		eidolon3: require("../../images/character_eidolon/dr_ratio_eidolon3.webp"),
+		eidolon4: require("../../images/character_eidolon/dr_ratio_eidolon4.webp"),
+		eidolon5: require("../../images/character_eidolon/dr_ratio_eidolon5.webp"),
+		eidolon6: require("../../images/character_eidolon/dr_ratio_eidolon6.webp"),
+		soul1: require("../../images/character_soul/dr_ratio_soul1.webp"),
+		soul2: require("../../images/character_soul/dr_ratio_soul2.webp"),
+		soul3: require("../../images/character_soul/dr_ratio_soul3.webp"),
+		soul4: require("../../images/character_soul/dr_ratio_soul4.webp"),
+		soul5: require("../../images/character_soul/dr_ratio_soul5.webp"),
+		soul6: require("../../images/character_soul/dr_ratio_soul6.webp"),	
+	},
+	"Ruan Mei":{
+		eidolon1: require("../../images/character_eidolon/ruan_mei_eidolon1.webp"),
+		eidolon2: require("../../images/character_eidolon/ruan_mei_eidolon2.webp"),
+		eidolon3: require("../../images/character_eidolon/ruan_mei_eidolon3.webp"),
+		eidolon4: require("../../images/character_eidolon/ruan_mei_eidolon4.webp"),
+		eidolon5: require("../../images/character_eidolon/ruan_mei_eidolon5.webp"),
+		eidolon6: require("../../images/character_eidolon/ruan_mei_eidolon6.webp"),
+		soul1: require("../../images/character_soul/ruan_mei_soul1.webp"),
+		soul2: require("../../images/character_soul/ruan_mei_soul2.webp"),
+		soul3: require("../../images/character_soul/ruan_mei_soul3.webp"),
+		soul4: require("../../images/character_soul/ruan_mei_soul4.webp"),
+		soul5: require("../../images/character_soul/ruan_mei_soul5.webp"),
+		soul6: require("../../images/character_soul/ruan_mei_soul6.webp"),	
+
+	},
+	Xueyi:{
+		eidolon1: require("../../images/character_eidolon/xueyi_eidolon1.webp"),
+		eidolon2: require("../../images/character_eidolon/xueyi_eidolon2.webp"),
+		eidolon3: require("../../images/character_eidolon/xueyi_eidolon3.webp"),
+		eidolon4: require("../../images/character_eidolon/xueyi_eidolon4.webp"),
+		eidolon5: require("../../images/character_eidolon/xueyi_eidolon5.webp"),
+		eidolon6: require("../../images/character_eidolon/xueyi_eidolon6.webp"),
+		soul1: require("../../images/character_soul/xueyi_soul1.webp"),
+		soul2: require("../../images/character_soul/xueyi_soul2.webp"),
+		soul3: require("../../images/character_soul/xueyi_soul3.webp"),
+		soul4: require("../../images/character_soul/xueyi_soul4.webp"),
+		soul5: require("../../images/character_soul/xueyi_soul5.webp"),
+		soul6: require("../../images/character_soul/xueyi_soul6.webp"),	
+	},
+
+  	Argenti : {
 		eidolon1: require("../../images/character_eidolon/argenti_eidolon1.webp"),
 		eidolon2: require("../../images/character_eidolon/argenti_eidolon2.webp"),
 		eidolon3: require("../../images/character_eidolon/argenti_eidolon3.webp"),

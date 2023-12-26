@@ -36,7 +36,7 @@
    "id": 67219,
    "type": 601,
    "purposeId": 2,
-   "iconPath": "03a85f3ccfcb36eb4e371d602e552113e1ada82e6ca848ca9d4f2761f6991e5e",
+   "iconPath": "d74f7384a695f9189837d5b200d8acd883dfe1684806da8c8f68701e841a2bfd",
    "name": "Horn aus Schnee",
    "desc": "Zerbrochenes Horn eines Eisigen Streuners. Material zum Aufstieg der Figuren mit Eis-Typ.",
    "lore": "Die Silbermähnen-Wachen trugen Wettbewerbe aus, bei denen der Sieger innerhalb einer gewissen Zeit einen Körperteil eines Monsters beschaffen musste. Dieses kalte, zerbrochene Horn muss aus einem solchen Wettbewerb stammen.<br /><br />„Sir Bova, das ist aber kein Elchgeweih und über den Geomark-Schmelzofen will sich das bestimmt auch niemand hängen.“",
@@ -44,6 +44,7 @@
    "rarity": 4,
    "rewardPath": "/material/67219",
    "comeFrom": [
+    "Ruhender Schatten (Korridor der verhallenden Echos)",
     "Ruhender Schatten (Korridor der verhallenden Echos)",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -165,6 +166,7 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Blütenkelch (Nietstadt)",
+    "Blütenkelch (Nietstadt)",
     "Glut-Tausch"
    ]
   },
@@ -172,7 +174,7 @@
    "id": 717320,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "f32ca1d67c0e385f701d450cae1c5dea41f334e31d61eb331d4be4dc7551c378",
+   "iconPath": "f54699a5eaba1cef67217196db0a1440c1b1c1c5b89179b36b2ebe7331831ea1",
    "name": "Zuckender Kern",
    "desc": "Das Herz eines Monsters, das durch das Fragmentum streifte. Ein fortschrittliches Material zur Verstärkung.",
    "lore": "Eine Wunde, in der das Böse gärt, der Drang zur Sünde. Dies ist der Ursprung der Fragmentum-Verzerrung.<br />Das Herz schlägt langsam und besitzt noch genug Kraft, um eine weitere Katastrophe auszulösen. Es sollte sicherheitshalber zerstört werden.<br /><br />„Es ist wie ein Krebsgeschwür ...“",
@@ -190,7 +192,7 @@
    "id": 836261,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "061bb583c251ea1491996ac5de0e5abb6ad317d66eeb6746872470f0325de7a0",
+   "iconPath": "36e68603fbc67d4b69c02e01d7d5d41a80446ea6c49b1d828b47320f6225825c",
    "name": "Schlüssel der Weisheit",
    "desc": "Ein mythischer Schlüssel aus den Händen der größten Ausnahmetalente der Galaxie, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad der Gelehrsamkeit</span> stark hochgestuft werden können.",
    "lore": "Gilt als Beweis für eine Einladung in den Nous-Tempel.<br />An den Schlüssel zu gelangen ist nicht halb so schwierig wie die Tür zu finden, zu der er gehört. Wer durch die heiligen Pforten tritt, erkennt sofort, dass es kein Zurück gibt, wenn man erst einen Fuß auf die andere Seite gesetzt hat.<br /><br />„Wissen gibt uns nicht alle Antworten im Universum, aber es befähigt uns dazu, die richtigen Fragen zu stellen.“",
@@ -198,6 +200,7 @@
    "rarity": 4,
    "rewardPath": "/material/836261",
    "comeFrom": [
+    "Blütenkelch (Nietstadt)",
     "Blütenkelch (Nietstadt)",
     "Omni-Synthesemaschine – Materialsynthese"
    ]
@@ -214,6 +217,7 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
+    "Blütenkelch (Nietstadt)",
     "Blütenkelch (Nietstadt)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Glut-Tausch"
@@ -2124,7 +2128,7 @@
   {
    "id": 9,
    "title": "Ärgernisse",
-   "text": "Ich bin schon perfekt genug, was muss ich noch beweisen? Natürlich könnte ich noch ein paar Bücher schreiben ... aber was würde mir das bringen? Warum sollte ich mir die Mühe machen?",
+   "text": "Ich bin schon perfekt genug, was muss ich noch beweisen? Natürlich könnte ich noch ein paar Bücher schreiben ... aber was würde mir das bringen? Warum sollte ich mir die Mühe machen?",
    "unlockRequirement": "",
    "cnUrl": "4b6f3b25bc8af27ae7293955840a256b1a0e8961a82b31d73df2d59de7e73545",
    "jpUrl": "73dd62838ef3ae4dad8710f6a747cafef2d9ae4570070a3fc9410299ec9a49bf",
@@ -2134,7 +2138,7 @@
   {
    "id": 10,
    "title": "Etwas Mitteilenswertes",
-   "text": "Die Intelligenzia-Gilde findet immer einen Weg, ihre Argumente zu untermauern, und schreibt in einer Nacht so viele „Studien“, dass sie damit eine ganze Bibliothek füllen könnte ... Das ist ein Problem.",
+   "text": "Die Intelligenzia-Gilde findet immer einen Weg, ihre Argumente zu untermauern, und schreibt in einer Nacht so viele „Studien“, dass sie damit eine ganze Bibliothek füllen könnte ... Das ist ein Problem.",
    "unlockRequirement": "",
    "cnUrl": "7ab7eebc1ed09e7b3729adb87d5df90fe814547b9f6453fbb3b33bfb1b2006de",
    "jpUrl": "ca436d8f56e4bda68c7e8aa5df029f5817037fae6967e0d9560c026e136e4e6b",
@@ -2183,7 +2187,17 @@
   },
   {
    "id": 15,
-   "title": "Eidolon-Aktivierung",
+   "title": "Über Ruan Mei",
+   "text": "Ruan Mei ist ein Genie unter Genies – das werde ich nicht leugnen. Ich verstehe mich nicht immer mit ihr, aber ich bewundere sie ... und vielleicht beruht die Bewunderung auf Gegenseitigkeit.",
+   "unlockRequirement": "",
+   "cnUrl": "987167665783544986a4e1027d3e6736b21057302b4b14b5d564f326a62dff85",
+   "jpUrl": "3f1c5798965c0d358ea4f5789e4b6c4d965fbfb4f22ff69866d702844ffe9788",
+   "enUrl": "316553f85f11081aeb5bf85bd93b9fed3ba47e5e1eb83706989093fa898ff1f4",
+   "krUrl": "c49cf4222f843b049b9a95f5b48e14457490987b2ecab454ee333b00f2020f39"
+  },
+  {
+   "id": 16,
+   "title": "Eidolon aktiviert",
    "text": "Was ich unter Inspiration verstehe? Pff, lediglich die tausenden von Ideen, die mir jede Minute durch den Kopf gehen.",
    "unlockRequirement": "",
    "cnUrl": "6301c1fd4fe0f57f90b3f68332a080d095ea70bf2bd5af94488ee428fcffbb61",
@@ -2192,7 +2206,7 @@
    "krUrl": "ac6150c7dffdd985a57c92e00b2ce854881313502f44296c0c0274fe1091a1a9"
   },
   {
-   "id": 16,
+   "id": 17,
    "title": "Figurenaufstieg",
    "text": "Das nennst du ein Build-Update?",
    "unlockRequirement": "",
@@ -2202,7 +2216,7 @@
    "krUrl": "ee32fc602579d1a27d40ef53928d84d295158d2d096f81c6dd5613a6a283362c"
   },
   {
-   "id": 17,
+   "id": 18,
    "title": "Höchststufe erreicht",
    "text": "Endlich. Feierabend. Tschüss.",
    "unlockRequirement": "",
@@ -2212,8 +2226,8 @@
    "krUrl": "008e16bb763e297af176bfef41581d1e7da21e099b72e3a055ff0d45f808e40e"
   },
   {
-   "id": 18,
-   "title": "Spur-Aktivierung",
+   "id": 19,
+   "title": "Spur aktiviert",
    "text": "Zufrieden? Ein Ratschlag: Erwarte nicht zu viel von einer Marionette.",
    "unlockRequirement": "",
    "cnUrl": "10e61cc31b906e27596b29869900959dd83b4ef7a0b565251a763571f1fbd87f",
@@ -2222,7 +2236,7 @@
    "krUrl": "0668aca33befd5b11651a4195b27faec3652bcf727f5131c33bc64e942ebd929"
   },
   {
-   "id": 19,
+   "id": 20,
    "title": "Teammitglied: Trailblazer",
    "text": "Wehe, du bist nicht brav. Vergeude nicht meine Zeit.",
    "unlockRequirement": "",
@@ -2232,7 +2246,7 @@
    "krUrl": "0ddef21dc1e6526a982adfc2383ac6d659ee366b92b6a26b013549fa35aecae6"
   },
   {
-   "id": 20,
+   "id": 21,
    "title": "Teammitglied: Arlan",
    "text": "Warum das lange Gesicht? Ich werde dich schon nicht fressen.",
    "unlockRequirement": "",
@@ -2242,7 +2256,7 @@
    "krUrl": "73bc72b628b29d652e6af775cb84f59b6c1f2efaa777d0be9ba287a955ede708"
   },
   {
-   "id": 21,
+   "id": 22,
    "title": "Teammitglied: Asta",
    "text": "Asta! Hier ist der Schlüssel. Ich muss jetzt los, tschüss.",
    "unlockRequirement": "",
@@ -2252,7 +2266,7 @@
    "krUrl": "04977f97581aeac688901458457bcdb924e422df988c997b4d2622d2ccb2d750"
   },
   {
-   "id": 22,
+   "id": 23,
    "title": "Teammitglied: Himeko",
    "text": "Du weißt, wie der Hase läuft. Schick mir all deine neuen Spielzeuge und ich bringe sie später zurück.",
    "unlockRequirement": "",
@@ -2260,6 +2274,16 @@
    "jpUrl": "57c49bcbdbb69c542800e0e130e90e961340c1ba8559ccbf859503657ac326dc",
    "enUrl": "a16193f50c5b39ddfc6e3b6e2c5678ca3f249b73fc76113adb9f793157074440",
    "krUrl": "7cab0f4584cb10b59d2decd5c000b446e465ccaf723e77c98a5ed07745e4cfe8"
+  },
+  {
+   "id": 24,
+   "title": "Teammitglied: Ruan Mei",
+   "text": "Normalerweise sehe ich dich nur innerhalb der Universum-Simulation. An wem möchtest du dieses Mal experimentieren?",
+   "unlockRequirement": "",
+   "cnUrl": "d5e609c843d2f48c0f778e3caa541ad112b01c54fe5eeb914a6973b642b5105d",
+   "jpUrl": "928040dbc1849376d3758b69412ca7efe8f49d57717fb3f60b1d2686333368e6",
+   "enUrl": "50d296f95736aee63692480b0b2886b238e3fd31747e68e8afb4ac8c55d1e632",
+   "krUrl": "d554233e18818e9bb31515bbcdfb11540d2e5dba17ae8e31bfeb3c5378a21f5d"
   },
   {
    "id": 51,
@@ -2535,7 +2559,7 @@
   },
   {
    "title": "Geschichte (Teil 4)",
-   "text": "Frau Herta, Sie sind so rücksichtsvoll. Die Forschungsarbeiten der Mitglieder der Geniusgesellschaft sind in der Tat so komplex, dass wir kaum deren Titel verstehen. Also lassen Sie uns über etwas anderes reden: Die Raumstation wimmelt von Ihren treuen Unterstützern. Alle interessieren sich für Ihre persönlichen Umstände. Zum Beispiel, was das Manuskript betrifft, das Sie verfassen. Wann haben Sie vor, das neuste Kapitel zu veröffentlichen?<br /><br />„Ich glaube nicht, dass das von Belang ist. Um auf etwas Wichtigeres zu sprechen zu kommen: Elias Salas sagte einst, dass das Schwierigste von allem ist, an sich selbst zu arbeiten. Betrachten wir diese Frage also genauer: Wenn man eine Arbeit schreibt, besteht die Frage darin, wie man die Arbeit schreiben soll ...“<br /><br />Ähm ... äh ... ich verstehe. Aber, Frau Herta, wir alle lieben Ihr Buch Wie ich der Geniusgesellschaft beigetreten bin ...<br /><br />„Ich glaube nicht, dass das von Belang ist. Um auf etwas Wichtigeres zu sprechen zu kommen: Zandar sagte einst, dass selbst jene, die es ganz nach oben geschafft haben, weiterhin an sich selbst arbeiten müssen. Betrachten wir diese Frage also genauer: Wenn man über den sogenannten Beitritt zur Geniusgesellschaft nachdenkt, besteht die Frage darin, wie man es anfängt, der Geniusgesellschaft beizutreten ...“<br /><br />Sind Sie im ... Auto-Beantwortungsmodus?<br /><br />„Ich glaube nicht, dass das von Belang ist. Um auf etwas Wichtigeres zu sprechen zu kommen: Yu Qingtu sagte einst, dass Akademiker zu sein eine Frage der Ambition ist. Betrachten wir diese Frage also genauer: Wenn man über einen sogenannten Auto-Beantwortungsmodus nachdenkt, besteht die Frage darin, wie man einen Beantwortungsmodus automatisieren kann ...“",
+   "text": "Frau Herta, Sie sind so rücksichtsvoll. Die Forschungsarbeiten der Mitglieder der Geniusgesellschaft sind in der Tat so komplex, dass wir kaum deren Titel verstehen. Also lassen Sie uns über etwas anderes reden: Die Raumstation wimmelt von Ihren treuen Unterstützern. Alle interessieren sich für Ihre persönlichen Umstände. Zum Beispiel, was das Manuskript betrifft, das Sie verfassen. Wann haben Sie vor, das neuste Kapitel zu veröffentlichen?<br /><br />„Ich glaube nicht, dass das von Belang ist. Um auf etwas Wichtigeres zu sprechen zu kommen: Elias Salas sagte einst, dass das Schwierigste von allem ist, an sich selbst zu arbeiten. Betrachten wir diese Frage also genauer: Wenn man eine Arbeit schreibt, besteht die Frage darin, wie man die Arbeit schreiben soll ...“<br /><br />Ähm ... äh ... ich verstehe. Aber, Frau Herta, wir alle lieben Ihr Buch „Wie ich der Geniusgesellschaft beigetreten bin“ ...<br /><br />„Ich glaube nicht, dass das von Belang ist. Um auf etwas Wichtigeres zu sprechen zu kommen: Zandar sagte einst, dass selbst jene, die es ganz nach oben geschafft haben, weiterhin an sich selbst arbeiten müssen. Betrachten wir diese Frage also genauer: Wenn man über den sogenannten Beitritt zur Geniusgesellschaft nachdenkt, besteht die Frage darin, wie man es anfängt, der Geniusgesellschaft beizutreten ...“<br /><br />Sind Sie im ... Auto-Beantwortungsmodus?<br /><br />„Ich glaube nicht, dass das von Belang ist. Um auf etwas Wichtigeres zu sprechen zu kommen: Yu Qingtu sagte einst, dass Akademiker zu sein eine Frage der Ambition ist. Betrachten wir diese Frage also genauer: Wenn man über einen sogenannten Auto-Beantwortungsmodus nachdenkt, besteht die Frage darin, wie man einen Beantwortungsmodus automatisieren kann ...“",
    "unlockRequirement": "Wird auf Figurenstufe <nobr>80</nobr> freigeschaltet"
   }
  ],

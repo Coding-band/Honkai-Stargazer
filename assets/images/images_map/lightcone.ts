@@ -1,4 +1,14 @@
 const Lightcone = {
+  //add in 1.6.0
+  "Baptism of Pure Thought": {
+    icon: require("../../images/lightcone_icon/baptism_of_pure_thought.webp"),
+    imageFull: require("../../images/lightcone_artwork/baptism_of_pure_thought_artwork.webp"),
+  },
+  "Past Self in Mirror": {
+    icon: require("../../images/lightcone_icon/past_self_in_mirror.webp"),
+    imageFull: require("../../images/lightcone_artwork/past_self_in_mirror_artwork.webp"),
+  },
+
   "An Instant Before A Gaze": {
     icon: require("../../images/lightcone_icon/an_instant_before_a_gaze.webp"),
     imageFull: require("../../images/lightcone_artwork/an_instant_before_a_gaze_artwork.webp"),
