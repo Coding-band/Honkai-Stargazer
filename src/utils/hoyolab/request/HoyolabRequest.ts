@@ -1,7 +1,7 @@
-import { hsrServerId } from "./servers/hsrServer.types";
-import { LanguageEnum } from "./language/language.interface";
-import Request from "./request/Request";
-import { hsrServer } from "./servers/hsrServer";
+import { hsrServerId } from "../servers/hsrServer.types";
+import { LanguageEnum } from "../language/language.interface";
+import Request from "./Request";
+import { hsrServer } from "../servers/hsrServer";
 
 export default class HoyolabRequest {
   private request: Request;
@@ -29,6 +29,7 @@ export default class HoyolabRequest {
     return this.request.send(getUrl(uuid, server));
   }
 
+  //* 獲取崩鐵角色便籤
   public getHsrNote(uuid: string, server: hsrServerId = "asia") {
     const getUrl = (uuid: string, server: hsrServerId) =>
       `https://bbs-api-os.hoyolab.com/game_record/hkrpg/api/note?server=${hsrServer[server]}&role_id=${uuid}`;

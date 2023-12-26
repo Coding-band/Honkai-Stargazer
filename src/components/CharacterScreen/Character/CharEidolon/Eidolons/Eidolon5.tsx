@@ -1,11 +1,9 @@
-import { View, Text, GestureResponderEvent, Pressable } from "react-native";
-import React, { useContext } from "react";
+import { GestureResponderEvent, Pressable } from "react-native";
+import React from "react";
 import { Image } from "expo-image";
-import CharacterContext from "../../../../../context/CharacterData/CharacterContext";
-import { Chacracter } from "../../../../../../assets/images/images_map";
-import { CharacterName } from "../../../../../types/character";
 import { animated, useSpring } from "@react-spring/native";
 import useCharData from "../../../../../context/CharacterData/useCharData";
+import CharacterSoul from "../../../../../../assets/images/images_map/characterSoul";
 
 const eidolonBorder5 = require("../../../../../../assets/images/character_eidolon_border/eidolon_border_5.svg");
 
@@ -17,7 +15,7 @@ export default function Eidolon5({
   onPress: (e: GestureResponderEvent) => void;
 }) {
   const { charId } = useCharData();
-  const charEidolon5 = Chacracter[charId]?.eidolon5;
+  const charEidolon5 = CharacterSoul[charId]?.eidolon5;
 
   const animation = useSpring({
     opacity: selected ? 1 : 0,

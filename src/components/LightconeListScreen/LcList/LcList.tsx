@@ -3,7 +3,6 @@ import { ScrollView, View } from "react-native";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
 import lightconeList from "../../../../data/lightcone_data/lightcone_list.json";
-import * as images_map from "../../../../assets/images/images_map";
 import { LightconeCard, LightconeName } from "../../../types/lightcone";
 import LightConeCard from "../../global/LightConeCard/LightConeCard";
 import { Path } from "../../../types/path";
@@ -14,6 +13,7 @@ import useLcSortingReverse from "../../../redux/lightconeSortingReverse/useLcSor
 import useLcFilter from "../../../redux/lightconeFilter/useLcFilter";
 import useTextLanguage from "../../../context/TextLanguage/useTextLanguage";
 import useLightconeSearch from "../../../redux/lightconeSearch/useLightconeSearch";
+import Lightcone from "../../../../assets/images/images_map/lightcone";
 
 export default function LcList() {
   
@@ -33,7 +33,7 @@ export default function LcList() {
           name: lcFullData?.name || lc.name,
           rare: lc.rare,
           path: lc.path as Path,
-          image: images_map.Lightcone[lc.name as LightconeName]?.icon,
+          image: Lightcone[lc.name as LightconeName]?.icon,
           version: lc.version,
           atk: lcAttrData.atk,
           def: lcAttrData.def,

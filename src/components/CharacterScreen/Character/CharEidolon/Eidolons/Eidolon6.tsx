@@ -1,11 +1,9 @@
 import { GestureResponderEvent, Pressable } from "react-native";
-import React, { useContext } from "react";
+import React from "react";
 import { Image } from "expo-image";
-import CharacterContext from "../../../../../context/CharacterData/CharacterContext";
-import { Chacracter } from "../../../../../../assets/images/images_map";
-import { CharacterName } from "../../../../../types/character";
 import { animated, useSpring } from "@react-spring/native";
 import useCharData from "../../../../../context/CharacterData/useCharData";
+import CharacterSoul from "../../../../../../assets/images/images_map/characterSoul";
 
 const eidolonBorder6 = require("../../../../../../assets/images/character_eidolon_border/eidolon_border_6.svg");
 
@@ -17,7 +15,7 @@ export default function Eidolon6({
   onPress: (e: GestureResponderEvent) => void;
 }) {
   const { charId } = useCharData();
-  const charEidolon6 = Chacracter[charId]?.eidolon6;
+  const charEidolon6 = CharacterSoul[charId]?.eidolon6;
 
   const animation = useSpring({
     opacity: selected ? 1 : 0, // 更平滑的透明度过渡

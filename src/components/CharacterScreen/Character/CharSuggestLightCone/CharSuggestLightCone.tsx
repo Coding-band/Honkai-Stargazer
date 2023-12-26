@@ -3,7 +3,6 @@ import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { ScrollView, View } from "react-native";
 import CharSuggestLightConeCard from "./CharSuggestLightConeCard/CharSuggestLightConeCard";
 import lightconeList from "../../../../../data/lightcone_data/lightcone_list.json";
-import lightconeListMap from "../../../../../map/lightcone_data_map";
 import React from "react";
 import {
   getCharAdviceData,
@@ -11,9 +10,9 @@ import {
 } from "../../../../utils/dataMap/getDataFromMap";
 import useCharId from "../../../../context/CharacterData/useCharId";
 import LightconeNameMap from "../../../../../map/lightcone_name_map";
-import { Lightcone } from "../../../../../assets/images/images_map";
 import { LightconeName } from "../../../../types/lightcone";
 import useTextLanguage from "../../../../context/TextLanguage/useTextLanguage";
+import Lightcone from "../../../../../assets/images/images_map/lightcone";
 
 export default React.memo(function CharSuggestLightCone() {
 

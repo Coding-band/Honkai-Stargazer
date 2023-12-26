@@ -4,17 +4,21 @@ import Button from "../../../../../global/Button/Button";
 import { TextInput } from "react-native";
 import useHoyolabCookie from "../../../../../../redux/hoyolabCookie/useHoyolabCookie";
 import TextButton from "../../../../../global/TextButton/TextButton";
+import useHsrServerChosen from "../../../../../../redux/hsrServerChosen/useHsrServerChosen";
 
 type Props = {
   onCookieSave?: () => void;
 };
 
 export default function ManualEnterCookie(props: Props) {
+
   const { setHoyolabCookie } = useHoyolabCookie();
+  const { setHsrServerChosen } = useHsrServerChosen();
 
   const [inputCookie, setInputCookie] = useState("");
   const handleSaveCookie = () => {
     setHoyolabCookie(inputCookie);
+    setHsrServerChosen("cn1");
     props.onCookieSave && props.onCookieSave();
   };
 
@@ -24,7 +28,7 @@ export default function ManualEnterCookie(props: Props) {
         请选择服务器并粘贴 Cookies。
       </Text>
       <TextButton hasShadow={false} width={"100%"} height={46}>
-        Asia
+        星穹列车
       </TextButton>
       <TextInput
         value={inputCookie}

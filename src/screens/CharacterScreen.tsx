@@ -12,13 +12,13 @@ import { filter } from "lodash";
 import { CharacterName, Character } from "../types/character";
 import CharacterContext from "../context/CharacterData/CharacterContext";
 import charList from "../../data/character_data/character_list.json";
-import * as imagesMap from "../../assets/images/images_map";
 import Fixed from "../components/global/Fixed/Fixed";
 import { getCharFullData } from "../utils/dataMap/getDataFromMap";
 import { Path } from "../types/path";
 import { CombatType } from "../types/combatType";
 import WallPaper from "../components/global/WallPaper/WallPaper";
 import useTextLanguage from "../context/TextLanguage/useTextLanguage";
+import CharacterImage from "../../assets/images/images_map/chacracterImage";
 
 export default function CharacterScreen() {
   const { language: textLanguage } = useTextLanguage();
@@ -42,7 +42,7 @@ export default function CharacterScreen() {
       combatTypeId: charDataJson.element as CombatType,
       combatType: charFullData?.damageType?.name,
       location: charFullData?.archive?.camp,
-      imageFull: imagesMap.Chacracter[charId]?.imageFull,
+      imageFull: CharacterImage[charId]?.imageFull,
     });
     setShowMain(true);
   }, []);

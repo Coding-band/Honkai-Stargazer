@@ -1,4 +1,4 @@
-const Character = {
+const CharacterImage = {
 	Argenti : {
 		icon: require("../../images/character_icon/argenti_icon.webp"),
 		imageSplash: require("../../images/character_splash/argenti_splash.webp"),
@@ -186,4 +186,4 @@ const Character = {
 	},	
 }
 
-export default Character;
+export default CharacterImage;

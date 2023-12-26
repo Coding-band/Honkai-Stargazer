@@ -1,5 +1,5 @@
 import axios, { AxiosError, AxiosRequestConfig } from "axios";
-import generateDS, { DS } from "../ds/generateDs";
+import generateDS from "../ds/generateDs";
 import { LanguageEnum } from "../language/language.interface";
 import {
   IResponse,
@@ -7,6 +7,8 @@ import {
   RequestHeaderType,
   RequestParamType,
 } from "./Request.interface";
+import generateDsV2 from "../ds/generateDsV2";
+import { hsrPlatform } from "../servers/hsrServer.types";
 
 export default class Request {
   /*
@@ -27,24 +29,24 @@ export default class Request {
   /*
    * Flag indicating whether Dynamic Security is used.
    */
-  private ds: DS;
-
-  /*
-   * The number of request attempts made.
-   */
+  private ds: hsrPlatform;
 
   constructor(
     cookies: string | null = null,
-    dsType: DS = "hoyolab",
+    dsType: hsrPlatform = "hoyolab",
     lang: LanguageEnum = LanguageEnum.TRADIIONAL_CHINESE
   ) {
     this.headers = {
       "Content-Type": "application/json",
-      Host: "bbs-api-os.hoyolab.com",
       "User-Agent":
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
-      "x-rpc-app_version": "1.5.0",
+      Host:
+        dsType === "hoyolab"
+          ? "bbs-api-os.hoyolab.com"
+          : "api-takumi-record.mihoyo.com",
+      "x-rpc-app_version": dsType === "hoyolab" ? "1.5.0" : "2.65.2",
       "x-rpc-client_type": "5",
+      "x-rpc-device_fp": "38d7f38577590",
     };
     this.body = {};
     this.params = {};
@@ -96,7 +98,7 @@ export default class Request {
    * @param flag boolean Flag indicating whether to use dynamic security or not (default: true).
    * @returns {this} The current Request instance.
    */
-  public setDs(dsType: DS): Request {
+  public setDs(dsType: hsrPlatform): Request {
     this.ds = dsType;
     return this;
   }
@@ -129,7 +131,10 @@ export default class Request {
     method: "GET" | "POST" = "GET"
   ): Promise<IResponse> {
     if (this.ds) {
-      this.headers.DS = generateDS(this.ds);
+      this.headers.DS =
+        this.ds === "hoyolab"
+          ? generateDS()
+          : generateDsV2(JSON.stringify(this.body), url.split("?")[1]);
     }
 
     const config: AxiosRequestConfig = {
@@ -158,9 +163,11 @@ export default class Request {
       this.body = {};
       return result;
     } catch (error) {
+      console.log(error);
+
       return {
         retcode: -9999,
-        message: "",
+        message: String(error),
         data: null,
       };
     }

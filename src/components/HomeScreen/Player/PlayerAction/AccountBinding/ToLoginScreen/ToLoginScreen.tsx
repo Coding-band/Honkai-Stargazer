@@ -8,8 +8,8 @@ import { SCREENS } from "../../../../../../constant/screens";
 import TextButton from "../../../../../global/TextButton/TextButton";
 
 const hsrServers: Server[] = [
-  // { id: "asia", name: "星穹列车", platform: "miyoushe" },
-  // { id: "asia", name: "无名客", platform: "miyoushe" },
+  { id: "cn1", name: "星穹列车", platform: "mihoyo" },
+  { id: "cn2", name: "无名客", platform: "mihoyo" },
   { id: "asia", name: "Asia", platform: "hoyolab" },
   { id: "europe", name: "Europe", platform: "hoyolab" },
   { id: "america", name: "America", platform: "hoyolab" },
@@ -23,13 +23,14 @@ type Props = {
 
 export default function ToLoginScreen(props: Props) {
   const navigation = useNavigation();
-  const { setHsrServerChosen } = useHsrServerChosen();
 
   const handleChoseServer = (server: Server) => {
     props.onServerChosen && props.onServerChosen(server);
-    setHsrServerChosen(server.id);
     // @ts-ignore
-    navigation.navigate(SCREENS.LoginPage.id);
+    navigation.navigate(SCREENS.LoginPage.id, {
+      serverId: server.id,
+      platform: server.platform,
+    });
   };
 
   return (

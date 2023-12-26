@@ -1,8 +1,8 @@
-import useHoyolabGameRecord from "./useHoyolabGameRecord";
+import useHsrPlayerData from "./useHsrPlayerData";
 
 const useHsrUUID = () => {
-  const { data: hoyolabGameRecord } = useHoyolabGameRecord();
-  return hoyolabGameRecord?.list?.[1]?.game_role_id;
+  const playerData = useHsrPlayerData();
+  return playerData?.game_role_id;
 };
 
 export default useHsrUUID;

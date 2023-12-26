@@ -4,7 +4,6 @@ import CharCard from "../../global/CharCard/CharCard";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
 import characterList from "../../../../data/character_data/character_list.json";
-import * as images_map from "../../../../assets/images/images_map";
 import { CharacterCard, CharacterName } from "../../../types/character";
 import { CombatType } from "../../../types/combatType";
 import { Path } from "../../../types/path";
@@ -18,6 +17,7 @@ import _ from "lodash";
 import path from "../../../constant/path";
 import useTextLanguage from "../../../context/TextLanguage/useTextLanguage";
 import useCharacterSearch from "../../../redux/characterSearch/useCharacterSearch";
+import CharacterImage from "../../../../assets/images/images_map/chacracterImage";
 
 export default function CharList() {
   const navigation = useNavigation();
@@ -37,7 +37,7 @@ export default function CharList() {
           rare: char.rare,
           combatType: char.element as CombatType,
           path: char.path as Path,
-          image: images_map.Chacracter[char.name as CharacterName]?.icon,
+          image: CharacterImage[char.name as CharacterName]?.icon,
           version: char.version,
           atk: charAttrData.atk,
           def: charAttrData.def,
