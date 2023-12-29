@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import RelicContext from "./RelicContext";
-import { Relic, RelicName } from "../../types/relic";
+import { RelicName } from "../../types/relic";
 import { getRelicFullData } from "../../utils/dataMap/getDataFromMap";
 import useTextLanguage from "../TextLanguage/useTextLanguage";
 import RelicMap from "../../../assets/images/images_map/relic";
+import { RelicData } from "./RelicData.types";
 
 export default function RelicProvider({
   children,
@@ -12,9 +13,8 @@ export default function RelicProvider({
   children: any;
   relicId: RelicName;
 }) {
-    
   const { language: textLanguage } = useTextLanguage();
-  const [relicData, setRelicData] = useState<Relic>({});
+  const [relicData, setRelicData] = useState<RelicData>();
 
   useEffect(() => {
     const relicFullData = getRelicFullData(relicId, textLanguage);

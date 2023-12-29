@@ -6,8 +6,8 @@ import Animated, {
 } from "react-native-reanimated";
 import { Image } from "expo-image";
 import { Dimensions, View } from "react-native";
-import useLcData from "../../../../context/LightconeData/useLcData";
-import useRelicData from "../../../../context/RelicData/useRelicData";
+import useLcData from "../../../../context/LightconeData/hooks/useLcData";
+import useRelicData from "../../../../context/RelicData/hooks/useRelicData";
 
 type Props = {
   scrollHandler: SharedValue<number>;

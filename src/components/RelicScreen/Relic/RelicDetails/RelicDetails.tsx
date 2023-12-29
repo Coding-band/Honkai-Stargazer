@@ -2,7 +2,7 @@ import { View, ScrollView } from "react-native";
 import React from "react";
 import PageHeading from "../../../global/PageHeading/PageHeading";
 import { ChatCircle } from "phosphor-react-native";
-import useRelicData from "../../../../context/RelicData/useRelicData";
+import useRelicData from "../../../../context/RelicData/hooks/useRelicData";
 import { map } from "lodash";
 import RelicDetailsCard from "./RelicDetailsCard/CharSuggestLightConeCard";
 

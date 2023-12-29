@@ -6,7 +6,7 @@ import { Image } from "expo-image";
 import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import useDelayLoad from "../../../../hooks/useDelayLoad";
 import { getCharAttrData } from "../../../../utils/calculator/getAttrData";
-import useCharData from "../../../../context/CharacterData/useCharData";
+import useCharData from "../../../../context/CharacterData/hooks/useCharData";
 import MaterialCard from "../../../global/MaterialCard/MaterialCard";
 import {
   MaterialCount,

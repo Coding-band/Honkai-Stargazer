@@ -4,7 +4,7 @@ import CharCard from "../../global/CharCard/CharCard";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
 import characterList from "../../../../data/character_data/character_list.json";
-import { CharacterCard, CharacterName } from "../../../types/character";
+import { CharacterName } from "../../../types/character";
 import { CombatType } from "../../../types/combatType";
 import { Path } from "../../../types/path";
 import useCharSorting from "../../../redux/characterSorting/useCharSorting";
@@ -18,12 +18,27 @@ import path from "../../../constant/path";
 import useTextLanguage from "../../../context/TextLanguage/useTextLanguage";
 import useCharacterSearch from "../../../redux/characterSearch/useCharacterSearch";
 import CharacterImage from "../../../../assets/images/images_map/chacracterImage";
+import { ExpoImage } from "../../../types/image";
+
+type CharListItem = {
+  id: CharacterName;
+  name: string;
+  rare: number;
+  path: Path;
+  combatType: CombatType;
+  image: ExpoImage;
+  version: string;
+  atk: number;
+  def: number;
+  hp: number;
+  energy: number;
+};
 
 export default function CharList() {
   const navigation = useNavigation();
   const { language: textLanguage } = useTextLanguage();
 
-  const [charCardListData, setCharCardListData] = useState<CharacterCard[]>();
+  const [charCardListData, setCharCardListData] = useState<CharListItem[]>();
 
   useEffect(() => {
     setCharCardListData(
@@ -54,8 +69,8 @@ export default function CharList() {
   const { searchValue } = useCharacterSearch();
 
   const charCardListJSX = useMemo(() => {
-    const sortData = (charCardListData: CharacterCard[] | undefined) => {
-      type Data = CharacterCard[] | undefined;
+    const sortData = (charCardListData: CharListItem[] | undefined) => {
+      type Data = CharListItem[] | undefined;
 
       //* 排序
       const sortStrategies = {

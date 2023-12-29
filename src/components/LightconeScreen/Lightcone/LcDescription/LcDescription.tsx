@@ -7,7 +7,7 @@ import LightconeContext from "../../../../context/LightconeData/LightconeContext
 import { getLcFullData } from "../../../../utils/dataMap/getDataFromMap";
 import formatDesc from "../../../../utils/format/formatDesc";
 import { HtmlText } from "@e-mine/react-native-html-text";
-import useLcData from "../../../../context/LightconeData/useLcData";
+import useLcData from "../../../../context/LightconeData/hooks/useLcData";
 
 export default function LcDescription() {
   const { lcFullData } = useLcData();

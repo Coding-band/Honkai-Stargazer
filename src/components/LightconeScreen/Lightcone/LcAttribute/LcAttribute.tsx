@@ -6,8 +6,11 @@ import { Image } from "expo-image";
 import PageHeading from "../../../global/PageHeading/PageHeading";
 import useDelayLoad from "../../../../hooks/useDelayLoad";
 import { getLcAttrData } from "../../../../utils/calculator/getAttrData";
-import useLcData from "../../../../context/LightconeData/useLcData";
-import { MaterialCount, getLcMaterialData } from "../../../../utils/calculator/getMaterialData";
+import useLcData from "../../../../context/LightconeData/hooks/useLcData";
+import {
+  MaterialCount,
+  getLcMaterialData,
+} from "../../../../utils/calculator/getMaterialData";
 import { map } from "lodash";
 import MaterialCard from "../../../global/MaterialCard/MaterialCard";
 import Material from "../../../../../assets/images/images_map/material";

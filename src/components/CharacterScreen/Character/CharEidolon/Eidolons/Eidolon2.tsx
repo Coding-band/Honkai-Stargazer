@@ -2,7 +2,7 @@ import { GestureResponderEvent, Pressable } from "react-native";
 import React from "react";
 import { Image } from "expo-image";
 import { animated, useSpring } from "@react-spring/native";
-import useCharData from "../../../../../context/CharacterData/useCharData";
+import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
 import CharacterSoul from "../../../../../../assets/images/images_map/characterSoul";
 
 const eidolonBorder2 = require("../../../../../../assets/images/character_eidolon_border/eidolon_border_2.svg");

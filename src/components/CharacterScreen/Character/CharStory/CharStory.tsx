@@ -5,7 +5,7 @@ import { ChatsCircle } from "phosphor-react-native";
 import CharacterContext from "../../../../context/CharacterData/CharacterContext";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
-import useCharData from "../../../../context/CharacterData/useCharData";
+import useCharData from "../../../../context/CharacterData/hooks/useCharData";
 
 export default React.memo(function CharStory() {
   const { charFullData } = useCharData();

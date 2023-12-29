@@ -8,7 +8,7 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { Shadow } from "react-native-shadow-2";
 import { Image } from "expo-image";
 import CharacterSoul from "../../../../../../assets/images/images_map/characterSoul";
-import useCharData from "../../../../../context/CharacterData/useCharData";
+import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
 
 type Props = {
   id: number;

@@ -2,18 +2,26 @@ import { View, Text, ScrollView } from "react-native";
 import React, { useEffect, useMemo, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import useTextLanguage from "../../../context/TextLanguage/useTextLanguage";
-import { RelicCard, RelicName } from "../../../types/relic";
+import { RelicName } from "../../../types/relic";
 import relicList from "../../../../data/relic_data/relic_list.json";
 import Relic from "../../../../assets/images/images_map/relic";
 import { getRelicFullData } from "../../../utils/dataMap/getDataFromMap";
 import RelicsCard from "../../global/RelicsCard/RelicsCard";
 import { SCREENS } from "../../../constant/screens";
+import { ExpoImage } from "../../../types/image";
+
+type RelicListItem = {
+  id: string;
+  name: string;
+  rare: number;
+  image: ExpoImage;
+};
 
 export default function RelicList() {
   const navigation = useNavigation();
   const { language: textLanguage } = useTextLanguage();
 
-  const [relicCardListData, setRelicCardListData] = useState<RelicCard[]>();
+  const [relicCardListData, setRelicCardListData] = useState<RelicListItem[]>();
 
   useEffect(() => {
     setRelicCardListData(
@@ -32,7 +40,7 @@ export default function RelicList() {
   }, []);
 
   const relicCardListJSX = useMemo(() => {
-    const sortData = (relicCardListData: RelicCard[] | undefined) => {
+    const sortData = (relicCardListData: RelicListItem[] | undefined) => {
       return relicCardListData;
     };
 

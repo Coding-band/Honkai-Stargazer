@@ -1,6 +1,6 @@
 import { createContext } from "react";
-import { Lightcone } from "../../types/lightcone";
+import { LightconeData } from "./LightconeData.types";
 
-const LightconeContext = createContext<Lightcone | null>(null);
+const LightconeContext = createContext<LightconeData | undefined>(undefined);
 
 export default LightconeContext;

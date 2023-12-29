@@ -1,27 +1,3 @@
-import { ExpoImage } from "./image";
-import { Path } from "./path";
-
-export type Lightcone = {
-  id?: LightconeName;
-  name?: string;
-  image?: ExpoImage;
-  imageFull?: ExpoImage;
-  rare?: number;
-  path?: string;
-  pathId?: string;
-};
-
-export type LightconeCard = {
-  id: string;
-  name: string;
-  rare: number;
-  path: Path;
-  atk: number;
-  def: number;
-  hp: number;
-  image: ExpoImage;
-};
-
 export type LightconeName =
   | "An Instant Before A Gaze"
   | "Night of Fright"

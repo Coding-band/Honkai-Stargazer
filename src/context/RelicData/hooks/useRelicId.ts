@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import RelicContext from "./RelicContext";
+import RelicContext from "../RelicContext";
 
 const useRelicId = () => {
   const relicData = useContext(RelicContext);

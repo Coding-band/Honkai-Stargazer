@@ -1,6 +1,5 @@
 import { createContext } from "react";
-import { Character } from "../../types/character";
+import { CharacterData } from "./CharacterData.types";
 
-const CharacterContext = createContext<Character | null>(null);
-
+const CharacterContext = createContext<CharacterData | undefined>(undefined);
 export default CharacterContext;

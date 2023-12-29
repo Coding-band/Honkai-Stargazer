@@ -3,8 +3,8 @@ import React from "react";
 import LcStars from "../../../global/PageStars/PageStars";
 import { Image } from "expo-image";
 import Path from "../../../../../assets/images/images_map/path";
-import useLcData from "../../../../context/LightconeData/useLcData";
-import useRelicData from "../../../../context/RelicData/useRelicData";
+import useLcData from "../../../../context/LightconeData/hooks/useLcData";
+import useRelicData from "../../../../context/RelicData/hooks/useRelicData";
 
 export default function RelicInfo() {
   const { relicData } = useRelicData();

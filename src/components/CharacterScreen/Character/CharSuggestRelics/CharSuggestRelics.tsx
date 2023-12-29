@@ -4,7 +4,7 @@ import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { BaseballCap } from "phosphor-react-native";
 import RelicsCard from "../../../global/RelicsCard/RelicsCard";
 import { Image } from "expo-image";
-import useCharId from "../../../../context/CharacterData/useCharId";
+import useCharId from "../../../../context/CharacterData/hooks/useCharId";
 import { getCharAdviceData } from "../../../../utils/dataMap/getDataFromMap";
 import useTextLanguage from "../../../../context/TextLanguage/useTextLanguage";
 import CharSuggestRelicsLeft from "./CharSuggestRelicsLeft/CharSuggestRelicsLeft";

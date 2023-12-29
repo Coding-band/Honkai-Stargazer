@@ -3,7 +3,7 @@ import { ScrollView, View } from "react-native";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
 import lightconeList from "../../../../data/lightcone_data/lightcone_list.json";
-import { LightconeCard, LightconeName } from "../../../types/lightcone";
+import { LightconeName } from "../../../types/lightcone";
 import LightConeCard from "../../global/LightConeCard/LightConeCard";
 import { Path } from "../../../types/path";
 import { getLcFullData } from "../../../utils/dataMap/getDataFromMap";
@@ -14,13 +14,26 @@ import useLcFilter from "../../../redux/lightconeFilter/useLcFilter";
 import useTextLanguage from "../../../context/TextLanguage/useTextLanguage";
 import useLightconeSearch from "../../../redux/lightconeSearch/useLightconeSearch";
 import Lightcone from "../../../../assets/images/images_map/lightcone";
+import { ExpoImage } from "../../../types/image";
+
+type LcListItem = {
+  id: string;
+  name: string;
+  rare: number;
+  path: Path;
+  image: ExpoImage;
+  atk: number;
+  def: number;
+  hp: number;
+};
+
 
 export default function LcList() {
   
   const navigation = useNavigation();
   const { language: textLanguage } = useTextLanguage();
 
-  const [lcCardListData, setLcCardListData] = useState<LightconeCard[]>();
+  const [lcCardListData, setLcCardListData] = useState<LcListItem[]>();
 
   useEffect(() => {
     setLcCardListData(
@@ -49,8 +62,8 @@ export default function LcList() {
   const { searchValue } = useLightconeSearch();
 
   const lcCardListJSX = useMemo(() => {
-    const sortData = (lcCardListData: LightconeCard[] | undefined) => {
-      type Data = LightconeCard[] | undefined;
+    const sortData = (lcCardListData: LcListItem[] | undefined) => {
+      type Data = LcListItem[] | undefined;
 
       //* 排序
       const sortStrategies = {

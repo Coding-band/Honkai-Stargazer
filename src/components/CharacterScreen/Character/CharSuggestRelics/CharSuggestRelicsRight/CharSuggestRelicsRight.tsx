@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import RelicsCard from "../../../../global/RelicsCard/RelicsCard";
 import RightBtn from "../ui/RightBtn";
 import LeftBtn from "../ui/LeftBtn";
-import useCharId from "../../../../../context/CharacterData/useCharId";
+import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
 import {
   getCharAdviceData,
   getRelicFullData,
@@ -19,7 +19,7 @@ import { useNavigation } from "@react-navigation/native";
 
 export default function CharSuggestRelicsRight() {
   const { language: textLanguage } = useTextLanguage();
-const navigation = useNavigation();
+  const navigation = useNavigation();
 
   const charId = useCharId();
   const advices = getCharAdviceData(charId);

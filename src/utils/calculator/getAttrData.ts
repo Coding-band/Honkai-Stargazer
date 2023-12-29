@@ -8,7 +8,7 @@ const levelMax = [20, 30, 40, 50, 60, 70, 80];
 //* 根據等級取得角色屬性數值
 export function getCharAttrData(id: CharacterName, level: number = 1) {
   const charFullData = getCharFullData(id);
-  const charLevelData = charFullData.levelData;
+  const charLevelData = charFullData?.levelData;
 
   const attributes = {
     atk: 0,
@@ -16,12 +16,12 @@ export function getCharAttrData(id: CharacterName, level: number = 1) {
     def: 0,
     speed: 0,
     aggro: 0,
-    energy: charFullData.spRequirement,
+    energy: charFullData?.spRequirement,
   };
 
   // 找到對應等級的數據
-  const dataForLevel = charLevelData.find((data) =>
-    level === 80 ? level <= data.maxLevel : level < data.maxLevel
+  const dataForLevel = charLevelData?.find((data) =>
+    level === 80 ? level <= data?.maxLevel : level < data?.maxLevel
   );
 
   if (dataForLevel) {

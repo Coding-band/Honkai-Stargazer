@@ -4,7 +4,7 @@ import PageHeading from "../../../global/PageHeading/PageHeading";
 import { DiceFour, DiceTwo } from "phosphor-react-native";
 import formatDesc from "../../../../utils/format/formatDesc";
 import { HtmlText } from "@e-mine/react-native-html-text";
-import useRelicData from "../../../../context/RelicData/useRelicData";
+import useRelicData from "../../../../context/RelicData/hooks/useRelicData";
 
 export default function RelicDescription() {
   const { relicFullData } = useRelicData();

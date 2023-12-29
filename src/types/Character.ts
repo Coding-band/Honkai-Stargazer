@@ -1,34 +1,7 @@
-import { CombatType } from "./combatType";
-import { ExpoImage } from "./image";
-import { Path } from "./path";
-
-export type Character = {
-  id?: CharacterName;
-  name?: string;
-  image?: ExpoImage;
-  imageFull?: ExpoImage;
-  rare?: number;
-  pathId?: Path;
-  path?: string;
-  combatTypeId?: CombatType;
-  combatType?: string;
-  location?: string;
-};
-
-export type CharacterCard = {
-  id: CharacterName;
-  name: string;
-  rare: number;
-  path: Path;
-  combatType: CombatType;
-  image: ExpoImage;
-  version: string;
-  atk: number;
-  def: number;
-  hp: number;
-  energy: number;
-};
-
+/**
+ * * 崩鐵角色稱標準名稱
+ * * 作為 Stargazer 的角色 ID
+ */
 export type CharacterName =
   | "Argenti"
   | "Huohuo"

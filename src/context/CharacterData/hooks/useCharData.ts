@@ -1,7 +1,7 @@
 import { useContext, useMemo } from "react";
-import useTextLanguage from "../TextLanguage/useTextLanguage";
-import CharacterContext from "./CharacterContext";
-import { getCharFullData } from "../../utils/dataMap/getDataFromMap";
+import useTextLanguage from "../../TextLanguage/useTextLanguage";
+import CharacterContext from "../CharacterContext";
+import { getCharFullData } from "../../../utils/dataMap/getDataFromMap";
 
 const useCharData = () => {
   const { language: textLanguage } = useTextLanguage();

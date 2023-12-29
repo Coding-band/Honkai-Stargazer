@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import CharacterContext from "./CharacterContext";
+import CharacterContext from "../CharacterContext";
 
 const useCharId = () => {
   const charData = useContext(CharacterContext);

@@ -8,18 +8,17 @@ import {
   getCharAdviceData,
   getLcFullData,
 } from "../../../../utils/dataMap/getDataFromMap";
-import useCharId from "../../../../context/CharacterData/useCharId";
+import useCharId from "../../../../context/CharacterData/hooks/useCharId";
 import LightconeNameMap from "../../../../../map/lightcone_name_map";
 import { LightconeName } from "../../../../types/lightcone";
 import useTextLanguage from "../../../../context/TextLanguage/useTextLanguage";
 import Lightcone from "../../../../../assets/images/images_map/lightcone";
 
 export default React.memo(function CharSuggestLightCone() {
-
-  const {language:textLanguage} = useTextLanguage();
+  const { language: textLanguage } = useTextLanguage();
 
   const charId = useCharId();
-  const suggestConesData = getCharAdviceData(charId)?.cones;
+  const suggestConesData = getCharAdviceData(charId)?.conesNew;
   const suggestCones = suggestConesData?.map((cone) => {
     // @ts-ignore
     const lcId: LightconeName = LightconeNameMap[cone.cone];

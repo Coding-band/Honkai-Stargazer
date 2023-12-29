@@ -1,6 +1,6 @@
 import { createContext } from "react";
-import { Relic } from "../../types/relic";
+import { RelicData } from "./RelicData.types";
 
-const RelicContext = createContext<Relic | null>(null);
+const RelicContext = createContext<RelicData | undefined>(undefined);
 
 export default RelicContext;

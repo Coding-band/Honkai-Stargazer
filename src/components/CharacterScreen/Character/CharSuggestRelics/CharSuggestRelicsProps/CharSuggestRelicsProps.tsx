@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import React from "react";
-import useCharData from "../../../../../context/CharacterData/useCharData";
+import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
 import useAppLanguage from "../../../../../context/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../../locales";
 

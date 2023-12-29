@@ -5,8 +5,8 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 import { Image } from "expo-image";
-import { Dimensions,View } from "react-native";
-import useLcData from "../../../../context/LightconeData/useLcData";
+import { Dimensions, View } from "react-native";
+import useLcData from "../../../../context/LightconeData/hooks/useLcData";
 
 type Props = {
   scrollHandler: SharedValue<number>;

@@ -3,7 +3,7 @@ import React from "react";
 import LcStars from "../../../global/PageStars/PageStars";
 import { Image } from "expo-image";
 import Path from "../../../../../assets/images/images_map/path";
-import useLcData from "../../../../context/LightconeData/useLcData";
+import useLcData from "../../../../context/LightconeData/hooks/useLcData";
 
 export default function LcInfo() {
   const { lcData } = useLcData();

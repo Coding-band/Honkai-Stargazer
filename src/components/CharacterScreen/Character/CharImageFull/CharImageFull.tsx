@@ -7,7 +7,7 @@ import Animated, {
 import { Image } from "expo-image";
 import CharacterContext from "../../../../context/CharacterData/CharacterContext";
 import { Dimensions, Platform } from "react-native";
-import useCharData from "../../../../context/CharacterData/useCharData";
+import useCharData from "../../../../context/CharacterData/hooks/useCharData";
 
 type Props = {
   scrollHandler: SharedValue<number>;
@@ -15,8 +15,7 @@ type Props = {
 };
 
 export default React.memo(function CharImageFull(props: Props) {
- 
-  const {charData}=useCharData();
+  const { charData } = useCharData();
 
   const imageAnimatedStyles = useAnimatedStyle(() => {
     // const height = props.charContainerHeight;

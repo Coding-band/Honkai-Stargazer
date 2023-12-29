@@ -9,7 +9,7 @@ import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { ParamList } from "../types/navigation";
 import CharacterMain from "../components/CharacterScreen/Character/Character";
 import { filter } from "lodash";
-import { CharacterName, Character } from "../types/character";
+import { CharacterName} from "../types/character";
 import CharacterContext from "../context/CharacterData/CharacterContext";
 import charList from "../../data/character_data/character_list.json";
 import Fixed from "../components/global/Fixed/Fixed";
@@ -19,36 +19,22 @@ import { CombatType } from "../types/combatType";
 import WallPaper from "../components/global/WallPaper/WallPaper";
 import useTextLanguage from "../context/TextLanguage/useTextLanguage";
 import CharacterImage from "../../assets/images/images_map/chacracterImage";
+import CharacterProvider from "../context/CharacterData/CharacterProvider";
 
 export default function CharacterScreen() {
-  const { language: textLanguage } = useTextLanguage();
-
   const route = useRoute<RouteProp<ParamList, "Character">>();
   const charId = route.params.id as CharacterName;
   const charName = route.params.name;
 
-  const [charData, setCharData] = useState<Character>({});
   const [showMain, setShowMain] = useState(false);
-
   useEffect(() => {
-    const charDataJson = filter(charList, (char) => char?.name === charId)[0];
-    const charFullData = getCharFullData(charId, textLanguage);
-    setCharData({
-      id: charId,
-      name: charFullData?.name,
-      rare: charDataJson?.rare,
-      pathId: charDataJson.path as Path,
-      path: charFullData?.baseType?.name,
-      combatTypeId: charDataJson.element as CombatType,
-      combatType: charFullData?.damageType?.name,
-      location: charFullData?.archive?.camp,
-      imageFull: CharacterImage[charId]?.imageFull,
+    setTimeout(() => {
+      setShowMain(true);
     });
-    setShowMain(true);
   }, []);
 
   return (
-    <CharacterContext.Provider value={charData}>
+    <CharacterProvider charId={charId}>
       <View style={{ flex: 1, backgroundColor: "white" }}>
         <StatusBar style="dark" />
         <WallPaper isBlur />
@@ -68,6 +54,6 @@ export default function CharacterScreen() {
 
         <Fixed />
       </View>
-    </CharacterContext.Provider>
+    </CharacterProvider>
   );
 }

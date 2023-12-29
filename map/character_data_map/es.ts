@@ -43,8 +43,8 @@ import Xueyi from "../../data/character_data/es/xueyi.json";
 
 const ES = {
   //add in 1.6.0
-  DrRatio,
-  RuanMei,
+  "Dr. Ratio": DrRatio,
+  "Ruan Mei": RuanMei,
   Xueyi,
 
   Argenti,

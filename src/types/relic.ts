@@ -1,20 +1,3 @@
-import { ExpoImage } from "./image";
-
-export type Relic = {
-  id?: RelicName;
-  name?: string;
-  image?: ExpoImage;
-  imageFull?: ExpoImage[];
-  rare?: number;
-};
-
-export type RelicCard = {
-  id: string;
-  name: string;
-  rare: number;
-  image: ExpoImage;
-};
-
 export type RelicName =
   | "Passerby of Wandering Cloud"
   | "Musketeer of Wild Wheat"

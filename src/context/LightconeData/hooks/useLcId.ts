@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import LightconeContext from "./LightconeContext";
+import LightconeContext from "../LightconeContext";
 
 const useLcId = () => {
   const lcData = useContext(LightconeContext);

@@ -9,7 +9,7 @@ import MaterialList from "../../../../global/MaterialList/MaterialList";
 import Sliderbar from "../../../../global/Sliderbar/Sliderbar";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { getCharFullData } from "../../../../../utils/dataMap/getDataFromMap";
-import useCharData from "../../../../../context/CharacterData/useCharData";
+import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
 
 type Props = {
   id: number;
