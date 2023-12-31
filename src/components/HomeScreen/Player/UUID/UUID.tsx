@@ -1,6 +1,6 @@
 import React from "react";
-import { Text, View } from "react-native";
-import useHsrUUID from "../../../hooks/hoyolab/useHsrUUID";
+import { Text, TouchableOpacity, View } from "react-native";
+import useHsrUUID from "../../../../hooks/hoyolab/useHsrUUID";
 
 export default function UUID() {
   const uuid = useHsrUUID();
