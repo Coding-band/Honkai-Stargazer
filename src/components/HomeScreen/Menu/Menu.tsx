@@ -67,8 +67,7 @@ export default function Menu() {
   return (
     <View
       style={{
-        height:
-          Dimensions.get("window").height - (Platform.OS === "ios" ? 295 : 268),
+        height: 530,
       }}
     >
       <ScrollView>

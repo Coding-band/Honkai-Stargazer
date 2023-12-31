@@ -1,14 +1,14 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, View } from "react-native";
+import { Linking, Pressable, SafeAreaView, Text, View } from "react-native";
 import { cn } from "../../../utils/css/cn";
 import Tab from "./Tab/Tab";
-import { MathOperations, Person, Sword } from "phosphor-react-native";
+import { Image } from "expo-image";
 
 export default function Tabbar() {
   return (
-    <SafeAreaView className={cn("absolute bottom-0", "w-full h-[130px]")}>
+    <SafeAreaView className={cn("absolute bottom-0", "w-full h-[160px]")}>
       <Divider />
-      <View
+      {/* <View
         style={{
           flex: 1,
           flexDirection: "row",
@@ -26,6 +26,24 @@ export default function Tabbar() {
         <Tab>
           <MathOperations color="white" size={32} weight="fill" />
         </Tab>
+      </View> */}
+      <View className="py-2" style={{ alignItems: "center", gap: 8 }}>
+        <Text className="text-text text-[14px] font-[HY65]">
+          可透過捐贈或邀請他人免除廣告
+        </Text>
+        <Pressable
+          className="w-full h-[70px]"
+          onPress={() => {
+            Linking.openURL(
+              "https://play.google.com/store/apps/details?id=com.voc.genshin_spirit_gp"
+            );
+          }}
+        >
+          <Image
+            className="w-full h-full"
+            source={require("../../../../assets/ads/gs_ad.png")}
+          />
+        </Pressable>
       </View>
     </SafeAreaView>
   );
