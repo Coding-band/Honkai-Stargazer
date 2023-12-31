@@ -1,6 +1,7 @@
 import {
   BaseballCap,
   MapTrifold,
+  MedalMilitary,
   Person,
   SlidersHorizontal,
   Sword,
@@ -80,5 +81,11 @@ export const SCREENS = {
     name: "更换壁纸",
     shortName: "壁纸",
     icon: SlidersHorizontal,
+  },
+  MemoryOfChaosPage: {
+    id: "MemoryOfChaos",
+    name: "混沌回憶",
+    shortName: "混沌回憶",
+    icon: MedalMilitary,
   },
 };

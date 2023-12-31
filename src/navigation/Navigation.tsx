@@ -15,6 +15,7 @@ import SettingScreen from "../screens/SettingScreen";
 import WallPaperScreen from "../screens/WallPaperScreen";
 import RelicListScreen from "../screens/RelicListScreen";
 import RelicScreen from "../screens/RelicScreen";
+import MemoryOfChaosScreen from "../screens/MemoryOfChaosScreen";
 
 export default function Navigation() {
   const Stack = createNativeStackNavigator();
@@ -58,6 +59,11 @@ export default function Navigation() {
         <Stack.Screen
           name={SCREENS.RelicPage.id}
           component={RelicScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.MemoryOfChaosPage.id}
+          component={MemoryOfChaosScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

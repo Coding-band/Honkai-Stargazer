@@ -106,16 +106,20 @@ export default function Menu() {
             }}
             width={menuItemSize.width}
             height={menuItemSize.height}
-            Icon={BaseballCap}
+            Icon={SCREENS.RelicListPage.icon}
           >
-            遺器
+            {SCREENS.RelicListPage.shortName}
           </MenuItem>
           <MenuItem
+            onPress={() => {
+              // @ts-ignore
+              navigation.navigate(SCREENS.MemoryOfChaosPage.id);
+            }}
             width={menuItemSize.width}
             height={menuItemSize.height}
-            Icon={MedalMilitary}
+            Icon={SCREENS.MemoryOfChaosPage.icon}
           >
-            混沌回忆
+            {SCREENS.MemoryOfChaosPage.shortName}
           </MenuItem>
           <MenuItemLarge
             width={menuItemLargeSize.width}
