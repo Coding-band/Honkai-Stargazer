@@ -205,10 +205,11 @@ export default function Menu() {
           className={cn("w-full pt-3 px-4 pb-5")}
           style={{ flexDirection: "row", flexWrap: "wrap", gap: 13 }}
         >
-          {menuItems.map((menuItem) => {
+          {menuItems.map((menuItem, i) => {
             if (menuItem.type === "normal") {
               return (
                 <MenuItem
+                  key={i}
                   width={menuItemSize.width}
                   height={menuItemSize.height}
                   Icon={menuItem.icon}
@@ -220,6 +221,7 @@ export default function Menu() {
             } else if (menuItem.type === "large") {
               return (
                 <MenuItemLarge
+                  key={i}
                   width={menuItemLargeSize.width}
                   height={menuItemLargeSize.height}
                   Icon={menuItem.icon}

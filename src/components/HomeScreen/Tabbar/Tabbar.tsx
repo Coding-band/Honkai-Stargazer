@@ -7,7 +7,7 @@ import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
 
 export default function Tabbar() {
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
   return (
     <SafeAreaView className={cn("absolute bottom-0", "w-full h-[160px]")}>
       <Divider />

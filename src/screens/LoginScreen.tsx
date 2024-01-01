@@ -16,9 +16,9 @@ import useHsrServerChosen from "../redux/hsrServerChosen/useHsrServerChosen";
 import { isHoyolabPlatform } from "../utils/hoyolab/utils";
 import useAppLanguage from "../context/AppLanguage/useAppLanguage";
 import cookieUtil from "cookie";
-
-import auth from "@react-native-firebase/auth";
 import Toast from "../utils/toast/Toast";
+import auth from "@react-native-firebase/auth";
+import db from "@react-native-firebase/firestore";
 
 export default function LoginScreen() {
   const { language } = useAppLanguage();
@@ -44,33 +44,58 @@ export default function LoginScreen() {
     // firebase auth
     if (cookieParse.account_id_v2) {
       // firebase 註冊
-      try {
-        const userCredential = await auth().createUserWithEmailAndPassword(
-          `${cookieParse.account_id_v2}@stargazer.com`,
-          `${cookieParse.account_mid_v2}`
-        );
-        const user = userCredential.user;
-      } catch (error: any) {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+      handleFirebaseSignUp(
+        `${cookieParse.account_id_v2}@stargazer.com`,
+        `${cookieParse.account_mid_v2}`
+      );
+    }
+  };
 
-        if (errorCode === "auth/email-already-in-use") {
-          // firebase 登入
-          try {
-            const userCredential = await auth().signInWithEmailAndPassword(
-              `${cookieParse.account_id_v2}@stargazer.com`,
-              `${cookieParse.account_mid_v2}`
-            );
-            const user = userCredential.user;
-            console.log(user);
-          } catch (error: any) {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorMessage);
-          }
-        }
+  const handleFirebaseSignUp = async (email: string, password: string) => {
+    try {
+      const userCredential = await auth().createUserWithEmailAndPassword(
+        email,
+        password
+      );
+
+      const user = userCredential.user;
+    } catch (error: any) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      if (errorCode === "auth/email-already-in-use") {
+        // firebase 登入
+        handleFirebaseSignIn(email, password);
       }
     }
+  };
+
+  const handleFirebaseSignIn = async (email: string, password: string) => {
+    try {
+      const userCredential = await auth().signInWithEmailAndPassword(
+        email,
+        password
+      );
+      const user = userCredential.user;
+    } catch (error: any) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    }
+  };
+
+  const createFirebaseProfile = () => {
+    db()
+      .collection("users")
+      .add({
+        first: "Ada",
+        last: "Lovelace",
+        born: 1815,
+      })
+      .then((docRef) => {
+        console.log("Document written with ID: ", docRef.id);
+      })
+      .catch((error) => {
+        console.error("Error adding document: ", error);
+      });
   };
 
   return (

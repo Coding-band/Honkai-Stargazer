@@ -14,7 +14,7 @@ export default function Player() {
   const playerData = useHsrPlayerData();
   const playerNickName = playerData?.nickname;
   const playerLevel = playerData?.level;
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
 
   return (
     <View
