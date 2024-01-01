@@ -9,6 +9,8 @@ import { Shadow } from "react-native-shadow-2";
 import { Image } from "expo-image";
 import CharacterSoul from "../../../../../../assets/images/images_map/characterSoul";
 import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
+import useAppLanguage from "../../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../../locales";
 
 type Props = {
   id: number;
@@ -17,6 +19,7 @@ type Props = {
 
 export default React.memo(function EidolonPopUp({ id, onClose }: Props) {
   const { charId, charFullData } = useCharData();
+  const {language} = useAppLanguage();
 
   const charEidolonRank = charFullData.ranks?.filter(
     (rank) => rank.id === id
@@ -56,7 +59,7 @@ export default React.memo(function EidolonPopUp({ id, onClose }: Props) {
                 </Shadow>
                 <View className="w-[250px]" style={{ gap: 4 }}>
                   <Text className="text-[#333] text-[14px] font-[HY65]">
-                    星魂{id}
+                  {LOCALES[language].Eidolon}{id}
                   </Text>
                   <HtmlText
                     style={{ fontSize: 14, color: "#666", fontFamily: "HY65" }}

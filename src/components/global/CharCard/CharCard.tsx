@@ -12,8 +12,8 @@ type Props = {
   id: string;
   rare: number;
   name: string;
-  path: Path;
-  combatType: CombatType;
+  path?: Path;
+  combatType?: CombatType;
   image?:
     | string
     | number

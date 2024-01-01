@@ -20,6 +20,7 @@ export default function MOCList() {
       {
         date: `${floor?.node_1?.challenge_time.year}.${floor?.node_1?.challenge_time.month}.${floor?.node_1?.challenge_time.day} ${floor?.node_1?.challenge_time.hour}:${floor?.node_1?.challenge_time.minute}`,
         characters: floor?.node_1?.avatars?.map((char: any) => ({
+          officalId: char.id,
           level: char?.level,
           image: char?.icon,
           rare: char?.rarity,
@@ -29,6 +30,7 @@ export default function MOCList() {
       {
         date: `${floor?.node_2?.challenge_time.year}.${floor?.node_2?.challenge_time.month}.${floor?.node_2?.challenge_time.day} ${floor?.node_2?.challenge_time.hour}:${floor?.node_2?.challenge_time.minute}`,
         characters: floor?.node_2?.avatars?.map((char: any) => ({
+          officalId: char.id,
           level: char?.level,
           image: char?.icon,
           rare: char?.rarity,

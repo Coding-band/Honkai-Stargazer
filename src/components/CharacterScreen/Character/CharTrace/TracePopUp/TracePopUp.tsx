@@ -10,6 +10,8 @@ import Sliderbar from "../../../../global/Sliderbar/Sliderbar";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { getCharFullData } from "../../../../../utils/dataMap/getDataFromMap";
 import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
+import useAppLanguage from "../../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../../locales";
 
 type Props = {
   id: number;
@@ -18,6 +20,7 @@ type Props = {
 
 export default React.memo(function TracePopUp({ id, onClose }: Props) {
   const { charFullData } = useCharData();
+  const { language } = useAppLanguage();
 
   const charSkillGrouping = charFullData?.skillGrouping;
   const charSkill = useMemo(
@@ -69,7 +72,7 @@ export default React.memo(function TracePopUp({ id, onClose }: Props) {
                     {charSkill.tagHash}
                   </Text>
                   <Text className="text-[#666] text-[14px] font-[HY65]">
-                    能量回复：{charSkill.energy}
+                    {LOCALES[language].TraceEnergyEarn}{charSkill.energy}
                   </Text>
                 </View>
                 <View

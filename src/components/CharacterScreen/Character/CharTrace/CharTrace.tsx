@@ -11,14 +11,17 @@ import EruditionTraceTree from "./TraceTree/EruditionTraceTree";
 import AbundanceTraceTree from "./TraceTree/AbundanceTraceTree";
 import PreservationTraceTree from "./TraceTree/PreservationTraceTree";
 import useCharData from "../../../../context/CharacterData/hooks/useCharData";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 export default React.memo(function CharTrace() {
+  const { language } = useAppLanguage();
   const { charData } = useCharData();
   const charPathId = charData?.pathId;
 
   return (
     <View style={{ alignItems: "center" }}>
-      <CharPageHeading Icon={TreeStructure}>行迹树</CharPageHeading>
+      <CharPageHeading Icon={TreeStructure}>{LOCALES[language].TraceTree}</CharPageHeading>
       {charPathId === "Hunt" && <HuntTraceTree />}
       {charPathId === "Destruction" && <DestructionTraceTree />}
       {charPathId === "Harmony" && <HarmonyTraceTree />}

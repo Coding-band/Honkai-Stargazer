@@ -4,12 +4,15 @@ import Button from "../../../../../global/Button/Button";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import loginPolicyText from "../../../../../../../data/sg_data/login_policy.json"
 import TextButton from "../../../../../global/TextButton/TextButton";
+import useAppLanguage from "../../../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../../../locales";
 
 type Props = {
   onAcceptPolicy: () => void;
 };
 
 export default function LoginPolicy(props: Props) {
+  const {language} = useAppLanguage();
   return (
     <View className="p-4">
       <View style={{ gap: 0, alignItems: "center" }}>
@@ -22,7 +25,7 @@ export default function LoginPolicy(props: Props) {
           width={140}
           height={46}
         >
-          确定
+          {LOCALES[language].OK}
         </TextButton>
       </View>
     </View>

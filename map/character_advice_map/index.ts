@@ -36,7 +36,7 @@ import Tingyun from "../../data/character_data/advice/tingyun.json";
 import Welt from "../../data/character_data/advice/welt.json";
 import Yanqing from "../../data/character_data/advice/yanqing.json";
 
-const advice = {
+const charAdviceMap = {
   //add in 1.6.0
   "Dr. Ratio": null,
   "Ruan Mei": null,
@@ -81,4 +81,4 @@ const advice = {
   Yanqing,
 };
 
-export default advice;
+export default charAdviceMap;

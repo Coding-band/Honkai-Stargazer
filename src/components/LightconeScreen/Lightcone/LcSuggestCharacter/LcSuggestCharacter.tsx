@@ -5,6 +5,8 @@ import characterList from "../../../../../data/character_data/character_list.jso
 import characterListMap from "../../../../../map/character_data_map";
 import LcSuggestCharacterCard from "./LcSuggestCharacterCard/LcSuggestCharacterCard";
 import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 const testData = [
   {
@@ -46,9 +48,10 @@ const testData = [
 ];
 
 export default function LcSuggestCharacter() {
+  const {language} = useAppLanguage();
   return (
     <View style={{ alignItems: "center" }}>
-      <PageHeading Icon={Sword}>推荐角色</PageHeading>
+      <PageHeading Icon={Sword}>{LOCALES[language].AdviceCharacters}</PageHeading>
       <ScrollView horizontal>
         <View
           style={{

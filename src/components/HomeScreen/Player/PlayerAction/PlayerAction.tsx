@@ -7,9 +7,12 @@ import { useClickOutside } from "react-native-click-outside";
 import AccountBinding from "./AccountBinding/AccountBinding";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../constant/screens";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 export default function PlayerAction() {
   const navigation = useNavigation();
+  const {language} = useAppLanguage();
 
   const [isPress, setIsPress] = useState(false);
   const containerRef = useClickOutside<View>(() => {
@@ -38,16 +41,18 @@ export default function PlayerAction() {
               setIsBindingAccount(true);
             }}
           >
-            账号綁定
+          {LOCALES[language].AccountLogin}
           </ListItem>
-          <ListItem>编辑首页</ListItem>
+          <ListItem>
+            {LOCALES[language].ModifyHomePage}</ListItem>
           <ListItem
             onPress={() => {
               // @ts-ignore
               navigation.navigate(SCREENS.SettingPage.id);
             }}
           >
-            设置
+            
+            {LOCALES[language].Setting}
           </ListItem>
         </List>
       </View>

@@ -5,6 +5,8 @@ import Button from "../Button/Button";
 import FilterItem from "./FilterItem/FilterItem";
 import { ExpoImage } from "../../../types/image";
 import _ from "lodash";
+import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../locales";
 
 type Props = {
   items: { value: string; name: string; icon: ExpoImage }[];
@@ -16,11 +18,12 @@ type Props = {
 };
 
 export default function FilterPopUp(props: Props) {
+  const { language } = useAppLanguage();
   return (
     <View className="absolute bottom-0">
       <PopUpCard
         onClose={props.onClose && props.onClose}
-        title="筛选规则"
+        title={LOCALES[language].FilterTitle}
         content={
           <View className="p-4 pt-0">
             <View className="py-2.5" style={{ flexDirection: "row", gap: 12 }}>
@@ -102,7 +105,7 @@ export default function FilterPopUp(props: Props) {
                 height={46}
               >
                 <Text className="font-[HY65] text-[#222] text-[16px]">
-                  重置
+                {LOCALES[language].Reset}
                 </Text>
               </Button>
               <Button
@@ -112,7 +115,7 @@ export default function FilterPopUp(props: Props) {
                 height={46}
               >
                 <Text className="font-[HY65] text-[#222] text-[16px]">
-                  确定
+                {LOCALES[language].OK}
                 </Text>
               </Button>
             </View>

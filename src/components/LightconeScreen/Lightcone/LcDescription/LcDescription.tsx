@@ -8,14 +8,17 @@ import { getLcFullData } from "../../../../utils/dataMap/getDataFromMap";
 import formatDesc from "../../../../utils/format/formatDesc";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import useLcData from "../../../../context/LightconeData/hooks/useLcData";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 export default function LcDescription() {
   const { lcFullData } = useLcData();
   const [skillLevel, setSkillLevel] = useState(0);
+  const {language} = useAppLanguage();
 
   return (
     <View style={{ alignItems: "center" }}>
-      <PageHeading Icon={Info}>技能描述</PageHeading>
+      <PageHeading Icon={Info}>{LOCALES[language].SkillDesc}</PageHeading>
       <View className="w-full">
         <Text className="text-text font-[HY65] text-[20px] leading-[40px]">
           {lcFullData.skill.name}

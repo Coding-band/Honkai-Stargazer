@@ -1,17 +1,20 @@
-import { View, Text, ScrollView, StyleSheet } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import React from "react";
 import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { BaseballCap } from "phosphor-react-native";
-import RelicsCard from "../../../global/RelicsCard/RelicsCard";
 import { Image } from "expo-image";
-import useCharId from "../../../../context/CharacterData/hooks/useCharId";
-import { getCharAdviceData } from "../../../../utils/dataMap/getDataFromMap";
-import useTextLanguage from "../../../../context/TextLanguage/useTextLanguage";
 import CharSuggestRelicsLeft from "./CharSuggestRelicsLeft/CharSuggestRelicsLeft";
-import LeftBtn from "./ui/LeftBtn";
-import RightBtn from "./ui/RightBtn";
 import CharSuggestRelicsRight from "./CharSuggestRelicsRight/CharSuggestRelicsRight";
 import CharSuggestRelicsProps from "./CharSuggestRelicsProps/CharSuggestRelicsProps";
+<<<<<<< HEAD
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
+=======
+import useCharId from "../../../../context/CharacterData/hooks/useCharId";
+import charAdviceMap from "../../../../../map/character_advice_map";
+import { LOCALES } from "../../../../../locales";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+>>>>>>> 884dc9966fac382282b4c53713889206665746a6
 
 // Relic 遺器套裝
 // Ornaments 位面飾品
@@ -19,25 +22,40 @@ import CharSuggestRelicsProps from "./CharSuggestRelicsProps/CharSuggestRelicsPr
 
 const AddIcon = require("../../../../../assets/icons/Add.svg");
 
-const testMain = [
-  { title: "躯干", description: "暴击，暴伤" },
-  { title: "躯干", description: "暴击，暴伤" },
-  { title: "躯干", description: "暴击，暴伤" },
-  { title: "躯干", description: "暴击，暴伤" },
-];
-const testSecond = "暴击率，速度，暴击伤害，攻击力";
-
 export default React.memo(function CharSuggestRelics() {
+<<<<<<< HEAD
+  const { language } = useAppLanguage();
   return (
     <View style={{ alignItems: "center" }}>
-      <CharPageHeading Icon={BaseballCap}>推荐遗器</CharPageHeading>
+      <CharPageHeading Icon={BaseballCap}>{LOCALES[language].AdviceRelics}</CharPageHeading>
       <View className="w-full" style={styles.lightconeImages}>
         <CharSuggestRelicsLeft />
         <View className="translate-y-[14px]">
           <AddIconComponent />
+=======
+  const { language: appLanguage } = useAppLanguage();
+
+  const charId = useCharId();
+  const advices = charAdviceMap[charId];
+  const suggestRelics = advices?.relics!;
+
+  return (
+    <View style={{ alignItems: "center" }}>
+      <CharPageHeading Icon={BaseballCap}>推荐遗器</CharPageHeading>
+      {suggestRelics ? (
+        <View className="w-full" style={styles.lightconeImages}>
+          <CharSuggestRelicsLeft />
+          <View className="translate-y-[14px]">
+            <AddIconComponent />
+          </View>
+          <CharSuggestRelicsRight />
+>>>>>>> 884dc9966fac382282b4c53713889206665746a6
         </View>
-        <CharSuggestRelicsRight />
-      </View>
+      ) : (
+        <Text className="text-text text-[HY65]">
+          {LOCALES[appLanguage].NoDataYet}
+        </Text>
+      )}
       <CharSuggestRelicsProps />
     </View>
   );

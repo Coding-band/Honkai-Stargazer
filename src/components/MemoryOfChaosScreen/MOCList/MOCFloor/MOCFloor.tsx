@@ -2,6 +2,11 @@ import { View, Text } from "react-native";
 import React from "react";
 import CharCard from "../../../global/CharCard/CharCard";
 import { Image } from "expo-image";
+import { useNavigation } from "@react-navigation/native";
+import { SCREENS } from "../../../../constant/screens";
+import officalCharId from "../../../../../map/character_offical_id_map";
+import { CombatType } from "../../../../types/combatType";
+import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
 
 type Props = {
   title: string;
@@ -12,15 +17,18 @@ type Props = {
   teams: {
     date: string;
     characters: {
+      officalId: number;
       level: number;
       image: string;
       rare: number;
-      combatType: string;
+      combatType: CombatType;
     }[];
   }[];
 };
 
 export default function MOCFloor(props: Props) {
+  const navigation = useNavigation();
+
   return (
     <View className="w-full  border border-[#DDDDDD20] rounded-[4px] p-2.5">
       {/* Layer 1 */}
@@ -65,13 +73,21 @@ export default function MOCFloor(props: Props) {
           {props.teams[0].characters?.map((char, i) => (
             <CharCard
               key={i}
+              // @ts-ignore
+              id={officalCharId[char.officalId]}
               name={`Lv ${char.level}`}
               image={char.image}
               rare={char.rare}
-              // @ts-ignore
-              // path={char.path}
-              // @ts-ignore
               combatType={char.combatType}
+              onPress={() => {
+                // @ts-ignore
+                navigation.navigate(SCREENS.CharacterPage.id, {
+                  // @ts-ignore
+                  id: officalCharId[char.officalId],
+                  // @ts-ignore
+                  name: getCharFullData(officalCharId[char.officalId]).name,
+                });
+              }}
             />
           ))}
         </View>
@@ -103,17 +119,25 @@ export default function MOCFloor(props: Props) {
           {props.teams[1].characters?.map((char, i) => (
             <CharCard
               key={i}
+              // @ts-ignore
+              id={officalCharId[char.officalId]}
               name={`Lv ${char.level}`}
               image={char.image}
               rare={char.rare}
               // @ts-ignore
-              // path={char.path}
-              // @ts-ignore
               combatType={char.combatType}
+              onPress={() => {
+                // @ts-ignore
+                navigation.navigate(SCREENS.CharacterPage.id, {
+                  // @ts-ignore
+                  id: officalCharId[char.officalId],
+                  // @ts-ignore
+                  name: getCharFullData(officalCharId[char.officalId]).name,
+                });
+              }}
             />
           ))}
         </View>
-        
       </View>
     </View>
   );

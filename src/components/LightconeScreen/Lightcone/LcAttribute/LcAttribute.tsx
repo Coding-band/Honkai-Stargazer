@@ -14,6 +14,8 @@ import {
 import { map } from "lodash";
 import MaterialCard from "../../../global/MaterialCard/MaterialCard";
 import Material from "../../../../../assets/images/images_map/material";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 const HPIcon = require("../../../../../assets/icons/HP.png");
 const STRIcon = require("../../../../../assets/icons/STR.png");
@@ -23,6 +25,7 @@ const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 
 export default function LcAttribute() {
   const loaded = useDelayLoad(100);
+  const {language} = useAppLanguage();
 
   const { lcId, lcFullData } = useLcData();
 
@@ -76,7 +79,7 @@ export default function LcAttribute() {
   return (
     <>
       <View style={{ alignItems: "center" }}>
-        <PageHeading Icon={Info}>基础属性</PageHeading>
+        <PageHeading Icon={Info}>{LOCALES[language].BasicStatus}</PageHeading>
         {loaded && (
           <>
             {/* 等級 - 起點 */}

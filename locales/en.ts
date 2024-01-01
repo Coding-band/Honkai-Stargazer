@@ -70,11 +70,14 @@ export const EN = {
   Eidolon:"Eidolon",
   AdviceCharacters:"Advice Characters",
   AdviceLightcones:"Advice Lightcones",
+  AdviceTeams:"Advice Teams",
   RelicStatus2Pcs:"2pc",
   RelicStatus4Pcs:"4pc",
   AdviceRelics:"Advice Relics",
   AdviceGetPath:"Access Way",
   CharacterStory:"Story",
+  MainAffix:"Main Affix",
+  SubAffix:"Sub Affix",
   // ui - Memory Of Chaos
   PlayersBattleReport:"${1}'s Battle Chronic",
   PlayersRemainRounds:"${1} Round(s) Remained",
@@ -107,6 +110,13 @@ export const EN = {
   SpecialThanks:"Special Thanks",
   SpecialThanksDevs:"Developers",
   SpecialThanksOpenSource:"Open Source Thx",
+  SelectAccountInServer:"Please select the server you are playing.",
+  ManuallySetup:"Setup Manually",
+  SelectServerTitle:"Select Server",
+  RemarksInLogin:"Login Remarks",
+  CopyToClipBoard:"Copied to Clipboard ~",
+  FailToCopy:"Failed to Copy : ",
+
 
   // affixs of relics
   RelicAffixATK : "ATK",

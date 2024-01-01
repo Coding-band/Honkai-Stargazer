@@ -4,16 +4,19 @@ import SearchBtn from "../../../global/Searchbar/SearchBtn/SearchBtn";
 import Searchbar from "../../../global/Searchbar/Searchbar/Searchbar";
 import useLightconeIsSearching from "../../../../redux/lightconeIsSearching/useLightconeIsSearching";
 import useLightconeSearch from "../../../../redux/lightconeSearch/useLightconeSearch";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 export default function SearchAction() {
   const { setIsSearching, isSearching } = useLightconeIsSearching();
   const { searchValue, setSearchValue } = useLightconeSearch();
+  const {language} = useAppLanguage();
 
   return (
     <View>
       {isSearching ? (
         <Searchbar
-          placeholder="搜尋光錐"
+          placeholder={LOCALES[language].FilterFindLightcone }
           value={searchValue}
           onChangeText={setSearchValue}
           onClear={() => {

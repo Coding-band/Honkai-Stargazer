@@ -4,7 +4,7 @@ import { CombatType } from "../../../types/combatType";
 import { Image } from "expo-image";
 import CombatTypeMap from "../../../../assets/images/images_map/combatType";
 
-export default function CombatTypeCardIcon({ value }: { value: CombatType }) {
+export default function CombatTypeCardIcon({ value }: { value?: CombatType }) {
   return (
     value && (
       <View

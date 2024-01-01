@@ -3,10 +3,13 @@ import React from "react";
 import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { Person } from "phosphor-react-native";
 import CharSuggestTeamCard from "./CharSuggestTeamCard/CharSuggestTeamCard";
+<<<<<<< HEAD
 
 import characterList from "../../../../../data/character_data/character_list.json";
 import characterListMap from "../../../../../map/character_data_map";
 import * as imagesMap from "../../../../../assets/images/images_map";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 const testData = [
   [
@@ -88,9 +91,21 @@ const testData = [
 ];
 
 export default React.memo(function CharSuggestTeam() {
+  const {language} = useAppLanguage();
+=======
+import useCharId from "../../../../context/CharacterData/hooks/useCharId";
+import charAdviceMap from "../../../../../map/character_advice_map";
+
+export default React.memo(function CharSuggestTeam() {
+  const charId = useCharId();
+  // @ts-ignore
+  const suggestTeamsData = charAdviceMap[charId]?.teams;
+
+
+>>>>>>> 884dc9966fac382282b4c53713889206665746a6
   return (
     <View style={{ alignItems: "center" }}>
-      <CharPageHeading Icon={Person}>推荐队伍</CharPageHeading>
+      <CharPageHeading Icon={Person}>{LOCALES[language].AdviceTeams}</CharPageHeading>
       <View
         style={{
           flexDirection: "row",

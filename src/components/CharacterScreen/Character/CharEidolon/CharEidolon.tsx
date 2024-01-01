@@ -10,9 +10,12 @@ import Eidolon5 from "./Eidolons/Eidolon5";
 import Eidolon6 from "./Eidolons/Eidolon6";
 import EidolonPopUp from "./EidolonPopUp/EidolonPopUp";
 import { useClickOutside } from "react-native-click-outside";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 export default React.memo(function CharEidolon() {
   const [selectedEidolon, setSelectedEidolon] = useState(0);
+  const { language } = useAppLanguage();
 
   const containerRef = useClickOutside<View>(() => {
     setSelectedEidolon(0);
@@ -27,7 +30,7 @@ export default React.memo(function CharEidolon() {
         }}
         style={{ alignItems: "center" }}
       >
-        <CharPageHeading Icon={StarHalf}>星魂</CharPageHeading>
+        <CharPageHeading Icon={StarHalf}>{LOCALES[language].Eidolon}</CharPageHeading>
         <View className="w-[350px] h-[280px]">
           <Eidolon1
             selected={selectedEidolon === 1}

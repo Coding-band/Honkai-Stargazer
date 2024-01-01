@@ -8,10 +8,12 @@ import PathMap from "../../../../../assets/images/images_map/path";
 import CombatTypeMap from "../../../../../assets/images/images_map/combatType";
 import { Path as PathType } from "../../../../types/path";
 import { CombatType as CombatTypeType } from "../../../../types/combatType";
-import { ZH_CN } from "../../../../../locales/zh_cn";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 export default function FilterAction() {
   const [open, setOpen] = useState(false);
+  const {language} = useAppLanguage();
 
   const { charFilter, charFilterSelected, setCharFilterSelected } =
     useCharFilter();
@@ -20,7 +22,7 @@ export default function FilterAction() {
     () =>
       charFilter?.map((item) => ({
         value: item.id,
-        name: ZH_CN[item.id],
+        name: LOCALES[language][item.id],
         icon: Path.includes(item.id)
           ? PathMap[item.id as PathType].icon
           : CombatTypeMap[item.id as CombatTypeType].icon,

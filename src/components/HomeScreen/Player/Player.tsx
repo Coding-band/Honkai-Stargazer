@@ -7,11 +7,14 @@ import PlayerAvator from "./PlayerAvator/PlayerAvator";
 import { cn } from "../../../utils/css/cn";
 import PlayerCharacter from "./PlayerCharacter/PlayerCharacter";
 import useHsrPlayerData from "../../../hooks/hoyolab/useHsrPlayerData";
+import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../locales";
 
 export default function Player() {
   const playerData = useHsrPlayerData();
   const playerNickName = playerData?.nickname;
   const playerLevel = playerData?.level;
+  const {language} = useAppLanguage();
 
   return (
     <View
@@ -36,7 +39,7 @@ export default function Player() {
             <PlayerAction />
             <View>
               <Text className="font-[HY75] text-[#DBC291] text-[14px] font-medium">
-                开拓等级 {playerLevel || "?"}
+                {LOCALES[language].PlayerLevel} {playerLevel || "?"}
               </Text>
             </View>
           </View>

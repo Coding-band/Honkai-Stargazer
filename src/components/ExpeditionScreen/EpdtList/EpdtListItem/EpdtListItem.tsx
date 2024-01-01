@@ -8,6 +8,8 @@ import {
   formatTimePoint,
 } from "../../../../utils/date/formatTime";
 import { animated, useSpring } from "@react-spring/native";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 type Props = {
   avatars: string[];
@@ -18,6 +20,7 @@ type Props = {
 };
 
 export default function EpdtListItem(props: Props) {
+  const { language } = useAppLanguage();
   const progressBarAnimation = useSpring({
     from: { width: "0%" },
     to: { width: `${100 - (props.remainingTime / 72000) * 100}%` },
@@ -47,7 +50,7 @@ export default function EpdtListItem(props: Props) {
                   {/* 剩餘時間 */}
                   <Text className="font-[HY65] text-[13px] text-[#00000060]">
                     {props.ongoing === false
-                      ? "已完成"
+                      ? LOCALES[language].IsDone
                       : formatTimeDuration(props.remainingTime)}
                   </Text>
                 </View>

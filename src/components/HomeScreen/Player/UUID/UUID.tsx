@@ -3,16 +3,19 @@ import { Text, TouchableOpacity, View } from "react-native";
 import useHsrUUID from "../../../../hooks/hoyolab/useHsrUUID";
 import Toast from "../../../../utils/toast/Toast";
 import * as Clipboard from "expo-clipboard";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 export default function UUID() {
   const uuid = useHsrUUID();
+  const {language} = useAppLanguage();
 
   const handleCopyUUID = useCallback(async () => {
     try {
       await Clipboard.setStringAsync(uuid);
-      Toast("已複製到剪貼簿");
+      Toast(LOCALES[language].CopyToClipBoard);
     } catch (e) {
-      Toast("複製失敗, 錯誤代碼：" + e);
+      Toast(LOCALES[language].FailToCopy + e);
     }
   }, [uuid]);
 

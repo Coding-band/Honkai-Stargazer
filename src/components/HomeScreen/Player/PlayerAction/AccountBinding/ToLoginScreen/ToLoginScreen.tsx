@@ -6,6 +6,8 @@ import { useNavigation } from "@react-navigation/native";
 import Button from "../../../../../global/Button/Button";
 import { SCREENS } from "../../../../../../constant/screens";
 import TextButton from "../../../../../global/TextButton/TextButton";
+import useAppLanguage from "../../../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../../../locales";
 
 const hsrServers: Server[] = [
   { id: "cn1", name: "星穹列车", platform: "mihoyo" },
@@ -22,6 +24,7 @@ type Props = {
 };
 
 export default function ToLoginScreen(props: Props) {
+  const {language} = useAppLanguage();
   const navigation = useNavigation();
 
   const handleChoseServer = (server: Server) => {
@@ -36,7 +39,7 @@ export default function ToLoginScreen(props: Props) {
   return (
     <View style={{ gap: 12 }}>
       <Text className="text-[14px] font-[HY55] text-black leading-5">
-        请选择账号所在服务器。
+        {LOCALES[language].SelectAccountInServer}
       </Text>
       {hsrServers.map((server) => (
         <TextButton
@@ -59,7 +62,7 @@ export default function ToLoginScreen(props: Props) {
         width={"100%"}
         height={46}
       >
-        手动设置
+      {LOCALES[language].ManuallySetup}
       </TextButton>
     </View>
   );

@@ -3,8 +3,11 @@ import { Linking, Pressable, SafeAreaView, Text, View } from "react-native";
 import { cn } from "../../../utils/css/cn";
 import Tab from "./Tab/Tab";
 import { Image } from "expo-image";
+import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../locales";
 
 export default function Tabbar() {
+  const {language} = useAppLanguage();
   return (
     <SafeAreaView className={cn("absolute bottom-0", "w-full h-[160px]")}>
       <Divider />
@@ -29,7 +32,7 @@ export default function Tabbar() {
       </View> */}
       <View className="py-2" style={{ alignItems: "center", gap: 8 }}>
         <Text className="text-text text-[14px] font-[HY65]">
-          可透過捐贈或邀請他人免除廣告
+          {LOCALES[language].DonationRemoveAds}
         </Text>
         <Pressable
           className="w-full h-[70px]"
