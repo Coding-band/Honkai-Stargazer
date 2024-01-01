@@ -1,25 +1,26 @@
 import { Sword } from "phosphor-react-native";
 import CharPageHeading from "../../../global/PageHeading/PageHeading";
-import { ScrollView, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import CharSuggestLightConeCard from "./CharSuggestLightConeCard/CharSuggestLightConeCard";
 import lightconeList from "../../../../../data/lightcone_data/lightcone_list.json";
 import React from "react";
-import {
-  getCharAdviceData,
-  getLcFullData,
-} from "../../../../utils/dataMap/getDataFromMap";
+import { getLcFullData } from "../../../../utils/dataMap/getDataFromMap";
 import useCharId from "../../../../context/CharacterData/hooks/useCharId";
 import LightconeNameMap from "../../../../../map/lightcone_name_map";
 import { LightconeName } from "../../../../types/lightcone";
 import useTextLanguage from "../../../../context/TextLanguage/useTextLanguage";
 import Lightcone from "../../../../../assets/images/images_map/lightcone";
+import charAdviceMap from "../../../../../map/character_advice_map";
+import { LOCALES } from "../../../../../locales";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
 
 export default React.memo(function CharSuggestLightCone() {
   const { language: textLanguage } = useTextLanguage();
+  const { language: appLanguage } = useAppLanguage();
 
   const charId = useCharId();
   // @ts-ignore
-  const suggestConesData = getCharAdviceData(charId)?.conesNew;
+  const suggestConesData = charAdviceMap[charId]?.conesNew;
   const suggestCones = suggestConesData?.map((cone: any) => {
     // @ts-ignore
     const lcId: LightconeName = LightconeNameMap[cone.cone];
@@ -38,23 +39,29 @@ export default React.memo(function CharSuggestLightCone() {
   return (
     <View style={{ alignItems: "center" }}>
       <CharPageHeading Icon={Sword}>推荐光锥</CharPageHeading>
-      <ScrollView horizontal>
-        <View
-          style={{
-            flexDirection: "row",
-            flexWrap: "wrap",
-            columnGap: 8,
-          }}
-        >
-          {suggestCones
-            ?.slice()
-            .sort((a: any, b: any) => b.rare - a.rare)
-            .map((l: any, i: any) => (
-              // @ts-ignore
-              <CharSuggestLightConeCard key={i} {...l} />
-            ))}
-        </View>
-      </ScrollView>
+      {suggestCones ? (
+        <ScrollView horizontal>
+          <View
+            style={{
+              flexDirection: "row",
+              flexWrap: "wrap",
+              columnGap: 8,
+            }}
+          >
+            {suggestCones
+              ?.slice()
+              .sort((a: any, b: any) => b.rare - a.rare)
+              .map((l: any, i: any) => (
+                // @ts-ignore
+                <CharSuggestLightConeCard key={i} {...l} />
+              ))}
+          </View>
+        </ScrollView>
+      ) : (
+        <Text className="text-text text-[HY65]">
+          {LOCALES[appLanguage].NoDataYet}
+        </Text>
+      )}
     </View>
   );
 });

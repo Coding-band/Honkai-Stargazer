@@ -4,10 +4,7 @@ import RelicsCard from "../../../../global/RelicsCard/RelicsCard";
 import RightBtn from "../ui/RightBtn";
 import LeftBtn from "../ui/LeftBtn";
 import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
-import {
-  getCharAdviceData,
-  getRelicFullData,
-} from "../../../../../utils/dataMap/getDataFromMap";
+import { getRelicFullData } from "../../../../../utils/dataMap/getDataFromMap";
 import { map } from "lodash";
 import useTextLanguage from "../../../../../context/TextLanguage/useTextLanguage";
 import { RelicName } from "../../../../../types/relic";
@@ -16,6 +13,7 @@ import SelectedIndex from "../ui/SelectedIndex";
 import CharSuggestRelicsCard from "../CharSuggestRelicsCard/CharSuggestRelicsCard";
 import { SCREENS } from "../../../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
+import charAdviceMap from "../../../../../../map/character_advice_map";
 
 export default function CharSuggestRelicsLeft() {
   const { language: textLanguage } = useTextLanguage();
@@ -23,7 +21,7 @@ export default function CharSuggestRelicsLeft() {
   const navigation = useNavigation();
 
   const charId = useCharId();
-  const advices = getCharAdviceData(charId);
+  const advices = charAdviceMap[charId];
   const suggestRelics = advices?.relics!;
 
   const [selectedIndex, setSelectedIndex] = useState(0);

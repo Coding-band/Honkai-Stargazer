@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 import { Path } from "../../../types/path";
 import PathMap from "../../../../assets/images/images_map/path";
 
-export default function PathCardIcon({ value }: { value: Path }) {
+export default function PathCardIcon({ value }: { value?: Path }) {
   return (
     value && (
       <View

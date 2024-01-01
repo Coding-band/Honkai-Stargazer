@@ -2,7 +2,7 @@
   "expo": {
     "name": "Stargazer",
     "slug": "honkai-stargazer",
-    "version": "2.0.0-7",
+    "version": "2.0.0.7",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -15,15 +15,17 @@
       "**/*"
     ],
     "ios": {
+      "googleServicesFile": "./GoogleService-Info.plist",
       "supportsTablet": true,
-      "bundleIdentifier": "com.dalufishe.honkaistargazer"
+      "bundleIdentifier": "com.voc.honkaistargazer"
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#000000"
       },
-      "package": "com.dalufishe.honkaistargazer"
+      "package": "com.voc.honkai_stargazer_gp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -41,6 +43,15 @@
       "url": "https://u.expo.dev/b9fe7661-b87f-485b-9509-cf28cddfe023"
     },
     "plugins": [
+      "@react-native-firebase/app",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
       [
         "expo-media-library",
         {
@@ -48,7 +59,8 @@
           "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
           "isAccessMediaLocationEnabled": true
         }
-      ]
+      ],
+      "expo-build-properties"
     ]
   }
 }
