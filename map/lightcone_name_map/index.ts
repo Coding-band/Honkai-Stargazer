@@ -69,8 +69,8 @@ const LightconeName = {
   "post-op-conversation": "Post-Op Conversation",
   "quid-pro-quo": "Quid Pro Quo",
   "resolution-shines-as-pearls-of-sweat":
-    "Resolution Shines As Pearls of Sweat",
-  "-to-darkness": "Return to Darkness",
+  "Resolution Shines As Pearls of Sweat",
+  "return-to-darkness": "Return to Darkness",
   "river-flows-in-spring": "River Flows in Spring",
   sagacity: "Sagacity",
   "shared-feeling": "Shared Feeling",
