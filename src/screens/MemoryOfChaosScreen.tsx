@@ -5,9 +5,12 @@ import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import { ImageBackground } from "expo-image";
 import MOCList from "../components/MemoryOfChaosScreen/MOCList/MOCList";
+import useAppLanguage from "../context/AppLanguage/useAppLanguage";
 
 export default function MemoryOfChaosScreen() {
   
+  const { language } = useAppLanguage();
+
   const [showMain, setShowMain] = useState(false);
   useEffect(() => {
     setTimeout(() => {
@@ -26,7 +29,7 @@ export default function MemoryOfChaosScreen() {
         contentFit="cover"
       />
       <Header leftBtn="back" Icon={SCREENS.MemoryOfChaosPage.icon}>
-        {SCREENS.MemoryOfChaosPage.name}
+        {SCREENS.MemoryOfChaosPage.getName(language)}
       </Header>
       {showMain && <MOCList />}
     </View>

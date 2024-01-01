@@ -7,19 +7,22 @@ import { SCREENS } from "../constant/screens";
 import CharList from "../components/CharacterListScreen/CharList/CharList";
 import WallPaper from "../components/global/WallPaper/WallPaper";
 import CharAction from "../components/CharacterListScreen/CharAction/CharAction";
+import useAppLanguage from "../context/AppLanguage/useAppLanguage";
 
 export default function CharacterListScreen() {
+  const { language } = useAppLanguage();
+
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
-      <WallPaper isBlur/>
+      <WallPaper isBlur />
       <LinearGradient
         className="absolute w-full h-full"
         colors={["#00000080", "#00000020"]}
       />
 
       <Header Icon={SCREENS.CharacterListPage.icon}>
-        {SCREENS.CharacterListPage.name}
+        {SCREENS.CharacterListPage.getName(language)}
       </Header>
       <>
         <CharList />

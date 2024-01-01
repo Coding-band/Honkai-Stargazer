@@ -6,19 +6,23 @@ import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import EpdtList from "../components/ExpeditionScreen/EpdtList/EpdtList";
 import WallPaper from "../components/global/WallPaper/WallPaper";
+import useAppLanguage from "../context/AppLanguage/useAppLanguage";
 
 export default function ExpeditionScreen() {
+
+  const {language} = useAppLanguage();
+
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
-      <WallPaper isBlur/>
+      <WallPaper isBlur />
       <LinearGradient
         className="absolute w-full h-full"
         colors={["#00000080", "#00000020"]}
       />
 
       <Header leftBtn="back" Icon={SCREENS.ExpeditionPage.icon}>
-        {SCREENS.ExpeditionPage.shortName}
+        {SCREENS.ExpeditionPage.getName(language)}
       </Header>
       <EpdtList />
       <LinearGradient

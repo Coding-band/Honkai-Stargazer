@@ -4,12 +4,19 @@ import WebView from "react-native-webview";
 import { StatusBar } from "expo-status-bar";
 import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
+import useAppLanguage from "../context/AppLanguage/useAppLanguage";
 
 export default function MapScreen() {
+  
+    const { language } = useAppLanguage();
+
+  
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
-      <Header Icon={SCREENS.MapPage.icon}>{SCREENS.MapPage.name}</Header>
+      <Header Icon={SCREENS.MapPage.icon}>
+        {SCREENS.MapPage.getName(language)}
+      </Header>
       <WebView
         style={{ marginTop: 110 }}
         source={{

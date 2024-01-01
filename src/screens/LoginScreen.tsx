@@ -14,8 +14,13 @@ import { ParamList } from "../types/navigation";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import useHsrServerChosen from "../redux/hsrServerChosen/useHsrServerChosen";
 import { isHoyolabPlatform } from "../utils/hoyolab/utils";
+import useAppLanguage from "../context/AppLanguage/useAppLanguage";
 
 export default function LoginScreen() {
+
+    const { language } = useAppLanguage();
+
+
   const route = useRoute<RouteProp<ParamList, "Login">>();
   const platform = route.params.platform;
   const serverId = route.params.serverId;
@@ -37,7 +42,7 @@ export default function LoginScreen() {
         }}
         Icon={SCREENS.LoginPage.icon}
       >
-        {SCREENS.LoginPage.name}
+        {SCREENS.LoginPage.getName(language)}
       </Header>
       <WebView
         incognito

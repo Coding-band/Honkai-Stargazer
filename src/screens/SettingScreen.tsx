@@ -6,8 +6,13 @@ import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import WallPaper from "../components/global/WallPaper/WallPaper";
 import SettingList from "../components/SettingScreen/SettingList/SettingList";
+import useAppLanguage from "../context/AppLanguage/useAppLanguage";
 
 export default function SettingScreen() {
+
+
+  const { language } = useAppLanguage();
+
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
@@ -18,7 +23,7 @@ export default function SettingScreen() {
       />
 
       <Header leftBtn="back" Icon={SCREENS.SettingPage.icon}>
-        {SCREENS.SettingPage.name}
+        {SCREENS.SettingPage.getName(language)}
       </Header>
       <SettingList />
       <LinearGradient

@@ -1,4 +1,5 @@
 export const ZH_HK = {
+  // path
   Abundance: "豐饒",
   Destruction: "毀滅",
   Erudition: "智識",
@@ -7,12 +8,14 @@ export const ZH_HK = {
   Nihility: "虛無",
   Preservation: "存謢",
   Physical: "物理",
+  // element (combat type)
   Wind: "風",
   Ice: "冰",
   Fire: "火",
   Lightning: "雷",
   Quantum: "量子",
   Imaginary: "虛數",
+  // relic
   RelicPropBody: "軀幹",
   RelicPropFeet: "腳部",
   RelicPropPlanarSphere: "位面球",
@@ -21,4 +24,23 @@ export const ZH_HK = {
   RelicPropFeetShort: "腳部",
   RelicPropPlanarSphereShort: "位面球",
   RelicPropLinkRopeShort: "連結繩",
+  // ui
+  Character: "角色",
+  CharacterList: "角色列表",
+  Lightcone: "光錐",
+  LightconeList: "光錐列表",
+  Relic: "遺器",
+  RelicList: "遺器列表",
+  Stamina: "開拓力",
+  StaminaIsFull: "開拓力已滿",
+  Map: "地圖",
+  Login: "登入",
+  Expedition: "派遣",
+  ExpeditionFull: "派遣委託",
+  Setting: "設置",
+  WallPaper: "壁纸",
+  ChangeWallPaper: "更換壁紙",
+  MemoryOfChaos: "混沌回憶",
+  NoDataYet: "暫無數據",
+  IsDone: "已完成",
 };

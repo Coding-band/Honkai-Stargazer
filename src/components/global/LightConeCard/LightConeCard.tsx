@@ -8,7 +8,6 @@ import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image } from "expo-image";
 import { ExpoImage } from "../../../types/image";
-import { Shadow } from "react-native-shadow-2";
 import { CardColors } from "../../../constant/card";
 import PathCardIcon from "../PathCardIcon/PathCardIcon";
 import { Path } from "../../../types/path";

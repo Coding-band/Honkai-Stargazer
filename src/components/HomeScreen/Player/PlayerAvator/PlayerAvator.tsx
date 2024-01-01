@@ -2,24 +2,29 @@ import { Image } from "expo-image";
 import React, { useEffect, useState } from "react";
 import { Pressable, View } from "react-native";
 import useHsrFullData from "../../../../hooks/hoyolab/useHsrFullData";
+import { animated, useSpring } from "@react-spring/native";
 
 export default function PlayerAvator() {
   const playerFullData = useHsrFullData();
   const avator = playerFullData?.data?.cur_head_icon_url;
 
-  const [rotate, setRotate] = useState(0);
+  const [scale, setScale] = useState(1);
   const [flag, setFlag] = useState(false);
 
+  const avatorAnimation = useSpring({ scale, config: { tension: 220 } });
   useEffect(() => {
     setTimeout(() => {
       if (flag) {
-        setRotate(rotate + 10);
+        setScale(scale + 0.1);
+      } else {
+        setScale(1);
       }
-    }, 10);
-  }, [rotate, flag]);
+    });
+  }, [scale, flag]);
 
   return (
     <Pressable
+      className="z-50"
       onPressIn={() => {
         setFlag(true);
       }}
@@ -27,9 +32,9 @@ export default function PlayerAvator() {
         setFlag(false);
       }}
     >
-      <View
+      <AnimatedView
         className="w-[73px] h-[73px] rounded-full mr-2 bg-white"
-        style={{ transform: [{ rotate: rotate + "deg" }] }}
+        style={{ transform: [avatorAnimation] }}
       >
         <Image
           source={{
@@ -42,7 +47,9 @@ export default function PlayerAvator() {
             backgroundColor: "rgba(144, 124, 84, 0.4)",
           }}
         />
-      </View>
+      </AnimatedView>
     </Pressable>
   );
 }
+
+const AnimatedView = animated(View);

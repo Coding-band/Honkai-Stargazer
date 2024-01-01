@@ -8,8 +8,13 @@ import { SCREENS } from "../constant/screens";
 import WallPaper from "../components/global/WallPaper/WallPaper";
 import RelicList from "../components/RelicListScreen/RelicList/RelicList";
 import RelicAction from "../components/RelicListScreen/RelicAction/RelicAction";
+import useAppLanguage from "../context/AppLanguage/useAppLanguage";
 
 export default function RelicListScreen() {
+
+  const { language } = useAppLanguage();
+
+
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
@@ -20,7 +25,7 @@ export default function RelicListScreen() {
       />
 
       <Header Icon={SCREENS.RelicListPage.icon}>
-        {SCREENS.RelicListPage.name}
+        {SCREENS.RelicListPage.getName(language)}
       </Header>
       <>
         <RelicList />

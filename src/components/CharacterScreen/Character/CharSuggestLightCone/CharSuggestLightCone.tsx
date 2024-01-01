@@ -18,8 +18,9 @@ export default React.memo(function CharSuggestLightCone() {
   const { language: textLanguage } = useTextLanguage();
 
   const charId = useCharId();
+  // @ts-ignore
   const suggestConesData = getCharAdviceData(charId)?.conesNew;
-  const suggestCones = suggestConesData?.map((cone) => {
+  const suggestCones = suggestConesData?.map((cone: any) => {
     // @ts-ignore
     const lcId: LightconeName = LightconeNameMap[cone.cone];
     const lcFullData = getLcFullData(lcId, textLanguage);
@@ -47,8 +48,8 @@ export default React.memo(function CharSuggestLightCone() {
         >
           {suggestCones
             ?.slice()
-            .sort((a, b) => b.rare - a.rare)
-            .map((l, i) => (
+            .sort((a: any, b: any) => b.rare - a.rare)
+            .map((l: any, i: any) => (
               // @ts-ignore
               <CharSuggestLightConeCard key={i} {...l} />
             ))}

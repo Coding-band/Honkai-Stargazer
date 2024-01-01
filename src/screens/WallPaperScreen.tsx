@@ -4,10 +4,14 @@ import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
-import WallPaper from "../components/global/WallPaper/WallPaper";
 import WallPaperChanger from "../components/WallPaperScreen/WallPaperChanger";
+import useAppLanguage from "../context/AppLanguage/useAppLanguage";
 
 export default function WallPaperScreen() {
+  
+    const { language } = useAppLanguage();
+
+  
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
@@ -18,7 +22,7 @@ export default function WallPaperScreen() {
       />
 
       <Header leftBtn="back" Icon={SCREENS.WallPaperPage.icon}>
-        {SCREENS.WallPaperPage.name}
+        {SCREENS.WallPaperPage.getName(language)}
       </Header>
       <WallPaperChanger />
       <LinearGradient

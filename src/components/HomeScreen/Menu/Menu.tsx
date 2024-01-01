@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  View,
-  ScrollView,
-  LayoutChangeEvent,
-  Platform,
-  Text,
-} from "react-native";
+import { View, ScrollView, LayoutChangeEvent, Text } from "react-native";
 import { cn } from "../../../utils/css/cn";
 import MenuItem from "./MenuItem/MenuItem";
 import {
@@ -26,26 +20,27 @@ import {
   Users,
 } from "phosphor-react-native";
 import MenuItemLarge from "./MenuItemLarge/MenuItemLarge";
-import { Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../constant/screens";
 import useHsrNote from "../../../hooks/hoyolab/useHsrNote";
 import _ from "lodash";
 import { formatTimePoint } from "../../../utils/date/formatTime";
-
-const OEPN_LONG_MENU = false;
+import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../locales";
+import Toast from "../../../utils/toast/Toast";
+import formatNumber from "../../../utils/format/formatNumber";
 
 export default function Menu() {
   const navigation = useNavigation();
+  const { language } = useAppLanguage();
 
+  //* Layout
   const [layout, setLayout] = useState({ width: 0, height: 0 });
   const [menuItemSize, setMenuItemSize] = useState({ width: 0, height: 0 });
   const [menuItemLargeSize, setMenuItemLargeSize] = useState({
     width: 0,
     height: 0,
   });
-
-  const playerNote = useHsrNote();
 
   useEffect(() => {
     MenuItem;
@@ -64,6 +59,140 @@ export default function Menu() {
     setLayout({ width, height });
   };
 
+  //* Data
+  const playerNote = useHsrNote();
+
+  //* Menu
+  const menuItems = [
+    // 角色列表
+    {
+      type: "normal",
+      name: SCREENS.CharacterListPage.getShortName(language),
+      icon: SCREENS.CharacterListPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.CharacterListPage.id);
+      },
+    },
+    // 光錐列表
+    {
+      type: "normal",
+      name: SCREENS.LightconeListPage.getShortName(language),
+      icon: SCREENS.LightconeListPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.LightconeListPage.id);
+      },
+    },
+    // 遺器列表F
+    {
+      type: "normal",
+      name: SCREENS.RelicListPage.getShortName(language),
+      icon: SCREENS.RelicListPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.RelicListPage.id);
+      },
+    },
+    // 混沌回憶
+    {
+      type: "normal",
+      name: SCREENS.MemoryOfChaosPage.getShortName(language),
+      icon: SCREENS.MemoryOfChaosPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.MemoryOfChaosPage.id);
+      },
+    },
+    // 開拓力
+    {
+      type: "large",
+      name: LOCALES[language].Stamina,
+      icon: Calendar,
+      title: playerNote.data ? (
+        <>
+          <Text className="text-[24px] leading-[26px]">
+            {playerNote.data?.current_stamina}
+          </Text>
+          <Text>/{playerNote.data?.max_stamina}</Text>
+        </>
+      ) : null,
+      subtitle: playerNote.data ? (
+        <Text>
+          {playerNote.data.current_stamina >= 240
+            ? LOCALES[language].StaminaIsFull
+            : formatTimePoint(
+                (playerNote.data.max_stamina -
+                  playerNote.data.current_stamina) *
+                  360
+              )}
+        </Text>
+      ) : null,
+      onPress: () => {},
+    },
+    // 每日實訓
+    {
+      type: "normal",
+      name: playerNote.data
+        ? `${playerNote.data?.current_train_score}/${playerNote.data?.max_train_score}`
+        : LOCALES[language].NoDataYet,
+      icon: Calendar,
+      onPress: () => {},
+    },
+    // 模擬宇宙
+    {
+      type: "normal",
+      name: playerNote.data
+        ? `${formatNumber(playerNote.data?.current_rogue_score)}/${formatNumber(
+            playerNote.data?.max_rogue_score
+          )}`
+        : LOCALES[language].NoDataYet,
+      icon: Planet,
+      onPress: () => {},
+    },
+    // 派遣委託
+    {
+      type: "large",
+      name: SCREENS.ExpeditionPage.getShortName(language),
+      icon: SCREENS.ExpeditionPage.icon,
+      title: playerNote.data ? (
+        <>
+          <Text className="text-[24px] leading-[26px]">
+            {playerNote.data?.accepted_epedition_num}
+          </Text>
+          <Text>/{playerNote.data?.total_expedition_num}</Text>
+        </>
+      ) : null,
+      subtitle: playerNote.data ? (
+        <Text>
+          {_.maxBy(playerNote.data.expeditions, (e: any) => e.remaining_time)
+            .remaining_time === 0
+            ? LOCALES[language].IsDone
+            : formatTimePoint(
+                _.maxBy(
+                  playerNote.data.expeditions,
+                  (e: any) => e.remaining_time
+                ).remaining_time
+              )}
+        </Text>
+      ) : null,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.ExpeditionPage.id);
+      },
+    },
+    // 地圖
+    {
+      type: "normal",
+      name: SCREENS.MapPage.getShortName(language),
+      icon: SCREENS.MapPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.MapPage.id);
+      },
+    },
+  ];
+
   return (
     <View
       style={{
@@ -76,144 +205,38 @@ export default function Menu() {
           className={cn("w-full pt-3 px-4 pb-5")}
           style={{ flexDirection: "row", flexWrap: "wrap", gap: 13 }}
         >
-          <MenuItem
-            onPress={() => {
-              // @ts-ignore
-              navigation.navigate(SCREENS.CharacterListPage.id);
-            }}
-            width={menuItemSize.width}
-            height={menuItemSize.height}
-            Icon={SCREENS.CharacterListPage.icon}
-          >
-            {SCREENS.CharacterListPage.shortName}
-          </MenuItem>
-          <MenuItem
-            onPress={() => {
-              // @ts-ignore
-              navigation.navigate(SCREENS.LightconeListPage.id);
-            }}
-            width={menuItemSize.width}
-            height={menuItemSize.height}
-            Icon={SCREENS.LightconeListPage.icon}
-          >
-            {SCREENS.LightconeListPage.shortName}
-          </MenuItem>
-          <MenuItem
-            onPress={() => {
-              // @ts-ignore
-              navigation.navigate(SCREENS.RelicListPage.id);
-            }}
-            width={menuItemSize.width}
-            height={menuItemSize.height}
-            Icon={SCREENS.RelicListPage.icon}
-          >
-            {SCREENS.RelicListPage.shortName}
-          </MenuItem>
-          <MenuItem
-            onPress={() => {
-              // @ts-ignore
-              navigation.navigate(SCREENS.MemoryOfChaosPage.id);
-            }}
-            width={menuItemSize.width}
-            height={menuItemSize.height}
-            Icon={SCREENS.MemoryOfChaosPage.icon}
-          >
-            {SCREENS.MemoryOfChaosPage.shortName}
-          </MenuItem>
-          <MenuItemLarge
-            width={menuItemLargeSize.width}
-            height={menuItemLargeSize.height}
-            Icon={Moon}
-            title={
-              playerNote.data ? (
-                <>
-                  <Text className="text-[24px] leading-[26px]">
-                    {playerNote.data?.current_stamina}
-                  </Text>
-                  <Text>/{playerNote.data?.max_stamina}</Text>
-                </>
-              ) : (
-                <></>
-              )
+          {menuItems.map((menuItem) => {
+            if (menuItem.type === "normal") {
+              return (
+                <MenuItem
+                  width={menuItemSize.width}
+                  height={menuItemSize.height}
+                  Icon={menuItem.icon}
+                  onPress={menuItem.onPress}
+                >
+                  {menuItem.name}
+                </MenuItem>
+              );
+            } else if (menuItem.type === "large") {
+              return (
+                <MenuItemLarge
+                  width={menuItemLargeSize.width}
+                  height={menuItemLargeSize.height}
+                  Icon={menuItem.icon}
+                  onPress={menuItem.onPress}
+                  title={menuItem.title}
+                  subtitle={menuItem.subtitle}
+                >
+                  {menuItem.name}
+                </MenuItemLarge>
+              );
             }
-            subtitle={
-              playerNote.data ? (
-                <Text>
-                  {playerNote.data.current_stamina >= 240
-                    ? "開拓力已滿"
-                    : formatTimePoint(
-                        (playerNote.data.max_stamina -
-                          playerNote.data.current_stamina) *
-                          360
-                      )}
-                </Text>
-              ) : (
-                <></>
-              )
-            }
-          >
-            开拓力
-          </MenuItemLarge>
-          {/* 每日實訓 */}
-          <MenuItem
-            width={menuItemSize.width}
-            height={menuItemSize.height}
-            Icon={Calendar}
-          >
-            {playerNote.data
-              ? `${playerNote.data?.current_train_score}/${playerNote.data?.max_train_score}`
-              : "暫無數據"}
-          </MenuItem>
-          <MenuItem
-            width={menuItemSize.width}
-            height={menuItemSize.height}
-            Icon={Planet}
-          >
-            暫無數據
-          </MenuItem>
-          <MenuItemLarge
+          })}
+
+          {/* <MenuItem
             onPress={() => {
-              // @ts-ignore
-              navigation.navigate(SCREENS.ExpeditionPage.id);
+              Toast.StillDevelopingToast();
             }}
-            width={menuItemLargeSize.width}
-            height={menuItemLargeSize.height}
-            Icon={Users}
-            title={
-              playerNote.data ? (
-                <>
-                  <Text className="text-[24px] leading-[26px]">
-                    {playerNote.data?.accepted_epedition_num}
-                  </Text>
-                  <Text>/{playerNote.data?.total_expedition_num}</Text>
-                </>
-              ) : (
-                <></>
-              )
-            }
-            subtitle={
-              playerNote.data ? (
-                <Text>
-                  {_.maxBy(
-                    playerNote.data.expeditions,
-                    (e: any) => e.remaining_time
-                  ).remaining_time === 0
-                    ? "已完成"
-                    : formatTimePoint(
-                        _.maxBy(
-                          playerNote.data.expeditions,
-                          (e: any) => e.remaining_time
-                        ).remaining_time
-                      )}
-                </Text>
-              ) : (
-                <></>
-              )
-            }
-          >
-            派遣委托
-          </MenuItemLarge>
-          <MenuItem
             width={menuItemSize.width}
             height={menuItemSize.height}
             Icon={MathOperations}
@@ -221,6 +244,9 @@ export default function Menu() {
             养成计算
           </MenuItem>
           <MenuItem
+            onPress={() => {
+              Toast.StillDevelopingToast();
+            }}
             width={menuItemSize.width}
             height={menuItemSize.height}
             Icon={Gauge}
@@ -228,6 +254,9 @@ export default function Menu() {
             伤害模拟
           </MenuItem>
           <MenuItem
+            onPress={() => {
+              Toast.StillDevelopingToast();
+            }}
             width={menuItemSize.width}
             height={menuItemSize.height}
             Icon={Books}
@@ -243,9 +272,12 @@ export default function Menu() {
               navigation.navigate(SCREENS.MapPage.id);
             }}
           >
-            {SCREENS.MapPage.shortName}
+            {SCREENS.MapPage.getShortName(language)}
           </MenuItem>
           <MenuItem
+            onPress={() => {
+              Toast.StillDevelopingToast();
+            }}
             width={menuItemSize.width}
             height={menuItemSize.height}
             Icon={ShootingStar}
@@ -253,6 +285,9 @@ export default function Menu() {
             祈愿分析
           </MenuItem>
           <MenuItem
+            onPress={() => {
+              Toast.StillDevelopingToast();
+            }}
             width={menuItemSize.width}
             height={menuItemSize.height}
             Icon={StarOfDavid}
@@ -260,6 +295,9 @@ export default function Menu() {
             祈愿模拟
           </MenuItem>
           <MenuItem
+            onPress={() => {
+              Toast.StillDevelopingToast();
+            }}
             width={menuItemSize.width}
             height={menuItemSize.height}
             Icon={Ticket}
@@ -267,249 +305,15 @@ export default function Menu() {
             兑换码
           </MenuItem>
           <MenuItem
+            onPress={() => {
+              Toast.StillDevelopingToast();
+            }}
             width={menuItemSize.width}
             height={menuItemSize.height}
             Icon={ClockClockwise}
           >
             未来卡池
-          </MenuItem>
-          {/*  */}
-          {OEPN_LONG_MENU && (
-            <>
-              <MenuItem
-                onPress={() => {
-                  // @ts-ignore
-                  navigation.navigate(SCREENS.CharacterListPage.id);
-                }}
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={SCREENS.CharacterListPage.icon}
-              >
-                {SCREENS.CharacterListPage.shortName}
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={Sword}
-              >
-                光锥
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={BaseballCap}
-              >
-                遺器
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={MedalMilitary}
-              >
-                混沌回忆
-              </MenuItem>
-              <MenuItemLarge
-                width={menuItemLargeSize.width}
-                height={menuItemLargeSize.height}
-                Icon={Moon}
-              >
-                开拓力
-              </MenuItemLarge>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={Calendar}
-              >
-                100/500
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={Planet}
-              >
-                270/350
-              </MenuItem>
-              <MenuItemLarge
-                width={menuItemLargeSize.width}
-                height={menuItemLargeSize.height}
-                Icon={Users}
-              >
-                派遣委托
-              </MenuItemLarge>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={MathOperations}
-              >
-                养成计算
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={Gauge}
-              >
-                伤害模拟
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={Books}
-              >
-                百科
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={MapTrifold}
-              >
-                地图
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={ShootingStar}
-              >
-                祈愿分析
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={StarOfDavid}
-              >
-                祈愿模拟
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={Ticket}
-              >
-                兑换码
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={ClockClockwise}
-              >
-                未来卡池
-              </MenuItem>
-              <MenuItem
-                onPress={() => {
-                  // @ts-ignore
-                  navigation.navigate(SCREENS.CharacterListPage.id);
-                }}
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={SCREENS.CharacterListPage.icon}
-              >
-                {SCREENS.CharacterListPage.shortName}
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={Sword}
-              >
-                光锥
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={BaseballCap}
-              >
-                遺器
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={MedalMilitary}
-              >
-                混沌回忆
-              </MenuItem>
-              <MenuItemLarge
-                width={menuItemLargeSize.width}
-                height={menuItemLargeSize.height}
-                Icon={Moon}
-              >
-                开拓力
-              </MenuItemLarge>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={Calendar}
-              >
-                100/500
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={Planet}
-              >
-                270/350
-              </MenuItem>
-              <MenuItemLarge
-                width={menuItemLargeSize.width}
-                height={menuItemLargeSize.height}
-                Icon={Users}
-              >
-                派遣委托
-              </MenuItemLarge>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={MathOperations}
-              >
-                养成计算
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={Gauge}
-              >
-                伤害模拟
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={Books}
-              >
-                百科
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={MapTrifold}
-              >
-                地图
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={ShootingStar}
-              >
-                祈愿分析
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={StarOfDavid}
-              >
-                祈愿模拟
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={Ticket}
-              >
-                兑换码
-              </MenuItem>
-              <MenuItem
-                width={menuItemSize.width}
-                height={menuItemSize.height}
-                Icon={ClockClockwise}
-              >
-                未来卡池
-              </MenuItem>
-            </>
-          )}
+          </MenuItem> */}
         </View>
       </ScrollView>
     </View>
