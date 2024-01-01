@@ -10,22 +10,13 @@ import LightconeNameMap from "../../../../../map/lightcone_name_map";
 import { LightconeName } from "../../../../types/lightcone";
 import useTextLanguage from "../../../../context/TextLanguage/useTextLanguage";
 import Lightcone from "../../../../../assets/images/images_map/lightcone";
-<<<<<<< HEAD
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
-import { LOCALES } from "../../../../../locales";
-=======
 import charAdviceMap from "../../../../../map/character_advice_map";
 import { LOCALES } from "../../../../../locales";
 import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
->>>>>>> 884dc9966fac382282b4c53713889206665746a6
 
 export default React.memo(function CharSuggestLightCone() {
   const { language: textLanguage } = useTextLanguage();
   const { language: appLanguage } = useAppLanguage();
-<<<<<<< HEAD
-=======
-
->>>>>>> 884dc9966fac382282b4c53713889206665746a6
   const charId = useCharId();
   // @ts-ignore
   const suggestConesData = charAdviceMap[charId]?.conesNew;
@@ -46,27 +37,7 @@ export default React.memo(function CharSuggestLightCone() {
 
   return (
     <View style={{ alignItems: "center" }}>
-<<<<<<< HEAD
       <CharPageHeading Icon={Sword}>{LOCALES[appLanguage].AdviceLightcones}</CharPageHeading>
-      <ScrollView horizontal>
-        <View
-          style={{
-            flexDirection: "row",
-            flexWrap: "wrap",
-            columnGap: 8,
-          }}
-        >
-          {suggestCones
-            ?.slice()
-            .sort((a: any, b: any) => b.rare - a.rare)
-            .map((l: any, i: any) => (
-              // @ts-ignore
-              <CharSuggestLightConeCard key={i} {...l} />
-            ))}
-        </View>
-      </ScrollView>
-=======
-      <CharPageHeading Icon={Sword}>推荐光锥</CharPageHeading>
       {suggestCones ? (
         <ScrollView horizontal>
           <View
@@ -90,7 +61,6 @@ export default React.memo(function CharSuggestLightCone() {
           {LOCALES[appLanguage].NoDataYet}
         </Text>
       )}
->>>>>>> 884dc9966fac382282b4c53713889206665746a6
     </View>
   );
 });

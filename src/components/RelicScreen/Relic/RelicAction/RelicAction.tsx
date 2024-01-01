@@ -7,6 +7,8 @@ import Animated, {
   useAnimatedStyle,
   withSpring,
 } from "react-native-reanimated";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 type Props = {
   scrollHandler: SharedValue<number>;
@@ -15,6 +17,7 @@ type Props = {
 };
 
 export default React.memo(function RelicAction(props: Props) {
+  const {language} = useAppLanguage();
   const bottomAnimatedStyles = useAnimatedStyle(() => {
     if (props.scrollHandler.value > 0) {
       return {
@@ -41,10 +44,10 @@ export default React.memo(function RelicAction(props: Props) {
       ]}
     >
       <Button onPress={props.onLeftClick} width={140} height={46}>
-        <Text className="font-[HY65] text-[16px]">推荐角色</Text>
+        <Text className="font-[HY65] text-[16px]">{LOCALES[language].AdviceCharacters}</Text>
       </Button>
       <Button onPress={props.onRightClick} width={140} height={46}>
-        <Text className="font-[HY65] text-[16px]">获取途径</Text>
+        <Text className="font-[HY65] text-[16px]">{LOCALES[language].AdviceGetPath}</Text>
       </Button>
     </Animated.View>
   );

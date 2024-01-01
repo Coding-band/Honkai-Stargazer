@@ -7,6 +7,8 @@ import { SCREENS } from "../../../../constant/screens";
 import officalCharId from "../../../../../map/character_offical_id_map";
 import { CombatType } from "../../../../types/combatType";
 import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 type Props = {
   title: string;
@@ -28,6 +30,7 @@ type Props = {
 
 export default function MOCFloor(props: Props) {
   const navigation = useNavigation();
+  const {language} = useAppLanguage();
 
   return (
     <View className="w-full  border border-[#DDDDDD20] rounded-[4px] p-2.5">
@@ -38,7 +41,7 @@ export default function MOCFloor(props: Props) {
             {props.title}
           </Text>
           <Text className="text-[#FFFFFF90] text-[12px] font-[HY65] leading-5">
-            剩餘{props.roundRemaining}輪
+            {LOCALES[language].PlayersRemainRounds.replace("${1}",props.roundRemaining.toString())}
           </Text>
         </View>
         <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
@@ -61,11 +64,11 @@ export default function MOCFloor(props: Props) {
                 {props.teams[0].date}
               </Text>
               <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-                {props.round}輪
+                {props.round}{LOCALES[language].PlayersRounds}
               </Text>
             </View>
             <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-              平均{props.roundAverage}輪
+            {LOCALES[language].PlayersAverageRounds.replace("${1}",props.roundAverage.toString())}
             </Text>
           </View>
         </View>
@@ -107,11 +110,11 @@ export default function MOCFloor(props: Props) {
                 2023.12.19 17:24
               </Text>
               <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-                {props.round}輪
+                {props.round}{LOCALES[language].PlayersRounds}
               </Text>
             </View>
             <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-              平均{props.roundAverage}輪
+            {LOCALES[language].PlayersAverageRounds.replace("${1}",props.roundAverage.toString())}
             </Text>
           </View>
         </View>

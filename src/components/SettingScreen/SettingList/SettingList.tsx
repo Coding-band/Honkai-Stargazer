@@ -7,8 +7,11 @@ import LanguageSetting from "./LanguageSetting/LanguageSetting";
 import PersonalSetting from "./PersonalSetting/PersonalSetting";
 import NotificationSetting from "./NotificationSetting/NotificationSetting";
 import SupportSetting from "./SupportSetting/SupportSetting";
+import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../locales";
 
 export default function SettingList() {
+  const {language} = useAppLanguage();
   return (
     <ScrollView
       style={{
@@ -24,12 +27,12 @@ export default function SettingList() {
         <PersonalSetting />
         <NotificationSetting />
         <SupportSetting />
-        <SettingGroup title="开发者选项">
-          <SettingItem type="navigation" title="使用Cookies登录" />
+        <SettingGroup title={LOCALES[language].DevOptions}>
+          <SettingItem type="navigation" title={LOCALES[language].DevUseCookieLogin} />
         </SettingGroup>
-        <SettingGroup title="特別感謝">
-          <SettingItem type="navigation" title="開發人員" />
-          <SettingItem type="navigation" title="開源感謝" />
+        <SettingGroup title={LOCALES[language].SpecialThanks}>
+          <SettingItem type="navigation" title={LOCALES[language].SpecialThanksDevs} />
+          <SettingItem type="navigation" title={LOCALES[language].SpecialThanksOpenSource} />
         </SettingGroup>
       </View>
     </ScrollView>

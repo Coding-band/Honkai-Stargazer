@@ -5,10 +5,13 @@ import MOCFloor from "./MOCFloor/MOCFloor";
 import useMemoryOfChaos from "../../../hooks/hoyolab/useMemoryOfChaos";
 import { capitalize } from "lodash";
 import useHsrPlayerData from "../../../hooks/hoyolab/useHsrPlayerData";
+import { LOCALES } from "../../../../locales";
+import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
 
 export default function MOCList() {
   const { data: moc } = useMemoryOfChaos();
   const playerData = useHsrPlayerData();
+  const {language} = useAppLanguage();
 
   const floors = moc?.all_floor_detail?.map((floor: any) => ({
     title: floor?.name,
@@ -57,7 +60,7 @@ export default function MOCList() {
         >
           <Text className="text-white font-[HY65]">排序方式：正序</Text>
           <Text className="text-white font-[HY65]">
-            {playerData?.nickname}的战绩
+            {LOCALES[language].PlayersBattleReport.replace("${1}",playerData?.nickname)}
           </Text>
         </View>
         {floors?.map((floor: any) => (

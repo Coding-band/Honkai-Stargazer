@@ -5,6 +5,8 @@ import { DiceFour, DiceTwo } from "phosphor-react-native";
 import formatDesc from "../../../../utils/format/formatDesc";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import useRelicData from "../../../../context/RelicData/hooks/useRelicData";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 export default function RelicDescription() {
   const { relicFullData } = useRelicData();
@@ -13,11 +15,13 @@ export default function RelicDescription() {
 
   const relic4Pc = relicFullData.skills.filter((r) => r.useNum === 4)[0];
 
+  const {language} = useAppLanguage();
+
   return (
     <View>
       {relic2Pc && (
         <>
-          <PageHeading Icon={DiceTwo}>两件套</PageHeading>
+          <PageHeading Icon={DiceTwo}>{LOCALES[language].RelicStatus2Pcs}</PageHeading>
           <HtmlText
             style={{ color: "#DDD", fontFamily: "HY65", fontSize: 14 }}
             // className="text-text2 font-[HY65] text-[14px]"
@@ -32,7 +36,7 @@ export default function RelicDescription() {
       )}
       {relic4Pc && (
         <>
-          <PageHeading Icon={DiceFour}>四件套</PageHeading>
+          <PageHeading Icon={DiceFour}>{LOCALES[language].RelicStatus4Pcs}</PageHeading>
           <HtmlText
             style={{ color: "#DDD", fontFamily: "HY65", fontSize: 14 }}
             // className="text-text2 font-[HY65] text-[14px]"

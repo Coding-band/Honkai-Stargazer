@@ -6,6 +6,8 @@ import characterListMap from "../../../../../map/character_data_map";
 import LcSuggestCharacterCard from "./RelicSuggestCharacterCard/RelicSuggestCharacterCard";
 import RelicSuggestCharacterCard from "./RelicSuggestCharacterCard/RelicSuggestCharacterCard";
 import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 const testData = [
   {
@@ -47,9 +49,10 @@ const testData = [
 ];
 
 export default function RelicSuggestCharacter() {
+  const {language} = useAppLanguage();
   return (
     <View style={{ alignItems: "center" }}>
-      <PageHeading Icon={Sword}>推荐角色</PageHeading>
+      <PageHeading Icon={Sword}>{LOCALES[language].AdviceCharacters}</PageHeading>
       <ScrollView horizontal>
         <View
           style={{

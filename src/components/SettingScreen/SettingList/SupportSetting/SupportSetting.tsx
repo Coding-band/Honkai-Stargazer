@@ -7,21 +7,23 @@ import ReactNativeModal from "react-native-modal";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import Button from "../../../global/Button/Button";
 import TextButton from "../../../global/TextButton/TextButton";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 export default function SupportSetting() {
   const [openDonate, setOpenDonate] = useState(false);
-
+  const {language} = useAppLanguage();
   return (
     <>
-      <SettingGroup title="支持我们">
+      <SettingGroup title={LOCALES[language].SupportUs}>
         <SettingItem
           type="navigation"
-          title="捐赠"
+          title={LOCALES[language].Donation}
           onNavigate={() => {
             setOpenDonate(true);
           }}
         />
-        <SettingItem type="navigation" title="邀请他人" />
+        <SettingItem type="navigation" title={LOCALES[language].InviteOthers} />
       </SettingGroup>
       <ReactNativeModal
         useNativeDriverForBackdrop

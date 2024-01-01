@@ -6,15 +6,10 @@ import { Image } from "expo-image";
 import CharSuggestRelicsLeft from "./CharSuggestRelicsLeft/CharSuggestRelicsLeft";
 import CharSuggestRelicsRight from "./CharSuggestRelicsRight/CharSuggestRelicsRight";
 import CharSuggestRelicsProps from "./CharSuggestRelicsProps/CharSuggestRelicsProps";
-<<<<<<< HEAD
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
-import { LOCALES } from "../../../../../locales";
-=======
 import useCharId from "../../../../context/CharacterData/hooks/useCharId";
 import charAdviceMap from "../../../../../map/character_advice_map";
 import { LOCALES } from "../../../../../locales";
 import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
->>>>>>> 884dc9966fac382282b4c53713889206665746a6
 
 // Relic 遺器套裝
 // Ornaments 位面飾品
@@ -23,17 +18,7 @@ import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
 const AddIcon = require("../../../../../assets/icons/Add.svg");
 
 export default React.memo(function CharSuggestRelics() {
-<<<<<<< HEAD
-  const { language } = useAppLanguage();
-  return (
-    <View style={{ alignItems: "center" }}>
-      <CharPageHeading Icon={BaseballCap}>{LOCALES[language].AdviceRelics}</CharPageHeading>
-      <View className="w-full" style={styles.lightconeImages}>
-        <CharSuggestRelicsLeft />
-        <View className="translate-y-[14px]">
-          <AddIconComponent />
-=======
-  const { language: appLanguage } = useAppLanguage();
+  const { language} = useAppLanguage();
 
   const charId = useCharId();
   const advices = charAdviceMap[charId];
@@ -41,7 +26,7 @@ export default React.memo(function CharSuggestRelics() {
 
   return (
     <View style={{ alignItems: "center" }}>
-      <CharPageHeading Icon={BaseballCap}>推荐遗器</CharPageHeading>
+      <CharPageHeading Icon={BaseballCap}>{LOCALES[language].AdviceRelics}</CharPageHeading>
       {suggestRelics ? (
         <View className="w-full" style={styles.lightconeImages}>
           <CharSuggestRelicsLeft />
@@ -49,11 +34,10 @@ export default React.memo(function CharSuggestRelics() {
             <AddIconComponent />
           </View>
           <CharSuggestRelicsRight />
->>>>>>> 884dc9966fac382282b4c53713889206665746a6
         </View>
       ) : (
         <Text className="text-text text-[HY65]">
-          {LOCALES[appLanguage].NoDataYet}
+          {LOCALES[language].NoDataYet}
         </Text>
       )}
       <CharSuggestRelicsProps />

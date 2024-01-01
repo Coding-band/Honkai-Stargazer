@@ -9,6 +9,7 @@ import {
   TextLanguage,
 } from "../../../../constant/language";
 import _ from "lodash";
+import { LOCALES } from "../../../../../locales";
 
 const textLanguages = TextLanguage.map((lan) => ({
   name: Language[lan],
@@ -28,17 +29,17 @@ export default function LanguageSetting() {
     useAppLanguage();
 
   return (
-    <SettingGroup title="語言設置">
+    <SettingGroup title={LOCALES[appLanguage].LanguageSetup}>
       <SettingItem
         type="list"
-        title="文本語言"
+        title={LOCALES[appLanguage].DocumentLanguage}
         list={textLanguages}
         value={textLanguage}
         onChange={setTextLanguage}
       />
       <SettingItem
         type="list"
-        title="App語言"
+        title={LOCALES[appLanguage].AppLanguage}
         list={appLanguages}
         value={appLanguage}
         onChange={setAppLanguage}

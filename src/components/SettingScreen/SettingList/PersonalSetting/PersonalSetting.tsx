@@ -6,30 +6,34 @@ import useLocalState from "../../../../hooks/useLocalState";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../constant/screens";
 import useWallPaper from "../../../../redux/wallPaper/useWallPaper";
+import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
-const fonts = [
-  { name: "開", value: true },
-  { name: "關", value: false },
-];
 
 export default function PersonalSetting() {
   const navigation = useNavigation();
+  const {language} = useAppLanguage();
+
+  const fonts = [
+    { name: LOCALES[language].SwitchOn, value: true },
+    { name: LOCALES[language].SwitchOff, value: false },
+  ];
 
   const [font, setFont] = useLocalState("use-custom-font", fonts[0].value);
   const { wallPaper } = useWallPaper();
 
   return (
-    <SettingGroup title="個性化">
+    <SettingGroup title={LOCALES[language].Customize}>
       <SettingItem
         type="list"
-        title="使用游戏字体"
+        title={LOCALES[language].UseHSRFont}
         list={fonts}
         value={font}
         onChange={setFont}
       />
       <SettingItem
         type="navigation"
-        title="更换壁纸"
+        title={LOCALES[language].ChangeWallPaper}
         content={wallPaper?.name}
         onNavigate={() => {
           // @ts-ignore
