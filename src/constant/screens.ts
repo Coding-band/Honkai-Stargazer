@@ -68,8 +68,8 @@ export const SCREENS = {
   },
   ExpeditionPage: {
     id: "Expedition",
-    getName: (lang: AppLanguage) => LOCALES[lang].ExpeditionFull,
-    getShortName: (lang: AppLanguage) => LOCALES[lang].ExpeditionFull,
+    getName: (lang: AppLanguage) => LOCALES[lang].NotiExpedition,
+    getShortName: (lang: AppLanguage) => LOCALES[lang].NotiExpedition,
     icon: Users,
   },
   SettingPage: {
