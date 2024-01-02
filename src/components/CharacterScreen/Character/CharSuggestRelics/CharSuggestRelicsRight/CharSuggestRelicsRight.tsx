@@ -55,7 +55,7 @@ export default function CharSuggestRelicsRight() {
                 name={getRelicFullData(relic, textLanguage)?.name}
                 // description={"voc"}
                 rare={5}
-                image={Relic[relic]?.icon1}
+                image={Relic[relic]?.pcIcon}
                 onPress={() => {
                   // @ts-ignore
                   navigation.push(SCREENS.RelicPage.id, {

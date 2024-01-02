@@ -3,6 +3,7 @@ import React from "react";
 import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
 import useAppLanguage from "../../../../../context/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../../locales";
+import { AppLanguage } from "../../../../../language/language";
 
 export default function CharSuggestRelicsProps() {
   const { language: appLanguage } = useAppLanguage();
@@ -18,7 +19,9 @@ export default function CharSuggestRelicsProps() {
   return (
     <View className="w-full mt-4">
       <View className="w-full">
-        <Text className="font-[HY75] text-white text-[16px]">{LOCALES[appLanguage].MainAffix}</Text>
+        <Text className="font-[HY75] text-white text-[16px]">
+          {LOCALES[appLanguage].MainAffix}
+        </Text>
         <View
           className="w-full pt-3 pb-4"
           style={{
@@ -56,9 +59,11 @@ export default function CharSuggestRelicsProps() {
           alignItems: "center",
         }}
       >
-        <Text className="font-[HY75] text-white text-[16px]">{LOCALES[appLanguage].SubAffix}</Text>
+        <Text className="font-[HY75] text-white text-[16px]">
+          {LOCALES[appLanguage].SubAffix}
+        </Text>
         <Text className="text-[13px] text-[#DDD] opacity-80 font-[HY65]">
-          {"暴击率，速度，暴击伤害，攻击力"} 
+          {LOCALES[appLanguage].NoDataYet}
         </Text>
       </View>
     </View>
