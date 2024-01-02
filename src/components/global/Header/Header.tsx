@@ -16,6 +16,7 @@ type Props = {
   leftBtn?: "close" | "back";
   onPress?: (e: GestureResponderEvent) => void;
   onBack?: () => void;
+  goBack?: boolean;
 };
 
 export default function Header(props: Props) {
@@ -26,7 +27,11 @@ export default function Header(props: Props) {
   const handleClose = () => {
     props.onBack && props.onBack();
     // @ts-ignore
-    navigation.goBack();
+    if (props.goBack !== undefined && !props.goBack) {
+      //
+    } else {
+      navigation.goBack();
+    }
   };
 
   return (
