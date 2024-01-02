@@ -25,7 +25,7 @@ const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 
 export default function LcAttribute() {
   const loaded = useDelayLoad(100);
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
 
   const { lcId, lcFullData } = useLcData();
 

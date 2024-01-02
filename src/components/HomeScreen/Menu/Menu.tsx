@@ -108,7 +108,7 @@ export default function Menu() {
     {
       type: "large",
       name: LOCALES[language].Stamina,
-      icon: Calendar,
+      icon: Moon,
       title: playerNote.data ? (
         <>
           <Text className="text-[24px] leading-[26px]">

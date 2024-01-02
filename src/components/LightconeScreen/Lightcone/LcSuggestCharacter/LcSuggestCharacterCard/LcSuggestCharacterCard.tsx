@@ -14,6 +14,7 @@ type Props = {
   image?: ExpoImage;
   rare: number;
   name: string;
+  description: string;
   path: Path;
   combatType: CombatType;
 };
@@ -63,8 +64,11 @@ export default function LcSuggestCharacterCard(props: Props) {
             <CharCard onPress={handlePopupPress} {...props} />
           </View>
           <PopUpCard
-            title="于夜色中"
-            content="希儿的限定毕业光锥，提供了非常暴力的输出数值，同时对她的速度有一定要求，推荐副词条中尽量选择带有速度的遗器。"
+            onClose={() => {
+              setIsSelected(false);
+            }}
+            title={props.name}
+            content={props.description}
           />
         </Pressable>
       </Modal>

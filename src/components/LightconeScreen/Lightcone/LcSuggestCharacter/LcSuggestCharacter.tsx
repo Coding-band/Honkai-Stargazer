@@ -7,51 +7,75 @@ import LcSuggestCharacterCard from "./LcSuggestCharacterCard/LcSuggestCharacterC
 import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
 import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
-
-const testData = [
-  {
-    id: "March 7th",
-    rare: characterList.filter((char) => char.name === "March 7th")[0].rare,
-    name: characterListMap.zh_cn["March 7th"].name,
-    image: CharacterImage["March 7th"].icon,
-    combatType: characterList.filter((char) => char.name === "March 7th")[0]
-      .element,
-    path: characterList.filter((char) => char.name === "March 7th")[0].path,
-  },
-  {
-    id: "Serval",
-    rare: characterList.filter((char) => char.name === "Serval")[0].rare,
-    name: characterListMap.zh_cn["Serval"].name,
-    image: CharacterImage["Serval"].icon,
-    combatType: characterList.filter((char) => char.name === "Serval")[0]
-      .element,
-    path: characterList.filter((char) => char.name === "Serval")[0].path,
-  },
-  {
-    id: "Clara",
-    rare: characterList.filter((char) => char.name === "Clara")[0].rare,
-    name: characterListMap.zh_cn["Clara"].name,
-    image: CharacterImage["Clara"].icon,
-    combatType: characterList.filter((char) => char.name === "Clara")[0]
-      .element,
-    path: characterList.filter((char) => char.name === "Clara")[0].path,
-  },
-  {
-    id: "Bailu",
-    rare: characterList.filter((char) => char.name === "Bailu")[0].rare,
-    name: characterListMap.zh_cn["Bailu"].name,
-    image: CharacterImage["Bailu"].icon,
-    combatType: characterList.filter((char) => char.name === "Bailu")[0]
-      .element,
-    path: characterList.filter((char) => char.name === "Bailu")[0].path,
-  },
-];
+import useLcId from "../../../../context/LightconeData/hooks/useLcId";
+import { CHARACTERS } from "../../../../constant/character";
+import charAdviceMap from "../../../../../map/character_advice_map";
+import { forEach } from "lodash";
+import { useEffect, useMemo, useState } from "react";
+import LightconeName from "../../../../../map/lightcone_name_map";
+import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
+import useTextLanguage from "../../../../context/TextLanguage/useTextLanguage";
+import { CharacterName } from "../../../../types/character";
 
 export default function LcSuggestCharacter() {
-  const {language} = useAppLanguage();
+  const { language: textLanguage } = useTextLanguage();
+  const { language: appLanguage } = useAppLanguage();
+
+  const lcId = useLcId();
+
+  const [suggestChars, setSuggestChars] = useState([]);
+  useEffect(() => {
+    const suggestCharacters: any = [];
+    const charIdToCones = CHARACTERS.map((charId) => ({
+      [charId]: charAdviceMap[charId]?.conesNew.map((c) => c.cone),
+    }));
+    charIdToCones.forEach((charIdToCone) => {
+      for (const [charId, cones] of Object.entries(charIdToCone)) {
+        if (cones) {
+          cones.forEach((cone) => {
+            // @ts-ignore
+            if (LightconeName[cone] === lcId) {
+              suggestCharacters.push(charId);
+            }
+          });
+        }
+      }
+    });
+    setSuggestChars(suggestCharacters);
+  }, [lcId]);
+
+  const suggestCharsJsx = useMemo(
+    () =>
+      suggestChars
+        .map((charId: CharacterName) => {
+          const charJsonData = characterList.filter(
+            (char) => char.name === charId
+          )[0];
+          const charFullData = getCharFullData(charId, textLanguage);
+          return {
+            id: charId,
+            rare: charJsonData.rare,
+            name: charFullData.name,
+            description: charFullData.descHash,
+            image: CharacterImage[charId].icon,
+            combatType: charJsonData.element,
+            path: charJsonData.path,
+          };
+        })
+        ?.slice()
+        .sort((a: any, b: any) => b.rare - a.rare)
+        .map((l, i) => (
+          // @ts-ignore
+          <LcSuggestCharacterCard key={i} {...l} />
+        )),
+    [suggestChars]
+  );
+
   return (
     <View style={{ alignItems: "center" }}>
-      <PageHeading Icon={Sword}>{LOCALES[language].AdviceCharacters}</PageHeading>
+      <PageHeading Icon={Sword}>
+        {LOCALES[appLanguage].AdviceCharacters}
+      </PageHeading>
       <ScrollView horizontal>
         <View
           style={{
@@ -60,10 +84,7 @@ export default function LcSuggestCharacter() {
             columnGap: 8,
           }}
         >
-          {testData.map((l, i) => (
-            // @ts-ignore
-            <LcSuggestCharacterCard key={i} {...l} />
-          ))}
+          {suggestCharsJsx}
         </View>
       </ScrollView>
     </View>

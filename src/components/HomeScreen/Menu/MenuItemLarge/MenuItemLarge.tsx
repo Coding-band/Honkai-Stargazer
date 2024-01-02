@@ -46,8 +46,8 @@ export default function MenuItemLarge({
                 className="absolute"
                 style={{
                   alignItems: "center",
+                  justifyContent: title ? "flex-start" : "center",
                   flexDirection: "row",
-
                   width,
                   height,
                 }}
@@ -70,22 +70,24 @@ export default function MenuItemLarge({
                   </Text>
                 </View>
                 {/* right */}
-                <View
-                  className="translate-x-[-8px]"
-                  style={{
-                    width: width - (width - 13) / 2,
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    gap: 6,
-                  }}
-                >
-                  <Text className=" text-text text-[16px] font-medium font-[HY65]">
-                    {title}
-                  </Text>
-                  <Text className="text-text2 text-[14px] font-[HY65]">
-                    {subtitle}
-                  </Text>
-                </View>
+                {title && (
+                  <View
+                    className="translate-x-[-8px]"
+                    style={{
+                      width: width - (width - 13) / 2,
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      gap: 6,
+                    }}
+                  >
+                    <Text className=" text-text text-[16px] font-medium font-[HY65]">
+                      {title}
+                    </Text>
+                    <Text className="text-text2 text-[14px] font-[HY65]">
+                      {subtitle}
+                    </Text>
+                  </View>
+                )}
               </View>
             </View>,
             Platform.OS !== "android"

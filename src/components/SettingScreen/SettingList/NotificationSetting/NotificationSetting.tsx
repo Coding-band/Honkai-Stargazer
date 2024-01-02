@@ -6,7 +6,7 @@ import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
 export default function NotificationSetting() {
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
   return (
     <SettingGroup title="通知">
       <SettingItem

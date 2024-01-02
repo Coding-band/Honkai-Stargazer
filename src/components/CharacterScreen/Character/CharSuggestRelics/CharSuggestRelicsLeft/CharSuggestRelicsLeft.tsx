@@ -55,6 +55,7 @@ export default function CharSuggestRelicsLeft() {
             }
             return (
               <RelicsCard
+                key={k}
                 // id={relic}
                 name={getRelicFullData(relic, textLanguage)?.name}
                 // description=""

@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PlayerAction from "./PlayerAction/PlayerAction";
 import PlayerLevelBar from "./PlayerLevelBar/PlayerLevelBar";
 import UUID from "./UUID/UUID";
@@ -9,12 +9,18 @@ import PlayerCharacter from "./PlayerCharacter/PlayerCharacter";
 import useHsrPlayerData from "../../../hooks/hoyolab/useHsrPlayerData";
 import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
+import db from "../../../firebase/db";
+import useHsrUUID from "../../../hooks/hoyolab/useHsrUUID";
+import useIsAdmin from "../../../firebase/hooks/useIsAdmin";
 
 export default function Player() {
+  const { language } = useAppLanguage();
+
   const playerData = useHsrPlayerData();
   const playerNickName = playerData?.nickname;
   const playerLevel = playerData?.level;
-  const { language } = useAppLanguage();
+
+  const isAdmin = useIsAdmin();
 
   return (
     <View
@@ -29,7 +35,12 @@ export default function Player() {
           <View style={styles.playerAvatarRow}>
             <PlayerAvator />
             <View>
-              <Text className="text-white text-xl font-medium font-[HY65] mb-1.5">
+              <Text
+                className={cn(
+                  isAdmin ? "text-[#FF5555]" : "text-white",
+                  "text-xl font-medium font-[HY65] mb-1.5"
+                )}
+              >
                 {playerNickName || "開拓者"}
               </Text>
               <PlayerCharacter />

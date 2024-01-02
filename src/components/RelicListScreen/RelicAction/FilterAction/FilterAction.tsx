@@ -3,7 +3,7 @@ import FilterBtn from "./FilterBtn/FilterBtn";
 import { View } from "react-native";
 import FilterPopUp from "../../../global/FilterPopUp/FilterPopUp";
 import useCharFilter from "../../../../redux/characterFilter/useCharFilter";
-import Path from "../../../../constant/path";
+import { PATHS } from "../../../../constant/path";
 import PathMap from "../../../../../assets/images/images_map/path";
 import CombatTypeMap from "../../../../../assets/images/images_map/combatType";
 import { Path as PathType } from "../../../../types/path";
@@ -23,7 +23,7 @@ export default function FilterAction() {
       charFilter?.map((item) => ({
         value: item.id,
         name: LOCALES[language][item.id],
-        icon: Path.includes(item.id)
+        icon: PATHS.includes(item.id)
           ? PathMap[item.id as PathType].icon
           : CombatTypeMap[item.id as CombatTypeType].icon,
       })),

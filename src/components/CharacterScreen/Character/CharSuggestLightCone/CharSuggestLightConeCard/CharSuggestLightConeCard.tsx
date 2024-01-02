@@ -7,7 +7,6 @@ import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../../constant/screens";
 import { Path } from "../../../../../types/path";
-import { HtmlText } from "@e-mine/react-native-html-text";
 
 type Props = {
   id: string;

@@ -17,6 +17,7 @@ type Props = {
   round: number;
   roundAverage: number;
   roundRemaining: number;
+  isFast: boolean;
   teams: {
     date: string;
     characters: {
@@ -32,127 +33,107 @@ type Props = {
 export default function MOCFloor(props: Props) {
   const navigation = useNavigation();
   const { language } = useAppLanguage();
-  
+
   return (
-    <View className="w-full  border border-[#DDDDDD20] rounded-[4px] p-2.5">
-      {/* Layer 1 */}
-      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+    props.isFast || (
+      <View className="w-full  border border-[#DDDDDD20] rounded-[4px] p-2.5">
+        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+          <View>
+            {/* 標題 */}
+            <Text className="text-[#FFF] text-[16px] font-[HY65]">
+              {props.title}
+            </Text>
+            {/* 剩餘 ... 輪 */}
+            <Text className="text-[#FFFFFF90] text-[12px] font-[HY65] leading-5">
+              {formatLocale(LOCALES[language].PlayersRemainRounds, [
+                props.roundRemaining,
+              ])}
+            </Text>
+          </View>
+          {/* 星星數 */}
+          <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+            {Array.from({ length: props.stars }, (_, i) => (
+              <Star key={i} />
+            ))}
+          </View>
+        </View>
+        {/* Layer 1 */}
         <View>
-          <Text className="text-[#FFF] text-[16px] font-[HY65]">
-            {props.title}
-          </Text>
-          <Text className="text-[#FFFFFF90] text-[12px] font-[HY65] leading-5">
-            {LOCALES[language].PlayersRemainRounds.replace(
-              "${1}",
-              props.roundRemaining.toString()
-            )}
-          </Text>
-        </View>
-        <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-          {Array.from({ length: props.stars }, (_, i) => (
-            <Star key={i} />
-          ))}
-        </View>
-      </View>
-      {/* Com */}
-      <View>
-        <View className="mt-2">
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-            }}
-          >
-            <View style={{ flexDirection: "row", gap: 4 }}>
+          <View className="mt-2">
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <View style={{ flexDirection: "row", gap: 4 }}>
+                <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
+                  {props.teams[0].date}
+                </Text>
+                <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
+                  {formatLocale(LOCALES[language].PlayersRounds, [props.round])}
+                </Text>
+              </View>
               <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-                {props.teams[0].date}
-              </Text>
-              <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-                {formatLocale(LOCALES[language].PlayersRounds, [props.round])}
+                {LOCALES[language].PlayersAverageRounds.replace(
+                  "${1}",
+                  props.roundAverage.toString()
+                )}
               </Text>
             </View>
-            <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-              {LOCALES[language].PlayersAverageRounds.replace(
-                "${1}",
-                props.roundAverage.toString()
-              )}
-            </Text>
+          </View>
+          <View className="mt-2" style={{ flexDirection: "row", gap: 6 }}>
+            {props.teams[0].characters?.map((char, i) => (
+              <CharCard
+                key={i}
+                // @ts-ignore
+                id={officalCharId[char.officalId]}
+                name={`Lv ${char.level}`}
+                image={char.image}
+                rare={char.rare}
+                combatType={char.combatType}
+                onPress={() => {
+                  // @ts-ignore
+                  navigation.navigate(SCREENS.CharacterPage.id, {
+                    // @ts-ignore
+                    id: officalCharId[char.officalId],
+                    // @ts-ignore
+                    name: getCharFullData(officalCharId[char.officalId]).name,
+                  });
+                }}
+              />
+            ))}
+          </View>
+          <View className="w-full h-[1px] bg-[#FFFFFF20] mt-3"></View>
+        </View>
+        {/* Layer 2 */}
+        <View>
+          <View className="mt-2" style={{ flexDirection: "row", gap: 6 }}>
+            {props.teams[1].characters?.map((char, i) => (
+              <CharCard
+                key={i}
+                // @ts-ignore
+                id={officalCharId[char.officalId]}
+                name={`Lv ${char.level}`}
+                image={char.image}
+                rare={char.rare}
+                // @ts-ignore
+                combatType={char.combatType}
+                onPress={() => {
+                  // @ts-ignore
+                  navigation.navigate(SCREENS.CharacterPage.id, {
+                    // @ts-ignore
+                    id: officalCharId[char.officalId],
+                    // @ts-ignore
+                    name: getCharFullData(officalCharId[char.officalId]).name,
+                  });
+                }}
+              />
+            ))}
           </View>
         </View>
-        <View className="mt-2" style={{ flexDirection: "row", gap: 6 }}>
-          {props.teams[0].characters?.map((char, i) => (
-            <CharCard
-              key={i}
-              // @ts-ignore
-              id={officalCharId[char.officalId]}
-              name={`Lv ${char.level}`}
-              image={char.image}
-              rare={char.rare}
-              combatType={char.combatType}
-              onPress={() => {
-                // @ts-ignore
-                navigation.navigate(SCREENS.CharacterPage.id, {
-                  // @ts-ignore
-                  id: officalCharId[char.officalId],
-                  // @ts-ignore
-                  name: getCharFullData(officalCharId[char.officalId]).name,
-                });
-              }}
-            />
-          ))}
-        </View>
-        <View className="w-full h-[1px] bg-[#FFFFFF20] mt-3"></View>
       </View>
-      {/* Com */}
-      <View>
-        <View className="mt-2">
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-            }}
-          >
-            <View style={{ flexDirection: "row", gap: 4 }}>
-              <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-                {props.teams[0].date}
-              </Text>
-              <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-                {formatLocale(LOCALES[language].PlayersRounds, [props.round])}
-              </Text>
-            </View>
-            <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-              {LOCALES[language].PlayersAverageRounds.replace(
-                "${1}",
-                props.roundAverage.toString()
-              )}
-            </Text>
-          </View>
-        </View>
-        <View className="mt-2" style={{ flexDirection: "row", gap: 6 }}>
-          {props.teams[1].characters?.map((char, i) => (
-            <CharCard
-              key={i}
-              // @ts-ignore
-              id={officalCharId[char.officalId]}
-              name={`Lv ${char.level}`}
-              image={char.image}
-              rare={char.rare}
-              // @ts-ignore
-              combatType={char.combatType}
-              onPress={() => {
-                // @ts-ignore
-                navigation.navigate(SCREENS.CharacterPage.id, {
-                  // @ts-ignore
-                  id: officalCharId[char.officalId],
-                  // @ts-ignore
-                  name: getCharFullData(officalCharId[char.officalId]).name,
-                });
-              }}
-            />
-          ))}
-        </View>
-      </View>
-    </View>
+    )
   );
 }
 

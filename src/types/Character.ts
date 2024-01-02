@@ -3,6 +3,9 @@
  * * 作為 Stargazer 的角色 ID
  */
 export type CharacterName =
+  | "Dr. Ratio"
+  | "Ruan Mei"
+  | "Xueyi"
   | "Argenti"
   | "Huohuo"
   | "Hanya"

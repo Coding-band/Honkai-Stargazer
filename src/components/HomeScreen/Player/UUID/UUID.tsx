@@ -8,7 +8,7 @@ import { LOCALES } from "../../../../../locales";
 
 export default function UUID() {
   const uuid = useHsrUUID();
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
 
   const handleCopyUUID = useCallback(async () => {
     try {
@@ -17,7 +17,7 @@ export default function UUID() {
     } catch (e) {
       Toast(LOCALES[language].FailToCopy + e);
     }
-  }, [uuid]);
+  }, [uuid, language]);
 
   return (
     <TouchableOpacity activeOpacity={0.35} onPress={handleCopyUUID}>

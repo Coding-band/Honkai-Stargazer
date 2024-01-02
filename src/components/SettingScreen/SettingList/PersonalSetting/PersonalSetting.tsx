@@ -24,13 +24,13 @@ export default function PersonalSetting() {
 
   return (
     <SettingGroup title={LOCALES[language].Customize}>
-      <SettingItem
+      {/* <SettingItem
         type="list"
         title={LOCALES[language].UseHSRFont}
         list={fonts}
         value={font}
         onChange={setFont}
-      />
+      /> */}
       <SettingItem
         type="navigation"
         title={LOCALES[language].ChangeWallPaper}

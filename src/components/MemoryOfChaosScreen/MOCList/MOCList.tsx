@@ -21,6 +21,7 @@ export default function MOCList() {
     round: floor?.round_num,
     roundAverage: floor?.round_num,
     roundRemaining: 30 - floor?.round_num,
+    isFast: floor?.is_fast,
     teams: [
       {
         date: `${floor?.node_1?.challenge_time.year}.${floor?.node_1?.challenge_time.month}.${floor?.node_1?.challenge_time.day} ${floor?.node_1?.challenge_time.hour}:${floor?.node_1?.challenge_time.minute}`,
@@ -56,15 +57,16 @@ export default function MOCList() {
   );
 
   return (
-    <ScrollView className="z-30 py-[127px] px-[17px] pb-0">
+    <ScrollView className="z-30 pt-[127px] px-[17px] pb-0">
       {moc && (
         <View
           style={{
             flexDirection: "row",
+            justifyContent: "center",
             flexWrap: "wrap",
             gap: 12,
           }}
-          className="pb-60"
+          className="pb-36"
         >
           {/* Top */}
           <View
@@ -101,11 +103,15 @@ export default function MOCList() {
               )}
             </Text>
           </View>
-          {floors?.map((floor: any, index: number) => (
-            <AnimatedView key={floor?.title} style={trails[index]}>
-              <MOCFloor {...floor} />
-            </AnimatedView>
-          ))}
+          {floors.length ? (
+            floors?.map((floor: any, index: number) => (
+              <AnimatedView key={floor?.title} style={trails[index]}>
+                <MOCFloor {...floor} />
+              </AnimatedView>
+            ))
+          ) : (
+            <Text className="text-text">{LOCALES[language].NoDataYet}</Text>
+          )}
         </View>
       )}
     </ScrollView>

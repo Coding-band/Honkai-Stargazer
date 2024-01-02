@@ -57,11 +57,7 @@ export default function Relic() {
             <Animated.View style={contentAnimatedStyles}>
               <RelicDescription />
               <RelicDetails />
-              <RelicSuggestCharacter />
-              {/* <LcAttribute />
-             
-              <LcSuggestCharacter />
-              <LcStory /> */}
+              {/* <RelicSuggestCharacter /> */}
               <View className="pb-[60px]" />
             </Animated.View>
           </View>

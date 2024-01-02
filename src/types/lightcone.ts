@@ -1,4 +1,6 @@
 export type LightconeName =
+  | "Baptism of Pure Thought"
+  | "Past Self in Mirror"
   | "An Instant Before A Gaze"
   | "Night of Fright"
   | "Worrisome, Blissful"

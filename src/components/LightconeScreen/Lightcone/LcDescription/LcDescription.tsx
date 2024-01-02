@@ -14,7 +14,7 @@ import { LOCALES } from "../../../../../locales";
 export default function LcDescription() {
   const { lcFullData } = useLcData();
   const [skillLevel, setSkillLevel] = useState(0);
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
 
   return (
     <View style={{ alignItems: "center" }}>
@@ -23,15 +23,6 @@ export default function LcDescription() {
         <Text className="text-text font-[HY65] text-[20px] leading-[40px]">
           {lcFullData.skill.name}
         </Text>
-        <View
-          className="pb-[5px]"
-          style={{ flexDirection: "row", justifyContent: "space-between" }}
-        >
-          <Text className="text-[#DD8200] font-[HY65] text-[14px]">单攻</Text>
-          <Text className="text-text font-[HY65] text-[14px]">
-            能量回复：20
-          </Text>
-        </View>
         <View
           className="pb-3"
           style={{ flexDirection: "row", justifyContent: "space-between" }}

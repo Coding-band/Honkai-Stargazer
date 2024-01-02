@@ -9,10 +9,11 @@ import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../constant/screens";
 import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
+import Toast from "../../../../utils/toast/Toast";
 
 export default function PlayerAction() {
   const navigation = useNavigation();
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
 
   const [isPress, setIsPress] = useState(false);
   const containerRef = useClickOutside<View>(() => {
@@ -41,17 +42,21 @@ export default function PlayerAction() {
               setIsBindingAccount(true);
             }}
           >
-          {LOCALES[language].AccountLogin}
+            {LOCALES[language].AccountLogin}
           </ListItem>
-          <ListItem>
-            {LOCALES[language].ModifyHomePage}</ListItem>
+          <ListItem
+            onPress={() => {
+              Toast.StillDevelopingToast();
+            }}
+          >
+            {LOCALES[language].ModifyHomePage}
+          </ListItem>
           <ListItem
             onPress={() => {
               // @ts-ignore
               navigation.navigate(SCREENS.SettingPage.id);
             }}
           >
-            
             {LOCALES[language].Setting}
           </ListItem>
         </List>

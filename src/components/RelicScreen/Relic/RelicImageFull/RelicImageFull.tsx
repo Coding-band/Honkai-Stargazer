@@ -49,34 +49,35 @@ export default function RelicImageFull(props: Props) {
         style={{
           width: Dimensions.get("window").width,
           height: (Dimensions.get("window").height * 3) / 4,
-          marginTop: (Dimensions.get("window").height * 1) / 4 - 160,
+          marginTop: (Dimensions.get("window").height * 1) / 4 - 120,
           flexDirection: "row",
           flexWrap: "wrap",
           justifyContent: "center",
           alignItems: "center",
+          gap: 20,
         }}
       >
         <Image
           transition={200}
-          className="z-40 w-48 h-48"
+          className="z-40 w-36 h-36"
           source={relicData?.imageFull?.[0]}
           contentFit={"contain"}
         />
         <Image
           transition={200}
-          className="z-40 w-48 h-48"
+          className="z-40 w-36 h-36"
           source={relicData?.imageFull?.[1]}
           contentFit={"contain"}
         />
         <Image
           transition={200}
-          className="z-40 w-48 h-48"
+          className="z-40 w-36 h-36"
           source={relicData?.imageFull?.[2]}
           contentFit={"contain"}
         />
         <Image
           transition={200}
-          className="z-40 w-48 h-48"
+          className="z-40 w-36 h-36"
           source={relicData?.imageFull?.[3]}
           contentFit={"contain"}
         />

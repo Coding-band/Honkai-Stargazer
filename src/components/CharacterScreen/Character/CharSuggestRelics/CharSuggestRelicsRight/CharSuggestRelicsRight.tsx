@@ -51,6 +51,7 @@ export default function CharSuggestRelicsRight() {
             let relic = v;
             return (
               <RelicsCard
+                key={k}
                 // id={relic}
                 name={getRelicFullData(relic, textLanguage)?.name}
                 // description={"voc"}

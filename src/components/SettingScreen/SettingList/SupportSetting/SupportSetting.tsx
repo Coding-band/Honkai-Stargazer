@@ -9,10 +9,11 @@ import Button from "../../../global/Button/Button";
 import TextButton from "../../../global/TextButton/TextButton";
 import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
+import Toast from "../../../../utils/toast/Toast";
 
 export default function SupportSetting() {
   const [openDonate, setOpenDonate] = useState(false);
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
   return (
     <>
       <SettingGroup title={LOCALES[language].SupportUs}>
@@ -23,7 +24,13 @@ export default function SupportSetting() {
             setOpenDonate(true);
           }}
         />
-        <SettingItem type="navigation" title={LOCALES[language].InviteOthers} />
+        <SettingItem
+          type="navigation"
+          title={LOCALES[language].InviteOthers}
+          onNavigate={() => {
+            Toast.StillDevelopingToast();
+          }}
+        />
       </SettingGroup>
       <ReactNativeModal
         useNativeDriverForBackdrop

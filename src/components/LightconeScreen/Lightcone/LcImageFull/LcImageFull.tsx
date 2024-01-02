@@ -31,6 +31,7 @@ export default function LcImageFull(props: Props) {
       };
     }
   });
+  
 
   return (
     <Animated.View style={imageAnimatedStyles}>
@@ -48,7 +49,7 @@ export default function LcImageFull(props: Props) {
         style={{
           width: Dimensions.get("window").width,
           height: (Dimensions.get("window").height * 3) / 5,
-          transform: [{ scale: 0.9 }, { rotate: "5deg" }],
+          transform: [{ scale: 0.9 }, { rotate: "0deg" }],
         }}
       >
         <Image

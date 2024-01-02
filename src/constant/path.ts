@@ -8,7 +8,7 @@
     <string name="path_the_preservation">存護</string>
 */
 
-export default [
+export const PATHS = [
   "Erudition",
   "Abundance",
   "Harmony",

@@ -5,11 +5,20 @@ import SettingItem from "../../SettingGroup/SettingItem/SettingItem";
 import Toast from "../../../../utils/toast/Toast";
 import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
+import formatLocale from "../../../../utils/format/formatLocale";
+import useHsrUUID from "../../../../hooks/hoyolab/useHsrUUID";
 
 export default function AccountSetting() {
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
+
+  const hsrUUID = useHsrUUID();
+
   return (
-    <SettingGroup title="账号设置(108289390)">
+    <SettingGroup
+      title={formatLocale(LOCALES[language].AccountSetup, [
+        hsrUUID || "00000000",
+      ])}
+    >
       <SettingItem
         type="navigation"
         title={LOCALES[language].UseInviteCode}

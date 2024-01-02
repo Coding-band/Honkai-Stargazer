@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import FilterBtn from "./FilterBtn/FilterBtn";
 import { View } from "react-native";
 import FilterPopUp from "../../../global/FilterPopUp/FilterPopUp";
-import Path from "../../../../constant/path";
+import { PATHS } from "../../../../constant/path";
 import PathMap from "../../../../../assets/images/images_map/path";
 import useLcFilter from "../../../../redux/lightconeFilter/useLcFilter";
 import CombatTypeMap from "../../../../../assets/images/images_map/combatType";
@@ -20,7 +20,7 @@ export default function FilterAction() {
       lcFilter?.map((item) => ({
         value: item.id,
         name: ZH_CN[item.id],
-        icon: Path.includes(item.id)
+        icon: PATHS.includes(item.id)
           ? PathMap[item.id as PathType].icon
           : CombatTypeMap[item.id as CombatTypeType].icon,
       })),

@@ -9,9 +9,11 @@ import NotificationSetting from "./NotificationSetting/NotificationSetting";
 import SupportSetting from "./SupportSetting/SupportSetting";
 import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
+import SpecialThanksSetting from "./SpecialThanksSetting/SpecialThanksSetting";
+import DevelopmentSetting from "./DevelopmentSetting/DevelopmentSetting";
 
 export default function SettingList() {
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
   return (
     <ScrollView
       style={{
@@ -27,13 +29,8 @@ export default function SettingList() {
         <PersonalSetting />
         <NotificationSetting />
         <SupportSetting />
-        <SettingGroup title={LOCALES[language].DevOptions}>
-          <SettingItem type="navigation" title={LOCALES[language].DevUseCookieLogin} />
-        </SettingGroup>
-        <SettingGroup title={LOCALES[language].SpecialThanks}>
-          <SettingItem type="navigation" title={LOCALES[language].SpecialThanksDevs} />
-          <SettingItem type="navigation" title={LOCALES[language].SpecialThanksOpenSource} />
-        </SettingGroup>
+        <SpecialThanksSetting />
+        <DevelopmentSetting />
       </View>
     </ScrollView>
   );

@@ -7,7 +7,8 @@ const useHsrPlayerData = () => {
 
   const gameRecord = useHoyolabGameRecord()?.data;
   const playerData = gameRecord?.list?.filter(
-    (game: any) => game.game_id === 6
+    (game: any) =>
+      game.game_id === 6 && game.region === hsrServer[hsrServerChosen]
   )[0];
   return playerData;
 };

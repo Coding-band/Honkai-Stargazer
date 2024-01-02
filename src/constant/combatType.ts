@@ -8,7 +8,7 @@
     <string name="element_quantum">量子</string>
 */
 
-export default [
+export const COMBATTYPES = [
   "Physical",
   "Wind",
   "Ice",

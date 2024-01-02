@@ -12,9 +12,9 @@ import { getCharFullData } from "../../../utils/dataMap/getDataFromMap";
 import { getCharAttrData } from "../../../utils/calculator/getAttrData";
 import useCharSortingReverse from "../../../redux/characterSortingReverse/useCharSortingReverse";
 import useCharFilter from "../../../redux/characterFilter/useCharFilter";
-import combatType from "../../../constant/combatType";
+import { COMBATTYPES } from "../../../constant/combatType";
 import _ from "lodash";
-import path from "../../../constant/path";
+import { PATHS } from "../../../constant/path";
 import useTextLanguage from "../../../context/TextLanguage/useTextLanguage";
 import useCharacterSearch from "../../../redux/characterSearch/useCharacterSearch";
 import CharacterImage from "../../../../assets/images/images_map/chacracterImage";
@@ -108,10 +108,10 @@ export default function CharList() {
       }
       // 只選單邊
       else if (
-        (!!_.intersection(combatType, charFilterSelected).length &&
-          !_.intersection(path, charFilterSelected).length) ||
-        (!_.intersection(combatType, charFilterSelected).length &&
-          !!_.intersection(path, charFilterSelected).length)
+        (!!_.intersection(COMBATTYPES, charFilterSelected).length &&
+          !_.intersection(PATHS, charFilterSelected).length) ||
+        (!_.intersection(COMBATTYPES, charFilterSelected).length &&
+          !!_.intersection(PATHS, charFilterSelected).length)
       ) {
         sortedData = sortedData?.filter(
           (data) =>

@@ -6,7 +6,6 @@ import Tabbar from "../components/HomeScreen/Tabbar/Tabbar";
 import Player from "../components/HomeScreen/Player/Player";
 import { StatusBar } from "expo-status-bar";
 import WallPaper from "../components/global/WallPaper/WallPaper";
-import useWallPaper from "../redux/wallPaper/useWallPaper";
 import useHsrPlayerData from "../hooks/hoyolab/useHsrPlayerData";
 import auth from "@react-native-firebase/auth";
 import useHoyolabCookie from "../redux/hoyolabCookie/useHoyolabCookie";
@@ -15,6 +14,9 @@ import Users from "../firebase/models/Users";
 import useHsrFullData from "../hooks/hoyolab/useHsrFullData";
 import UserCharacters from "../firebase/models/UserCharacters";
 import useHsrCharList from "../hooks/hoyolab/useHsrCharList";
+import useMemoryOfChaos from "../hooks/hoyolab/useMemoryOfChaos";
+import UserMemoryOfChaos from "../firebase/models/UserMemoryOfChaos";
+import { ADMIN_LIST } from "../firebase/constant/adminList";
 
 export default function HomeScreen() {
   const { hoyolabCookieParse } = useHoyolabCookie();
@@ -22,6 +24,7 @@ export default function HomeScreen() {
   const hsrFullData = useHsrFullData().data;
   const hsrPlayerData = useHsrPlayerData();
   const hsrCharList = useHsrCharList();
+  const moc = useMemoryOfChaos().data;
 
   const handleFirebaseSignUp = async (email: string, password: string) => {
     try {
@@ -46,10 +49,15 @@ export default function HomeScreen() {
   };
 
   const createOrUpdateFirebaseProfile = async () => {
-    if (hsrFullData && hsrPlayerData && hsrCharList) {
-      db.Users.doc(hsrPlayerData.game_role_id).set({
-        id: hsrPlayerData.game_role_id,
+    if (hsrFullData && hsrPlayerData && hsrCharList && moc) {
+      const uuid = hsrPlayerData.game_role_id;
+
+      // Users
+      db.Users.doc(uuid).set({
+        id: uuid,
         name: hsrPlayerData.nickname,
+        role: ADMIN_LIST.includes(uuid) ? "admin" : "user",
+        plan: "normal",
         level: hsrPlayerData.level,
         region: hsrPlayerData.region,
         active_days: hsrFullData.stats.active_days,
@@ -57,7 +65,9 @@ export default function HomeScreen() {
         achievement_num: hsrFullData.stats.achievement_num,
         chest_num: hsrFullData.stats.chest_num,
       } as Users);
-      db.UserCharacters.doc(hsrPlayerData.game_role_id).set({
+
+      // UserCharacters
+      db.UserCharacters.doc(uuid).set({
         count: hsrFullData.stats.avatar_num,
         characters: hsrCharList.map((char: any) => ({
           id: char.id,
@@ -65,6 +75,45 @@ export default function HomeScreen() {
           rank: char.rank,
         })),
       } as UserCharacters);
+
+      // UserMemoryOfChaos
+      const mocData = {
+        [moc.schedule_id]: {
+          begin_time: moc.begin_time,
+          end_time: moc.end_time,
+          star_num: moc.star_num,
+          battle_num: moc.battle_num,
+          max_floor_id: moc.max_floor_id,
+          all_floor_detail: moc.all_floor_detail.map((f: any) => ({
+            floor_id: f.maze_id,
+            round_num: f.round_num,
+            star_num: f.star_num,
+            layer_1: {
+              challenge_time: f.node_1.challenge_time,
+              characters: f.node_1.avatars.map((c: any) => ({
+                id: c.id,
+                level: c.level,
+                rank: c.rank,
+              })),
+            },
+            layer_2: {
+              challenge_time: f.node_2.challenge_time,
+              characters: f.node_2.avatars.map((c: any) => ({
+                id: c.id,
+                level: c.level,
+                rank: c.rank,
+              })),
+            },
+          })),
+        },
+      } as UserMemoryOfChaos;
+      try {
+        await db.UserMemoryOfChaos.doc(uuid).update(mocData);
+      } catch (error: any) {
+        if (error.code === "firestore/not-found") {
+          await db.UserMemoryOfChaos.doc(uuid).set(mocData);
+        }
+      }
     }
   };
 
