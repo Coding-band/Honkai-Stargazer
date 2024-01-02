@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { TextLanguage } from "../../types/language";
+import { TextLanguage } from "../../language/language.types";
 
 const TextLanguageContext = createContext<{
   language: TextLanguage;

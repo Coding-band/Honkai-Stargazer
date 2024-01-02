@@ -7,11 +7,13 @@ import { capitalize } from "lodash";
 import useHsrPlayerData from "../../../hooks/hoyolab/useHsrPlayerData";
 import { LOCALES } from "../../../../locales";
 import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
+import { animated, useTrail } from "@react-spring/native";
 
 export default function MOCList() {
+  // data
   const { data: moc } = useMemoryOfChaos();
   const playerData = useHsrPlayerData();
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
 
   const floors = moc?.all_floor_detail?.map((floor: any) => ({
     title: floor?.name,
@@ -43,30 +45,71 @@ export default function MOCList() {
     ],
   }));
 
+  // animation
+  const [trails] = useTrail(
+    10,
+    () => ({
+      from: { opacity: 0 },
+      to: { opacity: 1 },
+    }),
+    []
+  );
+
   return (
     <ScrollView className="z-30 py-[127px] px-[17px] pb-0">
-      <View
-        style={{
-          flexDirection: "row",
-          flexWrap: "wrap",
-          gap: 12,
-        }}
-        className="pb-60"
-      >
-        {/* Top */}
+      {moc && (
         <View
-          className="w-full"
-          style={{ flexDirection: "row", justifyContent: "space-between" }}
+          style={{
+            flexDirection: "row",
+            flexWrap: "wrap",
+            gap: 12,
+          }}
+          className="pb-60"
         >
-          <Text className="text-white font-[HY65]">排序方式：正序</Text>
-          <Text className="text-white font-[HY65]">
-            {LOCALES[language].PlayersBattleReport.replace("${1}",playerData?.nickname)}
-          </Text>
+          {/* Top */}
+          <View
+            className="w-full"
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
+            {
+              <Text className="text-white font-[HY65]">
+                {moc.begin_time.month.toLocaleString("en-US", {
+                  minimumIntegerDigits: 2,
+                  useGrouping: false,
+                })}
+                /
+                {moc.begin_time.day.toLocaleString("en-US", {
+                  minimumIntegerDigits: 2,
+                  useGrouping: false,
+                })}{" "}
+                -{" "}
+                {moc.end_time.month.toLocaleString("en-US", {
+                  minimumIntegerDigits: 2,
+                  useGrouping: false,
+                })}
+                /
+                {moc.end_time.day.toLocaleString("en-US", {
+                  minimumIntegerDigits: 2,
+                  useGrouping: false,
+                })}
+              </Text>
+            }
+            <Text className="text-white font-[HY65]">
+              {LOCALES[language].PlayersBattleReport.replace(
+                "${1}",
+                playerData?.nickname
+              )}
+            </Text>
+          </View>
+          {floors?.map((floor: any, index: number) => (
+            <AnimatedView key={floor?.title} style={trails[index]}>
+              <MOCFloor {...floor} />
+            </AnimatedView>
+          ))}
         </View>
-        {floors?.map((floor: any) => (
-          <MOCFloor key={floor?.title} {...floor} />
-        ))}
-      </View>
+      )}
     </ScrollView>
   );
 }
+
+const AnimatedView = animated(View);

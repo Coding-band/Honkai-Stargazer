@@ -4,7 +4,7 @@ import relicDataMap from "../../../map/relic_data_map";
 import relicPcMap from "../../../map/relic_pc_map";
 import { CharacterName } from "../../types/character";
 import { LightconeName } from "../../types/lightcone";
-import { TextLanguage } from "../../types/language";
+import { TextLanguage } from "../../language/language.types";
 import { RelicName } from "../../types/relic";
 
 export function getCharFullData(

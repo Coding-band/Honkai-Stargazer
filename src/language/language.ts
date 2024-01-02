@@ -1,7 +1,7 @@
 import {
   TextLanguage as TextLanguageType,
   AppLanguage as AppLanguageType,
-} from "../types/language";
+} from "./language.types";
 
 export const Language = {
   vocchinese: "Vocchinese", //Easter Egg

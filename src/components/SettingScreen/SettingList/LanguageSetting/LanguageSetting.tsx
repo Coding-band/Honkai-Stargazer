@@ -7,7 +7,7 @@ import {
   AppLanguage,
   Language,
   TextLanguage,
-} from "../../../../constant/language";
+} from "../../../../language/language";
 import _ from "lodash";
 import { LOCALES } from "../../../../../locales";
 

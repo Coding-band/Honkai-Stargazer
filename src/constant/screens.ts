@@ -8,7 +8,7 @@ import {
   User,
   Users,
 } from "phosphor-react-native";
-import { AppLanguage } from "../types/language";
+import { AppLanguage } from "../language/language.types";
 import { LOCALES } from "../../locales";
 
 export const SCREENS = {

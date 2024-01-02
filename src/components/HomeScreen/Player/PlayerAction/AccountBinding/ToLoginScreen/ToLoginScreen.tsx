@@ -1,13 +1,17 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { Server } from "../../../../../../utils/hoyolab/servers/hsrServer.types";
-import useHsrServerChosen from "../../../../../../redux/hsrServerChosen/useHsrServerChosen";
 import { useNavigation } from "@react-navigation/native";
-import Button from "../../../../../global/Button/Button";
 import { SCREENS } from "../../../../../../constant/screens";
 import TextButton from "../../../../../global/TextButton/TextButton";
 import useAppLanguage from "../../../../../../context/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../../../locales";
+import { hsrPlatform, hsrServerId } from "../../../../../../utils/hoyolab/servers/hsrServer.types";
+
+type Server = {
+  id: hsrServerId;
+  name: string;
+  platform: hsrPlatform;
+};
 
 const hsrServers: Server[] = [
   { id: "cn1", name: "星穹列车", platform: "mihoyo" },
@@ -24,7 +28,7 @@ type Props = {
 };
 
 export default function ToLoginScreen(props: Props) {
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
   const navigation = useNavigation();
 
   const handleChoseServer = (server: Server) => {
@@ -62,7 +66,7 @@ export default function ToLoginScreen(props: Props) {
         width={"100%"}
         height={46}
       >
-      {LOCALES[language].ManuallySetup}
+        {LOCALES[language].ManuallySetup}
       </TextButton>
     </View>
   );

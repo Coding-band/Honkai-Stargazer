@@ -9,6 +9,7 @@ import { CombatType } from "../../../../types/combatType";
 import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
 import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
+import formatLocale from "../../../../utils/format/formatLocale";
 
 type Props = {
   title: string;
@@ -30,8 +31,8 @@ type Props = {
 
 export default function MOCFloor(props: Props) {
   const navigation = useNavigation();
-  const {language} = useAppLanguage();
-
+  const { language } = useAppLanguage();
+  
   return (
     <View className="w-full  border border-[#DDDDDD20] rounded-[4px] p-2.5">
       {/* Layer 1 */}
@@ -41,7 +42,10 @@ export default function MOCFloor(props: Props) {
             {props.title}
           </Text>
           <Text className="text-[#FFFFFF90] text-[12px] font-[HY65] leading-5">
-            {LOCALES[language].PlayersRemainRounds.replace("${1}",props.roundRemaining.toString())}
+            {LOCALES[language].PlayersRemainRounds.replace(
+              "${1}",
+              props.roundRemaining.toString()
+            )}
           </Text>
         </View>
         <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
@@ -64,11 +68,14 @@ export default function MOCFloor(props: Props) {
                 {props.teams[0].date}
               </Text>
               <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-                {props.round}{LOCALES[language].PlayersRounds}
+                {formatLocale(LOCALES[language].PlayersRounds, [props.round])}
               </Text>
             </View>
             <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-            {LOCALES[language].PlayersAverageRounds.replace("${1}",props.roundAverage.toString())}
+              {LOCALES[language].PlayersAverageRounds.replace(
+                "${1}",
+                props.roundAverage.toString()
+              )}
             </Text>
           </View>
         </View>
@@ -107,14 +114,17 @@ export default function MOCFloor(props: Props) {
           >
             <View style={{ flexDirection: "row", gap: 4 }}>
               <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-                2023.12.19 17:24
+                {props.teams[0].date}
               </Text>
               <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-                {props.round}{LOCALES[language].PlayersRounds}
+                {formatLocale(LOCALES[language].PlayersRounds, [props.round])}
               </Text>
             </View>
             <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-            {LOCALES[language].PlayersAverageRounds.replace("${1}",props.roundAverage.toString())}
+              {LOCALES[language].PlayersAverageRounds.replace(
+                "${1}",
+                props.roundAverage.toString()
+              )}
             </Text>
           </View>
         </View>

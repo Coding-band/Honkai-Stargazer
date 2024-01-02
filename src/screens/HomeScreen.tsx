@@ -9,32 +9,19 @@ import WallPaper from "../components/global/WallPaper/WallPaper";
 import useWallPaper from "../redux/wallPaper/useWallPaper";
 import useHsrPlayerData from "../hooks/hoyolab/useHsrPlayerData";
 import auth from "@react-native-firebase/auth";
-import db from "@react-native-firebase/firestore";
 import useHoyolabCookie from "../redux/hoyolabCookie/useHoyolabCookie";
+import db from "../firebase/db";
+import Users from "../firebase/models/Users";
+import useHsrFullData from "../hooks/hoyolab/useHsrFullData";
+import UserCharacters from "../firebase/models/UserCharacters";
+import useHsrCharList from "../hooks/hoyolab/useHsrCharList";
 
 export default function HomeScreen() {
- 
   const { hoyolabCookieParse } = useHoyolabCookie();
+
+  const hsrFullData = useHsrFullData().data;
   const hsrPlayerData = useHsrPlayerData();
-
-  useEffect(() => {
-    if (hsrPlayerData) {
-      const email = `${hsrPlayerData.game_role_id}@stargazer.com`;
-      const password = hoyolabCookieParse.account_mid_v2;
-
-      // firebase 註冊
-      handleFirebaseSignUp(email, password).then((isAlreadySignUp) => {
-        if (isAlreadySignUp) {
-          // firebase 登入
-          handleFirebaseSignIn(email, password).then(() => {
-            createOrUpdateFirebaseProfile();
-          });
-        } else {
-          createOrUpdateFirebaseProfile();
-        }
-      });
-    }
-  }, [hsrPlayerData]);
+  const hsrCharList = useHsrCharList();
 
   const handleFirebaseSignUp = async (email: string, password: string) => {
     try {
@@ -59,13 +46,52 @@ export default function HomeScreen() {
   };
 
   const createOrUpdateFirebaseProfile = async () => {
-    db().collection("Users").doc(hsrPlayerData.game_role_id).set({
-      id: hsrPlayerData.game_role_id,
-      name: hsrPlayerData.nickname,
-      level: hsrPlayerData.level,
-      region: hsrPlayerData.region,
-    });
+    if (hsrFullData && hsrPlayerData && hsrCharList) {
+      db.Users.doc(hsrPlayerData.game_role_id).set({
+        id: hsrPlayerData.game_role_id,
+        name: hsrPlayerData.nickname,
+        level: hsrPlayerData.level,
+        region: hsrPlayerData.region,
+        active_days: hsrFullData.stats.active_days,
+        char_num: hsrFullData.stats.avatar_num,
+        achievement_num: hsrFullData.stats.achievement_num,
+        chest_num: hsrFullData.stats.chest_num,
+      } as Users);
+      db.UserCharacters.doc(hsrPlayerData.game_role_id).set({
+        count: hsrFullData.stats.avatar_num,
+        characters: hsrCharList.map((char: any) => ({
+          id: char.id,
+          level: char.level,
+          rank: char.rank,
+        })),
+      } as UserCharacters);
+    }
   };
+
+  useEffect(() => {
+    if (hsrPlayerData) {
+      const email = `${hsrPlayerData.game_role_id}@stargazer.com`;
+      const password = hoyolabCookieParse.account_mid_v2;
+
+      // firebase 註冊
+      handleFirebaseSignUp(email, password).then((isAlreadySignUp) => {
+        if (isAlreadySignUp) {
+          // firebase 登入
+          handleFirebaseSignIn(email, password).then(() => {
+            createOrUpdateFirebaseProfile();
+          });
+        } else {
+          createOrUpdateFirebaseProfile();
+        }
+      });
+    }
+  }, [
+    hsrPlayerData,
+    hoyolabCookieParse,
+    handleFirebaseSignUp,
+    handleFirebaseSignIn,
+    createOrUpdateFirebaseProfile,
+  ]);
 
   return (
     <Pressable style={{ flex: 1, backgroundColor: "white" }}>
