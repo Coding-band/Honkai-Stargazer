@@ -72,9 +72,9 @@ export default function MenuItemLarge({
                 {/* right */}
                 {title && (
                   <View
-                    className="translate-x-[-8px]"
+                    className="translate-x-[-8px] "
                     style={{
-                      width: width - (width - 13) / 2,
+                      width: width - (width - 16) / 2,
                       alignItems: "center",
                       justifyContent: "space-between",
                       gap: 6,

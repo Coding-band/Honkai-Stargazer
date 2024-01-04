@@ -22,7 +22,13 @@ export default memo(function WallPaperSwiper(props: Props) {
   }, []);
 
   return (
-    <View className="w-full h-[486px]" style={{ alignItems: "center" }}>
+    <View
+      style={{
+        alignItems: "center",
+        width: Dimensions.get("screen").width,
+        height: Dimensions.get("screen").height - 400,
+      }}
+    >
       <Swiper
         ref={swiperRef}
         index={props.index}
@@ -37,7 +43,13 @@ export default memo(function WallPaperSwiper(props: Props) {
       >
         {props.wallPapers.map((w, k) => (
           <View key={k} style={styles.slideContainer}>
-            <Image style={styles.slide} source={{ uri: w.url }} />
+            <Image
+              contentFit={
+                Dimensions.get("screen").width > 600 ? "contain" : "cover"
+              }
+              style={styles.slide}
+              source={{ uri: w.url }}
+            />
           </View>
         ))}
       </Swiper>

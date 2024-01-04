@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, KeyboardAvoidingView } from "react-native";
 import React, { useEffect } from "react";
 import Animated, {
   useAnimatedStyle,
@@ -9,6 +9,10 @@ import { Dimensions } from "react-native";
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
 import { Image } from "expo-image";
 import useCharComments from "../../../../../firebase/hooks/useCharComments";
+import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
+import { findKey } from "lodash";
+import officalCharId from "../../../../../../map/character_offical_id_map";
+import { ScrollView } from "react-native";
 
 const UpArrow = require("./icons/UpArrow.svg");
 const DownArrow = require("./icons/DownArrow.svg");
@@ -16,11 +20,15 @@ const DownArrow = require("./icons/DownArrow.svg");
 type Props = {
   containerRef: any;
   children: any;
+  bottom: any;
 };
 
 export default function CommentBox(props: Props) {
   // data
-  const { data: charComments } = useCharComments("1107");
+  const charId = useCharId();
+  const officalId = findKey(officalCharId, (v) => v === charId);
+
+  const { data: charComments } = useCharComments(officalId || "");
 
   // animation
   const hieght = useSharedValue(Dimensions.get("window").height - 160);
@@ -65,6 +73,12 @@ export default function CommentBox(props: Props) {
     };
   });
 
+  const animatedStyles3 = useAnimatedStyle(() => {
+    return {
+      opacity: translation.value.y < 0 ? withSpring(1) : 0,
+    };
+  });
+
   return (
     <View>
       <GestureDetector gesture={gesture}>
@@ -78,14 +92,27 @@ export default function CommentBox(props: Props) {
               className="w-[12px] h-[12px]"
             />
             <Text className="text-white text-[16px] font-[HY65]">
-              {charComments?.comment_num}條評論
+              {charComments?.comments.length || 0}條評論
             </Text>
           </View>
         </Animated.View>
       </GestureDetector>
-      <Animated.View className="w-full" style={[animatedStyles2, { gap: 24 }]}>
-        {props.children}
-      </Animated.View>
+      <Animated.ScrollView nestedScrollEnabled style={[animatedStyles2]}>
+        <Animated.View className="w-full mb-28 " style={[{ gap: 24 }]}>
+          {props.children}
+        </Animated.View>
+      </Animated.ScrollView>
+      {translation.value.y < 0 && (
+        <KeyboardAvoidingView
+          className="absolute bottom-0 w-full"
+          behavior="position"
+          keyboardVerticalOffset={110}
+        >
+          <Animated.View style={[animatedStyles3]}>
+            {props.bottom}
+          </Animated.View>
+        </KeyboardAvoidingView>
+      )}
     </View>
   );
 }

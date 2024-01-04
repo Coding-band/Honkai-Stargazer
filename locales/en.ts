@@ -1,4 +1,6 @@
 export const EN = {
+  Trailblazer: "Trailblazer",
+
   // path
   Abundance: "Abundance",
   Destruction: "Destruction",
@@ -119,6 +121,9 @@ export const EN = {
   RemarksInLogin: "Login Remarks",
   CopyToClipBoard: "Copied to Clipboard ~",
   FailToCopy: "Failed to Copy : ",
+  // ui - WallPaper Page
+  SaveWallPaper: "Save",
+  SetWallPaper: "Set",
 
   // affixs of relics
   RelicAffixATK: "ATK",

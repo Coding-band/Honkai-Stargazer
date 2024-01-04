@@ -1,8 +1,16 @@
 import { BlurView } from "expo-blur";
+import { useEffect, useState } from "react";
 
 const withBlurView = (jsx: React.ReactNode, active: boolean = true) => {
+  const [intensity, setIntensity] = useState(0);
+  useEffect(() => {
+    setTimeout(() => {
+      setIntensity(20);
+    }, 500);
+  }, []);
+
   return active ? (
-    <BlurView intensity={20} tint="light">
+    <BlurView intensity={intensity} tint="light">
       {jsx}
     </BlurView>
   ) : (

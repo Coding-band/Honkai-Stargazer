@@ -51,7 +51,11 @@ export default React.memo(function Character() {
         charContainerHeight={containerHeight}
       />
       <View className="absolute w-full h-full pt-0 pb-0 z-40">
-        <Animated.ScrollView ref={aref} style={{ padding: 24 }}>
+        <Animated.ScrollView
+          ref={aref}
+          style={{ padding: 24 }}
+          nestedScrollEnabled={true}
+        >
           <View onLayout={handleLayout}>
             <CharInfo />
             <Animated.View style={contentAnimatedStyles}>

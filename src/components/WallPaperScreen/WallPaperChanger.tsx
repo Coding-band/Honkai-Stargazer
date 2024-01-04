@@ -8,11 +8,17 @@ import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../constant/screens";
 import Toast from "../../utils/toast/Toast";
 import * as MediaLibrary from "expo-media-library";
+import useHsrPlayerName from "../../hooks/hoyolab/useHsrPlayerName";
+import { LOCALES } from "../../../locales";
+import useAppLanguage from "../../context/AppLanguage/useAppLanguage";
 
 export default function WallPaperChanger() {
   const navigation = useNavigation();
-  const { wallPaper, setWallPaper } = useWallPaper();
+  const { language } = useAppLanguage();
 
+  const playerName = useHsrPlayerName();
+
+  const { wallPaper, setWallPaper } = useWallPaper();
   const [currentWallPaperIndex, setCurrentWallPaperIndex] = useState(
     // @ts-ignore
     wallPaper?.id - 1
@@ -42,26 +48,16 @@ export default function WallPaperChanger() {
         style={{ flexDirection: "row", gap: 10, justifyContent: "center" }}
         className="pt-[20px] pb-[35px]"
       >
-        <Button
+        <OptionBtn onPress={() => {}}>
+          {playerName || LOCALES[language].Trailblazer}
+        </OptionBtn>
+        <OptionBtn
           onPress={() => {
             Toast.StillDevelopingToast();
           }}
-          width={170}
-          height={46}
         >
-          <Text className="text-[16px] text-[#222] font-[HY65]">Dalufishe</Text>
-        </Button>
-        <Button
-          onPress={() => {
-            Toast.StillDevelopingToast();
-          }}
-          width={170}
-          height={46}
-        >
-          <Text className="text-[16px] text-[#222] font-[HY65]">
-            模糊：开启
-          </Text>
-        </Button>
+          模糊：开启
+        </OptionBtn>
       </View>
       <WallPaperSwiper
         wallPapers={wallPapers}
@@ -71,6 +67,7 @@ export default function WallPaperChanger() {
         onIndexChange={setCurrentWallPaperIndex}
       />
       <View>
+        {/* wallpaper name */}
         <View className="mt-5" style={{ alignItems: "center" }}>
           <Text className="text-[16px] font-[HY65] text-[#FFF]">
             {wallPapers[currentWallPaperIndex].name}
@@ -80,22 +77,30 @@ export default function WallPaperChanger() {
           style={{ flexDirection: "row", gap: 10, justifyContent: "center" }}
           className="pt-[35px]"
         >
-          <Button
+          <OptionBtn
             onPress={() => {
               handleSaveWallPaper(wallPapers[currentWallPaperIndex].url);
             }}
-            width={170}
-            height={46}
           >
-            <Text className="text-[16px] text-[#222] font-[HY65]">
-              保存壁纸
-            </Text>
-          </Button>
-          <Button onPress={handleSetWallPaper} width={170} height={46}>
-            <Text className="text-[16px] text-[#222] font-[HY65]">设置</Text>
-          </Button>
+            保存壁纸
+          </OptionBtn>
+          <OptionBtn onPress={handleSetWallPaper}>设置</OptionBtn>
         </View>
       </View>
     </View>
   );
 }
+
+const OptionBtn = ({
+  onPress,
+  children,
+}: {
+  onPress: () => void;
+  children: string;
+}) => {
+  return (
+    <Button onPress={onPress} width={170} height={46}>
+      <Text className="text-[16px] text-[#222] font-[HY65]">{children}</Text>
+    </Button>
+  );
+};

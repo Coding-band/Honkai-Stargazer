@@ -1,4 +1,5 @@
 export const VOCCHINESE = {
+  Trailblazer: "開拓者",
   // path
   Abundance: "豐饒",
   Destruction: "毀滅",
@@ -119,6 +120,9 @@ export const VOCCHINESE = {
   RemarksInLogin: "登入前要睇嘅嘢",
   CopyToClipBoard: "Copy咗啦",
   FailToCopy: "Copy唔到：",
+  // ui - WallPaper Page
+  SaveWallPaper: "保存壁紙",
+  SetWallPaper: "設置",
 
   // affixs of relics
   RelicAffixATK: "攻擊力",

@@ -17,15 +17,17 @@ type Props = {
 };
 
 export default React.memo(function CharAction(props: Props) {
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
   const bottomAnimatedStyles = useAnimatedStyle(() => {
     if (props.scrollHandler.value > 0) {
       return {
         opacity: withSpring(0),
+        display: "none",
       };
     } else {
       return {
         opacity: withSpring(1),
+        display: "absolute",
       };
     }
   });
@@ -44,10 +46,14 @@ export default React.memo(function CharAction(props: Props) {
       ]}
     >
       <Button onPress={props.onLeftClick} width={140} height={46}>
-        <Text className="font-[HY65] text-[16px]">{LOCALES[language].AdviceRelics}</Text>
+        <Text className="font-[HY65] text-[16px]">
+          {LOCALES[language].AdviceRelics}
+        </Text>
       </Button>
       <Button onPress={props.onRightClick} width={140} height={46}>
-        <Text className="font-[HY65] text-[16px]">{LOCALES[language].AdviceTeams}</Text>
+        <Text className="font-[HY65] text-[16px]">
+          {LOCALES[language].AdviceTeams}
+        </Text>
       </Button>
     </Animated.View>
   );

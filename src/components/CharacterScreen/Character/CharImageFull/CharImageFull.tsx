@@ -31,7 +31,7 @@ export default React.memo(function CharImageFull(props: Props) {
         opacity: withSpring(1),
       };
     }
-  });
+  }, []);
 
   return (
     <Animated.View

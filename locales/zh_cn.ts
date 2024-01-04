@@ -1,4 +1,6 @@
 export const ZH_CN = {
+  Trailblazer: "開拓者",
+  // path
   Abundance: "丰饶",
   Destruction: "毁灭",
   Erudition: "智识",
@@ -116,6 +118,9 @@ export const ZH_CN = {
   RemarksInLogin: "登录须知",
   CopyToClipBoard: "已复制到剪贴簿",
   FailToCopy: "复制失败, 错误代码：",
+  // ui - WallPaper Page
+  SaveWallPaper: "保存壁纸",
+  SetWallPaper: "设置",
 
   // affixs of relics
   RelicAffixATK: "攻击力",

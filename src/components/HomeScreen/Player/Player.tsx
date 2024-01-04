@@ -42,7 +42,7 @@ export default function Player() {
                   "text-xl font-medium font-[HY65] mb-1.5"
                 )}
               >
-                {playerNickName || "開拓者"}
+                {playerNickName || LOCALES[language].Trailblazer}
               </Text>
               <PlayerCharacter />
             </View>
@@ -51,7 +51,8 @@ export default function Player() {
             <PlayerAction />
             <View>
               <Text className="font-[HY75] text-[#DBC291] text-[14px] font-medium">
-                {LOCALES[language].PlayerLevel} {playerLevel || "?"}
+                {LOCALES[language].PlayerLevel}{" "}
+                {playerLevel || ": " + LOCALES[language].NoDataYet}
               </Text>
             </View>
           </View>

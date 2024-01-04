@@ -8,12 +8,13 @@ import WallPaperChanger from "../components/WallPaperScreen/WallPaperChanger";
 import useAppLanguage from "../context/AppLanguage/useAppLanguage";
 
 export default function WallPaperScreen() {
-  
-    const { language } = useAppLanguage();
+  const { language } = useAppLanguage();
 
-  
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View
+      style={{ flex: 1, backgroundColor: "white" }}
+      className="overflow-hidden"
+    >
       <StatusBar style="dark" />
 
       <LinearGradient

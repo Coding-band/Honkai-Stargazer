@@ -1,4 +1,5 @@
 export const ZH_HK = {
+  Trailblazer: "開拓者",
   // path
   Abundance: "豐饒",
   Destruction: "毀滅",
@@ -119,6 +120,9 @@ export const ZH_HK = {
   RemarksInLogin: "登入須知",
   CopyToClipBoard: "已複製到剪貼簿",
   FailToCopy: "複製失敗, 錯誤代碼：",
+  // ui - WallPaper Page
+  SaveWallPaper: "保存壁紙",
+  SetWallPaper: "設置",
 
   // affixs of relics
   RelicAffixATK: "攻擊力",

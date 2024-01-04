@@ -45,6 +45,7 @@ export default function LoginScreen() {
         {SCREENS.LoginPage.getName(language)}
       </Header>
       <WebView
+        incognito
         javaScriptEnabled
         domStorageEnabled
         sharedCookiesEnabled
