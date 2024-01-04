@@ -23,7 +23,7 @@ export default function Navigation() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          animation: "default",
+          animation: Platform.OS === "ios" ? "default" : "none",
         }}
       >
         <Stack.Screen
@@ -79,7 +79,10 @@ export default function Navigation() {
         <Stack.Screen
           name={SCREENS.LoginPage.id}
           component={LoginScreen}
-          options={{ headerShown: false, animation: "fade_from_bottom" }}
+          options={{
+            headerShown: false,
+            animation: Platform.OS === "ios" ? "fade_from_bottom" : "none",
+          }}
         />
         <Stack.Screen
           name={SCREENS.SettingPage.id}

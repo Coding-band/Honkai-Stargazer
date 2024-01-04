@@ -3,6 +3,7 @@ import { hsrServer } from "../../utils/hoyolab/servers/hsrServer.types";
 export default interface Users {
   id: string;
   name: string;
+  avatar_url: string;
   role: "user" | "admin";
   plan: "normal" | "premium";
   level: number;

@@ -6,6 +6,7 @@ import CharAttribute from "./CharAttribute/CharAttribute";
 import CharTrace from "./CharTrace/CharTrace";
 import CharStory from "./CharStory/CharStory";
 import CharSuggestTeam from "./CharSuggestTeam/CharSuggestTeam";
+import CharComment from "./CharComment/CharComment";
 import CharSuggestRelics from "./CharSuggestRelics/CharSuggestRelics";
 import CharSuggestLightCone from "./CharSuggestLightCone/CharSuggestLightCone";
 import Animated, {
@@ -61,6 +62,7 @@ export default React.memo(function Character() {
               <CharSuggestRelics />
               {/* <CharSuggestTeam /> */}
               <CharStory />
+              <CharComment containerRef={aref} />
               <View className="pb-[60px]" />
             </Animated.View>
           </View>

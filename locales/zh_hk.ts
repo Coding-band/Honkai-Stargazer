@@ -78,6 +78,7 @@ export const ZH_HK = {
   CharacterStory: "角色故事",
   MainAffix: "主詞條",
   SubAffix: "副詞條",
+  CommentNumber: "${1}條評論",
   // ui - Memory Of Chaos
   PlayersBattleReport: "${1}的戰績",
   PlayersRemainRounds: "剩餘${1}輪",

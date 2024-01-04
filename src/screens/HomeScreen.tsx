@@ -16,7 +16,6 @@ import UserCharacters from "../firebase/models/UserCharacters";
 import useHsrCharList from "../hooks/hoyolab/useHsrCharList";
 import useMemoryOfChaos from "../hooks/hoyolab/useMemoryOfChaos";
 import UserMemoryOfChaos from "../firebase/models/UserMemoryOfChaos";
-import { ADMIN_LIST } from "../firebase/constant/adminList";
 
 export default function HomeScreen() {
   const { hoyolabCookieParse } = useHoyolabCookie();
@@ -53,22 +52,36 @@ export default function HomeScreen() {
       const uuid = hsrPlayerData.game_role_id;
 
       // Users
-      db.Users.doc(uuid).set({
-        id: uuid,
-        name: hsrPlayerData.nickname,
-        role: ADMIN_LIST.includes(uuid) ? "admin" : "user",
-        plan: "normal",
-        level: hsrPlayerData.level,
-        region: hsrPlayerData.region,
-        active_days: hsrFullData.stats.active_days,
-        char_num: hsrFullData.stats.avatar_num,
-        achievement_num: hsrFullData.stats.achievement_num,
-        chest_num: hsrFullData.stats.chest_num,
-      } as Users);
+      try {
+        await db.Users.doc(uuid).update({
+          avatar_url: hsrFullData.cur_head_icon_url,
+          level: hsrPlayerData.level,
+          active_days: hsrFullData.stats.active_days,
+          char_num: hsrFullData.stats.avatar_num,
+          achievement_num: hsrFullData.stats.achievement_num,
+          chest_num: hsrFullData.stats.chest_num,
+        });
+      } catch (error: any) {
+        if (error.code === "firestore/not-found") {
+          await db.Users.doc(uuid).set({
+            id: uuid,
+            name: hsrPlayerData.nickname,
+            avatar_url: hsrFullData.cur_head_icon_url,
+            role: "user",
+            plan: "normal",
+            level: hsrPlayerData.level,
+            region: hsrPlayerData.region,
+            active_days: hsrFullData.stats.active_days,
+            char_num: hsrFullData.stats.avatar_num,
+            achievement_num: hsrFullData.stats.achievement_num,
+            chest_num: hsrFullData.stats.chest_num,
+          } as Users);
+        }
+      }
 
       // UserCharacters
       db.UserCharacters.doc(uuid).set({
-        count: hsrFullData.stats.avatar_num,
+        char_num: hsrFullData.stats.avatar_num,
         characters: hsrCharList.map((char: any) => ({
           id: char.id,
           level: char.level,

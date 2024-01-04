@@ -78,6 +78,7 @@ export const VOCCHINESE = {
   CharacterStory: "佢嘅故仔",
   MainAffix: "主詞條",
   SubAffix: "副詞條",
+  CommentNumber: "${1}條評論",
   // ui - Memory Of Chaos
   PlayersBattleReport: "${1}打成點",
   PlayersRemainRounds: "仲剩${1}輪",

@@ -78,6 +78,7 @@ export const EN = {
   CharacterStory: "Story",
   MainAffix: "Main Affix",
   SubAffix: "Sub Affix",
+  CommentNumber: "${1} Comments",
   // ui - Memory Of Chaos
   PlayersBattleReport: "${1}'s Battle Chronic",
   PlayersRemainRounds: "${1} Round(s) Remained",

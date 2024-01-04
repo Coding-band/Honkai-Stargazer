@@ -9,9 +9,8 @@ import PlayerCharacter from "./PlayerCharacter/PlayerCharacter";
 import useHsrPlayerData from "../../../hooks/hoyolab/useHsrPlayerData";
 import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
-import db from "../../../firebase/db";
-import useHsrUUID from "../../../hooks/hoyolab/useHsrUUID";
 import useIsAdmin from "../../../firebase/hooks/useIsAdmin";
+import useIsTester from "../../../firebase/hooks/useIsTester";
 
 export default function Player() {
   const { language } = useAppLanguage();
@@ -21,6 +20,7 @@ export default function Player() {
   const playerLevel = playerData?.level;
 
   const isAdmin = useIsAdmin();
+  const isTester = useIsTester();
 
   return (
     <View
@@ -38,6 +38,7 @@ export default function Player() {
               <Text
                 className={cn(
                   isAdmin ? "text-[#FF5555]" : "text-white",
+
                   "text-xl font-medium font-[HY65] mb-1.5"
                 )}
               >

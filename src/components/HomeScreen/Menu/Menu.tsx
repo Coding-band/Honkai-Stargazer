@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { View, ScrollView, LayoutChangeEvent, Text } from "react-native";
+import {
+  View,
+  ScrollView,
+  LayoutChangeEvent,
+  Text,
+  Dimensions,
+} from "react-native";
 import { cn } from "../../../utils/css/cn";
 import MenuItem from "./MenuItem/MenuItem";
 import {
@@ -196,7 +202,7 @@ export default function Menu() {
   return (
     <View
       style={{
-        height: 530,
+        height: Dimensions.get("screen").height - 350,
       }}
     >
       <ScrollView>

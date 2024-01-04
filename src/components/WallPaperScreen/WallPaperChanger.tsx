@@ -32,8 +32,7 @@ export default function WallPaperChanger() {
       await MediaLibrary.saveToLibraryAsync(uri);
       Toast(`已儲存壁紙 ${wallPapers[currentWallPaperIndex].name}`);
     } catch (error) {
-      console.log(error);
-      Toast(`壁紙儲存失敗`);
+      Toast(`壁紙儲存失敗 ` + error);
     }
   };
 

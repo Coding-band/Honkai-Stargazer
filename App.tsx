@@ -18,7 +18,7 @@ import TextLanguageProvider from "./src/context/TextLanguage/TextLanguageProvide
 import AppLanguageProvider from "./src/context/AppLanguage/AppLanguageProvider";
 
 // import playground for testing
-import "./playground";
+// import "./playground";
 
 const queryClient = new QueryClient();
 SplashScreen.preventAutoHideAsync();
@@ -36,6 +36,7 @@ export default function App() {
       setupNavigationBar();
     }
   }, []);
+
   const [fontsLoaded] = useFonts({
     HY55: require("./assets/fonts/MiSans-Regular.ttf"),
     HY65: require("./assets/fonts/MiSans-Medium.ttf"),

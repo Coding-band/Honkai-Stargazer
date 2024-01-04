@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import React, { useEffect } from "react";
+import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { WebView } from "react-native-webview";
 import Header from "../components/global/Header/Header";
@@ -11,16 +11,10 @@ import {
   getHoyolabCookieFromCookieManager,
 } from "../utils/hoyolab/cookie/hoyolabCookie";
 import { ParamList } from "../types/navigation";
-import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
+import { RouteProp, useRoute } from "@react-navigation/native";
 import useHsrServerChosen from "../redux/hsrServerChosen/useHsrServerChosen";
 import { isHoyolabPlatform } from "../utils/hoyolab/utils";
 import useAppLanguage from "../context/AppLanguage/useAppLanguage";
-import cookieUtil from "cookie";
-import Toast from "../utils/toast/Toast";
-import auth from "@react-native-firebase/auth";
-import db from "@react-native-firebase/firestore";
-import HoyolabRequest from "../utils/hoyolab/request/HoyolabRequest";
-import useHsrPlayerData from "../hooks/hoyolab/useHsrPlayerData";
 
 export default function LoginScreen() {
   const { language } = useAppLanguage();
@@ -43,8 +37,6 @@ export default function LoginScreen() {
     setHoyolabCookie(cookie);
   };
 
-
-
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
@@ -53,12 +45,17 @@ export default function LoginScreen() {
         {SCREENS.LoginPage.getName(language)}
       </Header>
       <WebView
-        incognito
-        className="mt-[110px]"
-        style={{ flex: 1 }}
+        javaScriptEnabled
+        domStorageEnabled
+        sharedCookiesEnabled
+        thirdPartyCookiesEnabled
+        cacheEnabled={false}
+        originWhitelist={["*"]}
         source={{
           uri: platform === "hoyolab" ? cookieURLs.hoyolab : cookieURLs.mihoyo,
         }}
+        className="mt-[110px]"
+        style={{ flex: 1 }}
       />
     </View>
   );

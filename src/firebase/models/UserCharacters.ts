@@ -1,5 +1,5 @@
 export default interface UserCharacters {
-  count: number;
+  char_num: number;
   characters: {
     id: number;
     level: number;

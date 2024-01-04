@@ -12,13 +12,19 @@ export const cookieURLs = {
 export const getHoyolabCookieFromCookieManager = async (
   platform: hsrPlatform
 ) => {
-  const hoyolabCookie = await CookieManager.get(
-    platform === "hoyolab" ? cookieURLs.hoyolab : cookieURLs.mihoyo
-  ).then((cookies: any) => {
-    return map(cookies, (c: any) => {
+  let hoyolabCookie = "";
+
+  try {
+    const hoyolabCookieParse = await CookieManager.get(
+      platform === "hoyolab" ? cookieURLs.hoyolab : cookieURLs.mihoyo
+    );
+    console.log(hoyolabCookieParse);
+    hoyolabCookie = map(hoyolabCookieParse, (c: any) => {
       return cookieUtil.serialize(c.name, c.value);
     }).join("; ");
-  });
+  } catch (e) {
+    console.log(e);
+  }
 
   // console.log(hoyolabCookie);
 
