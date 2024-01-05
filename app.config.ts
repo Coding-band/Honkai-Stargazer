@@ -1,6 +1,7 @@
 import { ExpoConfig, ConfigContext } from "expo/config";
 
-const ENV = process.env.NODE_ENV;
+// process.env.NODE_ENV;
+const ENV = "development";
 
 export const APP_NAME = {
   development: "Stargazer Development Version",
@@ -15,7 +16,6 @@ export const VERSION = {
 };
 
 export const PACKAGE_NAME = {
-  development: "com.voc.honkaistargazerfordev",
   iosBETA: "com.voc.honkaistargazerbeta",
   androidBETA: "com.voc.honkai_stargazer_beta",
   ios: "com.voc.honkaistargazer",
@@ -48,7 +48,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     googleServicesFile: "./GoogleService-Info.plist",
     supportsTablet: true,
     bundleIdentifier: askEnvDo({
-      development: PACKAGE_NAME.development,
+      development: PACKAGE_NAME.iosBETA,
       beta: PACKAGE_NAME.iosBETA,
       production: PACKAGE_NAME.ios,
     }),
@@ -65,7 +65,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       backgroundColor: "#000000",
     },
     package: askEnvDo({
-      development: PACKAGE_NAME.development,
+      development: PACKAGE_NAME.androidBETA,
       beta: PACKAGE_NAME.androidBETA,
       production: PACKAGE_NAME.android,
     }),
