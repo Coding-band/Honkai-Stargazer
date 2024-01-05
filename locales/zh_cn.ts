@@ -123,6 +123,8 @@ export const ZH_CN = {
   // ui - WallPaper Page
   SaveWallPaper: "保存壁纸",
   SetWallPaper: "设置",
+  // ui - Code Page
+  HasCopy: "已拷贝",
 
   // affixs of relics
   RelicAffixATK: "攻击力",

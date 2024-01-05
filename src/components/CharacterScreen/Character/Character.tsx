@@ -52,6 +52,7 @@ export default React.memo(function Character() {
       />
       <View className="absolute w-full h-full pt-0 pb-0 z-40">
         <Animated.ScrollView
+          // @ts-ignore
           ref={aref}
           style={{ padding: 24 }}
           nestedScrollEnabled={true}

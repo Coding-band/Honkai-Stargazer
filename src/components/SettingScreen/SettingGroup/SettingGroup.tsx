@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 
 type Props = {
-  title: string;
+  title: any;
   children: any;
 };
 

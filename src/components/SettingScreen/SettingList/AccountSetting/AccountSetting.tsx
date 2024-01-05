@@ -1,4 +1,3 @@
-import { View, Text } from "react-native";
 import React from "react";
 import SettingGroup from "../../SettingGroup/SettingGroup";
 import SettingItem from "../../SettingGroup/SettingItem/SettingItem";

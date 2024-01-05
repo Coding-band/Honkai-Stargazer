@@ -24,3 +24,7 @@ export default function Toast(message: string) {
 Toast.StillDevelopingToast = () => {
   return Toast("此功能仍在開發中");
 };
+
+Toast.CopyToClipboard = () => {
+  return Toast("已複製到剪貼簿");
+};

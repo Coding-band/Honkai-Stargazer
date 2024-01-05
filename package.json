@@ -6,13 +6,13 @@
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web",
-    "build-dev": "set NODE_ENV=development&&eas build --profile development --platform android"
+    "web": "expo start --web"
   },
   "dependencies": {
     "@e-mine/react-native-html-text": "^0.3.3",
     "@expo/webpack-config": "^19.0.0",
     "@react-native-async-storage/async-storage": "1.18.2",
+    "@react-native-community/art": "^1.2.0",
     "@react-native-cookies/cookies": "^6.2.1",
     "@react-native-firebase/app": "^18.7.3",
     "@react-native-firebase/auth": "^18.7.3",
@@ -56,7 +56,6 @@
     "react-native-gesture-handler": "~2.12.0",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-modal": "^13.0.1",
-    "react-native-neomorph-shadows": "^1.1.2",
     "react-native-reanimated": "~3.4.2",
     "react-native-root-siblings": "^5.0.1",
     "react-native-root-toast": "^3.5.1",
@@ -71,7 +70,8 @@
     "react-redux": "^9.0.2",
     "redux": "^5.0.0",
     "redux-persist": "^6.0.0",
-    "tailwind-merge": "^2.0.0"
+    "tailwind-merge": "^2.0.0",
+    "expo-sharing": "~11.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

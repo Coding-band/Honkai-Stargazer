@@ -125,6 +125,8 @@ export const ZH_HK = {
   // ui - WallPaper Page
   SaveWallPaper: "保存壁紙",
   SetWallPaper: "設置",
+  // ui - Code Page
+  HasCopy: "已複製",
 
   // affixs of relics
   RelicAffixATK: "攻擊力",

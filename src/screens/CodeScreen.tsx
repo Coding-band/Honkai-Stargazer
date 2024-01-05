@@ -6,7 +6,7 @@ import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import WallPaper from "../components/global/WallPaper/WallPaper";
 import useAppLanguage from "../context/AppLanguage/useAppLanguage";
-import CodeList from "../components/CodeScreen/CodeList";
+import CodeList from "../components/CodeScreen/CodeList/CodeList";
 
 export default function CodeScreen() {
   const { language } = useAppLanguage();

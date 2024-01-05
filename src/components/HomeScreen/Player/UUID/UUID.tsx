@@ -13,7 +13,7 @@ export default function UUID() {
   const handleCopyUUID = useCallback(async () => {
     try {
       await Clipboard.setStringAsync(uuid);
-      Toast(LOCALES[language].CopyToClipBoard);
+      Toast.CopyToClipboard();
     } catch (e) {
       Toast(LOCALES[language].FailToCopy + e);
     }
