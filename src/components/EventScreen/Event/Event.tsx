@@ -1,12 +1,13 @@
-import { View, Text, ScrollView, Dimensions } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import React, { useState } from "react";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { ParamList } from "../../../types/navigation";
 import { Image } from "expo-image";
 import useHsrEvent from "../../../hooks/hoyolab/useHsrEvent";
 import { RefreshControl } from "react-native";
-import WebView from "react-native-webview";
 import EventWebView from "./EventWebView/EventWebView";
+import Animated, {
+} from "react-native-reanimated";
 
 export default function Event() {
   const route = useRoute<RouteProp<ParamList, "Event">>();
@@ -29,7 +30,7 @@ export default function Event() {
         }
       >
         <View style={{ gap: 16, alignItems: "center" }} className="mb-16">
-          <Image
+          <AnimatedImage
             className="w-screen h-[142px]"
             source={hsrEvent?.banner}
             contentFit="contain"
@@ -40,3 +41,5 @@ export default function Event() {
     </View>
   );
 }
+
+const AnimatedImage = Animated.createAnimatedComponent(Image);

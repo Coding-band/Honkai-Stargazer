@@ -20,12 +20,7 @@ export default function EpdtList() {
   return (
     <View style={{ width: "100%" }} className="z-30">
       <ScrollView
-        className="h-screen"
-        style={{
-          padding: 17,
-          paddingBottom: 0,
-          marginTop: 110,
-        }}
+        className="h-screen p-4 pb-0 pt-[126px]"
         refreshControl={
           <RefreshControl refreshing={false} onRefresh={onRefresh} />
         }

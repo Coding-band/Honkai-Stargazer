@@ -6,6 +6,7 @@ import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import WallPaper from "../components/global/WallPaper/WallPaper";
 import useAppLanguage from "../context/AppLanguage/useAppLanguage";
+import CodeList from "../components/CodeScreen/CodeList";
 
 export default function CodeScreen() {
   const { language } = useAppLanguage();
@@ -22,7 +23,7 @@ export default function CodeScreen() {
       <Header leftBtn="back" Icon={SCREENS.CodePage.icon}>
         {SCREENS.CodePage.getName(language)}
       </Header>
-
+      <CodeList />
       <LinearGradient
         className="w-full h-[600px] absolute bottom-0"
         colors={["#00000000", "#000000"]}

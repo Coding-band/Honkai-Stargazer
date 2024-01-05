@@ -5,6 +5,10 @@ import useHsrEvent from "../../hooks/hoyolab/useHsrEvent";
 import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../constant/screens";
+import Animated, {
+  SharedTransition,
+  withSpring,
+} from "react-native-reanimated";
 
 export default function EventList() {
   const navigation = useNavigation();
@@ -44,7 +48,10 @@ export default function EventList() {
               }}
             >
               <View className="w-full">
-                <Image className="w-full h-[130px]" source={event?.banner} />
+                <AnimatedImage
+                  className="w-full h-[130px]"
+                  source={event?.banner}
+                />
               </View>
             </TouchableOpacity>
           ))}
@@ -53,3 +60,5 @@ export default function EventList() {
     </View>
   );
 }
+
+const AnimatedImage = Animated.createAnimatedComponent(Image);

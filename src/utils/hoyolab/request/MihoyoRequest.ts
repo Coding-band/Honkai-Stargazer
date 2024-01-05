@@ -42,15 +42,14 @@ export default class MihoyoRequest {
     return this.request.send(getUrl(uuid, server));
   }
 
-  //* 獲取混沌回憶資料
-  public getHsrMemoryOfChaos(uuid: string, server: hsrServerId = "asia") {
-    const getUrl = (uuid: string, server: hsrServerId) =>
-      `https://api-takumi-record.mihoyo.com/game_record/app/hkrpg/api/challenge?server=${hsrServer[server]}&role_id=${uuid}&schedule_type=1&need_all=true`;
-
-    return this.request.send(getUrl(uuid, server));
+  //* 獲取活動列表
+  public getHsrEventList(uuid: string, server: hsrServerId = "asia") {
+    return axios.get(
+      `https://sg-hkrpg-api.hoyoverse.com/common/hkrpg_global/announcement/api/getAnnList?game=hkrpg&game_biz=hkrpg_global&lang=zh-tw&bundle_id=hkrpg_global&level=55&platform=pc&region=prod_official_cht&uid=900000000`
+    );
   }
 
-  //* 獲取活動列表
+  //* 獲取活動
   public getHsrEvent(uuid: string, server: hsrServerId = "asia") {
     return axios.get(
       `https://sg-hkrpg-api.hoyoverse.com/common/hkrpg_global/announcement/api/getAnnContent?game=hkrpg&game_biz=hkrpg_global&lang=zh-tw&bundle_id=hkrpg_global&level=55&platform=pc&region=prod_official_cht&uid=900000000`
