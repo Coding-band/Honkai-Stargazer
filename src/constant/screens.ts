@@ -1,10 +1,12 @@
 import {
   BaseballCap,
+  FilmSlate,
   MapTrifold,
   MedalMilitary,
   Person,
   SlidersHorizontal,
   Sword,
+  Ticket,
   User,
   Users,
 } from "phosphor-react-native";
@@ -89,5 +91,23 @@ export const SCREENS = {
     getName: (lang: AppLanguage) => LOCALES[lang].MemoryOfChaos,
     getShortName: (lang: AppLanguage) => LOCALES[lang].MemoryOfChaos,
     icon: MedalMilitary,
+  },
+  EventListPage: {
+    id: "EventList",
+    getName: (lang: AppLanguage) => LOCALES[lang].Event,
+    getShortName: (lang: AppLanguage) => LOCALES[lang].Event,
+    icon: FilmSlate,
+  },
+  EventPage: {
+    id: "Event",
+    getName: (lang: AppLanguage) => LOCALES[lang].Event,
+    getShortName: (lang: AppLanguage) => LOCALES[lang].Event,
+    icon: FilmSlate,
+  },
+  CodePage: {
+    id: "Code",
+    getName: (lang: AppLanguage) => LOCALES[lang].Codes,
+    getShortName: (lang: AppLanguage) => LOCALES[lang].Codes,
+    icon: Ticket,
   },
 };

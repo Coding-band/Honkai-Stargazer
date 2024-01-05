@@ -105,7 +105,10 @@ export default function MOCList() {
           </View>
           {floors.length ? (
             floors?.map((floor: any, index: number) => (
-              <AnimatedView key={floor?.title} style={trails[index]}>
+              <AnimatedView
+                key={floor?.title}
+                // style={trails[index]}
+              >
                 <MOCFloor {...floor} />
               </AnimatedView>
             ))

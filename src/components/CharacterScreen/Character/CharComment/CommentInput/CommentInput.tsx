@@ -15,11 +15,14 @@ import { findKey } from "lodash";
 import officalCharId from "../../../../../../map/character_offical_id_map";
 import useCharComments from "../../../../../firebase/hooks/useCharComments";
 import { BlurView } from "expo-blur";
+import useFirebaseUid from "../../../../../firebase/hooks/useFirebaseUid";
+
+
 
 export default function CommentInput() {
   const [input, setInput] = useState("");
 
-  const hsrUUID = useHsrUUID();
+  const uid = useFirebaseUid();
   const charId = useCharId();
   const officalId = findKey(officalCharId, (v) => v === charId);
 
@@ -39,28 +42,31 @@ export default function CommentInput() {
             value={input}
             onChangeText={setInput}
             onSubmitEditing={async () => {
-              if (hsrUUID) {
-                try {
+              if (uid) {
+                const docExists = (
+                  await db.CharacterComments.doc(officalId).get()
+                ).exists;
+
+                if (docExists) {
                   await db.CharacterComments.doc(officalId).update({
                     comments: firestore.FieldValue.arrayUnion({
-                      user_id: hsrUUID,
+                      user_id: uid,
                       content: input,
                     }),
                   });
                   refetch();
-                } catch (error: any) {
-                  if (error.code === "firestore/not-found") {
-                    await db.CharacterComments.doc(officalId).set({
-                      comments: firestore.FieldValue.arrayUnion({
-                        user_id: hsrUUID,
-                        content: input,
-                      }),
-                    });
-                    refetch();
-                  }
+                } else {
+                  await db.CharacterComments.doc(officalId).set({
+                    comments: firestore.FieldValue.arrayUnion({
+                      user_id: uid,
+                      content: input,
+                    }),
+                  });
+                  refetch();
                 }
+
+                setInput("");
               }
-              setInput("");
             }}
             placeholder="幫幫我 史瓦羅先生！"
             placeholderTextColor="gray"

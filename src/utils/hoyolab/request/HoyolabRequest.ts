@@ -3,6 +3,7 @@ import { LanguageEnum } from "../language/language.interface";
 import Request from "./Request";
 import { hsrServer } from "../servers/hsrServer";
 import generateDS from "../ds/generateDs";
+import axios from "axios";
 
 export default class HoyolabRequest {
   private request: Request;
@@ -47,5 +48,12 @@ export default class HoyolabRequest {
       `https://bbs-api-os.hoyolab.com/game_record/hkrpg/api/challenge?server=${hsrServer[server]}&role_id=${uuid}&schedule_type=1&need_all=true`;
 
     return this.request.send(getUrl(uuid, server));
+  }
+
+  //* 獲取活動列表
+  public getHsrEvent(uuid: string, server: hsrServerId = "asia") {
+    return axios.get(
+      `https://sg-hkrpg-api.hoyoverse.com/common/hkrpg_global/announcement/api/getAnnContent?game=hkrpg&game_biz=hkrpg_global&lang=zh-tw&bundle_id=hkrpg_global&level=55&platform=pc&region=prod_official_cht&uid=900000000`
+    );
   }
 }

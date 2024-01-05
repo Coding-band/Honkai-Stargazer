@@ -33,8 +33,8 @@ export const TextLanguage: TextLanguageType[] = [
   "th",
 ];
 export const AppLanguage: AppLanguageType[] = [
-  "en",
+  // "en",
   "zh_cn",
   "zh_hk",
-  "vocchinese",
+  // "vocchinese",
 ];

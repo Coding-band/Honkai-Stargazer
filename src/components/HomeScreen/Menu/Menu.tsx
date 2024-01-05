@@ -197,6 +197,26 @@ export default function Menu() {
         navigation.navigate(SCREENS.MapPage.id);
       },
     },
+    // 活動
+    {
+      type: "normal",
+      name: SCREENS.EventListPage.getShortName(language),
+      icon: SCREENS.EventListPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.EventListPage.id);
+      },
+    },
+    // 兌換碼
+    {
+      type: "normal",
+      name: SCREENS.CodePage.getShortName(language),
+      icon: SCREENS.CodePage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.CodePage.id);
+      },
+    },
   ];
 
   return (

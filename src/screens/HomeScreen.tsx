@@ -1,5 +1,5 @@
 import { LinearGradient } from "expo-linear-gradient";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Pressable, View } from "react-native";
 import Menu from "../components/HomeScreen/Menu/Menu";
 import Tabbar from "../components/HomeScreen/Tabbar/Tabbar";
@@ -16,11 +16,15 @@ import UserCharacters from "../firebase/models/UserCharacters";
 import useHsrCharList from "../hooks/hoyolab/useHsrCharList";
 import useMemoryOfChaos from "../hooks/hoyolab/useMemoryOfChaos";
 import UserMemoryOfChaos from "../firebase/models/UserMemoryOfChaos";
+import useFirebaseUid from "../firebase/hooks/useFirebaseUid";
+import useHsrUUID from "../hooks/hoyolab/useHsrUUID";
 
 export default function HomeScreen() {
-  const { hoyolabCookieParse } = useHoyolabCookie();
+  const uid = useFirebaseUid();
 
+  const { hoyolabCookieParse } = useHoyolabCookie();
   const hsrFullData = useHsrFullData().data;
+  const hsrUUID = useHsrUUID();
   const hsrPlayerData = useHsrPlayerData();
   const hsrCharList = useHsrCharList();
   const moc = useMemoryOfChaos().data;
@@ -32,6 +36,7 @@ export default function HomeScreen() {
     } catch (error: any) {
       const errorCode = error.code;
       const errorMessage = error.message;
+      // console.log("signup: " + errorMessage);
       if (errorCode === "auth/email-already-in-use") {
         return true;
       }
@@ -44,27 +49,33 @@ export default function HomeScreen() {
     } catch (error: any) {
       const errorCode = error.code;
       const errorMessage = error.message;
+      console.log("signin: " + errorMessage);
     }
   };
 
   const createOrUpdateFirebaseProfile = async () => {
-    if (hsrFullData && hsrPlayerData && hsrCharList && moc) {
+    if (uid && hsrFullData && hsrPlayerData && hsrCharList && moc) {
+      // uid 表示 firebase uid, uuid 表示崩鐵遊戲 id
       const uuid = hsrPlayerData.game_role_id;
-
       // Users
-      try {
-        await db.Users.doc(uuid).update({
-          avatar_url: hsrFullData.cur_head_icon_url,
-          level: hsrPlayerData.level,
-          active_days: hsrFullData.stats.active_days,
-          char_num: hsrFullData.stats.avatar_num,
-          achievement_num: hsrFullData.stats.achievement_num,
-          chest_num: hsrFullData.stats.chest_num,
-        });
-      } catch (error: any) {
-        if (error.code === "firestore/not-found") {
-          await db.Users.doc(uuid).set({
-            id: uuid,
+      const UsersIsExist = (await db.Users.doc(uid).get()).exists;
+      if (UsersIsExist) {
+        try {
+          await db.Users.doc(uid).update({
+            avatar_url: hsrFullData.cur_head_icon_url,
+            level: hsrPlayerData.level,
+            active_days: hsrFullData.stats.active_days,
+            char_num: hsrFullData.stats.avatar_num,
+            achievement_num: hsrFullData.stats.achievement_num,
+            chest_num: hsrFullData.stats.chest_num,
+          });
+        } catch (e: any) {
+          // console.log("update User: " + e.message);
+        }
+      } else {
+        try {
+          await db.Users.doc(uid).set({
+            uuid: uuid,
             name: hsrPlayerData.nickname,
             avatar_url: hsrFullData.cur_head_icon_url,
             role: "user",
@@ -76,20 +87,38 @@ export default function HomeScreen() {
             achievement_num: hsrFullData.stats.achievement_num,
             chest_num: hsrFullData.stats.chest_num,
           } as Users);
+        } catch (e: any) {
+          // console.log("create User: " + e.message);
         }
       }
 
       // UserCharacters
-      db.UserCharacters.doc(uuid).set({
-        char_num: hsrFullData.stats.avatar_num,
-        characters: hsrCharList.map((char: any) => ({
-          id: char.id,
-          level: char.level,
-          rank: char.rank,
-        })),
-      } as UserCharacters);
+      const UserCharactersIsExist = (await db.UserCharacters.doc(uid).get())
+        .exists;
+      if (UserCharactersIsExist) {
+        db.UserCharacters.doc(uid).set({
+          char_num: hsrFullData.stats.avatar_num,
+          characters: hsrCharList.map((char: any) => ({
+            id: char.id,
+            level: char.level,
+            rank: char.rank,
+          })),
+        } as UserCharacters);
+      } else {
+        db.UserCharacters.doc(uid).set({
+          char_num: hsrFullData.stats.avatar_num,
+          characters: hsrCharList.map((char: any) => ({
+            id: char.id,
+            level: char.level,
+            rank: char.rank,
+          })),
+        } as UserCharacters);
+      }
 
       // UserMemoryOfChaos
+      const UserMemoryOfChaosIsExist = (
+        await db.UserMemoryOfChaos.doc(uid).get()
+      ).exists;
       const mocData = {
         [moc.schedule_id]: {
           begin_time: moc.begin_time,
@@ -120,21 +149,20 @@ export default function HomeScreen() {
           })),
         },
       } as UserMemoryOfChaos;
-      try {
-        await db.UserMemoryOfChaos.doc(uuid).update(mocData);
-      } catch (error: any) {
-        if (error.code === "firestore/not-found") {
-          await db.UserMemoryOfChaos.doc(uuid).set(mocData);
-        }
+      if (UserMemoryOfChaosIsExist) {
+        await db.UserMemoryOfChaos.doc(uid).update(mocData);
+      } else {
+        await db.UserMemoryOfChaos.doc(uid).set(mocData);
       }
     }
   };
 
   useEffect(() => {
-    if (hsrPlayerData) {
-      const email = `${hsrPlayerData.game_role_id}@stargazer.com`;
-      const password = hoyolabCookieParse.account_mid_v2;
+    //* 如果存在崩鐵 UUID (表示已登入 hoyolab + 擁有崩鐵帳號，執行 firebase 登入)
 
+    if (hsrUUID) {
+      const email = `${hsrUUID}@stargazer.com`;
+      const password = hoyolabCookieParse.account_mid_v2;
       // firebase 註冊
       handleFirebaseSignUp(email, password).then((isAlreadySignUp) => {
         if (isAlreadySignUp) {
@@ -148,7 +176,7 @@ export default function HomeScreen() {
       });
     }
   }, [
-    hsrPlayerData,
+    hsrUUID,
     hoyolabCookieParse,
     handleFirebaseSignUp,
     handleFirebaseSignIn,

@@ -20,13 +20,16 @@ type Props = {
 export default function FilterPopUp(props: Props) {
   const { language } = useAppLanguage();
   return (
-    <View className="absolute bottom-0">
+    <View className="absolute bottom-0 translate-x-[-6px] translate-y-[18px]">
       <PopUpCard
         onClose={props.onClose && props.onClose}
         title={LOCALES[language].FilterTitle}
         content={
-          <View className="p-4 pt-0">
-            <View className="py-2.5" style={{ flexDirection: "row", gap: 12 }}>
+          <View className="pt-0">
+            <View
+              className="px-4 py-2.5"
+              style={{ flexDirection: "row", gap: 12 }}
+            >
               <View
                 className="flex-1"
                 style={{
@@ -92,6 +95,7 @@ export default function FilterPopUp(props: Props) {
               </View>
             </View>
             <View
+              className="p-4 bg-[#333]"
               style={{
                 flexDirection: "row",
                 alignItems: "center",
@@ -105,7 +109,7 @@ export default function FilterPopUp(props: Props) {
                 height={46}
               >
                 <Text className="font-[HY65] text-[#222] text-[16px]">
-                {LOCALES[language].Reset}
+                  {LOCALES[language].Reset}
                 </Text>
               </Button>
               <Button
@@ -115,7 +119,7 @@ export default function FilterPopUp(props: Props) {
                 height={46}
               >
                 <Text className="font-[HY65] text-[#222] text-[16px]">
-                {LOCALES[language].OK}
+                  {LOCALES[language].OK}
                 </Text>
               </Button>
             </View>

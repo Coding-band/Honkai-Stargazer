@@ -47,6 +47,8 @@ export const ZH_HK = {
   AccountLogin: "帳戶綁定",
   ModifyHomePage: "編輯首頁",
   SimulatedUniverse: "模擬宇宙",
+  Event: "活動",
+  Codes: "兌換碼",
   // ui - filter and sort
   SortByDate: "實裝日期",
   SortByENName: "名稱（英文）",

@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import useHsrUUID from "../../hooks/hoyolab/useHsrUUID";
 import db from "../db";
+import useFirebaseUid from "./useFirebaseUid";
 
 const useIsAdmin = () => {
-  const hsrUUID = useHsrUUID();
+  const uid = useFirebaseUid();
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
-    if (hsrUUID) {
-      db.Users.doc(hsrUUID)
+    if (uid) {
+      db.Users.doc(uid)
         .get()
         .then((data) => {
           if (data.data()?.role === "admin") {
@@ -19,7 +20,7 @@ const useIsAdmin = () => {
     } else {
       setIsAdmin(false);
     }
-  }, [hsrUUID]);
+  }, [uid]);
   return isAdmin;
 };
 

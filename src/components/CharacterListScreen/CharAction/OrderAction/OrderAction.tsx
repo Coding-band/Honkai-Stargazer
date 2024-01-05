@@ -25,7 +25,7 @@ export default function OrderAction() {
       }
       value={charSorting?.id}
       onChange={handleOrderChange}
-      bottom={46}
+      bottom={56}
     >
       {charSortingList?.map((sorting) => (
         <Listbox.Item key={sorting.id} value={sorting.id}>

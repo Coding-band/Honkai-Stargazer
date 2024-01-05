@@ -45,6 +45,8 @@ export const ZH_CN = {
   AccountLogin: "账户绑定",
   ModifyHomePage: "编辑首页",
   SimulatedUniverse: "模拟宇宙",
+  Event: "活動",
+  Codes: "兌換碼",
   // ui - filter and sort
   SortByDate: "实装日期",
   SortByENName: "名称（英文）",

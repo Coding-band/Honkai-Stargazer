@@ -3,7 +3,7 @@ import SettingGroup from "../../SettingGroup/SettingGroup";
 import SettingItem from "../../SettingGroup/SettingItem/SettingItem";
 import { LOCALES } from "../../../../../locales";
 import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
-import { expo } from "../../../../../app.json";
+import { VERSION } from "../../../../../app.config";
 import * as Device from "expo-device";
 
 export default function DevelopmentSetting() {
@@ -14,7 +14,7 @@ export default function DevelopmentSetting() {
       <SettingItem
         type="navigation"
         title={LOCALES[language].AppVersion}
-        content={expo.version}
+        content={VERSION.production}
       />
       <SettingItem
         type="navigation"

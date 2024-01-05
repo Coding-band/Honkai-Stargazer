@@ -1,5 +1,5 @@
 
-export type AppLanguage = "zh_hk" | "zh_cn" | "en" | "vocchinese";
+export type AppLanguage = "zh_hk" | "zh_cn" 
 export type TextLanguage =
   | "zh_hk"
   | "zh_cn"

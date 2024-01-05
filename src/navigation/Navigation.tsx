@@ -16,6 +16,9 @@ import WallPaperScreen from "../screens/WallPaperScreen";
 import RelicListScreen from "../screens/RelicListScreen";
 import RelicScreen from "../screens/RelicScreen";
 import MemoryOfChaosScreen from "../screens/MemoryOfChaosScreen";
+import EventListScreen from "../screens/EventListScreen";
+import EventScreen from "../screens/EventScreen";
+import CodeScreen from "../screens/CodeScreen";
 
 export default function Navigation() {
   const Stack = createNativeStackNavigator();
@@ -92,6 +95,22 @@ export default function Navigation() {
         <Stack.Screen
           name={SCREENS.WallPaperPage.id}
           component={WallPaperScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.EventListPage.id}
+          component={EventListScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.EventPage.id}
+          component={EventScreen}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name={SCREENS.CodePage.id}
+          component={CodeScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

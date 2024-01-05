@@ -13,4 +13,5 @@ export type ParamList = {
   Lightcone: { id: string; name: string };
   Relic: { id: string; name: string };
   Login: { platform: hsrPlatform; serverId: hsrServerId };
+  Event: { id: string };
 };
