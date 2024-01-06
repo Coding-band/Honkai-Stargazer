@@ -69,6 +69,10 @@ export default function Menu() {
   const playerNote = useHsrNote();
 
   //* Menu
+
+  const [staminaIsCheck, setStaminaIsCheck] = useState(false);
+  const [epeditionIsCheck, setEpeditionIsCheck] = useState(false);
+
   const menuItems = [
     // 角色列表
     {
@@ -90,7 +94,7 @@ export default function Menu() {
         navigation.navigate(SCREENS.LightconeListPage.id);
       },
     },
-    // 遺器列表F
+    // 遺器列表
     {
       type: "normal",
       name: SCREENS.RelicListPage.getShortName(language),
@@ -134,7 +138,12 @@ export default function Menu() {
               )}
         </Text>
       ) : null,
-      onPress: () => {},
+      onPress: () => {
+        setStaminaIsCheck(true);
+      },
+      hasDot:
+        !staminaIsCheck &&
+        playerNote.data?.current_stamina === playerNote.data?.max_stamina,
     },
     // 每日實訓
     {
@@ -185,7 +194,10 @@ export default function Menu() {
       onPress: () => {
         // @ts-ignore
         navigation.navigate(SCREENS.ExpeditionPage.id);
+        setEpeditionIsCheck(true);
       },
+      hasDot:
+        !epeditionIsCheck && playerNote.data?.accepted_epedition_num === 0,
     },
     // 地圖
     {
@@ -240,6 +252,7 @@ export default function Menu() {
                   height={menuItemSize.height}
                   Icon={menuItem.icon}
                   onPress={menuItem.onPress}
+                  hasDot={menuItem?.hasDot}
                 >
                   {menuItem.name}
                 </MenuItem>
@@ -254,6 +267,7 @@ export default function Menu() {
                   onPress={menuItem.onPress}
                   title={menuItem.title}
                   subtitle={menuItem.subtitle}
+                  hasDot={menuItem?.hasDot}
                 >
                   {menuItem.name}
                 </MenuItemLarge>

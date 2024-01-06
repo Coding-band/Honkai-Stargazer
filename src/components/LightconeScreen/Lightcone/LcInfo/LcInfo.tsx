@@ -4,6 +4,7 @@ import LcStars from "../../../global/PageStars/PageStars";
 import { Image } from "expo-image";
 import Path from "../../../../../assets/images/images_map/path";
 import useLcData from "../../../../context/LightconeData/hooks/useLcData";
+import { globalStyles } from "../../../../../styles/global";
 
 export default function LcInfo() {
   const { lcData } = useLcData();
@@ -16,7 +17,10 @@ export default function LcInfo() {
       }}
     >
       <View style={{ gap: 12 }}>
-        <Text className="text-[32px] font-[HY65] text-white">
+        <Text
+          className="text-[32px] font-[HY65] text-white"
+          style={globalStyles.textShadow}
+        >
           {lcData?.name}
         </Text>
         <LcStars count={lcData?.rare || 5} />
@@ -35,7 +39,10 @@ export default function LcInfo() {
               source={Path[lcData?.pathId].icon}
               style={{ width: 24, height: 24 }}
             />
-            <Text className="text-[16px] text-white font-[HY65]">
+            <Text
+              className="text-[16px] text-white font-[HY65]"
+              style={globalStyles.textShadow}
+            >
               {lcData?.path}
             </Text>
           </View>

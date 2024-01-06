@@ -5,6 +5,7 @@ import { Image } from "expo-image";
 import Path from "../../../../../assets/images/images_map/path";
 import useLcData from "../../../../context/LightconeData/hooks/useLcData";
 import useRelicData from "../../../../context/RelicData/hooks/useRelicData";
+import { globalStyles } from "../../../../../styles/global";
 
 export default function RelicInfo() {
   const { relicData } = useRelicData();
@@ -16,7 +17,10 @@ export default function RelicInfo() {
       }}
     >
       <View style={{ gap: 12 }}>
-        <Text className="text-[32px] font-[HY65] text-white">
+        <Text
+          className="text-[32px] font-[HY65] text-white"
+          style={globalStyles.textShadow}
+        >
           {relicData?.name}
         </Text>
         <LcStars count={relicData?.rare || 5} />

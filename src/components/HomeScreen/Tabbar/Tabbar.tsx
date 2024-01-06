@@ -1,10 +1,10 @@
 import React from "react";
 import { Linking, Pressable, SafeAreaView, Text, View } from "react-native";
 import { cn } from "../../../utils/css/cn";
-import Tab from "./Tab/Tab";
 import { Image } from "expo-image";
 import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
+import TypingText from "../../global/TypingText/TypingText";
 
 export default function Tabbar() {
   const { language } = useAppLanguage();
@@ -31,9 +31,12 @@ export default function Tabbar() {
         </Tab>
       </View> */}
       <View className="py-2" style={{ alignItems: "center", gap: 8 }}>
-        <Text className="text-text text-[14px] font-[HY65]">
-          {LOCALES[language].DonationRemoveAds}
-        </Text>
+        <TypingText
+          color="white"
+          textSize={14}
+          fontFamily="HY65"
+          text={LOCALES[language].DonationRemoveAds}
+        />
         <Pressable
           className="w-full h-[70px]"
           onPress={() => {
