@@ -11,6 +11,7 @@ export default function UUID() {
   const { language } = useAppLanguage();
 
   const handleCopyUUID = useCallback(async () => {
+
     try {
       await Clipboard.setStringAsync(uuid);
       Toast.CopyToClipboard();
