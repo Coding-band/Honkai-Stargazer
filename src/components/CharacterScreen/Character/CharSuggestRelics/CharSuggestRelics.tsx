@@ -9,7 +9,7 @@ import CharSuggestRelicsProps from "./CharSuggestRelicsProps/CharSuggestRelicsPr
 import useCharId from "../../../../context/CharacterData/hooks/useCharId";
 import charAdviceMap from "../../../../../map/character_advice_map";
 import { LOCALES } from "../../../../../locales";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 
 // Relic 遺器套裝
 // Ornaments 位面飾品
@@ -18,7 +18,7 @@ import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
 const AddIcon = require("../../../../../assets/icons/Add.svg");
 
 export default React.memo(function CharSuggestRelics() {
-  const { language} = useAppLanguage();
+  const { language } = useAppLanguage();
 
   const charId = useCharId();
   const advices = charAdviceMap[charId];
@@ -26,7 +26,9 @@ export default React.memo(function CharSuggestRelics() {
 
   return (
     <View style={{ alignItems: "center" }}>
-      <CharPageHeading Icon={BaseballCap}>{LOCALES[language].AdviceRelics}</CharPageHeading>
+      <CharPageHeading Icon={BaseballCap}>
+        {LOCALES[language].AdviceRelics}
+      </CharPageHeading>
       {suggestRelics ? (
         <View className="w-full" style={styles.lightconeImages}>
           <CharSuggestRelicsLeft />

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import CharacterComments from "../models/CharacterComments";
 import db from "../db";
 import { useQuery } from "react-query";

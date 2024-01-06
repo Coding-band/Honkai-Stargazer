@@ -5,7 +5,7 @@ import characterList from "../../../../../data/character_data/character_list.jso
 import characterListMap from "../../../../../map/character_data_map";
 import LcSuggestCharacterCard from "./LcSuggestCharacterCard/LcSuggestCharacterCard";
 import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 import useLcId from "../../../../context/LightconeData/hooks/useLcId";
 import { CHARACTERS } from "../../../../constant/character";
@@ -14,7 +14,7 @@ import { forEach } from "lodash";
 import { useEffect, useMemo, useState } from "react";
 import LightconeName from "../../../../../map/lightcone_name_map";
 import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
-import useTextLanguage from "../../../../context/TextLanguage/useTextLanguage";
+import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
 import { CharacterName } from "../../../../types/character";
 
 export default function LcSuggestCharacter() {

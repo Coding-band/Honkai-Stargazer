@@ -24,6 +24,7 @@ export default function EpdtList() {
         refreshControl={
           <RefreshControl refreshing={false} onRefresh={onRefresh} />
         }
+        scrollEnabled={false}
       >
         <View
           style={{

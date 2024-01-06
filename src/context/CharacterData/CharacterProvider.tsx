@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CharacterName } from "../../types/character";
-import useTextLanguage from "../TextLanguage/useTextLanguage";
+import useTextLanguage from "../../language/TextLanguage/useTextLanguage";
 import { CharacterData } from "./CharacterData.types";
 import charList from "../../../data/character_data/character_list.json";
 import { filter } from "lodash";

@@ -8,11 +8,11 @@ import { getLcFullData } from "../../../../utils/dataMap/getDataFromMap";
 import useCharId from "../../../../context/CharacterData/hooks/useCharId";
 import LightconeNameMap from "../../../../../map/lightcone_name_map";
 import { LightconeName } from "../../../../types/lightcone";
-import useTextLanguage from "../../../../context/TextLanguage/useTextLanguage";
+import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
 import Lightcone from "../../../../../assets/images/images_map/lightcone";
 import charAdviceMap from "../../../../../map/character_advice_map";
 import { LOCALES } from "../../../../../locales";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 
 export default React.memo(function CharSuggestLightCone() {
   const { language: textLanguage } = useTextLanguage();
@@ -37,7 +37,9 @@ export default React.memo(function CharSuggestLightCone() {
 
   return (
     <View style={{ alignItems: "center" }}>
-      <CharPageHeading Icon={Sword}>{LOCALES[appLanguage].AdviceLightcones}</CharPageHeading>
+      <CharPageHeading Icon={Sword}>
+        {LOCALES[appLanguage].AdviceLightcones}
+      </CharPageHeading>
       {suggestCones ? (
         <ScrollView horizontal>
           <View

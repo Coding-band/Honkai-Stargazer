@@ -22,12 +22,12 @@ const DEXIcon = require("../../../../../assets/icons/DEX.png");
 // const ELIcon = require("../../../../../assets/icons/EL.png");
 const AggroIcon = require("../../../../../assets/icons/Aggro.png");
 const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
 export default React.memo(function CharAttribute() {
   const loaded = useDelayLoad(100);
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
 
   const { charId, charFullData } = useCharData();
 
@@ -84,7 +84,9 @@ export default React.memo(function CharAttribute() {
   return (
     <>
       <View style={{ alignItems: "center" }}>
-        <CharPageHeading Icon={Info}>{LOCALES[language].BasicStatus}</CharPageHeading>
+        <CharPageHeading Icon={Info}>
+          {LOCALES[language].BasicStatus}
+        </CharPageHeading>
         {loaded && (
           <>
             {/* 等級 - 起點 */}

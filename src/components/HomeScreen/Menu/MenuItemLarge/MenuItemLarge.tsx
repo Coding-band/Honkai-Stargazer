@@ -60,15 +60,15 @@ export default function MenuItemLarge({
                   <View
                     style={{
                       width: (width - 13) / 2,
+                      height: height - 30,
                       alignItems: "center",
                       justifyContent: "space-between",
-                      gap: 6,
                     }}
                   >
                     {Icon && <Icon weight="fill" size={32} color="white" />}
                     <Text
                       style={{ fontFamily: "HY65" }}
-                      className="text-[14px] text-text2 text-center"
+                      className="text-[13px] text-text2 text-center"
                     >
                       {children}
                     </Text>
@@ -78,16 +78,16 @@ export default function MenuItemLarge({
                     <View
                       className="translate-x-[-8px] "
                       style={{
-                        width: width - (width - 16) / 2,
+                        width: width - (width - 13) / 2,
+                        height: height - 30,
                         alignItems: "center",
                         justifyContent: "space-between",
-                        gap: 6,
                       }}
                     >
-                      <Text className=" text-text text-[16px] font-medium font-[HY65]">
+                      <Text className=" text-text text-[15px] font-medium font-[HY65] translate-y-[4px]">
                         {title}
                       </Text>
-                      <Text className="text-text2 text-[14px] font-[HY65]">
+                      <Text className="text-text2 text-[13px] font-[HY65]">
                         {subtitle}
                       </Text>
                     </View>

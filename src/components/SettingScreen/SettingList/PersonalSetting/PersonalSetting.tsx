@@ -6,13 +6,12 @@ import useLocalState from "../../../../hooks/useLocalState";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../constant/screens";
 import useWallPaper from "../../../../redux/wallPaper/useWallPaper";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
-
 
 export default function PersonalSetting() {
   const navigation = useNavigation();
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
 
   const fonts = [
     { name: LOCALES[language].SwitchOn, value: true },

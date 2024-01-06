@@ -65,10 +65,10 @@ export default React.memo(function Character() {
               <CharEidolon />
               <CharSuggestLightCone />
               <CharSuggestRelics />
-              {/* <CharSuggestTeam /> */}
+              <CharSuggestTeam />
               <CharStory />
               <CharComment containerRef={aref} />
-              <View className="pb-[60px]" />
+              <View className="pb-[68px]" />
             </Animated.View>
           </View>
         </Animated.ScrollView>

@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import FilterItem from "./FilterItem/FilterItem";
 import { ExpoImage } from "../../../types/image";
 import _ from "lodash";
-import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
 
 type Props = {

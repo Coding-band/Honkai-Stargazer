@@ -7,7 +7,7 @@ import Animated, {
   useAnimatedStyle,
   withSpring,
 } from "react-native-reanimated";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
 type Props = {
@@ -17,7 +17,7 @@ type Props = {
 };
 
 export default React.memo(function RelicAction(props: Props) {
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
   const bottomAnimatedStyles = useAnimatedStyle(() => {
     if (props.scrollHandler.value > 0) {
       return {
@@ -44,10 +44,14 @@ export default React.memo(function RelicAction(props: Props) {
       ]}
     >
       <Button onPress={props.onLeftClick} width={140} height={46}>
-        <Text className="font-[HY65] text-[16px]">{LOCALES[language].AdviceCharacters}</Text>
+        <Text className="font-[HY65] text-[16px]">
+          {LOCALES[language].AdviceCharacters}
+        </Text>
       </Button>
       <Button onPress={props.onRightClick} width={140} height={46}>
-        <Text className="font-[HY65] text-[16px]">{LOCALES[language].AdviceGetPath}</Text>
+        <Text className="font-[HY65] text-[16px]">
+          {LOCALES[language].AdviceGetPath}
+        </Text>
       </Button>
     </Animated.View>
   );

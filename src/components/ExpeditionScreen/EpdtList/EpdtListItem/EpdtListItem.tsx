@@ -8,7 +8,7 @@ import {
   formatTimePoint,
 } from "../../../../utils/date/formatTime";
 import { animated, useSpring } from "@react-spring/native";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
 type Props = {

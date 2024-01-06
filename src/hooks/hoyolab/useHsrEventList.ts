@@ -6,7 +6,7 @@ import HoyolabRequest from "../../utils/hoyolab/request/HoyolabRequest";
 import MihoyoRequest from "../../utils/hoyolab/request/MihoyoRequest";
 import { isHoyolabPlatform } from "../../utils/hoyolab/utils";
 
-const useHsrEvent = () => {
+const useHsrEventList = () => {
   const HsrUUID = useHsrUUID();
   const { hsrServerChosen } = useHsrServerChosen();
 
@@ -26,4 +26,4 @@ const useHsrEvent = () => {
   return { data, isError, error, isLoading, isFetching, refetch };
 };
 
-export default useHsrEvent;
+export default useHsrEventList;

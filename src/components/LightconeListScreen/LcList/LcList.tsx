@@ -11,7 +11,7 @@ import { getLcAttrData } from "../../../utils/calculator/getAttrData";
 import useLcSorting from "../../../redux/lightconeSorting/useLcSorting";
 import useLcSortingReverse from "../../../redux/lightconeSortingReverse/useLcSortingReverse";
 import useLcFilter from "../../../redux/lightconeFilter/useLcFilter";
-import useTextLanguage from "../../../context/TextLanguage/useTextLanguage";
+import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
 import useLightconeSearch from "../../../redux/lightconeSearch/useLightconeSearch";
 import Lightcone from "../../../../assets/images/images_map/lightcone";
 import { ExpoImage } from "../../../types/image";
@@ -27,9 +27,7 @@ type LcListItem = {
   hp: number;
 };
 
-
 export default function LcList() {
-  
   const navigation = useNavigation();
   const { language: textLanguage } = useTextLanguage();
 

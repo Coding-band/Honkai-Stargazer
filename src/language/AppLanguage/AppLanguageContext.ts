@@ -1,8 +1,8 @@
 import { createContext } from "react";
-import { AppLanguage } from "../../language/language.types";
+import { AppLanguage } from "../language.types";
 
 const AppLanguageContext = createContext<{
   language: AppLanguage;
   setLanguage?: (l: AppLanguage) => void;
-}>({ language: "zh_cn" });
+}>({ language: "zh_hk" });
 export default AppLanguageContext;

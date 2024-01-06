@@ -8,12 +8,12 @@ import PathMap from "../../../../../assets/images/images_map/path";
 import CombatTypeMap from "../../../../../assets/images/images_map/combatType";
 import { Path as PathType } from "../../../../types/path";
 import { CombatType as CombatTypeType } from "../../../../types/combatType";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
 export default function FilterAction() {
   const [open, setOpen] = useState(false);
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
 
   const { charFilter, charFilterSelected, setCharFilterSelected } =
     useCharFilter();

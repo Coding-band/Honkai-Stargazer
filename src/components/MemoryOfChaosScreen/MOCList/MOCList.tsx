@@ -6,7 +6,7 @@ import useMemoryOfChaos from "../../../hooks/hoyolab/useMemoryOfChaos";
 import { capitalize } from "lodash";
 import useHsrPlayerData from "../../../hooks/hoyolab/useHsrPlayerData";
 import { LOCALES } from "../../../../locales";
-import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { animated, useTrail } from "@react-spring/native";
 
 export default function MOCList() {

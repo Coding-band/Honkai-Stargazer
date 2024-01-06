@@ -3,7 +3,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 import useHsrUUID from "../../../../hooks/hoyolab/useHsrUUID";
 import Toast from "../../../../utils/toast/Toast";
 import * as Clipboard from "expo-clipboard";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
 export default function UUID() {

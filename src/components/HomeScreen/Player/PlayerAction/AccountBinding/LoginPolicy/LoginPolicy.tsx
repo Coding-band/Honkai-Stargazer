@@ -4,7 +4,7 @@ import Button from "../../../../../global/Button/Button";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import loginPolicyText from "../../../../../../../data/sg_data/login_policy.json";
 import TextButton from "../../../../../global/TextButton/TextButton";
-import useAppLanguage from "../../../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../../../locales";
 
 type Props = {

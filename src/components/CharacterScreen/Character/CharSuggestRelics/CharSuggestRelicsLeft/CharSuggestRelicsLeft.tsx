@@ -6,7 +6,7 @@ import LeftBtn from "../ui/LeftBtn";
 import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
 import { getRelicFullData } from "../../../../../utils/dataMap/getDataFromMap";
 import { map } from "lodash";
-import useTextLanguage from "../../../../../context/TextLanguage/useTextLanguage";
+import useTextLanguage from "../../../../../language/TextLanguage/useTextLanguage";
 import { RelicName } from "../../../../../types/relic";
 import Relic from "../../../../../../assets/images/images_map/relic";
 import SelectedIndex from "../ui/SelectedIndex";

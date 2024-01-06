@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import React from "react";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 import SettingGroup from "../../SettingGroup/SettingGroup";
 import SettingItem from "../../SettingGroup/SettingItem/SettingItem";

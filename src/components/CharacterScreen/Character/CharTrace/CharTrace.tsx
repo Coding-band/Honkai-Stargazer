@@ -11,7 +11,7 @@ import EruditionTraceTree from "./TraceTree/EruditionTraceTree";
 import AbundanceTraceTree from "./TraceTree/AbundanceTraceTree";
 import PreservationTraceTree from "./TraceTree/PreservationTraceTree";
 import useCharData from "../../../../context/CharacterData/hooks/useCharData";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
 export default React.memo(function CharTrace() {
@@ -21,7 +21,9 @@ export default React.memo(function CharTrace() {
 
   return (
     <View style={{ alignItems: "center" }}>
-      <CharPageHeading Icon={TreeStructure}>{LOCALES[language].TraceTree}</CharPageHeading>
+      <CharPageHeading Icon={TreeStructure}>
+        {LOCALES[language].TraceTree}
+      </CharPageHeading>
       {charPathId === "Hunt" && <HuntTraceTree />}
       {charPathId === "Destruction" && <DestructionTraceTree />}
       {charPathId === "Harmony" && <HarmonyTraceTree />}

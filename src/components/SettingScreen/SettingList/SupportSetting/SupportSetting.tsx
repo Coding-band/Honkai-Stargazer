@@ -7,7 +7,7 @@ import ReactNativeModal from "react-native-modal";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import Button from "../../../global/Button/Button";
 import TextButton from "../../../global/TextButton/TextButton";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 import Toast from "../../../../utils/toast/Toast";
 

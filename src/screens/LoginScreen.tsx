@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 import { WebView } from "react-native-webview";
 import Header from "../components/global/Header/Header";
@@ -14,7 +14,8 @@ import { ParamList } from "../types/navigation";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import useHsrServerChosen from "../redux/hsrServerChosen/useHsrServerChosen";
 import { isHoyolabPlatform } from "../utils/hoyolab/utils";
-import useAppLanguage from "../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../language/AppLanguage/useAppLanguage";
+import auth from "@react-native-firebase/auth";
 
 export default function LoginScreen() {
   const { language } = useAppLanguage();
@@ -24,7 +25,12 @@ export default function LoginScreen() {
   const serverId = route.params.serverId;
 
   const { setHoyolabCookie } = useHoyolabCookie();
-  const { setHsrServerChosen, hsrServerChosen } = useHsrServerChosen();
+  const { setHsrServerChosen } = useHsrServerChosen();
+
+  // firebase 登出
+  useEffect(() => {
+    auth().signOut();
+  }, []);
 
   const handleLogin = async () => {
     // hoyolab 或米游社所在伺服器判斷

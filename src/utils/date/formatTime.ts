@@ -4,6 +4,9 @@ import "dayjs/locale/zh-tw"; // 導入所需的語言包
 dayjs.locale("zh-tw"); // 設置本地化語言
 
 export function formatTimeDuration(second: number) {
+
+  console.log(second)
+
   const formattedTime = dayjs()
     .startOf("day")
     .add(second, "second")

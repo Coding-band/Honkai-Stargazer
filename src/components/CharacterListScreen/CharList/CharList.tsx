@@ -15,7 +15,7 @@ import useCharFilter from "../../../redux/characterFilter/useCharFilter";
 import { COMBATTYPES } from "../../../constant/combatType";
 import _ from "lodash";
 import { PATHS } from "../../../constant/path";
-import useTextLanguage from "../../../context/TextLanguage/useTextLanguage";
+import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
 import useCharacterSearch from "../../../redux/characterSearch/useCharacterSearch";
 import CharacterImage from "../../../../assets/images/images_map/chacracterImage";
 import { ExpoImage } from "../../../types/image";

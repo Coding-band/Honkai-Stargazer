@@ -14,8 +14,8 @@ import { Provider } from "react-redux";
 import { persistor, store } from "./src/redux/store";
 import { PersistGate } from "redux-persist/integration/react";
 import { RootSiblingParent } from "react-native-root-siblings";
-import TextLanguageProvider from "./src/context/TextLanguage/TextLanguageProvider";
-import AppLanguageProvider from "./src/context/AppLanguage/AppLanguageProvider";
+import TextLanguageProvider from "./src/language/TextLanguage/TextLanguageProvider";
+import AppLanguageProvider from "./src/language/AppLanguage/AppLanguageProvider";
 
 // import playground for testing
 // import "./playground";

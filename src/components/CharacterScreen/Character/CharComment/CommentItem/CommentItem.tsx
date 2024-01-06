@@ -3,6 +3,11 @@ import React, { useEffect, useState } from "react";
 import db from "../../../../../firebase/db";
 import Users from "../../../../../firebase/models/Users";
 import { Image } from "expo-image";
+import useUser from "../../../../../firebase/hooks/useUser";
+import useUserCharacters from "../../../../../firebase/hooks/useUserCharacters";
+import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
+import officalCharId from "../../../../../../map/character_offical_id_map";
+import { findKey } from "lodash";
 
 export default function CommentItem({
   user_id,
@@ -11,18 +16,17 @@ export default function CommentItem({
   user_id: string;
   content: string;
 }) {
-  const [username, setUsername] = useState("");
-  const [userAvatar, setUserAvatar] = useState("");
+  const charId = useCharId();
+  const charOfficalId = findKey(officalCharId, (v) => v === charId);
 
-  useEffect(() => {
-    db.Users.doc(user_id)
-      .get()
-      .then((data) => {
-        const user = data.data() as Users;
-        setUsername(user.name);
-        setUserAvatar(user.avatar_url);
-      });
-  }, [user_id]);
+  const { data: user } = useUser(user_id);
+  const username = user?.name;
+  const userAvatar = user?.avatar_url;
+  const { data: userCharsInfo } = useUserCharacters(user_id);
+  const userCharacters = userCharsInfo?.characters;
+  const userHasChar = !!userCharacters?.filter(
+    (char) => char.id.toString() === charOfficalId
+  ).length;
 
   return (
     <View style={{ flexDirection: "row", gap: 14 }}>
@@ -34,7 +38,19 @@ export default function CommentItem({
         }
       />
       <View style={{ gap: 2, flex: 1 }}>
-        <Text className="text-text text-[16px] font-[HY65]">{username}</Text>
+        <View style={{ flexDirection: "row", gap: 10, alignItems: "center" }}>
+          <Text className="text-text text-[16px] font-[HY65]">{username}</Text>
+          {userHasChar && (
+            <View
+              className="h-4 px-[5px] bg-[#F3F9FF] rounded-[34px]"
+              style={{ justifyContent: "center" }}
+            >
+              <Text className="text-[#393A5C] text-[10px] font-[HY65]">
+                {"已擁有"}
+              </Text>
+            </View>
+          )}
+        </View>
         <Text className="text-text2 text-[14px] font-[HY65]">{content}</Text>
       </View>
     </View>

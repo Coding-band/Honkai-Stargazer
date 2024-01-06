@@ -80,7 +80,7 @@ export default function CommentBox(props: Props) {
   });
 
   return (
-    <View>
+    <View className="">
       <GestureDetector gesture={gesture}>
         <Animated.View style={[animatedStyles]}>
           <View
@@ -106,7 +106,7 @@ export default function CommentBox(props: Props) {
         <KeyboardAvoidingView
           className="absolute bottom-0 w-full"
           behavior="position"
-          keyboardVerticalOffset={110}
+          keyboardVerticalOffset={96}
         >
           <Animated.View style={[animatedStyles3]}>
             {props.bottom}

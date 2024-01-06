@@ -49,7 +49,8 @@ export default function EventWebView({
                       }
                       img {
                         width:100%;
-                      } 
+                      }
+                   
                   </style>
                   ${`<h1 class="title">${title}</h1>`}
                   ${content}

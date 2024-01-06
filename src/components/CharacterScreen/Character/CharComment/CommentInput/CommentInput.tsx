@@ -1,16 +1,8 @@
-import {
-  TextInput,
-  KeyboardAvoidingView,
-  View,
-  Keyboard,
-  Platform,
-  TouchableOpacity,
-} from "react-native";
+import { TextInput, View, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import { cn } from "../../../../../utils/css/cn";
 import db from "../../../../../firebase/db";
 import firestore from "@react-native-firebase/firestore";
-import useHsrUUID from "../../../../../hooks/hoyolab/useHsrUUID";
 import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
 import { findKey } from "lodash";
 import officalCharId from "../../../../../../map/character_offical_id_map";
@@ -39,6 +31,7 @@ export default function CommentInput() {
             comments: firestore.FieldValue.arrayUnion({
               user_id: uid,
               content: input,
+              createdAt: firestore.Timestamp.now(),
             }),
           });
         } else {
@@ -46,6 +39,7 @@ export default function CommentInput() {
             comments: firestore.FieldValue.arrayUnion({
               user_id: uid,
               content: input,
+              createdAt: firestore.Timestamp.now(),
             }),
           });
         }

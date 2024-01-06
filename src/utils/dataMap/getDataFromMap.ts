@@ -6,12 +6,17 @@ import { CharacterName } from "../../types/character";
 import { LightconeName } from "../../types/lightcone";
 import { TextLanguage } from "../../language/language.types";
 import { RelicName } from "../../types/relic";
+import characterList from "../../../data/character_data/character_list.json";
 
 export function getCharFullData(
   charId: CharacterName,
   language: TextLanguage = "zh_cn"
 ) {
   return charDataMap[language][charId];
+}
+
+export function getCharJsonData(charId: CharacterName) {
+  return characterList.filter((char) => char.name === charId)[0];
 }
 
 export function getLcFullData(

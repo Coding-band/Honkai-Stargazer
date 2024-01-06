@@ -1,111 +1,91 @@
 import { View } from "react-native";
 import React from "react";
-import CharPageHeading from "../../../global/PageHeading/PageHeading";
-import { Person } from "phosphor-react-native";
-import CharSuggestTeamCard from "./CharSuggestTeamCard/CharSuggestTeamCard";
-<<<<<<< HEAD
-
-import characterList from "../../../../../data/character_data/character_list.json";
-import characterListMap from "../../../../../map/character_data_map";
-import * as imagesMap from "../../../../../assets/images/images_map";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
-
-const testData = [
-  [
-    {
-      id: "Jing Yuan",
-      rare: characterList.filter((char) => char.name === "Jing Yuan")[0].rare,
-      name: characterListMap.zh_cn["Jing Yuan"].name,
-      image: imagesMap.Chacracter["Jing Yuan"].icon,
-      path: characterList.filter((char) => char.name === "Jing Yuan")[0].path,
-      combatType: characterList.filter((char) => char.name === "Jing Yuan")[0]
-        .element,
-    },
-    {
-      id: "Hook",
-      rare: characterList.filter((char) => char.name === "Hook")[0].rare,
-      name: characterListMap.zh_cn["Hook"].name,
-      image: imagesMap.Chacracter["Hook"].icon,
-      path: characterList.filter((char) => char.name === "Hook")[0].path,
-      combatType: characterList.filter((char) => char.name === "Hook")[0]
-        .element,
-    },
-    {
-      id: "Pela",
-      rare: characterList.filter((char) => char.name === "Pela")[0].rare,
-      name: characterListMap.zh_cn["Pela"].name,
-      image: imagesMap.Chacracter["Pela"].icon,
-      path: characterList.filter((char) => char.name === "Pela")[0].path,
-      combatType: characterList.filter((char) => char.name === "Pela")[0]
-        .element,
-    },
-    {
-      id: "Seele",
-      rare: characterList.filter((char) => char.name === "Seele")[0].rare,
-      name: characterListMap.zh_cn["Seele"].name,
-      image: imagesMap.Chacracter["Seele"].icon,
-      path: characterList.filter((char) => char.name === "Seele")[0].path,
-      combatType: characterList.filter((char) => char.name === "Seele")[0]
-        .element,
-    },
-  ],
-  [
-    {
-      id: "March 7th",
-      rare: characterList.filter((char) => char.name === "March 7th")[0].rare,
-      name: characterListMap.zh_cn["March 7th"].name,
-      image: imagesMap.Chacracter["March 7th"].icon,
-      path: characterList.filter((char) => char.name === "March 7th")[0].path,
-      combatType: characterList.filter((char) => char.name === "March 7th")[0]
-        .element,
-    },
-    {
-      id: "Serval",
-      rare: characterList.filter((char) => char.name === "Serval")[0].rare,
-      name: characterListMap.zh_cn["Serval"].name,
-      image: imagesMap.Chacracter["Serval"].icon,
-      path: characterList.filter((char) => char.name === "Serval")[0].path,
-      combatType: characterList.filter((char) => char.name === "Serval")[0]
-        .element,
-    },
-    {
-      id: "Clara",
-      rare: characterList.filter((char) => char.name === "Clara")[0].rare,
-      name: characterListMap.zh_cn["Clara"].name,
-      image: imagesMap.Chacracter["Clara"].icon,
-      path: characterList.filter((char) => char.name === "Clara")[0].path,
-      combatType: characterList.filter((char) => char.name === "Clara")[0]
-        .element,
-    },
-    {
-      id: "Bailu",
-      rare: characterList.filter((char) => char.name === "Bailu")[0].rare,
-      name: characterListMap.zh_cn["Bailu"].name,
-      image: imagesMap.Chacracter["Bailu"].icon,
-      path: characterList.filter((char) => char.name === "Bailu")[0].path,
-      combatType: characterList.filter((char) => char.name === "Bailu")[0]
-        .element,
-    },
-  ],
-];
-
-export default React.memo(function CharSuggestTeam() {
-  const {language} = useAppLanguage();
-=======
+import CharPageHeading from "../../../../components/global/PageHeading/PageHeading";
 import useCharId from "../../../../context/CharacterData/hooks/useCharId";
+import { Person } from "phosphor-react-native";
+import CharacterName from "../../../../../map/character_name_map";
 import charAdviceMap from "../../../../../map/character_advice_map";
+import CharSuggestTeamCard from "./CharSuggestTeamCard/CharSuggestTeamCard";
+import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
+import { CharacterName as CharNameType } from "../../../../types/character";
+import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
+import {
+  getCharFullData,
+  getCharJsonData,
+} from "../../../../utils/dataMap/getDataFromMap";
 
 export default React.memo(function CharSuggestTeam() {
+  const { language: textLanguage } = useTextLanguage();
+  const { language } = useAppLanguage();
+
   const charId = useCharId();
   // @ts-ignore
-  const suggestTeamsData = charAdviceMap[charId]?.teams;
+  const suggestTeamsData = charAdviceMap[charId]?.teams.map((team) => {
+    // @ts-ignore
+    const teamCharId1 = CharacterName[team.member_1] as CharNameType;
+    // @ts-ignore
+    const teamCharId2 = CharacterName[team.member_2] as CharNameType;
+    // @ts-ignore
+    const teamCharId3 = CharacterName[team.member_3] as CharNameType;
+    // @ts-ignore
+    const teamCharId4 = CharacterName[team.member_4] as CharNameType;
 
+    const charJsonData1 = getCharJsonData(teamCharId1);
+    const charJsonData2 = getCharJsonData(teamCharId2);
+    const charJsonData3 = getCharJsonData(teamCharId3);
+    const charJsonData4 = getCharJsonData(teamCharId4);
 
->>>>>>> 884dc9966fac382282b4c53713889206665746a6
+    const charFullData1 = getCharFullData(teamCharId1, textLanguage);
+    const charFullData2 = getCharFullData(teamCharId2, textLanguage);
+    const charFullData3 = getCharFullData(teamCharId3, textLanguage);
+    const charFullData4 = getCharFullData(teamCharId4, textLanguage);
+
+    return {
+      name: team.name,
+      team: [
+        {
+          id: teamCharId1,
+          image: CharacterImage[teamCharId1].icon,
+          rare: charJsonData1.rare,
+          name: charFullData1.name,
+          path: charJsonData1.path,
+          combatType: charJsonData1.element,
+        },
+        {
+          id: teamCharId2,
+          image: CharacterImage[teamCharId2].icon,
+          rare: charJsonData2.rare,
+          name: charFullData2.name,
+          path: charJsonData2.path,
+          combatType: charJsonData2.element,
+        },
+        {
+          id: teamCharId3,
+          image: CharacterImage[teamCharId3].icon,
+          rare: charJsonData3.rare,
+          name: charFullData3.name,
+          path: charJsonData3.path,
+          combatType: charJsonData3.element,
+        },
+        {
+          id: teamCharId4,
+          image: CharacterImage[teamCharId4].icon,
+          rare: charJsonData4.rare,
+          name: charFullData4.name,
+          path: charJsonData4.path,
+          combatType: charJsonData4.element,
+        },
+      ],
+    };
+  });
+
   return (
     <View style={{ alignItems: "center" }}>
-      <CharPageHeading Icon={Person}>{LOCALES[language].AdviceTeams}</CharPageHeading>
+      <CharPageHeading Icon={Person}>
+        {LOCALES[language].AdviceTeams}
+      </CharPageHeading>
       <View
         style={{
           flexDirection: "row",
@@ -113,9 +93,9 @@ export default React.memo(function CharSuggestTeam() {
           rowGap: 16,
         }}
       >
-        {testData.map((team, i) => (
+        {suggestTeamsData.map((team: any, i: number) => (
           // @ts-ignore
-          <CharSuggestTeamCard key={i} team={team} />
+          <CharSuggestTeamCard key={i} team={team.team} name={team.name} />
         ))}
       </View>
     </View>

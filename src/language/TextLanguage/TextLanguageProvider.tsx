@@ -1,6 +1,6 @@
 import React from "react";
 import TextLanguageContext from "./TextLanguageContext";
-import { TextLanguage } from "../../language/language.types";
+import { TextLanguage } from "../language.types";
 import useLocalState from "../../hooks/useLocalState";
 
 export default function TextLanguageProvider({ children }: { children: any }) {

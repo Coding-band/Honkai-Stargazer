@@ -7,7 +7,7 @@ import { SCREENS } from "../constant/screens";
 import CharList from "../components/CharacterListScreen/CharList/CharList";
 import WallPaper from "../components/global/WallPaper/WallPaper";
 import CharAction from "../components/CharacterListScreen/CharAction/CharAction";
-import useAppLanguage from "../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 
 export default function CharacterListScreen() {
   const { language } = useAppLanguage();

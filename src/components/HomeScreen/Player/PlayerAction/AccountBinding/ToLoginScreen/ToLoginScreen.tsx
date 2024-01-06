@@ -3,9 +3,12 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../../../constant/screens";
 import TextButton from "../../../../../global/TextButton/TextButton";
-import useAppLanguage from "../../../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../../../locales";
-import { hsrPlatform, hsrServerId } from "../../../../../../utils/hoyolab/servers/hsrServer.types";
+import {
+  hsrPlatform,
+  hsrServerId,
+} from "../../../../../../utils/hoyolab/servers/hsrServer.types";
 
 type Server = {
   id: hsrServerId;

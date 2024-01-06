@@ -4,7 +4,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import * as Clipboard from "expo-clipboard";
 import Toast from "../../../../utils/toast/Toast";
 import { LOCALES } from "../../../../../locales";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { ShareNetwork } from "phosphor-react-native";
 import { Share } from "react-native";
 

@@ -8,12 +8,10 @@ import { SCREENS } from "../constant/screens";
 import WallPaper from "../components/global/WallPaper/WallPaper";
 import RelicList from "../components/RelicListScreen/RelicList/RelicList";
 import RelicAction from "../components/RelicListScreen/RelicAction/RelicAction";
-import useAppLanguage from "../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 
 export default function RelicListScreen() {
-
   const { language } = useAppLanguage();
-
 
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>

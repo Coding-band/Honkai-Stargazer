@@ -1,7 +1,7 @@
 import { View, Text, ScrollView } from "react-native";
 import React, { useEffect, useMemo, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import useTextLanguage from "../../../context/TextLanguage/useTextLanguage";
+import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
 import { RelicName } from "../../../types/relic";
 import relicList from "../../../../data/relic_data/relic_list.json";
 import Relic from "../../../../assets/images/images_map/relic";

@@ -7,7 +7,7 @@ import { SCREENS } from "../constant/screens";
 import LcList from "../components/LightconeListScreen/LcList/LcList";
 import LcAction from "../components/LightconeListScreen/LcAction/LcAction";
 import WallPaper from "../components/global/WallPaper/WallPaper";
-import useAppLanguage from "../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 
 export default function LightconeListScreen() {
   const { language } = useAppLanguage();

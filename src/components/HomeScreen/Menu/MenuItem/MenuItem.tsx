@@ -61,7 +61,7 @@ export default function MenuItem({
                     {Icon && <Icon weight="fill" size={32} color="white" />}
                     <Text
                       style={{ fontFamily: "HY65" }}
-                      className="text-[14px] text-text2 text-center"
+                      className="text-[13px] text-text2 text-center"
                     >
                       {children}
                     </Text>

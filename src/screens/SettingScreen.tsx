@@ -6,11 +6,9 @@ import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import WallPaper from "../components/global/WallPaper/WallPaper";
 import SettingList from "../components/SettingScreen/SettingList/SettingList";
-import useAppLanguage from "../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 
 export default function SettingScreen() {
-
-
   const { language } = useAppLanguage();
 
   return (

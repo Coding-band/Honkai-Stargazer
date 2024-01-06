@@ -5,15 +5,17 @@ import { ChatCircle } from "phosphor-react-native";
 import useRelicData from "../../../../context/RelicData/hooks/useRelicData";
 import { map } from "lodash";
 import RelicDetailsCard from "./RelicDetailsCard/CharSuggestLightConeCard";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
 export default function RelicDetails() {
   const { relicData, relicFullData } = useRelicData();
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
   return (
     <View style={{ alignItems: "center" }}>
-      <PageHeading Icon={ChatCircle}>{LOCALES[language].RelicDetail}</PageHeading>
+      <PageHeading Icon={ChatCircle}>
+        {LOCALES[language].RelicDetail}
+      </PageHeading>
       <ScrollView horizontal>
         <View
           style={{

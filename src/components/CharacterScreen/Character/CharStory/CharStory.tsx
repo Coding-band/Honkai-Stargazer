@@ -6,16 +6,18 @@ import CharacterContext from "../../../../context/CharacterData/CharacterContext
 import { HtmlText } from "@e-mine/react-native-html-text";
 import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
 import useCharData from "../../../../context/CharacterData/hooks/useCharData";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
 export default React.memo(function CharStory() {
   const { charFullData } = useCharData();
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
 
   return (
     <View>
-      <CharPageHeading Icon={ChatsCircle}>{LOCALES[language].CharacterStory}</CharPageHeading>
+      <CharPageHeading Icon={ChatsCircle}>
+        {LOCALES[language].CharacterStory}
+      </CharPageHeading>
       <HtmlText style={{ lineHeight: 24, color: "white", fontFamily: "HY65" }}>
         {charFullData.storyItems[0].text || ""}
       </HtmlText>

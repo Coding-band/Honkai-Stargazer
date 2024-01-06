@@ -2,7 +2,7 @@ import React from "react";
 import { Linking, Pressable, SafeAreaView, Text, View } from "react-native";
 import { cn } from "../../../utils/css/cn";
 import { Image } from "expo-image";
-import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
 import TypingText from "../../global/TypingText/TypingText";
 

@@ -2,7 +2,7 @@ import React from "react";
 import SettingGroup from "../../SettingGroup/SettingGroup";
 import SettingItem from "../../SettingGroup/SettingItem/SettingItem";
 import Toast from "../../../../utils/toast/Toast";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 import formatLocale from "../../../../utils/format/formatLocale";
 import useHsrUUID from "../../../../hooks/hoyolab/useHsrUUID";

@@ -7,7 +7,7 @@ import { useClickOutside } from "react-native-click-outside";
 import AccountBinding from "./AccountBinding/AccountBinding";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../constant/screens";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 import Toast from "../../../../utils/toast/Toast";
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import RelicContext from "./RelicContext";
 import { RelicName } from "../../types/relic";
 import { getRelicFullData } from "../../utils/dataMap/getDataFromMap";
-import useTextLanguage from "../TextLanguage/useTextLanguage";
+import useTextLanguage from "../../language/TextLanguage/useTextLanguage";
 import RelicMap from "../../../assets/images/images_map/relic";
 import { RelicData } from "./RelicData.types";
 

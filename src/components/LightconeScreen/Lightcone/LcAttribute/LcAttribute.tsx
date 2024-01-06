@@ -14,7 +14,7 @@ import {
 import { map } from "lodash";
 import MaterialCard from "../../../global/MaterialCard/MaterialCard";
 import Material from "../../../../../assets/images/images_map/material";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
 const HPIcon = require("../../../../../assets/icons/HP.png");

@@ -15,7 +15,7 @@ import { SCREENS } from "../../../constant/screens";
 import useHsrNote from "../../../hooks/hoyolab/useHsrNote";
 import _ from "lodash";
 import { formatTimePoint } from "../../../utils/date/formatTime";
-import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
 import Toast from "../../../utils/toast/Toast";
 import formatNumber from "../../../utils/format/formatNumber";
@@ -182,7 +182,9 @@ export default function Menu() {
         setEpeditionIsCheck(true);
       },
       hasDot:
-        !epeditionIsCheck && playerNote.data?.accepted_epedition_num === 0,
+        !epeditionIsCheck &&
+        playerNote.data?.expeditions.filter((e: any) => e.status === "Ongoing")
+          .length === 0,
     },
     // 地圖
     {

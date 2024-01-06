@@ -6,12 +6,12 @@ import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
 import ToLoginScreen from "./ToLoginScreen/ToLoginScreen";
 import ManualEnterCookie from "./ManualEnterCookie/ManualEnterCookie";
 import useIsAcceptBindingPolicy from "../../../../../redux/isAcceptBindingPolicy/useIsAcceptBindingPolicy";
-import useAppLanguage from "../../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../../locales";
 
 export default function AccountBinding() {
   const [isVisable, setIsVisable] = useState(true);
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
 
   const { isAcceptBindingPolicy, setIsAcceptBindingPolicy } =
     useIsAcceptBindingPolicy();
@@ -38,7 +38,11 @@ export default function AccountBinding() {
           onClose={() => {
             setIsVisable(false);
           }}
-          title={isAcceptBindingPolicy ? LOCALES[language].SelectServerTitle : LOCALES[language].RemarksInLogin}
+          title={
+            isAcceptBindingPolicy
+              ? LOCALES[language].SelectServerTitle
+              : LOCALES[language].RemarksInLogin
+          }
           content={
             <View className="p-4">
               {isAcceptBindingPolicy ? (

@@ -7,7 +7,7 @@ import { SCREENS } from "../../../../constant/screens";
 import officalCharId from "../../../../../map/character_offical_id_map";
 import { CombatType } from "../../../../types/combatType";
 import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 import formatLocale from "../../../../utils/format/formatLocale";
 

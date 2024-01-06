@@ -6,11 +6,10 @@ import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import EpdtList from "../components/ExpeditionScreen/EpdtList/EpdtList";
 import WallPaper from "../components/global/WallPaper/WallPaper";
-import useAppLanguage from "../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 
 export default function ExpeditionScreen() {
-
-  const {language} = useAppLanguage();
+  const { language } = useAppLanguage();
 
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>

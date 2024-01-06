@@ -27,6 +27,7 @@ export default function CodeList() {
         refreshControl={
           <RefreshControl refreshing={false} onRefresh={onRefresh} />
         }
+        scrollEnabled={false}
       >
         <View style={{ gap: 16, alignItems: "center" }} className="mb-16">
           {codes.map((code) => (

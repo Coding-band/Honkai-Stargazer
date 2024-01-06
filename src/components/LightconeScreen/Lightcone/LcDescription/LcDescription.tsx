@@ -8,7 +8,7 @@ import { getLcFullData } from "../../../../utils/dataMap/getDataFromMap";
 import formatDesc from "../../../../utils/format/formatDesc";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import useLcData from "../../../../context/LightconeData/hooks/useLcData";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
 export default function LcDescription() {

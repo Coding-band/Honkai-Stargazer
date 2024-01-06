@@ -10,7 +10,7 @@ import Eidolon5 from "./Eidolons/Eidolon5";
 import Eidolon6 from "./Eidolons/Eidolon6";
 import EidolonPopUp from "./EidolonPopUp/EidolonPopUp";
 import { useClickOutside } from "react-native-click-outside";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
 export default React.memo(function CharEidolon() {
@@ -30,7 +30,9 @@ export default React.memo(function CharEidolon() {
         }}
         style={{ alignItems: "center" }}
       >
-        <CharPageHeading Icon={StarHalf}>{LOCALES[language].Eidolon}</CharPageHeading>
+        <CharPageHeading Icon={StarHalf}>
+          {LOCALES[language].Eidolon}
+        </CharPageHeading>
         <View className="w-[350px] h-[280px]">
           <Eidolon1
             selected={selectedEidolon === 1}

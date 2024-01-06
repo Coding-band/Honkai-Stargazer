@@ -8,8 +8,11 @@ import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../../constant/screens";
 import { Path } from "../../../../../types/path";
 import { CombatType } from "../../../../../types/combatType";
+import { LOCALES } from "../../../../../../locales";
+import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
 
 type Props = {
+  name: string;
   team: {
     image: ExpoImage;
     rare: number;
@@ -21,6 +24,7 @@ type Props = {
 };
 
 export default React.memo(function CharSuggestTeamCard(props: Props) {
+  const { language } = useAppLanguage();
   const navigation = useNavigation();
 
   const [isSelected, setIsSelected] = useState(false);
@@ -81,10 +85,7 @@ export default React.memo(function CharSuggestTeamCard(props: Props) {
               <CharCard onPress={handleCharPress} key={i} {...char} />
             ))}
           </View>
-          <PopUpCard
-            title="狐鸭三拐一"
-            content="停云、布洛妮娅双同协的增益，给予希儿很强的启动能力、高斩杀线的收割能力、以及高额的爆发能力。而符玄保证队伍生存的同时，也能提供一定的辅助能力。"
-          />
+          <PopUpCard title={props.name} content={LOCALES[language].NoDataYet} />
         </Pressable>
       </Modal>
     </View>

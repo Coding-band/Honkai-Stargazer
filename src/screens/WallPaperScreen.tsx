@@ -5,7 +5,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import WallPaperChanger from "../components/WallPaperScreen/WallPaperChanger";
-import useAppLanguage from "../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 
 export default function WallPaperScreen() {
   const { language } = useAppLanguage();

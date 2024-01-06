@@ -7,7 +7,7 @@ import LanguageSetting from "./LanguageSetting/LanguageSetting";
 import PersonalSetting from "./PersonalSetting/PersonalSetting";
 import NotificationSetting from "./NotificationSetting/NotificationSetting";
 import SupportSetting from "./SupportSetting/SupportSetting";
-import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
 import SpecialThanksSetting from "./SpecialThanksSetting/SpecialThanksSetting";
 import DevelopmentSetting from "./DevelopmentSetting/DevelopmentSetting";

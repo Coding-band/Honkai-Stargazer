@@ -7,7 +7,7 @@ import PlayerAvator from "./PlayerAvator/PlayerAvator";
 import { cn } from "../../../utils/css/cn";
 import PlayerCharacter from "./PlayerCharacter/PlayerCharacter";
 import useHsrPlayerData from "../../../hooks/hoyolab/useHsrPlayerData";
-import useAppLanguage from "../../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
 import useIsAdmin from "../../../firebase/hooks/useIsAdmin";
 import useIsTester from "../../../firebase/hooks/useIsTester";
@@ -52,8 +52,7 @@ export default function Player() {
             <View>
               <Text className="font-[HY75] text-[#DBC291] text-[14px] font-medium">
                 {LOCALES[language].PlayerLevel}{" "}
-                {playerLevel ||
-                  ": " + LOCALES[language].NoDataYet + "，請先登入！"}
+                {playerLevel || ": " + LOCALES[language].NoDataYet}
               </Text>
             </View>
           </View>

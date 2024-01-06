@@ -1,8 +1,8 @@
 import React from "react";
 import SettingGroup from "../../SettingGroup/SettingGroup";
 import SettingItem from "../../SettingGroup/SettingItem/SettingItem";
-import useTextLanguage from "../../../../context/TextLanguage/useTextLanguage";
-import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
+import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import {
   AppLanguage,
   Language,

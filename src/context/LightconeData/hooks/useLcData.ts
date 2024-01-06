@@ -1,5 +1,5 @@
 import { useContext, useMemo } from "react";
-import useTextLanguage from "../../TextLanguage/useTextLanguage";
+import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
 import { getLcFullData } from "../../../utils/dataMap/getDataFromMap";
 import LightconeContext from "../LightconeContext";
 

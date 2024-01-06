@@ -5,10 +5,9 @@ import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import { ImageBackground } from "expo-image";
 import MOCList from "../components/MemoryOfChaosScreen/MOCList/MOCList";
-import useAppLanguage from "../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 
 export default function MemoryOfChaosScreen() {
-  
   const { language } = useAppLanguage();
 
   const [showMain, setShowMain] = useState(false);

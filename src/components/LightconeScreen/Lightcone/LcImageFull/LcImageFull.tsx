@@ -31,7 +31,6 @@ export default function LcImageFull(props: Props) {
       };
     }
   });
-  
 
   return (
     <Animated.View style={imageAnimatedStyles}>
@@ -57,6 +56,7 @@ export default function LcImageFull(props: Props) {
           className="z-40 absolute w-full h-full"
           source={lcData?.imageFull}
           contentFit={"contain"}
+          style={{ transform: [{ scale: 1.05 }] }}
         />
       </View>
     </Animated.View>

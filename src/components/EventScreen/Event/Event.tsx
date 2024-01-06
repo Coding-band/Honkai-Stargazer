@@ -7,13 +7,16 @@ import useHsrEvent from "../../../hooks/hoyolab/useHsrEvent";
 import { RefreshControl } from "react-native";
 import EventWebView from "./EventWebView/EventWebView";
 import Animated from "react-native-reanimated";
+import { cn } from "../../../utils/css/cn";
 
 export default function Event() {
   const route = useRoute<RouteProp<ParamList, "Event">>();
   const eventId = route.params.id;
+  const eventType = eventId.toString().startsWith("3") ? "pic_list" : "list";
 
   const { data: hsrEvents, refetch: hsrEventsRefetch } = useHsrEvent();
-  const hsrEventsList = hsrEvents?.data?.list;
+  const hsrEventsList =
+    hsrEvents?.data?.[eventType === "pic_list" ? "pic_list" : "list"];
   const hsrEvent = hsrEventsList.find((event: any) => event.ann_id === eventId);
 
   const onRefresh = React.useCallback(() => {
@@ -21,23 +24,29 @@ export default function Event() {
   }, []);
 
   return (
-    <View style={{ width: "100%" }} className="z-30">
-      <ScrollView
-        className="w-full mt-[110px]"
-        refreshControl={
-          <RefreshControl refreshing={false} onRefresh={onRefresh} />
-        }
+    <ScrollView className="z-30 py-[110px] pb-0">
+      <View
+        style={{
+          flexDirection: "row",
+          flexWrap: "wrap",
+          gap: 11,
+          justifyContent: "center",
+        }}
+        className="pb-12"
       >
         <View style={{ gap: 16, alignItems: "center" }} className="mb-16">
           <AnimatedImage
-            className="w-screen aspect-[360/130]"
-            source={hsrEvent?.banner}
+            className={cn(
+              "w-screen",
+              eventType === "pic_list" ? "aspect-[360/110]" : "aspect-[360/130]"
+            )}
+            source={hsrEvent?.[eventType === "pic_list" ? "img" : "banner"]}
             contentFit="contain"
           />
           <EventWebView title={hsrEvent?.title} content={hsrEvent?.content} />
         </View>
-      </ScrollView>
-    </View>
+      </View>
+    </ScrollView>
   );
 }
 

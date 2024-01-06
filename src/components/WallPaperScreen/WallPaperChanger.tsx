@@ -10,7 +10,7 @@ import Toast from "../../utils/toast/Toast";
 import * as MediaLibrary from "expo-media-library";
 import useHsrPlayerName from "../../hooks/hoyolab/useHsrPlayerName";
 import { LOCALES } from "../../../locales";
-import useAppLanguage from "../../context/AppLanguage/useAppLanguage";
+import useAppLanguage from "../../language/AppLanguage/useAppLanguage";
 
 export default function WallPaperChanger() {
   const navigation = useNavigation();
