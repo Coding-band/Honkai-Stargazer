@@ -8,23 +8,7 @@ import {
 } from "react-native";
 import { cn } from "../../../utils/css/cn";
 import MenuItem from "./MenuItem/MenuItem";
-import {
-  BaseballCap,
-  Books,
-  Calendar,
-  ClockClockwise,
-  Gauge,
-  MapTrifold,
-  MathOperations,
-  MedalMilitary,
-  Moon,
-  Planet,
-  ShootingStar,
-  StarOfDavid,
-  Sword,
-  Ticket,
-  Users,
-} from "phosphor-react-native";
+import { Calendar, Moon, Planet } from "phosphor-react-native";
 import MenuItemLarge from "./MenuItemLarge/MenuItemLarge";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../constant/screens";
@@ -235,7 +219,7 @@ export default function Menu() {
   return (
     <View
       style={{
-        height: Dimensions.get("screen").height - 350,
+        height: Dimensions.get("screen").height - 328,
       }}
     >
       <ScrollView>
