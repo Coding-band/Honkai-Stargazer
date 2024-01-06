@@ -143,6 +143,7 @@ export default function Menu() {
       },
       hasDot:
         !staminaIsCheck &&
+        playerNote.data?.current_stamina &&
         playerNote.data?.current_stamina === playerNote.data?.max_stamina,
     },
     // 每日實訓

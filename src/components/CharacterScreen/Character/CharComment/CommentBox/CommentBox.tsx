@@ -1,4 +1,4 @@
-import { View, Text, KeyboardAvoidingView } from "react-native";
+import { View, Text, KeyboardAvoidingView, Platform } from "react-native";
 import React, { useEffect } from "react";
 import Animated, {
   useAnimatedStyle,
@@ -31,7 +31,7 @@ export default function CommentBox(props: Props) {
   const { data: charComments } = useCharComments(officalId || "");
 
   // animation
-  const hieght = useSharedValue(Dimensions.get("window").height - 160);
+  const hieght = useSharedValue(Dimensions.get("screen").height - 240);
   const isPressed = useSharedValue(false);
   const translation = useSharedValue({ x: 0, y: 0 });
 
@@ -39,7 +39,7 @@ export default function CommentBox(props: Props) {
     if (translation.value.y < 0) {
       props.containerRef?.current?.scrollTo({
         x: 0,
-        y: 3000,
+        y: 3400,
         animated: true,
       });
     }
@@ -98,7 +98,7 @@ export default function CommentBox(props: Props) {
         </Animated.View>
       </GestureDetector>
       <Animated.ScrollView nestedScrollEnabled style={[animatedStyles2]}>
-        <Animated.View className="w-full mb-28 " style={[{ gap: 24 }]}>
+        <Animated.View className="w-full mb-28" style={[{ gap: 24 }]}>
           {props.children}
         </Animated.View>
       </Animated.ScrollView>

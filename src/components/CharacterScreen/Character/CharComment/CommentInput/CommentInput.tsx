@@ -4,6 +4,7 @@ import {
   View,
   Keyboard,
   Platform,
+  TouchableOpacity,
 } from "react-native";
 import React, { useState } from "react";
 import { cn } from "../../../../../utils/css/cn";
@@ -17,6 +18,7 @@ import useCharComments from "../../../../../firebase/hooks/useCharComments";
 import { BlurView } from "expo-blur";
 import useFirebaseUid from "../../../../../firebase/hooks/useFirebaseUid";
 import Toast from "../../../../../utils/toast/Toast";
+import { Image } from "expo-image";
 
 export default function CommentInput() {
   const uid = useFirebaseUid();
@@ -52,12 +54,13 @@ export default function CommentInput() {
           Toast("留言成功！");
           refetch();
         }, 500);
-      } catch (e) {
+      } catch (e: any) {
         Toast("留言失敗，錯誤訊息：" + e.message);
       }
-
-      setInput("");
+    } else {
+      Toast("您尚未登入！");
     }
+    setInput("");
   };
 
   return (
@@ -76,9 +79,19 @@ export default function CommentInput() {
             onSubmitEditing={handleSubmit}
             placeholder="幫幫我 史瓦羅先生！"
             placeholderTextColor="gray"
+            keyboardType="twitter"
           />
         </BlurView>
       </View>
     </View>
   );
 }
+
+const SendBtn = () => (
+  <TouchableOpacity
+    onPress={() => {}}
+    className="w-8 h-8 absolute right-2 top-[7px]"
+  >
+    <Image source={require("./icons/SendBtn.svg")} className="w-8 h-8" />
+  </TouchableOpacity>
+);
