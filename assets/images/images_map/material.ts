@@ -1,4 +1,8 @@
 const Material = {
+	//Lightcone EXP
+	694487 : require("../../images/material_icon/material_refined_aether.webp"),
+	694488 : require("../../images/material_icon/material_condensed_aether.webp"),
+	694489 : require("../../images/material_icon/material_sparse_aether.webp"),
 	//add in 1.6.0
 	470781 : require("../../images/material_icon/material_past_evils_of_the_borehole_planet_disaster.webp"),
 	
