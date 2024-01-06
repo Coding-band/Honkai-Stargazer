@@ -1,4 +1,4 @@
-import { View, Text, Dimensions } from "react-native";
+import { View, Text, Dimensions, Platform } from "react-native";
 import React, { useState } from "react";
 import WebView from "react-native-webview";
 
@@ -12,10 +12,11 @@ export default function EventWebView({
   const [webviewHeight, setWebviewHeight] = useState(0);
   return (
     <WebView
+      bounces={false}
       automaticallyAdjustContentInsets={false}
       scrollEnabled={false}
       onMessage={(event: any) => {
-        setWebviewHeight(parseInt(event.nativeEvent.data) / 2.7);
+        setWebviewHeight(parseInt(event.nativeEvent.data));
       }}
       javaScriptEnabled={true}
       injectedJavaScript={`
@@ -33,7 +34,9 @@ export default function EventWebView({
                         margin: 0;
                         padding: 0;
                         color: white;
-                        font-size: 48px;
+                        font-size: ${
+                          Platform.OS === "android" ? "48px" : "24px"
+                        };
                       }
                       .title {
                         font-size: 150%;

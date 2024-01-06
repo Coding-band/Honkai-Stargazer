@@ -52,7 +52,8 @@ export default function Player() {
             <View>
               <Text className="font-[HY75] text-[#DBC291] text-[14px] font-medium">
                 {LOCALES[language].PlayerLevel}{" "}
-                {playerLevel || ": " + LOCALES[language].NoDataYet}
+                {playerLevel ||
+                  ": " + LOCALES[language].NoDataYet + "，請先登入！"}
               </Text>
             </View>
           </View>

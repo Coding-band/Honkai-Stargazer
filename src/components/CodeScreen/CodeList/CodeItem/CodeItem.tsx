@@ -5,8 +5,8 @@ import * as Clipboard from "expo-clipboard";
 import Toast from "../../../../utils/toast/Toast";
 import { LOCALES } from "../../../../../locales";
 import useAppLanguage from "../../../../context/AppLanguage/useAppLanguage";
-import * as Sharing from "expo-sharing";
 import { ShareNetwork } from "phosphor-react-native";
+import { Share } from "react-native";
 
 type Props = {
   code: string;
@@ -27,9 +27,16 @@ export default function CodeItem(props: Props) {
     }
   }, [props.code]);
 
-//   const handleShareCope = async () => {
-//     const isAvailable = await Sharing.isAvailableAsync();
-//   };
+  const handleShareCope = async () => {
+    try {
+      await Share.share({
+        message: props.code,
+      });
+      Toast("分享成功！");
+    } catch (error: any) {
+      Toast("分享失敗，錯誤訊息：" + error.message);
+    }
+  };
 
   return (
     <TouchableOpacity
@@ -79,7 +86,10 @@ export default function CodeItem(props: Props) {
             >
               {props.code}
             </Text>
-            <TouchableOpacity className="w-9 h-9 rounded-full bg-white justify-center items-center">
+            <TouchableOpacity
+              className="w-9 h-9 rounded-full bg-white justify-center items-center"
+              onPress={handleShareCope}
+            >
               <ShareNetwork weight="fill" />
             </TouchableOpacity>
           </View>

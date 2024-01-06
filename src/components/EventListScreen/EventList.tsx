@@ -47,12 +47,10 @@ export default function EventList() {
                 navigation.push(SCREENS.EventPage.id, { id: event?.ann_id });
               }}
             >
-              <View className="w-full">
-                <AnimatedImage
-                  className="w-full h-[130px]"
-                  source={event?.banner}
-                />
-              </View>
+              <AnimatedImage
+                className="w-full aspect-[360/130]"
+                source={event?.banner}
+              />
             </TouchableOpacity>
           ))}
         </View>

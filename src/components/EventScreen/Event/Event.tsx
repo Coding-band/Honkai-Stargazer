@@ -6,8 +6,7 @@ import { Image } from "expo-image";
 import useHsrEvent from "../../../hooks/hoyolab/useHsrEvent";
 import { RefreshControl } from "react-native";
 import EventWebView from "./EventWebView/EventWebView";
-import Animated, {
-} from "react-native-reanimated";
+import Animated from "react-native-reanimated";
 
 export default function Event() {
   const route = useRoute<RouteProp<ParamList, "Event">>();
@@ -31,7 +30,7 @@ export default function Event() {
       >
         <View style={{ gap: 16, alignItems: "center" }} className="mb-16">
           <AnimatedImage
-            className="w-screen h-[142px]"
+            className="w-screen aspect-[360/130]"
             source={hsrEvent?.banner}
             contentFit="contain"
           />
