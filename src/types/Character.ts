@@ -42,4 +42,8 @@ export type CharacterName =
   | "Sushang"
   | "Tingyun"
   | "Welt"
-  | "Yanqing";
+  | "Yanqing"
+  | "Trailblazer Boy (Physical)"
+  | "Trailblazer Girl (Physical)"
+  | "Trailblazer Boy (Fire)"
+  | "Trailblazer Girl (Fire)";

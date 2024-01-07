@@ -1,3 +1,7 @@
+import PlayerBoy1 from "../../data/character_data/kr/playerboy.json";
+import PlayerBoy2 from "../../data/character_data/kr/playerboy2.json";
+import PlayerGirl1 from "../../data/character_data/kr/playergirl.json";
+import PlayerGirl2 from "../../data/character_data/kr/playergirl2.json";
 import Argenti from "../../data/character_data/kr/argenti.json";
 import Huohuo from "../../data/character_data/kr/huohuo.json";
 import Hanya from "../../data/character_data/kr/hanya.json";
@@ -83,6 +87,10 @@ const KR = {
   Tingyun,
   Welt,
   Yanqing,
+  "Trailblazer Boy (Physical)": PlayerBoy1,
+  "Trailblazer Girl (Physical)": PlayerGirl1,
+  "Trailblazer Boy (Fire)": PlayerBoy2,
+  "Trailblazer Girl (Fire)": PlayerGirl2,
 };
 
 export default KR;

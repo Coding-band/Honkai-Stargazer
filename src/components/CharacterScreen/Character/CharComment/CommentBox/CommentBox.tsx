@@ -98,9 +98,7 @@ export default function CommentBox(props: Props) {
         </Animated.View>
       </GestureDetector>
       <Animated.ScrollView nestedScrollEnabled style={[animatedStyles2]}>
-        <Animated.View className="w-full mb-28" style={[{ gap: 24 }]}>
-          {props.children}
-        </Animated.View>
+        <Animated.View className="w-full mb-28">{props.children}</Animated.View>
       </Animated.ScrollView>
       {translation.value.y < 0 && (
         <KeyboardAvoidingView

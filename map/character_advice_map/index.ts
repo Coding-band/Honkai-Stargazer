@@ -1,6 +1,10 @@
- import Argenti from "../../data/character_data/advice/argenti.json";
+import PlayerBoy1 from "../../data/character_data/advice/playerboy.json";
+import PlayerBoy2 from "../../data/character_data/advice/playerboy2.json";
+import PlayerGirl1 from "../../data/character_data/advice/playergirl.json";
+import PlayerGirl2 from "../../data/character_data/advice/playergirl2.json";
+import Argenti from "../../data/character_data/advice/argenti.json";
 import Huohuo from "../../data/character_data/advice/huohuo.json";
- import Hanya from "../../data/character_data/advice/hanya.json";
+import Hanya from "../../data/character_data/advice/hanya.json";
 import Jingliu from "../../data/character_data/advice/jingliu.json";
 import TopazNumby from "../../data/character_data/advice/topaz.json";
 import Guinaifen from "../../data/character_data/advice/guinaifen.json";
@@ -79,6 +83,10 @@ const charAdviceMap = {
   Tingyun,
   Welt,
   Yanqing,
+  "Trailblazer Boy (Physical)": PlayerBoy1,
+  "Trailblazer Girl (Physical)": PlayerGirl1,
+  "Trailblazer Boy (Fire)": PlayerBoy2,
+  "Trailblazer Girl (Fire)": PlayerGirl2,
 };
 
 export default charAdviceMap;

@@ -39,6 +39,10 @@ const officalCharId = {
   1302: "Argenti",
   1303: "Ruan Mei",
   1305: "Dr. Ratio",
+  8001: "Trailblazer Boy (Physical)",
+  8002: "Trailblazer Girl (Physical)",
+  8003: "Trailblazer Boy (Fire)",
+  8004: "Trailblazer Girl (Fire)",
 };
 
 export default officalCharId;

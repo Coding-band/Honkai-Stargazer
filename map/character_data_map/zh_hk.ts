@@ -1,3 +1,7 @@
+import PlayerBoy1 from "../../data/character_data/zh_hk/playerboy.json";
+import PlayerBoy2 from "../../data/character_data/zh_hk/playerboy2.json";
+import PlayerGirl1 from "../../data/character_data/zh_hk/playergirl.json";
+import PlayerGirl2 from "../../data/character_data/zh_hk/playergirl2.json";
 import Argenti from "../../data/character_data/zh_hk/argenti.json";
 import Huohuo from "../../data/character_data/zh_hk/huohuo.json";
 import Hanya from "../../data/character_data/zh_hk/hanya.json";
@@ -84,6 +88,10 @@ const ZH_HK = {
   Tingyun,
   Welt,
   Yanqing,
+  "Trailblazer Boy (Physical)": PlayerBoy1,
+  "Trailblazer Girl (Physical)": PlayerGirl1,
+  "Trailblazer Boy (Fire)": PlayerBoy2,
+  "Trailblazer Girl (Fire)": PlayerGirl2,
 };
 
 export default ZH_HK;

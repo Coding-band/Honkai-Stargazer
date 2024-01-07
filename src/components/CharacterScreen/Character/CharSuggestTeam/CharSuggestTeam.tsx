@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { Text, View } from "react-native";
 import React from "react";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
@@ -18,11 +18,11 @@ import {
 
 export default React.memo(function CharSuggestTeam() {
   const { language: textLanguage } = useTextLanguage();
-  const { language } = useAppLanguage();
+  const { language: appLanguage } = useAppLanguage();
 
   const charId = useCharId();
   // @ts-ignore
-  const suggestTeamsData = charAdviceMap[charId]?.teams.map((team) => {
+  const suggestTeamsData = charAdviceMap[charId]?.teams?.map((team) => {
     // @ts-ignore
     const teamCharId1 = CharacterName[team.member_1] as CharNameType;
     // @ts-ignore
@@ -47,35 +47,35 @@ export default React.memo(function CharSuggestTeam() {
       team: [
         {
           id: teamCharId1,
-          image: CharacterImage[teamCharId1].icon,
-          rare: charJsonData1.rare,
-          name: charFullData1.name,
-          path: charJsonData1.path,
-          combatType: charJsonData1.element,
+          image: CharacterImage[teamCharId1]?.icon,
+          rare: charJsonData1?.rare,
+          name: charFullData1?.name,
+          path: charJsonData1?.path,
+          combatType: charJsonData1?.element,
         },
         {
           id: teamCharId2,
-          image: CharacterImage[teamCharId2].icon,
-          rare: charJsonData2.rare,
-          name: charFullData2.name,
-          path: charJsonData2.path,
-          combatType: charJsonData2.element,
+          image: CharacterImage[teamCharId2]?.icon,
+          rare: charJsonData2?.rare,
+          name: charFullData2?.name,
+          path: charJsonData2?.path,
+          combatType: charJsonData2?.element,
         },
         {
           id: teamCharId3,
-          image: CharacterImage[teamCharId3].icon,
-          rare: charJsonData3.rare,
-          name: charFullData3.name,
-          path: charJsonData3.path,
-          combatType: charJsonData3.element,
+          image: CharacterImage[teamCharId3]?.icon,
+          rare: charJsonData3?.rare,
+          name: charFullData3?.name,
+          path: charJsonData3?.path,
+          combatType: charJsonData3?.element,
         },
         {
           id: teamCharId4,
-          image: CharacterImage[teamCharId4].icon,
-          rare: charJsonData4.rare,
-          name: charFullData4.name,
-          path: charJsonData4.path,
-          combatType: charJsonData4.element,
+          image: CharacterImage[teamCharId4]?.icon,
+          rare: charJsonData4?.rare,
+          name: charFullData4?.name,
+          path: charJsonData4?.path,
+          combatType: charJsonData4?.element,
         },
       ],
     };
@@ -84,20 +84,26 @@ export default React.memo(function CharSuggestTeam() {
   return (
     <View style={{ alignItems: "center" }}>
       <CharPageHeading Icon={Person}>
-        {LOCALES[language].AdviceTeams}
+        {LOCALES[appLanguage].AdviceTeams}
       </CharPageHeading>
-      <View
-        style={{
-          flexDirection: "row",
-          flexWrap: "wrap",
-          rowGap: 16,
-        }}
-      >
-        {suggestTeamsData.map((team: any, i: number) => (
-          // @ts-ignore
-          <CharSuggestTeamCard key={i} team={team.team} name={team.name} />
-        ))}
-      </View>
+      {suggestTeamsData ? (
+        <View
+          style={{
+            flexDirection: "row",
+            flexWrap: "wrap",
+            rowGap: 16,
+          }}
+        >
+          {suggestTeamsData?.slice(0, 2).map((team: any, i: number) => (
+            // @ts-ignore
+            <CharSuggestTeamCard key={i} team={team.team} name={team.name} />
+          ))}
+        </View>
+      ) : (
+        <Text className="text-text text-[HY65]">
+          {LOCALES[appLanguage].NoDataYet}
+        </Text>
+      )}
     </View>
   );
 });

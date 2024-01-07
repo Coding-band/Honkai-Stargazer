@@ -286,6 +286,34 @@ const CharacterSkillMain = {
     skill4: require("../../images/character_skill/march_7th_skill4.webp"),
     skill6: require("../../images/character_skill/march_7th_skill6.webp"),
   },
+  "Trailblazer Boy (Physical)": {
+    skill1: require("../../images/character_skill/trailblazer_physical_skill1.webp"),
+    skill2: require("../../images/character_skill/trailblazer_physical_skill2.webp"),
+    skill3: require("../../images/character_skill/trailblazer_physical_skill3.webp"),
+    skill4: require("../../images/character_skill/trailblazer_physical_skill4.webp"),
+    skill6: require("../../images/character_skill/trailblazer_physical_skill6.webp"),
+  },
+  "Trailblazer Girl (Physical)": {
+    skill1: require("../../images/character_skill/trailblazer_physical_skill1.webp"),
+    skill2: require("../../images/character_skill/trailblazer_physical_skill2.webp"),
+    skill3: require("../../images/character_skill/trailblazer_physical_skill3.webp"),
+    skill4: require("../../images/character_skill/trailblazer_physical_skill4.webp"),
+    skill6: require("../../images/character_skill/trailblazer_physical_skill6.webp"),
+  },
+  "Trailblazer Boy (Fire)": {
+    skill1: require("../../images/character_skill/trailblazer_fire_skill1.webp"),
+    skill2: require("../../images/character_skill/trailblazer_fire_skill2.webp"),
+    skill3: require("../../images/character_skill/trailblazer_fire_skill3.webp"),
+    skill4: require("../../images/character_skill/trailblazer_fire_skill4.webp"),
+    skill6: require("../../images/character_skill/trailblazer_fire_skill6.webp"),
+  },
+  "Trailblazer Girl (Fire)": {
+    skill1: require("../../images/character_skill/trailblazer_fire_skill1.webp"),
+    skill2: require("../../images/character_skill/trailblazer_fire_skill2.webp"),
+    skill3: require("../../images/character_skill/trailblazer_fire_skill3.webp"),
+    skill4: require("../../images/character_skill/trailblazer_fire_skill4.webp"),
+    skill6: require("../../images/character_skill/trailblazer_fire_skill6.webp"),
+  },
 };
 
 export default CharacterSkillMain;

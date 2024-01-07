@@ -1,3 +1,7 @@
+import PlayerBoy1 from "../../data/character_data/ru/playerboy.json";
+import PlayerBoy2 from "../../data/character_data/ru/playerboy2.json";
+import PlayerGirl1 from "../../data/character_data/ru/playergirl.json";
+import PlayerGirl2 from "../../data/character_data/ru/playergirl2.json";
 import Argenti from "../../data/character_data/ru/argenti.json";
 import Huohuo from "../../data/character_data/ru/huohuo.json";
 import Hanya from "../../data/character_data/ru/hanya.json";
@@ -84,6 +88,10 @@ const RU = {
   Tingyun,
   Welt,
   Yanqing,
+  "Trailblazer Boy (Physical)": PlayerBoy1,
+  "Trailblazer Girl (Physical)": PlayerGirl1,
+  "Trailblazer Boy (Fire)": PlayerBoy2,
+  "Trailblazer Girl (Fire)": PlayerGirl2,
 };
 
 export default RU;
