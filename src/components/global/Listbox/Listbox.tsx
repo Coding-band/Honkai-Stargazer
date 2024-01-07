@@ -5,6 +5,7 @@ import { Shadow } from "react-native-shadow-2";
 
 import ListboxItem from "./ListboxItem/ListboxItem";
 import { useClickOutside } from "react-native-click-outside";
+import { BlurView } from "expo-blur";
 
 type Props = {
   button: React.ReactNode;
@@ -12,7 +13,6 @@ type Props = {
   onChange?: (v: any) => void;
   onOpen?: (v: boolean) => void;
   children: any[];
-  top?: number;
   bottom?: number;
 };
 
@@ -38,33 +38,34 @@ export default function Listbox(props: Props) {
         {props.button}
       </TouchableOpacity>
       {open && (
-        <View
-          ref={ref}
-          className="absolute w-full bg-[#DDDDDD]"
+        <Shadow
+          startColor="#00000025"
+          distance={16}
+          offset={[4, 8]}
+          paintInside
           style={{
-            shadowColor: "#00000025",
-            shadowOffset: { width: 16, height: 4 },
-            shadowRadius: 16,
-            elevation: 16,
-            top: props.top,
+            position: "absolute",
             bottom: props.bottom,
+            width: "100%",
           }}
         >
-          {props.children.map((listboxitem) => (
-            <ListboxItem
-              key={listboxitem.props.value}
-              onPress={() => {
-                setOpen(false);
-                setTimeout(() => {
-                  props.onChange && props.onChange(listboxitem.props.value);
-                });
-              }}
-              selected={props.value === listboxitem.props.value}
-            >
-              {listboxitem}
-            </ListboxItem>
-          ))}
-        </View>
+          <View ref={ref} className="bg-[#DDDDDD]">
+            {props.children.map((listboxitem) => (
+              <ListboxItem
+                key={listboxitem.props.value}
+                onPress={() => {
+                  setOpen(false);
+                  setTimeout(() => {
+                    props.onChange && props.onChange(listboxitem.props.value);
+                  });
+                }}
+                selected={props.value === listboxitem.props.value}
+              >
+                {listboxitem}
+              </ListboxItem>
+            ))}
+          </View>
+        </Shadow>
       )}
     </View>
   );
@@ -73,3 +74,4 @@ export default function Listbox(props: Props) {
 Listbox.Item = function ({ children }: { children: any; value: any }) {
   return children;
 };
+
