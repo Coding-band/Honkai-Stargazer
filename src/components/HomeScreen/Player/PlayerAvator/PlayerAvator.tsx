@@ -3,39 +3,25 @@ import React, { useEffect, useState } from "react";
 import { Pressable, View } from "react-native";
 import useHsrFullData from "../../../../hooks/hoyolab/useHsrFullData";
 import { animated, useSpring } from "@react-spring/native";
+import { useNavigation } from "@react-navigation/native";
+import { SCREENS } from "../../../../constant/screens";
+import useHsrUUID from "../../../../hooks/hoyolab/useHsrUUID";
 
 export default function PlayerAvator() {
+  const navigation = useNavigation();
+
+  const hsrUUID = useHsrUUID();
   const playerFullData = useHsrFullData();
   const avator = playerFullData?.data?.cur_head_icon_url;
 
-  const [scale, setScale] = useState(1);
-  const [flag, setFlag] = useState(false);
-
-  const avatorAnimation = useSpring({ scale, config: { tension: 220 } });
-  useEffect(() => {
-    setTimeout(() => {
-      if (flag) {
-        setScale(scale + 0.1);
-      } else {
-        setScale(1);
-      }
-    });
-  }, [scale, flag]);
+  const handleNavigatUserInfoPage = () => {
+    // @ts-ignore
+    navigation.push(SCREENS.UserInfoPage.id, { uuid: hsrUUID });
+  };
 
   return (
-    <Pressable
-      className="z-50"
-      onPressIn={() => {
-        setFlag(true);
-      }}
-      onPressOut={() => {
-        setFlag(false);
-      }}
-    >
-      <AnimatedView
-        className="w-[73px] h-[73px] rounded-full mr-2 bg-white"
-        style={{ transform: [avatorAnimation] }}
-      >
+    <Pressable className="z-50" onPress={handleNavigatUserInfoPage}>
+      <AnimatedView className="w-[73px] h-[73px] rounded-full mr-2 bg-white">
         <Image
           source={{
             uri:

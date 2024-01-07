@@ -110,4 +110,10 @@ export const SCREENS = {
     getShortName: (lang: AppLanguage) => LOCALES[lang].Codes,
     icon: Ticket,
   },
+  UserInfoPage: {
+    id: "UserInfo",
+    getName: (lang: AppLanguage) => "",
+    getShortName: (lang: AppLanguage) => "",
+    icon: Ticket,
+  },
 };

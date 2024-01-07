@@ -14,4 +14,5 @@ export type ParamList = {
   Relic: { id: string; name: string };
   Login: { platform: hsrPlatform; serverId: hsrServerId };
   Event: { id: string };
+  UserInfo: { uuid: string };
 };

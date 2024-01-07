@@ -19,6 +19,7 @@ import MemoryOfChaosScreen from "../screens/MemoryOfChaosScreen";
 import EventListScreen from "../screens/EventListScreen";
 import EventScreen from "../screens/EventScreen";
 import CodeScreen from "../screens/CodeScreen";
+import UserInfoScreen from "../screens/UserInfoScreen";
 
 export default function Navigation() {
   const Stack = createNativeStackNavigator();
@@ -107,10 +108,14 @@ export default function Navigation() {
           component={EventScreen}
           options={{ headerShown: false }}
         />
-
         <Stack.Screen
           name={SCREENS.CodePage.id}
           component={CodeScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.UserInfoPage.id}
+          component={UserInfoScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
