@@ -6,7 +6,7 @@ import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { VERSION } from "../../../../../app.config";
 import * as Device from "expo-device";
 import useIsAdmin from "../../../../firebase/hooks/useIsAdmin";
-import Noti from "../../../../utils/notifications/Noti";
+import Noti from "../../../../notifications/utils/Noti";
 
 export default function DevelopmentSetting() {
   const { language } = useAppLanguage();

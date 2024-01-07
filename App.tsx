@@ -16,27 +16,15 @@ import { PersistGate } from "redux-persist/integration/react";
 import { RootSiblingParent } from "react-native-root-siblings";
 import TextLanguageProvider from "./src/language/TextLanguage/TextLanguageProvider";
 import AppLanguageProvider from "./src/language/AppLanguage/AppLanguageProvider";
-import * as Device from "expo-device";
-import * as Notifications from "expo-notifications";
+import NotificationWrapper from "./src/notifications/NotificationWrapper";
 
 // import playground for testing
 // import "./playground";
 
-Notifications.setNotificationHandler({
-  handleNotification: async () => ({
-    shouldShowAlert: true,
-    shouldPlaySound: false,
-    shouldSetBadge: false,
-  }),
-});
-
 const queryClient = new QueryClient();
-
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  registerForPushNotificationsAsync();
-
   useEffect(() => {
     // 在组件加载后设置导航栏
     async function setupNavigationBar() {
@@ -69,57 +57,27 @@ export default function App() {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-        <AppLanguageProvider>
-          <TextLanguageProvider>
-            <RootSiblingParent>
-              <QueryClientProvider client={queryClient}>
-                <GestureHandlerRootView style={{ flex: 1 }}>
-                  <ClickOutsideProvider>
-                    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-                      {/* <StatusBar hidden /> */}
-                      <FixedProvider>
-                        <Navigation />
-                      </FixedProvider>
-                    </View>
-                  </ClickOutsideProvider>
-                </GestureHandlerRootView>
-              </QueryClientProvider>
-            </RootSiblingParent>
-          </TextLanguageProvider>
-        </AppLanguageProvider>
+        <NotificationWrapper>
+          <AppLanguageProvider>
+            <TextLanguageProvider>
+              <RootSiblingParent>
+                <QueryClientProvider client={queryClient}>
+                  <GestureHandlerRootView style={{ flex: 1 }}>
+                    <ClickOutsideProvider>
+                      <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+                        {/* <StatusBar hidden /> */}
+                        <FixedProvider>
+                          <Navigation />
+                        </FixedProvider>
+                      </View>
+                    </ClickOutsideProvider>
+                  </GestureHandlerRootView>
+                </QueryClientProvider>
+              </RootSiblingParent>
+            </TextLanguageProvider>
+          </AppLanguageProvider>
+        </NotificationWrapper>
       </PersistGate>
     </Provider>
   );
-}
-
-async function registerForPushNotificationsAsync() {
-  let token;
-
-  if (Platform.OS === "android") {
-    await Notifications.setNotificationChannelAsync("default", {
-      name: "default",
-      importance: Notifications.AndroidImportance.MAX,
-      vibrationPattern: [0, 250, 250, 250],
-      lightColor: "#FF231F7C",
-    });
-  }
-
-  if (Device.isDevice) {
-    const { status: existingStatus } =
-      await Notifications.getPermissionsAsync();
-    let finalStatus = existingStatus;
-    if (existingStatus !== "granted") {
-      const { status } = await Notifications.requestPermissionsAsync();
-      finalStatus = status;
-    }
-    if (finalStatus !== "granted") {
-      alert("Failed to get push token for push notification!");
-      return;
-    }
-    token = (await Notifications.getExpoPushTokenAsync()).data;
-  } else {
-    alert("Must use physical device for Push Notifications");
-  }
-
-  return token;
 }
