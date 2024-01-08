@@ -21,11 +21,12 @@ import EventScreen from "../screens/EventScreen";
 import CodeScreen from "../screens/CodeScreen";
 import UserInfoScreen from "../screens/UserInfoScreen";
 
-export default function Navigation() {
+export default function Navigation({ initialRouteName }: { initialRouteName: string }) {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
       <Stack.Navigator
+        initialRouteName={initialRouteName}
         screenOptions={{
           animation: Platform.OS === "ios" ? "default" : "none",
         }}

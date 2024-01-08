@@ -17,6 +17,8 @@ import { RootSiblingParent } from "react-native-root-siblings";
 import TextLanguageProvider from "./src/language/TextLanguage/TextLanguageProvider";
 import AppLanguageProvider from "./src/language/AppLanguage/AppLanguageProvider";
 import NotificationWrapper from "./src/notifications/NotificationWrapper";
+import { pushExpoNotiType } from "./src/notifications/constant/pushExpoNotiType";
+import { SCREENS } from "./src/constant/screens";
 
 // import playground for testing
 // import "./playground";
@@ -25,6 +27,8 @@ const queryClient = new QueryClient();
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
+  const [initialRouteName, setInitialRouteName] = useState(SCREENS.HomePage.id);
+
   useEffect(() => {
     // 在组件加载后设置导航栏
     async function setupNavigationBar() {
@@ -57,7 +61,15 @@ export default function App() {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-        <NotificationWrapper>
+        <NotificationWrapper
+          onResponseReceived={(data, type) => {
+            //* 角色留言提及通知
+            if (type === pushExpoNotiType.sendCharacterComment) {
+              const charId = data.charId;
+              setInitialRouteName("/Character/" + charId);
+            }
+          }}
+        >
           <AppLanguageProvider>
             <TextLanguageProvider>
               <RootSiblingParent>
@@ -67,7 +79,7 @@ export default function App() {
                       <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
                         {/* <StatusBar hidden /> */}
                         <FixedProvider>
-                          <Navigation />
+                          <Navigation initialRouteName={initialRouteName} />
                         </FixedProvider>
                       </View>
                     </ClickOutsideProvider>

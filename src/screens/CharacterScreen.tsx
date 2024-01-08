@@ -7,16 +7,20 @@ import { SCREENS } from "../constant/screens";
 import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { ParamList } from "../types/navigation";
 import CharacterMain from "../components/CharacterScreen/Character/Character";
-import { CharacterName} from "../types/character";
+import { CharacterName } from "../types/character";
 import CharacterContext from "../context/CharacterData/CharacterContext";
 import Fixed from "../components/global/Fixed/Fixed";
 import WallPaper from "../components/global/WallPaper/WallPaper";
 import CharacterProvider from "../context/CharacterData/CharacterProvider";
+import useTextLanguage from "../language/TextLanguage/useTextLanguage";
+import { getCharFullData } from "../utils/dataMap/getDataFromMap";
 
 export default function CharacterScreen() {
+  const { language } = useTextLanguage();
+
   const route = useRoute<RouteProp<ParamList, "Character">>();
   const charId = route.params.id as CharacterName;
-  const charName = route.params.name;
+  const charName = getCharFullData(charId, language).name;
 
   const [showMain, setShowMain] = useState(false);
   useEffect(() => {

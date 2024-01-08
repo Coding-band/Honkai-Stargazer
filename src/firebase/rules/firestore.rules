@@ -12,9 +12,21 @@ service cloud.firestore {
             // 確定用戶是本人, 並且不存在惡意改權限之行為可建立用戶資料
             allow create: if isOwner(userId) && incomingData().role == "user";
             // 確定用戶是本人, 並且不存在惡意改權限之行為可更新用戶資料
-            allow update: if isOwner(userId);
+            allow update: if isOwner(userId) && incomingData().role == null;
             // 只有管理員可刪除用戶資料
             allow delete: if getUserData().role  == "admin";
+        }
+
+        /* UserTokens */
+        match /UserTokens/{userId} {
+            // 任何人都可以讀用戶資料
+            allow read: if true;
+            // 確定用戶是本人, 並且不存在惡意改權限之行為可建立用戶資料
+            allow create: if isOwner(userId);
+            // 確定用戶是本人, 並且不存在惡意改權限之行為可更新用戶資料
+            allow update: if isOwner(userId);
+            // 只有管理員可刪除用戶資料
+            allow delete: if false;
         }
 
         /* UserCharacters */

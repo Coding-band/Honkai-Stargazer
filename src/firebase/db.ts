@@ -14,6 +14,7 @@ const db = {
   UserCharacters: firestore().collection("UserCharacters"),
   UserMemoryOfChaos: firestore().collection("UserMemoryOfChaos"),
   CharacterComments: firestore().collection("CharacterComments"),
+  UserTokens: firestore().collection("UserTokens"),
 };
 
 export default db;

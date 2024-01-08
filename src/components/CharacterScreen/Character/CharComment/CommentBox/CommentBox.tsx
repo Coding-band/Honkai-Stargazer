@@ -1,5 +1,5 @@
 import { View, Text, KeyboardAvoidingView, Platform } from "react-native";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -12,7 +12,7 @@ import useCharComments from "../../../../../firebase/hooks/useCharComments";
 import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
 import { findKey } from "lodash";
 import officalCharId from "../../../../../../map/character_offical_id_map";
-import { ScrollView } from "react-native";
+import { AnimatedScrollView } from "react-native-reanimated/lib/typescript/reanimated2/component/ScrollView";
 
 const UpArrow = require("./icons/UpArrow.svg");
 const DownArrow = require("./icons/DownArrow.svg");
@@ -79,6 +79,13 @@ export default function CommentBox(props: Props) {
     };
   });
 
+  const scrollRef = useRef<AnimatedScrollView>();
+  useEffect(() => {
+    setTimeout(() => {
+      scrollRef.current?.scrollToEnd();
+    }, 1000);
+  }, []);
+
   return (
     <View className="">
       <GestureDetector gesture={gesture}>
@@ -97,8 +104,13 @@ export default function CommentBox(props: Props) {
           </View>
         </Animated.View>
       </GestureDetector>
-      <Animated.ScrollView nestedScrollEnabled style={[animatedStyles2]}>
-        <Animated.View className="w-full mb-28">{props.children}</Animated.View>
+      <Animated.ScrollView
+        //@ts-ignore
+        ref={scrollRef}
+        nestedScrollEnabled
+        style={[animatedStyles2]}
+      >
+        <Animated.View className="w-full mb-20">{props.children}</Animated.View>
       </Animated.ScrollView>
       {translation.value.y < 0 && (
         <KeyboardAvoidingView

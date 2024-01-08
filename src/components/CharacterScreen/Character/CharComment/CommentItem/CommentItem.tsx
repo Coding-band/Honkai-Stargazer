@@ -13,25 +13,56 @@ import useUserCharacters from "../../../../../firebase/hooks/useUserCharacters";
 import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
 import officalCharId from "../../../../../../map/character_offical_id_map";
 import { findKey } from "lodash";
+import { extractMentionsSplit } from "../CommentInput/utils/extractMetions";
+import { hasUserByUsername } from "../../../../../firebase/utils/hasUser";
 
 export default function CommentItem({
   user_id,
   content,
+  mentions,
 }: {
   user_id: string;
   content: string;
+  mentions: string[];
 }) {
+  const { data: user } = useUser(user_id);
+  const { data: userCharsInfo } = useUserCharacters(user_id);
+
   const charId = useCharId();
   const charOfficalId = findKey(officalCharId, (v) => v === charId);
-
-  const { data: user } = useUser(user_id);
   const username = user?.name;
   const userAvatar = user?.avatar_url;
-  const { data: userCharsInfo } = useUserCharacters(user_id);
   const userCharacters = userCharsInfo?.characters;
   const userHasChar = !!userCharacters?.filter(
     (char) => char.id.toString() === charOfficalId
   ).length;
+
+  const [processedContent, setProcessedContent] = useState<any[]>([]);
+  useEffect(() => {
+    async function processContent() {
+      const parts = extractMentionsSplit(content);
+      const processedParts = await Promise.all(
+        parts.map(async (part, i) => {
+          if (
+            mentions?.includes(part) &&
+            (await hasUserByUsername(part.slice(1)))
+          ) {
+            return (
+              <Text key={i} className="text-[#DD8200]">
+                {part}
+              </Text>
+            );
+          } else {
+            return <Text key={i}>{part}</Text>;
+          }
+        })
+      );
+
+      setProcessedContent(processedParts);
+    }
+
+    processContent();
+  }, [content]); // 依赖项列表，当这些依赖项更改时，useEffect 会重新执行
 
   return (
     <TouchableNativeFeedback>
@@ -59,7 +90,9 @@ export default function CommentItem({
               </View>
             )}
           </View>
-          <Text className="text-text2 text-[14px] font-[HY65]">{content}</Text>
+          <Text className="text-text2 text-[14px] font-[HY65]">
+            {processedContent}
+          </Text>
         </View>
       </View>
     </TouchableNativeFeedback>
