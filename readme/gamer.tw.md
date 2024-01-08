@@ -9,7 +9,8 @@
 ### <span style="color:#569CD6">如果你有以上疑問，<span style="color:#569CD6;font-size:">看這篇文章就對了！
 
 ## <span style="color:#569CD6">App 簡介
-星穹觀星者2 是由團隊<span style="color:#E31576">Coding Band</span>開發，將在Google Play Store和 App Store 上架，讓使用Android和iOS的開拓者都能夠體驗星穹觀星者2。
+星穹觀星者2 是由團隊<span style="color:#E31576">Coding Band</span>開發 
+<br>&emsp;**(Dalufishe : 主要代碼編寫, 2O48 : UI/UX設計, 夜芷冰 : Team Leader)** <br>將在Google Play Store和 App Store 上架，讓使用Android和iOS的開拓者都能夠體驗星穹觀星者2。
 
 <span style="color:#E31576">⚠️請認准包裝名!!! 不要下載非以下渠道分發的版本!!!⚠️</span>
 - `com.voc.honkai_stargazer_gp` ([星穹觀星者2 Google Play](https://play.google.com/store/apps/details?id=com.voc.honkai_stargazer_gp))
@@ -23,6 +24,9 @@
 ## <span style="color:#569CD6">App 特點
 星穹觀星者2 將會提供以下功能:
 - 角色、光錐、遺器資料查詢![角色、光錐、遺器資料查詢](./image/Screenshot_20240107-180813.png)
+- 角色高清圖(不要問我為啥AKA寫真圖) (為了拍圖 差點把電腦顯卡燒了QQ)![角色高清圖](./image/Screenshot_20240107-181159.png)
+- 星穹鐵道活動列表![星穹鐵道活動列表](./image/Screenshot_20240108-141346.png)
+- 兌換碼![兌換碼](./image/Screenshot_20240108-141414.png)
 - 展示自己帳戶的即時開拓力、每日任務進度、派遣委託![即時開拓力、每日任務進度、派遣委託](./image/Screenshot_20240107-183711.png)
 - 查看自己的混沌回憶紀錄
 - 展示活動列表、地圖、兌換碼功能。
