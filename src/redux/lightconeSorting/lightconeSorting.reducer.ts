@@ -1,16 +1,19 @@
+import { LOCALES } from "../../../locales";
+import useAppLanguage from "../../language/AppLanguage/useAppLanguage";
 import {
   LightconeSorting,
   LightconeSortingAction,
 } from "./lightconeSorting.types";
 
+const {language} = useAppLanguage();
 export const lightconeSorting = (
   prevSate: LightconeSorting = [
-    { id: "time", name: "实装日期", selected: true },
-    { id: "name", name: "名称（英文）", selected: false },
-    { id: "atk", name: "攻击力", selected: false },
-    { id: "def", name: "防御力", selected: false },
-    { id: "hp", name: "生命值", selected: false },
-    { id: "rare", name: "稀有度", selected: false },
+    { id: "time", name: LOCALES[language].SortByDate, selected: true },
+    { id: "name", name: LOCALES[language].SortByENName, selected: false },
+    { id: "atk", name: LOCALES[language].SortByATK, selected: false },
+    { id: "def", name: LOCALES[language].SortByDEF, selected: false },
+    { id: "hp", name: LOCALES[language].SortByHP, selected: false },
+    { id: "rare", name: LOCALES[language].SortByRarity, selected: false },
   ],
   action: LightconeSortingAction
 ) => {
