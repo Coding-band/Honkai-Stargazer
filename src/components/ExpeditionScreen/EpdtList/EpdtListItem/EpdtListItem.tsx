@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
-import { BlurView } from "expo-blur";
+import BlurView from "../../../global/BlurView/BlurView";
 import { Shadow } from "react-native-shadow-2";
 import { Image } from "expo-image";
 import {

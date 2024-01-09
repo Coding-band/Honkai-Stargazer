@@ -31,7 +31,7 @@ export default function Button({
     hasShadow ? (
       <Shadow offset={[0, 4]}>
         <View
-          className="bg-[#dddddd] rounded-[49px] p-[3px]"
+          className="bg-[#DDD] rounded-[49px] p-[3px]"
           style={[
             {
               width,

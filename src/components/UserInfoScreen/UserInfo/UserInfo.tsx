@@ -49,7 +49,7 @@ export default function UserInfo(props: Props) {
               gap: 18,
               height: Dimensions.get("window").height,
             },
-            animation,
+            // animation,
           ]}
         >
           <View style={{ alignItems: "center", gap: 6 }}>

@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
-import { BlurView } from "expo-blur";
+import BlurView from "../../../global/BlurView/BlurView";
 import { Image } from "expo-image";
 import Listbox from "../../../global/Listbox/Listbox";
 

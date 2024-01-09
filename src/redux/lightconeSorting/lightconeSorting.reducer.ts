@@ -5,7 +5,7 @@ import {
 
 export const lightconeSorting = (
   prevSate: LightconeSorting = [
-    { id: "time", name: "時裝日期", selected: true },
+    { id: "time", name: "實裝日期", selected: true },
     { id: "name", name: "名稱（英文）", selected: false },
     { id: "atk", name: "攻擊力", selected: false },
     { id: "def", name: "防禦力", selected: false },

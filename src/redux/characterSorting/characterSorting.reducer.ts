@@ -5,7 +5,7 @@ import {
 
 export const characterSorting = (
   prevSate: CharacterSorting = [
-    { id: "time", name: "实装日期", selected: true },
+    { id: "time", name: "實裝日期", selected: true },
     { id: "name", name: "名称（英文）", selected: false },
     { id: "atk", name: "攻击力", selected: false },
     { id: "def", name: "防御力", selected: false },

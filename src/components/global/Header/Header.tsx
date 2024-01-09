@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { BlurView } from "expo-blur";
+import BlurView from "../BlurView/BlurView";
 import { Image } from "expo-image";
 import { IconProps } from "phosphor-react-native";
 import React from "react";

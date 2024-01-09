@@ -1,4 +1,4 @@
-import { BlurView } from "expo-blur";
+import BlurView from "../../../global/BlurView/BlurView";
 import React from "react";
 import {
   View,

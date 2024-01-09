@@ -1,4 +1,10 @@
-import { View, Text, TouchableOpacity, Dimensions } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Dimensions,
+  ScrollView,
+} from "react-native";
 import React, { createContext } from "react";
 import Header2 from "../../global/Header2/Header2";
 import useHsrUUID from "../../../hooks/hoyolab/useHsrUUID";
@@ -27,6 +33,7 @@ import UserCharCombatTypeAndPath from "./UserCharCombatTypeAndPath/UserCharComba
 import UserCharSkills from "./UserCharSkills/UserCharSkills";
 import UserCharAttribute from "./UserCharAttribute/UserCharAttribute";
 import UserCharLightcone from "./UserCharLightcone/UserCharLightcone";
+import UserCharRelics from "./UserCharRelics/UserCharRelics";
 
 export default function UserCharDetail() {
   const { language: appLanguage } = useAppLanguage();
@@ -46,52 +53,54 @@ export default function UserCharDetail() {
     <View className="z-30">
       <Header2 rightBtn={isOwner ? <ShareBtn /> : null} />
 
-      <View
-        style={[
-          {
-            alignItems: "center",
-            gap: 18,
-            height: Dimensions.get("window").height,
-          },
-        ]}
-      >
-        <ImageBackground
-          source={CharacterImage[charId].fade}
-          className="w-full"
+      <ScrollView style={{ height: Dimensions.get("screen").height }}>
+        <View
+          style={[
+            {
+              alignItems: "center",
+              gap: 18,
+            },
+          ]}
         >
-          <View className="mt-12" style={{ alignItems: "center", gap: 228 }}>
-            <View style={{ alignItems: "center", gap: 4 }}>
-              {/* 用戶名 */}
-              <Text
-                className="text-[#FFFFFF] font-[HY65] text-[16px]"
-                style={globalStyles.textShadow}
-              >
-                {inGameInfo?.player?.nickname}
-              </Text>
-              {/* UUID & 伺服器 */}
-              <UUIDBox uuid={profileUUID} />
+          <ImageBackground
+            source={CharacterImage[charId].fade}
+            className="w-full"
+          >
+            <View className="mt-12" style={{ alignItems: "center", gap: 228 }}>
+              <View style={{ alignItems: "center", gap: 4 }}>
+                {/* 用戶名 */}
+                <Text
+                  className="text-[#FFFFFF] font-[HY65] text-[16px]"
+                  style={globalStyles.textShadow}
+                >
+                  {inGameInfo?.player?.nickname}
+                </Text>
+                {/* UUID & 伺服器 */}
+                <UUIDBox uuid={profileUUID} />
+              </View>
+              <View style={{ alignItems: "center", gap: 4 }}>
+                {/* 角色名 */}
+                <Text
+                  className="text-[#FFFFFF] font-[HY65] text-[32px]"
+                  style={globalStyles.textShadow}
+                >
+                  {charFullData.name}
+                </Text>
+                {/* 星星數 */}
+                <UserCharDetailStars count={charJsonData.rare} />
+                {/* 等級，星魂 */}
+                <UserCharLevel />
+                {/* 屬性，命途 */}
+                <UserCharCombatTypeAndPath />
+                <UserCharSkills />
+              </View>
             </View>
-            <View style={{ alignItems: "center", gap: 4 }}>
-              {/* 角色名 */}
-              <Text
-                className="text-[#FFFFFF] font-[HY65] text-[32px]"
-                style={globalStyles.textShadow}
-              >
-                {charFullData.name}
-              </Text>
-              {/* 星星數 */}
-              <UserCharDetailStars count={charJsonData.rare} />
-              {/* 等級，星魂 */}
-              <UserCharLevel />
-              {/* 屬性，命途 */}
-              <UserCharCombatTypeAndPath />
-              <UserCharSkills />
-            </View>
-          </View>
-        </ImageBackground>
-        <UserCharAttribute />
-        <UserCharLightcone />
-      </View>
+          </ImageBackground>
+          <UserCharAttribute />
+          <UserCharLightcone />
+          <UserCharRelics />
+        </View>
+      </ScrollView>
     </View>
   );
 }

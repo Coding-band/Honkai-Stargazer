@@ -1,4 +1,4 @@
-import { BlurView } from "expo-blur";
+import BlurView from "../components/global/BlurView/BlurView";
 import { useEffect, useState } from "react";
 
 const withBlurView = (jsx: React.ReactNode, active: boolean = true) => {

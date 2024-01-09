@@ -1,9 +1,6 @@
 import {
   TextInput,
   View,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-  Pressable,
 } from "react-native";
 import React, { useState } from "react";
 import { cn } from "../../../../../utils/css/cn";
@@ -13,7 +10,7 @@ import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
 import { findKey } from "lodash";
 import officalCharId from "../../../../../../map/character_offical_id_map";
 import useCharComments from "../../../../../firebase/hooks/useCharComments";
-import { BlurView } from "expo-blur";
+import BlurView from "../../../../global/BlurView/BlurView";
 import useFirebaseUid from "../../../../../firebase/hooks/useFirebaseUid";
 import Toast from "../../../../../utils/toast/Toast";
 import { extractMentionsMatch } from "./utils/extractMetions";
@@ -21,7 +18,6 @@ import pushExpoNoti from "../../../../../notifications/utils/pushExpoNoti";
 import useHsrPlayerName from "../../../../../hooks/hoyolab/useHsrPlayerName";
 import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
 import { pushExpoNotiType } from "../../../../../notifications/constant/pushExpoNotiType";
-import { Image } from "expo-image";
 import CommentAddPhoto from "./CommentAddPhoto/CommentAddPhoto";
 
 export default function CommentInput() {
