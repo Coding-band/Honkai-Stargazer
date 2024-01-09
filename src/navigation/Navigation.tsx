@@ -20,8 +20,13 @@ import EventListScreen from "../screens/EventListScreen";
 import EventScreen from "../screens/EventScreen";
 import CodeScreen from "../screens/CodeScreen";
 import UserInfoScreen from "../screens/UserInfoScreen";
+import UserCharDetailScreen from "../screens/UserCharDetailScreen";
 
-export default function Navigation({ initialRouteName }: { initialRouteName: string }) {
+export default function Navigation({
+  initialRouteName,
+}: {
+  initialRouteName: string;
+}) {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
@@ -117,6 +122,11 @@ export default function Navigation({ initialRouteName }: { initialRouteName: str
         <Stack.Screen
           name={SCREENS.UserInfoPage.id}
           component={UserInfoScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.UserCharDetailPage.id}
+          component={UserCharDetailScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

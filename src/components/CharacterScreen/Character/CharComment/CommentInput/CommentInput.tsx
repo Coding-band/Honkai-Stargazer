@@ -1,4 +1,10 @@
-import { TextInput, View, TouchableOpacity } from "react-native";
+import {
+  TextInput,
+  View,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  Pressable,
+} from "react-native";
 import React, { useState } from "react";
 import { cn } from "../../../../../utils/css/cn";
 import db from "../../../../../firebase/db";
@@ -15,6 +21,8 @@ import pushExpoNoti from "../../../../../notifications/utils/pushExpoNoti";
 import useHsrPlayerName from "../../../../../hooks/hoyolab/useHsrPlayerName";
 import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
 import { pushExpoNotiType } from "../../../../../notifications/constant/pushExpoNotiType";
+import { Image } from "expo-image";
+import CommentAddPhoto from "./CommentAddPhoto/CommentAddPhoto";
 
 export default function CommentInput() {
   const uid = useFirebaseUid();
@@ -102,9 +110,10 @@ export default function CommentInput() {
   };
 
   return (
-    <View className="w-full h-[80px] " style={{ justifyContent: "center" }}>
+    <View className="w-full h-[80px] px-6" style={{ justifyContent: "center" }}>
       <View className="rounded-[23px] overflow-hidden">
         <BlurView tint="dark" intensity={40}>
+          {/* 輸入框 */}
           <TextInput
             className={cn(
               "w-full h-[46px] px-[20px]",
@@ -116,9 +125,11 @@ export default function CommentInput() {
             onChangeText={handleTextChange}
             onSubmitEditing={handleSubmit}
             placeholder="幫幫我 史瓦羅先生！"
-            placeholderTextColor="gray"
+            placeholderTextColor="#F3F9FF40"
             keyboardType="twitter"
           />
+          {/* 新增圖片 */}
+          <CommentAddPhoto />
         </BlurView>
       </View>
     </View>

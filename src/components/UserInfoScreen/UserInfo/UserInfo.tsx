@@ -1,4 +1,4 @@
-import { View, Text, Dimensions } from "react-native";
+import { View, Text, Dimensions, ActivityIndicator } from "react-native";
 import React from "react";
 import Header2 from "../../global/Header2/Header2";
 import { TouchableOpacity } from "react-native";
@@ -12,80 +12,106 @@ import { LOCALES } from "../../../../locales";
 import UserInfoCharacters from "./UserInfoCharacters/UserInfoCharacters";
 import useMemoryOfChaos from "../../../hooks/hoyolab/useMemoryOfChaos";
 import Toast from "../../../utils/toast/Toast";
+import UserAvatar from "../../global/UserAvatar/UserAvatar";
+import AvatarIcon from "../../../../assets/images/images_map/avatarIcon";
+import getServerFromUUID from "../../../utils/hoyolab/servers/getServerFromUUID";
+import { animated, useSpring } from "@react-spring/native";
+import UUIDBox from "../../global/UUIDBox/UUIDBox";
 
-export default function UserInfo() {
+type Props = {
+  uuid: string;
+};
+
+export default function UserInfo(props: Props) {
   const { language: appLangauge } = useAppLanguage();
 
   const hsrUUID = useHsrUUID();
-  const { hsrServerChosen } = useHsrServerChosen();
+  const isOwner = props.uuid === hsrUUID;
+
   const { data: hsrFullData } = useHsrFullData();
-  const { data: hsrInGameInfo } = useHsrInGameInfo(hsrUUID);
+  const { data: hsrInGameInfo } = useHsrInGameInfo(props.uuid);
   const { data: moc } = useMemoryOfChaos();
+  const playerAvatar =
+    // @ts-ignore
+    AvatarIcon[hsrInGameInfo?.player?.avatar?.icon?.match(/\d+/g).join("")];
+
+  const animation = useSpring({ from: { opacity: 0 }, to: { opacity: 1 } });
 
   return (
     <View className="z-30">
-      <Header2 rightBtn={<ShareBtn />} />
-      <View
-        className="mt-12 px-4"
-        style={{
-          alignItems: "center",
-          gap: 18,
-          height: Dimensions.get("window").height,
-        }}
-      >
-        <View style={{ alignItems: "center", gap: 6 }}>
-          {/* 頭像 */}
-          <Avatar
-            image={hsrFullData?.cur_head_icon_url}
-            onPress={() => {
-              const signature = hsrInGameInfo?.player?.signature;
-              if (signature) {
-                Toast(signature);
-              }
-            }}
-          />
-          {/* 玩家名 */}
-          <Text className="text-text text-[24px] font-[HY65]">
-            {hsrInGameInfo?.player?.nickname}
-          </Text>
-          {/* UUID & 伺服器 */}
-          <View
-            className="bg-[#00000040] rounded-[49px] px-[12px] py-[6px]"
-            style={{ alignItems: "center" }}
-          >
-            <Text className="text-[#FFFFFF] font-[HY65]">
-              {hsrUUID} · {LOCALES[appLangauge][hsrServerChosen]}
+      <Header2 rightBtn={isOwner ? <ShareBtn /> : null} />
+      {hsrInGameInfo ? (
+        <AnimatedView
+          className="mt-12 px-4"
+          style={[
+            {
+              alignItems: "center",
+              gap: 18,
+              height: Dimensions.get("window").height,
+            },
+            animation,
+          ]}
+        >
+          <View style={{ alignItems: "center", gap: 6 }}>
+            {/* 頭像 */}
+            <UserAvatar
+              image={playerAvatar}
+              onPress={() => {
+                const signature = hsrInGameInfo?.player?.signature;
+                if (signature) {
+                  Toast(signature);
+                }
+              }}
+            />
+            {/* 玩家名 */}
+            <Text className="text-text text-[24px] font-[HY65]">
+              {hsrInGameInfo?.player?.nickname}
+            </Text>
+            {/* UUID & 伺服器 */}
+            <UUIDBox uuid={props.uuid} />
+          </View>
+          {/* 等級 */}
+          <View style={{ flexDirection: "row", gap: 16, alignItems: "center" }}>
+            <InfoItem title={"開拓等級"} value={hsrInGameInfo?.player?.level} />
+            <View className="w-[1px] h-6 bg-[#F3F9FF40]"></View>
+            <InfoItem
+              title={"均衡等级"}
+              value={hsrInGameInfo?.player?.world_level}
+            />
+          </View>
+          {/* 擁有角色 */}
+          <UserInfoCharacters uuid={props.uuid} />
+          {/* 其他資訊 */}
+          {isOwner && (
+            <View
+              className="w-full px-3"
+              style={{ flexDirection: "row", justifyContent: "space-between" }}
+            >
+              <InfoItem
+                title={"活躍天數"}
+                value={hsrFullData?.stats.active_days}
+              />
+              <InfoItem
+                title={"達成成就"}
+                value={hsrInGameInfo?.player?.space_info?.achievement_count}
+              />
+              <InfoItem
+                title={"戰利品"}
+                value={hsrFullData?.stats?.chest_num}
+              />
+              <InfoItem title={"忘卻之庭"} value={`${moc?.battle_num}/12`} />
+            </View>
+          )}
+          {/* 由 Stargazer 製作 */}
+          <View className="absolute bottom-6">
+            <Text className="text-text text-[12px] font-[HY65]">
+              由 Stargazer 製作
             </Text>
           </View>
-        </View>
-        {/* 等級 */}
-        <View style={{ flexDirection: "row", gap: 16, alignItems: "center" }}>
-          <View className="w-[1px] h-6 bg-[#F3F9FF40]"></View>
-          <InfoItem title={"開拓等級"} value={hsrInGameInfo?.player?.level} />
-          <InfoItem
-            title={"均衡等级"}
-            value={hsrInGameInfo?.player?.world_level}
-          />
-        </View>
-        {/* 擁有角色 */}
-        <UserInfoCharacters />
-        {/* 其他資訊 */}
-        <View
-          className="w-full px-3"
-          style={{ flexDirection: "row", justifyContent: "space-between" }}
-        >
-          <InfoItem title={"活跃天数"} value={hsrFullData?.stats.active_days} />
-          <InfoItem title={"达成成就"} value={hsrInGameInfo?.player?.level} />
-          <InfoItem title={"战利品"} value={hsrFullData?.stats?.chest_num} />
-          <InfoItem title={"忘却之庭"} value={`${moc?.battle_num}/12`} />
-        </View>
-        {/*  */}
-        <View className="absolute bottom-6">
-          <Text className="text-text text-[12px] font-[HY65]">
-            由 Stargazer 制作
-          </Text>
-        </View>
-      </View>
+        </AnimatedView>
+      ) : (
+        <ActivityIndicator />
+      )}
     </View>
   );
 }
@@ -97,20 +123,6 @@ const InfoItem = ({ title, value }: { title: string; value: string }) => (
   </View>
 );
 
-const Avatar = ({ image, onPress }: { image: string; onPress: () => void }) => (
-  <TouchableOpacity className="z-50" onPress={onPress} activeOpacity={0.35}>
-    <Image
-      source={{
-        uri: image,
-      }}
-      className="w-[73px] h-[73px] rounded-full"
-      style={{
-        backgroundColor: "rgba(144, 124, 84, 0.4)",
-      }}
-    />
-  </TouchableOpacity>
-);
-
 const ShareBtn = () => (
   <TouchableOpacity onPress={() => {}}>
     <Image
@@ -119,3 +131,5 @@ const ShareBtn = () => (
     />
   </TouchableOpacity>
 );
+
+const AnimatedView = animated(View);

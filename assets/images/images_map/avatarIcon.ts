@@ -1,4 +1,4 @@
-const avatarIcon = {
+const AvatarIcon = {
   1001: require("../../images/avatar_icon/1001.webp"),
   1002: require("../../images/avatar_icon/1002.webp"),
   1003: require("../../images/avatar_icon/1003.webp"),
@@ -121,4 +121,4 @@ const avatarIcon = {
   Ziqiao: require("../../images/avatar_icon/Ziqiao.webp"),
 };
 
-export default avatarIcon;
+export default AvatarIcon;

@@ -1,4 +1,4 @@
-const officalCharId = {
+const officalCharId: any = {
   1001: "March 7th",
   1002: "Dan Heng",
   1003: "Himeko",

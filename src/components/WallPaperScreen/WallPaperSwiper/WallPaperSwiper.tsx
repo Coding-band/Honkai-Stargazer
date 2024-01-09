@@ -48,7 +48,7 @@ export default memo(function WallPaperSwiper(props: Props) {
                 Dimensions.get("screen").width > 600 ? "contain" : "cover"
               }
               style={styles.slide}
-              source={{ uri: w.url }}
+              source={w.url}
             />
           </View>
         ))}

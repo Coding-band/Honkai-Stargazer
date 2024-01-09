@@ -12,7 +12,7 @@ import CharacterSkillTree from "../../../../../../assets/images/images_map/chara
 import CharacterSkillMain from "../../../../../../assets/images/images_map/characterSkillMain";
 import TracePopUp from "../TracePopUp/TracePopUp";
 
-const TraceLine = require("../../../../../../assets/images/path_trace_line/harmony_trace_line.svg");
+const TraceLine = require("./images/path_trace_line/harmony_trace_line.svg");
 
 export default function HarmonyTraceTree() {
   const loaded = useDelayLoad(100);

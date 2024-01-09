@@ -12,7 +12,7 @@ import TracePopUp from "../TracePopUp/TracePopUp";
 import CharacterSkillTree from "../../../../../../assets/images/images_map/characterSkillTree";
 import CharacterSkillMain from "../../../../../../assets/images/images_map/characterSkillMain";
 
-const TraceLine = require("../../../../../../assets/images/path_trace_line/abundance_trace_line.svg");
+const TraceLine = require("./images/path_trace_line/abundance_trace_line.svg");
 
 export default function AbundanceTraceTree() {
   const loaded = useDelayLoad(100);
@@ -37,6 +37,7 @@ export default function AbundanceTraceTree() {
   const skillTreeOuter3Edge1 = skillTreeOuter3.children[0];
   const skillTreeOuter3Edge2 = skillTreeOuter3.children[1];
   const skillTreeOtherEdge1 = skillTrees[3];
+  const skillTreeOtherEdge2 = skillTrees[4];
 
   const [selectedInner, setSelectedInner] = useState(0);
 
@@ -141,7 +142,7 @@ export default function AbundanceTraceTree() {
                 top={365}
                 icon={
                   // @ts-ignore
-                  CharacterSkillTree[skillTreeOtherEdge1.embedBuff.iconPath]
+                  CharacterSkillTree[skillTreeOtherEdge2.embedBuff.iconPath]
                 }
               />
               <Outer
@@ -187,7 +188,7 @@ export default function AbundanceTraceTree() {
               />
 
               <Inner
-                left={132}
+                left={131}
                 top={102}
                 icon={CharacterSkillMain[charId].skill4}
                 selected={selectedInner === 4}
@@ -196,7 +197,7 @@ export default function AbundanceTraceTree() {
                 }}
               />
               <Inner
-                left={132}
+                left={131}
                 top={187}
                 icon={CharacterSkillMain[charId].skill3}
                 selected={selectedInner === 3}
@@ -205,7 +206,7 @@ export default function AbundanceTraceTree() {
                 }}
               />
               <Inner
-                left={132}
+                left={131}
                 top={270}
                 icon={CharacterSkillMain[charId].skill6}
                 selected={selectedInner === 5}

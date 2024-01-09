@@ -21,5 +21,14 @@ export const wallPapers: WallPaper[] = [
     url: `https://act-webstatic.hoyoverse.com/game_record/hkrpg/SpriteOutput/PhoneTheme/Theme/PhoneThemeMain/221003.png`,
     name: "壁紙四",
   },
-  { id: 5, url: `https://voc2048.com/stargazer2/test-bg.png`, name: "壁紙五" },
+  {
+    id: 5,
+    url: require("../../../assets/images/bgs/bg_light.png"),
+    name: "純色壁紙",
+  },
+  {
+    id: 6,
+    url: require("../../../assets/images/bgs/bg_5.png"),
+    name: "鏡流",
+  },
 ];

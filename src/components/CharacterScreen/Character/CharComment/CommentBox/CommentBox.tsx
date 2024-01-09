@@ -115,8 +115,8 @@ export default function CommentBox(props: Props) {
       {translation.value.y < 0 && (
         <KeyboardAvoidingView
           className="absolute bottom-0 w-full"
-          behavior="position"
-          keyboardVerticalOffset={96}
+          behavior="padding"
+          keyboardVerticalOffset={98}
         >
           <Animated.View style={[animatedStyles3]}>
             {props.bottom}

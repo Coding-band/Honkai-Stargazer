@@ -151,4 +151,7 @@ export const ZH_CN = {
   RelicAffixLightning: "雷属性伤害加成",
   RelicAffixQuantum: "量子属性伤害加成",
   RelicAffixImaginary: "虚数属性伤害加成",
+
+  // toast
+  PleaseLogin: "請先登入！",
 };

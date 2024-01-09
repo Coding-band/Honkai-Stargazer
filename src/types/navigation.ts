@@ -14,4 +14,5 @@ export type ParamList = {
   Login: { platform: hsrPlatform; serverId: hsrServerId };
   Event: { id: string };
   UserInfo: { uuid: string };
+  UserCharDetail: { uuid: string; charId: string };
 };

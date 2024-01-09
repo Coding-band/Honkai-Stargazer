@@ -114,6 +114,12 @@ export const SCREENS = {
     id: "UserInfo",
     getName: (lang: AppLanguage) => "",
     getShortName: (lang: AppLanguage) => "",
-    icon: Ticket,
+    icon: null,
+  },
+  UserCharDetailPage: {
+    id: "UserCharDetail",
+    getName: (lang: AppLanguage) => "",
+    getShortName: (lang: AppLanguage) => "",
+    icon: null,
   },
 };

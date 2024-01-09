@@ -1,21 +1,19 @@
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import React from "react";
-import { StatusBar } from "expo-status-bar";
-import { LinearGradient } from "expo-linear-gradient";
-import Header from "../components/global/Header/Header";
-import { SCREENS } from "../constant/screens";
-import WallPaper from "../components/global/WallPaper/WallPaper";
 import useAppLanguage from "../language/AppLanguage/useAppLanguage";
-import EventList from "../components/EventListScreen/EventList";
-import UserInfo from "../components/UserInfoScreen/UserInfo/UserInfo";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { ParamList } from "../types/navigation";
+import { StatusBar } from "expo-status-bar";
+import WallPaper from "../components/global/WallPaper/WallPaper";
+import { LinearGradient } from "expo-linear-gradient";
+import UserCharDetail from "../components/UserCharDetailScreen/UserCharDetail/UserCharDetail";
 
-export default function UserInfoScreen() {
+export default function UserCharDetailScreen() {
   const { language } = useAppLanguage();
 
-  const route = useRoute<RouteProp<ParamList, "UserInfo">>();
+  const route = useRoute<RouteProp<ParamList, "UserCharDetail">>();
   const uuid = route.params.uuid;
+  const charId = route.params.charId;
 
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
@@ -25,7 +23,7 @@ export default function UserInfoScreen() {
         className="absolute w-full h-full"
         colors={["#00000080", "#00000020"]}
       />
-      <UserInfo uuid={uuid} />
+      <UserCharDetail uuid={uuid} />
       <LinearGradient
         className="w-full h-[600px] absolute bottom-0"
         colors={["#00000000", "#000000"]}

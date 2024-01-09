@@ -5,13 +5,13 @@ import { TextInput } from "react-native";
 import useHoyolabCookie from "../../../../../../redux/hoyolabCookie/useHoyolabCookie";
 import TextButton from "../../../../../global/TextButton/TextButton";
 import useHsrServerChosen from "../../../../../../redux/hsrServerChosen/useHsrServerChosen";
+import auth from "@react-native-firebase/auth";
 
 type Props = {
   onCookieSave?: () => void;
 };
 
 export default function ManualEnterCookie(props: Props) {
-
   const { setHoyolabCookie } = useHoyolabCookie();
   const { setHsrServerChosen } = useHsrServerChosen();
 
@@ -19,6 +19,7 @@ export default function ManualEnterCookie(props: Props) {
   const handleSaveCookie = () => {
     setHoyolabCookie(inputCookie);
     setHsrServerChosen("cn1");
+    auth().signOut();
     props.onCookieSave && props.onCookieSave();
   };
 

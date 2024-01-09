@@ -13,7 +13,7 @@ export default function WallPaper(props: Props) {
     <ImageBackground
       className="absolute w-full h-full -mt-1 scale-105"
       // 把背景關掉
-      source={{ uri: wallPaper?.url }}
+      source={ wallPaper?.url }
       // placeholder={blurhash}
       contentFit="cover"
       blurRadius={props.isBlur ? 5 : 0}

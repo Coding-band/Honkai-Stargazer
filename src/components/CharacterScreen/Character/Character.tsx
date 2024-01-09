@@ -54,22 +54,23 @@ export default React.memo(function Character() {
         <Animated.ScrollView
           // @ts-ignore
           ref={aref}
-          style={{ padding: 24 }}
           nestedScrollEnabled={true}
         >
           <View onLayout={handleLayout}>
-            <CharInfo />
-            <Animated.View style={contentAnimatedStyles}>
-              <CharAttribute />
-              <CharTrace />
-              <CharEidolon />
-              <CharSuggestLightCone />
-              <CharSuggestRelics />
-              <CharSuggestTeam />
-              <CharStory />
-              <CharComment containerRef={aref} />
-              <View className="pb-[68px]" />
-            </Animated.View>
+            <View className="p-6">
+              <CharInfo />
+              <Animated.View style={contentAnimatedStyles}>
+                <CharAttribute />
+                <CharTrace />
+                <CharEidolon />
+                <CharSuggestLightCone />
+                <CharSuggestRelics />
+                <CharSuggestTeam />
+                <CharStory />
+              </Animated.View>
+            </View>
+            <CharComment containerRef={aref} />
+            <View className="pb-[40px]" />
           </View>
         </Animated.ScrollView>
       </View>

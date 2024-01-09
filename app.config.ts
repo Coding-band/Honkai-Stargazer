@@ -104,6 +104,16 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
         requestLegacyExternalStorage: true,
       },
     ],
+    [
+      "expo-image-picker",
+      {
+        photosPermission: "custom photos permission",
+        cameraPermission: "Allow $(PRODUCT_NAME) to open the camera",
+
+        "//": "Disables the microphone permission",
+        microphonePermission: false,
+      },
+    ],
     "expo-build-properties",
   ],
 });

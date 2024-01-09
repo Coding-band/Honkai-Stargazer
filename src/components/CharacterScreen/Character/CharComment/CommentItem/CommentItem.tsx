@@ -3,6 +3,7 @@ import {
   Text,
   TouchableOpacity,
   TouchableNativeFeedback,
+  TouchableWithoutFeedback,
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import db from "../../../../../firebase/db";
@@ -15,6 +16,7 @@ import officalCharId from "../../../../../../map/character_offical_id_map";
 import { findKey } from "lodash";
 import { extractMentionsSplit } from "../CommentInput/utils/extractMetions";
 import { hasUserByUsername } from "../../../../../firebase/utils/hasUser";
+import CommentUserAvatar from "./CommentUserAvatar/CommentUserAvatar";
 
 export default function CommentItem({
   user_id,
@@ -31,7 +33,7 @@ export default function CommentItem({
   const charId = useCharId();
   const charOfficalId = findKey(officalCharId, (v) => v === charId);
   const username = user?.name;
-  const userAvatar = user?.avatar_url;
+
   const userCharacters = userCharsInfo?.characters;
   const userHasChar = !!userCharacters?.filter(
     (char) => char.id.toString() === charOfficalId
@@ -66,14 +68,8 @@ export default function CommentItem({
 
   return (
     <TouchableNativeFeedback>
-      <View className="py-3" style={{ flexDirection: "row", gap: 14 }}>
-        <Image
-          className="w-9 h-9"
-          source={
-            userAvatar ||
-            "https://act.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_763646/c86d9128cff46891e47275f3b48b5eeb.png?x-oss-process=image%2Fformat%2Cwebp"
-          }
-        />
+      <View className="px-6 py-3" style={{ flexDirection: "row", gap: 14 }}>
+        <CommentUserAvatar user={user} />
         <View style={{ gap: 2, flex: 1 }}>
           <View style={{ flexDirection: "row", gap: 10, alignItems: "center" }}>
             <Text className="text-text text-[16px] font-[HY65]">

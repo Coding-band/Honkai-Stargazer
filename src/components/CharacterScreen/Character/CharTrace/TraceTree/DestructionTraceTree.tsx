@@ -12,7 +12,7 @@ import TracePopUp from "../TracePopUp/TracePopUp";
 import CharacterSkillTree from "../../../../../../assets/images/images_map/characterSkillTree";
 import CharacterSkillMain from "../../../../../../assets/images/images_map/characterSkillMain";
 
-const TraceLine = require("../../../../../../assets/images/path_trace_line/destruction_trace_line.svg");
+const TraceLine = require("./images/path_trace_line/destruction_trace_line.svg");
 
 export default function DestructionTraceTree() {
   const loaded = useDelayLoad(100);
