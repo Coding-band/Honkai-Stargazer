@@ -26,10 +26,10 @@ export default function ManualEnterCookie(props: Props) {
   return (
     <View style={{ gap: 12 }}>
       <Text className="text-[14px] font-[HY55] text-black leading-5">
-        请选择服务器并粘贴 Cookies。
+        請選擇服務器並貼上 Cookies。
       </Text>
       <TextButton hasShadow={false} width={"100%"} height={46}>
-        星穹列车
+        星窮列車
       </TextButton>
       <TextInput
         value={inputCookie}

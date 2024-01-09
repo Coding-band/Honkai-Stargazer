@@ -4,6 +4,7 @@ import {
   hsrPlatform,
   hsrServerId,
 } from "../utils/hoyolab/servers/hsrServer.types";
+import { CharacterName } from "./character";
 
 export type ParamList = {
   Character: {
@@ -14,5 +15,5 @@ export type ParamList = {
   Login: { platform: hsrPlatform; serverId: hsrServerId };
   Event: { id: string };
   UserInfo: { uuid: string };
-  UserCharDetail: { uuid: string; charId: string };
+  UserCharDetail: { uuid: string; charId: CharacterName };
 };
