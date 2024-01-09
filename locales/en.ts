@@ -144,4 +144,7 @@ export const EN = {
   RelicAffixLightning: "Lightning DMG Bonus",
   RelicAffixQuantum: "Quantum DMG Bonus",
   RelicAffixImaginary: "Imaginary DMG Bonus",
+  
+  // toast
+  PleaseLogin: "Pls login first ~",
 };

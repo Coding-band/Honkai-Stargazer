@@ -153,5 +153,5 @@ export const ZH_CN = {
   RelicAffixImaginary: "虚数属性伤害加成",
 
   // toast
-  PleaseLogin: "請先登入！",
+  PleaseLogin: "请先登入！",
 };

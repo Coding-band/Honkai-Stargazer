@@ -143,4 +143,7 @@ export const VOCCHINESE = {
   RelicAffixLightning: "雷屬性傷害加成",
   RelicAffixQuantum: "量子屬性傷害加成",
   RelicAffixImaginary: "虛數屬性傷害加成",
+
+  // toast
+  PleaseLogin: "請登入先~",
 };
