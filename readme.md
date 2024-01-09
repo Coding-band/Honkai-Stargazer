@@ -8,6 +8,10 @@
 ![Make With Love](https://img.shields.io/badge/make_with_%E2%9D%A4%EF%B8%8F-white)
 ![Version](https://img.shields.io/badge/Version-2.0.0_BETA-pink)
 
+#### [按我去看 App 特點](#app-特點)
+
+#### [按我去看 用戶資料使用聲明](#用戶資料使用聲明)
+
 ### 關於 App
 
 星穹觀星者 2 是由團隊[<span style="color:#E31576">Coding Band</span>](https://github.com/Coding-Band)開發
@@ -18,187 +22,132 @@
 
 <br>將在 Google Play Store 和 App Store 上架，讓使用 Android 和 iOS 的開拓者都能夠體驗星穹觀星者 2。
 
-### 加入我們的 Discord 伺服器吧 ~
+<span style="color:#E31576">⚠️ 請認准包裝名!!! 不要下載非以下渠道分發的版本!!!⚠️</span>
 
-[![Coding Band 伺服器](https://dcbadge.vercel.app/api/server/uXatcbWKv2?theme=discord-inverted)](https://discord.gg/uXatcbWKv2)
+- `com.voc.honkai_stargazer_gp` (Google Play)
+- `com.voc.honkaistargazer` (App Store)
+
+<span style="color:#FF99CC">📢 如果不介意的話，可以透過 App 内捐款支持我們~ 營運和 App Store 上架都是蠻燒錢的 QQ📢</span><br>
+<span style="color:#FF9900">📧 如果你想與我們合作，歡迎透過以下方式聯絡我們 📧</span><br>
+
+- [![Coding Band 伺服器](https://dcbadge.vercel.app/api/server/uXatcbWKv2?theme=discord-inverted)](https://discord.gg/uXatcbWKv2)<br>
+- [Email](mailto:xectorda@gmail.com) (標題記得標注`合作`或者相近詞)
 
 ### Crowdin 翻譯進度
 
-![de translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=de&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27de%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-591669.json>)
-![es-ES translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=es-ES&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27es-ES%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-591669.json>)
-![fr translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=fr&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27fr%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-591669.json>)
-![ja translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ja&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ja%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-591669.json>)
-![pt-PT translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=pt-PT&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27pt-PT%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-591669.json>)
-![ru translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ru&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ru%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-591669.json>)
-![uk translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=uk&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27uk%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-591669.json>)
+![de translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=de&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27de%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![es-ES translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=es-ES&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27es-ES%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![fr translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=fr&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27fr%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![id translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=id&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ja%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![ja translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ja&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ja%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![ko translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ko&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ja%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![pt-PT translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=pt-PT&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27pt-PT%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![ru translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ru&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ru%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![th translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ru&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27th%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![vi translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ru&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27vi%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 
-## We need you !
+---
 
-### Translator
+### <span style="color:#339966">封測人員招募 (直至 2024/01/10 08:00 UTC+8)
 
-- If you want to help us on translating, feel free to join us through <a href="https://crowdin.com/project/genshin-spirit/invite?h=a5b551bd4396ec965a65c8a9a29260401802677">Crowdin</a> ~
-- If you want to translate new language, you may directly DM Voc-夜芷冰 (vocaloid2048)
+我們正招募 20 ~ 30 位封測人員，協助我們測試 App 功能的穩定性和使用體驗，不論你是 Android 用戶，或者 iOS 用戶，都可以申請參與哦~
+<br><br>
+封測期為 : 2024/01/10 09:00 UTC+8 ~ 2024/01/17 09:00 UTC+8<br>
+封測人員將會被邀請進入 Discord 伺服器，並給予臨時身份組<br>
+<span style="color:#FF0000">**如果你沒有 Discord 帳戶，請記得申請前先註冊一個**
 
-### Developer
+你可以透過這個 Email (xectorda@gmail.com)<br>
+或者在 Discord 好友搜尋 `yukina4096`<br><br>
+![yukina4096](./readme/image/螢幕擷取畫面%202024-01-08%20193615.png)
 
-- If you are interested on helping us on developing Honkai Stargazer (Android / Cross-Platform Version)
-- Or developing other external products (E.g. Honkai Stargazer Rainmeter Skin by `vocaloid2048`)
-- Feel free to DM Voc-夜芷冰 (vocaloid2048) ~
-- P.S. Android Version base on Java+XML, Cross-Platform Version still haven't any plan of it
+標明你想參加這次的封測的裝置是 Android / iOS，並加入我們的 Discord 伺服器
+<br>
+我們會在額滿後停止接受申請~
 
-### Beta Testers
+### <span style="color:#FF9900"><守則>
 
-- If you want to help us on improving user experience and debug
-- Or want to try the beta version of Genshin Spirit
-- Feel free to contact Voc-夜芷冰 (vocaloid2048)
+- 不得公開、私下分發封測版本予任何人
+- 不得拆包、捉包、反編譯 、重新打包 App
+- 封測版本並不代表正式版，務必注意
+- 不建議分享封測内容，以免造成誤會
+- 不得惡意攻擊伺服器/使伺服器無法正常提供服務
 
-## Device Suggestion
+---
 
-|                 | Minium                | Awesome                |
-| --------------- | --------------------- | ---------------------- |
-| Android Version | 8.0 (API 26) or above | 10.0 (API 29) or above |
-| RAM             | 2GB                   | 4GB or above           |
-| Storage         | 150MB                 | 1GB or above           |
-| App Version     | Hmm…                  | Latest !               |
+## <span style="color:#569CD6">幫幫我，開拓者!
 
-## Feature
+我們目前在招募志願者協助我們提升 App 的質量:
 
-<table>
-    <tr>
-        <td>
-            <img src="readme/en/1.png">
-        </td>
-        <td>
-            <img src="readme/en/2.png">
-        </td>
-        <td>
-            <img src="readme/en/3.png">
-        </td>
-        <td>
-            <img src="readme/en/4.png">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <img src="readme/en/5.png">
-        </td>
-        <td>
-            <img src="readme/en/6.png">
-        </td>
-        <td>
-            <img src="readme/en/7.png">
-        </td>
-        <td>
-            <img src="readme/en/8.png">
-        </td>
-    </tr>
-</table>
+### <span style="color:#339966">翻譯 <span style="color:#CCCCCC">（把 App 的文字變成你的朋友都能看懂）
 
-- [星穹觀星者 2](#星穹觀星者-2)
-  - [關於 App](#關於-app)
-  - [加入我們的 Discord 伺服器吧 ~](#加入我們的-discord-伺服器吧-)
-  - [Crowdin 翻譯進度](#crowdin-翻譯進度)
-  - [We need you !](#we-need-you-)
-    - [Translator](#translator)
-    - [Developer](#developer)
-    - [Beta Testers](#beta-testers)
-  - [Device Suggestion](#device-suggestion)
-  - [Feature](#feature)
-  - [Home Page](#home-page)
-    - [Available Soon](#available-soon)
-  - [Character/Lightcone/Relic List](#characterlightconerelic-list)
-  - [Character Page](#character-page)
-    - [# P.S. Advice Page will be unselectable if there don't have data of it. (./app/src/main/assets/character_data/advice)](#-ps-advice-page-will-be-unselectable-if-there-dont-have-data-of-it-appsrcmainassetscharacter_dataadvice)
-  - [Lightcone Page](#lightcone-page)
-  - [Setting Page](#setting-page)
-    - [Appearance](#appearance)
-    - [About](#about)
-    - [Special Thanks](#special-thanks)
-    - [Credit By](#credit-by)
-    - [Donate](#donate)
-  - [Disclaim](#disclaim)
+- 語言不限（英、繁、簡、廣東話已經有了，注音我是不反對誒）
+- 人數不限，但必須負責任
+- 使用 Crowdin 翻譯協作平台
 
-## Home Page
+### <span style="color:#339966">Beta 測試員
 
-### Available Soon
+- 人數：100 人 (Android 和 iOS)
+- 需要遵守<守則>
 
-## Character/Lightcone/Relic List
+### <span style="color:#FF9900"><守則>
 
-User can select character(s) they would like to search in this list, which also contains :
+- 不得公開、私下分發封測版本予任何人
+- 不得拆包、捉包、反編譯 、重新打包 App
+- 封測版本並不代表正式版，務必注意
+- 不建議分享封測内容，以免造成誤會
+- 不得惡意攻擊伺服器/使伺服器無法正常提供服務
 
-- Search By Text (**Both English and language you selected in app are available**)
-- Search By Element/Rarity/Path/Status
-  - Simply select requirement(s) of who you want to search
-  - Press _Apply_ and the list will show the result to you
-- Different layout of list item
-  - Two types of layout
+## 用戶資料使用聲明
 
-## Character Page
+### Cookies 使用原則説明
 
-User can read character's information inside this scrollable page
+- 星穹觀星者 2 <span style="color:#FF0000">不會</span> 收集用戶的 Cookies，用戶所有的 Cookies 均只會儲存於本地。Cookies 並不能代替帳戶密碼，無法用於第三方登入。<br>
+- 我們<span style="color:#FF0000">不會</span>、亦無法收集和存取用戶的**帳戶和密碼**。<br>
+- 當用戶在按下`帳戶綁定`後，即確認知悉 App 的 Cookies 使用原則，並允許 星穹觀星者 2 獲取已登入帳戶相關數據。
 
-- Scrollable SeekBar for user to know each level's materials count that required
-- Colored Text for user to read the important value and Element easily
-- Character Eidolon is also available !
-- Character Advice Page can give user a nice idea of their characters
+### 用戶資料收集聲明
 
-#### # P.S. Advice Page will be unselectable if there don't have data of it. (./app/src/main/assets/character_data/advice)
+我們僅會收集並儲存以下數據，用於（日後）向用戶提供進階功能:
 
-## Lightcone Page
+- 遊戲 UID、等級、名稱、伺服器、活躍日數、寶箱數、頭像
+- 擁有角色，已裝備光錐，遺器名稱、等級
+- 混沌回憶數據
+- 用戶在開拓者留言功能内的留言時間、内容
 
-User can read lightcone's information inside this scrollable page
+我們保留一切更改收集範圍的權利。<br>
+以上資訊用於建立和管理帳戶，以及提供進階功能服務。
 
-- Scrollable SeekBar for user to know each level's materials count that required
-- Colored Text for user to read the important value and Element easily
-- ~~High-Resolution Image shown at the top of the page~~
+## App 特點
 
-## Setting Page
+Coding Band 由 4 位核心成員組成,分別是 :<br>
 
-### Appearance
+- 《設計大佬》[2O48](https://github.com/2O48)
+- 《RN 打嚕魚》[Dalufishe](https://github.com/Dalufishe)
+- 《SG1 作者》[夜芷冰](https://github.com/Vocaloid2048)
+- 《Furina》[Somebody](https://github.com/ilikecatgirls)
+  ![用黑塔的圖片代替](./readme/image/StarRail_Image_1701573293.png)
 
-User can customize their own preferences in this app :
+星穹觀星者 2 將會提供以下功能:
 
-- Language (See [Crowdin Translation Progress](#crowdin-translation-progress))
-- Material Color
-- Theme (DayNight)
-- Haptic Feedback
-- HSR Font
-- Shadow of List Item
+- 角色、光錐、遺器資料查詢![角色、光錐、遺器資料查詢](./readme/image/Screenshot_20240107-180813.png)
+- 角色高清圖(不要問我為啥 AKA 寫真圖) (為了拍圖 差點把電腦顯卡燒了 QQ)![角色高清圖](./readme/image/Screenshot_20240107-181159.png)
+- 星穹鐵道活動列表![星穹鐵道活動列表](./readme/image/Screenshot_20240108-141346.png)
+- 兌換碼![兌換碼](./readme/image/Screenshot_20240108-141414.png)
+- 展示自己帳戶的即時開拓力、每日任務進度、派遣委託![即時開拓力、每日任務進度、派遣委託](./readme/image/Screenshot_20240107-183711.png)
+- 查看自己的混沌回憶紀錄
+- 展示活動列表、地圖、兌換碼功能。
+- 角色推薦配隊、光錐、遺器。![推薦](./readme/image/Screenshot_20240107-181220.png)
+- 開拓者留言功能![留言功能](./readme/image/Screenshot_20240107-183842.png)
+- 文檔支援 12 種語言，App 介面暫時支援繁簡中和廣東話 (Vocchinese)
+- 背景更換 (🙂?)
+- 彩蛋 (找找看吧~)
 
-### About
+## 設備建議
 
-User can view `Version Code` of Compiled App, also with our contact way.
-
-### Special Thanks
-
-**Really, Really Thank You for those who helped us to improve this project! (By Vocchi)**
-
-### Credit By
-
-Here's the links of some data in this project we reference from. Thanks also.
-
-### Donate
-
-In this project, we had included the donation function (Google Play)<br>
-Please feel free to donate as you wish. Vocchi will be thankful for your kindly donation
-
-```
-P.S. Vocchi don't drink coffee actually.
-```
-
-## Disclaim
-
-_This application is not affiliated with miHoYo Co. Ltd. 崩壞•星穹觀星者(Honkai Stargazer) is only an app that provides data developed by fans. The information provided in this app is for reference only. Honkai Stargazer will not guarantee the accuracy and completeness of any information provided on it to any degree._
-
-_This application will not collect any personal privacy data that may be used to identify and track users along with other information. If necessary, the application will only collect application stack errors and limited device information[Note 0]. The collected data is used to repair application vulnerabilities and improve user experience._
-
-_This project (崩壞•星穹觀星者 Honkai Stargazer) does not object to anyone adding functions, debugging, compiling and testing, and using it for learning purposes, but this project does not allow third parties to distribute freely (whether private or public) the unofficial version [Note 1] without written permission from Voc-夜芷冰, and deliberately pretend to be the developer of this project. Voc-夜芷冰 reserves the right to ask individuals/institutions who violate the above conditions to be removed._
-
-<br>[Note 0] We will only collect :
-
-- Your device name
-- Your device's Android Version
-- App Version
-- Your Language & DayNight Preference in App
-
-<br>[Note 1] The unofficial version includes third-party self-compilation and distribution after downloading the application installation file on the cooperative platform.
+|              | 最少值              | 建議值                 |
+| ------------ | ------------------- | ---------------------- |
+| Android 版本 | 8.0 (API 26) 或以上 | 10.0 (API 29) or above |
+| iOS 版本     | 13.0 或以上         | 15.0 或以上            |
+| RAM          | 2GB                 | 4GB 或以上             |
+| 存儲空間     | 250MB               | 1GB 或以上             |
+| App 版本號   | 誒...你知道的       | 當然是最新穩定版       |
