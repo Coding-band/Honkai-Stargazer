@@ -48,13 +48,13 @@ export const VOCCHINESE = {
   ModifyHomePage: "改下排版先",
   SimulatedUniverse: "模擬宇宙",
   // ui - filter and sort
-  SortByDate: "實裝日期",
-  SortByENName: "名稱（英文）",
-  SortByATK: "攻擊力",
-  SortByDEF: "防禦力",
-  SortByHP: "生命值",
-  SortByEnergyMax: "能量上限",
-  SortByRarity: "稀有度",
+  SortByTime: "實裝日期",
+  SortByName: "名稱（英文）",
+  SortByAtk: "攻擊力",
+  SortByDef: "防禦力",
+  SortByHp: "生命值",
+  SortByEnergy: "能量上限",
+  SortByRare: "稀有度",
   Reset: "重置",
   OK: "確定",
   FilterTitle: "篩選規則",
@@ -86,6 +86,7 @@ export const VOCCHINESE = {
   PlayersAverageRounds: "平均${1}輪",
   PlayersRounds: "${1}輪",
   // ui - Setting Page
+  Navigate: "前往",
   SwitchOn: "開",
   SwitchOff: "關",
   AccountSetup: "帳戶設定(${1})",
@@ -145,5 +146,5 @@ export const VOCCHINESE = {
   RelicAffixImaginary: "虛數屬性傷害加成",
 
   // toast
-  PleaseLogin: "請登入先~",
+  PleaseLogin: "請登入先！",
 };

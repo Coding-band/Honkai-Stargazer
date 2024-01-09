@@ -155,13 +155,7 @@ export const EN = {
   RelicAffixLightning: "Lightning DMG Bonus",
   RelicAffixQuantum: "Quantum DMG Bonus",
   RelicAffixImaginary: "Imaginary DMG Bonus",
-<<<<<<< HEAD
-  
-  // toast
-  PleaseLogin: "Pls login first ~",
-=======
 
   // toast
   PleaseLogin: "Please login first！",
->>>>>>> 4df9e90 (fix: 修正許多錯誤 (主要是語言))
 };
