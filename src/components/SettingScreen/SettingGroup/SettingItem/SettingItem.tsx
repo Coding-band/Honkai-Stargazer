@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import BlurView from "../../../global/BlurView/BlurView";
 import { Image } from "expo-image";
 import Listbox from "../../../global/Listbox/Listbox";
+import { LOCALES } from "../../../../../locales";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 
 const ArrowRight = require("./icons/ArrowRight.svg");
 const ArrowDown = require("./icons/ArrowDown.svg");
@@ -19,6 +21,8 @@ type Props = {
 };
 
 export default function SettingItem(props: Props) {
+  const { language } = useAppLanguage();
+
   const [zIndex, setZIndex] = useState(0);
 
   const handleListboxOpen = (isOpen: boolean) => {
@@ -81,7 +85,7 @@ export default function SettingItem(props: Props) {
             style={{ justifyContent: "center", alignItems: "center" }}
           >
             <Text className="text-[14px] font-[HY65]">
-              {props.content || "前往"}
+              {props.content || LOCALES[language].Navigate}
             </Text>
             <Image
               source={ArrowRight}

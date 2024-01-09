@@ -1,11 +1,11 @@
 import { ExpoConfig, ConfigContext } from "expo/config";
 
 // process.env.NODE_ENV;
-const ENV = "beta";
+export const ENV = "beta";
 
 export const APP_NAME = {
   development: "Stargazer Development Version",
-  beta: "Stargazer BETA",
+  beta: "Stargazer",
   production: "Stargazer",
 };
 
@@ -13,6 +13,13 @@ export const VERSION = {
   development: "2.0.0",
   beta: "2.0.10",
   production: "2.0.0",
+};
+
+export const APP_ICON = {
+  iosBETA: "./assets/IOS-BETA.png",
+  androidBETA: "./assets/Android-BETA.png",
+  ios: "./assets/IOS.png",
+  android: "./assets/Android.png",
 };
 
 export const PACKAGE_NAME = {
@@ -36,7 +43,11 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     production: VERSION.production,
   }),
   orientation: "portrait",
-  icon: "./assets/icon.png",
+  icon: askEnvDo({
+    development: APP_ICON.iosBETA,
+    beta: APP_ICON.iosBETA,
+    production: APP_ICON.ios,
+  }),
   userInterfaceStyle: "light",
   splash: {
     image: "./assets/splash.png",
@@ -61,7 +72,11 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   android: {
     googleServicesFile: "./google-services.json",
     adaptiveIcon: {
-      foregroundImage: "./assets/android-icon.png",
+      foregroundImage: askEnvDo({
+        development: APP_ICON.androidBETA,
+        beta: APP_ICON.androidBETA,
+        production: APP_ICON.android,
+      }),
       backgroundColor: "#000000",
     },
     package: askEnvDo({

@@ -43,8 +43,8 @@ export default function LcAction(props: Props) {
         },
       ]}
     >
-      <Button onPress={props.onLeftClick} width={140} height={46}>
-        <Text className="font-[HY65] text-[16px]">
+      <Button onPress={props.onLeftClick} width={200} height={46}>
+        <Text className="font-[HY65] text-[16px]" numberOfLines={1}>
           {LOCALES[language].AdviceCharacters}
         </Text>
       </Button>

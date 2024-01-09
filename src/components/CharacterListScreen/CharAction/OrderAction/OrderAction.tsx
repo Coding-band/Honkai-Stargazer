@@ -3,8 +3,13 @@ import Listbox from "../../../global/Listbox/Listbox";
 import useCharSortingReverse from "../../../../redux/characterSortingReverse/useCharSortingReverse";
 import OrderBtn from "./OrderBtn/OrderBtn";
 import useCharSorting from "../../../../redux/characterSorting/useCharSorting";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
+import { capitalize } from "lodash";
 
 export default function OrderAction() {
+  const { language } = useAppLanguage();
+
   const { charSorting, setCharSorting, charSortingList } = useCharSorting();
   const { setCharSortingReverse, charSortingReverse } = useCharSortingReverse();
 
@@ -16,11 +21,14 @@ export default function OrderAction() {
     setCharSorting(v);
   };
 
+
+  
   return (
     <Listbox
       button={
         <OrderBtn onPressReverse={handleReverse} reverse={!!charSortingReverse}>
-          {charSorting?.name || ""}
+          {/* @ts-ignore */}
+          {LOCALES[language]["SortBy" + capitalize(charSorting.id)]}
         </OrderBtn>
       }
       value={charSorting?.id}
@@ -29,7 +37,8 @@ export default function OrderAction() {
     >
       {charSortingList?.map((sorting) => (
         <Listbox.Item key={sorting.id} value={sorting.id}>
-          {sorting.name}
+          {/* @ts-ignore */}
+          {LOCALES[language]["SortBy" + capitalize(sorting.id)]}
         </Listbox.Item>
       )) || []}
     </Listbox>

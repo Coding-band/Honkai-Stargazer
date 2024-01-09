@@ -54,6 +54,7 @@ export default function EventList() {
                   }}
                 >
                   <Image
+                    transition={200}
                     className="w-full aspect-[360/108]"
                     source={event?.img}
                   />
@@ -76,6 +77,7 @@ export default function EventList() {
                   }}
                 >
                   <Image
+                    transition={200}
                     className="w-full aspect-[360/130]"
                     source={event?.banner}
                   />

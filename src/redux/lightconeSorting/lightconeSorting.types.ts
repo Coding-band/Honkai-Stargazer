@@ -5,7 +5,6 @@ export type LightconeSortingAction = {
 
 export type LightconeSorting = {
   id: LightconeSortingType;
-  name: string;
   selected: boolean;
 }[];
 

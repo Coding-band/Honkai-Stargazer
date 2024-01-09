@@ -89,7 +89,7 @@ export default function MenuItemLarge({
                       <Text className=" text-text text-[15px] font-medium font-[HY65] translate-y-[4px]">
                         {title}
                       </Text>
-                      <Text className="text-text2 text-[13px] font-[HY65]">
+                      <Text className="text-text2 text-[13px] font-[HY65] text-center">
                         {subtitle}
                       </Text>
                     </View>

@@ -8,9 +8,12 @@ import useLcFilter from "../../../../redux/lightconeFilter/useLcFilter";
 import CombatTypeMap from "../../../../../assets/images/images_map/combatType";
 import { Path as PathType } from "../../../../types/path";
 import { CombatType as CombatTypeType } from "../../../../types/combatType";
-import { ZH_CN } from "../../../../../locales/zh_cn";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 export default function FilterAction() {
+  const { language } = useAppLanguage();
+
   const [open, setOpen] = useState(false);
 
   const { lcFilter, lcFilterSelected, setLcFilterSelected } = useLcFilter();
@@ -19,7 +22,7 @@ export default function FilterAction() {
     () =>
       lcFilter?.map((item) => ({
         value: item.id,
-        name: ZH_CN[item.id],
+        name: LOCALES[language][item.id],
         icon: PATHS.includes(item.id)
           ? PathMap[item.id as PathType].icon
           : CombatTypeMap[item.id as CombatTypeType].icon,

@@ -85,7 +85,13 @@ export default React.memo(function CharSuggestTeamCard(props: Props) {
               <CharCard onPress={handleCharPress} key={i} {...char} />
             ))}
           </View>
-          <PopUpCard title={props.name} content={LOCALES[language].NoDataYet} />
+          <PopUpCard
+            title={props.name}
+            content={LOCALES[language].NoDataYet}
+            onClose={() => {
+              setIsSelected(false);
+            }}
+          />
         </Pressable>
       </Modal>
     </View>

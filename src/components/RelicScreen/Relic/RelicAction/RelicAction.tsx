@@ -43,11 +43,11 @@ export default React.memo(function RelicAction(props: Props) {
         },
       ]}
     >
-      <Button onPress={props.onLeftClick} width={140} height={46}>
+      {/* <Button onPress={props.onLeftClick} width={140} height={46}>
         <Text className="font-[HY65] text-[16px]">
           {LOCALES[language].AdviceCharacters}
         </Text>
-      </Button>
+      </Button> */}
       <Button onPress={props.onRightClick} width={140} height={46}>
         <Text className="font-[HY65] text-[16px]">
           {LOCALES[language].AdviceGetPath}

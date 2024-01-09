@@ -8,7 +8,7 @@ import { LOCALES } from "../../../../../locales";
 export default function NotificationSetting() {
   const { language } = useAppLanguage();
   return (
-    <SettingGroup title="通知">
+    <SettingGroup title={LOCALES[language].Notifi}>
       <SettingItem
         type="navigation"
         title={LOCALES[language].NotifiAll}

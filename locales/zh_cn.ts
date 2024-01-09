@@ -1,4 +1,5 @@
 export const ZH_CN = {
+  // server
   asia: "亞服",
   europe: "歐服",
   america: "美服",
@@ -14,6 +15,7 @@ export const ZH_CN = {
   Hunt: "巡猎",
   Nihility: "虚无",
   Preservation: "存護",
+  // element (combat type)
   Physical: "物理",
   Wind: "风",
   Ice: "冰",
@@ -21,6 +23,7 @@ export const ZH_CN = {
   Lightning: "雷",
   Quantum: "量子",
   Imaginary: "虚数",
+  // relic
   RelicPropBody: "躯干",
   RelicPropFeet: "脚部",
   RelicPropPlanarSphere: "位面球",
@@ -54,13 +57,13 @@ export const ZH_CN = {
   Event: "活動",
   Codes: "兌換碼",
   // ui - filter and sort
-  SortByDate: "实装日期",
-  SortByENName: "名称（英文）",
-  SortByATK: "攻击力",
-  SortByDEF: "防御力",
-  SortByHP: "生命值",
-  SortByEnergyMax: "能量上限",
-  SortByRarity: "稀有度",
+  SortByTime: "实装日期",
+  SortByName: "名称（英文）",
+  SortByAtk: "攻击力",
+  SortByDef: "防御力",
+  SortByHp: "生命值",
+  SortByEnergy: "能量上限",
+  SortByRare: "稀有度",
   Reset: "重置",
   OK: "确定",
   FilterTitle: "筛选规则",
@@ -92,6 +95,7 @@ export const ZH_CN = {
   PlayersAverageRounds: "平均${1}轮",
   PlayersRounds: "${1}轮",
   // ui - Setting Page
+  Navigate: "前往",
   SwitchOn: "开",
   SwitchOff: "关",
   AccountSetup: "账户设置(${1})",

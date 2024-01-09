@@ -12,6 +12,7 @@ import RelicAction from "./RelicAction/RelicAction";
 import RelicDescription from "./RelicDescription/RelicDescription";
 import RelicDetails from "./RelicDetails/RelicDetails";
 import RelicSuggestCharacter from "./RelicSuggestCharacter/RelicSuggestCharacter";
+import Toast from "../../../utils/toast/Toast";
 
 export default function Relic() {
   const [containerHeight, setContainerHeight] = useState(0);
@@ -71,7 +72,9 @@ export default function Relic() {
             animated: true,
           });
         }}
-        onRightClick={() => {}}
+        onRightClick={() => {
+          Toast.StillDevelopingToast();
+        }}
         scrollHandler={scrollHandler}
       />
     </View>

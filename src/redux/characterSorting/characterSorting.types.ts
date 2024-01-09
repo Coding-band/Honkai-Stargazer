@@ -5,7 +5,6 @@ export type CharacterSortingAction = {
 
 export type CharacterSorting = {
   id: CharacterSortingType;
-  name: string;
   selected: boolean;
 }[];
 

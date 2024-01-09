@@ -59,6 +59,7 @@ export default function RelicsCard(props: Props) {
         style={{ alignItems: "center" }}
       >
         <Text
+          numberOfLines={2}
           className="text-text2 text-[12px] font-[HY65]"
           style={{
             flexWrap: "wrap", // 允许文本换行

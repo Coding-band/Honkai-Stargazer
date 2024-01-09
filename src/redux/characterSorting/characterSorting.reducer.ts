@@ -5,13 +5,13 @@ import {
 
 export const characterSorting = (
   prevSate: CharacterSorting = [
-    { id: "time", name: "實裝日期", selected: true },
-    { id: "name", name: "名称（英文）", selected: false },
-    { id: "atk", name: "攻击力", selected: false },
-    { id: "def", name: "防御力", selected: false },
-    { id: "hp", name: "生命值", selected: false },
-    { id: "energy", name: "能量上限", selected: false },
-    { id: "rare", name: "稀有度", selected: false },
+    { id: "time", selected: true },
+    { id: "name", selected: false },
+    { id: "atk", selected: false },
+    { id: "def", selected: false },
+    { id: "hp", selected: false },
+    { id: "energy", selected: false },
+    { id: "rare", selected: false },
   ],
   action: CharacterSortingAction
 ) => {

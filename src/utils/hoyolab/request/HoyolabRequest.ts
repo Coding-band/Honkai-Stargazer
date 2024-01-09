@@ -2,7 +2,6 @@ import { hsrServerId } from "../servers/hsrServer.types";
 import { LanguageEnum } from "../language/language.interface";
 import Request from "./Request";
 import { hsrServer } from "../servers/hsrServer";
-import generateDS from "../ds/generateDs";
 import axios from "axios";
 
 export default class HoyolabRequest {

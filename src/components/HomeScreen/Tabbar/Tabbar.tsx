@@ -5,11 +5,14 @@ import { Image } from "expo-image";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
 import TypingText from "../../global/TypingText/TypingText";
+import { ENV, VERSION } from "../../../../app.config";
+import { HtmlText } from "@e-mine/react-native-html-text";
+import BetaTabbar from "../../Beta/BetaTabbar";
 
 export default function Tabbar() {
   const { language } = useAppLanguage();
   return (
-    <SafeAreaView className={cn("absolute bottom-0", "w-full h-[160px]")}>
+    <SafeAreaView className={cn("absolute bottom-0", "w-full h-[180px]")}>
       <Divider />
       {/* <View
         style={{
@@ -31,25 +34,32 @@ export default function Tabbar() {
         </Tab>
       </View> */}
       <View className="py-2" style={{ alignItems: "center", gap: 8 }}>
-        <TypingText
-          color="white"
-          textSize={14}
-          fontFamily="HY65"
-          text={LOCALES[language].DonationRemoveAds}
-        />
-        <Pressable
-          className="w-full h-[70px]"
-          onPress={() => {
-            Linking.openURL(
-              "https://play.google.com/store/apps/details?id=com.voc.genshin_spirit_gp"
-            );
-          }}
+        <Text
+          className="text-text text-[14px] font-[HY65]"
+          // color="white"
+          // textSize={14}
+          // fontFamily="HY65"
+          // text={}
         >
-          <Image
-            className="w-full h-full"
-            source={require("../../../../assets/ads/gs_ad.png")}
-          />
-        </Pressable>
+          {LOCALES[language].DonationRemoveAds}
+        </Text>
+        {ENV === "beta" ? (
+          <BetaTabbar />
+        ) : (
+          <Pressable
+            className="w-full h-[70px]"
+            onPress={() => {
+              Linking.openURL(
+                "https://play.google.com/store/apps/details?id=com.voc.genshin_spirit_gp"
+              );
+            }}
+          >
+            <Image
+              className="w-full h-full"
+              source={require("../../../../assets/ads/gs_ad.png")}
+            />
+          </Pressable>
+        )}
       </View>
     </SafeAreaView>
   );

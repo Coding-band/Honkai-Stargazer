@@ -47,7 +47,7 @@ export default React.memo(function CharAction(props: Props) {
     >
       <Button onPress={props.onLeftClick} width={140} height={46}>
         <Text className="font-[HY65] text-[16px]">
-          {LOCALES[language].AdviceRelics}
+          {LOCALES[language].AdviceLightcones}
         </Text>
       </Button>
       <Button onPress={props.onRightClick} width={140} height={46}>

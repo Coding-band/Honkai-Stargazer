@@ -17,7 +17,7 @@ export default function RelicItem({ userRelicData }: { userRelicData: any }) {
       ]
     ) + 1;
 
-      console.log(userRelicData.rarity);
+  console.log(userRelicData.rarity);
 
   return (
     <View className="w-[160px] py-2" style={{ flexDirection: "row", gap: 10 }}>
@@ -29,6 +29,7 @@ export default function RelicItem({ userRelicData }: { userRelicData: any }) {
           justifyContent: "center",
           alignItems: "center",
         }}
+        // @ts-ignore
         colors={CardColors[userRelicData.rarity]}
       >
         <Image

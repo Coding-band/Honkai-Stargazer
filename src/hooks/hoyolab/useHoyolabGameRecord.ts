@@ -4,8 +4,11 @@ import HoyolabRequest from "../../utils/hoyolab/request/HoyolabRequest";
 import MihoyoRequest from "../../utils/hoyolab/request/MihoyoRequest";
 import useHsrServerChosen from "../../redux/hsrServerChosen/useHsrServerChosen";
 import { isHoyolabPlatform } from "../../utils/hoyolab/utils";
+import useAppLanguage from "../../language/AppLanguage/useAppLanguage";
+import { LanguageEnum } from "../../utils/hoyolab/language/language.interface";
 
 const useHoyolabGameRecord = () => {
+
   const { hoyolabCookie, hoyolabCookieParse } = useHoyolabCookie();
   const { hsrServerChosen } = useHsrServerChosen();
 

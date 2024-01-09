@@ -35,7 +35,7 @@ export default function FilterItem(props: Props) {
       style={{ flexDirection: "row", alignItems: "center", gap: 10 }}
     >
       <Image source={props.icon} className="w-5 h-5" />
-      <Text className="font-[HY65]">{props.children}</Text>
+      <Text numberOfLines={1} className="font-[HY65] w-16">{props.children}</Text>
       <View
         className={cn(
           "w-4 h-4 absolute right-3",

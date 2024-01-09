@@ -23,18 +23,13 @@ export default function RelicAction() {
       keyboardVerticalOffset={25}
       className="w-full h-[46px] absolute bottom-0 mb-[37px] z-50"
       contentContainerStyle={{
-        justifyContent: isSearching ? "flex-end" : "center",
+        marginRight: isSearching ? 0 : 30,
+        justifyContent: "flex-end",
         alignItems: "center",
         flexDirection: "row",
         gap: 11,
       }}
     >
-      {isSearching || (
-        <>
-          <FilterAction />
-          <OrderAction />
-        </>
-      )}
       <SearchAction />
     </KeyboardAvoidingView>
   );

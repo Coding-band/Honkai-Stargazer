@@ -1,6 +1,12 @@
 export const EN = {
+  // server
+  asia: "Asia",
+  europe: "Europe",
+  america: "America",
+  twhkmo: "TW HK MO",
+  cn1: "星窮列車",
+  cn2: "無名客",
   Trailblazer: "Trailblazer",
-
   // path
   Abundance: "Abundance",
   Destruction: "Destruction",
@@ -39,23 +45,25 @@ export const EN = {
   Login: "Login",
   Expedition: "Exped.",
   ExpeditionFullName: "Expedition",
-  Setting: "Setting",
+  Setting: "Settings",
   MemoryOfChaos: "Memory of Chaos",
   NoDataYet: "No Data Yet",
   IsDone: "Done",
   DonationRemoveAds: "Remove Ads through donation or invite others",
-  PlayerLevel: "Trailblaze Lvl.",
-  AccountLogin: "Login Hoyoverse",
+  PlayerLevel: "Level.",
+  AccountLogin: "Login",
   ModifyHomePage: "Modify Home Page",
   SimulatedUniverse: "Simulated Universe",
+  Event: "Event",
+  Codes: "Codes",
   // ui - filter and sort
-  SortByDate: "Release Date",
-  SortByENName: "Name (EN)",
-  SortByATK: "ATK",
-  SortByDEF: "DEF",
-  SortByHP: "HP",
-  SortByEnergyMax: "Energy Max",
-  SortByRarity: "Rarity",
+  SortByTime: "Release Date",
+  SortByName: "Name (EN)",
+  SortByAtk: "ATK",
+  SortByDef: "DEF",
+  SortByHp: "HP",
+  SortByEnergy: "Energy Max",
+  SortByRare: "Rarity",
   Reset: "Reset",
   OK: "OK",
   FilterTitle: "Filter",
@@ -71,7 +79,7 @@ export const EN = {
   TraceEnergyEarn: "Energy Recover",
   Eidolon: "Eidolon",
   AdviceCharacters: "Advice Characters",
-  AdviceLightcones: "Advice Lightcones",
+  AdviceLightcones: "Advice Cones",
   AdviceTeams: "Advice Teams",
   RelicStatus2Pcs: "2pc",
   RelicStatus4Pcs: "4pc",
@@ -87,11 +95,12 @@ export const EN = {
   PlayersAverageRounds: "${1} Round(s) Average",
   PlayersRounds: "${1} Round(s)",
   // ui - Setting Page
+  Navigate: "Navigate",
   SwitchOn: "ON",
   SwitchOff: "OFF",
-  AccountSetup: "Account Setup(${1})",
+  AccountSetup: "Account Setup (${1})",
   UseInviteCode: "Use Invite Code",
-  HaveNotUsed: "Haven't Useed",
+  HaveNotUsed: "Haven't Used",
   LanguageSetup: "Language Setup",
   DocumentLanguage: "Document Language",
   AppLanguage: "App Language",
@@ -114,7 +123,7 @@ export const EN = {
   AppVersion: "App Version",
   SpecialThanks: "Special Thanks",
   SpecialThanksDevs: "Developers",
-  SpecialThanksOpenSource: "Open Source Thx",
+  SpecialThanksOpenSource: "Open Source Thanks",
   SelectAccountInServer: "Please select the server you are playing.",
   ManuallySetup: "Setup Manually",
   SelectServerTitle: "Select Server",
@@ -124,6 +133,8 @@ export const EN = {
   // ui - WallPaper Page
   SaveWallPaper: "Save",
   SetWallPaper: "Set",
+  // ui - Code Page
+  HasCopy: "Copied",
 
   // affixs of relics
   RelicAffixATK: "ATK",
@@ -144,7 +155,13 @@ export const EN = {
   RelicAffixLightning: "Lightning DMG Bonus",
   RelicAffixQuantum: "Quantum DMG Bonus",
   RelicAffixImaginary: "Imaginary DMG Bonus",
+<<<<<<< HEAD
   
   // toast
   PleaseLogin: "Pls login first ~",
+=======
+
+  // toast
+  PleaseLogin: "Please login first！",
+>>>>>>> 4df9e90 (fix: 修正許多錯誤 (主要是語言))
 };

@@ -1,6 +1,6 @@
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useEffect, useRef, useState } from "react";
-import { Pressable, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import Menu from "../components/HomeScreen/Menu/Menu";
 import Tabbar from "../components/HomeScreen/Tabbar/Tabbar";
 import Player from "../components/HomeScreen/Player/Player";
@@ -18,6 +18,9 @@ import useMemoryOfChaos from "../hooks/hoyolab/useMemoryOfChaos";
 import useFirebaseUid from "../firebase/hooks/useFirebaseUid";
 import useHsrUUID from "../hooks/hoyolab/useHsrUUID";
 import UserMemoryOfChaos from "../firebase/models/UserMemoryOfChaos";
+import firestore from "@react-native-firebase/firestore";
+import { ENV } from "../../app.config";
+import BetaWidget from "../components/Beta/BetaWidget";
 
 export default function HomeScreen() {
   const uid = useFirebaseUid();
@@ -36,7 +39,7 @@ export default function HomeScreen() {
     } catch (error: any) {
       const errorCode = error.code;
       const errorMessage = error.message;
-      // console.log("signup: " + errorMessage);
+      console.log("signup: " + errorMessage);
       if (errorCode === "auth/email-already-in-use") {
         return true;
       }
@@ -59,7 +62,6 @@ export default function HomeScreen() {
     if (hsrUUID && hoyolabCookieParse) {
       const email = `${hsrUUID}@stargazer.com`;
       const password = hoyolabCookieParse.account_mid_v2;
-
       // firebase 註冊
       handleFirebaseSignUp(email, password).then((isAlreadySignUp) => {
         if (isAlreadySignUp) {
@@ -87,6 +89,7 @@ export default function HomeScreen() {
               char_num: hsrFullData.stats.avatar_num,
               achievement_num: hsrFullData.stats.achievement_num,
               chest_num: hsrFullData.stats.chest_num,
+              last_login: firestore.Timestamp.now(),
             });
           } catch (e: any) {
             console.log("update User: " + e.message);
@@ -105,6 +108,7 @@ export default function HomeScreen() {
               char_num: hsrFullData.stats.avatar_num,
               achievement_num: hsrFullData.stats.achievement_num,
               chest_num: hsrFullData.stats.chest_num,
+              last_login: firestore.Timestamp.now(),
             } as Users);
           } catch (e: any) {
             console.log("create User: " + e.message);
@@ -215,6 +219,7 @@ export default function HomeScreen() {
         colors={["#00000050", "#00000040"]}
       />
       <View className="absolute w-full h-full">
+        {ENV === "beta" ? <BetaWidget /> : null}
         <Player />
         <LinearGradient
           // Background Linear Gradient

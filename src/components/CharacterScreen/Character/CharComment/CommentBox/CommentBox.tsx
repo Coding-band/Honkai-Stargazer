@@ -39,7 +39,7 @@ export default function CommentBox(props: Props) {
     if (translation.value.y < 0) {
       props.containerRef?.current?.scrollTo({
         x: 0,
-        y: 3400,
+        y: 3800,
         animated: true,
       });
     }

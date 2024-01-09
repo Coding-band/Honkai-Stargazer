@@ -44,7 +44,10 @@ export default function CharSuggestRelicsProps() {
               <Text className="text-[13px] text-white font-[HY75]">
                 {mainRelicPropNames[i]}
               </Text>
-              <Text className="text-[13px] text-[#DDD] opacity-80 font-[HY65]">
+              <Text
+                numberOfLines={1}
+                className="text-[13px] text-[#DDD] opacity-80 font-[HY65] w-24 text-right"
+              >
                 {t.propertyName}
               </Text>
             </View>
