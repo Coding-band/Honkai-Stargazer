@@ -6,7 +6,7 @@ import useLocalState from "../../hooks/useLocalState";
 export default function TextLanguageProvider({ children }: { children: any }) {
   const [language, setLanguage] = useLocalState<TextLanguage>(
     "text-language",
-    "zh_cn"
+    "zh_hk"
   );
 
   return (

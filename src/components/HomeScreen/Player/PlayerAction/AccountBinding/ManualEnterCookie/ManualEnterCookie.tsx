@@ -6,19 +6,25 @@ import useHoyolabCookie from "../../../../../../redux/hoyolabCookie/useHoyolabCo
 import TextButton from "../../../../../global/TextButton/TextButton";
 import useHsrServerChosen from "../../../../../../redux/hsrServerChosen/useHsrServerChosen";
 import auth from "@react-native-firebase/auth";
+import { LOCALES } from "../../../../../../../locales";
+import { hsrServer } from "../../../../../../utils/hoyolab/servers/hsrServer";
+import { keys } from "lodash";
 
 type Props = {
   onCookieSave?: () => void;
 };
 
 export default function ManualEnterCookie(props: Props) {
+  const [btnChooseServerIndex, setBtnChooseServerIndex] = useState(0);
+
   const { setHoyolabCookie } = useHoyolabCookie();
   const { setHsrServerChosen } = useHsrServerChosen();
 
   const [inputCookie, setInputCookie] = useState("");
   const handleSaveCookie = () => {
     setHoyolabCookie(inputCookie);
-    setHsrServerChosen("asia");
+    // @ts-ignore
+    setHsrServerChosen(keys(hsrServer)[btnChooseServerIndex]);
     auth().signOut();
     props.onCookieSave && props.onCookieSave();
   };
@@ -28,8 +34,20 @@ export default function ManualEnterCookie(props: Props) {
       <Text className="text-[14px] font-[HY55] text-black leading-5">
         請選擇服務器並貼上 Cookies。
       </Text>
-      <TextButton hasShadow={false} width={"100%"} height={46}>
-        亞服
+      <TextButton
+        onPress={() => {
+          if (btnChooseServerIndex === 5) {
+            setBtnChooseServerIndex(0);
+          } else {
+            setBtnChooseServerIndex(btnChooseServerIndex + 1);
+          }
+        }}
+        hasShadow={false}
+        width={"100%"}
+        height={46}
+      >
+        {/* @ts-ignore */}
+        {LOCALES["zh_hk"][keys(hsrServer)[btnChooseServerIndex]]}
       </TextButton>
       <TextInput
         value={inputCookie}

@@ -2,6 +2,7 @@ import { View, ScrollView, RefreshControl } from "react-native";
 import React from "react";
 import EpdtListItem from "./EpdtListItem/EpdtListItem";
 import useHsrNote from "../../../hooks/hoyolab/useHsrNote";
+import NotFound from "../../global/Loading/NotFound";
 
 export default function EpdtList() {
   const { data: hsrNote, refetch: refetchHsrNote } = useHsrNote();
@@ -17,7 +18,7 @@ export default function EpdtList() {
     refetchHsrNote();
   }, []);
 
-  return (
+  return epdtList ? (
     <View style={{ width: "100%" }} className="z-30">
       <ScrollView
         className="h-screen p-4 pb-0 mt-[110px]"
@@ -40,5 +41,7 @@ export default function EpdtList() {
         </View>
       </ScrollView>
     </View>
+  ) : (
+    <NotFound />
   );
 }

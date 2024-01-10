@@ -34,10 +34,12 @@ import UserCharSkills from "./UserCharSkills/UserCharSkills";
 import UserCharAttribute from "./UserCharAttribute/UserCharAttribute";
 import UserCharLightcone from "./UserCharLightcone/UserCharLightcone";
 import UserCharRelics from "./UserCharRelics/UserCharRelics";
+import useDelayLoad from "../../../hooks/useDelayLoad";
+import Toast from "../../../utils/toast/Toast";
+import Loading from "../../global/Loading/Loading";
 
 export default function UserCharDetail() {
-  const { language: appLanguage } = useAppLanguage();
-  const { language: textLanguage } = useTextLanguage();
+  const loaded = useDelayLoad(100);
 
   const hsrUUID = useHsrUUID();
   const profileUUID = useProfileUUID();
@@ -52,67 +54,78 @@ export default function UserCharDetail() {
   return (
     <View className="z-30">
       <Header2 rightBtn={isOwner ? <ShareBtn /> : null} />
-
-      <ScrollView style={{ height: Dimensions.get("screen").height }}>
-        <View
-          style={[
-            {
-              alignItems: "center",
-              gap: 18,
-            },
-          ]}
-        >
-          <ImageBackground
-            source={CharacterImage[charId].fade}
-            className="w-full"
+      {loaded && inGameInfo ? (
+        <ScrollView style={{ height: Dimensions.get("screen").height }}>
+          <View
+            style={[
+              {
+                alignItems: "center",
+                gap: 18,
+              },
+            ]}
           >
-            <View className="mt-12" style={{ alignItems: "center", gap: 228 }}>
-              <View style={{ alignItems: "center", gap: 4 }}>
-                {/* 用戶名 */}
-                <Text
-                  className="text-[#FFFFFF] font-[HY65] text-[16px]"
-                  style={globalStyles.textShadow}
-                >
-                  {inGameInfo?.player?.nickname}
-                </Text>
-                {/* UUID & 伺服器 */}
-                <UUIDBox uuid={profileUUID} />
+            <ImageBackground
+              source={CharacterImage[charId].fade}
+              className="w-full"
+            >
+              <View
+                className="mt-12"
+                style={{ alignItems: "center", gap: 228 }}
+              >
+                <View style={{ alignItems: "center", gap: 4 }}>
+                  {/* 用戶名 */}
+                  <Text
+                    className="text-[#FFFFFF] font-[HY65] text-[16px]"
+                    style={globalStyles.textShadow}
+                  >
+                    {inGameInfo?.player?.nickname}
+                  </Text>
+                  {/* UUID & 伺服器 */}
+                  <UUIDBox uuid={profileUUID} />
+                </View>
+                <View style={{ alignItems: "center", gap: 4 }}>
+                  {/* 角色名 */}
+                  <Text
+                    className="text-[#FFFFFF] font-[HY65] text-[32px]"
+                    style={globalStyles.textShadow}
+                  >
+                    {charFullData.name}
+                  </Text>
+                  {/* 星星數 */}
+                  <UserCharDetailStars count={charJsonData.rare} />
+                  {/* 等級，星魂 */}
+                  <UserCharLevel />
+                  {/* 屬性，命途 */}
+                  <UserCharCombatTypeAndPath />
+                  <UserCharSkills />
+                </View>
               </View>
-              <View style={{ alignItems: "center", gap: 4 }}>
-                {/* 角色名 */}
-                <Text
-                  className="text-[#FFFFFF] font-[HY65] text-[32px]"
-                  style={globalStyles.textShadow}
-                >
-                  {charFullData.name}
+            </ImageBackground>
+            <UserCharAttribute />
+            <UserCharLightcone />
+            <UserCharRelics />
+            {isOwner && (
+              <View className="mb-12 mt-12">
+                <Text className="text-text text-[12px] font-[HY65]">
+                  由 Stargazer 製作
                 </Text>
-                {/* 星星數 */}
-                <UserCharDetailStars count={charJsonData.rare} />
-                {/* 等級，星魂 */}
-                <UserCharLevel />
-                {/* 屬性，命途 */}
-                <UserCharCombatTypeAndPath />
-                <UserCharSkills />
               </View>
-            </View>
-          </ImageBackground>
-          <UserCharAttribute />
-          <UserCharLightcone />
-          <UserCharRelics />
-          {/* 由 Stargazer 製作 */}
-          <View className="mb-12 mt-12">
-            <Text className="text-text text-[12px] font-[HY65]">
-              由 Stargazer 製作
-            </Text>
+            )}
           </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      ) : (
+        <Loading />
+      )}
     </View>
   );
 }
 
 const ShareBtn = () => (
-  <TouchableOpacity onPress={() => {}}>
+  <TouchableOpacity
+    onPress={() => {
+      Toast.StillDevelopingToast();
+    }}
+  >
     <Image
       style={{ width: 40, height: 40 }}
       source={require("../../../../assets/icons/Share.svg")}

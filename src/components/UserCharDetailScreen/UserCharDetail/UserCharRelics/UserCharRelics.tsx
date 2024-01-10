@@ -18,7 +18,10 @@ export default function UserCharRelics() {
       style={{ flexDirection: "row", flexWrap: "wrap", gap: 20 }}
     >
       {userRelicsData.map((userRelicData) => (
-        <RelicItem userRelicData={userRelicData}></RelicItem>
+        <RelicItem
+          key={userRelicData.id}
+          userRelicData={userRelicData}
+        ></RelicItem>
       ))}
     </View>
   );

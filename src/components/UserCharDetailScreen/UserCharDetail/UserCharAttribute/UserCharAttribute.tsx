@@ -3,6 +3,7 @@ import React from "react";
 import { Image } from "expo-image";
 import useProfileHsrInGameInfo from "../../../../context/UserCharDetailData/hooks/useProfileHsrInGameInfo";
 import useProfileCharFullData from "../../../../context/UserCharDetailData/hooks/useProfileCharFullData";
+import AttributeImage from "../../../../../assets/images/images_map/attributeImage";
 
 export default function UserCharAttribute() {
   const charFullData = useProfileCharFullData();
@@ -11,85 +12,161 @@ export default function UserCharAttribute() {
   const attributes = [
     {
       key: "hp",
-      icon: require("../../../../../assets/images/ui_icon/ic_hp.webp"),
+      icon: AttributeImage.hp,
       value: (
-        inGameCharData?.attributes.filter((attr: any) => attr.field === "hp")[0]
-          ?.value +
-          inGameCharData?.additions.filter(
-            (attr: any) => attr.field === "hp"
-          )[0]?.value || 0
+        (inGameCharData?.attributes.filter(
+          (attr: any) => attr.field === "hp"
+        )[0]?.value || 0) +
+        (inGameCharData?.additions.filter((attr: any) => attr.field === "hp")[0]
+          ?.value || 0)
       ).toFixed(),
     },
     {
       key: "atk",
-      icon: require("../../../../../assets/images/ui_icon/ic_atk.webp"),
+      icon: AttributeImage.atk,
       value: (
-        inGameCharData?.attributes.filter(
+        (inGameCharData?.attributes.filter(
           (attr: any) => attr.field === "atk"
-        )[0]?.value +
-          inGameCharData?.additions.filter(
-            (attr: any) => attr.field === "atk"
-          )[0]?.value || 0
+        )[0]?.value || 0) +
+        (inGameCharData?.additions.filter(
+          (attr: any) => attr.field === "atk"
+        )[0]?.value || 0)
       ).toFixed(),
     },
     {
       key: "def",
-      icon: require("../../../../../assets/images/ui_icon/ic_def.webp"),
+      icon: AttributeImage.def,
       value: (
-        inGameCharData?.attributes.filter(
+        (inGameCharData?.attributes.filter(
           (attr: any) => attr.field === "spd"
-        )[0]?.value +
-          inGameCharData?.additions.filter(
-            (attr: any) => attr.field === "spd"
-          )[0]?.value || 0
+        )[0]?.value || 0) +
+        (inGameCharData?.additions.filter(
+          (attr: any) => attr.field === "spd"
+        )[0]?.value || 0)
       ).toFixed(),
     },
     {
       key: "speed",
-      icon: require("../../../../../assets/images/ui_icon/ic_speed.webp"),
+      icon: AttributeImage.spd,
       value: inGameCharData?.attributes.filter(
         (attr: any) => attr.field === "spd"
       )[0]?.display,
     },
-
-    {
-      key: "energy",
-      icon: require("../../../../../assets/images/ui_icon/ic_energy.webp"),
-      value: charFullData?.spRequirement,
-    },
+    // {
+    //   key: "energy",
+    //   icon: AttributeImage.energy,
+    //   value: charFullData?.spRequirement,
+    // },
     {
       key: "crit_rate",
-      icon: require("../../../../../assets/images/ui_icon/ic_crit_rate.webp"),
-      value: inGameCharData?.attributes.filter(
-        (attr: any) => attr.field === "crit_rate"
-      )[0]?.display,
+      icon: AttributeImage.crit_rate,
+      value:
+        (
+          ((inGameCharData?.attributes.filter(
+            (attr: any) => attr.field === "crit_rate"
+          )[0]?.value || 0) +
+            (inGameCharData?.additions.filter(
+              (attr: any) => attr.field === "crit_rate"
+            )[0]?.value || 0)) *
+          100
+        ).toFixed(0) + "%",
     },
     {
       key: "crit_dmg",
-      icon: require("../../../../../assets/images/ui_icon/ic_crit_dmg.webp"),
-      value: inGameCharData?.attributes.filter(
-        (attr: any) => attr.field === "crit_dmg"
-      )[0]?.display,
+      icon: AttributeImage.crit_dmg,
+      value:
+        (
+          ((inGameCharData?.attributes.filter(
+            (attr: any) => attr.field === "crit_dmg"
+          )[0]?.value || 0) +
+            (inGameCharData?.additions.filter(
+              (attr: any) => attr.field === "crit_dmg"
+            )[0]?.value || 0)) *
+          100
+        ).toFixed(0) + "%",
     },
     {
-      key: "effect_hit_rate",
-      icon: require("../../../../../assets/images/ui_icon/ic_effect_hit_rate.webp"),
+      key: "effect_hit",
+      icon: AttributeImage.crit_rate,
       value: inGameCharData?.properties.filter(
         (attr: any) => attr.field === "effect_hit"
       )[0]?.display,
     },
     {
       key: "effect_res",
-      icon: require("../../../../../assets/images/ui_icon/ic_effect_res.webp"),
+      icon: AttributeImage.effect_res,
       value: inGameCharData?.properties.filter(
         (attr: any) => attr.field === "effect_res"
+      )[0]?.display,
+    },
+    {
+      key: "heal_rate",
+      icon: AttributeImage.heal_rate,
+      value: inGameCharData?.properties.filter(
+        (attr: any) => attr.field === "heal_rate"
+      )[0]?.display,
+    },
+    {
+      key: "break_dmg",
+      icon: AttributeImage.break_dmg,
+      value: inGameCharData?.properties.filter(
+        (attr: any) => attr.field === "break_dmg"
+      )[0]?.display,
+    },
+    {
+      key: "lightning_dmg",
+      icon: AttributeImage.lightning_dmg,
+      value: inGameCharData?.properties.filter(
+        (attr: any) => attr.field === "lightning_dmg"
+      )[0]?.display,
+    },
+    {
+      key: "quantum_dmg",
+      icon: AttributeImage.quantum_dmg,
+      value: inGameCharData?.properties.filter(
+        (attr: any) => attr.field === "quantum_dmg"
+      )[0]?.display,
+    },
+    {
+      key: "ice_dmg",
+      icon: AttributeImage.ice_dmg,
+      value: inGameCharData?.properties.filter(
+        (attr: any) => attr.field === "ice_dmg"
+      )[0]?.display,
+    },
+    {
+      key: "fire_dmg",
+      icon: AttributeImage.fire_dmg,
+      value: inGameCharData?.properties.filter(
+        (attr: any) => attr.field === "fire_dmg"
+      )[0]?.display,
+    },
+    {
+      key: "imaginary_dmg",
+      icon: AttributeImage.imaginary_dmg,
+      value: inGameCharData?.properties.filter(
+        (attr: any) => attr.field === "imaginary_dmg"
+      )[0]?.display,
+    },
+    {
+      key: "physical_dmg",
+      icon: AttributeImage.physical_dmg,
+      value: inGameCharData?.properties.filter(
+        (attr: any) => attr.field === "physical_dmg"
+      )[0]?.display,
+    },
+    {
+      key: "wind_dmg",
+      icon: AttributeImage.wind_dmg,
+      value: inGameCharData?.properties.filter(
+        (attr: any) => attr.field === "wind_dmg"
       )[0]?.display,
     },
   ];
 
   return (
     <View
-      className="px-4"
+      className="px-3"
       style={{
         flexDirection: "row",
         gap: 10,

@@ -20,7 +20,7 @@ import useHsrUUID from "../hooks/hoyolab/useHsrUUID";
 import UserMemoryOfChaos from "../firebase/models/UserMemoryOfChaos";
 import firestore from "@react-native-firebase/firestore";
 import { ENV } from "../../app.config";
-import BetaWidget from "../components/Beta/BetaWidget";
+import BetaWidget from "../components/global/Beta/BetaWidget";
 
 export default function HomeScreen() {
   const uid = useFirebaseUid();

@@ -7,7 +7,7 @@ export default function UserCharLevel() {
 
   return (
     <View
-      className="mt-2 bg-[#00000050] rounded-[49px] px-[12px] py-[4px]"
+      className="mt-2 bg-[#00000070] rounded-[49px] px-[12px] py-[4px]"
       style={{ alignItems: "center" }}
     >
       <Text className="text-[12px] text-[#FFFFFF] font-[HY65]">

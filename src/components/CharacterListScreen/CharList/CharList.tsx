@@ -163,10 +163,7 @@ export default function CharList() {
   ]);
 
   return (
-    <ScrollView
-      style={{ paddingVertical: 127, paddingHorizontal: 17, paddingBottom: 0 }}
-      className="z-30"
-    >
+    <ScrollView className="z-30 pt-[127px] pb-0">
       <View
         style={{
           flexDirection: "row",

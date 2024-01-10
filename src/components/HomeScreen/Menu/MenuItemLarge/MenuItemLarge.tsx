@@ -60,10 +60,9 @@ export default function MenuItemLarge({
                   <View
                     style={{
                       width: (width - 13) / 2,
-                      height: height,
                       alignItems: "center",
-                      justifyContent: "center",
-                      gap: 8,
+                      justifyContent: "space-between",
+                      gap: 6,
                     }}
                   >
                     {Icon && <Icon weight="fill" size={32} color="white" />}
@@ -79,17 +78,16 @@ export default function MenuItemLarge({
                     <View
                       className="translate-x-[-8px] "
                       style={{
-                        width: width - (width - 13) / 2,
-                        height: height,
+                        width: width - (width - 16) / 2,
                         alignItems: "center",
-                        justifyContent: "center",
-                        gap: 8,
+                        justifyContent: "space-between",
+                        gap: 6,
                       }}
                     >
-                      <Text className=" text-text text-[15px] font-medium font-[HY65] translate-y-[4px]">
+                      <Text className=" text-text text-[15px] font-medium font-[HY65]">
                         {title}
                       </Text>
-                      <Text className="text-text2 text-[13px] font-[HY65] text-center">
+                      <Text className="text-text2 text-[13px] font-[HY65]">
                         {subtitle}
                       </Text>
                     </View>

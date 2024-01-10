@@ -40,7 +40,7 @@ export const EN = {
   Relic: "Relics",
   RelicList: "Relic List",
   Stamina: "Stamina",
-  StaminaIsFull: "Stamina is full",
+  StaminaIsFull: "Full",
   Map: "Map",
   Login: "Login",
   Expedition: "Exped.",

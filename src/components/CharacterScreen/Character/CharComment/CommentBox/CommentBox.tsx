@@ -99,7 +99,7 @@ export default function CommentBox(props: Props) {
               className="w-[12px] h-[12px]"
             />
             <Text className="text-white text-[16px] font-[HY65]">
-              {charComments?.comments.length || 0}條評論
+              {charComments?.comments?.length || 0}條評論
             </Text>
           </View>
         </Animated.View>

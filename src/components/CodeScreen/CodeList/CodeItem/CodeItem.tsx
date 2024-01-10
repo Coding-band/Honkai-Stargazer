@@ -62,7 +62,7 @@ export default function CodeItem(props: Props) {
           >
             {/* 日期 / 已複製 */}
             <Text className="text-text font-[HY65]">
-              {hasCopy ? LOCALES[language].HasCopy : "12月15日-12月16日"}
+              {hasCopy ? LOCALES[language].HasCopy : "這些是測試用兌換碼"}
             </Text>
             {/* 國際服 / 中國服 */}
             <Text className="text-text font-[HY65]">INT</Text>

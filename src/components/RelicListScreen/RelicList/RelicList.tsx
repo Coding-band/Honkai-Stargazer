@@ -9,6 +9,7 @@ import { getRelicFullData } from "../../../utils/dataMap/getDataFromMap";
 import RelicsCard from "../../global/RelicsCard/RelicsCard";
 import { SCREENS } from "../../../constant/screens";
 import { ExpoImage } from "../../../types/image";
+import useRelicSearch from "../../../redux/relicSearch/useRelicSearch";
 
 type RelicListItem = {
   id: string;
@@ -39,9 +40,21 @@ export default function RelicList() {
     );
   }, []);
 
+  const { searchValue } = useRelicSearch();
+
   const relicCardListJSX = useMemo(() => {
     const sortData = (relicCardListData: RelicListItem[] | undefined) => {
-      return relicCardListData;
+      let sortedData = relicCardListData;
+
+      //* 搜尋
+
+      if (searchValue) {
+        sortedData = sortedData?.filter((data) =>
+          data.name.includes(searchValue)
+        );
+      }
+
+      return sortedData;
     };
 
     const sortedData = sortData(relicCardListData);
@@ -59,17 +72,10 @@ export default function RelicList() {
         {...item}
       />
     ));
-  }, [relicCardListData]);
+  }, [relicCardListData, searchValue]);
 
   return (
-    <ScrollView
-      style={{
-        paddingVertical: 127,
-        paddingHorizontal: 17,
-        paddingBottom: 0,
-      }}
-      className="z-30"
-    >
+    <ScrollView className="z-30 pt-[127px] pb-0">
       <View
         style={{
           flexDirection: "row",

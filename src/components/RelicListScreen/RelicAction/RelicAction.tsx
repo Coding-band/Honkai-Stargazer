@@ -2,8 +2,6 @@ import { KeyboardAvoidingView } from "react-native";
 import React, { useEffect } from "react";
 import useRelicIsSearching from "../../../redux/relicIsSearching/useRelicIsSearching";
 import useRelicSearch from "../../../redux/relicSearch/useRelicSearch";
-import FilterAction from "./FilterAction/FilterAction";
-import OrderAction from "./OrderAction/OrderAction";
 import SearchAction from "./SearchAction/SearchAction";
 
 export default function RelicAction() {

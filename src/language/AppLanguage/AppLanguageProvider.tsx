@@ -6,7 +6,7 @@ import AppLanguageContext from "./AppLanguageContext";
 export default function AppLanguageProvider({ children }: { children: any }) {
   const [language, setLanguage] = useLocalState<AppLanguage>(
     "app-language",
-    "zh_cn"
+    "zh_hk"
   );
 
   return (

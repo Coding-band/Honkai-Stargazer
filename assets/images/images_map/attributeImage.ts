@@ -9,9 +9,15 @@ const AttributeImage = {
   energy: require("../ui_icon/ic_energy.webp"),
   spd: require("../ui_icon/ic_speed.webp"),
   effect_res: require("../ui_icon/ic_effect_res.webp"),
-  quantum_dmg: require("../ui_icon/element_quantum.webp"),
   sp_rate: require("../ui_icon/ic_energy_regeneration_rate.webp"),
-  heal_rate:require("../ui_icon/ic_outgoing_healing_boost.webp")
+  heal_rate: require("../ui_icon/ic_outgoing_healing_boost.webp"),
+  lightning_dmg: require("../ui_icon/element_lightning.webp"),
+  quantum_dmg: require("../ui_icon/element_quantum.webp"),
+  ice_dmg: require("../ui_icon/element_ice.webp"),
+  fire_dmg: require("../ui_icon/element_fire.webp"),
+  imaginary_dmg: require("../ui_icon/element_imaginary.webp"),
+  physical_dmg: require("../ui_icon/element_physical.webp"),
+  wind_dmg: require("../ui_icon/element_wind.webp"),
 };
 
 export default AttributeImage;

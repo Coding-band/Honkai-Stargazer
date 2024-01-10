@@ -38,6 +38,8 @@ export default function UserInfoCharacters(props: Props) {
       id: charId,
       rare: charJsonData.rare,
       name: charFullData.name,
+      rank: char.rank,
+      level: "Lv " + char.level,
       image: CharacterImage[charId].icon,
     };
   });
@@ -59,6 +61,8 @@ export default function UserInfoCharacters(props: Props) {
             id: char.id,
             rare: charJsonData.rare,
             name: charFullData.name,
+            rank: char.rank,
+            level: "Lv " + char.level,
             image: CharacterImage[charId].icon,
           };
         })
@@ -70,7 +74,14 @@ export default function UserInfoCharacters(props: Props) {
         擁有角色 {hsrInGameInfo?.player?.space_info?.avatar_count}
       </Text>
       {/* 展示櫃 */}
-      <View style={{ flexDirection: "row", gap: 12, flexWrap: "wrap" }}>
+      <View
+        style={{
+          flexDirection: "row",
+          gap: 10,
+          flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
         {inGameCharacters?.map((char: any) => (
           <CharCard
             key={char.id}
@@ -90,7 +101,14 @@ export default function UserInfoCharacters(props: Props) {
         className="w-[355px] h-[13px]"
       />
       {/* hoyolab 數據 */}
-      <View style={{ flexDirection: "row", gap: 12, flexWrap: "wrap" }}>
+      <View
+        style={{
+          flexDirection: "row",
+          gap: 10,
+          flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
         {hsrCharacters?.slice(0, 8)?.map((char: any) => (
           <CharCard key={char.id} {...char} />
         ))}

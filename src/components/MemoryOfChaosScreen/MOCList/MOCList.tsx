@@ -8,6 +8,7 @@ import useHsrPlayerData from "../../../hooks/hoyolab/useHsrPlayerData";
 import { LOCALES } from "../../../../locales";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { animated, useTrail } from "@react-spring/native";
+import NotFound from "../../global/Loading/NotFound";
 
 export default function MOCList() {
   // data
@@ -56,68 +57,68 @@ export default function MOCList() {
     []
   );
 
-  return (
+  return moc ? (
     <ScrollView className="z-30 pt-[127px] px-[17px] pb-0">
-      {moc && (
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          gap: 12,
+        }}
+        className="pb-36"
+      >
+        {/* Top */}
         <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: 12,
-          }}
-          className="pb-36"
+          className="w-full"
+          style={{ flexDirection: "row", justifyContent: "space-between" }}
         >
-          {/* Top */}
-          <View
-            className="w-full"
-            style={{ flexDirection: "row", justifyContent: "space-between" }}
-          >
-            {
-              <Text className="text-white font-[HY65]">
-                {moc.begin_time.month.toLocaleString("en-US", {
-                  minimumIntegerDigits: 2,
-                  useGrouping: false,
-                })}
-                /
-                {moc.begin_time.day.toLocaleString("en-US", {
-                  minimumIntegerDigits: 2,
-                  useGrouping: false,
-                })}{" "}
-                -{" "}
-                {moc.end_time.month.toLocaleString("en-US", {
-                  minimumIntegerDigits: 2,
-                  useGrouping: false,
-                })}
-                /
-                {moc.end_time.day.toLocaleString("en-US", {
-                  minimumIntegerDigits: 2,
-                  useGrouping: false,
-                })}
-              </Text>
-            }
+          {
             <Text className="text-white font-[HY65]">
-              {LOCALES[language].PlayersBattleReport.replace(
-                "${1}",
-                playerData?.nickname
-              )}
+              {moc.begin_time.month.toLocaleString("en-US", {
+                minimumIntegerDigits: 2,
+                useGrouping: false,
+              })}
+              /
+              {moc.begin_time.day.toLocaleString("en-US", {
+                minimumIntegerDigits: 2,
+                useGrouping: false,
+              })}{" "}
+              -{" "}
+              {moc.end_time.month.toLocaleString("en-US", {
+                minimumIntegerDigits: 2,
+                useGrouping: false,
+              })}
+              /
+              {moc.end_time.day.toLocaleString("en-US", {
+                minimumIntegerDigits: 2,
+                useGrouping: false,
+              })}
             </Text>
-          </View>
-          {floors.length ? (
-            floors?.map((floor: any, index: number) => (
-              <AnimatedView
-                key={floor?.title}
-                // style={trails[index]}
-              >
-                <MOCFloor {...floor} />
-              </AnimatedView>
-            ))
-          ) : (
-            <Text className="text-text">{LOCALES[language].NoDataYet}</Text>
-          )}
+          }
+          <Text className="text-white font-[HY65]">
+            {LOCALES[language].PlayersBattleReport.replace(
+              "${1}",
+              playerData?.nickname
+            )}
+          </Text>
         </View>
-      )}
+        {floors.length ? (
+          floors?.map((floor: any, index: number) => (
+            <AnimatedView
+              key={floor?.title}
+              // style={trails[index]}
+            >
+              <MOCFloor {...floor} />
+            </AnimatedView>
+          ))
+        ) : (
+          <Text className="text-text">{LOCALES[language].NoDataYet}</Text>
+        )}
+      </View>
     </ScrollView>
+  ) : (
+    <NotFound />
   );
 }
 

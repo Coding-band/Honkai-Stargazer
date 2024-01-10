@@ -7,7 +7,7 @@ import { LOCALES } from "../../../../locales";
 import TypingText from "../../global/TypingText/TypingText";
 import { ENV, VERSION } from "../../../../app.config";
 import { HtmlText } from "@e-mine/react-native-html-text";
-import BetaTabbar from "../../Beta/BetaTabbar";
+import BetaTabbar from "../../global/Beta/BetaTabbar";
 
 export default function Tabbar() {
   const { language } = useAppLanguage();

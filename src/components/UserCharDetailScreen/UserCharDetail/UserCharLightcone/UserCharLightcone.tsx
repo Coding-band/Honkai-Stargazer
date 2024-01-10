@@ -1,17 +1,19 @@
 import { View, Text } from "react-native";
 import React from "react";
 import useProfileHsrInGameInfo from "../../../../context/UserCharDetailData/hooks/useProfileHsrInGameInfo";
-import UserCharLevel from "../UserCharLevel/UserCharLevel";
 import UserCharDetailStars from "../UserCharDetailStars/UserCharDetailStars";
 import { Image } from "expo-image";
-import Path from "../../../../../assets/images/images_map/path";
 import officalLightconeId from "../../../../../map/lightcone_offical_id_map";
 import Lightcone from "../../../../../assets/images/images_map/lightcone";
 import { LightconeName } from "../../../../types/lightcone";
 import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
-import { getLcFullData } from "../../../../utils/dataMap/getDataFromMap";
-import LightconeLevel from "./LightconeLevel/LightconeLevel";
+import {
+  getLcFullData,
+  getLcJsonData,
+} from "../../../../utils/dataMap/getDataFromMap";
+import LightconePath from "./LightconePath/LightconePath";
 import LightconeAttribute from "./LightconeAttribute/LightconeAttribute";
+import LightconeLevel from "./LightconeLevel/LightconeLevel";
 
 export default function UserCharLightcone() {
   const { language } = useTextLanguage();
@@ -21,8 +23,9 @@ export default function UserCharLightcone() {
   const lightconeId = officalLightconeId[
     inGameCharData.light_cone.id
   ] as LightconeName;
-
+  const lcJsonData = getLcJsonData(lightconeId);
   const lcFullData = getLcFullData(lightconeId, language);
+  const lcInGameData = inGameCharData.light_cone;
 
   return (
     <View style={{ alignItems: "center" }}>
@@ -46,17 +49,18 @@ export default function UserCharLightcone() {
           <Text className="text-[20px] font-[HY65] text-text">
             {lcFullData.name}
           </Text>
-          <View
-            className="mb-3 bg-[#222222] rounded-[49px] px-[12px] py-[4px]"
-            style={{ alignItems: "center" }}
-          >
-            <Text className="text-[12px] text-[#FFFFFF] font-[HY65]">
-              Lv 80 · 1星魂
-            </Text>
-          </View>
-          <UserCharDetailStars count={5} />
-          <LightconeLevel lcId={lightconeId} />
-          <LightconeAttribute lcId={lightconeId} />
+          <LightconeLevel
+            lcId={lightconeId}
+            lcFullData={lcFullData}
+            lcInGameData={lcInGameData}
+          />
+          <UserCharDetailStars count={lcInGameData.rarity} />
+          <LightconePath lcId={lightconeId} lcJsonData={lcJsonData} />
+          <LightconeAttribute
+            lcId={lightconeId}
+            lcFullData={lcFullData}
+            lcInGameData={lcInGameData}
+          />
         </View>
       </View>
       <View className="w-[135px] h-[1px] bg-[#F3F9FF40]"></View>

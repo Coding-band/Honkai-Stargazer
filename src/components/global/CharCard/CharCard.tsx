@@ -12,6 +12,8 @@ type Props = {
   id: string;
   rare: number;
   name: string;
+  rank?: number;
+  level?: number;
   path?: Path;
   combatType?: CombatType;
   image?:
@@ -86,7 +88,31 @@ export default function CharCard(props: Props) {
             <CombatTypeCardIcon value={props.combatType} />
             <PathCardIcon value={props.path} />
           </View>
+          {/* 命作 */}
+          {props.rank !== undefined && (
+            <View
+              className="absolute right-1 top-1 bg-[#F3F9FF] rounded-full w-4 h-4"
+              style={{ justifyContent: "center", alignItems: "center" }}
+            >
+              <Text className="text-[#393A5C] text-[12px] font-[HY65] font-bold translate-y-[-2px]">
+                {props.rank}
+              </Text>
+            </View>
+          )}
         </View>
+        {/* 等級 */}
+        {props.level !== undefined && (
+          <View
+            className="absolute bottom-[25px] w-full"
+            style={{ alignItems: "center" }}
+          >
+            <View className="bg-[#22222290] h-4 px-2 rounded-[43px]">
+              <Text className="text-text font-[HY65] text-[12px] translate-y-[-1px]">
+                {props.level}
+              </Text>
+            </View>
+          </View>
+        )}
       </LinearGradient>
       {/* </Shadow> */}
     </TouchableOpacity>

@@ -4,44 +4,46 @@ import { LightconeName } from "../../../../../types/lightcone";
 import useProfileCharFullData from "../../../../../context/UserCharDetailData/hooks/useProfileCharFullData";
 import useProfileHsrInGameInfo from "../../../../../context/UserCharDetailData/hooks/useProfileHsrInGameInfo";
 import { Image } from "expo-image";
+import AttributeImage from "../../../../../../assets/images/images_map/attributeImage";
 
-export default function LightconeAttribute({ lcId }: { lcId: LightconeName }) {
-  const { inGameCharData } = useProfileHsrInGameInfo();
+export default function LightconeAttribute({
+  lcId,
+  lcFullData,
+  lcInGameData,
+}: {
+  lcId: LightconeName;
+  lcFullData: any;
+  lcInGameData: any;
+}) {
   const attributes = [
     {
       key: "hp",
-      icon: require("../../../../../../assets/images/ui_icon/ic_hp.webp"),
+      icon: AttributeImage.hp,
       value: (
-        inGameCharData.light_cone.attributes.filter(
-          (attr: any) => attr.field === "hp"
-        )[0]?.value +
-          inGameCharData.light_cone.attributes.filter(
-            (attr: any) => attr.field === "hp"
-          )[0]?.value || 0
+        lcInGameData.attributes.filter((attr: any) => attr.field === "hp")[0]
+          ?.value +
+          lcInGameData.attributes.filter((attr: any) => attr.field === "hp")[0]
+            ?.value || 0
       ).toFixed(),
     },
     {
       key: "atk",
-      icon: require("../../../../../../assets/images/ui_icon/ic_atk.webp"),
+      icon: AttributeImage.atk,
       value: (
-        inGameCharData.light_cone.attributes.filter(
-          (attr: any) => attr.field === "atk"
-        )[0]?.value +
-          inGameCharData.light_cone.attributes.filter(
-            (attr: any) => attr.field === "atk"
-          )[0]?.value || 0
+        lcInGameData.attributes.filter((attr: any) => attr.field === "atk")[0]
+          ?.value +
+          lcInGameData.attributes.filter((attr: any) => attr.field === "atk")[0]
+            ?.value || 0
       ).toFixed(),
     },
     {
       key: "def",
-      icon: require("../../../../../../assets/images/ui_icon/ic_def.webp"),
+      icon: AttributeImage.def,
       value: (
-        inGameCharData.light_cone.attributes.filter(
-          (attr: any) => attr.field === "def"
-        )[0]?.value +
-          inGameCharData.light_cone.attributes.filter(
-            (attr: any) => attr.field === "def"
-          )[0]?.value || 0
+        lcInGameData.attributes.filter((attr: any) => attr.field === "def")[0]
+          ?.value +
+          lcInGameData.attributes.filter((attr: any) => attr.field === "def")[0]
+            ?.value || 0
       ).toFixed(),
     },
   ];

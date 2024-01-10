@@ -8,10 +8,10 @@ export default function PathCardIcon({ value }: { value?: Path }) {
   return (
     value && (
       <View
-        className="w-4 h-4 rounded-full bg-[#00000040]"
+        className="w-5 h-5 rounded-full bg-[#00000040]"
         style={{ justifyContent: "center", alignItems: "center" }}
       >
-        <Image className="w-3.5 h-3.5" source={PathMap[value].icon} />
+        <Image className="w-4 h-4" source={PathMap[value].icon} />
       </View>
     )
   );
