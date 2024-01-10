@@ -99,6 +99,12 @@ export default function UserCharDetail() {
           <UserCharAttribute />
           <UserCharLightcone />
           <UserCharRelics />
+          {/* 由 Stargazer 製作 */}
+          <View className="mb-12 mt-12">
+            <Text className="text-text text-[12px] font-[HY65]">
+              由 Stargazer 製作
+            </Text>
+          </View>
         </View>
       </ScrollView>
     </View>

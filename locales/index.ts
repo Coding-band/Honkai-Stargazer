@@ -7,5 +7,5 @@ export const LOCALES =  {
   en: EN,
   zh_cn: ZH_CN,
   zh_hk: ZH_HK,
-  // vocchinese : VOCCHINESE,
+  vocchinese : VOCCHINESE,
 };

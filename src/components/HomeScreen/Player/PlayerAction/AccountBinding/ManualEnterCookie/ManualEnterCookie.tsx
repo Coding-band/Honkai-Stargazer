@@ -18,7 +18,7 @@ export default function ManualEnterCookie(props: Props) {
   const [inputCookie, setInputCookie] = useState("");
   const handleSaveCookie = () => {
     setHoyolabCookie(inputCookie);
-    setHsrServerChosen("cn1");
+    setHsrServerChosen("asia");
     auth().signOut();
     props.onCookieSave && props.onCookieSave();
   };
@@ -29,7 +29,7 @@ export default function ManualEnterCookie(props: Props) {
         請選擇服務器並貼上 Cookies。
       </Text>
       <TextButton hasShadow={false} width={"100%"} height={46}>
-        星窮列車
+        亞服
       </TextButton>
       <TextInput
         value={inputCookie}
