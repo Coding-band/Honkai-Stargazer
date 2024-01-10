@@ -37,6 +37,13 @@ import UserCharRelics from "./UserCharRelics/UserCharRelics";
 import useDelayLoad from "../../../hooks/useDelayLoad";
 import Toast from "../../../utils/toast/Toast";
 import Loading from "../../global/Loading/Loading";
+import Animated, {
+  useAnimatedRef,
+  useAnimatedStyle,
+  useScrollViewOffset,
+  withSpring,
+} from "react-native-reanimated";
+import ProducedByStargazer from "../../global/ProducedByStargazer/ProducedByStargazer";
 
 export default function UserCharDetail() {
   const loaded = useDelayLoad(100);
@@ -51,71 +58,85 @@ export default function UserCharDetail() {
   const charFullData = useProfileCharFullData();
   const charId = useProfileCharId();
 
+  const aref = useAnimatedRef<Animated.ScrollView>();
+  const scrollHandler = useScrollViewOffset(aref);
+
+  const contentAnimatedStyles = useAnimatedStyle(() => {
+    if (scrollHandler.value > 0) {
+      return {
+        opacity: withSpring(0),
+      };
+    } else {
+      return {
+        opacity: withSpring(1),
+      };
+    }
+  });
+
   return (
     <View className="z-30">
       <Header2 rightBtn={isOwner ? <ShareBtn /> : null} />
-      {loaded && inGameInfo ? (
-        <ScrollView style={{ height: Dimensions.get("screen").height }}>
-          <View
-            style={[
-              {
-                alignItems: "center",
-                gap: 18,
-              },
-            ]}
-          >
-            <ImageBackground
-              source={CharacterImage[charId].fade}
-              className="w-full"
+
+      {inGameInfo ? (
+        <>
+          <View className="mt-12 z-40" style={{ alignItems: "center", gap: 4 }}>
+            {/* 用戶名 */}
+            <Text
+              className="text-[#FFFFFF] font-[HY65] text-[16px]"
+              style={globalStyles.textShadow}
             >
-              <View
-                className="mt-12"
-                style={{ alignItems: "center", gap: 228 }}
-              >
-                <View style={{ alignItems: "center", gap: 4 }}>
-                  {/* 用戶名 */}
-                  <Text
-                    className="text-[#FFFFFF] font-[HY65] text-[16px]"
-                    style={globalStyles.textShadow}
-                  >
-                    {inGameInfo?.player?.nickname}
-                  </Text>
-                  {/* UUID & 伺服器 */}
-                  <UUIDBox uuid={profileUUID} />
-                </View>
-                <View style={{ alignItems: "center", gap: 4 }}>
-                  {/* 角色名 */}
-                  <Text
-                    className="text-[#FFFFFF] font-[HY65] text-[32px]"
-                    style={globalStyles.textShadow}
-                  >
-                    {charFullData.name}
-                  </Text>
-                  {/* 星星數 */}
-                  <UserCharDetailStars count={charJsonData.rare} />
-                  {/* 等級，星魂 */}
-                  <UserCharLevel />
-                  {/* 屬性，命途 */}
-                  <UserCharCombatTypeAndPath />
-                  <UserCharSkills />
-                </View>
-              </View>
-            </ImageBackground>
-            <UserCharAttribute />
-            <UserCharLightcone />
-            <UserCharRelics />
-            {isOwner && (
-              <View className="mb-12 mt-12">
-                <Text className="text-text text-[12px] font-[HY65]">
-                  由 Stargazer 製作
-                </Text>
-              </View>
-            )}
+              {inGameInfo?.player?.nickname}
+            </Text>
+            {/* UUID & 伺服器 */}
+            <UUIDBox uuid={profileUUID} />
           </View>
-        </ScrollView>
+          <Animated.Image
+            style={contentAnimatedStyles}
+            source={CharacterImage[charId].fade}
+            className="absolute w-full h-[580px]"
+          />
+        </>
       ) : (
         <Loading />
       )}
+      <Animated.ScrollView
+        // @ts-ignore
+        ref={aref}
+        style={{ height: Dimensions.get("screen").height - 110 }}
+      >
+        <View
+          style={{
+            alignItems: "center",
+            gap: 18,
+          }}
+        >
+          <View style={{ alignItems: "center", marginTop: 228 }}>
+            <View style={{ alignItems: "center", gap: 4 }}>
+              {/* 角色名 */}
+              <Text
+                className="text-[#FFFFFF] font-[HY65] text-[32px]"
+                style={globalStyles.textShadow}
+              >
+                {charFullData.name}
+              </Text>
+              {/* 星星數 */}
+              <UserCharDetailStars count={charJsonData.rare} />
+              {/* 等級，星魂 */}
+              <UserCharLevel />
+              {/* 屬性，命途 */}
+              <UserCharCombatTypeAndPath />
+              <UserCharSkills />
+            </View>
+          </View>
+          <UserCharAttribute />
+          <UserCharLightcone />
+          <UserCharRelics />
+          {/* 由 Stargazer 製作 */}
+          <View className="mb-12 mt-12">
+            {isOwner && <ProducedByStargazer />}
+          </View>
+        </View>
+      </Animated.ScrollView>
     </View>
   );
 }

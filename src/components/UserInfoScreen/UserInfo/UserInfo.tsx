@@ -24,6 +24,7 @@ import getServerFromUUID from "../../../utils/hoyolab/servers/getServerFromUUID"
 import { animated, useSpring } from "@react-spring/native";
 import UUIDBox from "../../global/UUIDBox/UUIDBox";
 import Loading from "../../global/Loading/Loading";
+import ProducedByStargazer from "../../global/ProducedByStargazer/ProducedByStargazer";
 
 type Props = {
   uuid: string;
@@ -42,8 +43,6 @@ export default function UserInfo(props: Props) {
     // @ts-ignore
     AvatarIcon[hsrInGameInfo?.player?.avatar?.icon?.match(/\d+/g).join("")];
 
-  const animation = useSpring({ from: { opacity: 0 }, to: { opacity: 1 } });
-
   return (
     <View className="z-30">
       <Header2 rightBtn={isOwner ? <ShareBtn /> : null} />
@@ -51,13 +50,10 @@ export default function UserInfo(props: Props) {
         {hsrInGameInfo ? (
           <AnimatedView
             className="mt-12 px-4"
-            style={[
-              {
-                alignItems: "center",
-                gap: 18,
-              },
-              // animation,
-            ]}
+            style={{
+              alignItems: "center",
+              gap: 18,
+            }}
           >
             <View style={{ alignItems: "center", gap: 6 }}>
               {/* 頭像 */}
@@ -65,6 +61,7 @@ export default function UserInfo(props: Props) {
                 image={playerAvatar}
                 onPress={() => {
                   const signature = hsrInGameInfo?.player?.signature;
+
                   if (signature) {
                     Toast(signature);
                   }
@@ -118,13 +115,9 @@ export default function UserInfo(props: Props) {
               </View>
             )}
             {/* 由 Stargazer 製作 */}
-            {isOwner && (
-              <View className="mb-12 mt-12">
-                <Text className="text-text text-[12px] font-[HY65]">
-                  由 Stargazer 製作
-                </Text>
-              </View>
-            )}
+            <View className="mb-12 mt-12">
+              {isOwner && <ProducedByStargazer />}
+            </View>
           </AnimatedView>
         ) : (
           <Loading />

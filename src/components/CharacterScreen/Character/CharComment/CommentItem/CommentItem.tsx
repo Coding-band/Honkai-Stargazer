@@ -17,6 +17,7 @@ import { findKey } from "lodash";
 import { extractMentionsSplit } from "../CommentInput/utils/extractMetions";
 import { hasUserByUsername } from "../../../../../firebase/utils/hasUser";
 import CommentUserAvatar from "./CommentUserAvatar/CommentUserAvatar";
+import useCopyToClipboard from "../../../../../hooks/useCopyToClipboard";
 
 export default function CommentItem({
   user_id,
@@ -66,8 +67,14 @@ export default function CommentItem({
     processContent();
   }, [content]); // 依赖项列表，当这些依赖项更改时，useEffect 会重新执行
 
+  const handleCopy = useCopyToClipboard();
+
   return (
-    <TouchableNativeFeedback>
+    <TouchableNativeFeedback
+      onLongPress={() => {
+        handleCopy(content);
+      }}
+    >
       <View className="px-6 py-3" style={{ flexDirection: "row", gap: 14 }}>
         <CommentUserAvatar user={user} />
         <View style={{ gap: 2, flex: 1 }}>

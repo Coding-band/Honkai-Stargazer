@@ -1,8 +1,11 @@
 import {
+  Keyboard,
   TextInput,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
   View,
 } from "react-native";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { cn } from "../../../../../utils/css/cn";
 import db from "../../../../../firebase/db";
 import firestore from "@react-native-firebase/firestore";
@@ -18,7 +21,7 @@ import pushExpoNoti from "../../../../../notifications/utils/pushExpoNoti";
 import useHsrPlayerName from "../../../../../hooks/hoyolab/useHsrPlayerName";
 import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
 import { pushExpoNotiType } from "../../../../../notifications/constant/pushExpoNotiType";
-import CommentAddPhoto from "./CommentAddPhoto/CommentAddPhoto";
+import CommentToolBox from "./CommentAddPhoto/CommentAddPhoto";
 
 export default function CommentInput() {
   const uid = useFirebaseUid();
@@ -106,26 +109,30 @@ export default function CommentInput() {
   };
 
   return (
-    <View className="w-full h-[80px] px-6" style={{ justifyContent: "center" }}>
+    <View className="w-full px-6" style={{ justifyContent: "center" }}>
       <View className="rounded-[23px] overflow-hidden">
-        <BlurView tint="dark" intensity={40}>
+        <BlurView
+          tint="dark"
+          intensity={40}
+          className="bg-[#FFFFFF20]"
+          style={{ flexDirection: "row" }}
+        >
           {/* 輸入框 */}
           <TextInput
+            // multiline
             className={cn(
-              "w-full h-[46px] px-[20px]",
-              "bg-[#FFFFFF20]",
+              "py-[9px] px-[20px]",
               "text-[16px] font-[HY65] text-text"
             )}
-            style={{ justifyContent: "center" }}
+            style={{ justifyContent: "center", flex: 1 }}
             value={input}
             onChangeText={handleTextChange}
             onSubmitEditing={handleSubmit}
             placeholder="幫幫我 史瓦羅先生！"
             placeholderTextColor="#F3F9FF40"
-            keyboardType="twitter"
           />
           {/* 新增圖片 */}
-          <CommentAddPhoto />
+          {/* <CommentToolBox onHandleSend={handleSubmit} /> */}
         </BlurView>
       </View>
     </View>

@@ -20,6 +20,9 @@ export function getCharMaterialData(
   fromLevel: number = 1,
   toLevel: number = 80
 ) {
+  if (fromLevel >= 80) {
+    return {};
+  }
   //初始化 - 素材映射
   let charFullData = getCharFullData(id);
   let charLevelData = charFullData.levelData;
@@ -101,6 +104,10 @@ export function getLcMaterialData(
   fromLevel: number = 1,
   toLevel: number = 80
 ) {
+  if (fromLevel >= 80) {
+    return {};
+  }
+
   const lcFullData = getLcFullData(id);
   const lcLevelData = lcFullData.levelData;
   let materialHash: MaterialMap = {};

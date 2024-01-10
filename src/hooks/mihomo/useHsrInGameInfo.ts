@@ -9,7 +9,6 @@ const useHsrInGameInfo = (uuid: string) => {
       select(data) {
         return data?.data;
       },
-      staleTime: Infinity,
     }
   );
   return query;

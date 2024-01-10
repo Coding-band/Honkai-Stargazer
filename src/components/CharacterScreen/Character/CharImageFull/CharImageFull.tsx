@@ -8,6 +8,7 @@ import { Image } from "expo-image";
 import CharacterContext from "../../../../context/CharacterData/CharacterContext";
 import { Dimensions, Platform } from "react-native";
 import useCharData from "../../../../context/CharacterData/hooks/useCharData";
+import { TextInput } from "react-native-gesture-handler";
 
 type Props = {
   scrollHandler: SharedValue<number>;

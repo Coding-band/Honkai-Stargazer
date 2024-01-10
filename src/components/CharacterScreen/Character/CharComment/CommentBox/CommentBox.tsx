@@ -39,7 +39,7 @@ export default function CommentBox(props: Props) {
     if (translation.value.y < 0) {
       props.containerRef?.current?.scrollTo({
         x: 0,
-        y: 3800,
+        y: 3400,
         animated: true,
       });
     }
@@ -99,7 +99,7 @@ export default function CommentBox(props: Props) {
               className="w-[12px] h-[12px]"
             />
             <Text className="text-white text-[16px] font-[HY65]">
-              {charComments?.comments?.length || 0}條評論
+              {charComments?.comments.length || 0}條評論
             </Text>
           </View>
         </Animated.View>
@@ -116,7 +116,7 @@ export default function CommentBox(props: Props) {
         <KeyboardAvoidingView
           className="absolute bottom-0 w-full"
           behavior="padding"
-          keyboardVerticalOffset={98}
+          keyboardVerticalOffset={114}
         >
           <Animated.View style={[animatedStyles3]}>
             {props.bottom}

@@ -29,6 +29,7 @@ export default function UserInfoCharacters(props: Props) {
   const hsrCharList = useHsrCharList();
   const { data: hsrInGameInfo } = useHsrInGameInfo(props.uuid);
 
+  // 展櫃資料
   const inGameCharacters = hsrInGameInfo?.characters?.map((char: any) => {
     // @ts-ignore
     const charId = officalCharId[char.id] as CharacterName;
@@ -47,6 +48,7 @@ export default function UserInfoCharacters(props: Props) {
     (char: any) => char.id
   );
 
+  // hoyolab 角色資料
   const hsrCharacters = isOwner
     ? hsrCharList
         ?.filter(
@@ -77,7 +79,7 @@ export default function UserInfoCharacters(props: Props) {
       <View
         style={{
           flexDirection: "row",
-          gap: 10,
+          gap: 9,
           flexWrap: "wrap",
           justifyContent: "center",
         }}
@@ -104,7 +106,7 @@ export default function UserInfoCharacters(props: Props) {
       <View
         style={{
           flexDirection: "row",
-          gap: 10,
+          gap: 9,
           flexWrap: "wrap",
           justifyContent: "center",
         }}

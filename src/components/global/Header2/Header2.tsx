@@ -23,10 +23,7 @@ export default function Header2(props: Props) {
   };
 
   return (
-    <Pressable
-      onPress={props.onPress}
-      style={{ position: "absolute", width: "100%", zIndex: 50 }}
-    >
+    <Pressable className="absolute w-full z-50" onPress={props.onPress} pointerEvents="box-none">
       <View className="w-full h-[110px]">
         {/* 左邊叉叉 */}
         <TouchableOpacity
