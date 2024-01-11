@@ -151,7 +151,8 @@ export const ZH_HK = {
   RelicAffix_physical_dmg: "物理屬性傷害加成",
   RelicAffix_wind_dmg: "風屬性傷害加成",
   RelicAffix_fire_dmg: "火屬性傷害加成",
-  RelicAffix_ice_dmg: "冰屬性D雷屬性傷害加成",
+  RelicAffix_ice_dmg: "冰屬性傷害加成",
+  RelicAffix_lightning_dmg: "雷屬性傷害加成",
   RelicAffix_quantum_dmg: "量子屬性傷害加成",
   RelicAffix_imaginary_dmg: "虛數屬性傷害加成",
 
