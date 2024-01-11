@@ -43,8 +43,11 @@
 ![ko translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ko&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ja%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 ![pt-PT translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=pt-PT&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27pt-PT%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 ![ru translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ru&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ru%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![th translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ru&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27th%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![vi translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ru&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27vi%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![th translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=th&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27th%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![vi translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=vi&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27vi%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![cht translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=zh-HK&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27zh-HK%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![chs translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=zh-CN&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27zh-CN%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![Vocchinese translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=yue&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27yue%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 
 ---
 
