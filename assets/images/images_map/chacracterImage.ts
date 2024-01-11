@@ -9,13 +9,13 @@ const CharacterImage = {
   "Ruan Mei": {
     icon: require("../../images/character_icon/ruan_mei_icon.webp"),
     imageSplash: require("../../images/character_splash/ruan_mei_splash.webp"),
-    imageFull: require("../../images/character_splash/ruan_mei_splash.webp"),
+    imageFull: require("../../images/character_full/ruan_mei_full.webp"),
     fade: require("../../images/character_fade/ruan_mei_fade.webp"),
   },
   Xueyi: {
     icon: require("../../images/character_icon/xueyi_icon.webp"),
     imageSplash: require("../../images/character_splash/xueyi_splash.webp"),
-    imageFull: require("../../images/character_splash/xueyi_splash.webp"),
+    imageFull: require("../../images/character_full/xueyi_full.webp"),
     fade: require("../../images/character_fade/xueyi_fade.webp"),
   },
   Argenti: {
