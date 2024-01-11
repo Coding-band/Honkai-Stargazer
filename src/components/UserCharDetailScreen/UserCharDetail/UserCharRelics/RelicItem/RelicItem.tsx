@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { CardColors } from "../../../../../constant/card";
@@ -18,30 +18,32 @@ export default function RelicItem({ userRelicData }: { userRelicData: any }) {
     ) + 1;
 
   return (
-    <View className="w-[160px] py-2" style={{ flexDirection: "row", gap: 10 }}>
-      <LinearGradient
-        className="w-[47px] h-[47px]"
-        style={{
-          borderRadius: 4,
-          borderTopRightRadius: 10,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-        // @ts-ignore
-        colors={CardColors[userRelicData.rarity]}
-      >
-        <Image
-          transition={200}
-          className="w-[30px] h-[30px]"
+    <View className="w-[160px] py-2" style={{ flexDirection: "row", gap: 5 }}>
+      <TouchableOpacity activeOpacity={0.65}>
+        <LinearGradient
+          className="w-[47px] h-[47px]"
+          style={{
+            borderRadius: 4,
+            borderTopRightRadius: 10,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
           // @ts-ignore
-          source={Relic[relicSetId]?.["icon" + relicCount]}
-        />
-        <View className="absolute bottom-[-8px] bg-[#00000040] rounded-[15px] px-1.5 py-0.5">
-          <Text className="text-text font-[HY65] text-[8px] text-center">
-            {userRelicData.level}
-          </Text>
-        </View>
-      </LinearGradient>
+          colors={CardColors[userRelicData.rarity]}
+        >
+          <Image
+            transition={200}
+            className="w-[30px] h-[30px]"
+            // @ts-ignore
+            source={Relic[relicSetId]?.["icon" + relicCount]}
+          />
+          <View className="absolute bottom-[-8px] bg-[#00000040] rounded-[15px] px-1.5 py-0.5">
+            <Text className="text-text font-[HY65] text-[8px] text-center">
+              {userRelicData.level}
+            </Text>
+          </View>
+        </LinearGradient>
+      </TouchableOpacity>
       <View>
         <View className="w-[105px]" style={{ flexDirection: "row" }}>
           <Image
