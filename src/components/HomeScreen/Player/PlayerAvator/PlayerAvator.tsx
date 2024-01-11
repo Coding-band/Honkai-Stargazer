@@ -8,6 +8,7 @@ import UserAvatar from "../../../global/UserAvatar/UserAvatar";
 import Toast from "../../../../utils/toast/Toast";
 import { LOCALES } from "../../../../../locales";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
+import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
 
 export default function PlayerAvator() {
   const navigation = useNavigation();
@@ -28,13 +29,7 @@ export default function PlayerAvator() {
 
   return (
     <View className="mr-2">
-      <UserAvatar
-        image={
-          avatar ||
-          "https://act.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_763646/c86d9128cff46891e47275f3b48b5eeb.png?x-oss-process=image%2Fformat%2Cwebp"
-        }
-        onPress={handleNavigatUserInfoPage}
-      />
+      <UserAvatar image={avatar} onPress={handleNavigatUserInfoPage} />
     </View>
   );
 }

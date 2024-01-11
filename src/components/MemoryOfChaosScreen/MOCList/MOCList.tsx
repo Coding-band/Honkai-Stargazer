@@ -58,7 +58,7 @@ export default function MOCList() {
     []
   );
 
-  if (!floors.length) return <NoDataYet />;
+  if (!floors?.length) return <NoDataYet />;
   if (!moc) return <NotFound />;
 
   return (

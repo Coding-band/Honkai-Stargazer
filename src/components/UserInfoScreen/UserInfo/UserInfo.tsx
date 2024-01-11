@@ -25,6 +25,7 @@ import { animated, useSpring } from "@react-spring/native";
 import UUIDBox from "../../global/UUIDBox/UUIDBox";
 import Loading from "../../global/Loading/Loading";
 import ProducedByStargazer from "../../global/ProducedByStargazer/ProducedByStargazer";
+import NoPublicData from "./NoPublicData/NoPublicData";
 
 type Props = {
   uuid: string;
@@ -34,14 +35,14 @@ export default function UserInfo(props: Props) {
   const { language: appLangauge } = useAppLanguage();
 
   const hsrUUID = useHsrUUID();
-  const isOwner = props.uuid === hsrUUID;
-
   const { data: hsrFullData } = useHsrFullData();
   const { data: hsrInGameInfo } = useHsrInGameInfo(props.uuid);
   const { data: moc } = useMemoryOfChaos();
   const playerAvatar =
     // @ts-ignore
     AvatarIcon[hsrInGameInfo?.player?.avatar?.icon?.match(/\d+/g).join("")];
+
+  const isOwner = props.uuid === hsrUUID;
 
   return (
     <View className="z-30">
@@ -91,7 +92,7 @@ export default function UserInfo(props: Props) {
             {/* 擁有角色 */}
             <UserInfoCharacters uuid={props.uuid} />
             {/* 其他資訊 */}
-            {isOwner && (
+            {isOwner ? (
               <View
                 className="w-full px-3"
                 style={{
@@ -113,6 +114,8 @@ export default function UserInfo(props: Props) {
                 />
                 <InfoItem title={"忘卻之庭"} value={`${moc?.battle_num}/12`} />
               </View>
+            ) : (
+              <NoPublicData />
             )}
             {/* 由 Stargazer 製作 */}
             <View className="mb-12 mt-12">

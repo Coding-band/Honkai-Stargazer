@@ -11,11 +11,6 @@ import useHsrUUID from "../../../hooks/hoyolab/useHsrUUID";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { Image, ImageBackground } from "expo-image";
 import UUIDBox from "../../global/UUIDBox/UUIDBox";
-import { CharacterName } from "../../../types/character";
-import {
-  getCharFullData,
-  getCharJsonData,
-} from "../../../utils/dataMap/getDataFromMap";
 import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
 import useHsrInGameInfo from "../../../hooks/mihomo/useHsrInGameInfo";
 import CharacterImage from "../../../../assets/images/images_map/chacracterImage";
@@ -46,17 +41,14 @@ import Animated, {
 import ProducedByStargazer from "../../global/ProducedByStargazer/ProducedByStargazer";
 
 export default function UserCharDetail() {
-  const loaded = useDelayLoad(100);
-
   const hsrUUID = useHsrUUID();
   const profileUUID = useProfileUUID();
-
-  const isOwner = profileUUID === hsrUUID;
-
   const { inGameInfo } = useProfileHsrInGameInfo();
   const charJsonData = useProfileCharJsonData();
   const charFullData = useProfileCharFullData();
   const charId = useProfileCharId();
+
+  const isOwner = profileUUID === hsrUUID;
 
   const aref = useAnimatedRef<Animated.ScrollView>();
   const scrollHandler = useScrollViewOffset(aref);
@@ -73,32 +65,26 @@ export default function UserCharDetail() {
     }
   });
 
+  if (!inGameInfo) return <Loading />;
   return (
     <View className="z-30">
       <Header2 rightBtn={isOwner ? <ShareBtn /> : null} />
-
-      {inGameInfo ? (
-        <>
-          <View className="mt-12 z-40" style={{ alignItems: "center", gap: 4 }}>
-            {/* 用戶名 */}
-            <Text
-              className="text-[#FFFFFF] font-[HY65] text-[16px]"
-              style={globalStyles.textShadow}
-            >
-              {inGameInfo?.player?.nickname}
-            </Text>
-            {/* UUID & 伺服器 */}
-            <UUIDBox uuid={profileUUID} />
-          </View>
-          <Animated.Image
-            style={contentAnimatedStyles}
-            source={CharacterImage[charId].fade}
-            className="absolute w-full h-[580px]"
-          />
-        </>
-      ) : (
-        <Loading />
-      )}
+      <View className="mt-12 z-40" style={{ alignItems: "center", gap: 4 }}>
+        {/* 用戶名 */}
+        <Text
+          className="text-[#FFFFFF] font-[HY65] text-[16px]"
+          style={globalStyles.textShadow}
+        >
+          {inGameInfo?.player?.nickname}
+        </Text>
+        {/* UUID & 伺服器 */}
+        <UUIDBox uuid={profileUUID} />
+      </View>
+      <Animated.Image
+        style={contentAnimatedStyles}
+        source={CharacterImage[charId].fade}
+        className="absolute w-full h-[580px]"
+      />
       <Animated.ScrollView
         // @ts-ignore
         ref={aref}

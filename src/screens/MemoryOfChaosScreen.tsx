@@ -6,6 +6,7 @@ import { SCREENS } from "../constant/screens";
 import { ImageBackground } from "expo-image";
 import MOCList from "../components/MemoryOfChaosScreen/MOCList/MOCList";
 import useAppLanguage from "../language/AppLanguage/useAppLanguage";
+import WallPaperForMOC from "../components/global/WallPaper/WallPaperForMOC";
 
 export default function MemoryOfChaosScreen() {
   const { language } = useAppLanguage();
@@ -20,13 +21,7 @@ export default function MemoryOfChaosScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
-      <ImageBackground
-        className="absolute w-full h-full"
-        // 把背景關掉
-        source={require("../../assets/images/bgs/memory_of_chaos_bg.png")}
-        // placeholder={blurhash}
-        contentFit="cover"
-      />
+      <WallPaperForMOC />
       <Header leftBtn="back" Icon={SCREENS.MemoryOfChaosPage.icon}>
         {SCREENS.MemoryOfChaosPage.getName(language)}
       </Header>

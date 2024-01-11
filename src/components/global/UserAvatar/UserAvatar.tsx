@@ -3,6 +3,7 @@ import React from "react";
 import { TouchableOpacity } from "react-native";
 import { Image } from "expo-image";
 import { ExpoImage } from "../../../types/image";
+import CharacterImage from "../../../../assets/images/images_map/chacracterImage";
 
 export default function UserAvatar({
   image,
@@ -18,7 +19,8 @@ export default function UserAvatar({
       activeOpacity={0.35}
     >
       <Image
-        source={image}
+        transition={200}
+        source={image || CharacterImage["Trailblazer Girl (Physical)"].icon}
         className="w-[73px] h-[73px] rounded-full"
         style={{
           backgroundColor: "rgba(144, 124, 84, 0.4)",

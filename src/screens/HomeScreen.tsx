@@ -21,6 +21,7 @@ import UserMemoryOfChaos from "../firebase/models/UserMemoryOfChaos";
 import firestore from "@react-native-firebase/firestore";
 import { ENV } from "../../app.config";
 import BetaWidget from "../components/global/Beta/BetaWidget";
+import WallPaperForMOC from "../components/global/WallPaper/WallPaperForMOC";
 
 export default function HomeScreen() {
   const uid = useFirebaseUid();
@@ -213,6 +214,8 @@ export default function HomeScreen() {
   return (
     <Pressable style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
+      {/* 渾沌回憶背景預先加載 */}
+      <WallPaperForMOC />
       <WallPaper />
       <LinearGradient
         className="absolute w-full h-full"
