@@ -4,8 +4,13 @@ import { Image } from "expo-image";
 import useProfileHsrInGameInfo from "../../../../context/UserCharDetailData/hooks/useProfileHsrInGameInfo";
 import useProfileCharFullData from "../../../../context/UserCharDetailData/hooks/useProfileCharFullData";
 import AttributeImage from "../../../../../assets/images/images_map/attributeImage";
+import { LOCALES } from "../../../../../locales";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 
 export default function UserCharAttribute() {
+
+  const {language} = useAppLanguage();
+
   const [displayMode, setDisplayMode] = useState<"light" | "normal">("light");
 
   const { inGameCharData } = useProfileHsrInGameInfo();
@@ -193,7 +198,7 @@ export default function UserCharAttribute() {
               attr.value && (
                 <View style={{ flexDirection: "row", alignItems: "center" }}>
                   <Image source={attr.icon} className="w-6 h-6" />
-                  <Text className="text-text text-[14px]"> {attr.value}</Text>
+                  <Text className="text-text text-[14px]"> {LOCALES[language]}</Text>
                 </View>
               )
           )}
