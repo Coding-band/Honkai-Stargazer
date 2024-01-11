@@ -338,6 +338,7 @@ export default function UserCharAttribute() {
                   >
                     <Image source={attr.icon} className="w-6 h-6" />
                     <Text className="text-text text-[14px] font-[HY65]">
+                      {/* @ts-ignore */}
                       {LOCALES[language]["RelicAffix_" + attr.key]}
                     </Text>
                   </View>
@@ -349,7 +350,8 @@ export default function UserCharAttribute() {
                     }}
                   >
                     <Text className="text-text text-[14px] font-[HY65]">
-                      {attr.attr ? attr.attr + " + " : ""}
+                      {attr.attr}
+                      {attr.addi && attr.attr ? <Text> + </Text> : null}
                       <Text className="text-green-600">{attr.addi}</Text>
                     </Text>
                   </View>

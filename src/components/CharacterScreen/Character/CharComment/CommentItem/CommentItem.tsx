@@ -18,6 +18,7 @@ import { extractMentionsSplit } from "../CommentInput/utils/extractMetions";
 import { hasUserByUsername } from "../../../../../firebase/utils/hasUser";
 import CommentUserAvatar from "./CommentUserAvatar/CommentUserAvatar";
 import useCopyToClipboard from "../../../../../hooks/useCopyToClipboard";
+import { Vibration } from "react-native";
 
 export default function CommentItem({
   user_id,
@@ -73,6 +74,7 @@ export default function CommentItem({
     <TouchableNativeFeedback
       onLongPress={() => {
         handleCopy(content);
+        Vibration.vibrate(50);
       }}
     >
       <View className="px-6 py-3" style={{ flexDirection: "row", gap: 14 }}>

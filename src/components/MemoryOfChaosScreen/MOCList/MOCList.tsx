@@ -9,6 +9,7 @@ import { LOCALES } from "../../../../locales";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { animated, useTrail } from "@react-spring/native";
 import NotFound from "../../global/Loading/NotFound";
+import NoDataYet from "../../global/Loading/NoDataYet";
 
 export default function MOCList() {
   // data
@@ -57,7 +58,10 @@ export default function MOCList() {
     []
   );
 
-  return moc ? (
+  if (!floors.length) return <NoDataYet />;
+  if (!moc) return <NotFound />;
+
+  return (
     <ScrollView className="z-30 pt-[127px] px-[17px] pb-0">
       <View
         style={{
@@ -103,22 +107,16 @@ export default function MOCList() {
             )}
           </Text>
         </View>
-        {floors.length ? (
-          floors?.map((floor: any, index: number) => (
-            <AnimatedView
-              key={floor?.title}
-              // style={trails[index]}
-            >
-              <MOCFloor {...floor} />
-            </AnimatedView>
-          ))
-        ) : (
-          <Text className="text-text">{LOCALES[language].NoDataYet}</Text>
-        )}
+        {floors?.map((floor: any, index: number) => (
+          <AnimatedView
+            key={floor?.title}
+            // style={trails[index]}
+          >
+            <MOCFloor {...floor} />
+          </AnimatedView>
+        ))}
       </View>
     </ScrollView>
-  ) : (
-    <NotFound />
   );
 }
 
