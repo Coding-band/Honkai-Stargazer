@@ -24,7 +24,7 @@ export default function FilterAction() {
         value: item.id,
         name: LOCALES[language][item.id],
         icon: PATHS.includes(item.id)
-          ? PathMap[item.id as PathType].icon
+          ? PathMap[item.id as PathType].icon2
           : CombatTypeMap[item.id as CombatTypeType].icon,
       })),
     [charFilter]
