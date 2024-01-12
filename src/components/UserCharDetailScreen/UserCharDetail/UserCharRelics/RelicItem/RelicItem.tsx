@@ -7,8 +7,17 @@ import Relic from "../../../../../../assets/images/images_map/relic";
 import { RelicName } from "../../../../../types/relic";
 import officalRelicId from "../../../../../../map/relic_offical_id_map";
 import AttributeImage from "../../../../../../assets/images/images_map/attributeImage";
+import BlurView from "../../../../global/BlurView/BlurView";
+import RelicScore from "./RelicScore/RelicScore";
+import getRelicScore from "../../../../../utils/calculator/relicScoreCalculator/getRelicScore";
 
-export default function RelicItem({ userRelicData }: { userRelicData: any }) {
+export default function RelicItem({
+  userRelicData,
+  score,
+}: {
+  userRelicData: any;
+  score: number;
+}) {
   const relicSetId = officalRelicId[userRelicData.set_id] as RelicName;
   const relicCount =
     Number(
@@ -19,6 +28,7 @@ export default function RelicItem({ userRelicData }: { userRelicData: any }) {
 
   return (
     <View className="w-[160px] py-2" style={{ flexDirection: "row", gap: 5 }}>
+      {/* 圖片 */}
       <TouchableOpacity activeOpacity={0.65}>
         <LinearGradient
           className="w-[47px] h-[47px]"
@@ -44,17 +54,31 @@ export default function RelicItem({ userRelicData }: { userRelicData: any }) {
           </View>
         </LinearGradient>
       </TouchableOpacity>
+      {/* 詞條 */}
       <View>
-        <View className="w-[105px]" style={{ flexDirection: "row" }}>
-          <Image
-            className="w-[20px] h-[20px]"
-            // @ts-ignore
-            source={AttributeImage[userRelicData.main_affix.field]}
-          />
-          <Text className="text-text text-[12px] font-[HY65]">
-            +{userRelicData.main_affix.display}
-          </Text>
+        <View
+          className="w-[120px]"
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          {/* 主詞條 */}
+          <View style={{ flexDirection: "row" }}>
+            <Image
+              className="w-[20px] h-[20px]"
+              // @ts-ignore
+              source={AttributeImage[userRelicData.main_affix.field]}
+            />
+            <Text className="text-text text-[12px] font-[HY65]">
+              +{userRelicData.main_affix.display}
+            </Text>
+          </View>
+          {/* 評分 */}
+          <RelicScore score={score} />
         </View>
+        {/* 副詞條 */}
         <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
           {userRelicData.sub_affix.map((sub: any) => (
             <View

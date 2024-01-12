@@ -28,10 +28,6 @@ const queryClient = new QueryClient();
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  
-  // 
-  getRelicScore();
-
   const [initialRouteName, setInitialRouteName] = useState(SCREENS.HomePage.id);
 
   useEffect(() => {

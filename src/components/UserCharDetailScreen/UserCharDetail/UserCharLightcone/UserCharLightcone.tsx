@@ -39,7 +39,7 @@ export default function UserCharLightcone() {
     rotate: displayMode === "normal" ? "5deg" : "0deg",
   });
   const lightconeImageAnimationScale = useSpring({
-    scale: displayMode === "normal" ? 1 : 1.35,
+    scale: displayMode === "normal" ? 1 : 1.25,
   });
 
   return (

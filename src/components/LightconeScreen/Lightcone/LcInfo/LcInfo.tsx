@@ -18,7 +18,7 @@ export default function LcInfo() {
     >
       <View style={{ gap: 12 }}>
         <Text
-          className="text-[32px] font-[HY65] text-white"
+          className="text-[32px] font-[HY65] text-white leading-9"
           style={globalStyles.textShadow}
         >
           {lcData?.name}
