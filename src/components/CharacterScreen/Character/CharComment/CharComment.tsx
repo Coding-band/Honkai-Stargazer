@@ -2,10 +2,8 @@ import { KeyboardAvoidingView, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Image } from "expo-image";
 import CommentBox from "./CommentBox/CommentBox";
-import db from "../../../../firebase/db";
-import CharacterComments from "../../../../firebase/models/CharacterComments";
 import CommentItem from "./CommentItem/CommentItem";
-import useCharComments from "../../../../firebase/hooks/useCharComments";
+import useCharComments from "../../../../firebase/hooks/CharComments/useCharComments";
 import CommentInput from "./CommentInput/CommentInput";
 import useCharId from "../../../../context/CharacterData/hooks/useCharId";
 import { findKey } from "lodash";
@@ -18,13 +16,17 @@ type Props = {
 export default function CharComment(props: Props) {
   const charId = useCharId();
   const officalId = findKey(officalCharId, (v) => v === charId);
-
   const { data: charComments } = useCharComments(officalId || "");
 
+  const [input, setInput] = useState("");
+
   return (
-    <CommentBox containerRef={props.containerRef} bottom={<CommentInput />}>
+    <CommentBox
+      containerRef={props.containerRef}
+      bottom={<CommentInput value={input} onChange={setInput} />}
+    >
       {charComments?.comments?.map((c, i) => (
-        <CommentItem key={i} {...c} />
+        <CommentItem key={i} {...c} input={input} setInput={setInput} />
       ))}
     </CommentBox>
   );

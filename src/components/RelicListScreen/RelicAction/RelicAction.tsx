@@ -19,7 +19,7 @@ export default function RelicAction() {
     <KeyboardAvoidingView
       behavior="position"
       keyboardVerticalOffset={25}
-      className="w-full h-[46px] absolute bottom-0 mb-[37px] z-50"
+      className="w-full h-[46px] absolute bottom-12 z-50"
       contentContainerStyle={{
         marginRight: isSearching ? 0 : 30,
         justifyContent: "flex-end",

@@ -15,5 +15,6 @@ export default interface Users {
   char_num: number;
   achievement_num: number;
   chest_num: number;
+  show_info: boolean;
   last_login: FirebaseFirestoreTypes.Timestamp;
 }

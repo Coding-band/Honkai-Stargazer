@@ -22,7 +22,7 @@ export default function ListItem({
               alignItems: "center",
             }}
           >
-            <Text className="text-[14px] font-[HY55]">{children}</Text>
+            <Text className="text-[14px] font-[HY55] leading-5">{children}</Text>
           </View>
         </View>
       </Shadow>

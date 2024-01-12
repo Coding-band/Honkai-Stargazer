@@ -5,13 +5,19 @@ import useProfileHsrInGameInfo from "../../../../context/UserCharDetailData/hook
 import AttributeImage from "../../../../../assets/images/images_map/attributeImage";
 import { LOCALES } from "../../../../../locales";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
+import useLocalState from "../../../../hooks/useLocalState";
+import useProfileCharFullData from "../../../../context/UserCharDetailData/hooks/useProfileCharFullData";
 
 export default function UserCharAttribute() {
   const { language } = useAppLanguage();
 
-  const [displayMode, setDisplayMode] = useState<"light" | "normal">("light");
+  const [displayMode, setDisplayMode] = useLocalState<"light" | "normal">(
+    "user-char-detail-page-attr-display-mode",
+    "light"
+  );
 
   const { inGameCharData } = useProfileHsrInGameInfo();
+  const charFullData = useProfileCharFullData();
 
   const attributes = [
     {
@@ -23,13 +29,14 @@ export default function UserCharAttribute() {
       addi: inGameCharData?.additions.filter(
         (attr: any) => attr.field === "hp"
       )[0]?.display,
-      value: (
+      value: Math.floor(
         (inGameCharData?.attributes.filter(
           (attr: any) => attr.field === "hp"
         )[0]?.value || 0) +
-        (inGameCharData?.additions.filter((attr: any) => attr.field === "hp")[0]
-          ?.value || 0)
-      ).toFixed(),
+          (inGameCharData?.additions.filter(
+            (attr: any) => attr.field === "hp"
+          )[0]?.value || 0)
+      ),
     },
     {
       key: "atk",
@@ -40,14 +47,14 @@ export default function UserCharAttribute() {
       addi: inGameCharData?.additions.filter(
         (attr: any) => attr.field === "atk"
       )[0]?.display,
-      value: (
+      value: Math.floor(
         (inGameCharData?.attributes.filter(
           (attr: any) => attr.field === "atk"
         )[0]?.value || 0) +
-        (inGameCharData?.additions.filter(
-          (attr: any) => attr.field === "atk"
-        )[0]?.value || 0)
-      ).toFixed(),
+          (inGameCharData?.additions.filter(
+            (attr: any) => attr.field === "atk"
+          )[0]?.value || 0)
+      ),
     },
     {
       key: "def",
@@ -58,14 +65,14 @@ export default function UserCharAttribute() {
       addi: inGameCharData?.additions.filter(
         (attr: any) => attr.field === "hp"
       )[0]?.display,
-      value: (
+      value: Math.floor(
         (inGameCharData?.attributes.filter(
           (attr: any) => attr.field === "def"
         )[0]?.value || 0) +
-        (inGameCharData?.additions.filter(
-          (attr: any) => attr.field === "def"
-        )[0]?.value || 0)
-      ).toFixed(),
+          (inGameCharData?.additions.filter(
+            (attr: any) => attr.field === "def"
+          )[0]?.value || 0)
+      ),
     },
     {
       key: "spd",
@@ -76,20 +83,22 @@ export default function UserCharAttribute() {
       addi: inGameCharData?.additions.filter(
         (attr: any) => attr.field === "spd"
       )[0]?.display,
-      value: (
+      value: Math.floor(
         (inGameCharData?.attributes.filter(
           (attr: any) => attr.field === "spd"
         )[0]?.value || 0) +
-        (inGameCharData?.additions.filter(
-          (attr: any) => attr.field === "spd"
-        )[0]?.value || 0)
-      ).toFixed(),
+          (inGameCharData?.additions.filter(
+            (attr: any) => attr.field === "spd"
+          )[0]?.value || 0)
+      ),
     },
-    // {
-    //   key: "energy",
-    //   icon: AttributeImage.energy,
-    //   value: charFullData?.spRequirement,
-    // },
+    {
+      key: "energy",
+      icon: AttributeImage.energy,
+      attr: charFullData?.spRequirement,
+      addi: null,
+      value: charFullData?.spRequirement,
+    },
     {
       key: "crit_rate",
       icon: AttributeImage.crit_rate,
@@ -100,15 +109,17 @@ export default function UserCharAttribute() {
         (attr: any) => attr.field === "crit_rate"
       )[0]?.display,
       value:
-        (
+        Math.floor(
           ((inGameCharData?.attributes.filter(
             (attr: any) => attr.field === "crit_rate"
           )[0]?.value || 0) +
             (inGameCharData?.additions.filter(
               (attr: any) => attr.field === "crit_rate"
             )[0]?.value || 0)) *
-          100
-        ).toFixed(1) + "%",
+            1000
+        ) /
+          10 +
+        "%",
     },
     {
       key: "crit_dmg",
@@ -120,15 +131,17 @@ export default function UserCharAttribute() {
         (attr: any) => attr.field === "crit_dmg"
       )[0]?.display,
       value:
-        (
+        Math.floor(
           ((inGameCharData?.attributes.filter(
             (attr: any) => attr.field === "crit_dmg"
           )[0]?.value || 0) +
             (inGameCharData?.additions.filter(
               (attr: any) => attr.field === "crit_dmg"
             )[0]?.value || 0)) *
-          100
-        ).toFixed(1) + "%",
+            1000
+        ) /
+          10 +
+        "%",
     },
     {
       key: "break_dmg",
@@ -178,9 +191,18 @@ export default function UserCharAttribute() {
       addi: inGameCharData?.additions.filter(
         (attr: any) => attr.field === "heal_rate"
       )[0]?.display,
-      value: inGameCharData?.properties.filter(
-        (attr: any) => attr.field === "heal_rate"
-      )[0]?.display,
+      value:
+        Math.floor(
+          ((inGameCharData?.attributes.filter(
+            (attr: any) => attr.field === "heal_rate"
+          )[0]?.value || 0) +
+            (inGameCharData?.additions.filter(
+              (attr: any) => attr.field === "heal_rate"
+            )[0]?.value || 0)) *
+            1000
+        ) /
+          10 +
+        "%",
     },
 
     {
@@ -295,7 +317,7 @@ export default function UserCharAttribute() {
         >
           {attributes.map(
             (attr) =>
-              attr.value && (
+              (attr.attr || attr.addi) && (
                 <View
                   style={{
                     flexDirection: "row",
@@ -320,7 +342,7 @@ export default function UserCharAttribute() {
         >
           {attributes.map(
             (attr) =>
-              attr.value && (
+              (attr.attr || attr.addi) && (
                 <View
                   className="w-[320px]"
                   style={{

@@ -9,6 +9,7 @@ import { ShareNetwork } from "phosphor-react-native";
 import { Share } from "react-native";
 
 type Props = {
+  time: number;
   code: string;
 };
 
@@ -61,11 +62,11 @@ export default function CodeItem(props: Props) {
             }}
           >
             {/* 日期 / 已複製 */}
-            <Text className="text-text font-[HY65]">
-              {hasCopy ? LOCALES[language].HasCopy : "這些是測試用兌換碼"}
+            <Text className="text-text font-[HY65] leading-5">
+              {hasCopy ? LOCALES[language].HasCopy : props.time}
             </Text>
             {/* 國際服 / 中國服 */}
-            <Text className="text-text font-[HY65]">INT</Text>
+            <Text className="text-text font-[HY65]">ALL</Text>
           </LinearGradient>
           <View
             className="px-2.5"

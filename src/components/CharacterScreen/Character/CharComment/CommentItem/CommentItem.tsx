@@ -1,16 +1,13 @@
 import {
   View,
   Text,
-  TouchableOpacity,
   TouchableNativeFeedback,
+  TouchableOpacity,
   TouchableWithoutFeedback,
 } from "react-native";
 import React, { useEffect, useState } from "react";
-import db from "../../../../../firebase/db";
-import Users from "../../../../../firebase/models/Users";
-import { Image } from "expo-image";
-import useUser from "../../../../../firebase/hooks/useUser";
-import useUserCharacters from "../../../../../firebase/hooks/useUserCharacters";
+import useUser from "../../../../../firebase/hooks/User/useUser";
+import useUserCharacters from "../../../../../firebase/hooks/UserCharacters/useUserCharacters";
 import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
 import officalCharId from "../../../../../../map/character_offical_id_map";
 import { findKey } from "lodash";
@@ -24,10 +21,14 @@ export default function CommentItem({
   user_id,
   content,
   mentions,
+  input,
+  setInput,
 }: {
   user_id: string;
   content: string;
   mentions: string[];
+  input: string;
+  setInput: (v: string) => void;
 }) {
   const { data: user } = useUser(user_id);
   const { data: userCharsInfo } = useUserCharacters(user_id);
@@ -69,6 +70,9 @@ export default function CommentItem({
   }, [content]); // 依赖项列表，当这些依赖项更改时，useEffect 会重新执行
 
   const handleCopy = useCopyToClipboard();
+  const handleCopyTag = () => {
+    setInput(input + ` @${username}`.trim() + " ");
+  };
 
   return (
     <TouchableNativeFeedback
@@ -81,9 +85,11 @@ export default function CommentItem({
         <CommentUserAvatar user={user} />
         <View style={{ gap: 2, flex: 1 }}>
           <View style={{ flexDirection: "row", gap: 10, alignItems: "center" }}>
-            <Text className="text-text text-[16px] font-[HY65]">
-              {username}
-            </Text>
+            <TouchableWithoutFeedback onPress={handleCopyTag}>
+              <Text className="text-text text-[16px] font-[HY65]">
+                {username}
+              </Text>
+            </TouchableWithoutFeedback>
             {userHasChar && (
               <View
                 className="h-4 px-[5px] bg-[#F3F9FF] rounded-[34px]"

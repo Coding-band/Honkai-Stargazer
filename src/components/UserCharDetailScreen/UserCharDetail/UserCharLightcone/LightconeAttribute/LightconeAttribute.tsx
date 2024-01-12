@@ -19,32 +19,26 @@ export default function LightconeAttribute({
     {
       key: "hp",
       icon: AttributeImage.hp,
-      value: (
+      value: Math.floor(
         lcInGameData.attributes.filter((attr: any) => attr.field === "hp")[0]
-          ?.value +
-          lcInGameData.attributes.filter((attr: any) => attr.field === "hp")[0]
-            ?.value || 0
-      ).toFixed(),
+          ?.value
+      ),
     },
     {
       key: "atk",
       icon: AttributeImage.atk,
-      value: (
+      value: Math.floor(
         lcInGameData.attributes.filter((attr: any) => attr.field === "atk")[0]
-          ?.value +
-          lcInGameData.attributes.filter((attr: any) => attr.field === "atk")[0]
-            ?.value || 0
-      ).toFixed(),
+          ?.value
+      ),
     },
     {
       key: "def",
       icon: AttributeImage.def,
-      value: (
+      value: Math.floor(
         lcInGameData.attributes.filter((attr: any) => attr.field === "def")[0]
-          ?.value +
-          lcInGameData.attributes.filter((attr: any) => attr.field === "def")[0]
-            ?.value || 0
-      ).toFixed(),
+          ?.value
+      ),
     },
   ];
 

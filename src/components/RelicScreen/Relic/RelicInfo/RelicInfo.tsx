@@ -18,7 +18,7 @@ export default function RelicInfo() {
     >
       <View style={{ gap: 12 }}>
         <Text
-          className="text-[32px] font-[HY65] text-white font-bold"
+          className="text-[32px] font-[HY65] text-white"
           style={globalStyles.textShadow}
         >
           {relicData?.name}

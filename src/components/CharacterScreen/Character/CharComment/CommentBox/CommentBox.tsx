@@ -8,7 +8,7 @@ import Animated, {
 import { Dimensions } from "react-native";
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
 import { Image } from "expo-image";
-import useCharComments from "../../../../../firebase/hooks/useCharComments";
+import useCharComments from "../../../../../firebase/hooks/CharComments/useCharComments";
 import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
 import { findKey } from "lodash";
 import officalCharId from "../../../../../../map/character_offical_id_map";
@@ -114,7 +114,7 @@ export default function CommentBox(props: Props) {
       </Animated.ScrollView>
       {translation.value.y < 0 && (
         <KeyboardAvoidingView
-          className="absolute bottom-0 w-full"
+          className="absolute bottom-4 w-full"
           behavior="padding"
           keyboardVerticalOffset={114}
         >

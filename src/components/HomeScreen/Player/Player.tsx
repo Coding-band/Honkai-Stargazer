@@ -9,8 +9,8 @@ import PlayerCharacter from "./PlayerCharacter/PlayerCharacter";
 import useHsrPlayerData from "../../../hooks/hoyolab/useHsrPlayerData";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
-import useIsAdmin from "../../../firebase/hooks/useIsAdmin";
-import useIsTester from "../../../firebase/hooks/useIsTester";
+import useIsAdmin from "../../../firebase/hooks/Role/useIsAdmin";
+import useIsTester from "../../../firebase/hooks/Role/useIsTester";
 
 export default function Player() {
   const { language } = useAppLanguage();

@@ -37,7 +37,7 @@ export default function RelicItem({ userRelicData }: { userRelicData: any }) {
             // @ts-ignore
             source={Relic[relicSetId]?.["icon" + relicCount]}
           />
-          <View className="absolute bottom-[-8px] bg-[#00000040] rounded-[15px] px-1.5 py-0.5">
+          <View className="absolute bottom-[-8px] bg-[#00000040] rounded-[15px] px-1.5 py-0.5 z-50">
             <Text className="text-text font-[HY65] text-[8px] text-center">
               {userRelicData.level}
             </Text>

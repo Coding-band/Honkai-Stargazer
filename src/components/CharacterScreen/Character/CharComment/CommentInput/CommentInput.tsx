@@ -1,20 +1,14 @@
-import {
-  Keyboard,
-  TextInput,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-  View,
-} from "react-native";
-import React, { useState, useRef } from "react";
+import { TextInput, View } from "react-native";
+import React, { useState, useEffect } from "react";
 import { cn } from "../../../../../utils/css/cn";
 import db from "../../../../../firebase/db";
 import firestore from "@react-native-firebase/firestore";
 import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
 import { findKey } from "lodash";
 import officalCharId from "../../../../../../map/character_offical_id_map";
-import useCharComments from "../../../../../firebase/hooks/useCharComments";
+import useCharComments from "../../../../../firebase/hooks/CharComments/useCharComments";
 import BlurView from "../../../../global/BlurView/BlurView";
-import useFirebaseUid from "../../../../../firebase/hooks/useFirebaseUid";
+import useMyFirebaseUid from "../../../../../firebase/hooks/FirebaseUid/useMyFirebaseUid";
 import Toast from "../../../../../utils/toast/Toast";
 import { extractMentionsMatch } from "./utils/extractMetions";
 import pushExpoNoti from "../../../../../notifications/utils/pushExpoNoti";
@@ -23,14 +17,29 @@ import useCharData from "../../../../../context/CharacterData/hooks/useCharData"
 import { pushExpoNotiType } from "../../../../../notifications/constant/pushExpoNotiType";
 import CommentToolBox from "./CommentAddPhoto/CommentAddPhoto";
 
-export default function CommentInput() {
-  const uid = useFirebaseUid();
+export default function CommentInput({
+  value,
+  onChange,
+}: {
+  value: string;
+  onChange: (value: string) => void;
+}) {
+  const uid = useMyFirebaseUid();
   const playerName = useHsrPlayerName();
   const charId = useCharId();
   const charName = useCharData().charFullData.name;
   const officalId = findKey(officalCharId, (v) => v === charId);
 
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(value || "");
+
+  useEffect(() => {
+    setInput(value);
+  }, [value]);
+
+  useEffect(() => {
+    onChange(input);
+  }, [input]);
+
   const [extractMetionInput, setExtractMetionInput] = useState<string[]>([]);
   const { refetch } = useCharComments(officalId || "");
 

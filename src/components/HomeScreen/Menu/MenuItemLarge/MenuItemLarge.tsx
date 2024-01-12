@@ -68,7 +68,7 @@ export default function MenuItemLarge({
                     {Icon && <Icon weight="fill" size={32} color="white" />}
                     <Text
                       style={{ fontFamily: "HY65" }}
-                      className="text-[13px] text-text2 text-center"
+                      className="text-[13px] text-text2 text-center leading-5"
                     >
                       {children}
                     </Text>
@@ -76,9 +76,9 @@ export default function MenuItemLarge({
                   {/* right */}
                   {title && (
                     <View
-                      className="translate-x-[-8px] "
+                      className="absolute right-2"
                       style={{
-                        width: width - (width - 16) / 2,
+                        minWidth: (width - 13) / 2,
                         alignItems: "center",
                         justifyContent: "space-between",
                         gap: 6,

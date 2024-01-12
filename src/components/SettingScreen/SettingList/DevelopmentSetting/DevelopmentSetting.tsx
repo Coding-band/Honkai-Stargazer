@@ -5,7 +5,7 @@ import { LOCALES } from "../../../../../locales";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { VERSION } from "../../../../../app.config";
 import * as Device from "expo-device";
-import useIsAdmin from "../../../../firebase/hooks/useIsAdmin";
+import useIsAdmin from "../../../../firebase/hooks/Role/useIsAdmin";
 import Noti from "../../../../notifications/utils/Noti";
 
 export default function DevelopmentSetting() {

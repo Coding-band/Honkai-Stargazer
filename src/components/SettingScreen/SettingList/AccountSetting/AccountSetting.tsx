@@ -26,6 +26,15 @@ export default function AccountSetting() {
           Toast.StillDevelopingToast();
         }}
       />
+      <SettingItem
+        type="list"
+        title={"個人頁面展示"}
+        list={[
+          { value: "show", name: "顯示" },
+          { value: "hide", name: "隱藏" },
+        ]}
+        value={"show"}
+      />
     </SettingGroup>
   );
 }

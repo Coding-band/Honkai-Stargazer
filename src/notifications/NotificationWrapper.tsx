@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import * as Notifications from "expo-notifications";
 import * as Device from "expo-device";
 import Constants from "expo-constants";
-import useFirebaseUid from "../firebase/hooks/useFirebaseUid";
+import useMyFirebaseUid from "../firebase/hooks/FirebaseUid/useMyFirebaseUid";
 import db from "../firebase/db";
 import UserToken from "../firebase/models/UserTokens";
 import { pushExpoNotiType } from "./constant/pushExpoNotiType";
@@ -34,7 +34,7 @@ export default function NotificationWrapper({
   }, []);
 
   //* sync to firebase
-  const uid = useFirebaseUid();
+  const uid = useMyFirebaseUid();
   // 建立或更新用戶數據 (User)
   useEffect(() => {
     async function createOrUpdateUser() {

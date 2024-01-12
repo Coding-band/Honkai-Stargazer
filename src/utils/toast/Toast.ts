@@ -1,8 +1,8 @@
 import T from "react-native-root-toast";
 
-export default function Toast(message: string) {
+export default function Toast(message: string, second: number = 2) {
   return T.show(message, {
-    duration: 2000,
+    duration: second * 1000,
     position: T.positions.CENTER,
     shadow: true,
     animation: true,
@@ -15,6 +15,7 @@ export default function Toast(message: string) {
       backgroundColor: "#F3F9FF",
     },
     textStyle: {
+      lineHeight: 20,
       fontFamily: "HY65",
       color: "#222",
     },

@@ -49,7 +49,11 @@ export default function Button({
               alignItems: "center",
             }}
           >
-            {children}
+            {typeof children === "string" ? (
+              <Text className="text-[#222] font-[HY65]">{children}</Text>
+            ) : (
+              children
+            )}
           </View>
         </View>
       </Shadow>
@@ -73,7 +77,11 @@ export default function Button({
             alignItems: "center",
           }}
         >
-          {children}
+          {typeof children === "string" ? (
+            <Text className="text-[#222] font-[HY65]">{children}</Text>
+          ) : (
+            children
+          )}
         </View>
       </View>
     )
@@ -100,7 +108,11 @@ export default function Button({
                 alignItems: "center",
               }}
             >
-              {children}
+              {typeof children === "string" ? (
+                <Text className="text-[#222] font-[HY65]">{children}</Text>
+              ) : (
+                children
+              )}
             </View>
           </View>
         </Shadow>
@@ -124,7 +136,11 @@ export default function Button({
               alignItems: "center",
             }}
           >
-            {children}
+            {typeof children === "string" ? (
+              <Text className="text-[#222] font-[HY65]">{children}</Text>
+            ) : (
+              children
+            )}
           </View>
         </View>
       )}

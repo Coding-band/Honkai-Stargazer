@@ -118,7 +118,7 @@ export default function UserCharDetail() {
           <UserCharLightcone />
           <UserCharRelics />
           {/* 由 Stargazer 製作 */}
-          <View className="mb-12 mt-12">
+          <View className="mb-16 mt-0">
             {isOwner && <ProducedByStargazer />}
           </View>
         </View>

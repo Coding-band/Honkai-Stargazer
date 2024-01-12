@@ -19,7 +19,7 @@ export default React.memo(function CharInfo() {
     >
       <View style={{ gap: 12 }}>
         <Text
-          className="text-[32px] font-[HY65] text-white font-bold"
+          className="text-[32px] font-[HY65] text-white"
           style={globalStyles.textShadow}
         >
           {charData?.name}

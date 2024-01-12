@@ -40,7 +40,9 @@ export default function SettingItem(props: Props) {
       style={{ flexDirection: "row", zIndex }}
     >
       <View className="flex-1 h-full px-3" style={{ justifyContent: "center" }}>
-        <Text className="text-[14px] font-[HY65]">{props.title}</Text>
+        <Text className="text-[14px] font-[HY65] leading-5">
+          {props.title}
+        </Text>
       </View>
       {props.type === "list" ? (
         // @ts-ignore
@@ -60,7 +62,7 @@ export default function SettingItem(props: Props) {
                 <Text className="text-[14px] font-[HY65]">
                   {
                     props.list?.filter((item) => item.value === props.value)[0]
-                      .name
+                      ?.name
                   }
                 </Text>
                 <Image
@@ -74,7 +76,7 @@ export default function SettingItem(props: Props) {
         >
           {props.list?.map((item) => (
             <Listbox.Item key={item.value} value={item.value}>
-              {item.name}
+              {item?.name}
             </Listbox.Item>
           ))}
         </Listbox>

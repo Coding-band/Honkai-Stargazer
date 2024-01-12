@@ -15,7 +15,7 @@ import useHsrFullData from "../hooks/hoyolab/useHsrFullData";
 import UserCharacters from "../firebase/models/UserCharacters";
 import useHsrCharList from "../hooks/hoyolab/useHsrCharList";
 import useMemoryOfChaos from "../hooks/hoyolab/useMemoryOfChaos";
-import useFirebaseUid from "../firebase/hooks/useFirebaseUid";
+import useMyFirebaseUid from "../firebase/hooks/FirebaseUid/useMyFirebaseUid";
 import useHsrUUID from "../hooks/hoyolab/useHsrUUID";
 import UserMemoryOfChaos from "../firebase/models/UserMemoryOfChaos";
 import firestore from "@react-native-firebase/firestore";
@@ -24,7 +24,7 @@ import BetaWidget from "../components/global/Beta/BetaWidget";
 import WallPaperForMOC from "../components/global/WallPaper/WallPaperForMOC";
 
 export default function HomeScreen() {
-  const uid = useFirebaseUid();
+  const uid = useMyFirebaseUid();
 
   const { hoyolabCookieParse } = useHoyolabCookie();
   const hsrFullData = useHsrFullData().data;
@@ -109,6 +109,7 @@ export default function HomeScreen() {
               char_num: hsrFullData.stats.avatar_num,
               achievement_num: hsrFullData.stats.achievement_num,
               chest_num: hsrFullData.stats.chest_num,
+              show_info: false,
               last_login: firestore.Timestamp.now(),
             } as Users);
           } catch (e: any) {
@@ -167,6 +168,7 @@ export default function HomeScreen() {
             star_num: moc.star_num,
             battle_num: moc.battle_num,
             max_floor_id: moc.max_floor_id,
+            max_floor: moc.all_floor_detail.length,
             all_floor_detail: moc.all_floor_detail.map((f: any) => ({
               floor_id: f.maze_id,
               round_num: f.round_num,

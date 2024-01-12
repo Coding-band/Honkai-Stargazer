@@ -17,6 +17,7 @@ export default interface UserMemoryOfChaos {
     star_num: number;
     battle_num: number;
     max_floor_id: number;
+    max_floor: number;
     all_floor_detail: {
       floor_id: number;
       round_num: number;

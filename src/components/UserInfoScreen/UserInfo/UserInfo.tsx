@@ -1,54 +1,50 @@
-import {
-  View,
-  Text,
-  Dimensions,
-  ActivityIndicator,
-  ScrollView,
-} from "react-native";
+import { View, Text, Dimensions, ScrollView } from "react-native";
 import React from "react";
 import Header2 from "../../global/Header2/Header2";
 import { TouchableOpacity } from "react-native";
 import { Image } from "expo-image";
-import useHsrFullData from "../../../hooks/hoyolab/useHsrFullData";
 import useHsrInGameInfo from "../../../hooks/mihomo/useHsrInGameInfo";
 import useHsrUUID from "../../../hooks/hoyolab/useHsrUUID";
-import useHsrServerChosen from "../../../redux/hsrServerChosen/useHsrServerChosen";
-import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
-import { LOCALES } from "../../../../locales";
 import UserInfoCharacters from "./UserInfoCharacters/UserInfoCharacters";
-import useMemoryOfChaos from "../../../hooks/hoyolab/useMemoryOfChaos";
 import Toast from "../../../utils/toast/Toast";
 import UserAvatar from "../../global/UserAvatar/UserAvatar";
 import AvatarIcon from "../../../../assets/images/images_map/avatarIcon";
-import getServerFromUUID from "../../../utils/hoyolab/servers/getServerFromUUID";
-import { animated, useSpring } from "@react-spring/native";
+import { animated } from "@react-spring/native";
 import UUIDBox from "../../global/UUIDBox/UUIDBox";
 import Loading from "../../global/Loading/Loading";
 import ProducedByStargazer from "../../global/ProducedByStargazer/ProducedByStargazer";
 import NoPublicData from "./NoPublicData/NoPublicData";
+import useUserByUUID from "../../../firebase/hooks/User/useUserByUUID";
+import useUserMocByUUID from "../../../firebase/hooks/UserMoc/useUserMocByUUID";
 
 type Props = {
   uuid: string;
 };
 
 export default function UserInfo(props: Props) {
-  const { language: appLangauge } = useAppLanguage();
-
+  const profileUUID = props.uuid;
   const hsrUUID = useHsrUUID();
-  const { data: hsrFullData } = useHsrFullData();
-  const { data: hsrInGameInfo } = useHsrInGameInfo(props.uuid);
-  const { data: moc } = useMemoryOfChaos();
+
+  const isOwner = profileUUID === hsrUUID;
+
+  // 資料來自崩鐵
+  const { data: hsrInGameInfo } = useHsrInGameInfo(profileUUID);
+  // 資料來自 firebase 資料庫
+  const { data: userData } = useUserByUUID(profileUUID);
+  const { data: userMocData } = useUserMocByUUID(profileUUID);
+
+  const isShowInfo = userData?.show_info;
+
   const playerAvatar =
     // @ts-ignore
     AvatarIcon[hsrInGameInfo?.player?.avatar?.icon?.match(/\d+/g).join("")];
-
-  const isOwner = props.uuid === hsrUUID;
+  const latestUserMocData = userMocData?.[Object.keys(userMocData).pop() || ""];
 
   return (
     <View className="z-30">
       <Header2 rightBtn={isOwner ? <ShareBtn /> : null} />
       <ScrollView style={{ height: Dimensions.get("screen").height }}>
-        {hsrInGameInfo ? (
+        {hsrInGameInfo && userData && userMocData ? (
           <AnimatedView
             className="mt-12 px-4"
             style={{
@@ -89,36 +85,38 @@ export default function UserInfo(props: Props) {
                 value={hsrInGameInfo?.player?.world_level}
               />
             </View>
-            {/* 擁有角色 */}
-            <UserInfoCharacters uuid={props.uuid} />
-            {/* 其他資訊 */}
-            {isOwner ? (
-              <View
-                className="w-full px-3"
-                style={{
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                }}
-              >
-                <InfoItem
-                  title={"活躍天數"}
-                  value={hsrFullData?.stats.active_days}
-                />
-                <InfoItem
-                  title={"達成成就"}
-                  value={hsrInGameInfo?.player?.space_info?.achievement_count}
-                />
-                <InfoItem
-                  title={"戰利品"}
-                  value={hsrFullData?.stats?.chest_num}
-                />
-                <InfoItem title={"忘卻之庭"} value={`${moc?.battle_num}/12`} />
-              </View>
-            ) : (
-              <NoPublicData />
-            )}
+            <View className="w-full" style={{ alignItems: "center", gap: 8 }}>
+              {/* 擁有角色 */}
+              <UserInfoCharacters uuid={props.uuid} />
+              {/* 其他資訊 */}
+              {isOwner || isShowInfo ? (
+                <View
+                  className="w-full px-3"
+                  style={{
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <InfoItem
+                    title={"活躍天數"}
+                    value={userData?.active_days || 0}
+                  />
+                  <InfoItem
+                    title={"達成成就"}
+                    value={hsrInGameInfo?.player?.space_info?.achievement_count}
+                  />
+                  <InfoItem title={"戰利品"} value={userData?.chest_num} />
+                  <InfoItem
+                    title={"忘卻之庭"}
+                    value={`${latestUserMocData?.max_floor || 0}/12`}
+                  />
+                </View>
+              ) : (
+                <NoPublicData />
+              )}
+            </View>
             {/* 由 Stargazer 製作 */}
-            <View className="mb-12 mt-12">
+            <View className="mb-16 mt-0">
               {isOwner && <ProducedByStargazer />}
             </View>
           </AnimatedView>
@@ -130,10 +128,16 @@ export default function UserInfo(props: Props) {
   );
 }
 
-const InfoItem = ({ title, value }: { title: string; value: string }) => (
+const InfoItem = ({
+  title,
+  value,
+}: {
+  title: string;
+  value: string | number | undefined;
+}) => (
   <View style={{ alignItems: "center" }}>
     <Text className="text-text text-[24px] font-[HY65]">{value}</Text>
-    <Text className="text-text text-[12px] font-[HY65]">{title}</Text>
+    <Text className="text-text text-[12px] font-[HY65] leading-5">{title}</Text>
   </View>
 );
 
