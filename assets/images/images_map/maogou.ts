@@ -4,7 +4,7 @@
  * uiDisplay : 展示在物品 不是固定大小 !
  */
 
-const maogou = {
+const MaoGou = {
   maogou_body1: {
     combine: require("../../images/maogou/maogou_body1.webp"),
     uiDisplay: require("../../images/maogou/maogou_body1_ui.webp"),
@@ -186,3 +186,5 @@ const maogou = {
     uiDisplay: require("../../images/maogou/maogou_tail5_ui.webp"),
   },
 };
+
+export default MaoGou;
