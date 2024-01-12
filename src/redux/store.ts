@@ -22,6 +22,7 @@ import { characterSearch } from "./characterSearch/characterSearch.reducer";
 import { characterIsSearching } from "./characterIsSearching/characterIsSearching.reducer";
 import { lightconeSearch } from "./lightconeSearch/lightconeSearch.reducer";
 import { lightconeIsSearching } from "./lightconeIsSearching/lightconeIsSearching.reducer";
+import { doUseCustomFont } from "./doUseCustomFont/doUseCustomFont.reducer";
 
 const reducer = combineReducers({
   hsrServerChosen,
@@ -40,6 +41,7 @@ const reducer = combineReducers({
   characterIsSearching,
   lightconeSearch,
   lightconeIsSearching,
+  doUseCustomFont,
 });
 
 // persist
@@ -55,6 +57,7 @@ const persistConfig = {
     // "lightconeSorting",
     // "lightconeSortingReverse",
     "wallPaper",
+    "doUseCustomFont",
   ],
 };
 

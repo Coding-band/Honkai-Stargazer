@@ -8,6 +8,7 @@ import { SCREENS } from "../../../../constant/screens";
 import useWallPaper from "../../../../redux/wallPaper/useWallPaper";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
+import useDoUseCustomFont from "../../../../redux/doUseCustomFont/useDoUseCustomFont";
 
 export default function PersonalSetting() {
   const navigation = useNavigation();
@@ -17,8 +18,8 @@ export default function PersonalSetting() {
     { name: LOCALES[language].SwitchOn, value: true },
     { name: LOCALES[language].SwitchOff, value: false },
   ];
+  const { doUseCustomFont, setDoUseCustomFont } = useDoUseCustomFont();
 
-  const [font, setFont] = useLocalState("use-custom-font", fonts[0].value);
   const { wallPaper } = useWallPaper();
 
   return (
@@ -27,8 +28,8 @@ export default function PersonalSetting() {
         type="list"
         title={LOCALES[language].UseHSRFont}
         list={fonts}
-        value={font}
-        onChange={setFont}
+        value={doUseCustomFont}
+        onChange={setDoUseCustomFont}
       /> */}
       <SettingItem
         type="navigation"

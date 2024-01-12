@@ -65,7 +65,7 @@ export default function UserInfo(props: Props) {
                 }}
               />
               {/* 玩家名 */}
-              <Text className="text-text text-[24px] font-[HY65]">
+              <Text className="text-text text-[24px] font-[HY65] leading-8">
                 {hsrInGameInfo?.player?.nickname}
               </Text>
               {/* UUID & 伺服器 */}

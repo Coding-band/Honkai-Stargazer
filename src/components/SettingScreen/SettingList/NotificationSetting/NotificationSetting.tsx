@@ -27,7 +27,7 @@ export default function NotificationSetting() {
       />
       <SettingItem
         type="navigation"
-        title={LOCALES[language].Stamina}
+        title={LOCALES[language].NotiExpedition}
         content={LOCALES[language].SwitchOff}
         onNavigate={() => {
           Toast.StillDevelopingToast();

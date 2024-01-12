@@ -72,7 +72,7 @@ export default function UserCharDetail() {
       <View className="mt-12 z-40" style={{ alignItems: "center", gap: 4 }}>
         {/* 用戶名 */}
         <Text
-          className="text-[#FFFFFF] font-[HY65] text-[16px]"
+          className="text-[#FFFFFF] font-[HY65] text-[16px] leading-5"
           style={globalStyles.textShadow}
         >
           {inGameInfo?.player?.nickname}
@@ -100,7 +100,7 @@ export default function UserCharDetail() {
             <View style={{ alignItems: "center", gap: 4 }}>
               {/* 角色名 */}
               <Text
-                className="text-[#FFFFFF] font-[HY65] text-[32px]"
+                className="text-[#FFFFFF] font-[HY65] text-[32px] leading-10"
                 style={globalStyles.textShadow}
               >
                 {charFullData.name}

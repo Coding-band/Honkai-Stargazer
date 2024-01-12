@@ -18,6 +18,7 @@ import useUserCharactersByUUID from "../../../../firebase/hooks/UserCharacters/u
 import Toast from "../../../../utils/toast/Toast";
 import useUser from "../../../../firebase/hooks/User/useUser";
 import NoPublicData from "../NoPublicData/NoPublicData";
+import useUserByUUID from "../../../../firebase/hooks/User/useUserByUUID";
 
 type Props = {
   uuid: string;
@@ -31,7 +32,7 @@ export default function UserInfoCharacters(props: Props) {
   const profileUUID = props.uuid;
 
   const isOwner = profileUUID === hsrUUID;
-  const isShowInfo = useUser().data?.show_info;
+  const isShowInfo = useUserByUUID(profileUUID).data?.show_info;
 
   const { data: hsrInGameInfo } = useHsrInGameInfo(props.uuid);
   const userCharList = useUserCharactersByUUID(profileUUID).data?.characters;
@@ -83,7 +84,7 @@ export default function UserInfoCharacters(props: Props) {
         activeOpacity={0.65}
         onPress={() => {
           Toast(
-            "為了保障安全性和用戶權益，我們會通過用戶的設備（客戶端），而不是通過伺服器，來更新 hoyolab 角色數據。這意味著如果用戶一段時間不使用 Stargazer，可能會導致他們的角色數量、活躍天數、達成成就和忘卻之庭數據存在差異。請注意，這些數據僅供參考，不具有絕對準確性。",
+            "為了保障安全性和用戶權益，我們通過用戶的設備（客戶端），而非透過伺服器來更新 hoyolab 角色數據。這意味著如果用戶一段時間不使用 Stargazer，可能會導致他們的角色數量、活躍天數、達成成就和忘卻之庭數據存在差異。請注意，這些數據僅供參考，不具有絕對準確性。",
             5
           );
         }}

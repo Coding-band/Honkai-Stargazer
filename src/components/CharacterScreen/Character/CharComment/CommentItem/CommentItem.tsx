@@ -86,7 +86,7 @@ export default function CommentItem({
         <View style={{ gap: 2, flex: 1 }}>
           <View style={{ flexDirection: "row", gap: 10, alignItems: "center" }}>
             <TouchableWithoutFeedback onPress={handleCopyTag}>
-              <Text className="text-text text-[16px] font-[HY65]">
+              <Text className="text-text text-[16px] font-[HY65] leading-5">
                 {username}
               </Text>
             </TouchableWithoutFeedback>
@@ -101,7 +101,7 @@ export default function CommentItem({
               </View>
             )}
           </View>
-          <Text className="text-text2 text-[14px] font-[HY65]">
+          <Text className="text-text2 text-[14px] font-[HY65] leading-5">
             {processedContent}
           </Text>
         </View>

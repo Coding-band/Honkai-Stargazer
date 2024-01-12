@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SettingGroup from "../../SettingGroup/SettingGroup";
 import SettingItem from "../../SettingGroup/SettingItem/SettingItem";
 import Toast from "../../../../utils/toast/Toast";
@@ -6,11 +6,19 @@ import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 import formatLocale from "../../../../utils/format/formatLocale";
 import useHsrUUID from "../../../../hooks/hoyolab/useHsrUUID";
+import useIsShowUserInfo from "../../../../firebase/hooks/User/useIsShowUserInfo";
 
 export default function AccountSetting() {
   const { language } = useAppLanguage();
-
   const hsrUUID = useHsrUUID();
+
+  const { isShowInfo: isShowInfoFB, setIsShowInfo: setIsShowInfoFB } =
+    useIsShowUserInfo(hsrUUID);
+
+  const [isShowInfo, setIsShowInfo] = useState<boolean>();
+  useEffect(() => {
+    setIsShowInfo(isShowInfoFB);
+  }, [isShowInfoFB]);
 
   return (
     <SettingGroup
@@ -26,15 +34,21 @@ export default function AccountSetting() {
           Toast.StillDevelopingToast();
         }}
       />
-      <SettingItem
-        type="list"
-        title={"個人頁面展示"}
-        list={[
-          { value: "show", name: "顯示" },
-          { value: "hide", name: "隱藏" },
-        ]}
-        value={"show"}
-      />
+      {hsrUUID && (
+        <SettingItem
+          type="list"
+          title={"個人頁面展示"}
+          list={[
+            { value: true, name: "顯示" },
+            { value: false, name: "隱藏" },
+          ]}
+          value={isShowInfo}
+          onChange={(v) => {
+            setIsShowInfo(v);
+            setIsShowInfoFB(v);
+          }}
+        />
+      )}
     </SettingGroup>
   );
 }
