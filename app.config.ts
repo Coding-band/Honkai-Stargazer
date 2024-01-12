@@ -1,7 +1,7 @@
 import { ExpoConfig, ConfigContext } from "expo/config";
 
 // process.env.NODE_ENV;
-export const ENV = "development";
+export const ENV = "beta";
 
 export const APP_NAME = {
   development: "Stargazer Development Version",
@@ -11,7 +11,7 @@ export const APP_NAME = {
 
 export const VERSION = {
   development: "2.0.0",
-  beta: "2.0.13",
+  beta: "2.0.14",
   production: "2.0.0",
 };
 
