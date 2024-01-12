@@ -4,8 +4,8 @@ export const strings = {
   europe: "歐服",
   america: "美服",
   twhkmo: "台港澳服",
-  cn1: "星穹列车",
-  cn2: "无名客",
+  cn1: "星穹列車",
+  cn2: "無名客",
   Trailblazer: "開拓者",
   // path
   Abundance: "豐饒",

@@ -37,4 +37,5 @@ export const AppLanguage: AppLanguageType[] = [
   "zh_cn",
   "zh_hk",
   "vocchinese",
+  "jp",
 ];
