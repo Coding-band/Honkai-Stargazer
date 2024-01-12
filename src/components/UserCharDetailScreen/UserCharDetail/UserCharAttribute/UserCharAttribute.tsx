@@ -94,7 +94,7 @@ export default function UserCharAttribute() {
     },
     {
       key: "energy",
-      icon: AttributeImage.energy,
+      icon: AttributeImage.sp_rate,
       attr: charFullData?.spRequirement,
       addi: null,
       value: charFullData?.spRequirement,
