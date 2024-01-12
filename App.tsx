@@ -19,6 +19,7 @@ import AppLanguageProvider from "./src/language/AppLanguage/AppLanguageProvider"
 import NotificationWrapper from "./src/notifications/NotificationWrapper";
 import { pushExpoNotiType } from "./src/notifications/constant/pushExpoNotiType";
 import { SCREENS } from "./src/constant/screens";
+import getRelicScore from "./src/utils/calculator/relicScoreCalculator/getRelicScore";
 
 // import playground for testing
 // import "./playground";
@@ -27,6 +28,10 @@ const queryClient = new QueryClient();
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
+  
+  // 
+  getRelicScore();
+
   const [initialRouteName, setInitialRouteName] = useState(SCREENS.HomePage.id);
 
   useEffect(() => {

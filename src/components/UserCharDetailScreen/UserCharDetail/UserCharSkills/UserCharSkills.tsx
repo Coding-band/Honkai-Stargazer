@@ -46,7 +46,7 @@ export default function UserCharSkills() {
           className="w-9 h-9 mb-1"
           source={CharacterSkillMain[charId].skill4}
         />
-        <Text className="text-text font-[HY55]">天赋</Text>
+        <Text className="text-text font-[HY55]">天賦</Text>
         <Text className="text-text font-[HY55]">
           Lv {inGameCharData.skills[3].level}
         </Text>

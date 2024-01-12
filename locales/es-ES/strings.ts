@@ -65,7 +65,8 @@ export const strings = {
   SortByEnergy: "Energy Max",
   SortByRare: "Rarity",
   Reset: "Reset",
-  OK: "OK",
+  OK: "Agree",
+  NotOK: "Disagree",
   FilterTitle: "Filter",
   FilterFindCharacter: "Search for Characters",
   FilterFindLightcone: "Search for Lightcones",
@@ -155,5 +156,5 @@ export const strings = {
   RelicAffix_quantum_dmg: "Quantum DMG Bonus",
   RelicAffix_imaginary_dmg: "Imaginary DMG Bonus",
   // toast
-  PleaseLogin: "Please login first！"
+  PleaseLogin: "Please login first！",
 };

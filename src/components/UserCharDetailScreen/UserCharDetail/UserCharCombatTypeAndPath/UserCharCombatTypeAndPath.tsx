@@ -23,7 +23,7 @@ export default function UserCharCombatTypeAndPath() {
           source={Path[charJsonData?.path].icon}
           style={{ width: 24, height: 24 }}
         />
-        <Text className="text-text text-[16px] font-[HY65]">
+        <Text className="text-text text-[16px] font-[HY65] leading-5">
           {LOCALES[language][charJsonData?.path as PathType]}
         </Text>
       </View>
@@ -34,7 +34,7 @@ export default function UserCharCombatTypeAndPath() {
           style={{ width: 24, height: 24 }}
         />
 
-        <Text className="text-text text-[16px] font-[HY65]">
+        <Text className="text-text text-[16px] font-[HY65] leading-5">
           {LOCALES[language][charJsonData?.element as CombatTypeType]}
         </Text>
       </View>

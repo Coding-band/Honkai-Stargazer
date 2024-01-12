@@ -43,6 +43,7 @@ export const strings = {
   StaminaIsFull: "开拓力已满",
   Map: "地图",
   Login: "登入",
+  Logout: "登出",
   Expedition: "派遣",
   ExpeditionFullName: "派遣委托",
   Setting: "设置",
@@ -65,7 +66,8 @@ export const strings = {
   SortByEnergy: "能量上限",
   SortByRare: "稀有度",
   Reset: "重置",
-  OK: "确定",
+  OK: "同意",
+  NotOK: "不同意",
   FilterTitle: "筛选规则",
   FilterFindCharacter: "搜寻角色",
   FilterFindLightcone: "搜寻光锥",
@@ -155,5 +157,5 @@ export const strings = {
   RelicAffix_quantum_dmg: "量子属性伤害加成",
   RelicAffix_imaginary_dmg: "虚数属性伤害加成",
   // toast
-  PleaseLogin: "请先登入！"
+  PleaseLogin: "请先登入！",
 };

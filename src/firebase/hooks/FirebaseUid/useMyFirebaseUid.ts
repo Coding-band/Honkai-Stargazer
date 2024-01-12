@@ -8,6 +8,8 @@ const useMyFirebaseUid = () => {
     auth().onAuthStateChanged((user) => {
       if (user?.uid) {
         setUid(user?.uid);
+      } else {
+        setUid("");
       }
     });
   }, []);

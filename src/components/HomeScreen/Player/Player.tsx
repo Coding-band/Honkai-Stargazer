@@ -38,7 +38,6 @@ export default function Player() {
               <Text
                 className={cn(
                   isAdmin ? "text-[#FF5555]" : "text-white",
-
                   "text-xl font-medium font-[HY65] mb-1.5"
                 )}
               >

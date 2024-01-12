@@ -10,39 +10,47 @@ import { SCREENS } from "../../../../constant/screens";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 import Toast from "../../../../utils/toast/Toast";
+import useHsrUUID from "../../../../hooks/hoyolab/useHsrUUID";
+import auth from "@react-native-firebase/auth";
+import useHoyolabCookie from "../../../../redux/hoyolabCookie/useHoyolabCookie";
 
 export default function PlayerAction() {
   const navigation = useNavigation();
   const { language } = useAppLanguage();
 
   const [isPress, setIsPress] = useState(false);
+  const [isBindingAccount, setIsBindingAccount] = useState(false);
   const containerRef = useClickOutside<View>(() => {
     if (isPress) {
       setIsPress(false);
     }
   });
 
-  const [isBindingAccount, setIsBindingAccount] = useState(false);
+  const hsrUUID = useHsrUUID();
+  const { setHoyolabCookie } = useHoyolabCookie();
+
+  const handleCloseBindingPopUp = () => {
+    setIsPress(!isPress);
+    setIsBindingAccount(false);
+  };
+  const handleOpenBindingPopUp = () => {
+    setIsBindingAccount(true);
+  };
+  const handleLogout = () => {
+    auth().signOut();
+    setHoyolabCookie("");
+  };
 
   return (
     <View className="z-50" ref={containerRef}>
-      <MoreBtn
-        onPress={() => {
-          setIsPress(!isPress);
-          setIsBindingAccount(false);
-        }}
-      />
+      <MoreBtn onPress={handleCloseBindingPopUp} />
       <View
         style={{ display: isPress ? "flex" : "none" }}
         className="absolute right-0 top-8"
       >
         <List>
-          <ListItem
-            onPress={() => {
-              setIsBindingAccount(true);
-            }}
-          >
-            {LOCALES[language].AccountLogin}
+          <ListItem onPress={hsrUUID ? handleLogout : handleOpenBindingPopUp}>
+            {LOCALES[language][hsrUUID ? "Logout" : "AccountLogin"]}
           </ListItem>
           <ListItem
             onPress={() => {

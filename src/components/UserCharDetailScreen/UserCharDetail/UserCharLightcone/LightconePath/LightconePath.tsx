@@ -24,7 +24,7 @@ export default function LightconePath({
         source={Path[lcJsonData.path].icon}
         style={{ width: 24, height: 24 }}
       />
-      <Text className="text-text text-[16px] font-[HY65]">
+      <Text className="text-text text-[16px] font-[HY65] leading-5">
         {LOCALES[appLanguage][lcJsonData.path as PathType]}
       </Text>
     </View>

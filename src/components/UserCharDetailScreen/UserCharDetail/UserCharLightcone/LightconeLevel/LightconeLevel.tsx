@@ -13,10 +13,10 @@ export default function LightconeLevel({
 }) {
   return (
     <View
-      className="mb-3 bg-[#222222] rounded-[49px] px-[12px] py-[4px]"
+      className="mb-2 bg-[#222222] rounded-[49px] px-[12px] py-[4px]"
       style={{ alignItems: "center" }}
     >
-      <Text className="text-[12px] text-[#FFFFFF] font-[HY65]">
+      <Text className="text-[12px] text-[#FFFFFF] font-[HY65] leading-4">
         Lv {lcInGameData.level} · {lcInGameData.rank}疊影
       </Text>
     </View>

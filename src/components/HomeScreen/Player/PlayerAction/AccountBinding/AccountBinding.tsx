@@ -67,6 +67,9 @@ export default function AccountBinding() {
                   onAcceptPolicy={() => {
                     setIsAcceptBindingPolicy(true);
                   }}
+                  onRejectPolicy={() => {
+                    setIsVisable(false);
+                  }}
                 />
               )}
             </View>

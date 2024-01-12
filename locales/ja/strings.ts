@@ -43,6 +43,7 @@ export const strings = {
   StaminaIsFull: "開拓力は満タンです",
   Map: "マップ",
   Login: "ログイン",
+  Logout: "登出",
   Expedition: "依頼",
   ExpeditionFullName: "依頼",
   Setting: "設定",
@@ -65,7 +66,8 @@ export const strings = {
   SortByEnergy: "Energy Max",
   SortByRare: "Rarity",
   Reset: "リセット",
-  OK: "OK",
+  OK: "同意",
+  NotOK: "不同意",
   FilterTitle: "フィルター",
   FilterFindCharacter: "キャラクター検索",
   FilterFindLightcone: "光円錐検索",
@@ -155,5 +157,5 @@ export const strings = {
   RelicAffix_quantum_dmg: "量子属性与ダメージ",
   RelicAffix_imaginary_dmg: "虚数属性与ダメージ",
   // toast
-  PleaseLogin: "Please login first！"
+  PleaseLogin: "Please login first！",
 };
