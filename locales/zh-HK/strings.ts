@@ -1,4 +1,4 @@
-export const ZH_HK = {
+export const strings = {
   // server
   asia: "亞服",
   europe: "歐服",
@@ -15,8 +15,8 @@ export const ZH_HK = {
   Hunt: "巡獵",
   Nihility: "虛無",
   Preservation: "存謢",
-  Physical: "物理",
   // element (combat type)
+  Physical: "物理",
   Wind: "風",
   Ice: "冰",
   Fire: "火",
@@ -80,10 +80,10 @@ export const ZH_HK = {
   Eidolon: "星魂",
   AdviceCharacters: "推薦角色",
   AdviceLightcones: "推薦光錐",
+  AdviceTeams: "推薦隊伍",
   RelicStatus2Pcs: "兩件套",
   RelicStatus4Pcs: "四件套",
   AdviceRelics: "推薦遺器",
-  AdviceTeams: "推薦隊伍",
   AdviceGetPath: "獲取途徑",
   CharacterStory: "角色故事",
   MainAffix: "主詞條",
@@ -106,8 +106,8 @@ export const ZH_HK = {
   AppLanguage: "App語言",
   Customize: "個性化",
   UseHSRFont: "使用遊戲字體",
-  ChangeWallPaper: "更換桌布",
   WallPaper: "桌布",
+  ChangeWallPaper: "更換桌布",
   Notifi: "通知",
   NotifiAll: "所有通知",
   NotiStamina: "開拓力",
@@ -135,7 +135,6 @@ export const ZH_HK = {
   SetWallPaper: "設置",
   // ui - Code Page
   HasCopy: "已複製",
-
   // affixs of relics
   RelicAffix_atk: "攻擊力",
   RelicAffix_def: "防禦力",
@@ -155,7 +154,6 @@ export const ZH_HK = {
   RelicAffix_lightning_dmg: "雷屬性傷害加成",
   RelicAffix_quantum_dmg: "量子屬性傷害加成",
   RelicAffix_imaginary_dmg: "虛數屬性傷害加成",
-
   // toast
-  PleaseLogin: "請先登入！",
+  PleaseLogin: "請先登入！"
 };

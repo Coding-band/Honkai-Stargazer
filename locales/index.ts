@@ -1,7 +1,7 @@
-import { EN } from "./en";
-import { ZH_CN } from "./zh_cn";
-import { ZH_HK } from "./zh_hk";
-import { VOCCHINESE } from "./vocchinese";
+import { strings as EN} from "./en/strings";
+import { strings as ZH_CN} from "./zh-CN/strings";
+import { strings as ZH_HK} from "./zh-HK/strings";
+import { strings as VOCCHINESE } from "./yue/strings";
 
 export const LOCALES =  {
   en: EN,

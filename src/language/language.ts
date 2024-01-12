@@ -36,5 +36,5 @@ export const AppLanguage: AppLanguageType[] = [
   "en",
   "zh_cn",
   "zh_hk",
-  // "vocchinese",
+  "vocchinese",
 ];

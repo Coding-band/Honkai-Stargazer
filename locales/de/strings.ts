@@ -1,11 +1,11 @@
-export const EN = {
+export const strings = {
   // server
   asia: "Asia",
   europe: "Europe",
   america: "America",
   twhkmo: "TW HK MO",
-  cn1: "星窮列車",
-  cn2: "無名客",
+  cn1: "星穹列车",
+  cn2: "无名客",
   Trailblazer: "Trailblazer",
   // path
   Abundance: "Abundance",
@@ -135,27 +135,25 @@ export const EN = {
   SetWallPaper: "Set",
   // ui - Code Page
   HasCopy: "Copied",
-
   // affixs of relics
-  RelicAffixATK: "ATK",
-  RelicAffixDEF: "DEF",
-  RelicAffixHP: "HP",
-  RelicAffixCritDMG: "CritDMG",
-  RelicAffixCritRate: "Crit%",
-  RelicAffixSpeed: "SPD",
-  RelicAffixEffectHitRate: "Effect Hit%",
-  RelicAffixEffectRES: "Effect RES",
-  RelicAffixBreakEffect: "Break Effect",
-  RelicAffixOutgoingHealingBoost: "Healing Boost",
-  RelicAffixEnergyRR: "Energy Recover%",
-  RelicAffixPhysical: "Physical DMG Bonus",
-  RelicAffixWind: "Wind DMG Bonus",
-  RelicAffixFire: "Pyro DMG Bonus",
-  RelicAffixIce: "Cryo DMG Bonus",
-  RelicAffixLightning: "Lightning DMG Bonus",
-  RelicAffixQuantum: "Quantum DMG Bonus",
-  RelicAffixImaginary: "Imaginary DMG Bonus",
-
+  RelicAffix_atk: "ATK",
+  RelicAffix_def: "DEF",
+  RelicAffix_hp: "HP",
+  RelicAffix_crit_dmg: "CritDMG",
+  RelicAffix_crit_rate: "Crit%",
+  RelicAffix_spd: "SPD",
+  RelicAffix_effect_hit: "Effect Hit%",
+  RelicAffix_effect_res: "Effect RES",
+  RelicAffix_break_dmg: "Break Effect",
+  RelicAffix_heal_rate: "Healing Boost",
+  RelicAffix_energy: "Energy Recover%",
+  RelicAffix_physical_dmg: "Physical DMG Bonus",
+  RelicAffix_wind_dmg: "Wind DMG Bonus",
+  RelicAffix_fire_dmg: "Pyro DMG Bonus",
+  RelicAffix_ice_dmg: "Cryo DMG Bonus",
+  RelicAffix_lightning_dmg: "Lightning DMG Bonus",
+  RelicAffix_quantum_dmg: "Quantum DMG Bonus",
+  RelicAffix_imaginary_dmg: "Imaginary DMG Bonus",
   // toast
-  PleaseLogin: "Please login first！",
+  PleaseLogin: "Please login first！"
 };

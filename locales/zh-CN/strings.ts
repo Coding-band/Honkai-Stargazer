@@ -1,11 +1,11 @@
-export const ZH_CN = {
+export const strings = {
   // server
-  asia: "亞服",
-  europe: "歐服",
+  asia: "亚服",
+  europe: "欧服",
   america: "美服",
   twhkmo: "台港澳服",
-  cn1: "星穹列車",
-  cn2: "無名客",
+  cn1: "星穹列车",
+  cn2: "无名客",
   Trailblazer: "開拓者",
   // path
   Abundance: "丰饶",
@@ -14,7 +14,7 @@ export const ZH_CN = {
   Harmony: "同谐",
   Hunt: "巡猎",
   Nihility: "虚无",
-  Preservation: "存護",
+  Preservation: "存护",
   // element (combat type)
   Physical: "物理",
   Wind: "风",
@@ -54,8 +54,8 @@ export const ZH_CN = {
   AccountLogin: "账户绑定",
   ModifyHomePage: "编辑首页",
   SimulatedUniverse: "模拟宇宙",
-  Event: "活動",
-  Codes: "兌換碼",
+  Event: "活动",
+  Codes: "兑换码",
   // ui - filter and sort
   SortByTime: "实装日期",
   SortByName: "名称（英文）",
@@ -80,10 +80,10 @@ export const ZH_CN = {
   Eidolon: "星魂",
   AdviceCharacters: "推荐角色",
   AdviceLightcones: "推荐光锥",
+  AdviceTeams: "推荐队伍",
   RelicStatus2Pcs: "两件套",
   RelicStatus4Pcs: "四件套",
   AdviceRelics: "推荐遗器",
-  AdviceTeams: "推荐队伍",
   AdviceGetPath: "获取途径",
   CharacterStory: "角色故事",
   MainAffix: "主词条",
@@ -106,8 +106,8 @@ export const ZH_CN = {
   AppLanguage: "App语言",
   Customize: "个性化",
   UseHSRFont: "使用游戏字体",
-  ChangeWallPaper: "更换桌布",
   WallPaper: "桌布",
+  ChangeWallPaper: "更换桌布",
   Notifi: "通知",
   NotifiAll: "所有通知",
   NotiStamina: "开拓力",
@@ -135,7 +135,6 @@ export const ZH_CN = {
   SetWallPaper: "设置",
   // ui - Code Page
   HasCopy: "已拷贝",
-
   // affixs of relics
   RelicAffix_atk: "攻击力",
   RelicAffix_def: "防御力",
@@ -155,7 +154,6 @@ export const ZH_CN = {
   RelicAffix_lightning_dmg: "雷属性伤害加成",
   RelicAffix_quantum_dmg: "量子属性伤害加成",
   RelicAffix_imaginary_dmg: "虚数属性伤害加成",
-
   // toast
-  PleaseLogin: "请先登入！",
+  PleaseLogin: "请先登入！"
 };
