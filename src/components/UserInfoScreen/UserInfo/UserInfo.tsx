@@ -66,7 +66,7 @@ export default function UserInfo(props: Props) {
         <TopTabs
           tabs={[
             { name: "遊戲數據", value: "game-data" },
-            { name: "其他", value: "more-info" },
+            { name: "動態", value: "more-info" },
           ]}
           active={activeTab}
           onChange={(a) => {
