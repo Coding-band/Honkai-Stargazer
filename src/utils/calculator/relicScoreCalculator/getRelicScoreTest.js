@@ -1,11 +1,11 @@
-const scoreWeight =require("./data/relicWeightList.json");
+const scoreWeight = require("./data/relicWeightList.json");
 const demoCharData = require("./data/charDataDemo.json");
 
 function getRelicScore(){
   /**
   * 初始化
   **/
-  const charId = "1211";
+  const charId = "1102";
   const charScoreWeight = scoreWeight[charId];
   const charRelicsData = demoCharData.relics;
 
@@ -203,8 +203,9 @@ function getRelicScore(){
     });
   });
   //單一遺器的總分
+  
   const relicEachFinalScore = relicSubFinalScore.map((val, i) => {
-    return { [relicOrder[i]]: val + relicMainScore[i][relicOrder[i]] * relicRarityExpectPercent[relicRarity[i]] };
+    return { [relicOrder[i]]: (val + relicMainScore[i][relicOrder[i]]) * relicRarityExpectPercent[5-relicRarity[i]] };
   });
 
   //所有遺器合共的總分 !!!
@@ -214,14 +215,14 @@ function getRelicScore(){
   relicEachFinalScore.map((val, i) => {
     relicAllFinalScore += val[relicOrder[i]];
   });
-
   //你只需要 relicAllFinalScore 去計算評價等級 (等級範圍明天聊)
   return {
-    mainScore : relicMainValue,
-    subScore : relicSubFinalScore,
+    mainScore: relicMainScore,
+    subScore : relicSubScore,
     eachScore: relicEachFinalScore,
     totalScore: relicAllFinalScore,
   };
+
 }
 
 
