@@ -119,7 +119,7 @@ export default function UserCharDetail() {
           <UserCharRelics />
           {/* 由 Stargazer 製作 */}
           <View className="mb-16 mt-0">
-            {isOwner && <ProducedByStargazer />}
+            <ProducedByStargazer />
           </View>
         </View>
       </Animated.ScrollView>

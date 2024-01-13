@@ -27,7 +27,7 @@ export default function RelicItem({
     ) + 1;
 
   return (
-    <View className="w-[160px] py-2" style={{ flexDirection: "row", gap: 5 }}>
+    <View className="w-[170px] py-2" style={{ flexDirection: "row", gap: 6 }}>
       {/* 圖片 */}
       <TouchableOpacity activeOpacity={0.65}>
         <LinearGradient
@@ -43,7 +43,7 @@ export default function RelicItem({
         >
           <Image
             transition={200}
-            className="w-[30px] h-[30px]"
+            className="w-[30px] h-[30px] z-30"
             // @ts-ignore
             source={Relic[relicSetId]?.["icon" + relicCount]}
           />

@@ -7,6 +7,8 @@ import Relic from "../../../../../assets/images/images_map/relic";
 import useProfileHsrInGameInfo from "../../../../context/UserCharDetailData/hooks/useProfileHsrInGameInfo";
 import RelicItem from "./RelicItem/RelicItem";
 import getRelicScore from "../../../../utils/calculator/relicScoreCalculator/getRelicScore";
+import getTotalScoreRange from "./utils/getTotalScoreRange";
+import ScoreRangeFont from "../../../../../assets/images/images_map/scoreRangeFont";
 
 export default function UserCharRelics() {
   const { inGameCharData } = useProfileHsrInGameInfo();
@@ -18,22 +20,72 @@ export default function UserCharRelics() {
   );
 
   return (
-    <View
-      className=""
-      style={{
-        flexDirection: "row",
-        flexWrap: "wrap",
-        gap: 20,
-        justifyContent: "center",
-      }}
-    >
-      {userRelicsData.map((userRelicData, i) => (
-        <RelicItem
-          key={userRelicData.id}
-          userRelicData={userRelicData}
-          score={eachScore ? Object.values(eachScore?.[i])?.[0] : 0}
-        ></RelicItem>
-      ))}
+    <View style={{ gap: 20 }}>
+      <View
+        style={{
+          flexDirection: "row",
+          flexWrap: "wrap",
+          columnGap: 24,
+          rowGap: 0,
+          justifyContent: "center",
+        }}
+      >
+        {userRelicsData.map((userRelicData, i) => (
+          <RelicItem
+            key={userRelicData.id}
+            userRelicData={userRelicData}
+            score={eachScore ? Object.values(eachScore?.[i])?.[0] : 0}
+          ></RelicItem>
+        ))}
+      </View>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "center",
+          gap: 16,
+          flexWrap: "wrap",
+        }}
+      >
+        {/* <View style={{ gap: 8, alignItems: "center" }}>
+          <Text className="text-text font-[HY65] text-[24px]">B</Text>
+          <Text className="text-text font-[HY65] text-[12px]">角色评价</Text>
+        </View>
+        <View style={{ gap: 8, alignItems: "center" }}>
+          <Text className="text-text font-[HY65] text-[24px]">101%</Text>
+          <Text className="text-text font-[HY65] text-[12px]">角色毕业率</Text>
+        </View>
+        <View style={{ gap: 8, alignItems: "center" }}>
+          <Text className="text-text font-[HY65] text-[24px]">101%</Text>
+          <Text className="text-text font-[HY65] text-[12px]">角色评分</Text>
+        </View> */}
+        <View
+          className="h-[55px]"
+          style={{ justifyContent: "space-between", alignItems: "center" }}
+        >
+          <Text className="text-text font-[HY65] text-[24px]">
+            {totalScore.toFixed(1)}
+          </Text>
+          <Text className="text-text font-[HY65] text-[12px]">遺器評分</Text>
+        </View>
+        <View
+          className="h-[55px]"
+          style={{ justifyContent: "space-between", alignItems: "center" }}
+        >
+          <Image
+            className="w-6 h-[26px]"
+            source={ScoreRangeFont[getTotalScoreRange(totalScore)]}
+          ></Image>
+          <Text className="text-text font-[HY65] text-[12px]">遺器評價</Text>
+        </View>
+      </View>
+      <View style={{ alignItems: "center", gap: 2 }}>
+        <Text className="text-text font-[HY65] text-[18px]">
+          超過全服 99% 用户
+        </Text>
+        <Text className="text-[#FFFFFF60] font-[HY65] text-[12px] leading-4">
+          （數據來源於已登入用戶）
+        </Text>
+      </View>
     </View>
   );
 }
