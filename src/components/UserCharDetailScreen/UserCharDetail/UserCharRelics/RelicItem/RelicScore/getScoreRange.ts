@@ -1,9 +1,14 @@
 export default function getScoreRange(score: number) {
-  if (score < 8) return "D";
-  else if (score < 16 && score > 8) return "C";
-  else if (score < 24 && score > 16) return "B";
-  else if (score < 32 && score > 24) return "A";
-  else if (score < 40 && score > 32) return "S";
-  else if (score > 40) return "SS";
-  else return "D";
+  // 10,20,30,40,50 (0,+10,+10,+10,+10)
+  // 6,14,22,36,45 (0,+8,+8,+14,+9)
+  // 6,10,14,20,28,36,45 (0,+4,+4,+6,+8,+8,+9) -> Using
+  //if (score < 6) return "E";
+  if (score < 10) return "D";
+  if (score < 14) return "C";
+  if (score < 20) return "B";
+  if (score < 28) return "A";
+  if (score < 36) return "S";
+  if (score < 45) return "SS";
+  //if (score >= 45) return "Voc";
+  return "D";
 }
