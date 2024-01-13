@@ -10,7 +10,7 @@ const useIsTester = () => {
       db.Users.doc(uid)
         .get()
         .then((data) => {
-          if (data.data()?.role === "tester") {
+          if (data.data()?.role === "beta_user") {
             setIsAdmin(true);
           } else {
             setIsAdmin(false);

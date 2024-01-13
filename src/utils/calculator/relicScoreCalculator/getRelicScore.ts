@@ -8,7 +8,7 @@ export default function getRelicScore(
     name: string;
     level: number;
     rarity: number;
-    icon:string;
+    icon: string;
     main_affix: {
       type: string;
       value: number;
@@ -36,19 +36,22 @@ export default function getRelicScore(
   //遺器的次序
   const relicOrderExpect = ["Head", "Hands", "Body", "Shoes", "Ball", "Link"];
   //const relicRarityExpectPercent = [1,0.7,0.5,0.25,0.1];
-  const relicRarityExpectPercent = [1,0.8,0.6,0.4,0.2];
-  let relicOrder : string[] = [];
-  let relicRarity : number[] = [];
+  const relicRarityExpectPercent = [1, 0.8, 0.6, 0.4, 0.2];
+  let relicOrder: string[] = [];
+  let relicRarity: number[] = [];
 
   // 主詞條數據
   const relicMainValue = charRelicsData.map((relic) => {
-    const tmpVar = relic.icon.split(".")[0].replace("icon/relic/","");
-    const relicFindPosition = (tmpVar[0] === "3" ? Number(tmpVar[tmpVar.length - 1])+4 : Number(tmpVar[tmpVar.length - 1]));
-    
-    relicOrder.push(relicOrderExpect[relicFindPosition])
-    relicRarity.push(relic.rarity)
+    const tmpVar = relic.icon.split(".")[0].replace("icon/relic/", "");
+    const relicFindPosition =
+      tmpVar[0] === "3"
+        ? Number(tmpVar[tmpVar.length - 1]) + 4
+        : Number(tmpVar[tmpVar.length - 1]);
 
-    return {[relic.main_affix.type]: relic.main_affix.value}
+    relicOrder.push(relicOrderExpect[relicFindPosition]);
+    relicRarity.push(relic.rarity);
+
+    return { [relic.main_affix.type]: relic.main_affix.value };
   });
   // 副詞條數據
   const relicSubValue = charRelicsData.map((relic) =>
@@ -107,10 +110,10 @@ export default function getRelicScore(
    **/
 
   //各個遺器内所有副詞條總分
-  let relicSubFinalScore : number[] = [];
+  let relicSubFinalScore: number[] = [];
   relicOrder.map(() => {
-    relicSubFinalScore.push(0)
-  })
+    relicSubFinalScore.push(0);
+  });
 
   //這個位置要留意一下，因爲我當時沒有判斷到是否有齊6個遺器，假如資料只有0-5個遺器，一定出問題
   //副詞條分數詳情

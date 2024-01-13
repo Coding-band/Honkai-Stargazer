@@ -13,7 +13,7 @@ export default function NoDataYet() {
           className="w-[144px] h-[144px]"
           source={require("./images/03.png")}
         />
-        <Text className="text-text font-[HY65] text-[16px]">
+        <Text className="text-text font-[HY65] text-[16px] leading-5">
           暫時沒找到數據...
         </Text>
       </View>

@@ -4,16 +4,48 @@ import "dayjs/locale/zh-tw"; // 導入所需的語言包
 dayjs.locale("zh-tw"); // 設置本地化語言
 
 export function formatTimeDuration(second: number) {
+  // 檢查是否超過30天（30天的秒數）
+  const thirtyDaysInSeconds = 30 * 24 * 60 * 60;
+  if (second >= thirtyDaysInSeconds) {
+    return "30 天";
+  }
 
-  console.log(second)
+  // 計算天數、小時、分鐘和秒數
+  const days = Math.floor(second / (24 * 60 * 60));
+  const hours = Math.floor((second % (24 * 60 * 60)) / (60 * 60));
+  const minutes = Math.floor((second % (60 * 60)) / 60);
+  const seconds = Number((second % 60).toFixed(0));
 
-  const formattedTime = dayjs()
-    .startOf("day")
-    .add(second, "second")
-    .format(`H小時mm分鐘ss秒`);
+  // 構建時間格式化字符串
+  let formattedTime = "";
+  if (days > 0) formattedTime += `${days}天`;
+  if (hours > 0) formattedTime += `${hours}小時`;
+  if (minutes > 0) formattedTime += `${minutes}分鐘`;
+  // if (seconds > 0) formattedTime += `${seconds}秒`;
 
-  return formattedTime;
+  return formattedTime || "0秒"; // 如果所有時間單位都為0，則返回 '0秒'
 }
+
+export function formatTimeDurationSimple(second:number) {
+  // 檢查是否超過30天（30天的秒數）
+  const thirtyDaysInSeconds = 30 * 24 * 60 * 60;
+  if (second >= thirtyDaysInSeconds) {
+    return "30 天";
+  }
+
+  // 計算天數、小時、分鐘和秒數
+  const days = Math.floor(second / (24 * 60 * 60));
+  const hours = Math.floor((second % (24 * 60 * 60)) / (60 * 60));
+  const minutes = Math.floor((second % (60 * 60)) / 60);
+
+  // 只返回最大的非零時間單位
+  if (days > 0) return `${days}天`;
+  if (hours > 0) return `${hours}小時`;
+  if (minutes > 0) return `${minutes}分鐘`;
+
+  return "0秒"; // 如果所有時間單位都為0，則返回 '0秒'
+}
+
 
 export function formatTimePoint(second: number) {
   // 取得當前時間

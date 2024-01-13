@@ -101,7 +101,7 @@ export default function HomeScreen() {
               uuid: uuid,
               name: hsrPlayerData.nickname,
               avatar_url: hsrFullData.cur_head_icon_url,
-              role: "user",
+              role: ENV === "beta" ? "beta_user" : "user",
               plan: "normal",
               level: hsrPlayerData.level,
               region: hsrPlayerData.region,

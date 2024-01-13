@@ -10,12 +10,18 @@ import useCharComments from "../../../../../firebase/hooks/CharComments/useCharC
 import BlurView from "../../../../global/BlurView/BlurView";
 import useMyFirebaseUid from "../../../../../firebase/hooks/FirebaseUid/useMyFirebaseUid";
 import Toast from "../../../../../utils/toast/Toast";
-import { extractMentionsMatch } from "./utils/extractMetions";
+import {
+  extractMentionsMatch,
+  extractMentionsSplit,
+} from "../../../../../utils/extractMetions";
 import pushExpoNoti from "../../../../../notifications/utils/pushExpoNoti";
 import useHsrPlayerName from "../../../../../hooks/hoyolab/useHsrPlayerName";
 import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
 import { pushExpoNotiType } from "../../../../../notifications/constant/pushExpoNotiType";
 import CommentToolBox from "./CommentAddPhoto/CommentAddPhoto";
+import useAddCharComment from "../../../../../firebase/hooks/CharComments/useAddCharComment";
+import { customAlphabet } from "nanoid/non-secure";
+import useAddUserComment from "../../../../../firebase/hooks/UserComments/useAddUserComment";
 
 export default function CommentInput({
   value,
@@ -40,12 +46,12 @@ export default function CommentInput({
     onChange(input);
   }, [input]);
 
-  const [extractMetionInput, setExtractMetionInput] = useState<string[]>([]);
-  const { refetch } = useCharComments(officalId || "");
+  const { refetch: getComments } = useCharComments(officalId || "");
+  const { mutateAsync: addCharComments } = useAddCharComment(officalId || "");
+  const { mutateAsync: addUserComments } = useAddUserComment();
 
   const handleTextChange = (text: string) => {
     setInput(text);
-    setExtractMetionInput(extractMentionsMatch(text));
   };
 
   const handleSubmit = async () => {
@@ -54,67 +60,64 @@ export default function CommentInput({
       return;
     }
 
-    if (uid) {
-      const isDocExists = (await db.CharacterComments.doc(officalId).get())
-        .exists;
+    if (!uid) {
+      Toast("您尚未登入！");
+      return;
+    }
 
-      try {
-        if (isDocExists) {
-          await db.CharacterComments.doc(officalId).update({
-            comments: firestore.FieldValue.arrayUnion({
-              user_id: uid,
-              content: input,
-              mentions: extractMetionInput,
-              createdAt: firestore.Timestamp.now(),
-            }),
-          });
-        } else {
-          await db.CharacterComments.doc(officalId).set({
-            comments: firestore.FieldValue.arrayUnion({
-              user_id: uid,
-              content: input,
-              mentions: extractMetionInput,
-              createdAt: firestore.Timestamp.now(),
-            }),
-          });
-        }
-        setTimeout(() => {
-          Toast("留言成功！");
-          refetch();
-        }, 500);
+    try {
+      const commentId = customAlphabet(
+        "abcdefghijklmnopqrstuvwxyzABCDEFGHIGKLMNOPQUSTUVWXYZ0123456789"
+      )();
 
-        // tag users (push notification)
-        if (extractMetionInput?.length) {
-          extractMetionInput.map(async (mentionUser: string) => {
-            const mentionUserName = mentionUser.slice(1);
-            const querySnapshot = await db.Users.where(
-              "name",
-              "==",
-              mentionUserName
-            ).get();
-            querySnapshot.forEach(async (doc) => {
-              const uid = doc.id;
-              const expoPushToken = (await db.UserTokens.doc(uid).get()).data()
-                ?.expo_push_token;
-              pushExpoNoti({
-                to: expoPushToken,
-                title: `開拓者快報！`,
-                body: `玩家 ${playerName} 在【${charName}討論串】提及了您！`,
-                data: {
-                  type: pushExpoNotiType.sendCharacterComment,
-                  charId,
-                },
-              });
+      await Promise.all([
+        addCharComments({
+          id: commentId,
+          content: input,
+        }),
+        addUserComments({
+          id: commentId,
+          type: "character-comment",
+          title: officalId || "",
+          content: input,
+        }),
+      ]);
+
+      Toast("留言成功！");
+      setInput("");
+
+      // 更新評論區
+      getComments();
+
+      // 提及用戶 (推送通知)
+      const extractMetionInput = extractMentionsSplit(input);
+      if (extractMetionInput?.length) {
+        extractMetionInput.map(async (mentionUser: string) => {
+          const mentionUserName = mentionUser.slice(1);
+          const querySnapshot = await db.Users.where(
+            "name",
+            "==",
+            mentionUserName
+          ).get();
+          querySnapshot.forEach(async (doc) => {
+            const uid = doc.id;
+            const expoPushToken = (await db.UserTokens.doc(uid).get()).data()
+              ?.expo_push_token;
+            pushExpoNoti({
+              to: expoPushToken,
+              title: `開拓者快報！`,
+              body: `玩家 ${playerName} 在【${charName}討論串】提及了您！快來參與討論吧。`,
+              data: {
+                type: pushExpoNotiType.sendCharacterComment,
+                charId,
+              },
             });
           });
-        }
-      } catch (e: any) {
-        Toast("留言失敗，錯誤訊息：" + e.message);
+        });
       }
-    } else {
-      Toast("您尚未登入！");
+    } catch (e: any) {
+      Toast("留言失敗，錯誤訊息：" + e.message);
     }
-    setInput("");
   };
 
   return (

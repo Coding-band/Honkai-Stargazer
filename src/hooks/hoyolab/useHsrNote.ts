@@ -11,7 +11,7 @@ const useHsrNote = () => {
   const HsrUUID = useHsrUUID();
   const { hsrServerChosen } = useHsrServerChosen();
 
-  const { data, isError, error, isLoading, isFetching, refetch } = useQuery(
+  const data = useQuery(
     ["hsr-note", hoyolabCookie, , HsrUUID, hsrServerChosen],
     () =>
       new (isHoyolabPlatform(hsrServerChosen) ? HoyolabRequest : MihoyoRequest)(
@@ -21,9 +21,10 @@ const useHsrNote = () => {
       select(data) {
         return data.data;
       },
+      refetchInterval: 1000 * 60 * 1,
     }
   );
-  return { data, isError, error, isLoading, isFetching, refetch };
+  return data;
 };
 
 export default useHsrNote;

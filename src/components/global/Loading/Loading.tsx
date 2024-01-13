@@ -27,7 +27,7 @@ export default function Loading() {
           className="w-[144px] h-[144px]"
           source={require("./images/01.png")}
         />
-        <Text className="text-text font-[HY65] text-[16px]">
+        <Text className="text-text font-[HY65] text-[16px] leading-5">
           帕姆祈禱中{dot}
         </Text>
       </View>

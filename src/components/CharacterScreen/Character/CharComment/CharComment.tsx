@@ -14,6 +14,7 @@ type Props = {
 };
 
 export default function CharComment(props: Props) {
+
   const charId = useCharId();
   const officalId = findKey(officalCharId, (v) => v === charId);
   const { data: charComments } = useCharComments(officalId || "");

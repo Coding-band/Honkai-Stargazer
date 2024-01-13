@@ -1,7 +1,5 @@
 import { hsrServer } from "../../utils/hoyolab/servers/hsrServer.types";
-import firestore, {
-  FirebaseFirestoreTypes,
-} from "@react-native-firebase/firestore";
+import { FirebaseFirestoreTypes } from "@react-native-firebase/firestore";
 
 export default interface Users {
   uuid: string;

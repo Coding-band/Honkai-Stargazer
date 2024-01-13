@@ -1,5 +1,5 @@
 import { View, Text, Dimensions, ScrollView } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import Header2 from "../../global/Header2/Header2";
 import { TouchableOpacity } from "react-native";
 import { Image } from "expo-image";
@@ -9,13 +9,19 @@ import UserInfoCharacters from "./UserInfoCharacters/UserInfoCharacters";
 import Toast from "../../../utils/toast/Toast";
 import UserAvatar from "../../global/UserAvatar/UserAvatar";
 import AvatarIcon from "../../../../assets/images/images_map/avatarIcon";
-import { animated } from "@react-spring/native";
+import { animated, useSpring } from "@react-spring/native";
 import UUIDBox from "../../global/UUIDBox/UUIDBox";
 import Loading from "../../global/Loading/Loading";
 import ProducedByStargazer from "../../global/ProducedByStargazer/ProducedByStargazer";
 import NoPublicData from "./NoPublicData/NoPublicData";
 import useUserByUUID from "../../../firebase/hooks/User/useUserByUUID";
 import useUserMocByUUID from "../../../firebase/hooks/UserMoc/useUserMocByUUID";
+import TopTabs from "./TopTabs/TopTabs";
+import Comment from "./Comment/Comment";
+import auth from "@react-native-firebase/auth";
+import { formatTimeDuration, formatTimeDurationSimple } from "../../../utils/date/formatTime";
+import useUserComments from "../../../firebase/hooks/UserComments/useUserComments";
+import useFirebaseUidByUUID from "../../../firebase/hooks/FirebaseUid/useFirebaseUidByUUID";
 
 type Props = {
   uuid: string;
@@ -25,14 +31,13 @@ export default function UserInfo(props: Props) {
   const profileUUID = props.uuid;
   const hsrUUID = useHsrUUID();
 
-  const isOwner = profileUUID === hsrUUID;
-
   // 資料來自崩鐵
   const { data: hsrInGameInfo } = useHsrInGameInfo(profileUUID);
   // 資料來自 firebase 資料庫
   const { data: userData } = useUserByUUID(profileUUID);
   const { data: userMocData } = useUserMocByUUID(profileUUID);
 
+  const isOwner = profileUUID === hsrUUID;
   const isShowInfo = userData?.show_info;
 
   const playerAvatar =
@@ -40,13 +45,39 @@ export default function UserInfo(props: Props) {
     AvatarIcon[hsrInGameInfo?.player?.avatar?.icon?.match(/\d+/g).join("")];
   const latestUserMocData = userMocData?.[Object.keys(userMocData).pop() || ""];
 
+  const [activeTab, setActiveTab] = useState("game-data");
+  const isGameDataPage = activeTab === "game-data";
+
+  const timeString =
+    formatTimeDurationSimple(
+      Date.now() / 1000 -
+      new Date(auth().currentUser?.metadata.lastSignInTime || "").getTime() / 1000
+    ) + "前";
+
+  // 检查返回的字符串是否为纯数字
+  const parts = timeString.split(/([A-Za-z\u4e00-\u9fa5]+)/);
+
+  const firebaseUID = useFirebaseUidByUUID(profileUUID);
+  const { data: userComments } = useUserComments(firebaseUID || "");
+
   return (
     <View className="z-30">
-      <Header2 rightBtn={isOwner ? <ShareBtn /> : null} />
+      <Header2 rightBtn={isOwner ? <ShareBtn /> : null}>
+        <TopTabs
+          tabs={[
+            { name: "遊戲數據", value: "game-data" },
+            { name: "其他", value: "more-info" },
+          ]}
+          active={activeTab}
+          onChange={(a) => {
+            setActiveTab(a);
+          }}
+        />
+      </Header2>
       <ScrollView style={{ height: Dimensions.get("screen").height }}>
         {hsrInGameInfo && userData && userMocData ? (
           <AnimatedView
-            className="mt-12 px-4"
+            className="mt-28"
             style={{
               alignItems: "center",
               gap: 18,
@@ -73,25 +104,64 @@ export default function UserInfo(props: Props) {
             </View>
             {/* 等級 */}
             <View
-              style={{ flexDirection: "row", gap: 16, alignItems: "center" }}
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
             >
               <InfoItem
-                title={"開拓等級"}
-                value={hsrInGameInfo?.player?.level}
+                title={isGameDataPage ? "開拓等級" : "留言數"}
+                value={isGameDataPage ? hsrInGameInfo?.player?.level : userComments?.comments_num || 0}
               />
               <View className="w-[1px] h-6 bg-[#F3F9FF40]"></View>
               <InfoItem
-                title={"均衡等级"}
-                value={hsrInGameInfo?.player?.world_level}
+                title={isGameDataPage ? "均衡等级" : "上次上線"}
+                value={
+                  isGameDataPage ? (
+                    hsrInGameInfo?.player?.world_level
+                  ) : (
+                    <Text>
+                      {parts.map((part, index) =>
+                        // 检查每个部分是否为纯数字
+                        /^\d+$/.test(part) ? (
+                          <Text key={index}>{part}</Text>
+                        ) : (
+                          <Text className="text-[12px] leading-5" key={index}>
+                            {part}
+                          </Text>
+                        )
+                      )}
+                    </Text>
+                  )
+                }
               />
+              {isGameDataPage && (
+                <>
+                  <View className="w-[1px] h-6 bg-[#F3F9FF40]"></View>
+                  <InfoItem
+                    title="擁有角色"
+                    value={hsrInGameInfo?.player?.space_info?.avatar_count}
+                  />
+                </>
+              )}
             </View>
-            <View className="w-full" style={{ alignItems: "center", gap: 8 }}>
+            {/* 遊戲數據頁顯示 */}
+            <View
+              className="w-full"
+              style={{
+                position: isGameDataPage ? "relative" : "absolute",
+                left: isGameDataPage ? 0 : -10000,
+                alignItems: "center",
+                gap: 8,
+              }}
+            >
               {/* 擁有角色 */}
               <UserInfoCharacters uuid={props.uuid} />
               {/* 其他資訊 */}
               {isOwner || isShowInfo ? (
                 <View
-                  className="w-full px-3"
+                  className="w-full"
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
@@ -115,10 +185,25 @@ export default function UserInfo(props: Props) {
                 <NoPublicData />
               )}
             </View>
-            {/* 由 Stargazer 製作 */}
-            <View className="mb-16 mt-0">
-              {isOwner && <ProducedByStargazer />}
+            {/* 其他頁顯示 */}
+            <View
+              className="w-full"
+              style={{
+                position: !isGameDataPage ? "relative" : "absolute",
+                left: !isGameDataPage ? 0 : -10000,
+                alignItems: "center",
+                gap: 8,
+              }}
+            >
+              {userComments?.comments?.map((comment: any) => (
+                <Comment {...comment} key={comment.id} />
+              ))}
             </View>
+            {/* 由 Stargazer 製作 */}
+            {isGameDataPage && (<View className="mb-16 mt-0">
+              <ProducedByStargazer />
+            </View>)}
+
           </AnimatedView>
         ) : (
           <Loading />
@@ -135,8 +220,8 @@ const InfoItem = ({
   title: string;
   value: string | number | undefined;
 }) => (
-  <View style={{ alignItems: "center" }}>
-    <Text className="text-text text-[24px] font-[HY65]">{value}</Text>
+  <View style={{ alignItems: "center" }} className="w-24">
+    <Text className="text-text text-[24px] font-[HY65] leading-5">{value}</Text>
     <Text className="text-text text-[12px] font-[HY65] leading-5">{title}</Text>
   </View>
 );

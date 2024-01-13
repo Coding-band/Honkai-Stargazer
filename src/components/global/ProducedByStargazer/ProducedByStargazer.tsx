@@ -4,6 +4,6 @@ import React from "react";
 export default function ProducedByStargazer() {
   return (
     // 由 Stargazer 製作
-    <Text className="text-text text-[12px] font-[HY65]">由 Stargazer 製作</Text>
+    <Text className="text-text text-[12px] font-[HY65] leading-5">由 Stargazer 製作</Text>
   );
 }

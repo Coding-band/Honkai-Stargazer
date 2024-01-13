@@ -11,22 +11,21 @@ import useUserCharacters from "../../../../../firebase/hooks/UserCharacters/useU
 import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
 import officalCharId from "../../../../../../map/character_offical_id_map";
 import { findKey } from "lodash";
-import { extractMentionsSplit } from "../CommentInput/utils/extractMetions";
+import { extractMentionsSplit } from "../../../../../utils/extractMetions";
 import { hasUserByUsername } from "../../../../../firebase/utils/hasUser";
 import CommentUserAvatar from "./CommentUserAvatar/CommentUserAvatar";
 import useCopyToClipboard from "../../../../../hooks/useCopyToClipboard";
 import { Vibration } from "react-native";
+import TagContent from "../../../../global/TagContent/TagContent";
 
 export default function CommentItem({
   user_id,
   content,
-  mentions,
   input,
   setInput,
 }: {
   user_id: string;
   content: string;
-  mentions: string[];
   input: string;
   setInput: (v: string) => void;
 }) {
@@ -41,33 +40,9 @@ export default function CommentItem({
   const userHasChar = !!userCharacters?.filter(
     (char) => char.id.toString() === charOfficalId
   ).length;
-
-  const [processedContent, setProcessedContent] = useState<any[]>([]);
-  useEffect(() => {
-    async function processContent() {
-      const parts = extractMentionsSplit(content);
-      const processedParts = await Promise.all(
-        parts.map(async (part, i) => {
-          if (
-            mentions?.includes(part) &&
-            (await hasUserByUsername(part.slice(1)))
-          ) {
-            return (
-              <Text key={i} className="text-[#DD8200]">
-                {part}
-              </Text>
-            );
-          } else {
-            return <Text key={i}>{part}</Text>;
-          }
-        })
-      );
-
-      setProcessedContent(processedParts);
-    }
-
-    processContent();
-  }, [content]); // 依赖项列表，当这些依赖项更改时，useEffect 会重新执行
+  const userHasCharAndIsFullRank =
+    userCharacters?.filter((char) => char.id.toString() === charOfficalId)[0]
+      ?.rank === 6;
 
   const handleCopy = useCopyToClipboard();
   const handleCopyTag = () => {
@@ -90,7 +65,7 @@ export default function CommentItem({
                 {username}
               </Text>
             </TouchableWithoutFeedback>
-            {userHasChar && (
+            {userHasChar && !userHasCharAndIsFullRank && (
               <View
                 className="h-4 px-[5px] bg-[#F3F9FF] rounded-[34px]"
                 style={{ justifyContent: "center" }}
@@ -100,10 +75,18 @@ export default function CommentItem({
                 </Text>
               </View>
             )}
+            {userHasCharAndIsFullRank && (
+              <View
+                className="h-4 px-[5px] bg-[#FFE690] rounded-[34px]"
+                style={{ justifyContent: "center" }}
+              >
+                <Text className="text-[#6C5710] text-[10px] font-[HY65]">
+                  {"滿命"}
+                </Text>
+              </View>
+            )}
           </View>
-          <Text className="text-text2 text-[14px] font-[HY65] leading-5">
-            {processedContent}
-          </Text>
+          <TagContent>{content}</TagContent>
         </View>
       </View>
     </TouchableNativeFeedback>

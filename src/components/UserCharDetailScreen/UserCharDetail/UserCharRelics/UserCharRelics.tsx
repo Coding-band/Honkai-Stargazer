@@ -72,8 +72,9 @@ export default function UserCharRelics() {
           style={{ justifyContent: "space-between", alignItems: "center" }}
         >
           <Image
-            className="w-6 h-[26px]"
+            className="w-12 h-8"
             source={ScoreRangeFont[getTotalScoreRange(totalScore)]}
+            contentFit="contain"
           ></Image>
           <Text className="text-text font-[HY65] text-[12px]">遺器評價</Text>
         </View>

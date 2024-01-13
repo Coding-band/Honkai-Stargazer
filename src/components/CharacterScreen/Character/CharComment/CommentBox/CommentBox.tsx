@@ -1,5 +1,5 @@
 import { View, Text, KeyboardAvoidingView, Platform } from "react-native";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -13,6 +13,7 @@ import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
 import { findKey } from "lodash";
 import officalCharId from "../../../../../../map/character_offical_id_map";
 import { AnimatedScrollView } from "react-native-reanimated/lib/typescript/reanimated2/component/ScrollView";
+import { useRoute } from "@react-navigation/native";
 
 const UpArrow = require("./icons/UpArrow.svg");
 const DownArrow = require("./icons/DownArrow.svg");
@@ -24,6 +25,9 @@ type Props = {
 };
 
 export default function CommentBox(props: Props) {
+
+
+
   // data
   const charId = useCharId();
   const officalId = findKey(officalCharId, (v) => v === charId);
@@ -55,7 +59,7 @@ export default function CommentBox(props: Props) {
         y: e.translationY,
       };
     })
-    .onEnd(() => {})
+    .onEnd(() => { })
     .onFinalize(() => {
       isPressed.value = false;
     });
@@ -69,7 +73,7 @@ export default function CommentBox(props: Props) {
   const animatedStyles2 = useAnimatedStyle(() => {
     return {
       height: translation.value.y < 0 ? hieght.value : /* withSpring(0) */ 0,
-      opacity: translation.value.y < 0 ? withSpring(1) : 0,
+      display: translation.value.y < 0 ? "flex" : "none"
     };
   });
 
@@ -87,7 +91,7 @@ export default function CommentBox(props: Props) {
   }, []);
 
   return (
-    <View className="">
+    <View >
       <GestureDetector gesture={gesture}>
         <Animated.View style={[animatedStyles]}>
           <View
@@ -116,7 +120,7 @@ export default function CommentBox(props: Props) {
         <KeyboardAvoidingView
           className="absolute bottom-4 w-full"
           behavior="padding"
-          keyboardVerticalOffset={114}
+          keyboardVerticalOffset={118}
         >
           <Animated.View style={[animatedStyles3]}>
             {props.bottom}

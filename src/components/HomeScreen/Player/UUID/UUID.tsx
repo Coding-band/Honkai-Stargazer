@@ -11,7 +11,6 @@ export default function UUID() {
   const { language } = useAppLanguage();
 
   const handleCopyUUID = useCallback(async () => {
-
     try {
       await Clipboard.setStringAsync(uuid);
       Toast.CopyToClipboard();
@@ -30,7 +29,7 @@ export default function UUID() {
           backgroundColor: "rgba(0, 0, 0, 0.3)",
         }}
       >
-        <Text className="text-white">{uuid || "00000000"}</Text>
+        <Text className="text-white font-[HY65]">{uuid || "00000000"}</Text>
       </View>
     </TouchableOpacity>
   );

@@ -9,6 +9,7 @@ import { CharacterName } from "./character";
 export type ParamList = {
   Character: {
     id: string;
+    commentId?: string;
   };
   Lightcone: { id: string; name: string };
   Relic: { id: string; name: string };

@@ -13,7 +13,7 @@ export default function NotFound() {
           className="w-[144px] h-[144px]"
           source={require("./images/02.png")}
         />
-        <Text className="text-text font-[HY65] text-[16px]">
+        <Text className="text-text font-[HY65] text-[16px] leading-5">
           和列車失去聯繫了...
         </Text>
       </View>

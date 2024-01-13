@@ -3,7 +3,7 @@ import db from "../../db";
 import { useQuery } from "react-query";
 
 const useCharComments = (charId: string) => {
-  const data = useQuery(["firebase-char-comment", charId], () =>
+  const data = useQuery(["firebase-char-comments", charId], () =>
     db.CharacterComments.doc(charId)
       .get()
       .then((data) => {

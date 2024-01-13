@@ -359,7 +359,7 @@ export default function UserCharAttribute() {
                     }}
                   >
                     <Image source={attr.icon} className="w-6 h-6" />
-                    <Text className="text-text text-[14px] font-[HY65]">
+                    <Text className="text-text text-[14px] font-[HY65] leading-5">
                       {/* @ts-ignore */}
                       {LOCALES[language]["RelicAffix_" + attr.key]}
                     </Text>

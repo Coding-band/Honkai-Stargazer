@@ -11,10 +11,11 @@ import firestore from "@react-native-firebase/firestore";
 
 const db = {
   Users: firestore().collection("Users"),
+  UserTokens: firestore().collection("UserTokens"),
   UserCharacters: firestore().collection("UserCharacters"),
   UserMemoryOfChaos: firestore().collection("UserMemoryOfChaos"),
+  UserComments: firestore().collection("UserComments"),
   CharacterComments: firestore().collection("CharacterComments"),
-  UserTokens: firestore().collection("UserTokens"),
 };
 
 export default db;
