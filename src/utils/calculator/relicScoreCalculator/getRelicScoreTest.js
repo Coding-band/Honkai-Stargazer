@@ -1,28 +1,18 @@
-import scoreWeight from "./data/relicWeightList.json";
-import demoCharData from "./data/charDataDemo.json";
+const scoreWeight =require("./data/relicWeightList.json");
+const demoCharData = require("./data/charDataDemo.json");
 
-export default function getRelicScore(
-  charId: string,
-  charRelicsData: {
-    id: string;
-    name: string;
-    level: number;
-    icon:string;
-    main_affix: {
-      type: string;
-      value: number;
-    };
-    sub_affix: {
-      type: string;
-      value: number;
-    }[];
-  }[]
-) {
+function getRelicScore(){
+  /**
+  * 初始化
+  **/
+  const charId = "1211";
+  const charScoreWeight = scoreWeight[charId];
+  const charRelicsData = demoCharData.relics;
+
   /**
    * 初始化
    **/
   // @ts-ignore
-  const charScoreWeight = scoreWeight[charId];
 
   // 該角色還沒有權重
   if (!charScoreWeight) {
@@ -31,11 +21,9 @@ export default function getRelicScore(
       totalScore: 0,
     };
   }
-
-  //遺器的次序
+  //遺器次序
   const relicOrderExpect = ["Head", "Hands", "Body", "Shoes", "Ball", "Link"];
-  let relicOrder : string[] = [];
-
+  let relicOrder = [];
   // 主詞條數據
   const relicMainValue = charRelicsData.map((relic) => {
     const tmpVar = relic.icon.split(".")[0].replace("icon/relic/","");
@@ -45,12 +33,14 @@ export default function getRelicScore(
 
     return {[relic.main_affix.type]: relic.main_affix.value}
   });
+  
   // 副詞條數據
   const relicSubValue = charRelicsData.map((relic) =>
     relic.sub_affix.map((sub) => ({
       [sub.type]: sub.value,
     }))
   );
+  console.log(relicMainValue)
   // 遺器等級
   const relicLevelValue = charRelicsData.map((relic) => relic.level);
 
@@ -102,7 +92,7 @@ export default function getRelicScore(
    **/
 
   //各個遺器内所有副詞條總分
-  let relicSubFinalScore : number[] = [];
+  let relicSubFinalScore = [];
   relicOrder.map(() => {
     relicSubFinalScore.push(0)
   })
@@ -208,7 +198,6 @@ export default function getRelicScore(
       return { [relicOrder[i] + "_sub" + j]: tmpScore };
     });
   });
-
   //單一遺器的總分
   const relicEachFinalScore = relicSubFinalScore.map((val, i) => {
     return { [relicOrder[i]]: val + relicMainScore[i][relicOrder[i]] };
@@ -228,3 +217,6 @@ export default function getRelicScore(
     totalScore: relicAllFinalScore,
   };
 }
+
+
+console.log(getRelicScore())
