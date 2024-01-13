@@ -115,11 +115,7 @@ export default function Menu() {
         <Text>
           {playerNote.data.current_stamina >= 240
             ? LOCALES[language].StaminaIsFull
-            : formatTimePoint(
-                (playerNote.data.max_stamina -
-                  playerNote.data.current_stamina) *
-                  360
-              )}
+            : formatTimePoint(playerNote.data.stamina_recover_time)}
         </Text>
       ) : null,
       onPress: () => {
