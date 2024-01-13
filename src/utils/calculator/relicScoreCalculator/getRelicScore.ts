@@ -7,6 +7,7 @@ export default function getRelicScore(
     id: string;
     name: string;
     level: number;
+    rarity: number;
     icon:string;
     main_affix: {
       type: string;
@@ -34,7 +35,10 @@ export default function getRelicScore(
 
   //遺器的次序
   const relicOrderExpect = ["Head", "Hands", "Body", "Shoes", "Ball", "Link"];
+  //const relicRarityExpectPercent = [1,0.7,0.5,0.25,0.1];
+  const relicRarityExpectPercent = [1,0.8,0.6,0.4,0.2];
   let relicOrder : string[] = [];
+  let relicRarity : number[] = [];
 
   // 主詞條數據
   const relicMainValue = charRelicsData.map((relic) => {
@@ -42,6 +46,7 @@ export default function getRelicScore(
     const relicFindPosition = (tmpVar[0] === "3" ? Number(tmpVar[tmpVar.length - 1])+4 : Number(tmpVar[tmpVar.length - 1]));
     
     relicOrder.push(relicOrderExpect[relicFindPosition])
+    relicRarity.push(relic.rarity)
 
     return {[relic.main_affix.type]: relic.main_affix.value}
   });
@@ -211,7 +216,7 @@ export default function getRelicScore(
 
   //單一遺器的總分
   const relicEachFinalScore = relicSubFinalScore.map((val, i) => {
-    return { [relicOrder[i]]: val + relicMainScore[i][relicOrder[i]] };
+    return { [relicOrder[i]]: val + relicMainScore[i][relicOrder[i]] * relicRarityExpectPercent[relicRarity[i]]};
   });
 
   //所有遺器合共的總分 !!!
