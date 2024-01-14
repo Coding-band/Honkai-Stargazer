@@ -165,7 +165,7 @@ export const strings = {
   UserInfoStatus: "動態",
   UserInfoGamePlayerLevel: "開拓等級",
   UserInfoCountComments: "留言數",
-  UserInfoGameWorldLevel:"均衡等级",
+  UserInfoGameWorldLevel: "均衡等级",
   UserInfoLastOnlineTime: "上次上線",
   UserInfoOwnedCharacters: "擁有角色",
   UserInfoGameActiveDays: "活躍天數",
@@ -175,7 +175,5 @@ export const strings = {
   UserCharLevelLv: "等級",
   UserCharLevelSoul: "星魂",
   ProducedByStargazer: "由 Stargazer 製作",
-
-
-  
+  NoOnlineData: "無上線紀錄",
 };

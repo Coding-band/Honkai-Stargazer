@@ -167,7 +167,7 @@ export const strings = {
   UserInfoStatus: "Status",
   UserInfoGamePlayerLevel: "Trailblaze Lvl.",
   UserInfoCountComments: "Comments",
-  UserInfoGameWorldLevel:"Equilibrium Lvl.",
+  UserInfoGameWorldLevel: "Equilibrium Lvl.",
   UserInfoLastOnlineTime: "Last Online At",
   UserInfoOwnedCharacters: "Characters",
   UserInfoGameActiveDays: "Active Days",
@@ -177,4 +177,5 @@ export const strings = {
   UserCharLevelLv: "Lv.",
   UserCharLevelSoul: "Eidolon",
   ProducedByStargazer: "Produced By Stargazer",
+  NoOnlineData: "No record",
 };

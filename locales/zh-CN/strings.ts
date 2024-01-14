@@ -158,14 +158,14 @@ export const strings = {
   RelicAffix_imaginary_dmg: "虚数属性伤害加成",
   // toast
   PleaseLogin: "请先登入！",
-  
+
   //Add in 20240114
   UserInfoLastLoginAt: "${1}前",
   UserInfoGameData: "游戏数据",
   UserInfoStatus: "动态",
   UserInfoGamePlayerLevel: "开拓等级",
   UserInfoCountComments: "留言数",
-  UserInfoGameWorldLevel:"均衡等级",
+  UserInfoGameWorldLevel: "均衡等级",
   UserInfoLastOnlineTime: "上次上线",
   UserInfoOwnedCharacters: "拥有角色",
   UserInfoGameActiveDays: "活跃天数",
@@ -175,5 +175,5 @@ export const strings = {
   UserCharLevelLv: "等级",
   UserCharLevelSoul: "星魂",
   ProducedByStargazer: "由 Stargazer 制作",
-
+  NoOnlineData: "無上線紀錄",
 };

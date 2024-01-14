@@ -14,6 +14,7 @@ import DraggableFlatList, {
   RenderItemParams,
   ScaleDecorator,
 } from "react-native-draggable-flatlist";
+import { uniq } from 'lodash'
 
 export default function UIDSearch() {
 
@@ -41,7 +42,7 @@ export default function UIDSearch() {
     if (data) {
       // @ts-ignore
       navigation.navigate(SCREENS.UserInfoPage.id, { uuid: input })
-      setUidHistory([input, ...uidHistory])
+      setUidHistory(uniq([input, ...uidHistory]))
       setInput("")
     }
 
@@ -57,10 +58,10 @@ export default function UIDSearch() {
       // keyboardShouldPersistTaps="always"
       >
         <UIDSearchbar value={input} onChangeText={setInput} onSubmit={handleSubmit} placeholder='請輸入 UID' />
-        <Text className="text-text text-[12px] font-[HY65]">仅支持查询完整uid，不支持查询昵称或部分uid</Text>
+        <Text className="text-text text-[12px] font-[HY65] leading-4">僅支持查詢完整uid，不支持查詢暱稱或部分uid</Text>
         <View className="w-full" style={{ justifyContent: "space-between", flexDirection: "row" }}>
-          <Text className="text-text text-[14px] font-[HY65]">查询记录</Text>
-          <Text className="text-text text-[14px] font-[HY65]">切换</Text>
+          <Text className="text-text text-[14px] font-[HY65] leading-5">查詢記錄</Text>
+          <Text className="text-text text-[14px] font-[HY65] leading-5">切換</Text>
         </View>
 
         <DraggableFlatList

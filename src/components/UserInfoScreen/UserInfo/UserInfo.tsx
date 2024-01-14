@@ -99,7 +99,7 @@ export default function UserInfo(props: Props) {
         </Animated.View>
       </Header2>
       <Animated.ScrollView ref={aref} style={{ height: Dimensions.get("screen").height }}>
-        {hsrInGameInfo  ? (
+        {hsrInGameInfo ? (
           <AnimatedView
             className="mt-28"
             style={{
@@ -146,7 +146,7 @@ export default function UserInfo(props: Props) {
                     hsrInGameInfo?.player?.world_level
                   ) : (
                     <Text>
-                      {parts.map((part, index) =>
+                      {userData?.last_login ? (parts.map((part, index) =>
                         // 检查每个部分是否为纯数字
                         /^\d+$/.test(part) ? (
                           <Text key={index}>{part}</Text>
@@ -154,8 +154,10 @@ export default function UserInfo(props: Props) {
                           <Text className="text-[12px] leading-5" key={index}>
                             {part}
                           </Text>
-                        )
-                      )}
+                        ))
+                      ) : <Text className="text-[12px] leading-4" >
+                            {LOCALES[language].NoOnlineData}
+                      </Text>}
                     </Text>
                   )
                 }
