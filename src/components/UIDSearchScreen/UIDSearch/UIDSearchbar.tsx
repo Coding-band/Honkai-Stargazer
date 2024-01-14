@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Pressable, Keyboard, TouchableOpacity } from 'react-native'
+import { View, Text, ScrollView, Pressable, Keyboard, TouchableOpacity, Dimensions } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import Searchbar from './UIDSearchbar/UIDSearchbar'
 import { Image } from 'expo-image'
@@ -65,6 +65,7 @@ export default function UIDSearch() {
         </View>
 
         <DraggableFlatList
+          containerStyle={{ height: Dimensions.get("screen").height - 260 }}
           data={uidHistory}
           onDragEnd={({ data }) => { setUidHistory(data) }}
           keyExtractor={(item) => item}
