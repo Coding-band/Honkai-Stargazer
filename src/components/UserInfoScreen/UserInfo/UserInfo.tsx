@@ -22,6 +22,8 @@ import auth from "@react-native-firebase/auth";
 import { formatTimeDuration, formatTimeDurationSimple } from "../../../utils/date/formatTime";
 import useUserComments from "../../../firebase/hooks/UserComments/useUserComments";
 import useFirebaseUidByUUID from "../../../firebase/hooks/FirebaseUid/useFirebaseUidByUUID";
+import Animated, { useAnimatedRef, useAnimatedStyle, useScrollViewOffset, withSpring } from "react-native-reanimated";
+import NoComment from "./NoComment/NoComment";
 
 type Props = {
   uuid: string;
@@ -33,6 +35,7 @@ export default function UserInfo(props: Props) {
 
   // 資料來自崩鐵
   const { data: hsrInGameInfo } = useHsrInGameInfo(profileUUID);
+
   // 資料來自 firebase 資料庫
   const { data: userData } = useUserByUUID(profileUUID);
   const { data: userMocData } = useUserMocByUUID(profileUUID);
@@ -51,31 +54,48 @@ export default function UserInfo(props: Props) {
   const timeString =
     formatTimeDurationSimple(
       Date.now() / 1000 -
-      new Date(auth().currentUser?.metadata.lastSignInTime || "").getTime() / 1000
+      Number(userData?.last_login?.seconds)
     ) + "前";
 
-  // 检查返回的字符串是否为纯数字
-  const parts = timeString.split(/([A-Za-z\u4e00-\u9fa5]+)/);
 
+  // 用戶留言
+  const parts = timeString.split(/([A-Za-z\u4e00-\u9fa5]+)/);
   const firebaseUID = useFirebaseUidByUUID(profileUUID);
   const { data: userComments } = useUserComments(firebaseUID || "");
+
+  const aref = useAnimatedRef<Animated.ScrollView>();
+  const scrollHandler = useScrollViewOffset(aref);
+
+  const headerAnimatedStyles = useAnimatedStyle(() => {
+    if (scrollHandler.value > 0) {
+      return {
+        opacity: withSpring(0),
+      };
+    } else {
+      return {
+        opacity: withSpring(1),
+      };
+    }
+  });
 
   return (
     <View className="z-30">
       <Header2 rightBtn={isOwner ? <ShareBtn /> : null}>
-        <TopTabs
-          tabs={[
-            { name: "遊戲數據", value: "game-data" },
-            { name: "動態", value: "more-info" },
-          ]}
-          active={activeTab}
-          onChange={(a) => {
-            setActiveTab(a);
-          }}
-        />
+        <Animated.View style={headerAnimatedStyles}>
+          <TopTabs
+            tabs={[
+              { name: "遊戲數據", value: "game-data" },
+              { name: "動態", value: "more-info" },
+            ]}
+            active={activeTab}
+            onChange={(a) => {
+              setActiveTab(a);
+            }}
+          />
+        </Animated.View>
       </Header2>
-      <ScrollView style={{ height: Dimensions.get("screen").height }}>
-        {hsrInGameInfo && userData && userMocData ? (
+      <Animated.ScrollView ref={aref} style={{ height: Dimensions.get("screen").height }}>
+        {hsrInGameInfo  ? (
           <AnimatedView
             className="mt-28"
             style={{
@@ -195,9 +215,9 @@ export default function UserInfo(props: Props) {
                 gap: 8,
               }}
             >
-              {userComments?.comments?.map((comment: any) => (
+              {userComments?.comments ? userComments?.comments?.map((comment: any) => (
                 <Comment {...comment} key={comment.id} />
-              ))}
+              )) : <NoComment />}
             </View>
             {/* 由 Stargazer 製作 */}
             {isGameDataPage && (<View className="mb-16 mt-0">
@@ -208,7 +228,7 @@ export default function UserInfo(props: Props) {
         ) : (
           <Loading />
         )}
-      </ScrollView>
+      </Animated.ScrollView>
     </View>
   );
 }

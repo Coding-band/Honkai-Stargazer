@@ -14,16 +14,12 @@ import {
 } from "../../../../utils/calculator/getMaterialData";
 import { map } from "lodash";
 import Material from "../../../../../assets/images/images_map/material";
-
-const HPIcon = require("../../../../../assets/icons/HP.png");
-const STRIcon = require("../../../../../assets/icons/STR.png");
-const DEFIcon = require("../../../../../assets/icons/DEF.png");
-const DEXIcon = require("../../../../../assets/icons/DEX.png");
-// const ELIcon = require("../../../../../assets/icons/EL.png");
-const AggroIcon = require("../../../../../assets/icons/Aggro.png");
-const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
+import AttributeImage from "../../../../../assets/images/images_map/attributeImage";
+
+const AggroIcon = require("../../../../../assets/icons/Aggro.png");
+const DownArrowIcon = require("../../../../../assets/icons/DownArrow.svg");
 
 export default React.memo(function CharAttribute() {
   const loaded = useDelayLoad(100);
@@ -138,25 +134,25 @@ export default React.memo(function CharAttribute() {
             {/* 屬性數值 */}
             <View className="mt-4" style={{ flexDirection: "row", gap: 12 }}>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={HPIcon} />
+                <Image className="w-6 h-6" source={AttributeImage.hp} />
                 <Text className="text-white text-[16px] font-medium">
                   {attributes.hp.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={STRIcon} />
+                <Image className="w-6 h-6" source={AttributeImage.atk} />
                 <Text className="text-white text-[16px] font-medium">
                   {attributes.atk.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={DEFIcon} />
+                <Image className="w-6 h-6" source={AttributeImage.def} />
                 <Text className="text-white text-[16px] font-medium">
                   {attributes.def.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={DEXIcon} />
+                <Image className="w-6 h-6" source={AttributeImage.spd} />
                 <Text className="text-white text-[16px] font-medium">
                   {attributes.speed.toFixed(0)}
                 </Text>

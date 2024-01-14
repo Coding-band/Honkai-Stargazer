@@ -44,6 +44,9 @@ export default function CommentItem({
     userCharacters?.filter((char) => char.id.toString() === charOfficalId)[0]
       ?.rank === 6;
 
+  console.log(userCharacters?.filter((char) => char.id.toString() === charOfficalId)[0]
+    ?.rank)
+
   const handleCopy = useCopyToClipboard();
   const handleCopyTag = () => {
     setInput(input + ` @${username}`.trim() + " ");

@@ -5,5 +5,5 @@ export default function getServerFromUUID(uuid: string) {
   else if (uuid.startsWith("7")) return "europe";
   else if (uuid.startsWith("6")) return "america";
   else if (uuid.startsWith("9")) return "twhkmo";
-  else return "cn1";
+  else return null;
 }

@@ -1,4 +1,5 @@
 import {
+  Alien,
   BaseballCap,
   FilmSlate,
   MapTrifold,
@@ -121,5 +122,11 @@ export const SCREENS = {
     getName: (lang: AppLanguage) => "",
     getShortName: (lang: AppLanguage) => "",
     icon: null,
+  },
+  UIDSearchPage: {
+    id: "UIDSearch",
+    getName: (lang: AppLanguage) => "UID查詢",
+    getShortName: (lang: AppLanguage) => "UID查詢",
+    icon: Alien,
   },
 };

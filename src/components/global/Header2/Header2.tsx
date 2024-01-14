@@ -13,6 +13,7 @@ type Props = {
   rightBtn?: React.ReactNode;
   onPress?: (e: GestureResponderEvent) => void;
   onBack?: () => void;
+  style?: any
 };
 
 export default function Header2(props: Props) {
@@ -28,6 +29,7 @@ export default function Header2(props: Props) {
       className="absolute w-full z-50"
       onPress={props.onPress}
       pointerEvents="box-none"
+      style={props.style}
     >
       <View
         className="w-full h-[110px]"

@@ -87,6 +87,7 @@ export default function UserCharLightcone() {
                     color: "#DDD",
                     fontFamily: "HY65",
                     width: 220,
+                    lineHeight:20,
                   }}
                 >
                   {formatDesc(

@@ -21,13 +21,16 @@ import EventScreen from "../screens/EventScreen";
 import CodeScreen from "../screens/CodeScreen";
 import UserInfoScreen from "../screens/UserInfoScreen";
 import UserCharDetailScreen from "../screens/UserCharDetailScreen";
+import UIDSearchScreen from "../screens/UIDSearchScreen";
 
 export default function Navigation({
   initialRouteName,
 }: {
   initialRouteName: string;
 }) {
+
   const Stack = createNativeStackNavigator();
+
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -127,6 +130,11 @@ export default function Navigation({
         <Stack.Screen
           name={SCREENS.UserCharDetailPage.id}
           component={UserCharDetailScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.UIDSearchPage.id}
+          component={UIDSearchScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

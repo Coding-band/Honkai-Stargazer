@@ -19,9 +19,15 @@ type Props = {
 };
 
 export default React.memo(function TracePopUp({ id, onClose }: Props) {
-  const { charFullData } = useCharData();
+  const navigation = useNavigation();
   const { language } = useAppLanguage();
 
+  const { setFixed } = useContext(FixedContext)!;
+  const currentRoute =
+    navigation.getState().routes[navigation.getState().routes.length - 1];
+  const route = useRoute();
+
+  const { charFullData } = useCharData();
   const charSkillGrouping = charFullData?.skillGrouping;
   const charSkill = useMemo(
     () =>
@@ -32,12 +38,15 @@ export default React.memo(function TracePopUp({ id, onClose }: Props) {
   );
 
   const [skillLevel, setSkillLevel] = useState(0);
+  useEffect(() => {
+    if (skillLevel + 1 >= charSkill?.levelData?.length) {
+      setSkillLevel(charSkill?.levelData?.length - 1)
+    } else {
+      setSkillLevel(skillLevel)
+    }
+  }, [skillLevel, charSkill?.levelData?.length])
 
-  const { setFixed } = useContext(FixedContext)!;
-  const navigation = useNavigation();
-  const currentRoute =
-    navigation.getState().routes[navigation.getState().routes.length - 1];
-  const route = useRoute();
+  console.log(1)
 
   useEffect(() => {
     if (!charSkill || currentRoute.key !== route.key) {
@@ -58,7 +67,7 @@ export default React.memo(function TracePopUp({ id, onClose }: Props) {
                     alignSelf: "flex-start",
                   }}
                 >
-                  <Text className="font-[HY65] text-[14px] text-white">
+                  <Text className="font-[HY65] text-[14px] text-white leading-5">
                     {charSkill.typeDescHash}
                   </Text>
                 </View>
@@ -68,7 +77,7 @@ export default React.memo(function TracePopUp({ id, onClose }: Props) {
                     justifyContent: "space-between",
                   }}
                 >
-                  <Text className="text-[#DD8200] text-[14px] font-[HY65]">
+                  <Text className="text-[#DD8200] text-[14px] font-[HY65] leading-5">
                     {charSkill.tagHash}
                   </Text>
                   <Text className="text-[#666] text-[14px] font-[HY65]">
@@ -96,16 +105,16 @@ export default React.memo(function TracePopUp({ id, onClose }: Props) {
                   />
                 </View>
                 <HtmlText
-                  style={{ fontSize: 14, color: "#666", fontFamily: "HY65" }}
+                  style={{ fontSize: 14, color: "#666", fontFamily: "HY65", lineHeight: 20 }}
                 >
                   {formatDesc(
                     charSkill.descHash,
                     charSkill.levelData[skillLevel]?.params
                   )}
                 </HtmlText>
-                <View className="mt-[-12px]">
+                {/* <View className="mt-[-12px]">
                   <MaterialList />
-                </View>
+                </View> */}
               </View>
             }
           />

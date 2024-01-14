@@ -25,7 +25,7 @@ export default function PopUpCard(props: Props) {
           alignItems: "center",
         }}
       >
-        <Text className="font-[HY65] text-[20px]">{props.title}</Text>
+        <Text className="font-[HY65] text-[20px] leading-8">{props.title}</Text>
         <TouchableOpacity
           onPress={() => {
             props.onClose && props.onClose();

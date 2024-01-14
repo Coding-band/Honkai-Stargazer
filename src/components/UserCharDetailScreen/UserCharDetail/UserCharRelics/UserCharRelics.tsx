@@ -80,8 +80,8 @@ export default function UserCharRelics() {
         </View>
       </View>
       <View style={{ alignItems: "center", gap: 2 }}>
-        <Text className="text-text font-[HY65] text-[18px]">
-          超過全服 99% 用户
+        <Text className="text-text font-[HY65] text-[18px] leading-5">
+          用戶量不足 暫無排行
         </Text>
         <Text className="text-[#FFFFFF60] font-[HY65] text-[12px] leading-4">
           （數據來源於已登入用戶）

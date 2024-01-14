@@ -13,7 +13,7 @@ export default function NoPublicData() {
           className="w-[144px] h-[144px]"
           source={require("./images/04.png")}
         />
-        <Text className="text-text font-[HY65] text-[16px]">
+        <Text className="text-text font-[HY65] text-[16px] leading-5">
           玩家没有公開信息哦
         </Text>
       </View>

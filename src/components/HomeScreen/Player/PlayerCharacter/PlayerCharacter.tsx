@@ -15,7 +15,7 @@ export default function PlayerCharacter() {
   const { data: inGameInfo } = useHsrInGameInfo(hsrUUID);
   return (
     <View className="flex flex-row gap-1">
-      {inGameInfo?.characters?.map((char: any, i: number) => (
+      {inGameInfo?.characters ? inGameInfo?.characters?.map((char: any, i: number) => (
         <TouchableOpacity
           key={char.id}
           activeOpacity={0.35}
@@ -36,7 +36,7 @@ export default function PlayerCharacter() {
             }
           />
         </TouchableOpacity>
-      ))}
+      )) : <View className="w-[30px] h-[30px] bg-[#D9D9D9] rounded-full overflow-hidden"></View>}
     </View>
   );
 }

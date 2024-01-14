@@ -20,7 +20,7 @@ export function formatTimeDuration(second: number) {
   let formattedTime = "";
   if (days > 0) formattedTime += `${days}天`;
   if (hours > 0) formattedTime += `${hours}小時`;
-  if (minutes > 0) formattedTime += `${minutes}分鐘`;
+  if (minutes > 0) formattedTime += `${minutes}分`;
   // if (seconds > 0) formattedTime += `${seconds}秒`;
 
   return formattedTime || "0秒"; // 如果所有時間單位都為0，則返回 '0秒'
