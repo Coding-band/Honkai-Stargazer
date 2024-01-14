@@ -194,16 +194,16 @@ export default function UserInfo(props: Props) {
                   }}
                 >
                   <InfoItem
-                    title={"活躍天數"}
+                    title={LOCALES[language].UserInfoGameActiveDays}
                     value={userData?.active_days || 0}
                   />
                   <InfoItem
-                    title={"達成成就"}
+                    title={LOCALES[language].UserInfoGameAchievements}
                     value={hsrInGameInfo?.player?.space_info?.achievement_count}
                   />
-                  <InfoItem title={"戰利品"} value={userData?.chest_num} />
+                  <InfoItem title={LOCALES[language].UserInfoGameOpenedChests} value={userData?.chest_num} />
                   <InfoItem
-                    title={"忘卻之庭"}
+                    title={LOCALES[language].UserInfoGameForgottenHall}
                     value={`${latestUserMocData?.max_floor || 0}/12`}
                   />
                 </View>

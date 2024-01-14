@@ -177,5 +177,7 @@ export const strings = {
   UserCharLevelLv: "Lv.",
   UserCharLevelSoul: "Eidolon",
   ProducedByStargazer: "Produced By Stargazer",
+
+  //Add in 20240114 - After 2.0.15
   NoOnlineData: "No record",
 };

@@ -175,5 +175,7 @@ export const strings = {
   UserCharLevelLv: "等级",
   UserCharLevelSoul: "星魂",
   ProducedByStargazer: "由 Stargazer 制作",
+  
+  //Add in 20240114 - After 2.0.15
   NoOnlineData: "無上線紀錄",
 };
