@@ -18,14 +18,14 @@ export default function LcDescription() {
 
   return (
     <View style={{ alignItems: "center" }}>
-      <PageHeading Icon={Info}>{LOCALES[language].SkillDesc}</PageHeading>
+      <PageHeading Icon={Info}>{LOCALES[language].LightconeEffect}</PageHeading>
       <View className="w-full">
         <Text className="text-text font-[HY65] text-[20px] leading-[40px]">
           {lcFullData.skill.name}
         </Text>
         <View
           className="pb-3"
-          style={{ flexDirection: "row", justifyContent: "space-between" }}
+          style={{ flexDirection: "row", justifyContent: "space-between",alignItems:"center" }}
         >
           <Text className="text-text font-[HY65] text-[16px]">
             Lv.{skillLevel + 1}/5

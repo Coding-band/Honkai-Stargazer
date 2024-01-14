@@ -60,10 +60,10 @@ export default function UserCharAttribute() {
       key: "def",
       icon: AttributeImage.def,
       attr: inGameCharData?.attributes.filter(
-        (attr: any) => attr.field === "hp"
+        (attr: any) => attr.field === "def"
       )[0]?.display,
       addi: inGameCharData?.additions.filter(
-        (attr: any) => attr.field === "hp"
+        (attr: any) => attr.field === "def"
       )[0]?.display,
       value: Math.floor(
         (inGameCharData?.attributes.filter(
@@ -94,7 +94,7 @@ export default function UserCharAttribute() {
     },
     {
       key: "energy",
-      icon: AttributeImage.sp_rate,
+      icon: AttributeImage.energy,
       attr: charFullData?.spRequirement,
       addi: null,
       value: charFullData?.spRequirement,

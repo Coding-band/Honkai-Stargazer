@@ -149,7 +149,7 @@ export const strings = {
   RelicAffix_effect_res: "Effect RES",
   RelicAffix_break_dmg: "Break Effect",
   RelicAffix_heal_rate: "Healing Boost",
-  RelicAffix_energy: "Energy Recover%",
+  RelicAffix_energy: "Energy Limit",
   RelicAffix_physical_dmg: "Physical DMG Bonus",
   RelicAffix_wind_dmg: "Wind DMG Bonus",
   RelicAffix_fire_dmg: "Pyro DMG Bonus",

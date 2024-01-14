@@ -15,7 +15,7 @@ export default function LcStory() {
   return (
     <View style={{ alignItems: "center" }}>
       <PageHeading Icon={ChatsCircle}>
-        {LOCALES[language].SkillDetail}
+        {LOCALES[language].LightconeStory}
       </PageHeading>
       <HtmlText style={{ lineHeight: 24, color: "white", fontFamily: "HY65" }}>
         {lcFullData.descHash || ""}

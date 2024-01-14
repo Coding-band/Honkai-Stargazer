@@ -53,7 +53,7 @@ export default function UserCharDetail() {
   const aref = useAnimatedRef<Animated.ScrollView>();
   const scrollHandler = useScrollViewOffset(aref);
 
-  const contentAnimatedStyles = useAnimatedStyle(() => {
+  const contentAnimatedStyle = useAnimatedStyle(() => {
     if (scrollHandler.value > 0) {
       return {
         opacity: withSpring(0),
@@ -65,23 +65,37 @@ export default function UserCharDetail() {
     }
   });
 
+  const playerNameAnimatedStyle = useAnimatedStyle(() => {
+    return { display: scrollHandler.value > 250 ? "none" : "flex" };
+  });
+
+  const playerName2AnimatedStyle = useAnimatedStyle(() => {
+    return { display: scrollHandler.value < 250 ? "none" : "flex" };
+  });
+
   if (!inGameInfo) return <Loading />;
   return (
     <View className="z-30">
       <Header2 rightBtn={isOwner ? <ShareBtn /> : null} />
       <View className="mt-12 z-40" style={{ alignItems: "center", gap: 4 }}>
         {/* 用戶名 */}
-        <Text
+        <Animated.Text
           className="text-[#FFFFFF] font-[HY65] text-[16px] leading-5"
-          style={globalStyles.textShadow}
+          style={[globalStyles.textShadow, playerNameAnimatedStyle]}
         >
           {inGameInfo?.player?.nickname}
-        </Text>
+        </Animated.Text>
+        <Animated.Text
+          className="text-[#FFFFFF] font-[HY65] text-[16px] leading-5"
+          style={[globalStyles.textShadow, playerName2AnimatedStyle]}
+        >
+          {inGameInfo?.player?.nickname} · {charFullData.name}
+        </Animated.Text>
         {/* UUID & 伺服器 */}
         <UUIDBox uuid={profileUUID} />
       </View>
       <Animated.Image
-        style={contentAnimatedStyles}
+        style={contentAnimatedStyle}
         source={CharacterImage[charId].fade}
         className="absolute w-full h-[580px]"
       />

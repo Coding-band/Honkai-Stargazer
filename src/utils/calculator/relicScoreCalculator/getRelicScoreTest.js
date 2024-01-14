@@ -1,7 +1,7 @@
 const scoreWeight = require("./data/relicWeightList.json");
 const demoCharData = require("./data/charDataDemo.json");
 
-function getRelicScore(){
+function getRelicScore() {
   /**
   * 初始化
   **/
@@ -23,27 +23,27 @@ function getRelicScore(){
   }
   //遺器次序
   const relicOrderExpect = ["Head", "Hands", "Body", "Shoes", "Ball", "Link"];
-  const relicRarityExpectPercent = [1,0.8,0.6,0.4,0.2];
+  const relicRarityExpectPercent = [1, 0.8, 0.6, 0.4, 0.2];
   let relicOrder = [];
   let relicRarity = [];
   // 主詞條數據
   const relicMainValue = charRelicsData.map((relic) => {
-    const tmpVar = relic.icon.split(".")[0].replace("icon/relic/","");
-    const relicFindPosition = (tmpVar[0] === "3" ? Number(tmpVar[tmpVar.length - 1])+4 : Number(tmpVar[tmpVar.length - 1]));
-    
+    const tmpVar = relic.icon.split(".")[0].replace("icon/relic/", "");
+    const relicFindPosition = (tmpVar[0] === "3" ? Number(tmpVar[tmpVar.length - 1]) + 4 : Number(tmpVar[tmpVar.length - 1]));
+
     relicOrder.push(relicOrderExpect[relicFindPosition])
     relicRarity.push(relic.rarity)
 
-    return {[relic.main_affix.type]: relic.main_affix.value}
+    return { [relic.main_affix.type]: relic.main_affix.value }
   });
-  
+
   // 副詞條數據
   const relicSubValue = charRelicsData.map((relic) =>
     relic.sub_affix.map((sub) => ({
       [sub.type]: sub.value,
     }))
   );
-  console.log(relicMainValue)
+
   // 遺器等級
   const relicLevelValue = charRelicsData.map((relic) => relic.level);
 
@@ -196,16 +196,16 @@ function getRelicScore(){
           break;
         }
       }
-      
+
       //把得分放入指定遺器内副詞條總分
       relicSubFinalScore[i] += tmpScore;
       return { [relicOrder[i] + "_sub" + j]: tmpScore };
     });
   });
   //單一遺器的總分
-  
+
   const relicEachFinalScore = relicSubFinalScore.map((val, i) => {
-    return { [relicOrder[i]]: (val + relicMainScore[i][relicOrder[i]]) * relicRarityExpectPercent[5-relicRarity[i]] };
+    return { [relicOrder[i]]: (val + relicMainScore[i][relicOrder[i]]) * relicRarityExpectPercent[5 - relicRarity[i]] };
   });
 
   //所有遺器合共的總分 !!!
@@ -218,7 +218,7 @@ function getRelicScore(){
   //你只需要 relicAllFinalScore 去計算評價等級 (等級範圍明天聊)
   return {
     mainScore: relicMainScore,
-    subScore : relicSubScore,
+    subScore: relicSubScore,
     eachScore: relicEachFinalScore,
     totalScore: relicAllFinalScore,
   };
@@ -226,4 +226,3 @@ function getRelicScore(){
 }
 
 
-console.log(getRelicScore())

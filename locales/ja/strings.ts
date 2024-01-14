@@ -146,7 +146,7 @@ export const strings = {
   RelicAffix_effect_res: "効果抵抗",
   RelicAffix_break_dmg: "撃破特効",
   RelicAffix_heal_rate: "治癒量",
-  RelicAffix_energy: "EP回復効率",
+  RelicAffix_energy: "EP上限",
   RelicAffix_physical_dmg: "物理属性与ダメージ",
   RelicAffix_wind_dmg: "風属性与ダメージ",
   RelicAffix_fire_dmg: "炎属性与ダメージ",

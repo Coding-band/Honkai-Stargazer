@@ -36,7 +36,7 @@ export default function Comment(props: Props) {
       activeOpacity={0.6}
       onPress={() => {
         // @ts-ignore
-        navigation.navigate(SCREENS.CharacterPage.id, {
+        navigation.push(SCREENS.CharacterPage.id, {
           id: charId,
           commentId: props.id,
         });
@@ -54,7 +54,7 @@ export default function Comment(props: Props) {
         </TouchableOpacity>
         <View style={{ gap: 2, flex: 1 }}>
           <View style={{ flexDirection: "row", gap: 10, alignItems: "center" }}>
-            <TouchableWithoutFeedback onPress={() => {}}>
+            <TouchableWithoutFeedback onPress={() => { }}>
               <Text className="text-[#CCC] text-[12px] font-[HY65] leading-5">
                 {`在「${getCharFullData(charId, textLanguage)?.name}」的評論區`}
               </Text>

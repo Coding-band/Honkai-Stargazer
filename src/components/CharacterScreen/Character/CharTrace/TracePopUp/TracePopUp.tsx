@@ -14,11 +14,12 @@ import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../../locales";
 
 type Props = {
-  id: number;
+  type?: "inner" | "outer" | "edge";
+  data: any;
   onClose: () => void;
 };
 
-export default React.memo(function TracePopUp({ id, onClose }: Props) {
+export default React.memo(function TracePopUp({ type, data, onClose }: Props) {
   const navigation = useNavigation();
   const { language } = useAppLanguage();
 
@@ -27,76 +28,88 @@ export default React.memo(function TracePopUp({ id, onClose }: Props) {
     navigation.getState().routes[navigation.getState().routes.length - 1];
   const route = useRoute();
 
-  const { charFullData } = useCharData();
-  const charSkillGrouping = charFullData?.skillGrouping;
-  const charSkill = useMemo(
-    () =>
-      charFullData?.skills?.filter(
-        (skill) => skill.id === (id > 0 && charSkillGrouping?.[id - 1][0])
-      )[0],
-    [charFullData, id, charSkillGrouping]
-  );
+  let skillData = null;
+  if (type === "edge") {
+    skillData = data?.embedBuff;
+  } else if (type === "outer") {
+    skillData = data?.embedBonusSkill;
+  } else {
+    skillData = data;
+  }
 
   const [skillLevel, setSkillLevel] = useState(0);
   useEffect(() => {
-    if (skillLevel + 1 >= charSkill?.levelData?.length) {
-      setSkillLevel(charSkill?.levelData?.length - 1)
-    } else {
-      setSkillLevel(skillLevel)
-    }
-  }, [skillLevel, charSkill?.levelData?.length])
+    console.log(skillData?.levelData);
 
-  console.log(1)
+    if (!skillData?.levelData) {
+      setSkillLevel(0);
+    } else if (skillLevel + 1 >= skillData?.levelData?.length) {
+      setSkillLevel(skillData?.levelData?.length - 1);
+    } else {
+      setSkillLevel(skillLevel);
+    }
+  }, [skillLevel, skillData?.levelData?.length]);
 
   useEffect(() => {
-    if (!charSkill || currentRoute.key !== route.key) {
+    if (!data || currentRoute.key !== route.key) {
       setFixed(null);
     } else {
       setFixed(
         <View className="w-[350px] mb-6">
           <PopUpCard
             onClose={onClose}
-            title={charSkill.name}
+            title={skillData?.name}
             content={
               <View className="px-4 py-[12px]" style={{ gap: 6 }}>
+                {skillData?.typeDescHash && (
+                  <View
+                    className="px-3 h-[30px] bg-[#666] rounded-[40px]"
+                    style={{
+                      justifyContent: "center",
+                      alignItems: "center",
+                      alignSelf: "flex-start",
+                    }}
+                  >
+                    <Text className="font-[HY65] text-[14px] text-white leading-5">
+                      {skillData?.typeDescHash}
+                    </Text>
+                  </View>
+                )}
                 <View
-                  className="px-3 h-[30px] bg-[#666] rounded-[40px]"
                   style={{
-                    justifyContent: "center",
-                    alignItems: "center",
-                    alignSelf: "flex-start",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
                   }}
                 >
-                  <Text className="font-[HY65] text-[14px] text-white leading-5">
-                    {charSkill.typeDescHash}
-                  </Text>
+                  {skillData?.tagHash && (
+                    <Text className="text-[#DD8200] text-[14px] font-[HY65] leading-5">
+                      {skillData?.tagHash}
+                    </Text>
+                  )}
+                  {skillData?.energy && (
+                    <Text className="text-[#666] text-[14px] font-[HY65]">
+                      {LOCALES[language].TraceEnergyEarn}
+                      {skillData?.energy}
+                    </Text>
+                  )}
                 </View>
                 <View
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
-                  }}
-                >
-                  <Text className="text-[#DD8200] text-[14px] font-[HY65] leading-5">
-                    {charSkill.tagHash}
-                  </Text>
-                  <Text className="text-[#666] text-[14px] font-[HY65]">
-                    {LOCALES[language].TraceEnergyEarn}
-                    {charSkill.energy}
-                  </Text>
-                </View>
-                <View
-                  style={{
-                    flexDirection: "row",
-                    justifyContent: "space-between",
                     alignItems: "center",
                   }}
                 >
-                  <Text className="text-[16px] text-[#222222]">
-                    Lv.{skillLevel + 1}/{charSkill.levelData.length}
-                  </Text>
+                  {skillData?.levelData?.length &&
+                  skillData?.levelData?.length !== 1 ? (
+                    <Text className="text-[16px] text-[#222222]">
+                      Lv.{skillLevel + 1}/{skillData?.levelData?.length}
+                    </Text>
+                  ) : (
+                    <Text className="text-[16px] text-[#222222]">Lv.1/1</Text>
+                  )}
                   <Sliderbar
-                    point={charSkill.levelData.length}
+                    point={skillData?.levelData?.length}
                     hasDot={false}
                     width={250}
                     bgColor="#00000010"
@@ -104,14 +117,30 @@ export default React.memo(function TracePopUp({ id, onClose }: Props) {
                     onChange={setSkillLevel}
                   />
                 </View>
-                <HtmlText
-                  style={{ fontSize: 14, color: "#666", fontFamily: "HY65", lineHeight: 20 }}
+                <Text
+                  style={{
+                    fontSize: 14,
+                    color: "#666",
+                    fontFamily: "HY65",
+                    lineHeight: 20,
+                  }}
                 >
-                  {formatDesc(
-                    charSkill.descHash,
-                    charSkill.levelData[skillLevel]?.params
+                  {skillData?.descHash && (
+                    <HtmlText>
+                      {formatDesc(
+                        skillData?.descHash,
+                        skillData?.levelData?.[skillLevel]?.params
+                      )}
+                    </HtmlText>
                   )}
-                </HtmlText>
+                  {skillData?.statusList && (
+                    <Text>
+                      <Text>{skillData?.statusList[0].key}</Text>
+                      <Text>提升</Text>
+                      <Text>{skillData?.statusList[0].value * 100}%。</Text>
+                    </Text>
+                  )}
+                </Text>
                 {/* <View className="mt-[-12px]">
                   <MaterialList />
                 </View> */}
@@ -121,7 +150,7 @@ export default React.memo(function TracePopUp({ id, onClose }: Props) {
         </View>
       );
     }
-  }, [charSkill, charSkill?.levelData?.length, skillLevel, id]);
+  }, [data, skillData?.levelData?.length, skillLevel]);
 
   return <></>;
 });

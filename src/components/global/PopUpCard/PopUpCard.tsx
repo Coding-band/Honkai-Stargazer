@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Platform } from "react-native";
 import React from "react";
 import BlurView from "../BlurView/BlurView";
 import { Image } from "expo-image";
@@ -13,8 +13,9 @@ type Props = {
 export default function PopUpCard(props: Props) {
   return (
     <BlurView
-      intensity={250}
-      style={{ backgroundColor: "#f7f7f7" }}
+      disable={Platform.OS === "android"}
+      intensity={60}
+      style={{ backgroundColor: "#F3F9FF" }}
       className="w-full rounded-[4px] rounded-tr-[24px] overflow-hidden"
     >
       <View

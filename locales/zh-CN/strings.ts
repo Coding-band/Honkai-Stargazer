@@ -148,7 +148,7 @@ export const strings = {
   RelicAffix_effect_res: "效果抗性",
   RelicAffix_break_dmg: "击破特攻",
   RelicAffix_heal_rate: "治疗量加成",
-  RelicAffix_energy: "能量恢复效率",
+  RelicAffix_energy: "能量上限",
   RelicAffix_physical_dmg: "物理属性伤害加成",
   RelicAffix_wind_dmg: "风属性伤害加成",
   RelicAffix_fire_dmg: "火属性伤害加成",
@@ -175,7 +175,11 @@ export const strings = {
   UserCharLevelLv: "等级",
   UserCharLevelSoul: "星魂",
   ProducedByStargazer: "由 Stargazer 制作",
-  
+
   //Add in 20240114 - After 2.0.15
   NoOnlineData: "無上線紀錄",
+
+  //Add in 20240115
+  LightconeEffect: "光錐效果",
+  LightconeStory: "光錐故事",
 };
