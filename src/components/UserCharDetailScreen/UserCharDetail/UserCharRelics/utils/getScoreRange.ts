@@ -8,7 +8,8 @@ export default function getScoreRange(score: number) {
   if (score < 20) return "B";
   if (score < 28) return "A";
   if (score < 36) return "S";
-  if (score < 45) return "SS";
+  if (score >= 36) return "SS";
+  //if (score < 45) return "SS";
   //if (score >= 45) return "Voc";
   return "D";
 }
