@@ -65,7 +65,7 @@ export default function UIDSearch() {
         </View>
 
         <DraggableFlatList
-          containerStyle={{ height: Dimensions.get("screen").height - 260 }}
+          containerStyle={{ height: Dimensions.get("screen").height - 260, }}
           data={uidHistory}
           onDragEnd={({ data }) => { setUidHistory(data) }}
           keyExtractor={(item) => item}
@@ -78,7 +78,7 @@ export default function UIDSearch() {
                   navigation.navigate(SCREENS.UserInfoPage.id, { uuid: item })
                 }}
 
-                delayLongPress={50}
+                delayLongPress={200}
                 className='mb-4'
                 onLongPress={drag}
                 disabled={isActive}
@@ -87,6 +87,7 @@ export default function UIDSearch() {
               </TouchableOpacity>
             )
           }}
+
         />
 
       </View>
