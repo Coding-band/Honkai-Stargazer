@@ -43,7 +43,7 @@ export const strings = {
   StaminaIsFull: "Full",
   Map: "Map",
   Login: "Login",
-  Logout: "登出",
+  Logout: "Logout",
   Expedition: "Exped.",
   ExpeditionFullName: "Expedition",
   Setting: "Settings",
@@ -160,4 +160,21 @@ export const strings = {
 
   // toast
   PleaseLogin: "Please login first！",
+
+  //Add in 20240114
+  UserInfoLastLoginAt: "${1} Before",
+  UserInfoGameData: "Game Data",
+  UserInfoStatus: "Status",
+  UserInfoGamePlayerLevel: "Trailblaze Lvl.",
+  UserInfoCountComments: "Comments",
+  UserInfoGameWorldLevel:"Equilibrium Lvl.",
+  UserInfoLastOnlineTime: "Last Online At",
+  UserInfoOwnedCharacters: "Characters",
+  UserInfoGameActiveDays: "Active Days",
+  UserInfoGameAchievements: "Achievements",
+  UserInfoGameOpenedChests: "Treasures",
+  UserInfoGameForgottenHall: "Forgotten Hall",
+  UserCharLevelLv: "Lv.",
+  UserCharLevelSoul: "Eidolon",
+  ProducedByStargazer: "Produced By Stargazer",
 };

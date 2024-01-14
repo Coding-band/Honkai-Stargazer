@@ -24,6 +24,8 @@ import useUserComments from "../../../firebase/hooks/UserComments/useUserComment
 import useFirebaseUidByUUID from "../../../firebase/hooks/FirebaseUid/useFirebaseUidByUUID";
 import Animated, { useAnimatedRef, useAnimatedStyle, useScrollViewOffset, withSpring } from "react-native-reanimated";
 import NoComment from "./NoComment/NoComment";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../locales";
 
 type Props = {
   uuid: string;
@@ -32,6 +34,7 @@ type Props = {
 export default function UserInfo(props: Props) {
   const profileUUID = props.uuid;
   const hsrUUID = useHsrUUID();
+  const { language } = useAppLanguage();
 
   // 資料來自崩鐵
   const { data: hsrInGameInfo } = useHsrInGameInfo(profileUUID);
@@ -51,6 +54,7 @@ export default function UserInfo(props: Props) {
   const [activeTab, setActiveTab] = useState("game-data");
   const isGameDataPage = activeTab === "game-data";
 
+  //UserInfoLastLoginAt
   const timeString =
     formatTimeDurationSimple(
       Date.now() / 1000 -
@@ -84,8 +88,8 @@ export default function UserInfo(props: Props) {
         <Animated.View style={headerAnimatedStyles}>
           <TopTabs
             tabs={[
-              { name: "遊戲數據", value: "game-data" },
-              { name: "動態", value: "more-info" },
+              { name: LOCALES[language].UserInfoGameData, value: "game-data" },
+              { name: LOCALES[language].UserInfoStatus, value: "more-info" },
             ]}
             active={activeTab}
             onChange={(a) => {
@@ -131,12 +135,12 @@ export default function UserInfo(props: Props) {
               }}
             >
               <InfoItem
-                title={isGameDataPage ? "開拓等級" : "留言數"}
+                title={isGameDataPage ? LOCALES[language].UserInfoGamePlayerLevel : LOCALES[language].UserInfoCountComments}
                 value={isGameDataPage ? hsrInGameInfo?.player?.level : userComments?.comments_num || 0}
               />
               <View className="w-[1px] h-6 bg-[#F3F9FF40]"></View>
               <InfoItem
-                title={isGameDataPage ? "均衡等级" : "上次上線"}
+                title={isGameDataPage ? LOCALES[language].UserInfoGameWorldLevel : LOCALES[language].UserInfoLastOnlineTime}
                 value={
                   isGameDataPage ? (
                     hsrInGameInfo?.player?.world_level
@@ -160,7 +164,7 @@ export default function UserInfo(props: Props) {
                 <>
                   <View className="w-[1px] h-6 bg-[#F3F9FF40]"></View>
                   <InfoItem
-                    title="擁有角色"
+                    title={LOCALES[language].UserInfoOwnedCharacters}
                     value={hsrInGameInfo?.player?.space_info?.avatar_count}
                   />
                 </>

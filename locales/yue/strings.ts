@@ -158,4 +158,21 @@ export const strings = {
   RelicAffix_imaginary_dmg: "虛數屬性傷害加成",
   // toast
   PleaseLogin: "請登入先！",
+  
+  //Add in 20240114
+  UserInfoLastLoginAt: "${1}前",
+  UserInfoGameData: "遊戲數據",
+  UserInfoStatus: "動態",
+  UserInfoGamePlayerLevel: "開拓等級",
+  UserInfoCountComments: "留言數",
+  UserInfoGameWorldLevel:"均衡等级",
+  UserInfoLastOnlineTime: "上次上線",
+  UserInfoOwnedCharacters: "擁有角色",
+  UserInfoGameActiveDays: "活躍天數",
+  UserInfoGameAchievements: "達成成就",
+  UserInfoGameOpenedChests: "戰利品",
+  UserInfoGameForgottenHall: "忘卻之庭",
+  UserCharLevelLv: "等級",
+  UserCharLevelSoul: "星魂",
+  ProducedByStargazer: "係Stargazer入面整出嚟",
 };
