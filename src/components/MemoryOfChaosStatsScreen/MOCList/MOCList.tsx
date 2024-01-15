@@ -72,7 +72,6 @@ export default function MOCList() {
   }));
 
   // state
-
   const aref = useAnimatedRef<Animated.ScrollView>();
   const scrollHandler = useScrollViewOffset(aref);
 
