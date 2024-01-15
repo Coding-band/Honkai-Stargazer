@@ -22,12 +22,12 @@ export default function UserCharRelics() {
   return (
     <View style={{ gap: 20 }}>
       <View
+        className="px-4"
         style={{
           flexDirection: "row",
           flexWrap: "wrap",
           columnGap: 24,
           rowGap: 0,
-          justifyContent: "center",
         }}
       >
         {userRelicsData.map((userRelicData, i) => (

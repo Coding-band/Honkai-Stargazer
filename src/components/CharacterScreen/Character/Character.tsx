@@ -17,11 +17,8 @@ import Animated, {
 } from "react-native-reanimated";
 import CharImageFull from "./CharImageFull/CharImageFull";
 import CharEidolon from "./CharEidolon/CharEidolon";
-import { ParamList } from "../../../types/navigation";
-import { RouteProp, useRoute } from "@react-navigation/native";
 
 export default React.memo(function Character() {
-
   const [containerHeight, setContainerHeight] = useState(0);
 
   const handleLayout = (event: LayoutChangeEvent) => {
@@ -58,6 +55,7 @@ export default React.memo(function Character() {
           // @ts-ignore
           ref={aref}
           nestedScrollEnabled={true}
+          keyboardShouldPersistTaps="always"
         >
           <View onLayout={handleLayout}>
             <View className="p-6">

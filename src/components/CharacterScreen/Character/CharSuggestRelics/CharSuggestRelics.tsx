@@ -21,7 +21,7 @@ export default React.memo(function CharSuggestRelics() {
   const { language } = useAppLanguage();
 
   const charId = useCharId();
-  const advices = charAdviceMap[charId];
+  const advices = charAdviceMap?.[charId];
   const suggestRelics = advices?.relics!;
 
   return (

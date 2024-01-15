@@ -72,7 +72,7 @@ export default function UserCharLightcone() {
             contentFit="contain"
           />
           <View style={{ gap: 2, alignItems: "flex-start" }}>
-            <Text className="text-[20px] font-[HY65] text-text">
+            <Text className="text-[20px] font-[HY65] text-text leading-8">
               {lcFullData.name}
             </Text>
             <LightconeLevel

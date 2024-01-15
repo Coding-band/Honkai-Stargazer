@@ -12,6 +12,7 @@ import CharacterSkillTree from "../../../../../../assets/images/images_map/chara
 import CharacterSkillMain from "../../../../../../assets/images/images_map/characterSkillMain";
 import TracePopUp from "../TracePopUp/TracePopUp";
 import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
+import Path from "../../../../../../assets/images/images_map/path";
 
 const TraceLine = require("./images/path_trace_line/harmony_trace_line.svg");
 
@@ -71,6 +72,10 @@ export default function HarmonyTraceTree() {
       >
         {/* 軀幹 (線條) */}
         <Image source={TraceLine} style={{ width: 263, height: 374 }} />
+        <Image
+          className="absolute left-4 opacity-40 w-[300px] h-[300px]"
+          source={Path["Harmony"].icon2}
+        />
         {/* 選項 */}
         {loaded && (
           <>
@@ -82,6 +87,7 @@ export default function HarmonyTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter3Edge1.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOuter3Edge1}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOuter3Edge1);
@@ -94,6 +100,7 @@ export default function HarmonyTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter3Edge2.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOuter3Edge2}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOuter3Edge2);
@@ -106,6 +113,7 @@ export default function HarmonyTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter3Edge3.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOuter3Edge3}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOuter3Edge3);
@@ -119,6 +127,7 @@ export default function HarmonyTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter1Edge1.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOuter1Edge1}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOuter1Edge1);
@@ -131,6 +140,7 @@ export default function HarmonyTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter1Edge2.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOuter1Edge2}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOuter1Edge2);
@@ -143,6 +153,7 @@ export default function HarmonyTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter2Edge1.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOuter2Edge1}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOuter2Edge1);
@@ -155,6 +166,7 @@ export default function HarmonyTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter2Edge2.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOuter2Edge2}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOuter2Edge2);
@@ -167,6 +179,7 @@ export default function HarmonyTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOtherEdge1.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOtherEdge1}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOtherEdge1);
@@ -179,6 +192,7 @@ export default function HarmonyTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOtherEdge2.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOtherEdge2}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOtherEdge2);
@@ -191,6 +205,7 @@ export default function HarmonyTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOtherEdge3.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOtherEdge3}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOtherEdge3);
@@ -205,6 +220,7 @@ export default function HarmonyTraceTree() {
                     skillTreeOuter1.embedBonusSkill?.iconPath
                   ]
                 }
+                selected={selectData === skillTreeOuter1}
                 onPress={() => {
                   setSelectType("outer");
                   setSelectData(skillTreeOuter1);
@@ -219,6 +235,7 @@ export default function HarmonyTraceTree() {
                     skillTreeOuter2.embedBonusSkill?.iconPath
                   ]
                 }
+                selected={selectData === skillTreeOuter2}
                 onPress={() => {
                   setSelectType("outer");
                   setSelectData(skillTreeOuter2);
@@ -233,6 +250,7 @@ export default function HarmonyTraceTree() {
                     skillTreeOuter3.embedBonusSkill?.iconPath
                   ]
                 }
+                selected={selectData === skillTreeOuter3}
                 onPress={() => {
                   setSelectType("outer");
                   setSelectData(skillTreeOuter3);
@@ -244,6 +262,7 @@ export default function HarmonyTraceTree() {
                 left={68}
                 top={142}
                 icon={CharacterSkillMain[charId].skill1}
+                selected={selectData === skillTreeInner1}
                 onPress={() => {
                   setSelectType("inner");
                   setSelectData(skillTreeInner1);
@@ -253,6 +272,7 @@ export default function HarmonyTraceTree() {
                 left={132}
                 top={134}
                 icon={CharacterSkillMain[charId].skill4}
+                selected={selectData === skillTreeInner4}
                 onPress={() => {
                   setSelectType("inner");
                   setSelectData(skillTreeInner4);
@@ -262,6 +282,7 @@ export default function HarmonyTraceTree() {
                 left={132}
                 top={210}
                 icon={CharacterSkillMain[charId].skill3}
+                selected={selectData === skillTreeInner3}
                 onPress={() => {
                   setSelectType("inner");
                   setSelectData(skillTreeInner3);
@@ -271,6 +292,7 @@ export default function HarmonyTraceTree() {
                 left={132}
                 top={295}
                 icon={CharacterSkillMain[charId].skill6}
+                selected={selectData === skillTreeInner6}
                 onPress={() => {
                   setSelectType("inner");
                   setSelectData(skillTreeInner6);
@@ -280,6 +302,7 @@ export default function HarmonyTraceTree() {
                 left={196}
                 top={142}
                 icon={CharacterSkillMain[charId].skill2}
+                selected={selectData === skillTreeInner2}
                 onPress={() => {
                   setSelectType("inner");
                   setSelectData(skillTreeInner2);

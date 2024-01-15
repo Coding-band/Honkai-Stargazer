@@ -55,7 +55,7 @@ export default function CharCard(props: Props) {
       >
         <View
           //   style={animation}
-          className={cn("w-20 h-[102px]")}
+          className={cn("w-20")}
         >
           {/* 角色頭像 */}
           <Image
@@ -65,20 +65,23 @@ export default function CharCard(props: Props) {
           />
           {/* 角色名稱 */}
           <View
-            className="bg-[#222222]"
+            className="bg-[#222222] translate-y-[-2px]"
             style={{
-              width: 80,
-              height: 20,
+     
               justifyContent: "center",
               alignItems: "center",
             }}
           >
-            <Text
-              numberOfLines={1}
-              className="text-text2 font-[HY65] text-[12px] leading-4"
-            >
-              {props.name}
-            </Text>
+            {typeof props.name === "string" ? (
+              <Text
+                numberOfLines={1}
+                className="text-text2 font-[HY65] text-[12px] leading-4"
+              >
+                {props.name}
+              </Text>
+            ) : (
+              <>{props.name}</>
+            )}
           </View>
           {/* 命途 & 元素 */}
           <View
@@ -94,7 +97,7 @@ export default function CharCard(props: Props) {
               className="absolute right-1 top-1 bg-[#F3F9FF] rounded-full w-4 h-4"
               style={{ justifyContent: "center", alignItems: "center" }}
             >
-              <Text className="text-[#393A5C] text-[12px] font-[HY65] font-bold translate-y-[-2px]">
+              <Text className="text-[#393A5C] text-[12px] font-[HY65]">
                 {props.rank}
               </Text>
             </View>
@@ -103,11 +106,11 @@ export default function CharCard(props: Props) {
         {/* 等級 */}
         {props.level !== undefined && (
           <View
-            className="absolute bottom-[25px] w-full"
+            className="absolute top-[60px] w-full"
             style={{ alignItems: "center" }}
           >
             <View className="bg-[#22222290] h-4 px-2 rounded-[43px]">
-              <Text className="text-text font-[HY65] text-[12px] translate-y-[-1px]">
+              <Text className="text-text font-[HY65] text-[12px]">
                 {props.level}
               </Text>
             </View>

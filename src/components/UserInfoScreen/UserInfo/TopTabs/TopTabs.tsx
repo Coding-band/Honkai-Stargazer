@@ -29,11 +29,15 @@ export default function TopTabs(props: {
         className="rounded-[20px] overflow-hidden absolute"
         style={animationConatiner}
       >
-        <AnimatedBlurView
-          intensity={35}
-          style={[{ height }, animation]}
-          className="py-[7px] px-[14px] bg-[#FFFFFF20]"
-        />
+        {widths.length ? (
+          <AnimatedBlurView
+            intensity={35}
+            style={[{ height }, animation]}
+            className="py-[7px] px-[14px] bg-[#FFFFFF20]"
+          />
+        ) : (
+          <></>
+        )}
       </AnimatedView>
       {props.tabs.map((tab, i) => (
         <TouchableOpacity

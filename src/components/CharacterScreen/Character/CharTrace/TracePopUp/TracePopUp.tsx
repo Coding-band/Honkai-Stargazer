@@ -137,7 +137,9 @@ export default React.memo(function TracePopUp({ type, data, onClose }: Props) {
                     <Text>
                       <Text>{skillData?.statusList[0].key}</Text>
                       <Text>提升</Text>
-                      <Text>{skillData?.statusList[0].value * 100}%。</Text>
+                      <Text>
+                        {(skillData?.statusList[0].value * 100).toFixed(1)}%。
+                      </Text>
                     </Text>
                   )}
                 </Text>

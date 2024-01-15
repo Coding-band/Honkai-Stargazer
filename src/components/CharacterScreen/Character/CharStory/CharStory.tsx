@@ -1,5 +1,5 @@
-import { View, Text } from "react-native";
-import React, { useContext } from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import React, { useContext, useRef, useState } from "react";
 import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { ChatsCircle } from "phosphor-react-native";
 import CharacterContext from "../../../../context/CharacterData/CharacterContext";
@@ -11,16 +11,40 @@ import { LOCALES } from "../../../../../locales";
 
 export default React.memo(function CharStory() {
   const { charFullData } = useCharData();
-  const { language } = useAppLanguage();
+
+  const storyLength = useRef(charFullData.storyItems.length);
+  const [currentStoryIndex, setCurrentStoryIndex] = useState(0);
+  const handleNextStory = () => {
+    if (currentStoryIndex === storyLength.current - 1) {
+      setCurrentStoryIndex(0);
+    } else {
+      setCurrentStoryIndex(currentStoryIndex + 1);
+    }
+  };
+  const handlePrevStory = () => {
+    if (currentStoryIndex === 0) {
+      setCurrentStoryIndex(storyLength.current - 1);
+    } else {
+      setCurrentStoryIndex(currentStoryIndex - 1);
+    }
+  };
 
   return (
     <View>
       <CharPageHeading Icon={ChatsCircle}>
-        {LOCALES[language].CharacterStory}
+        {charFullData.storyItems[currentStoryIndex].title}
       </CharPageHeading>
-      <HtmlText style={{ lineHeight: 24, color: "white", fontFamily: "HY65" }}>
-        {charFullData.storyItems[0].text || ""}
-      </HtmlText>
+      <TouchableOpacity
+        activeOpacity={0.35}
+        onPress={handleNextStory}
+        onLongPress={handlePrevStory}
+      >
+        <HtmlText
+          style={{ lineHeight: 24, color: "white", fontFamily: "HY65" }}
+        >
+          {charFullData.storyItems[currentStoryIndex].text || ""}
+        </HtmlText>
+      </TouchableOpacity>
     </View>
   );
 });

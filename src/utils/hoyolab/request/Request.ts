@@ -142,8 +142,6 @@ export default class Request {
       this.body = {};
       return result;
     } catch (error) {
-      console.log(error);
-
       return {
         retcode: -9999,
         message: String(error),

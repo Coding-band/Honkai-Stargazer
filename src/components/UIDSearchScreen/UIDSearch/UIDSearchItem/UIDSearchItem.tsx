@@ -30,7 +30,7 @@ export default function UIDSearchItem({ uuid }: { uuid: string }) {
                 </View>
             </View>
             <View className='mt-[10px]' style={{ alignSelf: "flex-start" }}>
-                <Text className="text-text text-[12px] font-[HY65] leading-5">{LOCALES[appLanguage].PlayerLevel + " " + user?.player?.level}</Text>
+                <Text className="text-text text-[12px] font-[HY65] leading-5">{LOCALES[appLanguage].PlayerLevel + " " + user?.player?.level||0}</Text>
             </View>
         </View>
 

@@ -28,9 +28,11 @@ export default function HomeScreen() {
 
   const { hoyolabCookieParse } = useHoyolabCookie();
   const hsrFullData = useHsrFullData().data;
+
   const hsrUUID = useHsrUUID();
   const hsrPlayerData = useHsrPlayerData();
-  const hsrCharList = useHsrCharList();
+  const { data: hsrCharList } = useHsrCharList();
+
   const moc = useMemoryOfChaos().data;
 
   const handleFirebaseSignUp = async (email: string, password: string) => {
@@ -124,30 +126,48 @@ export default function HomeScreen() {
   //* 建立或更新用戶角色數據 (UserCharacters)
   useEffect(() => {
     async function createOrUpdateUserCharacters() {
-      if (uid && hsrFullData && hsrCharList) {
+      if (uid && hsrCharList) {
+        const charsData = {
+          characters: hsrCharList.map((char:any) => ({
+            id: char?.id,
+            level: char?.level,
+            rank: char?.rank,
+            equip: char?.equip
+              ? {
+                  id: char?.equip?.id,
+                  level: char?.equip?.level,
+                  rank: char?.equip?.rank,
+                }
+              : {},
+            relics: char?.relics
+              ? char?.relics?.map((relic: any) => ({
+                  id: relic?.id,
+                  level: relic?.level,
+                  rarity: relic?.rarity,
+                  pos: relic?.pos,
+                }))
+              : [],
+            ornaments: char?.ornaments
+              ? char?.ornaments?.map((ornament: any) => ({
+                  id: ornament?.id,
+                  level: ornament?.level,
+                  rarity: ornament?.rarity,
+                  pos: ornament?.pos,
+                }))
+              : [],
+          })),
+        } as UserCharacters;
         const UserCharactersIsExist = (await db.UserCharacters.doc(uid).get())
           .exists;
         if (UserCharactersIsExist) {
           try {
-            db.UserCharacters.doc(uid).update({
-              characters: hsrCharList.map((char: any) => ({
-                id: char.id,
-                level: char.level,
-                rank: char.rank,
-              })),
-            } as UserCharacters);
+            db.UserCharacters.doc(uid).update(charsData);
           } catch (e: any) {
             console.log("updated UserCharacters: " + e.message);
           }
         } else {
           try {
-            db.UserCharacters.doc(uid).set({
-              characters: hsrCharList.map((char: any) => ({
-                id: char.id,
-                level: char.level,
-                rank: char.rank,
-              })),
-            } as UserCharacters);
+            db.UserCharacters.doc(uid).set(charsData);
           } catch (e: any) {
             console.log("create UserCharacters: " + e.message);
           }
@@ -155,7 +175,7 @@ export default function HomeScreen() {
       }
     }
     createOrUpdateUserCharacters();
-  }, [uid, hsrFullData, hsrCharList]);
+  }, [uid, hsrCharList]);
 
   //* 建立或更新用戶混沌回憶資料 (UserMemoryOfChaos)
   useEffect(() => {

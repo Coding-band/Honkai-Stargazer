@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Dimensions } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { CardColors } from "../../../../../constant/card";
@@ -27,7 +27,14 @@ export default function RelicItem({
     ) + 1;
 
   return (
-    <View className="w-[170px] py-2" style={{ flexDirection: "row", gap: 6 }}>
+    <View
+      className="py-2"
+      style={{
+        flexDirection: "row",
+        gap: 6,
+        width: Dimensions.get("screen").width / 2 - 36,
+      }}
+    >
       {/* 圖片 */}
       <TouchableOpacity activeOpacity={0.65}>
         <LinearGradient

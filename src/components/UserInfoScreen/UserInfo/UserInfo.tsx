@@ -19,10 +19,15 @@ import useUserMocByUUID from "../../../firebase/hooks/UserMoc/useUserMocByUUID";
 import TopTabs from "./TopTabs/TopTabs";
 import Comment from "./Comment/Comment";
 import auth from "@react-native-firebase/auth";
-import { formatTimeDuration, formatTimeDurationSimple } from "../../../utils/date/formatTime";
+import { formatTimeDurationSimple } from "../../../utils/date/formatTime";
 import useUserComments from "../../../firebase/hooks/UserComments/useUserComments";
 import useFirebaseUidByUUID from "../../../firebase/hooks/FirebaseUid/useFirebaseUidByUUID";
-import Animated, { useAnimatedRef, useAnimatedStyle, useScrollViewOffset, withSpring } from "react-native-reanimated";
+import Animated, {
+  useAnimatedRef,
+  useAnimatedStyle,
+  useScrollViewOffset,
+  withSpring,
+} from "react-native-reanimated";
 import NoComment from "./NoComment/NoComment";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
@@ -37,7 +42,7 @@ export default function UserInfo(props: Props) {
   const { language } = useAppLanguage();
 
   // 資料來自崩鐵
-  const { data: hsrInGameInfo } = useHsrInGameInfo(profileUUID);
+  const { data: hsrInGameInfo } = useHsrInGameInfo(profileUUID) as any;
 
   // 資料來自 firebase 資料庫
   const { data: userData } = useUserByUUID(profileUUID);
@@ -57,10 +62,8 @@ export default function UserInfo(props: Props) {
   //UserInfoLastLoginAt
   const timeString =
     formatTimeDurationSimple(
-      Date.now() / 1000 -
-      Number(userData?.last_login?.seconds)
+      Date.now() / 1000 - Number(userData?.last_login?.seconds)
     ) + "前";
-
 
   // 用戶留言
   const parts = timeString.split(/([A-Za-z\u4e00-\u9fa5]+)/);
@@ -98,7 +101,10 @@ export default function UserInfo(props: Props) {
           />
         </Animated.View>
       </Header2>
-      <Animated.ScrollView ref={aref} style={{ height: Dimensions.get("screen").height }}>
+      <Animated.ScrollView
+        ref={aref}
+        style={{ height: Dimensions.get("screen").height }}
+      >
         {hsrInGameInfo ? (
           <AnimatedView
             className="mt-28"
@@ -135,29 +141,45 @@ export default function UserInfo(props: Props) {
               }}
             >
               <InfoItem
-                title={isGameDataPage ? LOCALES[language].UserInfoGamePlayerLevel : LOCALES[language].UserInfoCountComments}
-                value={isGameDataPage ? hsrInGameInfo?.player?.level : userComments?.comments_num || 0}
+                title={
+                  isGameDataPage
+                    ? LOCALES[language].UserInfoGamePlayerLevel
+                    : LOCALES[language].UserInfoCountComments
+                }
+                value={
+                  isGameDataPage
+                    ? hsrInGameInfo?.player?.level
+                    : userComments?.comments_num || 0
+                }
               />
               <View className="w-[1px] h-6 bg-[#F3F9FF40]"></View>
               <InfoItem
-                title={isGameDataPage ? LOCALES[language].UserInfoGameWorldLevel : LOCALES[language].UserInfoLastOnlineTime}
+                title={
+                  isGameDataPage
+                    ? LOCALES[language].UserInfoGameWorldLevel
+                    : LOCALES[language].UserInfoLastOnlineTime
+                }
                 value={
                   isGameDataPage ? (
                     hsrInGameInfo?.player?.world_level
                   ) : (
                     <Text>
-                      {userData?.last_login ? (parts.map((part, index) =>
-                        // 检查每个部分是否为纯数字
-                        /^\d+$/.test(part) ? (
-                          <Text key={index}>{part}</Text>
-                        ) : (
-                          <Text className="text-[12px] leading-5" key={index}>
-                            {part}
-                          </Text>
-                        ))
-                      ) : <Text className="text-[12px] leading-4" >
-                            {LOCALES[language].NoOnlineData}
-                      </Text>}
+                      {userData?.last_login ? (
+                        parts.map((part, index) =>
+                          // 检查每个部分是否为纯数字
+                          /^\d+$/.test(part) ? (
+                            <Text key={index}>{part}</Text>
+                          ) : (
+                            <Text className="text-[12px] leading-5" key={index}>
+                              {part}
+                            </Text>
+                          )
+                        )
+                      ) : (
+                        <Text className="text-[12px] leading-4">
+                          {LOCALES[language].NoOnlineData}
+                        </Text>
+                      )}
                     </Text>
                   )
                 }
@@ -187,10 +209,10 @@ export default function UserInfo(props: Props) {
               {/* 其他資訊 */}
               {isOwner || isShowInfo ? (
                 <View
-                  className="w-full"
+                  className="w-full px-4"
                   style={{
                     flexDirection: "row",
-                    justifyContent: "space-between",
+                    justifyContent: "space-around",
                   }}
                 >
                   <InfoItem
@@ -201,7 +223,10 @@ export default function UserInfo(props: Props) {
                     title={LOCALES[language].UserInfoGameAchievements}
                     value={hsrInGameInfo?.player?.space_info?.achievement_count}
                   />
-                  <InfoItem title={LOCALES[language].UserInfoGameOpenedChests} value={userData?.chest_num} />
+                  <InfoItem
+                    title={LOCALES[language].UserInfoGameOpenedChests}
+                    value={userData?.chest_num}
+                  />
                   <InfoItem
                     title={LOCALES[language].UserInfoGameForgottenHall}
                     value={`${latestUserMocData?.max_floor || 0}/12`}
@@ -221,15 +246,20 @@ export default function UserInfo(props: Props) {
                 gap: 8,
               }}
             >
-              {userComments?.comments ? userComments?.comments?.map((comment: any) => (
-                <Comment {...comment} key={comment.id} />
-              )) : <NoComment />}
+              {userComments?.comments ? (
+                userComments?.comments?.map((comment: any) => (
+                  <Comment {...comment} key={comment.id} />
+                ))
+              ) : (
+                <NoComment />
+              )}
             </View>
             {/* 由 Stargazer 製作 */}
-            {isGameDataPage && (<View className="mb-16 mt-0">
-              <ProducedByStargazer />
-            </View>)}
-
+            {isGameDataPage && (
+              <View className="mb-16 mt-0">
+                <ProducedByStargazer />
+              </View>
+            )}
           </AnimatedView>
         ) : (
           <Loading />

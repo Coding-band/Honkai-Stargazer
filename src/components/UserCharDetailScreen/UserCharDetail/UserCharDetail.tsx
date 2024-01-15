@@ -39,14 +39,17 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 import ProducedByStargazer from "../../global/ProducedByStargazer/ProducedByStargazer";
+import useUserCharactersByUUID from "../../../firebase/hooks/UserCharacters/useUserCharactersByUUID";
+import officalCharId from "../../../../map/character_offical_id_map";
 
 export default function UserCharDetail() {
+  const charId = useProfileCharId();
+
   const hsrUUID = useHsrUUID();
   const profileUUID = useProfileUUID();
   const { inGameInfo } = useProfileHsrInGameInfo();
   const charJsonData = useProfileCharJsonData();
   const charFullData = useProfileCharFullData();
-  const charId = useProfileCharId();
 
   const isOwner = profileUUID === hsrUUID;
 

@@ -4,7 +4,10 @@ import useTextLanguage from "../../language/TextLanguage/useTextLanguage";
 import { CharacterData } from "./CharacterData.types";
 import charList from "../../../data/character_data/character_list.json";
 import { filter } from "lodash";
-import { getCharFullData } from "../../utils/dataMap/getDataFromMap";
+import {
+  getCharFullData,
+  getCharJsonData,
+} from "../../utils/dataMap/getDataFromMap";
 import CharacterImage from "../../../assets/images/images_map/chacracterImage";
 import { Path } from "../../types/path";
 import { CombatType } from "../../types/combatType";
@@ -18,18 +21,19 @@ export default function CharacterProvider({
   charId: CharacterName;
 }) {
   const { language: textLanguage } = useTextLanguage();
+
+  const charJsonData = getCharJsonData(charId);
+  const charFullData = getCharFullData(charId, textLanguage);
   const [charData, setCharData] = useState<CharacterData>();
 
   useEffect(() => {
-    const charDataJson = filter(charList, (char) => char?.name === charId)[0];
-    const charFullData = getCharFullData(charId, textLanguage);
     setCharData({
       id: charId,
       name: charFullData?.name,
-      rare: charDataJson?.rare,
-      pathId: charDataJson.path as Path,
+      rare: charJsonData?.rare,
+      pathId: charJsonData.path as Path,
       path: charFullData?.baseType?.name,
-      combatTypeId: charDataJson.element as CombatType,
+      combatTypeId: charJsonData.element as CombatType,
       combatType: charFullData?.damageType?.name,
       location: charFullData?.archive?.camp,
       image: CharacterImage[charId]?.icon,
@@ -38,7 +42,7 @@ export default function CharacterProvider({
   }, []);
 
   return (
-    <CharacterContext.Provider value={charData}>
+    <CharacterContext.Provider value={{ charData, charJsonData, charFullData }}>
       {children}
     </CharacterContext.Provider>
   );

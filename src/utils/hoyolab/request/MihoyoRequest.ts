@@ -34,6 +34,14 @@ export default class MihoyoRequest {
     return this.request.send(getUrl(uuid, server));
   }
 
+  //* 獲取用戶角色
+  public getHsrCharactersData(uuid: string, server: hsrServerId = "asia") {
+    const getUrl = (uuid: string, server: hsrServerId) =>
+      `https://api-takumi-record.mihoyo.com/game_record/app/hkrpg/api/avatar/info?server=${hsrServer[server]}&role_id=${uuid}`;
+
+    return this.request.send(getUrl(uuid, server));
+  }
+
   //* 獲取崩鐵角色便籤
   public getHsrNote(uuid: string, server: hsrServerId = "asia") {
     const getUrl = (uuid: string, server: hsrServerId) =>

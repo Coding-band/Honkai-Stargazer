@@ -1,4 +1,4 @@
-import { TextInput, View } from "react-native";
+import { Keyboard, Pressable, TextInput, View } from "react-native";
 import React, { useState, useEffect } from "react";
 import { cn } from "../../../../../utils/css/cn";
 import db from "../../../../../firebase/db";
@@ -144,7 +144,7 @@ export default function CommentInput({
             placeholderTextColor="#F3F9FF40"
           />
           {/* 新增圖片 */}
-          {/* <CommentToolBox onHandleSend={handleSubmit} /> */}
+          <CommentToolBox onHandleSend={handleSubmit} />
         </BlurView>
       </View>
     </View>

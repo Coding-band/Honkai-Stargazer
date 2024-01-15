@@ -11,8 +11,7 @@ const useHsrFullData = () => {
   const HsrUUID = useHsrUUID();
   const { hsrServerChosen } = useHsrServerChosen();
 
-
-  const { data, isError, error, isLoading, isFetching } = useQuery(
+  const data = useQuery(
     ["hsr-full-data", hoyolabCookie, HsrUUID, hsrServerChosen],
     () =>
       new (isHoyolabPlatform(hsrServerChosen) ? HoyolabRequest : MihoyoRequest)(
@@ -24,7 +23,7 @@ const useHsrFullData = () => {
       },
     }
   );
-  return { data, isError, error, isLoading, isFetching };
+  return data;
 };
 
 export default useHsrFullData;

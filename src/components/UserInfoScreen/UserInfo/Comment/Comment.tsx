@@ -12,8 +12,6 @@ import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
 import officalCharId from "../../../../../map/character_offical_id_map";
 import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
 import { CharacterName } from "../../../../types/character";
-import { extractMentionsSplit } from "../../../../utils/extractMetions";
-import { hasUserByUsername } from "../../../../firebase/utils/hasUser";
 import TagContent from "../../../global/TagContent/TagContent";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../constant/screens";
@@ -49,7 +47,7 @@ export default function Comment(props: Props) {
         <TouchableOpacity activeOpacity={1}>
           <Image
             className="w-9 h-9 rounded-full"
-            source={CharacterImage[charId].icon}
+            source={CharacterImage[charId]?.icon}
           />
         </TouchableOpacity>
         <View style={{ gap: 2, flex: 1 }}>

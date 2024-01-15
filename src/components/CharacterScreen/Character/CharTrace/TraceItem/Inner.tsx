@@ -17,7 +17,7 @@ export default React.memo(
     left: number;
     top: number;
     icon: ExpoImage;
-    selected?: boolean;
+    selected: boolean;
     onPress: (e: GestureResponderEvent) => void;
   }) => {
     const animation = useSpring({

@@ -12,6 +12,7 @@ import TracePopUp from "../TracePopUp/TracePopUp";
 import CharacterSkillTree from "../../../../../../assets/images/images_map/characterSkillTree";
 import CharacterSkillMain from "../../../../../../assets/images/images_map/characterSkillMain";
 import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
+import Path from "../../../../../../assets/images/images_map/path";
 
 const TraceLine = require("./images/path_trace_line/preservation_trace_line.svg");
 
@@ -71,6 +72,10 @@ export default function PreservationTraceTree() {
       >
         {/* 軀幹 (線條) */}
         <Image source={TraceLine} style={{ width: 295, height: 367 }} />
+        <Image
+          className="absolute left-4 opacity-40 w-[300px] h-[300px]"
+          source={Path["Preservation"].icon2}
+        />
         {/* 選項 */}
         {loaded && (
           <>
@@ -82,6 +87,7 @@ export default function PreservationTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter3Edge1.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOuter3Edge1}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOuter3Edge1);
@@ -94,6 +100,7 @@ export default function PreservationTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter3Edge2.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOuter3Edge2}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOuter3Edge2);
@@ -106,6 +113,7 @@ export default function PreservationTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter3Edge3.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOuter3Edge3}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOuter3Edge3);
@@ -118,6 +126,7 @@ export default function PreservationTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter1Edge1.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOuter1Edge1}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOuter1Edge1);
@@ -130,6 +139,7 @@ export default function PreservationTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter1Edge2.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOuter1Edge2}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOuter1Edge2);
@@ -142,6 +152,7 @@ export default function PreservationTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter2Edge1.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOuter2Edge1}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOuter2Edge1);
@@ -154,6 +165,7 @@ export default function PreservationTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter2Edge2.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOuter2Edge2}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOuter2Edge2);
@@ -166,6 +178,7 @@ export default function PreservationTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOtherEdge2.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOtherEdge2}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOtherEdge2);
@@ -178,6 +191,7 @@ export default function PreservationTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOtherEdge3.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOtherEdge3}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOtherEdge3);
@@ -190,6 +204,7 @@ export default function PreservationTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOtherEdge1.embedBuff.iconPath]
                 }
+                selected={selectData === skillTreeOtherEdge1}
                 onPress={() => {
                   setSelectType("edge");
                   setSelectData(skillTreeOtherEdge1);
@@ -202,6 +217,7 @@ export default function PreservationTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter1.embedBonusSkill?.iconPath]
                 }
+                selected={selectData === skillTreeOuter1}
                 onPress={() => {
                   setSelectType("outer");
                   setSelectData(skillTreeOuter1);
@@ -214,6 +230,7 @@ export default function PreservationTraceTree() {
                   // @ts-ignore
                   CharacterSkillTree[skillTreeOuter2.embedBonusSkill?.iconPath]
                 }
+                selected={selectData === skillTreeOuter2}
                 onPress={() => {
                   setSelectType("outer");
                   setSelectData(skillTreeOuter2);
@@ -228,6 +245,7 @@ export default function PreservationTraceTree() {
                     skillTreeOuter3.embedBonusSkill?.iconPath
                   ]
                 }
+                selected={selectData === skillTreeOuter3}
                 onPress={() => {
                   setSelectType("outer");
                   setSelectData(skillTreeOuter3);
@@ -239,6 +257,7 @@ export default function PreservationTraceTree() {
                 left={50}
                 top={200}
                 icon={CharacterSkillMain[charId].skill1}
+                selected={selectData === skillTreeInner1}
                 onPress={() => {
                   setSelectType("inner");
                   setSelectData(skillTreeInner1);
@@ -248,6 +267,7 @@ export default function PreservationTraceTree() {
                 left={136}
                 top={125}
                 icon={CharacterSkillMain[charId].skill4}
+                selected={selectData === skillTreeInner4}
                 onPress={() => {
                   setSelectType("inner");
                   setSelectData(skillTreeInner4);
@@ -257,6 +277,7 @@ export default function PreservationTraceTree() {
                 left={136}
                 top={195}
                 icon={CharacterSkillMain[charId].skill3}
+                selected={selectData === skillTreeInner3}
                 onPress={() => {
                   setSelectType("inner");
                   setSelectData(skillTreeInner3);
@@ -266,6 +287,7 @@ export default function PreservationTraceTree() {
                 left={136}
                 top={265}
                 icon={CharacterSkillMain[charId].skill6}
+                selected={selectData === skillTreeInner6}
                 onPress={() => {
                   setSelectType("inner");
                   setSelectData(skillTreeInner6);
@@ -275,6 +297,7 @@ export default function PreservationTraceTree() {
                 left={220}
                 top={200}
                 icon={CharacterSkillMain[charId].skill2}
+                selected={selectData === skillTreeInner2}
                 onPress={() => {
                   setSelectType("inner");
                   setSelectData(skillTreeInner2);

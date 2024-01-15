@@ -10,8 +10,6 @@ const useHsrInGameInfo = (uuid: string, config?: any) => {
         return data?.data;
       },
       ...config,
-      
-      
     }
   );
   return query;

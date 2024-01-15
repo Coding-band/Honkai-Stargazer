@@ -1,4 +1,11 @@
-import { View, Text, KeyboardAvoidingView, Platform } from "react-native";
+import {
+  View,
+  Text,
+  KeyboardAvoidingView,
+  Platform,
+  Pressable,
+  Keyboard,
+} from "react-native";
 import React, { useEffect, useRef, useState } from "react";
 import Animated, {
   useAnimatedStyle,
@@ -25,9 +32,6 @@ type Props = {
 };
 
 export default function CommentBox(props: Props) {
-
-
-
   // data
   const charId = useCharId();
   const officalId = findKey(officalCharId, (v) => v === charId);
@@ -59,7 +63,7 @@ export default function CommentBox(props: Props) {
         y: e.translationY,
       };
     })
-    .onEnd(() => { })
+    .onEnd(() => {})
     .onFinalize(() => {
       isPressed.value = false;
     });
@@ -73,7 +77,7 @@ export default function CommentBox(props: Props) {
   const animatedStyles2 = useAnimatedStyle(() => {
     return {
       height: translation.value.y < 0 ? hieght.value : /* withSpring(0) */ 0,
-      display: translation.value.y < 0 ? "flex" : "none"
+      display: translation.value.y < 0 ? "flex" : "none",
     };
   });
 
@@ -91,7 +95,11 @@ export default function CommentBox(props: Props) {
   }, []);
 
   return (
-    <View >
+    <Pressable
+      onPress={() => {
+        Keyboard.dismiss();
+      }}
+    >
       <GestureDetector gesture={gesture}>
         <Animated.View style={[animatedStyles]}>
           <View
@@ -113,6 +121,7 @@ export default function CommentBox(props: Props) {
         ref={scrollRef}
         nestedScrollEnabled
         style={[animatedStyles2]}
+        keyboardShouldPersistTaps="always"
       >
         <Animated.View className="w-full mb-20">{props.children}</Animated.View>
       </Animated.ScrollView>
@@ -127,6 +136,6 @@ export default function CommentBox(props: Props) {
           </Animated.View>
         </KeyboardAvoidingView>
       )}
-    </View>
+    </Pressable>
   );
 }

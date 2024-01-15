@@ -15,7 +15,7 @@ export default function PageHeading({ Icon, children }: Props) {
         <View
           style={{ backgroundColor: "#ffffff40", height: 2, width: 50 }}
         ></View>
-        <Text className="text-white text-[16px]" style={{ fontFamily: "HY65" }}>
+        <Text className="text-white text-[16px] font-[HY65] leading-5">
           {children}
         </Text>
         <View
