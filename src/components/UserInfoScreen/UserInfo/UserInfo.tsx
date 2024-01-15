@@ -203,7 +203,7 @@ export default function UserInfo(props: Props) {
                 alignItems: "center",
                 gap: 8,
               }}
-            >
+            > 
               {/* 擁有角色 */}
               <UserInfoCharacters uuid={props.uuid} />
               {/* 其他資訊 */}
