@@ -1,938 +1,1471 @@
-[
-  {
-    "name": {
-      "zh_cn": "藏于深空之秘其一",
-      "zh_hk": "藏於深空之秘其一",
-      "de": "Das Geheimnis in den Tiefen des Alls I",
-      "en": "Enigma in Deep Space (I)",
-      "es": "Incógnita del espacio profundo I",
-      "fr": "Mystère des profondeurs de l'espace (I)",
-      "id": "Rahasia di Langit Dalam 1",
-      "jp": "深空に隠された秘密・1",
-      "kr": "심우주에 숨겨진 비밀•1",
-      "pt": "Enigma no Espaço Profundo (I)",
-      "ru": "Тайна в глубинах космоса I",
-      "th": "ปริศนาในห้วงอวกาศ 1",
-      "vi": "Bí Ẩn Không Gian 1"
+{
+  "info": [
+    {
+      "name": {
+        "zh_cn": "藏于深空之秘其一",
+        "zh_hk": "藏於深空之秘其一",
+        "de": "Das Geheimnis in den Tiefen des Alls I",
+        "en": "Enigma in Deep Space (I)",
+        "es": "Incógnita del espacio profundo I",
+        "fr": "Mystère des profondeurs de l'espace (I)",
+        "id": "Rahasia di Langit Dalam 1",
+        "jp": "深空に隠された秘密・1",
+        "kr": "심우주에 숨겨진 비밀•1",
+        "pt": "Enigma no Espaço Profundo (I)",
+        "ru": "Тайна в глубинах космоса I",
+        "th": "ปริศนาในห้วงอวกาศ 1",
+        "vi": "Bí Ẩn Không Gian 1"
+      },
+      "part1": {
+        "weakness_suggest": [
+          "Ice",
+          "Thunder"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "The Ascended",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Thunder"
+            ]
+          },
+          {
+            "monster_name": "Disciples of Sanctus Medicus: Ballistarius",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Wind"
+            ]
+          },
+          {
+            "monster_name": "Mara-Struck Warden",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Ice",
+              "Thunder",
+              "Quantum"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "The Ascended",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Thunder"
+            ]
+          },
+          {
+            "monster_name": "Searing Prowler",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Ice",
+              "Thunder",
+              "Imaginary"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "weakness_suggest": [
+          "Physical",
+          "Imaginary"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Aurumaton Spectral Envoy",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Cloud Knights Patroller",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Fire",
+              "Wind",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Wraith Warden",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Wind"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Bronya",
+            "monster_code": 4,
+            "monster_weakness": [
+              "Physical",
+              "Fire",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Aurumaton Spectral Envoy",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Wraith Warden",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Wind"
+            ]
+          }
+        ]
+      }
     },
-    "part1": {
-      "weakness_suggest": ["Ice", "Thunder"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "The Ascended",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Ice", "Thunder"]
-        },
-        {
-          "monster_name": "Disciples of Sanctus Medicus: Ballistarius",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Ice", "Wind"]
-        },
-        {
-          "monster_name": "Mara-Struck Warden",
-          "monster_code": 2,
-          "monster_weakness": ["Ice", "Thunder", "Quantum"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "The Ascended",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Ice", "Thunder"]
-        },
-        {
-          "monster_name": "Searing Prowler",
-          "monster_code": 3,
-          "monster_weakness": ["Ice", "Thunder", "Imaginary"]
-        }
-      ]
+    {
+      "name": {
+        "zh_cn": "藏于深空之秘其二",
+        "zh_hk": "藏於深空之秘其二",
+        "de": "Das Geheimnis in den Tiefen des Alls II",
+        "en": "Enigma in Deep Space (II)",
+        "es": "Incógnita del espacio profundo II",
+        "fr": "Mystère des profondeurs de l'espace (II)",
+        "id": "Rahasia di Langit Dalam 2",
+        "jp": "深空に隠された秘密・2",
+        "kr": "심우주에 숨겨진 비밀•2",
+        "pt": "Enigma no Espaço Profundo (II)",
+        "ru": "Тайна в глубинах космоса II",
+        "th": "ปริศนาในห้วงอวกาศ 2",
+        "vi": "Bí Ẩn Không Gian 2"
+      },
+      "part1": {
+        "weakness_suggest": [
+          "Fire",
+          "Ice"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Stormbringer",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Everwinter Shadewalker",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Fire",
+              "Quantum"
+            ]
+          },
+          {
+            "monster_name": "Vagrant",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Imaginary"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Automaton Grizzly",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Thunder"
+            ]
+          },
+          {
+            "monster_name": "Stormbringer",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Vagrant",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Imaginary"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "weakness_suggest": [
+          "Wind",
+          "Quantum"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Aurumaton Gatekeeper",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Thunder",
+              "Wind",
+              "Quantum"
+            ]
+          },
+          {
+            "monster_name": "Abundance Sprite: Golden Hound",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Ice",
+              "Thunder",
+              "Quantum"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Aurumaton Gatekeeper",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Thunder",
+              "Wind",
+              "Quantum"
+            ]
+          },
+          {
+            "monster_name": "Ice Out of Space",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Wind",
+              "Quantum"
+            ]
+          }
+        ]
+      }
     },
-    "part2": {
-      "weakness_suggest": ["Physical", "Imaginary"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Aurumaton Spectral Envoy",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Thunder", "Imaginary"]
-        },
-        {
-          "monster_name": "Cloud Knights Patroller",
-          "monster_code": 2,
-          "monster_weakness": ["Fire", "Wind", "Imaginary"]
-        },
-        {
-          "monster_name": "Wraith Warden",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Ice", "Wind"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Bronya",
-          "monster_code": 4,
-          "monster_weakness": ["Physical", "Fire", "Imaginary"]
-        },
-        {
-          "monster_name": "Aurumaton Spectral Envoy",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Thunder", "Imaginary"]
-        },
-        {
-          "monster_name": "Wraith Warden",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Ice", "Wind"]
-        }
-      ]
+    {
+      "name": {
+        "zh_cn": "藏于深空之秘其三",
+        "zh_hk": "藏於深空之秘其三",
+        "de": "Das Geheimnis in den Tiefen des Alls III",
+        "en": "Enigma in Deep Space (III)",
+        "es": "Incógnita del espacio profundo III",
+        "fr": "Mystère des profondeurs de l'espace (III)",
+        "id": "Rahasia di Langit Dalam 3",
+        "jp": "深空に隠された秘密・3",
+        "kr": "심우주에 숨겨진 비밀•3",
+        "pt": "Enigma no Espaço Profundo (III)",
+        "ru": "Тайна в глубинах космоса III",
+        "th": "ปริศนาในห้วงอวกาศ 3",
+        "vi": "Bí Ẩn Không Gian 3"
+      },
+      "part1": {
+        "weakness_suggest": [
+          "Ice",
+          "Imaginary"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Disciples of Sanctus Medicus: Shape Shifter",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Ice",
+              "Wind",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Mara-Struck Warden",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Ice",
+              "Thunder",
+              "Quantum"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Disciples of Sanctus Medicus: Shape Shifter",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Ice",
+              "Wind",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Stormbringer",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Imaginary"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "weakness_suggest": [
+          "Wind"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Guardian Shadow",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Wind",
+              "Quantum"
+            ]
+          },
+          {
+            "monster_name": "Automaton Beetle",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Thunder",
+              "Wind",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Imaginary Weaver",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Quantum"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Svarog",
+            "monster_code": 4,
+            "monster_weakness": [
+              "Fire",
+              "Thunder",
+              "Wind"
+            ]
+          },
+          {
+            "monster_name": "Guardian Shadow",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Wind",
+              "Quantum"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": {
+        "zh_cn": "藏于深空之秘其四",
+        "zh_hk": "藏於深空之秘其四",
+        "de": "Das Geheimnis in den Tiefen des Alls IV",
+        "en": "Enigma in Deep Space (IV)",
+        "es": "Incógnita del espacio profundo IV",
+        "fr": "Mystère des profondeurs de l'espace (IV)",
+        "id": "Rahasia di Langit Dalam 4",
+        "jp": "深空に隠された秘密・4",
+        "kr": "심우주에 숨겨진 비밀•4",
+        "pt": "Enigma no Espaço Profundo (IV)",
+        "ru": "Тайна в глубинах космоса IV",
+        "th": "ปริศนาในห้วงอวกาศ 4",
+        "vi": "Bí Ẩn Không Gian 4"
+      },
+      "part1": {
+        "weakness_suggest": [
+          "Fire",
+          "Ice"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Abundance Sprite: Malefic Ape",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Wind"
+            ]
+          },
+          {
+            "monster_name": "Abundance Sprite: Golden Hound",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Ice",
+              "Thunder",
+              "Quantum"
+            ]
+          },
+          {
+            "monster_name": "Abundance Sprite: Wooden Lupus",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Fire",
+              "Wind",
+              "Imaginary"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Abundance Sprite: Malefic Ape",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Wind"
+            ]
+          },
+          {
+            "monster_name": "Senior Staff: Team Leader",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Imaginary"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "weakness_suggest": [
+          "Physical",
+          "Imaginary"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Aurumaton Spectral Envoy",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Wraith Warden",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Wind"
+            ]
+          },
+          {
+            "monster_name": "Entranced Ingenium: Illumination Dragonfish",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Imaginary"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Aurumaton Spectral Envoy",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Voidranger: Trampler",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Wind",
+              "Imaginary"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": {
+        "zh_cn": "藏于深空之秘其五",
+        "zh_hk": "藏於深空之秘其五",
+        "de": "Das Geheimnis in den Tiefen des Alls V",
+        "en": "Enigma in Deep Space (V)",
+        "es": "Incógnita del espacio profundo V",
+        "fr": "Mystère des profondeurs de l'espace (V)",
+        "id": "Rahasia di Langit Dalam 5",
+        "jp": "深空に隠された秘密・5",
+        "kr": "심우주에 숨겨진 비밀•5",
+        "pt": "Enigma no Espaço Profundo (V)",
+        "ru": "Тайна в глубинах космоса V",
+        "th": "ปริศนาในห้วงอวกาศ 5",
+        "vi": "Bí Ẩn Không Gian 5"
+      },
+      "part1": {
+        "weakness_suggest": [
+          "Fire",
+          "Thunder"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Frigid Prowler",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Thunder",
+              "Quantum"
+            ]
+          },
+          {
+            "monster_name": "Imaginary Weaver",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Quantum"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Decaying Shadow",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Thunder",
+              "Wind"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "weakness_suggest": [
+          "Physical",
+          "Ice"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Blaze Out of Space",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Quantum"
+            ]
+          },
+          {
+            "monster_name": "Incineration Shadewalker",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Ice",
+              "Wind",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Imaginary Weaver",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Quantum"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Argenti",
+            "monster_code": 4,
+            "monster_weakness": [
+              "Physical",
+              "Fire",
+              "Ice"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": {
+        "zh_cn": "藏于深空之秘其六",
+        "zh_hk": "藏於深空之秘其六",
+        "de": "Das Geheimnis in den Tiefen des Alls VI",
+        "en": "Enigma in Deep Space (VI)",
+        "es": "Incógnita del espacio profundo VI",
+        "fr": "Mystère des profondeurs de l'espace (VI)",
+        "id": "Rahasia di Langit Dalam 6",
+        "jp": "深空に隠された秘密・6",
+        "kr": "심우주에 숨겨진 비밀•6",
+        "pt": "Enigma no Espaço Profundo (VI)",
+        "ru": "Тайна в глубинах космоса VI",
+        "th": "ปริศนาในห้วงอวกาศ 6",
+        "vi": "Bí Ẩn Không Gian 6"
+      },
+      "part1": {
+        "weakness_suggest": [
+          "Ice",
+          "Thunder"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "The Ascended",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Thunder"
+            ]
+          },
+          {
+            "monster_name": "Disciples of Sanctus Medicus: Ballistarius",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Wind"
+            ]
+          },
+          {
+            "monster_name": "Mara-Struck Warden",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Ice",
+              "Thunder",
+              "Quantum"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "The Ascended",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Thunder"
+            ]
+          },
+          {
+            "monster_name": "Searing Prowler",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Ice",
+              "Thunder",
+              "Imaginary"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "weakness_suggest": [
+          "Physical",
+          "Imaginary"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Aurumaton Spectral Envoy",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Cloud Knights Patroller",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Fire",
+              "Wind",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Wraith Warden",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Wind"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Bronya",
+            "monster_code": 4,
+            "monster_weakness": [
+              "Physical",
+              "Fire",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Aurumaton Spectral Envoy",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Wraith Warden",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Wind"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": {
+        "zh_cn": "藏于深空之秘其七",
+        "zh_hk": "藏於深空之秘其七",
+        "de": "Das Geheimnis in den Tiefen des Alls VII",
+        "en": "Enigma in Deep Space (VII)",
+        "es": "Incógnita del espacio profundo VII",
+        "fr": "Mystère des profondeurs de l'espace (VII)",
+        "id": "Rahasia di Langit Dalam 7",
+        "jp": "深空に隠された秘密・7",
+        "kr": "심우주에 숨겨진 비밀•7",
+        "pt": "Enigma no Espaço Profundo (VII)",
+        "ru": "Тайна в глубинах космоса VII",
+        "th": "ปริศนาในห้วงอวกาศ 7",
+        "vi": "Bí Ẩn Không Gian 7"
+      },
+      "part1": {
+        "weakness_suggest": [
+          "Fire",
+          "Ice"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Stormbringer",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Everwinter Shadewalker",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Fire",
+              "Quantum"
+            ]
+          },
+          {
+            "monster_name": "Vagrant",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Imaginary"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Automaton Grizzly",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Thunder"
+            ]
+          },
+          {
+            "monster_name": "Stormbringer",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Vagrant",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Imaginary"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "weakness_suggest": [
+          "Wind",
+          "Quantum"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Aurumaton Gatekeeper",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Thunder",
+              "Wind",
+              "Quantum"
+            ]
+          },
+          {
+            "monster_name": "Abundance Sprite: Golden Hound",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Ice",
+              "Thunder",
+              "Quantum"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Aurumaton Gatekeeper",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Thunder",
+              "Wind",
+              "Quantum"
+            ]
+          },
+          {
+            "monster_name": "Ice Out of Space",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Wind",
+              "Quantum"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": {
+        "zh_cn": "藏于深空之秘其八",
+        "zh_hk": "藏於深空之秘其八",
+        "de": "Das Geheimnis in den Tiefen des Alls VIII",
+        "en": "Enigma in Deep Space (VIII)",
+        "es": "Incógnita del espacio profundo VIII",
+        "fr": "Mystère des profondeurs de l'espace (VIII)",
+        "id": "Rahasia di Langit Dalam 8",
+        "jp": "深空に隠された秘密・8",
+        "kr": "심우주에 숨겨진 비밀•8",
+        "pt": "Enigma no Espaço Profundo (VIII)",
+        "ru": "Тайна в глубинах космоса VIII",
+        "th": "ปริศนาในห้วงอวกาศ 8",
+        "vi": "Bí Ẩn Không Gian 8"
+      },
+      "part1": {
+        "weakness_suggest": [
+          "Ice",
+          "Imaginary"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Disciples of Sanctus Medicus: Shape Shifter",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Ice",
+              "Wind",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Mara-Struck Warden",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Ice",
+              "Thunder",
+              "Quantum"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Disciples of Sanctus Medicus: Shape Shifter",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Ice",
+              "Wind",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Stormbringer",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Imaginary"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "weakness_suggest": [
+          "Wind"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Guardian Shadow",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Wind",
+              "Quantum"
+            ]
+          },
+          {
+            "monster_name": "Automaton Beetle",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Thunder",
+              "Wind",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Imaginary Weaver",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Quantum"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Svarog",
+            "monster_code": 4,
+            "monster_weakness": [
+              "Fire",
+              "Thunder",
+              "Wind"
+            ]
+          },
+          {
+            "monster_name": "Guardian Shadow",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Wind",
+              "Quantum"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": {
+        "zh_cn": "藏于深空之秘其九",
+        "zh_hk": "藏於深空之秘其九",
+        "de": "Das Geheimnis in den Tiefen des Alls IX",
+        "en": "Enigma in Deep Space (IX)",
+        "es": "Incógnita del espacio profundo IX",
+        "fr": "Mystère des profondeurs de l'espace (IX)",
+        "id": "Rahasia di Langit Dalam 9",
+        "jp": "深空に隠された秘密・9",
+        "kr": "심우주에 숨겨진 비밀•9",
+        "pt": "Enigma no Espaço Profundo (IX)",
+        "ru": "Тайна в глубинах космоса IX",
+        "th": "ปริศนาในห้วงอวกาศ 9",
+        "vi": "Bí Ẩn Không Gian 9"
+      },
+      "part1": {
+        "weakness_suggest": [
+          "Fire",
+          "Ice"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Abundance Sprite: Malefic Ape",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Wind"
+            ]
+          },
+          {
+            "monster_name": "Abundance Sprite: Golden Hound",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Ice",
+              "Thunder",
+              "Quantum"
+            ]
+          },
+          {
+            "monster_name": "Abundance Sprite: Wooden Lupus",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Fire",
+              "Wind",
+              "Imaginary"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Abundance Sprite: Malefic Ape",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Wind"
+            ]
+          },
+          {
+            "monster_name": "Senior Staff: Team Leader",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Imaginary"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "weakness_suggest": [
+          "Physical",
+          "Imaginary"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Aurumaton Spectral Envoy",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Wraith Warden",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Wind"
+            ]
+          },
+          {
+            "monster_name": "Entranced Ingenium: Illumination Dragonfish",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Imaginary"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Aurumaton Spectral Envoy",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Voidranger: Trampler",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Wind",
+              "Imaginary"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": {
+        "zh_cn": "藏于深空之秘其十",
+        "zh_hk": "藏於深空之秘其十",
+        "de": "Das Geheimnis in den Tiefen des Alls X",
+        "en": "Enigma in Deep Space (X)",
+        "es": "Incógnita del espacio profundo X",
+        "fr": "Mystère des profondeurs de l'espace (X)",
+        "id": "Rahasia di Langit Dalam <unbreak>10</unbreak>",
+        "jp": "深空に隠された秘密・<unbreak>10</unbreak>",
+        "kr": "심우주에 숨겨진 비밀•<unbreak>10</unbreak>",
+        "pt": "Enigma no Espaço Profundo (X)",
+        "ru": "Тайна в глубинах космоса X",
+        "th": "ปริศนาในห้วงอวกาศ <unbreak>10</unbreak>",
+        "vi": "Bí Ẩn Không Gian <unbreak>10</unbreak>"
+      },
+      "part1": {
+        "weakness_suggest": [
+          "Fire",
+          "Thunder"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Frigid Prowler",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Thunder",
+              "Quantum"
+            ]
+          },
+          {
+            "monster_name": "Imaginary Weaver",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Quantum"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Decaying Shadow",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Thunder",
+              "Wind"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "weakness_suggest": [
+          "Physical",
+          "Ice"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Blaze Out of Space",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Quantum"
+            ]
+          },
+          {
+            "monster_name": "Incineration Shadewalker",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Ice",
+              "Wind",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Imaginary Weaver",
+            "monster_code": 2,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Quantum"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Argenti",
+            "monster_code": 4,
+            "monster_weakness": [
+              "Physical",
+              "Fire",
+              "Ice"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": {
+        "zh_cn": "藏于深空之秘其十一",
+        "zh_hk": "藏於深空之秘其十一",
+        "de": "Das Geheimnis in den Tiefen des Alls XI",
+        "en": "Enigma in Deep Space (XI)",
+        "es": "Incógnita del espacio profundo XI",
+        "fr": "Mystère des profondeurs de l'espace (XI)",
+        "id": "Rahasia di Langit Dalam <unbreak>11</unbreak>",
+        "jp": "深空に隠された秘密・<unbreak>11</unbreak>",
+        "kr": "심우주에 숨겨진 비밀•<unbreak>11</unbreak>",
+        "pt": "Enigma no Espaço Profundo (XI)",
+        "ru": "Тайна в глубинах космоса XI",
+        "th": "ปริศนาในห้วงอวกาศ <unbreak>11</unbreak>",
+        "vi": "Bí Ẩn Không Gian <unbreak>11</unbreak>"
+      },
+      "part1": {
+        "weakness_suggest": [
+          "Thunder",
+          "Imaginary"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Aurumaton Spectral Envoy",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Automaton Direwolf",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Ice",
+              "Thunder",
+              "Imaginary"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Gepard",
+            "monster_code": 4,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Aurumaton Spectral Envoy",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Thunder",
+              "Imaginary"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "weakness_suggest": [
+          "Fire",
+          "Ice"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Abundance Sprite: Malefic Ape",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Wind"
+            ]
+          },
+          {
+            "monster_name": "Senior Staff: Team Leader",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Imaginary"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Abundant Ebon Deer",
+            "monster_code": 4,
+            "monster_weakness": [
+              "Fire",
+              "Ice",
+              "Quantum"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": {
+        "zh_cn": "藏于深空之秘其十二",
+        "zh_hk": "藏於深空之秘其十二",
+        "de": "Das Geheimnis in den Tiefen des Alls XII",
+        "en": "Enigma in Deep Space (XII)",
+        "es": "Incógnita del espacio profundo XII",
+        "fr": "Mystère des profondeurs de l'espace (XII)",
+        "id": "Rahasia di Langit Dalam <unbreak>12</unbreak>",
+        "jp": "深空に隠された秘密・<unbreak>12</unbreak>",
+        "kr": "심우주에 숨겨진 비밀•<unbreak>12</unbreak>",
+        "pt": "Enigma no Espaço Profundo (XII)",
+        "ru": "Тайна в глубинах космоса XII",
+        "th": "ปริศนาในห้วงอวกาศ <unbreak>12</unbreak>",
+        "vi": "Bí Ẩn Không Gian <unbreak>12</unbreak>"
+      },
+      "part1": {
+        "weakness_suggest": [
+          "Wind",
+          "Imaginary"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "Voidranger: Trampler",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Wind",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Disciples of Sanctus Medicus: Shape Shifter",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Ice",
+              "Wind",
+              "Imaginary"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Disciples of Sanctus Medicus: Shape Shifter",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Ice",
+              "Wind",
+              "Imaginary"
+            ]
+          },
+          {
+            "monster_name": "Stellaron Hunter: Kafka",
+            "monster_code": -1,
+            "monster_weakness": [
+              "Physical",
+              "Wind",
+              "Imaginary"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "weakness_suggest": [
+          "Ice"
+        ],
+        "totalWaves": 2,
+        "wave1": [
+          {
+            "monster_name": "The Ascended",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Thunder"
+            ]
+          },
+          {
+            "monster_name": "Silvermane Lieutenant",
+            "monster_code": 3,
+            "monster_weakness": [
+              "Physical",
+              "Ice",
+              "Quantum"
+            ]
+          }
+        ],
+        "wave2": [
+          {
+            "monster_name": "Swarm: True Sting",
+            "monster_code": 4,
+            "monster_weakness": [
+              "Ice",
+              "Quantum",
+              "Imaginary"
+            ]
+          }
+        ]
+      }
     }
+  ],
+  "name": {
+    "zh_cn": "藏于深空之秘",
+    "zh_hk": "藏於深空之秘",
+    "de": "Das Geheimnis in den Tiefen des Alls",
+    "en": "Enigma in Deep Space",
+    "es": "Incógnita del espacio profundo",
+    "fr": "Mystère des profondeurs de l'espace",
+    "id": "Rahasia di Langit Dalam",
+    "jp": "深空に隠された秘密",
+    "kr": "심우주에 숨겨진 비밀",
+    "pt": "Enigma no Espaço Profundo",
+    "ru": "Тайна в глубинах космоса",
+    "th": "ปริศนาในห้วงอวกาศ",
+    "vi": "Bí Ẩn Không Gian"
   },
-  {
-    "name": {
-      "zh_cn": "藏于深空之秘其二",
-      "zh_hk": "藏於深空之秘其二",
-      "de": "Das Geheimnis in den Tiefen des Alls II",
-      "en": "Enigma in Deep Space (II)",
-      "es": "Incógnita del espacio profundo II",
-      "fr": "Mystère des profondeurs de l'espace (II)",
-      "id": "Rahasia di Langit Dalam 2",
-      "jp": "深空に隠された秘密・2",
-      "kr": "심우주에 숨겨진 비밀•2",
-      "pt": "Enigma no Espaço Profundo (II)",
-      "ru": "Тайна в глубинах космоса II",
-      "th": "ปริศนาในห้วงอวกาศ 2",
-      "vi": "Bí Ẩn Không Gian 2"
-    },
-    "part1": {
-      "weakness_suggest": ["Fire", "Ice"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Stormbringer",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Imaginary"]
-        },
-        {
-          "monster_name": "Everwinter Shadewalker",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Fire", "Quantum"]
-        },
-        {
-          "monster_name": "Vagrant",
-          "monster_code": 2,
-          "monster_weakness": ["Fire", "Ice", "Imaginary"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Automaton Grizzly",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Thunder"]
-        },
-        {
-          "monster_name": "Stormbringer",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Imaginary"]
-        },
-        {
-          "monster_name": "Vagrant",
-          "monster_code": 2,
-          "monster_weakness": ["Fire", "Ice", "Imaginary"]
-        }
-      ]
-    },
-    "part2": {
-      "weakness_suggest": ["Wind", "Quantum"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Aurumaton Gatekeeper",
-          "monster_code": 3,
-          "monster_weakness": ["Thunder", "Wind", "Quantum"]
-        },
-        {
-          "monster_name": "Abundance Sprite: Golden Hound",
-          "monster_code": 2,
-          "monster_weakness": ["Ice", "Thunder", "Quantum"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Aurumaton Gatekeeper",
-          "monster_code": 3,
-          "monster_weakness": ["Thunder", "Wind", "Quantum"]
-        },
-        {
-          "monster_name": "Ice Out of Space",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Wind", "Quantum"]
-        }
-      ]
-    }
-  },
-  {
-    "name": {
-      "zh_cn": "藏于深空之秘其三",
-      "zh_hk": "藏於深空之秘其三",
-      "de": "Das Geheimnis in den Tiefen des Alls III",
-      "en": "Enigma in Deep Space (III)",
-      "es": "Incógnita del espacio profundo III",
-      "fr": "Mystère des profondeurs de l'espace (III)",
-      "id": "Rahasia di Langit Dalam 3",
-      "jp": "深空に隠された秘密・3",
-      "kr": "심우주에 숨겨진 비밀•3",
-      "pt": "Enigma no Espaço Profundo (III)",
-      "ru": "Тайна в глубинах космоса III",
-      "th": "ปริศนาในห้วงอวกาศ 3",
-      "vi": "Bí Ẩn Không Gian 3"
-    },
-    "part1": {
-      "weakness_suggest": ["Ice", "Imaginary"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Disciples of Sanctus Medicus: Shape Shifter",
-          "monster_code": 3,
-          "monster_weakness": ["Ice", "Wind", "Imaginary"]
-        },
-        {
-          "monster_name": "Mara-Struck Warden",
-          "monster_code": 2,
-          "monster_weakness": ["Ice", "Thunder", "Quantum"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Disciples of Sanctus Medicus: Shape Shifter",
-          "monster_code": 3,
-          "monster_weakness": ["Ice", "Wind", "Imaginary"]
-        },
-        {
-          "monster_name": "Stormbringer",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Imaginary"]
-        }
-      ]
-    },
-    "part2": {
-      "weakness_suggest": ["Wind"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Guardian Shadow",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Wind", "Quantum"]
-        },
-        {
-          "monster_name": "Automaton Beetle",
-          "monster_code": 2,
-          "monster_weakness": ["Thunder", "Wind", "Imaginary"]
-        },
-        {
-          "monster_name": "Imaginary Weaver",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Thunder", "Quantum"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Svarog",
-          "monster_code": 4,
-          "monster_weakness": ["Fire", "Thunder", "Wind"]
-        },
-        {
-          "monster_name": "Guardian Shadow",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Wind", "Quantum"]
-        }
-      ]
-    }
-  },
-  {
-    "name": {
-      "zh_cn": "藏于深空之秘其四",
-      "zh_hk": "藏於深空之秘其四",
-      "de": "Das Geheimnis in den Tiefen des Alls IV",
-      "en": "Enigma in Deep Space (IV)",
-      "es": "Incógnita del espacio profundo IV",
-      "fr": "Mystère des profondeurs de l'espace (IV)",
-      "id": "Rahasia di Langit Dalam 4",
-      "jp": "深空に隠された秘密・4",
-      "kr": "심우주에 숨겨진 비밀•4",
-      "pt": "Enigma no Espaço Profundo (IV)",
-      "ru": "Тайна в глубинах космоса IV",
-      "th": "ปริศนาในห้วงอวกาศ 4",
-      "vi": "Bí Ẩn Không Gian 4"
-    },
-    "part1": {
-      "weakness_suggest": ["Fire", "Ice"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Abundance Sprite: Malefic Ape",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Wind"]
-        },
-        {
-          "monster_name": "Abundance Sprite: Golden Hound",
-          "monster_code": 2,
-          "monster_weakness": ["Ice", "Thunder", "Quantum"]
-        },
-        {
-          "monster_name": "Abundance Sprite: Wooden Lupus",
-          "monster_code": 2,
-          "monster_weakness": ["Fire", "Wind", "Imaginary"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Abundance Sprite: Malefic Ape",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Wind"]
-        },
-        {
-          "monster_name": "Senior Staff: Team Leader",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Imaginary"]
-        }
-      ]
-    },
-    "part2": {
-      "weakness_suggest": ["Physical", "Imaginary"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Aurumaton Spectral Envoy",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Thunder", "Imaginary"]
-        },
-        {
-          "monster_name": "Wraith Warden",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Ice", "Wind"]
-        },
-        {
-          "monster_name": "Entranced Ingenium: Illumination Dragonfish",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Thunder", "Imaginary"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Aurumaton Spectral Envoy",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Thunder", "Imaginary"]
-        },
-        {
-          "monster_name": "Voidranger: Trampler",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Wind", "Imaginary"]
-        }
-      ]
-    }
-  },
-  {
-    "name": {
-      "zh_cn": "藏于深空之秘其五",
-      "zh_hk": "藏於深空之秘其五",
-      "de": "Das Geheimnis in den Tiefen des Alls V",
-      "en": "Enigma in Deep Space (V)",
-      "es": "Incógnita del espacio profundo V",
-      "fr": "Mystère des profondeurs de l'espace (V)",
-      "id": "Rahasia di Langit Dalam 5",
-      "jp": "深空に隠された秘密・5",
-      "kr": "심우주에 숨겨진 비밀•5",
-      "pt": "Enigma no Espaço Profundo (V)",
-      "ru": "Тайна в глубинах космоса V",
-      "th": "ปริศนาในห้วงอวกาศ 5",
-      "vi": "Bí Ẩn Không Gian 5"
-    },
-    "part1": {
-      "weakness_suggest": ["Fire", "Thunder"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Frigid Prowler",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Thunder", "Quantum"]
-        },
-        {
-          "monster_name": "Imaginary Weaver",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Thunder", "Quantum"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Decaying Shadow",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Thunder", "Wind"]
-        }
-      ]
-    },
-    "part2": {
-      "weakness_suggest": ["Physical", "Ice"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Blaze Out of Space",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Ice", "Quantum"]
-        },
-        {
-          "monster_name": "Incineration Shadewalker",
-          "monster_code": 2,
-          "monster_weakness": ["Ice", "Wind", "Imaginary"]
-        },
-        {
-          "monster_name": "Imaginary Weaver",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Thunder", "Quantum"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Argenti",
-          "monster_code": 4,
-          "monster_weakness": ["Physical", "Fire", "Ice"]
-        }
-      ]
-    }
-  },
-  {
-    "name": {
-      "zh_cn": "藏于深空之秘其六",
-      "zh_hk": "藏於深空之秘其六",
-      "de": "Das Geheimnis in den Tiefen des Alls VI",
-      "en": "Enigma in Deep Space (VI)",
-      "es": "Incógnita del espacio profundo VI",
-      "fr": "Mystère des profondeurs de l'espace (VI)",
-      "id": "Rahasia di Langit Dalam 6",
-      "jp": "深空に隠された秘密・6",
-      "kr": "심우주에 숨겨진 비밀•6",
-      "pt": "Enigma no Espaço Profundo (VI)",
-      "ru": "Тайна в глубинах космоса VI",
-      "th": "ปริศนาในห้วงอวกาศ 6",
-      "vi": "Bí Ẩn Không Gian 6"
-    },
-    "part1": {
-      "weakness_suggest": ["Ice", "Thunder"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "The Ascended",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Ice", "Thunder"]
-        },
-        {
-          "monster_name": "Disciples of Sanctus Medicus: Ballistarius",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Ice", "Wind"]
-        },
-        {
-          "monster_name": "Mara-Struck Warden",
-          "monster_code": 2,
-          "monster_weakness": ["Ice", "Thunder", "Quantum"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "The Ascended",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Ice", "Thunder"]
-        },
-        {
-          "monster_name": "Searing Prowler",
-          "monster_code": 3,
-          "monster_weakness": ["Ice", "Thunder", "Imaginary"]
-        }
-      ]
-    },
-    "part2": {
-      "weakness_suggest": ["Physical", "Imaginary"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Aurumaton Spectral Envoy",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Thunder", "Imaginary"]
-        },
-        {
-          "monster_name": "Cloud Knights Patroller",
-          "monster_code": 2,
-          "monster_weakness": ["Fire", "Wind", "Imaginary"]
-        },
-        {
-          "monster_name": "Wraith Warden",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Ice", "Wind"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Bronya",
-          "monster_code": 4,
-          "monster_weakness": ["Physical", "Fire", "Imaginary"]
-        },
-        {
-          "monster_name": "Aurumaton Spectral Envoy",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Thunder", "Imaginary"]
-        },
-        {
-          "monster_name": "Wraith Warden",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Ice", "Wind"]
-        }
-      ]
-    }
-  },
-  {
-    "name": {
-      "zh_cn": "藏于深空之秘其七",
-      "zh_hk": "藏於深空之秘其七",
-      "de": "Das Geheimnis in den Tiefen des Alls VII",
-      "en": "Enigma in Deep Space (VII)",
-      "es": "Incógnita del espacio profundo VII",
-      "fr": "Mystère des profondeurs de l'espace (VII)",
-      "id": "Rahasia di Langit Dalam 7",
-      "jp": "深空に隠された秘密・7",
-      "kr": "심우주에 숨겨진 비밀•7",
-      "pt": "Enigma no Espaço Profundo (VII)",
-      "ru": "Тайна в глубинах космоса VII",
-      "th": "ปริศนาในห้วงอวกาศ 7",
-      "vi": "Bí Ẩn Không Gian 7"
-    },
-    "part1": {
-      "weakness_suggest": ["Fire", "Ice"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Stormbringer",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Imaginary"]
-        },
-        {
-          "monster_name": "Everwinter Shadewalker",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Fire", "Quantum"]
-        },
-        {
-          "monster_name": "Vagrant",
-          "monster_code": 2,
-          "monster_weakness": ["Fire", "Ice", "Imaginary"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Automaton Grizzly",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Thunder"]
-        },
-        {
-          "monster_name": "Stormbringer",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Imaginary"]
-        },
-        {
-          "monster_name": "Vagrant",
-          "monster_code": 2,
-          "monster_weakness": ["Fire", "Ice", "Imaginary"]
-        }
-      ]
-    },
-    "part2": {
-      "weakness_suggest": ["Wind", "Quantum"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Aurumaton Gatekeeper",
-          "monster_code": 3,
-          "monster_weakness": ["Thunder", "Wind", "Quantum"]
-        },
-        {
-          "monster_name": "Abundance Sprite: Golden Hound",
-          "monster_code": 2,
-          "monster_weakness": ["Ice", "Thunder", "Quantum"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Aurumaton Gatekeeper",
-          "monster_code": 3,
-          "monster_weakness": ["Thunder", "Wind", "Quantum"]
-        },
-        {
-          "monster_name": "Ice Out of Space",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Wind", "Quantum"]
-        }
-      ]
-    }
-  },
-  {
-    "name": {
-      "zh_cn": "藏于深空之秘其八",
-      "zh_hk": "藏於深空之秘其八",
-      "de": "Das Geheimnis in den Tiefen des Alls VIII",
-      "en": "Enigma in Deep Space (VIII)",
-      "es": "Incógnita del espacio profundo VIII",
-      "fr": "Mystère des profondeurs de l'espace (VIII)",
-      "id": "Rahasia di Langit Dalam 8",
-      "jp": "深空に隠された秘密・8",
-      "kr": "심우주에 숨겨진 비밀•8",
-      "pt": "Enigma no Espaço Profundo (VIII)",
-      "ru": "Тайна в глубинах космоса VIII",
-      "th": "ปริศนาในห้วงอวกาศ 8",
-      "vi": "Bí Ẩn Không Gian 8"
-    },
-    "part1": {
-      "weakness_suggest": ["Ice", "Imaginary"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Disciples of Sanctus Medicus: Shape Shifter",
-          "monster_code": 3,
-          "monster_weakness": ["Ice", "Wind", "Imaginary"]
-        },
-        {
-          "monster_name": "Mara-Struck Warden",
-          "monster_code": 2,
-          "monster_weakness": ["Ice", "Thunder", "Quantum"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Disciples of Sanctus Medicus: Shape Shifter",
-          "monster_code": 3,
-          "monster_weakness": ["Ice", "Wind", "Imaginary"]
-        },
-        {
-          "monster_name": "Stormbringer",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Imaginary"]
-        }
-      ]
-    },
-    "part2": {
-      "weakness_suggest": ["Wind"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Guardian Shadow",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Wind", "Quantum"]
-        },
-        {
-          "monster_name": "Automaton Beetle",
-          "monster_code": 2,
-          "monster_weakness": ["Thunder", "Wind", "Imaginary"]
-        },
-        {
-          "monster_name": "Imaginary Weaver",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Thunder", "Quantum"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Svarog",
-          "monster_code": 4,
-          "monster_weakness": ["Fire", "Thunder", "Wind"]
-        },
-        {
-          "monster_name": "Guardian Shadow",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Wind", "Quantum"]
-        }
-      ]
-    }
-  },
-  {
-    "name": {
-      "zh_cn": "藏于深空之秘其九",
-      "zh_hk": "藏於深空之秘其九",
-      "de": "Das Geheimnis in den Tiefen des Alls IX",
-      "en": "Enigma in Deep Space (IX)",
-      "es": "Incógnita del espacio profundo IX",
-      "fr": "Mystère des profondeurs de l'espace (IX)",
-      "id": "Rahasia di Langit Dalam 9",
-      "jp": "深空に隠された秘密・9",
-      "kr": "심우주에 숨겨진 비밀•9",
-      "pt": "Enigma no Espaço Profundo (IX)",
-      "ru": "Тайна в глубинах космоса IX",
-      "th": "ปริศนาในห้วงอวกาศ 9",
-      "vi": "Bí Ẩn Không Gian 9"
-    },
-    "part1": {
-      "weakness_suggest": ["Fire", "Ice"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Abundance Sprite: Malefic Ape",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Wind"]
-        },
-        {
-          "monster_name": "Abundance Sprite: Golden Hound",
-          "monster_code": 2,
-          "monster_weakness": ["Ice", "Thunder", "Quantum"]
-        },
-        {
-          "monster_name": "Abundance Sprite: Wooden Lupus",
-          "monster_code": 2,
-          "monster_weakness": ["Fire", "Wind", "Imaginary"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Abundance Sprite: Malefic Ape",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Wind"]
-        },
-        {
-          "monster_name": "Senior Staff: Team Leader",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Imaginary"]
-        }
-      ]
-    },
-    "part2": {
-      "weakness_suggest": ["Physical", "Imaginary"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Aurumaton Spectral Envoy",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Thunder", "Imaginary"]
-        },
-        {
-          "monster_name": "Wraith Warden",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Ice", "Wind"]
-        },
-        {
-          "monster_name": "Entranced Ingenium: Illumination Dragonfish",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Thunder", "Imaginary"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Aurumaton Spectral Envoy",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Thunder", "Imaginary"]
-        },
-        {
-          "monster_name": "Voidranger: Trampler",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Wind", "Imaginary"]
-        }
-      ]
-    }
-  },
-  {
-    "name": {
-      "zh_cn": "藏于深空之秘其十",
-      "zh_hk": "藏於深空之秘其十",
-      "de": "Das Geheimnis in den Tiefen des Alls X",
-      "en": "Enigma in Deep Space (X)",
-      "es": "Incógnita del espacio profundo X",
-      "fr": "Mystère des profondeurs de l'espace (X)",
-      "id": "Rahasia di Langit Dalam <unbreak>10</unbreak>",
-      "jp": "深空に隠された秘密・<unbreak>10</unbreak>",
-      "kr": "심우주에 숨겨진 비밀•<unbreak>10</unbreak>",
-      "pt": "Enigma no Espaço Profundo (X)",
-      "ru": "Тайна в глубинах космоса X",
-      "th": "ปริศนาในห้วงอวกาศ <unbreak>10</unbreak>",
-      "vi": "Bí Ẩn Không Gian <unbreak>10</unbreak>"
-    },
-    "part1": {
-      "weakness_suggest": ["Fire", "Thunder"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Frigid Prowler",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Thunder", "Quantum"]
-        },
-        {
-          "monster_name": "Imaginary Weaver",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Thunder", "Quantum"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Decaying Shadow",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Thunder", "Wind"]
-        }
-      ]
-    },
-    "part2": {
-      "weakness_suggest": ["Physical", "Ice"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Blaze Out of Space",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Ice", "Quantum"]
-        },
-        {
-          "monster_name": "Incineration Shadewalker",
-          "monster_code": 2,
-          "monster_weakness": ["Ice", "Wind", "Imaginary"]
-        },
-        {
-          "monster_name": "Imaginary Weaver",
-          "monster_code": 2,
-          "monster_weakness": ["Physical", "Thunder", "Quantum"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Argenti",
-          "monster_code": 4,
-          "monster_weakness": ["Physical", "Fire", "Ice"]
-        }
-      ]
-    }
-  },
-  {
-    "name": {
-      "zh_cn": "藏于深空之秘其十一",
-      "zh_hk": "藏於深空之秘其十一",
-      "de": "Das Geheimnis in den Tiefen des Alls XI",
-      "en": "Enigma in Deep Space (XI)",
-      "es": "Incógnita del espacio profundo XI",
-      "fr": "Mystère des profondeurs de l'espace (XI)",
-      "id": "Rahasia di Langit Dalam <unbreak>11</unbreak>",
-      "jp": "深空に隠された秘密・<unbreak>11</unbreak>",
-      "kr": "심우주에 숨겨진 비밀•<unbreak>11</unbreak>",
-      "pt": "Enigma no Espaço Profundo (XI)",
-      "ru": "Тайна в глубинах космоса XI",
-      "th": "ปริศนาในห้วงอวกาศ <unbreak>11</unbreak>",
-      "vi": "Bí Ẩn Không Gian <unbreak>11</unbreak>"
-    },
-    "part1": {
-      "weakness_suggest": ["Thunder", "Imaginary"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Aurumaton Spectral Envoy",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Thunder", "Imaginary"]
-        },
-        {
-          "monster_name": "Automaton Direwolf",
-          "monster_code": 3,
-          "monster_weakness": ["Ice", "Thunder", "Imaginary"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Gepard",
-          "monster_code": 4,
-          "monster_weakness": ["Physical", "Thunder", "Imaginary"]
-        },
-        {
-          "monster_name": "Aurumaton Spectral Envoy",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Thunder", "Imaginary"]
-        }
-      ]
-    },
-    "part2": {
-      "weakness_suggest": ["Fire", "Ice"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Abundance Sprite: Malefic Ape",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Wind"]
-        },
-        {
-          "monster_name": "Senior Staff: Team Leader",
-          "monster_code": 3,
-          "monster_weakness": ["Fire", "Ice", "Imaginary"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Abundant Ebon Deer",
-          "monster_code": 4,
-          "monster_weakness": ["Fire", "Ice", "Quantum"]
-        }
-      ]
-    }
-  },
-  {
-    "name": {
-      "zh_cn": "藏于深空之秘其十二",
-      "zh_hk": "藏於深空之秘其十二",
-      "de": "Das Geheimnis in den Tiefen des Alls XII",
-      "en": "Enigma in Deep Space (XII)",
-      "es": "Incógnita del espacio profundo XII",
-      "fr": "Mystère des profondeurs de l'espace (XII)",
-      "id": "Rahasia di Langit Dalam <unbreak>12</unbreak>",
-      "jp": "深空に隠された秘密・<unbreak>12</unbreak>",
-      "kr": "심우주에 숨겨진 비밀•<unbreak>12</unbreak>",
-      "pt": "Enigma no Espaço Profundo (XII)",
-      "ru": "Тайна в глубинах космоса XII",
-      "th": "ปริศนาในห้วงอวกาศ <unbreak>12</unbreak>",
-      "vi": "Bí Ẩn Không Gian <unbreak>12</unbreak>"
-    },
-    "part1": {
-      "weakness_suggest": ["Wind", "Imaginary"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "Voidranger: Trampler",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Wind", "Imaginary"]
-        },
-        {
-          "monster_name": "Disciples of Sanctus Medicus: Shape Shifter",
-          "monster_code": 3,
-          "monster_weakness": ["Ice", "Wind", "Imaginary"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Disciples of Sanctus Medicus: Shape Shifter",
-          "monster_code": 3,
-          "monster_weakness": ["Ice", "Wind", "Imaginary"]
-        },
-        {
-          "monster_name": "Stellaron Hunter: Kafka",
-          "monster_code": -1,
-          "monster_weakness": ["Physical", "Wind", "Imaginary"]
-        }
-      ]
-    },
-    "part2": {
-      "weakness_suggest": ["Ice"],
-      "totalWaves": 2,
-      "wave1": [
-        {
-          "monster_name": "The Ascended",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Ice", "Thunder"]
-        },
-        {
-          "monster_name": "Silvermane Lieutenant",
-          "monster_code": 3,
-          "monster_weakness": ["Physical", "Ice", "Quantum"]
-        }
-      ],
-      "wave2": [
-        {
-          "monster_name": "Swarm: True Sting",
-          "monster_code": 4,
-          "monster_weakness": ["Ice", "Quantum", "Imaginary"]
-        }
-      ]
-    }
+  "desc": {
+    "zh_cn": "我方目标击破敌方目标弱点或攻击处于弱点击破状态的敌方目标后，为【记忆紊流】增加<color=#f29e38ff><unbreak>#3[i]</unbreak></color>段攻击段数，最多叠加<color=#f29e38ff><unbreak>#1[i]</unbreak></color>段。\\n每个轮开始时，每段攻击对随机敌方目标造成1次基于目标生命上限的伤害。",
+    "zh_hk": "我方目標擊破敵方目標弱點或攻擊處於弱點擊破狀態的敵方目標後，為【記憶紊流】增加<color=#f29e38ff><unbreak>#3[i]</unbreak></color>段攻擊段數，最多疊加<color=#f29e38ff><unbreak>#1[i]</unbreak></color>段。\\n每一輪開始時，每段攻擊對隨機敵方目標根據其生命上限造成1次傷害。",
+    "de": "Wenn ein Verbündeter bei einem Gegner Schwächebruch verursacht oder einen Gegner im Schwächebruch angreift, wird die Trefferzahl von „Turbulenzen des Gedächtnisses“ um <color=#f29e38ff><unbreak>#3[i]</unbreak></color> erhöht, bis max. <color=#f29e38ff><unbreak>#1[i]</unbreak></color> Treffer.\\nZu Beginn jeder Runde verursacht jeder Treffer bei einem zufälligen Ziel 1-mal SCH basierend auf seinen max. LP.",
+    "en": "After an ally Breaks enemies' Weaknesses or attacks Weakness Broken enemies, add <color=#f29e38ff><unbreak>#3[i]</unbreak></color> Hit(s) Per Action to Memory Turbulence, up to <color=#f29e38ff><unbreak>#1[i]</unbreak></color> extra hits.\\nAt the start of every Cycle, every hit will deal DMG based on the enemy targets' respective Max HP to random enemy targets 1 time.",
+    "es": "Después de que un aliado rompa la Debilidad de un enemigo o ataque a un enemigo con Ruptura de Debilidad, se añade <color=#f29e38ff><unbreak>#3[i]</unbreak></color> golpe por acción a Recuerdo turbulento, hasta un máximo de <color=#f29e38ff><unbreak>#1[i]</unbreak></color> golpes adicionales.\\nAl comenzar cada ciclo, cada golpe inflige a un enemigo al azar un daño basado en los PV máx. del objetivo.",
+    "fr": "Quand un allié inflige une Rupture de faiblesse à un ennemi ou attaque un ennemi qui subit une Rupture de faiblesse, ajoute <color=#f29e38ff><unbreak>#3[i]</unbreak></color> frappe par action à la Turbulence mémorielle, jusqu'à <color=#f29e38ff><unbreak>#1[i]</unbreak></color> frappes supplémentaires.\\nAu début de chaque cycle, chaque frappe inflige des DGT en fonction des PV max respectifs des ennemis ciblés à des cibles ennemies aléatoires (1 fois).",
+    "id": "Setelah rekan tim mengakibatkan Weakness Break pada target musuh atau menyerang target musuh yang berstatus Weakness Break, akan menambah <color=#f29e38ff><unbreak>#3[i]</unbreak></color> Hits Per Action dari \"Memory Turbulence\", maksimal bertambah <color=#f29e38ff><unbreak>#1[i]</unbreak></color> Hit.\\nSaat setiap Putaran dimulai, setiap Hit akan mengakibatkan 1 kali DMG pada target musuh secara acak berdasarkan Max HP target.",
+    "jp": "味方が敵を弱点撃破、または弱点撃破状態の敵を攻撃した後、「記憶の乱流」の攻撃段数が<color=#f29e38ff><unbreak>#3[i]</unbreak></color>段アップする、最大で<color=#f29e38ff><unbreak>#1[i]</unbreak></color>段累積できる。\\n各ラウンド開始時、1段の攻撃につきランダムな敵に、その敵の最大HPに応じたダメージを1回与える。",
+    "kr": "아군이 적의 약점을 격파하거나 약점 격파 상태의 적 공격 후, [기억의 와류]의 공격 단수가 <color=#f29e38ff><unbreak>#3[i]</unbreak></color>단 추가된다. 최대 중첩수: <color=#f29e38ff><unbreak>#1[i]</unbreak></color>단\\n라운드가 시작될 때마다 임의의 적에게 공격 단수당 목표 HP 최대치에 따른 피해를 1회 가한다",
+    "pt": "Depois que um aliado Quebra a Fraqueza de um inimigo ou ataca um inimigo com Quebra de Fraqueza, adiciona <color=#f29e38ff><unbreak>#3[i]</unbreak></color> Golpe(s) por Ação à Turbulência de Memória, até o máximo de <color=#f29e38ff><unbreak>#1[i]</unbreak></color> golpes extras.\\nNo início de cada Ciclo, cada golpe causará Dano com base nos PV máximos respectivos de cada inimigo-alvo a inimigos-alvo aleatórios 1 vez.",
+    "ru": "После того как союзник пробивает уязвимость противника или атакует противника с пробитой уязвимостью, Турбулентности памяти добавляется <color=#f29e38ff><unbreak>#3[i]</unbreak></color> удар за действие. Этот эффект может складываться до <color=#f29e38ff><unbreak>#1[i]</unbreak></color> ударов.\\nВ начале каждого цикла каждый удар наносит случайному противнику 1 раз урон, который зависит от его макс. HP.",
+    "th": "หลังจากเป้าหมายฝ่ายเรา ทำลายจุดอ่อนของศัตรูเป้าหมาย หรือโจมตีศัตรูเป้าหมาย ที่ติดสถานะทำลายจุดอ่อนแล้ว จะเพิ่มจำนวนการโจมตีให้กับ \"Memory Turbulence\" <color=#f29e38ff><unbreak>#3[i]</unbreak></color> ครั้ง โดยสามารถซ้อนทับได้มากสุด <color=#f29e38ff><unbreak>#1[i]</unbreak></color> ครั้ง\\nเมื่อเริ่มต้นในแต่ละรอบ การโจมตีแต่ละครั้งจะสุ่มสร้าง DMG 1 ครั้งให้กับศัตรูเป้าหมาย ตาม HP สูงสุดของเป้าหมายดังกล่าว",
+    "vi": "Sau khi mục tiêu phe ta Phá Vỡ Điểm Yếu của kẻ địch hoặc tấn công kẻ địch ở trạng thái Phá Vỡ Điểm Yếu, sẽ thêm <color=#f29e38ff><unbreak>#3[i]</unbreak></color> đòn đánh cho Dòng Hồi Ức Rối Loạn, tối đa cộng dồn <color=#f29e38ff><unbreak>#1[i]</unbreak></color> đòn.\\nKhi bắt đầu mỗi vòng, mỗi đòn đánh sẽ gây 1 lần sát thương lên kẻ địch ngẫu nhiên căn cứ theo Giới Hạn HP của mục tiêu."
   }
-]
+}
