@@ -1,4 +1,8 @@
 const officalCharId: any = {
+  8001: "Trailblazer Boy (Physical)",
+  8002: "Trailblazer Girl (Physical)",
+  8003: "Trailblazer Boy (Fire)",
+  8004: "Trailblazer Girl (Fire)",
   1001: "March 7th",
   1002: "Dan Heng",
   1003: "Himeko",
@@ -39,10 +43,6 @@ const officalCharId: any = {
   1302: "Argenti",
   1303: "Ruan Mei",
   1305: "Dr. Ratio",
-  8001: "Trailblazer Boy (Physical)",
-  8002: "Trailblazer Girl (Physical)",
-  8003: "Trailblazer Boy (Fire)",
-  8004: "Trailblazer Girl (Fire)",
 };
 
 export default officalCharId;

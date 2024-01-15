@@ -3,7 +3,7 @@ import SettingGroup from "../../SettingGroup/SettingGroup";
 import SettingItem from "../../SettingGroup/SettingItem/SettingItem";
 import { LOCALES } from "../../../../../locales";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
-import { VERSION } from "../../../../../app.config";
+import { ENV, VERSION } from "../../../../../app.config";
 import * as Device from "expo-device";
 import useIsAdmin from "../../../../firebase/hooks/Role/useIsAdmin";
 import Noti from "../../../../notifications/utils/Noti";
@@ -16,12 +16,16 @@ export default function DevelopmentSetting() {
   return (
     <SettingGroup title={LOCALES[language].DevOptions}>
       <SettingItem
-        type="navigation"
+        type="none"
         title={LOCALES[language].AppVersion}
-        content={VERSION.production}
+        content={
+          ENV === "beta"
+            ? "BETA " + VERSION.production + ` (${VERSION.beta.split(".")[2]})`
+            : VERSION.production
+        }
       />
       <SettingItem
-        type="navigation"
+        type="none"
         title={LOCALES[language].OsVersion}
         content={`${Device.osName} ${Device.osVersion}`}
       />

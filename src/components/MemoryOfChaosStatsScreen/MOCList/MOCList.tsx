@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import { Image } from "expo-image";
 import MOCFloor from "./MOCFloor/MOCFloor";
@@ -12,13 +12,24 @@ import NotFound from "../../global/Loading/NotFound";
 import NoDataYet from "../../global/Loading/NoDataYet";
 import { globalStyles } from "../../../../styles/global";
 import Button from "../../global/Button/Button";
+import Header2 from "../../global/Header2/Header2";
+import { SCREENS } from "../../../constant/screens";
+import MocHeader from "../MocHeader/MocHeader";
+import Animated, {
+  useAnimatedRef,
+  useAnimatedStyle,
+  useScrollViewOffset,
+  withSpring,
+} from "react-native-reanimated";
+import useDelayLoad from "../../../hooks/useDelayLoad";
+import Loading from "../../global/Loading/Loading";
 
 export default function MOCList() {
+  const loaded = useDelayLoad(1000);
+
   // data
   const { data: moc } = useMemoryOfChaos();
   const playerData = useHsrPlayerData();
-  const { language } = useAppLanguage();
-
   const floors = moc?.all_floor_detail?.map((floor: any) => ({
     title: floor?.name,
     stars: floor?.star_num,
@@ -61,74 +72,31 @@ export default function MOCList() {
   }));
 
   // state
-  const [timeMode, setTimeMode] = useState<"text" | "time">("text");
 
-  if (!floors?.length) return <NoDataYet />;
-  if (!moc) return <NotFound />;
+  const aref = useAnimatedRef<Animated.ScrollView>();
+  const scrollHandler = useScrollViewOffset(aref);
 
   return (
-    <ScrollView className="z-30 pt-[127px] pb-0">
-      <View
-        style={{ ...globalStyles.rJCenterFWrap, gap: 12 }}
-        className="pb-48"
-      >
-        {/* Top */}
-        <View
-          className="w-full px-4 "
-          style={{ gap: 20, alignItems: "center" }}
-        >
-          <Button
-            width={250}
-            height={46}
-            onPress={() => {
-              if (timeMode === "time") setTimeMode("text");
-              else setTimeMode("time");
-            }}
-          >
-            {timeMode === "time" ? (
-              <Text className="text-[#222] font-[HY65]">
-                {moc.begin_time.month.toLocaleString("en-US", {
-                  minimumIntegerDigits: 2,
-                  useGrouping: false,
-                })}
-                月
-                {moc.begin_time.day.toLocaleString("en-US", {
-                  minimumIntegerDigits: 2,
-                  useGrouping: false,
-                })}
-                日 -{" "}
-                {moc.end_time.month.toLocaleString("en-US", {
-                  minimumIntegerDigits: 2,
-                  useGrouping: false,
-                })}
-                月
-                {moc.end_time.day.toLocaleString("en-US", {
-                  minimumIntegerDigits: 2,
-                  useGrouping: false,
-                })}
-                日
-              </Text>
-            ) : (
-              "1.5 下半 - 2 藏於深空之秘"
-            )}
-          </Button>
+    <View>
+      <MocHeader scrollHandler={scrollHandler} />
+      {!floors?.length && <NoDataYet />}
+      {!moc && <NotFound />}
+      <Animated.ScrollView ref={aref} className="z-30 pt-[127px] pb-0">
+        {loaded ? (
           <View
-            className="w-full"
-            style={{ flexDirection: "row", justifyContent: "space-between" }}
+            style={{ ...globalStyles.rJCenterFWrap, gap: 12 }}
+            className="pb-48"
           >
-            <Text className="text-white font-[HY65]">
-              {LOCALES[language].PlayersBattleReport.replace(
-                "${1}",
-                playerData?.nickname
-              )}
-            </Text>
-            <Text className="text-white font-[HY65]">正向排序</Text>
+            {floors?.map((floor: any, index: number) => (
+              <MOCFloor key={floor?.title} {...floor} />
+            ))}
           </View>
-        </View>
-        {floors?.map((floor: any, index: number) => (
-          <MOCFloor key={floor?.title} {...floor} />
-        ))}
-      </View>
-    </ScrollView>
+        ) : (
+          <View className="translate-y-[-127px]">
+            <Loading />
+          </View>
+        )}
+      </Animated.ScrollView>
+    </View>
   );
 }

@@ -17,7 +17,7 @@ export default function LcStory() {
       <PageHeading Icon={ChatsCircle}>
         {LOCALES[language].LightconeStory}
       </PageHeading>
-      <HtmlText style={{ lineHeight: 24, color: "white", fontFamily: "HY65" }}>
+      <HtmlText style={{ lineHeight: 24, color: "#DDD", fontFamily: "HY65" }}>
         {lcFullData.descHash || ""}
       </HtmlText>
     </View>

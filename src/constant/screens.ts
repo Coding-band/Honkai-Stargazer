@@ -93,6 +93,12 @@ export const SCREENS = {
     getShortName: (lang: AppLanguage) => LOCALES[lang].MemoryOfChaos,
     icon: MedalMilitary,
   },
+  MemoryOfChaosStatsPage: {
+    id: "MemoryOfChaosStats",
+    getName: (lang: AppLanguage) => LOCALES[lang].MemoryOfChaos,
+    getShortName: (lang: AppLanguage) => LOCALES[lang].MemoryOfChaos,
+    icon: MedalMilitary,
+  },
   EventListPage: {
     id: "EventList",
     getName: (lang: AppLanguage) => LOCALES[lang].Event,

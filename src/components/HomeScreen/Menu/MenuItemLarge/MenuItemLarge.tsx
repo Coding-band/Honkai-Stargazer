@@ -5,6 +5,7 @@ import { Shadow } from "react-native-shadow-2";
 import withBlurView from "../../../../hoc/withBlurView";
 import { GestureResponderEvent } from "react-native";
 import Dot from "../Dot/Dot";
+import useDoUseHomePageBlurEffect from "../../../../redux/doUseHomePageBlurEffect/useDoUseHomePageBlurEffect";
 
 export default function MenuItemLarge({
   children,
@@ -25,6 +26,8 @@ export default function MenuItemLarge({
   onPress?: (e: GestureResponderEvent) => void;
   hasDot?: boolean;
 }) {
+  const { doUseHomePageBlurEffect } = useDoUseHomePageBlurEffect();
+
   return (
     <View>
       <Shadow offset={[0, 4]} distance={6} startColor="#00000025">
@@ -94,7 +97,7 @@ export default function MenuItemLarge({
                   )}
                 </View>
               </View>,
-              Platform.OS !== "android"
+              doUseHomePageBlurEffect
             )}
           </View>
         </TouchableOpacity>

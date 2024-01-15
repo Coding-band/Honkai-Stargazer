@@ -13,7 +13,9 @@ const db = {
   Users: firestore().collection("Users"),
   UserTokens: firestore().collection("UserTokens"),
   UserCharacters: firestore().collection("UserCharacters"),
-  UserMemoryOfChaos: firestore().collection("UserMemoryOfChaos"),
+  UserMemoryOfChaos(schedule: any) {
+    return firestore().collection(`UserMemoryOfChaos-${schedule}`);
+  },
   UserComments: firestore().collection("UserComments"),
   CharacterComments: firestore().collection("CharacterComments"),
 };

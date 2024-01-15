@@ -5,19 +5,14 @@ import {
   Dimensions,
   ScrollView,
 } from "react-native";
-import React, { createContext } from "react";
+import React from "react";
 import Header2 from "../../global/Header2/Header2";
 import useHsrUUID from "../../../hooks/hoyolab/useHsrUUID";
-import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
-import { Image, ImageBackground } from "expo-image";
+import { Image } from "expo-image";
 import UUIDBox from "../../global/UUIDBox/UUIDBox";
-import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
-import useHsrInGameInfo from "../../../hooks/mihomo/useHsrInGameInfo";
 import CharacterImage from "../../../../assets/images/images_map/chacracterImage";
 import UserCharDetailStars from "./UserCharDetailStars/UserCharDetailStars";
 import { globalStyles } from "../../../../styles/global";
-import CombatType from "../../../../assets/images/images_map/combatType";
-import Path from "../../../../assets/images/images_map/path";
 import UserCharLevel from "./UserCharLevel/UserCharLevel";
 import useProfileUUID from "../../../context/UserCharDetailData/hooks/useProfileUUID";
 import useProfileCharJsonData from "../../../context/UserCharDetailData/hooks/useProfileCharJsonData";
@@ -29,7 +24,6 @@ import UserCharSkills from "./UserCharSkills/UserCharSkills";
 import UserCharAttribute from "./UserCharAttribute/UserCharAttribute";
 import UserCharLightcone from "./UserCharLightcone/UserCharLightcone";
 import UserCharRelics from "./UserCharRelics/UserCharRelics";
-import useDelayLoad from "../../../hooks/useDelayLoad";
 import Toast from "../../../utils/toast/Toast";
 import Loading from "../../global/Loading/Loading";
 import Animated, {
@@ -39,15 +33,12 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 import ProducedByStargazer from "../../global/ProducedByStargazer/ProducedByStargazer";
-import useUserCharactersByUUID from "../../../firebase/hooks/UserCharacters/useUserCharactersByUUID";
-import officalCharId from "../../../../map/character_offical_id_map";
 
 export default function UserCharDetail() {
   const charId = useProfileCharId();
-
   const hsrUUID = useHsrUUID();
   const profileUUID = useProfileUUID();
-  const { inGameInfo } = useProfileHsrInGameInfo();
+  const { inGameInfo } = useProfileHsrInGameInfo() as any;
   const charJsonData = useProfileCharJsonData();
   const charFullData = useProfileCharFullData();
 
@@ -92,14 +83,14 @@ export default function UserCharDetail() {
           className="text-[#FFFFFF] font-[HY65] text-[16px] leading-5"
           style={[globalStyles.textShadow, playerName2AnimatedStyle]}
         >
-          {inGameInfo?.player?.nickname} · {charFullData.name}
+          {inGameInfo?.player?.nickname} · {charFullData?.name}
         </Animated.Text>
         {/* UUID & 伺服器 */}
         <UUIDBox uuid={profileUUID} />
       </View>
       <Animated.Image
         style={contentAnimatedStyle}
-        source={CharacterImage[charId].fade}
+        source={CharacterImage[charId]?.fade}
         className="absolute w-full h-[580px]"
       />
       <Animated.ScrollView
@@ -146,6 +137,7 @@ export default function UserCharDetail() {
 
 const ShareBtn = () => (
   <TouchableOpacity
+    className="translate-x-[-2px]"
     onPress={() => {
       Toast.StillDevelopingToast();
     }}

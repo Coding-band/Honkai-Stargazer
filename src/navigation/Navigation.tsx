@@ -22,13 +22,13 @@ import CodeScreen from "../screens/CodeScreen";
 import UserInfoScreen from "../screens/UserInfoScreen";
 import UserCharDetailScreen from "../screens/UserCharDetailScreen";
 import UIDSearchScreen from "../screens/UIDSearchScreen";
+import MemoryOfChaosStatsScreen from "../screens/MemoryOfChaosStatsScreen";
 
 export default function Navigation({
   initialRouteName,
 }: {
   initialRouteName: string;
 }) {
-
   const Stack = createNativeStackNavigator();
 
   return (
@@ -77,6 +77,11 @@ export default function Navigation({
         <Stack.Screen
           name={SCREENS.MemoryOfChaosPage.id}
           component={MemoryOfChaosScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.MemoryOfChaosStatsPage.id}
+          component={MemoryOfChaosStatsScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

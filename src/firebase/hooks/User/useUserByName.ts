@@ -12,7 +12,8 @@ const useUserByName = (name: string | undefined) => {
       }
       const user = querySnapshot.docs[0].data() as Users;
       return user;
-    }
+    },
+    { staleTime: 1000 * 60 }
   );
   return data;
 };

@@ -9,10 +9,9 @@ import { LinearGradient } from "expo-linear-gradient";
 import UserCharDetail from "../components/UserCharDetailScreen/UserCharDetail/UserCharDetail";
 import { CharacterName } from "../types/character";
 import UserCharDetailContext from "../context/UserCharDetailData/UserCharDetailContext";
+import useUserByUUID from "../firebase/hooks/User/useUserByUUID";
 
 export default function UserCharDetailScreen() {
-  const { language } = useAppLanguage();
-
   const route = useRoute<RouteProp<ParamList, "UserCharDetail">>();
   const uuid = route.params.uuid;
   const charId = route.params.charId;

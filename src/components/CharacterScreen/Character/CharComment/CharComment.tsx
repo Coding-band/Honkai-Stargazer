@@ -1,4 +1,4 @@
-import { KeyboardAvoidingView, View } from "react-native";
+import { KeyboardAvoidingView, View, Text } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Image } from "expo-image";
 import CommentBox from "./CommentBox/CommentBox";
@@ -14,21 +14,23 @@ type Props = {
 };
 
 export default function CharComment(props: Props) {
-
   const charId = useCharId();
   const officalId = findKey(officalCharId, (v) => v === charId);
+
   const { data: charComments } = useCharComments(officalId || "");
 
   const [input, setInput] = useState("");
 
   return (
-    <CommentBox
-      containerRef={props.containerRef}
-      bottom={<CommentInput value={input} onChange={setInput} />}
-    >
-      {charComments?.comments?.map((c, i) => (
-        <CommentItem key={i} {...c} input={input} setInput={setInput} />
-      ))}
-    </CommentBox>
+    <>
+      <CommentBox
+        containerRef={props.containerRef}
+        bottom={<CommentInput value={input} onChange={setInput} />}
+      >
+        {charComments?.comments?.map((c, i) => (
+          <CommentItem key={i} {...c} input={input} setInput={setInput} />
+        ))}
+      </CommentBox>
+    </>
   );
 }

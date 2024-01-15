@@ -11,6 +11,9 @@ import * as MediaLibrary from "expo-media-library";
 import useHsrPlayerName from "../../hooks/hoyolab/useHsrPlayerName";
 import { LOCALES } from "../../../locales";
 import useAppLanguage from "../../language/AppLanguage/useAppLanguage";
+import useDoUseHomePageBlurEffect from "../../redux/doUseHomePageBlurEffect/useDoUseHomePageBlurEffect";
+import db from "../../firebase/db";
+import useMyFirebaseUid from "../../firebase/hooks/FirebaseUid/useMyFirebaseUid";
 
 export default function WallPaperChanger() {
   const navigation = useNavigation();
@@ -21,7 +24,7 @@ export default function WallPaperChanger() {
   const { wallPaper, setWallPaper } = useWallPaper();
   const [currentWallPaperIndex, setCurrentWallPaperIndex] = useState(
     // @ts-ignore
-    wallPaper?.id - 1
+    wallPapers.findIndex((w) => w.id === wallPaper?.id) || 0
   );
 
   const handleSetWallPaper = () => {
@@ -30,17 +33,21 @@ export default function WallPaperChanger() {
     navigation.navigate(SCREENS.HomePage.id);
     Toast(`已切換成壁紙 ${wallPapers[currentWallPaperIndex].name}`);
   };
+
   const handleSaveWallPaper = async (uri: string) => {
     try {
       // Request device storage access permission
       const { status } = await MediaLibrary.requestPermissionsAsync();
       // Save image to media library
       await MediaLibrary.saveToLibraryAsync(uri);
-      Toast(`已儲存壁紙 ${wallPapers[currentWallPaperIndex].name}`);
+      Toast(`已儲存壁紙 ${wallPapers?.[currentWallPaperIndex]?.name}`);
     } catch (error) {
       Toast(`壁紙儲存失敗 ` + error);
     }
   };
+
+  const { setDoHomePageUseBlurEffect, doUseHomePageBlurEffect } =
+    useDoUseHomePageBlurEffect();
 
   return (
     <View className="w-full h-full z-30 mt-[110px]">
@@ -53,23 +60,23 @@ export default function WallPaperChanger() {
         </OptionBtn>
         <OptionBtn
           onPress={() => {
-            Toast.StillDevelopingToast();
+            setDoHomePageUseBlurEffect(!doUseHomePageBlurEffect);
           }}
         >
-          模糊：开启
+          {`模糊：${doUseHomePageBlurEffect ? "開啟" : "關閉"}`}
         </OptionBtn>
       </View>
       <WallPaperSwiper
         wallPapers={wallPapers}
         // Index number of initial slide.
         // @ts-ignore
-        index={wallPaper?.id - 1}
+        index={wallPapers.findIndex((w) => w.id === wallPaper?.id)}
         onIndexChange={setCurrentWallPaperIndex}
       />
       <View>
         {/* wallpaper name */}
         <View className="mt-5" style={{ alignItems: "center" }}>
-          <Text className="text-[16px] font-[HY65] text-[#FFF]">
+          <Text className="text-[16px] font-[HY65] text-[#FFF] leading-5">
             {wallPapers[currentWallPaperIndex].name}
           </Text>
         </View>
@@ -84,7 +91,7 @@ export default function WallPaperChanger() {
           >
             保存壁纸
           </OptionBtn>
-          <OptionBtn onPress={handleSetWallPaper}>设置</OptionBtn>
+          <OptionBtn onPress={handleSetWallPaper}>設置</OptionBtn>
         </View>
       </View>
     </View>
@@ -100,7 +107,9 @@ const OptionBtn = ({
 }) => {
   return (
     <Button onPress={onPress} width={170} height={46}>
-      <Text className="text-[16px] text-[#222] font-[HY65]">{children}</Text>
+      <Text className="text-[16px] text-[#222] font-[HY65] leading-5">
+        {children}
+      </Text>
     </Button>
   );
 };

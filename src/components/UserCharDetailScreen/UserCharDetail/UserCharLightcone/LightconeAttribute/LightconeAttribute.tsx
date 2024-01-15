@@ -43,23 +43,25 @@ export default function LightconeAttribute({
   ];
 
   return (
-    <View
-      style={{
-        flexDirection: "row",
-        gap: 10,
-        flexWrap: "wrap",
-        justifyContent: "center",
-      }}
-    >
-      {attributes.map(
-        (attr) =>
-          attr.value && (
-            <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <Image source={attr.icon} className="w-6 h-6" />
-              <Text className="text-text text-[14px]"> {attr.value}</Text>
-            </View>
-          )
-      )}
-    </View>
+    lcInGameData && (
+      <View
+        style={{
+          flexDirection: "row",
+          gap: 10,
+          flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
+        {attributes.map(
+          (attr) =>
+            attr.value && (
+              <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <Image source={attr.icon} className="w-6 h-6" />
+                <Text className="text-text text-[14px]"> {attr.value}</Text>
+              </View>
+            )
+        )}
+      </View>
+    )
   );
 }

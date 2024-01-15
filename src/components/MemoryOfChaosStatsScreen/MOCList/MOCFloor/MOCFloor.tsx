@@ -39,59 +39,57 @@ export default function MOCFloor(props: Props) {
   const { language } = useAppLanguage();
 
   return (
-    props.isFast || (
-      <View className="border border-[#DDDDDD20] rounded-[4px] p-2.5">
-        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-          <View>
-            {/* 標題 */}
-            <Text className="text-[#FFF] text-[16px] font-[HY65]">
-              {props.title.slice(-(props.title.length - 6))}
-            </Text>
-            {/* 剩餘 ... 輪 */}
-            <Text className="text-[#FFFFFF90] text-[12px] font-[HY65] leading-5">
-              {formatLocale(LOCALES[language].PlayersRemainRounds, [
-                props.roundRemaining,
-              ])}
-            </Text>
-          </View>
-          {/* 星星數 */}
-          <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-            {Array.from({ length: props.stars }, (_, i) => (
-              <MocStar key={i} />
-            ))}
-          </View>
+    <View className="border border-[#DDDDDD20] rounded-[4px] p-2.5 w-[360px]">
+      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+        <View>
+          {/* 標題 */}
+          <Text className="text-[#FFF] text-[16px] font-[HY65]">
+            {props.title.slice(-(props.title.length - 6))}
+          </Text>
+          {/* 剩餘 ... 輪 */}
+          <Text className="text-[#FFFFFF90] text-[12px] font-[HY65] leading-5">
+            {formatLocale(LOCALES[language].PlayersRemainRounds, [
+              props.roundRemaining,
+            ])}
+          </Text>
         </View>
-        <View className="mt-2">
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-            }}
-          >
-            <View style={{ flexDirection: "row", gap: 4 }}>
-              <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-                {props.teams[0].date}
-              </Text>
+        {/* 星星數 */}
+        <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+          {Array.from({ length: props.stars }, (_, i) => (
+            <MocStar key={i} />
+          ))}
+        </View>
+      </View>
+      {!props.isFast ? (
+        <>
+          <View className="mt-2">
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <View style={{ flexDirection: "row", gap: 4 }}>
+                <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
+                  {props.teams[0].date}
+                </Text>
+              </View>
               <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
                 {formatLocale(LOCALES[language].PlayersRounds, [props.round])}
               </Text>
             </View>
-            <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-              {LOCALES[language].PlayersAverageRounds.replace(
-                "${1}",
-                props.roundAverage.toString()
-              )}
-            </Text>
           </View>
-        </View>
-        <View style={{ alignItems: "center" }}>
-          {/* Layer 1 */}
-          <MocFloorLayer team={props.teams[0]} />
-          {/* Layer 2 */}
-          <MocFloorLayer team={props.teams[1]} />
-        </View>
-      </View>
-    )
+          <View style={{ alignItems: "center" }}>
+            {/* Layer 1 */}
+            <MocFloorLayer team={props.teams[0]} />
+            {/* Layer 2 */}
+            <MocFloorLayer team={props.teams[1]} />
+          </View>
+        </>
+      ) : (
+        <Text className="text-[#DD8200] text-[14px] font-[HY65]">快速通關</Text>
+      )}
+    </View>
   );
 }
 

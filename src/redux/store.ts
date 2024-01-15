@@ -23,6 +23,8 @@ import { characterIsSearching } from "./characterIsSearching/characterIsSearchin
 import { lightconeSearch } from "./lightconeSearch/lightconeSearch.reducer";
 import { lightconeIsSearching } from "./lightconeIsSearching/lightconeIsSearching.reducer";
 import { doUseCustomFont } from "./doUseCustomFont/doUseCustomFont.reducer";
+import { doUseBlurEffect } from "./doUseBlurEffect/doUseBlurEffect.reducer";
+import { doUseHomePageBlurEffect } from "./doUseHomePageBlurEffect/doUseHomePageBlurEffect.reducer";
 
 const reducer = combineReducers({
   hsrServerChosen,
@@ -42,6 +44,8 @@ const reducer = combineReducers({
   lightconeSearch,
   lightconeIsSearching,
   doUseCustomFont,
+  doUseBlurEffect,
+  doUseHomePageBlurEffect,
 });
 
 // persist
@@ -58,6 +62,8 @@ const persistConfig = {
     // "lightconeSortingReverse",
     "wallPaper",
     "doUseCustomFont",
+    "doUseBlurEffect",
+    "doUseHomePageBlurEffect",
   ],
 };
 

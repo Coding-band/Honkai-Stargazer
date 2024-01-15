@@ -8,8 +8,6 @@ import {
   Dimensions,
 } from "react-native";
 import React, { useEffect, useState } from "react";
-import Searchbar from "./UIDSearchbar/UIDSearchbar";
-import { Image } from "expo-image";
 import UIDSearchbar from "./UIDSearchbar/UIDSearchbar";
 import UIDSearchItem from "./UIDSearchItem/UIDSearchItem";
 import Toast from "../../../utils/toast/Toast";

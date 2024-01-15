@@ -59,6 +59,7 @@ export default function CharCard(props: Props) {
         >
           {/* 角色頭像 */}
           <Image
+            cachePolicy="none"
             transition={200}
             style={{ width: 80, height: 80 }}
             source={props.image}
@@ -67,7 +68,6 @@ export default function CharCard(props: Props) {
           <View
             className="bg-[#222222] translate-y-[-2px]"
             style={{
-     
               justifyContent: "center",
               alignItems: "center",
             }}

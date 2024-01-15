@@ -54,7 +54,6 @@ export default function UserInfo(props: Props) {
   const playerAvatar =
     // @ts-ignore
     AvatarIcon[hsrInGameInfo?.player?.avatar?.icon?.match(/\d+/g).join("")];
-  const latestUserMocData = userMocData?.[Object.keys(userMocData).pop() || ""];
 
   const [activeTab, setActiveTab] = useState("game-data");
   const isGameDataPage = activeTab === "game-data";
@@ -203,7 +202,7 @@ export default function UserInfo(props: Props) {
                 alignItems: "center",
                 gap: 8,
               }}
-            > 
+            >
               {/* 擁有角色 */}
               <UserInfoCharacters uuid={props.uuid} />
               {/* 其他資訊 */}
@@ -229,7 +228,7 @@ export default function UserInfo(props: Props) {
                   />
                   <InfoItem
                     title={LOCALES[language].UserInfoGameForgottenHall}
-                    value={`${latestUserMocData?.max_floor || 0}/12`}
+                    value={`${userMocData?.max_floor || 0}/12`}
                   />
                 </View>
               ) : (
@@ -238,7 +237,7 @@ export default function UserInfo(props: Props) {
             </View>
             {/* 其他頁顯示 */}
             <View
-              className="w-full"
+              className="w-full mb-12"
               style={{
                 position: !isGameDataPage ? "relative" : "absolute",
                 left: !isGameDataPage ? 0 : -10000,
@@ -284,6 +283,7 @@ const InfoItem = ({
 
 const ShareBtn = () => (
   <TouchableOpacity
+    className="translate-x-[-2px]"
     onPress={() => {
       Toast.StillDevelopingToast();
     }}

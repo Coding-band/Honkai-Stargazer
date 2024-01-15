@@ -11,7 +11,8 @@ const useIsShowUserInfo = (uuid: string) => {
       const show_info = (await db.Users.doc(firebaseUid).get()).data()
         ?.show_info;
       return show_info;
-    }
+    },
+    { staleTime: 1000 * 60 }
   );
 
   const { mutate: setIsShowInfo } = useMutation(

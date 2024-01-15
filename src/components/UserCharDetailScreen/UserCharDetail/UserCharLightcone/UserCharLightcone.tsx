@@ -24,11 +24,11 @@ export default function UserCharLightcone() {
 
   const { inGameCharData } = useProfileHsrInGameInfo();
   const lightconeId = officalLightconeId[
-    inGameCharData.light_cone.id
+    inGameCharData?.light_cone?.id
   ] as LightconeName;
   const lcJsonData = getLcJsonData(lightconeId);
   const lcFullData = getLcFullData(lightconeId, language);
-  const lcInGameData = inGameCharData.light_cone;
+  const lcInGameData = inGameCharData?.light_cone;
 
   const [displayMode, setDisplayMode] = useLocalState<"light" | "normal">(
     "user-char-detail-page-lightcone-display-mode",
@@ -43,75 +43,77 @@ export default function UserCharLightcone() {
   });
 
   return (
-    <View style={{ alignItems: "center" }}>
-      <View className="w-[135px] h-[1px] bg-[#F3F9FF40]"></View>
-      <TouchableOpacity
-        activeOpacity={0.35}
-        onPress={() => {
-          setDisplayMode(displayMode === "light" ? "normal" : "light");
-        }}
-      >
-        <View
-          className="py-[18px]"
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-
-            gap: 40,
+    inGameCharData && (
+      <View style={{ alignItems: "center" }}>
+        <View className="w-[135px] h-[1px] bg-[#F3F9FF40]"></View>
+        <TouchableOpacity
+          activeOpacity={0.35}
+          onPress={() => {
+            setDisplayMode(displayMode === "light" ? "normal" : "light");
           }}
         >
-          <AnimatedImage
-            className="w-[72px] h-[106px] border-4 border-[#FFF]"
+          <View
+            className="py-[18px]"
             style={{
-              transform: [
-                lightconeImageAnimationRotate,
-                lightconeImageAnimationScale,
-              ],
+              flexDirection: "row",
+              alignItems: "center",
+
+              gap: 40,
             }}
-            source={Lightcone[lightconeId].imageFull}
-            contentFit="contain"
-          />
-          <View style={{ gap: 2, alignItems: "flex-start" }}>
-            <Text className="text-[20px] font-[HY65] text-text leading-8">
-              {lcFullData.name}
-            </Text>
-            <LightconeLevel
-              lcId={lightconeId}
-              lcFullData={lcFullData}
-              lcInGameData={lcInGameData}
+          >
+            <AnimatedImage
+              className="w-[72px] h-[106px] border-4 border-[#FFF]"
+              style={{
+                transform: [
+                  lightconeImageAnimationRotate,
+                  lightconeImageAnimationScale,
+                ],
+              }}
+              source={Lightcone[lightconeId].imageFull}
+              contentFit="contain"
             />
-            {displayMode === "light" ? (
-              <>
-                <HtmlText
-                  style={{
-                    color: "#DDD",
-                    fontFamily: "HY65",
-                    width: 220,
-                    lineHeight:20,
-                  }}
-                >
-                  {formatDesc(
-                    lcFullData.skill.descHash,
-                    lcFullData.skill.levelData[lcInGameData.rank - 1].params
-                  )}
-                </HtmlText>
-              </>
-            ) : (
-              <>
-                <UserCharDetailStars count={lcInGameData.rarity} />
-                <LightconePath lcId={lightconeId} lcJsonData={lcJsonData} />
-                <LightconeAttribute
-                  lcId={lightconeId}
-                  lcFullData={lcFullData}
-                  lcInGameData={lcInGameData}
-                />
-              </>
-            )}
+            <View style={{ gap: 2, alignItems: "flex-start" }}>
+              <Text className="text-[20px] font-[HY65] text-text leading-8">
+                {lcFullData.name}
+              </Text>
+              <LightconeLevel
+                lcId={lightconeId}
+                lcFullData={lcFullData}
+                lcInGameData={lcInGameData}
+              />
+              {displayMode === "light" ? (
+                <>
+                  <HtmlText
+                    style={{
+                      color: "#DDD",
+                      fontFamily: "HY65",
+                      width: 220,
+                      lineHeight: 20,
+                    }}
+                  >
+                    {formatDesc(
+                      lcFullData.skill.descHash,
+                      lcFullData.skill.levelData[lcInGameData.rank - 1].params
+                    )}
+                  </HtmlText>
+                </>
+              ) : (
+                <>
+                  <UserCharDetailStars count={lcInGameData.rarity} />
+                  <LightconePath lcId={lightconeId} lcJsonData={lcJsonData} />
+                  <LightconeAttribute
+                    lcId={lightconeId}
+                    lcFullData={lcFullData}
+                    lcInGameData={lcInGameData}
+                  />
+                </>
+              )}
+            </View>
           </View>
-        </View>
-      </TouchableOpacity>
-      <View className="w-[135px] h-[1px] bg-[#F3F9FF40]"></View>
-    </View>
+        </TouchableOpacity>
+        <View className="w-[135px] h-[1px] bg-[#F3F9FF40]"></View>
+      </View>
+    )
   );
 }
 

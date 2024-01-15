@@ -12,7 +12,8 @@ const useUserCharactersByUUID = (uuid: string) => {
       const querySnapshot = await db.UserCharacters.doc(firebaseUid).get();
       const charsData = querySnapshot.data();
       return charsData;
-    }
+    },
+    { staleTime: 1000 * 60 }
   );
   return data;
 };

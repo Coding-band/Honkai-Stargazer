@@ -42,7 +42,7 @@ export default function HomeScreen() {
     } catch (error: any) {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log("signup: " + errorMessage);
+      // console.log("signup: " + errorMessage);
       if (errorCode === "auth/email-already-in-use") {
         return true;
       }
@@ -128,7 +128,7 @@ export default function HomeScreen() {
     async function createOrUpdateUserCharacters() {
       if (uid && hsrCharList) {
         const charsData = {
-          characters: hsrCharList.map((char:any) => ({
+          characters: hsrCharList.map((char: any) => ({
             id: char?.id,
             level: char?.level,
             rank: char?.rank,
@@ -182,48 +182,49 @@ export default function HomeScreen() {
     async function createOrUpdateUserMemoryOfChaos() {
       if (uid && moc) {
         const mocData = {
-          [moc.schedule_id]: {
-            begin_time: moc.begin_time,
-            end_time: moc.end_time,
-            star_num: moc.star_num,
-            battle_num: moc.battle_num,
-            max_floor_id: moc.max_floor_id,
-            max_floor: moc.all_floor_detail.length,
-            all_floor_detail: moc.all_floor_detail.map((f: any) => ({
-              floor_id: f.maze_id,
-              round_num: f.round_num,
-              star_num: f.star_num,
-              layer_1: {
-                challenge_time: f.node_1.challenge_time,
-                characters: f.node_1.avatars.map((c: any) => ({
-                  id: c.id,
-                  level: c.level,
-                  rank: c.rank,
-                })),
-              },
-              layer_2: {
-                challenge_time: f.node_2.challenge_time,
-                characters: f.node_2.avatars.map((c: any) => ({
-                  id: c.id,
-                  level: c.level,
-                  rank: c.rank,
-                })),
-              },
-            })),
-          },
+          begin_time: moc.begin_time,
+          end_time: moc.end_time,
+          star_num: moc.star_num,
+          battle_num: moc.battle_num,
+          max_floor_id: moc.max_floor_id,
+          max_floor: moc.all_floor_detail.length || null,
+          all_floor_detail: moc.all_floor_detail.map((f: any) => ({
+            floor_id: f.maze_id,
+            round_num: f.round_num,
+            star_num: f.star_num,
+            layer_1: {
+              challenge_time: f.node_1.challenge_time,
+              characters: f.node_1.avatars.map((c: any) => ({
+                id: c.id,
+                level: c.level,
+                rank: c.rank,
+              })),
+            },
+            layer_2: {
+              challenge_time: f.node_2.challenge_time,
+              characters: f.node_2.avatars.map((c: any) => ({
+                id: c.id,
+                level: c.level,
+                rank: c.rank,
+              })),
+            },
+          })),
         } as UserMemoryOfChaos;
         const UserMemoryOfChaosIsExist = (
-          await db.UserMemoryOfChaos.doc(uid).get()
+          await db.UserMemoryOfChaos(moc.schedule_id).doc(uid).get()
         ).exists;
         if (UserMemoryOfChaosIsExist) {
           try {
-            await db.UserMemoryOfChaos.doc(uid).update(mocData);
+            await db
+              .UserMemoryOfChaos(moc.schedule_id)
+              .doc(uid)
+              .update(mocData);
           } catch (e: any) {
             console.log("updated UserMemoryOfChaos: " + e.message);
           }
         } else {
           try {
-            await db.UserMemoryOfChaos.doc(uid).set(mocData);
+            await db.UserMemoryOfChaos(moc.schedule_id).doc(uid).set(mocData);
           } catch (e: any) {
             console.log("create UserMemoryOfChaos: " + e.message);
           }

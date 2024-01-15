@@ -10,10 +10,9 @@ import EventList from "../components/EventListScreen/EventList";
 import UserInfo from "../components/UserInfoScreen/UserInfo/UserInfo";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { ParamList } from "../types/navigation";
+import useUserByUUID from "../firebase/hooks/User/useUserByUUID";
 
 export default function UserInfoScreen() {
-  const { language } = useAppLanguage();
-
   const route = useRoute<RouteProp<ParamList, "UserInfo">>();
   const uuid = route.params.uuid;
 

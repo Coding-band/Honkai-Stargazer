@@ -44,8 +44,6 @@ export default function UserInfoCharacters(props: Props) {
   const { data: hsrInGameInfo } = useHsrInGameInfo(props.uuid);
   const userCharList = useUserCharactersByUUID(profileUUID).data?.characters;
 
-  console.log(userCharList);
-
   // 展櫃資料
   // @ts-ignore
   const inGameCharacters = hsrInGameInfo?.characters?.map((char: any) => {
@@ -82,7 +80,7 @@ export default function UserInfoCharacters(props: Props) {
       const charJsonData = getCharJsonData(charId);
       const charFullData = getCharFullData(charId, textLanguage);
       return {
-        id: char.id,
+        id: charId,
         rare: charJsonData.rare,
         name: charFullData.name,
         rank: char.rank,
@@ -107,22 +105,8 @@ export default function UserInfoCharacters(props: Props) {
   return (
     <>
       <View style={{ gap: 10 }}>
-        {/* <TouchableOpacity
-        activeOpacity={0.65}
-        onPress={() => {
-          Toast(
-            "為了保障安全性和用戶權益，我們通過用戶的設備（客戶端），而非透過伺服器來更新 hoyolab 角色數據。這意味著如果用戶一段時間不使用 Stargazer，可能會導致他們的角色數量、活躍天數、達成成就和忘卻之庭數據存在差異。請注意，這些數據僅供參考，不具有絕對準確性。",
-            5
-          );
-        }}
-      >
-        <Text className="text-text text-[16px] font-[HY65]">
-          擁有角色 {hsrInGameInfo?.player?.space_info?.avatar_count}
-        </Text>
-      </TouchableOpacity> */}
-
-        {/* 展示櫃 */}
         <View style={{ alignItems: "center", gap: 8 }}>
+          {/* Top */}
           <View
             style={{
               flexDirection: "row",
@@ -162,6 +146,7 @@ export default function UserInfoCharacters(props: Props) {
             }}
             style={{ flexDirection: "row", gap: 8 }}
           >
+            {/* 展櫃數據 */}
             {inGameCharacters?.map((char: any) => (
               <CharCard
                 key={char.id}
@@ -178,6 +163,7 @@ export default function UserInfoCharacters(props: Props) {
                       <View>
                         <Image
                           className="w-9 h-9"
+                          // @ts-ignore
                           source={Lightcone?.[char.light_cone?.id]?.icon}
                         />
                       </View>
@@ -208,10 +194,7 @@ export default function UserInfoCharacters(props: Props) {
               />
             ))}
           </View>
-          <Image
-            source={require("./icons/Divider.svg")}
-            className="w-[340px] h-[13px] "
-          />
+          <Divider />
           {/* hoyolab 數據 */}
           {isOwner || isShowInfo ? (
             <View style={{ alignItems: "center", gap: 16 }}>
@@ -241,6 +224,7 @@ export default function UserInfoCharacters(props: Props) {
                             <View>
                               <Image
                                 className="w-9 h-9"
+                                // @ts-ignore
                                 source={Lightcone?.[char.light_cone?.id]?.icon}
                               />
                             </View>
@@ -248,12 +232,12 @@ export default function UserInfoCharacters(props: Props) {
                               <Text className="text-text text-[12px] font-[HY65] leading-5">
                                 {char.light_cone?.level
                                   ? `Lv.${char.light_cone?.level}`
-                                  : ""}
+                                  : " "}
                               </Text>
                               <Text className="text-text text-[12px] font-[HY65] leading-5">
                                 {char.light_cone?.rank
                                   ? `${char.light_cone?.rank}階`
-                                  : "無裝備"}
+                                  : "無裝備 "}
                               </Text>
                             </View>
                           </View>
@@ -263,10 +247,10 @@ export default function UserInfoCharacters(props: Props) {
                       }
                       onPress={() => {
                         // @ts-ignore
-                        navigation.navigate("UserCharDetail", {
-                          uuid: props.uuid,
-                          charId: char.id,
-                        });
+                        // navigation.navigate("UserCharDetail", {
+                        //   uuid: props.uuid,
+                        //   charId: char.id,
+                        // });
                       }}
                     />
                   ))}
@@ -288,23 +272,21 @@ export default function UserInfoCharacters(props: Props) {
           )}
         </View>
       </View>
-      {openQuestionPopUp && (
-        <ReactNativeModal
-          useNativeDriverForBackdrop
-          hasBackdrop={false}
-          isVisible={openQuestionPopUp}
-          statusBarTranslucent
-          deviceHeight={Dimensions.get("screen").height}
-        >
-          <PopUpCard
-            title="公開角色"
-            content="為了保障安全性和用戶權益，我們通過用戶的設備（客戶端），而非透過伺服器來更新 hoyolab 角色數據。這意味著如果用戶一段時間不使用 Stargazer，可能會導致他們的角色數量、活躍天數、達成成就和忘卻之庭數據存在差異。請注意，這些數據僅供參考，不具有絕對準確性。"
-            onClose={() => {
-              setOpenQuestionPopUp(false);
-            }}
-          />
-        </ReactNativeModal>
-      )}
+      <ReactNativeModal
+        useNativeDriverForBackdrop
+        hasBackdrop={false}
+        isVisible={openQuestionPopUp}
+        statusBarTranslucent
+        deviceHeight={Dimensions.get("screen").height}
+      >
+        <PopUpCard
+          title="公開角色"
+          content="為了保障安全性和用戶權益，我們通過用戶的設備（客戶端），而非透過伺服器來更新 hoyolab 角色數據。這意味著如果用戶一段時間不使用 Stargazer，可能會導致他們的角色數量、活躍天數、達成成就和忘卻之庭數據存在差異。請注意，這些數據僅供參考，不具有絕對準確性。"
+          onClose={() => {
+            setOpenQuestionPopUp(false);
+          }}
+        />
+      </ReactNativeModal>
     </>
   );
 }
@@ -321,3 +303,10 @@ const MoreBtn = ({ onPress }: { onPress: () => void }) => {
     </TouchableOpacity>
   );
 };
+
+const Divider = () => (
+  <Image
+    source={require("./icons/Divider.svg")}
+    className="w-[340px] h-[13px] "
+  />
+);

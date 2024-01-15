@@ -18,6 +18,7 @@ export default function CharSuggestRelicsProps() {
 
   const adviceRelics = charAdviceRelicMap?.[charId];
 
+
   return (
     <View className="w-full mt-4">
       <View className="w-full">

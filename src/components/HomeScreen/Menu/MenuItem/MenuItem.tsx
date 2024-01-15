@@ -11,6 +11,7 @@ import { BlurView } from "expo-blur";
 import { Platform } from "react-native";
 import withBlurView from "../../../../hoc/withBlurView";
 import Dot from "../Dot/Dot";
+import useDoUseHomePageBlurEffect from "../../../../redux/doUseHomePageBlurEffect/useDoUseHomePageBlurEffect";
 
 export default function MenuItem({
   children,
@@ -27,6 +28,8 @@ export default function MenuItem({
   onPress?: (e: GestureResponderEvent) => void;
   hasDot?: boolean;
 }) {
+  const { doUseHomePageBlurEffect } = useDoUseHomePageBlurEffect();
+
   return (
     <View>
       <Shadow offset={[0, 4]} distance={6} startColor="#00000025">
@@ -68,7 +71,7 @@ export default function MenuItem({
                   </View>
                 </View>
               </View>,
-              Platform.OS !== "android"
+              doUseHomePageBlurEffect
             )}
           </View>
         </TouchableOpacity>

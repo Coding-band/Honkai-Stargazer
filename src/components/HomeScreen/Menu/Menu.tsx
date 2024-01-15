@@ -17,7 +17,6 @@ import _ from "lodash";
 import { formatTimePoint } from "../../../utils/date/formatTime";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
-import Toast from "../../../utils/toast/Toast";
 import formatNumber from "../../../utils/format/formatNumber";
 
 export default function Menu() {
@@ -133,18 +132,18 @@ export default function Menu() {
         ? `${playerNote.data?.current_train_score}/${playerNote.data?.max_train_score}`
         : LOCALES[language].NoDataYet,
       icon: Calendar,
-      onPress: () => { },
+      onPress: () => {},
     },
     // 模擬宇宙
     {
       type: "normal",
       name: playerNote.data
         ? `${formatNumber(playerNote.data?.current_rogue_score)}/${formatNumber(
-          playerNote.data?.max_rogue_score
-        )}`
+            playerNote.data?.max_rogue_score
+          )}`
         : LOCALES[language].NoDataYet,
       icon: Planet,
-      onPress: () => { },
+      onPress: () => {},
     },
     // 派遣委託
     {
@@ -165,11 +164,11 @@ export default function Menu() {
             .remaining_time === 0
             ? LOCALES[language].IsDone
             : formatTimePoint(
-              _.maxBy(
-                playerNote.data.expeditions,
-                (e: any) => e.remaining_time
-              ).remaining_time
-            )}
+                _.maxBy(
+                  playerNote.data.expeditions,
+                  (e: any) => e.remaining_time
+                ).remaining_time
+              )}
         </Text>
       ) : null,
       onPress: () => {
@@ -227,7 +226,7 @@ export default function Menu() {
   return (
     <View
       style={{
-        height: Dimensions.get("screen").height - 328,
+        height: Dimensions.get("screen").height - 350,
       }}
     >
       <ScrollView>

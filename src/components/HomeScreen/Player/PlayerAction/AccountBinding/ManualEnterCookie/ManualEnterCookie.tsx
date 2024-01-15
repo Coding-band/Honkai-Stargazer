@@ -9,6 +9,7 @@ import auth from "@react-native-firebase/auth";
 import { LOCALES } from "../../../../../../../locales";
 import { hsrServer } from "../../../../../../utils/hoyolab/servers/hsrServer";
 import { keys } from "lodash";
+import Toast from "../../../../../../utils/toast/Toast";
 
 type Props = {
   onCookieSave?: () => void;
@@ -21,11 +22,16 @@ export default function ManualEnterCookie(props: Props) {
   const { setHsrServerChosen } = useHsrServerChosen();
 
   const [inputCookie, setInputCookie] = useState("");
+
   const handleSaveCookie = () => {
+    if (!inputCookie) {
+      Toast("請輸入 cookie！");
+      return;
+    }
+
     setHoyolabCookie(inputCookie);
     // @ts-ignore
     setHsrServerChosen(keys(hsrServer)[btnChooseServerIndex]);
-    auth().signOut();
     props.onCookieSave && props.onCookieSave();
   };
 

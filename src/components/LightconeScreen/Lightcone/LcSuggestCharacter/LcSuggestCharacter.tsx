@@ -1,6 +1,6 @@
 import { Sword } from "phosphor-react-native";
 import PageHeading from "../../../global/PageHeading/PageHeading";
-import { ScrollView, View } from "react-native";
+import { ScrollView, View, Text } from "react-native";
 import characterList from "../../../../../data/character_data/character_list.json";
 import characterListMap from "../../../../../map/character_data_map";
 import LcSuggestCharacterCard from "./LcSuggestCharacterCard/LcSuggestCharacterCard";
@@ -46,28 +46,32 @@ export default function LcSuggestCharacter() {
 
   const suggestCharsJsx = useMemo(
     () =>
-      suggestChars
-        .map((charId: CharacterName) => {
-          const charJsonData = characterList.filter(
-            (char) => char.name === charId
-          )[0];
-          const charFullData = getCharFullData(charId, textLanguage);
-          return {
-            id: charId,
-            rare: charJsonData.rare,
-            name: charFullData.name,
-            description: charFullData.descHash,
-            image: CharacterImage[charId].icon,
-            combatType: charJsonData.element,
-            path: charJsonData.path,
-          };
-        })
-        ?.slice()
-        .sort((a: any, b: any) => b.rare - a.rare)
-        .map((l, i) => (
-          // @ts-ignore
-          <LcSuggestCharacterCard key={i} {...l} />
-        )),
+      suggestChars?.length? (
+        suggestChars
+          .map((charId: CharacterName) => {
+            const charJsonData = characterList.filter(
+              (char) => char.name === charId
+            )[0];
+            const charFullData = getCharFullData(charId, textLanguage);
+            return {
+              id: charId,
+              rare: charJsonData.rare,
+              name: charFullData.name,
+              description: charFullData.descHash,
+              image: CharacterImage[charId].icon,
+              combatType: charJsonData.element,
+              path: charJsonData.path,
+            };
+          })
+          ?.slice()
+          .sort((a: any, b: any) => b.rare - a.rare)
+          .map((l, i) => (
+            // @ts-ignore
+            <LcSuggestCharacterCard key={i} {...l} />
+          ))
+      ) : (
+        <Text className="text-text font-[HY65]">{LOCALES[appLanguage].NoDataYet}</Text>
+      ),
     [suggestChars]
   );
 

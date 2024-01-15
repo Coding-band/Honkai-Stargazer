@@ -1,4 +1,4 @@
-import { View, ScrollView } from "react-native";
+  import { View, ScrollView } from "react-native";
 import React, { useState } from "react";
 import SettingGroup from "../SettingGroup/SettingGroup";
 import SettingItem from "../SettingGroup/SettingItem/SettingItem";

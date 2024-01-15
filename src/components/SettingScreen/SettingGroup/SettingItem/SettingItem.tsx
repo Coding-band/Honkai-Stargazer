@@ -10,7 +10,7 @@ const ArrowRight = require("./icons/ArrowRight.svg");
 const ArrowDown = require("./icons/ArrowDown.svg");
 
 type Props = {
-  type: "navigation" | "list";
+  type: "navigation" | "list" | "none";
   title: string;
   content?: string;
   list?: { value: any; name: string }[];
@@ -40,11 +40,9 @@ export default function SettingItem(props: Props) {
       style={{ flexDirection: "row", zIndex }}
     >
       <View className="flex-1 h-full px-3" style={{ justifyContent: "center" }}>
-        <Text className="text-[14px] font-[HY65] leading-5">
-          {props.title}
-        </Text>
+        <Text className="text-[14px] font-[HY65] leading-5">{props.title}</Text>
       </View>
-      {props.type === "list" ? (
+      {props.type === "list" && (
         // @ts-ignore
         <Listbox
           value={props.value}
@@ -80,7 +78,24 @@ export default function SettingItem(props: Props) {
             </Listbox.Item>
           ))}
         </Listbox>
-      ) : (
+      )}
+      {props.type === "navigation" && (
+        <TouchableOpacity activeOpacity={0.35} onPress={props.onNavigate}>
+          <View
+            className="w-40 h-full bg-[#F3F9F990]"
+            style={{ justifyContent: "center", alignItems: "center" }}
+          >
+            <Text className="text-[14px] font-[HY65] leading-5">
+              {props.content || LOCALES[language].Navigate}
+            </Text>
+            <Image
+              source={ArrowRight}
+              className="w-3 h-[14px] absolute right-[14px]"
+            />
+          </View>
+        </TouchableOpacity>
+      )}
+      {props.type === "none" && (
         <TouchableOpacity activeOpacity={0.35} onPress={props.onNavigate}>
           <View
             className="w-40 h-full bg-[#F3F9F990]"
@@ -89,10 +104,6 @@ export default function SettingItem(props: Props) {
             <Text className="text-[14px] font-[HY65]">
               {props.content || LOCALES[language].Navigate}
             </Text>
-            <Image
-              source={ArrowRight}
-              className="w-3 h-[14px] absolute right-[14px]"
-            />
           </View>
         </TouchableOpacity>
       )}

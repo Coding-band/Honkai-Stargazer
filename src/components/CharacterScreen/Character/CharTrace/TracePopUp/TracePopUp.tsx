@@ -39,8 +39,6 @@ export default React.memo(function TracePopUp({ type, data, onClose }: Props) {
 
   const [skillLevel, setSkillLevel] = useState(0);
   useEffect(() => {
-    console.log(skillData?.levelData);
-
     if (!skillData?.levelData) {
       setSkillLevel(0);
     } else if (skillLevel + 1 >= skillData?.levelData?.length) {

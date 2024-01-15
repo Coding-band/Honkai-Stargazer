@@ -93,11 +93,33 @@ export default function UserCharAttribute() {
       ),
     },
     {
-      key: "energy",
+      key: "sp",
       icon: AttributeImage.energy,
       attr: charFullData?.spRequirement,
       addi: null,
       value: charFullData?.spRequirement,
+    },
+    {
+      key: "sp_rate",
+      icon: AttributeImage.sp_rate,
+      attr: inGameCharData?.attributes.filter(
+        (attr: any) => attr.field === "sp_rate"
+      )[0]?.display,
+      addi: inGameCharData?.additions.filter(
+        (attr: any) => attr.field === "sp_rate"
+      )[0]?.display,
+      value:
+        Math.floor(
+          ((inGameCharData?.attributes.filter(
+            (attr: any) => attr.field === "crit_rate"
+          )[0]?.value || 0) +
+            (inGameCharData?.additions.filter(
+              (attr: any) => attr.field === "crit_rate"
+            )[0]?.value || 0)) *
+            1000
+        ) /
+          10 +
+        "%",
     },
     {
       key: "crit_rate",
@@ -361,7 +383,7 @@ export default function UserCharAttribute() {
                     <Image source={attr.icon} className="w-6 h-6" />
                     <Text className="text-text text-[14px] font-[HY65] leading-5">
                       {/* @ts-ignore */}
-                      {LOCALES[language]["RelicAffix_" + attr.key]}
+                      {LOCALES[language]["ATTR_" + attr.key.toUpperCase()]}
                     </Text>
                   </View>
                   <View

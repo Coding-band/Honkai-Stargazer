@@ -25,7 +25,11 @@ export default function LcDescription() {
         </Text>
         <View
           className="pb-3"
-          style={{ flexDirection: "row", justifyContent: "space-between",alignItems:"center" }}
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
         >
           <Text className="text-text font-[HY65] text-[16px]">
             Lv.{skillLevel + 1}/5
@@ -38,7 +42,12 @@ export default function LcDescription() {
           />
         </View>
         <HtmlText
-          style={{ color: "#DDD", fontFamily: "HY65", fontSize: 14 }}
+          style={{
+            color: "#FFF",
+            fontFamily: "HY65",
+            fontSize: 14,
+            lineHeight: 20,
+          }}
           // className="text-text2 font-[HY65] text-[14px]"
         >
           {formatDesc(

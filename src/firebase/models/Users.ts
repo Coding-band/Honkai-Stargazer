@@ -15,4 +15,5 @@ export default interface Users {
   chest_num: number;
   show_info: boolean;
   last_login: FirebaseFirestoreTypes.Timestamp;
+  wallpaperId: number;
 }

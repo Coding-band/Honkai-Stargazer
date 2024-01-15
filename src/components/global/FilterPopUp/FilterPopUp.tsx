@@ -20,7 +20,7 @@ type Props = {
 export default function FilterPopUp(props: Props) {
   const { language } = useAppLanguage();
   return (
-    <View className="absolute bottom-0 translate-x-[-6px] translate-y-[18px]">
+    <View className="absolute bottom-16 translate-x-[-6px] h-[100px]" style={{justifyContent:"flex-end"}}>
       <PopUpCard
         onClose={props.onClose && props.onClose}
         title={LOCALES[language].FilterTitle}

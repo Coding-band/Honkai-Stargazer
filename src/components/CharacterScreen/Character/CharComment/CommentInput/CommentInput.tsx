@@ -30,6 +30,7 @@ export default function CommentInput({
   value: string;
   onChange: (value: string) => void;
 }) {
+  
   const uid = useMyFirebaseUid();
   const playerName = useHsrPlayerName();
   const charId = useCharId();
@@ -131,10 +132,10 @@ export default function CommentInput({
         >
           {/* 輸入框 */}
           <TextInput
-            // multiline
+            multiline
             className={cn(
               "py-[9px] px-[20px]",
-              "text-[16px] font-[HY65] text-text"
+              "text-[16px] font-[HY65] text-text leading-5"
             )}
             style={{ justifyContent: "center", flex: 1 }}
             value={input}
