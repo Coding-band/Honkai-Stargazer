@@ -149,7 +149,7 @@ export const strings = {
   RelicAffix_effect_res: "Effect RES",
   RelicAffix_break_dmg: "Break Effect",
   RelicAffix_heal_rate: "Healing Boost",
-  RelicAffix_energy: "Energy Limit",
+  RelicAffix_energy: "Energy Regen.",
   RelicAffix_physical_dmg: "Physical DMG Bonus",
   RelicAffix_wind_dmg: "Wind DMG Bonus",
   RelicAffix_fire_dmg: "Pyro DMG Bonus",
@@ -180,4 +180,31 @@ export const strings = {
 
   //Add in 20240114 - After 2.0.15
   NoOnlineData: "No record",
+  
+  //Add in 20240115
+  LightconeEffect: "Lightcone Effect",
+  LightconeStory: "Lightcone Story",
+  ATTR_CRIT_RATE: "CritRate",
+  ATTR_CRIT_DMG: "CritDMG",
+  ATTR_HP: "HP",
+  ATTR_HPP: "HP%",
+  ATTR_ATK: "ATK",
+  ATTR_ATKP: "ATK%",
+  ATTR_DEF: "DEF",
+  ATTR_DEFP: "DEF%",
+  ATTR_SPD: "SPD",
+  ATTR_BREAK_EFFECT: "Break Effect",
+  ATTR_EFFECT_HIT: "Effect Hit",
+  ATTR_EFFECT_RES: "Effect RES",
+  ATTR_QUANTUM: "QUANTUM DMG",
+  ATTR_FIRE: "Fire DMG",
+  ATTR_ICE: "Ice DMG",
+  ATTR_IMAGINARY: "Imaginary DMG",
+  ATTR_WIND: "Wind DMG",
+  ATTR_THUNDER: "Thunder DMG",
+  ATTR_PHYSICAL: "Physical DMG",
+  ATTR_ENERGY_REGENERATE: "Energy Regen.",
+  ATTR_HEAL_BONUS: "Heal Bonus",
+
+  EnergyMax: "Energy Max.",
 };

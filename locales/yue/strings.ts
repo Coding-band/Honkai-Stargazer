@@ -148,7 +148,7 @@ export const strings = {
   RelicAffix_effect_res: "效果抗性",
   RelicAffix_break_dmg: "擊破特攻",
   RelicAffix_heal_rate: "治療量加成",
-  RelicAffix_energy: "能量上限",
+  RelicAffix_energy: "能量回復效率",
   RelicAffix_physical_dmg: "物理屬性傷害加成",
   RelicAffix_wind_dmg: "風屬性傷害加成",
   RelicAffix_fire_dmg: "火屬性傷害加成",
@@ -158,7 +158,6 @@ export const strings = {
   RelicAffix_imaginary_dmg: "虛數屬性傷害加成",
   // toast
   PleaseLogin: "請登入先！",
-
   //Add in 20240114
   UserInfoLastLoginAt: "${1}前",
   UserInfoGameData: "遊戲數據",
@@ -175,5 +174,31 @@ export const strings = {
   UserCharLevelLv: "等級",
   UserCharLevelSoul: "星魂",
   ProducedByStargazer: "係Stargazer入面整出嚟",
+  //Add in 20240114 - After 2.0.15
   NoOnlineData: "無上線紀錄",
+  //Add in 20240115
+  LightconeEffect: "光錐效果",
+  LightconeStory: "光錐故仔",
+  ATTR_CRIT_RATE: "暴擊率",
+  ATTR_CRIT_DMG: "暴擊傷害",
+  ATTR_HP: "生命值",
+  ATTR_HPP: "生命值%",
+  ATTR_ATK: "攻擊力",
+  ATTR_ATKP: "攻擊力%",
+  ATTR_DEF: "防禦力",
+  ATTR_DEFP: "防禦力%",
+  ATTR_SPD: "速度",
+  ATTR_BREAK_EFFECT: "擊破特攻",
+  ATTR_EFFECT_HIT: "效果命中",
+  ATTR_EFFECT_RES: "效果抵抗",
+  ATTR_QUANTUM: "量子傷害提高",
+  ATTR_FIRE: "火傷害提高",
+  ATTR_ICE: "冰傷害提高",
+  ATTR_IMAGINARY: "虛數傷害提高",
+  ATTR_WIND: "風傷害提高",
+  ATTR_THUNDER: "雷傷害提高",
+  ATTR_PHYSICAL: "物理傷害提高",
+  ATTR_ENERGY_REGENERATE: "充能效率",
+  ATTR_HEAL_BONUS: "治療量加成",
+  EnergyMax: "能量上限"
 };

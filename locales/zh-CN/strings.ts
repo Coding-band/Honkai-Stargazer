@@ -6,7 +6,7 @@ export const strings = {
   twhkmo: "台港澳服",
   cn1: "星穹列车",
   cn2: "无名客",
-  Trailblazer: "開拓者",
+  Trailblazer: "开拓者",
   // path
   Abundance: "丰饶",
   Destruction: "毁灭",
@@ -121,7 +121,7 @@ export const strings = {
   InviteOthers: "邀请他人",
   DevOptions: "开发者选项",
   DevUseCookieLogin: "使用Cookies登入",
-  OsVersion: "作業系統版本",
+  OsVersion: "系统版本",
   AppVersion: "App版本",
   SpecialThanks: "鸣谢",
   SpecialThanksDevs: "开发人员",
@@ -130,7 +130,7 @@ export const strings = {
   ManuallySetup: "手动设置",
   SelectServerTitle: "选择服务器",
   RemarksInLogin: "登录须知",
-  CopyToClipBoard: "已复制到剪贴簿",
+  CopyToClipBoard: "已复制到剪贴板",
   FailToCopy: "复制失败, 错误代码：",
   // ui - WallPaper Page
   SaveWallPaper: "保存壁纸",
@@ -148,7 +148,7 @@ export const strings = {
   RelicAffix_effect_res: "效果抗性",
   RelicAffix_break_dmg: "击破特攻",
   RelicAffix_heal_rate: "治疗量加成",
-  RelicAffix_energy: "能量上限",
+  RelicAffix_energy: "能量回复效率",
   RelicAffix_physical_dmg: "物理属性伤害加成",
   RelicAffix_wind_dmg: "风属性伤害加成",
   RelicAffix_fire_dmg: "火属性伤害加成",
@@ -158,7 +158,6 @@ export const strings = {
   RelicAffix_imaginary_dmg: "虚数属性伤害加成",
   // toast
   PleaseLogin: "请先登入！",
-
   //Add in 20240114
   UserInfoLastLoginAt: "${1}前",
   UserInfoGameData: "游戏数据",
@@ -175,11 +174,31 @@ export const strings = {
   UserCharLevelLv: "等级",
   UserCharLevelSoul: "星魂",
   ProducedByStargazer: "由 Stargazer 制作",
-
   //Add in 20240114 - After 2.0.15
-  NoOnlineData: "無上線紀錄",
-
+  NoOnlineData: "无上线记录",
   //Add in 20240115
-  LightconeEffect: "光錐效果",
-  LightconeStory: "光錐故事",
+  LightconeEffect: "光锥效果",
+  LightconeStory: "光锥故事",
+  ATTR_CRIT_RATE: "暴击率",
+  ATTR_CRIT_DMG: "暴击伤害",
+  ATTR_HP: "生命值",
+  ATTR_HPP: "生命值%",
+  ATTR_ATK: "攻击力",
+  ATTR_ATKP: "攻击力%",
+  ATTR_DEF: "防御力",
+  ATTR_DEFP: "防御力%",
+  ATTR_SPD: "速度",
+  ATTR_BREAK_EFFECT: "击破特攻",
+  ATTR_EFFECT_HIT: "效果命中",
+  ATTR_EFFECT_RES: "效果抵抗",
+  ATTR_QUANTUM: "量子伤害提高",
+  ATTR_FIRE: "火伤害提高",
+  ATTR_ICE: "冰伤害提高",
+  ATTR_IMAGINARY: "虚数伤害提高",
+  ATTR_WIND: "风伤害提高",
+  ATTR_THUNDER: "雷伤害提高",
+  ATTR_PHYSICAL: "物理伤害提高",
+  ATTR_ENERGY_REGENERATE: "充能效率",
+  ATTR_HEAL_BONUS: "治疗量加成",
+  EnergyMax: "能量上限"
 };

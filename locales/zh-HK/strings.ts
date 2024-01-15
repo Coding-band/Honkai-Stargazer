@@ -148,7 +148,7 @@ export const strings = {
   RelicAffix_effect_res: "效果抗性",
   RelicAffix_break_dmg: "擊破特攻",
   RelicAffix_heal_rate: "治療量加成",
-  RelicAffix_energy: "能量上限",
+  RelicAffix_energy: "能量回復效率",
   RelicAffix_physical_dmg: "物理屬性傷害加成",
   RelicAffix_wind_dmg: "風屬性傷害加成",
   RelicAffix_fire_dmg: "火屬性傷害加成",
@@ -158,7 +158,6 @@ export const strings = {
   RelicAffix_imaginary_dmg: "虛數屬性傷害加成",
   // toast
   PleaseLogin: "請先登入！",
-
   //Add in 20240114
   UserInfoLastLoginAt: "${1}前",
   UserInfoGameData: "遊戲數據",
@@ -175,17 +174,13 @@ export const strings = {
   UserCharLevelLv: "等級",
   UserCharLevelSoul: "星魂",
   ProducedByStargazer: "由 Stargazer 製作",
-
   //Add in 20240114 - After 2.0.15
   NoOnlineData: "無上線紀錄",
-
   //Add in 20240115
   LightconeEffect: "光錐效果",
   LightconeStory: "光錐故事",
   ATTR_CRIT_RATE: "暴擊率",
-  ATTR_CRIT_RATEP: "暴擊率%",
   ATTR_CRIT_DMG: "暴擊傷害",
-  ATTR_CRIT_DMGP: "暴擊傷害%",
   ATTR_HP: "生命值",
   ATTR_HPP: "生命值%",
   ATTR_ATK: "攻擊力",
@@ -205,4 +200,5 @@ export const strings = {
   ATTR_PHYSICAL: "物理傷害提高",
   ATTR_ENERGY_REGENERATE: "充能效率",
   ATTR_HEAL_BONUS: "治療量加成",
+  EnergyMax: "能量上限"
 };
