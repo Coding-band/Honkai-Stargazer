@@ -1,4 +1,6 @@
 const Material = {
+	//星瓊
+	900001: require("../../images/material_icon/material_stella_jade.webp"),
 	//Lightcone EXP
 	694487 : require("../../images/material_icon/material_refined_aether.webp"),
 	694488 : require("../../images/material_icon/material_condensed_aether.webp"),
