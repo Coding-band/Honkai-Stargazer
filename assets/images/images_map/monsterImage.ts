@@ -1,4 +1,7 @@
 const Monsterimages = {
+    "Vagrant":{
+        icon: require("../../images/monster_icon/monster_vagrant.webp"),
+    },
     "Silvermane Cannoneer": {
         icon: require("../../images/monster_icon/monster_silvermane_cannoneer_icon.webp"),
     },
