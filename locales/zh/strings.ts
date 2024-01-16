@@ -137,27 +137,8 @@ export const strings = {
   SetWallPaper: "ㄕㄜㄓ",
   // ui - Code Page
   HasCopy: "已複製",
-  // affixs of relics
-  RelicAffix_atk: "ㄍㄨㄥㄐ一ㄌ一",
-  RelicAffix_def: "ㄈㄤㄩㄌ一",
-  RelicAffix_hp: "ㄕㄥㄇ一ㄥㄓ",
-  RelicAffix_crit_dmg: "ㄅㄠㄐ一ㄕㄤㄏㄞ",
-  RelicAffix_crit_rate: "ㄅㄠㄐ一ㄌㄩ",
-  RelicAffix_spd: "ㄙㄨㄉㄨ",
-  RelicAffix_effect_hit: "ㄒ一ㄠㄍㄨㄛㄇ一ㄥㄓㄨㄥ",
-  RelicAffix_effect_res: "ㄒ一ㄠㄍㄨㄛㄎㄤㄒ一ㄥ",
-  RelicAffix_break_dmg: "ㄐ一ㄆㄛㄊㄜㄍㄨㄥ",
-  RelicAffix_heal_rate: "ㄓㄌ一ㄠㄌ一ㄤㄐ一ㄚㄔㄥ",
-  RelicAffix_energy: "ㄋㄥㄌ一ㄤㄏㄨㄟㄈㄨㄒ一ㄠㄌㄩ",
-  RelicAffix_physical_dmg: "ㄨㄕㄤㄐ一ㄚㄔㄥ",
-  RelicAffix_wind_dmg: "ㄈㄥㄕㄤㄐ一ㄚㄔㄥ",
-  RelicAffix_fire_dmg: "ㄏㄨㄛㄕㄤㄐ一ㄚㄔㄥ",
-  RelicAffix_ice_dmg: "ㄅ一ㄥㄕㄤㄐ一ㄚㄔㄥ",
-  RelicAffix_lightning_dmg: "ㄌㄟㄕㄤㄐ一ㄚㄔㄥ",
-  RelicAffix_quantum_dmg: "ㄌ一ㄤㄗㄕㄤㄐ一ㄚㄔㄥ",
-  RelicAffix_imaginary_dmg: "ㄒㄩㄕㄨㄕㄤㄐ一ㄚㄔㄥ",
   // toast
-  PleaseLogin: "請先登入！",
+  PleaseLogin: "Please login first!",
   //Add in 20240114
   UserInfoLastLoginAt: "${1} ㄑ一ㄢ",
   UserInfoGameData: "一ㄡㄒ一ㄕㄨㄐㄩ",
@@ -178,7 +159,9 @@ export const strings = {
   NoOnlineData: "無上線紀錄",
   //Add in 20240115
   LightconeEffect: "ㄍㄨㄤㄓㄨㄟㄒ一ㄠㄍㄨㄛ",
-  LightconeStory: "ㄍㄨㄤㄓㄨㄟㄍㄨㄕ",
+  LightconeStory: "Lightcone Story",
+  //Add in 20240116
+  UseBlurEffect: "Use Blur Effect",
   ATTR_CRIT_RATE: "ㄅㄠㄐ一ㄌㄩ",
   ATTR_CRIT_DMG: "ㄅㄠㄐ一ㄕㄤㄏㄞ",
   ATTR_HP: "ㄕㄥㄇ一ㄥㄓ",
@@ -199,6 +182,5 @@ export const strings = {
   ATTR_THUNDER: "ㄌㄟㄕㄤㄊ一ㄍㄠ",
   ATTR_PHYSICAL: "ㄨㄌ一ㄕㄤㄊ一ㄍㄠ",
   ATTR_ENERGY_REGENERATE: "ㄔㄨㄥㄋㄥㄒ一ㄠㄌㄩ",
-  ATTR_HEAL_BONUS: "ㄓㄌ一ㄠㄌ一ㄤㄐ一ㄚㄔㄥ",
-  EnergyMax: "ㄋㄥㄌ一ㄤㄕㄤㄒ一ㄢ"
+  ATTR_HEAL_BONUS: "ㄓㄌ一ㄠㄌ一ㄤㄐ一ㄚㄔㄥ"
 };

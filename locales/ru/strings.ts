@@ -137,27 +137,8 @@ export const strings = {
   SetWallPaper: "Set",
   // ui - Code Page
   HasCopy: "Copied",
-  // affixs of relics
-  RelicAffix_atk: "ATK",
-  RelicAffix_def: "DEF",
-  RelicAffix_hp: "HP",
-  RelicAffix_crit_dmg: "CritDMG",
-  RelicAffix_crit_rate: "Crit%",
-  RelicAffix_spd: "SPD",
-  RelicAffix_effect_hit: "Effect Hit%",
-  RelicAffix_effect_res: "Effect RES",
-  RelicAffix_break_dmg: "Break Effect",
-  RelicAffix_heal_rate: "Healing Boost",
-  RelicAffix_energy: "Energy Regen.",
-  RelicAffix_physical_dmg: "Physical DMG Bonus",
-  RelicAffix_wind_dmg: "Wind DMG Bonus",
-  RelicAffix_fire_dmg: "Pyro DMG Bonus",
-  RelicAffix_ice_dmg: "Cryo DMG Bonus",
-  RelicAffix_lightning_dmg: "Lightning DMG Bonus",
-  RelicAffix_quantum_dmg: "Quantum DMG Bonus",
-  RelicAffix_imaginary_dmg: "Imaginary DMG Bonus",
   // toast
-  PleaseLogin: "Please login first！",
+  PleaseLogin: "Please login first!",
   //Add in 20240114
   UserInfoLastLoginAt: "${1} Before",
   UserInfoGameData: "Game Data",
@@ -179,6 +160,8 @@ export const strings = {
   //Add in 20240115
   LightconeEffect: "Lightcone Effect",
   LightconeStory: "Lightcone Story",
+  //Add in 20240116
+  UseBlurEffect: "Use Blur Effect",
   ATTR_CRIT_RATE: "CritRate",
   ATTR_CRIT_DMG: "CritDMG",
   ATTR_HP: "HP",
@@ -199,6 +182,5 @@ export const strings = {
   ATTR_THUNDER: "Thunder DMG",
   ATTR_PHYSICAL: "Physical DMG",
   ATTR_ENERGY_REGENERATE: "Energy Regen.",
-  ATTR_HEAL_BONUS: "Heal Bonus",
-  EnergyMax: "Energy Max."
+  ATTR_HEAL_BONUS: "Heal Bonus"
 };
