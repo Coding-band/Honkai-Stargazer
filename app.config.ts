@@ -22,6 +22,7 @@ export const APP_ICON = {
   android: "./assets/Android.png",
 };
 
+
 export const PACKAGE_NAME = {
   iosBETA: "com.voc.honkaistargazerbeta",
   androidBETA: "com.voc.honkai_stargazer_beta",
@@ -56,6 +57,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   assetBundlePatterns: ["**/*"],
   ios: {
+    bitcode: false,
     googleServicesFile: "./GoogleService-Info.plist",
     supportsTablet: true,
     bundleIdentifier: askEnvDo({
