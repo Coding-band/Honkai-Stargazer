@@ -33,6 +33,7 @@ export default function RelicList() {
           id: relicId,
           name: relicFullData?.name || relic.name,
           rare: 5,
+          set: relic.type === "ORNAMENTS" ? 2 : 4,
           image: Relic[relicId]?.icon1,
           version: relic.version,
         };

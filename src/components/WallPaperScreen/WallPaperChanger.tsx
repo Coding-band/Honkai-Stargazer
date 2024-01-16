@@ -14,9 +14,13 @@ import useAppLanguage from "../../language/AppLanguage/useAppLanguage";
 import useDoUseHomePageBlurEffect from "../../redux/doUseHomePageBlurEffect/useDoUseHomePageBlurEffect";
 import db from "../../firebase/db";
 import useMyFirebaseUid from "../../firebase/hooks/FirebaseUid/useMyFirebaseUid";
+import useTextLanguage from "../../language/TextLanguage/useTextLanguage";
+import { getCharFullData } from "../../utils/dataMap/getDataFromMap";
+import officalCharId from "../../../map/character_offical_id_map";
 
 export default function WallPaperChanger() {
   const navigation = useNavigation();
+  const { language: textLanguage } = useTextLanguage();
   const { language } = useAppLanguage();
 
   const playerName = useHsrPlayerName();
@@ -77,7 +81,18 @@ export default function WallPaperChanger() {
         {/* wallpaper name */}
         <View className="mt-5" style={{ alignItems: "center" }}>
           <Text className="text-[16px] font-[HY65] text-[#FFF] leading-5">
-            {wallPapers[currentWallPaperIndex].name}
+            {officalCharId[
+              String(wallPapers[currentWallPaperIndex]?.id).split("-")?.[0]
+            ]
+              ? getCharFullData(
+                  officalCharId[
+                    String(wallPapers[currentWallPaperIndex]?.id).split(
+                      "-"
+                    )?.[0]
+                  ],
+                  textLanguage
+                )?.name + "壁紙"
+              : wallPapers[currentWallPaperIndex]?.name}
           </Text>
         </View>
         <View

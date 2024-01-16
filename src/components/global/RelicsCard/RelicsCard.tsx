@@ -14,6 +14,7 @@ type Props = {
   image?: ExpoImage;
   rare: number;
   name: string;
+  set?: number;
   onPress?: (e: GestureResponderEvent) => void;
 };
 
@@ -34,24 +35,31 @@ export default function RelicsCard(props: Props) {
           shadowColor: "#000000",
           shadowOpacity: 0.25,
           elevation: 8,
+          alignItems: "center",
+          justifyContent: "center",
         }}
         colors={
           props.rare === 5 ? ["#905A52", "#C8A471"] : ["#404165", "#9763CE"]
         }
       >
-        <View
-          className="w-full h-full"
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Image
-            transition={200}
-            style={{ width: 75, height: 75 }}
-            source={props.image}
-          />
-        </View>
+        {/* 圖片 */}
+        <Image
+          cachePolicy="none"
+          transition={200}
+          style={{ width: 55, height: 55 }}
+          source={props.image}
+        />
+        {/* 套數 */}
+        {props.set && (
+          <View
+            className="w-[18px] h-[18px] rounded-full absolute left-1 top-1 bg-[#00000040]"
+            style={{ justifyContent: "center", alignItems: "center" }}
+          >
+            <Text className="text-text text-[12px] font-[HY65]">
+              {props?.set}
+            </Text>
+          </View>
+        )}
       </LinearGradient>
       {/* </Shadow> */}
       <View

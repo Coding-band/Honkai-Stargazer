@@ -22,9 +22,7 @@ export default function AccountSetting() {
 
   return (
     <SettingGroup
-      title={formatLocale(LOCALES[language].AccountSetup, [
-        hsrUUID || "00000000",
-      ])}
+      title={formatLocale(LOCALES[language].AccountSetup, [hsrUUID])}
     >
       <SettingItem
         type="navigation"

@@ -29,7 +29,6 @@ export default function MOCList() {
 
   // data
   const { data: moc } = useMemoryOfChaos();
-  const playerData = useHsrPlayerData();
   const floors = moc?.all_floor_detail?.map((floor: any) => ({
     title: floor?.name,
     stars: floor?.star_num,
