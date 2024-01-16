@@ -50,17 +50,23 @@ export default function RelicItem({
         >
           <Image
             transition={200}
-            className="w-[30px] h-[30px] z-30"
+            className="w-[30px] h-[30px]"
             // @ts-ignore
             source={Relic[relicSetId]?.["icon" + relicCount]}
           />
-          <View className="absolute bottom-[-8px] bg-[#00000040] rounded-[15px] px-1.5 py-0.5 z-50">
-            <Text className="text-text font-[HY65] text-[8px] text-center">
-              {userRelicData.level}
-            </Text>
-          </View>
         </LinearGradient>
       </TouchableOpacity>
+      {/* 等級 */}
+      <View
+        className="absolute bottom-0 w-[47px] z-50"
+        style={{ alignItems: "center" }}
+      >
+        <View className="bg-[#00000040] rounded-[15px] px-1.5 py-0.5">
+          <Text className="text-text font-[HY65] text-[8px] text-center">
+            {userRelicData.level}
+          </Text>
+        </View>
+      </View>
       {/* 詞條 */}
       <View>
         <View
