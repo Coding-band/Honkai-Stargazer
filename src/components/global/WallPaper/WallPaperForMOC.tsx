@@ -7,7 +7,7 @@ export default function WallPaperForMOC() {
     <ImageBackground
       className="absolute w-full h-full"
       // 把背景關掉
-      source={require("../../../../assets/images/bgs/memory_of_chaos_bg.png")}
+      source={require("../../../../assets/images/bgs/memory_of_chaos_bg.webp")}
       // placeholder={blurhash}
       contentFit="cover"
     />

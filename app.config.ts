@@ -90,15 +90,15 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   extra: {
     eas: {
-      projectId: "b9fe7661-b87f-485b-9509-cf28cddfe023",
-    },
+      projectId: "bb2e2b0e-bd4c-4c64-9feb-6d935193567c"
+    }
   },
-  owner: "dalufishe",
+  owner: "vocaloid2048",
   runtimeVersion: {
     policy: "appVersion",
   },
   updates: {
-    url: "https://u.expo.dev/b9fe7661-b87f-485b-9509-cf28cddfe023",
+    url: "https://u.expo.dev/bb2e2b0e-bd4c-4c64-9feb-6d935193567c",
   },
   plugins: [
     "@react-native-firebase/app",
