@@ -11,7 +11,7 @@ export const APP_NAME = {
 
 export const VERSION = {
   development: "2.0.0",
-  beta: "2.0.15",
+  beta: "2.0.16",
   production: "2.0.0",
 };
 
