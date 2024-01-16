@@ -230,7 +230,13 @@ const Monsterimages = {
     "Swarm: True Sting (Complete)": {
         icon: require("../../images/monster_icon/monster_swarm_true_sting_complete_icon.webp"),
     },
+    "Swarm: True Sting": {
+        icon: require("../../images/monster_icon/monster_swarm_true_sting_complete_icon.webp"),
+    },
     "Starcrusher Swarm King: Skaracabaz (Synthetic)": {
+        icon: require("../../images/monster_icon/monster_starcrusher_swarm_king_skaracabaz_synthetic_icon.webp"),
+    },
+    "Starcrusher Swarm King: Skaracabaz": {
         icon: require("../../images/monster_icon/monster_starcrusher_swarm_king_skaracabaz_synthetic_icon.webp"),
     },
     "Grunt: Field Personnel": {
