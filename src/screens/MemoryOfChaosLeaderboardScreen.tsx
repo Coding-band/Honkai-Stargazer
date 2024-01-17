@@ -17,18 +17,10 @@ export default function MemoryOfChaosLeaderboardScreen() {
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
       <WallPaperForMOC />
-      <LinearGradient
-        className="absolute w-full h-full"
-        colors={["#00000080", "#00000020"]}
-      />
       <Header leftBtn="back" Icon={SCREENS.MemoryOfChaosLeaderboardPage.icon}>
         {SCREENS.MemoryOfChaosLeaderboardPage.getName(language)}
       </Header>
       <MOCLbList />
-      <LinearGradient
-        className="w-full h-[600px] absolute bottom-0"
-        colors={["#00000000", "#000000"]}
-      />
     </View>
   );
 }

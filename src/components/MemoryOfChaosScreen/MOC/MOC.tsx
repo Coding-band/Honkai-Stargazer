@@ -22,12 +22,12 @@ export default function MOC() {
 
   const mocVersion = [
     {
-      id: 1008,
-      name: `${MOCDataMap[1008].time.versionBegin} - ${MOCDataMap[1008].time.versionEnd} ${MOCDataMap[1008].name[textLanguage]}`,
-    },
-    {
       id: 1009,
       name: `${MOCDataMap[1009].time.versionBegin} - ${MOCDataMap[1009].time.versionEnd} ${MOCDataMap[1009].name[textLanguage]}`,
+    },
+    {
+      id: 1008,
+      name: `${MOCDataMap[1008].time.versionBegin} - ${MOCDataMap[1008].time.versionEnd} ${MOCDataMap[1008].name[textLanguage]}`,
     },
   ];
   const [selectedVersion, setSelectedVersion] = useState(mocVersion[0].id);

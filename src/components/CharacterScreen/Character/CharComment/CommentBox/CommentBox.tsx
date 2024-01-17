@@ -87,10 +87,9 @@ export default function CommentBox(props: Props) {
 
   const scrollRef = useRef<AnimatedScrollView>();
   useEffect(() => {
-    setTimeout(() => {
-      scrollRef.current?.scrollToEnd();
-    }, 1000);
-  }, []);
+    if (translation.value.y < 0)
+      scrollRef.current?.scrollToEnd({ animated: true });
+  }, [translation.value.y]);
 
   return (
     <Pressable
@@ -127,7 +126,7 @@ export default function CommentBox(props: Props) {
         <KeyboardAvoidingView
           className="absolute bottom-4 w-full"
           behavior="padding"
-          keyboardVerticalOffset={118}
+          keyboardVerticalOffset={Platform.OS === "android" ? 118 : 124}
         >
           <Animated.View style={[animatedStyles3]}>
             {props.bottom}

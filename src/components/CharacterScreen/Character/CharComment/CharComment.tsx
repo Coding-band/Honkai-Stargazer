@@ -22,15 +22,13 @@ export default function CharComment(props: Props) {
   const [input, setInput] = useState("");
 
   return (
-    <>
-      <CommentBox
-        containerRef={props.containerRef}
-        bottom={<CommentInput value={input} onChange={setInput} />}
-      >
-        {charComments?.map((c, i) => (
-          <CommentItem key={i} {...c} input={input} setInput={setInput} />
-        ))}
-      </CommentBox>
-    </>
+    <CommentBox
+      containerRef={props.containerRef}
+      bottom={<CommentInput value={input} onChange={setInput} />}
+    >
+      {charComments?.map((c: any, i) => (
+        <CommentItem key={i} {...c} input={input} setInput={setInput} />
+      ))}
+    </CommentBox>
   );
 }

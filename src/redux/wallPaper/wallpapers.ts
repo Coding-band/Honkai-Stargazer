@@ -186,8 +186,8 @@ export const wallPapers = [
     id: 1303,
     url: require("../../../assets/images/bgs/1303.webp"),
   },
-  // {
-  //   id: 1305,
-  //   url: require("../../../assets/images/bgs/1305.webp"),
-  // },
+  {
+    id: 1305,
+    url: require("../../../assets/images/bgs/1305.webp"),
+  },
 ];

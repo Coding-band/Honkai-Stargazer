@@ -67,24 +67,22 @@ export default memo(function WallPaperSwiper(props: Props) {
                 contentFit={
                   Dimensions.get("screen").width > 600 ? "contain" : "cover"
                 }
-                style={[
-                  styles.slide,
-                  {
-                    opacity: !playerHasCharacter ? 0.6 : 1,
-                  },
-                ]}
+                style={[styles.slide]}
                 source={w.url}
               />
               {playerHasCharacter || (
-                <View
-                  className="absolute -translate-y-4"
-                  style={{ alignItems: "center", gap: 8 }}
-                >
-                  <Lock size={32} color="white" />
-                  <Text className="text-text font-[HY65] text-[14px] leading-4">
-                    {LOCALES[language].GetCharAndUnLock}
-                  </Text>
-                </View>
+                <>
+                  <View className="absolute w-full h-full opacity-60 bg-[#000]" />
+                  <View
+                    className="absolute -translate-y-4"
+                    style={{ alignItems: "center", gap: 8 }}
+                  >
+                    <Lock size={32} color="white" />
+                    <Text className="text-text font-[HY65] text-[14px] leading-4">
+                      {LOCALES[language].GetCharAndUnLock}
+                    </Text>
+                  </View>
+                </>
               )}
             </View>
           );

@@ -122,10 +122,19 @@ export default function HomeScreen() {
             console.log("create User: " + e.message);
           }
         }
+        // 更新上線時間
+        const i = setInterval(() => {
+          db.Users.doc(uid).update({
+            last_login: firestore.Timestamp.now(),
+          });
+        }, 1000 * 60);
+        return () => {
+          clearInterval(i);
+        };
       }
     }
     createOrUpdateUser();
-  }, [uid, hsrPlayerData, hsrPlayerData]);
+  }, [uid, hsrFullData, hsrPlayerData]);
 
   //* 建立或更新用戶角色數據 (UserCharacters)
   useEffect(() => {

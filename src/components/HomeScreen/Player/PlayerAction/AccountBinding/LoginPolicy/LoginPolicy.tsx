@@ -36,6 +36,7 @@ export default function LoginPolicy(props: Props) {
         hasShadow={false}
         width={320}
         height={46}
+        disable={countDown !== 0}
       >
         {countDown === 0 ? (
           LOCALES[language].OK

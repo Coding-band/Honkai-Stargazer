@@ -6,20 +6,19 @@ import db from "../../../../firebase/db";
 import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
 import officalCharId from "../../../../../map/character_offical_id_map";
 import useMyFirebaseUid from "../../../../firebase/hooks/FirebaseUid/useMyFirebaseUid";
+import { LinearGradient } from "expo-linear-gradient";
 
 export default function MOCLbItem({
   versionNumber,
   floorNumber,
   floorName,
-  showRank,
-  setShowRank,
 }: {
   versionNumber: number;
   floorNumber: number;
   floorName: string;
-  showRank: boolean;
-  setShowRank: (s: boolean) => void;
 }) {
+  const [showRank, setShowRank] = useState(false);
+
   const { data: floorLbData } = useQuery(
     ["moc-leaderboard", floorNumber, versionNumber],
     async () =>
@@ -47,7 +46,8 @@ export default function MOCLbItem({
   );
 
   return (
-    <View
+    <LinearGradient
+      colors={["#000000", "#00000000"]}
       className="border border-[#DDDDDD20] rounded-[4px] py-4 px-3 w-[360px]"
       style={{ gap: 8 }}
     >
@@ -65,21 +65,17 @@ export default function MOCLbItem({
             rank={i + 1}
             {...user}
             showRank={showRank}
-            onShowRank={(showRank: boolean) => {
-              setShowRank(showRank);
-            }}
+            onShowRank={setShowRank}
           />
         ))}
         <RecordItem
           rank={"-"}
           {...myFloorLbData}
           showRank={showRank}
-          onShowRank={(showRank: boolean) => {
-            setShowRank(showRank);
-          }}
+          onShowRank={setShowRank}
         />
       </View>
-    </View>
+    </LinearGradient>
   );
 }
 
@@ -98,12 +94,6 @@ const RecordItem = (props: any) => {
 
   return (
     <View className="pl-3" style={{ flexDirection: "row", gap: 8 }}>
-      <Text
-        style={{ color: getRankColor(props.rank) }}
-        className="text-[#FFD070] font-[HY65] text-[16px]"
-      >
-        {props.rank}
-      </Text>
       <View
         style={{
           flexDirection: "row",
@@ -113,18 +103,26 @@ const RecordItem = (props: any) => {
         }}
       >
         <View style={{ gap: 4 }}>
-          <Text
-            className="text-[14px] font-[HY65] leading-4"
-            style={{ color: props?.name ? "white" : "#DDD" }}
-          >
-            {
-              // props?.uuid?.substr(0, 3) +
-              // props?.uuid?.substr(-3).padStart(props.uuid?.length - 3, "*")
-              props.name || "暫無數據"
-            }
-          </Text>
+          <View style={{ flexDirection: "row", gap: 4, alignItems: "center" }}>
+            <Text
+              style={{ color: getRankColor(props.rank) }}
+              className="font-[HY65] text-[16px]"
+            >
+              {props.rank}
+            </Text>
+            <Text
+              className="text-[14px] font-[HY65] leading-4"
+              style={{ color: props?.name ? "white" : "#DDD" }}
+            >
+              {
+                // props?.uuid?.substr(0, 3) +
+                // props?.uuid?.substr(-3).padStart(props.uuid?.length - 3, "*")
+                props.name || "暫無數據"
+              }
+            </Text>
+          </View>
           {props.challenge_time && (
-            <Text className="text-text text-[10px] font-[HY65] translate-x-[-18px]">
+            <Text className="text-text text-[10px] font-[HY65] translate-x-[-10px]">
               {new Date(props.challenge_time).toLocaleDateString()}{" "}
               {new Date(props.challenge_time).getHours()}:
               {new Date(props.challenge_time).getMinutes()} {props.round_num}輪{" "}

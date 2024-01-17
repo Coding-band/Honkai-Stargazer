@@ -9,7 +9,6 @@ import { globalStyles } from "../../../../../styles/global";
 
 export default React.memo(function CharInfo() {
   const { charData } = useCharData();
-  console.log(charData);
 
   return (
     <View

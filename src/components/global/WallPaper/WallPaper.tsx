@@ -14,6 +14,7 @@ export default function WallPaper(props: Props) {
 
   return (
     <ImageBackground
+      cachePolicy="none"
       className="absolute w-full h-full -mt-1 scale-105"
       // 把背景關掉
       source={

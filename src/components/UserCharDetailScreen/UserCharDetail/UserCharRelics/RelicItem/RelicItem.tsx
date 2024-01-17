@@ -58,7 +58,7 @@ export default function RelicItem({
       </TouchableOpacity>
       {/* 等級 */}
       <View
-        className="absolute bottom-0 w-[47px] z-50"
+        className="absolute bottom-[14px] w-[47px] z-50"
         style={{ alignItems: "center" }}
       >
         <View className="bg-[#00000040] rounded-[15px] px-1.5 py-0.5">

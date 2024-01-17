@@ -16,16 +16,15 @@ import { Image } from "expo-image";
 export default function MOCLbList() {
   const { language: textLanguage } = useTextLanguage();
 
-  const [showRank, setShowRank] = useState(false);
 
   const mocVersion = [
     {
-      id: 1008,
-      name: `${MOCDataMap[1008].time.versionBegin} - ${MOCDataMap[1008].time.versionEnd} ${MOCDataMap[1008].name[textLanguage]}`,
-    },
-    {
       id: 1009,
       name: `${MOCDataMap[1009].time.versionBegin} - ${MOCDataMap[1009].time.versionEnd} ${MOCDataMap[1009].name[textLanguage]}`,
+    },
+    {
+      id: 1008,
+      name: `${MOCDataMap[1008].time.versionBegin} - ${MOCDataMap[1008].time.versionEnd} ${MOCDataMap[1008].name[textLanguage]}`,
     },
   ];
   const [selectedVersion, setSelectedVersion] = useState(mocVersion[0].id);
@@ -44,6 +43,7 @@ export default function MOCLbList() {
       >
         <View className="w-full mb-4 z-40" style={{ alignItems: "center" }}>
           <Listbox
+            top={8}
             button={
               <Button width={300} height={46} withArrow>
                 <Text className="text-[16px] font-[HY65] text-[#222]">
@@ -64,15 +64,14 @@ export default function MOCLbList() {
             )) || []}
           </Listbox>
         </View>
-        <View style={{ gap: 16, alignItems: "center" }} className="mb-36">
+        <View style={{ gap: 16, alignItems: "center" }} className="mb-44">
           {floorNames?.map((name: string, i: number) => (
             <MOCLbItem
               key={i}
               versionNumber={selectedVersion}
               floorNumber={floorNames.length - i}
               floorName={name}
-              showRank={showRank}
-              setShowRank={setShowRank}
+            
             />
           ))}
         </View>
