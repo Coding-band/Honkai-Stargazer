@@ -14,6 +14,7 @@ type Props = {
   onOpen?: (v: boolean) => void;
   children: any[];
   bottom?: number;
+  top?: number;
 };
 
 export default function Listbox(props: Props) {
@@ -43,12 +44,14 @@ export default function Listbox(props: Props) {
           distance={16}
           offset={[4, 8]}
           paintInside
-          style={{
-            position: "absolute",
-            top: !props.bottom ? 8 : 0,
-            bottom: props.bottom,
-            width: "100%",
-          }}
+          style={[
+            {
+              position: "absolute",
+              top: props.top,
+              bottom: props.bottom,
+              width: "100%",
+            },
+          ]}
         >
           <View ref={ref} className="bg-[#DDDDDD]">
             {props.children.map((listboxitem) => (

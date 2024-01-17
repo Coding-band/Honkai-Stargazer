@@ -194,4 +194,11 @@ export const strings = {
   ATTR_WIND_DMG: "風傷害提高",
   ATTR_LIGHTNING_DNG: "雷傷害提高",
   ATTR_PHYSICAL_DMG: "物理傷害提高",
+  //Add in 20240117
+  UnLockAll: "解鎖全部",
+  BlurOn: "模糊：開啟",
+  BlurOff: "模糊：關閉",
+  GetCharAndUnLock: "獲得該角色即可解鎖",
+  Leaderboard: "排行榜",
+  UIDSearch: "UID查詢",
 };

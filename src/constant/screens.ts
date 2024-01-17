@@ -102,8 +102,10 @@ export const SCREENS = {
   },
   MemoryOfChaosLeaderboardPage: {
     id: "MemoryOfChaosLeaderboard",
-    getName: (lang: AppLanguage) => "混沌回憶·排行榜",
-    getShortName: (lang: AppLanguage) => "混沌回憶·排行榜",
+    getName: (lang: AppLanguage) =>
+      `${LOCALES[lang].MemoryOfChaos}·${LOCALES[lang].Leaderboard}`,
+    getShortName: (lang: AppLanguage) =>
+      `${LOCALES[lang].MemoryOfChaos}·${LOCALES[lang].Leaderboard}`,
     icon: ChartBar,
   },
   EventListPage: {
@@ -138,8 +140,8 @@ export const SCREENS = {
   },
   UIDSearchPage: {
     id: "UIDSearch",
-    getName: (lang: AppLanguage) => "UID查詢",
-    getShortName: (lang: AppLanguage) => "UID查詢",
+    getName: (lang: AppLanguage) => LOCALES[lang].UIDSearch,
+    getShortName: (lang: AppLanguage) => LOCALES[lang].UIDSearch,
     icon: Alien,
   },
 };

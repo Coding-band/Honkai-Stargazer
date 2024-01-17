@@ -5,6 +5,7 @@ import { useQuery } from "react-query";
 import db from "../../../../firebase/db";
 import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
 import officalCharId from "../../../../../map/character_offical_id_map";
+import useMyFirebaseUid from "../../../../firebase/hooks/FirebaseUid/useMyFirebaseUid";
 
 export default function MOCLbItem({
   versionNumber,
@@ -33,6 +34,18 @@ export default function MOCLbItem({
       ).docs.map((doc) => doc.data())
   );
 
+  const firebaseUID = useMyFirebaseUid();
+  const { data: myFloorLbData } = useQuery(
+    ["my-moc-leaderboard", floorNumber, versionNumber, firebaseUID],
+    async () =>
+      (
+        await db
+          .UserMemoryOfChaos(versionNumber, floorNumber)
+          .doc(firebaseUID)
+          .get()
+      ).data()
+  );
+
   return (
     <View
       className="border border-[#DDDDDD20] rounded-[4px] py-4 px-3 w-[360px]"
@@ -57,6 +70,14 @@ export default function MOCLbItem({
             }}
           />
         ))}
+        <RecordItem
+          rank={"-"}
+          {...myFloorLbData}
+          showRank={showRank}
+          onShowRank={(showRank: boolean) => {
+            setShowRank(showRank);
+          }}
+        />
       </View>
     </View>
   );
@@ -96,7 +117,11 @@ const RecordItem = (props: any) => {
             className="text-[14px] font-[HY65] leading-4"
             style={{ color: props?.name ? "white" : "#DDD" }}
           >
-            {props?.name || "暫無數據"}
+            {
+              // props?.uuid?.substr(0, 3) +
+              // props?.uuid?.substr(-3).padStart(props.uuid?.length - 3, "*")
+              props.name || "暫無數據"
+            }
           </Text>
           {props.challenge_time && (
             <Text className="text-text text-[10px] font-[HY65] translate-x-[-18px]">

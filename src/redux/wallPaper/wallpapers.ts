@@ -9,7 +9,7 @@ export const wallPapers = [
   {
     id: 221001,
     url: require("../../../assets/images/bgs/221001.webp"),
-    name: "星火遊園",
+    name: "機巧夢消長",
   },
   {
     id: 221002,
@@ -19,7 +19,7 @@ export const wallPapers = [
   {
     id: 221003,
     url: require("../../../assets/images/bgs/221003.webp"),
-    name: "機巧夢消長",
+    name: "星火遊園",
   },
   {
     id: 999,

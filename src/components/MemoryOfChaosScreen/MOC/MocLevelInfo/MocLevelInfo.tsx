@@ -7,8 +7,13 @@ import { LinearGradient } from "expo-linear-gradient";
 import MonsterImage from "../../../../../assets/images/images_map/monsterImage";
 import MOCDataMap from "../../../../../map/memory_of_chao_data_map";
 
-export default function MocLevelInfo() {
-  const mocData = MOCDataMap[1009];
+export default function MocLevelInfo({
+  versionNumber,
+}: {
+  versionNumber: number;
+}) {
+  // @ts-ignore
+  const mocData = MOCDataMap[versionNumber];
   const [floor, setFloor] = useState(1);
 
   return (
@@ -20,6 +25,7 @@ export default function MocLevelInfo() {
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
         <Text className="text-text text-[16px] font-[HY65]">關卡資訊</Text>
         <FloorOptions
+          length={mocData.info.length}
           onChange={(f) => {
             setFloor(f);
           }}
@@ -104,7 +110,7 @@ const Mob = ({ children }: { children: any }) => (
           colors={["#78767D", "#9F9FAA"]}
         >
           <Image
-          cachePolicy="none"
+            cachePolicy="none"
             transition={200}
             // @ts-ignore
             source={MonsterImage[children.monster_name]?.icon}
@@ -119,25 +125,16 @@ const Mob = ({ children }: { children: any }) => (
         ))}
       </View>
     </View>
-    {/* <ReactNativeModal
-      useNativeDriverForBackdrop
-      hasBackdrop={false}
-      isVisible={openQuestionPopUp}
-      statusBarTranslucent
-      deviceHeight={Dimensions.get("screen").height}
-    >
-      <PopUpCard
-        title={children.monster_name}
-        content="為了保障安全性和用戶權益，我們通過用戶的設備（客戶端），而非透過伺服器來更新 hoyolab 角色數據。這意味著如果用戶一段時間不使用 Stargazer，可能會導致他們的角色數量、活躍天數、達成成就和忘卻之庭數據存在差異。請注意，這些數據僅供參考，不具有絕對準確性。"
-        onClose={() => {
-          setOpenQuestionPopUp(false);
-        }}
-      />
-    </ReactNativeModal> */}
   </>
 );
 
-const FloorOptions = ({ onChange }: { onChange: (floor: number) => void }) => {
+const FloorOptions = ({
+  onChange,
+  length,
+}: {
+  onChange: (floor: number) => void;
+  length: number;
+}) => {
   const floors = [
     "其一",
     "其二",
@@ -151,7 +148,8 @@ const FloorOptions = ({ onChange }: { onChange: (floor: number) => void }) => {
     "其十",
     "其十一",
     "其十二",
-  ];
+  ].slice(0, length);
+
   const [currentFloor, setCurrentFloor] = useState(0);
   const [open, setOpen] = useState(false);
 
@@ -175,7 +173,7 @@ const FloorOptions = ({ onChange }: { onChange: (floor: number) => void }) => {
       </TouchableOpacity>
       <View
         style={{ display: open ? "flex" : "none", gap: 8 }}
-        className="absolute top-[32px] right-2 bg-[#1B0314] px-3"
+        className="absolute top-[32px] right-2 bg-[#1B0314] px-3 pb-2"
       >
         {floors.map((floor, i) => (
           <TouchableOpacity

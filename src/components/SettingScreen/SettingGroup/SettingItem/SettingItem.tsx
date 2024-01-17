@@ -70,7 +70,7 @@ export default function SettingItem(props: Props) {
               </View>
             </TouchableOpacity>
           }
-          top={40}
+    
         >
           {props.list?.map((item) => (
             <Listbox.Item key={item.value} value={item.value}>

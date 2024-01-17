@@ -13,16 +13,28 @@ import { Image } from "expo-image";
 import ReactNativeModal from "react-native-modal";
 import PopUpCard from "../../global/PopUpCard/PopUpCard";
 import { HtmlText } from "@e-mine/react-native-html-text";
+import Listbox from "../../global/Listbox/Listbox";
 
 export default function MOC() {
   const { language: textLanguage } = useTextLanguage();
 
-  const mocData = MOCDataMap[1009];
+  const [showDetail, setShowDetail] = useState(false);
+
+  const mocVersion = [
+    {
+      id: 1008,
+      name: `${MOCDataMap[1008].time.versionBegin} - ${MOCDataMap[1008].time.versionEnd} ${MOCDataMap[1008].name[textLanguage]}`,
+    },
+    {
+      id: 1009,
+      name: `${MOCDataMap[1009].time.versionBegin} - ${MOCDataMap[1009].time.versionEnd} ${MOCDataMap[1009].name[textLanguage]}`,
+    },
+  ];
+  const [selectedVersion, setSelectedVersion] = useState(mocVersion[0].id);
+  const mocData = MOCDataMap[selectedVersion];
 
   const aref = useAnimatedRef<Animated.ScrollView>();
   const scrollHandler = useScrollViewOffset(aref);
-
-  const [showDetail, setShowDetail] = useState(false);
 
   return (
     <View>
@@ -32,12 +44,27 @@ export default function MOC() {
         className="z-30 pt-[110px] pb-0"
         contentContainerStyle={{ alignItems: "center", gap: 14 }}
       >
-        <View style={{ flexDirection: "row", gap: 14 }}>
-          <Button width={300} height={46}>
-            <Text className="text-[16px] font-[HY65] text-[#222]">
-              {mocData?.name?.[textLanguage]}
-            </Text>
-          </Button>
+        <View style={{ flexDirection: "row", gap: 14 }} className="z-30">
+          <Listbox
+            button={
+              <Button width={300} height={46} withArrow>
+                <Text className="text-[16px] font-[HY65] text-[#222]">
+                  {mocVersion.filter((v) => v.id === selectedVersion)[0].name}
+                </Text>
+              </Button>
+            }
+            value={selectedVersion}
+            onChange={(version) => {
+              setSelectedVersion(version);
+            }}
+          >
+            {mocVersion?.map((version) => (
+              <Listbox.Item key={version.id} value={version.id}>
+                {/* @ts-ignore */}
+                {version.name}
+              </Listbox.Item>
+            )) || []}
+          </Listbox>
           <Button
             onPress={() => {
               setShowDetail(true);
@@ -48,7 +75,7 @@ export default function MOC() {
             <Image source={require("./icons/Detail.svg")} className="w-6 h-3" />
           </Button>
         </View>
-        <MocLevelInfo />
+        <MocLevelInfo versionNumber={selectedVersion} />
       </Animated.ScrollView>
       <ReactNativeModal
         useNativeDriverForBackdrop
@@ -59,7 +86,9 @@ export default function MOC() {
         <PopUpCard
           title="效果"
           content={
-            <HtmlText style={{ fontFamily: "HY65", padding: 16 ,lineHeight:20}}>
+            <HtmlText
+              style={{ fontFamily: "HY65", padding: 16, lineHeight: 20 }}
+            >
               {mocData?.desc[textLanguage]}
             </HtmlText>
           }

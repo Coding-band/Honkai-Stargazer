@@ -10,10 +10,15 @@ import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 import useDoUseCustomFont from "../../../../redux/doUseCustomFont/useDoUseCustomFont";
 import useDoUseBlurEffect from "../../../../redux/doUseBlurEffect/useDoUseBlurEffect";
+import officalCharId from "../../../../../map/character_offical_id_map";
+import { wallPapers } from "../../../../redux/wallPaper/wallpapers";
+import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
+import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
 
 export default function PersonalSetting() {
   const navigation = useNavigation();
   const { language } = useAppLanguage();
+  const { language: textLanguage } = useTextLanguage();
 
   // 字體
   const switchs = [
@@ -25,6 +30,12 @@ export default function PersonalSetting() {
 
   // 壁紙
   const { wallPaper } = useWallPaper();
+  const wallPaperName = officalCharId[String(wallPaper?.id).split("-")?.[0]]
+    ? getCharFullData(
+        officalCharId[String(wallPaper?.id).split("-")?.[0]],
+        textLanguage
+      )?.name
+    : wallPaper?.name;
 
   // 模糊效果
 
@@ -42,7 +53,7 @@ export default function PersonalSetting() {
       <SettingItem
         type="navigation"
         title={LOCALES[language].ChangeWallPaper}
-        content={wallPaper?.name}
+        content={wallPaperName}
         onNavigate={() => {
           // @ts-ignore
           navigation.navigate(SCREENS.WallPaperPage.id);

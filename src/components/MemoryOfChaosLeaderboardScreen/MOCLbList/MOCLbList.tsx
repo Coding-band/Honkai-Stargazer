@@ -17,9 +17,16 @@ export default function MOCLbList() {
   const { language: textLanguage } = useTextLanguage();
 
   const [showRank, setShowRank] = useState(false);
+
   const mocVersion = [
-    { id: 1008, name: "1.5 - 1.6 飲月之亂" },
-    { id: 1009, name: "1.6 - 2.0 藏於深空之秘" },
+    {
+      id: 1008,
+      name: `${MOCDataMap[1008].time.versionBegin} - ${MOCDataMap[1008].time.versionEnd} ${MOCDataMap[1008].name[textLanguage]}`,
+    },
+    {
+      id: 1009,
+      name: `${MOCDataMap[1009].time.versionBegin} - ${MOCDataMap[1009].time.versionEnd} ${MOCDataMap[1009].name[textLanguage]}`,
+    },
   ];
   const [selectedVersion, setSelectedVersion] = useState(mocVersion[0].id);
 

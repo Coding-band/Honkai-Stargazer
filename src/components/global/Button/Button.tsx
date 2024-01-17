@@ -20,6 +20,7 @@ export default function Button({
   disable = false,
   style,
   withArrow,
+  activeOpacity,
 }: {
   children: any;
   width: DimensionValue;
@@ -29,6 +30,7 @@ export default function Button({
   disable?: boolean;
   withArrow?: boolean;
   style?: StyleProp<ViewStyle>;
+  activeOpacity?: number;
 }) {
   return disable ? (
     hasShadow ? (
@@ -102,7 +104,7 @@ export default function Button({
       </View>
     )
   ) : (
-    <TouchableOpacity activeOpacity={0.65} onPress={onPress}>
+    <TouchableOpacity activeOpacity={activeOpacity || 0.65} onPress={onPress}>
       {hasShadow ? (
         <Shadow offset={[0, 4]}>
           <View
