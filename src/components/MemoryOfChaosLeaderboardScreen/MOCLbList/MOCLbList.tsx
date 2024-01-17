@@ -11,6 +11,7 @@ import MOCDataMap from "../../../../map/memory_of_chao_data_map";
 import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
 import Button from "../../global/Button/Button";
 import Listbox from "../../global/Listbox/Listbox";
+import { Image } from "expo-image";
 
 export default function MOCLbList() {
   const { language: textLanguage } = useTextLanguage();
@@ -21,10 +22,9 @@ export default function MOCLbList() {
     { id: 1009, name: "1.6 - 2.0 藏於深空之秘" },
   ];
   const [selectedVersion, setSelectedVersion] = useState(mocVersion[0].id);
-  console.log(selectedVersion);
-  // @ts-ignore
 
-  const mocData = MOCDataMap[1009];
+  // @ts-ignore
+  const mocData = MOCDataMap[selectedVersion];
   const floorNames = mocData.info
     .map((floor: any) => floor.name?.[textLanguage])
     .reverse();
@@ -38,9 +38,9 @@ export default function MOCLbList() {
         <View className="w-full mb-4 z-40" style={{ alignItems: "center" }}>
           <Listbox
             button={
-              <Button width={300} height={46}>
+              <Button width={300} height={46} withArrow>
                 <Text className="text-[16px] font-[HY65] text-[#222]">
-                  {mocVersion.filter(v=>v.id===selectedVersion)[0].name}
+                  {mocVersion.filter((v) => v.id === selectedVersion)[0].name}
                 </Text>
               </Button>
             }
@@ -61,6 +61,7 @@ export default function MOCLbList() {
           {floorNames?.map((name: string, i: number) => (
             <MOCLbItem
               key={i}
+              versionNumber={selectedVersion}
               floorNumber={floorNames.length - i}
               floorName={name}
               showRank={showRank}

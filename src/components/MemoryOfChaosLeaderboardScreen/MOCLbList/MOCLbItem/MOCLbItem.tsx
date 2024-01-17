@@ -7,29 +7,30 @@ import CharacterImage from "../../../../../assets/images/images_map/chacracterIm
 import officalCharId from "../../../../../map/character_offical_id_map";
 
 export default function MOCLbItem({
+  versionNumber,
   floorNumber,
   floorName,
   showRank,
   setShowRank,
 }: {
+  versionNumber: number;
   floorNumber: number;
   floorName: string;
   showRank: boolean;
   setShowRank: (s: boolean) => void;
 }) {
   const { data: floorLbData } = useQuery(
-    ["moc-leaderboard", floorNumber],
+    ["moc-leaderboard", floorNumber, versionNumber],
     async () =>
       (
         await db
-          .UserMemoryOfChaos(1009, floorNumber)
+          .UserMemoryOfChaos(versionNumber, floorNumber)
           .orderBy("star_num", "desc")
           .orderBy("round_num")
           .orderBy("challenge_time")
           .limit(5)
           .get()
-      ).docs.map((doc) => doc.data()),
-    {}
+      ).docs.map((doc) => doc.data())
   );
 
   return (
@@ -86,6 +87,7 @@ const RecordItem = (props: any) => {
         style={{
           flexDirection: "row",
           justifyContent: "space-between",
+          alignItems: "flex-end",
           flex: 1,
         }}
       >

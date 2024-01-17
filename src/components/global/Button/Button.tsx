@@ -1,3 +1,4 @@
+import { Image } from "expo-image";
 import React from "react";
 import {
   DimensionValue,
@@ -18,6 +19,7 @@ export default function Button({
   hasShadow = true,
   disable = false,
   style,
+  withArrow,
 }: {
   children: any;
   width: DimensionValue;
@@ -25,6 +27,7 @@ export default function Button({
   onPress?: (e: GestureResponderEvent) => void;
   hasShadow?: boolean;
   disable?: boolean;
+  withArrow?: boolean;
   style?: StyleProp<ViewStyle>;
 }) {
   return disable ? (
@@ -54,6 +57,13 @@ export default function Button({
             ) : (
               children
             )}
+
+            {withArrow && (
+              <Image
+                className="w-3 h-2 absolute right-4"
+                source={require("../../../../assets/icons/DownArrowSingleBlack.svg")}
+              />
+            )}
           </View>
         </View>
       </Shadow>
@@ -81,6 +91,12 @@ export default function Button({
             <Text className="text-[#222] font-[HY65]">{children}</Text>
           ) : (
             children
+          )}
+          {withArrow && (
+            <Image
+              className="w-3 h-2 absolute right-4"
+              source={require("../../../../assets/icons/DownArrowSingleBlack.svg")}
+            />
           )}
         </View>
       </View>
@@ -113,6 +129,12 @@ export default function Button({
               ) : (
                 children
               )}
+              {withArrow && (
+                <Image
+                  className="w-3 h-2 absolute right-4"
+                  source={require("../../../../assets/icons/DownArrowSingleBlack.svg")}
+                />
+              )}
             </View>
           </View>
         </Shadow>
@@ -140,6 +162,12 @@ export default function Button({
               <Text className="text-[#222] font-[HY65]">{children}</Text>
             ) : (
               children
+            )}
+            {withArrow && (
+              <Image
+                className="w-3 h-2 absolute right-4"
+                source={require("../../../../assets/icons/DownArrowSingleBlack.svg")}
+              />
             )}
           </View>
         </View>
