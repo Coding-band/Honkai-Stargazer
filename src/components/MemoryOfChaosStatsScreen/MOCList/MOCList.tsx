@@ -1,32 +1,21 @@
-import { View, Text, ScrollView, TouchableOpacity } from "react-native";
-import React, { useState } from "react";
-import { Image } from "expo-image";
+import { View } from "react-native";
+import React from "react";
 import MOCFloor from "./MOCFloor/MOCFloor";
 import useMemoryOfChaos from "../../../hooks/hoyolab/useMemoryOfChaos";
 import { capitalize } from "lodash";
-import useHsrPlayerData from "../../../hooks/hoyolab/useHsrPlayerData";
-import { LOCALES } from "../../../../locales";
-import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
-import { animated, useTrail } from "@react-spring/native";
 import NotFound from "../../global/Loading/NotFound";
 import NoDataYet from "../../global/Loading/NoDataYet";
 import { globalStyles } from "../../../../styles/global";
-import Button from "../../global/Button/Button";
-import Header2 from "../../global/Header2/Header2";
-import { SCREENS } from "../../../constant/screens";
 import MocHeader from "../MocHeader/MocHeader";
 import Animated, {
   useAnimatedRef,
-  useAnimatedStyle,
   useScrollViewOffset,
-  withSpring,
 } from "react-native-reanimated";
 import useDelayLoad from "../../../hooks/useDelayLoad";
 import Loading from "../../global/Loading/Loading";
 
 export default function MOCList() {
   const loaded = useDelayLoad(1000);
-
   // data
   const { data: moc } = useMemoryOfChaos();
   const floors = moc?.all_floor_detail?.map((floor: any) => ({

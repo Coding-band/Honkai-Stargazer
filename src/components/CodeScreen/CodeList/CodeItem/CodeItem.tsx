@@ -9,7 +9,7 @@ import { ShareNetwork } from "phosphor-react-native";
 import { Share } from "react-native";
 
 type Props = {
-  time: number;
+  time: string;
   code: string;
 };
 

@@ -17,11 +17,14 @@ import useHsrCharList from "../hooks/hoyolab/useHsrCharList";
 import useMemoryOfChaos from "../hooks/hoyolab/useMemoryOfChaos";
 import useMyFirebaseUid from "../firebase/hooks/FirebaseUid/useMyFirebaseUid";
 import useHsrUUID from "../hooks/hoyolab/useHsrUUID";
-import UserMemoryOfChaos from "../firebase/models/UserMemoryOfChaos";
+import UserMemoryOfChaos, {
+  UserMemoryOfChaosFloor,
+} from "../firebase/models/UserMemoryOfChaos";
 import firestore from "@react-native-firebase/firestore";
 import { ENV } from "../../app.config";
 import BetaWidget from "../components/global/Beta/BetaWidget";
 import WallPaperForMOC from "../components/global/WallPaper/WallPaperForMOC";
+import useMemoryOfChaosPrev from "../hooks/hoyolab/useMemoryOfChaosPrev";
 
 export default function HomeScreen() {
   const uid = useMyFirebaseUid();
@@ -34,6 +37,7 @@ export default function HomeScreen() {
   const { data: hsrCharList } = useHsrCharList();
 
   const moc = useMemoryOfChaos().data;
+  const mocPrev = useMemoryOfChaosPrev().data;
 
   const handleFirebaseSignUp = async (email: string, password: string) => {
     try {
@@ -180,7 +184,8 @@ export default function HomeScreen() {
   //* 建立或更新用戶混沌回憶資料 (UserMemoryOfChaos)
   useEffect(() => {
     async function createOrUpdateUserMemoryOfChaos() {
-      if (uid && moc) {
+      if (uid && moc && mocPrev && hsrPlayerData) {
+        // 完整混沌回憶資料
         const mocData = {
           begin_time: moc.begin_time,
           end_time: moc.end_time,
@@ -210,29 +215,120 @@ export default function HomeScreen() {
             },
           })),
         } as UserMemoryOfChaos;
-        const UserMemoryOfChaosIsExist = (
-          await db.UserMemoryOfChaos(moc.schedule_id).doc(uid).get()
-        ).exists;
-        if (UserMemoryOfChaosIsExist) {
-          try {
-            await db
-              .UserMemoryOfChaos(moc.schedule_id)
-              .doc(uid)
-              .update(mocData);
-          } catch (e: any) {
-            console.log("updated UserMemoryOfChaos: " + e.message);
-          }
+        const mocDoc = db.UserMemoryOfChaos(moc.schedule_id).doc(uid);
+        const docIsExist = (await mocDoc.get()).exists;
+        if (docIsExist) {
+          await mocDoc.update(mocData);
         } else {
-          try {
-            await db.UserMemoryOfChaos(moc.schedule_id).doc(uid).set(mocData);
-          } catch (e: any) {
-            console.log("create UserMemoryOfChaos: " + e.message);
-          }
+          await mocDoc.set(mocData);
         }
+        // 單層混沌回憶資料
+        mocData?.all_floor_detail
+          ?.slice()
+          ?.reverse()
+          ?.forEach(async (floor, i) => {
+            const floorNum = i + 1;
+            const floorData = {
+              uuid: hsrPlayerData.game_role_id,
+              name: hsrPlayerData.nickname,
+              floor_id: floor.floor_id,
+              floor_num: floorNum,
+              round_num: floor.round_num,
+              star_num: floor.star_num,
+              challenge_time: toTimestamp(floor.layer_1.challenge_time),
+              layer_1: {
+                characters: floor.layer_1.characters,
+              },
+              layer_2: {
+                characters: floor.layer_2.characters,
+              },
+            } as UserMemoryOfChaosFloor;
+            const floorDoc = db
+              .UserMemoryOfChaos(moc.schedule_id, floorNum)
+              .doc(uid);
+            const docIsExist = (await floorDoc.get()).exists;
+            if (docIsExist) {
+              floorDoc.update(floorData);
+            } else {
+              floorDoc.set(floorData);
+            }
+          });
+
+        // 完整前一次混沌回憶資料
+        const mocPrevData = {
+          begin_time: mocPrev.begin_time,
+          end_time: mocPrev.end_time,
+          star_num: mocPrev.star_num,
+          battle_num: mocPrev.battle_num,
+          max_floor_id: mocPrev.max_floor_id,
+          max_floor: mocPrev.all_floor_detail.length || null,
+          all_floor_detail: mocPrev.all_floor_detail.map((f: any) => ({
+            floor_id: f.maze_id,
+            round_num: f.round_num,
+            star_num: f.star_num,
+            layer_1: {
+              challenge_time: f.node_1.challenge_time,
+              characters: f.node_1.avatars.map((c: any) => ({
+                id: c.id,
+                level: c.level,
+                rank: c.rank,
+              })),
+            },
+            layer_2: {
+              challenge_time: f.node_2.challenge_time,
+              characters: f.node_2.avatars.map((c: any) => ({
+                id: c.id,
+                level: c.level,
+                rank: c.rank,
+              })),
+            },
+          })),
+        } as UserMemoryOfChaos;
+
+        const mocPrevDoc = db.UserMemoryOfChaos(mocPrev.schedule_id).doc(uid);
+        const prevDocIsExist = (await mocPrevDoc.get()).exists;
+
+        if (prevDocIsExist) {
+          await mocPrevDoc.update(mocPrevData);
+        } else {
+          await mocPrevDoc.set(mocPrevData);
+        }
+        // 單層前一次混沌回憶資料
+        mocPrevData?.all_floor_detail
+          ?.slice()
+          ?.reverse()
+          ?.forEach(async (floor, i) => {
+            const floorNum = i + 1;
+            const floorData = {
+              uuid: hsrPlayerData.game_role_id,
+              name: hsrPlayerData.nickname,
+              floor_id: floor.floor_id,
+              floor_num: floorNum,
+              round_num: floor.round_num,
+              star_num: floor.star_num,
+              challenge_time: toTimestamp(floor.layer_1.challenge_time),
+              layer_1: {
+                characters: floor.layer_1.characters,
+              },
+              layer_2: {
+                characters: floor.layer_2.characters,
+              },
+            } as UserMemoryOfChaosFloor;
+            const floorDoc = db
+              .UserMemoryOfChaos(mocPrev.schedule_id, floorNum)
+              .doc(uid);
+            const docIsExist = (await floorDoc.get()).exists;
+            if (docIsExist) {
+              floorDoc.update(floorData);
+            } else {
+              floorDoc.set(floorData);
+            }
+          });
+        // 完整前一次混沌回憶資料
       }
     }
     createOrUpdateUserMemoryOfChaos();
-  }, [uid, moc]);
+  }, [uid, moc, mocPrev, hsrPlayerData]);
 
   return (
     <Pressable style={{ flex: 1, backgroundColor: "white" }}>
@@ -259,4 +355,15 @@ export default function HomeScreen() {
       </View>
     </Pressable>
   );
+}
+
+function toTimestamp(obj: any) {
+  // Destructure the object to extract year, month, day, hour, and minute
+  const { year, month, day, hour, minute } = obj;
+
+  // Create a new Date instance - remember JavaScript months are 0-indexed
+  const date = new Date(year, month - 1, day, hour, minute);
+
+  // Return the Unix timestamp (in milliseconds)
+  return date.getTime();
 }

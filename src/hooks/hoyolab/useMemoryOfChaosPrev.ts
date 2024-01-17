@@ -6,23 +6,17 @@ import HoyolabRequest from "../../utils/hoyolab/request/HoyolabRequest";
 import MihoyoRequest from "../../utils/hoyolab/request/MihoyoRequest";
 import { isHoyolabPlatform } from "../../utils/hoyolab/utils";
 
-const useMemoryOfChaos = (scheduleType: 1 | 2 = 1) => {
+const useMemoryOfChaosPrev = () => {
   const { hoyolabCookie } = useHoyolabCookie();
   const HsrUUID = useHsrUUID();
   const { hsrServerChosen } = useHsrServerChosen();
 
   const { data, isError, error, isLoading, isFetching } = useQuery(
-    [
-      "hsr-memory-of-chaos",
-      hoyolabCookie,
-      HsrUUID,
-      hsrServerChosen,
-      scheduleType,
-    ],
+    ["hsr-memory-of-chaos", hoyolabCookie, HsrUUID, hsrServerChosen],
     () =>
       new (isHoyolabPlatform(hsrServerChosen) ? HoyolabRequest : MihoyoRequest)(
         hoyolabCookie
-      ).getHsrMemoryOfChaos(HsrUUID, hsrServerChosen, scheduleType),
+      ).getHsrMemoryOfChaos(HsrUUID, hsrServerChosen, 2),
     {
       select(data) {
         return data?.data;
@@ -32,4 +26,4 @@ const useMemoryOfChaos = (scheduleType: 1 | 2 = 1) => {
   return { data, isError, error, isLoading, isFetching };
 };
 
-export default useMemoryOfChaos;
+export default useMemoryOfChaosPrev;

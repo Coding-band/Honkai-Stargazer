@@ -9,6 +9,7 @@ import { globalStyles } from "../../../../../styles/global";
 
 export default React.memo(function CharInfo() {
   const { charData } = useCharData();
+  console.log(charData);
 
   return (
     <View
@@ -54,7 +55,7 @@ export default React.memo(function CharInfo() {
           <View style={{ flexDirection: "row", gap: 8 }}>
             <Image
               // @ts-ignore
-              source={Path[charData?.pathId].icon}
+              source={Path[charData?.pathId]?.icon}
               style={{ width: 24, height: 24 }}
             />
             <Text
@@ -68,7 +69,7 @@ export default React.memo(function CharInfo() {
           <View style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
             <Image
               // @ts-ignore
-              source={CombatType[charData?.combatTypeId].icon}
+              source={CombatType[charData?.combatTypeId]?.icon}
               style={{ width: 24, height: 24 }}
             />
             <Text

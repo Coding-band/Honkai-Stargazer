@@ -27,7 +27,7 @@ export default function CharComment(props: Props) {
         containerRef={props.containerRef}
         bottom={<CommentInput value={input} onChange={setInput} />}
       >
-        {charComments?.comments?.map((c, i) => (
+        {charComments?.map((c, i) => (
           <CommentItem key={i} {...c} input={input} setInput={setInput} />
         ))}
       </CommentBox>

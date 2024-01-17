@@ -1,6 +1,7 @@
 import {
   Alien,
   BaseballCap,
+  ChartBar,
   FilmSlate,
   MapTrifold,
   MedalMilitary,
@@ -98,6 +99,12 @@ export const SCREENS = {
     getName: (lang: AppLanguage) => LOCALES[lang].MemoryOfChaos,
     getShortName: (lang: AppLanguage) => LOCALES[lang].MemoryOfChaos,
     icon: MedalMilitary,
+  },
+  MemoryOfChaosLeaderboardPage: {
+    id: "MemoryOfChaosLeaderboard",
+    getName: (lang: AppLanguage) => "混沌回憶·排行榜",
+    getShortName: (lang: AppLanguage) => "混沌回憶·排行榜",
+    icon: ChartBar,
   },
   EventListPage: {
     id: "EventList",

@@ -16,7 +16,7 @@ export default function PopUpCard(props: Props) {
       disable={Platform.OS === "android"}
       intensity={60}
       style={{
-        backgroundColor: Platform.OS === "android" ? "#dfe4ef" : "#F3F9FF",
+        backgroundColor: Platform.OS === "android" ? "#d2d6db" : "#F3F9FF",
       }}
       className="w-full rounded-[4px] rounded-tr-[24px] overflow-hidden"
     >

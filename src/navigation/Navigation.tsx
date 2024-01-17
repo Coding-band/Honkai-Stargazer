@@ -23,6 +23,7 @@ import UserInfoScreen from "../screens/UserInfoScreen";
 import UserCharDetailScreen from "../screens/UserCharDetailScreen";
 import UIDSearchScreen from "../screens/UIDSearchScreen";
 import MemoryOfChaosStatsScreen from "../screens/MemoryOfChaosStatsScreen";
+import MemoryOfChaosLeaderboardScreen from "../screens/MemoryOfChaosLeaderboardScreen";
 
 export default function Navigation({
   initialRouteName,
@@ -82,6 +83,11 @@ export default function Navigation({
         <Stack.Screen
           name={SCREENS.MemoryOfChaosStatsPage.id}
           component={MemoryOfChaosStatsScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.MemoryOfChaosLeaderboardPage.id}
+          component={MemoryOfChaosLeaderboardScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

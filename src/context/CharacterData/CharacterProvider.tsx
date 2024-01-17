@@ -24,7 +24,7 @@ export default function CharacterProvider({
 
   const charJsonData = getCharJsonData(charId);
   const charFullData = getCharFullData(charId, textLanguage);
-  const [charData, setCharData] = useState<CharacterData>();
+  const [charData, setCharData] = useState<CharacterData>({});
 
   useEffect(() => {
     setCharData({

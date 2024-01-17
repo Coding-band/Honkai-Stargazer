@@ -44,7 +44,7 @@ export default function MOCFloor(props: Props) {
         <View>
           {/* 標題 */}
           <Text className="text-[#FFF] text-[16px] font-[HY65]">
-            {props.title.slice(-(props.title.length - 6))}
+            {props.title}
           </Text>
           {/* 剩餘 ... 輪 */}
           <Text className="text-[#FFFFFF90] text-[12px] font-[HY65] leading-5">

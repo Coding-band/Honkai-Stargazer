@@ -45,6 +45,7 @@ export default function Listbox(props: Props) {
           paintInside
           style={{
             position: "absolute",
+            top: !props.bottom ? 8 : 0,
             bottom: props.bottom,
             width: "100%",
           }}
@@ -74,4 +75,3 @@ export default function Listbox(props: Props) {
 Listbox.Item = function ({ children }: { children: any; value: any }) {
   return children;
 };
-

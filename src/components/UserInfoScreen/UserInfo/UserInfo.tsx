@@ -246,9 +246,12 @@ export default function UserInfo(props: Props) {
               }}
             >
               {userComments?.comments ? (
-                userComments?.comments?.map((comment: any) => (
-                  <Comment {...comment} key={comment.id} />
-                ))
+                userComments?.comments
+                  ?.slice()
+                  ?.reverse()
+                  ?.map((comment: any) => (
+                    <Comment {...comment} key={comment.id} />
+                  ))
               ) : (
                 <NoComment />
               )}

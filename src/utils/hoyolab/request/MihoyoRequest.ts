@@ -51,9 +51,13 @@ export default class MihoyoRequest {
   }
 
   //* 獲取混沌回憶資料
-  public getHsrMemoryOfChaos(uuid: string, server: hsrServerId = "asia") {
+  public getHsrMemoryOfChaos(
+    uuid: string,
+    server: hsrServerId = "asia",
+    scheduleType: 1 | 2 
+  ) {
     const getUrl = (uuid: string, server: hsrServerId) =>
-      `https://api-takumi-record.mihoyo.com/game_record/app/hkrpg/api/challenge?server=${hsrServer[server]}&role_id=${uuid}&schedule_type=1&need_all=true`;
+      `https://api-takumi-record.mihoyo.com/game_record/app/hkrpg/api/challenge?server=${hsrServer[server]}&role_id=${uuid}&schedule_type=${scheduleType}&need_all=true`;
 
     return this.request.send(getUrl(uuid, server));
   }

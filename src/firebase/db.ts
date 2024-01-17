@@ -13,11 +13,15 @@ const db = {
   Users: firestore().collection("Users"),
   UserTokens: firestore().collection("UserTokens"),
   UserCharacters: firestore().collection("UserCharacters"),
-  UserMemoryOfChaos(schedule: any) {
-    return firestore().collection(`UserMemoryOfChaos-${schedule}`);
+  UserMemoryOfChaos(scheduleId: string | number, floorId?: string | number) {
+    return firestore().collection(
+      `UserMemoryOfChaos-${scheduleId}${floorId ? `-${floorId}` : ""}`
+    );
   },
   UserComments: firestore().collection("UserComments"),
-  CharacterComments: firestore().collection("CharacterComments"),
+  CharacterComments(charId: string | number) {
+    return firestore().collection(`CharacterComments-${charId}`);
+  },
 };
 
 export default db;

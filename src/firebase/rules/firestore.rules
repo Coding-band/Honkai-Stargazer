@@ -10,9 +10,9 @@ service cloud.firestore {
             // 任何人都可以讀用戶資料
             allow read: if true;
             // 確定用戶是本人, 並且不存在惡意改權限之行為可建立用戶資料
-            allow create: if isOwner(userId) && incomingData().role == "user";
+            allow create: if isOwner(userId) && (incomingData().role == "user"||incomingData().role == "beta_user");
             // 確定用戶是本人, 並且不存在惡意改權限之行為可更新用戶資料
-            allow update: if isOwner(userId) && incomingData().role == null;
+            allow update: if isOwner(userId);
             // 只有管理員可刪除用戶資料
             allow delete: if getUserData().role  == "admin";
         }
@@ -38,16 +38,40 @@ service cloud.firestore {
         }
 
         /* UserMemoryOfChaos */
-        match /UserMemoryOfChaos/{userId} {
+        match /UserMemoryOfChaos/{scheduleId}/{userId} {
+            // 任何人都可以讀用戶混沌回憶資料 (之後可加上權限控制, 如是否開啟查看戰績)
+            allow read: if true;
+            // 確定用戶是本人, 才可以寫入用戶混沌回憶資料
+            allow write: if isOwner(userId);
+        }
+        match /UserMemoryOfChaos/{scheduleId}-{floorId}/{userId} {
             // 任何人都可以讀用戶混沌回憶資料 (之後可加上權限控制, 如是否開啟查看戰績)
             allow read: if true;
             // 確定用戶是本人, 才可以寫入用戶混沌回憶資料
             allow write: if isOwner(userId);
         }
 
+        /* UserComments */
+        match /UserComments/{userId} {
+            // 任何人都可以讀用戶留言
+            allow read: if true;
+            // 確定用戶是本人才能留言
+            allow create: if 
+            incomingData().comments.size() == 1 &&
+            isOwner(userId);
+            // 確定用戶是本人才能留言
+            allow update: if 
+            incomingData().comments.size() == (existingData().comments.size() + 1) && 
+            isOwner(userId) &&
+            incomingData().comments[incomingData().comments.size()-1].content != "";
+            // 管理員才能刪除留言
+            allow delete: if getUserData().role  == "admin";
+        }
+
+
         /* CharacterComments */
         match /CharacterComments/{charId} {
-            // 任何人都可以讀角色資料
+            // 任何人都可以讀角色留言
             allow read: if true;
             // 確定用戶是本人才能留言
             allow create: if 

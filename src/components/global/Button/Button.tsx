@@ -59,7 +59,7 @@ export default function Button({
       </Shadow>
     ) : (
       <View
-        className="bg-[#dddddd] rounded-[49px] p-[3px]"
+        className="bg-[#ddd] rounded-[49px] p-[3px]"
         style={[
           {
             width,

@@ -182,5 +182,16 @@ export const strings = {
   ATTR_THUNDER: "雷傷害提高",
   ATTR_PHYSICAL: "物理傷害提高",
   ATTR_ENERGY_REGENERATE: "能量恢復效率",
-  ATTR_HEAL_BONUS: "治療量加成"
+  ATTR_HEAL_BONUS: "治療量加成",
+  ATTR_HEAL_RATE: "治療量加成",
+  ATTR_SP: "能量上限",
+  ATTR_SP_RATE: "能量回復效率",
+  ATTR_BREAK_DMG: "擊破特攻",
+  ATTR_QUANTUM_DMG: "量子傷害提高",
+  ATTR_FIRE_DMG: "火傷害提高",
+  ATTR_ICE_DMG: "冰傷害提高",
+  ATTR_IMAGINARY_DMG: "虛數傷害提高",
+  ATTR_WIND_DMG: "風傷害提高",
+  ATTR_LIGHTNING_DNG: "雷傷害提高",
+  ATTR_PHYSICAL_DMG: "物理傷害提高",
 };

@@ -21,32 +21,34 @@ export default function AccountSetting() {
   }, [isShowInfoFB]);
 
   return (
-    <SettingGroup
-      title={formatLocale(LOCALES[language].AccountSetup, [hsrUUID])}
-    >
-      <SettingItem
-        type="navigation"
-        title={LOCALES[language].UseInviteCode}
-        content={LOCALES[language].HaveNotUsed}
-        onNavigate={() => {
-          Toast.StillDevelopingToast();
-        }}
-      />
-      {hsrUUID && (
+    hsrUUID && (
+      <SettingGroup
+        title={formatLocale(LOCALES[language].AccountSetup, [hsrUUID])}
+      >
         <SettingItem
-          type="list"
-          title={"個人頁面展示"}
-          list={[
-            { value: true, name: "顯示" },
-            { value: false, name: "隱藏" },
-          ]}
-          value={isShowInfo}
-          onChange={(v) => {
-            setIsShowInfo(v);
-            setIsShowInfoFB(v);
+          type="navigation"
+          title={LOCALES[language].UseInviteCode}
+          content={LOCALES[language].HaveNotUsed}
+          onNavigate={() => {
+            Toast.StillDevelopingToast();
           }}
         />
-      )}
-    </SettingGroup>
+        {hsrUUID && (
+          <SettingItem
+            type="list"
+            title={"個人頁面展示"}
+            list={[
+              { value: true, name: "顯示" },
+              { value: false, name: "隱藏" },
+            ]}
+            value={isShowInfo}
+            onChange={(v) => {
+              setIsShowInfo(v);
+              setIsShowInfoFB(v);
+            }}
+          />
+        )}
+      </SettingGroup>
+    )
   );
 }
