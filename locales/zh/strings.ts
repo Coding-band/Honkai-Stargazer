@@ -138,14 +138,14 @@ export const strings = {
   // ui - Code Page
   HasCopy: "已複製",
   // toast
-  PleaseLogin: "Please login first!",
+  PleaseLogin: "請先登入！",
   //Add in 20240114
   UserInfoLastLoginAt: "${1} ㄑ一ㄢ",
   UserInfoGameData: "一ㄡㄒ一ㄕㄨㄐㄩ",
   UserInfoStatus: "ㄉㄨㄥㄊㄞ",
   UserInfoGamePlayerLevel: "ㄎㄞㄊㄨㄛㄉㄥㄐ一",
   UserInfoCountComments: "ㄌ一ㄡ一ㄢㄕㄨ",
-  UserInfoGameWorldLevel: "ㄐㄩㄣㄏㄥㄉㄥㄐ一",
+  UserInfoGameWorldLevel: "Equili. Lvl.",
   UserInfoLastOnlineTime: "ㄕㄤㄘㄕㄤㄒ一ㄢ",
   UserInfoOwnedCharacters: "ㄩㄥ一ㄡㄐㄩㄝㄙㄜ",
   UserInfoGameActiveDays: "ㄏㄨㄛㄩㄝㄊ一ㄢㄕㄨ",
@@ -159,9 +159,9 @@ export const strings = {
   NoOnlineData: "無上線紀錄",
   //Add in 20240115
   LightconeEffect: "ㄍㄨㄤㄓㄨㄟㄒ一ㄠㄍㄨㄛ",
-  LightconeStory: "Lightcone Story",
+  LightconeStory: "ㄍㄨㄤ之ㄨㄟㄍㄨㄕ",
   //Add in 20240116
-  UseBlurEffect: "Use Blur Effect",
+  UseBlurEffect: "ㄕㄩㄥㄇㄛㄏㄨㄒ一ㄠㄎㄨㄛ",
   ATTR_CRIT_RATE: "ㄅㄠㄐ一ㄌㄩ",
   ATTR_CRIT_DMG: "ㄅㄠㄐ一ㄕㄤㄏㄞ",
   ATTR_HP: "ㄕㄥㄇ一ㄥㄓ",
@@ -182,5 +182,14 @@ export const strings = {
   ATTR_THUNDER: "ㄌㄟㄕㄤㄊ一ㄍㄠ",
   ATTR_PHYSICAL: "ㄨㄌ一ㄕㄤㄊ一ㄍㄠ",
   ATTR_ENERGY_REGENERATE: "ㄔㄨㄥㄋㄥㄒ一ㄠㄌㄩ",
-  ATTR_HEAL_BONUS: "ㄓㄌ一ㄠㄌ一ㄤㄐ一ㄚㄔㄥ"
+  ATTR_HEAL_BONUS: "ㄓㄌ一ㄠㄌ一ㄤㄐ一ㄚㄔㄥ",
+  //Add in 20240117
+  UnLockAll: "Unlock All",
+  BlurOn: "Blur : ON",
+  BlurOff: "Blur : OFF",
+  GetCharAndUnLock: "Unlock when owned he/her",
+  Leaderboard: "Leaderboard",
+  UIDSearch: "UID Search",
+  PublicChars: "Disclose characters",
+  Switch: "Switch"
 };

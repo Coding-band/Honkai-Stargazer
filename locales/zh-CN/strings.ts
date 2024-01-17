@@ -182,5 +182,14 @@ export const strings = {
   ATTR_THUNDER: "雷伤害提高",
   ATTR_PHYSICAL: "物理伤害提高",
   ATTR_ENERGY_REGENERATE: "能量恢复效率",
-  ATTR_HEAL_BONUS: "治疗量加成"
+  ATTR_HEAL_BONUS: "治疗量加成",
+  //Add in 20240117
+  UnLockAll: "解锁全部",
+  BlurOn: "模糊：开启",
+  BlurOff: "模糊：关闭",
+  GetCharAndUnLock: "获得该角色即可解锁",
+  Leaderboard: "排行榜",
+  UIDSearch: "UID查询",
+  PublicChars: "公开角色",
+  Switch: "切换"
 };

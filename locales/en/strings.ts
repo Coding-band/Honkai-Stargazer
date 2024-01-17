@@ -183,4 +183,15 @@ export const strings = {
   ATTR_PHYSICAL: "Physical DMG",
   ATTR_ENERGY_REGENERATE: "Energy Regen.",
   ATTR_HEAL_BONUS: "Heal Bonus",
+
+  //Add in 20240117
+  UnLockAll: "Unlock All",
+  BlurOn: "Blur : ON",
+  BlurOff: "Blur : OFF",
+  GetCharAndUnLock: "Unlock when owned he/her",
+  Leaderboard: "Leaderboard",
+  UIDSearch: "UID Search",
+  PublicChars: "Disclose characters",
+  Switch: "Switch",
+
 };

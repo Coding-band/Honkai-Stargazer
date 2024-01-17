@@ -183,17 +183,6 @@ export const strings = {
   ATTR_PHYSICAL: "物理傷害提高",
   ATTR_ENERGY_REGENERATE: "能量恢復效率",
   ATTR_HEAL_BONUS: "治療量加成",
-  ATTR_HEAL_RATE: "治療量加成",
-  ATTR_SP: "能量上限",
-  ATTR_SP_RATE: "能量回復效率",
-  ATTR_BREAK_DMG: "擊破特攻",
-  ATTR_QUANTUM_DMG: "量子傷害提高",
-  ATTR_FIRE_DMG: "火傷害提高",
-  ATTR_ICE_DMG: "冰傷害提高",
-  ATTR_IMAGINARY_DMG: "虛數傷害提高",
-  ATTR_WIND_DMG: "風傷害提高",
-  ATTR_LIGHTNING_DNG: "雷傷害提高",
-  ATTR_PHYSICAL_DMG: "物理傷害提高",
   //Add in 20240117
   UnLockAll: "解鎖全部",
   BlurOn: "模糊：開啟",
@@ -202,5 +191,5 @@ export const strings = {
   Leaderboard: "排行榜",
   UIDSearch: "UID查詢",
   PublicChars: "公開角色",
-  Switch: "切換",
+  Switch: "切換"
 };

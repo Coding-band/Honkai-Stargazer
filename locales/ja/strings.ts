@@ -145,7 +145,7 @@ export const strings = {
   UserInfoStatus: "Status",
   UserInfoGamePlayerLevel: "Trailblaze Lvl.",
   UserInfoCountComments: "Comments",
-  UserInfoGameWorldLevel: "Equilibrium Lvl.",
+  UserInfoGameWorldLevel: "Equili. Lvl.",
   UserInfoLastOnlineTime: "Last Online At",
   UserInfoOwnedCharacters: "Characters",
   UserInfoGameActiveDays: "Active Days",
@@ -183,4 +183,13 @@ export const strings = {
   ATTR_PHYSICAL: "物理属性与ダメージ",
   ATTR_ENERGY_REGENERATE: "EP回復効率",
   ATTR_HEAL_BONUS: "治癒量",
+  //Add in 20240117
+  UnLockAll: "Unlock All",
+  BlurOn: "Blur : ON",
+  BlurOff: "Blur : OFF",
+  GetCharAndUnLock: "Unlock when owned he/her",
+  Leaderboard: "Leaderboard",
+  UIDSearch: "UID Search",
+  PublicChars: "Disclose characters",
+  Switch: "Switch"
 };

@@ -145,7 +145,7 @@ export const strings = {
   UserInfoStatus: "Estado",
   UserInfoGamePlayerLevel: "Nivel de Traza caminos",
   UserInfoCountComments: "Comentarios",
-  UserInfoGameWorldLevel: "Nivel de Equilibrio",
+  UserInfoGameWorldLevel: "Equili. Lvl.",
   UserInfoLastOnlineTime: "Última conexión en",
   UserInfoOwnedCharacters: "Personajes",
   UserInfoGameActiveDays: "Días activos",
@@ -182,5 +182,14 @@ export const strings = {
   ATTR_THUNDER: "Thunder DMG",
   ATTR_PHYSICAL: "Physical DMG",
   ATTR_ENERGY_REGENERATE: "Energy Regen.",
-  ATTR_HEAL_BONUS: "Heal Bonus"
+  ATTR_HEAL_BONUS: "Heal Bonus",
+  //Add in 20240117
+  UnLockAll: "Unlock All",
+  BlurOn: "Blur : ON",
+  BlurOff: "Blur : OFF",
+  GetCharAndUnLock: "Unlock when owned he/her",
+  Leaderboard: "Leaderboard",
+  UIDSearch: "UID Search",
+  PublicChars: "Disclose characters",
+  Switch: "Switch"
 };
