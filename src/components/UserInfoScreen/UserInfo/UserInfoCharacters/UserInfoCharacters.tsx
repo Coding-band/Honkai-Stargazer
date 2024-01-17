@@ -12,12 +12,8 @@ import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
 import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
 import { CharacterName } from "../../../../types/character";
 import { Image } from "expo-image";
-import useHsrCharList from "../../../../hooks/hoyolab/useHsrCharList";
 import { useNavigation } from "@react-navigation/native";
 import useUserCharactersByUUID from "../../../../firebase/hooks/UserCharacters/useUserCharactersByUUID";
-import Toast from "../../../../utils/toast/Toast";
-import useUser from "../../../../firebase/hooks/User/useUser";
-import NoPublicData from "../NoPublicData/NoPublicData";
 import useUserByUUID from "../../../../firebase/hooks/User/useUserByUUID";
 import { Question } from "phosphor-react-native";
 import PopUpCard from "../../../global/PopUpCard/PopUpCard";
@@ -26,6 +22,8 @@ import officalLightconeId from "../../../../../map/lightcone_offical_id_map";
 import Lightcone from "../../../../../assets/images/images_map/lightcone";
 import { LightconeName } from "../../../../types/lightcone";
 import useLocalState from "../../../../hooks/useLocalState";
+import { LOCALES } from "../../../../../locales";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 
 type Props = {
   uuid: string;
@@ -33,6 +31,7 @@ type Props = {
 
 export default function UserInfoCharacters(props: Props) {
   const { language: textLanguage } = useTextLanguage();
+  const { language: appLanguage } = useAppLanguage();
   const navigation = useNavigation();
 
   const hsrUUID = useHsrUUID();
@@ -136,7 +135,7 @@ export default function UserInfoCharacters(props: Props) {
               }}
             >
               <Text className="text-text text-[14px] font-[HY65] leading-5">
-                切換
+                {LOCALES[appLanguage].Switch}
               </Text>
             </TouchableOpacity>
           </View>
@@ -280,7 +279,7 @@ export default function UserInfoCharacters(props: Props) {
         deviceHeight={Dimensions.get("screen").height}
       >
         <PopUpCard
-          title="公開角色"
+          title={LOCALES[appLanguage].PublicChars}
           content="為了保障安全性和用戶權益，我們通過用戶的設備（客戶端），而非透過伺服器來更新 hoyolab 角色數據。這意味著如果用戶一段時間不使用 Stargazer，可能會導致他們的角色數量、活躍天數、達成成就和忘卻之庭數據存在差異。請注意，這些數據僅供參考，不具有絕對準確性。"
           onClose={() => {
             setOpenQuestionPopUp(false);

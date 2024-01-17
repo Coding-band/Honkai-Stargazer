@@ -201,4 +201,6 @@ export const strings = {
   GetCharAndUnLock: "獲得該角色即可解鎖",
   Leaderboard: "排行榜",
   UIDSearch: "UID查詢",
+  PublicChars: "公開角色",
+  Switch: "切換",
 };

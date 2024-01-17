@@ -145,7 +145,7 @@ export const strings = {
   UserInfoStatus: "Status",
   UserInfoGamePlayerLevel: "Trailblaze Lvl.",
   UserInfoCountComments: "Comments",
-  UserInfoGameWorldLevel: "Equilibrium Lvl.",
+  UserInfoGameWorldLevel: "Equili. Lvl.",
   UserInfoLastOnlineTime: "Last Online At",
   UserInfoOwnedCharacters: "Characters",
   UserInfoGameActiveDays: "Active Days",

@@ -49,7 +49,7 @@ export default function Player() {
           <View style={styles.playerActionColumn}>
             <PlayerAction />
             <View>
-              <Text className="font-[HY75] text-[#DBC291] text-[14px] font-medium">
+              <Text className="font-[HY75] text-[#DBC291] text-[14px]">
                 {LOCALES[language].PlayerLevel}{" "}
                 {playerLevel || ": " + LOCALES[language].NoDataYet}
               </Text>
