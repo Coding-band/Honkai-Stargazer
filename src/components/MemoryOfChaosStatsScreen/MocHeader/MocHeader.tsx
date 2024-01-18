@@ -41,7 +41,7 @@ export default function MocHeader({ scrollHandler }: { scrollHandler: any }) {
       }
     >
       <View style={{ alignItems: "center" }}>
-        <Text className="text-[20px] text-text font-[HY65]">我的戰績</Text>
+        <Text className="text-[20px] text-text font-[HY65]">{LOCALES[language].MOCMyBattleReport}</Text>
         <Text className="text-[14px] text-text font-[HY65]">
           {hsrUUID} · {LOCALES[language][getServerFromUUID(hsrUUID)!]}
         </Text>

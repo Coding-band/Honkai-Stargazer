@@ -14,6 +14,8 @@ import ReactNativeModal from "react-native-modal";
 import PopUpCard from "../../global/PopUpCard/PopUpCard";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import Listbox from "../../global/Listbox/Listbox";
+import { LOCALES } from "../../../../locales";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 
 export default function MOC() {
   const { language: textLanguage } = useTextLanguage();
@@ -32,6 +34,8 @@ export default function MOC() {
   ];
   const [selectedVersion, setSelectedVersion] = useState(mocVersion[0].id);
   const mocData = MOCDataMap[selectedVersion];
+
+  const { language } = useAppLanguage();
 
   const aref = useAnimatedRef<Animated.ScrollView>();
   const scrollHandler = useScrollViewOffset(aref);
@@ -61,7 +65,7 @@ export default function MOC() {
             {mocVersion?.map((version) => (
               <Listbox.Item key={version.id} value={version.id}>
                 {/* @ts-ignore */}
-                {version.name}
+                {version.name+"Y"}
               </Listbox.Item>
             )) || []}
           </Listbox>
@@ -84,7 +88,7 @@ export default function MOC() {
         deviceHeight={Dimensions.get("screen").height}
       >
         <PopUpCard
-          title="效果"
+          title={LOCALES[language].MOCEffect}
           content={
             <HtmlText
               style={{ fontFamily: "HY65", padding: 16, lineHeight: 20 }}

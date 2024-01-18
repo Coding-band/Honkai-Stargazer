@@ -15,6 +15,8 @@ import { CharacterName } from "../../../../types/character";
 import TagContent from "../../../global/TagContent/TagContent";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../constant/screens";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 type Props = {
   type: "character-comment";
@@ -28,6 +30,8 @@ export default function Comment(props: Props) {
   const navigation = useNavigation();
 
   const charId = officalCharId[props.title] as CharacterName;
+
+  const { language } = useAppLanguage();
 
   return (
     <TouchableOpacity
@@ -54,7 +58,7 @@ export default function Comment(props: Props) {
           <View style={{ flexDirection: "row", gap: 10, alignItems: "center" }}>
             <TouchableWithoutFeedback onPress={() => { }}>
               <Text className="text-[#CCC] text-[12px] font-[HY65] leading-5">
-                {`在「${getCharFullData(charId, textLanguage)?.name}」的評論區`}
+                {LOCALES[language].CommentInDiscussion.replace("${charName}",getCharFullData(charId, textLanguage)?.name)}
               </Text>
             </TouchableWithoutFeedback>
           </View>

@@ -9,6 +9,8 @@ import useMyFirebaseUid from "../../../../firebase/hooks/FirebaseUid/useMyFireba
 import { LinearGradient } from "expo-linear-gradient";
 import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { ParamList } from "../../../../types/navigation";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 export default function MOCLbItem({
   versionNumber,
@@ -52,6 +54,7 @@ export default function MOCLbItem({
       ).data()
   );
 
+  const { language } = useAppLanguage();
   return (
     <LinearGradient
       colors={["#000000", "#00000000"]}
@@ -67,7 +70,8 @@ export default function MOCLbItem({
       >
         <Text className="text-text2 font-[HY65] text-[16px]">
           {floorName}
-          {isLayer2 ? "（下半）" : "（上半）"}
+          {" "}
+          {isLayer2 ? LOCALES[language].MOCPart2 : LOCALES[language].MOCPart1}
         </Text>
         <TouchableOpacity
           activeOpacity={0.65}
@@ -79,7 +83,7 @@ export default function MOCLbItem({
             });
           }}
         >
-          <Text className="text-text2 font-[HY65] text-[12px]">展示更多</Text>
+          <Text className="text-text2 font-[HY65] text-[12px]">{LOCALES[language].MOCShowMore}</Text>
         </TouchableOpacity>
       </View>
       <View style={{ gap: 12 }}>
@@ -126,6 +130,7 @@ export default function MOCLbItem({
 }
 
 const RecordItem = React.memo((props: any) => {
+  const { language } = useAppLanguage();
   function getRankColor(rank: number) {
     const colors = {
       1: "#FFD070",
@@ -163,7 +168,7 @@ const RecordItem = React.memo((props: any) => {
               {
                 // props?.uuid?.substr(0, 3) +
                 // props?.uuid?.substr(-3).padStart(props.uuid?.length - 3, "*")
-                props.name || "暫無數據"
+                props.name || LOCALES[language].NoDataYet
               }
             </Text>
           </View>
