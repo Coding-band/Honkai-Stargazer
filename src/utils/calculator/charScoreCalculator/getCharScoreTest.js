@@ -2,7 +2,7 @@ const scoreWeight = require("./data/charWeightList.json");
 const demoCharData = require("./data/charDataDemo.json");
 
 function getCharScore() {
-  const charId = "1102";
+  const charId = "1217";
   const schoolIndex = 0 //流派Index
 
   const lcAdviceScores = 10 //推薦光錐加分
@@ -11,17 +11,20 @@ function getCharScore() {
    * 初始化
    **/
   // @ts-ignore
-  const charScoreWeight = scoreWeight[charId][schoolIndex];
-  const charLightconeID = demoCharData.light_cone.id;
-  const charSoulLvl = demoCharData.rank;
-  const charTraceLvl = demoCharData.skills;
-  let charAttrTMP = new Map();
+  const charScoreWeight = scoreWeight[charId][schoolIndex]; //對應角色流派内，該角色評分權重
+  const charLightconeID = demoCharData.light_cone.id; //角色使用中的光錐
+  const charSoulLvl = demoCharData.rank; //角色的星魂等級
+  const charTraceLvl = demoCharData.skills;  //角色行跡内等級
+
+  //合拼 attributes+additions [START]
+  let charAttrTMP = new Map(); 
   demoCharData.attributes.map((attrs) => {
     charAttrTMP.set(attrs.field,attrs.value)
   })
-  const charAttrFinal = demoCharData.additions.map((attrs) => {
+  const charAttrFinal = demoCharData.additions.map((attrs) => { //存放final合拼 attributes+additions
     return {[attrs.field] : attrs.value + (charAttrTMP.get(attrs.field) === undefined ? 0 : charAttrTMP.get(attrs.field))}
   })
+  //合拼 attributes+additions [END]
 
   // 該角色還沒有權重
   if (!charScoreWeight) {
@@ -41,17 +44,17 @@ function getCharScore() {
     lightconeScore = 0
   }
 
-  // 星魂分數 -> 每級+5分, 最多20分
+  // 星魂分數 -> 每級+5分, 最多15分
   let soulScore = 0
   for(let i = 0 ; i < charScoreWeight.soul.length ; i++){
     if(charSoulLvl >= charScoreWeight.soul[i]){
-      soulScore += (soulScore >= 20 ? 0 : 5)
+      soulScore += (soulScore >= 15 ? 0 : 5)
     }else{
       break;
     }
   }
 
-  // 行跡分數 -> 最多36分(沒什麼可能達到)
+  // 行跡分數 -> 最多35分
   let traceScore = 0
   charTraceLvl.map((trace) => {
     switch(trace.type){
@@ -62,23 +65,54 @@ function getCharScore() {
       default : traceScore += 0
     }
   })
+  traceScore = (traceScore > 35 ? 35 : traceScore)
 
-  // 屬性分數 -> 最多??分
+  // 屬性分數 -> 最多60分
   let attrScore = 0
+  let attrWeightSum = 0 //總權重淨值 (1.5+2+1+...)
+
+  const attrGradKeys = Object.keys(charScoreWeight.grad); //獲取所有有畢業值的屬性
+  const attrWeightValidKeys = Object.keys(charScoreWeight.attr); //獲取所有有畢業值的屬性
+  for(let x = 0 ; x < attrWeightValidKeys.length ; x++){
+    if(attrGradKeys.includes(attrWeightValidKeys[x])){ 
+      attrWeightSum += charScoreWeight.attr[attrWeightValidKeys[x]] //計算總權重淨值 (1.5+2+1+...)
+    }
+  }
+
   charAttrFinal.map((attrs) => {
     const name = Object.keys(attrs)[0];
     const attrValue = attrs[name];
     const weightValue = charScoreWeight.attr[name];
+    const gradValue = charScoreWeight.grad[name];
 
-    console.log(name + ":" + (weightValue === undefined ? 0 : weightValue) 
-    * (attrValue < 3 ? attrValue * 10 : (attrValue > 200 ? attrValue / 100 : attrValue / 10)))
-
+    /*
     attrScore += 
     (weightValue === undefined ? 0 : weightValue) 
     * (attrValue < 3 ? attrValue * 10 : (attrValue > 200 ? attrValue / 100 : attrValue / 10))
+    */
+
+    if(gradValue === undefined || weightValue === undefined){
+      //...如果沒有畢業分，做甚麼？只能不算
+    }else{
+      attrScore += (attrValue / gradValue) //畢業比率
+        * (weightValue / attrWeightSum) * 60 //滿分的佔便比
+      console.log(name+" : "+attrValue+" / "+gradValue+" || "+(attrValue / gradValue) //畢業比率
+      )
+    }
   })
   
+  //最大值 120 , 畢業100
   return lightconeScore + soulScore + traceScore + attrScore
 }
 
+function getCharRank(score){
+  if(score <= 20){return "D"}
+  if(score <= 40){return "C"}
+  if(score <= 60){return "B"}
+  if(score <= 80){return "A"}
+  if(score <= 100){return "S"}
+  if(score <= 120){return "SS"}
+}
+
 console.log(getCharScore())
+console.log(getCharRank(getCharScore()))
