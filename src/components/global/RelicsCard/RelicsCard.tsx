@@ -9,6 +9,7 @@ import { Shadow } from "react-native-shadow-2";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image } from "expo-image";
 import { ExpoImage } from "../../../types/image";
+import CardBg from "../CardBg/CardBg";
 
 type Props = {
   image?: ExpoImage;
@@ -24,23 +25,16 @@ export default function RelicsCard(props: Props) {
   return (
     <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
       {/* <Shadow distance={6} offset={[4, 4]} startColor="#00000025"> */}
-      <LinearGradient
+      <CardBg rare={props.rare} />
+      <View
         className="w-20 h-20"
         style={{
           borderRadius: 4,
           borderTopRightRadius: 10,
           overflow: "hidden",
-          shadowOffset: { width: 4, height: 4 },
-          shadowRadius: 8,
-          shadowColor: "#000000",
-          shadowOpacity: 0.25,
-          elevation: 8,
           alignItems: "center",
           justifyContent: "center",
         }}
-        colors={
-          props.rare === 5 ? ["#905A52", "#C8A471"] : ["#404165", "#9763CE"]
-        }
       >
         {/* 圖片 */}
         <Image
@@ -60,7 +54,7 @@ export default function RelicsCard(props: Props) {
             </Text>
           </View>
         )}
-      </LinearGradient>
+      </View>
       {/* </Shadow> */}
       <View
         className="w-20 h-24 pt-1 mb-[-40px]"

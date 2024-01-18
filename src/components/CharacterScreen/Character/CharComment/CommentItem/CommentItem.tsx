@@ -131,7 +131,13 @@ const Like = ({
       }}
     >
       <Text className="text-text font-[HY65] text-[14px]">
-        {isLiked && !likeUsers.includes(firebaseUID) ? likeUsers?.length + 1 : likeUsers?.length}
+        {(likeUsers?.includes(firebaseUID)
+          ? isLiked
+            ? likeUsers?.length
+            : likeUsers?.length - 1
+          : isLiked
+          ? likeUsers?.length + 1
+          : likeUsers?.length) || ""}
       </Text>
       <TouchableOpacity onPress={handleOnLike} activeOpacity={0.65}>
         <ThumbsUp

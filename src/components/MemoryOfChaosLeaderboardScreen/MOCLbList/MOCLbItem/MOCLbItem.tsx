@@ -18,6 +18,7 @@ export default function MOCLbItem({
   floorName: string;
 }) {
   const [showRank, setShowRank] = useState(false);
+  const [isLayer2, setIsLayer2] = useState(false);
 
   const { data: floorLbData } = useQuery(
     ["moc-leaderboard", floorNumber, versionNumber],
@@ -51,7 +52,10 @@ export default function MOCLbItem({
       className="border border-[#DDDDDD20] rounded-[4px] py-4 px-3 w-[360px]"
       style={{ gap: 8 }}
     >
-      <Text className="text-text2 font-[HY65] text-[16px]">{floorName}</Text>
+      <Text className="text-text2 font-[HY65] text-[16px]">
+        {floorName}
+        {isLayer2 ? "（下半）" : "（上半）"}
+      </Text>
       <View style={{ gap: 12 }}>
         {[
           floorLbData?.[0],
@@ -66,6 +70,8 @@ export default function MOCLbItem({
             {...user}
             showRank={showRank}
             onShowRank={setShowRank}
+            isLayer2={isLayer2}
+            onSetIsLayer2={setIsLayer2}
           />
         ))}
         <RecordItem
@@ -73,6 +79,8 @@ export default function MOCLbItem({
           {...myFloorLbData}
           showRank={showRank}
           onShowRank={setShowRank}
+          isLayer2={isLayer2}
+          onSetIsLayer2={setIsLayer2}
         />
       </View>
     </LinearGradient>
@@ -80,8 +88,6 @@ export default function MOCLbItem({
 }
 
 const RecordItem = (props: any) => {
-  const [isLayer2, setIsLayer2] = useState(true);
-
   function getRankColor(rank: number) {
     const colors = {
       1: "#FFD070",
@@ -133,13 +139,15 @@ const RecordItem = (props: any) => {
         <TouchableOpacity
           activeOpacity={0.35}
           onPress={() => {
-            // setIsLayer2(!isLayer2);
+            props.onSetIsLayer2(!props.isLayer2);
+          }}
+          onLongPress={() => {
             props.onShowRank(!props.showRank);
           }}
           style={{ flexDirection: "row", gap: 6 }}
         >
           {props.round_num !== 0 ? (
-            props[isLayer2 ? "layer_2" : "layer_1"]?.characters.map(
+            props[props.isLayer2 ? "layer_2" : "layer_1"]?.characters.map(
               (char: any) => (
                 <View
                   key={char.id}

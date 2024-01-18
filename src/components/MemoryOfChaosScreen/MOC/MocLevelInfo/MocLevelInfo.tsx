@@ -22,7 +22,10 @@ export default function MocLevelInfo({
       style={{ gap: 8 }}
     >
       {/* Top */}
-      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+      <View
+        className="z-50"
+        style={{ flexDirection: "row", justifyContent: "space-between" }}
+      >
         <Text className="text-text text-[16px] font-[HY65]">關卡資訊</Text>
         <FloorOptions
           length={mocData.info.length}
@@ -158,7 +161,7 @@ const FloorOptions = ({
   }, [currentFloor]);
 
   return (
-    <View className="z-50 w-[90px]" style={{ alignItems: "flex-end" }}>
+    <View className="w-[90px]" style={{ alignItems: "flex-end" }}>
       <TouchableOpacity
         onPress={() => {
           setOpen(!open);
@@ -172,8 +175,12 @@ const FloorOptions = ({
         <Image source={require("./icons/More.svg")} className="w-3 h-1.5" />
       </TouchableOpacity>
       <View
-        style={{ display: open ? "flex" : "none", gap: 8 }}
-        className="absolute top-[32px] right-2 bg-[#1B0314] px-3 pb-2"
+        style={{
+          display: open ? "flex" : "none",
+          gap: 8,
+          alignItems: "center",
+        }}
+        className="absolute top-[24px] right-0 bg-[#9F9FAA] px-3 py-2 rounded-[4px]"
       >
         {floors.map((floor, i) => (
           <TouchableOpacity

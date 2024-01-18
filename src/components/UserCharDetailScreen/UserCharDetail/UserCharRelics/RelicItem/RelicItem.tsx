@@ -10,6 +10,7 @@ import AttributeImage from "../../../../../../assets/images/images_map/attribute
 import BlurView from "../../../../global/BlurView/BlurView";
 import RelicScore from "./RelicScore/RelicScore";
 import getRelicScore from "../../../../../utils/calculator/relicScoreCalculator/getRelicScore";
+import CardBg from "../../../../global/CardBg/CardBg";
 
 export default function RelicItem({
   userRelicData,
@@ -37,7 +38,10 @@ export default function RelicItem({
     >
       {/* 圖片 */}
       <TouchableOpacity activeOpacity={0.65}>
-        <LinearGradient
+        <View style={{ transform: [{ scale: 0.6 }, { translateX: -13}] }}>
+          <CardBg rare={userRelicData.rarity} />
+        </View>
+        <View
           className="w-[47px] h-[47px]"
           style={{
             borderRadius: 4,
@@ -46,7 +50,7 @@ export default function RelicItem({
             alignItems: "center",
           }}
           // @ts-ignore
-          colors={CardColors[userRelicData.rarity]}
+          // colors={CardColors[userRelicData.rarity]}
         >
           <Image
             transition={200}
@@ -54,11 +58,11 @@ export default function RelicItem({
             // @ts-ignore
             source={Relic[relicSetId]?.["icon" + relicCount]}
           />
-        </LinearGradient>
+        </View>
       </TouchableOpacity>
       {/* 等級 */}
       <View
-        className="absolute bottom-[14px] w-[47px] z-50"
+        className="absolute top-[48px] w-[47px] z-50"
         style={{ alignItems: "center" }}
       >
         <View className="bg-[#00000040] rounded-[15px] px-1.5 py-0.5">

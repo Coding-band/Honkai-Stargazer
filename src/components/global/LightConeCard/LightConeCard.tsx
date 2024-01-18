@@ -6,11 +6,12 @@ import {
 } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import { Image } from "expo-image";
+import { Image, ImageBackground } from "expo-image";
 import { ExpoImage } from "../../../types/image";
 import { CardColors } from "../../../constant/card";
 import PathCardIcon from "../PathCardIcon/PathCardIcon";
 import { Path } from "../../../types/path";
+import CardBg from "../CardBg/CardBg";
 
 type Props = {
   image?: ExpoImage;
@@ -28,14 +29,14 @@ export default function LightConeCard(props: Props) {
         offset={[2, 15]}
         startColor={props.rare === 5 ? "#C7A37150" : "#9663CC50"}
       > */}
-      <LinearGradient
+      <CardBg rare={props.rare} />
+      <View
         className="w-20 h-20"
         style={{
           borderRadius: 4,
           borderTopRightRadius: 10,
           overflow: "hidden",
         }}
-        colors={CardColors[props.rare as 3 | 4 | 5]}
       >
         <View
           className="w-full h-full"
@@ -56,7 +57,7 @@ export default function LightConeCard(props: Props) {
             <PathCardIcon value={props.path} />
           </View>
         </View>
-      </LinearGradient>
+      </View>
       {/* </Shadow> */}
       <View
         className="w-20 h-24 pt-1 mb-[-50px]"
