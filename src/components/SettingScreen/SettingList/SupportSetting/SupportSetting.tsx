@@ -10,10 +10,14 @@ import TextButton from "../../../global/TextButton/TextButton";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 import Toast from "../../../../utils/toast/Toast";
+import { useNavigation } from "@react-navigation/native";
+import { SCREENS } from "../../../../constant/screens";
 
 export default function SupportSetting() {
-  const [openDonate, setOpenDonate] = useState(false);
+  const navigation = useNavigation();
   const { language } = useAppLanguage();
+
+  const [openDonate, setOpenDonate] = useState(false);
   return (
     <>
       <SettingGroup title={LOCALES[language].SupportUs}>
@@ -28,7 +32,8 @@ export default function SupportSetting() {
           type="navigation"
           title={LOCALES[language].InviteOthers}
           onNavigate={() => {
-            Toast.StillDevelopingToast();
+            // @ts-ignore
+            navigation.navigate(SCREENS.InvitePage.id);
           }}
         />
       </SettingGroup>

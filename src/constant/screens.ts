@@ -82,6 +82,12 @@ export const SCREENS = {
     getShortName: (lang: AppLanguage) => LOCALES[lang].Setting,
     icon: SlidersHorizontal,
   },
+  InvitePage: {
+    id: "Invite",
+    getName: (lang: AppLanguage) => "邀請他人",
+    getShortName: (lang: AppLanguage) => "邀請他人",
+    icon: SlidersHorizontal,
+  },
   WallPaperPage: {
     id: "WallPaper",
     getName: (lang: AppLanguage) => LOCALES[lang].WallPaper,

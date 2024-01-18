@@ -24,6 +24,7 @@ import UserCharDetailScreen from "../screens/UserCharDetailScreen";
 import UIDSearchScreen from "../screens/UIDSearchScreen";
 import MemoryOfChaosStatsScreen from "../screens/MemoryOfChaosStatsScreen";
 import MemoryOfChaosLeaderboardScreen from "../screens/MemoryOfChaosLeaderboardScreen";
+import InviteScreen from "../screens/InviteScreen";
 
 export default function Navigation({
   initialRouteName,
@@ -111,6 +112,11 @@ export default function Navigation({
         <Stack.Screen
           name={SCREENS.SettingPage.id}
           component={SettingScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.InvitePage.id}
+          component={InviteScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

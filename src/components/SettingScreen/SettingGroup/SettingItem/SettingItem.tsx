@@ -57,7 +57,7 @@ export default function SettingItem(props: Props) {
                 className="w-40 h-full bg-[#F3F9F990]"
                 style={{ justifyContent: "center", alignItems: "center" }}
               >
-                <Text className="text-[14px] font-[HY65]">
+                <Text className="text-[14px] font-[HY65] leading-5">
                   {
                     props.list?.filter((item) => item.value === props.value)[0]
                       ?.name
@@ -70,7 +70,6 @@ export default function SettingItem(props: Props) {
               </View>
             </TouchableOpacity>
           }
-    
         >
           {props.list?.map((item) => (
             <Listbox.Item key={item.value} value={item.value}>
@@ -101,7 +100,7 @@ export default function SettingItem(props: Props) {
             className="w-40 h-full bg-[#F3F9F990]"
             style={{ justifyContent: "center", alignItems: "center" }}
           >
-            <Text className="text-[14px] font-[HY65]">
+            <Text className="text-[14px] font-[HY65] leading-5">
               {props.content || LOCALES[language].Navigate}
             </Text>
           </View>
