@@ -20,6 +20,8 @@ import useMyFirebaseUid from "../../../../../firebase/hooks/FirebaseUid/useMyFir
 import db from "../../../../../firebase/db";
 import firestore from "@react-native-firebase/firestore";
 import { useQuery } from "react-query";
+import { LOCALES } from "../../../../../../locales";
+import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
 
 export default function CommentItem({
   id,
@@ -151,23 +153,25 @@ const Like = ({
 };
 
 const HasOwnedTag = () => {
+  const { language } = useAppLanguage();
   return (
     <View
       className="h-4 px-[5px] bg-[#F3F9FF] rounded-[34px]"
       style={{ justifyContent: "center" }}
     >
-      <Text className="text-[#393A5C] text-[10px] font-[HY65]">{"已擁有"}</Text>
+      <Text className="text-[#393A5C] text-[10px] font-[HY65]">{LOCALES[language].UserOwned}</Text>
     </View>
   );
 };
 
 const MaxRankTag = () => {
+  const { language } = useAppLanguage();
   return (
     <View
       className="h-4 px-[5px] bg-[#FFE690] rounded-[34px]"
       style={{ justifyContent: "center" }}
     >
-      <Text className="text-[#6C5710] text-[10px] font-[HY65]">{"滿命"}</Text>
+      <Text className="text-[#6C5710] text-[10px] font-[HY65]">{LOCALES[language].FullEidolon}</Text>
     </View>
   );
 };

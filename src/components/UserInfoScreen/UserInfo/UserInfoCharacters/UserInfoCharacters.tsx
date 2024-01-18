@@ -78,12 +78,13 @@ export default function UserInfoCharacters(props: Props) {
       const charId = officalCharId[char.id] as CharacterName;
       const charJsonData = getCharJsonData(charId);
       const charFullData = getCharFullData(charId, textLanguage);
+      const { language } = useAppLanguage();
       return {
         id: charId,
         rare: charJsonData.rare,
         name: charFullData.name,
         rank: char.rank,
-        level: "Lv " + char.level,
+        level: LOCALES[language].UserCharLevelLv + char.level,
         image: CharacterImage[charId].icon,
         light_cone: {
           id: officalLightconeId[char?.equip?.id] as LightconeName,
@@ -101,6 +102,8 @@ export default function UserInfoCharacters(props: Props) {
   const [charsDisplayWidth, setCharsDisplayWidth] = useState(0);
   const [openQuestionPopUp, setOpenQuestionPopUp] = useState(false);
 
+  const { language } = useAppLanguage()
+
   return (
     <>
       <View style={{ gap: 10 }}>
@@ -117,7 +120,7 @@ export default function UserInfoCharacters(props: Props) {
               style={{ flexDirection: "row", gap: 4, alignItems: "center" }}
             >
               <Text className="text-text text-[14px] font-[HY65]">
-                公開角色
+                {LOCALES[language].PublicChars}
               </Text>
               <TouchableOpacity
                 activeOpacity={0.35}
@@ -174,8 +177,8 @@ export default function UserInfoCharacters(props: Props) {
                         </Text>
                         <Text className="text-text text-[12px] font-[HY65] leading-5">
                           {char.light_cone?.rank
-                            ? `${char.light_cone?.rank}階`
-                            : "無裝備"}
+                            ? LOCALES[language].SuperimposeLvl.replace("${1}",`${char.light_cone?.rank}`)
+                            : LOCALES[language].SuperimposeNotEquipped}
                         </Text>
                       </View>
                     </View>
@@ -235,8 +238,8 @@ export default function UserInfoCharacters(props: Props) {
                               </Text>
                               <Text className="text-text text-[12px] font-[HY65] leading-5">
                                 {char.light_cone?.rank
-                                  ? `${char.light_cone?.rank}階`
-                                  : "無裝備 "}
+                                    ? LOCALES[language].SuperimposeLvl.replace("${1}",`${char.light_cone?.rank}`)
+                                    : LOCALES[language].SuperimposeNotEquipped}
                               </Text>
                             </View>
                           </View>
@@ -280,7 +283,7 @@ export default function UserInfoCharacters(props: Props) {
       >
         <PopUpCard
           title={LOCALES[appLanguage].PublicChars}
-          content="為了保障安全性和用戶權益，我們通過用戶的設備（客戶端），而非透過伺服器來更新 hoyolab 角色數據。這意味著如果用戶一段時間不使用 Stargazer，可能會導致他們的角色數量、活躍天數、達成成就和忘卻之庭數據存在差異。請注意，這些數據僅供參考，不具有絕對準確性。"
+          content={LOCALES[appLanguage].PublicCharDesc}
           onClose={() => {
             setOpenQuestionPopUp(false);
           }}

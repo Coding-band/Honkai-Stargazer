@@ -27,8 +27,7 @@ export default function UserCharLevel() {
     >
       <Text className="text-[12px] text-[#FFFFFF] font-[HY65]">
         {LOCALES[language].UserCharLevelLv} {inGameCharData?.level} ·{" "}
-        {inGameCharData?.rank}
-        {LOCALES[language].UserCharLevelSoul}
+        {LOCALES[language].CharSoul.replace("${1}",inGameCharData?.rank)}
       </Text>
     </View>
   );

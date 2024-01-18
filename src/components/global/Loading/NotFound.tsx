@@ -1,8 +1,11 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { Image } from "expo-image";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../locales";
 
 export default function NotFound() {
+  const { language } = useAppLanguage()
   return (
     <View
       className="w-screen h-screen"
@@ -14,7 +17,7 @@ export default function NotFound() {
           source={require("./images/02.png")}
         />
         <Text className="text-text font-[HY65] text-[16px] leading-5">
-          和列車失去聯繫了...
+          {LOCALES[language].DiscloseChar}
         </Text>
       </View>
     </View>

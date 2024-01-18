@@ -21,6 +21,8 @@ import { findKey } from "lodash";
 import officalCharId from "../../../../../../map/character_offical_id_map";
 import { AnimatedScrollView } from "react-native-reanimated/lib/typescript/reanimated2/component/ScrollView";
 import { useRoute } from "@react-navigation/native";
+import { LOCALES } from "../../../../../../locales";
+import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
 
 const UpArrow = require("./icons/UpArrow.svg");
 const DownArrow = require("./icons/DownArrow.svg");
@@ -35,7 +37,7 @@ export default function CommentBox(props: Props) {
   // data
   const charId = useCharId();
   const officalId = findKey(officalCharId, (v) => v === charId);
-
+  const { language } = useAppLanguage();
   const { data: charComments } = useCharComments(officalId || "");
 
   // animation
@@ -108,7 +110,7 @@ export default function CommentBox(props: Props) {
               className="w-[12px] h-[12px]"
             />
             <Text className="text-white text-[16px] font-[HY65]">
-              {charComments?.length || 0}條評論
+              {LOCALES[language].Comments.replace("${1}",(charComments?.length || 0))}
             </Text>
           </View>
         </Animated.View>

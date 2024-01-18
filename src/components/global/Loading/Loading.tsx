@@ -1,9 +1,12 @@
 import { View, Text } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Image } from "expo-image";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../locales";
 
 export default function Loading() {
   const [dot, setDot] = useState(".");
+  const { language } = useAppLanguage()
   useEffect(() => {
     const t = setInterval(() => {
       if (dot === "...") {
@@ -28,7 +31,7 @@ export default function Loading() {
           source={require("./images/01.png")}
         />
         <Text className="text-text font-[HY65] text-[16px] leading-5">
-          帕姆祈禱中{dot}
+          {LOCALES[language].AppStatusLoading}{dot}
         </Text>
       </View>
     </View>

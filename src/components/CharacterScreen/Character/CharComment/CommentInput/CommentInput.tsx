@@ -22,6 +22,8 @@ import CommentToolBox from "./CommentAddPhoto/CommentAddPhoto";
 import useAddCharComment from "../../../../../firebase/hooks/CharComments/useAddCharComment";
 import { customAlphabet } from "nanoid/non-secure";
 import useAddUserComment from "../../../../../firebase/hooks/UserComments/useAddUserComment";
+import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../../locales";
 
 export default function CommentInput({
   value,
@@ -39,6 +41,8 @@ export default function CommentInput({
 
   const [input, setInput] = useState(value || "");
 
+  const { language } = useAppLanguage();
+  
   useEffect(() => {
     setInput(value);
   }, [value]);
@@ -56,13 +60,13 @@ export default function CommentInput({
   };
 
   const handleSubmit = async () => {
-    if (!input) {
-      Toast("請輸入訊息！");
+    if (!input || input.trim() === "") {
+      Toast(LOCALES[language].CommentPlsEnterComment);
       return;
     }
 
     if (!uid) {
-      Toast("您尚未登入！");
+      Toast(LOCALES[language].CommentHaventLogin);
       return;
     }
 
@@ -84,7 +88,7 @@ export default function CommentInput({
         }),
       ]);
 
-      Toast("留言成功！");
+      Toast(LOCALES[language].CommentSuccessful);
       setInput("");
 
       // 更新評論區
@@ -106,8 +110,8 @@ export default function CommentInput({
               ?.expo_push_token;
             pushExpoNoti({
               to: expoPushToken,
-              title: `開拓者快報！`,
-              body: `玩家 ${playerName} 在【${charName}討論串】提及了您！快來參與討論吧。`,
+              title: LOCALES[language].TrailblazerNoti,
+              body: LOCALES[language].TrailblazerNotiTaggedU.replace("${playerName}",playerName).replace("${charName}",charName),
               data: {
                 type: pushExpoNotiType.sendCharacterComment,
                 charId,
@@ -117,7 +121,7 @@ export default function CommentInput({
         });
       }
     } catch (e: any) {
-      Toast("留言失敗，錯誤訊息：" + e.message);
+      Toast(LOCALES[language].CommentFailed+ e.message);
     }
   };
 
@@ -141,7 +145,7 @@ export default function CommentInput({
             value={input}
             onChangeText={handleTextChange}
             onSubmitEditing={handleSubmit}
-            placeholder="幫幫我 史瓦羅先生！"
+            placeholder={LOCALES[language].CommentTextInputHint}
             placeholderTextColor="#F3F9FF40"
           />
           {/* 新增圖片 */}

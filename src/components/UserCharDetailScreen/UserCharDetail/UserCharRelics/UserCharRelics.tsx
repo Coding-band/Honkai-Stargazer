@@ -9,6 +9,8 @@ import RelicItem from "./RelicItem/RelicItem";
 import getRelicScore from "../../../../utils/calculator/relicScoreCalculator/getRelicScore";
 import getTotalScoreRange from "./utils/getTotalScoreRange";
 import ScoreRangeFont from "../../../../../assets/images/images_map/scoreRangeFont";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 export default function UserCharRelics() {
   const { inGameCharData } = useProfileHsrInGameInfo();
@@ -18,6 +20,7 @@ export default function UserCharRelics() {
     inGameCharData?.id,
     userRelicsData
   );
+  const { language } = useAppLanguage()
 
   return (
     inGameCharData && (
@@ -66,7 +69,7 @@ export default function UserCharRelics() {
             <Text className="text-text font-[HY65] text-[24px]">
               {totalScore.toFixed(1)}
             </Text>
-            <Text className="text-text font-[HY65] text-[12px]">遺器評分</Text>
+            <Text className="text-text font-[HY65] text-[12px]">{LOCALES[language].RelicScore}</Text>
           </View>
           <View
             className="h-[55px]"
@@ -77,15 +80,15 @@ export default function UserCharRelics() {
               source={ScoreRangeFont[getTotalScoreRange(totalScore)]}
               contentFit="contain"
             ></Image>
-            <Text className="text-text font-[HY65] text-[12px]">遺器評價</Text>
+            <Text className="text-text font-[HY65] text-[12px]">{LOCALES[language].RelicRank}</Text>
           </View>
         </View>
         <View style={{ alignItems: "center", gap: 2 }}>
           <Text className="text-text font-[HY65] text-[18px] leading-5">
-            用戶量不足 暫無排行
+          {LOCALES[language].LackOfUserData}
           </Text>
           <Text className="text-[#FFFFFF60] font-[HY65] text-[12px] leading-4">
-            （數據來源於已登入用戶）
+          {LOCALES[language].LeaderboardDataFrom}
           </Text>
         </View>
       </View>

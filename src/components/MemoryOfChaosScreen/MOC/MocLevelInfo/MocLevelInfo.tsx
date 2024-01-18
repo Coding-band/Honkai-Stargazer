@@ -6,6 +6,8 @@ import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
 import { LinearGradient } from "expo-linear-gradient";
 import MonsterImage from "../../../../../assets/images/images_map/monsterImage";
 import MOCDataMap from "../../../../../map/memory_of_chao_data_map";
+import { LOCALES } from "../../../../../locales";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 
 export default function MocLevelInfo({
   versionNumber,
@@ -15,6 +17,7 @@ export default function MocLevelInfo({
   // @ts-ignore
   const mocData = MOCDataMap[versionNumber];
   const [floor, setFloor] = useState(1);
+  const { language } = useAppLanguage();
 
   return (
     <View
@@ -26,7 +29,7 @@ export default function MocLevelInfo({
         className="z-50"
         style={{ flexDirection: "row", justifyContent: "space-between" }}
       >
-        <Text className="text-text text-[16px] font-[HY65]">關卡資訊</Text>
+        <Text className="text-text text-[16px] font-[HY65]">{LOCALES[language].MOCMissionInfoTitle}</Text>
         <FloorOptions
           length={mocData.info.length}
           onChange={(f) => {
@@ -138,19 +141,20 @@ const FloorOptions = ({
   onChange: (floor: number) => void;
   length: number;
 }) => {
+  const { language } = useAppLanguage();
   const floors = [
-    "其一",
-    "其二",
-    "其三",
-    "其四",
-    "其五",
-    "其六",
-    "其七",
-    "其八",
-    "其九",
-    "其十",
-    "其十一",
-    "其十二",
+    LOCALES[language].MOCMissionPart1,
+    LOCALES[language].MOCMissionPart2,
+    LOCALES[language].MOCMissionPart3,
+    LOCALES[language].MOCMissionPart4,
+    LOCALES[language].MOCMissionPart5,
+    LOCALES[language].MOCMissionPart6,
+    LOCALES[language].MOCMissionPart7,
+    LOCALES[language].MOCMissionPart8,
+    LOCALES[language].MOCMissionPart9,
+    LOCALES[language].MOCMissionPart10,
+    LOCALES[language].MOCMissionPart11,
+    LOCALES[language].MOCMissionPart12,
   ].slice(0, length);
 
   const [currentFloor, setCurrentFloor] = useState(0);

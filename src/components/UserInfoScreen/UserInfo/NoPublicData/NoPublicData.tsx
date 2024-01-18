@@ -1,8 +1,11 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { Image } from "expo-image";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 export default function NoPublicData() {
+  const { language } = useAppLanguage()
   return (
     <View
       className="h-[250px]"
@@ -14,7 +17,7 @@ export default function NoPublicData() {
           source={require("./images/04.png")}
         />
         <Text className="text-text font-[HY65] text-[16px] leading-5">
-          玩家没有公開信息哦
+          {LOCALES[language].AppStatusPlayerNoReleaseData}
         </Text>
       </View>
     </View>

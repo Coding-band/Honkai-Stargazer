@@ -63,8 +63,8 @@ export default function UserInfo(props: Props) {
     Date.now() / 1000 - Number(userData?.last_login?.seconds);
   const timeString =
     lastLoginDuration < 300
-      ? "上線中"
-      : formatTimeDurationSimple(lastLoginDuration) + "前";
+      ? LOCALES[language].StatusNow
+      : LOCALES[language].UserInfoLastLoginAt.replace("${1}",formatTimeDurationSimple(lastLoginDuration));
 
   // 用戶留言
   const parts = timeString.split(/([A-Za-z\u4e00-\u9fa5]+)/);
