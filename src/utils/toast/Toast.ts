@@ -22,10 +22,13 @@ export default function Toast(message: string, second: number = 2) {
   });
 }
 
+/**20240118 UNSUITABLE TO EDIT */
+//FunctionStillInDevelop
 Toast.StillDevelopingToast = () => {
-  return Toast("此功能仍在開發中");
+  return Toast("此功能仍在開發中 Still in Development");
 };
 
 Toast.CopyToClipboard = () => {
-  return Toast("已複製到剪貼簿");
+  return Toast("已複製 Copied");
 };
+

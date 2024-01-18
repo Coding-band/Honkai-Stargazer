@@ -22,8 +22,8 @@ export function formatTimeDuration(second: number) {
   // 構建時間格式化字符串
   let formattedTime = "";
   if (days > 0) formattedTime += LOCALES[language].StatusDays.replace("${1}",`${days}`);
-  if (hours > 0) formattedTime += LOCALES[language].StatusHours.replace("${1}",`${hours}`);
-  if (minutes > 0) formattedTime += LOCALES[language].StatusMinutes.replace("${1}",`${minutes}`);
+  if (hours > 0) formattedTime += " "+LOCALES[language].StatusHours.replace("${1}",`${hours}`);
+  if (minutes > 0) formattedTime += " "+LOCALES[language].StatusMinutes.replace("${1}",`${minutes}`);
   // if (seconds > 0) formattedTime += `${seconds}秒`;
 
   return formattedTime || LOCALES[language].StatusSeconds.replace("${1}","0"); // 如果所有時間單位都為0，則返回 '0秒'

@@ -33,9 +33,9 @@ export default function CodeItem(props: Props) {
       await Share.share({
         message: props.code,
       });
-      Toast("分享成功！");
+      Toast(LOCALES[language].ShareSuccess);
     } catch (error: any) {
-      Toast("分享失敗，錯誤訊息：" + error.message);
+      Toast(LOCALES[language].ShareError + error.message);
     }
   };
 
@@ -66,7 +66,7 @@ export default function CodeItem(props: Props) {
               {hasCopy ? LOCALES[language].HasCopy : props.time}
             </Text>
             {/* 國際服 / 中國服 */}
-            <Text className="text-text font-[HY65]">ALL</Text>
+            <Text className="text-text font-[HY65]">{LOCALES[language].CodeAll}</Text>
           </LinearGradient>
           <View
             className="px-2.5"

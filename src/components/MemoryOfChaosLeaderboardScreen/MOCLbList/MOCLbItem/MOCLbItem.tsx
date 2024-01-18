@@ -176,8 +176,8 @@ const RecordItem = React.memo((props: any) => {
             <Text className="text-text text-[10px] font-[HY65] translate-x-[-10px]">
               {new Date(props.challenge_time).toLocaleDateString()}{" "}
               {new Date(props.challenge_time).getHours()}:
-              {new Date(props.challenge_time).getMinutes()} {props.round_num}輪{" "}
-              {props.star_num}星
+              {new Date(props.challenge_time).getMinutes()} {LOCALES[language].MOCRounds.replace("${1}",props.round_num)}{" "}
+              {LOCALES[language].MOCStars.replace("${1}",props.star_num)}
             </Text>
           )}
         </View>

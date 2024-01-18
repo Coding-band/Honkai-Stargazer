@@ -44,7 +44,7 @@ export default function MOCFloor(props: Props) {
         <View>
           {/* 標題 */}
           <Text className="text-[#FFF] text-[16px] font-[HY65]">
-            {/* 20230118 UNSUITABLE TO EDIT*/}
+            {/* 20240118 UNSUITABLE TO EDIT*/}
             {props.title}
           </Text>
           {/* 剩餘 ... 輪 */}
@@ -88,7 +88,7 @@ export default function MOCFloor(props: Props) {
           </View>
         </>
       ) : (
-        <Text className="text-[#DD8200] text-[14px] font-[HY65]">快速通關</Text>
+        <Text className="text-[#DD8200] text-[14px] font-[HY65]">{LOCALES[language].MOCSkipped}</Text>
       )}
     </View>
   );

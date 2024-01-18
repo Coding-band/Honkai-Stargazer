@@ -13,10 +13,10 @@ import RelicDescription from "./RelicDescription/RelicDescription";
 import RelicDetails from "./RelicDetails/RelicDetails";
 import RelicSuggestCharacter from "./RelicSuggestCharacter/RelicSuggestCharacter";
 import Toast from "../../../utils/toast/Toast";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 
 export default function Relic() {
   const [containerHeight, setContainerHeight] = useState(0);
-
   const handleLayout = (event: LayoutChangeEvent) => {
     const { height } = event.nativeEvent.layout;
     setContainerHeight(height);

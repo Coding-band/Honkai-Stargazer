@@ -21,7 +21,7 @@ import { hasIn, includes } from "lodash";
 export default function WallPaperChanger() {
   const navigation = useNavigation();
   const { language: textLanguage } = useTextLanguage();
-  const { language } = useAppLanguage();
+  const { language: appLanguage } = useAppLanguage();
 
   const playerName = useHsrPlayerName();
   const playerCharIdList = useHsrCharList().data?.map((char: any) => char.id);
@@ -37,7 +37,7 @@ export default function WallPaperChanger() {
     ? getCharFullData(
         officalCharId[currentWallPaperId.split("-")?.[0]],
         textLanguage
-      )?.name + "壁紙"
+      )?.name
     : wallPapers[currentWallPaperIndex]?.name;
 
   const playerHasCharacter =
@@ -50,7 +50,7 @@ export default function WallPaperChanger() {
     setWallPaper(wallPapers[currentWallPaperIndex].id);
     // @ts-ignore
     navigation.navigate(SCREENS.HomePage.id);
-    Toast(`已切換成壁紙 ${wallPaperName}`);
+    Toast(LOCALES[appLanguage].SettingChangedWallpaper.replace("${1}",wallPaperName));
   };
 
   const handleSaveWallPaper = async (uri: string) => {
@@ -59,9 +59,9 @@ export default function WallPaperChanger() {
     //   const { status } = await MediaLibrary.requestPermissionsAsync();
     //   // Save image to media library
     //   await MediaLibrary.saveToLibraryAsync(uri);
-    //   Toast(`已儲存壁紙 ${wallPapers?.[currentWallPaperIndex]?.name}`);
+    //   Toast(LOCALES[appLanguage].SettingSaveWallpaperSuccess); //`${wallPapers?.[currentWallPaperIndex]?.name}`
     // } catch (error) {
-    //   Toast(`壁紙儲存失敗 ` + error);
+    //   Toast(LOCALES[appLanguage].SettingSaveWallpaperError + error);
     //    }
     Toast.StillDevelopingToast();
   };
@@ -81,7 +81,7 @@ export default function WallPaperChanger() {
             Toast.StillDevelopingToast();
           }}
         >
-          {LOCALES[language].UnLockAll}
+          {LOCALES[appLanguage].UnLockAll}
         </OptionBtn>
         {/* 模糊效果 */}
         <OptionBtn
@@ -89,7 +89,7 @@ export default function WallPaperChanger() {
             setDoHomePageUseBlurEffect(!doUseHomePageBlurEffect);
           }}
         >
-          {LOCALES[language][doUseHomePageBlurEffect ? "BlurOn" : "BlurOff"]}
+          {LOCALES[appLanguage][doUseHomePageBlurEffect ? "BlurOn" : "BlurOff"]}
         </OptionBtn>
       </View>
       <WallPaperSwiper
@@ -117,14 +117,14 @@ export default function WallPaperChanger() {
               handleSaveWallPaper(wallPapers[currentWallPaperIndex].url);
             }}
           >
-            {LOCALES[language].SaveWallPaper}
+            {LOCALES[appLanguage].SaveWallPaper}
           </OptionBtn>
           {/* 設置 */}
           <OptionBtn
             disabled={!playerHasCharacter}
             onPress={handleSetWallPaper}
           >
-            {LOCALES[language].SetWallPaper}
+            {LOCALES[appLanguage].SetWallPaper}
           </OptionBtn>
         </View>
       </View>

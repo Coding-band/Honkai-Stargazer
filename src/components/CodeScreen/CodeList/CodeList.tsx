@@ -2,11 +2,16 @@ import { View, ScrollView } from "react-native";
 import React, { useState } from "react";
 import { RefreshControl } from "react-native";
 import CodeItem from "./CodeItem/CodeItem";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../locales";
 
 export default function CodeList() {
+  const { language } = useAppLanguage()
+
+  //Also can select RedeemCodeUntil, RedeemCodeExpired
   const [codes, setCodes] = useState([
     {
-      time: "永久",
+      time: LOCALES[language].RedeemCodeForever, 
       code: "STARRAILGIFT",
     },
   ]);

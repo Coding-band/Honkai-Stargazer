@@ -65,7 +65,7 @@ export default function MOC() {
             {mocVersion?.map((version) => (
               <Listbox.Item key={version.id} value={version.id}>
                 {/* @ts-ignore */}
-                {version.name+"Y"}
+                {version.name}
               </Listbox.Item>
             )) || []}
           </Listbox>

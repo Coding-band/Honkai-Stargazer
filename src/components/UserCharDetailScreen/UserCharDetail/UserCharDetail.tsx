@@ -33,6 +33,7 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 import ProducedByStargazer from "../../global/ProducedByStargazer/ProducedByStargazer";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 
 export default function UserCharDetail() {
   const charId = useProfileCharId();

@@ -34,7 +34,7 @@ export default function PersonalSetting() {
     ? getCharFullData(
         officalCharId[String(wallPaper?.id).split("-")?.[0]],
         textLanguage
-      )?.name + "壁紙"
+      )?.name
     : wallPaper?.name;
 
   // 模糊效果

@@ -20,9 +20,12 @@ import DraggableFlatList, {
   RenderItemParams,
 } from "react-native-draggable-flatlist";
 import { uniq } from "lodash";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../locales";
 
 export default function UIDSearch() {
   const navigation = useNavigation();
+  const { language } = useAppLanguage()
 
   const [input, setInput] = useState("");
   const [uidHistory, setUidHistory] = useLocalState<string[]>(
@@ -37,15 +40,15 @@ export default function UIDSearch() {
 
   const handleSubmit = () => {
     if (input.length !== 9 || !getServerFromUUID(input)) {
-      Toast("UID 格式錯誤");
+      Toast(LOCALES[language].UIDFormatError);
     } else {
-      Toast("搜尋中...", 8);
+      Toast(LOCALES[language].Searching, 8);
       refetch();
     }
   };
   useEffect(() => {
     if (error) {
-      Toast("查無資料");
+      Toast(LOCALES[language].UIDNoData);
     }
 
     if (data) {
@@ -77,10 +80,10 @@ export default function UIDSearch() {
           value={input}
           onChangeText={setInput}
           onSubmit={handleSubmit}
-          placeholder="請輸入 UID"
+          placeholder={LOCALES[language].UIDEnter}
         />
         <Text className="text-text text-[12px] font-[HY65] leading-4">
-          僅支持查詢完整uid，不支持查詢暱稱或部分uid
+          {LOCALES[language].UIDOnlySupportFullUID}
         </Text>
         {!!uidHistory?.length && (
           <View
@@ -88,11 +91,11 @@ export default function UIDSearch() {
             style={{ justifyContent: "space-between", flexDirection: "row" }}
           >
             <Text className="text-text text-[14px] font-[HY65] leading-5">
-              查詢記錄
+              {LOCALES[language].UIDSearchRecord}
             </Text>
             <TouchableOpacity activeOpacity={0.35} onPress={handleClearHistory}>
               <Text className="text-text text-[14px] font-[HY65] leading-5">
-                清除
+                {LOCALES[language].UIDSearchRecordClear}
               </Text>
             </TouchableOpacity>
           </View>

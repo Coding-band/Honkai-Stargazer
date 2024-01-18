@@ -10,6 +10,7 @@ import { LOCALES } from "../../../../../../../locales";
 import { hsrServer } from "../../../../../../utils/hoyolab/servers/hsrServer";
 import { keys } from "lodash";
 import Toast from "../../../../../../utils/toast/Toast";
+import useAppLanguage from "../../../../../../language/AppLanguage/useAppLanguage";
 
 type Props = {
   onCookieSave?: () => void;
@@ -17,7 +18,7 @@ type Props = {
 
 export default function ManualEnterCookie(props: Props) {
   const [btnChooseServerIndex, setBtnChooseServerIndex] = useState(0);
-
+  const { language } = useAppLanguage()
   const { setHoyolabCookie } = useHoyolabCookie();
   const { setHsrServerChosen } = useHsrServerChosen();
 
@@ -25,7 +26,7 @@ export default function ManualEnterCookie(props: Props) {
 
   const handleSaveCookie = () => {
     if (!inputCookie) {
-      Toast("請輸入 cookie！");
+      Toast(LOCALES[language].LoginEnterCookies);
       return;
     }
 
@@ -38,7 +39,7 @@ export default function ManualEnterCookie(props: Props) {
   return (
     <View style={{ gap: 12 }}>
       <Text className="text-[14px] font-[HY65] text-black leading-5">
-        請選擇服務器並貼上 Cookies。
+        {LOCALES[language].SelectServerAndPasteCookies}
       </Text>
       <TextButton
         onPress={() => {
@@ -60,8 +61,7 @@ export default function ManualEnterCookie(props: Props) {
         onChangeText={setInputCookie}
         textAlignVertical="top"
         multiline={true}
-        placeholder={`請使用電腦登入 hoyolab / 米游社，按 F12 開啟開發人員面板-> 應用程式 -> Cookies, 把包含 ltuid_v2、ltoken_v2、account_id_v2、cookie_token_v2、account_mid_v2 和 ltmid_v2 貼上。請注意，此選項主要為開發人員設計。Stargazer 建議您在非不得已的情況下不要使用這一選項，以免增加複雜度。
-`}
+        placeholder={LOCALES[language].LoginViaPCToGetCookies}
         className="w-full h-[280px] bg-[#ffffff50] rounded-[24px] p-3 font-[HY55] leading-5"
       />
       <TextButton
@@ -70,7 +70,7 @@ export default function ManualEnterCookie(props: Props) {
         width={"100%"}
         height={46}
       >
-        確定
+        {LOCALES[language].ConfirmBTN}
       </TextButton>
     </View>
   );

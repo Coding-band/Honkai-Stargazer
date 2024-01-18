@@ -36,10 +36,10 @@ export default function AccountSetting() {
         {hsrUUID && (
           <SettingItem
             type="list"
-            title={"個人頁面展示"}
+            title={LOCALES[language].SettingPersonalPage}
             list={[
-              { value: true, name: "顯示" },
-              { value: false, name: "隱藏" },
+              { value: true, name: LOCALES[language].SettingPersonalPageShow },
+              { value: false, name: LOCALES[language].SettingPersonalPageDisable },
             ]}
             value={isShowInfo}
             onChange={(v) => {
