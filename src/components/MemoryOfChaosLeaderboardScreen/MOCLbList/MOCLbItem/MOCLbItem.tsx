@@ -7,6 +7,8 @@ import CharacterImage from "../../../../../assets/images/images_map/chacracterIm
 import officalCharId from "../../../../../map/character_offical_id_map";
 import useMyFirebaseUid from "../../../../firebase/hooks/FirebaseUid/useMyFirebaseUid";
 import { LinearGradient } from "expo-linear-gradient";
+import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
+import { ParamList } from "../../../../types/navigation";
 
 export default function MOCLbItem({
   versionNumber,
@@ -17,11 +19,15 @@ export default function MOCLbItem({
   floorNumber: number;
   floorName: string;
 }) {
+  const navigation = useNavigation();
+  const route = useRoute<RouteProp<ParamList, "MemoryOfChaosLeaderboard">>();
+  const showMoreFloorDetails = !!route.params?.floorNumber;
+
   const [showRank, setShowRank] = useState(false);
   const [isLayer2, setIsLayer2] = useState(false);
 
   const { data: floorLbData } = useQuery(
-    ["moc-leaderboard", floorNumber, versionNumber],
+    ["moc-leaderboard", floorNumber, versionNumber, showMoreFloorDetails],
     async () =>
       (
         await db
@@ -29,7 +35,7 @@ export default function MOCLbItem({
           .orderBy("star_num", "desc")
           .orderBy("round_num")
           .orderBy("challenge_time")
-          .limit(5)
+          .limit(showMoreFloorDetails ? 50 : 5)
           .get()
       ).docs.map((doc) => doc.data())
   );
@@ -52,28 +58,60 @@ export default function MOCLbItem({
       className="border border-[#DDDDDD20] rounded-[4px] py-4 px-3 w-[360px]"
       style={{ gap: 8 }}
     >
-      <Text className="text-text2 font-[HY65] text-[16px]">
-        {floorName}
-        {isLayer2 ? "（下半）" : "（上半）"}
-      </Text>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <Text className="text-text2 font-[HY65] text-[16px]">
+          {floorName}
+          {isLayer2 ? "（下半）" : "（上半）"}
+        </Text>
+        <TouchableOpacity
+          activeOpacity={0.65}
+          onPress={() => {
+            // @ts-ignore
+            navigation.push("MemoryOfChaosLeaderboard", {
+              scheduleId: versionNumber,
+              floorNumber: floorNumber,
+            });
+          }}
+        >
+          <Text className="text-text2 font-[HY65] text-[12px]">展示更多</Text>
+        </TouchableOpacity>
+      </View>
       <View style={{ gap: 12 }}>
-        {[
-          floorLbData?.[0],
-          floorLbData?.[1],
-          floorLbData?.[2],
-          floorLbData?.[3],
-          floorLbData?.[4],
-        ]?.map((user, i) => (
-          <RecordItem
-            key={i}
-            rank={i + 1}
-            {...user}
-            showRank={showRank}
-            onShowRank={setShowRank}
-            isLayer2={isLayer2}
-            onSetIsLayer2={setIsLayer2}
-          />
-        ))}
+        {showMoreFloorDetails
+          ? new Array(50)
+              .fill(null)
+              .map((val, i) => floorLbData?.[i])
+              ?.map((user, i) => (
+                <RecordItem
+                  key={i}
+                  rank={i + 1}
+                  {...user}
+                  showRank={showRank}
+                  onShowRank={setShowRank}
+                  isLayer2={isLayer2}
+                  onSetIsLayer2={setIsLayer2}
+                />
+              ))
+          : new Array(5)
+              .fill(null)
+              .map((val, i) => floorLbData?.[i])
+              ?.map((user, i) => (
+                <RecordItem
+                  key={i}
+                  rank={i + 1}
+                  {...user}
+                  showRank={showRank}
+                  onShowRank={setShowRank}
+                  isLayer2={isLayer2}
+                  onSetIsLayer2={setIsLayer2}
+                />
+              ))}
         <RecordItem
           rank={"-"}
           {...myFloorLbData}
@@ -87,7 +125,7 @@ export default function MOCLbItem({
   );
 }
 
-const RecordItem = (props: any) => {
+const RecordItem = React.memo((props: any) => {
   function getRankColor(rank: number) {
     const colors = {
       1: "#FFD070",
@@ -109,15 +147,17 @@ const RecordItem = (props: any) => {
         }}
       >
         <View style={{ gap: 4 }}>
-          <View style={{ flexDirection: "row", gap: 4, alignItems: "center" }}>
+          <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <View className="w-6 absolute -left-3" style={{alignItems:"flex-end"}}>
+              <Text
+                style={{ color: getRankColor(props.rank) }}
+                className="font-[HY65] text-[16px]"
+              >
+                {props.rank}
+              </Text>
+            </View>
             <Text
-              style={{ color: getRankColor(props.rank) }}
-              className="font-[HY65] text-[16px]"
-            >
-              {props.rank}
-            </Text>
-            <Text
-              className="text-[14px] font-[HY65] leading-4"
+              className="text-[14px] font-[HY65] leading-4 pl-6"
               style={{ color: props?.name ? "white" : "#DDD" }}
             >
               {
@@ -178,4 +218,4 @@ const RecordItem = (props: any) => {
       </View>
     </View>
   );
-};
+});

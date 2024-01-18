@@ -17,4 +17,5 @@ export type ParamList = {
   Event: { id: string };
   UserInfo: { uuid: string };
   UserCharDetail: { uuid: string; charId: CharacterName };
+  MemoryOfChaosLeaderboard: { scheduleId?: number; floorNumber?: number };
 };
