@@ -180,9 +180,9 @@ export const strings = {
   ATTR_ICE_DMG: "冰傷害提高",
   ATTR_IMAGINARY_DMG: "虛數傷害提高",
   ATTR_WIND_DMG: "風傷害提高",
-  ATTR_THUNDER_DMG: "雷傷害提高",
+  ATTR_LIGHTNING_DMG: "雷傷害提高",
   ATTR_PHYSICAL_DMG: "物理傷害提高",
-  ATTR_ENERGY_REGENERATE: "能量恢復效率",
+  ATTR_SP_RATE: "能量恢復效率",
   ATTR_HEAL_BONUS: "治療量加成",
   //Add in 20240117
   UnLockAll: "解鎖全部",

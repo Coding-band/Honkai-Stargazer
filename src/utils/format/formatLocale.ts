@@ -1,3 +1,6 @@
 export default function formatLocale(localeString: string, params: any[] = []) {
-  return localeString.replace("${1}", params[0]);
+  for(let index = 0 ; index < params.length ; index++){
+    localeString = localeString.replace("${"+index+"}", params[index]);
+  }
+  return localeString;
 }
