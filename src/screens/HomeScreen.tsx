@@ -26,6 +26,7 @@ import BetaWidget from "../components/global/Beta/BetaWidget";
 import WallPaperForMOC from "../components/global/WallPaper/WallPaperForMOC";
 import useMemoryOfChaosPrev from "../hooks/hoyolab/useMemoryOfChaosPrev";
 import genId from "../utils/genId";
+import useHsrInGameInfo from "../hooks/mihomo/useHsrInGameInfo";
 
 export default function HomeScreen() {
   const uid = useMyFirebaseUid();
@@ -36,6 +37,7 @@ export default function HomeScreen() {
   const hsrUUID = useHsrUUID();
   const hsrPlayerData = useHsrPlayerData();
   const { data: hsrCharList } = useHsrCharList();
+  // const { data: hsrInGameInfo } = useHsrInGameInfo(hsrUUID);
 
   const moc = useMemoryOfChaos().data;
   const mocPrev = useMemoryOfChaosPrev().data;

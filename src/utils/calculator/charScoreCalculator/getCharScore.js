@@ -14,6 +14,8 @@ export default function getCharScore(charId, charData) {
   const charScoreWeight = scoreWeight[charId][schoolIndex]; //對應角色流派内，該角色評分權重
   const charLightconeID = charData.light_cone.id; //角色使用中的光錐
   const charLightconeSuper = charData.light_cone.rank; //角色使用中的光錐疊影
+  const charPromotion = charData.promotion; //角色突破等級
+  const charLevel = charData.level; //角色等級
   const charSoulLvl = charData.rank; //角色的星魂等級
   const charTraceLvl = charData.skills;  //角色行跡内等級
 
@@ -34,35 +36,35 @@ export default function getCharScore(charId, charData) {
 
   // 光錐分數 -> 加最多10+4分 (10 : 推薦 || +4 : 疊影)
   let lightconeScore = 0
-  if(charScoreWeight.advice_lightcone.includes(Number(charLightconeID))){
+  if (charScoreWeight.advice_lightcone.includes(Number(charLightconeID))) {
     lightconeScore = lcAdviceScores
-  }else if(charScoreWeight.normal_lightcone.includes(Number(charLightconeID))){
+  } else if (charScoreWeight.normal_lightcone.includes(Number(charLightconeID))) {
     lightconeScore = lcSuitableScores
-  }else{
+  } else {
     lightconeScore = 0
   }
-  lightconeScore += (charLightconeSuper-1) //疊影 = [2,3,4,5] -> 每次加1分
+  lightconeScore += (charLightconeSuper - 1) //疊影 = [2,3,4,5] -> 每次加1分
 
   // 星魂分數 -> 最多6分
   let soulScore = 0
-  for(let i = 0 ; i < charScoreWeight.soul.length ; i++){
-    if(charSoulLvl >= charScoreWeight.soul[i]){
-      soulScore += (soulScore >= 6 ? 0 : (6/charScoreWeight.soul.length))
-    }else{
+  for (let i = 0; i < charScoreWeight.soul.length; i++) {
+    if (charSoulLvl >= charScoreWeight.soul[i]) {
+      soulScore += (soulScore >= 6 ? 0 : (6 / charScoreWeight.soul.length))
+    } else {
       break;
     }
   }
 
   // 行跡分數 -> 最多36分
   let traceScore = 0
-  let isChecked = [false,false,false,false];
+  let isChecked = [false, false, false, false];
   charTraceLvl.map((trace) => {
-    switch(trace.type){
-      case "Normal" : if(isChecked[0]) return; isChecked[0] = true; traceScore += charScoreWeight.trace.normal_atk * trace.level /3;break; //Max 9*2/3 = 6
-      case "Ultra" : if(isChecked[1]) return; isChecked[1] = true; traceScore += charScoreWeight.trace.ultimate * trace.level /3;break; //Max 15*2/3 = 10
-      case "Talent" : if(isChecked[2]) return; isChecked[2] = true; traceScore += charScoreWeight.trace.talent * trace.level /3;break;  //Max 15*2/3 = 10
-      case "BPSkill" : if(isChecked[3]) return; isChecked[3] = true; traceScore += charScoreWeight.trace.skill * trace.level /3;break;  //Max 15*2/3 = 10
-      default : traceScore += 0
+    switch (trace.type) {
+      case "Normal": if (isChecked[0]) return; isChecked[0] = true; traceScore += charScoreWeight.trace.normal_atk * trace.level / 3; break; //Max 9*2/3 = 6
+      case "Ultra": if (isChecked[1]) return; isChecked[1] = true; traceScore += charScoreWeight.trace.ultimate * trace.level / 3; break; //Max 15*2/3 = 10
+      case "Talent": if (isChecked[2]) return; isChecked[2] = true; traceScore += charScoreWeight.trace.talent * trace.level / 3; break;  //Max 15*2/3 = 10
+      case "BPSkill": if (isChecked[3]) return; isChecked[3] = true; traceScore += charScoreWeight.trace.skill * trace.level / 3; break;  //Max 15*2/3 = 10
+      default: traceScore += 0
     }
   })
   traceScore = (traceScore > 36 ? 36 : traceScore)
@@ -76,8 +78,8 @@ export default function getCharScore(charId, charData) {
 
   const attrGradKeys = Object.keys(charScoreWeight.grad); //獲取所有有畢業值的屬性
   const attrWeightValidKeys = Object.keys(charScoreWeight.attr); //獲取所有有畢業值的屬性
-  for(let x = 0 ; x < attrWeightValidKeys.length ; x++){
-    if(attrGradKeys.includes(attrWeightValidKeys[x])){ 
+  for (let x = 0; x < attrWeightValidKeys.length; x++) {
+    if (attrGradKeys.includes(attrWeightValidKeys[x])) {
       attrWeightSum += charScoreWeight.attr[attrWeightValidKeys[x]] //計算總權重淨值 (1.5+2+1+...)
     }
   }
@@ -93,17 +95,17 @@ export default function getCharScore(charId, charData) {
     * (attrValue < 3 ? attrValue * 10 : (attrValue > 200 ? attrValue / 100 : attrValue / 10))
     */
 
-    if(gradValue === undefined || weightValue === undefined){
+    if (gradValue === undefined || weightValue === undefined) {
       //...如果沒有畢業分，做甚麼？只能不算
-    }else{
+    } else {
       attrScore += (attrValue / gradValue) //畢業比率
-        * ((0.5*Math.pow(charLevel,2)/80)/40) //角色等級Curve
+        * ((0.5 * Math.pow(charLevel, 2) / 80) / 40) //角色等級Curve
         * (weightValue / attrWeightSum) * 58 //滿分的佔比
-      console.log(name+" : "+(attrValue)+" / "+(gradValue)+" || "+((attrValue) / (gradValue))+" || "+((attrValue) / (gradValue))* (weightValue / attrWeightSum) * 58) //畢業比率
-      
+      // console.log(name + " : " + (attrValue) + " / " + (gradValue) + " || " + ((attrValue) / (gradValue)) + " || " + ((attrValue) / (gradValue)) * (weightValue / attrWeightSum) * 58) //畢業比率
+
     }
   })
-  
+
   //最大值 120 , 畢業100
   //console.log(lightconeScore+"||"+ soulScore+"||" + traceScore +"||"+ attrScore+"||"+promotionScore)
   return lightconeScore + soulScore + traceScore + attrScore + promotionScore
