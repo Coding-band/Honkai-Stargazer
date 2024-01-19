@@ -280,7 +280,6 @@ export const strings = {
   FunctionStillInDevelop: "ㄆㄚㄇㄨㄎㄞㄈㄚㄓㄨㄥ",
   LoginEnterCookies: "請輸入 cookie！",
   SelectServerAndPasteCookies: "請選擇服務器並貼上 Cookies。",
-  LoginViaPCToGetCookies: "請使用電腦登入 hoyolab / 米游社，按 F12 開啟開發人員面板-> 應用程式 -> Cookies, 把包含 ltuid_v2、ltoken_v2、account_id_v2、cookie_token_v2、account_mid_v2 和 ltmid_v2 貼上。請注意，此選項主要為開發人員設計。Stargazer 建議您在非不得已的情況下不要使用這一選項，以免增加複雜度。",
   ConfirmBTN: "ㄑㄩㄝㄉ一ㄥ",
   ShareSuccess: "分享成功！",
   ShareError: "分享失敗，錯誤訊息： ",

@@ -1,7 +1,7 @@
 const scoreWeight = require("./data/charWeightList.json");
 const demoCharData = require("./data/charDataDemo.json");
 
-function getCharScore(charId, charData) {
+export default function getCharScore(charId, charData) {
   //const charId = "1217";
   const schoolIndex = 0 //流派Index
 
@@ -104,11 +104,11 @@ function getCharScore(charId, charData) {
   })
   
   //最大值 120 , 畢業100
-  console.log(lightconeScore+"||"+ soulScore+"||" + traceScore +"||"+ attrScore)
+  //console.log(lightconeScore+"||"+ soulScore+"||" + traceScore +"||"+ attrScore)
   return lightconeScore + soulScore + traceScore + attrScore
 }
 
-function getCharRank(score){
+export function getCharRank(score){
   if(score <= 20){return "D"}
   if(score <= 40){return "C"}
   if(score <= 60){return "B"}
@@ -116,6 +116,3 @@ function getCharRank(score){
   if(score <= 100){return "S"}
   if(score <= 120){return "SS"}
 }
-
-console.log(getCharScore("1217",demoCharData))
-console.log(getCharRank(getCharScore("1217",demoCharData)))

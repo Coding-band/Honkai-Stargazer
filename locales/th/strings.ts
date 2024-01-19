@@ -180,7 +180,7 @@ export const strings = {
   ATTR_ICE_DMG: "Ice DMG",
   ATTR_IMAGINARY_DMG: "Imaginary DMG",
   ATTR_WIND_DMG: "Wind DMG",
-  ATTR_THUNDER_DMG: "Thunder DMG",
+  ATTR_LIGHTNING_DMG: "Lightning DMG",
   ATTR_PHYSICAL_DMG: "Physical DMG",
   ATTR_ENERGY_REGENERATE: "Energy Regen.",
   ATTR_HEAL_BONUS: "Heal Bonus",
