@@ -182,7 +182,7 @@ export const strings = {
   ATTR_LIGHTNING_DMG: "Lightning DMG",
   ATTR_PHYSICAL_DMG: "Physical DMG",
   ATTR_SP_RATE: "Energy Regen.",
-  ATTR_HEAL_BONUS: "Heal Bonus",
+  ATTR_HEAL_RATE: "Heal Bonus",
 
   //Add in 20240117
   UnLockAll: "Unlock All",

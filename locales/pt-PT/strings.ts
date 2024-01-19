@@ -182,7 +182,7 @@ export const strings = {
   ATTR_LIGHTNING_DMG: "DANO de Raio",
   ATTR_PHYSICAL_DMG: "DANO Físico",
   ATTR_SP_RATE: "Recuperação de Energia.",
-  ATTR_HEAL_BONUS: "Bônus de Cura",
+  ATTR_HEAL_RATE: "Bônus de Cura",
   //Add in 20240117
   UnLockAll: "Desbloquear Tudo",
   BlurOn: "Desfoque : LIGADO",

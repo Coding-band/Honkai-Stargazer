@@ -182,7 +182,7 @@ export const strings = {
   ATTR_LIGHTNING_DMG: "Lightning DMG",
   ATTR_PHYSICAL_DMG: "Physical DMG",
   ATTR_SP_RATE: "EP回復効率",
-  ATTR_HEAL_BONUS: "治癒量",
+  ATTR_HEAL_RATE: "治癒量",
   //Add in 20240117
   UnLockAll: "Unlock All",
   BlurOn: "Blur : ON",

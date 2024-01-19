@@ -182,7 +182,7 @@ export const strings = {
   ATTR_LIGHTNING_DMG: "ㄌㄟㄕㄤㄊ一ㄍㄠ",
   ATTR_PHYSICAL_DMG: "ㄨㄕㄤㄊ一ㄍㄠ",
   ATTR_SP_RATE: "ㄔㄨㄥㄋㄥㄒ一ㄠㄌㄩ",
-  ATTR_HEAL_BONUS: "ㄓㄌ一ㄠㄌ一ㄤㄐ一ㄚㄔㄥ",
+  ATTR_HEAL_RATE: "ㄓㄌ一ㄠㄌ一ㄤㄐ一ㄚㄔㄥ",
   //Add in 20240117
   UnLockAll: "ㄐㄧㄝㄙㄨㄛㄑㄩㄢㄅㄨ",
   BlurOn: "ㄇㄛㄏㄨ : ㄎㄞㄑ一",

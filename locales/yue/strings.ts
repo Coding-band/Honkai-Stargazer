@@ -182,7 +182,7 @@ export const strings = {
   ATTR_LIGHTNING_DMG: "雷傷害提高",
   ATTR_PHYSICAL_DMG: "物理傷害提高",
   ATTR_SP_RATE: "能量恢復效率",
-  ATTR_HEAL_BONUS: "治療量加成",
+  ATTR_HEAL_RATE: "治療量加成",
   //Add in 20240117
   UnLockAll: "解鎖全部",
   BlurOn: "模糊：開咗",
