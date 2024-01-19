@@ -181,7 +181,7 @@ export const strings = {
   ATTR_WIND_DMG: "Wind DMG",
   ATTR_LIGHTNING_DMG: "Lightning DMG",
   ATTR_PHYSICAL_DMG: "Physical DMG",
-  ATTR_ENERGY_REGENERATE: "Energy Regen.",
+  ATTR_SP_RATE: "Energy Regen.",
   ATTR_HEAL_BONUS: "Heal Bonus",
   //Add in 20240117
   UnLockAll: "Unlock All",

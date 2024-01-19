@@ -44,7 +44,7 @@ export default function UserCharScore() {
           <Text className="text-text font-[HY65] text-[24px]">
             {charTotalScore.toFixed(1)}
           </Text>
-          <Text className="text-text font-[HY65] text-[12px]">角色評分</Text>
+          <Text className="text-text font-[HY65] text-[12px]">{LOCALES[appLanguage].CharScore}</Text>
         </View>
         <View style={{ gap: 8, alignItems: "center" }}>
           <Image
@@ -52,7 +52,7 @@ export default function UserCharScore() {
             source={ScoreRangeFont[getCharRange(charTotalScore)]}
             contentFit="contain"
           />
-          <Text className="text-text font-[HY65] text-[12px]">角色評價</Text>
+          <Text className="text-text font-[HY65] text-[12px]">{LOCALES[appLanguage].CharRank}</Text>
         </View>
         <View
           className="h-[55px]"

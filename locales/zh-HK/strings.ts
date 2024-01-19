@@ -179,7 +179,7 @@ export const strings = {
   ATTR_ICE_DMG: "冰傷害提高",
   ATTR_IMAGINARY_DMG: "虛數傷害提高",
   ATTR_WIND_DMG: "風傷害提高",
-  ATTR_LIGHTNING_DMG: "雷傷害提高",//edit to LIGHTNING
+  ATTR_LIGHTNING_DMG: "雷傷害提高",
   ATTR_PHYSICAL_DMG: "物理傷害提高",
   ATTR_SP_RATE: "能量恢復效率",
   ATTR_HEAL_BONUS: "治療量加成",
@@ -229,7 +229,7 @@ export const strings = {
   StatusToday: "今天 ${1}",
   StatusTomorrow: "明天 ${1}",
   SuperimposeLvl: "${1}階",
-  SuperimposeNotEquipped: "無裝備",
+  SuperimposeNotEquipped: "沒裝備",
   TrailblazerNoti: "開拓者快訊",
   CommentFailed: "留言失敗，錯誤訊息：",
   CommentPlsEnterComment: "請輸入訊息！",
@@ -278,5 +278,5 @@ export const strings = {
   ConfirmBTN: "確定",
   ShareSuccess: "分享成功！",
   ShareError: "分享失敗，錯誤訊息：",
-  CodeAll: "所有伺服器",
+  CodeAll: "所有伺服器"
 };

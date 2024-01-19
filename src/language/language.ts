@@ -42,4 +42,5 @@ export const AppLanguage: AppLanguageType[] = [
   "jyu_yam",
   "es",
   "ru",
+  "pt",
 ];

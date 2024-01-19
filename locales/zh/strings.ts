@@ -236,7 +236,7 @@ export const strings = {
   CommentHaventLogin: "您尚未登入！",
   CommentSuccessful: "留言成功！",
   CommentTextInputHint: "幫幫我 史瓦羅先生！",
-  CommentInDiscussion: "在「${charName}」的評論區",
+  CommentInDiscussion: "在「${1}」的評論區",
   MOCMissionInfoTitle: "ㄍㄨㄢㄎㄚㄗㄒㄩㄣ",
   MOCSkipped: "ㄎㄨㄞㄙㄨㄊㄨㄥㄍㄨㄢ",
   MOCMissionPart1: "一",
