@@ -1,5 +1,4 @@
 import scoreWeight from "./data/relicWeightList.json";
-import demoCharData from "./data/charDataDemo.json";
 
 export default function getRelicScore(
   charId: string,
@@ -219,7 +218,11 @@ export default function getRelicScore(
 
   //單一遺器的總分
   const relicEachFinalScore = relicSubFinalScore.map((val, i) => {
-    return { [relicOrder[i]]: (val + relicMainScore[i][relicOrder[i]]) * relicRarityExpectPercent[5-relicRarity[i]]};
+    return {
+      [relicOrder[i]]:
+        (val + relicMainScore[i][relicOrder[i]]) *
+        relicRarityExpectPercent[5 - relicRarity[i]],
+    };
   });
 
   //所有遺器合共的總分 !!!
@@ -233,8 +236,34 @@ export default function getRelicScore(
   //你只需要 relicAllFinalScore 去計算評價等級 (等級範圍明天聊)
   return {
     mainScore: relicMainScore,
-    subScore : relicSubScore,
+    subScore: relicSubScore,
     eachScore: relicEachFinalScore,
     totalScore: relicAllFinalScore,
   };
+}
+
+export function getRelicScoreRange(score: number) {
+  // 10,20,30,40,50 (0,+10,+10,+10,+10)
+  // 6,14,22,36,45 (0,+8,+8,+14,+9)
+  // 6,10,14,20,28,36,45 (0,+4,+4,+6,+8,+8,+9) -> Using
+  //if (score < 6) return "E";
+  if (score < 10) return "D";
+  if (score < 14) return "C";
+  if (score < 20) return "B";
+  if (score < 28) return "A";
+  if (score < 36) return "S";
+  if (score >= 36) return "SS";
+  //if (score < 45) return "SS";
+  //if (score >= 45) return "Voc";
+  return "D";
+}
+
+export function getRelicTotalScoreRange(score: number) {
+  if (score < 40) return "D";
+  else if (score < 80) return "C";
+  else if (score < 100) return "B";
+  else if (score < 150) return "A";
+  else if (score < 200) return "S";
+  else if (score >= 200) return "SS";
+  else return "D";
 }

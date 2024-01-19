@@ -64,7 +64,10 @@ export default function UserInfo(props: Props) {
   const timeString =
     lastLoginDuration < 300
       ? LOCALES[language].StatusNow
-      : LOCALES[language].UserInfoLastLoginAt.replace("${1}",formatTimeDurationSimple(lastLoginDuration));
+      : LOCALES[language].UserInfoLastLoginAt.replace(
+          "${1}",
+          formatTimeDurationSimple(lastLoginDuration)
+        );
 
   // 用戶留言
   const parts = timeString.split(/([A-Za-z\u4e00-\u9fa5]+)/);
@@ -166,7 +169,7 @@ export default function UserInfo(props: Props) {
                   ) : (
                     <Text>
                       {userData?.last_login ? (
-                        parts.map((part, index) =>
+                        parts.map((part: any, index: number) =>
                           // 检查每个部分是否为纯数字
                           /^\d+$/.test(part) ? (
                             <Text key={index}>{part}</Text>

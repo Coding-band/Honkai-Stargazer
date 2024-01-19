@@ -20,38 +20,35 @@ export default function getCharScore(charId, charData) {
   //合拼 attributes+additions [START] { _ / omit -> lodash}
   let charAttrTMP = new Map();
   charData.attributes.map((attrs) => {
-    charAttrTMP.set(attrs.field,attrs.value)
+    charAttrTMP.set(attrs.field, attrs.value)
   })
   const charAttrFinal = charData.additions.map((attrs) => { //存放final合拼 attributes+additions
-    return {[attrs.field] : attrs.value + (charAttrTMP.get(attrs.field) === undefined ? 0 : charAttrTMP.get(attrs.field))}
+    return { [attrs.field]: attrs.value + (charAttrTMP.get(attrs.field) === undefined ? 0 : charAttrTMP.get(attrs.field)) }
   })
   //合拼 attributes+additions [END]
 
   // 該角色還沒有權重
   if (!charScoreWeight) {
-    return {
-      eachScore: null,
-      totalScore: 0,
-    };
+    return 0
   }
 
   // 光錐分數 -> 加最多10+5分 (10 : 推薦 || +5 : 疊影)
   let lightconeScore = 0
-  if(charScoreWeight.advice_lightcone.includes(Number(charLightconeID))){
+  if (charScoreWeight.advice_lightcone.includes(Number(charLightconeID))) {
     lightconeScore = lcAdviceScores
-  }else if(charScoreWeight.normal_lightcone.includes(Number(charLightconeID))){
+  } else if (charScoreWeight.normal_lightcone.includes(Number(charLightconeID))) {
     lightconeScore = lcSuitableScores
-  }else{
+  } else {
     lightconeScore = 0
   }
   lightconeScore += (charLightconeSuper) //疊影 = [1,2,3,4,5] -> 每次加1分
 
   // 星魂分數 -> 每級+5分, 最多10分
   let soulScore = 0
-  for(let i = 0 ; i < charScoreWeight.soul.length ; i++){
-    if(charSoulLvl >= charScoreWeight.soul[i]){
+  for (let i = 0; i < charScoreWeight.soul.length; i++) {
+    if (charSoulLvl >= charScoreWeight.soul[i]) {
       soulScore += (soulScore >= 10 ? 0 : 5)
-    }else{
+    } else {
       break;
     }
   }
@@ -59,12 +56,12 @@ export default function getCharScore(charId, charData) {
   // 行跡分數 -> 最多35分
   let traceScore = 0
   charTraceLvl.map((trace) => {
-    switch(trace.type){
-      case "Normal" : traceScore += charScoreWeight.trace.normal_atk * trace.level /3;break; //Max 9*2/3 = 6
-      case "Ultra" : traceScore += charScoreWeight.trace.ultimate * trace.level /3;break; //Max 15*2/3 = 10
-      case "Talent" : traceScore += charScoreWeight.trace.talent * trace.level /3;break;  //Max 15*2/3 = 10
-      case "BPSkill" : traceScore += charScoreWeight.trace.skill * trace.level /3;break;  //Max 15*2/3 = 10
-      default : traceScore += 0
+    switch (trace.type) {
+      case "Normal": traceScore += charScoreWeight.trace.normal_atk * trace.level / 3; break; //Max 9*2/3 = 6
+      case "Ultra": traceScore += charScoreWeight.trace.ultimate * trace.level / 3; break; //Max 15*2/3 = 10
+      case "Talent": traceScore += charScoreWeight.trace.talent * trace.level / 3; break;  //Max 15*2/3 = 10
+      case "BPSkill": traceScore += charScoreWeight.trace.skill * trace.level / 3; break;  //Max 15*2/3 = 10
+      default: traceScore += 0
     }
   })
   traceScore = (traceScore > 35 ? 35 : traceScore)
@@ -75,8 +72,8 @@ export default function getCharScore(charId, charData) {
 
   const attrGradKeys = Object.keys(charScoreWeight.grad); //獲取所有有畢業值的屬性
   const attrWeightValidKeys = Object.keys(charScoreWeight.attr); //獲取所有有畢業值的屬性
-  for(let x = 0 ; x < attrWeightValidKeys.length ; x++){
-    if(attrGradKeys.includes(attrWeightValidKeys[x])){ 
+  for (let x = 0; x < attrWeightValidKeys.length; x++) {
+    if (attrGradKeys.includes(attrWeightValidKeys[x])) {
       attrWeightSum += charScoreWeight.attr[attrWeightValidKeys[x]] //計算總權重淨值 (1.5+2+1+...)
     }
   }
@@ -93,26 +90,27 @@ export default function getCharScore(charId, charData) {
     * (attrValue < 3 ? attrValue * 10 : (attrValue > 200 ? attrValue / 100 : attrValue / 10))
     */
 
-    if(gradValue === undefined || weightValue === undefined){
+    if (gradValue === undefined || weightValue === undefined) {
       //...如果沒有畢業分，做甚麼？只能不算
-    }else{
+    } else {
       attrScore += (attrValue / gradValue) //畢業比率
         * (weightValue / attrWeightSum) * 60 //滿分的佔便比
       //console.log(name+" : "+attrValue+" / "+gradValue+" || "+(attrValue / gradValue) //畢業比率
       //)
     }
   })
-  
+
   //最大值 120 , 畢業100
   //console.log(lightconeScore+"||"+ soulScore+"||" + traceScore +"||"+ attrScore)
   return lightconeScore + soulScore + traceScore + attrScore
 }
 
-export function getCharRank(score){
-  if(score <= 20){return "D"}
-  if(score <= 40){return "C"}
-  if(score <= 60){return "B"}
-  if(score <= 80){return "A"}
-  if(score <= 100){return "S"}
-  if(score <= 120){return "SS"}
+export function getCharRange(score) {
+  if (score <= 20) { return "D" }
+  else if (score <= 40) { return "C" }
+  else if (score <= 60) { return "B" }
+  else if (score <= 80) { return "A" }
+  else if (score <= 100) { return "S" }
+  else { return "SS" }
+
 }

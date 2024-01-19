@@ -1,15 +1,11 @@
 import { View, Text, TouchableOpacity, Dimensions } from "react-native";
 import React from "react";
-import { LinearGradient } from "expo-linear-gradient";
-import { CardColors } from "../../../../../constant/card";
 import { Image } from "expo-image";
 import Relic from "../../../../../../assets/images/images_map/relic";
 import { RelicName } from "../../../../../types/relic";
 import officalRelicId from "../../../../../../map/relic_offical_id_map";
 import AttributeImage from "../../../../../../assets/images/images_map/attributeImage";
-import BlurView from "../../../../global/BlurView/BlurView";
 import RelicScore from "./RelicScore/RelicScore";
-import getRelicScore from "../../../../../utils/calculator/relicScoreCalculator/getRelicScore";
 import CardBg from "../../../../global/CardBg/CardBg";
 
 export default function RelicItem({
@@ -74,7 +70,7 @@ export default function RelicItem({
       {/* 詞條 */}
       <View>
         <View
-          className="w-[120px]"
+          className="w-[114px]"
           style={{
             flexDirection: "row",
             alignItems: "center",

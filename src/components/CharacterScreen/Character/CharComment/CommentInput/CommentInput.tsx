@@ -97,6 +97,7 @@ export default function CommentInput({
 
       Toast(LOCALES[language].CommentSuccessful);
       setInput("");
+      Keyboard.dismiss();
 
       // 更新評論區
       getComments();

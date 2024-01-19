@@ -34,6 +34,7 @@ import Animated, {
 } from "react-native-reanimated";
 import ProducedByStargazer from "../../global/ProducedByStargazer/ProducedByStargazer";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
+import UserCharScore from "./UserCharScore/UserCharScore";
 
 export default function UserCharDetail() {
   const charId = useProfileCharId();
@@ -126,6 +127,7 @@ export default function UserCharDetail() {
           <UserCharAttribute />
           <UserCharLightcone />
           <UserCharRelics />
+          <UserCharScore />
           {/* 由 Stargazer 製作 */}
           <View className="mb-16 mt-0">
             <ProducedByStargazer />

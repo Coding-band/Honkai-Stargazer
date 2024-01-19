@@ -17,6 +17,7 @@ import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../constant/screens";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
+import formatLocale from "../../../../utils/format/formatLocale";
 
 type Props = {
   type: "character-comment";
@@ -56,9 +57,11 @@ export default function Comment(props: Props) {
         </TouchableOpacity>
         <View style={{ gap: 2, flex: 1 }}>
           <View style={{ flexDirection: "row", gap: 10, alignItems: "center" }}>
-            <TouchableWithoutFeedback onPress={() => { }}>
+            <TouchableWithoutFeedback onPress={() => {}}>
               <Text className="text-[#CCC] text-[12px] font-[HY65] leading-5">
-                {LOCALES[language].CommentInDiscussion.replace("${1}",getCharFullData(charId, textLanguage)?.name)}
+                {formatLocale(LOCALES[language].CommentInDiscussion, [
+                  getCharFullData(charId, textLanguage)?.name,
+                ])}
               </Text>
             </TouchableWithoutFeedback>
           </View>

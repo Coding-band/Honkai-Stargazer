@@ -2,11 +2,11 @@ import { View, Text } from "react-native";
 import React from "react";
 import { Image } from "expo-image";
 import { ScoreColors } from "../../../../../../constant/score";
-import getScoreRange from "../../utils/getScoreRange";
 import RelicScoreBlurMap from "./images/map/RelicScoreBlurMap";
+import { getRelicScoreRange } from "../../../../../../utils/calculator/relicScoreCalculator/getRelicScore";
 
 export default function RelicScore({ score }: { score: number }) {
-  const scoreRange = getScoreRange(score);
+  const scoreRange = getRelicScoreRange(score);
 
   return (
     <View>
