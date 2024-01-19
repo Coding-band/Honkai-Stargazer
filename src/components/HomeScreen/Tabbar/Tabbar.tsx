@@ -12,7 +12,7 @@ import BetaTabbar from "../../global/Beta/BetaTabbar";
 export default function Tabbar() {
   const { language } = useAppLanguage();
   return (
-    <SafeAreaView className={cn("absolute bottom-0", "w-full h-[180px]")}>
+    <SafeAreaView className={cn("absolute bottom-0", "w-full h-[152px]")}>
       <Divider />
       {/* <View
         style={{
@@ -44,7 +44,20 @@ export default function Tabbar() {
           {LOCALES[language].DonationRemoveAds}
         </Text>
         {ENV === "beta" ? (
-          <BetaTabbar />
+          // <BetaTabbar />
+          <Pressable
+            className="w-full h-[70px]"
+            onPress={() => {
+              Linking.openURL(
+                "https://play.google.com/store/apps/details?id=com.voc.genshin_spirit_gp"
+              );
+            }}
+          >
+            <Image
+              className="w-full h-full"
+              source={require("../../../../assets/ads/gs_ad.png")}
+            />
+          </Pressable>
         ) : (
           <Pressable
             className="w-full h-[70px]"

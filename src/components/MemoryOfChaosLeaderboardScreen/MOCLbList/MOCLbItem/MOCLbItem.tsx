@@ -11,6 +11,7 @@ import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { ParamList } from "../../../../types/navigation";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
+import formatLocale from "../../../../utils/format/formatLocale";
 
 export default function MOCLbItem({
   versionNumber,
@@ -21,6 +22,8 @@ export default function MOCLbItem({
   floorNumber: number;
   floorName: string;
 }) {
+  const { language } = useAppLanguage();
+
   const navigation = useNavigation();
   const route = useRoute<RouteProp<ParamList, "MemoryOfChaosLeaderboard">>();
   const showMoreFloorDetails = !!route.params?.floorNumber;
@@ -28,10 +31,11 @@ export default function MOCLbItem({
   const [showRank, setShowRank] = useState(false);
   const [isLayer2, setIsLayer2] = useState(false);
 
+  // 排行榜資訊
   const { data: floorLbData } = useQuery(
     ["moc-leaderboard", floorNumber, versionNumber, showMoreFloorDetails],
-    async () =>
-      (
+    async () => {
+      const result = (
         await db
           .UserMemoryOfChaos(versionNumber, floorNumber)
           .orderBy("star_num", "desc")
@@ -39,9 +43,12 @@ export default function MOCLbItem({
           .orderBy("challenge_time")
           .limit(showMoreFloorDetails ? 50 : 5)
           .get()
-      ).docs.map((doc) => doc.data())
+      ).docs.map((doc) => doc.data());
+      return result;
+    }
   );
 
+  // 我的排行榜資訊
   const firebaseUID = useMyFirebaseUid();
   const { data: myFloorLbData } = useQuery(
     ["my-moc-leaderboard", floorNumber, versionNumber, firebaseUID],
@@ -54,7 +61,6 @@ export default function MOCLbItem({
       ).data()
   );
 
-  const { language } = useAppLanguage();
   return (
     <LinearGradient
       colors={["#000000", "#00000000"]}
@@ -69,8 +75,7 @@ export default function MOCLbItem({
         }}
       >
         <Text className="text-text2 font-[HY65] text-[16px]">
-          {floorName}
-          {" "}
+          {floorName}{" "}
           {isLayer2 ? LOCALES[language].MOCPart2 : LOCALES[language].MOCPart1}
         </Text>
         <TouchableOpacity
@@ -83,7 +88,9 @@ export default function MOCLbItem({
             });
           }}
         >
-          <Text className="text-text2 font-[HY65] text-[12px]">{LOCALES[language].MOCShowMore}</Text>
+          <Text className="text-text2 font-[HY65] text-[12px]">
+            {LOCALES[language].MOCShowMore}
+          </Text>
         </TouchableOpacity>
       </View>
       <View style={{ gap: 12 }}>
@@ -153,7 +160,10 @@ const RecordItem = React.memo((props: any) => {
       >
         <View style={{ gap: 4 }}>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
-            <View className="w-6 absolute -left-3" style={{alignItems:"flex-end"}}>
+            <View
+              className="w-6 absolute -left-3"
+              style={{ alignItems: "flex-end" }}
+            >
               <Text
                 style={{ color: getRankColor(props.rank) }}
                 className="font-[HY65] text-[16px]"
@@ -176,17 +186,18 @@ const RecordItem = React.memo((props: any) => {
             <Text className="text-text text-[10px] font-[HY65] translate-x-[-10px]">
               {new Date(props.challenge_time).toLocaleDateString()}{" "}
               {new Date(props.challenge_time).getHours()}:
-              {new Date(props.challenge_time).getMinutes()} {LOCALES[language].MOCRounds.replace("${1}",props.round_num)}{" "}
-              {LOCALES[language].MOCStars.replace("${1}",props.star_num)}
+              {new Date(props.challenge_time).getMinutes()}{" "}
+              {formatLocale(LOCALES[language].MOCRounds, [props.round_num])}{" "}
+              {formatLocale(LOCALES[language].MOCStars, [props.star_num])}
             </Text>
           )}
         </View>
         <TouchableOpacity
           activeOpacity={0.35}
-          onPress={() => {
+          onLongPress={() => {
             props.onSetIsLayer2(!props.isLayer2);
           }}
-          onLongPress={() => {
+          onPress={() => {
             props.onShowRank(!props.showRank);
           }}
           style={{ flexDirection: "row", gap: 6 }}

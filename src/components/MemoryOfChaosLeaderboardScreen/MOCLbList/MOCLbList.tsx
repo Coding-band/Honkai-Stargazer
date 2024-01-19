@@ -1,37 +1,24 @@
-import {
-  View,
-  ScrollView,
-  RefreshControl,
-  Dimensions,
-  Text,
-} from "react-native";
+import { View, ScrollView, Dimensions, Text } from "react-native";
 import React, { useState } from "react";
 import MOCLbItem from "./MOCLbItem/MOCLbItem";
 import MOCDataMap from "../../../../map/memory_of_chao_data_map";
 import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
 import Button from "../../global/Button/Button";
 import Listbox from "../../global/Listbox/Listbox";
-import { Image } from "expo-image";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { ParamList } from "../../../types/navigation";
+import { MocVersion } from "../../../constant/moc";
 
 export default function MOCLbList() {
   const { language: textLanguage } = useTextLanguage();
 
   const route = useRoute<RouteProp<ParamList, "MemoryOfChaosLeaderboard">>();
+  // 當頁面跳轉時有指定版本&樓層數 (查看完整排行榜時)
   const scheduleId = route.params?.scheduleId;
   const floorNumber = route.params?.floorNumber;
 
-  const mocVersion = [
-    {
-      id: 1009,
-      name: `${MOCDataMap[1009].time.versionBegin} - ${MOCDataMap[1009].time.versionEnd} ${MOCDataMap[1009].name[textLanguage]}`,
-    },
-    {
-      id: 1008,
-      name: `${MOCDataMap[1008].time.versionBegin} - ${MOCDataMap[1008].time.versionEnd} ${MOCDataMap[1008].name[textLanguage]}`,
-    },
-  ];
+  const mocVersion = MocVersion(textLanguage);
+
   const [selectedVersion, setSelectedVersion] = useState(
     scheduleId || mocVersion[0].id
   );
@@ -77,12 +64,12 @@ export default function MOCLbList() {
         </View>
         <View style={{ gap: 16, alignItems: "center" }} className="mb-44">
           {floorNumber
-            ? [floorNames?.[floorNumber - 1]]?.map(
+            ? [floorNames?.[floorNames.length - floorNumber]]?.map(
                 (name: string, i: number) => (
                   <MOCLbItem
                     key={i}
                     versionNumber={selectedVersion}
-                    floorNumber={floorNames.length - i}
+                    floorNumber={floorNumber}
                     floorName={name}
                   />
                 )

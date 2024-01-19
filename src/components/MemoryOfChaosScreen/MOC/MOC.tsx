@@ -16,22 +16,15 @@ import { HtmlText } from "@e-mine/react-native-html-text";
 import Listbox from "../../global/Listbox/Listbox";
 import { LOCALES } from "../../../../locales";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
+import { MocVersion } from "../../../constant/moc";
 
 export default function MOC() {
   const { language: textLanguage } = useTextLanguage();
 
   const [showDetail, setShowDetail] = useState(false);
 
-  const mocVersion = [
-    {
-      id: 1009,
-      name: `${MOCDataMap[1009].time.versionBegin} - ${MOCDataMap[1009].time.versionEnd} ${MOCDataMap[1009].name[textLanguage]}`,
-    },
-    {
-      id: 1008,
-      name: `${MOCDataMap[1008].time.versionBegin} - ${MOCDataMap[1008].time.versionEnd} ${MOCDataMap[1008].name[textLanguage]}`,
-    },
-  ];
+  const mocVersion = MocVersion(textLanguage);
+
   const [selectedVersion, setSelectedVersion] = useState(mocVersion[0].id);
   const mocData = MOCDataMap[selectedVersion];
 

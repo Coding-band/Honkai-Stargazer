@@ -1,4 +1,6 @@
 import T from "react-native-root-toast";
+import { AppLanguage } from "../../language/language.types";
+import { LOCALES } from "../../../locales";
 
 export default function Toast(message: string, second: number = 2) {
   return T.show(message, {
@@ -24,11 +26,14 @@ export default function Toast(message: string, second: number = 2) {
 
 /**20240118 UNSUITABLE TO EDIT */
 //FunctionStillInDevelop
-Toast.StillDevelopingToast = () => {
-  return Toast("此功能仍在開發中 Still in Development");
+Toast.StillDevelopingToast = (lang: AppLanguage = "en") => {
+  return Toast(LOCALES[lang].FunctionStillInDevelop);
 };
 
-Toast.CopyToClipboard = () => {
-  return Toast("已複製 Copied");
+Toast.CopyToClipboard = (lang: AppLanguage = "zh_hk") => {
+  return Toast(LOCALES[lang].CopyToClipBoard);
 };
 
+Toast.FailToCopy = (lang: AppLanguage = "zh_hk") => {
+  return Toast(LOCALES[lang].FailToCopy);
+};

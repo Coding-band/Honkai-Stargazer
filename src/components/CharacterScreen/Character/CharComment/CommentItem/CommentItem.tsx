@@ -19,7 +19,6 @@ import { ThumbsUp } from "phosphor-react-native";
 import useMyFirebaseUid from "../../../../../firebase/hooks/FirebaseUid/useMyFirebaseUid";
 import db from "../../../../../firebase/db";
 import firestore from "@react-native-firebase/firestore";
-import { useQuery } from "react-query";
 import { LOCALES } from "../../../../../../locales";
 import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
 
@@ -159,7 +158,9 @@ const HasOwnedTag = () => {
       className="h-4 px-[5px] bg-[#F3F9FF] rounded-[34px]"
       style={{ justifyContent: "center" }}
     >
-      <Text className="text-[#393A5C] text-[10px] font-[HY65]">{LOCALES[language].UserOwned}</Text>
+      <Text className="text-[#393A5C] text-[10px] font-[HY65]">
+        {LOCALES[language].UserOwned}
+      </Text>
     </View>
   );
 };
@@ -171,7 +172,9 @@ const MaxRankTag = () => {
       className="h-4 px-[5px] bg-[#FFE690] rounded-[34px]"
       style={{ justifyContent: "center" }}
     >
-      <Text className="text-[#6C5710] text-[10px] font-[HY65]">{LOCALES[language].FullEidolon}</Text>
+      <Text className="text-[#6C5710] text-[10px] font-[HY65]">
+        {LOCALES[language].FullEidolon}
+      </Text>
     </View>
   );
 };

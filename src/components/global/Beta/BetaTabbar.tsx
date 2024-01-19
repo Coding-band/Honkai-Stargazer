@@ -21,9 +21,14 @@ export default function BetaTabbar() {
   return (
     <View className="w-full h-full px-4">
       <HtmlText
-        style={{ color: "white", fontFamily: "HY65", textAlign: "center",lineHeight:20 }}
+        style={{
+          color: "white",
+          fontFamily: "HY65",
+          textAlign: "center",
+          lineHeight: 20,
+        }}
       >
-        {tabbarMessage?.[language]}
+        {tabbarMessage?.[language] || tabbarMessage?.["en"]}
       </HtmlText>
     </View>
   );

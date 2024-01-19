@@ -11,9 +11,9 @@ const useCopyToClipboard = () => {
     async (text: string) => {
       try {
         await Clipboard.setStringAsync(text);
-        Toast.CopyToClipboard();
+        Toast.CopyToClipboard(appLanguage);
       } catch (e) {
-        Toast(LOCALES[appLanguage].FailToCopy + e);
+        Toast.FailToCopy(appLanguage);
       }
     },
     [appLanguage]

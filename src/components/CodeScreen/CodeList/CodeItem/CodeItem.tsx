@@ -21,7 +21,7 @@ export default function CodeItem(props: Props) {
   const handleCopyCode = useCallback(async () => {
     try {
       await Clipboard.setStringAsync(props.code);
-      Toast.CopyToClipboard();
+      Toast.CopyToClipboard(language);
       setHasCopy(true);
     } catch (e) {
       //

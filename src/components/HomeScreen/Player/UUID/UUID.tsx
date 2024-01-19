@@ -7,15 +7,15 @@ import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
 export default function UUID() {
-  const uuid = useHsrUUID();
   const { language } = useAppLanguage();
 
+  const uuid = useHsrUUID();
   const handleCopyUUID = useCallback(async () => {
     try {
       await Clipboard.setStringAsync(uuid);
-      Toast.CopyToClipboard();
+      Toast.CopyToClipboard(language);
     } catch (e) {
-      Toast(LOCALES[language].FailToCopy + e);
+      Toast.FailToCopy(language);
     }
   }, [uuid, language]);
 

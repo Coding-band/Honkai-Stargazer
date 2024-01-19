@@ -12,9 +12,9 @@ export default function UUIDBox({ uuid }: { uuid: string }) {
   const handleCopyUUID = useCallback(async () => {
     try {
       await Clipboard.setStringAsync(uuid);
-      Toast.CopyToClipboard();
+      Toast.CopyToClipboard(appLanguage);
     } catch (e) {
-      Toast(LOCALES[appLanguage].FailToCopy + e);
+      Toast.FailToCopy(appLanguage);
     }
   }, [uuid, appLanguage]);
 
@@ -25,7 +25,8 @@ export default function UUIDBox({ uuid }: { uuid: string }) {
         style={{ alignItems: "center" }}
       >
         <Text className="text-[#FFFFFF] font-[HY65]">
-          {uuid} · {LOCALES[appLanguage][getServerFromUUID(uuid)]}
+          {uuid || "000000000"} ·{" "}
+          {LOCALES[appLanguage][getServerFromUUID(uuid)!] || "無"}
         </Text>
       </View>
     </TouchableOpacity>
