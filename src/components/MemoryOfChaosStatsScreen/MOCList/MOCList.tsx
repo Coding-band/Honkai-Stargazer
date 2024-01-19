@@ -69,20 +69,14 @@ export default function MOCList() {
       {!floors?.length && <NoDataYet />}
       {!moc && <NotFound />}
       <Animated.ScrollView ref={aref} className="z-30 pt-[127px] pb-0">
-        {loaded ? (
-          <View
-            style={{ ...globalStyles.rJCenterFWrap, gap: 12 }}
-            className="pb-48"
-          >
-            {floors?.map((floor: any, index: number) => (
-              <MOCFloor key={floor?.title} {...floor} />
-            ))}
-          </View>
-        ) : (
-          <View className="translate-y-[-127px]">
-            <Loading />
-          </View>
-        )}
+        <View
+          style={{ ...globalStyles.rJCenterFWrap, gap: 12 }}
+          className="pb-48"
+        >
+          {floors?.map((floor: any, index: number) => (
+            <MOCFloor key={floor?.title} {...floor} />
+          ))}
+        </View>
       </Animated.ScrollView>
     </View>
   );

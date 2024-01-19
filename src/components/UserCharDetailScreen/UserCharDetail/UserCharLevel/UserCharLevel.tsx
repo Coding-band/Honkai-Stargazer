@@ -15,10 +15,10 @@ export default function UserCharLevel() {
   const profileUUID = useProfileUUID();
 
   const { inGameCharData } = useProfileHsrInGameInfo();
-  // const { data: hoyolabCharacters } = useUserCharactersByUUID(profileUUID);
-  // const hoyolabCharData = hoyolabCharacters?.characters?.filter(
-  //   (char) => officalCharId[char.id] === charId
-  // )[0];
+  const { data: hoyolabCharacters } = useUserCharactersByUUID(profileUUID);
+  const hoyolabCharData = hoyolabCharacters?.characters?.filter(
+    (char: any) => officalCharId[char.id] === charId
+  )[0];
 
   return (
     <View
@@ -26,8 +26,12 @@ export default function UserCharLevel() {
       style={{ alignItems: "center" }}
     >
       <Text className="text-[12px] text-[#FFFFFF] font-[HY65]">
-        {LOCALES[language].UserCharLevelLv} {inGameCharData?.level} ·{" "}
-        {LOCALES[language].CharSoul.replace("${1}",inGameCharData?.rank)}
+        {LOCALES[language].UserCharLevelLv}{" "}
+        {inGameCharData?.level || hoyolabCharData.level} ·{" "}
+        {LOCALES[language].CharSoul.replace(
+          "${1}",
+          inGameCharData?.rank || hoyolabCharData.rank
+        )}
       </Text>
     </View>
   );

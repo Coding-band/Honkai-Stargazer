@@ -20,7 +20,7 @@ export default function MemoryOfChaosScreen() {
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar style="dark" />
       <WallPaperForMOC />
-      {showMain && <MOC />}
+      <MOC />
     </View>
   );
 }

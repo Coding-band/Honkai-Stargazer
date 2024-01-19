@@ -107,18 +107,20 @@ const Like = ({
   };
 
   useEffect(() => {
-    if (isLiked) {
-      db.CharacterComments(charOfficalId)
-        .doc(commentId)
-        .update({
-          likes: firestore.FieldValue.arrayUnion(firebaseUID),
-        });
-    } else {
-      db.CharacterComments(charOfficalId)
-        .doc(commentId)
-        .update({
-          likes: firestore.FieldValue.arrayRemove(firebaseUID),
-        });
+    if (firebaseUID) {
+      if (isLiked) {
+        db.CharacterComments(charOfficalId)
+          .doc(commentId)
+          .update({
+            likes: firestore.FieldValue.arrayUnion(firebaseUID),
+          });
+      } else {
+        db.CharacterComments(charOfficalId)
+          .doc(commentId)
+          .update({
+            likes: firestore.FieldValue.arrayRemove(firebaseUID),
+          });
+      }
     }
   }, [isLiked]);
 

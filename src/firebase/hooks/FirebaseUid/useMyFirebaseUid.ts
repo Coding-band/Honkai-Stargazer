@@ -6,8 +6,7 @@ import useHsrUUID from "../../../hooks/hoyolab/useHsrUUID";
 const useMyFirebaseUid = () => {
   const hsrUUID = useHsrUUID();
   const firebaseUID = useFirebaseUidByUUID(hsrUUID);
-
-  return firebaseUID;
+  return firebaseUID || "";
 };
 
 export default useMyFirebaseUid;

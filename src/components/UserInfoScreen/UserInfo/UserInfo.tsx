@@ -9,7 +9,7 @@ import UserInfoCharacters from "./UserInfoCharacters/UserInfoCharacters";
 import Toast from "../../../utils/toast/Toast";
 import UserAvatar from "../../global/UserAvatar/UserAvatar";
 import AvatarIcon from "../../../../assets/images/images_map/avatarIcon";
-import { animated, useSpring } from "@react-spring/native";
+import { animated} from "@react-spring/native";
 import UUIDBox from "../../global/UUIDBox/UUIDBox";
 import Loading from "../../global/Loading/Loading";
 import ProducedByStargazer from "../../global/ProducedByStargazer/ProducedByStargazer";

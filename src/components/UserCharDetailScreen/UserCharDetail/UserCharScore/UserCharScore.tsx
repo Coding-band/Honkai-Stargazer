@@ -22,71 +22,74 @@ export default function UserCharScore() {
     inGameCharData?.id,
     userRelicsData
   );
-  const charTotalScore = getCharScore(inGameCharData?.id, inGameCharData);
-
-  console.log(charTotalScore);
+  const charTotalScore = inGameCharData
+    ? getCharScore(inGameCharData?.id, inGameCharData)
+    : 0;
 
   return (
-    <>
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "center",
-          gap: 16,
-          flexWrap: "wrap",
-        }}
-      >
-        {/* <View style={{ gap: 8, alignItems: "center" }}>
+    inGameCharData && (
+      <>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            gap: 16,
+            flexWrap: "wrap",
+          }}
+        >
+          {/* <View style={{ gap: 8, alignItems: "center" }}>
           <Text className="text-text font-[HY65] text-[24px]">101%</Text>
           <Text className="text-text font-[HY65] text-[12px]">角色毕业率</Text>
         </View> */}
-        <View style={{ gap: 8, alignItems: "center" }}>
-          <Text className="text-text font-[HY65] text-[24px]">
-            {charTotalScore.toFixed(1)}
-          </Text>
-          <Text className="text-text font-[HY65] text-[12px]">{LOCALES[appLanguage].CharScore}</Text>
+
+          <View style={{ gap: 8, alignItems: "center" }}>
+            <Text className="text-text font-[HY65] text-[24px]">
+              {charTotalScore.toFixed(1)}
+            </Text>
+            <Text className="text-text font-[HY65] text-[12px]">角色評分</Text>
+          </View>
+          <View style={{ gap: 8, alignItems: "center" }}>
+            <Image
+              className="w-12 h-8"
+              source={ScoreRangeFont[getCharRange(charTotalScore)]}
+              contentFit="contain"
+            />
+            <Text className="text-text font-[HY65] text-[12px]">角色評價</Text>
+          </View>
+          <View
+            className="h-[55px]"
+            style={{ justifyContent: "space-between", alignItems: "center" }}
+          >
+            <Text className="text-text font-[HY65] text-[24px]">
+              {relicTotalScore.toFixed(1)}
+            </Text>
+            <Text className="text-text font-[HY65] text-[12px]">
+              {LOCALES[appLanguage].RelicScore}
+            </Text>
+          </View>
+          <View
+            className="h-[55px]"
+            style={{ justifyContent: "space-between", alignItems: "center" }}
+          >
+            <Image
+              className="w-12 h-8"
+              source={ScoreRangeFont[getRelicTotalScoreRange(relicTotalScore)]}
+              contentFit="contain"
+            />
+            <Text className="text-text font-[HY65] text-[12px]">
+              {LOCALES[appLanguage].RelicRank}
+            </Text>
+          </View>
         </View>
-        <View style={{ gap: 8, alignItems: "center" }}>
-          <Image
-            className="w-12 h-8"
-            source={ScoreRangeFont[getCharRange(charTotalScore)]}
-            contentFit="contain"
-          />
-          <Text className="text-text font-[HY65] text-[12px]">{LOCALES[appLanguage].CharRank}</Text>
-        </View>
-        <View
-          className="h-[55px]"
-          style={{ justifyContent: "space-between", alignItems: "center" }}
-        >
-          <Text className="text-text font-[HY65] text-[24px]">
-            {relicTotalScore.toFixed(1)}
+        <View style={{ alignItems: "center", gap: 2 }}>
+          <Text className="text-text font-[HY65] text-[18px] leading-5">
+            {LOCALES[appLanguage].LackOfUserData}
           </Text>
-          <Text className="text-text font-[HY65] text-[12px]">
-            {LOCALES[appLanguage].RelicScore}
+          <Text className="text-[#FFFFFF60] font-[HY65] text-[12px] leading-4">
+            {LOCALES[appLanguage].LeaderboardDataFrom}
           </Text>
         </View>
-        <View
-          className="h-[55px]"
-          style={{ justifyContent: "space-between", alignItems: "center" }}
-        >
-          <Image
-            className="w-12 h-8"
-            source={ScoreRangeFont[getRelicTotalScoreRange(relicTotalScore)]}
-            contentFit="contain"
-          />
-          <Text className="text-text font-[HY65] text-[12px]">
-            {LOCALES[appLanguage].RelicRank}
-          </Text>
-        </View>
-      </View>
-      <View style={{ alignItems: "center", gap: 2 }}>
-        <Text className="text-text font-[HY65] text-[18px] leading-5">
-          {LOCALES[appLanguage].LackOfUserData}
-        </Text>
-        <Text className="text-[#FFFFFF60] font-[HY65] text-[12px] leading-4">
-          {LOCALES[appLanguage].LeaderboardDataFrom}
-        </Text>
-      </View>
-    </>
+      </>
+    )
   );
 }

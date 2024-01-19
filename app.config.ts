@@ -1,7 +1,7 @@
 import { ExpoConfig, ConfigContext } from "expo/config";
 
 // process.env.NODE_ENV;
-export const ENV = "beta";
+export const ENV = "development";
 
 export const APP_NAME = {
   development: "Stargazer Development Version",
@@ -21,7 +21,6 @@ export const APP_ICON = {
   ios: "./assets/IOS.png",
   android: "./assets/Android.png",
 };
-
 
 export const PACKAGE_NAME = {
   iosBETA: "com.voc.honkaistargazerbeta",
@@ -57,7 +56,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   assetBundlePatterns: ["**/*"],
   ios: {
-    bitcode: false,
     googleServicesFile: "./GoogleService-Info.plist",
     supportsTablet: true,
     bundleIdentifier: askEnvDo({

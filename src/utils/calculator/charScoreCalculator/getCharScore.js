@@ -4,8 +4,8 @@ const demoCharData = require("./data/charDataDemo.json");
 export default function getCharScore(charId, charData) {
   let maxSchoolDataIndex = 0
   let schoolData = []
-  for(let index = 0 ; index < scoreWeight[charId].length ; index++){
-      
+  for (let index = 0; index < scoreWeight[charId].length; index++) {
+
     //const charId = "1217";
     const schoolIndex = index //流派Index
 
@@ -108,14 +108,14 @@ export default function getCharScore(charId, charData) {
         // console.log(name + " : " + (attrValue) + " / " + (gradValue) + " || " + ((attrValue) / (gradValue)) + " || " + ((attrValue) / (gradValue)) * (weightValue / attrWeightSum) * 58) //畢業比率
 
       }
-      
+
     })
 
     //最大值 120 , 畢業100
     //console.log(lightconeScore+"||"+ soulScore+"||" + traceScore +"||"+ attrScore+"||"+promotionScore)
 
     schoolData.push((lightconeScore + soulScore + traceScore + attrScore + promotionScore))
-    if(schoolData[index] > schoolData[maxSchoolDataIndex]){
+    if (schoolData[index] > schoolData[maxSchoolDataIndex]) {
       maxSchoolDataIndex = index;
     }
   }
@@ -124,10 +124,10 @@ export default function getCharScore(charId, charData) {
 
 export function getCharRange(score) {
   if (score < 20) { return "D" }
-  if (score < 40) { return "C" }
-  if (score < 60) { return "B" }
-  if (score < 80) { return "A" }
-  if (score < 100) { return "S" }
+  else if (score < 40) { return "C" }
+  else if (score < 60) { return "B" }
+  else if (score < 80) { return "A" }
+  else if (score < 100) { return "S" }
   return "SS"
 
 }

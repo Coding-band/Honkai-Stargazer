@@ -7,7 +7,7 @@ const useHsrInGameInfo = (uuid: string = "00000000", config?: any) => {
     () => axios.get(`https://api.mihomo.me/sr_info_parsed/${uuid}?lang=cht`),
     {
       select(data) {
-        return data?.data;
+        return data?.data as any;
       },
       ...config,
     }

@@ -255,10 +255,10 @@ export default function UserInfoCharacters(props: Props) {
                       }
                       onPress={() => {
                         // @ts-ignore
-                        // navigation.navigate("UserCharDetail", {
-                        //   uuid: props.uuid,
-                        //   charId: char.id,
-                        // });
+                        navigation.navigate("UserCharDetail", {
+                          uuid: props.uuid,
+                          charId: char.id,
+                        });
                       }}
                     />
                   ))}

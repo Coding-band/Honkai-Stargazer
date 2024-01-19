@@ -27,6 +27,7 @@ import WallPaperForMOC from "../components/global/WallPaper/WallPaperForMOC";
 import useMemoryOfChaosPrev from "../hooks/hoyolab/useMemoryOfChaosPrev";
 import genId from "../utils/genId";
 import useHsrInGameInfo from "../hooks/mihomo/useHsrInGameInfo";
+import { unionBy } from "lodash";
 
 export default function HomeScreen() {
   const uid = useMyFirebaseUid();
@@ -37,7 +38,7 @@ export default function HomeScreen() {
   const hsrUUID = useHsrUUID();
   const hsrPlayerData = useHsrPlayerData();
   const { data: hsrCharList } = useHsrCharList();
-  // const { data: hsrInGameInfo } = useHsrInGameInfo(hsrUUID);
+  const { data: hsrInGameInfo } = useHsrInGameInfo(hsrUUID);
 
   const moc = useMemoryOfChaos().data;
   const mocPrev = useMemoryOfChaosPrev().data;
@@ -151,6 +152,8 @@ export default function HomeScreen() {
   useEffect(() => {
     async function createOrUpdateUserCharacters() {
       if (uid && hsrCharList) {
+        const UserCharacterDocGet = await db.UserCharacters.doc(uid).get();
+        const UserCharactersIsExist = UserCharacterDocGet.exists;
         const charsData = {
           characters: hsrCharList.map((char: any) => ({
             id: char?.id,
@@ -180,9 +183,12 @@ export default function HomeScreen() {
                 }))
               : [],
           })),
+          characters_details: unionBy(
+            UserCharacterDocGet?.data()?.characters_characters_details,
+            hsrInGameInfo?.characters,
+            "id"
+          ),
         } as UserCharacters;
-        const UserCharactersIsExist = (await db.UserCharacters.doc(uid).get())
-          .exists;
         if (UserCharactersIsExist) {
           try {
             db.UserCharacters.doc(uid).update(charsData);

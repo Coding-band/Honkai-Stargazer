@@ -321,58 +321,26 @@ export default function UserCharAttribute() {
   ];
 
   return (
-    <TouchableOpacity
-      onPress={() => {
-        setDisplayMode(displayMode === "light" ? "normal" : "light");
-      }}
-      activeOpacity={0.35}
-    >
-      {displayMode === "light" ? (
-        <View
-          className="px-3"
-          style={{
-            flexDirection: "row",
-            gap: 10,
-            flexWrap: "wrap",
-            justifyContent: "center",
-          }}
-        >
-          {attributes.map(
-            (attr) =>
-              (attr.attr || attr.addi) && (
-                <View
-                  style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    gap: 6,
-                  }}
-                >
-                  <Image source={attr.icon} className="w-6 h-6" />
-                  <Text className="text-text text-[14px] font-[HY65]">
-                    {attr.value}
-                  </Text>
-                </View>
-              )
-          )}
-        </View>
-      ) : (
-        <View
-          className="px-3"
-          style={{
-            gap: 10,
-          }}
-        >
-          {attributes.map(
-            (attr) =>
-              (attr.attr || attr.addi) && (
-                <View
-                  className="w-[320px]"
-                  style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                  }}
-                >
+    inGameCharData && (
+      <TouchableOpacity
+        onPress={() => {
+          setDisplayMode(displayMode === "light" ? "normal" : "light");
+        }}
+        activeOpacity={0.35}
+      >
+        {displayMode === "light" ? (
+          <View
+            className="px-3"
+            style={{
+              flexDirection: "row",
+              gap: 10,
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
+          >
+            {attributes.map(
+              (attr) =>
+                (attr.attr || attr.addi) && (
                   <View
                     style={{
                       flexDirection: "row",
@@ -381,30 +349,63 @@ export default function UserCharAttribute() {
                     }}
                   >
                     <Image source={attr.icon} className="w-6 h-6" />
-                    <Text className="text-text text-[14px] font-[HY65] leading-5">
-                      {/* @ts-ignore */}
-                      {LOCALES[language]["ATTR_" + attr.key.toUpperCase()]}
+                    <Text className="text-text text-[14px] font-[HY65]">
+                      {attr.value}
                     </Text>
                   </View>
+                )
+            )}
+          </View>
+        ) : (
+          <View
+            className="px-3"
+            style={{
+              gap: 10,
+            }}
+          >
+            {attributes.map(
+              (attr) =>
+                (attr.attr || attr.addi) && (
                   <View
+                    className="w-[320px]"
                     style={{
                       flexDirection: "row",
                       alignItems: "center",
-                      gap: 6,
+                      justifyContent: "space-between",
                     }}
                   >
-                    <Text className="text-text text-[14px] font-[HY65]">
-                      {attr.attr}
-                      {attr.addi && attr.attr ? <Text> + </Text> : null}
-                      <Text className="text-green-600">{attr.addi}</Text>
-                    </Text>
+                    <View
+                      style={{
+                        flexDirection: "row",
+                        alignItems: "center",
+                        gap: 6,
+                      }}
+                    >
+                      <Image source={attr.icon} className="w-6 h-6" />
+                      <Text className="text-text text-[14px] font-[HY65] leading-5">
+                        {/* @ts-ignore */}
+                        {LOCALES[language]["ATTR_" + attr.key.toUpperCase()]}
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        flexDirection: "row",
+                        alignItems: "center",
+                        gap: 6,
+                      }}
+                    >
+                      <Text className="text-text text-[14px] font-[HY65]">
+                        {attr.attr}
+                        {attr.addi && attr.attr ? <Text> + </Text> : null}
+                        <Text className="text-green-600">{attr.addi}</Text>
+                      </Text>
+                    </View>
                   </View>
-                </View>
-              )
-          )}
-        </View>
-      )}
-    </TouchableOpacity>
+                )
+            )}
+          </View>
+        )}
+      </TouchableOpacity>
+    )
   );
 }
-
