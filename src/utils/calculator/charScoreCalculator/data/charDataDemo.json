@@ -1,114 +1,114 @@
 {
-  "id": "8002",
-  "name": "Dalufish",
+  "id": "1006",
+  "name": "銀狼",
   "rarity": 5,
-  "rank": 5,
-  "level": 40,
-  "promotion": 2,
-  "icon": "icon/character/8002.png",
-  "preview": "image/character_preview/8002.png",
-  "portrait": "image/character_portrait/8002.png",
+  "rank": 0,
+  "level": 80,
+  "promotion": 6,
+  "icon": "icon/character/1006.png",
+  "preview": "image/character_preview/1006.png",
+  "portrait": "image/character_portrait/1006.png",
   "rank_icons": [
-    "icon/skill/8002_rank1.png",
-    "icon/skill/8002_rank2.png",
-    "icon/skill/8002_skill.png",
-    "icon/skill/8002_rank4.png",
-    "icon/skill/8002_ultimate.png",
-    "icon/skill/8002_rank6.png"
+    "icon/skill/1006_rank1.png",
+    "icon/skill/1006_rank2.png",
+    "icon/skill/1006_skill.png",
+    "icon/skill/1006_rank4.png",
+    "icon/skill/1006_ultimate.png",
+    "icon/skill/1006_rank6.png"
   ],
   "path": {
-    "id": "Warrior",
-    "name": "毀滅",
-    "icon": "icon/path/Destruction.png"
+    "id": "Warlock",
+    "name": "虛無",
+    "icon": "icon/path/Nihility.png"
   },
   "element": {
-    "id": "Physical",
-    "name": "物理",
-    "color": "#FFFFFF",
-    "icon": "icon/element/Physical.png"
+    "id": "Quantum",
+    "name": "量子",
+    "color": "#1C29BA",
+    "icon": "icon/element/Quantum.png"
   },
   "skills": [
     {
-      "id": "800201",
-      "name": "再見安打",
-      "level": 2,
+      "id": "100601",
+      "name": "|系統警告|",
+      "level": 4,
       "max_level": 9,
       "element": {
-        "id": "Physical",
-        "name": "物理",
-        "color": "#FFFFFF",
-        "icon": "icon/element/Physical.png"
+        "id": "Quantum",
+        "name": "量子",
+        "color": "#1C29BA",
+        "icon": "icon/element/Quantum.png"
       },
       "type": "Normal",
       "type_text": "普通攻擊",
       "effect": "SingleAttack",
       "effect_text": "單體攻擊",
-      "simple_desc": "對敵方單體造成少量物理屬性傷害。",
-      "desc": "對指定敵方單體造成等同於開拓者60%攻擊力的物理屬性傷害。",
-      "icon": "icon/skill/8002_basic_atk.png"
+      "simple_desc": "對敵方單體造成少量量子屬性傷害。",
+      "desc": "對指定敵方單體造成等同於銀狼80%攻擊力的量子屬性傷害。",
+      "icon": "icon/skill/1006_basic_atk.png"
     },
     {
-      "id": "800202",
-      "name": "安息全壘打",
-      "level": 4,
+      "id": "100602",
+      "name": "是否允許更改？",
+      "level": 7,
       "max_level": 15,
       "element": {
-        "id": "Physical",
-        "name": "物理",
-        "color": "#FFFFFF",
-        "icon": "icon/element/Physical.png"
+        "id": "Quantum",
+        "name": "量子",
+        "color": "#1C29BA",
+        "icon": "icon/element/Quantum.png"
       },
       "type": "BPSkill",
       "type_text": "戰技",
-      "effect": "Blast",
-      "effect_text": "擴散",
-      "simple_desc": "對敵方單體以及相鄰目標造成物理屬性傷害。",
-      "desc": "對指定敵方單體及其相鄰目標造成等同於開拓者81%攻擊力的物理屬性傷害。",
-      "icon": "icon/skill/8002_skill.png"
+      "effect": "SingleAttack",
+      "effect_text": "單體攻擊",
+      "simple_desc": "有高機率向敵方單體附加額外的弱點，並對其造成量子屬性傷害。",
+      "desc": "有81%的基礎機率向指定敵方單體目標附加1個場上我方目標持有屬性的弱點，且該弱點對應屬性的抗性降低20%，持續2回合。若附加的是敵方目標原有屬性的弱點，則不會觸發對應屬性的抗性降低效果。\n同一敵方目標僅能被銀狼附加1個弱點，當銀狼對其再次附加弱點時，僅保留最新附加的弱點。\n有100%的基礎機率額外使該目標的全屬性抗性降低9.1%，持續2回合。\n對該目標造成等同於銀狼159%攻擊力的量子屬性傷害。",
+      "icon": "icon/skill/1006_skill.png"
     },
     {
-      "id": "800203",
-      "name": "星塵王牌",
-      "level": 5,
+      "id": "100603",
+      "name": "|帳號封鎖|",
+      "level": 6,
       "max_level": 15,
       "element": {
-        "id": "Physical",
-        "name": "物理",
-        "color": "#FFFFFF",
-        "icon": "icon/element/Physical.png"
+        "id": "Quantum",
+        "name": "量子",
+        "color": "#1C29BA",
+        "icon": "icon/element/Quantum.png"
       },
       "type": "Ultra",
       "type_text": "終結技",
-      "effect": "Enhance",
-      "effect_text": "強化",
-      "simple_desc": "選擇單體或擴散的攻擊方式，揮出全力一擊。",
-      "desc": "在兩種攻擊模式中選擇其一揮出全力一擊。\n【全勝•再見安打】：對指定敵方單體造成等同於開拓者360%攻擊力的物理屬性傷害。\n【全勝•安息全壘打】：對指定敵方單體造成等同於開拓者216%攻擊力的物理屬性傷害，並對其相鄰目標造成等同於開拓者129%攻擊力的物理屬性傷害。",
-      "icon": "icon/skill/8002_ultimate.png"
+      "effect": "SingleAttack",
+      "effect_text": "單體攻擊",
+      "simple_desc": "有高機率使敵方單體防禦力降低，並對其造成大量量子屬性傷害。",
+      "desc": "有92%的基礎機率使指定敵方單體防禦力降低40.5%，持續3回合，同時對該目標造成等同於銀狼304%攻擊力的量子屬性傷害。",
+      "icon": "icon/skill/1006_ultimate.png"
     },
     {
-      "id": "800204",
-      "name": "牽制盜壘",
-      "level": 4,
+      "id": "100604",
+      "name": "等待程式回應……",
+      "level": 6,
       "max_level": 15,
       "element": null,
       "type": "Talent",
       "type_text": "天賦",
-      "effect": "Enhance",
-      "effect_text": "強化",
-      "simple_desc": "",
-      "desc": "每次擊破敵方目標的弱點後，攻擊力提高13%，最多疊加2層。",
-      "icon": "icon/skill/8002_talent.png"
+      "effect": "Impair",
+      "effect_text": "妨害",
+      "simple_desc": "攻擊後有機率向目標植入1個隨機【缺陷】。",
+      "desc": "銀狼能夠製造：攻擊力降低7.5%、防禦力降低6.0%、速度降低4.5%3種【缺陷】。\n銀狼每次發動攻擊後有66%的基礎機率向受到攻擊的敵方目標植入1個隨機【缺陷】，持續3回合。",
+      "icon": "icon/skill/1006_talent.png"
     },
     {
-      "id": "800206",
-      "name": "800206",
+      "id": "100606",
+      "name": "100606",
       "level": 0,
       "max_level": 1,
       "element": {
-        "id": "Physical",
-        "name": "物理",
-        "color": "#FFFFFF",
-        "icon": "icon/element/Physical.png"
+        "id": "Quantum",
+        "name": "量子",
+        "color": "#1C29BA",
+        "icon": "icon/element/Quantum.png"
       },
       "type": "MazeNormal",
       "type_text": "",
@@ -116,128 +116,95 @@
       "effect_text": "",
       "simple_desc": "",
       "desc": "",
-      "icon": "icon/skill/8002_basic_atk.png"
+      "icon": "icon/skill/1006_basic_atk.png"
     },
     {
-      "id": "800207",
-      "name": "不死三振",
+      "id": "100607",
+      "name": "|強制結束程式|",
       "level": 1,
       "max_level": 1,
-      "element": null,
+      "element": {
+        "id": "Quantum",
+        "name": "量子",
+        "color": "#1C29BA",
+        "icon": "icon/element/Quantum.png"
+      },
       "type": "Maze",
       "type_text": "秘技",
-      "effect": "Restore",
-      "effect_text": "回復",
-      "simple_desc": "",
-      "desc": "使用秘技後立即為我方全體回復等同於各自生命上限15%的生命值。",
-      "icon": "icon/skill/8002_technique.png"
-    },
-    {
-      "id": "800208",
-      "name": "全勝•再見安打",
-      "level": 5,
-      "max_level": 15,
-      "element": {
-        "id": "Physical",
-        "name": "物理",
-        "color": "#FFFFFF",
-        "icon": "icon/element/Physical.png"
-      },
-      "type": "Ultra",
-      "type_text": "終結技",
-      "effect": "SingleAttack",
-      "effect_text": "單體攻擊",
-      "simple_desc": "對敵方單體造成大量物理屬性傷害。",
-      "desc": "對指定敵方單體造成等同於開拓者360%攻擊力的物理屬性傷害。",
-      "icon": "icon/skill/8002_ultimate.png"
-    },
-    {
-      "id": "800209",
-      "name": "全勝•安息全壘打",
-      "level": 5,
-      "max_level": 15,
-      "element": {
-        "id": "Physical",
-        "name": "物理",
-        "color": "#FFFFFF",
-        "icon": "icon/element/Physical.png"
-      },
-      "type": "Ultra",
-      "type_text": "終結技",
-      "effect": "Blast",
-      "effect_text": "擴散",
-      "simple_desc": "對敵方單體及其相鄰目標造成物理屬性傷害。",
-      "desc": "對指定敵方單體造成等同於開拓者216%攻擊力的物理屬性傷害，同時對其相鄰目標造成等同於開拓者129%攻擊力的物理屬性傷害。",
-      "icon": "icon/skill/8002_ultimate.png"
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "simple_desc": "攻擊敵人，進入戰鬥後對敵方全體造成少量傷害，並無視弱點屬性削減韌性。",
+      "desc": "立即攻擊敵人，進入戰鬥後對敵方全體造成等同於銀狼80%攻擊力的量子屬性傷害，並無視弱點屬性削減敵方全體的韌性，擊破弱點時，觸發量子屬性的弱點擊破效果。",
+      "icon": "icon/skill/1006_technique.png"
     }
   ],
   "skill_trees": [
     {
-      "id": "8002001",
-      "level": 1,
+      "id": "1006001",
+      "level": 4,
       "anchor": "Point01",
-      "max_level": 7,
-      "icon": "icon/skill/8002_basic_atk.png",
+      "max_level": 6,
+      "icon": "icon/skill/1006_basic_atk.png",
       "parent": null
     },
     {
-      "id": "8002002",
-      "level": 2,
+      "id": "1006002",
+      "level": 7,
       "anchor": "Point02",
-      "max_level": 12,
-      "icon": "icon/skill/8002_skill.png",
+      "max_level": 10,
+      "icon": "icon/skill/1006_skill.png",
       "parent": null
     },
     {
-      "id": "8002003",
-      "level": 3,
+      "id": "1006003",
+      "level": 6,
       "anchor": "Point03",
-      "max_level": 12,
-      "icon": "icon/skill/8002_ultimate.png",
+      "max_level": 10,
+      "icon": "icon/skill/1006_ultimate.png",
       "parent": null
     },
     {
-      "id": "8002004",
-      "level": 2,
+      "id": "1006004",
+      "level": 6,
       "anchor": "Point04",
-      "max_level": 12,
-      "icon": "icon/skill/8002_talent.png",
+      "max_level": 10,
+      "icon": "icon/skill/1006_talent.png",
       "parent": null
     },
     {
-      "id": "8002007",
+      "id": "1006007",
       "level": 1,
       "anchor": "Point05",
       "max_level": 1,
-      "icon": "icon/skill/8002_technique.png",
+      "icon": "icon/skill/1006_technique.png",
       "parent": null
     },
     {
-      "id": "8002101",
-      "level": 0,
+      "id": "1006101",
+      "level": 1,
       "anchor": "Point06",
       "max_level": 1,
-      "icon": "icon/skill/8002_skilltree1.png",
+      "icon": "icon/skill/1006_skilltree1.png",
       "parent": null
     },
     {
-      "id": "8002102",
-      "level": 0,
+      "id": "1006102",
+      "level": 1,
       "anchor": "Point07",
       "max_level": 1,
-      "icon": "icon/skill/8002_skilltree2.png",
+      "icon": "icon/skill/1006_skilltree2.png",
       "parent": null
     },
     {
-      "id": "8002103",
-      "level": 0,
+      "id": "1006103",
+      "level": 1,
       "anchor": "Point08",
       "max_level": 1,
-      "icon": "icon/skill/8002_skilltree3.png",
+      "icon": "icon/skill/1006_skilltree3.png",
       "parent": null
     },
     {
-      "id": "8002201",
+      "id": "1006201",
       "level": 1,
       "anchor": "Point09",
       "max_level": 1,
@@ -245,273 +212,403 @@
       "parent": null
     },
     {
-      "id": "8002202",
-      "level": 0,
+      "id": "1006202",
+      "level": 1,
       "anchor": "Point10",
       "max_level": 1,
-      "icon": "icon/property/IconMaxHP.png",
-      "parent": "8002101"
+      "icon": "icon/property/IconStatusProbability.png",
+      "parent": "1006101"
     },
     {
-      "id": "8002203",
-      "level": 0,
+      "id": "1006203",
+      "level": 1,
       "anchor": "Point11",
       "max_level": 1,
       "icon": "icon/property/IconAttack.png",
-      "parent": "8002202"
+      "parent": "1006202"
     },
     {
-      "id": "8002204",
+      "id": "1006204",
       "level": 0,
       "anchor": "Point12",
       "max_level": 1,
-      "icon": "icon/property/IconDefence.png",
-      "parent": "8002203"
+      "icon": "icon/property/IconQuantumAddedRatio.png",
+      "parent": "1006203"
     },
     {
-      "id": "8002205",
-      "level": 0,
+      "id": "1006205",
+      "level": 1,
       "anchor": "Point13",
       "max_level": 1,
       "icon": "icon/property/IconAttack.png",
-      "parent": "8002102"
+      "parent": "1006102"
     },
     {
-      "id": "8002206",
+      "id": "1006206",
       "level": 0,
       "anchor": "Point14",
       "max_level": 1,
-      "icon": "icon/property/IconMaxHP.png",
-      "parent": "8002205"
+      "icon": "icon/property/IconStatusProbability.png",
+      "parent": "1006205"
     },
     {
-      "id": "8002207",
+      "id": "1006207",
       "level": 0,
       "anchor": "Point15",
       "max_level": 1,
       "icon": "icon/property/IconAttack.png",
-      "parent": "8002206"
+      "parent": "1006206"
     },
     {
-      "id": "8002208",
+      "id": "1006208",
       "level": 0,
       "anchor": "Point16",
       "max_level": 1,
-      "icon": "icon/property/IconDefence.png",
-      "parent": "8002103"
+      "icon": "icon/property/IconQuantumAddedRatio.png",
+      "parent": "1006103"
     },
     {
-      "id": "8002209",
+      "id": "1006209",
       "level": 0,
       "anchor": "Point17",
       "max_level": 1,
-      "icon": "icon/property/IconMaxHP.png",
-      "parent": "8002208"
+      "icon": "icon/property/IconStatusProbability.png",
+      "parent": "1006103"
     },
     {
-      "id": "8002210",
+      "id": "1006210",
       "level": 0,
       "anchor": "Point18",
       "max_level": 1,
       "icon": "icon/property/IconAttack.png",
-      "parent": "8002208"
+      "parent": "1006201"
     }
   ],
   "light_cone": {
-    "id": "21019",
-    "name": "在藍天下",
+    "id": "22000",
+    "name": "新手任務開始前",
     "rarity": 4,
-    "rank": 1,
-    "level": 40,
-    "promotion": 2,
-    "icon": "icon/light_cone/21019.png",
-    "preview": "image/light_cone_preview/21019.png",
-    "portrait": "image/light_cone_portrait/21019.png",
+    "rank": 5,
+    "level": 80,
+    "promotion": 6,
+    "icon": "icon/light_cone/22000.png",
+    "preview": "image/light_cone_preview/22000.png",
+    "portrait": "image/light_cone_portrait/22000.png",
     "path": {
-      "id": "Warrior",
-      "name": "毀滅",
-      "icon": "icon/path/Destruction.png"
+      "id": "Warlock",
+      "name": "虛無",
+      "icon": "icon/path/Nihility.png"
     },
     "attributes": [
       {
         "field": "hp",
         "name": "生命值",
         "icon": "icon/property/IconMaxHP.png",
-        "value": 416.88,
-        "display": "416",
+        "value": 952.56,
+        "display": "952",
         "percent": false
       },
       {
         "field": "atk",
         "name": "攻擊力",
         "icon": "icon/property/IconAttack.png",
-        "value": 208.44,
-        "display": "208",
+        "value": 476.28,
+        "display": "476",
         "percent": false
       },
       {
         "field": "def",
         "name": "防禦力",
         "icon": "icon/property/IconDefence.png",
-        "value": 144.75,
-        "display": "144",
+        "value": 330.75,
+        "display": "330",
         "percent": false
       }
     ],
     "properties": [
       {
-        "type": "AttackAddedRatio",
-        "field": "atk",
-        "name": "攻擊力",
-        "icon": "icon/property/IconAttack.png",
-        "value": 0.16,
-        "display": "16.0%",
+        "type": "StatusProbabilityBase",
+        "field": "effect_hit",
+        "name": "效果命中",
+        "icon": "icon/property/IconStatusProbability.png",
+        "value": 0.4,
+        "display": "40.0%",
         "percent": true
       }
     ]
   },
   "relics": [
     {
-      "id": "41111",
-      "name": "怪盜的千人假面",
-      "set_id": "111",
-      "set_name": "流星追跡的怪盜",
-      "rarity": 3,
-      "level": 0,
-      "icon": "icon/relic/111_0.png",
+      "id": "61021",
+      "name": "快槍手的野穗氈帽",
+      "set_id": "102",
+      "set_name": "野穗伴行的快槍手",
+      "rarity": 5,
+      "level": 15,
+      "icon": "icon/relic/102_0.png",
       "main_affix": {
         "type": "HPDelta",
         "field": "hp",
         "name": "生命值",
         "icon": "icon/property/IconMaxHP.png",
-        "value": 67.73760000057518,
-        "display": "67",
+        "value": 705.6000000101048,
+        "display": "705",
         "percent": false
       },
       "sub_affix": [
         {
-          "type": "CriticalChanceBase",
-          "field": "crit_rate",
-          "name": "暴擊率",
-          "icon": "icon/property/IconCriticalChance.png",
-          "value": 0.015552000375465,
-          "display": "1.5%",
+          "type": "HPAddedRatio",
+          "field": "hp",
+          "name": "生命值",
+          "icon": "icon/property/IconMaxHP.png",
+          "value": 0.11664000176824801,
+          "display": "11.6%",
           "percent": true,
-          "count": 1,
-          "step": 0
-        }
-      ]
-    },
-    {
-      "id": "51112",
-      "name": "怪盜的繪紋手套",
-      "set_id": "111",
-      "set_name": "流星追跡的怪盜",
-      "rarity": 4,
-      "level": 8,
-      "icon": "icon/relic/111_1.png",
-      "main_affix": {
-        "type": "AttackDelta",
-        "field": "atk",
-        "name": "攻擊力",
-        "icon": "icon/property/IconAttack.png",
-        "value": 171.6019200074952,
-        "display": "171",
-        "percent": false
-      },
-      "sub_affix": [
-        {
-          "type": "DefenceDelta",
-          "field": "def",
-          "name": "防禦力",
-          "icon": "icon/property/IconDefence.png",
-          "value": 15.241518000839278,
-          "display": "15",
-          "percent": false,
-          "count": 1,
-          "step": 1
-        },
-        {
-          "type": "AttackAddedRatio",
-          "field": "atk",
-          "name": "攻擊力",
-          "icon": "icon/property/IconAttack.png",
-          "value": 0.031104000750929,
-          "display": "3.1%",
-          "percent": true,
-          "count": 1,
-          "step": 1
+          "count": 3,
+          "step": 3
         },
         {
           "type": "SpeedDelta",
           "field": "spd",
           "name": "速度",
           "icon": "icon/property/IconSpeed.png",
-          "value": 3.600000001490118,
-          "display": "3",
+          "value": 7.200000001117588,
+          "display": "7",
           "percent": false,
-          "count": 2,
-          "step": 2
+          "count": 3,
+          "step": 4
+        },
+        {
+          "type": "StatusResistanceBase",
+          "field": "effect_res",
+          "name": "效果抗性",
+          "icon": "icon/property/IconStatusResistance.png",
+          "value": 0.034560000523925,
+          "display": "3.4%",
+          "percent": true,
+          "count": 1,
+          "step": 0
         },
         {
           "type": "BreakDamageAddedRatioBase",
           "field": "break_dmg",
           "name": "擊破特攻",
           "icon": "icon/property/IconBreakUp.png",
-          "value": 0.041472000768408,
-          "display": "4.1%",
+          "value": 0.129600003361702,
+          "display": "12.9%",
           "percent": true,
-          "count": 1,
+          "count": 2,
+          "step": 4
+        }
+      ]
+    },
+    {
+      "id": "61022",
+      "name": "快槍手的粗革手套",
+      "set_id": "102",
+      "set_name": "野穗伴行的快槍手",
+      "rarity": 5,
+      "level": 15,
+      "icon": "icon/relic/102_1.png",
+      "main_affix": {
+        "type": "AttackDelta",
+        "field": "atk",
+        "name": "攻擊力",
+        "icon": "icon/property/IconAttack.png",
+        "value": 352.8000000116881,
+        "display": "352",
+        "percent": false
+      },
+      "sub_affix": [
+        {
+          "type": "HPDelta",
+          "field": "hp",
+          "name": "生命值",
+          "icon": "icon/property/IconMaxHP.png",
+          "value": 76.20758800394833,
+          "display": "76",
+          "percent": false,
+          "count": 2,
+          "step": 2
+        },
+        {
+          "type": "DefenceAddedRatio",
+          "field": "def",
+          "name": "防禦力",
+          "icon": "icon/property/IconDefence.png",
+          "value": 0.102599999634548,
+          "display": "10.2%",
+          "percent": true,
+          "count": 2,
+          "step": 3
+        },
+        {
+          "type": "CriticalChanceBase",
+          "field": "crit_rate",
+          "name": "暴擊率",
+          "icon": "icon/property/IconCriticalChance.png",
+          "value": 0.061560001457111,
+          "display": "6.1%",
+          "percent": true,
+          "count": 2,
+          "step": 3
+        },
+        {
+          "type": "BreakDamageAddedRatioBase",
+          "field": "break_dmg",
+          "name": "擊破特攻",
+          "icon": "icon/property/IconBreakUp.png",
+          "value": 0.103680001571774,
+          "display": "10.3%",
+          "percent": true,
+          "count": 2,
           "step": 0
         }
       ]
     },
     {
-      "id": "41113",
-      "name": "怪盜的纖鋼爪鉤",
-      "set_id": "111",
-      "set_name": "流星追跡的怪盜",
-      "rarity": 3,
-      "level": 0,
-      "icon": "icon/relic/111_2.png",
+      "id": "61023",
+      "name": "快槍手的獵風披肩",
+      "set_id": "102",
+      "set_name": "野穗伴行的快槍手",
+      "rarity": 5,
+      "level": 15,
+      "icon": "icon/relic/102_2.png",
       "main_affix": {
-        "type": "DefenceAddedRatio",
-        "field": "def",
-        "name": "防禦力",
-        "icon": "icon/property/IconDefence.png",
-        "value": 0.051840000785887,
-        "display": "5.1%",
+        "type": "StatusProbabilityBase",
+        "field": "effect_hit",
+        "name": "效果命中",
+        "icon": "icon/property/IconStatusProbability.png",
+        "value": 0.43200000724755605,
+        "display": "43.2%",
         "percent": true
       },
       "sub_affix": [
         {
-          "type": "CriticalDamageBase",
-          "field": "crit_dmg",
-          "name": "暴擊傷害",
-          "icon": "icon/property/IconCriticalDamage.png",
-          "value": 0.034992001019418,
-          "display": "3.4%",
-          "percent": true,
+          "type": "HPDelta",
+          "field": "hp",
+          "name": "生命值",
+          "icon": "icon/property/IconMaxHP.png",
+          "value": 33.870039001107216,
+          "display": "33",
+          "percent": false,
           "count": 1,
-          "step": 1
+          "step": 0
+        },
+        {
+          "type": "AttackDelta",
+          "field": "atk",
+          "name": "攻擊力",
+          "icon": "icon/property/IconAttack.png",
+          "value": 38.10379200289026,
+          "display": "38",
+          "percent": false,
+          "count": 2,
+          "step": 2
+        },
+        {
+          "type": "HPAddedRatio",
+          "field": "hp",
+          "name": "生命值",
+          "icon": "icon/property/IconMaxHP.png",
+          "value": 0.06912000104785,
+          "display": "6.9%",
+          "percent": true,
+          "count": 2,
+          "step": 0
+        },
+        {
+          "type": "BreakDamageAddedRatioBase",
+          "field": "break_dmg",
+          "name": "擊破特攻",
+          "icon": "icon/property/IconBreakUp.png",
+          "value": 0.181440004147589,
+          "display": "18.1%",
+          "percent": true,
+          "count": 3,
+          "step": 4
         }
       ]
     },
     {
-      "id": "51114",
-      "name": "怪盜的流星快靴",
-      "set_id": "111",
-      "set_name": "流星追跡的怪盜",
-      "rarity": 4,
-      "level": 9,
-      "icon": "icon/relic/111_3.png",
+      "id": "61024",
+      "name": "快槍手的鉚釘馬靴",
+      "set_id": "102",
+      "set_name": "野穗伴行的快槍手",
+      "rarity": 5,
+      "level": 15,
+      "icon": "icon/relic/102_3.png",
+      "main_affix": {
+        "type": "SpeedDelta",
+        "field": "spd",
+        "name": "速度",
+        "icon": "icon/property/IconSpeed.png",
+        "value": 25.03200000547804,
+        "display": "25",
+        "percent": false
+      },
+      "sub_affix": [
+        {
+          "type": "HPDelta",
+          "field": "hp",
+          "name": "生命值",
+          "icon": "icon/property/IconMaxHP.png",
+          "value": 76.20758800394833,
+          "display": "76",
+          "percent": false,
+          "count": 2,
+          "step": 2
+        },
+        {
+          "type": "DefenceDelta",
+          "field": "def",
+          "name": "防禦力",
+          "icon": "icon/property/IconDefence.png",
+          "value": 16.935019000666216,
+          "display": "16",
+          "percent": false,
+          "count": 1,
+          "step": 0
+        },
+        {
+          "type": "HPAddedRatio",
+          "field": "hp",
+          "name": "生命值",
+          "icon": "icon/property/IconMaxHP.png",
+          "value": 0.12528000189923,
+          "display": "12.5%",
+          "percent": true,
+          "count": 3,
+          "step": 5
+        },
+        {
+          "type": "AttackAddedRatio",
+          "field": "atk",
+          "name": "攻擊力",
+          "icon": "icon/property/IconAttack.png",
+          "value": 0.06912000104785,
+          "display": "6.9%",
+          "percent": true,
+          "count": 2,
+          "step": 0
+        }
+      ]
+    },
+    {
+      "id": "63035",
+      "name": "公司的巨構總部",
+      "set_id": "303",
+      "set_name": "泛銀河商業公司",
+      "rarity": 5,
+      "level": 12,
+      "icon": "icon/relic/303_0.png",
       "main_affix": {
         "type": "AttackAddedRatio",
         "field": "atk",
         "name": "攻擊力",
         "icon": "icon/property/IconAttack.png",
-        "value": 0.22948200046084602,
-        "display": "22.9%",
+        "value": 0.35942400572821803,
+        "display": "35.9%",
         "percent": true
       },
       "sub_affix": [
@@ -520,20 +617,31 @@
           "field": "atk",
           "name": "攻擊力",
           "icon": "icon/property/IconAttack.png",
-          "value": 15.241518000839278,
-          "display": "15",
+          "value": 16.935019000666216,
+          "display": "16",
           "percent": false,
           "count": 1,
-          "step": 1
+          "step": 0
         },
         {
-          "type": "DefenceDelta",
+          "type": "HPAddedRatio",
+          "field": "hp",
+          "name": "生命值",
+          "icon": "icon/property/IconMaxHP.png",
+          "value": 0.155520002357664,
+          "display": "15.5%",
+          "percent": true,
+          "count": 4,
+          "step": 4
+        },
+        {
+          "type": "DefenceAddedRatio",
           "field": "def",
           "name": "防禦力",
           "icon": "icon/property/IconDefence.png",
-          "value": 16.935020001605153,
-          "display": "16",
-          "percent": false,
+          "value": 0.053999999770894,
+          "display": "5.3%",
+          "percent": true,
           "count": 1,
           "step": 2
         },
@@ -542,131 +650,86 @@
           "field": "effect_hit",
           "name": "效果命中",
           "icon": "icon/property/IconStatusProbability.png",
-          "value": 0.05875200103037,
-          "display": "5.8%",
+          "value": 0.086400001309814,
+          "display": "8.6%",
           "percent": true,
           "count": 2,
-          "step": 1
-        },
-        {
-          "type": "BreakDamageAddedRatioBase",
-          "field": "break_dmg",
-          "name": "擊破特攻",
-          "icon": "icon/property/IconBreakUp.png",
-          "value": 0.041472000768408,
-          "display": "4.1%",
-          "percent": true,
-          "count": 1,
-          "step": 0
+          "step": 4
         }
       ]
     },
     {
-      "id": "43015",
-      "name": "「黑塔」的太空站",
-      "set_id": "301",
-      "set_name": "太空封印站",
-      "rarity": 3,
-      "level": 0,
-      "icon": "icon/relic/301_0.png",
+      "id": "63036",
+      "name": "公司的貿易航道",
+      "set_id": "303",
+      "set_name": "泛銀河商業公司",
+      "rarity": 5,
+      "level": 13,
+      "icon": "icon/relic/303_1.png",
       "main_affix": {
-        "type": "ImaginaryAddedRatio",
-        "field": "imaginary_dmg",
-        "name": "虛數屬性傷害提高",
-        "icon": "icon/property/IconImaginaryAddedRatio.png",
-        "value": 0.037324999924749,
-        "display": "3.7%",
+        "type": "SPRatioBase",
+        "field": "sp_rate",
+        "name": "能量恢復效率",
+        "icon": "icon/property/IconEnergyRecovery.png",
+        "value": 0.172622015234084,
+        "display": "17.2%",
         "percent": true
       },
       "sub_affix": [
+        {
+          "type": "DefenceAddedRatio",
+          "field": "def",
+          "name": "防禦力",
+          "icon": "icon/property/IconDefence.png",
+          "value": 0.097199999727308,
+          "display": "9.7%",
+          "percent": true,
+          "count": 2,
+          "step": 2
+        },
         {
           "type": "SpeedDelta",
           "field": "spd",
           "name": "速度",
           "icon": "icon/property/IconSpeed.png",
-          "value": 1.400000000372529,
-          "display": "1",
+          "value": 4.900000000838191,
+          "display": "4",
           "percent": false,
-          "count": 1,
-          "step": 2
-        }
-      ]
-    },
-    {
-      "id": "43016",
-      "name": "「黑塔」的漫歷軌跡",
-      "set_id": "301",
-      "set_name": "太空封印站",
-      "rarity": 3,
-      "level": 0,
-      "icon": "icon/relic/301_1.png",
-      "main_affix": {
-        "type": "DefenceAddedRatio",
-        "field": "def",
-        "name": "防禦力",
-        "icon": "icon/property/IconDefence.png",
-        "value": 0.051840000785887,
-        "display": "5.1%",
-        "percent": true
-      },
-      "sub_affix": [
+          "count": 2,
+          "step": 3
+        },
         {
-          "type": "HPAddedRatio",
-          "field": "hp",
-          "name": "生命值",
-          "icon": "icon/property/IconMaxHP.png",
-          "value": 0.023328001610934998,
-          "display": "2.3%",
+          "type": "CriticalChanceBase",
+          "field": "crit_rate",
+          "name": "暴擊率",
+          "icon": "icon/property/IconCriticalChance.png",
+          "value": 0.061560001457111,
+          "display": "6.1%",
+          "percent": true,
+          "count": 2,
+          "step": 3
+        },
+        {
+          "type": "StatusResistanceBase",
+          "field": "effect_res",
+          "name": "效果抗性",
+          "icon": "icon/property/IconStatusResistance.png",
+          "value": 0.043200000654907,
+          "display": "4.3%",
           "percent": true,
           "count": 1,
-          "step": 1
+          "step": 2
         }
       ]
     }
   ],
   "relic_sets": [
     {
-      "id": "111",
-      "name": "流星追跡的怪盜",
-      "icon": "icon/relic/111.png",
+      "id": "102",
+      "name": "野穗伴行的快槍手",
+      "icon": "icon/relic/102.png",
       "num": 2,
-      "desc": "擊破特攻提高16%。",
-      "properties": [
-        {
-          "type": "BreakDamageAddedRatioBase",
-          "field": "break_dmg",
-          "name": "擊破特攻",
-          "icon": "icon/property/IconBreakUp.png",
-          "value": 0.16,
-          "display": "16.0%",
-          "percent": true
-        }
-      ]
-    },
-    {
-      "id": "111",
-      "name": "流星追跡的怪盜",
-      "icon": "icon/relic/111.png",
-      "num": 4,
-      "desc": "使裝備者的擊破特攻提高16%。當裝備者擊破敵方目標弱點後，恢復3點能量。",
-      "properties": [
-        {
-          "type": "BreakDamageAddedRatioBase",
-          "field": "break_dmg",
-          "name": "擊破特攻",
-          "icon": "icon/property/IconBreakUp.png",
-          "value": 0.16,
-          "display": "16.0%",
-          "percent": true
-        }
-      ]
-    },
-    {
-      "id": "301",
-      "name": "太空封印站",
-      "icon": "icon/relic/301.png",
-      "num": 2,
-      "desc": "使裝備者的攻擊力提高12%。當裝備者的速度大於等於120時，攻擊力額外提高12%。",
+      "desc": "攻擊力提高12%。",
       "properties": [
         {
           "type": "AttackAddedRatio",
@@ -678,6 +741,42 @@
           "percent": true
         }
       ]
+    },
+    {
+      "id": "102",
+      "name": "野穗伴行的快槍手",
+      "icon": "icon/relic/102.png",
+      "num": 4,
+      "desc": "使裝備者的速度提高6%、普通攻擊傷害提高10%。",
+      "properties": [
+        {
+          "type": "SpeedAddedRatio",
+          "field": "spd",
+          "name": "速度",
+          "icon": "icon/property/IconSpeed.png",
+          "value": 0.06,
+          "display": "6.0%",
+          "percent": true
+        }
+      ]
+    },
+    {
+      "id": "303",
+      "name": "泛銀河商業公司",
+      "icon": "icon/relic/303.png",
+      "num": 2,
+      "desc": "使裝備者的效果命中提高10%。同時提高裝備者等同於現有效果命中25%的攻擊力，最多提高25%。",
+      "properties": [
+        {
+          "type": "StatusProbabilityBase",
+          "field": "effect_hit",
+          "name": "效果命中",
+          "icon": "icon/property/IconStatusProbability.png",
+          "value": 0.1,
+          "display": "10.0%",
+          "percent": true
+        }
+      ]
     }
   ],
   "attributes": [
@@ -685,32 +784,32 @@
       "field": "hp",
       "name": "生命值",
       "icon": "icon/property/IconMaxHP.png",
-      "value": 1030.6799999999998,
-      "display": "1030",
+      "value": 2000.376,
+      "display": "2000",
       "percent": false
     },
     {
       "field": "atk",
       "name": "攻擊力",
       "icon": "icon/property/IconAttack.png",
-      "value": 525.24,
-      "display": "525",
+      "value": 1116.612,
+      "display": "1116",
       "percent": false
     },
     {
       "field": "def",
       "name": "防禦力",
       "icon": "icon/property/IconDefence.png",
-      "value": 379.875,
-      "display": "379",
+      "value": 791.595,
+      "display": "791",
       "percent": false
     },
     {
       "field": "spd",
       "name": "速度",
       "icon": "icon/property/IconSpeed.png",
-      "value": 100.0,
-      "display": "100",
+      "value": 107.0,
+      "display": "107",
       "percent": false
     },
     {
@@ -735,72 +834,72 @@
       "field": "atk",
       "name": "攻擊力",
       "icon": "icon/property/IconAttack.png",
-      "value": 491.7904292848072,
-      "display": "491",
+      "value": 1176.6753115094834,
+      "display": "1176",
       "percent": false
+    },
+    {
+      "field": "effect_hit",
+      "name": "效果命中",
+      "icon": "icon/property/IconStatusProbability.png",
+      "value": 1.05840000855737,
+      "display": "105.8%",
+      "percent": true
     },
     {
       "field": "hp",
       "name": "生命值",
       "icon": "icon/property/IconMaxHP.png",
-      "value": 91.78130470093366,
-      "display": "91",
-      "percent": false
-    },
-    {
-      "field": "crit_rate",
-      "name": "暴擊率",
-      "icon": "icon/property/IconCriticalChance.png",
-      "value": 0.015552000375465,
-      "display": "1.5%",
-      "percent": true
-    },
-    {
-      "field": "def",
-      "name": "防禦力",
-      "icon": "icon/property/IconDefence.png",
-      "value": 71.56197859952208,
-      "display": "71",
+      "value": 1825.1806557277523,
+      "display": "1825",
       "percent": false
     },
     {
       "field": "spd",
       "name": "速度",
       "icon": "icon/property/IconSpeed.png",
-      "value": 5.000000001862647,
-      "display": "5",
+      "value": 43.55200000743382,
+      "display": "43",
       "percent": false
+    },
+    {
+      "field": "effect_res",
+      "name": "效果抗性",
+      "icon": "icon/property/IconStatusResistance.png",
+      "value": 0.077760001178832,
+      "display": "7.7%",
+      "percent": true
     },
     {
       "field": "break_dmg",
       "name": "擊破特攻",
       "icon": "icon/property/IconBreakUp.png",
-      "value": 0.402944001536816,
-      "display": "40.2%",
+      "value": 0.414720009081065,
+      "display": "41.4%",
       "percent": true
     },
     {
-      "field": "crit_dmg",
-      "name": "暴擊傷害",
-      "icon": "icon/property/IconCriticalDamage.png",
-      "value": 0.034992001019418,
-      "display": "3.4%",
+      "field": "def",
+      "name": "防禦力",
+      "icon": "icon/property/IconDefence.png",
+      "value": 217.84182931415543,
+      "display": "217",
+      "percent": false
+    },
+    {
+      "field": "crit_rate",
+      "name": "暴擊率",
+      "icon": "icon/property/IconCriticalChance.png",
+      "value": 0.123120002914222,
+      "display": "12.3%",
       "percent": true
     },
     {
-      "field": "effect_hit",
-      "name": "效果命中",
-      "icon": "icon/property/IconStatusProbability.png",
-      "value": 0.05875200103037,
-      "display": "5.8%",
-      "percent": true
-    },
-    {
-      "field": "imaginary_dmg",
-      "name": "虛數屬性傷害提高",
-      "icon": "icon/property/IconImaginaryAddedRatio.png",
-      "value": 0.037324999924749,
-      "display": "3.7%",
+      "field": "sp_rate",
+      "name": "能量恢復效率",
+      "icon": "icon/property/IconEnergyRecovery.png",
+      "value": 0.172622015234084,
+      "display": "17.2%",
       "percent": true
     }
   ],
@@ -810,80 +909,8 @@
       "field": "atk",
       "name": "攻擊力",
       "icon": "icon/property/IconAttack.png",
-      "value": 0.5805860012117751,
-      "display": "58.0%",
-      "percent": true
-    },
-    {
-      "type": "HPDelta",
-      "field": "hp",
-      "name": "生命值",
-      "icon": "icon/property/IconMaxHP.png",
-      "value": 67.73760000057518,
-      "display": "67",
-      "percent": false
-    },
-    {
-      "type": "CriticalChanceBase",
-      "field": "crit_rate",
-      "name": "暴擊率",
-      "icon": "icon/property/IconCriticalChance.png",
-      "value": 0.015552000375465,
-      "display": "1.5%",
-      "percent": true
-    },
-    {
-      "type": "AttackDelta",
-      "field": "atk",
-      "name": "攻擊力",
-      "icon": "icon/property/IconAttack.png",
-      "value": 186.8434380083345,
-      "display": "186",
-      "percent": false
-    },
-    {
-      "type": "DefenceDelta",
-      "field": "def",
-      "name": "防禦力",
-      "icon": "icon/property/IconDefence.png",
-      "value": 32.17653800244443,
-      "display": "32",
-      "percent": false
-    },
-    {
-      "type": "SpeedDelta",
-      "field": "spd",
-      "name": "速度",
-      "icon": "icon/property/IconSpeed.png",
-      "value": 5.000000001862647,
-      "display": "5",
-      "percent": false
-    },
-    {
-      "type": "BreakDamageAddedRatioBase",
-      "field": "break_dmg",
-      "name": "擊破特攻",
-      "icon": "icon/property/IconBreakUp.png",
-      "value": 0.402944001536816,
-      "display": "40.2%",
-      "percent": true
-    },
-    {
-      "type": "DefenceAddedRatio",
-      "field": "def",
-      "name": "防禦力",
-      "icon": "icon/property/IconDefence.png",
-      "value": 0.103680001571774,
-      "display": "10.3%",
-      "percent": true
-    },
-    {
-      "type": "CriticalDamageBase",
-      "field": "crit_dmg",
-      "name": "暴擊傷害",
-      "icon": "icon/property/IconCriticalDamage.png",
-      "value": 0.034992001019418,
-      "display": "3.4%",
+      "value": 0.6885440067760681,
+      "display": "68.8%",
       "percent": true
     },
     {
@@ -891,26 +918,107 @@
       "field": "effect_hit",
       "name": "效果命中",
       "icon": "icon/property/IconStatusProbability.png",
-      "value": 0.05875200103037,
-      "display": "5.8%",
+      "value": 1.05840000855737,
+      "display": "105.8%",
       "percent": true
     },
     {
-      "type": "ImaginaryAddedRatio",
-      "field": "imaginary_dmg",
-      "name": "虛數屬性傷害提高",
-      "icon": "icon/property/IconImaginaryAddedRatio.png",
-      "value": 0.037324999924749,
-      "display": "3.7%",
-      "percent": true
+      "type": "HPDelta",
+      "field": "hp",
+      "name": "生命值",
+      "icon": "icon/property/IconMaxHP.png",
+      "value": 891.8852150191087,
+      "display": "891",
+      "percent": false
     },
     {
       "type": "HPAddedRatio",
       "field": "hp",
       "name": "生命值",
       "icon": "icon/property/IconMaxHP.png",
-      "value": 0.023328001610934998,
-      "display": "2.3%",
+      "value": 0.466560007072992,
+      "display": "46.6%",
+      "percent": true
+    },
+    {
+      "type": "SpeedDelta",
+      "field": "spd",
+      "name": "速度",
+      "icon": "icon/property/IconSpeed.png",
+      "value": 37.13200000743382,
+      "display": "37",
+      "percent": false
+    },
+    {
+      "type": "StatusResistanceBase",
+      "field": "effect_res",
+      "name": "效果抗性",
+      "icon": "icon/property/IconStatusResistance.png",
+      "value": 0.077760001178832,
+      "display": "7.7%",
+      "percent": true
+    },
+    {
+      "type": "BreakDamageAddedRatioBase",
+      "field": "break_dmg",
+      "name": "擊破特攻",
+      "icon": "icon/property/IconBreakUp.png",
+      "value": 0.414720009081065,
+      "display": "41.4%",
+      "percent": true
+    },
+    {
+      "type": "AttackDelta",
+      "field": "atk",
+      "name": "攻擊力",
+      "icon": "icon/property/IconAttack.png",
+      "value": 407.8388110152446,
+      "display": "407",
+      "percent": false
+    },
+    {
+      "type": "DefenceAddedRatio",
+      "field": "def",
+      "name": "防禦力",
+      "icon": "icon/property/IconDefence.png",
+      "value": 0.25379999913275,
+      "display": "25.3%",
+      "percent": true
+    },
+    {
+      "type": "CriticalChanceBase",
+      "field": "crit_rate",
+      "name": "暴擊率",
+      "icon": "icon/property/IconCriticalChance.png",
+      "value": 0.123120002914222,
+      "display": "12.3%",
+      "percent": true
+    },
+    {
+      "type": "DefenceDelta",
+      "field": "def",
+      "name": "防禦力",
+      "icon": "icon/property/IconDefence.png",
+      "value": 16.935019000666216,
+      "display": "16",
+      "percent": false
+    },
+    {
+      "type": "SPRatioBase",
+      "field": "sp_rate",
+      "name": "能量恢復效率",
+      "icon": "icon/property/IconEnergyRecovery.png",
+      "value": 0.172622015234084,
+      "display": "17.2%",
+      "percent": true
+    },
+    {
+      "type": "SpeedAddedRatio",
+      "field": "spd",
+      "name": "速度",
+      "icon": "icon/property/IconSpeed.png",
+      "value": 0.06,
+      "display": "6.0%",
       "percent": true
     }
   ]
