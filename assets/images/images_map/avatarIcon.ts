@@ -1,4 +1,4 @@
-const AvatarIcon = {
+const AvatarIcon: any = {
   1001: require("../../images/avatar_icon/1001.webp"),
   1002: require("../../images/avatar_icon/1002.webp"),
   1003: require("../../images/avatar_icon/1003.webp"),

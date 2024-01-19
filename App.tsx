@@ -60,21 +60,21 @@ export default function App() {
   }
 
   return (
-    <Provider store={store}>
-      <PersistGate persistor={persistor}>
-        <NotificationWrapper
-          onResponseReceived={(data, type) => {
-            //* 角色留言提及通知
-            if (type === pushExpoNotiType.sendCharacterComment) {
-              const charId = data.charId;
-              setInitialRouteName("/Character/" + charId);
-            }
-          }}
-        >
-          <AppLanguageProvider>
-            <TextLanguageProvider>
-              <RootSiblingParent>
-                <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
+        <PersistGate persistor={persistor}>
+          <NotificationWrapper
+            onResponseReceived={(data, type) => {
+              //* 角色留言提及通知
+              if (type === pushExpoNotiType.sendCharacterComment) {
+                const charId = data.charId;
+                setInitialRouteName("/Character/" + charId);
+              }
+            }}
+          >
+            <AppLanguageProvider>
+              <TextLanguageProvider>
+                <RootSiblingParent>
                   <GestureHandlerRootView style={{ flex: 1 }}>
                     <ClickOutsideProvider>
                       <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
@@ -85,12 +85,12 @@ export default function App() {
                       </View>
                     </ClickOutsideProvider>
                   </GestureHandlerRootView>
-                </QueryClientProvider>
-              </RootSiblingParent>
-            </TextLanguageProvider>
-          </AppLanguageProvider>
-        </NotificationWrapper>
-      </PersistGate>
-    </Provider>
+                </RootSiblingParent>
+              </TextLanguageProvider>
+            </AppLanguageProvider>
+          </NotificationWrapper>
+        </PersistGate>
+      </Provider>
+    </QueryClientProvider>
   );
 }

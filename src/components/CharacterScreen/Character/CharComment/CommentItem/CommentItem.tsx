@@ -93,7 +93,7 @@ const Like = ({
   commentId: string;
   likeUsers: string[];
 }) => {
-  const { uid: firebaseUID } = useMyFirebaseUid();
+  const firebaseUID = useMyFirebaseUid();
   const charId = useCharId();
   const charOfficalId = findKey(officalCharId, (v) => v === charId)!;
 

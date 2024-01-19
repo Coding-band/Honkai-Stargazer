@@ -229,7 +229,7 @@ export const strings = {
   StatusToday: "今天 ${1}",
   StatusTomorrow: "明天 ${1}",
   SuperimposeLvl: "${1}階",
-  SuperimposeNotEquipped: "沒裝備",
+  SuperimposeNotEquipped: "無裝備",
   TrailblazerNoti: "開拓者快訊",
   CommentFailed: "留言失敗，錯誤訊息：",
   CommentPlsEnterComment: "請輸入訊息！",

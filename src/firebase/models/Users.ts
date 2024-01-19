@@ -9,6 +9,7 @@ export default interface Users {
   plan: "normal" | "premium";
   level: number;
   region: hsrServer;
+  invite_code: string;
   active_days: number;
   char_num: number;
   achievement_num: number;

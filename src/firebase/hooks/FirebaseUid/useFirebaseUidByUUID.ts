@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import auth from "@react-native-firebase/auth";
 import { useQuery } from "react-query";
 import db from "../../db";
 

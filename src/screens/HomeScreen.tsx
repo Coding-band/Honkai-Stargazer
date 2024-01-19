@@ -25,9 +25,10 @@ import { ENV } from "../../app.config";
 import BetaWidget from "../components/global/Beta/BetaWidget";
 import WallPaperForMOC from "../components/global/WallPaper/WallPaperForMOC";
 import useMemoryOfChaosPrev from "../hooks/hoyolab/useMemoryOfChaosPrev";
+import genId from "../utils/genId";
 
 export default function HomeScreen() {
-  const { uid } = useMyFirebaseUid();
+  const uid = useMyFirebaseUid();
 
   const { hoyolabCookieParse } = useHoyolabCookie();
   const hsrFullData = useHsrFullData().data;
@@ -86,8 +87,10 @@ export default function HomeScreen() {
       if (uid && hsrFullData && hsrPlayerData) {
         // uid 表示 firebase uid, uuid 表示崩鐵遊戲 id
         const uuid = hsrPlayerData.game_role_id;
-        const UsersIsExist = (await db.Users.doc(uid).get()).exists;
-        if (UsersIsExist) {
+        const UserData = await db.Users.doc(uid).get();
+        const UserIsExist = UserData.exists;
+
+        if (UserIsExist) {
           try {
             await db.Users.doc(uid).update({
               avatar_url: hsrFullData.cur_head_icon_url,
@@ -98,6 +101,11 @@ export default function HomeScreen() {
               chest_num: hsrFullData.stats.chest_num,
               last_login: firestore.Timestamp.now(),
             });
+            if (!UserData?.data()?.invite_code) {
+              await db.Users.doc(uid).update({
+                invite_code: "SG-" + genId(10),
+              });
+            }
           } catch (e: any) {
             console.log("update User: " + e.message);
           }
@@ -109,6 +117,7 @@ export default function HomeScreen() {
               avatar_url: hsrFullData.cur_head_icon_url,
               role: ENV === "beta" ? "beta_user" : "user",
               plan: "normal",
+              invite_code: "SG-" + genId(10),
               level: hsrPlayerData.level,
               region: hsrPlayerData.region,
               active_days: hsrFullData.stats.active_days,

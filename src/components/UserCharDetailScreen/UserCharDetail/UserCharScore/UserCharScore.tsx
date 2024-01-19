@@ -8,7 +8,9 @@ import { LOCALES } from "../../../../../locales";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { Image } from "expo-image";
 import ScoreRangeFont from "../../../../../assets/images/images_map/scoreRangeFont";
-import getCharScore, { getCharRange } from "../../../../utils/calculator/charScoreCalculator/getCharScore";
+import getCharScore, {
+  getCharRange,
+} from "../../../../utils/calculator/charScoreCalculator/getCharScore";
 
 export default function UserCharScore() {
   const { language: appLanguage } = useAppLanguage();
@@ -34,14 +36,6 @@ export default function UserCharScore() {
           flexWrap: "wrap",
         }}
       >
-        <View style={{ gap: 8, alignItems: "center" }}>
-          <Image
-            className="w-12 h-8"
-            source={ScoreRangeFont[getCharRange(charTotalScore)]}
-            contentFit="contain"
-          />
-          <Text className="text-text font-[HY65] text-[12px]">角色評價</Text>
-        </View>
         {/* <View style={{ gap: 8, alignItems: "center" }}>
           <Text className="text-text font-[HY65] text-[24px]">101%</Text>
           <Text className="text-text font-[HY65] text-[12px]">角色毕业率</Text>
@@ -51,6 +45,14 @@ export default function UserCharScore() {
             {charTotalScore.toFixed(1)}
           </Text>
           <Text className="text-text font-[HY65] text-[12px]">角色評分</Text>
+        </View>
+        <View style={{ gap: 8, alignItems: "center" }}>
+          <Image
+            className="w-12 h-8"
+            source={ScoreRangeFont[getCharRange(charTotalScore)]}
+            contentFit="contain"
+          />
+          <Text className="text-text font-[HY65] text-[12px]">角色評價</Text>
         </View>
         <View
           className="h-[55px]"

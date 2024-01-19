@@ -34,7 +34,7 @@ export default React.memo(function CharInfo() {
           <CharStars count={charData?.rare || 5} />
           <View>
             <Text
-              className="text-[16px] text-white font-[HY65]"
+              className="text-[16px] text-white font-[HY65] leading-5"
               style={globalStyles.textShadow}
             >
               {charData?.location}
@@ -58,7 +58,7 @@ export default React.memo(function CharInfo() {
               style={{ width: 24, height: 24 }}
             />
             <Text
-              className="text-[16px] text-white font-[HY65]"
+              className="text-[16px] text-white font-[HY65] leading-5"
               style={globalStyles.textShadow}
             >
               {charData?.path}
@@ -72,7 +72,7 @@ export default React.memo(function CharInfo() {
               style={{ width: 24, height: 24 }}
             />
             <Text
-              className="text-[16px] text-white font-[HY65]"
+              className="text-[16px] text-white font-[HY65] leading-5"
               style={globalStyles.textShadow}
             >
               {charData?.combatType}

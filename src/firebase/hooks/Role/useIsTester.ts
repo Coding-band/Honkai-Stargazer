@@ -3,7 +3,7 @@ import useMyFirebaseUid from "../FirebaseUid/useMyFirebaseUid";
 import db from "../../db";
 
 const useIsTester = () => {
-  const { uid } = useMyFirebaseUid();
+  const uid = useMyFirebaseUid();
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
     if (uid) {

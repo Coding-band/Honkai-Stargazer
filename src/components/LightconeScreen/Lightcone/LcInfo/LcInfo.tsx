@@ -40,7 +40,7 @@ export default function LcInfo() {
               style={{ width: 24, height: 24 }}
             />
             <Text
-              className="text-[16px] text-white font-[HY65]"
+              className="text-[16px] text-white font-[HY65] leading-5"
               style={globalStyles.textShadow}
             >
               {lcData?.path}

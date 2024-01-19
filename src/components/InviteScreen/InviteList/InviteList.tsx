@@ -2,20 +2,19 @@ import { View, Text, ScrollView } from "react-native";
 import React from "react";
 import SettingGroup from "../../SettingScreen/SettingGroup/SettingGroup";
 import SettingItem from "../../SettingScreen/SettingGroup/SettingItem/SettingItem";
+import { Image } from "expo-image";
+import useUser from "../../../firebase/hooks/User/useUser";
+import useMyFirebaseUid from "../../../firebase/hooks/FirebaseUid/useMyFirebaseUid";
 
 export default function InviteList() {
+  const firebaseUID = useMyFirebaseUid();
+  const { data: user } = useUser(firebaseUID || "");
+
   return (
-    <ScrollView
-      style={{
-        paddingVertical: 110,
-        paddingHorizontal: 17,
-        paddingBottom: 0,
-      }}
-      className="z-30 h-screen"
-    >
-      <View style={{ gap: 20 }} className="pb-48">
+    <ScrollView className="z-30 h-screen py-[110px]  pb-0">
+      <View style={{ gap: 20 }} className="pb-48 px-4">
         <SettingGroup title={"我的邀請碼"}>
-          <SettingItem type="none" title={"3CXYB5879A"} content={"複製"} />
+          <SettingItem type="none" title={user?.invite_code} content={"複製"} />
         </SettingGroup>
         <SettingGroup title={"使用我的"}>
           <SettingItem
@@ -50,33 +49,23 @@ export default function InviteList() {
             title={"3707258630(Asia)"}
             content={"主頁"}
           />
-          <SettingItem
-            type="navigation"
-            title={"3707258630(Asia)"}
-            content={"主頁"}
-          />
-          <SettingItem
-            type="navigation"
-            title={"3707258630(Asia)"}
-            content={"主頁"}
-          />
-          <SettingItem
-            type="navigation"
-            title={"3707258630(Asia)"}
-            content={"主頁"}
-          />
-          <SettingItem
-            type="navigation"
-            title={"3707258630(Asia)"}
-            content={"主頁"}
-          />
         </SettingGroup>
         <View className="mt-6">
-          <Text className="text-text font-[HY65] text-[16px]">
-            拥有5名及以上用户使用你的邀请码后你即可永久获得与捐赠完全相同的回报
+          <Text className="text-text font-[HY65] text-[14px]">
+            拥有5名及以上用户使用你的邀请码后你即可永久获得与捐赠完全相同的回报。
           </Text>
         </View>
       </View>
+      <Image
+        source={
+          [
+            require("./images/haha.png"),
+            require("./images/haha2.png"),
+            require("./images/haha3.png"),
+          ][Math.floor(Math.random() * 3)]
+        }
+        className="w-40 h-40 absolute -right-0 bottom-0"
+      />
     </ScrollView>
   );
 }

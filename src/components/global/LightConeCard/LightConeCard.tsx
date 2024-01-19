@@ -65,7 +65,7 @@ export default function LightConeCard(props: Props) {
       >
         <Text
           numberOfLines={2}
-          className="text-text2 text-[12px] font-[HY65]"
+          className="text-text2 text-[12px] font-[HY65] leading-4"
           style={{
             flexWrap: "wrap",
             textAlign: "center",

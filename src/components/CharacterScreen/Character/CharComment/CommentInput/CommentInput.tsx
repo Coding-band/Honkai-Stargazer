@@ -24,6 +24,7 @@ import { customAlphabet } from "nanoid/non-secure";
 import useAddUserComment from "../../../../../firebase/hooks/UserComments/useAddUserComment";
 import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../../locales";
+import genId from "../../../../../utils/genId";
 
 export default function CommentInput({
   value,
@@ -32,7 +33,7 @@ export default function CommentInput({
   value: string;
   onChange: (value: string) => void;
 }) {
-  const { uid } = useMyFirebaseUid();
+  const uid = useMyFirebaseUid();
   const playerName = useHsrPlayerName();
   const charId = useCharId();
   const charName = useCharData().charFullData.name;
@@ -78,9 +79,7 @@ export default function CommentInput({
     }
 
     try {
-      const commentId = customAlphabet(
-        "abcdefghijklmnopqrstuvwxyzABCDEFGHIGKLMNOPQUSTUVWXYZ0123456789"
-      )();
+      const commentId = genId();
 
       await Promise.all([
         addCharComments({

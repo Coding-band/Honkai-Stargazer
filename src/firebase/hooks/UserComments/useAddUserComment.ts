@@ -4,7 +4,7 @@ import firestore from "@react-native-firebase/firestore";
 import useMyFirebaseUid from "../FirebaseUid/useMyFirebaseUid";
 
 const useAddUserComment = () => {
-  const { uid } = useMyFirebaseUid();
+  const uid = useMyFirebaseUid();
 
   const data = useMutation(
     async ({

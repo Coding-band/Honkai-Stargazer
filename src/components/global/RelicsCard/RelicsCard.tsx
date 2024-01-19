@@ -49,7 +49,7 @@ export default function RelicsCard(props: Props) {
             className="w-[18px] h-[18px] rounded-full absolute left-1 top-1 bg-[#00000040]"
             style={{ justifyContent: "center", alignItems: "center" }}
           >
-            <Text className="text-text text-[12px] font-[HY65]">
+            <Text className="text-text text-[12px] font-[HY65] leading-4">
               {props?.set}
             </Text>
           </View>
