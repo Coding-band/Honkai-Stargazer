@@ -1,6 +1,9 @@
 export const longStrings = {
-    PublicCharDesc: "To protect security and user rights, we update hoyolab role data through the user's device (client) rather than through the server. This means that if a user does not use Stargazer for a while, it may result in discrepancies in their character count, days active, achievements achieved, and the Forgotten Hall data. Please note that these data are for reference only and are not accurate.",
-    TrailblazerNotiTaggedU: "Player ${playerName} in \"${charName}'s Discussion\" has mentioned you! Come to join the discussion.",
-    UIDOnlySupportFullUID:"Only support search by full UID, it's not allow to search by name or partly UID.",
-    LoginViaPCToGetCookies:"Please use a computer to log in to Hoyolab / Miyoushe, press F12 to open the developer panel -> Applications -> Cookies, and paste the Cookies that contain ltuid_v2, ltoken_v2, account_id_v2, cookie_token_v2, account_mid_v2 and ltmid_v2. Note that this option is primarily designed for developers. Stargazer recommends that you do not use this option unless necessary, to avoid adding complexity.",
+    PublicCharDesc: "为了保障安全性和用户权益，我们通过用户的设备（客户端），而非透过服务器来更新 hoyolab 角色数据。这意味着如果用户一段时间不使用 Stargazer，可能会导致他们的角色数量、活跃天数、达成成就和忘却之庭数据存在差异。请注意，这些数据仅供参考，不具有绝对准确性。",
+    TrailblazerNotiTaggedU: "玩家 ${1} 在【${2}讨论串】提及了您！快来参与讨论吧。",
+    UIDOnlySupportFullUID: "仅支持查询完整UID，不支持查询昵称或部分UID",
+    SelectServerAndPasteCookies: "请选择服务器并贴上 Cookies。",
+    LoginViaPCToGetCookies: "请使用计算机登入 hoyolab / 米游社，按 F12 开启开发人员面板-> 应用程序 -> Cookies, 把包含 ltuid_v2、ltoken_v2、account_id_v2、cookie_token_v2、account_mid_v2 和 ltmid_v2 贴上。请注意，此选项主要为开发人员设计。Stargazer 建议您在非不得已的情况下不要使用这一选项，以免增加复杂度。",
+    CommentOverLimit: "输入超过最大值上限（200字元），请减少输入再发布。",
+    DonationRemoveAds: "可以透过捐赠或邀请他人移除广告",
 }

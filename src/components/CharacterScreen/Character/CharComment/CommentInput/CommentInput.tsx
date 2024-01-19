@@ -121,7 +121,7 @@ export default function CommentInput({
               body: LOCALES[language].TrailblazerNotiTaggedU.replace(
                 "${playerName}",
                 playerName
-              ).replace("${charName}", charName),
+              ).replace("${1}", charName),
               data: {
                 type: pushExpoNotiType.sendCharacterComment,
                 charId,

@@ -4,4 +4,6 @@ export const longStrings = {
     UIDOnlySupportFullUID: "僅支持查詢完整UID，不支持查詢暱稱或部分UID",
     LoginViaPCToGetCookies: "請使用電腦登入 hoyolab / 米游社，按 F12 開啟開發人員面板-> 應用程式 -> Cookies, 把包含 ltuid_v2、ltoken_v2、account_id_v2、cookie_token_v2、account_mid_v2 和 ltmid_v2 貼上。請注意，此選項主要為開發人員設計。Stargazer 建議您在非不得已的情況下不要使用這一選項，以免增加複雜度。",
     SelectServerAndPasteCookies: "請選擇服務器並貼上 Cookies。",
+    CommentOverLimit: "輸入超過最大值上限（200字元），請減少輸入再發布。",
+    DonationRemoveAds: "可以透過捐贈或邀請他人移除廣告",
 }

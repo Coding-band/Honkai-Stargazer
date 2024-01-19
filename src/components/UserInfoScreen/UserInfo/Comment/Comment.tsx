@@ -58,7 +58,7 @@ export default function Comment(props: Props) {
           <View style={{ flexDirection: "row", gap: 10, alignItems: "center" }}>
             <TouchableWithoutFeedback onPress={() => { }}>
               <Text className="text-[#CCC] text-[12px] font-[HY65] leading-5">
-                {LOCALES[language].CommentInDiscussion.replace("${charName}",getCharFullData(charId, textLanguage)?.name)}
+                {LOCALES[language].CommentInDiscussion.replace("${1}",getCharFullData(charId, textLanguage)?.name)}
               </Text>
             </TouchableWithoutFeedback>
           </View>
