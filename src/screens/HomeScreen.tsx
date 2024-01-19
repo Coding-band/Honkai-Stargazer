@@ -27,7 +27,7 @@ import WallPaperForMOC from "../components/global/WallPaper/WallPaperForMOC";
 import useMemoryOfChaosPrev from "../hooks/hoyolab/useMemoryOfChaosPrev";
 
 export default function HomeScreen() {
-  const uid = useMyFirebaseUid();
+  const { uid } = useMyFirebaseUid();
 
   const { hoyolabCookieParse } = useHoyolabCookie();
   const hsrFullData = useHsrFullData().data;

@@ -56,6 +56,8 @@ function getCharScore(charId, charData) {
     }
   }
 
+  _
+
   // 行跡分數 -> 最多35分
   let traceScore = 0
   charTraceLvl.map((trace) => {

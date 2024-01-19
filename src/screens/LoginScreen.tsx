@@ -27,11 +27,6 @@ export default function LoginScreen() {
   const { setHoyolabCookie } = useHoyolabCookie();
   const { setHsrServerChosen } = useHsrServerChosen();
 
-  // firebase 登出
-  useEffect(() => {
-    auth().signOut();
-  }, []);
-
   const handleLogin = async () => {
     // hoyolab 或米游社所在伺服器判斷
     setHsrServerChosen(serverId);
@@ -51,7 +46,6 @@ export default function LoginScreen() {
         {SCREENS.LoginPage.getName(language)}
       </Header>
       <WebView
-    
         incognito
         javaScriptEnabled
         domStorageEnabled

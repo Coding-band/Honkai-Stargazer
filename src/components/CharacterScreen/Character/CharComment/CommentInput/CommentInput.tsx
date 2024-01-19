@@ -32,8 +32,7 @@ export default function CommentInput({
   value: string;
   onChange: (value: string) => void;
 }) {
-  
-  const uid = useMyFirebaseUid();
+  const { uid } = useMyFirebaseUid();
   const playerName = useHsrPlayerName();
   const charId = useCharId();
   const charName = useCharData().charFullData.name;
@@ -42,7 +41,7 @@ export default function CommentInput({
   const [input, setInput] = useState(value || "");
 
   const { language } = useAppLanguage();
-  
+
   useEffect(() => {
     setInput(value);
   }, [value]);
@@ -60,11 +59,19 @@ export default function CommentInput({
   };
 
   const handleSubmit = async () => {
+    // 輸入超過 1000 字
+    if (input.length > 200) {
+      Toast(LOCALES[language].CommentOverLimit);
+      return;
+    }
+
+    // 輸入空訊息
     if (!input || input.trim() === "") {
       Toast(LOCALES[language].CommentPlsEnterComment);
       return;
     }
 
+    // 沒登入
     if (!uid) {
       Toast(LOCALES[language].CommentHaventLogin);
       return;
@@ -111,7 +118,10 @@ export default function CommentInput({
             pushExpoNoti({
               to: expoPushToken,
               title: LOCALES[language].TrailblazerNoti,
-              body: LOCALES[language].TrailblazerNotiTaggedU.replace("${playerName}",playerName).replace("${charName}",charName),
+              body: LOCALES[language].TrailblazerNotiTaggedU.replace(
+                "${playerName}",
+                playerName
+              ).replace("${charName}", charName),
               data: {
                 type: pushExpoNotiType.sendCharacterComment,
                 charId,
@@ -121,7 +131,7 @@ export default function CommentInput({
         });
       }
     } catch (e: any) {
-      Toast(LOCALES[language].CommentFailed+ e.message);
+      Toast(LOCALES[language].CommentFailed + e.message);
     }
   };
 

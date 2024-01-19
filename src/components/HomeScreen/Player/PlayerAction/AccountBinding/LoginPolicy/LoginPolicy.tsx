@@ -29,6 +29,7 @@ export default function LoginPolicy(props: Props) {
   return (
     <View style={{ gap: 10, alignItems: "center" }}>
       <HtmlText style={{ color: "#000", fontFamily: "HY55", lineHeight: 20 }}>
+        {/* @ts-ignore */}
         {loginPolicyText[language]}
       </HtmlText>
       <Button

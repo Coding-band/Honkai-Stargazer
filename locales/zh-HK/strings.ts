@@ -180,7 +180,7 @@ export const strings = {
   ATTR_ICE_DMG: "冰傷害提高",
   ATTR_IMAGINARY_DMG: "虛數傷害提高",
   ATTR_WIND_DMG: "風傷害提高",
-  ATTR_LIGHTNING_DMG: "雷傷害提高",
+  ATTR_THUNDER_DMG: "雷傷害提高",//edit to LIGHTNING
   ATTR_PHYSICAL_DMG: "物理傷害提高",
   ATTR_SP_RATE: "能量恢復效率",
   ATTR_HEAL_BONUS: "治療量加成",
@@ -222,6 +222,7 @@ export const strings = {
   AppStatusPlayerNoReleaseData: "玩家沒有公開數據誒",
   AppStatusNoDataFound: "暫時沒找到數據...",
   CharSoul: "星魂${1}",
+  PublicCharDesc: "為了保障安全性和用戶權益，我們通過用戶的設備（客戶端），而非透過伺服器來更新 hoyolab 角色數據。這意味著如果用戶一段時間不使用 Stargazer，可能會導致他們的角色數量、活躍天數、達成成就和忘卻之庭數據存在差異。請注意，這些數據僅供參考，不具有絕對準確性。",
   StatusNow: "上線中",
   StatusHours: "${1}小時",
   StatusMinutes: "${1}分鐘",
@@ -232,6 +233,7 @@ export const strings = {
   SuperimposeLvl: "${1}階",
   SuperimposeNotEquipped: "沒裝備",
   TrailblazerNoti: "開拓者快訊",
+  TrailblazerNotiTaggedU: "玩家 ${playerName} 在【${charName}討論串】提及了您！快來參與討論吧。",
   CommentFailed: "留言失敗，錯誤訊息：",
   CommentPlsEnterComment: "請輸入訊息！",
   CommentHaventLogin: "您尚未登入！",
@@ -276,8 +278,12 @@ export const strings = {
   SettingSaveWallpaperError: "儲存壁紙 : ",
   FunctionStillInDevelop: "此功能仍在開發中",
   LoginEnterCookies: "請輸入 cookie！",
+  SelectServerAndPasteCookies: "請選擇服務器並貼上 Cookies。",
+  LoginViaPCToGetCookies: "請使用電腦登入 hoyolab / 米游社，按 F12 開啟開發人員面板-> 應用程式 -> Cookies, 把包含 ltuid_v2、ltoken_v2、account_id_v2、cookie_token_v2、account_mid_v2 和 ltmid_v2 貼上。請注意，此選項主要為開發人員設計。Stargazer 建議您在非不得已的情況下不要使用這一選項，以免增加複雜度。",
   ConfirmBTN: "確定",
   ShareSuccess: "分享成功！",
   ShareError: "分享失敗，錯誤訊息：",
-  CodeAll: "所有伺服器"
+  CodeAll: "所有伺服器",
+  // 20240119
+  CommentOverLimit: "輸入超過最大值上限（200字元），請減少輸入再發布。",
 };

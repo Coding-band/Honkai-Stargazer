@@ -13,6 +13,7 @@ import Toast from "../../../../utils/toast/Toast";
 import useHsrUUID from "../../../../hooks/hoyolab/useHsrUUID";
 import auth from "@react-native-firebase/auth";
 import useHoyolabCookie from "../../../../redux/hoyolabCookie/useHoyolabCookie";
+import useMyFirebaseUid from "../../../../firebase/hooks/FirebaseUid/useMyFirebaseUid";
 
 export default function PlayerAction() {
   const navigation = useNavigation();
@@ -28,6 +29,7 @@ export default function PlayerAction() {
 
   const hsrUUID = useHsrUUID();
   const { setHoyolabCookie } = useHoyolabCookie();
+  const { setUid: setMyFirebaseUid } = useMyFirebaseUid();
 
   const handleCloseBindingPopUp = () => {
     setIsPress(!isPress);
@@ -38,6 +40,7 @@ export default function PlayerAction() {
   };
   const handleLogout = () => {
     auth().signOut();
+    setMyFirebaseUid("");
     setHoyolabCookie("");
   };
 

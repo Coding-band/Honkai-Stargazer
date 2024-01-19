@@ -34,7 +34,7 @@ export default function NotificationWrapper({
   }, []);
 
   //* sync to firebase
-  const uid = useMyFirebaseUid();
+  const { uid } = useMyFirebaseUid();
   // 建立或更新用戶數據 (User)
   useEffect(() => {
     async function createOrUpdateUser() {

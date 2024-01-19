@@ -13,7 +13,7 @@ const useMyFirebaseUid = () => {
       }
     });
   }, []);
-  return uid;
+  return { uid, setUid };
 };
 
 export default useMyFirebaseUid;

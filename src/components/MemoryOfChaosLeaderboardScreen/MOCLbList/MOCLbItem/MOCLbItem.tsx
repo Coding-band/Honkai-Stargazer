@@ -49,7 +49,7 @@ export default function MOCLbItem({
   );
 
   // 我的排行榜資訊
-  const firebaseUID = useMyFirebaseUid();
+  const { uid: firebaseUID } = useMyFirebaseUid();
   const { data: myFloorLbData } = useQuery(
     ["my-moc-leaderboard", floorNumber, versionNumber, firebaseUID],
     async () =>

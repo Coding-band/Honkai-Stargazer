@@ -102,7 +102,7 @@ export default function UserInfoCharacters(props: Props) {
   const [charsDisplayWidth, setCharsDisplayWidth] = useState(0);
   const [openQuestionPopUp, setOpenQuestionPopUp] = useState(false);
 
-  const { language } = useAppLanguage()
+  const { language } = useAppLanguage();
 
   return (
     <>
@@ -113,7 +113,7 @@ export default function UserInfoCharacters(props: Props) {
             style={{
               flexDirection: "row",
               justifyContent: "space-between",
-              width: charsDisplayWidth,
+              width: charsDisplayWidth || 352,
             }}
           >
             <View
@@ -177,7 +177,10 @@ export default function UserInfoCharacters(props: Props) {
                         </Text>
                         <Text className="text-text text-[12px] font-[HY65] leading-5">
                           {char.light_cone?.rank
-                            ? LOCALES[language].SuperimposeLvl.replace("${1}",`${char.light_cone?.rank}`)
+                            ? LOCALES[language].SuperimposeLvl.replace(
+                                "${1}",
+                                `${char.light_cone?.rank}`
+                              )
                             : LOCALES[language].SuperimposeNotEquipped}
                         </Text>
                       </View>
@@ -238,8 +241,11 @@ export default function UserInfoCharacters(props: Props) {
                               </Text>
                               <Text className="text-text text-[12px] font-[HY65] leading-5">
                                 {char.light_cone?.rank
-                                    ? LOCALES[language].SuperimposeLvl.replace("${1}",`${char.light_cone?.rank}`)
-                                    : LOCALES[language].SuperimposeNotEquipped}
+                                  ? LOCALES[language].SuperimposeLvl.replace(
+                                      "${1}",
+                                      `${char.light_cone?.rank}`
+                                    )
+                                  : LOCALES[language].SuperimposeNotEquipped}
                               </Text>
                             </View>
                           </View>

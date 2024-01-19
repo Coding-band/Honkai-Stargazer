@@ -4,13 +4,13 @@ import firestore from "@react-native-firebase/firestore";
 import useMyFirebaseUid from "../FirebaseUid/useMyFirebaseUid";
 
 const useAddCharComment = (charId: string) => {
-  const uid = useMyFirebaseUid();
+  const { uid } = useMyFirebaseUid();
 
   const data = useMutation(
     async ({ id, content }: { id: string; content: string }) => {
       const doc = db.CharacterComments(charId).doc(id);
       const docIsExists = (await doc.get()).exists;
-   
+
       if (docIsExists) {
         await doc.update({
           user_id: uid,
