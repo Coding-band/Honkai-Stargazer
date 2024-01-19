@@ -14,6 +14,8 @@ function getCharScore(charId, charData) {
   const charScoreWeight = scoreWeight[charId][schoolIndex]; //對應角色流派内，該角色評分權重
   const charLightconeID = charData.light_cone.id; //角色使用中的光錐
   const charLightconeSuper = charData.light_cone.rank; //角色使用中的光錐疊影
+  const charPromotion = charData.promotion; //角色突破等級
+  const charLevel = charData.level; //角色等級
   const charSoulLvl = charData.rank; //角色的星魂等級
   const charTraceLvl = charData.skills;  //角色行跡内等級
 
@@ -35,7 +37,7 @@ function getCharScore(charId, charData) {
     };
   }
 
-  // 光錐分數 -> 加最多10+5分 (10 : 推薦 || +5 : 疊影)
+  // 光錐分數 -> 加最多10+4分 (10 : 推薦 || +4 : 疊影)
   let lightconeScore = 0
   if(charScoreWeight.advice_lightcone.includes(Number(charLightconeID))){
     lightconeScore = lcAdviceScores
@@ -44,34 +46,36 @@ function getCharScore(charId, charData) {
   }else{
     lightconeScore = 0
   }
-  lightconeScore += (charLightconeSuper) //疊影 = [1,2,3,4,5] -> 每次加1分
+  lightconeScore += (charLightconeSuper-1) //疊影 = [2,3,4,5] -> 每次加1分
 
-  // 星魂分數 -> 每級+5分, 最多10分
+  // 星魂分數 -> 最多6分
   let soulScore = 0
   for(let i = 0 ; i < charScoreWeight.soul.length ; i++){
     if(charSoulLvl >= charScoreWeight.soul[i]){
-      soulScore += (soulScore >= 10 ? 0 : 5)
+      soulScore += (soulScore >= 6 ? 0 : (6/charScoreWeight.soul.length))
     }else{
       break;
     }
   }
 
-  _
-
-  // 行跡分數 -> 最多35分
+  // 行跡分數 -> 最多36分
   let traceScore = 0
+  let isChecked = [false,false,false,false];
   charTraceLvl.map((trace) => {
     switch(trace.type){
-      case "Normal" : traceScore += charScoreWeight.trace.normal_atk * trace.level /3;break; //Max 9*2/3 = 6
-      case "Ultra" : traceScore += charScoreWeight.trace.ultimate * trace.level /3;break; //Max 15*2/3 = 10
-      case "Talent" : traceScore += charScoreWeight.trace.talent * trace.level /3;break;  //Max 15*2/3 = 10
-      case "BPSkill" : traceScore += charScoreWeight.trace.skill * trace.level /3;break;  //Max 15*2/3 = 10
+      case "Normal" : if(isChecked[0]) return; isChecked[0] = true; traceScore += charScoreWeight.trace.normal_atk * trace.level /3;break; //Max 9*2/3 = 6
+      case "Ultra" : if(isChecked[1]) return; isChecked[1] = true; traceScore += charScoreWeight.trace.ultimate * trace.level /3;break; //Max 15*2/3 = 10
+      case "Talent" : if(isChecked[2]) return; isChecked[2] = true; traceScore += charScoreWeight.trace.talent * trace.level /3;break;  //Max 15*2/3 = 10
+      case "BPSkill" : if(isChecked[3]) return; isChecked[3] = true; traceScore += charScoreWeight.trace.skill * trace.level /3;break;  //Max 15*2/3 = 10
       default : traceScore += 0
     }
   })
-  traceScore = (traceScore > 35 ? 35 : traceScore)
+  traceScore = (traceScore > 36 ? 36 : traceScore)
 
-  // 屬性分數 -> 最多60分
+  //突破分數 -> 最多6分
+  let promotionScore = charPromotion
+
+  // 屬性分數 -> 最多58分
   let attrScore = 0
   let attrWeightSum = 0 //總權重淨值 (1.5+2+1+...)
 
@@ -88,7 +92,6 @@ function getCharScore(charId, charData) {
     const attrValue = attrs[name];
     const weightValue = charScoreWeight.attr[name];
     const gradValue = charScoreWeight.grad[name];
-
     /*
     attrScore += 
     (weightValue === undefined ? 0 : weightValue) 
@@ -99,15 +102,16 @@ function getCharScore(charId, charData) {
       //...如果沒有畢業分，做甚麼？只能不算
     }else{
       attrScore += (attrValue / gradValue) //畢業比率
-        * (weightValue / attrWeightSum) * 60 //滿分的佔便比
-      //console.log(name+" : "+attrValue+" / "+gradValue+" || "+(attrValue / gradValue) //畢業比率
-      //)
+        * ((0.5*Math.pow(charLevel,2)/80)/40) //角色等級Curve
+        * (weightValue / attrWeightSum) * 58 //滿分的佔比
+      console.log(name+" : "+(attrValue)+" / "+(gradValue)+" || "+((attrValue) / (gradValue))+" || "+((attrValue) / (gradValue))* (weightValue / attrWeightSum) * 58) //畢業比率
+      
     }
   })
   
   //最大值 120 , 畢業100
-  console.log(lightconeScore+"||"+ soulScore+"||" + traceScore +"||"+ attrScore)
-  return lightconeScore + soulScore + traceScore + attrScore
+  console.log(lightconeScore+"||"+ soulScore+"||" + traceScore +"||"+ attrScore+"||"+promotionScore)
+  return lightconeScore + soulScore + traceScore + attrScore + promotionScore
 }
 
 function getCharRank(score){
@@ -119,5 +123,4 @@ function getCharRank(score){
   if(score <= 120){return "SS"}
 }
 
-console.log(getCharScore("1217",demoCharData))
-console.log(getCharRank(getCharScore("1217",demoCharData)))
+console.log((getCharScore("8002",demoCharData)))
