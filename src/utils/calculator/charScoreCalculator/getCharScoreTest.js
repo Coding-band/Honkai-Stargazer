@@ -90,7 +90,7 @@ function getCharScore(charId, charData) {
 
     charAttrFinal.map((attrs) => {
       const name = Object.keys(attrs)[0];
-      const attrValue = attrs[name];
+      const attrValue = attrs[name] + (name === "sp_rate" ? 1 : 0);
       const weightValue = charScoreWeight.attr[name];
       const gradValue = charScoreWeight.grad[name];
       /*
@@ -164,4 +164,4 @@ function getCurrAndGradScore(charId, charData){
     }
     return returnValue;
 }
-console.log(JSON.stringify(getCurrAndGradScore("1303",demoCharData)))
+console.log(JSON.stringify(getCharScore("1203",demoCharData)))
