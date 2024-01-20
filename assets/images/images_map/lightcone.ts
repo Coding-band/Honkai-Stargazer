@@ -1,4 +1,4 @@
-const Lightcone = {
+const Lightcone: any = {
   //add in 1.6.0
   "Baptism of Pure Thought": {
     icon: require("../../images/lightcone_icon/baptism_of_pure_thought.webp"),

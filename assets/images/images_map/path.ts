@@ -1,4 +1,4 @@
-const Path = {
+const Path: any = {
   Abundance: {
     icon: require("../ui_icon/path_the_abundance.webp"),
     icon2: require("../ui_icon/path_the_abundance_abyss.webp"),

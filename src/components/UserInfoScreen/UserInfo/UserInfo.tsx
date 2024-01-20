@@ -9,7 +9,7 @@ import UserInfoCharacters from "./UserInfoCharacters/UserInfoCharacters";
 import Toast from "../../../utils/toast/Toast";
 import UserAvatar from "../../global/UserAvatar/UserAvatar";
 import AvatarIcon from "../../../../assets/images/images_map/avatarIcon";
-import { animated} from "@react-spring/native";
+import { animated } from "@react-spring/native";
 import UUIDBox from "../../global/UUIDBox/UUIDBox";
 import Loading from "../../global/Loading/Loading";
 import ProducedByStargazer from "../../global/ProducedByStargazer/ProducedByStargazer";
@@ -140,7 +140,6 @@ export default function UserInfo(props: Props) {
             <View
               style={{
                 flexDirection: "row",
-                justifyContent: "space-between",
                 alignItems: "center",
               }}
             >
@@ -283,7 +282,7 @@ const InfoItem = ({
   title: string;
   value: string | number | undefined;
 }) => (
-  <View style={{ alignItems: "center" }} className="w-24">
+  <View style={{ alignItems: "center" }} className="w-20">
     <Text className="text-text text-[24px] font-[HY65] leading-5">{value}</Text>
     <Text className="text-text text-[12px] font-[HY65] leading-5">{title}</Text>
   </View>

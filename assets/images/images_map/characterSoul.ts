@@ -3,7 +3,7 @@
  * For Trailblazer, there did splitted to Boy1, Boy2, Girl1, Girl2 , etc (if necessery).
  */
 
-const CharacterSoul = {
+const CharacterSoul: any = {
   //add in 1.6.0
   "Dr. Ratio": {
     eidolon1: require("../../images/character_eidolon/dr_ratio_eidolon1.webp"),

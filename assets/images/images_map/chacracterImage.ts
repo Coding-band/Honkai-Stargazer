@@ -1,4 +1,4 @@
-const CharacterImage = {
+const CharacterImage: any = {
   //add in 1.6.0
   "Dr. Ratio": {
     icon: require("../../images/character_icon/dr_ratio_icon.webp"),

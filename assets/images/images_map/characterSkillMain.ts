@@ -3,7 +3,7 @@
  * For Trailblazer, there did splitted to Boy1, Boy2, Girl1, Girl2 , etc (if necessery).
  */
 
-const CharacterSkillMain = {
+const CharacterSkillMain: any = {
   //add in 1.6.0
   "Dr. Ratio": {
     skill1: require("../../images/character_skill/dr_ratio_skill1.webp"),

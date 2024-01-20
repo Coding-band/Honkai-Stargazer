@@ -1,4 +1,4 @@
-const AttributeImage = {
+const AttributeImage: any = {
   hp: require("../ui_icon/ic_hp.webp"),
   atk: require("../ui_icon/ic_atk.webp"),
   break_dmg: require("../ui_icon/ic_break_effect.webp"),

@@ -1,4 +1,4 @@
-const Relic = {
+const Relic: any = {
   "Passerby of Wandering Cloud": {
     icon1: require("../relic_icon/passerby_of_wandering_cloud_1.webp"),
     icon2: require("../relic_icon/passerby_of_wandering_cloud_2.webp"),

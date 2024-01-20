@@ -1,4 +1,4 @@
-const CharacterSkillTree = {
+const CharacterSkillTree : any= {
 	"b9952c496d29e0fbfdf92e772518aec6a1acca081bd41ebaf3e0f279d9910656" : require("../../images/character_skill_tree/b9952c496d29e0fbfdf92e772518aec6a1acca081bd41ebaf3e0f279d9910656.webp"),
 	"f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c" : require("../../images/character_skill_tree/f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c.webp"),
 	"97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8" : require("../../images/character_skill_tree/97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8.webp"),
