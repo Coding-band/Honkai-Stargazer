@@ -182,7 +182,7 @@ export const strings = {
   ATTR_LIGHTNING_DMG: "Lightning DMG",
   ATTR_PHYSICAL_DMG: "Physical DMG",
   ATTR_SP_RATE: "EP回復効率",
-  ATTR_HEAL_RATE: "治癒量",
+  ATTR_HEAL_RATE: "Heal Bonus",
   //Add in 20240117
   UnLockAll: "Unlock All",
   BlurOn: "Blur : ON",
@@ -278,5 +278,8 @@ export const strings = {
   ConfirmBTN: "Confirm",
   ShareSuccess: "Share Successfully!",
   ShareError: "Share Failed : ",
-  CodeAll: "ALL Servers"
+  CodeAll: "ALL Servers",
+  CharSoulShort: "E${1}",
+  PlsDonateUs: "Pls consider to donate for supporting us, thx!",
+  DonateInRandomCount: "Random"
 };

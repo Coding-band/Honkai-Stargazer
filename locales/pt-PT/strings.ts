@@ -103,7 +103,7 @@ export const strings = {
   UseInviteCode: "Usar Código de Convite",
   HaveNotUsed: "Não Utilizado",
   LanguageSetup: "Configuração de Idioma",
-  DocumentLanguage: "Idioma do Documento",
+  DocumentLanguage: "Idioma dos Documentos",
   AppLanguage: "Idioma do Aplicativo",
   Customize: "Personalizar",
   UseHSRFont: "Usar Fonte do Jogo",
@@ -160,7 +160,7 @@ export const strings = {
   LightconeEffect: "Efeito do Cone de Luz",
   LightconeStory: "História do Cone de Luz",
   //Add in 20240116
-  UseBlurEffect: "Usar Efeito de Desfoque",
+  UseBlurEffect: "Usar Efeito de Blur",
   ATTR_CRIT_RATE: "Taxa-Crit",
   ATTR_CRIT_DMG: "Dano-Crit",
   ATTR_HP: "PV",
@@ -182,11 +182,11 @@ export const strings = {
   ATTR_LIGHTNING_DMG: "DANO de Raio",
   ATTR_PHYSICAL_DMG: "DANO Físico",
   ATTR_SP_RATE: "Recuperação de Energia.",
-  ATTR_HEAL_RATE: "Bônus de Cura",
+  ATTR_HEAL_RATE: "Heal Bonus",
   //Add in 20240117
-  UnLockAll: "Desbloquear Tudo",
-  BlurOn: "Desfoque : LIGADO",
-  BlurOff: "Desfoque : DESLIGADO",
+  UnLockAll: "Destravar Todos",
+  BlurOn: "Blur : LIGADO",
+  BlurOff: "Blur : DESLIGADO",
   GetCharAndUnLock: "Desbloquear quando possuir ele/ela",
   Leaderboard: "Classificação",
   UIDSearch: "Busca por UID",
@@ -206,7 +206,7 @@ export const strings = {
   //天賦
   TraceTechnique: "Técnica",
   //秘技
-  Superimpose: "Sobrepor ${1}",
+  Superimpose: "Sobreposição ${1}",
   //疊影
   RelicScore: "Pontuação de Relíquia",
   CharScore: "Pontuação de Pers.",
@@ -227,15 +227,15 @@ export const strings = {
   StatusSeconds: "${1}s",
   StatusDays: "${1}d",
   StatusToday: "Hoje ${1}",
-  StatusTomorrow: "Amanhã ${1}",
-  SuperimposeLvl: "Sobrepor ${1}",
+  StatusTomorrow: "AMÂ ${1}",
+  SuperimposeLvl: "S.${1}",
   SuperimposeNotEquipped: "Não Disponível",
   TrailblazerNoti: "Notificação de Desbravador!",
   CommentFailed: "Falha ao comentar, erro : ",
   CommentPlsEnterComment: "Por favor, escreva o seu comentário",
   CommentHaventLogin: "Por favor, primeiro faça o login!",
   CommentSuccessful: "Sucesso!",
-  CommentTextInputHint: "Ajude-me, Sr. Svarog!",
+  CommentTextInputHint: "Socorro, Sr. Svarog!",
   CommentInDiscussion: "Em \" Discissão de${1}\"",
   MOCMissionInfoTitle: "Informações da Missão",
   MOCSkipped: "Ignorado",
@@ -278,5 +278,8 @@ export const strings = {
   ConfirmBTN: "Confirmar",
   ShareSuccess: "Compartilhado com Sucesso!",
   ShareError: "Falha ao Compartilhar : ",
-  CodeAll: "Todos os servidores"
+  CodeAll: "Todos os servidores",
+  CharSoulShort: "E${1}",
+  PlsDonateUs: "Pls consider to donate for supporting us, thx!",
+  DonateInRandomCount: "Random"
 };

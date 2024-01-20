@@ -182,7 +182,7 @@ export const strings = {
   ATTR_LIGHTNING_DMG: "ㄌㄟㄕㄤㄊ一ㄍㄠ",
   ATTR_PHYSICAL_DMG: "ㄨㄕㄤㄊ一ㄍㄠ",
   ATTR_SP_RATE: "ㄔㄨㄥㄋㄥㄒ一ㄠㄌㄩ",
-  ATTR_HEAL_RATE: "ㄓㄌ一ㄠㄌ一ㄤㄐ一ㄚㄔㄥ",
+  ATTR_HEAL_RATE: "Heal Bonus",
   //Add in 20240117
   UnLockAll: "ㄐㄧㄝㄙㄨㄛㄑㄩㄢㄅㄨ",
   BlurOn: "ㄇㄛㄏㄨ : ㄎㄞㄑ一",
@@ -236,7 +236,7 @@ export const strings = {
   CommentHaventLogin: "您尚未登入！",
   CommentSuccessful: "留言成功！",
   CommentTextInputHint: "幫幫我 史瓦羅先生！",
-  CommentInDiscussion: "在「${1}」的評論區",
+  CommentInDiscussion: "在「${charName}」的評論區",
   MOCMissionInfoTitle: "ㄍㄨㄢㄎㄚㄗㄒㄩㄣ",
   MOCSkipped: "ㄎㄨㄞㄙㄨㄊㄨㄥㄍㄨㄢ",
   MOCMissionPart1: "一",
@@ -278,5 +278,8 @@ export const strings = {
   ConfirmBTN: "ㄑㄩㄝㄉ一ㄥ",
   ShareSuccess: "分享成功！",
   ShareError: "分享失敗，錯誤訊息： ",
-  CodeAll: "ㄙㄨㄛ一ㄡㄙㄈㄨㄑ一"
+  CodeAll: "ㄙㄨㄛ一ㄡㄙㄈㄨㄑ一",
+  CharSoulShort: "E${1}",
+  PlsDonateUs: "Pls consider to donate for supporting us, thx!",
+  DonateInRandomCount: "Random"
 };

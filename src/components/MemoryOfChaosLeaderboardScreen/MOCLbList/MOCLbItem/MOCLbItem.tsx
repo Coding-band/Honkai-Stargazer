@@ -219,7 +219,7 @@ const RecordItem = React.memo((props: any) => {
                     {props.showRank ? (
                       <Text
                         style={{ color: char.rank === 6 ? "#DD8200" : "#FFF" }}
-                      >{`${char.rank} 魂`}</Text>
+                      >{formatLocale(LOCALES[language].CharSoulShort,[char.rank])}</Text>
                     ) : (
                       `Lv ${char.level}`
                     )}
@@ -228,7 +228,7 @@ const RecordItem = React.memo((props: any) => {
               )
             )
           ) : (
-            <Text className="text-text2 font-[HY65] text-[12px]">快速通關</Text>
+            <Text className="text-text2 font-[HY65] text-[12px]">{LOCALES[language].MOCSkipped}</Text>
           )}
         </TouchableOpacity>
       </View>

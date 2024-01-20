@@ -278,5 +278,8 @@ export const strings = {
   ConfirmBTN: "確定",
   ShareSuccess: "分享成功！",
   ShareError: "分享失敗，錯誤訊息：",
-  CodeAll: "所有伺服器"
+  CodeAll: "所有伺服器",
+  CharSoulShort: "魂 ${1}",
+  PlsDonateUs: "請考慮透過捐贈支持我們，謝謝！",
+  DonateInRandomCount: "隨機"
 };

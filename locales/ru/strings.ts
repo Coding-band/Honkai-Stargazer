@@ -278,5 +278,8 @@ export const strings = {
   ConfirmBTN: "Confirm",
   ShareSuccess: "Share Successfully!",
   ShareError: "Share Failed : ",
-  CodeAll: "ALL Servers"
+  CodeAll: "ALL Servers",
+  CharSoulShort: "E${1}",
+  PlsDonateUs: "Pls consider to donate for supporting us, thx!",
+  DonateInRandomCount: "Random"
 };
