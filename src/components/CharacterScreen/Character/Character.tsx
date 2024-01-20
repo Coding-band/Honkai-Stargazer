@@ -68,6 +68,7 @@ export default React.memo(function Character() {
                 <CharTrace />
                 <CharEidolon />
                 <CharSuggestLightCone />
+                <CharSuggestRelics />
                 <CharSuggestTeam />
                 <CharStory />
                 {/* <CharAttribute />
