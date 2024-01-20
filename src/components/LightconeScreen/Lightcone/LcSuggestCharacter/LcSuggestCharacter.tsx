@@ -76,7 +76,7 @@ export default function LcSuggestCharacter() {
   );
 
   return (
-    <View style={{ alignItems: "center" }}>
+    <View className="px-4" style={{ alignItems: "center" }}>
       <PageHeading Icon={Sword}>
         {LOCALES[appLanguage].AdviceCharacters}
       </PageHeading>

@@ -20,7 +20,7 @@ export default function CharSuggestRelicsProps() {
 
 
   return (
-    <View className="w-full mt-4">
+    <View className="w-full mt-4 px-6">
       <View className="w-full">
         <Text className="font-[HY75] text-white text-[16px]">
           {LOCALES[appLanguage].MainAffix}

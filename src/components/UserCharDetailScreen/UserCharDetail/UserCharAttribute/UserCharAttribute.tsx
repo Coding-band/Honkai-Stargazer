@@ -111,10 +111,10 @@ export default function UserCharAttribute() {
       value:
         Math.floor(
           ((inGameCharData?.attributes.filter(
-            (attr: any) => attr.field === "crit_rate"
+            (attr: any) => attr.field === "sp_rate"
           )[0]?.value || 0) +
             (inGameCharData?.additions.filter(
-              (attr: any) => attr.field === "crit_rate"
+              (attr: any) => attr.field === "sp_rate"
             )[0]?.value || 0)) *
             1000
         ) /

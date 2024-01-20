@@ -1,5 +1,5 @@
 import { View, Text, ScrollView } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import SettingGroup from "../../SettingScreen/SettingGroup/SettingGroup";
 import SettingItem from "../../SettingScreen/SettingGroup/SettingItem/SettingItem";
 import { Image } from "expo-image";
@@ -8,17 +8,21 @@ import useMyFirebaseUid from "../../../firebase/hooks/FirebaseUid/useMyFirebaseU
 
 export default function InviteList() {
   const firebaseUID = useMyFirebaseUid();
-  const { data: user } = useUser(firebaseUID || "");
+  const inviteCode = useUser(firebaseUID || "").data?.invite_code;
+
+  const [emoji, setEmoji] = useState(
+    [
+      require("./images/haha.png"),
+      require("./images/haha2.png"),
+      require("./images/haha3.png"),
+    ][Math.floor(Math.random() * 3)]
+  );
 
   return (
     <ScrollView className="z-30 h-screen py-[110px]  pb-0">
       <View style={{ gap: 20 }} className="pb-48 px-4">
         <SettingGroup title={"我的邀請碼"}>
-          <SettingItem
-            type="none"
-            title={user?.invite_code || ""}
-            content={"複製"}
-          />
+          <SettingItem type="none" title={inviteCode || ""} content={"複製"} />
         </SettingGroup>
         <SettingGroup title={"使用我的"}>
           <SettingItem
@@ -60,16 +64,7 @@ export default function InviteList() {
           </Text>
         </View>
       </View>
-      <Image
-        source={
-          [
-            require("./images/haha.png"),
-            require("./images/haha2.png"),
-            require("./images/haha3.png"),
-          ][Math.floor(Math.random() * 3)]
-        }
-        className="w-40 h-40 absolute -right-0 bottom-0"
-      />
+      <Image source={emoji} className="w-40 h-40 absolute -right-0 bottom-0" />
     </ScrollView>
   );
 }

@@ -9,11 +9,11 @@ export default function UserCharRelics() {
   const userRelicsData: any[] = inGameCharData?.relics;
   const { eachScore } = getRelicScore(inGameCharData?.id, userRelicsData);
 
-  const [selectedRelic, setSelectedRelic] = useState(0);
+  const [selectedRelic, setSelectedRelic] = useState(-1);
 
   return (
     inGameCharData && (
-      <View style={{ gap: 20,alignItems:"center" }}>
+      <View style={{ gap: 20, alignItems: "center" }}>
         <View
           className="px-4"
           style={{

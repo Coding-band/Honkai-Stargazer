@@ -7,27 +7,35 @@ import useProfileHsrInGameInfo from "../../../../context/UserCharDetailData/hook
 import { LOCALES } from "../../../../../locales";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { Image } from "expo-image";
-import ScoreRangeFont from "../../../../../assets/images/images_map/scoreRangeFont";
 import getCharScore, {
   getCharRange,
+  getCurrAndGradScore,
 } from "../../../../utils/calculator/charScoreCalculator/getCharScore";
-import { cn } from "../../../../utils/css/cn";
+import UserCharScoreItem from "./UserCharScoreItem/UserCharScoreItem";
+import ScoreRangeFont from "../../../global/ScoreRangeFont/ScoreRangeFont";
+import AttributeImage from "../../../../../assets/images/images_map/attributeImage";
+import UserCharScoreBar from "./UserCharScoreBar/UserCharScoreBar";
 
 export default function UserCharScore() {
   const { language: appLanguage } = useAppLanguage();
 
   const { inGameCharData } = useProfileHsrInGameInfo();
   const userRelicsData: any[] = inGameCharData?.relics;
+  const charId = inGameCharData?.id;
 
-  const { totalScore: relicTotalScore } = getRelicScore(
+  // 遺器總分
+  const relicTotalScore = getRelicScore(
     inGameCharData?.id,
     userRelicsData
-  );
+  ).totalScore;
+  // 角色總分
   const charTotalScore = inGameCharData
-    ? getCharScore(inGameCharData?.id, inGameCharData)
+    ? getCharScore(charId, inGameCharData)
     : 0;
+  // 各屬性畢業度
+  const currAndGrad = getCurrAndGradScore(charId, 0, inGameCharData);
 
-  const { language } = useAppLanguage()
+  const { language } = useAppLanguage();
 
   return (
     inGameCharData && (
@@ -44,60 +52,36 @@ export default function UserCharScore() {
           <Text className="text-text font-[HY65] text-[24px]">101%</Text>
           <Text className="text-text font-[HY65] text-[12px]">角色毕业率</Text>
         </View> */}
-
-          <View
-            className="h-[54px]"
-            style={{ justifyContent: "space-between", alignItems: "center" }}
-          >
-            <Text
-              className={cn(
-                "text-text font-[HY65] text-[24px]",
-                Platform.OS === "ios" ? "translate-y-[6px]" : ""
-              )}
-            >
-              {charTotalScore.toFixed(1)}
-            </Text>
-            <Text className="text-text font-[HY65] text-[12px]">{LOCALES[language].CharScore}</Text>
-          </View>
-          <View
-            className="h-[54px]"
-            style={{ justifyContent: "space-between", alignItems: "center" }}
-          >
-            <Image
-              className="w-12 h-8"
-              source={ScoreRangeFont[getCharRange(charTotalScore)]}
-              contentFit="contain"
-            />
-            <Text className="text-text font-[HY65] text-[12px]">{LOCALES[language].CharRank}</Text>
-          </View>
-          <View
-            className="h-[54px]"
-            style={{ justifyContent: "space-between", alignItems: "center" }}
-          >
-            <Text
-              className={cn(
-                "text-text font-[HY65] text-[24px]",
-                Platform.OS === "ios" ? "translate-y-[6px]" : ""
-              )}
-            >
-              {relicTotalScore.toFixed(1)}
-            </Text>
-            <Text className="text-text font-[HY65] text-[12px]">
-              {LOCALES[appLanguage].RelicScore}
-            </Text>
-          </View>
-          <View
-            className="h-[54px]"
-            style={{ justifyContent: "space-between", alignItems: "center" }}
-          >
-            <Image
-              className="w-12 h-8"
-              source={ScoreRangeFont[getRelicTotalScoreRange(relicTotalScore)]}
-              contentFit="contain"
-            />
-            <Text className="text-text font-[HY65] text-[12px]">
-              {LOCALES[appLanguage].RelicRank}
-            </Text>
+          <UserCharScoreItem
+            title={LOCALES[appLanguage].CharScore}
+            value={charTotalScore.toFixed(1)}
+          />
+          <UserCharScoreItem
+            title={LOCALES[appLanguage].CharRank}
+            value={<ScoreRangeFont scoreRange={getCharRange(charTotalScore)} />}
+          />
+          <UserCharScoreItem
+            title={LOCALES[appLanguage].RelicScore}
+            value={relicTotalScore.toFixed(1)}
+          />
+          <UserCharScoreItem
+            title={LOCALES[appLanguage].RelicRank}
+            value={
+              <ScoreRangeFont
+                scoreRange={getRelicTotalScoreRange(relicTotalScore)}
+              />
+            }
+          />
+        </View>
+        <View>
+          <View style={{ gap: 10 }}>
+            {currAndGrad.map((attr, i) => (
+              <UserCharScoreBar
+                field={Object.keys(attr)[0]}
+                currScore={Object.values(attr)?.[0]?.[0] as number}
+                gradScore={Object.values(attr)?.[0]?.[1] as number}
+              />
+            ))}
           </View>
         </View>
         <View style={{ alignItems: "center", gap: 2 }}>
