@@ -1,15 +1,15 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
-import BlurView from "../BlurView/BlurView";
+import BlurView from "../../../global/BlurView/BlurView";
 import { Shadow } from "react-native-shadow-2";
 import { Image } from "expo-image";
 import {
   formatTimeDuration,
   formatTimePoint,
-} from "../../../utils/date/formatTime";
+} from "../../../../utils/date/formatTime";
 import { animated, useSpring } from "@react-spring/native";
-import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
-import { LOCALES } from "../../../../locales";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
+import { LOCALES } from "../../../../../locales";
 
 type Props = {
   avatars: string[];
@@ -34,7 +34,7 @@ export default function EpdtListItem(props: Props) {
         <BlurView className="w-full">
           <Shadow startColor="#00000025" style={{ width: "100%" }}>
             <View
-              className="w-full h-20 p-[10px] bg-[#F3F9FF80]"
+              className="w-full h-20 p-[10px] bg-[#d2d6db]"
               style={{ gap: 6 }}
             >
               <View style={{ gap: 8, flexDirection: "row" }}>

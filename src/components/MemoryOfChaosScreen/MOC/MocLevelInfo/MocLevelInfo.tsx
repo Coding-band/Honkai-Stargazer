@@ -29,7 +29,9 @@ export default function MocLevelInfo({
         className="z-50"
         style={{ flexDirection: "row", justifyContent: "space-between" }}
       >
-        <Text className="text-text text-[16px] font-[HY65]">{LOCALES[language].MOCMissionInfoTitle}</Text>
+        <Text className="text-text text-[16px] font-[HY65]">
+          {LOCALES[language].MOCMissionInfoTitle}
+        </Text>
         <FloorOptions
           length={mocData.info.length}
           onChange={(f) => {
@@ -97,8 +99,8 @@ const Layer = ({
         </View>
         {/*  */}
         <View style={{ flex: 1, flexDirection: "row", gap: 20 }}>
-          {data["part" + part]["wave" + wave].map((monster: any) => (
-            <Mob>{monster}</Mob>
+          {data["part" + part]["wave" + wave].map((monster: any, i: number) => (
+            <Mob key={i}>{monster}</Mob>
           ))}
         </View>
       </View>
@@ -184,7 +186,7 @@ const FloorOptions = ({
           gap: 8,
           alignItems: "center",
         }}
-        className="absolute top-[24px] right-0 bg-[#9F9FAA] px-3 py-2 rounded-[4px]"
+        className="absolute top-[24px] right-0 bg-[#3E3E47] px-3 py-2 rounded-[4px]"
       >
         {floors.map((floor, i) => (
           <TouchableOpacity

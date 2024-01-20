@@ -357,7 +357,7 @@ export default function HomeScreen() {
   }, [uid, moc, mocPrev, hsrPlayerData]);
 
   return (
-    <Pressable style={{ flex: 1, backgroundColor: "white" }}>
+    <Pressable style={{ flex: 1 }} className="overflow-hidden">
       <StatusBar style="dark" />
       {/* 渾沌回憶背景預先加載 */}
       <WallPaperForMOC />

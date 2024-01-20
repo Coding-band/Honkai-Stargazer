@@ -39,7 +39,7 @@ export default function LoginScreen() {
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View style={{ flex: 1 }} className="overflow-hidden">
       <StatusBar style="dark" />
       <WallPaper />
       <Header onBack={handleLogin} Icon={SCREENS.LoginPage.icon}>

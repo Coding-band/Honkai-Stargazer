@@ -82,9 +82,10 @@ export default function MenuItemLarge({
                       className="absolute right-2"
                       style={{
                         minWidth: (width - 13) / 2,
+                        height,
                         alignItems: "center",
-                        justifyContent: "space-between",
-                        gap: 6,
+                        justifyContent: "center",
+                        gap: 12,
                       }}
                     >
                       <Text className=" text-text text-[15px] font-medium font-[HY65]">

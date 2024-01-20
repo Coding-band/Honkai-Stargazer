@@ -13,7 +13,7 @@ export default function LcStory() {
   const { language } = useAppLanguage();
 
   return (
-    <View style={{ alignItems: "center" }}>
+    <View className="px-6" style={{ alignItems: "center" }}>
       <PageHeading Icon={ChatsCircle}>
         {LOCALES[language].LightconeStory}
       </PageHeading>

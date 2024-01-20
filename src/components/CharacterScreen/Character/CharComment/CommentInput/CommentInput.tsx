@@ -1,4 +1,4 @@
-import { Keyboard, Pressable, TextInput, View } from "react-native";
+import { Keyboard, Platform, Pressable, TextInput, View } from "react-native";
 import React, { useState, useEffect } from "react";
 import { cn } from "../../../../../utils/css/cn";
 import db from "../../../../../firebase/db";
@@ -148,10 +148,14 @@ export default function CommentInput({
           <TextInput
             multiline
             className={cn(
-              "py-[9px] px-[20px]",
-              "text-[16px] font-[HY65] text-text leading-5"
+              "px-[20px]",
+              "text-[16px] font-[HY65] text-text leading-6"
             )}
-            style={{ justifyContent: "center", flex: 1 }}
+            style={{
+              justifyContent: "center",
+              flex: 1,
+              paddingVertical: Platform.OS === "android" ? 9 : 15,
+            }}
             value={input}
             onChangeText={handleTextChange}
             onSubmitEditing={handleSubmit}

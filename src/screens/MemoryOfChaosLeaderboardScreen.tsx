@@ -9,18 +9,22 @@ import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 import CodeList from "../components/CodeScreen/CodeList/CodeList";
 import WallPaperForMOC from "../components/global/WallPaper/WallPaperForMOC";
 import MOCLbList from "../components/MemoryOfChaosLeaderboardScreen/MOCLbList/MOCLbList";
+import useDelayLoad from "../hooks/useDelayLoad";
+import Loading from "../components/global/Loading/Loading";
 
 export default function MemoryOfChaosLeaderboardScreen() {
   const { language } = useAppLanguage();
 
+  const loaded = useDelayLoad(1000);
+
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View style={{ flex: 1 }} className="overflow-hidden">
       <StatusBar style="dark" />
       <WallPaperForMOC />
       <Header leftBtn="back" Icon={SCREENS.MemoryOfChaosLeaderboardPage.icon}>
         {SCREENS.MemoryOfChaosLeaderboardPage.getName(language)}
       </Header>
-      <MOCLbList />
+      {loaded ? <MOCLbList /> : <Loading />}
     </View>
   );
 }

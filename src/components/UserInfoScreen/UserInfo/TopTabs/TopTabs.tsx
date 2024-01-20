@@ -52,8 +52,9 @@ export default function TopTabs(props: {
             if (active === tab.value) {
               setHeight(height);
             }
-            setWidths([...widths, width]);
-            setOffsets([...offsets, x]);
+
+            setWidths((widths) => [...widths, width].sort().reverse());
+            setOffsets((offsets) => [...offsets, x].sort());
           }}
         >
           <View className="py-[7px] px-[14px] rounded-[20px]">

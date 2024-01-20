@@ -17,7 +17,7 @@ export default function UserInfoScreen() {
   const uuid = route.params.uuid;
 
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View style={{ flex: 1 }} className="overflow-hidden">
       <StatusBar style="dark" />
       <WallPaper isBlur />
       <LinearGradient

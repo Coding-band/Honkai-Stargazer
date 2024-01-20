@@ -14,9 +14,9 @@ export default function PopUpCard(props: Props) {
   return (
     <BlurView
       disable={Platform.OS === "android"}
-      intensity={60}
+      intensity={40}
       style={{
-        backgroundColor: Platform.OS === "android" ? "#d2d6db" : "#F3F9FF",
+        backgroundColor: "#d2d6db",
       }}
       className="w-full rounded-[4px] rounded-tr-[24px] overflow-hidden"
     >

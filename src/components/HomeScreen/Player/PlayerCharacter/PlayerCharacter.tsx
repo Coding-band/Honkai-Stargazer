@@ -12,7 +12,7 @@ export default function PlayerCharacter() {
   const navigation = useNavigation();
 
   const hsrUUID = useHsrUUID();
-  const { data: inGameInfo } = useHsrInGameInfo(hsrUUID);
+  const { data: inGameInfo } = useHsrInGameInfo(hsrUUID) as any; 
   return (
     <View className="flex flex-row gap-1">
       {inGameInfo?.characters ? inGameInfo?.characters?.map((char: any, i: number) => (

@@ -13,7 +13,7 @@ export default function CharacterListScreen() {
   const { language } = useAppLanguage();
 
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View style={{ flex: 1 }} className="overflow-hidden">
       <StatusBar style="dark" />
       <WallPaper isBlur />
       <LinearGradient

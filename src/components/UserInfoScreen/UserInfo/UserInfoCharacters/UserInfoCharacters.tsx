@@ -113,7 +113,7 @@ export default function UserInfoCharacters(props: Props) {
             style={{
               flexDirection: "row",
               justifyContent: "space-between",
-              width: charsDisplayWidth || 344,
+              width: Math.max(charsDisplayWidth, 340),
             }}
           >
             <View

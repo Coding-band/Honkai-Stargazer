@@ -1,6 +1,6 @@
 import { View, ScrollView, RefreshControl } from "react-native";
 import React from "react";
-import EpdtListItem from "../../global/EpdtListItem/EpdtListItem";
+import EpdtListItem from "./EpdtListItem/EpdtListItem";
 import useHsrNote from "../../../hooks/hoyolab/useHsrNote";
 import NotFound from "../../global/Loading/NotFound";
 

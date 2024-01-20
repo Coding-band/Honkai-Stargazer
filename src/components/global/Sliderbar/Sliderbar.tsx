@@ -9,6 +9,7 @@ import Animated, {
   useAnimatedStyle,
   useSharedValue,
 } from "react-native-reanimated";
+import * as Haptics from "expo-haptics";
 
 type Props = {
   point?: number;
@@ -72,7 +73,8 @@ export default function Sliderbar({
     );
     transitionX.value = 0; // 重置 transitionX
     onChange(points.findIndex((v) => v === closest));
-    // Vibration.vibrate(2);
+    // 震動回饋
+    // Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
   };
 
   const gestureHandler = useAnimatedGestureHandler({

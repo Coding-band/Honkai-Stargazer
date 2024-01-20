@@ -62,6 +62,7 @@ export default function ManualEnterCookie(props: Props) {
         textAlignVertical="top"
         multiline={true}
         placeholder={LOCALES[language].LoginViaPCToGetCookies}
+        placeholderTextColor="gray"
         className="w-full h-[280px] bg-[#ffffff50] rounded-[24px] p-3 font-[HY55] leading-5"
       />
       <TextButton

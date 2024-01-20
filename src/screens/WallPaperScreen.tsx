@@ -11,10 +11,7 @@ export default function WallPaperScreen() {
   const { language } = useAppLanguage();
 
   return (
-    <View
-      style={{ flex: 1, backgroundColor: "white" }}
-      className="overflow-hidden"
-    >
+    <View style={{ flex: 1 }} className="overflow-hidden">
       <StatusBar style="dark" />
 
       <LinearGradient

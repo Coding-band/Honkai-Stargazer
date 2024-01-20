@@ -47,8 +47,8 @@ export default function CommentBox(props: Props) {
 
   useEffect(() => {
     if (translation.value.y < 0) {
-      props.containerRef?.current?.scrollToEnd({
-        animated: true,
+      props.containerRef?.current?.scrollTo({
+        y: 3400,
       });
     }
   }, [translation.value.y]);
@@ -90,7 +90,7 @@ export default function CommentBox(props: Props) {
   const scrollRef = useRef<AnimatedScrollView>();
   useEffect(() => {
     if (translation.value.y < 0)
-      scrollRef.current?.scrollToEnd({ animated: true });
+      scrollRef.current?.scrollToEnd({ animated: false });
   }, [translation.value.y]);
 
   return (
@@ -110,7 +110,10 @@ export default function CommentBox(props: Props) {
               className="w-[12px] h-[12px]"
             />
             <Text className="text-white text-[16px] font-[HY65]">
-              {LOCALES[language].Comments.replace("${1}",(charComments?.length || 0))}
+              {LOCALES[language].Comments.replace(
+                "${1}",
+                charComments?.length || 0
+              )}
             </Text>
           </View>
         </Animated.View>
@@ -124,17 +127,16 @@ export default function CommentBox(props: Props) {
       >
         <Animated.View className="w-full mb-20">{props.children}</Animated.View>
       </Animated.ScrollView>
-      {translation.value.y < 0 && (
-        <KeyboardAvoidingView
-          className="absolute bottom-4 w-full"
-          behavior="padding"
-          keyboardVerticalOffset={Platform.OS === "android" ? 118 : 124}
-        >
-          <Animated.View style={[animatedStyles3]}>
-            {props.bottom}
-          </Animated.View>
-        </KeyboardAvoidingView>
-      )}
+
+      <KeyboardAvoidingView
+        // @ts-ignore
+        style={{ display: translation.value.y < 0 ? "" : "none" }}
+        className="absolute bottom-4 w-full"
+        behavior="padding"
+        keyboardVerticalOffset={Platform.OS === "android" ? 118 : 124}
+      >
+        <Animated.View style={[animatedStyles3]}>{props.bottom}</Animated.View>
+      </KeyboardAvoidingView>
     </Pressable>
   );
 }

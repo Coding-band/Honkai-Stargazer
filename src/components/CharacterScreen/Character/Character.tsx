@@ -1,4 +1,4 @@
-import { View, LayoutChangeEvent, Dimensions } from "react-native";
+import { View, LayoutChangeEvent, Dimensions, Keyboard } from "react-native";
 import React, { useState } from "react";
 import CharAction from "./CharAction/CharAction";
 import CharInfo from "./CharInfo/CharInfo";
@@ -56,18 +56,27 @@ export default React.memo(function Character() {
           ref={aref}
           nestedScrollEnabled={true}
           keyboardShouldPersistTaps="always"
+          onScroll={() => {
+            Keyboard.dismiss();
+          }}
         >
           <View onLayout={handleLayout}>
-            <View className="p-6">
+            <View>
               <CharInfo />
               <Animated.View style={contentAnimatedStyles}>
                 <CharAttribute />
                 <CharTrace />
                 <CharEidolon />
                 <CharSuggestLightCone />
-                <CharSuggestRelics />
                 <CharSuggestTeam />
                 <CharStory />
+                {/* <CharAttribute />
+                <CharTrace />
+                <CharEidolon />
+                <CharSuggestLightCone />
+                <CharSuggestRelics />
+                <CharSuggestTeam />
+                <CharStory /> */}
               </Animated.View>
             </View>
             <CharComment containerRef={aref} />

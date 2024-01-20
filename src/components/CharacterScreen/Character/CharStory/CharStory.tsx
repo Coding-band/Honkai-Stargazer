@@ -30,7 +30,7 @@ export default React.memo(function CharStory() {
   };
 
   return (
-    <View>
+    <View className="px-6">
       <CharPageHeading Icon={ChatsCircle}>
         {charFullData.storyItems[currentStoryIndex].title}
       </CharPageHeading>

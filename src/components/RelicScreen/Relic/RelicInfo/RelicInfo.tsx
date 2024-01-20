@@ -11,6 +11,7 @@ export default function RelicInfo() {
   const { relicData } = useRelicData();
   return (
     <View
+      className="px-6"
       style={{
         paddingTop: Dimensions.get("window").height - 244,
         gap: 8,

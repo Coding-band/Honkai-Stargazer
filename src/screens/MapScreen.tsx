@@ -10,7 +10,7 @@ export default function MapScreen() {
   const { language } = useAppLanguage();
 
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View style={{ flex: 1 }} className="overflow-hidden">
       <StatusBar style="dark" />
       <Header Icon={SCREENS.MapPage.icon}>
         {SCREENS.MapPage.getName(language)}

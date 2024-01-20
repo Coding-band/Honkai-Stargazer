@@ -26,14 +26,13 @@ export default function RelicScreen() {
 
   return (
     <RelicProvider relicId={relicId}>
-      <View style={{ flex: 1, backgroundColor: "white" }}>
+      <View style={{ flex: 1 }} className="overflow-hidden">
         <StatusBar style="dark" />
         <WallPaper isBlur />
         <LinearGradient
           className="absolute w-full h-full"
           colors={["#00000080", "#00000020"]}
         />
-
         <Header leftBtn="back" Icon={SCREENS.RelicPage.icon}>
           {relicName}
         </Header>

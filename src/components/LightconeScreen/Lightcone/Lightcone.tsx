@@ -42,17 +42,14 @@ export default function Lightcone() {
       className="absolute bottom-0 w-full h-screen z-30"
       style={{ alignItems: "center" }}
     >
-      <View
-        className="z-30"
-        style={{ marginTop: Dimensions.get("window").height / 9 }}
-      >
+      <View className="z-30">
         <LcImageFull
           scrollHandler={scrollHandler}
           lcContainerHeight={containerHeight}
         />
       </View>
       <View className="absolute w-full h-full pt-0 pb-0 z-40">
-        <Animated.ScrollView ref={aref} style={{ padding: 24 }}>
+        <Animated.ScrollView ref={aref} className="pt-6">
           <View onLayout={handleLayout}>
             <LcInfo />
             <Animated.View style={contentAnimatedStyles}>

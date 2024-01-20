@@ -4,6 +4,7 @@ import {
   TouchableNativeFeedback,
   TouchableOpacity,
   TouchableWithoutFeedback,
+  Pressable,
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import useUser from "../../../../../firebase/hooks/User/useUser";
@@ -59,10 +60,10 @@ export default function CommentItem({
 
   return (
     <TouchableNativeFeedback
-      onLongPress={() => {
-        handleCopy(content);
-        Vibration.vibrate(50);
-      }}
+    // onLongPress={() => {
+    //   handleCopy(content);
+    //   Vibration.vibrate(10);
+    // }}
     >
       <View className="px-6 py-3" style={{ flexDirection: "row", gap: 14 }}>
         {/* 頭像 */}
@@ -122,10 +123,11 @@ const Like = ({
           });
       }
     }
-  }, [isLiked]);
+  }, [firebaseUID, isLiked]);
 
   return (
-    <View
+    <Pressable
+      onPress={handleOnLike}
       className="absolute right-0"
       style={{
         flexDirection: "row",
@@ -142,14 +144,14 @@ const Like = ({
           ? likeUsers?.length + 1
           : likeUsers?.length) || ""}
       </Text>
-      <TouchableOpacity onPress={handleOnLike} activeOpacity={0.65}>
+      <TouchableOpacity activeOpacity={0.65}>
         <ThumbsUp
           color="white"
           size={20}
           weight={isLiked ? "fill" : "regular"}
         />
       </TouchableOpacity>
-    </View>
+    </Pressable>
   );
 };
 

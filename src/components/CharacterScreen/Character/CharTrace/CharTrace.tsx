@@ -19,7 +19,7 @@ export default React.memo(function CharTrace() {
   const charPathId = charData?.pathId;
 
   return (
-    <View style={{ alignItems: "center" }}>
+    <View className="px-4" style={{ alignItems: "center" }}>
       <CharPageHeading Icon={TreeStructure}>
         {LOCALES[language].TraceTree}
       </CharPageHeading>

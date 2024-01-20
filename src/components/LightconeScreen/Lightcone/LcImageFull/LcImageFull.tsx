@@ -47,8 +47,8 @@ export default function LcImageFull(props: Props) {
       <View
         style={{
           width: Dimensions.get("window").width,
-          height: (Dimensions.get("window").height * 3) / 5,
-          transform: [{ scale: 0.9 }, { rotate: "0deg" }],
+          height: Dimensions.get("window").height,
+          transform: [{ scale: 0.8 }, { rotate: "0deg" }],
         }}
       >
         <Image
@@ -56,7 +56,7 @@ export default function LcImageFull(props: Props) {
           className="z-40 absolute w-full h-full"
           source={lcData?.imageFull}
           contentFit={"contain"}
-          style={{ transform: [{ scale: 1.05 }] }}
+          style={{ bottom: 880 - Dimensions.get("window").height }}
         />
       </View>
     </Animated.View>

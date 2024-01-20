@@ -6,11 +6,14 @@ const useUserByUUID = (uuid: string) => {
   const data = useQuery(
     ["firebase-user-by-uuid", uuid],
     async () => {
-      const querySnapshot = await db.Users.where("uuid", "==", uuid).get();
-      if (querySnapshot.empty) {
-        return null;
+      let user = {};
+      if (uuid) {
+        const querySnapshot = await db.Users.where("uuid", "==", uuid).get();
+        if (querySnapshot.empty) {
+          return null;
+        }
+        user = querySnapshot.docs[0].data() as Users;
       }
-      const user = querySnapshot.docs[0].data() as Users;
       return user;
     },
     { staleTime: 1000 * 60 }

@@ -78,7 +78,7 @@ export default function LcAttribute() {
 
   return (
     <>
-      <View style={{ alignItems: "center" }}>
+      <View className="px-6" style={{ alignItems: "center" }}>
         <PageHeading Icon={Info}>{LOCALES[language].BasicStatus}</PageHeading>
         {loaded && (
           <>
@@ -150,7 +150,7 @@ export default function LcAttribute() {
           </>
         )}
       </View>
-      <ScrollView horizontal className="mt-5">
+      <ScrollView horizontal className="mt-5 mx-6">
         <View style={{ flexDirection: "row", gap: 14 }}>
           {map(materials, (v, k) => {
             return (

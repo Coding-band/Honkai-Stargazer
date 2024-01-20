@@ -90,11 +90,12 @@ export default React.memo(function CharSuggestTeam() {
         <View
           style={{
             flexDirection: "row",
+            justifyContent: "center",
             flexWrap: "wrap",
             rowGap: 16,
           }}
         >
-          {suggestTeamsData?.slice(0, 2).map((team: any, i: number) => (
+          {suggestTeamsData?.map((team: any, i: number) => (
             // @ts-ignore
             <CharSuggestTeamCard key={i} team={team.team} name={team.name} />
           ))}

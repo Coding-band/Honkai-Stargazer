@@ -11,6 +11,7 @@ export default function LcInfo() {
 
   return (
     <View
+      className="px-6"
       style={{
         paddingTop: Dimensions.get("window").height - 244,
         gap: 8,

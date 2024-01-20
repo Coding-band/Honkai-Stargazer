@@ -15,6 +15,7 @@ type Props = {
   children: any[];
   bottom?: number;
   top?: number;
+  style?: any;
 };
 
 export default function Listbox(props: Props) {
@@ -29,7 +30,7 @@ export default function Listbox(props: Props) {
   });
 
   return (
-    <View>
+    <View style={props.style}>
       <TouchableOpacity
         onPress={() => {
           setOpen(!open);

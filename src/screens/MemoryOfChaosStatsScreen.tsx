@@ -6,7 +6,7 @@ import WallPaperForMOC from "../components/global/WallPaper/WallPaperForMOC";
 
 export default function MemoryOfChaosStatsScreen() {
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View style={{ flex: 1 }} className="overflow-hidden">
       <StatusBar style="dark" />
       <WallPaperForMOC />
       <MOCList />

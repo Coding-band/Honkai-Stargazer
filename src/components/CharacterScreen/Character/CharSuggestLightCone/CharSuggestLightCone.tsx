@@ -36,7 +36,7 @@ export default React.memo(function CharSuggestLightCone() {
   });
 
   return (
-    <View style={{ alignItems: "center" }}>
+    <View className="px-4" style={{ alignItems: "center" }}>
       <CharPageHeading Icon={Sword}>
         {LOCALES[appLanguage].AdviceLightcones}
       </CharPageHeading>

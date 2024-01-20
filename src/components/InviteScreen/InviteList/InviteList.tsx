@@ -14,7 +14,11 @@ export default function InviteList() {
     <ScrollView className="z-30 h-screen py-[110px]  pb-0">
       <View style={{ gap: 20 }} className="pb-48 px-4">
         <SettingGroup title={"我的邀請碼"}>
-          <SettingItem type="none" title={user?.invite_code} content={"複製"} />
+          <SettingItem
+            type="none"
+            title={user?.invite_code || ""}
+            content={"複製"}
+          />
         </SettingGroup>
         <SettingGroup title={"使用我的"}>
           <SettingItem

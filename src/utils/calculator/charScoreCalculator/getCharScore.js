@@ -1,5 +1,4 @@
-const scoreWeight = require("./data/charWeightList.json");
-const demoCharData = require("./data/charDataDemo.json");
+import scoreWeight from "./data/charWeightList.json"
 
 export default function getCharScore(charId, charData) {
   let maxSchoolDataIndex = 0

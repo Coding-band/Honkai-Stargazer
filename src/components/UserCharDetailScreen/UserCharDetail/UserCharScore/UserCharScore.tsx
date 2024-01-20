@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, Platform } from "react-native";
 import React from "react";
 import getRelicScore, {
   getRelicTotalScoreRange,
@@ -11,6 +11,7 @@ import ScoreRangeFont from "../../../../../assets/images/images_map/scoreRangeFo
 import getCharScore, {
   getCharRange,
 } from "../../../../utils/calculator/charScoreCalculator/getCharScore";
+import { cn } from "../../../../utils/css/cn";
 
 export default function UserCharScore() {
   const { language: appLanguage } = useAppLanguage();
@@ -42,13 +43,24 @@ export default function UserCharScore() {
           <Text className="text-text font-[HY65] text-[12px]">角色毕业率</Text>
         </View> */}
 
-          <View style={{ gap: 8, alignItems: "center" }}>
-            <Text className="text-text font-[HY65] text-[24px]">
+          <View
+            className="h-[54px]"
+            style={{ justifyContent: "space-between", alignItems: "center" }}
+          >
+            <Text
+              className={cn(
+                "text-text font-[HY65] text-[24px]",
+                Platform.OS === "ios" ? "translate-y-[6px]" : ""
+              )}
+            >
               {charTotalScore.toFixed(1)}
             </Text>
             <Text className="text-text font-[HY65] text-[12px]">角色評分</Text>
           </View>
-          <View style={{ gap: 8, alignItems: "center" }}>
+          <View
+            className="h-[54px]"
+            style={{ justifyContent: "space-between", alignItems: "center" }}
+          >
             <Image
               className="w-12 h-8"
               source={ScoreRangeFont[getCharRange(charTotalScore)]}
@@ -57,10 +69,15 @@ export default function UserCharScore() {
             <Text className="text-text font-[HY65] text-[12px]">角色評價</Text>
           </View>
           <View
-            className="h-[55px]"
+            className="h-[54px]"
             style={{ justifyContent: "space-between", alignItems: "center" }}
           >
-            <Text className="text-text font-[HY65] text-[24px]">
+            <Text
+              className={cn(
+                "text-text font-[HY65] text-[24px]",
+                Platform.OS === "ios" ? "translate-y-[6px]" : ""
+              )}
+            >
               {relicTotalScore.toFixed(1)}
             </Text>
             <Text className="text-text font-[HY65] text-[12px]">
@@ -68,7 +85,7 @@ export default function UserCharScore() {
             </Text>
           </View>
           <View
-            className="h-[55px]"
+            className="h-[54px]"
             style={{ justifyContent: "space-between", alignItems: "center" }}
           >
             <Image

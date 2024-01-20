@@ -46,14 +46,14 @@ export default function Player() {
               <PlayerCharacter />
             </View>
           </View>
-          <View style={styles.playerActionColumn}>
+          <View style={styles.playerActionColumn} className="absolute right-0">
+            {/* 三個點點 */}
             <PlayerAction />
-            <View>
-              <Text className="font-[HY75] text-[#DBC291] text-[14px]">
-                {LOCALES[language].PlayerLevel}{" "}
-                {playerLevel || ": " + LOCALES[language].NoDataYet}
-              </Text>
-            </View>
+            {/* 開拓等級 */}
+            <Text className="font-[HY65] text-[#DBC291] text-[14px]">
+              {LOCALES[language].PlayerLevel}{" "}
+              {playerLevel || ": " + LOCALES[language].NoDataYet}
+            </Text>
           </View>
         </View>
         <PlayerLevelBar />

@@ -17,7 +17,7 @@ export default function LcDescription() {
   const { language } = useAppLanguage();
 
   return (
-    <View style={{ alignItems: "center" }}>
+    <View className="px-6" style={{ alignItems: "center" }}>
       <PageHeading Icon={Info}>{LOCALES[language].LightconeEffect}</PageHeading>
       <View className="w-full">
         <Text className="text-text font-[HY65] text-[20px] leading-[40px]">

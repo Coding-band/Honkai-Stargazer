@@ -18,7 +18,7 @@ export default function RelicDescription() {
   const { language } = useAppLanguage();
 
   return (
-    <View>
+    <View className="px-6">
       {relic2Pc && (
         <>
           <PageHeading Icon={DiceTwo}>

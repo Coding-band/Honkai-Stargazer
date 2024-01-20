@@ -79,7 +79,7 @@ export default React.memo(function CharAttribute() {
 
   return (
     <>
-      <View style={{ alignItems: "center" }}>
+      <View className="px-6" style={{ alignItems: "center" }}>
         <CharPageHeading Icon={Info}>
           {LOCALES[language].BasicStatus}
         </CharPageHeading>
@@ -167,7 +167,7 @@ export default React.memo(function CharAttribute() {
           </>
         )}
       </View>
-      <ScrollView horizontal className="mt-5">
+      <ScrollView horizontal className="mt-5 mx-6">
         <View style={{ flexDirection: "row", gap: 14 }}>
           {map(materials, (v, k) => {
             return (

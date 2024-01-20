@@ -21,6 +21,7 @@ export default function UserAvatar({
       <Image
         transition={200}
         source={image || CharacterImage["Trailblazer Girl (Physical)"].icon}
+        placeholder={"LDI;uA?I01s.%P%4~X-;02^,?Gf8"}
         className="w-[73px] h-[73px] rounded-full"
         style={{
           backgroundColor: "rgba(144, 124, 84, 0.4)",

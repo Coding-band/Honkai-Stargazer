@@ -8,6 +8,7 @@ import TypingText from "../../global/TypingText/TypingText";
 import { ENV, VERSION } from "../../../../app.config";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import BetaTabbar from "../../global/Beta/BetaTabbar";
+import DonateTab from "./DonateTab/DonateTab";
 
 export default function Tabbar() {
   const { language } = useAppLanguage();
@@ -43,36 +44,20 @@ export default function Tabbar() {
         >
           {LOCALES[language].DonationRemoveAds}
         </Text>
-        {ENV === "beta" ? (
-          // <BetaTabbar />
-          <Pressable
-            className="w-full h-[70px]"
-            onPress={() => {
-              Linking.openURL(
-                "https://play.google.com/store/apps/details?id=com.voc.genshin_spirit_gp"
-              );
-            }}
-          >
-            <Image
-              className="w-full h-full"
-              source={require("../../../../assets/ads/gs_ad.png")}
-            />
-          </Pressable>
-        ) : (
-          <Pressable
-            className="w-full h-[70px]"
-            onPress={() => {
-              Linking.openURL(
-                "https://play.google.com/store/apps/details?id=com.voc.genshin_spirit_gp"
-              );
-            }}
-          >
-            <Image
-              className="w-full h-full"
-              source={require("../../../../assets/ads/gs_ad.png")}
-            />
-          </Pressable>
-        )}
+        {/* <Pressable
+          className="w-full h-[70px]"
+          onPress={() => {
+            Linking.openURL(
+              "https://play.google.com/store/apps/details?id=com.voc.genshin_spirit_gp"
+            );
+          }}
+        >
+          <Image
+            className="w-full h-full"
+            source={require("../../../../assets/ads/gs_ad.png")}
+          />
+        </Pressable> */}
+        <DonateTab />
       </View>
     </SafeAreaView>
   );

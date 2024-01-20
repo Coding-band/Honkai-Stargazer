@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BlurView as ExpoBlurView } from "expo-blur";
 import * as Device from "expo-device";
 import { omit } from "lodash";
