@@ -29,8 +29,9 @@ export default function UserCharScoreBar(props: Props) {
             {LOCALES[language]["ATTR_" + props.field.toUpperCase()]}
           </Text>
           <Text className="text-text font-[HY65]">
-            {Math.floor(props.currScore * 10) / 10}{props.type === "percent" ? "%" : ""}/
-            {Math.floor(props.gradScore * 10) / 10}{props.type === "percent" ? "%" : ""}
+            {props.type === "value"
+              ? `${Math.floor(props.currScore * 10) / 10}/${Math.floor(props.gradScore * 10) / 10}`
+              : `${Math.floor(props.currScore * 1000) / 10}/${Math.floor(props.gradScore * 1000) / 10}%`}
           </Text>
         </View>
         <View className="w-[280px] h-[3px]" style={{ flexDirection: "row" }}>

@@ -131,7 +131,7 @@ export function getCharRange(score) {
 
 }
 
-export function getCurrAndGradScore(charId, charData){
+export function getCurrAndGradScore(charId, charData) {
   const returnValue = [] //返回變量
   for (let index = 0; index < scoreWeight[charId].length; index++) {
     const returnValueThisSchool = []
