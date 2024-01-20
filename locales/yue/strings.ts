@@ -279,7 +279,8 @@ export const strings = {
   ShareSuccess: "攪掂！",
   ShareError: "失敗咗：",
   CodeAll: "所有伺服器",
+  //Add in 20240120
   CharSoulShort: "魂 ${1}",
-  PlsDonateUs: "請考慮透過捐贈支持我們，謝謝！",
-  DonateInRandomCount: "隨機"
+  PlsDonateUs: "請考慮透過捐贈支持我哋，謝謝！",
+  DonateInRandomCount: "隨機",
 };
