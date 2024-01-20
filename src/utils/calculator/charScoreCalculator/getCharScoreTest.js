@@ -153,14 +153,15 @@ function getCurrAndGradScore(charId, charData){
         const name = Object.keys(attrs)[0];
         const attrValue = attrs[name];
         const gradValue = charScoreWeight.grad[name];
+        const intList = ["atk","def","hp","spd","sp"] //只有這些才是整數 -> value
         if (gradValue === undefined || attrValue === undefined) {
           //...如果沒有畢業分，做甚麼？只能不算
         }else{
-          returnValueThisSchool.push({[name] : [attrValue , gradValue, (attrValue / gradValue)]})
+          returnValueThisSchool.push({[name] : [attrValue , gradValue, (intList.includes(name) ? "value" : "percent")]})
         }
       })
       returnValue.push(returnValueThisSchool)
     }
     return returnValue;
 }
-console.log((getCurrAndGradScore("1006",demoCharData)))
+console.log(JSON.stringify(getCurrAndGradScore("1112",demoCharData)))

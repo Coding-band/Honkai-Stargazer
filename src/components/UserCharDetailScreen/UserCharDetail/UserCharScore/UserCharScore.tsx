@@ -27,6 +27,8 @@ export default function UserCharScore() {
     ? getCharScore(inGameCharData?.id, inGameCharData)
     : 0;
 
+  const { language } = useAppLanguage()
+
   return (
     inGameCharData && (
       <>
@@ -55,7 +57,7 @@ export default function UserCharScore() {
             >
               {charTotalScore.toFixed(1)}
             </Text>
-            <Text className="text-text font-[HY65] text-[12px]">角色評分</Text>
+            <Text className="text-text font-[HY65] text-[12px]">{LOCALES[language].CharScore}</Text>
           </View>
           <View
             className="h-[54px]"
@@ -66,7 +68,7 @@ export default function UserCharScore() {
               source={ScoreRangeFont[getCharRange(charTotalScore)]}
               contentFit="contain"
             />
-            <Text className="text-text font-[HY65] text-[12px]">角色評價</Text>
+            <Text className="text-text font-[HY65] text-[12px]">{LOCALES[language].CharRank}</Text>
           </View>
           <View
             className="h-[54px]"
