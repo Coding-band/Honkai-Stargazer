@@ -33,7 +33,7 @@ export default function UserCharScore() {
     ? getCharScore(charId, inGameCharData)
     : 0;
   // 各屬性畢業度
-  const currAndGrad = getCurrAndGradScore(charId, 0, inGameCharData);
+  const currAndGrad = getCurrAndGradScore(charId, inGameCharData)[0];
 
   const { language } = useAppLanguage();
 
@@ -78,8 +78,9 @@ export default function UserCharScore() {
             {currAndGrad.map((attr, i) => (
               <UserCharScoreBar
                 field={Object.keys(attr)[0]}
-                currScore={Object.values(attr)?.[0]?.[0] as number}
-                gradScore={Object.values(attr)?.[0]?.[1] as number}
+                currScore={(Object.values(attr)?.[0]?.[0] as number)*(Object.values(attr)?.[0]?.[2] === "percent" ? 100 : 1)}
+                gradScore={(Object.values(attr)?.[0]?.[1] as number)*(Object.values(attr)?.[0]?.[2] === "percent" ? 100 : 1)}
+                type={Object.values(attr)?.[0]?.[2] === "percent"}
               />
             ))}
           </View>

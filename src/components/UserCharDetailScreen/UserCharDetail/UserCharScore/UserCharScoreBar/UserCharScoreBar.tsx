@@ -9,6 +9,7 @@ type Props = {
   field: string;
   currScore: number;
   gradScore: number;
+  type: "percent" | "value";
 };
 
 export default function UserCharScoreBar(props: Props) {
@@ -28,8 +29,8 @@ export default function UserCharScoreBar(props: Props) {
             {LOCALES[language]["ATTR_" + props.field.toUpperCase()]}
           </Text>
           <Text className="text-text font-[HY65]">
-            {Math.floor(props.currScore * 10) / 10}/
-            {Math.floor(props.gradScore * 10) / 10}
+            {Math.floor(props.currScore * 10) / 10}{props.type === "percent" ? "%" : ""}/
+            {Math.floor(props.gradScore * 10) / 10}{props.type === "percent" ? "%" : ""}
           </Text>
         </View>
         <View className="w-[280px] h-[3px]" style={{ flexDirection: "row" }}>
