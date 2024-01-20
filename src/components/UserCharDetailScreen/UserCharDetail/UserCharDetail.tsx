@@ -127,7 +127,6 @@ export default function UserCharDetail() {
           <UserCharAttribute />
           <UserCharLightcone />
           <UserCharRelics />
-
           <UserCharScore />
           {/* 由 Stargazer 製作 */}
           <View className="mb-16 mt-0">
