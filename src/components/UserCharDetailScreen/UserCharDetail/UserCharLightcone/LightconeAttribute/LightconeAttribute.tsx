@@ -47,7 +47,7 @@ export default function LightconeAttribute({
       <View
         style={{
           flexDirection: "row",
-          gap: 10,
+          gap: 4,
           flexWrap: "wrap",
           justifyContent: "center",
         }}
@@ -57,7 +57,7 @@ export default function LightconeAttribute({
             attr.value && (
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image source={attr.icon} className="w-6 h-6" />
-                <Text className="text-text text-[14px]"> {attr.value}</Text>
+                <Text className="text-text text-[14px] font-[HY65]"> {attr.value}</Text>
               </View>
             )
         )}

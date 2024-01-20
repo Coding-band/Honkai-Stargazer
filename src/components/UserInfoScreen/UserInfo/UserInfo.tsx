@@ -53,7 +53,7 @@ export default function UserInfo(props: Props) {
 
   const playerAvatar =
     // @ts-ignore
-    AvatarIcon[hsrInGameInfo?.player?.avatar?.icon?.match(/\d+/g).join("")];
+    AvatarIcon[hsrInGameInfo?.player?.avatar?.icon?.match(/\d+/g)?.join("")];
 
   const [activeTab, setActiveTab] = useState("game-data");
   const isGameDataPage = activeTab === "game-data";

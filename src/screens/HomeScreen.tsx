@@ -36,9 +36,10 @@ export default function HomeScreen() {
   const hsrFullData = useHsrFullData().data;
 
   const hsrUUID = useHsrUUID();
+
   const hsrPlayerData = useHsrPlayerData();
   const { data: hsrCharList } = useHsrCharList();
-  const { data: hsrInGameInfo } = useHsrInGameInfo(hsrUUID);
+  const { data: hsrInGameInfo } = useHsrInGameInfo(hsrUUID) as any;
 
   const moc = useMemoryOfChaos().data;
   const mocPrev = useMemoryOfChaosPrev().data;
@@ -151,7 +152,7 @@ export default function HomeScreen() {
   //* 建立或更新用戶角色數據 (UserCharacters)
   useEffect(() => {
     async function createOrUpdateUserCharacters() {
-      if (uid && hsrCharList) {
+      if (uid && hsrCharList && hsrInGameInfo) {
         const UserCharacterDocGet = await db.UserCharacters.doc(uid).get();
         const UserCharactersIsExist = UserCharacterDocGet.exists;
         const charsData = {
@@ -184,7 +185,7 @@ export default function HomeScreen() {
               : [],
           })),
           characters_details: unionBy(
-            UserCharacterDocGet?.data()?.characters_characters_details,
+            UserCharacterDocGet?.data()?.characters_details,
             hsrInGameInfo?.characters,
             "id"
           ),
@@ -205,7 +206,7 @@ export default function HomeScreen() {
       }
     }
     createOrUpdateUserCharacters();
-  }, [uid, hsrCharList]);
+  }, [uid, hsrCharList, hsrInGameInfo]);
 
   //* 建立或更新用戶混沌回憶資料 (UserMemoryOfChaos)
   useEffect(() => {

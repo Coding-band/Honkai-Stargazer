@@ -12,7 +12,7 @@ export default function UserCharRelics() {
   const [selectedRelic, setSelectedRelic] = useState(-1);
 
   return (
-    inGameCharData && (
+    !!userRelicsData?.length && (
       <View style={{ gap: 20, alignItems: "center" }}>
         <View
           className="px-4"

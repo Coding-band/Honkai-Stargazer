@@ -43,7 +43,8 @@ export default function UserCharLightcone() {
   });
 
   return (
-    inGameCharData && (
+    inGameCharData &&
+    lightconeId && (
       <View style={{ alignItems: "center" }}>
         <View className="w-[135px] h-[1px] bg-[#F3F9FF40]"></View>
         <TouchableOpacity

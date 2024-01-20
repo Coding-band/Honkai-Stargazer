@@ -15,8 +15,8 @@ export default function getCharScore(charId, charData) {
      **/
     // @ts-ignore
     const charScoreWeight = scoreWeight[charId][schoolIndex]; //對應角色流派内，該角色評分權重
-    const charLightconeID = charData.light_cone.id; //角色使用中的光錐
-    const charLightconeSuper = charData.light_cone.rank; //角色使用中的光錐疊影
+    const charLightconeID = charData?.light_cone?.id; //角色使用中的光錐
+    const charLightconeSuper = charData?.light_cone?.rank||0; //角色使用中的光錐疊影
     const charPromotion = charData.promotion; //角色突破等級
     const charLevel = charData.level; //角色等級
     const charSoulLvl = charData.rank; //角色的星魂等級
@@ -39,12 +39,14 @@ export default function getCharScore(charId, charData) {
 
     // 光錐分數 -> 加最多10+4分 (10 : 推薦 || +4 : 疊影)
     let lightconeScore = 0
-    if (charScoreWeight.advice_lightcone.includes(Number(charLightconeID))) {
-      lightconeScore = lcAdviceScores
-    } else if (charScoreWeight.normal_lightcone.includes(Number(charLightconeID))) {
-      lightconeScore = lcSuitableScores
-    } else {
-      lightconeScore = 0
+    if (charLightconeID) {
+      if (charScoreWeight.advice_lightcone.includes(Number(charLightconeID))) {
+        lightconeScore = lcAdviceScores
+      } else if (charScoreWeight.normal_lightcone.includes(Number(charLightconeID))) {
+        lightconeScore = lcSuitableScores
+      } else {
+        lightconeScore = 0
+      }
     }
     lightconeScore += (charLightconeSuper - 1) //疊影 = [2,3,4,5] -> 每次加1分
 
@@ -118,7 +120,7 @@ export default function getCharScore(charId, charData) {
       maxSchoolDataIndex = index;
     }
   }
-  return schoolData[maxSchoolDataIndex]
+  return schoolData[0]
 }
 
 export function getCharRange(score) {
@@ -137,26 +139,26 @@ export function getCurrAndGradScore(charId, charData) {
     const returnValueThisSchool = []
     const charScoreWeight = scoreWeight[charId][index]; //對應角色流派内，該角色評分權重
     //合拼 attributes+additions [START] { _ / omit -> lodash}
-      let charAttrTMP = new Map();
-      charData.attributes.map((attrs) => {
-        charAttrTMP.set(attrs.field, attrs.value)
-      })
-      const charAttrFinal = charData.additions.map((attrs) => { //存放final合拼 attributes+additions
-       return { [attrs.field]: attrs.value + (charAttrTMP.get(attrs.field) === undefined ? 0 : charAttrTMP.get(attrs.field)) + (attrs.field === "sp_rate" ? 1 : 0) }
-      })
-      //合拼 attributes+additions [END]
-      charAttrFinal.map((attrs) => {
-        const name = Object.keys(attrs)[0];
-        const attrValue = attrs[name];
-        const gradValue = charScoreWeight.grad[name];
-        const intList = ["atk","def","hp","spd","sp"] //只有這些才是整數 -> value
-        if (gradValue === undefined || attrValue === undefined) {
-          //...如果沒有畢業分，做甚麼？只能不算
-        }else{
-          returnValueThisSchool.push({[name] : [attrValue , gradValue, (intList.includes(name) ? "value" : "percent")]})
-        }
-      })
-      returnValue.push(returnValueThisSchool)
-    }
-    return returnValue;
+    let charAttrTMP = new Map();
+    charData.attributes.map((attrs) => {
+      charAttrTMP.set(attrs.field, attrs.value)
+    })
+    const charAttrFinal = charData.additions.map((attrs) => { //存放final合拼 attributes+additions
+      return { [attrs.field]: attrs.value + (charAttrTMP.get(attrs.field) === undefined ? 0 : charAttrTMP.get(attrs.field)) + (attrs.field === "sp_rate" ? 1 : 0) }
+    })
+    //合拼 attributes+additions [END]
+    charAttrFinal.map((attrs) => {
+      const name = Object.keys(attrs)[0];
+      const attrValue = attrs[name];
+      const gradValue = charScoreWeight.grad[name];
+      const intList = ["atk", "def", "hp", "spd", "sp"] //只有這些才是整數 -> value
+      if (gradValue === undefined || attrValue === undefined) {
+        //...如果沒有畢業分，做甚麼？只能不算
+      } else {
+        returnValueThisSchool.push({ [name]: [attrValue, gradValue, (intList.includes(name) ? "value" : "percent")] })
+      }
+    })
+    returnValue.push(returnValueThisSchool)
+  }
+  return returnValue;
 }

@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 import getRelicScore, {
   getRelicTotalScoreRange,
@@ -6,7 +6,6 @@ import getRelicScore, {
 import useProfileHsrInGameInfo from "../../../../context/UserCharDetailData/hooks/useProfileHsrInGameInfo";
 import { LOCALES } from "../../../../../locales";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
-import { Image } from "expo-image";
 import getCharScore, {
   getCharRange,
   getCurrAndGradScore,
@@ -32,37 +31,40 @@ export default function UserCharScore() {
     ? getCharScore(charId, inGameCharData)
     : 0;
   // 各屬性畢業度
-  const currAndGrad = getCurrAndGradScore(charId, inGameCharData)[0];
-
-  console.log(currAndGrad);
+  const currAndGrad = inGameCharData
+    ? getCurrAndGradScore(charId, inGameCharData)[0]
+    : [];
 
   return (
     inGameCharData && (
-      <>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            gap: 16,
-            flexWrap: "wrap",
-          }}
-        >
-          {/* <View style={{ gap: 8, alignItems: "center" }}>
-          <Text className="text-text font-[HY65] text-[24px]">101%</Text>
-          <Text className="text-text font-[HY65] text-[12px]">角色毕业率</Text>
+      <View style={{gap:24}}>
+        {/* <View style={styles.container}>
+          <Text className="text-text font-[HY65] text-[20px]">角色详情</Text>
+          <View
+            className="w-[100px] h-[30px] bg-[#00000040] rounded-[43px]"
+            style={{ justifyContent: "center", alignItems: "center" }}
+          >
+            <Text className="text-text font-[HY65]">默認流派</Text>
+          </View>
         </View> */}
+        {/* 評分區 */}
+        <View style={styles.scoreContainer}>
+          {/* 角色評分 */}
           <UserCharScoreItem
             title={LOCALES[appLanguage].CharScore}
             value={charTotalScore.toFixed(1)}
           />
+          {/* 角色評價 */}
           <UserCharScoreItem
             title={LOCALES[appLanguage].CharRank}
             value={<ScoreRangeFont scoreRange={getCharRange(charTotalScore)} />}
           />
+          {/* 遺器評分 */}
           <UserCharScoreItem
             title={LOCALES[appLanguage].RelicScore}
             value={relicTotalScore.toFixed(1)}
           />
+          {/* 角色評價 */}
           <UserCharScoreItem
             title={LOCALES[appLanguage].RelicRank}
             value={
@@ -72,18 +74,23 @@ export default function UserCharScore() {
             }
           />
         </View>
+        {/* 當前數值 & 畢業數值分析 */}
         <View>
-          <View style={{ gap: 10 }}>
-            {currAndGrad.map((attr, i) => (
+          <View style={{ gap: 16 }}>
+            {currAndGrad?.map((attr: any, i: number) => (
               <UserCharScoreBar
                 field={Object.keys(attr)[0]}
-                currScore={Object.values(attr)?.[0]?.[0] as number}
-                gradScore={Object.values(attr)?.[0]?.[1] as number}
-                type={Object.values(attr)?.[0]?.[2] as number}
+                // @ts-ignore
+                currScore={Object.values(attr)?.[0]?.[0]}
+                // @ts-ignore
+                gradScore={Object.values(attr)?.[0]?.[1]}
+                // @ts-ignore
+                type={Object.values(attr)?.[0]?.[2]}
               />
             ))}
           </View>
         </View>
+        {/*  */}
         <View style={{ alignItems: "center", gap: 2 }}>
           <Text className="text-text font-[HY65] text-[18px] leading-5">
             {LOCALES[appLanguage].LackOfUserData}
@@ -92,7 +99,22 @@ export default function UserCharScore() {
             {LOCALES[appLanguage].LeaderboardDataFrom}
           </Text>
         </View>
-      </>
+      </View>
     )
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems:"center",
+    width: 300,
+  },
+  scoreContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 16,
+    flexWrap: "wrap",
+  },
+});

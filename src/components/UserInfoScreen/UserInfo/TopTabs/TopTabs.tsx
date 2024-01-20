@@ -53,7 +53,7 @@ export default function TopTabs(props: {
               setHeight(height);
             }
 
-            setWidths((widths) => [...widths, width].sort().reverse());
+            setWidths((widths) => [...widths, width].sort((b, a) => a - b));
             setOffsets((offsets) => [...offsets, x].sort());
           }}
         >

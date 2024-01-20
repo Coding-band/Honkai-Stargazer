@@ -4,6 +4,7 @@ import { TouchableOpacity } from "react-native";
 import { Image } from "expo-image";
 import { ExpoImage } from "../../../types/image";
 import CharacterImage from "../../../../assets/images/images_map/chacracterImage";
+import AvatarIcon from "../../../../assets/images/images_map/avatarIcon";
 
 export default function UserAvatar({
   image,
@@ -20,7 +21,7 @@ export default function UserAvatar({
     >
       <Image
         transition={200}
-        source={image || CharacterImage["Trailblazer Girl (Physical)"].icon}
+        source={image || AvatarIcon["Anonymous"]}
         placeholder={"LDI;uA?I01s.%P%4~X-;02^,?Gf8"}
         className="w-[73px] h-[73px] rounded-full"
         style={{

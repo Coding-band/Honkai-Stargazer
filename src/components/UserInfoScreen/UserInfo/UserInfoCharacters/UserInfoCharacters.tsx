@@ -24,6 +24,7 @@ import { LightconeName } from "../../../../types/lightcone";
 import useLocalState from "../../../../hooks/useLocalState";
 import { LOCALES } from "../../../../../locales";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
+import { union } from "lodash";
 
 type Props = {
   uuid: string;
@@ -40,27 +41,30 @@ export default function UserInfoCharacters(props: Props) {
   const isOwner = profileUUID === hsrUUID;
   const isShowInfo = useUserByUUID(profileUUID).data?.show_info;
 
-  const { data: hsrInGameInfo } = useHsrInGameInfo(props.uuid);
+  const hsrInGameInfo = useHsrInGameInfo(props.uuid).data;
   const userCharList = useUserCharactersByUUID(profileUUID).data?.characters;
+  const userDetailCharList =
+    useUserCharactersByUUID(profileUUID).data?.characters_details;
 
   // 展櫃資料
   // @ts-ignore
   const inGameCharacters = hsrInGameInfo?.characters?.map((char: any) => {
     // @ts-ignore
-    const charId = officalCharId[char.id] as CharacterName;
+    const charId = officalCharId[char?.id] as CharacterName;
     const charJsonData = getCharJsonData(charId);
     const charFullData = getCharFullData(charId, textLanguage);
+
     return {
       id: charId,
-      rare: charJsonData.rare,
-      name: charFullData.name,
-      rank: char.rank,
-      level: "Lv " + char.level,
+      rare: charJsonData?.rare,
+      name: charFullData?.name,
+      rank: char?.rank,
+      level: "Lv " + char?.level,
       image: CharacterImage[charId].icon,
       light_cone: {
-        id: officalLightconeId[char.light_cone.id] as LightconeName,
-        level: char.light_cone.level,
-        rank: char.light_cone.rank,
+        id: officalLightconeId[char?.light_cone?.id] as LightconeName,
+        level: char?.light_cone?.level,
+        rank: char?.light_cone?.rank,
       },
     };
   });
@@ -68,23 +72,53 @@ export default function UserInfoCharacters(props: Props) {
   const inGameCharactersIds: any[] = inGameCharacters?.map(
     (char: any) => char.id
   );
-  // hoyolab 角色資料
-  const userCharacters = userCharList
+  const dbGameCharactersIds = userDetailCharList?.map((char) => char.id);
+
+  // 記憶展櫃資料
+  const dbUserCharacters = userCharList
     ?.filter(
-      (char: any) => !inGameCharactersIds?.includes(officalCharId[char.id])
+      (char: any) =>
+        !inGameCharactersIds?.includes(officalCharId[char?.id]) &&
+        dbGameCharactersIds.includes(char?.id?.toString())
     )
     ?.map((char: any) => {
       // @ts-ignore
       const charId = officalCharId[char.id] as CharacterName;
       const charJsonData = getCharJsonData(charId);
       const charFullData = getCharFullData(charId, textLanguage);
-      const { language } = useAppLanguage();
       return {
         id: charId,
         rare: charJsonData.rare,
         name: charFullData.name,
         rank: char.rank,
-        level: LOCALES[language].UserCharLevelLv + char.level,
+        level: LOCALES[appLanguage].UserCharLevelLv + char.level,
+        image: CharacterImage[charId].icon,
+        light_cone: {
+          id: officalLightconeId[char?.equip?.id] as LightconeName,
+          level: char?.equip?.level,
+          rank: char?.equip?.rank,
+        },
+      };
+    });
+
+  // hoyolab 角色資料
+  const userCharacters = userCharList
+    ?.filter(
+      (char: any) =>
+        !inGameCharactersIds?.includes(officalCharId[char?.id]) &&
+        !dbGameCharactersIds.includes(char?.id?.toString())
+    )
+    ?.map((char: any) => {
+      // @ts-ignore
+      const charId = officalCharId[char.id] as CharacterName;
+      const charJsonData = getCharJsonData(charId);
+      const charFullData = getCharFullData(charId, textLanguage);
+      return {
+        id: charId,
+        rare: charJsonData.rare,
+        name: charFullData.name,
+        rank: char.rank,
+        level: LOCALES[appLanguage].UserCharLevelLv + char.level,
         image: CharacterImage[charId].icon,
         light_cone: {
           id: officalLightconeId[char?.equip?.id] as LightconeName,
@@ -102,8 +136,6 @@ export default function UserInfoCharacters(props: Props) {
   const [charsDisplayWidth, setCharsDisplayWidth] = useState(0);
   const [openQuestionPopUp, setOpenQuestionPopUp] = useState(false);
 
-  const { language } = useAppLanguage();
-
   return (
     <>
       <View style={{ gap: 10 }}>
@@ -120,7 +152,7 @@ export default function UserInfoCharacters(props: Props) {
               style={{ flexDirection: "row", gap: 4, alignItems: "center" }}
             >
               <Text className="text-text text-[14px] font-[HY65]">
-                {LOCALES[language].PublicChars}
+                {LOCALES[appLanguage].PublicChars}
               </Text>
               <TouchableOpacity
                 activeOpacity={0.35}
@@ -177,11 +209,11 @@ export default function UserInfoCharacters(props: Props) {
                         </Text>
                         <Text className="text-text text-[12px] font-[HY65] leading-5">
                           {char.light_cone?.rank
-                            ? LOCALES[language].SuperimposeLvl.replace(
+                            ? LOCALES[appLanguage].SuperimposeLvl.replace(
                                 "${1}",
                                 `${char.light_cone?.rank}`
                               )
-                            : LOCALES[language].SuperimposeNotEquipped}
+                            : LOCALES[appLanguage].SuperimposeNotEquipped}
                         </Text>
                       </View>
                     </View>
@@ -201,7 +233,7 @@ export default function UserInfoCharacters(props: Props) {
           </View>
           <Divider />
           {/* hoyolab 數據 */}
-          {isOwner || isShowInfo ? (
+          {
             <View style={{ alignItems: "center", gap: 16 }}>
               <View
                 style={{
@@ -211,7 +243,10 @@ export default function UserInfoCharacters(props: Props) {
                   justifyContent: "center",
                 }}
               >
-                {userCharacters
+                {union(
+                  dbUserCharacters,
+                  (isOwner || isShowInfo) && userCharacters
+                )
                   ?.slice(0, showMoreChars ? 50 : 8)
                   ?.map((char: any) => (
                     <CharCard
@@ -241,11 +276,11 @@ export default function UserInfoCharacters(props: Props) {
                               </Text>
                               <Text className="text-text text-[12px] font-[HY65] leading-5">
                                 {char.light_cone?.rank
-                                  ? LOCALES[language].SuperimposeLvl.replace(
+                                  ? LOCALES[appLanguage].SuperimposeLvl.replace(
                                       "${1}",
                                       `${char.light_cone?.rank}`
                                     )
-                                  : LOCALES[language].SuperimposeNotEquipped}
+                                  : LOCALES[appLanguage].SuperimposeNotEquipped}
                               </Text>
                             </View>
                           </View>
@@ -275,9 +310,7 @@ export default function UserInfoCharacters(props: Props) {
                 />
               </View>
             </View>
-          ) : (
-            <></>
-          )}
+          }
         </View>
       </View>
       <ReactNativeModal

@@ -47,9 +47,7 @@ export default function CommentBox(props: Props) {
 
   useEffect(() => {
     if (translation.value.y < 0) {
-      props.containerRef?.current?.scrollTo({
-        y: 3400,
-      });
+      props.containerRef?.current?.scrollToEnd();
     }
   }, [translation.value.y]);
 
