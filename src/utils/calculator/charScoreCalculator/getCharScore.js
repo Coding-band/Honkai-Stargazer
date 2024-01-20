@@ -130,3 +130,30 @@ export function getCharRange(score) {
   return "SS"
 
 }
+
+export function getCurrAndGradScore(charId, schoolIndex, charData){
+  const charScoreWeight = scoreWeight[charId][schoolIndex]; //對應角色流派内，該角色評分權重
+  //合拼 attributes+additions [START] { _ / omit -> lodash}
+    let charAttrTMP = new Map();
+    charData.attributes.map((attrs) => {
+      charAttrTMP.set(attrs.field, attrs.value)
+    })
+    const charAttrFinal = charData.additions.map((attrs) => { //存放final合拼 attributes+additions
+      return { [attrs.field]: attrs.value + (charAttrTMP.get(attrs.field) === undefined ? 0 : charAttrTMP.get(attrs.field)) }
+    })
+    //合拼 attributes+additions [END]
+
+    const returnValue = []
+    charAttrFinal.map((attrs) => {
+      const name = Object.keys(attrs)[0];
+      const attrValue = attrs[name];
+      const gradValue = charScoreWeight.grad[name];
+      if (gradValue === undefined || attrValue === undefined) {
+        //...如果沒有畢業分，做甚麼？只能不算
+      }else{
+        returnValue.push({[name] : [attrValue , gradValue, (attrValue / gradValue)]})
+      }
+    })
+
+    return returnValue;
+}
