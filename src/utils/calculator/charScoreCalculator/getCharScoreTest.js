@@ -146,7 +146,7 @@ function getCurrAndGradScore(charId, charData){
         charAttrTMP.set(attrs.field, attrs.value)
       })
       const charAttrFinal = charData.additions.map((attrs) => { //存放final合拼 attributes+additions
-        return { [attrs.field]: attrs.value + (charAttrTMP.get(attrs.field) === undefined ? 0 : charAttrTMP.get(attrs.field)) }
+        return { [attrs.field]: attrs.value + (charAttrTMP.get(attrs.field) === undefined ? 0 : charAttrTMP.get(attrs.field)) + (attrs.field === "sp_rate" ? 1 : 0) }
       })
       //合拼 attributes+additions [END]
       charAttrFinal.map((attrs) => {
@@ -164,4 +164,4 @@ function getCurrAndGradScore(charId, charData){
     }
     return returnValue;
 }
-console.log(JSON.stringify(getCurrAndGradScore("1112",demoCharData)))
+console.log(JSON.stringify(getCurrAndGradScore("1303",demoCharData)))
