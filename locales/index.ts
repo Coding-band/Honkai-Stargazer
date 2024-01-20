@@ -7,6 +7,7 @@ import { strings as JyuYam } from "./zh/strings"; //注音
 import { strings as ES } from "./es-ES/strings";
 import { strings as PT } from "./pt-PT/strings";
 import { strings as RU } from "./ru/strings";
+import { strings as UK } from "./uk/strings"; //烏克蘭文
 
 import { longStrings as EN_LONG } from "./en/long_strings";
 import { longStrings as ZH_CN_LONG } from "./zh-CN/long_strings";
@@ -40,6 +41,7 @@ export const LOCALES = {
   es: fallbackLang(ES,ES_LONG),
   ru: fallbackLang(RU,RU_LONG),
   pt: fallbackLang(PT,PT_LONG),
+  uk: fallbackLang(UK,EN_LONG), //TEMP
 };
 
 function fallbackLang(lang: any, langLong: any) {

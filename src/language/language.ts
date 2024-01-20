@@ -18,6 +18,7 @@ export const Language = {
   kr: "한국어",
   th: "ภาษาไทย",
   jyu_yam: "ㄓㄨˋ ㄧㄣ",
+  uk: "Україна",
 };
 export const TextLanguage: TextLanguageType[] = [
   "en",
@@ -43,4 +44,5 @@ export const AppLanguage: AppLanguageType[] = [
   "es",
   "ru",
   "pt",
+  "uk",
 ];
