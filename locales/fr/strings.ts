@@ -174,7 +174,7 @@ export const strings = {
   ATTR_SP: "Energy Max",
   ATTR_EFFECT_HIT: "Effect Hit",
   ATTR_EFFECT_RES: "Effect RES",
-  ATTR_QUANTUM_DMG: "QUANTUM DMG",
+  ATTR_QUANTUM_DMG: "Quantum DMG",
   ATTR_FIRE_DMG: "Fire DMG",
   ATTR_ICE_DMG: "Ice DMG",
   ATTR_IMAGINARY_DMG: "Imaginary DMG",

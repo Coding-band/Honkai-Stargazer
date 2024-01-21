@@ -174,7 +174,7 @@ export const strings = {
   ATTR_SP: "ㄋㄥㄌ一ㄤㄕㄤㄒ一ㄢ",
   ATTR_EFFECT_HIT: "ㄒ一ㄠㄍㄨㄛㄇ一ㄥㄓㄨㄥ",
   ATTR_EFFECT_RES: "ㄒ一ㄠㄍㄨㄛㄉ一ㄎㄤ",
-  ATTR_QUANTUM_DMG: "ㄌ一ㄤㄗㄕㄤㄊ一ㄍㄠ",
+  ATTR_QUANTUM_DMG: "Quantum DMG",
   ATTR_FIRE_DMG: "ㄏㄨㄛㄕㄤㄊ一ㄍㄠ",
   ATTR_ICE_DMG: "ㄅ一ㄥㄕㄤㄊ一ㄍㄠ",
   ATTR_IMAGINARY_DMG: "ㄒㄩㄕㄨㄕㄤㄊ一ㄍㄠ",

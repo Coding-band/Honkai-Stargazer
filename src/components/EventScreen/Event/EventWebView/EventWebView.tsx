@@ -52,7 +52,7 @@ export default function EventWebView({
 
 ${`<h1 class="title">${title}</h1>`}
 ${content
-  .replaceAll('&lt;t class="t_lc"&gt;', "<span")
+  .replaceAll('&lt;t class="t_lc"&gt;', "")
   .replaceAll('&lt;t class="t_gl"&gt;', "")
   .replaceAll("&lt;/t&gt;", "")}
 `,

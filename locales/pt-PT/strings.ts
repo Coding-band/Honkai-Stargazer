@@ -174,7 +174,7 @@ export const strings = {
   ATTR_SP: "Energia Máxima",
   ATTR_EFFECT_HIT: "Acerto de Efeito",
   ATTR_EFFECT_RES: "Resis. ao Efeito",
-  ATTR_QUANTUM_DMG: "Dano Quântico",
+  ATTR_QUANTUM_DMG: "Quantum DMG",
   ATTR_FIRE_DMG: "Dano de Fogo",
   ATTR_ICE_DMG: "Dano de Gelo",
   ATTR_IMAGINARY_DMG: "Dano Imaginário",

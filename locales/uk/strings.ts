@@ -174,7 +174,7 @@ export const strings = {
   ATTR_SP: "Макс. енергія",
   ATTR_EFFECT_HIT: "Шанс ефекту влуч.",
   ATTR_EFFECT_RES: "Супротив ефекту",
-  ATTR_QUANTUM_DMG: "Квантом шкода",
+  ATTR_QUANTUM_DMG: "Quantum DMG",
   ATTR_FIRE_DMG: "Вогняна шкода",
   ATTR_ICE_DMG: "Крижана шкода",
   ATTR_IMAGINARY_DMG: "Уявна шкода",

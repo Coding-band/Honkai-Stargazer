@@ -174,7 +174,7 @@ export const strings = {
   ATTR_SP: "能量上限",
   ATTR_EFFECT_HIT: "效果命中",
   ATTR_EFFECT_RES: "效果抵抗",
-  ATTR_QUANTUM_DMG: "量子傷害提高",
+  ATTR_QUANTUM_DMG: "Quantum DMG",
   ATTR_FIRE_DMG: "火傷害提高",
   ATTR_ICE_DMG: "冰傷害提高",
   ATTR_IMAGINARY_DMG: "虛數傷害提高",
