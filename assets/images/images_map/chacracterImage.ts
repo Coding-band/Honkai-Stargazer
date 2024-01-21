@@ -3,7 +3,7 @@ const CharacterImage: any = {
   "Dr. Ratio": {
     icon: require("../../images/character_icon/dr_ratio_icon.webp"),
     imageSplash: require("../../images/character_splash/dr_ratio_splash.webp"),
-    imageFull: require("../../images/character_splash/dr_ratio_splash.webp"),
+    imageFull: require("../../images/character_full/dr_ratio_full.webp"),
     fade: require("../../images/character_fade/dr_ratio_fade.webp"),
   },
   "Ruan Mei": {
