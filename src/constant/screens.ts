@@ -84,8 +84,8 @@ export const SCREENS = {
   },
   InvitePage: {
     id: "Invite",
-    getName: (lang: AppLanguage) => "邀請他人",
-    getShortName: (lang: AppLanguage) => "邀請他人",
+    getName: (lang: AppLanguage) => LOCALES[lang].InviteOthers,
+    getShortName: (lang: AppLanguage) => LOCALES[lang].InviteOthers,
     icon: SlidersHorizontal,
   },
   WallPaperPage: {
@@ -149,5 +149,11 @@ export const SCREENS = {
     getName: (lang: AppLanguage) => LOCALES[lang].UIDSearch,
     getShortName: (lang: AppLanguage) => LOCALES[lang].UIDSearch,
     icon: Alien,
+  },
+  LeaderboardListPage: {
+    id: "LeaderboardList",
+    getName: (lang: AppLanguage) => LOCALES[lang].Leaderboard,
+    getShortName: (lang: AppLanguage) => LOCALES[lang].Leaderboard,
+    icon: ChartBar,
   },
 };

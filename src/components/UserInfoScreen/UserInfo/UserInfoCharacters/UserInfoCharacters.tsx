@@ -79,7 +79,7 @@ export default function UserInfoCharacters(props: Props) {
     ?.filter(
       (char: any) =>
         !inGameCharactersIds?.includes(officalCharId[char?.id]) &&
-        dbGameCharactersIds.includes(char?.id?.toString())
+        dbGameCharactersIds?.includes(char?.id?.toString())
     )
     ?.map((char: any) => {
       // @ts-ignore
@@ -106,7 +106,7 @@ export default function UserInfoCharacters(props: Props) {
     ?.filter(
       (char: any) =>
         !inGameCharactersIds?.includes(officalCharId[char?.id]) &&
-        !dbGameCharactersIds.includes(char?.id?.toString())
+        !dbGameCharactersIds?.includes(char?.id?.toString())
     )
     ?.map((char: any) => {
       // @ts-ignore
@@ -298,17 +298,19 @@ export default function UserInfoCharacters(props: Props) {
                     />
                   ))}
               </View>
-              <View
-                style={{
-                  transform: [{ rotate: showMoreChars ? "180deg" : "0deg" }],
-                }}
-              >
-                <MoreBtn
-                  onPress={() => {
-                    setShowMoreChars(!showMoreChars);
+              {(isOwner || isShowInfo) && (
+                <View
+                  style={{
+                    transform: [{ rotate: showMoreChars ? "180deg" : "0deg" }],
                   }}
-                />
-              </View>
+                >
+                  <MoreBtn
+                    onPress={() => {
+                      setShowMoreChars(!showMoreChars);
+                    }}
+                  />
+                </View>
+              )}
             </View>
           }
         </View>

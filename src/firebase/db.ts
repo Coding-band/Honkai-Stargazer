@@ -22,6 +22,9 @@ const db = {
   CharacterComments(charId: string | number) {
     return firestore().collection(`CharacterComments-${charId}`);
   },
+  UserCharacterScores(charId: string | number) {
+    return firestore().collection(`UserCharacterScores-${charId}`);
+  },
 };
 
 export default db;

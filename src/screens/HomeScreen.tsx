@@ -28,6 +28,8 @@ import useMemoryOfChaosPrev from "../hooks/hoyolab/useMemoryOfChaosPrev";
 import genId from "../utils/genId";
 import useHsrInGameInfo from "../hooks/mihomo/useHsrInGameInfo";
 import { unionBy } from "lodash";
+import useUserCharacters from "../firebase/hooks/UserCharacters/useUserCharacters";
+import getCharScore from "../utils/calculator/charScoreCalculator/getCharScore";
 
 export default function HomeScreen() {
   const uid = useMyFirebaseUid();
@@ -36,13 +38,14 @@ export default function HomeScreen() {
   const hsrFullData = useHsrFullData().data;
 
   const hsrUUID = useHsrUUID();
-
   const hsrPlayerData = useHsrPlayerData();
-  const { data: hsrCharList } = useHsrCharList();
-  const { data: hsrInGameInfo } = useHsrInGameInfo(hsrUUID) as any;
+  const hsrCharList = useHsrCharList().data;
+  const hsrInGameInfo = useHsrInGameInfo(hsrUUID).data as any;
 
   const moc = useMemoryOfChaos().data;
   const mocPrev = useMemoryOfChaosPrev().data;
+
+  const userCharDetailList = useUserCharacters(uid).data.characters_details;
 
   const handleFirebaseSignUp = async (email: string, password: string) => {
     try {
@@ -356,6 +359,23 @@ export default function HomeScreen() {
     }
     createOrUpdateUserMemoryOfChaos();
   }, [uid, moc, mocPrev, hsrPlayerData]);
+
+  //* 建立或更新用戶角色練度數據 (UserCharacterScores)
+  useEffect(() => {
+    async function createOrUpdateUserCharacterScores() {
+      if (uid && userCharDetailList) {
+        userCharDetailList?.map(async (char: any) => {
+          const doc = db.UserCharacterScores(char.id).doc(uid);
+          const docIsExist = (await doc.get()).exists;
+          if (docIsExist) {
+          } else {
+            doc.set({ score: getCharScore(char.id, char) });
+          }
+        });
+      }
+    }
+    createOrUpdateUserCharacterScores();
+  }, [uid, userCharDetailList]);
 
   return (
     <Pressable style={{ flex: 1 }} className="overflow-hidden">

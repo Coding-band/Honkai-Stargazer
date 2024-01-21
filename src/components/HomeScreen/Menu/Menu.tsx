@@ -221,6 +221,16 @@ export default function Menu() {
         navigation.navigate(SCREENS.UIDSearchPage.id);
       },
     },
+    // 排行榜
+    {
+      type: "normal",
+      name: SCREENS.LeaderboardListPage.getShortName(language),
+      icon: SCREENS.LeaderboardListPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.LeaderboardListPage.id);
+      },
+    },
   ];
 
   return (
