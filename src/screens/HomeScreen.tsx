@@ -45,7 +45,7 @@ export default function HomeScreen() {
   const moc = useMemoryOfChaos().data;
   const mocPrev = useMemoryOfChaosPrev().data;
 
-  const userCharDetailList = useUserCharacters(uid).data.characters_details;
+  const userCharDetailList = useUserCharacters(uid).data?.characters_details;
 
   const handleFirebaseSignUp = async (email: string, password: string) => {
     try {

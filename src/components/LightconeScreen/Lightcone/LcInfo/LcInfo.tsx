@@ -13,7 +13,7 @@ export default function LcInfo() {
     <View
       className="px-6"
       style={{
-        paddingTop: Dimensions.get("window").height - 244,
+        paddingTop: Dimensions.get("window").height - 230,
         gap: 8,
       }}
     >

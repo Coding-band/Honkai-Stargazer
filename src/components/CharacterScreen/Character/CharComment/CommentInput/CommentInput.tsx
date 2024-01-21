@@ -148,7 +148,7 @@ export default function CommentInput({
           <TextInput
             multiline
             className={cn(
-              "px-[20px]",
+              "px-5",
               "text-[16px] font-[HY65] text-text leading-6"
             )}
             style={{

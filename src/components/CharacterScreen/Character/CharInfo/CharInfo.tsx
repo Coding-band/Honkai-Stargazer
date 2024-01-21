@@ -14,7 +14,7 @@ export default React.memo(function CharInfo() {
     <View
     className="px-6"
       style={{
-        paddingTop: Dimensions.get("window").height - 244,
+        paddingTop: Dimensions.get("window").height - 210,
         gap: 8,
       }}
     >
