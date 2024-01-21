@@ -137,7 +137,7 @@ export const strings = {
   // ui - Code Page
   HasCopy: "Copiado",
   // toast
-  PleaseLogin: "Please login first!",
+  PleaseLogin: "¡Inicie sesión primero!",
   //Add in 20240114
   UserInfoLastLoginAt: "${1} Antes",
   UserInfoGameData: "Datos del juego",
