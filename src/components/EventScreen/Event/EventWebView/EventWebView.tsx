@@ -10,6 +10,7 @@ export default function EventWebView({
   content: string;
 }) {
   const [webviewHeight, setWebviewHeight] = useState(0);
+
   return (
     <WebView
       bounces={false}
@@ -29,33 +30,33 @@ export default function EventWebView({
       }}
       source={{
         html: `
-                  <style>
-                    * {
-                        margin: 0;
-                        padding: 0;
-                        color: white;
-                        font-size: ${
-                          Platform.OS === "android" ? "48px" : "24px"
-                        };
-                      }
-                      .title {
-                        font-size: 150%;
-                        text-align: center;
-                        margin-bottom:32px;
-                      
-                      }
-                      h1 {
-                        margin-bottom: 16px;
-                      }
-                      img {
-                        width:100%;
-                      }
-                   
-                  </style>
-                  ${`<h1 class="title">${title}</h1>`}
-                  ${content}
-                `,
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  .title {
+    font-size: 150%;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  h1 {
+    margin-bottom: 16px;
+  }
+  img {
+    width: 100%;
+  }
+</style>
+
+${`<h1 class="title">${title}</h1>`}
+${content
+  .replaceAll('&lt;t class="t_lc"&gt;', "<span")
+  .replaceAll('&lt;t class="t_gl"&gt;', "")
+  .replaceAll("&lt;/t&gt;", "")}
+`,
       }}
-    ></WebView>
+    />
   );
 }

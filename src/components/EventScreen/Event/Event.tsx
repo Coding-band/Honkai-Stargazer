@@ -21,10 +21,14 @@ export default function Event() {
     hsrEvents?.data?.[eventType === "pic_list" ? "pic_list" : "list"];
   const hsrEvent = hsrEventsList.find((event: any) => event.ann_id === eventId);
   */
- 
-  const hsrEventTMP1 = hsrEvents?.data?.["pic_list"].find((event: any) => event.ann_id === eventId);
-  const hsrEventTMP2 = hsrEvents?.data?.["list"].find((event: any) => event.ann_id === eventId);
-  const hsrEvent = (hsrEventTMP1 === undefined ? hsrEventTMP2 : hsrEventTMP1)
+
+  const hsrEventTMP1 = hsrEvents?.data?.["pic_list"].find(
+    (event: any) => event.ann_id === eventId
+  );
+  const hsrEventTMP2 = hsrEvents?.data?.["list"].find(
+    (event: any) => event.ann_id === eventId
+  );
+  const hsrEvent = hsrEventTMP1 === undefined ? hsrEventTMP2 : hsrEventTMP1;
 
   const onRefresh = React.useCallback(() => {
     hsrEventsRefetch();
@@ -50,7 +54,7 @@ export default function Event() {
             source={hsrEvent?.[eventType === "pic_list" ? "img" : "banner"]}
             contentFit="contain"
           />
-          <EventWebView title={hsrEvent?.title} content={hsrEvent?.content.replaceAll("&lt;t class=\"t_lc\"&gt;","<span").replaceAll("&lt;/t&gt;","")} />
+          <EventWebView title={hsrEvent?.title} content={hsrEvent?.content} />
         </View>
       </View>
     </ScrollView>

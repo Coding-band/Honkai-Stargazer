@@ -6,24 +6,16 @@ import {
   StyleSheet,
 } from "react-native";
 import React from "react";
-import { RefreshControl } from "react-native";
 import useHsrEvent from "../../hooks/hoyolab/useHsrEvent";
 import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../constant/screens";
 import useHsrEventList from "../../hooks/hoyolab/useHsrEventList";
-import { formatTimeDuration } from "../../utils/date/formatTime";
 
 export default function EventList() {
   const navigation = useNavigation();
 
   const { data: hsrEvents, refetch: hsrEventsRefetch } = useHsrEvent();
-  const { data: hsrEventList, refetch: hsrEventListRefetch } =
-    useHsrEventList();
-
-  const onRefresh = React.useCallback(() => {
-    hsrEventsRefetch();
-  }, []);
 
   const handleNavigateEvent = (id: string) => {
     // @ts-ignore
