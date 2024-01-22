@@ -174,7 +174,7 @@ export const strings = {
   ATTR_SP: "ㄋㄥㄌ一ㄤㄕㄤㄒ一ㄢ",
   ATTR_EFFECT_HIT: "ㄒ一ㄠㄍㄨㄛㄇ一ㄥㄓㄨㄥ",
   ATTR_EFFECT_RES: "ㄒ一ㄠㄍㄨㄛㄉ一ㄎㄤ",
-  ATTR_QUANTUM_DMG: "Quantum DMG",
+  ATTR_QUANTUM_DMG: "ㄌ一ㄤㄗㄕㄤㄊ一ㄍㄠ",
   ATTR_FIRE_DMG: "ㄏㄨㄛㄕㄤㄊ一ㄍㄠ",
   ATTR_ICE_DMG: "ㄅ一ㄥㄕㄤㄊ一ㄍㄠ",
   ATTR_IMAGINARY_DMG: "ㄒㄩㄕㄨㄕㄤㄊ一ㄍㄠ",
@@ -182,7 +182,7 @@ export const strings = {
   ATTR_LIGHTNING_DMG: "ㄌㄟㄕㄤㄊ一ㄍㄠ",
   ATTR_PHYSICAL_DMG: "ㄨㄕㄤㄊ一ㄍㄠ",
   ATTR_SP_RATE: "ㄔㄨㄥㄋㄥㄒ一ㄠㄌㄩ",
-  ATTR_HEAL_RATE: "Heal Bonus",
+  ATTR_HEAL_RATE: "ㄓㄌ一ㄠㄌ一ㄤㄐ一ㄚㄔㄥ",
   //Add in 20240117
   UnLockAll: "ㄐㄧㄝㄙㄨㄛㄑㄩㄢㄅㄨ",
   BlurOn: "ㄇㄛㄏㄨ : ㄎㄞㄑ一",
@@ -279,7 +279,7 @@ export const strings = {
   ShareSuccess: "分享成功！",
   ShareError: "分享失敗，錯誤訊息： ",
   CodeAll: "ㄙㄨㄛ一ㄡㄙㄈㄨㄑ一",
-  CharSoulShort: "E${1}",
-  PlsDonateUs: "Pls consider to donate for supporting us, thx!",
-  DonateInRandomCount: "Random"
+  CharSoulShort: "ㄏㄨㄣ ${1}",
+  PlsDonateUs: "請考慮透過捐贈支持我們，謝謝！",
+  DonateInRandomCount: "ㄙㄨㄟㄐ一"
 };
