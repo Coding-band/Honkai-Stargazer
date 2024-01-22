@@ -48,11 +48,12 @@ export default function getCharScore(charId, charData) {
         lightconeScore = 0
       }
     }
-    lightconeScore += (charLightconeSuper - 1) //疊影 = [2,3,4,5] -> 每次加1分
+    lightconeScore += Math.max(charLightconeSuper - 1,0) //疊影 = [2,3,4,5] -> 每次加1分
 
     // 星魂分數 -> 最多6分
     let soulScore = 0
     for (let i = 0; i < charScoreWeight.soul.length; i++) {
+      if(charScoreWeight.soul[i] < 0) continue;
       if (charSoulLvl >= charScoreWeight.soul[i]) {
         soulScore += (soulScore >= 6 ? 0 : (6 / charScoreWeight.soul.length))
       } else {

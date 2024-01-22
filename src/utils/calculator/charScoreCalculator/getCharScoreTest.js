@@ -16,8 +16,8 @@ function getCharScore(charId, charData) {
      **/
     // @ts-ignore
     const charScoreWeight = scoreWeight[charId][schoolIndex]; //對應角色流派内，該角色評分權重
-    const charLightconeID = charData.light_cone.id; //角色使用中的光錐
-    const charLightconeSuper = charData.light_cone.rank; //角色使用中的光錐疊影
+    const charLightconeID = (charData.light_cone === null ? 0 : charData.light_cone.id); //角色使用中的光錐
+    const charLightconeSuper = (charData.light_cone === null ? 0 : charData.light_cone.rank); //角色使用中的光錐疊影
     const charPromotion = charData.promotion; //角色突破等級
     const charLevel = charData.level; //角色等級
     const charSoulLvl = charData.rank; //角色的星魂等級
@@ -47,11 +47,12 @@ function getCharScore(charId, charData) {
     } else {
       lightconeScore = 0
     }
-    lightconeScore += (charLightconeSuper - 1) //疊影 = [2,3,4,5] -> 每次加1分
+    lightconeScore += Math.max(charLightconeSuper - 1,0) //疊影 = [2,3,4,5] -> 每次加1分
 
     // 星魂分數 -> 最多6分
     let soulScore = 0
     for (let i = 0; i < charScoreWeight.soul.length; i++) {
+      if(charScoreWeight.soul[i] < 0) continue;
       if (charSoulLvl >= charScoreWeight.soul[i]) {
         soulScore += (soulScore >= 6 ? 0 : (6 / charScoreWeight.soul.length))
       } else {
@@ -112,7 +113,7 @@ function getCharScore(charId, charData) {
     })
 
     //最大值 120 , 畢業100
-    //console.log(lightconeScore+"||"+ soulScore+"||" + traceScore +"||"+ attrScore+"||"+promotionScore)
+    console.log(lightconeScore+"||"+ soulScore+"||" + traceScore +"||"+ attrScore+"||"+promotionScore)
 
     schoolData.push((lightconeScore + soulScore + traceScore + attrScore + promotionScore))
     if(schoolData[index] > schoolData[maxSchoolDataIndex]){
@@ -164,4 +165,4 @@ function getCurrAndGradScore(charId, charData){
     }
     return returnValue;
 }
-console.log(JSON.stringify(getCharScore("1203",demoCharData)))
+console.log(JSON.stringify(getCharScore("1305",demoCharData)))
