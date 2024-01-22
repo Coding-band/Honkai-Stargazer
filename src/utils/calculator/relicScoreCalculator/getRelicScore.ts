@@ -79,7 +79,7 @@ export default function getRelicScore(
     // 主詞條數值 -- 算式不需使用
     const value = main[name];
     // 主詞條權重
-    const weight = relicMainScoreWeight[`${i + 1}`][name];
+    const weight = (relicMainScoreWeight[`${i + 1}`][name] === undefined ? 0 : relicMainScoreWeight[`${i + 1}`][name]);
 
     //按遺器位置内、主詞條加成和 [等級] (特定情況下) 計算積分
     switch (relicOrderExpect.indexOf(relicOrder[i])) {

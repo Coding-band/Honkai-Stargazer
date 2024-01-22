@@ -5,7 +5,7 @@ function getRelicScore() {
   /**
   * 初始化
   **/
-  const charId = "1102";
+  const charId = "1009";
   const charScoreWeight = scoreWeight[charId];
   const charRelicsData = demoCharData.relics;
 
@@ -65,7 +65,7 @@ function getRelicScore() {
     // 主詞條數值 -- 算式不需使用
     const value = main[name];
     // 主詞條權重
-    const weight = relicMainScoreWeight[`${i + 1}`][name];
+    const weight = (relicMainScoreWeight[`${i + 1}`][name] === undefined ? 0 : relicMainScoreWeight[`${i + 1}`][name]);
 
     //按遺器位置内、主詞條加成和 [等級] (特定情況下) 計算積分
     switch (relicOrderExpect.indexOf(relicOrder[i])) {
@@ -89,6 +89,7 @@ function getRelicScore() {
         return { [relicOrder[i]]: 0 };
     }
   });
+  
 
   /**
    * 副詞條積分
@@ -215,6 +216,14 @@ function getRelicScore() {
   relicEachFinalScore.map((val, i) => {
     relicAllFinalScore += val[relicOrder[i]];
   });
+
+  console.log("START")
+  console.log(relicMainScore)
+  console.log(relicSubScore)
+  console.log(relicEachFinalScore)
+  console.log(relicAllFinalScore)
+  console.log("END")
+
   //你只需要 relicAllFinalScore 去計算評價等級 (等級範圍明天聊)
   return {
     mainScore: relicMainScore,
@@ -224,5 +233,7 @@ function getRelicScore() {
   };
 
 }
+
+getRelicScore()
 
 
