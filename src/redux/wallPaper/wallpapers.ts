@@ -95,6 +95,10 @@ export const wallPapers = [
     url: require("../../../assets/images/bgs/1107-2.webp"),
   },
   {
+    id: "1107-3",
+    url: require("../../../assets/images/bgs/1107-3.webp"),
+  },
+  {
     id: 1108,
     url: require("../../../assets/images/bgs/1108.webp"),
   },
@@ -185,9 +189,5 @@ export const wallPapers = [
   {
     id: 1303,
     url: require("../../../assets/images/bgs/1303.webp"),
-  },
-  {
-    id: 1305,
-    url: require("../../../assets/images/bgs/1305.webp"),
-  },
+  }
 ];
