@@ -15,7 +15,7 @@ export default function UserCharRelics() {
     !!userRelicsData?.length && (
       <View style={{ gap: 20, alignItems: "center" }}>
         <View
-          className="px-4"
+          className="px-4 h-[230px]"
           style={{
             flexDirection: "row",
             flexWrap: "wrap",

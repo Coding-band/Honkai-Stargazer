@@ -22,7 +22,7 @@ export default function WallPaper(props: Props) {
       }
       // placeholder={blurhash}
       contentFit="cover"
-      blurRadius={props.isBlur ? 5 : 0}
+      blurRadius={props.isBlur ? 7 : 0}
     />
   );
 }

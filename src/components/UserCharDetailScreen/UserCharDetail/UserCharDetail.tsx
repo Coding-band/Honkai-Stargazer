@@ -69,7 +69,6 @@ export default function UserCharDetail() {
     return { display: scrollHandler.value < 250 ? "none" : "flex" };
   });
 
-  if (!inGameInfo) return <Loading />;
   return (
     <View className="z-30">
       <Header2 rightBtn={isOwner ? <ShareBtn /> : null} />

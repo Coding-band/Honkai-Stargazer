@@ -12,6 +12,7 @@ import { ParamList } from "../../../../types/navigation";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 import formatLocale from "../../../../utils/format/formatLocale";
+import getRankColor from "../../../../utils/getRankColor";
 
 export default function MOCLbItem({
   versionNumber,
@@ -74,10 +75,17 @@ export default function MOCLbItem({
           alignItems: "center",
         }}
       >
-        <Text className="text-text2 font-[HY65] text-[16px]">
-          {floorName}{" "}
-          {isLayer2 ? LOCALES[language].MOCPart2 : LOCALES[language].MOCPart1}
-        </Text>
+        <TouchableOpacity
+          activeOpacity={0.35}
+          onPress={() => {
+            setIsLayer2(!isLayer2);
+          }}
+        >
+          <Text className="text-text2 font-[HY65] text-[16px]">
+            {floorName}{" "}
+            {isLayer2 ? LOCALES[language].MOCPart2 : LOCALES[language].MOCPart1}
+          </Text>
+        </TouchableOpacity>
         <TouchableOpacity
           activeOpacity={0.65}
           onPress={() => {
@@ -106,7 +114,6 @@ export default function MOCLbItem({
                   showRank={showRank}
                   onShowRank={setShowRank}
                   isLayer2={isLayer2}
-                  onSetIsLayer2={setIsLayer2}
                 />
               ))
           : new Array(5)
@@ -120,7 +127,6 @@ export default function MOCLbItem({
                   showRank={showRank}
                   onShowRank={setShowRank}
                   isLayer2={isLayer2}
-                  onSetIsLayer2={setIsLayer2}
                 />
               ))}
         <RecordItem
@@ -129,7 +135,6 @@ export default function MOCLbItem({
           showRank={showRank}
           onShowRank={setShowRank}
           isLayer2={isLayer2}
-          onSetIsLayer2={setIsLayer2}
         />
       </View>
     </LinearGradient>
@@ -138,15 +143,6 @@ export default function MOCLbItem({
 
 const RecordItem = React.memo((props: any) => {
   const { language } = useAppLanguage();
-  function getRankColor(rank: number) {
-    const colors = {
-      1: "#FFD070",
-      2: "#F3F9FF80",
-      3: "#AB6F66",
-    };
-    // @ts-ignore
-    return colors[rank] || "#FFFFFF";
-  }
 
   return (
     <View className="pl-3" style={{ flexDirection: "row", gap: 8 }}>
@@ -194,9 +190,6 @@ const RecordItem = React.memo((props: any) => {
         </View>
         <TouchableOpacity
           activeOpacity={0.35}
-          onLongPress={() => {
-            props.onSetIsLayer2(!props.isLayer2);
-          }}
           onPress={() => {
             props.onShowRank(!props.showRank);
           }}
@@ -211,6 +204,7 @@ const RecordItem = React.memo((props: any) => {
                   className="w-8"
                 >
                   <Image
+                    transition={200}
                     className="w-6 h-6 rounded-full"
                     // @ts-ignore
                     source={CharacterImage[officalCharId[char.id]].icon}
@@ -219,7 +213,11 @@ const RecordItem = React.memo((props: any) => {
                     {props.showRank ? (
                       <Text
                         style={{ color: char.rank === 6 ? "#DD8200" : "#FFF" }}
-                      >{formatLocale(LOCALES[language].CharSoulShort,[char.rank])}</Text>
+                      >
+                        {formatLocale(LOCALES[language].CharSoulShort, [
+                          char.rank,
+                        ])}
+                      </Text>
                     ) : (
                       `Lv ${char.level}`
                     )}
@@ -228,7 +226,9 @@ const RecordItem = React.memo((props: any) => {
               )
             )
           ) : (
-            <Text className="text-text2 font-[HY65] text-[12px]">{LOCALES[language].MOCSkipped}</Text>
+            <Text className="text-text2 font-[HY65] text-[12px]">
+              {LOCALES[language].MOCSkipped}
+            </Text>
           )}
         </TouchableOpacity>
       </View>

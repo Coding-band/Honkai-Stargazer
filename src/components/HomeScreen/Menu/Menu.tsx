@@ -181,6 +181,26 @@ export default function Menu() {
         playerNote.data?.expeditions.filter((e: any) => e.status === "Ongoing")
           .length === 0,
     },
+    // 練度排行榜
+    {
+      type: "normal",
+      name: SCREENS.ScoreLeaderboardPage.getShortName(language),
+      icon: SCREENS.ScoreLeaderboardPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.ScoreLeaderboardPage.id);
+      },
+    },
+    // 混沌回憶排行榜
+    {
+      type: "normal",
+      name: SCREENS.MemoryOfChaosLeaderboardPage.getShortName(language),
+      icon: SCREENS.MemoryOfChaosLeaderboardPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.MemoryOfChaosLeaderboardPage.id);
+      },
+    },
     // 地圖
     {
       type: "normal",
@@ -219,16 +239,6 @@ export default function Menu() {
       onPress: () => {
         // @ts-ignore
         navigation.navigate(SCREENS.UIDSearchPage.id);
-      },
-    },
-    // 排行榜
-    {
-      type: "normal",
-      name: SCREENS.LeaderboardListPage.getShortName(language),
-      icon: SCREENS.LeaderboardListPage.icon,
-      onPress: () => {
-        // @ts-ignore
-        navigation.navigate(SCREENS.LeaderboardListPage.id);
       },
     },
   ];
@@ -276,88 +286,6 @@ export default function Menu() {
               );
             }
           })}
-
-          {/* <MenuItem
-            onPress={() => {
-              Toast.StillDevelopingToast();
-            }}
-            width={menuItemSize.width}
-            height={menuItemSize.height}
-            Icon={MathOperations}
-          >
-            养成计算
-          </MenuItem>
-          <MenuItem
-            onPress={() => {
-              Toast.StillDevelopingToast();
-            }}
-            width={menuItemSize.width}
-            height={menuItemSize.height}
-            Icon={Gauge}
-          >
-            伤害模拟
-          </MenuItem>
-          <MenuItem
-            onPress={() => {
-              Toast.StillDevelopingToast();
-            }}
-            width={menuItemSize.width}
-            height={menuItemSize.height}
-            Icon={Books}
-          >
-            百科
-          </MenuItem>
-          <MenuItem
-            width={menuItemSize.width}
-            height={menuItemSize.height}
-            Icon={SCREENS.MapPage.icon}
-            onPress={() => {
-              // @ts-ignore
-              navigation.navigate(SCREENS.MapPage.id);
-            }}
-          >
-            {SCREENS.MapPage.getShortName(language)}
-          </MenuItem>
-          <MenuItem
-            onPress={() => {
-              Toast.StillDevelopingToast();
-            }}
-            width={menuItemSize.width}
-            height={menuItemSize.height}
-            Icon={ShootingStar}
-          >
-            祈愿分析
-          </MenuItem>
-          <MenuItem
-            onPress={() => {
-              Toast.StillDevelopingToast();
-            }}
-            width={menuItemSize.width}
-            height={menuItemSize.height}
-            Icon={StarOfDavid}
-          >
-            祈愿模拟
-          </MenuItem>
-          <MenuItem
-            onPress={() => {
-              Toast.StillDevelopingToast();
-            }}
-            width={menuItemSize.width}
-            height={menuItemSize.height}
-            Icon={Ticket}
-          >
-            兑换码
-          </MenuItem>
-          <MenuItem
-            onPress={() => {
-              Toast.StillDevelopingToast();
-            }}
-            width={menuItemSize.width}
-            height={menuItemSize.height}
-            Icon={ClockClockwise}
-          >
-            未来卡池
-          </MenuItem> */}
         </View>
       </ScrollView>
     </View>

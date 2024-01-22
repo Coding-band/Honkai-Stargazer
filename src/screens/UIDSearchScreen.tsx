@@ -9,7 +9,7 @@ import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 import CodeList from "../components/CodeScreen/CodeList/CodeList";
 import Searchbar from "../components/UIDSearchScreen/UIDSearch/UIDSearchbar/UIDSearchbar";
 import { Image } from "expo-image";
-import UIDSearch from "../components/UIDSearchScreen/UIDSearch/UIDSearchbar";
+import UIDSearch from "../components/UIDSearchScreen/UIDSearch/UIDSearch";
 
 export default function UIDSearchScreen() {
     const { language } = useAppLanguage();

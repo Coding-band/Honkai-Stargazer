@@ -26,6 +26,7 @@ export default function MOC() {
   const mocVersion = MocVersion(textLanguage);
 
   const [selectedVersion, setSelectedVersion] = useState(mocVersion[0].id);
+  // @ts-ignore
   const mocData = MOCDataMap[selectedVersion];
 
   const { language } = useAppLanguage();

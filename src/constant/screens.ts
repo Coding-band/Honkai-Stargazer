@@ -9,6 +9,7 @@ import {
   SlidersHorizontal,
   Sword,
   Ticket,
+  Trophy,
   User,
   Users,
 } from "phosphor-react-native";
@@ -111,7 +112,7 @@ export const SCREENS = {
     getName: (lang: AppLanguage) =>
       `${LOCALES[lang].MemoryOfChaos}·${LOCALES[lang].Leaderboard}`,
     getShortName: (lang: AppLanguage) =>
-      `${LOCALES[lang].MemoryOfChaos}·${LOCALES[lang].Leaderboard}`,
+      `${LOCALES[lang].MemoryOfChaosShort}${LOCALES[lang].Leaderboard}`,
     icon: ChartBar,
   },
   EventListPage: {
@@ -150,10 +151,12 @@ export const SCREENS = {
     getShortName: (lang: AppLanguage) => LOCALES[lang].UIDSearch,
     icon: Alien,
   },
-  LeaderboardListPage: {
-    id: "LeaderboardList",
-    getName: (lang: AppLanguage) => LOCALES[lang].Leaderboard,
-    getShortName: (lang: AppLanguage) => LOCALES[lang].Leaderboard,
-    icon: ChartBar,
+  ScoreLeaderboardPage: {
+    id: "ScoreLeaderboard",
+    getName: (lang: AppLanguage) =>
+      `${LOCALES[lang].ScoreLevel}${LOCALES[lang].Leaderboard}`,
+    getShortName: (lang: AppLanguage) =>
+      `${LOCALES[lang].ScoreLevel}${LOCALES[lang].Leaderboard}`,
+    icon: Trophy,
   },
 };

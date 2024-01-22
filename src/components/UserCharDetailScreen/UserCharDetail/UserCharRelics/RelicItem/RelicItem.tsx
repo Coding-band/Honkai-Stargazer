@@ -45,7 +45,7 @@ export default function RelicItem({
           flexDirection: selected ? "column" : "row",
           gap: selected ? 18 : 6,
           width: selected ? "100%" : Dimensions.get("screen").width / 2 - 36,
-          height: selected ? 228 : null,
+          height: selected ? 230 : null,
           alignItems: selected ? "center" : "flex-start",
         },
       ]}

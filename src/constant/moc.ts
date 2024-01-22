@@ -3,6 +3,10 @@ import { TextLanguage } from "../language/language.types";
 
 export const MocVersion = (lang: TextLanguage) => [
   {
+    id: 1010,
+    name: `${MOCDataMap[1010].time.versionBegin} - ${MOCDataMap[1010].time.versionEnd} ${MOCDataMap[1010].name[lang]}`,
+  },
+  {
     id: 1009,
     name: `${MOCDataMap[1009].time.versionBegin} - ${MOCDataMap[1009].time.versionEnd} ${MOCDataMap[1009].name[lang]}`,
   },

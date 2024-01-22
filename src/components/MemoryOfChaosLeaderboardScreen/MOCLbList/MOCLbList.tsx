@@ -42,7 +42,11 @@ export default function MOCLbList() {
             <Listbox
               top={8}
               button={
-                <Button width={300} height={46} withArrow>
+                <Button
+                  width={Dimensions.get("screen").width - 32}
+                  height={46}
+                  withArrow
+                >
                   <Text className="text-[16px] font-[HY65] text-[#222]">
                     {mocVersion.filter((v) => v.id === selectedVersion)[0].name}
                   </Text>

@@ -281,5 +281,8 @@ export const strings = {
   CodeAll: "所有伺服器",
   CharSoulShort: "魂 ${1}",
   PlsDonateUs: "請考慮透過捐贈支持我們，謝謝！",
-  DonateInRandomCount: "隨機"
+  DonateInRandomCount: "隨機",
+  // add in 2024/01/22
+  MemoryOfChaosShort: "渾沌",
+  ScoreLevel: "練度",
 };

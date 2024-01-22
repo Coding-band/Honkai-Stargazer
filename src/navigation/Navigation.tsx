@@ -25,7 +25,7 @@ import UIDSearchScreen from "../screens/UIDSearchScreen";
 import MemoryOfChaosStatsScreen from "../screens/MemoryOfChaosStatsScreen";
 import MemoryOfChaosLeaderboardScreen from "../screens/MemoryOfChaosLeaderboardScreen";
 import InviteScreen from "../screens/InviteScreen";
-import LeaderboardListScreen from "../screens/LeaderboardListScreen";
+import ScoreLeaderboardScreen from "../screens/ScoreLeaderboardScreen";
 
 export default function Navigation({
   initialRouteName,
@@ -156,8 +156,8 @@ export default function Navigation({
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name={SCREENS.LeaderboardListPage.id}
-          component={LeaderboardListScreen}
+          name={SCREENS.ScoreLeaderboardPage.id}
+          component={ScoreLeaderboardScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
