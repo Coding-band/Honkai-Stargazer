@@ -281,5 +281,10 @@ export const strings = {
   CodeAll: "所有服务器",
   CharSoulShort: "魂 ${1}",
   PlsDonateUs: "请考虑透过捐赠支持我们，谢谢！",
-  DonateInRandomCount: "随机"
+  DonateInRandomCount: "随机",
+  //20240122
+  MemoryOfChaosShort: "混沌",
+  ScoreLevel: "练度",
+  MemoryOfChaosLeaderboard: "混沌排行榜",
+  ScoreLevelLeaderboard: "练度排行榜"
 };

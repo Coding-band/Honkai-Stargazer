@@ -281,5 +281,8 @@ export const strings = {
   CodeAll: "ALL Servers",
   CharSoulShort: "E${1}",
   PlsDonateUs: "Pls consider to donate for supporting us, thx!",
-  DonateInRandomCount: "Random"
+  DonateInRandomCount: "Random",
+  //20240122
+  MemoryOfChaosShort: "MOC",
+  ScoreLevel: "Proficiency"
 };

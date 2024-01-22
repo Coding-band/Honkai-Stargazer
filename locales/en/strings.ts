@@ -278,4 +278,9 @@ export const strings = {
   CharSoulShort: "E${1}",
   PlsDonateUs: "Pls consider to donate for supporting us, thx!",
   DonateInRandomCount: "Random",
+  //20240122
+  MemoryOfChaosShort:"MOC",
+  ScoreLevel:"Proficiency",
+  MemoryOfChaosLeaderboard: "MOC Leaderboard",
+  ScoreLevelLeaderboard: "Proficiency Leaderboard"
 };

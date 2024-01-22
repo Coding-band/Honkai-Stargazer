@@ -281,5 +281,8 @@ export const strings = {
   CodeAll: "Todos los servidores",
   CharSoulShort: "E${1}",
   PlsDonateUs: "¡Considera donar para apoyarnos, por favor!",
-  DonateInRandomCount: "Aleatorio"
+  DonateInRandomCount: "Aleatorio",
+  //20240122
+  MemoryOfChaosShort: "MOC",
+  ScoreLevel: "Proficiency"
 };
