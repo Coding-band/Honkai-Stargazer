@@ -1,13 +1,8 @@
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  ScrollView,
-  Dimensions,
-} from "react-native";
+import { View, Text, TouchableOpacity, Dimensions } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Image } from "expo-image";
 import { useClickOutside } from "react-native-click-outside";
+import { ScrollView } from "react-native-gesture-handler";
 
 const Options = ({
   values,
@@ -56,7 +51,7 @@ const Options = ({
         }}
         contentContainerStyle={{
           alignItems: "center",
-          paddingBottom: 24,
+          paddingBottom: 12,
         }}
         className="absolute top-[24px] left-0 bg-[#3E3E47] px-3 py-1.5 rounded-[4px]"
       >
@@ -71,7 +66,7 @@ const Options = ({
             }}
             style={{ alignItems: "center", justifyContent: "center" }}
           >
-            <Text className="text-text text-[16px] font-[HY65]">
+            <Text className="text-text text-[16px] font-[HY65] leading-5">
               {value?.name}
             </Text>
           </TouchableOpacity>
