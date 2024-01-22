@@ -1,4 +1,4 @@
-import { View, Text, Dimensions, Platform } from "react-native";
+import { View, Text, Dimensions, Platform, Linking } from "react-native";
 import React, { useState } from "react";
 import WebView from "react-native-webview";
 
@@ -18,6 +18,12 @@ export default function EventWebView({
       scrollEnabled={false}
       onMessage={(event: any) => {
         setWebviewHeight(parseInt(event.nativeEvent.data));
+      }}
+      onShouldStartLoadWithRequest={(request) => {
+        if (request.url !== "about:blank") {
+          Linking.openURL(request.url);
+          return false;
+        } else return true;
       }}
       javaScriptEnabled={true}
       injectedJavaScript={`
@@ -60,6 +66,7 @@ export default function EventWebView({
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
+   
   }
   
 table{
@@ -69,8 +76,7 @@ table{
 td{
   background-color:#f3f3f3;
   color:  rgb(157, 133, 99);
-  width:25vw;
-  height:50px;
+  height: 50px;
   text-align:center;
 }
 
@@ -92,10 +98,26 @@ tr:nth-of-type(1) td{
   ${content
     ?.replaceAll('&lt;t class="t_lc"&gt;', "")
     ?.replaceAll('&lt;t class="t_gl"&gt;', "")
-    ?.replaceAll("&lt;/t&gt;", "")}
+    ?.replaceAll("&lt;/t&gt;", "")
+    ?.replaceAll(/href=\"javascript:[^\"]+\"/g, convertHref)}
 </body>
 `,
       }}
     />
   );
+}
+
+function convertHref(hrefString: string) {
+  // 使用正则表达式匹配引号之间的部分
+  const regex = /'(.+?)'/;
+  const match = regex.exec(hrefString);
+
+  // 如果匹配成功，返回包含正确格式的 href 字符串
+  if (match && match.length > 1) {
+    const a = `href="${match[1]}"`;
+    console.log(a);
+    return a;
+  } else {
+    return hrefString; // 如果无法匹配，返回原始字符串
+  }
 }

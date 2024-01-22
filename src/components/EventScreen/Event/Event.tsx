@@ -14,13 +14,7 @@ export default function Event() {
   const eventId = route.params.id;
   const eventType = eventId.toString().startsWith("3") ? "pic_list" : "list";
 
-  const { data: hsrEvents, refetch: hsrEventsRefetch } = useHsrEvent();
-  /*
-  Origin version 
-  const hsrEventsList =
-    hsrEvents?.data?.[eventType === "pic_list" ? "pic_list" : "list"];
-  const hsrEvent = hsrEventsList.find((event: any) => event.ann_id === eventId);
-  */
+  const { data: hsrEvents } = useHsrEvent();
 
   const hsrEventTMP1 = hsrEvents?.data?.["pic_list"].find(
     (event: any) => event.ann_id === eventId
@@ -29,10 +23,6 @@ export default function Event() {
     (event: any) => event.ann_id === eventId
   );
   const hsrEvent = hsrEventTMP1 === undefined ? hsrEventTMP2 : hsrEventTMP1;
-
-  const onRefresh = React.useCallback(() => {
-    hsrEventsRefetch();
-  }, []);
 
   return (
     <ScrollView className="z-30 py-[110px] pb-0">
@@ -53,6 +43,7 @@ export default function Event() {
             )}
             source={hsrEvent?.[eventType === "pic_list" ? "img" : "banner"]}
             contentFit="contain"
+            contentPosition="top"
           />
           <EventWebView title={hsrEvent?.title} content={hsrEvent?.content} />
         </View>

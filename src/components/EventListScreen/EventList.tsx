@@ -4,23 +4,26 @@ import {
   ScrollView,
   TouchableOpacity,
   StyleSheet,
+  TouchableWithoutFeedback,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import useHsrEvent from "../../hooks/hoyolab/useHsrEvent";
 import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../constant/screens";
+import EventListItemType2 from "./EventListItem/EventListItemType2";
+import EventListItemType1 from "./EventListItem/EventListItemType1";
 import useHsrEventList from "../../hooks/hoyolab/useHsrEventList";
+import useLocalState from "../../hooks/useLocalState";
 
 export default function EventList() {
-  const navigation = useNavigation();
-
   const { data: hsrEvents, refetch: hsrEventsRefetch } = useHsrEvent();
+  const { data: hsrEventsList } = useHsrEventList();
 
-  const handleNavigateEvent = (id: string) => {
-    // @ts-ignore
-    navigation.push(SCREENS.EventPage.id, { id });
-  };
+  const [displayType, setDisplayType] = useLocalState<1 | 2>(
+    "hoyolab-event-display-type",
+    1
+  );
 
   return (
     <ScrollView className="z-30 py-[127px] px-[17px] pb-0">
@@ -37,47 +40,38 @@ export default function EventList() {
           {hsrEvents?.data?.pic_list?.map(
             (event: any, i: number) =>
               event?.title && (
-                <TouchableOpacity
-                  key={event?.ann_id}
-                  className="w-full"
-                  activeOpacity={0.65}
-                  onPress={() => {
-                    handleNavigateEvent(event?.ann_id);
+                <EventListItemType1
+                  event={event}
+                  eventListData={
+                    [
+                      ...hsrEventsList.data.pic_list[0].type_list[0].list,
+                      ...hsrEventsList.data.pic_list[0].type_list[1].list,
+                    ].filter((e: any) => e.ann_id === event.ann_id)[0]
+                  }
+                  displayType={displayType}
+                  onLongPress={() => {
+                    if (displayType === 1) setDisplayType(2);
+                    else setDisplayType(1);
                   }}
-                >
-                  <Image
-                    transition={200}
-                    className="w-full aspect-[360/108]"
-                    source={event?.img}
-                  />
-                  {/* <View
-                    className="w-10 h-5 bg-[#F3F9FF80] absolute top-[9px] left-[9px]"
-                    style={styles.leftTopWidget}
-                  ></View> */}
-                </TouchableOpacity>
+                />
               )
           )}
           {hsrEvents?.data?.list?.map(
             (event: any, i: number) =>
               event?.title && (
-                <TouchableOpacity
-                  key={event?.ann_id}
-                  className="w-full"
-                  activeOpacity={0.65}
-                  onPress={() => {
-                    handleNavigateEvent(event?.ann_id);
+                <EventListItemType2
+                  event={event}
+                  eventListData={
+                    hsrEventsList.data.list[0].list.filter(
+                      (e: any) => e.ann_id === event.ann_id
+                    )[0]
+                  }
+                  displayType={displayType}
+                  onLongPress={() => {
+                    if (displayType === 1) setDisplayType(2);
+                    else setDisplayType(1);
                   }}
-                >
-                  <Image
-                    transition={200}
-                    className="w-full aspect-[360/130]"
-                    source={event?.banner}
-                  />
-                  {/* <View
-                    className="h-5 bg-[#F3F9FF80] absolute top-[9px] left-[9px]"
-                    style={styles.leftTopWidget}
-                  ></View> */}
-                </TouchableOpacity>
+                />
               )
           )}
         </View>
