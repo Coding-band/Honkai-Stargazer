@@ -159,7 +159,45 @@ export function getCurrAndGradScore(charId, charData) {
         returnValueThisSchool.push({ [name]: [attrValue, gradValue, (intList.includes(name) ? "value" : "percent")] })
       }
     })
-    returnValue.push(returnValueThisSchool)
+    returnValue.push(returnValueThisSchool) //已知問題，當有第2個或以上的流派時，無法正確把該些流派的數據push入去
   }
   return returnValue;
+}
+
+/**
+ * 
+ * @param {*} charId 角色ID
+ * @param {*} charData 角色數據
+ * @returns [{"行跡名稱" : [行跡現在等級,行跡畢業等級]},...]
+ * E.g. [{"Normal": [4, 4]}, {"BPSkill": [7, 6]}, {"Ultra": [6, 8]}, {"Talent": [6, 7]}]
+ * 當中Normal = 普攻 ; BPSkill = 戰技 ; Ultra = 終結技 ; Talent = 天賦
+ */
+export function getTraceInfo(charId, charData){
+  /*
+  目前定義如下 : 行跡權重 = [2,1.5,1] , 對應等級將會是 = [8,7,6] (普攻會是 6,5,4) 
+  指定的行跡(E.g. 終結技) 按着行跡權重 暫時釐定的畢業等級
+  i.e.
+  角色的終結技的行跡權重 = 2 , 終結技畢業等級 = 8
+  角色的普通攻擊的行跡權重 = 1.5 , 普通攻擊畢業等級 = 5
+  角色的天賦的行跡權重 = 1 , 普通攻擊畢業等級 = 6
+  */
+  let returnValue = [];
+  for (let index = 0; index < scoreWeight[charId].length; index++) {
+    let returnValueThisSchool = []
+    const charScoreWeight = scoreWeight[charId][index]; //對應角色流派内，該角色評分權重
+    const charTraceLvl = charData.skills;  //角色行跡内等級
+    const traceGradLvlList = [8,7,6]
+    let isChecked = [false, false, false, false];
+    //普通攻擊
+    charTraceLvl.map((trace) => {
+      switch (trace.type) {
+        case "Normal": if (isChecked[0]) return; isChecked[0] = true; returnValueThisSchool.push({[trace.type] : [trace.level,traceGradLvlList[2-(charScoreWeight.trace.normal_atk*2-2)] - 2]}); break;
+        case "Ultra": if (isChecked[1]) return; isChecked[1] = true; returnValueThisSchool.push({[trace.type] : [trace.level,traceGradLvlList[2-(charScoreWeight.trace.ultimate*2-2)]]}); break;
+        case "Talent": if (isChecked[2]) return; isChecked[2] = true;returnValueThisSchool.push({[trace.type] : [trace.level,traceGradLvlList[2-(charScoreWeight.trace.talent*2-2)]]}); break;
+        case "BPSkill": if (isChecked[3]) return; isChecked[3] = true;returnValueThisSchool.push({[trace.type] : [trace.level,traceGradLvlList[2-(charScoreWeight.trace.skill*2-2)]]}); break;
+      }
+    })
+    returnValue.push(returnValueThisSchool) //已知問題，當有第2個或以上的流派時，無法正確把該些流派的數據push入去
+  }
+  return returnValue
 }

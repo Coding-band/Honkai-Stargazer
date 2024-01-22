@@ -9,6 +9,7 @@ import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import getCharScore, {
   getCharRange,
   getCurrAndGradScore,
+  getTraceInfo,
 } from "../../../../utils/calculator/charScoreCalculator/getCharScore";
 import UserCharScoreItem from "./UserCharScoreItem/UserCharScoreItem";
 import ScoreRangeFont from "../../../global/ScoreRangeFont/ScoreRangeFont";

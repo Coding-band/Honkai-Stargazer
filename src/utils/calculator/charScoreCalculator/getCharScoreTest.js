@@ -1,6 +1,7 @@
 const scoreWeight = require("./data/charWeightList.json");
 const demoCharData = require("./data/charDataDemo.json");
 
+
 function getCharScore(charId, charData) {
   let maxSchoolDataIndex = 0
   let schoolData = []
@@ -165,4 +166,4 @@ function getCurrAndGradScore(charId, charData){
     }
     return returnValue;
 }
-console.log(JSON.stringify(getCharScore("1305",demoCharData)))
+console.log(JSON.stringify(getCurrAndGradScore("1305",demoCharData)))
