@@ -122,6 +122,9 @@ export default function CommentBox(props: Props) {
         nestedScrollEnabled
         style={[animatedStyles2]}
         keyboardShouldPersistTaps="always"
+        onScroll={() => {
+          Keyboard.dismiss();
+        }}
       >
         <Animated.View className="w-full mb-20">{props.children}</Animated.View>
       </Animated.ScrollView>

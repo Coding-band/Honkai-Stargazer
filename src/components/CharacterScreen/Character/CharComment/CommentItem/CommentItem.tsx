@@ -108,26 +108,23 @@ const Like = ({
   };
 
   useEffect(() => {
-    if (firebaseUID) {
-      if (isLiked) {
-        db.CharacterComments(charOfficalId)
-          .doc(commentId)
-          .update({
-            likes: firestore.FieldValue.arrayUnion(firebaseUID),
-          });
-      } else {
-        db.CharacterComments(charOfficalId)
-          .doc(commentId)
-          .update({
-            likes: firestore.FieldValue.arrayRemove(firebaseUID),
-          });
-      }
+    if (isLiked) {
+      db.CharacterComments(charOfficalId)
+        .doc(commentId)
+        .update({
+          likes: firestore.FieldValue.arrayUnion(firebaseUID),
+        });
+    } else {
+      db.CharacterComments(charOfficalId)
+        .doc(commentId)
+        .update({
+          likes: firestore.FieldValue.arrayRemove(firebaseUID),
+        });
     }
-  }, [firebaseUID, isLiked]);
+  }, [isLiked]);
 
   return (
     <Pressable
-      onPress={handleOnLike}
       className="absolute right-0"
       style={{
         flexDirection: "row",
@@ -144,7 +141,7 @@ const Like = ({
           ? likeUsers?.length + 1
           : likeUsers?.length) || ""}
       </Text>
-      <TouchableOpacity activeOpacity={0.65}>
+      <TouchableOpacity onPress={handleOnLike} activeOpacity={0.65}>
         <ThumbsUp
           color="white"
           size={20}

@@ -35,26 +35,65 @@ export default function EventWebView({
   * {
     margin: 0;
     padding: 0;
-    color: white;
+  }
+  body {
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 600;
+    color: #ddd;
   }
   .title {
+    color: white;
     font-size: 150%;
+    font-weight: bold;
     text-align: center;
     margin-bottom: 32px;
   }
+  strong{
+    color: #DD8200;
+  }
   h1 {
-    margin-bottom: 16px;
+    font-size: 125%;
+    color: #e9ba79;
+    margin-bottom: 8px;
   }
   img {
     width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
-</style>
+  
+table{
+   font-weight: 600;
+}
 
-${`<h1 class="title">${title}</h1>`}
-${content
-  .replaceAll('&lt;t class="t_lc"&gt;', "")
-  .replaceAll('&lt;t class="t_gl"&gt;', "")
-  .replaceAll("&lt;/t&gt;", "")}
+td{
+  background-color:#f3f3f3;
+  color:  rgb(157, 133, 99);
+  width:25vw;
+  height:50px;
+  text-align:center;
+}
+
+tr{
+  border-bottom: 1px solid #dddddd;
+}
+
+tr:last-of-type{
+  border-bottom: 2px solid #009879;
+}
+
+tr:nth-of-type(1) td{
+  background-color:#d0d0d0;
+} 
+
+</style>
+<body>
+  ${`<div class="title">${title}</div>`}
+  ${content
+    ?.replaceAll('&lt;t class="t_lc"&gt;', "")
+    ?.replaceAll('&lt;t class="t_gl"&gt;', "")
+    ?.replaceAll("&lt;/t&gt;", "")}
+</body>
 `,
       }}
     />
