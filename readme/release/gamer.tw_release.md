@@ -27,7 +27,7 @@
 可以透過 UID 查詢 / 按下留言區任意用戶的頭像，就可以觀看該用戶的角色評分！<br>
 評分標準和權重仍然在測試階段，歡迎各位到[這個 Google Sheet (By 明治 和 Voc)](https://docs.google.com/spreadsheets/d/1E5FZGeIWsKABSOkjjzZ_y6DsueteM3Q-i8tgGW9Ea9c/edit?usp=sharing) 提出建議！![Google Sheet](image.png)
 
-#### <span style="color:#00CCCC">【不需登入】</span> 排行榜<span style="color:#CC7700">【進階】</span>
+#### <span style="color:#00CCCC">【不需登入】</span> 排行榜
 
 目前 App 內提供 _練度排行榜_ 和 **混沌排行榜**<br>
 _練度排行榜_
