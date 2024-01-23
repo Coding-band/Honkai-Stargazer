@@ -9,7 +9,7 @@ import { CombatType } from "../../../../types/combatType";
 import {
   getCharFullData,
   getCharJsonData,
-} from "../../../../utils/dataMap/getDataFromMap";
+} from "../../../../utils/data/getDataFromMap";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 import formatLocale from "../../../../utils/format/formatLocale";
@@ -88,7 +88,9 @@ export default function MOCFloor(props: Props) {
           </View>
         </>
       ) : (
-        <Text className="text-[#DD8200] text-[14px] font-[HY65]">{LOCALES[language].MOCSkipped}</Text>
+        <Text className="text-[#DD8200] text-[14px] font-[HY65]">
+          {LOCALES[language].MOCSkipped}
+        </Text>
       )}
     </View>
   );

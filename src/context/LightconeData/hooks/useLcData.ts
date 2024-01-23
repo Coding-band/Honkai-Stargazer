@@ -1,6 +1,6 @@
 import { useContext, useMemo } from "react";
 import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
-import { getLcFullData } from "../../../utils/dataMap/getDataFromMap";
+import { getLcFullData } from "../../../utils/data/getDataFromMap";
 import LightconeContext from "../LightconeContext";
 
 const useLcData = () => {

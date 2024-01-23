@@ -41,11 +41,14 @@ export default function EventList() {
             (event: any, i: number) =>
               event?.title && (
                 <EventListItemType1
+                  key={i}
                   event={event}
                   eventListData={
                     [
-                      ...hsrEventsList.data.pic_list[0].type_list[0].list,
-                      ...hsrEventsList.data.pic_list[0].type_list[1].list,
+                      ...hsrEventsList?.data?.pic_list?.[0]?.type_list?.[0]
+                        ?.list,
+                      ...hsrEventsList?.data?.pic_list?.[0]?.type_list?.[1]
+                        ?.list,
                     ].filter((e: any) => e.ann_id === event.ann_id)[0]
                   }
                   displayType={displayType}
@@ -60,9 +63,10 @@ export default function EventList() {
             (event: any, i: number) =>
               event?.title && (
                 <EventListItemType2
+                  key={i}
                   event={event}
                   eventListData={
-                    hsrEventsList.data.list[0].list.filter(
+                    hsrEventsList?.data?.list?.[0]?.list?.filter(
                       (e: any) => e.ann_id === event.ann_id
                     )[0]
                   }

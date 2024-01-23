@@ -13,7 +13,7 @@ import Fixed from "../components/global/Fixed/Fixed";
 import WallPaper from "../components/global/WallPaper/WallPaper";
 import CharacterProvider from "../context/CharacterData/CharacterProvider";
 import useTextLanguage from "../language/TextLanguage/useTextLanguage";
-import { getCharFullData } from "../utils/dataMap/getDataFromMap";
+import { getCharFullData } from "../utils/data/getDataFromMap";
 
 export default function CharacterScreen() {
   const { language } = useTextLanguage();

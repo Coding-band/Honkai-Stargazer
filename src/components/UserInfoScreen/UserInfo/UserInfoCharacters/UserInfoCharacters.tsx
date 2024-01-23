@@ -7,7 +7,7 @@ import officalCharId from "../../../../../map/character_offical_id_map";
 import {
   getCharFullData,
   getCharJsonData,
-} from "../../../../utils/dataMap/getDataFromMap";
+} from "../../../../utils/data/getDataFromMap";
 import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
 import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
 import { CharacterName } from "../../../../types/character";

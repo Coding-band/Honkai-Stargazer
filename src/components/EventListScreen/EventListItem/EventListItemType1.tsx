@@ -24,13 +24,6 @@ export default function EventListItemType1({
     navigation.push(SCREENS.EventPage.id, { id });
   };
 
-  console.log(
-    formatTimeDurationSimple(
-      new Date(eventListData.end_time).getTime() / 1000 -
-        new Date(eventListData.start_time).getTime() / 1000
-    )
-  );
-
   return (
     <TouchableOpacity
       key={event?.ann_id}
@@ -47,7 +40,7 @@ export default function EventListItemType1({
           className="w-[40px] h-[46px] bg-[#F3F9FF80] items-center justify-center"
           style={{ gap: 4 }}
         >
-          <Text className="font-[HY65] w-4 leading-4 text-center">
+          <Text className="font-[HY65] w-5 leading-4 text-center">
             {formatTimeDurationSimple(
               new Date(eventListData.end_time).getTime() / 1000 -
                 new Date(eventListData.start_time).getTime() / 1000

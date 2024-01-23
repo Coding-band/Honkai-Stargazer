@@ -39,7 +39,10 @@ export default function AccountSetting() {
             title={LOCALES[language].SettingPersonalPage}
             list={[
               { value: true, name: LOCALES[language].SettingPersonalPageShow },
-              { value: false, name: LOCALES[language].SettingPersonalPageDisable },
+              {
+                value: false,
+                name: LOCALES[language].SettingPersonalPageDisable,
+              },
             ]}
             value={isShowInfo}
             onChange={(v) => {

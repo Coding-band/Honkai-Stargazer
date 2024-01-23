@@ -8,7 +8,7 @@ import {
 import React, { useState, useEffect } from "react";
 import { Image } from "expo-image";
 import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
-import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
+import { getCharFullData } from "../../../../utils/data/getDataFromMap";
 import officalCharId from "../../../../../map/character_offical_id_map";
 import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
 import { CharacterName } from "../../../../types/character";

@@ -13,7 +13,7 @@ import useDoUseBlurEffect from "../../../../redux/doUseBlurEffect/useDoUseBlurEf
 import officalCharId from "../../../../../map/character_offical_id_map";
 import { wallPapers } from "../../../../redux/wallPaper/wallpapers";
 import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
-import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
+import { getCharFullData } from "../../../../utils/data/getDataFromMap";
 
 export default function PersonalSetting() {
   const navigation = useNavigation();

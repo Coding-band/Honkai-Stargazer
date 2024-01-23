@@ -7,7 +7,7 @@ import { filter } from "lodash";
 import {
   getCharFullData,
   getCharJsonData,
-} from "../../utils/dataMap/getDataFromMap";
+} from "../../utils/data/getDataFromMap";
 import CharacterImage from "../../../assets/images/images_map/chacracterImage";
 import { Path } from "../../types/path";
 import { CombatType } from "../../types/combatType";

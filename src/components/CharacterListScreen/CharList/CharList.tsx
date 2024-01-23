@@ -8,7 +8,7 @@ import { CharacterName } from "../../../types/character";
 import { CombatType } from "../../../types/combatType";
 import { Path } from "../../../types/path";
 import useCharSorting from "../../../redux/characterSorting/useCharSorting";
-import { getCharFullData } from "../../../utils/dataMap/getDataFromMap";
+import { getCharFullData } from "../../../utils/data/getDataFromMap";
 import { getCharAttrData } from "../../../utils/calculator/getAttrData";
 import useCharSortingReverse from "../../../redux/characterSortingReverse/useCharSortingReverse";
 import useCharFilter from "../../../redux/characterFilter/useCharFilter";

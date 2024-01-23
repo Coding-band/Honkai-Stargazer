@@ -1,7 +1,7 @@
 import { View, Text, Pressable } from "react-native";
 import React, { useContext, useState } from "react";
 import CharacterContext from "../../../../../context/CharacterData/CharacterContext";
-import { getCharFullData } from "../../../../../utils/dataMap/getDataFromMap";
+import { getCharFullData } from "../../../../../utils/data/getDataFromMap";
 import { Image } from "expo-image";
 import { useClickOutside } from "react-native-click-outside";
 import Edge from "../TraceItem/Edge";
@@ -72,7 +72,10 @@ export default function HuntTraceTree() {
       >
         {/* 軀幹 (線條) */}
         <Image source={TraceLine} style={{ width: 296, height: 374 }} />
-        <Image className="absolute left-4 opacity-40 w-[300px] h-[300px]" source={Path["Hunt"].icon2}  />
+        <Image
+          className="absolute left-4 opacity-40 w-[300px] h-[300px]"
+          source={Path["Hunt"].icon2}
+        />
         {/* 選項 */}
         {loaded && (
           <>

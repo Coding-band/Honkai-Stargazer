@@ -7,6 +7,8 @@ import useHsrCharList from "../../../hooks/hoyolab/useHsrCharList";
 import { includes } from "lodash";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
+import useIsAdmin from "../../../firebase/hooks/Role/useIsAdmin";
+import useIsTester from "../../../firebase/hooks/Role/useIsTester";
 
 const { width } = Dimensions.get("window");
 
@@ -20,15 +22,17 @@ export default memo(function WallPaperSwiper(props: Props) {
   const { language } = useAppLanguage();
 
   const playerCharIdList = useHsrCharList().data?.map((char: any) => char.id);
+  const isAdmin = useIsAdmin();
+  const isTester = useIsTester();
 
   /**
    * this solved "onIndexChanged not called, wrong screen rendered"
    */
   // @ts-ignore
   const swiperRef = useRef<React.Element<Swiper>>();
-  useLayoutEffect(() => {
-    swiperRef.current?.scrollBy(0);
-  }, []);
+  // useLayoutEffect(() => {
+  //   swiperRef.current?.scrollBy(0);
+  // }, []);
 
   return (
     <View
@@ -64,18 +68,16 @@ export default memo(function WallPaperSwiper(props: Props) {
           return (
             <View key={k} style={styles.slideContainer}>
               <Image
-                contentFit={
-                  Dimensions.get("screen").width > 600 ? "contain" : "cover"
-                }
+                contentFit={"cover"}
                 style={[styles.slide]}
                 source={w.url}
               />
-              {playerHasCharacter || (
+              {isAdmin || isTester || playerHasCharacter || (
                 <>
                   <View className="absolute w-full h-full opacity-60 bg-[#000]" />
                   <View
-                    className="absolute -translate-y-4"
-                    style={{ alignItems: "center", gap: 8 }}
+                    className="absolute -translate-y-4 items-center"
+                    style={{ gap: 8 }}
                   >
                     <Lock size={32} color="white" />
                     <Text className="text-text font-[HY65] text-[14px] leading-4">

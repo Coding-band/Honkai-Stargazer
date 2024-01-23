@@ -16,19 +16,19 @@ export default function UserCharScoreBar(props: Props) {
   const { language } = useAppLanguage();
 
   return (
-    <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+    <View className="flex-row item-center" style={{ gap: 8 }}>
       <Image source={AttributeImage?.[props.field]} className="w-6 h-6" />
       <View style={{ gap: 3 }}>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
-          }}
-        >
+        <View className="flex-row justify-between">
           <Text className="text-text font-[HY65]">
             {LOCALES[language]["ATTR_" + props.field.toUpperCase()]}
           </Text>
-          <Text className="text-text font-[HY65]">
+          <Text
+            className="font-[HY65]"
+            style={{
+              color: "white",
+            }}
+          >
             {props.type === "value" ? (
               // 數值
               <Text>{`${Math.floor(props.currScore * 10) / 10}/${

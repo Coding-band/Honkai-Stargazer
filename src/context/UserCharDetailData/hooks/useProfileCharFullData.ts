@@ -1,5 +1,5 @@
 import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
-import { getCharFullData } from "../../../utils/dataMap/getDataFromMap";
+import { getCharFullData } from "../../../utils/data/getDataFromMap";
 import useCharId from "./useProfileCharId";
 
 const useProfileCharFullData = () => {

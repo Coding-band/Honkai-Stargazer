@@ -3,7 +3,7 @@ import { LightconeName } from "../../types/lightcone";
 import useTextLanguage from "../../language/TextLanguage/useTextLanguage";
 import { filter } from "lodash";
 import lcList from "../../../data/lightcone_data/lightcone_list.json";
-import { getLcFullData } from "../../utils/dataMap/getDataFromMap";
+import { getLcFullData } from "../../utils/data/getDataFromMap";
 import LightconeMap from "../../../assets/images/images_map/lightcone";
 import LightconeContext from "./LightconeContext";
 import { LightconeData } from "./LightconeData.types";

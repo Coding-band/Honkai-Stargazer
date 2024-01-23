@@ -27,10 +27,10 @@ export default function UserCharLevel() {
     >
       <Text className="text-[12px] text-[#FFFFFF] font-[HY65]">
         {LOCALES[language].UserCharLevelLv}{" "}
-        {inGameCharData?.level || hoyolabCharData?.level} ·{" "}
+        {inGameCharData?.level || hoyolabCharData?.level || 0} ·{" "}
         {LOCALES[language].CharSoul.replace(
           "${1}",
-          inGameCharData?.rank || hoyolabCharData?.rank
+          inGameCharData?.rank || hoyolabCharData?.rank || 0
         )}
       </Text>
     </View>

@@ -30,6 +30,9 @@ import useHsrInGameInfo from "../hooks/mihomo/useHsrInGameInfo";
 import { unionBy } from "lodash";
 import useUserCharacters from "../firebase/hooks/UserCharacters/useUserCharacters";
 import getCharScore from "../utils/calculator/charScoreCalculator/getCharScore";
+import getRelicScore from "../utils/calculator/relicScoreCalculator/getRelicScore";
+import officalRelicId from "../../map/relic_offical_id_map";
+import getSetIdAndCountFromRelicData from "../utils/data/getSetIdAndCountFromRelicData";
 
 export default function HomeScreen() {
   const uid = useMyFirebaseUid();
@@ -367,9 +370,39 @@ export default function HomeScreen() {
         userCharDetailList?.map(async (char: any) => {
           const doc = db.UserCharacterScores(char.id).doc(uid);
           const docIsExist = (await doc.get()).exists;
+          const relicScore = getRelicScore(char.id, char.relics);
+
+          const scoreData: any = {
+            score: getCharScore(char.id, char),
+            rank: char.rank,
+            lightcone_id: Number(char.light_cone?.id) || null,
+            relic_score: relicScore.totalScore,
+          };
+
+          relicScore.eachScore?.map((scoreObj: any) => {
+            const [partName, score] = Object.entries(scoreObj)[0];
+            if (partName === "Head") scoreData.relic_head_score = score;
+            if (partName === "Hands") scoreData.relic_hands_score = score;
+            if (partName === "Body") scoreData.relic_body_score = score;
+            if (partName === "Shoes") scoreData.relic_shoes_score = score;
+            if (partName === "Ball") scoreData.relic_ball_score = score;
+            if (partName === "Link") scoreData.relic_link_score = score;
+          });
+
+          char.relics?.map((relic: any) => {
+            const [setId, countNum] = getSetIdAndCountFromRelicData(relic);
+            if (countNum === 1) scoreData.relic_head_set_id = setId;
+            if (countNum === 2) scoreData.relic_hands_set_id = setId;
+            if (countNum === 3) scoreData.relic_body_set_id = setId;
+            if (countNum === 4) scoreData.relic_shoes_set_id = setId;
+            if (countNum === 5) scoreData.relic_ball_set_id = setId;
+            if (countNum === 6) scoreData.relic_link_set_id = setId;
+          });
+
           if (docIsExist) {
+            doc.update(scoreData);
           } else {
-            doc.set({ score: getCharScore(char.id, char) });
+            doc.set(scoreData);
           }
         });
       }

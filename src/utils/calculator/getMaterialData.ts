@@ -1,7 +1,7 @@
 import { CharacterName } from "../../types/character";
 import { LightconeName } from "../../types/lightcone";
 import { Material } from "../../types/material";
-import { getCharFullData, getLcFullData } from "../dataMap/getDataFromMap";
+import { getCharFullData, getLcFullData } from "../data/getDataFromMap";
 
 const levelMin = [1, 20, 30, 40, 50, 60, 70];
 const levelMax = [20, 30, 40, 50, 60, 70, 80];

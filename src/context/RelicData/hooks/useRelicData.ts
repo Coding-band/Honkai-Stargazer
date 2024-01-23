@@ -1,6 +1,6 @@
 import { useContext, useMemo } from "react";
 import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
-import { getRelicFullData } from "../../../utils/dataMap/getDataFromMap";
+import { getRelicFullData } from "../../../utils/data/getDataFromMap";
 import RelicContext from "../RelicContext";
 
 const useRelicData = () => {

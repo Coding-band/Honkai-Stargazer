@@ -4,7 +4,7 @@ import { ScrollView, Text, View } from "react-native";
 import CharSuggestLightConeCard from "./CharSuggestLightConeCard/CharSuggestLightConeCard";
 import lightconeList from "../../../../../data/lightcone_data/lightcone_list.json";
 import React from "react";
-import { getLcFullData } from "../../../../utils/dataMap/getDataFromMap";
+import { getLcFullData } from "../../../../utils/data/getDataFromMap";
 import useCharId from "../../../../context/CharacterData/hooks/useCharId";
 import LightconeNameMap from "../../../../../map/lightcone_name_map";
 import { LightconeName } from "../../../../types/lightcone";

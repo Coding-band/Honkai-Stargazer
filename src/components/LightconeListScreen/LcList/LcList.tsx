@@ -6,7 +6,7 @@ import lightconeList from "../../../../data/lightcone_data/lightcone_list.json";
 import { LightconeName } from "../../../types/lightcone";
 import LightConeCard from "../../global/LightConeCard/LightConeCard";
 import { Path } from "../../../types/path";
-import { getLcFullData } from "../../../utils/dataMap/getDataFromMap";
+import { getLcFullData } from "../../../utils/data/getDataFromMap";
 import { getLcAttrData } from "../../../utils/calculator/getAttrData";
 import useLcSorting from "../../../redux/lightconeSorting/useLcSorting";
 import useLcSortingReverse from "../../../redux/lightconeSortingReverse/useLcSortingReverse";

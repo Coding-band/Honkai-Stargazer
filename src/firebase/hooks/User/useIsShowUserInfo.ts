@@ -11,16 +11,16 @@ const useIsShowUserInfo = (uuid: string) => {
       const show_info = (await db.Users.doc(firebaseUid).get()).data()
         ?.show_info;
       return show_info;
-    },
-    { staleTime: 1000 * 60 }
+    }
   );
 
   const { mutate: setIsShowInfo } = useMutation(
     ["firebase-set-is-show-user-info", firebaseUid, isShowInfo],
-    (s: boolean) =>
+    async (s: boolean) => {
       db.Users.doc(firebaseUid).update({
         show_info: s,
-      })
+      });
+    }
   );
 
   return { isShowInfo, setIsShowInfo };

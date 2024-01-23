@@ -4,7 +4,7 @@ import CharPageHeading from "../../../global/PageHeading/PageHeading";
 import { ChatsCircle } from "phosphor-react-native";
 import CharacterContext from "../../../../context/CharacterData/CharacterContext";
 import { HtmlText } from "@e-mine/react-native-html-text";
-import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
+import { getCharFullData } from "../../../../utils/data/getDataFromMap";
 import useCharData from "../../../../context/CharacterData/hooks/useCharData";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";

@@ -5,7 +5,7 @@ import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
 import { RelicName } from "../../../types/relic";
 import relicList from "../../../../data/relic_data/relic_list.json";
 import Relic from "../../../../assets/images/images_map/relic";
-import { getRelicFullData } from "../../../utils/dataMap/getDataFromMap";
+import { getRelicFullData } from "../../../utils/data/getDataFromMap";
 import RelicsCard from "../../global/RelicsCard/RelicsCard";
 import { SCREENS } from "../../../constant/screens";
 import { ExpoImage } from "../../../types/image";

@@ -1,5 +1,8 @@
 import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
-import { getCharFullData, getCharJsonData } from "../../../utils/dataMap/getDataFromMap";
+import {
+  getCharFullData,
+  getCharJsonData,
+} from "../../../utils/data/getDataFromMap";
 import useCharId from "./useProfileCharId";
 
 const useProfileCharJsonData = () => {

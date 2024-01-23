@@ -14,7 +14,7 @@ import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
 import {
   getCharFullData,
   getCharJsonData,
-} from "../../../../utils/dataMap/getDataFromMap";
+} from "../../../../utils/data/getDataFromMap";
 
 export default React.memo(function CharSuggestTeam() {
   const { language: textLanguage } = useTextLanguage();

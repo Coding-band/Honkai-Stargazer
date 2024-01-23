@@ -28,7 +28,7 @@ const Options = ({
   });
 
   return (
-    <View ref={ref} className="w-[110px] items-center z-30">
+    <View ref={ref} className="w-[110px] z-30">
       <TouchableOpacity
         onPress={() => {
           setOpen(!open);
@@ -66,7 +66,7 @@ const Options = ({
             }}
             style={{ alignItems: "center", justifyContent: "center" }}
           >
-            <Text className="text-text text-[16px] font-[HY65] leading-5">
+            <Text className="text-text text-[16px] text-center font-[HY65] leading-5">
               {value?.name}
             </Text>
           </TouchableOpacity>

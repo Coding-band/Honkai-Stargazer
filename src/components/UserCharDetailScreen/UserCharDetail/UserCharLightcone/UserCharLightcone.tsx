@@ -10,7 +10,7 @@ import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
 import {
   getLcFullData,
   getLcJsonData,
-} from "../../../../utils/dataMap/getDataFromMap";
+} from "../../../../utils/data/getDataFromMap";
 import LightconePath from "./LightconePath/LightconePath";
 import LightconeAttribute from "./LightconeAttribute/LightconeAttribute";
 import LightconeLevel from "./LightconeLevel/LightconeLevel";

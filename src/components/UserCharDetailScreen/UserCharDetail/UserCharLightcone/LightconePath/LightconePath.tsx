@@ -3,7 +3,7 @@ import React from "react";
 import { Image } from "expo-image";
 import Path from "../../../../../../assets/images/images_map/path";
 import { LightconeName } from "../../../../../types/lightcone";
-import { getLcJsonData } from "../../../../../utils/dataMap/getDataFromMap";
+import { getLcJsonData } from "../../../../../utils/data/getDataFromMap";
 import { LOCALES } from "../../../../../../locales";
 import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
 import { Path as PathType } from "../../../../../types/path";

@@ -4,7 +4,7 @@ import RelicsCard from "../../../../global/RelicsCard/RelicsCard";
 import RightBtn from "../ui/RightBtn";
 import LeftBtn from "../ui/LeftBtn";
 import useCharId from "../../../../../context/CharacterData/hooks/useCharId";
-import { getRelicFullData } from "../../../../../utils/dataMap/getDataFromMap";
+import { getRelicFullData } from "../../../../../utils/data/getDataFromMap";
 import { map } from "lodash";
 import useTextLanguage from "../../../../../language/TextLanguage/useTextLanguage";
 import { RelicName } from "../../../../../types/relic";

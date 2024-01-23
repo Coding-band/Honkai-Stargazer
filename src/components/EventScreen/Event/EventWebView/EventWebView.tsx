@@ -115,7 +115,6 @@ function convertHref(hrefString: string) {
   // 如果匹配成功，返回包含正确格式的 href 字符串
   if (match && match.length > 1) {
     const a = `href="${match[1]}"`;
-    console.log(a);
     return a;
   } else {
     return hrefString; // 如果无法匹配，返回原始字符串

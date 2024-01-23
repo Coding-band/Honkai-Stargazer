@@ -13,24 +13,31 @@ import { LOCALES } from "../../../locales";
 import useAppLanguage from "../../language/AppLanguage/useAppLanguage";
 import useDoUseHomePageBlurEffect from "../../redux/doUseHomePageBlurEffect/useDoUseHomePageBlurEffect";
 import useTextLanguage from "../../language/TextLanguage/useTextLanguage";
-import { getCharFullData } from "../../utils/dataMap/getDataFromMap";
+import { getCharFullData } from "../../utils/data/getDataFromMap";
 import officalCharId from "../../../map/character_offical_id_map";
 import useHsrCharList from "../../hooks/hoyolab/useHsrCharList";
-import { hasIn, includes } from "lodash";
+import { includes } from "lodash";
+import useDelayLoad from "../../hooks/useDelayLoad";
+import useIsAdmin from "../../firebase/hooks/Role/useIsAdmin";
+import useIsTester from "../../firebase/hooks/Role/useIsTester";
 
 export default function WallPaperChanger() {
+  const loaded = useDelayLoad(1000);
+
   const navigation = useNavigation();
   const { language: textLanguage } = useTextLanguage();
   const { language: appLanguage } = useAppLanguage();
 
-  const playerName = useHsrPlayerName();
   const playerCharIdList = useHsrCharList().data?.map((char: any) => char.id);
+  const isAdmin = useIsAdmin();
+  const isTester = useIsTester();
 
   const { wallPaper, setWallPaper } = useWallPaper();
   const [currentWallPaperIndex, setCurrentWallPaperIndex] = useState(
     // @ts-ignore
     wallPapers.findIndex((w) => w.id === wallPaper?.id) || 0
   );
+
   const currentWallPaperId = wallPapers[currentWallPaperIndex]?.id.toString();
 
   const wallPaperName = officalCharId[currentWallPaperId.split("-")?.[0]]
@@ -50,7 +57,12 @@ export default function WallPaperChanger() {
     setWallPaper(wallPapers[currentWallPaperIndex].id);
     // @ts-ignore
     navigation.navigate(SCREENS.HomePage.id);
-    Toast(LOCALES[appLanguage].SettingChangedWallpaper.replace("${1}",wallPaperName));
+    Toast(
+      LOCALES[appLanguage].SettingChangedWallpaper.replace(
+        "${1}",
+        wallPaperName
+      )
+    );
   };
 
   const handleSaveWallPaper = async (uri: string) => {
@@ -75,7 +87,7 @@ export default function WallPaperChanger() {
         style={{ flexDirection: "row", gap: 10, justifyContent: "center" }}
         className="pt-[20px] pb-[35px]"
       >
-        {/*  */}
+        {/* 解鎖全部 */}
         <OptionBtn
           onPress={() => {
             Toast.StillDevelopingToast();
@@ -92,13 +104,15 @@ export default function WallPaperChanger() {
           {LOCALES[appLanguage][doUseHomePageBlurEffect ? "BlurOn" : "BlurOff"]}
         </OptionBtn>
       </View>
-      <WallPaperSwiper
-        wallPapers={wallPapers}
-        // @ts-ignore
-        index={wallPapers.findIndex((w) => w.id === wallPaper?.id)}
-        onIndexChange={setCurrentWallPaperIndex}
-        // lock={!includes(playerCharIdList, wallPapers[currentWallPaperIndex].id)}
-      />
+      {/* 壁紙切換器 */}
+      <View style={{ opacity: loaded ? 1 : 0 }}>
+        <WallPaperSwiper
+          wallPapers={wallPapers}
+          // @ts-ignore
+          index={wallPapers.findIndex((w) => w.id === wallPaper?.id)}
+          onIndexChange={setCurrentWallPaperIndex}
+        />
+      </View>
       <View>
         {/* 壁紙名稱 */}
         <View className="mt-5" style={{ alignItems: "center" }}>
@@ -112,7 +126,7 @@ export default function WallPaperChanger() {
         >
           {/* 保存 */}
           <OptionBtn
-            disabled={!playerHasCharacter}
+            disabled={!(isAdmin || isTester || playerHasCharacter)}
             onPress={() => {
               handleSaveWallPaper(wallPapers[currentWallPaperIndex].url);
             }}
@@ -121,7 +135,7 @@ export default function WallPaperChanger() {
           </OptionBtn>
           {/* 設置 */}
           <OptionBtn
-            disabled={!playerHasCharacter}
+            disabled={!(isAdmin || isTester || playerHasCharacter)}
             onPress={handleSetWallPaper}
           >
             {LOCALES[appLanguage].SetWallPaper}

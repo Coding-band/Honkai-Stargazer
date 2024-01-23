@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, Platform } from "react-native";
 import React from "react";
 import { ImageBackground } from "expo-image";
 import useWallPaper from "../../../redux/wallPaper/useWallPaper";
@@ -22,7 +22,7 @@ export default function WallPaper(props: Props) {
       }
       // placeholder={blurhash}
       contentFit="cover"
-      blurRadius={props.isBlur ? 7 : 0}
+      blurRadius={props.isBlur ? (Platform.OS === "android" ? 2 : 5) : 0}
     />
   );
 }

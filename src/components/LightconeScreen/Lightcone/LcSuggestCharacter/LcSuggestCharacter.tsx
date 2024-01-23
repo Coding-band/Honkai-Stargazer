@@ -13,7 +13,7 @@ import charAdviceMap from "../../../../../map/character_advice_map";
 import { forEach } from "lodash";
 import { useEffect, useMemo, useState } from "react";
 import LightconeName from "../../../../../map/lightcone_name_map";
-import { getCharFullData } from "../../../../utils/dataMap/getDataFromMap";
+import { getCharFullData } from "../../../../utils/data/getDataFromMap";
 import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
 import { CharacterName } from "../../../../types/character";
 
@@ -46,7 +46,7 @@ export default function LcSuggestCharacter() {
 
   const suggestCharsJsx = useMemo(
     () =>
-      suggestChars?.length? (
+      suggestChars?.length ? (
         suggestChars
           .map((charId: CharacterName) => {
             const charJsonData = characterList.filter(
@@ -70,7 +70,9 @@ export default function LcSuggestCharacter() {
             <LcSuggestCharacterCard key={i} {...l} />
           ))
       ) : (
-        <Text className="text-text font-[HY65]">{LOCALES[appLanguage].NoDataYet}</Text>
+        <Text className="text-text font-[HY65]">
+          {LOCALES[appLanguage].NoDataYet}
+        </Text>
       ),
     [suggestChars]
   );
