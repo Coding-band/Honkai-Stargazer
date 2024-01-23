@@ -65,7 +65,7 @@ export default function MaterialCard(props: Props) {
               alignItems: "center",
             }}
           >
-            <Text className="text-text2 text-[12px]">{props.count}</Text>
+            <Text className="text-text2 text-[12px] font-[HY65]">{props.count}</Text>
           </View>
         </View>
       </LinearGradient>

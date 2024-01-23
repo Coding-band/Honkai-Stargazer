@@ -41,15 +41,11 @@ export default function MocLevelInfo({
       </View>
       <View>
         <View style={{ gap: 8 }}>
-          {/* 1-1 */}
-          <Layer data={mocData?.info?.[floor - 1]} part={1} wave={1} />
-          {/* 1-2 */}
-          <Layer data={mocData?.info?.[floor - 1]} part={1} wave={2} />
+          {/* 1 */}
+          <Layer floor={floor} data={mocData?.info?.[floor - 1]} part={1} />
           <View className="w-full h-[1px] bg-[#FFFFFF20]" />
-          {/* 2-1 */}
-          <Layer data={mocData?.info?.[floor - 1]} part={2} wave={1} />
-          {/* 2-2 */}
-          <Layer data={mocData?.info?.[floor - 1]} part={2} wave={2} />
+          {/* 2 */}
+          <Layer floor={floor} data={mocData?.info?.[floor - 1]} part={2} />
         </View>
         <View></View>
       </View>
@@ -58,27 +54,30 @@ export default function MocLevelInfo({
 }
 
 const Layer = ({
+  floor,
   data,
   part,
-  wave,
 }: {
+  floor: number;
   data: any;
   part: number;
-  wave: number;
 }) => {
   return (
     data && (
       <View
-        className="h-[80px]"
-        style={{ flexDirection: "row", alignItems: "center" }}
+        className="h-[140px]"
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+        }}
       >
-        {/*  */}
+        {/* 關卡名稱 */}
         <View
           className="w-[100px]"
           style={{ alignItems: "center", justifyContent: "center" }}
         >
           <Text className="text-text text-[16px] font-[HY65]">
-            {part}-{wave}
+            {floor}-{part}
           </Text>
           <View style={{ flexDirection: "row" }}>
             <Image
@@ -97,11 +96,18 @@ const Layer = ({
             />
           </View>
         </View>
-        {/*  */}
-        <View style={{ flex: 1, flexDirection: "row", gap: 20 }}>
-          {data["part" + part]["wave" + wave].map((monster: any, i: number) => (
-            <Mob key={i}>{monster}</Mob>
-          ))}
+        {/* 怪物 */}
+        <View style={{ gap: 12 }}>
+          <View style={{ flex: 1, flexDirection: "row", gap: 20 }}>
+            {data["part" + part]["wave1"].map((monster: any, i: number) => (
+              <Mob key={i}>{monster}</Mob>
+            ))}
+          </View>
+          <View style={{ flex: 1, flexDirection: "row", gap: 20 }}>
+            {data["part" + part]["wave2"].map((monster: any, i: number) => (
+              <Mob key={i}>{monster}</Mob>
+            ))}
+          </View>
         </View>
       </View>
     )

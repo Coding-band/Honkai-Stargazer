@@ -38,7 +38,7 @@ export default React.memo(function CharSuggestRelics() {
           <CharSuggestRelicsRight />
         </View>
       ) : (
-        <Text className="text-text text-[HY65]">
+        <Text className="text-text text-[HY65] font-[HY65]">
           {LOCALES[language].NoDataYet}
         </Text>
       )}

@@ -28,7 +28,7 @@ export default function UIDSearchItem({ uuid }: { uuid: string }) {
           // @ts-ignore
           source={
             AvatarIcon[user?.player?.avatar?.icon?.match(/\d+/g)?.join("")] ||
-            AvatarIcon
+            AvatarIcon["Anonymous"]
           }
           className="w-10 h-10 rounded-full bg-[#CAB89E]"
         />

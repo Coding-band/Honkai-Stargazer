@@ -21,6 +21,7 @@ export default function WallPaper(props: Props) {
         wallPaper?.url
       }
       // placeholder={blurhash}
+      cachePolicy="memory"
       contentFit="cover"
       blurRadius={props.isBlur ? (Platform.OS === "android" ? 2 : 5) : 0}
     />

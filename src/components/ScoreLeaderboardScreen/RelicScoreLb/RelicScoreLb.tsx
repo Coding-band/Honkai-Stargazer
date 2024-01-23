@@ -40,7 +40,9 @@ export default function RelicScoreLb(props: {
     })
   );
   // 當前選擇角色
-  const [selectedCharOption, setSelectedCharOption] = useState(props.selectedCharOption);
+  const [selectedCharOption, setSelectedCharOption] = useState(
+    props.selectedCharOption
+  );
   // <-> 父組件同步更新
   useEffect(() => {
     props.onChange(selectedCharOption);
@@ -77,7 +79,7 @@ export default function RelicScoreLb(props: {
           contentContainerStyle={{ gap: 12 }}
           style={{ height: Dimensions.get("screen").height - 220 }}
         >
-          {charScores?.map((item, i) => (
+          {charScores?.map((item: any, i: number) => (
             <CharRelicScoreLbItem
               key={i}
               rank={i + 1}

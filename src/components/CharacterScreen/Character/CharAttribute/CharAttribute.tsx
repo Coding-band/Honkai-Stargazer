@@ -95,7 +95,7 @@ export default React.memo(function CharAttribute() {
               }}
             >
               {/* 等級 */}
-              <Text className="text-white text-[16px] font-medium">
+              <Text className="text-white text-[16px] font-[HY65]">
                 Lv.{attrFromLevel === 0 ? 1 : attrFromLevel * 10}
               </Text>
               {/* 等級滑動欄 */}
@@ -121,7 +121,7 @@ export default React.memo(function CharAttribute() {
               }}
             >
               {/* 等級 */}
-              <Text className="text-white text-[16px] font-medium">
+              <Text className="text-white text-[16px] font-[HY65]">
                 Lv.{attrToLevel === 0 ? 1 : attrToLevel * 10}
               </Text>
               {/* 等級滑動欄 */}
@@ -132,34 +132,40 @@ export default React.memo(function CharAttribute() {
               />
             </View>
             {/* 屬性數值 */}
-            <View className="mt-4" style={{ flexDirection: "row", gap: 12 }}>
+            <View className="mt-4" style={{ flexDirection: "row", gap: 8 }}>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={AttributeImage.hp} />
-                <Text className="text-white text-[16px] font-medium">
+                <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.hp.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={AttributeImage.atk} />
-                <Text className="text-white text-[16px] font-medium">
+                <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.atk.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={AttributeImage.def} />
-                <Text className="text-white text-[16px] font-medium">
+                <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.def.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={AttributeImage.spd} />
-                <Text className="text-white text-[16px] font-medium">
+                <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.speed.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <Image className="w-6 h-6" source={AttributeImage.sp} />
+                <Text className="text-white text-[16px] font-[HY65]">
+                  {attributes.energy.toFixed(0)}
+                </Text>
+              </View>
+              <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={AggroIcon} />
-                <Text className="text-white text-[16px] font-medium">
+                <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.aggro.toFixed(0)}
                 </Text>
               </View>

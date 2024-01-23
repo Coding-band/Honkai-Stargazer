@@ -9,6 +9,7 @@ export default function WallPaperForMOC() {
     <ImageBackground
       className="absolute w-full h-full"
       source={Bg}
+      cachePolicy="memory"
       contentFit="cover"
       placeholder={"L11M7[fkayj[+DaxfkjtxyayfQfQ"}
     />

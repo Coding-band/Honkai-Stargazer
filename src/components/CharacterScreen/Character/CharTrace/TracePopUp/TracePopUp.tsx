@@ -100,11 +100,13 @@ export default React.memo(function TracePopUp({ type, data, onClose }: Props) {
                 >
                   {skillData?.levelData?.length &&
                   skillData?.levelData?.length !== 1 ? (
-                    <Text className="text-[16px] text-[#222222]">
+                    <Text className="text-[16px] text-[#222222] font-[HY65]">
                       Lv.{skillLevel + 1}/{skillData?.levelData?.length}
                     </Text>
                   ) : (
-                    <Text className="text-[16px] text-[#222222]">Lv.1/1</Text>
+                    <Text className="text-[16px] text-[#222222] font-[HY65]">
+                      Lv.1/1
+                    </Text>
                   )}
                   <Sliderbar
                     point={skillData?.levelData?.length}

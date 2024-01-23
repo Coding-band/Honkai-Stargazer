@@ -10,17 +10,13 @@ import useCharComments from "../../../../../firebase/hooks/CharComments/useCharC
 import BlurView from "../../../../global/BlurView/BlurView";
 import useMyFirebaseUid from "../../../../../firebase/hooks/FirebaseUid/useMyFirebaseUid";
 import Toast from "../../../../../utils/toast/Toast";
-import {
-  extractMentionsMatch,
-  extractMentionsSplit,
-} from "../../../../../utils/extractMetions";
+import { extractMentionsSplit } from "../../../../../utils/extractMetions";
 import pushExpoNoti from "../../../../../notifications/utils/pushExpoNoti";
 import useHsrPlayerName from "../../../../../hooks/hoyolab/useHsrPlayerName";
 import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
 import { pushExpoNotiType } from "../../../../../notifications/constant/pushExpoNotiType";
 import CommentToolBox from "./CommentAddPhoto/CommentAddPhoto";
 import useAddCharComment from "../../../../../firebase/hooks/CharComments/useAddCharComment";
-import { customAlphabet } from "nanoid/non-secure";
 import useAddUserComment from "../../../../../firebase/hooks/UserComments/useAddUserComment";
 import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../../locales";
@@ -135,12 +131,28 @@ export default function CommentInput({
     }
   };
 
+  const [intensity, setIntensity] = useState(10);
+  useEffect(() => {
+    setTimeout(() => {
+      setIntensity(30);
+    }, 1000);
+    setTimeout(() => {
+      setIntensity(30);
+    }, 1000);
+    setTimeout(() => {
+      setIntensity(30);
+    }, 1000);
+    setTimeout(() => {
+      setIntensity(30);
+    }, 1000);
+  }, []);
+
   return (
     <View className="w-full px-6" style={{ justifyContent: "center" }}>
       <View className="rounded-[23px] overflow-hidden">
         <BlurView
-          tint="dark"
-          intensity={40}
+          tint="light"
+          intensity={intensity}
           className="bg-[#FFFFFF20]"
           style={{ flexDirection: "row" }}
         >

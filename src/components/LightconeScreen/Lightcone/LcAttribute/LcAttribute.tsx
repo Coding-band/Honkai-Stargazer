@@ -92,7 +92,7 @@ export default function LcAttribute() {
               }}
             >
               {/* 等級 */}
-              <Text className="text-white text-[16px] font-medium">
+              <Text className="text-white text-[16px] font-[HY65]">
                 Lv.{attrFromLevel === 0 ? "1" : attrFromLevel * 10}
               </Text>
               {/* 等級滑動欄 */}
@@ -117,7 +117,7 @@ export default function LcAttribute() {
               }}
             >
               {/* 等級 */}
-              <Text className="text-white text-[16px] font-medium">
+              <Text className="text-white text-[16px] font-[HY65]">
                 Lv.{attrToLevel === 0 ? "1" : attrToLevel * 10}
               </Text>
               {/* 等級滑動欄 */}
@@ -130,19 +130,19 @@ export default function LcAttribute() {
             <View className="mt-4" style={{ flexDirection: "row", gap: 12 }}>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={HPIcon} />
-                <Text className="text-white text-[16px] font-medium">
+                <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.hp.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={STRIcon} />
-                <Text className="text-white text-[16px] font-medium">
+                <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.atk.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image className="w-6 h-6" source={DEFIcon} />
-                <Text className="text-white text-[16px] font-medium">
+                <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.def.toFixed(0)}
                 </Text>
               </View>

@@ -110,7 +110,11 @@ export const SCREENS = {
   MemoryOfChaosLeaderboardPage: {
     id: "MemoryOfChaosLeaderboard",
     getName: (lang: AppLanguage) =>
-      `${LOCALES[lang].MemoryOfChaos}·${LOCALES[lang].Leaderboard}`,
+      `${
+        lang === "zh_hk" || lang === "zh_cn"
+          ? LOCALES[lang].MemoryOfChaos
+          : LOCALES[lang].MemoryOfChaosShort
+      }·${LOCALES[lang].Leaderboard}`,
     getShortName: (lang: AppLanguage) =>
       `${LOCALES[lang].MemoryOfChaosLeaderboard}`,
     icon: ChartBar,
@@ -153,8 +157,7 @@ export const SCREENS = {
   },
   ScoreLeaderboardPage: {
     id: "ScoreLeaderboard",
-    getName: (lang: AppLanguage) =>
-      `${LOCALES[lang].ScoreLevelLeaderboard}`,
+    getName: (lang: AppLanguage) => `${LOCALES[lang].ScoreLevelLeaderboard}`,
     getShortName: (lang: AppLanguage) =>
       `${LOCALES[lang].ScoreLevelLeaderboard}`,
     icon: Trophy,

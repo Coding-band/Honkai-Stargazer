@@ -10,6 +10,7 @@ import CharComment from "./CharComment/CharComment";
 import CharSuggestRelics from "./CharSuggestRelics/CharSuggestRelics";
 import CharSuggestLightCone from "./CharSuggestLightCone/CharSuggestLightCone";
 import Animated, {
+  useAnimatedProps,
   useAnimatedRef,
   useAnimatedStyle,
   useScrollViewOffset,
@@ -52,6 +53,7 @@ export default React.memo(function Character() {
       />
       <View className="absolute w-full h-full pt-0 pb-0 z-40">
         <Animated.ScrollView
+          bounces={false}
           // @ts-ignore
           ref={aref}
           nestedScrollEnabled={true}

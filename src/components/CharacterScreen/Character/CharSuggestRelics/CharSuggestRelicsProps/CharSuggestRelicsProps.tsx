@@ -22,7 +22,7 @@ export default function CharSuggestRelicsProps() {
   return (
     <View className="w-full mt-4 px-6">
       <View className="w-full">
-        <Text className="font-[HY75] text-white text-[16px]">
+        <Text className="font-[HY65] text-white text-[16px]">
           {LOCALES[appLanguage].MainAffix}
         </Text>
         {/* 主詞條 */}
@@ -45,7 +45,7 @@ export default function CharSuggestRelicsProps() {
                 alignItems: "center",
               }}
             >
-              <Text className="text-[13px] text-white font-[HY75] leading-4">
+              <Text className="text-[13px] text-white font-[HY65] leading-4">
                 {mainRelicPropNames[i]}
               </Text>
               <Text
@@ -67,7 +67,7 @@ export default function CharSuggestRelicsProps() {
           alignItems: "center",
         }}
       >
-        <Text className="font-[HY75] text-white text-[16px]">
+        <Text className="font-[HY65] text-white text-[16px]">
           {LOCALES[appLanguage].SubAffix}
         </Text>
         <Text className="text-[13px] text-[#DDD] opacity-80 font-[HY65]">

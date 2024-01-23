@@ -52,7 +52,7 @@ export default function Relic() {
         />
       </View>
       <View className="absolute w-full h-full z-40">
-        <Animated.ScrollView ref={aref} className="pt-6">
+        <Animated.ScrollView bounces={false} ref={aref} className="pt-6">
           <View onLayout={handleLayout}>
             <RelicInfo />
             <Animated.View style={contentAnimatedStyles}>
