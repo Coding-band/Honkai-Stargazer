@@ -131,7 +131,7 @@ export default function CommentBox(props: Props) {
 
       <KeyboardAvoidingView
         // @ts-ignore
-        style={{ opacity: translation.value.y < 0 ? 1 : 0 }}
+        style={{ display: translation.value.y < 0 ? "" : "none" }}
         className="absolute bottom-2 w-full"
         behavior="padding"
         keyboardVerticalOffset={Platform.OS === "android" ? 118 : 124}
