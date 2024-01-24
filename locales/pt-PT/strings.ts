@@ -187,7 +187,7 @@ export const strings = {
   UnLockAll: "Destravar Todos",
   BlurOn: "Blur : LIGADO",
   BlurOff: "Blur : DESLIGADO",
-  GetCharAndUnLock: "Desbloquear quando possuir ele/ela",
+  GetCharAndUnLock: "Desbloqueado quando possuir",
   Leaderboard: "Classificação",
   UIDSearch: "Busca por UID",
   PublicChars: "Divulgar personagens",
@@ -283,6 +283,8 @@ export const strings = {
   PlsDonateUs: "Por favor, considere doar para nos apoiar, obrigado!",
   DonateInRandomCount: "Aleatório",
   //20240122
-  MemoryOfChaosShort: "MOC",
-  ScoreLevel: "Proficiency"
+  MemoryOfChaosShort: "MDC",
+  ScoreLevel: "Proficiência",
+  MemoryOfChaosLeaderboard: "Placar de MDC",
+  ScoreLevelLeaderboard: "Placar de Proficiência"
 };

@@ -281,5 +281,10 @@ export const strings = {
   CodeAll: "ㄙㄨㄛ一ㄡㄙㄈㄨㄑ一",
   CharSoulShort: "ㄏㄨㄣ ${1}",
   PlsDonateUs: "請考慮透過捐贈支持我們，謝謝！",
-  DonateInRandomCount: "ㄙㄨㄟㄐ一"
+  DonateInRandomCount: "ㄙㄨㄟㄐ一",
+  //20240122
+  MemoryOfChaosShort: "MOC",
+  ScoreLevel: "Proficiency",
+  MemoryOfChaosLeaderboard: "MOC Leaderboard",
+  ScoreLevelLeaderboard: "Proficiency Leaderboard"
 };

@@ -21,7 +21,7 @@ export const strings = {
   Ice: "Лід",
   Fire: "Вогонь",
   Lightning: "Електричний",
-  Quantum: "Квант",
+  Quantum: "Квантовий",
   Imaginary: "Уявний",
   // relic
   RelicPropBody: "Тіло",
@@ -33,7 +33,7 @@ export const strings = {
   RelicPropPlanarSphereShort: "Сфера",
   RelicPropLinkRopeShort: "Мотузка",
   // ui - main page
-  Character: "Персонажі",
+  Character: "Герої",
   CharacterList: "Список персонажів",
   Lightcone: "Конуси",
   LightconeList: "Список конусів",
@@ -92,9 +92,9 @@ export const strings = {
   CommentNumber: "${1} коментарів",
   // ui - Memory Of Chaos
   PlayersBattleReport: "Бойова хроніка за ${1}",
-  PlayersRemainRounds: "Залишилось ${1} рауд(ів)",
-  PlayersAverageRounds: "${1} раунд(ів) в середньому",
-  PlayersRounds: "${1} раунд(ів)",
+  PlayersRemainRounds: "Залишилось ${1} раунд(ів)",
+  PlayersAverageRounds: "${1} раундів в середньому",
+  PlayersRounds: "${1} раундів",
   // ui - Setting Page
   Navigate: "Перейти",
   SwitchOn: "Ввімк",
@@ -139,9 +139,9 @@ export const strings = {
   // toast
   PleaseLogin: "Будь ласка, спершу увійдіть!",
   //Add in 20240114
-  UserInfoLastLoginAt: "${1} До",
+  UserInfoLastLoginAt: "${1} назад",
   UserInfoGameData: "Ігрові дані",
-  UserInfoStatus: "Статус",
+  UserInfoStatus: "Характеристики",
   UserInfoGamePlayerLevel: "Рівень Освоєння",
   UserInfoCountComments: "Коментарі",
   UserInfoGameWorldLevel: "Рівень рівноваги",
@@ -193,7 +193,7 @@ export const strings = {
   PublicChars: "Видимі персонажі",
   Switch: "Переключити",
   //Add in 20240118
-  Comments: "Коментар(і): ${1}",
+  Comments: "${1} коментарів",
   UserOwned: "Отримано",
   FullEidolon: "E6",
   TraceNormalATK: "Звичайна Атака",
@@ -255,16 +255,16 @@ export const strings = {
   MOCMyBattleReport: "Мій звіт про битву",
   MOCPart1: "(Частина 1)",
   MOCPart2: "(Частина 2)",
-  MOCShowMore: "Показати більше",
-  MOCRounds: "${1} раунд(ів)",
-  MOCStars: "${1} зірочок(а)",
+  MOCShowMore: "Показати ще",
+  MOCRounds: "${1} раундів",
+  MOCStars: "${1} зірок",
   Searching: "Пошук...",
   UIDEnter: "Будь ласка, введіть UID",
   UIDFormatError: "Помилка формату UID",
   UIDNoData: "Немає даних",
   UIDSearchRecord: "Шукати записи",
   UIDSearchRecordClear: "Очистити",
-  RedeemCodeForever: "Постійно",
+  RedeemCodeForever: "Без обмежень",
   RedeemCodeUntil: "До ${1}",
   RedeemCodeExpired: "Застарів",
   SettingPersonalPage: "Показати особисту сторінку",
@@ -283,6 +283,8 @@ export const strings = {
   PlsDonateUs: "Будь ласка, розгляньте можливість пожертвувати на нашу підтримку, дякуємо!",
   DonateInRandomCount: "Випадкове",
   //20240122
-  MemoryOfChaosShort: "MOC",
-  ScoreLevel: "Proficiency"
+  MemoryOfChaosShort: "Хаос",
+  ScoreLevel: "Майстерність",
+  MemoryOfChaosLeaderboard: "Лідери хаосу",
+  ScoreLevelLeaderboard: "Лідери"
 };

@@ -284,5 +284,7 @@ export const strings = {
   DonateInRandomCount: "Random",
   //20240122
   MemoryOfChaosShort: "MOC",
-  ScoreLevel: "Proficiency"
+  ScoreLevel: "Proficiency",
+  MemoryOfChaosLeaderboard: "MOC Leaderboard",
+  ScoreLevelLeaderboard: "Proficiency Leaderboard"
 };
