@@ -36,7 +36,7 @@ const Options = ({
         activeOpacity={0.35}
         style={{ flexDirection: "row", alignItems: "center", gap: 8 }}
       >
-        <Text className="text-text2 text-[16px] font-[HY65]">
+        <Text className="text-text2 text-[16px] font-[HY65] leading-5">
           {values.filter((v) => v.id === current.id)[0]?.name}
         </Text>
         <Image
