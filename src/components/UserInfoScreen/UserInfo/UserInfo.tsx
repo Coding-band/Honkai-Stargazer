@@ -31,6 +31,7 @@ import Animated, {
 import NoComment from "./NoComment/NoComment";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
+// import PagerView from "react-native-pager-view";
 
 type Props = {
   uuid: string;
@@ -207,9 +208,8 @@ export default function UserInfo(props: Props) {
                 gap: 8,
               }}
             >
-              {/* 擁有角色 */}
               <UserInfoCharacters uuid={props.uuid} />
-              {/* 其他資訊 */}
+
               {isOwner || isShowInfo ? (
                 <View
                   className="w-full px-4"

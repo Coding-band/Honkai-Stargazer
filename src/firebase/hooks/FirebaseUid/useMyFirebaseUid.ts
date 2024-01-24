@@ -1,12 +1,19 @@
 import { useEffect, useState } from "react";
 import auth from "@react-native-firebase/auth";
-import useFirebaseUidByUUID from "./useFirebaseUidByUUID";
-import useHsrUUID from "../../../hooks/hoyolab/useHsrUUID";
 
 const useMyFirebaseUid = () => {
-  const hsrUUID = useHsrUUID();
-  const firebaseUID = useFirebaseUidByUUID(hsrUUID);
-  return firebaseUID || "";
+  const [uid, setUid] = useState("");
+  useEffect(() => {
+    // 獲取 firebase auth uid
+    auth().onAuthStateChanged((user) => {
+      if (user?.uid) {
+        setUid(user?.uid);
+      } else {
+        setUid("");
+      }
+    });
+  }, []);
+  return uid;
 };
 
 export default useMyFirebaseUid;

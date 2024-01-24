@@ -92,127 +92,143 @@ export default function HomeScreen() {
   }, [hsrUUID, hoyolabCookieParse, handleFirebaseSignUp, handleFirebaseSignIn]);
 
   //* 建立或更新用戶數據 (User)
-  // useEffect(() => {
-  //   async function createOrUpdateUser() {
-  //     if (uid && hsrFullData && hsrPlayerData) {
-  //       // uid 表示 firebase uid, uuid 表示崩鐵遊戲 id
-  //       const uuid = hsrPlayerData.game_role_id;
-  //       const UserData = await db.Users.doc(uid).get();
-  //       const UserIsExist = UserData.exists;
-
-  //       if (UserIsExist) {
-  //         try {
-  //           await db.Users.doc(uid).update({
-  //             avatar_url: hsrFullData.cur_head_icon_url,
-  //             level: hsrPlayerData.level,
-  //             active_days: hsrFullData.stats.active_days,
-  //             char_num: hsrFullData.stats.avatar_num,
-  //             achievement_num: hsrFullData.stats.achievement_num,
-  //             chest_num: hsrFullData.stats.chest_num,
-  //             last_login: firestore.Timestamp.now(),
-  //           });
-  //           if (!UserData?.data()?.invite_code) {
-  //             await db.Users.doc(uid).update({
-  //               invite_code: "SG-" + genId(10),
-  //             });
-  //           }
-  //         } catch (e: any) {
-  //           console.log("update User: " + e.message);
-  //         }
-  //       } else {
-  //         try {
-  //           await db.Users.doc(uid).set({
-  //             uuid: uuid,
-  //             name: hsrPlayerData.nickname,
-  //             avatar_url: hsrFullData.cur_head_icon_url,
-  //             role: ENV === "beta" ? "beta_user" : "user",
-  //             plan: "normal",
-  //             invite_code: "SG-" + genId(10),
-  //             level: hsrPlayerData.level,
-  //             region: hsrPlayerData.region,
-  //             active_days: hsrFullData.stats.active_days,
-  //             char_num: hsrFullData.stats.avatar_num,
-  //             achievement_num: hsrFullData.stats.achievement_num,
-  //             chest_num: hsrFullData.stats.chest_num,
-  //             show_info: false,
-  //             last_login: firestore.Timestamp.now(),
-  //           } as Users);
-  //         } catch (e: any) {
-  //           console.log("create User: " + e.message);
-  //         }
-  //       }
-  //       // 更新上線時間
-  //       const i = setInterval(() => {
-  //         db.Users.doc(uid).update({
-  //           last_login: firestore.Timestamp.now(),
-  //         });
-  //       }, 1000 * 60);
-  //       return () => {
-  //         clearInterval(i);
-  //       };
-  //     }
-  //   }
-  //   createOrUpdateUser();
-  // }, [uid, hsrFullData, hsrPlayerData]);
-
-  //* 建立或更新用戶角色數據 (UserCharacters)
   useEffect(() => {
-    async function createOrUpdateUserCharacters() {
-      if (uid && hsrCharList && hsrInGameInfo) {
-        const UserCharacterDocGet = await db.UserCharacters.doc(uid).get();
-        const UserCharactersIsExist = UserCharacterDocGet.exists;
-        const charsData = {
-          characters: hsrCharList.map((char: any) => ({
-            id: char?.id,
-            level: char?.level,
-            rank: char?.rank,
-            equip: char?.equip
-              ? {
-                  id: char?.equip?.id,
-                  level: char?.equip?.level,
-                  rank: char?.equip?.rank,
-                }
-              : {},
-            relics: char?.relics
-              ? char?.relics?.map((relic: any) => ({
-                  id: relic?.id,
-                  level: relic?.level,
-                  rarity: relic?.rarity,
-                  pos: relic?.pos,
-                }))
-              : [],
-            ornaments: char?.ornaments
-              ? char?.ornaments?.map((ornament: any) => ({
-                  id: ornament?.id,
-                  level: ornament?.level,
-                  rarity: ornament?.rarity,
-                  pos: ornament?.pos,
-                }))
-              : [],
-          })),
-          characters_details: unionBy(
-            UserCharacterDocGet?.data()?.characters_details,
-            hsrInGameInfo?.characters,
-            "id"
-          ),
-        } as UserCharacters;
-        if (UserCharactersIsExist) {
+    async function createOrUpdateUser() {
+      if (uid && hsrFullData && hsrPlayerData) {
+        // uid 表示 firebase uid, uuid 表示崩鐵遊戲 id
+        const uuid = hsrPlayerData.game_role_id;
+        const UserData = await db.Users.doc(uid).get();
+        const UserIsExist = UserData.exists;
+        if (UserIsExist) {
           try {
-            db.UserCharacters.doc(uid).update(charsData);
+            await db.Users.doc(uid).update({
+              avatar_url: hsrFullData.cur_head_icon_url,
+              level: hsrPlayerData.level,
+              active_days: hsrFullData.stats.active_days,
+              char_num: hsrFullData.stats.avatar_num,
+              achievement_num: hsrFullData.stats.achievement_num,
+              chest_num: hsrFullData.stats.chest_num,
+              last_login: firestore.Timestamp.now(),
+            });
+            if (!UserData?.data()?.invite_code) {
+              await db.Users.doc(uid).update({
+                invite_code: "SG-" + genId(10),
+              });
+            }
           } catch (e: any) {
-            console.log("updated UserCharacters: " + e.message);
+            console.log("update User: " + e.message);
           }
         } else {
           try {
-            db.UserCharacters.doc(uid).set(charsData);
+            await db.Users.doc(uid).set({
+              uuid: uuid,
+              name: hsrPlayerData.nickname,
+              avatar_url: hsrFullData.cur_head_icon_url,
+              role: ENV === "beta" ? "beta_user" : "user",
+              plan: "normal",
+              level: hsrPlayerData.level,
+              region: hsrPlayerData.region,
+              active_days: hsrFullData.stats.active_days,
+              char_num: hsrFullData.stats.avatar_num,
+              achievement_num: hsrFullData.stats.achievement_num,
+              chest_num: hsrFullData.stats.chest_num,
+              show_info: false,
+              last_login: firestore.Timestamp.now(),
+            } as Users);
           } catch (e: any) {
-            console.log("create UserCharacters: " + e.message);
+            console.log("create User: " + e.message);
           }
+        }
+        // 更新上線時間
+        const i = setInterval(() => {
+          db.Users.doc(uid).update({
+            last_login: firestore.Timestamp.now(),
+          });
+        }, 1000 * 60);
+        return () => {
+          clearInterval(i);
+        };
+      }
+    }
+    createOrUpdateUser();
+  }, [uid, hsrFullData, hsrPlayerData]);
+
+  //* 建立用戶邀請碼 (UserInviteCodes)
+  useEffect(() => {
+    async function createOrUpdateUserInviteCodes() {
+      if (uid) {
+        const doc = db.UserInviteCodes.doc(uid);
+        const docIsExist = (await doc.get()).exists;
+
+        if (docIsExist) {
+        } else {
+          await doc.set({
+            invite_code: "SG-" + genId(10),
+          });
         }
       }
     }
-    createOrUpdateUserCharacters();
-  }, [uid, hsrCharList, hsrInGameInfo]);
+    createOrUpdateUserInviteCodes();
+  }, [uid]);
+
+  //* 建立或更新用戶角色數據 (UserCharacters)
+  // useEffect(() => {
+  //   async function createOrUpdateUserCharacters() {
+  //     if (uid && hsrCharList && hsrInGameInfo) {
+  //       const UserCharacterDocGet = await db.UserCharacters.doc(uid).get();
+  //       const UserCharactersIsExist = UserCharacterDocGet.exists;
+  //       const charsData = {
+  //         characters: hsrCharList.map((char: any) => ({
+  //           id: char?.id,
+  //           level: char?.level,
+  //           rank: char?.rank,
+  //           equip: char?.equip
+  //             ? {
+  //                 id: char?.equip?.id,
+  //                 level: char?.equip?.level,
+  //                 rank: char?.equip?.rank,
+  //               }
+  //             : {},
+  //           relics: char?.relics
+  //             ? char?.relics?.map((relic: any) => ({
+  //                 id: relic?.id,
+  //                 level: relic?.level,
+  //                 rarity: relic?.rarity,
+  //                 pos: relic?.pos,
+  //               }))
+  //             : [],
+  //           ornaments: char?.ornaments
+  //             ? char?.ornaments?.map((ornament: any) => ({
+  //                 id: ornament?.id,
+  //                 level: ornament?.level,
+  //                 rarity: ornament?.rarity,
+  //                 pos: ornament?.pos,
+  //               }))
+  //             : [],
+  //         })),
+  //         characters_details: unionBy(
+  //           UserCharacterDocGet?.data()?.characters_details,
+  //           hsrInGameInfo?.characters,
+  //           "id"
+  //         ),
+  //       } as UserCharacters;
+  //       if (UserCharactersIsExist) {
+  //         try {
+  //           db.UserCharacters.doc(uid).update(charsData);
+  //         } catch (e: any) {
+  //           console.log("updated UserCharacters: " + e.message);
+  //         }
+  //       } else {
+  //         try {
+  //           db.UserCharacters.doc(uid).set(charsData);
+  //         } catch (e: any) {
+  //           console.log("create UserCharacters: " + e.message);
+  //         }
+  //       }
+  //     }
+  //   }
+  //   createOrUpdateUserCharacters();
+  // }, [uid, hsrCharList, hsrInGameInfo]);
 
   //* 建立或更新用戶混沌回憶資料 (UserMemoryOfChaos)
   useEffect(() => {

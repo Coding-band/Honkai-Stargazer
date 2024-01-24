@@ -12,6 +12,7 @@ import firestore from "@react-native-firebase/firestore";
 const db = {
   Users: firestore().collection("Users"),
   UserTokens: firestore().collection("UserTokens"),
+  UserInviteCodes: firestore().collection("UserInviteCodes"),
   UserCharacters: firestore().collection("UserCharacters"),
   UserMemoryOfChaos(scheduleId: string | number, floorId?: string | number) {
     return firestore().collection(

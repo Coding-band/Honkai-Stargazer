@@ -11,6 +11,7 @@ export default function Toast(message: string, second: number = 2) {
     hideOnPress: true,
     delay: 0,
     opacity: 1,
+    shadowColor: "gray",
     containerStyle: {
       paddingHorizontal: 10,
       paddingVertical: 8,

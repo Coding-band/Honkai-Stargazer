@@ -1,28 +1,41 @@
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, Pressable } from "react-native";
 import React, { useState } from "react";
 import SettingGroup from "../../SettingScreen/SettingGroup/SettingGroup";
 import SettingItem from "../../SettingScreen/SettingGroup/SettingItem/SettingItem";
 import { Image } from "expo-image";
 import useUser from "../../../firebase/hooks/User/useUser";
 import useMyFirebaseUid from "../../../firebase/hooks/FirebaseUid/useMyFirebaseUid";
+import useCopyToClipboard from "../../../hooks/useCopyToClipboard";
+import { useQuery } from "react-query";
+import db from "../../../firebase/db";
+import useUserInviteCode from "../../../firebase/hooks/User/useUserInviteCode";
+
+const emojis = [
+  require("./images/haha.png"),
+  require("./images/haha2.png"),
+  require("./images/haha3.png"),
+];
 
 export default function InviteList() {
   const firebaseUID = useMyFirebaseUid();
-  const inviteCode = useUser(firebaseUID || "").data?.invite_code;
+  const inviteCode = useUserInviteCode(firebaseUID);
 
-  const [emoji, setEmoji] = useState(
-    [
-      require("./images/haha.png"),
-      require("./images/haha2.png"),
-      require("./images/haha3.png"),
-    ][Math.floor(Math.random() * 3)]
-  );
+  const [emojiIndex, setEmojiIndex] = useState(Math.floor(Math.random() * 3));
+
+  const handleCopy = useCopyToClipboard();
 
   return (
     <ScrollView className="z-30 h-screen py-[110px]  pb-0">
       <View style={{ gap: 20 }} className="pb-48 px-4">
         <SettingGroup title={"我的邀請碼"}>
-          <SettingItem type="none" title={inviteCode || ""} content={"複製"} />
+          <SettingItem
+            type="none"
+            title={inviteCode || ""}
+            content={"複製"}
+            onNavigate={() => {
+              handleCopy(inviteCode || "");
+            }}
+          />
         </SettingGroup>
         <SettingGroup title={"使用我的"}>
           <SettingItem
@@ -64,7 +77,17 @@ export default function InviteList() {
           </Text>
         </View>
       </View>
-      <Image source={emoji} className="w-40 h-40 absolute -right-0 bottom-0" />
+      {/* 表情 */}
+      <Pressable
+        onPress={() => {
+          setEmojiIndex(Math.floor(Math.random() * 3));
+        }}
+      >
+        <Image
+          source={emojis[emojiIndex]}
+          className="w-40 h-40 absolute -right-0 bottom-0"
+        />
+      </Pressable>
     </ScrollView>
   );
 }
