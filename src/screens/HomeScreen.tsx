@@ -92,68 +92,68 @@ export default function HomeScreen() {
   }, [hsrUUID, hoyolabCookieParse, handleFirebaseSignUp, handleFirebaseSignIn]);
 
   //* 建立或更新用戶數據 (User)
-  useEffect(() => {
-    async function createOrUpdateUser() {
-      if (uid && hsrFullData && hsrPlayerData) {
-        // uid 表示 firebase uid, uuid 表示崩鐵遊戲 id
-        const uuid = hsrPlayerData.game_role_id;
-        const UserData = await db.Users.doc(uid).get();
-        const UserIsExist = UserData.exists;
+  // useEffect(() => {
+  //   async function createOrUpdateUser() {
+  //     if (uid && hsrFullData && hsrPlayerData) {
+  //       // uid 表示 firebase uid, uuid 表示崩鐵遊戲 id
+  //       const uuid = hsrPlayerData.game_role_id;
+  //       const UserData = await db.Users.doc(uid).get();
+  //       const UserIsExist = UserData.exists;
 
-        if (UserIsExist) {
-          try {
-            await db.Users.doc(uid).update({
-              avatar_url: hsrFullData.cur_head_icon_url,
-              level: hsrPlayerData.level,
-              active_days: hsrFullData.stats.active_days,
-              char_num: hsrFullData.stats.avatar_num,
-              achievement_num: hsrFullData.stats.achievement_num,
-              chest_num: hsrFullData.stats.chest_num,
-              last_login: firestore.Timestamp.now(),
-            });
-            if (!UserData?.data()?.invite_code) {
-              await db.Users.doc(uid).update({
-                invite_code: "SG-" + genId(10),
-              });
-            }
-          } catch (e: any) {
-            console.log("update User: " + e.message);
-          }
-        } else {
-          try {
-            await db.Users.doc(uid).set({
-              uuid: uuid,
-              name: hsrPlayerData.nickname,
-              avatar_url: hsrFullData.cur_head_icon_url,
-              role: ENV === "beta" ? "beta_user" : "user",
-              plan: "normal",
-              invite_code: "SG-" + genId(10),
-              level: hsrPlayerData.level,
-              region: hsrPlayerData.region,
-              active_days: hsrFullData.stats.active_days,
-              char_num: hsrFullData.stats.avatar_num,
-              achievement_num: hsrFullData.stats.achievement_num,
-              chest_num: hsrFullData.stats.chest_num,
-              show_info: false,
-              last_login: firestore.Timestamp.now(),
-            } as Users);
-          } catch (e: any) {
-            console.log("create User: " + e.message);
-          }
-        }
-        // 更新上線時間
-        const i = setInterval(() => {
-          db.Users.doc(uid).update({
-            last_login: firestore.Timestamp.now(),
-          });
-        }, 1000 * 60);
-        return () => {
-          clearInterval(i);
-        };
-      }
-    }
-    createOrUpdateUser();
-  }, [uid, hsrFullData, hsrPlayerData]);
+  //       if (UserIsExist) {
+  //         try {
+  //           await db.Users.doc(uid).update({
+  //             avatar_url: hsrFullData.cur_head_icon_url,
+  //             level: hsrPlayerData.level,
+  //             active_days: hsrFullData.stats.active_days,
+  //             char_num: hsrFullData.stats.avatar_num,
+  //             achievement_num: hsrFullData.stats.achievement_num,
+  //             chest_num: hsrFullData.stats.chest_num,
+  //             last_login: firestore.Timestamp.now(),
+  //           });
+  //           if (!UserData?.data()?.invite_code) {
+  //             await db.Users.doc(uid).update({
+  //               invite_code: "SG-" + genId(10),
+  //             });
+  //           }
+  //         } catch (e: any) {
+  //           console.log("update User: " + e.message);
+  //         }
+  //       } else {
+  //         try {
+  //           await db.Users.doc(uid).set({
+  //             uuid: uuid,
+  //             name: hsrPlayerData.nickname,
+  //             avatar_url: hsrFullData.cur_head_icon_url,
+  //             role: ENV === "beta" ? "beta_user" : "user",
+  //             plan: "normal",
+  //             invite_code: "SG-" + genId(10),
+  //             level: hsrPlayerData.level,
+  //             region: hsrPlayerData.region,
+  //             active_days: hsrFullData.stats.active_days,
+  //             char_num: hsrFullData.stats.avatar_num,
+  //             achievement_num: hsrFullData.stats.achievement_num,
+  //             chest_num: hsrFullData.stats.chest_num,
+  //             show_info: false,
+  //             last_login: firestore.Timestamp.now(),
+  //           } as Users);
+  //         } catch (e: any) {
+  //           console.log("create User: " + e.message);
+  //         }
+  //       }
+  //       // 更新上線時間
+  //       const i = setInterval(() => {
+  //         db.Users.doc(uid).update({
+  //           last_login: firestore.Timestamp.now(),
+  //         });
+  //       }, 1000 * 60);
+  //       return () => {
+  //         clearInterval(i);
+  //       };
+  //     }
+  //   }
+  //   createOrUpdateUser();
+  // }, [uid, hsrFullData, hsrPlayerData]);
 
   //* 建立或更新用戶角色數據 (UserCharacters)
   useEffect(() => {
