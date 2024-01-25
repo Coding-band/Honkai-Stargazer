@@ -130,23 +130,17 @@ P.S. 請理性使用留言功能，用戶不得洗版、任何形式的廣告、
 
 ### <span style="color:#569CD6">怎樣設定即時開拓力、回憶紀錄功能？
 
-首先，請到首頁按下 `...`，再按下選單内的`帳戶綁定`
-![Step1](./image/screen_login_1.png)
-之後請同意登入須知。
-![Step2](./image/screen_login_2.png)<br>
+| 首先，請到首頁按下 `...`，再按下選單内的`帳戶綁定` | 之後請同意登入須知                   | 同意後便會看到以下頁面               |
+| -------------------------------------------------- | ------------------------------------ | ------------------------------------ |
+| ![Step1](./image/screen_login_1.png)               | ![Step2](./image/screen_login_2.png) | ![Step3](./image/screen_login_3.png) |
 
-![Step3](./image/screen_login_3.png)<br>
+| ⚠️ 方法一：手動輸入 Cookies ⚠️                                                   | 🧙 方法二：到官方網頁登入 🧙                                                      |
+| -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| 按下`手動設定`，透過按下按鈕選取對應的伺服器，依照指引貼上 Cookies，再按「確定」 | 選取對應的伺服器 <span style="color:#FF0000">⚠️ 選錯會找不到遊戲帳戶的！⚠️</span> |
+| ![Alt text](./image/screen_login_3_1.png)                                        | ![Step4](./image/screen_login_3_2.png)                                            |
+|                                                                                  | 登入成功後按下 **左上方的叉號按鈕**                                               |
+|                                                                                  | ![Step4](./image/screen_login_4_1.png)                                            |
 
-⚠️ 方法一：手動輸入 Cookies ⚠️<br>
-按下`手動設定`，透過按下按鈕選取對應的伺服器，依照指引貼上 Cookies，再按「確定」<br>
-![Alt text](./image/screen_login_3_1.png)
-
-🧙 方法二：到官方網頁登入 🧙<br>
-選取對應的伺服器 <span style="color:#FF0000">⚠️ 選錯會找不到遊戲帳戶的！⚠️</span><br>
-輸入帳密 <span style="color:#FF0000">⚠️ 暫時只支援 Hoyoverse 通行證 / 米遊社 ⚠️</span>
-![Step4](./image/screen_login_3_2.png)
-登入成功後按下 **左上方的叉號按鈕**<br>
-![Step4](./image/screen_login_4_1.png)<br>
 **大功告成!！**
 
 ## <span style="color:#569CD6">後端伺服器説明

@@ -61,24 +61,25 @@ function getCharScore(charId, charData) {
       }
     }
 
-    // 行跡分數 -> 最多36分
+    // 行跡分數 -> 最多34分
     let traceScore = 0
     let isChecked = [false, false, false, false];
     charTraceLvl.map((trace) => {
       switch (trace.type) {
-        case "Normal": if (isChecked[0]) return; isChecked[0] = true; traceScore += charScoreWeight.trace.normal_atk * trace.level / 3; break; //Max 9*2/3 = 6
-        case "Ultra": if (isChecked[1]) return; isChecked[1] = true; traceScore += charScoreWeight.trace.ultimate * trace.level / 3; break; //Max 15*2/3 = 10
-        case "Talent": if (isChecked[2]) return; isChecked[2] = true; traceScore += charScoreWeight.trace.talent * trace.level / 3; break;  //Max 15*2/3 = 10
-        case "BPSkill": if (isChecked[3]) return; isChecked[3] = true; traceScore += charScoreWeight.trace.skill * trace.level / 3; break;  //Max 15*2/3 = 10
+        case "Normal": if (isChecked[0]) return; isChecked[0] = true; traceScore += charScoreWeight.trace.normal_atk * trace.level *2 / 3; break; //Max 9*2/3 = 6
+        case "Ultra": if (isChecked[1]) return; isChecked[1] = true; traceScore += charScoreWeight.trace.ultimate * trace.level *2/ 3; break; //Max 15*2/3 = 10
+        case "Talent": if (isChecked[2]) return; isChecked[2] = true; traceScore += charScoreWeight.trace.talent * trace.level *2/ 3; break;  //Max 15*2/3 = 10
+        case "BPSkill": if (isChecked[3]) return; isChecked[3] = true; traceScore += charScoreWeight.trace.skill * trace.level *2/ 3; break;  //Max 15*2/3 = 10
         default: traceScore += 0
       }
+      console.log(trace.type+" : "+charScoreWeight.trace.normal_atk * trace.level / 3)
     })
-    traceScore = (traceScore > 36 ? 36 : traceScore)
+    traceScore = (traceScore > 34 ? 34 : traceScore)
 
     //突破分數 -> 最多6分
     let promotionScore = charPromotion
 
-    // 屬性分數 -> 最多58分
+    // 屬性分數 -> 最多60分
     let attrScore = 0
     let attrWeightSum = 0 //總權重淨值 (1.5+2+1+...)
 
@@ -92,6 +93,7 @@ function getCharScore(charId, charData) {
 
     charAttrFinal.map((attrs) => {
       const name = Object.keys(attrs)[0];
+      const counts = Object.keys(attrs).length;
       const attrValue = attrs[name] + (name === "sp_rate" ? 1 : 0);
       const weightValue = charScoreWeight.attr[name];
       const gradValue = charScoreWeight.grad[name];
@@ -106,10 +108,12 @@ function getCharScore(charId, charData) {
       } else {
         attrScore += (attrValue / gradValue) //畢業比率
           * ((0.5 * Math.pow(charLevel, 2) / 80) / 40) //角色等級Curve
-          * (weightValue / attrWeightSum) * 58 //滿分的佔比
+          * (weightValue / attrWeightSum) //滿分的佔比
         // console.log(name + " : " + (attrValue) + " / " + (gradValue) + " || " + ((attrValue) / (gradValue)) + " || " + ((attrValue) / (gradValue)) * (weightValue / attrWeightSum) * 58) //畢業比率
 
       }
+
+      attrScore = Math.min(attrScore * 60 , 60)
       
     })
 
@@ -166,4 +170,4 @@ function getCurrAndGradScore(charId, charData){
     }
     return returnValue;
 }
-console.log(JSON.stringify(getCurrAndGradScore("1305",demoCharData)))
+console.log(JSON.stringify(getCharScore("1303",demoCharData)))

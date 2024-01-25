@@ -61,7 +61,7 @@ export default function getCharScore(charId, charData) {
       }
     }
 
-    // 行跡分數 -> 最多36分
+    // 行跡分數 -> 最多34分
     let traceScore = 0
     let isChecked = [false, false, false, false];
     charTraceLvl.map((trace) => {
@@ -73,12 +73,12 @@ export default function getCharScore(charId, charData) {
         default: traceScore += 0
       }
     })
-    traceScore = (traceScore > 36 ? 36 : traceScore)
+    traceScore = (traceScore > 34 ? 34 : traceScore)
 
     //突破分數 -> 最多6分
     let promotionScore = charPromotion
 
-    // 屬性分數 -> 最多58分
+    // 屬性分數 -> 最多60分
     let attrScore = 0
     let attrWeightSum = 0 //總權重淨值 (1.5+2+1+...)
 
@@ -106,7 +106,7 @@ export default function getCharScore(charId, charData) {
       } else {
         attrScore += (attrValue / gradValue) //畢業比率
           * ((0.5 * Math.pow(charLevel, 2) / 80) / 40) //角色等級Curve
-          * (weightValue / attrWeightSum) * 58 //滿分的佔比
+          * (weightValue / attrWeightSum) * 60 //滿分的佔比
         // console.log(name + " : " + (attrValue) + " / " + (gradValue) + " || " + ((attrValue) / (gradValue)) + " || " + ((attrValue) / (gradValue)) * (weightValue / attrWeightSum) * 58) //畢業比率
 
       }
