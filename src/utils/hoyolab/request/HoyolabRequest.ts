@@ -61,6 +61,18 @@ export default class HoyolabRequest {
     return this.request.send(getUrl(uuid, server));
   }
 
+  //* 獲取虛構敘事資料
+  public getHsrPureFiction(
+    uuid: string,
+    server: hsrServerId = "asia",
+    scheduleType: 1 | 2
+  ) {
+    const getUrl = (uuid: string, server: hsrServerId) =>
+      `https://bbs-api-os.hoyolab.com/game_record/hkrpg/api/challenge_story?server=${hsrServer[server]}&role_id=${uuid}&schedule_type=${scheduleType}&need_all=true`;
+
+    return this.request.send(getUrl(uuid, server));
+  }
+
   //* 獲取活動列表
   public getHsrEventList(uuid: string, server: hsrServerId = "asia") {
     return axios.get(

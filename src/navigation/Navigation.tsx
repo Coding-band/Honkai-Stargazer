@@ -26,6 +26,8 @@ import MemoryOfChaosStatsScreen from "../screens/MemoryOfChaosStatsScreen";
 import MemoryOfChaosLeaderboardScreen from "../screens/MemoryOfChaosLeaderboardScreen";
 import InviteScreen from "../screens/InviteScreen";
 import ScoreLeaderboardScreen from "../screens/ScoreLeaderboardScreen";
+import PureFictionScreen from "../screens/PureFictionScreen";
+import PureFictionStatsScreen from "../screens/PureFictionStatsScreen";
 
 export default function Navigation({
   initialRouteName,
@@ -90,6 +92,16 @@ export default function Navigation({
         <Stack.Screen
           name={SCREENS.MemoryOfChaosLeaderboardPage.id}
           component={MemoryOfChaosLeaderboardScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.PureFictionPage.id}
+          component={PureFictionScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.PureFictionStatsPage.id}
+          component={PureFictionStatsScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

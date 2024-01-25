@@ -1,5 +1,6 @@
 import {
   Alien,
+  Atom,
   BaseballCap,
   ChartBar,
   FilmSlate,
@@ -118,6 +119,18 @@ export const SCREENS = {
     getShortName: (lang: AppLanguage) =>
       `${LOCALES[lang].MemoryOfChaosLeaderboard}`,
     icon: ChartBar,
+  },
+  PureFictionPage: {
+    id: "PureFiction",
+    getName: (lang: AppLanguage) => LOCALES[lang].PureFiction,
+    getShortName: (lang: AppLanguage) => LOCALES[lang].PureFiction,
+    icon: Atom,
+  },
+  PureFictionStatsPage: {
+    id: " PureFictionStats",
+    getName: (lang: AppLanguage) => LOCALES[lang].PureFiction,
+    getShortName: (lang: AppLanguage) => LOCALES[lang].PureFiction,
+    icon: Atom,
   },
   EventListPage: {
     id: "EventList",

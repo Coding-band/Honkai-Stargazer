@@ -29,6 +29,7 @@ export default function PlayerAction() {
 
   const hsrUUID = useHsrUUID();
   const { setHoyolabCookie } = useHoyolabCookie();
+  const [uid, setUid] = useMyFirebaseUid("ios-modify");
 
   const handleCloseBindingPopUp = () => {
     setIsPress(!isPress);
@@ -39,6 +40,7 @@ export default function PlayerAction() {
   };
   const handleLogout = () => {
     auth().signOut();
+    setUid("");
     setHoyolabCookie("");
   };
 

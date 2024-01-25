@@ -22,7 +22,7 @@ import useIsAdmin from "../../firebase/hooks/Role/useIsAdmin";
 import useIsTester from "../../firebase/hooks/Role/useIsTester";
 
 export default function WallPaperChanger() {
-  const loaded = useDelayLoad(1500);
+  const loaded = useDelayLoad(500);
 
   const navigation = useNavigation();
   const { language: textLanguage } = useTextLanguage();

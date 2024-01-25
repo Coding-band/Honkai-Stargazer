@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import auth from "@react-native-firebase/auth";
 
-const useMyFirebaseUid = () => {
-  const [uid, setUid] = useState("");
+const useMyFirebaseUid = (type: "normal" | "ios-modify" = "normal") => {
+  const [uid, setUid] = useState<string>("");
   useEffect(() => {
     // 獲取 firebase auth uid
     auth().onAuthStateChanged((user) => {
@@ -13,6 +13,7 @@ const useMyFirebaseUid = () => {
       }
     });
   }, []);
+  if (type === "ios-modify") return [uid, setUid];
   return uid;
 };
 

@@ -22,13 +22,10 @@ export default function MocLevelInfo({
   return (
     <View
       className="border border-[#DDDDDD20] rounded-[4px] p-2.5 w-[360px]"
-      style={{ gap: 8 }}
+      style={{ gap: 16 }}
     >
       {/* Top */}
-      <View
-        className="z-50"
-        style={{ flexDirection: "row", justifyContent: "space-between" }}
-      >
+      <View className="z-50 flex-row justify-between">
         <Text className="text-text text-[16px] font-[HY65]">
           {LOCALES[language].MOCMissionInfoTitle}
         </Text>
@@ -47,8 +44,11 @@ export default function MocLevelInfo({
           {/* 2 */}
           <Layer floor={floor} data={mocData?.info?.[floor - 1]} part={2} />
         </View>
-        <View></View>
       </View>
+      <Text className="text-text2 font-[HY65] text-[16px] text-center">
+        {new Date(mocData.time.begin).toLocaleDateString()} -{" "}
+        {new Date(mocData.time.end).toLocaleDateString()}
+      </Text>
     </View>
   );
 }
@@ -65,7 +65,7 @@ const Layer = ({
   return (
     data && (
       <View
-        className="h-[140px]"
+        className="h-[146px]"
         style={{
           flexDirection: "row",
           alignItems: "center",

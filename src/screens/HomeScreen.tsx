@@ -207,11 +207,11 @@ export default function HomeScreen() {
               : [],
           })),
           characters_details: unionBy(
-            UserCharacterDocGet?.data()?.characters_details,
             hsrInGameInfo?.characters,
+            UserCharacterDocGet?.data()?.characters_details,
             "id"
           ),
-        } as UserCharacters;
+        } as UserCharacte;
         if (UserCharactersIsExist) {
           try {
             db.UserCharacters.doc(uid).update(charsData);

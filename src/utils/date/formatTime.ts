@@ -69,7 +69,6 @@ export function formatTimePoint(
   // 取得當前時間
   const now = dayjs();
 
-  // 從現在開始加上 38667 秒
   const timeAtZero = now.add(second, "second");
 
   let localizedTime;

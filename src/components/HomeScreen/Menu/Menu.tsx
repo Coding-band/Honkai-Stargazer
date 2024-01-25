@@ -87,14 +87,14 @@ export default function Menu() {
         navigation.navigate(SCREENS.RelicListPage.id);
       },
     },
-    // 混沌回憶
+    // UID查詢
     {
       type: "normal",
-      name: SCREENS.MemoryOfChaosPage.getShortName(language),
-      icon: SCREENS.MemoryOfChaosPage.icon,
+      name: SCREENS.UIDSearchPage.getShortName(language),
+      icon: SCREENS.UIDSearchPage.icon,
       onPress: () => {
         // @ts-ignore
-        navigation.navigate(SCREENS.MemoryOfChaosPage.id);
+        navigation.navigate(SCREENS.UIDSearchPage.id);
       },
     },
     // 開拓力
@@ -181,24 +181,24 @@ export default function Menu() {
         playerNote.data?.expeditions.filter((e: any) => e.status === "Ongoing")
           .length === 0,
     },
-    // 練度排行榜
+    // 混沌回憶
     {
       type: "normal",
-      name: SCREENS.ScoreLeaderboardPage.getShortName(language),
-      icon: SCREENS.ScoreLeaderboardPage.icon,
+      name: SCREENS.MemoryOfChaosPage.getShortName(language),
+      icon: SCREENS.MemoryOfChaosPage.icon,
       onPress: () => {
         // @ts-ignore
-        navigation.navigate(SCREENS.ScoreLeaderboardPage.id);
+        navigation.navigate(SCREENS.MemoryOfChaosPage.id);
       },
     },
-    // 混沌回憶排行榜
+    // 虛構敘事
     {
       type: "normal",
-      name: SCREENS.MemoryOfChaosLeaderboardPage.getShortName(language),
-      icon: SCREENS.MemoryOfChaosLeaderboardPage.icon,
+      name: SCREENS.PureFictionPage.getShortName(language),
+      icon: SCREENS.PureFictionPage.icon,
       onPress: () => {
         // @ts-ignore
-        navigation.navigate(SCREENS.MemoryOfChaosLeaderboardPage.id);
+        navigation.navigate(SCREENS.PureFictionPage.id);
       },
     },
     // 地圖
@@ -221,6 +221,26 @@ export default function Menu() {
         navigation.navigate(SCREENS.EventListPage.id);
       },
     },
+    // 混沌回憶排行榜
+    {
+      type: "normal",
+      name: SCREENS.MemoryOfChaosLeaderboardPage.getShortName(language),
+      icon: SCREENS.MemoryOfChaosLeaderboardPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.MemoryOfChaosLeaderboardPage.id);
+      },
+    },
+    // 練度排行榜
+    {
+      type: "normal",
+      name: SCREENS.ScoreLeaderboardPage.getShortName(language),
+      icon: SCREENS.ScoreLeaderboardPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.ScoreLeaderboardPage.id);
+      },
+    },
     // 兌換碼
     {
       type: "normal",
@@ -229,16 +249,6 @@ export default function Menu() {
       onPress: () => {
         // @ts-ignore
         navigation.navigate(SCREENS.CodePage.id);
-      },
-    },
-    // UID查詢
-    {
-      type: "normal",
-      name: SCREENS.UIDSearchPage.getShortName(language),
-      icon: SCREENS.UIDSearchPage.icon,
-      onPress: () => {
-        // @ts-ignore
-        navigation.navigate(SCREENS.UIDSearchPage.id);
       },
     },
   ];

@@ -13,8 +13,8 @@ import {
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 import formatLocale from "../../../../utils/format/formatLocale";
-import MocStar from "./MocStarIcon/MocStar";
 import { Path } from "../../../../types/path";
+import MocStar from "../../../MemoryOfChaosStatsScreen/MOCList/MOCFloor/MocStarIcon/MocStar";
 
 type Props = {
   title: string;
@@ -25,6 +25,7 @@ type Props = {
   isFast: boolean;
   teams: {
     date: string;
+    score: number;
     characters: {
       officalId: number;
       level: number;
@@ -35,7 +36,7 @@ type Props = {
   }[];
 };
 
-export default function MOCFloor(props: Props) {
+export default function PFFloor(props: Props) {
   const { language } = useAppLanguage();
 
   return (
@@ -47,7 +48,7 @@ export default function MOCFloor(props: Props) {
             {/* 20240118 UNSUITABLE TO EDIT*/}
             {props.title}
           </Text>
-          {/* 使用 ... 輪 */}
+          {/* 剩餘 ... 輪 */}
           <Text className="text-[#FFFFFF90] text-[12px] font-[HY65] leading-5">
             {formatLocale(LOCALES[language].PlayersRounds, [props.round])}
           </Text>
@@ -68,11 +69,7 @@ export default function MOCFloor(props: Props) {
                 justifyContent: "space-between",
               }}
             >
-              <View style={{ flexDirection: "row", gap: 4 }}>
-                <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
-                  {props.teams[0].date}
-                </Text>
-              </View>
+              <View style={{ flexDirection: "row", gap: 4 }}></View>
             </View>
           </View>
           <View style={{ alignItems: "center" }}>
@@ -95,7 +92,15 @@ const MocFloorLayer = ({ team }: { team: any }) => {
   const navigation = useNavigation();
   return (
     <View>
-      <View className="mt-2" style={{ flexDirection: "row", gap: 6 }}>
+      <View className="flex-row justify-between">
+        <Text className="text-[#FFF] text-[12px] font-[HY65] leading-5">
+          {team.date}
+        </Text>
+        <Text className="text-[#DD8200] text-[16px] font-[HY65] leading-5">
+          {team.score}
+        </Text>
+      </View>
+      <View className="my-2" style={{ flexDirection: "row", gap: 6 }}>
         {team?.characters?.map((char: any, i: number) => {
           const charId = officalCharId[char.officalId];
           const charJsonData = getCharJsonData(charId);

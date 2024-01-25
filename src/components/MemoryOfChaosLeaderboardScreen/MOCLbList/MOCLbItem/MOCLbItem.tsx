@@ -195,7 +195,7 @@ const RecordItem = React.memo((props: any) => {
           }}
           style={{ flexDirection: "row", gap: 6 }}
         >
-          {props.round_num !== 0 ? (
+          {props?.layer_1?.characters?.length !== 0 ? (
             props[props.isLayer2 ? "layer_2" : "layer_1"]?.characters.map(
               (char: any) => (
                 <View
