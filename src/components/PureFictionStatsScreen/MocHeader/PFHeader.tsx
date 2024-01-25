@@ -9,6 +9,7 @@ import getServerFromUUID from "../../../utils/hoyolab/servers/getServerFromUUID"
 import { ChartBarHorizontal } from "phosphor-react-native";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../constant/screens";
+import Toast from "../../../utils/toast/Toast";
 
 export default function MocHeader({ scrollHandler }: { scrollHandler: any }) {
   const { language } = useAppLanguage();
@@ -35,13 +36,16 @@ export default function MocHeader({ scrollHandler }: { scrollHandler: any }) {
         <LeaderboardBtn
           onPress={() => {
             // @ts-ignore
-            navigation.push(SCREENS.MemoryOfChaosLeaderboardPage.id);
+            Toast.StillDevelopingToast();
+            // navigation.push(SCREENS.MemoryOfChaosLeaderboardPage.id);
           }}
         />
       }
     >
       <View style={{ alignItems: "center" }}>
-        <Text className="text-[20px] text-text font-[HY65]">{LOCALES[language].MOCMyBattleReport}</Text>
+        <Text className="text-[20px] text-text font-[HY65]">
+          {LOCALES[language].MOCMyBattleReport}
+        </Text>
         <Text className="text-[14px] text-text font-[HY65]">
           {hsrUUID} · {LOCALES[language][getServerFromUUID(hsrUUID)!]}
         </Text>

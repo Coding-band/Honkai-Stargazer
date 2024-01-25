@@ -10,7 +10,7 @@ export default function SettingGroup(props: Props) {
   return (
     <>
       <View className="w-full mb-[-16px] mt-[20px]">
-        <Text className="text-text text-[16px] font-[HY55] leading-5">
+        <Text className="text-text text-[16px] font-[HY65] leading-5">
           {props.title}
         </Text>
       </View>

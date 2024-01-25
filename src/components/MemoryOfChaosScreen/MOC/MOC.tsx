@@ -74,7 +74,10 @@ export default function MOC() {
             width={46}
             height={46}
           >
-            <Image source={require("./icons/Detail.svg")} className="w-6 h-3" />
+            <Image
+              source={require("../../../../assets/icons/Detail.svg")}
+              className="w-6 h-3"
+            />
           </Button>
         </View>
         <MocLevelInfo versionNumber={selectedVersion} />
