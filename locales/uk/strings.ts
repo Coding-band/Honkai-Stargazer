@@ -286,5 +286,7 @@ export const strings = {
   MemoryOfChaosShort: "Хаос",
   ScoreLevel: "Майстерність",
   MemoryOfChaosLeaderboard: "Лідери хаосу",
-  ScoreLevelLeaderboard: "Лідери"
+  ScoreLevelLeaderboard: "Лідери",
+  //20240125
+  PureFiction: "Pure Fiction"
 };

@@ -288,5 +288,5 @@ export const strings = {
   MemoryOfChaosLeaderboard: "混沌排行榜",
   ScoreLevelLeaderboard: "練度排行榜",
   //20240125
-  PureFiction: "虛構敘事",
+  PureFiction: "虛構敘事"
 };

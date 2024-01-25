@@ -286,5 +286,7 @@ export const strings = {
   MemoryOfChaosShort: "MDC",
   ScoreLevel: "Proficiência",
   MemoryOfChaosLeaderboard: "Placar de MDC",
-  ScoreLevelLeaderboard: "Placar de Proficiência"
+  ScoreLevelLeaderboard: "Placar de Proficiência",
+  //20240125
+  PureFiction: "Pure Fiction"
 };

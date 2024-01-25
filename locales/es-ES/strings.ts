@@ -286,5 +286,7 @@ export const strings = {
   MemoryOfChaosShort: "MOC",
   ScoreLevel: "Proficiency",
   MemoryOfChaosLeaderboard: "MOC Leaderboard",
-  ScoreLevelLeaderboard: "Proficiency Leaderboard"
+  ScoreLevelLeaderboard: "Proficiency Leaderboard",
+  //20240125
+  PureFiction: "Pure Fiction"
 };
