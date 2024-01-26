@@ -33,6 +33,8 @@ import getCharScore from "../utils/calculator/charScoreCalculator/getCharScore";
 import getRelicScore from "../utils/calculator/relicScoreCalculator/getRelicScore";
 import officalRelicId from "../../map/relic_offical_id_map";
 import getSetIdAndCountFromRelicData from "../utils/data/getSetIdAndCountFromRelicData";
+import usePureFiction from "../hooks/hoyolab/usePureFiction";
+import usePureFictionPrev from "../hooks/hoyolab/usePureFictionPrev";
 
 export default function HomeScreen() {
   const uid = useMyFirebaseUid();
@@ -47,6 +49,8 @@ export default function HomeScreen() {
 
   const moc = useMemoryOfChaos().data;
   const mocPrev = useMemoryOfChaosPrev().data;
+  const pf = usePureFiction().data;
+  const pfPrev = usePureFictionPrev().data;
 
   const userCharDetailList = useUserCharacters(uid).data?.characters_details;
 
@@ -378,6 +382,161 @@ export default function HomeScreen() {
     }
     createOrUpdateUserMemoryOfChaos();
   }, [uid, moc, mocPrev, hsrPlayerData]);
+
+  //* 建立或更新用戶虛構敘事資料 (UserPureFiction)
+  useEffect(() => {
+    async function createOrUpdatePureFiction() {
+      if (uid && pf && pfPrev && hsrPlayerData) {
+        // 完整混沌回憶資料
+        const pfData = {
+          star_num: pf.star_num,
+          battle_num: pf.battle_num,
+          max_floor_id: pf.max_floor_id,
+          max_floor: pf.all_floor_detail.length || null,
+
+          all_floor_detail: pf.all_floor_detail.map((f: any) => ({
+            floor_id: f.maze_id,
+            round_num: f.round_num,
+            star_num: f.star_num,
+            score: Number(f.node_1.score) + Number(f.node_2.score),
+            layer_1: {
+              challenge_time: f.node_1.challenge_time,
+              characters: f.node_1.avatars.map((c: any) => ({
+                id: c.id,
+                level: c.level,
+                rank: c.rank,
+              })),
+              score: Number(f.node_1.score),
+            },
+            layer_2: {
+              challenge_time: f.node_2.challenge_time,
+              characters: f.node_2.avatars.map((c: any) => ({
+                id: c.id,
+                level: c.level,
+                rank: c.rank,
+                score: Number(f.node_2.score),
+              })),
+            },
+          })),
+        };
+        const pfDoc = db.UserPureFiction(pf.groups[0].schedule_id).doc(uid);
+        const docIsExist = (await pfDoc.get()).exists;
+        if (docIsExist) {
+          await pfDoc.update(pfData);
+        } else {
+          await pfDoc.set(pfData);
+        }
+        // 單層混沌回憶資料
+        pfData?.all_floor_detail
+          ?.slice()
+          ?.reverse()
+          ?.forEach(async (floor, i) => {
+            const floorNum = i + 1;
+            const floorData = {
+              uuid: hsrPlayerData.game_role_id,
+              name: hsrPlayerData.nickname,
+              floor_id: floor.floor_id,
+              floor_num: floorNum,
+              round_num: floor.round_num,
+              star_num: floor.star_num,
+              challenge_time: toTimestamp(floor.layer_1.challenge_time),
+              score: Number(floor.layer_1.score) + Number(floor.layer_1.score),
+              layer_1: {
+                characters: floor.layer_1.characters,
+                score: floor.layer_1.score,
+              },
+              layer_2: {
+                characters: floor.layer_2.characters,
+                score: floor.layer_1.score,
+              },
+            };
+            const floorDoc = db
+              .UserPureFiction(pf.groups[0].schedule_id, floorNum)
+              .doc(uid);
+            const docIsExist = (await floorDoc.get()).exists;
+            if (docIsExist) {
+              floorDoc.update(floorData);
+            } else {
+              floorDoc.set(floorData);
+            }
+          });
+
+        // // 完整前一次混沌回憶資料
+        // const pfPrevData = {
+        //   star_num: pfPrev.star_num,
+        //   battle_num: pfPrev.battle_num,
+        //   max_floor_id: pfPrev.max_floor_id,
+        //   max_floor: pfPrev.all_floor_detail.length || null,
+        //   all_floor_detail: pfPrev.all_floor_detail.map((f: any) => ({
+        //     floor_id: f.maze_id,
+        //     round_num: f.round_num,
+        //     star_num: f.star_num,
+        //     layer_1: {
+        //       challenge_time: f.node_1.challenge_time,
+        //       characters: f.node_1.avatars.map((c: any) => ({
+        //         id: c.id,
+        //         level: c.level,
+        //         rank: c.rank,
+        //       })),
+        //       score: Number(f.node_1.score),
+        //     },
+        //     layer_2: {
+        //       challenge_time: f.node_2.challenge_time,
+        //       characters: f.node_2.avatars.map((c: any) => ({
+        //         id: c.id,
+        //         level: c.level,
+        //         rank: c.rank,
+        //       })),
+        //       score: Number(f.node_1.score),
+        //     },
+        //   })),
+        // };
+
+        // const pfPrevDataDoc = db.UserPureFiction(pfPrev.groups[1].schedule_id).doc(uid);
+        // const prevDocIsExist = (await pfPrevDataDoc.get()).exists;
+
+        // if (prevDocIsExist) {
+        //   await pfPrevDataDoc.update(pfPrevData);
+        // } else {
+        //   await pfPrevDataDoc.set(pfPrevData);
+        // }
+        // // 單層前一次混沌回憶資料
+        // pfPrevData?.all_floor_detail
+        //   ?.slice()
+        //   ?.reverse()
+        //   ?.forEach(async (floor, i) => {
+        //     const floorNum = i + 1;
+        //     const floorData = {
+        //       uuid: hsrPlayerData.game_role_id,
+        //       name: hsrPlayerData.nickname,
+        //       floor_id: floor.floor_id,
+        //       floor_num: floorNum,
+        //       round_num: floor.round_num,
+        //       star_num: floor.star_num,
+        //       challenge_time: toTimestamp(floor.layer_1.challenge_time),
+        //       layer_1: {
+        //         characters: floor.layer_1.characters,
+        //         score: floor.layer_1.score,
+        //       },
+        //       layer_2: {
+        //         characters: floor.layer_2.characters,
+        //         score: floor.layer_1.score,
+        //       },
+        //     };
+        //     const floorDoc = db
+        //       .UserPureFiction(pfPrev.schedule_id, floorNum)
+        //       .doc(uid);
+        //     const docIsExist = (await floorDoc.get()).exists;
+        //     if (docIsExist) {
+        //       floorDoc.update(floorData);
+        //     } else {
+        //       floorDoc.set(floorData);
+        //     }
+        //   });
+      }
+    }
+    createOrUpdatePureFiction();
+  }, [uid, pf, pfPrev, hsrPlayerData]);
 
   //* 建立或更新用戶角色練度數據 (UserCharacterScores)
   useEffect(() => {

@@ -14,7 +14,7 @@ import { LOCALES } from "../../../../../locales";
 import formatLocale from "../../../../utils/format/formatLocale";
 import getRankColor from "../../../../utils/getRankColor";
 
-export default function MOCLbItem({
+export default function PFLbItem({
   versionNumber,
   floorNumber,
   floorName,
@@ -26,7 +26,7 @@ export default function MOCLbItem({
   const { language } = useAppLanguage();
 
   const navigation = useNavigation();
-  const route = useRoute<RouteProp<ParamList, "MemoryOfChaosLeaderboard">>();
+  const route = useRoute<RouteProp<ParamList, "PureFictionLeaderboard">>();
   const showMoreFloorDetails = !!route.params?.floorNumber;
 
   const [showRank, setShowRank] = useState(false);
@@ -34,12 +34,12 @@ export default function MOCLbItem({
 
   // 排行榜資訊
   const { data: floorLbData } = useQuery(
-    ["moc-leaderboard", floorNumber, versionNumber, showMoreFloorDetails],
+    ["pf-leaderboard", floorNumber, versionNumber, showMoreFloorDetails],
     async () => {
       const result = (
         await db
-          .UserMemoryOfChaos(versionNumber, floorNumber)
-          .orderBy("star_num", "desc")
+          .UserPureFiction(versionNumber, floorNumber)
+          .orderBy("score", "desc")
           .orderBy("round_num")
           .orderBy("challenge_time")
           .limit(showMoreFloorDetails ? 99 : 5)
@@ -52,11 +52,11 @@ export default function MOCLbItem({
   // 我的排行榜資訊
   const firebaseUID = useMyFirebaseUid();
   const { data: myFloorLbData } = useQuery(
-    ["my-moc-leaderboard", floorNumber, versionNumber, firebaseUID],
+    ["my-pf-leaderboard", floorNumber, versionNumber, firebaseUID],
     async () =>
       (
         await db
-          .UserMemoryOfChaos(versionNumber, floorNumber)
+          .UserPureFiction(versionNumber, floorNumber)
           .doc(firebaseUID)
           .get()
       ).data()
@@ -90,7 +90,7 @@ export default function MOCLbItem({
           activeOpacity={0.65}
           onPress={() => {
             // @ts-ignore
-            navigation.push("MemoryOfChaosLeaderboard", {
+            navigation.push("PureFictionLeaderboard", {
               scheduleId: versionNumber,
               floorNumber: floorNumber,
             });
@@ -184,7 +184,7 @@ const RecordItem = React.memo((props: any) => {
               {new Date(props.challenge_time).getHours()}:
               {new Date(props.challenge_time).getMinutes()}{" "}
               {formatLocale(LOCALES[language].MOCRounds, [props.round_num])}{" "}
-              {formatLocale(LOCALES[language].MOCStars, [props.star_num])}
+              {formatLocale(LOCALES[language].PFScore, [props.score])}
             </Text>
           )}
         </View>

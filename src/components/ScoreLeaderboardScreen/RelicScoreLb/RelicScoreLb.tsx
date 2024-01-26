@@ -59,6 +59,7 @@ export default function RelicScoreLb(props: {
         await db
           .UserCharacterScores(selectedCharOption.id)
           .orderBy("score", "desc")
+          .limit(99)
           .get()
       ).docs?.map((doc) => ({ id: doc.id, ...doc.data() })),
     { staleTime: 1000 * 60 }
@@ -139,7 +140,7 @@ const CharRelicScoreLbItem = (props: {
 
   return (
     !!props?.relicTotalScore && (
-      <View className="flex-row items-center justify-between">
+      <View className="flex-row items-center justify-between h-6">
         <View className="flex-row" style={{ gap: 10 }}>
           <Text
             style={{ color: getRankColor(props.rank) }}
@@ -185,10 +186,7 @@ const CharRelicScoreLbItem = (props: {
             />
           </View>
           {/* 分數 */}
-          <View
-            style={{ width: Platform.OS === "android" ? 56 : 48 }}
-            className="items-end"
-          >
+          <View className="items-end w-[56px]">
             <Text
               style={{
                 color: ScoreColors[getCharRange(props?.relicTotalScore)],

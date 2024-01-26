@@ -230,6 +230,15 @@ export default function Menu() {
         // @ts-ignore
         navigation.navigate(SCREENS.MemoryOfChaosLeaderboardPage.id);
       },
+    }, // 虛構回憶排行榜
+    {
+      type: "normal",
+      name: SCREENS.PureFictionLeaderboardPage.getShortName(language),
+      icon: SCREENS.PureFictionLeaderboardPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.PureFictionLeaderboardPage.id);
+      },
     },
     // 練度排行榜
     {

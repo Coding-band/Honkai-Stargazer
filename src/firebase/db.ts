@@ -19,6 +19,11 @@ const db = {
       `UserMemoryOfChaos-${scheduleId}${floorId ? `-${floorId}` : ""}`
     );
   },
+  UserPureFiction(scheduleId: string | number, floorId?: string | number) {
+    return firestore().collection(
+      `UserPureFiction-${scheduleId}${floorId ? `-${floorId}` : ""}`
+    );
+  },
   UserComments: firestore().collection("UserComments"),
   CharacterComments(charId: string | number) {
     return firestore().collection(`CharacterComments-${charId}`);

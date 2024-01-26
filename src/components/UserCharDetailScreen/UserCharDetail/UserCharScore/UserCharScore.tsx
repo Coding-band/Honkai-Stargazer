@@ -38,7 +38,7 @@ export default function UserCharScore() {
 
   return (
     inGameCharData && (
-      <View style={{gap:24}}>
+      <View style={{ gap: 24 }}>
         {/* <View style={styles.container}>
           <Text className="text-text font-[HY65] text-[20px]">角色详情</Text>
           <View
@@ -91,15 +91,6 @@ export default function UserCharScore() {
             ))}
           </View>
         </View>
-        {/*  */}
-        <View style={{ alignItems: "center", gap: 2 }}>
-          <Text className="text-text font-[HY65] text-[18px] leading-5">
-            {LOCALES[appLanguage].LackOfUserData}
-          </Text>
-          <Text className="text-[#FFFFFF60] font-[HY65] text-[12px] leading-4">
-            {LOCALES[appLanguage].LeaderboardDataFrom}
-          </Text>
-        </View>
       </View>
     )
   );
@@ -109,7 +100,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems:"center",
+    alignItems: "center",
     width: 300,
   },
   scoreContainer: {

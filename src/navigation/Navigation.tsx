@@ -28,6 +28,8 @@ import InviteScreen from "../screens/InviteScreen";
 import ScoreLeaderboardScreen from "../screens/ScoreLeaderboardScreen";
 import PureFictionScreen from "../screens/PureFictionScreen";
 import PureFictionStatsScreen from "../screens/PureFictionStatsScreen";
+import PureFictionLeaderboardScreen from "../screens/PureFictionLeaderboardScreen";
+import DescriptionScreen from "../screens/DescriptionScreen";
 
 export default function Navigation({
   initialRouteName,
@@ -105,6 +107,11 @@ export default function Navigation({
           options={{ headerShown: false }}
         />
         <Stack.Screen
+          name={SCREENS.PureFictionLeaderboardPage.id}
+          component={PureFictionLeaderboardScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name={SCREENS.ExpeditionPage.id}
           component={ExpeditionScreen}
           options={{ headerShown: false }}
@@ -170,6 +177,11 @@ export default function Navigation({
         <Stack.Screen
           name={SCREENS.ScoreLeaderboardPage.id}
           component={ScoreLeaderboardScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.DescriptionPage.id}
+          component={DescriptionScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

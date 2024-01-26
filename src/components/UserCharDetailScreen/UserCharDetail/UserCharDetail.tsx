@@ -33,8 +33,8 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 import ProducedByStargazer from "../../global/ProducedByStargazer/ProducedByStargazer";
-import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import UserCharScore from "./UserCharScore/UserCharScore";
+import UserCharStats from "./UserCharStats/UserCharStats";
 
 export default function UserCharDetail() {
   const charId = useProfileCharId();
@@ -127,6 +127,7 @@ export default function UserCharDetail() {
           <UserCharLightcone />
           <UserCharRelics />
           <UserCharScore />
+          <UserCharStats />
           {/* 由 Stargazer 製作 */}
           <View className="mb-16 mt-0">
             <ProducedByStargazer />

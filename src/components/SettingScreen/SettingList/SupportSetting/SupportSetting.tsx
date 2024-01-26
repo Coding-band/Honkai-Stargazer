@@ -20,7 +20,7 @@ export default function SupportSetting() {
   const [openDonate, setOpenDonate] = useState(false);
   return (
     <>
-      <SettingGroup title={LOCALES[language].SupportUs}>
+      {/* <SettingGroup title={LOCALES[language].SupportUs}>
         <SettingItem
           type="navigation"
           title={LOCALES[language].Donation}
@@ -85,7 +85,7 @@ export default function SupportSetting() {
             </View>
           }
         />
-      </ReactNativeModal>
+      </ReactNativeModal> */}
     </>
   );
 }

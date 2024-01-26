@@ -18,4 +18,10 @@ export type ParamList = {
   UserInfo: { uuid: string };
   UserCharDetail: { uuid: string; charId: CharacterName };
   MemoryOfChaosLeaderboard: { scheduleId?: number; floorNumber?: number };
+  PureFictionLeaderboard: { scheduleId?: number; floorNumber?: number };
+  Description: {
+    title: string;
+    icon: any;
+    content: any;
+  };
 };

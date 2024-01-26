@@ -3,6 +3,7 @@ import {
   Atom,
   BaseballCap,
   ChartBar,
+  ChartBarHorizontal,
   FilmSlate,
   MapTrifold,
   MedalMilitary,
@@ -132,6 +133,23 @@ export const SCREENS = {
     getShortName: (lang: AppLanguage) => LOCALES[lang].PureFiction,
     icon: Atom,
   },
+  PureFictionLeaderboardPage: {
+    id: "PureFictionLeaderboard",
+    getName: (lang: AppLanguage) =>
+      `${
+        lang === "zh_hk" || lang === "zh_cn"
+          ? LOCALES[lang].PureFiction
+          : LOCALES[lang].PureFictionShort
+      }·${LOCALES[lang].Leaderboard}`,
+    getShortName: (lang: AppLanguage) =>
+      `${LOCALES[lang].PureFictionLeaderboard}`,
+    icon: (props: any) => (
+      <ChartBarHorizontal
+        {...props}
+        style={{ transform: [{ rotate: "270deg" }] }}
+      />
+    ),
+  },
   EventListPage: {
     id: "EventList",
     getName: (lang: AppLanguage) => LOCALES[lang].Event,
@@ -174,5 +192,8 @@ export const SCREENS = {
     getShortName: (lang: AppLanguage) =>
       `${LOCALES[lang].ScoreLevelLeaderboard}`,
     icon: Trophy,
+  },
+  DescriptionPage: {
+    id: "Description",
   },
 };
