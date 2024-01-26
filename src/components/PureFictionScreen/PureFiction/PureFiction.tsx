@@ -34,7 +34,7 @@ export default function PureFiction() {
   const scrollHandler = useScrollViewOffset(aref);
 
   return (
-    <View>
+    <View className="h-screen">
       <PureFictionHeader scrollHandler={scrollHandler} />
       <Animated.ScrollView
         ref={aref}

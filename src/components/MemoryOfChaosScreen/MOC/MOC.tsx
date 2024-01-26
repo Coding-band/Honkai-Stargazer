@@ -35,7 +35,7 @@ export default function MOC() {
   const scrollHandler = useScrollViewOffset(aref);
 
   return (
-    <View>
+    <View className="h-screen">
       <MocHeader scrollHandler={scrollHandler} />
       <Animated.ScrollView
         ref={aref}

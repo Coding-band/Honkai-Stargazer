@@ -10,7 +10,11 @@ import { LOCALES } from "../../../../../locales";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import PFDataMap from "../../../../../map/pure_fiction_data_map";
 
-export default function PFLevelInfo({ versionNumber }: { versionNumber: number }) {
+export default function PFLevelInfo({
+  versionNumber,
+}: {
+  versionNumber: number;
+}) {
   // @ts-ignore
   const mocData = PFDataMap[versionNumber];
   const [floor, setFloor] = useState(1);
@@ -62,7 +66,7 @@ const Layer = ({
   return (
     data && (
       <View
-        className="h-[146px]"
+        className="h-[210px]"
         style={{
           flexDirection: "row",
           alignItems: "center",
@@ -102,6 +106,11 @@ const Layer = ({
           </View>
           <View style={{ flex: 1, flexDirection: "row", gap: 12 }}>
             {data["part" + part]["wave2"].map((monster: any, i: number) => (
+              <Mob key={i}>{monster}</Mob>
+            ))}
+          </View>
+          <View style={{ flex: 1, flexDirection: "row", gap: 12 }}>
+            {data["part" + part]["wave3"].map((monster: any, i: number) => (
               <Mob key={i}>{monster}</Mob>
             ))}
           </View>

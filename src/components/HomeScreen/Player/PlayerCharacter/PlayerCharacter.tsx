@@ -12,31 +12,36 @@ export default function PlayerCharacter() {
   const navigation = useNavigation();
 
   const hsrUUID = useHsrUUID();
-  const { data: inGameInfo } = useHsrInGameInfo(hsrUUID) as any; 
+  const { data: inGameInfo } = useHsrInGameInfo(hsrUUID) as any;
   return (
     <View className="flex flex-row gap-1">
-      {inGameInfo?.characters ? inGameInfo?.characters?.map((char: any, i: number) => (
-        <TouchableOpacity
-          key={char.id}
-          activeOpacity={0.35}
-          className="w-[30px] h-[30px] bg-[#D9D9D9] rounded-full overflow-hidden"
-          style={{ justifyContent: "center", alignItems: "center" }}
-          onPress={() => {
-            // @ts-ignore
-            navigation.navigate("UserCharDetail", {
-              uuid: hsrUUID,
-              charId: officalCharId[char.id] as CharacterName,
-            });
-          }}
-        >
-          <Image
-            className="w-[30px] h-[30px]"
-            source={
-              CharacterImage[officalCharId[char.id] as CharacterName].icon
-            }
-          />
-        </TouchableOpacity>
-      )) : <View className="w-[30px] h-[30px] bg-[#D9D9D9] rounded-full overflow-hidden"></View>}
+      {inGameInfo?.characters ? (
+        inGameInfo?.characters?.map((char: any, i: number) => (
+          <TouchableOpacity
+            key={char.id}
+            activeOpacity={0.35}
+            className="w-[30px] h-[30px] bg-[#D9D9D9] rounded-full overflow-hidden"
+            style={{ justifyContent: "center", alignItems: "center" }}
+            onPress={() => {
+              // @ts-ignore
+              navigation.navigate("UserCharDetail", {
+                uuid: hsrUUID,
+                charId: officalCharId[char.id] as CharacterName,
+              });
+            }}
+          >
+            <Image
+              className="w-[30px] h-[30px]"
+              source={
+                CharacterImage[officalCharId[char.id] as CharacterName].icon
+              }
+              cachePolicy="none"
+            />
+          </TouchableOpacity>
+        ))
+      ) : (
+        <View className="w-[30px] h-[30px] bg-[#D9D9D9] rounded-full overflow-hidden"></View>
+      )}
     </View>
   );
 }
