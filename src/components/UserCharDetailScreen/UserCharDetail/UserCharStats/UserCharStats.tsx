@@ -45,8 +45,7 @@ export default function UserCharStats() {
     <>
       <View style={{ alignItems: "center", gap: 2 }}>
         <Text className="text-text font-[HY65] text-[18px] leading-5">
-          超過全服 {(((overStat || 0) / (totalStat || 0)) * 100).toFixed(1)}%
-          用戶
+          超過全服 {((overStat / totalStat) * 100 || 0).toFixed(1)}% 用戶
         </Text>
         <Text className="text-[#FFFFFF60] font-[HY65] text-[12px] leading-4">
           {LOCALES[appLanguage].LeaderboardDataFrom}
