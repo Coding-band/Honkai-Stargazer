@@ -8,7 +8,7 @@ import Toast from "../../../../utils/toast/Toast";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../constant/screens";
 import { Star } from "phosphor-react-native";
-import AboutTheApp from "./AboutTheApp/AboutTheApp";
+import AboutTheApp from "./AboutTheApp1/AboutTheApp";
 
 export default function SpecialThanksSetting() {
   const navigation = useNavigation();
