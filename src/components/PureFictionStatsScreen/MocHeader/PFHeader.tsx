@@ -36,8 +36,8 @@ export default function MocHeader({ scrollHandler }: { scrollHandler: any }) {
         <LeaderboardBtn
           onPress={() => {
             // @ts-ignore
-            Toast.StillDevelopingToast();
-            // navigation.push(SCREENS.MemoryOfChaosLeaderboardPage.id);
+
+            navigation.push(SCREENS.PureFictionLeaderboardPage.id);
           }}
         />
       }

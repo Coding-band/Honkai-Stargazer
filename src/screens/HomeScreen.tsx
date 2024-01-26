@@ -88,7 +88,7 @@ export default function HomeScreen() {
       handleFirebaseSignUp(email, password).then((isAlreadySignUp) => {
         if (isAlreadySignUp) {
           // firebase 登入
-          handleFirebaseSignIn(email, password).then(() => {});
+          handleFirebaseSignIn(email, password).then((a) => {});
         } else {
         }
       });
