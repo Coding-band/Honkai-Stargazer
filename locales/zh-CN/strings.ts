@@ -288,5 +288,11 @@ export const strings = {
   MemoryOfChaosLeaderboard: "混沌排行榜",
   ScoreLevelLeaderboard: "练度排行榜",
   //20240125
-  PureFiction: "虚构叙事"
+  PureFiction: "虚构叙事",
+  //20240126
+  PureFictionShort: "虚构",
+  PureFictionLeaderboard: "虚构排行榜",
+  About: "关于",
+  AboutTheApp: "关于 Stargazer",
+  PFScore: "${1}分"
 };

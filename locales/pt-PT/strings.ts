@@ -288,5 +288,11 @@ export const strings = {
   MemoryOfChaosLeaderboard: "Placar de MDC",
   ScoreLevelLeaderboard: "Placar de Proficiência",
   //20240125
-  PureFiction: "Pure Fiction"
+  PureFiction: "Pura Ficção",
+  //20240126
+  PureFictionShort: "Pure",
+  PureFictionLeaderboard: "Pure Leaderboard",
+  About: "About",
+  AboutTheApp: "About Stargazer",
+  PFScore: "${1} pts"
 };

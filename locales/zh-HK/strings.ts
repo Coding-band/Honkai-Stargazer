@@ -289,9 +289,10 @@ export const strings = {
   ScoreLevelLeaderboard: "練度排行榜",
   //20240125
   PureFiction: "虛構敘事",
+  //20240126
   PureFictionShort: "虛構",
   PureFictionLeaderboard: "虛構排行榜",
   About: "關於",
   AboutTheApp: "關於 Stargazer",
-  PFScore: "${1}分",
+  PFScore: "${1}分"
 };

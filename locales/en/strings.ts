@@ -285,4 +285,10 @@ export const strings = {
   ScoreLevelLeaderboard: "Proficiency Leaderboard",
   //20240125
   PureFiction: "Pure Fiction",
+  //20240126
+  PureFictionShort: "Pure",
+  PureFictionLeaderboard: "Pure Leaderboard",
+  About: "About",
+  AboutTheApp: "About Stargazer",
+  PFScore: "${1} pts",
 };
