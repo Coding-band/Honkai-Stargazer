@@ -37,7 +37,7 @@ export default function getCharScore(charId, charData) {
       return 0
     }
 
-    // 光錐分數 -> 加最多10+4分 (10 : 推薦 || +4 : 疊影)
+    // 光錐分數 -> 占比10+4% (10 : 推薦 || +4 : 疊影)
     let lightconeScore = 0
     if (charLightconeID) {
       if (charScoreWeight.advice_lightcone.includes(Number(charLightconeID))) {
@@ -50,18 +50,18 @@ export default function getCharScore(charId, charData) {
     }
     lightconeScore += Math.max(charLightconeSuper - 1,0) //疊影 = [2,3,4,5] -> 每次加1分
 
-    // 星魂分數 -> 最多6分
+    // 星魂分數 -> 占比6%
     let soulScore = 0
     for (let i = 0; i < charScoreWeight.soul.length; i++) {
       if(charScoreWeight.soul[i] < 0) continue;
       if (charSoulLvl >= charScoreWeight.soul[i]) {
-        soulScore += (soulScore >= 6 ? 0 : (6 / charScoreWeight.soul.length))
+        soulScore += ((6 / charScoreWeight.soul.length))
       } else {
         break;
       }
     }
 
-    // 行跡分數 -> 最多34分
+    // 行跡分數 -> 占比34%
     let traceScore = 0
     let isChecked = [false, false, false, false];
     charTraceLvl.map((trace) => {
@@ -73,12 +73,11 @@ export default function getCharScore(charId, charData) {
         default: traceScore += 0
       }
     })
-    traceScore = (traceScore > 34 ? 34 : traceScore)
 
-    //突破分數 -> 最多6分
+    //突破分數 -> 占比6%
     let promotionScore = charPromotion
 
-    // 屬性分數 -> 最多60分
+    // 屬性分數 -> 占比60%
     let attrScore = 0
     let attrWeightSum = 0 //總權重淨值 (1.5+2+1+...)
 
@@ -106,14 +105,14 @@ export default function getCharScore(charId, charData) {
       } else {
         attrScore += (attrValue / gradValue) //畢業比率
           * ((0.5 * Math.pow(charLevel, 2) / 80) / 40) //角色等級Curve
-          * (weightValue / attrWeightSum) * 60 //滿分的佔比
+          * (weightValue / attrWeightSum) * 60 //佔比
         // console.log(name + " : " + (attrValue) + " / " + (gradValue) + " || " + ((attrValue) / (gradValue)) + " || " + ((attrValue) / (gradValue)) * (weightValue / attrWeightSum) * 58) //畢業比率
 
       }
 
     })
 
-    //最大值 120 , 畢業100
+    //最大值 沒上限 , 畢業100
     //console.log(lightconeScore+"||"+ soulScore+"||" + traceScore +"||"+ attrScore+"||"+promotionScore)
 
     schoolData.push((lightconeScore + soulScore + traceScore + attrScore + promotionScore))

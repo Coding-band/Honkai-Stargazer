@@ -35,11 +35,11 @@ function getCharScore(charId, charData) {
     //合拼 attributes+additions [END]
 
     // 該角色還沒有權重
-    if (!charScoreWeight) {
+    if (!charScoreWeight || charScoreWeight.advice_lightcone.includes(-1)) {
       return 0
     }
 
-    // 光錐分數 -> 加最多10+4分 (10 : 推薦 || +4 : 疊影)
+    // 光錐分數 -> 10+4% (10 : 推薦 || +4 : 疊影)
     let lightconeScore = 0
     if (charScoreWeight.advice_lightcone.includes(Number(charLightconeID))) {
       lightconeScore = lcAdviceScores
@@ -50,18 +50,18 @@ function getCharScore(charId, charData) {
     }
     lightconeScore += Math.max(charLightconeSuper - 1,0) //疊影 = [2,3,4,5] -> 每次加1分
 
-    // 星魂分數 -> 最多6分
+    // 星魂分數 -> 6%
     let soulScore = 0
     for (let i = 0; i < charScoreWeight.soul.length; i++) {
       if(charScoreWeight.soul[i] < 0) continue;
       if (charSoulLvl >= charScoreWeight.soul[i]) {
-        soulScore += (soulScore >= 6 ? 0 : (6 / charScoreWeight.soul.length))
+        soulScore += ((6 / charScoreWeight.soul.length))
       } else {
         break;
       }
     }
 
-    // 行跡分數 -> 最多34分
+    // 行跡分數 -> 34%
     let traceScore = 0
     let isChecked = [false, false, false, false];
     charTraceLvl.map((trace) => {
@@ -72,14 +72,13 @@ function getCharScore(charId, charData) {
         case "BPSkill": if (isChecked[3]) return; isChecked[3] = true; traceScore += charScoreWeight.trace.skill * trace.level *2/ 3; break;  //Max 15*2/3 = 10
         default: traceScore += 0
       }
-      console.log(trace.type+" : "+charScoreWeight.trace.normal_atk * trace.level / 3)
+      console.log(trace.type+" : "+ trace.level )
     })
-    traceScore = (traceScore > 34 ? 34 : traceScore)
 
-    //突破分數 -> 最多6分
+    //突破分數 -> 6%
     let promotionScore = charPromotion
 
-    // 屬性分數 -> 最多60分
+    // 屬性分數 -> 60%
     let attrScore = 0
     let attrWeightSum = 0 //總權重淨值 (1.5+2+1+...)
 
@@ -108,13 +107,10 @@ function getCharScore(charId, charData) {
       } else {
         attrScore += (attrValue / gradValue) //畢業比率
           * ((0.5 * Math.pow(charLevel, 2) / 80) / 40) //角色等級Curve
-          * (weightValue / attrWeightSum) //滿分的佔比
+          * (weightValue / attrWeightSum) * 60 //滿分的佔比
         // console.log(name + " : " + (attrValue) + " / " + (gradValue) + " || " + ((attrValue) / (gradValue)) + " || " + ((attrValue) / (gradValue)) * (weightValue / attrWeightSum) * 58) //畢業比率
 
-      }
-
-      attrScore = Math.min(attrScore * 60 , 60)
-      
+      }      
     })
 
     //最大值 120 , 畢業100
@@ -170,4 +166,4 @@ function getCurrAndGradScore(charId, charData){
     }
     return returnValue;
 }
-console.log(JSON.stringify(getCharScore("1303",demoCharData)))
+console.log(JSON.stringify(getCharScore("1305",demoCharData)))
