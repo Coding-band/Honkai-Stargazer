@@ -43,7 +43,7 @@ export default function Navigation({
       <Stack.Navigator
         initialRouteName={initialRouteName}
         screenOptions={{
-          animation: Platform.OS === "ios" ? "simple_push" : "none",
+          animation: Platform.OS === "ios" ? "simple_push" : "simple_push",
         }}
       >
         <Stack.Screen

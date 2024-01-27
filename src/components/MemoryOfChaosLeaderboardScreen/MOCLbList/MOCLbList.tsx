@@ -8,9 +8,12 @@ import Listbox from "../../global/Listbox/Listbox";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { ParamList } from "../../../types/navigation";
 import { MocVersion } from "../../../constant/moc";
+import { LOCALES } from "../../../../locales";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 
 export default function MOCLbList() {
   const { language: textLanguage } = useTextLanguage();
+  const { language: appLanguage } = useAppLanguage();
 
   const route = useRoute<RouteProp<ParamList, "MemoryOfChaosLeaderboard">>();
   // 當頁面跳轉時有指定版本&樓層數 (查看完整排行榜時)
@@ -67,25 +70,36 @@ export default function MOCLbList() {
           )}
         </View>
         <View style={{ gap: 16, alignItems: "center" }} className="mb-44">
-          {floorNumber
-            ? [floorNames?.[floorNames.length - floorNumber]]?.map(
-                (name: string, i: number) => (
+          {/* 排行榜列表 */}
+          <>
+            {floorNumber
+              ? [floorNames?.[floorNames.length - floorNumber]]?.map(
+                  (name: string, i: number) => (
+                    <MOCLbItem
+                      key={i}
+                      versionNumber={selectedVersion}
+                      floorNumber={floorNumber}
+                      floorName={name}
+                    />
+                  )
+                )
+              : floorNames?.map((name: string, i: number) => (
                   <MOCLbItem
                     key={i}
                     versionNumber={selectedVersion}
-                    floorNumber={floorNumber}
+                    floorNumber={floorNames.length - i}
                     floorName={name}
                   />
-                )
-              )
-            : floorNames?.map((name: string, i: number) => (
-                <MOCLbItem
-                  key={i}
-                  versionNumber={selectedVersion}
-                  floorNumber={floorNames.length - i}
-                  floorName={name}
-                />
-              ))}
+                ))}
+          </>
+          {/* 底下描述 */}
+          <View>
+            <Text className="text-text2 font-[HY65] text-[16px] text-center">
+              {LOCALES[appLanguage].EventDuration}：
+              {new Date(mocData.time.begin).toLocaleDateString()} -{" "}
+              {new Date(mocData.time.end).toLocaleDateString()}
+            </Text>
+          </View>
         </View>
       </ScrollView>
     </View>

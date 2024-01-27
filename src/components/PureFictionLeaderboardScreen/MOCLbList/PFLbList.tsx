@@ -8,9 +8,12 @@ import { RouteProp, useRoute } from "@react-navigation/native";
 import { ParamList } from "../../../types/navigation";
 import { PFVersion } from "../../../constant/pf";
 import PFDataMap from "../../../../map/pure_fiction_data_map";
+import { LOCALES } from "../../../../locales";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 
 export default function PFLbList() {
   const { language: textLanguage } = useTextLanguage();
+  const { language: appLanguage } = useAppLanguage();
 
   const route = useRoute<RouteProp<ParamList, "PureFictionLeaderboard">>();
   // 當頁面跳轉時有指定版本&樓層數 (查看完整排行榜時)
@@ -67,25 +70,36 @@ export default function PFLbList() {
           )}
         </View>
         <View style={{ gap: 16, alignItems: "center" }} className="mb-44">
-          {floorNumber
-            ? [floorNames?.[floorNames.length - floorNumber]]?.map(
-                (name: string, i: number) => (
+          {/* 排行榜列表 */}
+          <>
+            {floorNumber
+              ? [floorNames?.[floorNames.length - floorNumber]]?.map(
+                  (name: string, i: number) => (
+                    <PFLbItem
+                      key={i}
+                      versionNumber={selectedVersion}
+                      floorNumber={floorNumber}
+                      floorName={name}
+                    />
+                  )
+                )
+              : floorNames?.map((name: string, i: number) => (
                   <PFLbItem
                     key={i}
                     versionNumber={selectedVersion}
-                    floorNumber={floorNumber}
+                    floorNumber={floorNames.length - i}
                     floorName={name}
                   />
-                )
-              )
-            : floorNames?.map((name: string, i: number) => (
-                <PFLbItem
-                  key={i}
-                  versionNumber={selectedVersion}
-                  floorNumber={floorNames.length - i}
-                  floorName={name}
-                />
-              ))}
+                ))}
+          </>
+          {/* 底下描述 */}
+          <View>
+            <Text className="text-text2 font-[HY65] text-[16px] text-center">
+              {LOCALES[appLanguage].EventDuration}：
+              {new Date(pfData.time.begin).toLocaleDateString()} -{" "}
+              {new Date(pfData.time.end).toLocaleDateString()}
+            </Text>
+          </View>
         </View>
       </ScrollView>
     </View>

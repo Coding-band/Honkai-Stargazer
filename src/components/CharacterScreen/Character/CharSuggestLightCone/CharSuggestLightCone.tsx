@@ -30,6 +30,7 @@ export default React.memo(function CharSuggestLightCone() {
       rare: lightconeList.filter((lc) => lc.name === lcId)[0]?.rare,
       name: lcFullData?.name,
       description: lcFullData?.descHash,
+      skill: lcFullData?.skill,
       image: Lightcone[lcId]?.icon,
       path: lightconeList.filter((lc) => lc.name === lcId)[0]?.path,
     };

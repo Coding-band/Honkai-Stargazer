@@ -1,4 +1,4 @@
-import { View, Pressable } from "react-native";
+import { View, Pressable, Text } from "react-native";
 import React, { useCallback, useState } from "react";
 import LightConeCard from "../../../../global/LightConeCard/LightConeCard";
 import { ExpoImage } from "../../../../../types/image";
@@ -7,12 +7,16 @@ import PopUpCard from "../../../../global/PopUpCard/PopUpCard";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../../constant/screens";
 import { Path } from "../../../../../types/path";
+import Sliderbar from "../../../../global/Sliderbar/Sliderbar";
+import { HtmlText } from "@e-mine/react-native-html-text";
+import formatDesc from "../../../../../utils/format/formatDesc";
 
 type Props = {
   id: string;
   image?: ExpoImage;
   rare: number;
   name: string;
+  skill: any;
   description: string;
   path: Path;
 };
@@ -34,6 +38,8 @@ export default React.memo(function CharSuggestLightConeCard(props: Props) {
     });
     setIsSelected(false);
   }, []);
+
+  const [skillLevel, setSkillLevel] = useState(0);
 
   return (
     <View>
@@ -63,7 +69,46 @@ export default React.memo(function CharSuggestLightConeCard(props: Props) {
           </View>
           <PopUpCard
             title={props.name}
-            content={props.description}
+            content={
+              <View className="w-full p-4">
+                <Text className="text-black font-[HY65] text-[20px] leading-[40px]">
+                  {props.skill.name}
+                </Text>
+                <View
+                  className="pb-3"
+                  style={{
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <Text className="text-black font-[HY65] text-[16px]">
+                    Lv.{skillLevel + 1}/5
+                  </Text>
+                  <Sliderbar
+                    width={230}
+                    point={5}
+                    hasDot={false}
+                    value={skillLevel}
+                    onChange={setSkillLevel}
+                  />
+                </View>
+                <HtmlText
+                  style={{
+                    color: "black",
+                    fontFamily: "HY65",
+                    fontSize: 14,
+                    lineHeight: 20,
+                  }}
+                  // className="text-text2 font-[HY65] text-[14px]"
+                >
+                  {formatDesc(
+                    props.skill.descHash,
+                    props.skill.levelData[skillLevel].params
+                  )}
+                </HtmlText>
+              </View>
+            }
             onClose={() => {
               setIsSelected(false);
             }}

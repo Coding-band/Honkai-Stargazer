@@ -12,6 +12,7 @@ import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
 export default function LcDescription() {
+  
   const { lcFullData } = useLcData();
   const [skillLevel, setSkillLevel] = useState(0);
   const { language } = useAppLanguage();

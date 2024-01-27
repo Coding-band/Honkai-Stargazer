@@ -1,5 +1,5 @@
 import { View, Text, LayoutChangeEvent, Vibration } from "react-native";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import { cn } from "../../../utils/css/cn";
 import BlurView from "../BlurView/BlurView";
 import { PanGestureHandler } from "react-native-gesture-handler";
@@ -36,7 +36,7 @@ export default function Sliderbar({
     setContainerWidth(width);
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const span = (containerWidth - 16 * (point - 1)) / (point - 1);
     const points = [0];
     for (let i = 0; i < point - 1; i++) {
@@ -48,7 +48,7 @@ export default function Sliderbar({
   const positionX = useSharedValue(points?.[value] || 0);
   const transitionX = useSharedValue(0);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     positionX.value = points[value];
   }, [value, points]);
 
