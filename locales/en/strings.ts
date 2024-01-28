@@ -293,4 +293,7 @@ export const strings = {
   PFScore: "${1} pts",
   //20240127
   EventDuration: "Duration",
+  //20240128
+  Upgrade: "Upgrade",
+  OverWholeServerUser: "Top ${1}% of all users in record",
 };
