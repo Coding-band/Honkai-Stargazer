@@ -291,4 +291,6 @@ export const strings = {
   About: "About",
   AboutTheApp: "About Stargazer",
   PFScore: "${1} pts",
+  //20240127
+  EventDuration: "Duration",
 };

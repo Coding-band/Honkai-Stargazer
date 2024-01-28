@@ -294,5 +294,7 @@ export const strings = {
   PureFictionLeaderboard: "虚构排行榜",
   About: "关于",
   AboutTheApp: "关于 Stargazer",
-  PFScore: "${1}分"
+  PFScore: "${1}分",
+  //20240127
+  EventDuration: "活动期间"
 };

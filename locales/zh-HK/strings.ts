@@ -296,5 +296,5 @@ export const strings = {
   AboutTheApp: "關於 Stargazer",
   PFScore: "${1}分",
   //20240127
-  EventDuration: "活動期間",
+  EventDuration: "活動期間"
 };

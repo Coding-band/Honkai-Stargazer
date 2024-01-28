@@ -290,9 +290,11 @@ export const strings = {
   //20240125
   PureFiction: "Pura Ficção",
   //20240126
-  PureFictionShort: "Pure",
-  PureFictionLeaderboard: "Pure Leaderboard",
-  About: "About",
-  AboutTheApp: "About Stargazer",
-  PFScore: "${1} pts"
+  PureFictionShort: "Puro",
+  PureFictionLeaderboard: "Placar de Pura Ficção",
+  About: "Sobre",
+  AboutTheApp: "Sobre Stargazer",
+  PFScore: "${1} pts",
+  //20240127
+  EventDuration: "Duration"
 };

@@ -294,5 +294,7 @@ export const strings = {
   PureFictionLeaderboard: "Pure Leaderboard",
   About: "About",
   AboutTheApp: "About Stargazer",
-  PFScore: "${1} pts"
+  PFScore: "${1} pts",
+  //20240127
+  EventDuration: "Duration"
 };
