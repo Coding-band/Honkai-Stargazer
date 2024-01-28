@@ -14,53 +14,63 @@ export default function UserCharSkills() {
 
   return (
     inGameCharData && (
-      <View className="mt-2" style={{ flexDirection: "row", gap: 30 }}>
-        <View style={{ alignItems: "center" }}>
+      <View className="mt-2" style={{ flexDirection: "row" }}>
+        <View className="w-[72px] items-center">
           <Image
             className="w-9 h-9 mb-1"
             source={CharacterSkillMain[charId].skill1}
           />
-          <Text className="text-text font-[HY65]">{LOCALES[language].TraceNormalATK}</Text>
+          <Text className="text-text font-[HY65] text-center">
+            {LOCALES[language].TraceNormalATK}
+          </Text>
           <Text className="text-text font-[HY65]">
             Lv {inGameCharData.skills[0].level}
           </Text>
         </View>
-        <View style={{ alignItems: "center" }}>
+        <View className="w-[72px] items-center">
           <Image
             className="w-9 h-9 mb-1"
             source={CharacterSkillMain[charId].skill2}
           />
-          <Text className="text-text font-[HY65]">{LOCALES[language].TraceSkill}</Text>
+          <Text className="text-text font-[HY65]">
+            {LOCALES[language].TraceSkill}
+          </Text>
           <Text className="text-text font-[HY65]">
             Lv {inGameCharData.skills[1].level}
           </Text>
         </View>
-        <View style={{ alignItems: "center" }}>
+        <View className="w-[72px] items-center">
           <Image
             className="w-9 h-9 mb-1"
             source={CharacterSkillMain[charId].skill3}
           />
-          <Text className="text-text font-[HY65]">{LOCALES[language].TraceUltimate}</Text>
+          <Text className="text-text font-[HY65]">
+            {LOCALES[language].TraceUltimate}
+          </Text>
           <Text className="text-text font-[HY65]">
             Lv {inGameCharData.skills[2].level}
           </Text>
         </View>
-        <View style={{ alignItems: "center" }}>
+        <View className="w-[72px] items-center">
           <Image
             className="w-9 h-9 mb-1"
             source={CharacterSkillMain[charId].skill4}
           />
-          <Text className="text-text font-[HY65]">{LOCALES[language].TraceTalent}</Text>
+          <Text className="text-text font-[HY65]">
+            {LOCALES[language].TraceTalent}
+          </Text>
           <Text className="text-text font-[HY65]">
             Lv {inGameCharData.skills[3].level}
           </Text>
         </View>
-        <View style={{ alignItems: "center" }}>
+        <View className="w-[72px] items-center">
           <Image
             className="w-9 h-9 mb-1"
             source={CharacterSkillMain[charId].skill6}
           />
-          <Text className="text-text font-[HY65]">{LOCALES[language].TraceTechnique}</Text>
+          <Text className="text-text font-[HY65]">
+            {LOCALES[language].TraceTechnique}
+          </Text>
           <Text className="text-text font-[HY65]">
             Lv {inGameCharData.skills[5].level}
           </Text>

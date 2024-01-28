@@ -8,6 +8,7 @@ import { useQuery } from "react-query";
 import db from "../../../../firebase/db";
 import useProfileHsrInGameInfo from "../../../../context/UserCharDetailData/hooks/useProfileHsrInGameInfo";
 import getCharScore from "../../../../utils/calculator/charScoreCalculator/getCharScore";
+import formatLocale from "../../../../utils/format/formatLocale";
 
 export default function UserCharStats() {
   const { language: appLanguage } = useAppLanguage();
@@ -45,7 +46,10 @@ export default function UserCharStats() {
     <>
       <View style={{ alignItems: "center", gap: 2 }}>
         <Text className="text-text font-[HY65] text-[18px] leading-5">
-          超過全服 {((overStat / totalStat) * 100 || 0).toFixed(1)}% 用戶
+          {formatLocale(LOCALES[appLanguage].OverWholeServerUser, [
+            // @ts-ignore
+            ((overStat / totalStat) * 100 || 0).toFixed(1),
+          ])}
         </Text>
         <Text className="text-[#FFFFFF60] font-[HY65] text-[12px] leading-4">
           {LOCALES[appLanguage].LeaderboardDataFrom}

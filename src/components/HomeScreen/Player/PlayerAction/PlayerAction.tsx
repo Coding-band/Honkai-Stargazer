@@ -3,7 +3,7 @@ import { View } from "react-native";
 import MoreBtn from "../../../global/MoreBtn/MoreBtn";
 import List from "../../../global/List/List";
 import ListItem from "../../../global/List/ListItem";
-import { useClickOutside } from "react-native-click-outside";
+import { useClickOutside } from "../../../../../lib/react-native-click-outside/src/useClickOutside";
 import AccountBinding from "./AccountBinding/AccountBinding";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../constant/screens";

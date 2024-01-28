@@ -17,7 +17,7 @@ export default React.memo(function CharTrace() {
   const { language } = useAppLanguage();
   const { charData } = useCharData();
   const charPathId = charData?.pathId;
-
+ 
   return (
     <View className="px-4" style={{ alignItems: "center" }}>
       <CharPageHeading Icon={TreeStructure}>

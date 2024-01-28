@@ -5,7 +5,7 @@ import { useFonts } from "expo-font";
 import { useCallback, useEffect, useRef, useState } from "react";
 import * as SplashScreen from "expo-splash-screen";
 import * as NavigationBar from "expo-navigation-bar";
-import { ClickOutsideProvider } from "react-native-click-outside";
+import { ClickOutsideProvider } from "./lib/react-native-click-outside/src";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import FixedProvider from "./src/components/global/Fixed/FixedProvider";
 import Navigation from "./src/navigation/Navigation";
@@ -19,7 +19,6 @@ import AppLanguageProvider from "./src/language/AppLanguage/AppLanguageProvider"
 import NotificationWrapper from "./src/notifications/NotificationWrapper";
 import { pushExpoNotiType } from "./src/notifications/constant/pushExpoNotiType";
 import { SCREENS } from "./src/constant/screens";
-import getRelicScore from "./src/utils/calculator/relicScoreCalculator/getRelicScore";
 
 // import playground for testing
 // import "./playground";

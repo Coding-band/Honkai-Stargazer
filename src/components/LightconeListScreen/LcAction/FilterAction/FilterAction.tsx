@@ -10,6 +10,7 @@ import { Path as PathType } from "../../../../types/path";
 import { CombatType as CombatTypeType } from "../../../../types/combatType";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
+import { useClickOutside } from "../../../../../lib/react-native-click-outside/src";
 
 export default function FilterAction() {
   const { language } = useAppLanguage();
@@ -30,8 +31,12 @@ export default function FilterAction() {
     [lcFilter]
   );
 
+  const ref = useClickOutside(() => {
+    setOpen(false);
+  });
+
   return (
-    <View>
+    <View ref={ref}>
       <FilterBtn
         onPress={() => {
           setOpen(!open);

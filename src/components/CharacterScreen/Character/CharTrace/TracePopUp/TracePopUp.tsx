@@ -136,7 +136,7 @@ export default React.memo(function TracePopUp({ type, data, onClose }: Props) {
                   {skillData?.statusList && (
                     <Text>
                       <HtmlText>{skillData?.statusList[0].key}</HtmlText>
-                      <Text>提升</Text>
+                      <Text>{LOCALES[language].Upgrade}</Text>
                       <Text>
                         {skillData?.statusList[0].value < 1
                           ? `${(skillData?.statusList[0].value * 100).toFixed(

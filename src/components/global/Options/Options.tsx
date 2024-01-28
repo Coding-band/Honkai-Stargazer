@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, Dimensions } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Image } from "expo-image";
-import { useClickOutside } from "react-native-click-outside";
+import { useClickOutside } from "../../../../lib/react-native-click-outside/src/useClickOutside";
 import { ScrollView } from "react-native-gesture-handler";
 
 const Options = ({

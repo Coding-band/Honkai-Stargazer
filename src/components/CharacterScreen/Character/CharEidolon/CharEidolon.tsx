@@ -9,7 +9,7 @@ import Eidolon4 from "./Eidolons/Eidolon4";
 import Eidolon5 from "./Eidolons/Eidolon5";
 import Eidolon6 from "./Eidolons/Eidolon6";
 import EidolonPopUp from "./EidolonPopUp/EidolonPopUp";
-import { useClickOutside } from "react-native-click-outside";
+import { useClickOutside } from "../../../../../lib/react-native-click-outside/src/useClickOutside";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 

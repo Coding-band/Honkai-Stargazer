@@ -26,7 +26,7 @@ export default function UserCharScoreBar(props: Props) {
           <Text
             className="font-[HY65]"
             style={{
-              color: "white",
+              color: props.currScore >= props.gradScore ? "#FFD070" : "white",
             }}
           >
             {props.type === "value" ? (

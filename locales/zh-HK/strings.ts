@@ -296,5 +296,8 @@ export const strings = {
   AboutTheApp: "關於 Stargazer",
   PFScore: "${1}分",
   //20240127
-  EventDuration: "活動期間"
+  EventDuration: "活動期間",
+  //20240128
+  Upgrade: "提升",
+  OverWholeServerUser: "超過全服 ${1}% 用戶",
 };

@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import CharacterContext from "../../../../../context/CharacterData/CharacterContext";
 import { getCharFullData } from "../../../../../utils/data/getDataFromMap";
 import { Image } from "expo-image";
-import { useClickOutside } from "react-native-click-outside";
+import { useClickOutside } from "../../../../../../lib/react-native-click-outside/src/useClickOutside";
 import Edge from "../TraceItem/Edge";
 import useDelayLoad from "../../../../../hooks/useDelayLoad";
 import Outer from "../TraceItem/Outer";

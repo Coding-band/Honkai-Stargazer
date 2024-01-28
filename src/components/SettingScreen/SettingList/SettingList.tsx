@@ -13,6 +13,9 @@ import SpecialThanksSetting from "./SpecialThanksSetting/SpecialThanksSetting";
 import DevelopmentSetting from "./DevelopmentSetting/DevelopmentSetting";
 
 export default function SettingList() {
+
+  
+
   return (
     <ScrollView className="z-30 h-screen py-[110px] px-4 pb-0">
       <View style={{ gap: 20 }} className="pb-48">

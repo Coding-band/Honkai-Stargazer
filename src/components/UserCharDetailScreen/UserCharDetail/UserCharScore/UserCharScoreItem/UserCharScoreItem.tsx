@@ -12,7 +12,7 @@ export default function UserCharScoreItem({
 }) {
   return (
     <View
-      className="h-[54px]"
+      className="h-[54px] w-16"
       style={{ justifyContent: "space-between", alignItems: "center" }}
     >
       {typeof value === "string" ? (
@@ -27,7 +27,7 @@ export default function UserCharScoreItem({
       ) : (
         value
       )}
-      <Text className="text-text font-[HY65] text-[12px]">{title}</Text>
+      <Text className="text-text font-[HY65] text-[12px] text-center">{title}</Text>
     </View>
   );
 }

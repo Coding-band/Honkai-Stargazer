@@ -1,7 +1,7 @@
 import { View, Pressable } from "react-native";
 import React, { useState } from "react";
 import { Image } from "expo-image";
-import { useClickOutside } from "react-native-click-outside";
+import { useClickOutside } from "../../../../../../lib/react-native-click-outside/src/useClickOutside";
 import Edge from "../TraceItem/Edge";
 import useDelayLoad from "../../../../../hooks/useDelayLoad";
 import Outer from "../TraceItem/Outer";
