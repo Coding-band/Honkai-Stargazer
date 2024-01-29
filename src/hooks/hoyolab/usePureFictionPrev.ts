@@ -5,8 +5,14 @@ import useHsrServerChosen from "../../redux/hsrServerChosen/useHsrServerChosen";
 import HoyolabRequest from "../../utils/hoyolab/request/HoyolabRequest";
 import MihoyoRequest from "../../utils/hoyolab/request/MihoyoRequest";
 import { isHoyolabPlatform } from "../../utils/hoyolab/utils";
+import appLangHoyoLangMap from "../../utils/hoyolab/language/appLangHoyoLangMap";
+import useAppLanguage from "../../language/AppLanguage/useAppLanguage";
 
 const usePureFictionPrev = () => {
+
+  const { language } = useAppLanguage();
+
+
   const { hoyolabCookie } = useHoyolabCookie();
   const HsrUUID = useHsrUUID();
   const { hsrServerChosen } = useHsrServerChosen();
@@ -15,7 +21,8 @@ const usePureFictionPrev = () => {
     ["hsr-pure-fiction-prev", hoyolabCookie, HsrUUID, hsrServerChosen],
     () =>
       new (isHoyolabPlatform(hsrServerChosen) ? HoyolabRequest : MihoyoRequest)(
-        hoyolabCookie
+        hoyolabCookie,
+        appLangHoyoLangMap[language]
       ).getHsrPureFiction(HsrUUID, hsrServerChosen, 2),
     {
       select(data) {

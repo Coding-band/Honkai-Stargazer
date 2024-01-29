@@ -114,7 +114,7 @@ export default function Menu() {
         <Text>
           {playerNote.data.current_stamina >= 240
             ? LOCALES[language].StaminaIsFull
-            : formatTimePoint(playerNote.data.stamina_recover_time)}
+            : formatTimePoint(playerNote.data.stamina_recover_time, language)}
         </Text>
       ) : null,
       onPress: () => {
@@ -167,7 +167,8 @@ export default function Menu() {
                 _.maxBy(
                   playerNote.data.expeditions,
                   (e: any) => e.remaining_time
-                ).remaining_time
+                ).remaining_time,
+                language
               )}
         </Text>
       ) : null,
@@ -201,16 +202,7 @@ export default function Menu() {
         navigation.navigate(SCREENS.PureFictionPage.id);
       },
     },
-    // 地圖
-    {
-      type: "normal",
-      name: SCREENS.MapPage.getShortName(language),
-      icon: SCREENS.MapPage.icon,
-      onPress: () => {
-        // @ts-ignore
-        navigation.navigate(SCREENS.MapPage.id);
-      },
-    },
+
     // 活動
     {
       type: "normal",
@@ -219,6 +211,16 @@ export default function Menu() {
       onPress: () => {
         // @ts-ignore
         navigation.navigate(SCREENS.EventListPage.id);
+      },
+    },
+    // 練度排行榜
+    {
+      type: "normal",
+      name: SCREENS.ScoreLeaderboardPage.getShortName(language),
+      icon: SCREENS.ScoreLeaderboardPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.ScoreLeaderboardPage.id);
       },
     },
     // 混沌回憶排行榜
@@ -240,16 +242,6 @@ export default function Menu() {
         navigation.navigate(SCREENS.PureFictionLeaderboardPage.id);
       },
     },
-    // 練度排行榜
-    {
-      type: "normal",
-      name: SCREENS.ScoreLeaderboardPage.getShortName(language),
-      icon: SCREENS.ScoreLeaderboardPage.icon,
-      onPress: () => {
-        // @ts-ignore
-        navigation.navigate(SCREENS.ScoreLeaderboardPage.id);
-      },
-    },
     // 兌換碼
     {
       type: "normal",
@@ -258,6 +250,16 @@ export default function Menu() {
       onPress: () => {
         // @ts-ignore
         navigation.navigate(SCREENS.CodePage.id);
+      },
+    },
+    // 地圖
+    {
+      type: "normal",
+      name: SCREENS.MapPage.getShortName(language),
+      icon: SCREENS.MapPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.MapPage.id);
       },
     },
   ];

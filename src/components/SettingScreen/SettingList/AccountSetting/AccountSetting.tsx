@@ -34,14 +34,14 @@ export default function AccountSetting() {
         <SettingGroup
           title={formatLocale(LOCALES[language].AccountSetup, [hsrUUID])}
         >
-          <SettingItem
+          {/* <SettingItem
             type="navigation"
             title={LOCALES[language].UseInviteCode}
             content={LOCALES[language].HaveNotUsed}
             onNavigate={() => {
               setOpenInvite(true);
             }}
-          />
+          /> */}
           {hsrUUID && (
             <SettingItem
               type="list"

@@ -31,33 +31,31 @@ export default function FilterAction() {
     [charFilter]
   );
 
-  const ref = useClickOutside(() => {
-    setOpen(false);
-  });
-
   return (
-    <View ref={ref}>
+    <View>
       <FilterBtn
         onPress={() => {
           setOpen(!open);
         }}
       />
       {open && (
-        <FilterPopUp
-          items={charFilterItems!}
-          value={charFilterSelected!}
-          // @ts-ignore
-          onChange={setCharFilterSelected}
-          onClose={() => {
-            setOpen(false);
-          }}
-          onReset={() => {
-            setCharFilterSelected([]);
-          }}
-          onConfirm={() => {
-            setOpen(false);
-          }}
-        />
+        <View>
+          <FilterPopUp
+            items={charFilterItems!}
+            value={charFilterSelected!}
+            // @ts-ignore
+            onChange={setCharFilterSelected}
+            onClose={() => {
+              setOpen(false);
+            }}
+            onReset={() => {
+              setCharFilterSelected([]);
+            }}
+            onConfirm={() => {
+              setOpen(false);
+            }}
+          />
+        </View>
       )}
     </View>
   );

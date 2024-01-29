@@ -6,8 +6,10 @@ import useHsrServerChosen from "../../redux/hsrServerChosen/useHsrServerChosen";
 import { isHoyolabPlatform } from "../../utils/hoyolab/utils";
 import useAppLanguage from "../../language/AppLanguage/useAppLanguage";
 import { LanguageEnum } from "../../utils/hoyolab/language/language.interface";
+import appLangHoyoLangMap from "../../utils/hoyolab/language/appLangHoyoLangMap";
 
 const useHoyolabGameRecord = () => {
+  const { language } = useAppLanguage();
 
   const { hoyolabCookie, hoyolabCookieParse } = useHoyolabCookie();
   const { hsrServerChosen } = useHsrServerChosen();
@@ -20,7 +22,8 @@ const useHoyolabGameRecord = () => {
     ["hoyolab-game-record", hoyolabCookie, hoyolabId],
     () =>
       new (isHoyolabPlatform(hsrServerChosen) ? HoyolabRequest : MihoyoRequest)(
-        hoyolabCookie
+        hoyolabCookie,
+        appLangHoyoLangMap[language]
       ).getGameRecord(hoyolabId),
     {
       select(data) {

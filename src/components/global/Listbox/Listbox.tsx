@@ -4,8 +4,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { Shadow } from "react-native-shadow-2";
 
 import ListboxItem from "./ListboxItem/ListboxItem";
-import { useClickOutside } from "../../../../lib/react-native-click-outside/src/useClickOutside";
-import { BlurView } from "expo-blur";
+import { useClickOutside } from "react-native-click-outside";
 
 type Props = {
   button: React.ReactNode;

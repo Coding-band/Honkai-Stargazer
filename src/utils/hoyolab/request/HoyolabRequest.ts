@@ -6,7 +6,7 @@ import axios from "axios";
 
 export default class HoyolabRequest {
   private request: Request;
-
+  private lang: LanguageEnum;
   constructor(
     cookies: string | null = null,
     lang: LanguageEnum = LanguageEnum.TRADIIONAL_CHINESE
@@ -15,6 +15,7 @@ export default class HoyolabRequest {
       Host: "bbs-api-os.hoyolab.com",
       "x-rpc-app_version": "1.5.0",
     });
+    this.lang = lang;
   }
 
   //* 獲取 Hoyolab 遊戲紀錄
@@ -76,14 +77,14 @@ export default class HoyolabRequest {
   //* 獲取活動列表
   public getHsrEventList(uuid: string, server: hsrServerId = "asia") {
     return axios.get(
-      `https://sg-hkrpg-api.hoyoverse.com/common/hkrpg_global/announcement/api/getAnnList?game=hkrpg&game_biz=hkrpg_global&lang=zh-tw&bundle_id=hkrpg_global&level=55&platform=pc&region=prod_official_cht&uid=900000000`
+      `https://sg-hkrpg-api.hoyoverse.com/common/hkrpg_global/announcement/api/getAnnList?game=hkrpg&game_biz=hkrpg_global&lang=${this.lang}&bundle_id=hkrpg_global&level=55&platform=pc&region=prod_official_cht&uid=900000000`
     );
   }
 
   //* 獲取活動
   public getHsrEvent(uuid: string, server: hsrServerId = "asia") {
     return axios.get(
-      `https://sg-hkrpg-api.hoyoverse.com/common/hkrpg_global/announcement/api/getAnnContent?game=hkrpg&game_biz=hkrpg_global&lang=zh-tw&bundle_id=hkrpg_global&level=55&platform=pc&region=prod_official_cht&uid=900000000`
+      `https://sg-hkrpg-api.hoyoverse.com/common/hkrpg_global/announcement/api/getAnnContent?game=hkrpg&game_biz=hkrpg_global&lang=${this.lang}&bundle_id=hkrpg_global&level=55&platform=pc&region=prod_official_cht&uid=900000000`
     );
   }
 }

@@ -31,12 +31,8 @@ export default function FilterAction() {
     [lcFilter]
   );
 
-  const ref = useClickOutside(() => {
-    setOpen(false);
-  });
-
   return (
-    <View ref={ref}>
+    <View>
       <FilterBtn
         onPress={() => {
           setOpen(!open);

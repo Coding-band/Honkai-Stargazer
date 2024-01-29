@@ -7,6 +7,7 @@ import { ExpoImage } from "../../../types/image";
 import _ from "lodash";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
+import { useClickOutside } from "react-native-click-outside";
 
 type Props = {
   items: { value: string; name: string; icon: ExpoImage }[];
@@ -19,13 +20,21 @@ type Props = {
 
 export default function FilterPopUp(props: Props) {
   const { language } = useAppLanguage();
+
+  const ref = useClickOutside(() => {
+    props.onClose && props.onClose();
+  });
+
   return (
-    <View className="absolute bottom-16 translate-x-[-6px] h-[100px]" style={{justifyContent:"flex-end"}}>
+    <View
+      className="absolute bottom-16 translate-x-[-6px] h-[100px]"
+      style={{ justifyContent: "flex-end" }}
+    >
       <PopUpCard
         onClose={props.onClose && props.onClose}
         title={LOCALES[language].FilterTitle}
         content={
-          <View className="pt-0">
+          <View ref={ref} className="pt-0">
             <View
               className="px-4 py-2.5"
               style={{ flexDirection: "row", gap: 12 }}

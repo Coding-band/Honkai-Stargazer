@@ -73,13 +73,6 @@ export default React.memo(function Character() {
                 <CharSuggestRelics />
                 <CharSuggestTeam />
                 <CharStory />
-                {/* <CharAttribute />
-                <CharTrace />
-                <CharEidolon />
-                <CharSuggestLightCone />
-                <CharSuggestRelics />
-                <CharSuggestTeam />
-                <CharStory /> */}
               </Animated.View>
             </View>
             <CharComment containerRef={aref} />

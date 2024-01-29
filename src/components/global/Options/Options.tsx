@@ -28,11 +28,10 @@ const Options = ({
   });
 
   return (
-    <View className="w-[110px] z-30 ">
+    <View ref={ref} className="w-[110px] z-30 ">
       <TouchableOpacity
-        disabled={open}
         onPress={() => {
-          if (!open) setOpen(true);
+          setOpen(!open);
         }}
         activeOpacity={0.35}
         style={{ flexDirection: "row", alignItems: "center", gap: 8 }}
@@ -46,7 +45,6 @@ const Options = ({
         />
       </TouchableOpacity>
       <ScrollView
-        ref={ref}
         style={{
           display: open ? "flex" : "none",
           height: Dimensions.get("screen").height - 232,

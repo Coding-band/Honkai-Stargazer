@@ -21,6 +21,7 @@ import useAddUserComment from "../../../../../firebase/hooks/UserComments/useAdd
 import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../../locales";
 import genId from "../../../../../utils/genId";
+import useDelayLoad from "../../../../../hooks/useDelayLoad";
 
 export default function CommentInput({
   value,
@@ -131,29 +132,13 @@ export default function CommentInput({
     }
   };
 
-  const [intensity, setIntensity] = useState(10);
-  useEffect(() => {
-    setTimeout(() => {
-      setIntensity(30);
-    }, 1000);
-    setTimeout(() => {
-      setIntensity(30);
-    }, 1000);
-    setTimeout(() => {
-      setIntensity(30);
-    }, 1000);
-    setTimeout(() => {
-      setIntensity(30);
-    }, 1000);
-  }, []);
-
   return (
     <View className="w-full px-6" style={{ justifyContent: "center" }}>
       <View className="rounded-[23px] overflow-hidden">
         <BlurView
           tint="light"
-          intensity={intensity}
-          className="bg-[#FFFFFF20]"
+          intensity={30}
+          className="bg-[#ffffff20]"
           style={{ flexDirection: "row" }}
         >
           {/* 輸入框 */}

@@ -5,6 +5,7 @@ import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../constant/screens";
 import { formatTimeDurationSimple } from "../../../utils/date/formatTime";
+import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 
 export default function EventListItemType2({
   event,
@@ -18,18 +19,12 @@ export default function EventListItemType2({
   onLongPress: () => void;
 }) {
   const navigation = useNavigation();
+  const { language } = useAppLanguage();
 
   const handleNavigateEvent = (id: string) => {
     // @ts-ignore
     navigation.push(SCREENS.EventPage.id, { id });
   };
-
-  // console.log(
-  //   formatTimeDurationSimple(
-  //     new Date(eventListData.tag_end_time).getTime() / 1000 -
-  //       new Date(eventListData.tag_start_time).getTime() / 1000
-  //   )
-  // );
 
   return (
     <TouchableOpacity
@@ -50,7 +45,8 @@ export default function EventListItemType2({
           <Text className="font-[HY65] w-5 leading-4 text-center">
             {formatTimeDurationSimple(
               new Date(eventListData.end_time).getTime() / 1000 -
-                new Date(eventListData.start_time).getTime() / 1000
+                Date.now() / 1000,
+              language
             )}
           </Text>
         </View>
@@ -60,7 +56,8 @@ export default function EventListItemType2({
           <Text className="font-[HY65] leading-4">
             {formatTimeDurationSimple(
               new Date(eventListData.end_time).getTime() / 1000 -
-                new Date(eventListData.start_time).getTime() / 1000
+                Date.now() / 1000,
+              language
             )}
           </Text>
         </View>

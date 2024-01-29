@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { GestureResponderEvent, Platform, Pressable, StyleSheet, View } from 'react-native';
+import { GestureResponderEvent, Platform, StyleSheet, View } from 'react-native';
 import { onTouch, setIsTouch } from './utils/collection';
 import { isInRange } from './utils/helpers';
 
@@ -18,11 +18,8 @@ export const ClickOutsideProvider: FC<ClickOutsideProviderProps> = ({
 }) => (
   <View
     style={styles.flex}
-    onTouchStart={(e) => {
-      touchX = e.nativeEvent.changedTouches[0]?.pageX;
-      touchY = e.nativeEvent.changedTouches[0]?.pageY;
-      setIsTouch(true);
-        if (!touchX) touchX = e.nativeEvent.changedTouches[0]?.pageX;
+    onTouchEnd={(e) => {
+      if (!touchX) touchX = e.nativeEvent.changedTouches[0]?.pageX;
       if (!touchY) touchY = e.nativeEvent.changedTouches[0]?.pageY;
       if (!e.nativeEvent.changedTouches[0] || !touchX || !touchY) return;
       if (
@@ -35,6 +32,12 @@ export const ClickOutsideProvider: FC<ClickOutsideProviderProps> = ({
       onTouch(e);
       touchX = undefined;
       touchY = undefined;
+    }}
+    onTouchStart={(e) => {
+      touchX = e.nativeEvent.changedTouches[0]?.pageX;
+      touchY = e.nativeEvent.changedTouches[0]?.pageY;
+      setIsTouch(true);
+      
     }}
     {...(Platform.OS === 'web' && {
       onClick: (e: GestureResponderEvent) => {

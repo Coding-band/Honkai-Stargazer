@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { Platform, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import { BlurView as ExpoBlurView } from "expo-blur";
 import * as Device from "expo-device";
@@ -13,7 +13,11 @@ export default function BlurView(props: Props) {
 
   const { doUseBlurEffect } = useDoUseBlurEffect();
 
-  if (!doUseBlurEffect || osVersionNumber < 12 || props?.disable) {
+  if (
+    !doUseBlurEffect ||
+    (Platform.OS === "android" && osVersionNumber < 12) ||
+    props?.disable
+  ) {
     return (
       <View {...omit(props, ["intensity", "tint", "children"])}>
         {props.children}
