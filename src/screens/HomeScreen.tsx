@@ -414,8 +414,8 @@ export default function HomeScreen() {
                 id: c.id,
                 level: c.level,
                 rank: c.rank,
-                score: Number(f.node_2.score),
               })),
+              score: Number(f.node_2.score),
             },
           })),
         };
@@ -440,14 +440,14 @@ export default function HomeScreen() {
               round_num: floor.round_num,
               star_num: floor.star_num,
               challenge_time: toTimestamp(floor.layer_1.challenge_time),
-              score: Number(floor.layer_1.score) + Number(floor.layer_1.score),
+              score: Number(floor.layer_1.score) + Number(floor.layer_2.score),
               layer_1: {
                 characters: floor.layer_1.characters,
                 score: floor.layer_1.score,
               },
               layer_2: {
                 characters: floor.layer_2.characters,
-                score: floor.layer_1.score,
+                score: floor.layer_2.score,
               },
             };
             const floorDoc = db

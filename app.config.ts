@@ -56,7 +56,11 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   assetBundlePatterns: ["**/*"],
   ios: {
-    googleServicesFile: "./GoogleService-Info.plist",
+    googleServicesFile: askEnvDo({
+      development: "./beta-GoogleService-Info.plist",
+      beta: "./beta-GoogleService-Info.plist",
+      production: "./GoogleService-Info.plist",
+    }),
     supportsTablet: true,
     bundleIdentifier: askEnvDo({
       development: PACKAGE_NAME.iosBETA,

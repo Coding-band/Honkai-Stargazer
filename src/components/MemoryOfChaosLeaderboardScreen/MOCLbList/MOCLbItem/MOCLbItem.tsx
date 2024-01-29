@@ -181,8 +181,8 @@ const RecordItem = React.memo((props: any) => {
           {props.challenge_time && (
             <Text className="text-text text-[10px] font-[HY65] translate-x-[-10px]">
               {new Date(props.challenge_time).toLocaleDateString()}{" "}
-              {new Date(props.challenge_time).getHours()}:
-              {new Date(props.challenge_time).getMinutes()}{" "}
+              {`0${new Date(props.challenge_time).getHours()}`.slice(-2)}:
+              {`0${new Date(props.challenge_time).getMinutes()}`.slice(-2)}{" "}
               {formatLocale(LOCALES[language].MOCRounds, [props.round_num])}{" "}
               {formatLocale(LOCALES[language].MOCStars, [props.star_num])}
             </Text>
