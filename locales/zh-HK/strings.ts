@@ -218,7 +218,7 @@ export const strings = {
   LeaderboardDataFrom: "（數據來自已登入用戶）",
   AppStatusLoading: "帕姆祈禱中",
   AppStatusLostConnect: "和列車失去聯繋了...",
-  AppStatusPlayerNoReleaseData: "玩家沒有公開數據誒",
+  AppStatusPlayerNoReleaseData: "玩家沒有公開數據哦",
   AppStatusNoDataFound: "暫時沒找到數據...",
   CharSoul: "星魂${1}",
   StatusNow: "上線中",
@@ -299,5 +299,7 @@ export const strings = {
   EventDuration: "活動期間",
   //20240128
   Upgrade: "提升",
-  OverWholeServerUser: "超過全服 ${1}% 用戶"
+  OverWholeServerUser: "超過全服 ${1}% 用戶",
+  //20240129
+  NoCommentYet:"還沒有留言..."
 };

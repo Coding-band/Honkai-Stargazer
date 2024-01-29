@@ -81,7 +81,7 @@ export default function PFLbItem({
             setIsLayer2(!isLayer2);
           }}
         >
-          <Text className="text-text2 font-[HY65] text-[16px]">
+          <Text className="text-text2 font-[HY65] text-[16px] leading-5">
             {floorName}{" "}
             {isLayer2 ? LOCALES[language].MOCPart2 : LOCALES[language].MOCPart1}
           </Text>

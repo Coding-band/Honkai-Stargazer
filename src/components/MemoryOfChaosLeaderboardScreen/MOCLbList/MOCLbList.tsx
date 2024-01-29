@@ -50,7 +50,7 @@ export default function MOCLbList() {
                   height={46}
                   withArrow
                 >
-                  <Text className="text-[16px] font-[HY65] text-[#222]">
+                  <Text className="text-[16px] font-[HY65] text-[#222] leading-6">
                     {mocVersion.filter((v) => v.id === selectedVersion)[0].name}
                   </Text>
                 </Button>

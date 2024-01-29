@@ -49,7 +49,7 @@ export default function PureFiction() {
                 height={46}
                 withArrow
               >
-                <Text className="text-[16px] font-[HY65] text-[#222]">
+                <Text className="text-[16px] font-[HY65] text-[#222] leading-5">
                   {pfVersion.filter((v) => v.id === selectedVersion)[0].name}
                 </Text>
               </Button>

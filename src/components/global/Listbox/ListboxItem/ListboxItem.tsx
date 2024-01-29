@@ -22,7 +22,7 @@ export default function ListboxItem(props: Props) {
         alignItems: "center",
       }}
     >
-      <Text className="text-[#222] text-[16px] font-[HY65]">
+      <Text className="text-[#222] text-[16px] font-[HY65] leading-5">
         {props.children}
       </Text>
       {props.selected && <ListSelectedIcon />}

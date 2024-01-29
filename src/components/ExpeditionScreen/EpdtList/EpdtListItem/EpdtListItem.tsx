@@ -45,14 +45,17 @@ export default function EpdtListItem(props: Props) {
                 ></Image>
                 <View style={{ gap: 2, flexGrow: 1 }}>
                   {/* name */}
-                  <Text className="font-[HY55] text-[15px] text-[#222222] leading-5">
+                  <Text
+                    className="font-[HY55] text-[15px] text-[#222222] leading-5 w-48"
+                    numberOfLines={1}
+                  >
                     {props.name}
                   </Text>
                   {/* 剩餘時間 */}
                   <Text className="font-[HY65] text-[13px] text-[#00000060]">
                     {props.ongoing === false
                       ? LOCALES[language].IsDone
-                      : formatTimeDuration(props.remainingTime)}
+                      : formatTimeDuration(props.remainingTime, language)}
                   </Text>
                 </View>
                 <View
@@ -76,7 +79,7 @@ export default function EpdtListItem(props: Props) {
                   <Text className="font-[HY65] text-[13px] text-[#00000060]">
                     {props.ongoing === false
                       ? ""
-                      : formatTimePoint(props.remainingTime)}
+                      : formatTimePoint(props.remainingTime, language)}
                   </Text>
                 </View>
               </View>

@@ -67,7 +67,7 @@ export default function UserInfo(props: Props) {
       ? LOCALES[language].StatusNow
       : LOCALES[language].UserInfoLastLoginAt.replace(
           "${1}",
-          formatTimeDurationSimple(lastLoginDuration)
+          formatTimeDurationSimple(lastLoginDuration, language)
         );
 
   // 用戶留言

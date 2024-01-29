@@ -176,63 +176,63 @@ export default function HomeScreen() {
   }, [uid]);
 
   //* 建立或更新用戶角色數據 (UserCharacters)
-  // useEffect(() => {
-  //   async function createOrUpdateUserCharacters() {
-  //     if (uid && hsrCharList && hsrInGameInfo) {
-  //       const UserCharacterDocGet = await db.UserCharacters.doc(uid).get();
-  //       const UserCharactersIsExist = UserCharacterDocGet.exists;
-  //       const charsData = {
-  //         characters: hsrCharList.map((char: any) => ({
-  //           id: char?.id,
-  //           level: char?.level,
-  //           rank: char?.rank,
-  //           equip: char?.equip
-  //             ? {
-  //                 id: char?.equip?.id,
-  //                 level: char?.equip?.level,
-  //                 rank: char?.equip?.rank,
-  //               }
-  //             : {},
-  //           relics: char?.relics
-  //             ? char?.relics?.map((relic: any) => ({
-  //                 id: relic?.id,
-  //                 level: relic?.level,
-  //                 rarity: relic?.rarity,
-  //                 pos: relic?.pos,
-  //               }))
-  //             : [],
-  //           ornaments: char?.ornaments
-  //             ? char?.ornaments?.map((ornament: any) => ({
-  //                 id: ornament?.id,
-  //                 level: ornament?.level,
-  //                 rarity: ornament?.rarity,
-  //                 pos: ornament?.pos,
-  //               }))
-  //             : [],
-  //         })),
-  //         characters_details: unionBy(
-  //           hsrInGameInfo?.characters,
-  //           UserCharacterDocGet?.data()?.characters_details,
-  //           "id"
-  //         ),
-  //       } as UserCharacte;
-  //       if (UserCharactersIsExist) {
-  //         try {
-  //           db.UserCharacters.doc(uid).update(charsData);
-  //         } catch (e: any) {
-  //           console.log("updated UserCharacters: " + e.message);
-  //         }
-  //       } else {
-  //         try {
-  //           db.UserCharacters.doc(uid).set(charsData);
-  //         } catch (e: any) {
-  //           console.log("create UserCharacters: " + e.message);
-  //         }
-  //       }
-  //     }
-  //   }
-  //   createOrUpdateUserCharacters();
-  // }, [uid, hsrCharList, hsrInGameInfo]);
+  useEffect(() => {
+    async function createOrUpdateUserCharacters() {
+      if (uid && hsrCharList && hsrInGameInfo) {
+        const UserCharacterDocGet = await db.UserCharacters.doc(uid).get();
+        const UserCharactersIsExist = UserCharacterDocGet.exists;
+        const charsData = {
+          characters: hsrCharList.map((char: any) => ({
+            id: char?.id,
+            level: char?.level,
+            rank: char?.rank,
+            equip: char?.equip
+              ? {
+                  id: char?.equip?.id,
+                  level: char?.equip?.level,
+                  rank: char?.equip?.rank,
+                }
+              : {},
+            relics: char?.relics
+              ? char?.relics?.map((relic: any) => ({
+                  id: relic?.id,
+                  level: relic?.level,
+                  rarity: relic?.rarity,
+                  pos: relic?.pos,
+                }))
+              : [],
+            ornaments: char?.ornaments
+              ? char?.ornaments?.map((ornament: any) => ({
+                  id: ornament?.id,
+                  level: ornament?.level,
+                  rarity: ornament?.rarity,
+                  pos: ornament?.pos,
+                }))
+              : [],
+          })),
+          characters_details: unionBy(
+            hsrInGameInfo?.characters,
+            UserCharacterDocGet?.data()?.characters_details,
+            "id"
+          ),
+        } as UserCharacte;
+        if (UserCharactersIsExist) {
+          try {
+            db.UserCharacters.doc(uid).update(charsData);
+          } catch (e: any) {
+            console.log("updated UserCharacters: " + e.message);
+          }
+        } else {
+          try {
+            db.UserCharacters.doc(uid).set(charsData);
+          } catch (e: any) {
+            console.log("create UserCharacters: " + e.message);
+          }
+        }
+      }
+    }
+    createOrUpdateUserCharacters();
+  }, [uid, hsrCharList, hsrInGameInfo]);
 
   //* 建立或更新用戶混沌回憶資料 (UserMemoryOfChaos)
   useEffect(() => {

@@ -76,14 +76,14 @@ export default function App() {
               <TextLanguageProvider>
                 <RootSiblingParent>
                   <GestureHandlerRootView style={{ flex: 1 }}>
-                    <ClickOutsideProvider>
+                    <ClickOutsideProviderOffical>
                       <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
                         {/* <StatusBar hidden /> */}
                         <FixedProvider>
                           <Navigation initialRouteName={initialRouteName} />
                         </FixedProvider>
                       </View>
-                    </ClickOutsideProvider>
+                    </ClickOutsideProviderOffical>
                   </GestureHandlerRootView>
                 </RootSiblingParent>
               </TextLanguageProvider>

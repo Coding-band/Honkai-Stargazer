@@ -218,7 +218,7 @@ export const strings = {
   LeaderboardDataFrom: "（数据来自已登入用户）",
   AppStatusLoading: "帕姆祈祷中",
   AppStatusLostConnect: "和列车失去联系了...",
-  AppStatusPlayerNoReleaseData: "玩家没有公开数据诶",
+  AppStatusPlayerNoReleaseData: "玩家没有公开数据哦",
   AppStatusNoDataFound: "暂时没找到数据...",
   CharSoul: "星魂${1}",
   StatusNow: "上线中",
