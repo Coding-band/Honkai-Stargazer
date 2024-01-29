@@ -76,16 +76,14 @@ export default function App() {
               <TextLanguageProvider>
                 <RootSiblingParent>
                   <GestureHandlerRootView style={{ flex: 1 }}>
-                    <ClickOutsideProviderOffical>
-                      <ClickOutsideProvider>
-                        <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-                          {/* <StatusBar hidden /> */}
-                          <FixedProvider>
-                            <Navigation initialRouteName={initialRouteName} />
-                          </FixedProvider>
-                        </View>
-                      </ClickOutsideProvider>
-                    </ClickOutsideProviderOffical>
+                    <ClickOutsideProvider>
+                      <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+                        {/* <StatusBar hidden /> */}
+                        <FixedProvider>
+                          <Navigation initialRouteName={initialRouteName} />
+                        </FixedProvider>
+                      </View>
+                    </ClickOutsideProvider>
                   </GestureHandlerRootView>
                 </RootSiblingParent>
               </TextLanguageProvider>
