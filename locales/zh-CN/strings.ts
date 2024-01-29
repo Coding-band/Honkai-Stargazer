@@ -299,5 +299,7 @@ export const strings = {
   EventDuration: "活动期间",
   //20240128
   Upgrade: "提升",
-  OverWholeServerUser: "超过全服 ${1}% 用户"
+  OverWholeServerUser: "超过全服 ${1}% 用户",
+  //20240129
+  NoCommentYet: "还没有留言..."
 };

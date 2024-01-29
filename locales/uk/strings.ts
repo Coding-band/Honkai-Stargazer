@@ -299,5 +299,7 @@ export const strings = {
   EventDuration: "Duration",
   //20240128
   Upgrade: "Upgrade",
-  OverWholeServerUser: "Top ${1}% of all users in record"
+  OverWholeServerUser: "Top ${1}% of all users in record",
+  //20240129
+  NoCommentYet: "No comments yet ..."
 };
