@@ -1,8 +1,8 @@
 import { View, Text, TouchableOpacity, Dimensions } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Image } from "expo-image";
-import { useClickOutside } from "../../../../lib/react-native-click-outside/src/useClickOutside";
 import { ScrollView } from "react-native-gesture-handler";
+import { useClickOutside } from "react-native-click-outside";
 
 const Options = ({
   values,
@@ -23,12 +23,12 @@ const Options = ({
     onChange(current);
   }, [current]);
 
-  const ref = useClickOutside(() => {
-    setOpen(false);
-  });
+  // const ref = useClickOutside(() => {
+  //   setOpen(false);
+  // });
 
   return (
-    <View ref={ref} className="w-[110px] z-30">
+    <View  className="w-[110px] z-30">
       <TouchableOpacity
         onPress={() => {
           setOpen(!open);

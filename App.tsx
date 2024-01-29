@@ -6,6 +6,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import * as SplashScreen from "expo-splash-screen";
 import * as NavigationBar from "expo-navigation-bar";
 import { ClickOutsideProvider } from "./lib/react-native-click-outside/src";
+import { ClickOutsideProvider as ClickOutsideProviderOffical } from "react-native-click-outside";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import FixedProvider from "./src/components/global/Fixed/FixedProvider";
 import Navigation from "./src/navigation/Navigation";
@@ -75,14 +76,16 @@ export default function App() {
               <TextLanguageProvider>
                 <RootSiblingParent>
                   <GestureHandlerRootView style={{ flex: 1 }}>
-                    <ClickOutsideProvider>
-                      <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-                        {/* <StatusBar hidden /> */}
-                        <FixedProvider>
-                          <Navigation initialRouteName={initialRouteName} />
-                        </FixedProvider>
-                      </View>
-                    </ClickOutsideProvider>
+                    <ClickOutsideProviderOffical>
+                      <ClickOutsideProvider>
+                        <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+                          {/* <StatusBar hidden /> */}
+                          <FixedProvider>
+                            <Navigation initialRouteName={initialRouteName} />
+                          </FixedProvider>
+                        </View>
+                      </ClickOutsideProvider>
+                    </ClickOutsideProviderOffical>
                   </GestureHandlerRootView>
                 </RootSiblingParent>
               </TextLanguageProvider>

@@ -13,6 +13,7 @@ import CharacterSkillTree from "../../../../../../assets/images/images_map/chara
 import CharacterSkillMain from "../../../../../../assets/images/images_map/characterSkillMain";
 import useCharData from "../../../../../context/CharacterData/hooks/useCharData";
 import Path from "../../../../../../assets/images/images_map/path";
+import { Audio } from "expo-av";
 
 const TraceLine = require("./images/path_trace_line/erudition_trace_line.svg");
 
@@ -294,9 +295,13 @@ export default function EruditionTraceTree() {
                 top={344}
                 icon={CharacterSkillMain[charId].skill6}
                 selected={selectData === skillTreeInner6}
-                onPress={() => {
+                onPress={async () => {
                   setSelectType("inner");
                   setSelectData(skillTreeInner6);
+                  // const { sound } = await Audio.Sound.createAsync(
+                  //   require("../../../../../../assets/audio/herta_voice/herta_talent_1.mp3")
+                  // );
+                  // await sound.playAsync();
                 }}
               />
               <Inner

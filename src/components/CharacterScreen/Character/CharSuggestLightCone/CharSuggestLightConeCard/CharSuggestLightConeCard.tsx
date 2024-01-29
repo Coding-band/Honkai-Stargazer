@@ -10,6 +10,7 @@ import { Path } from "../../../../../types/path";
 import Sliderbar from "../../../../global/Sliderbar/Sliderbar";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import formatDesc from "../../../../../utils/format/formatDesc";
+import Button from "../../../../global/Button/Button";
 
 type Props = {
   id: string;
@@ -39,7 +40,7 @@ export default React.memo(function CharSuggestLightConeCard(props: Props) {
     setIsSelected(false);
   }, []);
 
-  const [skillLevel, setSkillLevel] = useState(0);
+  const [skillLevel, setSkillLevel] = useState(4);
 
   return (
     <View>
@@ -85,6 +86,7 @@ export default React.memo(function CharSuggestLightConeCard(props: Props) {
                   <Text className="text-black font-[HY65] text-[16px]">
                     Lv.{skillLevel + 1}/5
                   </Text>
+
                   <Sliderbar
                     width={230}
                     point={5}
