@@ -1,4 +1,4 @@
-ttttttttttttttttttttttttttimport React from 'react';
+import React from 'react';
 import type { View } from 'react-native';
 import { register, unregister } from './utils/collection';
 import { useFocusEffect } from './useFocusEffect';
