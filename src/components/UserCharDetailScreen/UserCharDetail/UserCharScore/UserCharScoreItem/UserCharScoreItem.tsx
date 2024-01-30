@@ -12,7 +12,7 @@ export default function UserCharScoreItem({
 }) {
   return (
     <View
-      className="h-[54px] w-16"
+      className="h-[54px] w-[72px]"
       style={{ justifyContent: "space-between", alignItems: "center" }}
     >
       {typeof value === "string" ? (

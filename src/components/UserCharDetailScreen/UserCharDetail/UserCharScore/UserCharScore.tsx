@@ -38,7 +38,7 @@ export default function UserCharScore() {
 
   return (
     inGameCharData && (
-      <View style={{ gap: 24 }}>
+      <View style={{ gap: 24 }} className="items-center">
         {/* <View style={styles.container}>
           <Text className="text-text font-[HY65] text-[20px]">角色详情</Text>
           <View

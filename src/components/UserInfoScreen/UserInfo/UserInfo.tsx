@@ -284,7 +284,7 @@ const InfoItem = ({
 }) => (
   <View style={{ alignItems: "center" }} className="w-20">
     <Text className="text-text text-[24px] font-[HY65] leading-5">{value}</Text>
-    <Text className="text-text text-[12px] font-[HY65] leading-5">{title}</Text>
+    <Text className="text-text text-[12px] font-[HY65] leading-5 text-center">{title}</Text>
   </View>
 );
 
