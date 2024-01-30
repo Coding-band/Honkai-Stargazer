@@ -1,0 +1,550 @@
+<!DOCTYPE html><html><head>
+      <title>reddit</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Vocap\.vscode\extensions\gicentre.markdown-preview-enhanced-with-litvis-0.31.0\node_modules\mume-with-litvis\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="we-have-made-a-probably-best-used-star-rail-assistant">&quot;We have made a (probably) best-used Star Rail Assistant&quot;</h1>
+
+<p><img src="./image/en/banner_release_en.jpg" alt="Stargazer 2 Banner"></p>
+<h3 class="mume-header" id="thank-you-very-much-to-everyone-who-participated-in-the-closed-beta-and-provided-us-with-different-valuable-suggestions-during-the-closed-beta">Thank you very much to everyone who participated in the closed beta and provided us with different valuable suggestions during the closed beta.</h3>
+
+<h3 class="mume-header" id="at-the-same-time-we-would-also-like-to-thank-meiji-for-his-great-help-and-suggestions-providing-us-with-guidance-on-various-high-end-functions-and-trying-to-integrate-this-articlehttpsforumgamercomtwcphpbsn72822sna4272">At the same time, we would also like to thank Meiji for his great help and suggestions, providing us with guidance on various high-end functions, and trying to integrate <a href="https://forum.gamer.com.tw/C.php?bsn=72822&amp;snA=4272">this article</a>?</h3>
+
+<h2 class="mume-header" id="span-stylecolor569cd6intro"><span style="color:#569CD6">Intro</span></h2>
+
+<p>Stargazer 2 was developed by<span style="color:#E31576">Coding Band</span>, and will upload to Google Play and App Store, which hope trabilizer can try our app in both Android and iOS devices</p>
+<p><span style="color:#E31576">&#x26A0;&#xFE0F; Please be careful on package name!!! Do not download versions that are not distributed through the following channels!!!&#x26A0;&#xFE0F;</span></p>
+<ul>
+<li><code>com.voc.honkai_stargazer_gp</code> (<a href="https://play.google.com/store/apps/details?id=com.voc.honkai_stargazer_gp">Google Play</a>)</li>
+<li><code>com.voc.honkaistargazer</code> (App Store)</li>
+</ul>
+<p><span style="color:#FF9900">&#x1F4E7; If you want to cooperate with us, please contact us via joining our <a href="https://discord.gg/uXatcbWKv2">Coding Band - Offical Server in Discord</a> &#x1F4E7;</span><br></p>
+<h2 class="mume-header" id="span-stylecolor569cd6highlights"><span style="color:#569CD6">Highlights</span></h2>
+
+<h3 class="mume-header" id="character-proficiency">Character Proficiency</h3>
+
+<h4 class="mume-header" id="span-stylecolor00ccccno-need-to-loginspan-character-relic-score-ranking"><span style="color:#00CCCC">[No need to login]</span> Character, Relic Score ranking</h4>
+
+<p>You can query by UID / click on the avatar of any user in the message area to view the user&apos;s role rating!<br><br>
+P.S. The scoring criteria and weights are still in testing.</p>
+<h4 class="mume-header" id="span-stylecolor00ccccno-need-to-loginspan-leaderboard"><span style="color:#00CCCC">[No need to login]</span> Leaderboard</h4>
+
+<p>Currently, Stargazer 2 provides <em>Proficiency Leaderboard</em>, <strong>MOC Leaderboard</strong> and <code>Pure Fiction Leaderboard</code><br><br>
+<em>Proficiency Leaderboard</em></p>
+<ul>
+<li>Provides the character proficiency ranking of all logged-in users in this character<br></li>
+<li>Press the user name to view the detailed proficiency information of the specific character from this user.<br></li>
+</ul>
+<p><strong>MOC Leaderboard</strong> and <code>Pure Fiction Leaderboard</code></p>
+<ul>
+<li>Provides the ranking of all logged-in users in the specified MOC / Pure Fiction<br></li>
+<li>Short press the character avatar to switch between display Character Level / Eidolon<br></li>
+<li>Short press the level name to switch between Node 1 / Node 2<br></li>
+<li>You may switch the MOC / Pure Fiction version at the top of leaderboard<br></li>
+</ul>
+<p>P.S. The proficiency data comes from in-game data of logged-in users. (Which set by user in &quot;Support Character&quot; and &quot;Starfaring Companions&quot;)<br><br>
+P.S. The MOC &amp; Pure Fiction data comes from in-game data of logged-in users.<br><br></p>
+<h3 class="mume-header" id="community">Community</h3>
+
+<h4 class="mume-header" id="span-stylecolorc09050may-need-to-loginspan-trabilizer-comments-function"><span style="color:#C09050">[May need to login]</span> Trabilizer Comments Function</h4>
+
+<p>You can use this function via select a character in character list, then scroll to the bottom</p>
+<ul>
+<li>[No need to login] Read other&apos;s comments and team builds (Plan to develop)</li>
+<li>[Pls login first] Send comments, giving likes</li>
+<li>[Pls login first] Send stickers</li>
+<li>[Pls login first] Share your team build (Plan to develop)</li>
+</ul>
+<p>P.S. Please use the message function rationally. Users are not allowed to wash pages, post any form of advertising, send any swear words, personal attacks, insults, inappropriate remarks, phishing links, 18-year-old prohibited / NSFW or metaphorical erotic images/videos/words such as suicide and self-harm, and Any verbal/behavioral harassment of others. If you find the above comments, please capture the evidence immediately and report it to the server MOD.</p>
+<h4 class="mume-header" id="span-stylecolor00ccccno-need-to-loginspan-uid-search"><span style="color:#00CCCC">[No need to login]</span> UID Search</h4>
+
+<p>You can search UID between any server<br><br>
+Please use the query function rationally and do not perform enumeration actions.</p>
+<h4 class="mume-header" id="span-stylecolor00ccccno-need-to-loginspan-user-character-showcase"><span style="color:#00CCCC">[No need to login]</span> User Character Showcase</h4>
+
+<p>You can search UID between any server<br><br>
+Please use the query function rationally and do not perform enumeration actions.</p>
+<h4 class="mume-header" id="span-stylecolor00ccccno-need-to-loginspan-characters-lightcones-and-relics-info-search"><span style="color:#00CCCC">[No need to login]</span> Characters, Lightcones and Relics Info Search</h4>
+
+<h4 class="mume-header" id="span-stylecolor00ccccno-need-to-loginspan-star-rail-event-list"><span style="color:#00CCCC">[No need to login]</span> Star Rail Event List</h4>
+
+<h4 class="mume-header" id="span-stylecolor00ccccno-need-to-loginspan-easter-eggs"><span style="color:#00CCCC">[No need to login]</span> Easter Eggs</h4>
+
+<h3 class="mume-header" id="account-status">Account Status</h3>
+
+<h4 class="mume-header" id="span-stylecolorc03050pls-login-firstspan-instant-trabilize-power-expedition-display"><span style="color:#C03050">[Pls login first]</span> Instant Trabilize Power, Expedition display</h4>
+
+<p>When you open the app, it will show ...</p>
+<ul>
+<li>Remain Trabilize Power and time cost for fulfill</li>
+<li>Daily Training Activity</li>
+<li>Expedition Information</li>
+<li>Score of Simulated Universe in this week</li>
+</ul>
+<p>In the main page (After u logged in)</p>
+<h4 class="mume-header" id="span-stylecolorc09050may-need-to-loginspan-moc-record"><span style="color:#C09050">[May need to login]</span> MOC record</h4>
+
+<p>After logging in, pressing &quot;Memory of Chaos&quot; will display the current monster content<br><br>
+Click the button next to the menu to display the current BUFF details<br><br>
+Press the button in the upper right corner to display the Chaos Memories record of the current account (login required)<br></p>
+<h4 class="mume-header" id="span-stylecolorc09050may-need-to-loginspan-pure-fiction-record"><span style="color:#C09050">[May need to login]</span> Pure Fiction record</h4>
+
+<p>After logging in, pressing &quot;Pure Fiction&quot; will display the current monster content<br><br>
+Press the button in the upper right corner to display the Pure Fiction record of the current account (login required)<br></p>
+<h3 class="mume-header" id="planned-to-develop">Planned to Develop</h3>
+
+<h4 class="mume-header" id="the-following-features-are-still-in-the-preliminary-planning-stages-please-help-us">The following features are still in the preliminary planning stages (please help us!)</h4>
+
+<ul>
+<li>Character Combat Order Tool</li>
+<li>Character DMG Simulator</li>
+<li>Friend add/remove function</li>
+<li>More Easter Eggs</li>
+<li>More and more...</li>
+</ul>
+<h3 class="mume-header" id="screenshots">Screenshots</h3>
+
+<table>
+<thead>
+<tr>
+<th>Character &amp; Relic Score</th>
+<th>Proficiency Leaderboard</th>
+<th>MOC Leaderboard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="./image/en/screen_score_function.jpg" alt="Alt text"></td>
+<td><img src="./image/en/screen_score_leaderboard.jpg" alt="Alt text"></td>
+<td><img src="./image/en/screen_moc_leaderboard.jpg" alt="Alt text"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Comment Function</th>
+<th>UID Search</th>
+<th>Character Showcase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="./image/en/screen_comment.jpg" alt="Alt text"></td>
+<td><img src="./image/en/screen_uid_search.jpg" alt="Alt text"></td>
+<td><img src="./image/en/screen_user_char_show.jpg" alt="Alt text"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Character Info Search</th>
+<th>Lightcone Info Search</th>
+<th>Relic Info Search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="./image/en/screen_char_list.jpg" alt="&#x89D2;&#x8272;&#x8CC7;&#x6599;&#x67E5;&#x8A62;"></td>
+<td><img src="./image/en/screen_lightcone_list.jpg" alt="&#x5149;&#x9310;&#x8CC7;&#x6599;&#x67E5;&#x8A62;"></td>
+<td><img src="./image/en/screen_relic_list.jpg" alt="&#x907A;&#x5668;&#x8CC7;&#x6599;&#x67E5;&#x8A62;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Event List</th>
+<th>Trailblazer Power</th>
+<th>MOC Record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="./image/en/screen_event_list.jpg" alt="&#x6D3B;&#x52D5;&#x5217;&#x8868;"></td>
+<td><img src="./image/en/screen_acc_status.jpg" alt="&#x958B;&#x62D3;&#x529B;"></td>
+<td><img src="./image/en/screen_moc_record.jpg" alt="&#x6DF7;&#x6C8C;&#x56DE;&#x61B6;&#x7D00;&#x9304;"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="mume-header" id="span-stylecolor569cd6cookies-usage-policy-statement"><span style="color:#569CD6">Cookies usage policy statement</span></h2>
+
+<h3 class="mume-header" id="span-stylecolor569cd6declaration"><span style="color:#569CD6">Declaration</span></h3>
+
+<p>Stargazer 2 <b>WON&apos;T</b> collect any cookies from user, all user cookies will only be stored locally. Cookies cannot replace account passwords and cannot be used for third-party login. We do not and cannot collect and access users&apos; accounts and passwords.<br><br>
+Once u press <code>Login</code>, which means you have confirmed that you are aware of the App&apos;s cookie usage policy allow Stargazer 2 to obtain data related to the logged in account.</p>
+<h3 class="mume-header" id="span-stylecolor569cd6how-to-set-up-instant-trabilize-power-and-mocpure-fiction"><span style="color:#569CD6">How to set up instant Trabilize Power and MOC/Pure Fiction?</span></h3>
+
+<table>
+<thead>
+<tr>
+<th>First, pls press <code>...</code> at the main page&#xFF0C;then press <code>Login</code></th>
+<th>Pls agree with the policy of using this function</th>
+<th>You will see this page after agree</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="./image/en/screen_login_1.jpg" alt="Step1"></td>
+<td><img src="./image/en/screen_login_2.jpg" alt="Step2"></td>
+<td><img src="./image/en/screen_login_3.jpg" alt="Step3"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&#x26A0;&#xFE0F; Method 1&#xFF1A;Enter Cookies Manually &#x26A0;&#xFE0F;</th>
+<th>&#x1F9D9; Method 2&#xFF1A;Login from offical site &#x1F9D9;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Press <code>Manually</code>, select your server by pressing the button (Which wrote the server name), then follow the instruction to paste Cookies. Press &quot;OK&quot; for confirming</td>
+<td>Select your server <span style="color:#FF0000">&#x26A0;&#xFE0F;It will be Failed to login if u selected the wrong server&#x26A0;&#xFE0F;</span></td>
+</tr>
+<tr>
+<td><img src="./image/en/screen_login_3_1.jpg" alt="Alt text"></td>
+<td><img src="./image/en/screen_login_3_2.jpg" alt="Step4"></td>
+</tr>
+<tr>
+<td></td>
+<td>After login successfully, pls press <strong>The &quot;X&quot; Button at the left-top corner</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><img src="./image/en/screen_login_4_1.jpg" alt="Step4"> s</td>
+</tr>
+</tbody>
+</table>
+<p><strong>DONE!</strong></p>
+<h2 class="mume-header" id="span-stylecolor569cd6backend-server-description"><span style="color:#569CD6">Backend server description</span></h2>
+
+<h3 class="mume-header" id="span-stylecolor569cd6declaration-1"><span style="color:#569CD6">Declaration</span></h3>
+
+<p>We will only collect and store the following data to provide users with advanced features (in the future):</p>
+<ul>
+<li>Game UID, level, name, server, number of active days, number of treasure chests opened, avatar</li>
+<li>Data of owned character, equipped with light cone, relic name and level</li>
+<li>MOC &amp; Pure Fiction data</li>
+<li>UID search records (only stored locally, we will not collect and use them for analysis)</li>
+<li>The time and content of the user&#x2019;s message in the message function</li>
+</ul>
+<p>We reserve the right to change the scope of collection.</p>
+<h2 class="mume-header" id="span-stylecolor569cd6pls-help-me--trabilizers-"><span style="color:#569CD6">Pls help me ! Trabilizers !</span></h2>
+
+<p>We are currently recruiting volunteers to help us improve the quality of our app:</p>
+<h3 class="mume-header" id="span-stylecolor339966translators-span-stylecolorcccccc"><span style="color:#339966">Translators <span style="color:#CCCCCC"></span></span></h3>
+
+<ul>
+<li>Any language are welcome!</li>
+<li>No limit to the number of translators</li>
+<li>Using Crowdin for doing translation</li>
+</ul>
+<h3 class="mume-header" id="span-stylecolor338899beta-testers-span"><span style="color:#338899">Beta Testers </span></h3>
+
+<ul>
+<li>Limits: 100 ppls (Android and iOS)</li>
+<li>Need to comply with &quot;RULES&quot;</li>
+<li>Violators will be permanently suspended from testing</li>
+<li>Please DM @yukina4096 in Discprd to apply, remember provide the following information as well:
+<ul>
+<li>Platform used (Android / iOS)</li>
+<li>Receive the email of the closed beta test (for iOS, please remember the email of the provider&#x2019;s Apple ID)</li>
+<li>Star Dome UID (to facilitate us to record errors and the like, please log in with the account with that UID when testing)<br>
+<img src="image/yukina_crop.png" alt="yukina4096"></li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="span-stylecolorff9900rules"><span style="color:#FF9900">&quot;RULES&quot;</span></h3>
+
+<ul>
+<li>Do not distribute the BETA version to anyone publicly or privately</li>
+<li>Unpacking, capturing, decompiling, or repackaging the App is not allowed</li>
+<li>Pls note that BETA version does not represent the official version</li>
+<li>Do not maliciously attack the server / make the server unable to provide normal services / DDos</li>
+</ul>
+<h3 class="mume-header" id="span-stylecolorff99ccabout-coding-band"><span style="color:#FF99CC">About Coding Band</span></h3>
+
+<p>Coding Band consists of 4 core members, namely :<br></p>
+<ul>
+<li>&#x300A;Designer&#x300B;<a href="https://github.com/2O48">2O48</a></li>
+<li>&#x300A;RN Fish&#x300B;<a href="https://github.com/Dalufishe">Dalufish</a></li>
+<li>&#x300A;Polite Cat&#x300B;<a href="https://github.com/Vocaloid2048">Voc-&#x591C;&#x82B7;&#x51B0;</a></li>
+<li>&#x300A;Furina&#x300B;<a href="https://github.com/ilikecatgirls">Somebody</a><br>
+<img src="./image/en/coding_band_4_ppl.jpg" alt="Herta IMG"></li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

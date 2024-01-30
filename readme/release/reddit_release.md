@@ -1,6 +1,16 @@
+---
+title: "reddit"
+output:
+  word_document:
+    path: ./reddit.docx
+    toc: true
+    toc_depth: 6
+    number_sections: true
+---
+
 # "We have made a (probably) best-used Star Rail Assistant"
 
-![Stargazer 2 Banner](./image/banner_release_en.png)
+![Stargazer 2 Banner](./image/en/banner_release_en.jpg)
 
 ### Thank you very much to everyone who participated in the closed beta and provided us with different valuable suggestions during the closed beta.
 
@@ -107,6 +117,26 @@ Press the button in the upper right corner to display the Pure Fiction record of
 - More Easter Eggs
 - More and more...
 
+### Screenshots
+
+| Character & Relic Score                           | Proficiency Leaderboard                              | MOC Leaderboard                                    |
+| ------------------------------------------------- | ---------------------------------------------------- | -------------------------------------------------- |
+| ![Alt text](./image/en/screen_score_function.jpg) | ![Alt text](./image/en/screen_score_leaderboard.jpg) | ![Alt text](./image/en/screen_moc_leaderboard.jpg) |
+
+| Comment Function                           | UID Search                                    | Character Showcase                                |
+| ------------------------------------------ | --------------------------------------------- | ------------------------------------------------- |
+| ![Alt text](./image/en/screen_comment.jpg) | ![Alt text](./image/en/screen_uid_search.jpg) | ![Alt text](./image/en/screen_user_char_show.jpg) |
+
+| Character Info Search                            | Lightcone Info Search                                 | Relic Info Search                                 |
+| ------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------- |
+| ![角色資料查詢](./image/en/screen_char_list.jpg) | ![光錐資料查詢](./image/en/screen_lightcone_list.jpg) | ![遺器資料查詢](./image/en/screen_relic_list.jpg) |
+
+| Event List                                    | Trailblazer Power                           | MOC Record                                        |
+| --------------------------------------------- | ------------------------------------------- | ------------------------------------------------- |
+| ![活動列表](./image/en/screen_event_list.jpg) | ![開拓力](./image/en/screen_acc_status.jpg) | ![混沌回憶紀錄](./image/en/screen_moc_record.jpg) |
+
+---
+
 ## <span style="color:#569CD6">Cookies usage policy statement
 
 ### <span style="color:#569CD6">Declaration
@@ -116,16 +146,16 @@ Once u press `Login`, which means you have confirmed that you are aware of the A
 
 ### <span style="color:#569CD6">How to set up instant Trabilize Power and MOC/Pure Fiction?
 
-| First, pls press `...` at the main page，then press `Login` | Pls agree with the policy of using this function | You will see this page after agree   |
-| ----------------------------------------------------------- | ------------------------------------------------ | ------------------------------------ |
-| ![Step1](./image/screen_login_1.png)                        | ![Step2](./image/screen_login_2.png)             | ![Step3](./image/screen_login_3.png) |
+| First, pls press `...` at the main page，then press `Login` | Pls agree with the policy of using this function | You will see this page after agree      |
+| ----------------------------------------------------------- | ------------------------------------------------ | --------------------------------------- |
+| ![Step1](./image/en/screen_login_1.jpg)                     | ![Step2](./image/en/screen_login_2.jpg)          | ![Step3](./image/en/screen_login_3.jpg) |
 
 | ⚠️ Method 1：Enter Cookies Manually ⚠️                                                                                                                             | 🧙 Method 2：Login from offical site 🧙                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
 | Press `Manually`, select your server by pressing the button (Which wrote the server name), then follow the instruction to paste Cookies. Press "OK" for confirming | Select your server <span style="color:#FF0000">⚠️It will be Failed to login if u selected the wrong server⚠️</span> |
-| ![Alt text](./image/screen_login_3_1.png)                                                                                                                          | ![Step4](./image/screen_login_3_2.png)                                                                              |
+| ![Alt text](./image/en/screen_login_3_1.jpg)                                                                                                                       | ![Step4](./image/en/screen_login_3_2.jpg)                                                                           |
 |                                                                                                                                                                    | After login successfully, pls press **The "X" Button at the left-top corner**                                       |
-|                                                                                                                                                                    | ![Step4](./image/screen_login_4_1.png)                                                                              |
+|                                                                                                                                                                    | ![Step4](./image/en/screen_login_4_1.jpg) s                                                                         |
 
 **DONE!**
 
@@ -179,4 +209,4 @@ Coding Band consists of 4 core members, namely :<br>
 - 《RN Fish》[Dalufish](https://github.com/Dalufishe)
 - 《Polite Cat》[Voc-夜芷冰](https://github.com/Vocaloid2048)
 - 《Furina》[Somebody](https://github.com/ilikecatgirls)
-  ![Herta IMG](./image/coding_band_4_ppl.png)
+  ![Herta IMG](./image/en/coding_band_4_ppl.jpg)
