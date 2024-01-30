@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity, Linking } from "react-native";
 import React from "react";
 import {
   HtmlText,
@@ -8,6 +8,7 @@ import {
 import { Image } from "expo-image";
 import { LOCALES } from "../../../../../../locales";
 import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
+import { DiscordLogo, GithubLogo, GooglePlayLogo } from "phosphor-react-native";
 
 export default function AboutTheApp() {
   const { language } = useAppLanguage();
@@ -37,13 +38,25 @@ export default function AboutTheApp() {
           {LOCALES[language].AboutTheAppContent}
         </HtmlText>
       </HtmlTextContext.Provider>
-      <Image
-        source={
-          "https://truth.bahamut.com.tw/s01/202401/forum/72822/eb351f271a3edd842e237b0ff2fcc71d.PNG?w=1000"
-        }
-        className="w-full h-48"
-        contentFit="contain"
-      />
+      <Image source={require("../../../../../../assets/images/codingband-banner.png")} className="w-full h-48" contentFit="contain" />
+      <View className="flex-row items-center justify-around mt-6">
+        <TouchableOpacity
+          activeOpacity={0.65}
+          onPress={() => {
+            Linking.openURL("https://discord.gg/uXatcbWKv2");
+          }}
+        >
+          <DiscordLogo size={32} color="#5865f2" weight="bold" />
+        </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={0.65}
+          onPress={() => {
+            Linking.openURL("https://github.com/Coding-band/Honkai-Stargazer");
+          }}
+        >
+          <GithubLogo size={32} color="#e6edf3" weight="bold" />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }

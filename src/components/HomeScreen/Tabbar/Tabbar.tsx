@@ -35,15 +35,21 @@ export default function Tabbar() {
         </Tab>
       </View> */}
       <View className="py-2" style={{ alignItems: "center", gap: 8 }}>
-        <Text
-          className="text-text text-[14px] font-[HY65]"
-          // color="white"
-          // textSize={14}
-          // fontFamily="HY65"
-          // text={}
+        <Pressable
+          onPress={() => {
+            Linking.openURL("https://discord.gg/uXatcbWKv2");
+          }}
         >
-          {LOCALES[language].DonationRemoveAds}
-        </Text>
+          <Text
+            className="text-text text-[14px] font-[HY65]"
+            // color="white"
+            // textSize={14}
+            // fontFamily="HY65"
+            // text={}
+          >
+            {LOCALES[language].DonationRemoveAds}
+          </Text>
+        </Pressable>
         {/* <Pressable
           className="w-full h-[70px]"
           onPress={() => {
