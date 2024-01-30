@@ -38,7 +38,6 @@ import usePureFictionPrev from "../hooks/hoyolab/usePureFictionPrev";
 
 export default function HomeScreen() {
   const uid = useMyFirebaseUid();
-
   const { hoyolabCookieParse } = useHoyolabCookie();
   const hsrFullData = useHsrFullData().data;
 
