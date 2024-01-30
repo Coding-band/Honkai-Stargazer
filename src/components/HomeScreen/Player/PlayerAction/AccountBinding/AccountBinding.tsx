@@ -13,8 +13,7 @@ export default function AccountBinding() {
   const [isVisable, setIsVisable] = useState(true);
   const { language } = useAppLanguage();
 
-  const { isAcceptBindingPolicy, setIsAcceptBindingPolicy } =
-    useIsAcceptBindingPolicy();
+  const [isAcceptBindingPolicy, setIsAcceptBindingPolicy] = useState(false);
   const [isManualEnterCookie, setIsManualEnterCookie] = useState(false);
 
   return (
