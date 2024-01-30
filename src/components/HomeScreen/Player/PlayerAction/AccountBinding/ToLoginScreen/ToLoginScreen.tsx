@@ -79,6 +79,9 @@ export default function ToLoginScreen(props: Props) {
       >
         {LOCALES[language].ManuallySetup}
       </Button>
+      <Text className="text-[14px] font-[HY65] text-black leading-5">
+        {LOCALES[language].LoginHint}
+      </Text>
     </View>
   );
 }
