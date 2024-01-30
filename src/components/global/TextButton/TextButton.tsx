@@ -9,7 +9,7 @@ type Props = {
 export default function TextButton(props: Props) {
   return (
     <Button {...props}>
-      <Text className="text-[14px] font-[HY55]">{props.children}</Text>
+      <Text className="text-[14px] font-[HY65]">{props.children}</Text>
     </Button>
   );
 }

@@ -82,7 +82,7 @@ export default function AccountSetting() {
                   multiline={true}
                
                   placeholderTextColor="gray"
-                  className="w-full bg-[#ffffff50] rounded-[8px] p-3 font-[HY55] leading-5"
+                  className="w-full bg-[#ffffff50] rounded-[8px] p-3 font-[HY65] leading-5"
                 />
                 <TextButton hasShadow={false} width={"100%"} height={46}>
                   確認

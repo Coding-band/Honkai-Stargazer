@@ -37,7 +37,9 @@ export default function Player() {
             <View>
               <Text
                 className={cn(
-                  isAdmin ? "text-[#FF5555]" : "text-white",
+                  "text-text",
+                  isAdmin && "text-[#FFD070]",
+                  isTester && "text-green-400",
                   "text-[22px] font-[HY65] mb-1.5"
                 )}
               >

@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, Platform } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../../../constant/screens";
@@ -9,6 +9,8 @@ import {
   hsrPlatform,
   hsrServerId,
 } from "../../../../../../utils/hoyolab/servers/hsrServer.types";
+import Button from "../../../../../global/Button/Button";
+import Toast from "../../../../../../utils/toast/Toast";
 
 type Server = {
   id: hsrServerId;
@@ -45,23 +47,29 @@ export default function ToLoginScreen(props: Props) {
 
   return (
     <View style={{ gap: 12 }}>
-      <Text className="text-[14px] font-[HY55] text-black leading-5">
+      <Text className="text-[14px] font-[HY65] text-black leading-5">
         {LOCALES[language].SelectAccountInServer}
       </Text>
       {hsrServers.map((server) => (
-        <TextButton
+        <Button
           onPress={() => {
-            handleChoseServer(server);
+            if (Platform.OS === "ios") {
+              Toast(LOCALES[language].IOSCantLoginYet);
+            } else {
+              handleChoseServer(server);
+            }
           }}
           key={server.id}
           hasShadow={false}
           width={"100%"}
           height={46}
         >
-          {server.name}
-        </TextButton>
+          <Text className={Platform.OS === "ios" ? "line-through" : ""}>
+            {server.name}
+          </Text>
+        </Button>
       ))}
-      <TextButton
+      <Button
         onPress={() => {
           props.onCookieChosen && props.onCookieChosen();
         }}
@@ -70,7 +78,7 @@ export default function ToLoginScreen(props: Props) {
         height={46}
       >
         {LOCALES[language].ManuallySetup}
-      </TextButton>
+      </Button>
     </View>
   );
 }

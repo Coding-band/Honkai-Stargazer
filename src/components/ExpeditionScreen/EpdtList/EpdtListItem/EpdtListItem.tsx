@@ -46,7 +46,7 @@ export default function EpdtListItem(props: Props) {
                 <View style={{ gap: 2, flexGrow: 1 }}>
                   {/* name */}
                   <Text
-                    className="font-[HY55] text-[15px] text-[#222222] leading-5 w-48"
+                    className="font-[HY65] text-[15px] text-[#222222] leading-5 w-48"
                     numberOfLines={1}
                   >
                     {props.name}
