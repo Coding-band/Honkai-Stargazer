@@ -303,5 +303,5 @@ export const strings = {
   //20240129
   NoCommentYet: "還沒有留言...",
   //20240131
-  SourceCode: "原始碼",
+  SourceCode: "原始碼"
 };

@@ -298,8 +298,10 @@ export const strings = {
   //20240127
   EventDuration: "Duração",
   //20240128
-  Upgrade: "Upgrade",
-  OverWholeServerUser: "Top ${1}% of all users in record",
+  Upgrade: "Atualizar",
+  OverWholeServerUser: "Top ${1}% de todos os recordes dos usuários",
   //20240129
-  NoCommentYet: "No comments yet ..."
+  NoCommentYet: "Sem comentários ainda...",
+  //20240131
+  SourceCode: "Source Code"
 };

@@ -17,5 +17,5 @@ export const longStrings = {
     "請注意：1. 目前只有 Hoyoverse，米游社以及 Cookies 能正常運作，若您嘗試如 Google 或 Facebook 登入可能會產生非預期性的錯誤。因此我們建議您到遊戲內更改帳號綁定以獲得最佳的使用體驗。2. iOS 端因平台限制目前僅支持 Cookies 登入，造成不便還請見諒。",
   LoginPolicy:
     "<p>親愛的用戶您好，登錄米游社 / Hoyoverse 帳號功能需要於設備端存儲您的 cookies，因此我們必須獲得您的授權才可以進行。我們保證您的 cookies 僅會保存在本地並僅於您和米游社 / Hoyoverse 間使用。此外，我們還會將遊戲數據（但不包括cookies）存儲到伺服器以提供服務（如混沌回憶排行）。</p><br/><p>注意：第一點，我們無法獲取您输入的帳號密碼信息，輸入帳密僅用於提供一種更便利的方式在取得 cookies，替代手動查找，輸入 cookies 的不便利性。第二，我們保證 cookies 僅存儲在用戶設備端（客戶端）（不管是手動還是透過登入頁面獲取），您可以在 Stargazer 的 Github 倉庫查看相關源代碼驗證此訊息。因此，我們不會為任何本 App 用户的帳密被盜用等行為負責。",
-  GithubStarPlease: "如果這個專案有幫助到您，請給我們一顆星星，謝謝！",
+  GithubStarPlease: "如果這個專案有幫助到您，請在GitHub給我們一顆星星，謝謝！",
 };

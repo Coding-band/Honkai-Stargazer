@@ -297,5 +297,7 @@ export const strings = {
   Upgrade: "Upgrade",
   OverWholeServerUser: "Top ${1}% of all users in record",
   //20240129
-  NoCommentYet:"No comments yet ..."
+  NoCommentYet:"No comments yet ...",
+  //20240131
+  SourceCode: "Source Code",
 };

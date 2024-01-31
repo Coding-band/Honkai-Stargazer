@@ -301,5 +301,7 @@ export const strings = {
   Upgrade: "提升",
   OverWholeServerUser: "超过全服 ${1}% 用户",
   //20240129
-  NoCommentYet: "还没有留言..."
+  NoCommentYet: "还没有留言...",
+  //20240131
+  SourceCode: "源代码"
 };
