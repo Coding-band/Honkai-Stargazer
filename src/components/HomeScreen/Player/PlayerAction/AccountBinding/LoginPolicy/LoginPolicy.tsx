@@ -1,10 +1,11 @@
-import { View, Text, ScrollView } from "react-native";
+import { View, Text } from "react-native";
 import React, { useEffect, useState } from "react";
 import Button from "../../../../../global/Button/Button";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import loginPolicyText from "../../../../../../../data/sg_data/login_policy.json";
 import useAppLanguage from "../../../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../../../locales";
+import { ScrollView } from "react-native-gesture-handler";
 
 type Props = {
   onAcceptPolicy: () => void;

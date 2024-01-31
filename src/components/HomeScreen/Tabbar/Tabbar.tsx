@@ -41,7 +41,7 @@ export default function Tabbar() {
           }}
         >
           <Text
-            className="text-text text-[14px] font-[HY65]"
+            className="text-text text-[14px] font-[HY65] leading-5"
             // color="white"
             // textSize={14}
             // fontFamily="HY65"
