@@ -15,7 +15,7 @@ export default function LcInfo() {
       className="px-6"
       style={{
         paddingTop:
-          Dimensions.get("window").height - 156 - containerLayout.height,
+          Dimensions.get("screen").height - 156 - containerLayout.height,
         gap: 8,
       }}
     >

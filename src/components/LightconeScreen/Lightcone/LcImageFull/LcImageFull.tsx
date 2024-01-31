@@ -56,7 +56,7 @@ export default function LcImageFull(props: Props) {
           className="z-40 absolute w-full h-full"
           source={lcData?.imageFull}
           contentFit={"contain"}
-          style={{ bottom: 880 - Dimensions.get("window").height }}
+          style={{ bottom: 880 - Dimensions.get("screen").height }}
         />
       </View>
     </Animated.View>

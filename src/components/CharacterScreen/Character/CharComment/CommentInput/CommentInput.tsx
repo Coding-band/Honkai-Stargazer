@@ -98,35 +98,35 @@ export default function CommentInput({
       // 更新評論區
       getComments();
 
-      // 提及用戶 (推送通知)
-      const extractMetionInput = extractMentionsSplit(input);
-      if (extractMetionInput?.length) {
-        extractMetionInput.map(async (mentionUser: string) => {
-          const mentionUserName = mentionUser.slice(1);
-          const querySnapshot = await db.Users.where(
-            "name",
-            "==",
-            mentionUserName
-          ).get();
-          querySnapshot.forEach(async (doc) => {
-            const uid = doc.id;
-            const expoPushToken = (await db.UserTokens.doc(uid).get()).data()
-              ?.expo_push_token;
-            pushExpoNoti({
-              to: expoPushToken,
-              title: LOCALES[language].TrailblazerNoti,
-              body: LOCALES[language].TrailblazerNotiTaggedU.replace(
-                "${playerName}",
-                playerName
-              ).replace("${1}", charName),
-              data: {
-                type: pushExpoNotiType.sendCharacterComment,
-                charId,
-              },
-            });
-          });
-        });
-      }
+      // 提及用戶 (推送通知) (暫時關閉)
+      // const extractMetionInput = extractMentionsSplit(input);
+      // if (extractMetionInput?.length) {
+      //   extractMetionInput.map(async (mentionUser: string) => {
+      //     const mentionUserName = mentionUser.slice(1);
+      //     const querySnapshot = await db.Users.where(
+      //       "name",
+      //       "==",
+      //       mentionUserName
+      //     ).get();
+      //     querySnapshot.forEach(async (doc) => {
+      //       const uid = doc.id;
+      //       const expoPushToken = (await db.UserTokens.doc(uid).get()).data()
+      //         ?.expo_push_token;
+      //       pushExpoNoti({
+      //         to: expoPushToken,
+      //         title: LOCALES[language].TrailblazerNoti,
+      //         body: LOCALES[language].TrailblazerNotiTaggedU.replace(
+      //           "${playerName}",
+      //           playerName
+      //         ).replace("${1}", charName),
+      //         data: {
+      //           type: pushExpoNotiType.sendCharacterComment,
+      //           charId,
+      //         },
+      //       });
+      //     });
+      //   });
+      // }
     } catch (e: any) {
       Toast(LOCALES[language].CommentFailed + e.message);
     }

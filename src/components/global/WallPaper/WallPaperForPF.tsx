@@ -1,16 +1,15 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { ImageBackground } from "expo-image";
+import { LinearGradient } from "expo-linear-gradient";
 
 const Bg = require("../../../../assets/images/bgs/pure_fiction_bg.png");
 
 export default function WallPaperForPF() {
   return (
-    <ImageBackground
+    <LinearGradient
       className="absolute w-full h-full"
-      source={Bg}
-      contentFit="cover"
-      placeholder={"L03vN~kCfQkC:NfPfQfPoNfQfQfQ"}
+      colors={["#262E3D", "#1A3555"]}
     />
   );
 }

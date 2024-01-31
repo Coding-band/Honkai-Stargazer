@@ -25,6 +25,7 @@ export default function NotificationWrapper({
   children: React.ReactNode;
   onResponseReceived: (data: any, type: any) => void;
 }) {
+
   //* expo push token
   const [expoPushToken, setExpoPushToken] = useState<string>();
   useEffect(() => {
@@ -115,7 +116,6 @@ async function registerForPushNotificationsAsync() {
     ).data;
     // console.log(token);
   } else {
-    alert("Must use physical device for Push Notifications");
   }
 
   return token;

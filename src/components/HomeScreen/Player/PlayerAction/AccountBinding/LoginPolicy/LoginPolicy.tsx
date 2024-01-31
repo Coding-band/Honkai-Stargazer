@@ -28,10 +28,12 @@ export default function LoginPolicy(props: Props) {
 
   return (
     <View style={{ gap: 10, alignItems: "center" }}>
-      <HtmlText style={{ color: "#000", fontFamily: "HY55", lineHeight: 20 }}>
-        {/* @ts-ignore */}
-        {loginPolicyText[language]}
-      </HtmlText>
+      <ScrollView className="h-[320px]">
+        <HtmlText style={{ color: "#000", fontFamily: "HY55", lineHeight: 20 }}>
+          {/* @ts-ignore */}
+          {LOCALES[language].LoginPolicy}
+        </HtmlText>
+      </ScrollView>
       <Button
         onPress={countDown === 0 ? props.onAcceptPolicy : () => {}}
         hasShadow={false}

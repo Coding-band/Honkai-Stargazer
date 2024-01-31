@@ -55,6 +55,7 @@ const persistConfig = {
   whitelist: [
     "hsrServerChosen",
     "hoyolabCookie",
+    "isAcceptBindingPolicy",
     // "characterSorting",
     // "characterSortingReverse",
     // "lightconeSorting",

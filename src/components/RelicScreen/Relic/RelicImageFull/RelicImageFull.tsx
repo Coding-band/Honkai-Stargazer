@@ -49,7 +49,7 @@ export default function RelicImageFull(props: Props) {
         style={{
           width: Dimensions.get("window").width,
           height: (Dimensions.get("window").height * 3) / 4,
-          marginTop: (Dimensions.get("window").height * 1) / 4 - 120,
+          marginTop: (Dimensions.get("screen").height * 1) / 4 - 60,
           flexDirection: "row",
           flexWrap: "wrap",
           justifyContent: "center",

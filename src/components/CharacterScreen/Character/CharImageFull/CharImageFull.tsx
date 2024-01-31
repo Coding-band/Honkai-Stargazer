@@ -46,7 +46,7 @@ export default React.memo(function CharImageFull(props: Props) {
         style={{
           width: Dimensions.get("window").width,
           height: (Dimensions.get("window").height * 3) / 4,
-          marginTop: (Dimensions.get("window").height * 1) / 4 - 60,
+          marginTop: (Dimensions.get("window").height * 1) / 4,
           transform: [{ scale: Platform.OS === "android" ? 1.2 : 1 }],
         }}
         source={charData?.imageFull}

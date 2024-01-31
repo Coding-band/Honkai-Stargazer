@@ -82,7 +82,7 @@ export default function CharScoreLb(props: {
         />
         <ScrollView
           className="px-2"
-          contentContainerStyle={{ gap: 12 }}
+          contentContainerStyle={{ gap: 12, paddingBottom: 60 }}
           style={{ height: Dimensions.get("screen").height - 220 }}
         >
           {charScores?.map((item, i) => (

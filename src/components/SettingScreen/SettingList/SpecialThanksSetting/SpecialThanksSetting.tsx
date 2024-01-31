@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, Linking } from "react-native";
 import React from "react";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
@@ -16,6 +16,7 @@ export default function SpecialThanksSetting() {
 
   return (
     <SettingGroup title={LOCALES[language].About}>
+      {/* 關於 App */}
       <SettingItem
         type="navigation"
         title={LOCALES[language].AboutTheApp}
@@ -28,18 +29,24 @@ export default function SpecialThanksSetting() {
           });
         }}
       />
-      {/* <SettingItem
-        type="navigation"
-        title={LOCALES[language].SpecialThanksDevs}
-        onNavigate={() => {
-          Toast.StillDevelopingToast();
-        }}
-      /> */}
+
+      {/* 開源感謝 */}
       <SettingItem
         type="navigation"
         title={LOCALES[language].SpecialThanksOpenSource}
         onNavigate={() => {
           Toast.StillDevelopingToast();
+        }}
+      />
+      {/* 原始碼 */}
+      <SettingItem
+        type="navigation"
+        title={LOCALES[language].SourceCode}
+        onNavigate={() => {
+          Toast(LOCALES[language].GithubStarPlease);
+          setTimeout(() => {
+            Linking.openURL("https://github.com/Coding-band/Honkai-Stargazer");
+          }, 2000);
         }}
       />
     </SettingGroup>

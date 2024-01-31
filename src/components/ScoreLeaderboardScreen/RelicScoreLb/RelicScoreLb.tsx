@@ -53,12 +53,12 @@ export default function RelicScoreLb(props: {
 
   // 評分數據
   const { data: charScores } = useQuery(
-    ["char-score-leaderboard", selectedCharOption.id],
+    ["relic-score-leaderboard", selectedCharOption.id],
     async () =>
       (
         await db
           .UserCharacterScores(selectedCharOption.id)
-          .orderBy("score", "desc")
+          .orderBy("relic_score", "desc")
           .limit(99)
           .get()
       ).docs?.map((doc) => ({ id: doc.id, ...doc.data() })),
@@ -77,7 +77,7 @@ export default function RelicScoreLb(props: {
         />
         <ScrollView
           className="px-2"
-          contentContainerStyle={{ gap: 12 }}
+          contentContainerStyle={{ gap: 12, paddingBottom: 60 }}
           style={{ height: Dimensions.get("screen").height - 220 }}
         >
           {charScores?.map((item: any, i: number) => (

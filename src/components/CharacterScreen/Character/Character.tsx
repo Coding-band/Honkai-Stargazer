@@ -44,8 +44,8 @@ export default React.memo(function Character() {
 
   return (
     <View
-      className="absolute bottom-0 w-full h-screen z-30"
-      style={{ alignItems: "center" }}
+      className="absolute bottom-0 w-full z-30"
+      style={{ alignItems: "center", height: Dimensions.get("screen").height }}
     >
       <CharImageFull
         scrollHandler={scrollHandler}

@@ -39,8 +39,8 @@ export default function Lightcone() {
 
   return (
     <View
-      className="absolute bottom-0 w-full h-screen z-30"
-      style={{ alignItems: "center" }}
+      className="absolute bottom-0 w-full z-30"
+      style={{ alignItems: "center", height: Dimensions.get("screen").height }}
     >
       <View className="z-30">
         <LcImageFull
@@ -50,7 +50,7 @@ export default function Lightcone() {
       </View>
       <View className="absolute w-full h-full pt-0 pb-0 z-40">
         <Animated.ScrollView bounces={false} ref={aref} className="pt-6">
-          <View onLayout={handleLayout}>  
+          <View onLayout={handleLayout}>
             <LcInfo />
             <Animated.View style={contentAnimatedStyles}>
               <LcAttribute />

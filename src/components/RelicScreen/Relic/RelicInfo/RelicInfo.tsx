@@ -13,7 +13,7 @@ export default function RelicInfo() {
     <View
       className="px-6"
       style={{
-        paddingTop: Dimensions.get("window").height - 244,
+        paddingTop: Dimensions.get("screen").height - 204,
         gap: 8,
       }}
     >

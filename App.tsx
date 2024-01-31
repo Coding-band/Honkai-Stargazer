@@ -63,7 +63,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <Provider store={store}>
         <PersistGate persistor={persistor}>
-          <NotificationWrapper
+          {/* <NotificationWrapper
             onResponseReceived={(data, type) => {
               //* 角色留言提及通知
               if (type === pushExpoNotiType.sendCharacterComment) {
@@ -71,24 +71,24 @@ export default function App() {
                 setInitialRouteName("/Character/" + charId);
               }
             }}
-          >
-            <AppLanguageProvider>
-              <TextLanguageProvider>
-                <RootSiblingParent>
-                  <GestureHandlerRootView style={{ flex: 1 }}>
-                    <ClickOutsideProviderOffical>
-                      <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-                        {/* <StatusBar hidden /> */}
-                        <FixedProvider>
-                          <Navigation initialRouteName={initialRouteName} />
-                        </FixedProvider>
-                      </View>
-                    </ClickOutsideProviderOffical>
-                  </GestureHandlerRootView>
-                </RootSiblingParent>
-              </TextLanguageProvider>
-            </AppLanguageProvider>
-          </NotificationWrapper>
+          > */}
+          <AppLanguageProvider>
+            <TextLanguageProvider>
+              <RootSiblingParent>
+                <GestureHandlerRootView style={{ flex: 1 }}>
+                  <ClickOutsideProviderOffical>
+                    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+                      {/* <StatusBar hidden /> */}
+                      <FixedProvider>
+                        <Navigation initialRouteName={initialRouteName} />
+                      </FixedProvider>
+                    </View>
+                  </ClickOutsideProviderOffical>
+                </GestureHandlerRootView>
+              </RootSiblingParent>
+            </TextLanguageProvider>
+          </AppLanguageProvider>
+          {/* </NotificationWrapper> */}
         </PersistGate>
       </Provider>
     </QueryClientProvider>

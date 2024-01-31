@@ -21,7 +21,7 @@ import UserMemoryOfChaos, {
   UserMemoryOfChaosFloor,
 } from "../firebase/models/UserMemoryOfChaos";
 import firestore from "@react-native-firebase/firestore";
-import { ENV } from "../../app.config";
+import { ENV, VERSION, askEnvDo } from "../../app.config";
 import BetaWidget from "../components/global/Beta/BetaWidget";
 import WallPaperForMOC from "../components/global/WallPaper/WallPaperForMOC";
 import useMemoryOfChaosPrev from "../hooks/hoyolab/useMemoryOfChaosPrev";
@@ -35,6 +35,9 @@ import officalRelicId from "../../map/relic_offical_id_map";
 import getSetIdAndCountFromRelicData from "../utils/data/getSetIdAndCountFromRelicData";
 import usePureFiction from "../hooks/hoyolab/usePureFiction";
 import usePureFictionPrev from "../hooks/hoyolab/usePureFictionPrev";
+import ReactNativeModal from "react-native-modal";
+import { Dimensions } from "react-native";
+import SelectLanguageAtFirstTime from "../components/global/SelectLanguageAtFirstTime/SelectLanguageAtFirstTime";
 
 export default function HomeScreen() {
   const uid = useMyFirebaseUid();
@@ -112,6 +115,11 @@ export default function HomeScreen() {
               achievement_num: hsrFullData.stats.achievement_num,
               chest_num: hsrFullData.stats.chest_num,
               last_login: firestore.Timestamp.now(),
+              app_version: askEnvDo({
+                development: "Development Version",
+                beta: VERSION.beta,
+                production: VERSION.production,
+              }),
             });
             if (!UserData?.data()?.invite_code) {
               await db.Users.doc(uid).update({
@@ -137,7 +145,12 @@ export default function HomeScreen() {
               chest_num: hsrFullData.stats.chest_num,
               show_info: false,
               last_login: firestore.Timestamp.now(),
-            } as Users);
+              app_version: askEnvDo({
+                development: "Development Version",
+                beta: VERSION.beta,
+                production: VERSION.production,
+              }),
+            });
           } catch (e: any) {
             console.log("create User: " + e.message);
           }
@@ -175,63 +188,63 @@ export default function HomeScreen() {
   }, [uid]);
 
   //* 建立或更新用戶角色數據 (UserCharacters)
-  useEffect(() => {
-    async function createOrUpdateUserCharacters() {
-      if (uid && hsrCharList && hsrInGameInfo) {
-        const UserCharacterDocGet = await db.UserCharacters.doc(uid).get();
-        const UserCharactersIsExist = UserCharacterDocGet.exists;
-        const charsData = {
-          characters: hsrCharList.map((char: any) => ({
-            id: char?.id,
-            level: char?.level,
-            rank: char?.rank,
-            equip: char?.equip
-              ? {
-                  id: char?.equip?.id,
-                  level: char?.equip?.level,
-                  rank: char?.equip?.rank,
-                }
-              : {},
-            relics: char?.relics
-              ? char?.relics?.map((relic: any) => ({
-                  id: relic?.id,
-                  level: relic?.level,
-                  rarity: relic?.rarity,
-                  pos: relic?.pos,
-                }))
-              : [],
-            ornaments: char?.ornaments
-              ? char?.ornaments?.map((ornament: any) => ({
-                  id: ornament?.id,
-                  level: ornament?.level,
-                  rarity: ornament?.rarity,
-                  pos: ornament?.pos,
-                }))
-              : [],
-          })),
-          characters_details: unionBy(
-            hsrInGameInfo?.characters,
-            UserCharacterDocGet?.data()?.characters_details,
-            "id"
-          ),
-        } as UserCharacte;
-        if (UserCharactersIsExist) {
-          try {
-            db.UserCharacters.doc(uid).update(charsData);
-          } catch (e: any) {
-            console.log("updated UserCharacters: " + e.message);
-          }
-        } else {
-          try {
-            db.UserCharacters.doc(uid).set(charsData);
-          } catch (e: any) {
-            console.log("create UserCharacters: " + e.message);
-          }
-        }
-      }
-    }
-    createOrUpdateUserCharacters();
-  }, [uid, hsrCharList, hsrInGameInfo]);
+  // useEffect(() => {
+  //   async function createOrUpdateUserCharacters() {
+  //     if (uid && hsrCharList && hsrInGameInfo) {
+  //       const UserCharacterDocGet = await db.UserCharacters.doc(uid).get();
+  //       const UserCharactersIsExist = UserCharacterDocGet.exists;
+  //       const charsData = {
+  //         characters: hsrCharList.map((char: any) => ({
+  //           id: char?.id,
+  //           level: char?.level,
+  //           rank: char?.rank,
+  //           equip: char?.equip
+  //             ? {
+  //                 id: char?.equip?.id,
+  //                 level: char?.equip?.level,
+  //                 rank: char?.equip?.rank,
+  //               }
+  //             : {},
+  //           relics: char?.relics
+  //             ? char?.relics?.map((relic: any) => ({
+  //                 id: relic?.id,
+  //                 level: relic?.level,
+  //                 rarity: relic?.rarity,
+  //                 pos: relic?.pos,
+  //               }))
+  //             : [],
+  //           ornaments: char?.ornaments
+  //             ? char?.ornaments?.map((ornament: any) => ({
+  //                 id: ornament?.id,
+  //                 level: ornament?.level,
+  //                 rarity: ornament?.rarity,
+  //                 pos: ornament?.pos,
+  //               }))
+  //             : [],
+  //         })),
+  //         characters_details: unionBy(
+  //           hsrInGameInfo?.characters,
+  //           UserCharacterDocGet?.data()?.characters_details,
+  //           "id"
+  //         ),
+  //       } as UserCharacte;
+  //       if (UserCharactersIsExist) {
+  //         try {
+  //           db.UserCharacters.doc(uid).update(charsData);
+  //         } catch (e: any) {
+  //           console.log("updated UserCharacters: " + e.message);
+  //         }
+  //       } else {
+  //         try {
+  //           db.UserCharacters.doc(uid).set(charsData);
+  //         } catch (e: any) {
+  //           console.log("create UserCharacters: " + e.message);
+  //         }
+  //       }
+  //     }
+  //   }
+  //   createOrUpdateUserCharacters();
+  // }, [uid, hsrCharList, hsrInGameInfo]);
 
   //* 建立或更新用戶混沌回憶資料 (UserMemoryOfChaos)
   useEffect(() => {
@@ -585,29 +598,32 @@ export default function HomeScreen() {
   }, [uid, userCharDetailList]);
 
   return (
-    <Pressable style={{ flex: 1 }} className="overflow-hidden">
-      <StatusBar style="dark" />
-      {/* 渾沌回憶背景預先加載 */}
-      <WallPaperForMOC />
-      <WallPaper />
-      <LinearGradient
-        className="absolute w-full h-full"
-        colors={["#00000050", "#00000040"]}
-      />
-      <View className="absolute w-full h-full">
-        {ENV === "beta" ? <BetaWidget /> : null}
-        <Player />
+    <>
+      <Pressable style={{ flex: 1 }} className="overflow-hidden">
+        <StatusBar style="dark" />
+        {/* 渾沌回憶背景預先加載 */}
+        <WallPaperForMOC />
+        <WallPaper />
         <LinearGradient
-          // Background Linear Gradient
-          colors={["rgba(0, 0, 0, 0.20) 0%", "rgba(0, 0, 0, 0.80) 100%"]}
-          className="w-full"
-          style={{ flex: 1 }}
-        >
-          <Menu />
-          <Tabbar />
-        </LinearGradient>
-      </View>
-    </Pressable>
+          className="absolute w-full h-full"
+          colors={["#00000050", "#00000040"]}
+        />
+        <View className="absolute w-full h-full">
+          {ENV === "beta" ? <BetaWidget /> : null}
+          <Player />
+          <LinearGradient
+            // Background Linear Gradient
+            colors={["rgba(0, 0, 0, 0.20) 0%", "rgba(0, 0, 0, 0.80) 100%"]}
+            className="w-full"
+            style={{ flex: 1 }}
+          >
+            <Menu />
+            <Tabbar />
+          </LinearGradient>
+        </View>
+      </Pressable>
+      <SelectLanguageAtFirstTime />
+    </>
   );
 }
 

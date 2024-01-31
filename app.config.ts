@@ -137,7 +137,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   ],
 });
 
-function askEnvDo({
+export function askEnvDo({
   development,
   beta,
   production,
