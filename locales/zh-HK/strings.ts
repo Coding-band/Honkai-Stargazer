@@ -305,5 +305,5 @@ export const strings = {
   //20240131
   SourceCode: "原始碼",
   PrevPage: "上一頁",
-  NextPage: "下一頁",
+  NextPage: "下一頁"
 };

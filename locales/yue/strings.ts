@@ -303,5 +303,7 @@ export const strings = {
   //20240129
   NoCommentYet: "仲未有人留言...",
   //20240131
-  SourceCode: "原始碼"
+  SourceCode: "原始碼",
+  PrevPage: "上一頁",
+  NextPage: "下一頁"
 };
