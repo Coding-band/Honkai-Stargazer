@@ -1,0 +1,2756 @@
+{
+ "spRequirement": 110,
+ "iconPath": "c9d26ad3ebb753fb4a9dd34299b5cb4f1a2cc52ef724a87689cc39446421f394",
+ "bgPath": "d71c512653902d0e80b31b5eed097ed07eec99081c0e47882dd43bab72dd3e30",
+ "figPath": "991aa9d7c911b02cfd47800cab0ad4146bb0d02de608eb112830f5e334ca2a13",
+ "fgPath": "",
+ "splashIconPath": "f1dfd94040dc1f7a208bc749c20be2fc5a9bd7a37da45ad756f201f0d49195b6",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 4,
+  "iconPath": "55d5339b99655abd5d47c976596bebf22e6e522614fef628f7c875606f3e1abd",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédito",
+   "desc": "Divisa que utiliza la Corporación para la Paz Interastral para sus cuentas con los clientes y que se acepta en todas partes como moneda de los viajes espaciales.",
+   "lore": "\"La gente corre, se pelea y comercia por algo que no son más que números en una terminal, pero lo que es verdaderamente valioso no se puede comprar\".",
+   "purpose": "Moneda común",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cáliz de la mina principal",
+    "Cáliz de la Comisión de Artesanía",
+    "Cáliz del Hotel Fantasía (paisaje onírico)",
+    "Recompensa de misión",
+    "Recompensa de encargo",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Huellas del destino",
+   "desc": "Material avanzado de mejora para los Rastros.",
+   "lore": "Un fracaso tras otro garantiza la victoria final. Un paso tras otro acaba llevándote al punto de inflexión de tu destino.",
+   "purpose": "Material de Rastros",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Recompensa de puntos del Universo Simulado",
+    "Honor anónimo",
+    "Canjeo de Ascuas",
+    "Recompensa de evento de duración limitada"
+   ]
+  },
+  "351748": {
+   "id": 351748,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "442bab2b74263d0e104d5ec345276405f4b7c2dac82725c9d089deef6e694263",
+   "name": "Soplete de ensueño",
+   "desc": "Soplete de cocina que prepara la comida al instante. Material de ascensión para los personajes de tipo Cuántico.",
+   "lore": "Soplete especial que desprende un aroma a sueños.<br />Es una máquina de cocina de la Compañía Dulces Sueños. También se puede usar como arma al transformarlo en la Compañía Teatral de Terrores.<br /><br />\"Ha sido diseñado de tal manera que la flama solo afecta a los ingredientes... Aunque eso no descarta la posibilidad de que el chef te considere uno\".",
+   "purpose": "Material de ascensión de personaje",
+   "rarity": 4,
+   "rewardPath": "/material/351748",
+   "comeFrom": [
+    "Sombra paralizada de la Frontera de los Sueños",
+    "Sombra paralizada de la Frontera de los Sueños",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "Guía del espíritu viajero",
+   "desc": "Material de experiencia para personajes. Otorga <nobr>20</nobr> <nobr>000</nobr> pts. de EXP.",
+   "lore": "Lectura indispensable para la exploración. Pulsa el botón Leer y una voz atractiva empezará a hablar en un idioma que entiendes y te contará las vivencias legendarias de aventureros famosos de distintos mundos, así como los valiosos conocimientos que adquirieron.<br /><br />\"El nuevo volumen de la serie Guía del espíritu viajero, titulado «Manual de gastronomía intergaláctica», saldrá a la venta muy pronto\".<br />\"Para enviar un artículo, conéctese a la baliza sinestésica ERD<nobr>-23</nobr>θ y contacte con un representante de la Sociedad del Conocimiento. Puede elegir la forma de pago más conveniente para usted\".",
+   "purpose": "Material de EXP de personaje",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Cáliz de las llanuras nevadas de las afueras",
+    "Cáliz del Vado de las Nubes",
+    "Cáliz de la Frontera de los Sueños",
+    "Salón olvidado"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "Registro de aventuras",
+   "desc": "Material de experiencia para personajes. Otorga <nobr>5000</nobr> pts. de EXP.",
+   "lore": "Colección de notas instructivas muy bien ordenadas. Contiene numerosas ilustraciones y textos que describen aventuras de principio a fin, así como información valiosa y técnicas de supervivencia.<br /><br />\"¿Por qué no lo digitalizan y lo guardan en un disco fotolítico? Sería mucho más práctico\".<br />\"La tecnología avanzada es mucho más frágil de lo que crees cuando tienes que enfrentarte a tormentas estelares o erupciones de neutrones. Además, seguro que quien escribió este libro quería que la gente lo leyera de la forma más sencilla posible\".",
+   "purpose": "Material de EXP de personaje",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Cáliz de las llanuras nevadas de las afueras",
+    "Cáliz del Vado de las Nubes",
+    "Cáliz de la Frontera de los Sueños",
+    "Entrenamiento diario",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "Noticias del viaje",
+   "desc": "Material de experiencia para personajes. Otorga <nobr>1000</nobr> pts. de EXP.",
+   "lore": "Diario de viaje con una caligrafía ilegible y un contenido completamente aleatorio, por lo que no te sirve de mucho.<br /><br />\"Dan Heng, acaba ya de leerlo y luego tíralo\".",
+   "purpose": "Material de EXP de personaje",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Cáliz de las llanuras nevadas de las afueras",
+    "Cáliz del Vado de las Nubes",
+    "Cáliz de la Frontera de los Sueños",
+    "Recompensa de encargo"
+   ]
+  },
+  "470781": {
+   "id": 470781,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "c63b922af281d49c4d1e5ee84aa4a5cb7027e4a16e96fe8f683c9f50a4bcb921",
+   "name": "Agravios pasados de la catástrofe devoraplanetas",
+   "desc": "Material avanzado de mejora para los Rastros.",
+   "lore": "Como descendiente criado por el mismísimo Imperator Insectorum, su único deseo es expandir su colonia. Utiliza guadañas gigantes para cortar planetas enteros y hacer su nido, y cría una innumerable descendencia, devastando a incontables seres vivos hasta su último aliento.<br /><br />\"En el mundo fracturado, langostas gigantes oscurecieron el cielo y plagas de insectos salieron de la corteza del planeta. El ciervo volante construyó un nuevo nido en homenaje al Imperator Insectorum... Que esta terrible escena solo quede registrada en los libros de historia y nunca se repita.\"",
+   "purpose": "Material de Rastros",
+   "rarity": 4,
+   "rewardPath": "/material/470781",
+   "comeFrom": [
+    "Ecos de la guerra de la zona de confinamiento"
+   ]
+  },
+  "549210": {
+   "id": 549210,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ae1751bde54881f61c4a931b60e2923b8032ce91241561aeb6ed88ac8ee27797",
+   "name": "Jirones de pensamientos",
+   "desc": "Fragmento de una memoria fugaz. Material simple que se usa en la potenciación.",
+   "lore": "Dentro de la Zona de los Recuerdos, miles de pensamientos se dispersan como el polvo. Fragmentos de ideas que sirven como alimento para los memes.<br /><br />\"Un pensamiento fugaz que podría desvanecerse en el aire o acumularse hasta convertirse en una obsesión\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 2,
+   "rewardPath": "/material/549210",
+   "comeFrom": [
+    "De Memes de la Zona de los Recuerdos",
+    "De enemigos en el Universo Simulado",
+    "Recompensa de encargo",
+    "Canjeo de Ascuas",
+    "Máquina sintetizadora multiusos - Intercambio de material",
+    "Cáliz (oro)"
+   ]
+  },
+  "589819": {
+   "id": 589819,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "9dcc37e0e0903af3108640d694d154e4d9c54670d5b1de405adc1c283ef3186f",
+   "name": "Compás celestial",
+   "desc": "Un melodioso compás que flota a la deriva en los cielos. Sirve para mejorar moderadamente los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Armonía</span>.",
+   "lore": "Compás que surgió del orden. Cayó silenciosamente desde los confines del cielo y se incorporó a la cacofonía como un grano de arena en el desierto.<br /><br />\"Es imperceptible, hasta que provoca una chispa de inspiración\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 3,
+   "rewardPath": "/material/589819",
+   "comeFrom": [
+    "Cáliz del Hotel Fantasía (paisaje onírico)",
+    "Cáliz del Hotel Fantasía (paisaje onírico)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "Canjeo de Ascuas",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "633151": {
+   "id": 633151,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "d76fcb744e5bf3574f3fa68b6e66adfefdf41b1652d1dd788b0dbe68407b1e0d",
+   "name": "Fragmento de impresiones",
+   "desc": "Fragmento de una memoria profunda. Material corriente que se usa en la potenciación.",
+   "lore": "Dentro de la Zona de los Recuerdos, los recuerdos se materializan como destellos fugaces de luz. Solo los fragmentos entrañables se convierten en los cimientos de los memes.<br /><br />\"Los recuerdos son más que réplicas del pasado, son una reconstrucción de las emociones pasadas\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 3,
+   "rewardPath": "/material/633151",
+   "comeFrom": [
+    "De Meme de la Zona de los Recuerdos (nivel de Equilibrio 2 o superior)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "De enemigos en el Universo Simulado",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "673760": {
+   "id": 673760,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "5c7b57df6d6628dc837cc7761256c3a3c5b4d964820177b62f191c7469360e36",
+   "name": "Movimiento celestial",
+   "desc": "Movimiento de la sinfonía del universo. Sirve para mejorar en gran medida los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Armonía</span>.",
+   "lore": "Movimiento musical que surgió del orden. Resuena suavemente más allá del cielo, inmerso en un silencio abrumador, como una estrella titilante en medio de la galaxia.<br /><br />\"Es intrascendente, hasta que desaparece en el olvido\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 4,
+   "rewardPath": "/material/673760",
+   "comeFrom": [
+    "Cáliz del Hotel Fantasía (paisaje onírico)",
+    "Cáliz del Hotel Fantasía (paisaje onírico)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "717092": {
+   "id": 717092,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ac85858f27838b734365e77343aabcdbaf56463c492b153cfb4ebd64c04f659f",
+   "name": "Fragmento de deseos",
+   "desc": "Fragmento de memoria de un deseo obsesivo. Material avanzado que se usa en la potenciación.",
+   "lore": "En la Zona de los Recuerdos la memoria de los deseos sigue creciendo. Se alimenta de pensamientos e impresiones y nutre el espejo del deseo, reflejando las inquietantes sombras de los memes.<br /><br />\"La memoria apunta al pasado, mientras que las ambiciones apuntan al futuro. Los deseos de la memoria provocan que los sueños se distorsionen y los demonios emerjan de las profundidades de la mente.\"",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 4,
+   "rewardPath": "/material/717092",
+   "comeFrom": [
+    "De Meme de la Zona de los Recuerdos (nivel de Equilibrio 4 o superior)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "De enemigos en el Universo Simulado",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "874346": {
+   "id": 874346,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "0b9599c040d16b07324d2f3ea37854bbe9d3d22cb80a43b3070662e562738a04",
+   "name": "Nota del firmamento",
+   "desc": "Fragmento de notas musicales que surgió en el firmamento. Sirve para mejorar ligeramente los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Armonía</span>.",
+   "lore": "Nota musical que surgió del orden. Cayó silenciosamente desde los confines de las nubes y se incorporó a la sinfonía mundana como una lágrima que se disuelve en el mar.<br /><br />\"Es inaudible, hasta que muere en una canción\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 2,
+   "rewardPath": "/material/874346",
+   "comeFrom": [
+    "Cáliz del Hotel Fantasía (paisaje onírico)",
+    "Cáliz del Hotel Fantasía (paisaje onírico)",
+    "Canjeo de Ascuas",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 71.28,
+   "attackAdd": 3.564,
+   "hpBase": 190.08,
+   "hpAdd": 9.504,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549210,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 99.792,
+   "attackAdd": 3.564,
+   "hpBase": 266.112,
+   "hpAdd": 9.504,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549210,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 128.304,
+   "attackAdd": 3.564,
+   "hpBase": 342.144,
+   "hpAdd": 9.504,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633151,
+     "count": 6
+    },
+    {
+     "id": 351748,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 156.816,
+   "attackAdd": 3.564,
+   "hpBase": 418.176,
+   "hpAdd": 9.504,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633151,
+     "count": 9
+    },
+    {
+     "id": 351748,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 185.328,
+   "attackAdd": 3.564,
+   "hpBase": 494.208,
+   "hpAdd": 9.504,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717092,
+     "count": 6
+    },
+    {
+     "id": 351748,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 213.84,
+   "attackAdd": 3.564,
+   "hpBase": 570.24,
+   "hpAdd": 9.504,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717092,
+     "count": 9
+    },
+    {
+     "id": 351748,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 242.352,
+   "attackAdd": 3.564,
+   "hpBase": 646.272,
+   "hpAdd": 9.504,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 101,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "9ce44da0ce2db178d03fa5848f1666aed212db44e4472db3cfc81a0444ab2964",
+   "artPath": "b410784fbb494f07996741bc2887c9ff9045c4e84e932bd539e9fa2fe8099a4e",
+   "name": "Suspensión de la incredulidad",
+   "descHash": "La duración de Adivinanza otorgada por la habilidad definitiva aumenta en 1 turno. El ATQ de los aliados con Adivinanza aumenta en un <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.4
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "6831a28c5ceeeeea8480f2a689dea58ab989249c3ceb3f87bfc094c6425b8079",
+   "artPath": "2d3fbd6ed5af564daf5076cb009ffeb329a7da156bf0dacfcdfb91ecd4e3def7",
+   "name": "Ficción sin fundamento",
+   "descHash": "Por cada acumulación del efecto del talento, los aliados ignoran un <nobr>#1[i]%</nobr> de la DEF del objetivo cuando infligen daño.",
+   "params": [
+    0.08
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "c6f2faef4ee3b3a9dffb3dec6902fe8969dddfe836148b5a1791f1a1b4c94000",
+   "artPath": "1edd944dd202e3682f8af150bbd42d6610d27a98d5c11dbee8a83e2bb7044c6b",
+   "name": "Sueño inalcanzable",
+   "descHash": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "ec1710504a85dcc5ffd40e56735ef4e3aae137eefa53154bf77668d496a636b9",
+   "artPath": "904de78ea5f505fc17de1b55998b5a9b9ba0a6d9ce09da47947fe953a1ce7a15",
+   "name": "La vida es un juego",
+   "descHash": "La habilidad definitiva recupera 1 pt. de habilidad básica adicional. El incremento del límite de pts. de habilidad básica del talento aumenta en 1.",
+   "params": []
+  },
+  {
+   "id": 5,
+   "iconPath": "089286e68a82186b3ed1946cbeef3427e1e57cbdb8b4a76a8535cd62a532e675",
+   "artPath": "267edc51f377116e7c60968b182c9222a769f8ac858c7f818f44eef57ec41c06",
+   "name": "Verdad de dos caras",
+   "descHash": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "97946a7beefedaf075a3e045a39f2d44cc9de450c44e047feb9f7bfeea214fb4",
+   "artPath": "83ea4cc2b496ca0758ac0069e3881ff56e4bcd0dc419e3fad8216c438c87a04a",
+   "name": "Polisemia narrativa",
+   "descHash": "El efecto de aumento de Daño CRIT de la habilidad básica aumenta adicionalmente en una cantidad equivalente al <nobr>#1[i]%</nobr> del Daño CRIT de Sparkle. Cuando Sparkle usa su habilidad básica, el efecto de aumento de Daño CRIT de la habilidad básica se aplica a todos los aliados que tengan Adivinanza. Cuando Sparkle usa su habilidad definitiva, si el objetivo aliado tiene el efecto de aumento de Daño CRIT de la habilidad básica, este efecto se extiende a todos los aliados que tengan Adivinanza.",
+   "params": [
+    0.3
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   364809
+  ],
+  [
+   448750
+  ],
+  [
+   532691
+  ],
+  [
+   649336
+  ],
+  [
+   933863
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "ATQ individual",
+   "descHash": "Inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> del ATQ de Sparkle como Daño <span style=\"color:#7788ff;\">Cuántico</span> a un enemigo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 364809,
+   "name": "Espectáculo en solitario",
+   "iconPath": "fad31a10c73dcd65756af32776ac4c83adab2d4fe72526ccb294a7cc4958a41a",
+   "typeDescHash": "ATQ básico",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874346,
+       "count": 3
+      },
+      {
+       "id": 549210,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589819,
+       "count": 3
+      },
+      {
+       "id": 633151,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589819,
+       "count": 5
+      },
+      {
+       "id": 633151,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673760,
+       "count": 3
+      },
+      {
+       "id": 717092,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673760,
+       "count": 8
+      },
+      {
+       "id": 717092,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Apoyo",
+   "descHash": "Aumenta el Daño CRIT de un aliado en un valor equivalente al <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> del Daño CRIT de Sparkle + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> durante <nobr>#3[i]</nobr> turno y adelanta la acción de ese aliado en un <nobr>#4[i]%</nobr>.<br />Si Sparkle usa esta habilidad consigo misma, no adelanta su acción.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 448750,
+   "name": "Pez de los sueños",
+   "iconPath": "c6f2faef4ee3b3a9dffb3dec6902fe8969dddfe836148b5a1791f1a1b4c94000",
+   "typeDescHash": "Habilidad básica",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.12,
+      0.27,
+      1,
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.132,
+      0.288,
+      1,
+      0.5
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549210,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.144,
+      0.306,
+      1,
+      0.5
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874346,
+       "count": 3
+      },
+      {
+       "id": 549210,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.156,
+      0.324,
+      1,
+      0.5
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589819,
+       "count": 3
+      },
+      {
+       "id": 633151,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.168,
+      0.342,
+      1,
+      0.5
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589819,
+       "count": 5
+      },
+      {
+       "id": 633151,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.18,
+      0.36,
+      1,
+      0.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589819,
+       "count": 7
+      },
+      {
+       "id": 633151,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.195,
+      0.3825,
+      1,
+      0.5
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673760,
+       "count": 3
+      },
+      {
+       "id": 717092,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.21,
+      0.405,
+      1,
+      0.5
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673760,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717092,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.225,
+      0.4275,
+      1,
+      0.5
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673760,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.24,
+      0.45,
+      1,
+      0.5
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673760,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.252,
+      0.468,
+      1,
+      0.5
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.264,
+      0.486,
+      1,
+      0.5
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.276,
+      0.504,
+      1,
+      0.5
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.288,
+      0.522,
+      1,
+      0.5
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.3,
+      0.54,
+      1,
+      0.5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Apoyo",
+   "descHash": "Recupera <nobr>#2[i]</nobr> pts. de habilidad básica para el equipo y otorga Adivinanza a todos los aliados. Cuando un aliado con Adivinanza activa el efecto de aumento de daño del talento de Sparkle, este aumento se incrementa de forma adicional en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> por cada acumulación durante <nobr>#4[i]</nobr> turnos.",
+   "ultimateCost": 110,
+   "break": "0",
+   "energy": "5",
+   "id": 532691,
+   "name": "Heroína de mil caras",
+   "iconPath": "0f83cac2777ff75b7e949f27cbd5d50015055d78acf1c421da75c5c251dcac32",
+   "typeDescHash": "Habilidad definitiva",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2,
+      4,
+      0.06,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      4,
+      0.064,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549210,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      4,
+      0.067999996,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874346,
+       "count": 3
+      },
+      {
+       "id": 549210,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      4,
+      0.072,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589819,
+       "count": 3
+      },
+      {
+       "id": 633151,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      4,
+      0.076,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589819,
+       "count": 5
+      },
+      {
+       "id": 633151,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      4,
+      0.08,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589819,
+       "count": 7
+      },
+      {
+       "id": 633151,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      4,
+      0.085,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673760,
+       "count": 3
+      },
+      {
+       "id": 717092,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      4,
+      0.09,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673760,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717092,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      4,
+      0.095,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673760,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      4,
+      0.1,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673760,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      4,
+      0.104,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      4,
+      0.108,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      4,
+      0.112,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      4,
+      0.116,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      4,
+      0.12,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Apoyo",
+   "descHash": "Cuando Sparkle está en el campo de batalla, el límite de pts. de habilidad básica aumenta en <nobr>#3[i]</nobr>. Cuando un aliado consume 1 pt. de habilidad básica, el daño de todos los aliados aumenta en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> durante <nobr>#1[i]</nobr> turnos. Se puede acumular hasta <nobr>#4[i]</nobr> veces.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 649336,
+   "name": "Truco narrativo",
+   "iconPath": "9a3f54ee20c7aefec4b5af5eba32319d99d1ef41fa55f73303caa2644bd6e2d3",
+   "typeDescHash": "Talento",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2,
+      0.03,
+      2,
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.033,
+      2,
+      3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549210,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.036,
+      2,
+      3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874346,
+       "count": 3
+      },
+      {
+       "id": 549210,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.039,
+      2,
+      3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589819,
+       "count": 3
+      },
+      {
+       "id": 633151,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.042,
+      2,
+      3
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589819,
+       "count": 5
+      },
+      {
+       "id": 633151,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.044999998,
+      2,
+      3
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589819,
+       "count": 7
+      },
+      {
+       "id": 633151,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.048750002,
+      2,
+      3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673760,
+       "count": 3
+      },
+      {
+       "id": 717092,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.052500002,
+      2,
+      3
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673760,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717092,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.05625,
+      2,
+      3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673760,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.06,
+      2,
+      3
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673760,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.063,
+      2,
+      3
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.066,
+      2,
+      3
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.069,
+      2,
+      3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.072,
+      2,
+      3
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2,
+      0.075,
+      2,
+      3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Ataca a un enemigo y, tras entrar en combate, consume la Firmeza del tipo correspondiente del enemigo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 817218,
+   "name": "Ataque",
+   "iconPath": "fad31a10c73dcd65756af32776ac4c83adab2d4fe72526ccb294a7cc4958a41a",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Apoyo",
+   "descHash": "Tras usar la técnica, todos los aliados obtienen Despiste durante <nobr>#2[i]</nobr> s. Los aliados con Despiste no pueden ser detectados por los enemigos. Al entrar en combate mientras dura Despiste, el equipo recupera <nobr>#1[i]</nobr> pts. de habilidad básica.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 933863,
+   "name": "Narradora poco fiable",
+   "iconPath": "41b98576a5a520631826a0bcfc03dfd2961c4784cc58f2e7abff70759f63aa5a",
+   "typeDescHash": "Técnica",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      3,
+      20
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1306101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1306202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1306203,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 801525,
+        "name": "Bonificación de PV",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+        "statusList": [
+         {
+          "key": "PV",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 589819,
+          "count": 3
+         },
+         {
+          "id": 633151,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 801524,
+      "name": "Bonificación de Daño CRIT",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609",
+      "statusList": [
+       {
+        "key": "Daño CRIT",
+        "value": 0.053
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 874346,
+        "count": 3
+       },
+       {
+        "id": 549210,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Al usar el ATQ básico, recupera <nobr>#1[i]</nobr> pts. de energía adicionales.",
+    "ultimateCost": 0,
+    "id": 801428,
+    "name": "Almanaque",
+    "iconPath": "87bfd08fb5b36a0555be29730899b7a6cadd7dd60493e6f91b9b9715193e58dd",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       10
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 874346,
+        "count": 3
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1306102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1306205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1306206,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 801520,
+        "name": "Bonificación de Daño CRIT",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609",
+        "statusList": [
+         {
+          "key": "Daño CRIT",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 673760,
+          "count": 3
+         },
+         {
+          "id": 717092,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 801523,
+      "name": "Bonificación de PV",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 589819,
+        "count": 5
+       },
+       {
+        "id": 633151,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "El efecto de aumento de Daño CRIT de la habilidad básica se extiende hasta el comienzo del siguiente turno del objetivo.",
+    "ultimateCost": 0,
+    "id": 801431,
+    "name": "Flor artificial",
+    "iconPath": "b1506ed70001a81bc6cba120df2c498150fac6559bcfc0aacb459f0d5dcf9497",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 589819,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1306103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1306208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1306209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 801535,
+        "name": "Bonificación de Daño CRIT",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609",
+        "statusList": [
+         {
+          "key": "Daño CRIT",
+          "value": 0.107
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 673760,
+          "count": 8
+         },
+         {
+          "id": 717092,
+          "count": 8
+         }
+        ]
+       }
+      },
+      {
+       "id": 1306210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 885467,
+        "name": "Bonificación de PV",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+        "statusList": [
+         {
+          "key": "PV",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 160000
+         },
+         {
+          "id": 673760,
+          "count": 8
+         },
+         {
+          "id": 717092,
+          "count": 8
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 801534,
+      "name": "Bonificación de RES a efecto",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+      "statusList": [
+       {
+        "key": "RES a efecto",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673760,
+        "count": 8
+       },
+       {
+        "id": 717092,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "El ATQ de todos los aliados aumenta en un <nobr>#4[i]%</nobr>. Cuando en el equipo aliado hay 1/2/3 personajes de tipo <span style=\"color:#7788ff;\">Cuántico</span>, el ATQ de los aliados de tipo <span style=\"color:#7788ff;\">Cuántico</span> aumenta en un <nobr>#1[i]%</nobr>/<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr> adicional.",
+    "ultimateCost": 0,
+    "id": 801430,
+    "name": "Serenata nocturna",
+    "iconPath": "a22d78c141da105c34684af61c972da7e5f31a992b667c21fd099915566ce5a4",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.05,
+       0.15,
+       0.3,
+       0.15
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673760,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1306201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1306204,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 801522,
+      "name": "Bonificación de RES a efecto",
+      "levelReq": 0,
+      "promotionReq": 3,
+      "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+      "statusList": [
+       {
+        "key": "RES a efecto",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 10000
+       },
+       {
+        "id": 589819,
+        "count": 3
+       },
+       {
+        "id": 633151,
+        "count": 3
+       }
+      ]
+     }
+    },
+    {
+     "id": 1306207,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 801521,
+      "name": "Bonificación de PV",
+      "levelReq": 0,
+      "promotionReq": 5,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 45000
+       },
+       {
+        "id": 673760,
+        "count": 3
+       },
+       {
+        "id": 717092,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 801527,
+    "name": "Bonificación de PV",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+    "statusList": [
+     {
+      "key": "PV",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549210,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Torso",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "Daño CRIT",
+    "propertyIconPath": "98a7bb4717c6f02e6288dc82193c9b741a07dbd4e1e832ccd2e1b6ede3239609"
+   },
+   {
+    "relicTypeHash": "Piernas",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "VEL",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Esfera de plano",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "PV",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "Cuerda de unión",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "Recuperación de energía",
+    "propertyIconPath": "75627c696d3e9763c0b4feeb4a8e2baf594ac73214c6227b3a125c032be090c8"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Primer encuentro",
+   "text": "¡Hola, hola! ¡Soy Sparkle! ¿Tienes alguna misión divertida y atrevida o un negocio arriesgado? ¡Entonces avísame! Si me interesa, podemos hablar de dinero. Después de todo, lo principal es pasar un rato divertido, ¿verdad?",
+   "unlockRequirement": "",
+   "cnUrl": "e2a8f6194b602bacd6322e59a0fcadc7827a134061b4ab0c31028e9a018f3c9a",
+   "jpUrl": "e99aeae553f11fec4adc871f97c5b1fc6b82086034461a319a072c1e234a58b2",
+   "enUrl": "45e18a3fbbe3dad7473c2f92a15276a77ad0838aaca7c6f3dae4801709c71271",
+   "krUrl": "9d5adca75a8bee9f22d5ddce87b838ee98ae58c40c47c9ccf9f3261389aeff29"
+  },
+  {
+   "id": 2,
+   "title": "Saludo",
+   "text": "Vaya, parece que nos cruzamos mucho últimamente... ¿Dónde te he visto antes? ¿Lo adivinas?",
+   "unlockRequirement": "",
+   "cnUrl": "260482b833262dfed8b88b0a5420718a9862e59447608637acfae5588842408b",
+   "jpUrl": "73de01511d55cb7d54f3c78151da84d838398d46e5c54d358439f39ec9ac20ea",
+   "enUrl": "554624a19de54656ab2654d0427448ca7305b0f953d71e44caaaccad8d201334",
+   "krUrl": "850d8b8e2b2b37dbb90cbc976a4a07f971cdb82cfa8dfdd8cf470a19fdb783ed"
+  },
+  {
+   "id": 3,
+   "title": "Despedida",
+   "text": "Nos vemos, Anónima/o. Intenta no meterte en problemas, especialmente... ¡la próxima vez que nos veamos!",
+   "unlockRequirement": "",
+   "cnUrl": "579a8feef8d43562269493c410151c778e6d606f4ae71d36b37775fe46a6cef2",
+   "jpUrl": "eb4340cc3830e2055bb6f92ea0f17b3ef39c7b983bea24d871a7da257a7c8467",
+   "enUrl": "861f511e4e001bb2b1ac37a9daa415bc08b4237526ec72bef05ad64b1bebf4de",
+   "krUrl": "19cb5e6aa994d8b7ee4960e331aa6da2fdd6f0e03139ae7c3100ee31a05843fa"
+  },
+  {
+   "id": 4,
+   "title": "Acerca de sí misma: nombre",
+   "text": "Yo me contento siendo un personaje secundario, animando a aquellos que acaparan la atención; luego, en el punto álgido del espectáculo, de repente me elevo hacia el cielo, y ¡bang! Brillo como un fuego artificial de colores brillantes. ¿Crees que algún personaje principal se atrevería a hacer eso?",
+   "unlockRequirement": "",
+   "cnUrl": "90a3aacf35e5e83ffd75df5fb0743027a6fa2fb05355370b1ea36cae1e6fac06",
+   "jpUrl": "f8a002a7419629e853113df148d5e91d5d0f6a69a7e77f6d1af004a3d9d7b9b4",
+   "enUrl": "640bf3b6950970436b616d0ecb2c6ba9687abf06767f510c3864b029f4097774",
+   "krUrl": "c7a15761b436f9b4966bdf93c455d565ee0968bce99b6697bd8e0808f2da447e"
+  },
+  {
+   "id": 5,
+   "title": "Acerca de sí misma: sueños",
+   "text": "No soy alguien con talento, y tener un sueño no es lo mío. Pero mi última meta es... ¡entrar en el Círculo de Genios! Sí, ¡quiero hacerme pasar por un genio! Ja, estoy ansiosa por intentarlo. ¿Crees que alguien se lo tragará?",
+   "unlockRequirement": "",
+   "cnUrl": "0a685f07a61b1e326de971cdecb478630233c6527e3247168282935ba59fbdaf",
+   "jpUrl": "6cbeb8865cf1b9d181863639caf8aa61f1f8f7ee38d714b2fe3e62dd866cca13",
+   "enUrl": "8c1e101ab751f361c03c9a8bf24f207a3dadf35bfab485b9b92ebc24033cdab4",
+   "krUrl": "b2b6494f5878b638e3d05d533d7c137911ef025c31f2f4515988fb0bf2234309"
+  },
+  {
+   "id": 6,
+   "title": "Acerca de sí misma: el pasado",
+   "text": "Una huérfana abandonada, una niña con una maldición, la última descendiente del clan Marioneta... ¡Puedo adaptarlo a los gustos particulares!",
+   "unlockRequirement": "",
+   "cnUrl": "144a6c83b919bff62ef643f170b0a9f8f12fd07d8668389fa8841361e20446e7",
+   "jpUrl": "46fd1c538be31687a2e6b17fc8b8eaacb29feaefdaef4ce08b263c1976596306",
+   "enUrl": "abf78df2ef5c869f3dbd5ff163a15a7a77980e5e29ff540efcab59c87ce55a57",
+   "krUrl": "394424fde3f919209f08a5366dd50fb972955cb1243d2e17170de5d7123bc12d"
+  },
+  {
+   "id": 7,
+   "title": "Conversación: Bufones Enmascarados",
+   "text": "Este mundo es como un gran circo incesante que muestra bestias compitiendo día y noche: osos en monociclos, leones saltando a través de aros de fuego, monos haciendo malabares con tazones... Lo que nos diferencia a nosotros, los \"bufones\", del resto, es que ya estamos actuando.",
+   "unlockRequirement": "",
+   "cnUrl": "fac0e2003fb8fac3ae9d6a6afbadc6342075ce3ca0444629d4f3ae12c7eca495",
+   "jpUrl": "5d3cd15446f466473aaba271b7cede1f95de4cfc981a8789a454b5946bfba140",
+   "enUrl": "0169213d06445de72003f5043e21c9a35bb9b8f036a72bc8592df0be32f8164a",
+   "krUrl": "25280ae311a7dcc1a84c76718960ae8181fb17b62d612b34b12b414ed011425b"
+  },
+  {
+   "id": 8,
+   "title": "Aficiones",
+   "text": "Me encantan las bromas; hay demasiado dolor y resentimiento en el mundo. Claro, una broma no va a hacer que el mundo sea mejor, pero tampoco lo empeora.",
+   "unlockRequirement": "",
+   "cnUrl": "c83658aa1aa110d4e8b89a7999e54fb76068972cc1306afd3bc1730a5046d6ec",
+   "jpUrl": "3f7f170540673efa4336bc1f7c97b1d41b83dedf4855c57741a6e11fbfc351e5",
+   "enUrl": "7b63c4565c1b451e76c6d6a92873a0767da6a879d6edab63e49e8a4fb24b17ff",
+   "krUrl": "0cf3d697553d2b3091589ac5d99e77af2d0c081324b820529d2daf9a93227959"
+  },
+  {
+   "id": 9,
+   "title": "Molestias",
+   "text": "Reglas, normas sociales de lo que se debe y no se debe hacer, todos estos códigos morales humanos inventados... He hecho todo lo posible, pero simplemente no puedo quitármelos de encima.",
+   "unlockRequirement": "",
+   "cnUrl": "0cd05369580d5b58f3dfdf8fa6c40b9c0028d78fb379051691f35c58ce83083b",
+   "jpUrl": "c93a026d464d00201919782db3639324e3b2f8406985e0d38546cd0c0fd8ae08",
+   "enUrl": "ee9179ecf90e5f3c3d67843c553e5edc2aa0dec311d93b22c1dc8dab59045405",
+   "krUrl": "31aacb02b2dd6dda12e925c8adc0cfd04b1c8c30acf5891a52279afe1848f77c"
+  },
+  {
+   "id": 10,
+   "title": "Algo que compartir",
+   "text": "Bueno, pues en el cosmos tenemos a un Eón arrogante llamado Nanook, que de verdad cree que, sin él, el universo no se dirigiría directo hacia la destrucción. ¿No te hace gracia? Pues... ¿quieres escuchar mi versión de la Conservación?",
+   "unlockRequirement": "",
+   "cnUrl": "170d34808bb4b6bd7757e1f6ac0d1175dbc6e869a095b1b27a6349f2b392b806",
+   "jpUrl": "30f222740663df31f9ef2d083bc1790e71188b905bd923778293cc80f0b36df5",
+   "enUrl": "01c4eb32ab0c625bcb60033b59972bdd5a97402f852feab357c1235746304e41",
+   "krUrl": "3ff9285b4560848a935bb22d2ee058941c8eea2df0087a8c7038e2938be24105"
+  },
+  {
+   "id": 11,
+   "title": "Un dato",
+   "text": "Los peces gordos creen que saben cómo funciona este mundo, así que andan por ahí creando todas las reglas, dictando lo que es legal, lo que es moral... ¡incluso quieren opinar sobre qué chistes son aceptables! Para mí, eso es un chiste de verdad.",
+   "unlockRequirement": "",
+   "cnUrl": "68c675bf6a9180ac4fa7d308b973b32c3a24483961630fe94172333a5c542c18",
+   "jpUrl": "e2834a0f2a548dead6f1dbaac20a51a4db215cbfc469303255196ff5166f6ee8",
+   "enUrl": "93e74c89194bd0fdfff4a2cb85dc1f7faf65bbf90e687fb0cfbc3344fd9cdf18",
+   "krUrl": "fb4d216f76057a54d214118e54c4887b231d01e8fdf42ed19054faee82fe5114"
+  },
+  {
+   "id": 12,
+   "title": "Acerca de Sampo",
+   "text": "Es bastante divertido, y fiable cuando se trata de solucionar un asunto. Lo único con este chico es que... hay ciertas cosas que no quiere hacer. ¡Tener límites siempre acaba aguando la fiesta!",
+   "unlockRequirement": "",
+   "cnUrl": "8fd5c93fa03e8021a6df7f975db8453a71f14072b1b90b5284eb72e8a66b36ac",
+   "jpUrl": "4784ecce451e721a17b0e2227441d7e3b192f68604309e09545d9820b9d404e9",
+   "enUrl": "ee69f49bf4870d2a92b060dae831855277b921bd78a489a2f5a3934c88fddc3d",
+   "krUrl": "e9f60e6ad7d5f247405a3c6c892270acd0a8497f3b2a19edd62d76b16278f04e"
+  },
+  {
+   "id": 13,
+   "title": "Acerca de Cisne Negro",
+   "text": "Elegante, entretenida, espléndida y peligrosa... Estoy deseando derrotar a alguien así, pero, eh, que ella me dé una paliza a mí... ¡también es muy posible!",
+   "unlockRequirement": "",
+   "cnUrl": "154a1bf941b7c24e5aa59f9180f4c566e8f9a84428b2deaf87cad0335718996e",
+   "jpUrl": "5f91090accc12c1446fb82ef1bc4fb795678ad4a97b383f3454e0f6ed6665697",
+   "enUrl": "41461ce4832812c66ad3f9176ee2ec60604bddd1e409bd62e4317bb971ee69cd",
+   "krUrl": "45d4f3bb473d96787603099d7fdad14bfa2c7923f6b9dc588619490783832c30"
+  },
+  {
+   "id": 14,
+   "title": "Acerca de Aventurino",
+   "text": "En serio, ¿quién rechazaría una invitación a nuestra taberna para ir a mezclarse con los peones de la Corporación? Pero, en verdad, la relación que tenemos ahora es mucho más interesante que si simplemente nos hubiéramos hecho amigos.",
+   "unlockRequirement": "",
+   "cnUrl": "9c17332ad649a8f7d303b9ee11f8ae75c28fc3d2d11b6ca34d470ae3828bc03e",
+   "jpUrl": "2ef917532284da86c58a88ccb0c6b56a7ee3f8072b238256b8042278a859aaf3",
+   "enUrl": "c76f215a66f32159fc18cc7680e43a5253410c74ab54381e62b3320c6e110bbe",
+   "krUrl": "5b2e7396e9ef0cedd772dbe1593545b0d3195e67a9935e50be7756262734fd47"
+  },
+  {
+   "id": 17,
+   "title": "Activación de Eidolon",
+   "text": "Una sabia necia o una necia sabia, ¿en quién me convertiré la próxima vez?",
+   "unlockRequirement": "",
+   "cnUrl": "801038495947b244f8ae335d0bc2fc0a1d6c1e63d1c342bbc6becf925e56f928",
+   "jpUrl": "c4a63fd41d92d426f8936334a9198b1b6b84ebb5d847495a8bf7cc927d34e39b",
+   "enUrl": "40b91dc6ca4d191e21654cee192fbb6a37a7bb12ae25315d8fe2cb39206515c1",
+   "krUrl": "244ead6d347e37c0f417fdc30ead0d333d362549832979b3a33c643064b9d5c7"
+  },
+  {
+   "id": 18,
+   "title": "Ascensión de personaje",
+   "text": "Vayamos un poco más al límite, ¿de acuerdo?",
+   "unlockRequirement": "",
+   "cnUrl": "034e9f498e12a2f1e4783370c2ecd0c5e5c888d25fd88f9056e5e01c41fac7b7",
+   "jpUrl": "fc5f8a7b80cf1dda9ec3e8ac8f0688dda6e713c8912d61a945664b816efd0c74",
+   "enUrl": "2e22c1bceec7907a442de8327a2a7ffcb9959720427df6e997de333531b5501c",
+   "krUrl": "7db7778b339118476051870ef1a0292b944021b42dd19b6e3c6c71d2e1fd9320"
+  },
+  {
+   "id": 19,
+   "title": "Nivel máximo alcanzado",
+   "text": "¿Te diviertes? ¡Eso es lo único que importa!",
+   "unlockRequirement": "",
+   "cnUrl": "78cf48c27902cdb5a4974effca3d5b467091ba3ef04cc4e01d86cdea2b659105",
+   "jpUrl": "f8c4259d41c76ca11bf5c35065ceae7896f87dab0755dd85423fed05d3908319",
+   "enUrl": "070588d06ba3db2760c58169a03dfdb5fbd84152526f87c333a6f034f7cb0b0c",
+   "krUrl": "5780706e61386d808f6bbdf46e2a7fc70cfab076687d60a19f2e94d0536186a3"
+  },
+  {
+   "id": 20,
+   "title": "Activación de Rastro",
+   "text": "¡Las reglas están para romperlas!",
+   "unlockRequirement": "",
+   "cnUrl": "8b1de09a2664cdb9978ea386a986ed047e672e1b97697409a43167d69e58a20c",
+   "jpUrl": "3a04238458ff3cefca6ba24ad6df2b21bfa302ff84659fa407b1dcca4cbeb5b7",
+   "enUrl": "0f06773301dcd2b66ae81738881305534d852e15083f2bcd14e647ba8d2a0ade",
+   "krUrl": "4106c2170d0c40347e45556105cef93d3975d9b063223f5e01b044564db587df"
+  },
+  {
+   "id": 21,
+   "title": "Miembro del equipo: Trazacaminos",
+   "text": "Te prometo que no te aburrirás conmigo. ¿Puedes decir lo mismo?",
+   "unlockRequirement": "",
+   "cnUrl": "d995cf059f88e38771d3278690f7c56fd64007196a906f136f068bb727e3a3f6",
+   "jpUrl": "a3976592927031b06a831559da50ecb405176e5d69cfd2bb7863919d4ecf6b16",
+   "enUrl": "6574743414d7cc473127cc5014e04b9f110f4762436c5e38e4b3fb80a0ca60ae",
+   "krUrl": "3f5bf93f78172a4bb8bcd4cf84d7227d2592ce5deb11c3bf262ba0c8f92ece97"
+  },
+  {
+   "id": 22,
+   "title": "Miembro del equipo: Cisne Negro",
+   "text": "Mi respetable Guardamemorias, ¿te atreves a que sea yo la que te guarde las espaldas?",
+   "unlockRequirement": "",
+   "cnUrl": "191fd3088cf272fd9f183db376dfdd5d053bfa6a4a907652fe537f7258e1e8af",
+   "jpUrl": "c783e94c3a9d3256b713df986704990041f3d13a83f48b49bae8b591aac180de",
+   "enUrl": "b1f678c963534590ccc6075818bd20aae685bdbf05ea8e3b7e8db36caa336bf6",
+   "krUrl": "af94e988822950c901c57cd72947d6fe8d4911523efb0ae02196fe622c04c28c"
+  },
+  {
+   "id": 23,
+   "title": "Miembro del equipo: Sampo",
+   "text": "¿No debería el \"bufón\" presentarse ante todos?",
+   "unlockRequirement": "",
+   "cnUrl": "b33b3b611050ef8a752a162d949a6e22a6f17a3772fc971e9d88704d6d6a11d1",
+   "jpUrl": "b21a0944431e7f2870d497a187f079bf1efcd57b17699f67f799496df967af6b",
+   "enUrl": "2ae45eb385b982fd2f93ee7b13b1b82053600b3bf80b045a8254a36c203f3297",
+   "krUrl": "3c96add23447b47cbcb682a44f290d4c680cec3bfc054a260f9faa6f1d2c98f1"
+  },
+  {
+   "id": 51,
+   "title": "Comienzo de la batalla: Ruptura de Debilidad",
+   "text": "Ups, ¿te ha dolido?",
+   "unlockRequirement": "",
+   "cnUrl": "ba402ac6097d4c0628309be6bedb062f5ba055c062b1982d3dc99e24f2d120d3",
+   "jpUrl": "fc339b4b0c430c081c641b3183525a441df814389a7c0abfc3c08157593efe3c",
+   "enUrl": "56388d3327bffd6fd37ad05731be5bda36c1f1c101d511676c84f15b964b586b",
+   "krUrl": "cfb9c94126e4d4f35e5192f52acb1e205514799fd680804ec8957e39d849b4b7"
+  },
+  {
+   "id": 52,
+   "title": "Comienzo de la batalla: alerta de peligro",
+   "text": "¡Empieza el juego!",
+   "unlockRequirement": "",
+   "cnUrl": "3505c62e64fbba9503e7b53166b256e0572853defa2f28fc685732d00dc8dcf9",
+   "jpUrl": "bb45b3212434028b6e87478275deb6a17341f87ed983fd4e08c76e17b807fcd4",
+   "enUrl": "e0e13d7ce8282354736dc8045da83025e0a28737dd1abd208dcef598fccf7b46",
+   "krUrl": "322868f521fb628098ea6b432f42eefcef627c7f39b7702516df873da7de2f89"
+  },
+  {
+   "id": 53,
+   "title": "Comienzo del turno 1",
+   "text": "¿Por qué no te quedas y jugamos un rato?",
+   "unlockRequirement": "",
+   "cnUrl": "c398f0c560a3ed5fe9a427864afdf1ee99a6f06541a93e60ef608546daa6b71a",
+   "jpUrl": "6be7a0c86aad93b45fb381393702d2ff08a62260ac665b83142c01757ae09d41",
+   "enUrl": "b45dfed4b4b3b8496d9b62b9275635b63c269c72ff9d9da50cf6bcbb229c9998",
+   "krUrl": "5847624eaddaf57fe3844d8922a1286040e31f862a7f8fce1c2e22050f0591b6"
+  },
+  {
+   "id": 54,
+   "title": "Comienzo del turno 2",
+   "text": "No te preocupes, no seré muy dura.",
+   "unlockRequirement": "",
+   "cnUrl": "006d656b87976dc4aa12850a0ee1c9f144eebe262bbf7078a20680e4476fee9f",
+   "jpUrl": "20738a0fa535886467d8e5b5f6d2df814a442dcadd9620bc7ec8dc4add721ed2",
+   "enUrl": "e2ab6ffce8969f27661daf8bf59104b2210bf3a72227b0a304e4e5c0d7297f70",
+   "krUrl": "2ca19f02208c6661c916edca1eedeef32fb1e46ebfb23795874b9c297a695478"
+  },
+  {
+   "id": 55,
+   "title": "En espera",
+   "text": "¡Tienes <nobr>10</nobr> segundos! ¡<nobr>10</nobr>, 9... 1!",
+   "unlockRequirement": "",
+   "cnUrl": "a7790e03d2b52107b426c0d9469964ae31971a2856d3892d35818e5f3a1ce6d3",
+   "jpUrl": "de76ab34e54de25b71418afe9efdaf586caceec5b465dee8e3263670cfb72080",
+   "enUrl": "a132a22d5c8b0476c7b9ecafef8dbf01f6edf1e7b52ac98a2fbc54746bb95acc",
+   "krUrl": "f93b05877b93b200165ede96b87c162d27ac5f768cc9c6c42d23ee6a5ba80f5a"
+  },
+  {
+   "id": 56,
+   "title": "ATQ básico",
+   "text": "Yo seré la mala.",
+   "unlockRequirement": "",
+   "cnUrl": "9104606c876ac6e577b78ccd4e088eff5d420978990ef96862d7a7511e8125e5",
+   "jpUrl": "30b8665a39217a6d7dafbc8aa9894fde62d4769a2e9e94e1d245f634c5315a8b",
+   "enUrl": "0d32de85b0cc9f4e096552cf10700b3c5cea5ca88bfc7742bd65bc045d8c1030",
+   "krUrl": "4078903bc39d8db5dded86b2919d2b03c0f310fbcabcfe1cfd1436f59563f84b"
+  },
+  {
+   "id": 57,
+   "title": "Habilidad básica 1",
+   "text": "No te muevas, ¿entendido?",
+   "unlockRequirement": "",
+   "cnUrl": "c8dee95275e9b7205fadd17552fae6ed3f1cabf3d0ae55dd1b948e72c2939347",
+   "jpUrl": "69a569dc0a17515044d6126b95041487e9b260a591a47e81e43d972417080476",
+   "enUrl": "88146940f75fdfc0cd0e7a0c8b983c650aa2d45d2339c141f5babb308c430cc1",
+   "krUrl": "f7a1ce2eaed3f6cd6d91fb174192862ce8a330b40e20e8cd2a721adc11a61988"
+  },
+  {
+   "id": 58,
+   "title": "Habilidad básica 2",
+   "text": "Démosle un poco más de vida.",
+   "unlockRequirement": "",
+   "cnUrl": "1646945406297299b247c4621e76cad079887624dfc351cffec470c7ed38e04b",
+   "jpUrl": "762f77baafc49badeb60077fc474c6a8bb9855f819fd70ec21b69d74b8c083aa",
+   "enUrl": "5542ba5312cdc31528fade0222b3f95ad954e3d750c02e14af24b7d7cbbc9148",
+   "krUrl": "d9b6c6bb6e6e32ee71fcc977281887cf481ae99e7b68be5068967bd438089e25"
+  },
+  {
+   "id": 59,
+   "title": "Al recibir un ataque ligero",
+   "text": "¡Ay, ay, ay!",
+   "unlockRequirement": "",
+   "cnUrl": "17c372db4c95a20300494dbb584cbe5a6d3fd75b5dc31a8342baaa7bf0302d5e",
+   "jpUrl": "d9b1b3ede858fa19f2d0e5101231c82b2f48ba38f0e21849a2d6af111e7687c2",
+   "enUrl": "cf20eece9c086bda76a01051b74426f94fa99c0f5102bbcadebd13174f85e747",
+   "krUrl": "a6df8987d6a46c3fe2d127efa1738ed807ae6207ad2ec2c2ff3459fb78b9a365"
+  },
+  {
+   "id": 60,
+   "title": "Al recibir un ataque fuerte",
+   "text": "¿Conque esas tenemos?",
+   "unlockRequirement": "",
+   "cnUrl": "a83d2ec51cf94448202bf0b6f65fc9f8f9f8fdb0eb1e61a62456344c1e4df459",
+   "jpUrl": "bd48414fab6be56b45e16ebe885fc3cad69d451e7c9a9b5c7db7a01c3f39570e",
+   "enUrl": "ab88552ae1c52c35510569cf1539b2675df07ee83e346d010ae886aa0d976753",
+   "krUrl": "1e22fffb8b4605305cb1ce835975f49f182f77822c829e50774a6e4b391433bb"
+  },
+  {
+   "id": 61,
+   "title": "Habilidad definitiva: activación",
+   "text": "Juguemos al escondite.",
+   "unlockRequirement": "",
+   "cnUrl": "9e1c9f1f43ee8af732d9fd1f8e6b2b6d86084341cba6406bb2b6daba3494a7ff",
+   "jpUrl": "2265a51cda255f293ac9ced8d25cb63915d0e43f4cde2ad81f975067f9dfd7aa",
+   "enUrl": "ea583ba3ad7fdc694dfbe9e1f55a80741abaed9d38f2b2616d799a51d80bdd41",
+   "krUrl": "c60885d91d6db40c5d81b2aadd8c181d590212b8d263dbdf443964f309aa70f0"
+  },
+  {
+   "id": 62,
+   "title": "Habilidad definitiva: lanzamiento",
+   "text": "Mil rostros en mil lugares... ¿puedes hallar la respuesta?",
+   "unlockRequirement": "",
+   "cnUrl": "6ef9f97e39263f7860b378a1fe20b4cd4a6fceb4cbda4adb994d767678e5308a",
+   "jpUrl": "f2a999486f56e213e8894ce494f3ef057fab077eaa4855270b690c963f64c6a8",
+   "enUrl": "7616796f674b7047794b82b32504308dbd1b5dfdd66f76aefb406afbaa45dd89",
+   "krUrl": "c954926a8fcb25651665337251921577471433a380787f4756fc0dd3208a55e1"
+  },
+  {
+   "id": 63,
+   "title": "Fuera de combate",
+   "text": "Suficiente diversión por hoy.",
+   "unlockRequirement": "",
+   "cnUrl": "60564b560634a11ecdeb6389d408070b44df18f86b045b923ab8e9d2151c6195",
+   "jpUrl": "66c2df0df1172a6e1319f780942844da40d0256ecbe16d6f633b8f9dd6cf9d38",
+   "enUrl": "a3d5b0c192a1132eed22a57f1daa57afcdbdcbab1d1f92a4f4e8d6a6315c78a8",
+   "krUrl": "8206c7579b737b832c5ce3bdf4be50f5feb701df936d256f249f44c276d22c0b"
+  },
+  {
+   "id": 64,
+   "title": "Retorno a la batalla",
+   "text": "¿Puedo terminar la siesta antes?",
+   "unlockRequirement": "",
+   "cnUrl": "ccce69d88d5211256e44c57ae0284c5cfd53d1e32f12315dc4ac573fd7e1c9e4",
+   "jpUrl": "94d931e1cb392bb6207da1f3701cc3d8dbbaf34d2817a5da4025fd3f160dd1bc",
+   "enUrl": "216b03e5777e67d5e55e31aa5430e21d241d8956c3806c8380be0cd96125d1fa",
+   "krUrl": "14116d9610042453f84b975ffd1bbb137fba89bc3e8f3284bb0e4f15f05760a0"
+  },
+  {
+   "id": 65,
+   "title": "Regeneración de PV",
+   "text": "¡No hay mejor fuerza que la fuerza en equipo!",
+   "unlockRequirement": "",
+   "cnUrl": "10062dcec0121a0a08adbf6fcabaa05b220d9af766780f1b4f485e11be9dd53c",
+   "jpUrl": "fbda7ef6a0fda5f408515520663e0ff9823afda09fde0b14ec32fd99b58619b0",
+   "enUrl": "50af8efbefd63957d153b8fea735b6206584a20213ee05a5bf1a09e2fc09c22d",
+   "krUrl": "2d491662d879992b37a5bf835ae1c7bb210e96dba1d2fad6fc4a86907fb0a1c3"
+  },
+  {
+   "id": 66,
+   "title": "Técnica",
+   "text": "Mira esto...",
+   "unlockRequirement": "",
+   "cnUrl": "e476b0adb309f2b59db3c138da0d09126d4600305e42462c12cfd71eb7146302",
+   "jpUrl": "6f081bafa32187bf6c72ec0bc90b0534dd2d8f08e70411192f7f4c6e6c8282a4",
+   "enUrl": "4243fed78bf81caa8a665a64f7795adc4bf00972a698162d3f7b86816012ab1c",
+   "krUrl": "64e0d1e19917bad602ac5cb98f770501fba92514a8b229df442bb27a2178c4d7"
+  },
+  {
+   "id": 67,
+   "title": "Victoria",
+   "text": "¡Esto es lo que yo llamo un buen día!",
+   "unlockRequirement": "",
+   "cnUrl": "143fc8291ffa47ddfdada226f85c6809333f519c411c8912e9f09ace6dfdcca2",
+   "jpUrl": "38451a2ba40a423e6b3b4ff0b06be70172c3fc383e35138031204d614fb24417",
+   "enUrl": "17fd0a8285244ca2e2b4ffd325c03d3f94a5fc0083179fa97843b953c0a6e53f",
+   "krUrl": "9a8301701cb14d5a9504ab6575070b8beb7155645e6886f2b6bc508b5dff5230"
+  },
+  {
+   "id": 68,
+   "title": "Al abrir un tesoro 1",
+   "text": "¿Nada más? Supongo que servirá.",
+   "unlockRequirement": "",
+   "cnUrl": "13b80e3806e5868db2e2bd3d33c15ed7b1dbac4963f8ec36fbe01d4cb0a610e3",
+   "jpUrl": "95dee77c7664efe19756b73ace61e073c61fa6d8398ef69c64c83c9158b46eb5",
+   "enUrl": "cacb01654d9e0220154eaa8356dffaaf799cff4a852eae62d4c71c839f607044",
+   "krUrl": "ab98d70cf1bc3f190952cbaebd48098246b3fb912e3503c2e666b96e670a3239"
+  },
+  {
+   "id": 69,
+   "title": "Al abrir un tesoro 2",
+   "text": "Ay, ¿no hay más?",
+   "unlockRequirement": "",
+   "cnUrl": "c211b3a9b4e9c6cca89f174a41448f68614744550db89a1d6a49e7cfaaca417e",
+   "jpUrl": "7ce4046a7d4db7ea058bc80f58441a50490458ebdb1c83fc094ea49a862a409a",
+   "enUrl": "30e0e7280d62ec2244027c436c852eae3c2d9e8dadfd1a1a7829b41bdd1de833",
+   "krUrl": "734bbc2eb687007f4ec9d6231570ad2af72cb1ea2ac4703168c5311bef692983"
+  },
+  {
+   "id": 70,
+   "title": "Al abrir un tesoro valioso",
+   "text": "¡Así está mejor!",
+   "unlockRequirement": "",
+   "cnUrl": "240d6111f2952a7580b23f9db2a2d0555a20cf7cca0eab3bcda1d09a2178fa29",
+   "jpUrl": "171883ce690a609060bdff5c12b6b7ebf7297f30073c0d471344aa51d6c73718",
+   "enUrl": "5cc9dc7e8bdb6f8d590e1df5d4ddcc2091ac9175ae137782d1f33497b0be8bb8",
+   "krUrl": "e6f9152c028eb97994d90e6726e09f593e11c436c4fb6983b1718798071eb416"
+  },
+  {
+   "id": 71,
+   "title": "Al resolver un acertijo 1",
+   "text": "A todo el mundo le gustan las chicas inteligentes, ¿no?",
+   "unlockRequirement": "",
+   "cnUrl": "6904024d9476f6f78c5fae5c51256a3d309405689d0431d8a3a43ded539ddfd0",
+   "jpUrl": "3fe7678977d7d4ecc936c58a4a02e24937f1e44410804ffba1727af50010c51a",
+   "enUrl": "554d8d3bd4d40065f6588d7e145de2d69f44bc435b072f0110a46977937827a4",
+   "krUrl": "b5c534710016c0685e6f989e2f606b34c6efea5a97096e7e131c8b0b0952cd3b"
+  },
+  {
+   "id": 72,
+   "title": "Al resolver un acertijo 2",
+   "text": "Nada mal, ¿la próxima me enseñas?",
+   "unlockRequirement": "",
+   "cnUrl": "ddc619a1553bfefeaae4547f171c2df62748f5579d516ff30529850f8595b2f1",
+   "jpUrl": "816552d1f92df4a5ec59c061abe7d9249d36c74621dcd9f94dc038c7a369f80f",
+   "enUrl": "d5b29660c4c2b62e2b8a39a2ace588afeccbb8e2b64d33a00965eadb37a9c681",
+   "krUrl": "c028ee09b3089d52bd4d6a86825deeeb538b8eb6d539cf2d5627d742ae3e255e"
+  },
+  {
+   "id": 73,
+   "title": "Objetivo enemigo encontrado",
+   "text": "Será mejor que te rindas mientras aún puedes...",
+   "unlockRequirement": "",
+   "cnUrl": "b564ae4a22d5507142560c0e2185397a5bcff42d45963004c90314e540cc7f45",
+   "jpUrl": "7472be401c9a12533629019188a49ea30cd3152dbedc95f51b85adc46642b3b2",
+   "enUrl": "abaf4db86361cea9e0a69d7f8c8ecbc47a31d1edccf6f9cc21ce1a2899a16c57",
+   "krUrl": "f997aa97e72be3f64761979432f158b05c9164c1a6ca88df879cbf139281b369"
+  },
+  {
+   "id": 74,
+   "title": "Al regresar a la ciudad",
+   "text": "¿Dónde me necesitarán esta vez?",
+   "unlockRequirement": "",
+   "cnUrl": "7520e78e6dae5ede69637bf9b17c5ebfda9a814e7efe330133682e32353ee525",
+   "jpUrl": "589ab734dbc00518d28aa358e6be486e6763f7a0c0435a903baef4b7dca0b0f3",
+   "enUrl": "147a6dbd3f096a456941ac651f301118a485f032cc5be839ada3600dd5744b89",
+   "krUrl": "a52fc05c22780efd39caa48a1e71eea0854c078c9f3eb5778ab8dd4b09d2eab3"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Detalles del personaje",
+   "text": "Una miembro de los Bufones Enmascarados inescrutable y sin escrúpulos.<br />Una peligrosa maestra de las artes dramáticas obsesionada con la actuación. Una mujer de innumerables máscaras y capaz de usar un sinfín de rostros.<br />Riqueza, estatus, poder... Nada de esto importa a Sparkle. Lo único que puede despertar su interés es la \"diversión\".",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Historia del personaje I",
+   "text": "La niña, abandonada en un orfanato, vivió sin saber nada de sus orígenes o destino hasta que se encontró con una compañía de teatro ambulante. Desde lejos, vio a una chica de cabellos azabaches con dos coletas que se movía con la fluidez de un pez por el escenario. A pesar de sus diversas máscaras, ninguna le impedía reír o llorar durante su actuación, logrando cautivar al público incluso desde la lejanía. El pez saltó delante de ella y luego se sumergió de nuevo, creando pequeñas olas en la superficie del agua.<br /><br />Poco a poco, se dio cuenta de que estaba viendo el espectáculo desde debajo del escenario.<br /><br />Intrigada, siguió yendo a ver los espectáculos durante muchos días, pero siempre como parte del público, sin subirse al escenario. Al finalizar una de las actuaciones, fue a los bastidores. Allí, la chica de cabello negro le dio una máscara.<br />\"¿Yo también puedo actuar?\".<br />\"¿Por qué no? Si te pones la máscara y la gente cree que eres «Sparkle», entonces lo eres. Ve, es tu momento\".<br /><br />Al levantarse el telón, que servía de \"cuarta pared\", el escenario quedó levemente iluminado, creando una escena inquietante como la de un oscuro vacío. Aunque llevaba puesta una máscara, sabía que el público podía verla y oírla. Rememoró la actuación de Sparkle, tratando de imitar sus movimientos, su voz y su comportamiento.<br /><br />\"Lo hiciste muy bien para ser tu primera vez\".<br />\"Pero mi imitación... no fue perfecta\".<br />\"Fue un pequeño desliz. No debería ser un problema siempre y cuando nadie note la diferencia... Por cierto, nos vamos mañana. Así que ahora y hasta que tú quieras, tú serás la verdadera Sparkle aquí. Puedes hacer que ella sea lo que tú quieras que sea\".<br />Sparkle intentó decir algo, pero la chica le frotó la cabeza con cariño.<br />\"No muchos vienen a vernos, solo tú. Solo somos una pequeña compañía y no tenemos grandes aspiraciones de ser famosos en el cosmos... Me hace feliz saber que alguien como tú recordará a un personaje insignificante como Sparkle... No llores, puedes quedarte con la máscara. Ahora es tuya\".<br />Sparkle asintió.<br />\"Cuando te la pongas, tendrás el poder de convertirte en todos y en nadie... Si de verdad aspiras a ser actriz, no te limites a un escenario pequeño como este. Fija tu mirada en un mundo más amplio y explora nuevos horizontes\".",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>20</nobr> de personaje."
+  },
+  {
+   "title": "Historia del personaje II",
+   "text": "Al ser la última descendiente del clan Marioneta, la chica no tenía libertad para elegir. Estaba obligada a vivir de acuerdo con lo que dictaba su máscara, pues las marionetas no son más que meros recipientes.<br /><br />Según la legenda, cuanto más tiempo usa una marioneta su máscara, más posibilidades hay de que la marioneta obtenga un alma y se convierta en un humano de verdad. Sin embargo, en el folclore humano, las máscaras son herramientas usadas para resucitar a los muertos, lo que hizo que disminuyera el número de gente de su clan.<br /><br />No obstante, como no le interesaba convertirse en humana, ser una marioneta tampoco era una mala opción. Con obediencia cumplió las órdenes de la máscara, a pesar de que corría el riesgo de ser perseguida. Al fin y al cabo, desafiar los designios de la máscara suponía todo un desafío.<br /><br />Los movimientos eran un elemento clave.<br />Debido a la voluntad de la máscara, debía sonreír con dulzura cuando estaba feliz, sostenerse la frente mientras lloraba, apretar los dientes cuando estaba enojada, entrecerrar los ojos cuando estaba celosa y montar una escena cuando estaba desperada. También había gestos distintivos, como levantar un poco las cejas cuando miraba a alguien con el lado izquierdo del rostro, levantar la mano para expresar que algo le gustaba, aunque debía bajarla después, y morderse ligeramente el labio inferior para expresar sus verdaderos deseos.<br /><br />La voz era sin duda otro elemento a tener en cuenta.<br />Dependiendo de la situación, su voz debía sonar alegre cuando estaba feliz, melosa cuando expresaba emociones líricas, calmada y firme cuando reiteraba una afirmación, tensa cuando guardaba enojo, y triste cuando estaba llena de aflicción.<br /><br />Extraordinariamente, se las arregló para llevar ese estilo de vida durante años, mimetizándose a la perfección con el entorno, y hasta se convirtió en dramaturga. Nunca nadie sospechó que llevaba una máscara. Sin embargo, no pudo evitar preguntarse si había otro tipo de \"máscara\" en el mundo. Tal vez alguien que llevara una máscara así se reiría al buscar venganza, lloraría al sonreír, se quedaría en silencio de ira ... y pronunciaría los comentarios más sarcásticos con la mayor de las calmas.<br /><br />Naturalmente, ella no podía hacerlo, pues debía actuar como dictaba su máscara. Sin embargo, como dramaturga que era, le resultaba fácil hacer que sus personajes actuaran así en el escenario.<br /><br />Una mañana, sonó el timbre, pero no era la persona que solía hacerle las entregas.<br />\"Querida señorita Sparkle, me preguntaba si tendría un minuto\".<br />\"Leímos su último trabajo y tenemos curiosidad por saber si sabe algo acerca de la 'máscara'...\".<br />",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>40</nobr> de personaje."
+  },
+  {
+   "title": "Historia del personaje III",
+   "text": "La chica sin rostro se dio cuenta de que debía tener algún tipo de maldición. ¿Por qué no sentía ningún estímulo? Podía percibir perfectamente el dolor, los sabores y los olores, pero era incapaz de reaccionar ante ellos. Era obvio que no podía experimentar felicidad, enojo, tristeza ni cualquier otra emoción. Solo podía limitarse a observar a los demás en diversas circunstancias y tratar de comprender sus sentimientos.<br /><br />\"¿Cómo se sentirían si estuvieran bebiendo una taza de té amargo? ¿Cómo la beberían?\".<br />A pesar de que estaba atado a una silla e inmovilizado, el vagabundo de la izquierda hizo un gesto de aprecio y asintió. La chica del medio lanzó inmediatamente un quejido y negó con la cabeza, mientras que la señora de la derecha arrugó la nariz con disgusto.<br /><br />\"¿Y si estuvieran dentro de una cabaña muy fría con solo esa taza de té?\".<br />Naturalmente, el hombre asintió. La chica se quejó un rato y, luego, aceptó de mala gana. Mientras, la señora volvió a mostrar disgusto.<br /><br />Siguió cambiando las situaciones hipotéticas y haciéndoles preguntas día y noche hasta que sus entrevistados se desmayaron. Los envió a casa y buscó nuevos participantes para sus \"entrevistas\".<br /><br />Durante ese tiempo, todos los habitantes del pueblo tuvieron la misma pesadilla. Estaban atrapados en un lugar donde una chica con el rostro borroso les hacía preguntas de forma educada y no tenían más remedio que responderlas. Solo podían responder una y otra vez hasta que la chica registraba cada detalle en máscaras de papel, una tras otra. Cuando una máscara estaba llena, la reemplazaba por otra.<br /><br />A esa pesadilla la sustituyó otra más tarde en la que los habitantes decían que veían máscaras de papel volando por el aire en mitad de la noche. Las máscaras hablaban entre sí y brillaban tenuemente antes de desaparecer, como si fueran bengalas en el cielo nocturno. Aparecían cada noche, como si fueran los inquilinos que vivían en las sombras de la ciudad.<br /><br />En un sótano oscuro, la chica permanecía ajena a aquella pesadilla. Había recopilado suficiente información sobre los matices y emociones de las personas y su perspectiva sobre diversos asuntos. Creía firmemente que, aunque careciera de emociones, las máscaras que había creado eran de carne y hueso. Incluso creía que un día se convertirían en seres de verdad.",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>60</nobr> de personaje."
+  },
+  {
+   "title": "Historia del personaje IV",
+   "text": "\"Algunas versiones son especialmente populares\". Cuando Sparkle llegó a la taberna de los Bufones, admitió sus actos. \"Gustar y creer son dos cosas diferentes, pero las personas tienden a creer en sus historias favoritas\".<br /><br />\"¿Mentiras? Vamos, no trato de contar una gran historia ni crear una experiencia llamativa... Simplemente, me limito a utilizar toda mi imaginación para mí misma. Imagino varias vidas, busco entusiasmo y luego las recreo lo mejor que puedo. Eso sí, siempre freno el globo de mi imaginación un instante antes de que explote\".<br /><br />\"En serio, tener un guion no es suficiente. Antes de nada, debo creer plenamente que el personaje que represento de verdad existe. Luego, necesito imaginar las otras historias donde el personaje aparecerá. Siempre necesito información extra para que su motivación sea lógica y emocional\".<br /><br />\"Solo así siento que capto la esencia del personaje sin la influencia de los demás. Después de todo, podría toparme con otros Bufones y no sabré qué quieren hasta que descubra quiénes son. A veces, solo te gusta la apariencia de un personaje, y otras veces solo quieres probarlo por diversión. Yo también lo hago a veces\".<br /><br />\"Y claro, hay algunos que actúan solo para ganar dinero o para convertirse en otras personas, con la esperanza de conseguir riqueza, estatus o un poder inigualable... Sea como sea, lo que trato de decir es que en un ambiente como este, ¿quién si no yo puede garantizar que no me desviaré de mi camino y me convertiré en un personaje en la historia de otra persona? ¡Nadie! Por eso debo imaginar y sumergirme incansablemente en la actuación\".<br /><br />\"No, no lo niego... Me resulta adictivo. Cuanto más imagino, más quedo absorta en esos personajes, en las situaciones maravillosas y trágicas que creo para ellos, y en las emociones que experimentan en esas circunstancias...\".<br /><br />\"Claro, antes pensaba en ese tipo de vida... Unirme a una compañía, convertirme en actriz, viajar a planetas desconocidos para hacer espectáculos, crear un personaje que tenga mi nombre... Pero un día, de repente, ¡me di cuenta de algo!\".<br /><br />\"Si quieres actuar, ¿qué escenario es más fascinante que tu propia vida?\".",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>80</nobr> de personaje."
+  }
+ ],
+ "archive": {
+  "cvCn": "赵爽",
+  "cvJp": "上田麗奈",
+  "cvKr": "성예원",
+  "cvEn": "Lizzie Freeman",
+  "camp": "Bufones Enmascarados"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Sparkle",
+ "rarity": 5,
+ "descHash": "Una miembro de los Bufones Enmascarados inescrutable y sin escrúpulos. Una peligrosa maestra de las artes dramáticas obsesionada con la actuación. Una mujer de innumerables máscaras y capaz de usar un sinfín de rostros. Riqueza, estatus, poder... Nada de esto importa a Sparkle. Lo único que puede despertar su interés es la \"diversión\".",
+ "artPath": "22498bd5da077b56fa1c9ef4886efbf3f62b558d381ff1a7b17e2724143426f2",
+ "miniIconPath": "9da8f43ce94fde4b59e6b912399bb691350719279eb77aea9cda9ceb1ddd7548",
+ "damageType": {
+  "id": 32,
+  "iconPath": "ddae115334fb14959c5e24b70a5b165c431afc32f9fcf84d4b50e5e0e15bcc1f",
+  "color": "#1C29BA",
+  "name": "Cuántico",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "fd3dc153082117a49b1d8eb7d166dd32d65d636463e15c604b583d5945a4ca69",
+  "altIconPath": "691e6c36e7f71344352e4ed80941938d7dc5722b23cef7a18f7fa8722d8c0523",
+  "color": "#FFFFFF",
+  "name": "Armonía",
+  "rarity": 0
+ },
+ "pageId": "sparkle"
+}

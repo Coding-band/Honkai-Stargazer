@@ -2,7 +2,7 @@
  "name": "Reflet du passé",
  "rarity": 5,
  "descHash": "Autrefois, elle aimait sceller l'instant précis où les fleurs de prunier étaient sur le point de faner pour ensuite le chérir.<br />Ce temps lointain est désormais révolu. De nombreuses formes de vie, qu'elles aient été vives ou douces, ont fleuri de ses mains, mais les fleurs de prunier flétrissent toujours à l'heure prévue.<br />Les années ont continué à s'écouler, et le reflet de son visage est resté le même. À l'échelle de l'univers cependant, n'aura-t-elle pas, elle aussi, réussi à préserver sa fraîcheur qu'un court instant ?<br /><br />« Si tout est voué à mourir, pourquoi s'efforcer à créer ? »<br />Après un silence qui parut une éternité, le vent souffla les fleurs à terre, et son reflet lui donna la réponse qu'elle avait déjà entendue trop de fois.<br />« Pour le jour où nous ne conserverons plus les fleurs de prunier. »<br />Elle caressa la surface glacée du miroir. Trop souvent de tels soliloques ont résonné pour qu'elle puisse les compter.",
- "iconPath": "17fb4c2376209de7c02e28ad5fdc6c3a3127da1309cd968090c736fa0b680688",
+ "iconPath": "6ccc4a04b8112e4be199e5c857df83025e459578cef664b5e92a7b32345f6a74",
  "artPath": "d50932a2642c0386cce0e550ba30a2e17f2d2557369ae0e2559e0d0c4440e34b",
  "mediumIconPath": "20e03477c372c2ec62973ad58a6109f6d935c3e3c550ccb729c7bd284262330a",
  "baseType": {
@@ -27,6 +27,8 @@
    "rewardPath": "/material/29328",
    "comeFrom": [
     "Calice de la Grande mine",
+    "Calice de la Commission de l'artisanat",
+    "Calice de l'Hôtel Rêverie du Pays des rêves",
     "Récompense de mission",
     "Récompense d'affectation",
     "Braises immortelles"
@@ -48,7 +50,8 @@
     "Ennemi de l'Univers simulé",
     "Récompense d'affectation",
     "Échange de braises",
-    "Échange de matériaux de l'Omni-synthétiseur"
+    "Échange de matériaux de l'Omni-synthétiseur",
+    "Calice doré"
    ]
   },
   "633445": {
@@ -83,7 +86,8 @@
    "comeFrom": [
     "Calice de la Colonie de robots",
     "Calice de la Colonie de robots",
-    "Braises immortelles"
+    "Braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur"
    ]
   },
   "694487": {
@@ -99,6 +103,8 @@
    "rewardPath": "/material/694487",
    "comeFrom": [
     "Calice du Col de Backwater",
+    "Calice de la Commission de divination",
+    "Calice du Rêve d'enfant",
     "Salle oubliée"
    ]
   },
@@ -115,6 +121,8 @@
    "rewardPath": "/material/694488",
    "comeFrom": [
     "Calice du Col de Backwater",
+    "Calice de la Commission de divination",
+    "Calice du Rêve d'enfant",
     "Braises immortelles"
    ]
   },
@@ -131,6 +139,8 @@
    "rewardPath": "/material/694489",
    "comeFrom": [
     "Calice du Col de Backwater",
+    "Calice de la Commission de divination",
+    "Calice du Rêve d'enfant",
     "Récompense d'affectation"
    ]
   },
@@ -166,7 +176,8 @@
    "comeFrom": [
     "Calice de la Colonie de robots",
     "Calice de la Colonie de robots",
-    "Synthèse de matériaux de l'Omni-synthétiseur"
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Échange de matériaux de l'Omni-synthétiseur"
    ]
   },
   "920197": {
@@ -184,7 +195,8 @@
     "Calice de la Colonie de robots",
     "Calice de la Colonie de robots",
     "Synthèse de matériaux de l'Omni-synthétiseur",
-    "Braises immortelles"
+    "Braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur"
    ]
   }
  },
@@ -344,7 +356,7 @@
  "skill": {
   "id": 23019,
   "name": "La fragrance prune de mes os",
-  "descHash": "Augmente l'effet de Rupture du porteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. Augmente les DGT de tous les alliés de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> pendant <nobr>#3[i]</nobr> tours lorsque le porteur utilise son ultime. Si l'effet de Rupture du porteur est supérieur ou égal à <nobr>#4[i]%</nobr>, il récupère 1 point de compétence. Tous les alliés régénèrent immédiatement <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[f1]</nobr></span> points d'énergie au début de chaque vague. Les effets du même type ne peuvent pas être cumulés.",
+  "descHash": "Augmente l'effet de Rupture du porteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. Augmente les DGT de tous les alliés de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> pendant <nobr>#3[i]</nobr> tours lorsque le porteur utilise son ultime. Si l'effet de Rupture du porteur est supérieur ou égal à <nobr>#4[i]%</nobr>, il récupère 1 point de compétence.<br />Tous les alliés régénèrent immédiatement <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[f1]</nobr></span> points d'énergie au début de chaque vague. Les effets du même type ne peuvent pas être cumulés.",
   "levelData": [
    {
     "params": [

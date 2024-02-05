@@ -1,0 +1,2720 @@
+{
+ "spRequirement": 100,
+ "iconPath": "370e9bedc92667833afb3178846f177550cfacb08dce4c993257e92af3786f62",
+ "bgPath": "5d7ae2341745b44f868ebec61b625914ff772a237df5162132e425dc7b260d27",
+ "figPath": "4ea3d874d2365142f7ebeef51b747abd5910864846b52b47f9ad79054bb52edb",
+ "fgPath": "38466e0aaef8acf0432888a746e36be0aed2be9a6ab956692fd35faa5af52ae0",
+ "splashIconPath": "1a9427acfd1f096a90ca70972ccb997dcd3dd783985b26b415a9a5e50d517a49",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 1,
+  "iconPath": "db6e0535800ce9a3dd926342c0481644831ce68b6b6add1f64a6a7fd01922095",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "信用點",
+   "desc": "星際和平公司與客戶結算時使用的貨幣，如今已成爲太空旅行的硬通貨。",
+   "lore": "「人們奔波、爭鬥、貿易，爲的不過是個終端裏顯示的數字。但真正珍貴之物，公司的數字是買不到的。」",
+   "purpose": "通用貨幣",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "擬造花萼【工造司】",
+    "擬造花萼【「白日夢」酒店-夢境】",
+    "任務獎勵",
+    "委託獎勵",
+    "餘燼兌換"
+   ]
+  },
+  "67221": {
+   "id": 67221,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "8984c99989ec99a94fa580d52f29cfa87de055249d1a8cbafa8ed7885e75a971",
+   "name": "冷藏夢箱",
+   "desc": "甜猿泰山攜帶的冰櫃，冰屬性角色的晉升素材。",
+   "lore": "特製蘇樂達冷櫃，讓冰爽的甜美爲你永駐。<br />美夢劇團們運送飲品的工具，也會在它們變成驚夢劇團時成爲武器。<br /><br />「特別聲明：運輸管線的美夢劇團皆爲外包員工，若發生意外事故，蘇樂達企業對此概不負責。」",
+   "purpose": "角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/67221",
+   "comeFrom": [
+    "凝滯虛影【「白日夢」酒店-夢境】",
+    "凝滯虛影【「白日夢」酒店-夢境】",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "命運的足跡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "一次又一次的敗北成就了你的勝利，一步又一步的前進讓你抵達了命運的拐點。",
+   "purpose": "行跡材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」積分獎勵",
+    "無名勳禮",
+    "餘燼兌換",
+    "限時活動獎勵"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "漫遊指南",
+   "desc": "角色的經驗材料，可以獲得<nobr>20000</nobr>點角色經驗。",
+   "lore": "跨越諸界必備的冒險叢書。按下閱讀鍵，充滿磁性的聲音將以你能聽懂的語言講述知名冒險家們在不同世界間的傳奇經歷，以及他們在各個星球上獲得的珍貴智慧。<br /><br />「漫遊指南全新書系《星際美食烹飪導覽》開售在即，敬請支持。」<br />「投稿請接入博識學會聯覺信標<nobr>23</nobr>θ聯絡員，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色經驗材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【流雲渡】",
+    "擬造花萼【築夢邊境】",
+    "「忘卻之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "冒險記錄",
+   "desc": "角色的經驗材料，可以獲得<nobr>5000</nobr>點角色經驗。",
+   "lore": "裝訂嚴整，一看就頗有教育意義的冒險札記。圖文並茂地描述了冒險行動的始末、有價值的信息和生存相關的技巧。<br /><br />「幹嘛不數據化放進光刻片裡？便攜多了。」<br />「面對恆星風暴和中子流噴發時，高科技比你想象的還要脆弱。何況，製作這本書的人一定希望人們用最簡單的方式閱讀它。」",
+   "purpose": "角色經驗材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【流雲渡】",
+    "擬造花萼【築夢邊境】",
+    "每日實訓",
+    "餘燼兌換"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "旅情見聞",
+   "desc": "角色的經驗材料，可以獲得<nobr>1000</nobr>點角色經驗。",
+   "lore": "記錄旅途見聞的日誌，字跡漫漶不清，內容隨心所欲，對你並沒有太大的幫助。<br /><br />「看完了就趕緊把這堆廢紙處理掉吧，丹恆？」",
+   "purpose": "角色經驗材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【流雲渡】",
+    "擬造花萼【築夢邊境】",
+    "委託獎勵"
+   ]
+  },
+  "470781": {
+   "id": 470781,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "c63b922af281d49c4d1e5ee84aa4a5cb7027e4a16e96fe8f683c9f50a4bcb921",
+   "name": "蛀星孕災的舊惡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "作爲蟲皇親自繁育的子嗣，它的唯一欲望便是擴張族羣。它以巨鐮收割星體爲巢，不倦培育無窮子孫，塗炭萬千生靈，直至隕落一刻。<br /><br />「破碎星球之上，巨蝗遮蔽天空，羣蟲湧出地殼。鍬甲將這顆新巢穴舉起，向它的蟲皇獻禮…願此番慘狀只存於史料中，永不復現。」",
+   "purpose": "行跡材料",
+   "rarity": 4,
+   "rewardPath": "/material/470781",
+   "comeFrom": [
+    "歷戰餘響【禁閉艙段】"
+   ]
+  },
+  "549209": {
+   "id": 549209,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "9a1cf43cc4fe48465c1a6a97d23a061fa43b6ab00796881aeaa8c3da2bb8fe73",
+   "name": "蓄夢元件",
+   "desc": "夢境造物的儲能裝置，強化所需的簡單材料。",
+   "lore": "儲存碎夢的築夢容器，爲夢境造物提供了基本的能源。<br /><br />「如果裝上這個玩意兒，就會得到一位美夢劇團的成員。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/549209",
+   "comeFrom": [
+    "驚夢劇團掉落",
+    "「模擬宇宙」中敵方掉落",
+    "委託獎勵",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換",
+    "擬造花萼（金）"
+   ]
+  },
+  "633150": {
+   "id": 633150,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "e27598c02b7aed5cb9b255fe0958340dbf3598f33ee10667848cfeed7fdd4815",
+   "name": "流夢閥門",
+   "desc": "夢境造物的控制部件，強化所需的普通材料。",
+   "lore": "調節慾念的築夢裝置，控制着夢境造物內心的情緒。<br /><br />「如果這玩意兒失靈了，就會得到一位驚夢劇團的成員。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/633150",
+   "comeFrom": [
+    "突破至均衡等級2後，驚夢劇團掉落",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "635680": {
+   "id": 635680,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "000c9b7fd1e06bc049904dbe29cde77df866803d5273f717e8d07d6edc45e67c",
+   "name": "步離犬牙",
+   "desc": "歩離人徵戰時遺留的零星碎牙。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">毀滅</span>角色的命途行跡。",
+   "lore": "步離人將銳牙視作徵戰者的砥鋒白刃。<br />歩離人崇敬擁有至高力量的戰士，在弱肉強食的「獵羣部落」裏，任何齲齒之流只會被族羣遺棄。<br /><br />「巢父大人，賜予我等尖牙銳爪。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/635680",
+   "comeFrom": [
+    "擬造花萼【鱗淵境】",
+    "擬造花萼【鱗淵境】",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "717091": {
+   "id": 717091,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "aa55e0e2abb0564d8d470280ad864c1c7a4d9f14cfe0427092a26075fcc86b94",
+   "name": "造夢馬達",
+   "desc": "夢境造物的動力核心，強化所需的高級材料。",
+   "lore": "創造幻想的築夢機械，賦予夢境造物靈魂的發動機。<br /><br />「如果發現這玩意兒出了故障…朋友，在陷入噩夢前快醒過來吧。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/717091",
+   "comeFrom": [
+    "突破至均衡等級4後，驚夢劇團掉落",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "836266": {
+   "id": 836266,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "bdd46b1026059a8d458c4b2ad165608360b1c51edfc47430ea836af6f1b925be",
+   "name": "月狂獠牙",
+   "desc": "歩離人徵戰時遺留的駭人長牙。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">毀滅</span>角色的命途行跡。",
+   "lore": "步離人通過與生俱來的「月狂」進一步強化身軀。<br />戰狂們自擁驚人的癒合能力，伴隨着骨質與肌肉增生，在血霧中摧枯拉朽。<br /><br />「巢父大人，賜予我等通天神力。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/836266",
+   "comeFrom": [
+    "擬造花萼【鱗淵境】",
+    "擬造花萼【鱗淵境】",
+    "「萬能合成機」- 材料合成",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "920207": {
+   "id": 920207,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "2ff2777d6f3abdd88bed93864e6b37ce1bfddf0c8982113629eccaff1928a985",
+   "name": "狼毒鋸牙",
+   "desc": "歩離人徵戰時遺留的吮血尖牙。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">毀滅</span>角色的命途行跡。",
+   "lore": "步離人將銳牙視作徵戰者的砥鋒白刃。<br />步離人血脈中流淌着瘋狂的衝動，在狼毒催化下，他們齧噬吮血，無往不利。<br /><br />「巢父大人，賜予我等銅筋鐵骨。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/920207",
+   "comeFrom": [
+    "擬造花萼【鱗淵境】",
+    "擬造花萼【鱗淵境】",
+    "「萬能合成機」- 材料合成",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 81.6,
+   "attackAdd": 4.08,
+   "hpBase": 172.8,
+   "hpAdd": 8.64,
+   "defenseBase": 54,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549209,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "attackBase": 114.24,
+   "attackAdd": 4.08,
+   "hpBase": 241.92,
+   "hpAdd": 8.64,
+   "defenseBase": 75.6,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549209,
+     "count": 8
+    }
+   ]
+  },
+  {
+   "attackBase": 146.88,
+   "attackAdd": 4.08,
+   "hpBase": 311.04,
+   "hpAdd": 8.64,
+   "defenseBase": 97.2,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633150,
+     "count": 5
+    },
+    {
+     "id": 67221,
+     "count": 2
+    }
+   ]
+  },
+  {
+   "attackBase": 179.52,
+   "attackAdd": 4.08,
+   "hpBase": 380.16,
+   "hpAdd": 8.64,
+   "defenseBase": 118.8,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633150,
+     "count": 8
+    },
+    {
+     "id": 67221,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 212.16,
+   "attackAdd": 4.08,
+   "hpBase": 449.28,
+   "hpAdd": 8.64,
+   "defenseBase": 140.4,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717091,
+     "count": 5
+    },
+    {
+     "id": 67221,
+     "count": 15
+    }
+   ]
+  },
+  {
+   "attackBase": 244.8,
+   "attackAdd": 4.08,
+   "hpBase": 518.4,
+   "hpAdd": 8.64,
+   "defenseBase": 162,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717091,
+     "count": 7
+    },
+    {
+     "id": 67221,
+     "count": 28
+    }
+   ]
+  },
+  {
+   "attackBase": 277.44,
+   "attackAdd": 4.08,
+   "hpBase": 587.52,
+   "hpAdd": 8.64,
+   "defenseBase": 183.6,
+   "defenseAdd": 2.7,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 125,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "64a0a203abb578b199e30810d3b98e3b04d792df8b2446063a54260491449048",
+   "artPath": "3b4f75168c7c92c0de802d1a435c759aaa43593c09e3271291b51281734123aa",
+   "name": "飄忽的幻影",
+   "descHash": "施放終結技時，場上每有1個敵方目標，本次終結技的攻擊段數額外增加<nobr>#1[i]</nobr>段，最多額外增加<nobr>#2[i]</nobr>段。",
+   "params": [
+    1,
+    5
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "d14381519c40e07efa2984ae10a4b94241d8a189a1a4e274ba4c53f08cd78f6a",
+   "artPath": "4c15e577e0d8cb964b1f4583575753922a88d0110694f113b222b4096bf69c05",
+   "name": "青春的悵望",
+   "descHash": "終結技每段攻擊前，有<nobr>#3[i]%</nobr>的基礎概率使目標防禦力降低<nobr>#1[i]%</nobr>，持續<nobr>#2[i]</nobr>回合。",
+   "params": [
+    0.16,
+    3,
+    0.24
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "64fa1faad980625d5304ad67ca625454abacff8be9dc6cec788606ae89a7d822",
+   "artPath": "94686de2335ae99ed51255046005a75c5d851bfdbbcf2d3b5434b39a316cd7fd",
+   "name": "歡樂年光的影子",
+   "descHash": "終結技等級+2，最多不超過<nobr>15</nobr>級，普攻等級+1，最多不超過<nobr>10</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "3e4e166c3d7e25097d36f11b12f31fb228f69168cbec3590cbc6abe843f8447d",
+   "artPath": "fbb1546fb1a861d3e092f2b39cd198700ef483dcadbb47676957bd3bce1aca3c",
+   "name": "親摯的音容",
+   "descHash": "終結技每段攻擊的傷害倍率提高<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.06
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "4374bf6a7d4233b8e2b9a467c29f6ff26e4a2ba4e3da86f753b9127e529f7699",
+   "artPath": "bdc520574f5485289e73a22d6750c4341a4a6660846d0c3d514d2e4059396b1a",
+   "name": "最初的愛與友誼",
+   "descHash": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "522236f2e402c98fdb0e2995d635bb29361eafb932051c4acd61510704167bd1",
+   "artPath": "0b4aa144cd876a324349b09faee57c378da13c4eefc8c6dc6d0a247a588bf32a",
+   "name": "久已生疏的憧憬",
+   "descHash": "施放終結技時，使自身造成的傷害提高<nobr>#2[i]%</nobr>，持續至自身回合結束，且下一次施放戰技後爲我方恢復<nobr>#1[i]</nobr>個戰技點。",
+   "params": [
+    1,
+    0.3
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   14910
+  ],
+  [
+   98851
+  ],
+  [
+   182792
+  ],
+  [
+   529797
+  ],
+  [
+   814324
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於米沙<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#47C7FD;\">冰</span>屬性傷害。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 14910,
+   "name": "請…請讓一下！",
+   "iconPath": "01c0bdc68429c8ddcb25f8443deea5f75c1e9959843853576bd94328bcd3d455",
+   "typeDescHash": "普攻",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635680,
+       "count": 2
+      },
+      {
+       "id": 549209,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920207,
+       "count": 2
+      },
+      {
+       "id": 633150,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920207,
+       "count": 4
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836266,
+       "count": 2
+      },
+      {
+       "id": 717091,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836266,
+       "count": 6
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "擴散",
+   "descHash": "增加<nobr>#3[i]</nobr>段米沙下一次終結技的攻擊段數。對指定敵方單體造成等同於米沙<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#47C7FD;\">冰</span>屬性傷害，並對其相鄰目標造成等同於米沙<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#47C7FD;\">冰</span>屬性傷害。",
+   "ultimateCost": 0,
+   "break": "60 + 30/adjacent",
+   "energy": "30",
+   "id": 98851,
+   "name": "客…客房服務！",
+   "iconPath": "4374bf6a7d4233b8e2b9a467c29f6ff26e4a2ba4e3da86f753b9127e529f7699",
+   "typeDescHash": "戰技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      0.4,
+      1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.1,
+      0.44,
+      1
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549209,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      0.48,
+      1
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635680,
+       "count": 2
+      },
+      {
+       "id": 549209,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3,
+      0.52,
+      1
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920207,
+       "count": 2
+      },
+      {
+       "id": 633150,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.4,
+      0.56,
+      1
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920207,
+       "count": 4
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      0.6,
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920207,
+       "count": 6
+      },
+      {
+       "id": 633150,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1.625,
+      0.65,
+      1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836266,
+       "count": 2
+      },
+      {
+       "id": 717091,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.75,
+      0.7,
+      1
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836266,
+       "count": 4
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.875,
+      0.75,
+      1
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836266,
+       "count": 6
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.8,
+      1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836266,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.1,
+      0.84,
+      1
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.2,
+      0.88,
+      1
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.3,
+      0.92,
+      1
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.4,
+      0.96,
+      1
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.5,
+      1,
+      1
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "彈射",
+   "descHash": "初始擁有<nobr>#1[i]</nobr>段攻擊段數。首先施放1段攻擊對指定敵方單體造成等同於米沙<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#47C7FD;\">冰</span>屬性傷害，其餘每段攻擊對敵方隨機單體造成等同於米沙<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#47C7FD;\">冰</span>屬性傷害。每段攻擊前有<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>的<u>基礎概率</u>使目標陷入凍結狀態，持續1回合。<br />凍結狀態下，敵方目標不能行動，同時每回合開始時受到等同於米沙<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>攻擊力的<span style=\"color:#47C7FD;\">冰</span>屬性<u>附加傷害</u>。<br />終結技最多累計<nobr>#5[i]</nobr>段攻擊段數，施放終結技後攻擊段數恢復至初始狀態。",
+   "ultimateCost": 100,
+   "break": "30/hit",
+   "energy": "5/hit",
+   "id": 182792,
+   "name": "要…要遲到了！",
+   "iconPath": "02ecdce60d2ccf6f75b4727440c7e8cdad54ce0ac51314b46e80ad3f1c9e2227",
+   "typeDescHash": "終結技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      3,
+      0.36,
+      0.12,
+      0.18,
+      10
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.384,
+      0.128,
+      0.192,
+      10
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549209,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.408,
+      0.13599999,
+      0.204,
+      10
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635680,
+       "count": 2
+      },
+      {
+       "id": 549209,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.432,
+      0.144,
+      0.216,
+      10
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920207,
+       "count": 2
+      },
+      {
+       "id": 633150,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.456,
+      0.152,
+      0.228,
+      10
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920207,
+       "count": 4
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.48,
+      0.16,
+      0.24,
+      10
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920207,
+       "count": 6
+      },
+      {
+       "id": 633150,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.51,
+      0.17,
+      0.255,
+      10
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836266,
+       "count": 2
+      },
+      {
+       "id": 717091,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.54,
+      0.18,
+      0.27,
+      10
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836266,
+       "count": 4
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.57,
+      0.19,
+      0.285,
+      10
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836266,
+       "count": 6
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.6,
+      0.2,
+      0.3,
+      10
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836266,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.624,
+      0.208,
+      0.312,
+      10
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.648,
+      0.216,
+      0.324,
+      10
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.672,
+      0.224,
+      0.336,
+      10
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.696,
+      0.232,
+      0.348,
+      10
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.72,
+      0.24,
+      0.36,
+      10
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "強化",
+   "descHash": "我方全體每消耗1個戰技點，增加<nobr>#2[i]</nobr>段米沙下一次終結技的攻擊段數，同時米沙恢復<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]</nobr></span>點能量。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 529797,
+   "name": "擒縱機構",
+   "iconPath": "b634853bf5ce4717b2c3a85e40aa870e539988fa6b6cf2854d9849e9d8eb8eb6",
+   "typeDescHash": "天賦",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.1,
+      1
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549209,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      1
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635680,
+       "count": 2
+      },
+      {
+       "id": 549209,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3,
+      1
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920207,
+       "count": 2
+      },
+      {
+       "id": 633150,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.4,
+      1
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920207,
+       "count": 4
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920207,
+       "count": 6
+      },
+      {
+       "id": 633150,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1.625,
+      1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836266,
+       "count": 2
+      },
+      {
+       "id": 717091,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.75,
+      1
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836266,
+       "count": 4
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.875,
+      1
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836266,
+       "count": 6
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836266,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.1,
+      1
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.2,
+      1
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.3,
+      1
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.4,
+      1
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.5,
+      1
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "攻擊敵人，進入戰鬥後削弱敵方目標對應屬性韌性。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 730383,
+   "name": "攻擊",
+   "iconPath": "01c0bdc68429c8ddcb25f8443deea5f75c1e9959843853576bd94328bcd3d455",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "妨害",
+   "descHash": "使用祕技後，製造1片持續<nobr>#1[i]</nobr>秒的特殊領域。處於特殊領域內的敵人陷入【夢境監牢】狀態。【夢境監牢】狀態下的敵人會停止所有行動。與處於【夢境監牢】狀態下的敵人進入戰鬥後，增加<nobr>#2[i]</nobr>段米沙下一次終結技的攻擊段數。我方製造的領域效果最多存在1個。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 814324,
+   "name": "停一停吧，你真美麗！",
+   "iconPath": "4398b0162a3b642a113aa5c99dbc6e12a46390216060e7c8c5b5714bb6728731",
+   "typeDescHash": "祕技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      15,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1312101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1312202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1312203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1312204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 454727,
+          "name": "暴擊率強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+          "statusList": [
+           {
+            "key": "暴擊率",
+            "value": 0.026999999
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 920207,
+            "count": 2
+           },
+           {
+            "id": 633150,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 454728,
+        "name": "傷害強化•冰",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "873bd0d39d583fadfc1427c8fbe603df5c14370368804e2dfebb4f447910174b",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#47C7FD;\">冰</span>屬性傷害提高",
+          "value": 0.032
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920207,
+          "count": 2
+         },
+         {
+          "id": 633150,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 454729,
+      "name": "防禦強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+      "statusList": [
+       {
+        "key": "防禦力",
+        "value": 0.05
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635680,
+        "count": 2
+       },
+       {
+        "id": 549209,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "終結技首段攻擊前，使目標陷入凍結狀態的基礎概率提高<nobr>#1[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 454569,
+    "name": "釋放",
+    "iconPath": "1de0cb40e2189a17bb4052f9234a3093b4a7e2ea036e323a9562529c17790d7d",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.8
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635680,
+        "count": 2
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1312102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1312205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1312206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1312207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 454724,
+          "name": "傷害強化•冰",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "873bd0d39d583fadfc1427c8fbe603df5c14370368804e2dfebb4f447910174b",
+          "statusList": [
+           {
+            "key": "<span style=\"color:#47C7FD;\">冰</span>屬性傷害提高",
+            "value": 0.048
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 836266,
+            "count": 2
+           },
+           {
+            "id": 717091,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 454725,
+        "name": "防禦強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+        "statusList": [
+         {
+          "key": "防禦力",
+          "value": 0.075
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836266,
+          "count": 2
+         },
+         {
+          "id": 717091,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 454726,
+      "name": "傷害強化•冰",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "873bd0d39d583fadfc1427c8fbe603df5c14370368804e2dfebb4f447910174b",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#47C7FD;\">冰</span>屬性傷害提高",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920207,
+        "count": 4
+       },
+       {
+        "id": 633150,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "施放終結技時，效果命中提高<nobr>#1[i]%</nobr>，持續至本次終結技行動結束。",
+    "ultimateCost": 0,
+    "id": 454570,
+    "name": "鎖接",
+    "iconPath": "e10779a1c12ceebc87e508e96b75a92a760081131988d5df4043c3211a21f674",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.6
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920207,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1312103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1312208,
+     "type": 2,
+     "children": [
+      {
+       "id": 1312209,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 454738,
+        "name": "防禦強化",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "4145abc71eb094c43193b14852a3911acd6c31a8794f0926333d40591d47e68a",
+        "statusList": [
+         {
+          "key": "防禦力",
+          "value": 0.1
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836266,
+          "count": 6
+         },
+         {
+          "id": 717091,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1312210,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 538672,
+        "name": "傷害強化•冰",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "873bd0d39d583fadfc1427c8fbe603df5c14370368804e2dfebb4f447910174b",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#47C7FD;\">冰</span>屬性傷害提高",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836266,
+          "count": 6
+         },
+         {
+          "id": 717091,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 454739,
+      "name": "暴擊率強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8",
+      "statusList": [
+       {
+        "key": "暴擊率",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836266,
+        "count": 6
+       },
+       {
+        "id": 717091,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "對陷入凍結狀態的敵方目標造成傷害時，暴擊傷害提升<nobr>#1[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 454571,
+    "name": "傳衝",
+    "iconPath": "7f29861afa9899ca2d01cac21b7ed36800dd9232a8485aafff85a8383363b298",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.3
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836266,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1312201,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 454730,
+    "name": "傷害強化•冰",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "873bd0d39d583fadfc1427c8fbe603df5c14370368804e2dfebb4f447910174b",
+    "statusList": [
+     {
+      "key": "<span style=\"color:#47C7FD;\">冰</span>屬性傷害提高",
+      "value": 0.032
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549209,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "軀幹",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "暴擊率",
+    "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8"
+   },
+   {
+    "relicTypeHash": "腳部",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "速度",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "位面球",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "冰屬性傷害提高",
+    "propertyIconPath": "873bd0d39d583fadfc1427c8fbe603df5c14370368804e2dfebb4f447910174b"
+   },
+   {
+    "relicTypeHash": "連結繩",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "攻擊力",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初次見面",
+   "text": "我是「白日夢酒店」的門童米沙，歡迎來到匹諾康尼，請這邊走，我來爲你搬運行李！",
+   "unlockRequirement": "",
+   "cnUrl": "914fd50bb88e78e5d68acdbfdc3bfe91a3cfd9e2dba5079b52abb34ea3b53edd",
+   "jpUrl": "7ae0cec01fba83b25f408adf45061192d00fc7b6696656345912747753625948",
+   "enUrl": "44d7a5f4a4d3a04430434c27cd407cc6d6f3472805de6b17afb9abdafa7de1af",
+   "krUrl": "13e3021983b677e09bada1963be80dc35760b08d666f87a59e3622e2bf90923b"
+  },
+  {
+   "id": 2,
+   "title": "問候",
+   "text": "開拓者，你休息得好嗎，如果想去哪，請隨時來找我！",
+   "unlockRequirement": "",
+   "cnUrl": "85cb804b30502ee202e6de7d64a8e455fc57fd8e0c873b04710adc5c31b48d1a",
+   "jpUrl": "f6dc389454d56f1c5a169673b3cb1d65c444fd42459bce5dcf6a59f8cb3234ff",
+   "enUrl": "1ac8ca0245e522aa3f8262e589843949b9371d7fa6f1750d9a08aacaf555a7dd",
+   "krUrl": "bbddf23a8ff2165a6c9fa818efeabb802dc2e4cda2a593b3f80239298b6f13cb"
+  },
+  {
+   "id": 3,
+   "title": "道別",
+   "text": "米沙要繼續工作了。我們…還會再見的吧？",
+   "unlockRequirement": "",
+   "cnUrl": "cea95a870d300e312e5edb406fca9a8713d0df382c8dfc782abce0864fb0dbd5",
+   "jpUrl": "8feb5c306266e3a7466a34a5e2f19f84dddcf1e27293b47fdfa69c838f210150",
+   "enUrl": "dc2d2294e12a636fb75148b28483f4fba033cbdfd6ecfb98df4977c713ca39ff",
+   "krUrl": "b18fbc18de0b3ec1173795483731ecbaa64119090b0260b033cffca6e8fe0626"
+  },
+  {
+   "id": 4,
+   "title": "關於自己•工作",
+   "text": "我喜歡在「白日夢酒店」工作！在這裡，能遇見這麼多遠方來客，能聽說那麼多冒險故事，真好啊……",
+   "unlockRequirement": "",
+   "cnUrl": "7bcaf91e337a51f030205e4f7d64cb28d2de5c89f28d470eff496317a1fffe93",
+   "jpUrl": "8c61c925856b18d539c248b274208e033e7c393082e4d99ce8e71e81a43b390b",
+   "enUrl": "233aab7cbac53db43314ff104f268f61e3eb45fc91e81eece182cbe7d31aab2a",
+   "krUrl": "0c4c5c0533002cbd9a4ab5aaddf1ada47c6a0ffd44b872a70cdf01b108141bdd"
+  },
+  {
+   "id": 5,
+   "title": "關於自己•未來",
+   "text": "米沙要努力工作，攢下很多積蓄，以後能像大人們一樣在羣星之間旅行探索！",
+   "unlockRequirement": "",
+   "cnUrl": "e671cee197b04f3418e9214a1e148f2eede8b88d46157ae8bbed09a9d827eef9",
+   "jpUrl": "3902d441160dab010b6d0fcfa064778d88f80f7f4de4adeac48c715c5162e059",
+   "enUrl": "cc56bb8c50d07fb181f71f22898d524150313cc7b070a1bf85426b1bf7bb9117",
+   "krUrl": "2c622dd9f06e14d01983264515772500e0d6e8f2fea90dde38c267c183cff351"
+  },
+  {
+   "id": 6,
+   "title": "閒談•維修",
+   "text": "時間久了，酒店角角落落的機械部件也會出些故障…如果能修好的話，我還是不想更換新零件……",
+   "unlockRequirement": "",
+   "cnUrl": "a44d15a75825d307767e05a6fb3b28d2e68fc359e5dc8553f437b2dae8646de6",
+   "jpUrl": "7fda29243aef287bf74b6aa68e0623ae0d33acc51fd04dfa81a1243c742e973b",
+   "enUrl": "2194f65daca94e8fad0a542aab3ea591b533c703a88054b138862819a3ba1f26",
+   "krUrl": "02e9059a2e80c82342f64ac0accde5187540af8ee12b6aeb99468a7aa2276737"
+  },
+  {
+   "id": 7,
+   "title": "愛好",
+   "text": "銀河地理雜誌每一本我都會看…特別是最近一期，那條大鯨魚還會吞食星球，真的太厲害了！不知道什麼時候才能看到下一期……",
+   "unlockRequirement": "",
+   "cnUrl": "e435bc0698c7308b2fd01ace999618f2233b4d716e232b4bd40f3a961986da48",
+   "jpUrl": "af7c6d500fbd266ca8823e83acfd244542d95adc466825391ee445bd5d2bdd62",
+   "enUrl": "6a7fbab48ec913e91e00835d8e899c57eed01e741bb322488eb0b885df84643a",
+   "krUrl": "b5a48c1f971d9b2818d0730760b8681093aa0d0ecbe45583789931a178a7befe"
+  },
+  {
+   "id": 8,
+   "title": "煩惱",
+   "text": "約定的時間已經過了，爺爺什麼時候能回家呢……",
+   "unlockRequirement": "",
+   "cnUrl": "88340477c3362232a67b9cb6d59f45618723b2f605e20b25fc239a4c79dcf30b",
+   "jpUrl": "68912b16dd83f302044c582a00b189fa141d6d8e052a420989541f73a130425c",
+   "enUrl": "2937c05f8b05d62465856a6e70d34df15c6817734488fd81ef40a06382f57878",
+   "krUrl": "ce7fe7e17b60afcf8ff21b7a6f3b0db97745ed5073ded5318be2cbbeab5152f1"
+  },
+  {
+   "id": 9,
+   "title": "分享",
+   "text": "小時候我經常偷喝蘇樂達，等到爺爺發現的時候，我已經蛀牙了…所以一定不能多喝蘇樂達…不對，小朋友不可以，大人可以！",
+   "unlockRequirement": "",
+   "cnUrl": "df03667e71ffdb916e4af8a30164bc9417942433cbcfed20461a89e71bcc2cf2",
+   "jpUrl": "82027bec8b4c22c10fae49b2d4b53f52e3a7cb2e6809d8f22a07dad01326241f",
+   "enUrl": "3bad7757811c2cd5be5d6b8c5ff25dd38c8325c975a91e6d99c61f4624b91571",
+   "krUrl": "e9b28c64fc53a45eb97901ca15f4ee24485f6f0c73243b85ab111aca7fcda217"
+  },
+  {
+   "id": 10,
+   "title": "見聞",
+   "text": "我常聽人說，「開拓」就是進入一片尚未開闢的新領域，匹諾康尼也經歷過類似的歷史——蘇樂達的美味，美夢劇團的演出，都是經由一次次的「開拓」才完成的…真不容易呀……",
+   "unlockRequirement": "",
+   "cnUrl": "15aee79a416ea2a10bb635885d08e4b15dd7d5cce7fd3288f93307b0b172cacd",
+   "jpUrl": "054ad9818093daf077e0c7405a853efc974bd42850e592c1359e4542d083850f",
+   "enUrl": "923a3d3a865640fd21a789ef6313bcfdebfb318dc807de82dbd4b649eab0fd40",
+   "krUrl": "9624464e3525e0668286484e953fa2dada3b3517f0f74c03d4c2025d1bfc40fb"
+  },
+  {
+   "id": 11,
+   "title": "關於開拓者",
+   "text": "「白日夢酒店」的工作雖然忙碌，但也因爲這份工作，我才能認識像開拓者你這樣的朋友！",
+   "unlockRequirement": "",
+   "cnUrl": "15d0329d8842290165c64a10a16015355d615adde28740a597b7dea684012a05",
+   "jpUrl": "edb4aab70769cd46e2382390199dbd2bce0564b2380cc97546ffc3fcb1d94d34",
+   "enUrl": "7c6aae38376efb2e5037ca8ee4bd57ee0dac5ef91e286832685f9af30b9e19f2",
+   "krUrl": "ec6d804086b07df6173c63e745629cca60fe61aefa450d983fb3894d525ee892"
+  },
+  {
+   "id": 12,
+   "title": "關於知更鳥",
+   "text": "知更鳥小姐的歌聲，可以將人帶到連美夢也抵達不了的遠方。我…我會一直支持知更鳥小姐的！",
+   "unlockRequirement": "",
+   "cnUrl": "19b3d921e9cda62dca5852d973f0463468041598219a4e12fb33903f472ff5c4",
+   "jpUrl": "b5eb3897550fb105f0240d9942cbd8e8834e4b8f1cab8f8a174c1b87b29d9b90",
+   "enUrl": "ce33384126e4de1f65cadd8aba4cd9033968af672ddf643e8edf30e561bb6967",
+   "krUrl": "398bccce1c5b24e718da85ad7590c05b731a0c204c282f882adebae6ba3155aa"
+  },
+  {
+   "id": 13,
+   "title": "關於星期日",
+   "text": "星期日先生年紀輕輕，卻已經是匹諾康尼的大人物…光是在一旁看着他，就會讓人感到壓力倍增……",
+   "unlockRequirement": "",
+   "cnUrl": "0175f7f854b1472db95ade0d16accf906c2f6e42aa9506b62a5e0b7d81c04118",
+   "jpUrl": "01f7ed8443cac46008ded4d194eec0d805282cfebd8cf0a99a74b05b33f1d28f",
+   "enUrl": "18be02a8ffa7500a46404789982092cd57586ecb86eaf6614bec8adaa4d8f4bc",
+   "krUrl": "0d5747d7c6de302716d590f806aa82084f6719ab9af67ce05857cbb9c1307f2a"
+  },
+  {
+   "id": 14,
+   "title": "關於加拉赫",
+   "text": "在匹諾康尼的街頭，經常能看見加拉赫在工作。從以前開始，他就一直那麼盡心盡責。",
+   "unlockRequirement": "",
+   "cnUrl": "6568f682b28db0b72a5cd7cafce39ce49acacc12fce87199e4a8484cb6505097",
+   "jpUrl": "e96ef7998adcfc86d9c72d1645694e466977af775aab2e065c94061469235a96",
+   "enUrl": "d97da46ba3ab72c869a71f7cc1b6b9d34c9e69eb32f0d1956ff2e84aa7199db8",
+   "krUrl": "8d68753d85059b0bc75a42d2ad4f270b8d4aadb4962123cba3bec6ac28e91c87"
+  },
+  {
+   "id": 15,
+   "title": "關於無名客",
+   "text": "爺爺說過，夢想什麼時候開始都不算晚，重要的是實現夢想的願望有多深。米沙會一直記着，總有一日，實現自己和爺爺的夢想！",
+   "unlockRequirement": "",
+   "cnUrl": "c5ca77fbd0691261e3c51001707a00bfdbb91b2dce54bd7dcf62df95770c2ab3",
+   "jpUrl": "20088a12ae1bdddca59db9a72d1e287700a2936418f054048ee96c311623c108",
+   "enUrl": "a39500855bfd1d7809b9481a7991efe4af8dd01d029156cc2296edfbc0ae78e0",
+   "krUrl": "f04ca110db04d3c4c1a619df191d802a0d947d14064958fb10b5c815020b0c32"
+  },
+  {
+   "id": 16,
+   "title": "關於鐘錶小子",
+   "text": "悄悄告訴你，鐘錶小子是真實存在的，不是我想象出的卡通夥伴哦！",
+   "unlockRequirement": "",
+   "cnUrl": "47eabba3350df8d5e7546e543a3551a08a24695b54fff906af18b28f1c5b30f1",
+   "jpUrl": "94570daf60cb946d16c8c74ab8595f3be1d19638731e6c98ba6aedab516cf903",
+   "enUrl": "ce0f7f9d6f39c54eb40452a4e2f3e0c9a6580a927b99ae5f631a8629dc103b7a",
+   "krUrl": "d3be6fcb54560ad71e96f6915bbceaed79f8b3934cc3f9e804c700f1aca55438"
+  },
+  {
+   "id": 17,
+   "title": "星魂激活",
+   "text": "米沙的心願，就是快點長大。",
+   "unlockRequirement": "",
+   "cnUrl": "1d39777bbfbf0d1e8b23afd6a837212ff65492e5b7d82a1f8d89198220ab65d9",
+   "jpUrl": "1f73871e08ca9539e9ec598a93c3f8b817dded0ec3feab7f7df75f96164ef3fe",
+   "enUrl": "2e322447e51be0c9bb8c9d8f908053c2bd4602d7388b9e9706c3918674a71500",
+   "krUrl": "2d0dae3162cfe11c8573d29b5f3e0da3bb01dd94dfc9e5f48985862482cd1721"
+  },
+  {
+   "id": 18,
+   "title": "角色晉階",
+   "text": "離夢想越來越近了。",
+   "unlockRequirement": "",
+   "cnUrl": "a824c430a5a9c66efb40c7444fefd86a16994ecbeb5d04dd9f580d1a3651b808",
+   "jpUrl": "1d50dece99915588fa6b32f385641d81b44f64ad3a9e3c7ae2e2ed5f8c7a22e2",
+   "enUrl": "f7341b25846afbcb2184900c425b0c5715ecbb220231cacfdeda18ba66b813da",
+   "krUrl": "c194d59162795ae2b8070f5a671bf6c82d1cc538984ece0304d38f91352d895a"
+  },
+  {
+   "id": 19,
+   "title": "角色滿級",
+   "text": "我也能變得那麼厲害？不會是在做夢吧…",
+   "unlockRequirement": "",
+   "cnUrl": "b67b9abd7e61db845f7a9a4c6a31b25e0ada21d689c044c3ea8648d096249fc9",
+   "jpUrl": "792ec8edacab0411e8adfc21bb59818a154fdfde86cc984b39cd7c9528dc5e9a",
+   "enUrl": "1fc07d525f9a21dfd5451bc59471adaef78aeda13e5fb909cde90a66456b9005",
+   "krUrl": "19ed2bce9aabc17182e218ed910ed1163b934755bef39069fc3e8f2d51b7482a"
+  },
+  {
+   "id": 20,
+   "title": "行跡激活",
+   "text": "太好了，又可以學習新東西了！",
+   "unlockRequirement": "",
+   "cnUrl": "bff06565feeda7330c11d8e5149c28d7f7b2ce6fb2f5be075f4b1a9470751675",
+   "jpUrl": "ffc7de31788506d9bc4e03370f24c810c7646dc91dad99808e09dfef6b238fc9",
+   "enUrl": "c934d8042b8c753cfef83aa6a4fb7071c7be28d3012ab73ba7701f01e73a0d28",
+   "krUrl": "a93d8624e62184f5445e5ed7b953ab303fc79e45558dfe9f0d5fb2c23f0c9245"
+  },
+  {
+   "id": 21,
+   "title": "隊伍編成•開拓者",
+   "text": "是開拓者嗎？終於有機會一起並肩作戰了！",
+   "unlockRequirement": "",
+   "cnUrl": "471486e8efa4b32ae21a9e5aa5817e8844e01ca4049dfb28178f0080a7f02f68",
+   "jpUrl": "15f82102bd764105dfc3d1581f08a1fa953767ac9ba0da634144bf7f08cb7ec5",
+   "enUrl": "a67d5b5b254b6763feadb26245de1990940e78e8438e5f167285e5820511e4d8",
+   "krUrl": "b89a0c4b55e3ed486f0bb450951fb55c88f52ae3ee3e25711a74dcc2061a4a83"
+  },
+  {
+   "id": 51,
+   "title": "戰鬥開始•弱點擊破",
+   "text": "一鼓作氣搞定…！",
+   "unlockRequirement": "",
+   "cnUrl": "91470270bc81bda99045839dd4e57e62f9854cf7bb6bf532eae2e7c543839927",
+   "jpUrl": "c64ab8535b1dddfc3fdbfcdd443f7fe1f734fae78fcc30a5dffe453f0a988354",
+   "enUrl": "1e28ceb94322f33f490569912fb79a42c0b84f4fae2363962b0439a83e57f9a4",
+   "krUrl": "e59bab121bf1eade8c73082bc1c66b383390c7f1d6c931458f533d6d5234472a"
+  },
+  {
+   "id": 52,
+   "title": "戰鬥開始•危險預警",
+   "text": "這位客人，請別生氣…",
+   "unlockRequirement": "",
+   "cnUrl": "e484f6545af781b19457ef72413821a0db87be981850624e7eee4e4ccfc7f79f",
+   "jpUrl": "b0d3a3e5471db84dcc2939969f486ea4419d25708e86caaae62ee1b052d94e8c",
+   "enUrl": "5f904fb3c6e6a0984a604a4e0545eb6001d5e9a519e6dbdb0630456492d11379",
+   "krUrl": "93c711ef150da7e965db4802a222e3c9fdf978a53ee7721b40a7b5c172851982"
+  },
+  {
+   "id": 53,
+   "title": "回合開始•一",
+   "text": "開始今天的工作吧…！",
+   "unlockRequirement": "",
+   "cnUrl": "de3c05ffd555c7a1425987bfde1f2e97fc258d957c20178804a6015de5d538c5",
+   "jpUrl": "e1a86f87293e24f88fc5e2353b5290279a6359ef33f962eb23efdec8e37b8729",
+   "enUrl": "98cbd8e221e14d5bcf56eebbb176cb3821556a69ad145d12cf73b51262b3ffd4",
+   "krUrl": "0ad618954ee271005462cec9ffd31e946b15fd9fe2b66ab53e3821f60b266655"
+  },
+  {
+   "id": 54,
+   "title": "回合開始•二",
+   "text": "希望這次不會搞砸…",
+   "unlockRequirement": "",
+   "cnUrl": "b998ba871c893eecc9760bf9e653c9e6a9cb5d25248bb56da58a381d9be9eca6",
+   "jpUrl": "830c8c9238b847389c845b0f21c32900e338ec795db47798d4146af49fdf7aa5",
+   "enUrl": "3d227f75d8f9f29a6bb8a47ba5b2c22da5fe0b5eb133871225a42edffbe7821a",
+   "krUrl": "4a454701c2648832583ec46af5feec056c17ad78b79b9465a246dd8836cd0547"
+  },
+  {
+   "id": 55,
+   "title": "回合待機",
+   "text": "再這樣下去，工作要做不完了…",
+   "unlockRequirement": "",
+   "cnUrl": "ff2dc49a8bfda5ae652615d091b15129c61c63871aba8ba4cc9c6d7d53fe1d17",
+   "jpUrl": "e51390552a9636209aad03f97540273e6429cf6663d8cab9de4aa77d18bc0669",
+   "enUrl": "7604a6cc608d13fb90d18429d7dc768b36ac07d94fc2e7fb3f2e17239e047ffe",
+   "krUrl": "542aa35d5e03926e425da2882695f911833389c5d39317dac155360318b3eb8e"
+  },
+  {
+   "id": 56,
+   "title": "普攻",
+   "text": "請…請讓一下！",
+   "unlockRequirement": "",
+   "cnUrl": "3f0e85f47f3a13408cbd22485c3ac2ccf91f980086b8b7699b7cf44564981975",
+   "jpUrl": "21450f0e06f0039fbd7ccc9114f8068a9a8f4c1fab55961eafe70b50d9db5c1a",
+   "enUrl": "8017be029c619d903107ec14aa2632069526ac8e982dd3b59e0fcb613a582130",
+   "krUrl": "78eefe434ea50bd9aabc26433572baa2b0c2376a8eb42f0cb2f02814ddcfeb48"
+  },
+  {
+   "id": 57,
+   "title": "戰技•一",
+   "text": "我這就收拾乾淨！",
+   "unlockRequirement": "",
+   "cnUrl": "c1c15ffa438ae2ed59a9e6c5f23e041280bd607d9593daaa02e9d980b451b9cc",
+   "jpUrl": "0f8b5637e26b64df55473f68fb869194f9ff33ae8246e4413f5c035a0c955cc7",
+   "enUrl": "63815fb3ce06ccdc68f3718f73f563819dc801f9f1bb6590ba245cfbfb405deb",
+   "krUrl": "65eace540709a40e4762ff2e6b7793660018228ca6dcee0f5fce3760118e2d4d"
+  },
+  {
+   "id": 58,
+   "title": "戰技•二",
+   "text": "要隨時保持整潔！",
+   "unlockRequirement": "",
+   "cnUrl": "a3eadd8e157a766d04dae116129c89347605d9bd88d5cb91936067b64269d8ae",
+   "jpUrl": "4e383e7aa741d3598607d343f35db5c2abfd60c266e483c0ee956f18a242533a",
+   "enUrl": "cdd07076669934b67a337de78cff6f4e2d46b25d2028b7e0aa4d9c4d148ab0b8",
+   "krUrl": "122c312edbeea09697d6c25909e2fc8ed67d1676d0d27d678e2ada672ba0f21d"
+  },
+  {
+   "id": 59,
+   "title": "輕受擊",
+   "text": "要、要有禮貌……",
+   "unlockRequirement": "",
+   "cnUrl": "e20edafb9c1e0b703d112be60e71c9863834cb2bc061a30b1d265be40ab36370",
+   "jpUrl": "2ab760f0ecb59f54b24824b5f22876e3000bb70d8e6cdefb54fec427fc7936f0",
+   "enUrl": "187a725e51968e9f0478e69dbe2d4889bf36bc8b9112d22c8271ddddbc584ec0",
+   "krUrl": "2bbfa5da4d36d82dffb8561cb35c8014a22d8762da26f84e89897c45329c7699"
+  },
+  {
+   "id": 60,
+   "title": "重受擊",
+   "text": "不可以動手……",
+   "unlockRequirement": "",
+   "cnUrl": "8d2c4eb69aa5b224d60c6d89a67a18fd5028c4dfc9399eb74ee3de15e46748eb",
+   "jpUrl": "f75c1179627eae5be60bc887d3abf98198ffd58c7a7ee8e47cd1b3d4e4093939",
+   "enUrl": "76a2404dd9d38df6da13b63603a146a9fcfd072a3e467ce9a630a5ace975a66a",
+   "krUrl": "7ab45aa9cfa0d588433ad46638240c76af700090da865d158fe5b917cf9a420c"
+  },
+  {
+   "id": 61,
+   "title": "終結技•激活",
+   "text": "不知道時間還剩多少…",
+   "unlockRequirement": "",
+   "cnUrl": "9d795c87fc835e0bff00143e3bb8cc1c9a16c379911c7a126e312d5a4a9f9897",
+   "jpUrl": "f8f85aff3ec30c26ce3d9ecdd936eeb9ab7dac74b84b8562698b9a92bbbc2207",
+   "enUrl": "3c02de53da19229255cdae255c2474e8da3b0bb341d61b5e9794321600b5e4c2",
+   "krUrl": "44d7c4a198232fdcb8af0201e937cc5b79a015e2da0b2e7cd474b58da1b349c5"
+  },
+  {
+   "id": 62,
+   "title": "終結技•施放",
+   "text": "又、又要來不及了嗚啊啊啊——！對不起…",
+   "unlockRequirement": "",
+   "cnUrl": "d9be4b2d6230ec93a441a3846dd71dee6249cf1dab709e9b30d774af7def9df2",
+   "jpUrl": "2cb32af6cb2e859bdc0a866a81e685061e366ddcc163c23553867f74fec5e700",
+   "enUrl": "7c8c9242a258dc82286a2b8b44c62e2bb4e4f2672bf8d5affcd1386e4779943a",
+   "krUrl": "40b2c1a3562cc6ad689a7260bdd7026fa8a7c7f84408c3026f782ac3ed9fad88"
+  },
+  {
+   "id": 63,
+   "title": "無法戰鬥",
+   "text": "招待…不周……",
+   "unlockRequirement": "",
+   "cnUrl": "d24d0007435b74fc72fe8e962af7029bd7800e0a697d121b653c1ff48f46f811",
+   "jpUrl": "7764a2d80d25052150cd77af5d244018f010906f2758a3ef368eb696d719479e",
+   "enUrl": "8c21cd190fab949d1782154f661fa35df93b3d73c78836ea2102325d0d3b773d",
+   "krUrl": "a0987048d9cf5d78626c13e85ca676c23f9a78be6fbc12ed3b47f1a2024fe2e4"
+  },
+  {
+   "id": 64,
+   "title": "重回戰鬥",
+   "text": "這次一定讓您滿意…！",
+   "unlockRequirement": "",
+   "cnUrl": "0b354a22c8156991098334dc80572f5b64c97b04cc5497c8a4e82624c09104bd",
+   "jpUrl": "ed41581b3b50e590eb35929618bf3e1316136fe33421f91435987da754e02d44",
+   "enUrl": "8f8de278f4197e2695f8c4efc919e4544c9f54c4f2462576f01c3a20cd435934",
+   "krUrl": "fc56e907f374b1b4d6d356a0dd82a20564c4979ca2c89aad67525d1c3f973d90"
+  },
+  {
+   "id": 65,
+   "title": "回復生命",
+   "text": "給您添麻煩了…",
+   "unlockRequirement": "",
+   "cnUrl": "ce3eef6ca33710c1f3e03d10438bf387515a4f3e481efeb91ff50ae8eea83401",
+   "jpUrl": "33ad9eedea46a78b026fb1a83b4adfd79f4e5135b0a8fdd47cf0164d614ac26f",
+   "enUrl": "8033d3463959d794428eca3681b82e7408a2a2ba8fca89613b78b1640d3eca5f",
+   "krUrl": "f204aa55c3190dd5765ccb3e706b8009642c5a1640a0e58057b5e9ede6c694a6"
+  },
+  {
+   "id": 66,
+   "title": "祕技",
+   "text": "請等一等…！",
+   "unlockRequirement": "",
+   "cnUrl": "afc254ec376423d73cbca58c6017b9acf3ab4d8d982b2fae20630464da04f6ea",
+   "jpUrl": "ac3ece755ea331ebc79b874c0ff0fe46195c03d95ab8e0b9fd28554ff34fb6dd",
+   "enUrl": "7a31fedd0c07484c65642c6b1e20a15845fcc0e37f97f732e01ec1d6a0b3b45a",
+   "krUrl": "63e55d251570c5acd71bcd7ac87cf404631eea8b9d24e44d9aba806c587202f8"
+  },
+  {
+   "id": 67,
+   "title": "戰鬥勝利",
+   "text": "這次的工作也圓滿完成了…",
+   "unlockRequirement": "",
+   "cnUrl": "e9b429251275cdb3e69c15032f967bb9a40ab72d2acb0be50437bfdd37aa78a0",
+   "jpUrl": "365f7caa2f37e265456b6b6b71ab5794ef816c1bb98dce6fd37c96b47e589b68",
+   "enUrl": "77772b02278333fbf21ff870edf1202d585c1030ff0a06df3037a87b5c730000",
+   "krUrl": "e4bea2b3ad8da8d796a7e6ab8956770a2067bd3a82d3bf46ac3ee407b74b2fc3"
+  },
+  {
+   "id": 68,
+   "title": "開啓戰利品•一",
+   "text": "是哪位客人的遺失物嗎…？",
+   "unlockRequirement": "",
+   "cnUrl": "90a809c19f9525aa7005c95338e023b04ee7349038a9000c1f356f182f95ebfd",
+   "jpUrl": "8d13437364ef8a430998ceb4142dc44e3f2e4f63d9c0c8b41dd51653522249e1",
+   "enUrl": "97d92a6525665952007c65dd1c2651ae19ca9725d720cac5f2b1526b414b4f67",
+   "krUrl": "8d96086dede1bb1eb3e44cd1d3839e49a6e0451a3d0e9f1769df2b2dc78aa96b"
+  },
+  {
+   "id": 69,
+   "title": "開啓戰利品•二",
+   "text": "居然有這麼多小費…！",
+   "unlockRequirement": "",
+   "cnUrl": "d013917b1af3072d4860839b6ccfde14c471278de44d38a1f63499f9f5338ed4",
+   "jpUrl": "9fb9cb4db8ffcf7cc1709d9cb1efcb5f790bf0a474837864f81747700d7bba5e",
+   "enUrl": "e29c2d9f8f550e01796b90c9ff22b575dabdc988ebabe34a53d3630a825b38fe",
+   "krUrl": "810c07a2c853ef77cfe2d47c7eecc720f4f1d00539c60e4b83f844c88f7899f4"
+  },
+  {
+   "id": 70,
+   "title": "開啓貴重戰利品",
+   "text": "這、這也太貴重了！我不能收…",
+   "unlockRequirement": "",
+   "cnUrl": "02c1f3d156903c9df21371a2967651e53fc7a73145a63faebe7965ffbf7e4562",
+   "jpUrl": "682775256febb79337e11f5bc5ebba927b0e5b1dd4ae68ff2e137e1028f62e43",
+   "enUrl": "02fff652d2cfcbe8df5ea895ac4c511147c300bad7799f47a986403057767cd4",
+   "krUrl": "56127adc8b6062a1e74d3d9251ab4a448d76bd93ef5406651482149519aa69ae"
+  },
+  {
+   "id": 71,
+   "title": "解謎成功•一",
+   "text": "大功告成！",
+   "unlockRequirement": "",
+   "cnUrl": "8085bf97ff5a294162c25604b60950c61d0d90f6674bd980f84d6d4f263bf63a",
+   "jpUrl": "e0317006449c24bf672e667b3401251d4dfb52d6702402c4dd28b185b8bc3aae",
+   "enUrl": "d5a5d3cdb051fe976a022cc9df16f15b8224dddd9e4bdf6edbf971284225563d",
+   "krUrl": "ea9add6b91243234f9ab79e9ec672b3c1dae4028a97c2a2f70b8d1f45350d0c9"
+  },
+  {
+   "id": 72,
+   "title": "解謎成功•二",
+   "text": "好像找到竅門了。",
+   "unlockRequirement": "",
+   "cnUrl": "b1a978a5823e02465b9de8db68816ebb38dbe113b9491dfec302cc831af61b03",
+   "jpUrl": "04e063ec70db316ccc8d472fb28da391c441f30ee1135534774632ad7291a939",
+   "enUrl": "a4116672058f42f32498c2de15f116426ef48beec69715648f5f2d3181cfb0bb",
+   "krUrl": "793954fdc7fbbf3cee5d3f41be9f53bcaad37947ab53f9d0453ae1691e92cf38"
+  },
+  {
+   "id": 73,
+   "title": "發現敵方目標",
+   "text": "那邊好像有個難纏的客人…",
+   "unlockRequirement": "",
+   "cnUrl": "1b2956f6a083c28e912e8c158fcf2c7a57acee3dd0efb1ba0e571c8dc853c9e9",
+   "jpUrl": "902f94b6ec0d5ad9b22bb0798d494ea7d2b591d191f9ac68c48f3f8ad6adabdc",
+   "enUrl": "90b51fe849eeaf535bcf80ee1680db4e7bcaacb86865e27d502dadedf2246d3e",
+   "krUrl": "ed20bb31c5f501df7033517643d6b79df66ee1795ae1a3c039c17d967394de57"
+  },
+  {
+   "id": 74,
+   "title": "返回城鎮",
+   "text": "工作全部完成，好好休息一下吧。",
+   "unlockRequirement": "",
+   "cnUrl": "d4c6904c156fca3bbe195eeccdcbae6dc07fe082bc97231a01fbb82327cd0e18",
+   "jpUrl": "404594c306ab68bf01176a52f91da5654b7363a2c060c6ad364966941f369dcc",
+   "enUrl": "5ec0d253f1af227f87f2358f0dbb9cd1c6d0c6bc00b1ffa153dfb786ff2f868e",
+   "krUrl": "24202289b61068098bdcbe408712a99664303edc8e3c7dfd2f1c0139923d4bd7"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "角色詳情",
+   "text": "乖巧懂事的「白日夢酒店」門童，夢想成爲一名和爺爺一樣的銀河冒險家。<br />工作十分努力，尤其擅長修理各類機械，熱衷於酒店住客分享的星際見聞。<br />希望自己快快長大，期待着早日有一天踏上探索羣星的旅程。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "角色故事·一",
+   "text": "懷表走到早上六點，廚房煮牛奶和烤麵包的香味一如往常飄進他狹小的臥室。<br /><br />客人們就要來了，他慌慌張張地起牀，站到門口。機油、皮革、煙草的味道撲面而來，他還沒來得及張嘴，幾個人高馬大的身影便已踏進門檻。<br /><br />「歡…歡迎光臨……」<br /><br />遠道而來的冒險家們並沒有在意在門口迎接的小不點，他們正忙着大聲吹噓過去一段時間的奇遇。那些故事不知爲何總是牽引着他的心，令他頻頻回頭傾聽。<br /><br />「一道巨大的光束從天而降，射穿了一顆鬱鬱蔥蔥的星球…我當時就在附近，飛船被氣浪拍飛了。我冒死才拍到幾張照片……」<br />「你這算什麼，我的經歷才真嚇人。在星際旅行的時候，我掉進一片深不見底的憶域，裡面全是我這輩子都沒見過的怪物，甚至還有幽靈一樣的人……」<br />「這些都——弱爆了！你們看過鋪天蓋地的蟲羣嗎，我可是從裡面活着回來的，那一次，整個星球都覆滅了……」<br /><br />他羨慕聽着這些或真或假的吹噓，終於鼓足勇氣開口——<br />「那個…請問，如果想在銀河中冒險，有什麼需要學習的嗎？」<br />卡座上的話語停止了，幾個人不約而同看向他。<br />「怎麼，小不點，你也想去往銀河冒險？」<br />「嗯…我想做一名走遍銀河的冒險家，就…就像爺爺一樣。」<br />「志氣還挺大哈哈哈！」<br />「小不點，做我們這行可不輕鬆，你要會用武器，會自己修東西，會識別方向，要學的多了去了！」<br />「我知道…爺爺也總是抱怨容易偏航和拋錨，也許我可以學會怎麼去解決這些問題……」<br />「你們這些傢伙，總是喜歡嚇唬小孩子。」<br />爲首的老人清了清嗓子，看向米沙。<br />「所有的東西都可以慢慢學習。只是你得考慮清楚，你確實有這個夢想嗎？願意爲它堅持多久？孩子，那才是最重要的問題。」",
+   "unlockRequirement": "角色等級<nobr>20</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·二",
+   "text": "懷表走到下午兩點，打掃與迎客工作交接給同事後，他換上工作服開始檢修機械。<br /><br />大叔瓦爾德在前面走着，不時停下敲擊那些複雜的機械。他小跑着跟在瓦爾德身後，側耳傾聽機械運轉中的雜音，準確地指出裡面的問題。<br /><br />今天的任務，是修好一堆破鍾。生鏽的，報廢的，缺齒輪的，被砸壞的，在米沙眼中，它們就像迷失了方向的海員，急需有人帶領它們走上正確的軌道。<br /><br />「壁鍾先生，請往西邊走，誒，懷表夫人，請你不要停下！」<br />「鬧鐘先生，請喫飽飯再行動吧，那邊三位手錶小姐，請你們跟着懷表先生一塊走吧！」<br />突然，所有壞掉的鐘表開始走動。他撥動輪盤，調整指針，仿佛一位遨遊於時間之海的船長。<br />「米沙船長，現在的方向對了！」<br />「我們終於走出了迷霧，航過大海就是終點！」<br />「繼續航行吧，大海也無法阻擋我們的腳步！」<br />米沙眼中，那些鐘錶仿佛有了自己的生命和意志，在表達着向前進發的欣喜。<br /><br />瓦爾德微笑着摸了摸他的頭。<br />「看來我不用擔心這的時間會變得錯亂了，畢竟無論如何，還有你這位引航員哩。」",
+   "unlockRequirement": "角色等級<nobr>40</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·三",
+   "text": "懷表走到傍晚七點，他早早喫完晚飯，躺在了櫥櫃改造的小牀上。<br />他望着眼前閉塞的黑暗，聽着懷表永恆不變的嘀嗒聲音，這是他最幸福的劇場時光——沒有工作，沒有現實，只有最自由的幻想。<br /><br />穿越迷霧之後，他幻想的故事已到了最精彩的海戰環節。他伸出雙手，把被海浪打翻的夥伴拉回來，他又在畫面上劃了一道橫線，好像那樣就可以把大海裏的怪物幹掉……<br /><br />「船長，船長，快起來，天晴啦！」<br />他揉了揉眼睛，不可置信地看着面前的景象：<br />一隻金色的懷表長出了手腳，穿上了制服，戴着紅色的領結，正招呼着他過來。<br />一面銀色的鏡子映出他的樣子，一邊擺弄自己的長裙，一邊用望遠鏡觀察遠處的景象。<br />昨夜的風暴消失無蹤，涼爽的海風吹拂着他的制服，遠處已然是新大陸的輪廓。<br /><br />「看啊，船長，海岸已經不遠了！」<br />鐘錶小人與鏡子小姐拉起他的手，輕輕地一躍。他還沒有反應過來，三個人便一起跳上了雲端。望着腳下無垠的大海與新月般的大陸，鐘錶小人和鏡子小姐歡呼雀躍，拉着他跳起了踢踏舞。他握緊了夥伴的手，心中又驚又喜。<br /><br />「你們…你們是我的夥伴嗎？」<br />「是啊，我們一路經歷了那麼的困難，迷失過好多次方向，終於到新大陸啦！」<br />……<br /><br />天亮的時候，他從夢中醒來，一滴眼淚從他眼角滑落。<br />他看了看自己的臥室，原來是懷表壓在了胸口，鏡子從牆上掉了下來。<br />他擦掉淚水，覺得好像什麼都沒有失去，但又好像什麼都失去了。",
+   "unlockRequirement": "角色等級<nobr>60</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·四",
+   "text": "懷表再次走到早上六點，廚房煮牛奶和烤麵包的香味一如往常飄進了他狹小的臥室。<br /><br />他已徹底融入這裡的生活，將自己的夢想深埋於心。他不再那麼容易對客人的故事感到激動，也不再期待爺爺能夠馬上回來。<br /><br />「也許大人都是那個樣子，說話不算數，也不願意認真聽小孩子講話。」<br />他接過客人的箱包，客人們目不斜視地走掉，只剩下他一個人在那裡自言自語。<br /><br />他回到鐘錶房，如同往常一樣檢查那些時鐘。不同的時區有不同的時間，他怔怔地望着滿牆的鐘表，想象着那些世界發生的故事。想着想着，他攤開畫紙，繼續畫下自己與想象中的夥伴經歷的故事。<br /><br />那已經是故事的結尾了。<br /><br />「夥伴們，再見！我會留在新大陸，等它建設完成之後，再與你們一起前往新的世界！」<br />「米沙船長，再見！我們有緣再會！」<br />其他的夥伴走了，而蹦蹦跳跳的鐘表小人與溫柔的鏡子小姐都留了下來。他曾經帶領着這些夥伴穿越迷霧，航過大海。每一次危險關頭，他調整羅盤，將隊伍帶向正確的方向。現在，那個叫米沙的孩子將在新的大陸建設新的國度，直到再次踏上旅途的機會來臨。<br /><br />「如果要接着畫的話，第二部就暫定爲新大陸歷險記吧。」<br />他畫完最後一筆的時候，聽見了某種熟悉的聲音與顫動，仿佛有一個龐然大物從宇宙深處而來，停在了酒店門外。<br /><br />他扔下畫筆，打開門，跑了出去——<br /><br />「您好，歡迎光……」<br /><br />在晨光下閃閃發亮的星穹列車，疲憊地，驕傲地，悄然停在了那<br />——就像「夢」中的一樣。",
+   "unlockRequirement": "角色等級<nobr>80</nobr>解鎖"
+  }
+ ],
+ "archive": {
+  "cvCn": "柳知蕭",
+  "cvJp": "松井恵理子",
+  "cvKr": "박신희",
+  "cvEn": "Cat Protano",
+  "camp": "匹諾康尼"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "米沙",
+ "rarity": 4,
+ "descHash": "匹諾康尼酒店的門童侍應，乖巧懂事的小男孩。 對無名客抱有極大憧憬，夢想有朝一日自己也能踏上旅途。",
+ "artPath": "35c2bd0fc3b03dc00d91776118b3e546a73802a01450f335310a1be14fc15a41",
+ "miniIconPath": "5901c970a59bd0f0a9e290365b8cc015537c13b9757cf1b77ea1f3c137755d5b",
+ "damageType": {
+  "id": 4,
+  "iconPath": "c7ca3cbdcd5d26fbfad374f97d58d9152b5a398a5e5bf6d441a29041251fa779",
+  "color": "#47C7FD",
+  "name": "冰",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "673136d8ba64c836e77a0084380bccea317250a93f866ddfcb0d64682b543970",
+  "altIconPath": "9093f5a5aa958c0fe5a14267d9fe5101a95a033e08898ba40b35994c1a3a8d81",
+  "color": "#FFFFFF",
+  "name": "毀滅",
+  "rarity": 0
+ },
+ "pageId": "misha"
+}

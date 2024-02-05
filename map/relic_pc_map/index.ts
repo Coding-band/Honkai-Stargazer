@@ -7,6 +7,10 @@ import pt from "../../data/relic_data/relic_pc_pt.json";
 import ru from "../../data/relic_data/relic_pc_ru.json";
 import zh_cn from "../../data/relic_data/relic_pc_zh_cn.json";
 import zh_hk from "../../data/relic_data/relic_pc_zh_hk.json";
+import kr from "../../data/relic_data/relic_pc_kr.json";
+import th from "../../data/relic_data/relic_pc_th.json";
+import id from "../../data/relic_data/relic_pc_id.json";
+import vi from "../../data/relic_data/relic_pc_vi.json";
 
 export default {
   de,
@@ -18,4 +22,8 @@ export default {
   ru,
   zh_cn,
   zh_hk,
+  kr,
+  th,
+  id,
+  vi
 };

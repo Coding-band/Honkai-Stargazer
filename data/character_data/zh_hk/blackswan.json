@@ -1,0 +1,2887 @@
+{
+ "spRequirement": 120,
+ "iconPath": "218faf96434a001084762eed4d2499a7fd55d7014588a441709ed7ef335862f7",
+ "bgPath": "b5422d3e9fc53ffe9813b32a915769b75dad6ba2e2d9a0b95df4814c95b204c3",
+ "figPath": "8edb308439fd6545b630899981d7d833a82efc9c241d5a62215b7c6f2c43bb76",
+ "fgPath": "",
+ "splashIconPath": "8235c510c01b722b5ced0f0ece69b8f597028c031a888fb79177692456aa68f2",
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 5,
+  "iconPath": "4b4b5f13f6588e7fb1c030c28f9b9b67a7a8c4bab77c05e38d5c9f64eb0d99e7",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "信用點",
+   "desc": "星際和平公司與客戶結算時使用的貨幣，如今已成爲太空旅行的硬通貨。",
+   "lore": "「人們奔波、爭鬥、貿易，爲的不過是個終端裏顯示的數字。但真正珍貴之物，公司的數字是買不到的。」",
+   "purpose": "通用貨幣",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "擬造花萼【工造司】",
+    "擬造花萼【「白日夢」酒店-夢境】",
+    "任務獎勵",
+    "委託獎勵",
+    "餘燼兌換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "命運的足跡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "一次又一次的敗北成就了你的勝利，一步又一步的前進讓你抵達了命運的拐點。",
+   "purpose": "行跡材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」積分獎勵",
+    "無名勳禮",
+    "餘燼兌換",
+    "限時活動獎勵"
+   ]
+  },
+  "267806": {
+   "id": 267806,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "b58782779268cffe0f8c8873690ce14c5a236ad8d2986a9d8171dc8ac6d49cdb",
+   "name": "天人遺垢",
+   "desc": "承露天人所遺的殘燼，風屬性角色的晉升素材。",
+   "lore": "仙人本擬爲世人帶去遺惠，卻在「豐饒」恩賜褪去，解脫降臨的剎那才明白：自己從來只是血肉凡胎，御風空行不過是如夢泡影，遺世所留僅只有塵跡污垢。<br /><br />「帝弓司命啊，我詛咒您…」",
+   "purpose": "角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/267806",
+   "comeFrom": [
+    "凝滯虛影【丹鼎司】",
+    "凝滯虛影【丹鼎司】",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "漫遊指南",
+   "desc": "角色的經驗材料，可以獲得<nobr>20000</nobr>點角色經驗。",
+   "lore": "跨越諸界必備的冒險叢書。按下閱讀鍵，充滿磁性的聲音將以你能聽懂的語言講述知名冒險家們在不同世界間的傳奇經歷，以及他們在各個星球上獲得的珍貴智慧。<br /><br />「漫遊指南全新書系《星際美食烹飪導覽》開售在即，敬請支持。」<br />「投稿請接入博識學會聯覺信標<nobr>23</nobr>θ聯絡員，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色經驗材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【流雲渡】",
+    "擬造花萼【築夢邊境】",
+    "「忘卻之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "冒險記錄",
+   "desc": "角色的經驗材料，可以獲得<nobr>5000</nobr>點角色經驗。",
+   "lore": "裝訂嚴整，一看就頗有教育意義的冒險札記。圖文並茂地描述了冒險行動的始末、有價值的信息和生存相關的技巧。<br /><br />「幹嘛不數據化放進光刻片裡？便攜多了。」<br />「面對恆星風暴和中子流噴發時，高科技比你想象的還要脆弱。何況，製作這本書的人一定希望人們用最簡單的方式閱讀它。」",
+   "purpose": "角色經驗材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【流雲渡】",
+    "擬造花萼【築夢邊境】",
+    "每日實訓",
+    "餘燼兌換"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "旅情見聞",
+   "desc": "角色的經驗材料，可以獲得<nobr>1000</nobr>點角色經驗。",
+   "lore": "記錄旅途見聞的日誌，字跡漫漶不清，內容隨心所欲，對你並沒有太大的幫助。<br /><br />「看完了就趕緊把這堆廢紙處理掉吧，丹恆？」",
+   "purpose": "角色經驗材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【流雲渡】",
+    "擬造花萼【築夢邊境】",
+    "委託獎勵"
+   ]
+  },
+  "470781": {
+   "id": 470781,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "c63b922af281d49c4d1e5ee84aa4a5cb7027e4a16e96fe8f683c9f50a4bcb921",
+   "name": "蛀星孕災的舊惡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "作爲蟲皇親自繁育的子嗣，它的唯一欲望便是擴張族羣。它以巨鐮收割星體爲巢，不倦培育無窮子孫，塗炭萬千生靈，直至隕落一刻。<br /><br />「破碎星球之上，巨蝗遮蔽天空，羣蟲湧出地殼。鍬甲將這顆新巢穴舉起，向它的蟲皇獻禮…願此番慘狀只存於史料中，永不復現。」",
+   "purpose": "行跡材料",
+   "rarity": 4,
+   "rewardPath": "/material/470781",
+   "comeFrom": [
+    "歷戰餘響【禁閉艙段】"
+   ]
+  },
+  "549438": {
+   "id": 549438,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "5eb86757b6878dd09f969ed2d9e75af43eac2565bd49fdbe391f716e5adca101",
+   "name": "熄滅原核",
+   "desc": "裂界中徘徊的怪物的心臟，強化所需的簡單材料。",
+   "lore": "就像孳生惡瘤的病竈，引致罪行的衝動，它是裂界扭曲的源頭。<br />在沉重的打擊下，這顆心臟已然停止搏動，失去了光澤。<br /><br />「初步判定它是某種雜交產物：一半原體，另一半的數據與星核高度擬合——生物科，莎拉•卡斯特羅」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/549438",
+   "comeFrom": [
+    "部分裂界造物掉落",
+    "「模擬宇宙」中敵方掉落",
+    "委託獎勵",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換",
+    "擬造花萼（金）"
+   ]
+  },
+  "589818": {
+   "id": 589818,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "daa3e2f0fc9cc9bcc2da489f1a17ad0adfa1ce552e27b1f294fc4acb245de673",
+   "name": "星火之精",
+   "desc": "「火劫大戰」後流竄的熾盛歲陽。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "刁鑽促搯、一簇團焰形狀的歲陽火苗。<br />顯形時「火焰」大小，可以辨別歲陽個體強弱。這團炬火歲陽初嘗心智，貪圖喫掉宿主的七情六慾。<br /><br />「汲取喜悲，左右意志…」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/589818",
+   "comeFrom": [
+    "擬造花萼【丹鼎司】",
+    "擬造花萼【丹鼎司】",
+    "「萬能合成機」- 材料合成",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "633379": {
+   "id": 633379,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4886a5629723505540ba6d02fac7f264a3164458f4194796470c1826138ba105",
+   "name": "微光原核",
+   "desc": "裂界中徘徊的怪物的心臟，強化所需的普通材料。",
+   "lore": "就像孳生惡瘤的病竈，引致罪行的衝動，它是裂界扭曲的源頭。<br />這顆心臟已然閃着微光，其上的紋路仍有生命力。<br /><br />「這究竟是什麼怪物？你看見了嗎——那是上一任隊長的臉，是他的臉！」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/633379",
+   "comeFrom": [
+    "突破至均衡等級2後，部分裂界造物掉落",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "673759": {
+   "id": 673759,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "f11dd326fbfb4a1a66e7e8807c44a70a648b773365a75cbd532d7e444f9b52ff",
+   "name": "焚天之魔",
+   "desc": "「火劫大戰」後融聚的獸形歲陽。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "多謀善慮、初具獸形的強力歲陽。<br />顯形時「火焰」大小，可以辨別歲陽個體強弱。大歲陽融聚後漸漸成形，不死不滅，危害程度可稱之爲災害。<br /><br />「水淹火灼，山崩雷劈…」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/673759",
+   "comeFrom": [
+    "擬造花萼【丹鼎司】",
+    "擬造花萼【丹鼎司】",
+    "「萬能合成機」- 材料合成",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "717320": {
+   "id": 717320,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "f54699a5eaba1cef67217196db0a1440c1b1c1c5b89179b36b2ebe7331831ea1",
+   "name": "蠢動原核",
+   "desc": "裂界中徘徊的怪物的心臟，強化所需的高級材料。",
+   "lore": "就像孳生惡瘤的病竈，引致罪行的衝動，它是裂界扭曲的源頭。<br />這顆心臟依然緩緩律動，其力量殘留，必將引發新的災難。爲恐再生事端，最好儘快將它滅活處理。<br /><br />「就像癌變……」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/717320",
+   "comeFrom": [
+    "突破至均衡等級4後，部分裂界造物掉落",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "874345": {
+   "id": 874345,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "5bcb3a328152515e073bcf4072d659b4725ab9ae271ee6aedb5cb60fec84a7e1",
+   "name": "熾情之靈",
+   "desc": "「火劫大戰」後逸散的微弱歲陽。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "天真爛漫、無固定形體的歲陽星火。<br />顯形時「火焰」大小，可以辨別歲陽個體強弱。這縷小小歲陽思慮單純，容易被更強大的歲陽吞併。<br /><br />「無形無根，漫遊天外…」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/874345",
+   "comeFrom": [
+    "擬造花萼【丹鼎司】",
+    "擬造花萼【丹鼎司】",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 89.76,
+   "attackAdd": 4.488,
+   "hpBase": 147.84,
+   "hpAdd": 7.392,
+   "defenseBase": 66,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549438,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 125.664,
+   "attackAdd": 4.488,
+   "hpBase": 206.976,
+   "hpAdd": 7.392,
+   "defenseBase": 92.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549438,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 161.568,
+   "attackAdd": 4.488,
+   "hpBase": 266.112,
+   "hpAdd": 7.392,
+   "defenseBase": 118.8,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633379,
+     "count": 6
+    },
+    {
+     "id": 267806,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 197.472,
+   "attackAdd": 4.488,
+   "hpBase": 325.248,
+   "hpAdd": 7.392,
+   "defenseBase": 145.2,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633379,
+     "count": 9
+    },
+    {
+     "id": 267806,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 233.376,
+   "attackAdd": 4.488,
+   "hpBase": 384.384,
+   "hpAdd": 7.392,
+   "defenseBase": 171.6,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717320,
+     "count": 6
+    },
+    {
+     "id": 267806,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 269.28,
+   "attackAdd": 4.488,
+   "hpBase": 443.52,
+   "hpAdd": 7.392,
+   "defenseBase": 198,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717320,
+     "count": 9
+    },
+    {
+     "id": 267806,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 305.184,
+   "attackAdd": 4.488,
+   "hpBase": 502.656,
+   "hpAdd": 7.392,
+   "defenseBase": 224.4,
+   "defenseAdd": 3.3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "ba1141393ef88c217b2e59bdce58a61ba5f45d9b0162166a86704a4945219cf6",
+   "artPath": "4513a29ebcc922eab12617a55dd58978c6a2c06cf4ac90fdd2ad892dc05ba0d2",
+   "name": "三磅石，七階柱",
+   "descHash": "當黑天鵝處於可戰鬥狀態時，處於風化、裂傷、灼燒、觸電狀態下的敵方目標對應的風、物理、火、雷屬性抗性分別降低<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.25
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "420d033f134db663da7f64e6e3b12017f97b9228fe03a35566b5cad859ae4784",
+   "artPath": "760de1f0c7cd413cda516e16ae5fc6fd57ab962aeed91a22bc1759229eeee97c",
+   "name": "羔羊，請勿爲我慟哭",
+   "descHash": "【奧跡】狀態下的敵方目標被消滅時，有<nobr>#1[i]%</nobr>的基礎概率使相鄰目標陷入<nobr>#2[i]</nobr>層【奧跡】。",
+   "params": [
+    1,
+    6
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "d20288ef01a22a9347aea1f469fd5bf221e9a9c7266ca64896e31ef3da49c55f",
+   "artPath": "4203ab6b8102c900683e6d21decb4bc0f0118c25c158897e37308723fd86966b",
+   "name": "上界如此，下界亦然",
+   "descHash": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "ab35f129f930b7e0d7dc02b53f09ca63272056d8eca7dc09f55e248695dec404",
+   "artPath": "71d0beda48cd4198ed9d3880275cbef849c999019d5e88bcb355ecc6faacebaf",
+   "name": "淚水，亦是禮物",
+   "descHash": "【揭露】狀態下，敵方目標效果抵抗降低<nobr>#1[i]%</nobr>，且每回合開始時或被消滅時使黑天鵝恢復<nobr>#2[i]</nobr>點能量。能量恢復效果在【揭露】狀態持續時間內最多觸發1次，再次陷入【揭露】狀態會刷新觸發次數。",
+   "params": [
+    0.1,
+    8
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "1f77c680c96f816c05e772ac266cc78a08c5a98ffaba8f5419185cdba1a6ea67",
+   "artPath": "4438d2fa65de7ddc2118afb93b5333900befecd2f95f310f06c00000077fd8cc",
+   "name": "候鳥之路",
+   "descHash": "終結技等級+2，最多不超過<nobr>15</nobr>級，普攻等級+1，最多不超過<nobr>10</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "090706494f93eb29c1fe4706d7cab5959cf93457be91584013611ee7dca14480",
+   "artPath": "10c3567544ec1c0100dd07c6efd00fdc5698dd5058f6eb7977b146f36f4c13e1",
+   "name": "萬神皆善，苦役者未知",
+   "descHash": "當敵方目標受到黑天鵝的隊友的攻擊時，黑天鵝有<nobr>#2[i]%</nobr>的基礎概率使目標陷入1層【奧跡】。<br />每當黑天鵝使敵方目標陷入【奧跡】時，有<nobr>#1[i]%</nobr>的固定概率使本次疊加的【奧跡】層數額外提高<nobr>#3[i]</nobr>層。",
+   "params": [
+    0.5,
+    0.65,
+    1
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   451140
+  ],
+  [
+   735667
+  ],
+  [
+   651726
+  ],
+  [
+   936253
+  ],
+  [
+   20194
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於黑天鵝<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#00FF9C;\">風</span>屬性傷害，有<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>的<u>基礎概率</u>使目標陷入1層【<u>奧跡</u>】，且攻擊陷入<span style=\"color:#00FF9C;\">風</span>化、裂傷、灼燒、觸電狀態的目標後，分別各有<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>的<u>基礎概率</u>額外使目標陷入1層【<u>奧跡</u>】。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 451140,
+   "name": "洞見，緘默的黎明",
+   "iconPath": "28c089fa8c20eb8021e6611f35b0fbded241044a0b15cd2d85d6a316c1b030ce",
+   "typeDescHash": "普攻",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.3,
+      0.5,
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.36,
+      0.53,
+      0.53
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874345,
+       "count": 3
+      },
+      {
+       "id": 549438,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.42,
+      0.56,
+      0.56
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589818,
+       "count": 3
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.48,
+      0.59,
+      0.59
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589818,
+       "count": 5
+      },
+      {
+       "id": 633379,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.54,
+      0.62,
+      0.62
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673759,
+       "count": 3
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      0.65,
+      0.65
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673759,
+       "count": 8
+      },
+      {
+       "id": 717320,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.66,
+      0.68,
+      0.68
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.72,
+      0.71,
+      0.71
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.78,
+      0.74,
+      0.74
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "擴散",
+   "descHash": "對指定敵方單體及其相鄰目標造成等同於黑天鵝<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#00FF9C;\">風</span>屬性傷害，同時有<nobr>#2[i]%</nobr>的<u>基礎概率</u>使目標和相鄰目標陷入1層【<u>奧跡</u>】，此外有<nobr>#3[i]%</nobr>的<u>基礎概率</u>使目標和相鄰目標防禦力降低<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span>，持續<nobr>#5[i]</nobr>回合。",
+   "ultimateCost": 0,
+   "break": "60 + 30/adjacent",
+   "energy": "30",
+   "id": 735667,
+   "name": "失墜，僞神的黃昏",
+   "iconPath": "d20288ef01a22a9347aea1f469fd5bf221e9a9c7266ca64896e31ef3da49c55f",
+   "typeDescHash": "戰技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.45,
+      1,
+      1,
+      0.148,
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.495,
+      1,
+      1,
+      0.154,
+      3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549438,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.54,
+      1,
+      1,
+      0.16,
+      3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874345,
+       "count": 3
+      },
+      {
+       "id": 549438,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.585,
+      1,
+      1,
+      0.166,
+      3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589818,
+       "count": 3
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.63,
+      1,
+      1,
+      0.172,
+      3
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589818,
+       "count": 5
+      },
+      {
+       "id": 633379,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.675,
+      1,
+      1,
+      0.178,
+      3
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589818,
+       "count": 7
+      },
+      {
+       "id": 633379,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.73125,
+      1,
+      1,
+      0.1855,
+      3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673759,
+       "count": 3
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7875,
+      1,
+      1,
+      0.193,
+      3
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673759,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.84375,
+      1,
+      1,
+      0.2005,
+      3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673759,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9,
+      1,
+      1,
+      0.208,
+      3
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673759,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.945,
+      1,
+      1,
+      0.214,
+      3
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.99,
+      1,
+      1,
+      0.22,
+      3
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.035,
+      1,
+      1,
+      0.226,
+      3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.08,
+      1,
+      1,
+      0.232,
+      3
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.125,
+      1,
+      1,
+      0.238,
+      3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "羣攻",
+   "descHash": "使敵方全體陷入【揭露】狀態，持續<nobr>#2[i]</nobr>回合。<br />【揭露】狀態下，敵方目標自身回合內受到的傷害提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>，且當敵方目標處於【<u>奧跡</u>】狀態時，也會被視爲同時陷入了<span style=\"color:#00FF9C;\">風</span>化、裂傷、灼燒、觸電狀態，並且【<u>奧跡</u>】每回合開始造成傷害後不會重置層數。【<u>奧跡</u>】不會重置層數的效果在【揭露】狀態持續時間內最多觸發<nobr>#4[i]</nobr>次，再次陷入【揭露】狀態會刷新觸發次數。<br />對敵方全體造成等同於黑天鵝<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#00FF9C;\">風</span>屬性傷害。",
+   "ultimateCost": 120,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 651726,
+   "name": "沉醉於彼界的臂灣",
+   "iconPath": "23a4792bfaf92a04d3c6dad9992b2855bb2e847b201041f2db754a2bc1f035d1",
+   "typeDescHash": "終結技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.72,
+      2,
+      0.15,
+      1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.768,
+      2,
+      0.16,
+      1
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549438,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.816,
+      2,
+      0.17,
+      1
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874345,
+       "count": 3
+      },
+      {
+       "id": 549438,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.864,
+      2,
+      0.18,
+      1
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589818,
+       "count": 3
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.912,
+      2,
+      0.19,
+      1
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589818,
+       "count": 5
+      },
+      {
+       "id": 633379,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.96,
+      2,
+      0.2,
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589818,
+       "count": 7
+      },
+      {
+       "id": 633379,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.02,
+      2,
+      0.2125,
+      1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673759,
+       "count": 3
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.08,
+      2,
+      0.225,
+      1
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673759,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.14,
+      2,
+      0.2375,
+      1
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673759,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      2,
+      0.25,
+      1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673759,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.248,
+      2,
+      0.26,
+      1
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.296,
+      2,
+      0.27,
+      1
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.344,
+      2,
+      0.28,
+      1
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.392,
+      2,
+      0.29,
+      1
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.44,
+      2,
+      0.3,
+      1
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "妨害",
+   "descHash": "敵方目標每回合開始時每受到1次持續傷害，有<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>的<u>基礎概率</u>陷入1層【<u>奧跡</u>】。<br />【<u>奧跡</u>】狀態下，敵方目標每回合開始時受到等同於黑天鵝<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#00FF9C;\">風</span>屬性持續傷害，每層【<u>奧跡</u>】使此傷害倍率提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>，隨後重置爲1層。【<u>奧跡</u>】最多疊加<nobr>#8[i]</nobr>層。<br />僅在敵方目標回合開始【<u>奧跡</u>】造成傷害時，黑天鵝根據目標陷入的【<u>奧跡</u>】層數觸發額外效果：<br />大於等於<nobr>#4[i]</nobr>層：對相鄰目標造成等同於黑天鵝<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span>攻擊力的<span style=\"color:#00FF9C;\">風</span>屬性持續傷害，並且有<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>的<u>基礎概率</u>使相鄰目標陷入1層【<u>奧跡</u>】。<br />大於等於<nobr>#6[i]</nobr>層：使本次造成的持續傷害無視該目標及其相鄰目標<nobr>#7[i]%</nobr>的防禦力。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 936253,
+   "name": "無端命運的機杼",
+   "iconPath": "fd03e726637331044db0cd24a4f58de55ca78fb71c281f88f041ef53348b868c",
+   "typeDescHash": "天賦",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.96,
+      0.5,
+      0.048,
+      3,
+      0.72,
+      7,
+      0.2,
+      50
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.1184,
+      0.515,
+      0.05592,
+      3,
+      0.8388,
+      7,
+      0.2,
+      50
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549438,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2768,
+      0.53,
+      0.06384,
+      3,
+      0.9576,
+      7,
+      0.2,
+      50
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874345,
+       "count": 3
+      },
+      {
+       "id": 549438,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.4352,
+      0.545,
+      0.07176,
+      3,
+      1.0764,
+      7,
+      0.2,
+      50
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589818,
+       "count": 3
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5936,
+      0.56,
+      0.07968,
+      3,
+      1.1952,
+      7,
+      0.2,
+      50
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589818,
+       "count": 5
+      },
+      {
+       "id": 633379,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.752,
+      0.575,
+      0.0876,
+      3,
+      1.314,
+      7,
+      0.2,
+      50
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589818,
+       "count": 7
+      },
+      {
+       "id": 633379,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.896,
+      0.59375,
+      0.0948,
+      3,
+      1.422,
+      7,
+      0.2,
+      50
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673759,
+       "count": 3
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.04,
+      0.6125,
+      0.102,
+      3,
+      1.53,
+      7,
+      0.2,
+      50
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673759,
+       "count": 5
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.22,
+      0.63125,
+      0.111,
+      3,
+      1.665,
+      7,
+      0.2,
+      50
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673759,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.4,
+      0.65,
+      0.12,
+      3,
+      1.8,
+      7,
+      0.2,
+      50
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673759,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.52,
+      0.665,
+      0.126,
+      3,
+      1.89,
+      7,
+      0.2,
+      50
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.64,
+      0.68,
+      0.132,
+      3,
+      1.98,
+      7,
+      0.2,
+      50
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.76,
+      0.695,
+      0.138,
+      3,
+      2.07,
+      7,
+      0.2,
+      50
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.88,
+      0.71,
+      0.144,
+      3,
+      2.16,
+      7,
+      0.2,
+      50
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.725,
+      0.15,
+      3,
+      2.25,
+      7,
+      0.2,
+      50
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "攻擊敵人，進入戰鬥後削弱敵方目標對應屬性韌性。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 136839,
+   "name": "攻擊",
+   "iconPath": "28c089fa8c20eb8021e6611f35b0fbded241044a0b15cd2d85d6a316c1b030ce",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "強化",
+   "descHash": "使用祕技後，下一次戰鬥開始時有<nobr>#1[i]%</nobr>的<u>基礎概率</u>使敵方每個單體目標陷入1層【<u>奧跡</u>】。使其中每個成功陷入【<u>奧跡</u>】的目標再次陷入1層【<u>奧跡</u>】，重複此效果直到未能成功使該目標陷入【<u>奧跡</u>】。每次使目標陷入【<u>奧跡</u>】的<u>基礎概率</u>等同於上一次成功使該目標陷入【<u>奧跡</u>】時的<u>基礎概率</u>的<nobr>#2[i]%</nobr>。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 20194,
+   "name": "取此真相，棄捨表徵",
+   "iconPath": "7b9bde5a20064da11a6d5d8310b59f9be3834d20110ca9b965a940ced0250cec",
+   "typeDescHash": "祕技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.5,
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1307101,
+   "type": 1,
+   "children": [
+    {
+     "id": 1307202,
+     "type": 2,
+     "children": [
+      {
+       "id": 1307203,
+       "type": 2,
+       "children": [
+        {
+         "id": 1307204,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 88439,
+          "name": "效果命中強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+          "statusList": [
+           {
+            "key": "效果命中",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 589818,
+            "count": 3
+           },
+           {
+            "id": 633379,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 88442,
+        "name": "攻擊強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+        "statusList": [
+         {
+          "key": "攻擊力",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 589818,
+          "count": 3
+         },
+         {
+          "id": 633379,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 88441,
+      "name": "傷害強化•風",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "6ed4c20b424ce99fc080b98f339acbf6535738e14c8d8e649ec3e1e286b348fa",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#00FF9C;\">風</span>屬性傷害提高",
+        "value": 0.032
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 874345,
+        "count": 3
+       },
+       {
+        "id": 549438,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "施放戰技攻擊陷入<span style=\"color:#00FF9C;\">風</span>化、裂傷、灼燒、觸電狀態的指定敵方單體後，分別各有<nobr>#1[i]%</nobr>的基礎概率額外使目標陷入1層【奧跡】。",
+    "ultimateCost": 0,
+    "id": 88345,
+    "name": "髒中躁動",
+    "iconPath": "f7bbe66d5abb062414a7ba4105470891c3f1c9f0b8154af7c01f6db1528a4e9b",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.65
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 874345,
+        "count": 3
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1307102,
+   "type": 1,
+   "children": [
+    {
+     "id": 1307205,
+     "type": 2,
+     "children": [
+      {
+       "id": 1307206,
+       "type": 2,
+       "children": [
+        {
+         "id": 1307207,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 88438,
+          "name": "攻擊強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+          "statusList": [
+           {
+            "key": "攻擊力",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 673759,
+            "count": 3
+           },
+           {
+            "id": 717320,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 88437,
+        "name": "傷害強化•風",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "6ed4c20b424ce99fc080b98f339acbf6535738e14c8d8e649ec3e1e286b348fa",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#00FF9C;\">風</span>屬性傷害提高",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 673759,
+          "count": 3
+         },
+         {
+          "id": 717320,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 88440,
+      "name": "攻擊強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "攻擊力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 589818,
+        "count": 5
+       },
+       {
+        "id": 633379,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "在敵方目標進入戰鬥時，有<nobr>#1[i]%</nobr>的基礎概率陷入1層【奧跡】。敵方目標在我方單次攻擊內每受到1次持續傷害，有<nobr>#1[i]%</nobr>的基礎概率陷入1層【奧跡】，單次攻擊內最多陷入<nobr>#2[i]</nobr>層。",
+    "ultimateCost": 0,
+    "id": 88348,
+    "name": "杯底端倪",
+    "iconPath": "b4936224993a00c3f6cc5fd8f9ade0139fb35460b32d20f69cd58b5aedd38130",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.65,
+       3
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 589818,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1307103,
+   "type": 1,
+   "children": [
+    {
+     "id": 1307208,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 88451,
+      "name": "效果命中強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f",
+      "statusList": [
+       {
+        "key": "效果命中",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673759,
+        "count": 8
+       },
+       {
+        "id": 717320,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1307209,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 88452,
+      "name": "傷害強化•風",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "6ed4c20b424ce99fc080b98f339acbf6535738e14c8d8e649ec3e1e286b348fa",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#00FF9C;\">風</span>屬性傷害提高",
+        "value": 0.064
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673759,
+        "count": 8
+       },
+       {
+        "id": 717320,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "使自身造成的傷害提高，提高數值等同於效果命中的<nobr>#1[i]%</nobr>，最多使造成的傷害提高<nobr>#2[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 88347,
+    "name": "燭影朕兆",
+    "iconPath": "e77d0ab82e7a474767dd9f8a3fd47b231cd8d0af494f7c4039127c3fe16150b2",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.6,
+       0.72
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673759,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1307201,
+   "type": 2,
+   "children": [
+    {
+     "id": 1307210,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 4502,
+      "name": "攻擊強化",
+      "levelReq": 80,
+      "promotionReq": 0,
+      "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+      "statusList": [
+       {
+        "key": "攻擊力",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673759,
+        "count": 8
+       },
+       {
+        "id": 717320,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 88444,
+    "name": "攻擊強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c",
+    "statusList": [
+     {
+      "key": "攻擊力",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549438,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "軀幹",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "效果命中",
+    "propertyIconPath": "14a0ed2b3e0b7b7f9f36bb9d022ac332700fc1ff076d3863bf07ba8222fe582f"
+   },
+   {
+    "relicTypeHash": "腳部",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "攻擊力",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   },
+   {
+    "relicTypeHash": "位面球",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "風屬性傷害提高",
+    "propertyIconPath": "6ed4c20b424ce99fc080b98f339acbf6535738e14c8d8e649ec3e1e286b348fa"
+   },
+   {
+    "relicTypeHash": "連結繩",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "攻擊力",
+    "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初次見面",
+   "text": "開拓者？有趣的名字，唔，還有難以看穿的命運。",
+   "unlockRequirement": "",
+   "cnUrl": "4f8d8ef49e52ef07076fa7b9c59bb39f2d42e4bfd13ef357697503666b55f42c",
+   "jpUrl": "1ccc5b6cc7fcfe2dca15e46e83f4bfb09f0505c079289f5b64534a93d8427709",
+   "enUrl": "4e19b71fa4ba219b99e8b9dd261c138c907ec0a867de2b71ca96196156d2593e",
+   "krUrl": "864d96ccbeb70bc52879f6b55bcb3b3842ab096db7ae379b340d38ebc2f3f203"
+  },
+  {
+   "id": 2,
+   "title": "問候",
+   "text": "最近過得怎麼樣？有煩心事的話，要讓我替你佔卜…決定「選擇」麼？",
+   "unlockRequirement": "",
+   "cnUrl": "431801ec03501c3273c50fa7a4dd23c2c896b176320dddc596024fd64049be9c",
+   "jpUrl": "7570356729de25876a811639a654bcd2c6cac4fb0c3d1940c56e1d59fef4c1e4",
+   "enUrl": "a6d6f3a1f1424e2c5e5fecef1bb4503cf8252d590300e053c1d39c28d4784eee",
+   "krUrl": "910785b5a0d67a8b2ec8d794c5a4729ebad800d7d03a53bfd2c4b82b13ef5b81"
+  },
+  {
+   "id": 3,
+   "title": "道別",
+   "text": "不用擔心，只要我不抹去你的記憶，你就不會忘記我~",
+   "unlockRequirement": "",
+   "cnUrl": "db853b9887144d75bd9bb1cb52e3c64d901fffe98d3ff449285b6e82de025eed",
+   "jpUrl": "ca9fca8805ee85fe7a85b0bb39100ec223751347288129494ee75628830347e8",
+   "enUrl": "7f54e18d91205d0c564b946a6d093b597d42976e94eac3224ecf6d914a71b611",
+   "krUrl": "f8e144ac2a1dc18f8576978df02de048d32211fee60a5f160511a19e4f57e59b"
+  },
+  {
+   "id": 4,
+   "title": "關於自己•存在",
+   "text": "凡人只能看見物質，卻不明白精神與靈性才是宇宙的本質。受「浮黎」的恩賜，我們擺脫易壞的實體，得以親近真正的存在。",
+   "unlockRequirement": "",
+   "cnUrl": "099018899c5cef21798928257c01965bdb7cc2eee6e4d4712e476565c098986a",
+   "jpUrl": "7d6424425033075a351237945dd00b426dcb96a2780200fb12b43c872b4855ea",
+   "enUrl": "526732b4086ef1ac3b6245f129881e7a55b97d84f15ef984ab481fbdfe77d7db",
+   "krUrl": "2db14673478ba55274cb187d939d953984a11644905277df2357c4d4317bbb54"
+  },
+  {
+   "id": 5,
+   "title": "關於自己•願望",
+   "text": "打撈那些珍貴的記憶，將它們封存於淨土之中。如此，一切都不會真正逝去。",
+   "unlockRequirement": "",
+   "cnUrl": "7ba71f419c1d33fda734d1a95c95c567f134e0e8880f3c35121e98ff7de23bbe",
+   "jpUrl": "74064beeebbd157f0331df5ab37f69f276ad3034d1b4d09660e02503a0cbf1c2",
+   "enUrl": "39b8059804c060d58b2735c629fdc01d11ef77b923d060e129b6bc51c7d2c374",
+   "krUrl": "4a28e00f6ad9f0d08bf45b584054b7afa07d0097033c3bd793868c943b9f6f88"
+  },
+  {
+   "id": 6,
+   "title": "閒談•佔卜方式",
+   "text": "羣星的運動，數字的默示，紙牌的預言…嗯，聽說最近手機佔卜也很流行。但這些都只是輔助，傾聽一個人的言語，走入他們的內心，窺探他們的記憶，結果才最準確。",
+   "unlockRequirement": "",
+   "cnUrl": "ed94ca6aede552ed46f9adaf51148552a1e2501e050c1fa11e769914d2f83bcd",
+   "jpUrl": "5e0529b9391876c038e181deab3351f841fca7413dfbab842ced1c893448aa6d",
+   "enUrl": "22e809bb991d03f8440222b229e1364ff332d19305c8b294fa609244a81bddf4",
+   "krUrl": "e3b433bbd7ffdc889f787b0321a54f7bde7a46e1a4256133c81599098b0b0eca"
+  },
+  {
+   "id": 7,
+   "title": "閒談•光錐",
+   "text": "一個人的一生，也只能提取出寥寥數份飽含力量的記憶，痛苦的，歡欣的，憤怒的，悲傷的…憶庭的初衷是留存這些記憶，但也逃不過公司爲它明碼標價的企圖。",
+   "unlockRequirement": "",
+   "cnUrl": "e5666436cc1dfe9861044f39b8179f1a85c3e8067d3d6211559ba8f6f8cad84f",
+   "jpUrl": "6cc75e8f8785b1de96d2bef7888a90c4617133ea18aabcd57c7e6c926f0f74d4",
+   "enUrl": "6ffa81ee373d027f24745ccba7a93a24fceeb891821fb167bbc81b8fafdd07f5",
+   "krUrl": "7a87fdcc59a4da7f25f0caf6e72c3d99040c6cbd6c6c4a75d103307860aaffa3"
+  },
+  {
+   "id": 8,
+   "title": "愛好",
+   "text": "如果能先於世間察覺、收集一份記憶，那獨自欣賞的時光，是我個人最鍾愛的、獨一無二的回憶。",
+   "unlockRequirement": "",
+   "cnUrl": "d92d968f70c401567640bf4184cfecdd308bc339afb382a51d8e898932b28629",
+   "jpUrl": "8191ee9a7e8cb8f40b330261c53b9819cc5387494883c19daaf2386340c94ebe",
+   "enUrl": "f10ce61f64ce92fc54e7f6108df518b474f61b12412f9cc1c33af7ef73c01ac5",
+   "krUrl": "3e7ea5cdb18125bafcdfe61e7b8cfd69363bf2e532fe84cef405cca9bab4b9ab"
+  },
+  {
+   "id": 9,
+   "title": "煩惱",
+   "text": "沒有肉身固然方便，但以「模因」的方式來去世間，卻始終面臨着失落「自我」的風險。",
+   "unlockRequirement": "",
+   "cnUrl": "a44159f7841f9eb19ee87f754aee308f6b48977df6b6dda2c8009c3ab5a69b92",
+   "jpUrl": "2bfb2fdfec204131575f03f02be80b230b0a42bd19a96cc1a698658e151a509f",
+   "enUrl": "7e74bdbf6f517fad61580f94edc2f65979eefe927c0bb20df5d43b29f4f3cc2c",
+   "krUrl": "7f6d2525277ff542c9faeace76b572ec07725d2ced90159f7848fec9ce2e52ea"
+  },
+  {
+   "id": 10,
+   "title": "分享•淨土",
+   "text": "那些最爲絢爛瑰麗的記憶，將被送往淨土保存。在憶者間流傳的傳說中，「浮黎」會將這些記憶編織入善見天，在世界覆滅後，它們將成爲重塑一切的模板。",
+   "unlockRequirement": "",
+   "cnUrl": "316ec602869c7fa0f7ed064cab6832018073b7f4de22c48b3d36d311bfda8db2",
+   "jpUrl": "66d01a7451db2c351b14628c8c3a7d02232918e62b72859cb8e26dea3963ef7d",
+   "enUrl": "7fabe0238036ac6501ed611d3efe03ff8e5b1061fc89a54e6feb7bdfbf1ae0b7",
+   "krUrl": "810b6b7cbdb549b200fb766d2287165eb6b5e90ec5b25f4517552c07720c835c"
+  },
+  {
+   "id": 11,
+   "title": "分享•模因",
+   "text": "成爲「模因」的那一日，我看到自己的肉身消融，衆人的記憶在時間中析出，沉澱，結晶而後又破碎。它們是如此璀璨，仿佛有着無數切面的晶體。那一刻，我明白了，一切將逝，而「記憶」永存。",
+   "unlockRequirement": "",
+   "cnUrl": "98eb0822baf4b5ee0bc8e39e42b18accf8926b64b29b11e93849176ccc16db38",
+   "jpUrl": "169afa40ff9af0c7a42e72a3dd5b3f2a860a923837f976441d771afbeed993ff",
+   "enUrl": "f486a5b30bd647236085b3a0bf6ade9004110a18c70c5f28d7ef41b29881108c",
+   "krUrl": "d21bee74e5a42b1f857f7beee4a6b4163ab64f66ce7d1dcdbb3ee72f8c2898fc"
+  },
+  {
+   "id": 12,
+   "title": "見聞",
+   "text": "有些憶者喜歡偷偷潛入他人的腦海，隨意篡改他們的記憶…但我一點也不喜歡那麼做。只有未經他人修改的記憶才足夠真實和珍貴，否則，那只是別人插入你腦袋的思想罷了。",
+   "unlockRequirement": "",
+   "cnUrl": "5239e7dac9c6bb2a333de8bfde0bc44c7f3024109d9c26d24367e8f85d968ff7",
+   "jpUrl": "8f9e481599eda12e5d554e110d72d8e18ab89d9688fa9097e2799a916eaf58bf",
+   "enUrl": "c509301bcb7936b45799342a53d70d2cc37037eb4cd4d68fa5c7876b65602133",
+   "krUrl": "2da666653624f791ba566ba1a88db2cfd501f39962fed9e3df31ce6b84139f51"
+  },
+  {
+   "id": 13,
+   "title": "關於開拓者",
+   "text": "或許有一天，你會主動同我分享你的記憶——我期待這一刻的到來。",
+   "unlockRequirement": "",
+   "cnUrl": "2f1a728791145555d54e4e6b5cc982fe6b496f954de84eaba0c5a99d73ca4680",
+   "jpUrl": "40ffcdb5611ba3e0944adcda6c2ff2e75fdaea1031fa03bee6d36adc6675db7b",
+   "enUrl": "2b13b9129f937ae7948314bb75fd2d88738d9225cf26a0a63e6200265e2f5dd5",
+   "krUrl": "03a952cd679681094971eab86e828ad8a4543cfc4b35ee598ee5d69de9f61341"
+  },
+  {
+   "id": 14,
+   "title": "關於黃泉",
+   "text": "在做好準備前，不要輕易走入一個人的回憶，尤其是她的。",
+   "unlockRequirement": "",
+   "cnUrl": "ee6bfd4c8b5afc643f048a0533ca9722184d6a8f9c32448b93cecc43d5782b71",
+   "jpUrl": "0dd93e2d91c59e3ace48bb3e7fe1bad4add4a154ccbf1ed3da60b17bef62cf31",
+   "enUrl": "34b4bba2e42a424cebcb9db42333af7be65d1e698f5032fb249370674fe851f7",
+   "krUrl": "22700bac2377d4185e0882e1b6d00c5c2cb5c9d882c0767b8a15a604c37af633"
+  },
+  {
+   "id": 15,
+   "title": "關於砂金",
+   "text": "尋找機會的時候，一個像他那樣的賭徒永遠不會拒絕你的要求。投其所好，也要有所防備。",
+   "unlockRequirement": "",
+   "cnUrl": "971f42d8586b173f6c6310a373b33b794f49529379595eebd33a80f0b3437515",
+   "jpUrl": "4c7e00ec987260c82a772d44db87c05f38cd4e0b4fe9f8d99b8e39a126733f67",
+   "enUrl": "630a4129cd4814e87eb8d4bb5d0afb373dd4ca7d06497962c58fdfd21f5f092e",
+   "krUrl": "aa1a8fe605aea518ab594b93b47855dd840758f829bf4d521acfde3e15a28de7"
+  },
+  {
+   "id": 16,
+   "title": "關於花火",
+   "text": "唔，有趣的小妹妹。雖然嘴上不說，但我猜她一直很想被人「看見」。她的內心是我見過最混亂不堪的地方，但也卻手握最有力的武器——直覺。",
+   "unlockRequirement": "",
+   "cnUrl": "d2ae19f14d9b330a86bae4d1c036eb7f5413b1d0a5a89e9238ab8da3e64f1952",
+   "jpUrl": "e30b85393db865ac6f3bd846e3e9406d4813477967d91a810ce80d5a54439599",
+   "enUrl": "d8d3976d1720f3abf2e352912a4d931644137a51738ed5d39b06c70c7f6961d7",
+   "krUrl": "feee175eec9c7a98025d7d588baacae290ade2d8459e690bd1e03ca20de5c383"
+  },
+  {
+   "id": 17,
+   "title": "關於三月七",
+   "text": "即便忘記了過去，即使曾對未來迷茫，她的經歷也一定能成爲獨一無二的憶質。真令人期待呀，那時，她會爲憶庭獻上怎樣的回憶……",
+   "unlockRequirement": "",
+   "cnUrl": "d5abd9d0def47ef5d644c795f34c257e48472a322b12c9021f0dc530c3d0da16",
+   "jpUrl": "42d3fa40017b3d578f9ad6d04fb7d960ba74144abf6ab33a5b0c69d98cf4c480",
+   "enUrl": "387a300bc351e3e2c2a4a80774d455657f687601ac8db4423a9fc8594aec088b",
+   "krUrl": "de7d45bba47842c258e83f0e095da4b7f427ed4ee32802a2d2a9fb1c0137b4e0"
+  },
+  {
+   "id": 18,
+   "title": "星魂激活",
+   "text": "散落的記憶，正於命途之上重新連綴。",
+   "unlockRequirement": "",
+   "cnUrl": "73be736c4b2e4ab6a09d73e76d85946afbd4524bd9b693e49c117bb0289000d6",
+   "jpUrl": "36913bb888a3e51b4cd3ca7ea5c9a700c4990b904150163e9fa1f00c303b390b",
+   "enUrl": "6e880e35448d7b239e32c5f14d6b237247eb156c4d38d6ba504521fac9c12184",
+   "krUrl": "ea6ad988695cc0af3124f44d81ca437e24091ed53d4d7a22d6cb712ddcc7eed7"
+  },
+  {
+   "id": 19,
+   "title": "角色晉階",
+   "text": "我想起了一些美妙的經歷。",
+   "unlockRequirement": "",
+   "cnUrl": "3fbac058b140644e0546f17c504f75834b1d7536ba85669af3581dd171f72091",
+   "jpUrl": "62760172b77ad89434515de34467efae1e5b7fcecce016900aa43e453c5f196d",
+   "enUrl": "ccf8fdc561fa71e752203ccb00867d279c4239263fa18389829c642d77fd09e4",
+   "krUrl": "a2daaed6750a978c80a8cb512c9be260ba57ea29063a76a597f02b1ebf45eb3d"
+  },
+  {
+   "id": 20,
+   "title": "角色滿級",
+   "text": "啓程吧，遠方還有那麼多記憶在閃耀。",
+   "unlockRequirement": "",
+   "cnUrl": "2a703e4d76488847a86c7159a155ef6e8c52489a79fe46c615b9fd52ed9b60e7",
+   "jpUrl": "93b0253dfe2155da77376e2423b5172d0d634b71fb4b7008d7fb7ba4f09935bf",
+   "enUrl": "8e68dbf61ef7f26df5ec1fc4fe0c40481b65d003904b4fd4b24951f33e54e4ea",
+   "krUrl": "a6b0bd38ab16e7dc3009ff133b8a406f4ab286af4e0d35a284355758432e19b4"
+  },
+  {
+   "id": 21,
+   "title": "行跡激活",
+   "text": "偉大的故事，來自偉大的既往。",
+   "unlockRequirement": "",
+   "cnUrl": "bb8b7798b9d41d50a5297b0af9e94c120a34d4d7ecfb06589844d19a0df3e9b4",
+   "jpUrl": "e7a1d3334f58b2f826c0f99067bb28a8e7552b544b237c1384e81b49bfe002fe",
+   "enUrl": "f145de8e68d0a9841e04e47b214fc8efd91c33767f3e73029d71a48521d45c65",
+   "krUrl": "1af0de94228e9f714cefe1a725bb4276ae6daed8400ac4aa498202894e60b116"
+  },
+  {
+   "id": 22,
+   "title": "隊伍編成•開拓者",
+   "text": "姐姐會盡我所能幫你的。",
+   "unlockRequirement": "",
+   "cnUrl": "20162dee651159907ae733da62dd1158a1ab9299a6c0ec6ba3c6ec4fd612ff67",
+   "jpUrl": "b4dc4633baef0c74f4e0d33011c0ec53b2dad5149b06e54cc343f6bcd06249e2",
+   "enUrl": "fe5332f775faf93966ddeb931f1fc7b6db915e181925fb22251f2ff3a7513262",
+   "krUrl": "22001d9fe8b22e1f8170e22ace9d0d8ce8bec06f2ae8d89f54ac48d78cff3217"
+  },
+  {
+   "id": 23,
+   "title": "隊伍編成•花火",
+   "text": "小姑娘，這次可別玩過火了哦。",
+   "unlockRequirement": "",
+   "cnUrl": "7f9582756b596236d617e12a7efe301585ea325aa615996c4d6ce0d7602efb65",
+   "jpUrl": "36c32568e8f59c891934da7efa74e454a2c821346e40590750e9c8d3b3f64fcf",
+   "enUrl": "0a8924aefce15140e5deff7f7621edb102b11a92b96acfa378039016132a8ef9",
+   "krUrl": "842af9b344d5c84628a7c994ddfa0f7c1048759288ba6e8d14a834c9606b2e94"
+  },
+  {
+   "id": 24,
+   "title": "隊伍編成•三月七",
+   "text": "這一次的經歷，對你而言會意味着什麼……",
+   "unlockRequirement": "",
+   "cnUrl": "d8c0df698e4872f7592328377e6492f5075640b2d4cab1942433f7e8a6b8368b",
+   "jpUrl": "40c567b5983fb2f5472e51c8c6d910546b1d521902c03fb13718a912a5c10110",
+   "enUrl": "c7e286cdb86e154495b700ca2446df2914411d7ecedaadcbd9428940b883884b",
+   "krUrl": "784b7e80568c7702bcacc182a81b60eb0933c8aadb632f102cd922dcbdc37187"
+  },
+  {
+   "id": 51,
+   "title": "戰鬥開始•弱點擊破",
+   "text": "既定的軌跡已然顯現。",
+   "unlockRequirement": "",
+   "cnUrl": "bb7c9aa0a03f19e079dfe7f33c275ae33900ce9da697b469a9084bf0ee8cb434",
+   "jpUrl": "89ba846b7cae0cae4fa388112d7c62091b61ad6ccb1eaf6a962904bf04e203dc",
+   "enUrl": "85a0c5eacccbddc14bef984ae3815e281928a1ca99dd4e5f3ad3ef7c92c998f3",
+   "krUrl": "534f35f437228fd96f9b35392e4a96169e10ab210a42413afa67a0c63fc096ef"
+  },
+  {
+   "id": 52,
+   "title": "戰鬥開始•危險預警",
+   "text": "難以領會的預言……",
+   "unlockRequirement": "",
+   "cnUrl": "e20ddf28d9c216930453fb75fcd6a95d9cb7f7a0ad7522d096b4d3918b6dff50",
+   "jpUrl": "ab185f067956b2fddf41b2f785579e49cccd6e041a1123fd29a0b6a2e72dd16f",
+   "enUrl": "c612f658a76f5f3b33aa9b57ccf7d8b648c4bbea8159b819818d57b08adafb68",
+   "krUrl": "063fd1d3bf902c42755507c9d421785f7c413cf39b82e55e79728ee48fc9f172"
+  },
+  {
+   "id": 53,
+   "title": "回合開始•一",
+   "text": "命運，並非一種選擇。",
+   "unlockRequirement": "",
+   "cnUrl": "f02822d898bc6d24f30bc191c1526525d4c167358a4404e8b5000d85d3fb52a4",
+   "jpUrl": "04a10382cd73f4e91dc9df7baf8aa91f05d168a9d26bdf60d8762666e1226c65",
+   "enUrl": "e61303728a3f5a452c2b33aa61d7f4906d402cfd394046a38fb83c4c0b12e87e",
+   "krUrl": "d8d1614b71a043fd6d5cb10fffce2437e16630b916248c5a9bf9012b5d58d923"
+  },
+  {
+   "id": 54,
+   "title": "回合開始•二",
+   "text": "這次想同我了解什麼？",
+   "unlockRequirement": "",
+   "cnUrl": "21b10d2b4fdcf52b89fd2c0b1162a7df8a0f191b95fcf0835bdc6e3981273d84",
+   "jpUrl": "0793225dc863dc8d8b6bdb497a5f015160b951633cc82b41548e1249a3f41134",
+   "enUrl": "faf25b1382d9f7995305d4e6b891ff559b659a24c77da37cf4868e0f3c09576e",
+   "krUrl": "84ecdc77305f45d1c00beee948cb7ee43855d3956aa83853b8c575d6635c283e"
+  },
+  {
+   "id": 55,
+   "title": "回合待機",
+   "text": "繼續吧，否則如何得到解答？",
+   "unlockRequirement": "",
+   "cnUrl": "326470225c5096b32e2a1b51a374d84044ef1ddb8de82ae641fa5d2d434c8346",
+   "jpUrl": "841a2d9c688aa7d9d89a97179ac25179d4fda405a6934e014f67cd58a40c0289",
+   "enUrl": "3028a9e6e9c02df62c8e12fbdd36118fccdb6be2ea1bd87753eb4535b46ea72e",
+   "krUrl": "c782e37a0ad608aec2268eb2bb0f4a68a749142c469ad480abe2113fc6ca3b1f"
+  },
+  {
+   "id": 56,
+   "title": "普攻",
+   "text": "喏，拿好了。",
+   "unlockRequirement": "",
+   "cnUrl": "449bac6f97234daf1366a83ab467c153b33c281106fa56e5e756c1d1529ed846",
+   "jpUrl": "91dbc6e6cf8d93cbe039dc205851c60002611657e198fdc02f4b6cfb865edbfc",
+   "enUrl": "c1c0c94a4ecb97084335fc2e0b8289ba571ad95a8bc11683d70d45a55a24dacb",
+   "krUrl": "cb7ca45e2f1e37b87e139e05e00ad6f8ecf0cd73fdf927663402a994b40a8b44"
+  },
+  {
+   "id": 57,
+   "title": "戰技•一",
+   "text": "不祥之徵，重現。",
+   "unlockRequirement": "",
+   "cnUrl": "c5171cbc723f4e8fedd2d209b2ca13876f072dc55d95f5343ad654fb66aff473",
+   "jpUrl": "e82dc0d0984085905a294a8a2f2f27255d4bba7096b3c7e70552b5690eabd5d3",
+   "enUrl": "68246818eb729bb1925615d2d8e4280269f4ac14b679a013e7f0dde9ead0026d",
+   "krUrl": "fdcda4e9845a552ea6f8337862adef4c75e4390933e2b803f216643fd5a129e4"
+  },
+  {
+   "id": 58,
+   "title": "戰技•二",
+   "text": "厄運之誓，降臨。",
+   "unlockRequirement": "",
+   "cnUrl": "ffe3248e5de7d6dd6b3631e92ea04c5c8cb3a11800077a90520eedf649ded2f4",
+   "jpUrl": "284516ac98d4ece8ae356d24deee81bccb756442239478844b2d184f12b2be5d",
+   "enUrl": "2d10cbe8e5c883241d22cb2b6b0d49370753fd346788c88e88241f9553f0809c",
+   "krUrl": "f08b792c530c3e875023b6a0caf07f38dfa9222c0acd46fcd610f96a2c47e259"
+  },
+  {
+   "id": 59,
+   "title": "輕受擊",
+   "text": "無禮的客人。",
+   "unlockRequirement": "",
+   "cnUrl": "5b41d260009a4a7a48481c8775db0a78d785edbbb148baf94bd38a93a508e07d",
+   "jpUrl": "14815914073294c8d770547b433a08c4384c203ea06d2ec44771dd4bbe532d24",
+   "enUrl": "12a3f662a6ecd2dd877852a3778703b4682c9dcf08f6e284efa3fb3d44aa246c",
+   "krUrl": "0faecdccef0dc4ab586c32fb6586740f8865d20ec7f887ea9a3fcbe5584a5700"
+  },
+  {
+   "id": 60,
+   "title": "重受擊",
+   "text": "你將承受代價。",
+   "unlockRequirement": "",
+   "cnUrl": "efa375005a21d39d31c37e4c8d9108a7b7cfad752a16c65dba9d1d9634bc4b44",
+   "jpUrl": "8a35e7d51b95da4a117ce9be640876f7f076927aa86beb1907450ecb352fa227",
+   "enUrl": "c579566658c22ac2b6ad31320a67698df3b640a5d2523033d624f2474a7f11c6",
+   "krUrl": "803ea6886a516e5494f40cdf9bb4809f22b0ad52016a7da6497f7af1de4bb782"
+  },
+  {
+   "id": 61,
+   "title": "終結技•激活",
+   "text": "記憶是常變的泡沫。",
+   "unlockRequirement": "",
+   "cnUrl": "c6634d1ecdb484522cf6017c5eabd89c5610b2926af1220e0a253b6a3c177594",
+   "jpUrl": "320fc595b080638d1d76b8c3663dbaeb026540f68855d4da5952e35610d9ac87",
+   "enUrl": "62007ee62ba6ea54095291ab62ca08af2c2144e2d3932276db7d533d1b6af9df",
+   "krUrl": "cbc1eb658e3adf7796df1d2903cdd5e56f391577676114b532276291d85a7f11"
+  },
+  {
+   "id": 62,
+   "title": "終結技•施放",
+   "text": "靜默的水面下…便是無盡深淵。",
+   "unlockRequirement": "",
+   "cnUrl": "d369a48013166cf45dd31afa0551a7781b27d29dc7a289287118b69c72e925d4",
+   "jpUrl": "0a841ed3205a35e2695a1eb1d0645f8476cbbaf938bf4457640a4675ae51fc40",
+   "enUrl": "028ee3363139bf4b6df537eca3c40b44a95307ac7118be59799ea6a214173efc",
+   "krUrl": "f3704412182c078a70ca634ca38da19dddae287777d912d4ab9c06f1dfe9ab0f"
+  },
+  {
+   "id": 63,
+   "title": "無法戰鬥",
+   "text": "流年…不利……",
+   "unlockRequirement": "",
+   "cnUrl": "bb427175e99b7e21d0267bc0c7608164d515a1cc0b1232e87ef5f3f9b168081d",
+   "jpUrl": "8cec91d2ba81ec99796fc858dc9c8868b94e5989e34abf7ecf5ab56dc6a38224",
+   "enUrl": "ff8714228024c73553e789b7f86fad9743534fec0c7155d7733162e8583e4b35",
+   "krUrl": "15b09317003428e914a89bd9bed1830245d1954ddb47dd4cba3157bcab59ed3f"
+  },
+  {
+   "id": 64,
+   "title": "重回戰鬥",
+   "text": "唯有記憶永存。",
+   "unlockRequirement": "",
+   "cnUrl": "9e903b570fe612b7a149cd83c786681d3cf00436851694f0178fefdbce73156f",
+   "jpUrl": "e75255b17f8d0701e050b2e33817e7c3069effde11e155853f2b3b2a24dba1e5",
+   "enUrl": "49a0eb1f621774a59e9d28f3149b226ea67a06560eb7b56148172cf6c2f46183",
+   "krUrl": "ddc2611c995d2ba5bd525e1c57102f020e6dfa6d2a94ea7c314ac9533dcb4031"
+  },
+  {
+   "id": 65,
+   "title": "回復生命",
+   "text": "感謝命運的指引。",
+   "unlockRequirement": "",
+   "cnUrl": "725021ac110c1d89848ddcca7d965a477e5e684850c32439bc4144437d6e3615",
+   "jpUrl": "0721fcc10f517840e5f6aab4b66ebc77947933ae656668b9521700a186c2ebb0",
+   "enUrl": "59544a1bc13e2f5ec111bab1da3de0f2bdae71a23b359aae1b3e3c55b101ef06",
+   "krUrl": "a918282b4d4492c6b9da5447ae0e036dad819f4ae6ca2caeddd5f8a161f31011"
+  },
+  {
+   "id": 66,
+   "title": "祕技",
+   "text": "來許願吧。",
+   "unlockRequirement": "",
+   "cnUrl": "c35cb2598a5954715871265fbd540304c33ff599e24d4214a1122f716589b521",
+   "jpUrl": "270df038e7562df7400cd4be6b4f783832de19fb253e6ffed564cbb7b085f837",
+   "enUrl": "4aeedf73db7611b4d53c4d64dfaaebd49dc089df46f4d709eac2744fc1123ca7",
+   "krUrl": "e7dfc33e0e0863b3247654284970cdec0016c6c1b46c23ddb004b7a9375783cb"
+  },
+  {
+   "id": 67,
+   "title": "戰鬥勝利",
+   "text": "又一份珍貴的回憶。",
+   "unlockRequirement": "",
+   "cnUrl": "12e0683ce4a6d86de6d5c7af899d790ec7188ae510f3b327ceb16cc49d05a547",
+   "jpUrl": "4641e18158b2d36c1c24f486842b94e0f9c93ac0f1f24cbd8999853feb7fbbb8",
+   "enUrl": "a45d29233d113e412c381cb980440296bcbdb1bc2181c7cbe035466873f42d92",
+   "krUrl": "009bf05a58d37e7f6f55b1629243825a21665f61372a9fea68c245bc2b64c4f3"
+  },
+  {
+   "id": 68,
+   "title": "開啓戰利品•一",
+   "text": "運勢不錯。",
+   "unlockRequirement": "",
+   "cnUrl": "a6112d18f0c8ef0a6f81d0ef4ceed8153361fa1e6fd81af9aa156a28f039f37f",
+   "jpUrl": "6bd924c28be7b62173f2d16a896d2e63c76f4a8f989e49080a0e96a95277f7fc",
+   "enUrl": "1161384e99f9c3052356d08ac21458af982d09a18a697e5222641aa3da20329d",
+   "krUrl": "76979cd5f82754d98e7493df925b46ba06399a2a7da60f27c6a4b2f3a71e61d9"
+  },
+  {
+   "id": 69,
+   "title": "開啓戰利品•二",
+   "text": "心誠則靈。",
+   "unlockRequirement": "",
+   "cnUrl": "72da38c247953d3e50b170d8cc9d4db004d7ccbf68ca56d6020e5638eeb76cf1",
+   "jpUrl": "b34d8c7181688c4130a2664b221eb0f846f143c26d7af5e19a462b2cd1af4d4b",
+   "enUrl": "39a96968172ef254cb82fc2eef1667c040f5370daf304397e88998670718c405",
+   "krUrl": "262c92246adff4d5eaec9540ca6bb2ed2597641f6658facb898e04dcc3710405"
+  },
+  {
+   "id": 70,
+   "title": "開啓貴重戰利品",
+   "text": "命運的饋贈，有時出乎意料。",
+   "unlockRequirement": "",
+   "cnUrl": "6b64fbefc440df19091eea7ad1de2abad9b89fa9278bff179d26831d6e5ecd05",
+   "jpUrl": "03683d81673fc85c808e79ac456ae4962d53f57f304cabf4485c35f5d9867e30",
+   "enUrl": "1662b15e7fd6e09a3d8ef758feca7506c2515d41bb20406df8cda841dcf4502e",
+   "krUrl": "f10be36f03af213adc2a45601dbbcea74c55a67df7e6b3692022d210e0c75586"
+  },
+  {
+   "id": 71,
+   "title": "解謎成功•一",
+   "text": "一次絕妙的解讀。",
+   "unlockRequirement": "",
+   "cnUrl": "30d954ac8ee3b362c4ae6a7031b933d229c3417f793d7e48ad020a830f2162fb",
+   "jpUrl": "2afa32b153dddd6ed6e2f84aa51245015968f9eab53f0fe8c523a4f387fa7fd9",
+   "enUrl": "06d66a094ca11ef758db817621db0cc40022cf0a236a612347f03cda70fff5d6",
+   "krUrl": "c95fd38b80e84ca9e2fb9d9cc3143a97a1ccf27c9d2174ec8c34f5a8426389b8"
+  },
+  {
+   "id": 72,
+   "title": "解謎成功•二",
+   "text": "智慧與記憶的力量……",
+   "unlockRequirement": "",
+   "cnUrl": "a577e59a40985c0c041af0a4789f2f229c611e49b71db4948ba26b53796316fb",
+   "jpUrl": "1b8b6f5124ba65972b41eeebe38735344f0b2f1fd002f06adf9234588c8c6a7b",
+   "enUrl": "1df6eb7405a94bfb72ca74ad298c07098acdd7fa856c63f0d65c8b93173c2558",
+   "krUrl": "615e55f8b8001d458dc792f4072dc09efc7d955ab4d6e51b3635e248e983e839"
+  },
+  {
+   "id": 73,
+   "title": "發現敵方目標",
+   "text": "逆位，不利……",
+   "unlockRequirement": "",
+   "cnUrl": "f78ab2dbb31b9ecb27191ab6e32749044cb9ed8b50f58c0fbead1acd4c099405",
+   "jpUrl": "5434d051267028959e867ca822703ea2cc2075a53f882be5f03b3d3c1e194354",
+   "enUrl": "c883a475db2fc7323d4cc5da4d6a4de26d09000ac3b980f3607118ae570fdd61",
+   "krUrl": "d88ed7cc889cf1f1dd679d5e6bf1dd165864b0a2b93a7938240d268fc7640bc1"
+  },
+  {
+   "id": 74,
+   "title": "返回城鎮",
+   "text": "這裡的過去很有趣…要找個地方聊聊嗎？",
+   "unlockRequirement": "",
+   "cnUrl": "b2468d2dafc9c447c5142da471f9c3ea101589986bd9b4666717d0deebc97a01",
+   "jpUrl": "baf5b9c831e86d33d89ca373d14a855374ee9baa70dc57fd2528d721155e55ac",
+   "enUrl": "378ba5f89455d1fd15e0a0fcb2fc68d1273e2aaa389e57ec518580a3874aa85f",
+   "krUrl": "3ca0600c88d5eb6cf29e237b8b88ad2c2e5478bed6b3e6580bad42e36d2ecf8d"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "角色詳情",
+   "text": "「流光憶庭」的憶者，神祕優雅的佔卜師。<br />常掛着溫柔的微笑，耐心聆聽他人的言語，並藉此走入「記憶」，掌握全盤信息。<br />熱衷於收集獨一無二的記憶，背後的想法卻難以看透。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "角色故事·一",
+   "text": "「她呀，是個奇怪的孩子。我早就知道會這樣，她出生的那天，雲雀在樹上鳴叫，月亮的淡影和初升的朝陽一起印在天上，手裡的紙牌告訴我，一個眷戀過去的靈魂即將來到人世。從小時候開始，她最感興趣的事情就是追問那些曾經的故事。她好奇我們是怎麼來的，誰創造了我們，這個世界又是怎麼來的，有時候那些問題讓最博學的人也啞口無言。我知道有很多孩子笑她，但那些問題不重要嗎？生命是一座迂迴的迷宮，除了記憶，我們一無所有。」<br /><align=\"right\">——一位母親的回憶</align><br /><br />患上失憶症的母親變得健忘，無法辨認家人，也無法回憶起片刻之前發生的事情。<br />拿着失憶症的診斷書，她緊緊擁抱手足無措的母親，試圖將她留下的日記重新讀給她聽——母親就在那，可母親究竟在哪呢？<br /><br />她陪伴着母親到達了生命的出口。但她明白，從記憶變得支離破碎的那一天起，母親的自身就越來越模糊了。如果有一天連她的記憶也變得支離破碎，母親便會徹底離她而去。<br /><br />「生命是一座迂迴的迷宮，除了記憶，我們一無所有。」她第一次理解了這句話的含義。",
+   "unlockRequirement": "角色等級<nobr>20</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·二",
+   "text": "「我以探險家的身份來到這顆星球，一如既往，我會統計河流的走向如何，研究街巷的磚瓦是怎樣的材質，落差最大的道路有多少度，還有煙囪的個數和分布…這些工作符合人們的想象，對於保存一個星球「記憶」的想象。<br /><br />——但這遠遠不夠。<br /><br />當我在人後真正開始工作，便頻繁見到那名少女。有時陽光透過葉尖，跟隨她的身影下顫動，最終消失在某個轉角處，那時路燈便會點亮；有時她目光跟隨一隻信鴿，每周第三天的傍晚它會從大祭司住處出發，第二天凌晨回到皇宮侍衛長的手中，而他們是明面上的政敵；有時她靜靜打量雨水落入下水道，損壞的痕跡來自從對岸發射來的火炮；有時浪花會打溼她的裙角，而河邊洗衣的老婦正吶吶自語上一代當權者和他五個私生子的故事。<br /><br />——除了我們，很少有人知道星球會這樣把自己的「記憶」裹藏起來。<br /><br />我跟隨她來到一處荒野上的石頭前，我覺得，是時候邀請她了。<br /><br />『你看到了什麼？』我以她能看見的模樣，向她詢問。<br />她指着雜草生長的地方，那裡留着打磨的痕跡。<br />『一塊石頭，我覺得它曾是一座壁爐的一部分…但應該不止於此。』<br />我點點頭，幫她清除了石頭縫隙中的雜草與泥土。<br />『它還曾是一座紀念碑。』她撫摸着石頭上的刻痕。<br />『是的。但「記憶」仍不止於此。』<br /><br />於是我向她展示。荒野上的石頭，它曾是某戶人家的壁爐，在這之前，它還曾是一座紀念碑，一座花壇，一方祭臺…而在更早之前，它是一處荒野上的石頭。<br /><br />『要看見這些「記憶」，我會付出怎樣的代價？』<br />『在你願意現身前，人們將無從知曉你的存在。』<br />『就像人們看到黑天鵝前，從不知道天鵝不止白色一種？』<br />『就像那樣。』」<br /><br /><align=\"right\">——一位<ruby>探險家<rt>憶者</rt></ruby>的回憶</align><br /><br />憶者們穿梭於諸多星球，在每一條路途，每一個轉角間採擷城市的記憶，他們會確保自己不留下痕跡，以免被城市記得。除非他們遇到具備憶者資質的人，並將他們從這座城市的記憶中帶走，帶去更廣闊的大海。",
+   "unlockRequirement": "角色等級<nobr>40</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·三",
+   "text": "「許多人沉湎於過去的美好，幻想能活在回憶中，所以他們想要成爲憶者。可惜，這樣的人往往會變成爲所欲爲的焚化工，隨意將回憶篡改成自己喜歡的樣子。但她不一樣…我看到了她對於記憶本身的尊重，以及強烈的意志與決心。按照慣例，成爲憶者前的三個問題，她的回答如下：<br /><br />『你是否願意用盡你的一生去收集記憶？』<br />『我願意。』<br />『你是否願意爲此放棄肉身，接受自我的異變？』<br />『我願意。』<br />『如果有一天你不復存在，你會給世界留下什麼？』<br />『我的記憶。那裡有過去的種子，它會在未來重生。』<br /><br />有些記憶瑣碎而溫暖，有些記憶宏大而浩瀚，有些記憶像寵物一樣溫馴，有些記憶則像猛獸一樣難以控制…而她成爲憶者的那一刻，她的記憶變得安靜而平和，仿佛洶湧的海浪遇到了屬於自己的港灣。」<br /><align=\"right\">——一位憶者的回憶</align><br /><br />「想到了什麼？」憶者問道。<br />她睜開眼，記憶的碎片繞着她的身邊旋轉。<br />「人們以爲自己面對的是現在與未來，卻無人知曉我們其實都在走向過去。」",
+   "unlockRequirement": "角色等級<nobr>60</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·四",
+   "text": "「地點：匹諾康尼 <br />時間：██年██月██日<br />客人：██、██、██、██<br />『一份悲傷的回憶，來自██。這份鎏金般的回憶帶着誇飾與渴望，它將在往後的歲月藏起隱祕的傷懷，也註定了回憶的主人將長久受此影響。』<br />『一份歡樂的回憶，來自██。這份戲劇般的回憶披着斑斕的色彩，歡樂，混亂，滑稽——卻難以稱之爲幸福。它所呈現的未來，也是如此。』<br />『一份遺憾的回憶，來自██。這份幸福的回憶美麗而瞬息即滅，如同死火堆中飛出的流星。享受時光吧，客人，它告訴我那很快就要逝去。』<br />『一份模糊的回憶，來自██。這份回憶微弱、混沌且令人迷茫，就像看不見盡頭、望不到結局的冷雨。我渴望捕捉它指向的明天，是雨，還是晴……』」<br /><align=\"right\">——黑天鵝的回憶</align><br /><br />「我看到一個女人的身影，在影像和圖案間跳躍變形。不…我沒有瘋，我的確看到了『她』。我記得她的聲音，那種絲絨一般的質感，我也記得她手中流光溢彩的紙牌，好像有什麼魔力似的…噢，對了，她還邀請我佔卜。她說，『不管你是想佔卜幸福、災難、失物還是意外所獲…我只需你付出一個真實的故事——因爲過去和未來本是同一個圓上的同一個點。』我的腦袋暈乎乎的，她真溫柔，我和她說了好多好多，只記得她很耐心的聽完了我說的胡話…然後，根據她的佔卜，我替酒店的客人找到了她的鏡子！噢，你問我向她說了什麼——沒什麼重要的，不過是一些關於過去的傳言……」<br /><align=\"right\">——一位匹諾康尼本地人的回憶</align><br /><br />如今，她以佔卜師的身份，穿梭於不同的世界，追索與命途，與星神有關的記憶。她相信，那些記憶堅硬如寶石，即便遺忘也無法徹底消磨它們。<br /><br />「很多憶者都去過匹諾康尼，但一無所獲，他們說那只是水面上一場浮華的夢。」<br />「但夢…亦是記憶的一種變形。趁着那些竊憶者和焚化工還沒到來，我會潛入深海，一睹殘骸。」",
+   "unlockRequirement": "角色等級<nobr>80</nobr>解鎖"
+  }
+ ],
+ "archive": {
+  "cvCn": "楊夢露",
+  "cvJp": "生天目仁美",
+  "cvKr": "김하영",
+  "cvEn": "Arryn Zech",
+  "camp": "流光憶庭"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "黑天鵝",
+ "rarity": 5,
+ "descHash": "流光憶庭的憶者，慵懶神祕的佔卜師。 耐心聆聽他人「記憶」，諸般命運盡在掌握。",
+ "artPath": "da5a3d8d87865c51907df718c329a6d552ef2ddbc3e1f6e82dd466c14b0c1aa6",
+ "miniIconPath": "741cd71f3a6a5c9ad08beec9f832c75eaea8a07246cafcd530c806b8d2dc00a5",
+ "damageType": {
+  "id": 16,
+  "iconPath": "2f3d2fba0ee9442f1c51cf42a91af6f9ece3f19168237fd3963d352e508791c7",
+  "color": "#00FF9C",
+  "name": "風",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "96c3b8dd457b98955d440531986a23d509f705c13d7aa794d1e97bcfd03d5701",
+  "altIconPath": "b55d340138ed77756cd939d0d9ee2103a5398f999202c1ed19d092ac87333155",
+  "color": "#FFFFFF",
+  "name": "虛無",
+  "rarity": 0
+ },
+ "pageId": "blackswan"
+}

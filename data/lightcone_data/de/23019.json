@@ -2,7 +2,7 @@
  "name": "Das Ich im Spiegel",
  "rarity": 5,
  "descHash": "Wenn die Pflaumenblüten kurz vor dem Verwelken standen, versiegelte sie diesen Moment gerne und behielt ihn für sich.<br />Seitdem sind viele Jahre vergangen. Viele Lebensformen – wilde, süße und alles dazwischen – sind durch ihre Hände erblüht, aber die Pflaumenblüten verwelken immer noch zu ihren vorbestimmten Zeiten.<br />Seitdem sind viele Jahre vergangen. Ihr Antlitz im Spiegel scheint von der Zeit unberührt zu sein. Aber ist auch sie im großen Plan des Kosmos dazu bestimmt, nur einen flüchtigen Moment zu bestehen?<br /><br />„Wenn alles auf den Untergang ausgerichtet ist, welchem Zweck dient dann die Schöpfung?“<br />Nach einer scheinbar unendlichen Stille weht der Wind, die Blütenblätter fallen und das Spiegelbild gibt die gleiche Antwort wie immer.<br />„Für den Tag, an dem die Pflaumenblüten nicht mehr aufbewahrt werden.“<br />Sie streicht mit der Hand über den kalten Spiegel und fragt sich, wie viele Male sie diesen Satz schon gesagt hat.",
- "iconPath": "17fb4c2376209de7c02e28ad5fdc6c3a3127da1309cd968090c736fa0b680688",
+ "iconPath": "6ccc4a04b8112e4be199e5c857df83025e459578cef664b5e92a7b32345f6a74",
  "artPath": "d50932a2642c0386cce0e550ba30a2e17f2d2557369ae0e2559e0d0c4440e34b",
  "mediumIconPath": "20e03477c372c2ec62973ad58a6109f6d935c3e3c550ccb729c7bd284262330a",
  "baseType": {
@@ -27,6 +27,8 @@
    "rewardPath": "/material/29328",
    "comeFrom": [
     "Blütenkelch (Große Mine)",
+    "Blütenkelch: Kunsthandwerkskommission",
+    "Blütenkelch: Hotel Reverie (Traumlandschaft)",
     "Missionsbelohnungen",
     "Auftragsbelohnungen",
     "Glut-Tausch"
@@ -48,7 +50,8 @@
     "Universum-Simulation-Gegner",
     "Auftragsbelohnungen",
     "Glut-Tausch",
-    "Omni-Synthesemaschine – Materialtausch"
+    "Omni-Synthesemaschine – Materialtausch",
+    "Blütenkelch (Golden)"
    ]
   },
   "633445": {
@@ -83,7 +86,8 @@
    "comeFrom": [
     "Blütenkelch (Robotersiedlung)",
     "Blütenkelch (Robotersiedlung)",
-    "Glut-Tausch"
+    "Glut-Tausch",
+    "Omni-Synthesemaschine – Materialtausch"
    ]
   },
   "694487": {
@@ -99,6 +103,8 @@
    "rewardPath": "/material/694487",
    "comeFrom": [
     "Blütenkelch (Abgelegener Pass)",
+    "Blütenkelch: Wahrsagekommission",
+    "Blütenkelch: Der Traum eines Kindes",
     "Vergessene Halle"
    ]
   },
@@ -115,6 +121,8 @@
    "rewardPath": "/material/694488",
    "comeFrom": [
     "Blütenkelch (Abgelegener Pass)",
+    "Blütenkelch Wahrsagekommission",
+    "Blütenkelch: Der Traum eines Kindes",
     "Glut-Tausch"
    ]
   },
@@ -131,6 +139,8 @@
    "rewardPath": "/material/694489",
    "comeFrom": [
     "Blütenkelch (Abgelegener Pass)",
+    "Blütenkelch: Wahrsagekommission",
+    "Blütenkelch: Der Traum eines Kindes",
     "Auftragsbelohnungen"
    ]
   },
@@ -166,7 +176,8 @@
    "comeFrom": [
     "Blütenkelch (Robotersiedlung)",
     "Blütenkelch (Robotersiedlung)",
-    "Omni-Synthesemaschine – Materialsynthese"
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Omni-Synthesemaschine – Materialtausch"
    ]
   },
   "920197": {
@@ -184,7 +195,8 @@
     "Blütenkelch (Robotersiedlung)",
     "Blütenkelch (Robotersiedlung)",
     "Omni-Synthesemaschine – Materialsynthese",
-    "Glut-Tausch"
+    "Glut-Tausch",
+    "Omni-Synthesemaschine – Materialtausch"
    ]
   }
  },
@@ -344,7 +356,7 @@
  "skill": {
   "id": 23019,
   "name": "Pflaumenduft",
-  "descHash": "Erhöht den Brucheffekt des Trägers um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. Wenn der Träger seinen Ultimate einsetzt, wird der verursachte SCH für <nobr>#3[i]</nobr> Rd. um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> erhöht. Wenn der Brucheffekt des Trägers <nobr>#4[i]%</nobr> oder mehr beträgt, wird 1 Fertigkeitspunkt wiederhergestellt.<br />Zu Beginn jeder Kampfwelle werden bei allen Verbündeten <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[f1]</nobr></span> Pkt. Energie wiederhergestellt. Effekte desselben Typs sind nicht stapelbar.",
+  "descHash": "Erhöht den Brucheffekt des Trägers um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. Wenn der Träger seinen Ultimate einsetzt, wird der verursachte SCH aller Verbündeten für <nobr>#3[i]</nobr> Rd. um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> erhöht. Wenn der Brucheffekt des Trägers <nobr>#4[i]%</nobr> oder mehr beträgt, wird 1 Fertigkeitspunkt wiederhergestellt.<br />Zu Beginn jeder Kampfwelle werden bei allen Verbündeten <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[f1]</nobr></span> Pkt. Energie wiederhergestellt. Effekte desselben Typs sind nicht stapelbar.",
   "levelData": [
    {
     "params": [

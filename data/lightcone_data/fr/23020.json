@@ -2,7 +2,7 @@
  "name": "Baptême de pure réflexion",
  "rarity": 5,
  "descHash": "Le soleil de l'après-midi amène sa chaleur et les effluves des fleurs embaument l'air ambiant.<br />Bien qu'il s'efforce de garder ses pensées pures, la stagnation cognitive attire inévitablement les particules de l'esprit comme de la poussière.<br /><br />« La guérison des pensées est tout aussi vitale que la santé du corps. »<br />Les clameurs des imbéciles s'estompent avec la fatigue tandis qu'il s'enfonce dans l'eau, laissant libre cours à toutes ses pensées, tout en éclaircissant et en ordonnant son esprit.<br /><br />« La vérité échappe à toute souillure, et n'accepte que les pensées les plus pures. »",
- "iconPath": "c44aed25143251f0f69185e79cd1670a0595bbc093a80e7d44aeb992dba9cb12",
+ "iconPath": "deeba335d5776548f4e02ba1311edd967fc82280479901d604dde36bfe5f3386",
  "artPath": "279928ae8cd2756ced85b5ce4e6b939f866a2d5af8ac77574e868ee8a8ce7c91",
  "mediumIconPath": "7353d4b855c082efac2e38ee422cd0b7e1979cb87f4cb42e9cb8a0d9509d377a",
  "baseType": {
@@ -27,6 +27,8 @@
    "rewardPath": "/material/29328",
    "comeFrom": [
     "Calice de la Grande mine",
+    "Calice de la Commission de l'artisanat",
+    "Calice de l'Hôtel Rêverie du Pays des rêves",
     "Récompense de mission",
     "Récompense d'affectation",
     "Braises immortelles"
@@ -48,7 +50,8 @@
     "Ennemi de l'Univers simulé",
     "Récompense d'affectation",
     "Échange de braises",
-    "Échange de matériaux de l'Omni-synthétiseur"
+    "Échange de matériaux de l'Omni-synthétiseur",
+    "Calice doré"
    ]
   },
   "633378": {
@@ -83,7 +86,8 @@
    "comeFrom": [
     "Calice des Plaines des neiges périphériques",
     "Calice des Plaines des neiges périphériques",
-    "Braises immortelles"
+    "Braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur"
    ]
   },
   "694487": {
@@ -99,6 +103,8 @@
    "rewardPath": "/material/694487",
    "comeFrom": [
     "Calice du Col de Backwater",
+    "Calice de la Commission de divination",
+    "Calice du Rêve d'enfant",
     "Salle oubliée"
    ]
   },
@@ -115,6 +121,8 @@
    "rewardPath": "/material/694488",
    "comeFrom": [
     "Calice du Col de Backwater",
+    "Calice de la Commission de divination",
+    "Calice du Rêve d'enfant",
     "Braises immortelles"
    ]
   },
@@ -131,6 +139,8 @@
    "rewardPath": "/material/694489",
    "comeFrom": [
     "Calice du Col de Backwater",
+    "Calice de la Commission de divination",
+    "Calice du Rêve d'enfant",
     "Récompense d'affectation"
    ]
   },
@@ -166,7 +176,8 @@
    "comeFrom": [
     "Calice des Plaines des neiges périphériques",
     "Calice des Plaines des neiges périphériques",
-    "Synthèse de matériaux de l'Omni-synthétiseur"
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Échange de matériaux de l'Omni-synthétiseur"
    ]
   },
   "920201": {
@@ -184,7 +195,8 @@
     "Calice des Plaines des neiges périphériques",
     "Calice des Plaines des neiges périphériques",
     "Synthèse de matériaux de l'Omni-synthétiseur",
-    "Braises immortelles"
+    "Braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur"
    ]
   }
  },
@@ -344,7 +356,7 @@
  "skill": {
   "id": 23020,
   "name": "Entraînement mental",
-  "descHash": "Augmente les DGT critiques du porteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. Les DGT critiques du porteur augmentent de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> supplémentaires pour chaque malus subi par la cible ennemie, jusqu'à un maximum de <nobr>#3[i]</nobr> cumuls. Lorsque le porteur attaque une cible avec son ultime, il bénéficie de l'effet Débat, qui augmente les DGT qu'il inflige de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> et ses attaques de suivi ignorent <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> de la DÉF de la cible. Cet effet dure <nobr>#6[i]</nobr> tours.",
+  "descHash": "Augmente de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> les DGT critiques du porteur. Pour chaque malus subi par une cible ennemie, les DGT critiques du porteur augmentent de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> supplémentaires sur cette cible, jusqu'à un maximum de <nobr>#3[i]</nobr> cumuls. Lorsque le porteur attaque une cible avec son ultime, il bénéficie de l'effet Débat, ce qui augmente de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> les DGT qu'il inflige et permet à ses attaques de suivi d'ignorer <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> de la DÉF de la cible. Cet effet dure <nobr>#6[i]</nobr> tours.",
   "levelData": [
    {
     "params": [

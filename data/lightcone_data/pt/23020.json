@@ -1,8 +1,8 @@
 {
  "name": "O Batismo de Pensamento Puro",
  "rarity": 5,
- "descHash": "A luz vespertina brilha na medida certa, e a fragrância das flores enche o ar.<br />Ainda que ele tente manter seus pensamentos puros, a exaustão cognitiva inevitavelmente atrai partículas da mente, reunidas como grãos de poeira.<br /><br />\"Curar os pensamentos de alguém é tão importante quanto preservar a saúde de alguém.\"<br />O clamor dos tolos desaparece junto com o cansaço enquanto ele afunda na água, permitindo que todos os pensamentos flutuem, deixando sua mente elucidada e organizada.<br /><br />\"A verdade escapa a todos os imundos, e apenas os de pesamento puro poderão se aproximar.\"",
- "iconPath": "c44aed25143251f0f69185e79cd1670a0595bbc093a80e7d44aeb992dba9cb12",
+ "descHash": "A luz vespertina brilha na medida certa, e a fragrância das flores enche o ar.<br />Ainda que ele tente manter seus pensamentos puros, a exaustão cognitiva inevitavelmente atrai partículas da mente, reunidas como grãos de poeira.<br /><br />\"Curar os pensamentos de alguém é tão importante quanto preservar a saúde de alguém.\"<br />O clamor dos tolos desaparece junto com o cansaço enquanto ele afunda na água, permitindo que todos os pensamentos flutuem, deixando sua mente elucidada e organizada.<br /><br />\"A verdade escapa a todos os imundos, e apenas os de pensamento puro poderão se aproximar.\"",
+ "iconPath": "deeba335d5776548f4e02ba1311edd967fc82280479901d604dde36bfe5f3386",
  "artPath": "279928ae8cd2756ced85b5ce4e6b939f866a2d5af8ac77574e868ee8a8ce7c91",
  "mediumIconPath": "7353d4b855c082efac2e38ee422cd0b7e1979cb87f4cb42e9cb8a0d9509d377a",
  "baseType": {
@@ -27,6 +27,8 @@
    "rewardPath": "/material/29328",
    "comeFrom": [
     "Cálice (Grande Mina)",
+    "Cálice: Comissão de Artesanato",
+    "Cálice: Devaneio (Mundonírico)",
     "Recompensas de Missão",
     "Recompensas de Atribuição",
     "Troca de Brasas"
@@ -48,7 +50,8 @@
     "Inimigos do Universo Simulado",
     "Recompensas de Atribuição",
     "Troca de Brasas",
-    "Sintetizador Omni — Troca de Material"
+    "Sintetizador Omni — Troca de Material",
+    "Cálice (Dourado)"
    ]
   },
   "633378": {
@@ -83,7 +86,8 @@
    "comeFrom": [
     "Cálice (Planícies Nevadas Distantes)",
     "Cálice (Planícies Nevadas Distantes)",
-    "Troca de Brasas"
+    "Troca de Brasas",
+    "Sintetizador Omni — Troca de Material"
    ]
   },
   "694487": {
@@ -99,6 +103,8 @@
    "rewardPath": "/material/694487",
    "comeFrom": [
     "Cálice (Passagem do Remanso)",
+    "Cálice: Comissão de Divinação",
+    "Cálice: Sonho de Uma Criança",
     "Salão Esquecido"
    ]
   },
@@ -115,6 +121,8 @@
    "rewardPath": "/material/694488",
    "comeFrom": [
     "Cálice (Passagem do Remanso)",
+    "Cálice: Comissão de Divinação",
+    "Cálice: Sonho de Uma Criança",
     "Troca de Brasas"
    ]
   },
@@ -131,6 +139,8 @@
    "rewardPath": "/material/694489",
    "comeFrom": [
     "Cálice (Passagem do Remanso)",
+    "Cálice: Comissão de Divinação",
+    "Cálice: Sonho de Uma Criança",
     "Recompensas de Atribuição"
    ]
   },
@@ -166,7 +176,8 @@
    "comeFrom": [
     "Cálice (Planícies Nevadas Distantes)",
     "Cálice (Planícies Nevadas Distantes)",
-    "Sintetizador Omni — Síntese de Material"
+    "Sintetizador Omni — Síntese de Material",
+    "Sintetizador Omni — Troca de Material"
    ]
   },
   "920201": {
@@ -184,7 +195,8 @@
     "Cálice (Planícies Nevadas Distantes)",
     "Cálice (Planícies Nevadas Distantes)",
     "Sintetizador Omni — Síntese de Material",
-    "Troca de Brasas"
+    "Troca de Brasas",
+    "Sintetizador Omni — Troca de Material"
    ]
   }
  },
@@ -344,7 +356,7 @@
  "skill": {
   "id": 23020,
   "name": "Treinamento Mental",
-  "descHash": "Aumenta o Dano CRIT do usuário em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. Para cada penalidade no inimigo-alvo, o Dano CRIT causado pelo usuário ao alvo aumenta em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>, acumulando até um máximo de <nobr>#3[i]</nobr> vezes. Quando o usuário ataca o inimigo-alvo com sua Perícia Suprema, ele recebe o efeito Disputa, que aumenta o Dano causado em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> e permite que seus Ataques Extras ignorem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> da DEF do alvo. Este efeito dura <nobr>#6[i]</nobr> rodadas.",
+  "descHash": "Aumenta o Dano CRIT do usuário em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. Para cada penalidade no inimigo-alvo, o Dano CRIT causado pelo usuário ao alvo aumenta adicionalmente em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>, acumulando até um máximo de <nobr>#3[i]</nobr> vezes. Quando o usuário ataca o inimigo-alvo com sua Perícia Suprema, ele recebe o efeito Disputa, que aumenta o Dano causado em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> e permite que seus Ataques Extras ignorem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> da DEF do alvo. Este efeito dura <nobr>#6[i]</nobr> rodadas.",
   "levelData": [
    {
     "params": [

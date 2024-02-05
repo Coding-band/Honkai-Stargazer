@@ -1,0 +1,508 @@
+{
+ "name": "Chuyến Thám Hiểm Thị Trấn Mộng Đẹp",
+ "rarity": 4,
+ "descHash": "\"Quý khán giả thân mến, Cậu Bé Đồng Hồ và đồng đội lại sắp gặp gỡ mọi người rồi!\"<br /><br />\"Trong tập trước, Ông Chủ Đá phát hiện ra Thị Trấn Mộng Đẹp ẩn chứa nguồn tài nguyên vô cùng phong phú nên đã bắt đầu tranh giành quyền thống trị thị trấn này. Cậu Bé Đồng Hồ hợp sức cùng Người Anh Em Hanu và Chim Giấy đuổi Ông Chủ Đá cùng đám thuộc hạ đáng ghét khỏi Thị Trấn Mộng Đẹp.\"<br /><br />\"Ông Chủ Đá không để mình bị hạ gục một cách dễ dàng như vậy, bèn tập hợp một đám côn đồ tuyên bố sẽ san bằng Thị Trấn Mộng Đẹp. Cậu Bé Đồng Hồ trong tập này sẽ phải đối mặt với nguy cơ lớn nhất trong lịch sử!\"<br /><br />\"Cậu Bé Đồng Hồ sẽ dùng những kế hoạch nào để đột phá vòng vây? Sẽ lại có những đồng minh nào mới gia nhập? Hãy đón xem tập mới nhất của Thị Trấn Mộng Đẹp Phiêu Lưu Ký!\"",
+ "iconPath": "eb377578f2a10c7427bf93be5edea1cc49b0ba72f3e212625d363bc9bdd50038",
+ "artPath": "97cbc7b410267cdbba566f2b66538620f6bfd8069a017f13cb7bdccb65f9af8d",
+ "mediumIconPath": "a55660e4476406b8c7b73748c674abd46b591364e7c2f236679d98c9ed3b5db4",
+ "baseType": {
+  "id": 0,
+  "iconPath": "fd3dc153082117a49b1d8eb7d166dd32d65d636463e15c604b583d5945a4ca69",
+  "color": "#FFFFFF",
+  "name": "Hòa Hợp",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Điểm Tín Dụng",
+   "desc": "Tiền mà Công ty Hành Tinh Hòa Bình (IPC) dùng để giao dịch với khách, nay đã trở thành đồng tiền chính khi đi lại trong vũ trụ.",
+   "lore": "\"Mọi người bôn ba, đấu tranh, mua bán, cũng chỉ là vì những con số xuất hiện ở điểm cuối. Nhưng thứ quý giá thật sự, lại không thể mua được con số của công ty.\"",
+   "purpose": "Tiền Tệ Thường",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Đài Hoa Nhân Tạo - Khu Mỏ Khổng Lồ",
+    "Đài Hoa Nhân Tạo: Sở Công Nghiệp",
+    "Đài Hoa Nhân Tạo: Khách Sạn Mộng Mơ - Cõi Mộng",
+    "Phần thưởng nhiệm vụ",
+    "Thưởng Ủy Thác",
+    "Đổi Tro Tàn"
+   ]
+  },
+  "549209": {
+   "id": 549209,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "9a1cf43cc4fe48465c1a6a97d23a061fa43b6ab00796881aeaa8c3da2bb8fe73",
+   "name": "Thiết Bị Lưu Giữ Giấc Mơ",
+   "desc": "Thiết bị lưu trữ năng lượng của Tạo Vật Cõi Mộng, vật liệu đơn giản để cường hóa.",
+   "lore": "Rương Xây Mộng chứa những giấc mơ tan vỡ, cung cấp năng lượng cơ bản cho Tạo Vật Cõi Mộng.<br /><br />\"Nếu cài đặt thứ này sẽ nhận được một thành viên của Đoàn Kịch Mộng Đẹp.\"",
+   "purpose": "Nguyên Liệu Vết Tích <br />Nguyên Liệu Nâng<br />Bậc Nhân Vật",
+   "rarity": 2,
+   "rewardPath": "/material/549209",
+   "comeFrom": [
+    "Đoàn Kịch Ác Mộng",
+    "Rớt từ kẻ địch trong Vũ Trụ Mô Phỏng",
+    "Thưởng Ủy Thác",
+    "Đổi Tro Tàn",
+    "Máy Ghép Vạn Năng - Đổi Nguyên Liệu",
+    "Đài Hoa Nhân Tạo (Vàng)"
+   ]
+  },
+  "589819": {
+   "id": 589819,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "9dcc37e0e0903af3108640d694d154e4d9c54670d5b1de405adc1c283ef3186f",
+   "name": "Ô Nhịp Thiên Không",
+   "desc": "Những đoạn nhạc từ trên trời rơi xuống. Có thể tăng tương đối Vết Tích Vận Mệnh của nhân vật <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Hòa Hợp</span>.",
+   "lore": "Một đoạn giai điệu tách khỏi trật tự. Nó lặng lẽ từ phía chân trời rơi xuống, rơi vào sự ồn ào, giống như một nắm cát vàng nằm rải rác trên hoang mạc.<br /><br />\"Không ai chú ý đến nó, cho đến lúc cảm hứng bắt được nó...\"",
+   "purpose": "Nguyên Liệu Vết Tích<br />Nguyên Liệu Nâng<br />Bậc Nón Ánh Sáng",
+   "rarity": 3,
+   "rewardPath": "/material/589819",
+   "comeFrom": [
+    "Đài Hoa Nhân Tạo: Khách Sạn Mộng Mơ - Cõi Mộng",
+    "Đài Hoa Nhân Tạo: Khách Sạn Mộng Mơ - Cõi Mộng",
+    "Máy Ghép Vạn Năng - Ghép Nguyên Liệu",
+    "Đổi Tro Tàn",
+    "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
+   ]
+  },
+  "633150": {
+   "id": 633150,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "e27598c02b7aed5cb9b255fe0958340dbf3598f33ee10667848cfeed7fdd4815",
+   "name": "Van Dòng Chảy Giấc Mơ",
+   "desc": "Bộ phận điều khiển của Tạo Vật Cõi Mộng, nguyên liệu thường dùng để cường hóa.",
+   "lore": "Thiết bị xây dựng giấc mơ điều chỉnh dục vọng, kiểm soát cảm xúc bên trong của Tạo Vật Cõi Mộng.<br /><br />\"Nếu thứ này mất tác dụng sẽ nhận được một thành viên Đoàn Kịch Ác Mộng.\"",
+   "purpose": "Nguyên Liệu Vết Tích <br />Nguyên Liệu Nâng<br />Bậc Nhân Vật",
+   "rarity": 3,
+   "rewardPath": "/material/633150",
+   "comeFrom": [
+    "Đoàn Kịch Ác Mộng khi đạt Cân Bằng cấp 2",
+    "Máy Ghép Vạn Năng - Ghép Nguyên Liệu",
+    "Rớt từ kẻ địch trong Vũ Trụ Mô Phỏng",
+    "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
+   ]
+  },
+  "673760": {
+   "id": 673760,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "5c7b57df6d6628dc837cc7761256c3a3c5b4d964820177b62f191c7469360e36",
+   "name": "Chương Nhạc Ngoài Bầu Trời",
+   "desc": "Chương nhạc giao hưởng đến từ vũ trụ. Có thể tăng mạnh Vết Tích Vận Mệnh của nhân vật <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Hòa Hợp</span>.",
+   "lore": "Một đoạn nhạc rơi khỏi trật tự. Nó lặng lẽ vang vọng bên ngoài bầu trời, bị nhấn chìm trong sự im lặng bao la, giống như một ngôi sao đơn độc lấp lánh trong dải ngân hà.<br /><br />\"Không ai cảm nhận được nó, cho đến khi bị mọi người lãng quên ♬...\"",
+   "purpose": "Nguyên Liệu Vết Tích<br />Nguyên Liệu Nâng<br />Bậc Nón Ánh Sáng",
+   "rarity": 4,
+   "rewardPath": "/material/673760",
+   "comeFrom": [
+    "Đài Hoa Nhân Tạo: Khách Sạn Mộng Mơ - Cõi Mộng",
+    "Đài Hoa Nhân Tạo: Khách Sạn Mộng Mơ - Cõi Mộng",
+    "Máy Ghép Vạn Năng - Ghép Nguyên Liệu",
+    "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "f098da0aef7117b02e1bd2fe0f1117e4a260c6b0563c4c7835ef48b6aee37f81",
+   "name": "Aether Tinh Luyện",
+   "desc": "Nguyên liệu cường hóa Nón Ánh Sáng, có thể nhận <nobr>6000</nobr> EXP Nón Ánh Sáng.",
+   "lore": "Một lọ Aether được tinh chế bằng kỹ thuật đặc biệt.<br /><br />\"Sảnh Đường Hồi Ức hy vọng lấy lại sự huy hoàng của ngày xưa, nhưng đó là \"huy hoàng của ngày xưa\" mà họ đã chọn, hiểu không?\"",
+   "purpose": "Nguyên Liệu EXP Nón Ánh Sáng",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Đài Hoa Nhân Tạo - Lằn Ranh",
+    "Đài Hoa Nhân Tạo: Sở Thiên Tượng",
+    "Đài Hoa Nhân Tạo: Giấc Mơ Trẻ Thơ",
+    "Sảnh Đường Lãng Quên"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "name": "Aether Cô Đặc",
+   "desc": "Nguyên liệu cường hóa Nón Ánh Sáng, có thể nhận <nobr>2000</nobr> EXP Nón Ánh Sáng.",
+   "lore": "Một lọ Aether được tinh chế bằng kỹ thuật đặc biệt.<br /><br />\"Phải cẩn thận, không được đè hay làm đổ. Nếu nó bị hỏng hoặc bị rò rỉ, vui lòng tham khảo Chương 2 của \"Sổ tay hướng dẫn xử lý tai nạn tràn ra\" để xử lý sau tai nạn. \"",
+   "purpose": "Nguyên Liệu EXP Nón Ánh Sáng",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Đài Hoa Nhân Tạo - Lằn Ranh",
+    "Đài Hoa Nhân Tạo: Sở Thiên Tượng",
+    "Đài Hoa Nhân Tạo: Giấc Mơ Trẻ Thơ",
+    "Đổi Tro Tàn"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d4e3585911d6f71b87b47ced1a2f6e0b0f77dbdc8615650896e77bae87361afd",
+   "name": "Aether Loãng",
+   "desc": "Nguyên liệu cường hóa Nón Ánh Sáng, có thể nhận <nobr>500</nobr> EXP Nón Ánh Sáng.",
+   "lore": "Một chất môi giới tưởng tượng không nên tồn tại trong thực tế, nguyên liệu cơ bản để tạo ra nón ánh sáng.<br />Đưa vào trong nón ánh sáng, có thể khiến những thứ được gói trong đó trở nên rõ ràng hơn.<br /><br />\"Hóa ra là như vậy, \"ý nghĩa\" của Sảnh Đường Hồi Ức chính là thứ này, chẳng trách Người Lưu Giữ Ký Ức có thể mang theo ký ức đi xuyên qua các hành tinh.\"",
+   "purpose": "Nguyên Liệu EXP Nón Ánh Sáng",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Đài Hoa Nhân Tạo - Lằn Ranh",
+    "Đài Hoa Nhân Tạo: Sở Thiên Tượng",
+    "Đài Hoa Nhân Tạo: Giấc Mơ Trẻ Thơ",
+    "Thưởng Ủy Thác"
+   ]
+  },
+  "717091": {
+   "id": 717091,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "aa55e0e2abb0564d8d470280ad864c1c7a4d9f14cfe0427092a26075fcc86b94",
+   "name": "Động Cơ Tạo Giấc Mơ",
+   "desc": "Cốt lõi sức mạnh của Tạo Vật Cõi Mộng, vật liệu cao cấp để cường hóa.",
+   "lore": "Cỗ máy xây mộng tạo ra những ảo ảnh và thổi linh hồn vào các Tạo Vật Cõi Mộng.<br /><br />\"Nếu phát hiện thứ này gặp trục trặc... bạn của tôi, hãy thức dậy trước khi rơi vào ác mộng.\"",
+   "purpose": "Nguyên Liệu Vết Tích <br />Nguyên Liệu Nâng<br />Bậc Nhân Vật",
+   "rarity": 4,
+   "rewardPath": "/material/717091",
+   "comeFrom": [
+    "Đoàn Kịch Ác Mộng khi đạt Cân Bằng cấp 4",
+    "Máy Ghép Vạn Năng - Ghép Nguyên Liệu",
+    "Rớt từ kẻ địch trong Vũ Trụ Mô Phỏng",
+    "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
+   ]
+  },
+  "874346": {
+   "id": 874346,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "0b9599c040d16b07324d2f3ea37854bbe9d3d22cb80a43b3070662e562738a04",
+   "name": "Nốt Nhạc Đám Mây",
+   "desc": "Nốt nhạc lẻ từ đám mây rơi xuống. Có thể tăng lượng nhỏ Vết Tích Vận Mệnh của nhân vật <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Hòa Hợp</span>.",
+   "lore": "Một nốt nhạc tách khỏi trật tự. Lặng lẽ rơi vào rìa mây, rơi vào những âm thanh bình thường, giống như giọt nước mắt rơi xuống biển cả.<br /><br />\"Không ai nghe thấy nó cho đến lúc nó rơi vào một bản nhạc...\"",
+   "purpose": "Nguyên Liệu Vết Tích<br />Nguyên Liệu Nâng<br />Bậc Nón Ánh Sáng",
+   "rarity": 2,
+   "rewardPath": "/material/874346",
+   "comeFrom": [
+    "Đài Hoa Nhân Tạo: Khách Sạn Mộng Mơ - Cõi Mộng",
+    "Đài Hoa Nhân Tạo: Khách Sạn Mộng Mơ - Cõi Mộng",
+    "Đổi Tro Tàn",
+    "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549209,
+     "count": 5
+    }
+   ],
+   "attackBase": 19.2,
+   "attackAdd": 2.88,
+   "hpBase": 43.2,
+   "hpAdd": 6.48,
+   "defenseBase": 18,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 874346,
+     "count": 3
+    },
+    {
+     "id": 549209,
+     "count": 10
+    }
+   ],
+   "attackBase": 42.24,
+   "attackAdd": 2.88,
+   "hpBase": 95.04,
+   "hpAdd": 6.48,
+   "defenseBase": 39.6,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 589819,
+     "count": 3
+    },
+    {
+     "id": 633150,
+     "count": 6
+    }
+   ],
+   "attackBase": 72.96,
+   "attackAdd": 2.88,
+   "hpBase": 164.16,
+   "hpAdd": 6.48,
+   "defenseBase": 68.4,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 589819,
+     "count": 6
+    },
+    {
+     "id": 633150,
+     "count": 9
+    }
+   ],
+   "attackBase": 103.68,
+   "attackAdd": 2.88,
+   "hpBase": 233.28,
+   "hpAdd": 6.48,
+   "defenseBase": 97.2,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 673760,
+     "count": 4
+    },
+    {
+     "id": 717091,
+     "count": 5
+    }
+   ],
+   "attackBase": 134.4,
+   "attackAdd": 2.88,
+   "hpBase": 302.4,
+   "hpAdd": 6.48,
+   "defenseBase": 126,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 673760,
+     "count": 8
+    },
+    {
+     "id": 717091,
+     "count": 7
+    }
+   ],
+   "attackBase": 165.12,
+   "attackAdd": 2.88,
+   "hpBase": 371.52,
+   "hpAdd": 6.48,
+   "defenseBase": 154.8,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 195.84,
+   "attackAdd": 2.88,
+   "hpBase": 440.64,
+   "hpAdd": 6.48,
+   "defenseBase": 183.6,
+   "defenseAdd": 2.7
+  }
+ ],
+ "skill": {
+  "id": 21036,
+  "name": "Đoàn Kết",
+  "descHash": "Sau khi người trang bị thi triển một trong các loại kỹ năng Tấn Công Thường/Chiến Kỹ/Tuyệt Kỹ, sẽ kèm theo Trái Tim Trẻ Thơ lên toàn bộ phe ta, Trái Tim Trẻ Thơ tăng <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> sát thương do kỹ năng loại tương ứng của mục tiêu phe ta gây ra. Trái Tim Trẻ Thơ chỉ có hiệu lực với loại kỹ năng mà người trang bị vừa mới sử dụng, và không thể cộng dồn.",
+  "levelData": [
+   {
+    "params": [
+     0.12
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.14
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.16
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.18
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.2
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 50,
+   "2": 80,
+   "3": 140,
+   "4": 210,
+   "5": 300,
+   "6": 400,
+   "7": 510,
+   "8": 640,
+   "9": 780,
+   "10": 930,
+   "11": 1090,
+   "12": 1260,
+   "13": 1460,
+   "14": 1650,
+   "15": 1860,
+   "16": 2080,
+   "17": 2300,
+   "18": 2540,
+   "19": 2790,
+   "20": 2900,
+   "21": 3010,
+   "22": 3130,
+   "23": 3240,
+   "24": 3360,
+   "25": 3490,
+   "26": 3610,
+   "27": 3740,
+   "28": 3860,
+   "29": 3990,
+   "30": 4130,
+   "31": 4260,
+   "32": 4400,
+   "33": 4540,
+   "34": 4680,
+   "35": 4820,
+   "36": 4970,
+   "37": 5110,
+   "38": 5260,
+   "39": 5410,
+   "40": 5560,
+   "41": 6100,
+   "42": 6450,
+   "43": 6810,
+   "44": 7180,
+   "45": 7550,
+   "46": 7930,
+   "47": 8310,
+   "48": 8710,
+   "49": 9110,
+   "50": 9520,
+   "51": 9940,
+   "52": 10350,
+   "53": 10780,
+   "54": 11220,
+   "55": 11660,
+   "56": 12110,
+   "57": 12570,
+   "58": 13030,
+   "59": 13500,
+   "60": 13980,
+   "61": 14630,
+   "62": 15420,
+   "63": 16210,
+   "64": 17010,
+   "65": 17830,
+   "66": 18660,
+   "67": 19500,
+   "68": 20350,
+   "69": 21220,
+   "70": 22100,
+   "71": 24650,
+   "72": 26970,
+   "73": 29330,
+   "74": 31720,
+   "75": 34140,
+   "76": 36600,
+   "77": 39100,
+   "78": 41620,
+   "79": 44180,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "21036"
+}
