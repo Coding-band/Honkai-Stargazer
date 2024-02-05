@@ -4,6 +4,49 @@
  */
 
 const CharacterSoul: any = {
+  //add in 2.0.0
+  "Black Swan": {
+    eidolon1: require("../../images/character_eidolon/black_swan_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/black_swan_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/black_swan_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/black_swan_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/black_swan_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/black_swan_eidolon6.webp"),
+    soul1: require("../../images/character_soul/black_swan_soul1.webp"),
+    soul2: require("../../images/character_soul/black_swan_soul2.webp"),
+    soul3: require("../../images/character_soul/black_swan_soul3.webp"),
+    soul4: require("../../images/character_soul/black_swan_soul4.webp"),
+    soul5: require("../../images/character_soul/black_swan_soul5.webp"),
+    soul6: require("../../images/character_soul/black_swan_soul6.webp"),
+  },
+  "Misha": {
+    eidolon1: require("../../images/character_eidolon/misha_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/misha_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/misha_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/misha_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/misha_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/misha_eidolon6.webp"),
+    soul1: require("../../images/character_soul/misha_soul1.webp"),
+    soul2: require("../../images/character_soul/misha_soul2.webp"),
+    soul3: require("../../images/character_soul/misha_soul3.webp"),
+    soul4: require("../../images/character_soul/misha_soul4.webp"),
+    soul5: require("../../images/character_soul/misha_soul5.webp"),
+    soul6: require("../../images/character_soul/misha_soul6.webp"),
+  },
+  "Sparkle": {
+    eidolon1: require("../../images/character_eidolon/sparkle_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/sparkle_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/sparkle_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/sparkle_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/sparkle_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/sparkle_eidolon6.webp"),
+    soul1: require("../../images/character_soul/sparkle_soul1.webp"),
+    soul2: require("../../images/character_soul/sparkle_soul2.webp"),
+    soul3: require("../../images/character_soul/sparkle_soul3.webp"),
+    soul4: require("../../images/character_soul/sparkle_soul4.webp"),
+    soul5: require("../../images/character_soul/sparkle_soul5.webp"),
+    soul6: require("../../images/character_soul/sparkle_soul6.webp"),
+  },
   //add in 1.6.0
   "Dr. Ratio": {
     eidolon1: require("../../images/character_eidolon/dr_ratio_eidolon1.webp"),

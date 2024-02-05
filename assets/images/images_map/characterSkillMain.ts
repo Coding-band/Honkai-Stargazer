@@ -4,6 +4,28 @@
  */
 
 const CharacterSkillMain: any = {
+  //add in 2.0.0
+  "Black Swan": {
+    skill1: require("../../images/character_skill/black_swan_skill1.webp"),
+    skill2: require("../../images/character_skill/black_swan_skill2.webp"),
+    skill3: require("../../images/character_skill/black_swan_skill3.webp"),
+    skill4: require("../../images/character_skill/black_swan_skill4.webp"),
+    skill6: require("../../images/character_skill/black_swan_skill6.webp"),
+  },
+  "Misha": {
+    skill1: require("../../images/character_skill/misha_skill1.webp"),
+    skill2: require("../../images/character_skill/misha_skill2.webp"),
+    skill3: require("../../images/character_skill/misha_skill3.webp"),
+    skill4: require("../../images/character_skill/misha_skill4.webp"),
+    skill6: require("../../images/character_skill/misha_skill6.webp"),
+  },
+  "Sparkle": {
+    skill1: require("../../images/character_skill/sparkle_skill1.webp"),
+    skill2: require("../../images/character_skill/sparkle_skill2.webp"),
+    skill3: require("../../images/character_skill/sparkle_skill3.webp"),
+    skill4: require("../../images/character_skill/sparkle_skill4.webp"),
+    skill6: require("../../images/character_skill/sparkle_skill6.webp"),
+  },
   //add in 1.6.0
   "Dr. Ratio": {
     skill1: require("../../images/character_skill/dr_ratio_skill1.webp"),

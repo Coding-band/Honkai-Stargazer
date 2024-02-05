@@ -1,4 +1,23 @@
 const CharacterImage: any = {
+  //add in 2.0.0
+  "Black Swan": {
+    icon: require("../../images/character_icon/black_swan_icon.webp"),
+    imageSplash: require("../../images/character_splash/black_swan_splash.webp"),
+    imageFull: require("../../images/character_splash/black_swan_splash.webp"),
+    fade: require("../../images/character_fade/black_swan_fade.webp"),
+  },
+  "Sparkle": {
+    icon: require("../../images/character_icon/sparkle_icon.webp"),
+    imageSplash: require("../../images/character_splash/sparkle_splash.webp"),
+    imageFull: require("../../images/character_splash/sparkle_splash.webp"),
+    fade: require("../../images/character_fade/sparkle_fade.webp"),
+  },
+  "Misha": {
+    icon: require("../../images/character_icon/misha_icon.webp"),
+    imageSplash: require("../../images/character_splash/misha_splash.webp"),
+    imageFull: require("../../images/character_splash/misha_splash.webp"),
+    fade: require("../../images/character_fade/misha_fade.webp"),
+  },
   //add in 1.6.0
   "Dr. Ratio": {
     icon: require("../../images/character_icon/dr_ratio_icon.webp"),
