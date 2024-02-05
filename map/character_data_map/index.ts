@@ -10,6 +10,7 @@ import pt from "./pt";
 import ru from "./ru";
 import th from "./th";
 import vi from "./vi";
+import id from "./id";
 
 export default {
   zh_cn,
@@ -23,5 +24,6 @@ export default {
   pt,
   ru,
   th,
-  vi
+  vi,
+  id
 };

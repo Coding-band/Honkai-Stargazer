@@ -3,6 +3,9 @@
  * * 作為 Stargazer 的角色 ID
  */
 export type CharacterName =
+  | "Black Swan"
+  | "Sparkle"
+  | "Misha"
   | "Dr. Ratio"
   | "Ruan Mei"
   | "Xueyi"

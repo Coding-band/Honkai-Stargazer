@@ -15,6 +15,8 @@ const officalRelicId: any = {
   114: "Messenger Traversing Hackerspace",
   115: "The Ashblazing Grand Duke",
   116: "Prisoner in Deep Confinement",
+  117: "Pioneer Diver of Dead Waters",
+  118: "Watchmaker, Master of Dream Machinations",
   301: "Space Sealing Station",
   302: "Fleet of the Ageless",
   303: "Pan-Cosmic Commercial Enterprise",

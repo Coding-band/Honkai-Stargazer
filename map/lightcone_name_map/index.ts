@@ -1,4 +1,16 @@
 const LightconeName = {
+  //Add in 2.0.0
+  "earthly-escapade": "Earthly Escapade",
+  "reforged-remembrance": "Reforged Remembrance",
+  "what-is-real": "What Is Real?",
+  "flames-afar": "Flames Afar",
+  "destinys-threads-forewoven": "Destiny's Threads Forewoven",
+  "the-day-the-cosmos-fell": "The Day The Cosmos Fell",
+  "its-showtime": "It's Showtime",
+  "indelible-promise": "Indelible Promise",
+  "final-victor": "Final Victor",
+  "dreamville-adventure": "Dreamville Adventure",
+
   //Add in 1.6.0
   "baptism-of-pure-thought": "Baptism of Pure Thought",
   "past-self-in-mirror": "Past Self in Mirror",

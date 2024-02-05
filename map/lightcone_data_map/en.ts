@@ -84,7 +84,30 @@ import Arrows from "../../data/lightcone_data/en/20000.json";
 import BaptismofPureThought from "../../data/lightcone_data/en/23020.json";
 import PastSelfinMirror from "../../data/lightcone_data/en/23019.json";
 
+//add in 2.0.0
+import EarthlyEscapade from "../../data/lightcone_data/en/23021.json";
+import ReforgedRemembrance from "../../data/lightcone_data/en/23022.json";
+import WhatIsReal from "../../data/lightcone_data/en/21035.json";
+import FlamesAfar from "../../data/lightcone_data/en/21038.json";
+import DestinysThreadsForewoven from "../../data/lightcone_data/en/21039.json";
+import TheDayTheCosmosFell from "../../data/lightcone_data/en/21040.json";
+import ItsShowtime from "../../data/lightcone_data/en/21041.json";
+import IndeliblePromise from "../../data/lightcone_data/en/21042.json";
+import FinalVictor from "../../data/lightcone_data/en/21037.json";
+import DreamvilleAdventure from "../../data/lightcone_data/en/21036.json";
+
 const EN = {
+  //add in 2.0.0
+  "Earthly Escapade": EarthlyEscapade,
+  "Reforged Remembrance": ReforgedRemembrance,
+  "What Is Real?": WhatIsReal,
+  "Flames Afar": FlamesAfar,
+  "Destiny's Threads Forewoven": DestinysThreadsForewoven,
+  "The Day The Cosmos Fell": TheDayTheCosmosFell,
+  "It's Showtime": ItsShowtime,
+  "Indelible Promise": IndeliblePromise,
+  "Final Victor": FinalVictor,
+  "Dreamville Adventure": DreamvilleAdventure,
   //add in 1.6.0
   "Baptism of Pure Thought": BaptismofPureThought,
   "Past Self in Mirror": PastSelfinMirror,

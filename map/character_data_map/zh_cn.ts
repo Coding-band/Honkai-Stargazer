@@ -45,7 +45,16 @@ import DrRatio from "../../data/character_data/zh_cn/drratio.json";
 import RuanMei from "../../data/character_data/zh_cn/ruanmei.json";
 import Xueyi from "../../data/character_data/zh_cn/xueyi.json";
 
+//add in 2.0.0
+import BlackSwan from "../../data/character_data/zh_cn/blackswan.json";
+import Sparkle from "../../data/character_data/zh_cn/sparkle.json";
+import Misha from "../../data/character_data/zh_cn/misha.json";
+
 const ZH_CN = {
+  //add in 2.0.0
+  "Black Swan": BlackSwan,
+  "Sparkle": Sparkle,
+  Misha,
   //add in 1.6.0
   "Dr. Ratio": DrRatio,
   "Ruan Mei": RuanMei,

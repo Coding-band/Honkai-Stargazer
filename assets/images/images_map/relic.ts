@@ -2,8 +2,8 @@ const Relic: any = {
   //Add in 2.0.0
   "Pioneer Diver of Dead Waters": {
     icon1: require("../relic_icon/pioneer_diver_of_dead_waters_1.webp"),
-    icon2: require("../relic_icon/pioneer_diver_of_dead_waters.webp"),
-    icon3: require("../relic_icon/pioneer_diver_of_dead_waters.webp"),
+    icon2: require("../relic_icon/pioneer_diver_of_dead_waters_2.webp"),
+    icon3: require("../relic_icon/pioneer_diver_of_dead_waters_3.webp"),
     icon4: require("../relic_icon/pioneer_diver_of_dead_waters_4.webp"),
     pcIcon: require("../relic_pcicon/pioneer_diver_of_dead_waters.webp"),
   },

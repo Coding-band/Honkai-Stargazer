@@ -26,8 +26,13 @@ import RutilantArena from "../../data/relic_data/de/309.json";
 import BrokenKeel from "../../data/relic_data/de/310.json";
 import FirmamentFrontlineGlamoth from "../../data/relic_data/de/311.json";
 import PenaconyLandoftheDreams from "../../data/relic_data/de/312.json";
+//Add in 2.0.0
+import PioneerDiverofDeadWaters from "../../data/relic_data/de/117.json";
+import WatchmakerMasterofDreamMachinations from "../../data/relic_data/de/118.json";
 
 const DE = {
+  "Pioneer Diver of Dead Waters":PioneerDiverofDeadWaters,
+  "Watchmaker, Master of Dream Machinations":WatchmakerMasterofDreamMachinations,
   "Passerby of Wandering Cloud": PasserbyofWanderingCloud,
   "Musketeer of Wild Wheat": MusketeerofWildWheat,
   "Knight of Purity Palace": KnightofPurityPalace,

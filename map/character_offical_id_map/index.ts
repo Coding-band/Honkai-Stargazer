@@ -43,6 +43,9 @@ const officalCharId: any = {
   1302: "Argenti",
   1303: "Ruan Mei",
   1305: "Dr. Ratio",
+  1306: "Sparkle",
+  1307: "Black Swan",
+  1312: "Misha",
 };
 
 export default officalCharId;

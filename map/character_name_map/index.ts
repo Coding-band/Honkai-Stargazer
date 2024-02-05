@@ -1,4 +1,9 @@
 const CharacterName = {
+  //add in 2.0.0
+  "black-swan": "Black Swan",
+  "sparkle": "Sparkle",
+  misha: "Misha",
+
   //add in 1.6.0
   "dr-ratio": "Dr. Ratio",
   "ruan-mei": "Ruan Mei",

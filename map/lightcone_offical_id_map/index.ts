@@ -1,4 +1,16 @@
 const officalLightconeId: any = {
+
+  21035: "What Is Real?",
+  21036: "Dreamville Adventure",
+  21037: "Final Victor",
+  21038: "Flames Afar",
+  21039: "Destiny's Threads Forewoven",
+  21040: "The Day The Cosmos Fell",
+  21041: "It's Showtime",
+  21042: "Indelible Promise",
+  23021: "Earthly Escapade",
+  23022: "Reforged Remembrance",
+
   20000: "Arrows",
   20001: "Cornucopia",
   20002: "Collapsing Sky",

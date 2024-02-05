@@ -1,4 +1,6 @@
 export type RelicName =
+  | "Watchmaker, Master of Dream Machinations"
+  | "Pioneer Diver of Dead Waters"
   | "Passerby of Wandering Cloud"
   | "Musketeer of Wild Wheat"
   | "Knight of Purity Palace"
