@@ -1,4 +1,20 @@
 const Relic: any = {
+  //Add in 2.0.0
+  "Pioneer Diver of Dead Waters": {
+    icon1: require("../relic_icon/pioneer_diver_of_dead_waters_1.webp"),
+    icon2: require("../relic_icon/pioneer_diver_of_dead_waters.webp"),
+    icon3: require("../relic_icon/pioneer_diver_of_dead_waters.webp"),
+    icon4: require("../relic_icon/pioneer_diver_of_dead_waters_4.webp"),
+    pcIcon: require("../relic_pcicon/pioneer_diver_of_dead_waters.webp"),
+  },
+  "Watchmaker, Master of Dream Machinations": {
+    icon1: require("../relic_icon/watchmaker_master_of_dream_machinations_1.webp"),
+    icon2: require("../relic_icon/watchmaker_master_of_dream_machinations_2.webp"),
+    icon3: require("../relic_icon/watchmaker_master_of_dream_machinations_3.webp"),
+    icon4: require("../relic_icon/watchmaker_master_of_dream_machinations_4.webp"),
+    pcIcon: require("../relic_pcicon/watchmaker_master_of_dream_machinations.webp"),
+  },
+  // Add in 1.6.0 and before
   "Passerby of Wandering Cloud": {
     icon1: require("../relic_icon/passerby_of_wandering_cloud_1.webp"),
     icon2: require("../relic_icon/passerby_of_wandering_cloud_2.webp"),
