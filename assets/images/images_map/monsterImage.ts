@@ -1,6 +1,47 @@
 const Monsterimages: any = {
+  //Add in 2.0.0
+  "Stellaron Hunter: Sam": {
+    icon: require("../../images/monster_icon/monster_stellaron_hunter_sam_icon.webp"),
+  },
+  "Memory Zone Meme \"Something Unto Death\"": {
+    icon: require("../../images/monster_icon/monster_memory_zone_meme_something_unto_death_icon.webp"),
+  },
+  "Sombrous Sepulcher": {
+    icon: require("../../images/monster_icon/monster_sombrous_sepulcher_icon.webp"),
+  },
+  "Memory Zone Meme \"Heartbreaker\"": {
+    icon: require("../../images/monster_icon/monster_memory_zone_meme_heartbreaker_icon.webp"),
+  },
+  "Memory Zone Meme \"Allseer\"": {
+    icon: require("../../images/monster_icon/monster_memory_zone_meme_allseer_icon.webp"),
+  },
+  "Dreamjolt Troupe's Sweet Gorilla": {
+    icon: require("../../images/monster_icon/monster_dreamjolt_troupes_sweet_gorilla_icon.webp"),
+  },
+  "Dreamjolt Troupe's Beyond Overcooked": {
+    icon: require("../../images/monster_icon/monster_dreamjolt_troupes_beyond_overcooked_icon.webp"),
+  },
+  "Lordly Trashcan": {
+    icon: require("../../images/monster_icon/monster_lordly_trashcan_icon.webp"),
+  },
+  "Dreamjolt Troupe's Bubble Hound": {
+    icon: require("../../images/monster_icon/monster_dreamjolt_troupes_bubble_hound_icon.webp"),
+  },
+  "Dreamjolt Troupe's Mr. Domescreen": {
+    icon: require("../../images/monster_icon/monster_dreamjolt_troupes_mr_domescreen_icon.webp"),
+  },
+  "Dreamjolt Troupe's Birdskull": {
+    icon: require("../../images/monster_icon/monster_dreamjolt_troupes_birdskull_icon.webp"),
+  },
+  "Dreamjolt Troupe's Spring Loader": {
+    icon: require("../../images/monster_icon/monster_dreamjolt_troupes_spring_loader_icon.webp"),
+  },
+  "Engine of Creation": {
+    icon: require("../../images/monster_icon/monster_engine_of_creation_icon.webp"),
+  },
+  //Add in 1.6.0 and before
   Vagrant: {
-    icon: require("../../images/monster_icon/monster_vagrant.webp"),
+    icon: require("../../images/monster_icon/monster_vagrant_icon.webp"),
   },
   "Silvermane Cannoneer": {
     icon: require("../../images/monster_icon/monster_silvermane_cannoneer_icon.webp"),
@@ -265,9 +306,6 @@ const Monsterimages: any = {
   },
   "Senior Staff: Team Leader": {
     icon: require("../../images/monster_icon/monster_senior_staff_team_leader_icon.webp"),
-  },
-  "Engine of Creation": {
-    icon: require("../../images/monster_icon/monster_engine_of_creation_icon.webp"),
   },
 };
 
