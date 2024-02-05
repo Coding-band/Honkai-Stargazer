@@ -1,4 +1,16 @@
 const AvatarIcon: any = {
+  //Add in 2.0.0
+  1306: require("../../images/avatar_icon/1306.webp"),
+  1307: require("../../images/avatar_icon/1307.webp"),
+  1312: require("../../images/avatar_icon/1312.webp"),
+  DelicayExpress: require("../../images/avatar_icon/DelicayExpress.webp"),
+  DesolaTheSecond: require("../../images/avatar_icon/DesolaTheSecond.webp"),
+  DreamOffice: require("../../images/avatar_icon/DreamOffice.webp"),
+  DreamStore: require("../../images/avatar_icon/DreamStore.webp"),
+  Uma: require("../../images/avatar_icon/Uma.webp"),
+  Woolsey: require("../../images/avatar_icon/Woolsey.webp"),
+
+  //Add in 1.6.0 and before
   1001: require("../../images/avatar_icon/1001.webp"),
   1002: require("../../images/avatar_icon/1002.webp"),
   1003: require("../../images/avatar_icon/1003.webp"),
