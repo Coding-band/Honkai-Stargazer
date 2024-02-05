@@ -1,4 +1,45 @@
 const Lightcone: any = {
+  //add in 2.0.0
+  "Earthly Escapade": {
+    icon: require("../../images/lightcone_icon/earthly_escapade.webp"),
+    imageFull: require("../../images/lightcone_artwork/earthly_escapade_artwork.webp"),
+  },
+  "Reforged Remembrance": {
+    icon: require("../../images/lightcone_icon/reforged_remembrance.webp"),
+    imageFull: require("../../images/lightcone_artwork/reforged_remembrance_artwork.webp"),
+  },
+  "What Is Real?": {
+    icon: require("../../images/lightcone_icon/what_is_real.webp"),
+    imageFull: require("../../images/lightcone_artwork/what_is_real_artwork.webp"),
+  },
+  "Flames Afar": {
+    icon: require("../../images/lightcone_icon/flames_afar.webp"),
+    imageFull: require("../../images/lightcone_artwork/flames_afar_artwork.webp"),
+  },
+  "Destiny's Threads Forewoven": {
+    icon: require("../../images/lightcone_icon/destinys_threads_forewoven.webp"),
+    imageFull: require("../../images/lightcone_artwork/destinys_threads_forewoven_artwork.webp"),
+  },
+  "The Day The Cosmos Fell": {
+    icon: require("../../images/lightcone_icon/the_day_the_cosmos_fell.webp"),
+    imageFull: require("../../images/lightcone_artwork/the_day_the_cosmos_fell_artwork.webp"),
+  },
+  "It's Showtime": {
+    icon: require("../../images/lightcone_icon/its_showtime.webp"),
+    imageFull: require("../../images/lightcone_artwork/its_showtime_artwork.webp"),
+  },
+  "Indelible Promise": {
+    icon: require("../../images/lightcone_icon/indelible_promise.webp"),
+    imageFull: require("../../images/lightcone_artwork/indelible_promise_artwork.webp"),
+  },
+  "Final Victor": {
+    icon: require("../../images/lightcone_icon/final_victor.webp"),
+    imageFull: require("../../images/lightcone_artwork/final_victor_artwork.webp"),
+  },
+  "Dreamville Adventure": {
+    icon: require("../../images/lightcone_icon/dreamville_adventure.webp"),
+    imageFull: require("../../images/lightcone_artwork/dreamville_adventure_artwork.webp"),
+  },
   //add in 1.6.0
   "Baptism of Pure Thought": {
     icon: require("../../images/lightcone_icon/baptism_of_pure_thought.webp"),
