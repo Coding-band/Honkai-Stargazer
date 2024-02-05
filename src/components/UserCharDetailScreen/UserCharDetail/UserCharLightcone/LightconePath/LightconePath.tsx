@@ -8,7 +8,7 @@ import { LOCALES } from "../../../../../../locales";
 import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
 import { Path as PathType } from "../../../../../types/path";
 
-export default function LightconePath({
+export default React.memo(function LightconePath({
   lcId,
   lcJsonData,
 }: {
@@ -29,4 +29,4 @@ export default function LightconePath({
       </Text>
     </View>
   );
-}
+});

@@ -20,7 +20,9 @@ export default function MOCLbList() {
   const scheduleId = route.params?.scheduleId;
   const floorNumber = route.params?.floorNumber;
 
-  const mocVersion = MocVersion(textLanguage);
+  const mocVersion = MocVersion(textLanguage).filter(
+    (version) => version.startBegin < Date.now()
+  );
 
   const [selectedVersion, setSelectedVersion] = useState(
     scheduleId || mocVersion[0].id

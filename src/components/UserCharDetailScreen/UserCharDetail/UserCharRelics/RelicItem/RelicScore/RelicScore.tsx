@@ -5,7 +5,7 @@ import { ScoreColors } from "../../../../../../constant/score";
 import RelicScoreBlurMap from "./images/map/RelicScoreBlurMap";
 import { getRelicScoreRange } from "../../../../../../utils/calculator/relicScoreCalculator/getRelicScore";
 
-export default function RelicScore({ score }: { score: number }) {
+export default React.memo(function RelicScore({ score }: { score: number }) {
   const scoreRange = getRelicScoreRange(score);
 
   return (
@@ -23,4 +23,4 @@ export default function RelicScore({ score }: { score: number }) {
       />
     </View>
   );
-}
+});

@@ -1,5 +1,5 @@
-import { View, Text, KeyboardAvoidingView } from "react-native";
-import React, { useState } from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import React, { useEffect, useState } from "react";
 import Button from "../../../../../global/Button/Button";
 import { TextInput } from "react-native";
 import useHoyolabCookie from "../../../../../../redux/hoyolabCookie/useHoyolabCookie";
@@ -11,6 +11,8 @@ import { hsrServer } from "../../../../../../utils/hoyolab/servers/hsrServer";
 import { keys } from "lodash";
 import Toast from "../../../../../../utils/toast/Toast";
 import useAppLanguage from "../../../../../../language/AppLanguage/useAppLanguage";
+import { ClipboardText } from "phosphor-react-native";
+import * as Clipboard from "expo-clipboard";
 
 type Props = {
   onCookieSave?: () => void;
@@ -18,7 +20,7 @@ type Props = {
 
 export default function ManualEnterCookie(props: Props) {
   const [btnChooseServerIndex, setBtnChooseServerIndex] = useState(0);
-  const { language } = useAppLanguage()
+  const { language } = useAppLanguage();
   const { setHoyolabCookie } = useHoyolabCookie();
   const { setHsrServerChosen } = useHsrServerChosen();
 
@@ -56,23 +58,49 @@ export default function ManualEnterCookie(props: Props) {
         {/* @ts-ignore */}
         {LOCALES["zh_hk"][keys(hsrServer)[btnChooseServerIndex]]}
       </TextButton>
-      <TextInput
-        value={inputCookie}
-        onChangeText={setInputCookie}
-        textAlignVertical="top"
-        multiline={true}
-        placeholder={LOCALES[language].LoginViaPCToGetCookies}
-        placeholderTextColor="gray"
-        className="w-full h-[280px] bg-[#ffffff50] rounded-[24px] p-3 font-[HY65] leading-5"
-      />
-      <TextButton
+      <View className="w-full h-[280px]">
+        <TextInput
+          value={inputCookie}
+          onChangeText={setInputCookie}
+          textAlignVertical="top"
+          multiline={true}
+          placeholder={LOCALES[language].LoginViaPCToGetCookies}
+          placeholderTextColor="gray"
+          className="w-full h-full bg-[#ffffff50] rounded-[24px] p-3 font-[HY65] leading-5"
+        />
+        <PasteBtn onPaste={setInputCookie} />
+      </View>
+      <Button
         onPress={handleSaveCookie}
         hasShadow={false}
         width={"100%"}
         height={46}
       >
         {LOCALES[language].ConfirmBTN}
-      </TextButton>
+      </Button>
     </View>
   );
 }
+
+const PasteBtn = ({ onPaste }: { onPaste: (v: string) => void }) => {
+  const [copiedText, setCopiedText] = React.useState("");
+  const fetchCopiedText = async () => {
+    const text = await Clipboard.getStringAsync();
+    setCopiedText(text);
+  };
+
+  useEffect(() => {
+    if (copiedText) {
+      onPaste(copiedText);
+    }
+  }, [copiedText]);
+
+  return (
+    <TouchableOpacity
+      onPress={fetchCopiedText}
+      className="absolute right-3 bottom-3 w-[42px] h-[42px] rounded-[12px] bg-[#00000010] items-center justify-center"
+    >
+      <ClipboardText weight="fill" />
+    </TouchableOpacity>
+  );
+};

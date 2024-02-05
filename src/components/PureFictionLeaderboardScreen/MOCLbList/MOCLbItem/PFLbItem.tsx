@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Image } from "expo-image";
 import { useQuery } from "react-query";
 import db from "../../../../firebase/db";
@@ -15,7 +15,7 @@ import formatLocale from "../../../../utils/format/formatLocale";
 import getRankColor from "../../../../utils/getRankColor";
 import MOCPageNavigator from "../../../MemoryOfChaosLeaderboardScreen/MOCLbList/MOCLbItem/MOCPageNavigator/MOCPageNavigator";
 
-export default function PFLbItem({
+export default React.memo(function PFLbItem({
   versionNumber,
   floorNumber,
   floorName,
@@ -43,13 +43,7 @@ export default function PFLbItem({
 
   // 排行榜資訊
   const { data: floorLbData } = useQuery(
-    [
-      "pf-leaderboard",
-      floorNumber,
-      versionNumber,
-      showMoreFloorDetails,
-      currentPage,
-    ],
+    ["pf-leaderboard", floorNumber, versionNumber, showMoreFloorDetails],
     async () => {
       const result = (
         await db
@@ -76,6 +70,33 @@ export default function PFLbItem({
           .get()
       ).data()
   );
+
+  const showMoreFloorDetailsJSX = useMemo(() => {
+    // 計算起始索引，只計算一次
+    const startIndex = currentPage * countPerPage;
+
+    // 如果floorLbData不存在，則提前返回空陣列以避免後續錯誤
+    if (!floorLbData) {
+      return [];
+    }
+
+    return floorLbData
+      .slice(startIndex, startIndex + countPerPage) // 直接截取當前頁面的數據範圍
+      .map((user, index) => {
+        const rank = startIndex + index + 1; // 計算排名
+        return (
+          <RecordItem
+            key={index}
+            rank={rank}
+            {...user}
+            showRank={showRank}
+            onShowRank={setShowRank}
+            isLayer2={isLayer2}
+            onSetLayer2={setIsLayer2}
+          />
+        );
+      });
+  }, [floorLbData, currentPage, showRank, isLayer2]);
 
   return (
     <View>
@@ -115,20 +136,7 @@ export default function PFLbItem({
         </View>
         <View style={{ gap: 12 }}>
           {showMoreFloorDetails
-            ? new Array(countPerPage)
-                .fill(null)
-                .map((val, i) => floorLbData?.[currentPage * countPerPage + i])
-                ?.map((user, i) => (
-                  <RecordItem
-                    key={i}
-                    rank={currentPage * countPerPage + i + 1}
-                    {...user}
-                    showRank={showRank}
-                    onShowRank={setShowRank}
-                    isLayer2={isLayer2}
-                    onSetLayer2={setIsLayer2}
-                  />
-                ))
+            ? showMoreFloorDetailsJSX
             : new Array(5)
                 .fill(null)
                 .map((val, i) => floorLbData?.[i])
@@ -162,7 +170,7 @@ export default function PFLbItem({
       )}
     </View>
   );
-}
+});
 
 const RecordItem = React.memo((props: any) => {
   const { language } = useAppLanguage();

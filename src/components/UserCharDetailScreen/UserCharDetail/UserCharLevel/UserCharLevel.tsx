@@ -8,7 +8,7 @@ import useProfileUUID from "../../../../context/UserCharDetailData/hooks/useProf
 import officalCharId from "../../../../../map/character_offical_id_map";
 import useProfileCharId from "../../../../context/UserCharDetailData/hooks/useProfileCharId";
 
-export default function UserCharLevel() {
+export default React.memo(function UserCharLevel() {
   const { language } = useAppLanguage();
 
   const charId = useProfileCharId();
@@ -35,4 +35,4 @@ export default function UserCharLevel() {
       </Text>
     </View>
   );
-}
+});

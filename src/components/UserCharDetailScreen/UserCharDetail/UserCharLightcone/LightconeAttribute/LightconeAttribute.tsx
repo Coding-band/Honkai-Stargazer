@@ -6,7 +6,7 @@ import useProfileHsrInGameInfo from "../../../../../context/UserCharDetailData/h
 import { Image } from "expo-image";
 import AttributeImage from "../../../../../../assets/images/images_map/attributeImage";
 
-export default function LightconeAttribute({
+export default React.memo(function LightconeAttribute({
   lcId,
   lcFullData,
   lcInGameData,
@@ -57,11 +57,14 @@ export default function LightconeAttribute({
             attr.value && (
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Image source={attr.icon} className="w-6 h-6" />
-                <Text className="text-text text-[14px] font-[HY65]"> {attr.value}</Text>
+                <Text className="text-text text-[14px] font-[HY65]">
+                  {" "}
+                  {attr.value}
+                </Text>
               </View>
             )
         )}
       </View>
     )
   );
-}
+});

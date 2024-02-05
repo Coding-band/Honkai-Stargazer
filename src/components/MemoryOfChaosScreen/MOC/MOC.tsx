@@ -17,13 +17,23 @@ import Listbox from "../../global/Listbox/Listbox";
 import { LOCALES } from "../../../../locales";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { MocVersion } from "../../../constant/moc";
+import useIsAdmin from "../../../firebase/hooks/Role/useIsAdmin";
+import useIsTester from "../../../firebase/hooks/Role/useIsTester";
 
 export default function MOC() {
   const { language: textLanguage } = useTextLanguage();
 
+  const isAdmin = useIsAdmin();
+  const isTester = useIsTester();
+
   const [showDetail, setShowDetail] = useState(false);
 
-  const mocVersion = MocVersion(textLanguage);
+  const mocVersion =
+    isAdmin || isTester
+      ? MocVersion(textLanguage)
+      : MocVersion(textLanguage).filter(
+          (version) => version.startBegin < Date.now()
+        );
 
   const [selectedVersion, setSelectedVersion] = useState(mocVersion[0].id);
   // @ts-ignore

@@ -8,7 +8,7 @@ import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import useLocalState from "../../../../hooks/useLocalState";
 import useProfileCharFullData from "../../../../context/UserCharDetailData/hooks/useProfileCharFullData";
 
-export default function UserCharAttribute() {
+export default React.memo(function UserCharAttribute() {
   const { language } = useAppLanguage();
 
   const [displayMode, setDisplayMode] = useLocalState<"light" | "normal">(
@@ -408,4 +408,4 @@ export default function UserCharAttribute() {
       </TouchableOpacity>
     )
   );
-}
+});

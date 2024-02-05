@@ -19,7 +19,7 @@ import formatDesc from "../../../../utils/format/formatDesc";
 import useLocalState from "../../../../hooks/useLocalState";
 import { animated, useSpring } from "@react-spring/native";
 
-export default function UserCharLightcone() {
+export default React.memo(function UserCharLightcone() {
   const { language } = useTextLanguage();
 
   const { inGameCharData } = useProfileHsrInGameInfo();
@@ -116,6 +116,5 @@ export default function UserCharLightcone() {
       </View>
     )
   );
-}
-
+});
 const AnimatedImage = animated(Image);

@@ -1,18 +1,14 @@
 import { View, Text, TouchableOpacity } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Image } from "expo-image";
 import { useQuery } from "react-query";
 import db from "../../../../firebase/db";
-import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
-import officalCharId from "../../../../../map/character_offical_id_map";
 import useMyFirebaseUid from "../../../../firebase/hooks/FirebaseUid/useMyFirebaseUid";
 import { LinearGradient } from "expo-linear-gradient";
 import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { ParamList } from "../../../../types/navigation";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
-import formatLocale from "../../../../utils/format/formatLocale";
-import getRankColor from "../../../../utils/getRankColor";
 import MOCRecordItem from "./MOCRecordItem/MOCRecordItem";
 import MOCPageNavigator from "./MOCPageNavigator/MOCPageNavigator";
 
@@ -44,13 +40,7 @@ export default React.memo(function MOCLbItem({
 
   // 排行榜資訊
   const { data: floorLbData } = useQuery(
-    [
-      "moc-leaderboard",
-      floorNumber,
-      versionNumber,
-      showMoreFloorDetails,
-      currentPage,
-    ],
+    ["moc-leaderboard", floorNumber, versionNumber, showMoreFloorDetails],
     async () => {
       const result = (
         await db
@@ -80,6 +70,33 @@ export default React.memo(function MOCLbItem({
       ).data()
   );
 
+  const showMoreFloorDetailsJSX = useMemo(() => {
+    // 計算起始索引，只計算一次
+    const startIndex = currentPage * countPerPage;
+
+    // 如果floorLbData不存在，則提前返回空陣列以避免後續錯誤
+    if (!floorLbData) {
+      return [];
+    }
+
+    return floorLbData
+      .slice(startIndex, startIndex + countPerPage) // 直接截取當前頁面的數據範圍
+      .map((user, index) => {
+        const rank = startIndex + index + 1; // 計算排名
+        return (
+          <MOCRecordItem
+            key={index}
+            rank={rank}
+            {...user}
+            showRank={showRank}
+            onShowRank={setShowRank}
+            isLayer2={isLayer2}
+            onSetLayer2={setIsLayer2}
+          />
+        );
+      });
+  }, [floorLbData, currentPage, showRank, isLayer2]);
+
   return (
     <View>
       <LinearGradient
@@ -87,6 +104,7 @@ export default React.memo(function MOCLbItem({
         className="border border-[#DDDDDD20] rounded-[4px] py-4 px-3 w-[360px]"
         style={{ gap: 8 }}
       >
+        {/* 名稱，顯示更多 */}
         <View className="flex-row justify-between items-center">
           <TouchableOpacity
             activeOpacity={0.35}
@@ -116,22 +134,10 @@ export default React.memo(function MOCLbItem({
             </Text>
           </TouchableOpacity>
         </View>
+        {/* 排行榜主體 */}
         <View style={{ gap: 12 }}>
           {showMoreFloorDetails
-            ? new Array(countPerPage)
-                .fill(null)
-                .map((val, i) => floorLbData?.[currentPage * countPerPage + i])
-                ?.map((user, i) => (
-                  <MOCRecordItem
-                    key={i}
-                    rank={currentPage * countPerPage + i + 1}
-                    {...user}
-                    showRank={showRank}
-                    onShowRank={setShowRank}
-                    isLayer2={isLayer2}
-                    onSetLayer2={setIsLayer2}
-                  />
-                ))
+            ? showMoreFloorDetailsJSX
             : new Array(5)
                 .fill(null)
                 .map((val, i) => floorLbData?.[i])

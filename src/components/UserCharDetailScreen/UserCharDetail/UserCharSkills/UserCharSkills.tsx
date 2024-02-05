@@ -7,7 +7,7 @@ import useProfileHsrInGameInfo from "../../../../context/UserCharDetailData/hook
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
 
-export default function UserCharSkills() {
+export default React.memo(function UserCharSkills() {
   const charId = useProfileCharId();
   const { inGameCharData } = useProfileHsrInGameInfo();
   const { language } = useAppLanguage();
@@ -78,4 +78,4 @@ export default function UserCharSkills() {
       </View>
     )
   );
-}
+});

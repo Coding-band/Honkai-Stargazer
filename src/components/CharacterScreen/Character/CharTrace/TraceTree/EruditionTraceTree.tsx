@@ -17,9 +17,7 @@ import { Audio } from "expo-av";
 
 const TraceLine = require("./images/path_trace_line/erudition_trace_line.svg");
 
-export default function EruditionTraceTree() {
-  const loaded = useDelayLoad(100);
-
+export default React.memo(function EruditionTraceTree() {
   const { charFullData, charId } = useCharData();
 
   const skillTrees: any = charFullData.skillTreePoints
@@ -77,246 +75,244 @@ export default function EruditionTraceTree() {
           source={Path["Erudition"].icon2}
         />
         {/* 選項 */}
-        {loaded && (
+        <>
           <>
-            <>
-              <Edge
-                left={85}
-                top={24}
-                icon={
-                  // @ts-ignore
-                  CharacterSkillTree[skillTreeOuter3Edge1.embedBuff.iconPath]
-                }
-                selected={selectData === skillTreeOuter3Edge1}
-                onPress={() => {
-                  setSelectType("edge");
-                  setSelectData(skillTreeOuter3Edge1);
-                }}
-              />
-              <Edge
-                left={214}
-                top={24}
-                icon={
-                  // @ts-ignore
-                  CharacterSkillTree[skillTreeOuter3Edge2.embedBuff.iconPath]
-                }
-                selected={selectData === skillTreeOuter3Edge2}
-                onPress={() => {
-                  setSelectType("edge");
-                  setSelectData(skillTreeOuter3Edge2);
-                }}
-              />
-              <Edge
-                left={0}
-                top={153}
-                icon={
-                  // @ts-ignore
-                  CharacterSkillTree[skillTreeOuter1Edge1.embedBuff.iconPath]
-                }
-                selected={selectData === skillTreeOuter1Edge1}
-                onPress={() => {
-                  setSelectType("edge");
-                  setSelectData(skillTreeOuter1Edge1);
-                }}
-              />
-              <Edge
-                left={10}
-                top={215}
-                icon={
-                  // @ts-ignore
-                  CharacterSkillTree[skillTreeOuter1Edge2.embedBuff.iconPath]
-                }
-                selected={selectData === skillTreeOuter1Edge2}
-                onPress={() => {
-                  setSelectType("edge");
-                  setSelectData(skillTreeOuter1Edge2);
-                }}
-              />
+            <Edge
+              left={85}
+              top={24}
+              icon={
+                // @ts-ignore
+                CharacterSkillTree[skillTreeOuter3Edge1.embedBuff.iconPath]
+              }
+              selected={selectData === skillTreeOuter3Edge1}
+              onPress={() => {
+                setSelectType("edge");
+                setSelectData(skillTreeOuter3Edge1);
+              }}
+            />
+            <Edge
+              left={214}
+              top={24}
+              icon={
+                // @ts-ignore
+                CharacterSkillTree[skillTreeOuter3Edge2.embedBuff.iconPath]
+              }
+              selected={selectData === skillTreeOuter3Edge2}
+              onPress={() => {
+                setSelectType("edge");
+                setSelectData(skillTreeOuter3Edge2);
+              }}
+            />
+            <Edge
+              left={0}
+              top={153}
+              icon={
+                // @ts-ignore
+                CharacterSkillTree[skillTreeOuter1Edge1.embedBuff.iconPath]
+              }
+              selected={selectData === skillTreeOuter1Edge1}
+              onPress={() => {
+                setSelectType("edge");
+                setSelectData(skillTreeOuter1Edge1);
+              }}
+            />
+            <Edge
+              left={10}
+              top={215}
+              icon={
+                // @ts-ignore
+                CharacterSkillTree[skillTreeOuter1Edge2.embedBuff.iconPath]
+              }
+              selected={selectData === skillTreeOuter1Edge2}
+              onPress={() => {
+                setSelectType("edge");
+                setSelectData(skillTreeOuter1Edge2);
+              }}
+            />
 
-              <Edge
-                left={10}
-                top={95}
-                icon={
-                  // @ts-ignore
-                  CharacterSkillTree[skillTreeOuter1Edge3.embedBuff.iconPath]
-                }
-                selected={selectData === skillTreeOuter1Edge3}
-                onPress={() => {
-                  setSelectType("edge");
-                  setSelectData(skillTreeOuter1Edge3);
-                }}
-              />
+            <Edge
+              left={10}
+              top={95}
+              icon={
+                // @ts-ignore
+                CharacterSkillTree[skillTreeOuter1Edge3.embedBuff.iconPath]
+              }
+              selected={selectData === skillTreeOuter1Edge3}
+              onPress={() => {
+                setSelectType("edge");
+                setSelectData(skillTreeOuter1Edge3);
+              }}
+            />
 
-              <Edge
-                left={285}
-                top={95}
-                icon={
+            <Edge
+              left={285}
+              top={95}
+              icon={
+                // @ts-ignore
+                CharacterSkillTree[skillTreeOuter2Edge1.embedBuff.iconPath]
+              }
+              selected={selectData === skillTreeOuter2Edge1}
+              onPress={() => {
+                setSelectType("edge");
+                setSelectData(skillTreeOuter2Edge1);
+              }}
+            />
+            <Edge
+              left={285}
+              top={215}
+              icon={
+                // @ts-ignore
+                CharacterSkillTree[skillTreeOuter2Edge2.embedBuff.iconPath]
+              }
+              selected={selectData === skillTreeOuter2Edge2}
+              onPress={() => {
+                setSelectType("edge");
+                setSelectData(skillTreeOuter2Edge2);
+              }}
+            />
+            <Edge
+              left={295}
+              top={153}
+              icon={
+                // @ts-ignore
+                CharacterSkillTree[skillTreeOuter2Edge3.embedBuff.iconPath]
+              }
+              selected={selectData === skillTreeOuter2Edge3}
+              onPress={() => {
+                setSelectType("edge");
+                setSelectData(skillTreeOuter2Edge3);
+              }}
+            />
+            <Edge
+              left={80}
+              top={345}
+              icon={
+                // @ts-ignore
+                CharacterSkillTree[skillTreeOtherEdge1.embedBuff.iconPath]
+              }
+              selected={selectData === skillTreeOtherEdge1}
+              onPress={() => {
+                setSelectType("edge");
+                setSelectData(skillTreeOtherEdge1);
+              }}
+            />
+            <Edge
+              left={215}
+              top={345}
+              icon={
+                // @ts-ignore
+                CharacterSkillTree[skillTreeOtherEdge2.embedBuff.iconPath]
+              }
+              selected={selectData === skillTreeOtherEdge2}
+              onPress={() => {
+                setSelectType("edge");
+                setSelectData(skillTreeOtherEdge2);
+              }}
+            />
+            <Outer
+              left={51}
+              top={134}
+              icon={
+                CharacterSkillTree[
                   // @ts-ignore
-                  CharacterSkillTree[skillTreeOuter2Edge1.embedBuff.iconPath]
-                }
-                selected={selectData === skillTreeOuter2Edge1}
-                onPress={() => {
-                  setSelectType("edge");
-                  setSelectData(skillTreeOuter2Edge1);
-                }}
-              />
-              <Edge
-                left={285}
-                top={215}
-                icon={
+                  skillTreeOuter1.embedBonusSkill?.iconPath
+                ]
+              }
+              selected={selectData === skillTreeOuter1}
+              onPress={() => {
+                setSelectType("outer");
+                setSelectData(skillTreeOuter1);
+              }}
+            />
+            <Outer
+              left={213}
+              top={134}
+              icon={
+                CharacterSkillTree[
                   // @ts-ignore
-                  CharacterSkillTree[skillTreeOuter2Edge2.embedBuff.iconPath]
-                }
-                selected={selectData === skillTreeOuter2Edge2}
-                onPress={() => {
-                  setSelectType("edge");
-                  setSelectData(skillTreeOuter2Edge2);
-                }}
-              />
-              <Edge
-                left={295}
-                top={153}
-                icon={
+                  skillTreeOuter2.embedBonusSkill?.iconPath
+                ]
+              }
+              selected={selectData === skillTreeOuter2}
+              onPress={() => {
+                setSelectType("outer");
+                setSelectData(skillTreeOuter2);
+              }}
+            />
+            <Outer
+              left={134}
+              top={0}
+              icon={
+                CharacterSkillTree[
                   // @ts-ignore
-                  CharacterSkillTree[skillTreeOuter2Edge3.embedBuff.iconPath]
-                }
-                selected={selectData === skillTreeOuter2Edge3}
-                onPress={() => {
-                  setSelectType("edge");
-                  setSelectData(skillTreeOuter2Edge3);
-                }}
-              />
-              <Edge
-                left={80}
-                top={345}
-                icon={
-                  // @ts-ignore
-                  CharacterSkillTree[skillTreeOtherEdge1.embedBuff.iconPath]
-                }
-                selected={selectData === skillTreeOtherEdge1}
-                onPress={() => {
-                  setSelectType("edge");
-                  setSelectData(skillTreeOtherEdge1);
-                }}
-              />
-              <Edge
-                left={215}
-                top={345}
-                icon={
-                  // @ts-ignore
-                  CharacterSkillTree[skillTreeOtherEdge2.embedBuff.iconPath]
-                }
-                selected={selectData === skillTreeOtherEdge2}
-                onPress={() => {
-                  setSelectType("edge");
-                  setSelectData(skillTreeOtherEdge2);
-                }}
-              />
-              <Outer
-                left={51}
-                top={134}
-                icon={
-                  CharacterSkillTree[
-                    // @ts-ignore
-                    skillTreeOuter1.embedBonusSkill?.iconPath
-                  ]
-                }
-                selected={selectData === skillTreeOuter1}
-                onPress={() => {
-                  setSelectType("outer");
-                  setSelectData(skillTreeOuter1);
-                }}
-              />
-              <Outer
-                left={213}
-                top={134}
-                icon={
-                  CharacterSkillTree[
-                    // @ts-ignore
-                    skillTreeOuter2.embedBonusSkill?.iconPath
-                  ]
-                }
-                selected={selectData === skillTreeOuter2}
-                onPress={() => {
-                  setSelectType("outer");
-                  setSelectData(skillTreeOuter2);
-                }}
-              />
-              <Outer
-                left={134}
-                top={0}
-                icon={
-                  CharacterSkillTree[
-                    // @ts-ignore
-                    skillTreeOuter3.embedBonusSkill?.iconPath
-                  ]
-                }
-                selected={selectData === skillTreeOuter3}
-                onPress={() => {
-                  setSelectType("outer");
-                  setSelectData(skillTreeOuter3);
-                }}
-              />
-            </>
-            <>
-              <Inner
-                left={52}
-                top={205}
-                icon={CharacterSkillMain[charId].skill1}
-                selected={selectData === skillTreeInner1}
-                onPress={() => {
-                  setSelectType("inner");
-                  setSelectData(skillTreeInner1);
-                }}
-              />
-              <Inner
-                left={133}
-                top={125}
-                icon={CharacterSkillMain[charId].skill4}
-                selected={selectData === skillTreeInner4}
-                onPress={() => {
-                  setSelectType("inner");
-                  setSelectData(skillTreeInner4);
-                }}
-              />
-              <Inner
-                left={133}
-                top={205}
-                icon={CharacterSkillMain[charId].skill3}
-                selected={selectData === skillTreeInner3}
-                onPress={() => {
-                  setSelectType("inner");
-                  setSelectData(skillTreeInner3);
-                }}
-              />
-
-              <Inner
-                left={133}
-                top={344}
-                icon={CharacterSkillMain[charId].skill6}
-                selected={selectData === skillTreeInner6}
-                onPress={async () => {
-                  setSelectType("inner");
-                  setSelectData(skillTreeInner6);
-                  // const { sound } = await Audio.Sound.createAsync(
-                  //   require("../../../../../../assets/audio/herta_voice/herta_talent_1.mp3")
-                  // );
-                  // await sound.playAsync();
-                }}
-              />
-              <Inner
-                left={214}
-                top={205}
-                icon={CharacterSkillMain[charId].skill2}
-                selected={selectData === skillTreeInner2}
-                onPress={() => {
-                  setSelectType("inner");
-                  setSelectData(skillTreeInner2);
-                }}
-              />
-            </>
+                  skillTreeOuter3.embedBonusSkill?.iconPath
+                ]
+              }
+              selected={selectData === skillTreeOuter3}
+              onPress={() => {
+                setSelectType("outer");
+                setSelectData(skillTreeOuter3);
+              }}
+            />
           </>
-        )}
+          <>
+            <Inner
+              left={52}
+              top={205}
+              icon={CharacterSkillMain[charId].skill1}
+              selected={selectData === skillTreeInner1}
+              onPress={() => {
+                setSelectType("inner");
+                setSelectData(skillTreeInner1);
+              }}
+            />
+            <Inner
+              left={133}
+              top={125}
+              icon={CharacterSkillMain[charId].skill4}
+              selected={selectData === skillTreeInner4}
+              onPress={() => {
+                setSelectType("inner");
+                setSelectData(skillTreeInner4);
+              }}
+            />
+            <Inner
+              left={133}
+              top={205}
+              icon={CharacterSkillMain[charId].skill3}
+              selected={selectData === skillTreeInner3}
+              onPress={() => {
+                setSelectType("inner");
+                setSelectData(skillTreeInner3);
+              }}
+            />
+
+            <Inner
+              left={133}
+              top={344}
+              icon={CharacterSkillMain[charId].skill6}
+              selected={selectData === skillTreeInner6}
+              onPress={async () => {
+                setSelectType("inner");
+                setSelectData(skillTreeInner6);
+                // const { sound } = await Audio.Sound.createAsync(
+                //   require("../../../../../../assets/audio/herta_voice/herta_talent_1.mp3")
+                // );
+                // await sound.playAsync();
+              }}
+            />
+            <Inner
+              left={214}
+              top={205}
+              icon={CharacterSkillMain[charId].skill2}
+              selected={selectData === skillTreeInner2}
+              onPress={() => {
+                setSelectType("inner");
+                setSelectData(skillTreeInner2);
+              }}
+            />
+          </>
+        </>
       </Pressable>
       <TracePopUp
         type={selectType}
@@ -328,4 +324,4 @@ export default function EruditionTraceTree() {
       />
     </>
   );
-}
+});

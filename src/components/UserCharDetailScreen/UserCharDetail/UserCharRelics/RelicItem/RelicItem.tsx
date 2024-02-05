@@ -12,7 +12,7 @@ import { LOCALES } from "../../../../../../locales";
 import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
 import { upperCase } from "lodash";
 
-export default function RelicItem({
+export default React.memo(function RelicItem({
   userRelicData,
   score,
   selected,
@@ -175,6 +175,5 @@ export default function RelicItem({
       )}
     </AnimatedView>
   );
-}
-
+});
 const AnimatedView = animated(View);

@@ -4,7 +4,7 @@ import useProfileHsrInGameInfo from "../../../../context/UserCharDetailData/hook
 import RelicItem from "./RelicItem/RelicItem";
 import getRelicScore from "../../../../utils/calculator/relicScoreCalculator/getRelicScore";
 
-export default function UserCharRelics() {
+export default React.memo(function UserCharRelics() {
   const { inGameCharData } = useProfileHsrInGameInfo();
   const userRelicsData: any[] = inGameCharData?.relics;
   const { eachScore } = getRelicScore(inGameCharData?.id, userRelicsData);
@@ -55,4 +55,4 @@ export default function UserCharRelics() {
       </View>
     )
   );
-}
+});

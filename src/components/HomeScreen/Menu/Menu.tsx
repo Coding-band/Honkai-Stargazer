@@ -243,15 +243,15 @@ export default function Menu() {
       },
     },
     // 兌換碼
-    {
-      type: "normal",
-      name: SCREENS.CodePage.getShortName(language),
-      icon: SCREENS.CodePage.icon,
-      onPress: () => {
-        // @ts-ignore
-        navigation.navigate(SCREENS.CodePage.id);
-      },
-    },
+    // {
+    //   type: "normal",
+    //   name: SCREENS.CodePage.getShortName(language),
+    //   icon: SCREENS.CodePage.icon,
+    //   onPress: () => {
+    //     // @ts-ignore
+    //     navigation.navigate(SCREENS.CodePage.id);
+    //   },
+    // },
     // 地圖
     {
       type: "normal",

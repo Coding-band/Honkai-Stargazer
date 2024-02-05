@@ -7,6 +7,7 @@ import { Path } from "../../../types/path";
 import { CombatType } from "../../../types/combatType";
 import CombatTypeCardIcon from "../CombatTypeCardIcon/CombatTypeCardIcon";
 import PathCardIcon from "../PathCardIcon/PathCardIcon";
+// import FastImage from "react-native-fast-image";
 
 type Props = {
   id: string;
@@ -27,7 +28,7 @@ type Props = {
   onPress?: (charId: string, charName: string) => void;
 };
 
-export default function CharCard(props: Props) {
+export default React.memo(function CharCard(props: Props) {
   //   const animation = useSpring({ from: { opacity: 0.25 }, to: { opacity: 1 } });
 
   return (
@@ -56,7 +57,7 @@ export default function CharCard(props: Props) {
         <View
           //   style={animation}
           className={cn("w-20")}
-        >
+        > 
           {/* 角色頭像 */}
           <Image
             cachePolicy="none"
@@ -120,4 +121,4 @@ export default function CharCard(props: Props) {
       {/* </Shadow> */}
     </TouchableOpacity>
   );
-}
+});

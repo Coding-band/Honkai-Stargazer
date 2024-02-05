@@ -17,15 +17,27 @@ import PopUpCard from "../../global/PopUpCard/PopUpCard";
 import { LOCALES } from "../../../../locales";
 import { HtmlText } from "@e-mine/react-native-html-text";
 import PFLevelInfo from "./MocLevelInfo/PFLevelInfo";
+import useIsAdmin from "../../../firebase/hooks/Role/useIsAdmin";
+import useIsTester from "../../../firebase/hooks/Role/useIsTester";
 
 export default function PureFiction() {
   const { language } = useAppLanguage();
   const { language: textLanguage } = useTextLanguage();
 
+    const isAdmin = useIsAdmin();
+    const isTester = useIsTester();
+
+
   const [showDetail, setShowDetail] = useState(false);
 
-  const pfVersion = PFVersion(textLanguage);
-
+  const pfVersion =
+    isAdmin || isTester
+      ? PFVersion(textLanguage)
+      : PFVersion(textLanguage).filter(
+          (version) => version.startBegin < Date.now()
+        );
+ 
+   
   const [selectedVersion, setSelectedVersion] = useState(pfVersion[0].id);
   // @ts-ignore
   const pfData = PFDataMap[selectedVersion];

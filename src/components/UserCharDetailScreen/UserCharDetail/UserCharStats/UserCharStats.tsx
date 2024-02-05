@@ -10,7 +10,7 @@ import useProfileHsrInGameInfo from "../../../../context/UserCharDetailData/hook
 import getCharScore from "../../../../utils/calculator/charScoreCalculator/getCharScore";
 import formatLocale from "../../../../utils/format/formatLocale";
 
-export default function UserCharStats() {
+export default React.memo(function UserCharStats() {
   const { language: appLanguage } = useAppLanguage();
 
   const profileUUID = useProfileUUID();
@@ -57,4 +57,4 @@ export default function UserCharStats() {
       </View>
     </>
   );
-}
+});

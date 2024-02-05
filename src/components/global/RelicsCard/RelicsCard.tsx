@@ -19,7 +19,7 @@ type Props = {
   onPress?: (e: GestureResponderEvent) => void;
 };
 
-export default function RelicsCard(props: Props) {
+export default React.memo(function RelicsCard(props: Props) {
   //   const animation = useSpring({ from: { opacity: 0.25 }, to: { opacity: 1 } });
 
   return (
@@ -73,4 +73,4 @@ export default function RelicsCard(props: Props) {
       </View>
     </TouchableOpacity>
   );
-}
+});

@@ -12,7 +12,7 @@ type Props = {
   type: "percent" | "value";
 };
 
-export default function UserCharScoreBar(props: Props) {
+export default React.memo(function UserCharScoreBar(props: Props) {
   const { language } = useAppLanguage();
 
   return (
@@ -64,4 +64,4 @@ export default function UserCharScoreBar(props: Props) {
       </View>
     </View>
   );
-}
+});

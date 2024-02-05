@@ -4,6 +4,7 @@ import {
   Dimensions,
   Keyboard,
   TouchableOpacity,
+  KeyboardAvoidingView,
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import LoginPolicy from "./LoginPolicy/LoginPolicy";
@@ -29,8 +30,8 @@ export default function AccountBinding() {
       statusBarTranslucent
       deviceHeight={Dimensions.get("screen").height}
     >
-      <View
-        onTouchEnd={Keyboard.dismiss}
+      <Pressable
+        onPress={Keyboard.dismiss}
         style={{
           flex: 1,
           justifyContent: "center",
@@ -80,7 +81,7 @@ export default function AccountBinding() {
             </View>
           }
         />
-      </View>
+      </Pressable>
     </ReactNativeModal>
   );
 }

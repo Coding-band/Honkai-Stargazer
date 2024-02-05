@@ -15,7 +15,7 @@ import UserCharScoreItem from "./UserCharScoreItem/UserCharScoreItem";
 import ScoreRangeFont from "../../../global/ScoreRangeFont/ScoreRangeFont";
 import UserCharScoreBar from "./UserCharScoreBar/UserCharScoreBar";
 
-export default function UserCharScore() {
+export default React.memo(function UserCharScore() {
   const { language: appLanguage } = useAppLanguage();
 
   const { inGameCharData } = useProfileHsrInGameInfo();
@@ -94,8 +94,7 @@ export default function UserCharScore() {
       </View>
     )
   );
-}
-
+});
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",

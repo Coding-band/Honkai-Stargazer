@@ -10,7 +10,7 @@ import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { Path as PathType } from "../../../../types/path";
 import { CombatType as CombatTypeType } from "../../../../types/combatType";
 
-export default function UserCharCombatTypeAndPath() {
+export default React.memo(function UserCharCombatTypeAndPath() {
   const { language } = useAppLanguage();
 
   const charJsonData = useProfileCharJsonData();
@@ -40,4 +40,4 @@ export default function UserCharCombatTypeAndPath() {
       </View>
     </View>
   );
-}
+});

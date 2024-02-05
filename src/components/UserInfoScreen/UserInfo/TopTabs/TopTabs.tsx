@@ -2,12 +2,15 @@ import { View, Text, TouchableOpacity } from "react-native";
 import React, { useEffect, useState } from "react";
 import { animated, useSpring } from "@react-spring/native";
 import BlurView from "../../../global/BlurView/BlurView";
+import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 
 export default function TopTabs(props: {
   tabs: { name: string; value: string }[];
   active: string;
   onChange?: (active: string) => void;
 }) {
+  const { language } = useAppLanguage();
+
   const [active, setActive] = useState(props.active);
   useEffect(() => {
     props.onChange && props.onChange(active);
@@ -53,7 +56,11 @@ export default function TopTabs(props: {
               setHeight(height);
             }
 
-            setWidths((widths) => [...widths, width].sort((b, a) => a - b));
+            setWidths((widths) =>
+              [...widths, width].sort((b, a) =>
+                language === "uk" ? b - a : a - b
+              )
+            );
             setOffsets((offsets) => [...offsets, x].sort());
           }}
         >

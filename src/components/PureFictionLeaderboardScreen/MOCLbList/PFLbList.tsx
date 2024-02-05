@@ -20,7 +20,9 @@ export default function PFLbList() {
   const scheduleId = route.params?.scheduleId;
   const floorNumber = route.params?.floorNumber;
 
-  const pfVersion = PFVersion(textLanguage);
+  const pfVersion = PFVersion(textLanguage).filter(
+    (version) => version.startBegin < Date.now()
+  );;
 
   const [selectedVersion, setSelectedVersion] = useState(
     scheduleId || pfVersion[0].id

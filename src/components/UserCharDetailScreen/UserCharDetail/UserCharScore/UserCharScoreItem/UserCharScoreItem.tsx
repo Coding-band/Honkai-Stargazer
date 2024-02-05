@@ -3,7 +3,7 @@ import React from "react";
 import { Platform } from "react-native";
 import { cn } from "../../../../../utils/css/cn";
 
-export default function UserCharScoreItem({
+export default React.memo(function UserCharScoreItem({
   title,
   value,
 }: {
@@ -27,7 +27,9 @@ export default function UserCharScoreItem({
       ) : (
         value
       )}
-      <Text className="text-text font-[HY65] text-[12px] text-center">{title}</Text>
+      <Text className="text-text font-[HY65] text-[12px] text-center">
+        {title}
+      </Text>
     </View>
   );
-}
+});

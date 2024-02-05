@@ -138,7 +138,7 @@ export default function UserCharDetail() {
   );
 }
 
-const ShareBtn = () => (
+const ShareBtn = React.memo(() => (
   <TouchableOpacity
     className="translate-x-[-2px]"
     onPress={() => {
@@ -150,4 +150,4 @@ const ShareBtn = () => (
       source={require("../../../../assets/icons/Share.svg")}
     />
   </TouchableOpacity>
-);
+))

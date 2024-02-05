@@ -4,7 +4,7 @@ import { LightconeName } from "../../../../../types/lightcone";
 import { LOCALES } from "../../../../../../locales";
 import useAppLanguage from "../../../../../language/AppLanguage/useAppLanguage";
 
-export default function LightconeLevel({
+export default React.memo(function LightconeLevel({
   lcId,
   lcFullData,
   lcInGameData,
@@ -20,8 +20,9 @@ export default function LightconeLevel({
       style={{ alignItems: "center" }}
     >
       <Text className="text-[12px] text-[#FFFFFF] font-[HY65] leading-4">
-        Lv {lcInGameData.level} · {LOCALES[language].Superimpose.replace("${1}",lcInGameData.rank)}
+        Lv {lcInGameData.level} ·{" "}
+        {LOCALES[language].Superimpose.replace("${1}", lcInGameData.rank)}
       </Text>
     </View>
   );
-}
+});

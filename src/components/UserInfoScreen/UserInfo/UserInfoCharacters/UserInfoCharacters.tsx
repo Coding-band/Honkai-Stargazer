@@ -30,7 +30,7 @@ type Props = {
   uuid: string;
 };
 
-export default function UserInfoCharacters(props: Props) {
+export default React.memo(function UserInfoCharacters(props: Props) {
   const { language: textLanguage } = useTextLanguage();
   const { language: appLanguage } = useAppLanguage();
   const navigation = useNavigation();
@@ -332,7 +332,7 @@ export default function UserInfoCharacters(props: Props) {
       </ReactNativeModal>
     </>
   );
-}
+});
 
 const MoreBtn = ({ onPress }: { onPress: () => void }) => {
   return (

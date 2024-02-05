@@ -7,7 +7,6 @@ import formatLocale from "../../../../../utils/format/formatLocale";
 import { Image } from "expo-image";
 import CharacterImage from "../../../../../../assets/images/images_map/chacracterImage";
 import officalCharId from "../../../../../../map/character_offical_id_map";
-import useDelayLoad from "../../../../../hooks/useDelayLoad";
 
 export default React.memo(function MOCRecordItem(props: {
   rank: any;
@@ -72,34 +71,7 @@ export default React.memo(function MOCRecordItem(props: {
           {props?.layer_1?.characters?.length !== 0 ? (
             props[props.isLayer2 ? "layer_2" : "layer_1"]?.characters.map(
               (char: any) => (
-                <View
-                  key={char.id}
-                  style={{ gap: 2, alignItems: "center" }}
-                  className="w-8"
-                >
-                  <Image
-                    cachePolicy="none"
-                    transition={200}
-                    className="w-6 h-6 rounded-full"
-                    // @ts-ignore
-                    source={CharacterImage[officalCharId[char.id]].icon}
-                  />
-                  <Text className="text-text font-[HY65] text-[10px]">
-                    {props.showRank ? (
-                      <Text
-                        style={{
-                          color: char.rank === 6 ? "#DD8200" : "#FFF",
-                        }}
-                      >
-                        {formatLocale(LOCALES[language].CharSoulShort, [
-                          char.rank,
-                        ])}
-                      </Text>
-                    ) : (
-                      `Lv ${char.level}`
-                    )}
-                  </Text>
-                </View>
+                <LbTeamItem char={char} showRank={props.showRank} />
               )
             )
           ) : (
@@ -112,3 +84,38 @@ export default React.memo(function MOCRecordItem(props: {
     </View>
   );
 });
+
+const LbTeamItem = React.memo(
+  ({ char, showRank }: { char: any; showRank: boolean }) => {
+    const { language } = useAppLanguage();
+
+    return (
+      <View
+        key={char.id}
+        style={{ gap: 2, alignItems: "center" }}
+        className="w-8"
+      >
+        <Image
+          cachePolicy="none"
+          transition={200}
+          className="w-6 h-6 rounded-full"
+          // @ts-ignore
+          source={CharacterImage[officalCharId[char.id]].icon}
+        />
+        <Text className="text-text font-[HY65] text-[10px]">
+          {showRank ? (
+            <Text
+              style={{
+                color: char.rank === 6 ? "#DD8200" : "#FFF",
+              }}
+            >
+              {formatLocale(LOCALES[language].CharSoulShort, [char.rank])}
+            </Text>
+          ) : (
+            `Lv ${char.level}`
+          )}
+        </Text>
+      </View>
+    );
+  }
+);

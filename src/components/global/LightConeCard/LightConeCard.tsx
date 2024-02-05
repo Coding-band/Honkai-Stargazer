@@ -21,7 +21,7 @@ type Props = {
   onPress?: (e: GestureResponderEvent) => void;
 };
 
-export default function LightConeCard(props: Props) {
+export default React.memo(function LightConeCard(props: Props) {
   return (
     <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
       {/* <Shadow
@@ -76,4 +76,4 @@ export default function LightConeCard(props: Props) {
       </View>
     </TouchableOpacity>
   );
-}
+});
