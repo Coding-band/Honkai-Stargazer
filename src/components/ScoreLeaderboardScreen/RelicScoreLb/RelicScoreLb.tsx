@@ -5,25 +5,26 @@ import {
   Dimensions,
   TouchableOpacity,
   Platform,
-} from "react-native";
-import React, { useEffect, useState } from "react";
-import Options from "../../global/Options/Options";
-import { map } from "lodash";
-import { getCharFullData } from "../../../utils/data/getDataFromMap";
-import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
-import officalCharId from "../../../../map/character_offical_id_map";
-import getRankColor from "../../../utils/getRankColor";
-import { useQuery } from "react-query";
-import db from "../../../firebase/db";
-import useUser from "../../../firebase/hooks/User/useUser";
-import { ScoreColors } from "../../../constant/score";
-import { useNavigation } from "@react-navigation/native";
-import { SCREENS } from "../../../constant/screens";
-import { getCharRange } from "../../../utils/calculator/charScoreCalculator/getCharScore";
-import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
-import { Image } from "expo-image";
-import Relic from "../../../../assets/images/images_map/relic";
-import officalRelicId from "../../../../map/relic_offical_id_map";
+} from 'react-native';
+import React, { useEffect, useState } from 'react';
+import Options from '../../global/Options/Options';
+import { map } from 'lodash';
+import { getCharFullData } from '../../../utils/data/getDataFromMap';
+import useTextLanguage from '../../../language/TextLanguage/useTextLanguage';
+import officalCharId from '../../../../map/character_offical_id_map';
+import getRankColor from '../../../utils/getRankColor';
+import { useQuery } from 'react-query';
+import db from '../../../firebase/db';
+import useUser from '../../../firebase/hooks/User/useUser';
+import { ScoreColors } from '../../../constant/score';
+import { useNavigation } from '@react-navigation/native';
+import { SCREENS } from '../../../constant/screens';
+import { getCharRange } from '../../../utils/calculator/charScoreCalculator/getCharScore';
+import useAppLanguage from '../../../language/AppLanguage/useAppLanguage';
+import { Image } from 'expo-image';
+import Relic from '../../../../assets/images/images_map/relic';
+import officalRelicId from '../../../../map/relic_offical_id_map';
+import { FlatList } from 'react-native';
 
 export default function RelicScoreLb(props: {
   selectedCharOption: any;
@@ -53,12 +54,12 @@ export default function RelicScoreLb(props: {
 
   // 評分數據
   const { data: charScores } = useQuery(
-    ["relic-score-leaderboard", selectedCharOption.id],
+    ['relic-score-leaderboard', selectedCharOption.id],
     async () =>
       (
         await db
           .UserCharacterScores(selectedCharOption.id)
-          .orderBy("relic_score", "desc")
+          .orderBy('relic_score', 'desc')
           .limit(99)
           .get()
       ).docs?.map((doc) => ({ id: doc.id, ...doc.data() })),
@@ -75,15 +76,14 @@ export default function RelicScoreLb(props: {
             setSelectedCharOption(c);
           }}
         />
-        <ScrollView
-          className="px-2"
-          contentContainerStyle={{ gap: 12, paddingBottom: 60 }}
-          style={{ height: Dimensions.get("screen").height - 220 }}
-        >
-          {charScores?.map((item: any, i: number) => (
+        <FlatList
+          data={charScores} // 数据源
+          keyExtractor={(item, index) => `relic-score-${item.id || index}`} // 提供唯一的key
+          renderItem={(
+            { item, index } // 渲染列表项
+          ) => (
             <CharRelicScoreLbItem
-              key={i}
-              rank={i + 1}
+              rank={index + 1}
               userId={item.id}
               charId={selectedCharOption.id}
               relicTotalScore={item.relic_score}
@@ -100,104 +100,112 @@ export default function RelicScoreLb(props: {
               relicBallSetId={item.relic_ball_set_id}
               relicLinkSetId={item.relic_link_set_id}
             />
-          ))}
-        </ScrollView>
+          )}
+          contentContainerStyle={{ paddingBottom: 60, paddingHorizontal: 2 }} // 设置内容容器的样式
+          style={{ height: Dimensions.get('screen').height - 220 }} // 设置FlatList的样式
+        />
       </View>
     </>
   );
 }
 
-const CharRelicScoreLbItem = (props: {
-  rank: number;
-  userId: string;
-  relicTotalScore: number;
-  relicHeadScore: number;
-  relicHandsScore: number;
-  relicBodyScore: number;
-  relicShoesScore: number;
-  relicBallScore: number;
-  relicLinkScore: number;
-  relicHeadSetId: number;
-  relicHandsSetId: number;
-  relicBodySetId: number;
-  relicShoesSetId: number;
-  relicBallSetId: number;
-  relicLinkSetId: number;
-  charId: string;
-}) => {
-  const navigation = useNavigation();
-  const { language: appLanguage } = useAppLanguage();
+const CharRelicScoreLbItem = React.memo(
+  (props: {
+    rank: number;
+    userId: string;
+    relicTotalScore: number;
+    relicHeadScore: number;
+    relicHandsScore: number;
+    relicBodyScore: number;
+    relicShoesScore: number;
+    relicBallScore: number;
+    relicLinkScore: number;
+    relicHeadSetId: number;
+    relicHandsSetId: number;
+    relicBodySetId: number;
+    relicShoesSetId: number;
+    relicBallSetId: number;
+    relicLinkSetId: number;
+    charId: string;
+  }) => {
+    const navigation = useNavigation();
+    const { language: appLanguage } = useAppLanguage();
 
-  const { data: user } = useUser(props.userId);
+    const { data: user } = useUser(props.userId);
 
-  const handleNavigateToUserCharaPage = () => {
-    // @ts-ignore
-    navigation.push(SCREENS.UserCharDetailPage.id, {
-      uuid: user?.uuid,
-      charId: officalCharId?.[props.charId],
-    });
-  };
+    const handleNavigateToUserCharaPage = () => {
+      // @ts-ignore
+      navigation.push(SCREENS.UserCharDetailPage.id, {
+        uuid: user?.uuid,
+        charId: officalCharId?.[props.charId],
+      });
+    };
 
-  return (
-    !!props?.relicTotalScore && (
-      <View className="flex-row items-center justify-between h-6">
-        <View className="flex-row" style={{ gap: 10 }}>
-          <Text
-            style={{ color: getRankColor(props.rank) }}
-            className="font-[HY65] text-[20px] leading-5"
-          >
-            {props.rank}
-          </Text>
-          <TouchableOpacity
-            activeOpacity={0.35}
-            onPress={handleNavigateToUserCharaPage}
-          >
-            <Text className="text-text font-[HY65] text-[20px] leading-6">
-              {user?.name}
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <View className="flex-row items-center" style={{ gap: 12 }}>
-          {/* 遺器圖標 */}
-          <View className="flex-row" style={{ gap: 4 }}>
-            <Image
-              className="w-[20px] h-[20px]"
-              // @ts-ignore
-              source={Relic[officalRelicId[props.relicHeadSetId]]?.["icon" + 1]}
-            />
-            <Image
-              className="w-[20px] h-[20px]"
-              // @ts-ignore
-              source={
-                Relic[officalRelicId[props.relicHandsSetId]]?.["icon" + 2]
-              }
-            />
-            <Image
-              className="w-[20px] h-[20px]"
-              // @ts-ignore
-              source={Relic[officalRelicId[props.relicBodySetId]]?.["icon" + 3]}
-            />
-            <Image
-              className="w-[20px] h-[20px]"
-              // @ts-ignore
-              source={
-                Relic[officalRelicId[props.relicShoesSetId]]?.["icon" + 4]
-              }
-            />
-          </View>
-          {/* 分數 */}
-          <View className="items-end w-[56px]">
+    return (
+      !!props?.relicTotalScore && (
+        <View className="flex-row items-center justify-between h-6">
+          <View className="flex-row" style={{ gap: 10 }}>
             <Text
-              style={{
-                color: ScoreColors[getCharRange(props?.relicTotalScore)],
-              }}
-              className="font-[HY65] text-[18px] leading-5"
+              style={{ color: getRankColor(props.rank) }}
+              className="font-[HY65] text-[20px] leading-5"
             >
-              {props?.relicTotalScore?.toFixed(1)}
+              {props.rank}
             </Text>
+            <TouchableOpacity
+              activeOpacity={0.35}
+              onPress={handleNavigateToUserCharaPage}
+            >
+              <Text className="text-text font-[HY65] text-[20px] leading-6">
+                {user?.name}
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View className="flex-row items-center" style={{ gap: 12 }}>
+            {/* 遺器圖標 */}
+            <View className="flex-row" style={{ gap: 4 }}>
+              <Image
+                className="w-[20px] h-[20px]"
+                // @ts-ignore
+                source={
+                  Relic[officalRelicId[props.relicHeadSetId]]?.['icon' + 1]
+                }
+              />
+              <Image
+                className="w-[20px] h-[20px]"
+                // @ts-ignore
+                source={
+                  Relic[officalRelicId[props.relicHandsSetId]]?.['icon' + 2]
+                }
+              />
+              <Image
+                className="w-[20px] h-[20px]"
+                // @ts-ignore
+                source={
+                  Relic[officalRelicId[props.relicBodySetId]]?.['icon' + 3]
+                }
+              />
+              <Image
+                className="w-[20px] h-[20px]"
+                // @ts-ignore
+                source={
+                  Relic[officalRelicId[props.relicShoesSetId]]?.['icon' + 4]
+                }
+              />
+            </View>
+            {/* 分數 */}
+            <View className="items-end w-[56px]">
+              <Text
+                style={{
+                  color: ScoreColors[getCharRange(props?.relicTotalScore)],
+                }}
+                className="font-[HY65] text-[18px] leading-5"
+              >
+                {props?.relicTotalScore?.toFixed(1)}
+              </Text>
+            </View>
           </View>
         </View>
-      </View>
-    )
-  );
-};
+      )
+    );
+  }
+);
