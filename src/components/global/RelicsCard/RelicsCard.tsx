@@ -19,7 +19,7 @@ type Props = {
   onPress?: (e: GestureResponderEvent) => void;
 };
 
-export default function RelicsCard(props: Props) {
+export default React.memo(function RelicsCard(props: Props) {
   //   const animation = useSpring({ from: { opacity: 0.25 }, to: { opacity: 1 } });
 
   return (
@@ -31,9 +31,9 @@ export default function RelicsCard(props: Props) {
         style={{
           borderRadius: 4,
           borderTopRightRadius: 10,
-          overflow: "hidden",
-          alignItems: "center",
-          justifyContent: "center",
+          overflow: 'hidden',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
         {/* 圖片 */}
@@ -47,7 +47,7 @@ export default function RelicsCard(props: Props) {
         {props.set && (
           <View
             className="w-[18px] h-[18px] rounded-full absolute left-1 top-1 bg-[#00000040]"
-            style={{ justifyContent: "center", alignItems: "center" }}
+            style={{ justifyContent: 'center', alignItems: 'center' }}
           >
             <Text className="text-text text-[12px] font-[HY65] leading-4">
               {props?.set}
@@ -58,14 +58,14 @@ export default function RelicsCard(props: Props) {
       {/* </Shadow> */}
       <View
         className="w-20 h-24 pt-1 mb-[-40px]"
-        style={{ alignItems: "center" }}
+        style={{ alignItems: 'center' }}
       >
         <Text
           numberOfLines={2}
           className="text-text2 text-[12px] font-[HY65]"
           style={{
-            flexWrap: "wrap", // 允许文本换行
-            textAlign: "center", // 文本居中
+            flexWrap: 'wrap', // 允许文本换行
+            textAlign: 'center', // 文本居中
           }}
         >
           {props.name}
@@ -73,4 +73,4 @@ export default function RelicsCard(props: Props) {
       </View>
     </TouchableOpacity>
   );
-}
+});

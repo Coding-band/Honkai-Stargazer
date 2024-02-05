@@ -1,21 +1,21 @@
-import { View, Text, TouchableOpacity } from "react-native";
-import React, { useEffect, useState } from "react";
-import { Image } from "expo-image";
-import { useQuery } from "react-query";
-import db from "../../../../firebase/db";
-import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
-import officalCharId from "../../../../../map/character_offical_id_map";
-import useMyFirebaseUid from "../../../../firebase/hooks/FirebaseUid/useMyFirebaseUid";
-import { LinearGradient } from "expo-linear-gradient";
-import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
-import { ParamList } from "../../../../types/navigation";
-import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
-import { LOCALES } from "../../../../../locales";
-import formatLocale from "../../../../utils/format/formatLocale";
-import getRankColor from "../../../../utils/getRankColor";
-import MOCPageNavigator from "../../../MemoryOfChaosLeaderboardScreen/MOCLbList/MOCLbItem/MOCPageNavigator/MOCPageNavigator";
+import { View, Text, TouchableOpacity } from 'react-native';
+import React, { useEffect, useMemo, useState } from 'react';
+import { Image } from 'expo-image';
+import { useQuery } from 'react-query';
+import db from '../../../../firebase/db';
+import CharacterImage from '../../../../../assets/images/images_map/chacracterImage';
+import officalCharId from '../../../../../map/character_offical_id_map';
+import useMyFirebaseUid from '../../../../firebase/hooks/FirebaseUid/useMyFirebaseUid';
+import { LinearGradient } from 'expo-linear-gradient';
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
+import { ParamList } from '../../../../types/navigation';
+import useAppLanguage from '../../../../language/AppLanguage/useAppLanguage';
+import { LOCALES } from '../../../../../locales';
+import formatLocale from '../../../../utils/format/formatLocale';
+import getRankColor from '../../../../utils/getRankColor';
+import MOCPageNavigator from '../../../MemoryOfChaosLeaderboardScreen/MOCLbList/MOCLbItem/MOCPageNavigator/MOCPageNavigator';
 
-export default function PFLbItem({
+export default React.memo(function PFLbItem({
   versionNumber,
   floorNumber,
   floorName,
@@ -27,7 +27,7 @@ export default function PFLbItem({
   const { language } = useAppLanguage();
 
   const navigation = useNavigation();
-  const route = useRoute<RouteProp<ParamList, "PureFictionLeaderboard">>();
+  const route = useRoute<RouteProp<ParamList, 'PureFictionLeaderboard'>>();
   const showMoreFloorDetails = !!route.params?.floorNumber;
   const firebaseUID = useMyFirebaseUid();
 
@@ -43,20 +43,14 @@ export default function PFLbItem({
 
   // 排行榜資訊
   const { data: floorLbData } = useQuery(
-    [
-      "pf-leaderboard",
-      floorNumber,
-      versionNumber,
-      showMoreFloorDetails,
-      currentPage,
-    ],
+    ['pf-leaderboard', floorNumber, versionNumber, showMoreFloorDetails],
     async () => {
       const result = (
         await db
           .UserPureFiction(versionNumber, floorNumber)
-          .orderBy("score", "desc")
-          .orderBy("round_num")
-          .orderBy("challenge_time")
+          .orderBy('score', 'desc')
+          .orderBy('round_num')
+          .orderBy('challenge_time')
           .limit(showMoreFloorDetails ? pageCount * countPerPage : 5)
           .get()
       ).docs.map((doc) => doc.data());
@@ -67,7 +61,7 @@ export default function PFLbItem({
 
   // 我的排行榜資訊
   const { data: myFloorLbData } = useQuery(
-    ["my-pf-leaderboard", floorNumber, versionNumber, firebaseUID],
+    ['my-pf-leaderboard', floorNumber, versionNumber, firebaseUID],
     async () =>
       (
         await db
@@ -77,10 +71,37 @@ export default function PFLbItem({
       ).data()
   );
 
+  const showMoreFloorDetailsJSX = useMemo(() => {
+    // 計算起始索引，只計算一次
+    const startIndex = currentPage * countPerPage;
+
+    // 如果floorLbData不存在，則提前返回空陣列以避免後續錯誤
+    if (!floorLbData) {
+      return [];
+    }
+
+    return floorLbData
+      .slice(startIndex, startIndex + countPerPage) // 直接截取當前頁面的數據範圍
+      .map((user, index) => {
+        const rank = startIndex + index + 1; // 計算排名
+        return (
+          <RecordItem
+            key={index}
+            rank={rank}
+            {...user}
+            showRank={showRank}
+            onShowRank={setShowRank}
+            isLayer2={isLayer2}
+            onSetLayer2={setIsLayer2}
+          />
+        );
+      });
+  }, [floorLbData, currentPage, showRank, isLayer2]);
+
   return (
     <View>
       <LinearGradient
-        colors={["#000000", "#00000000"]}
+        colors={['#000000', '#00000000']}
         className="border border-[#DDDDDD20] rounded-[4px] py-4 px-3 w-[360px]"
         style={{ gap: 8 }}
       >
@@ -92,7 +113,7 @@ export default function PFLbItem({
             }}
           >
             <Text className="text-text2 font-[HY65] text-[16px] leading-5">
-              {floorName}{" "}
+              {floorName}{' '}
               {isLayer2
                 ? LOCALES[language].MOCPart2
                 : LOCALES[language].MOCPart1}
@@ -102,7 +123,7 @@ export default function PFLbItem({
             activeOpacity={0.65}
             onPress={() => {
               // @ts-ignore
-              navigation.push("PureFictionLeaderboard", {
+              navigation.push('PureFictionLeaderboard', {
                 scheduleId: versionNumber,
                 floorNumber: floorNumber,
               });
@@ -115,20 +136,7 @@ export default function PFLbItem({
         </View>
         <View style={{ gap: 12 }}>
           {showMoreFloorDetails
-            ? new Array(countPerPage)
-                .fill(null)
-                .map((val, i) => floorLbData?.[currentPage * countPerPage + i])
-                ?.map((user, i) => (
-                  <RecordItem
-                    key={i}
-                    rank={currentPage * countPerPage + i + 1}
-                    {...user}
-                    showRank={showRank}
-                    onShowRank={setShowRank}
-                    isLayer2={isLayer2}
-                    onSetLayer2={setIsLayer2}
-                  />
-                ))
+            ? showMoreFloorDetailsJSX
             : new Array(5)
                 .fill(null)
                 .map((val, i) => floorLbData?.[i])
@@ -144,7 +152,7 @@ export default function PFLbItem({
                   />
                 ))}
           <RecordItem
-            rank={"-"}
+            rank={'-'}
             {...myFloorLbData}
             showRank={showRank}
             onShowRank={setShowRank}
@@ -162,23 +170,23 @@ export default function PFLbItem({
       )}
     </View>
   );
-}
+});
 
 const RecordItem = React.memo((props: any) => {
   const { language } = useAppLanguage();
 
   return (
-    <View className="pl-3" style={{ flexDirection: "row", gap: 8 }}>
+    <View className="pl-3" style={{ flexDirection: 'row', gap: 8 }}>
       <View
         style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "flex-end",
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'flex-end',
           flex: 1,
         }}
       >
         <View style={{ gap: 4 }}>
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <View className="w-10 absolute -left-7 items-end">
               <Text
                 style={{ color: getRankColor(props.rank) }}
@@ -189,7 +197,7 @@ const RecordItem = React.memo((props: any) => {
             </View>
             <Text
               className="text-[14px] font-[HY65] leading-4 pl-6"
-              style={{ color: props?.name ? "white" : "#DDD" }}
+              style={{ color: props?.name ? 'white' : '#DDD' }}
             >
               {
                 // props?.uuid?.substr(0, 3) +
@@ -200,10 +208,10 @@ const RecordItem = React.memo((props: any) => {
           </View>
           {props.challenge_time && (
             <Text className="text-text text-[10px] font-[HY65] translate-x-[-10px]">
-              {new Date(props.challenge_time).toLocaleDateString()}{" "}
+              {new Date(props.challenge_time).toLocaleDateString()}{' '}
               {`0${new Date(props.challenge_time).getHours()}`.slice(-2)}:
-              {`0${new Date(props.challenge_time).getMinutes()}`.slice(-2)}{" "}
-              {formatLocale(LOCALES[language].MOCRounds, [props.round_num])}{" "}
+              {`0${new Date(props.challenge_time).getMinutes()}`.slice(-2)}{' '}
+              {formatLocale(LOCALES[language].MOCRounds, [props.round_num])}{' '}
               {formatLocale(LOCALES[language].PFScore, [props.score])}
             </Text>
           )}
@@ -216,14 +224,14 @@ const RecordItem = React.memo((props: any) => {
           onLongPress={() => {
             props.onSetLayer2(!props.isLayer2);
           }}
-          style={{ flexDirection: "row", gap: 6 }}
+          style={{ flexDirection: 'row', gap: 6 }}
         >
           {props?.layer_1?.characters?.length !== 0 ? (
-            props[props.isLayer2 ? "layer_2" : "layer_1"]?.characters.map(
+            props[props.isLayer2 ? 'layer_2' : 'layer_1']?.characters.map(
               (char: any) => (
                 <View
                   key={char.id}
-                  style={{ gap: 2, alignItems: "center" }}
+                  style={{ gap: 2, alignItems: 'center' }}
                   className="w-8"
                 >
                   <Image
@@ -236,7 +244,7 @@ const RecordItem = React.memo((props: any) => {
                   <Text className="text-text font-[HY65] text-[10px]">
                     {props.showRank ? (
                       <Text
-                        style={{ color: char.rank === 6 ? "#DD8200" : "#FFF" }}
+                        style={{ color: char.rank === 6 ? '#DD8200' : '#FFF' }}
                       >
                         {formatLocale(LOCALES[language].CharSoulShort, [
                           char.rank,

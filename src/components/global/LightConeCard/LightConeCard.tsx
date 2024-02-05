@@ -21,7 +21,7 @@ type Props = {
   onPress?: (e: GestureResponderEvent) => void;
 };
 
-export default function LightConeCard(props: Props) {
+export default React.memo(function LightConeCard(props: Props) {
   return (
     <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
       {/* <Shadow
@@ -35,14 +35,14 @@ export default function LightConeCard(props: Props) {
         style={{
           borderRadius: 4,
           borderTopRightRadius: 10,
-          overflow: "hidden",
+          overflow: 'hidden',
         }}
       >
         <View
           className="w-full h-full"
           style={{
-            alignItems: "center",
-            justifyContent: "center",
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
           {/* 光錐圖標 */}
@@ -61,14 +61,14 @@ export default function LightConeCard(props: Props) {
       {/* </Shadow> */}
       <View
         className="w-20 h-24 pt-1 mb-[-50px]"
-        style={{ alignItems: "center" }}
+        style={{ alignItems: 'center' }}
       >
         <Text
           numberOfLines={2}
           className="text-text2 text-[12px] font-[HY65] leading-4"
           style={{
-            flexWrap: "wrap",
-            textAlign: "center",
+            flexWrap: 'wrap',
+            textAlign: 'center',
           }}
         >
           {props.name}
@@ -76,4 +76,4 @@ export default function LightConeCard(props: Props) {
       </View>
     </TouchableOpacity>
   );
-}
+});

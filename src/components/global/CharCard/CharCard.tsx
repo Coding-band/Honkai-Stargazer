@@ -1,12 +1,12 @@
-import { View, Text, TouchableOpacity } from "react-native";
-import React from "react";
-import { LinearGradient } from "expo-linear-gradient";
-import { Image, ImageSource } from "expo-image";
-import { cn } from "../../../utils/css/cn";
-import { Path } from "../../../types/path";
-import { CombatType } from "../../../types/combatType";
-import CombatTypeCardIcon from "../CombatTypeCardIcon/CombatTypeCardIcon";
-import PathCardIcon from "../PathCardIcon/PathCardIcon";
+import { View, Text, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Image, ImageSource } from 'expo-image';
+import { cn } from '../../../utils/css/cn';
+import { Path } from '../../../types/path';
+import { CombatType } from '../../../types/combatType';
+import CombatTypeCardIcon from '../CombatTypeCardIcon/CombatTypeCardIcon';
+import PathCardIcon from '../PathCardIcon/PathCardIcon';
 
 type Props = {
   id: string;
@@ -27,7 +27,7 @@ type Props = {
   onPress?: (charId: string, charName: string) => void;
 };
 
-export default function CharCard(props: Props) {
+export default React.memo(function CharCard(props: Props) {
   //   const animation = useSpring({ from: { opacity: 0.25 }, to: { opacity: 1 } });
 
   return (
@@ -42,20 +42,20 @@ export default function CharCard(props: Props) {
         style={{
           borderRadius: 4,
           borderTopRightRadius: 10,
-          overflow: "hidden",
+          overflow: 'hidden',
           shadowOffset: { width: 4, height: 4 },
           shadowRadius: 8,
-          shadowColor: "#000000",
+          shadowColor: '#000000',
           shadowOpacity: 0.25,
           elevation: 8,
         }}
         colors={
-          props.rare === 5 ? ["#905A52", "#C8A471"] : ["#404165", "#9763CE"]
+          props.rare === 5 ? ['#905A52', '#C8A471'] : ['#404165', '#9763CE']
         }
       >
         <View
           //   style={animation}
-          className={cn("w-20")}
+          className={cn('w-20')}
         >
           {/* 角色頭像 */}
           <Image
@@ -68,11 +68,11 @@ export default function CharCard(props: Props) {
           <View
             className="bg-[#222222] translate-y-[-2px]"
             style={{
-              justifyContent: "center",
-              alignItems: "center",
+              justifyContent: 'center',
+              alignItems: 'center',
             }}
           >
-            {typeof props.name === "string" ? (
+            {typeof props.name === 'string' ? (
               <Text
                 numberOfLines={1}
                 className="text-text2 font-[HY65] text-[12px] leading-4"
@@ -86,7 +86,7 @@ export default function CharCard(props: Props) {
           {/* 命途 & 元素 */}
           <View
             className="absolute top-0.5 left-1"
-            style={{ flexDirection: "column", gap: 8 }}
+            style={{ flexDirection: 'column', gap: 8 }}
           >
             <CombatTypeCardIcon value={props.combatType} />
             <PathCardIcon value={props.path} />
@@ -95,7 +95,7 @@ export default function CharCard(props: Props) {
           {props.rank !== undefined && (
             <View
               className="absolute right-1 top-1 bg-[#F3F9FF] rounded-full w-4 h-4"
-              style={{ justifyContent: "center", alignItems: "center" }}
+              style={{ justifyContent: 'center', alignItems: 'center' }}
             >
               <Text className="text-[#393A5C] text-[12px] font-[HY65]">
                 {props.rank}
@@ -107,7 +107,7 @@ export default function CharCard(props: Props) {
         {props.level !== undefined && (
           <View
             className="absolute top-[60px] w-full"
-            style={{ alignItems: "center" }}
+            style={{ alignItems: 'center' }}
           >
             <View className="bg-[#22222290] h-4 px-2 rounded-[43px]">
               <Text className="text-text font-[HY65] text-[12px]">
@@ -120,4 +120,4 @@ export default function CharCard(props: Props) {
       {/* </Shadow> */}
     </TouchableOpacity>
   );
-}
+});

@@ -1,49 +1,45 @@
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Platform } from "react-native";
-import { SCREENS } from "../constant/screens";
-import HomeScreen from "../screens/HomeScreen";
-import CharacterListScreen from "../screens/CharacterListScreen";
-import CharacterScreen from "../screens/CharacterScreen";
-import LightconeListScreen from "../screens/LightconeListScreen";
-import LightconeScreen from "../screens/LightconeScreen";
-import LoginScreen from "../screens/LoginScreen";
-import MapScreen from "../screens/MapScreen";
-import ExpeditionScreen from "../screens/ExpeditionScreen";
-import SettingScreen from "../screens/SettingScreen";
-import WallPaperScreen from "../screens/WallPaperScreen";
-import RelicListScreen from "../screens/RelicListScreen";
-import RelicScreen from "../screens/RelicScreen";
-import MemoryOfChaosScreen from "../screens/MemoryOfChaosScreen";
-import EventListScreen from "../screens/EventListScreen";
-import EventScreen from "../screens/EventScreen";
-import CodeScreen from "../screens/CodeScreen";
-import UserInfoScreen from "../screens/UserInfoScreen";
-import UserCharDetailScreen from "../screens/UserCharDetailScreen";
-import UIDSearchScreen from "../screens/UIDSearchScreen";
-import MemoryOfChaosStatsScreen from "../screens/MemoryOfChaosStatsScreen";
-import MemoryOfChaosLeaderboardScreen from "../screens/MemoryOfChaosLeaderboardScreen";
-import InviteScreen from "../screens/InviteScreen";
-import ScoreLeaderboardScreen from "../screens/ScoreLeaderboardScreen";
-import PureFictionScreen from "../screens/PureFictionScreen";
-import PureFictionStatsScreen from "../screens/PureFictionStatsScreen";
-import PureFictionLeaderboardScreen from "../screens/PureFictionLeaderboardScreen";
-import DescriptionScreen from "../screens/DescriptionScreen";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Platform } from 'react-native';
+import { SCREENS } from '../constant/screens';
+import HomeScreen from '../screens/HomeScreen';
+import CharacterListScreen from '../screens/CharacterListScreen';
+import CharacterScreen from '../screens/CharacterScreen';
+import LightconeListScreen from '../screens/LightconeListScreen';
+import LightconeScreen from '../screens/LightconeScreen';
+import LoginScreen from '../screens/LoginScreen';
+import MapScreen from '../screens/MapScreen';
+import ExpeditionScreen from '../screens/ExpeditionScreen';
+import SettingScreen from '../screens/SettingScreen';
+import WallPaperScreen from '../screens/WallPaperScreen';
+import RelicListScreen from '../screens/RelicListScreen';
+import RelicScreen from '../screens/RelicScreen';
+import MemoryOfChaosScreen from '../screens/MemoryOfChaosScreen';
+import EventListScreen from '../screens/EventListScreen';
+import EventScreen from '../screens/EventScreen';
+import CodeScreen from '../screens/CodeScreen';
+import UserInfoScreen from '../screens/UserInfoScreen';
+import UserCharDetailScreen from '../screens/UserCharDetailScreen';
+import UIDSearchScreen from '../screens/UIDSearchScreen';
+import MemoryOfChaosStatsScreen from '../screens/MemoryOfChaosStatsScreen';
+import MemoryOfChaosLeaderboardScreen from '../screens/MemoryOfChaosLeaderboardScreen';
+import InviteScreen from '../screens/InviteScreen';
+import ScoreLeaderboardScreen from '../screens/ScoreLeaderboardScreen';
+import PureFictionScreen from '../screens/PureFictionScreen';
+import PureFictionStatsScreen from '../screens/PureFictionStatsScreen';
+import PureFictionLeaderboardScreen from '../screens/PureFictionLeaderboardScreen';
+import DescriptionScreen from '../screens/DescriptionScreen';
 
-export default function Navigation({
-  initialRouteName,
-}: {
-  initialRouteName: string;
-}) {
+export default function Navigation() {
   const Stack = createNativeStackNavigator();
 
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={initialRouteName}
+        // initialRouteName={initialRouteName}
         screenOptions={{
-          animation: Platform.OS === "ios" ? "simple_push" : "none",
+          animation: Platform.OS === 'ios' ? 'simple_push' : 'none',
         }}
       >
         <Stack.Screen
@@ -126,7 +122,7 @@ export default function Navigation({
           component={LoginScreen}
           options={{
             headerShown: false,
-            animation: Platform.OS === "ios" ? "fade_from_bottom" : "none",
+            animation: Platform.OS === 'ios' ? 'fade_from_bottom' : 'none',
           }}
         />
         <Stack.Screen

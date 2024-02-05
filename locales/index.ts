@@ -31,17 +31,17 @@ import { strings as VI } from "./vi/strings";
  NOT IN USED NOW
 */
 
-export const LOCALES = {
-  en: fallbackLang(EN,EN_LONG),
-  zh_cn: fallbackLang(ZH_CN,ZH_CN_LONG),
-  zh_hk: fallbackLang(ZH_HK,ZH_HK_LONG),
-  vocchinese: fallbackLang(VOCCHINESE,VOCCHINESE_LONG),
-  jp: fallbackLang(JP,JP_LONG),
-  jyu_yam: fallbackLang(JyuYam,JyuYam_LONG), //注音
-  es: fallbackLang(ES,ES_LONG),
-  ru: fallbackLang(RU,RU_LONG),
-  pt: fallbackLang(PT,PT_LONG),
-  uk: fallbackLang(UK,EN_LONG), //TEMP
+export const LOCALES: any = {
+  en: fallbackLang(EN, EN_LONG),
+  zh_cn: fallbackLang(ZH_CN, ZH_CN_LONG),
+  zh_hk: fallbackLang(ZH_HK, ZH_HK_LONG),
+  vocchinese: fallbackLang(VOCCHINESE, VOCCHINESE_LONG),
+  jp: fallbackLang(JP, JP_LONG),
+  jyu_yam: fallbackLang(JyuYam, JyuYam_LONG), //注音
+  es: fallbackLang(ES, ES_LONG),
+  ru: fallbackLang(RU, RU_LONG),
+  pt: fallbackLang(PT, PT_LONG),
+  uk: fallbackLang(UK, EN_LONG), //TEMP
 };
 
 function fallbackLang(lang: any, langLong: any) {

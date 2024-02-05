@@ -1,20 +1,30 @@
-import { View, Text, TouchableOpacity } from "react-native";
-import React, { useCallback, useState } from "react";
-import { LinearGradient } from "expo-linear-gradient";
-import * as Clipboard from "expo-clipboard";
-import Toast from "../../../../utils/toast/Toast";
-import { LOCALES } from "../../../../../locales";
-import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
-import { ShareNetwork } from "phosphor-react-native";
-import { Share } from "react-native";
+import { View, Text, TouchableOpacity } from 'react-native';
+import React, { useCallback, useState } from 'react';
+import { LinearGradient } from 'expo-linear-gradient';
+import * as Clipboard from 'expo-clipboard';
+import Toast from '../../../../utils/toast/Toast';
+import { LOCALES } from '../../../../../locales';
+import useAppLanguage from '../../../../language/AppLanguage/useAppLanguage';
+import { ShareNetwork } from 'phosphor-react-native';
+import { Share } from 'react-native';
+import formatLocale from '../../../../utils/format/formatLocale';
 
 type Props = {
-  time: string;
+  start_time: number;
+  end_time: number;
   code: string;
+  server: 'INT' | 'CN' | 'ALL';
 };
 
 export default function CodeItem(props: Props) {
   const { language } = useAppLanguage();
+
+  const timeString =
+    props.start_time === 0
+      ? LOCALES[language].RedeemCodeForever
+      : `${formatLocale(LOCALES[language].RedeemCodeUntil, [
+          new Date(props.end_time).toLocaleString(),
+        ])}`;
 
   const [hasCopy, setHasCopy] = useState(false);
 
@@ -47,41 +57,45 @@ export default function CodeItem(props: Props) {
     >
       <View
         className="w-full h-[90px] bg-[#7D8390] rounded-[4px] overflow-hidden"
-        style={{ justifyContent: "center" }}
+        style={{ justifyContent: 'center' }}
       >
         <View className="w-full h-[87px] bg-[#D2DBE3] rounded-[4px] overflow-hidden">
           <LinearGradient
             className="w-full h-[30px] px-2.5 opacity-80"
-            colors={["#020510", "#454C65"]}
+            colors={['#020510', '#454C65']}
             start={[0, 0]}
             end={[1, 1]}
             style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-              alignItems: "center",
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
             }}
           >
             {/* 日期 / 已複製 */}
             <Text className="text-text font-[HY65] leading-5">
-              {hasCopy ? LOCALES[language].HasCopy : props.time}
+              {hasCopy ? LOCALES[language].HasCopy : timeString}
             </Text>
             {/* 國際服 / 中國服 */}
-            <Text className="text-text font-[HY65]">{LOCALES[language].CodeAll}</Text>
+            <Text className="text-text font-[HY65]">
+              {props.server === 'ALL'
+                ? LOCALES[language].CodeAll
+                : props.server}
+            </Text>
           </LinearGradient>
           <View
             className="px-2.5"
             style={{
               flex: 1,
-              alignItems: "center",
-              justifyContent: "space-between",
-              flexDirection: "row",
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexDirection: 'row',
             }}
           >
             {/* 兌換碼 */}
             <Text
               className="text-[#222] font-[HY65] text-[17px] font-bold translate-y-[-2px]"
               style={{
-                textDecorationLine: hasCopy ? "line-through" : "none",
+                textDecorationLine: hasCopy ? 'line-through' : 'none',
                 opacity: hasCopy ? 0.3 : 1,
               }}
             >

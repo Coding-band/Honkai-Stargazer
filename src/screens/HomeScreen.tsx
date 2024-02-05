@@ -1,43 +1,43 @@
-import { LinearGradient } from "expo-linear-gradient";
-import React, { useEffect, useRef, useState } from "react";
-import { Pressable, Text, View } from "react-native";
-import Menu from "../components/HomeScreen/Menu/Menu";
-import Tabbar from "../components/HomeScreen/Tabbar/Tabbar";
-import Player from "../components/HomeScreen/Player/Player";
-import { StatusBar } from "expo-status-bar";
-import WallPaper from "../components/global/WallPaper/WallPaper";
-import useHsrPlayerData from "../hooks/hoyolab/useHsrPlayerData";
-import auth from "@react-native-firebase/auth";
-import useHoyolabCookie from "../redux/hoyolabCookie/useHoyolabCookie";
-import db from "../firebase/db";
-import Users from "../firebase/models/Users";
-import useHsrFullData from "../hooks/hoyolab/useHsrFullData";
-import UserCharacters from "../firebase/models/UserCharacters";
-import useHsrCharList from "../hooks/hoyolab/useHsrCharList";
-import useMemoryOfChaos from "../hooks/hoyolab/useMemoryOfChaos";
-import useMyFirebaseUid from "../firebase/hooks/FirebaseUid/useMyFirebaseUid";
-import useHsrUUID from "../hooks/hoyolab/useHsrUUID";
+import { LinearGradient } from 'expo-linear-gradient';
+import React, { useEffect, useRef, useState } from 'react';
+import { Pressable, Text, View } from 'react-native';
+import Menu from '../components/HomeScreen/Menu/Menu';
+import Tabbar from '../components/HomeScreen/Tabbar/Tabbar';
+import Player from '../components/HomeScreen/Player/Player';
+import { StatusBar } from 'expo-status-bar';
+import WallPaper from '../components/global/WallPaper/WallPaper';
+import useHsrPlayerData from '../hooks/hoyolab/useHsrPlayerData';
+import auth from '@react-native-firebase/auth';
+import useHoyolabCookie from '../redux/hoyolabCookie/useHoyolabCookie';
+import db from '../firebase/db';
+import Users from '../firebase/models/Users';
+import useHsrFullData from '../hooks/hoyolab/useHsrFullData';
+import UserCharacters from '../firebase/models/UserCharacters';
+import useHsrCharList from '../hooks/hoyolab/useHsrCharList';
+import useMemoryOfChaos from '../hooks/hoyolab/useMemoryOfChaos';
+import useMyFirebaseUid from '../firebase/hooks/FirebaseUid/useMyFirebaseUid';
+import useHsrUUID from '../hooks/hoyolab/useHsrUUID';
 import UserMemoryOfChaos, {
   UserMemoryOfChaosFloor,
-} from "../firebase/models/UserMemoryOfChaos";
-import firestore from "@react-native-firebase/firestore";
-import { ENV, VERSION, askEnvDo } from "../../app.config";
-import BetaWidget from "../components/global/Beta/BetaWidget";
-import WallPaperForMOC from "../components/global/WallPaper/WallPaperForMOC";
-import useMemoryOfChaosPrev from "../hooks/hoyolab/useMemoryOfChaosPrev";
-import genId from "../utils/genId";
-import useHsrInGameInfo from "../hooks/mihomo/useHsrInGameInfo";
-import { unionBy } from "lodash";
-import useUserCharacters from "../firebase/hooks/UserCharacters/useUserCharacters";
-import getCharScore from "../utils/calculator/charScoreCalculator/getCharScore";
-import getRelicScore from "../utils/calculator/relicScoreCalculator/getRelicScore";
-import officalRelicId from "../../map/relic_offical_id_map";
-import getSetIdAndCountFromRelicData from "../utils/data/getSetIdAndCountFromRelicData";
-import usePureFiction from "../hooks/hoyolab/usePureFiction";
-import usePureFictionPrev from "../hooks/hoyolab/usePureFictionPrev";
-import ReactNativeModal from "react-native-modal";
-import { Dimensions } from "react-native";
-import SelectLanguageAtFirstTime from "../components/global/SelectLanguageAtFirstTime/SelectLanguageAtFirstTime";
+} from '../firebase/models/UserMemoryOfChaos';
+import firestore from '@react-native-firebase/firestore';
+import { ENV, VERSION, askEnvDo } from '../../app.config';
+import BetaWidget from '../components/global/Beta/BetaWidget';
+import WallPaperForMOC from '../components/global/WallPaper/WallPaperForMOC';
+import useMemoryOfChaosPrev from '../hooks/hoyolab/useMemoryOfChaosPrev';
+import genId from '../utils/genId';
+import useHsrInGameInfo from '../hooks/mihomo/useHsrInGameInfo';
+import { unionBy } from 'lodash';
+import useUserCharacters from '../firebase/hooks/UserCharacters/useUserCharacters';
+import getCharScore from '../utils/calculator/charScoreCalculator/getCharScore';
+import getRelicScore from '../utils/calculator/relicScoreCalculator/getRelicScore';
+import officalRelicId from '../../map/relic_offical_id_map';
+import getSetIdAndCountFromRelicData from '../utils/data/getSetIdAndCountFromRelicData';
+import usePureFiction from '../hooks/hoyolab/usePureFiction';
+import usePureFictionPrev from '../hooks/hoyolab/usePureFictionPrev';
+import ReactNativeModal from 'react-native-modal';
+import { Dimensions } from 'react-native';
+import SelectLanguageAtFirstTime from '../components/global/SelectLanguageAtFirstTime/SelectLanguageAtFirstTime';
 
 export default function HomeScreen() {
   const uid = useMyFirebaseUid();
@@ -64,7 +64,7 @@ export default function HomeScreen() {
       const errorCode = error.code;
       const errorMessage = error.message;
       // console.log("signup: " + errorMessage);
-      if (errorCode === "auth/email-already-in-use") {
+      if (errorCode === 'auth/email-already-in-use') {
         return true;
       }
     }
@@ -76,7 +76,7 @@ export default function HomeScreen() {
     } catch (error: any) {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log("signin: " + errorMessage);
+      console.log('signin: ' + errorMessage);
     }
   };
 
@@ -116,18 +116,18 @@ export default function HomeScreen() {
               chest_num: hsrFullData.stats.chest_num,
               last_login: firestore.Timestamp.now(),
               app_version: askEnvDo({
-                development: "Development Version",
+                development: 'Development Version',
                 beta: VERSION.beta,
                 production: VERSION.production,
               }),
             });
             if (!UserData?.data()?.invite_code) {
               await db.Users.doc(uid).update({
-                invite_code: "SG-" + genId(10),
+                invite_code: 'SG-' + genId(10),
               });
             }
           } catch (e: any) {
-            console.log("update User: " + e.message);
+            console.log('update User: ' + e.message);
           }
         } else {
           try {
@@ -135,8 +135,8 @@ export default function HomeScreen() {
               uuid: uuid,
               name: hsrPlayerData.nickname,
               avatar_url: hsrFullData.cur_head_icon_url,
-              role: ENV === "beta" ? "beta_user" : "user",
-              plan: "normal",
+              role: ENV === 'beta' ? 'beta_user' : 'user',
+              plan: 'normal',
               level: hsrPlayerData.level,
               region: hsrPlayerData.region,
               active_days: hsrFullData.stats.active_days,
@@ -146,13 +146,13 @@ export default function HomeScreen() {
               show_info: false,
               last_login: firestore.Timestamp.now(),
               app_version: askEnvDo({
-                development: "Development Version",
+                development: 'Development Version',
                 beta: VERSION.beta,
                 production: VERSION.production,
               }),
             });
           } catch (e: any) {
-            console.log("create User: " + e.message);
+            console.log('create User: ' + e.message);
           }
         }
         // 更新上線時間
@@ -179,7 +179,7 @@ export default function HomeScreen() {
         if (docIsExist) {
         } else {
           await doc.set({
-            invite_code: "SG-" + genId(10),
+            invite_code: 'SG-' + genId(10),
           });
         }
       }
@@ -410,7 +410,9 @@ export default function HomeScreen() {
             floor_id: f.maze_id,
             round_num: f.round_num,
             star_num: f.star_num,
-            score: Number(f.node_1.score) + Number(f.node_2.score),
+            score: f.is_fast
+              ? 80000
+              : Number(f.node_1.score) + Number(f.node_2.score),
             layer_1: {
               challenge_time: f.node_1.challenge_time,
               characters: f.node_1.avatars.map((c: any) => ({
@@ -418,7 +420,7 @@ export default function HomeScreen() {
                 level: c.level,
                 rank: c.rank,
               })),
-              score: Number(f.node_1.score),
+              score: f.is_fast ? 40000 : Number(f.node_1.score),
             },
             layer_2: {
               challenge_time: f.node_2.challenge_time,
@@ -427,7 +429,7 @@ export default function HomeScreen() {
                 level: c.level,
                 rank: c.rank,
               })),
-              score: Number(f.node_2.score),
+              score: f.is_fast ? 40000 : Number(f.node_2.score),
             },
           })),
         };
@@ -452,14 +454,16 @@ export default function HomeScreen() {
               round_num: floor.round_num,
               star_num: floor.star_num,
               challenge_time: toTimestamp(floor.layer_1.challenge_time),
-              score: Number(floor.layer_1.score) + Number(floor.layer_2.score),
+              score: floor.is_fast
+                ? 80000
+                : Number(floor.layer_1.score) + Number(floor.layer_2.score),
               layer_1: {
                 characters: floor.layer_1.characters,
-                score: floor.layer_1.score,
+                score: floor.is_fast ? 40000 : floor.layer_1.score,
               },
               layer_2: {
                 characters: floor.layer_2.characters,
-                score: floor.layer_2.score,
+                score: floor.is_fast ? 40000 : floor.layer_2.score,
               },
             };
             const floorDoc = db
@@ -473,78 +477,86 @@ export default function HomeScreen() {
             }
           });
 
-        // // 完整前一次混沌回憶資料
-        // const pfPrevData = {
-        //   star_num: pfPrev.star_num,
-        //   battle_num: pfPrev.battle_num,
-        //   max_floor_id: pfPrev.max_floor_id,
-        //   max_floor: pfPrev.all_floor_detail.length || null,
-        //   all_floor_detail: pfPrev.all_floor_detail.map((f: any) => ({
-        //     floor_id: f.maze_id,
-        //     round_num: f.round_num,
-        //     star_num: f.star_num,
-        //     layer_1: {
-        //       challenge_time: f.node_1.challenge_time,
-        //       characters: f.node_1.avatars.map((c: any) => ({
-        //         id: c.id,
-        //         level: c.level,
-        //         rank: c.rank,
-        //       })),
-        //       score: Number(f.node_1.score),
-        //     },
-        //     layer_2: {
-        //       challenge_time: f.node_2.challenge_time,
-        //       characters: f.node_2.avatars.map((c: any) => ({
-        //         id: c.id,
-        //         level: c.level,
-        //         rank: c.rank,
-        //       })),
-        //       score: Number(f.node_1.score),
-        //     },
-        //   })),
-        // };
+        // 完整前一次混沌回憶資料
+        const pfPrevData = {
+          star_num: pfPrev.star_num,
+          battle_num: pfPrev.battle_num,
+          max_floor_id: pfPrev.max_floor_id,
+          max_floor: pfPrev.all_floor_detail.length || null,
+          all_floor_detail: pfPrev.all_floor_detail.map((f: any) => ({
+            floor_id: f.maze_id,
+            round_num: f.round_num,
+            star_num: f.star_num,
+            score: f.is_fast
+              ? 80000
+              : Number(f.node_1.score) + Number(f.node_2.score),
+            layer_1: {
+              challenge_time: f.node_1.challenge_time,
+              characters: f.node_1.avatars.map((c: any) => ({
+                id: c.id,
+                level: c.level,
+                rank: c.rank,
+              })),
+              score: f.is_fast ? 40000 : Number(f.node_1.score),
+            },
+            layer_2: {
+              challenge_time: f.node_2.challenge_time,
+              characters: f.node_2.avatars.map((c: any) => ({
+                id: c.id,
+                level: c.level,
+                rank: c.rank,
+              })),
+              score: f.is_fast ? 40000 : Number(f.node_2.score),
+            },
+          })),
+        };
 
-        // const pfPrevDataDoc = db.UserPureFiction(pfPrev.groups[1].schedule_id).doc(uid);
-        // const prevDocIsExist = (await pfPrevDataDoc.get()).exists;
+        const pfPrevDataDoc = db
+          .UserPureFiction(pfPrev.groups[1].schedule_id)
+          .doc(uid);
+        const prevDocIsExist = (await pfPrevDataDoc.get()).exists;
 
-        // if (prevDocIsExist) {
-        //   await pfPrevDataDoc.update(pfPrevData);
-        // } else {
-        //   await pfPrevDataDoc.set(pfPrevData);
-        // }
-        // // 單層前一次混沌回憶資料
-        // pfPrevData?.all_floor_detail
-        //   ?.slice()
-        //   ?.reverse()
-        //   ?.forEach(async (floor, i) => {
-        //     const floorNum = i + 1;
-        //     const floorData = {
-        //       uuid: hsrPlayerData.game_role_id,
-        //       name: hsrPlayerData.nickname,
-        //       floor_id: floor.floor_id,
-        //       floor_num: floorNum,
-        //       round_num: floor.round_num,
-        //       star_num: floor.star_num,
-        //       challenge_time: toTimestamp(floor.layer_1.challenge_time),
-        //       layer_1: {
-        //         characters: floor.layer_1.characters,
-        //         score: floor.layer_1.score,
-        //       },
-        //       layer_2: {
-        //         characters: floor.layer_2.characters,
-        //         score: floor.layer_1.score,
-        //       },
-        //     };
-        //     const floorDoc = db
-        //       .UserPureFiction(pfPrev.schedule_id, floorNum)
-        //       .doc(uid);
-        //     const docIsExist = (await floorDoc.get()).exists;
-        //     if (docIsExist) {
-        //       floorDoc.update(floorData);
-        //     } else {
-        //       floorDoc.set(floorData);
-        //     }
-        //   });
+        if (prevDocIsExist) {
+          await pfPrevDataDoc.update(pfPrevData);
+        } else {
+          await pfPrevDataDoc.set(pfPrevData);
+        }
+        // 單層前一次混沌回憶資料
+        pfPrevData?.all_floor_detail
+          ?.slice()
+          ?.reverse()
+          ?.forEach(async (floor, i) => {
+            const floorNum = i + 1;
+            const floorData = {
+              uuid: hsrPlayerData.game_role_id,
+              name: hsrPlayerData.nickname,
+              floor_id: floor.floor_id,
+              floor_num: floorNum,
+              round_num: floor.round_num,
+              star_num: floor.star_num,
+              challenge_time: toTimestamp(floor.layer_1.challenge_time),
+              score: floor.is_fast
+                ? 80000
+                : Number(floor.layer_1.score) + Number(floor.layer_2.score),
+              layer_1: {
+                characters: floor.layer_1.characters,
+                score: floor.is_fast ? 40000 : floor.layer_1.score,
+              },
+              layer_2: {
+                characters: floor.layer_2.characters,
+                score: floor.is_fast ? 40000 : floor.layer_2.score,
+              },
+            };
+            const floorDoc = db
+              .UserPureFiction(pf.groups[1].schedule_id, floorNum)
+              .doc(uid);
+            const docIsExist = (await floorDoc.get()).exists;
+            if (docIsExist) {
+              floorDoc.update(floorData);
+            } else {
+              floorDoc.set(floorData);
+            }
+          });
       }
     }
     createOrUpdatePureFiction();
@@ -568,12 +580,12 @@ export default function HomeScreen() {
 
           relicScore.eachScore?.map((scoreObj: any) => {
             const [partName, score] = Object.entries(scoreObj)[0];
-            if (partName === "Head") scoreData.relic_head_score = score;
-            if (partName === "Hands") scoreData.relic_hands_score = score;
-            if (partName === "Body") scoreData.relic_body_score = score;
-            if (partName === "Shoes") scoreData.relic_shoes_score = score;
-            if (partName === "Ball") scoreData.relic_ball_score = score;
-            if (partName === "Link") scoreData.relic_link_score = score;
+            if (partName === 'Head') scoreData.relic_head_score = score;
+            if (partName === 'Hands') scoreData.relic_hands_score = score;
+            if (partName === 'Body') scoreData.relic_body_score = score;
+            if (partName === 'Shoes') scoreData.relic_shoes_score = score;
+            if (partName === 'Ball') scoreData.relic_ball_score = score;
+            if (partName === 'Link') scoreData.relic_link_score = score;
           });
 
           char.relics?.map((relic: any) => {
@@ -606,14 +618,14 @@ export default function HomeScreen() {
         <WallPaper />
         <LinearGradient
           className="absolute w-full h-full"
-          colors={["#00000050", "#00000040"]}
+          colors={['#00000050', '#00000040']}
         />
         <View className="absolute w-full h-full">
-          {ENV === "beta" ? <BetaWidget /> : null}
+          {ENV === 'beta' ? <BetaWidget /> : null}
           <Player />
           <LinearGradient
             // Background Linear Gradient
-            colors={["rgba(0, 0, 0, 0.20) 0%", "rgba(0, 0, 0, 0.80) 100%"]}
+            colors={['rgba(0, 0, 0, 0.20) 0%', 'rgba(0, 0, 0, 0.80) 100%']}
             className="w-full"
             style={{ flex: 1 }}
           >
