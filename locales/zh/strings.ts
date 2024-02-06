@@ -283,27 +283,27 @@ export const strings = {
   PlsDonateUs: "請考慮透過捐贈支持我們，謝謝！",
   DonateInRandomCount: "ㄙㄨㄟㄐ一",
   //20240122
-  MemoryOfChaosShort: "MOC",
-  ScoreLevel: "Proficiency",
-  MemoryOfChaosLeaderboard: "MOC Leaderboard",
-  ScoreLevelLeaderboard: "Proficiency Leaderboard",
+  MemoryOfChaosShort: "ㄏㄨㄣㄉㄨㄣ",
+  ScoreLevel: "ㄌ一ㄢㄉㄨ",
+  MemoryOfChaosLeaderboard: "ㄏㄨㄣㄉㄨㄣㄆㄞㄏㄤㄅㄤ",
+  ScoreLevelLeaderboard: "ㄌ一ㄢㄉㄨㄆㄞㄏㄤㄅㄤ",
   //20240125
-  PureFiction: "Pure Fiction",
+  PureFiction: "ㄒㄩㄍㄡㄒㄩㄕ",
   //20240126
-  PureFictionShort: "Pure",
-  PureFictionLeaderboard: "Pure Leaderboard",
-  About: "About",
-  AboutTheApp: "About Stargazer",
-  PFScore: "${1} pts",
+  PureFictionShort: "ㄒㄩㄍㄡ",
+  PureFictionLeaderboard: "ㄒㄩㄍㄡㄆㄞㄏㄤㄅㄤ",
+  About: "ㄍㄨㄢㄩ",
+  AboutTheApp: "關於 Stargazer",
+  PFScore: "${1} ㄈㄣ",
   //20240127
-  EventDuration: "Duration",
+  EventDuration: "ㄏㄨㄛㄉㄨㄥㄑ一ㄐ一ㄢ",
   //20240128
-  Upgrade: "Upgrade",
-  OverWholeServerUser: "Top ${1}% of all users in record",
+  Upgrade: "ㄊ一ㄕㄥ",
+  OverWholeServerUser: "超過全服 ${1}% 用戶",
   //20240129
-  NoCommentYet: "No comments yet ...",
+  NoCommentYet: "還沒有留言...",
   //20240131
-  SourceCode: "Source Code",
-  PrevPage: "Previous Page",
-  NextPage: "Next Page"
+  SourceCode: "ㄩㄢㄕㄇㄚ",
+  PrevPage: "ㄕㄤ一一ㄝ",
+  NextPage: "ㄒ一ㄚ一一ㄝ"
 };

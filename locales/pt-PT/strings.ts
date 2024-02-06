@@ -66,7 +66,7 @@ export const strings = {
   SortByRare: "Raridade",
   Reset: "Redefinir",
   OK: "Ok",
-  NotOK: "Discordo",
+  NotOK: "Recusar",
   FilterTitle: "Filtrar",
   FilterFindCharacter: "Pesquisar por Personagens",
   FilterFindLightcone: "Pesquisar por Cones de Luz",
@@ -303,7 +303,7 @@ export const strings = {
   //20240129
   NoCommentYet: "Sem comentários ainda...",
   //20240131
-  SourceCode: "Source Code",
-  PrevPage: "Previous Page",
-  NextPage: "Next Page"
+  SourceCode: "Código Fonte",
+  PrevPage: "Página Anterior",
+  NextPage: "Próxima Página"
 };
