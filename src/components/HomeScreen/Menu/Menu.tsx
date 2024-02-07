@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { cn } from "../../../utils/css/cn";
 import MenuItem from "./MenuItem/MenuItem";
-import { Calendar, Moon, Planet } from "phosphor-react-native";
+import { Calendar, Moon, Planet, Star } from "phosphor-react-native";
 import MenuItemLarge from "./MenuItemLarge/MenuItemLarge";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../constant/screens";
@@ -18,6 +18,7 @@ import { formatTimePoint } from "../../../utils/date/formatTime";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
 import formatNumber from "../../../utils/format/formatNumber";
+import AboutTheApp from "../../SettingScreen/SettingList/SpecialThanksSetting/AboutTheApp1/AboutTheApp";
 
 export default function Menu() {
   const navigation = useNavigation();
@@ -260,6 +261,20 @@ export default function Menu() {
       onPress: () => {
         // @ts-ignore
         navigation.navigate(SCREENS.MapPage.id);
+      },
+    },
+    // 關於 App
+    {
+      type: "normal",
+      name: SCREENS.AboutAppPage.getShortName(language),
+      icon: SCREENS.AboutAppPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.DescriptionPage.id, {
+          title: LOCALES[language].AboutTheApp,
+          icon: Star,
+          content: <AboutTheApp />,
+        });
       },
     },
   ];

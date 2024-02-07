@@ -178,58 +178,67 @@ export default React.memo(function UserInfoCharacters(props: Props) {
             onLayout={(e) => {
               setCharsDisplayWidth(e.nativeEvent.layout.width);
             }}
-            style={{ flexDirection: "row", gap: 8 }}
+            style={{ alignItems: "center", gap: 16 }}
           >
-            {/* 展櫃數據 */}
-            {inGameCharacters?.map((char: any) => (
-              <CharCard
-                key={char.id}
-                {...char}
-                name={
-                  charsDisplayMode ? (
-                    <View
-                      style={{
-                        flexDirection: "row",
-                        alignItems: "center",
-                        gap: 4,
-                      }}
-                    >
-                      <View>
-                        <Image
-                          className="w-9 h-9"
-                          // @ts-ignore
-                          source={Lightcone?.[char.light_cone?.id]?.icon}
-                        />
+            <View
+              style={{
+                flexDirection: "row",
+                gap: 8,
+                flexWrap: "wrap",
+                justifyContent: "center",
+              }}
+            >
+              {/* 展櫃數據 */}
+              {inGameCharacters?.map((char: any) => (
+                <CharCard
+                  key={char.id}
+                  {...char}
+                  name={
+                    charsDisplayMode ? (
+                      <View
+                        style={{
+                          flexDirection: "row",
+                          alignItems: "center",
+                          gap: 4,
+                        }}
+                      >
+                        <View>
+                          <Image
+                            className="w-9 h-9"
+                            // @ts-ignore
+                            source={Lightcone?.[char.light_cone?.id]?.icon}
+                          />
+                        </View>
+                        <View style={{ alignItems: "flex-end", gap: -4 }}>
+                          <Text className="text-text text-[12px] font-[HY65] leading-5">
+                            {char.light_cone?.level
+                              ? `Lv.${char.light_cone?.level}`
+                              : ""}
+                          </Text>
+                          <Text className="text-text text-[12px] font-[HY65] leading-5">
+                            {char.light_cone?.rank
+                              ? LOCALES[appLanguage].SuperimposeLvl.replace(
+                                  "${1}",
+                                  `${char.light_cone?.rank}`
+                                )
+                              : LOCALES[appLanguage].SuperimposeNotEquipped}
+                          </Text>
+                        </View>
                       </View>
-                      <View style={{ alignItems: "flex-end", gap: -4 }}>
-                        <Text className="text-text text-[12px] font-[HY65] leading-5">
-                          {char.light_cone?.level
-                            ? `Lv.${char.light_cone?.level}`
-                            : ""}
-                        </Text>
-                        <Text className="text-text text-[12px] font-[HY65] leading-5">
-                          {char.light_cone?.rank
-                            ? LOCALES[appLanguage].SuperimposeLvl.replace(
-                                "${1}",
-                                `${char.light_cone?.rank}`
-                              )
-                            : LOCALES[appLanguage].SuperimposeNotEquipped}
-                        </Text>
-                      </View>
-                    </View>
-                  ) : (
-                    char.name
-                  )
-                }
-                onPress={() => {
-                  // @ts-ignore
-                  navigation.navigate("UserCharDetail", {
-                    uuid: props.uuid,
-                    charId: char.id,
-                  });
-                }}
-              />
-            ))}
+                    ) : (
+                      char.name
+                    )
+                  }
+                  onPress={() => {
+                    // @ts-ignore
+                    navigation.navigate("UserCharDetail", {
+                      uuid: props.uuid,
+                      charId: char.id,
+                    });
+                  }}
+                />
+              ))}
+            </View>
           </View>
           <Divider />
           {/* hoyolab 數據 */}

@@ -9,6 +9,7 @@ import {
   MedalMilitary,
   Person,
   SlidersHorizontal,
+  Star,
   Sword,
   Ticket,
   Trophy,
@@ -195,5 +196,11 @@ export const SCREENS = {
   },
   DescriptionPage: {
     id: "Description",
+  },
+  AboutAppPage: {
+    id: "AboutApp",
+    getName: (lang: AppLanguage) => `${LOCALES[lang].About}`,
+    getShortName: (lang: AppLanguage) => `${LOCALES[lang].About}`,
+    icon: Star,
   },
 };
