@@ -53,7 +53,11 @@ export default React.memo(function UserCharScore() {
           {/* 角色評分 */}
           <UserCharScoreItem
             title={LOCALES[appLanguage].CharScore}
-            value={charTotalScore.toFixed(1)}
+            value={
+              charTotalScore === -1
+              ? "N/A"
+              : charTotalScore.toFixed(1)
+            }
           />
           {/* 角色評價 */}
           <UserCharScoreItem
@@ -63,7 +67,10 @@ export default React.memo(function UserCharScore() {
           {/* 遺器評分 */}
           <UserCharScoreItem
             title={LOCALES[appLanguage].RelicScore}
-            value={relicTotalScore.toFixed(1)}
+            value={relicTotalScore === -1
+              ? "N/A"
+              : relicTotalScore.toFixed(1)
+            }
           />
           {/* 角色評價 */}
           <UserCharScoreItem

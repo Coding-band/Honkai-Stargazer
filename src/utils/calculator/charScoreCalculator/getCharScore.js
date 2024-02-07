@@ -4,8 +4,8 @@ export default function getCharScore(charId, charData) {
   let maxSchoolDataIndex = 0
   let schoolData = []  
   //若果暫時沒有權重 必須返回空值
-  if(scoreWeight === undefined || charData === undefined){
-    return []
+  if(scoreWeight === undefined || scoreWeight[charId] === undefined|| charData === undefined){
+    return -1
   }
   for (let index = 0; index < scoreWeight[charId].length; index++) {
 
@@ -38,7 +38,7 @@ export default function getCharScore(charId, charData) {
 
     // 該角色還沒有權重
     if (!charScoreWeight) {
-      return 0
+      return -1
     }
 
     // 光錐分數 -> 占比10+4% (10 : 推薦 || +4 : 疊影)
@@ -141,7 +141,7 @@ export function getCurrAndGradScore(charId, charData) {
   const returnValue = [] //返回變量
 
   //若果暫時沒有權重 必須返回空值
-  if(scoreWeight === undefined || charData === undefined){
+  if(scoreWeight === undefined || scoreWeight[charId] === undefined|| charData === undefined){
     return []
   }
 
@@ -182,6 +182,10 @@ export function getCurrAndGradScore(charId, charData) {
  * 當中Normal = 普攻 ; BPSkill = 戰技 ; Ultra = 終結技 ; Talent = 天賦
  */
 export function getTraceInfo(charId, charData){
+  //若果暫時沒有權重 必須返回空值
+  if(scoreWeight === undefined || scoreWeight[charId] === undefined|| charData === undefined){
+    return [];
+  }
   /*
   目前定義如下 : 行跡權重 = [2,1.5,1] , 對應等級將會是 = [8,7,6] (普攻會是 6,5,4) 
   指定的行跡(E.g. 終結技) 按着行跡權重 暫時釐定的畢業等級

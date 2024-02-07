@@ -28,7 +28,7 @@ export default function getRelicScore(
   if (!charScoreWeight) {
     return {
       eachScore: null,
-      totalScore: 0,
+      totalScore: -1,
     };
   }
 
