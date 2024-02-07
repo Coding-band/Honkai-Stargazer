@@ -2,7 +2,11 @@ import scoreWeight from "./data/charWeightList.json"
 
 export default function getCharScore(charId, charData) {
   let maxSchoolDataIndex = 0
-  let schoolData = []
+  let schoolData = []  
+  //若果暫時沒有權重 必須返回空值
+  if(scoreWeight === undefined || charData === undefined){
+    return []
+  }
   for (let index = 0; index < scoreWeight[charId].length; index++) {
 
     //const charId = "1217";
@@ -52,7 +56,7 @@ export default function getCharScore(charId, charData) {
 
     // 星魂分數 -> 占比6%
     let soulScore = 0
-    for (let i = 0; i < charScoreWeight.soul.length; i++) {
+    for (let i = 0; i < (charScoreWeight.soul === undefined ? 0 : charScoreWeight.soul.length); i++) {
       if(charScoreWeight.soul[i] < 0) continue;
       if (charSoulLvl >= charScoreWeight.soul[i]) {
         soulScore += ((6 / charScoreWeight.soul.length))
@@ -135,6 +139,12 @@ export function getCharRange(score) {
 
 export function getCurrAndGradScore(charId, charData) {
   const returnValue = [] //返回變量
+
+  //若果暫時沒有權重 必須返回空值
+  if(scoreWeight === undefined || charData === undefined){
+    return []
+  }
+
   for (let index = 0; index < scoreWeight[charId].length; index++) {
     const returnValueThisSchool = []
     const charScoreWeight = scoreWeight[charId][index]; //對應角色流派内，該角色評分權重
