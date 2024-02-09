@@ -15,6 +15,7 @@ import {
   Trophy,
   User,
   Users,
+  StarOfDavid
 } from "phosphor-react-native";
 import { AppLanguage } from "../language/language.types";
 import { LOCALES } from "../../locales";
@@ -202,5 +203,11 @@ export const SCREENS = {
     getName: (lang: AppLanguage) => `${LOCALES[lang].About}`,
     getShortName: (lang: AppLanguage) => `${LOCALES[lang].About}`,
     icon: Star,
+  },
+  LotteryPage: {
+    id: "Lottery",
+    getName: (lang: AppLanguage) => `${LOCALES[lang].LotterySimulator}`,
+    getShortName: (lang: AppLanguage) => `${LOCALES[lang].LotterySimulator}`,
+    icon: StarOfDavid,
   },
 };

@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { cn } from "../../../utils/css/cn";
 import MenuItem from "./MenuItem/MenuItem";
-import { Calendar, Moon, Planet, Star } from "phosphor-react-native";
+import { Calendar, Moon, Planet, Star, StarOfDavid } from "phosphor-react-native";
 import MenuItemLarge from "./MenuItemLarge/MenuItemLarge";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../constant/screens";
@@ -19,6 +19,7 @@ import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
 import formatNumber from "../../../utils/format/formatNumber";
 import AboutTheApp from "../../SettingScreen/SettingList/SpecialThanksSetting/AboutTheApp1/AboutTheApp";
+import LotteryScreen from "../../../screens/LotteryScreen";
 
 export default function Menu() {
   const navigation = useNavigation();
@@ -274,6 +275,19 @@ export default function Menu() {
           title: LOCALES[language].AboutTheApp,
           icon: Star,
           content: <AboutTheApp />,
+        });
+      },
+    },// 抽卡模擬
+    {
+      type: "normal",
+      name: SCREENS.LotteryPage.getShortName(language),
+      icon: SCREENS.LotteryPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.LotteryPage.id, {
+          title: LOCALES[language].LotteryPage,
+          icon: StarOfDavid,
+          content: <LotteryScreen />,
         });
       },
     },

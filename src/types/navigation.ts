@@ -24,4 +24,5 @@ export type ParamList = {
     icon: any;
     content: any;
   };
+  Lottery: {id: string};
 };
