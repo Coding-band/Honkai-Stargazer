@@ -3,7 +3,7 @@ const CharacterImage: any = {
   "Black Swan": {
     icon: require("../../images/character_icon/black_swan_icon.webp"),
     imageSplash: require("../../images/character_splash/black_swan_splash.webp"),
-    imageFull: require("../../images/character_splash/black_swan_splash.webp"),
+    imageFull: require("../../images/character_full/black_swan_full.webp"),
     fade: require("../../images/character_fade/black_swan_fade.webp"),
   },
   "Sparkle": {
