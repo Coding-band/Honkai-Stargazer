@@ -14,7 +14,7 @@ import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../constant/screens";
 import Purchases, { LOG_LEVEL, PRODUCT_CATEGORY, PURCHASE_TYPE, PurchasesStoreProduct } from "react-native-purchases";
 import { PurchasesPackage } from "react-native-purchases";
-import { PURCHASE_APPLE_KEY, PURCHASE_APPLE_KEY_BETA, PURCHASE_GOOGLE_KEY, purchaseItemID_AppStore, purchaseItemID_AppStoreBETA, purchaseItemID_GooglePlay } from "../../../../../env";
+import { PURCHASE_APPLE_KEY, PURCHASE_APPLE_KEY_BETA, PURCHASE_GOOGLE_KEY, purchaseItemID_AppStore, purchaseItemID_AppStoreBETA, purchaseItemID_GooglePlay } from "../../../../constant/billing";
 import { ENV } from "../../../../../app.config";
 
 export default function SupportSetting() {
