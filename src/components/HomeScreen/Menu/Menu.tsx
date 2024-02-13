@@ -162,16 +162,20 @@ export default function Menu() {
       ) : null,
       subtitle: playerNote.data ? (
         <Text>
-          {_.maxBy(playerNote.data.expeditions, (e: any) => e.remaining_time)
-            .remaining_time === 0
-            ? LOCALES[language].IsDone
-            : formatTimePoint(
-                _.maxBy(
-                  playerNote.data.expeditions,
-                  (e: any) => e.remaining_time
-                ).remaining_time,
-                language
-              )}
+          {
+            (playerNote.data.expeditions.length === 0 ? LOCALES[language].IsDone : 
+              _.maxBy(playerNote.data.expeditions, (e: any) => e.remaining_time)
+                .remaining_time === 0
+                ? LOCALES[language].IsDone
+                : formatTimePoint(
+                    _.maxBy(
+                      playerNote.data.expeditions,
+                      (e: any) => e.remaining_time
+                    ).remaining_time,
+                    language
+                  )  
+            )
+          }
         </Text>
       ) : null,
       onPress: () => {
