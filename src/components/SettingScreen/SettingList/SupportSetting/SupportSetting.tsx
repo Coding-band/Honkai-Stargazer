@@ -1,5 +1,5 @@
-import { View, Text, Dimensions } from "react-native";
-import React, { useState } from "react";
+import { View, Text, Dimensions, Platform } from "react-native";
+import React, { useEffect, useState } from "react";
 import SettingGroup from "../../SettingGroup/SettingGroup";
 import SettingItem from "../../SettingGroup/SettingItem/SettingItem";
 import PopUpCard from "../../../global/PopUpCard/PopUpCard";
@@ -12,15 +12,53 @@ import { LOCALES } from "../../../../../locales";
 import Toast from "../../../../utils/toast/Toast";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../../constant/screens";
+import Purchases, { LOG_LEVEL, PRODUCT_CATEGORY, PURCHASE_TYPE, PurchasesStoreProduct } from "react-native-purchases";
+import { PurchasesPackage } from "react-native-purchases";
+import { PURCHASE_APPLE_KEY, PURCHASE_APPLE_KEY_BETA, PURCHASE_GOOGLE_KEY, purchaseItemID_AppStore, purchaseItemID_AppStoreBETA, purchaseItemID_GooglePlay } from "../../../../../env";
+import { ENV } from "../../../../../app.config";
 
 export default function SupportSetting() {
   const navigation = useNavigation();
   const { language } = useAppLanguage();
 
   const [openDonate, setOpenDonate] = useState(false);
+  
+  // - State for displaying an overlay view
+  const [productList, setProductList] = useState<PurchasesStoreProduct[]>([]);
+  useEffect(() => {
+    const products = async () => {
+      // Purchases
+      Purchases.setLogLevel(LOG_LEVEL.VERBOSE);
+      if (Platform.OS === 'ios') {
+        if(ENV === "beta"){
+          Purchases.configure({apiKey: PURCHASE_APPLE_KEY_BETA});
+          setProductList((await Purchases.getProducts(purchaseItemID_AppStoreBETA, PRODUCT_CATEGORY.NON_SUBSCRIPTION)).sort((a,b) => (a.price - b.price)))
+        }else{
+          Purchases.configure({apiKey: PURCHASE_APPLE_KEY});
+          setProductList((await Purchases.getProducts(purchaseItemID_AppStore, PRODUCT_CATEGORY.NON_SUBSCRIPTION)).sort((a,b) => (a.price - b.price)))
+        }
+      } else if (Platform.OS === 'android') {
+        Purchases.configure({apiKey: PURCHASE_GOOGLE_KEY});
+        setProductList((await Purchases.getProducts(purchaseItemID_GooglePlay, PRODUCT_CATEGORY.NON_SUBSCRIPTION)).sort((a,b) => (a.price - b.price)))
+      }
+    }
+
+    products()
+  }, [])
+
+  const doPurchasing = async(itemId : number) => {
+    try {
+      const { customerInfo, productIdentifier } = await Purchases.purchaseStoreProduct(productList[itemId]);
+      console.log(customerInfo)
+      console.log(productIdentifier)
+    } catch (e : any) {
+      Toast("Error !!! : "+e);
+    }
+  }
+
   return (
     <>
-      {/* <SettingGroup title={LOCALES[language].SupportUs}>
+      <SettingGroup title={LOCALES[language].SupportUs}>
         <SettingItem
           type="navigation"
           title={LOCALES[language].Donation}
@@ -57,22 +95,22 @@ export default function SupportSetting() {
                 {`进行任意一项捐赠即可<span style="color:#DD8200;">免除所有廣告</span>。`}
               </HtmlText>
               <View style={{ gap: 12 }}>
-                <TextButton hasShadow={false} width={310} height={46}>
+                <TextButton hasShadow={false} width={310} height={46} onPress={() => doPurchasing(0)}>
                   捐赠$2
                 </TextButton>
-                <TextButton hasShadow={false} width={310} height={46}>
+                <TextButton hasShadow={false} width={310} height={46} onPress={() => doPurchasing(1)}>
                   捐赠$5
                 </TextButton>
-                <TextButton hasShadow={false} width={310} height={46}>
+                <TextButton hasShadow={false} width={310} height={46} onPress={() => doPurchasing(2)}>
                   捐赠$10
                 </TextButton>
-                <TextButton hasShadow={false} width={310} height={46}>
+                <TextButton hasShadow={false} width={310} height={46} onPress={() => doPurchasing(3)}>
                   捐赠$20
                 </TextButton>
-                <TextButton hasShadow={false} width={310} height={46}>
+                <TextButton hasShadow={false} width={310} height={46} onPress={() => doPurchasing(4)}>
                   捐赠$50
                 </TextButton>
-                <TextButton hasShadow={false} width={310} height={46}>
+                <TextButton hasShadow={false} width={310} height={46} onPress={() => doPurchasing(5)}>
                   捐赠$99
                 </TextButton>
                 <TextButton hasShadow={false} width={310} height={46}>
@@ -85,7 +123,7 @@ export default function SupportSetting() {
             </View>
           }
         />
-      </ReactNativeModal> */}
+      </ReactNativeModal>
     </>
   );
 }

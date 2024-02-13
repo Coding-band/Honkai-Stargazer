@@ -1,8 +1,9 @@
-import { View, Text, TouchableOpacity, Linking } from "react-native";
+import { View, Text, TouchableOpacity, Linking, Platform } from "react-native";
 import React from "react";
 import { Image, ImageBackground } from "expo-image";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
+import Toast from "../../../../utils/toast/Toast";
 
 export default function DonateTab() {
   const { language } = useAppLanguage();
@@ -30,7 +31,12 @@ export default function DonateTab() {
 
 const DonateBtn = (props: { children: string }) => {
   const handleOpenBuyMeACoffee = () => {
-    Linking.openURL("https://www.buymeacoffee.com/codingband");
+    //解決iOS版本不符合App Store内購政策問題
+    if(Platform.OS !== 'ios'){
+      Linking.openURL("https://www.buymeacoffee.com/codingband");
+    }else{
+      Toast("Please go to '...' -> Donation ~")
+    }
   };
 
   return (

@@ -20,6 +20,8 @@ import AppLanguageProvider from "./src/language/AppLanguage/AppLanguageProvider"
 import NotificationWrapper from "./src/notifications/NotificationWrapper";
 import { pushExpoNotiType } from "./src/notifications/constant/pushExpoNotiType";
 import { SCREENS } from "./src/constant/screens";
+import Purchases, { LOG_LEVEL } from "react-native-purchases"
+import {PURCHASE_APPLE_KEY, PURCHASE_GOOGLE_KEY} from './env'
 
 // import playground for testing
 // import "./playground";
@@ -41,6 +43,7 @@ export default function App() {
     if (Platform.OS === "android") {
       setupNavigationBar();
     }
+    
   }, []);
 
   const [fontsLoaded] = useFonts({
