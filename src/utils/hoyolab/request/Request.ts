@@ -42,7 +42,6 @@ export default class Request {
       "User-Agent":
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
       "x-rpc-client_type": "5",
-      "x-rpc-device_fp": "38d7f38577590",
     };
     this.body = {};
     this.params = {};
@@ -116,6 +115,7 @@ export default class Request {
       params: this.params,
       headers: this.headers as object,
       responseType: "json",
+      withCredentials:false
     };
 
     if (method === "POST") {
@@ -126,7 +126,6 @@ export default class Request {
       this.dsType === "v1"
         ? generateDS()
         : generateDsV2(JSON.stringify(this.body), url.split("?")[1]);
-
     try {
       const request = await axios(url, config);
 

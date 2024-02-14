@@ -6,7 +6,7 @@ export const longStrings = {
   UIDOnlySupportFullUID: "仅支持查询完整UID，不支持查询昵称或部分UID",
   SelectServerAndPasteCookies: "请选择服务器并贴上 Cookies。",
   LoginViaPCToGetCookies:
-    "请使用电脑登入 hoyolab / 米游社，首先，在浏览器中打开网站，接着按下 F12 键以开启开发者工具面板。在面板中选择「控制台」并输入以下代码：javascript:(function(){prompt(document.domain,document.cookie)})();。这将会显示一个含有 Cookies 的弹窗，并将弹出的 Cookies 复制贴上到此处。影片教学：https://www.bilibili.com/video/BV1Nm4y1P75R/",
+    "请使用计算机登入 hoyolab / 米游社，并确认您已经先注销再登入，并按照以下影片教学获取Cookies : https://www.youtube.com/watch?v=CLkhV30kg_A (记得选取复制cURL (bash))",
   CommentOverLimit: "输入超过最大值上限（200字元），请减少输入再发布。",
   DonationRemoveAds: "由 Coding Band 制作 :D",
   AboutTheAppContent:

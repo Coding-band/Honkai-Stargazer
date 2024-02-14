@@ -5,7 +5,7 @@ export const longStrings = {
     "玩家 ${1} 在【${2}討論串】提及了您！快來參與討論吧。",
   UIDOnlySupportFullUID: "僅支持查詢完整UID，不支持查詢暱稱或部分UID",
   LoginViaPCToGetCookies:
-    "請使用電腦登入 hoyolab / 米游社，首先，在瀏覽器中打開網站，接著按下 F12 鍵以開啟開發者工具面板。在面板中選擇「控制台」並輸入以下代碼：javascript:(function(){prompt(document.domain,document.cookie)})();。這將會顯示一個含有 Cookies 的彈窗，並將彈出的 Cookies 複製貼上到此處。影片教學：https://www.bilibili.com/video/BV1Nm4y1P75R/",
+  "請使用電腦登入 hoyolab / 米游社，並確認您已經先登出再登入，並按照以下影片教學獲取Cookies : https://www.youtube.com/watch?v=CLkhV30kg_A (記得選取複製cURL (bash))",
   SelectServerAndPasteCookies: "請選擇服務器並貼上 Cookies。",
   CommentOverLimit: "輸入超過最大值上限（200字元），請減少輸入再發布。",
   DonationRemoveAds: "由 Coding Band 製作 :D",
