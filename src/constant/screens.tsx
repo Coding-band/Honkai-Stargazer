@@ -204,10 +204,13 @@ export const SCREENS = {
     getShortName: (lang: AppLanguage) => `${LOCALES[lang].About}`,
     icon: Star,
   },
+  /*
+  
   LotteryPage: {
     id: "Lottery",
     getName: (lang: AppLanguage) => `${LOCALES[lang].LotterySimulator}`,
     getShortName: (lang: AppLanguage) => `${LOCALES[lang].LotterySimulator}`,
     icon: StarOfDavid,
   },
+  */
 };

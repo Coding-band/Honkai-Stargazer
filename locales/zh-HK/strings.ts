@@ -310,4 +310,5 @@ export const strings = {
   LotterySimulator: "抽卡模擬",
   MakeOnePull: "躍遷1次",
   MakeTenPull: "躍遷10次",
+  TutorialVideo: "教學影片"
 };

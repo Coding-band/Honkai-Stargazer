@@ -185,11 +185,13 @@ export default function Navigation({
           component={DescriptionScreen}
           options={{ headerShown: false }}
         />
+        {/*// 抽卡模擬
         <Stack.Screen
           name={SCREENS.LotteryPage.id}
           component={LotteryScreen}
           options={{ headerShown: false }}
         />
+        */}
       </Stack.Navigator>
     </NavigationContainer>
   );

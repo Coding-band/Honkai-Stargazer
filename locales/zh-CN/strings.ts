@@ -305,5 +305,10 @@ export const strings = {
   //20240131
   SourceCode: "源代码",
   PrevPage: "上一页",
-  NextPage: "下一页"
+  NextPage: "下一页",
+  //20240209 - Lottery
+  LotterySimulator: "抽卡模拟",
+  MakeOnePull: "跃迁1次",
+  MakeTenPull: "跃迁10次",
+  TutorialVideo: "教学视频"
 };

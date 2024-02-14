@@ -5,8 +5,8 @@ export const longStrings = {
     "玩家 ${1} 在【${2}討論串】提及了您！快來參與討論吧。",
   UIDOnlySupportFullUID: "僅支持查詢完整UID，不支持查詢暱稱或部分UID",
   LoginViaPCToGetCookies:
-    "請使用電腦登入 hoyolab / 米游社，並確認您已經先登出再登入，並按照以下影片教學獲取Cookies : https://www.youtube.com/watch?v=CLkhV30kg_A (記得選取複製cURL (bash))",
-  SelectServerAndPasteCookies: "請選擇服務器並貼上 Cookies。",
+    "請使用電腦登入 hoyolab / 米游社，並確認您已經先登出再登入，並按照以下教學影片獲取Cookies : https://www.youtube.com/watch?v=CLkhV30kg_A (記得選取複製cURL (bash))",
+  SelectServerAndPasteCookies: "請選擇伺服器並貼上 Cookies。",
   CommentOverLimit: "輸入超過最大值上限（200字元），請減少輸入再發布。",
   DonationRemoveAds: "由 Coding Band 製作 :D",
   AboutTheAppContent:

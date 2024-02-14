@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Linking } from "react-native";
 import React, { useEffect, useState } from "react";
 import Button from "../../../../../global/Button/Button";
 import { TextInput } from "react-native";
@@ -56,8 +56,21 @@ export default function ManualEnterCookie(props: Props) {
         height={46}
       >
         {/* @ts-ignore */}
-        {LOCALES["zh_hk"][keys(hsrServer)[btnChooseServerIndex]]}
+        {LOCALES["en"][keys(hsrServer)[btnChooseServerIndex]]}
       </TextButton>
+        {/** 教學影片 */}
+      <TextButton
+        onPress={() => {
+          Linking.openURL("https://www.youtube.com/watch?v=CLkhV30kg_A");
+        }}
+        hasShadow={false}
+        width={"100%"}
+        height={46}
+      >
+        {/* @ts-ignore */}
+        {LOCALES[language].TutorialVideo}
+      </TextButton>
+
       <View className="w-full h-[280px]">
         <TextInput
           value={inputCookie}

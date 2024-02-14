@@ -305,5 +305,10 @@ export const strings = {
   //20240131
   SourceCode: "Source Code",
   PrevPage: "Previous Page",
-  NextPage: "Next Page"
+  NextPage: "Next Page",
+  //20240209 - Lottery
+  LotterySimulator: "Wrap Simulator",
+  MakeOnePull: "Wrap x1",
+  MakeTenPull: "Wrap x10",
+  TutorialVideo: "Instructional Video"
 };

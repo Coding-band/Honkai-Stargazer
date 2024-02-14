@@ -190,21 +190,21 @@ export const strings = {
   GetCharAndUnLock: "所有時にロックを解除",
   Leaderboard: "リーダーボード",
   UIDSearch: "UID 検索",
-  PublicChars: "Disclose characters",
-  Switch: "Switch",
+  PublicChars: "キャラクター表示",
+  Switch: "スイッチ",
   //Add in 20240118
-  Comments: "${1} Comments",
-  UserOwned: "Owned",
+  Comments: "${1} コメント",
+  UserOwned: "購入済み",
   FullEidolon: "E6",
   TraceNormalATK: "通常攻撃",
   //普攻
   TraceSkill: "スキル",
   //戰技
-  TraceUltimate: "Ultimate",
+  TraceUltimate: "必殺技",
   //終結技
-  TraceTalent: "Talent",
+  TraceTalent: "天賦",
   //天賦
-  TraceTechnique: "Technique",
+  TraceTechnique: "秘技",
   //秘技
   Superimpose: "Superimpose ${1}",
   //疊影
@@ -288,10 +288,10 @@ export const strings = {
   MemoryOfChaosLeaderboard: "MOC Leaderboard",
   ScoreLevelLeaderboard: "Proficiency Leaderboard",
   //20240125
-  PureFiction: "Pure Fiction",
+  PureFiction: "虚構叙事",
   //20240126
-  PureFictionShort: "Pure",
-  PureFictionLeaderboard: "Pure Leaderboard",
+  PureFictionShort: "虚構",
+  PureFictionLeaderboard: "虚構叙事リーダーボード",
   About: "About",
   AboutTheApp: "About Stargazer",
   PFScore: "${1} pts",
@@ -305,5 +305,10 @@ export const strings = {
   //20240131
   SourceCode: "Source Code",
   PrevPage: "Previous Page",
-  NextPage: "Next Page"
+  NextPage: "Next Page",
+  //20240209 - Lottery
+  LotterySimulator: "Wrap Simulator",
+  MakeOnePull: "Wrap x1",
+  MakeTenPull: "Wrap x10",
+  TutorialVideo: "Instructional Video"
 };

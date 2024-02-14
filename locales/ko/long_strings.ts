@@ -6,7 +6,7 @@ export const longStrings = {
   UIDOnlySupportFullUID:
     "Only support search by full UID, it's not allow to search by name or partly UID.",
   LoginViaPCToGetCookies:
-    "Please use a computer to log in to hoyolab / 米游社. Make sure you have logout, and login again, then please follow the video tutorial: https://www.youtube.com/watch?v=CLkhV30kg_A (for copying, please select cURL (bash))",
+    "Please use a computer to log in to hoyolab / 米游社. Make sure you have logout, and login again, then please follow the instructional video: https://www.youtube.com/watch?v=CLkhV30kg_A (for copying, please select cURL (bash))",
   SelectServerAndPasteCookies:
     "Please select the server and paste your Cookies.",
   CommentOverLimit:

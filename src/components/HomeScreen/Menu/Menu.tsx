@@ -282,7 +282,7 @@ export default function Menu() {
         });
       },
     },// 抽卡模擬
-    {
+    {/*
       type: "normal",
       name: SCREENS.LotteryPage.getShortName(language),
       icon: SCREENS.LotteryPage.icon,
@@ -294,6 +294,7 @@ export default function Menu() {
           content: <LotteryScreen />,
         });
       },
+      */
     },
   ];
 
