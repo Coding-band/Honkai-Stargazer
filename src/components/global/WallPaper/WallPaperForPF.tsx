@@ -3,8 +3,6 @@ import React from "react";
 import { ImageBackground } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 
-const Bg = require("../../../../assets/images/bgs/pure_fiction_bg.png");
-
 export default function WallPaperForPF() {
   return (
     <LinearGradient
