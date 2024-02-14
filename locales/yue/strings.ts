@@ -310,5 +310,8 @@ export const strings = {
   LotterySimulator: "抽卡模擬",
   MakeOnePull: "躍遷1次",
   MakeTenPull: "躍遷10次",
-  TutorialVideo: "教學片"
+  TutorialVideo: "教學片",
+  DonationDesc: "感謝您的捐贈，有您的支持我們才能更好地完善本App，所有捐贈都將用於Stargazer的<span style=\"color:#DD8200;\">必要支出</span>和<span style=\"color:#DD8200;\">其他提升</span>。",
+  DonateUs: "捐贈",
+  ShareToOthers: "開拓者們，浩瀚的宇宙中充滿了無盡的秘密，而在追尋秘密的旅途中，一位可靠的嚮導將助你一臂之力！ 星穹觀星者不僅是個包含養成建議、資料查詢、練度排名等功能的星穹鐵道小助手 App，更是你探索之旅的得力夥伴！ 立即下載，開啟屬於你的星際冒險之旅！ \nApp Store：${AppStoreLink}\nPlay Store：${PlayStoreLink}"
 };

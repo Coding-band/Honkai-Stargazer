@@ -310,5 +310,8 @@ export const strings = {
   LotterySimulator: "抽卡模拟",
   MakeOnePull: "跃迁1次",
   MakeTenPull: "跃迁10次",
-  TutorialVideo: "教学视频"
+  TutorialVideo: "教学视频",
+  DonationDesc: "感谢您的捐赠，有您的支持我们才能更好地完善本App，所有捐赠都将用于Stargazer的<span style=\"color:#DD8200;\">必要支出</span>和<span style=\"color:#DD8200;\">其他提升</span>。",
+  DonateUs: "捐赠",
+  ShareToOthers: "开拓者们，浩瀚的宇宙中充满了无尽的秘密，而在追寻秘密的旅途中，一位可靠的向导将助你一臂之力！ 星穹观星者不仅是个包含养成建议、数据查询、练度排名等功能的星穹铁道小助手 App，更是你探索之旅的得力伙伴！ 立即下载，开启属于你的星际冒险之旅！ \nApp Store：${AppStoreLink}\nPlay Store：${PlayStoreLink}"
 };

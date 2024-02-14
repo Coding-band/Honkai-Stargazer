@@ -1,4 +1,4 @@
-import { View, Text, Dimensions, Platform } from "react-native";
+import { View, Text, Dimensions, Platform, Share } from "react-native";
 import React, { useEffect, useState } from "react";
 import SettingGroup from "../../SettingGroup/SettingGroup";
 import SettingItem from "../../SettingGroup/SettingItem/SettingItem";
@@ -16,6 +16,7 @@ import Purchases, { LOG_LEVEL, PRODUCT_CATEGORY, PURCHASE_TYPE, PurchasesStorePr
 import { PurchasesPackage } from "react-native-purchases";
 import { PURCHASE_APPLE_KEY, PURCHASE_APPLE_KEY_BETA, PURCHASE_GOOGLE_KEY, purchaseItemID_AppStore, purchaseItemID_AppStoreBETA, purchaseItemID_GooglePlay } from "../../../../constant/billing";
 import { ENV } from "../../../../../app.config";
+import * as Clipboard from "expo-clipboard";
 
 export default function SupportSetting() {
   const navigation = useNavigation();
@@ -52,7 +53,9 @@ export default function SupportSetting() {
       console.log(customerInfo)
       console.log(productIdentifier)
     } catch (e : any) {
-      Toast("Error !!! : "+e);
+      if(!e.userCancelled){
+        Toast("Error : "+e);
+      }
     }
   }
 
@@ -66,14 +69,38 @@ export default function SupportSetting() {
             setOpenDonate(true);
           }}
         />
+        { 
         <SettingItem
           type="navigation"
           title={LOCALES[language].InviteOthers}
-          onNavigate={() => {
+          onNavigate={async() => {
             // @ts-ignore
-            navigation.navigate(SCREENS.InvitePage.id);
+            try{
+              await Share.share({
+                message : LOCALES[language].ShareToOthers
+                  .replace("${AppStoreLink}","https://apps.apple.com/us/app/stargazer-2-unofficial/id6474837377")
+                  .replace("${PlayStoreLink}","https://play.google.com/store/apps/details?id=com.voc.honkai_stargazer_gp")
+              })
+            }catch(error){
+              Toast.FailToCopy(language)
+            }
+              /*
+              try {
+              await Clipboard.setStringAsync(
+                (Platform.OS === "ios" 
+                ? "https://apps.apple.com/us/app/stargazer-2-unofficial/id6474837377" 
+                : "https://play.google.com/store/apps/details?id=com.voc.honkai_stargazer_gp"
+                )
+              );
+              Toast.CopyToClipboard(language);
+            } catch (e) {
+              Toast.FailToCopy(language);
+            }
+              */
           }}
         />
+        
+        }
       </SettingGroup>
       <ReactNativeModal
         useNativeDriverForBackdrop
@@ -85,40 +112,49 @@ export default function SupportSetting() {
           onClose={() => {
             setOpenDonate(false);
           }}
-          title="捐赠"
+          title={LOCALES[language].Donation}
           content={
             <View className="pt-2 py-4 px-4" style={{ gap: 10 }}>
               <HtmlText style={{ fontFamily: "HY65" }}>
-                {`感谢您的捐赠，有您的支持我们才能更好地完善本App，所有捐赠都将用于Stargazer的<span style="color:#DD8200;">必要支出</span>和<span style="color:#DD8200;">其他提升</span>。`}
+                {LOCALES[language].DonationDesc}
               </HtmlText>
-              <HtmlText style={{ fontFamily: "HY65" }}>
+              { /* 暫時沒有廣告功能
+                <HtmlText style={{ fontFamily: "HY65" }}>
                 {`进行任意一项捐赠即可<span style="color:#DD8200;">免除所有廣告</span>。`}
               </HtmlText>
+              */
+              }
               <View style={{ gap: 12 }}>
-                <TextButton hasShadow={false} width={310} height={46} onPress={() => doPurchasing(0)}>
-                  捐赠$2
+                <TextButton hasShadow={false} width={"100%"} height={46} onPress={() => doPurchasing(0)}>
+                  {LOCALES[language].DonateUs + " $2"}
                 </TextButton>
-                <TextButton hasShadow={false} width={310} height={46} onPress={() => doPurchasing(1)}>
-                  捐赠$5
+                <TextButton hasShadow={false} width={"100%"} height={46} onPress={() => doPurchasing(1)}>
+                  {LOCALES[language].DonateUs + " $5"}
                 </TextButton>
-                <TextButton hasShadow={false} width={310} height={46} onPress={() => doPurchasing(2)}>
-                  捐赠$10
+                <TextButton hasShadow={false} width={"100%"} height={46} onPress={() => doPurchasing(2)}>
+                  {LOCALES[language].DonateUs + " $10"}
                 </TextButton>
-                <TextButton hasShadow={false} width={310} height={46} onPress={() => doPurchasing(3)}>
-                  捐赠$20
+                <TextButton hasShadow={false} width={"100%"} height={46} onPress={() => doPurchasing(3)}>
+                  {LOCALES[language].DonateUs + " $20"}
                 </TextButton>
-                <TextButton hasShadow={false} width={310} height={46} onPress={() => doPurchasing(4)}>
-                  捐赠$50
+                <TextButton hasShadow={false} width={"100%"} height={46} onPress={() => doPurchasing(4)}>
+                  {LOCALES[language].DonateUs + " $50"}
                 </TextButton>
-                <TextButton hasShadow={false} width={310} height={46} onPress={() => doPurchasing(5)}>
-                  捐赠$99
+                <TextButton hasShadow={false} width={"100%"} height={46} onPress={() => doPurchasing(5)}>
+                  {LOCALES[language].DonateUs + " $99"}
                 </TextButton>
-                <TextButton hasShadow={false} width={310} height={46}>
-                  恢复捐赠
-                </TextButton>
-                <TextButton hasShadow={false} width={310} height={46}>
-                  所有捐赠名单
-                </TextButton>
+                {/** 退款請求相關請到我們的Discord伺服器 : https://discord.gg/uXatcbWKv2，向@vocaloid2048 / @yukina4096 提出 */}
+                {/* 恢復捐贈是指，如果之前捐贈過就直接獲得捐贈權益 (暫未開放，如有需要，請到我們的Discord伺服器 : https://discord.gg/uXatcbWKv2，向@vocaloid2048 / @yukina4096 提出)
+                  <TextButton hasShadow={false} width={310} height={46}>
+                    恢复捐赠
+                  </TextButton>
+                */
+                }
+                {/* 暫未開放名單功能
+                  <TextButton hasShadow={false} width={310} height={46}>
+                    所有捐赠名单
+                  </TextButton>
+            */}
               </View>
             </View>
           }
