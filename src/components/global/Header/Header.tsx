@@ -6,6 +6,7 @@ import React from "react";
 import { Pressable, Text, TouchableOpacity, View } from "react-native";
 import { GestureResponderEvent } from "react-native-modal";
 import { Shadow } from "react-native-shadow-2";
+import DeviceInfo from "react-native-device-info"
 
 const CloseBtn = require("../../../../assets/icons/Close.svg");
 const BackBtn = require("../../../../assets/icons/Back.svg");
@@ -23,6 +24,9 @@ export default function Header(props: Props) {
 
   const navigation = useNavigation();
 
+  const dynamicIslandHeight = (DeviceInfo.hasDynamicIsland() ? 130 : 110)
+  const dynamicIslandHeightInClass = (DeviceInfo.hasDynamicIsland() ? "w-full h-[130px]" : "w-full h-[110px]")
+
   const handleClose = () => {
     props.onBack && props.onBack();
     navigation.goBack();
@@ -34,17 +38,17 @@ export default function Header(props: Props) {
       style={{ position: "absolute", width: "100%", zIndex: 50 }}
     >
       <BlurView
-        style={{ height: 110, width: "100%" }}
+        style={{ height: dynamicIslandHeight, width: "100%" }}
         intensity={20}
         tint="dark"
       >
         <Shadow
-          style={{ width: "100%", height: 110 }}
+          style={{ width: "100%", height: dynamicIslandHeight }}
           distance={20}
           startColor={"rgba(0, 0, 0, 0.25)"}
         >
           <View
-            className="w-full h-[110px]"
+            className={dynamicIslandHeightInClass}
             style={{
               backgroundColor: "rgba(255, 255, 255, 0.20)",
             }}
