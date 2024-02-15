@@ -20,7 +20,7 @@ export default function DevelopmentSetting() {
         title={LOCALES[language].AppVersion}
         content={
           ENV === "beta"
-            ? "BETA " + VERSION.production + ` (${VERSION.beta.split(".")[2]})`
+            ? "BETA " + VERSION.beta + ` (${VERSION.beta.split(".")[2]})`
             : VERSION.production
         }
       />

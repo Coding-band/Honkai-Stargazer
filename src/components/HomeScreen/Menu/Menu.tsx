@@ -20,6 +20,7 @@ import { LOCALES } from "../../../../locales";
 import formatNumber from "../../../utils/format/formatNumber";
 import AboutTheApp from "../../SettingScreen/SettingList/SpecialThanksSetting/AboutTheApp1/AboutTheApp";
 import LotteryScreen from "../../../screens/LotteryScreen";
+import Toast from "../../../utils/toast/Toast";
 
 export default function Menu() {
   const navigation = useNavigation();
@@ -121,6 +122,7 @@ export default function Menu() {
       ) : null,
       onPress: () => {
         setStaminaIsCheck(true);
+        Toast.StillDevelopingToast(language)
       },
       hasDot:
         !staminaIsCheck &&
@@ -134,7 +136,9 @@ export default function Menu() {
         ? `${playerNote.data?.current_train_score}/${playerNote.data?.max_train_score}`
         : LOCALES[language].NoDataYet,
       icon: Calendar,
-      onPress: () => {},
+      onPress: () => {
+        Toast.StillDevelopingToast(language)
+      },
     },
     // 模擬宇宙
     {
@@ -145,7 +149,9 @@ export default function Menu() {
           )}`
         : LOCALES[language].NoDataYet,
       icon: Planet,
-      onPress: () => {},
+      onPress: () => {
+        Toast.StillDevelopingToast(language)
+      },
     },
     // 派遣委託
     {

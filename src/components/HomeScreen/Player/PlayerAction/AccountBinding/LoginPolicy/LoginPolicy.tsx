@@ -30,7 +30,7 @@ export default function LoginPolicy(props: Props) {
   return (
     <View style={{ gap: 10, alignItems: "center" }}>
       <View>
-        <HtmlText style={{ color: "#000", fontFamily: "HY55", lineHeight: 20 }}>
+        <HtmlText style={{ color: "#000", fontFamily: "HY65", lineHeight: 20 }}>
           {/* @ts-ignore */}
           {LOCALES[language].LoginPolicy}
         </HtmlText>
