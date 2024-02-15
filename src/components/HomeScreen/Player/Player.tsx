@@ -24,7 +24,7 @@ export default function Player() {
 
   return (
     <View
-      className={cn("w-full pt-8 px-4 z-50")}
+      className={cn("w-full pt-12 px-4 z-50")}
       style={styles.playerContainer}
     >
       {/* uuid */}

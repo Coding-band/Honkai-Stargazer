@@ -37,6 +37,7 @@ export default function App() {
       await NavigationBar.setPositionAsync("absolute");
       await NavigationBar.setBackgroundColorAsync("#00000000");
       await NavigationBar.setVisibilityAsync("hidden");
+      await NavigationBar.setBehaviorAsync('overlay-swipe');
     }
 
     if (Platform.OS === "android") {

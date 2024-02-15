@@ -13,7 +13,7 @@ import DonateTab from "./DonateTab/DonateTab";
 export default function Tabbar() {
   const { language } = useAppLanguage();
   return (
-    <SafeAreaView className={cn("absolute bottom-0", "w-full h-[152px]")}>
+    <SafeAreaView className={cn("absolute bottom-0", "w-full h-[132px]")}>
       <Divider />
       {/* <View
         style={{
