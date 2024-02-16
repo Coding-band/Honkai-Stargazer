@@ -145,7 +145,7 @@ export default React.memo(function UserInfoCharacters(props: Props) {
             style={{
               flexDirection: "row",
               justifyContent: "space-between",
-              width: Math.max(charsDisplayWidth, 340),
+              width: 340,
             }}
           >
             <View
