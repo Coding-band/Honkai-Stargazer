@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SettingGroup from "../../SettingGroup/SettingGroup";
 import SettingItem from "../../SettingGroup/SettingItem/SettingItem";
 import useTextLanguage from "../../../../language/TextLanguage/useTextLanguage";
@@ -36,10 +36,14 @@ export default function LanguageSetting() {
     useAppLanguage();
 
   const [easterEggAppear, setIsEasterEggAppear] = useLocalState<boolean>(
-    "text-easteregg-appear",
+    "text-easteregg-appear11",
     false
   );
-  
+  useEffect(() => {
+    if(appLanguage === 'vocchinese' || appLanguage === 'jyu_yam'){
+      setIsEasterEggAppear(true)
+    }
+  })
   
   return (
     <SettingGroup title={LOCALES[appLanguage].LanguageSetup}>
