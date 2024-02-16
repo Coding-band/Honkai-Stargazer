@@ -16,7 +16,7 @@ export default function PlayerCharacter() {
   return (
     <View className="flex flex-row gap-1">
       {inGameInfo?.characters ? (
-        inGameInfo?.characters?.slice(0, 4)?.map((char: any, i: number) => (
+        inGameInfo?.characters?.slice(0, 5)?.map((char: any, i: number) => (
           <TouchableOpacity
             key={char.id}
             activeOpacity={0.35}
