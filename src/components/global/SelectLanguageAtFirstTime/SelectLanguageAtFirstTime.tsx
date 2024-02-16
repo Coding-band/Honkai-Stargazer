@@ -3,15 +3,16 @@ import React, { useState } from "react";
 import ReactNativeModal from "react-native-modal";
 import PopUpCard from "../PopUpCard/PopUpCard";
 import Button from "../Button/Button";
-import { AppLanguage, Language } from "../../../language/language";
+import { AppLanguage, Language, isGptTranslate } from "../../../language/language";
 import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import useIsAcceptBindingPolicy from "../../../redux/isAcceptBindingPolicy/useIsAcceptBindingPolicy";
+import Toast from "../../../utils/toast/Toast";
 
 const appLanguages = AppLanguage.filter(
   (lang) => lang !== "vocchinese" && lang !== "jyu_yam"
 ).map((lan) => ({
-  name: Language[lan],
+  name: Language[lan]+ (isGptTranslate[lan] ? "（GPT）" : ""),
   value: lan,
 }));
 

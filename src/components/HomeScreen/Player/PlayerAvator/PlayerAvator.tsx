@@ -9,6 +9,8 @@ import Toast from "../../../../utils/toast/Toast";
 import { LOCALES } from "../../../../../locales";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import CharacterImage from "../../../../../assets/images/images_map/chacracterImage";
+import useHsrInGameInfo from "../../../../hooks/mihomo/useHsrInGameInfo";
+import AvatarIcon from "../../../../../assets/images/images_map/avatarIcon";
 
 export default function PlayerAvator() {
   const navigation = useNavigation();
@@ -16,7 +18,10 @@ export default function PlayerAvator() {
 
   const hsrUUID = useHsrUUID();
   const playerFullData = useHsrFullData();
-  const avatar = playerFullData?.data?.cur_head_icon_url;
+
+  // 資料來自崩鐵
+  const { data: hsrInGameInfo } = useHsrInGameInfo(hsrUUID) as any;
+  const avatar = AvatarIcon[hsrInGameInfo?.player?.avatar?.icon?.match(/\d+/g)?.join("")];
 
   const handleNavigatUserInfoPage = () => {
     if (hsrUUID) {

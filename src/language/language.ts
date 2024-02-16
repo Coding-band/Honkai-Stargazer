@@ -20,6 +20,23 @@ export const Language = {
   jyu_yam: "ㄓㄨˋ ㄧㄣ",
   uk: "Українська",
 };
+export const isGptTranslate = {
+  vocchinese: false, //Easter Egg
+  en: false,
+  zh_cn: false,
+  zh_hk: false,
+  jp: false,
+  fr: false,
+  ru: true,
+  de: false,
+  pt: false,
+  vi: false,
+  es: true,
+  kr: false,
+  th: false,
+  jyu_yam: false,
+  uk: false,
+};
 export const TextLanguage: TextLanguageType[] = [
   "en",
   "zh_cn",
