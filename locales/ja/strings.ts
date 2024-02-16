@@ -191,7 +191,7 @@ export const strings = {
   Leaderboard: "リーダーボード",
   UIDSearch: "UID 検索",
   PublicChars: "キャラクター表示",
-  Switch: "スイッチ",
+  Switch: "切り替え",
   //Add in 20240118
   Comments: "${1} コメント",
   UserOwned: "購入済み",

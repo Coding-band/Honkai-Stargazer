@@ -307,11 +307,11 @@ export const strings = {
   PrevPage: "Página Anterior",
   NextPage: "Próxima Página",
   //20240209 - Lottery
-  LotterySimulator: "Wrap Simulator",
-  MakeOnePull: "Wrap x1",
-  MakeTenPull: "Wrap x10",
-  TutorialVideo: "Instructional Video",
-  DonationDesc: 'Thanks for your donation, your support is important for us in improving this app, all donations will be used in <span style="color:#DD8200;">Necessary Expenses</span> and <span style="color:#DD8200;">Other Improvements</span>.',
-  DonateUs: 'Donate Us',
-  ShareToOthers: "Trailblazers, the vast universe is full of endless secrets, and on your journey to pursue the secrets, a reliable guide will help you! Stargazer is not only a Star Rail Assistant App that includes development suggestions, data query, training ranking, and other functions, but also a powerful partner for your exploration journey! Download now and start your own interstellar adventure!\nApp Store : ${AppStoreLink}\nPlay Store : ${PlayStoreLink}"
+  LotterySimulator: "Simulador de Cápsulas",
+  MakeOnePull: "Embrulhar x1",
+  MakeTenPull: "Embrulhar 10x",
+  TutorialVideo: "Vídeo de Instrução",
+  DonationDesc: "Obrigado pela sua doação, seu apoio é importante para melhorarmos este aplicativo, todas as doações serão utilizadas em <span style=\"color:#DD8200;\">Despesas Necessárias</span> e <span style=\"color:#DD8200;\">Outras Melhorias</span>.",
+  DonateUs: "Doe-nos",
+  ShareToOthers: "Desbravadores, o vasto universo está cheio de segredos infinitos e, em sua jornada para perseguir os segredos, um guia confiável irá ajudá-los! Stargazer não é apenas um Aplicativo de Assistência para Star Rail que inclui sugestões de desenvolvimento, consulta de dados, classificação de treinamento e outras funções, mas também um parceiro poderoso para sua jornada de exploração! Baixe agora e comece sua própria aventura interestelar!\nApp Store: ${AppStoreLink}\nPlay Store: ${PlayStoreLink}"
 };
