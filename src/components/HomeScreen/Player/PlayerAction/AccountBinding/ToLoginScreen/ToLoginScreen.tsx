@@ -53,18 +53,14 @@ export default function ToLoginScreen(props: Props) {
       {hsrServers.map((server) => (
         <Button
           onPress={() => {
-            if (Platform.OS === "ios") {
-              Toast(LOCALES[language].IOSCantLoginYet);
-            } else {
               handleChoseServer(server);
-            }
           }}
           key={server.id}
           hasShadow={false}
           width={"100%"}
           height={46}
         >
-          <Text className={Platform.OS === "ios" ? "line-through" : ""}>
+          <Text>
             {server.name}
           </Text>
         </Button>

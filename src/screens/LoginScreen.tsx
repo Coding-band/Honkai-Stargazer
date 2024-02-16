@@ -46,12 +46,12 @@ export default function LoginScreen() {
         {SCREENS.LoginPage.getName(language)}
       </Header>
       <WebView
-        incognito
+        incognito={false}
         javaScriptEnabled
         domStorageEnabled
         sharedCookiesEnabled
         thirdPartyCookiesEnabled
-        cacheEnabled={false}
+        cacheEnabled={true}
         originWhitelist={["*"]}
         source={{
           uri: platform === "hoyolab" ? cookieURLs.hoyolab : cookieURLs.mihoyo,

@@ -2,6 +2,7 @@ import CookieManager from "@react-native-cookies/cookies";
 import { map } from "lodash";
 import cookieUtil from "cookie";
 import { hsrPlatform } from "../servers/hsrServer.types";
+import {clearWebViewIOSCache} from 'react-native-webview-ios-cache-clear';
 
 export const cookieURLs = {
   mihoyo:
@@ -26,6 +27,11 @@ export const getHoyolabCookieFromCookieManager = async (
   }
 
   console.log(hoyolabCookie);
+  CookieManager.clearAll()
+  .then((success) => {
+    console.log('CookieManager.clearAll =>', success);
+  });
+  console.log("iOS clean : "+await clearWebViewIOSCache());
 
   return hoyolabCookie;
 };
