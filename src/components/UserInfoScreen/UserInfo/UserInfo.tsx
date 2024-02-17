@@ -52,7 +52,7 @@ export default function UserInfo(props: Props) {
 
   //截圖
   const captureFullRef = useRef(null);
-  const [isChapture, setCapture] = useState(false);
+  const [isCapture, setCapture] = useState(false);
   const captureFull = () => {
     setCapture(true)
     setTimeout(() => {
@@ -137,7 +137,7 @@ export default function UserInfo(props: Props) {
         style={{ height: Dimensions.get("screen").height }}
       >
       <ViewShot ref={captureFullRef} captureMode="mount">
-        {isChapture ? (
+        {isCapture ? (
           <>
             <WallPaper isBlur />
             <LinearGradient
@@ -248,7 +248,7 @@ export default function UserInfo(props: Props) {
                 gap: 8,
               }}
             >
-              <UserInfoCharacters uuid={props.uuid} isCapture = {isChapture}/>
+              <UserInfoCharacters uuid={props.uuid} isCapture = {isCapture}/>
 
               {isOwner || isShowInfo ? (
                 <View
