@@ -20,9 +20,10 @@ import { includes } from "lodash";
 import useDelayLoad from "../../hooks/useDelayLoad";
 import useIsAdmin from "../../firebase/hooks/Role/useIsAdmin";
 import useIsTester from "../../firebase/hooks/Role/useIsTester";
+import { dynamicHeightWallpaperChangerView } from "../../constant/ui";
 
 export default function WallPaperChanger() {
-  const loaded = useDelayLoad(500);
+  const loaded = useDelayLoad(100);
 
   const navigation = useNavigation();
   const { language: textLanguage } = useTextLanguage();
@@ -82,7 +83,7 @@ export default function WallPaperChanger() {
     useDoUseHomePageBlurEffect();
 
   return (
-    <View className="w-full h-full z-30 mt-[110px]">
+    <View className={dynamicHeightWallpaperChangerView}>
       <View
         style={{ flexDirection: "row", gap: 10, justifyContent: "center" }}
         className="pt-[20px] pb-[35px]"

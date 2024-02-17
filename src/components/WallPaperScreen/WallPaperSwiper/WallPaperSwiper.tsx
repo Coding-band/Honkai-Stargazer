@@ -9,6 +9,7 @@ import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
 import useIsAdmin from "../../../firebase/hooks/Role/useIsAdmin";
 import useIsTester from "../../../firebase/hooks/Role/useIsTester";
+import { dynamicHeightWallpaperSwiper } from "../../../constant/ui";
 
 const { width } = Dimensions.get("window");
 
@@ -39,7 +40,7 @@ export default memo(function WallPaperSwiper(props: Props) {
       style={{
         alignItems: "center",
         width: Dimensions.get("screen").width,
-        height: Dimensions.get("screen").height - 400,
+        height: Dimensions.get("screen").height - dynamicHeightWallpaperSwiper,
       }}
     >
       <Swiper

@@ -88,3 +88,18 @@ export const dynamicHeightUserInfoAnimView = (
     : DeviceInfo.hasNotch() ? "mt-28"
     : "mt-24"
 );
+
+
+//對於WallpaperChanger的View動態設定 (活動內容頁)
+export const dynamicHeightWallpaperChangerView = (
+    DeviceInfo.hasDynamicIsland() ? "w-full h-full z-30 mt-[130px]"
+    : DeviceInfo.hasNotch() ? "w-full h-full z-30 mt-[110px]"
+    : "w-full h-full z-30 mt-[95px]"
+);
+
+//對於無語狀態下的400動態設定 (桌布更換)
+export const dynamicHeightWallpaperSwiper = (
+    DeviceInfo.hasDynamicIsland() ? 400
+    : DeviceInfo.hasNotch() ? 370
+    : 340
+);
