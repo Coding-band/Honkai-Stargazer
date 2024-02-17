@@ -7,6 +7,19 @@ export const dynamicHeightScrollView = (
     : "z-30 pt-[112px] pb-0"
 );
 
+//對於ScrollView + 左右Padding高度的動態設定
+export const dynamicHeightScrollViewLRPadding = (
+    DeviceInfo.hasDynamicIsland() ? "z-30 py-[147px] px-[17px] pb-0" 
+    : DeviceInfo.hasNotch() ? "z-30 py-[127px] px-[17px] pb-0"
+    : "z-30 py-[112px] px-[17px] pb-0"
+);
+//對於設定頁ScrollView高度的動態設定
+export const dynamicHeightSettingScrollView = (
+    DeviceInfo.hasDynamicIsland() ? "z-30 h-screen py-[130px] px-4 pb-0" 
+    : DeviceInfo.hasNotch() ? "z-30 h-screen py-[110px] px-4 pb-0"
+    : "z-30 h-screen py-[95px] px-4 pb-0"
+);
+
 //對於排行榜ScrollView高度的動態設定
 export const dynamicHeightLeaderScrollView = (
     DeviceInfo.hasDynamicIsland() ? "p-4 pb-0 pt-[147px]"

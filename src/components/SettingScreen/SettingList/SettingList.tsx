@@ -11,13 +11,14 @@ import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
 import SpecialThanksSetting from "./SpecialThanksSetting/SpecialThanksSetting";
 import DevelopmentSetting from "./DevelopmentSetting/DevelopmentSetting";
+import { dynamicHeightSettingScrollView } from "../../../constant/ui";
 
 export default function SettingList() {
 
   
 
   return (
-    <ScrollView className="z-30 h-screen py-[110px] px-4 pb-0">
+    <ScrollView className={dynamicHeightSettingScrollView}>
       <View style={{ gap: 20 }} className="pb-48">
         <AccountSetting />
         <LanguageSetting />

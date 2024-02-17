@@ -10,6 +10,7 @@ import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { ParamList } from "../types/navigation";
 import { ScrollView } from "react-native-gesture-handler";
+import { dynamicHeightScrollViewLRPadding } from "../constant/ui";
 
 export default function DescriptionScreen() {
   const route = useRoute<RouteProp<ParamList, "Description">>();
@@ -29,7 +30,7 @@ export default function DescriptionScreen() {
       <Header leftBtn="back" Icon={Icon}>
         {title}
       </Header>
-      <ScrollView className="z-30 py-[127px] px-[17px] pb-0">
+      <ScrollView className={dynamicHeightScrollViewLRPadding}>
         {content}
         <View className="mt-48"/>
       </ScrollView>

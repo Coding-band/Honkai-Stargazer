@@ -101,7 +101,7 @@ export default function RelicScoreLb(props: {
               relicLinkSetId={item.relic_link_set_id}
             />
           )}
-          contentContainerStyle={{ paddingBottom: 60, paddingHorizontal: 2 }} // 设置内容容器的样式
+          contentContainerStyle={{ paddingBottom: 60, paddingHorizontal: 2 ,gap: 12,}} // 设置内容容器的样式
           style={{ height: Dimensions.get("screen").height - 220 }} // 设置FlatList的样式
         />
       </View>
@@ -162,35 +162,35 @@ const CharRelicScoreLbItem = React.memo(
           </View>
           <View className="flex-row items-center" style={{ gap: 12 }}>
             {/* 遺器圖標 */}
-            <View className="flex-row" style={{ gap: 4 }}>
+            <View className="flex-row" style={{ gap: 6 }}>
               <Image
-                className="w-[20px] h-[20px]"
+                className="w-7 h-7"
                 // @ts-ignore
                 source={
                   Relic[officalRelicId[props.relicHeadSetId]]?.["icon" + 1]
                 }
               />
               <Image
-                className="w-[20px] h-[20px]"
+                className="w-7 h-7"
                 // @ts-ignore
                 source={
                   Relic[officalRelicId[props.relicHandsSetId]]?.["icon" + 2]
                 }
               />
               <Image
-                className="w-[20px] h-[20px]"
+                className="w-7 h-7"
                 // @ts-ignore
                 source={
                   Relic[officalRelicId[props.relicBodySetId]]?.["icon" + 3]
                 }
               />
               <Image
-                className="w-[20px] h-[20px]"
+                className="w-7 h-7"
                 // @ts-ignore
                 source={
                   Relic[officalRelicId[props.relicShoesSetId]]?.["icon" + 4]
                 }
-              />
+              />  
             </View>
             {/* 分數 */}
             <View className="items-end w-[56px]">

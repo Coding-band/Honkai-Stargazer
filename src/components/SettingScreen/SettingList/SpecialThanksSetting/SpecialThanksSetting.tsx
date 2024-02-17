@@ -31,6 +31,7 @@ export default function SpecialThanksSetting() {
       />
 
       {/* 開源感謝 */}
+      {/* 暫時註解，功能和關於App覆蓋
       <SettingItem
         type="navigation"
         title={LOCALES[language].SpecialThanksOpenSource}
@@ -38,6 +39,8 @@ export default function SpecialThanksSetting() {
           Toast.StillDevelopingToast();
         }}
       />
+      */
+      }
       {/* 原始碼 */}
       <SettingItem
         type="navigation"
@@ -47,6 +50,16 @@ export default function SpecialThanksSetting() {
           setTimeout(() => {
             Linking.openURL("https://github.com/Coding-band/Honkai-Stargazer");
           }, 2000);
+        }}
+      />
+      {/* Discord */}
+      <SettingItem
+        type="navigation"
+        title={"Discord"}
+        onNavigate={() => {
+          setTimeout(() => {
+            Linking.openURL("https://discord.gg/uXatcbWKv2");
+          }, 100);
         }}
       />
     </SettingGroup>

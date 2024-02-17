@@ -22,6 +22,7 @@ import { map } from "lodash";
 import { getCharFullData } from "../../utils/data/getDataFromMap";
 import useTextLanguage from "../../language/TextLanguage/useTextLanguage";
 import officalCharId from "../../../map/character_offical_id_map";
+import { dynamicHeightLeaderScrollView } from "../../constant/ui";
 
 export default function ScoreLbList() {
   const loaded = useDelayLoad(1000);
@@ -64,7 +65,7 @@ export default function ScoreLbList() {
       />
       {/* 排行榜主體 */}
       <View
-        className="p-4 pb-0 pt-[127px]"
+        className={dynamicHeightLeaderScrollView}
         style={{
           height: Dimensions.get("screen").height,
           opacity: loaded ? 1 : 0,
