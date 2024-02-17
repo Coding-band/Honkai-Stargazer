@@ -13,6 +13,7 @@ import Animated, {
 } from "react-native-reanimated";
 import useDelayLoad from "../../../hooks/useDelayLoad";
 import Loading from "../../global/Loading/Loading";
+import { dynamicHeightScrollView } from "../../../constant/ui";
 
 export default function MOCList() {
   const loaded = useDelayLoad(1000);
@@ -68,7 +69,7 @@ export default function MOCList() {
       <MocHeader scrollHandler={scrollHandler} />
       {!floors?.length && <NoDataYet />}
       {!moc && <NotFound />}
-      <Animated.ScrollView ref={aref} className="z-30 pt-[127px] pb-0">
+      <Animated.ScrollView ref={aref} className={dynamicHeightScrollView}>
         <View
           style={{ ...globalStyles.rJCenterFWrap, gap: 12 }}
           className="pb-48"

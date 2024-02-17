@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import useRelicIsSearching from "../../../redux/relicIsSearching/useRelicIsSearching";
 import useRelicSearch from "../../../redux/relicSearch/useRelicSearch";
 import SearchAction from "./SearchAction/SearchAction";
+import { dynamicHeightListAction } from "../../../constant/ui";
 
 export default function RelicAction() {
   const { isSearching, setIsSearching } = useRelicIsSearching();
@@ -19,7 +20,7 @@ export default function RelicAction() {
     <KeyboardAvoidingView
       behavior="position"
       keyboardVerticalOffset={25}
-      className="w-full h-[46px] absolute bottom-12 z-50"
+      className={dynamicHeightListAction}
       contentContainerStyle={{
         marginRight: isSearching ? 0 : 30,
         justifyContent: "flex-end",

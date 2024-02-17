@@ -19,6 +19,8 @@ import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
 import useCharacterSearch from "../../../redux/characterSearch/useCharacterSearch";
 import CharacterImage from "../../../../assets/images/images_map/chacracterImage";
 import { ExpoImage } from "../../../types/image";
+import DeviceInfo from "react-native-device-info";
+import { dynamicHeightScrollView } from "../../../constant/ui";
 
 type CharListItem = {
   id: CharacterName;
@@ -163,7 +165,7 @@ export default function CharList() {
   ]);
 
   return (
-    <ScrollView className="z-30 pt-[127px] pb-0">
+    <ScrollView className={dynamicHeightScrollView}>
       <View
         style={{
           flexDirection: "row",

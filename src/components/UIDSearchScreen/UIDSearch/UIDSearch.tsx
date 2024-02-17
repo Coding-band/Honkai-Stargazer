@@ -22,6 +22,7 @@ import DraggableFlatList, {
 import { uniq } from "lodash";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
+import { dynamicHeightUIDSearchView } from "../../../constant/ui";
 
 export default function UIDSearch() {
   const navigation = useNavigation();
@@ -72,7 +73,7 @@ export default function UIDSearch() {
       className="z-30"
     >
       <View
-        className="h-screen p-4 pb-0 mt-[110px]"
+        className={dynamicHeightUIDSearchView}
         style={{ alignItems: "center", gap: 16 }}
         // keyboardShouldPersistTaps="always"
       >

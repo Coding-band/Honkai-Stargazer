@@ -19,6 +19,7 @@ import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { MocVersion } from "../../../constant/moc";
 import useIsAdmin from "../../../firebase/hooks/Role/useIsAdmin";
 import useIsTester from "../../../firebase/hooks/Role/useIsTester";
+import { dynamicHeightMonsterScrollView } from "../../../constant/ui";
 
 export default function MOC() {
   const { language: textLanguage } = useTextLanguage();
@@ -49,7 +50,7 @@ export default function MOC() {
       <MocHeader scrollHandler={scrollHandler} />
       <Animated.ScrollView
         ref={aref}
-        className="z-30 pt-[110px] pb-0"
+        className={dynamicHeightMonsterScrollView}
         contentContainerStyle={{ alignItems: "center", gap: 14 }}
       >
         <View style={{ flexDirection: "row", gap: 14 }} className="z-30">

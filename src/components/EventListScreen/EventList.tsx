@@ -15,6 +15,7 @@ import EventListItemType2 from "./EventListItem/EventListItemType2";
 import EventListItemType1 from "./EventListItem/EventListItemType1";
 import useHsrEventList from "../../hooks/hoyolab/useHsrEventList";
 import useLocalState from "../../hooks/useLocalState";
+import { dynamicHeightEventList } from "../../constant/ui";
 
 export default function EventList() {
   const { data: hsrEvents, refetch: hsrEventsRefetch } = useHsrEvent();
@@ -26,7 +27,7 @@ export default function EventList() {
   );
 
   return (
-    <ScrollView className="z-30 py-[127px] px-[17px] pb-0">
+    <ScrollView className={dynamicHeightEventList}>
       <View
         style={{
           flexDirection: "row",

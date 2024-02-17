@@ -15,6 +15,7 @@ import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
 import useLightconeSearch from "../../../redux/lightconeSearch/useLightconeSearch";
 import Lightcone from "../../../../assets/images/images_map/lightcone";
 import { ExpoImage } from "../../../types/image";
+import { dynamicHeightScrollView } from "../../../constant/ui";
 
 type LcListItem = {
   id: string;
@@ -136,7 +137,7 @@ export default function LcList() {
   ]);
 
   return (
-    <ScrollView className="z-30 pt-[127px] pb-0">
+    <ScrollView className={dynamicHeightScrollView}>
       <View
         style={{
           flexDirection: "row",

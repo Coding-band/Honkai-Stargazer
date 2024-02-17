@@ -10,6 +10,7 @@ import PFDataMap from "../../../../map/pure_fiction_data_map";
 import { LOCALES } from "../../../../locales";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import PFLbItem from "./MOCLbItem/PFLbItem";
+import { dynamicHeightLeaderScrollView } from "../../../constant/ui";
 
 export default function PFLbList() {
   const { language: textLanguage } = useTextLanguage();
@@ -37,7 +38,7 @@ export default function PFLbList() {
   return (
     <View style={{ width: "100%" }} className="z-30">
       <ScrollView
-        className="p-4 pb-0 pt-[127px]"
+        className={dynamicHeightLeaderScrollView}
         style={{ height: Dimensions.get("screen").height }}
       >
         <View className="w-full mb-4 z-40" style={{ alignItems: "center" }}>

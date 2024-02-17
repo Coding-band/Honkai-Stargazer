@@ -8,6 +8,7 @@ import { RefreshControl } from "react-native";
 import EventWebView from "./EventWebView/EventWebView";
 import Animated from "react-native-reanimated";
 import { cn } from "../../../utils/css/cn";
+import { dynamicHeightEventWebview } from "../../../constant/ui";
 
 export default function Event() {
   const route = useRoute<RouteProp<ParamList, "Event">>();
@@ -25,7 +26,7 @@ export default function Event() {
   const hsrEvent = hsrEventTMP1 === undefined ? hsrEventTMP2 : hsrEventTMP1;
 
   return (
-    <ScrollView className="z-30 py-[110px] pb-0">
+    <ScrollView className={dynamicHeightEventWebview}>
       <View
         style={{
           flexDirection: "row",

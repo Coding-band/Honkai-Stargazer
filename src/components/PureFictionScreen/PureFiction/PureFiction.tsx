@@ -19,6 +19,7 @@ import { HtmlText } from "@e-mine/react-native-html-text";
 import PFLevelInfo from "./MocLevelInfo/PFLevelInfo";
 import useIsAdmin from "../../../firebase/hooks/Role/useIsAdmin";
 import useIsTester from "../../../firebase/hooks/Role/useIsTester";
+import { dynamicHeightMonsterScrollView } from "../../../constant/ui";
 
 export default function PureFiction() {
   const { language } = useAppLanguage();
@@ -50,7 +51,7 @@ export default function PureFiction() {
       <PureFictionHeader scrollHandler={scrollHandler} />
       <Animated.ScrollView
         ref={aref}
-        className="z-30 pt-[110px] pb-0"
+        className={dynamicHeightMonsterScrollView}
         contentContainerStyle={{ alignItems: "center", gap: 14 }}
       >
         <View style={{ flexDirection: "row", gap: 14 }} className="z-30">

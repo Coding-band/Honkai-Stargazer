@@ -5,6 +5,7 @@ import FilterAction from "./FilterAction/FilterAction";
 import SearchAction from "./SearchAction/SearchAction";
 import useCharacterIsSearching from "../../../redux/characterIsSearching/useCharacterIsSearching";
 import useCharacterSearch from "../../../redux/characterSearch/useCharacterSearch";
+import { dynamicHeightListAction } from "../../../constant/ui";
 
 export default function CharAction() {
   const { isSearching, setIsSearching } = useCharacterIsSearching();
@@ -21,7 +22,7 @@ export default function CharAction() {
     <KeyboardAvoidingView
       behavior="position"
       keyboardVerticalOffset={25}
-      className="w-full h-[46px] absolute bottom-12 z-50"
+      className={dynamicHeightListAction}
       contentContainerStyle={{
         justifyContent: isSearching ? "flex-end" : "center",
         alignItems: "center",

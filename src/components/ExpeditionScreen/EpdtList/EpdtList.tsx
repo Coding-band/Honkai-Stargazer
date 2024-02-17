@@ -3,6 +3,7 @@ import React from "react";
 import EpdtListItem from "./EpdtListItem/EpdtListItem";
 import useHsrNote from "../../../hooks/hoyolab/useHsrNote";
 import NotFound from "../../global/Loading/NotFound";
+import { dynamicHeightEpditScrollView } from "../../../constant/ui";
 
 export default function EpdtList() {
   const { data: hsrNote, refetch: refetchHsrNote } = useHsrNote();
@@ -21,7 +22,7 @@ export default function EpdtList() {
   return epdtList ? (
     <View style={{ width: "100%" }} className="z-30">
       <ScrollView
-        className="h-screen p-4 pb-0 mt-[110px]"
+        className={dynamicHeightEpditScrollView}
         refreshControl={
           <RefreshControl refreshing={false} onRefresh={onRefresh} />
         }

@@ -5,6 +5,7 @@ import { Pressable, Text, TouchableOpacity, View } from "react-native";
 import { GestureResponderEvent } from "react-native-modal";
 import Animated from "react-native-reanimated";
 import BlurView from "../BlurView/BlurView";
+import { dynamicHeightHeader } from "../../../constant/ui";
 
 const CloseBtn = require("../../../../assets/icons/Close.svg");
 const BackBtn = require("../../../../assets/icons/Back.svg");
@@ -34,7 +35,7 @@ export default function Header2(props: Props) {
       style={props.style}
     >
       <View
-        className="w-full h-[110px]"
+        className={dynamicHeightHeader}
         style={{ alignItems: "center", justifyContent: "flex-end" }}
       >
         {/* 左邊叉叉 */}

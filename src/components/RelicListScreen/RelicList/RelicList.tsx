@@ -10,6 +10,7 @@ import RelicsCard from "../../global/RelicsCard/RelicsCard";
 import { SCREENS } from "../../../constant/screens";
 import { ExpoImage } from "../../../types/image";
 import useRelicSearch from "../../../redux/relicSearch/useRelicSearch";
+import { dynamicHeightScrollView } from "../../../constant/ui";
 
 type RelicListItem = {
   id: string;
@@ -76,7 +77,7 @@ export default function RelicList() {
   }, [relicCardListData, searchValue]);
 
   return (
-    <ScrollView className="z-30 pt-[127px] pb-0">
+    <ScrollView className={dynamicHeightScrollView}>
       <View
         style={{
           flexDirection: "row",

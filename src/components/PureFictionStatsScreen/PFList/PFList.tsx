@@ -11,6 +11,7 @@ import Animated, {
   useScrollViewOffset,
 } from "react-native-reanimated";
 import usePureFiction from "../../../hooks/hoyolab/usePureFiction";
+import { dynamicHeightScrollView } from "../../../constant/ui";
 
 export default function PFList() {
   // data
@@ -67,7 +68,7 @@ export default function PFList() {
       <PFHeader scrollHandler={scrollHandler} />
       {!floors?.length && <NoDataYet />}
       {!moc && <NotFound />}
-      <Animated.ScrollView ref={aref} className="z-30 pt-[127px] pb-0">
+      <Animated.ScrollView ref={aref} className={dynamicHeightScrollView}>
         <View
           style={{ ...globalStyles.rJCenterFWrap, gap: 12 }}
           className="pb-48"
