@@ -28,9 +28,10 @@ import { union } from "lodash";
 
 type Props = {
   uuid: string;
+  isCapture?: boolean;
 };
 
-export default React.memo(function UserInfoCharacters(props: Props) {
+export default React.memo(function UserInfoCharacters(props: Props , {isCapture} : {isCapture : boolean}) {
   const { language: textLanguage } = useTextLanguage();
   const { language: appLanguage } = useAppLanguage();
   const navigation = useNavigation();
@@ -141,6 +142,8 @@ export default React.memo(function UserInfoCharacters(props: Props) {
       <View style={{ gap: 10 }}>
         <View style={{ alignItems: "center", gap: 8 }}>
           {/* Top */}
+
+          {!props.isCapture ? (
           <View
             style={{
               flexDirection: "row",
@@ -174,6 +177,7 @@ export default React.memo(function UserInfoCharacters(props: Props) {
               </Text>
             </TouchableOpacity>
           </View>
+          ) : (<></>)}
           <View
             onLayout={(e) => {
               setCharsDisplayWidth(e.nativeEvent.layout.width);

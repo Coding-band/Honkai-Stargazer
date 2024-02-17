@@ -1,5 +1,5 @@
-import { View, Text, Dimensions, ScrollView } from "react-native";
-import React, { useState } from "react";
+import { View, Text, Dimensions, ScrollView, Share } from "react-native";
+import React, { useCallback, useRef, useState } from "react";
 import Header2 from "../../global/Header2/Header2";
 import { TouchableOpacity } from "react-native";
 import { Image } from "expo-image";
@@ -31,16 +31,41 @@ import Animated, {
 import NoComment from "./NoComment/NoComment";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
+import { dynamicHeightUserInfoAnimView } from "../../../constant/ui";
 // import PagerView from "react-native-pager-view";
-
+import ViewShot, { captureRef } from "react-native-view-shot";
+import { GestureResponderEvent } from "react-native-modal";
+import {Image as ImageRN} from 'react-native'
+import WallPaper from "../../global/WallPaper/WallPaper";
+import { LinearGradient } from "expo-linear-gradient";
 type Props = {
   uuid: string;
+};
+type Share = {
+  onPress?: (e: GestureResponderEvent) => void;
 };
 
 export default function UserInfo(props: Props) {
   const profileUUID = props.uuid;
   const hsrUUID = useHsrUUID();
   const { language } = useAppLanguage();
+
+  //截圖
+  const captureFullRef = useRef(null);
+  const [isChapture, setCapture] = useState(false);
+  const captureFull = () => {
+    setCapture(true)
+    setTimeout(() => {
+      captureRef(captureFullRef).then(async (url : any) => {
+        try{
+          setCapture(false)
+          await Share.share({url: url});
+        }catch(error){
+          Toast.FailToCopy(language)
+        }
+      })
+    }, 500)
+  }
 
   // 資料來自崩鐵
   const { data: hsrInGameInfo } = useHsrInGameInfo(profileUUID) as any;
@@ -78,6 +103,7 @@ export default function UserInfo(props: Props) {
   const aref = useAnimatedRef<Animated.ScrollView>();
   const scrollHandler = useScrollViewOffset(aref);
 
+
   const headerAnimatedStyles = useAnimatedStyle(() => {
     if (scrollHandler.value > 0) {
       return {
@@ -92,7 +118,7 @@ export default function UserInfo(props: Props) {
 
   return (
     <View className="z-30">
-      <Header2 rightBtn={isOwner ? <ShareBtn /> : null}>
+      <Header2 rightBtn={isOwner ? <ShareBtn onPress={captureFull}/> : null}>
         <Animated.View style={headerAnimatedStyles}>
           <TopTabs
             tabs={[
@@ -110,9 +136,23 @@ export default function UserInfo(props: Props) {
         ref={aref}
         style={{ height: Dimensions.get("screen").height }}
       >
+      <ViewShot ref={captureFullRef} captureMode="mount">
+        {isChapture ? (
+          <>
+            <WallPaper isBlur />
+            <LinearGradient
+              className="absolute w-full h-full"
+              colors={["#00000080", "#00000020"]}
+            />
+            <LinearGradient
+              className="w-full h-[600px] absolute bottom-0"
+              colors={["#00000000", "#000000"]}
+            />
+          </>
+        ) : (<></>)}
         {hsrInGameInfo ? (
           <AnimatedView
-            className="mt-28"
+            className={dynamicHeightUserInfoAnimView}
             style={{
               alignItems: "center",
               gap: 18,
@@ -208,7 +248,7 @@ export default function UserInfo(props: Props) {
                 gap: 8,
               }}
             >
-              <UserInfoCharacters uuid={props.uuid} />
+              <UserInfoCharacters uuid={props.uuid} isCapture = {isChapture}/>
 
               {isOwner || isShowInfo ? (
                 <View
@@ -270,6 +310,7 @@ export default function UserInfo(props: Props) {
         ) : (
           <Loading />
         )}
+      </ViewShot>
       </Animated.ScrollView>
     </View>
   );
@@ -288,12 +329,10 @@ const InfoItem = ({
   </View>
 );
 
-const ShareBtn = () => (
+const ShareBtn = (props : Share) => (
   <TouchableOpacity
     className="translate-x-[-2px]"
-    onPress={() => {
-      Toast.StillDevelopingToast();
-    }}
+    onPress={props.onPress}
   >
     <Image
       style={{ width: 40, height: 40 }}
