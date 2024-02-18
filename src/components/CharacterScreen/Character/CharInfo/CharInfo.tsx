@@ -42,8 +42,10 @@ export default React.memo(function CharInfo() {
           <CharStars count={charData?.rare || 5} />
           <View>
             <Text
+              numberOfLines={1} 
+              ellipsizeMode='tail'  
               className="text-[16px] text-white font-[HY65] leading-5"
-              style={globalStyles.textShadow}
+              style={[globalStyles.textShadow,{width:150},{textAlign: 'right'}]}
             >
               {charData?.location}
             </Text>
@@ -59,7 +61,7 @@ export default React.memo(function CharInfo() {
       >
         <View style={{ flexDirection: "row", gap: 26 }}>
           {/* 命途 */}
-          <View style={{ flexDirection: "row", gap: 8 }}>
+          <View style={{ flexDirection: "row", gap: 8, alignItems: "center" }}>
             <Image
               // @ts-ignore
               source={Path[charData?.pathId]?.icon}
