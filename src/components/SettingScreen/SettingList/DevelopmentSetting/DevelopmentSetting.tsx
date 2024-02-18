@@ -7,6 +7,7 @@ import { ENV, VERSION } from "../../../../../app.config";
 import * as Device from "expo-device";
 import useIsAdmin from "../../../../firebase/hooks/Role/useIsAdmin";
 import Noti from "../../../../notifications/utils/Noti";
+import DeviceInfo from "react-native-device-info";
 
 export default function DevelopmentSetting() {
   const { language } = useAppLanguage();
@@ -18,11 +19,7 @@ export default function DevelopmentSetting() {
       <SettingItem
         type="none"
         title={LOCALES[language].AppVersion}
-        content={
-          ENV === "beta"
-            ? "BETA " + VERSION.beta + ` (${VERSION.beta.split(".")[2]})`
-            : VERSION.production
-        }
+        content={DeviceInfo.getVersion() + ` (${DeviceInfo.getBuildNumber()})`  }
       />
       <SettingItem
         type="none"
