@@ -139,7 +139,11 @@ export default function CommentInput({
           tint="light"
           intensity={30}
           className="bg-[#ffffff20]"
-          style={{ flexDirection: "row" }}
+          style={
+            (Platform.OS === 'android' ? 
+              { flexDirection: "row",paddingLeft: 15} 
+              : { flexDirection: "row"}
+            )}
         >
           {/* 輸入框 */}
           <TextInput
@@ -151,7 +155,7 @@ export default function CommentInput({
             style={{
               justifyContent: "center",
               flex: 1,
-              paddingVertical: Platform.OS === "android" ? 9 : 15,
+              paddingVertical: Platform.OS === "android" ? 9 : 15
             }}
             value={input}
             onChangeText={handleTextChange}
