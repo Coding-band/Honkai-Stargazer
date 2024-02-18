@@ -48,13 +48,22 @@ export default function SupportSetting() {
   }, [])
 
   const doPurchasing = async(itemId : number) => {
+    if(ENV === "beta"){ Toast(LOCALES[language].ErrorDonationInBeta,3,true); return; }
     try {
-      const { customerInfo, productIdentifier } = await Purchases.purchaseStoreProduct(productList[itemId]);
-      console.log(customerInfo)
-      console.log(productIdentifier)
+      await Purchases.purchaseStoreProduct(productList[itemId]);
     } catch (e : any) {
       if(!e.userCancelled){
-        Toast("Error : "+e);
+        Toast(
+          e.message === "TypeError: Cannot read property 'identifier' of undefined" 
+          ? LOCALES[language].ErrorIdentifier
+          
+          : e.message === "Error: The operation is already in progress for this product." 
+          ? LOCALES[language].ErrorIdentifier
+
+          : e.message
+          , 3
+          , true
+        );
       }
     }
   }

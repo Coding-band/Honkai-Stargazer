@@ -2,10 +2,11 @@ import T from "react-native-root-toast";
 import { AppLanguage } from "../../language/language.types";
 import { LOCALES } from "../../../locales";
 
-export default function Toast(message: string, second: number = 2) {
+export default function Toast(message: string, second: number = 2, isBottom: boolean = false) {
+  console.log(isBottom)
   return T.show(message, {
     duration: second * 1000,
-    position: T.positions.CENTER,
+    position: (isBottom ? T.positions.BOTTOM : T.positions.CENTER),
     shadow: true,
     animation: true,
     hideOnPress: true,

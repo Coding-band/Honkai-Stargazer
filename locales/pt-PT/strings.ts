@@ -313,5 +313,9 @@ export const strings = {
   TutorialVideo: "Vídeo de Instrução",
   DonationDesc: "Obrigado pela sua doação, seu apoio é importante para melhorarmos este aplicativo, todas as doações serão utilizadas em <span style=\"color:#DD8200;\">Despesas Necessárias</span> e <span style=\"color:#DD8200;\">Outras Melhorias</span>.",
   DonateUs: "Doe-nos",
-  ShareToOthers: "Desbravadores, o vasto universo está cheio de segredos infinitos e, em sua jornada para perseguir os segredos, um guia confiável irá ajudá-los! Stargazer não é apenas um Aplicativo de Assistência para Star Rail que inclui sugestões de desenvolvimento, consulta de dados, classificação de treinamento e outras funções, mas também um parceiro poderoso para sua jornada de exploração! Baixe agora e comece sua própria aventura interestelar!\nApp Store: ${AppStoreLink}\nPlay Store: ${PlayStoreLink}"
+  ShareToOthers: "Desbravadores, o vasto universo está cheio de segredos infinitos e, em sua jornada para perseguir os segredos, um guia confiável irá ajudá-los! Stargazer não é apenas um Aplicativo de Assistência para Star Rail que inclui sugestões de desenvolvimento, consulta de dados, classificação de treinamento e outras funções, mas também um parceiro poderoso para sua jornada de exploração! Baixe agora e comece sua própria aventura interestelar!\nApp Store: ${AppStoreLink}\nPlay Store: ${PlayStoreLink}",
+  //20240218 - Common Errors
+  ErrorDonationInBeta: "Donation is not available in BETA",
+  ErrorIdentifier: "Unable for find the donation...",
+  ErrorPurchaseAlready: "Please wait a minute and retry again"
 };

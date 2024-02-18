@@ -313,5 +313,9 @@ export const strings = {
   TutorialVideo: "Instructional Video",
   DonationDesc: 'Thanks for your donation, your support is important for us in improving this app, all donations will be used in <span style="color:#DD8200;">Necessary Expenses</span> and <span style="color:#DD8200;">Other Improvements</span>.',
   DonateUs: 'Donate Us',
-  ShareToOthers: "Trailblazers, the vast universe is full of endless secrets, and on your journey to pursue the secrets, a reliable guide will help you! Stargazer is not only a Star Rail Assistant App that includes development suggestions, data query, training ranking, and other functions, but also a powerful partner for your exploration journey! Download now and start your own interstellar adventure!\nApp Store : ${AppStoreLink}\nPlay Store : ${PlayStoreLink}"
+  ShareToOthers: "Trailblazers, the vast universe is full of endless secrets, and on your journey to pursue the secrets, a reliable guide will help you! Stargazer is not only a Star Rail Assistant App that includes development suggestions, data query, training ranking, and other functions, but also a powerful partner for your exploration journey! Download now and start your own interstellar adventure!\nApp Store : ${AppStoreLink}\nPlay Store : ${PlayStoreLink}",
+  //20240218 - Common Errors
+  ErrorDonationInBeta: "Donation is not available in BETA",
+  ErrorIdentifier: "Unable for find the donation...",
+  ErrorPurchaseAlready: "Please wait a minute and retry again"
 };

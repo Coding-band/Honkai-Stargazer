@@ -40,13 +40,20 @@ export default function DonateTab() {
       if(Platform.OS !== 'ios'){
         Linking.openURL("https://www.buymeacoffee.com/codingband");
       }else{
+        if(ENV === "beta"){ Toast(LOCALES[language].ErrorDonationInBeta); return; }
         try {
-          const { customerInfo, productIdentifier } = await Purchases.purchaseStoreProduct(productList[itemId]);
-          console.log(customerInfo)
-          console.log(productIdentifier)
+          await Purchases.purchaseStoreProduct(productList[itemId]);
         } catch (e : any) {
           if(!e.userCancelled){
-          Toast("Error : "+e);
+            Toast(
+              e.message === "TypeError: Cannot read property 'identifier' of undefined" 
+              ? LOCALES[language].ErrorIdentifier
+              
+              : e.message === "Error: The operation is already in progress for this product." 
+              ? LOCALES[language].ErrorIdentifier
+    
+              : e.message
+            );
           }
         }
       }
