@@ -2,9 +2,9 @@ import DeviceInfo from "react-native-device-info";
 
 //對於ScrollView高度的動態設定
 export const dynamicHeightScrollView = (
-    DeviceInfo.hasDynamicIsland() ? "z-30 pt-[147px] pb-0" 
-    : DeviceInfo.hasNotch() ? "z-30 pt-[127px] pb-0"
-    : "z-30 pt-[112px] pb-0"
+    DeviceInfo.hasDynamicIsland() ? "z-30 pt-[147px] pb-0  px-[8px] " 
+    : DeviceInfo.hasNotch() ? "z-30 pt-[127px] pb-0  px-[8px] "
+    : "z-30 pt-[112px] pb-0  px-[8px] "
 );
 
 //對於ScrollView + 左右Padding高度的動態設定
