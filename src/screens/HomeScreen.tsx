@@ -622,7 +622,7 @@ export default function HomeScreen() {
           </LinearGradient>
         </View>
       </Pressable>
-      <SelectLanguageAtFirstTime />
+      <SelectLanguageAtFirstTime key={"selectLanguageAtFirstTime"} />
     </>
   );
 }

@@ -8,6 +8,7 @@ import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import useIsAcceptBindingPolicy from "../../../redux/isAcceptBindingPolicy/useIsAcceptBindingPolicy";
 import Toast from "../../../utils/toast/Toast";
+import { TextLanguage } from "../../../language/language.types";
 
 const appLanguages = AppLanguage.filter(
   (lang) => lang !== "vocchinese" && lang !== "jyu_yam"
@@ -37,9 +38,11 @@ export default function SelectLanguageAtFirstTime() {
         content={
           <View className="p-4" style={{ gap: 12 }}>
             {appLanguages.map((lang) => (
-              <Button
+              <Button key={lang.name}
                 onPress={() => {
-                  setTextLanguage(lang.value);
+                  if((lang.name !== "vocchinese" && lang.name !== "jyu_yam") && (lang.value !== undefined)&& (lang !== undefined)){
+                    setTextLanguage!(lang.value as TextLanguage);
+                  }
                   setAppLanguage(lang.value);
                   setIsAcceptBindingPolicy(true);
                 }}
