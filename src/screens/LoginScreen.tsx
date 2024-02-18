@@ -16,6 +16,7 @@ import useHsrServerChosen from "../redux/hsrServerChosen/useHsrServerChosen";
 import { isHoyolabPlatform } from "../utils/hoyolab/utils";
 import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 import auth from "@react-native-firebase/auth";
+import { dynamicHeightLoginWebview } from "../constant/ui";
 
 export default function LoginScreen() {
   const { language } = useAppLanguage();
@@ -56,7 +57,7 @@ export default function LoginScreen() {
         source={{
           uri: platform === "hoyolab" ? cookieURLs.hoyolab : cookieURLs.mihoyo,
         }}
-        className="mt-[110px]"
+        className={dynamicHeightLoginWebview}
         style={{ flex: 1 }}
       />
     </View>

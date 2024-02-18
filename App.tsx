@@ -25,8 +25,8 @@ import { SCREENS } from "./src/constant/screens";
 // import playground for testing
 // import "./playground";
 
-const queryClient = new QueryClient();
 SplashScreen.preventAutoHideAsync();
+const queryClient = new QueryClient();
 
 export default function App() {
   const [initialRouteName, setInitialRouteName] = useState(SCREENS.HomePage.id);

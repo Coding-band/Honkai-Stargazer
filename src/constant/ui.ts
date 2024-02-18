@@ -103,3 +103,10 @@ export const dynamicHeightWallpaperSwiper = (
     : DeviceInfo.hasNotch() ? 370
     : 340
 );
+
+//對於登入頁面Webview高度動態設定
+export const dynamicHeightLoginWebview = (
+    DeviceInfo.hasDynamicIsland() ? "mt-[130px]"
+    : DeviceInfo.hasNotch() ? "mt-[110px]"
+    : "mt-[95px]"
+);

@@ -147,24 +147,23 @@ export default function UserCharDetail() {
 
             <View className="mt-12 z-40" style={{ alignItems: "center", gap: 4 }}>
               {/* 用戶名 */}
-              <Animated.Text
+              <Text
                 className="text-[#FFFFFF] font-[HY65] text-[16px] leading-5"
-                style={[globalStyles.textShadow, playerNameAnimatedStyle]}
+                style={[globalStyles.textShadow]}
               >
                 {inGameInfo?.player?.nickname}
-              </Animated.Text>
-              <Animated.Text
+              </Text>
+              <Text
                 className="text-[#FFFFFF] font-[HY65] text-[16px] leading-5"
-                style={[globalStyles.textShadow, playerName2AnimatedStyle]}
+                style={[globalStyles.textShadow]}
               >
                 {inGameInfo?.player?.nickname} · {charFullData?.name}
-              </Animated.Text>
+              </Text>
               {/* UUID & 伺服器 */}
               <UUIDBox uuid={profileUUID} />
             </View>
 
-            <Animated.Image
-          style={contentAnimatedStyle}
+            <Image
           source={CharacterImage[charId]?.fade}
           className="absolute w-full h-[580px]"
         />
