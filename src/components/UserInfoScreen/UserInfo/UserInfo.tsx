@@ -1,4 +1,4 @@
-import { View, Text, Dimensions, ScrollView, Share } from "react-native";
+import { View, Text, Dimensions, ScrollView, Platform, Share} from "react-native";
 import React, { useCallback, useRef, useState } from "react";
 import Header2 from "../../global/Header2/Header2";
 import { TouchableOpacity } from "react-native";
@@ -38,10 +38,12 @@ import { GestureResponderEvent } from "react-native-modal";
 import {Image as ImageRN} from 'react-native'
 import WallPaper from "../../global/WallPaper/WallPaper";
 import { LinearGradient } from "expo-linear-gradient";
+import * as MediaLibrary from "expo-media-library"
+import * as Sharing from "expo-sharing"
 type Props = {
   uuid: string;
 };
-type Share = {
+type ShareX = {
   onPress?: (e: GestureResponderEvent) => void;
 };
 
@@ -55,15 +57,28 @@ export default function UserInfo(props: Props) {
   const [isCapture, setCapture] = useState(false);
   const captureFull = () => {
     setCapture(true)
-    setTimeout(() => {
-      captureRef(captureFullRef).then(async (url : any) => {
-        try{
-          setCapture(false)
-          await Share.share({url: url});
-        }catch(error){
-          Toast.FailToCopy(language)
-        }
-      })
+    setTimeout(async () => {
+      try{
+        await captureRef(captureFullRef).then(async (uri : any) => {
+          if(Platform.OS === 'android'){
+            await MediaLibrary.requestPermissionsAsync().then(async (response : MediaLibrary.PermissionResponse) => {
+              if(response.granted){
+                await MediaLibrary.createAssetAsync(uri).then(async (result : any) => {
+                  setCapture(false)
+                  await Sharing.shareAsync(result.uri);
+                })
+              }else{
+                Toast(LOCALES[language].ErrorscreenshotPermissionRejected)
+              }
+            })
+          }else{
+            setCapture(false)
+            await Share.share({url: uri});
+          }
+        })
+      }catch(e : any){
+        console.log(e)
+      }
     }, 500)
   }
 
@@ -329,7 +344,7 @@ const InfoItem = ({
   </View>
 );
 
-const ShareBtn = (props : Share) => (
+const ShareBtn = (props : ShareX) => (
   <TouchableOpacity
     className="translate-x-[-2px]"
     onPress={props.onPress}

@@ -317,5 +317,9 @@ export const strings = {
   //20240218 - Common Errors
   ErrorDonationInBeta: "BETA不開放App内捐贈哦~",
   ErrorIdentifier: "暫時沒法找到該捐贈選項...",
-  ErrorPurchaseAlready: "請在一分鐘後重試"
+  ErrorPurchaseAlready: "請在一分鐘後重試",
+  //20240219 - Permissions and isNotch ...
+  ErrorscreenshotPermissionRejected: "申請獲取存取截圖權限被拒絕，請重新按下按鈕/到系統設定允許存取權限。",
+  UserCustomHasNotch: "瀏海屏適配",
+  UserCustomHasDynamicIsland: "動態島適配",
 };
