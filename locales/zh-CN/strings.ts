@@ -318,8 +318,8 @@ export const strings = {
   ErrorDonationInBeta: "BETA不开放App内捐赠哦~",
   ErrorIdentifier: "暂时没法找到该捐赠选项...",
   ErrorPurchaseAlready: "请在一分钟后重试",
-  //20240219 - Permission and isNotch ...
+  //20240219 - Permissions and isNotch ...
   ErrorscreenshotPermissionRejected: "申请获取存取截图权限被拒绝，请重新按下按钮/到系统设定允许存取权限。",
   UserCustomHasNotch: "浏海屏适配",
-  UserCustomHasDynamicIsland: "动态岛适配",
+  UserCustomHasDynamicIsland: "动态岛适配"
 };

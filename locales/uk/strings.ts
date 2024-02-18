@@ -317,5 +317,9 @@ export const strings = {
   //20240218 - Common Errors
   ErrorDonationInBeta: "Donation is not available in BETA",
   ErrorIdentifier: "Unable for find the donation...",
-  ErrorPurchaseAlready: "Please wait a minute and retry again"
+  ErrorPurchaseAlready: "Please wait a minute and retry again",
+  //20240219 - Permissions and isNotch ...
+  ErrorscreenshotPermissionRejected: "Permission for accessing screenshot was rejected, please press the button again/ grant the permission in system setting.",
+  UserCustomHasNotch: "Notch Adaptation",
+  UserCustomHasDynamicIsland: "Dynamic Island Adaptation"
 };

@@ -321,5 +321,5 @@ export const strings = {
   //20240219 - Permissions and isNotch ...
   ErrorscreenshotPermissionRejected: "申請獲取存取截圖權限被拒絕，請重新按下按鈕/到系統設定允許存取權限。",
   UserCustomHasNotch: "瀏海屏適配",
-  UserCustomHasDynamicIsland: "動態島適配",
+  UserCustomHasDynamicIsland: "動態島適配"
 };
