@@ -14,6 +14,7 @@ import TextButton from "../../../global/TextButton/TextButton";
 import { TextInput } from "react-native";
 import useLocalState from "../../../../hooks/useLocalState";
 import DeviceInfo from "react-native-device-info";
+import { initUIData } from "../../../../constant/ui";
 
 export default function UISetting() {
   const { language } = useAppLanguage();
@@ -65,6 +66,9 @@ export default function UISetting() {
               value={isCustomNotch}
               onChange={(v) => {
                 setCustomNotch(v)
+                setTimeout(() => {
+                  initUIData(isCustomDynamicIsland,v)
+                },500)
               }}
             />
 
@@ -84,6 +88,9 @@ export default function UISetting() {
               value={isCustomDynamicIsland}
               onChange={(v) => {
                 setCustomDynamicIsland(v)
+                setTimeout(() => {
+                  initUIData(v,isCustomNotch)
+                },500)
               }}
             />
         

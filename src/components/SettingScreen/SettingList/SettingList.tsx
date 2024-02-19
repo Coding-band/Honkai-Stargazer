@@ -22,7 +22,7 @@ export default function SettingList() {
     <ScrollView className={dynamicHeightSettingScrollView}>
       <View style={{ gap: 20 }} className="pb-48">
         <AccountSetting />
-        <UISetting/>
+        {/*<UISetting/>*/}
         <LanguageSetting />
         <PersonalSetting />
         <NotificationSetting />
