@@ -2,6 +2,7 @@ import { View, ScrollView } from "react-native";
 import React, { useState } from "react";
 import SettingGroup from "../SettingGroup/SettingGroup";
 import SettingItem from "../SettingGroup/SettingItem/SettingItem";
+import UISetting from "./UISetting/UISetting";
 import AccountSetting from "./AccountSetting/AccountSetting";
 import LanguageSetting from "./LanguageSetting/LanguageSetting";
 import PersonalSetting from "./PersonalSetting/PersonalSetting";
@@ -21,6 +22,7 @@ export default function SettingList() {
     <ScrollView className={dynamicHeightSettingScrollView}>
       <View style={{ gap: 20 }} className="pb-48">
         <AccountSetting />
+        <UISetting/>
         <LanguageSetting />
         <PersonalSetting />
         <NotificationSetting />
