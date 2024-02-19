@@ -1,17 +1,9 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Platform } from "react-native";
 import DeviceInfo from "react-native-device-info";
 
-let getDynamicIsland = DeviceInfo.hasDynamicIsland();
-let getNotch = DeviceInfo.hasNotch();
-
-export function initUIData(getDynamicIslandx : boolean , getNotchx : boolean){
-    if(getDynamicIslandx !== undefined){
-        getDynamicIsland = getDynamicIslandx;
-    }
-    if(getNotchx !== undefined){
-        getNotch = getNotchx;
-    }
-}
+const getDynamicIsland = DeviceInfo.hasDynamicIsland();
+const getNotch = (Platform.OS === 'ios' ? DeviceInfo.hasNotch() : true);
 
 //對於ScrollView高度的動態設定
 export const dynamicHeightScrollView = (
