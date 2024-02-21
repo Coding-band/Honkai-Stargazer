@@ -115,3 +115,9 @@ export const dynamicHeightLoginWebview = (
     : getNotch ? "mt-[110px]"
     : "mt-[95px]"
 );
+//對於篩選介面置中
+export const dynamicFilterCenter = (
+    getDynamicIsland ? "absolute bottom-28 translate-x-[-6px] h-[100px]"
+    : getNotch ? "absolute bottom-24 translate-x-[-6px] h-[100px]"
+    : "absolute bottom-16 translate-x-[-6px] h-[100px]"
+);

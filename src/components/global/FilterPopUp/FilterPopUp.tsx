@@ -8,6 +8,7 @@ import _ from "lodash";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
 import { useClickOutside } from "react-native-click-outside";
+import { dynamicFilterCenter } from "../../../constant/ui";
 
 type Props = {
   items: { value: string; name: string; icon: ExpoImage }[];
@@ -27,7 +28,7 @@ export default function FilterPopUp(props: Props) {
 
   return (
     <View
-      className="absolute bottom-16 translate-x-[-6px] h-[100px]"
+      className={dynamicFilterCenter}
       style={{ justifyContent: "flex-end" }}
     >
       <PopUpCard
