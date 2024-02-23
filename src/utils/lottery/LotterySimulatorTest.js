@@ -29,7 +29,7 @@ const itemRare4Char = [
     "佩拉","桑博","虎克","艾絲妲",
     "青雀","阿蘭","馭空","盧卡",
     "丹恆","寒鴉","雪衣","玲可",
-    "三月七"
+    "三月七","桂乃芬","米沙","停雲",
 ]
 
 //五星角色常駐
@@ -67,7 +67,68 @@ const headerRare5n = "\x1b[43m【5✦常駐】\x1b[0m"
 const headerRare5u = "\x1b[43m【5✦限定】\x1b[0m"
 
 //pullInfo : {"special_rare5": ["Ruan Mei"], "special_rare4": ["March 7th", "Tingyun", "Xueyi"]}
+
+/**
+ * 
+ * @param {object} pullInfo 
+ * @param {string} pullType 
+ * @param {*} pullCount 
+ */
 function makePulls(pullInfo, pullType, pullCount){
+    //暫存本次抽卡的紀錄
+    let pullArray = []
+    let pullNormalRate = pullNormalRateChar, pullPityRate = pullPityRateChar
+    let pullRate = pullNormalRate, pullPityOrNot = pullPityOrNotChar
+    let pullNormalSet = itemRare3, pullUpSet = itemRare3
+    let pullPityMax = (pullType === LIMIT_CHAR ? pullPityMaxChar : pullPityMaxLC)
+    let pullsAfterRare4 = 0, pullsAfterRare5 = 0
+    let isMustGetRare4  = false, isMustGetRare5  = false
+    let pulledItemType = "THREE"
+
+    const itemUpRare4 = ["桂乃芬","米沙","停雲"]
+    const itemUpRare5 = ["黑天鵝"]
+
+    for(let x = 0 ; x < 180 ; x++){
+        const randNum = Math.random(Date.now())
+        //75 + Math.random(Date.now())* 15 不應該出現 但爲了避免過高機率是89
+        if(randNum <= pullRate[0] && pullsAfterRare4 < 9 && pullsAfterRare5 < pullPityMax - 15 + Math.random(Date.now())* 15 ){
+            pulledItemType = "THREE";
+            pullNormalSet = itemRare3
+            pullUpSet = itemRare3
+        }else if(randNum <= pullRate[0] + pullRate[1] && pullsAfterRare5 < pullPityMax - 15 + Math.random(Date.now())* 15){
+            pulledItemType = "FOUR";
+            pullNormalSet = itemRare4Char.concat(itemRare4LC).filter((item) => !itemUpRare4.includes(item))
+            pullUpSet = itemUpRare4
+            isMustGetRare4 = !isMustGetRare4
+        }else{
+            pulledItemType = "FIVE";
+            pullNormalSet = itemRare5Char.filter((item) => !itemUpRare4.includes(item))
+            pullUpSet = itemUpRare5
+            isMustGetRare5 = !isMustGetRare5
+            pullRate = (isMustGetRare5 ? pullPityRate : pullNormalRate)
+        }
+
+        (pulledItemType === "FIVE" ? console.log("距離上一次5星 "+pullsAfterRare5) : "")
+
+        pullsAfterRare4 = (pulledItemType === "FOUR" ? 0 : pullsAfterRare4 + 1)
+        pullsAfterRare5 = (pulledItemType === "FIVE" ? 0 : pullsAfterRare5 + 1)
+        
+        const randPityOrNot = Math.random(Date.now())
+        const randIndex = Math.trunc(Math.random(Date.now()) * (
+            (isMustGetRare4 && pulledItemType === "FOUR" || isMustGetRare5 && pulledItemType === "FIVE" ? pullUpSet.length : (randPityOrNot < pullPityOrNot ? pullNormalSet.length : pullUpSet.length))
+        ));
+
+        pullArray.push((
+                pulledItemType === "THREE" && true ? headerRare3n
+                : (pulledItemType === "FOUR") ? ((isMustGetRare4) ? headerRare4u : (randPityOrNot < pullPityOrNot ? headerRare4n : headerRare4u)) 
+                : ((isMustGetRare5) ? headerRare5u : (randPityOrNot < pullPityOrNot ? headerRare5n : headerRare5u)) 
+            ) + ((randPityOrNot < pullPityOrNot) ? ((isMustGetRare4 && pulledItemType === "FOUR" || isMustGetRare5 && pulledItemType === "FIVE") ? pullUpSet : pullNormalSet) : pullUpSet)[randIndex]
+        )
+    }
+    
+    for(let c = 0 ; c < pullArray.length ; c++){
+        console.log((c < 100 ? "0" : "") + (c < 10 ? "0" : "") + c +"\t"+pullArray[c])
+    }
     
 }
 
@@ -98,12 +159,12 @@ function testPulls(){
             pullUpSet = itemRare3
         }else if(randNum <= pullRate[0] + pullRate[1] && pullsAfterRare5 < pullPityMax - 15 + Math.random(Date.now())* 15){
             pulledItemType = "FOUR";
-            pullNormalSet = itemRare4Char.concat(itemRare4LC)
+            pullNormalSet = itemRare4Char.concat(itemRare4LC).filter((item) => !itemUpRare4.includes(item))
             pullUpSet = itemUpRare4
             isMustGetRare4 = !isMustGetRare4
         }else{
             pulledItemType = "FIVE";
-            pullNormalSet = itemRare5Char
+            pullNormalSet = itemRare5Char.filter((item) => !itemUpRare4.includes(item))
             pullUpSet = itemUpRare5
             isMustGetRare5 = !isMustGetRare5
             pullRate = (isMustGetRare5 ? pullPityRate : pullNormalRate)
@@ -132,4 +193,6 @@ function testPulls(){
     }
 }
 
-testPulls()
+console.log(typeof {"this":"2","that":"2"})
+
+//testPulls()

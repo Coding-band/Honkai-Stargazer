@@ -27,6 +27,8 @@ import { ExpoImage } from "../types/image";
 import Button from "../components/global/Button/Button";
 import { LOCALES } from "../../locales";
 import Toast from "../utils/toast/Toast";
+import makePulls, { PullConfig, PullInfo, PullType } from "../utils/lottery/LotterySimulator";
+import useLocalState from "../hooks/useLocalState";
 
 type CharListItem = {
   id: CharacterName;
@@ -45,13 +47,38 @@ export default function LotteryScreen() {
   const [charCardListData, setCharCardListData] = useState<CharListItem[]>();
 
   const tmpPullList = ["Ruan Mei", "March 7th", "Tingyun", "Xueyi"]
+
+  //抽卡紀錄
+  const [pullRecord, setPullRecord] = useLocalState<Array<String>>(
+    "user-pull-simulator-record7",
+    []
+  )
+
+  const [pullConfig, setPullConfig] = useLocalState<PullConfig>(
+    "user-pull-simulator-config7",
+    {"isMustGetRare4": false, "isMustGetRare5": false, "pullsAfterRare4": 0, "pullsAfterRare5": 0}
+  )
+    
   
   function makeOnePull(){
     Toast("Make 1 time pull");
+    let pullInfo : PullInfo = new PullInfo();
+    pullInfo.special_rare4 = ["桂乃芬","米沙","停雲"]
+    pullInfo.special_rare5 = ["黑天鵝"]
+    
+    const result = makePulls(pullInfo,pullConfig, PullType.PULL_LIMIT_CHAR, 1)
+    setPullConfig(result["pullConfig"])
+    setPullRecord(pullRecord.concat(result["pullArray"]))
+    console.log(pullConfig)
+    console.log(pullRecord)
   }
 
   function makeTenPull(){
     Toast("Make 10 times pull");
+    let pullInfo : PullInfo = new PullInfo();
+    pullInfo.special_rare4 = ["桂乃芬","米沙","停雲"]
+    pullInfo.special_rare5 = ["黑天鵝"]
+    console.log(makePulls(pullInfo, PullType.PULL_LIMIT_CHAR, 10))
   }
 
   const handleCharPress = useCallback((charId: string, charName: string) => {
