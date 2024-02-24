@@ -61,7 +61,6 @@ export default function LotteryScreen() {
     
   
   function makeOnePull(){
-    Toast("Make 1 time pull");
     let pullInfo : PullInfo = new PullInfo();
     pullInfo.special_rare4 = ["桂乃芬","米沙","停雲"]
     pullInfo.special_rare5 = ["黑天鵝"]
@@ -69,8 +68,8 @@ export default function LotteryScreen() {
     const result = makePulls(pullInfo,pullConfig, PullType.PULL_LIMIT_CHAR, 1)
     setPullConfig(result["pullConfig"])
     setPullRecord(pullRecord.concat(result["pullArray"]))
-    console.log(pullConfig)
-    console.log(pullRecord)
+
+    Toast("獲得了 : "+result["pullArray"].map((item) => item.itemId)).toString();
   }
 
   function makeTenPull(){
@@ -78,7 +77,12 @@ export default function LotteryScreen() {
     let pullInfo : PullInfo = new PullInfo();
     pullInfo.special_rare4 = ["桂乃芬","米沙","停雲"]
     pullInfo.special_rare5 = ["黑天鵝"]
-    console.log(makePulls(pullInfo, PullType.PULL_LIMIT_CHAR, 10))
+        
+    const result = makePulls(pullInfo,pullConfig, PullType.PULL_LIMIT_CHAR, 10)
+    setPullConfig(result["pullConfig"])
+    setPullRecord(pullRecord.concat(result["pullArray"]))
+
+    Toast("獲得了 : "+result["pullArray"].map((item) => item.itemId)).toString();
   }
 
   const handleCharPress = useCallback((charId: string, charName: string) => {
