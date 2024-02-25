@@ -44,7 +44,7 @@ export const strings = {
   Map: "Mapa",
   Login: "Iniciar Sessão",
   Logout: "Desconectar-se",
-  Expedition: "Despachado.",
+  Expedition: "Exped.",
   ExpeditionFullName: "Expedição",
   Setting: "Configurações",
   MemoryOfChaos: "Memória do Caos",
@@ -315,11 +315,11 @@ export const strings = {
   DonateUs: "Doe-nos",
   ShareToOthers: "Desbravadores, o vasto universo está cheio de segredos infinitos e, em sua jornada para perseguir os segredos, um guia confiável irá ajudá-los! Stargazer não é apenas um Aplicativo de Assistência para Star Rail que inclui sugestões de desenvolvimento, consulta de dados, classificação de treinamento e outras funções, mas também um parceiro poderoso para sua jornada de exploração! Baixe agora e comece sua própria aventura interestelar!\nApp Store: ${AppStoreLink}\nPlay Store: ${PlayStoreLink}",
   //20240218 - Common Errors
-  ErrorDonationInBeta: "Donation is not available in BETA",
-  ErrorIdentifier: "Unable for find the donation...",
-  ErrorPurchaseAlready: "Please wait a minute and retry again",
+  ErrorDonationInBeta: "Doação não está disponível em BETA",
+  ErrorIdentifier: "Não foi possível encontrar a doação...",
+  ErrorPurchaseAlready: "Por favor, espere um pouco e tente novamente",
   //20240219 - Permissions and isNotch ...
-  ErrorscreenshotPermissionRejected: "Permission for accessing screenshot was rejected, please press the button again/ grant the permission in system setting.",
-  UserCustomHasNotch: "Notch Adaptation",
-  UserCustomHasDynamicIsland: "Dynamic Island Adaptation"
+  ErrorscreenshotPermissionRejected: "A permissão para acessar a captura de tela foi rejeitada, pressione o botão novamente/ conceda a permissão nas configurações do sistema.",
+  UserCustomHasNotch: "Adaptação de Notch",
+  UserCustomHasDynamicIsland: "Adaptação para Dynamic Island"
 };

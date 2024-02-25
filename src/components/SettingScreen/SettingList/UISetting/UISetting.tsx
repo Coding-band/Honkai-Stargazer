@@ -14,7 +14,6 @@ import TextButton from "../../../global/TextButton/TextButton";
 import { TextInput } from "react-native";
 import useLocalState from "../../../../hooks/useLocalState";
 import DeviceInfo from "react-native-device-info";
-import { initUIData } from "../../../../constant/ui";
 
 export default function UISetting() {
   const { language } = useAppLanguage();
@@ -51,6 +50,15 @@ export default function UISetting() {
           title={LOCALES[language].AccountSetup}
         >
           <SettingItem
+            type="none"
+            title={"Clean Caches"}
+            content={"Clean"}
+            onNavigate={() => {
+              console.log("功能未實裝")
+              console.log("清理缓存成功")
+            }}
+          />
+          {/*<SettingItem
               type="list"
               title={LOCALES[language].UserCustomHasNotch}
               list={[
@@ -93,7 +101,7 @@ export default function UISetting() {
                 },500)
               }}
             />
-        
+            */}
         </SettingGroup>
       </>
   );

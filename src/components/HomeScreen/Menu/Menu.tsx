@@ -21,6 +21,7 @@ import formatNumber from "../../../utils/format/formatNumber";
 import AboutTheApp from "../../SettingScreen/SettingList/SpecialThanksSetting/AboutTheApp1/AboutTheApp";
 import LotteryScreen from "../../../screens/LotteryScreen";
 import Toast from "../../../utils/toast/Toast";
+import { ENV } from "../../../../app.config";
 
 export default function Menu() {
   const navigation = useNavigation();
@@ -294,11 +295,16 @@ export default function Menu() {
       icon: SCREENS.LotteryPage.icon,
       onPress: () => {
         // @ts-ignore
-        navigation.navigate(SCREENS.LotteryPage.id, {
-          title: LOCALES[language].LotteryPage,
-          icon: StarOfDavid,
-          content: <LotteryScreen />,
-        });
+
+        if(ENV === "beta" || ENV === "production") {
+          Toast.StillDevelopingToast(language)
+        }else{
+          navigation.navigate(SCREENS.LotteryPage.id, {
+            title: LOCALES[language].LotteryPage,
+            icon: StarOfDavid,
+            content: <LotteryScreen />,
+          });
+        }
       },
       
     },
