@@ -163,28 +163,28 @@ const CharRelicScoreLbItem = React.memo(
           <View className="flex-row items-center" style={{ gap: 12 }}>
             {/* 遺器圖標 */}
             <View className="flex-row" style={{ gap: 6 }}>
-              <Image
+              <Image cachePolicy="none"
                 className="w-7 h-7"
                 // @ts-ignore
                 source={
                   Relic[officalRelicId[props.relicHeadSetId]]?.["icon" + 1]
                 }
               />
-              <Image
+              <Image cachePolicy="none"
                 className="w-7 h-7"
                 // @ts-ignore
                 source={
                   Relic[officalRelicId[props.relicHandsSetId]]?.["icon" + 2]
                 }
               />
-              <Image
+              <Image cachePolicy="none"
                 className="w-7 h-7"
                 // @ts-ignore
                 source={
                   Relic[officalRelicId[props.relicBodySetId]]?.["icon" + 3]
                 }
               />
-              <Image
+              <Image cachePolicy="none"
                 className="w-7 h-7"
                 // @ts-ignore
                 source={

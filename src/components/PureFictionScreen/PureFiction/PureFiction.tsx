@@ -86,7 +86,7 @@ export default function PureFiction() {
             width={46}
             height={46}
           >
-            <Image
+            <Image cachePolicy="none"
               source={require("../../../../assets/icons/Detail.svg")}
               className="w-6 h-3"
             />

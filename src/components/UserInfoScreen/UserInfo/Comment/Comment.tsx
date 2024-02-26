@@ -50,7 +50,7 @@ export default function Comment(props: Props) {
         style={{ flexDirection: "row", gap: 14 }}
       >
         <TouchableOpacity activeOpacity={1}>
-          <Image
+          <Image cachePolicy="none"
             className="w-9 h-9 rounded-full"
             source={CharacterImage[charId]?.icon}
           />

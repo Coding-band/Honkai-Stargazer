@@ -95,8 +95,7 @@ const LbTeamItem = React.memo(
         style={{ gap: 2, alignItems: "center" }}
         className="w-8"
       >
-        <Image
-          cachePolicy="none"
+        <Image cachePolicy="none"
           transition={200}
           className="w-6 h-6 rounded-full"
           // @ts-ignore

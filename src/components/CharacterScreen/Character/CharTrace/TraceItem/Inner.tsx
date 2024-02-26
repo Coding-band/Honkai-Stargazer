@@ -47,7 +47,7 @@ export default React.memo(
             }}
             className="w-[60px] h-[60px] bg-[#333] rounded-full border-2"
           >
-            <Image source={icon} className="w-9 h-9" />
+            <Image cachePolicy="none" source={icon} className="w-9 h-9" />
           </AnimatedView>
         </Shadow>
       </Pressable>

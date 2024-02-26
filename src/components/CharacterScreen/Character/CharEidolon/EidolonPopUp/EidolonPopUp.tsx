@@ -50,7 +50,7 @@ export default React.memo(function EidolonPopUp({ id, onClose }: Props) {
                     className="w-[60px] h-[60px] bg-[#333] rounded-full border-2 border-white"
                     style={{ justifyContent: "center", alignItems: "center" }}
                   >
-                    <Image
+                    <Image cachePolicy="none"
                       className="w-12 h-12"
                       // @ts-ignore
                       source={CharacterSoul[charId]["soul" + id]}

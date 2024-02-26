@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
 
 const AddIconComponent = () => {
   return (
-    <Image
+    <Image cachePolicy="none"
       className="translate-y-8"
       style={{ width: 13, height: 13 }}
       source={AddIcon}

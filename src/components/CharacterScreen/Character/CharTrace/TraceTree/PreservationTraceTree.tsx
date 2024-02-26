@@ -69,8 +69,8 @@ export default React.memo(function PreservationTraceTree() {
         }}
       >
         {/* 軀幹 (線條) */}
-        <Image source={TraceLine} style={{ width: 295, height: 367 }} />
-        <Image
+        <Image cachePolicy="none" source={TraceLine} style={{ width: 295, height: 367 }} />
+        <Image cachePolicy="none"
           className="absolute left-4 opacity-40 w-[300px] h-[300px]"
           source={Path["Preservation"].icon2}
         />

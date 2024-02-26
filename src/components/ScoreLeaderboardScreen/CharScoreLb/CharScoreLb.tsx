@@ -151,7 +151,7 @@ const CharScoreLbItem = React.memo(
         <View className="flex-row items-center" style={{ gap: 12 }}>
           {/* 光錐 */}
           <View>
-            <Image
+            <Image cachePolicy="none"
               className="w-7 h-7"
               source={Lightcone[officalLightconeId[props.lightconeId]]?.icon}
             />

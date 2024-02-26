@@ -348,7 +348,7 @@ export default React.memo(function UserCharAttribute() {
                       gap: 6,
                     }}
                   >
-                    <Image source={attr.icon} className="w-6 h-6" />
+                    <Image cachePolicy="none" source={attr.icon} className="w-6 h-6" />
                     <Text className="text-text text-[14px] font-[HY65]">
                       {attr.value}
                     </Text>
@@ -381,7 +381,7 @@ export default React.memo(function UserCharAttribute() {
                         gap: 6,
                       }}
                     >
-                      <Image source={attr.icon} className="w-6 h-6" />
+                      <Image cachePolicy="none" source={attr.icon} className="w-6 h-6" />
                       <Text className="text-text text-[14px] font-[HY65] leading-5">
                         {/* @ts-ignore */}
                         {LOCALES[language]["ATTR_" + attr.key.toUpperCase()]}

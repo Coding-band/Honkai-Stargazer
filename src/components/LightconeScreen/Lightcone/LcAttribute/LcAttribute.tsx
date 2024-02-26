@@ -101,7 +101,7 @@ export default function LcAttribute() {
                 onChange={handleFromLevelChange}
               />
             </View>
-            <Image
+            <Image cachePolicy="none"
               className="w-[10px] h-[10px] my-[5px] ml-[5px]"
               style={{ alignSelf: "flex-start" }}
               source={DownArrowIcon}
@@ -129,19 +129,19 @@ export default function LcAttribute() {
             {/* 屬性數值 */}
             <View className="mt-4" style={{ flexDirection: "row", gap: 12 }}>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={HPIcon} />
+                <Image cachePolicy="none" className="w-6 h-6" source={HPIcon} />
                 <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.hp.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={STRIcon} />
+                <Image cachePolicy="none" className="w-6 h-6" source={STRIcon} />
                 <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.atk.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={DEFIcon} />
+                <Image cachePolicy="none" className="w-6 h-6" source={DEFIcon} />
                 <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.def.toFixed(0)}
                 </Text>

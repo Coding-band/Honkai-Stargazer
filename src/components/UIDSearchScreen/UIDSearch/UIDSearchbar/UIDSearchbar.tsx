@@ -32,7 +32,7 @@ export default function UIDSearchbar(props: Props) {
                     keyboardType="number-pad"
                 />
                 <TouchableOpacity activeOpacity={0.35} onPress={props.onSubmit}>
-                    <Image style={{ width: 18, height: 18 }} source={SearchIcon} />
+                    <Image cachePolicy="none" style={{ width: 18, height: 18 }} source={SearchIcon} />
                 </TouchableOpacity>
             </View>
         </Button>

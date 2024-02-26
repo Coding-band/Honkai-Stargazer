@@ -17,7 +17,7 @@ export default React.memo(function RelicScore({ score }: { score: number }) {
         {score.toFixed(1)}
       </Text>
       {/* 評分 */}
-      <Image
+      <Image cachePolicy="none"
         source={RelicScoreBlurMap[scoreRange]}
         className="absolute w-12 h-[30px] translate-y-[-8px] translate-x-[-4px]"
       />

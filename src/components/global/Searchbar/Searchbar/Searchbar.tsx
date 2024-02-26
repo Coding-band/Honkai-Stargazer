@@ -37,7 +37,7 @@ export default function Searchbar(props: Props) {
         className="w-full h-full px-3"
         style={{ flexDirection: "row", alignItems: "center", gap: 9 }}
       >
-        <Image style={{ width: 18, height: 18 }} source={SearchIcon} />
+        <Image cachePolicy="none" style={{ width: 18, height: 18 }} source={SearchIcon} />
         <TextInput
           // @ts-ignore
           ref={inputRef}
@@ -51,7 +51,7 @@ export default function Searchbar(props: Props) {
           className="absolute right-1"
           activeOpacity={0}
         >
-          <Image style={{ width: 30, height: 30 }} source={CloseIcon} />
+          <Image cachePolicy="none" style={{ width: 30, height: 30 }} source={CloseIcon} />
         </TouchableOpacity>
       </View>
     </AnimatedButton>

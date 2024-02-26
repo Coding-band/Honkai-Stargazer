@@ -49,7 +49,7 @@ export default function Header2(props: Props) {
             className="w-[44px] h-[44px] bg-[#FFFFFF20]"
             style={{ justifyContent: "center", alignItems: "center" }}
           >
-            <Image
+            <Image cachePolicy="none"
               style={{ width: 40, height: 40 }}
               source={props.leftBtn === "back" ? BackBtn : CloseBtn}
             />

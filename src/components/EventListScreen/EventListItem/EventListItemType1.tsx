@@ -62,7 +62,7 @@ export default function EventListItemType1({
           </Text>
         </View>
       )}
-      <Image
+      <Image cachePolicy="none"
         transition={200}
         className="aspect-[360/108] flex-1"
         source={event?.img}

@@ -234,7 +234,7 @@ const RecordItem = React.memo((props: any) => {
                   style={{ gap: 2, alignItems: "center" }}
                   className="w-8"
                 >
-                  <Image
+                  <Image cachePolicy="none"
                     cachePolicy="none"
                     transition={200}
                     className="w-6 h-6 rounded-full"

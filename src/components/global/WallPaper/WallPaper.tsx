@@ -18,7 +18,7 @@ export default function WallPaper(props: Props) {
       // 把背景關掉
       source={
         wallPapers?.filter((w) => w?.id === props?.wallPaperId)[0]?.url ||
-        wallPapers?.filter((w) => w?.id === wallPaper.id)[0]?.url ||
+        wallPapers?.filter((w) => w?.id === wallPaper?.id)[0]?.url ||
         wallPaper?.url
       }
       // placeholder={blurhash}

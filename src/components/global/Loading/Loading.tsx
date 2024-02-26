@@ -26,7 +26,7 @@ export default function Loading() {
       style={{ justifyContent: "center", alignItems: "center" }}
     >
       <View style={{ gap: 21, alignItems: "center" }}>
-        <Image
+        <Image cachePolicy="none"
           className="w-[144px] h-[144px]"
           source={require("./images/01.png")}
         />

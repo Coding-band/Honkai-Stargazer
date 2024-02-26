@@ -61,7 +61,7 @@ export default function Button({
             )}
 
             {withArrow && (
-              <Image
+              <Image cachePolicy="none"
                 className="w-3 h-2 absolute right-4"
                 source={require("../../../../assets/icons/DownArrowSingleBlack.svg")}
               />
@@ -95,7 +95,7 @@ export default function Button({
             children
           )}
           {withArrow && (
-            <Image
+            <Image cachePolicy="none"
               className="w-3 h-2 absolute right-4"
               source={require("../../../../assets/icons/DownArrowSingleBlack.svg")}
             />
@@ -132,7 +132,7 @@ export default function Button({
                 children
               )}
               {withArrow && (
-                <Image
+                <Image cachePolicy="none"
                   className="w-3 h-2 absolute right-4"
                   source={require("../../../../assets/icons/DownArrowSingleBlack.svg")}
                 />
@@ -166,7 +166,7 @@ export default function Button({
               children
             )}
             {withArrow && (
-              <Image
+              <Image cachePolicy="none"
                 className="w-3 h-2 absolute right-4"
                 source={require("../../../../assets/icons/DownArrowSingleBlack.svg")}
               />

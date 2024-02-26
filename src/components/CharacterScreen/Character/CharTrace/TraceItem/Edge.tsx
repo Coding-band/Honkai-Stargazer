@@ -40,7 +40,7 @@ export default React.memo(
         ]}
         className="absolute w-8 h-8 bg-[#666] rounded-full"
       >
-        <Image source={icon} className="w-6 h-6" />
+        <Image cachePolicy="none" source={icon} className="w-6 h-6" />
       </AnimatedPressable>
     );
   }

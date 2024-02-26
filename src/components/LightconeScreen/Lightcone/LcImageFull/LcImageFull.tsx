@@ -34,7 +34,7 @@ export default function LcImageFull(props: Props) {
 
   return (
     <Animated.View style={imageAnimatedStyles}>
-      {/* <Image
+      {/* <Image cachePolicy="none"
         transition={200}
         style={{
           width: Dimensions.get("window").width,
@@ -51,7 +51,7 @@ export default function LcImageFull(props: Props) {
           transform: [{ scale: 0.8 }, { rotate: "0deg" }],
         }}
       >
-        <Image
+        <Image cachePolicy="none"
           transition={200}
           className="z-40 absolute w-full h-full"
           source={lcData?.imageFull}

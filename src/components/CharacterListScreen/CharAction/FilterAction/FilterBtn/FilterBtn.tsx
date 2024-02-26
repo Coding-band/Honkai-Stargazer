@@ -11,7 +11,7 @@ type Props = {
 export default function FilterBtn(props: Props) {
   return (
     <Button onPress={props.onPress} width={46} height={46}>
-      <Image
+      <Image cachePolicy="none"
         style={{
           width: 16,
           height: 16,

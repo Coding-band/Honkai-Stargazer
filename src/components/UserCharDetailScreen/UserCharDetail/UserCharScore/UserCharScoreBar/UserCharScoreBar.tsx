@@ -17,7 +17,7 @@ export default React.memo(function UserCharScoreBar(props: Props) {
 
   return (
     <View className="flex-row item-center" style={{ gap: 8 }}>
-      <Image source={AttributeImage?.[props.field]} className="w-6 h-6" />
+      <Image cachePolicy="none" source={AttributeImage?.[props.field]} className="w-6 h-6" />
       <View style={{ gap: 3 }}>
         <View className="flex-row justify-between">
           <Text className="text-text font-[HY65]">

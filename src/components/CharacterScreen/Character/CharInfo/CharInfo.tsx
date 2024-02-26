@@ -62,7 +62,7 @@ export default React.memo(function CharInfo() {
         <View style={{ flexDirection: "row", gap: 26 }}>
           {/* 命途 */}
           <View style={{ flexDirection: "row", gap: 8, alignItems: "center" }}>
-            <Image
+            <Image cachePolicy="none"
               // @ts-ignore
               source={Path[charData?.pathId]?.icon}
               style={{ width: 24, height: 24 }}
@@ -76,7 +76,7 @@ export default React.memo(function CharInfo() {
           </View>
           {/* 屬性 */}
           <View style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
-            <Image
+            <Image cachePolicy="none"
               // @ts-ignore
               source={CombatType[charData?.combatTypeId]?.icon}
               style={{ width: 24, height: 24 }}

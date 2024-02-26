@@ -83,7 +83,7 @@ export default function InviteList() {
           setEmojiIndex(Math.floor(Math.random() * 3));
         }}
       >
-        <Image
+        <Image cachePolicy="none"
           source={emojis[emojiIndex]}
           className="w-40 h-40 absolute -right-0 bottom-0"
         />

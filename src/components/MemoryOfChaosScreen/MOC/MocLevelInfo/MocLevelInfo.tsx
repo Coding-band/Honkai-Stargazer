@@ -80,14 +80,14 @@ const Layer = ({
             {floor}-{part}
           </Text>
           <View style={{ flexDirection: "row" }}>
-            <Image
+            <Image cachePolicy="none"
               className="w-4 h-4"
               source={
                 // @ts-ignore
                 CombatType[data["part" + part].weakness_suggest[0]]?.icon
               }
             />
-            <Image
+            <Image cachePolicy="none"
               className="w-4 h-4"
               source={
                 // @ts-ignore
@@ -123,7 +123,7 @@ const Mob = ({ children }: { children: any }) => (
           style={{ justifyContent: "center", alignItems: "center" }}
           colors={["#78767D", "#9F9FAA"]}
         >
-          <Image
+          <Image cachePolicy="none"
             cachePolicy="none"
             transition={200}
             // @ts-ignore
@@ -135,7 +135,7 @@ const Mob = ({ children }: { children: any }) => (
       <View style={{ flexDirection: "row" }}>
         {children.monster_weakness.map((w: any, i: number) => (
           // @ts-ignore
-          <Image key={i} className="w-4 h-4" source={CombatType[w]?.icon} />
+          <Image cachePolicy="none" key={i} className="w-4 h-4" source={CombatType[w]?.icon} />
         ))}
       </View>
     </View>
@@ -184,7 +184,7 @@ const FloorOptions = ({
         <Text className="text-text text-[16px] font-[HY65]">
           {floors[currentFloor]}
         </Text>
-        <Image source={require("./icons/More.svg")} className="w-3 h-1.5" />
+        <Image cachePolicy="none" source={require("./icons/More.svg")} className="w-3 h-1.5" />
       </TouchableOpacity>
       <View
         style={{

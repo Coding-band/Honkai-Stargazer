@@ -34,7 +34,7 @@ export default function FilterItem(props: Props) {
       className="w-full h-10 bg-white pl-2 pr-3"
       style={{ flexDirection: "row", alignItems: "center", gap: 10 }}
     >
-      <Image source={props.icon} className="w-5 h-5" />
+      <Image cachePolicy="none" source={props.icon} className="w-5 h-5" />
       <Text numberOfLines={1} className="font-[HY65] w-16 leading-5">
         {props.children}
       </Text>
@@ -45,7 +45,7 @@ export default function FilterItem(props: Props) {
         )}
         style={{ justifyContent: "center", alignItems: "center" }}
       >
-        {selected && <Image source={CheckIcon} className="w-2.5 h-2.5" />}
+        {selected && <Image cachePolicy="none" source={CheckIcon} className="w-2.5 h-2.5" />}
       </View>
     </TouchableOpacity>
   );

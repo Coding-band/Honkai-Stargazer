@@ -16,7 +16,7 @@ export default React.memo(function UserCharSkills() {
     inGameCharData && (
       <View className="mt-2" style={{ flexDirection: "row" }}>
         <View className="w-[72px] items-center">
-          <Image
+          <Image cachePolicy="none"
             className="w-9 h-9 mb-1"
             source={CharacterSkillMain[charId].skill1}
           />
@@ -28,7 +28,7 @@ export default React.memo(function UserCharSkills() {
           </Text>
         </View>
         <View className="w-[72px] items-center">
-          <Image
+          <Image cachePolicy="none"
             className="w-9 h-9 mb-1"
             source={CharacterSkillMain[charId].skill2}
           />
@@ -40,7 +40,7 @@ export default React.memo(function UserCharSkills() {
           </Text>
         </View>
         <View className="w-[72px] items-center">
-          <Image
+          <Image cachePolicy="none"
             className="w-9 h-9 mb-1"
             source={CharacterSkillMain[charId].skill3}
           />
@@ -52,7 +52,7 @@ export default React.memo(function UserCharSkills() {
           </Text>
         </View>
         <View className="w-[72px] items-center">
-          <Image
+          <Image cachePolicy="none"
             className="w-9 h-9 mb-1"
             source={CharacterSkillMain[charId].skill4}
           />
@@ -64,7 +64,7 @@ export default React.memo(function UserCharSkills() {
           </Text>
         </View>
         <View className="w-[72px] items-center">
-          <Image
+          <Image cachePolicy="none"
             className="w-9 h-9 mb-1"
             source={CharacterSkillMain[charId].skill6}
           />

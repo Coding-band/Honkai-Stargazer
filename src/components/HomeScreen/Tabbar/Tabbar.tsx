@@ -58,7 +58,7 @@ export default function Tabbar() {
             );
           }}
         >
-          <Image
+          <Image cachePolicy="none"
             className="w-full h-full"
             source={require("../../../../assets/ads/gs_ad.png")}
           />

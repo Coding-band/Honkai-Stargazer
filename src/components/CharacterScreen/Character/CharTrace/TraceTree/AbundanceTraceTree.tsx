@@ -67,8 +67,8 @@ export default React.memo(function AbundanceTraceTree() {
         }}
       >
         {/* 軀幹 (線條) */}
-        <Image source={TraceLine} style={{ width: 308, height: 366 }} />
-        <Image
+        <Image cachePolicy="none" source={TraceLine} style={{ width: 308, height: 366 }} />
+        <Image cachePolicy="none"
           className="absolute left-4 opacity-40 w-[300px] h-[300px]"
           source={Path["Abundance"].icon2}
         />

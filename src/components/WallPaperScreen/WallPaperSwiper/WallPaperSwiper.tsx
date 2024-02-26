@@ -68,7 +68,7 @@ export default memo(function WallPaperSwiper(props: Props) {
 
           return (
             <View key={k} style={styles.slideContainer}>
-              <Image
+              <Image cachePolicy="none"
                 contentFit={"cover"}
                 style={[styles.slide]}
                 source={w.url}

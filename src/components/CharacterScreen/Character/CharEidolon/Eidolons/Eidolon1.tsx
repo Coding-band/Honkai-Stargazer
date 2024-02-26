@@ -33,7 +33,7 @@ export default function Eidolon1({
       style={animationZ}
       className="absolute w-[150px] h-[150px] left-[3px] top-[22px]"
     >
-      <Image source={charEidolon1} className="w-full h-full absolute " />
+      <Image cachePolicy="none" source={charEidolon1} className="w-full h-full absolute " />
       <AnimatedImage
         contentFit="contain"
         source={eidolonBorder1}

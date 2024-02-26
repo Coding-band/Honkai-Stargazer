@@ -30,7 +30,7 @@ export default function PlayerCharacter() {
               });
             }}
           >
-            <Image
+            <Image cachePolicy="none"
               className="w-[30px] h-[30px]"
               source={
                 CharacterImage[officalCharId[char.id] as CharacterName].icon

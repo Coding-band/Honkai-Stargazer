@@ -17,7 +17,7 @@ export default function RightBtn({ onPress }: { onPress?: () => void }) {
       }}
       onPress={onPress}
     >
-      <Image style={{ width: 7.5, height: 15 }} source={RightIcon} />
+      <Image cachePolicy="none" style={{ width: 7.5, height: 15 }} source={RightIcon} />
     </TouchableOpacity>
   );
 }

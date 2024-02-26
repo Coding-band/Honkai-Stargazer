@@ -105,7 +105,7 @@ export default React.memo(function CharAttribute() {
                 onChange={handleFromLevelChange}
               />
             </View>
-            <Image
+            <Image cachePolicy="none"
               className="w-[10px] h-[10px] my-[5px] ml-[5px]"
               style={{ alignSelf: "flex-start" }}
               source={DownArrowIcon}
@@ -134,37 +134,37 @@ export default React.memo(function CharAttribute() {
             {/* 屬性數值 */}
             <View className="mt-4" style={{ flexDirection: "row", gap: 8 }}>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={AttributeImage.hp} />
+                <Image cachePolicy="none" className="w-6 h-6" source={AttributeImage.hp} />
                 <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.hp.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={AttributeImage.atk} />
+                <Image cachePolicy="none" className="w-6 h-6" source={AttributeImage.atk} />
                 <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.atk.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={AttributeImage.def} />
+                <Image cachePolicy="none" className="w-6 h-6" source={AttributeImage.def} />
                 <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.def.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={AttributeImage.spd} />
+                <Image cachePolicy="none" className="w-6 h-6" source={AttributeImage.spd} />
                 <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.speed.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={AttributeImage.sp} />
+                <Image cachePolicy="none" className="w-6 h-6" source={AttributeImage.sp} />
                 <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.energy.toFixed(0)}
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image className="w-6 h-6" source={AggroIcon} />
+                <Image cachePolicy="none" className="w-6 h-6" source={AggroIcon} />
                 <Text className="text-white text-[16px] font-[HY65]">
                   {attributes.aggro.toFixed(0)}
                 </Text>

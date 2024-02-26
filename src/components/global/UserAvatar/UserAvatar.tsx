@@ -19,7 +19,7 @@ export default function UserAvatar({
       onPress={onPress}
       activeOpacity={0.35}
     >
-      <Image
+      <Image cachePolicy="none"
         transition={200}
         source={image || AvatarIcon["Anonymous"]}
         placeholder={"LDI;uA?I01s.%P%4~X-;02^,?Gf8"}

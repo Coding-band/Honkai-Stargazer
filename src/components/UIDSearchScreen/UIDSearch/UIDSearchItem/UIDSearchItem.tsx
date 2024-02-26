@@ -24,7 +24,7 @@ export default function UIDSearchItem({ uuid }: { uuid: string }) {
       }}
     >
       <View style={{ flexDirection: "row", gap: 9 }}>
-        <Image
+        <Image cachePolicy="none"
           // @ts-ignore
           source={
             AvatarIcon[user?.player?.avatar?.icon?.match(/\d+/g)?.join("")] ||

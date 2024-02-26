@@ -11,7 +11,7 @@ export default function CombatTypeCardIcon({ value }: { value?: CombatType }) {
         className="top-1 w-5 h-5 rounded-full bg-[#00000040]"
         style={{ justifyContent: "center", alignItems: "center" }}
       >
-        <Image className="w-4 h-3.5" source={CombatTypeMap[value].icon} />
+        <Image cachePolicy="none" className="w-4 h-3.5" source={CombatTypeMap[value].icon} />
       </View>
     )
   );

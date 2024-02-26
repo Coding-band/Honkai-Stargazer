@@ -28,7 +28,7 @@ export default function CommentUserAvatar(props: Props) {
         });
       }}
     >
-      <Image className="w-9 h-9" source={props.user?.avatar_url} />
+      <Image cachePolicy="none" className="w-9 h-9" source={props.user?.avatar_url} />
     </TouchableOpacity>
   );
 }

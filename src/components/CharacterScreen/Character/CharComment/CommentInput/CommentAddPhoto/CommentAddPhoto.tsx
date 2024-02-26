@@ -31,7 +31,7 @@ export default function CommentToolBox({
         className="w-8 h-8"
         activeOpacity={0.35}
       >
-        <Image
+        <Image cachePolicy="none"
           className="w-full h-full"
           source={require("./icons/SendBtn.svg")}
         ></Image>

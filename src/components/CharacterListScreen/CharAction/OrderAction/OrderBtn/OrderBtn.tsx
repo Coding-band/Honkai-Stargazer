@@ -26,7 +26,7 @@ export default function OrderBtn({
           }}
           style={{ justifyContent: "center", alignItems: "center" }}
         >
-          <Image
+          <Image cachePolicy="none"
             style={{
               width: 18,
               height: 18,

@@ -39,7 +39,7 @@ export default function EpdtListItem(props: Props) {
             >
               <View style={{ gap: 8, flexDirection: "row" }}>
                 {/* icon */}
-                <Image
+                <Image cachePolicy="none"
                   className="w-10 h-10 rounded-full bg-[#FFFFFF60]"
                   source={{ uri: props.icon }}
                 ></Image>
@@ -68,7 +68,7 @@ export default function EpdtListItem(props: Props) {
                   {/* 角色 */}
                   <View style={{ flexDirection: "row", gap: 4 }}>
                     {props.avatars?.map((avatar, i) => (
-                      <Image
+                      <Image cachePolicy="none"
                         key={i}
                         className="w-5 h-5 rounded-full"
                         source={{ uri: avatar }}

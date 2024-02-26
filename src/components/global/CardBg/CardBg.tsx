@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 
 export default function CardBg({ rare }: { rare: number }) {
   return (
-    <Image
+    <Image cachePolicy="none"
       source={Bgs[rare]}
       className="w-[116px] h-[116px] absolute -left-5 -top-1"
       contentFit="contain"

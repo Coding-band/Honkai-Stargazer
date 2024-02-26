@@ -46,7 +46,7 @@ export default React.memo(function LightConeCard(props: Props) {
           }}
         >
           {/* 光錐圖標 */}
-          <Image
+          <Image cachePolicy="none"
             transition={200}
             style={{ width: 72, height: 72 }}
             source={props.image}

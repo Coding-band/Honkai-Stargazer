@@ -19,7 +19,7 @@ export default React.memo(function LightconePath({
 
   return (
     <View className="mt-2" style={{ flexDirection: "row", gap: 4 }}>
-      <Image
+      <Image cachePolicy="none"
         // @ts-ignore
         source={Path[lcJsonData.path].icon}
         style={{ width: 24, height: 24 }}

@@ -42,7 +42,7 @@ export default function LcInfo() {
       >
         <View style={{ flexDirection: "row", gap: 26 }}>
           <View style={{ flexDirection: "row", gap: 8 }}>
-            <Image
+            <Image cachePolicy="none"
               // @ts-ignore
               source={Path[lcData?.pathId].icon}
               style={{ width: 24, height: 24 }}

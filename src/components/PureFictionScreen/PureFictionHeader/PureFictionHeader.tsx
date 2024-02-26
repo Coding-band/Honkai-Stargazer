@@ -76,7 +76,7 @@ export default function PureFictionHeader({
 
 const StatBtn = ({ onPress }: { onPress: () => void }) => (
   <TouchableOpacity onPress={onPress}>
-    <Image
+    <Image cachePolicy="none"
       style={{ width: 40, height: 40 }}
       source={require("./icons/Stat.svg")}
     />

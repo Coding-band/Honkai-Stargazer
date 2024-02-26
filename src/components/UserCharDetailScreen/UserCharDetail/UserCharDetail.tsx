@@ -180,7 +180,7 @@ export default function UserCharDetail() {
               <UUIDBox uuid={profileUUID} />
             </View>
 
-            <Image
+            <Image cachePolicy="none"
           source={CharacterImage[charId]?.fade}
           className="absolute w-full h-[580px]"
         />
@@ -231,7 +231,7 @@ const ShareBtn = React.memo((props : ShareX) => (
     className="translate-x-[-2px]"
     onPress={props.onPress}
   >
-    <Image
+    <Image cachePolicy="none"
       style={{ width: 40, height: 40 }}
       source={require("../../../../assets/icons/Share.svg")}
     />

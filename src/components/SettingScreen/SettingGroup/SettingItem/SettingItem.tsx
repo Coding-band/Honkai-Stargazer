@@ -63,7 +63,7 @@ export default function SettingItem(props: Props) {
                       ?.name
                   }
                 </Text>
-                <Image
+                <Image cachePolicy="none"
                   source={ArrowDown}
                   className="w-3 h-[14px] absolute right-[14px]"
                 />
@@ -87,7 +87,7 @@ export default function SettingItem(props: Props) {
             <Text className="text-[14px] font-[HY65] leading-5">
               {props.content || LOCALES[language].Navigate}
             </Text>
-            <Image
+            <Image cachePolicy="none"
               source={ArrowRight}
               className="w-3 h-[14px] absolute right-[14px]"
             />

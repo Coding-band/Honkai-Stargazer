@@ -17,7 +17,7 @@ export default function LeftBtn({ onPress }: { onPress?: () => void }) {
       }}
       onPress={onPress}
     >
-      <Image style={{ width: 7.5, height: 15 }} source={LeftIcon} />
+      <Image cachePolicy="none" style={{ width: 7.5, height: 15 }} source={LeftIcon} />
     </TouchableOpacity>
   );
 }

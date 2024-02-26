@@ -56,7 +56,7 @@ export default React.memo(function LightconeAttribute({
           (attr) =>
             attr.value && (
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Image source={attr.icon} className="w-6 h-6" />
+                <Image cachePolicy="none" source={attr.icon} className="w-6 h-6" />
                 <Text className="text-text text-[14px] font-[HY65]">
                   {" "}
                   {attr.value}

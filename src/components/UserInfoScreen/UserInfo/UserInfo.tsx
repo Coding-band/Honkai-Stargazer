@@ -349,7 +349,7 @@ const ShareBtn = (props : ShareX) => (
     className="translate-x-[-2px]"
     onPress={props.onPress}
   >
-    <Image
+    <Image cachePolicy="none"
       style={{ width: 40, height: 40 }}
       source={require("../../../../assets/icons/Share.svg")}
     />

@@ -41,7 +41,7 @@ export default React.memo(function CharImageFull(props: Props) {
         ...imageAnimatedStyles,
       }}
     >
-      <Image
+      <Image cachePolicy="none"
         transition={200}
         style={{
           width: Dimensions.get("window").width,

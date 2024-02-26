@@ -207,7 +207,7 @@ export default React.memo(function UserInfoCharacters(props: Props , {isCapture}
                         }}
                       >
                         <View>
-                          <Image
+                          <Image cachePolicy="none"
                             className="w-9 h-9"
                             // @ts-ignore
                             source={Lightcone?.[char.light_cone?.id]?.icon}
@@ -275,7 +275,7 @@ export default React.memo(function UserInfoCharacters(props: Props , {isCapture}
                             }}
                           >
                             <View>
-                              <Image
+                              <Image cachePolicy="none"
                                 className="w-9 h-9"
                                 // @ts-ignore
                                 source={Lightcone?.[char.light_cone?.id]?.icon}
@@ -355,13 +355,13 @@ const MoreBtn = ({ onPress }: { onPress: () => void }) => {
       activeOpacity={0.35}
       onPress={onPress}
     >
-      <Image className="w-3 h-3" source={require("./icons/More.svg")} />
+      <Image cachePolicy="none" className="w-3 h-3" source={require("./icons/More.svg")} />
     </TouchableOpacity>
   );
 };
 
 const Divider = () => (
-  <Image
+  <Image cachePolicy="none"
     source={require("./icons/Divider.svg")}
     className="w-[340px] h-[13px] "
   />

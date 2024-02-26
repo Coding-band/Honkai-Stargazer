@@ -5,7 +5,7 @@ import ScoreRangeFontMap from "./ScoreRangeFontMap";
 
 export default function ScoreRangeFont({ scoreRange }: { scoreRange: string }) {
   return (
-    <Image
+    <Image cachePolicy="none"
       className="w-12 h-8"
       source={ScoreRangeFontMap[scoreRange]}
       contentFit="contain"

@@ -103,7 +103,7 @@ export default function CommentBox(props: Props) {
             className="w-full pt-[32px] pb-[16px]"
             style={{ alignItems: "center", gap: 16 }}
           >
-            <Image
+            <Image cachePolicy="none"
               source={translation.value.y < 0 ? DownArrow : UpArrow}
               className="w-[12px] h-[12px]"
             />

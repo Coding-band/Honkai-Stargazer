@@ -69,8 +69,8 @@ export default React.memo(function NihilityTraceTree() {
         }}
       >
         {/* 軀幹 (線條) */}
-        <Image source={TraceLine} style={{ width: 299, height: 360 }} />
-        <Image
+        <Image cachePolicy="none" source={TraceLine} style={{ width: 299, height: 360 }} />
+        <Image cachePolicy="none"
           className="absolute left-4 opacity-40 w-[300px] h-[300px]"
           source={Path["Nihility"].icon2}
         />

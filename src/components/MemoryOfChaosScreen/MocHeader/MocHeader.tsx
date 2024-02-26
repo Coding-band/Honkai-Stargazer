@@ -72,7 +72,7 @@ export default function MocHeader({ scrollHandler }: { scrollHandler: any }) {
 
 const StatBtn = ({ onPress }: { onPress: () => void }) => (
   <TouchableOpacity onPress={onPress}>
-    <Image
+    <Image cachePolicy="none"
       style={{ width: 40, height: 40 }}
       source={require("./icons/Stat.svg")}
     />

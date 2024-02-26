@@ -39,7 +39,7 @@ const Options = ({
         <Text className="text-text2 text-[16px] font-[HY65] leading-5">
           {values.filter((v) => v.id === current.id)[0]?.name}
         </Text>
-        <Image
+        <Image cachePolicy="none"
           source={require("../../../../assets/icons/More.svg")}
           className="w-3 h-1.5"
         />

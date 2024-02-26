@@ -68,7 +68,7 @@ export default React.memo(function RelicItem({
               alignItems: "center",
             }}
           >
-            <Image
+            <Image cachePolicy="none"
               transition={200}
               className="w-[30px] h-[30px]"
               // @ts-ignore
@@ -92,7 +92,7 @@ export default React.memo(function RelicItem({
       {selected ? (
         <View className="w-[200px]" style={{ gap: 4 }}>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
-            <Image
+            <Image cachePolicy="none"
               className="w-[24px] h-[24px]"
               // @ts-ignore
               source={AttributeImage[userRelicData.main_affix.field]}
@@ -113,7 +113,7 @@ export default React.memo(function RelicItem({
               <View
                 style={{ flexDirection: "row", alignItems: "center", gap: 6 }}
               >
-                <Image
+                <Image cachePolicy="none"
                   className="w-[24px] h-[24px]"
                   // @ts-ignore
                   source={AttributeImage[sub.field]}
@@ -141,7 +141,7 @@ export default React.memo(function RelicItem({
           >
             {/* 主詞條 */}
             <View style={{ flexDirection: "row" }}>
-              <Image
+              <Image cachePolicy="none"
                 className="w-[20px] h-[20px]"
                 // @ts-ignore
                 source={AttributeImage[userRelicData.main_affix.field]}
@@ -160,7 +160,7 @@ export default React.memo(function RelicItem({
                 className="w-[61px]"
                 style={{ flexDirection: "row", alignItems: "center" }}
               >
-                <Image
+                <Image cachePolicy="none"
                   className="w-[20px] h-[20px]"
                   // @ts-ignore
                   source={AttributeImage[sub.field]}

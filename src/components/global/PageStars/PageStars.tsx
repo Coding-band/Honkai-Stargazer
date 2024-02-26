@@ -13,7 +13,7 @@ export default function PageStars(props: Props) {
   return (
     <View className="ml-1 my-[-8px]" style={{ flexDirection: "row" }}>
       {range(props.count).map((i) => (
-        <Image
+        <Image cachePolicy="none"
           key={i}
           style={{ width: 40, height: 40, marginLeft: -8 }}
           source={StarIcon}

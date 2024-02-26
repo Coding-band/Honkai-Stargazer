@@ -51,7 +51,7 @@ export default function MaterialCard(props: Props) {
             alignItems: "center",
           }}
         >
-          <Image
+          <Image cachePolicy="none"
             transition={200}
             style={{ width: 46, height: 46, marginVertical: 5 }}
             source={props.image}

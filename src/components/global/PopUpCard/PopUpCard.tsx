@@ -34,7 +34,7 @@ export default function PopUpCard(props: Props) {
             props.onClose && props.onClose();
           }}
         >
-          <Image
+          <Image cachePolicy="none"
             style={{ width: 40, height: 40 }}
             source={require("../../../../assets/icons/CloseBlack.svg")}
           />

@@ -129,7 +129,7 @@ export default function LotteryScreen() {
         }
         rightBtn={<LotteryRecordBtn />}
       />
-      <Image
+      <Image cachePolicy="none"
         style={[{ height: 570 }]}
         source={require("../../assets/images/character_splash/ruan_mei_splash.webp")}
       />

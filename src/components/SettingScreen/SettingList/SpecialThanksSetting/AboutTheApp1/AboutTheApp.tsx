@@ -38,7 +38,7 @@ export default function AboutTheApp() {
           {LOCALES[language].AboutTheAppContent}
         </HtmlText>
       </HtmlTextContext.Provider>
-      <Image source={require("../../../../../../assets/images/codingband-banner.png")} className="w-full h-48" contentFit="contain" />
+      <Image cachePolicy="none" source={require("../../../../../../assets/images/codingband-banner.png")} className="w-full h-48" contentFit="contain" />
       <View className="flex-row items-center justify-around mt-6">
         <TouchableOpacity
           activeOpacity={0.65}

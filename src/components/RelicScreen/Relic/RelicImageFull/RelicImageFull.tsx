@@ -35,7 +35,7 @@ export default function RelicImageFull(props: Props) {
 
   return (
     <Animated.View style={imageAnimatedStyles}>
-      {/* <Image
+      {/* <Image cachePolicy="none"
         transition={200}
         style={{
           width: Dimensions.get("window").width,
@@ -57,25 +57,25 @@ export default function RelicImageFull(props: Props) {
           gap: 20,
         }}
       >
-        <Image
+        <Image cachePolicy="none"
           transition={200}
           className="z-40 w-36 h-36"
           source={relicData?.imageFull?.[0]}
           contentFit={"contain"}
         />
-        <Image
+        <Image cachePolicy="none"
           transition={200}
           className="z-40 w-36 h-36"
           source={relicData?.imageFull?.[1]}
           contentFit={"contain"}
         />
-        <Image
+        <Image cachePolicy="none"
           transition={200}
           className="z-40 w-36 h-36"
           source={relicData?.imageFull?.[2]}
           contentFit={"contain"}
         />
-        <Image
+        <Image cachePolicy="none"
           transition={200}
           className="z-40 w-36 h-36"
           source={relicData?.imageFull?.[3]}

@@ -43,7 +43,7 @@ export default function HeaderAlpha(props: Props) {
           onPress={handleClose}
           className="absolute left-[17px] bottom-[14px] rounded-full overflow-hidden z-50"
         >
-          <Image
+          <Image cachePolicy="none"
               style={{ width: 40, height: 40 }}
               source={props.leftBtn === "back" ? BackBtn : CloseBtn}
             />

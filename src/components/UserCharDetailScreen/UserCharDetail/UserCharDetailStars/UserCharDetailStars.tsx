@@ -13,7 +13,7 @@ export default function UserCharDetailStars(props: Props) {
   return (
     <View className="ml-1 my-[-8px]" style={{ flexDirection: "row" }}>
       {range(props.count).map((i) => (
-        <Image
+        <Image cachePolicy="none"
           key={i}
           style={{ width: 24, height: 24, marginLeft: -4 }}
           source={StarIcon}

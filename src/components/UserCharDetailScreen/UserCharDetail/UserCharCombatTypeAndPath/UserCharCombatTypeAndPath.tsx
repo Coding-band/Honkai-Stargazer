@@ -18,7 +18,7 @@ export default React.memo(function UserCharCombatTypeAndPath() {
   return (
     <View className="mt-2" style={{ flexDirection: "row", gap: 26 }}>
       <View style={{ flexDirection: "row", gap: 4 }}>
-        <Image
+        <Image cachePolicy="none"
           // @ts-ignore
           source={Path[charJsonData?.path].icon}
           style={{ width: 24, height: 24 }}
@@ -28,7 +28,7 @@ export default React.memo(function UserCharCombatTypeAndPath() {
         </Text>
       </View>
       <View style={{ flexDirection: "row", gap: 4 }}>
-        <Image
+        <Image cachePolicy="none"
           // @ts-ignore
           source={CombatType[charJsonData?.element].icon}
           style={{ width: 24, height: 24 }}

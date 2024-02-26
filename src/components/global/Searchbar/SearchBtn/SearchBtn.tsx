@@ -12,7 +12,7 @@ type Props = {
 export default function SearchBtn(props: Props) {
   return (
     <Button width={46} height={46} onPress={props.onPress}>
-      <Image style={{ width: 18, height: 18 }} source={SearchIcon} />
+      <Image cachePolicy="none" style={{ width: 18, height: 18 }} source={SearchIcon} />
     </Button>
   );
 }
