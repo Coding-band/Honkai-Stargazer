@@ -60,7 +60,6 @@ export default React.memo(function CharCard(props: Props) {
         > 
           {/* 角色頭像 */}
           <Image cachePolicy="none"
-            cachePolicy="none"
             transition={200}
             style={{ width: 80, height: 80 }}
             source={props.image}

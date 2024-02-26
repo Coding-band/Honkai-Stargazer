@@ -235,7 +235,6 @@ const RecordItem = React.memo((props: any) => {
                   className="w-8"
                 >
                   <Image cachePolicy="none"
-                    cachePolicy="none"
                     transition={200}
                     className="w-6 h-6 rounded-full"
                     // @ts-ignore

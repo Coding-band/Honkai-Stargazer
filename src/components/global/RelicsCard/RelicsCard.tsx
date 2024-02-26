@@ -38,7 +38,6 @@ export default React.memo(function RelicsCard(props: Props) {
       >
         {/* 圖片 */}
         <Image cachePolicy="none"
-          cachePolicy="none"
           transition={200}
           style={{ width: 55, height: 55 }}
           source={props.image}

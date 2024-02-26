@@ -124,7 +124,6 @@ const Mob = ({ children }: { children: any }) => (
           colors={["#78767D", "#9F9FAA"]}
         >
           <Image cachePolicy="none"
-            cachePolicy="none"
             transition={200}
             // @ts-ignore
             source={MonsterImage[children.monster_name]?.icon}

@@ -35,7 +35,6 @@ export default function PlayerCharacter() {
               source={
                 CharacterImage[officalCharId[char.id] as CharacterName].icon
               }
-              cachePolicy="none"
             />
           </TouchableOpacity>
         ))
