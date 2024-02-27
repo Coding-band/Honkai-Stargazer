@@ -170,12 +170,12 @@ export default function CharList() {
         style={{
           flexDirection: "row",
           flexWrap: "wrap",
-          gap: 11,
+          rowGap:8,
           justifyContent: "center",
         }}
         className="pb-60"
       >
-        {charCardListJSX}
+      {charCardListJSX}
       </View>
     </ScrollView>
   );

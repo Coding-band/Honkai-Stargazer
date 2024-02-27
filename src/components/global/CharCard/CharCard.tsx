@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Dimensions, PixelRatio } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image, ImageSource } from "expo-image";
@@ -30,10 +30,17 @@ type Props = {
 
 export default React.memo(function CharCard(props: Props) {
   //   const animation = useSpring({ from: { opacity: 0.25 }, to: { opacity: 1 } });
+  const itemMaxWidth = 80;
+  const itemPadding = 6;
+  const dimension = Dimensions.get('window');
+  const totalAvailableWidth = (dimension.width - 8*2);
+  const itemInRow = Math.trunc(totalAvailableWidth / itemMaxWidth)
+  const oneItemWidth = itemMaxWidth + (((totalAvailableWidth % itemMaxWidth ) / itemInRow) )
 
   return (
     <TouchableOpacity
       activeOpacity={0.65}
+      style={{paddingLeft: itemPadding, paddingRight: itemPadding, width : oneItemWidth}}
       onPress={() => {
         props.onPress && props.onPress(props.id, props.name);
       }}
@@ -56,12 +63,11 @@ export default React.memo(function CharCard(props: Props) {
       >
         <View
           //   style={animation}
-          className={cn("w-20")}
         > 
           {/* 角色頭像 */}
           <Image cachePolicy="none"
             transition={200}
-            style={{ width: 80, height: 80 }}
+            style={{ width: oneItemWidth-itemPadding, height: oneItemWidth-itemPadding }}
             source={props.image}
           />
           {/* 角色名稱 */}
