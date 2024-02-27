@@ -142,7 +142,7 @@ export default function LcList() {
         style={{
           flexDirection: "row",
           flexWrap: "wrap",
-          columnGap: 11,
+          rowGap: 8,
           justifyContent: "center",
         }}
         className="pb-60"
