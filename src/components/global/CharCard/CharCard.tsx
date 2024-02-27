@@ -37,6 +37,8 @@ export default React.memo(function CharCard(props: Props) {
   const itemInRow = Math.trunc(totalAvailableWidth / itemMaxWidth)
   const oneItemWidth = itemMaxWidth + (((totalAvailableWidth % itemMaxWidth ) / itemInRow) )
 
+  //console.log(dimension.width +" | "+totalAvailableWidth+" | "+itemInRow+ " | "+(totalAvailableWidth % itemMaxWidth)+ " | "+oneItemWidth2)
+  
   return (
     <TouchableOpacity
       activeOpacity={0.65}

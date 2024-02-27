@@ -23,15 +23,16 @@ type Props = {
 export default React.memo(function RelicsCard(props: Props) {
   //   const animation = useSpring({ from: { opacity: 0.25 }, to: { opacity: 1 } });
   const itemMaxWidth = 55*1.4;
-  const itemPadding = 10;
+  const itemPadding = 5;
   const dimension = Dimensions.get('window');
   const totalAvailableWidth = (dimension.width - 8*2);
   const itemInRow = Math.trunc(totalAvailableWidth / itemMaxWidth)
-  const oneItemWidth = itemMaxWidth + (((totalAvailableWidth % itemMaxWidth ) / itemInRow) - 2)
-  //console.log(itemInRow)
-  //have issue in width = 84.40413356574761
+  const oneItemWidth = itemMaxWidth + (((totalAvailableWidth % itemMaxWidth ) / itemInRow) ) - itemPadding
+  console.log(totalAvailableWidth)
+  //have issue in width = 84.40413356574761 ~ 84.78599512702031
+  
   return (
-    <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
+    <TouchableOpacity activeOpacity={0.65} onPress={props.onPress} style={{paddingLeft : itemPadding}}>
       {/* <Shadow distance={6} offset={[4, 4]} startColor="#00000025"> */}
       <View style={{width : oneItemWidth}}>
         <CardBg rare={props.rare} width={oneItemWidth*2/1.4}/>
