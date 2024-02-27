@@ -2,11 +2,12 @@ import { View, Text } from "react-native";
 import React from "react";
 import { Image } from "expo-image";
 
-export default function CardBg({ rare }: { rare: number }) {
+export default function CardBg({ rare, width }: { rare: number, width:number }) {
   return (
     <Image cachePolicy="none"
       source={Bgs[rare]}
-      className="w-[116px] h-[116px] absolute -left-5 -top-1"
+      className="absolute -left-5 -top-1"
+      style={{width: width, height:width}}
       contentFit="contain"
     />
   );
