@@ -66,6 +66,8 @@ export default function CommentBox(props: Props) {
       isPressed.value = false;
     });
 
+
+
   const animatedStyles = useAnimatedStyle(() => {
     return {
       transform: [{ scale: withSpring(isPressed.value ? 1.2 : 1) }],
@@ -95,6 +97,10 @@ export default function CommentBox(props: Props) {
     <Pressable
       onPress={() => {
         Keyboard.dismiss();
+        translation.value = {
+          x: -translation.value.x,
+          y: -translation.value.y,
+        };
       }}
     >
       <GestureDetector gesture={gesture}>
