@@ -1,5 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { Platform } from "react-native";
+import { Dimensions, Platform } from "react-native";
 import DeviceInfo from "react-native-device-info";
 
 const getDynamicIsland = DeviceInfo.hasDynamicIsland();
@@ -120,4 +120,11 @@ export const dynamicFilterCenter = (
     getDynamicIsland ? "absolute bottom-28 translate-x-[-6px] h-[100px]"
     : getNotch ? "absolute bottom-24 translate-x-[-6px] h-[100px]"
     : "absolute bottom-16 translate-x-[-6px] h-[100px]"
+);
+
+//對於抽卡頁面底部預留高度動態設定
+export const dynamicHeightBottomBar = (
+    (Dimensions.get('screen').height - Dimensions.get('window').height > 0 ? 48
+    : 12    
+    )
 );

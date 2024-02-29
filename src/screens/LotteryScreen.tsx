@@ -29,6 +29,7 @@ import { LOCALES } from "../../locales";
 import Toast from "../utils/toast/Toast";
 import makePulls, { PullConfig, PullInfo, PullType } from "../utils/lottery/LotterySimulator";
 import useLocalState from "../hooks/useLocalState";
+import { dynamicHeightBottomBar } from "../constant/ui";
 
 type CharListItem = {
   id: CharacterName;
@@ -46,7 +47,7 @@ export default function LotteryScreen() {
   const [selectedChild, setSelectedChild] = useState("charLottery1");
   const [charCardListData, setCharCardListData] = useState<CharListItem[]>();
 
-  const tmpPullList = ["Ruan Mei", "March 7th", "Tingyun", "Xueyi"]
+  const tmpPullList = ["Black Swan", "Guinaifen", "Misha", "Tingyun"]
 
   //抽卡紀錄
   const [pullRecord, setPullRecord] = useLocalState<Array<String>>(
@@ -82,7 +83,7 @@ export default function LotteryScreen() {
     setPullConfig(result["pullConfig"])
     setPullRecord(pullRecord.concat(result["pullArray"]))
 
-    Toast("獲得了 : "+result["pullArray"].map((item) => item.itemId)).toString();
+    Toast("獲得了 : "+result["pullArray"].map((item: { itemId: any; }) => item.itemId)).toString();
   }
 
   const handleCharPress = useCallback((charId: string, charName: string) => {
@@ -130,63 +131,69 @@ export default function LotteryScreen() {
         rightBtn={<LotteryRecordBtn />}
       />
       <Image cachePolicy="none"
-        style={[{ height: 570 }]}
-        source={require("../../assets/images/character_splash/ruan_mei_splash.webp")}
+        style={[{ height: 520, flex:1 }]}
+        source={CharacterImage[tmpPullList[0]]?.imageSplash}
       />
       <View style={{ marginTop: 6 , marginBottom: 8 }}></View>
-      <Text
-        className="text-[29px] font-[HY65] text-white"
-        style={[
-          { fontSize: 28 },
-          { color: "#FFFFFF" },
-          { textAlign: "center" },
-          {},
-        ]}
-      >
-        疏影三迭
-      </Text>
+      
+      <View style={{
+              justifyContent: "center", backgroundColor:"#000000"}}>
+        <Text
+          className="text-[29px] font-[HY65] text-white"
+          style={[
+            { fontSize: 28 },
+            { color: "#FFFFFF" },
+            { textAlign: "center" },
+            {},
+          ]}
+        >
+          疏影三迭
+        </Text>
 
-      <View 
-        style={{
-            flexDirection: "row",
-            flexWrap: "wrap",
-            gap: 11,
-            justifyContent: "center",
-            marginLeft:8,
-            marginTop:10,
-            marginRight:8
-        }}
-      >
-        {charCardListData?.filter((char) => {return tmpPullList.includes(char.id)}).sort((char) => {return char.rare}).map((char, i) => (
-          <CharCard 
-            key={i} {...char}
-            onPress={handleCharPress}
-          />
-        ))}
-      </View>
+        <View 
+          style={{
+              flexDirection: "row",
+              flexWrap: "wrap",
+              gap: 0,
+              justifyContent: "center",
+              marginLeft:8,
+              marginTop:10,
+              marginRight:8
+          }}
+        >
+          {charCardListData?.filter((char) => {return tmpPullList.includes(char.id)}).sort((char) => {return char.rare}).map((char, i) => (
+            <CharCard 
+              key={i} {...char}
+              onPress={handleCharPress}
+            />
+          ))}
+        </View>
 
-      <View 
-        style={{
-            flexDirection: "row",
-            flexWrap: "wrap",
-            gap: 11,
-            justifyContent: "center",
-            marginLeft:40,
-            marginBottom:10,
-            marginTop:16,
-            marginRight:40
-        }}
-      >
-        <Button onPress={makeOnePull} width={140} height={46}>
-          <Text className="font-[HY65] text-[16px]">
-            {LOCALES[appLanguage].MakeOnePull}
-          </Text>
-        </Button>
-        <Button onPress={makeTenPull} width={140} height={46}>
-          <Text className="font-[HY65] text-[16px]">
-            {LOCALES[appLanguage].MakeTenPull}
-          </Text>
-        </Button>
+        <View 
+          style={{
+              flexDirection: "row",
+              flexWrap: "wrap",
+              gap: 11,
+              justifyContent: "center",
+              marginLeft:40,
+              marginBottom:10,
+              marginTop:16,
+              marginRight:40
+          }}
+        >
+          <Button onPress={makeOnePull} width={140} height={46}>
+            <Text className="font-[HY65] text-[16px]">
+              {LOCALES[appLanguage].MakeOnePull}
+            </Text>
+          </Button>
+          <Button onPress={makeTenPull} width={140} height={46}>
+            <Text className="font-[HY65] text-[16px]">
+              {LOCALES[appLanguage].MakeTenPull}
+            </Text>
+          </Button>
+        </View>
+
+        <View style={{marginBottom: dynamicHeightBottomBar }}></View>
       </View>
 
     </View>
