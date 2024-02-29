@@ -47,7 +47,12 @@ export default function LotteryScreen() {
   const [selectedChild, setSelectedChild] = useState("charLottery1");
   const [charCardListData, setCharCardListData] = useState<CharListItem[]>();
 
-  const tmpPullList = ["Black Swan", "Guinaifen", "Misha", "Tingyun"]
+  const tmpDataFromJSON = [
+    {"version": "2.0", "phase" : 1, "type" : "CHAR", "special_rare5" : ["Black Swan"], "special_rare4": ["Guinaifen", "Misha", "Tingyun"]},
+    {"version": "2.0", "phase" : 2, "type" : "CHAR", "special_rare5" : ["Sparkle"], "special_rare4": ["Sampo", "Guinaifen", "Tingyun"]},
+  ]
+
+  const tmpPullList = tmpDataFromJSON[0]
 
   //抽卡紀錄
   const [pullRecord, setPullRecord] = useLocalState<Array<String>>(
@@ -121,6 +126,7 @@ export default function LotteryScreen() {
         colors={["#00000000", "#000000"]}
       />
 
+      {/* 頂部導航欄 */}
       <HeaderAlpha
         children={
           <LotteryHeaderChild
@@ -130,14 +136,19 @@ export default function LotteryScreen() {
         }
         rightBtn={<LotteryRecordBtn />}
       />
+
+      {/* 限定角色圖片 */}
       <Image cachePolicy="none"
         style={[{ height: 520, flex:1 }]}
-        source={CharacterImage[tmpPullList[0]]?.imageSplash}
+        source={CharacterImage[tmpPullList.special_rare5[0]]?.imageSplash}
       />
+
+      {/* 空格區 */}
       <View style={{ marginTop: 6 , marginBottom: 8 }}></View>
       
-      <View style={{
-              justifyContent: "center", backgroundColor:"#000000"}}>
+      {/* 躍遷相關 */}
+      <View style={{ justifyContent: "center", backgroundColor:"#000000"}}>
+        {/* 卡池名稱 */}
         <Text
           className="text-[29px] font-[HY65] text-white"
           style={[
@@ -150,6 +161,9 @@ export default function LotteryScreen() {
           疏影三迭
         </Text>
 
+        {/* 選取卡池Spinner */}
+
+        {/* 限定UP資訊 */}
         <View 
           style={{
               flexDirection: "row",
@@ -161,7 +175,7 @@ export default function LotteryScreen() {
               marginRight:8
           }}
         >
-          {charCardListData?.filter((char) => {return tmpPullList.includes(char.id)}).sort((char) => {return char.rare}).map((char, i) => (
+          {charCardListData?.filter((char) => {return tmpPullList.special_rare4.includes(char.id) || tmpPullList.special_rare5.includes(char.id)}).sort((char) => {return char.rare}).map((char, i) => (
             <CharCard 
               key={i} {...char}
               onPress={handleCharPress}
@@ -169,24 +183,28 @@ export default function LotteryScreen() {
           ))}
         </View>
 
+        {/* 躍遷按鈕 */}
         <View 
           style={{
               flexDirection: "row",
               flexWrap: "wrap",
               gap: 11,
+              maxHeight: 46,
+              height:46,
+              maxWidth : 140,
               justifyContent: "center",
-              marginLeft:40,
+              marginLeft:8,
               marginBottom:10,
               marginTop:16,
-              marginRight:40
+              marginRight:8
           }}
         >
-          <Button onPress={makeOnePull} width={140} height={46}>
+          <Button onPress={makeOnePull} >
             <Text className="font-[HY65] text-[16px]">
               {LOCALES[appLanguage].MakeOnePull}
             </Text>
           </Button>
-          <Button onPress={makeTenPull} width={140} height={46}>
+          <Button onPress={makeTenPull} width={140} >
             <Text className="font-[HY65] text-[16px]">
               {LOCALES[appLanguage].MakeTenPull}
             </Text>
