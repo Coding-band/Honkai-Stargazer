@@ -157,6 +157,12 @@ export default function LotteryScreen() {
     });
   }, []);
 
+  const handleRecordPress = useCallback(() => {
+    // @ts-ignore
+    navigation.push(SCREENS.LotteryRecordPage.id, {
+    });
+  }, []);
+
   useEffect(() => {
     setCharCardListData(
       characterList.map((char) => {
@@ -211,7 +217,7 @@ export default function LotteryScreen() {
             setSelectedChild={setSelectedPage}
           />
         }
-        rightBtn={<LotteryRecordBtn />}
+        rightBtn={<LotteryRecordBtn onPress={handleRecordPress}/>}
       />
 
       {/* 限定角色圖片 */}
