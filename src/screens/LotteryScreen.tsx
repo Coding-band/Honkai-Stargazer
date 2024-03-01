@@ -18,7 +18,7 @@ import CharCard from "../components/global/CharCard/CharCard";
 import { Path } from "../types/path";
 import characterList from "../../data/character_data/character_list.json";
 import CharacterImage from "../../assets/images/images_map/chacracterImage";
-import { getCharFullData } from "../utils/data/getDataFromMap";
+import { getCharFullData, getLcFullData } from "../utils/data/getDataFromMap";
 import { getCharAttrData } from "../utils/calculator/getAttrData";
 import useTextLanguage from "../language/TextLanguage/useTextLanguage";
 import { CharacterName } from "../types/character";
@@ -30,8 +30,9 @@ import Toast from "../utils/toast/Toast";
 import makePulls, { PullConfig, PullInfo, PullType } from "../utils/lottery/LotterySimulator";
 import useLocalState from "../hooks/useLocalState";
 import { dynamicHeightBottomBar } from "../constant/ui";
-import Listbox from "../components/global/Listbox/Listbox";
 import LotteryListBox from "../components/LotteryScreen/LotteryListbox/LotteryListbox";
+import Lightcone from "../../assets/images/images_map/lightcone";
+import DropDownMenuButton from "../components/LotteryScreen/DropDownMenuButton";
 
 type CharListItem = {
   id: CharacterName;
@@ -46,16 +47,48 @@ export default function LotteryScreen() {
   const { language: appLanguage } = useAppLanguage();
   const { language: textLanguage } = useTextLanguage();
   const navigation = useNavigation();
-  const [selectedChild, setSelectedChild] = useState("charLottery1");
   const [charCardListData, setCharCardListData] = useState<CharListItem[]>();
 
+  const typeWithPageIndex = ["CHAR", "STATIC", "LIGHTCONE"]
+
   const tmpDataFromJSON = [
-    {"version": "2.0", "phase" : 1, "versionCode": 2001, "type" : "CHAR", "special_rare5" : ["Black Swan"], "special_rare4": ["Guinaifen", "Misha", "Tingyun"], "title":{"en" : "I am dumb", "zh_hk" : "1234567890ASDFGHJKL"}},
-    {"version": "2.0", "phase" : 2, "versionCode": 2002, "type" : "CHAR", "special_rare5" : ["Sparkle"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title":{"en" : "I am dumb", "zh_hk" : "焰錦遊魚", "vocchinese" : "狂三崩鐵版"}},
-    {"version": "2.0", "phase" : 1, "versionCode": 2011, "type" : "LIGHTCONE", "special_rare5" : ["Sparkle"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title":{"en" : "I am dumb", "zh_hk" : "測試光錐1", "vocchinese" : "狂三崩鐵版"}},
-    {"version": "2.0", "phase" : 2, "versionCode": 2012, "type" : "LIGHTCONE", "special_rare5" : ["Sparkle"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title":{"en" : "I am dumb", "zh_hk" : "先去洗個澡", "vocchinese" : "狂三崩鐵版"}},
+    {"version": "2.0", "phase" : 2, "versionCode": 2004, "type" : "CHAR", "special_rare5" : ["Jing Yuan"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title":{"en" : "Swirl of Heavenly Spear", "zh_hk" : "天戈麾斥", "vocchinese" : "狂三崩鐵版"}},
+    {"version": "2.0", "phase" : 2, "versionCode": 2003, "type" : "CHAR", "special_rare5" : ["Sparkle"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title":{"en" : "Sparkling Splendor", "zh_hk" : "焰錦遊魚", "vocchinese" : "狂三崩鐵版"}},
+    {"version": "2.0", "phase" : 1, "versionCode": 2002, "type" : "CHAR", "special_rare5" : ["Black Swan"], "special_rare4": ["Misha", "Tingyun", "Guinaifen"], "title":{"en" : "Swirl of Heavenly Spear", "zh_hk" : "鏡影婆娑", "vocchinese" : "狂三崩鐵版"}},
+    {"version": "2.0", "phase" : 1, "versionCode": 2001, "type" : "CHAR", "special_rare5" : ["Dan Heng • Imbibitor Lunae"], "special_rare4": ["Misha", "Tingyun", "Guinaifen"], "title":{"en" : "Sparkling Splendor", "zh_hk" : "濯世垂虹", "vocchinese" : "狂三崩鐵版"}},
+    {"version": "2.0", "phase" : 2, "versionCode": 2011, "type" : "LIGHTCONE", "special_rare5" : ["Void"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title":{"en" : "I am dumb", "zh_hk" : "測試光錐1", "vocchinese" : "狂三崩鐵版"}},
+    {"version": "2.0", "phase" : 2, "versionCode": 2012, "type" : "LIGHTCONE", "special_rare5" : ["Dance! Dance! Dance!"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title":{"en" : "I am dumb", "zh_hk" : "先去洗個澡2", "vocchinese" : "狂三崩鐵版"}},
+    {"version": "1.6", "phase" : 2, "versionCode": 1602, "type" : "CHAR", "special_rare5" : ["Black Swan"], "special_rare4": ["Guinaifen", "Misha", "Tingyun"], "title":{"en" : "I am dumb", "zh_hk" : "名字暫時這樣改"}},
+    {"version": "1.6", "phase" : 1, "versionCode": 1601, "type" : "CHAR", "special_rare5" : ["Black Swan"], "special_rare4": ["Guinaifen", "Misha", "Tingyun"], "title":{"en" : "I am dumb", "zh_hk" : "名字暫時這樣改"}},
+    {"version": "1.0", "phase" : -1, "versionCode": 1000, "type" : "STATIC", "special_rare5" : [], "special_rare4": [], "title":{"en" : "I am dumb", "zh_hk" : "群星躍遷", "vocchinese" : "常駐池"}},
   ]
 
+  const poolItems : Array<PullInfo> = tmpDataFromJSON.map((data) => {
+    let poolItem = new PullInfo();
+    poolItem.version = data.version;
+    poolItem.phase = data.phase;
+    poolItem.versionCode = data.versionCode;
+    poolItem.type = data.type;
+    poolItem.special_rare5 = data.special_rare5;
+    poolItem.special_rare4 = data.special_rare4;
+    poolItem.title = data.title;
+    return poolItem
+  })
+
+  //紀錄當前選取了哪個卡池
+  const [selectedPage, setSelectedPage] = useState<number>(
+    //"user-pull-simulator-select-page",
+    0
+  );
+  
+  const [selectedPool, setSelectedPool] = useState<Array<PullInfo>>(
+    //"user-pull-simulator-select-pool",
+    [
+      poolItems.filter((pool) => pool.type === "CHAR").sort((a,b) => {return b.versionCode - a.versionCode})[0],
+      poolItems.filter((pool) => pool.type === "STATIC").sort((a,b) => {return b.versionCode - a.versionCode})[0],
+      poolItems.filter((pool) => pool.type === "LIGHTCONE").sort((a,b) => {return b.versionCode - a.versionCode})[0]
+    ]
+  );
   
   //抽卡紀錄
   const [pullRecord, setPullRecord] = useLocalState<Array<String>>(
@@ -68,34 +101,20 @@ export default function LotteryScreen() {
     {"isMustGetRare4": false, "isMustGetRare5": false, "pullsAfterRare4": 0, "pullsAfterRare5": 0}
   )
 
-  const [currentPoolID, setCurrentPoolID] = useState()
-  const [currentPoolName, setCurrentPoolName] = useState()
-    
-  const tmpPullList = tmpDataFromJSON[0]//tmpDataFromJSON.map((pool) => {if(pool.versionCode === currentPoolID){return pool}})
-
-  function makeOnePull(){
-    let pullInfo : PullInfo = new PullInfo();
-    pullInfo.special_rare4 = ["桂乃芬","米沙","停雲"]
-    pullInfo.special_rare5 = ["黑天鵝"]
-    
-    const result = makePulls(pullInfo,pullConfig, PullType.PULL_LIMIT_CHAR, 1)
+  function makeOnePull(){    
+    const result = makePulls(selectedPool[selectedPage],pullConfig, 1)
     setPullConfig(result["pullConfig"])
     setPullRecord(pullRecord.concat(result["pullArray"]))
 
-    Toast("獲得了 : "+result["pullArray"].map((item) => item.itemId)).toString();
+    Toast("獲得了 : "+result["pullArray"].map((item) => ((getCharFullData(item.itemId, textLanguage) || getLcFullData(item.itemId, textLanguage))).name)).toString();
   }
 
-  function makeTenPull(){
-    Toast("Make 10 times pull");
-    let pullInfo : PullInfo = new PullInfo();
-    pullInfo.special_rare4 = ["桂乃芬","米沙","停雲"]
-    pullInfo.special_rare5 = ["黑天鵝"]
-        
-    const result = makePulls(pullInfo,pullConfig, PullType.PULL_LIMIT_CHAR, 10)
+  function makeTenPull(){        
+    const result = makePulls(selectedPool[selectedPage],pullConfig, 10)
     setPullConfig(result["pullConfig"])
     setPullRecord(pullRecord.concat(result["pullArray"]))
 
-    Toast("獲得了 : "+result["pullArray"].map((item: { itemId: any; }) => item.itemId)).toString();
+    Toast("獲得了 : "+result["pullArray"].map((item: { itemId: any; }) => (getCharFullData(item.itemId, textLanguage) || getLcFullData(item.itemId, textLanguage)).name)).toString();
   }
 
   const handleCharPress = useCallback((charId: string, charName: string) => {
@@ -137,8 +156,8 @@ export default function LotteryScreen() {
       <HeaderAlpha
         children={
           <LotteryHeaderChild
-            selectedChild={selectedChild}
-            setSelectedChild={setSelectedChild}
+            selectedChild={selectedPage}
+            setSelectedChild={setSelectedPage}
           />
         }
         rightBtn={<LotteryRecordBtn />}
@@ -146,8 +165,11 @@ export default function LotteryScreen() {
 
       {/* 限定角色圖片 */}
       <Image cachePolicy="none"
-        style={[{ height: 520, flex:1 }]}
-        source={CharacterImage[tmpPullList.special_rare5[0]]?.imageSplash}
+        style={[{ flex : 1}]}
+        source={
+          CharacterImage[selectedPool[selectedPage].special_rare5[0]]?.imageSplash ||
+          Lightcone[selectedPool[selectedPage].special_rare5[0]]?.imageFull || 
+          require("../../assets/images/ui_icon/static_lottery_bg.webp")}
       />
 
       {/* 空格區 */}
@@ -157,32 +179,46 @@ export default function LotteryScreen() {
       <View style={{ justifyContent: "center"}}>
         
         {/* 選取卡池Spinner */}
-        <LotteryListBox style={{ alignSelf: "center"}}
-          top={8}
+        <LotteryListBox key={"lotteryListBox"+selectedPage} style={{ alignSelf: "center", marginBottom : 8, marginLeft : 16, marginRight : 16}}
+          //top={8}
+          bottom={32 + 4}
           button={
-            <Button
-              width={Dimensions.get("screen").width - 256                                      }
-              height={46}
+            <DropDownMenuButton
+              width={"100%"}
+              height={32}
               withArrow
             >
-              <Text className="text-[16px] font-[HY65] text-[#222] leading-5">
-                {tmpDataFromJSON?.map((version) => {
-                    return (version.versionCode === currentPoolID ? version.title[appLanguage] : "")
-                })}
+              <Text className="text-[14px] font-[HY65] text-[#F3F9FF66] leading-5 pr-5 pl-5" numberOfLines={1}>
+                {
+                  ( selectedPool[selectedPage].phase === -1 
+                    ? selectedPool[selectedPage].title[appLanguage]
+                    //: selectedPool[selectedPage].version + " " + (selectedPool[selectedPage].phase === 1 ? LOCALES[appLanguage].MOCPart1 : LOCALES[appLanguage].MOCPart2)
+                    : selectedPool[selectedPage].version + " - " + (getCharFullData(selectedPool[selectedPage].special_rare5[0], textLanguage) || getLcFullData(selectedPool[selectedPage].special_rare5[0], textLanguage)).name
+                  )
+                  //+selectedPool[selectedPage].title[appLanguage]
+                }
               </Text>
-            </Button>
+            </DropDownMenuButton>
           }
-          value={currentPoolID}
-          onChange={(version) => {
-            setCurrentPoolID(version);
-            //setCurrentPoolName(version);
+          value={selectedPool[selectedPage]}
+          onChange={(poolSelect : PullInfo) => {
+            selectedPool[selectedPage] = poolSelect
+            //https://stackoverflow.com/questions/56266575/why-is-usestate-not-triggering-re-render
+            //在這裏卡住了1小時
+            setSelectedPool([...selectedPool]) 
           }}
         >  
-          {tmpDataFromJSON?.map((version) => (
-              <Listbox.Item key={version.versionCode} value={version.versionCode}>
+          {poolItems.filter((pool) => pool.type === typeWithPageIndex[selectedPage]).sort((a,b) => {return (b.versionCode - a.versionCode)}).map((pool) => (
+              <LotteryListBox.Item key={pool.versionCode} value={pool}>
                   {/* @ts-ignore */}
-                  {version.title[appLanguage]}
-                </Listbox.Item>
+                  {
+                    ( pool.phase === -1 
+                      ? pool.title[appLanguage]
+                      //: pool.version +" " + (pool.phase === 1 ? LOCALES[appLanguage].MOCPart1 : LOCALES[appLanguage].MOCPart2) + " "
+                      : pool.version + " - " + (getCharFullData(pool.special_rare5[0], textLanguage) || getLcFullData(pool.special_rare5[0], textLanguage)).name
+                    )
+                  }
+                </LotteryListBox.Item>
               )) || []
           }
         </LotteryListBox>
@@ -197,9 +233,8 @@ export default function LotteryScreen() {
             {},
           ]}
         >
-          {currentPoolName}
+          {selectedPool[selectedPage].title[appLanguage]}
         </Text>
-
 
         {/* 限定UP資訊 */}
         <View 
@@ -213,12 +248,15 @@ export default function LotteryScreen() {
               marginRight:8
           }}
         >
-          {charCardListData?.filter((char) => {return tmpPullList.special_rare4.includes(char.id) || tmpPullList.special_rare5.includes(char.id)}).sort((char) => {return char.rare}).map((char, i) => (
-            <CharCard 
-              key={i} {...char}
-              onPress={handleCharPress}
-            />
-          ))}
+          {
+            charCardListData?.filter((char) => {
+              return selectedPool[selectedPage].special_rare4.includes(char.id) || selectedPool[selectedPage].special_rare5.includes(char.id)
+            }).sort((a,b) => {return b.rare - a.rare}).map((char, i) => (
+              <CharCard 
+                key={i} {...char}
+                onPress={handleCharPress}
+              />
+            ))}
         </View>
 
         {/* 躍遷按鈕 */}

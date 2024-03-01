@@ -15,14 +15,14 @@ export default function ListboxItem(props: Props) {
     <TouchableOpacity
       activeOpacity={0.65}
       onPress={props.onPress}
-      className={cn("w-full p-[10px]", props.selected ? "bg-[#00000010]" : "")}
+      className={cn("p-[8px]", props.selected ? "bg-[#00000010]" : "")}
       style={{
         flexDirection: "row",
-        justifyContent: "space-between",
+        justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <Text className="text-[#222] text-[16px] font-[HY65] leading-5">
+      <Text className="text-[#F3F9FF66] text-[14px] font-[HY65] leading-5">
         {props.children}
       </Text>
       {props.selected && <ListSelectedIcon />}
