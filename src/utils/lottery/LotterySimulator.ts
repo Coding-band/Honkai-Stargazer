@@ -131,7 +131,7 @@ export default function makePulls(pullInfo : PullInfo, pullConfig : PullConfig, 
             ...
         ]
     */
-    let pullType = pullInfo.type as PullType
+    let pullType = pullInfo?.type as PullType
     let pullArray = []
 
     //抽卡基礎機率 & 抽卡保底機率
@@ -153,9 +153,9 @@ export default function makePulls(pullInfo : PullInfo, pullConfig : PullConfig, 
     let isMustGetRare4  = pullConfig?.isMustGetRare4, isMustGetRare5  = pullConfig?.isMustGetRare5
 
     //限定UP四星 & 限定UP五星 & 常駐五星判定
-    const itemUpRare4 = pullInfo?.special_rare4
-    const itemUpRare5 = pullInfo?.special_rare5
-    const itemNormalRare5 = (pullType === PullType.PULL_LIMIT_LIGHTCONE ? itemRare5LC : itemRare5Char)
+    const itemUpRare4 = (pullType === PullType.PULL_STATIC ? itemRare4Char.concat(itemRare4LC) : pullInfo?.special_rare4)
+    const itemUpRare5 = (pullType === PullType.PULL_STATIC ? itemRare5Char.concat(itemRare5LC) : pullInfo?.special_rare5)
+    const itemNormalRare5 = (pullType === PullType.PULL_STATIC ? itemRare5Char.concat(itemRare5LC) : pullType === PullType.PULL_LIMIT_LIGHTCONE ? itemRare5LC : itemRare5Char)
 
     for(let x = 0 ; x < pullCount ; x++){
         const randNum = Math.random()
@@ -168,13 +168,13 @@ export default function makePulls(pullInfo : PullInfo, pullConfig : PullConfig, 
         }else if(randNum <= pullRate[0] + pullRate[1] && pullsAfterRare5 < pullPityMax - 15 + Math.random()* 15){ 
             //本次抽到四星
             pulledItemType = "FOUR"; //紀錄本次抽到哪個星級
-            pullNormalSet = itemRare4Char.concat(itemRare4LC).filter((item) => !itemUpRare4.includes(item)) //扣除限定UP四星後的常駐組合
+            pullNormalSet = itemRare4Char.concat(itemRare4LC).filter((item) => !(pullType === PullType.PULL_STATIC ? false : itemUpRare4.includes(item))) //扣除限定UP四星後的常駐組合
             pullUpSet = itemUpRare4 //設定限定部分的組合
             isMustGetRare4 = !isMustGetRare4 //轉換一下 - 本次是保低？
         }else{ 
             //本次抽到五星
             pulledItemType = "FIVE"; //紀錄本次抽到哪個星級
-            pullNormalSet = itemNormalRare5.filter((item) => !itemUpRare5.includes(item))  //扣除限定UP五星後的常駐組合
+            pullNormalSet = itemNormalRare5.filter((item) => !(pullType === PullType.PULL_STATIC ? false : itemUpRare5.includes(item)))  //扣除限定UP五星後的常駐組合
             pullUpSet = itemUpRare5 //設定限定部分的組合
             isMustGetRare5 = !isMustGetRare5 //轉換一下 - 本次是保低？
             pullRate = (isMustGetRare5 ? pullPityRate : pullNormalRate)
@@ -185,12 +185,15 @@ export default function makePulls(pullInfo : PullInfo, pullConfig : PullConfig, 
             (isMustGetRare4 && pulledItemType === "FOUR" || isMustGetRare5 && pulledItemType === "FIVE" ? pullUpSet.length : (randPityOrNot < pullPityOrNot ? pullNormalSet.length : pullUpSet.length))
         ));
 
+          console.log(((randPityOrNot < pullPityOrNot) ? ((isMustGetRare4 && pulledItemType === "FOUR" || isMustGetRare5 && pulledItemType === "FIVE") ? pullUpSet : pullNormalSet) : pullUpSet))
+
         pullArray.push(
             {
                 "rare" : (pulledItemType === "THREE" ? 3 : pulledItemType === "FOUR" ? 4 : 5),
                 "itemId" : ((randPityOrNot < pullPityOrNot) ? ((isMustGetRare4 && pulledItemType === "FOUR" || isMustGetRare5 && pulledItemType === "FIVE") ? pullUpSet : pullNormalSet) : pullUpSet)[randIndex],
                 "isMustGetRare": (pulledItemType === "THREE" ? false : pulledItemType === "FOUR" ? isMustGetRare4 : isMustGetRare5),
                 "pullsAfterRare" :(pulledItemType === "THREE" ? -1 : pulledItemType === "FOUR" ? pullsAfterRare4 : pullsAfterRare5),
+                "pullType" : pullType,
             }
         )
         

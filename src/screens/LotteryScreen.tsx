@@ -49,7 +49,7 @@ export default function LotteryScreen() {
   const navigation = useNavigation();
   const [charCardListData, setCharCardListData] = useState<CharListItem[]>();
 
-  const typeWithPageIndex = ["CHAR", "STATIC", "LIGHTCONE"]
+  const typeWithPageIndex = [PullType.PULL_LIMIT_CHAR, PullType.PULL_STATIC, PullType.PULL_LIMIT_LIGHTCONE]
 
   const tmpDataFromJSON = [
     {"version": "2.0", "phase" : 2, "versionCode": 2004, "type" : "CHAR", "special_rare5" : ["Jing Yuan"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title":{"en" : "Swirl of Heavenly Spear", "zh_hk" : "天戈麾斥", "vocchinese" : "狂三崩鐵版"}},
@@ -96,25 +96,36 @@ export default function LotteryScreen() {
     []
   )
 
-  const [pullConfig, setPullConfig] = useLocalState<PullConfig>(
-    "user-pull-simulator-config7",
+  const [pullCharConfig, setPullCharConfig] = useLocalState<PullConfig>(
+    "user-pull-simulator-config-char",
+    {"isMustGetRare4": false, "isMustGetRare5": false, "pullsAfterRare4": 0, "pullsAfterRare5": 0}
+  )
+  const [pullLcConfig, setPullLcConfig] = useLocalState<PullConfig>(
+    "user-pull-simulator-config-lc",
+    {"isMustGetRare4": false, "isMustGetRare5": false, "pullsAfterRare4": 0, "pullsAfterRare5": 0}
+  )
+  const [pullStaticConfig, setPullStaticConfig] = useLocalState<PullConfig>(
+    "user-pull-simulator-config-static",
     {"isMustGetRare4": false, "isMustGetRare5": false, "pullsAfterRare4": 0, "pullsAfterRare5": 0}
   )
 
-  function makeOnePull(){    
-    const result = makePulls(selectedPool[selectedPage],pullConfig, 1)
-    setPullConfig(result["pullConfig"])
-    setPullRecord(pullRecord.concat(result["pullArray"]))
+  const configs = [pullCharConfig,pullStaticConfig,pullLcConfig]
 
-    Toast("獲得了 : "+result["pullArray"].map((item) => ((getCharFullData(item.itemId, textLanguage) || getLcFullData(item.itemId, textLanguage))).name)).toString();
+  function makeOnePull(){    
+    handlePullResult(makePulls(selectedPool[selectedPage],configs[selectedPage], 1))
   }
 
   function makeTenPull(){        
-    const result = makePulls(selectedPool[selectedPage],pullConfig, 10)
-    setPullConfig(result["pullConfig"])
-    setPullRecord(pullRecord.concat(result["pullArray"]))
+    handlePullResult(makePulls(selectedPool[selectedPage],configs[selectedPage], 10))
+  }
 
-    Toast("獲得了 : "+result["pullArray"].map((item: { itemId: any; }) => (getCharFullData(item.itemId, textLanguage) || getLcFullData(item.itemId, textLanguage)).name)).toString();
+  function handlePullResult(result : object){
+      const work = (typeWithPageIndex[selectedPage] === PullType.PULL_LIMIT_CHAR ? setPullCharConfig(result["pullConfig"])
+      : typeWithPageIndex[selectedPage] === PullType.PULL_STATIC ? setPullStaticConfig(result["pullConfig"])
+      : setPullLcConfig(result["pullConfig"])
+      )
+      setPullRecord(pullRecord.concat(result["pullArray"]))
+      Toast("獲得了 : "+result["pullArray"].map((item : { itemId: any; }) => ((getCharFullData(item.itemId, textLanguage) || getLcFullData(item.itemId, textLanguage)).name))).toString();    
   }
 
   const handleCharPress = useCallback((charId: string, charName: string) => {
