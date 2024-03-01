@@ -17,7 +17,9 @@ import useCharData from "../context/CharacterData/hooks/useCharData";
 import CharCard from "../components/global/CharCard/CharCard";
 import { Path } from "../types/path";
 import characterList from "../../data/character_data/character_list.json";
+import lightconeList from "../../data/lightcone_data/lightcone_list.json";
 import CharacterImage from "../../assets/images/images_map/chacracterImage";
+import LightconeImage from "../../assets/images/images_map/lightcone";
 import { getCharFullData, getLcFullData } from "../utils/data/getDataFromMap";
 import { getCharAttrData } from "../utils/calculator/getAttrData";
 import useTextLanguage from "../language/TextLanguage/useTextLanguage";
@@ -33,6 +35,8 @@ import { dynamicHeightBottomBar } from "../constant/ui";
 import LotteryListBox from "../components/LotteryScreen/LotteryListbox/LotteryListbox";
 import Lightcone from "../../assets/images/images_map/lightcone";
 import DropDownMenuButton from "../components/LotteryScreen/DropDownMenuButton";
+import LightConeCard from "../components/global/LightConeCard/LightConeCard";
+import { LightconeName } from "../types/lightcone";
 
 type CharListItem = {
   id: CharacterName;
@@ -43,11 +47,20 @@ type CharListItem = {
   image: ExpoImage;
 };
 
+type LcListItem = {
+  id: LightconeName;
+  name: string;
+  rare: number;
+  path: Path;
+  image: ExpoImage;
+};
+
 export default function LotteryScreen() {
   const { language: appLanguage } = useAppLanguage();
   const { language: textLanguage } = useTextLanguage();
   const navigation = useNavigation();
   const [charCardListData, setCharCardListData] = useState<CharListItem[]>();
+  const [lcCardListData, setLcCardListData] = useState<LcListItem[]>();
 
   const typeWithPageIndex = [PullType.PULL_LIMIT_CHAR, PullType.PULL_STATIC, PullType.PULL_LIMIT_LIGHTCONE]
 
@@ -57,7 +70,7 @@ export default function LotteryScreen() {
     {"version": "2.0", "phase" : 1, "versionCode": 2002, "type" : "CHAR", "special_rare5" : ["Black Swan"], "special_rare4": ["Misha", "Tingyun", "Guinaifen"], "title":{"en" : "Swirl of Heavenly Spear", "zh_hk" : "鏡影婆娑", "vocchinese" : "狂三崩鐵版"}},
     {"version": "2.0", "phase" : 1, "versionCode": 2001, "type" : "CHAR", "special_rare5" : ["Dan Heng • Imbibitor Lunae"], "special_rare4": ["Misha", "Tingyun", "Guinaifen"], "title":{"en" : "Sparkling Splendor", "zh_hk" : "濯世垂虹", "vocchinese" : "狂三崩鐵版"}},
     {"version": "2.0", "phase" : 2, "versionCode": 2011, "type" : "LIGHTCONE", "special_rare5" : ["Void"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title":{"en" : "I am dumb", "zh_hk" : "測試光錐1", "vocchinese" : "狂三崩鐵版"}},
-    {"version": "2.0", "phase" : 2, "versionCode": 2012, "type" : "LIGHTCONE", "special_rare5" : ["Dance! Dance! Dance!"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title":{"en" : "I am dumb", "zh_hk" : "先去洗個澡2", "vocchinese" : "狂三崩鐵版"}},
+    {"version": "2.0", "phase" : 2, "versionCode": 2012, "type" : "LIGHTCONE", "special_rare5" : ["Dance! Dance! Dance!"], "special_rare4": ["Void"], "title":{"en" : "I am dumb", "zh_hk" : "先去洗個澡2", "vocchinese" : "狂三崩鐵版"}},
     {"version": "1.6", "phase" : 2, "versionCode": 1602, "type" : "CHAR", "special_rare5" : ["Black Swan"], "special_rare4": ["Guinaifen", "Misha", "Tingyun"], "title":{"en" : "I am dumb", "zh_hk" : "名字暫時這樣改"}},
     {"version": "1.6", "phase" : 1, "versionCode": 1601, "type" : "CHAR", "special_rare5" : ["Black Swan"], "special_rare4": ["Guinaifen", "Misha", "Tingyun"], "title":{"en" : "I am dumb", "zh_hk" : "名字暫時這樣改"}},
     {"version": "1.0", "phase" : -1, "versionCode": 1000, "type" : "STATIC", "special_rare5" : [], "special_rare4": [], "title":{"en" : "I am dumb", "zh_hk" : "群星躍遷", "vocchinese" : "常駐池"}},
@@ -136,6 +149,14 @@ export default function LotteryScreen() {
     });
   }, []);
 
+  const handleLcPress = useCallback((lcId: string, lcName: string) => {
+    // @ts-ignore
+    navigation.push(SCREENS.LightconePage.id, {
+      id: lcId,
+      name: lcName,
+    });
+  }, []);
+
   useEffect(() => {
     setCharCardListData(
       characterList.map((char) => {
@@ -152,6 +173,25 @@ export default function LotteryScreen() {
         };
       })
     );
+    
+  }, []);
+
+  useEffect(() => {
+    setLcCardListData(
+      lightconeList.map((lc) => {
+        const lcId = lc.name as LightconeName;
+        const lcFullData = getLcFullData(lcId, textLanguage);
+        return {
+          id: lcId,
+          name: lcFullData?.name || lc.name,
+          rare: lc.rare,
+          path: lc.path as Path,
+          image: LightconeImage[lc.name as LightconeName]?.icon,
+          version: lc.version,
+        };
+      })
+    );
+    
   }, []);
 
   return (
@@ -263,11 +303,26 @@ export default function LotteryScreen() {
             charCardListData?.filter((char) => {
               return selectedPool[selectedPage].special_rare4.includes(char.id) || selectedPool[selectedPage].special_rare5.includes(char.id)
             }).sort((a,b) => {return b.rare - a.rare}).map((char, i) => (
-              <CharCard 
+              (<CharCard 
                 key={i} {...char}
                 onPress={handleCharPress}
-              />
-            ))}
+              />)
+            ))
+            }
+            {
+            lcCardListData?.filter((lc) => {
+              return selectedPool[selectedPage].special_rare4.includes(lc.id) || selectedPool[selectedPage].special_rare5.includes(lc.id)
+            }).sort((a,b) => {return b.rare - a.rare}).map((lc, i) => (
+              (<LightConeCard 
+                key={i} {...lc}
+                onPress={() => {
+                  handleLcPress(lc.id, lc.name)
+                }}
+                
+              />)
+            ))
+          
+          }
         </View>
 
         {/* 躍遷按鈕 */}
