@@ -321,5 +321,11 @@ export const strings = {
   //20240219 - Permissions and isNotch ...
   ErrorscreenshotPermissionRejected: "A permissão para acessar a captura de tela foi rejeitada, pressione o botão novamente/ conceda a permissão nas configurações do sistema.",
   UserCustomHasNotch: "Adaptação de Notch",
-  UserCustomHasDynamicIsland: "Adaptação para Dynamic Island"
+  UserCustomHasDynamicIsland: "Adaptação para Dynamic Island",
+  //20240302 - LotteryRecord
+  LotterySimulatorRecord: "Wrap Simulator Record",
+  LotterySimulatorRecordNotice: "Records shown below are NOT from in-game, only from Simulator",
+  LotteryRecordType: "Type",
+  LotteryRecordName: "Name",
+  LotteryRecordTime: "Time"
 };

@@ -307,7 +307,7 @@ export const strings = {
   PrevPage: "上一页",
   NextPage: "下一页",
   //20240209 - Lottery
-  LotterySimulator: "抽卡模拟",
+  LotterySimulator: "跃迁模拟",
   MakeOnePull: "跃迁1次",
   MakeTenPull: "跃迁10次",
   TutorialVideo: "教学视频",
@@ -321,5 +321,11 @@ export const strings = {
   //20240219 - Permissions and isNotch ...
   ErrorscreenshotPermissionRejected: "申请获取存取截图权限被拒绝，请重新按下按钮/到系统设定允许存取权限。",
   UserCustomHasNotch: "浏海屏适配",
-  UserCustomHasDynamicIsland: "动态岛适配"
+  UserCustomHasDynamicIsland: "动态岛适配",
+  //20240302 - LotteryRecord
+  LotterySimulatorRecord: "跃迁仿真纪录",
+  LotterySimulatorRecordNotice: "此处仅显示跃迁仿真纪录，并非游戏内跃迁纪录",
+  LotteryRecordType: "类型",
+  LotteryRecordName: "名称",
+  LotteryRecordTime: "时间"
 };

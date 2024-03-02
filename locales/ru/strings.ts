@@ -321,5 +321,11 @@ export const strings = {
   //20240219 - Permissions and isNotch ...
   ErrorscreenshotPermissionRejected: "Permission for accessing screenshot was rejected, please press the button again/ grant the permission in system setting.",
   UserCustomHasNotch: "Notch Adaptation",
-  UserCustomHasDynamicIsland: "Dynamic Island Adaptation"
+  UserCustomHasDynamicIsland: "Dynamic Island Adaptation",
+  //20240302 - LotteryRecord
+  LotterySimulatorRecord: "Wrap Simulator Record",
+  LotterySimulatorRecordNotice: "Records shown below are NOT from in-game, only from Simulator",
+  LotteryRecordType: "Type",
+  LotteryRecordName: "Name",
+  LotteryRecordTime: "Time"
 };

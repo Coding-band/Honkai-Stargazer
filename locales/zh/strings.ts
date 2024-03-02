@@ -321,5 +321,11 @@ export const strings = {
   //20240219 - Permissions and isNotch ...
   ErrorscreenshotPermissionRejected: "ㄕㄣㄑㄏㄨㄛㄑㄩㄘㄨㄣㄑㄩㄐㄧㄝㄊㄨㄑㄩㄢㄒㄧㄢㄅㄟㄐㄩㄐㄩㄝ，ㄑㄧㄥㄔㄨㄥㄒㄧㄣㄢㄒㄧㄚㄢㄋㄧㄡ/ㄉㄠㄒㄧㄊㄨㄥㄕㄜㄉㄧㄥㄩㄣㄒㄩㄘㄨㄣㄑㄩㄑㄩㄢㄒㄧㄢ。",
   UserCustomHasNotch: "ㄌㄧㄡㄏㄞㄆㄧㄥㄕㄆㄟ",
-  UserCustomHasDynamicIsland: "ㄉㄨㄥㄊㄞㄉㄠㄕㄆㄟ"
+  UserCustomHasDynamicIsland: "ㄉㄨㄥㄊㄞㄉㄠㄕㄆㄟ",
+  //20240302 - LotteryRecord
+  LotterySimulatorRecord: "Wrap Simulator Record",
+  LotterySimulatorRecordNotice: "Records shown below are NOT from in-game, only from Simulator",
+  LotteryRecordType: "Type",
+  LotteryRecordName: "Name",
+  LotteryRecordTime: "Time"
 };

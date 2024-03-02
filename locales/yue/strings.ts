@@ -307,7 +307,7 @@ export const strings = {
   PrevPage: "上一頁",
   NextPage: "下一頁",
   //20240209 - Lottery
-  LotterySimulator: "抽卡模擬",
+  LotterySimulator: "躍遷模擬",
   MakeOnePull: "躍遷1次",
   MakeTenPull: "躍遷10次",
   TutorialVideo: "教學片",
@@ -321,5 +321,11 @@ export const strings = {
   //20240219 - Permissions and isNotch ...
   ErrorscreenshotPermissionRejected: "申請獲取存取截圖權限被拒絕，請重新按下按鈕/到系統設定允許存取權限。",
   UserCustomHasNotch: "瀏海屏適配",
-  UserCustomHasDynamicIsland: "動態島適配"
+  UserCustomHasDynamicIsland: "動態島適配",
+  //20240302 - LotteryRecord
+  LotterySimulatorRecord: "躍遷模擬紀錄",
+  LotterySimulatorRecordNotice: "此處僅顯示躍遷模擬紀錄，並非遊戲內躍遷紀錄",
+  LotteryRecordType: "類型",
+  LotteryRecordName: "名稱",
+  LotteryRecordTime: "時間"
 };
