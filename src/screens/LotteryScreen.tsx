@@ -55,6 +55,8 @@ type LcListItem = {
   image: ExpoImage;
 };
 
+export const typeWithPageIndex = [PullType.PULL_LIMIT_CHAR, PullType.PULL_STATIC, PullType.PULL_LIMIT_LIGHTCONE];
+
 export default function LotteryScreen() {
   const { language: appLanguage } = useAppLanguage();
   const { language: textLanguage } = useTextLanguage();
@@ -62,21 +64,20 @@ export default function LotteryScreen() {
   const [charCardListData, setCharCardListData] = useState<CharListItem[]>();
   const [lcCardListData, setLcCardListData] = useState<LcListItem[]>();
 
-  const typeWithPageIndex = [PullType.PULL_LIMIT_CHAR, PullType.PULL_STATIC, PullType.PULL_LIMIT_LIGHTCONE]
 
   const tmpDataFromJSON = [
-    {"version": "2.0", "phase" : 2, "versionCode": 2004, "type" : "CHAR", "special_rare5" : ["Jing Yuan"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title":{"en" : "Swirl of Heavenly Spear", "zh_hk" : "天戈麾斥", "vocchinese" : "狂三崩鐵版"}},
-    {"version": "2.0", "phase" : 2, "versionCode": 2003, "type" : "CHAR", "special_rare5" : ["Sparkle"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title":{"en" : "Sparkling Splendor", "zh_hk" : "焰錦遊魚", "vocchinese" : "狂三崩鐵版"}},
-    {"version": "2.0", "phase" : 1, "versionCode": 2002, "type" : "CHAR", "special_rare5" : ["Black Swan"], "special_rare4": ["Misha", "Tingyun", "Guinaifen"], "title":{"en" : "Swirl of Heavenly Spear", "zh_hk" : "鏡影婆娑", "vocchinese" : "狂三崩鐵版"}},
-    {"version": "2.0", "phase" : 1, "versionCode": 2001, "type" : "CHAR", "special_rare5" : ["Dan Heng • Imbibitor Lunae"], "special_rare4": ["Misha", "Tingyun", "Guinaifen"], "title":{"en" : "Sparkling Splendor", "zh_hk" : "濯世垂虹", "vocchinese" : "狂三崩鐵版"}},
-    {"version": "2.0", "phase" : 2, "versionCode": 2011, "type" : "LIGHTCONE", "special_rare5" : ["Void"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title":{"en" : "I am dumb", "zh_hk" : "測試光錐1", "vocchinese" : "狂三崩鐵版"}},
-    {"version": "2.0", "phase" : 2, "versionCode": 2012, "type" : "LIGHTCONE", "special_rare5" : ["Dance! Dance! Dance!"], "special_rare4": ["Void"], "title":{"en" : "I am dumb", "zh_hk" : "先去洗個澡2", "vocchinese" : "狂三崩鐵版"}},
-    {"version": "1.6", "phase" : 2, "versionCode": 1602, "type" : "CHAR", "special_rare5" : ["Black Swan"], "special_rare4": ["Guinaifen", "Misha", "Tingyun"], "title":{"en" : "I am dumb", "zh_hk" : "名字暫時這樣改"}},
-    {"version": "1.6", "phase" : 1, "versionCode": 1601, "type" : "CHAR", "special_rare5" : ["Black Swan"], "special_rare4": ["Guinaifen", "Misha", "Tingyun"], "title":{"en" : "I am dumb", "zh_hk" : "名字暫時這樣改"}},
-    {"version": "1.0", "phase" : -1, "versionCode": 1000, "type" : "STATIC", "special_rare5" : [], "special_rare4": [], "title":{"en" : "I am dumb", "zh_hk" : "群星躍遷", "vocchinese" : "常駐池"}},
+    { "version": "2.0", "phase": 2, "versionCode": 2004, "type": "CHAR", "special_rare5": ["Jing Yuan"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title": { "en": "Swirl of Heavenly Spear", "zh_hk": "天戈麾斥", "vocchinese": "狂三崩鐵版" } },
+    { "version": "2.0", "phase": 2, "versionCode": 2003, "type": "CHAR", "special_rare5": ["Sparkle"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title": { "en": "Sparkling Splendor", "zh_hk": "焰錦遊魚", "vocchinese": "狂三崩鐵版" } },
+    { "version": "2.0", "phase": 1, "versionCode": 2002, "type": "CHAR", "special_rare5": ["Black Swan"], "special_rare4": ["Misha", "Tingyun", "Guinaifen"], "title": { "en": "Swirl of Heavenly Spear", "zh_hk": "鏡影婆娑", "vocchinese": "狂三崩鐵版" } },
+    { "version": "2.0", "phase": 1, "versionCode": 2001, "type": "CHAR", "special_rare5": ["Dan Heng • Imbibitor Lunae"], "special_rare4": ["Misha", "Tingyun", "Guinaifen"], "title": { "en": "Sparkling Splendor", "zh_hk": "濯世垂虹", "vocchinese": "狂三崩鐵版" } },
+    { "version": "2.0", "phase": 2, "versionCode": 2011, "type": "LIGHTCONE", "special_rare5": ["Void"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title": { "en": "I am dumb", "zh_hk": "測試光錐1", "vocchinese": "狂三崩鐵版" } },
+    { "version": "2.0", "phase": 2, "versionCode": 2012, "type": "LIGHTCONE", "special_rare5": ["Dance! Dance! Dance!"], "special_rare4": ["Void"], "title": { "en": "I am dumb", "zh_hk": "先去洗個澡2", "vocchinese": "狂三崩鐵版" } },
+    { "version": "1.6", "phase": 2, "versionCode": 1602, "type": "CHAR", "special_rare5": ["Black Swan"], "special_rare4": ["Guinaifen", "Misha", "Tingyun"], "title": { "en": "I am dumb", "zh_hk": "名字暫時這樣改" } },
+    { "version": "1.6", "phase": 1, "versionCode": 1601, "type": "CHAR", "special_rare5": ["Black Swan"], "special_rare4": ["Guinaifen", "Misha", "Tingyun"], "title": { "en": "I am dumb", "zh_hk": "名字暫時這樣改" } },
+    { "version": "1.0", "phase": -1, "versionCode": 1000, "type": "STATIC", "special_rare5": [], "special_rare4": [], "title": { "en": "I am dumb", "zh_hk": "群星躍遷", "vocchinese": "常駐池" } },
   ]
 
-  const poolItems : Array<PullInfo> = tmpDataFromJSON.map((data) => {
+  const poolItems: Array<PullInfo> = tmpDataFromJSON.map((data) => {
     let poolItem = new PullInfo();
     poolItem.version = data.version;
     poolItem.phase = data.phase;
@@ -93,52 +94,56 @@ export default function LotteryScreen() {
     //"user-pull-simulator-select-page",
     0
   );
-  
+
   const [selectedPool, setSelectedPool] = useState<Array<PullInfo>>(
     //"user-pull-simulator-select-pool",
     [
-      poolItems.filter((pool) => pool.type === "CHAR").sort((a,b) => {return b.versionCode - a.versionCode})[0],
-      poolItems.filter((pool) => pool.type === "STATIC").sort((a,b) => {return b.versionCode - a.versionCode})[0],
-      poolItems.filter((pool) => pool.type === "LIGHTCONE").sort((a,b) => {return b.versionCode - a.versionCode})[0]
+      poolItems.filter((pool) => pool.type === "CHAR").sort((a, b) => { return b.versionCode - a.versionCode })[0],
+      poolItems.filter((pool) => pool.type === "STATIC").sort((a, b) => { return b.versionCode - a.versionCode })[0],
+      poolItems.filter((pool) => pool.type === "LIGHTCONE").sort((a, b) => { return b.versionCode - a.versionCode })[0]
     ]
   );
-  
+
   //抽卡紀錄
   const [pullRecord, setPullRecord] = useLocalState<Array<String>>(
-    "user-pull-simulator-record7",
+    "user-pull-simulator-record",
     []
   )
 
+  //限定角色池Config
   const [pullCharConfig, setPullCharConfig] = useLocalState<PullConfig>(
     "user-pull-simulator-config-char",
-    {"isMustGetRare4": false, "isMustGetRare5": false, "pullsAfterRare4": 0, "pullsAfterRare5": 0}
+    { "isMustGetRare4": false, "isMustGetRare5": false, "pullsAfterRare4": 0, "pullsAfterRare5": 0 }
   )
+  //限定光錐池Config
   const [pullLcConfig, setPullLcConfig] = useLocalState<PullConfig>(
     "user-pull-simulator-config-lc",
-    {"isMustGetRare4": false, "isMustGetRare5": false, "pullsAfterRare4": 0, "pullsAfterRare5": 0}
+    { "isMustGetRare4": false, "isMustGetRare5": false, "pullsAfterRare4": 0, "pullsAfterRare5": 0 }
   )
+  //常駐池Config
   const [pullStaticConfig, setPullStaticConfig] = useLocalState<PullConfig>(
     "user-pull-simulator-config-static",
-    {"isMustGetRare4": false, "isMustGetRare5": false, "pullsAfterRare4": 0, "pullsAfterRare5": 0}
+    { "isMustGetRare4": false, "isMustGetRare5": false, "pullsAfterRare4": 0, "pullsAfterRare5": 0 }
   )
 
-  const configs = [pullCharConfig,pullStaticConfig,pullLcConfig]
+  const configs = [pullCharConfig, pullStaticConfig, pullLcConfig]
 
-  function makeOnePull(){    
-    handlePullResult(makePulls(selectedPool[selectedPage],configs[selectedPage], 1))
+  function makeOnePull() {
+    handlePullResult(makePulls(selectedPool[selectedPage], configs[selectedPage], 1))
   }
 
-  function makeTenPull(){        
-    handlePullResult(makePulls(selectedPool[selectedPage],configs[selectedPage], 10))
+  function makeTenPull() {
+    handlePullResult(makePulls(selectedPool[selectedPage], configs[selectedPage], 10))
   }
 
-  function handlePullResult(result : object){
-      const work = (typeWithPageIndex[selectedPage] === PullType.PULL_LIMIT_CHAR ? setPullCharConfig(result["pullConfig"])
-      : typeWithPageIndex[selectedPage] === PullType.PULL_STATIC ? setPullStaticConfig(result["pullConfig"])
-      : setPullLcConfig(result["pullConfig"])
-      )
-      setPullRecord(pullRecord.concat(result["pullArray"]))
-      Toast("獲得了 : "+result["pullArray"].map((item : { itemId: any; }) => ((getCharFullData(item.itemId, textLanguage) || getLcFullData(item.itemId, textLanguage)).name))).toString();    
+  function handlePullResult(result: object) {
+    const work = (
+      typeWithPageIndex[selectedPage] === PullType.PULL_LIMIT_CHAR ? setPullCharConfig(result["pullConfig"])
+        : typeWithPageIndex[selectedPage] === PullType.PULL_STATIC ? setPullStaticConfig(result["pullConfig"])
+          : setPullLcConfig(result["pullConfig"])
+    )
+    setPullRecord(pullRecord.concat(result["pullArray"]))
+    Toast("獲得了 : " + result["pullArray"].map((item: { itemId: any; }) => ((getCharFullData(item.itemId, textLanguage) || getLcFullData(item.itemId, textLanguage)).name))).toString();
   }
 
   const handleCharPress = useCallback((charId: string, charName: string) => {
@@ -157,9 +162,13 @@ export default function LotteryScreen() {
     });
   }, []);
 
-  const handleRecordPress = useCallback(() => {
+  const handleRecordPress = useCallback((selected: number) => {
     // @ts-ignore
     navigation.push(SCREENS.LotteryRecordPage.id, {
+      currPage: selected,
+      titleLocale: selectedPool.map((pool) => {
+        return pool.title
+      })
     });
   }, []);
 
@@ -179,7 +188,7 @@ export default function LotteryScreen() {
         };
       })
     );
-    
+
   }, []);
 
   useEffect(() => {
@@ -197,7 +206,7 @@ export default function LotteryScreen() {
         };
       })
     );
-    
+
   }, []);
 
   return (
@@ -217,26 +226,26 @@ export default function LotteryScreen() {
             setSelectedChild={setSelectedPage}
           />
         }
-        rightBtn={<LotteryRecordBtn onPress={handleRecordPress}/>}
+        rightBtn={<LotteryRecordBtn onPress={() => handleRecordPress(selectedPage)} />}
       />
 
       {/* 限定角色圖片 */}
       <Image cachePolicy="none"
-        style={[{ flex : 1}]}
+        style={[{ flex: 1 }]}
         source={
           CharacterImage[selectedPool[selectedPage].special_rare5[0]]?.imageSplash ||
-          Lightcone[selectedPool[selectedPage].special_rare5[0]]?.imageFull || 
+          Lightcone[selectedPool[selectedPage].special_rare5[0]]?.imageFull ||
           require("../../assets/images/ui_icon/static_lottery_bg.webp")}
       />
 
       {/* 空格區 */}
-      <View style={{ marginTop: 6 , marginBottom: 8 }}></View>
-      
+      <View style={{ marginTop: 6, marginBottom: 8 }}></View>
+
       {/* 躍遷相關 */}
-      <View style={{ justifyContent: "center"}}>
-        
+      <View style={{ justifyContent: "center" }}>
+
         {/* 選取卡池Spinner */}
-        <LotteryListBox key={"lotteryListBox"+selectedPage} style={{ alignSelf: "center", marginBottom : 8, marginLeft : 16, marginRight : 16}}
+        <LotteryListBox key={"lotteryListBox" + selectedPage} style={{ alignSelf: "center", marginBottom: 8, marginLeft: 16, marginRight: 16 }}
           //top={8}
           bottom={32 + 4}
           button={
@@ -247,7 +256,7 @@ export default function LotteryScreen() {
             >
               <Text className="text-[14px] font-[HY65] text-[#F3F9FF66] leading-5 pr-5 pl-5" numberOfLines={1}>
                 {
-                  ( selectedPool[selectedPage].phase === -1 
+                  (selectedPool[selectedPage].phase === -1
                     ? selectedPool[selectedPage].title[appLanguage]
                     //: selectedPool[selectedPage].version + " " + (selectedPool[selectedPage].phase === 1 ? LOCALES[appLanguage].MOCPart1 : LOCALES[appLanguage].MOCPart2)
                     : selectedPool[selectedPage].version + " - " + (getCharFullData(selectedPool[selectedPage].special_rare5[0], textLanguage) || getLcFullData(selectedPool[selectedPage].special_rare5[0], textLanguage)).name
@@ -258,28 +267,28 @@ export default function LotteryScreen() {
             </DropDownMenuButton>
           }
           value={selectedPool[selectedPage]}
-          onChange={(poolSelect : PullInfo) => {
+          onChange={(poolSelect: PullInfo) => {
             selectedPool[selectedPage] = poolSelect
             //https://stackoverflow.com/questions/56266575/why-is-usestate-not-triggering-re-render
             //在這裏卡住了1小時
-            setSelectedPool([...selectedPool]) 
+            setSelectedPool([...selectedPool])
           }}
-        >  
-          {poolItems.filter((pool) => pool.type === typeWithPageIndex[selectedPage]).sort((a,b) => {return (b.versionCode - a.versionCode)}).map((pool) => (
-              <LotteryListBox.Item key={pool.versionCode} value={pool}>
-                  {/* @ts-ignore */}
-                  {
-                    ( pool.phase === -1 
-                      ? pool.title[appLanguage]
-                      //: pool.version +" " + (pool.phase === 1 ? LOCALES[appLanguage].MOCPart1 : LOCALES[appLanguage].MOCPart2) + " "
-                      : pool.version + " - " + (getCharFullData(pool.special_rare5[0], textLanguage) || getLcFullData(pool.special_rare5[0], textLanguage)).name
-                    )
-                  }
-                </LotteryListBox.Item>
-              )) || []
+        >
+          {poolItems.filter((pool) => pool.type === typeWithPageIndex[selectedPage]).sort((a, b) => { return (b.versionCode - a.versionCode) }).map((pool) => (
+            <LotteryListBox.Item key={pool.versionCode} value={pool}>
+              {/* @ts-ignore */}
+              {
+                (pool.phase === -1
+                  ? pool.title[appLanguage]
+                  //: pool.version +" " + (pool.phase === 1 ? LOCALES[appLanguage].MOCPart1 : LOCALES[appLanguage].MOCPart2) + " "
+                  : pool.version + " - " + (getCharFullData(pool.special_rare5[0], textLanguage) || getLcFullData(pool.special_rare5[0], textLanguage)).name
+                )
+              }
+            </LotteryListBox.Item>
+          )) || []
           }
         </LotteryListBox>
-        
+
         {/* 卡池名稱 */}
         <Text
           className="text-[29px] font-[HY65] text-white"
@@ -294,72 +303,72 @@ export default function LotteryScreen() {
         </Text>
 
         {/* 限定UP資訊 */}
-        <View 
+        <View
           style={{
-              flexDirection: "row",
-              flexWrap: "wrap",
-              gap: 0,
-              justifyContent: "center",
-              marginLeft:8,
-              marginTop:10,
-              marginRight:8
+            flexDirection: "row",
+            flexWrap: "wrap",
+            gap: 0,
+            justifyContent: "center",
+            marginLeft: 8,
+            marginTop: 10,
+            marginRight: 8
           }}
         >
           {
             charCardListData?.filter((char) => {
               return selectedPool[selectedPage].special_rare4.includes(char.id) || selectedPool[selectedPage].special_rare5.includes(char.id)
-            }).sort((a,b) => {return b.rare - a.rare}).map((char, i) => (
-              (<CharCard 
+            }).sort((a, b) => { return b.rare - a.rare }).map((char, i) => (
+              (<CharCard
                 key={i} {...char}
                 onPress={handleCharPress}
               />)
             ))
-            }
-            {
+          }
+          {
             lcCardListData?.filter((lc) => {
               return selectedPool[selectedPage].special_rare4.includes(lc.id) || selectedPool[selectedPage].special_rare5.includes(lc.id)
-            }).sort((a,b) => {return b.rare - a.rare}).map((lc, i) => (
-              (<LightConeCard 
+            }).sort((a, b) => { return b.rare - a.rare }).map((lc, i) => (
+              (<LightConeCard
                 key={i} {...lc}
                 onPress={() => {
                   handleLcPress(lc.id, lc.name)
                 }}
-                
+
               />)
             ))
-          
+
           }
         </View>
 
         {/* 躍遷按鈕 */}
-        <View 
+        <View
           style={{
-              flexDirection: "row",
-              flexWrap: "wrap",
-              gap: 11,
-              maxHeight: 46,
-              height:46,
-              maxWidth : "100%",
-              justifyContent: "center",
-              marginLeft:8,
-              marginBottom:10,
-              marginTop:16,
-              marginRight:8
+            flexDirection: "row",
+            flexWrap: "wrap",
+            gap: 11,
+            maxHeight: 46,
+            height: 46,
+            maxWidth: "100%",
+            justifyContent: "center",
+            marginLeft: 8,
+            marginBottom: 10,
+            marginTop: 16,
+            marginRight: 8
           }}
         >
           <Button onPress={makeOnePull} >
-            <Text className="font-[HY65] text-[16px]" style={{marginLeft: 24,marginRight: 24}}>
+            <Text className="font-[HY65] text-[16px]" style={{ marginLeft: 24, marginRight: 24 }}>
               {LOCALES[appLanguage].MakeOnePull}
             </Text>
           </Button>
           <Button onPress={makeTenPull}  >
-            <Text className="font-[HY65] text-[16px]" style={{marginLeft: 24,marginRight: 24}}>
+            <Text className="font-[HY65] text-[16px]" style={{ marginLeft: 24, marginRight: 24 }}>
               {LOCALES[appLanguage].MakeTenPull}
             </Text>
           </Button>
         </View>
 
-        <View style={{marginBottom: dynamicHeightBottomBar }}></View>
+        <View style={{ marginBottom: dynamicHeightBottomBar }}></View>
       </View>
 
     </View>

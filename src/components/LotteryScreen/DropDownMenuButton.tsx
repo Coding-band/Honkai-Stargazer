@@ -28,7 +28,7 @@ export default function DropDownMenuButton({
   style?: StyleProp<ViewStyle>;
   activeOpacity?: number;
 }) {
-  return(
+  return (
     <View
       className="rounded-[8px] border width-[8px] border-solid border-[#F3F9FF66] w-full h-full"
       style={[
@@ -37,7 +37,7 @@ export default function DropDownMenuButton({
           height,
           justifyContent: "flex-start",
           alignItems: "center",
-          flexDirection : "row",
+          flexDirection: "row",
         },
         style,
       ]}

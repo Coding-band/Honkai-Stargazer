@@ -46,9 +46,9 @@ export default function Listbox(props: Props) {
               top: props.top,
               bottom: props.bottom,
               maxHeight: 150,
-              alignSelf:"center",
+              alignSelf: "center",
               borderRadius: 12,
-              backgroundColor:"#555555"
+              backgroundColor: "#555555"
             },
           ]}
         >

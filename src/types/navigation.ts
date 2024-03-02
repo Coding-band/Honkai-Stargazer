@@ -24,5 +24,6 @@ export type ParamList = {
     icon: any;
     content: any;
   };
-  Lottery: {id: string};
+  Lottery: { id: string };
+  LotteryRecord: { currPage: number, titleLocale: string[] };
 };

@@ -13,6 +13,7 @@ type Props = {
   children?: any;
   leftBtn?: "close" | "back";
   rightBtn?: any;
+  canOverLay?: boolean;
   onPress?: (e: GestureResponderEvent) => void;
   onBack?: () => void;
   style?: any;
@@ -28,10 +29,10 @@ export default function HeaderAlpha(props: Props) {
 
   return (
     <AnimatedPressable
-      className="absolute w-full z-50"
+      className="w-full z-50"
       onPress={props.onPress}
       pointerEvents="box-none"
-      style={props.style}
+      style={[props.style, { position: (props.canOverLay === false ? "relative" : "absolute") }]}
     >
       <View
         className="w-full h-[110px]"
@@ -44,16 +45,16 @@ export default function HeaderAlpha(props: Props) {
           className="absolute left-[17px] bottom-[14px] rounded-full overflow-hidden z-50"
         >
           <Image cachePolicy="none"
-              style={{ width: 40, height: 40 }}
-              source={props.leftBtn === "back" ? BackBtn : CloseBtn}
-            />
+            style={{ width: 40, height: 40 }}
+            source={props.leftBtn === "back" ? BackBtn : CloseBtn}
+          />
         </TouchableOpacity>
         {/* 中間主體 */}
         <View className="translate-y-[-19px]">{props.children}</View>
         {/* 右邊按鈕 */}
         {
           <View
-          className="absolute right-[17px] bottom-[14px] rounded-full overflow-hidden z-50"
+            className="absolute right-[17px] bottom-[14px] rounded-full overflow-hidden z-50"
             style={{ alignItems: "center", justifyContent: "flex-end" }}
           >{props.rightBtn}</View>
         }

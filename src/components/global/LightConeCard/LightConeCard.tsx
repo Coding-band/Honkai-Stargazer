@@ -26,10 +26,10 @@ export default React.memo(function LightConeCard(props: Props) {
   const itemMaxWidth = 72;
   const itemPadding = 8;
   const dimension = Dimensions.get('window');
-  const totalAvailableWidth = (dimension.width - 8*2);
+  const totalAvailableWidth = (dimension.width - 8 * 2);
   const itemInRow = Math.trunc(totalAvailableWidth / itemMaxWidth)
-  const oneItemWidth = itemMaxWidth + (((totalAvailableWidth % itemMaxWidth ) / itemInRow) ) - itemPadding
-  
+  const oneItemWidth = itemMaxWidth + (((totalAvailableWidth % itemMaxWidth) / itemInRow)) - itemPadding
+
   return (
     <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
       {/* <Shadow
@@ -38,14 +38,14 @@ export default React.memo(function LightConeCard(props: Props) {
         startColor={props.rare === 5 ? "#C7A37150" : "#9663CC50"}
       > */}
       <View>
-        <CardBg rare={props.rare} width={oneItemWidth*2/1.4}/>
+        <CardBg rare={props.rare} width={oneItemWidth * 2 / 1.4} />
         <View
           style={{
             borderRadius: 4,
             borderTopRightRadius: 10,
             overflow: "hidden",
-            width:oneItemWidth,
-            height:oneItemWidth,
+            width: oneItemWidth,
+            height: oneItemWidth,
             alignItems: "center",
             justifyContent: "center",
           }}
@@ -60,7 +60,7 @@ export default React.memo(function LightConeCard(props: Props) {
             {/* 光錐圖標 */}
             <Image cachePolicy="none"
               transition={200}
-              style={{ width: oneItemWidth/1.2, height: oneItemWidth/1.2 }}
+              style={{ width: oneItemWidth / 1.2, height: oneItemWidth / 1.2 }}
               source={props.image}
               contentFit="contain"
             />
@@ -79,7 +79,7 @@ export default React.memo(function LightConeCard(props: Props) {
             numberOfLines={2}
             className="text-text2 text-[12px] font-[HY65] leading-4"
             style={{
-              width:oneItemWidth,
+              width: oneItemWidth,
               flexWrap: "wrap",
               textAlign: "center",
             }}
