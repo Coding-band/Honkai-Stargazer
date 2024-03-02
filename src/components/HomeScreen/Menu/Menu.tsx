@@ -34,6 +34,8 @@ export default function Menu() {
     width: 0,
     height: 0,
   });
+  //開拓力/後備開拓力切換
+  const [isDisplayBackupStamina, setIsDisplayBackupStamina] = useState(false);
 
   useEffect(() => {
     MenuItem;
@@ -107,23 +109,38 @@ export default function Menu() {
       name: LOCALES[language].Stamina,
       icon: Moon,
       title: playerNote.data ? (
-        <>
-          <Text className="text-[24px] leading-[26px]">
-            {playerNote.data?.current_stamina}
-          </Text>
-          <Text>/{playerNote.data?.max_stamina}</Text>
-        </>
+        isDisplayBackupStamina ?
+          (
+            <>
+              <Text className="text-[24px] leading-[26px]">
+                {playerNote.data?.current_reserve_stamina}
+              </Text>
+              <Text>/2400</Text>
+            </>
+          ) : (<>
+            <Text className="text-[24px] leading-[26px]">
+              {playerNote.data?.current_stamina}
+            </Text>
+            <Text>/{playerNote.data?.max_stamina}</Text>
+          </>
+          )
       ) : null,
       subtitle: playerNote.data ? (
-        <Text>
+        !isDisplayBackupStamina ? (<Text>
           {playerNote.data.current_stamina >= 240
             ? LOCALES[language].StaminaIsFull
             : formatTimePoint(playerNote.data.stamina_recover_time, language)}
-        </Text>
+        </Text>) : (<Text>
+          ----
+        </Text>)
       ) : null,
       onPress: () => {
         setStaminaIsCheck(true);
         Toast.StillDevelopingToast(language)
+      },
+      onLongPress: () => {
+        setIsDisplayBackupStamina(!isDisplayBackupStamina);
+        console.log("isDisplayBackupStamina : " + isDisplayBackupStamina)
       },
       hasDot:
         !staminaIsCheck &&
@@ -146,8 +163,8 @@ export default function Menu() {
       type: "normal",
       name: playerNote.data
         ? `${formatNumber(playerNote.data?.current_rogue_score)}/${formatNumber(
-            playerNote.data?.max_rogue_score
-          )}`
+          playerNote.data?.max_rogue_score
+        )}`
         : LOCALES[language].NoDataYet,
       icon: Planet,
       onPress: () => {
@@ -170,17 +187,17 @@ export default function Menu() {
       subtitle: playerNote.data ? (
         <Text>
           {
-            (playerNote.data.expeditions.length === 0 ? LOCALES[language].IsDone : 
+            (playerNote.data.expeditions.length === 0 ? LOCALES[language].IsDone :
               _.maxBy(playerNote.data.expeditions, (e: any) => e.remaining_time)
                 .remaining_time === 0
                 ? LOCALES[language].IsDone
                 : formatTimePoint(
-                    _.maxBy(
-                      playerNote.data.expeditions,
-                      (e: any) => e.remaining_time
-                    ).remaining_time,
-                    language
-                  )  
+                  _.maxBy(
+                    playerNote.data.expeditions,
+                    (e: any) => e.remaining_time
+                  ).remaining_time,
+                  language
+                )
             )
           }
         </Text>
@@ -296,9 +313,9 @@ export default function Menu() {
       onPress: () => {
         // @ts-ignore
 
-        if(ENV === "beta" || ENV === "production") {
+        if (ENV === "beta" || ENV === "production") {
           Toast.StillDevelopingToast(language)
-        }else{
+        } else {
           navigation.navigate(SCREENS.LotteryPage.id, {
             title: LOCALES[language].LotteryPage,
             icon: StarOfDavid,
@@ -306,7 +323,7 @@ export default function Menu() {
           });
         }
       },
-      
+
     },
   ];
 
@@ -331,6 +348,7 @@ export default function Menu() {
                   height={menuItemSize.height}
                   Icon={menuItem.icon}
                   onPress={menuItem.onPress}
+                  onLongPress={menuItem.onLongPress}
                   hasDot={menuItem?.hasDot}
                 >
                   {menuItem.name}
@@ -344,6 +362,7 @@ export default function Menu() {
                   height={menuItemLargeSize.height}
                   Icon={menuItem.icon}
                   onPress={menuItem.onPress}
+                  onLongPress={menuItem.onLongPress}
                   title={menuItem.title}
                   subtitle={menuItem.subtitle}
                   hasDot={menuItem?.hasDot}

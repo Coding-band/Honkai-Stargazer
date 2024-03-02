@@ -19,6 +19,7 @@ export default function MenuItem({
   width,
   height,
   onPress,
+  onLongPress,
   hasDot,
 }: {
   children: any;
@@ -26,6 +27,7 @@ export default function MenuItem({
   width: number;
   height: number;
   onPress?: (e: GestureResponderEvent) => void;
+  onLongPress?: (e: GestureResponderEvent) => void;
   hasDot?: boolean;
 }) {
   const { doUseHomePageBlurEffect } = useDoUseHomePageBlurEffect();
@@ -33,7 +35,7 @@ export default function MenuItem({
   return (
     <View>
       <Shadow offset={[0, 4]} distance={6} startColor="#00000025">
-        <TouchableOpacity onPress={onPress} activeOpacity={0.65}>
+        <TouchableOpacity onPress={onPress} onLongPress={onLongPress} activeOpacity={0.65}>
           <View
             style={{
               width,
