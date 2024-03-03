@@ -29,7 +29,7 @@ import { ExpoImage } from "../types/image";
 import Button from "../components/global/Button/Button";
 import { LOCALES } from "../../locales";
 import Toast from "../utils/toast/Toast";
-import makePulls, { PullConfig, PullInfo, PullResult, PullType } from "../utils/lottery/LotterySimulator";
+import makePulls, { PullConfig, PullInfo, PullResult, PullReturnObject, PullType } from "../utils/lottery/LotterySimulator";
 import useLocalState from "../hooks/useLocalState";
 import { dynamicHeightBottomBar } from "../constant/ui";
 import LotteryListBox from "../components/LotteryScreen/LotteryListbox/LotteryListbox";
@@ -40,6 +40,8 @@ import { LightconeName } from "../types/lightcone";
 import PagerView from 'react-native-pager-view';
 import { DirectEventHandler } from "react-native/Libraries/Types/CodegenTypes";
 import { OnPageScrollEventData } from "react-native-pager-view/lib/typescript/PagerViewNativeComponent";
+import lottery_list from "../../data/lottery_data/lottery_list.json";
+import lottery_title from "../../data/lottery_data/lottery_title.json";
 
 type CharListItem = {
   id: CharacterName;
@@ -67,27 +69,10 @@ export default function LotteryScreen() {
   const [charCardListData, setCharCardListData] = useState<CharListItem[]>();
   const [lcCardListData, setLcCardListData] = useState<LcListItem[]>();
 
-  const tmpDataFromJSON = [
-    { "version": "2.0", "phase": 2, "versionCode": 2004, "type": "CHAR", "special_rare5": ["Jing Yuan"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title": { "en": "Swirl of Heavenly Spear", "zh_hk": "天戈麾斥", "vocchinese": "狂三崩鐵版" } },
-    { "version": "2.0", "phase": 2, "versionCode": 2003, "type": "CHAR", "special_rare5": ["Sparkle"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title": { "en": "Sparkling Splendor", "zh_hk": "焰錦遊魚", "vocchinese": "狂三崩鐵版" } },
-    { "version": "2.0", "phase": 1, "versionCode": 2002, "type": "CHAR", "special_rare5": ["Black Swan"], "special_rare4": ["Misha", "Tingyun", "Guinaifen"], "title": { "en": "Swirl of Heavenly Spear", "zh_hk": "鏡影婆娑", "vocchinese": "狂三崩鐵版" } },
-    { "version": "2.0", "phase": 1, "versionCode": 2001, "type": "CHAR", "special_rare5": ["Dan Heng • Imbibitor Lunae"], "special_rare4": ["Misha", "Tingyun", "Guinaifen"], "title": { "en": "Sparkling Splendor", "zh_hk": "濯世垂虹", "vocchinese": "狂三崩鐵版" } },
-    { "version": "2.0", "phase": 2, "versionCode": 2011, "type": "LIGHTCONE", "special_rare5": ["Void"], "special_rare4": ["Sampo", "Qingque", "Hanya"], "title": { "en": "I am dumb", "zh_hk": "測試光錐1", "vocchinese": "狂三崩鐵版" } },
-    { "version": "2.0", "phase": 2, "versionCode": 2012, "type": "LIGHTCONE", "special_rare5": ["Dance! Dance! Dance!"], "special_rare4": ["Void"], "title": { "en": "I am dumb", "zh_hk": "先去洗個澡2", "vocchinese": "狂三崩鐵版" } },
-    { "version": "1.6", "phase": 2, "versionCode": 1602, "type": "CHAR", "special_rare5": ["Black Swan"], "special_rare4": ["Guinaifen", "Misha", "Tingyun"], "title": { "en": "I am dumb", "zh_hk": "名字暫時這樣改" } },
-    { "version": "1.6", "phase": 1, "versionCode": 1601, "type": "CHAR", "special_rare5": ["Black Swan"], "special_rare4": ["Guinaifen", "Misha", "Tingyun"], "title": { "en": "I am dumb", "zh_hk": "名字暫時這樣改" } },
-    { "version": "1.0", "phase": -1, "versionCode": 1000, "type": "STATIC", "special_rare5": [], "special_rare4": [], "title": { "en": "I am dumb", "zh_hk": "群星躍遷", "vocchinese": "常駐池" } },
-  ]
-
-  const poolItems: Array<PullInfo> = tmpDataFromJSON.map((data) => {
-    let poolItem = new PullInfo();
-    poolItem.version = data.version;
-    poolItem.phase = data.phase;
-    poolItem.versionCode = data.versionCode;
-    poolItem.type = data.type;
-    poolItem.special_rare5 = data.special_rare5;
-    poolItem.special_rare4 = data.special_rare4;
-    poolItem.title = data.title;
+  const poolItems: Array<PullInfo> = lottery_list.filter((data) => {return data.begin_time <= Math.trunc(Date.now()/1000)}).map((data) => {
+    let poolItem = data as PullInfo;
+    //@ts-ignore
+    poolItem.title = lottery_title[data.poolCode.toString()].title;
     return poolItem
   })
 
@@ -100,9 +85,9 @@ export default function LotteryScreen() {
   const [selectedPool, setSelectedPool] = useState<Array<PullInfo>>(
     //"user-pull-simulator-select-pool",
     [
-      poolItems.filter((pool) => pool.type === "CHAR").sort((a, b) => { return b.versionCode - a.versionCode })[0],
-      poolItems.filter((pool) => pool.type === "STATIC").sort((a, b) => { return b.versionCode - a.versionCode })[0],
-      poolItems.filter((pool) => pool.type === "LIGHTCONE").sort((a, b) => { return b.versionCode - a.versionCode })[0]
+      poolItems.filter((pool) => pool.type === "CHAR").sort((a, b) => { return b.poolCode - a.poolCode })[0],
+      poolItems.filter((pool) => pool.type === "STATIC").sort((a, b) => { return b.poolCode - a.poolCode })[0],
+      poolItems.filter((pool) => pool.type === "LIGHTCONE").sort((a, b) => { return b.poolCode - a.poolCode })[0]
     ]
   );
 
@@ -138,14 +123,14 @@ export default function LotteryScreen() {
     handlePullResult(makePulls(selectedPool[selectedPage], configs[selectedPage], 10))
   }
 
-  function handlePullResult(result: object) {
+  function handlePullResult(result: PullReturnObject) {
     const work = (
       typeWithPageIndex[selectedPage] === PullType.PULL_LIMIT_CHAR ? setPullCharConfig(result["pullConfig"])
         : typeWithPageIndex[selectedPage] === PullType.PULL_STATIC ? setPullStaticConfig(result["pullConfig"])
           : setPullLcConfig(result["pullConfig"])
     )
     setPullRecord(pullRecord.concat(result["pullArray"]))
-    Toast("獲得了 : " + result["pullArray"].map((item: { itemId: any; }) => ((getCharFullData(item.itemId, textLanguage) || getLcFullData(item.itemId, textLanguage)).name))).toString();
+    Toast("獲得了 : " + result["pullArray"].map((item: { itemId: any; }) => ((getCharFullData(item.itemId, textLanguage) || getLcFullData(item.itemId, textLanguage))?.name))).toString();
   }
 
   const handleCharPress = useCallback((charId: string, charName: string) => {
@@ -254,7 +239,7 @@ export default function LotteryScreen() {
                     (selectedPool[selectedPage].phase === -1
                       ? selectedPool[selectedPage].title[appLanguage]
                       //: selectedPool[selectedPage].version + " " + (selectedPool[selectedPage].phase === 1 ? LOCALES[appLanguage].MOCPart1 : LOCALES[appLanguage].MOCPart2)
-                      : selectedPool[selectedPage].version + " - " + (getCharFullData(selectedPool[selectedPage].special_rare5[0], textLanguage) || getLcFullData(selectedPool[selectedPage].special_rare5[0], textLanguage)).name
+                      : selectedPool[selectedPage].version + " - " + (getCharFullData(selectedPool[selectedPage].special_rare5[0], textLanguage) || getLcFullData(selectedPool[selectedPage].special_rare5[0], textLanguage))?.name
                     )
                     //+selectedPool[selectedPage].title[appLanguage]
                   }
@@ -269,14 +254,14 @@ export default function LotteryScreen() {
               setSelectedPool([...selectedPool])
             }}
           >
-            {poolItems.filter((pool) => pool.type === typeWithPageIndex[selectedPage]).sort((a, b) => { return (b.versionCode - a.versionCode) }).map((pool) => (
-              <LotteryListBox.Item key={pool.versionCode} value={pool}>
+            {poolItems.filter((pool) => pool.type === typeWithPageIndex[selectedPage]).sort((a, b) => { return (b.poolCode - a.poolCode) }).map((pool) => (
+              <LotteryListBox.Item key={pool.poolCode} value={pool}>
                 {/* @ts-ignore */}
                 {
                   (pool.phase === -1
                     ? pool.title[appLanguage]
                     //: pool.version +" " + (pool.phase === 1 ? LOCALES[appLanguage].MOCPart1 : LOCALES[appLanguage].MOCPart2) + " "
-                    : pool.version + " - " + (getCharFullData(pool.special_rare5[0], textLanguage) || getLcFullData(pool.special_rare5[0], textLanguage)).name
+                    : pool.version + " - " + (getCharFullData(pool.special_rare5[0], textLanguage) || getLcFullData(pool.special_rare5[0], textLanguage))?.name
                   )
                 }
               </LotteryListBox.Item>
@@ -351,12 +336,12 @@ export default function LotteryScreen() {
               marginRight: 8
             }}
           >
-            <Button onPress={makeOnePull} >
+            <Button onPress={makeOnePull} width={"100%"} height={"100%"}>
               <Text className="font-[HY65] text-[16px]" style={{ marginLeft: 24, marginRight: 24 }}>
                 {LOCALES[appLanguage].MakeOnePull}
               </Text>
             </Button>
-            <Button onPress={makeTenPull}  >
+            <Button onPress={makeTenPull}  width={"100%"} height={"100%"}>
               <Text className="font-[HY65] text-[16px]" style={{ marginLeft: 24, marginRight: 24 }}>
                 {LOCALES[appLanguage].MakeTenPull}
               </Text>

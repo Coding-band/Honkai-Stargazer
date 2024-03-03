@@ -21,7 +21,6 @@ import lightconeList from "../../data/lightcone_data/lightcone_list.json";
 import CharacterImage from "../../assets/images/images_map/chacracterImage";
 import LightconeImage from "../../assets/images/images_map/lightcone";
 import { getCharFullData, getLcFullData } from "../utils/data/getDataFromMap";
-import { getCharAtData } from "../utils/calculator/getAttrData";
 import useTextLanguage from "../language/TextLanguage/useTextLanguage";
 import { CharacterName } from "../types/character";
 import { CombatType } from "../types/combatType";

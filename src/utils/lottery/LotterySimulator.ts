@@ -96,11 +96,13 @@ export enum PullType {
 export class PullInfo {
   version: string = "1.0";
   phase: number = 1;
-  versionCode: number = 1001;
+  poolCode: number = 1001;
   type: string = "STATIC";
   special_rare5: Array<string> = [];
   special_rare4: Array<string> = [];
   title: object = { "en": "常駐", "zh_hk": "常駐" };
+  begin_time: number = 0; 
+  end_time: number = 0; 
 };
 
 export class PullConfig {
@@ -117,6 +119,12 @@ export class PullResult {
   pullsAfterRare: number = 0;
   pullType: PullType = PullType.PULL_LIMIT_CHAR;
   unixTime: number = 0;
+  poolCode: number = 1001;
+}
+
+export class PullReturnObject {
+  pullArray: Array<PullResult> = [];
+  pullConfig : PullConfig = new PullConfig();
 }
 
 /**
@@ -126,7 +134,7 @@ export class PullResult {
  * @param pullCount number (mainly will have 1 and 10 only.)
  * @returns 
  */
-export default function makePulls(pullInfo: PullInfo, pullConfig: PullConfig, pullCount: number): object {
+export default function makePulls(pullInfo: PullInfo, pullConfig: PullConfig, pullCount: number): PullReturnObject {
   /* 暫存本次抽卡的紀錄 : 
     [
       // 距離上次抽到五星後，過了78抽，第79抽保底抽到阮．梅
@@ -196,13 +204,16 @@ export default function makePulls(pullInfo: PullInfo, pullConfig: PullConfig, pu
 
     //console.log(((randPityOrNot < pullPityOrNot) ? ((isMustGetRare4 && pulledItemType === "FOUR" || isMustGetRare5 && pulledItemType === "FIVE") ? pullUpSet : pullNormalSet) : pullUpSet))
 
-    let pullResult = new PullResult();
-    pullResult.rare = (pulledItemType === "THREE" ? 3 : pulledItemType === "FOUR" ? 4 : 5)
-    pullResult.itemId = ((randPityOrNot < pullPityOrNot) ? ((isMustGetRare4 && pulledItemType === "FOUR" || isMustGetRare5 && pulledItemType === "FIVE") ? pullUpSet : pullNormalSet) : pullUpSet)[randIndex]
-    pullResult.isMustGetRare = (pulledItemType === "THREE" ? false : pulledItemType === "FOUR" ? isMustGetRare4 : isMustGetRare5)
-    pullResult.pullsAfterRare = (pulledItemType === "THREE" ? -1 : pulledItemType === "FOUR" ? pullsAfterRare4 : pullsAfterRare5)
-    pullResult.pullType = pullType
-    pullResult.unixTime = Date.now()
+    let pullResult : PullResult = {
+      "rare": (pulledItemType === "THREE" ? 3 : pulledItemType === "FOUR" ? 4 : 5),
+      "itemId": ((randPityOrNot < pullPityOrNot) ? ((isMustGetRare4 && pulledItemType === "FOUR" || isMustGetRare5 && pulledItemType === "FIVE") ? pullUpSet : pullNormalSet) : pullUpSet)[randIndex],
+      "isMustGetRare": (pulledItemType === "THREE" ? false : pulledItemType === "FOUR" ? isMustGetRare4 : isMustGetRare5),
+      "pullsAfterRare": (pulledItemType === "THREE" ? -1 : pulledItemType === "FOUR" ? pullsAfterRare4 : pullsAfterRare5),
+      "pullType": pullType,
+      "unixTime": Date.now(),
+      "poolCode": poolCode,
+    };
+    
     pullArray.push(pullResult)
 
     pullsAfterRare4 = (pulledItemType === "FOUR" ? 0 : pullsAfterRare4 + 1)
@@ -210,11 +221,9 @@ export default function makePulls(pullInfo: PullInfo, pullConfig: PullConfig, pu
 
   }
 
-  let pullConfigFinal = new PullConfig();
-  pullConfigFinal.pullsAfterRare4 = pullsAfterRare4;
-  pullConfigFinal.pullsAfterRare5 = pullsAfterRare5;
-  pullConfigFinal.isMustGetRare4 = isMustGetRare4;
-  pullConfigFinal.isMustGetRare5 = isMustGetRare5;
+  let pullConfigFinal : PullConfig = {
+    pullsAfterRare4,pullsAfterRare5,isMustGetRare4,isMustGetRare5
+  };
 
   return {
     pullArray,
