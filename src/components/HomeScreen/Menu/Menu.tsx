@@ -136,11 +136,7 @@ export default function Menu() {
       ) : null,
       onPress: () => {
         setStaminaIsCheck(true);
-        Toast.StillDevelopingToast(language)
-      },
-      onLongPress: () => {
         setIsDisplayBackupStamina(!isDisplayBackupStamina);
-        console.log("isDisplayBackupStamina : " + isDisplayBackupStamina)
       },
       hasDot:
         !staminaIsCheck &&
