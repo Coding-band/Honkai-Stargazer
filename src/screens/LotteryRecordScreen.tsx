@@ -21,7 +21,7 @@ import lightconeList from "../../data/lightcone_data/lightcone_list.json";
 import CharacterImage from "../../assets/images/images_map/chacracterImage";
 import LightconeImage from "../../assets/images/images_map/lightcone";
 import { getCharFullData, getLcFullData } from "../utils/data/getDataFromMap";
-import { getCharAttrData } from "../utils/calculator/getAttrData";
+import { getCharAtData } from "../utils/calculator/getAttrData";
 import useTextLanguage from "../language/TextLanguage/useTextLanguage";
 import { CharacterName } from "../types/character";
 import { CombatType } from "../types/combatType";
@@ -29,7 +29,7 @@ import { ExpoImage } from "../types/image";
 import Button from "../components/global/Button/Button";
 import { LOCALES } from "../../locales";
 import Toast from "../utils/toast/Toast";
-import makePulls, { PullConfig, PullInfo, PullType } from "../utils/lottery/LotterySimulator";
+import makePulls, { PullConfig, PullInfo, PullResult, PullType } from "../utils/lottery/LotterySimulator";
 import useLocalState from "../hooks/useLocalState";
 import { dynamicHeightBottomBar } from "../constant/ui";
 import LotteryListBox from "../components/LotteryScreen/LotteryListbox/LotteryListbox";
@@ -55,57 +55,36 @@ export default function LotteryScreen() {
   );
 
   //抽卡紀錄
-  const [pullRecord, setPullRecord] = useLocalState<Array<String>>(
+  const [pullRecord, setPullRecord] = useLocalState<Array<PullResult>>(
     "user-pull-simulator-record",
     []
   )
 
-
+  //列表文字基礎Style
   const listItemTextStyle = {
     fontFamily: "HY65",
     justifyContent: 'center',
     alignItems: 'center',
     color: "#FFFFFF",
-    fontSize: 16,
+    fontSize: 18,
     paddingTop: 9,
     paddingBottom: 9,
+    flexWrap: "wrap",
+    paddingLeft: 0,
+    paddingRight: 8,
   }
 
+  //列表中間文字Style
+  const listItemCenterTextStyle = [listItemTextStyle, { flexWrap: 'nowrap', flex: 1, paddingLeft: 8, paddingRight: 8 }]
 
-  const listItemRare4TextStyle = {
-    color: "#A256E1",
-  }
-  const listItemRare5TextStyle = {
-    color: "#D1A96A",
-  }
+  //列表右方文字Style
+  const listItemRightTextStyle = [listItemTextStyle, { textAlign: 'right', paddingLeft: 8 }]
 
-  const listItemRTextStyle = [listItemTextStyle, { textAlign: 'right' }]
+  //四星名字Style
+  const listItemRare4TextStyle = { color: "#A256E1", }
 
-  let recordViewArray: Array<Array<React.JSX.Element>> = [
-    [<Text style={listItemTextStyle}>{LOCALES[appLanguage].LotteryRecordType}</Text>],
-    [<Text style={listItemTextStyle}>{LOCALES[appLanguage].LotteryRecordName}</Text>],
-    [<Text style={listItemRTextStyle}>{LOCALES[appLanguage].LotteryRecordTime}</Text>],
-  ];
-  pullRecord.filter((pull) => pull.pullType === typeWithPageIndex[selectedPage]).map((data, index) => {
-    const fullData = (getCharFullData(data.itemId, textLanguage) || getLcFullData(data.itemId, textLanguage))
-
-    recordViewArray[0][index + 1] =
-      <Text style={listItemTextStyle}>
-        {(fullData).spRequirement === undefined ? LOCALES[appLanguage].Lightcone : LOCALES[appLanguage].Character}
-      </Text>
-
-    recordViewArray[1][index + 1] =
-      <Text style={[listItemTextStyle, (fullData.rarity === 5 ? listItemRare5TextStyle : fullData.rarity === 4 ? listItemRare4TextStyle : {})]}>
-        {(fullData).name}
-      </Text>
-
-    recordViewArray[2][index + 1] =
-      <Text style={listItemRTextStyle}>
-        {dayjs.unix(data.unixTime / 1000).format("YYYY-MM-DD HH:mm")}
-      </Text>
-
-
-  })
+  //五星名字Style
+  const listItemRare5TextStyle = { color: "#D1A96A", }
 
   return (
     <View style={{ flex: 1 }} className="overflow-hidden">
@@ -146,7 +125,7 @@ export default function LotteryScreen() {
         </Text>
 
         {/* 卡池選擇 */}
-        {true && (<View
+        {false && (<View
           style={{
             justifyContent: "center",
             alignSelf: "center",
@@ -160,6 +139,20 @@ export default function LotteryScreen() {
         </View>)}
       </View>
 
+      {/* 列表標題欄 */}
+      <View
+        style={{
+          flexDirection: "row",
+          width: "100%",
+          paddingLeft: 16,
+          paddingRight: 16,
+          alignSelf: "center",
+        }}>
+        <Text style={listItemTextStyle}>{LOCALES[appLanguage].LotteryRecordType}</Text>
+        <Text style={listItemCenterTextStyle}>{LOCALES[appLanguage].LotteryRecordName}</Text>
+        <Text style={listItemRightTextStyle}>{LOCALES[appLanguage].LotteryRecordTime}</Text>
+      </View>
+
       {/* 列表 */}
       <ScrollView
         style={{
@@ -167,46 +160,29 @@ export default function LotteryScreen() {
           height: "100%",
         }}
       >
+
         {/* 列表主體 */}
-        <View
-          style={{
-            flex: 1,
-            flexDirection: "row",
-            width: "100%",
-            height: "100%",
-            //backgroundColor: "#FFFFFF",
-            paddingLeft: 16,
-            paddingRight: 16,
-            alignSelf: "center",
-          }}
-        >
-          {/* 類型 */}
-          <View style={{
-            flexWrap: "wrap",
-            paddingRight: 8,
-            //backgroundColor: "#8A63C8",
-          }}>
-            {recordViewArray[0]}
-          </View>
+        <View style={{ width: "100%", flex: 1, paddingBottom: 60 }}>
+          {
+            pullRecord.filter((pull: PullResult) => pull.pullType === typeWithPageIndex[selectedPage])
+              .sort((a, b) => b.unixTime - a.unixTime)
+              .map((pull: PullResult, index: number) => {
+                const fullData = (getCharFullData(pull.itemId as CharacterName, textLanguage) || getLcFullData(pull.itemId as LightconeName, textLanguage))
+                return (
+                  <View style={{ width: "100%", paddingLeft: 16, paddingRight: 16 }}>
+                    <View style={{ width: "100%", flex: 1, flexDirection: "row" }}>
+                      <Text style={listItemTextStyle}>{fullData.spRequirement === undefined ? LOCALES[appLanguage].Lightcone : LOCALES[appLanguage].Character}</Text>
+                      <Text style={[listItemCenterTextStyle, (fullData.rarity === 5 ? listItemRare5TextStyle : fullData.rarity === 4 ? listItemRare4TextStyle : {})]}>{fullData.name}</Text>
+                      <Text style={listItemRightTextStyle}>{dayjs.unix(pull.unixTime / 1000).format("YYYY-MM-DD HH:mm")}</Text>
+                    </View>
 
-          {/* 名稱 */}
-          <View style={{
-            flex: 1,
-            paddingLeft: 8,
-            paddingRight: 8,
-            //backgroundColor: "#313131",
-          }}>
-            {recordViewArray[1]}
-          </View>
-
-          {/* 時間 */}
-          <View style={{
-            flexWrap: "wrap",
-            //backgroundColor: "#45CC23",
-            paddingLeft: 8,
-          }}>
-            {recordViewArray[2]}
-          </View>
+                    {false && (index + 1) % 10 === 0 && (
+                      <View style={{ marginLeft: 16, marginRight: 16, height: 2, backgroundColor: "#CCCCCC", borderColor: "#CCCCCC", borderRadius: 60 }}></View>
+                    )}
+                  </View>
+                )
+              })
+          }
         </View>
       </ScrollView>
     </View>

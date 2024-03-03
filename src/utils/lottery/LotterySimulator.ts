@@ -110,6 +110,15 @@ export class PullConfig {
   isMustGetRare5: boolean = false;
 }
 
+export class PullResult {
+  rare: number = 3;
+  itemId: string = "Void";
+  isMustGetRare: boolean = false;
+  pullsAfterRare: number = 0;
+  pullType: PullType = PullType.PULL_LIMIT_CHAR;
+  unixTime: number = 0;
+}
+
 /**
  * 
  * @param pullInfo {"special_rare5": ["Ruan Mei"], "special_rare4": ["March 7th", "Tingyun", "Xueyi"]}
@@ -132,7 +141,7 @@ export default function makePulls(pullInfo: PullInfo, pullConfig: PullConfig, pu
     ]
   */
   let pullType = pullInfo?.type as PullType
-  let pullArray = []
+  let pullArray: Array<PullResult> = []
 
   //抽卡基礎機率 & 抽卡保底機率
   let pullNormalRate = pullNormalRateChar, pullPityRate = pullPityRateChar
@@ -187,16 +196,14 @@ export default function makePulls(pullInfo: PullInfo, pullConfig: PullConfig, pu
 
     //console.log(((randPityOrNot < pullPityOrNot) ? ((isMustGetRare4 && pulledItemType === "FOUR" || isMustGetRare5 && pulledItemType === "FIVE") ? pullUpSet : pullNormalSet) : pullUpSet))
 
-    pullArray.push(
-      {
-        "rare": (pulledItemType === "THREE" ? 3 : pulledItemType === "FOUR" ? 4 : 5),
-        "itemId": ((randPityOrNot < pullPityOrNot) ? ((isMustGetRare4 && pulledItemType === "FOUR" || isMustGetRare5 && pulledItemType === "FIVE") ? pullUpSet : pullNormalSet) : pullUpSet)[randIndex],
-        "isMustGetRare": (pulledItemType === "THREE" ? false : pulledItemType === "FOUR" ? isMustGetRare4 : isMustGetRare5),
-        "pullsAfterRare": (pulledItemType === "THREE" ? -1 : pulledItemType === "FOUR" ? pullsAfterRare4 : pullsAfterRare5),
-        "pullType": pullType,
-        "unixTime": Date.now(),
-      }
-    )
+    let pullResult = new PullResult();
+    pullResult.rare = (pulledItemType === "THREE" ? 3 : pulledItemType === "FOUR" ? 4 : 5)
+    pullResult.itemId = ((randPityOrNot < pullPityOrNot) ? ((isMustGetRare4 && pulledItemType === "FOUR" || isMustGetRare5 && pulledItemType === "FIVE") ? pullUpSet : pullNormalSet) : pullUpSet)[randIndex]
+    pullResult.isMustGetRare = (pulledItemType === "THREE" ? false : pulledItemType === "FOUR" ? isMustGetRare4 : isMustGetRare5)
+    pullResult.pullsAfterRare = (pulledItemType === "THREE" ? -1 : pulledItemType === "FOUR" ? pullsAfterRare4 : pullsAfterRare5)
+    pullResult.pullType = pullType
+    pullResult.unixTime = Date.now()
+    pullArray.push(pullResult)
 
     pullsAfterRare4 = (pulledItemType === "FOUR" ? 0 : pullsAfterRare4 + 1)
     pullsAfterRare5 = (pulledItemType === "FIVE" ? 0 : pullsAfterRare5 + 1)

@@ -29,7 +29,7 @@ import { ExpoImage } from "../types/image";
 import Button from "../components/global/Button/Button";
 import { LOCALES } from "../../locales";
 import Toast from "../utils/toast/Toast";
-import makePulls, { PullConfig, PullInfo, PullType } from "../utils/lottery/LotterySimulator";
+import makePulls, { PullConfig, PullInfo, PullResult, PullType } from "../utils/lottery/LotterySimulator";
 import useLocalState from "../hooks/useLocalState";
 import { dynamicHeightBottomBar } from "../constant/ui";
 import LotteryListBox from "../components/LotteryScreen/LotteryListbox/LotteryListbox";
@@ -105,7 +105,7 @@ export default function LotteryScreen() {
   );
 
   //抽卡紀錄
-  const [pullRecord, setPullRecord] = useLocalState<Array<String>>(
+  const [pullRecord, setPullRecord] = useLocalState<Array<PullResult>>(
     "user-pull-simulator-record",
     []
   )
