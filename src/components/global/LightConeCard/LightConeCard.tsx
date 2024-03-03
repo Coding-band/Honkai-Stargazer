@@ -29,7 +29,7 @@ export default React.memo(function LightConeCard(props: Props) {
   const totalAvailableWidth = (dimension.width - 8 * 2);
   const itemInRow = Math.trunc(totalAvailableWidth / itemMaxWidth)
   const oneItemWidth = itemMaxWidth + (((totalAvailableWidth % itemMaxWidth) / itemInRow)) - itemPadding
-
+  const oneItemWidthMax = oneItemWidth * 2 / 1.4
   return (
     <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
       {/* <Shadow
@@ -38,7 +38,7 @@ export default React.memo(function LightConeCard(props: Props) {
         startColor={props.rare === 5 ? "#C7A37150" : "#9663CC50"}
       > */}
       <View>
-        <CardBg rare={props.rare} width={oneItemWidth * 2 / 1.4} />
+        <CardBg rare={props.rare} width={oneItemWidthMax} />
         <View
           style={{
             borderRadius: 4,
@@ -73,15 +73,16 @@ export default React.memo(function LightConeCard(props: Props) {
         {/* </Shadow> */}
         <View
           className="pt-1"
-          style={{ alignItems: "center" }}
+          style={{ alignItems: "center", }}
         >
           <Text
             numberOfLines={2}
             className="text-text2 text-[12px] font-[HY65] leading-4"
             style={{
-              width: oneItemWidth,
+              width: oneItemWidth - 4,
               flexWrap: "wrap",
               textAlign: "center",
+              marginRight: 8
             }}
           >
             {props.name}

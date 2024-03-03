@@ -22,27 +22,27 @@ type Props = {
 
 export default React.memo(function RelicsCard(props: Props) {
   //   const animation = useSpring({ from: { opacity: 0.25 }, to: { opacity: 1 } });
-  const itemMaxWidth = 55*1.4;
+  const itemMaxWidth = 55 * 1.4;
   const itemPadding = 5;
   const dimension = Dimensions.get('window');
-  const totalAvailableWidth = (dimension.width - 8*2);
+  const totalAvailableWidth = (dimension.width - 8 * 2);
   const itemInRow = Math.trunc(totalAvailableWidth / itemMaxWidth)
-  const oneItemWidth = itemMaxWidth + (((totalAvailableWidth % itemMaxWidth ) / itemInRow) ) - itemPadding
-  console.log(totalAvailableWidth)
+  const oneItemWidth = itemMaxWidth + (((totalAvailableWidth % itemMaxWidth) / itemInRow)) - itemPadding
+  const oneItemWidthMax = oneItemWidth * 2 / 1.4
   //have issue in width = 84.40413356574761 ~ 84.78599512702031
-  
+
   return (
-    <TouchableOpacity activeOpacity={0.65} onPress={props.onPress} style={{paddingLeft : itemPadding}}>
+    <TouchableOpacity activeOpacity={0.65} onPress={props.onPress} style={{ paddingLeft: itemPadding }}>
       {/* <Shadow distance={6} offset={[4, 4]} startColor="#00000025"> */}
-      <View style={{width : oneItemWidth}}>
-        <CardBg rare={props.rare} width={oneItemWidth*2/1.4}/>
+      <View style={{ width: oneItemWidth }}>
+        <CardBg rare={props.rare} width={oneItemWidthMax} />
         <View
           style={{
             borderRadius: 4,
             borderTopRightRadius: 10,
             overflow: "hidden",
-            width:oneItemWidth,
-            height:oneItemWidth,
+            width: oneItemWidth,
+            height: oneItemWidth,
             alignItems: "center",
             justifyContent: "center",
           }}
@@ -50,7 +50,7 @@ export default React.memo(function RelicsCard(props: Props) {
           {/* 圖片 */}
           <Image cachePolicy="none"
             transition={200}
-            style={{ width: oneItemWidth/1.4, height: oneItemWidth/1.4 }}
+            style={{ width: oneItemWidth / 1.4, height: oneItemWidth / 1.4 }}
             source={props.image}
           />
           {/* 套數 */}
@@ -68,15 +68,16 @@ export default React.memo(function RelicsCard(props: Props) {
         {/* </Shadow> */}
         <View
           className="pt-1"
-          style={{ alignItems: "center"}}
+          style={{ alignItems: "center" }}
         >
           <Text
             numberOfLines={2}
             className="text-text2 text-[12px] font-[HY65]"
             style={{
-              width:oneItemWidth,
+              width: oneItemWidth,
               flexWrap: "wrap", // 允许文本换行
               textAlign: "center", // 文本居中
+              marginRight: 8
             }}
           >
             {props.name}
