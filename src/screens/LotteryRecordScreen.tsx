@@ -176,6 +176,7 @@ export default function LotteryScreen() {
                       <Text style={listItemRightTextStyle}>{dayjs.unix(pull.unixTime / 1000).format("YYYY-MM-DD HH:mm")}</Text>
                     </View>
 
+                    {/* 每十個項目加一條分隔綫 */}
                     {false && (index + 1) % 10 === 0 && (
                       <View style={{ marginLeft: 16, marginRight: 16, height: 2, backgroundColor: "#CCCCCC", borderColor: "#CCCCCC", borderRadius: 60 }}></View>
                     )}
