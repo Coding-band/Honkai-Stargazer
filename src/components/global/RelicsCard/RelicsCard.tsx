@@ -27,12 +27,12 @@ export default React.memo(function RelicsCard(props: Props) {
   const dimension = Dimensions.get('window');
   const totalAvailableWidth = (dimension.width - 8 * 2);
   const itemInRow = Math.trunc(totalAvailableWidth / itemMaxWidth)
-  const oneItemWidth = itemMaxWidth + (((totalAvailableWidth % itemMaxWidth) / itemInRow)) - itemPadding
+  const oneItemWidth = itemMaxWidth + (((totalAvailableWidth % itemMaxWidth) / itemInRow)) - itemPadding*2
   const oneItemWidthMax = oneItemWidth * 2 / 1.4
   //have issue in width = 84.40413356574761 ~ 84.78599512702031
 
   return (
-    <TouchableOpacity activeOpacity={0.65} onPress={props.onPress} style={{ paddingLeft: itemPadding }}>
+    <TouchableOpacity activeOpacity={0.65} onPress={props.onPress} style={{ paddingLeft: itemPadding,paddingRight: itemPadding }}>
       {/* <Shadow distance={6} offset={[4, 4]} startColor="#00000025"> */}
       <View style={{ width: oneItemWidth }}>
         <CardBg rare={props.rare} width={oneItemWidthMax} />
@@ -45,6 +45,7 @@ export default React.memo(function RelicsCard(props: Props) {
             height: oneItemWidth,
             alignItems: "center",
             justifyContent: "center",
+            paddingRight:5
           }}
         >
           {/* 圖片 */}
@@ -56,8 +57,8 @@ export default React.memo(function RelicsCard(props: Props) {
           {/* 套數 */}
           {props.set && (
             <View
-              className="w-[18px] h-[18px] rounded-full absolute left-1 top-1 bg-[#00000040]"
-              style={{ justifyContent: "center", alignItems: "center" }}
+              className="w-[18px] h-[18px] rounded-full absolute left-0.5 top-1 bg-[#00000040]"
+              style={{ justifyContent: "center", alignItems: "center"}}
             >
               <Text className="text-text text-[12px] font-[HY65] leading-4">
                 {props?.set}
@@ -77,7 +78,7 @@ export default React.memo(function RelicsCard(props: Props) {
               width: oneItemWidth,
               flexWrap: "wrap", // 允许文本换行
               textAlign: "center", // 文本居中
-              marginRight: 8
+              paddingRight:itemPadding
             }}
           >
             {props.name}

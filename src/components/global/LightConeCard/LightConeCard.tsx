@@ -24,14 +24,14 @@ type Props = {
 
 export default React.memo(function LightConeCard(props: Props) {
   const itemMaxWidth = 72;
-  const itemPadding = 8;
+  const itemPadding = 5;
   const dimension = Dimensions.get('window');
   const totalAvailableWidth = (dimension.width - 8 * 2);
   const itemInRow = Math.trunc(totalAvailableWidth / itemMaxWidth)
-  const oneItemWidth = itemMaxWidth + (((totalAvailableWidth % itemMaxWidth) / itemInRow)) - itemPadding
+  const oneItemWidth = itemMaxWidth + (((totalAvailableWidth % itemMaxWidth) / itemInRow)) - itemPadding*2
   const oneItemWidthMax = oneItemWidth * 2 / 1.4
   return (
-    <TouchableOpacity activeOpacity={0.65} onPress={props.onPress}>
+    <TouchableOpacity activeOpacity={0.65} onPress={props.onPress} style={{ paddingLeft: itemPadding,paddingRight: itemPadding }}>
       {/* <Shadow
         distance={20}
         offset={[2, 15]}
@@ -50,13 +50,6 @@ export default React.memo(function LightConeCard(props: Props) {
             justifyContent: "center",
           }}
         >
-          <View
-            className="w-full h-full"
-            style={{
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
             {/* 光錐圖標 */}
             <Image cachePolicy="none"
               transition={200}
@@ -68,21 +61,19 @@ export default React.memo(function LightConeCard(props: Props) {
             <View className="absolute top-1 left-1">
               <PathCardIcon value={props.path} />
             </View>
-          </View>
         </View>
         {/* </Shadow> */}
         <View
           className="pt-1"
-          style={{ alignItems: "center", }}
+          style={{ alignItems: "center"}}
         >
           <Text
             numberOfLines={2}
-            className="text-text2 text-[12px] font-[HY65] leading-4"
+            className="text-text2 text-[12px] font-[HY65]"
             style={{
-              width: oneItemWidth - 4,
+              width: oneItemWidth ,
               flexWrap: "wrap",
-              textAlign: "center",
-              marginRight: 8
+              textAlign: "center"
             }}
           >
             {props.name}
