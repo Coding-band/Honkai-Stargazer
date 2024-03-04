@@ -124,5 +124,8 @@ export const dynamicFilterCenter = (
 
 //對於頁面底部預留高度動態設定
 export const dynamicHeightBottomBar = (
-    (Dimensions.get('screen').height - Dimensions.get('window').height)
+    (Dimensions.get('screen').height - Dimensions.get('window').height > 48
+    ? Dimensions.get('screen').height - Dimensions.get('window').height 
+    : 48
+    )
 );

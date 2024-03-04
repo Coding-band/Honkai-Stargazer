@@ -33,12 +33,9 @@ export default React.memo(function CharAction(props: Props) {
     }
   });
 
-  const pb = "pb-["+dynamicHeightBottomBar+"px]".toString()
-  console.log(pb)
-
   return (
     <Animated.View
-      className={cn("w-full z-50", "absolute bottom-0",pb)}
+      className={cn("w-full z-50", "absolute bottom-0")}
       style={[
         bottomAnimatedStyles,
         {
@@ -46,7 +43,7 @@ export default React.memo(function CharAction(props: Props) {
           alignItems: "center",
           flexDirection: "row",
           gap: 27,
-          paddingBottom : (dynamicHeightBottomBar)/1.5
+          paddingBottom : (dynamicHeightBottomBar > 36 ? dynamicHeightBottomBar : 36)/1.5
         },
       ]}
     >
