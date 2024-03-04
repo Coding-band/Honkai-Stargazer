@@ -57,6 +57,7 @@ export default function Listbox(props: Props) {
               {props.children.map((listboxitem) => (
                 <ListboxItem
                   key={listboxitem.props.value.versionCode}
+                  showSelectPoint={false}
                   onPress={() => {
                     setOpen(false);
                     setTimeout(() => {

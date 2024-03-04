@@ -7,6 +7,7 @@ import ListSelectedIcon from "../ListSelectedIcon/ListSelectedIcon";
 type Props = {
   onPress: () => void;
   selected: boolean;
+  showSelectPoint: boolean;
   children: any;
 };
 
@@ -25,7 +26,7 @@ export default function ListboxItem(props: Props) {
       <Text className="text-[#F3F9FF66] text-[14px] font-[HY65] leading-5">
         {props.children}
       </Text>
-      {props.selected && <ListSelectedIcon />}
+      {props.selected && props.showSelectPoint && <ListSelectedIcon />}
     </TouchableOpacity>
   );
 }

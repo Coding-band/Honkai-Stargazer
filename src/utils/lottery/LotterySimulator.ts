@@ -211,7 +211,7 @@ export default function makePulls(pullInfo: PullInfo, pullConfig: PullConfig, pu
       "pullsAfterRare": (pulledItemType === "THREE" ? -1 : pulledItemType === "FOUR" ? pullsAfterRare4 : pullsAfterRare5),
       "pullType": pullType,
       "unixTime": Date.now(),
-      "poolCode": poolCode,
+      "poolCode": pullInfo.poolCode,
     };
     
     pullArray.push(pullResult)
