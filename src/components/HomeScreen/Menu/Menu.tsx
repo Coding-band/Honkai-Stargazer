@@ -325,14 +325,12 @@ export default function Menu() {
 
   return (
     <View
-      style={{
-        height: Dimensions.get("screen").height - 312,
-      }}
+      style={{flex: 1, justifyContent: 'flex-start',paddingBottom : 24 }}
     >
       <ScrollView>
         <View
           onLayout={onLayout}
-          className={cn("w-full pt-3 px-4 pb-5")}
+          className={cn("w-full pt-3 px-4 pb-8")}
           style={{ flexDirection: "row", flexWrap: "wrap", gap: 13 }}
         >
           {menuItems.map((menuItem, i) => {

@@ -13,7 +13,7 @@ import DonateTab from "./DonateTab/DonateTab";
 export default function Tabbar() {
   const { language } = useAppLanguage();
   return (
-    <SafeAreaView className={cn("absolute bottom-0", "w-full h-[132px]")}>
+    <SafeAreaView className={cn("bottom-0", "w-full h-[132px]") } style={{justifyContent: 'flex-end'}}>
       <Divider />
       {/* <View
         style={{
@@ -34,14 +34,14 @@ export default function Tabbar() {
           <MathOperations color="white" size={32} weight="fill" />
         </Tab>
       </View> */}
-      <View className="py-2" style={{ alignItems: "center", gap: 8 }}>
+      <View className="py-2" style={{ alignItems: "center", gap: 8 , width:"100%"}}>
         <Pressable
           onPress={() => {
             Linking.openURL("https://discord.gg/uXatcbWKv2");
           }}
         >
-          <Text
-            className="text-text text-[14px] font-[HY65] leading-5"
+          <Text style={{maxHeight:24}}
+            className="text-text text-[14px] font-[HY65] "
             // color="white"
             // textSize={14}
             // fontFamily="HY65"

@@ -617,8 +617,10 @@ export default function HomeScreen() {
             className="w-full"
             style={{ flex: 1 }}
           >
-            <Menu />
-            <Tabbar />
+            <View style={{flex:1, flexDirection:"column",}}>
+              <Menu/>
+              <Tabbar/>
+            </View>
           </LinearGradient>
         </View>
       </Pressable>
