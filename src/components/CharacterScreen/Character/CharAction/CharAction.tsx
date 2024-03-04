@@ -43,7 +43,7 @@ export default React.memo(function CharAction(props: Props) {
           alignItems: "center",
           flexDirection: "row",
           gap: 27,
-          paddingBottom : (dynamicHeightBottomBar > 36 ? dynamicHeightBottomBar : 36)/1.5
+          paddingBottom : (dynamicHeightBottomBar)/1.5
         },
       ]}
     >
