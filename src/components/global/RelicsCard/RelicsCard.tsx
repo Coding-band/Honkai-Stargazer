@@ -45,7 +45,7 @@ export default React.memo(function RelicsCard(props: Props) {
             height: oneItemWidth,
             alignItems: "center",
             justifyContent: "center",
-            paddingRight:5
+            paddingRight:itemPadding
           }}
         >
           {/* 圖片 */}
@@ -78,7 +78,7 @@ export default React.memo(function RelicsCard(props: Props) {
               width: oneItemWidth,
               flexWrap: "wrap", // 允许文本换行
               textAlign: "center", // 文本居中
-              paddingRight:itemPadding
+              paddingRight:6
             }}
           >
             {props.name}

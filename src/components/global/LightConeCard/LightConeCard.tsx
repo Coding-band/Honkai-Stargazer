@@ -48,6 +48,7 @@ export default React.memo(function LightConeCard(props: Props) {
             height: oneItemWidth,
             alignItems: "center",
             justifyContent: "center",
+            paddingRight:5
           }}
         >
             {/* 光錐圖標 */}
@@ -58,7 +59,7 @@ export default React.memo(function LightConeCard(props: Props) {
               contentFit="contain"
             />
             {/* 命途 & 元素 */}
-            <View className="absolute top-1 left-1">
+            <View className="absolute top-1 left-0">
               <PathCardIcon value={props.path} />
             </View>
         </View>
@@ -73,7 +74,8 @@ export default React.memo(function LightConeCard(props: Props) {
             style={{
               width: oneItemWidth ,
               flexWrap: "wrap",
-              textAlign: "center"
+              textAlign: "center",
+              paddingRight:6
             }}
           >
             {props.name}

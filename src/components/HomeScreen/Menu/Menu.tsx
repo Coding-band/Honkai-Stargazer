@@ -308,16 +308,11 @@ export default function Menu() {
       icon: SCREENS.LotteryPage.icon,
       onPress: () => {
         // @ts-ignore
-
-        if (ENV === "beta" || ENV === "production") {
-          Toast.StillDevelopingToast(language)
-        } else {
-          navigation.navigate(SCREENS.LotteryPage.id, {
-            title: LOCALES[language].LotteryPage,
-            icon: StarOfDavid,
-            content: <LotteryScreen />,
-          });
-        }
+        navigation.navigate(SCREENS.LotteryPage.id, {
+          title: LOCALES[language].LotteryPage,
+          icon: StarOfDavid,
+          content: <LotteryScreen />,
+        });
       },
 
     },
