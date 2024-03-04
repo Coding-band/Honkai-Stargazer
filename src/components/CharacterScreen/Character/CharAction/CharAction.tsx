@@ -1,4 +1,4 @@
-import { Text } from "react-native";
+import { Dimensions, PixelRatio, Text } from "react-native";
 import React from "react";
 import Button from "../../../global/Button/Button";
 import { cn } from "../../../../utils/css/cn";
@@ -9,6 +9,7 @@ import Animated, {
 } from "react-native-reanimated";
 import useAppLanguage from "../../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../../locales";
+import { dynamicHeightBottomBar } from "../../../../constant/ui";
 
 type Props = {
   scrollHandler: SharedValue<number>;
@@ -32,9 +33,12 @@ export default React.memo(function CharAction(props: Props) {
     }
   });
 
+  const pb = "pb-["+dynamicHeightBottomBar+"px]".toString()
+  console.log(pb)
+
   return (
     <Animated.View
-      className={cn("w-full h-[83px] mb-[20px] z-50", "absolute bottom-0")}
+      className={cn("w-full z-50", "absolute bottom-0",pb)}
       style={[
         bottomAnimatedStyles,
         {
@@ -42,6 +46,7 @@ export default React.memo(function CharAction(props: Props) {
           alignItems: "center",
           flexDirection: "row",
           gap: 27,
+          paddingBottom : (dynamicHeightBottomBar)/1.5
         },
       ]}
     >

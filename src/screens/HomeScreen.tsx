@@ -38,6 +38,8 @@ import usePureFictionPrev from "../hooks/hoyolab/usePureFictionPrev";
 import ReactNativeModal from "react-native-modal";
 import { Dimensions } from "react-native";
 import SelectLanguageAtFirstTime from "../components/global/SelectLanguageAtFirstTime/SelectLanguageAtFirstTime";
+import DonateTab from "../components/HomeScreen/Tabbar/DonateTab/DonateTab";
+import { dynamicHeightBottomBar } from "../constant/ui";
 
 export default function HomeScreen() {
   const uid = useMyFirebaseUid();
@@ -596,6 +598,7 @@ export default function HomeScreen() {
     }
     createOrUpdateUserCharacterScores();
   }, [uid, userCharDetailList]);
+  
 
   return (
     <>
@@ -618,8 +621,12 @@ export default function HomeScreen() {
             style={{ flex: 1 }}
           >
             <View style={{flex:1, flexDirection:"column",}}>
-              <Menu/>
-              <Tabbar/>
+              <View style={{flex:1}}>
+                <Menu/>
+              </View>
+              <View style={{width: "100%", height: (48 + dynamicHeightBottomBar)}}>
+                <DonateTab />
+              </View>
             </View>
           </LinearGradient>
         </View>

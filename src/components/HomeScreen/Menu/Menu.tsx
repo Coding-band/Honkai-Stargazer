@@ -320,7 +320,7 @@ export default function Menu() {
 
   return (
     <View
-      style={{flex: 1, justifyContent: 'flex-start',paddingBottom : 24 }}
+      style={{flex: 1, justifyContent: 'flex-start' }}
     >
       <ScrollView>
         <View

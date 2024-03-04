@@ -122,9 +122,7 @@ export const dynamicFilterCenter = (
     : "absolute bottom-16 translate-x-[-6px] h-[100px]"
 );
 
-//對於抽卡頁面底部預留高度動態設定
+//對於頁面底部預留高度動態設定
 export const dynamicHeightBottomBar = (
-    (Dimensions.get('screen').height - Dimensions.get('window').height > 0 ? 48
-    : 12    
-    )
+    (Dimensions.get('screen').height - Dimensions.get('window').height)
 );
