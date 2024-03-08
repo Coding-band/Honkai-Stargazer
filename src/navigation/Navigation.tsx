@@ -32,6 +32,7 @@ import PureFictionLeaderboardScreen from "../screens/PureFictionLeaderboardScree
 import DescriptionScreen from "../screens/DescriptionScreen";
 import LotteryScreen from "../screens/LotteryScreen";
 import LotteryRecordScreen from "../screens/LotteryRecordScreen";
+import WrapAnalysisScreen from "../screens/WrapAnalysisScreen";
 
 export default function Navigation({
   initialRouteName,
@@ -194,6 +195,11 @@ export default function Navigation({
         <Stack.Screen
           name={SCREENS.LotteryRecordPage.id}
           component={LotteryRecordScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS.WrapAnalysisPage.id}
+          component={WrapAnalysisScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

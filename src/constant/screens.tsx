@@ -15,7 +15,8 @@ import {
   Trophy,
   User,
   Users,
-  StarOfDavid
+  StarOfDavid,
+  ShootingStar
 } from "phosphor-react-native";
 import { AppLanguage } from "../language/language.types";
 import { LOCALES } from "../../locales";
@@ -217,5 +218,12 @@ export const SCREENS = {
     getName: (lang: AppLanguage) => `${LOCALES[lang].LotterySimulator}`,
     getShortName: (lang: AppLanguage) => `${LOCALES[lang].LotterySimulator}`,
     icon: StarOfDavid,
+  },
+  
+  WrapAnalysisPage: {
+    id: "WrapAnalysis",
+    getName: (lang: AppLanguage) => `${LOCALES[lang].WrapAnalysis}`,
+    getShortName: (lang: AppLanguage) => `${LOCALES[lang].WrapAnalysis}`,
+    icon: ShootingStar,
   },
 };

@@ -327,5 +327,7 @@ export const strings = {
   LotterySimulatorRecordNotice: "此處僅顯示躍遷模擬紀錄，並非遊戲內躍遷紀錄",
   LotteryRecordType: "類型",
   LotteryRecordName: "名稱",
-  LotteryRecordTime: "時間"
+  LotteryRecordTime: "時間",
+  //20240308 - Wrap Analysis
+  WrapAnalysis: "躍遷分析"
 };

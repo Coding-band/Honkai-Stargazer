@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { cn } from "../../../utils/css/cn";
 import MenuItem from "./MenuItem/MenuItem";
-import { Calendar, Moon, Planet, Star, StarOfDavid } from "phosphor-react-native";
+import { Calendar, Moon, Planet, ShootingStar, Star, StarOfDavid } from "phosphor-react-native";
 import MenuItemLarge from "./MenuItemLarge/MenuItemLarge";
 import { useNavigation } from "@react-navigation/native";
 import { SCREENS } from "../../../constant/screens";
@@ -22,6 +22,7 @@ import AboutTheApp from "../../SettingScreen/SettingList/SpecialThanksSetting/Ab
 import LotteryScreen from "../../../screens/LotteryScreen";
 import Toast from "../../../utils/toast/Toast";
 import { ENV } from "../../../../app.config";
+import WrapAnalysisScreen from "../../../screens/WrapAnalysisScreen";
 
 export default function Menu() {
   const navigation = useNavigation();
@@ -312,6 +313,20 @@ export default function Menu() {
           title: LOCALES[language].LotteryPage,
           icon: StarOfDavid,
           content: <LotteryScreen />,
+        });
+      },
+
+    },// 躍遷分析
+    {
+      type: "normal",
+      name: SCREENS.WrapAnalysisPage.getShortName(language),
+      icon: SCREENS.WrapAnalysisPage.icon,
+      onPress: () => {
+        // @ts-ignore
+        navigation.navigate(SCREENS.WrapAnalysisPage.id, {
+          title: LOCALES[language].WrapAnalysisPage,
+          icon: ShootingStar,
+          content: <WrapAnalysisScreen />,
         });
       },
 

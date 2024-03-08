@@ -26,4 +26,5 @@ export type ParamList = {
   };
   Lottery: { id: string };
   LotteryRecord: { currPage: number, titleLocale: string[] };
+  WrapAnalysis: { uuid: string };
 };
