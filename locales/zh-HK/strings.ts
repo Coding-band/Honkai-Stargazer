@@ -329,5 +329,16 @@ export const strings = {
   LotteryRecordName: "名稱",
   LotteryRecordTime: "時間",
   //20240308 - Wrap Analysis
-  WrapAnalysis: "躍遷分析"
+  WrapAnalysis: "躍遷分析",
+  WrapNeedInit: "暫無評價，請點擊左下角按鈕導入躍遷鏈結",
+  WrapCharPool: "角色活動躍遷",
+  WrapLcPool: "光錐活動躍遷",
+  WrapStaticPool: "常駐躍遷",
+  WrapNewbiePool: "新手躍遷",
+  WrapLuckTitle: "您的運氣評價",
+  WrapDetails: "詳細記錄",
+  WrapFourFiveStarRecord: "四星及五星",
+  WrapInfoPity: "保底不歪概率",
+  WrapAvgGetUP: "平均出貨抽數",
+  WrapTotalPull: "總抽數",
 };
