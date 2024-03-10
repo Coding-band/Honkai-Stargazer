@@ -49,7 +49,7 @@ export default function Lightcone() {
         />
       </View>
       <View className="absolute w-full h-full pt-0 pb-0 z-40">
-        <Animated.ScrollView bounces={false} ref={aref} className="pt-6">
+        <Animated.ScrollView bounces={true} ref={aref} className="pt-6">
           <View onLayout={handleLayout}>
             <LcInfo />
             <Animated.View style={contentAnimatedStyles}>
