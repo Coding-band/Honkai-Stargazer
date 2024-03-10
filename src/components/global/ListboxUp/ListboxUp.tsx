@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import React, { useLayoutEffect, useState } from "react";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import { Shadow } from "react-native-shadow-2";
 
 import ListboxItem from "./ListboxItem/ListboxItem";
@@ -15,7 +15,6 @@ type Props = {
   bottom?: number;
   top?: number;
   style?: any;
-  isTop?: boolean;
 };
 
 export default function Listbox(props: Props) {
@@ -30,7 +29,7 @@ export default function Listbox(props: Props) {
   });
 
   return (
-    <View style={props.style}>
+    <View style={props.style} >
       <TouchableOpacity
         onPress={() => {
           setOpen(!open);
@@ -40,37 +39,38 @@ export default function Listbox(props: Props) {
         {props.button}
       </TouchableOpacity>
       {open && (
-        <Shadow
-          startColor="#00000025"
-          distance={16}
-          offset={[4, 8]}
-          paintInside
+        <View
           style={[
             {
               position: "absolute",
               top: props.top,
               bottom: props.bottom,
-              width: "100%",
+              width:"100%",
+              borderRadius: 12,
+              backgroundColor: "#DDDDDD"
             },
           ]}
         >
-          <View ref={ref} className="bg-[#DDDDDD]">
-            {props.children.map((listboxitem) => (
-              <ListboxItem
-                key={listboxitem.props.value}
-                onPress={() => {
-                  setOpen(false);
-                  setTimeout(() => {
-                    props.onChange && props.onChange(listboxitem.props.value);
-                  });
-                }}
-                selected={props.value === listboxitem.props.value}
-              >
-                {listboxitem}
-              </ListboxItem>
-            ))}
-          </View>
-        </Shadow>
+          <ScrollView >
+            <View ref={ref}>
+              {props.children.map((listboxitem) => (
+                <ListboxItem
+                  key={listboxitem.props.value.versionCode}
+                  showSelectPoint={false}
+                  onPress={() => {
+                    setOpen(false);
+                    setTimeout(() => {
+                      props.onChange && props.onChange(listboxitem.props.value);
+                    });
+                  }}
+                  selected={props.value === listboxitem.props.value}
+                >
+                  {listboxitem}
+                </ListboxItem>
+              ))}
+            </View>
+          </ScrollView>
+        </View>
       )}
     </View>
   );

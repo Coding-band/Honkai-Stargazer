@@ -98,7 +98,7 @@ export default function MOCLbList() {
           {/* 底下描述 */}
           <View>
             <Text className="text-text2 font-[HY65] text-[16px] text-center">
-              {LOCALES[appLanguage].EventDuration}：
+              {LOCALES[appLanguage].EventDuration}:
               {new Date(mocData.time.begin).toLocaleDateString()} -{" "}
               {new Date(mocData.time.end).toLocaleDateString()}
             </Text>

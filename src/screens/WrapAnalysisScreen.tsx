@@ -25,11 +25,20 @@ import useTextLanguage from "../language/TextLanguage/useTextLanguage";
 import useLocalState from "../hooks/useLocalState";
 import Header2 from "../components/global/Header2/Header2";
 import { LOCALES } from "../../locales";
-import { dynamicHeightScrollView } from "../constant/ui";
+import { dynamicHeightBottomBar, dynamicHeightScrollView, dynamicHeightTopHeader } from "../constant/ui";
 import { cn } from "../utils/css/cn";
 import PageStars from "../components/global/PageStars/PageStars";
 import CheckBox from '@react-native-community/checkbox';
 import officalCharId from "../../map/character_offical_id_map";
+import Animated, {
+  SharedValue,
+  useAnimatedStyle,
+  withSpring,
+} from "react-native-reanimated";
+import Button from "../components/global/Button/Button";
+import ListboxUp from "../components/global/ListboxUp/ListboxUp";
+import UpButton from "../components/global/UpButton/UpButton";
+import DropDownMenuButton from "../components/LotteryScreen/DropDownMenuButton";
 
 /**
  * 本功能確認將依照SRGF (https://uigf.org/zh/standards/SRGF.html) 
@@ -46,11 +55,22 @@ export default function WrapAnalysisScreen() {
   const { language: textLanguage } = useTextLanguage();
   const navigation = useNavigation();
 
+  //躍遷頁面List
+  const pageList = [
+    {page:1, title:LOCALES[appLanguage].WrapStaticPool}, //常駐躍遷
+    {page:2, title:LOCALES[appLanguage].WrapNewbiePool}, //新手躍遷
+    {page:11, title:LOCALES[appLanguage].WrapCharPool}, //角色活動躍遷
+    {page:12, title:LOCALES[appLanguage].WrapLcPool}, //光錐活動躍遷
+  ]
+
   //檢查是否已經導入了躍遷數據
   const [haveData, setHaveData] = useState(false)
 
   //檢查是否選取展示五星和四星
   const [showRare4and5, setShowRare4and5] = useState(false)
+
+  //選取了哪個躍遷頁面？
+  const [selectedPage, setSelectedPage] = useState(2)
 
   //Scale of your screen
   const dpScale = Dimensions.get('screen').scale
@@ -82,9 +102,10 @@ export default function WrapAnalysisScreen() {
     { "charId": 1013, "rare": 4, "pulled": 8, "isPity": false },
     { "charId": 1002, "rare": 5, "pulled": 15, "isPity": false },
     { "charId": 1009, "rare": 4, "pulled": 3, "isPity": false },
+    { "charId": 1003, "rare": 5, "pulled": 3, "isPity": false },
   ]
 
-  const minDpOfText = 14 
+  const minDpOfText = 14
 
   return (
     <View style={{ flex: 1 }} className="overflow-hidden">
@@ -100,126 +121,132 @@ export default function WrapAnalysisScreen() {
         {LOCALES[appLanguage].WrapAnalysis}
       </Header>
 
-      <ScrollView className={dynamicHeightScrollView}>
       <View
         style={{
           justifyContent: "center",
+          padding: 16,
+          width: "100%",
+          flexDirection: "column",
+          flex: 1
         }}
-        className="pb-48"
+        className={dynamicHeightTopHeader}
       >
 
-          {/* 内容摘要 - 卡片 */}
-          <View style={{
+        {/* 内容摘要 - 卡片 */}
+        <View style={{
+          backgroundColor: "#AAAAAA66",
+          borderRadius: 10,
+          borderWidth: 0,
+        }}>
+          {/* 内容摘要 - 未/已導入資料 */}
+          {false ? (<Text className="text-[13px] font-[HY65] text-[#FFFFFF] pl-[48px] pr-[48px] pt-[60px] pb-[60px]"
+            style={{
+              justifyContent: "center",
+              alignSelf: "center",
+            }}
+          >
+            {LOCALES[appLanguage].WrapNeedInit}
+          </Text>
+          ) : (
+            <View>
+              <View
+                style={{
+                  padding: 20,
+                  justifyContent: 'center',
+                  alignContent: 'center',
+                  alignItems: 'center'
+                }}
+              >
+                {/* 運氣評價 - 星星 */}
+                <PageStars
+                  count={5}
+                />
+
+                {/* 運氣評價 - 標題 */}
+                <Text className="text-[13px] font-[HY65] text-[#FFFFFF] p-[4px]"
+                  style={{
+                    justifyContent: "center",
+                    alignSelf: "center",
+                  }}
+                >
+                  {LOCALES[appLanguage].WrapLuckTitle}
+                </Text>
+
+                {/* 運氣評價 - 細節 */}
+                <View
+                  style={{ flexDirection: 'row', width: '100%', }}
+                >
+                  {tmpData.map((data, index) => (
+                    <View key={"wrapinfo_" + index} style={{ flex: 1 }}>
+                      <Text className="text-[24px] font-[HY65] text-[#FFFFFF] p-[4px]"
+                        style={{
+                          justifyContent: "center",
+                          alignSelf: "center",
+                        }}
+                      >
+                        {data.data}
+                      </Text>
+                      <Text className="text-[13px] font-[HY65] text-[#FFFFFF] p-[4px]"
+                        style={{
+                          justifyContent: "center",
+                          alignSelf: "center",
+                        }}
+                      >
+                        {data.title}
+                      </Text>
+                    </View>
+                  ))}
+                </View>
+              </View>
+            </View>
+          )}
+        </View>
+
+        {/* 詳細記錄 - 篩選*/}
+        <View
+          style={{
+            paddingTop: 15,
+            paddingBottom: 15,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            width: "100%"
+          }}
+        >
+          <Text className="text-[15px] font-[HY65] text-[#FFFFFF]">
+            {LOCALES[appLanguage].WrapDetails}
+          </Text>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <Text className="text-[15px] font-[HY65] text-[#FFFFFF]">
+              {LOCALES[appLanguage].WrapFourFiveStarRecord}
+            </Text>
+            <CheckBox
+              style={{ height: 24, width: 24 }}
+              tintColor="#FFFFFFF40"
+              tintColors={{ true: "#FFFFFF40", false: "#FFFFFF40" }}
+              value={showRare4and5}
+              onValueChange={setShowRare4and5}
+            >
+            </CheckBox>
+          </View>
+        </View>
+
+        {/* 詳細記錄 - 列表*/}
+        <ScrollView 
+          style={{
             backgroundColor: "#AAAAAA66",
             borderRadius: 10,
             borderWidth: 0,
-          }}>
-            {/* 内容摘要 - 未/已導入資料 */}
-            {false ? (<Text className="text-[13px] font-[HY65] text-[#FFFFFF] pl-[48px] pr-[48px] pt-[60px] pb-[60px]"
-              style={{
-                justifyContent: "center",
-                alignSelf: "center",
-              }}
-            >
-              {LOCALES[appLanguage].WrapNeedInit}
-            </Text>
-            ) : (
-              <View>
-                <View
-                  style={{
-                    padding: 20,
-                    justifyContent: 'center',
-                    alignContent: 'center',
-                    alignItems: 'center'
-                  }}
-                >
-                  {/* 運氣評價 - 星星 */}
-                  <PageStars
-                    count={5}
-                  />
-
-                  {/* 運氣評價 - 標題 */}
-                  <Text className="text-[13px] font-[HY65] text-[#FFFFFF] p-[4px]"
-                    style={{
-                      justifyContent: "center",
-                      alignSelf: "center",
-                    }}
-                  >
-                    {LOCALES[appLanguage].WrapLuckTitle}
-                  </Text>
-
-                  {/* 運氣評價 - 細節 */}
-                  <View
-                    style={{ flex: 1, flexDirection: 'row', width: '100%', }}
-                  >
-                    {tmpData.map((data, index) => (
-                      <View key={"wrapinfo_" + index} style={{ flex: 1 }}>
-                        <Text className="text-[24px] font-[HY65] text-[#FFFFFF] p-[4px]"
-                          style={{
-                            justifyContent: "center",
-                            alignSelf: "center",
-                          }}
-                        >
-                          {data.data}
-                        </Text>
-                        <Text className="text-[13px] font-[HY65] text-[#FFFFFF] p-[4px]"
-                          style={{
-                            justifyContent: "center",
-                            alignSelf: "center",
-                          }}
-                        >
-                          {data.title}
-                        </Text>
-                      </View>
-                    ))}
-                  </View>
-                </View>
-              </View>
-            )}
-          </View>
-
-          <View>
-            {/* 詳細記錄 - 篩選*/}
-            <View
-              style={{
-                paddingTop: 15,
-                paddingBottom: 15,
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                width: "100%"
-              }}
-            >
-              <Text className="text-[15px] font-[HY65] text-[#FFFFFF]">
-                {LOCALES[appLanguage].WrapDetails}
-              </Text>
-              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Text className="text-[15px] font-[HY65] text-[#FFFFFF]">
-                  {LOCALES[appLanguage].WrapFourFiveStarRecord}
-                </Text>
-                <CheckBox
-                  style={{ height: 24, width: 24 }}
-                  tintColor="#FFFFFFF40"
-                  tintColors={{ true: "#FFFFFF40", false: "#FFFFFF40" }}
-                  value={showRare4and5}
-                  onValueChange={setShowRare4and5}
-                >
-                </CheckBox>
-              </View>
-            </View>
-
-            {/* 詳細記錄 - 列表*/}
-            <View style={{
-              backgroundColor: "#AAAAAA66",
-              borderRadius: 10,
-              borderWidth: 0,
-              padding: 8
-            }}>
-
-              {/* 詳細記錄 - 列表物件*/}
-              {tmpDataDetails.filter((data) => (data.rare === 4 && showRare4and5) || data.rare === 5).map((data) => {
-                const dataFull = getCharFullData(officalCharId[data.charId])
-                return (
+            flex: 1,
+            flexWrap: 'wrap',
+            marginBottom : 21
+          }}
+        >
+          <View style={{ padding: 8 }}>
+            {/* 詳細記錄 - 列表物件*/}
+            {tmpDataDetails.filter((data) => (data.rare === 4 && showRare4and5) || data.rare === 5).map((data) => {
+              const dataFull = getCharFullData(officalCharId[data.charId])
+              return (
                 <View style={{ height: 36, margin: 8, flexDirection: 'row', backgroundColor: "#31313100" }}>
                   {/* 角色圖片*/}
                   <Image cachePolicy="none"
@@ -248,8 +275,7 @@ export default function WrapAnalysisScreen() {
                         flexDirection: 'row',
                         justifyContent: "space-between",
                         padding: 3,
-                        width: (barMaxLength * data?.pulled / 90 < (minDpOfText* (data?.isPity ? 2 : 1)) ? minDpOfText* (data?.isPity ? 2 : 1) : barMaxLength * data?.pulled / 90),
-                        minWidth : 'auto'
+                        width: (barMaxLength * data?.pulled / 90 < (minDpOfText * (data?.isPity ? 2 : 1)) ? minDpOfText * (data?.isPity ? 2 : 1) : barMaxLength * data?.pulled / 90),
                       }}
                     >
                       <Text className="text-[12px] font-[HY65] text-[#000000]">
@@ -263,12 +289,63 @@ export default function WrapAnalysisScreen() {
                     </LinearGradient>
                   </View>
                 </View>
-              )})}
+              )
+            })}
 
-            </View>
           </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
+
+        {/* 底部功能區 */}
+        <Animated.View
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+            alignSelf: "center",
+            flexDirection: "row",
+            width: "100%",
+            gap: 8,
+            paddingBottom: (dynamicHeightBottomBar) / 1.5
+          }}
+        >
+          <Button width={46} height={46}>
+            <Image cachePolicy="none" className="w-6 h-6" source={require("../../assets/images/ui_icon/WrapImport.svg")} />
+          </Button>
+          <View style={{flex: 1,flexWrap:'wrap'}}>
+            
+          <ListboxUp style={{alignSelf: "center" }}
+            //top={8}
+            bottom={46 + 4}
+            button={
+              <UpButton
+                width={"100%"}
+                style={{flexWrap:'wrap',flexDirection:"row"}}
+                height={46}
+                withArrow
+              >
+                <Text className="text-[14px] font-[HY65] text-[#000000] leading-5 pr-5 pl-5" numberOfLines={1}>
+                  {pageList[selectedPage].title}
+                </Text>
+              </UpButton>
+            }
+            value={selectedPage}
+                onChange={(index) => {
+                  setSelectedPage(index);
+                }}
+          >
+            {pageList.map((pages,index) => (
+                    <ListboxUp.Item key={pages.page} value={index}>
+                      {/* @ts-ignore */}
+                      {pages.title}
+                    </ListboxUp.Item>
+                  ))
+            }
+          </ListboxUp>
+          </View>
+          <Button width={46} height={46}>
+            <Image cachePolicy="none" className="w-6 h-6" source={require("../../assets/images/ui_icon/WrapAccount.svg")} />
+          </Button>
+        </Animated.View>
+      </View>
 
 
     </View>

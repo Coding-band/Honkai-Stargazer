@@ -129,3 +129,10 @@ export const dynamicHeightBottomBar = (
     : 48
     )
 );
+
+//對於頁面頂部Header預留高度動態設定
+export const dynamicHeightTopHeader = (
+    getDynamicIsland ? "pt-[147px]" 
+    : getNotch ? "pt-[127px]"
+    : "pt-[112px]"
+);
