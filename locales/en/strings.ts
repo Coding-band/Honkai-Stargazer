@@ -324,4 +324,25 @@ export const strings = {
   LotteryRecordType: "Type",
   LotteryRecordName: "Name",
   LotteryRecordTime: "Time",
+  //20240308 ~ 0311 - Wrap Analysis
+  WrapAnalysis: "Wrap Analysis",
+  WrapNeedInit: "No reviews yet. Please click the button in the bottom-let corner to import the wrap URL.",
+  WrapCharPool: "Character Event Wrap",
+  WrapLcPool: "Lightcone Event Wrap",
+  WrapStaticPool: "Regular Wrap",
+  WrapNewbiePool: "Departure Warp",
+  WrapLuckTitle: "Your Luck Review",
+  WrapDetails: "Detail of Records",
+  WrapFourFiveStarRecord: "4-Star & 5-Star",
+  WrapInfoPity: "Percentage of Non-pity",
+  WrapAvgGetUP: "Average Pulls for 5-Star",
+  WrapTotalPull: "Total Pulled",
+  WrapPopUpURLTitle: "Paste the Wrap URL",
+  WrapPopUpURLInfo: "Please paste the Wrap URL below",
+  WrapPopUpURLToast: "Please enter the Wrap URL!",
+  WrapPopUpURLTextArea: "Pleas put the Wrap URL in there",
+  WrapPopUpURLTutorial: "How to get the Wrap URL?",
+  WrapPopUpURLAnalysisButton: "Analysis"
+
+
 };

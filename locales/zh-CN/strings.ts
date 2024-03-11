@@ -327,5 +327,24 @@ export const strings = {
   LotterySimulatorRecordNotice: "此处仅显示跃迁仿真纪录，并非游戏内跃迁纪录",
   LotteryRecordType: "类型",
   LotteryRecordName: "名称",
-  LotteryRecordTime: "时间"
+  LotteryRecordTime: "时间",
+  //20240308 ~ 0311 - Wrap Analysis
+  WrapAnalysis: "跃迁分析",
+  WrapNeedInit: "暂无评价，请点击左下角按钮导入跃迁链结",
+  WrapCharPool: "角色活动跃迁",
+  WrapLcPool: "光锥活动跃迁",
+  WrapStaticPool: "常驻跃迁",
+  WrapNewbiePool: "始發跃迁",
+  WrapLuckTitle: "您的运气评价",
+  WrapDetails: "详细记录",
+  WrapFourFiveStarRecord: "四星及五星",
+  WrapInfoPity: "保底不歪概率",
+  WrapAvgGetUP: "平均出货抽数",
+  WrapTotalPull: "总抽数",
+  WrapPopUpURLTitle: "粘贴跃迁连结",
+  WrapPopUpURLInfo: "请在下方粘贴跃迁连结",
+  WrapPopUpURLToast: "请输入跃迁连结！",
+  WrapPopUpURLTextArea: "跃迁连结请放在这里~",
+  WrapPopUpURLTutorial: "如何获取连结？",
+  WrapPopUpURLAnalysisButton: "分析"
 };

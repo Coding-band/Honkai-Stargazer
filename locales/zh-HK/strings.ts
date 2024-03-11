@@ -334,7 +334,7 @@ export const strings = {
   WrapCharPool: "角色活動躍遷",
   WrapLcPool: "光錐活動躍遷",
   WrapStaticPool: "常駐躍遷",
-  WrapNewbiePool: "新手躍遷",
+  WrapNewbiePool: "始發躍遷",
   WrapLuckTitle: "您的運氣評價",
   WrapDetails: "詳細記錄",
   WrapFourFiveStarRecord: "四星及五星",
@@ -347,5 +347,4 @@ export const strings = {
   WrapPopUpURLTextArea: "躍遷連結請放在這裏~",
   WrapPopUpURLTutorial: "如何獲取連結？",
   WrapPopUpURLAnalysisButton: "分析"
-
 };
