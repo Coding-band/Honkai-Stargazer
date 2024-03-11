@@ -99,7 +99,7 @@ export default function CommentBox(props: Props) {
         Keyboard.dismiss();
         translation.value = {
           x: -translation.value.x,
-          y: -translation.value.y,
+          y: -(translation.value.y == 0 ? 10 : translation.value.y),
         };
       }}
     >

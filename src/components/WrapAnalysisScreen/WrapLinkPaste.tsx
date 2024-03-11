@@ -39,7 +39,7 @@ export default function WrapLinkPaste(props: Props) {
     {/** 教學影片 */}
       <TextButton
         onPress={() => {
-          Linking.openURL("https://www.youtube.com/watch?v=CLkhV30kg_A");
+          //Linking.openURL("https://www.youtube.com/watch?v=CLkhV30kg_A");
         }}
         hasShadow={false}
         width={"100%"}

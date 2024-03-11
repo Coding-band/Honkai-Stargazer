@@ -9,7 +9,7 @@ const CharacterImage: any = {
   "Sparkle": {
     icon: require("../../images/character_icon/sparkle_icon.webp"),
     imageSplash: require("../../images/character_splash/sparkle_splash.webp"),
-    imageFull: require("../../images/character_splash/sparkle_splash.webp"),
+    imageFull: require("../../images/character_full/sparkle_full.webp"),
     fade: require("../../images/character_fade/sparkle_fade.webp"),
   },
   "Misha": {
