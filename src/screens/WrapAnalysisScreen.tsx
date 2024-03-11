@@ -39,6 +39,7 @@ import Button from "../components/global/Button/Button";
 import ListboxUp from "../components/global/ListboxUp/ListboxUp";
 import UpButton from "../components/global/UpButton/UpButton";
 import DropDownMenuButton from "../components/LotteryScreen/DropDownMenuButton";
+import WrapPopUp from "../components/WrapAnalysisScreen/WrapPopUp"
 
 /**
  * 本功能確認將依照SRGF (https://uigf.org/zh/standards/SRGF.html) 
@@ -63,6 +64,9 @@ export default function WrapAnalysisScreen() {
     {page:12, title:LOCALES[appLanguage].WrapLcPool}, //光錐活動躍遷
   ]
 
+  //躍遷數據URL
+  const [wrapURL, setWrapURL] = useState("")
+
   //檢查是否已經導入了躍遷數據
   const [haveData, setHaveData] = useState(false)
 
@@ -71,6 +75,9 @@ export default function WrapAnalysisScreen() {
 
   //選取了哪個躍遷頁面？
   const [selectedPage, setSelectedPage] = useState(2)
+
+  //開啟了匯入頁面？
+  const [openedImportPage, setOpenedImportPage] = useState(false)
 
   //Scale of your screen
   const dpScale = Dimensions.get('screen').scale
@@ -104,6 +111,8 @@ export default function WrapAnalysisScreen() {
     { "charId": 1009, "rare": 4, "pulled": 3, "isPity": false },
     { "charId": 1003, "rare": 5, "pulled": 3, "isPity": false },
   ]
+
+  console.log(wrapURL)
 
   const minDpOfText = 14
 
@@ -307,7 +316,7 @@ export default function WrapAnalysisScreen() {
             paddingBottom: (dynamicHeightBottomBar) / 1.5
           }}
         >
-          <Button width={46} height={46}>
+          <Button width={46} height={46} onPress={() => setOpenedImportPage(true)}>
             <Image cachePolicy="none" className="w-6 h-6" source={require("../../assets/images/ui_icon/WrapImport.svg")} />
           </Button>
           <View style={{flex: 1,flexWrap:'wrap'}}>
@@ -346,8 +355,12 @@ export default function WrapAnalysisScreen() {
           </Button>
         </Animated.View>
       </View>
-
-
+      {openedImportPage && <WrapPopUp 
+        isOpened={openedImportPage} 
+        setIsOpened={setOpenedImportPage}
+        setWrapURL={setWrapURL}
+        />
+      }
     </View>
   )
 }

@@ -328,7 +328,7 @@ export const strings = {
   LotteryRecordType: "類型",
   LotteryRecordName: "名稱",
   LotteryRecordTime: "時間",
-  //20240308 - Wrap Analysis
+  //20240308 ~ 0311 - Wrap Analysis
   WrapAnalysis: "躍遷分析",
   WrapNeedInit: "暫無評價，請點擊左下角按鈕導入躍遷鏈結",
   WrapCharPool: "角色活動躍遷",
@@ -341,4 +341,11 @@ export const strings = {
   WrapInfoPity: "保底不歪概率",
   WrapAvgGetUP: "平均出貨抽數",
   WrapTotalPull: "總抽數",
+  WrapPopUpURLTitle: "粘貼躍遷連結",
+  WrapPopUpURLInfo: "請在下方粘貼躍遷連結",
+  WrapPopUpURLToast: "請輸入躍遷連結！",
+  WrapPopUpURLTextArea: "躍遷連結請放在這裏~",
+  WrapPopUpURLTutorial: "如何獲取連結？",
+  WrapPopUpURLAnalysisButton: "分析"
+
 };
