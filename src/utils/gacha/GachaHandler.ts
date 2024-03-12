@@ -13,13 +13,13 @@ const TIMEZONE_ASIA = 8;
 const TIMEZONE_HKTWMO = 8;
 const TIMEZONE_CN = 8;
 
-type uidServerInfo = {
+export type uidServerInfo = {
   uid : string,
   serverTZ : number,
   serverName : hsrServer
 }
 
-type GachaInfo = {
+export type GachaInfo = {
   uid : string,
   gacha_id : string,
   gacha_type : 1 | 2 | 11 | 12,
@@ -54,16 +54,30 @@ export default class GachaHandler {
     arr : GachaInfo[],
     lang?: LanguageEnum,
     lastPageId?: number,
-    gachaId? : 1 | 2 | 11 | 12,
+    gachaId? : -1 | 1 | 2 | 11 | 12,
     lastId? : string,
     size? : number
-  ){
+  ): Promise<GachaInfo[]> {
     size = (size && size > 20 ? 20 : size);
+    if(gachaId === -1){
+      const gachaPool = [1,2,11,12];
+      for(let x = 0 ; x < gachaPool.length ; x ++){
+        //@ts-ignore
+        let tmpArr : GachaInfo[] = [] 
+        let tmpLastPageId = 0
+        let tmpLastId = 0
+        await this.sleep(300).then(async() => {
+          arr = arr.concat(await this.gachaCombineHandler(authkey,tmpArr,lang,tmpLastPageId,gachaPool[x],tmpLastId,size))
+        });
+      }
+      return arr
+    }
     return await this.getGachaRecordByAuthKey(authkey,lang,lastPageId,gachaId,lastId,size).then(async (getRecordArr) => {
       if(getRecordArr !== undefined && getRecordArr.length > 0){
         lastId = getRecordArr[getRecordArr.length - 1].id;
         lastPageId = (lastPageId ? lastPageId : 0) + 1;
         arr = arr.concat(getRecordArr)
+        console.log(gachaId)
         return await this.sleep(300).then(() => {return this.gachaCombineHandler(authkey,arr,lang,lastPageId,gachaId,lastId,size)})
       }else{
         return arr

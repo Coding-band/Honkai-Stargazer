@@ -42,7 +42,7 @@ import DropDownMenuButton from "../components/LotteryScreen/DropDownMenuButton";
 import WrapPopUp from "../components/WrapAnalysisScreen/WrapPopUp"
 import GachaHandler from "../utils/gacha/GachaHandler";
 import { LanguageEnum } from "../utils/hoyolab/language/language.interface";
-
+import { GachaInfo } from "../utils/gacha/GachaHandler";
 /**
  * 本功能確認將依照SRGF (https://uigf.org/zh/standards/SRGF.html) 
  * 設計SRGF制式的匯入及匯出功能
@@ -353,19 +353,27 @@ export default function WrapAnalysisScreen() {
           </ListboxUp>
           </View>
           <Button width={46} height={46} onPress={async() => {
-            let arr = [] 
-            
-            console.log("XXX : "+
-              JSON.stringify(await new GachaHandler().gachaCombineHandler(
-                "h6pFKYpWfg7QwO9VaYLFUmYUeAF%2F99RDqsGPDt63fdeAJUgaZzJ7RQ9PYGWSuOcMwPG1vo5GVK2XqnNvU%2FmdAa2vwwjN13FD5qKEHmEvV6kS%2BijC6icgq%2BOvHDlP3S2DzyPbmvvCoRKCvfslBrEYwxVGBIfXPw9w39bNKBnGu7C3cvbUWF9Eu4iLkaZLUm2C9OkKcBhgoj6YTs4koXNwWdmmjFTd8TwPBwyRZppSyDC4Keg8DYgJy%2FLttqm9BTG0m80xWL9jIl4NP59qk4DKowADPKJQn51rZkU3AXkEqTQAMSPgDB3mw%2FYuQbGw5vtxcdvfJHD5f1tph21yDTYJj240Jv83cYtgpjwg%2FPM8X6jkVT7SQHyOogY6pzZPZIKrqTQQMQCo6K1KuaSRZLyn6aKGiZ%2B903PuKn1OZeMPOqf%2F4OWK%2BM3iBbHdlx%2BgdVqOUwj0Sn9nBPxiVS4NLm02XnYVQwGfo4Hht62ErGIgyua1DyngZ3Dct1gkeLyQoq4dY2SdzovUK7z14TtDx7QNJ%2FLQ7nUQyW99CPEoTt7PUyWFPJEemRTjWZyDjGH%2BEsS%2FCl1NzNuQAmb1%2ByfjbC57%2FaOrX7%2FOf6GoQPo1q2ipSusohZtvfsQ9CtL6syxD63X6Gq73lbmC2qqp55aBbUj8WdahQawomNOLQaZ6HXtwJbM%3D",
-                arr,
-                "zh-tw" as LanguageEnum,
-                0,
-                11,
-                "0",
-                20
-              ))
+            let arr : GachaInfo[] = [];
+            const gachaInfoArray = await new GachaHandler().gachaCombineHandler(
+              "h6pFKYpWfg7QwO9VaYLFUmYUeAF%2F99RDqsGPDt63fdeAJUgaZzJ7RQ9PYGWSuOcMwPG1vo5GVK2XqnNvU%2FmdAa2vwwjN13FD5qKEHmEvV6kS%2BijC6icgq%2BOvHDlP3S2DzyPbmvvCoRKCvfslBrEYwxVGBIfXPw9w39bNKBnGu7C3cvbUWF9Eu4iLkaZLUm2C9OkKcBhgoj6YTs4koXNwWdmmjFTd8TwPBwyRZppSyDC4Keg8DYgJy%2FLttqm9BTG0m80xWL9jIl4NP59qk4DKowADPKJQn51rZkU3AXkEqTQAMSPgDB3mw%2FYuQbGw5vtxcdvfJHD5f1tph21yDTYJj240Jv83cYtgpjwg%2FPM8X6jkVT7SQHyOogY6pzZPZIKrqTQQMQCo6K1KuaSRZLyn6aKGiZ%2B903PuKn1OZeMPOqf%2F4OWK%2BM3iBbHdlx%2BgdVqOUwj0Sn9nBPxiVS4NLm02XnYVQwGfo4Hht62ErGIgyua1DyngZ3Dct1gkeLyQoq4dY2SdzovUK7z14TtDx7QNJ%2FLQ7nUQyW99CPEoTt7PUyWFPJEemRTjWZyDjGH%2BEsS%2FCl1NzNuQAmb1%2ByfjbC57%2FaOrX7%2FOf6GoQPo1q2ipSusohZtvfsQ9CtL6syxD63X6Gq73lbmC2qqp55aBbUj8WdahQawomNOLQaZ6HXtwJbM%3D",
+              arr,
+              "zh-tw" as LanguageEnum,
+              0,
+              -1,
+              "0",
+              20
             )
+            
+            const finalGachaInfoArray = gachaInfoArray.sort(
+              (a : GachaInfo, b: GachaInfo) => (
+                b.id - a.id
+              )
+            )
+            
+            console.log(JSON.stringify(finalGachaInfoArray))
+
+            //new GachaHandler().importGachaRecord(JSON.stringify(finalGachaInfoArray))
+          
           }}>
             <Image cachePolicy="none" className="w-6 h-6" source={require("../../assets/images/ui_icon/WrapAccount.svg")} />
           </Button>
