@@ -6,13 +6,12 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![Make With Love](https://img.shields.io/badge/make_with_%E2%9D%A4%EF%B8%8F-white)
-![Version](https://img.shields.io/badge/Version-2.0.0_BETA-pink)
+![Version](https://img.shields.io/badge/Version-2.1.4_BETA-pink)
 
 星穹觀星者 2 是由團隊[<span style="color:#E31576">Coding Band</span>](https://github.com/Coding-Band)開發
 
-- [<span style="color:#FF9900">Dalufishe<span style="color:#CCCCCC">](https://github.com/Dalufishe) : 主要代碼編寫
 - [<span style="color:#00CCFF">2O48](https://github.com/2O48) : UI/UX 設計
-- [<span style="color:#FF99CC">夜芷冰](https://github.com/Vocaloid2048) : Team Leader
+- [<span style="color:#FF99CC">夜芷冰](https://github.com/Vocaloid2048) : Team Leader 兼代碼編寫
 
 ### 十分感謝參加了封測的各位，在封測期間向我們提出不同寶貴建議
 
@@ -43,9 +42,9 @@
 ![de translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=de&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27de%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 ![es-ES translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=es-ES&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27es-ES%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 ![fr translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=fr&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27fr%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![id translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=id&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ja%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![id translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=id&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27id%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 ![ja translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ja&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ja%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![ko translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ko&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ja%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![ko translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ko&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ko%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 ![pt-PT translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=pt-PT&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27pt-PT%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 ![ru translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ru&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ru%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 ![th translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=th&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27th%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
@@ -223,10 +222,10 @@ P.S. 請理性使用留言功能，用戶不得洗版、任何形式的廣告、
 
 ### <span style="color:#FF99CC">關於 Coding Band
 
-Coding Band 由 4 位核心成員組成,分別是 :<br>
+Coding Band 由 3 位核心成員組成,分別是 :<br>
 
 - 《設計大佬》[2O48](https://github.com/2O48)
-- 《RN 打嚕魚》[Dalufish](https://github.com/Dalufishe)
 - 《禮貌貓咪》[夜芷冰](https://github.com/Vocaloid2048)
 - 《Furina》[Somebody](https://github.com/ilikecatgirls)
+- [已謝幕]
   ![用黑塔的圖片代替](./readme/release/image/coding_band_4_ppl.png)
