@@ -369,7 +369,7 @@ export default function WrapAnalysisScreen() {
             )
             
             setGachaData(finalGachaInfoArray);
-            console.log(JSON.stringify(finalGachaInfoArray))
+            //console.log(JSON.stringify(finalGachaInfoArray))
 
             new GachaHandler().importGachaRecord(JSON.stringify(finalGachaInfoArray))
           

@@ -16,10 +16,12 @@ export default React.memo(function MOCLbItem({
   versionNumber,
   floorNumber,
   floorName,
+  isShowingMore,
 }: {
   versionNumber: number;
   floorNumber: number;
   floorName: string;
+  isShowingMore: boolean;
 }) {
   const { language } = useAppLanguage();
 
@@ -119,13 +121,15 @@ export default React.memo(function MOCLbItem({
                 : LOCALES[language].MOCPart1}
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity
+          { !route.params?.isShowingMore && (
+            <TouchableOpacity
             activeOpacity={0.65}
             onPress={() => {
               // @ts-ignore
               navigation.push("MemoryOfChaosLeaderboard", {
                 scheduleId: versionNumber,
                 floorNumber: floorNumber,
+                isShowingMore : true
               });
             }}
           >
@@ -133,6 +137,7 @@ export default React.memo(function MOCLbItem({
               {LOCALES[language].MOCShowMore}
             </Text>
           </TouchableOpacity>
+          )}
         </View>
         {/* 排行榜主體 */}
         <View style={{ gap: 12 }}>

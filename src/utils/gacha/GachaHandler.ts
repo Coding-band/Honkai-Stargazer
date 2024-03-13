@@ -30,7 +30,9 @@ export type GachaInfo = {
   lang : LanguageEnum,
   item_type : string,
   rank_type : 4 | 5,
-  id : string
+  id : string,
+  isPity : boolean,
+  afterPulled : number
 }
 
 export const GachaPoolArray = [1,2,11,12];

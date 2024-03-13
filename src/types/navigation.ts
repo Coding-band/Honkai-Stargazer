@@ -17,8 +17,8 @@ export type ParamList = {
   Event: { id: string };
   UserInfo: { uuid: string };
   UserCharDetail: { uuid: string; charId: CharacterName };
-  MemoryOfChaosLeaderboard: { scheduleId?: number; floorNumber?: number };
-  PureFictionLeaderboard: { scheduleId?: number; floorNumber?: number };
+  MemoryOfChaosLeaderboard: { scheduleId?: number; floorNumber?: number, isShowingMore?: boolean };
+  PureFictionLeaderboard: { scheduleId?: number; floorNumber?: number, isShowingMore?: boolean  };
   Description: {
     title: string;
     icon: any;
