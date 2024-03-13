@@ -250,7 +250,7 @@ export default function WrapAnalysisScreen() {
               (parseInt(data.gacha_type) === GachaPoolArray[selectedPage])
             ).map((data) => {
               const gacha_id = parseInt(data.item_id)
-              const dataFull = (gacha_id >= 10000 ? getLcFullData(officalLcId[gacha_id]) : getCharFullData(officalCharId[gacha_id]))
+              const dataFull = (gacha_id >= 10000 ? getLcFullData(officalLcId[gacha_id],appLanguage) : getCharFullData(officalCharId[gacha_id],appLanguage))
               const dataIMG = (gacha_id >= 10000 ? LightconeImage[officalLcId[gacha_id]]?.icon : CharacterImage[officalCharId[gacha_id]]?.icon)
               const dataPulled = 30 //data?.pulled
               const dataIsPity = false //data?.pulled
@@ -322,7 +322,7 @@ export default function WrapAnalysisScreen() {
             
           <ListboxUp style={{alignSelf: "center" }}
             //top={8}
-            bottom={46 + 4}
+            bottom={46 + 8}
             button={
               <UpButton
                 width={"100%"}
@@ -353,7 +353,7 @@ export default function WrapAnalysisScreen() {
             let arr : GachaInfo[] = [];
             console.log("HI")
             const gachaInfoArray = await new GachaHandler().gachaCombineHandler(
-              "h6pFKYpWfg7QwO9VaYLFUmYUeAF%2F99RDqsGPDt63fdeAJUgaZzJ7RQ9PYGWSuOcMwPG1vo5GVK2XqnNvU%2FmdAa2vwwjN13FD5qKEHmEvV6kS%2BijC6icgq%2BOvHDlP3S2DzyPbmvvCoRKCvfslBrEYwxVGBIfXPw9w39bNKBnGu7C3cvbUWF9Eu4iLkaZLUm2C9OkKcBhgoj6YTs4koXNwWdmmjFTd8TwPBwyRZppSyDC4Keg8DYgJy%2FLttqm9BTG0m80xWL9jIl4NP59qk4DKowADPKJQn51rZkU3AXkEqTQAMSPgDB3mw%2FYuQbGw5vtxcdvfJHD5f1tph21yDTYJj240Jv83cYtgpjwg%2FPM8X6jkVT7SQHyOogY6pzZPZIKrqTQQMQCo6K1KuaSRZLyn6aKGiZ%2B903PuKn1OZeMPOqf%2F4OWK%2BM3iBbHdlx%2BgdVqOUwj0Sn9nBPxiVS4NLm02XnYVQwGfo4Hht62ErGIgyua1DyngZ3Dct1gkeLyQoq4dY2SdzovUK7z14TtDx7QNJ%2FLQ7nUQyW99CPEoTt7PUyWFPJEemRTjWZyDjGH%2BEsS%2FCl1NzNuQAmb1%2ByfjbC57%2FaOrX7%2FOf6GoQPo1q2ipSusohZtvfsQ9CtL6syxD63X6Gq73lbmC2qqp55aBbUj8WdahQawomNOLQaZ6HXtwJbM%3D",
+              "mygKo0peA7yr1qfUcGpXP8u9DeJqtigj5ef3%2Bl8Bxu5%2B%2Bs%2FXDdIZd9rexSebg2Ddj3qlLylwLGA8jOKyW8YklFKXiE%2BGt4Qem5dG%2Fkq2qXJ3W92dLrwJt7K8HANuoaVTKZFX22NfNhh88WZ23xRgai0JiUuBimDrSsr9PmfTjtRRtJCK1j1pezFok%2FhVy9eTG2apBK7cjHQq2Tl6p2S2fcE1jiJBTOqhBdQfRmiPa%2BdxhgBHsZGW9bkBF%2Bi%2Bv48buNO%2BWWl50iVqn1uzjoOyYO2exTQmal%2BwYpGmynupwJv6DI7GsW7QWhzxfuhOt%2BbbtXiFGWYkAwAjKakP%2BOxgWWQn1ZFr1quBS9Q6PaHyNj7YP6ukptpCVkf6djnDnNZwQRWx4aK9OGbZzd97aoWIrC0LqfvL%2BxDvebc06wNk7ZbEcI6OFJZe0KOuXM%2Fa0bOjph3i0m33jqPuEHmvi1OgB6Fh3kUY8hFs26Uej6y5hk5tn7NVlUXv8ev%2BJQpKYWU6NAqN%2B1nomIPDHmIT9Kot%2FvXIBBzmX%2BKPbraB1%2B31w%2FK4Djm5FzLlUuhGV6GffbnahTC9vlVJKXCGwlD2sBVLxYkSPLnPXPj%2BHv888AdCwjJrn3Xt3m1c%2B66zx%2FQ2uFo6RicJZXj7qiAymo2c1JDQbWeqof5Ox1rfqxYhjXaBH%2Fk%3D",
               arr,
               "zh-tw" as LanguageEnum,
               0,

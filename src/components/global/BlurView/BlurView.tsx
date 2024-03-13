@@ -25,7 +25,7 @@ export default function BlurView(props: Props) {
     );
   } else
     return (
-      <ExpoBlurView {...omit(props, ["children"])}>
+      <ExpoBlurView experimentalBlurMethod="dimezisBlurView" {...omit(props, ["children"])} >
         {props.children}
       </ExpoBlurView>
     );

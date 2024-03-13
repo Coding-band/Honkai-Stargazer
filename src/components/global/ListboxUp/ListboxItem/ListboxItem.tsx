@@ -19,7 +19,7 @@ export default function ListboxItem(props: Props) {
       className={cn("w-full p-[10px]", props.selected ? "bg-[#00000010]" : "")}
       style={{
         flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
       }}
     >

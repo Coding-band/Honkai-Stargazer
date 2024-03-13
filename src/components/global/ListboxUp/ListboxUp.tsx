@@ -46,7 +46,6 @@ export default function Listbox(props: Props) {
               top: props.top,
               bottom: props.bottom,
               width:"100%",
-              borderRadius: 12,
               backgroundColor: "#DDDDDD"
             },
           ]}
@@ -56,7 +55,7 @@ export default function Listbox(props: Props) {
               {props.children.map((listboxitem) => (
                 <ListboxItem
                   key={listboxitem.props.value.versionCode}
-                  showSelectPoint={false}
+                  showSelectPoint={true}
                   onPress={() => {
                     setOpen(false);
                     setTimeout(() => {
