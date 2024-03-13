@@ -30,6 +30,7 @@ import { cn } from "../utils/css/cn";
 import PageStars from "../components/global/PageStars/PageStars";
 import CheckBox from '@react-native-community/checkbox';
 import officalCharId from "../../map/character_offical_id_map";
+import officalLcId from "../../map/lightcone_offical_id_map";
 import Animated, {
   SharedValue,
   useAnimatedStyle,
@@ -40,7 +41,7 @@ import ListboxUp from "../components/global/ListboxUp/ListboxUp";
 import UpButton from "../components/global/UpButton/UpButton";
 import DropDownMenuButton from "../components/LotteryScreen/DropDownMenuButton";
 import WrapPopUp from "../components/WrapAnalysisScreen/WrapPopUp"
-import GachaHandler from "../utils/gacha/GachaHandler";
+import GachaHandler, { GachaPoolArray } from "../utils/gacha/GachaHandler";
 import { LanguageEnum } from "../utils/hoyolab/language/language.interface";
 import { GachaInfo } from "../utils/gacha/GachaHandler";
 /**
@@ -70,7 +71,7 @@ export default function WrapAnalysisScreen() {
   const [wrapURL, setWrapURL] = useState("")
 
   //檢查是否已經導入了躍遷數據
-  const [haveData, setHaveData] = useState(false)
+  const [gachaData, setGachaData] = useState<GachaInfo[]>([])
 
   //檢查是否選取展示五星和四星
   const [showRare4and5, setShowRare4and5] = useState(false)
@@ -97,24 +98,13 @@ export default function WrapAnalysisScreen() {
   const midRateColor = ["#F3F9FF9A", "#F3F9FF"];
   const poorRateColor = ["#AB6F669A", "#AB6F66"];
 
-  const tmpDataDetails = [
-    { "charId": 1306, "rare": 5, "pulled": 36, "isPity": false },
-    { "charId": 1302, "rare": 5, "pulled": 72, "isPity": false },
-    { "charId": 1215, "rare": 4, "pulled": 9, "isPity": true },
-    { "charId": 1210, "rare": 4, "pulled": 1, "isPity": false },
-    { "charId": 1208, "rare": 5, "pulled": 48, "isPity": false },
-    { "charId": 1205, "rare": 5, "pulled": 24, "isPity": false },
-    { "charId": 1110, "rare": 4, "pulled": 82, "isPity": false },
-    { "charId": 1107, "rare": 5, "pulled": 1, "isPity": true },
-    { "charId": 1009, "rare": 4, "pulled": 6, "isPity": false },
-    { "charId": 1008, "rare": 4, "pulled": 5, "isPity": false },
-    { "charId": 1013, "rare": 4, "pulled": 8, "isPity": false },
-    { "charId": 1002, "rare": 5, "pulled": 15, "isPity": false },
-    { "charId": 1009, "rare": 4, "pulled": 3, "isPity": false },
-    { "charId": 1003, "rare": 5, "pulled": 3, "isPity": false },
-  ]
+  useEffect(() => {
+    async function refreshData(){
+      setGachaData((await new GachaHandler().getGachaRecord()) as GachaInfo[]);
+    }
 
-  console.log(wrapURL)
+    refreshData();
+  })
 
   const minDpOfText = 14
 
@@ -255,8 +245,15 @@ export default function WrapAnalysisScreen() {
         >
           <View style={{ padding: 8 }}>
             {/* 詳細記錄 - 列表物件*/}
-            {tmpDataDetails.filter((data) => (data.rare === 4 && showRare4and5) || data.rare === 5).map((data) => {
-              const dataFull = getCharFullData(officalCharId[data.charId])
+            {gachaData.filter((data : GachaInfo) => 
+              ((parseInt(data.rank_type) === 4 && showRare4and5) || parseInt(data.rank_type) === 5) && 
+              (parseInt(data.gacha_type) === GachaPoolArray[selectedPage])
+            ).map((data) => {
+              const gacha_id = parseInt(data.item_id)
+              const dataFull = (gacha_id >= 10000 ? getLcFullData(officalLcId[gacha_id]) : getCharFullData(officalCharId[gacha_id]))
+              const dataIMG = (gacha_id >= 10000 ? LightconeImage[officalLcId[gacha_id]]?.icon : CharacterImage[officalCharId[gacha_id]]?.icon)
+              const dataPulled = 30 //data?.pulled
+              const dataIsPity = false //data?.pulled
               return (
                 <View style={{ height: 36, margin: 8, flexDirection: 'row', backgroundColor: "#31313100" }}>
                   {/* 角色圖片*/}
@@ -264,7 +261,7 @@ export default function WrapAnalysisScreen() {
                     transition={200}
                     className="rounded-full"
                     style={{ height: 36, width: 36 }}
-                    source={CharacterImage[officalCharId[data.charId]]?.icon}
+                    source={dataIMG}
                   />
 
                   {/* 角色名字 & 出貨抽數*/}
@@ -279,20 +276,20 @@ export default function WrapAnalysisScreen() {
                       {dataFull?.name}
                     </Text>
                     <LinearGradient
-                      colors={(data?.pulled <= avgGetUP ? goodRateColor : data?.pulled <= 70 ? midRateColor : poorRateColor)}
+                      colors={(dataPulled <= avgGetUP ? goodRateColor : dataPulled <= 70 ? midRateColor : poorRateColor)}
                       start={{ x: 0, y: 0 }}
                       end={{ x: 0.58, y: 0 }}
                       style={{
                         flexDirection: 'row',
                         justifyContent: "space-between",
                         padding: 3,
-                        width: (barMaxLength * data?.pulled / 90 < (minDpOfText * (data?.isPity ? 2 : 1)) ? minDpOfText * (data?.isPity ? 2 : 1) : barMaxLength * data?.pulled / 90),
+                        width: (barMaxLength * dataPulled / 90 < (minDpOfText * (dataIsPity ? 2 : 1)) ? minDpOfText * (dataIsPity ? 2 : 1) : barMaxLength * dataPulled / 90),
                       }}
                     >
                       <Text className="text-[12px] font-[HY65] text-[#000000]">
-                        {data?.pulled}
+                        {dataPulled}
                       </Text>
-                      {data?.isPity && (
+                      {dataIsPity && (
                         <Text className="text-[12px] font-[HY65] text-[#000000]">
                           歪
                         </Text>
@@ -354,6 +351,7 @@ export default function WrapAnalysisScreen() {
           </View>
           <Button width={46} height={46} onPress={async() => {
             let arr : GachaInfo[] = [];
+            console.log("HI")
             const gachaInfoArray = await new GachaHandler().gachaCombineHandler(
               "h6pFKYpWfg7QwO9VaYLFUmYUeAF%2F99RDqsGPDt63fdeAJUgaZzJ7RQ9PYGWSuOcMwPG1vo5GVK2XqnNvU%2FmdAa2vwwjN13FD5qKEHmEvV6kS%2BijC6icgq%2BOvHDlP3S2DzyPbmvvCoRKCvfslBrEYwxVGBIfXPw9w39bNKBnGu7C3cvbUWF9Eu4iLkaZLUm2C9OkKcBhgoj6YTs4koXNwWdmmjFTd8TwPBwyRZppSyDC4Keg8DYgJy%2FLttqm9BTG0m80xWL9jIl4NP59qk4DKowADPKJQn51rZkU3AXkEqTQAMSPgDB3mw%2FYuQbGw5vtxcdvfJHD5f1tph21yDTYJj240Jv83cYtgpjwg%2FPM8X6jkVT7SQHyOogY6pzZPZIKrqTQQMQCo6K1KuaSRZLyn6aKGiZ%2B903PuKn1OZeMPOqf%2F4OWK%2BM3iBbHdlx%2BgdVqOUwj0Sn9nBPxiVS4NLm02XnYVQwGfo4Hht62ErGIgyua1DyngZ3Dct1gkeLyQoq4dY2SdzovUK7z14TtDx7QNJ%2FLQ7nUQyW99CPEoTt7PUyWFPJEemRTjWZyDjGH%2BEsS%2FCl1NzNuQAmb1%2ByfjbC57%2FaOrX7%2FOf6GoQPo1q2ipSusohZtvfsQ9CtL6syxD63X6Gq73lbmC2qqp55aBbUj8WdahQawomNOLQaZ6HXtwJbM%3D",
               arr,
@@ -370,9 +368,10 @@ export default function WrapAnalysisScreen() {
               )
             )
             
+            setGachaData(finalGachaInfoArray);
             console.log(JSON.stringify(finalGachaInfoArray))
 
-            //new GachaHandler().importGachaRecord(JSON.stringify(finalGachaInfoArray))
+            new GachaHandler().importGachaRecord(JSON.stringify(finalGachaInfoArray))
           
           }}>
             <Image cachePolicy="none" className="w-6 h-6" source={require("../../assets/images/ui_icon/WrapAccount.svg")} />

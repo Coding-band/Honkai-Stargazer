@@ -33,6 +33,8 @@ export type GachaInfo = {
   id : string
 }
 
+export const GachaPoolArray = [1,2,11,12];
+
 export default class GachaHandler {
   private gachaRequest = new GachaRequest();
 
@@ -40,9 +42,9 @@ export default class GachaHandler {
    * 獲取躍遷紀錄 (GachaInfo包裝)
    */
   public getGachaRecord(){
-    AsyncStorage.getItem(GACHA_KEY).then((data) => {
+    return AsyncStorage.getItem(GACHA_KEY).then((data) => {
       if(data){
-        return JSON.parse(data).list as Array<GachaInfo>
+        return JSON.parse(data) as Array<GachaInfo>
       }else{
         return [];
       }
@@ -60,14 +62,13 @@ export default class GachaHandler {
   ): Promise<GachaInfo[]> {
     size = (size && size > 20 ? 20 : size);
     if(gachaId === -1){
-      const gachaPool = [1,2,11,12];
-      for(let x = 0 ; x < gachaPool.length ; x ++){
+      for(let x = 0 ; x < GachaPoolArray.length ; x ++){
         //@ts-ignore
         let tmpArr : GachaInfo[] = [] 
         let tmpLastPageId = 0
         let tmpLastId = 0
         await this.sleep(300).then(async() => {
-          arr = arr.concat(await this.gachaCombineHandler(authkey,tmpArr,lang,tmpLastPageId,gachaPool[x],tmpLastId,size))
+          arr = arr.concat(await this.gachaCombineHandler(authkey,tmpArr,lang,tmpLastPageId,GachaPoolArray[x],tmpLastId,size))
         });
       }
       return arr
@@ -96,7 +97,7 @@ export default class GachaHandler {
    * @param gachaData 躍遷紀錄
    */
   public importGachaRecord(gachaData : string){
-    AsyncStorage.setItem(GACHA_KEY, JSON.parse(gachaData).data.list);
+    AsyncStorage.setItem(GACHA_KEY, gachaData);
   }
 
   /**
