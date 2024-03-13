@@ -29,7 +29,7 @@ export type GachaInfo = {
   name : string,
   lang : LanguageEnum,
   item_type : string,
-  rank_type : 4 | 5,
+  rank_type : 3 | 4 | 5,
   id : string,
   isPity : boolean,
   afterPulled : number

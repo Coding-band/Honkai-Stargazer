@@ -362,16 +362,45 @@ export default function WrapAnalysisScreen() {
               20
             )
             
-            const finalGachaInfoArray = gachaInfoArray.sort(
+            const preSortGachaInfoArray = gachaInfoArray.sort(
               (a : GachaInfo, b: GachaInfo) => (
-                b.id - a.id
+                a.id - b.id
               )
             )
+
+            for(const pool in GachaPoolArray){
+              let isPityRare4 = false, isPityRare5 = false;
+              let afterPullRare4 = 0, afterPullRare5 = 0;
+              preSortGachaInfoArray
+                .filter((gacha : GachaInfo) => (gacha.gacha_type === parseInt(pool)))
+                .map((gacha : GachaInfo) => {
+                  switch(gacha.rank_type){
+                    case 3 : {
+                      afterPullRare4++
+                      afterPullRare5++
+                      break;
+                    }
+                    case 4 : {
+                      afterPullRare4 = 0
+                      afterPullRare5++
+                      //根據時間判定是否歪/UP角色
+                      break;
+                    }
+                    case 5 : {
+                      afterPullRare4++
+                      afterPullRare5 = 0
+                      //根據時間判定是否歪/UP角色
+                      break;
+                    }
+                  }
+                })
+            }
             
-            setGachaData(finalGachaInfoArray);
+            //卡池合併 & 存放在同一個Array
+            setGachaData(preSortGachaInfoArray);
             //console.log(JSON.stringify(finalGachaInfoArray))
 
-            new GachaHandler().importGachaRecord(JSON.stringify(finalGachaInfoArray))
+            new GachaHandler().importGachaRecord(JSON.stringify(preSortGachaInfoArray))
           
           }}>
             <Image cachePolicy="none" className="w-6 h-6" source={require("../../assets/images/ui_icon/WrapAccount.svg")} />
