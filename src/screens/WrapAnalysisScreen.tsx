@@ -44,6 +44,7 @@ import WrapPopUp from "../components/WrapAnalysisScreen/WrapPopUp"
 import GachaHandler, { GachaPoolArray } from "../utils/gacha/GachaHandler";
 import { LanguageEnum } from "../utils/hoyolab/language/language.interface";
 import { GachaInfo } from "../utils/gacha/GachaHandler";
+import lottery_list from "../../data/lottery_data/lottery_list.json";
 /**
  * 本功能確認將依照SRGF (https://uigf.org/zh/standards/SRGF.html) 
  * 設計SRGF制式的匯入及匯出功能
@@ -252,8 +253,8 @@ export default function WrapAnalysisScreen() {
               const gacha_id = parseInt(data.item_id)
               const dataFull = (gacha_id >= 10000 ? getLcFullData(officalLcId[gacha_id],appLanguage) : getCharFullData(officalCharId[gacha_id],appLanguage))
               const dataIMG = (gacha_id >= 10000 ? LightconeImage[officalLcId[gacha_id]]?.icon : CharacterImage[officalCharId[gacha_id]]?.icon)
-              const dataPulled = 30 //data?.pulled
-              const dataIsPity = false //data?.pulled
+              const dataPulled = (data?.afterPulled === undefined ? 1 : parseInt(data?.afterPulled))
+              const dataIsPity = (data?.isPity === undefined ? false : parseInt(data?.isPity))
               return (
                 <View style={{ height: 36, margin: 8, flexDirection: 'row', backgroundColor: "#31313100" }}>
                   {/* 角色圖片*/}
@@ -283,7 +284,7 @@ export default function WrapAnalysisScreen() {
                         flexDirection: 'row',
                         justifyContent: "space-between",
                         padding: 3,
-                        width: (barMaxLength * dataPulled / 90 < (minDpOfText * (dataIsPity ? 2 : 1)) ? minDpOfText * (dataIsPity ? 2 : 1) : barMaxLength * dataPulled / 90),
+                        width: (barMaxLength * dataPulled / 90 < (minDpOfText * (dataIsPity ? 2 : 1)) ? minDpOfText * (dataIsPity ? 2 : 1) : barMaxLength * dataPulled / 90)+1,
                       }}
                     >
                       <Text className="text-[12px] font-[HY65] text-[#000000]">
@@ -360,47 +361,58 @@ export default function WrapAnalysisScreen() {
               -1,
               "0",
               20
-            )
+            ) as GachaInfo[]
             
-            const preSortGachaInfoArray = gachaInfoArray.sort(
+            let preSortGachaInfoArray = gachaInfoArray.sort(
               (a : GachaInfo, b: GachaInfo) => (
                 a.id - b.id
               )
             )
 
-            for(const pool in GachaPoolArray){
+            for(let x = 0 ; x < GachaPoolArray.length ; x++){
+              const pool = GachaPoolArray[x]
               let isPityRare4 = false, isPityRare5 = false;
               let afterPullRare4 = 0, afterPullRare5 = 0;
               preSortGachaInfoArray
-                .filter((gacha : GachaInfo) => (gacha.gacha_type === parseInt(pool)))
+                .filter((gacha : GachaInfo) => (parseInt(gacha.gacha_type) === pool))
                 .map((gacha : GachaInfo) => {
-                  switch(gacha.rank_type){
+                  switch(parseInt(gacha.rank_type)){
                     case 3 : {
                       afterPullRare4++
                       afterPullRare5++
                       break;
                     }
                     case 4 : {
+                      //根據時間判定是否歪/UP角色
+                      gacha = updateGachaData(gacha,pool,isPityRare4,4);
+                      gacha.afterPulled = afterPullRare4;
                       afterPullRare4 = 0
                       afterPullRare5++
-                      //根據時間判定是否歪/UP角色
+                      console.log("4")
                       break;
                     }
                     case 5 : {
+                      //根據時間判定是否歪/UP角色
+                      gacha = updateGachaData(gacha,pool,isPityRare5,5);
+                      gacha.afterPulled = afterPullRare5;
                       afterPullRare4++
                       afterPullRare5 = 0
-                      //根據時間判定是否歪/UP角色
+                      console.log("5")
                       break;
                     }
                   }
                 })
             }
-            
+            let postSortGachaInfoArray = preSortGachaInfoArray.sort(
+              (a : GachaInfo, b: GachaInfo) => (
+                b.id - a.id
+              )
+            )
             //卡池合併 & 存放在同一個Array
-            setGachaData(preSortGachaInfoArray);
+            setGachaData(postSortGachaInfoArray);
             //console.log(JSON.stringify(finalGachaInfoArray))
 
-            new GachaHandler().importGachaRecord(JSON.stringify(preSortGachaInfoArray))
+            new GachaHandler().importGachaRecord(JSON.stringify(postSortGachaInfoArray))
           
           }}>
             <Image cachePolicy="none" className="w-6 h-6" source={require("../../assets/images/ui_icon/WrapAccount.svg")} />
@@ -415,4 +427,30 @@ export default function WrapAnalysisScreen() {
       }
     </View>
   )
+}
+
+function updateGachaData(gacha : GachaInfo, targetGacha : number, isPityRare : boolean , rare : number) : GachaInfo {
+  if(parseInt(gacha.gacha_type) === targetGacha){
+    const time = (new Date(gacha.time).getTime()/1000)
+    const lotteryList = lottery_list.filter((data) => (data.type === (targetGacha === 11 ? "CHAR" : "LIGHTCONE")))
+    for(const data in lotteryList){
+      //是這個池了
+      if(data.begin_time <= time && data.end_time >= time){
+        //中了當期UP
+        if(
+          parseInt(gacha.item_id) >= 10000 && (rare === 4 ? data.special_rare4 : data.special_rare5).includes(officalLcId[gacha.item_id]) ||
+          (rare === 4 ? data.special_rare4 : data.special_rare5).includes(officalCharId[gacha.item_id])
+        ){
+          isPityRare = false;
+        }else{
+          isPityRare = true;
+        }
+
+        //更新資料
+        gacha.isPity = isPityRare;
+        break;
+      }
+    }
+  }
+  return gacha;
 }

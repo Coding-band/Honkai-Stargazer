@@ -21,7 +21,7 @@ export type uidServerInfo = {
 
 export type GachaInfo = {
   uid : string,
-  gacha_id : string,
+  gacha_id : number,
   gacha_type : 1 | 2 | 11 | 12,
   item_id : number,
   count : 1,
@@ -70,7 +70,7 @@ export default class GachaHandler {
         let tmpLastPageId = 0
         let tmpLastId = 0
         await this.sleep(300).then(async() => {
-          arr = arr.concat(await this.gachaCombineHandler(authkey,tmpArr,lang,tmpLastPageId,GachaPoolArray[x],tmpLastId,size))
+          arr = arr.concat(await this.gachaCombineHandler(authkey,tmpArr,lang,tmpLastPageId,GachaPoolArray[x],tmpLastId,size) as GachaInfo[])
         });
       }
       return arr
@@ -81,7 +81,7 @@ export default class GachaHandler {
         lastPageId = (lastPageId ? lastPageId : 0) + 1;
         arr = arr.concat(getRecordArr)
         console.log(gachaId)
-        return await this.sleep(300).then(() => {return this.gachaCombineHandler(authkey,arr,lang,lastPageId,gachaId,lastId,size)})
+        return await this.sleep(300).then(() => {return this.gachaCombineHandler(authkey,arr,lang,lastPageId,gachaId,lastId,size)}) as GachaInfo[]
       }else{
         return arr
       }
