@@ -4,6 +4,8 @@ import { LanguageEnum } from "../hoyolab/language/language.interface";
 import { hsrServer } from "../hoyolab/servers/hsrServer.types";
 import { ENV, PACKAGE_NAME, VERSION } from "../../../app.config";
 import { NativeModules } from "react-native";
+import Toast from "../toast/Toast";
+import { AppLanguage } from "../../language/language.types";
 
 export const GACHA_KEY = "user-gacha-data";
 
@@ -66,6 +68,7 @@ export default class GachaHandler {
     if(gachaId === -1){
       for(let x = 0 ; x < GachaPoolArray.length ; x ++){
         //@ts-ignore
+        Toast("進度 : "+(x+1)+"/"+GachaPoolArray.length, 3)
         let tmpArr : GachaInfo[] = [] 
         let tmpLastPageId = 0
         let tmpLastId = 0
@@ -73,7 +76,7 @@ export default class GachaHandler {
           arr = arr.concat(await this.gachaCombineHandler(authkey,tmpArr,lang,tmpLastPageId,GachaPoolArray[x],tmpLastId,size) as GachaInfo[])
         });
       }
-      return arr
+      return arr as GachaInfo[]
     }
     return await this.getGachaRecordByAuthKey(authkey,lang,lastPageId,gachaId,lastId,size).then(async (getRecordArr) => {
       if(getRecordArr !== undefined && getRecordArr.length > 0){
@@ -83,7 +86,7 @@ export default class GachaHandler {
         console.log(gachaId)
         return await this.sleep(300).then(() => {return this.gachaCombineHandler(authkey,arr,lang,lastPageId,gachaId,lastId,size)}) as GachaInfo[]
       }else{
-        return arr
+        return arr as GachaInfo[]
       }
     });
     

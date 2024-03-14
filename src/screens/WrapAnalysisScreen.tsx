@@ -108,7 +108,6 @@ export default function WrapAnalysisScreen() {
   })
 
   const minDpOfText = 14
-
   return (
     <View style={{ flex: 1 }} className="overflow-hidden">
       <StatusBar style="dark" />
@@ -253,8 +252,8 @@ export default function WrapAnalysisScreen() {
               const gacha_id = parseInt(data.item_id)
               const dataFull = (gacha_id >= 10000 ? getLcFullData(officalLcId[gacha_id],appLanguage) : getCharFullData(officalCharId[gacha_id],appLanguage))
               const dataIMG = (gacha_id >= 10000 ? LightconeImage[officalLcId[gacha_id]]?.icon : CharacterImage[officalCharId[gacha_id]]?.icon)
-              const dataPulled = (data?.afterPulled === undefined ? 1 : parseInt(data?.afterPulled))
-              const dataIsPity = (data?.isPity === undefined ? false : parseInt(data?.isPity))
+              const dataPulled = (data?.afterPulled === undefined ? 1 : data?.afterPulled)
+              const dataIsPity = (data?.isPity === undefined ? false : data?.isPity)
               return (
                 <View style={{ height: 36, margin: 8, flexDirection: 'row', backgroundColor: "#31313100" }}>
                   {/* 角色圖片*/}
@@ -352,7 +351,7 @@ export default function WrapAnalysisScreen() {
           </View>
           <Button width={46} height={46} onPress={async() => {
             let arr : GachaInfo[] = [];
-            console.log("HI")
+             
             const gachaInfoArray = await new GachaHandler().gachaCombineHandler(
               "mygKo0peA7yr1qfUcGpXP8u9DeJqtigj5ef3%2Bl8Bxu5%2B%2Bs%2FXDdIZd9rexSebg2Ddj3qlLylwLGA8jOKyW8YklFKXiE%2BGt4Qem5dG%2Fkq2qXJ3W92dLrwJt7K8HANuoaVTKZFX22NfNhh88WZ23xRgai0JiUuBimDrSsr9PmfTjtRRtJCK1j1pezFok%2FhVy9eTG2apBK7cjHQq2Tl6p2S2fcE1jiJBTOqhBdQfRmiPa%2BdxhgBHsZGW9bkBF%2Bi%2Bv48buNO%2BWWl50iVqn1uzjoOyYO2exTQmal%2BwYpGmynupwJv6DI7GsW7QWhzxfuhOt%2BbbtXiFGWYkAwAjKakP%2BOxgWWQn1ZFr1quBS9Q6PaHyNj7YP6ukptpCVkf6djnDnNZwQRWx4aK9OGbZzd97aoWIrC0LqfvL%2BxDvebc06wNk7ZbEcI6OFJZe0KOuXM%2Fa0bOjph3i0m33jqPuEHmvi1OgB6Fh3kUY8hFs26Uej6y5hk5tn7NVlUXv8ev%2BJQpKYWU6NAqN%2B1nomIPDHmIT9Kot%2FvXIBBzmX%2BKPbraB1%2B31w%2FK4Djm5FzLlUuhGV6GffbnahTC9vlVJKXCGwlD2sBVLxYkSPLnPXPj%2BHv888AdCwjJrn3Xt3m1c%2B66zx%2FQ2uFo6RicJZXj7qiAymo2c1JDQbWeqof5Ox1rfqxYhjXaBH%2Fk%3D",
               arr,
@@ -360,9 +359,9 @@ export default function WrapAnalysisScreen() {
               0,
               -1,
               "0",
-              20
+              20,
             ) as GachaInfo[]
-            
+
             let preSortGachaInfoArray = gachaInfoArray.sort(
               (a : GachaInfo, b: GachaInfo) => (
                 a.id - b.id
@@ -388,7 +387,6 @@ export default function WrapAnalysisScreen() {
                       gacha.afterPulled = afterPullRare4;
                       afterPullRare4 = 0
                       afterPullRare5++
-                      console.log("4")
                       break;
                     }
                     case 5 : {
@@ -397,7 +395,6 @@ export default function WrapAnalysisScreen() {
                       gacha.afterPulled = afterPullRare5;
                       afterPullRare4++
                       afterPullRare5 = 0
-                      console.log("5")
                       break;
                     }
                   }
@@ -433,13 +430,15 @@ function updateGachaData(gacha : GachaInfo, targetGacha : number, isPityRare : b
   if(parseInt(gacha.gacha_type) === targetGacha){
     const time = (new Date(gacha.time).getTime()/1000)
     const lotteryList = lottery_list.filter((data) => (data.type === (targetGacha === 11 ? "CHAR" : "LIGHTCONE")))
-    for(const data in lotteryList){
+    for(let y = 0 ; y < lotteryList.length ; y++){
+      let data = lotteryList[y]
       //是這個池了
       if(data.begin_time <= time && data.end_time >= time){
         //中了當期UP
         if(
-          parseInt(gacha.item_id) >= 10000 && (rare === 4 ? data.special_rare4 : data.special_rare5).includes(officalLcId[gacha.item_id]) ||
-          (rare === 4 ? data.special_rare4 : data.special_rare5).includes(officalCharId[gacha.item_id])
+          (parseInt(gacha.item_id) >= 10000 && 
+            (rare === 4 ? data.special_rare4 : data.special_rare5).includes(officalLcId[parseInt(gacha.item_id)])
+          ) || (rare === 4 ? data.special_rare4 : data.special_rare5).includes(officalCharId[parseInt(gacha.item_id)])
         ){
           isPityRare = false;
         }else{
@@ -448,7 +447,6 @@ function updateGachaData(gacha : GachaInfo, targetGacha : number, isPityRare : b
 
         //更新資料
         gacha.isPity = isPityRare;
-        break;
       }
     }
   }
