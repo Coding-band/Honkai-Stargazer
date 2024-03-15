@@ -16,6 +16,7 @@ type Props = {
     isOpened : boolean;
     setIsOpened : (open : boolean) => void;
     setWrapURL : (url : string) => void;
+    confirmedTasks : () => void;
 };
 
 export default function WrapPopUp(props : Props) {
@@ -54,7 +55,9 @@ export default function WrapPopUp(props : Props) {
                             <WrapLinkPaste setWrapURL={props.setWrapURL} setClose={() => {
                                 setIsVisable(false);
                                 props.setIsOpened(false);
-                            }}/>
+                            }}
+                            confirmedTasks={props.confirmedTasks}
+                            />
                         </View>
                     }
                 />

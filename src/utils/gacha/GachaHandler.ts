@@ -8,6 +8,7 @@ import Toast from "../toast/Toast";
 import { AppLanguage } from "../../language/language.types";
 
 export const GACHA_KEY = "user-gacha-data";
+export const GACHA_SUMMARY_KEY = "user-gacha-summary";
 
 const TIMEZONE_NA = -5;
 const TIMEZONE_EU = 1;
@@ -16,81 +17,89 @@ const TIMEZONE_HKTWMO = 8;
 const TIMEZONE_CN = 8;
 
 export type uidServerInfo = {
-  uid : string,
-  serverTZ : number,
-  serverName : hsrServer
+  uid: string,
+  serverTZ: number,
+  serverName: hsrServer
 }
 
 export type GachaInfo = {
-  uid : string,
-  gacha_id : number,
-  gacha_type : 1 | 2 | 11 | 12,
-  item_id : number,
-  count : 1,
-  time : string,
-  name : string,
-  lang : LanguageEnum,
-  item_type : string,
-  rank_type : 3 | 4 | 5,
-  id : string,
-  isPity : boolean,
-  afterPulled : number
+  uid: string,
+  gacha_id: number,
+  gacha_type: 1 | 2 | 11 | 12,
+  item_id: number,
+  count: 1,
+  time: string,
+  name: string,
+  lang: LanguageEnum,
+  item_type: string,
+  rank_type: 3 | 4 | 5,
+  id: string,
+  isPity: boolean,
+  afterPulled: number
 }
 
-export const GachaPoolArray = [1,2,11,12];
+export type GachaSummary = {
+  regionTimezone: number,
+  rare5Gacha: GachaInfo[],
+  rare4Gacha: GachaInfo[],
+  rare5GachaAverage: number,
+  rare5HavePityPercent: number,
+  totalPulls: number,
+  luckyRanking: number,
+  isInit: boolean,
+}
+
+export const GachaPoolArray = [1, 2, 11, 12];
 
 export default class GachaHandler {
   private gachaRequest = new GachaRequest();
 
   /**
-   * 獲取躍遷紀錄 (GachaInfo包裝)
+   * 合拼抽卡紀錄（基本上只在透過authkey獲取抽卡紀錄會調用）
+   * @param authkey authkey
+   * @param arr 
+   * @param lang 
+   * @param lastPageId 
+   * @param gachaId 
+   * @param lastId 
+   * @param size 
+   * @returns 
    */
-  public getGachaRecord(){
-    return AsyncStorage.getItem(GACHA_KEY).then((data) => {
-      if(data){
-        return JSON.parse(data) as Array<GachaInfo>
-      }else{
-        return [];
-      }
-    })
-  }
-
   public async gachaCombineHandler(
     authkey: string | null = null,
-    arr : GachaInfo[],
+    arr: GachaInfo[],
     lang?: LanguageEnum,
     lastPageId?: number,
-    gachaId? : -1 | 1 | 2 | 11 | 12,
-    lastId? : string,
-    size? : number
+    gachaId?: -1 | 1 | 2 | 11 | 12 = -1,
+    lastId?: string,
+    size?: number
   ): Promise<GachaInfo[]> {
     size = (size && size > 20 ? 20 : size);
-    if(gachaId === -1){
-      for(let x = 0 ; x < GachaPoolArray.length ; x ++){
+    if (gachaId === -1) {
+      for (let x = 0; x < GachaPoolArray.length; x++) {
         //@ts-ignore
-        Toast("進度 : "+(x+1)+"/"+GachaPoolArray.length, 3)
-        let tmpArr : GachaInfo[] = [] 
+        let tmpArr: GachaInfo[] = []
         let tmpLastPageId = 0
         let tmpLastId = 0
-        await this.sleep(300).then(async() => {
-          arr = arr.concat(await this.gachaCombineHandler(authkey,tmpArr,lang,tmpLastPageId,GachaPoolArray[x],tmpLastId,size) as GachaInfo[])
+        await this.sleep(300).then(async () => {
+          arr = arr.concat(await this.gachaCombineHandler(authkey, tmpArr, lang, tmpLastPageId, GachaPoolArray[x], tmpLastId, size) as GachaInfo[])
         });
       }
       return arr as GachaInfo[]
     }
-    return await this.getGachaRecordByAuthKey(authkey,lang,lastPageId,gachaId,lastId,size).then(async (getRecordArr) => {
-      if(getRecordArr !== undefined && getRecordArr.length > 0){
+    return await this.getGachaRecordByAuthKey(authkey, lang, lastPageId, gachaId, lastId, size).then(async (getRecordArr) => {
+      if (getRecordArr !== undefined && getRecordArr.length > 0) {
         lastId = getRecordArr[getRecordArr.length - 1].id;
         lastPageId = (lastPageId ? lastPageId : 0) + 1;
         arr = arr.concat(getRecordArr)
-        console.log(gachaId)
-        return await this.sleep(300).then(() => {return this.gachaCombineHandler(authkey,arr,lang,lastPageId,gachaId,lastId,size)}) as GachaInfo[]
-      }else{
+        Toast("進度 : " + (GachaPoolArray.indexOf(gachaId) + 1) + "/" + GachaPoolArray.length +", 第"+(lastPageId)+"頁", 1)
+        return await this.sleep(300).then(() => { return this.gachaCombineHandler(authkey, arr, lang, lastPageId, gachaId, lastId, size) }) as GachaInfo[]
+      } else {
         return arr as GachaInfo[]
       }
     });
-    
-    
+
+
   }
 
   public sleep(ms: number) {
@@ -101,8 +110,40 @@ export default class GachaHandler {
    * 匯入躍遷紀錄
    * @param gachaData 躍遷紀錄
    */
-  public importGachaRecord(gachaData : string){
+  public importGachaRecord(gachaData: string) {
     AsyncStorage.setItem(GACHA_KEY, gachaData);
+  }
+  /**
+ * 獲取躍遷紀錄 (GachaInfo包裝)
+ */
+  public async getGachaRecord() {
+    return await AsyncStorage.getItem(GACHA_KEY).then((data) => {
+      if (data) {
+        return JSON.parse(data) as Array<GachaInfo>
+      } else {
+        return [];
+      }
+    })
+  }
+
+  /**
+   * 設定躍遷總結資料
+   * @param gachaSummary 躍遷總結
+   */
+  public setGachaSummary(gachaSummary: GachaSummary[]) {
+    AsyncStorage.setItem(GACHA_SUMMARY_KEY, JSON.stringify(gachaSummary));
+  }
+  /**
+   * 獲取躍遷總結資料 (GachaSummary包裝)
+   */
+  public async getGachaSummary() {
+    return await AsyncStorage.getItem(GACHA_SUMMARY_KEY).then((data) => {
+      if (data) {
+        return JSON.parse(data) as GachaSummary[]
+      } else {
+        return [];
+      }
+    })
   }
 
   /**
@@ -111,10 +152,10 @@ export default class GachaHandler {
    * @param lang 語言
    * @returns 按標準匯出的JSON 
    */
-  public async exportGachaRecord(exportType: "SRGF", lang : LanguageEnum){
+  public async exportGachaRecord(exportType: "SRGF", lang: LanguageEnum) {
     return AsyncStorage.getItem(GACHA_KEY).then((data) => {
       if (exportType === "SRGF") {
-        const gachaList = (data === null ? {list:[]} : {list : JSON.parse(data)});
+        const gachaList = (data === null ? { list: [] } : { list: JSON.parse(data) });
         const uid = gachaList.list[0]?.uid;
         const srgfHeader = {
           "info": {
@@ -152,35 +193,34 @@ export default class GachaHandler {
     return this.gachaRequest
       ?.send(
         "https://api-os-takumi.hoyoverse.com/common/gacha_record/api/getGachaLog?authkey_ver=1&sign_type=2" +
-          "&game_biz=hkrpg_cn" +
-          (lang ? "&lang="+lang : "&lang=zh-tw")+
-          (gachaType ? "&gacha_type=" + gachaType :  "&gacha_type=1")+
-          (pageId ? "&page=" + pageId : "")+
-          (endId ? "&end_id=" + endId : "")+
-          (size ? "&size=" + size : "")+
-          (authkey ? "&authkey="+authkey : "")
+        "&game_biz=hkrpg_cn" +
+        (lang ? "&lang=" + lang : "&lang=zh-tw") +
+        (gachaType ? "&gacha_type=" + gachaType : "&gacha_type=1") +
+        (pageId ? "&page=" + pageId : "") +
+        (endId ? "&end_id=" + endId : "") +
+        (size ? "&size=" + size : "") +
+        (authkey ? "&authkey=" + authkey : "")
       )
       .then((dataJSON) => {
-        console.log(dataJSON.message)
-        return dataJSON.data.list;
+        return (dataJSON.data === null || dataJSON.data == undefined ? [] : dataJSON.data.list) as GachaInfo[];
       })
       .catch((error) => {
-        console.log(error);
+        Toast(error, 5, true);
       });
   }
 
-  public getServerInfoByUID(uid : string) : uidServerInfo {
-    switch(uid[0]){
-        case "1" :
-        case "2" :
-        case "3" :
-        case "4" : return {uid, serverTZ : TIMEZONE_CN, serverName : "prod_gf_cn"}
-        case "5" : return {uid, serverTZ : TIMEZONE_CN, serverName : "prod_qd_cn"}
-        case "6" : return {uid, serverTZ : TIMEZONE_NA, serverName : "prod_official_usa"}
-        case "7" : return {uid, serverTZ : TIMEZONE_EU, serverName : "prod_official_eur"}
-        case "8" : return {uid, serverTZ : TIMEZONE_ASIA, serverName : "prod_official_asia"}
-        case "9" : return {uid, serverTZ : TIMEZONE_HKTWMO, serverName : "prod_official_cht"}
-        default : return {uid, serverTZ: TIMEZONE_HKTWMO, serverName : "prod_official_usa"} //故意的，方便找到ERROR
+  public getServerInfoByUID(uid: string): uidServerInfo {
+    switch (uid[0]) {
+      case "1":
+      case "2":
+      case "3":
+      case "4": return { uid, serverTZ: TIMEZONE_CN, serverName: "prod_gf_cn" }
+      case "5": return { uid, serverTZ: TIMEZONE_CN, serverName: "prod_qd_cn" }
+      case "6": return { uid, serverTZ: TIMEZONE_NA, serverName: "prod_official_usa" }
+      case "7": return { uid, serverTZ: TIMEZONE_EU, serverName: "prod_official_eur" }
+      case "8": return { uid, serverTZ: TIMEZONE_ASIA, serverName: "prod_official_asia" }
+      case "9": return { uid, serverTZ: TIMEZONE_HKTWMO, serverName: "prod_official_cht" }
+      default: return { uid, serverTZ: TIMEZONE_HKTWMO, serverName: "prod_official_usa" } //故意的，方便找到ERROR
     }
   }
 }

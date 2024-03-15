@@ -14,6 +14,7 @@ import TextButton from "../global/TextButton/TextButton";
 type Props = {
     setWrapURL : (url : string) => void;
     setClose : () => void;
+    confirmedTasks : () => void;
 };
 
 export default function WrapLinkPaste(props: Props) {
@@ -27,6 +28,7 @@ export default function WrapLinkPaste(props: Props) {
       return;
     }
     props.setWrapURL(inputURL)
+    props.confirmedTasks();
     props.setClose && props.setClose();
   };
 
