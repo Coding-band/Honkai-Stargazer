@@ -9,9 +9,9 @@
 ![Version](https://img.shields.io/badge/Version-2.1.4_BETA-pink)
 
 星穹觀星者 2 是由團隊[<span style="color:#E31576">Coding Band</span>](https://github.com/Coding-Band)開發
-
 - [<span style="color:#00CCFF">2O48](https://github.com/2O48) : UI/UX 設計
 - [<span style="color:#FF99CC">夜芷冰](https://github.com/Vocaloid2048) : Team Leader 兼代碼編寫
+- 【已謝幕】 [<span style="color:#FF9900">Dalufishe<span style="color:#CCCCCC">](https://github.com/Dalufishe) : 主要代碼編寫 (現已分道揚鑣)
 
 ### 十分感謝參加了封測的各位，在封測期間向我們提出不同寶貴建議
 
@@ -227,5 +227,9 @@ Coding Band 由 3 位核心成員組成,分別是 :<br>
 - 《設計大佬》[2O48](https://github.com/2O48)
 - 《禮貌貓咪》[夜芷冰](https://github.com/Vocaloid2048)
 - 《Furina》[Somebody](https://github.com/ilikecatgirls)
-- [已謝幕]
   ![用黑塔的圖片代替](./readme/release/image/coding_band_4_ppl.png)
+
+感謝以下曾經貢獻的各位：
+- [Dalufish](https://github.com/Dalufishe)
+- [NightFire19](https://github.com/NightFire19)
+- [SipTik](https://github.com/SipT1k)
