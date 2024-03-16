@@ -68,17 +68,6 @@ export default function WrapAnalysisScreen() {
     { page: 12, title: LOCALES[appLanguage].WrapLcPool }, //光錐活動躍遷
   ]
 
-  const gachaSummaryBase = {
-    regionTimezone: -1,
-    rare5Gacha: [],
-    rare4Gacha: [],
-    rare5GachaAverage: 0,
-    rare5HavePityPercent: 0,
-    totalPulls: 0,
-    luckyRanking: 0,
-    isInit: false,
-  } as GachaSummary
-
   //躍遷數據URL
   const [wrapURL, setWrapURL] = useState("")
 
@@ -86,7 +75,7 @@ export default function WrapAnalysisScreen() {
   const [gachaData, setGachaData] = useState<GachaInfo[]>([])
 
   //躍遷紀錄總結
-  const [gachaSummary, setGachaSummary] = useState<GachaSummary[]>([gachaSummaryBase,gachaSummaryBase,gachaSummaryBase,gachaSummaryBase])
+  const [gachaSummary, setGachaSummary] = useState<GachaSummary[]>([])
 
   //檢查是否選取展示五星和四星
   const [showRare4and5, setShowRare4and5] = useState(false)
@@ -102,12 +91,6 @@ export default function WrapAnalysisScreen() {
 
   const barMaxLength = (Dimensions.get('window').width) - (36 + 10) * dpScale
 
-  const tmpData = [
-    { "title": LOCALES[appLanguage].WrapInfoPity, "data": ((1 - gachaSummary[selectedPage].rare5HavePityPercent) * 100).toFixed(1) + "%" },
-    { "title": LOCALES[appLanguage].WrapAvgGetUP, "data": gachaSummary[selectedPage].rare5GachaAverage.toFixed(1) },
-    { "title": LOCALES[appLanguage].WrapTotalPull, "data": gachaSummary[selectedPage].totalPulls },
-  ]
-
   const avgGetUP = 40;
   const goodRateColor = ["#FFD0709A", "#FFD070"];
   const midRateColor = ["#F3F9FF9A", "#F3F9FF"];
@@ -116,10 +99,17 @@ export default function WrapAnalysisScreen() {
   useEffect(() => {
     async function refreshData() {
       setGachaData((await new GachaHandler().getGachaRecord()) as GachaInfo[]);
+      setGachaSummary((await new GachaHandler().getGachaSummary()) as GachaSummary[])
     }
 
     refreshData();
-  })
+  },[])
+
+  const tmpData = [
+    { "title": LOCALES[appLanguage].WrapInfoPity, "data": ((1 - gachaSummary[selectedPage]?.rare5HavePityPercent) * 100)?.toFixed(1) + "%" },
+    { "title": LOCALES[appLanguage].WrapAvgGetUP, "data": gachaSummary[selectedPage]?.rare5GachaAverage?.toFixed(1) },
+    { "title": LOCALES[appLanguage].WrapTotalPull, "data": gachaSummary[selectedPage]?.totalPulls },
+  ]
 
   const minDpOfText = 14
   return (
@@ -262,14 +252,14 @@ export default function WrapAnalysisScreen() {
             {gachaData.filter((data: GachaInfo) =>
               ((parseInt(data.rank_type) === 4 && showRare4and5) || parseInt(data.rank_type) === 5) &&
               (parseInt(data.gacha_type) === GachaPoolArray[selectedPage])
-            ).map((data) => {
+            ).map((data,index) => {
               const gacha_id = parseInt(data.item_id)
               const dataFull = (gacha_id >= 10000 ? getLcFullData(officalLcId[gacha_id], appLanguage) : getCharFullData(officalCharId[gacha_id], appLanguage))
               const dataIMG = (gacha_id >= 10000 ? LightconeImage[officalLcId[gacha_id]]?.icon : CharacterImage[officalCharId[gacha_id]]?.icon)
               const dataPulled = (data?.afterPulled === undefined ? 1 : data?.afterPulled)
               const dataIsPity = (data?.isPity === undefined ? false : data?.isPity)
               return (
-                <View style={{ height: 36, margin: 8, flexDirection: 'row', backgroundColor: "#31313100" }}>
+                <View key={index} style={{ height: 36, margin: 8, flexDirection: 'row', backgroundColor: "#31313100" }}>
                   {/* 角色圖片*/}
                   <Image cachePolicy="none"
                     transition={200}
@@ -376,7 +366,7 @@ export default function WrapAnalysisScreen() {
         setWrapURL={setWrapURL}
         confirmedTasks={async () => {
           let arr: GachaInfo[] = [];
-          /*
+          
           const gachaInfoArray = await new GachaHandler().gachaCombineHandler(
             wrapURL,
             arr,
@@ -386,9 +376,9 @@ export default function WrapAnalysisScreen() {
             "0",
             20,
           ) as GachaInfo[]
-          */
+          
 
-          const gachaInfoArray = await new GachaHandler().getGachaRecord();
+          //const gachaInfoArray = await new GachaHandler().getGachaRecord();
 
           let preSortGachaInfoArray = gachaInfoArray.sort(
             (a: GachaInfo, b: GachaInfo) => (
@@ -456,10 +446,10 @@ export default function WrapAnalysisScreen() {
               rare5IsPity += (gacha.isPity === true ? 1 : 0)
             }
 
-            console.log(rare5IsPity +" | "+ rare5TotalPulled +" | "+ rare5PityPulled+" | "+tmrGachaSummary[x].rare5Gacha.length)
             tmrGachaSummary[x].rare5GachaAverage = rare5TotalPulled / (tmrGachaSummary[x].rare5Gacha.length - rare5IsPity);
             tmrGachaSummary[x].rare5HavePityPercent = rare5IsPity / tmrGachaSummary[x].rare5Gacha.length
 
+            console.log(tmrGachaSummary[x].rare5GachaAverage)
           }
           //卡池合併 & 存放在同一個Array
           setGachaData(postSortGachaInfoArray);

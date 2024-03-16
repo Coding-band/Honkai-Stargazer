@@ -269,16 +269,18 @@ export default function Menu() {
         navigation.navigate(SCREENS.PureFictionLeaderboardPage.id);
       },
     },
-    // 兌換碼
-    // {
-    //   type: "normal",
-    //   name: SCREENS.CodePage.getShortName(language),
-    //   icon: SCREENS.CodePage.icon,
-    //   onPress: () => {
-    //     // @ts-ignore
-    //     navigation.navigate(SCREENS.CodePage.id);
-    //   },
-    // },
+    // 兌換碼 : 嗯 毛線球
+     /*
+     {
+       type: "normal",
+       name: SCREENS.CodePage.getShortName(language),
+       icon: SCREENS.CodePage.icon,
+       onPress: () => {
+         // @ts-ignore
+         navigation.navigate(SCREENS.CodePage.id);
+       },
+    },
+     */
     // 地圖
     {
       type: "normal",
