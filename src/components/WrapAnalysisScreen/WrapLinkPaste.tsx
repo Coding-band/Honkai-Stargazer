@@ -14,21 +14,29 @@ import TextButton from "../global/TextButton/TextButton";
 type Props = {
     setWrapURL : (url : string) => void;
     setClose : () => void;
-    confirmedTasks : () => void;
+    confirmedTasks : (url : string) => void;
 };
 
 export default function WrapLinkPaste(props: Props) {
   const { language } = useAppLanguage();
 
   const [ inputURL, setInputURL ] = useState("")
+  /**
+   * 
+   * @param ms 睡覺的毫秒
+   * @returns 一個Promise，但你不需要讀它
+   */
+  function sleep(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms || 1000));
+  }
 
-  const handleSaveURL = () => {
+  const handleSaveURL = async() => {
     if (!inputURL) {
       Toast(LOCALES[language].WrapPopUpURLToast);
       return;
     }
     props.setWrapURL(inputURL)
-    props.confirmedTasks();
+    await sleep(200).then(() => {props.confirmedTasks(inputURL);})
     props.setClose && props.setClose();
   };
 

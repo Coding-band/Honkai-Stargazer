@@ -16,7 +16,7 @@ type Props = {
     isOpened : boolean;
     setIsOpened : (open : boolean) => void;
     setWrapURL : (url : string) => void;
-    confirmedTasks : () => void;
+    confirmedTasks : (url : string) => void;
 };
 
 export default function WrapPopUp(props : Props) {

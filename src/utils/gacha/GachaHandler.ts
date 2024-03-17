@@ -6,9 +6,11 @@ import { ENV, PACKAGE_NAME, VERSION } from "../../../app.config";
 import { NativeModules } from "react-native";
 import Toast from "../toast/Toast";
 import { AppLanguage } from "../../language/language.types";
+import { LOCALES } from "../../../locales";
 
-export const GACHA_KEY = "user-gacha-data";
-export const GACHA_SUMMARY_KEY = "user-gacha-summary";
+export const GACHA_KEY = "user-analysis-gacha-data";
+export const GACHA_END_ID_KEY = "user-analysis-gacha-end-id";
+export const GACHA_SUMMARY_KEY = "user-analysis-gacha-summary";
 
 const TIMEZONE_NA = -5;
 const TIMEZONE_EU = 1;
@@ -51,19 +53,25 @@ export type GachaSummary = {
 
 export const GachaPoolArray = [1, 2, 11, 12];
 
+/**
+ * 看不明是十分正常 感到混亂也是十分正常
+ * 因爲我在開發這個功能的時候 思緒十分散
+ * 先説一句Sorry ...
+ */
 export default class GachaHandler {
+  //勿刪，Class實體化
   private gachaRequest = new GachaRequest();
 
   /**
    * 合拼抽卡紀錄（基本上只在透過authkey獲取抽卡紀錄會調用）
    * @param authkey authkey
-   * @param arr 
-   * @param lang 
-   * @param lastPageId 
-   * @param gachaId 
-   * @param lastId 
-   * @param size 
-   * @returns 
+   * @param arr 臨時存放的陣列
+   * @param lang 語言
+   * @param lastPageId 上一頁躍遷頁數 
+   * @param gachaId 卡池種類ID
+   * @param lastId 上一個請求最後一個ID，用於接續請求
+   * @param size 本頁請求躍遷項目數
+   * @returns 官方躍遷紀錄JSON (GachaInfo封裝)
    */
   public async gachaCombineHandler(
     authkey: string | null = null,
@@ -72,7 +80,8 @@ export default class GachaHandler {
     lastPageId?: number,
     gachaId?: -1 | 1 | 2 | 11 | 12 = -1,
     lastId?: string,
-    size?: number
+    size?: number,
+    language?: AppLanguage
   ): Promise<GachaInfo[]> {
     size = (size && size > 20 ? 20 : size);
     if (gachaId === -1) {
@@ -82,18 +91,30 @@ export default class GachaHandler {
         let tmpLastPageId = 0
         let tmpLastId = 0
         await this.sleep(300).then(async () => {
-          arr = arr.concat(await this.gachaCombineHandler(authkey, tmpArr, lang, tmpLastPageId, GachaPoolArray[x], tmpLastId, size) as GachaInfo[])
+          arr = arr.concat(await this.gachaCombineHandler(authkey, tmpArr, lang, tmpLastPageId, GachaPoolArray[x], tmpLastId, size,language) as GachaInfo[])
         });
       }
       return arr as GachaInfo[]
     }
     return await this.getGachaRecordByAuthKey(authkey, lang, lastPageId, gachaId, lastId, size).then(async (getRecordArr) => {
+      const GachaPoolArrayLocale = [
+        LOCALES[language].WrapStaticPool,
+        LOCALES[language].WrapNewbiePool,
+        LOCALES[language].WrapCharPool,
+        LOCALES[language].WrapLcPool
+      ]
       if (getRecordArr !== undefined && getRecordArr.length > 0) {
         lastId = getRecordArr[getRecordArr.length - 1].id;
         lastPageId = (lastPageId ? lastPageId : 0) + 1;
         arr = arr.concat(getRecordArr)
-        Toast("進度 : " + (GachaPoolArray.indexOf(gachaId) + 1) + "/" + GachaPoolArray.length +", 第"+(lastPageId)+"頁", 1)
-        return await this.sleep(300).then(() => { return this.gachaCombineHandler(authkey, arr, lang, lastPageId, gachaId, lastId, size) }) as GachaInfo[]
+        Toast(
+          LOCALES[language].WrapPopUpURLProgress
+            .replace("${1}",(GachaPoolArrayLocale[GachaPoolArray.indexOf(gachaId)]))
+            .replace("${2}",lastPageId),
+          1,
+          false
+        )
+        return await this.sleep(300).then(() => { return this.gachaCombineHandler(authkey, arr, lang, lastPageId, gachaId, lastId, size,language) }) as GachaInfo[]
       } else {
         return arr as GachaInfo[]
       }
@@ -102,6 +123,11 @@ export default class GachaHandler {
 
   }
 
+  /**
+   * 
+   * @param ms 睡覺的毫秒
+   * @returns 一個Promise，但你不需要讀它
+   */
   public sleep(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms || 1000));
   }
@@ -145,6 +171,21 @@ export default class GachaHandler {
       }
     })
   }
+    /**
+   * 設定躍遷最後一筆ID (避免覆蓋)
+   * @param gachaSummary 躍遷總結
+   */
+    public setGachaEndId(gachaEndId: string) {
+      AsyncStorage.setItem(GACHA_END_ID_KEY, gachaEndId);
+    }
+    /**
+     * 獲取躍遷最後一筆ID (避免覆蓋)
+     */
+    public async getGachaEndId() {
+      return await AsyncStorage.getItem(GACHA_END_ID_KEY).then((data) => {
+        return data || 0
+      })
+    }
 
   /**
    * 匯出躍遷紀錄
@@ -202,13 +243,22 @@ export default class GachaHandler {
         (authkey ? "&authkey=" + authkey : "")
       )
       .then((dataJSON) => {
+        if(dataJSON.retcode !== 0){
+          Toast(dataJSON.message,3,false)
+          console.log(dataJSON.message)
+        }
         return (dataJSON.data === null || dataJSON.data == undefined ? [] : dataJSON.data.list) as GachaInfo[];
       })
       .catch((error) => {
-        Toast(error, 5, true);
+        Toast(error, 3);
       });
   }
 
+  /**
+   * 
+   * @param uid 遊戲UID (E.g. 900033852)
+   * @returns "{ uid , serverTZ , serverName}"
+   */
   public getServerInfoByUID(uid: string): uidServerInfo {
     switch (uid[0]) {
       case "1":

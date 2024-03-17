@@ -1,4 +1,4 @@
-import { View, Text, Dimensions } from "react-native";
+import { View, Text, Dimensions, Platform } from "react-native";
 import React, { useCallback, useEffect, useState } from "react";
 import Header from "../components/global/Header/Header";
 import { StatusBar } from "expo-status-bar";
@@ -45,6 +45,7 @@ import GachaHandler, { GachaPoolArray } from "../utils/gacha/GachaHandler";
 import { LanguageEnum } from "../utils/hoyolab/language/language.interface";
 import { GachaInfo, GachaSummary } from "../utils/gacha/GachaHandler";
 import lottery_list from "../../data/lottery_data/lottery_list.json";
+import BouncyCheckbox from "react-native-bouncy-checkbox";
 /**
  * 本功能確認將依照SRGF (https://uigf.org/zh/standards/SRGF.html) 
  * 設計SRGF制式的匯入及匯出功能
@@ -52,7 +53,12 @@ import lottery_list from "../../data/lottery_data/lottery_list.json";
  * 
  * 本功能默認使用「躍遷紀錄連結」（從官方抽卡紀錄截取）
  * 不排除以後添加其他更加便利的方案（https://github.com/UIGF-org/mihoyo-api-collect/issues/40#issuecomment-1983776127）
- */
+ * 
+ * 看不明是十分正常 感到混亂也是十分正常
+ * 因爲我在開發這個功能的時候 思緒十分散
+ * 先説一句Sorry ...
+*/
+
 
 export default function WrapAnalysisScreen() {
   const route = useRoute<RouteProp<ParamList, "WrapAnalysis">>();
@@ -91,7 +97,6 @@ export default function WrapAnalysisScreen() {
 
   const barMaxLength = (Dimensions.get('window').width) - (36 + 10) * dpScale
 
-  const avgGetUP = 40;
   const goodRateColor = ["#FFD0709A", "#FFD070"];
   const midRateColor = ["#F3F9FF9A", "#F3F9FF"];
   const poorRateColor = ["#AB6F669A", "#AB6F66"];
@@ -103,13 +108,14 @@ export default function WrapAnalysisScreen() {
     }
 
     refreshData();
-  },[])
+  }, [])
 
   const tmpData = [
     { "title": LOCALES[appLanguage].WrapInfoPity, "data": ((1 - gachaSummary[selectedPage]?.rare5HavePityPercent) * 100)?.toFixed(1) + "%" },
-    { "title": LOCALES[appLanguage].WrapAvgGetUP, "data": gachaSummary[selectedPage]?.rare5GachaAverage?.toFixed(1) },
+    { "title": LOCALES[appLanguage].WrapAvgGetUP, "data": (isNaN(parseFloat(gachaSummary[selectedPage]?.rare5GachaAverage)) ? "?" : gachaSummary[selectedPage]?.rare5GachaAverage?.toFixed(1)) },
     { "title": LOCALES[appLanguage].WrapTotalPull, "data": gachaSummary[selectedPage]?.totalPulls },
   ]
+  const avgGetUP = gachaSummary[selectedPage]?.rare5GachaAverage;
 
   const minDpOfText = 14
   return (
@@ -144,7 +150,7 @@ export default function WrapAnalysisScreen() {
           borderWidth: 0,
         }}>
           {/* 内容摘要 - 未/已導入資料 */}
-          {false ? (<Text className="text-[13px] font-[HY65] text-[#FFFFFF] pl-[48px] pr-[48px] pt-[60px] pb-[60px]"
+          {gachaData.length === 0 ? (<Text className="text-[13px] font-[HY65] text-[#FFFFFF] pl-[48px] pr-[48px] pt-[60px] pb-[60px]"
             style={{
               justifyContent: "center",
               alignSelf: "center",
@@ -182,7 +188,7 @@ export default function WrapAnalysisScreen() {
                   style={{ flexDirection: 'row', width: '100%', }}
                 >
                   {tmpData.map((data, index) => (
-                    <View key={"wrapinfo_" + index} style={{ flex: 1 }}>
+                    !(selectedPage === 0 && index === 0) && (<View key={"wrapinfo_" + index} style={{ flex: 1 }}>
                       <Text className="text-[24px] font-[HY65] text-[#FFFFFF] p-[4px]"
                         style={{
                           justifyContent: "center",
@@ -199,7 +205,7 @@ export default function WrapAnalysisScreen() {
                       >
                         {data.title}
                       </Text>
-                    </View>
+                    </View>)
                   ))}
                 </View>
               </View>
@@ -207,105 +213,124 @@ export default function WrapAnalysisScreen() {
           )}
         </View>
 
-        {/* 詳細記錄 - 篩選*/}
-        <View
-          style={{
-            paddingTop: 15,
-            paddingBottom: 15,
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            width: "100%"
-          }}
-        >
-          <Text className="text-[15px] font-[HY65] text-[#FFFFFF]">
-            {LOCALES[appLanguage].WrapDetails}
-          </Text>
-          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <Text className="text-[15px] font-[HY65] text-[#FFFFFF]">
-              {LOCALES[appLanguage].WrapFourFiveStarRecord}
-            </Text>
-            <CheckBox
-              style={{ height: 24, width: 24 }}
-              tintColor="#FFFFFFF40"
-              tintColors={{ true: "#FFFFFF40", false: "#FFFFFF40" }}
-              value={showRare4and5}
-              onValueChange={setShowRare4and5}
+        {gachaData.length === 0 ? (
+          <View
+            style={{
+              backgroundColor: "#AAAAAA00",
+              borderRadius: 10,
+              borderWidth: 0,
+              flex: 1,
+              flexWrap: 'wrap',
+              marginBottom: 21
+            }}
+          ></View>
+        ) : (
+          <>
+            {/* 詳細記錄 - 篩選*/}
+            <View
+              style={{
+                paddingTop: 15,
+                paddingBottom: 15,
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                width: "100%"
+              }}
             >
-            </CheckBox>
-          </View>
-        </View>
+              <Text className="text-[15px] font-[HY65] text-[#FFFFFF]">
+                {LOCALES[appLanguage].WrapDetails}
+              </Text>
+              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <Text className="text-[15px] font-[HY65] text-[#FFFFFF]">
+                  {LOCALES[appLanguage].WrapFourFiveStarRecord}
+                </Text>
+                <BouncyCheckbox 
+                  style={{ height: 24, width: 24 }}
+                  fillColor="#FFFFFFF40"
+                  unfillColor="#FFFFFFF40"
+                  tintColors={{ true: "#FFFFFF40", false: "#FFFFFF40" }}
+                  value={showRare4and5}
+                  onValueChange={setShowRare4and5}
+                >
+                </BouncyCheckbox >
+              </View>
+            </View>
 
-        {/* 詳細記錄 - 列表*/}
-        <ScrollView
-          style={{
-            backgroundColor: "#AAAAAA66",
-            borderRadius: 10,
-            borderWidth: 0,
-            flex: 1,
-            flexWrap: 'wrap',
-            marginBottom: 21
-          }}
-        >
-          <View style={{ padding: 8 }}>
-            {/* 詳細記錄 - 列表物件*/}
-            {gachaData.filter((data: GachaInfo) =>
-              ((parseInt(data.rank_type) === 4 && showRare4and5) || parseInt(data.rank_type) === 5) &&
-              (parseInt(data.gacha_type) === GachaPoolArray[selectedPage])
-            ).map((data,index) => {
-              const gacha_id = parseInt(data.item_id)
-              const dataFull = (gacha_id >= 10000 ? getLcFullData(officalLcId[gacha_id], appLanguage) : getCharFullData(officalCharId[gacha_id], appLanguage))
-              const dataIMG = (gacha_id >= 10000 ? LightconeImage[officalLcId[gacha_id]]?.icon : CharacterImage[officalCharId[gacha_id]]?.icon)
-              const dataPulled = (data?.afterPulled === undefined ? 1 : data?.afterPulled)
-              const dataIsPity = (data?.isPity === undefined ? false : data?.isPity)
-              return (
-                <View key={index} style={{ height: 36, margin: 8, flexDirection: 'row', backgroundColor: "#31313100" }}>
-                  {/* 角色圖片*/}
-                  <Image cachePolicy="none"
-                    transition={200}
-                    className="rounded-full"
-                    style={{ height: 36, width: 36 }}
-                    source={dataIMG}
-                  />
+            {/* 詳細記錄 - 列表*/}
+            <ScrollView
+              horizontal={Platform.OS === "android" ? false : true}
+              alwaysBounceHorizontal={false}
+              style={{
+                backgroundColor: "#AAAAAA66",
+                borderRadius: 10,
+                borderWidth: 0,
+                flex: 1,
+                flexWrap: 'wrap',
+                marginBottom: 21
+              }}
+            >
+              <View style={{ padding: 8 }}>
+                {/* 詳細記錄 - 列表物件*/}
+                {gachaData.filter((data: GachaInfo) =>
+                  ((parseInt(data.rank_type) === 4 && showRare4and5) || parseInt(data.rank_type) === 5) &&
+                  (parseInt(data.gacha_type) === GachaPoolArray[selectedPage])
+                ).map((data, index) => {
+                  const gacha_id = parseInt(data.item_id)
+                  const dataFull = (gacha_id >= 10000 ? getLcFullData(officalLcId[gacha_id], appLanguage) : getCharFullData(officalCharId[gacha_id], appLanguage))
+                  const dataIMG = (gacha_id >= 10000 ? LightconeImage[officalLcId[gacha_id]]?.icon : CharacterImage[officalCharId[gacha_id]]?.icon)
+                  const dataPulled = (data?.afterPulled === undefined ? 1 : data?.afterPulled)
+                  const dataIsPity = (data?.isPity === undefined ? false : data?.isPity)
+                  return (
+                    <View key={index} style={{ height: 36, margin: 8, flexDirection: 'row', backgroundColor: "#31313100" }}>
+                      {/* 角色圖片*/}
+                      <Image cachePolicy="none"
+                        transition={200}
+                        className="rounded-full"
+                        style={{ height: 36, width: 36 }}
+                        source={dataIMG}
+                      />
 
-                  {/* 角色名字 & 出貨抽數*/}
-                  <View style={{ height: 36, width: "100%", paddingLeft: 10 }}>
-                    <Text className="text-[11px] font-[HY65] text-[#FFFFFF]"
-                      style={{
-                        justifyContent: "center",
-                        alignSelf: 'flex-start',
-                        paddingBottom: 2
-                      }}
-                    >
-                      {dataFull?.name}
-                    </Text>
-                    <LinearGradient
-                      colors={(dataPulled <= avgGetUP ? goodRateColor : dataPulled <= 70 ? midRateColor : poorRateColor)}
-                      start={{ x: 0, y: 0 }}
-                      end={{ x: 0.58, y: 0 }}
-                      style={{
-                        flexDirection: 'row',
-                        justifyContent: "space-between",
-                        padding: 3,
-                        width: (barMaxLength * dataPulled / 90 < (minDpOfText * (dataIsPity ? 2 : 1)) ? minDpOfText * (dataIsPity ? 2 : 1) : barMaxLength * dataPulled / 90) + 1,
-                      }}
-                    >
-                      <Text className="text-[12px] font-[HY65] text-[#000000]">
-                        {dataPulled}
-                      </Text>
-                      {dataIsPity && (
-                        <Text className="text-[12px] font-[HY65] text-[#000000]">
-                          歪
+                      {/* 角色名字 & 出貨抽數*/}
+                      <View style={{ height: 36, width: "100%", paddingLeft: 10 }}>
+                        <Text className="text-[11px] font-[HY65] text-[#FFFFFF]"
+                          style={{
+                            justifyContent: "center",
+                            alignSelf: 'flex-start',
+                            paddingBottom: 2
+                          }}
+                        >
+                          {dataFull?.name}
                         </Text>
-                      )}
-                    </LinearGradient>
-                  </View>
-                </View>
-              )
-            })}
+                        <LinearGradient
+                          colors={(dataPulled <= avgGetUP ? goodRateColor : dataPulled <= 70 ? midRateColor : poorRateColor)}
+                          start={{ x: 0, y: 0 }}
+                          end={{ x: 0.58, y: 0 }}
+                          style={{
+                            flexDirection: 'row',
+                            justifyContent: "space-between",
+                            padding: 3,
+                            width: (barMaxLength * dataPulled / 90 < (minDpOfText * (dataIsPity ? 2 : 1)) ? minDpOfText * (dataIsPity ? 2 : 1) : barMaxLength * dataPulled / 90) + 1,
+                          }}
+                        >
+                          <Text className="text-[12px] font-[HY65] text-[#000000]">
+                            {dataPulled}
+                          </Text>
+                          {dataIsPity && (
+                            <Text className="text-[12px] font-[HY65] text-[#000000]">
+                              歪
+                            </Text>
+                          )}
+                        </LinearGradient>
+                      </View>
+                    </View>
+                  )
+                })}
 
-          </View>
-        </ScrollView>
+              </View>
+            </ScrollView>
+          </>
+        )}
+
 
         {/* 底部功能區 */}
         <Animated.View
@@ -366,17 +391,18 @@ export default function WrapAnalysisScreen() {
         setWrapURL={setWrapURL}
         confirmedTasks={async () => {
           let arr: GachaInfo[] = [];
-          
+          console.log(await (wrapURL.startsWith("https://") ? encodeURIComponent(new URL(wrapURL).searchParams.get('authkey')) : wrapURL))
           const gachaInfoArray = await new GachaHandler().gachaCombineHandler(
-            wrapURL,
+            (wrapURL.startsWith("https://") ? encodeURIComponent(new URL(wrapURL).searchParams.get('authkey')) : wrapURL),
             arr,
             "zh-tw" as LanguageEnum,
             0,
             -1,
             "0",
             20,
+            appLanguage
           ) as GachaInfo[]
-          
+
 
           //const gachaInfoArray = await new GachaHandler().getGachaRecord();
 
@@ -388,11 +414,11 @@ export default function WrapAnalysisScreen() {
 
           //console.log(gachaInfoArray)
 
-          let tmrGachaSummary = [
-            {regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false} as GachaSummary,
-            {regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false} as GachaSummary,
-            {regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false} as GachaSummary,
-            {regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false} as GachaSummary,
+          let tmpGachaSummary = [
+            { regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false } as GachaSummary,
+            { regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false } as GachaSummary,
+            { regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false } as GachaSummary,
+            { regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false } as GachaSummary,
           ] as GachaSummary[]
           for (let x = 0; x < GachaPoolArray.length; x++) {
             const pool = GachaPoolArray[x]
@@ -401,8 +427,8 @@ export default function WrapAnalysisScreen() {
             preSortGachaInfoArray
               .filter((gacha: GachaInfo) => (parseInt(gacha.gacha_type) === pool))
               .map((gacha: GachaInfo) => {
-                tmrGachaSummary[x].totalPulls += 1
-                console.log(tmrGachaSummary[0].totalPulls+" | "+tmrGachaSummary[1].totalPulls+" | "+tmrGachaSummary[2].totalPulls+" | "+tmrGachaSummary[3].totalPulls)
+                tmpGachaSummary[x].totalPulls += 1
+                //console.log(tmrGachaSummary[0].totalPulls + " | " + tmrGachaSummary[1].totalPulls + " | " + tmrGachaSummary[2].totalPulls + " | " + tmrGachaSummary[3].totalPulls)
                 switch (parseInt(gacha.rank_type)) {
                   case 3: {
                     afterPullRare4++
@@ -411,20 +437,20 @@ export default function WrapAnalysisScreen() {
                   }
                   case 4: {
                     //根據時間判定是否歪/UP角色
-                    gacha = updateGachaData(gacha, pool, isPityRare4, 4);
+                    gacha = (pool !== 1 && pool !== 2 ? updateGachaData(gacha, pool, isPityRare5, 4) : gacha);
                     gacha.afterPulled = afterPullRare4;
                     afterPullRare4 = 1
                     afterPullRare5++
-                    tmrGachaSummary[x].rare4Gacha.push(gacha)
+                    tmpGachaSummary[x].rare4Gacha.push(gacha)
                     break;
                   }
                   case 5: {
                     //根據時間判定是否歪/UP角色
-                    gacha = updateGachaData(gacha, pool, isPityRare5, 5);
+                    gacha = (pool !== 1 && pool !== 2 ? updateGachaData(gacha, pool, isPityRare5, 5) : gacha);
                     gacha.afterPulled = afterPullRare5;
                     afterPullRare4++
                     afterPullRare5 = 1
-                    tmrGachaSummary[x].rare5Gacha.push(gacha)
+                    tmpGachaSummary[x].rare5Gacha.push(gacha)
                     break;
                   }
                 }
@@ -436,29 +462,29 @@ export default function WrapAnalysisScreen() {
             )
           )
 
-          for (let x = 0; x < GachaPoolArray.length; x++){
+          for (let x = 0; x < GachaPoolArray.length; x++) {
             let rare5IsPity = 0, rare5TotalPulled = 0, rare5PityPulled = 0;
 
-            for (let index = 0; index < tmrGachaSummary[x].rare5Gacha.length; index++) {
-              const gacha = tmrGachaSummary[x].rare5Gacha[index]
+            for (let index = 0; index < tmpGachaSummary[x].rare5Gacha.length; index++) {
+              const gacha = tmpGachaSummary[x].rare5Gacha[index]
               rare5TotalPulled += gacha.afterPulled;
               rare5PityPulled += (gacha.isPity === true ? gacha.afterPulled : 0)
               rare5IsPity += (gacha.isPity === true ? 1 : 0)
             }
 
-            tmrGachaSummary[x].rare5GachaAverage = rare5TotalPulled / (tmrGachaSummary[x].rare5Gacha.length - rare5IsPity);
-            tmrGachaSummary[x].rare5HavePityPercent = rare5IsPity / tmrGachaSummary[x].rare5Gacha.length
+            tmpGachaSummary[x].rare5GachaAverage = rare5TotalPulled / (tmpGachaSummary[x].rare5Gacha.length - rare5IsPity);
+            tmpGachaSummary[x].rare5HavePityPercent = rare5IsPity / tmpGachaSummary[x].rare5Gacha.length
 
-            console.log(tmrGachaSummary[x].rare5GachaAverage)
+            //console.log(tmpGachaSummary[x].rare5GachaAverage)
           }
           //卡池合併 & 存放在同一個Array
           setGachaData(postSortGachaInfoArray);
-          setGachaSummary(tmrGachaSummary);
+          setGachaSummary(tmpGachaSummary);
 
           //console.log(JSON.stringify(finalGachaInfoArray))
 
           new GachaHandler().importGachaRecord(JSON.stringify(postSortGachaInfoArray))
-          new GachaHandler().setGachaSummary(tmrGachaSummary)
+          new GachaHandler().setGachaSummary(tmpGachaSummary)
         }}
       />
       }
