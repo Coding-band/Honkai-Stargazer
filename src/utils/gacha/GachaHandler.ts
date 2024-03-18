@@ -69,6 +69,7 @@ export default class GachaHandler {
    * @param lang 語言
    * @param lastPageId 上一頁躍遷頁數 
    * @param gachaId 卡池種類ID
+   * @param endId 停止的ID，用於合拼
    * @param lastId 上一個請求最後一個ID，用於接續請求
    * @param size 本頁請求躍遷項目數
    * @returns 官方躍遷紀錄JSON (GachaInfo封裝)
@@ -79,7 +80,7 @@ export default class GachaHandler {
     lang?: LanguageEnum,
     lastPageId?: number,
     gachaId?: -1 | 1 | 2 | 11 | 12 = -1,
-    lastId?: string,
+    lastId? : string,
     size?: number,
     language?: AppLanguage
   ): Promise<GachaInfo[]> {
@@ -183,7 +184,7 @@ export default class GachaHandler {
      */
     public async getGachaEndId() {
       return await AsyncStorage.getItem(GACHA_END_ID_KEY).then((data) => {
-        return data || 0
+        return data === null ? "0" : data
       })
     }
 

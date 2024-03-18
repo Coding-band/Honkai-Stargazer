@@ -83,6 +83,9 @@ export default function WrapAnalysisScreen() {
   //躍遷紀錄總結
   const [gachaSummary, setGachaSummary] = useState<GachaSummary[]>([])
 
+  //躍遷第一筆紀錄ID
+  const [gachaEndId, setGachaEndId] = useState("0")
+
   //檢查是否選取展示五星和四星
   const [showRare4and5, setShowRare4and5] = useState(false)
 
@@ -105,6 +108,7 @@ export default function WrapAnalysisScreen() {
     async function refreshData() {
       setGachaData((await new GachaHandler().getGachaRecord()) as GachaInfo[]);
       setGachaSummary((await new GachaHandler().getGachaSummary()) as GachaSummary[])
+      setGachaEndId((await new GachaHandler().getGachaEndId()))
     }
 
     refreshData();
@@ -461,6 +465,9 @@ export default function WrapAnalysisScreen() {
                 b.id - a.id
               )
             )
+
+            //這個稍後弄
+            setGachaEndId(postSortGachaInfoArray[0].id);
 
             for (let x = 0; x < GachaPoolArray.length; x++) {
               let rare5IsPity = 0, rare5TotalPulled = 0, rare5PityPulled = 0;

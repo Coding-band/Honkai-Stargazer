@@ -1,7 +1,7 @@
 import { View } from "react-native";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { WebView } from "react-native-webview";
+import { WebView, WebViewNavigation } from "react-native-webview";
 import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import useHoyolabCookie from "../redux/hoyolabCookie/useHoyolabCookie";
@@ -17,6 +17,7 @@ import { isHoyolabPlatform } from "../utils/hoyolab/utils";
 import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 import auth from "@react-native-firebase/auth";
 import { dynamicHeightLoginWebview } from "../constant/ui";
+import DeviceInfo from "react-native-device-info";
 
 export default function LoginScreen() {
   const { language } = useAppLanguage();
@@ -27,6 +28,7 @@ export default function LoginScreen() {
 
   const { setHoyolabCookie } = useHoyolabCookie();
   const { setHsrServerChosen } = useHsrServerChosen();
+
 
   const handleLogin = async () => {
     // hoyolab 或米游社所在伺服器判斷
@@ -51,8 +53,10 @@ export default function LoginScreen() {
         javaScriptEnabled
         domStorageEnabled
         sharedCookiesEnabled
-        thirdPartyCookiesEnabled
+        thirdPartyCookiesEnabled={true}
         cacheEnabled={true}
+        setSupportMultipleWindows={false}
+        userAgent={DeviceInfo.getUserAgentSync().replace("wv", "")}
         originWhitelist={["*"]}
         source={{
           uri: platform === "hoyolab" ? cookieURLs.hoyolab : cookieURLs.mihoyo,
