@@ -36,7 +36,7 @@ export default function WrapLinkPaste(props: Props) {
       return;
     }
     props.setWrapURL(inputURL)
-    await sleep(200).then(() => {props.confirmedTasks(inputURL);})
+    props.confirmedTasks(inputURL);
     props.setClose && props.setClose();
   };
 

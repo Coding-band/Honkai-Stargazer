@@ -244,13 +244,13 @@ export default function WrapAnalysisScreen() {
                 <Text className="text-[15px] font-[HY65] text-[#FFFFFF]">
                   {LOCALES[appLanguage].WrapFourFiveStarRecord}
                 </Text>
-                <BouncyCheckbox 
-                  style={{ height: 24, width: 24 }}
-                  fillColor="#FFFFFFF40"
-                  unfillColor="#FFFFFFF40"
-                  tintColors={{ true: "#FFFFFF40", false: "#FFFFFF40" }}
-                  value={showRare4and5}
-                  onValueChange={setShowRare4and5}
+                <BouncyCheckbox
+                  style={{ height: 24, width: 24, marginLeft: 8 }}
+                  fillColor="#FFFFFF40"
+                  unfillColor="#FFFFFF40"
+                  iconStyle={{ borderRadius: 3 }}
+                  innerIconStyle={{ borderRadius: 3, }}
+                  onPress={setShowRare4and5}
                 >
                 </BouncyCheckbox >
               </View>
@@ -389,102 +389,105 @@ export default function WrapAnalysisScreen() {
         isOpened={openedImportPage}
         setIsOpened={setOpenedImportPage}
         setWrapURL={setWrapURL}
-        confirmedTasks={async () => {
-          let arr: GachaInfo[] = [];
-          console.log(await (wrapURL.startsWith("https://") ? encodeURIComponent(new URL(wrapURL).searchParams.get('authkey')) : wrapURL))
-          const gachaInfoArray = await new GachaHandler().gachaCombineHandler(
-            (wrapURL.startsWith("https://") ? encodeURIComponent(new URL(wrapURL).searchParams.get('authkey')) : wrapURL),
-            arr,
-            "zh-tw" as LanguageEnum,
-            0,
-            -1,
-            "0",
-            20,
-            appLanguage
-          ) as GachaInfo[]
+        confirmedTasks={(url: string) => {
+          async function todo() {
+            let arr: GachaInfo[] = [];
+            const gachaInfoArray = await new GachaHandler().gachaCombineHandler(
+              (url.startsWith("https://") ? encodeURIComponent(new URL(url).searchParams.get('authkey')) : url),
+              arr,
+              "zh-tw" as LanguageEnum,
+              0,
+              -1,
+              "0",
+              20,
+              appLanguage
+            ) as GachaInfo[]
 
 
-          //const gachaInfoArray = await new GachaHandler().getGachaRecord();
+            //const gachaInfoArray = await new GachaHandler().getGachaRecord();
 
-          let preSortGachaInfoArray = gachaInfoArray.sort(
-            (a: GachaInfo, b: GachaInfo) => (
-              a.id - b.id
+            let preSortGachaInfoArray = gachaInfoArray.sort(
+              (a: GachaInfo, b: GachaInfo) => (
+                a.id - b.id
+              )
             )
-          )
 
-          //console.log(gachaInfoArray)
+            //console.log(gachaInfoArray)
 
-          let tmpGachaSummary = [
-            { regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false } as GachaSummary,
-            { regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false } as GachaSummary,
-            { regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false } as GachaSummary,
-            { regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false } as GachaSummary,
-          ] as GachaSummary[]
-          for (let x = 0; x < GachaPoolArray.length; x++) {
-            const pool = GachaPoolArray[x]
-            let isPityRare4 = false, isPityRare5 = false;
-            let afterPullRare4 = 0, afterPullRare5 = 0;
-            preSortGachaInfoArray
-              .filter((gacha: GachaInfo) => (parseInt(gacha.gacha_type) === pool))
-              .map((gacha: GachaInfo) => {
-                tmpGachaSummary[x].totalPulls += 1
-                //console.log(tmrGachaSummary[0].totalPulls + " | " + tmrGachaSummary[1].totalPulls + " | " + tmrGachaSummary[2].totalPulls + " | " + tmrGachaSummary[3].totalPulls)
-                switch (parseInt(gacha.rank_type)) {
-                  case 3: {
-                    afterPullRare4++
-                    afterPullRare5++
-                    break;
+            let tmpGachaSummary = [
+              { regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false } as GachaSummary,
+              { regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false } as GachaSummary,
+              { regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false } as GachaSummary,
+              { regionTimezone: -1, rare5Gacha: [], rare4Gacha: [], rare5GachaAverage: 0, rare5HavePityPercent: 0, totalPulls: 0, luckyRanking: 0, isInit: false } as GachaSummary,
+            ] as GachaSummary[]
+            for (let x = 0; x < GachaPoolArray.length; x++) {
+              const pool = GachaPoolArray[x]
+              let isPityRare4 = false, isPityRare5 = false;
+              let afterPullRare4 = 0, afterPullRare5 = 0;
+              preSortGachaInfoArray
+                .filter((gacha: GachaInfo) => (parseInt(gacha.gacha_type) === pool))
+                .map((gacha: GachaInfo) => {
+                  tmpGachaSummary[x].totalPulls += 1
+                  //console.log(tmrGachaSummary[0].totalPulls + " | " + tmrGachaSummary[1].totalPulls + " | " + tmrGachaSummary[2].totalPulls + " | " + tmrGachaSummary[3].totalPulls)
+                  switch (parseInt(gacha.rank_type)) {
+                    case 3: {
+                      afterPullRare4++
+                      afterPullRare5++
+                      break;
+                    }
+                    case 4: {
+                      //根據時間判定是否歪/UP角色
+                      gacha = (pool !== 1 && pool !== 2 ? updateGachaData(gacha, pool, isPityRare5, 4) : gacha);
+                      gacha.afterPulled = afterPullRare4;
+                      afterPullRare4 = 1
+                      afterPullRare5++
+                      tmpGachaSummary[x].rare4Gacha.push(gacha)
+                      break;
+                    }
+                    case 5: {
+                      //根據時間判定是否歪/UP角色
+                      gacha = (pool !== 1 && pool !== 2 ? updateGachaData(gacha, pool, isPityRare5, 5) : gacha);
+                      gacha.afterPulled = afterPullRare5;
+                      afterPullRare4++
+                      afterPullRare5 = 1
+                      tmpGachaSummary[x].rare5Gacha.push(gacha)
+                      break;
+                    }
                   }
-                  case 4: {
-                    //根據時間判定是否歪/UP角色
-                    gacha = (pool !== 1 && pool !== 2 ? updateGachaData(gacha, pool, isPityRare5, 4) : gacha);
-                    gacha.afterPulled = afterPullRare4;
-                    afterPullRare4 = 1
-                    afterPullRare5++
-                    tmpGachaSummary[x].rare4Gacha.push(gacha)
-                    break;
-                  }
-                  case 5: {
-                    //根據時間判定是否歪/UP角色
-                    gacha = (pool !== 1 && pool !== 2 ? updateGachaData(gacha, pool, isPityRare5, 5) : gacha);
-                    gacha.afterPulled = afterPullRare5;
-                    afterPullRare4++
-                    afterPullRare5 = 1
-                    tmpGachaSummary[x].rare5Gacha.push(gacha)
-                    break;
-                  }
-                }
-              })
-          }
-          let postSortGachaInfoArray = preSortGachaInfoArray.sort(
-            (a: GachaInfo, b: GachaInfo) => (
-              b.id - a.id
-            )
-          )
-
-          for (let x = 0; x < GachaPoolArray.length; x++) {
-            let rare5IsPity = 0, rare5TotalPulled = 0, rare5PityPulled = 0;
-
-            for (let index = 0; index < tmpGachaSummary[x].rare5Gacha.length; index++) {
-              const gacha = tmpGachaSummary[x].rare5Gacha[index]
-              rare5TotalPulled += gacha.afterPulled;
-              rare5PityPulled += (gacha.isPity === true ? gacha.afterPulled : 0)
-              rare5IsPity += (gacha.isPity === true ? 1 : 0)
+                })
             }
+            let postSortGachaInfoArray = preSortGachaInfoArray.sort(
+              (a: GachaInfo, b: GachaInfo) => (
+                b.id - a.id
+              )
+            )
 
-            tmpGachaSummary[x].rare5GachaAverage = rare5TotalPulled / (tmpGachaSummary[x].rare5Gacha.length - rare5IsPity);
-            tmpGachaSummary[x].rare5HavePityPercent = rare5IsPity / tmpGachaSummary[x].rare5Gacha.length
+            for (let x = 0; x < GachaPoolArray.length; x++) {
+              let rare5IsPity = 0, rare5TotalPulled = 0, rare5PityPulled = 0;
 
-            //console.log(tmpGachaSummary[x].rare5GachaAverage)
+              for (let index = 0; index < tmpGachaSummary[x].rare5Gacha.length; index++) {
+                const gacha = tmpGachaSummary[x].rare5Gacha[index]
+                rare5TotalPulled += gacha.afterPulled;
+                rare5PityPulled += (gacha.isPity === true ? gacha.afterPulled : 0)
+                rare5IsPity += (gacha.isPity === true ? 1 : 0)
+              }
+
+              tmpGachaSummary[x].rare5GachaAverage = rare5TotalPulled / (tmpGachaSummary[x].rare5Gacha.length - rare5IsPity);
+              tmpGachaSummary[x].rare5HavePityPercent = rare5IsPity / tmpGachaSummary[x].rare5Gacha.length
+
+              //console.log(tmpGachaSummary[x].rare5GachaAverage)
+            }
+            //卡池合併 & 存放在同一個Array
+            setGachaData(postSortGachaInfoArray);
+            setGachaSummary(tmpGachaSummary);
+
+            //console.log(JSON.stringify(finalGachaInfoArray))
+
+            new GachaHandler().importGachaRecord(JSON.stringify(postSortGachaInfoArray))
+            new GachaHandler().setGachaSummary(tmpGachaSummary)
           }
-          //卡池合併 & 存放在同一個Array
-          setGachaData(postSortGachaInfoArray);
-          setGachaSummary(tmpGachaSummary);
 
-          //console.log(JSON.stringify(finalGachaInfoArray))
-
-          new GachaHandler().importGachaRecord(JSON.stringify(postSortGachaInfoArray))
-          new GachaHandler().setGachaSummary(tmpGachaSummary)
+          todo();
         }}
       />
       }
