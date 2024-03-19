@@ -114,11 +114,11 @@ export default React.memo(function CharCard(props: Props) {
         {/* 等級 */}
         {props.level !== undefined && (
           <View
-            className="absolute top-[60px] w-full"
+            className="absolute top-[72px] w-full"
             style={{ alignItems: "center" }}
           >
-            <View className="bg-[#22222290] h-4 px-2 rounded-[43px]">
-              <Text className="text-text font-[HY65] text-[12px]">
+            <View className="bg-[#22222290] h-4 px-2 rounded-[43px]" style={{ alignSelf: "center" }}>
+              <Text className="text-text h-4 font-[HY65] text-[12px]" style={{ textAlignVertical: "center"}}>
                 {props.level}
               </Text>
             </View>

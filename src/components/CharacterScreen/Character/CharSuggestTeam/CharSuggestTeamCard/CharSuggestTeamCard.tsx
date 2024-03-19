@@ -49,7 +49,8 @@ export default React.memo(function CharSuggestTeamCard(props: Props) {
         style={{
           opacity: isSelected ? 0 : 1,
           flexDirection: "row",
-          gap: 8,
+          gap: 0,
+          rowGap:8,
         }}
       >
         {props.team.map((char, i) => (

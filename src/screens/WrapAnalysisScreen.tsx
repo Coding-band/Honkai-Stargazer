@@ -1,5 +1,5 @@
 import { View, Text, Dimensions, Platform } from "react-native";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, useRef } from "react";
 import Header from "../components/global/Header/Header";
 import { StatusBar } from "expo-status-bar";
 import { SCREENS } from "../constant/screens";
@@ -46,6 +46,7 @@ import { LanguageEnum } from "../utils/hoyolab/language/language.interface";
 import { GachaInfo, GachaSummary } from "../utils/gacha/GachaHandler";
 import lottery_list from "../../data/lottery_data/lottery_list.json";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
+import Toast from "../utils/toast/Toast";
 /**
  * 本功能確認將依照SRGF (https://uigf.org/zh/standards/SRGF.html) 
  * 設計SRGF制式的匯入及匯出功能
@@ -65,6 +66,8 @@ export default function WrapAnalysisScreen() {
   const { language: appLanguage } = useAppLanguage();
   const { language: textLanguage } = useTextLanguage();
   const navigation = useNavigation();
+
+  const cbRef = useRef<BouncyCheckbox>();
 
   //躍遷頁面List
   const pageList = [
@@ -253,11 +256,13 @@ export default function WrapAnalysisScreen() {
                   {LOCALES[appLanguage].WrapFourFiveStarRecord}
                 </Text>
                 <BouncyCheckbox
-                  style={{ height: 24, width: 24, marginLeft: 8 }}
+                  ref={cbRef}
+                  style={{marginLeft: 6, width:16 , height:16 }}
+                  size={16}
                   fillColor="#FCBC62"
                   unfillColor="#00000000"
                   iconStyle={{ borderRadius: 0}}
-                  innerIconStyle={{ borderRadius: 0, borderWidth:2 }}
+                  innerIconStyle={{ borderRadius: 0, borderWidth:(cbRef.current?.state.checked ? 0 : 1.5), borderColor:"#FFFFFF40"}}
                   onPress={setShowRare4and5}
                 >
                 </BouncyCheckbox >
@@ -353,7 +358,7 @@ export default function WrapAnalysisScreen() {
           }}
         >
           <Button width={46} height={46} onPress={() => setOpenedImportPage(true)}>
-            <Image cachePolicy="none" className="w-6 h-6" source={require("../../assets/images/ui_icon/WrapImport.svg")} />
+            <Image cachePolicy="none" className="w-5 h-5" source={require("../../assets/images/ui_icon/WrapImport.svg")} />
           </Button>
           <View style={{ flex: 1, flexWrap: 'wrap' }}>
 
@@ -387,9 +392,9 @@ export default function WrapAnalysisScreen() {
             </ListboxUp>
           </View>
           <Button width={46} height={46} onPress={async () => {
-
+            Toast.StillDevelopingToast(appLanguage);
           }}>
-            <Image cachePolicy="none" className="w-6 h-6" source={require("../../assets/images/ui_icon/WrapAccount.svg")} />
+            <Image cachePolicy="none" className="w-5 h-5" source={require("../../assets/images/ui_icon/WrapAccount.svg")} />
           </Button>
         </Animated.View>
       </View>

@@ -12,7 +12,7 @@ type Props = {
 
 export default function PageStars(props: Props) {
   return (
-    <View className="ml-1 my-[-8px]" style={...props.style,{ flexDirection: "row" }}>
+    <View className="ml-1 my-[-8px]" style={[props.style,{ flexDirection: "row" }]}>
       {range(props.count).map((i) => (
         <Image cachePolicy="none"
           key={i}

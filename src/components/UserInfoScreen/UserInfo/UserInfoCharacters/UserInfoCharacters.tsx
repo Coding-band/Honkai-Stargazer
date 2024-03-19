@@ -187,7 +187,8 @@ export default React.memo(function UserInfoCharacters(props: Props , {isCapture}
             <View
               style={{
                 flexDirection: "row",
-                gap: 8,
+                gap: 0,
+                rowGap:8,
                 flexWrap: "wrap",
                 justifyContent: "center",
               }}
@@ -251,7 +252,8 @@ export default React.memo(function UserInfoCharacters(props: Props , {isCapture}
               <View
                 style={{
                   flexDirection: "row",
-                  gap: 8,
+                  gap: 0,
+                  rowGap:8,
                   flexWrap: "wrap",
                   justifyContent: "center",
                 }}

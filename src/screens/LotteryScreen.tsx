@@ -337,12 +337,12 @@ export default function LotteryScreen() {
             }}
           >
             <Button onPress={makeOnePull} width={"100%"} height={"100%"}>
-              <Text className="font-[HY65] text-[16px]" style={{ marginLeft: 24, marginRight: 24 }}>
+              <Text className="font-[HY65] text-[16px]" style={{ marginLeft: 24, marginRight: 24 , minWidth : 70, textAlign: 'center'}}>
                 {LOCALES[appLanguage].MakeOnePull}
               </Text>
             </Button>
             <Button onPress={makeTenPull}  width={"100%"} height={"100%"}>
-              <Text className="font-[HY65] text-[16px]" style={{ marginLeft: 24, marginRight: 24 }}>
+              <Text className="font-[HY65] text-[16px]" style={{ marginLeft: 24, marginRight: 24 , minWidth : 70, textAlign: 'center'}}>
                 {LOCALES[appLanguage].MakeTenPull}
               </Text>
             </Button>

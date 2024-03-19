@@ -5,6 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import Header from "../components/global/Header/Header";
 import { SCREENS } from "../constant/screens";
 import useAppLanguage from "../language/AppLanguage/useAppLanguage";
+import { dynamicHeightHeader, dynamicHeightHeaderValue } from "../constant/ui";
 
 export default function MapScreen() {
   const { language } = useAppLanguage();
@@ -16,7 +17,7 @@ export default function MapScreen() {
         {SCREENS.MapPage.getName(language)}
       </Header>
       <WebView
-        style={{ marginTop: 110 }}
+        style={{ marginTop: dynamicHeightHeaderValue }}
         source={{
           uri: "https://act.hoyolab.com/sr/app/interactive-map/index.html",
         }}

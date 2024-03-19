@@ -16,7 +16,7 @@ export default function LotterRecordBtn(props : Props){
                 style={[{ paddingLeft: 3.5 },{ paddingRight: 3.5 }]}
                 onPress={() => {props.onPress && props.onPress()}}
             >
-            <ClockCounterClockwise size={40} color="white" weight={"regular"}/>
+            <ClockCounterClockwise size={32} color="white" weight={"regular"}/>
         </TouchableOpacity>
     )
 }

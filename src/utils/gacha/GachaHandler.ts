@@ -308,6 +308,6 @@ export default class GachaHandler {
     ) : -1)
 
     const divCheck = (2 - (wrapPityRate === -1 ? 1 : 0) - (wrapAvgGetUP === -1 ? 1 : 0))
-    return divCheck > 0 ? (pityRateScore + avgGetUpScore) / divCheck : 0
+    return divCheck > 0 ? Math.round((pityRateScore + avgGetUpScore) / divCheck) : 0
   }
 }
