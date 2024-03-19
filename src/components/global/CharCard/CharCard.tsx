@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity, Dimensions, PixelRatio } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image, ImageSource } from "expo-image";
 import { cn } from "../../../utils/css/cn";
@@ -38,7 +38,7 @@ export default React.memo(function CharCard(props: Props) {
   const oneItemWidth = itemMaxWidth + (((totalAvailableWidth % itemMaxWidth ) / itemInRow) )
 
   //console.log(dimension.width +" | "+totalAvailableWidth+" | "+itemInRow+ " | "+(totalAvailableWidth % itemMaxWidth)+ " | "+oneItemWidth2)
-  
+
   return (
     <TouchableOpacity
       activeOpacity={0.65}
@@ -114,8 +114,8 @@ export default React.memo(function CharCard(props: Props) {
         {/* 等級 */}
         {props.level !== undefined && (
           <View
-            className="absolute top-[72px] w-full"
-            style={{ alignItems: "center" }}
+            className="absolute w-full"
+            style={{ alignItems: "center", marginTop : oneItemWidth - 26 }}
           >
             <View className="bg-[#22222290] h-4 px-2 rounded-[43px]" style={{ alignSelf: "center" }}>
               <Text className="text-text h-4 font-[HY65] text-[12px]" style={{ textAlignVertical: "center"}}>
