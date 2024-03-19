@@ -346,5 +346,6 @@ export const strings = {
   WrapPopUpURLToast: "請輸入躍遷連結！",
   WrapPopUpURLTextArea: "躍遷連結請放在這裏~",
   WrapPopUpURLTutorial: "如何獲取連結？",
-  WrapPopUpURLAnalysisButton: "分析"
+  WrapPopUpURLAnalysisButton: "分析",
+  WrapPopUpURLProgress: "分析進度 : ${1} 第${2}頁"
 };

@@ -346,5 +346,6 @@ export const strings = {
   WrapPopUpURLToast: "Please enter the Wrap URL!",
   WrapPopUpURLTextArea: "Pleas put the Wrap URL in there",
   WrapPopUpURLTutorial: "How to get the Wrap URL?",
-  WrapPopUpURLAnalysisButton: "Analysis"
+  WrapPopUpURLAnalysisButton: "Analysis",
+  WrapPopUpURLProgress: "Analysis Progess : Page ${2} of ${1}"
 };

@@ -346,5 +346,6 @@ export const strings = {
   WrapPopUpURLToast: "请输入跃迁连结！",
   WrapPopUpURLTextArea: "跃迁连结请放在这里~",
   WrapPopUpURLTutorial: "如何获取连结？",
-  WrapPopUpURLAnalysisButton: "分析"
+  WrapPopUpURLAnalysisButton: "分析",
+  WrapPopUpURLProgress: "分析进度 : ${1} 第${2}页"
 };
