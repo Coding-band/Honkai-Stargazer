@@ -21,7 +21,8 @@ const TIMEZONE_CN = 8;
 export type uidServerInfo = {
   uid: string,
   serverTZ: number,
-  serverName: hsrServer
+  serverName: hsrServer,
+  regionType: string,
 }
 
 export type GachaInfo = {
@@ -79,10 +80,11 @@ export default class GachaHandler {
     arr: GachaInfo[],
     lang?: LanguageEnum,
     lastPageId?: number,
-    gachaId?: -1 | 1 | 2 | 11 | 12 = -1,
-    lastId? : string,
+    gachaId?: -1 | 1 | 2 | 11 | 12,
+    lastId?: string,
     size?: number,
-    language?: AppLanguage
+    language?: AppLanguage,
+    regionType?: "GLOBAL" | "CN"
   ): Promise<GachaInfo[]> {
     size = (size && size > 20 ? 20 : size);
     if (gachaId === -1) {
@@ -91,13 +93,22 @@ export default class GachaHandler {
         let tmpArr: GachaInfo[] = []
         let tmpLastPageId = 0
         let tmpLastId = 0
+
+        if (x === 0) {
+          (await this.getGachaRecordByAuthKey(authkey, lang, 1, 11, "0", 1, regionType).then((getRecordArr: GachaInfo[]) => {
+            if (getRecordArr.length > 0) {
+              regionType = this.getServerInfoByUID(getRecordArr[0].uid).regionType
+            }
+          }))
+        }
+
         await this.sleep(300).then(async () => {
-          arr = arr.concat(await this.gachaCombineHandler(authkey, tmpArr, lang, tmpLastPageId, GachaPoolArray[x], tmpLastId, size,language) as GachaInfo[])
+          arr = arr.concat(await this.gachaCombineHandler(authkey, tmpArr, lang, tmpLastPageId, GachaPoolArray[x], tmpLastId, size, language, regionType) as GachaInfo[])
         });
       }
       return arr as GachaInfo[]
     }
-    return await this.getGachaRecordByAuthKey(authkey, lang, lastPageId, gachaId, lastId, size).then(async (getRecordArr) => {
+    return await this.getGachaRecordByAuthKey(authkey, lang, lastPageId, gachaId, lastId, size, regionType).then(async (getRecordArr) => {
       const GachaPoolArrayLocale = [
         LOCALES[language].WrapStaticPool,
         LOCALES[language].WrapNewbiePool,
@@ -110,12 +121,12 @@ export default class GachaHandler {
         arr = arr.concat(getRecordArr)
         Toast(
           LOCALES[language].WrapPopUpURLProgress
-            .replace("${1}",(GachaPoolArrayLocale[GachaPoolArray.indexOf(gachaId)]))
-            .replace("${2}",lastPageId),
+            .replace("${1}", (GachaPoolArrayLocale[GachaPoolArray.indexOf(gachaId)]))
+            .replace("${2}", lastPageId),
           1,
           false
         )
-        return await this.sleep(300).then(() => { return this.gachaCombineHandler(authkey, arr, lang, lastPageId, gachaId, lastId, size,language) }) as GachaInfo[]
+        return await this.sleep(300).then(() => { return this.gachaCombineHandler(authkey, arr, lang, lastPageId, gachaId, lastId, size, language, regionType) }) as GachaInfo[]
       } else {
         return arr as GachaInfo[]
       }
@@ -172,21 +183,21 @@ export default class GachaHandler {
       }
     })
   }
-    /**
-   * 設定躍遷最後一筆ID (避免覆蓋)
-   * @param gachaSummary 躍遷總結
+  /**
+ * 設定躍遷最後一筆ID (避免覆蓋)
+ * @param gachaSummary 躍遷總結
+ */
+  public setGachaEndId(gachaEndId: string) {
+    AsyncStorage.setItem(GACHA_END_ID_KEY, gachaEndId);
+  }
+  /**
+   * 獲取躍遷最後一筆ID (避免覆蓋)
    */
-    public setGachaEndId(gachaEndId: string) {
-      AsyncStorage.setItem(GACHA_END_ID_KEY, gachaEndId);
-    }
-    /**
-     * 獲取躍遷最後一筆ID (避免覆蓋)
-     */
-    public async getGachaEndId() {
-      return await AsyncStorage.getItem(GACHA_END_ID_KEY).then((data) => {
-        return data === null ? "0" : data
-      })
-    }
+  public async getGachaEndId() {
+    return await AsyncStorage.getItem(GACHA_END_ID_KEY).then((data) => {
+      return data === null ? "0" : data
+    })
+  }
 
   /**
    * 匯出躍遷紀錄
@@ -230,11 +241,12 @@ export default class GachaHandler {
     pageId?: number,
     gachaType?: 1 | 2 | 11 | 12,
     endId?: string,
-    size?: number
+    size?: number,
+    regionType?: "GLOBAL" | "CN"
   ): Promise<Array<GachaInfo>> {
     return this.gachaRequest
       ?.send(
-        "https://api-os-takumi.hoyoverse.com/common/gacha_record/api/getGachaLog?authkey_ver=1&sign_type=2" +
+        "https://" + (regionType === "CN" ? "api-takumi.mihoyo.com" : "api-os-takumi.hoyoverse.com") + "/common/gacha_record/api/getGachaLog?authkey_ver=1&sign_type=2" +
         "&game_biz=hkrpg_cn" +
         (lang ? "&lang=" + lang : "&lang=zh-tw") +
         (gachaType ? "&gacha_type=" + gachaType : "&gacha_type=1") +
@@ -244,8 +256,8 @@ export default class GachaHandler {
         (authkey ? "&authkey=" + authkey : "")
       )
       .then((dataJSON) => {
-        if(dataJSON.retcode !== 0){
-          Toast(dataJSON.message,3,false)
+        if (dataJSON.retcode !== 0) {
+          Toast(dataJSON.message, 3, false)
           console.log(dataJSON.message)
         }
         return (dataJSON.data === null || dataJSON.data == undefined ? [] : dataJSON.data.list) as GachaInfo[];
@@ -258,20 +270,44 @@ export default class GachaHandler {
   /**
    * 
    * @param uid 遊戲UID (E.g. 900033852)
-   * @returns "{ uid , serverTZ , serverName}"
+   * @returns "{ uid , serverTZ , serverName, regionType}"
    */
   public getServerInfoByUID(uid: string): uidServerInfo {
     switch (uid[0]) {
       case "1":
       case "2":
       case "3":
-      case "4": return { uid, serverTZ: TIMEZONE_CN, serverName: "prod_gf_cn" }
-      case "5": return { uid, serverTZ: TIMEZONE_CN, serverName: "prod_qd_cn" }
-      case "6": return { uid, serverTZ: TIMEZONE_NA, serverName: "prod_official_usa" }
-      case "7": return { uid, serverTZ: TIMEZONE_EU, serverName: "prod_official_eur" }
-      case "8": return { uid, serverTZ: TIMEZONE_ASIA, serverName: "prod_official_asia" }
-      case "9": return { uid, serverTZ: TIMEZONE_HKTWMO, serverName: "prod_official_cht" }
-      default: return { uid, serverTZ: TIMEZONE_HKTWMO, serverName: "prod_official_usa" } //故意的，方便找到ERROR
+      case "4": return { uid, serverTZ: TIMEZONE_CN, serverName: "prod_gf_cn", regionType: "CN" }
+      case "5": return { uid, serverTZ: TIMEZONE_CN, serverName: "prod_qd_cn", regionType: "CN" }
+      case "6": return { uid, serverTZ: TIMEZONE_NA, serverName: "prod_official_usa", regionType: "GLOBAL" }
+      case "7": return { uid, serverTZ: TIMEZONE_EU, serverName: "prod_official_eur", regionType: "GLOBAL" }
+      case "8": return { uid, serverTZ: TIMEZONE_ASIA, serverName: "prod_official_asia", regionType: "GLOBAL" }
+      case "9": return { uid, serverTZ: TIMEZONE_HKTWMO, serverName: "prod_official_cht", regionType: "GLOBAL" }
+      default: return { uid, serverTZ: TIMEZONE_HKTWMO, serverName: "prod_official_usa", regionType: "GLOBAL" } //故意的，方便找到ERROR
     }
+  }
+
+  /**
+   * 
+   * @param wrapPityRate 抽卡歪了的機率
+   * @param wrapAvgGetUP 平均出貨機率（當期限定UP）
+   * @returns 介乎0-5的數值
+   */
+  public getWrapLuckyScore(wrapPityRate : number, wrapAvgGetUP : number) : number {
+    let pityRateScore = 0;
+    let avgGetUpScore = 0;
+
+    pityRateScore = (wrapPityRate === -1 ? 0 : 5 - wrapPityRate * 5);
+    avgGetUpScore = (wrapAvgGetUP !== undefined && wrapAvgGetUP > 0 && wrapAvgGetUP !== -1 ?
+    (
+      wrapAvgGetUP > 80 ? 0 : 
+      wrapAvgGetUP > 70 ? 1 : 
+      wrapAvgGetUP > 60 ? 2 : 
+      wrapAvgGetUP > 50 ? 3 : 
+      wrapAvgGetUP > 40 ? 4 : 5
+    ) : -1)
+
+    const divCheck = (2 - (wrapPityRate === -1 ? 1 : 0) - (wrapAvgGetUP === -1 ? 1 : 0))
+    return divCheck > 0 ? (pityRateScore + avgGetUpScore) / divCheck : 0
   }
 }

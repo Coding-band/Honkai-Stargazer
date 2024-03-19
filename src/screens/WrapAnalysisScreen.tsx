@@ -174,7 +174,11 @@ export default function WrapAnalysisScreen() {
               >
                 {/* 運氣評價 - 星星 */}
                 <PageStars
-                  count={5}
+                style={{minHeight:40, minWidth:1}}
+                  count={new GachaHandler().getWrapLuckyScore(
+                    (selectedPage == 0 || selectedPage == 1 ? -1 : gachaSummary[selectedPage]?.rare5HavePityPercent),
+                    (isNaN(parseFloat(gachaSummary[selectedPage]?.rare5GachaAverage)) ? -1 : gachaSummary[selectedPage]?.rare5GachaAverage)
+                  )}
                 />
 
                 {/* 運氣評價 - 標題 */}
@@ -250,10 +254,10 @@ export default function WrapAnalysisScreen() {
                 </Text>
                 <BouncyCheckbox
                   style={{ height: 24, width: 24, marginLeft: 8 }}
-                  fillColor="#FFFFFF40"
-                  unfillColor="#FFFFFF40"
-                  iconStyle={{ borderRadius: 3 }}
-                  innerIconStyle={{ borderRadius: 3, }}
+                  fillColor="#FCBC62"
+                  unfillColor="#00000000"
+                  iconStyle={{ borderRadius: 0}}
+                  innerIconStyle={{ borderRadius: 0, borderWidth:2 }}
                   onPress={setShowRare4and5}
                 >
                 </BouncyCheckbox >
