@@ -51,9 +51,7 @@ export function getLcAttrData(id: LightconeName, level: number = 1) {
   };
 
   // 找到對應等級的數據
-  const dataForLevel = lcLevelData.find((data) =>
-    level === 80 ? level <= data.maxLevel : level < data.maxLevel
-  );
+  const dataForLevel = lcLevelData.find((data) => level === 80 ? level <= data.maxLevel : level < data.maxLevel);
 
   if (dataForLevel) {
     // 計算屬性值
@@ -61,6 +59,44 @@ export function getLcAttrData(id: LightconeName, level: number = 1) {
       dataForLevel.attackBase + dataForLevel.attackAdd * (level - 1);
     attributes.hp = dataForLevel.hpBase + dataForLevel.hpAdd * (level - 1);
     attributes.def =
+      dataForLevel.defenseBase + dataForLevel.defenseAdd * (level - 1);
+  }
+
+  return attributes;
+}
+
+//* 根據等級取得角色屬性數值
+export function getLcAttrDataJSON(id: LightconeName, level: number = 1) {
+  const lcFullData = getLcFullData(id);
+  const lcLevelData = lcFullData.levelData;
+
+  const attributes = [
+    {
+      field: "hp",
+      value: 0,
+      percent : false
+    },
+    {
+      field: "hp",
+      value: 0,
+      percent : false
+    },
+    {
+      field: "def",
+      value: 0,
+      percent : false
+    },
+  ];
+
+  // 找到對應等級的數據
+  const dataForLevel = lcLevelData.find((data) => level === 80 ? level <= data.maxLevel : level < data.maxLevel) ;
+
+  if (dataForLevel) {
+    // 計算屬性值
+    attributes[0].value =
+      dataForLevel.attackBase + dataForLevel.attackAdd * (level - 1);
+    attributes[1].value = dataForLevel.hpBase + dataForLevel.hpAdd * (level - 1);
+    attributes[2].value =
       dataForLevel.defenseBase + dataForLevel.defenseAdd * (level - 1);
   }
 

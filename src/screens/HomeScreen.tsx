@@ -40,6 +40,9 @@ import { Dimensions } from "react-native";
 import SelectLanguageAtFirstTime from "../components/global/SelectLanguageAtFirstTime/SelectLanguageAtFirstTime";
 import DonateTab from "../components/HomeScreen/Tabbar/DonateTab/DonateTab";
 import { dynamicHeightBottomBar } from "../constant/ui";
+import { getLcFullData } from "../utils/data/getDataFromMap";
+import useAppLanguage from "../language/AppLanguage/useAppLanguage";
+import { getLcAttrData, getLcAttrDataJSON } from "../utils/calculator/getAttrData";
 
 export default function HomeScreen() {
   const uid = useMyFirebaseUid();
@@ -57,6 +60,8 @@ export default function HomeScreen() {
   const pfPrev = usePureFictionPrev().data;
 
   const userCharDetailList = useUserCharacters(uid).data?.characters_details;
+
+  const { language : appLanguage } = useAppLanguage();
 
   const handleFirebaseSignUp = async (email: string, password: string) => {
     try {
@@ -224,14 +229,32 @@ export default function HomeScreen() {
                 }))
               : [],
           })),
-          
-          /*
+
+          /**
+           * 金玉其外 敗絮其中
+           */
           characters_details: unionBy(
-            hsrInGameInfo?.characters,
+            hsrCharList.map((char: any) => ({
+              addition : [],
+              attributes : [],
+              id : char?.id,
+              level : char?.level,
+              light_cone : {
+                attributes : getLcAttrDataJSON(char?.equip?.id, char?.equip?.level),
+                id : char?.equip?.id,
+                level : char?.equip?.level,
+                promotion : char?.equip?.rank,
+                //what is rank? necessery for path?
+                rarity : char?.equip?.rarity,
+              },
+              //skill and skill_tree ?
+              relics : [...char?.relics,char?.ornaments] //property -> affix
+              //attributes, additions, properties
+              //pos
+            })),
             UserCharacterDocGet?.data()?.characters_details,
             "id"
           ),
-          */
         } as UserCharacters;
         if (UserCharactersIsExist) {
           try {
