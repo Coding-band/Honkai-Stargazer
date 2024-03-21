@@ -192,7 +192,7 @@ export default function HomeScreen() {
   //* 建立或更新用戶角色數據 (UserCharacters)
   useEffect(() => {
     async function createOrUpdateUserCharacters() {
-      if (uid && hsrCharList && hsrInGameInfo) {
+      if (uid && hsrCharList) {
         const UserCharacterDocGet = await db.UserCharacters.doc(uid).get();
         const UserCharactersIsExist = UserCharacterDocGet.exists;
         const charsData = {
@@ -224,12 +224,15 @@ export default function HomeScreen() {
                 }))
               : [],
           })),
+          
+          /*
           characters_details: unionBy(
             hsrInGameInfo?.characters,
             UserCharacterDocGet?.data()?.characters_details,
             "id"
           ),
-        } as UserCharacte;
+          */
+        } as UserCharacters;
         if (UserCharactersIsExist) {
           try {
             db.UserCharacters.doc(uid).update(charsData);
