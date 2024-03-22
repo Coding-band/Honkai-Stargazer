@@ -43,6 +43,7 @@ import { dynamicHeightBottomBar } from "../constant/ui";
 import { getLcFullData } from "../utils/data/getDataFromMap";
 import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 import { getLcAttrData, getLcAttrDataJSON } from "../utils/calculator/getAttrData";
+import { getAttrKeyByPropertyType } from "../utils/hoyolab/exchange/exchange";
 
 export default function HomeScreen() {
   const uid = useMyFirebaseUid();
@@ -61,7 +62,7 @@ export default function HomeScreen() {
 
   const userCharDetailList = useUserCharacters(uid).data?.characters_details;
 
-  const { language : appLanguage } = useAppLanguage();
+  const { language: appLanguage } = useAppLanguage();
 
   const handleFirebaseSignUp = async (email: string, password: string) => {
     try {
@@ -97,7 +98,7 @@ export default function HomeScreen() {
       handleFirebaseSignUp(email, password).then((isAlreadySignUp) => {
         if (isAlreadySignUp) {
           // firebase 登入
-          handleFirebaseSignIn(email, password).then((a) => {});
+          handleFirebaseSignIn(email, password).then((a) => { });
         } else {
         }
       });
@@ -200,6 +201,8 @@ export default function HomeScreen() {
       if (uid && hsrCharList) {
         const UserCharacterDocGet = await db.UserCharacters.doc(uid).get();
         const UserCharactersIsExist = UserCharacterDocGet.exists;
+        console.log("UserCharactersIsExist : " + UserCharactersIsExist)
+        console.log("uid : " + uid)
         const charsData = {
           characters: hsrCharList.map((char: any) => ({
             id: char?.id,
@@ -207,55 +210,126 @@ export default function HomeScreen() {
             rank: char?.rank,
             equip: char?.equip
               ? {
-                  id: char?.equip?.id,
-                  level: char?.equip?.level,
-                  rank: char?.equip?.rank,
-                }
+                id: char?.equip?.id,
+                level: char?.equip?.level,
+                rank: char?.equip?.rank,
+              }
               : {},
             relics: char?.relics
               ? char?.relics?.map((relic: any) => ({
-                  id: relic?.id,
-                  level: relic?.level,
-                  rarity: relic?.rarity,
-                  pos: relic?.pos,
-                }))
+                id: relic?.id,
+                level: relic?.level,
+                rarity: relic?.rarity,
+                pos: relic?.pos,
+              }))
               : [],
             ornaments: char?.ornaments
               ? char?.ornaments?.map((ornament: any) => ({
-                  id: ornament?.id,
-                  level: ornament?.level,
-                  rarity: ornament?.rarity,
-                  pos: ornament?.pos,
-                }))
+                id: ornament?.id,
+                level: ornament?.level,
+                rarity: ornament?.rarity,
+                pos: ornament?.pos,
+              }))
               : [],
           })),
 
           /**
            * 金玉其外 敗絮其中
            */
-          characters_details: unionBy(
-            hsrCharList.map((char: any) => ({
-              addition : [],
-              attributes : [],
-              id : char?.id,
-              level : char?.level,
-              light_cone : {
-                attributes : getLcAttrDataJSON(char?.equip?.id, char?.equip?.level),
-                id : char?.equip?.id,
-                level : char?.equip?.level,
-                promotion : char?.equip?.rank,
+          characters_details: hsrCharList.map((char: any) => {
+            return ({
+              id: char?.id?.toString(),
+              level: char?.level,
+              light_cone: char?.equip?.id !== undefined ? {
+                attributes: getLcAttrDataJSON(char?.equip?.id, char?.equip?.level),
+                id: char?.equip?.id,
+                level: char?.equip?.level,
+                promotion: char?.equip?.rank,
                 //what is rank? necessery for path?
-                rarity : char?.equip?.rarity,
-              },
+                rarity: char?.equip?.rarity,
+              } : {},
               //skill and skill_tree ?
-              relics : [...char?.relics,char?.ornaments] //property -> affix
+              skills: char?.skills.filter((skill: any) => skill.point_type === 2).map((skill: any) => ({
+                level: skill?.level,
+                point_id: skill?.point_id,
+              })),
+              relics: char?.relics.map((data: any) => ({
+                id: data?.id,
+                level: data?.level,
+                rarity: data?.rarity,
+                pos: data?.pos,
+                icon: (Math.floor(getIconStrById(data?.id) / 10).toString()+"_"+(getIconStrById(data?.id) % 10 - (getIconStrById(data?.id) % 10 > 4 ? 4 : 0)).toString()),
+                main_affix: {
+                  field: getAttrKeyByPropertyType(data?.main_property?.property_type).key,
+                  value: Number(data?.main_property?.value.replace("%", "")) / (data?.main_property?.value.includes("%") ? 100 : 1),
+                  times: data?.main_property?.times,
+                  display: data?.main_property?.value,
+                },
+                sub_affix: data?.properties?.map((sub: any) => ({
+                  field: getAttrKeyByPropertyType(sub?.property_type).key,
+                  value: Number(sub?.value.replace("%", "")) / (sub?.value.includes("%") ? 100 : 1),
+                  times: sub?.times,
+                  display: sub?.value,
+                }))
+              })).concat(
+                char?.ornaments.map((data: any) => ({
+                  id: data?.id,
+                  level: data?.level,
+                  rarity: data?.rarity,
+                  pos: data?.pos,
+                  main_affix: {
+                    field: getAttrKeyByPropertyType(data?.main_property?.property_type).key,
+                    value: Number(data?.main_property?.value.replace("%", "")) / (data?.main_property?.value.includes("%") ? 100 : 1),
+                    times: data?.main_property?.times,
+                    display: data?.main_property?.value,
+                  },
+                  sub_affix: data?.properties?.map((sub: any) => ({
+                    field: getAttrKeyByPropertyType(sub?.property_type).key,
+                    value: Number(sub?.value.replace("%", "")) / (sub?.value.includes("%") ? 100 : 1),
+                    times: sub?.times,
+                    display: sub?.value,
+                  }))
+                }))
+              ), //property -> affix
               //attributes, additions, properties
+              attributes: (char?.properties?.map((data: any) => ({
+                field: getAttrKeyByPropertyType(data?.property_type).key,
+                value: (
+                  //檢查是否雙暴，True的話就要直接套用50% / 5%基數
+                  ["crit_rate", "crit_dmg"].indexOf(getAttrKeyByPropertyType(data?.property_type).key) !== -1
+                    ? (getAttrKeyByPropertyType(data?.property_type).key === "crit_rate" ? 0.05 : 0.5)
+                    : Number(data?.base?.replace("%", "")) / (data?.base?.includes("%") ? 100 : 1)
+                ),
+                percent: getAttrKeyByPropertyType(data?.property_type).isPercent,
+                display: ["crit_rate", "crit_dmg"].indexOf(getAttrKeyByPropertyType(data?.property_type).key) !== -1
+                  ? (getAttrKeyByPropertyType(data?.property_type).key === "crit_rate" ? "50.0%" : "5.0%")
+                  : data?.base,
+              }))),
+              additions: (char?.properties?.map((data: any) => ({
+                field: getAttrKeyByPropertyType(data?.property_type).key,
+                value: (
+                  //檢查是否雙暴，True的話就要減50% / 5%基數
+                  ["crit_rate", "crit_dmg"].indexOf(getAttrKeyByPropertyType(data?.property_type).key) !== -1
+                    ? Number(data?.base?.replace("%", "")) / 100 - (getAttrKeyByPropertyType(data?.property_type).key === "crit_rate" ? 0.05 : 0.5)
+                    : Number(data?.add?.replace("%", "")) / (data?.add?.includes("%") ? 100 : 1)
+                ),
+                percent: getAttrKeyByPropertyType(data?.property_type).isPercent,
+                display: ["crit_rate", "crit_dmg"].indexOf(getAttrKeyByPropertyType(data?.property_type).key) !== -1
+                  ? ((Number(data?.base?.replace("%", "")) / 100 - (getAttrKeyByPropertyType(data?.property_type).key === "crit_rate" ? 0.05 : 0.5)) 
+                    * 100).toFixed(1).toString()+"%"
+                  : data?.add,
+              }))),
+              properties: (char?.properties?.map((data: any) => ({
+                field: getAttrKeyByPropertyType(data?.property_type).key,
+                value: Number(data?.final?.replace("%", "")) / (data?.final?.includes("%") ? 100 : 1),
+                percent: getAttrKeyByPropertyType(data?.property_type).isPercent,
+                display: data?.final,
+              })))
               //pos
-            })),
-            UserCharacterDocGet?.data()?.characters_details,
-            "id"
-          ),
+            })
+          }),
         } as UserCharacters;
+
         if (UserCharactersIsExist) {
           try {
             db.UserCharacters.doc(uid).update(charsData);
@@ -264,7 +338,9 @@ export default function HomeScreen() {
           }
         } else {
           try {
+            console.log("AAAAA")
             db.UserCharacters.doc(uid).set(charsData);
+            console.log("BBBBBB")
           } catch (e: any) {
             console.log("create UserCharacters: " + e.message);
           }
@@ -624,7 +700,7 @@ export default function HomeScreen() {
     }
     createOrUpdateUserCharacterScores();
   }, [uid, userCharDetailList]);
-  
+
 
   return (
     <>
@@ -646,11 +722,11 @@ export default function HomeScreen() {
             className="w-full"
             style={{ flex: 1 }}
           >
-            <View style={{flex:1, flexDirection:"column",}}>
-              <View style={{flex:1}}>
-                <Menu/>
+            <View style={{ flex: 1, flexDirection: "column", }}>
+              <View style={{ flex: 1 }}>
+                <Menu />
               </View>
-              <View style={{width: "100%", height: (48 + dynamicHeightBottomBar)}}>
+              <View style={{ width: "100%", height: (48 + dynamicHeightBottomBar) }}>
                 <DonateTab />
               </View>
             </View>
@@ -671,4 +747,12 @@ function toTimestamp(obj: any) {
 
   // Return the Unix timestamp (in milliseconds)
   return date.getTime();
+}
+
+function getIconStrById(id : number){
+  let tmpId = id;
+  while (tmpId > 10000){
+    tmpId -= 10000;
+  }
+  return tmpId;
 }

@@ -28,8 +28,8 @@ export default React.memo(function RelicItem({
   const relicSetId = officalRelicId[userRelicData.set_id] as RelicName;
   const relicCount =
     Number(
-      userRelicData.icon.split(".")[0][
-        userRelicData.icon.split(".")[0].length - 1
+      userRelicData.icon?.split(".")[0][
+        userRelicData.icon?.split(".")[0].length - 1
       ]
     ) + 1;
 

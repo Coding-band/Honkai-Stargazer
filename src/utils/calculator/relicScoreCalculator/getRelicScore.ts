@@ -41,7 +41,8 @@ export default function getRelicScore(
 
   // 主詞條數據
   const relicMainValue = charRelicsData.map((relic) => {
-    const tmpVar = relic.icon.split(".")[0].replace("icon/relic/", "");
+    const tmpId = getIconStrById(Number(relic.id));
+    const tmpVar = relic.icon?.split(".")[0].replace("icon/relic/", "") || Math.floor(tmpId / 10).toString()+"_"+(tmpId % 10 - (tmpId % 10 > 4 ? 4 : 0));
     const relicFindPosition =
       tmpVar[0] === "3"
         ? Number(tmpVar[tmpVar.length - 1]) + 4
@@ -271,4 +272,12 @@ export function getRelicTotalScoreRange(score: number) {
   else if (score < 160) return "A";
   else if (score < 200) return "S";
   return "SS";
+}
+
+function getIconStrById(id : number){
+  let tmpId = id;
+  while (tmpId > 10000){
+    tmpId -= 10000;
+  }
+  return tmpId;
 }

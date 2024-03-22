@@ -1,3 +1,4 @@
+import officalLightconeId from "../../../map/lightcone_offical_id_map";
 import { CharacterName } from "../../types/character";
 import { LightconeName } from "../../types/lightcone";
 import { getCharFullData, getLcFullData } from "../data/getDataFromMap";
@@ -66,25 +67,28 @@ export function getLcAttrData(id: LightconeName, level: number = 1) {
 }
 
 //* 根據等級取得角色屬性數值
-export function getLcAttrDataJSON(id: LightconeName, level: number = 1) {
-  const lcFullData = getLcFullData(id);
+export function getLcAttrDataJSON(id: number, level: number = 1) {
+  const lcFullData = getLcFullData(officalLightconeId[id]);
   const lcLevelData = lcFullData.levelData;
 
   const attributes = [
     {
       field: "hp",
       value: 0,
-      percent : false
+      percent : false,
+      display : "0.0",
     },
     {
       field: "hp",
       value: 0,
-      percent : false
+      percent : false,
+      display : "0.0",
     },
     {
       field: "def",
       value: 0,
-      percent : false
+      percent : false,
+      display : "0.0",
     },
   ];
 
@@ -98,6 +102,10 @@ export function getLcAttrDataJSON(id: LightconeName, level: number = 1) {
     attributes[1].value = dataForLevel.hpBase + dataForLevel.hpAdd * (level - 1);
     attributes[2].value =
       dataForLevel.defenseBase + dataForLevel.defenseAdd * (level - 1);
+
+      attributes.map((attribute : any) => {
+        attribute.display = (attribute.value * (attribute.percent ? 100 : 1)).toFixed(1).toString()+(attribute.percent ? "%" : "")
+      })
   }
 
   return attributes;

@@ -11,7 +11,6 @@ export default React.memo(function UserCharSkills() {
   const charId = useProfileCharId();
   const { inGameCharData } = useProfileHsrInGameInfo();
   const { language } = useAppLanguage();
-
   return (
     inGameCharData && (
       <View className="mt-2" style={{ flexDirection: "row" }}>
@@ -72,7 +71,7 @@ export default React.memo(function UserCharSkills() {
             {LOCALES[language].TraceTechnique}
           </Text>
           <Text className="text-text font-[HY65]">
-            Lv {inGameCharData.skills[5].level}
+            Lv 1
           </Text>
         </View>
       </View>
