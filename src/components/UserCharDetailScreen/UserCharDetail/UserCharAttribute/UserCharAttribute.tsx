@@ -340,7 +340,7 @@ export default React.memo(function UserCharAttribute() {
           >
             {attributes.map(
               (attr) =>
-                (attr.attr || attr.addi) && (
+                ((attr.attr && attr.attr !== "0.0%") || (attr.addi  && attr.addi !== "0.0%")) && (
                   <View
                     style={{
                       flexDirection: "row",
@@ -365,7 +365,7 @@ export default React.memo(function UserCharAttribute() {
           >
             {attributes.map(
               (attr) =>
-                (attr.attr || attr.addi) && (
+                ((attr.attr && attr.attr !== "0.0%") || (attr.addi  && attr.addi !== "0.0%")) && (
                   <View
                     className="w-[320px]"
                     style={{
@@ -395,16 +395,16 @@ export default React.memo(function UserCharAttribute() {
                       }}
                     >
                       <Text className="text-text text-[14px] font-[HY65]">
-                        {attr.attr}
-                        {attr.addi && attr.attr ? <Text> + </Text> : null}
-                        <Text className="text-green-600">{attr.addi}</Text>
+                        {attr.attr === "0.0%" ? "" : attr.attr}
+                        {attr.addi && attr.attr && (attr.attr !== "0.0%") && (attr.addi !== "0.0%") ? <Text> + </Text> : null}
+                        {attr.addi !== "0.0%" ? <Text className="text-green-600">{attr.addi}</Text> : <></>}
                       </Text>
                     </View>
                   </View>
                 )
             )}
           </View>
-        )}
+        )} 
       </TouchableOpacity>
     )
   );

@@ -79,7 +79,7 @@ export function getLcAttrDataJSON(id: number, level: number = 1) {
       display : "0.0",
     },
     {
-      field: "hp",
+      field: "atk",
       value: 0,
       percent : false,
       display : "0.0",

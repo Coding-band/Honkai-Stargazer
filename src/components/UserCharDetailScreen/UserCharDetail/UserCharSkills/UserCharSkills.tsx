@@ -71,7 +71,7 @@ export default React.memo(function UserCharSkills() {
             {LOCALES[language].TraceTechnique}
           </Text>
           <Text className="text-text font-[HY65]">
-            Lv 1
+            Lv {inGameCharData.skills[5].level}
           </Text>
         </View>
       </View>

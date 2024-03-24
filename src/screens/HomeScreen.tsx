@@ -240,11 +240,12 @@ export default function HomeScreen() {
             return ({
               id: char?.id?.toString(),
               level: char?.level,
+              promotion: getPromotionByLevel(char?.level),
               light_cone: char?.equip?.id !== undefined ? {
                 attributes: getLcAttrDataJSON(char?.equip?.id, char?.equip?.level),
                 id: char?.equip?.id,
                 level: char?.equip?.level,
-                promotion: char?.equip?.rank,
+                rank: char?.equip?.rank,
                 //what is rank? necessery for path?
                 rarity: char?.equip?.rarity,
               } : {},
@@ -252,79 +253,117 @@ export default function HomeScreen() {
               skills: char?.skills.filter((skill: any) => skill.point_type === 2).map((skill: any) => ({
                 level: skill?.level,
                 point_id: skill?.point_id,
-              })),
-              relics: char?.relics.map((data: any) => ({
-                id: data?.id,
-                level: data?.level,
-                rarity: data?.rarity,
-                pos: data?.pos,
-                icon: (Math.floor(getIconStrById(data?.id) / 10).toString()+"_"+(getIconStrById(data?.id) % 10 - (getIconStrById(data?.id) % 10 > 4 ? 4 : 0)).toString()),
-                main_affix: {
-                  field: getAttrKeyByPropertyType(data?.main_property?.property_type).key,
-                  value: Number(data?.main_property?.value.replace("%", "")) / (data?.main_property?.value.includes("%") ? 100 : 1),
-                  times: data?.main_property?.times,
-                  display: data?.main_property?.value,
-                },
-                sub_affix: data?.properties?.map((sub: any) => ({
-                  field: getAttrKeyByPropertyType(sub?.property_type).key,
-                  value: Number(sub?.value.replace("%", "")) / (sub?.value.includes("%") ? 100 : 1),
-                  times: sub?.times,
-                  display: sub?.value,
-                }))
-              })).concat(
-                char?.ornaments.map((data: any) => ({
+              })).concat({
+                level: 1, //這個是秘技
+              }),
+              relics: char?.relics.map((data: any) => {
+                const attrData = getAttrKeyByPropertyType(data?.main_property?.property_type);
+                const iconId = getIconStrById(data?.id);
+                const iconSetId = Math.floor(iconId / 10).toString();
+                return ({
                   id: data?.id,
                   level: data?.level,
                   rarity: data?.rarity,
                   pos: data?.pos,
-                  main_affix: {
-                    field: getAttrKeyByPropertyType(data?.main_property?.property_type).key,
+                  set_id: iconSetId,
+                  icon: (iconSetId + "_" + (iconId % 10 - (iconId % 10 >= 5 ? 5 : 1)).toString()),
+                  main_affix: {//s
+                    type: attrData.type,
+                    field: attrData.key,
                     value: Number(data?.main_property?.value.replace("%", "")) / (data?.main_property?.value.includes("%") ? 100 : 1),
                     times: data?.main_property?.times,
                     display: data?.main_property?.value,
                   },
-                  sub_affix: data?.properties?.map((sub: any) => ({
-                    field: getAttrKeyByPropertyType(sub?.property_type).key,
-                    value: Number(sub?.value.replace("%", "")) / (sub?.value.includes("%") ? 100 : 1),
-                    times: sub?.times,
-                    display: sub?.value,
-                  }))
-                }))
+                  sub_affix: data?.properties?.map((sub: any) => {
+                    const attrDataSub = getAttrKeyByPropertyType(sub?.property_type);
+                    return ({
+                      type: attrDataSub.type,
+                      field: attrDataSub.key,
+                      value: Number(sub?.value.replace("%", "")) / (sub?.value.includes("%") ? 100 : 1),
+                      times: sub?.times,
+                      display: sub?.value,
+                    })
+                  })
+                })
+              }).concat(
+                char?.ornaments.map((data: any) => {
+                  const attrData = getAttrKeyByPropertyType(data?.main_property?.property_type);
+                  const iconId = getIconStrById(data?.id);
+                  const idSetId = Math.floor(iconId / 10).toString();
+                  return ({
+                    id: data?.id,
+                    level: data?.level,
+                    rarity: data?.rarity,
+                    pos: data?.pos,
+                    set_id: idSetId,
+                    icon: (idSetId + "_" + (iconId % 10 - (iconId % 10 >= 5 ? 5 : 1)).toString()),
+                    main_affix: {
+                      type: attrData.type,
+                      field: attrData.key,
+                      value: Number(data?.main_property?.value.replace("%", "")) / (data?.main_property?.value.includes("%") ? 100 : 1),
+                      times: data?.main_property?.times,
+                      display: data?.main_property?.value,
+                    },
+                    sub_affix: data?.properties?.map((sub: any) => {
+                      const attrDataSub = getAttrKeyByPropertyType(sub?.property_type);
+                      return ({
+                        type: attrDataSub.type,
+                        field: attrDataSub.key,
+                        value: Number(sub?.value.replace("%", "")) / (sub?.value.includes("%") ? 100 : 1),
+                        times: sub?.times,
+                        display: sub?.value,
+                      })
+                    })
+                  })
+                })
               ), //property -> affix
               //attributes, additions, properties
-              attributes: (char?.properties?.map((data: any) => ({
-                field: getAttrKeyByPropertyType(data?.property_type).key,
-                value: (
-                  //檢查是否雙暴，True的話就要直接套用50% / 5%基數
-                  ["crit_rate", "crit_dmg"].indexOf(getAttrKeyByPropertyType(data?.property_type).key) !== -1
-                    ? (getAttrKeyByPropertyType(data?.property_type).key === "crit_rate" ? 0.05 : 0.5)
-                    : Number(data?.base?.replace("%", "")) / (data?.base?.includes("%") ? 100 : 1)
-                ),
-                percent: getAttrKeyByPropertyType(data?.property_type).isPercent,
-                display: ["crit_rate", "crit_dmg"].indexOf(getAttrKeyByPropertyType(data?.property_type).key) !== -1
-                  ? (getAttrKeyByPropertyType(data?.property_type).key === "crit_rate" ? "50.0%" : "5.0%")
-                  : data?.base,
-              }))),
-              additions: (char?.properties?.map((data: any) => ({
-                field: getAttrKeyByPropertyType(data?.property_type).key,
-                value: (
-                  //檢查是否雙暴，True的話就要減50% / 5%基數
-                  ["crit_rate", "crit_dmg"].indexOf(getAttrKeyByPropertyType(data?.property_type).key) !== -1
-                    ? Number(data?.base?.replace("%", "")) / 100 - (getAttrKeyByPropertyType(data?.property_type).key === "crit_rate" ? 0.05 : 0.5)
-                    : Number(data?.add?.replace("%", "")) / (data?.add?.includes("%") ? 100 : 1)
-                ),
-                percent: getAttrKeyByPropertyType(data?.property_type).isPercent,
-                display: ["crit_rate", "crit_dmg"].indexOf(getAttrKeyByPropertyType(data?.property_type).key) !== -1
-                  ? ((Number(data?.base?.replace("%", "")) / 100 - (getAttrKeyByPropertyType(data?.property_type).key === "crit_rate" ? 0.05 : 0.5)) 
-                    * 100).toFixed(1).toString()+"%"
-                  : data?.add,
-              }))),
-              properties: (char?.properties?.map((data: any) => ({
-                field: getAttrKeyByPropertyType(data?.property_type).key,
-                value: Number(data?.final?.replace("%", "")) / (data?.final?.includes("%") ? 100 : 1),
-                percent: getAttrKeyByPropertyType(data?.property_type).isPercent,
-                display: data?.final,
-              })))
+              attributes: (char?.properties?.map((data: any) => {
+                const attrData = getAttrKeyByPropertyType(data?.property_type);
+                return ({
+                  field: attrData.key,
+                  value: (
+                    //Case : 檢查是否雙暴，True的話就要直接套用50% / 5%基數
+                    (["crit_rate", "crit_dmg"].indexOf(attrData.key) !== -1
+                      ? (attrData.key === "crit_rate" ? 0.05 : 0.5)
+                      : Number(data?.base?.replace("%", "")) / (data?.base?.includes("%") ? 100 : 1))
+                  ),
+                  percent: attrData.isPercent,
+                  display:
+                    //Case : 檢查是否雙暴，True的話就要直接套用50% / 5%基數
+                    (["crit_rate", "crit_dmg"].indexOf(attrData.key) !== -1
+                      ? (attrData.key === "crit_rate" ? "5.0%" : "50.0%")
+                      : data?.base),
+                })
+              })),
+              additions: (char?.properties?.map((data: any) => {
+                const attrData = getAttrKeyByPropertyType(data?.property_type);
+                return ({
+                  field: attrData.key,
+                  value: (
+                    //Case : 檢查是否雙暴，True的話就要直接套用50% / 5%基數
+                    (["crit_rate", "crit_dmg"].indexOf(attrData.key) !== -1
+                      ? Number(data?.base?.replace("%", "")) / 100 - (attrData.key === "crit_rate" ? 0.05 : 0.5)
+                      : Number(data?.add?.replace("%", "")) / (data?.add?.includes("%") ? 100 : 1))
+                  ),
+                  percent: attrData.isPercent,
+                  display:
+                    //Case : 檢查是否雙暴，True的話就要直接套用50% / 5%基數
+                    (["crit_rate", "crit_dmg"].indexOf(attrData.key) !== -1
+                      ? ((Number(data?.base?.replace("%", "")) / 100 - (attrData.key === "crit_rate" ? 0.05 : 0.5))
+                        * 100).toFixed(1).toString() + "%"
+                      : data?.add),
+                })
+              })),
+              properties: (char?.properties?.map((data: any) => {
+                const attrData = getAttrKeyByPropertyType(data?.property_type);
+                return ({
+                  field: attrData.key,
+                  value: Number(data?.final?.replace("%", "")) / (data?.final?.includes("%") ? 100 : 1),
+                  percent: attrData.isPercent,
+                  display: data?.final,
+                })
+              }))
               //pos
             })
           }),
@@ -338,9 +377,7 @@ export default function HomeScreen() {
           }
         } else {
           try {
-            console.log("AAAAA")
             db.UserCharacters.doc(uid).set(charsData);
-            console.log("BBBBBB")
           } catch (e: any) {
             console.log("create UserCharacters: " + e.message);
           }
@@ -749,10 +786,20 @@ function toTimestamp(obj: any) {
   return date.getTime();
 }
 
-function getIconStrById(id : number){
+function getIconStrById(id: number) {
   let tmpId = id;
-  while (tmpId > 10000){
+  while (tmpId > 10000) {
     tmpId -= 10000;
   }
   return tmpId;
+}
+
+function getPromotionByLevel(level: number) {
+  if (level > 70) { return 6 }
+  if (level > 60) { return 5 }
+  if (level > 50) { return 4 }
+  if (level > 40) { return 3 }
+  if (level > 30) { return 2 }
+  if (level > 20) { return 1 }
+  return 0
 }

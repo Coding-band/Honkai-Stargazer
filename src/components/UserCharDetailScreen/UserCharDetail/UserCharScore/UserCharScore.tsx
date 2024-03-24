@@ -21,7 +21,7 @@ export default React.memo(function UserCharScore() {
   const { inGameCharData } = useProfileHsrInGameInfo();
   const userRelicsData: any[] = inGameCharData?.relics;
   const charId = inGameCharData?.id;
-
+  
   // 遺器總分
   const relicTotalScore = getRelicScore(
     inGameCharData?.id,
