@@ -347,5 +347,7 @@ export const strings = {
   WrapPopUpURLTextArea: "Por favor coloque o URL de Salto lá",
   WrapPopUpURLTutorial: "Como conseguir o URL de Salto?",
   WrapPopUpURLAnalysisButton: "Análise",
-  WrapPopUpURLProgress: "Analysis Progess : Page ${2} of ${1}"
+  WrapPopUpURLProgress: "Progresso da Análise: Página ${2} de ${1}",
+  //20240325
+  AppInnerVersionCode: "Codename"
 };

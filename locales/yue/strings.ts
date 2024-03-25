@@ -349,5 +349,5 @@ export const strings = {
   WrapPopUpURLAnalysisButton: "分析",
   WrapPopUpURLProgress: "分析進度 : ${1} 第${2}頁",
   //20240325
-  AppInnerVersionCode: "開發代號",
+  AppInnerVersionCode: "開發代號"
 };
