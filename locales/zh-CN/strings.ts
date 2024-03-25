@@ -347,5 +347,7 @@ export const strings = {
   WrapPopUpURLTextArea: "跃迁连结请放在这里~",
   WrapPopUpURLTutorial: "如何获取连结？",
   WrapPopUpURLAnalysisButton: "分析",
-  WrapPopUpURLProgress: "分析进度 : ${1} 第${2}页"
+  WrapPopUpURLProgress: "分析进度 : ${1} 第${2}页",
+  //20240325
+  AppInnerVersionCode: "开发代号",
 };

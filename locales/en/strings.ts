@@ -343,7 +343,9 @@ export const strings = {
   WrapPopUpURLTextArea: "Pleas put the Wrap URL in there",
   WrapPopUpURLTutorial: "How to get the Wrap URL?",
   WrapPopUpURLAnalysisButton: "Analysis",
-  WrapPopUpURLProgress: "Analysis Progess : Page ${2} of ${1}"
+  WrapPopUpURLProgress: "Analysis Progess : Page ${2} of ${1}",
+  //20240325
+  AppInnerVersionCode: "Codename",
 
 
 };
