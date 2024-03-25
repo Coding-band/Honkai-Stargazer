@@ -66,6 +66,7 @@ export default function WrapAnalysisScreen() {
   const { language: appLanguage } = useAppLanguage();
   const { language: textLanguage } = useTextLanguage();
   const navigation = useNavigation();
+  const scrollViewRef = useRef();
 
   const cbRef = useRef<BouncyCheckbox>();
 
@@ -135,7 +136,7 @@ export default function WrapAnalysisScreen() {
       />
 
       {/* 頂部導航欄 */}
-      <Header leftBtn="close" Icon={SCREENS.WrapAnalysisPage.icon}>
+      <Header leftBtn="close" Icon={SCREENS.WrapAnalysisPage.icon} scrollViewRef={scrollViewRef}>
         {LOCALES[appLanguage].WrapAnalysis}
       </Header>
 
@@ -177,7 +178,7 @@ export default function WrapAnalysisScreen() {
               >
                 {/* 運氣評價 - 星星 */}
                 <PageStars
-                style={{minHeight:40, minWidth:1}}
+                  style={{ minHeight: 40, minWidth: 1 }}
                   count={new GachaHandler().getWrapLuckyScore(
                     (selectedPage == 0 || selectedPage == 1 ? -1 : gachaSummary[selectedPage]?.rare5HavePityPercent),
                     (isNaN(parseFloat(gachaSummary[selectedPage]?.rare5GachaAverage)) ? -1 : gachaSummary[selectedPage]?.rare5GachaAverage)
@@ -257,12 +258,12 @@ export default function WrapAnalysisScreen() {
                 </Text>
                 <BouncyCheckbox
                   ref={cbRef}
-                  style={{marginLeft: 6, width:16 , height:16 }}
+                  style={{ marginLeft: 6, width: 16, height: 16 }}
                   size={16}
                   fillColor="#FCBC62"
                   unfillColor="#00000000"
-                  iconStyle={{ borderRadius: 0}}
-                  innerIconStyle={{ borderRadius: 0, borderWidth:(cbRef.current?.state.checked ? 0 : 1.5), borderColor:"#FFFFFF40"}}
+                  iconStyle={{ borderRadius: 0 }}
+                  innerIconStyle={{ borderRadius: 0, borderWidth: (cbRef.current?.state.checked ? 0 : 1.5), borderColor: "#FFFFFF40" }}
                   onPress={setShowRare4and5}
                 >
                 </BouncyCheckbox >
@@ -271,6 +272,8 @@ export default function WrapAnalysisScreen() {
 
             {/* 詳細記錄 - 列表*/}
             <ScrollView
+              //@ts-ignore
+              ref={scrollViewRef}
               horizontal={Platform.OS === "android" ? false : true}
               alwaysBounceHorizontal={false}
               style={{

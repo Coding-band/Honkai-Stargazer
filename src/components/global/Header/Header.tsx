@@ -2,12 +2,14 @@ import { useNavigation } from "@react-navigation/native";
 import BlurView from "../BlurView/BlurView";
 import { Image } from "expo-image";
 import { IconProps } from "phosphor-react-native";
-import React from "react";
+import React, { LegacyRef, MutableRefObject, Ref } from "react";
 import { Pressable, Text, TouchableOpacity, View } from "react-native";
 import { GestureResponderEvent } from "react-native-modal";
 import { Shadow } from "react-native-shadow-2";
 import DeviceInfo from "react-native-device-info"
 import { dynamicHeightHeader, dynamicHeightHeaderValue } from "../../../constant/ui";
+import { FlatList, ScrollView } from "react-native-gesture-handler";
+import Animated from "react-native-reanimated";
 
 const CloseBtn = require("../../../../assets/icons/Close.svg");
 const BackBtn = require("../../../../assets/icons/Back.svg");
@@ -18,6 +20,7 @@ type Props = {
   leftBtn?: "close" | "back";
   onPress?: (e: GestureResponderEvent) => void;
   onBack?: () => void;
+  scrollViewRef?: MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>
 };
 
 export default function Header(props: Props) {
@@ -32,7 +35,17 @@ export default function Header(props: Props) {
 
   return (
     <Pressable
-      onPress={props.onPress}
+      onPress={() => {
+        props.onPress; 
+        //@ts-ignore
+        if(props.scrollViewRef?.isFlatList === true){
+          //@ts-ignore
+          (props.scrollViewRef)?.current?.scrollToOffset({offset : 0, animated : true})
+        }else{
+          (props.scrollViewRef)?.current?.scrollTo({x : 0, y : 0, animated : true})
+        }
+        
+      }}
       style={{ position: "absolute", width: "100%", zIndex: 50 }}
     >
       <BlurView

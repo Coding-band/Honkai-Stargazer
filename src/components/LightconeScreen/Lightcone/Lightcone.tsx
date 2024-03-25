@@ -1,5 +1,5 @@
 import { View, LayoutChangeEvent, Dimensions } from "react-native";
-import React, { useState } from "react";
+import React, { MutableRefObject, useEffect, useState } from "react";
 import Animated, {
   useAnimatedRef,
   useAnimatedStyle,
@@ -13,8 +13,13 @@ import LcAttribute from "./LcAttribute/LcAttribute";
 import LcStory from "./LcStory/LcStory";
 import LcSuggestCharacter from "./LcSuggestCharacter/LcSuggestCharacter";
 import LcDescription from "./LcDescription/LcDescription";
+import { ScrollView } from "react-native-gesture-handler";
 
-export default function Lightcone() {
+type Props = {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
+
+export default function Lightcone(props : Props) {
   const [containerHeight, setContainerHeight] = useState(0);
 
   const handleLayout = (event: LayoutChangeEvent) => {
@@ -24,6 +29,11 @@ export default function Lightcone() {
 
   const aref = useAnimatedRef<Animated.ScrollView>();
   const scrollHandler = useScrollViewOffset(aref);
+
+  useEffect(() => {
+    props.scrollViewRef = aref;
+    props.scrollViewRef.current = aref.current;
+  })
 
   const contentAnimatedStyles = useAnimatedStyle(() => {
     if (scrollHandler.value > 0) {

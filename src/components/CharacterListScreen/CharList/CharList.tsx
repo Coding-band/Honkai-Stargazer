@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { MutableRefObject, useEffect, useMemo, useState } from "react";
 import { ScrollView, TextInput, View } from "react-native";
 import CharCard from "../../global/CharCard/CharCard";
 import { SCREENS } from "../../../constant/screens";
@@ -21,6 +21,7 @@ import CharacterImage from "../../../../assets/images/images_map/chacracterImage
 import { ExpoImage } from "../../../types/image";
 import DeviceInfo from "react-native-device-info";
 import { dynamicHeightScrollView } from "../../../constant/ui";
+import Animated from "react-native-reanimated";
 
 type CharListItem = {
   id: CharacterName;
@@ -36,7 +37,11 @@ type CharListItem = {
   energy: number;
 };
 
-export default function CharList() {
+type Props= {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
+
+export default function CharList(props : Props) {
   const navigation = useNavigation();
   const { language: textLanguage } = useTextLanguage();
 
@@ -165,7 +170,8 @@ export default function CharList() {
   ]);
 
   return (
-    <ScrollView className={dynamicHeightScrollView}>
+    //@ts-ignore
+    <ScrollView className={dynamicHeightScrollView} ref={props.scrollViewRef}>
       <View
         style={{
           flexDirection: "row",

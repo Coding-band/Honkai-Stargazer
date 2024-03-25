@@ -1,11 +1,16 @@
 import { View, ScrollView, RefreshControl } from "react-native";
-import React from "react";
+import React, { MutableRefObject } from "react";
 import EpdtListItem from "./EpdtListItem/EpdtListItem";
 import useHsrNote from "../../../hooks/hoyolab/useHsrNote";
 import NotFound from "../../global/Loading/NotFound";
 import { dynamicHeightEpditScrollView } from "../../../constant/ui";
+import Animated from "react-native-reanimated";
 
-export default function EpdtList() {
+type Props = {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
+
+export default function EpdtList(props : Props) {
   const { data: hsrNote, refetch: refetchHsrNote } = useHsrNote();
   const epdtList = hsrNote?.expeditions?.map((epdt: any) => ({
     avatars: epdt?.avatars,
@@ -22,6 +27,8 @@ export default function EpdtList() {
   return epdtList ? (
     <View style={{ width: "100%" }} className="z-30">
       <ScrollView
+        //@ts-ignore
+        ref={props.scrollViewRef}
         className={dynamicHeightEpditScrollView}
         refreshControl={
           <RefreshControl refreshing={false} onRefresh={onRefresh} />

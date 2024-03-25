@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { MutableRefObject, useEffect, useMemo, useState } from "react";
 import { ScrollView, View } from "react-native";
 import { SCREENS } from "../../../constant/screens";
 import { useNavigation } from "@react-navigation/native";
@@ -16,6 +16,7 @@ import useLightconeSearch from "../../../redux/lightconeSearch/useLightconeSearc
 import Lightcone from "../../../../assets/images/images_map/lightcone";
 import { ExpoImage } from "../../../types/image";
 import { dynamicHeightScrollView } from "../../../constant/ui";
+import Animated from "react-native-reanimated";
 
 type LcListItem = {
   id: string;
@@ -28,7 +29,11 @@ type LcListItem = {
   hp: number;
 };
 
-export default function LcList() {
+type Props = {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
+
+export default function LcList(props : Props) {
   const navigation = useNavigation();
   const { language: textLanguage } = useTextLanguage();
 
@@ -137,7 +142,8 @@ export default function LcList() {
   ]);
 
   return (
-    <ScrollView className={dynamicHeightScrollView}>
+    //@ts-ignore
+    <ScrollView className={dynamicHeightScrollView} ref={props.scrollViewRef}>
       <View
         style={{
           flexDirection: "row",

@@ -5,7 +5,7 @@ import {
   Dimensions,
   TouchableOpacity,
 } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { MutableRefObject, useEffect, useState } from "react";
 import Listbox from "../global/Listbox/Listbox";
 import Button from "../global/Button/Button";
 import WallPaper from "../global/WallPaper/WallPaper";
@@ -23,8 +23,13 @@ import { getCharFullData } from "../../utils/data/getDataFromMap";
 import useTextLanguage from "../../language/TextLanguage/useTextLanguage";
 import officalCharId from "../../../map/character_offical_id_map";
 import { dynamicHeightLeaderScrollView } from "../../constant/ui";
+import Animated from "react-native-reanimated";
 
-export default function ScoreLbList() {
+type Props = {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
+
+export default function ScoreLbList(props : Props) {
   const loaded = useDelayLoad(1000);
   const { language: appLanguage } = useAppLanguage();
   const { language: textLanguage } = useTextLanguage();
@@ -107,6 +112,7 @@ export default function ScoreLbList() {
           style={{ display: selectedScoreOption === "char" ? "flex" : "none" }}
         >
           <CharScoreLb
+            scrollViewRef={props.scrollViewRef}
             selectedCharOption={selectedCharOption}
             onChange={(v) => {
               setSelectedCharOption(v);

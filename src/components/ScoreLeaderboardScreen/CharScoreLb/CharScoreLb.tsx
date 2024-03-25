@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   Platform,
 } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 import Options from "../../global/Options/Options";
 import { map } from "lodash";
 import { getCharFullData } from "../../../utils/data/getDataFromMap";
@@ -29,12 +29,22 @@ import Lightcone from "../../../../assets/images/images_map/lightcone";
 import officalLightconeId from "../../../../map/lightcone_offical_id_map";
 import { CharacterName } from "../../../types/character";
 import { FlatList } from "react-native";
+import Animated from "react-native-reanimated";
 
 export default function CharScoreLb(props: {
   selectedCharOption: any;
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
   onChange: (v: any) => void;
 }) {
   const { language: textLanguage } = useTextLanguage();
+  const flatListRef = useRef(null);
+  
+  useEffect(() => {
+    props.scrollViewRef = flatListRef;
+    props.scrollViewRef.current = flatListRef.current;
+    //@ts-ignore
+    props.scrollViewRef.isFlatList = true;
+  })
 
   // 所有角色選項
   const charOptions: { id: string; name: string }[] = map(
@@ -82,6 +92,8 @@ export default function CharScoreLb(props: {
           }}
         />
         <FlatList
+          //@ts-ignore
+          ref={flatListRef}
           data={charScores} // 数据源
           keyExtractor={(item, index) => item.id || index.toString()} // 指定key
           renderItem={(

@@ -1,5 +1,5 @@
 import { View, ScrollView, Dimensions, Text } from "react-native";
-import React, { useState } from "react";
+import React, { MutableRefObject, useState } from "react";
 import MOCLbItem from "./MOCLbItem/MOCLbItem";
 import MOCDataMap from "../../../../map/memory_of_chao_data_map";
 import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
@@ -11,8 +11,13 @@ import { MocVersion } from "../../../constant/moc";
 import { LOCALES } from "../../../../locales";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { dynamicHeightLeaderScrollView } from "../../../constant/ui";
+import Animated from "react-native-reanimated";
 
-export default function MOCLbList() {
+type Props = {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
+
+export default function MOCLbList(props : Props) {
   const { language: textLanguage } = useTextLanguage();
   const { language: appLanguage } = useAppLanguage();
 
@@ -38,6 +43,8 @@ export default function MOCLbList() {
   return (
     <View style={{ width: "100%" }} className="z-30">
       <ScrollView
+        //@ts-ignore
+        ref={props.scrollViewRef}
         className={dynamicHeightLeaderScrollView}
         style={{ height: Dimensions.get("screen").height }}
       >

@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import React from "react";
+import React, { useRef } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
 import { StatusBar } from "expo-status-bar";
@@ -11,6 +11,7 @@ import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 
 export default function LightconeListScreen() {
   const { language } = useAppLanguage();
+  const scrollViewRef = useRef();
 
   return (
     <View style={{ flex: 1 }} className="overflow-hidden">
@@ -21,11 +22,11 @@ export default function LightconeListScreen() {
         colors={["#00000080", "#00000020"]}
       />
 
-      <Header Icon={SCREENS.LightconeListPage.icon}>
+      <Header Icon={SCREENS.LightconeListPage.icon} scrollViewRef={scrollViewRef}>
         {SCREENS.LightconeListPage.getName(language)}
       </Header>
       <>
-        <LcList />
+        <LcList scrollViewRef={scrollViewRef}/>
         <LcAction />
       </>
       <LinearGradient

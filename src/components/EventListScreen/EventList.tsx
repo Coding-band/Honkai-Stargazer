@@ -6,7 +6,7 @@ import {
   StyleSheet,
   TouchableWithoutFeedback,
 } from "react-native";
-import React, { useState } from "react";
+import React, { MutableRefObject, useState } from "react";
 import useHsrEvent from "../../hooks/hoyolab/useHsrEvent";
 import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
@@ -16,8 +16,13 @@ import EventListItemType1 from "./EventListItem/EventListItemType1";
 import useHsrEventList from "../../hooks/hoyolab/useHsrEventList";
 import useLocalState from "../../hooks/useLocalState";
 import { dynamicHeightEventList } from "../../constant/ui";
+import Animated from "react-native-reanimated";
 
-export default function EventList() {
+type Props = {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
+
+export default function EventList(props : Props) {
   const { data: hsrEvents, refetch: hsrEventsRefetch } = useHsrEvent();
   const { data: hsrEventsList } = useHsrEventList();
 
@@ -27,7 +32,8 @@ export default function EventList() {
   );
 
   return (
-    <ScrollView className={dynamicHeightEventList}>
+    //@ts-ignore
+    <ScrollView className={dynamicHeightEventList} ref={props.scrollViewRef}>
       <View
         style={{
           flexDirection: "row",

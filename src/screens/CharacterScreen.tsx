@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
@@ -14,10 +14,12 @@ import WallPaper from "../components/global/WallPaper/WallPaper";
 import CharacterProvider from "../context/CharacterData/CharacterProvider";
 import useTextLanguage from "../language/TextLanguage/useTextLanguage";
 import { getCharFullData } from "../utils/data/getDataFromMap";
+import { ScrollView } from "react-native-gesture-handler";
+import Animated from "react-native-reanimated";
 
 export default function CharacterScreen() {
   const { language } = useTextLanguage();
-
+  const scrollViewRef = useRef<ScrollView | Animated.ScrollView | undefined | null>();
   const route = useRoute<RouteProp<ParamList, "Character">>();
   const charId = route.params.id as CharacterName;
   const charName = getCharFullData(charId, language).name;
@@ -39,10 +41,10 @@ export default function CharacterScreen() {
           colors={["#00000080", "#00000020"]}
         />
 
-        <Header leftBtn="back" Icon={SCREENS.CharacterPage.icon}>
+        <Header leftBtn="back" Icon={SCREENS.CharacterPage.icon} scrollViewRef={scrollViewRef}>
           {charName}
         </Header>
-        {showMain && <CharacterMain />}
+        {showMain && <CharacterMain scrollViewRef={scrollViewRef}/>}
         <LinearGradient
           className="w-full h-[600px] absolute bottom-0"
           colors={["#00000000", "#000000"]}

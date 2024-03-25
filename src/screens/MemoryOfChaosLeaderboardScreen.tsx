@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import React from "react";
+import React, { useRef } from "react";
 import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
@@ -14,6 +14,7 @@ import Loading from "../components/global/Loading/Loading";
 
 export default function MemoryOfChaosLeaderboardScreen() {
   const { language } = useAppLanguage();
+  const scrollViewRef = useRef();
 
   const loaded = useDelayLoad(1000);
 
@@ -21,10 +22,10 @@ export default function MemoryOfChaosLeaderboardScreen() {
     <View style={{ flex: 1 }} className="overflow-hidden">
       <StatusBar style="dark" />
       <WallPaperForMOC />
-      <Header leftBtn="back" Icon={SCREENS.MemoryOfChaosLeaderboardPage.icon}>
+      <Header leftBtn="back" Icon={SCREENS.MemoryOfChaosLeaderboardPage.icon} scrollViewRef={scrollViewRef}>
         {SCREENS.MemoryOfChaosLeaderboardPage.getName(language)}
       </Header>
-      {loaded ? <MOCLbList /> : <Loading />}
+      {loaded ? <MOCLbList scrollViewRef={scrollViewRef}/> : <Loading />}
     </View>
   );
 }

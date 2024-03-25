@@ -1,5 +1,5 @@
 import { View, ScrollView } from "react-native";
-import React, { useState } from "react";
+import React, { MutableRefObject, useState } from "react";
 import SettingGroup from "../SettingGroup/SettingGroup";
 import SettingItem from "../SettingGroup/SettingItem/SettingItem";
 import UISetting from "./UISetting/UISetting";
@@ -13,13 +13,17 @@ import { LOCALES } from "../../../../locales";
 import SpecialThanksSetting from "./SpecialThanksSetting/SpecialThanksSetting";
 import DevelopmentSetting from "./DevelopmentSetting/DevelopmentSetting";
 import { dynamicHeightSettingScrollView } from "../../../constant/ui";
+import Animated from "react-native-reanimated";
 
-export default function SettingList() {
+type Props = {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
 
-  
+export default function SettingList(props : Props) {
 
   return (
-    <ScrollView className={dynamicHeightSettingScrollView}>
+    //@ts-ignore
+    <ScrollView className={dynamicHeightSettingScrollView} ref={props.scrollViewRef}>
       <View style={{ gap: 20 }} className="pb-48">
         <AccountSetting />
         {/*<UISetting/>*/}

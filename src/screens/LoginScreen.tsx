@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { WebView, WebViewNavigation } from "react-native-webview";
 import Header from "../components/global/Header/Header";
@@ -21,6 +21,7 @@ import DeviceInfo from "react-native-device-info";
 
 export default function LoginScreen() {
   const { language } = useAppLanguage();
+  const scrollViewRef = useRef();
 
   const route = useRoute<RouteProp<ParamList, "Login">>();
   const platform = route.params.platform;
@@ -56,7 +57,7 @@ export default function LoginScreen() {
         thirdPartyCookiesEnabled={true}
         cacheEnabled={true}
         setSupportMultipleWindows={false}
-        userAgent={DeviceInfo.getUserAgentSync().replace("wv", "")}
+        //userAgent={DeviceInfo.getUserAgentSync().replace("wv", "")} //Key of the Google Login
         originWhitelist={["*"]}
         source={{
           uri: platform === "hoyolab" ? cookieURLs.hoyolab : cookieURLs.mihoyo,

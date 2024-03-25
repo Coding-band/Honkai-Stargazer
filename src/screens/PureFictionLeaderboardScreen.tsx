@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import React from "react";
+import React, { useRef } from "react";
 import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
@@ -15,6 +15,7 @@ import PFLbList from "../components/PureFictionLeaderboardScreen/MOCLbList/PFLbL
 
 export default function PureFictionLeaderboardScreen() {
   const { language } = useAppLanguage();
+  const scrollViewRef = useRef();
 
   const loaded = useDelayLoad(1000);
 
@@ -22,10 +23,10 @@ export default function PureFictionLeaderboardScreen() {
     <View style={{ flex: 1 }} className="overflow-hidden">
       <StatusBar style="dark" />
       <WallPaperForPF />
-      <Header leftBtn="back" Icon={SCREENS.PureFictionLeaderboardPage.icon}>
+      <Header leftBtn="back" Icon={SCREENS.PureFictionLeaderboardPage.icon} scrollViewRef={scrollViewRef}>
         {SCREENS.PureFictionLeaderboardPage.getName(language)}
       </Header>
-      {loaded ? <PFLbList /> : <Loading />}
+      {loaded ? <PFLbList scrollViewRef={scrollViewRef} /> : <Loading />}
     </View>
   );
 }

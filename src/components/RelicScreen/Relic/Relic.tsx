@@ -1,5 +1,5 @@
 import { View, LayoutChangeEvent, Dimensions } from "react-native";
-import React, { useState } from "react";
+import React, { MutableRefObject, useEffect, useState } from "react";
 import Animated, {
   useAnimatedRef,
   useAnimatedStyle,
@@ -14,8 +14,13 @@ import RelicDetails from "./RelicDetails/RelicDetails";
 import RelicSuggestCharacter from "./RelicSuggestCharacter/RelicSuggestCharacter";
 import Toast from "../../../utils/toast/Toast";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
+import { ScrollView } from "react-native-gesture-handler";
 
-export default function Relic() {
+type Props = {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
+
+export default function Relic(props : Props) {
   const [containerHeight, setContainerHeight] = useState(0);
   const handleLayout = (event: LayoutChangeEvent) => {
     const { height } = event.nativeEvent.layout;
@@ -24,6 +29,11 @@ export default function Relic() {
 
   const aref = useAnimatedRef<Animated.ScrollView>();
   const scrollHandler = useScrollViewOffset(aref);
+
+  useEffect(() => {
+    props.scrollViewRef = aref;
+    props.scrollViewRef.current = aref.current;
+  })
 
   const contentAnimatedStyles = useAnimatedStyle(() => {
     if (scrollHandler.value > 0) {

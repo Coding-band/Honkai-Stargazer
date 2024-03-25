@@ -1,5 +1,5 @@
 import { View, Text, ScrollView, Pressable } from "react-native";
-import React, { useState } from "react";
+import React, { MutableRefObject, useState } from "react";
 import SettingGroup from "../../SettingScreen/SettingGroup/SettingGroup";
 import SettingItem from "../../SettingScreen/SettingGroup/SettingItem/SettingItem";
 import { Image } from "expo-image";
@@ -9,14 +9,18 @@ import useCopyToClipboard from "../../../hooks/useCopyToClipboard";
 import { useQuery } from "react-query";
 import db from "../../../firebase/db";
 import useUserInviteCode from "../../../firebase/hooks/User/useUserInviteCode";
+import Animated from "react-native-reanimated";
 
 const emojis = [
   require("./images/haha.png"),
   require("./images/haha2.png"),
   require("./images/haha3.png"),
 ];
+type Props = {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
 
-export default function InviteList() {
+export default function InviteList(props : Props) {
   const firebaseUID = useMyFirebaseUid();
   const inviteCode = useUserInviteCode(firebaseUID);
 
@@ -25,7 +29,8 @@ export default function InviteList() {
   const handleCopy = useCopyToClipboard();
 
   return (
-    <ScrollView className="z-30 h-screen py-[110px]  pb-0">
+    //@ts-ignore
+    <ScrollView className="z-30 h-screen py-[110px]  pb-0" ref={props.scrollViewRef}>
       <View style={{ gap: 20 }} className="pb-48 px-4">
         <SettingGroup title={"我的邀請碼"}>
           <SettingItem

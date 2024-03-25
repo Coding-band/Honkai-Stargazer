@@ -1,5 +1,5 @@
 import { View, Text, ScrollView } from "react-native";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { MutableRefObject, useEffect, useMemo, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
 import { RelicName } from "../../../types/relic";
@@ -11,6 +11,7 @@ import { SCREENS } from "../../../constant/screens";
 import { ExpoImage } from "../../../types/image";
 import useRelicSearch from "../../../redux/relicSearch/useRelicSearch";
 import { dynamicHeightScrollView } from "../../../constant/ui";
+import Animated from "react-native-reanimated";
 
 type RelicListItem = {
   id: string;
@@ -19,7 +20,11 @@ type RelicListItem = {
   image: ExpoImage;
 };
 
-export default function RelicList() {
+type Props = {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
+
+export default function RelicList(props : Props) {
   const navigation = useNavigation();
   const { language: textLanguage } = useTextLanguage();
 
@@ -77,7 +82,8 @@ export default function RelicList() {
   }, [relicCardListData, searchValue]);
 
   return (
-    <ScrollView className={dynamicHeightScrollView}>
+    //@ts-ignore
+    <ScrollView className={dynamicHeightScrollView} ref={props.scrollViewRef}>
       <View
         style={{
           flexDirection: "row",

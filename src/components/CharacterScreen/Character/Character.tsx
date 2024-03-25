@@ -1,5 +1,5 @@
 import { View, LayoutChangeEvent, Dimensions, Keyboard } from "react-native";
-import React, { useState } from "react";
+import React, { MutableRefObject, useEffect, useState } from "react";
 import CharAction from "./CharAction/CharAction";
 import CharInfo from "./CharInfo/CharInfo";
 import CharAttribute from "./CharAttribute/CharAttribute";
@@ -18,8 +18,13 @@ import Animated, {
 } from "react-native-reanimated";
 import CharImageFull from "./CharImageFull/CharImageFull";
 import CharEidolon from "./CharEidolon/CharEidolon";
+import { ScrollView } from "react-native-gesture-handler";
 
-export default React.memo(function Character() {
+type Props = {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
+
+export default React.memo(function Character(props : Props) {
   const [containerHeight, setContainerHeight] = useState(0);
 
   const handleLayout = (event: LayoutChangeEvent) => {
@@ -29,6 +34,11 @@ export default React.memo(function Character() {
 
   const aref = useAnimatedRef<Animated.ScrollView>();
   const scrollHandler = useScrollViewOffset(aref);
+
+  useEffect(() => {
+    props.scrollViewRef = aref;
+    props.scrollViewRef.current = aref.current;
+  })
 
   const contentAnimatedStyles = useAnimatedStyle(() => {
     if (scrollHandler.value > 0) {

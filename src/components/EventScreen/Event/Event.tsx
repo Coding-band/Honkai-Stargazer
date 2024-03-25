@@ -1,5 +1,5 @@
 import { View, Text, ScrollView } from "react-native";
-import React, { useState } from "react";
+import React, { MutableRefObject, useState } from "react";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { ParamList } from "../../../types/navigation";
 import { Image } from "expo-image";
@@ -10,7 +10,11 @@ import Animated from "react-native-reanimated";
 import { cn } from "../../../utils/css/cn";
 import { dynamicHeightEventWebview } from "../../../constant/ui";
 
-export default function Event() {
+type Props = {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
+
+export default function Event(props: Props) {
   const route = useRoute<RouteProp<ParamList, "Event">>();
   const eventId = route.params.id;
   const eventType = eventId.toString().startsWith("3") ? "pic_list" : "list";
@@ -26,7 +30,8 @@ export default function Event() {
   const hsrEvent = hsrEventTMP1 === undefined ? hsrEventTMP2 : hsrEventTMP1;
 
   return (
-    <ScrollView className={dynamicHeightEventWebview}>
+    //@ts-ignore
+    <ScrollView className={dynamicHeightEventWebview} ref={props.scrollViewRef}>
       <View
         style={{
           flexDirection: "row",

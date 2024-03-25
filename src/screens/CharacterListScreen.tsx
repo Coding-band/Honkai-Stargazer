@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import React from "react";
+import React, { useRef } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
 import { StatusBar } from "expo-status-bar";
@@ -11,7 +11,7 @@ import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 
 export default function CharacterListScreen() {
   const { language } = useAppLanguage();
-
+  const scrollViewRef = useRef();
   return (
     <View style={{ flex: 1 }} className="overflow-hidden">
       <StatusBar style="dark" />
@@ -21,11 +21,11 @@ export default function CharacterListScreen() {
         colors={["#00000080", "#00000020"]}
       />
 
-      <Header Icon={SCREENS.CharacterListPage.icon}>
+      <Header Icon={SCREENS.CharacterListPage.icon} scrollViewRef={scrollViewRef}>
         {SCREENS.CharacterListPage.getName(language)}
       </Header>
       <>
-        <CharList />
+        <CharList scrollViewRef={scrollViewRef} />
         <CharAction />
       </>
       <LinearGradient

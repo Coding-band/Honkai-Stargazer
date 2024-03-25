@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Dimensions,
 } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { MutableRefObject, useEffect, useState } from "react";
 import UIDSearchbar from "./UIDSearchbar/UIDSearchbar";
 import UIDSearchItem from "./UIDSearchItem/UIDSearchItem";
 import Toast from "../../../utils/toast/Toast";
@@ -23,10 +23,17 @@ import { uniq } from "lodash";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import { LOCALES } from "../../../../locales";
 import { dynamicHeightUIDSearchView } from "../../../constant/ui";
+import Animated from "react-native-reanimated";
 
-export default function UIDSearch() {
+type Props = {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
+
+export default function UIDSearch(props : Props) {
   const navigation = useNavigation();
   const { language } = useAppLanguage()
+  //@ts-ignore
+  props.scrollViewRef.isFlatList = true;
 
   const [input, setInput] = useState("");
   const [uidHistory, setUidHistory] = useLocalState<string[]>(
@@ -103,6 +110,8 @@ export default function UIDSearch() {
         )}
 
         <DraggableFlatList
+          //@ts-ignore
+          ref={props.scrollViewRef}
           containerStyle={{ height: Dimensions.get("screen").height - 260 }}
           data={uidHistory}
           onDragEnd={({ data }) => {

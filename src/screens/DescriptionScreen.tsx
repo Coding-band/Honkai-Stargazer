@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import React from "react";
+import React, { useRef } from "react";
 import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
@@ -17,6 +17,7 @@ export default function DescriptionScreen() {
   const title = route.params.title;
   const Icon = route.params.icon;
   const content = route.params.content;
+  const scrollViewRef = useRef();
 
   return (
     <View style={{ flex: 1 }} className="overflow-hidden">
@@ -27,10 +28,10 @@ export default function DescriptionScreen() {
         colors={["#00000080", "#00000020"]}
       />
 
-      <Header leftBtn="back" Icon={Icon}>
+      <Header leftBtn="back" Icon={Icon} scrollViewRef={scrollViewRef}>
         {title}
       </Header>
-      <ScrollView className={dynamicHeightScrollViewLRPadding}>
+      <ScrollView className={dynamicHeightScrollViewLRPadding} ref={scrollViewRef}>
         {content}
         <View className="mt-48"/>
       </ScrollView>

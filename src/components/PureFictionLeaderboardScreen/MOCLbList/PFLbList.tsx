@@ -1,5 +1,5 @@
 import { View, ScrollView, Dimensions, Text } from "react-native";
-import React, { useState } from "react";
+import React, { MutableRefObject, useState } from "react";
 import useTextLanguage from "../../../language/TextLanguage/useTextLanguage";
 import Button from "../../global/Button/Button";
 import Listbox from "../../global/Listbox/Listbox";
@@ -11,8 +11,13 @@ import { LOCALES } from "../../../../locales";
 import useAppLanguage from "../../../language/AppLanguage/useAppLanguage";
 import PFLbItem from "./MOCLbItem/PFLbItem";
 import { dynamicHeightLeaderScrollView } from "../../../constant/ui";
+import Animated from "react-native-reanimated";
 
-export default function PFLbList() {
+type Props = {
+  scrollViewRef : MutableRefObject<ScrollView | Animated.ScrollView | undefined | null>;
+}
+
+export default function PFLbList(props : Props) {
   const { language: textLanguage } = useTextLanguage();
   const { language: appLanguage } = useAppLanguage();
 
@@ -38,6 +43,8 @@ export default function PFLbList() {
   return (
     <View style={{ width: "100%" }} className="z-30">
       <ScrollView
+        //@ts-ignore
+        ref={props.scrollViewRef}
         className={dynamicHeightLeaderScrollView}
         style={{ height: Dimensions.get("screen").height }}
       >

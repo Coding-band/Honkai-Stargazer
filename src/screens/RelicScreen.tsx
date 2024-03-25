@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
@@ -16,6 +16,7 @@ export default function RelicScreen() {
   const route = useRoute<RouteProp<ParamList, "Relic">>();
   const relicId = route.params.id as RelicName;
   const relicName = route.params.name;
+  const scrollViewRef = useRef();
 
   const [showMain, setShowMain] = useState(false);
   useEffect(() => {
@@ -33,10 +34,10 @@ export default function RelicScreen() {
           className="absolute w-full h-full"
           colors={["#00000080", "#00000020"]}
         />
-        <Header leftBtn="back" Icon={SCREENS.RelicPage.icon}>
+        <Header leftBtn="back" Icon={SCREENS.RelicPage.icon} scrollViewRef={scrollViewRef}>
           {relicName}
         </Header>
-        {showMain && <RelicMain />}
+        {showMain && <RelicMain scrollViewRef={scrollViewRef}/>}
         <LinearGradient
           className="w-full h-[600px] absolute bottom-0"
           colors={["#00000000", "#000000"]}

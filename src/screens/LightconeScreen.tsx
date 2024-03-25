@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/global/Header/Header";
@@ -15,6 +15,7 @@ export default function LightconeScreen() {
   const route = useRoute<RouteProp<ParamList, "Lightcone">>();
   const lcId = route.params.id as LightconeName;
   const lcName = route.params.name;
+  const scrollViewRef = useRef();
 
   const [showMain, setShowMain] = useState(false);
   useEffect(() => {
@@ -33,10 +34,10 @@ export default function LightconeScreen() {
           colors={["#00000080", "#00000020"]}
         />
 
-        <Header leftBtn="back" Icon={SCREENS.LightconePage.icon}>
+        <Header leftBtn="back" Icon={SCREENS.LightconePage.icon} scrollViewRef={scrollViewRef}>
           {lcName}
         </Header>
-        {showMain && <LightconeMain />}
+        {showMain && <LightconeMain scrollViewRef={scrollViewRef}/>}
         <LinearGradient
           className="w-full h-[600px] absolute bottom-0"
           colors={["#00000000", "#000000"]}
