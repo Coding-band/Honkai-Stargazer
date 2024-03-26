@@ -23,7 +23,7 @@ export default React.memo(function UserCharCombatTypeAndPath() {
           source={Path[charJsonData?.path].icon}
           style={{ width: 24, height: 24 }}
         />
-        <Text className="text-text text-[16px] font-[HY65] leading-5">
+        <Text className="text-text text-[16px] font-[HY65] leading-5" style={{textAlignVertical: 'center'}}>
           {LOCALES[language][charJsonData?.path as PathType]}
         </Text>
       </View>
@@ -34,7 +34,7 @@ export default React.memo(function UserCharCombatTypeAndPath() {
           style={{ width: 24, height: 24 }}
         />
 
-        <Text className="text-text text-[16px] font-[HY65] leading-5">
+        <Text className="text-text text-[16px] font-[HY65] leading-5" style={{textAlignVertical: 'center'}}>
           {LOCALES[language][charJsonData?.element as CombatTypeType]}
         </Text>
       </View>
