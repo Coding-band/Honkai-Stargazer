@@ -2,9 +2,14 @@
  "spRequirement": 100,
  "iconPath": "370e9bedc92667833afb3178846f177550cfacb08dce4c993257e92af3786f62",
  "bgPath": "5d7ae2341745b44f868ebec61b625914ff772a237df5162132e425dc7b260d27",
- "figPath": "4ea3d874d2365142f7ebeef51b747abd5910864846b52b47f9ad79054bb52edb",
- "fgPath": "38466e0aaef8acf0432888a746e36be0aed2be9a6ab956692fd35faa5af52ae0",
+ "figPath": "157a94e85ec9dcd2d07c75265ca47dcaba9d89170a8560adccab01d939790959",
+ "fgPath": "cbb1c01e976cebe66bd9f9cdd3496cc6f5a93f76c0597428bb4dcd450d730dac",
  "splashIconPath": "1a9427acfd1f096a90ca70972ccb997dcd3dd783985b26b415a9a5e50d517a49",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRqACAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSDcBAAABkHPbtrG9sveDz7Zt27ZtxLYro7PZJZVt20Zr285z744jYgLw34qC/1VNoiav9rEANPU/gJimrd8ezFIA9R963eZXnz6QvLksDKoJAAX6ZFJSCEE+iEO8JRTEbXTs8YSSUhrfeTKmtgAK3GbaIHD/M/mn4PWX4wANKOmK8e++S0FKfvo4AAp8Wi/N7kxL3EchpeCVPa2qjqjzr86sPXFeUkpS8H0yEHvw+w9+XtdnDUlJwXuBqWOOkPIbN1mMeC0MSoO7tAkkf0iDd98uXvn6CQV/ZCAueAb5g6eDEu0Dzt2lwVtm5gBm3SIfVgHJ4z/zG9dFJymKbmJZdmViug6bVfzKZ+Wne+Cv7lpq69AdT0ijtnW29x9a9vzvpPH12c0defi3Rd7oDTt6mForgAJV+ct/KioAAABWUDggQgEAAJAHAJ0BKhQAFAA+bTKVR6QioiEoCACADYlmAJ0ygy7JwEsQegB0spKqvGt9DewBukH63B5IL7r48Dsw6tLvpqlltx+HsAD+8eBcRrzTlFbJxZbifnfozsSfnQYIJ578/7z2ZTyQlG32sOskYluDaSp1czKA4VG/LtE+aDlVOM3OUj76zQ25AHxewToTGl/5/x7vO9WPvXIXog1HsgRmAOom01plhyGTkz1kRWqT2l1uR4nhOTEv206fcOWI4+bZAB3w4PSdvf99rWLbdipNEkuR/4CzbTN7ceUFJGLW8+KgyoSV3OeaEXxKuE2V3ZyP2K/rr7CAxbFqc/nwa7y7d4RURz4tvZpXo3dWriyQmP8Ifa3YG1LVnmM0aq+TLCv5Nw4rzw2Lra60CnUJM7HGl4+j4LkAS1ZC9DFOAOEL65HAAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -47,7 +52,6 @@
    "rewardPath": "/material/67221",
    "comeFrom": [
     "Sombra Estagnada: Devaneio (Mundonírico)",
-    "Sombra Estagnada: Devaneio (Mundonírico)",
     "Sintetizador Omni — Troca de Material"
    ]
   },
@@ -66,6 +70,7 @@
     "Recompensas de Pontuação do Universo Simulado",
     "Honra dos Inominados",
     "Troca de Brasas",
+    "Troca de Luz Estelar",
     "Recompensas de Evento por Tempo Limitado"
    ]
   },
@@ -190,7 +195,6 @@
    "rewardPath": "/material/635680",
    "comeFrom": [
     "Cálice (Desfiladeiro Escamado Aquático)",
-    "Cálice (Desfiladeiro Escamado Aquático)",
     "Troca de Brasas",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -226,7 +230,6 @@
    "rewardPath": "/material/836266",
    "comeFrom": [
     "Cálice (Desfiladeiro Escamado Aquático)",
-    "Cálice (Desfiladeiro Escamado Aquático)",
     "Sintetizador Omni — Síntese de Material",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920207",
    "comeFrom": [
-    "Cálice (Desfiladeiro Escamado Aquático)",
     "Cálice (Desfiladeiro Escamado Aquático)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas",
@@ -441,7 +443,7 @@
    "iconPath": "64a0a203abb578b199e30810d3b98e3b04d792df8b2446063a54260491449048",
    "artPath": "3b4f75168c7c92c0de802d1a435c759aaa43593c09e3271291b51281734123aa",
    "name": "Capricho Extravagante",
-   "descHash": "Ao usar a Perícia Suprema, para cada inimigo no campo, aumenta adicionalmente os Golpes por Ação da Perícia Suprema em <nobr>#1[i]</nobr> golpe(s), até um aumento máximo de <nobr>#2[i]</nobr> golpe(s).",
+   "descHash": "Ao usar a Perícia Suprema, para cada inimigo no campo, aumenta adicionalmente os Golpes por Ação da Perícia Suprema atual em <nobr>#1[i]</nobr> golpe(s), até um aumento máximo de <nobr>#2[i]</nobr> golpe(s).",
    "params": [
     1,
     5
@@ -470,7 +472,7 @@
   {
    "id": 4,
    "iconPath": "3e4e166c3d7e25097d36f11b12f31fb228f69168cbec3590cbc6abe843f8447d",
-   "artPath": "fbb1546fb1a861d3e092f2b39cd198700ef483dcadbb47676957bd3bce1aca3c",
+   "artPath": "c01a43ed3ff800848e25dad3208477fd65ae4fca114147af5bb54acde80d90c0",
    "name": "Visão de Afinidade",
    "descHash": "Aumenta o Multiplicador de Dano de cada golpe da Perícia Suprema em <nobr>#1[i]%</nobr>.",
    "params": [
@@ -683,7 +685,7 @@
    "break": "60 + 30/adjacent",
    "energy": "30",
    "id": 98851,
-   "name": "S-Serviço de Quarto",
+   "name": "S-Serviço de Quarto!",
    "iconPath": "4374bf6a7d4233b8e2b9a467c29f6ff26e4a2ba4e3da86f753b9127e529f7699",
    "typeDescHash": "Perícia",
    "levelReq": 0,
@@ -981,7 +983,7 @@
    "tagHash": "Rebote",
    "descHash": "Possui <nobr>#1[i]</nobr> Golpes por Ação por padrão. Primeiro, usa 1 golpe para causar Dano de <span style=\"color:#47C7FD;\">Gelo</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> do ATQ de Misha a um único inimigo-alvo. Então, cada um dos golpes restantes causa Dano de <span style=\"color:#47C7FD;\">Gelo</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> do ATQ de Misha a um único inimigo aleatório. Logo antes do acerto de cada golpe, existe uma <u>chance-base</u> de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> de causar Congelamento ao alvo, durando por 1 rodada.<br />Enquanto no estado de Congelamento, inimigos-alvo não podem agir, e no início de suas rodadas, eles recebem <u>Dano de <span style=\"color:#47C7FD;\">Gelo</span> Adicional</u> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> do ATQ de Misha.<br />Essa Perícia Suprema pode possuir até <nobr>#5[i]</nobr> Golpes por Ação. Depois que a Perícia Suprema é utilizada, seus Golpes por Ação serão redefinidos ao nível padrão.",
    "ultimateCost": 100,
-   "break": "30/hit",
+   "break": "30 + 15/subsequent",
    "energy": "5/hit",
    "id": 182792,
    "name": "V-Vou me Atrasar!",
@@ -1310,7 +1312,7 @@
   },
   {
    "tagHash": "Aprimoramento",
-   "descHash": "Sempre que um aliado consumir um Ponto de Perícia, a próxima Perícia Suprema de Misha desfere <nobr>#2[i]</nobr> Golpe(s) por Ação a mais e Misha regenera <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]</nobr></span> de Energia.",
+   "descHash": "Para cada 1 Ponto de Perícia consumido por um aliado, a próxima Perícia Suprema de Misha desfere <nobr>#2[i]</nobr> Golpe(s) por Ação a mais e Misha regenera <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]</nobr></span> de Energia.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1645,18 +1647,22 @@
  "skillTreePoints": [
   {
    "id": 1312101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1312202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1312203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1312204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1782,18 +1788,22 @@
   },
   {
    "id": 1312102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1312205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1312206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1312207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1884,7 +1894,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Ao usar a Perícia Suprema, aumenta a Taxa de Acerto de Efeito em <nobr>#1[i]%</nobr>, durando até o final da ação atual da Perícia Suprema.",
+    "descHash": "Ao usar a Perícia Suprema, aumenta a Taxa de Acerto de Efeito em <nobr>#1[i]%</nobr>, durando até o final da ação da Perícia Suprema atual.",
     "ultimateCost": 0,
     "id": 454570,
     "name": "Interligação",
@@ -1923,14 +1933,17 @@
   },
   {
    "id": 1312103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1312208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1312209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1963,6 +1976,7 @@
       },
       {
        "id": 1312210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2063,6 +2077,7 @@
   },
   {
    "id": 1312201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2124,7 +2139,7 @@
   {
    "id": 1,
    "title": "Primeiro Encontro",
-   "text": "Olá, eu sou o Misha, o servente do Hotel Devaneio. Bem-vinda/Bem-vindo à Penacony. Por aqui. Ah, deixe-me carregar suas malas!",
+   "text": "Olá, eu sou o Misha, o servente do Hotel Devaneio. Bem-vinda/Bem-vindo a Penacony. Por aqui. Ah, deixe-me carregar suas malas!",
    "unlockRequirement": "",
    "cnUrl": "914fd50bb88e78e5d68acdbfdc3bfe91a3cfd9e2dba5079b52abb34ea3b53edd",
    "jpUrl": "7ae0cec01fba83b25f408adf45061192d00fc7b6696656345912747753625948",
@@ -2134,7 +2149,7 @@
   {
    "id": 2,
    "title": "Cumprimento",
-   "text": "Desbravador/Desbravadora, você descansou bem? Se tiver algum lugar que você gostaria de ir, por favor, não hesite em vir me encontrar!",
+   "text": "Desbravador/Desbravadora, você descansou bem? Se tiver algum lugar que você gostaria de ir, por favor, não hesite em me procurar!",
    "unlockRequirement": "",
    "cnUrl": "85cb804b30502ee202e6de7d64a8e455fc57fd8e0c873b04710adc5c31b48d1a",
    "jpUrl": "f6dc389454d56f1c5a169673b3cb1d65c444fd42459bce5dcf6a59f8cb3234ff",
@@ -2194,7 +2209,7 @@
   {
    "id": 8,
    "title": "Irritações",
-   "text": "Ele já está atrasado... eu fico pensando onde o vovô pode estar...",
+   "text": "Ele já está atrasado... onde será que o vovô se meteu...",
    "unlockRequirement": "",
    "cnUrl": "88340477c3362232a67b9cb6d59f45618723b2f605e20b25fc239a4c79dcf30b",
    "jpUrl": "68912b16dd83f302044c582a00b189fa141d6d8e052a420989541f73a130425c",
@@ -2204,7 +2219,7 @@
   {
    "id": 9,
    "title": "Uma Curiosidade",
-   "text": "Quando eu era pequeno, eu roubava uns golinhos da FelizAlma, e na hora que o vovô percebeu, eu já estava com cáries... Então, a gente definitivamente não deveria beber demais... Espera, na real eu acho que é tranquilo para adultos, mas as criancinhas não deveriam beber!",
+   "text": "Quando eu era pequeno, eu roubava uns golinhos de FelizAlma, e na hora que o vovô percebeu, eu já estava com cáries... Então, a gente definitivamente não deveria beber demais... Espera, na real eu acho que é tranquilo para adultos, mas as criancinhas não deveriam beber!",
    "unlockRequirement": "",
    "cnUrl": "df03667e71ffdb916e4af8a30164bc9417942433cbcfed20461a89e71bcc2cf2",
    "jpUrl": "82027bec8b4c22c10fae49b2d4b53f52e3a7cb2e6809d8f22a07dad01326241f",
@@ -2234,7 +2249,7 @@
   {
    "id": 12,
    "title": "Sobre a Robin",
-   "text": "As músicas da senhorita Robin têm o poder de levar as pessoas para os lugares mais distantes, além dos sonhos mais lindos. Eu... Eu vou sempre ser um fã da senhorita Robin!",
+   "text": "As músicas da senhorita Robin têm o poder de levar as pessoas para os lugares mais distantes, além dos sonhos mais lindos. Eu... Eu sempre vou ser fã da senhorita Robin!",
    "unlockRequirement": "",
    "cnUrl": "19b3d921e9cda62dca5852d973f0463468041598219a4e12fb33903f472ff5c4",
    "jpUrl": "b5eb3897550fb105f0240d9942cbd8e8834e4b8f1cab8f8a174c1b87b29d9b90",
@@ -2244,7 +2259,7 @@
   {
    "id": 13,
    "title": "Sobre o Sunday",
-   "text": "Bem, apesar de ser novo, o Sr. Sunday já é um manda-chuva em Penacony. Só de ver ele de longe já pode te fazer ficar em choque...",
+   "text": "Bem, apesar de ser novo, o Sr. Sunday já é bem importante em Penacony. Só de ver ele de longe já pode te fazer ficar em choque...",
    "unlockRequirement": "",
    "cnUrl": "0175f7f854b1472db95ade0d16accf906c2f6e42aa9506b62a5e0b7d81c04118",
    "jpUrl": "01f7ed8443cac46008ded4d194eec0d805282cfebd8cf0a99a74b05b33f1d28f",
@@ -2264,7 +2279,7 @@
   {
    "id": 15,
    "title": "Sobre os Inominados",
-   "text": "O vovô me disse que nunca é tarde demais para sonhar, ele disse que o que importa é o quanto você quer fazer ele se tornar realidade. Eu nunca vou esquecer disso, vai chegar o dia em que eu vou fazer os meus sonhos e do vovô virarem realidade.",
+   "text": "O vovô me disse que nunca é tarde demais para sonhar, ele disse que o que importa é o quanto você quer fazer ele se tornar realidade. Eu nunca vou esquecer disso, vai chegar o dia em que eu vou fazer os meus sonhos e os do vovô virarem realidade.",
    "unlockRequirement": "",
    "cnUrl": "c5ca77fbd0691261e3c51001707a00bfdbb91b2dce54bd7dcf62df95770c2ab3",
    "jpUrl": "20088a12ae1bdddca59db9a72d1e287700a2936418f054048ee96c311623c108",
@@ -2273,7 +2288,7 @@
   },
   {
    "id": 16,
-   "title": "Sobre Relogin",
+   "title": "Sobre o Relogin",
    "text": "Deixe eu te contar um segredo, o Relogin é real, ele não é só um amigo imaginário que eu inventei!",
    "unlockRequirement": "",
    "cnUrl": "47eabba3350df8d5e7546e543a3551a08a24695b54fff906af18b28f1c5b30f1",
@@ -2304,7 +2319,7 @@
   {
    "id": 19,
    "title": "Nível Máximo Alcançado",
-   "text": "Espera, eu sou tão impressionante assim? Isso tem que ser um sonho!",
+   "text": "Espera, eu sou tão impressionante assim? Isso só pode ser um sonho!",
    "unlockRequirement": "",
    "cnUrl": "b67b9abd7e61db845f7a9a4c6a31b25e0ada21d689c044c3ea8648d096249fc9",
    "jpUrl": "792ec8edacab0411e8adfc21bb59818a154fdfde86cc984b39cd7c9528dc5e9a",
@@ -2324,12 +2339,22 @@
   {
    "id": 21,
    "title": "Entrou na Equipe com Desbravador/Desbravadora",
-   "text": "Aquela lá é a/Aquele lá é o Desbravador/Desbravadora? Sim! Finalmente, vamos lutar lado a lado!",
+   "text": "É você, Desbravador/Desbravadora? Sim! Finalmente, vamos lutar lado a lado!",
    "unlockRequirement": "",
    "cnUrl": "471486e8efa4b32ae21a9e5aa5817e8844e01ca4049dfb28178f0080a7f02f68",
    "jpUrl": "15f82102bd764105dfc3d1581f08a1fa953767ac9ba0da634144bf7f08cb7ec5",
    "enUrl": "a67d5b5b254b6763feadb26245de1990940e78e8438e5f167285e5820511e4d8",
    "krUrl": "b89a0c4b55e3ed486f0bb450951fb55c88f52ae3ee3e25711a74dcc2061a4a83"
+  },
+  {
+   "id": 22,
+   "title": "Entrou na Equipe com Gallagher",
+   "text": "Gallagher? Você está aqui! Saca só, eu também consigo proteger todo mundo!",
+   "unlockRequirement": "",
+   "cnUrl": "ea7e9c5b7043c6a2004fa9b980a0b07f2f678f91fc64a8da4dc10d1e0e57589e",
+   "jpUrl": "9cd0fd82cf10bd8c0c3e3e755da039c81191f92709a76d9c9bae592dd229312b",
+   "enUrl": "3befdc4779ca9e2b6ae2dbb5055e5d434cc8d5d1e8ffce7a48efa9d4da2302cf",
+   "krUrl": "fe634019e5290d9054f631321b3123e5f9a742ea2953f178285739c2a6a9cc5d"
   },
   {
    "id": 51,
@@ -2524,7 +2549,7 @@
   {
    "id": 70,
    "title": "Abrindo Tesouro Precioso",
-   "text": "Eu não consigo aceitar uma coisa que valha tanto...",
+   "text": "Eu não consigo aceitar uma coisa tão valiosa assim...",
    "unlockRequirement": "",
    "cnUrl": "02c1f3d156903c9df21371a2967651e53fc7a73145a63faebe7965ffbf7e4562",
    "jpUrl": "682775256febb79337e11f5bc5ebba927b0e5b1dd4ae68ff2e137e1028f62e43",
@@ -2544,7 +2569,7 @@
   {
    "id": 72,
    "title": "Enigma Solucionado - 2",
-   "text": "Eu devo ter decifrado o código.",
+   "text": "Acho que eu decifrei o código.",
    "unlockRequirement": "",
    "cnUrl": "b1a978a5823e02465b9de8db68816ebb38dbe113b9491dfec302cc831af61b03",
    "jpUrl": "04e063ec70db316ccc8d472fb28da391c441f30ee1135534774632ad7291a939",
@@ -2590,12 +2615,12 @@
   },
   {
    "title": "História de Personagem: Parte III",
-   "text": "Quando o relógio de bolso bateu sete da noite, Misha acabou o jantar e se acomodou na cama que havia sido modificada de um armário.<br />Olhando para a escuridão em sua volta, ele ouvia o tique-taque incessante do relógio de bolso. As horas mais abençoadas do dia dele. Sem trabalho, sem realidade, apenas voos irrestritos de fantasia.<br /><br />Após viajar pela neblina, a história de fantasia chegou à parte mais emocionante da batalha marítima. Ele estendeu as mãos, puxando os companheiros derrubados pelas ondas, e desenhou outra linha na tela como se estivesse vencendo um monstro marítimo...<br /><br />\"Capitão, capitão, acorde, está clareando!\"<br />Ele esfregou os olhos e olhou incrédulo para a paisagem diante dele.<br />Um relógio de bolso dourado, que havia se transformado em uma figura com braços e pernas, vestido com um uniforme e gravata-borboleta vermelha, acenou para ele.<br />Uma senhora de espelho prateado o refletiu, ajustando o vestido e olhando através dos binóculos para a cena distante.<br />A tempestade da noite anterior desapareceu sem deixar rastros. Uma brisa marítima refrescante fez o uniforme de Misha se agitar, e, ao longe, eles conseguiam ver o contorno do Novo Mundo.<br /><br />\"Olha, capitão, a costa não está longe!\"<br />Pegando a mão de Misha, o Sr. Relógio de Bolso e a Srta. Espelho pularam graciosamente nas nuvens. Antes que pudesse reagir, os três estavam no ar, olhando para o mar sem fim e o continente em formato crescente abaixo deles. O Sr. Relógio de Bolso e a Srta. Espelho ficaram felizes, conduzindo Misha numa dança animada. Ele segurou as mãos dos companheiros, cheio de admiração e alegria.<br /><br />\"Vocês... Vocês são meus companheiros?\"<br />\"Sim, já enfrentamos inúmeros desafios e nos perdemos várias vezes no meio do caminho, mas finalmente achamos o Novo Mundo!\"<br /><br /><br />Ao amanhecer, Misha acordou do sonho, uma lágrima descendo pelo canto do olho.<br />Olhando para o quarto, ele viu o relógio de bolso apertado contra seu peito, e o espelho havia caído da parede.<br />Enxugando as lágrimas, Misha sentiu como se não tivesse perdido nada, e ainda assim tivesse perdido tudo.",
+   "text": "Quando o relógio de bolso bateu sete da noite, Misha acabou o jantar e se acomodou na cama que havia sido feita a partir de um armário.<br />Olhando para a escuridão à sua volta, ele ouvia o tique-taque incessante do relógio de bolso. As horas mais abençoadas do dia dele. Sem trabalho, sem realidade, apenas voos irrestritos de fantasia.<br /><br />Após viajar pela neblina, a história de fantasia chegou à parte mais emocionante da batalha marítima. Ele estendeu as mãos, puxando os companheiros derrubados pelas ondas, e desenhou outra linha na tela como se estivesse vencendo um monstro marítimo...<br /><br />\"Capitão, capitão, acorde, está clareando!\"<br />Ele esfregou os olhos e olhou incrédulo para a paisagem diante dele.<br />Um relógio de bolso dourado, que havia se transformado em uma figura com braços e pernas, vestido com um uniforme e gravata-borboleta vermelha, acenou para ele.<br />Uma senhora que era um espelho prateado o refletiu, ajustando o vestido e olhando através dos binóculos para a cena distante.<br />A tempestade da noite anterior desapareceu sem deixar rastros. Uma brisa marítima refrescante fez o uniforme de Misha se agitar, e, ao longe, eles conseguiam ver o contorno do Novo Mundo.<br /><br />\"Olha, capitão, a costa não está longe!\"<br />Pegando a mão de Misha, o Sr. Relógio de Bolso e a Srta. Espelho pularam graciosamente nas nuvens. Antes que pudesse reagir, os três estavam no ar, olhando para o mar sem fim e o continente em formato de lua crescente abaixo deles. O Sr. Relógio de Bolso e a Srta. Espelho ficaram felizes, conduzindo Misha numa dança animada. Ele segurou as mãos dos companheiros, cheio de admiração e alegria.<br /><br />\"Vocês... Vocês são meus companheiros?\"<br />\"Sim, já enfrentamos inúmeros desafios e nos perdemos várias vezes no meio do caminho, mas finalmente achamos o Novo Mundo!\"<br /><br /><br />Ao amanhecer, Misha acordou do sonho, uma lágrima descendo pelo canto do olho.<br />Olhando para o quarto, ele viu o relógio de bolso apertado contra seu peito, e o espelho havia caído da parede.<br />Enxugando as lágrimas, Misha sentiu como se não tivesse perdido nada, e ainda assim tivesse perdido tudo.",
    "unlockRequirement": "Desbloqueado no Nível <nobr>60</nobr> de Personagem"
   },
   {
    "title": "História de Personagem: Parte IV",
-   "text": "Quando o relógio de bolso bateu seis horas da manhã, o cheiro familiar de leite e torrada vindo da cozinha invadiu o quarto, como sempre.<br /><br />Ele havia voltado à vida, enterrando os sonhos no fundo do seu coração. Ele não se deixava mais encantar facilmente pelas histórias dos hóspedes e nem tinha mais esperança de que seu avô voltasse logo.<br /><br />\"Talvez seja como os adultos são. Não cumprem promessas, e não ouvem as crianças.\"<br />Ele pegou as malas e bolsas dos hóspedes. Eles passaram sem olhar, deixando-o falando sozinho.<br /><br />Ele voltou para a sala de relógios e checou os vários relógios que marcavam horas diferentes de lugares diferentes, como sempre. Misha olhou sem expressão para a parede cheia de relógios, imaginando as histórias e os mundos que havia neles. Perdido em pensamentos de reinos fantásticos, ele desdobrou um pedaço de papel e começou a desenhar as aventuras que viveu com seus companheiros imaginários.<br /><br />Esse foi o fim da história.<br /><br />\"Adeus, companheiros! Ficarei no Novo Mundo, e quando ele for concluído, continuarei viajando com vocês para outros novos mundos!\"<br />\"Adeus, Capitão Misha! Espero que nossos caminhos se cruzem de novo!\"<br />Todos os companheiros dele foram embora, exceto seu primeiro imediato, Sr. Relógio de Bolso, e a gentil Srta. Espelho. Eles passaram por névoas e atravessaram o mar juntos. Em momentos cruciais, Misha levou o navio deles para a direção certa. Agora, a criança chamada Misha começaria a construir um reino novo num continente novo até que a oportunidade de outra jornada surgisse.<br /><br />\"Se eu for desenhar alguma coisa nova, minha próxima criação será sobre as aventuras no novo mundo.\"<br />Quando ele terminou, ouviu um som familiar e vibrações, como se um ser colossal tivesse emergido das profundezas do universo e chegado no lado de fora do portão do hotel.<br /><br />Ele deixou de lado os pincéis, abriu a porta e saiu correndo...<br /><br />\"Boas-vindas a...\"<br /><br />O Expresso Astral, brilhando na luz da manhã, exausto e orgulhoso, aguardava ali, estacionado e silencioso.<br />Como no sonho.",
+   "text": "Quando o relógio de bolso bateu seis horas da manhã, o cheiro familiar de leite e torrada vindo da cozinha invadiu o quarto, como sempre.<br /><br />Ele havia voltado à vida, enterrando os sonhos no fundo do seu coração. Ele não se deixava mais encantar facilmente pelas histórias dos hóspedes e nem tinha mais esperança de que seu avô voltasse logo.<br /><br />\"Talvez os adultos sejam assim mesmo. Não cumprem promessas, e não ouvem as crianças.\"<br />Ele pegou as malas e bolsas dos hóspedes. Eles passaram sem olhar, deixando-o falando sozinho.<br /><br />Ele voltou para a sala de relógios e checou os vários relógios que marcavam horas diferentes de lugares diferentes, como sempre. Misha olhou sem expressão para a parede cheia de relógios, imaginando as histórias e os mundos que havia neles. Perdido em pensamentos de reinos fantásticos, ele desdobrou um pedaço de papel e começou a desenhar as aventuras que viveu com seus companheiros imaginários.<br /><br />Esse foi o fim da história.<br /><br />\"Adeus, companheiros! Ficarei no Novo Mundo, e quando ele for concluído, continuarei viajando com vocês para outros novos mundos!\"<br />\"Adeus, Capitão Misha! Espero que nossos caminhos se cruzem de novo!\"<br />Todos os companheiros dele foram embora, exceto seu primeiro imediato, Sr. Relógio de Bolso, e a gentil Srta. Espelho. Eles passaram por névoas e atravessaram o mar juntos. Em momentos cruciais, Misha levou o navio deles para a direção certa. Agora, a criança chamada Misha começaria a construir um reino novo num continente novo até que a oportunidade de outra jornada surgisse.<br /><br />\"Se eu for desenhar alguma coisa nova, minha próxima criação será sobre as aventuras no novo mundo.\"<br />Quando ele terminou, ouviu um som familiar e vibrações, como se um ser colossal tivesse emergido das profundezas do universo e chegado no lado de fora do portão do hotel.<br /><br />Ele deixou de lado os pincéis, abriu a porta e saiu correndo...<br /><br />\"Boas-vindas a...\"<br /><br />O Expresso Astral, brilhando na luz da manhã, exausto e orgulhoso, aguardava ali, estacionado e silencioso.<br />Como no sonho.",
    "unlockRequirement": "Desbloqueado no Nível <nobr>80</nobr> de Personagem"
   }
  ],
@@ -2698,8 +2723,8 @@
  },
  "name": "Misha",
  "rarity": 4,
- "descHash": "Um jovem bem-comportado que trabalha como servente em Penacony. Misha sente muita falta dos Inominados e sonha em um dia embarcar em sua própria jornada.",
- "artPath": "35c2bd0fc3b03dc00d91776118b3e546a73802a01450f335310a1be14fc15a41",
+ "descHash": "Um jovem bem-comportado que trabalha como servente em Penacony. Misha tem uma grande admiração pelos Inominados e sonha em um dia embarcar em sua própria jornada.",
+ "artPath": "f313ab391a54a5508a6c601d604f08410d02e880edc73b4ddbae3fdc560af2cd",
  "miniIconPath": "5901c970a59bd0f0a9e290365b8cc015537c13b9757cf1b77ea1f3c137755d5b",
  "damageType": {
   "id": 4,

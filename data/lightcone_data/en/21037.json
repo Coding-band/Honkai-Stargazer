@@ -4,6 +4,11 @@
  "descHash": "\"You don't believe me?\"<br />He provocatively looks at the man before him, then draws out a revolver, empties its cylinder, and leaves a single shot in the chamber.<br /><br />\"Seems like I'll need to get you up to speed on how I do things if our cooperation were to remain amicable.\"<br />He pushes the gun into his opponent's hand, spins the cylinder, and points the barrel to his own chest.<br /><br />He pulls the trigger repeatedly, and the smile on his face remains the same after three empty clicks.<br />\"Life is a grand gamble, and I'll always be the final victor.\"",
  "iconPath": "c2e8458bbdc6862164941324b67010d441eb06928cc97414cdca04fee0f4876e",
  "artPath": "35b24424db8c352f74968e4dfb30d543ad8707aa8cfc3238226b32131d4bb363",
+ "artPlaceholder": {
+  "data": "data:image/webp;base64,UklGRnIBAABXRUJQVlA4IGYBAABQBwCdASoUABwAPm0ukkYkIqGhMBgIAIANiWQAnTLdWDXLPQqJVN493pIdLY2/YXvuy6U1pMmPGhnOuweMAk/cdltYAP79JdX4/T+Wfsoei2h9zkJmqIPeBh56Xn787W2qk+DfL46/hsOvp9CntL6wOYv4x+e99tB4j71DYonFEvC5mbwUyeybF5deYBRQBRBeDU0HlwL6lQVPpFvzjTwf6qnCGNs7v4DZmVcVANoFV+NEupBtpd8AzojMplU3wNZSiGR+yeC1M0n+U8wDIL99dHWCdIlrNH/j5wunkvU7ZfbOJ/pMB9fwHHvdW41zRiDkQqedjH3ldyDV/opAfkZL29QRBMCvxhHdqO7VJEkXDacLodkKax4ccTMeb04Ek+yeGZrQvr3ZaRDq3VqSBccpCuYV2Wcwob3s6JcqCAaRov8z/7/n+BhJJM1xVyry2x4Ij8EZYjHp5ET0oPOupglvmBLXkAAA",
+  "w": 867,
+  "h": 1230
+ },
  "mediumIconPath": "ce14cb6d02bff6b4d6681a7a6333ef9ad45fae540b3532e74e493a6dc9167d7e",
  "baseType": {
   "id": 0,
@@ -85,7 +90,6 @@
    "rewardPath": "/material/635674",
    "comeFrom": [
     "Calyx (Outlying Snow Plains)",
-    "Calyx (Outlying Snow Plains)",
     "Embers Exchange",
     "Omni-Synthesizer — Material Exchange"
    ]
@@ -112,7 +116,7 @@
    "id": 694488,
    "type": 601,
    "purposeId": 5,
-   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "iconPath": "026b806a3d824e733df266921f36f82bcff426f6ab12699ca5c4ad0c73723779",
    "name": "Condensed Aether",
    "desc": "Enhancement material for Light Cones, provides <nobr>2000</nobr> Light Cone EXP.",
    "lore": "A can of Aether refined through special techniques.<br /><br />\"Handle with care, do not drop or place pressure upon it. If damages and leaks occur, please refer to chapter II of the Leak Disaster Response Manual for emergency response.\"",
@@ -175,7 +179,6 @@
    "rewardPath": "/material/836260",
    "comeFrom": [
     "Calyx (Outlying Snow Plains)",
-    "Calyx (Outlying Snow Plains)",
     "Omni-Synthesizer — Material Synthesis",
     "Omni-Synthesizer — Material Exchange"
    ]
@@ -192,7 +195,6 @@
    "rarity": 3,
    "rewardPath": "/material/920201",
    "comeFrom": [
-    "Calyx (Outlying Snow Plains)",
     "Calyx (Outlying Snow Plains)",
     "Omni-Synthesizer — Material Synthesis",
     "Embers Exchange",
@@ -355,8 +357,8 @@
  ],
  "skill": {
   "id": 21037,
-  "name": "All In",
-  "descHash": "Increases the wearer's ATK by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. When the wearer lands a CRIT hit on enemies, gains a stack of Good Fortune, stacking up to <nobr>#3[i]</nobr> time(s). Every stack of Good Fortune the wearer has will increase their CRIT DMG by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Good Fortune will be removed at the end of the wearer's turn.",
+  "name": "Wager",
+  "descHash": "Increases the wearer's ATK by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>. When the wearer lands a CRIT hit on enemies, gains 1 stack of Good Fortune. This can stack up to <nobr>#3[i]</nobr> time(s). Every stack of Good Fortune increases the wearer's CRIT DMG by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Good Fortune will be removed at the end of the wearer's turn.",
   "levelData": [
    {
     "params": [

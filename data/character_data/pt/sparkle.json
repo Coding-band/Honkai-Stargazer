@@ -5,6 +5,11 @@
  "figPath": "991aa9d7c911b02cfd47800cab0ad4146bb0d02de608eb112830f5e334ca2a13",
  "fgPath": "",
  "splashIconPath": "f1dfd94040dc1f7a208bc749c20be2fc5a9bd7a37da45ad756f201f0d49195b6",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRv4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSDkBAAABkHPbtrG9yvejz7Zt22br76sY20lt27ZT2erMynYqO3mesz9HxASgX1Wtao/WAagYWEPhlTp3AwoG9gFqxqcCgJ1PnkM/AaPKLl52jJ2/pahg3aVnWVChoe3jc95Ydujwpye3n4xckm4AGobfPUuT/b6+34k6e2jo2JH7meb//5Zl8scCDx93KAiZF/aNFoUi/7m1drsnAOSfoCXsa/GZ55trgI4p/C8ipIjw53YesIWO+TSFQlKE//5wMmCEJPz6RhHpY/H6kQagpQNTH9AihWLyU/6GOCBlprsWdJCmUITcHdzlCB1DpkTlzyBFhC/PdawLhKIgZn720OM/aZH3sjStug4qVLi1tpZv/2r+WTe9Gq7xnujrv2ZZYtNv8s1OX9ho6Ksg4szzFRuONsbEQMHATu2HJmHQAFZQOCCeAQAAsAgAnQEqFAAUAD5tMJRHpCKiISgIAIANiWwAnTKEen+O8PM7/AA2zXKzaq7vGRPwHpg5p/nL2AP1S31UPNqFIg7Q9T2kHbdQBrCqhrKcAP7veqX6qZbpLZcedXteDfxY2/gB/PEV8UYdmD8EUgmz0t9gc3FBfgkAvb6C2pyleNMk8Br6fwdrFdTyxNsmXwg9/xuQRx3bc0d/+4FysOh+tYqkZN6fLtuxams/N3/KvdriDFt96dXtpuuVl7Afmll03lhB7YNrn5yaU+ck8jW3Y58P8bYvZvHGm1cdV9yRdFmxZCL/xVTjEP/TAfXyK1bLjPaXo2Rx2zL2F70ACVwvdX9MUePuNay0w3+i/NvzggswmF4I5EnffzWPo6b/HUHeNUMNN1AZLpEks/I8uUbtRPT3VYj46xuupu1jrNZ4MWno0ppt2nQWL/jW2+g/fZUyUwb8u2/xcfsrz0IBeySlPfiNafOGfLsfxIVurQCsdFpHy9Vh+lskTADdSKniGHoseVetB0AZ8/SatIIHf2xbdHAgvJ0/t3uoE+IcAAAA",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Recompensas de Pontuação do Universo Simulado",
     "Honra dos Inominados",
     "Troca de Brasas",
+    "Troca de Luz Estelar",
     "Recompensas de Evento por Tempo Limitado"
    ]
   },
@@ -64,7 +70,6 @@
    "rarity": 4,
    "rewardPath": "/material/351748",
    "comeFrom": [
-    "Sombra Estagnada: Margem do Sonho",
     "Sombra Estagnada: Margem do Sonho",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -172,7 +177,6 @@
    "rewardPath": "/material/589819",
    "comeFrom": [
     "Cálice: Devaneio (Mundonírico)",
-    "Cálice: Devaneio (Mundonírico)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas",
     "Sintetizador Omni — Troca de Material"
@@ -209,7 +213,6 @@
    "rewardPath": "/material/673760",
    "comeFrom": [
     "Cálice: Devaneio (Mundonírico)",
-    "Cálice: Devaneio (Mundonírico)",
     "Sintetizador Omni — Síntese de Material",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -244,7 +247,6 @@
    "rarity": 2,
    "rewardPath": "/material/874346",
    "comeFrom": [
-    "Cálice: Devaneio (Mundonírico)",
     "Cálice: Devaneio (Mundonírico)",
     "Troca de Brasas",
     "Sintetizador Omni — Troca de Material"
@@ -439,9 +441,9 @@
   {
    "id": 1,
    "iconPath": "9ce44da0ce2db178d03fa5848f1666aed212db44e4472db3cfc81a0444ab2964",
-   "artPath": "b410784fbb494f07996741bc2887c9ff9045c4e84e932bd539e9fa2fe8099a4e",
+   "artPath": "9b2cefc8111d1be621f58cde3d8eb08ccf2e22a7992505ebe901b7fd674e78d4",
    "name": "Suspensão de Descrença",
-   "descHash": "O efeito de Criptografia aplicado pela Perícia Suprema dura por 1 rodada extra. Todos os aliados afetados por Criptografia têm seu ATQ aumentado em <nobr>#1[i]%</nobr>.",
+   "descHash": "O efeito de Criptografia concedido pela Perícia Suprema dura por 1 rodada extra. Todos os aliados com Criptografia têm seu ATQ aumentado em <nobr>#1[i]%</nobr>.",
    "params": [
     0.4
    ]
@@ -449,9 +451,9 @@
   {
    "id": 2,
    "iconPath": "6831a28c5ceeeeea8480f2a689dea58ab989249c3ceb3f87bfc094c6425b8079",
-   "artPath": "2d3fbd6ed5af564daf5076cb009ffeb329a7da156bf0dacfcdfb91ecd4e3def7",
+   "artPath": "a7670d995478c53fdf6ffff301be8959a00978d21b4ed3d57061f97aac87b567",
    "name": "Puramente Fictício",
-   "descHash": "Cada acúmulo de Talento permite que os aliados ignorem <nobr>#1[i]%</nobr> da DEF do inimigo-alvo ao causar Dano.",
+   "descHash": "Cada acúmulo do efeito do Talento permite que os aliados ignorem adicionalmente <nobr>#1[i]%</nobr> da DEF do alvo ao causar Dano.",
    "params": [
     0.08
    ]
@@ -467,7 +469,7 @@
   {
    "id": 4,
    "iconPath": "ec1710504a85dcc5ffd40e56735ef4e3aae137eefa53154bf77668d496a636b9",
-   "artPath": "904de78ea5f505fc17de1b55998b5a9b9ba0a6d9ce09da47947fe953a1ce7a15",
+   "artPath": "3d3fb5c3033c97002ef326352aba0ed5b26636e23699418c56233d94941bed4d",
    "name": "A Vida É uma Aposta",
    "descHash": "A Perícia Suprema recupera mais 1 de Ponto de Perícia. O Talento ainda aumenta adicionalmente o máximo de Pontos de Perícia em 1.",
    "params": []
@@ -483,9 +485,9 @@
   {
    "id": 6,
    "iconPath": "97946a7beefedaf075a3e045a39f2d44cc9de450c44e047feb9f7bfeea214fb4",
-   "artPath": "83ea4cc2b496ca0758ac0069e3881ff56e4bcd0dc419e3fad8216c438c87a04a",
+   "artPath": "0c42626e2ed820bae2e1a329a7e44dda34ece227cb0df56473cd5eaa0def5431",
    "name": "Narrativa Polissêmica",
-   "descHash": "O efeito de Bônus de Dano CRIT da Perícia de Sparkle aumenta adicionalmente o Dano CRIT de Sparkle em <nobr>#1[i]%</nobr>, e quando ela usa sua Perícia, o efeito de Bônus de Dano CRIT será aplicado a todos os aliados com Criptografia no momento. Quando Sparkle usa sua Perícia Suprema, este efeito se espalha para todos os aliados com Criptografia caso o alvo aliado tenha o efeito de aumento de Dano CRIT da Perícia já ativo.",
+   "descHash": "O efeito de Bônus de Dano CRIT fornecido pela Perícia aumenta adicionalmente em uma quantidade igual a <nobr>#1[i]%</nobr> do Dano CRIT de Sparkle. Quando Sparkle usa sua Perícia, o efeito de Bônus de Dano CRIT da Perícia dela será aplicado a todos os aliados com Criptografia. Quando Sparkle usa sua Perícia Suprema, qualquer aliado único que se beneficie do Bônus de Dano CRIT da Perícia dela espalhará esse efeito para aliados com Criptografia.",
    "params": [
     0.3
    ]
@@ -672,7 +674,7 @@
   },
   {
    "tagHash": "Suporte",
-   "descHash": "Aumenta o Dano CRIT de um único aliado em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> do Dano CRIT de Sparkle + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>, durando por <nobr>#3[i]</nobr> rodada(s). E ao mesmo tempo Avança Adiante a ação deste aliado em <nobr>#4[i]%</nobr>.<br />Quando Sparkle usa essa habilidade em si, sua ação não será Avançada Adiante.",
+   "descHash": "Aumenta o Dano CRIT de um único aliado-alvo em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> do Dano CRIT de Sparkle + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>, durando por <nobr>#3[i]</nobr> rodada(s). E ao mesmo tempo, Avança Adiante a ação deste aliado em <nobr>#4[i]%</nobr>.<br />Quando Sparkle usa essa habilidade em si, sua ação não será Avançada Adiante.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -992,7 +994,7 @@
   },
   {
    "tagHash": "Suporte",
-   "descHash": "Recupera <nobr>#2[i]</nobr> Pontos de Perícia para a equipe e concede Criptografia a todos os aliados. Quando aliados com Criptografia ativam o efeito de Bônus de Dano concedido pelo Talento de Sparkle, cada acúmulo aumenta adicionalmente seu efeito em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>, durando por <nobr>#4[i]</nobr> rodadas.",
+   "descHash": "Recupera <nobr>#2[i]</nobr> Pontos de Perícia para a equipe e concede Criptografia a todos os aliados. Para aliados com Criptografia, cada acúmulo do efeito de Bônus de Dano concedido pelo Talento de Sparkle aumenta adicionalmente em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>, durando por <nobr>#4[i]</nobr> rodada(s).",
    "ultimateCost": 110,
    "break": "0",
    "energy": "5",
@@ -1312,7 +1314,7 @@
   },
   {
    "tagHash": "Suporte",
-   "descHash": "Enquanto Sparkle estiver no campo de batalha, aumenta adicionalmente o número máximo de Pontos de Perícia em <nobr>#3[i]</nobr>. Sempre que um aliado consome 1 Ponto de Perícia, o Dano de todos os aliados será aumentado em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>. Este efeito dura por <nobr>#1[i]</nobr> rodada(s) e pode ser acumulado até <nobr>#4[i]</nobr> veze(s).",
+   "descHash": "Enquanto Sparkle estiver no campo de batalha, aumenta adicionalmente o número máximo de Pontos de Perícia em <nobr>#3[i]</nobr>. Sempre que um aliado consome 1 Ponto de Perícia, o Dano causado por todos os aliados será aumentado em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>. Este efeito dura por <nobr>#1[i]</nobr> rodada(s) e pode ser acumulado até <nobr>#4[i]</nobr> veze(s).",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1681,14 +1683,17 @@
  "skillTreePoints": [
   {
    "id": 1306101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1306202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1306203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1785,14 +1790,17 @@
   },
   {
    "id": 1306102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1306205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1306206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1854,7 +1862,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "O efeito de Bônus de Dano CRIT fornecido pela Perícia é estendido para durar até o início da próxima rodada do alvo.",
+    "descHash": "O efeito de Bônus de Dano CRIT fornecido pela Perícia será estendido para durar até o início da próxima rodada do alvo.",
     "ultimateCost": 0,
     "id": 801431,
     "name": "Flor Artificial",
@@ -1891,14 +1899,17 @@
   },
   {
    "id": 1306103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1306208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1306209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1931,6 +1942,7 @@
       },
       {
        "id": 1306210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1992,7 +2004,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Aumenta o ATQ de todos os aliados em <nobr>#4[i]%</nobr>. Quando há 1/2/3 aliado(s) <span style=\"color:#7788ff;\">Quântico</span>s na equipe, o ATQ dos aliados é aumentado em <nobr>#1[i]%</nobr>/<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>.",
+    "descHash": "Aumenta o ATQ de todos os aliados em <nobr>#4[i]%</nobr>. Quando há 1/2/3 aliado(s) do Tipo <span style=\"color:#7788ff;\">Quântico</span>s na equipe, adicionalmente, o ATQ dos aliados é aumentado em <nobr>#1[i]%</nobr>/<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>.",
     "ultimateCost": 0,
     "id": 801430,
     "name": "Noturna",
@@ -2034,10 +2046,12 @@
   },
   {
    "id": 1306201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1306204,
+     "anchor": 12,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2070,6 +2084,7 @@
     },
     {
      "id": 1306207,
+     "anchor": 15,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2170,7 +2185,7 @@
   {
    "id": 2,
    "title": "Cumprimento",
-   "text": "Ah uau, a gente tem se trombado muito, ein...? Onde será que eu já te vi antes? Consegue adivinhar?",
+   "text": "Ah, uau, a gente tem se trombado muito, hein...? Onde será que eu já te vi antes? Consegue adivinhar?",
    "unlockRequirement": "",
    "cnUrl": "260482b833262dfed8b88b0a5420718a9862e59447608637acfae5588842408b",
    "jpUrl": "73de01511d55cb7d54f3c78151da84d838398d46e5c54d358439f39ec9ac20ea",
@@ -2190,7 +2205,7 @@
   {
    "id": 4,
    "title": "Sobre si: Nome",
-   "text": "Eu não me importo de ser um personagem coadjuvante no fundão, torcendo pelos que estão no foco, e daí, no clímax da performance, eu broto do céu e PÁ! Sparkle aparece brilhando que nem fogos de artifício coloridos. Você acha que o personagem principal teria o peito de fazer isso?",
+   "text": "Eu não me importo de ser um personagem coadjuvante no fundão, torcendo pelos que estão no foco, e daí, no clímax da performance, eu broto do céu e PÁ! Sparkle aparece brilhando que nem fogos de artifício coloridos. Você acha que o personagem principal teria peito de fazer isso?",
    "unlockRequirement": "",
    "cnUrl": "90a3aacf35e5e83ffd75df5fb0743027a6fa2fb05355370b1ea36cae1e6fac06",
    "jpUrl": "f8a002a7419629e853113df148d5e91d5d0f6a69a7e77f6d1af004a3d9d7b9b4",
@@ -2220,7 +2235,7 @@
   {
    "id": 7,
    "title": "Bate-Papo: Tolos Mascarados",
-   "text": "Esse mundo é tipo um circo enorme sem fim, com um bando de bestas brigando dia e noite: ursos em uniciclos, leões pulando por aros em chamas, macacos fazendo malabarismo... A única coisa que separa os \"Tolos\" do resto de vocês é que a gente já sabe do que tá rolando.",
+   "text": "Esse mundo é tipo um circo enorme sem fim, com um bando de bestas brigando dia e noite: ursos em uniciclos, leões pulando por aros em chamas, macacos fazendo malabarismo... A única coisa que separa os \"Tolos\" do resto de vocês é que a gente já sabe o que tá rolando.",
    "unlockRequirement": "",
    "cnUrl": "fac0e2003fb8fac3ae9d6a6afbadc6342075ce3ca0444629d4f3ae12c7eca495",
    "jpUrl": "5d3cd15446f466473aaba271b7cede1f95de4cfc981a8789a454b5946bfba140",
@@ -2250,7 +2265,7 @@
   {
    "id": 10,
    "title": "Uma Curiosidade",
-   "text": "Então, temos esse Aeonzinho arrogante chamado \"Nanook\" por aí no cosmos, e ele realmente acredita que, sem ele, o universo todinho estaria caminhando direto para a \"Destruição\"! Não achou graça? Tá bom, quer ouvir a minha versão da \"Preservação\"?",
+   "text": "Então, temos esse Aeonzinho arrogante chamado \"Nanook\" por aí no cosmos, e ELE realmente acredita que, sem ELE, o universo todinho não estaria caminhando direto para a \"Destruição\"! Não achou graça? Tá bom, quer ouvir a minha versão da \"Preservação\"?",
    "unlockRequirement": "",
    "cnUrl": "170d34808bb4b6bd7757e1f6ac0d1175dbc6e869a095b1b27a6349f2b392b806",
    "jpUrl": "30f222740663df31f9ef2d083bc1790e71188b905bd923778293cc80f0b36df5",
@@ -2260,7 +2275,7 @@
   {
    "id": 11,
    "title": "Conhecimento",
-   "text": "Os poderosos acham que entendem como esse mundo funciona, então eles ficam aí inventando as regrinhas deles, julgando o que pode e o que não pode, o que é moral ou não... Eles até querem mandar em que piadas podem ou não! Hahaha, pra mim isso sim é uma verdadeira piada.",
+   "text": "Os poderosos acham que entendem como esse mundo funciona, então eles ficam aí inventando as regrinhas deles, julgando o que pode e o que não pode, o que é moral ou não... Eles até querem mandar em quais piadas podem ou não! Hahaha, pra mim isso sim é uma verdadeira piada.",
    "unlockRequirement": "",
    "cnUrl": "68c675bf6a9180ac4fa7d308b973b32c3a24483961630fe94172333a5c542c18",
    "jpUrl": "e2834a0f2a548dead6f1dbaac20a51a4db215cbfc469303255196ff5166f6ee8",
@@ -2280,7 +2295,7 @@
   {
    "id": 13,
    "title": "Sobre a Cisne Negro",
-   "text": "Graciosa, divertida, chique e perigosa... Eu chego a coçar de vontade de acabar com uma figura dessas, mas ei, ela dar um couro em mim... tá valendo também!",
+   "text": "Graciosa, divertida, chique e perigosa... Eu tô coçando de vontade de acabar com uma figura dessas, mas ei, ela dar um couro em mim... tá valendo também!",
    "unlockRequirement": "",
    "cnUrl": "154a1bf941b7c24e5aa59f9180f4c566e8f9a84428b2deaf87cad0335718996e",
    "jpUrl": "5f91090accc12c1446fb82ef1bc4fb795678ad4a97b383f3454e0f6ed6665697",
@@ -2330,7 +2345,7 @@
   {
    "id": 20,
    "title": "Ativação de Rastro",
-   "text": "Regras são feitas para serem quebradas~",
+   "text": "Regras são feitas para serem quebradas!",
    "unlockRequirement": "",
    "cnUrl": "8b1de09a2664cdb9978ea386a986ed047e672e1b97697409a43167d69e58a20c",
    "jpUrl": "3a04238458ff3cefca6ba24ad6df2b21bfa302ff84659fa407b1dcca4cbeb5b7",
@@ -2350,7 +2365,7 @@
   {
    "id": 22,
    "title": "Entrou na Equipe com Cisne Negro",
-   "text": "Minha querida Memoriadora, você tem a coragem de me deixar cobrir sua retaguarda?",
+   "text": "Minha querida Memoriadora, você tem coragem de me deixar eu te proteger?",
    "unlockRequirement": "",
    "cnUrl": "191fd3088cf272fd9f183db376dfdd5d053bfa6a4a907652fe537f7258e1e8af",
    "jpUrl": "c783e94c3a9d3256b713df986704990041f3d13a83f48b49bae8b591aac180de",
@@ -2366,6 +2381,16 @@
    "jpUrl": "b21a0944431e7f2870d497a187f079bf1efcd57b17699f67f799496df967af6b",
    "enUrl": "2ae45eb385b982fd2f93ee7b13b1b82053600b3bf80b045a8254a36c203f3297",
    "krUrl": "3c96add23447b47cbcb682a44f290d4c680cec3bfc054a260f9faa6f1d2c98f1"
+  },
+  {
+   "id": 24,
+   "title": "Entrou na Equipe com Aventurine",
+   "text": "Quem é vivo sempre aparece, ein! Acho que agora você vai me ofuscar.",
+   "unlockRequirement": "",
+   "cnUrl": "801cd04799135123803117d999712591bc85c5cb86a4ec30ab5a83a08af42c16",
+   "jpUrl": "fedf2387f18fef1fa479a6328149643f7d16a272e580e1c63c91c6c83cd3e726",
+   "enUrl": "bebd5480174ee3883f66bad127bf3984c82ab8efb86f09f205471db853fb4070",
+   "krUrl": "bd0b37de1c4f8f1bd6721936c83e1a93d5ded73ba254a0ea9c0915a7e110dc47"
   },
   {
    "id": 51,
@@ -2490,7 +2515,7 @@
   {
    "id": 63,
    "title": "Ao Ficar Fora de Combate",
-   "text": "Já chega de brincadeira por hoje...",
+   "text": "Cansei de brincar por hoje...",
    "unlockRequirement": "",
    "cnUrl": "60564b560634a11ecdeb6389d408070b44df18f86b045b923ab8e9d2151c6195",
    "jpUrl": "66c2df0df1172a6e1319f780942844da40d0256ecbe16d6f633b8f9dd6cf9d38",
@@ -2540,7 +2565,7 @@
   {
    "id": 68,
    "title": "Abrindo Tesouro - 1",
-   "text": "É só isso? Acho que vai ter que ser isso mesmo.",
+   "text": "É só isso? Acho que vai ter que servir.",
    "unlockRequirement": "",
    "cnUrl": "13b80e3806e5868db2e2bd3d33c15ed7b1dbac4963f8ec36fbe01d4cb0a610e3",
    "jpUrl": "95dee77c7664efe19756b73ace61e073c61fa6d8398ef69c64c83c9158b46eb5",
@@ -2550,7 +2575,7 @@
   {
    "id": 69,
    "title": "Abrindo Tesouro - 2",
-   "text": "Awnn, não tem mais?",
+   "text": "Afe, não tem mais?",
    "unlockRequirement": "",
    "cnUrl": "c211b3a9b4e9c6cca89f174a41448f68614744550db89a1d6a49e7cfaaca417e",
    "jpUrl": "7ce4046a7d4db7ea058bc80f58441a50490458ebdb1c83fc094ea49a862a409a",
@@ -2616,12 +2641,12 @@
   },
   {
    "title": "História de Personagem: Parte I",
-   "text": "A garota, órfã abandonada, viveu sem conhecer suas origens ou seu destino até que encontrou uma trupe de passagem. À distância, ela observou uma senhorita com cabelo preto e dois rabos de cavalo movendo-se graciosamente por um palco como um peixe. Apesar de vestir diversas máscaras, elas não escondiam as risadas e o choro durante a apresentação, cativando o público mesmo de longe. O peixe saltou na frente dela e depois mergulhou novamente, criando ondulações na superfície da água.<br /><br />Aos poucos, ela percebeu que estava assistindo à apresentação debaixo do palco.<br /><br />Intrigada, ela continuou a assistir às apresentações por diversos dias, mas continuou como membro do público, nunca ficando diante das luzes do holofote. Após o fim de um dos shows, ela foi aos bastidores, onde a mulher de cabelo preto a entregou uma máscara.<br />\"Posso me apresentar também?\"<br />\"Por que não? Se todos acreditam que você é a 'Sparkle', então você é. Vá, está na hora do seu show.\"<br /><br />Quando a cortina, servindo como a quarta parede, foi erguida, o palco continuou levemente iluminado, revelando um vazio escuro e inquietante. Apesar de estar usando uma máscara, ela sabia que o público podia vê-la e ouvi-la. Ela continuava pensando na apresentação de Sparkle, imitando seus movimentos, voz e comportamento.<br /><br />\"Você se saiu muito bem para a sua primeira vez.\"<br />\"Mas a minha imitação... não foi perfeita.\"<br />\"Isso é só um probleminha, mas nada de mais, contanto que ninguém perceba a diferença... Aliás, vamos embora amanhã, então você pode continuar sendo a verdadeira Sparkle aqui pelo tempo que quiser e pode fazê-la ser o que você quiser.\"<br />Sparkle queria dizer alguma coisa, mas a moça acariciou a cabeça da garota.<br />\"Pouca gente, além de você, vem nos ver... Somos só uma pequena trupe e não temos grandes ambições de ficar famosos no cosmos... Fico muito feliz por conhecer alguém como você que se lembrará de uma personagem insignificante chamada Sparkle... Não chore, você pode ficar com essa máscara. Agora ela é sua.\"<br />Sparkle meneou a cabeça.<br />\"Quando usar essa máscara, você tem o poder de se tornar qualquer um e ninguém... Se realmente quiser ser uma atriz, não se limite a esse palco pequeno. Tenha como objetivo um mundo maior e explore novos horizontes.\"",
+   "text": "A garota, órfã abandonada, viveu sem conhecer suas origens ou seu destino até que encontrou uma trupe que estava de passagem. À distância, ela observou uma senhorita com cabelo preto e dois rabos de cavalo movendo-se graciosamente por um palco como um peixe. Apesar de vestir diversas máscaras, elas não escondiam as risadas e o choro durante a apresentação, cativando o público mesmo de longe. O peixe saltou na frente dela e depois mergulhou novamente, criando ondulações na superfície da água.<br /><br />Aos poucos, ela percebeu que estava assistindo à apresentação debaixo do palco.<br /><br />Intrigada, ela continuou a assistir às apresentações por diversos dias, mas continuou fazendo parte do público, nunca ficando diante das luzes do holofote. Após o fim de um dos shows, ela foi aos bastidores, onde a mulher de cabelo preto a entregou uma máscara.<br />\"Posso me apresentar também?\"<br />\"Por que não? Se todos acreditam que você é a 'Sparkle', então você é. Vá, está na hora do seu show.\"<br /><br />Quando a cortina, servindo como a quarta parede, foi erguida, o palco continuou levemente iluminado, revelando um vazio escuro e inquietante. Apesar de estar usando uma máscara, ela sabia que o público podia vê-la e ouvi-la. Ela continuava pensando na apresentação de Sparkle, imitando seus movimentos, voz e comportamento.<br /><br />\"Você se saiu muito bem para a sua primeira vez.\"<br />\"Mas a minha imitação... não foi perfeita.\"<br />\"Isso é só um probleminha, mas nada de mais, contanto que ninguém perceba a diferença... Aliás, vamos embora amanhã, então você pode continuar sendo a verdadeira Sparkle aqui pelo tempo que quiser e pode fazê-la ser o que você quiser.\"<br />Sparkle queria dizer alguma coisa, mas a moça acariciou a cabeça da garota.<br />\"Pouca gente, além de você, vem nos ver... Somos só uma pequena trupe e não temos grandes ambições de ficar famosos no cosmos... Fico muito feliz por conhecer alguém como você que se lembrará de uma personagem insignificante chamada Sparkle... Não chore, você pode ficar com essa máscara. Agora ela é sua.\"<br />Sparkle meneou a cabeça.<br />\"Quando usar essa máscara, você tem o poder de se tornar qualquer um e ninguém... Se realmente quiser ser uma atriz, não se limite a esse pequeno palco. Tenha como objetivo um mundo maior e explore novos horizontes.\"",
    "unlockRequirement": "Desbloqueado no Nível <nobr>20</nobr> de Personagem"
   },
   {
    "title": "História de Personagem: Parte II",
-   "text": "Como a última descendente do Clã das Marionetes, a garota não tinha liberdade para escolher. Ela estava destinada a viver a vida de acordo com o que a máscara ditasse, pois marionetes eram meros receptáculos para as máscaras.<br /><br />De acordo com a lenda, quanto mais uma marionete usa uma máscara, maiores as chances de adquirir uma alma, como se fosse um humano de verdade. No entanto, no folclore humano, máscaras eram representadas como ferramentas para ressuscitar os mortos, levando, assim, à diminuição do número de seu povo.<br /><br />No entanto, como ela não tinha interesse em se tornar humana, ser uma boneca não era uma escolha desfavorável para a marionete. Ela obedecia corretamente aos comandos da máscara, apesar do risco de atrair perseguidores, já que desafiar a máscara havia se provado desafiador.<br /><br />O movimento era um aspecto crucial.<br />Devido à vontade da máscara, ela precisava sorrir docemente quando estivesse feliz, segurar a cabeça quando chorasse, trincar os dentes quando irritada, franzir o cenho quando com inveja e fazer chilique quando desesperada. Havia também gestos característicos, como levantar as sobrancelhas levemente ao encarar as pessoas com o lado esquerdo do rosto e levantar a mão para expressar amor, apesar de ter que abaixar depois, pois morder levemente o lábio inferior era a sua forma de demonstrar os verdadeiros desejos.<br /><br />A voz era outro aspecto.<br />Dependendo da situação, a voz dela precisava ser animada quando estivesse feliz, melosa quando expressasse emoções líricas, calma e assertiva quando fizesse afirmações, tensa quando se irritasse e triste quando estivesse em luto.<br /><br />Notavelmente, ela conseguiu sustentar esse modo de viver por anos, se adequando perfeitamente ao ambiente e até se tornando dramaturga. Ninguém suspeitava que ela usava uma máscara. No entanto, ela não conseguia deixar de imaginar se havia outro tipo de \"máscara\" no mundo. Talvez alguém usando tal máscara risse ao se vingar, choraria ao sorrir, ficaria em silêncio quando com raiva... E diria as falas mais sarcásticas com a maior tranquilidade.<br /><br />Naturalmente, ela não pode fazer isso devido à vontade da máscara, mas como dramaturga, fazer os personagens no palco agirem assim era fácil.<br /><br />Certa manhã, a campainha tocou, mas não era o entregador de sempre na porta.<br />\"Cara senhorita Sparkle, gostaria de conversar com você.\"<br />\"Nós lemos seu trabalho mais recente e estamos curiosos para saber se você conhece mesmo a 'Máscara'...\"<br />",
+   "text": "Como a última descendente do Clã das Marionetes, a garota não tinha liberdade para escolher. Ela estava destinada a viver a vida de acordo com o que a máscara ditasse, pois marionetes eram meros receptáculos para as máscaras.<br /><br />De acordo com a lenda, quanto mais uma marionete usa uma máscara, maiores as chances de adquirir uma alma, como se fosse um humano de verdade. No entanto, no folclore humano, máscaras eram representadas como ferramentas para ressuscitar os mortos, levando, assim, à diminuição do número de seu povo.<br /><br />No entanto, como ela não tinha interesse em se tornar humana, ser uma boneca não era uma escolha desfavorável para a marionete. Ela obedecia corretamente aos comandos da máscara, apesar do risco de atrair perseguidores, já que afrontar a máscara havia se provado desafiador.<br /><br />O movimento era um aspecto crucial.<br />Devido à vontade da máscara, ela precisava sorrir docemente quando estivesse feliz, segurar a cabeça quando chorasse, trincar os dentes quando irritada, franzir o cenho quando com inveja e fazer chilique quando desesperada. Havia também gestos característicos, como levantar as sobrancelhas levemente ao encarar as pessoas com o lado esquerdo do rosto e levantar a mão para expressar amor, apesar de ter que abaixar depois, pois morder levemente o lábio inferior era a sua forma de demonstrar os verdadeiros desejos.<br /><br />A voz era outro aspecto.<br />Dependendo da situação, a voz dela precisava ser animada quando estivesse feliz, melosa quando expressasse emoções líricas, calma e assertiva quando fizesse afirmações, tensa quando se irritasse e triste quando estivesse em luto.<br /><br />Notavelmente, ela conseguiu sustentar esse modo de viver por anos, se adequando perfeitamente ao ambiente e até se tornando dramaturga. Ninguém suspeitava que ela usava uma máscara. No entanto, ela não conseguia deixar de imaginar se havia outro tipo de \"máscara\" no mundo. Talvez alguém usando tal máscara riria ao se vingar, choraria ao sorrir, ficaria em silêncio quando com raiva... E diria as falas mais sarcásticas com a maior tranquilidade.<br /><br />Naturalmente, ela não pode fazer isso devido à vontade da máscara, mas como dramaturga, fazer os personagens no palco agirem assim era fácil.<br /><br />Certa manhã, a campainha tocou, mas não era o entregador de sempre na porta.<br />\"Cara senhorita Sparkle, gostaria de conversar com você.\"<br />\"Nós lemos seu trabalho mais recente e estamos curiosos para saber se você conhece mesmo a 'Máscara'...\"<br />",
    "unlockRequirement": "Desbloqueado no Nível <nobr>40</nobr> de Personagem"
   },
   {
@@ -2631,7 +2656,7 @@
   },
   {
    "title": "História de Personagem: Parte IV",
-   "text": "\"Algumas versões são especialmente populares.\" Quando Sparkle chegou à Taverna dos Tolos, ela admitiu o que fez. \"Gostar e acreditar são duas coisas diferentes, mas as pessoas costumam acreditar mais nas histórias favoritas delas\".<br /><br />\"Mentiras? Ah qual é, eu não tô tentando contar uma história importante ou criar uma experiência que deixe todo mundo de boca aberta... Eu só tô treinando a minha imaginação pelo meu próprio bem. Eu imagino várias vidas diferentes, procuro as partes mais empolgantes e daí recrio tudo do melhor jeito possível, só pra depois puxar o freio da minha imaginação um segundo antes de explodir\".<br /><br />\"Sério, ficar tendo que seguir um roteiro não é o suficiente. Em primeiro lugar, eu preciso acreditar de corpo e alma que o personagem que eu tô interpretando existe de verdade. Daí, eu preciso imaginar as outras histórias que esse personagem pode aparecer. Eu sempre preciso de informações a mais pra deixar as motivações deles mais lógicas e também mais emotivas\".<br /><br />\"E só daí eu vou conseguir sentir que peguei a essência do personagem sem me influenciar pelos outros. No final das contas, eu posso até encontrar outros Tolos, mas eu não vou saber o que eles querem até eu saber quem eles são. Às vezes você só gosta da aparência de um personagem, e às vezes você só quer curtir por diversão. Eu também dou dessas de vez em quando\".<br /><br />\"E, é claro, tem aqueles que gostam de atuar só pra ganhar um dinheiro ou pra serem vistos, ficam esperando riqueza, status ou poder... De qualquer forma, o que eu tô tentando dizer é que, nesse tipo de ambiente, se não for eu, quem é que vai garantir que eu não vou sair do caminho e acabar virando personagem na história de outra pessoa? Ninguém! É por isso que eu tenho que me imaginar e me aprofundar em tudo que eu faço\".<br /><br />\"Não, eu não vou negar... realmente é um vício meu. Quanto mais eu imagino, mais eu acabo ficando imersa nos personagens, as situações lindas e trágicas que eu crio pra eles, as emoções que eles sentem nessa horas...\"<br /><br />\"Sim, eu já tive esse tipo de pensamento... de entrar pra uma trupe, virar uma atriz, viajar pra planetas desconhecidos pra me apresentar, criar um personagem que tenha meu nome... mas daí, um dia, eu tive um estalo!\"<br /><br />\"Se você quer atuar, tem algum palco melhor que a sua própria vida?\"",
+   "text": "\"Algumas versões são especialmente populares.\" Quando Sparkle chegou à Taverna dos Tolos, ela admitiu o que fez. \"Gostar e acreditar são duas coisas diferentes, mas as pessoas costumam acreditar mais nas histórias favoritas delas\".<br /><br />\"Mentiras? Ah qual é, eu não tô tentando contar uma história importante ou criar uma experiência que deixe todo mundo de boca aberta... Eu só tô treinando a minha imaginação pelo meu próprio bem. Eu imagino várias vidas diferentes, procuro as partes mais empolgantes e daí recrio tudo do melhor jeito possível, só pra depois puxar o freio da minha imaginação um segundo antes de explodir\".<br /><br />\"Sério, ficar tendo que seguir um roteiro não é o suficiente. Em primeiro lugar, eu preciso acreditar de corpo e alma que o personagem que eu tô interpretando existe de verdade. Daí, eu preciso imaginar as outras histórias que esse personagem pode aparecer. Eu sempre preciso de informações a mais pra deixar as motivações deles mais lógicas e também mais emotivas\".<br /><br />\"E só daí eu vou conseguir sentir que peguei a essência do personagem sem me influenciar pelos outros. No final das contas, eu posso até encontrar outros Tolos, mas eu não vou saber o que eles querem até eu saber quem eles são. Às vezes você só gosta da aparência de um personagem, e às vezes você só quer curtir por diversão. Eu também dou dessas de vez em quando\".<br /><br />\"E, é claro, tem aqueles que gostam de atuar só pra ganhar um dinheiro ou pra serem vistos, ficam esperando riqueza, status ou poder... De qualquer forma, o que eu tô tentando dizer é que, nesse tipo de ambiente, se não for eu, quem é que vai garantir que eu não vou sair do caminho e acabar virando personagem na história de outra pessoa? Ninguém! É por isso que eu tenho que me imaginar e me aprofundar em tudo que eu faço\".<br /><br />\"Não, eu não vou negar... realmente é um vício meu. Quanto mais eu imagino, mais eu acabo ficando imersa nos personagens, as situações lindas e trágicas que eu crio pra eles, as emoções que eles sentem nessa horas...\"<br /><br />\"Sim, eu já tive esse tipo de pensamento... de entrar pra uma trupe, virar uma atriz, viajar pra planetas desconhecidos pra me apresentar, criar um personagem que tenha meu nome... mas daí, um dia, eu percebi uma coisa!\"<br /><br />\"Se você quer atuar, tem algum palco melhor que a sua própria vida?\"",
    "unlockRequirement": "Desbloqueado no Nível <nobr>80</nobr> de Personagem"
   }
  ],
@@ -2735,7 +2760,7 @@
  "name": "Sparkle",
  "rarity": 5,
  "descHash": "Uma membro dos Tolos Mascarados. Indecifrável e inescrupulosa. Uma perigosa mestra das teatralidades, totalmente absorta na arte da apresentação. Adornada com inúmeras máscaras, ela é a heroína de mil faces. Riqueza, status, poder... Nada disso importa para Sparkle. A única coisa que chama a atenção dela é a \"diversão\".",
- "artPath": "22498bd5da077b56fa1c9ef4886efbf3f62b558d381ff1a7b17e2724143426f2",
+ "artPath": "eb7aa57c0d4fd224c13ba71d84d12f4f8bce0e0c098629756852b084527590ce",
  "miniIconPath": "9da8f43ce94fde4b59e6b912399bb691350719279eb77aea9cda9ceb1ddd7548",
  "damageType": {
   "id": 32,

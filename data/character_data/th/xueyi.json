@@ -5,6 +5,11 @@
  "figPath": "16ada6c299320b650f9b868f0f59b9d9e5610b7724589f200aad84bad7fab9c7",
  "fgPath": "819e62ad80ac68bb47a00a739d7f3b83278a98f86870feb50202c0a670e9e1b1",
  "splashIconPath": "7f5b3f5a4ae7f7eb6ad10093fda8946c266e4f005c5b2a470054af60e16c3902",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRrgCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAsBAAABkGRr2yE471/Vtt0bsI3Ytm0nsyzAmNk2Rj3MFmxnZJv1/+8bVGUNETEBCPUHxvvwYTxExqB5yeXYNbVoG4+YMA+o4bXNulN/ey3CDZrLhj6SqO93Vs2fkQEfQOl+WSdLK+ekDgBph94FkkiJUqDHmwcnZD8RSYqkSDpJU9De/VmkQkm5H5oObJWlIkmrC3FJWyQqkmSgJcg7Jfc/sno2wABHZBkhp4/l8FBxnowidXuFh5SLsiQpUqRe7n4wEF2SDX45kiIDagSSkLTuq/61cpSo10UwwOy3+5d3f5SV7mz5dKQxETCIzYH5smqHXo1+uLp3BaKL1xkc7Y2RcwEvzCAOQDI8xPkGAAAAVlA4IIYBAABQBwCdASoUABQAPm0ulEckIqIhKAqogA2JbACdMoPHacJoBzuemq+hL+mfpmexJ5VVyANiQNI8K+JgPt8CbD6PPnWAAP7zQDuCCP/59oTjeJ+U/HaaHGboBSd5P2KBOl+bPZS2IjPSjO09hzsLLI7bt+JrJH8O/d5pyNnidr12d/xHjXTDm78h1n9miAJl3+FN6acdz9m4rMDF7hS8jlag2JvJfxOgH1U0YZF8IHzDxsiQdyMCAzjy2BEzAEy4bps/Cy9XVPLlHLHTnkmsYES9OrCH+9O0BuGtWYpOZSxMSScUj6t/I9vGaF28Brg6XFbmC4vwfBeqRBhM2Omb84H5tgaOv/g/7o1Q6NFXu6D8+21n+C49cQEfLM8X8DtQ8vrbaht3PgM+Tb1PfpID88deGcqjJzaDNdZ4qfjg+MXX5SB25zulk55YbX+A/l1fq/7+df8ftrE76Y1pi6BVD/PV8oc5Bte/v+jAvsSKIBn7PSD7q8vfYQ1gpnnLJo+7yNlLgUCAAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "รางวัลคะแนนสะสม Simulated Universe",
     "เกียรติยศนิรนาม",
     "แลกเปลี่ยน Ember",
+    "ร้าน Starlight",
     "รางวัลกิจกรรมจำกัดเวลา"
    ]
   },
@@ -64,7 +70,6 @@
    "rarity": 4,
    "rewardPath": "/material/351747",
    "comeFrom": [
-    "Stagnant Shadow: Scalegorge Waterscape",
     "Stagnant Shadow: Scalegorge Waterscape",
     "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
    ]
@@ -190,7 +195,6 @@
    "rewardPath": "/material/635673",
    "comeFrom": [
     "Calyx (Storage Zone)",
-    "Calyx (Storage Zone)",
     "ร้าน Ember",
     "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
    ]
@@ -226,7 +230,6 @@
    "rewardPath": "/material/836259",
    "comeFrom": [
     "Calyx (Storage Zone)",
-    "Calyx (Storage Zone)",
     "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
     "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
    ]
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920200",
    "comeFrom": [
-    "Calyx (Storage Zone)",
     "Calyx (Storage Zone)",
     "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
     "ร้าน Ember",
@@ -1611,18 +1613,22 @@
  "skillTreePoints": [
   {
    "id": 1214101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1214202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1214203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1214204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1749,18 +1755,22 @@
   },
   {
    "id": 1214102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1214205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1214206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1214207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1891,14 +1901,17 @@
   },
   {
    "id": 1214103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1214208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1214209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1931,6 +1944,7 @@
       },
       {
        "id": 1214210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1992,7 +2006,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Xueyi จะสะสมจำนวนชั้นของ \"ความผิดบาป\" ที่เกินออกมา ซึ่งจะสะสมได้มากสุด <nobr>#1[i]</nobr> ชั้น เมื่อ Xueyi ปล่อยพรสวรรค์แล้ว จะได้รับ \"ความผิดบาป\" ตามจํานวนชั้นที่เกินออกมา",
+    "descHash": "Xueyi จะสะสมจำนวนชั้นของ \"ความผิดบาป\" ที่เกินออกมา ซึ่งจะสะสมได้มากสุด <nobr>#1[i]</nobr> ชั้น เมื่อ Xueyi ปล่อยพรสวรรค์แล้ว จะได้รับ \"ความผิดบาป\" ตามจำนวนชั้นที่เกินออกมา",
     "ultimateCost": 0,
     "id": 59334,
     "name": "Perspicacious Mainframe",
@@ -2031,6 +2045,7 @@
   },
   {
    "id": 1214201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2096,7 +2111,7 @@
    "unlockRequirement": "",
    "cnUrl": "be9a53e7ca6aead7d43f36a485ccf0c57c9ed76a29d2a2b6b719f6ccdce6d7a5",
    "jpUrl": "98fe630d7a69e05efaa8bec231aba4fa4b614456f08805e132e5e3e91cfc6b30",
-   "enUrl": "a8a20c94a91ab11027fd52374e6d7652aad38e63fa7d22dc0df903bc33a2aeeb",
+   "enUrl": "8e0c902f8a087605f4ef0d5f3081668d0e4fcdbf8d3302cd16bd44b216b2a985",
    "krUrl": "9e656dfb2ab88b65a435a07bf894caf3a82ecaecd79cd690ebb5eacf536bf782"
   },
   {
@@ -2106,7 +2121,7 @@
    "unlockRequirement": "",
    "cnUrl": "3ad93efa4abfb229f36cb75bf0257cc0c3272253b482f459dfb0dc786e66c4c2",
    "jpUrl": "1947e0119c916095ff5a2c179efec1adfc88522984faabc30b173418756bd42c",
-   "enUrl": "faa7b468f546d23ade402f98a81f5577c88c46caa781df621ccc77ca4b60fbe0",
+   "enUrl": "a6b9beae2442af24c39b4eadcbde546bc385f3ca619ae774701d568a2e1cc99b",
    "krUrl": "428a2540297d6ab1763296e425dd8925ffaceaa14d8e50915c161699d17c729e"
   },
   {
@@ -2116,7 +2131,7 @@
    "unlockRequirement": "",
    "cnUrl": "25c20abfa9d786ec31e61384ce8602d01eeec8291b422d6befa5d7ed0bdcf785",
    "jpUrl": "011a8f9e271951b84c7b37b4bfa50a8f6e573ffb1df4a322c5831aa3fc80380e",
-   "enUrl": "578ffaa64e4b73471f9dbabaf4627e1e14adc377460d4fe89fc649d1de973d13",
+   "enUrl": "b8b0e908ec39b0d3edda712cf496052c4b11050e5dce60b7bdafb6383765ca45",
    "krUrl": "4b9f9e23fa6567a5a6109cc8aca54c4d45998ba988802c40f321567d2ed94f9c"
   },
   {
@@ -2126,7 +2141,7 @@
    "unlockRequirement": "",
    "cnUrl": "751af41cb606e4f64c318689dfa39544fd0962cbe2bd0c06fd52facdb4a785bc",
    "jpUrl": "ce489e81299df0dc5ced49bf76edab0565903877afaaeca0bf984f4cd4191b49",
-   "enUrl": "f531c0261a9bfb6831e59c90e346e29098d1c3507fd3a284c46b76639a6c03de",
+   "enUrl": "b62279a6cf82d701870517c9378b2060a6ff58432f6f1aedfa1cffaa7c524d26",
    "krUrl": "5635f1cf04412b7ac741a8bd95eb87e3dea454c571c21ae5ca607ac19dd63b62"
   },
   {
@@ -2136,7 +2151,7 @@
    "unlockRequirement": "",
    "cnUrl": "8c585fada7858c60d13bea323219afe5b56d1debb9f0d6f8fffefe30ba7e3e17",
    "jpUrl": "186efb768727569ac0d6d51633ea0f08b010bd735b57382dcb384c410a445503",
-   "enUrl": "79c0d184788b106c8bcec4f2de32b59a52600264a990346dd54e2917af0650be",
+   "enUrl": "c48e1b9e8f58cd096d90b480d6a3902ed2349f78d2647f66135c077b246846af",
    "krUrl": "db1068d53cbe59498ada5b1389110a0df89bbef32c6a00ff878835375177dbca"
   },
   {
@@ -2146,7 +2161,7 @@
    "unlockRequirement": "",
    "cnUrl": "40fded049e14ad376a082313c3deafbccb46e0fdfe40efa27af2ed447110da95",
    "jpUrl": "c263ab3ffe0038b617e597e28ebe30ca10ff1edf76a9704ea1aac939697e496b",
-   "enUrl": "2156f97f7862aadcdd338f357e6ecbf32d02909dd39935d9c7a1d879afba672d",
+   "enUrl": "1c4447ae7719c0500f3f7259bfbcaeae5e00507161f76821117631c4cbf0e491",
    "krUrl": "18c7ae3edcd4dffd9ccd0584e41ab5dd38041a7fd5cf20dc7b6d6c179b2e9caa"
   },
   {
@@ -2156,7 +2171,7 @@
    "unlockRequirement": "",
    "cnUrl": "ad3f6779e2f6762fadbe36bb561999b7052179ff378902a90228401a0b90dece",
    "jpUrl": "a4e53981d27e23388f3a76613e62af12e5a33a5edb78e608a1c2fc2dbf8c443e",
-   "enUrl": "1811bb4fc445a93e5b765fa7cadce8c6f2d167f2cc284ff0e847ac15719876c3",
+   "enUrl": "230d84f8f19e432bbb66b2c893f6dad5254b76a08690fb28fb910947e44c6ebe",
    "krUrl": "601d47b1e2c04e1b5d32e391a275ad5a7cd8d1bce9b0525c090bf92fe4b482f6"
   },
   {
@@ -2166,7 +2181,7 @@
    "unlockRequirement": "",
    "cnUrl": "3a7e73b0dd626f991f41f3edade0aaba542b608f481c861f9bed81a9c5c7b717",
    "jpUrl": "7706ecb5898c8103f3c609c36e638963a74613256d6279ba7f0369de14d1f6c0",
-   "enUrl": "a8b5610b140e782774eee946964e42ce3149b8fcbbddf82554dcd07ade663f8a",
+   "enUrl": "d6e4f193b37f6b2ecae5de52081688da61e2a1f2aa297b7550bf86fc912355d0",
    "krUrl": "033a50610f42f029c5912784d11b014dd7fbf008fd4d6c735d8e88c1271ede00"
   },
   {
@@ -2176,7 +2191,7 @@
    "unlockRequirement": "",
    "cnUrl": "fb99d6416ca6cc5408da4677927e11744bb1ad839614893c08c2d0af118c4014",
    "jpUrl": "2bb1468248e106059007aa66c0a1caa481e091fa27041150b87e7c68730d8880",
-   "enUrl": "a3f6440a99077bd76945613f52b673a6336e5671f8e04cc511e7d9d52be1bd41",
+   "enUrl": "d26f18230eb8c4aed7c147eff9b90481ace8daa82993a7e0c4ce1819e05de214",
    "krUrl": "6efa8cb254fe1b41d64c6965b77403919fe5adac709d46d16e756054df801f09"
   },
   {
@@ -2186,7 +2201,7 @@
    "unlockRequirement": "",
    "cnUrl": "98f02be7fa52b92be984c11f5e3b0b5ccc844967cfe604191bd0a9fb0478fb57",
    "jpUrl": "d20245f25acddbdd300b5ffe4b400d0c7d6871914de26317ada7b5eea31e5a41",
-   "enUrl": "9ea0d24c1d5c52462fe53dfbcf78845e7c8ed178bbf5bd66d744de8cd9312a76",
+   "enUrl": "05417b7135d69ba01e3dcf511d0a39da01fb9115420913681e7774d31976f487",
    "krUrl": "627929ba0e5530de6d6f56d825e3a5bc2a97c7086f8c440dc3b056298bbd589f"
   },
   {
@@ -2196,7 +2211,7 @@
    "unlockRequirement": "",
    "cnUrl": "8e245503bc298f67f41ffc088d137e2c5e79786a743a85ed850a80f89692bc29",
    "jpUrl": "ee9b45a22d05876a64d194f56464cf356b4cea153948e7a259db9aa07cee5fc6",
-   "enUrl": "61dece5643c5e2f4a942252760f2860587dec506082fdf60510e8cb4229b19c4",
+   "enUrl": "9c8a0cb97eb06b27e5a19079cb65eee5748dd72cc23a65944e2a8558687bc230",
    "krUrl": "9f50b6fc216d4c3342bf354ceef2ffab03f544a9343955f86619f9f5f4414598"
   },
   {
@@ -2206,7 +2221,7 @@
    "unlockRequirement": "",
    "cnUrl": "a4eb4308b97af60b653b238f9d2698ae7008d448ad799a9dfbac76eb24685e44",
    "jpUrl": "292599ffadff3fa58cbce845e6da024bcf26422b0fc0fa340684cb3d0cf11c5d",
-   "enUrl": "4db82bf5784c40ced0d40eabcfed9968c6591252400ce2dd414afa8201221864",
+   "enUrl": "de1e780c639f9b145301e22016dec828e5a8b90d3669e34b72f08869d027557c",
    "krUrl": "bbe64181bd8ef08c61771d5acb9fc7657340e225a04cdb501832f71a29dec487"
   },
   {
@@ -2216,7 +2231,7 @@
    "unlockRequirement": "",
    "cnUrl": "adf5bab05f5781236f67cbc74b09ba8516f893947448bdac2b8f67e404bc7f4a",
    "jpUrl": "d2067179258c88e1fc580d562f9066d84325980d3994fbc585c69a982b28af6d",
-   "enUrl": "1ebee474ff75c979fdefc50fb854057cc37db6f5a88e96edf77e6eb81307b404",
+   "enUrl": "5d0c1695e9243dd617bc2ca2517072bc686bf2f002686955996f333fd0320723",
    "krUrl": "46e4d3d04111e0a5cc9d911a49284db2989df77af76be0d186b9df96eb9c299c"
   },
   {
@@ -2226,7 +2241,7 @@
    "unlockRequirement": "",
    "cnUrl": "a4424c30ed643de3dd153a0b7f421e25d383c78037b2409f9c9f4ac0b74c71f0",
    "jpUrl": "71853578e8a9bd390ce9cdbb81e11e7468a8f462653113689b0cc0efaf22f080",
-   "enUrl": "2f89b49af4ea075d156b30becd8375a4ef8b20d727cf37a92c27f60c9f7e3add",
+   "enUrl": "5b07e8d8b070dc9edfcfd5ba92cb8c9dccff98f498b18e4d30771eb10a57b693",
    "krUrl": "8ce86035ef5a0d5986aa49e00186068d5574f15382f536cb7b2865ee47537355"
   },
   {
@@ -2236,7 +2251,7 @@
    "unlockRequirement": "ปลดล็อกหลังจากสำเร็จภารกิจบุกเบิก \"น้อมส่งวิญญาณ ในหนทางอันแสนไกล\"",
    "cnUrl": "597dedcc03881f9fed4997e2c4c48f1d7bf0dfcc7d01ce59fb627cfcc6dfddc1",
    "jpUrl": "da2e9ac60a59a710a0a52f53ce5572150e1f1c2efb4ff9461e08c58e618b1421",
-   "enUrl": "e8304d7c565dc58c50cefb3fdeb89e410c4abdd01c50f706351ac9480b3f2b4c",
+   "enUrl": "0109187a746cfd2bac0a51463265a2135371c93bdfc37765c5d234af22e3af82",
    "krUrl": "3d4d351cf339558e76ac27f1a1648c84255348c621df6b7e225262e3a47f2169"
   },
   {
@@ -2246,7 +2261,7 @@
    "unlockRequirement": "",
    "cnUrl": "4f9b8a3bee52ea4438de0c74cb73177597930e0c83b9dcae86be354696a2505b",
    "jpUrl": "08d5eb51ad05048ba62022a6b47036126894022c376bbd52ef48740e9dab78ad",
-   "enUrl": "8eb6138cbc42c4b6153a539fd3dda8c0bd5a91f9c71efe5724aad1e0ae43bb67",
+   "enUrl": "79a66990d12a0bc04c8236d9dff09746748094d3c788413a444f3dd08dcf3124",
    "krUrl": "23fd947035e1ba45c5f9116d5f161bea3915082e7aa42b51cb426d04e8c3acba"
   },
   {
@@ -2256,7 +2271,7 @@
    "unlockRequirement": "ปลดล็อกหลังจากสำเร็จภารกิจบุกเบิก \"น้อมส่งวิญญาณ ในหนทางอันแสนไกล\"",
    "cnUrl": "cbf0fb3a9b98ba128590621a7bb7b19fe3f8eb4e7d3e4c55ed6d0423addddbd0",
    "jpUrl": "76ea87bb259c01723e7c1151b25c1b31fa76757be0a754a868e05195ce38ad9c",
-   "enUrl": "987913562b764aaf66af2b04df476ed4d7af24420967dda68829124a4967d2ac",
+   "enUrl": "b1264a8da68f83e5a4f24d436efb8e18b7c1cb64b5ee98eefa6ae996ce805c7e",
    "krUrl": "640a700caca3f469af90b80063ba901c16604bc1d469f77d12d2cc2abbf78d69"
   },
   {
@@ -2266,7 +2281,7 @@
    "unlockRequirement": "",
    "cnUrl": "069091a078a8f55ce0476403e583da981c8f6e7aa13d67a7bbb875ac9bac96b1",
    "jpUrl": "5a85f510e318a67ecca26c468d7572a4bc2310ac6de6071bf08a2bb5124fa5b8",
-   "enUrl": "3e1ac91da0f35a132a6ba26c77423fccdcafb4d61d57d2bc4d8a68d181e7abf4",
+   "enUrl": "342b7193dbf9a0cfe874e0b1763806cce3bc8e620dca8de971b476de79200a9b",
    "krUrl": "05268031624ecc62252c504b158d0606163c62538f5ad292161e9e83bb20b53d"
   },
   {
@@ -2276,7 +2291,7 @@
    "unlockRequirement": "",
    "cnUrl": "746713621443ad3527c442f1e8a9839971bc78cb5ddbd509b1be98f51ed73012",
    "jpUrl": "27ff7c5a3ae9a1fc340a511255e5424fde4bf0304981f2f823f19ba22613df89",
-   "enUrl": "9325f4d5e93a7933d32ae097762daec5ac0355ef0747cf682c78318a7794c5d4",
+   "enUrl": "42f62aaf89e7f92b67a99e9a1d9d9d10df63def98e29aaec6687d55651b13932",
    "krUrl": "1fbcbaef511c6f2422bf39480aff851d452bd0da6480c109e1925a2b98dee3be"
   },
   {
@@ -2286,7 +2301,7 @@
    "unlockRequirement": "",
    "cnUrl": "51e667c6575954fd9afdf85567907bb77edf08784d7c7910d0fa84bbe43dc597",
    "jpUrl": "33d47d1ef412c48690c2108b409e42ee71ceaf00d0039fcb7ace12f6cb9a7ebf",
-   "enUrl": "3587440deccc8f39080cb54eeec72d7ee4a41b5a25a8cc720e74859ef6cb73cc",
+   "enUrl": "26aadec128188ae0d0cae83ec729a56eae52a1a8b4411471d811fdf13c2ba5e9",
    "krUrl": "d22b37472e258e5f9711bf559748cab11c2c0a29775fc878e13f844972b45895"
   },
   {
@@ -2296,7 +2311,7 @@
    "unlockRequirement": "",
    "cnUrl": "409f2c0976c85ff0e30def079064ff74ef1c01722d0a5db76925f3e792bc617c",
    "jpUrl": "cb229e45136822cec2eb0b423a1accbfe54c5061520d6a8025215209003c6ade",
-   "enUrl": "7ab9e3bca506e517361d99ebaf58b4e69cce43c925dab6a614a0b7b03e3022d8",
+   "enUrl": "11d484fc7ad78048392e28f908174ce7d0478a190c6b9bffeeab4ec95979a0d6",
    "krUrl": "1c3a223279a36c021b6c4b5edf5c9526906255ae310cbba5661de0f219eee3ef"
   },
   {
@@ -2306,7 +2321,7 @@
    "unlockRequirement": "",
    "cnUrl": "45b328740b5a2ff10a02ac21a884880621ecf712dcf41def87f7bbfce3666b5c",
    "jpUrl": "e2e00af490922fe2fee9775c213de1c23814ed96abfc80c653ec83c7eb23f313",
-   "enUrl": "94657c57dfb1d62c583a091fc377b4f3297dd4f5509e2d89f54e32911ba75ebf",
+   "enUrl": "2f082651aae8774d29b3d06e0a845e00e839997af96e6611578a27b49b6cf070",
    "krUrl": "cb1274675f62714f36a816defadd2a3f3821d7828a55c2f65d7a0f67772e2f14"
   },
   {
@@ -2316,7 +2331,7 @@
    "unlockRequirement": "",
    "cnUrl": "6895b6aaf947316662d611bc660c6cbd4f2092d32d9d4e76951705433ec99fa0",
    "jpUrl": "72b09a42efe88da6e4e84839ff2bbe47a8dc366af18be861c3b93b76d32d08f7",
-   "enUrl": "7383c2229af89373a05ae5fb80300070d175ae73f8f19a9f4b25e3891c902735",
+   "enUrl": "efd87ba8cae164ed3a9a4e22e90dfb20715ab07b9243283f6a161ef01989d5e5",
    "krUrl": "f251dd95e958e533486c952706510ef520fdcc8887ff727eb15a0c38bba0eb79"
   },
   {
@@ -2326,7 +2341,7 @@
    "unlockRequirement": "",
    "cnUrl": "60c9847acc154ef1d03b5e138d7cc56677378aefd5e06e889c8cf1a91664a8ff",
    "jpUrl": "d84ed4611c32aeb0ee453b884258e50f43872342e5a97dbf50f3a9ce51e56268",
-   "enUrl": "ea7ab33fd73fc39b62a830f71c24e8b7c82f72d942c2cfa1bbcb926abf0ca608",
+   "enUrl": "3ca6f5c2f0cec72cb03a059487f26d75f93747cea51f2df71dff51740719965c",
    "krUrl": "e351550605d583265fbdaefffc96245479faa77262a1a11830a12b3aeaaaccee"
   },
   {
@@ -2336,7 +2351,7 @@
    "unlockRequirement": "",
    "cnUrl": "8f560f324a6582ddf6817462ef64cf4f582f6defc93e68b7716505df6366a100",
    "jpUrl": "df0c6c3c2cd6e510040c67dcaf855e6eaef4178f3794788877c704742d9e9ae2",
-   "enUrl": "16cf179c864531f04810fbc96021ef014321fc7317d5086795cecec74a157fad",
+   "enUrl": "5eed46293404af57bba203a832c16ba684518070e6f26a85875149035082fd51",
    "krUrl": "6f8ec7281676c355bfacbd72197535095d90051940e63bfcd49b80685f91cb95"
   },
   {
@@ -2346,7 +2361,7 @@
    "unlockRequirement": "",
    "cnUrl": "a890d747dd4df16438892788bc93bdc5c59a05104d978b0d1971bc8c091680d2",
    "jpUrl": "e2518802e5b6f6aa60050fe64b72b5337b1dd162db38cf460a835ea814d67334",
-   "enUrl": "66b894703d41a2ad483e980d6c476f9ce2bf095b4a5d08d977124495d123af70",
+   "enUrl": "05e6460249cc6e39f9e41fc586d5dc947c0d17913cbff3052ef0ce7d470ab36e",
    "krUrl": "a087400b0ff95f3b92716f07180ff6c3c1a84dedd487c2e98f371dd346600432"
   },
   {
@@ -2356,7 +2371,7 @@
    "unlockRequirement": "",
    "cnUrl": "5664744481bef9c2a8c7af9754c6943a2ad118d8e0b0056f5caf993f18bb5194",
    "jpUrl": "04773beaa5e5602ea71b6f06928d13cd86f462dfcd3d25676c0debec71f6b73e",
-   "enUrl": "b25cb840e8bc95036a691f33983460a1943aa040731ef4422458e91c778bdbe5",
+   "enUrl": "da7640eef3dbde838cfbf5e3a10830ff9ad5bab2409209dd9f9433866945cdac",
    "krUrl": "0e031d1bf240fb947fd8744b811e78641a0d54377d93fe3f10e48de05ce2e9cb"
   },
   {
@@ -2366,7 +2381,7 @@
    "unlockRequirement": "",
    "cnUrl": "6e4312eadaac3cc4d8555427446a6d0bdd97f5caa9553f34dac232b9747cb43c",
    "jpUrl": "08fa2859329aa2ac10b37f3299e5ff126fb32e8cf9b9bc122e43044a03c1c4b1",
-   "enUrl": "856d26ca8e84b2bb399030b9b11485d077b76731d66bf1f84f2eef2a848c686f",
+   "enUrl": "b792c6d6b6e61c5c4de0011c974e4ff76e86a687fc9740359c5f7195e51dbfc7",
    "krUrl": "d146ab0c0d871665655bbcf2ca4a1a2ce064639282dcf4da231ea26c6d377a1d"
   },
   {
@@ -2536,7 +2551,7 @@
    "unlockRequirement": "",
    "cnUrl": "c676dfd997b04c1c0a1460307c5a09fb85b1fe373cb530597146d20a6b826a6e",
    "jpUrl": "cf5394ea2bad0223dfe7ce90883cf37acf786f21e37c5f0d0d73f358c6334e74",
-   "enUrl": "e22aede544ef56a39eb0989e403f06e53e65856e0d27f3882adfa00e6ee0006f",
+   "enUrl": "e86bdd7cc2529a5b64464e0b99a919b521a7c8840cafc67249379fc19124ede1",
    "krUrl": "6957abdc7c5ebac849e442d27752ef452b1e5c0ddff0efdb1d9095bff7aff380"
   },
   {
@@ -2546,7 +2561,7 @@
    "unlockRequirement": "",
    "cnUrl": "0d398086e00a52c5a6f480af7562b87de40e69b0105ffab7f84bbc0c70cfa491",
    "jpUrl": "7b17ab5f70a15c0a2e9bfbc04bf21b04f36df2fa15762377990452dc6bdca05f",
-   "enUrl": "bc9e4654810f47aa5612ac0b07cf814e2a2026124bf1e81b7ab54d293764a406",
+   "enUrl": "e499c9c60e8e04e80cf027e3b5dfc3224014ed83a96944b8bc9a9ca4afcce8a8",
    "krUrl": "16f7777addb26d24c19afb4e23e3a73826fa75b8537cc0ce5a6a5cfda89786be"
   },
   {
@@ -2556,7 +2571,7 @@
    "unlockRequirement": "",
    "cnUrl": "c0c7ce195d584f699618b7aae62aa6f3c73d15acdbd4073f2d38d50edc5423c5",
    "jpUrl": "8be816a694321ffdbb3b2e14e2178910cf1a9517006bdf7c97063bae8c7c4cd4",
-   "enUrl": "859c9e766e7a8a1b3834b27bda0f1fcfec353554b50b61eaa2835b9d69fbf3e1",
+   "enUrl": "4225c1936bfb5882490a3a665306a2cb8be0e85f36b9b89efb32ca7e187426fc",
    "krUrl": "ed25eafca0380fd9c66709000b1d1ea1f337b08af7708ebcb2e13424549997ea"
   },
   {
@@ -2566,7 +2581,7 @@
    "unlockRequirement": "",
    "cnUrl": "67e577e52aa79ef6397ed7d9ca4fd5dcd1f2b03b1772e7df1c7538efc17b3872",
    "jpUrl": "f5d259da85d2bc1a58ce1c0d212f1c48e736bce83c14f56147931c9fb96526a1",
-   "enUrl": "40676a7aee89391b362ecface9c2897a34989bdbc0e14f11a0160b2ebc0cf29d",
+   "enUrl": "0134afa23582b8b25247ead36701b9348f4053f4b0c4bf28e611de3e37c0df2f",
    "krUrl": "c019af7e264e828d79375e574f110bfd36a3b84557bb38e71f3d5125df5b0f25"
   },
   {
@@ -2576,7 +2591,7 @@
    "unlockRequirement": "",
    "cnUrl": "95ab3073afc074f049b8a7f732c272272af354606c353cd7a0fef60aa964d7e3",
    "jpUrl": "13473377a8f69ba763813cfa5349ab75bbe3070555184fdbad0a92cc75d8e2eb",
-   "enUrl": "dccac9c0cfe6e018c1b687436e7ea5bd9e2389a4a25636101864e4afae0f39cb",
+   "enUrl": "642c2152503c7cfaaeb16ac2b1dcd5fc2424cc19201ccfd4d1c0947f4a1fc90a",
    "krUrl": "92fd34c2fbaba73af403f19ef74dcee3f8f586a7c7a3f944a52e97f2193475cf"
   },
   {
@@ -2586,7 +2601,7 @@
    "unlockRequirement": "",
    "cnUrl": "54300e3c3f4bc476d54ee607ef51e56e42f0523b8719dec5240e726e3d59431d",
    "jpUrl": "3b5b9155f8a558588c285e42028d42051ce5031c3d9ae19a87dad3f107306dff",
-   "enUrl": "1a5f54bb3f04cde4edf813e989bf7819dbe3e600db6b25e54d35a91b9198d24a",
+   "enUrl": "13a2f450172797387c443827c9caa0cbf001f477110babf7a0cbab8d6a75e2e3",
    "krUrl": "6d47ec93727c4cda88cb619aa8d2fe4bd6f0a06fccd25da551e16397e9f091bc"
   },
   {
@@ -2596,7 +2611,7 @@
    "unlockRequirement": "",
    "cnUrl": "f07075cc3b2c2d4d44474af39b83d1921ea0f05f7c1fd8d467f00cf4f5a30b35",
    "jpUrl": "04d5e172b4e60f0927d49ca5e027fdee00baec9ba152fb8180885637bcc833a5",
-   "enUrl": "068debbc726109e97a746283da5a3761f7f424dc2057c5922a6f0c0152003e40",
+   "enUrl": "ada814ef7bdf5fe0f697d32b0524fd75121c7c6f79980f56b2d912f2ab390ed5",
    "krUrl": "136f6748d94f2e921db2838b0bc8338adc881da52270377f0f854db83b27279f"
   },
   {
@@ -2606,7 +2621,7 @@
    "unlockRequirement": "",
    "cnUrl": "1b294aa46ab4d9719c47a3173a056df68823837a1ca5a957365e641603acf590",
    "jpUrl": "89e3ae3e814a7864ea15a74c3d97bf88286f8b0bcf4f5067cd23c2a132350c7b",
-   "enUrl": "f75400b2d32dbc1f3fa1e45c66a04e9883eed77c0213fd6f9c8d18b40896e50a",
+   "enUrl": "e03caee3bb7c1bbc7d0e3723f1ae688b7fa5ba6c9978a7a2321697582515925d",
    "krUrl": "ed7ec91d9865e2b9142a4bf9b87b2c5e9ccb547a5e0e1ceb4ccefe8ca5d1542b"
   }
  ],

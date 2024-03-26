@@ -2,9 +2,14 @@
  "spRequirement": 100,
  "iconPath": "afe8a2144149b6471090e8b144d3b91e8481c1e5d87e597e6f87a46e715c0544",
  "bgPath": "1df7e65eb4fdf58129687933e6ea13bef8606a14678032f4e38a2fa79ad20a83",
- "figPath": "16675b83758d6f800f40263a474d4904bd318b76a49487131f08d45e4b6791fc",
+ "figPath": "2dbb6c98ead272f3fa82a5a6241a08d5afc915f2ecbbc9294195e4841e13c145",
  "fgPath": "cf6114cacb12907786e934848f6d9e474618a12f0bd2f4a6afa8527b92cfa69e",
  "splashIconPath": "b32d5a8078f427207704521da532db7dfa0fd0d5a4dfd6b33410320b7f9da73a",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRpoCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSPUAAAABkGtr26E997zzd1Zs206XMq15BOmSNumS2nZv23ZqV7Y5M+99FZ9OISImQLUGVRtC/Zx9V5alSislQVoBcLef0nJBGr70CXmR8Xa80pKgui0RIpDxeZCCFNR6E/KIMf+5KCmRTvDfpdjOWSwFbSQzNhhT8EhBU3IiNja2za9+6v6caBsbU/J/qFaTGwMYQ8E1TS8wpoKJPJ21hGhTDf9Z0+0l0QYbDI58H3ICcuNSXPbfkl4rX1Dk0UAWY5FnkUNSy2GAPx9/ULbY0TlJpQVn3v358njV+sevL+1dPl6SEklNo2bO6KTQEiSFRJLSRKVBUkiDBABWUDggfgEAAHAIAJ0BKhQAFAA+bTKUR6QioiEoCACADYlsAJ0yhHp4+Gwr6LtnzzumAegB0l37kEa3upfQADpoXJfA0NpI5//KDCndKW7LS8HnQ2QA/svnRYVF/Drzivto8cWf193OG+saDVf9w4SWpYVRAuqzadDXL7xNK9x/Vvyqeno55uoVMyrLE2dSoZOJybCGu8QZ/qjV7MScDS2vjRuRqWJSk51L6MedyuL7kDX/PCU9MZVNvwrgbA3mGIShQCqQGqi3LY7Ob2BFDppHDphz2ZR/8S7wgdUOPBVKG0MJLH/ph8xol6IzvmYv5IH8qfEfjAWheuH8z6LZJlv5NlezCH+0sUAnmLg396Ff6xlb/dCv+CHgz/J3lmvMBPZft001+pTyU/M/t+PWJSaD/wQ88GemvFLBunpoPbhQ8WcaP3MzhJo9AyImcBSspSC5bq3NBHz+Ld69cF6zz+sRg7UyDB4ZCuZNFIN0I9n4LdEMS2pq5unudfbw2Z4AlsEyJg9RgAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -21,7 +26,7 @@
    "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
    "name": "Điểm Tín Dụng",
    "desc": "Tiền mà Công ty Hành Tinh Hòa Bình (IPC) dùng để giao dịch với khách, nay đã trở thành đồng tiền chính khi đi lại trong vũ trụ.",
-   "lore": "\"Mọi người bôn ba, đấu tranh, mua bán, cũng chỉ là vì những con số xuất hiện ở điểm cuối. Nhưng thứ quý giá thật sự, lại không thể mua được con số của công ty.\"",
+   "lore": "\"Người ta bôn ba, tranh đấu, mua bán, cũng chỉ vì những con số xuất hiện trên thiết bị đầu cuối. Nhưng thứ quý giá thật sự, thì con số của công ty lại không thể mua được.\"",
    "purpose": "Tiền Tệ Thường",
    "rarity": 3,
    "rewardPath": "/material/29328",
@@ -49,6 +54,7 @@
     "Thưởng Điểm Vũ Trụ Mô Phỏng",
     "Vinh Dự Vô Danh",
     "Đổi Tro Tàn",
+    "Đổi Ánh Sao",
     "Phần Thưởng Sự Kiện Hạn Giờ"
    ]
   },
@@ -190,7 +196,6 @@
    "rewardPath": "/material/635671",
    "comeFrom": [
     "Đài Hoa Nhân Tạo - Lằn Ranh",
-    "Đài Hoa Nhân Tạo - Lằn Ranh",
     "Đổi Tro Tàn",
     "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
    ]
@@ -226,7 +231,6 @@
    "rewardPath": "/material/836257",
    "comeFrom": [
     "Đài Hoa Nhân Tạo - Lằn Ranh",
-    "Đài Hoa Nhân Tạo - Lằn Ranh",
     "Máy Ghép Vạn Năng - Ghép Nguyên Liệu",
     "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
    ]
@@ -235,7 +239,7 @@
    "id": 920198,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "ed9df14a2fe247f4667c3573aa6eb1f367c5435d4c699eadef89c51e4d42d084",
+   "iconPath": "365bf3a80928eea605cbefd72636c62eb0c1887b4652520c3e9c3f99a55f0cb9",
    "name": "Mầm Sống",
    "desc": "Mầm non nhú lên từ hạt giống Trù Phú, có thể tăng tương đối Vết Tích Vận Mệnh của nhân vật <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Trù Phú</span>.",
    "lore": "Tỏa ra từng luồng hơi ấm, tất cả những nơi mà bộ rễ này cắm xuống đều xanh tươi um tùm. Đất hoang trở nên màu mỡ, thảm thực vật héo khô một lần nữa mọc lên đóa hoa trường sinh, dòng suối trong vắt từ trong đất tuôn chảy róc rách.<br />Đến gần nó, cơ bắp của bạn như có sự sống riêng của chúng, bắt đầu rục rịch sinh trưởng, tê rần kỳ lạ.<br /><br />\"Phàm là nơi tâm hồn sinh trưởng, cuộc sống sẽ không ngừng sinh sôi.\"",
@@ -243,7 +247,6 @@
    "rarity": 3,
    "rewardPath": "/material/920198",
    "comeFrom": [
-    "Đài Hoa Nhân Tạo - Lằn Ranh",
     "Đài Hoa Nhân Tạo - Lằn Ranh",
     "Máy Ghép Vạn Năng - Ghép Nguyên Liệu",
     "Đổi Tro Tàn",
@@ -459,7 +462,7 @@
   },
   {
    "id": 3,
-   "iconPath": "af4e41014864a8f554e377fa20b54a0d26f1cbb0b1032e210818014c3c25a29d",
+   "iconPath": "31e6696a6e652b28e7314e87c34b7d13ef979372f14e281795059a6b041a5d18",
    "artPath": "17bd5bff3d7d8523c41f0526615f7ed47857dc69ec59473ee916841ec0118d60",
    "name": "Buổi Chiều Tín Hiệu Tuyết Lở",
    "descHash": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
@@ -478,7 +481,7 @@
   },
   {
    "id": 5,
-   "iconPath": "d48de11fffb18287b3aa13e4bd8fe6553398ca48d32ff0750c7655f1f8b383a1",
+   "iconPath": "76531b9d5d4a57c2c0d3becfba8d624947de7ca81a6bb497f28f9ea407d19471",
    "artPath": "6e13b927794e8d258aad40f390b013685783e864fd0e58eb1d9cdd80d28bf721",
    "name": "Buổi Đêm Hồng Trà Cực Quang",
    "descHash": "Cấp Tuyệt Kỹ +2, tối đa không quá <nobr>15</nobr> cấp; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
@@ -487,7 +490,7 @@
   {
    "id": 6,
    "iconPath": "2c3bacfa7ef84ad0d3c7e6354de434834da756004e475ba6163beb844e12739b",
-   "artPath": "a67a9d5c91e11a11a402b5ed9764a222818988298ecd2b4e2eb070f8ec35392a",
+   "artPath": "ee636a3b81ab291e50c002542c7cddef2c6e0cfcae90b69fc303b165c7bfe94b",
    "name": "Bình Minh Của Bản Khảo Sát",
    "descHash": "Hiệu ứng tăng Giới Hạn HP của Phản Ứng Sinh Tồn sẽ tăng thêm, mức tăng bằng <nobr>#1[f1]%</nobr> Giới Hạn HP của Lynx và tăng Kháng Hiệu Ứng <nobr>#2[i]%</nobr>.",
    "params": [
@@ -522,7 +525,7 @@
    "energy": "20",
    "id": 549438,
    "name": "Kỹ Thuật Trèo Băng",
-   "iconPath": "603656ddf07dd9a588057d833ca4ab325b300d922e908398141ff756502dfa89",
+   "iconPath": "d93e1a33eaeaafc6160d370dac03b9c234f5a79d135a5d45704efffe9d43105f",
    "typeDescHash": "Tấn Công Thường",
    "levelReq": 0,
    "promotionReq": 0,
@@ -683,7 +686,7 @@
    "energy": "30",
    "id": 633379,
    "name": "Đồ Hộp Cắm Trại Ủ Muối",
-   "iconPath": "af4e41014864a8f554e377fa20b54a0d26f1cbb0b1032e210818014c3c25a29d",
+   "iconPath": "31e6696a6e652b28e7314e87c34b7d13ef979372f14e281795059a6b041a5d18",
    "typeDescHash": "Chiến Kỹ",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1029,7 +1032,7 @@
    "energy": "5",
    "id": 717320,
    "name": "Sơ Cứu Vùng Tuyết",
-   "iconPath": "e6a580862d64d80ff288666e6ac46fe5a2473eaa28c8f99d9c793d66e8a395c8",
+   "iconPath": "6aee788a64a71c6379e18fec8291d287ac82d39e1d5b660967a64ff5e208c122",
    "typeDescHash": "Tuyệt Kỹ",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1330,7 +1333,7 @@
    "energy": "0",
    "id": 64325,
    "name": "Kinh Nghiệm Sinh Tồn",
-   "iconPath": "da096924ee0966742e1240b06753c856428920832fdcdd19572152ab89b95c93",
+   "iconPath": "c6511baeeb9a2b58e0c4bbc7dc3ff339f14ae0dcc9b68e58aa88ccae40598e1d",
    "typeDescHash": "Thiên Phú",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1661,7 +1664,7 @@
    "energy": "0",
    "id": 232207,
    "name": "Tấn Công",
-   "iconPath": "603656ddf07dd9a588057d833ca4ab325b300d922e908398141ff756502dfa89",
+   "iconPath": "d93e1a33eaeaafc6160d370dac03b9c234f5a79d135a5d45704efffe9d43105f",
    "typeDescHash": "",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1683,7 +1686,7 @@
    "energy": "0",
    "id": 348852,
    "name": "Thanh Năng Lượng Socola",
-   "iconPath": "a1622fd01ca7300836bfc5a3fecdddcdb3718d022713c14f1510053e5d35cc2d",
+   "iconPath": "c22387e8dacd03ee2d62684656f69f2ad45ced63f1f5fb049078b17210179c79",
    "typeDescHash": "Bí Kỹ",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1703,18 +1706,22 @@
  "skillTreePoints": [
   {
    "id": 1110101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1110202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1110203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1110204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1809,7 +1816,7 @@
     "ultimateCost": 0,
     "id": 989097,
     "name": "Thăm Dò Trước",
-    "iconPath": "cf2dab40787d337430371068a4ade324526bb8000f6ed81e3bb8b5f8b7b65b68",
+    "iconPath": "135b0ad0b326e04622bad6428e88d05cf7b8d55988e0873000ce6e91b47e8925",
     "levelReq": 0,
     "promotionReq": 2,
     "levelData": [
@@ -1840,18 +1847,22 @@
   },
   {
    "id": 1110102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1110205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1110206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1110207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1946,7 +1957,7 @@
     "ultimateCost": 0,
     "id": 989098,
     "name": "Kỹ Thuật Thám Hiểm",
-    "iconPath": "d280aec2ce5c52edab49d4cd02f61665d7041836dea5d2b1e8a81b83513cf7f4",
+    "iconPath": "4dad595e29df901f3b5b951f37588a6cd2f1591f6a9b2f8cbc2e37fe21f5947b",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
@@ -1981,10 +1992,12 @@
   },
   {
    "id": 1110103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1110208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2017,6 +2030,7 @@
     },
     {
      "id": 1110209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2053,7 +2067,7 @@
     "ultimateCost": 0,
     "id": 989099,
     "name": "Sống Sót Trong Nghịch Cảnh",
-    "iconPath": "d79e638f84b0988cbcb95a8e8912e65248f8381f0e2d6b31303f598fa15e1c20",
+    "iconPath": "73f945fe8cc5f5505877cdf686dc5ae210a33b0f754b14feff8a378b4331981a",
     "levelReq": 0,
     "promotionReq": 6,
     "levelData": [
@@ -2088,6 +2102,7 @@
   },
   {
    "id": 1110201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2116,6 +2131,7 @@
   },
   {
    "id": 1110210,
+   "anchor": 18,
    "type": 2,
    "children": [],
    "embedBuff": {

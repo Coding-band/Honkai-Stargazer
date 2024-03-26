@@ -1,10 +1,15 @@
 {
  "spRequirement": 140,
  "iconPath": "62bbed3f4fa89607c950e0c37b287cd629c6dc011b81bd99cf3354a4dd3cb55e",
- "bgPath": "95add5fd751106b1eeb03cfcbe017215893f25a2ef09bf7a0c78af53275456a1",
+ "bgPath": "d82b845f86f056ebc33528c4e14f8dcf0d93fc67de5085a5c516e2ecaa8122ff",
  "figPath": "64b09bba9b3bbdaaccaa720f85047a4a42fd05d52605ef3e96e571d4d8244e6e",
  "fgPath": "939573cb980ac84a1ca1ac5e9b4503698ec38a52c4d17a4f300e98499de70b9a",
  "splashIconPath": "72cee71be6fe4de63b6bdecb1a1b69cb95724bc8f3cc89468c68343e5937c7dc",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRtACAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAUBAAABkLJt+/m/8u+/bVvRStrimm170WprttUU/6v/l7ClLXrJ+5vf7/e+wg8RMQGSlCIVtyklrTQjRQlTpHV1B7cq8+JySelxpCcfTkxPvX44uunFfSkrJvUls/B7Af7AqxtvMpSuTQSEXphZMmEEE5WSzhLYBmx7iZ95qrz6C9vYxhDxSToMJtbYOOSd1LFo2wkc8f5yqvaGmLgG2wvn1BgQ4TjYsMhxNf8lMjaOz/8B6SEBBhPrgNtK0yYWjY1jiZjukqr+EZgkFtmlFPWMERpjQwiskFKkt4SBoyCMlpj6cSlPUpp0H0zsx/5sxU2RVo4xeX/0y9V8KTWOUlKkwfaaVEmpkgQAVlA4IKQBAABQCACdASoUABQAPm0wk0ckIqGhKAqogA2JbACdMoR2iP3sJABLAHoAeWP+x3wV/5nzZimD+L7NX3wAOK5RH8JXtP8c2igGEGOSoAAA/pRKUuAwH5vGJIBA5buIbO3r/DWHcBC8JZpDfYiyM9A+TzJ1SvVbTr9/5m9V5xnrWwiCa2ur9KnZAD4wo9ebbTGyUxngw2i4n1JWVDtX6Hmx2qEZr63H6f9dBwmseTp2bNQzgGmm+KzqWWWwlFj+ZinV3opdnHpaHI+5mYJXBLvkgwQn4RqhX9bDlgNtZAdWrMkDkJ7lzFBxLr95utvv4eAPsluwv/pL1zFVOxJd4MsU+WMEV/hE+2XosW8qAswohM8eu+8B9XX1WRolibrv4u4rOSzCaDFtBVZnodN7/pHV6u26GmnF9/qd78X/ForIUUU6Yr8IgDSOYxDpa0hwkUT4+f386Eznv6M7r/aP/B6avVwKJ3jCor2H3Rmv+9vi53GWz9Kv+gx7zTmleg7HcXF8wtPUK2op3uU/r8f+sl/DyISv9WpnM5dOxR5kcmxJHM3GEPEAAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "시뮬레이션 우주 점수 보상",
     "무명의 공훈",
     "잔화 교환",
+    "스타라이트 교환",
     "한정 이벤트 보상"
    ]
   },
@@ -79,7 +85,6 @@
    "rarity": 4,
    "rewardPath": "/material/351746",
    "comeFrom": [
-    "정체된 허영 [베이스 캐빈]",
     "정체된 허영 [베이스 캐빈]",
     "「만능 합성기」- 재료 치환"
    ]
@@ -190,7 +195,6 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "모조 꽃받침 [리벳 타운]",
-    "모조 꽃받침 [리벳 타운]",
     "잔화 교환",
     "「만능 합성기」- 재료 치환"
    ]
@@ -226,7 +230,6 @@
    "rewardPath": "/material/836261",
    "comeFrom": [
     "모조 꽃받침 [리벳 타운]",
-    "모조 꽃받침 [리벳 타운]",
     "「만능 합성기」- 재료 합성",
     "「만능 합성기」- 재료 치환"
    ]
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
-    "모조 꽃받침 [리벳 타운]",
     "모조 꽃받침 [리벳 타운]",
     "「만능 합성기」- 재료 합성",
     "잔화 교환",
@@ -449,7 +451,7 @@
   {
    "id": 2,
    "iconPath": "75a125b9bf46e6e13c807cc6a74d125467d743e5aeb8253c59df539874114922",
-   "artPath": "9beea03214c8c9074239a759196c18c089ebfe79912c6a1dcde57270dc2ec7b4",
+   "artPath": "afa8cc1b8f7d13306fe2e05de72d149842efd78f9d2c8de3d7f0dfb2b4059e95",
    "name": "놀이판은 숙면 도우미",
    "descHash": "청작이 패 뽑기를 발동할 때마다 즉각 에너지를 <nobr>#1[i]</nobr>pt 회복한다",
    "params": [
@@ -1734,14 +1736,17 @@
  "skillTreePoints": [
   {
    "id": 1201101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1201202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1201203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1774,6 +1779,7 @@
       },
       {
        "id": 1201204,
+       "anchor": 12,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1868,14 +1874,17 @@
   },
   {
    "id": 1201102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1201205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1201206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1908,6 +1917,7 @@
       },
       {
        "id": 1201207,
+       "anchor": 15,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2008,10 +2018,12 @@
   },
   {
    "id": 1201103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1201208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2044,6 +2056,7 @@
     },
     {
      "id": 1201209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2115,6 +2128,7 @@
   },
   {
    "id": 1201201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2143,6 +2157,7 @@
   },
   {
    "id": 1201210,
+   "anchor": 18,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2814,7 +2829,7 @@
   },
   {
    "title": "캐릭터 스토리•1",
-   "text": "청작의 전설은 학교에서 시작된다<br /><br />청작이 입학한 때부터 졸업할 때까지 시험 성적이 기록된 곳에는 언제나 「청작」이라는 이름 뒤에 반드시 「<nobr>60</nobr>」이라는 숫자가 기록되어 있다. 이건 절대로 예외가 존재하지 않는다<br /><br />학교의 스승들은 처음에 단지 청작이 평범한 자질을 지녀 학문을 할 재능이 아니라고 생각해 그리 많은 것을 따지지 않았다. 그러나 그 눈에 띄는 숫자가 하나둘씩 학교 성적표를 채워가면서 스승들은 이게 우연이 아닐지도 모른다는 사실을 깨닫기 시작했다<br /><br />곧 스승들과 무릎을 맞대고 면담을 하는 것이 청작의 일상사가 되었다. 스승들이 언제나 하는 말은 아무리 많이 들어도 항상 이 몇 마디로 요약할 수 있었다. 「얌전하고 착하다」, 「천부적 자질을 지니고 있다」그러고는 약간의 불만 사항「똑똑한 머리를 잘못된 곳에 사용한다」, 결국에는 다시 거창한 칭찬「이 똑똑한 머리를 공부하는 데 쓰기만 한다면 나중에 반드시」……<br /><br />하지만 자신이 원하는 삶이 어떤 것인지 청작은 스승들보다 더 잘 알고 있었다. 면담할 때마다 「아, 네네네」, 「네, 좋아요」 그러고는 고개를 돌리자마자 수업 시간에 잠을 자고는 시험 시간에 저공비행 하기. 이게 바로 스승들의 당근과 채찍질 작전에 대한 청작의 답변이었다<br /><br />마침내 인내심을 잃은 선생님들은 결국 청작의 졸업 평가란에 냉정하게 다음과 같은 한 마디를 남겼다:<br /><br />「큰 인물이 되기는 어려움」",
+   "text": "청작의 전설은 학당에서 시작된다<br /><br />청작이 입학한 때부터 졸업할 때까지 시험 성적이 기록된 곳에는 언제나 「청작」이라는 이름 뒤에 반드시 「<nobr>60</nobr>」이라는 숫자가 기록되어 있다. 이건 절대로 예외가 존재하지 않는다<br /><br />학당의 스승들은 처음에 단지 청작이 평범한 자질을 지녀 학문을 할 재능이 아니라고 생각해 그리 많은 것을 따지지 않았다. 그러나 그 눈에 띄는 숫자가 하나둘씩 학교 성적표를 채워가면서 스승들은 이게 우연이 아닐지도 모른다는 사실을 깨닫기 시작했다<br /><br />곧 스승들과 무릎을 맞대고 면담을 하는 것이 청작의 일상사가 되었다. 스승들이 언제나 하는 말은 아무리 많이 들어도 항상 이 몇 마디로 요약할 수 있었다. 「얌전하고 착하다」, 「천부적 자질을 지니고 있다」 그러고는 약간의 불만 사항 「똑똑한 머리를 잘못된 곳에 사용한다」, 결국에는 다시 거창한 칭찬 「이 똑똑한 머리를 공부하는 데 쓰기만 한다면 나중에 반드시」……<br /><br />하지만 자신이 원하는 삶이 어떤 것인지 청작은 스승들보다 더 잘 알고 있었다. 면담할 때마다 「아, 네네네」, 「네, 좋아요」 그러고는 고개를 돌리자마자 수업 시간에 잠을 자고는 시험 시간에 저공비행 하기. 이게 바로 스승들의 당근과 채찍질 작전에 대한 청작의 답변이었다<br /><br />마침내 인내심을 잃은 선생님들은 결국 청작의 졸업 평가란에 냉정하게 다음과 같은 한 마디를 남겼다:<br /><br />「큰 인물이 되기는 어려움」",
    "unlockRequirement": "캐릭터 레벨 Lv.<nobr>20</nobr> 개방"
   },
   {
@@ -2933,7 +2948,7 @@
  "name": "청작",
  "rarity": 4,
  "descHash": "선주 「나부」의 태복사 소속 점술가 겸 서고 관리자 업무를 너무 태만히 한 탓에 곧 「문지기」로 좌천될 예정이라고 한다",
- "artPath": "0bbc2f63e6023b6aaca992f89952d6d44e591918c7834ec3da3598dabea6951a",
+ "artPath": "a3c4a87dbec7414cfb034d00b786b505e980f975391972264a7141b45e9834a1",
  "miniIconPath": "a4c059ae3e42fba63909fef256a5a453033a54e44c9db8af3ce6ea6316f4d5cc",
  "damageType": {
   "id": 32,

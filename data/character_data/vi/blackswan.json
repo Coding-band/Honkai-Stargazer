@@ -5,6 +5,11 @@
  "figPath": "8edb308439fd6545b630899981d7d833a82efc9c241d5a62215b7c6f2c43bb76",
  "fgPath": "",
  "splashIconPath": "8235c510c01b722b5ced0f0ece69b8f597028c031a888fb79177692456aa68f2",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRl4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAEBAAABkGtr27E59/ONbdtuZ01tu4ptp046q05l2+l8Blkpbdt63/sezylExAQAQEiAqRsQaoEZALMJ0NuzKQwTmgEw1D/+dHdaY1YKEJWaCARAgLq/+uf0+u3tm49e3z9RASAEq+QkasLn0wJDxGVHkt47573/Ly1A+dKHIiWRIqm/2tPwRBRFjSXJ/zoUflWOosaSEqkNUZ/kSHGMROrf8XjslrzzIknR//+4MQ5I2vVdkhcpUrq3oihA/N45zUceyVMUn52ZkWkAqhOA9fpP90978zDJnDv6+08aWNCK0HEsBP2/JV3bPtQOw4SGzPNHd+ahumEyMIwNAQyTNViIwQzjAgBWUDggNgEAADAHAJ0BKhQAFAA+bTKVR6QioiEoCACADYlqAJ0zJf9pB3xAPXVsjoiDvJM6owbtofaR3hXH2aoRdGCNaR9U/5+CgAD+9DLbvRnEYp+Qfj6a6cdpnJWurfuP+p6BAjiSRJ+1Ida3M/VahgqaUAB8EzS0ywVuafU8mmXo8duSnrWXMASkxeb8fwZVxiQ5OWgNq929bIxULsklVvLFYX1kk/aTnQmKLksDOwDDdfDtcC+TiRPdN032wuzluUATJTDEv3HMendYCFxMCKc52BoN967q7DeZ0U+RaXyCcHv9+f+MkhpU/v1c5WvMxeDL5sj4QCDK2yGhfguPB4/6DN9skb4c8A5JkQY7Hu9jJl1dseImDofKh8Aj/4Hv/TFq+OOnrD8zZyaH6WnkGKZkEVA46eUEDbmoAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -21,7 +26,7 @@
    "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
    "name": "Điểm Tín Dụng",
    "desc": "Tiền mà Công ty Hành Tinh Hòa Bình (IPC) dùng để giao dịch với khách, nay đã trở thành đồng tiền chính khi đi lại trong vũ trụ.",
-   "lore": "\"Mọi người bôn ba, đấu tranh, mua bán, cũng chỉ là vì những con số xuất hiện ở điểm cuối. Nhưng thứ quý giá thật sự, lại không thể mua được con số của công ty.\"",
+   "lore": "\"Người ta bôn ba, tranh đấu, mua bán, cũng chỉ vì những con số xuất hiện trên thiết bị đầu cuối. Nhưng thứ quý giá thật sự, thì con số của công ty lại không thể mua được.\"",
    "purpose": "Tiền Tệ Thường",
    "rarity": 3,
    "rewardPath": "/material/29328",
@@ -49,6 +54,7 @@
     "Thưởng Điểm Vũ Trụ Mô Phỏng",
     "Vinh Dự Vô Danh",
     "Đổi Tro Tàn",
+    "Đổi Ánh Sao",
     "Phần Thưởng Sự Kiện Hạn Giờ"
    ]
   },
@@ -172,7 +178,6 @@
    "rewardPath": "/material/589818",
    "comeFrom": [
     "Đài Hoa Nhân Tạo - Sở Đan Đỉnh",
-    "Đài Hoa Nhân Tạo - Sở Đan Đỉnh",
     "Máy Ghép Vạn Năng - Ghép Nguyên Liệu",
     "Đổi Tro Tàn",
     "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
@@ -209,7 +214,6 @@
    "rewardPath": "/material/673759",
    "comeFrom": [
     "Đài Hoa Nhân Tạo - Sở Đan Đỉnh",
-    "Đài Hoa Nhân Tạo - Sở Đan Đỉnh",
     "Máy Ghép Vạn Năng - Ghép Nguyên Liệu",
     "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
    ]
@@ -244,7 +248,6 @@
    "rarity": 2,
    "rewardPath": "/material/874345",
    "comeFrom": [
-    "Đài Hoa Nhân Tạo - Sở Đan Đỉnh",
     "Đài Hoa Nhân Tạo - Sở Đan Đỉnh",
     "Đổi Tro Tàn",
     "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
@@ -449,7 +452,7 @@
   {
    "id": 2,
    "iconPath": "420d033f134db663da7f64e6e3b12017f97b9228fe03a35566b5cad859ae4784",
-   "artPath": "760de1f0c7cd413cda516e16ae5fc6fd57ab962aeed91a22bc1759229eeee97c",
+   "artPath": "7d751acb21fa87b9e3239065a6cc46cf3587d92671e3c23113b1a4eeb6100904",
    "name": "Cừu Non, Xin Đừng Khóc Vì Ta",
    "descHash": "Khi kẻ địch ở trạng thái Dấu Tích Bí Ẩn bị tiêu diệt, có <nobr>#1[i]%</nobr> xác suất cơ bản khiến mục tiêu ở gần rơi vào <nobr>#2[i]</nobr> tầng Dấu Tích Bí Ẩn.",
    "params": [
@@ -470,7 +473,7 @@
    "iconPath": "ab35f129f930b7e0d7dc02b53f09ca63272056d8eca7dc09f55e248695dec404",
    "artPath": "71d0beda48cd4198ed9d3880275cbef849c999019d5e88bcb355ecc6faacebaf",
    "name": "Nước Mắt, Cũng Là Một Món Quà",
-   "descHash": "Ở trạng thái Vạch Trần, Kháng Hiệu Ứng của kẻ địch giảm <nobr>#1[i]%</nobr>, đồng thời khi bắt đầu mỗi hiệp hoặc bị tiêu diệt sẽ hồi phục <nobr>#2[i]</nobr> Năng Lượng cho Black Swan. Hiệu ứng hồi phục Năng Lượng tối đa kích hoạt 1 lần trong thời gian duy trì trạng thái Vạch Trần, rơi vào trạng thái Vạch Trần một lần nữa sẽ làm mới số lần kích hoạt.",
+   "descHash": "Ở trạng thái Vạch Trần, Kháng Hiệu Ứng của kẻ địch giảm <nobr>#1[i]%</nobr>, đồng thời khi kẻ địch bắt đầu mỗi hiệp hoặc bị tiêu diệt sẽ hồi phục <nobr>#2[i]</nobr> Năng Lượng cho Black Swan. Hiệu ứng hồi phục Năng Lượng tối đa kích hoạt 1 lần trong thời gian duy trì trạng thái Vạch Trần, rơi vào trạng thái Vạch Trần một lần nữa sẽ làm mới số lần kích hoạt.",
    "params": [
     0.1,
     8
@@ -479,7 +482,7 @@
   {
    "id": 5,
    "iconPath": "1f77c680c96f816c05e772ac266cc78a08c5a98ffaba8f5419185cdba1a6ea67",
-   "artPath": "4438d2fa65de7ddc2118afb93b5333900befecd2f95f310f06c00000077fd8cc",
+   "artPath": "46f20e4ec519bee5dfda5fa0ebb507279603181ea6ddb949723de32c0abf65e8",
    "name": "Đường Bay Chim Di Trú",
    "descHash": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>, cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
    "params": []
@@ -696,7 +699,7 @@
   },
   {
    "tagHash": "Khuếch Tán",
-   "descHash": "Gây Sát Thương <span style=\"color:#00FF9C;\">Phong</span> lên kẻ địch chỉ định và mục tiêu bên cạnh bằng <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> Tấn Công của Black Swan, đồng thời có <nobr>#2[i]%</nobr> <u>xác suất cơ bản</u> khiến mục tiêu và mục tiêu bên cạnh rơi vào 1 tầng <u>Dấu Tích Bí Ẩn</u>, ngoài ra có <nobr>#3[i]%</nobr> <u>xác suất cơ bản</u> giảm <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span> Phòng Thủ của mục tiêu và mục tiêu bên cạnh, duy trì <nobr>#5[i]</nobr> hiệp.",
+   "descHash": "Gây Sát Thương <span style=\"color:#00FF9C;\">Phong</span> lên 1 kẻ địch chỉ định và mục tiêu bên cạnh bằng <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> Tấn Công của Black Swan, đồng thời có <nobr>#2[i]%</nobr> <u>xác suất cơ bản</u> khiến mục tiêu và mục tiêu bên cạnh rơi vào 1 tầng <u>Dấu Tích Bí Ẩn</u>, ngoài ra có <nobr>#3[i]%</nobr> <u>xác suất cơ bản</u> giảm <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span> Phòng Thủ của mục tiêu và mục tiêu bên cạnh, duy trì <nobr>#5[i]</nobr> hiệp.",
    "ultimateCost": 0,
    "break": "60 + 30/adjacent",
    "energy": "30",
@@ -1780,18 +1783,22 @@
  "skillTreePoints": [
   {
    "id": 1307101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1307202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1307203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1307204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1917,18 +1924,22 @@
   },
   {
    "id": 1307102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1307205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1307206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1307207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2019,7 +2030,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Khi kẻ địch vào chiến đấu, sẽ có <nobr>#1[i]%</nobr> xác suất cơ bản rơi vào 1 tầng Dấu Tích Bí Ẩn. Mỗi khi kẻ địch chịu 1 lần Sát Thương Duy Trì trong 1 lần tấn công của phe ta, sẽ có <nobr>#1[i]%</nobr> xác suất cơ bản rơi vào 1 tầng Dấu Tích Bí Ẩn, tối đa rơi vào <nobr>#2[i]</nobr> tầng trong 1 lần tấn công.",
+    "descHash": "Khi kẻ địch vào chiến đấu, sẽ có <nobr>#1[i]%</nobr> xác suất cơ bản rơi vào 1 tầng Dấu Tích Bí Ẩn.<br />Mỗi khi kẻ địch chịu 1 lần Sát Thương Duy Trì trong 1 lần tấn công của phe ta, sẽ có <nobr>#1[i]%</nobr> xác suất cơ bản rơi vào 1 tầng Dấu Tích Bí Ẩn, tối đa rơi vào <nobr>#2[i]</nobr> tầng trong 1 lần tấn công.",
     "ultimateCost": 0,
     "id": 88348,
     "name": "Manh Mối Dưới Đáy Cốc",
@@ -2059,10 +2070,12 @@
   },
   {
    "id": 1307103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1307208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2095,6 +2108,7 @@
     },
     {
      "id": 1307209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2167,10 +2181,12 @@
   },
   {
    "id": 1307201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1307210,
+     "anchor": 18,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2296,7 +2312,7 @@
    "cnUrl": "099018899c5cef21798928257c01965bdb7cc2eee6e4d4712e476565c098986a",
    "jpUrl": "7d6424425033075a351237945dd00b426dcb96a2780200fb12b43c872b4855ea",
    "enUrl": "526732b4086ef1ac3b6245f129881e7a55b97d84f15ef984ab481fbdfe77d7db",
-   "krUrl": "2db14673478ba55274cb187d939d953984a11644905277df2357c4d4317bbb54"
+   "krUrl": "79ce2ababf53b66d47ad4d5cf4909901483b7034d5df50724c381fc3dd3b83a9"
   },
   {
    "id": 5,
@@ -2491,12 +2507,32 @@
   {
    "id": 24,
    "title": "Điều Chỉnh Đội-March 7th",
-   "text": "Lần trải nghiệm này, sẽ có ý nghĩa như thế nào với cô/anh...",
+   "text": "Lần trải nghiệm này, sẽ có ý nghĩa như thế nào với cô...",
    "unlockRequirement": "",
    "cnUrl": "d8c0df698e4872f7592328377e6492f5075640b2d4cab1942433f7e8a6b8368b",
    "jpUrl": "40c567b5983fb2f5472e51c8c6d910546b1d521902c03fb13718a912a5c10110",
    "enUrl": "c7e286cdb86e154495b700ca2446df2914411d7ecedaadcbd9428940b883884b",
    "krUrl": "784b7e80568c7702bcacc182a81b60eb0933c8aadb632f102cd922dcbdc37187"
+  },
+  {
+   "id": 25,
+   "title": "Điều Chỉnh Đội-Acheron",
+   "text": "Lần này do cô quyết định... \"Cô\" muốn nhảy một điệu như thế nào?",
+   "unlockRequirement": "",
+   "cnUrl": "bd2ae9b04e261093b32005ec1bb1e8675d3f394a34ac1f63afc6275c2bacd941",
+   "jpUrl": "aecc5d2f10eaf4b856b3092f0adcd324f9b490c77ee7df2453b861e9415a9fc4",
+   "enUrl": "3828f5ce1d63e62383782c6e6ee728ea4989ee6df80f8acedfcfa300a4e5af94",
+   "krUrl": "601d24e234772ed45d1b6fb72f3339d2212ebd98751eb83f50c88057b5ee60b4"
+  },
+  {
+   "id": 26,
+   "title": "Điều Chỉnh Đội-Aventurine",
+   "text": "Hy vọng lần này chúng ta hợp tác vui vẻ, mỗi người đều đạt được những gì mình muốn.",
+   "unlockRequirement": "",
+   "cnUrl": "72cee1d8e11c432ec564631300c82352db5432254cbf90de1c94b9a9b224d392",
+   "jpUrl": "ef268a4b9cc2dc62f83cc940a39d22f508c90747337338460d40b981fb63cc94",
+   "enUrl": "cae396e16ea1637244aba626c13d85d16851b1a6d2bfa0557fbc2668f568a1f3",
+   "krUrl": "6f90a022f3d703b9532848986be5e0db567f7f9b0c6d0b6671681354fa33ec17"
   },
   {
    "id": 51,
@@ -2621,12 +2657,12 @@
   {
    "id": 63,
    "title": "Không Thể Chiến Đấu",
-   "text": "Thời gian... tàn nhẫn...",
+   "text": "Thời gian trôi qua... thật tàn nhẫn...",
    "unlockRequirement": "",
    "cnUrl": "bb427175e99b7e21d0267bc0c7608164d515a1cc0b1232e87ef5f3f9b168081d",
    "jpUrl": "8cec91d2ba81ec99796fc858dc9c8868b94e5989e34abf7ecf5ab56dc6a38224",
    "enUrl": "ff8714228024c73553e789b7f86fad9743534fec0c7155d7733162e8583e4b35",
-   "krUrl": "15b09317003428e914a89bd9bed1830245d1954ddb47dd4cba3157bcab59ed3f"
+   "krUrl": "80456a009d7ba3be8e9f7dabfbc66fa91ae23046540eb925d48d76a74bee3f95"
   },
   {
    "id": 64,
@@ -2742,22 +2778,22 @@
  "storyItems": [
   {
    "title": "Chi Tiết Nhân Vật",
-   "text": "Người Lưu Giữ Ký Ức của \"Sảnh Đường Hồi Ức\", thầy bói toán bí ẩn và thanh lịch.<br />Luôn nở nụ cười dịu dàng, kiên nhẫn lắng nghe lời nói của người khác, và mượn điều đó để đi vào \"Ký Ức\", nắm bắt mọi thông tin.<br />Một người phụ nữ đam mê sưu tầm những ký ức độc đáo, nhưng lại rất khó nhìn thấu suy nghĩ của cô ấy.",
+   "text": "Người Lưu Giữ Ký Ức của \"Sảnh Đường Hồi Ức\", nhà chiêm tinh bí ẩn và thanh lịch.<br />Luôn nở nụ cười dịu dàng, kiên nhẫn lắng nghe lời nói của người khác, và mượn điều đó để đi vào \"Ký Ức\", nắm bắt mọi thông tin.<br />Một người phụ nữ đam mê sưu tầm những ký ức độc đáo, nhưng lại rất khó nhìn thấu suy nghĩ của cô ấy.",
    "unlockRequirement": ""
   },
   {
    "title": "Câu Chuyện Nhân Vật 1",
-   "text": "\"Con bé à, là một đứa trẻ kỳ lạ. Tôi đã biết trước sẽ như vậy mà, vào ngày con bé chào đời, chim sơn ca hót líu lo trên cây, mặt trăng đang mờ dần đi và mặt trời vừa ló dạng cùng in trên bầu trời, lá bài trong tay nói cho tôi biết rằng, một linh hồn vương vấn quá khứ sắp đến với thế gian. Ngay từ khi còn nhỏ, việc mà con bé hứng thú nhất chính là hỏi về những câu chuyện ngày xưa. Con bé tò mò chúng tôi đã sinh ra như thế nào, ai đã tạo ra chúng tôi, thế giới này hình thành như thế nào, đôi khi những câu hỏi đó khiến người uyên bác nhất cũng không nói nên lời. Tôi biết có nhiều đứa trẻ đã cười nhạo con bé, nhưng những câu hỏi đó không quan trọng sao? Cuộc sống là một mê cung ngoằn ngoèo, ngoài ký ức ra, chúng ta chẳng có gì khác.\"<br /><align=\"right\"> - Ký ức của một người mẹ</align><br /><br />Người mẹ mắc chứng mất trí nhớ trở thành một người nhớ nhớ quên quên, không thể nhận ra người thân, cũng không thể nhớ lại những chuyện vừa xảy ra không lâu trước đó.<br />Cầm trên tay kết quả chẩn đoán mất trí nhớ, cô ôm chặt người mẹ đang ngơ ngác, cố đọc cho bà nghe cuốn nhật ký của bà một lần nữa... Mẹ ở đó, nhưng rốt cuộc mẹ đang ở đâu?<br /><br />Cô đã cùng mẹ đi đến lối thoát của cuộc đời. Nhưng cô hiểu rằng, bắt đầu từ ngày ký ức trở nên rời rạc đó, hình ảnh của mẹ ngày càng mờ nhạt. Nếu một ngày nào đó, ngay cả ký ức của cô cũng vụ vỡ, thì mẹ sẽ rời xa cô hoàn toàn.<br /><br />\"Cuộc sống là một mê cung ngoằn ngoèo, ngoài ký ức ra, chúng ta chẳng có gì khác.\" Lần đầu tiên cô hiểu được ý nghĩa của câu nói này.",
+   "text": "\"Con bé à, là một đứa trẻ kỳ lạ. Tôi đã biết trước sẽ như vậy mà, vào ngày con bé chào đời, chim sơn ca hót líu lo trên cây, mặt trăng đang mờ dần đi và mặt trời vừa ló dạng cùng in trên bầu trời, lá bài trong tay nói cho tôi biết rằng, một linh hồn vương vấn quá khứ sắp đến với thế gian. Ngay từ khi còn nhỏ, việc mà con bé hứng thú nhất chính là hỏi về những câu chuyện ngày xưa. Con bé tò mò chúng tôi đã sinh ra như thế nào, ai đã tạo ra chúng tôi, thế giới này hình thành như thế nào, đôi khi những câu hỏi đó khiến người uyên bác nhất cũng không nói nên lời. Tôi biết có nhiều đứa trẻ đã cười nhạo con bé, nhưng những câu hỏi đó không quan trọng sao? Cuộc sống là một mê cung ngoằn ngoèo, ngoài ký ức ra, chúng ta chẳng có gì khác.\"<br /><align=\"right\"> - Ký ức của một người mẹ</align><br /><br />Người mẹ mắc chứng mất trí nhớ trở thành một người nhớ nhớ quên quên, không thể nhận ra người thân, cũng không thể nhớ lại những chuyện vừa xảy ra không lâu trước đó.<br />Cầm trên tay kết quả chẩn đoán mất trí nhớ, cô ôm chặt người mẹ đang ngơ ngác, cố đọc cho bà nghe cuốn nhật ký của bà một lần nữa... Mẹ ở đó, nhưng rốt cuộc mẹ đang ở đâu?<br /><br />Cô đã cùng mẹ đi đến lối thoát của cuộc đời. Nhưng cô hiểu rằng, bắt đầu từ ngày ký ức trở nên rời rạc đó, hình ảnh của mẹ ngày càng mờ nhạt. Nếu một ngày nào đó, ngay cả ký ức của cô cũng vụn vỡ, thì mẹ sẽ rời xa cô hoàn toàn.<br /><br />\"Cuộc sống là một mê cung ngoằn ngoèo, ngoài ký ức ra, chúng ta chẳng có gì khác.\" Lần đầu tiên cô hiểu được ý nghĩa của câu nói này.",
    "unlockRequirement": "Nhân vật đạt cấp <nobr>20</nobr> mở khóa"
   },
   {
    "title": "Câu Chuyện Nhân Vật 2",
-   "text": "\"Tôi đến hành tinh này với tư cách là một nhà thám hiểm. Như mọi khi, tôi sẽ thống kê hướng chảy của các dòng sông, nghiên cứu chất liệu gạch trên đường phố, độ chênh lệch của các con đường, cũng như số lượng và sự phân bố của các ống khói... Những công việc này phù hợp với trí tưởng tượng của con người, tưởng tượng về việc lưu giữ \"ký ức\" của một hành tinh.\"<br /><br />...Nhưng điều này vẫn chưa đủ.<br /><br />Khi tôi thực sự bắt đầu làm việc, tôi đã thường xuyên nhìn thấy cô gái đó. Đôi khi ánh nắng xuyên qua phiến lá, nhảy múa theo bóng dáng cô ấy, cuối cùng biến mất ở một góc phố nào đó, và rồi đèn đường sẽ sáng lên. Đôi khi ánh mắt cô ấy dõi theo một con chim bồ câu đưa thư, nó sẽ xuất phát từ nơi ở của Thầy Tế vào tối ngày thứ ba hàng tuần, và sẽ quay về trên tay Trưởng Thị Vệ Hoàng Gia vào sáng sớm ngày hôm sau, mà họ thì lại là kẻ thù chính trị công khai. Có khi cô lặng lẽ nhìn theo nước mưa chảy xuống cống rãnh, dấu tích thiệt hại do đạn pháo từ bờ bên kia bắn tới. Đôi khi sóng nước làm ướt gấu váy của cô, trong khi bà lão đang giặt quần áo bên sông đang thì thầm kể về câu chuyện người cầm quyền đời trước và năm đứa con ngoài giá thú của ông ta.<br /><br />...Ngoài chúng ta ra, rất ít người biết hành tinh này lại che giấu \"ký ức\" của mình bằng cách như vậy.<br /><br />Tôi đi theo cô ấy đến phía trước một hòn đá ở một nơi hoang dã, tôi cảm thấy đã đến lúc phải mời cô ấy rồi.<br /><br />\"Cô đã nhìn thấy gì rồi?\" Tôi hỏi cô ấy trong dáng vẻ mà cô ấy có thể nhìn thấy.<br />Cô ấy chỉ vào nơi cỏ dại đã mọc, ở đó vẫn còn dấu tích đã bị mài mòn.<br />\"Một hòn đá, tôi nghĩ nó đã từng là một phần của lò sưởi âm tường... Nhưng chắc không chỉ mỗi vậy đâu.\"<br />Tôi gật gù, giúp cô ấy dọn sạch cỏ và đất trong những kẽ hở trên hòn đá.<br />\"Nó còn từng là một bia tưởng niệm.\" Cô chạm vào những vết khắc trên hòn đá.<br />\"Phải, nhưng ký ức vẫn không chỉ dừng lại ở đó.\"<br /><br />Thế là tôi bèn trình bày cho cô ấy xem. Hòn đá ở nơi hoang dã, nó từng là lò sưởi của một gia đình nào đó, trước đó nữa, nó từng là một bia tưởng niệm, một bồn hoa, một đàn tế... Nhưng trước tất cả những điều đó, nó là hòn đá ở một nơi hoang dã.<br /><br />\"Để được xem những ký ức này, tôi sẽ phải trả cái giá như thế nào?\"<br />\"Trước khi cô sẵn sàng xuất hiện, mọi người sẽ không có cách nào biết được sự tồn tại của cô.\"<br />\"Cũng giống như trước khi mọi người nhìn thấy thiên nga đen, họ sẽ không thể biết được thiên nga không phải chỉ có mỗi màu trắng?\"<br />\"Giống vậy đó.\"<br /><br /><align=\"right\">Ký ức của một <ruby>nhà thám hiểm<rt>Người Lưu Giữ Ký Ức</rt></ruby></align><br /><br />Những Người Lưu Giữ Ký Ức du hành qua nhiều hành tinh, thu thập ký ức của thành phố mà họ gặp được trên mọi con đường và mọi ngóc ngách, họ cẩn thận không để lại dấu vết nào về sự hiện diện của mình, đảm bảo rằng không ai nhớ đến họ, trừ phi họ gặp được người có đủ tư chất để trở thành Người Lưu Giữ Ký Ức, người mà sau đó sẽ được họ đưa ra khỏi ký ức của thành phố này để đến vùng biển rộng lớn hơn.",
+   "text": "\"Tôi đến hành tinh này với tư cách là một nhà thám hiểm. Như mọi khi, tôi sẽ thống kê hướng chảy của các dòng sông, nghiên cứu chất liệu gạch trên đường phố, độ chênh lệch của các con đường, cũng như số lượng và sự phân bố của các ống khói... Những công việc này phù hợp với trí tưởng tượng của con người, phù hợp với tưởng tượng về việc lưu giữ \"ký ức\" của một hành tinh.\"<br /><br />...Nhưng điều này vẫn chưa đủ.<br /><br />Khi tôi thực sự bắt đầu làm việc, tôi đã thường xuyên nhìn thấy cô gái đó. Đôi khi ánh nắng xuyên qua phiến lá, nhảy múa theo bóng dáng cô ấy, cuối cùng biến mất ở một góc phố nào đó, và rồi đèn đường sẽ sáng lên. Đôi khi ánh mắt cô ấy dõi theo một con chim bồ câu đưa thư, nó sẽ xuất phát từ nơi ở của Thầy Tế vào tối ngày thứ ba hàng tuần, và sẽ quay về trên tay Trưởng Thị Vệ Hoàng Gia vào sáng sớm ngày hôm sau, mà họ thì lại là kẻ thù chính trị công khai. Có khi cô lặng lẽ nhìn theo nước mưa chảy xuống cống rãnh, dấu tích thiệt hại do đạn pháo từ bờ bên kia bắn tới. Đôi khi sóng nước làm ướt gấu váy của cô, trong khi bà lão đang giặt quần áo bên sông đang thì thầm kể về câu chuyện người cầm quyền đời trước và năm đứa con ngoài giá thú của ông ta.<br /><br />...Ngoài chúng ta ra, rất ít người biết hành tinh này lại che giấu \"ký ức\" của mình bằng cách như vậy.<br /><br />Tôi đi theo cô ấy đến phía trước một hòn đá ở một nơi hoang dã, tôi cảm thấy đã đến lúc phải mời cô ấy rồi.<br /><br />\"Cô đã nhìn thấy gì rồi?\" Tôi hỏi cô ấy trong dáng vẻ mà cô ấy có thể nhìn thấy.<br />Cô ấy chỉ vào nơi cỏ dại đã mọc, ở đó vẫn còn dấu tích đã bị mài mòn.<br />\"Một hòn đá, tôi nghĩ nó đã từng là một phần của lò sưởi âm tường... Nhưng chắc không chỉ mỗi vậy đâu.\"<br />Tôi gật gù, giúp cô ấy dọn sạch cỏ và đất trong những kẽ hở trên hòn đá.<br />\"Nó còn từng là một bia tưởng niệm.\" Cô chạm vào những vết khắc trên hòn đá.<br />\"Phải, nhưng ký ức vẫn không chỉ dừng lại ở đó.\"<br /><br />Thế là tôi bèn trình bày cho cô ấy xem. Hòn đá ở nơi hoang dã, nó từng là lò sưởi của một gia đình nào đó, trước đó nữa, nó từng là một bia tưởng niệm, một bồn hoa, một đàn tế... Nhưng trước tất cả những điều đó, nó là hòn đá ở một nơi hoang dã.<br /><br />\"Để được xem những ký ức này, tôi sẽ phải trả cái giá như thế nào?\"<br />\"Trước khi cô sẵn sàng xuất hiện, mọi người sẽ không có cách nào biết được sự tồn tại của cô.\"<br />\"Cũng giống như trước khi mọi người nhìn thấy thiên nga đen, họ sẽ không thể biết được thiên nga không phải chỉ có mỗi màu trắng?\"<br />\"Giống vậy đó.\"<br /><br /><align=\"right\">Ký ức của một <ruby>nhà thám hiểm<rt>Người Lưu Giữ Ký Ức</rt></ruby></align><br /><br />Những Người Lưu Giữ Ký Ức du hành qua nhiều hành tinh, thu thập ký ức của thành phố mà họ gặp được trên mọi con đường và mọi ngóc ngách, họ cẩn thận không để lại dấu vết nào về sự hiện diện của mình, đảm bảo rằng không ai nhớ đến họ, trừ phi họ gặp được người có đủ tư chất để trở thành Người Lưu Giữ Ký Ức, người mà sau đó sẽ được họ đưa ra khỏi ký ức của thành phố này để đến vùng biển rộng lớn hơn.",
    "unlockRequirement": "Nhân vật đạt cấp <nobr>40</nobr> mở khóa"
   },
   {
    "title": "Câu Chuyện Nhân Vật 3",
-   "text": "\"Rất nhiều người đắm chìm trong quá khứ đẹp đẽ, ảo tưởng được sống trong ký ức, cho nên họ muốn trở thành Người Lưu Giữ Ký Ức. Đáng tiếc, những người như vậy thường sẽ trở thành Người Hỏa Táng muốn làm gì thì làm, bóp méo ký ức trở thành kiểu mình muốn một cách tùy thích. Nhưng cô ấy thì khác... Tôi đã nhìn thấy sự tôn trọng đối với bản thân ký ức, cũng như ý chí và quyết tâm mạnh mẽ của cô ấy. Như thường lệ, ba câu hỏi trước khi trở thành Người Lưu Giữ Ký Ức, cô ấy trả lời như sau:<br /><br />\"Cô có sẵn lòng dành cả đời mình để đi thu thập ký ức không?\"<br />\"Tôi sẵn lòng.\"<br />\"Cô có sẵn lòng từ bỏ thân xác vì điều này, và chấp nhận sự biến đổi không?\"<br />\"Tôi sẵn lòng.\"<br />\"Nếu có một ngày cô không còn tồn tại nữa, cô sẽ để lại gì cho thế giới?\"<br />\"Ký ức của tôi. Trong đó có hạt giống của quá khứ, nó sẽ tái sinh trong tương lai.\"<br /><br />Có những ký ức vụn vặt mà ấm áp, có những ký ức thì vĩ đại bao la, có những ký ức lại dễ bảo như thú cưng, có những ký ức lại khó kiểm soát như dã thú... Và vào thời khắc cô trở thành Người Lưu Giữ Ký Ức đó, ký ức của cô trở nên tĩnh lặng và bình yên, như thể sóng biển cuộn trào đã gặp được bến đỗ của mình.\"<br /><align=\"right\">... Ký ức của một Người Lưu Giữ Ký Ức</align><br /><br />\"Đang nghĩ về điều gì vậy?\" Người Lưu Giữ Ký Ức hỏi.<br />Cô mở mắt ra, những mảnh ký ức đang xoay quanh cô.<br />\"Mọi người nghĩ rằng mình đang đối mặt với hiện tại và tương lai, nhưng không ai biết được thực ra chúng ta đang hướng về quá khứ.\"",
+   "text": "\"Rất nhiều người đắm chìm trong quá khứ đẹp đẽ, ảo tưởng được sống trong ký ức, cho nên họ muốn trở thành Người Lưu Giữ Ký Ức. Đáng tiếc, những người như vậy thường sẽ trở thành Người Hỏa Táng muốn làm gì thì làm, bóp méo ký ức trở thành kiểu mình muốn một cách tùy thích. Nhưng cô ấy thì khác... Tôi đã nhìn thấy sự tôn trọng đối với bản thân ký ức, cũng như ý chí và quyết tâm mạnh mẽ của cô ấy. Như thường lệ, ba câu hỏi trước khi trở thành Người Lưu Giữ Ký Ức, đã được cô ấy trả lời như sau:<br /><br />\"Cô có sẵn lòng dành cả đời mình để đi thu thập ký ức không?\"<br />\"Tôi sẵn lòng.\"<br />\"Cô có sẵn lòng từ bỏ thân xác vì điều này, và chấp nhận sự biến đổi không?\"<br />\"Tôi sẵn lòng.\"<br />\"Nếu có một ngày cô không còn tồn tại nữa, cô sẽ để lại gì cho thế giới?\"<br />\"Ký ức của tôi. Trong đó có hạt giống của quá khứ, nó sẽ tái sinh trong tương lai.\"<br /><br />Có những ký ức vụn vặt mà ấm áp, có những ký ức thì vĩ đại bao la, có những ký ức lại dễ bảo như thú cưng, có những ký ức lại khó kiểm soát như dã thú... Và vào thời khắc cô trở thành Người Lưu Giữ Ký Ức đó, ký ức của cô trở nên tĩnh lặng và bình yên, như thể sóng biển cuộn trào đã gặp được bến đỗ của mình.\"<br /><align=\"right\">... Ký ức của một Người Lưu Giữ Ký Ức</align><br /><br />\"Đang nghĩ về điều gì vậy?\" Người Lưu Giữ Ký Ức hỏi.<br />Cô mở mắt ra, những mảnh ký ức đang xoay quanh cô.<br />\"Mọi người nghĩ rằng mình đang đối mặt với hiện tại và tương lai, nhưng không ai biết được thực ra chúng ta đang hướng về quá khứ.\"",
    "unlockRequirement": "Nhân vật đạt cấp <nobr>60</nobr> mở khóa"
   },
   {
@@ -2866,7 +2902,7 @@
  "name": "Black Swan",
  "rarity": 5,
  "descHash": "Người Lưu Giữ Ký Ức của Sảnh Đường Hồi Ức, nhà chiêm tinh bí ẩn thong dong. Hãy kiên nhẫn lắng nghe \"ký ức\" của người khác, sẽ có thể nắm giữ vận mệnh trong tay.",
- "artPath": "da5a3d8d87865c51907df718c329a6d552ef2ddbc3e1f6e82dd466c14b0c1aa6",
+ "artPath": "870d3284ed48895f121c22c356f4292a94c0e2fdd368e691bf3a595ba7f0634c",
  "miniIconPath": "741cd71f3a6a5c9ad08beec9f832c75eaea8a07246cafcd530c806b8d2dc00a5",
  "damageType": {
   "id": 16,

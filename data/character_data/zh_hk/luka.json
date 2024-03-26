@@ -2,9 +2,14 @@
  "spRequirement": 130,
  "iconPath": "964fad345ab51a77077bce75f248ebb94290df59eece5f4b2d109e6a50eae854",
  "bgPath": "87f77b9da1f2167e89d13ddcde7d908d274f465c5fca0c5634e8d63db792eb52",
- "figPath": "9ff20160eb39efc5f0f23e473927ebcae01569778e3f034f188b235bd7ad8882",
- "fgPath": "5582a4d44d04267bf0657ff9d1cbf83bcc6e0b2e32bd943679c295aa5e3672b8",
+ "figPath": "768d41deed5fddb203b19ae6f4596d9e5b4c8172f2c3dbac4552c76671609d94",
+ "fgPath": "713da05189557f9a27e96f82704ccfb1e263f7a9b313a9504d500e431fd02159",
  "splashIconPath": "5ded512bc76c708e9a0e96cb9fd8a1e987436fa941a5ec5273270551e2b33fda",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRq4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSA4BAAABkGpt27FN1/u8v//0D5ptM5tpkm1ls9q281TPJHs2wLb1vs91hg/bEBEToJLDxicqu6ZJ2uq0uymEUCJR71V3fsNRpVJaLGjAWWIWmaHBY6SkQBo++jEx8mP32C8bGlS0ybiw/ybxP5ea/mCSqgpqNr+Nb7D5NOUd19sqlVIte3Ysw0Se/YgcrVdQpVbtWwc2EZxxTUrU48oTbGyicc7Zugqt+v4eY8DGzpmm6tvYGBtjx4wdmvfXERcrzDjY7HyGCyjA/GfOknPktnG0bWJG7D0TYm7HHJvsH7BA7d//A3Iw5PD68XpJbTpPu/+X75sGDR05aMrSNpKUSAq9p7RU6URSEoIkhRDSkFYkkgRWUDggegEAAJAHAJ0BKhQAFAA+bTCUR6QioiEoCACADYlkAJ0ygxg1y22A70D3ctNG3iLyQCmDeMFFmDhwSZVKXe6+fcvgv0iiz6f+AAD+9sog9QmD5hEUPz7vsVNDzp018poOvc3c2cf25xa5eGcVSaAfo4t+1P3yaYzkHOS2q870HbFnjWXBlhbbIZeRr/n93z3SrzbSncEJuiNBzjc0REyH8wWc7cx4/u4oM2bBgOHLFq75v0jrKJn5N+IGv5Flpjs76nIXMK62WjNhj0SqZgKlKlDFt1bw/adkJi7s7Go3hAlR/35R20dP9nKTKRoFJJCPOPcWl21BrWDbl1TUlZErSTqF0MFuXDcms6/5KeQXWNiB+yrJ0DvuWx/in7+IBTT73yK/4v77aw533dsj1h/e4mVnq+JoWDJsN2lG2GCV9+EOVP4h+2QH+qISYP/ij9dPMFffowPLqY+tgrVZ9MF2Vf12Bb+r/rylDibJxXLR7Ekpphhktcrujg8yqlAAAA==",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "「模擬宇宙」積分獎勵",
     "無名勳禮",
     "餘燼兌換",
+    "星芒兌換",
     "限時活動獎勵"
    ]
   },
@@ -164,7 +170,7 @@
    "id": 635669,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "bb7670872389d870154ac70d1b29dee2d6c123f558951c6f914f1d9a70c28382",
+   "iconPath": "271b1f9a291c44b698190683f224996bae3b49e8e596c227b819b72c3a2b82dd",
    "name": "黯淡黑曜",
    "desc": "一片自虛空中捕獲的黑質。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
    "lore": "任何手段都無法驗明它的本體。<br />輕輕觸碰，從碎片中傳來不明的囈語。<br /><br />「████ ██ █ █」",
@@ -172,7 +178,6 @@
    "rarity": 2,
    "rewardPath": "/material/635669",
    "comeFrom": [
-    "擬造花萼【大礦區】",
     "擬造花萼【大礦區】",
     "餘燼兌換",
     "「萬能合成機」- 材料置換"
@@ -209,7 +214,6 @@
    "rewardPath": "/material/836255",
    "comeFrom": [
     "擬造花萼【大礦區】",
-    "擬造花萼【大礦區】",
     "「萬能合成機」- 材料合成",
     "「萬能合成機」- 材料置換"
    ]
@@ -227,7 +231,6 @@
    "rewardPath": "/material/866633",
    "comeFrom": [
     "凝滯虛影【大礦區】",
-    "凝滯虛影【大礦區】",
     "「萬能合成機」- 材料置換"
    ]
   },
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
-    "擬造花萼【大礦區】",
     "擬造花萼【大礦區】",
     "「萬能合成機」- 材料合成",
     "餘燼兌換",
@@ -468,7 +470,7 @@
   {
    "id": 4,
    "iconPath": "de13c8d9014b925bf3f10e01b844835b775a82710e73e8acad85d1a86a1b8596",
-   "artPath": "2a59bdd9eb75e763d622b8637fe181500a11bc1186171649ca0274c736d9fbf4",
+   "artPath": "bd44694196dedd1093a35b4635202c32d639fd46e6b001a05d2e8a0b0fb10bc2",
    "name": "百折不回",
    "descHash": "每獲得1層【鬥志】，攻擊力提高<nobr>#1[i]%</nobr>，該效果最多疊加<nobr>#2[i]</nobr>層。",
    "params": [
@@ -487,7 +489,7 @@
   {
    "id": 6,
    "iconPath": "9afc0a2ee0f76d4a129d4d18fe0745e6f3f2e84845a0b4d3a144aa059a098400",
-   "artPath": "112e5db03f7fce5a6a93f31243edb581328512ee83bb0c6cb0a14a25de13d47a",
+   "artPath": "33d4cac26a8b9c9b093d48e853ec3db49455b333fc5d4f0717110484516f2876",
    "name": "冠軍應得的喝彩",
    "descHash": "施放強化普攻的【碎天拳】擊中陷入裂傷狀態下的敵方目標後，本次強化普攻使用的【直衝拳】每施放過1段攻擊，則額外使其當前承受的裂傷狀態立即產生1次相當於原傷害<nobr>#1[i]%</nobr>的傷害。",
    "params": [
@@ -1844,18 +1846,22 @@
  "skillTreePoints": [
   {
    "id": 1111101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1111202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1111203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1111204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1981,18 +1987,22 @@
   },
   {
    "id": 1111102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1111205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1111206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1111207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2122,10 +2132,12 @@
   },
   {
    "id": 1111103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1111208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2158,6 +2170,7 @@
     },
     {
      "id": 1111209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2229,10 +2242,12 @@
   },
   {
    "id": 1111201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1111210,
+     "anchor": 18,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2928,7 +2943,7 @@
  "name": "盧卡",
  "rarity": 4,
  "descHash": "貝洛伯格下層區的冠軍拳手，「地火」的得力幹將之一。 搏擊俱樂部的蟬聯冠軍，以自身的熱情激勵着下層區有夢想的孩子們。",
- "artPath": "a2a6e54f7946dbeec94a0dac84412ac6f535a541ada19ee99d244196fcf5e14f",
+ "artPath": "22fe1d85da647081a7020c5d3f6cdec5f585da751d5ac221e421de98693859d1",
  "miniIconPath": "61b8b675bd32da196574175aa1f21165e79196dd77afb6436717fb4089383b2b",
  "damageType": {
   "id": 1,

@@ -1,0 +1,2846 @@
+{
+ "spRequirement": 110,
+ "iconPath": "66ef641eac0db8e9f18ee0e6fee3f2ba5bc8d8eb8b5b53397c5da876e1c68787",
+ "bgPath": "2a2eb647f215910dabac50b08cb33f79ebccb47e174fdba935a4aae0843aa555",
+ "figPath": "97cc402e5bac4cde5a97f9138332fb4d4239b87ec5a8cc426fd8305e8f7d403d",
+ "fgPath": "fc4cd3ece56b1e04d6fb0b61ad38abd25f0c03437b35b93aa232a854e6fa0045",
+ "splashIconPath": "fec4c21cfb55059d506ad72c169042c83ebbbf369772e167b43fcbd2ed5bcf86",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRp4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAsBAAABkKtt2yFJb/01tm1b0axtp8iNUAdgpnttboeKGNv2bmRW/d/7LqrPISImAMkOAHLLJrUidQC4jKYVN1/5OXApEG6+dPujJM1FmBCWhGclyTzjAaQDCLDwwEV5b0aaDlXj/6zrkpGkROrplgY4TI4UU5REKRb74DBJ/P8/0msnXIhFMiqZVNQFh+CcPJkkem1EiLG/RYpMkOnDCLBWpFKTsdZixkMfy0RS/I/2ZdkSmT/6XjQaRUqRthYdNG24pkiUUaTpUyfK9t/sOyZ91kfJRNOXPocpywuX3tnSOGPqzd+KvOn3AFDjgHK4MtSe/iFJD2oRAAEQpOcBGN148Uu8G8kBAAQA0uqrigAAVlA4IGwBAAAwCACdASoUABQAPm0uk0ckIiGhKAqogA2JaACdMoMpLIBzJPqA0QDrbvKAuUBsTUwD9Zg4naA0atClntVnN7GX07RL471+vwFnAAD+8rOKuPKZ/bI+jpLQZ9+/lYL1ODr/A9SUHSOqEaKeX2e5S6sxX4TTnXfJuaCVLl0sf10olNHRKbSf46zp+vwRVI93DaHAbaj9Cx/UvK6rfCkrhP0/plzmaH9l1COyoP1H4tLxhDTyESk7n/FmDuV4FLAPZbUxKHLJdkW0I6mXsH5s396jmYFnZwpuS5YRAl0TWps1ITA5+QrHUP4wtw4RQDC3TekljZ7ANR3gATIaJatdENzL2fXMJ1oVb+kau0/2zeU8Q5tH9HJn+VD6AYIaaEm6CPVVbr7WcmULl3dNUr3rRoY64xAUp7eehmgEz5au17F/ktjqnp675OnE274IrG8gc+Zupbpwzv8qX1j8zc8sB2Df1qIlc+7LsWwaAAAA",
+  "w": 2048,
+  "h": 2048
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 7,
+  "iconPath": "232bc80b207d7be892c4e0c41ea43b44080e51373e3c4f6f0f2f9e0eb4e03194",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "信用點",
+   "desc": "星際和平公司與客戶結算時使用的貨幣，如今已成爲太空旅行的硬通貨。",
+   "lore": "「人們奔波、爭鬥、貿易，爲的不過是個終端裏顯示的數字。但真正珍貴之物，公司的數字是買不到的。」",
+   "purpose": "通用貨幣",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "擬造花萼【工造司】",
+    "擬造花萼【「白日夢」酒店-夢境】",
+    "任務獎勵",
+    "委託獎勵",
+    "餘燼兌換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "命運的足跡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "一次又一次的敗北成就了你的勝利，一步又一步的前進讓你抵達了命運的拐點。",
+   "purpose": "行跡材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」積分獎勵",
+    "無名勳禮",
+    "餘燼兌換",
+    "星芒兌換",
+    "限時活動獎勵"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "漫遊指南",
+   "desc": "角色的經驗材料，可以獲得<nobr>20000</nobr>點角色經驗。",
+   "lore": "跨越諸界必備的冒險叢書。按下閱讀鍵，充滿磁性的聲音將以你能聽懂的語言講述知名冒險家們在不同世界間的傳奇經歷，以及他們在各個星球上獲得的珍貴智慧。<br /><br />「漫遊指南全新書系《星際美食烹飪導覽》開售在即，敬請支持。」<br />「投稿請接入博識學會聯覺信標<nobr>23</nobr>θ聯絡員，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色經驗材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【流雲渡】",
+    "擬造花萼【築夢邊境】",
+    "「忘卻之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "冒險記錄",
+   "desc": "角色的經驗材料，可以獲得<nobr>5000</nobr>點角色經驗。",
+   "lore": "裝訂嚴整，一看就頗有教育意義的冒險札記。圖文並茂地描述了冒險行動的始末、有價值的信息和生存相關的技巧。<br /><br />「幹嘛不數據化放進光刻片裡？便攜多了。」<br />「面對恆星風暴和中子流噴發時，高科技比你想象的還要脆弱。何況，製作這本書的人一定希望人們用最簡單的方式閱讀它。」",
+   "purpose": "角色經驗材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【流雲渡】",
+    "擬造花萼【築夢邊境】",
+    "每日實訓",
+    "餘燼兌換"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "旅情見聞",
+   "desc": "角色的經驗材料，可以獲得<nobr>1000</nobr>點角色經驗。",
+   "lore": "記錄旅途見聞的日誌，字跡漫漶不清，內容隨心所欲，對你並沒有太大的幫助。<br /><br />「看完了就趕緊把這堆廢紙處理掉吧，丹恆？」",
+   "purpose": "角色經驗材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【流雲渡】",
+    "擬造花萼【築夢邊境】",
+    "委託獎勵"
+   ]
+  },
+  "470781": {
+   "id": 470781,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "c63b922af281d49c4d1e5ee84aa4a5cb7027e4a16e96fe8f683c9f50a4bcb921",
+   "name": "蛀星孕災的舊惡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "作爲蟲皇親自繁育的子嗣，它的唯一欲望便是擴張族羣。它以巨鐮收割星體爲巢，不倦培育無窮子孫，塗炭萬千生靈，直至隕落一刻。<br /><br />「破碎星球之上，巨蝗遮蔽天空，羣蟲湧出地殼。鍬甲將這顆新巢穴舉起，向它的蟲皇獻禮…願此番慘狀只存於史料中，永不復現。」",
+   "purpose": "行跡材料",
+   "rarity": 4,
+   "rewardPath": "/material/470781",
+   "comeFrom": [
+    "歷戰餘響【禁閉艙段】"
+   ]
+  },
+  "549209": {
+   "id": 549209,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "9a1cf43cc4fe48465c1a6a97d23a061fa43b6ab00796881aeaa8c3da2bb8fe73",
+   "name": "蓄夢元件",
+   "desc": "夢境造物的儲能裝置，強化所需的簡單材料。",
+   "lore": "儲存碎夢的築夢容器，爲夢境造物提供了基本的能源。<br /><br />「如果裝上這個玩意兒，就會得到一位美夢劇團的成員。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/549209",
+   "comeFrom": [
+    "驚夢劇團掉落",
+    "「模擬宇宙」中敵方掉落",
+    "委託獎勵",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換",
+    "擬造花萼（金）"
+   ]
+  },
+  "589812": {
+   "id": 589812,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "3004d26bebcef0435b0763480acc500f00a86770da78f7de060b4350882b1f67",
+   "name": "滋長花蜜",
+   "desc": "催生生命成長的蜜液，自翁瓦克聖林的心樹花汁中釀成。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">豐饒</span>角色的命途行跡。",
+   "lore": "魔王自肥沃的土壤中破土而出，不過是一腕尺高，圓滾滾的果子罷了。不知爲何，只有在擊敗了同胞兄弟姐妹們，它才有資格飲下花蜜，發育成形。<br /><br />「你能痛飲這林子裡任意一棵樹的樹汁，唯獨那棵樹的汁液你不可沾脣。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/589812",
+   "comeFrom": [
+    "擬造花萼【綏園】",
+    "「萬能合成機」- 材料合成",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "633150": {
+   "id": 633150,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "e27598c02b7aed5cb9b255fe0958340dbf3598f33ee10667848cfeed7fdd4815",
+   "name": "流夢閥門",
+   "desc": "夢境造物的控制部件，強化所需的普通材料。",
+   "lore": "調節慾念的築夢裝置，控制着夢境造物內心的情緒。<br /><br />「如果這玩意兒失靈了，就會得到一位驚夢劇團的成員。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/633150",
+   "comeFrom": [
+    "突破至均衡等級2後，驚夢劇團掉落",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "673753": {
+   "id": 673753,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "98956c7191b34655e76f1351f86d05cfe180bde1c7ad81b960c2d3198b4b4d0c",
+   "name": "萬相果實",
+   "desc": "蘊含衆生萬相的果實，自翁瓦克聖林的心樹枝頭培育生成。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">豐饒</span>角色的命途行跡。",
+   "lore": "飲下聖樹花蜜的一個晝夜內，可笑的球狀果實膨脹成了身披纖維鎧甲，手執樹矛和葉盾的「魔王」。圍繞着它的足跡，林間生靈紛紛獻上自己的基因，供王者品嘗、學習和變化。隨後，魔王將開始向翁瓦克的海洋與天空發起挑戰。<br /><br />「藉由此法，古老的先賢們將最恐怖的事物囚禁在了最可笑的遊戲裡。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/673753",
+   "comeFrom": [
+    "擬造花萼【綏園】",
+    "「萬能合成機」- 材料合成",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "717091": {
+   "id": 717091,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "aa55e0e2abb0564d8d470280ad864c1c7a4d9f14cfe0427092a26075fcc86b94",
+   "name": "造夢馬達",
+   "desc": "夢境造物的動力核心，強化所需的高級材料。",
+   "lore": "創造幻想的築夢機械，賦予夢境造物靈魂的發動機。<br /><br />「如果發現這玩意兒出了故障…朋友，在陷入噩夢前快醒過來吧。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/717091",
+   "comeFrom": [
+    "突破至均衡等級4後，驚夢劇團掉落",
+    "「萬能合成機」- 材料合成",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "874339": {
+   "id": 874339,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "c519892f81f8c3ee1c23884973d15c1c4884dec6cebcfd44bd6cb35bce604c84",
+   "name": "異木種籽",
+   "desc": "攜帶各色物種基因的種子，自翁瓦克聖林的心樹果實中取得。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">豐饒</span>角色的命途行跡。",
+   "lore": "翁瓦克的神聖林海中，巨大的異木聖樹耐心記錄着無數個生命周期裏生態圈的演變。它不斷以各色生命的基因爲種子培育出理想的「魔王」。<br /><br />「切開這堅硬的果實，從果肉裏掏出種子，然後埋在神聖的土壤裏，來年你將收穫數十位王者，靜待它們決出勝負吧！」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/874339",
+   "comeFrom": [
+    "擬造花萼【綏園】",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "983280": {
+   "id": 983280,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "0151bb6ca157095e4b12ac1516b05ce890c064d6738032a67eefe492162ff0fd",
+   "name": "忿火之心",
+   "desc": "「狂怒褪去之殼」的憶質核心，火屬性角色的晉升素材。",
+   "lore": "憤怒之火終會焚毀憤怒自身，忘卻憤怒的本因，只剩不甘的餘燼，以及一顆不滅的嗔心。<br /><br />「關於憤怒的憶質會因恨意長存，但也會因恨意失真。」",
+   "purpose": "角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/983280",
+   "comeFrom": [
+    "凝滯虛影【朝露公館】",
+    "「萬能合成機」- 材料置換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 72,
+   "attackAdd": 3.6,
+   "hpBase": 177.6,
+   "hpAdd": 8.88,
+   "defenseBase": 60,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549209,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "attackBase": 100.8,
+   "attackAdd": 3.6,
+   "hpBase": 248.64,
+   "hpAdd": 8.88,
+   "defenseBase": 84,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549209,
+     "count": 8
+    }
+   ]
+  },
+  {
+   "attackBase": 129.6,
+   "attackAdd": 3.6,
+   "hpBase": 319.68,
+   "hpAdd": 8.88,
+   "defenseBase": 108,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633150,
+     "count": 5
+    },
+    {
+     "id": 983280,
+     "count": 2
+    }
+   ]
+  },
+  {
+   "attackBase": 158.4,
+   "attackAdd": 3.6,
+   "hpBase": 390.72,
+   "hpAdd": 8.88,
+   "defenseBase": 132,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633150,
+     "count": 8
+    },
+    {
+     "id": 983280,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 187.2,
+   "attackAdd": 3.6,
+   "hpBase": 461.76,
+   "hpAdd": 8.88,
+   "defenseBase": 156,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717091,
+     "count": 5
+    },
+    {
+     "id": 983280,
+     "count": 15
+    }
+   ]
+  },
+  {
+   "attackBase": 216,
+   "attackAdd": 3.6,
+   "hpBase": 532.8,
+   "hpAdd": 8.88,
+   "defenseBase": 180,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717091,
+     "count": 7
+    },
+    {
+     "id": 983280,
+     "count": 28
+    }
+   ]
+  },
+  {
+   "attackBase": 244.8,
+   "attackAdd": 3.6,
+   "hpBase": 603.84,
+   "hpAdd": 8.88,
+   "defenseBase": 204,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "1c02d236c265b252501946163a123ea0024914f3d7bb717e614b53fba6918e90",
+   "artPath": "06ec5979cd3faee0259917c4277a3482c61fc21583cfc68a7801eaa82fb56a3c",
+   "name": "鹽與犬",
+   "descHash": "加拉赫進入戰鬥後會恢復<nobr>#1[i]</nobr>點能量，效果抵抗提高<nobr>#2[i]%</nobr>。",
+   "params": [
+    20,
+    0.5
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "bca9a8c6f1a873ff76cd0bd120473dcf660321c5bad73cffd7a9fbc7e7d25f04",
+   "artPath": "ded57e58a83be469fd8bc1744197764e5065f70e4a2c6570244066ddf5e3efbe",
+   "name": "獅子之尾",
+   "descHash": "施放戰技時，解除指定我方單體的<nobr>#1[i]</nobr>個負面效果，同時使其效果抵抗提高<nobr>#2[i]%</nobr>，持續<nobr>#3[i]</nobr>回合。",
+   "params": [
+    1,
+    0.3,
+    2
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "652c00cd672620ec1aa067b20fae0232fc92babfa0b9906c6e29073258d65708",
+   "artPath": "36eb269de21bb98b287d2d099d742874a7d6b9ce650d373464c2027232bd7141",
+   "name": "逝者的新生",
+   "descHash": "戰技等級+2，最多不超過<nobr>15</nobr>級，普攻等級+1，最多不超過<nobr>10</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "fe8d6bf3a18fc26d322b5cca6c7cf4387132c388b6baa6497c8d5ce03f70a8de",
+   "artPath": "5bedaf59fb700ad0c8b2b49fd1d4bf463c3399177ca4afaf6be3bb2a8cd14b22",
+   "name": "臨終的輕語",
+   "descHash": "加拉赫終結技造成的【酩酊】狀態持續時間延長<nobr>#1[i]</nobr>回合。",
+   "params": [
+    1
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "a9226a33341e99eabe22b8d047cc5588f9d7e4e595f7d73c3c4268182975f063",
+   "artPath": "1fc609b3622445a163df19949106991915a3002f4f13ae3bd6c3fe85e6e9adcb",
+   "name": "午後之死",
+   "descHash": "終結技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "85634385782afd2654b6f901572c0de58b4deeffae0002918c7dd583be8ed7b9",
+   "artPath": "9eb1f3131de5313ed323aba03f32fe28eb650194cade404055eb5ccce661cb96",
+   "name": "血與沙",
+   "descHash": "加拉赫的擊破特攻提高<nobr>#1[i]%</nobr>，弱點擊破效率提高<nobr>#2[i]%</nobr>。",
+   "params": [
+    0.2,
+    0.2
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   426146,
+   312431
+  ],
+  [
+   342205
+  ],
+  [
+   258264
+  ],
+  [
+   141619
+  ],
+  [
+   857092
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於加拉赫<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#F84F36;\">火</span>屬性傷害。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 426146,
+   "name": "開瓶費",
+   "iconPath": "5f7218bd22632454e4e7f7828aba4370abb31ca24b94fff192c8db547e6c4894",
+   "typeDescHash": "普攻",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 874339,
+       "count": 2
+      },
+      {
+       "id": 549209,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 589812,
+       "count": 2
+      },
+      {
+       "id": 633150,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 589812,
+       "count": 4
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 673753,
+       "count": 2
+      },
+      {
+       "id": 717091,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 673753,
+       "count": 6
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "回復",
+   "descHash": "立即爲指定我方單體回復<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]</nobr></span>點生命值。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 342205,
+   "name": "罐裝特調",
+   "iconPath": "652c00cd672620ec1aa067b20fae0232fc92babfa0b9906c6e29073258d65708",
+   "typeDescHash": "戰技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      200
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      340
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549209,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      480
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 874339,
+       "count": 2
+      },
+      {
+       "id": 549209,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      676
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 589812,
+       "count": 2
+      },
+      {
+       "id": 633150,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      830
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 589812,
+       "count": 4
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      984
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 589812,
+       "count": 6
+      },
+      {
+       "id": 633150,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1138
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 673753,
+       "count": 2
+      },
+      {
+       "id": 717091,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1292
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 673753,
+       "count": 4
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1446
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 673753,
+       "count": 6
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1600
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 673753,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1684
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1768
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1852
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1936
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2020
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "羣攻",
+   "descHash": "使敵方全體陷入【酩酊】狀態，持續<nobr>#2[i]</nobr>回合，同時對敵方全體造成等同於加拉赫<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#F84F36;\">火</span>屬性傷害，並將下一次普攻強化爲【酒花奔湧】。",
+   "ultimateCost": 110,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 258264,
+   "name": "香檳儀禮",
+   "iconPath": "6fc2e1dbc75c2594a415129007f14e24741480f254d28b0bc4c6140cffaab646",
+   "typeDescHash": "終結技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.75,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.825,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549209,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 874339,
+       "count": 2
+      },
+      {
+       "id": 549209,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 589812,
+       "count": 2
+      },
+      {
+       "id": 633150,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 589812,
+       "count": 4
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 589812,
+       "count": 6
+      },
+      {
+       "id": 633150,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1.21875,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 673753,
+       "count": 2
+      },
+      {
+       "id": 717091,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3125,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 673753,
+       "count": 4
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.40625,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 673753,
+       "count": 6
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 673753,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.575,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.65,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.725,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.8,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.875,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "回復",
+   "descHash": "【酩酊】使目標受到的擊破傷害提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>。陷入【酩酊】狀態的目標每次受到我方角色攻擊後，會回復攻擊者<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>點生命值。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 141619,
+   "name": "鏖戰正酣",
+   "iconPath": "40eb47c7f88c24abedb09c676140e2073e1dcc95b2e30129050b9ce13a8d800f",
+   "typeDescHash": "天賦",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.06,
+      80
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.066,
+      136
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549209,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.072,
+      192
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 874339,
+       "count": 2
+      },
+      {
+       "id": 549209,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.078,
+      270.4
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 589812,
+       "count": 2
+      },
+      {
+       "id": 633150,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.084,
+      332
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 589812,
+       "count": 4
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.09,
+      393.6
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 589812,
+       "count": 6
+      },
+      {
+       "id": 633150,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.0975,
+      455.2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 673753,
+       "count": 2
+      },
+      {
+       "id": 717091,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.105,
+      516.8
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 673753,
+       "count": 4
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1125,
+      578.4
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 673753,
+       "count": 6
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.12,
+      640
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 673753,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.126,
+      673.6
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.132,
+      707.2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.138,
+      740.8
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.144,
+      774.4
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.15,
+      808
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "攻擊敵人，進入戰鬥後削弱敵方目標對應屬性韌性。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 973737,
+   "name": "攻擊",
+   "iconPath": "5f7218bd22632454e4e7f7828aba4370abb31ca24b94fff192c8db547e6c4894",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "立即攻擊敵人，進入戰鬥後使敵方全體陷入【酩酊】狀態，持續<nobr>#1[i]</nobr>回合，並對敵方全體造成等同於加拉赫<nobr>#2[i]%</nobr>攻擊力的<span style=\"color:#F84F36;\">火</span>屬性傷害。",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "0",
+   "id": 857092,
+   "name": "親啓佳釀",
+   "iconPath": "8362bd58df7311412cb3d5800cab4697f28697fbc4e4356d58f505197ac69563",
+   "typeDescHash": "祕技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2,
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於加拉赫<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#F84F36;\">火</span>屬性傷害。並使目標攻擊力降低<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>，持續<nobr>#3[i]</nobr>回合。",
+   "ultimateCost": 0,
+   "break": "90",
+   "energy": "20",
+   "id": 312431,
+   "name": "酒花奔湧",
+   "iconPath": "587e67b212907295d75b9f47a763d27e8df0f217fcbac2b18dc54e4f5dec8b33",
+   "typeDescHash": "普攻",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.25,
+      0.1,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.5,
+      0.11,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 874339,
+       "count": 2
+      },
+      {
+       "id": 549209,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.75,
+      0.12,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 589812,
+       "count": 2
+      },
+      {
+       "id": 633150,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.13,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 589812,
+       "count": 4
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.25,
+      0.14,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 673753,
+       "count": 2
+      },
+      {
+       "id": 717091,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2.5,
+      0.15,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 673753,
+       "count": 6
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.75,
+      0.16,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.17,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.25,
+      0.18,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1301101,
+   "anchor": 6,
+   "type": 1,
+   "children": [
+    {
+     "id": 1301202,
+     "anchor": 10,
+     "type": 2,
+     "children": [
+      {
+       "id": 1301203,
+       "anchor": 11,
+       "type": 2,
+       "children": [
+        {
+         "id": 1301204,
+         "anchor": 12,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 63445,
+          "name": "生命強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+          "statusList": [
+           {
+            "key": "生命值",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 589812,
+            "count": 2
+           },
+           {
+            "id": 633150,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 63448,
+        "name": "效果抵抗強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+        "statusList": [
+         {
+          "key": "效果抵抗",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 589812,
+          "count": 2
+         },
+         {
+          "id": 633150,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 63447,
+      "name": "擊破強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+      "statusList": [
+       {
+        "key": "擊破特攻",
+        "value": 0.053
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 874339,
+        "count": 2
+       },
+       {
+        "id": 549209,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "使自身提供的治療量提高，提高數值等同於擊破特攻的<nobr>#1[i]%</nobr>，最多使提供的治療量提高<nobr>#2[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 63351,
+    "name": "嶄新配方",
+    "iconPath": "b42c59cf6ec75a9e2dab964bec6f26bb8e68b5f48ea423cf4acaa3a0f2f12a5e",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.5,
+       0.75
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 874339,
+        "count": 2
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1301102,
+   "anchor": 7,
+   "type": 1,
+   "children": [
+    {
+     "id": 1301205,
+     "anchor": 13,
+     "type": 2,
+     "children": [
+      {
+       "id": 1301206,
+       "anchor": 14,
+       "type": 2,
+       "children": [
+        {
+         "id": 1301207,
+         "anchor": 15,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 63444,
+          "name": "效果抵抗強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+          "statusList": [
+           {
+            "key": "效果抵抗",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 673753,
+            "count": 2
+           },
+           {
+            "id": 717091,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 63443,
+        "name": "擊破強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+        "statusList": [
+         {
+          "key": "擊破特攻",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 673753,
+          "count": 2
+         },
+         {
+          "id": 717091,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 63446,
+      "name": "效果抵抗強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+      "statusList": [
+       {
+        "key": "效果抵抗",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 589812,
+        "count": 4
+       },
+       {
+        "id": 633150,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "施放終結技後，立刻使自己行動提前<nobr>100%</nobr>。",
+    "ultimateCost": 0,
+    "id": 63354,
+    "name": "天然酵母",
+    "iconPath": "08d1f6474537cd68e555067fcfe1f705163e68be4e4443850976263463f41f67",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 589812,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1301103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1301208,
+     "anchor": 16,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 63457,
+      "name": "生命強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "生命值",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 673753,
+        "count": 6
+       },
+       {
+        "id": 717091,
+        "count": 6
+       }
+      ]
+     }
+    },
+    {
+     "id": 1301209,
+     "anchor": 17,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 63458,
+      "name": "效果抵抗強化",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+      "statusList": [
+       {
+        "key": "效果抵抗",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 673753,
+        "count": 6
+       },
+       {
+        "id": 717091,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "加拉赫施放【酒花奔湧】攻擊陷入【酩酊】狀態的目標時，使此次天賦提供的生命回復效果對我方隊友也會生效。",
+    "ultimateCost": 0,
+    "id": 63353,
+    "name": "敬請乾杯",
+    "iconPath": "f86a0b231a9cd7d4fb77d0ae28d748e94c9196d544b305f1f36fbeacd61d1de8",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 673753,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1301201,
+   "anchor": 9,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 63450,
+    "name": "效果抵抗強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+    "statusList": [
+     {
+      "key": "效果抵抗",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549209,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1301210,
+   "anchor": 18,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 979508,
+    "name": "生命強化",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+    "statusList": [
+     {
+      "key": "生命值",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 128000
+     },
+     {
+      "id": 673753,
+      "count": 6
+     },
+     {
+      "id": 717091,
+      "count": 6
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "軀幹",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "治療量加成",
+    "propertyIconPath": "57726150eaa27c675743fe08b88bd04575a0e76b5014dcfbc073c105aa1c7e44"
+   },
+   {
+    "relicTypeHash": "腳部",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "速度",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "位面球",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "生命值",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "連結繩",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "擊破特攻",
+    "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初次見面",
+   "text": "我是加拉赫，這兒的「獵犬」之一。歡迎來到夢想之地「匹諾康尼」，新手無名客。",
+   "unlockRequirement": "",
+   "cnUrl": "495221d21da5779a1a37579d4d3a5f1a62ac4e6e08ddb1cbade27b1b093b9838",
+   "jpUrl": "65ea30b62112b1f5330f01e40aeb71c4e4090b516f73a610ee81ff059b5b237e",
+   "enUrl": "67d240fbd2dbd209ce6dccd6b8b745c916ecf5d26a03e0b4824852f0ea683b7f",
+   "krUrl": "9ba7cbb38ad06c92bb553d5f14877e4087bb55cf94d170b5fb11759bc287198f"
+  },
+  {
+   "id": 2,
+   "title": "問候",
+   "text": "晚上好，大忙人。要來杯調飲嗎？",
+   "unlockRequirement": "",
+   "cnUrl": "0956ac391b16a31f055a4d341ac2ee134679f8d30af3db64cf82ada29f306aae",
+   "jpUrl": "d9a117fc607e27062de6f824356cff98502e241dcfd2ec52687a6544fe49f2ae",
+   "enUrl": "34609ce464aefd86f96bbb2c99c95d702cc308981a1c5aca5d26c226b5113fbf",
+   "krUrl": "597a28b55ebbd0fd9fda46bb783e92a8f1a2afce6834c18dd28aa4ed7eabca16"
+  },
+  {
+   "id": 3,
+   "title": "道別",
+   "text": "好了，成年人還有工作要做，自己去玩兒吧，開心點。",
+   "unlockRequirement": "",
+   "cnUrl": "492842235abf14868a290c8cafb4bed4a98364e54f8e85dda9452c6414ade508",
+   "jpUrl": "2f798021a12d1abc0e658de5ae3661c1e556d276ecd684fe6f978b18a6a31554",
+   "enUrl": "c76e4b534e95e9a3799c16f0f5db77cb2eb877df14d17cca8453c8ce965983c8",
+   "krUrl": "0230aac9edbce08bae3c96ad9ca61abb4056a9899769a0ce5089ebf4534f81f1"
+  },
+  {
+   "id": 4,
+   "title": "關於自己•領帶",
+   "text": "領帶亂了自己又看不見。在匹諾康尼，沒人會在乎別人穿了什麼。他們甚至不在乎對方到底是不是「人」。",
+   "unlockRequirement": "",
+   "cnUrl": "726d621a25fbf640d88e0b287e7179a15232358896e36984c48b9ad409de5c9a",
+   "jpUrl": "94284647ebe719a50960a22e9bc8d8d46d7fb5b3f81e17eacf4bd35ce3573aad",
+   "enUrl": "dd4e74e26f3e902246ba99a60d4eeb9b3fdd1b95fe95050c119caaead7ad6529",
+   "krUrl": "71b38402eb24ef96e1454aece41d26d68281e1ae805f27d6dc757b35a4d97d56"
+  },
+  {
+   "id": 5,
+   "title": "關於自己•身份",
+   "text": "「獵犬家系」的名頭算不上好聽，他們都叫我什麼？走狗？真本事沒多少，嘴巴倒是挺毒的。",
+   "unlockRequirement": "",
+   "cnUrl": "6d229e6262a8c6be051669fdcc0bca82ca873d53931ce380670535597a5316fe",
+   "jpUrl": "2884b57f9af07fb3468f51d0aa2a9c44ff6c7f56b0061c814e89ca081f668691",
+   "enUrl": "fdb95f11358600eb96dd3adeba7af3e546e5e0e565aba7a3d7cf66b662aa95cd",
+   "krUrl": "c8fa6ae89b1687d2eb7c30d21711e13b0902a385dc9e11e17f4d820ed3368a1c"
+  },
+  {
+   "id": 6,
+   "title": "閒談•蘇樂達",
+   "text": "無論經過多少時間，蘇樂達的口味始終穩定如一…這就是添加劑的魅力。",
+   "unlockRequirement": "",
+   "cnUrl": "7da6f936e5caa40d2ba0d0c655fc9a71bb7e88a4eeb40c626f85eea4e44d5191",
+   "jpUrl": "dc63524ff0c5f51f3ed90aa726b223e8a99eecd0d0a2ba18ea2a5e6d7a475d57",
+   "enUrl": "7887af868177cd760326a5c421976519af9d09373003a71d8228d30c223f6c99",
+   "krUrl": "ddf85926733a9b9c53e458317a1a65464ecb592c4a4ceb76db55cc4ed243c621"
+  },
+  {
+   "id": 7,
+   "title": "閒談·白日夢",
+   "text": "我最喜歡在匹諾康尼的街上閒逛，看這兒的每個人做他們的白日夢…我也曾想過去當個星際大流氓，狠狠大鬧一場，大不了就是蹲公司的牢子…哈哈，現在還想着呢！",
+   "unlockRequirement": "",
+   "cnUrl": "1d8e994fb506bb1387130b44488066c715d1ded377534f1da38a9c72f295793a",
+   "jpUrl": "b23ed7d60f83fcc3999ae436238e9f59de5ffc7f8bd7f69d1de83cf2ab362215",
+   "enUrl": "8ed2cc7e409175d4ad7058f483ed014b6e33db8afc642347233d913e7eb542eb",
+   "krUrl": "7c4e4d3fbd2f8b3e01eaec74e38743265724a9042dad51fcf4e21dc33b9d8258"
+  },
+  {
+   "id": 8,
+   "title": "愛好",
+   "text": "調飲是一門關乎感性的技術，在夢中調製汽水需加入當下的心情，如果煩悶，就濃鬱一點；如果快樂，就甜蜜一些…調製飲料，也是調製人生。",
+   "unlockRequirement": "",
+   "cnUrl": "1615f622a3fba8325fd4a61927215209096498d19f1dc6e4226f78ff5df526a8",
+   "jpUrl": "4b6666d273295a5f8f176c870917eac4c6b152df914a05da08d69e0ab43d5ace",
+   "enUrl": "7e24a2ac2e64c50290b5fac4d56bac0acb09b10f886538a53855a48706d86804",
+   "krUrl": "efa47619c43c44441bea093b1f2f5cb28ff79978ea5a8f5c1cb33e5b76a20fbe"
+  },
+  {
+   "id": 9,
+   "title": "煩惱",
+   "text": "配方差勁的飲料和甜點，經常用巧克力來掩蓋劣質口感，可惜騙不過我的舌頭…誰讓我最討厭巧克力。",
+   "unlockRequirement": "",
+   "cnUrl": "24a5fea3bd357f11d2b4761afecd92627396cf947aaf02007297a190937e9758",
+   "jpUrl": "c26cc4018951137edc1ede71078302aa7684edc7aeb23645c9051ddef7137dcf",
+   "enUrl": "ed1902392c199503bed141a77c236513da392729a88f06c0a4d5ba9ae82c029a",
+   "krUrl": "de0f368c07c79499545a5bf7688380cece68b3ab836c5851eda996e50947c5f9"
+  },
+  {
+   "id": 10,
+   "title": "分享",
+   "text": "五大家系中，「獵犬」擔負着守護家園的職責。也就是說…所有犯事兒的傢伙都由我處理。要讓一個人憑空消失，可比讓他憑空出現容易多了。",
+   "unlockRequirement": "",
+   "cnUrl": "bc577f079c02bf64f3c844293fad78f846ea397cff8e2f65e7943c04173344e1",
+   "jpUrl": "3b3a523a3b2683a8c34160307e8859f2f06c953203cf1380456f6abb8a882056",
+   "enUrl": "ced38297aaa09157f3cc8da2abce8eff698494aa7a566313bd14498423cc3099",
+   "krUrl": "cad9c5429c1f62cc4151bcad129320636684d22d663810bc439f14e3f166e260"
+  },
+  {
+   "id": 11,
+   "title": "見聞",
+   "text": "如果哪天你看到一隻發瘋的茶壺，或者一臺到處爬行的電話亭——那多半是遇上了「驚夢劇團」的搗亂鬼。別擔心，死是死不了，最多脫層皮。",
+   "unlockRequirement": "",
+   "cnUrl": "ed1c2b11499c43f57c50525175a3e999e310755b4efbd4372560fbdfe37ec34a",
+   "jpUrl": "20d1fa2f42c6f3d221d93858bca975d27c5a67c7e9b86cbc1807aee640d31a0b",
+   "enUrl": "a61990b5b765372ecd878145de973fb122be61bf8d86fefc3de5472703768233",
+   "krUrl": "e9f5290a0e25f505ac2424999f0bcf54a34e82c0e98b7c5f8d0cad6f70184d8c"
+  },
+  {
+   "id": 12,
+   "title": "關於無名客",
+   "text": "在羣星間仍有通路時，這個世界也留下過無名客的足跡。只可惜，匹諾康尼到底沒能記下其中任何一個名字。",
+   "unlockRequirement": "",
+   "cnUrl": "969aa5a11653142c65ab7b4e16220df0cea439539a399c720627e4793c643c1f",
+   "jpUrl": "55e6e31a72802922629083e0922be06dc1ca38e164cb2495cce6485adec702b5",
+   "enUrl": "341bf44b526a467ba0eac3e42243aea972414cc045ca57cb178da581eb5272b4",
+   "krUrl": "f586291f9cac9af0732d72ad0b5801e5a38478860d3b20074ce6637c797233bc"
+  },
+  {
+   "id": 13,
+   "title": "關於米沙",
+   "text": "米沙是個懂事的孩子，我在他這個年紀，還只知道到處咬人呢。",
+   "unlockRequirement": "",
+   "cnUrl": "1a41f73805a3414150c7e5fd2980de4210edd39beeb7fbb71035eedc6584a366",
+   "jpUrl": "c5ecaf899a833a7bd9c99c658303ce6e93a18e9694ddb39f776175bdd4b85cf0",
+   "enUrl": "46f2e9ef8ac3d285f4958e57b9e52fbedbee26a32f08ec520a0cd419bc3669fb",
+   "krUrl": "236b24019c223b258047cc5ed3e415f2142eecf825bb00c06b84b029751e4f3d"
+  },
+  {
+   "id": 14,
+   "title": "關於星期日",
+   "text": "他的氣味與「諧樂頌」相似，但我聞到了被掩蓋住的…更真實的一面。",
+   "unlockRequirement": "",
+   "cnUrl": "c09240fb0d334802defeca1824e543fc9e41c6d5268e43c0594f1f5fecc15b29",
+   "jpUrl": "98f4ddd0db84572ec21d1fe79d22e193be747c083e5cf6bcec4075487ac41019",
+   "enUrl": "970c3feaf914df9be97c61b0535dff91c27b358e1518f8d771e942bc868b4c9a",
+   "krUrl": "e00784f481147198491b7cdb2a192ca53710ce0a244c13e15efd2d0afe6d1e60"
+  },
+  {
+   "id": 15,
+   "title": "關於知更鳥",
+   "text": "來到匹諾康尼的外人不少，從匹諾康尼離開的本地人卻不多…她會做出這樣的選擇，想必另有隱情吧。",
+   "unlockRequirement": "",
+   "cnUrl": "b87d9dde15f5cc03c22fb5a8a22d1df162316a46206bca686e34a5a2f7019bd8",
+   "jpUrl": "9c3367cc9a289c10c127fd9a26b4e7ef61e1d87790fe6eed505ae525a63e0c9e",
+   "enUrl": "904ef28197523ea579ab260c4e7cd813bf293e1a891d597055c24b6570de25f6",
+   "krUrl": "30720c8d20db246948ebcc30d83b3c92ce64ab246c054b82740b6e179fc350ea"
+  },
+  {
+   "id": 16,
+   "title": "星魂激活",
+   "text": "小心，別在美夢中陷得太深。",
+   "unlockRequirement": "",
+   "cnUrl": "eab5bafefd2cc56091030450a975b122e3d912073eb7cae3963d0e27dd9c11a9",
+   "jpUrl": "5a54b5c487ffc0c5b358bfdcde93a5e42c24c3d84b210b7f26593d6062c17251",
+   "enUrl": "cf9877b8d489472728c04c00033f16452ed83c3be5d08c84c2c52f18d79d26e1",
+   "krUrl": "a4389ce2752ff01f8bbfef33882f40ce9571e1d1b764430428e0bca1065dd9b1"
+  },
+  {
+   "id": 17,
+   "title": "角色晉階",
+   "text": "直覺、本能…都能通過訓練來提升。",
+   "unlockRequirement": "",
+   "cnUrl": "8fdd6187987f5647f08d971b257c79a784f8c55e5285b9513580714b5cb6c482",
+   "jpUrl": "cc10309a2b6540f392b13dca5e50b3b3cd461477e1cb84b49517329d2e2377cd",
+   "enUrl": "27cd9d9271265e94db533faff334a71dca02b7d7e2ee568092dc41f74e1ae06c",
+   "krUrl": "51c4a703a29a3c2fdd0ebd021d93c541408ae6aaed94ee38558d37b4d422ae6b"
+  },
+  {
+   "id": 18,
+   "title": "角色滿級",
+   "text": "時間不多了。",
+   "unlockRequirement": "",
+   "cnUrl": "a50b4def07ac8d324e4ea74dc26ddc33c1e14333f28a2ac5c2fcddde6d8c9496",
+   "jpUrl": "251283b65ab1a0720ca51e85fb4b62e493112922a43bbdf818e245a702f2fbc6",
+   "enUrl": "86f547e0e82fc00157fdc90417a055c751b3aa374e5a74ce9be39a2d099904c4",
+   "krUrl": "e4b073ce46a302272965198056f4ab565ad75825c1e3b9500d7d0f588fe21f3d"
+  },
+  {
+   "id": 19,
+   "title": "行跡激活",
+   "text": "還用說麼？我當然更相信肌肉記憶。",
+   "unlockRequirement": "",
+   "cnUrl": "c7b4d050a30c1bcf1e721152aceda26f0695e681e3eb0eb66f2c7d168440d715",
+   "jpUrl": "7d0c72800023128cfdf8a7e48c6a19321de5c85e15f5fc201e726b9c4c9f53f7",
+   "enUrl": "0a563b18768499bca6e1db47689627cb4cf34842c46e8df59877719479ee7f10",
+   "krUrl": "a91eea16b58ffe20f7caefe7a816b1ed3fb1ec71feb94281788a82600cad5fcc"
+  },
+  {
+   "id": 20,
+   "title": "隊伍編成•開拓者",
+   "text": "再讓我見識見識「開拓」的力量吧。",
+   "unlockRequirement": "",
+   "cnUrl": "4571613c4a2177e02fa1339148c2e3c25668fc05a0de14986f486cf030511169",
+   "jpUrl": "2844fa4f9d232dbb843e6e362657bd39338dde0ddfdc5a32b9ffd65cb04981fa",
+   "enUrl": "5212bb1fdbfc6e283ce8a4ca04715254606e14d1e2b1ce0065720a12537044cd",
+   "krUrl": "44605d9d1d4b3fa3254cd3c3050d5aba2d37d3781992a0c35c559249e92b87e7"
+  },
+  {
+   "id": 21,
+   "title": "隊伍編成•米沙",
+   "text": "別溜達了。小孩子早點回去睡覺，不然長不高。",
+   "unlockRequirement": "",
+   "cnUrl": "ddd17a91be0559e73115919f68fd7f27b9dbea251c2cb78c8d401792c18d0284",
+   "jpUrl": "573d7cdbc815a715f8e3078f4112b9470af64245b617ad5e426eb149bfc7e2b7",
+   "enUrl": "5527d201d7fe5b8fbc3ffd1d2b83dee849294040aa72f1f7b2e97719651c3136",
+   "krUrl": "e343711f45694dc8460f8d6e3010a25bc2856881033a79ebc095c0edfc8e5973"
+  },
+  {
+   "id": 51,
+   "title": "戰鬥開始•弱點擊破",
+   "text": "就這點水平？",
+   "unlockRequirement": "",
+   "cnUrl": "d499d8058215dbb5199493d3095a5f31e5de8416280eee6d1cc2164bed508fee",
+   "jpUrl": "22d3d949c1a9090b37cf88d5c3db7172a4cd2dffe61a08156d7bec980c3c7e74",
+   "enUrl": "915dcc83ce9f08907280ff420ebac8c2e0f21439bb433297ef6f3eada5555fc4",
+   "krUrl": "601db81c458e7c6863de9e9e76124b64b0c1a44925387813b746ad7622cae009"
+  },
+  {
+   "id": 52,
+   "title": "戰鬥開始•危險預警",
+   "text": "喲，拿出真本事了。",
+   "unlockRequirement": "",
+   "cnUrl": "dd98e4e7c70f90cba59251bd5f4ddf719ad4eb47f2609fd798d689fde6c993d8",
+   "jpUrl": "5475430715260f1de69285d6b8003e83bb1df13aad2920abf0aeee75c525a13e",
+   "enUrl": "a3847970c41ac84800ce46a1ce450f5608aae48e69fea4edcec1260acabcf228",
+   "krUrl": "45d81c8ff31769a967de9078d7c733238a76813fa4b5a53443184a3f8c5db427"
+  },
+  {
+   "id": 53,
+   "title": "回合開始•一",
+   "text": "怎麼？又想被揍了？",
+   "unlockRequirement": "",
+   "cnUrl": "3481abab0feea95d56c73aded0a446dd202e59618d35e6c4c6bfce1f21be3084",
+   "jpUrl": "d55cc1859a68a3dc144c1e0a0d1985f890a6cb1f94f4483c71ee57e651e9e08d",
+   "enUrl": "b0da3c0ec82d2f2a823b438675b429fe0c50763226d97db539bc012574229d99",
+   "krUrl": "ada55c0679bc4592827fd4e450862661aa84a6a65112b6d9e5eddfb3405c8c2e"
+  },
+  {
+   "id": 54,
+   "title": "回合開始•二",
+   "text": "來了啊，走近點讓我瞧瞧。",
+   "unlockRequirement": "",
+   "cnUrl": "b9e6d0a8ac42c2d0c2575d4564939af454695d3afad9faff3c6f4b342a240a21",
+   "jpUrl": "65dfc974c0bb03a2552b5abb53e1a95a7c6d63dc90e277960c16b97f953c87be",
+   "enUrl": "1836c60e0c5274d90ff0eb7d3ef4bc4a6cddb269e8f568fa5abcca919153c8fb",
+   "krUrl": "8c0930574baa71af649c89019c8285f71cceec6eec9ed3eff8bd2e50264071ca"
+  },
+  {
+   "id": 55,
+   "title": "回合待機",
+   "text": "還打麼？不打我就歇會兒。",
+   "unlockRequirement": "",
+   "cnUrl": "c49b43d93e30b54ef98333380c3056cc9ca14c79ecbe57254ee7e34c491504fe",
+   "jpUrl": "b323e104551acfd794b09376eee07b766b90874e369f1bf91e7dea25c6d38d82",
+   "enUrl": "0f27daedc8f21c7ddba49dd54a0bdf3ddb9ab747c8da2c68ad371b6fc5991f47",
+   "krUrl": "8704f8954b4cc77695278bbcd4c03507588eb72d72655507037e0ba86c7bd60a"
+  },
+  {
+   "id": 56,
+   "title": "普攻",
+   "text": "從你開始吧。",
+   "unlockRequirement": "",
+   "cnUrl": "edc9bf5d88424adc11acf93af03ee4a619eb027ff8abdc787ff3b97f4acf7a03",
+   "jpUrl": "c4ee4ebf224d547eb5206207ec5ca491f295aa24d6ded213b937ee62e5a91432",
+   "enUrl": "e50d101d7d8d4de40a78b417673abc96cc16b5b0da343c890c9bdbd2d98db957",
+   "krUrl": "477166861b5a541f099be05ae189104546946c264e2d07237413920eead725c4"
+  },
+  {
+   "id": 57,
+   "title": "強化普攻",
+   "text": "還沒結呢。",
+   "unlockRequirement": "",
+   "cnUrl": "ce88335b78d8882da57ac030baa4482deb235a78abdf8d6ebe74a59b1a9666bc",
+   "jpUrl": "84b7f6c38de6aeb234a4c8a0fef33932227f3861ccd0d424373a5f9b8d808061",
+   "enUrl": "8837c73c6c2f679922af2990d21f83512e7e758f4e751e0f2499e4da595999e9",
+   "krUrl": "09d570801c88f81cc10bf6c32a404a5e23e7943f9a42f39dfdcbd05d069b3c55"
+  },
+  {
+   "id": 58,
+   "title": "戰技•一",
+   "text": "調劑一下。",
+   "unlockRequirement": "",
+   "cnUrl": "9863a7fe70be4209c9a8baad9e18581ea43d79ea60044bfd1e410c717598a773",
+   "jpUrl": "95595633bd063b5405a76440231884c90116e0453db5ba4ee57e2f90ddec8f6d",
+   "enUrl": "1e813626070d3ce94ff58f701398a484498660b83cdabbe290a68daffeb189a8",
+   "krUrl": "c7a02eaa0c9db71ca00c3732e83d4ddd02a3b6fd71462c5d3a1362e2908e5a23"
+  },
+  {
+   "id": 59,
+   "title": "戰技•二",
+   "text": "來一口吧。",
+   "unlockRequirement": "",
+   "cnUrl": "244c20e3910239bad1ec0ffc07ed4de563edbad4291807b084e182147dc2bd2b",
+   "jpUrl": "59a63854a3fd455cca4cea8d7981990f045c6d562da1c7ebfd4bfdd97399bb5b",
+   "enUrl": "c85ba27a8c1030af8edbe278644f40cd54032cd1c3f835e048ce850d7a6cd24c",
+   "krUrl": "398a4cffb4f6f221b76d282132a7af00b15e6e6c38c7598b26bf604d1723d8c7"
+  },
+  {
+   "id": 60,
+   "title": "輕受擊",
+   "text": "挺有自信麼？",
+   "unlockRequirement": "",
+   "cnUrl": "fcf8a7f9c61c0e5b6c70e1041d690a325251d64ce964987507b2da5eaf0e28ea",
+   "jpUrl": "19b71596fc389368043c53c8a25f4415e1a54c492865755740a3403156b6a80f",
+   "enUrl": "d262eb7a0489f555b40dabe4bf88a2427f743b4f63194ec12d621d44af4bd0f4",
+   "krUrl": "214646be89b2b33edf9f992736497720f87816573be921876720ddcce1738936"
+  },
+  {
+   "id": 61,
+   "title": "重受擊",
+   "text": "...不用管我。",
+   "unlockRequirement": "",
+   "cnUrl": "7170d08dcb5465d08f482daad6ea9aae04c12150644c98c0646ceb4557ad08f7",
+   "jpUrl": "103d81c9ca8d9bc50111157c52389853ddc8d328afe1609e1afe25adb579c59b",
+   "enUrl": "bf08fae66b8dcb8b711d0307727f87d2e40bb61083c3c5ff70e29fb96ff33853",
+   "krUrl": "1e90ac578c803a8a5e6fe6840cf4d4617e0bda4fb2d67e9c4ae948caabd35427"
+  },
+  {
+   "id": 62,
+   "title": "終結技•激活",
+   "text": "生命醇美如佳釀。",
+   "unlockRequirement": "",
+   "cnUrl": "88a24b6df6cca07ca5528526a73f00af8d9d960ba407106ad74f651f0cf95fbf",
+   "jpUrl": "900ced0cdc54454171b5e21e1b3818800dfe8f47878d2b464b44036163a322df",
+   "enUrl": "0aa778c97d8f6e9bbdaa4fad00356e63bd338c4e3add8b198c18abadcbf05c65",
+   "krUrl": "7056bdb8c41248269ab80af09df51472df081350d4248af79be8a7d93cbcec2d"
+  },
+  {
+   "id": 63,
+   "title": "終結技•施放",
+   "text": "朋友們，盡情享用吧！",
+   "unlockRequirement": "",
+   "cnUrl": "0f918f2777fcae11538667e49eec40cc0045546e5746e139a81b1e61457eb8ae",
+   "jpUrl": "f7a9987bf81f6744e12d2038770387186ac04c4379a22f96325b0ce85a74c09d",
+   "enUrl": "67f0c60dfa8fc42c76a3efc527dbb7d5693837ea800ebea15c72b7fcf62a5e55",
+   "krUrl": "3a917d5d5bb947e7af54cfd9d82d2646d3c0937fdfb1a6527fcabf4c7c08c1df"
+  },
+  {
+   "id": 64,
+   "title": "無法戰鬥",
+   "text": "如果能重來……",
+   "unlockRequirement": "",
+   "cnUrl": "acee257e69dcbe88d9cd55c5227362a422bc63c4d731e83fd03bb247135fea40",
+   "jpUrl": "315ae81a900014b419e1dd4d100a6922996002c3133fe7af211d77ce9d9ff76f",
+   "enUrl": "8aa0bb4c575e3951d0caecded5474f99d2cf9bdaf304f5fc144db0cbcb035290",
+   "krUrl": "9f00881dbb735f97c101ec77a1fea3e3554a0dfc4de8247925b79902ddfddef9"
+  },
+  {
+   "id": 65,
+   "title": "重回戰鬥",
+   "text": "我的使命還沒完成……",
+   "unlockRequirement": "",
+   "cnUrl": "596064fb6d679b2d04021c1c0ca48a96fc076127ac20a7754448e148ed54ea5d",
+   "jpUrl": "df5e6496a4122116d45655b7afc16ebc33d60f6065e60c0f727c55c81cbd4e4b",
+   "enUrl": "d0bb6596b97819214fa553e21db580c0c6d2bccc68b73e5647f4ede0181a2eb1",
+   "krUrl": "f1c9f0da135663799a15f7dd9a7edc819d593ddb6604163084bd346ccc7db62b"
+  },
+  {
+   "id": 66,
+   "title": "回復生命",
+   "text": "謝了夥計。",
+   "unlockRequirement": "",
+   "cnUrl": "12b5f13b56b95f7704630c70c6da40e23e838c20fc3533ffcd104bc0cbeeaf01",
+   "jpUrl": "6a4d8a48078d764d3e0d121dd552dfc949627fbe4a2d874ac4e226c68c69521d",
+   "enUrl": "a138d3ec2c7e059ab84cb08388857922c03ee573520743a5d2e0254c3a2cd242",
+   "krUrl": "193af1adfbc6423dc48348937f05bd2590478314e9515b0c1c9bcfd78a8833a6"
+  },
+  {
+   "id": 67,
+   "title": "祕技",
+   "text": "瞧着點。",
+   "unlockRequirement": "",
+   "cnUrl": "da6a9ccd798ffa617362a99706e5e0d806fddc3333e98748f5646c4a55163818",
+   "jpUrl": "c52c172afa911fd5d0dc8c4adea370b9473db4bf14f15c7e31687b5f77f2b992",
+   "enUrl": "37c4cf9354ae25b089d1883a7d805024d799b56aad47fbebc71756bc44ba05e5",
+   "krUrl": "63a1ee803b84d7cba2c28a313476f7cd2524b033a7a41854bb564c02b0727cd4"
+  },
+  {
+   "id": 68,
+   "title": "戰鬥勝利",
+   "text": "你們都還好吧？",
+   "unlockRequirement": "",
+   "cnUrl": "85a4ac625157a968206303cdd3d6c34e2835a77e7bc5312648d83795fcb2ccc3",
+   "jpUrl": "9dfa1a28c144f0f777512e124af07592770abe948e29c450ef94b24b14b08aa0",
+   "enUrl": "5149fb7e1bd2b7af9be3182ae3cb8e94adbdaf01f47edcea9b42bf449479bc03",
+   "krUrl": "287fbcadc6ac86645c6925709bf9f3bd15ad65cca14a2ec9b86b3d3bc40e8e62"
+  },
+  {
+   "id": 69,
+   "title": "開啓戰利品•一",
+   "text": "聞起來不錯。",
+   "unlockRequirement": "",
+   "cnUrl": "38585004636c42dcb83417b8e35c6bff299180b632caca26f7af4c5b53706ea0",
+   "jpUrl": "7d6cf53712c9290d3ef89da6f9ced4b5f15cd7680c21367b98f766e0e9b99fcb",
+   "enUrl": "469f42b02681df4753dd5fd1c4c5b293d829bdcce684bc2e114b3dca16e98751",
+   "krUrl": "a442bab1cdcabce6655bde29bee28f21e6614893afa53e8722cc7da19cf5f328"
+  },
+  {
+   "id": 70,
+   "title": "開啓戰利品•二",
+   "text": "哈哈，見者有份。",
+   "unlockRequirement": "",
+   "cnUrl": "07f61d5b49baef6a5726418c07be041083a52fdfb6190bfc32c0132399adca0b",
+   "jpUrl": "5fbf8d8668b1c62dd7a521fef4ae408796390c4db3c323aa344789cfca9ba7a1",
+   "enUrl": "0f73d275b1873b6bfe7f483e10dc1718255fe44c89fab443907b19679b8688cf",
+   "krUrl": "1b5636fb760a241862fc2423256e8d25f2f09fdde96604b9011c6f22d64902cc"
+  },
+  {
+   "id": 71,
+   "title": "開啓貴重戰利品",
+   "text": "生活就是如此美妙。",
+   "unlockRequirement": "",
+   "cnUrl": "43802a15c1395244d837cd4e5fd67bc453aed9c11d24bef5dc3de80b191309da",
+   "jpUrl": "2694d546ddf9d7581beea796b8f3fa4a98cdaf9cfb4182ed2a61d9b15b1d188b",
+   "enUrl": "f2c1c24bbfb5449c7187d0d51d07866a3e3501bbd36bff840deaa5c3ded66be0",
+   "krUrl": "d771869a4576b94097c249b0e056f11db26a9cf221e32d1f95d844525321383e"
+  },
+  {
+   "id": 72,
+   "title": "解謎成功•一",
+   "text": "人生嘛，總是充滿謎題。",
+   "unlockRequirement": "",
+   "cnUrl": "93b2471629519d2f4a2a4c9850046dc8cccf5d5f7671dfff05e1f54649126769",
+   "jpUrl": "2861427a35a565cd812a062d2435372150fac05383f826bce15a46788b97a15c",
+   "enUrl": "3f9a1e453c6cd49dd6c0f1a1586180441075b28197f456c2fc0daa99fe380015",
+   "krUrl": "2205329e9dd9fb643bfa977529c1064b3cf483440fa84a4757e60af40dcef7f1"
+  },
+  {
+   "id": 73,
+   "title": "解謎成功•二",
+   "text": "沒想到我還挺擅長這個。",
+   "unlockRequirement": "",
+   "cnUrl": "2eb1ef2136670f422bc3fcd78698eb4dc613ffccb0d5c650f5edc7b05a54062e",
+   "jpUrl": "43ce2eaef552cd6538374a7cf9a15a03c71b52151cf083aec1c3c550130cb5b2",
+   "enUrl": "6f254b65ca71ddd37c8492131d129dab0e17491acb63eee5e6001f26e119c2c8",
+   "krUrl": "dfad06cb349e55d9ad241bb9b8b5866aae43228d9676300c37fe58ff1701a429"
+  },
+  {
+   "id": 74,
+   "title": "發現敵方目標",
+   "text": "我來打頭陣。",
+   "unlockRequirement": "",
+   "cnUrl": "c9ce22b891924965d3db331d48f7c756a1466e1af57349b81d459342b0ed94da",
+   "jpUrl": "34bce4630294f5b8e7601f1202df5bedbd4ae661707982637cfde233a905f1c4",
+   "enUrl": "fed64f625837abae6b6e3d9e2f72423fef26c1ee2b758ef2710ab318db13f931",
+   "krUrl": "de6d29dad5d1890901da66cd8172f066f3d9554e393bb278d572ce4c91fc8c57"
+  },
+  {
+   "id": 75,
+   "title": "返回城鎮",
+   "text": "累了就上哪坐坐吧。",
+   "unlockRequirement": "",
+   "cnUrl": "25f49920cbaaa50100a7821de4a8d8844f9ef8637c417b16713e32c54cdae55e",
+   "jpUrl": "9d8a6e7a8bf3b1d101949a55a70818c3eaabe222d26531a36b75756acc07a722",
+   "enUrl": "ccc5f25ef7d80f72b77597de19c0ad76178eb33f319e065257b7f39009bd39df",
+   "krUrl": "3289b1e1f1feb44ec4db80bab47ef6f2313bd4fe5c3b6bd14d8974ca4b178fef"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "角色詳情",
+   "text": "匹諾康尼獵犬家系的治安官，也是一位不修邊幅、懶散隨性的調飲師。<br />着裝頗爲散漫，調飲更是隨意，對來訪賓客以禮相待，但保有戒心。<br />似乎有着諸多往事，卻從不主動提及。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "角色故事·一",
+   "text": "「煙草、糖果、廉價洗髮水——他聞起來就像一個典型的中年單身漢，衣服還算整潔，但總是皺巴巴的，沒有品味，也懶得打理自己的外貌。他朋友不多，下了班最大的愛好就是來上幾杯美夢特調，老地方，老口味，老招待，數十年未曾改變。<br /><br />這樣的人卻能夠贏得一幫獵犬家系成員的擁戴和尊敬，原因大概與他臉上的傷疤有關係。在幾乎沒有意外的美夢中，一道猙獰的傷疤對於治安官來說就是一份罕見的榮耀，亦是資歷與名望的象徵。<br /><br />每次面對案情，他總是先剝一塊糖扔到嘴裡，嚼得差不多的時候，他皺着眉頭開始調查，在深夜的酒館苦苦思考線索指向的方向。但和那些毛頭小子不一樣，他似乎已經不再爲了抓到嫌犯而高興。面對着那些在美夢中墮落的所謂罪犯，我在他的眼裡看不到絲毫的成就感，只有空洞和憂鬱。<br /><br />我能理解他，人到了這個年紀，就會開始懷疑自己之前所過的生活有什麼意義。這點倒是和曾經的我一模一樣。」 <br /><align=\"right\">——《手記•獵犬家系治安長官》</align>",
+   "unlockRequirement": "角色等級<nobr>20</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·二",
+   "text": "「人和人總需要某種契機才能開始交流，美夢中的各種特調便是化學反應的催化劑。<br /><br />我觀察四周，很快就找到一個習慣左右逢源的形象。<br /><br />借着美夢特調的名頭，他從糖漿與蘇樂達的歷史講起，向客人解釋搖晃的時間與成品風味的關聯，再後來，是特調的香氣與一個人性格的適配程度，如何掌握搭配成分的祕訣…周遭的臉沉沒在黑暗裡，他傾聽着或悲傷或喜悅的絮語，在觥籌交錯中冷眼看着衆人的心。<br /><br />他等待客人一個個散去，獨自將銀色的酒杯擦得鋥亮，望着門外。日復一日，他等待着一個永遠也不會回來的人，等待那個人給他一個永遠的謊言來終結如此漫長的命運。<br /><br />燈光盡數熄滅，他獨自行在街上，投下的影子很長很長——<br />也許，我最後也會踏上與他一樣的命定之路。」<br /><align=\"right\">——《手記•美夢調飲師》</align>",
+   "unlockRequirement": "角色等級<nobr>40</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·三",
+   "text": "「美夢中只有快樂，這恰恰是最大的悲哀。<br /><br />這些美夢中的失意者們，害怕家族的驅趕，如同幽靈一般行在夢境的邊緣，小心翼翼藏起自己的情緒，迴避那些聞着酸澀且微苦的記憶，只有在飲下特調的片刻，他們的防線才會潰不成軍，仿佛要把這輩子剩下的話說完——<br /><br />『看不起我的人可以繞酒店三圈，但願意正眼瞧我的人…哎，死一個就少一個了……』<br />『每個人都在白日做夢。我像你這麼大的時候，就想去當個星際大流氓。結果顯而易見，喏——白日夢碎了。』<br />『領帶亂了自己又看不見。在匹諾康尼，沒人會在乎別人穿了什麼。他們甚至不在乎對方到底是不是「人」。』<br />……<br /><br />他們口是心非，他們詞不達意，他們永遠不會說出心中所想——但也只有這樣，故事才顯得真實。」<br /><align=\"right\">——《手記•夢中的失意者》</align>",
+   "unlockRequirement": "角色等級<nobr>60</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·四",
+   "text": "「工作時間，他是個經驗豐富、處事不驚的治安官。輝煌之時已過，他手軟了許多，雄心與壯志也隨着白日夢的破碎消磨殆盡。下班後，他去往老酒館消磨漫長的夜晚，爲自己和老朋友親手調上幾杯飲料。酒杯相撞之際，那些話語如同泡沫一樣翻湧開來，旋即幻滅。<br /><br />他回憶着自己的黃金歲月，那時的他即便身受監禁依然嚮往自由。他們一起反抗欺壓，將性命全數託付給夥伴。他們夢想着自由的領土，隨時會死卻仿佛將無數個美好的明天攥在手中。然而到底寡不敵衆，熟悉之人一個個逝去，理想破滅，荒誕橫行——<br /><br />『那是你經歷的事情嗎？你…你是在開玩笑吧？』客人打斷了他幽幽的自語。<br />『當然了，怎麼可能是真的嘛。』他笑笑，繼續着手上的活。<br /><br />——加拉赫是我最真實的謊言。有時，我甚至分不清他與我之間的界限。」<br /><align=\"right\">——《手記•加拉赫》</align>",
+   "unlockRequirement": "角色等級<nobr>80</nobr>解鎖"
+  }
+ ],
+ "archive": {
+  "cvCn": "馬語非",
+  "cvJp": "三上哲",
+  "cvKr": "박상훈",
+  "cvEn": "Erik Braa",
+  "camp": "匹諾康尼"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "加拉赫",
+ "rarity": 4,
+ "descHash": "匹諾康尼獵犬家系的治安官，對來訪賓客以禮相待，但保有戒心。似乎有着諸多往事，卻從不主動提及。",
+ "artPath": "d478212eceda00d9dc262c5f54902b368626c3faf35ca1934ed34d22c84d4663",
+ "miniIconPath": "a2638f3f1da2fbb43fc46719739143a403658b3b53704b9b23e505cb7292b0eb",
+ "damageType": {
+  "id": 2,
+  "iconPath": "bd8329d02d7ecfee2a1f565e89cf3bf7bf6aaa60bea29cec2b4f7192626a0311",
+  "color": "#F84F36",
+  "name": "火",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "81e58cfdc0c8a9a026c2c3111a6bdf663d572fa71524907b004fc5eb7f34fade",
+  "altIconPath": "c825fa86e9a217db6e704916b2d5aeb22c5733b2776a0ea16c558c29e6c5c92c",
+  "color": "#FFFFFF",
+  "name": "豐饒",
+  "rarity": 0
+ },
+ "pageId": "gallagher"
+}

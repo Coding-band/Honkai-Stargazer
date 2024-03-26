@@ -5,6 +5,11 @@
  "figPath": "fad743b3b95ad05a8faade64c629ba8d5a6ae5f69c089e2b9756ab278b83ab32",
  "fgPath": "dda3db5c89edf47cb29222a502980f671b6c1fa080816719ab226d2ca5dbfb1b",
  "splashIconPath": "2a99e36bac5404f0d572eaea97f47cffa4b023504d67cee9db81f469a1ed9fb5",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRswCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSCoBAAABkHPbtrG9wve5n23bZsneiO1UqlN9VWzbtm3btm3zuWfHSURMAAAjEBj8VxExf4ryalh9sBgFAGAA11+ie60l723iRMkZg9BwuAsMio8438hLr889ZN9jO/u3gMAV3ek4+uIlaS3J6TBwwQB+pZKWlvYrm8GIYA8dpeXri7SWjwIgQO5bqqry23vyG9fFRMMdM/iVqqqkfnG4b8IWzNp7m2qpavl14mNa8rlfzdZlmz/zHVX56TWVlktD4J48b86mXdcvOu945Rz5iV8mw6/r5lWNy2u2tO998MHCaQNnNQ1Og0kd2G/nhwenWy0dZnuu6rOmNQCYgpJREy+PuzxuLRc3tZiwJgm/BgGpkhHZacfdSsSm+/8iMCICIK4iAP8ogt/KXwEQwW8BVlA4IHwBAADQBwCdASoUABQAPm0ylUekIqIhKAgAgA2JZgCdMoSA8QzuyveXCfbvTczT/OfsAfqhvrv6Sh9uzZgFQCMWNDX+R6vQ786VAAD+z4E1Prn7hSk3RyJ302E+EJ7KP2pJs1T3JpxIzHsl9KrurIq/wWDj7fyCMqQoCnlsjv1xhww/PmGU7EJDpvRDY6sTkGTcRyCcyw7NFezoN7ZEJXB77Ziw14W/ZP1bXilgklS0Tf6uQo5yjnpt22fz2Ps67LcKZ0/YB9YLQYQYBr8UpIL2FEBMOx6lNaPr+nK3OuQTqmUrtLkFj/9SEy+yWSY/n03qQrsFGQmWPLz/Bb3YBKhke+iq3prXxw8Pn86fP608VmIgtQmwX/jxCcy4sP/g4/u1gGSi++OtWCu9Mft7yTBe70RPPcbrz2X3cxK5FPPbymqsA1emR+2sfpj8x2kvxAnoKVryQAZ1pec8ncKW/5mCXvFEzcF/783T+/Y/bf38kf0ITIL8T5tpIXHjI3QAAA==",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Hadiah Poin \"Simulated Universe\"",
     "Kehormatan Tanpa Nama",
     "Penukaran Ember",
+    "Penukaran Starlight",
     "Hadiah Event Waktu Terbatas"
    ]
   },
@@ -192,7 +198,6 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Calyx \"Rivet Town\"",
-    "Calyx \"Rivet Town\"",
     "Penukaran Ember",
     "\"Omni-Synthesizer\" - Pertukaran Material"
    ]
@@ -229,7 +234,6 @@
    "rewardPath": "/material/836261",
    "comeFrom": [
     "Calyx \"Rivet Town\"",
-    "Calyx \"Rivet Town\"",
     "\"Omni-Synthesizer\" - Synthesis Material",
     "\"Omni-Synthesizer\" - Pertukaran Material"
    ]
@@ -246,7 +250,6 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
-    "Calyx \"Rivet Town\"",
     "Calyx \"Rivet Town\"",
     "\"Omni-Synthesizer\" - Synthesis Material",
     "Penukaran Ember",
@@ -488,7 +491,7 @@
   {
    "id": 6,
    "iconPath": "02cbee744a2a1801b79c0bb580c9e440f237123d9f819eca19d6bb64377835b6",
-   "artPath": "1777a35bfe372ae0ea115a9fea73b45e5bd0863087297ec610d51a3a0f9c7327",
+   "artPath": "76d2af494b4a68d86aa52994767c60bd433a03de27a0e62a2fcc6a1e559ee309",
    "name": "This Song Rocks to Heaven!",
    "descHash": "Meningkatkan <nobr>#1[i]%</nobr> DMG yang diakibatkan Serval pada target musuh yang berstatus Shock.",
    "params": [
@@ -1616,14 +1619,17 @@
  "skillTreePoints": [
   {
    "id": 1103101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1103202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1103203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1656,6 +1662,7 @@
       },
       {
        "id": 1103204,
+       "anchor": 12,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1752,14 +1759,17 @@
   },
   {
    "id": 1103102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1103205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1103206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1792,6 +1802,7 @@
       },
       {
        "id": 1103207,
+       "anchor": 15,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1892,10 +1903,12 @@
   },
   {
    "id": 1103103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1103208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -1928,6 +1941,7 @@
     },
     {
      "id": 1103209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2000,6 +2014,7 @@
   },
   {
    "id": 1103201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2028,6 +2043,7 @@
   },
   {
    "id": 1103210,
+   "anchor": 18,
    "type": 2,
    "children": [],
    "embedBuff": {

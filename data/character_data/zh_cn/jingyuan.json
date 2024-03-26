@@ -5,6 +5,11 @@
  "figPath": "f0d10346873e80911f55ed14ed19f8d7ad0b6602aa560eb7e38923ed7a02f30f",
  "fgPath": "04d6bcc33d0353d0143b61ab552916eecac0a1baee3e1e6c1606449c78562590",
  "splashIconPath": "72da6f1b2fae6c3fced8b6356875784d9bdfe1e28c20d7ae1026c5ce9d142cf4",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRlgCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSPEAAAABkLrt//nX8l+f73e2bbsvr3lrTkr2ko206B01OyKuHlb7NOP7eb0OxoiYAJyic5A5kg+QCicHx8xYL8jPzB6Ic2AOCZt/cLdmeaJw4c5wFA5vfLm/8fzp5c/3J8pg/jOIH3rlfRG/SRf88b9B0EVJspSlmuHvAj6Y+f6dpEjS7sYDCAKuyx4gUbrW3ZxY3LBjSUkUKUr6lJf/RqJISiJl9Xkc7qw8UqT4v1UDgEp5FA8Qf+tdEAzMPVnvt6Uo6+lHmwsYpHWV70u0/C2928Lh7WefSVYaCgg/yLgO4Lfm6Wo1jmxcIL8CcMxRAAMALg4GAFZQOCBAAQAA8AYAnQEqFAAUAD5tMpVHpCKiISgIAIANiWIAnTKEdXCBagLsl3mZ8Ae4LeAzAA6OpORbdYkPNMe4r+QKECVxQAD+83sZMfOLCjEVjZd364q5dBoWvKRLMXjyzvYcrWu/WmczIvvF0mv3pA9su+qjAr57EOVtNsYPe3gN7yBReWB7oxh5ttYNuenUmCLl/wvOS3P5EqfVur26RYsSRrn/M23Iysgy0+rd5RqTnVOjEyaCaJ2TC9DwwdiYK3TS23mMhhMV357DIDxO22bPpYU8DuIFB2a3RkZGa6uutfmf+OLkYRQzit/2SlBRimtmH+NvtHlhmfwWrsPQU9Pf7bkw6brKaxwHwftGlXPR5nfduBUGTZPIgROl7ALrF0M92YGmmivj//eMWamdaBFxovqlCFti36unQfBq2VBkyUgAAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "「模拟宇宙」积分奖励",
     "无名勋礼",
     "余烬兑换",
+    "星芒兑换",
     "限时活动奖励"
    ]
   },
@@ -64,7 +70,6 @@
    "rarity": 4,
    "rewardPath": "/material/151161",
    "comeFrom": [
-    "凝滞虚影【迴星港】",
     "凝滞虚影【迴星港】",
     "「万能合成机」- 材料置换"
    ]
@@ -148,7 +153,7 @@
    "id": 633445,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "c3cb2e5eb5390586c537d03d1de632b1aa59c49a3cc32f24d68672d2f97fb1e5",
+   "iconPath": "fc1f8e93b552510a719e96df3c4e48ace4f905d262668303315d785b951a7c04",
    "name": "永寿天华",
    "desc": "古老神物结成的花朵，强化所需的普通材料。",
    "lore": "仙舟长生种「无尽形寿」的源头，「丰饶」神迹的残余。历经坎坷，求药之舟谒见天颜。神明垂迹显化，建木生发。<br /><br />「新蕊月中落，天华云外香。桂馥吐纳间，鹤发换青髫。」",
@@ -174,7 +179,6 @@
    "rarity": 2,
    "rewardPath": "/material/635675",
    "comeFrom": [
-    "拟造花萼【铆钉镇】",
     "拟造花萼【铆钉镇】",
     "余烬兑换",
     "「万能合成机」- 材料置换"
@@ -211,7 +215,6 @@
    "rewardPath": "/material/836261",
    "comeFrom": [
     "拟造花萼【铆钉镇】",
-    "拟造花萼【铆钉镇】",
     "「万能合成机」- 材料合成",
     "「万能合成机」- 材料置换"
    ]
@@ -228,7 +231,6 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
-    "拟造花萼【铆钉镇】",
     "拟造花萼【铆钉镇】",
     "「万能合成机」- 材料合成",
     "余烬兑换",
@@ -448,7 +450,7 @@
   },
   {
    "id": 2,
-   "iconPath": "1ada2903de22f2211cd7ccc29b6f1d13cb32c853c2f204b0d98e950f18c05fe7",
+   "iconPath": "5e1700f4af0601eea2bea05a58a7680186dde591658d153603bec9825d60b53a",
    "artPath": "8d02f2fa030804a7410f8f4c0a5c3a21b3366f270f50df1056a2fd16e902eb9d",
    "name": "戎戈动地开天阵",
    "descHash": "【神君】行动后，景元的普攻、战技、终结技造成的伤害提高<nobr>#1[i]%</nobr>，持续<nobr>#2[i]</nobr>回合。",
@@ -459,8 +461,8 @@
   },
   {
    "id": 3,
-   "iconPath": "c285ee548496215a285ac813e29e5d66263c9ce37bd30bface67a35dd34607be",
-   "artPath": "008d32c21ea127793484562895a96f6c6316996b554ccfe07cefa105b06d0492",
+   "iconPath": "2c6c8d2c0a5842ea12b010eb66dceff271679a1a7791802da9514e81691d8a9f",
+   "artPath": "1b1e9adb44a8dc1e61488fdf6c251f3e40bcd074cad227d0e5ed911e535e92eb",
    "name": "移锋惊电冲霄汉",
    "descHash": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
    "params": []
@@ -468,7 +470,7 @@
   {
    "id": 4,
    "iconPath": "2b10749c72e213cf02be698dbeeffae1e10ea29442682e2ed7630900cb0bba92",
-   "artPath": "a8ecbfee2b5ed1aee477fc5f41a76a7a49ada94e77550f648f00eea927e0ad64",
+   "artPath": "66dc32381f62c8b17553a8f38f740263cf593f3d5b48991bdd5ff07c5d667efb",
    "name": "刃卷横云落玉沙",
    "descHash": "【神君】每段攻击后，景元恢复<nobr>#1[i]</nobr>点能量。",
    "params": [
@@ -485,7 +487,7 @@
   },
   {
    "id": 6,
-   "iconPath": "74e9240d790270802b8ce168fcdc3b530c87b633c2c520a85f6dd979454afe8a",
+   "iconPath": "ed18f716d9b696581c1ccfa670bbf946e0295dc6e8d08c87dfaafd89f796e9b4",
    "artPath": "dbaf33bf9cbd2477edf3676e9e13e239f4931131296edd74a2d97f5dc7de0aa6",
    "name": "威灵有应破敌雠",
    "descHash": "【神君】每段攻击后会使指定敌方目标额外陷入易伤状态。<br />易伤状态下的敌方目标受到的伤害提高<nobr>#1[i]%</nobr>，持续至【神君】本次攻击结束，该效果最多叠加<nobr>#2[i]</nobr>层。",
@@ -1654,6 +1656,7 @@
  "skillTreePoints": [
   {
    "id": 1204201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -1682,6 +1685,7 @@
   },
   {
    "id": 1204210,
+   "anchor": 18,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -1714,14 +1718,17 @@
   },
   {
    "id": 1204101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1204202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1204203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1754,6 +1761,7 @@
       },
       {
        "id": 1204204,
+       "anchor": 12,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1851,14 +1859,17 @@
   },
   {
    "id": 1204102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1204205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1204206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1891,6 +1902,7 @@
       },
       {
        "id": 1204207,
+       "anchor": 15,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1991,10 +2003,12 @@
   },
   {
    "id": 1204103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1204208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2027,6 +2041,7 @@
     },
     {
      "id": 1204209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2487,7 +2502,7 @@
    "cnUrl": "07e409e5eef76818a0d00dab5e9efe947b47bce36f4e33be8f595955c5c3bfc8",
    "jpUrl": "195e5b1932aed3e62d71d295cc818703ecf0bce17b3afd8d0f4936f776cb57bc",
    "enUrl": "4c6782bf4183a9bbdeac38ba5f352c3176c2fa01138617092107b59f712a245c",
-   "krUrl": "cde1f1c881367ff56c9947bae7e8dec82879dd7f3afa7b921b758aa19df497ca"
+   "krUrl": "4e8475915b51055727050dd34527adb492152fe3c822e538c8d4cbecd833895a"
   },
   {
    "id": 56,

@@ -3,8 +3,13 @@
  "iconPath": "b04234e91a4c2727c38da1d1117f838a3b3d2d805f268c8ef30ee3d55f209dee",
  "bgPath": "5b8c0b1f01f3a1d5f21d935bac5eff7faa836300d3b51619e01836bf2efce300",
  "figPath": "48de6a5940f1bc2c27ab4f32483f0b460c8c1a238fe30118b6c3d2bd142d58b6",
- "fgPath": "6beddb88cc58e1cce59b47f9a3de44269ec48299ad6852bcc1182152787f0532",
- "splashIconPath": "7ed6e2a65612551fd67c9f95cd2db08c1df569efba321e4adf22925fa91ba15e",
+ "fgPath": "aa38bcc6a8172825475bf8cda08f53ff1b8838395daab996dfd9d0dfccb67b53",
+ "splashIconPath": "c1ca41aeccea99e7840f768fe9999bf816194185def767f83007af0e60d3e0e5",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRn4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSBEBAAABkKNt27FH9/t9sW3be3BSOqlsjm1jAa5sd7ZVsbLt+f0+9+D7/zVExATAZxO++5sA/OHv74NCOBAC1M6C6Q2Jg7lnX1+qXMuVUVAWCuELlpH88cbDXvhZIGjkoRbtJl08AigABtpJCqlFaFsaB0Cp1pt0C0UoFM0x+PmhgtQUIUmhm+eiAGMj3RQhKUIhuRwNVx0US1KE2mb/PZQ5cPwDSXq0x6WFPx6vSUlEvU30NwcthbZ7U7Jholr0o68/xjbcnbX+C98+29YTBgMHSD4daQ2d+9Tu0fy9uxBA8JL3JG2XSc3/O/B/8OA7Uj784olpM7ZmA4AygcjaztTwksYIAFCwNODVzzQMeDdMBWUq/A8AVlA4IEYBAABQBgCdASoUABQAPm0wkkckIqGhKAqogA2JbACxHt7A7IA3nTeHiIS0EAMVpdJdEuV5SRIDeasqVQSK8AD+6/5qWcHMwrl8XReEQ5Gefr4ovHAVh9QkYv043Upfm2D+tFS1gZBGayU5N2OE4uMaKcLHGbAz3NAv1aXo1pXmX4UgjRqOj+Yjiy4Zi5cDlKRM9aeGo1l5BR80Fr05Ay3XSHl8+1ES/1oL0+0Hmb/u6rotkCmvIYn4GtBXzEGrECM44l/2EOTZX/j/h03iQJRPDvaIz2NFymQR+NEstVJ+WPTJuMTbYEp2eK825+8CMdk/hCBApsuNVdwuUiiVNSzIBv1cpbL+l7lqWq7Z5GKiUrIkx0jLd7GD/JyZZtTqLrGn6mPiq2Wu3CbClPfJ5wCzVWXh8gijyqhwueCpovXr0i5aXX/gwwAAAA==",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Récompenses de points de l'Univers simulé",
     "Honneur des Sans Noms",
     "Échange de braises",
+    "Lumières d'étoile",
     "Récompense d'événement à durée limitée"
    ]
   },
@@ -173,7 +179,6 @@
    "rewardPath": "/material/635670",
    "comeFrom": [
     "Calice de la Colonie de robots",
-    "Calice de la Colonie de robots",
     "Braises immortelles",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -209,7 +214,6 @@
    "rewardPath": "/material/836256",
    "comeFrom": [
     "Calice de la Colonie de robots",
-    "Calice de la Colonie de robots",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -227,7 +231,6 @@
    "rewardPath": "/material/866634",
    "comeFrom": [
     "Ombre stagnante du Jardin de vulpeflâne",
-    "Ombre stagnante du Jardin de vulpeflâne",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
   },
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920197",
    "comeFrom": [
-    "Calice de la Colonie de robots",
     "Calice de la Colonie de robots",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles",
@@ -439,7 +441,7 @@
   {
    "id": 1,
    "iconPath": "bd8d3896d01979ead66758f902d455aef9fb0306e7ac744cf7dfcff4395d5b7b",
-   "artPath": "24c574c9152d2ecb63ed28dbc12fcfef8194805e8b06ac43628844cd5c7c58b9",
+   "artPath": "89f72a7473270ff439e41451ba2d6644ed9c977cac0b61affdbcfc199673c9ce",
    "name": "Une seule pensée",
    "descHash": "Lorsqu'un allié qui bénéficie de l'effet de l'ultime de Hanya élimine un ennemi, l'action de Hanya est avancée de <nobr>#1[i]%</nobr>. Cet effet ne peut être déclenché que <nobr>#2[i]</nobr> fois par tour.",
    "params": [
@@ -1595,14 +1597,17 @@
  "skillTreePoints": [
   {
    "id": 1215101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1215202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1215203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1701,14 +1706,17 @@
   },
   {
    "id": 1215102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1215205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1215206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1811,14 +1819,17 @@
   },
   {
    "id": 1215103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1215208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1215209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1852,6 +1863,7 @@
       },
       {
        "id": 1215210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1952,10 +1964,12 @@
   },
   {
    "id": 1215201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1215204,
+     "anchor": 12,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -1988,6 +2002,7 @@
     },
     {
      "id": 1215207,
+     "anchor": 15,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2683,7 +2698,7 @@
  "name": "Hanya",
  "rarity": 4,
  "descHash": "L'une des juges de la Commission des dix seigneurs du Luofu de Xianzhou. Nominée par les Dix seigneurs et porteuse de l'autorité du Pinceau divin, elle lit le flux constant des vices et péchés humains, puis prononce les châtiments et punitions karmiques.",
- "artPath": "e30b8f2b3b8cc7afdd44d4c168be4bc08e6d245b5e2268a315b8b4d8330ac9d2",
+ "artPath": "f3b440b4bc7cd44dfd1215d8b9123d6bee5b783194d3a27a570d1f46dd1da6a9",
  "miniIconPath": "fda2b3da3f062c6e59e53bddc8cfeef1e1960b173534ae9e1f753eeba64d0c98",
  "damageType": {
   "id": 1,

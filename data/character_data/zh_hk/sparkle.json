@@ -5,6 +5,11 @@
  "figPath": "991aa9d7c911b02cfd47800cab0ad4146bb0d02de608eb112830f5e334ca2a13",
  "fgPath": "",
  "splashIconPath": "f1dfd94040dc1f7a208bc749c20be2fc5a9bd7a37da45ad756f201f0d49195b6",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRv4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSDkBAAABkHPbtrG9yvejz7Zt22br76sY20lt27ZT2erMynYqO3mesz9HxASgX1Wtao/WAagYWEPhlTp3AwoG9gFqxqcCgJ1PnkM/AaPKLl52jJ2/pahg3aVnWVChoe3jc95Ydujwpye3n4xckm4AGobfPUuT/b6+34k6e2jo2JH7meb//5Zl8scCDx93KAiZF/aNFoUi/7m1drsnAOSfoCXsa/GZ55trgI4p/C8ipIjw53YesIWO+TSFQlKE//5wMmCEJPz6RhHpY/H6kQagpQNTH9AihWLyU/6GOCBlprsWdJCmUITcHdzlCB1DpkTlzyBFhC/PdawLhKIgZn720OM/aZH3sjStug4qVLi1tpZv/2r+WTe9Gq7xnujrv2ZZYtNv8s1OX9ho6Ksg4szzFRuONsbEQMHATu2HJmHQAFZQOCCeAQAAsAgAnQEqFAAUAD5tMJRHpCKiISgIAIANiWwAnTKEen+O8PM7/AA2zXKzaq7vGRPwHpg5p/nL2AP1S31UPNqFIg7Q9T2kHbdQBrCqhrKcAP7veqX6qZbpLZcedXteDfxY2/gB/PEV8UYdmD8EUgmz0t9gc3FBfgkAvb6C2pyleNMk8Br6fwdrFdTyxNsmXwg9/xuQRx3bc0d/+4FysOh+tYqkZN6fLtuxams/N3/KvdriDFt96dXtpuuVl7Afmll03lhB7YNrn5yaU+ck8jW3Y58P8bYvZvHGm1cdV9yRdFmxZCL/xVTjEP/TAfXyK1bLjPaXo2Rx2zL2F70ACVwvdX9MUePuNay0w3+i/NvzggswmF4I5EnffzWPo6b/HUHeNUMNN1AZLpEks/I8uUbtRPT3VYj46xuupu1jrNZ4MWno0ppt2nQWL/jW2+g/fZUyUwb8u2/xcfsrz0IBeySlPfiNafOGfLsfxIVurQCsdFpHy9Vh+lskTADdSKniGHoseVetB0AZ8/SatIIHf2xbdHAgvJ0/t3uoE+IcAAAA",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "「模擬宇宙」積分獎勵",
     "無名勳禮",
     "餘燼兌換",
+    "星芒兌換",
     "限時活動獎勵"
    ]
   },
@@ -64,7 +70,6 @@
    "rarity": 4,
    "rewardPath": "/material/351748",
    "comeFrom": [
-    "凝滯虛影【築夢邊境】",
     "凝滯虛影【築夢邊境】",
     "「萬能合成機」- 材料置換"
    ]
@@ -172,7 +177,6 @@
    "rewardPath": "/material/589819",
    "comeFrom": [
     "擬造花萼【「白日夢」酒店-夢境】",
-    "擬造花萼【「白日夢」酒店-夢境】",
     "「萬能合成機」- 材料合成",
     "餘燼兌換",
     "「萬能合成機」- 材料置換"
@@ -209,7 +213,6 @@
    "rewardPath": "/material/673760",
    "comeFrom": [
     "擬造花萼【「白日夢」酒店-夢境】",
-    "擬造花萼【「白日夢」酒店-夢境】",
     "「萬能合成機」- 材料合成",
     "「萬能合成機」- 材料置換"
    ]
@@ -244,7 +247,6 @@
    "rarity": 2,
    "rewardPath": "/material/874346",
    "comeFrom": [
-    "擬造花萼【「白日夢」酒店-夢境】",
     "擬造花萼【「白日夢」酒店-夢境】",
     "餘燼兌換",
     "「萬能合成機」- 材料置換"
@@ -439,7 +441,7 @@
   {
    "id": 1,
    "iconPath": "9ce44da0ce2db178d03fa5848f1666aed212db44e4472db3cfc81a0444ab2964",
-   "artPath": "b410784fbb494f07996741bc2887c9ff9045c4e84e932bd539e9fa2fe8099a4e",
+   "artPath": "9b2cefc8111d1be621f58cde3d8eb08ccf2e22a7992505ebe901b7fd674e78d4",
    "name": "懸置懷疑",
    "descHash": "終結技施加的【謎詭】的持續時間額外增加1回合，持有【謎詭】的我方目標攻擊力提高<nobr>#1[i]%</nobr>。",
    "params": [
@@ -449,7 +451,7 @@
   {
    "id": 2,
    "iconPath": "6831a28c5ceeeeea8480f2a689dea58ab989249c3ceb3f87bfc094c6425b8079",
-   "artPath": "2d3fbd6ed5af564daf5076cb009ffeb329a7da156bf0dacfcdfb91ecd4e3def7",
+   "artPath": "a7670d995478c53fdf6ffff301be8959a00978d21b4ed3d57061f97aac87b567",
    "name": "虛構無端",
    "descHash": "天賦每層效果額外使我方目標造成傷害時無視目標<nobr>#1[i]%</nobr>的防禦力。",
    "params": [
@@ -467,7 +469,7 @@
   {
    "id": 4,
    "iconPath": "ec1710504a85dcc5ffd40e56735ef4e3aae137eefa53154bf77668d496a636b9",
-   "artPath": "904de78ea5f505fc17de1b55998b5a9b9ba0a6d9ce09da47947fe953a1ce7a15",
+   "artPath": "3d3fb5c3033c97002ef326352aba0ed5b26636e23699418c56233d94941bed4d",
    "name": "遊戲人間",
    "descHash": "終結技可以額外恢復1點戰技點，天賦的戰技點上限增加效果額外增加1點。",
    "params": []
@@ -483,7 +485,7 @@
   {
    "id": 6,
    "iconPath": "97946a7beefedaf075a3e045a39f2d44cc9de450c44e047feb9f7bfeea214fb4",
-   "artPath": "83ea4cc2b496ca0758ac0069e3881ff56e4bcd0dc419e3fad8216c438c87a04a",
+   "artPath": "0c42626e2ed820bae2e1a329a7e44dda34ece227cb0df56473cd5eaa0def5431",
    "name": "多重解答",
    "descHash": "戰技的暴擊傷害提高效果額外提高，提高數值等同於花火暴擊傷害的<nobr>#1[i]%</nobr>，花火施放戰技時，使戰技的暴擊傷害提高效果對持有【謎詭】的隊友都會生效，花火施放終結技時，若我方單體中有目標持有戰技的暴擊傷害提高效果，使該效果擴散至持有【謎詭】的隊友。",
    "params": [
@@ -511,7 +513,7 @@
  "skills": [
   {
    "tagHash": "單攻",
-   "descHash": "對指定敵方單體造成等同於花火</span><span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#7788ff;\">量子</span>屬性傷害。",
+   "descHash": "對指定敵方單體造成等同於花<span style=\"color:#F84F36;\">火</span><span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#7788ff;\">量子</span>屬性傷害。",
    "ultimateCost": 0,
    "break": "30",
    "energy": "20",
@@ -672,7 +674,7 @@
   },
   {
    "tagHash": "輔助",
-   "descHash": "使指定我方單體的暴擊傷害提高，提高數值等同於花火</span><span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>暴擊傷害+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>，持續<nobr>#3[i]</nobr>回合，並使該目標行動提前<nobr>#4[i]%</nobr>。<br />當花火</span>對自身施放該技能時，無法觸發行動提前效果。",
+   "descHash": "使指定我方單體的暴擊傷害提高，提高數值等同於花<span style=\"color:#F84F36;\">火</span><span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>暴擊傷害+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>，持續<nobr>#3[i]</nobr>回合，並使該目標行動提前<nobr>#4[i]%</nobr>。<br />當花<span style=\"color:#F84F36;\">火</span>對自身施放該技能時，無法觸發行動提前效果。",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -992,7 +994,7 @@
   },
   {
    "tagHash": "輔助",
-   "descHash": "爲我方恢復<nobr>#2[i]</nobr>個戰技點，並使我方全體獲得【謎詭】。持有【謎詭】的我方目標觸發花火</span>天賦造成的傷害提高效果每層額外提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>，持續<nobr>#4[i]</nobr>回合。",
+   "descHash": "爲我方恢復<nobr>#2[i]</nobr>個戰技點，並使我方全體獲得【謎詭】。持有【謎詭】的我方目標觸發花<span style=\"color:#F84F36;\">火</span>天賦造成的傷害提高效果每層額外提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>，持續<nobr>#4[i]</nobr>回合。",
    "ultimateCost": 110,
    "break": "0",
    "energy": "5",
@@ -1312,7 +1314,7 @@
   },
   {
    "tagHash": "輔助",
-   "descHash": "花火</span>在場時，戰技點上限額外增加<nobr>#3[i]</nobr>點。當我方目標每消耗1點戰技點，則使我方全體造成的傷害提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>，該效果持續<nobr>#1[i]</nobr>回合，最多可疊加<nobr>#4[i]</nobr>層。",
+   "descHash": "花<span style=\"color:#F84F36;\">火</span>在場時，戰技點上限額外增加<nobr>#3[i]</nobr>點。當我方目標每消耗1點戰技點，則使我方全體造成的傷害提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>，該效果持續<nobr>#1[i]</nobr>回合，最多可疊加<nobr>#4[i]</nobr>層。",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1681,14 +1683,17 @@
  "skillTreePoints": [
   {
    "id": 1306101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1306202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1306203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1785,14 +1790,17 @@
   },
   {
    "id": 1306102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1306205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1306206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1891,14 +1899,17 @@
   },
   {
    "id": 1306103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1306208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1306209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1931,6 +1942,7 @@
       },
       {
        "id": 1306210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2034,10 +2046,12 @@
   },
   {
    "id": 1306201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1306204,
+     "anchor": 12,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2070,6 +2084,7 @@
     },
     {
      "id": 1306207,
+     "anchor": 15,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2366,6 +2381,16 @@
    "jpUrl": "b21a0944431e7f2870d497a187f079bf1efcd57b17699f67f799496df967af6b",
    "enUrl": "2ae45eb385b982fd2f93ee7b13b1b82053600b3bf80b045a8254a36c203f3297",
    "krUrl": "3c96add23447b47cbcb682a44f290d4c680cec3bfc054a260f9faa6f1d2c98f1"
+  },
+  {
+   "id": 24,
+   "title": "隊伍編成•砂金",
+   "text": "喲！真正會玩的人入場了。跟着你咯。",
+   "unlockRequirement": "",
+   "cnUrl": "801cd04799135123803117d999712591bc85c5cb86a4ec30ab5a83a08af42c16",
+   "jpUrl": "fedf2387f18fef1fa479a6328149643f7d16a272e580e1c63c91c6c83cd3e726",
+   "enUrl": "bebd5480174ee3883f66bad127bf3984c82ab8efb86f09f205471db853fb4070",
+   "krUrl": "bd0b37de1c4f8f1bd6721936c83e1a93d5ded73ba254a0ea9c0915a7e110dc47"
   },
   {
    "id": 51,
@@ -2735,7 +2760,7 @@
  "name": "花火",
  "rarity": 5,
  "descHash": "「假面愚者」的成員之一，難以捉摸，不擇手段。 危險的戲劇大師，沉迷於扮演，身懷千張假面，能化萬種面相。 財富、地位、權利…於花火而言都不重要，能讓她出手的，唯有「樂趣」。",
- "artPath": "22498bd5da077b56fa1c9ef4886efbf3f62b558d381ff1a7b17e2724143426f2",
+ "artPath": "eb7aa57c0d4fd224c13ba71d84d12f4f8bce0e0c098629756852b084527590ce",
  "miniIconPath": "9da8f43ce94fde4b59e6b912399bb691350719279eb77aea9cda9ceb1ddd7548",
  "damageType": {
   "id": 32,

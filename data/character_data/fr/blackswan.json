@@ -5,6 +5,11 @@
  "figPath": "8edb308439fd6545b630899981d7d833a82efc9c241d5a62215b7c6f2c43bb76",
  "fgPath": "",
  "splashIconPath": "8235c510c01b722b5ced0f0ece69b8f597028c031a888fb79177692456aa68f2",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRl4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAEBAAABkGtr27E59/ONbdtuZ01tu4ptp046q05l2+l8Blkpbdt63/sezylExAQAQEiAqRsQaoEZALMJ0NuzKQwTmgEw1D/+dHdaY1YKEJWaCARAgLq/+uf0+u3tm49e3z9RASAEq+QkasLn0wJDxGVHkt47573/Ly1A+dKHIiWRIqm/2tPwRBRFjSXJ/zoUflWOosaSEqkNUZ/kSHGMROrf8XjslrzzIknR//+4MQ5I2vVdkhcpUrq3oihA/N45zUceyVMUn52ZkWkAqhOA9fpP90978zDJnDv6+08aWNCK0HEsBP2/JV3bPtQOw4SGzPNHd+ahumEyMIwNAQyTNViIwQzjAgBWUDggNgEAADAHAJ0BKhQAFAA+bTKVR6QioiEoCACADYlqAJ0zJf9pB3xAPXVsjoiDvJM6owbtofaR3hXH2aoRdGCNaR9U/5+CgAD+9DLbvRnEYp+Qfj6a6cdpnJWurfuP+p6BAjiSRJ+1Ida3M/VahgqaUAB8EzS0ywVuafU8mmXo8duSnrWXMASkxeb8fwZVxiQ5OWgNq929bIxULsklVvLFYX1kk/aTnQmKLksDOwDDdfDtcC+TiRPdN032wuzluUATJTDEv3HMendYCFxMCKc52BoN967q7DeZ0U+RaXyCcHv9+f+MkhpU/v1c5WvMxeDL5sj4QCDK2yGhfguPB4/6DN9skb4c8A5JkQY7Hu9jJl1dseImDofKh8Aj/4Hv/TFq+OOnrD8zZyaH6WnkGKZkEVA46eUEDbmoAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Récompenses de points de l'Univers simulé",
     "Honneur des Sans Noms",
     "Échange de braises",
+    "Lumières d'étoile",
     "Récompense d'événement à durée limitée"
    ]
   },
@@ -172,7 +178,6 @@
    "rewardPath": "/material/589818",
    "comeFrom": [
     "Calice de la Commission d'alchimie",
-    "Calice de la Commission d'alchimie",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles",
     "Échange de matériaux de l'Omni-synthétiseur"
@@ -209,7 +214,6 @@
    "rewardPath": "/material/673759",
    "comeFrom": [
     "Calice de la Commission d'alchimie",
-    "Calice de la Commission d'alchimie",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -244,7 +248,6 @@
    "rarity": 2,
    "rewardPath": "/material/874345",
    "comeFrom": [
-    "Calice de la Commission d'alchimie",
     "Calice de la Commission d'alchimie",
     "Braises immortelles",
     "Échange de matériaux de l'Omni-synthétiseur"
@@ -449,7 +452,7 @@
   {
    "id": 2,
    "iconPath": "420d033f134db663da7f64e6e3b12017f97b9228fe03a35566b5cad859ae4784",
-   "artPath": "760de1f0c7cd413cda516e16ae5fc6fd57ab962aeed91a22bc1759229eeee97c",
+   "artPath": "7d751acb21fa87b9e3239065a6cc46cf3587d92671e3c23113b1a4eeb6100904",
    "name": "Ne pleurez pas pour moi",
    "descHash": "Lorsqu'une cible ennemie affectée par Arcanes est vaincue, elle a <nobr>#1[i]%</nobr> de chances de base d'appliquer <nobr>#2[i]</nobr> cumuls d'Arcanes aux cibles adjacentes.",
    "params": [
@@ -470,7 +473,7 @@
    "iconPath": "ab35f129f930b7e0d7dc02b53f09ca63272056d8eca7dc09f55e248695dec404",
    "artPath": "71d0beda48cd4198ed9d3880275cbef849c999019d5e88bcb355ecc6faacebaf",
    "name": "Cadeau des pleurs",
-   "descHash": "La RÉS aux effets des cibles ennemies affectées par Épiphanie est réduite de <nobr>#1[i]%</nobr>, et Cygne noir récupère <nobr>#2[i]</nobr> points d'énergie au début de leur tour et lorsqu'elles sont éliminées. L'effet de régénération d'énergie ne peut se déclencher qu'une seule fois sur la durée d'Épiphanie et le nombre de déclenchements est réinitialisé lorsque l'ennemi subit à nouveau Épiphanie.",
+   "descHash": "La RÉS aux effets des cibles ennemies affectées par Épiphanie est réduite de <nobr>#1[i]%</nobr>, et Cygne noir récupère <nobr>#2[i]</nobr> points d'énergie au début de leur tour et lorsqu'elles sont éliminées. L'effet de régénération d'énergie ne peut se déclencher qu'une seule fois sur la durée d'Épiphanie et le nombre de déclenchements est réinitialisé lorsque l'effet Épiphanie est appliqué à nouveau.",
    "params": [
     0.1,
     8
@@ -479,7 +482,7 @@
   {
    "id": 5,
    "iconPath": "1f77c680c96f816c05e772ac266cc78a08c5a98ffaba8f5419185cdba1a6ea67",
-   "artPath": "4438d2fa65de7ddc2118afb93b5333900befecd2f95f310f06c00000077fd8cc",
+   "artPath": "46f20e4ec519bee5dfda5fa0ebb507279603181ea6ddb949723de32c0abf65e8",
    "name": "Migration des oiseaux",
    "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
    "params": []
@@ -489,7 +492,7 @@
    "iconPath": "090706494f93eb29c1fe4706d7cab5959cf93457be91584013611ee7dca14480",
    "artPath": "10c3567544ec1c0100dd07c6efd00fdc5698dd5058f6eb7977b146f36f4c13e1",
    "name": "Panthéon miséricordieux des masses pitoyables",
-   "descHash": "Lorsque des cibles ennemies sont attaquées par les alliés de Cygne noir, cette dernière a <nobr>#2[i]%</nobr> de chances de base d'infliger 1 cumul d'Arcanes à la cible.<br />Chaque fois que Cygne noir inflige Arcanes à une cible ennemie, il y a <nobr>#1[i]%</nobr> de chances fixes d'augmenter de <nobr>#3[i]</nobr> le nombre de cumuls d'Arcanes infligés cette fois-ci.",
+   "descHash": "Lorsqu'une cible ennemie est attaquée par des alliés de Cygne noir, Cygne noir a <nobr>#2[i]%</nobr> de chances de base d'appliquer 1 cumul d'Arcanes à la cible.<br />Chaque fois que Cygne noir applique Arcanes à une cible ennemie, il y a <nobr>#1[i]%</nobr> de chances fixes d'augmenter de <nobr>#3[i]</nobr> le nombre de cumuls d'Arcanes pour cette fois.",
    "params": [
     0.5,
     0.65,
@@ -517,7 +520,7 @@
  "skills": [
   {
    "tagHash": "Cible unique",
-   "descHash": "Inflige des DGT de vent équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Cygne noir à une cible ennemie unique, avec <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de <u>chances de base</u> d'infliger 1 cumul d'<u>Arcanes</u>. D'autre part, si la cible est affectée par Faille du vent, Saignement, Brûlure ou Stupéfaction, chaque effet a respectivement <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de <u>chances de base</u> d'infliger 1 cumul d'<u>Arcanes</u> supplémentaire à l'ennemi.",
+   "descHash": "Inflige des DGT de vent équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Cygne noir à une cible ennemie unique, avec <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de <u>chances de base</u> d'appliquer 1 cumul d'<u>Arcanes</u>. D'autre part, en cas d'attaque sur une cible affectée par Faille du vent, Saignement, Brûlure ou Stupéfaction, chaque effet a respectivement <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de <u>chances de base</u> d'appliquer 1 cumul d'<u>Arcanes</u> supplémentaire à la cible.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "20",
@@ -696,7 +699,7 @@
   },
   {
    "tagHash": "Propagation",
-   "descHash": "Inflige des DGT de vent équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Cygne noir à une cible ennemie unique et aux cibles adjacentes. D'autre part, il y a <nobr>#2[i]%</nobr> de <u>chances de base</u> d'infliger 1 cumul d'<u>Arcanes</u> à la cible ennemie et aux cibles adjacentes et <nobr>#3[i]%</nobr> de <u>chances de base</u> de réduire de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span> la DÉF de la cible ennemie et des cibles adjacentes pour une durée de <nobr>#5[i]</nobr> tours.",
+   "descHash": "Inflige des DGT de vent équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Cygne noir à une cible ennemie unique et aux cibles adjacentes. D'autre part, il y a <nobr>#2[i]%</nobr> de <u>chances de base</u> d'appliquer 1 cumul d'<u>Arcanes</u> à la cible ennemie et aux cibles adjacentes et <nobr>#3[i]%</nobr> de <u>chances de base</u> de réduire de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span> la DÉF de la cible ennemie et des cibles adjacentes pour une durée de <nobr>#5[i]</nobr> tours.",
    "ultimateCost": 0,
    "break": "60 + 30/adjacent",
    "energy": "30",
@@ -1031,7 +1034,7 @@
   },
   {
    "tagHash": "ZdE",
-   "descHash": "Inflige Épiphanie à tous les ennemis pendant <nobr>#2[i]</nobr> tours.<br />Les ennemis affectés par Épiphanie subissent <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de DGT supplémentaires pendant leur tour, et leur effet <u>Arcanes</u> est considéré comme Faille du vent, Saignement, Brûlure et Stupéfaction. D'autre part, lorsque leur effet <u>Arcanes</u> est déclenché au début du tour suivant, les cumuls d'<u>Arcanes</u> ne sont pas réinitialisés. L'effet de non-réinitialisation des cumuls peut être déclenché jusqu'à <nobr>#4[i]</nobr> fois pendant la durée d'Épiphanie, et son nombre de déclenchements est réinitialisé lorsque l'effet Épiphanie est appliqué à nouveau.<br />Inflige des DGT de vent équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Cygne noir à tous les ennemis.",
+   "descHash": "Inflige Épiphanie à tous les ennemis pendant <nobr>#2[i]</nobr> tours.<br />Les ennemis affectés par Épiphanie subissent <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de DGT supplémentaires pendant leur tour. D'autre part, lorsque des ennemis sont affectés par <u>Arcanes</u>, ils sont également considérés comme affectés par Faille du vent, Saignement, Brûlure et Stupéfaction. Lorsque l'effet <u>Arcanes</u> inflige des DGT au début de chaque tour, ses cumuls ne sont pas réinitialisés. Cet effet de non-réinitialisation des cumuls d'<u>Arcanes</u> peut être déclenché jusqu'à <nobr>#4[i]</nobr> fois pendant la durée d'Épiphanie, et son nombre de déclenchements est réinitialisé lorsque l'effet Épiphanie est appliqué à nouveau.<br />Inflige des DGT de vent équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Cygne noir à tous les ennemis.",
    "ultimateCost": 120,
    "break": "60/hit",
    "energy": "5",
@@ -1351,7 +1354,7 @@
   },
   {
    "tagHash": "Incapacitation",
-   "descHash": "Chaque fois qu'une cible ennemie subit des dégâts sur la durée au début de chaque tour, il y a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de <u>chances de base</u> de lui infliger <u>Arcanes</u>. <br />Les cibles ennemies affectées par <u>Arcanes</u> subissent des dégâts de vent sur la durée équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Cygne noir au début de chaque tour. Chaque cumul d'<u>Arcanes</u> augmente de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> ce multiplicateur de dégâts sur la durée. Puis <u>Arcanes</u> est réinitialisé à 1 cumul. <u>Arcanes</u> peut se cumuler jusqu'à <nobr>#8[i]</nobr> fois. <br />Lorsqu'<u>Arcanes</u> inflige des DGT au début du tour d'une cible ennemie, Cygne noir déclenche des effets supplémentaires en fonction du nombre de cumuls d'<u>Arcanes</u> appliqués à la cible :<br />À partir de <nobr>#4[i]</nobr> cumuls d'<u>Arcanes</u>, inflige des dégâts de vent sur la durée équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> de l'ATQ de Cygne noir aux cibles adjacentes, avec <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de <u>chances de base</u> de leur infliger 1 cumul d'<u>Arcanes</u>.<br />À partir de <nobr>#6[i]</nobr> cumuls d'<u>Arcanes</u>, permet aux dégâts sur la durée infligés cette fois d'ignorer <nobr>#7[i]%</nobr> de la DÉF de la cible et des cibles adjacentes.",
+   "descHash": "Chaque fois qu'une cible ennemie subit des dégâts sur la durée au début de chaque tour, il y a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de <u>chances de base</u> de lui appliquer 1 cumul d'<u>Arcanes</u>.<br />Les cibles ennemies affectées par <u>Arcanes</u> subissent des dégâts de vent sur la durée équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Cygne noir au début de chaque tour. Chaque cumul d'<u>Arcanes</u> augmente de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> ce multiplicateur de dégâts sur la durée. Puis <u>Arcanes</u> est réinitialisé à 1 cumul. <u>Arcanes</u> peut se cumuler jusqu'à <nobr>#8[i]</nobr> fois.<br />Lorsqu'<u>Arcanes</u> inflige des DGT au début du tour d'une cible ennemie, Cygne noir déclenche des effets supplémentaires en fonction du nombre de cumuls d'<u>Arcanes</u> appliqués à la cible :<br />À partir de <nobr>#4[i]</nobr> cumuls d'<u>Arcanes</u>, inflige des dégâts de vent sur la durée équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> de l'ATQ de Cygne noir aux cibles adjacentes, avec <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de <u>chances de base</u> de leur infliger 1 cumul d'<u>Arcanes</u>.<br />À partir de <nobr>#6[i]</nobr> cumuls d'<u>Arcanes</u>, permet aux dégâts sur la durée infligés cette fois d'ignorer <nobr>#7[i]%</nobr> de la DÉF de la cible et des cibles adjacentes.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1780,18 +1783,22 @@
  "skillTreePoints": [
   {
    "id": 1307101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1307202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1307203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1307204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1882,7 +1889,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Lorsque Cygne noir utilise sa compétence pour toucher un ennemi affecté par Faille du vent, Saignement, Brûlure ou Stupéfaction, chacun de ces malus a respectivement <nobr>#1[i]%</nobr> de chances de base d'infliger 1 cumul supplémentaire d'Arcanes.",
+    "descHash": "Lorsque Cygne noir utilise sa compétence pour attaquer un ennemi affecté par Faille du vent, Saignement, Brûlure ou Stupéfaction, chacun de ces malus a respectivement <nobr>#1[i]%</nobr> de chances de base d'appliquer 1 cumul supplémentaire d'Arcanes.",
     "ultimateCost": 0,
     "id": 88345,
     "name": "Inquiétude viscérale",
@@ -1917,18 +1924,22 @@
   },
   {
    "id": 1307102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1307205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1307206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1307207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2019,7 +2030,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Il y a <nobr>#1[i]%</nobr> de chances de base d'infliger 1 cumul d'Arcanes lorsqu'une cible entre en combat. Chaque fois qu'une cible ennemie subit des dégâts sur la durée pendant l'attaque d'un allié, elle a <nobr>#1[i]%</nobr> de chances de base d'être affectée par 1 cumul d'Arcanes. Peut se cumuler jusqu'à <nobr>#2[i]</nobr> fois au cours d'une même attaque.",
+    "descHash": "Lorsqu'une cible ennemie entre en combat, elle a <nobr>#1[i]%</nobr> de chances de base de subir 1 cumul d'Arcanes.<br />Chaque fois qu'une cible ennemie subit des dégâts sur la durée pendant l'attaque d'un allié, elle a <nobr>#1[i]%</nobr> de chances de base d'être affectée par 1 cumul d'Arcanes. Le nombre maximum de cumuls qui peuvent être appliqués au cours d'une seule attaque est de <nobr>#2[i]</nobr>.",
     "ultimateCost": 0,
     "id": 88348,
     "name": "Marc de café",
@@ -2059,10 +2070,12 @@
   },
   {
    "id": 1307103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1307208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2095,6 +2108,7 @@
     },
     {
      "id": 1307209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2167,10 +2181,12 @@
   },
   {
    "id": 1307201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1307210,
+     "anchor": 18,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2296,7 +2312,7 @@
    "cnUrl": "099018899c5cef21798928257c01965bdb7cc2eee6e4d4712e476565c098986a",
    "jpUrl": "7d6424425033075a351237945dd00b426dcb96a2780200fb12b43c872b4855ea",
    "enUrl": "526732b4086ef1ac3b6245f129881e7a55b97d84f15ef984ab481fbdfe77d7db",
-   "krUrl": "2db14673478ba55274cb187d939d953984a11644905277df2357c4d4317bbb54"
+   "krUrl": "79ce2ababf53b66d47ad4d5cf4909901483b7034d5df50724c381fc3dd3b83a9"
   },
   {
    "id": 5,
@@ -2371,7 +2387,7 @@
   {
    "id": 12,
    "title": "Connaissances",
-   "text": "Certains protecteurs de la mémoire aiment se faufiler discrètement dans l'esprit des gens pour altérer leurs souvenirs. Je n'apprécie pas cette façon de procéder. Seuls les souvenirs qui n'ont pas été modifiés sont suffisamment réels et précieux. Le reste, ce ne sont que des pensées qui nous ont été imposées.",
+   "text": "Certains protecteurs de la mémoire préfèrent se faufiler discrètement dans l'esprit des gens pour altérer leurs souvenirs. Je n'apprécie pas cette façon de procéder. Seuls les souvenirs qui n'ont pas été modifiés sont suffisamment réels et précieux. Le reste, ce ne sont que des pensées qui nous ont été imposées.",
    "unlockRequirement": "",
    "cnUrl": "5239e7dac9c6bb2a333de8bfde0bc44c7f3024109d9c26d24367e8f85d968ff7",
    "jpUrl": "8f9e481599eda12e5d554e110d72d8e18ab89d9688fa9097e2799a916eaf58bf",
@@ -2451,7 +2467,7 @@
   {
    "id": 20,
    "title": "Niveau max atteint",
-   "text": "En route, il y a encore tellement de souvenirs qui brillent au loin...",
+   "text": "En avant, il y a encore tellement de souvenirs qui brillent au loin...",
    "unlockRequirement": "",
    "cnUrl": "2a703e4d76488847a86c7159a155ef6e8c52489a79fe46c615b9fd52ed9b60e7",
    "jpUrl": "93b0253dfe2155da77376e2423b5172d0d634b71fb4b7008d7fb7ba4f09935bf",
@@ -2499,9 +2515,29 @@
    "krUrl": "784b7e80568c7702bcacc182a81b60eb0933c8aadb632f102cd922dcbdc37187"
   },
   {
+   "id": 25,
+   "title": "Rejoint l'équipe avec Achéron",
+   "text": "À toi de décider... Quelle danse tu veux cette fois ?",
+   "unlockRequirement": "",
+   "cnUrl": "bd2ae9b04e261093b32005ec1bb1e8675d3f394a34ac1f63afc6275c2bacd941",
+   "jpUrl": "aecc5d2f10eaf4b856b3092f0adcd324f9b490c77ee7df2453b861e9415a9fc4",
+   "enUrl": "3828f5ce1d63e62383782c6e6ee728ea4989ee6df80f8acedfcfa300a4e5af94",
+   "krUrl": "601d24e234772ed45d1b6fb72f3339d2212ebd98751eb83f50c88057b5ee60b4"
+  },
+  {
+   "id": 26,
+   "title": "Rejoint l'équipe avec Aventurine",
+   "text": "Espérons que cette fois-ci, on pourra collaborer sans problème et qu'on obtiendra ce qu'on désire.",
+   "unlockRequirement": "",
+   "cnUrl": "72cee1d8e11c432ec564631300c82352db5432254cbf90de1c94b9a9b224d392",
+   "jpUrl": "ef268a4b9cc2dc62f83cc940a39d22f508c90747337338460d40b981fb63cc94",
+   "enUrl": "cae396e16ea1637244aba626c13d85d16851b1a6d2bfa0557fbc2668f568a1f3",
+   "krUrl": "6f90a022f3d703b9532848986be5e0db567f7f9b0c6d0b6671681354fa33ec17"
+  },
+  {
    "id": 51,
    "title": "Rupture de faiblesse en début de combat",
-   "text": "Le cours du destin est toujours plus évident.",
+   "text": "Le cours du destin devient de plus en plus évident.",
    "unlockRequirement": "",
    "cnUrl": "bb7c9aa0a03f19e079dfe7f33c275ae33900ce9da697b469a9084bf0ee8cb434",
    "jpUrl": "89ba846b7cae0cae4fa388112d7c62091b61ad6ccb1eaf6a962904bf04e203dc",
@@ -2626,7 +2662,7 @@
    "cnUrl": "bb427175e99b7e21d0267bc0c7608164d515a1cc0b1232e87ef5f3f9b168081d",
    "jpUrl": "8cec91d2ba81ec99796fc858dc9c8868b94e5989e34abf7ecf5ab56dc6a38224",
    "enUrl": "ff8714228024c73553e789b7f86fad9743534fec0c7155d7733162e8583e4b35",
-   "krUrl": "15b09317003428e914a89bd9bed1830245d1954ddb47dd4cba3157bcab59ed3f"
+   "krUrl": "80456a009d7ba3be8e9f7dabfbc66fa91ae23046540eb925d48d76a74bee3f95"
   },
   {
    "id": 64,
@@ -2866,7 +2902,7 @@
  "name": "Cygne noir",
  "rarity": 5,
  "descHash": "Une protectrice de la mémoire du Jardin de la mémoire. Une divinatrice insouciante et mystérieuse. Il lui revient le devoir d'écouter les « Réminiscences » des hommes, il lui revient le devoir de tirer les fils du destin.",
- "artPath": "da5a3d8d87865c51907df718c329a6d552ef2ddbc3e1f6e82dd466c14b0c1aa6",
+ "artPath": "870d3284ed48895f121c22c356f4292a94c0e2fdd368e691bf3a595ba7f0634c",
  "miniIconPath": "741cd71f3a6a5c9ad08beec9f832c75eaea8a07246cafcd530c806b8d2dc00a5",
  "damageType": {
   "id": 16,

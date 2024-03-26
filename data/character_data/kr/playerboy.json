@@ -5,6 +5,11 @@
  "figPath": "ca1eea87b05a57c2a9b88164f2477ed76857212a1b0c28e01b9dc58c7d9c6212",
  "fgPath": "",
  "splashIconPath": "162321fe23f64a4d109111c2133da0654336ac411c37605d6beaecb00b0de8cd",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRlICAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAwBAAABkGNb27E91/O+v43Of6r8VcofXTQADMC209l2UhlVag7Ctm3rxXWCd2UMETEBUhSFIEl9pyc0Keh/Bx2d8BBedKrkn/F7+6u7b34kS/KUAyrsgwcPIX3zyRkfV8xTpFg7gMyGbzkZ9CsOOkaSAzaY5NGpGik6S4aNsW02zhqhSAdIXcg/D8/Mroi1hMxgMJBxb0xp0DFS29gYp+zrrAg6TuZ/+SfnS48ibSPFGMDmB+Mk7QJTYMz3RwMUNHJLiotsPq1vVqxRi5+SGRs758VAhaCWq9/AxjYpHzoVFKn72sf7xuCUfJUiSbFm3Bt+Ik+SJOfCYBUHzR09+S3AoTqFIkn16p27fUm/FEsSVlA4ICABAAAwBgCdASoUABQAPm0ukUakIqGhKA1QgA2JZgA1AHPK6ZLvLtcAbA2M0m+4EUe6c8ZVfAsfaruYCqTAAPwYspcSk9q2ltK7NK/jvBPSfn+juG3NTiXZM/cAE7dAxqNcwlr0/0ePwjZSeR6R1BuRp2244j19Pi9JMrUG/daVt5yHE+qNSdDsWyxv6u7W4DaCng+8Ozlz8XFWx3cPvOt/CI+YGtEeotLbBfAt23i6vA1pCoq2D3mT2jYdfEjkf3VnH7cAuSTRymMe4ykkFle7I0HTeUiu+OI5BhMgT6FPnRHiCLmmH4U1/X8rvMSFzt5Dc7xkCuKmxbUARrSCkOysludmQPPyPYf5KBZMznmCAQsRcXsDfD2PqiddMp9vEygkAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "시뮬레이션 우주 점수 보상",
     "무명의 공훈",
     "잔화 교환",
+    "스타라이트 교환",
     "한정 이벤트 보상"
    ]
   },
@@ -158,7 +164,6 @@
    "rewardPath": "/material/635673",
    "comeFrom": [
     "모조 꽃받침 [보관 캐빈]",
-    "모조 꽃받침 [보관 캐빈]",
     "잔화 교환",
     "「만능 합성기」- 재료 치환"
    ]
@@ -210,7 +215,6 @@
    "rewardPath": "/material/836259",
    "comeFrom": [
     "모조 꽃받침 [보관 캐빈]",
-    "모조 꽃받침 [보관 캐빈]",
     "「만능 합성기」- 재료 합성",
     "「만능 합성기」- 재료 치환"
    ]
@@ -227,7 +231,6 @@
    "rarity": 3,
    "rewardPath": "/material/920200",
    "comeFrom": [
-    "모조 꽃받침 [보관 캐빈]",
     "모조 꽃받침 [보관 캐빈]",
     "「만능 합성기」- 재료 합성",
     "잔화 교환",
@@ -438,7 +441,7 @@
   {
    "id": 1,
    "iconPath": "3fc96d75cbcc70d78fb9cb2f8d9ef972fbe1912e79be09f2bb534c94a9207791",
-   "artPath": "d11c0a0162c662c6397dea7c5b37b336a68197cad2f68cd2c026a3c8aff65bd4",
+   "artPath": "bc8a2d0e8cda054c0bcf1c92080aa64fcdbee7f84cccd62389aeb84770a63d7e",
    "name": "만계에 떨어진 별빛",
    "descHash": "필살기를 발동하여 적 처치 시 개척자는 에너지를 추가로 <nobr>#1[i]</nobr>pt 회복한다. 해당 효과는 공격할 때마다 1회만 발동할 수 있다",
    "params": [
@@ -448,7 +451,7 @@
   {
    "id": 2,
    "iconPath": "7898a0781d73b5c856ab955db7cb722b1ea4c69f56d2999bdc0821c0a5ee1512",
-   "artPath": "e88c40a20aa05889816411da000c8cb96d24aa7bf4f6fda987b1502766d67431",
+   "artPath": "1e3f9f9491298ef683dc7a3d7ad7174921e4a6eb9c9b783ab07cab39e0250283",
    "name": "가합의 인연",
    "descHash": "공격 발동 후 명중한 적의 약점이 물리 속성이면 개척자 공격력 <nobr>#1[i]%</nobr>만큼의 HP를 회복한다",
    "params": [
@@ -476,7 +479,7 @@
   {
    "id": 5,
    "iconPath": "43f71f2403401fbf3b24c93683a9a1917b3c01066538731587bee340f032d838",
-   "artPath": "2015cb9ae61b3bb35b9804adfb4315f08e736f45877e0234147ed4a2a55cec4a",
+   "artPath": "7e4071a56f8084a881036f90101b659b707a01b2f38d5710b1bd4bb7fb4e09a8",
    "name": "남겨진 부활의 희망",
    "descHash": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
    "params": []
@@ -2138,18 +2141,22 @@
  "skillTreePoints": [
   {
    "id": 8001101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 8001202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 8001203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 8001204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2275,18 +2282,22 @@
   },
   {
    "id": 8001102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 8001205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 8001206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 8001207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2416,14 +2427,17 @@
   },
   {
    "id": 8001103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 8001208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 8001209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2456,6 +2470,7 @@
       },
       {
        "id": 8001210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2521,7 +2536,7 @@
     "ultimateCost": 0,
     "id": 131379,
     "name": "투지",
-    "iconPath": "a7d8ac56ad0f78cc0b230bd60374bad03b9639805738f644f13bc73d4629584b",
+    "iconPath": "7bf55b20c36ef9974f2c0bc5a99c59c45d00aa15f2d92255256c1b69b0619c8d",
     "levelReq": 0,
     "promotionReq": 6,
     "levelData": [
@@ -2556,6 +2571,7 @@
   },
   {
    "id": 8001201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -3332,7 +3348,7 @@
  "name": "개척자",
  "rarity": 5,
  "descHash": "은하열차에 탑승한 소녀/소년 스텔라론이 가져온 위기를 해결하기 위해, 은하열차와의 동행을 선택한다",
- "artPath": "5433b191ec1412f8111256ba5fc301160a993e93144bb949ebe51a0bbb7ab2dc",
+ "artPath": "36a53d5049167a2a782c38eaa322be3359b5fa0982a38134842904204f9c9ada",
  "miniIconPath": "617551102827cfcab33ea104b46b82f007257985905116f4faf0131914012c8c",
  "damageType": {
   "id": 1,

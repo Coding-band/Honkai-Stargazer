@@ -2,9 +2,14 @@
  "spRequirement": 100,
  "iconPath": "d9e25c0678bf203a6d7912bd7565a02a42671dfdf035d1fe877f875a8313d0db",
  "bgPath": "0292f52eda4ba19e1e736dc6adb518e403f156008932d321d49036f63207da83",
- "figPath": "0c8c8fb721c7c5f7d6687ecc40f5f499b19f7353601fe3b6644b209d554cf22a",
+ "figPath": "94be9aaa16153acb80b1f8ab5e93f8ca371a883d3da27adc7f9fcb045e26f6e4",
  "fgPath": "cf0cb309245ac00964bc7de16c804dd8379d2df5ece64b4b955b436127f07821",
  "splashIconPath": "b44d341c2a29262cac3e7b327f86babefbb4a5070957f40573cf1c584b458264",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRn4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSPUAAAABkGvbtrFJ+7u3bCO2XRW5qm1FCvUAto0n+POOrNw2ox4VN6KKfty7d/Bh9CNExAQAQIBoawNEG4OmUyu3Lu8wAEyEAQZ+SVLmTWpPM8IGzam0cvSUxPOjBgB2/pM8wy6bezRbDqDlntIUSVH0elkN4MjiokhKEsWs1iIPg05eVCTpdLMKwH05Kk45fQGWPSbJOK+FS0vR8kM5kRESnfYWWEz8lKei6fV7LYK8ozc+yJOiyFAXDAqu/xO9c57hnN4ECIDljxXtci6jFAAYYGrNiecL6ZzCD+eLABiES3vHdxzasm1286Y6hI01+M/GWGutsSZRUgBWUDggYgEAAPAHAJ0BKhQAFAA+bS6URyQioiEoCqiADYlsAJ0ygoAHqAliX0APK79if9mP2x9oApl3jCH+zLKzdWFk7AU2sHbtxAV4QnQJgAD+fjNgrWJo/vQZ/i41c7ylfe+KfjXxeOdd8NlBCLq9SNwGXeZTodk3G7lGV5QeEm77/RRph0+vSy36CxY2fAuNDwBJG6LAiwa0NvYd0al+v8xh1e9AnBB43He4xJ/x6tNNSwk392fUtikr5tP+znv/Tv7oWP5cExPoOG+i5bpeQqz9JN2/FhAUwFqzr5303H9Ijwy2FIYjRC5LscBtuci36PmJOS7YpH4YVbttA551sQLIPqJTCszgDPb+3PfXpew9W02Z6wf4Nf9nJngh/f32k3X/F4mpeiH/Sy9d031gvkov/UV/+i51+i3sz4oEbCunqr/ff6RHBEP3aAhJtkNNbp6hr1h8QQGOX6O0nhhAQaAXIoxudBQAAA==",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -20,7 +25,7 @@
    "purposeId": 11,
    "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
    "name": "Credit",
-   "desc": "Diese Währung, die von der Interastrale Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
+   "desc": "Diese Währung, die von der Interastralen Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
    "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
    "purpose": "Gemeinsame Währung",
    "rarity": 3,
@@ -49,6 +54,7 @@
     "Punktebelohnungen in der Universum-Simulation",
     "Namenlose Ehre",
     "Glut-Tausch",
+    "Sternenlicht-Tausch",
     "Belohnungen für zeitlich begrenzte Aktionen"
    ]
   },
@@ -64,7 +70,6 @@
    "rarity": 4,
    "rewardPath": "/material/151160",
    "comeFrom": [
-    "Ruhender Schatten (Korridor der verhallenden Echos)",
     "Ruhender Schatten (Korridor der verhallenden Echos)",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -190,7 +195,6 @@
    "rewardPath": "/material/635671",
    "comeFrom": [
     "Blütenkelch (Abgelegener Pass)",
-    "Blütenkelch (Abgelegener Pass)",
     "Glut-Tausch",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -226,7 +230,6 @@
    "rewardPath": "/material/836257",
    "comeFrom": [
     "Blütenkelch (Abgelegener Pass)",
-    "Blütenkelch (Abgelegener Pass)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -235,7 +238,7 @@
    "id": 920198,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "ed9df14a2fe247f4667c3573aa6eb1f367c5435d4c699eadef89c51e4d42d084",
+   "iconPath": "365bf3a80928eea605cbefd72636c62eb0c1887b4652520c3e9c3f99a55f0cb9",
    "name": "Spross des Lebens",
    "desc": "Ein der Saat des Überflusses entsprungener Keimling, mit dem Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad des Überflusses</span> mäßig hochgestuft werden können.",
    "lore": "Strahlende Wärme, Leben und Wachstum gedeihen rund um den Ort, wo er seine Wurzeln schlägt. Karges Ödland verwandelt sich in saftige Grasfelder, verwelkte Pflanzen verjüngen und blühen, und Quellen brechen durch den Boden, um das Land zu befeuchten.<br />Wenn du dich ihm näherst, zucken deine Muskeln und Knochen und breiten sich mit einem unerträglichen Juckreiz aus.<br /><br />„Das Leben ist unermüdlich, wo die Seele gedeiht.“",
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920198",
    "comeFrom": [
-    "Blütenkelch (Abgelegener Pass)",
     "Blütenkelch (Abgelegener Pass)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Glut-Tausch",
@@ -449,7 +451,7 @@
   {
    "id": 2,
    "iconPath": "d3eee5800b28b0b3ef1c84f7aa6f40cb6d90fd42840a4a81b46202222425753f",
-   "artPath": "3f630db62216e9df37ca027bddbfdb1950831bcb175b94c6fc7714d10fa0dacc",
+   "artPath": "81312a814c2f15ca47e4c90fd5b97c7715bd686128aa3da3452f981864cd5291",
    "name": "Topf des schlummernden Drachen",
    "descHash": "Erhöht nach dem Einsatz des Ultimates die bewirkte Heilung von Bailu für <nobr>#2[i]</nobr> Rd. um <nobr>#1[i]%</nobr>.",
    "params": [
@@ -480,7 +482,7 @@
   {
    "id": 5,
    "iconPath": "537af9234c0208fb09d6c0046e10d8be1dfe19af7deaad369c288f93b37ac1c3",
-   "artPath": "950cf11b253c83c51f30719f1c96ba3ef2d4ba2fbf1421ff48df23221a8347d2",
+   "artPath": "929c15806b95d5083c590ffa16a00bae93499bec1038d2c41616e966716cf04e",
    "name": "Beseitigung irdischer Probleme",
    "descHash": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
    "params": []
@@ -1685,18 +1687,22 @@
  "skillTreePoints": [
   {
    "id": 1211101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1211202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1211203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1211204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1823,18 +1829,22 @@
   },
   {
    "id": 1211102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1211205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1211206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1211207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1964,10 +1974,12 @@
   },
   {
    "id": 1211103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1211208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2000,6 +2012,7 @@
     },
     {
      "id": 1211209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2071,6 +2084,7 @@
   },
   {
    "id": 1211201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2099,6 +2113,7 @@
   },
   {
    "id": 1211210,
+   "anchor": 18,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2613,7 +2628,7 @@
   },
   {
    "id": 69,
-   "title": "Schatz öffnen 1",
+   "title": "Schatz geöffnet 1",
    "text": "Wenn es hilft, ist es eine gute Medizin.",
    "unlockRequirement": "",
    "cnUrl": "fcfe93a6e7dd0479d6f4ddc4d0a218b21ade7c74314089dfeb792029ce0dac51",
@@ -2623,7 +2638,7 @@
   },
   {
    "id": 73,
-   "title": "Schatz öffnen 2",
+   "title": "Schatz geöffnet 2",
    "text": "Hmm ... Ist etwas davon ein Heilmittel?",
    "unlockRequirement": "",
    "cnUrl": "a408622e80661178d5a362d2a8e231a26056329da50a2b511f60ed03c9281a80",
@@ -2633,7 +2648,7 @@
   },
   {
    "id": 74,
-   "title": "Kostbaren Schatz öffnen",
+   "title": "Kostbaren Schatz geöffnet",
    "text": "Hier, nimm das und gib mir dafür ordentlich Zucker!",
    "unlockRequirement": "",
    "cnUrl": "3da95fc7e7c2171d0e6deb3b1370dad9856d5ea9567a420b2c69947d71775399",

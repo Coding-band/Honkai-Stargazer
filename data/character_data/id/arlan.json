@@ -2,9 +2,14 @@
  "spRequirement": 110,
  "iconPath": "820aba1ec89bd5405b4dab97cde417e3ffb6d0467633fb0c76d1d766b7bab46d",
  "bgPath": "c3c7caf69e7dcd45ddb8724caec7e9d6e7b88ef4db623e1dde803ad33b380882",
- "figPath": "7a9be9f4c06ac8da61c14383d7dcdd8e5fe171ddfd4aeded2350d2d649247c4c",
+ "figPath": "be168c1c264deb8f16001bc5daff83c8be726822b9164653b4bb527754ae5599",
  "fgPath": "5510a1ee5aaffcd744747faed81172bcc9f2a10a4341df6c347df0b04eabb375",
  "splashIconPath": "a36e13b4f5d9507bafaca1f5105f0b721edc70f6309a309d8c52441022bf6471",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRv4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSDwBAAABkCvbtmlbY+19bdu2jWfbtm1Gtm1Eimzbfi+ybXOvOYKrX4iICQCgTNjZAUasLxQMlLUF4L04CdUuxaFsqAl4tm7uYH/39rwRhwc41XTOTk0DDAy4VOB8idwW2bfxkClLWqOsMXTNsqf8x6UBu2feeeAT5AIAzW7x2Vdq3nlL7pi0NUOhQ4uQxntOTv9Ji/zN+c26Aehylq8WbJpziVrr/+wQ5A5njOHI+oc/8b+mWDzvmw4V2OsIl9Xfzn+kyH/28IgAYHb9Q/4RilCEB/pCAQF79q78RxGSFHKiM6AQOr7jD1pCERHqYsCAwqD7f1hWRDTvtrdHWdfwNZYlYv23+IBckgtAAfC6QE1SfzjdNcUXZU20+cg/ezdc50MT5SskzrjC+SjdsvmMs2GUAzigVvtADBwNdwNVdUf5VlA4IJwBAADQCACdASoUABQAPm0ylEekIqIhKAgAgA2JbACdMoSBB+bbB4UmmV89v+qvwa+UqUu/xZfNf/O9wPdVf2ADcdzfRhH/fELmwZV/NcSYBfuAAP7Azc1AkU6YgWL0Fcy+hg8YW6qGFwblk9/4cAQT+1uOS9sXYDrck2PT2Xnp6mjonyEQkzO/A8fd7KJua2w8oRPoUh/Ve/Mp4KT6OJ+tozG/gw9CZikcNezjcaWAPwlPfUx953slPj3chDAGyHZzu6/5Ss6qmzcwhl+PO92Xh7dB+63ETuEmnmCRtAN0jcpkYZd9DYi6MZT9JWayLmd65G33gtwzNOxxAk78Kt9lf0338Tco2rN/YLOn92vk4rXJy94b/PHKA/nQVOnEff/Gib+fxiSla/K/whI+PDYczYJA1PuSxqsTNySEXkBy/Mi00nCZJgbpv32cPXjr2cgMKGtGR/LTSB+AM/aiIOeDLZ62LzEryB+q/f1FMJuR/W//krqPZcIwfviogaX+Z3/ERqiIFu0j7d/h3+hf0k6lRfx8aaLDGH/uxupAAAAA",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Hadiah Poin \"Simulated Universe\"",
     "Kehormatan Tanpa Nama",
     "Penukaran Ember",
+    "Penukaran Starlight",
     "Hadiah Event Waktu Terbatas"
    ]
   },
@@ -175,7 +181,6 @@
    "rewardPath": "/material/635673",
    "comeFrom": [
     "Calyx \"Storage Zone\"",
-    "Calyx \"Storage Zone\"",
     "Penukaran Ember",
     "\"Omni-Synthesizer\" - Pertukaran Material"
    ]
@@ -211,7 +216,6 @@
    "rewardPath": "/material/836259",
    "comeFrom": [
     "Calyx \"Storage Zone\"",
-    "Calyx \"Storage Zone\"",
     "\"Omni-Synthesizer\" - Synthesis Material",
     "\"Omni-Synthesizer\" - Pertukaran Material"
    ]
@@ -228,7 +232,6 @@
    "rarity": 3,
    "rewardPath": "/material/920200",
    "comeFrom": [
-    "Calyx \"Storage Zone\"",
     "Calyx \"Storage Zone\"",
     "\"Omni-Synthesizer\" - Synthesis Material",
     "Penukaran Ember",
@@ -449,7 +452,7 @@
   {
    "id": 2,
    "iconPath": "c45f3a31bbe8bb06056741775d70d0eeb90527236c19211d9e6373e673f22cf3",
-   "artPath": "18c700c5fb70f6af8bd818407dce6bede3b3a3a68e5886adeb66b6ab2dde3637",
+   "artPath": "5c6390dc7a713031f9c7c382b172a3c0584d24c6c0b8db74b5c459e2eb0091ed",
    "name": "Breaking Free",
    "descHash": "Saat melancarkan Skill dan Ultimate, menghapus 1 status Debuff dirinya.",
    "params": []
@@ -476,7 +479,7 @@
   {
    "id": 5,
    "iconPath": "42b8fadb35da151843341b44d921b962f9e9d44429939e9ddee637bb0549c3d9",
-   "artPath": "033dc0bfab85cd88b3e789e86ab789dc072bdd70e1b3122b170d8b2b5bdfd7c2",
+   "artPath": "fe5c1f028db76612f68dcd74923d5d83f79b770b5c9d58b6670bf96df0edcc72",
    "name": "Hammer and Tongs",
    "descHash": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
    "params": []
@@ -1564,18 +1567,22 @@
  "skillTreePoints": [
   {
    "id": 1008101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1008202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1008203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1008204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1702,18 +1709,22 @@
   },
   {
    "id": 1008102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1008205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1008206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1008207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1843,14 +1854,17 @@
   },
   {
    "id": 1008103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1008208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1008209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1883,6 +1897,7 @@
       },
       {
        "id": 1008210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1983,6 +1998,7 @@
   },
   {
    "id": 1008201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2579,7 +2595,7 @@
  "name": "Arlan",
  "rarity": 4,
  "descHash": "Penanggung jawab Departemen Keamanan Stasiun Luar Angkasa \"Herta\". Dia tidak pandai bicara, tapi dia bersedia melindungi para peneliti agar mereka bisa menyelesaikan penelitian dengan lancar.",
- "artPath": "e0e1ae5460426ad389da0798d4e3e0c4e3ae8bd8e018e6957176cb26e337ec3d",
+ "artPath": "7a9a83f58908e23f3c24bca0c298cf83591d64e86351324f658b07fef7a3c50a",
  "miniIconPath": "1da6a0a0c49bde638e3a82906d1821987063ca714d734f567875d54a9782abe9",
  "damageType": {
   "id": 8,

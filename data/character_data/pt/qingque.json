@@ -1,10 +1,15 @@
 {
  "spRequirement": 140,
  "iconPath": "62bbed3f4fa89607c950e0c37b287cd629c6dc011b81bd99cf3354a4dd3cb55e",
- "bgPath": "95add5fd751106b1eeb03cfcbe017215893f25a2ef09bf7a0c78af53275456a1",
+ "bgPath": "d82b845f86f056ebc33528c4e14f8dcf0d93fc67de5085a5c516e2ecaa8122ff",
  "figPath": "64b09bba9b3bbdaaccaa720f85047a4a42fd05d52605ef3e96e571d4d8244e6e",
  "fgPath": "939573cb980ac84a1ca1ac5e9b4503698ec38a52c4d17a4f300e98499de70b9a",
  "splashIconPath": "72cee71be6fe4de63b6bdecb1a1b69cb95724bc8f3cc89468c68343e5937c7dc",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRtACAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAUBAAABkLJt+/m/8u+/bVvRStrimm170WprttUU/6v/l7ClLXrJ+5vf7/e+wg8RMQGSlCIVtyklrTQjRQlTpHV1B7cq8+JySelxpCcfTkxPvX44uunFfSkrJvUls/B7Af7AqxtvMpSuTQSEXphZMmEEE5WSzhLYBmx7iZ95qrz6C9vYxhDxSToMJtbYOOSd1LFo2wkc8f5yqvaGmLgG2wvn1BgQ4TjYsMhxNf8lMjaOz/8B6SEBBhPrgNtK0yYWjY1jiZjukqr+EZgkFtmlFPWMERpjQwiskFKkt4SBoyCMlpj6cSlPUpp0H0zsx/5sxU2RVo4xeX/0y9V8KTWOUlKkwfaaVEmpkgQAVlA4IKQBAABQCACdASoUABQAPm0wk0ckIqGhKAqogA2JbACdMoR2iP3sJABLAHoAeWP+x3wV/5nzZimD+L7NX3wAOK5RH8JXtP8c2igGEGOSoAAA/pRKUuAwH5vGJIBA5buIbO3r/DWHcBC8JZpDfYiyM9A+TzJ1SvVbTr9/5m9V5xnrWwiCa2ur9KnZAD4wo9ebbTGyUxngw2i4n1JWVDtX6Hmx2qEZr63H6f9dBwmseTp2bNQzgGmm+KzqWWWwlFj+ZinV3opdnHpaHI+5mYJXBLvkgwQn4RqhX9bDlgNtZAdWrMkDkJ7lzFBxLr95utvv4eAPsluwv/pL1zFVOxJd4MsU+WMEV/hE+2XosW8qAswohM8eu+8B9XX1WRolibrv4u4rOSzCaDFtBVZnodN7/pHV6u26GmnF9/qd78X/ForIUUU6Yr8IgDSOYxDpa0hwkUT4+f386Eznv6M7r/aP/B6avVwKJ3jCor2H3Rmv+9vi53GWz9Kv+gx7zTmleg7HcXF8wtPUK2op3uU/r8f+sl/DyISv9WpnM5dOxR5kcmxJHM3GEPEAAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Recompensas de Pontuação do Universo Simulado",
     "Honra dos Inominados",
     "Troca de Brasas",
+    "Troca de Luz Estelar",
     "Recompensas de Evento por Tempo Limitado"
    ]
   },
@@ -190,7 +196,6 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Cálice (Vila dos Rebites)",
-    "Cálice (Vila dos Rebites)",
     "Troca de Brasas",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -226,7 +231,6 @@
    "rewardPath": "/material/836261",
    "comeFrom": [
     "Cálice (Vila dos Rebites)",
-    "Cálice (Vila dos Rebites)",
     "Sintetizador Omni — Síntese de Material",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -243,7 +247,6 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
-    "Cálice (Vila dos Rebites)",
     "Cálice (Vila dos Rebites)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas",
@@ -449,7 +452,7 @@
   {
    "id": 2,
    "iconPath": "75a125b9bf46e6e13c807cc6a74d125467d743e5aeb8253c59df539874114922",
-   "artPath": "9beea03214c8c9074239a759196c18c089ebfe79912c6a1dcde57270dc2ec7b4",
+   "artPath": "afa8cc1b8f7d13306fe2e05de72d149842efd78f9d2c8de3d7f0dfb2b4059e95",
    "name": "Dormir nas Peças",
    "descHash": "Sempre que Pegar Peça é ativado, Qingque imediatamente regenera <nobr>#1[i]</nobr> de Energia.",
    "params": [
@@ -1734,14 +1737,17 @@
  "skillTreePoints": [
   {
    "id": 1201101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1201202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1201203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1774,6 +1780,7 @@
       },
       {
        "id": 1201204,
+       "anchor": 12,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1868,14 +1875,17 @@
   },
   {
    "id": 1201102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1201205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1201206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1908,6 +1918,7 @@
       },
       {
        "id": 1201207,
+       "anchor": 15,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2008,10 +2019,12 @@
   },
   {
    "id": 1201103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1201208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2044,6 +2057,7 @@
     },
     {
      "id": 1201209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2115,6 +2129,7 @@
   },
   {
    "id": 1201201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2143,6 +2158,7 @@
   },
   {
    "id": 1201210,
+   "anchor": 18,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2814,7 +2830,7 @@
   },
   {
    "title": "História de Personagem: Parte I",
-   "text": "A lenda de Qingque começou no liceu.<br /><br />Desde seus anos de caloura até o dia de sua formatura, sempre que as notas das provas eram anunciadas, o nome Qingque era sempre acompanhado por um número <nobr>60</nobr> por extenso: sessenta, sem exceção.<br /><br />No começo, os tutores pensavam que Qingque era apenas um talento mediano inadequado para a academia. Sendo assim, não davam muita atenção. Contudo, conforme o mesmo exato número seguia aparecendo nos registros, o corpo docente começou a suspeitar que isso não era mera coincidência.<br /><br />Muito rapidamente, ter longas conversas com os tutores se tornou algo recorrente para Qingque. Qualquer um que esteja familiarizado com este tipo de sofisma reconhecerá esses dizeres: no começo, ela é \"quieta e comportada\", ou \"dotada\". \"Depois, o tom passa a ser de culpa, \"É uma pena ver que seu cérebro é um grande desperdício\", \"até chegar ao grande final: \"Se ao menos você pudesse dedicar tanta criatividade aos estudos, blá, blá, blá...\"<br /><br />Mas Qingque sabia o tipo de vida que queria muito melhor do que seus tutores. Ela sempre repetia \"Ah, sim, sim, sim\" e \"Hmm, claro, claro, claro\" antes de voltar a dormir na carteira e passar raspando na prova seguinte. Era assim que Qingque respondia à coerção e às ameaças de seus tutores.<br /><br />Eles acabaram perdendo a paciência com ela. No fim, o que puderam fazer foi só deixar uma mensagem rancorosa no anuário dela:<br /><br />\"Vai ser difícil para ela alcançar a grandeza\"",
+   "text": "A lenda de Qingque começou no liceu.<br /><br />Desde seus anos de caloura até o dia de sua formatura, sempre que as notas das provas eram anunciadas, o nome Qingque era sempre acompanhado por um número <nobr>60</nobr> por extenso: sessenta, sem exceção.<br /><br />No começo, os tutores pensavam que Qingque era apenas um talento mediano inadequado para a academia. Sendo assim, não davam muita atenção. Contudo, conforme o mesmo exato número seguia aparecendo nos registros, o corpo docente começou a suspeitar que isso não era mera coincidência.<br /><br />Muito rapidamente, ter longas conversas com os tutores se tornou algo recorrente para Qingque. Qualquer um que esteja familiarizado com este tipo de sofisma reconhecerá esses dizeres: no começo, ela é \"quieta e comportada\", ou \"dotada\". \"Depois, o tom passa a ser de culpa, \"É uma pena ver que seu cérebro é um grande desperdício\", \"até chegar ao grande final: \"Se ao menos você pudesse dedicar tanta criatividade aos estudos, blá, blá, blá...\"<br /><br />Mas Qingque sabia o tipo de vida que queria muito melhor do que seus tutores. Ela sempre repetia \"Ah, sim, sim, sim\" e \"Hmm, claro, claro, claro\" antes de voltar a dormir na carteira e passar raspando na prova seguinte. Era assim que Qingque respondia à coerção e às ameaças de seus tutores.<br /><br />Eles acabaram perdendo a paciência com ela. No fim, o que puderam fazer foi só deixar uma mensagem rancorosa no anuário dela:<br /><br />\"Vai ser difícil para ela alcançar a grandeza\".",
    "unlockRequirement": "Desbloqueado no Nível <nobr>20</nobr> de Personagem"
   },
   {
@@ -2933,7 +2949,7 @@
  "name": "Qingque",
  "rarity": 4,
  "descHash": "Profetisa da Comissão de Divinação do Luofu do Xianzhou, e uma bibliotecária. Cada vez mais desestimulada e prestes a ser rebaixada a \"guardiã da porta\".",
- "artPath": "0bbc2f63e6023b6aaca992f89952d6d44e591918c7834ec3da3598dabea6951a",
+ "artPath": "a3c4a87dbec7414cfb034d00b786b505e980f975391972264a7141b45e9834a1",
  "miniIconPath": "a4c059ae3e42fba63909fef256a5a453033a54e44c9db8af3ce6ea6316f4d5cc",
  "damageType": {
   "id": 32,

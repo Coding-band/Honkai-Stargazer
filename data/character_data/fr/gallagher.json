@@ -1,0 +1,2846 @@
+{
+ "spRequirement": 110,
+ "iconPath": "66ef641eac0db8e9f18ee0e6fee3f2ba5bc8d8eb8b5b53397c5da876e1c68787",
+ "bgPath": "2a2eb647f215910dabac50b08cb33f79ebccb47e174fdba935a4aae0843aa555",
+ "figPath": "97cc402e5bac4cde5a97f9138332fb4d4239b87ec5a8cc426fd8305e8f7d403d",
+ "fgPath": "fc4cd3ece56b1e04d6fb0b61ad38abd25f0c03437b35b93aa232a854e6fa0045",
+ "splashIconPath": "fec4c21cfb55059d506ad72c169042c83ebbbf369772e167b43fcbd2ed5bcf86",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRp4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAsBAAABkKtt2yFJb/01tm1b0axtp8iNUAdgpnttboeKGNv2bmRW/d/7LqrPISImAMkOAHLLJrUidQC4jKYVN1/5OXApEG6+dPujJM1FmBCWhGclyTzjAaQDCLDwwEV5b0aaDlXj/6zrkpGkROrplgY4TI4UU5REKRb74DBJ/P8/0msnXIhFMiqZVNQFh+CcPJkkem1EiLG/RYpMkOnDCLBWpFKTsdZixkMfy0RS/I/2ZdkSmT/6XjQaRUqRthYdNG24pkiUUaTpUyfK9t/sOyZ91kfJRNOXPocpywuX3tnSOGPqzd+KvOn3AFDjgHK4MtSe/iFJD2oRAAEQpOcBGN148Uu8G8kBAAQA0uqrigAAVlA4IGwBAAAwCACdASoUABQAPm0uk0ckIiGhKAqogA2JaACdMoMpLIBzJPqA0QDrbvKAuUBsTUwD9Zg4naA0atClntVnN7GX07RL471+vwFnAAD+8rOKuPKZ/bI+jpLQZ9+/lYL1ODr/A9SUHSOqEaKeX2e5S6sxX4TTnXfJuaCVLl0sf10olNHRKbSf46zp+vwRVI93DaHAbaj9Cx/UvK6rfCkrhP0/plzmaH9l1COyoP1H4tLxhDTyESk7n/FmDuV4FLAPZbUxKHLJdkW0I6mXsH5s396jmYFnZwpuS5YRAl0TWps1ITA5+QrHUP4wtw4RQDC3TekljZ7ANR3gATIaJatdENzL2fXMJ1oVb+kau0/2zeU8Q5tH9HJn+VD6AYIaaEm6CPVVbr7WcmULl3dNUr3rRoY64xAUp7eehmgEz5au17F/ktjqnp675OnE274IrG8gc+Zupbpwzv8qX1j8zc8sB2Df1qIlc+7LsWwaAAAA",
+  "w": 2048,
+  "h": 2048
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 7,
+  "iconPath": "232bc80b207d7be892c4e0c41ea43b44080e51373e3c4f6f0f2f9e0eb4e03194",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Calice de la Commission de l'artisanat",
+    "Calice de l'Hôtel Rêverie du Pays des rêves",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Braises immortelles"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "999db0943876bc45d70e793bb21b7368b799f16b9b9b5ec98f87ab3a999ca059",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises",
+    "Lumières d'étoile",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "93e57927857330492588a5988471221f81a568e9405e453a4ec1a35e080e58ab",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice de Passenuage",
+    "Calice de la Frontière des rêves",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5bc0f70fa042018eea0146f55ad54f669516480a6c85e57e3a7d15596ae23894",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice de Passenuage",
+    "Calice de la Frontière des rêves",
+    "Entraînement quotidien",
+    "Braises immortelles"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "210df022ef9d45e28825002eae2111550ad34186eae4cefed470e45f6ec7c563",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice de Passenuage",
+    "Calice de la Frontière des rêves",
+    "Récompense d'affectation"
+   ]
+  },
+  "470781": {
+   "id": 470781,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "c63b922af281d49c4d1e5ee84aa4a5cb7027e4a16e96fe8f683c9f50a4bcb921",
+   "name": "Ancienne rancune du Désastre de l'ennui",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "En tant que descendant direct de l'Imperator Insectorum, son seul désir est de densifier la population des siens. Avec ses faux géantes, il décime d'innombrables créatures et récolte les cultures des planètes pour son nid, dans lequel il élève sa progéniture dans un flux continu jusqu'à sa mort.<br /><br />« Sur la planète brisée, des sauterelles géantes ont noirci le ciel, et de la croûte terrestre se déverse une nuée d'insectes. Le coléoptère a bâti ce nouveau nid et le présente en cadeau à l'Imperator Insectorum... Puisse cette horreur marquer l'histoire et ses écrits, puisse-t-elle ne jamais se reproduire. »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/470781",
+   "comeFrom": [
+    "Écho de la guerre de la Zone d'isolement"
+   ]
+  },
+  "549209": {
+   "id": 549209,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "9a1cf43cc4fe48465c1a6a97d23a061fa43b6ab00796881aeaa8c3da2bb8fe73",
+   "name": "Composant de stockage des rêves",
+   "desc": "Appareil de stockage pour les créations du Pays des rêves. Matériau commun utilisé pour le renforcement.",
+   "lore": "Appareil de stockage destiné aux rêves brisés. Fournit une source énergétique fondamentale pour les créations du Pays des rêves.<br /><br />« Installez cet appareil pour obtenir un membre de la Troupe Beaux rêves. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549209",
+   "comeFrom": [
+    "Troupe Chocmar",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur",
+    "Calice doré"
+   ]
+  },
+  "589812": {
+   "id": 589812,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "3004d26bebcef0435b0763480acc500f00a86770da78f7de060b4350882b1f67",
+   "name": "Suc nourricier",
+   "desc": "Le nectar produit par les fleurs de l'arbre-cœur du bois sacré de Vonwacq. Le suc accélère la croissance. Il permet d'améliorer modérément les Traces des personnages qui suivent la Voie de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abondance</span>.",
+   "lore": "Lorsque le Démon émerge du sol fertile, il n'est qu'un fruit rond à la tige longue comme l'avant-bras. Pour une raison que nous ignorons, il doit vaincre ses frères et sœurs avant de boire le nectar et de grandir.<br /><br />« Tu peux boire la sève de n'importe quel arbre de ce bois, hormis celui-ci. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/589812",
+   "comeFrom": [
+    "Calice du Jardin de vulpeflâne",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633150": {
+   "id": 633150,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "e27598c02b7aed5cb9b255fe0958340dbf3598f33ee10667848cfeed7fdd4815",
+   "name": "Valve de débit onirique",
+   "desc": "Composant de contrôle pour les créations du Pays des rêves. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "Appareil de construction de rêves qui régule les désirs et contrôle les émotions des créations du Pays des rêves.<br /><br />« Si l'appareil rencontre un défaut, vous obtiendrez un membre de la Troupe Chocmar. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633150",
+   "comeFrom": [
+    "Troupe Chocmar au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "673753": {
+   "id": 673753,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "98956c7191b34655e76f1351f86d05cfe180bde1c7ad81b960c2d3198b4b4d0c",
+   "name": "Myria-Fruit",
+   "desc": "Le fruit qui pousse sur les branches de l'arbre-cœur du bois sacré de Vonwacq. Il contient l'essence d'une multitude de formes de vie. Il permet d'améliorer considérablement les Traces des personnages qui suivent la Voie de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abondance</span>.",
+   "lore": "Un jour après avoir bu le nectar de l'arbre divin, le petit fruit minuscule se transforme en Démon revêtu d'une armure de fibres, armé d'une lance de bois et d'un bouclier de feuilles. À ses pieds, les créatures du bois lui offrent leurs gènes. Il goûte, apprend et se métamorphose. Le Démon ira ensuite défier la mer et le ciel de Vonwacq.<br /><br />« Voilà comment les sages de l'ancien temps emprisonnèrent les créatures les plus terrifiantes dans un jeu ridicule. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/673753",
+   "comeFrom": [
+    "Calice du Jardin de vulpeflâne",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "717091": {
+   "id": 717091,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "aa55e0e2abb0564d8d470280ad864c1c7a4d9f14cfe0427092a26075fcc86b94",
+   "name": "Moteur de création des rêves",
+   "desc": "Noyau d'énergie pour les créations du Pays des rêves. Matériau avancé utilisé pour le renforcement.",
+   "lore": "Appareil de construction de rêves servant à bâtir des fantasmes et accordant des âmes aux créations du Pays des rêves.<br /><br />« Si l'appareil connaît un dysfonctionnement... essayez de vous réveiller avant de sombrer dans un cauchemar. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717091",
+   "comeFrom": [
+    "Troupe Chocmar au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "874339": {
+   "id": 874339,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "c519892f81f8c3ee1c23884973d15c1c4884dec6cebcfd44bd6cb35bce604c84",
+   "name": "Graine de l'arbre extraterrestre",
+   "desc": "La graine extraite des fruits de l'arbre-cœur du bois sacré de Vonwacq. Elle porte les gènes de plusieurs formes de vie. Elle permet d'améliorer légèrement les Traces des personnages qui suivent la Voie de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abondance</span>.",
+   "lore": "L'énorme arbre du bois sacré de Vonwacq enregistre méticuleusement l'évolution de l'écosystème sur d'innombrables cycles de vie. Il nourrit ainsi le « Démon » idéal et utilise les gènes de différentes espèces comme graines.<br /><br />« Ouvrez ce fruit dur, séparez les graines de la chair et plantez-les dans le sol sacré. Vous récolterez des dizaines de commandants l'année suivante. Il ne reste plus qu'à faire un combat à mort pour trouver le champion ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/874339",
+   "comeFrom": [
+    "Calice du Jardin de vulpeflâne",
+    "Braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "983280": {
+   "id": 983280,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "0151bb6ca157095e4b12ac1516b05ce890c064d6738032a67eefe492162ff0fd",
+   "name": "Cœur enragé",
+   "desc": "Le souvenir profond d'une « carapace de colère réprimée ». Permet l'élévation des personnages de type feu.",
+   "lore": "Les flammes de la colère finiront par s'éteindre d'elles-mêmes, effaçant la cause originelle pour ne laisser derrière elles qu'une rancœur latente et une haine insatiable.<br /><br />« La haine fait perdurer le souvenir de la rage, mais cette même haine la rendra irréelle. »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/983280",
+   "comeFrom": [
+    "Ombre stagnante du Manoir de la rosée",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 72,
+   "attackAdd": 3.6,
+   "hpBase": 177.6,
+   "hpAdd": 8.88,
+   "defenseBase": 60,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549209,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "attackBase": 100.8,
+   "attackAdd": 3.6,
+   "hpBase": 248.64,
+   "hpAdd": 8.88,
+   "defenseBase": 84,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549209,
+     "count": 8
+    }
+   ]
+  },
+  {
+   "attackBase": 129.6,
+   "attackAdd": 3.6,
+   "hpBase": 319.68,
+   "hpAdd": 8.88,
+   "defenseBase": 108,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633150,
+     "count": 5
+    },
+    {
+     "id": 983280,
+     "count": 2
+    }
+   ]
+  },
+  {
+   "attackBase": 158.4,
+   "attackAdd": 3.6,
+   "hpBase": 390.72,
+   "hpAdd": 8.88,
+   "defenseBase": 132,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633150,
+     "count": 8
+    },
+    {
+     "id": 983280,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 187.2,
+   "attackAdd": 3.6,
+   "hpBase": 461.76,
+   "hpAdd": 8.88,
+   "defenseBase": 156,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717091,
+     "count": 5
+    },
+    {
+     "id": 983280,
+     "count": 15
+    }
+   ]
+  },
+  {
+   "attackBase": 216,
+   "attackAdd": 3.6,
+   "hpBase": 532.8,
+   "hpAdd": 8.88,
+   "defenseBase": 180,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717091,
+     "count": 7
+    },
+    {
+     "id": 983280,
+     "count": 28
+    }
+   ]
+  },
+  {
+   "attackBase": 244.8,
+   "attackAdd": 3.6,
+   "hpBase": 603.84,
+   "hpAdd": 8.88,
+   "defenseBase": 204,
+   "defenseAdd": 3,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "1c02d236c265b252501946163a123ea0024914f3d7bb717e614b53fba6918e90",
+   "artPath": "06ec5979cd3faee0259917c4277a3482c61fc21583cfc68a7801eaa82fb56a3c",
+   "name": "B<nobr>-52</nobr>",
+   "descHash": "Régénère <nobr>#1[i]</nobr> points d'énergie et augmente de <nobr>#2[i]%</nobr> sa RÉS aux effets lorsque Gallagher entre en combat.",
+   "params": [
+    20,
+    0.5
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "bca9a8c6f1a873ff76cd0bd120473dcf660321c5bad73cffd7a9fbc7e7d25f04",
+   "artPath": "ded57e58a83be469fd8bc1744197764e5065f70e4a2c6570244066ddf5e3efbe",
+   "name": "Souffle du dragon",
+   "descHash": "Supprime <nobr>#1[i]</nobr> malus de la cible alliée lors de l'utilisation de la compétence. D'autre part, augmente de <nobr>#2[i]%</nobr> sa RÉS aux effets pendant <nobr>#3[i]</nobr> tours.",
+   "params": [
+    1,
+    0.3,
+    2
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "652c00cd672620ec1aa067b20fae0232fc92babfa0b9906c6e29073258d65708",
+   "artPath": "36eb269de21bb98b287d2d099d742874a7d6b9ce650d373464c2027232bd7141",
+   "name": "Remontant",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "fe8d6bf3a18fc26d322b5cca6c7cf4387132c388b6baa6497c8d5ce03f70a8de",
+   "artPath": "5bedaf59fb700ad0c8b2b49fd1d4bf463c3399177ca4afaf6be3bb2a8cd14b22",
+   "name": "Derniers mots",
+   "descHash": "Augmente d'<nobr>#1[i]</nobr> tour la durée de l'effet Ivresse infligé par l'ultime de Gallagher.",
+   "params": [
+    1
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "a9226a33341e99eabe22b8d047cc5588f9d7e4e595f7d73c3c4268182975f063",
+   "artPath": "1fc609b3622445a163df19949106991915a3002f4f13ae3bd6c3fe85e6e9adcb",
+   "name": "Mort dans l'après-midi",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "85634385782afd2654b6f901572c0de58b4deeffae0002918c7dd583be8ed7b9",
+   "artPath": "9eb1f3131de5313ed323aba03f32fe28eb650194cade404055eb5ccce661cb96",
+   "name": "Sang et sable",
+   "descHash": "Augmente de <nobr>#1[i]%</nobr> l'effet de Rupture de Gallagher et de <nobr>#2[i]%</nobr> son efficacité de Rupture de faiblesse.",
+   "params": [
+    0.2,
+    0.2
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   426146,
+   312431
+  ],
+  [
+   342205
+  ],
+  [
+   258264
+  ],
+  [
+   141619
+  ],
+  [
+   857092
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT de feu équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Gallagher à une cible ennemie unique.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 426146,
+   "name": "Coup de pompe",
+   "iconPath": "5f7218bd22632454e4e7f7828aba4370abb31ca24b94fff192c8db547e6c4894",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 874339,
+       "count": 2
+      },
+      {
+       "id": 549209,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 589812,
+       "count": 2
+      },
+      {
+       "id": 633150,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 589812,
+       "count": 4
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 673753,
+       "count": 2
+      },
+      {
+       "id": 717091,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 673753,
+       "count": 6
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Restauration",
+   "descHash": "Soigne immédiatement <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]</nobr></span> PV à une cible alliée.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 342205,
+   "name": "Cuvée spéciale",
+   "iconPath": "652c00cd672620ec1aa067b20fae0232fc92babfa0b9906c6e29073258d65708",
+   "typeDescHash": "Compétence",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      200
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      340
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549209,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      480
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 874339,
+       "count": 2
+      },
+      {
+       "id": 549209,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      676
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 589812,
+       "count": 2
+      },
+      {
+       "id": 633150,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      830
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 589812,
+       "count": 4
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      984
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 589812,
+       "count": 6
+      },
+      {
+       "id": 633150,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1138
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 673753,
+       "count": 2
+      },
+      {
+       "id": 717091,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1292
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 673753,
+       "count": 4
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1446
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 673753,
+       "count": 6
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1600
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 673753,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1684
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1768
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1852
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1936
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2020
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ZdE",
+   "descHash": "Applique l'effet Ivresse à tous les ennemis pendant <nobr>#2[i]</nobr> tours. D'autre part, inflige des DGT de feu équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Gallagher à tous les ennemis et la prochaine ATQ normale de Gallagher est renforcée en Coup de fouet.",
+   "ultimateCost": 110,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 258264,
+   "name": "C'est ma tournée !",
+   "iconPath": "6fc2e1dbc75c2594a415129007f14e24741480f254d28b0bc4c6140cffaab646",
+   "typeDescHash": "Ultime",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.75,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.825,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549209,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 874339,
+       "count": 2
+      },
+      {
+       "id": 549209,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 589812,
+       "count": 2
+      },
+      {
+       "id": 633150,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 589812,
+       "count": 4
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 589812,
+       "count": 6
+      },
+      {
+       "id": 633150,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1.21875,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 673753,
+       "count": 2
+      },
+      {
+       "id": 717091,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3125,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 673753,
+       "count": 4
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.40625,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 673753,
+       "count": 6
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 673753,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.575,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.65,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.725,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.8,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.875,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Restauration",
+   "descHash": "L'effet Ivresse augmente de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> les DGT de rupture subis par les cibles. Chaque fois qu'une cible affectée par Ivresse est attaquée par un allié, l'assaillant récupère <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> PV.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 141619,
+   "name": "Ébriété destructrice",
+   "iconPath": "40eb47c7f88c24abedb09c676140e2073e1dcc95b2e30129050b9ce13a8d800f",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.06,
+      80
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.066,
+      136
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549209,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.072,
+      192
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 874339,
+       "count": 2
+      },
+      {
+       "id": 549209,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.078,
+      270.4
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 589812,
+       "count": 2
+      },
+      {
+       "id": 633150,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.084,
+      332
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 589812,
+       "count": 4
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.09,
+      393.6
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 589812,
+       "count": 6
+      },
+      {
+       "id": 633150,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.0975,
+      455.2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 673753,
+       "count": 2
+      },
+      {
+       "id": 717091,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.105,
+      516.8
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 673753,
+       "count": 4
+      },
+      {
+       "id": 470781,
+       "count": 1
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.1125,
+      578.4
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 673753,
+       "count": 6
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.12,
+      640
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 673753,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 470781,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.126,
+      673.6
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.132,
+      707.2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.138,
+      740.8
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.144,
+      774.4
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.15,
+      808
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 973737,
+   "name": "Attaque",
+   "iconPath": "5f7218bd22632454e4e7f7828aba4370abb31ca24b94fff192c8db547e6c4894",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Engage immédiatement le combat contre les ennemis. Inflige Ivresse à tous les ennemis pour une durée de <nobr>#1[i]</nobr> tours en entrant en combat. Et inflige des DGT de feu équivalents à <nobr>#2[i]%</nobr> de l'ATQ de Gallagher à tous les ennemis.",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "0",
+   "id": 857092,
+   "name": "Sans modération",
+   "iconPath": "8362bd58df7311412cb3d5800cab4697f28697fbc4e4356d58f505197ac69563",
+   "typeDescHash": "Technique",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2,
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT de feu équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Gallagher à une cible ennemie unique et réduit de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> l'ATQ de la cible pendant <nobr>#3[i]</nobr> tours.",
+   "ultimateCost": 0,
+   "break": "90",
+   "energy": "20",
+   "id": 312431,
+   "name": "Coup de fouet",
+   "iconPath": "587e67b212907295d75b9f47a763d27e8df0f217fcbac2b18dc54e4f5dec8b33",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.25,
+      0.1,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.5,
+      0.11,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 874339,
+       "count": 2
+      },
+      {
+       "id": 549209,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.75,
+      0.12,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 589812,
+       "count": 2
+      },
+      {
+       "id": 633150,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.13,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 589812,
+       "count": 4
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.25,
+      0.14,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 673753,
+       "count": 2
+      },
+      {
+       "id": 717091,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2.5,
+      0.15,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 673753,
+       "count": 6
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.75,
+      0.16,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.17,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.25,
+      0.18,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1301101,
+   "anchor": 6,
+   "type": 1,
+   "children": [
+    {
+     "id": 1301202,
+     "anchor": 10,
+     "type": 2,
+     "children": [
+      {
+       "id": 1301203,
+       "anchor": 11,
+       "type": 2,
+       "children": [
+        {
+         "id": 1301204,
+         "anchor": 12,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 63445,
+          "name": "Augmentation de PV",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+          "statusList": [
+           {
+            "key": "PV",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 8000
+           },
+           {
+            "id": 589812,
+            "count": 2
+           },
+           {
+            "id": 633150,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 63448,
+        "name": "Augmentation de la RÉS aux effets",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+        "statusList": [
+         {
+          "key": "RÉS aux effets",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 589812,
+          "count": 2
+         },
+         {
+          "id": 633150,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 63447,
+      "name": "Renforcement de Rupture",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+      "statusList": [
+       {
+        "key": "Effet de Rupture",
+        "value": 0.053
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 874339,
+        "count": 2
+       },
+       {
+        "id": 549209,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Augmente les soins prodigués par cette unité à hauteur de <nobr>#1[i]%</nobr> de son effet de Rupture, jusqu'à un maximum de <nobr>#2[i]%</nobr> d'augmentation.",
+    "ultimateCost": 0,
+    "id": 63351,
+    "name": "Cocktail signature",
+    "iconPath": "b42c59cf6ec75a9e2dab964bec6f26bb8e68b5f48ea423cf4acaa3a0f2f12a5e",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.5,
+       0.75
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 874339,
+        "count": 2
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1301102,
+   "anchor": 7,
+   "type": 1,
+   "children": [
+    {
+     "id": 1301205,
+     "anchor": 13,
+     "type": 2,
+     "children": [
+      {
+       "id": 1301206,
+       "anchor": 14,
+       "type": 2,
+       "children": [
+        {
+         "id": 1301207,
+         "anchor": 15,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 63444,
+          "name": "Augmentation de la RÉS aux effets",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+          "statusList": [
+           {
+            "key": "RÉS aux effets",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 36000
+           },
+           {
+            "id": 673753,
+            "count": 2
+           },
+           {
+            "id": 717091,
+            "count": 2
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 63443,
+        "name": "Renforcement de Rupture",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f",
+        "statusList": [
+         {
+          "key": "Effet de Rupture",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 673753,
+          "count": 2
+         },
+         {
+          "id": 717091,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 63446,
+      "name": "Augmentation de la RÉS aux effets",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+      "statusList": [
+       {
+        "key": "RÉS aux effets",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 589812,
+        "count": 4
+       },
+       {
+        "id": 633150,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Avance immédiatement de <nobr>100</nobr> % l'action de ce personnage après l'utilisation de son ultime.",
+    "ultimateCost": 0,
+    "id": 63354,
+    "name": "Levure de bière",
+    "iconPath": "08d1f6474537cd68e555067fcfe1f705163e68be4e4443850976263463f41f67",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 589812,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1301103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1301208,
+     "anchor": 16,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 63457,
+      "name": "Augmentation de PV",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 673753,
+        "count": 6
+       },
+       {
+        "id": 717091,
+        "count": 6
+       }
+      ]
+     }
+    },
+    {
+     "id": 1301209,
+     "anchor": 17,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 63458,
+      "name": "Augmentation de la RÉS aux effets",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+      "statusList": [
+       {
+        "key": "RÉS aux effets",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 673753,
+        "count": 6
+       },
+       {
+        "id": 717091,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Lorsque Gallagher utilise Coup de fouet pour attaquer des ennemis affectés par Ivresse, l'effet de restauration de PV de son talent s'applique également aux autres alliés pour cette attaque.",
+    "ultimateCost": 0,
+    "id": 63353,
+    "name": "Santé !",
+    "iconPath": "f86a0b231a9cd7d4fb77d0ae28d748e94c9196d544b305f1f36fbeacd61d1de8",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 673753,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 470781,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1301201,
+   "anchor": 9,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 63450,
+    "name": "Augmentation de la RÉS aux effets",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "fa7136a4b04e91ff341669c85c9a698aaf08a8d07aea80644e6e71ddbe2808c1",
+    "statusList": [
+     {
+      "key": "RÉS aux effets",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549209,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1301210,
+   "anchor": 18,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 979508,
+    "name": "Augmentation de PV",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf",
+    "statusList": [
+     {
+      "key": "PV",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 128000
+     },
+     {
+      "id": 673753,
+      "count": 6
+     },
+     {
+      "id": 717091,
+      "count": 6
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corps",
+    "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+    "propertyName": "Augm. des soins prodigués",
+    "propertyIconPath": "57726150eaa27c675743fe08b88bd04575a0e76b5014dcfbc073c105aa1c7e44"
+   },
+   {
+    "relicTypeHash": "Pieds",
+    "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+    "propertyName": "VIT",
+    "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+   },
+   {
+    "relicTypeHash": "Sphère planaire",
+    "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+    "propertyName": "PV",
+    "propertyIconPath": "164d0d1c7ba81c2ae0af472a7c7bf7954292f201a3a6a59de801043466ab5bbf"
+   },
+   {
+    "relicTypeHash": "Corde de liaison",
+    "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+    "propertyName": "Effet de Rupture",
+    "propertyIconPath": "5a45f69adc0f8e5199b51b683fa7d30e52be092a956d087bc3e9c01e2cd7c10f"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Première rencontre",
+   "text": "Je m'appelle Gallagher, je fais partie des Fin-Limier. Bienvenue à Penacony, la terre des rêves, Sans Nom.",
+   "unlockRequirement": "",
+   "cnUrl": "495221d21da5779a1a37579d4d3a5f1a62ac4e6e08ddb1cbade27b1b093b9838",
+   "jpUrl": "65ea30b62112b1f5330f01e40aeb71c4e4090b516f73a610ee81ff059b5b237e",
+   "enUrl": "67d240fbd2dbd209ce6dccd6b8b745c916ecf5d26a03e0b4824852f0ea683b7f",
+   "krUrl": "9ba7cbb38ad06c92bb553d5f14877e4087bb55cf94d170b5fb11759bc287198f"
+  },
+  {
+   "id": 2,
+   "title": "Salutation",
+   "text": "Bonsoir. Tu as l'air d'avoir travaillé dur. Tu veux un verre ?",
+   "unlockRequirement": "",
+   "cnUrl": "0956ac391b16a31f055a4d341ac2ee134679f8d30af3db64cf82ada29f306aae",
+   "jpUrl": "d9a117fc607e27062de6f824356cff98502e241dcfd2ec52687a6544fe49f2ae",
+   "enUrl": "34609ce464aefd86f96bbb2c99c95d702cc308981a1c5aca5d26c226b5113fbf",
+   "krUrl": "597a28b55ebbd0fd9fda46bb783e92a8f1a2afce6834c18dd28aa4ed7eabca16"
+  },
+  {
+   "id": 3,
+   "title": "Au revoir",
+   "text": "Très bien, j'ai du pain sur la planche. À plus tard, et profite bien.",
+   "unlockRequirement": "",
+   "cnUrl": "492842235abf14868a290c8cafb4bed4a98364e54f8e85dda9452c6414ade508",
+   "jpUrl": "2f798021a12d1abc0e658de5ae3661c1e556d276ecd684fe6f978b18a6a31554",
+   "enUrl": "c76e4b534e95e9a3799c16f0f5db77cb2eb877df14d17cca8453c8ce965983c8",
+   "krUrl": "0230aac9edbce08bae3c96ad9ca61abb4056a9899769a0ce5089ebf4534f81f1"
+  },
+  {
+   "id": 4,
+   "title": "Connaître Gallagher : Cravate",
+   "text": "Rah, cette cravate est tout de travers. Enfin, tu n'as peut-être pas remarqué. À Penacony, personne ne se soucie de ce qu'on porte. Ils se fichent même de savoir si la personne avec qui ils parlent est réelle.",
+   "unlockRequirement": "",
+   "cnUrl": "726d621a25fbf640d88e0b287e7179a15232358896e36984c48b9ad409de5c9a",
+   "jpUrl": "94284647ebe719a50960a22e9bc8d8d46d7fb5b3f81e17eacf4bd35ce3573aad",
+   "enUrl": "dd4e74e26f3e902246ba99a60d4eeb9b3fdd1b95fe95050c119caaead7ad6529",
+   "krUrl": "71b38402eb24ef96e1454aece41d26d68281e1ae805f27d6dc757b35a4d97d56"
+  },
+  {
+   "id": 5,
+   "title": "Connaître Gallagher : Identité",
+   "text": "« Maison Fin-Limier », tu parles d'un nom à coucher dehors. Tu sais comment on me surnomme ? Bon toutou ? On ne peut pas dire qu'ils aient beaucoup d'imagination, mais ils ont la langue bien pendue au moins.",
+   "unlockRequirement": "",
+   "cnUrl": "6d229e6262a8c6be051669fdcc0bca82ca873d53931ce380670535597a5316fe",
+   "jpUrl": "2884b57f9af07fb3468f51d0aa2a9c44ff6c7f56b0061c814e89ca081f668691",
+   "enUrl": "fdb95f11358600eb96dd3adeba7af3e546e5e0e565aba7a3d7cf66b662aa95cd",
+   "krUrl": "c8fa6ae89b1687d2eb7c30d21711e13b0902a385dc9e11e17f4d820ed3368a1c"
+  },
+  {
+   "id": 6,
+   "title": "Bavardage : Félicitâme",
+   "text": "Peu importe le temps qui passe, le goût du Félicitâme ne change pas... Ah, la magie des additifs.",
+   "unlockRequirement": "",
+   "cnUrl": "7da6f936e5caa40d2ba0d0c655fc9a71bb7e88a4eeb40c626f85eea4e44d5191",
+   "jpUrl": "dc63524ff0c5f51f3ed90aa726b223e8a99eecd0d0a2ba18ea2a5e6d7a475d57",
+   "enUrl": "7887af868177cd760326a5c421976519af9d09373003a71d8228d30c223f6c99",
+   "krUrl": "ddf85926733a9b9c53e458317a1a65464ecb592c4a4ceb76db55cc4ed243c621"
+  },
+  {
+   "id": 7,
+   "title": "Bavardage : Rêves",
+   "text": "J'adore me promener dans les rues de Penacony et regarder les gens se perdre dans leurs propres rêves... J'ai même pensé à devenir un bandit interstellaire qui sèmerait le chaos dans l'univers. Qu'est-ce qui pourrait m'arriver de pire  ? Faire un petit séjour au pénitencier de la CPI. Hé, même pour ça, je signe !",
+   "unlockRequirement": "",
+   "cnUrl": "1d8e994fb506bb1387130b44488066c715d1ded377534f1da38a9c72f295793a",
+   "jpUrl": "b23ed7d60f83fcc3999ae436238e9f59de5ffc7f8bd7f69d1de83cf2ab362215",
+   "enUrl": "8ed2cc7e409175d4ad7058f483ed014b6e33db8afc642347233d913e7eb542eb",
+   "krUrl": "7c4e4d3fbd2f8b3e01eaec74e38743265724a9042dad51fcf4e21dc33b9d8258"
+  },
+  {
+   "id": 8,
+   "title": "Passe-temps",
+   "text": "L'art de préparer des boissons est une expérience sensorielle. Pour créer une boisson pétillante dans un rêve, il faut ajouter un peu de son humeur. Elle sera plus corsée si on est soucieux, et plus sucrée si on est heureux... Il ne s'agit pas seulement de mélanger des boissons, mais également des tranches de vie.",
+   "unlockRequirement": "",
+   "cnUrl": "1615f622a3fba8325fd4a61927215209096498d19f1dc6e4226f78ff5df526a8",
+   "jpUrl": "4b6666d273295a5f8f176c870917eac4c6b152df914a05da08d69e0ab43d5ace",
+   "enUrl": "7e24a2ac2e64c50290b5fac4d56bac0acb09b10f886538a53855a48706d86804",
+   "krUrl": "efa47619c43c44441bea093b1f2f5cb28ff79978ea5a8f5c1cb33e5b76a20fbe"
+  },
+  {
+   "id": 9,
+   "title": "Problèmes",
+   "text": "Les boissons et les desserts de mauvaise qualité masquent généralement leur mauvais goût avec du chocolat, mais je ne me fais jamais avoir... C'est sans doute parce que je déteste le chocolat.",
+   "unlockRequirement": "",
+   "cnUrl": "24a5fea3bd357f11d2b4761afecd92627396cf947aaf02007297a190937e9758",
+   "jpUrl": "c26cc4018951137edc1ede71078302aa7684edc7aeb23645c9051ddef7137dcf",
+   "enUrl": "ed1902392c199503bed141a77c236513da392729a88f06c0a4d5ba9ae82c029a",
+   "krUrl": "de0f368c07c79499545a5bf7688380cece68b3ab836c5851eda996e50947c5f9"
+  },
+  {
+   "id": 10,
+   "title": "Anecdote",
+   "text": "Parmi les cinq grandes maisons, les « Fin-Limier » ont pour responsabilité de protéger le territoire. Donc... c'est souvent à moi de m'occuper de ceux qui sortent du rang. Quand j'y pense, c'est quand même plus facile de faire disparaître quelqu'un que de le faire se matérialiser.",
+   "unlockRequirement": "",
+   "cnUrl": "bc577f079c02bf64f3c844293fad78f846ea397cff8e2f65e7943c04173344e1",
+   "jpUrl": "3b3a523a3b2683a8c34160307e8859f2f06c953203cf1380456f6abb8a882056",
+   "enUrl": "ced38297aaa09157f3cc8da2abce8eff698494aa7a566313bd14498423cc3099",
+   "krUrl": "cad9c5429c1f62cc4151bcad129320636684d22d663810bc439f14e3f166e260"
+  },
+  {
+   "id": 11,
+   "title": "Connaissances",
+   "text": "Si tu vois un jour une théière enragée ou une cabine téléphonique en cavale, il y a de fortes chances pour que tu aies à faire à un des fauteurs de trouble de la « Troupe Chocmar ». Pas de quoi s'alarmer, cependant : tu ne risques rien, à part peut-être une brûlure superficielle.",
+   "unlockRequirement": "",
+   "cnUrl": "ed1c2b11499c43f57c50525175a3e999e310755b4efbd4372560fbdfe37ec34a",
+   "jpUrl": "20d1fa2f42c6f3d221d93858bca975d27c5a67c7e9b86cbc1807aee640d31a0b",
+   "enUrl": "a61990b5b765372ecd878145de973fb122be61bf8d86fefc3de5472703768233",
+   "krUrl": "e9f5290a0e25f505ac2424999f0bcf54a34e82c0e98b7c5f8d0cad6f70184d8c"
+  },
+  {
+   "id": 12,
+   "title": "À propos des Sans Noms",
+   "text": "À l'époque où les étoiles étaient encore connectées, ce monde a également été foulé par des Sans Noms. Malheureusement, Penacony les a tous oubliés.",
+   "unlockRequirement": "",
+   "cnUrl": "969aa5a11653142c65ab7b4e16220df0cea439539a399c720627e4793c643c1f",
+   "jpUrl": "55e6e31a72802922629083e0922be06dc1ca38e164cb2495cce6485adec702b5",
+   "enUrl": "341bf44b526a467ba0eac3e42243aea972414cc045ca57cb178da581eb5272b4",
+   "krUrl": "f586291f9cac9af0732d72ad0b5801e5a38478860d3b20074ce6637c797233bc"
+  },
+  {
+   "id": 13,
+   "title": "À propos de Micha",
+   "text": "Micha est un gamin raisonnable. Moi ? À son âge, j'étais une terreur, prêt à mordre n'importe qui m'approchait.",
+   "unlockRequirement": "",
+   "cnUrl": "1a41f73805a3414150c7e5fd2980de4210edd39beeb7fbb71035eedc6584a366",
+   "jpUrl": "c5ecaf899a833a7bd9c99c658303ce6e93a18e9694ddb39f776175bdd4b85cf0",
+   "enUrl": "46f2e9ef8ac3d285f4958e57b9e52fbedbee26a32f08ec520a0cd419bc3669fb",
+   "krUrl": "236b24019c223b258047cc5ed3e415f2142eecf825bb00c06b84b029751e4f3d"
+  },
+  {
+   "id": 14,
+   "title": "À propos de Sunday",
+   "text": "Il me fait penser aux « Odes de l'Harmonie », mais je sens qu'il y a quelque chose derrière son apparence... quelque chose de réel.",
+   "unlockRequirement": "",
+   "cnUrl": "c09240fb0d334802defeca1824e543fc9e41c6d5268e43c0594f1f5fecc15b29",
+   "jpUrl": "98f4ddd0db84572ec21d1fe79d22e193be747c083e5cf6bcec4075487ac41019",
+   "enUrl": "970c3feaf914df9be97c61b0535dff91c27b358e1518f8d771e942bc868b4c9a",
+   "krUrl": "e00784f481147198491b7cdb2a192ca53710ce0a244c13e15efd2d0afe6d1e60"
+  },
+  {
+   "id": 15,
+   "title": "À propos de Robin",
+   "text": "On voit beaucoup d'étrangers s'installer à Penacony, mais un local qui s'en va ? C'est rare... Elle devait avoir ses raisons.",
+   "unlockRequirement": "",
+   "cnUrl": "b87d9dde15f5cc03c22fb5a8a22d1df162316a46206bca686e34a5a2f7019bd8",
+   "jpUrl": "9c3367cc9a289c10c127fd9a26b4e7ef61e1d87790fe6eed505ae525a63e0c9e",
+   "enUrl": "904ef28197523ea579ab260c4e7cd813bf293e1a891d597055c24b6570de25f6",
+   "krUrl": "30720c8d20db246948ebcc30d83b3c92ce64ab246c054b82740b6e179fc350ea"
+  },
+  {
+   "id": 16,
+   "title": "Activation d'Eidolon",
+   "text": "Attention, ne te perds pas dans ce doux rêve.",
+   "unlockRequirement": "",
+   "cnUrl": "eab5bafefd2cc56091030450a975b122e3d912073eb7cae3963d0e27dd9c11a9",
+   "jpUrl": "5a54b5c487ffc0c5b358bfdcde93a5e42c24c3d84b210b7f26593d6062c17251",
+   "enUrl": "cf9877b8d489472728c04c00033f16452ed83c3be5d08c84c2c52f18d79d26e1",
+   "krUrl": "a4389ce2752ff01f8bbfef33882f40ce9571e1d1b764430428e0bca1065dd9b1"
+  },
+  {
+   "id": 17,
+   "title": "Élévation de personnage",
+   "text": "L'intuition et l'instinct... Ce sont deux choses qu'on peut aiguiser avec l'entraînement.",
+   "unlockRequirement": "",
+   "cnUrl": "8fdd6187987f5647f08d971b257c79a784f8c55e5285b9513580714b5cb6c482",
+   "jpUrl": "cc10309a2b6540f392b13dca5e50b3b3cd461477e1cb84b49517329d2e2377cd",
+   "enUrl": "27cd9d9271265e94db533faff334a71dca02b7d7e2ee568092dc41f74e1ae06c",
+   "krUrl": "51c4a703a29a3c2fdd0ebd021d93c541408ae6aaed94ee38558d37b4d422ae6b"
+  },
+  {
+   "id": 18,
+   "title": "Niveau max atteint",
+   "text": "Le temps passe vite.",
+   "unlockRequirement": "",
+   "cnUrl": "a50b4def07ac8d324e4ea74dc26ddc33c1e14333f28a2ac5c2fcddde6d8c9496",
+   "jpUrl": "251283b65ab1a0720ca51e85fb4b62e493112922a43bbdf818e245a702f2fbc6",
+   "enUrl": "86f547e0e82fc00157fdc90417a055c751b3aa374e5a74ce9be39a2d099904c4",
+   "krUrl": "e4b073ce46a302272965198056f4ab565ad75825c1e3b9500d7d0f588fe21f3d"
+  },
+  {
+   "id": 19,
+   "title": "Activation de Trace",
+   "text": "Que dire de plus ? La mémoire musculaire ne ment jamais.",
+   "unlockRequirement": "",
+   "cnUrl": "c7b4d050a30c1bcf1e721152aceda26f0695e681e3eb0eb66f2c7d168440d715",
+   "jpUrl": "7d0c72800023128cfdf8a7e48c6a19321de5c85e15f5fc201e726b9c4c9f53f7",
+   "enUrl": "0a563b18768499bca6e1db47689627cb4cf34842c46e8df59877719479ee7f10",
+   "krUrl": "a91eea16b58ffe20f7caefe7a816b1ed3fb1ec71feb94281788a82600cad5fcc"
+  },
+  {
+   "id": 20,
+   "title": "Rejoint l'équipe avec Pionnier/Pionnière",
+   "text": "Montre-moi encore de quoi sont capables les pionniers.",
+   "unlockRequirement": "",
+   "cnUrl": "4571613c4a2177e02fa1339148c2e3c25668fc05a0de14986f486cf030511169",
+   "jpUrl": "2844fa4f9d232dbb843e6e362657bd39338dde0ddfdc5a32b9ffd65cb04981fa",
+   "enUrl": "5212bb1fdbfc6e283ce8a4ca04715254606e14d1e2b1ce0065720a12537044cd",
+   "krUrl": "44605d9d1d4b3fa3254cd3c3050d5aba2d37d3781992a0c35c559249e92b87e7"
+  },
+  {
+   "id": 21,
+   "title": "Rejoint l'équipe avec Micha",
+   "text": "Arrête de traîner, gamin. Tu ferais mieux d'aller te coucher tôt si tu veux grandir.",
+   "unlockRequirement": "",
+   "cnUrl": "ddd17a91be0559e73115919f68fd7f27b9dbea251c2cb78c8d401792c18d0284",
+   "jpUrl": "573d7cdbc815a715f8e3078f4112b9470af64245b617ad5e426eb149bfc7e2b7",
+   "enUrl": "5527d201d7fe5b8fbc3ffd1d2b83dee849294040aa72f1f7b2e97719651c3136",
+   "krUrl": "e343711f45694dc8460f8d6e3010a25bc2856881033a79ebc095c0edfc8e5973"
+  },
+  {
+   "id": 51,
+   "title": "Rupture de faiblesse en début de combat",
+   "text": "C'est tout ce que tu sais faire ?",
+   "unlockRequirement": "",
+   "cnUrl": "d499d8058215dbb5199493d3095a5f31e5de8416280eee6d1cc2164bed508fee",
+   "jpUrl": "22d3d949c1a9090b37cf88d5c3db7172a4cd2dffe61a08156d7bec980c3c7e74",
+   "enUrl": "915dcc83ce9f08907280ff420ebac8c2e0f21439bb433297ef6f3eada5555fc4",
+   "krUrl": "601db81c458e7c6863de9e9e76124b64b0c1a44925387813b746ad7622cae009"
+  },
+  {
+   "id": 52,
+   "title": "Avertissement de danger en début de combat",
+   "text": "Alors comme ça, on joue le tout pour le tout, hein ?",
+   "unlockRequirement": "",
+   "cnUrl": "dd98e4e7c70f90cba59251bd5f4ddf719ad4eb47f2609fd798d689fde6c993d8",
+   "jpUrl": "5475430715260f1de69285d6b8003e83bb1df13aad2920abf0aeee75c525a13e",
+   "enUrl": "a3847970c41ac84800ce46a1ce450f5608aae48e69fea4edcec1260acabcf228",
+   "krUrl": "45d81c8ff31769a967de9078d7c733238a76813fa4b5a53443184a3f8c5db427"
+  },
+  {
+   "id": 53,
+   "title": "Début du tour 1",
+   "text": "Alors ? Vous en voulez encore ?",
+   "unlockRequirement": "",
+   "cnUrl": "3481abab0feea95d56c73aded0a446dd202e59618d35e6c4c6bfce1f21be3084",
+   "jpUrl": "d55cc1859a68a3dc144c1e0a0d1985f890a6cb1f94f4483c71ee57e651e9e08d",
+   "enUrl": "b0da3c0ec82d2f2a823b438675b429fe0c50763226d97db539bc012574229d99",
+   "krUrl": "ada55c0679bc4592827fd4e450862661aa84a6a65112b6d9e5eddfb3405c8c2e"
+  },
+  {
+   "id": 54,
+   "title": "Début du tour 2",
+   "text": "Alors comme ça, on se montre ? Approchez-vous que je vous vois.",
+   "unlockRequirement": "",
+   "cnUrl": "b9e6d0a8ac42c2d0c2575d4564939af454695d3afad9faff3c6f4b342a240a21",
+   "jpUrl": "65dfc974c0bb03a2552b5abb53e1a95a7c6d63dc90e277960c16b97f953c87be",
+   "enUrl": "1836c60e0c5274d90ff0eb7d3ef4bc4a6cddb269e8f568fa5abcca919153c8fb",
+   "krUrl": "8c0930574baa71af649c89019c8285f71cceec6eec9ed3eff8bd2e50264071ca"
+  },
+  {
+   "id": 55,
+   "title": "Tour inactif",
+   "text": "Tu veux continuer ? Sinon, je vais me reposer un peu.",
+   "unlockRequirement": "",
+   "cnUrl": "c49b43d93e30b54ef98333380c3056cc9ca14c79ecbe57254ee7e34c491504fe",
+   "jpUrl": "b323e104551acfd794b09376eee07b766b90874e369f1bf91e7dea25c6d38d82",
+   "enUrl": "0f27daedc8f21c7ddba49dd54a0bdf3ddb9ab747c8da2c68ad371b6fc5991f47",
+   "krUrl": "8704f8954b4cc77695278bbcd4c03507588eb72d72655507037e0ba86c7bd60a"
+  },
+  {
+   "id": 56,
+   "title": "ATQ normale",
+   "text": "On va commencer avec toi.",
+   "unlockRequirement": "",
+   "cnUrl": "edc9bf5d88424adc11acf93af03ee4a619eb027ff8abdc787ff3b97f4acf7a03",
+   "jpUrl": "c4ee4ebf224d547eb5206207ec5ca491f295aa24d6ded213b937ee62e5a91432",
+   "enUrl": "e50d101d7d8d4de40a78b417673abc96cc16b5b0da343c890c9bdbd2d98db957",
+   "krUrl": "477166861b5a541f099be05ae189104546946c264e2d07237413920eead725c4"
+  },
+  {
+   "id": 57,
+   "title": "ATQ normale renforcée",
+   "text": "On n'en a pas encore terminé.",
+   "unlockRequirement": "",
+   "cnUrl": "ce88335b78d8882da57ac030baa4482deb235a78abdf8d6ebe74a59b1a9666bc",
+   "jpUrl": "84b7f6c38de6aeb234a4c8a0fef33932227f3861ccd0d424373a5f9b8d808061",
+   "enUrl": "8837c73c6c2f679922af2990d21f83512e7e758f4e751e0f2499e4da595999e9",
+   "krUrl": "09d570801c88f81cc10bf6c32a404a5e23e7943f9a42f39dfdcbd05d069b3c55"
+  },
+  {
+   "id": 58,
+   "title": "Compétence 1",
+   "text": "On va mélanger un peu les choses.",
+   "unlockRequirement": "",
+   "cnUrl": "9863a7fe70be4209c9a8baad9e18581ea43d79ea60044bfd1e410c717598a773",
+   "jpUrl": "95595633bd063b5405a76440231884c90116e0453db5ba4ee57e2f90ddec8f6d",
+   "enUrl": "1e813626070d3ce94ff58f701398a484498660b83cdabbe290a68daffeb189a8",
+   "krUrl": "c7a02eaa0c9db71ca00c3732e83d4ddd02a3b6fd71462c5d3a1362e2908e5a23"
+  },
+  {
+   "id": 59,
+   "title": "Compétence 2",
+   "text": "Goûtez-moi ça !",
+   "unlockRequirement": "",
+   "cnUrl": "244c20e3910239bad1ec0ffc07ed4de563edbad4291807b084e182147dc2bd2b",
+   "jpUrl": "59a63854a3fd455cca4cea8d7981990f045c6d562da1c7ebfd4bfdd97399bb5b",
+   "enUrl": "c85ba27a8c1030af8edbe278644f40cd54032cd1c3f835e048ce850d7a6cd24c",
+   "krUrl": "398a4cffb4f6f221b76d282132a7af00b15e6e6c38c7598b26bf604d1723d8c7"
+  },
+  {
+   "id": 60,
+   "title": "Attaque légère subie",
+   "text": "On ne manque pas de confiance à ce que je vois.",
+   "unlockRequirement": "",
+   "cnUrl": "fcf8a7f9c61c0e5b6c70e1041d690a325251d64ce964987507b2da5eaf0e28ea",
+   "jpUrl": "19b71596fc389368043c53c8a25f4415e1a54c492865755740a3403156b6a80f",
+   "enUrl": "d262eb7a0489f555b40dabe4bf88a2427f743b4f63194ec12d621d44af4bd0f4",
+   "krUrl": "214646be89b2b33edf9f992736497720f87816573be921876720ddcce1738936"
+  },
+  {
+   "id": 61,
+   "title": "Attaque lourde subie",
+   "text": "... C'est rien.",
+   "unlockRequirement": "",
+   "cnUrl": "7170d08dcb5465d08f482daad6ea9aae04c12150644c98c0646ceb4557ad08f7",
+   "jpUrl": "103d81c9ca8d9bc50111157c52389853ddc8d328afe1609e1afe25adb579c59b",
+   "enUrl": "bf08fae66b8dcb8b711d0307727f87d2e40bb61083c3c5ff70e29fb96ff33853",
+   "krUrl": "1e90ac578c803a8a5e6fe6840cf4d4617e0bda4fb2d67e9c4ae948caabd35427"
+  },
+  {
+   "id": 62,
+   "title": "Activation de l'ultime",
+   "text": "La vie c'est comme un bon cocktail, corsé et sucré.",
+   "unlockRequirement": "",
+   "cnUrl": "88a24b6df6cca07ca5528526a73f00af8d9d960ba407106ad74f651f0cf95fbf",
+   "jpUrl": "900ced0cdc54454171b5e21e1b3818800dfe8f47878d2b464b44036163a322df",
+   "enUrl": "0aa778c97d8f6e9bbdaa4fad00356e63bd338c4e3add8b198c18abadcbf05c65",
+   "krUrl": "7056bdb8c41248269ab80af09df51472df081350d4248af79be8a7d93cbcec2d"
+  },
+  {
+   "id": 63,
+   "title": "Déclenchement de l'ultime",
+   "text": "Servez-vous, les amis !",
+   "unlockRequirement": "",
+   "cnUrl": "0f918f2777fcae11538667e49eec40cc0045546e5746e139a81b1e61457eb8ae",
+   "jpUrl": "f7a9987bf81f6744e12d2038770387186ac04c4379a22f96325b0ce85a74c09d",
+   "enUrl": "67f0c60dfa8fc42c76a3efc527dbb7d5693837ea800ebea15c72b7fcf62a5e55",
+   "krUrl": "3a917d5d5bb947e7af54cfd9d82d2646d3c0937fdfb1a6527fcabf4c7c08c1df"
+  },
+  {
+   "id": 64,
+   "title": "À terre",
+   "text": "Si seulement je pouvais tout recommencer...",
+   "unlockRequirement": "",
+   "cnUrl": "acee257e69dcbe88d9cd55c5227362a422bc63c4d731e83fd03bb247135fea40",
+   "jpUrl": "315ae81a900014b419e1dd4d100a6922996002c3133fe7af211d77ce9d9ff76f",
+   "enUrl": "8aa0bb4c575e3951d0caecded5474f99d2cf9bdaf304f5fc144db0cbcb035290",
+   "krUrl": "9f00881dbb735f97c101ec77a1fea3e3554a0dfc4de8247925b79902ddfddef9"
+  },
+  {
+   "id": 65,
+   "title": "Retour au combat",
+   "text": "Ma mission n'est pas terminée...",
+   "unlockRequirement": "",
+   "cnUrl": "596064fb6d679b2d04021c1c0ca48a96fc076127ac20a7754448e148ed54ea5d",
+   "jpUrl": "df5e6496a4122116d45655b7afc16ebc33d60f6065e60c0f727c55c81cbd4e4b",
+   "enUrl": "d0bb6596b97819214fa553e21db580c0c6d2bccc68b73e5647f4ede0181a2eb1",
+   "krUrl": "f1c9f0da135663799a15f7dd9a7edc819d593ddb6604163084bd346ccc7db62b"
+  },
+  {
+   "id": 66,
+   "title": "Récupération de santé",
+   "text": "Merci, camarade.",
+   "unlockRequirement": "",
+   "cnUrl": "12b5f13b56b95f7704630c70c6da40e23e838c20fc3533ffcd104bc0cbeeaf01",
+   "jpUrl": "6a4d8a48078d764d3e0d121dd552dfc949627fbe4a2d874ac4e226c68c69521d",
+   "enUrl": "a138d3ec2c7e059ab84cb08388857922c03ee573520743a5d2e0254c3a2cd242",
+   "krUrl": "193af1adfbc6423dc48348937f05bd2590478314e9515b0c1c9bcfd78a8833a6"
+  },
+  {
+   "id": 67,
+   "title": "Technique",
+   "text": "Attention.",
+   "unlockRequirement": "",
+   "cnUrl": "da6a9ccd798ffa617362a99706e5e0d806fddc3333e98748f5646c4a55163818",
+   "jpUrl": "c52c172afa911fd5d0dc8c4adea370b9473db4bf14f15c7e31687b5f77f2b992",
+   "enUrl": "37c4cf9354ae25b089d1883a7d805024d799b56aad47fbebc71756bc44ba05e5",
+   "krUrl": "63a1ee803b84d7cba2c28a313476f7cd2524b033a7a41854bb564c02b0727cd4"
+  },
+  {
+   "id": 68,
+   "title": "Combat gagné",
+   "text": "Tout le monde tient le coup ?",
+   "unlockRequirement": "",
+   "cnUrl": "85a4ac625157a968206303cdd3d6c34e2835a77e7bc5312648d83795fcb2ccc3",
+   "jpUrl": "9dfa1a28c144f0f777512e124af07592770abe948e29c450ef94b24b14b08aa0",
+   "enUrl": "5149fb7e1bd2b7af9be3182ae3cb8e94adbdaf01f47edcea9b42bf449479bc03",
+   "krUrl": "287fbcadc6ac86645c6925709bf9f3bd15ad65cca14a2ec9b86b3d3bc40e8e62"
+  },
+  {
+   "id": 69,
+   "title": "Ouverture de coffre 1",
+   "text": "Ça me paraît pas mal.",
+   "unlockRequirement": "",
+   "cnUrl": "38585004636c42dcb83417b8e35c6bff299180b632caca26f7af4c5b53706ea0",
+   "jpUrl": "7d6cf53712c9290d3ef89da6f9ced4b5f15cd7680c21367b98f766e0e9b99fcb",
+   "enUrl": "469f42b02681df4753dd5fd1c4c5b293d829bdcce684bc2e114b3dca16e98751",
+   "krUrl": "a442bab1cdcabce6655bde29bee28f21e6614893afa53e8722cc7da19cf5f328"
+  },
+  {
+   "id": 70,
+   "title": "Ouverture de coffre 2",
+   "text": "Haha, c'est à moi maintenant.",
+   "unlockRequirement": "",
+   "cnUrl": "07f61d5b49baef6a5726418c07be041083a52fdfb6190bfc32c0132399adca0b",
+   "jpUrl": "5fbf8d8668b1c62dd7a521fef4ae408796390c4db3c323aa344789cfca9ba7a1",
+   "enUrl": "0f73d275b1873b6bfe7f483e10dc1718255fe44c89fab443907b19679b8688cf",
+   "krUrl": "1b5636fb760a241862fc2423256e8d25f2f09fdde96604b9011c6f22d64902cc"
+  },
+  {
+   "id": 71,
+   "title": "Ouverture de coffre précieux",
+   "text": "La vie... est tellement belle.",
+   "unlockRequirement": "",
+   "cnUrl": "43802a15c1395244d837cd4e5fd67bc453aed9c11d24bef5dc3de80b191309da",
+   "jpUrl": "2694d546ddf9d7581beea796b8f3fa4a98cdaf9cfb4182ed2a61d9b15b1d188b",
+   "enUrl": "f2c1c24bbfb5449c7187d0d51d07866a3e3501bbd36bff840deaa5c3ded66be0",
+   "krUrl": "d771869a4576b94097c249b0e056f11db26a9cf221e32d1f95d844525321383e"
+  },
+  {
+   "id": 72,
+   "title": "Énigme réussie 1",
+   "text": "La vie est pleine de mystères.",
+   "unlockRequirement": "",
+   "cnUrl": "93b2471629519d2f4a2a4c9850046dc8cccf5d5f7671dfff05e1f54649126769",
+   "jpUrl": "2861427a35a565cd812a062d2435372150fac05383f826bce15a46788b97a15c",
+   "enUrl": "3f9a1e453c6cd49dd6c0f1a1586180441075b28197f456c2fc0daa99fe380015",
+   "krUrl": "2205329e9dd9fb643bfa977529c1064b3cf483440fa84a4757e60af40dcef7f1"
+  },
+  {
+   "id": 73,
+   "title": "Énigme réussie 2",
+   "text": "Qui aurait cru que je serais aussi doué pour ça.",
+   "unlockRequirement": "",
+   "cnUrl": "2eb1ef2136670f422bc3fcd78698eb4dc613ffccb0d5c650f5edc7b05a54062e",
+   "jpUrl": "43ce2eaef552cd6538374a7cf9a15a03c71b52151cf083aec1c3c550130cb5b2",
+   "enUrl": "6f254b65ca71ddd37c8492131d129dab0e17491acb63eee5e6001f26e119c2c8",
+   "krUrl": "dfad06cb349e55d9ad241bb9b8b5866aae43228d9676300c37fe58ff1701a429"
+  },
+  {
+   "id": 74,
+   "title": "Cible ennemie trouvée",
+   "text": "Je vais ouvrir le bal.",
+   "unlockRequirement": "",
+   "cnUrl": "c9ce22b891924965d3db331d48f7c756a1466e1af57349b81d459342b0ed94da",
+   "jpUrl": "34bce4630294f5b8e7601f1202df5bedbd4ae661707982637cfde233a905f1c4",
+   "enUrl": "fed64f625837abae6b6e3d9e2f72423fef26c1ee2b758ef2710ab318db13f931",
+   "krUrl": "de6d29dad5d1890901da66cd8172f066f3d9554e393bb278d572ce4c91fc8c57"
+  },
+  {
+   "id": 75,
+   "title": "Retour en ville",
+   "text": "Si tu es fatigué/fatiguée, trouve un endroit pour te poser un moment.",
+   "unlockRequirement": "",
+   "cnUrl": "25f49920cbaaa50100a7821de4a8d8844f9ef8637c417b16713e32c54cdae55e",
+   "jpUrl": "9d8a6e7a8bf3b1d101949a55a70818c3eaabe222d26531a36b75756acc07a722",
+   "enUrl": "ccc5f25ef7d80f72b77597de19c0ad76178eb33f319e065257b7f39009bd39df",
+   "krUrl": "3289b1e1f1feb44ec4db80bab47ef6f2313bd4fe5c3b6bd14d8974ca4b178fef"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Détails du personnage",
+   "text": "Chef de la sécurité de la Maison Fin-Limier à Penacony. C'est également un barman décontracté et insouciant.<br />Il a beau être négligé dans son apparence et servir les clients avec désinvolture, il reste toujours courtois, tout en maintenant une certaine réserve.<br />Il semble avoir un passé troublé, mais n'entre jamais volontairement dans les détails.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Histoire du personnage : Partie I",
+   "text": "Des effluves de tabac, de sucrerie et de shampoing bon marché... L'odeur typique d'un célibataire d'âge moyen. Ses vêtements sont propres, mais toujours froissés, et sa tenue démontre un manque total de style. Il semble ne porter aucun intérêt à son apparence. Il n'a pas beaucoup d'amis et son passe-temps préféré après le travail est de siroter quelques verres de liqueur Douce nuit. Il s'assoit toujours à la même place, commande la même boisson auprès des mêmes serveurs... Il n'a pas changé sa routine depuis plus de dix ans.<br /><br />Pourtant, cet homme a remporté l'admiration et le respect de la Maison Fin-Limier, ce qui n'est certainement pas sans lien avec la longue cicatrice qui lui barre le visage. Dans un beau rêve dénué de toute mésaventure, cette affreuse balafre fait office de médaille pour un officier de sécurité, symbole d'ancienneté et de prestige.<br /><br />Quand une affaire se présente à lui, il commence par déballer un bonbon avant de le fourrer dans sa bouche. Après l'avoir consciencieusement mastiqué, il se plonge dans l'enquête, sourcils froncés, et passe en revue les indices jusqu'à tard, toujours au bar. Cependant, contrairement aux jeunes officiers, il semble ne plus prendre plaisir à arrêter les suspects. Lorsque son regard croise celui des prétendus criminels perdus dans le rêve, je n'y perçois aucune trace de satisfaction, seulement un immense vide et une grande mélancolie.<br /><br />En réalité, je le comprends. À ce stade de la vie, vous commencez à remettre en question l'existence que vous avez menée jusqu'à présent. J'ai vécu la même chose.<br /><br /><align=\"right\">— Notes d'un chef de la sécurité de la Maison Fin-Limier</align>",
+   "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie II",
+   "text": "Les gens ont besoin d'un coup de pouce pour entamer la conversation dans les rêves, et les cocktails sont les catalyseurs de ces réactions.<br /><br />J'examine les alentours et je repère rapidement un individu qui a l'air d'avoir l'habitude de jouer sur les deux tableaux.<br /><br />Il lance la conversation en évoquant le succès de la liqueur Douce nuit avant de poursuivre sur l'histoire des sirops et du Félicitâme, expliquant aux convives le lien entre le temps passé à agiter la boisson et sa saveur finale. Enfin, il évoque les degrés de correspondance entre l'arôme du cocktail et la personnalité du client, le secret de la juste combinaison des ingrédients... Les visages qui l'entourent se noient dans les ténèbres environnantes. Il écoute les murmures de joie ou de chagrin, sondant froidement le cœur des masses tandis que la fête se poursuit.<br /><br />Une fois tous les clients partis, il astique les verres en argent jusqu'à ce qu'ils étincellent, le regard toujours tourné vers la porte. Jour après jour, il attend quelqu'un qui ne reviendra jamais, il attend de cette personne le mensonge éternel qui mettra un terme à ce destin sans fin.<br /><br />Il marche seul dans les rues tandis que les lampadaires s'éteignent les uns après les autres. L'ombre qu'il projette derrière lui est immense.<br />Peut-être que moi aussi, j'emprunterai le même chemin tout tracé que lui.<br /><br /><align=\"right\">— Notes d'un barman des rêves</align>",
+   "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie III",
+   "text": "Le bonheur ne réside que dans les beaux rêves, c'est ce qui en fait son plus grand malheur.<br /><br />Ces individus désabusés redoutent par-dessus tout de finir chassés par la Famille. Ils errent tels des fantômes aux confins des rêves, masquant au mieux leurs émotions et évitant les souvenirs qui leur inspireraient des regrets. Ce n'est que lorsque ils boivent une gorgée de cocktail que leurs défenses tombent, comme s'ils voulaient dire tout ce qu'ils ont sur le cœur pour le reste de leur vie...<br /><br />« Si tous ceux qui me détestent se mettaient en rang, la file irait d'ici jusqu'à l'entrée de l'Hôtel Rêverie. En revanche, ceux qui peuvent me regarder dans les yeux... *soupir* Disons que ceux-là ne sont pas nombreux... »<br />« Tout le monde a un rêve. Quand j'avais ton âge, je voulais devenir un brigand galactique. C'est loin d'être le cas, comme tu peux le voir  ! »<br />« Rah, cette cravate est toute de travers. Enfin, tu n'as peut-être pas remarqué. À Penacony, personne ne se soucie de ce qu'on porte. Ils se fichent même de savoir si la personne avec qui ils parlent est réelle. »<br />...<br /><br />Ils disent le contraire de ce qu'ils pensent, ils ne diront jamais ce qu'ils ressentent vraiment... mais il n'y a que comme ça que leur histoire peut tenir debout... »<br /><br /><align=\"right\">— Mémoires d'un rêveur déchu</align>",
+   "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie IV",
+   "text": "Pendant les heures de travail, il se présente comme un agent de sécurité expérimenté et posé. Il n'est plus tout jeune, il est plus tolérant et a fait le deuil de ses ambitions et de ses aspirations quand il a vu ses rêves voler en éclats. Après sa journée, il se rend au bar où il a ses habitudes et passe la soirée à concocter des cocktails pour lui et ses amis de longue date. À mesure que les verres s'entrechoquent, les conversations fusent et pétillent comme de la mousse, avant de s'évaporer.<br /><br />Il se remémore son passé glorieux, quand même en captivité, il aspirait à la liberté. Ensemble, ils combattaient l'oppression, s'en remettant les uns aux autres. Ils étaient prêts à mourir pour libérer leur terre, et pourtant, ils agissaient comme si des lendemains radieux les attendaient. Cependant, ils n'étaient pas assez nombreux. Ses amis ont péri les uns après les autres, les idéaux se sont effondrés et le chaos et l'absurdité se sont imposés...<br /><br />« Vous avez vécu tout cela ? Vous... Vous plaisantez, n'est-ce pas ? » demande le client, interrompant ce sombre monologue.<br />« Bien sûr que je plaisante. Comment tout cela pourrait-il être vrai ? » Il sourit et reprend son travail.<br /><br />... Gallagher est mon mensonge le plus authentique. J'ai parfois du mal à faire la part des choses entre lui et moi.<br /><br /><align=\"right\">— Mémoires de Gallagher</align>",
+   "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
+  }
+ ],
+ "archive": {
+  "cvCn": "马语非",
+  "cvJp": "三上哲",
+  "cvKr": "박상훈",
+  "cvEn": "Erik Braa",
+  "camp": "Penacony"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Gallagher",
+ "rarity": 4,
+ "descHash": "Agent de la Maison Fin-Limier de Penacony. Il est toujours courtois avec les visiteurs, mais reste vigilant. Il semble porter le poids d'un lourd passé, mais il s'applique à ne pas jamais l'évoquer.",
+ "artPath": "d478212eceda00d9dc262c5f54902b368626c3faf35ca1934ed34d22c84d4663",
+ "miniIconPath": "a2638f3f1da2fbb43fc46719739143a403658b3b53704b9b23e505cb7292b0eb",
+ "damageType": {
+  "id": 2,
+  "iconPath": "bd8329d02d7ecfee2a1f565e89cf3bf7bf6aaa60bea29cec2b4f7192626a0311",
+  "color": "#F84F36",
+  "name": "Feu",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "81e58cfdc0c8a9a026c2c3111a6bdf663d572fa71524907b004fc5eb7f34fade",
+  "altIconPath": "c825fa86e9a217db6e704916b2d5aeb22c5733b2776a0ea16c558c29e6c5c92c",
+  "color": "#FFFFFF",
+  "name": "L'Abondance",
+  "rarity": 0
+ },
+ "pageId": "gallagher"
+}

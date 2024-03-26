@@ -5,6 +5,11 @@
  "figPath": "89db5f40a6707bc62797abd111620bc8ca82b855b1a853af0f5d9eb3f7533149",
  "fgPath": "6ee61be30dc8466156309daa6b43e36376547e0e52af548475d06d1e5157fe12",
  "splashIconPath": "c59e2e0719c6524fcdced06f3daa6df593dae95e6fedcbcbf9085b695b45ed60",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRugCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSF8BAAABkC1JtmlbNeexr23btm3b9n2ybdu2bdu2bWO7r78hIhLAGv4Yaw1/GyBpdELSAVgMYDBpBlT3g9J1eqxJT3zAEO2Moyz+GbIe1NkF61pnLYn1o7lGkjjDAS3OXDJTyQGFxqaFxA90aPTSaqeWUnJT97oNe7dYAPseeS4MH3v2MLNfFwI6TH2UqODMiRpDY8e9hqdH9GyRj2rP3rZIME36MPusfC+qTpM+ZunyTmtjeeWU5NFxjsmhLWel7YHLtHT3s2cubct2V/p2Wm4NIab7x8Ax53/cvuVxnHv15aNe9EockbL29x2Xni6feNWzpsYS+fQuO6Gjp96+vu7StbvXb1QofVE/fMoMvV9ry4D50vfPcxdLujcEQ+q5F31fzzzxfb58yqmna0sDMVJB2SP69tDpkK5OaRCAgeD8SYuceXXklOSV63QuLGATVJ+6Z/+x51dqV2hUyGL52/AfAwAAVlA4IGIBAABQBwCdASoUABQAPm0ylEekIqIhKAgAgA2JbACdMoR5mNRz5vM7AA/TPrQP2vJpj4sxsJvgmMXvgStO/+Jw23U9DhwAAPZg46zaPQaefFnjBgwkHrJmLMlxwuGUy9l8Yunw2XI6CutuNGY9aq+DHTSjU9xUpBOaFGvaNQ55u+JgMCa9tKfu7YjtxlHPBkIFP9kxbNSDM33iQRH8j3eunBC7AO9ocUJeLnTzY8H2H7Orl20RlaL38Xk3nEWgCW8mRJTS9fxQbRigom//8savCZWwZjUcAaXbv9eg7zssp+YJ/hbyTSoDJc6A2pcth5wP0yR70l25ttAd4MsMSG6lo9PbvUZUqhQnQGBrt5JSBrGz0PHCOujgY2VgbKMufHlnjNUSjhW1ykzA1m7/+gx85DIHlf/Yf/M/+k49DW9XFf8Hd/MVxQdRRI0brzQ7aW4Q62wRhxNVEIiR2+tcMKXCBYgAAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -47,7 +52,6 @@
    "rewardPath": "/material/67219",
    "comeFrom": [
     "Застойная тень: Коридор исчезающего эха",
-    "Застойная тень: Коридор исчезающего эха",
     "Универсальная машина для синтеза: Обмен материалов"
    ]
   },
@@ -66,6 +70,7 @@
     "Награды за очки Виртуальной вселенной",
     "Честь Безымянных",
     "Неугасаемый пепел",
+    "Неугасаемый звёздный свет",
     "Награды временного события"
    ]
   },
@@ -181,7 +186,7 @@
    "id": 635669,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "bb7670872389d870154ac70d1b29dee2d6c123f558951c6f914f1d9a70c28382",
+   "iconPath": "271b1f9a291c44b698190683f224996bae3b49e8e596c227b819b72c3a2b82dd",
    "name": "Обсидиан ужаса",
    "desc": "Фрагмент тёмной материи, захваченный из пустоты. Можно использовать для незначительного повышения уровня Следов персонажей <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Небытия</span>.",
    "lore": "Его сущность выяснить невозможно.<br />Осторожно прикоснитесь и услышите бормотание осколка.<br /><br />«████ ██ █ █»",
@@ -189,7 +194,6 @@
    "rarity": 2,
    "rewardPath": "/material/635669",
    "comeFrom": [
-    "Чашелист: Большая шахта",
     "Чашелист: Большая шахта",
     "Неугасаемый пепел",
     "Универсальная машина для синтеза: Обмен материалов"
@@ -226,7 +230,6 @@
    "rewardPath": "/material/836255",
    "comeFrom": [
     "Чашелист: Большая шахта",
-    "Чашелист: Большая шахта",
     "Универсальная машина для синтеза: Синтез материалов",
     "Универсальная машина для синтеза: Обмен материалов"
    ]
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
-    "Чашелист: Большая шахта",
     "Чашелист: Большая шахта",
     "Универсальная машина для синтеза: Синтез материалов",
     "Неугасаемый пепел",
@@ -439,7 +441,7 @@
   {
    "id": 1,
    "iconPath": "68605004543b98340748b5f35ab2e6065478fad20249ad065544c65601e1eadd",
-   "artPath": "692c6a9ffb20bd1fe6804c1d95b4d108147b6fc43eaf0db342b0cd60239290d5",
+   "artPath": "12238acc2fcb48448396be6cafde9e97985c855a07c057e2b4b35de1d62ecf2a",
    "name": "Отчёт о победе",
    "descHash": "Победа над противником восстанавливает <nobr>#1[i]</nobr> ед. энергии Пелы.",
    "params": [
@@ -481,7 +483,7 @@
   {
    "id": 5,
    "iconPath": "aa50fd5784b3d1800bdc6b04efdfda5b3aab3af131e9c3b0cdf63f02dbf1de49",
-   "artPath": "46e590d5ede5cb39e92ae5bd3496b0ef5ec22899f1a501bd57ff1093346b32da",
+   "artPath": "b453a336a2945796df8a7533ee792af2558f59d380e25ecd044eefec3ed27025",
    "name": "Абсолютный риск",
    "descHash": "Уровень сверхспособности повышается на 2, максимальный уровень - <nobr>15</nobr>. Уровень таланта повышается на 2, максимальный уровень - <nobr>15</nobr>.",
    "params": []
@@ -1602,18 +1604,22 @@
  "skillTreePoints": [
   {
    "id": 1106101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1106202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1106203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1106204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1739,18 +1745,22 @@
   },
   {
    "id": 1106102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1106205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1106206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1106207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1880,10 +1890,12 @@
   },
   {
    "id": 1106103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1106208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -1916,6 +1928,7 @@
     },
     {
      "id": 1106209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -1987,10 +2000,12 @@
   },
   {
    "id": 1106201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1106210,
+     "anchor": 18,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2676,7 +2691,7 @@
  "name": "Пела",
  "rarity": 4,
  "descHash": "Офицер разведки Среброгривых Стражей. Военные из Среброгривых Стражей почитают её за серьёзный нрав.",
- "artPath": "e73ed61e62851bdcb7b2594e1b06a3f48716b7f94b2526ac05e23fac122a5598",
+ "artPath": "af4fc36768b3b566542d8d0991ecd96dbd629a17060f2a74eff6037b386820b3",
  "miniIconPath": "098a32116ac022cbfa92aadca12166ff2124d49707b4e208abb18c13a2e4aaf5",
  "damageType": {
   "id": 4,

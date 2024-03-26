@@ -2,9 +2,14 @@
  "spRequirement": 140,
  "iconPath": "0063c1e41293ebf22000b5099c0824ad41a8b371fdadeb2bf819e939bc93dd81",
  "bgPath": "0be5e6455724ff2c76190a47f7f46fe60f1445c744d6b25038cd4a2f5e5bc2dd",
- "figPath": "76de921d5cb178f3e18cc793bb75e77c1d82c491b2b8a55eab76a1ace5fc111c",
+ "figPath": "53bbbae8a5d5ef1d72547feaeb96b7314ca01fdff878ebc07502bc5c69167fcb",
  "fgPath": "b0638ac463e35834764f83a66186cc51e45ea9afcbcdcea040b958acb5c61eeb",
  "splashIconPath": "5385996ae4e46fb5f82ec4a7bf675a140fdd3621b5ebf4da3737b9ccb1569484",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRtoCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSBEBAAABkKvt//kvr8/ftv3P1uqavNYB9N/S1KbJrgNo6uoAtNu27cn+fj6vJ3z/HUNETIAGD6pcpKpS/WcIBdKincX7agcLklS98e2T2welgpwgdU9tXvz2B7xc06IgBalOvQs3PiKlX6xeMUFBKhty4NSLVx9ihhN7BvYrFM+48YF8k3ix9OhI1d6CFFOyjc3ngSMrVP+OaIyNTeLz3QlqvmwbGwwm435Z0NyEDTbGTrydJC0hGhsbcOJdnzTlB1nC5h8i5yXNvAqYfEeOB0ktm848Itn/kPjYrtxlRNvYNhslKRSq8RE/s8wmRW9SkKSgMa8A4i+ITFNe1YnDu7f8gPcbbu7typGKqyXNWbV+WNVcKQAAVlA4IKIBAACQCQCdASoUABQAPm0ukUakIqGhKA1QgA2JbACdMoR5n7Nwg+QG2A55bTAOe09iP9xf2A9p2lTHjtmD9ePYD/UfdMwqfbsbxZt8jdqlR8n1BMKRmDyYAPysVMPh+mT782tZyP+txp4jKHFKU6s7LVXZl/UmJrPU7zLGN/ud1Qx0+Y4Dyo4PflG9l2AjixQh5HfwMzG+SIyRdVjFe65pyXGlGyfOUX5P2ctz3BtsMGDwhpYRnP1lqr3ILgEiEbsQalXeU06GH7V9WXj4nQTgJbYgfW5xwaTsRIpIOy9hoJxMaq7dkUmZkiFanR1bFn9iVPjfXocviLXARKKd9U/tc8sS4L/+4fJYaSHVGkgqwpaBOhdMMntNZJZnj0Nyqd4o+xGw5TIFEqSdSzn9kI+nCooCyqs9I0+Y7P79a2sRpWPA8ZVzF73f5JsBDDP6Sdbz4Os7f4N9n//M07dlyLbcnTcMv8oCEkz9SiZZUU4f5/7vYoul8LdIBU/hLUSIsAwM2pq4Y+Tff9VACsxScmo+v+/yDbYnABxayHuwneUNuPWSWIAA",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -47,7 +52,6 @@
    "rewardPath": "/material/67220",
    "comeFrom": [
     "Застойная тень: Облачная переправа",
-    "Застойная тень: Облачная переправа",
     "Универсальная машина для синтеза: Обмен материалов"
    ]
   },
@@ -66,6 +70,7 @@
     "Награды за очки Виртуальной вселенной",
     "Честь Безымянных",
     "Неугасаемый пепел",
+    "Неугасаемый звёздный свет",
     "Награды временного события"
    ]
   },
@@ -190,7 +195,6 @@
    "rewardPath": "/material/635674",
    "comeFrom": [
     "Чашелист: Пригородные снежные поля",
-    "Чашелист: Пригородные снежные поля",
     "Неугасаемый пепел",
     "Универсальная машина для синтеза: Обмен материалов"
    ]
@@ -226,7 +230,6 @@
    "rewardPath": "/material/836260",
    "comeFrom": [
     "Чашелист: Пригородные снежные поля",
-    "Чашелист: Пригородные снежные поля",
     "Универсальная машина для синтеза: Синтез материалов",
     "Универсальная машина для синтеза: Обмен материалов"
    ]
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920201",
    "comeFrom": [
-    "Чашелист: Пригородные снежные поля",
     "Чашелист: Пригородные снежные поля",
     "Универсальная машина для синтеза: Синтез материалов",
     "Неугасаемый пепел",
@@ -449,7 +451,7 @@
   {
    "id": 2,
    "iconPath": "681721a4022c30db9366aabd02693a4cedd5d56b645e61a8b124b8cd2d78ee8d",
-   "artPath": "d7894245784c94cda1047e4a50e050a283665de78239a391ce3012729145df8b",
+   "artPath": "ff8ed1343261ae1678f617ce5664bcf5a5be62312bdd53acf6a6d81bd27739e1",
    "name": "Ясное сознание",
    "descHash": "Когда активна Эмпатическая связь, скорость восстановления энергии повышается на <nobr>#1[i]%</nobr>.",
    "params": [
@@ -1653,14 +1655,17 @@
  "skillTreePoints": [
   {
    "id": 1209101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1209202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1209203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1757,14 +1762,17 @@
   },
   {
    "id": 1209102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1209205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1209206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1865,14 +1873,17 @@
   },
   {
    "id": 1209103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1209208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1209209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1905,6 +1916,7 @@
       },
       {
        "id": 1209210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2006,6 +2018,7 @@
   },
   {
    "id": 1209201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2034,6 +2047,7 @@
   },
   {
    "id": 1209204,
+   "anchor": 12,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2066,6 +2080,7 @@
   },
   {
    "id": 1209207,
+   "anchor": 15,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2786,7 +2801,7 @@
  "name": "Яньцин",
  "rarity": 5,
  "descHash": "Подручный генерала Цзин Юаня. Одарённый фехтовальщик, который ещё очень юн. Никто не может превзойти Яньцина, когда он держит меч в руке.",
- "artPath": "87a167bc36b9137d33292c052f45da99e6d3542e52d429333f862b31081ed782",
+ "artPath": "b659b322647073771c900434c7e1f1417b8702e184c535f166ab9ed5ddf3245c",
  "miniIconPath": "9b5157d386417cf7351aa08c175c994b4ff4f1fdc4974a7efff9e385016b1c96",
  "damageType": {
   "id": 4,

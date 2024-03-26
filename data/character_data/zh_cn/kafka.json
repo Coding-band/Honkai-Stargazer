@@ -2,9 +2,14 @@
  "spRequirement": 120,
  "iconPath": "ee794f57f01e4db9a6cbcd754a79d06c55884da5aaeb99cf01eb5e68ef971fd9",
  "bgPath": "864f837899e9248a5865f6147a4677102c6ca356c851fdd940673cd7b34bd647",
- "figPath": "cf30b038cd1c866d1680c1e6c5da78695f3b6381f4f0f972b1ed2645dbf0ba0e",
- "fgPath": "da74e4e5b5127c8a5d1d5f60272f0832ab90ffce68baa4c54f2f8e48db1855fe",
+ "figPath": "b554206f0939d0fb54152bad65f6ff9c87be33f4a7237b49dafcade4b6b6a6f7",
+ "fgPath": "fcd04d383f61e6cf0aaa8fd1b6880c2b2b6f4de08b7b2dff318b5fd9d6a396dc",
  "splashIconPath": "d865c2226e88755c525fb64665fbf95823000e8a34b563c4bf0009b697e34980",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRkoCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAEBAAABkLpt2/m/4u/n/fk3285OS66LS2tWRbJtZNuL3uKivTXb/Hze+/o5IiZALYZaTqHWk/qvPTK//aCOUmoWlalC3b8C736/3NNFIalSzZdcogSYr2opVL/6/M25msy/XHKivVQRGv4UYOtivmMvmj5rnKT9/CkK+z+YDLBKuk42BhvjoswsVI+juDm2sf2fgzFmwzeMscE2f7ncbsFnMsZgjDNvxnbSNLIzNhjbl4cpaRzZNtjYBStUJaXT/LeNm/N5ikIhXeRfiY3zPx52VUhJNbegLHJRwu0+CklKqt9+8D7Ax309VaEWQ9LkIy8OTe0pJbUaKaRqSSnU5oqkqAi1CABWUDggIgEAABAHAJ0BKhQAFAA+bTKVR6QioiEoCACADYlAF2QVaTbsf+qAOeB7j9Tlze/pPkgBiuL0x+XQ99O87haPYvro6YqIAP7RfBg/U8NrCu2X3sR9xJCzc4FtGt/W9HyCB5g245nx+57RYEi5usVd/R9dbSV+qheE9ax4ZH+mu5h7hdIDTjR4I/LHoj+u/nkhCX3c85/nrayOhns3XTF0ERp9ALRyhuScgtaObOEERTHvfm1jOYaUzTyl6hgK++WjzDvGb0xL9IbNxaztJR3IeFSu92kZWoQL25ytqKVXyFtxgPOsEe+6toVotJYlacPOFeLosqWqhzyaEnVAAiODmbFxpMFKjVdW3088bkz2I/4Mgsvff8IJQ2Ty9C9XDoC1fWG5E0AA",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "「模拟宇宙」积分奖励",
     "无名勋礼",
     "余烬兑换",
+    "星芒兑换",
     "限时活动奖励"
    ]
   },
@@ -64,7 +70,6 @@
    "rarity": 4,
    "rewardPath": "/material/151161",
    "comeFrom": [
-    "凝滞虚影【迴星港】",
     "凝滞虚影【迴星港】",
     "「万能合成机」- 材料置换"
    ]
@@ -181,7 +186,7 @@
    "id": 635669,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "bb7670872389d870154ac70d1b29dee2d6c123f558951c6f914f1d9a70c28382",
+   "iconPath": "271b1f9a291c44b698190683f224996bae3b49e8e596c227b819b72c3a2b82dd",
    "name": "黯淡黑曜",
    "desc": "一片自虚空中捕获的黑质。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚无</span>角色的命途行迹。",
    "lore": "任何手段都无法验明它的本体。<br />轻轻触碰，从碎片中传来不明的呓语。<br /><br />「████ ██ █ █」",
@@ -189,7 +194,6 @@
    "rarity": 2,
    "rewardPath": "/material/635669",
    "comeFrom": [
-    "拟造花萼【大矿区】",
     "拟造花萼【大矿区】",
     "余烬兑换",
     "「万能合成机」- 材料置换"
@@ -226,7 +230,6 @@
    "rewardPath": "/material/836255",
    "comeFrom": [
     "拟造花萼【大矿区】",
-    "拟造花萼【大矿区】",
     "「万能合成机」- 材料合成",
     "「万能合成机」- 材料置换"
    ]
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
-    "拟造花萼【大矿区】",
     "拟造花萼【大矿区】",
     "「万能合成机」- 材料合成",
     "余烬兑换",
@@ -460,7 +462,7 @@
   },
   {
    "id": 3,
-   "iconPath": "e76c2c6f2b43f9188ec40f1221d155d1b083e208abdf829e0977beca3796d4f4",
+   "iconPath": "d287417359a015ddcbfe079f01ca08d2079f3474281c4f23b5015ddd182fa95c",
    "artPath": "ca058387ee280b323835272dc5b5afbf117c16a58dd459374d121cafa9ee8fb1",
    "name": "我赞美，即兴",
    "descHash": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
@@ -479,7 +481,7 @@
   {
    "id": 5,
    "iconPath": "34264dbb27ef393a51840990abde24e31272003aaafe3adaba46159e3e02a6c4",
-   "artPath": "dc8b360ca87223d09fed5b5179a76e9b3538c9833d9a194e483bcb86e908ba34",
+   "artPath": "a69013ce26e3b4ba26afec1773b370e31018fea4bc07f802d04d24b3269d8933",
    "name": "只有今晚奏鸣",
    "descHash": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
    "params": []
@@ -683,7 +685,7 @@
    "energy": "30",
    "id": 874958,
    "name": "月光摩挲连绵",
-   "iconPath": "e76c2c6f2b43f9188ec40f1221d155d1b083e208abdf829e0977beca3796d4f4",
+   "iconPath": "d287417359a015ddcbfe079f01ca08d2079f3474281c4f23b5015ddd182fa95c",
    "typeDescHash": "战技",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1672,18 +1674,22 @@
  "skillTreePoints": [
   {
    "id": 1005101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1005202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1005203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1005204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1807,18 +1813,22 @@
   },
   {
    "id": 1005102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1005205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1005206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1005207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1948,10 +1958,12 @@
   },
   {
    "id": 1005103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1005208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -1984,6 +1996,7 @@
     },
     {
      "id": 1005209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2055,10 +2068,12 @@
   },
   {
    "id": 1005201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1005210,
+     "anchor": 18,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2724,7 +2739,7 @@
  "name": "卡芙卡",
  "rarity": 5,
  "descHash": "「星核猎手」的成员，潇洒从容的职业装丽人。 利用言灵术，设计令开拓者吸收星核。 爱好是购买及整理大衣。",
- "artPath": "46ef898f976e66cdf8e6e04b5950171e155e368ca58a119c194e44e146fd1752",
+ "artPath": "f1462b576eecef074ec6c2897af8d44c5a674cc855d4f6a0fcf2f7dacb99a0a6",
  "miniIconPath": "075f07546de6a4c1d3169c999fd5a6cbd99dfc8d36edd1ba49d12d45dfb872a5",
  "damageType": {
   "id": 8,

@@ -5,6 +5,11 @@
  "figPath": "8095125b1386302ee5cc69330519ceaa2633a4ee258af08a7b81dc358184f434",
  "fgPath": "059cdf4ec1eab9c4a8825c49f4b58d40771de7a63af005c59e1b3df04f51f40b",
  "splashIconPath": "6822455c0a99b390bc06cf51b668e540037871a57795dba58518d99689e71425",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRloCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSPQAAAABkKNt27FH9xPbbK3WqrUD2066jNVnEVPaxgJc2ijtmfe578GPLUTEBCCqJZghZjNDvAYAKXmtjZ0VFsWQVJ458/iRPm8PZMASDACSNr+9l+Q6iIgGFE5+lBjc9W6kAFlN3TDskTspyqUvp17oSDa67skpSZS7JIVZjEoUSYoig7s+VmNLzogiSdE1iJ6fIin9J9J1swH9YkRRohh0OBW4qUBKlEhSb3/PJ6Bb7iRFigw6XgMA5xV+OyO6/1qGwZB7XfLfIYRfv6ljSACQgJTubUX+caUMBgAGYPz4jft3Dq02AIbIiQYg0QDAEGOiAUhMNPwPVlA4IEABAACQBgCdASoUABQAPm0wk0ckIqGhKAqogA2JaACdMoR10sxxSWmzbyqSpzxnDfWY6J5ABQhk/IHcmOd30+PgAP0k8uni8YJFTIWLiaTqwMdwRf7VI3penc1rwIaN4kbnSCwg3it2OsigAkKkwJimGF/unOKGNYsja+RqzU/njd31F/ntEfr9PZQTRq2OtAyGKDdKEnKcfWKswx0LBFhr9qU25J8d7G8jq5BWNYqNLU6VrBt6iaaOnQ9k9xRKd45rMWNz5grT9cACzaF4hFBKCcc7TzQOYkJXiQs22KfGRzZjGfVfcBY6CgXH+T37rcLFZ4HJCCYRwbrtKSeaHFoXStYh8PY8Iy8a3UCIj/P/Md0L1qm1YMShKstnK+daDIZcP0zyCXuwWIE0+PQ9UXnYd4kDjBYhwfyXxv+Ro2lrtFYAAA==",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Hadiah Poin \"Simulated Universe\"",
     "Kehormatan Tanpa Nama",
     "Penukaran Ember",
+    "Penukaran Starlight",
     "Hadiah Event Waktu Terbatas"
    ]
   },
@@ -135,7 +141,6 @@
    "rewardPath": "/material/468391",
    "comeFrom": [
     "Stagnant Shadow \"Backwater Pass\"",
-    "Stagnant Shadow \"Backwater Pass\"",
     "\"Omni-Synthesizer\" - Pertukaran Material"
    ]
   },
@@ -190,7 +195,6 @@
    "rewardPath": "/material/635671",
    "comeFrom": [
     "Calyx \"Backwater Pass\"",
-    "Calyx \"Backwater Pass\"",
     "Penukaran Ember",
     "\"Omni-Synthesizer\" - Pertukaran Material"
    ]
@@ -226,7 +230,6 @@
    "rewardPath": "/material/836257",
    "comeFrom": [
     "Calyx \"Backwater Pass\"",
-    "Calyx \"Backwater Pass\"",
     "\"Omni-Synthesizer\" - Synthesis Material",
     "\"Omni-Synthesizer\" - Pertukaran Material"
    ]
@@ -235,7 +238,7 @@
    "id": 920198,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "ed9df14a2fe247f4667c3573aa6eb1f367c5435d4c699eadef89c51e4d42d084",
+   "iconPath": "365bf3a80928eea605cbefd72636c62eb0c1887b4652520c3e9c3f99a55f0cb9",
    "name": "Sprout of Life",
    "desc": "Tunas muda yang muncul dari Seed of Abundance. Dapat meningkatkan level Trace milik karakter <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abundance</span> dalam jumlah sedang.",
    "lore": "Kehangatan yang memancar keluar, kehidupan dan pertumbuhan yang tumbuh subur di sekitar tempat dia berakar. Lahan tandus berubah menjadi padang rumput yang subur, tumbuh-tumbuhan yang mati menumbuhkan bunga umur panjang lagi, dan mata air yang jernih menyembur keluar dari dalam tanah untuk melembabkan tanah.<br />Saat kamu semakin dekat dengannya, otot dan tulangmu berkedut dan menyebar dengan rasa menggeliat yang tidak tertahankan.<br /><br />\"Hidup tidak pernah gagal di tempat jiwa berkelimpahan.\"",
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920198",
    "comeFrom": [
-    "Calyx \"Backwater Pass\"",
     "Calyx \"Backwater Pass\"",
     "\"Omni-Synthesizer\" - Synthesis Material",
     "Penukaran Ember",
@@ -449,7 +451,7 @@
   {
    "id": 2,
    "iconPath": "471567f145711957f3278d6cb5e737231f9b34716a31d0410618d655ff78570c",
-   "artPath": "593e496141eb2a513f0ac091b9fd8db46bde0d0cd2c04ef875ea52843148a2de",
+   "artPath": "19ce981225c04a0ca629b8fbc36c8db0407067420492167fb4cd0a3bcaf84a04",
    "name": "Bestowal From the Pure",
    "descHash": "Saat memicu efek Skill, jika persentase HP rekan tim yang ditargetkan kurang dari <nobr>50%</nobr>, maka pemulihan yang diberikan Luocha akan meningkat <nobr>#1[i]%</nobr>. Jika persentase HP rekan tim yang ditargetkan lebih dari atau sama dengan <nobr>50%</nobr>, maka Luocha akan memberikan Shield yang menahan DMG sebesar <nobr>#2[i]%</nobr> ATK Luocha +<nobr>#3[i]</nobr> selama <nobr>#4[i]</nobr> giliran.",
    "params": [
@@ -488,7 +490,7 @@
   {
    "id": 6,
    "iconPath": "0d80e385e207c140efabf788c696329cf7377002358d3e3994bf7822a8decc0b",
-   "artPath": "d2b11e65833bd329b587760d179af0a2211b2164d40ef90db836485e76fc2952",
+   "artPath": "960a1aba0737e6d5e210ebceba29d8ea47acf31947adbd98d89053a7433d53e1",
    "name": "Reunion With the Dust",
    "descHash": "Saat melancarkan Ultimate, ada <nobr>#1[i]%</nobr> peluang tetap untuk mengurangi <nobr>#2[i]%</nobr> RES seluruh tipe seluruh musuh selama <nobr>#3[i]</nobr> giliran.",
    "params": [
@@ -1655,18 +1657,22 @@
  "skillTreePoints": [
   {
    "id": 1203101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1203202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1203203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1203204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1792,6 +1798,7 @@
   },
   {
    "id": 1203201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -1820,6 +1827,7 @@
   },
   {
    "id": 1203210,
+   "anchor": 18,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -1852,18 +1860,22 @@
   },
   {
    "id": 1203102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1203205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1203206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1203207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1994,10 +2006,12 @@
   },
   {
    "id": 1203103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1203208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2030,6 +2044,7 @@
     },
     {
      "id": 1203209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2635,7 +2650,7 @@
  "storyItems": [
   {
    "title": "Detail Karakter",
-   "text": "Seorang pemuda tampan berambut pirang membawa peti mati besar.<br />Sebagai seorang pedagang dari luar angkasa, dia tidak beruntung dan terlibat dalam krisis Stellaron di Xianzhou \"Luofu\".<br />Dan itulah penyebab dia menyadari kalau keterampilan medisnya yang hebat akan sangat berguna.",
+   "text": "Pemuda tampan berambut pirang yang membawa peti mati raksasa di punggungnya.<br />Sebagai seorang pedagang luar angkasa, dia tidak beruntung dan terjebak dalam krisis Stellaron Xianzhou \"Luofu\".<br />Tanpa diduga, keahliannya dalam ilmu medis menjadi sangat berguna dalam pertempuran.",
    "unlockRequirement": ""
   },
   {

@@ -5,6 +5,11 @@
  "figPath": "8edb308439fd6545b630899981d7d833a82efc9c241d5a62215b7c6f2c43bb76",
  "fgPath": "",
  "splashIconPath": "8235c510c01b722b5ced0f0ece69b8f597028c031a888fb79177692456aa68f2",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRl4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAEBAAABkGtr27E59/ONbdtuZ01tu4ptp046q05l2+l8Blkpbdt63/sezylExAQAQEiAqRsQaoEZALMJ0NuzKQwTmgEw1D/+dHdaY1YKEJWaCARAgLq/+uf0+u3tm49e3z9RASAEq+QkasLn0wJDxGVHkt47573/Ly1A+dKHIiWRIqm/2tPwRBRFjSXJ/zoUflWOosaSEqkNUZ/kSHGMROrf8XjslrzzIknR//+4MQ5I2vVdkhcpUrq3oihA/N45zUceyVMUn52ZkWkAqhOA9fpP90978zDJnDv6+08aWNCK0HEsBP2/JV3bPtQOw4SGzPNHd+ahumEyMIwNAQyTNViIwQzjAgBWUDggNgEAADAHAJ0BKhQAFAA+bTKVR6QioiEoCACADYlqAJ0zJf9pB3xAPXVsjoiDvJM6owbtofaR3hXH2aoRdGCNaR9U/5+CgAD+9DLbvRnEYp+Qfj6a6cdpnJWurfuP+p6BAjiSRJ+1Ida3M/VahgqaUAB8EzS0ywVuafU8mmXo8duSnrWXMASkxeb8fwZVxiQ5OWgNq929bIxULsklVvLFYX1kk/aTnQmKLksDOwDDdfDtcC+TiRPdN032wuzluUATJTDEv3HMendYCFxMCKc52BoN967q7DeZ0U+RaXyCcHv9+f+MkhpU/v1c5WvMxeDL5sj4QCDK2yGhfguPB4/6DN9skb4c8A5JkQY7Hu9jJl1dseImDofKh8Aj/4Hv/TFq+OOnrD8zZyaH6WnkGKZkEVA46eUEDbmoAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "「模擬宇宙」ポイント報酬",
     "ナナシの勲功",
     "エンバー交換",
+    "星芒交換",
     "期間限定イベント報酬"
    ]
   },
@@ -172,7 +178,6 @@
    "rewardPath": "/material/589818",
    "comeFrom": [
     "疑似花萼「丹鼎司」",
-    "疑似花萼「丹鼎司」",
     "「万能合成マシン」- 素材合成",
     "エンバー交換",
     "「万能合成マシン」- 素材交換"
@@ -209,7 +214,6 @@
    "rewardPath": "/material/673759",
    "comeFrom": [
     "疑似花萼「丹鼎司」",
-    "疑似花萼「丹鼎司」",
     "「万能合成マシン」- 素材合成",
     "「万能合成マシン」- 素材交換"
    ]
@@ -244,7 +248,6 @@
    "rarity": 2,
    "rewardPath": "/material/874345",
    "comeFrom": [
-    "疑似花萼「丹鼎司」",
     "疑似花萼「丹鼎司」",
     "エンバー交換",
     "「万能合成マシン」- 素材交換"
@@ -449,7 +452,7 @@
   {
    "id": 2,
    "iconPath": "420d033f134db663da7f64e6e3b12017f97b9228fe03a35566b5cad859ae4784",
-   "artPath": "760de1f0c7cd413cda516e16ae5fc6fd57ab962aeed91a22bc1759229eeee97c",
+   "artPath": "7d751acb21fa87b9e3239065a6cc46cf3587d92671e3c23113b1a4eeb6100904",
    "name": "子羊よ、<br />私のために泣くなかれ",
    "descHash": "「アルカナ」状態の敵が倒された時、<nobr>#1[i]%</nobr>の基礎確率で隣接する敵に「アルカナ」を<nobr>#2[i]</nobr>層付与する。",
    "params": [
@@ -470,7 +473,7 @@
    "iconPath": "ab35f129f930b7e0d7dc02b53f09ca63272056d8eca7dc09f55e248695dec404",
    "artPath": "71d0beda48cd4198ed9d3880275cbef849c999019d5e88bcb355ecc6faacebaf",
    "name": "涙もまた贈り物",
-   "descHash": "「開示」状態の敵の効果抵抗-<nobr>#1[i]%</nobr>。「開示」状態の敵のターンが回ってきた時、または倒された時、ブラックスワンのEPを<nobr>#2[i]</nobr>回復する。EP回復効果は「開示」の効果時間内に1回まで発動できる。再度「開示」を付与すると、発動可能回数がリセットされる。",
+   "descHash": "「開示」状態の敵の効果抵抗-<nobr>#1[i]%</nobr>。「開示」状態の敵のターンが回ってきた時、または倒された時、ブラックスワンのEPを<nobr>#2[i]</nobr>回復する。EP回復効果は「開示」状態の継続時間内に1回まで発動できる。再度「開示」状態を付与すると、発動可能回数がリセットされる。",
    "params": [
     0.1,
     8
@@ -479,7 +482,7 @@
   {
    "id": 5,
    "iconPath": "1f77c680c96f816c05e772ac266cc78a08c5a98ffaba8f5419185cdba1a6ea67",
-   "artPath": "4438d2fa65de7ddc2118afb93b5333900befecd2f95f310f06c00000077fd8cc",
+   "artPath": "46f20e4ec519bee5dfda5fa0ebb507279603181ea6ddb949723de32c0abf65e8",
    "name": "渡り鳥の道",
    "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
@@ -696,7 +699,7 @@
   },
   {
    "tagHash": "拡散攻撃",
-   "descHash": "指定した敵単体および隣接する敵にブラックスワンの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与え、<nobr>#2[i]%</nobr>の<u>基礎確率</u>でターゲットおよび隣接する敵に「<u>アルカナ</u>」を1層付与する。さらに、<nobr>#3[i]%</nobr>の<u>基礎確率</u>でターゲットおよび隣接する敵の防御力-<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span>、<nobr>#5[i]</nobr>ターン継続。",
+   "descHash": "指定した敵単体、および隣接する敵にブラックスワンの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与え、<nobr>#2[i]%</nobr>の<u>基礎確率</u>でターゲット、および隣接する敵に「<u>アルカナ</u>」を1層付与する。さらに、<nobr>#3[i]%</nobr>の<u>基礎確率</u>でターゲット、および隣接する敵の防御力-<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span>、<nobr>#5[i]</nobr>ターン継続。",
    "ultimateCost": 0,
    "break": "60 + 30/adjacent",
    "energy": "30",
@@ -1031,7 +1034,7 @@
   },
   {
    "tagHash": "全体攻撃",
-   "descHash": "敵全体に「開示」を付与する、<nobr>#2[i]</nobr>ターン継続。<br />「開示」状態の敵は、自身のターンの被ダメージ+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>。また同時に「<u>アルカナ</u>」状態にある場合、<span style=\"color:#00FF9C;\">風</span>化、裂創、燃焼、感電をすべて付与されていると見なされ、「<u>アルカナ</u>」がターン開始時にダメージを発生した後、層数がリセットされなくなる。「<u>アルカナ</u>」の層数をリセットしない効果は、「開示」の効果時間内に<nobr>#4[i]</nobr>回まで発動できる。再度「開示」を付与すると、発動可能回数がリセットされる。<br />敵全体にブラックスワンの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与える。",
+   "descHash": "敵全体に「開示」状態を付与する、<nobr>#2[i]</nobr>ターン継続。<br />「開示」状態の敵は、自身のターンの被ダメージ+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>。また同時に「<u>アルカナ</u>」状態にある場合、<span style=\"color:#00FF9C;\">風</span>化、裂創、燃焼、感電をすべて付与されていると見なされ、「<u>アルカナ</u>」がターン開始時にダメージを発生した後、層数がリセットされなくなる。「<u>アルカナ</u>」の層数をリセットしない効果は、「開示」状態の継続時間内に<nobr>#4[i]</nobr>回まで発動できる。再度「開示」状態を付与すると、発動可能回数がリセットされる。<br />敵全体にブラックスワンの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#00FF9C;\">風</span>属性ダメージを与える。",
    "ultimateCost": 120,
    "break": "60/hit",
    "energy": "5",
@@ -1780,18 +1783,22 @@
  "skillTreePoints": [
   {
    "id": 1307101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1307202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1307203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1307204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1917,18 +1924,22 @@
   },
   {
    "id": 1307102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1307205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1307206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1307207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2019,7 +2030,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "戦闘に入る時、<nobr>#1[i]%</nobr>の基礎確率で敵に「アルカナ」を1層付与する。敵が味方単体の攻撃中に持続ダメージを1回受けるたびに、<nobr>#1[i]%</nobr>の基礎確率で「アルカナ」が1層付与される。1回の攻撃で最大で<nobr>#2[i]</nobr>層付与される。",
+    "descHash": "戦闘に入る時、<nobr>#1[i]%</nobr>の基礎確率で敵に「アルカナ」を1層付与する。<br />敵が味方単体の攻撃中に持続ダメージを1回受けるたびに、<nobr>#1[i]%</nobr>の基礎確率で「アルカナ」が1層付与される。1回の攻撃で最大で<nobr>#2[i]</nobr>層付与される。",
     "ultimateCost": 0,
     "id": 88348,
     "name": "チャリスの底の顛末",
@@ -2059,10 +2070,12 @@
   },
   {
    "id": 1307103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1307208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2095,6 +2108,7 @@
     },
     {
      "id": 1307209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2167,10 +2181,12 @@
   },
   {
    "id": 1307201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1307210,
+     "anchor": 18,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2296,7 +2312,7 @@
    "cnUrl": "099018899c5cef21798928257c01965bdb7cc2eee6e4d4712e476565c098986a",
    "jpUrl": "7d6424425033075a351237945dd00b426dcb96a2780200fb12b43c872b4855ea",
    "enUrl": "526732b4086ef1ac3b6245f129881e7a55b97d84f15ef984ab481fbdfe77d7db",
-   "krUrl": "2db14673478ba55274cb187d939d953984a11644905277df2357c4d4317bbb54"
+   "krUrl": "79ce2ababf53b66d47ad4d5cf4909901483b7034d5df50724c381fc3dd3b83a9"
   },
   {
    "id": 5,
@@ -2499,6 +2515,26 @@
    "krUrl": "784b7e80568c7702bcacc182a81b60eb0933c8aadb632f102cd922dcbdc37187"
   },
   {
+   "id": 25,
+   "title": "パーティ編成・黄泉",
+   "text": "今回はあなたに決めてもらいましょう…「あなた」はどんなダンスを踊りたい？",
+   "unlockRequirement": "",
+   "cnUrl": "bd2ae9b04e261093b32005ec1bb1e8675d3f394a34ac1f63afc6275c2bacd941",
+   "jpUrl": "aecc5d2f10eaf4b856b3092f0adcd324f9b490c77ee7df2453b861e9415a9fc4",
+   "enUrl": "3828f5ce1d63e62383782c6e6ee728ea4989ee6df80f8acedfcfa300a4e5af94",
+   "krUrl": "601d24e234772ed45d1b6fb72f3339d2212ebd98751eb83f50c88057b5ee60b4"
+  },
+  {
+   "id": 26,
+   "title": "パーティ編成・アベンチュリン",
+   "text": "今回は楽しく手を組みましょう。お互いに欲しいものを入手できるといいわね。",
+   "unlockRequirement": "",
+   "cnUrl": "72cee1d8e11c432ec564631300c82352db5432254cbf90de1c94b9a9b224d392",
+   "jpUrl": "ef268a4b9cc2dc62f83cc940a39d22f508c90747337338460d40b981fb63cc94",
+   "enUrl": "cae396e16ea1637244aba626c13d85d16851b1a6d2bfa0557fbc2668f568a1f3",
+   "krUrl": "6f90a022f3d703b9532848986be5e0db567f7f9b0c6d0b6671681354fa33ec17"
+  },
+  {
    "id": 51,
    "title": "戦闘開始・弱点撃破",
    "text": "定められた軌跡は顕現した。",
@@ -2626,7 +2662,7 @@
    "cnUrl": "bb427175e99b7e21d0267bc0c7608164d515a1cc0b1232e87ef5f3f9b168081d",
    "jpUrl": "8cec91d2ba81ec99796fc858dc9c8868b94e5989e34abf7ecf5ab56dc6a38224",
    "enUrl": "ff8714228024c73553e789b7f86fad9743534fec0c7155d7733162e8583e4b35",
-   "krUrl": "15b09317003428e914a89bd9bed1830245d1954ddb47dd4cba3157bcab59ed3f"
+   "krUrl": "80456a009d7ba3be8e9f7dabfbc66fa91ae23046540eb925d48d76a74bee3f95"
   },
   {
    "id": 64,
@@ -2747,7 +2783,7 @@
   },
   {
    "title": "ストーリー・1",
-   "text": "「あの子は不思議な子だったの。そのことはずっと早くから分かっていたわ。あの子が生まれた日は、ヒバリが鳴いていて、月の淡い影と朝日が一緒になっている空が見えたわ。手の中のカードには過去を懐かしむ魂がこの世にやってくると書かれていた。そして小さい頃から、過去の物語を知ることに一番興味があったわ。私たちは誰に作られどこから来たのか、この世界がどのように生まれたのか。あんな質問、どんなに博学な人でも答えるのは大変でしょうね。あの子は周りの子供たちによく笑われていたけど、とても重要な質問じゃないかしら？人生は入り組んだ迷宮で、私たちは記憶以外なにも持ってないのだから」<br /><align=\"right\">——ある母親の記憶</align><br /><br />認知症を患った母は物忘れが多くなり、家族を見分けることができず、少し前に起きたことも思い出せなくなった。<br />彼女は診断書を手に、戸惑う母をしっかりと抱きしめながら、日記をもう一度読み聞かせようとした——母は確かにそこにいた、けれど、本当はどこにいたのだろうか。<br /><br />彼女は母に、その最期まで付き添った。しかし母の記憶が支離滅裂になったあの日から、母自身の存在も曖昧となっていることに気付いていた。いつか彼女の記憶も支離滅裂なものになってしまったとき…母は、完全に彼女のもとからいなくなってしまうだろう。<br /><br />「人生は入り組んだ迷宮で、私たちは記憶以外なにも持ってないのだから」この言葉の意味が、初めて分かった。",
+   "text": "「あの子は不思議な子だったの。そのことはずっと早くから分かっていたわ。あの子が生まれた日は、ヒバリが鳴いていて、月の淡い影と朝日が一緒になっている空が見えたわ。手の中のカードには過去を懐かしむ魂がこの世にやってくると書かれていた。そして小さい頃から、過去の物語を知ることに一番興味があったわ。私たちは誰に作られどこから来たのか、この世界がどのように生まれたのか。あんな質問、どんなに博学な人でも答えるのは大変でしょうね。あの子は周りの子供たちによく笑われていたけど、とても重要な質問じゃないかしら？生命は1つの迷宮、記憶以外私たちには何もないのよ」<br /><align=\"right\">——ある母親の記憶</align><br /><br />認知症を患った母は物忘れが多くなり、家族を見分けることができず、少し前に起きたことも思い出せなくなった。<br />彼女は診断書を手に、戸惑う母をしっかりと抱きしめながら、日記をもう一度読み聞かせようとした——母は確かにそこにいた、けれど、本当はどこにいたのだろうか。<br /><br />彼女は母に、その最期まで付き添った。しかし母の記憶が支離滅裂になったあの日から、母自身の存在も曖昧となっていることに気付いていた。いつか彼女の記憶も支離滅裂なものになってしまったとき…母は、完全に彼女のもとからいなくなってしまうだろう。<br /><br />「生命は1つの迷宮、記憶以外私たちには何もない」この言葉の意味が、初めて分かった。",
    "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
   },
   {
@@ -2866,7 +2902,7 @@
  "name": "ブラックスワン",
  "rarity": 5,
  "descHash": "「ガーデン・オブ・リコレクション」のメモキーパーで、気だるげで謎めいた雰囲気の占い師。 他人の「記憶」に辛抱強く耳を傾け、その運命をすべて掌握している。",
- "artPath": "da5a3d8d87865c51907df718c329a6d552ef2ddbc3e1f6e82dd466c14b0c1aa6",
+ "artPath": "870d3284ed48895f121c22c356f4292a94c0e2fdd368e691bf3a595ba7f0634c",
  "miniIconPath": "741cd71f3a6a5c9ad08beec9f832c75eaea8a07246cafcd530c806b8d2dc00a5",
  "damageType": {
   "id": 16,

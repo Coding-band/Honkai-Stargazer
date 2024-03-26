@@ -5,6 +5,11 @@
  "figPath": "8edb308439fd6545b630899981d7d833a82efc9c241d5a62215b7c6f2c43bb76",
  "fgPath": "",
  "splashIconPath": "8235c510c01b722b5ced0f0ece69b8f597028c031a888fb79177692456aa68f2",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRl4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAEBAAABkGtr27E59/ONbdtuZ01tu4ptp046q05l2+l8Blkpbdt63/sezylExAQAQEiAqRsQaoEZALMJ0NuzKQwTmgEw1D/+dHdaY1YKEJWaCARAgLq/+uf0+u3tm49e3z9RASAEq+QkasLn0wJDxGVHkt47573/Ly1A+dKHIiWRIqm/2tPwRBRFjSXJ/zoUflWOosaSEqkNUZ/kSHGMROrf8XjslrzzIknR//+4MQ5I2vVdkhcpUrq3oihA/N45zUceyVMUn52ZkWkAqhOA9fpP90978zDJnDv6+08aWNCK0HEsBP2/JV3bPtQOw4SGzPNHd+ahumEyMIwNAQyTNViIwQzjAgBWUDggNgEAADAHAJ0BKhQAFAA+bTKVR6QioiEoCACADYlqAJ0zJf9pB3xAPXVsjoiDvJM6owbtofaR3hXH2aoRdGCNaR9U/5+CgAD+9DLbvRnEYp+Qfj6a6cdpnJWurfuP+p6BAjiSRJ+1Ida3M/VahgqaUAB8EzS0ywVuafU8mmXo8duSnrWXMASkxeb8fwZVxiQ5OWgNq929bIxULsklVvLFYX1kk/aTnQmKLksDOwDDdfDtcC+TiRPdN032wuzluUATJTDEv3HMendYCFxMCKc52BoN967q7DeZ0U+RaXyCcHv9+f+MkhpU/v1c5WvMxeDL5sj4QCDK2yGhfguPB4/6DN9skb4c8A5JkQY7Hu9jJl1dseImDofKh8Aj/4Hv/TFq+OOnrD8zZyaH6WnkGKZkEVA46eUEDbmoAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -20,7 +25,7 @@
    "purposeId": 11,
    "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
    "name": "Credit",
-   "desc": "Diese Währung, die von der Interastrale Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
+   "desc": "Diese Währung, die von der Interastralen Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
    "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
    "purpose": "Gemeinsame Währung",
    "rarity": 3,
@@ -49,6 +54,7 @@
     "Punktebelohnungen in der Universum-Simulation",
     "Namenlose Ehre",
     "Glut-Tausch",
+    "Sternenlicht-Tausch",
     "Belohnungen für zeitlich begrenzte Aktionen"
    ]
   },
@@ -172,7 +178,6 @@
    "rewardPath": "/material/589818",
    "comeFrom": [
     "Blütenkelch (Alchemiekommission)",
-    "Blütenkelch (Alchemiekommission)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Glut-Tausch",
     "Omni-Synthesemaschine – Materialtausch"
@@ -209,7 +214,6 @@
    "rewardPath": "/material/673759",
    "comeFrom": [
     "Blütenkelch (Alchemiekommission)",
-    "Blütenkelch (Alchemiekommission)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -244,7 +248,6 @@
    "rarity": 2,
    "rewardPath": "/material/874345",
    "comeFrom": [
-    "Blütenkelch (Alchemiekommission)",
     "Blütenkelch (Alchemiekommission)",
     "Glut-Tausch",
     "Omni-Synthesemaschine – Materialtausch"
@@ -449,9 +452,9 @@
   {
    "id": 2,
    "iconPath": "420d033f134db663da7f64e6e3b12017f97b9228fe03a35566b5cad859ae4784",
-   "artPath": "760de1f0c7cd413cda516e16ae5fc6fd57ab962aeed91a22bc1759229eeee97c",
+   "artPath": "7d751acb21fa87b9e3239065a6cc46cf3587d92671e3c23113b1a4eeb6100904",
    "name": "Lämmchen, weine nicht um mich",
-   "descHash": "Wird ein von „Arkana“ betroffener Gegner besiegt, besteht eine Grundchance von <nobr>#1[i]%</nobr>, angrenzende Einheiten mit <nobr>#2[i]</nobr> Stapelung(en) Arkana zu belegen.",
+   "descHash": "Wird ein von „Arkana“ betroffener Gegner besiegt, besteht eine Grundchance von <nobr>#1[i]%</nobr>, angrenzende Einheiten mit <nobr>#2[i]</nobr> Stapelungen Arkana zu belegen.",
    "params": [
     1,
     6
@@ -479,7 +482,7 @@
   {
    "id": 5,
    "iconPath": "1f77c680c96f816c05e772ac266cc78a08c5a98ffaba8f5419185cdba1a6ea67",
-   "artPath": "4438d2fa65de7ddc2118afb93b5333900befecd2f95f310f06c00000077fd8cc",
+   "artPath": "46f20e4ec519bee5dfda5fa0ebb507279603181ea6ddb949723de32c0abf65e8",
    "name": "Weg des Zugvogels",
    "descHash": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
    "params": []
@@ -696,7 +699,7 @@
   },
   {
    "tagHash": "Ausdehnung",
-   "descHash": "Fügt einem anvisierten Gegner und angrenzenden Einheiten <span style=\"color:#00FF9C;\">Wind</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> des ANG von Schwarzer Schwan zu und hat eine <u>Grundchance</u> von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>, die Ziele mit 1 Stapelung <u>Arkana</u> zu belegen. Hat außerdem eine <u>Grundchance</u> von <nobr>#3[i]%</nobr>, die VTD der Ziele für <nobr>#5[i]</nobr> Rd. um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span> zu reduzieren.",
+   "descHash": "Fügt einem anvisierten Gegner und angrenzenden Einheiten <span style=\"color:#00FF9C;\">Wind</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> des ANG von Schwarzer Schwan zu und hat eine <u>Grundchance</u> von <nobr>#2[i]%</nobr>, die Ziele mit 1 Stapelung <u>Arkana</u> zu belegen. Hat außerdem eine <u>Grundchance</u> von <nobr>#3[i]%</nobr>, die VTD der Ziele für <nobr>#5[i]</nobr> Rd. um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span> zu reduzieren.",
    "ultimateCost": 0,
    "break": "60 + 30/adjacent",
    "energy": "30",
@@ -1351,7 +1354,7 @@
   },
   {
    "tagHash": "Beeinträchtigung",
-   "descHash": "Jedes Mal, wenn ein Gegner zu Beginn der Runde DoT erleidet, besteht eine <u>Grundchance</u> von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>, dass er mit 1 Stapelung <u>Arkana</u> belegt wird.<br />Mit <u>Arkana</u> belegte Gegner erleiden <span style=\"color:#00FF9C;\">Wind</span>-DoT in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> des ANG von Schwarzer Schwan. Jede Stapelung von <u>Arkana</u> erhöht den SCH-Multiplikator um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>. <u>Arkana</u> wird danach auf 1 Stapelung zurückgesetzt. <u>Arkana</u> kann bis zu <nobr>#8[i]</nobr>-fach gestapelt werden.<br />Wenn <u>Arkana</u> zu Beginn einer gegnerischen Runde SCH verursacht, löst Schwarzer Schwan zusätzliche Effekte basierend auf der Stapelzahl von <u>Arkana</u> beim entsprechenden Ziel aus:<br />Bei <nobr>#4[i]</nobr> oder mehr Stapelungen wird bei angrenzenden Einheiten <span style=\"color:#00FF9C;\">Wind</span>-DoT in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> des ANG von Schwarzer Schwan verursacht und es besteht eine <u>Grundchance</u> von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>, diese mit 1 Stapelung <u>Arkana</u> zu belegen.<br />Bei <nobr>#6[i]</nobr> oder mehr Stapelungen ignoriert der aktuell verursachte DoT <nobr>#7[i]%</nobr> der VTD des Ziels und der angrenzenden Einheiten.<u>",
+   "descHash": "Jedes Mal, wenn ein Gegner zu Beginn der Runde DoT erleidet, besteht eine <u>Grundchance</u> von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>, dass er mit 1 Stapelung <u>Arkana</u> belegt wird.<br />Mit <u>Arkana</u> belegte Gegner erleiden <span style=\"color:#00FF9C;\">Wind</span>-DoT in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> des ANG von Schwarzer Schwan. Jede Stapelung von <u>Arkana</u> erhöht den SCH-Multiplikator um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>. <u>Arkana</u> wird danach auf 1 Stapelung zurückgesetzt. <u>Arkana</u> kann bis zu <nobr>#8[i]</nobr>-fach gestapelt werden.<br />Nur wenn <u>Arkana</u> zu Beginn einer gegnerischen Runde SCH verursacht, löst Schwarzer Schwan zusätzliche Effekte basierend auf der Stapelzahl von <u>Arkana</u> beim entsprechenden Ziel aus:<br />Bei <nobr>#4[i]</nobr> oder mehr Stapelungen wird bei angrenzenden Einheiten <span style=\"color:#00FF9C;\">Wind</span>-DoT in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> des ANG von Schwarzer Schwan verursacht und es besteht eine <u>Grundchance</u> von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>, diese mit 1 Stapelung <u>Arkana</u> zu belegen.<br />Bei <nobr>#6[i]</nobr> oder mehr Stapelungen ignoriert der aktuell verursachte DoT <nobr>#7[i]%</nobr> der VTD des Ziels und der angrenzenden Einheiten.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1780,18 +1783,22 @@
  "skillTreePoints": [
   {
    "id": 1307101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1307202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1307203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1307204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1882,7 +1889,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Nachdem mit der Fertigkeit ein Gegner angegriffen wurde, der sich im Status <span style=\"color:#00FF9C;\">Wind</span>scherung, Bluten, Brennen oder Schock befindet, besteht für jeden dieser Debuffs eine Grundchance von jeweils <nobr>#1[i]%</nobr>, ihn zusätzlich mit 1 Stapelung „Arkana“ zu belegen.",
+    "descHash": "Nachdem mit der Fertigkeit ein Gegner angegriffen wurde, der sich im Status <span style=\"color:#00FF9C;\">Wind</span>scherung, Bluten, Brennen oder Schock befindet, besteht für jeden dieser Debuffs eine Grundchance von <nobr>#1[i]%</nobr>, ihn zusätzlich mit 1 Stapelung „Arkana“ zu belegen.",
     "ultimateCost": 0,
     "id": 88345,
     "name": "Viszerale Unruhe",
@@ -1917,18 +1924,22 @@
   },
   {
    "id": 1307102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1307205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1307206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1307207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2019,7 +2030,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Wenn ein Gegner den Kampf betritt, besteht eine Grundchance von <nobr>#1[i]%</nobr>, ihn mit 1 Stapelung „Arkana“ zu belegen. Jedes Mal, wenn ein Gegner durch einen Einzelangriff eines Verbündeten DoT erleidet, besteht eine Grundchance von <nobr>#1[i]%</nobr>, dass er mit 1 Stapelung Arkana belegt wird. Jeder Einzelangriff kann bis zu <nobr>#2[i]</nobr> Stapelungen verursachen.",
+    "descHash": "Wenn ein Gegner den Kampf betritt, besteht eine Grundchance von <nobr>#1[i]%</nobr>, ihn mit 1 Stapelung „Arkana“ zu belegen.<br />Jedes Mal, wenn ein Gegner durch einen Einzelangriff eines Verbündeten DoT erleidet, besteht eine Grundchance von <nobr>#1[i]%</nobr>, dass er mit 1 Stapelung Arkana belegt wird. Jeder Einzelangriff kann bis zu <nobr>#2[i]</nobr> Stapelungen verursachen.",
     "ultimateCost": 0,
     "id": 88348,
     "name": "Des Kelches Bodensatz",
@@ -2059,10 +2070,12 @@
   },
   {
    "id": 1307103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1307208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2095,6 +2108,7 @@
     },
     {
      "id": 1307209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2167,10 +2181,12 @@
   },
   {
    "id": 1307201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1307210,
+     "anchor": 18,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2296,7 +2312,7 @@
    "cnUrl": "099018899c5cef21798928257c01965bdb7cc2eee6e4d4712e476565c098986a",
    "jpUrl": "7d6424425033075a351237945dd00b426dcb96a2780200fb12b43c872b4855ea",
    "enUrl": "526732b4086ef1ac3b6245f129881e7a55b97d84f15ef984ab481fbdfe77d7db",
-   "krUrl": "2db14673478ba55274cb187d939d953984a11644905277df2357c4d4317bbb54"
+   "krUrl": "79ce2ababf53b66d47ad4d5cf4909901483b7034d5df50724c381fc3dd3b83a9"
   },
   {
    "id": 5,
@@ -2499,6 +2515,26 @@
    "krUrl": "784b7e80568c7702bcacc182a81b60eb0933c8aadb632f102cd922dcbdc37187"
   },
   {
+   "id": 25,
+   "title": "Teammitglied: Acheron",
+   "text": "Es ist deine Entscheidung ... Welchen Tanz möchtest *du* tanzen?",
+   "unlockRequirement": "",
+   "cnUrl": "bd2ae9b04e261093b32005ec1bb1e8675d3f394a34ac1f63afc6275c2bacd941",
+   "jpUrl": "aecc5d2f10eaf4b856b3092f0adcd324f9b490c77ee7df2453b861e9415a9fc4",
+   "enUrl": "3828f5ce1d63e62383782c6e6ee728ea4989ee6df80f8acedfcfa300a4e5af94",
+   "krUrl": "601d24e234772ed45d1b6fb72f3339d2212ebd98751eb83f50c88057b5ee60b4"
+  },
+  {
+   "id": 26,
+   "title": "Teammitglied: Aventurin",
+   "text": "Ich hoffe, dass das Schicksal für uns beide günstig liegt.",
+   "unlockRequirement": "",
+   "cnUrl": "72cee1d8e11c432ec564631300c82352db5432254cbf90de1c94b9a9b224d392",
+   "jpUrl": "ef268a4b9cc2dc62f83cc940a39d22f508c90747337338460d40b981fb63cc94",
+   "enUrl": "cae396e16ea1637244aba626c13d85d16851b1a6d2bfa0557fbc2668f568a1f3",
+   "krUrl": "6f90a022f3d703b9532848986be5e0db567f7f9b0c6d0b6671681354fa33ec17"
+  },
+  {
    "id": 51,
    "title": "Kampf beginnt: Schwächebruch",
    "text": "Der vorgegebene Lauf des Schicksals zeigt sich.",
@@ -2626,7 +2662,7 @@
    "cnUrl": "bb427175e99b7e21d0267bc0c7608164d515a1cc0b1232e87ef5f3f9b168081d",
    "jpUrl": "8cec91d2ba81ec99796fc858dc9c8868b94e5989e34abf7ecf5ab56dc6a38224",
    "enUrl": "ff8714228024c73553e789b7f86fad9743534fec0c7155d7733162e8583e4b35",
-   "krUrl": "15b09317003428e914a89bd9bed1830245d1954ddb47dd4cba3157bcab59ed3f"
+   "krUrl": "80456a009d7ba3be8e9f7dabfbc66fa91ae23046540eb925d48d76a74bee3f95"
   },
   {
    "id": 64,
@@ -2670,7 +2706,7 @@
   },
   {
    "id": 68,
-   "title": "Schatz öffnen 1",
+   "title": "Schatz geöffnet 1",
    "text": "Eine Wendung des Schicksals.",
    "unlockRequirement": "",
    "cnUrl": "a6112d18f0c8ef0a6f81d0ef4ceed8153361fa1e6fd81af9aa156a28f039f37f",
@@ -2680,7 +2716,7 @@
   },
   {
    "id": 69,
-   "title": "Schatz öffnen 2",
+   "title": "Schatz geöffnet 2",
    "text": "Ein reines Herz gewinnt.",
    "unlockRequirement": "",
    "cnUrl": "72da38c247953d3e50b170d8cc9d4db004d7ccbf68ca56d6020e5638eeb76cf1",
@@ -2690,7 +2726,7 @@
   },
   {
    "id": 70,
-   "title": "Kostbaren Schatz öffnen",
+   "title": "Kostbaren Schatz geöffnet",
    "text": "Das Schicksal kann überraschende Geschenke bringen.",
    "unlockRequirement": "",
    "cnUrl": "6b64fbefc440df19091eea7ad1de2abad9b89fa9278bff179d26831d6e5ecd05",
@@ -2866,7 +2902,7 @@
  "name": "Schwarzer Schwan",
  "rarity": 5,
  "descHash": "Eine Wahrerin der Erinnerungen vom Garten des Gedächtnisses. Eine geheimnisvolle und elegante Wahrsagerin. Sie hört den Erinnerungen anderer geduldig zu, so erlangt sie die Macht über die Stränge des Schicksals.",
- "artPath": "da5a3d8d87865c51907df718c329a6d552ef2ddbc3e1f6e82dd466c14b0c1aa6",
+ "artPath": "870d3284ed48895f121c22c356f4292a94c0e2fdd368e691bf3a595ba7f0634c",
  "miniIconPath": "741cd71f3a6a5c9ad08beec9f832c75eaea8a07246cafcd530c806b8d2dc00a5",
  "damageType": {
   "id": 16,

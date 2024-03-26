@@ -5,6 +5,11 @@
  "figPath": "07c79d4effb28642ec266975b4d371dc64b1cac1383372e0965d208c3986297e",
  "fgPath": "9beae506832b8d7285bc31d34c930a519f60f1937f0f9a19073309141a286c22",
  "splashIconPath": "7daf4930f6d1c0c317a1305821824f2bfdd746a88f3ad9704ffa437985c7f6f0",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRpQCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSPkAAAABkHLbtrKtO1r3vp9/X/LvB3jzLwruDskdknsjWXXP2qgMEkQGySVa8vTy3OfZO7wSERNAzRLNazogUGdopPPtm8d7IdYBo8+d7KeNRCCW6OrrOf/DSSn3g34ibcDk5bKdW1burwPE2W3zzb1XnBWWZJV9nxhP/f+35ZUl2ZaVeykw/PPvb8uVkjPfgkZW2IVVYSv3y0hkLLPkqnLuZxBZask1lHwBGjjmJFWR5PIYlFjjvJaTXxCA+N7JqrDkrUSI7LQLS7Zy3yAABE5ZhSXJnqFUQeCys0KWkm8RavDYTillya+pGQjnfrnyy0ZCNQL0HHpy4/CCdgAAVlA4IHQBAAAQCACdASoUABQAPm0ukkakIqGhKA1QgA2JbACdMoM6NcBtgOfA0wDnqv2Z+DP9dyaO+KPUACt/tOTzjcR7t/+1+yQzVk2DXxdQAP7uzIlu9/7skZse8kMcnT1Gf6uFlG4UZOf7geYxfVSbQ0yVTgI1LVVEZsq/ylSPViEoe1tNc/H6XmMFmHvcbXOLsIOdGtf2f2HznJFTpaQaG2yRpn8cfYZHM56Zvz+iHY3VhZIRpKAqCVQjS6shcMJFF/lNCr39vvMLEEaP+VQl8V/GE2kyYd9lFjQhW/+n/P/HOBy5vHbopq2wRygE1idaJUx5H35KL/60sVzKNpqfjBgHke+5LMIkB/6sxpBdJ0RADMbs+Ip33uWUdawS/sSe5cjiFNHuINGgPO9cXEy4/hyM5cKIyEBiVU3p+aGf/wbm9DRWWz4G7VDW3tNqjbuDyDFzHL1dn4PllPDQkegg0V8QtjpBeWuBdi9+8O494hBaJU2XUxGAAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -47,7 +52,6 @@
    "rewardPath": "/material/67219",
    "comeFrom": [
     "Stagnant Shadow (Corridor of Fading Echoes)",
-    "Stagnant Shadow (Corridor of Fading Echoes)",
     "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
    ]
   },
@@ -66,6 +70,7 @@
     "รางวัลคะแนนสะสม Simulated Universe",
     "เกียรติยศนิรนาม",
     "แลกเปลี่ยน Ember",
+    "ร้าน Starlight",
     "รางวัลกิจกรรมจำกัดเวลา"
    ]
   },
@@ -192,7 +197,6 @@
    "rewardPath": "/material/635668",
    "comeFrom": [
     "Calyx (Supply Zone)",
-    "Calyx (Supply Zone)",
     "ร้าน Ember",
     "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
    ]
@@ -229,7 +233,6 @@
    "rewardPath": "/material/836254",
    "comeFrom": [
     "Calyx (Supply Zone)",
-    "Calyx (Supply Zone)",
     "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
     "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
    ]
@@ -246,7 +249,6 @@
    "rarity": 3,
    "rewardPath": "/material/920195",
    "comeFrom": [
-    "Calyx (Supply Zone)",
     "Calyx (Supply Zone)",
     "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
     "ร้าน Ember",
@@ -452,7 +454,7 @@
   {
    "id": 2,
    "iconPath": "cc2347509b41cd551e34fa5b09206edc06ad8f6a0c2d96ab5810296f2a2cd2d6",
-   "artPath": "a60838ee7846e856b064dd88c920a1d66f3ee02189e8250ddc6b7cfc8333b339",
+   "artPath": "0ce7bdbd15da8300bee5dbf1c408ff78979a3b8ea4c86b98accd433878996cc5",
    "name": "Lingering Cold",
    "descHash": "เมื่อสถานะแช่แข็ง ที่ศัตรูเป้าหมายติดจากสกิลต่อสู้ถูกลบออก ความเร็วของเป้าหมายจะลดลง <nobr>#1[i]%</nobr> เป็นเวลา <nobr>#2[i]</nobr> เทิร์น",
    "params": [
@@ -471,7 +473,7 @@
   {
    "id": 4,
    "iconPath": "290caace24e0b5d64a13b2a499e5b905db7c58325007ead4cb71322cffd24574",
-   "artPath": "2b3eac4bb4a9453c748c71dc5fd0010c4a698e4bc8ed45edc38811327c859485",
+   "artPath": "1afa6823ff3a50ffd113167c02ba352bb7a34e2a28a06dc106b026e0d790c2d5",
    "name": "Faith Moves Mountains",
    "descHash": "เมื่อ Gepard อยู่ในการต่อสู้ การต้านทานสถานะ ของฝ่ายตัวเองทั้งหมดจะเพิ่มขึ้น <nobr>#1[i]%</nobr>",
    "params": [
@@ -481,7 +483,7 @@
   {
    "id": 5,
    "iconPath": "e0a7ff79c411770d728219b573ab168460edc4c8ac20033e013f4fa7f745d78f",
-   "artPath": "2ccf9d8794486dcbc531cbe46684573643ee5bd512477c1dc95fbce7f5fc4ef9",
+   "artPath": "a553fa43067dc7a099b1fdce2956b172e04c51cf4f81dc5ef5b63cdf89b4145d",
    "name": "Cold Iron Fist",
    "descHash": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
    "params": []
@@ -489,7 +491,7 @@
   {
    "id": 6,
    "iconPath": "ae838ace1bdf350f787b3076f5adfa9c10784bfa3aa5bcf1ee0f56dbe25782bb",
-   "artPath": "0e5b3af504d1f18e36716a816cb3dd8913c70c749b171604142bc40fd3e87ff4",
+   "artPath": "09faf8dfdb76b6c110f9ac9d624a3a9fa667c85717fdbb315dd72ad9fb338838",
    "name": "Unyielding Resolve",
    "descHash": "เมื่อใช้พรสวรรค์ Gepard จะแอ็กชันทันที และปริมาณการฟื้นฟู HP ปัจจุบัน จะเพิ่มขึ้นอีก <nobr>#1[i]%</nobr> ของ HP สูงสุดของตัวเอง",
    "params": [
@@ -1606,7 +1608,7 @@
    "energy": "0",
    "id": 468391,
    "name": "Comradery",
-   "iconPath": "3716e7b3b1cab28844d8aefd743ec73baa185dc59cd331cb39560550e223cffa",
+   "iconPath": "a8f29cc68895701792c83695766c2c36842daff3b4eec941ba10d6bd914dd2c8",
    "typeDescHash": "เทคนิค",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1628,14 +1630,17 @@
  "skillTreePoints": [
   {
    "id": 1104103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1104208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1104209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1668,6 +1673,7 @@
       },
       {
        "id": 1104210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1768,18 +1774,22 @@
   },
   {
    "id": 1104201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1104101,
+     "anchor": 6,
      "type": 1,
      "children": [
       {
        "id": 1104202,
+       "anchor": 10,
        "type": 2,
        "children": [
         {
          "id": 1104203,
+         "anchor": 11,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1876,14 +1886,17 @@
     },
     {
      "id": 1104102,
+     "anchor": 7,
      "type": 1,
      "children": [
       {
        "id": 1104205,
+       "anchor": 13,
        "type": 2,
        "children": [
         {
          "id": 1104206,
+         "anchor": 14,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2007,6 +2020,7 @@
   },
   {
    "id": 1104204,
+   "anchor": 12,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2039,6 +2053,7 @@
   },
   {
    "id": 1104207,
+   "anchor": 15,
    "type": 2,
    "children": [],
    "embedBuff": {

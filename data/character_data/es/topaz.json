@@ -5,6 +5,11 @@
  "figPath": "d676592ac932355ab6420187dbe17214caba8a18831e2469ce301592bea5d8e1",
  "fgPath": "67319da7d0efd78cb0e8439faa6156da0b63bbd2ca36a9b1de3a8e339ed49201",
  "splashIconPath": "80ae17f3347cc3114ee3ae61d44f783ca639fafae7f26f4bf5a9d8f8644b4cc6",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRqoCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSB0BAAABkGtr27FH9/vFdtLZSWd7Zkrbtm2rs43Ktq3KB2B7pvrx3nfx4xgiYgIQ0AFgkBAOGABwAAOYUCC0O0a3wQBAuIPQgvxYg+SjB9+k+WRMLUtIXH9/3fktNc+keoQgBMPerrn4Q75v9X4CAGNQ81qStV6vlb7c2dElFAjd90ceS19L6UHfHmGhgyQrURIp69WO1P4du/6LpHxJ0aPRmcvXvRWpgKS+nMPY3V9EMZhvC6q2zb8ij0h/svpTmrBwyTWJEulD6l85YudcOPJMlqQo0qunAFD7RfJ4LP16NQRAKMpvSxI9llZypaxqARygfuHEGb8k6acuYuYAAI4BYsec2Ter64zDJ3IR0AmJcICY2n6VETAwfvya8EQABgAAVlA4IGYBAADQBwCdASoUABQAPm0ylUekIqIhKAgAgA2JaACdMuOBCLV5QegD/wb4BvIRKsPGg9mDTpXuoqJc0qOxcu/oHPYwoRvARFxIgADdvY31E83Edes/DC/5bdGF3cnDBlLCbK9h96/IB9F7tDxsDrohU1/3x5HZ7tPvZezkdo8DggdS2Ob9VTjzlfc4SEfLhyWVr9WVctWjB9kO260SP7bxvT3+ZPsdo1kjQ1Ou0+ze9O62vO/Juzt9vfzH9SC3CQaD/DxJtZR1qB9cCvkQGjSyR1RZYaRJBo7Va7Yo22F+Ius+1IJ+N2VIxzHnBz+5dzq9hxheAvG5P2o+rmA+eHQAjyRHM3/dPB9iRsN1VShQ1RtvKpTUwiZPFvUW8U9d1WiZ0vDiGIfTldsfjDG85gooIUKN6+Y4uXh2q3fhKONAS4E/29dsRFmZV+JGsYfYFgJ5uwwErB58uMcG6lYR0ODb6ja+B3+eCuAA",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Recompensa de puntos del Universo Simulado",
     "Honor anónimo",
     "Canjeo de Ascuas",
+    "Canjeo de Cosmiluz",
     "Recompensa de evento de duración limitada"
    ]
   },
@@ -175,7 +181,6 @@
    "rewardPath": "/material/635674",
    "comeFrom": [
     "Cáliz de las llanuras nevadas de las afueras",
-    "Cáliz de las llanuras nevadas de las afueras",
     "Canjeo de Ascuas",
     "Máquina sintetizadora multiusos - Intercambio de material"
    ]
@@ -212,7 +217,6 @@
    "rewardPath": "/material/836260",
    "comeFrom": [
     "Cáliz de las llanuras nevadas de las afueras",
-    "Cáliz de las llanuras nevadas de las afueras",
     "Máquina sintetizadora multiusos - Síntesis de materiales",
     "Máquina sintetizadora multiusos - Intercambio de material"
    ]
@@ -229,7 +233,6 @@
    "rarity": 3,
    "rewardPath": "/material/920201",
    "comeFrom": [
-    "Cáliz de las llanuras nevadas de las afueras",
     "Cáliz de las llanuras nevadas de las afueras",
     "Máquina sintetizadora multiusos - Síntesis de materiales",
     "Canjeo de Ascuas",
@@ -248,7 +251,6 @@
    "rarity": 4,
    "rewardPath": "/material/983279",
    "comeFrom": [
-    "Sombra paralizada de la mina principal",
     "Sombra paralizada de la mina principal",
     "Máquina sintetizadora multiusos - Intercambio de material"
    ]
@@ -1643,14 +1645,17 @@
  "skillTreePoints": [
   {
    "id": 1112101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1112202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1112203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1745,14 +1750,17 @@
   },
   {
    "id": 1112102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1112205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1112206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1853,14 +1861,17 @@
   },
   {
    "id": 1112103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1112208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1112209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1893,6 +1904,7 @@
       },
       {
        "id": 1112210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1993,6 +2005,7 @@
   },
   {
    "id": 1112201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2021,6 +2034,7 @@
   },
   {
    "id": 1112204,
+   "anchor": 12,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2053,6 +2067,7 @@
   },
   {
    "id": 1112207,
+   "anchor": 15,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2364,6 +2379,16 @@
    "jpUrl": "addf03ec06c76c442d186105d912db10f85de8e788822b0b2d3a3d4cf91abeb4",
    "enUrl": "6226469d7d43580dd794551925cffa50b825f7bd9d1d710c83617b5fa1943b73",
    "krUrl": "f6c0d7a060a17ef178b0527f63bfa13002a3308917c92886d963e2bb37f29f7a"
+  },
+  {
+   "id": 28,
+   "title": "Miembro del equipo: Aventurino",
+   "text": "Parece que esta vez trabajaremos juntas... Me imagino que un par de ojos más no hacen daño a nadie.",
+   "unlockRequirement": "",
+   "cnUrl": "0de4b67aa72ac475106c9424326a6fa4f8222bfb17fc13680ef0f4ed1cb42e4a",
+   "jpUrl": "a37736a2ec70865b6fe161cd2a61ca115041a4a2c68794ce2a8bc786bd984fdc",
+   "enUrl": "54d9b2b57dd2c10b33e023e956f8a471cf7dc67a793a4877f82c56703910fbfe",
+   "krUrl": "5ac098bc956c63aa1610ba6999ebd31200224867fb216841f80ab1252e01f06a"
   },
   {
    "id": 51,
@@ -2743,7 +2768,7 @@
  "name": "Topaz y Conti",
  "rarity": 5,
  "descHash": "Topaz, la experta del Departamento de Inversiones Estratégicas de la Corporación para la Paz Interastral y líder del equipo especial de fiscalización de deudas. Es miembro de los Diez Corazones de Piedra desde muy joven y su piedra angular es el \"topacio de la recaudación de deudas\". Su compañero, un Chanchito Dimensional llamado Conti, es capaz de percibir con agudeza dónde hay riquezas, con lo que los trabajos relacionados con seguridad, cobro de deudas y procesos actuariales no suponen ningún problema. Actualmente, viajan juntos por el cosmos investigando diversas deudas y obligaciones que pueden afectar negativamente al desarrollo de los negocios de la Corporación.",
- "artPath": "38c5014a3eb3b1189e5d67fa223027dabcd328ebc3b809867e76d8df5803fbe3",
+ "artPath": "fd0883162e340d4cf565c933a4ee63b8f64b3c8bf39182d81bbfe7af0d3a14e3",
  "miniIconPath": "1dc2e5d7dd4720deeb42759eeeb6345c633ff38edea3480b9ffe0829aacc3969",
  "damageType": {
   "id": 2,

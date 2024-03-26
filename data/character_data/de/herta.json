@@ -2,9 +2,14 @@
  "spRequirement": 110,
  "iconPath": "02f976029b325b719845b99ee037194fae6fdce138787032b8dccd8daa5f53ee",
  "bgPath": "bf1e24e63efbd09381f38786ba352ce46665b6deeb9e2c28660eb1d27d1f1da1",
- "figPath": "440bc89f072ed29ca08d1d40d39d592640c5a507dc5a1c56c83d857485b33745",
+ "figPath": "9d03ca91738f330a26051504ac742ad2ad7697c80c6dea970ce993c28b73acf4",
  "fgPath": "6cf0ea545601fc51a9f9b8066e93fa340793f41ad99b97209f7158de03e2f37e",
  "splashIconPath": "7614446d60a6a3edef33331f2a6f5a24e2f0bac8ab84cb24364c7d379346d060",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRooCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAgBAAABkGxt27Et5/O8v+0/27Yb27ZrViPbtm3X1Bi7cbvQ1HpxX+HDLkTEBJClo2kh0CBI5QOA4t0FQJ9WOPAeIKD/1twBvrzpQIIggBm78j1td8/d24vi0StqgKGHQ42Ad/fXdAGqtk1tuu/GJ0XJh5NLty2vobowgC1fJUUySWdHNO/QvoDu76UwSmRKwki3vAdOKEpkJjOThVpEDk0v2v+SzEyxXgEsU2ym1GamYXgOK8ok0dd2OLYpSWeW6FMjHN1NZjJJJsX6WAR0/Kb4P5MlUazHODwTpSSOojiMpfDKWDzAg59K/ePExul4UrZ5+WLNwXt7N7cmrxcuVco2gAdHhoEvzPEOHABWUDggXAEAAJAHAJ0BKhQAFAA+bTCTRyQioaEoCqiADYlsAJ0yhHAv8IxEhAYKBqGe8eViU5+7NOzKwZvnXq5ezphrnvRvGmvuPqPRAADMk1KL9xOFXk6og5kxuSbtufWdXALm19F2BWbSHskQJjCA15xaT63yIdjN2qFL11H1nDF4f4k/euXhZD4Ev32U9k174S8fXRVOSP9W5fTF8cBqjI5BlbhuhZv8v+37PP5Dun8v3fuXsKJHmWpauW/zfVTN1oreXahM9uy41zEVX7WKyTHNUYtSkBKx3+oAox/weJ+tNSfx88IH3Fn1TklNU+fquPrpn6+vehdLXIbuasQnd8fuf+m1xARuc3vM/sRd0AcvaHwCKN8zfc1mnxJ+9CMcdKlIgTMV7weeQyj/+xutn0uTgDx6Hy7MnqnrbAtBmiPzoGvRCAZOr4/Jemae/gsG2FWsMO1sg0FLGtQaVrHcQQAAAA==",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -20,7 +25,7 @@
    "purposeId": 11,
    "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
    "name": "Credit",
-   "desc": "Diese Währung, die von der Interastrale Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
+   "desc": "Diese Währung, die von der Interastralen Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
    "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
    "purpose": "Gemeinsame Währung",
    "rarity": 3,
@@ -47,7 +52,6 @@
    "rewardPath": "/material/67219",
    "comeFrom": [
     "Ruhender Schatten (Korridor der verhallenden Echos)",
-    "Ruhender Schatten (Korridor der verhallenden Echos)",
     "Omni-Synthesemaschine – Materialtausch"
    ]
   },
@@ -66,6 +70,7 @@
     "Punktebelohnungen in der Universum-Simulation",
     "Namenlose Ehre",
     "Glut-Tausch",
+    "Sternenlicht-Tausch",
     "Belohnungen für zeitlich begrenzte Aktionen"
    ]
   },
@@ -175,7 +180,6 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Blütenkelch (Nietstadt)",
-    "Blütenkelch (Nietstadt)",
     "Glut-Tausch",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -211,7 +215,6 @@
    "rewardPath": "/material/836261",
    "comeFrom": [
     "Blütenkelch (Nietstadt)",
-    "Blütenkelch (Nietstadt)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -228,7 +231,6 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
-    "Blütenkelch (Nietstadt)",
     "Blütenkelch (Nietstadt)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Glut-Tausch",
@@ -450,7 +452,7 @@
   {
    "id": 2,
    "iconPath": "c9851c996844a9b08c337ab710da62f6016a315105ced2f6b6f0ba5d5829d0b2",
-   "artPath": "09c09c9fccfa3d36a35632d131dadcbaaf49d4fcac8c37a548b6e3610b6fef40",
+   "artPath": "110e444fe3a1617b178e74742cb7e1cdd86ee10fc255e21180efe66356710286",
    "name": "Triumph und Verfolgung",
    "descHash": "Erhöht für jede Auslösung des Talents die KRIT-Rate von Herta um <nobr>#1[i]%</nobr>. Dieser Effekt ist bis zu <nobr>#2[i]</nobr>-mal stapelbar.",
    "params": [
@@ -1584,14 +1586,17 @@
  "skillTreePoints": [
   {
    "id": 1013101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1013202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1013203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1624,6 +1629,7 @@
       },
       {
        "id": 1013204,
+       "anchor": 12,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1720,14 +1726,17 @@
   },
   {
    "id": 1013102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1013205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1013206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1760,6 +1769,7 @@
       },
       {
        "id": 1013207,
+       "anchor": 15,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1860,10 +1870,12 @@
   },
   {
    "id": 1013103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1013208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -1896,6 +1908,7 @@
     },
     {
      "id": 1013209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -1967,6 +1980,7 @@
   },
   {
    "id": 1013201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -1995,6 +2009,7 @@
   },
   {
    "id": 1013210,
+   "anchor": 18,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2479,7 +2494,7 @@
   },
   {
    "id": 69,
-   "title": "Schatz öffnen 1",
+   "title": "Schatz geöffnet 1",
    "text": "Das war’s?",
    "unlockRequirement": "",
    "cnUrl": "82948c031a121e32dc5ebfc6535dd8cda458c77b55ef7eaf4af34ca367fb771d",
@@ -2489,7 +2504,7 @@
   },
   {
    "id": 73,
-   "title": "Schatz öffnen 2",
+   "title": "Schatz geöffnet 2",
    "text": "Meh, die Qualität ist zufriedenstellend.",
    "unlockRequirement": "",
    "cnUrl": "5dfe58e3a16bacaee8a72d601a99d0499eac50c941ed0831c7dfba6b4f3e7153",
@@ -2499,7 +2514,7 @@
   },
   {
    "id": 74,
-   "title": "Kostbaren Schatz öffnen",
+   "title": "Kostbaren Schatz geöffnet",
    "text": "Super. Cool! Können wir jetzt endlich los?",
    "unlockRequirement": "",
    "cnUrl": "671bbefa5ca0c9d1f0ffd1d027f87c9b5a9b92dcfe14a213407ac922b6c9725f",
@@ -2675,7 +2690,7 @@
  "name": "Herta",
  "rarity": 4,
  "descHash": "Mitglied Nr. <nobr>83</nobr> der Geniusgesellschaft und die wahre Herrin der Raumstation. Eine Wissenschaftlerin, die trotz ihrer überragenden Intelligenz wenig Mitgefühl für andere aufbringt.",
- "artPath": "1dc50cfe6bfb0444e1d02b0ecd8feccb7f4321f9b27798f2c795e4e9e4817dec",
+ "artPath": "f91c274df7c76a1c913b4235837ad3649851936c31a5b358c96269fc445e379d",
  "miniIconPath": "978db92cdbb2ff84da10c55b413cc820dc03ab15921c037fc2b6ee41711bc991",
  "damageType": {
   "id": 4,

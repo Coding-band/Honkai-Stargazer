@@ -5,6 +5,11 @@
  "figPath": "991aa9d7c911b02cfd47800cab0ad4146bb0d02de608eb112830f5e334ca2a13",
  "fgPath": "",
  "splashIconPath": "f1dfd94040dc1f7a208bc749c20be2fc5a9bd7a37da45ad756f201f0d49195b6",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRv4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSDkBAAABkHPbtrG9yvejz7Zt22br76sY20lt27ZT2erMynYqO3mesz9HxASgX1Wtao/WAagYWEPhlTp3AwoG9gFqxqcCgJ1PnkM/AaPKLl52jJ2/pahg3aVnWVChoe3jc95Ydujwpye3n4xckm4AGobfPUuT/b6+34k6e2jo2JH7meb//5Zl8scCDx93KAiZF/aNFoUi/7m1drsnAOSfoCXsa/GZ55trgI4p/C8ipIjw53YesIWO+TSFQlKE//5wMmCEJPz6RhHpY/H6kQagpQNTH9AihWLyU/6GOCBlprsWdJCmUITcHdzlCB1DpkTlzyBFhC/PdawLhKIgZn720OM/aZH3sjStug4qVLi1tpZv/2r+WTe9Gq7xnujrv2ZZYtNv8s1OX9ho6Ksg4szzFRuONsbEQMHATu2HJmHQAFZQOCCeAQAAsAgAnQEqFAAUAD5tMJRHpCKiISgIAIANiWwAnTKEen+O8PM7/AA2zXKzaq7vGRPwHpg5p/nL2AP1S31UPNqFIg7Q9T2kHbdQBrCqhrKcAP7veqX6qZbpLZcedXteDfxY2/gB/PEV8UYdmD8EUgmz0t9gc3FBfgkAvb6C2pyleNMk8Br6fwdrFdTyxNsmXwg9/xuQRx3bc0d/+4FysOh+tYqkZN6fLtuxams/N3/KvdriDFt96dXtpuuVl7Afmll03lhB7YNrn5yaU+ck8jW3Y58P8bYvZvHGm1cdV9yRdFmxZCL/xVTjEP/TAfXyK1bLjPaXo2Rx2zL2F70ACVwvdX9MUePuNay0w3+i/NvzggswmF4I5EnffzWPo6b/HUHeNUMNN1AZLpEks/I8uUbtRPT3VYj46xuupu1jrNZ4MWno0ppt2nQWL/jW2+g/fZUyUwb8u2/xcfsrz0IBeySlPfiNafOGfLsfxIVurQCsdFpHy9Vh+lskTADdSKniGHoseVetB0AZ8/SatIIHf2xbdHAgvJ0/t3uoE+IcAAAA",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Simulated Universe Point Rewards",
     "Nameless Honor",
     "Embers Exchange",
+    "Starlight Exchange",
     "Limited-Time Event Rewards"
    ]
   },
@@ -64,7 +70,6 @@
    "rarity": 4,
    "rewardPath": "/material/351748",
    "comeFrom": [
-    "Stagnant Shadow: Dream's Edge",
     "Stagnant Shadow: Dream's Edge",
     "Omni-Synthesizer — Material Exchange"
    ]
@@ -172,7 +177,6 @@
    "rewardPath": "/material/589819",
    "comeFrom": [
     "Calyx: The Reverie (Dreamscape)",
-    "Calyx: The Reverie (Dreamscape)",
     "Omni-Synthesizer — Material Synthesis",
     "Embers Exchange",
     "Omni-Synthesizer — Material Exchange"
@@ -209,7 +213,6 @@
    "rewardPath": "/material/673760",
    "comeFrom": [
     "Calyx: The Reverie (Dreamscape)",
-    "Calyx: The Reverie (Dreamscape)",
     "Omni-Synthesizer — Material Synthesis",
     "Omni-Synthesizer — Material Exchange"
    ]
@@ -244,7 +247,6 @@
    "rarity": 2,
    "rewardPath": "/material/874346",
    "comeFrom": [
-    "Calyx: The Reverie (Dreamscape)",
     "Calyx: The Reverie (Dreamscape)",
     "Embers Exchange",
     "Omni-Synthesizer — Material Exchange"
@@ -439,9 +441,9 @@
   {
    "id": 1,
    "iconPath": "9ce44da0ce2db178d03fa5848f1666aed212db44e4472db3cfc81a0444ab2964",
-   "artPath": "b410784fbb494f07996741bc2887c9ff9045c4e84e932bd539e9fa2fe8099a4e",
+   "artPath": "9b2cefc8111d1be621f58cde3d8eb08ccf2e22a7992505ebe901b7fd674e78d4",
    "name": "Suspension of Disbelief",
-   "descHash": "The Cipher effect applied by the Ultimate lasts for 1 extra turn. All allies affected by Cipher have their ATK increased by <nobr>#1[i]%</nobr>.",
+   "descHash": "The Cipher effect granted by the Ultimate lasts for 1 extra turn. All allies with Cipher have their ATK increased by <nobr>#1[i]%</nobr>.",
    "params": [
     0.4
    ]
@@ -449,9 +451,9 @@
   {
    "id": 2,
    "iconPath": "6831a28c5ceeeeea8480f2a689dea58ab989249c3ceb3f87bfc094c6425b8079",
-   "artPath": "2d3fbd6ed5af564daf5076cb009ffeb329a7da156bf0dacfcdfb91ecd4e3def7",
+   "artPath": "a7670d995478c53fdf6ffff301be8959a00978d21b4ed3d57061f97aac87b567",
    "name": "Purely Fictitious",
-   "descHash": "Each Talent stack allows allies to ignore <nobr>#1[i]%</nobr> of the enemy target's DEF when dealing DMG to enemies.",
+   "descHash": "Every stack of the Talent's effect allows allies to additionally ignore <nobr>#1[i]%</nobr> of the target's DEF when dealing DMG.",
    "params": [
     0.08
    ]
@@ -467,9 +469,9 @@
   {
    "id": 4,
    "iconPath": "ec1710504a85dcc5ffd40e56735ef4e3aae137eefa53154bf77668d496a636b9",
-   "artPath": "904de78ea5f505fc17de1b55998b5a9b9ba0a6d9ce09da47947fe953a1ce7a15",
+   "artPath": "3d3fb5c3033c97002ef326352aba0ed5b26636e23699418c56233d94941bed4d",
    "name": "Life Is a Gamble",
-   "descHash": "The Ultimate recovers 1 more Skill Point. The Talent additionally increases Max Skill Points by 1.",
+   "descHash": "The Ultimate recovers 1 more Skill Point. The Talent additionally increases the Max Skill Points by 1.",
    "params": []
   },
   {
@@ -483,9 +485,9 @@
   {
    "id": 6,
    "iconPath": "97946a7beefedaf075a3e045a39f2d44cc9de450c44e047feb9f7bfeea214fb4",
-   "artPath": "83ea4cc2b496ca0758ac0069e3881ff56e4bcd0dc419e3fad8216c438c87a04a",
+   "artPath": "0c42626e2ed820bae2e1a329a7e44dda34ece227cb0df56473cd5eaa0def5431",
    "name": "Narrative Polysemy",
-   "descHash": "The CRIT DMG Boost effect of Sparkle's Skill additionally increases by <nobr>#1[i]%</nobr> of Sparkle's CRIT DMG, and when she uses her Skill, the CRIT DMG Boost effect will apply to all allies currently with Cipher. When Sparkle uses her Ultimate, this effect will spread to all allies with Cipher should the allied target have the CRIT DMG increase effect provided by the Skill active on them.",
+   "descHash": "The CRIT DMG Boost effect provided by the Skill additionally increases by an amount equal to <nobr>#1[i]%</nobr> of Sparkle's CRIT DMG. When Sparkle uses Skill, her Skill's CRIT DMG Boost effect will apply to all allies with Cipher. When Sparkle uses her Ultimate, any single ally who benefits from her Skill's CRIT DMG Boost will spread that effect to allies with Cipher.",
    "params": [
     0.3
    ]
@@ -672,7 +674,7 @@
   },
   {
    "tagHash": "Support",
-   "descHash": "Increases the CRIT DMG of a single ally by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> of Sparkle's CRIT DMG plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>, lasting for <nobr>#3[i]</nobr> turn(s). And at the same time, Advances Forward this ally's action by <nobr>#4[i]%</nobr>.<br />When Sparkle uses this ability on herself, the Action Advance effect will not trigger.",
+   "descHash": "Increases the CRIT DMG of a single target ally by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> of Sparkle's CRIT DMG plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>, lasting for <nobr>#3[i]</nobr> turn(s). And at the same time, Advances Forward this ally's action by <nobr>#4[i]%</nobr>.<br />When Sparkle uses this ability on herself, the Action Advance effect will not trigger.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -992,7 +994,7 @@
   },
   {
    "tagHash": "Support",
-   "descHash": "Recovers <nobr>#2[i]</nobr> Skill Points for the team and grants all allies Cipher. When allies with Cipher trigger the DMG Boost effect provided by Sparkle's Talent, each stack additionally increases its effect by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>, lasting for <nobr>#4[i]</nobr> turns.",
+   "descHash": "Recovers <nobr>#2[i]</nobr> Skill Points for the team and grants all allies Cipher. For allies with Cipher, each stack of the DMG Boost effect provided by Sparkle's Talent additionally increases by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>, lasting for <nobr>#4[i]</nobr> turns.",
    "ultimateCost": 110,
    "break": "0",
    "energy": "5",
@@ -1312,7 +1314,7 @@
   },
   {
    "tagHash": "Support",
-   "descHash": "While Sparkle is on the battlefield, additionally increases the max number of Skill Points by <nobr>#3[i]</nobr>. Whenever an ally consumes 1 Skill Point, all allies' DMG increases by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>. This effect lasts for <nobr>#1[i]</nobr> turn(s) and can stack up to <nobr>#4[i]</nobr> time(s).",
+   "descHash": "While Sparkle is on the battlefield, additionally increases the max number of Skill Points by <nobr>#3[i]</nobr>. Whenever an ally consumes 1 Skill Point, all allies' DMG dealt increases by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>. This effect lasts for <nobr>#1[i]</nobr> turn(s) and can stack up to <nobr>#4[i]</nobr> time(s).",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1681,14 +1683,17 @@
  "skillTreePoints": [
   {
    "id": 1306101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1306202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1306203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1785,14 +1790,17 @@
   },
   {
    "id": 1306102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1306205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1306206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1854,7 +1862,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "The CRIT DMG Boost effect provided by the Skill will extend to last until the start of the target's next turn.",
+    "descHash": "The CRIT DMG Boost effect provided by the Skill will be extended until the start of the target's next turn.",
     "ultimateCost": 0,
     "id": 801431,
     "name": "Artificial Flower",
@@ -1891,14 +1899,17 @@
   },
   {
    "id": 1306103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1306208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1306209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1931,6 +1942,7 @@
       },
       {
        "id": 1306210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1992,7 +2004,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Increases all allies' ATK by <nobr>#4[i]%</nobr>. When there are 1/2/3 <span style=\"color:#7788ff;\">Quantum </span>allies in your team, increases Quantum-Type allies' ATK by <nobr>#1[i]%</nobr>/<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>.",
+    "descHash": "Increases all allies' ATK by <nobr>#4[i]%</nobr>. When there are 1/2/3 Quantum-Type allies in the team, additionally increases Quantum-Type allies' ATK by <nobr>#1[i]%</nobr>/<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>.",
     "ultimateCost": 0,
     "id": 801430,
     "name": "Nocturne",
@@ -2034,10 +2046,12 @@
   },
   {
    "id": 1306201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1306204,
+     "anchor": 12,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2070,6 +2084,7 @@
     },
     {
      "id": 1306207,
+     "anchor": 15,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2250,7 +2265,7 @@
   {
    "id": 10,
    "title": "Something to Share",
-   "text": "So, we've got this arrogant Aeon named \"Nanook\" out there in the cosmos, and they genuinely believe that, without them, the entire universe wouldn't be headed straight for \"Destruction!\" Not funny? Okay, wanna hear my \"Preservation\" version?",
+   "text": "So, we've got this arrogant Aeon named \"Nanook\" out there in the cosmos, and THEY genuinely believe that, without THEM, the entire universe wouldn't be headed straight for \"Destruction!\" Not funny? Okay, wanna hear my \"Preservation\" version?",
    "unlockRequirement": "",
    "cnUrl": "170d34808bb4b6bd7757e1f6ac0d1175dbc6e869a095b1b27a6349f2b392b806",
    "jpUrl": "30f222740663df31f9ef2d083bc1790e71188b905bd923778293cc80f0b36df5",
@@ -2366,6 +2381,16 @@
    "jpUrl": "b21a0944431e7f2870d497a187f079bf1efcd57b17699f67f799496df967af6b",
    "enUrl": "2ae45eb385b982fd2f93ee7b13b1b82053600b3bf80b045a8254a36c203f3297",
    "krUrl": "3c96add23447b47cbcb682a44f290d4c680cec3bfc054a260f9faa6f1d2c98f1"
+  },
+  {
+   "id": 24,
+   "title": "Added to Team With Aventurine",
+   "text": "Look who's graced us with their presence! Guess I'll be in your shadow now.",
+   "unlockRequirement": "",
+   "cnUrl": "801cd04799135123803117d999712591bc85c5cb86a4ec30ab5a83a08af42c16",
+   "jpUrl": "fedf2387f18fef1fa479a6328149643f7d16a272e580e1c63c91c6c83cd3e726",
+   "enUrl": "bebd5480174ee3883f66bad127bf3984c82ab8efb86f09f205471db853fb4070",
+   "krUrl": "bd0b37de1c4f8f1bd6721936c83e1a93d5ded73ba254a0ea9c0915a7e110dc47"
   },
   {
    "id": 51,
@@ -2611,7 +2636,7 @@
  "storyItems": [
   {
    "title": "Character Details",
-   "text": "A member of the Masked Fools. Inscrutable and unscrupulous.<br />A dangerous maestro of theatrics, utterly engrossed in the art of performance. Adorned with innumerable masks, she is the hero with a thousand faces.<br />Wealth, status, power... None of this matters to Sparkle. The only thing that can get her attention is \"amusement.\"",
+   "text": "A member of the Masked Fools. Inscrutable and unscrupulous.<br />A dangerous maestro of theatrics, utterly engrossed in the art of performance. Adorned with innumerable masks, she is the hero with a thousand faces.<br />Wealth, status, power... None of those matters to Sparkle. The only thing that can get her attention is \"amusement.\"",
    "unlockRequirement": ""
   },
   {
@@ -2734,8 +2759,8 @@
  },
  "name": "Sparkle",
  "rarity": 5,
- "descHash": "A member of the Masked Fools. Inscrutable and unscrupulous. A dangerous maestro of theatrics, utterly engrossed in the art of performance. Adorned with innumerable masks, she is the hero with a thousand faces. Wealth, status, power... None of this matters to Sparkle. The only thing that can get her attention is \"amusement.\"",
- "artPath": "22498bd5da077b56fa1c9ef4886efbf3f62b558d381ff1a7b17e2724143426f2",
+ "descHash": "A member of the Masked Fools. Inscrutable and unscrupulous. A dangerous maestro of theatrics, utterly engrossed in the art of performance. Adorned with innumerable masks, she is the hero with a thousand faces. Wealth, status, power... None of those matters to Sparkle. The only thing that can get her attention is \"amusement.\"",
+ "artPath": "eb7aa57c0d4fd224c13ba71d84d12f4f8bce0e0c098629756852b084527590ce",
  "miniIconPath": "9da8f43ce94fde4b59e6b912399bb691350719279eb77aea9cda9ceb1ddd7548",
  "damageType": {
   "id": 32,

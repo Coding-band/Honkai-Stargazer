@@ -5,6 +5,11 @@
  "figPath": "8a5513aef90767839602fae2824f35c020d5831a036d83684f9e7b3de5b6083f",
  "fgPath": "dd6b26da2d98027b38640d36e62de5d423e1765fafe17f500a94dc2100445b76",
  "splashIconPath": "0f2de12d43d1157a2a586285d70c245d3303f950006aca0855bad6fa2d03e79e",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRjICAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSOIAAAABgFvbtmpl3/vGIPXI3S12twa8ACpgUIFDBJFF0IG7V0DkhBbyI+TJ3sG7jxoiYgIQN0BZwcjJBGCQ6CH3/PuNimZqYVwGuJQkP9R1gkXDrUJGVBSqGTbmYU1/FEn5moMXM9hVIEpkoFkXcKWQkqhAK7Cua4VKWP0XE7ZgXBcKxRipIXiOU4WkKEb6qoJxHMeo2Fsa3DsKKFGK9F0OA8BgT4FIkYpe0x0ephXS9XPXB/ek/IiiGOp+2GHR6Ut+xCgKNAUvBoPWzZREKbWcg0QLFC286FPbgEmAtYDXldvcBAsAVlA4ICoBAAAQBgCdASoUABQAPm0ylUekIqIhKAgAgA2JYgCdMuupPaTZRidrS1AkiPucSIBn2njv8mB3bCHl0UAA/sPynHTVFV/WQNsFeUy/BzW49/xYSC4KiQk/Xz78H2eKANJUtFSPmd42bH9IPgl2w6pM+gXR38RHbFivVeT/ZWriIPpMm7x32rS9Q/Xbe5OYFk3C3Ki8ZM/eRtfVH51MiGbkxPxFbQxdLS/VQ/vn8Fs//b7wD1shm9qg5pVooR5g68VRQnuMLq/voF0J8mhQZ/E7+fFLmahf+kf2cmKjoasTqeDLc/TK+j4/rQK7P+JzJRQYszfzk37+xamq+SRqxFdCZRdyB3Bt0XZFGFsOIa7Z8A/p8i1Z2k7Aw31sTxonrQpIOALnSwRVZsKuQAAA",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Hadiah Poin \"Simulated Universe\"",
     "Kehormatan Tanpa Nama",
     "Penukaran Ember",
+    "Penukaran Starlight",
     "Hadiah Event Waktu Terbatas"
    ]
   },
@@ -173,7 +179,6 @@
    "rewardPath": "/material/635671",
    "comeFrom": [
     "Calyx \"Backwater Pass\"",
-    "Calyx \"Backwater Pass\"",
     "Penukaran Ember",
     "\"Omni-Synthesizer\" - Pertukaran Material"
    ]
@@ -209,7 +214,6 @@
    "rewardPath": "/material/836257",
    "comeFrom": [
     "Calyx \"Backwater Pass\"",
-    "Calyx \"Backwater Pass\"",
     "\"Omni-Synthesizer\" - Synthesis Material",
     "\"Omni-Synthesizer\" - Pertukaran Material"
    ]
@@ -227,7 +231,6 @@
    "rewardPath": "/material/866633",
    "comeFrom": [
     "Stagnant Shadow \"Great Mine\"",
-    "Stagnant Shadow \"Great Mine\"",
     "\"Omni-Synthesizer\" - Pertukaran Material"
    ]
   },
@@ -235,7 +238,7 @@
    "id": 920198,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "ed9df14a2fe247f4667c3573aa6eb1f367c5435d4c699eadef89c51e4d42d084",
+   "iconPath": "365bf3a80928eea605cbefd72636c62eb0c1887b4652520c3e9c3f99a55f0cb9",
    "name": "Sprout of Life",
    "desc": "Tunas muda yang muncul dari Seed of Abundance. Dapat meningkatkan level Trace milik karakter <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abundance</span> dalam jumlah sedang.",
    "lore": "Kehangatan yang memancar keluar, kehidupan dan pertumbuhan yang tumbuh subur di sekitar tempat dia berakar. Lahan tandus berubah menjadi padang rumput yang subur, tumbuh-tumbuhan yang mati menumbuhkan bunga umur panjang lagi, dan mata air yang jernih menyembur keluar dari dalam tanah untuk melembabkan tanah.<br />Saat kamu semakin dekat dengannya, otot dan tulangmu berkedut dan menyebar dengan rasa menggeliat yang tidak tertahankan.<br /><br />\"Hidup tidak pernah gagal di tempat jiwa berkelimpahan.\"",
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920198",
    "comeFrom": [
-    "Calyx \"Backwater Pass\"",
     "Calyx \"Backwater Pass\"",
     "\"Omni-Synthesizer\" - Synthesis Material",
     "Penukaran Ember",
@@ -482,7 +484,7 @@
   {
    "id": 5,
    "iconPath": "c56186a62771793cd6e189807d0f0ec7d54e9dc2e568da6a7cd0a60e2d4eaf7b",
-   "artPath": "0241f0c53255e855d31cb665934e43063a91b1ec685de9e7e9ad706183dc1255",
+   "artPath": "0bea34eb5254b8014df948bbaf32626dc50fbeea9efa5ff0effda10686cc1861",
    "name": "Preventive Treatment",
    "descHash": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
    "params": []
@@ -1633,18 +1635,22 @@
  "skillTreePoints": [
   {
    "id": 1105101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1105202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1105203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1105204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1770,18 +1776,22 @@
   },
   {
    "id": 1105102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1105205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1105206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1105207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1911,10 +1921,12 @@
   },
   {
    "id": 1105103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1105208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -1947,6 +1959,7 @@
     },
     {
      "id": 1105209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2018,6 +2031,7 @@
   },
   {
    "id": 1105201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2046,6 +2060,7 @@
   },
   {
    "id": 1105210,
+   "anchor": 18,
    "type": 2,
    "children": [],
    "embedBuff": {

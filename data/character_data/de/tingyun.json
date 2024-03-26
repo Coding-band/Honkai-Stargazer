@@ -5,6 +5,11 @@
  "figPath": "2a48af52d36e930a80fea4f99e2a331ff4a6aa0af2918fa78be049ddff911803",
  "fgPath": "58d0fa2f28bf9a077d7159bb47c13693246972aeb34f6fcb47382e5bd7eda96b",
  "splashIconPath": "5783094adf4d188a7bb78f083c9cb67d933f3409af2bd627f292ba1ce3be200b",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRpACAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAIBAAABkGJr2yI270CYmZkXEMWOE8fJAjiRzOCYo0hGR/d0C9yqOmbm+d9XzEzXEBETAL+NxsMKBNoItlDz+PrzVHN7VHYcQiNRK+r3yx/PXj6fgB0AXMgYBbIFNgB3cEGiaGjML23BhYNuyaNIiqRuemC5uNUfivJT/8yHNKD8rxgmGr1PzD9/KpIKJvXttLFaMgonqT9LddPbniHJIP3TnVh0DnzWX4XI6M02HGBE+ivRZ/S5DC5soPxKHkXKeHo3kwYADmIv5Rnxn/RHbzJgAXCBu5Invbynf81w4LcRO/xeZrmg9PuHCIRawKoWAZTtRIXBstE2EQcbtvMfsGDtVsCy4QdWUDggaAEAAHAHAJ0BKhQAFAA+bTCSRyQioaEoCqiADYlsAJ0yhHV3ptyHaijMbYDnsNxA9hjnyfZDfAGc5m7Wc79hOcbbmZpvys+AAP7ZLV7uahpkXkwp++zwrfK9+0r48nav2DHPvkJWXEEAM9sJRSyrAeHZQsmH1OAZeYY+26N3XmklI/8GFsSE5kBlZZafy/+/ny34XLZ9jZcHblFVgVN5JT/+f5PZv5lTMee2YwW+FRgdKw3ccE4rZ+c65lix7DsZDncL9cQO8ec3MaaLgHh26Zdbp3f56uO9UT19bb+yvmXZeoGJsONaeQ6Xxwy49nZ2LqY7sb3Hgsjni7fdWf7G3IpGxPp4i4pXAY9VC0PIgAkQvr7o0P009QSxa6qQN17e6jBuRkHxxoId2FOsdHyQgUAxvkFyFkz5dEUbkpXJt/N/u/5/47XSoCsun+dAgkmHPmZ36/eg7GxPHZzP6W22raUhyFPR2pxcYAAAAA==",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -20,7 +25,7 @@
    "purposeId": 11,
    "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
    "name": "Credit",
-   "desc": "Diese Währung, die von der Interastrale Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
+   "desc": "Diese Währung, die von der Interastralen Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
    "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
    "purpose": "Gemeinsame Währung",
    "rarity": 3,
@@ -49,6 +54,7 @@
     "Punktebelohnungen in der Universum-Simulation",
     "Namenlose Ehre",
     "Glut-Tausch",
+    "Sternenlicht-Tausch",
     "Belohnungen für zeitlich begrenzte Aktionen"
    ]
   },
@@ -64,7 +70,6 @@
    "rarity": 4,
    "rewardPath": "/material/151160",
    "comeFrom": [
-    "Ruhender Schatten (Korridor der verhallenden Echos)",
     "Ruhender Schatten (Korridor der verhallenden Echos)",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -148,7 +153,7 @@
    "id": 633445,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "c3cb2e5eb5390586c537d03d1de632b1aa59c49a3cc32f24d68672d2f97fb1e5",
+   "iconPath": "fc1f8e93b552510a719e96df3c4e48ace4f905d262668303315d785b951a7c04",
    "name": "Unsterbliche ätherische Blume",
    "desc": "Neue Blume, die aus einem alten göttlichen Konstrukt erblühen. Ein normales Material zur Verstärkung.",
    "lore": "Die Quelle der „Endlosen Lebensdauer“ der langlebigen Xianzhou-Spezies. Die Überbleibsel vom einstigen Einfluss des Äons des Überflusses. Nach endlosen Versuchen gelang es der Flotte, die nach der Medizin der Unsterblichkeit suchte, das Antlitz des himmlischen Wesens zu erblicken. Das göttliche Wesen ließ seine Segnungen in materieller Form herab, und der Himmelsbaum trieb seine Blätter aus.<br /><br />„Neue Knospen steigen in den Mond hinab, göttliche Blumen blühen an den Wolken. Im Wimpernschlag einer Blüte kehrt altes Holz in einen jugendlichen Hain zurück.“",
@@ -174,7 +179,6 @@
    "rarity": 2,
    "rewardPath": "/material/635670",
    "comeFrom": [
-    "Blütenkelch (Robotersiedlung)",
     "Blütenkelch (Robotersiedlung)",
     "Glut-Tausch",
     "Omni-Synthesemaschine – Materialtausch"
@@ -211,7 +215,6 @@
    "rewardPath": "/material/836256",
    "comeFrom": [
     "Blütenkelch (Robotersiedlung)",
-    "Blütenkelch (Robotersiedlung)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -228,7 +231,6 @@
    "rarity": 3,
    "rewardPath": "/material/920197",
    "comeFrom": [
-    "Blütenkelch (Robotersiedlung)",
     "Blütenkelch (Robotersiedlung)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Glut-Tausch",
@@ -1610,14 +1612,17 @@
  "skillTreePoints": [
   {
    "id": 1202101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1202202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1202203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1714,14 +1719,17 @@
   },
   {
    "id": 1202103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1202208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1202209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1754,6 +1762,7 @@
       },
       {
        "id": 1202210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1854,10 +1863,12 @@
   },
   {
    "id": 1202201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1202204,
+     "anchor": 12,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -1890,6 +1901,7 @@
     },
     {
      "id": 1202207,
+     "anchor": 15,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -1947,14 +1959,17 @@
   },
   {
    "id": 1202102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1202205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1202206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2527,7 +2542,7 @@
   },
   {
    "id": 68,
-   "title": "Schatz öffnen 1",
+   "title": "Schatz geöffnet 1",
    "text": "Das wird bestimmt einen guten Preis erzielen.",
    "unlockRequirement": "",
    "cnUrl": "ee8f91385562cf57ddda4eaf8f3cb4dd0f1132fc66b5f6b8ac75d1c68d91dfb3",
@@ -2537,7 +2552,7 @@
   },
   {
    "id": 72,
-   "title": "Schatz öffnen 2",
+   "title": "Schatz geöffnet 2",
    "text": "Das ist ganz nach meinem Geschmack.",
    "unlockRequirement": "",
    "cnUrl": "aa4dc2b2af15a7b4e7ecf6116876686e89e9818c271e97a7a7d9ed5c0baa60ca",
@@ -2547,7 +2562,7 @@
   },
   {
    "id": 73,
-   "title": "Kostbaren Schatz öffnen",
+   "title": "Kostbaren Schatz geöffnet",
    "text": "Was für ein Glücksfall ...",
    "unlockRequirement": "",
    "cnUrl": "f99fec0f5f81b972f49c42b59a9cacd27ec0cec6e1d0cdd0c13ea44c6f8c4816",
@@ -2723,7 +2738,7 @@
  "name": "Tingyun",
  "rarity": 4,
  "descHash": "Eine Botschafterin der Himmelreisekommission der Xianzhou Luofu. Sie ist in Begleitung einer geschäftlichen Delegation unterwegs, um Handelsbeziehungen und Allianzen mit zahlreichen Welten zu schmieden.",
- "artPath": "85c66cb308c861adce1cf3584e9c8300650ace766692207455051ccbc51d529c",
+ "artPath": "f4a9fbe70a796fa3aed278e6b7e054702dac6daeabca8f0ca1c7353e5d8cfa9f",
  "miniIconPath": "022c9f1b888c7ca0286cdfc82d671f0b938e3fe5b3d93d2e5ba9ab3d09fa90b9",
  "damageType": {
   "id": 8,

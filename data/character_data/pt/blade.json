@@ -5,6 +5,11 @@
  "figPath": "11c6329ed25e3a38bb2fd66926f95854dc76c9bd31ead6b321bae6d60cc89fac",
  "fgPath": "f8aa975d5a97251b0ded3c260c4222053fd3db46305fa9c61fa50125072238e8",
  "splashIconPath": "abe3ea520dfa18fddefdf3b5ef27b27a2e4d2f49d979d7585b6fbf273b25ecae",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRlgCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSP4AAAABkLL9//nX6t8/zGzemqPNZG/ZVlpd8toWcVxPOw/AdlSybfy+3/c7/BERE4CwLvpPriXBQZTJsRiRdD4JkR3kFOO2fgdqgB8B6fkVowpodDkebhgHZTUTD2Qpo7OAGwIX3gUZkQx0BnBCPOzqn0iKRgfhsPWbDKFo1Q4XCV6HZERKpALdSICT3vxIgUiFklazQOnqW1lSDCOjJzUpuedkSVFhSX1dKcBJGYqK4lcNsCdDKpLV0wRgX4HIMKSMbgEoeKn/IkWRsv+1DRdo+6h/lqS1NpAOfAAOih9KNlDor0XAAeAj9/hziZ8fvrnTDMdBqAckdq73ZMQUAx4AAFZQOCA0AQAA0AUAnQEqFAAUAD5tLpJGpCKhoSgNUIANiWoAnTLrtImFfKzfBmRC+7GCdGB0llCnwMEEdzQ0AAD+cH8w3/Em+e3eULMZ2D0SLtakGPRi7no/6QQVrKdvtAG8Qazp/vl2Lc8EI0B6/mLIRXbtceJHEMA+baze0p5AO/WpsPDIRHRZHmZ9Kg6xXNhYyevG3vg829DHTCzj9uAErDdBk0smljBi4Dn0iPCOJRFeyl/g0SIEcmE9zxfcaAVVRY/RM4IzkSBQXkuBH3/Osvwj2ejZfgAWM8Va95fVlLnY8cnOO/id/H5dvElVb/Dv6OTJI+ZsDT/CxOeLTSbh0pjfHv9VKhEAo8jz6uy0m2t5a701vbO+fqg6f8/8vjjOE///Q7vx/+hu9tN/09HhM5KXp80Nc/LK1AA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Recompensas de Pontuação do Universo Simulado",
     "Honra dos Inominados",
     "Troca de Brasas",
+    "Troca de Luz Estelar",
     "Recompensas de Evento por Tempo Limitado"
    ]
   },
@@ -59,7 +65,7 @@
    "iconPath": "9794d4b9cee70ded671331e6e9eec06326dcb9428d59540d9960f2a0bbea00e1",
    "name": "Arrependimento do Ochema Infinito",
    "desc": "Material avançado para subir o nível de Rastros.",
-   "lore": "Não importa quantos corpos sejam roubados, seus desejos se mantêm incompletos. Como aqueles que buscam os remédios da imortalidade, anseiam por um receptáculo imperecível, um que vai acabar com seu medo da destruição. E ainda assim, sabem que este é um sonho que nunca se realizará.<br /><br />\"Eu vi incontáveis mundos devorados pela conflagração da Mácula, e eu era uma de suas chamas. Eu dancei e rodopiei em seus dedos, perfeitamente ciente que, caso o combustível se esgotasse, este fogo também se extinguiria...\"",
+   "lore": "Não importa quantos corpos sejam roubados, seus desejos se mantêm incompletos. Como aqueles que buscam os remédios da imortalidade, anseiam por um receptáculo imperecível, um que vai acabar com seu medo da destruição. E ainda assim, sabem que este é um sonho que nunca se realizará.<br /><br />\"Eu vi incontáveis mundos devorados pela conflagração da Mácula, e eu era uma de SUAS chamas. Eu dancei e rodopiei em SEUS dedos, perfeitamente ciente que, caso o combustível se esgotasse, este fogo também se extinguiria...\"",
    "purpose": "Materiais de Rastro",
    "rarity": 4,
    "rewardPath": "/material/186254",
@@ -163,7 +169,7 @@
    "id": 633445,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "c3cb2e5eb5390586c537d03d1de632b1aa59c49a3cc32f24d68672d2f97fb1e5",
+   "iconPath": "fc1f8e93b552510a719e96df3c4e48ace4f905d262668303315d785b951a7c04",
    "name": "Floresciaéreo Imortal",
    "desc": "Novas flores crescendo de dentro de uma construção divina antiga. Material normal usado para aprimoramentos.",
    "lore": "A fonte da \"Duração Infinita\" dos macróbios do Xianzhou, resquício da influência do Aeon da Abundância. Depois de inúmeras provações, a frota que saiu em busca do remédio da imortalidade conseguiu avistar o semblante do ser celestial. A divindade ofereceu suas bênçãos em forma material, e assim nasceram folhas da Árvore Ambrosiana.<br /><br />\"Novos botões descem à lua, e flores divinas brotam nas nuvens. Breve como a vida de uma flor, a velha madeira volta a ser um pomar jovial.\"",
@@ -189,7 +195,6 @@
    "rarity": 2,
    "rewardPath": "/material/635673",
    "comeFrom": [
-    "Cálice (Zona de Armazenamento)",
     "Cálice (Zona de Armazenamento)",
     "Troca de Brasas",
     "Sintetizador Omni — Troca de Material"
@@ -226,7 +231,6 @@
    "rewardPath": "/material/836259",
    "comeFrom": [
     "Cálice (Zona de Armazenamento)",
-    "Cálice (Zona de Armazenamento)",
     "Sintetizador Omni — Síntese de Material",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -243,7 +247,6 @@
    "rarity": 3,
    "rewardPath": "/material/920200",
    "comeFrom": [
-    "Cálice (Zona de Armazenamento)",
     "Cálice (Zona de Armazenamento)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas",
@@ -450,7 +453,7 @@
   {
    "id": 2,
    "iconPath": "431815f2f5df45b637ce26150aeeb45fc8b8023e934233e6a85c0cac24a99e55",
-   "artPath": "e1b56b80612497491e400f9a82c0bc5edc153346b19118b4ac52eacd7403a765",
+   "artPath": "9168b053911c0f1291a72a672d2f0bb3d4df74ca0f5794925baa513489533196",
    "name": "Dez Mil Mágoas de Um Sonho Destruído",
    "descHash": "Quando Blade está no estado de Paisagem Infernal, sua Chance de CRIT aumenta em <nobr>#1[i]%</nobr>.",
    "params": [
@@ -468,7 +471,7 @@
   {
    "id": 4,
    "iconPath": "376ecf196b5fff3ac69d210055f9587dadb6c449b2e62bb9a956a545a7c4680a",
-   "artPath": "660d216681b295e722c743629951041922ca530e40a60f08eb66f75f2fa8feb2",
+   "artPath": "bc12f53a82adcc72bcea8cc500032a94ebfc952e61f9b7e62a3c7d03b9007b14",
    "name": "Rejeitado pela Morte, Infectado com Vida",
    "descHash": "Quando os PV atuais de Blade chegam a <nobr>50%</nobr> ou menos de seus PV máximos, aumenta os PV máximos dele em <nobr>#1[i]%</nobr>. Acumula até <nobr>#2[i]</nobr> vez(es).",
    "params": [
@@ -1710,7 +1713,7 @@
    "energy": "0",
    "id": 782077,
    "name": "Vento do Carma",
-   "iconPath": "ac684c49b9b4e07bbfd9bdcd4d170f5a5e449dac6269460140b9695c2c02332f",
+   "iconPath": "d7132102afb878817fd978bc65b04fb1d6682ee6dcc0389a44664d9fe260773d",
    "typeDescHash": "Técnica",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1928,18 +1931,22 @@
  "skillTreePoints": [
   {
    "id": 1205101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1205202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1205203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1205204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2065,18 +2072,22 @@
   },
   {
    "id": 1205102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1205205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1205206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1205207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2207,14 +2218,17 @@
   },
   {
    "id": 1205103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1205208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1205209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2247,6 +2261,7 @@
       },
       {
        "id": 1205210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2347,6 +2362,7 @@
   },
   {
    "id": 1205201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2688,7 +2704,7 @@
   {
    "id": 30,
    "title": "Sobre o Sam",
-   "text": "Eu vivo em um eterno purgatório. E Sam... ele é ótimo em criar um purgatório.",
+   "text": "Eu vivo em um eterno purgatório. E o Sam... ele é ótimo em criar um purgatório.",
    "unlockRequirement": "",
    "cnUrl": "5f5cb678bb31efb9dcaf16fb44b6c11221a86ad3436df7eac2a8cd6331312949",
    "jpUrl": "4df5ea65ba92afb37b437a04f96b777eb33bec8e126e4e4bb0514237028f49fa",
@@ -3063,8 +3079,8 @@
  "name": "Blade",
  "rarity": 5,
  "descHash": "Membro dos Caçadores de Stellaron e espadachim que abandonou seu corpo para se tornar uma lâmina. Jura lealdade ao \"Servo do Destino\" e possui uma habilidade de autocura aterrorizante.",
- "artPath": "3a0f398ff02c78fb422ea4b21ef0d5b1bac4ffc763f305842a7beb164573c956",
- "miniIconPath": "b1ce6ee69e127b78410b13695e593edd145241a15a6500f116b0180b38a19afb",
+ "artPath": "96d566e5f8f28bb38c4fce69c423f3aed081925580ec61d1a4bf426e7122ef4c",
+ "miniIconPath": "8bda44f7d830c40e37d5972c91697ea3afeab39675cf387a70aa19bf3f856c50",
  "damageType": {
   "id": 16,
   "iconPath": "2f3d2fba0ee9442f1c51cf42a91af6f9ece3f19168237fd3963d352e508791c7",

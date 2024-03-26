@@ -1,10 +1,15 @@
 {
  "spRequirement": 120,
  "iconPath": "1b00b74a9c683f9e2c151787f6cfe4a0695d1f0910c6131dc1b59ae20ecf81d8",
- "bgPath": "1b0d263c6609b725fac83ed51a021620b75ae1bb0f2d826e8aa9fe74c760f4bf",
+ "bgPath": "605d5851c77bf8d769310493c22dc26315e93fd01fb76dd4c4ab77d191b3ee6d",
  "figPath": "70c986fa335c0e4117b17d9b2a77e288de626792c12819a8756a3f2ade53ab00",
  "fgPath": "3d96f0f89279e0604f2c73d3183b0d41a1a5aebc755e1f8b50d0ff5853dd959f",
  "splashIconPath": "0c1fcaf8492a4c459c33f08fc8f052715ebeaa31946fd0434b7bb943eaaf0b09",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRpwCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSBoBAAABkHNb27HH0q/7iW3bdlJZpW07KW21Gqv6quls27ZtVPb7PPdYETEB+HPCzwkQICIAhJ8TfkkAPCwAAcBRmCa42AZ42hoZercAMHH3pMGzZ3d53Hu2XVeCxeFGWYg5Vmpzi1me1phZN7cS/SGW9TXtyz7JL8xKfvly5oJzTScs8hGku8tSaUpJfunevsM6BRMjfrdZKqUU867YKZ7sC4LZIam+sFKs8ZHpg7ol7/JBoN38WSmlNO05l7vs64IguJ9iZpaS+VOL9fVsCOih5vHqta8/Mm/asGotT0AfEMjYca5nYMWlfbMv7k514ec2hff5zqILa65vi8evCRX7nmYBsIHQ+wUE0Pl0rqo7kfC7RAhMSnDDf0mCfgdWUDggXAEAADAIAJ0BKhQAFAA+bTCSRyQioaEoCqiADYlsAJ0yhHUHo1Et/yWIA70DfVesA9CXpHf219HAwHbLgXq3+CkQ5yazw12lSzsqIGoAAP7zegDL+kvpW1PEWXhxDWbUudHgHwW662PyvAsRBo+pOcGBSb74NZDvn32Gn5mh5xZKz3TCp+eK8q4ZPh6rYbXVALalx3je6Nlvc9SK/1pE+lWOeCWmQxndIR/+VNxZKm9uY5zIYi82OU5xzCHDABKSaw+L1FGi22m/b4lygsYeiSDDDt5SGWhEWcbVATRGszipGmvrw+kOBgVnnwoaye+gohebuppzlhl1VZT5/f9ShEViygwbv4nfMmWUHBegVH8mcbU/g3XKURojXJu69wC0aA4PUjwQGUQH74e16cMJpkG86neKrbSrfGXiJT4yj7KR/f3ycb4vne6X/x637I/xpfk7ob/9auSXSqKnVUQAAA==",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Recompensas de Pontuação do Universo Simulado",
     "Honra dos Inominados",
     "Troca de Brasas",
+    "Troca de Luz Estelar",
     "Recompensas de Evento por Tempo Limitado"
    ]
   },
@@ -173,7 +179,6 @@
    "rewardPath": "/material/635673",
    "comeFrom": [
     "Cálice (Zona de Armazenamento)",
-    "Cálice (Zona de Armazenamento)",
     "Troca de Brasas",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -209,7 +214,6 @@
    "rewardPath": "/material/836259",
    "comeFrom": [
     "Cálice (Zona de Armazenamento)",
-    "Cálice (Zona de Armazenamento)",
     "Sintetizador Omni — Síntese de Material",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -226,7 +230,6 @@
    "rarity": 3,
    "rewardPath": "/material/920200",
    "comeFrom": [
-    "Cálice (Zona de Armazenamento)",
     "Cálice (Zona de Armazenamento)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas",
@@ -438,8 +441,8 @@
  "ranks": [
   {
    "id": 1,
-   "iconPath": "f33f300ec83ef46ed8d31e093cd0e1d34f18790dbcd71b7f0a8ae2a627885663",
-   "artPath": "e8f0c5d68b8ca8c26f08904fa7df57f9f2596e07ba0b7b07f770cb279d115db5",
+   "iconPath": "3380c39f1cfbbb2d273bed2e466e17b049700d4be3ed5bd58f4602d8ec877c46",
+   "artPath": "340d77d5a9c18d3d7fb497d5224098ef6e503618855b130c5d4e98324ba10ffe",
    "name": "Deus Ajuda Quem Cedo Madruga",
    "descHash": "A Perícia Aprimorada causa <nobr>#1[i]%</nobr> a mais de Dano.",
    "params": [
@@ -448,7 +451,7 @@
   },
   {
    "id": 2,
-   "iconPath": "9e96cddc93c7c184081f09dc1cabbb3b804dcc541d629fd83f30c0f547ffaa7f",
+   "iconPath": "b00e82d2328bc654ca66c692976b9904597cc1ff53160c3f689a1ba3231bddfa",
    "artPath": "b05ea27426573d5bfda8068b35e592275e2971b143e8f9a9901ec518360bcc32",
    "name": "Barriga Sã, Corpo São",
    "descHash": "Estende a duração de Queimadura causada pela Perícia em <nobr>#1[i]</nobr> rodada(s).",
@@ -458,7 +461,7 @@
   },
   {
    "id": 3,
-   "iconPath": "640ac94ac0b48afc7bdd8b3afeeab7f5ac0467411886e85ec812265e7cbd9a98",
+   "iconPath": "950a6d558b08c07b0e7c207ab6f489304a01a17ed26709fdcf6cc80ffa479da5",
    "artPath": "3a80c0de3ee1f843cf4a362c7ea569c2b25aaf311f47141e77486d2bec448868",
    "name": "Não Seja Implicante, Nada É Deselegante",
    "descHash": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
@@ -476,8 +479,8 @@
   },
   {
    "id": 5,
-   "iconPath": "4f0579dc94251c8fc9e91d078b312e3f4682072278bbf996475edc6e5f27fba4",
-   "artPath": "d4679dab6d9e5ebb5f90916857ee33d472a8e27dd687bfc745dd8e491919771d",
+   "iconPath": "416277872aa66dde583ae0b84cca3096c2a70d4741734af63070bb1b36b10690",
+   "artPath": "c6aabfd68ee3a3e01d7afa87a7fb405f122edb49cb881fc547b89e4410e62e81",
    "name": "Conheçam os Feitos das Toupeiras",
    "descHash": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
    "params": []
@@ -520,7 +523,7 @@
    "energy": "20",
    "id": 935680,
    "name": "Hehe! Não Vai se Queimar!",
-   "iconPath": "15c7155b98a734ed6a904de3dfa88452627e5834fdbe8b35be72958dd9c2142c",
+   "iconPath": "d3a044e262e94d2c2cfd3c03fc01680d13bdcc74ac41c01c1ee510f6e2df0187",
    "typeDescHash": "ATQ Básico",
    "levelReq": 0,
    "promotionReq": 0,
@@ -681,7 +684,7 @@
    "energy": "30",
    "id": 252911,
    "name": "Ei! Lembra da Hook?",
-   "iconPath": "640ac94ac0b48afc7bdd8b3afeeab7f5ac0467411886e85ec812265e7cbd9a98",
+   "iconPath": "950a6d558b08c07b0e7c207ab6f489304a01a17ed26709fdcf6cc80ffa479da5",
    "typeDescHash": "Perícia",
    "levelReq": 0,
    "promotionReq": 0,
@@ -997,7 +1000,7 @@
    "energy": "5",
    "id": 136266,
    "name": "Bum! Lá Vem Fogo!",
-   "iconPath": "3da127e3122f2f8879840bedc648c41c68d752a54f7f34a8a04799f2887c7b84",
+   "iconPath": "67c7af353a86839663c8d275ca44404c63114a28c3df3bfdf66391f0df98706b",
    "typeDescHash": "Perícia Suprema",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1268,7 +1271,7 @@
    "energy": "0",
    "id": 651153,
    "name": "Ha! Óleo nas Chamas!",
-   "iconPath": "c5b4276fb9a2bc7054b9364c6040d07b5f179a9eeb792ba3ce1ff9f0e381cb04",
+   "iconPath": "3db9479e9eed9367331c230e4e9ce82b10b212e657ddc1ec61b7a2d6d298a7db",
    "typeDescHash": "Talento",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1554,7 +1557,7 @@
    "energy": "0",
    "id": 851739,
    "name": "Ataque",
-   "iconPath": "15c7155b98a734ed6a904de3dfa88452627e5834fdbe8b35be72958dd9c2142c",
+   "iconPath": "d3a044e262e94d2c2cfd3c03fc01680d13bdcc74ac41c01c1ee510f6e2df0187",
    "typeDescHash": "",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1576,7 +1579,7 @@
    "energy": "0",
    "id": 767798,
    "name": "Argh! Olha Essa Bagunça!",
-   "iconPath": "6cf827fb01dfd433d14a18de026abc62d0cb832991a55637c4da82dbd5808a78",
+   "iconPath": "9907306f7e79998b728613d75eb912b0dafd3a9cf696a3a0f4208f430d9fb68d",
    "typeDescHash": "Técnica",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1603,7 +1606,7 @@
    "energy": "30",
    "id": 198744,
    "name": "Ei! Lembra da Hook?",
-   "iconPath": "640ac94ac0b48afc7bdd8b3afeeab7f5ac0467411886e85ec812265e7cbd9a98",
+   "iconPath": "4bcb809643b40792dcb255b9ee8cb7130e86d3f19e450deb365d201c107b391b",
    "typeDescHash": "Perícia",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1930,18 +1933,22 @@
  "skillTreePoints": [
   {
    "id": 1109101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1109202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1109203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1109204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2067,18 +2074,22 @@
   },
   {
    "id": 1109102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1109205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1109206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1109207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2173,7 +2184,7 @@
     "ultimateCost": 0,
     "id": 572888,
     "name": "Ingenuidade",
-    "iconPath": "5e8461c210759847bce60a6cee8567d9ce1cb9e47a3a24a62929b13d279b169d",
+    "iconPath": "6fc525587453362cd1c589b89de36386bbcdfecac3bef1593f59cf9d8673ada3",
     "levelReq": 0,
     "promotionReq": 4,
     "levelData": [
@@ -2208,14 +2219,17 @@
   },
   {
    "id": 1109103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1109208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1109209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2248,6 +2262,7 @@
       },
       {
        "id": 1109210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2313,7 +2328,7 @@
     "ultimateCost": 0,
     "id": 572887,
     "name": "Brincando com Fogo",
-    "iconPath": "59b88f385d6f18ff524b006fe3db041cce2e1c545dec58bd37c90580dada6307",
+    "iconPath": "5b7c92a4f24a386b7117ad9adc8708fc19cab6663907cc2ba9761ad5d7e62222",
     "levelReq": 0,
     "promotionReq": 6,
     "levelData": [
@@ -2349,6 +2364,7 @@
   },
   {
    "id": 1109201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -3025,7 +3041,7 @@
  "name": "Hook",
  "rarity": 4,
  "descHash": "Chefe (autointitulada) de um grupo aventureiro do Mundo de Baixo, as Toupeiras. Adora a liberdade e vê a vida como uma série de aventuras.",
- "artPath": "854253fdecb46d0ac93ce20bb3d421841a6a3d781693bffb2e56a7967531fa74",
+ "artPath": "6b9f0d3eaa7d240b3dc49f9fbb0f6e5afee0402477861422f627cfcb407019ce",
  "miniIconPath": "edd07b0bf4c84581a3b73d0623e1ece5cf8dbd71d80f91cd13f454892faf1233",
  "damageType": {
   "id": 2,

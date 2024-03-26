@@ -5,6 +5,11 @@
  "figPath": "8095125b1386302ee5cc69330519ceaa2633a4ee258af08a7b81dc358184f434",
  "fgPath": "059cdf4ec1eab9c4a8825c49f4b58d40771de7a63af005c59e1b3df04f51f40b",
  "splashIconPath": "6822455c0a99b390bc06cf51b668e540037871a57795dba58518d99689e71425",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRloCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSPQAAAABkKNt27FH9xPbbK3WqrUD2066jNVnEVPaxgJc2ijtmfe578GPLUTEBCCqJZghZjNDvAYAKXmtjZ0VFsWQVJ458/iRPm8PZMASDACSNr+9l+Q6iIgGFE5+lBjc9W6kAFlN3TDskTspyqUvp17oSDa67skpSZS7JIVZjEoUSYoig7s+VmNLzogiSdE1iJ6fIin9J9J1swH9YkRRohh0OBW4qUBKlEhSb3/PJ6Bb7iRFigw6XgMA5xV+OyO6/1qGwZB7XfLfIYRfv6ljSACQgJTubUX+caUMBgAGYPz4jft3Dq02AIbIiQYg0QDAEGOiAUhMNPwPVlA4IEABAACQBgCdASoUABQAPm0wk0ckIqGhKAqogA2JaACdMoR10sxxSWmzbyqSpzxnDfWY6J5ABQhk/IHcmOd30+PgAP0k8uni8YJFTIWLiaTqwMdwRf7VI3penc1rwIaN4kbnSCwg3it2OsigAkKkwJimGF/unOKGNYsja+RqzU/njd31F/ntEfr9PZQTRq2OtAyGKDdKEnKcfWKswx0LBFhr9qU25J8d7G8jq5BWNYqNLU6VrBt6iaaOnQ9k9xRKd45rMWNz5grT9cACzaF4hFBKCcc7TzQOYkJXiQs22KfGRzZjGfVfcBY6CgXH+T37rcLFZ4HJCCYRwbrtKSeaHFoXStYh8PY8Iy8a3UCIj/P/Md0L1qm1YMShKstnK+daDIZcP0zyCXuwWIE0+PQ9UXnYd4kDjBYhwfyXxv+Ro2lrtFYAAA==",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -21,7 +26,7 @@
    "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
    "name": "Điểm Tín Dụng",
    "desc": "Tiền mà Công ty Hành Tinh Hòa Bình (IPC) dùng để giao dịch với khách, nay đã trở thành đồng tiền chính khi đi lại trong vũ trụ.",
-   "lore": "\"Mọi người bôn ba, đấu tranh, mua bán, cũng chỉ là vì những con số xuất hiện ở điểm cuối. Nhưng thứ quý giá thật sự, lại không thể mua được con số của công ty.\"",
+   "lore": "\"Người ta bôn ba, tranh đấu, mua bán, cũng chỉ vì những con số xuất hiện trên thiết bị đầu cuối. Nhưng thứ quý giá thật sự, thì con số của công ty lại không thể mua được.\"",
    "purpose": "Tiền Tệ Thường",
    "rarity": 3,
    "rewardPath": "/material/29328",
@@ -49,6 +54,7 @@
     "Thưởng Điểm Vũ Trụ Mô Phỏng",
     "Vinh Dự Vô Danh",
     "Đổi Tro Tàn",
+    "Đổi Ánh Sao",
     "Phần Thưởng Sự Kiện Hạn Giờ"
    ]
   },
@@ -135,7 +141,6 @@
    "rewardPath": "/material/468391",
    "comeFrom": [
     "Hư Ảnh Ngưng Đọng - Lằn Ranh",
-    "Hư Ảnh Ngưng Đọng - Lằn Ranh",
     "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
    ]
   },
@@ -190,7 +195,6 @@
    "rewardPath": "/material/635671",
    "comeFrom": [
     "Đài Hoa Nhân Tạo - Lằn Ranh",
-    "Đài Hoa Nhân Tạo - Lằn Ranh",
     "Đổi Tro Tàn",
     "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
    ]
@@ -226,7 +230,6 @@
    "rewardPath": "/material/836257",
    "comeFrom": [
     "Đài Hoa Nhân Tạo - Lằn Ranh",
-    "Đài Hoa Nhân Tạo - Lằn Ranh",
     "Máy Ghép Vạn Năng - Ghép Nguyên Liệu",
     "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
    ]
@@ -235,7 +238,7 @@
    "id": 920198,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "ed9df14a2fe247f4667c3573aa6eb1f367c5435d4c699eadef89c51e4d42d084",
+   "iconPath": "365bf3a80928eea605cbefd72636c62eb0c1887b4652520c3e9c3f99a55f0cb9",
    "name": "Mầm Sống",
    "desc": "Mầm non nhú lên từ hạt giống Trù Phú, có thể tăng tương đối Vết Tích Vận Mệnh của nhân vật <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Trù Phú</span>.",
    "lore": "Tỏa ra từng luồng hơi ấm, tất cả những nơi mà bộ rễ này cắm xuống đều xanh tươi um tùm. Đất hoang trở nên màu mỡ, thảm thực vật héo khô một lần nữa mọc lên đóa hoa trường sinh, dòng suối trong vắt từ trong đất tuôn chảy róc rách.<br />Đến gần nó, cơ bắp của bạn như có sự sống riêng của chúng, bắt đầu rục rịch sinh trưởng, tê rần kỳ lạ.<br /><br />\"Phàm là nơi tâm hồn sinh trưởng, cuộc sống sẽ không ngừng sinh sôi.\"",
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920198",
    "comeFrom": [
-    "Đài Hoa Nhân Tạo - Lằn Ranh",
     "Đài Hoa Nhân Tạo - Lằn Ranh",
     "Máy Ghép Vạn Năng - Ghép Nguyên Liệu",
     "Đổi Tro Tàn",
@@ -449,7 +451,7 @@
   {
    "id": 2,
    "iconPath": "471567f145711957f3278d6cb5e737231f9b34716a31d0410618d655ff78570c",
-   "artPath": "593e496141eb2a513f0ac091b9fd8db46bde0d0cd2c04ef875ea52843148a2de",
+   "artPath": "19ce981225c04a0ca629b8fbc36c8db0407067420492167fb4cd0a3bcaf84a04",
    "name": "Tịnh Đình Tặng Lễ",
    "descHash": "Khi kích hoạt hiệu ứng Chiến Kỹ, nếu phần trăm HP hiện tại của mục tiêu chỉ định của phe ta dưới <nobr>50%</nobr>, thì lượng trị liệu mà Luocha cung cấp sẽ tăng <nobr>#1[i]%</nobr>; nếu phần trăm HP hiện tại của mục tiêu chỉ định của phe ta từ <nobr>50%</nobr> trở lên, sẽ cung cấp cho mục tiêu đó một tấm Khiên có thể triệt tiêu sát thương bằng <nobr>#2[i]%</nobr> Tấn Công của Luocha +<nobr>#3[i]</nobr>, duy trì <nobr>#4[i]</nobr> hiệp.",
    "params": [
@@ -488,7 +490,7 @@
   {
    "id": 6,
    "iconPath": "0d80e385e207c140efabf788c696329cf7377002358d3e3994bf7822a8decc0b",
-   "artPath": "d2b11e65833bd329b587760d179af0a2211b2164d40ef90db836485e76fc2952",
+   "artPath": "960a1aba0737e6d5e210ebceba29d8ea47acf31947adbd98d89053a7433d53e1",
    "name": "Trở Về Cát Bụi",
    "descHash": "Khi thi triển Tuyệt Kỹ, có <nobr>#1[i]%</nobr> xác suất cố định khiến Kháng Toàn Thuộc Tính của toàn bộ địch giảm <nobr>#2[i]%</nobr>, duy trì <nobr>#3[i]</nobr> hiệp.",
    "params": [
@@ -1655,18 +1657,22 @@
  "skillTreePoints": [
   {
    "id": 1203101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1203202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1203203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1203204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1792,6 +1798,7 @@
   },
   {
    "id": 1203201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -1820,6 +1827,7 @@
   },
   {
    "id": 1203210,
+   "anchor": 18,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -1852,18 +1860,22 @@
   },
   {
    "id": 1203102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1203205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1203206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1203207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1994,10 +2006,12 @@
   },
   {
    "id": 1203103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1203208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2030,6 +2044,7 @@
     },
     {
      "id": 1203209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {

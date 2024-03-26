@@ -4,6 +4,11 @@
  "descHash": "Le disque du phonographe tourne sans s'arrêter. Même les cris rauques, pourtant assourdissants, sont atténués par la chaleur qui l'enveloppe.<br />Elle a l'air perdue au milieu de la mélodie enchanteresse :<br /><br />Tout commence par la supplication et l'anticipation...<br />... suivies d'une effusion passionnée...<br />avec une envolée après l'autre...<br /><br />... jusqu'à ce que le disque s'arrête de tourner et que les cris rauques se taisent.<br />« Mission accomplie. »",
  "iconPath": "ac62b25ca235430f33305231a9cfee9ca0319762e889b57d889946962be7a7d2",
  "artPath": "72c715983edd31f15b92b3f2a3d98bbc369c61e94b0d8f344b8ddd21a8928911",
+ "artPlaceholder": {
+  "data": "data:image/webp;base64,UklGRowBAABXRUJQVlA4IIABAADQCACdASoUABwAPm0sk0akIiGhMBgIAIANiWgAnTKEeZiB9BowG3E58zTM95znwLAEMw8gg+/lOLat5qRPSmOsRRz/mH+ns2rrJJfFUc0AAM41saA0B4ujQHxBVtYbwHV5hb6I7mDF8B3IzTNvZFVkQQT3hs1LWyTFn9kNzqC/6icS+O+HYsXxZBFJXh63aEz6xav2UZ1Ff0Pbf0VNLlBqURrXOF7/0FMBteef+26ZR3mf4tlJccXvpcfH+Y4Hqp4Jp2C5Dx/rKVOyE/WGzTAPT77wEcaTWYwp+dKmFDvF1OxJ0M9mUacHD/5wMw+AGW1/TiRhlQWd+eo2s384oluZBVgH6qve3Dd/4B72/WLRJc0Ow8354vbFYe1efrVSq2JH1zzfU8mdrcBj9cOgczIsOu+VrU+vvrta5M+QXH2fmPGoivez3w9Mgsy3hUnJbbit6Bi/8JtX61YBCc/o3yXv0E2sQY5s92URlvMYGaG1vVNaSCThij+4R8mwXNYAAAA=",
+  "w": 867,
+  "h": 1230
+ },
  "mediumIconPath": "d2bd53aac939e168315f959462aa22b12d8566e9a16068fc5d9a735d54559aae",
  "baseType": {
   "id": 0,
@@ -78,7 +83,7 @@
    "id": 635669,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "bb7670872389d870154ac70d1b29dee2d6c123f558951c6f914f1d9a70c28382",
+   "iconPath": "271b1f9a291c44b698190683f224996bae3b49e8e596c227b819b72c3a2b82dd",
    "name": "Obsidienne d'effroi",
    "desc": "Fragment de matière noire capturé dans le vide. Permet d'améliorer légèrement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilité</span>.",
    "lore": "Rien ne prouve son noumène.<br />Touchez avec délicatesse pour entendre un vague murmure de la part de l'éclat.<br /><br />« ████ ██ █ █ »",
@@ -86,7 +91,6 @@
    "rarity": 2,
    "rewardPath": "/material/635669",
    "comeFrom": [
-    "Calice de la Grande mine",
     "Calice de la Grande mine",
     "Braises immortelles",
     "Échange de matériaux de l'Omni-synthétiseur"
@@ -114,7 +118,7 @@
    "id": 694488,
    "type": 601,
    "purposeId": 5,
-   "iconPath": "b312ff6a1384893dedb2dfb4aae677674a521e4f1e5ebab7beb232e0abc03a19",
+   "iconPath": "026b806a3d824e733df266921f36f82bcff426f6ab12699ca5c4ad0c73723779",
    "name": "Éther condensé",
    "desc": "Matériau de renforcement de cône de lumière. Confère 2 <nobr>000</nobr> points d'EXP de cône de lumière.",
    "lore": "Une bouteille d'éther raffiné par des procédés spéciaux.<br /><br />« À manier avec précaution, ne pas faire tomber, ne pas appliquer de pression. En cas de dommage ou de fuite, se référer au chapitre II du \"Manuel de prise en charge des désastres\" pour une solution d'urgence. »",
@@ -178,7 +182,6 @@
    "rewardPath": "/material/836255",
    "comeFrom": [
     "Calice de la Grande mine",
-    "Calice de la Grande mine",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -195,7 +198,6 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
-    "Calice de la Grande mine",
     "Calice de la Grande mine",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles",
@@ -359,7 +361,7 @@
  "skill": {
   "id": 21022,
   "name": "Une mesure de pause",
-  "descHash": "Augmente l'effet de Rupture infligé par le porteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>, et augmente les DGT qu'il inflige aux ennemis affectés par Stupéfaction ou Faille du vent de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Cet effet s'applique également aux dégâts sur la durée.",
+  "descHash": "Augmente l'effet de Rupture du porteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>, et augmente les DGT qu'il inflige aux ennemis affectés par Stupéfaction ou Faille du vent de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Cet effet s'applique également aux dégâts sur la durée.",
   "levelData": [
    {
     "params": [

@@ -2,9 +2,14 @@
  "spRequirement": 120,
  "iconPath": "d7541862df7c75d215d3013b97b7d15c8260620d453405de8ec5b3219bc89720",
  "bgPath": "f9875e739a35145f60d26ab98bb7b94c8e0710283e4e7dab1cc9a65e3c596576",
- "figPath": "99ebbd369db2adf9e4860bfb128ece00b2c9bdf3fa6265486d2a946eae28f5a7",
+ "figPath": "615b83f29fbc122228297c29758dd2d7cad61b471c77f4d0b3be0044fc0ccdde",
  "fgPath": "2e9da4befdac98ad2633027365b60298d236ca6ce9fd0896f2dec33073474a40",
  "splashIconPath": "b86ed618c16cf8af3a5acca21fde505bb4d30a597618167cd8c25575da3678e8",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRowCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAkBAAABkGNb27E91/O+f2zbto3Wtp10SW9MwEmnynZS2rY1ABvPe53iwxgiYgKUPwmSxk9T0UGav37l180KxWjACeB1s4ppoTRpdQr/493i/qFAqjpLb8XMGcxTkhOk9kfAxpElKiUpUZh1IP6xbf6zRyqVShUPQ4axHTnRaVl3hVrXiZmNwebPd3Y3VtNtn7AxGJyxrEYVlRr7LSevidyvqERTweTawH9u9lWjk3d/Y8Bgm788V8NN239hG2wb/2eXNOoj/2PmXIwjz8onWkzezBgDcZASTXp6/sPP7zhmtuOPYcpfZ8iQK0DGufptKqeSgnLLznv88y+/1nWvqvwhTaQKzXsOHju7WYkAAFZQOCBcAQAAsAcAnQEqFAAUAD5tMJJHJCKhoSgKqIANiWwAuzMziDnC/S7YDn0fQBvFe8lVwBQI7twMjHKfSamicDQ2+zNtVnk+3CMLAAD9G6off+tW0Kf5JBBnDWCXLSLYqGn299yahF2DasIDB+qOWX57OV1qp6Vs+dPHnrpO7O08WwC6LAOg35OmoHKD0mVQoMYJ0IVJuWPuDqK5M0a82XhhFaic/BRBxL6yFN2u2VnUyi8ZGv/vpgkRK+4W9WoO8SoCvyz53lDv3bznRtmlYwirmaJov9omeiOp8OpJT3XV5Hxxvy99ISH0+S2w7Yiq/evrN9/5/8JfEHX/j3Vv9iBRd/6qLHwETfEZTAPyd1xbZ+VwpsrH9kgus37jfoHy7aQQzb7eDFgASfTfWL0qUwYTs9Nc/7yG/y/OPE/+YS4qSf9PmyadtKjgkjgdqA0wte671DMOU6dKjAYPhJjoAAAA",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Recompensas de Pontuação do Universo Simulado",
     "Honra dos Inominados",
     "Troca de Brasas",
+    "Troca de Luz Estelar",
     "Recompensas de Evento por Tempo Limitado"
    ]
   },
@@ -173,7 +179,6 @@
    "rewardPath": "/material/635674",
    "comeFrom": [
     "Cálice (Planícies Nevadas Distantes)",
-    "Cálice (Planícies Nevadas Distantes)",
     "Troca de Brasas",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -209,7 +214,6 @@
    "rewardPath": "/material/836260",
    "comeFrom": [
     "Cálice (Planícies Nevadas Distantes)",
-    "Cálice (Planícies Nevadas Distantes)",
     "Sintetizador Omni — Síntese de Material",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -243,7 +247,6 @@
    "rarity": 3,
    "rewardPath": "/material/920201",
    "comeFrom": [
-    "Cálice (Planícies Nevadas Distantes)",
     "Cálice (Planícies Nevadas Distantes)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas",
@@ -483,7 +486,7 @@
   {
    "id": 6,
    "iconPath": "ce30c0a8290fccd503d1709a0a1fdea5d6a3c8d470369f355b6349e56446a119",
-   "artPath": "56cc5af4e41aeca9f5871b604e43b6f4718a582381a448bf4aee1ee750222d90",
+   "artPath": "3dc3e18185b2f6908606bcbbf7fb4b9b633c92903964b25c1b81f8b22770dc16",
    "name": "Permanecer Como Água",
    "descHash": "O Bônus de VEL do Talento é acumulável e pode acumular até 2 vezes. Adicionalmente, após entrar em batalha, Sushang imediatamente ganha 1 acúmulo do Bônus de VEL do seu Talento.",
    "params": []
@@ -1621,14 +1624,17 @@
  "skillTreePoints": [
   {
    "id": 1206101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1206202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1206203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1726,14 +1732,17 @@
   },
   {
    "id": 1206102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1206205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1206206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1835,14 +1844,17 @@
   },
   {
    "id": 1206103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1206208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1206209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1875,6 +1887,7 @@
       },
       {
        "id": 1206210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1975,6 +1988,7 @@
   },
   {
    "id": 1206201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2003,6 +2017,7 @@
   },
   {
    "id": 1206204,
+   "anchor": 12,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2035,6 +2050,7 @@
   },
   {
    "id": 1206207,
+   "anchor": 15,
    "type": 2,
    "children": [],
    "embedBuff": {

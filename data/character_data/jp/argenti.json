@@ -2,9 +2,14 @@
  "spRequirement": 180,
  "iconPath": "40744974ebfc3d3ae6a1ef9a4aa112e0f758ccadd23c3eaa883d1ec79889864f",
  "bgPath": "5fd774f32eca8067858270006fa5c961289010c05a266eda8ee6bf8153af5d29",
- "figPath": "0efdba7a6a3e16f57991a816e5dd2ba42248ff128724ca1c5c45699c7cefb61e",
+ "figPath": "bfd8764654fa153739eea45808c81da90cd3666e530481b3819395fececf631d",
  "fgPath": "1b412d46e309f7e76af8cdc0d9ddf2c20988f91bf309a4d7099d80da8f441962",
- "splashIconPath": "0938495715ba516df151fe3cb7cfcb3580ece1ecd67d041fdf13ae9fa5f38122",
+ "splashIconPath": "a88b1fa810ae4adad8cd6d2d75e5e13cc649af77aa768ea41ef61223603e70d0",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRooCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAIBAAABkGNb27E91/v+tv/YqjKDpLStIdi2rd61bbNLZdW2k+d9rxN8mEJETIAyV0uR8qw58O1mF8U5FWoyga15LeQHd3rFinIo0TyC4aIUZZMWEEhTdlUrytRqjGbx2/YvlkiRpFgDmXOL1CZwrLJa/8fazwswhoRLJUWSirSeb9jYKXfPn2inSCXaT2IwTnneuVKSJtYdJtjYkHC/XpE2sew+gMF2YJwKNY+PPPuUvsbGTlip4rjqNe+m77/3CNsm4bkk7eE74RfG2MDtw316nif9nSQhtW3eXLl8aOGg5rXvyZwQ+LWzvf5v3X/e+hWn3xjeLpw8qauK4ihWxprew/v0UGZWUDggYgEAAHAHAJ0BKhQAFAA+bS6URyQioiEoCqiADYlsAJ0yglgG2Y3AG8gegB0lH7T+kATKYXiV443p7cmypI75eelKwGUmkmAAAP6No0PaPpCjTNP2o20amnNVfWyPDco8c+IOpDGtxw29ykw+u3xI6WUzfzjSgSVBhAgpF8JlNTwgc2oKlXpJiQKgZeNM6+1y7B6rO4FcL8HeSOkFTLejAHySGGWvf38i82IRJffp1lgec8Ts9pcrs6tc0+IpswIL/BBf56f+FU9cf9cuibNZgb94v+1l/QUqUoXxqMjufirQv+owQkBHlC7tW97ZXxx+r8TSN2Z/BnFhurzjpeYccAS30+Hwv+Q7F5H7DWcOIG/zZtf9N/4kWrnMPQ2XuXiEXwNFryFvx/YaDNkZH5Oztxb2YV4tfdPYiPHgi62dP7en1hpbjev8CwCV7qr4Nb/PrjP4QvrEx9Wnwncx0c2X9MA9Mg5gAA==",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "「模擬宇宙」ポイント報酬",
     "ナナシの勲功",
     "エンバー交換",
+    "星芒交換",
     "期間限定イベント報酬"
    ]
   },
@@ -173,7 +179,6 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "疑似花萼「リベットタウン」",
-    "疑似花萼「リベットタウン」",
     "エンバー交換",
     "「万能合成マシン」- 素材交換"
    ]
@@ -209,7 +214,6 @@
    "rewardPath": "/material/836261",
    "comeFrom": [
     "疑似花萼「リベットタウン」",
-    "疑似花萼「リベットタウン」",
     "「万能合成マシン」- 素材合成",
     "「万能合成マシン」- 素材交換"
    ]
@@ -227,7 +231,6 @@
    "rewardPath": "/material/866634",
    "comeFrom": [
     "凝結虚影「綏園」",
-    "凝結虚影「綏園」",
     "「万能合成マシン」- 素材交換"
    ]
   },
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
-    "疑似花萼「リベットタウン」",
     "疑似花萼「リベットタウン」",
     "「万能合成マシン」- 素材合成",
     "エンバー交換",
@@ -449,7 +451,7 @@
   {
    "id": 2,
    "iconPath": "939503ae87f709848882b5f7704929f727032788b431608c51ca308a530f9ebe",
-   "artPath": "69c28965b048104da100fc411b22dcb1e99fbe8b94c92f3c1ffb4eaaeaf41653",
+   "artPath": "fc30eb8c7cf7ce5e33040f410cc8a0e0c16fee8d6240663d37b79f04eecae91e",
    "name": "メノウの謙遜",
    "descHash": "必殺技を発動した時、フィールド上の敵が<nobr>#1[i]</nobr>体以上の場合、攻撃力+<nobr>#2[i]%</nobr>、<nobr>#3[i]</nobr>ターン継続。",
    "params": [
@@ -488,7 +490,7 @@
   {
    "id": 6,
    "iconPath": "9d3053d297b61918a0be6f37982a2a33d7b10dc6e0cd4f43673c373cdf085139",
-   "artPath": "28d483781cbf0141f15ed08167b6dfb280fb4e12534a75c6f19624360899b405",
+   "artPath": "7373f2838c7f8ad825ab3b5a7b3b5a7c79e378b2f82ff7122c5215ce083850bd",
    "name": "「貴女」の輝き",
    "descHash": "必殺技を発動した時、敵の防御力を<nobr>#1[i]%</nobr>無視する。",
    "params": [
@@ -1918,14 +1920,17 @@
  "skillTreePoints": [
   {
    "id": 1302101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1302202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1302203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1958,6 +1963,7 @@
       },
       {
        "id": 1302204,
+       "anchor": 12,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2054,14 +2060,17 @@
   },
   {
    "id": 1302102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1302205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1302206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2094,6 +2103,7 @@
       },
       {
        "id": 1302207,
+       "anchor": 15,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2194,10 +2204,12 @@
   },
   {
    "id": 1302103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1302208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2230,6 +2242,7 @@
     },
     {
      "id": 1302209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2302,6 +2315,7 @@
   },
   {
    "id": 1302201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2330,6 +2344,7 @@
   },
   {
    "id": 1302210,
+   "anchor": 18,
    "type": 2,
    "children": [],
    "embedBuff": {

@@ -1,10 +1,15 @@
 {
  "spRequirement": 120,
  "iconPath": "c756e5880fcd7bd88d9adf0c46726979bf4f54e0262444c7b972744c7900e5b8",
- "bgPath": "7d1640b15933fc70ecab6ded2a93429b84dd70151964367f6b37cebff7aa665b",
- "figPath": "13a026975cf807fe581c10b055a8f11bcad7e3f26cfb6e23eadf3b5be7861dc0",
+ "bgPath": "fdcd62b3e4fa4a4acb7dc4ae2abb7b7fa7154eac5d9bad78b754a05d4c620d24",
+ "figPath": "fd58a0531fe56d95d3e4ed7046e2ed3ce3ea8dd4af21d32707fadd04eac88913",
  "fgPath": "7e7b14b663618e3ef12eea00c8eee9968f42d4a755f250a2d006ea32081b2141",
  "splashIconPath": "dbff8ab0614c088890725ee33c8add6dd325b31886f9d8d952d2af2d282b9de7",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRnQCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAEBAAABkGPbtmlb89m2beW2bePbdhmMGjC2/X/uyLaNc8+e87kMETEBAJzh25OHmZ0xa9y5lhDX9K6xQngCTtN83W8s2HzumkOy9l/Yjun+ieseH5EkY0vShgg3YFvjRVu0bZLG2LpdPoi8N+vvy1AkKdLo5oP4Xh39I4qakTJSfat+G1GzUrTVnPKeouZIGrX4HXKInINo1Iryf3MjqRq4PJLRXIx+pSL4gGxyFsrSLsDzgAxFziCj52FwRsF3WTYpUqJD6+EGF8zTdIokLV2NBOCEko3nn38ljcOypC3hmDn7xBdZkvRnIeA0zSVlzaWzT3Vv2fLhRLg4YXaPNcu8AMAZAABWUDggTAEAALAGAJ0BKhQAFAA+bTKVR6QioiEoCACADYlqAJ0y7PtfoESAljkckf539E4LFWWDck2yorfDSbfSDK0iOA0AAP69pICMBTqHvnEYUomG7VP9qns2OfvFf9OlrOFaibgOlO6kC0DuWQVn6ucfYAO/upLJ0fdr+JCJyYP0q0rhnVJQ18KV9kaXrJZqgkl+6nZbX/csrU5GR9JjCUoWSc1VfS3XTD2nuWCtvdWWW74f/11+MZyx0l/mgFlRPYb04l0d8CoIw9bATEtD0k273GFb98S8pNH1vzdndk//PlWF/2TUTFvpQ5mxHbBZaK69BX6g2/Uze97Gd1tyqbsd1U5+FPnIE/drU2iaUni2VhR5z/rwWYHLcNr/pl874/ThXFV3zJaOL32GZx42aIUCAzWfqOvM+yxrE/pIWBUbWSZQYvFFyOOBo2d8Hxs1C8AA",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Récompenses de points de l'Univers simulé",
     "Honneur des Sans Noms",
     "Échange de braises",
+    "Lumières d'étoile",
     "Récompense d'événement à durée limitée"
    ]
   },
@@ -64,7 +70,6 @@
    "rarity": 4,
    "rewardPath": "/material/267805",
    "comeFrom": [
-    "Ombre stagnante de la Ville de Rivet",
     "Ombre stagnante de la Ville de Rivet",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -181,7 +186,7 @@
    "id": 635669,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "bb7670872389d870154ac70d1b29dee2d6c123f558951c6f914f1d9a70c28382",
+   "iconPath": "271b1f9a291c44b698190683f224996bae3b49e8e596c227b819b72c3a2b82dd",
    "name": "Obsidienne d'effroi",
    "desc": "Fragment de matière noire capturé dans le vide. Permet d'améliorer légèrement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilité</span>.",
    "lore": "Rien ne prouve son noumène.<br />Touchez avec délicatesse pour entendre un vague murmure de la part de l'éclat.<br /><br />« ████ ██ █ █ »",
@@ -189,7 +194,6 @@
    "rarity": 2,
    "rewardPath": "/material/635669",
    "comeFrom": [
-    "Calice de la Grande mine",
     "Calice de la Grande mine",
     "Braises immortelles",
     "Échange de matériaux de l'Omni-synthétiseur"
@@ -226,7 +230,6 @@
    "rewardPath": "/material/836255",
    "comeFrom": [
     "Calice de la Grande mine",
-    "Calice de la Grande mine",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920196",
    "comeFrom": [
-    "Calice de la Grande mine",
     "Calice de la Grande mine",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles",
@@ -449,7 +451,7 @@
   {
    "id": 2,
    "iconPath": "82dd33a52bfa950fc38ac0b30b0157bedfe8e25c782d6ce3bdc48c8b0c1aa3b2",
-   "artPath": "648ba23455359a180c285dcfdc9d5c54399d1bfd0244e53051058fdbb8c91e6c",
+   "artPath": "3f7aed2227fdb37d108d236186b957e2fbb42daa7574bec1e27972012895012c",
    "name": "Enthousiasme contagieux",
    "descHash": "Vaincre un ennemi affecté par Faille du vent a <nobr>#1[i]%</nobr> de chances de base d'infliger à tous les ennemis <nobr>#2[i]</nobr> cumul du même effet Faille du vent que celui provoqué par le talent.",
    "params": [
@@ -468,7 +470,7 @@
   {
    "id": 4,
    "iconPath": "e16ef053d7a4a5387a3cc0a1c1a7e48fa2f4f4caf7b41532dc97df2430d2acbc",
-   "artPath": "4292fde12317525e5a140b9cac092a031bdbe28a84f23e7a357d4751ae9632ba",
+   "artPath": "ca0cf8f8bd394fb869301c9e095d28386797490a52b49b03ce4dbdb6545ff4da",
    "name": "Amour, gloire et... haine",
    "descHash": "Lorsque la compétence touche un ennemi qui a au moins <nobr>#1[i]</nobr> cumuls de Faille du vent, l'ennemi subit immédiatement <nobr>#2[i]%</nobr> des DGT de la Faille du vent actuelle.",
    "params": [
@@ -487,7 +489,7 @@
   {
    "id": 6,
    "iconPath": "fa3fb7999580a48d73022e7f4d33ca2bfa2f9fbe0f8303d2ccf3a889a7d68e8a",
-   "artPath": "c40ee5ff3171e5ceb7b0f4777ea01e754e1610a05d1b032355428847e5bec372",
+   "artPath": "80a677ede27b7372dd0324c0657abdf7d88b1b78ee5beff55dcf03b954ba4634",
    "name": "Envol des dépenses",
    "descHash": "Le multiplicateur des DGT infligés par l'effet Faille du vent du talent augmente de <nobr>#1[i]%</nobr>.",
    "params": [
@@ -1644,18 +1646,22 @@
  "skillTreePoints": [
   {
    "id": 1108102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1108205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1108206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1108207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1785,10 +1791,12 @@
   },
   {
    "id": 1108103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1108208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -1821,6 +1829,7 @@
     },
     {
      "id": 1108209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -1892,10 +1901,12 @@
   },
   {
    "id": 1108201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1108210,
+     "anchor": 18,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -1953,18 +1964,22 @@
   },
   {
    "id": 1108101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1108202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1108203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1108204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2371,6 +2386,26 @@
    "krUrl": "4c51436051d81ce87ed6f3f947a9cd9591b19824864fde349751c2b72e94cf14"
   },
   {
+   "id": 26,
+   "title": "Rejoint l'équipe avec Sparkle",
+   "text": "Comme toujours, pas de coup bas, on est d'accord ?",
+   "unlockRequirement": "",
+   "cnUrl": "b37dfe9a4637bd031d0759e143dd4d5c1406d01d006685b1c37eb80ef4e06fd4",
+   "jpUrl": "834564d0e4ef6991ac88446d1503cc4f65dc38494e3105ad36e40718f4bd5738",
+   "enUrl": "0f31c68e40d4e3480375d25d2926326111c443f93fd6edd57de863e02462e574",
+   "krUrl": "79e8ecf3754f837ba15acb7a983dd93fcd8fd2766293b90a4b1ec31212d34667"
+  },
+  {
+   "id": 27,
+   "title": "À propos de Sparkle",
+   "text": "Tu penses que tu l'as percée à jour, n'est-ce pas ? C'est exactement là qu'il faut se méfier ! Crois-moi, elle est tellement rusée qu'elle est capable de se jouer des tours à elle-même !",
+   "unlockRequirement": "",
+   "cnUrl": "29c41971b75f39e31685608a7b73115e4a9fb29ffe59dfcc37bade7718fea894",
+   "jpUrl": "d7c4f3045ec32e72a165cef07a7b41faf79e6793e333bc9b78089612ff37810d",
+   "enUrl": "62c897e1c507a8e9fecbaf6782a8693f7ba36c714b4f9af9cccebec0e4926644",
+   "krUrl": "70d6d2b6a706e89ce3f31307a2a0399a2c239d6ae6e01064cb47935b2d2a60d0"
+  },
+  {
    "id": 51,
    "title": "Rupture de faiblesse en début de combat",
    "text": "On ne fait que s'amuser.",
@@ -2718,7 +2753,7 @@
  "name": "Sampo",
  "rarity": 4,
  "descHash": "Un marchand qui voyage librement entre le Surmonde et le Souterrain. Toujours de bonne humeur, il se montre familier avec tout le monde et adore les plaisanteries.",
- "artPath": "4ebc2f21af0203e5745cb4c174f482009712261da669f3a679ca0bab9c5d8bb2",
+ "artPath": "7591beec8c4e818d5ab59366a90317f0c415ae4fc3ab44a5bb90b3d7f6cf4791",
  "miniIconPath": "9f45bb22baccfb6e2171d13d59e3af07a6e6e08f880770da2f0661eb37e7ce76",
  "damageType": {
   "id": 16,

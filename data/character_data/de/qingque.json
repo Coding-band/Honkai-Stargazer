@@ -1,10 +1,15 @@
 {
  "spRequirement": 140,
  "iconPath": "62bbed3f4fa89607c950e0c37b287cd629c6dc011b81bd99cf3354a4dd3cb55e",
- "bgPath": "95add5fd751106b1eeb03cfcbe017215893f25a2ef09bf7a0c78af53275456a1",
+ "bgPath": "d82b845f86f056ebc33528c4e14f8dcf0d93fc67de5085a5c516e2ecaa8122ff",
  "figPath": "64b09bba9b3bbdaaccaa720f85047a4a42fd05d52605ef3e96e571d4d8244e6e",
  "fgPath": "939573cb980ac84a1ca1ac5e9b4503698ec38a52c4d17a4f300e98499de70b9a",
  "splashIconPath": "72cee71be6fe4de63b6bdecb1a1b69cb95724bc8f3cc89468c68343e5937c7dc",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRtACAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAUBAAABkLJt+/m/8u+/bVvRStrimm170WprttUU/6v/l7ClLXrJ+5vf7/e+wg8RMQGSlCIVtyklrTQjRQlTpHV1B7cq8+JySelxpCcfTkxPvX44uunFfSkrJvUls/B7Af7AqxtvMpSuTQSEXphZMmEEE5WSzhLYBmx7iZ95qrz6C9vYxhDxSToMJtbYOOSd1LFo2wkc8f5yqvaGmLgG2wvn1BgQ4TjYsMhxNf8lMjaOz/8B6SEBBhPrgNtK0yYWjY1jiZjukqr+EZgkFtmlFPWMERpjQwiskFKkt4SBoyCMlpj6cSlPUpp0H0zsx/5sxU2RVo4xeX/0y9V8KTWOUlKkwfaaVEmpkgQAVlA4IKQBAABQCACdASoUABQAPm0wk0ckIqGhKAqogA2JbACdMoR2iP3sJABLAHoAeWP+x3wV/5nzZimD+L7NX3wAOK5RH8JXtP8c2igGEGOSoAAA/pRKUuAwH5vGJIBA5buIbO3r/DWHcBC8JZpDfYiyM9A+TzJ1SvVbTr9/5m9V5xnrWwiCa2ur9KnZAD4wo9ebbTGyUxngw2i4n1JWVDtX6Hmx2qEZr63H6f9dBwmseTp2bNQzgGmm+KzqWWWwlFj+ZinV3opdnHpaHI+5mYJXBLvkgwQn4RqhX9bDlgNtZAdWrMkDkJ7lzFBxLr95utvv4eAPsluwv/pL1zFVOxJd4MsU+WMEV/hE+2XosW8qAswohM8eu+8B9XX1WRolibrv4u4rOSzCaDFtBVZnodN7/pHV6u26GmnF9/qd78X/ForIUUU6Yr8IgDSOYxDpa0hwkUT4+f386Eznv6M7r/aP/B6avVwKJ3jCor2H3Rmv+9vi53GWz9Kv+gx7zTmleg7HcXF8wtPUK2op3uU/r8f+sl/DyISv9WpnM5dOxR5kcmxJHM3GEPEAAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -20,7 +25,7 @@
    "purposeId": 11,
    "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
    "name": "Credit",
-   "desc": "Diese Währung, die von der Interastrale Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
+   "desc": "Diese Währung, die von der Interastralen Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
    "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
    "purpose": "Gemeinsame Währung",
    "rarity": 3,
@@ -49,6 +54,7 @@
     "Punktebelohnungen in der Universum-Simulation",
     "Namenlose Ehre",
     "Glut-Tausch",
+    "Sternenlicht-Tausch",
     "Belohnungen für zeitlich begrenzte Aktionen"
    ]
   },
@@ -79,7 +85,6 @@
    "rarity": 4,
    "rewardPath": "/material/351746",
    "comeFrom": [
-    "Ruhender Schatten (Basiszone)",
     "Ruhender Schatten (Basiszone)",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -190,7 +195,6 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Blütenkelch (Nietstadt)",
-    "Blütenkelch (Nietstadt)",
     "Glut-Tausch",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -226,7 +230,6 @@
    "rewardPath": "/material/836261",
    "comeFrom": [
     "Blütenkelch (Nietstadt)",
-    "Blütenkelch (Nietstadt)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Omni-Synthesemaschine – Materialtausch"
    ]
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
-    "Blütenkelch (Nietstadt)",
     "Blütenkelch (Nietstadt)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Glut-Tausch",
@@ -449,7 +451,7 @@
   {
    "id": 2,
    "iconPath": "75a125b9bf46e6e13c807cc6a74d125467d743e5aeb8253c59df539874114922",
-   "artPath": "9beea03214c8c9074239a759196c18c089ebfe79912c6a1dcde57270dc2ec7b4",
+   "artPath": "afa8cc1b8f7d13306fe2e05de72d149842efd78f9d2c8de3d7f0dfb2b4059e95",
    "name": "Zeit für ein Nickerchen, direkt auf dem Schachbrett",
    "descHash": "Jedes Mal, wenn Qingque einen Stein zieht, erhält sie sofort <nobr>#1[i]</nobr> Pkt. Energie zurück.",
    "params": [
@@ -1734,14 +1736,17 @@
  "skillTreePoints": [
   {
    "id": 1201101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1201202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1201203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1774,6 +1779,7 @@
       },
       {
        "id": 1201204,
+       "anchor": 12,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1868,14 +1874,17 @@
   },
   {
    "id": 1201102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1201205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1201206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1908,6 +1917,7 @@
       },
       {
        "id": 1201207,
+       "anchor": 15,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2008,10 +2018,12 @@
   },
   {
    "id": 1201103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1201208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2044,6 +2056,7 @@
     },
     {
      "id": 1201209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2115,6 +2128,7 @@
   },
   {
    "id": 1201201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2143,6 +2157,7 @@
   },
   {
    "id": 1201210,
+   "anchor": 18,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2737,7 +2752,7 @@
   },
   {
    "id": 75,
-   "title": "Schatz öffnen 1",
+   "title": "Schatz geöffnet 1",
    "text": "Wir schwimmen im Geld!",
    "unlockRequirement": "",
    "cnUrl": "666de09c80171ea5369095a61ec7841d8cb31c637ca30b9b0706fc9a29634b69",
@@ -2747,7 +2762,7 @@
   },
   {
    "id": 79,
-   "title": "Schatz öffnen 2",
+   "title": "Schatz geöffnet 2",
    "text": "Ich könnte etwas von deinem Glück gebrauchen ...",
    "unlockRequirement": "",
    "cnUrl": "eac751355473b06434df1e31822ccdd17b3cf242f2fd8a1b6f83886c17a4cdbf",
@@ -2757,7 +2772,7 @@
   },
   {
    "id": 80,
-   "title": "Kostbaren Schatz öffnen",
+   "title": "Kostbaren Schatz geöffnet",
    "text": "Jackpot!",
    "unlockRequirement": "",
    "cnUrl": "f552a99654474c0e720de4c50c660d9e226ff883c3df8f4640f0ab9cbd16aa2d",
@@ -2814,7 +2829,7 @@
   },
   {
    "title": "Geschichte (Teil 1)",
-   "text": "Die Legende von Qingque beginnt im Lyzeum.<br /><br />Seit Qingques erstem Studienjahr bis zu ihrem Abschluss erschien hinter ihrem Namen bei der Bekanntgabe der Prüfungsnoten jedes Mal eine als Wort ausgeschriebene Zahl: sechzig.<br /><br />Zuerst dachten ihre Tutoren, dass Qingque nur durchschnittlich begabt und für höhere Bildung ungeeignet sei, also schenkten sie der Sache keine Beachtung. Als jedoch immer wieder dieselbe Zahl in ihren Prüfungsergebnissen auftauchte, begannen ihre Tutoren zu vermuten, dass dies kein Zufall war.<br /><br />Schon bald wurden lange, innige Gespräche mit den Tutoren für Qingque zur Regel. Jeder, der mit dieser Art von Sophisterei vertraut ist, wird diese Floskeln wiedererkennen: Zuerst wurde sie als „ruhig und brav“ oder „begabt“ bezeichnet. Doch schon bald wurde sie getadelt: „Was für eine Schande, dass du dein Talent vergeudest.“ Gefolgt von dem großen Finale: „Wenn du nur so viel Einfallsreichtum in dein Studium stecken könntest, dann bla, bla, bla ...“<br /><br />Aber Qingque hatte mehr Ahnung von dem Leben, das sie führen wollte, als ihre Tutoren. Sie wiederholte einfach immer wieder: „Oh, ganz genau“ und „Mmm, ja, auf jeden Fall“, bevor sie sich umdrehte, um am Schreibtisch einzuschlafen und bei der nächsten Prüfung gerade so durchzukommen – auf diese Weise reagierte Qingque auf die Zwänge und Drohungen ihrer Tutoren.<br /><br />Schließlich ging den Tutoren die Geduld mit ihr aus. Am Ende hinterließen sie nur eine verärgerte Nachricht in ihrem Jahrbuch:<br /><br />„Eine Herausforderung, Großes zu erreichen“",
+   "text": "Die Legende von Qingque beginnt im Lyzeum.<br /><br />Seit Qingques erstem Studienjahr bis zu ihrem Abschluss erschien hinter ihrem Namen bei der Bekanntgabe der Prüfungsnoten jedes Mal eine als Wort ausgeschriebene Zahl: sechzig.<br /><br />Zuerst dachten ihre Lehrer, dass Qingque nur durchschnittlich begabt und für höhere Bildung ungeeignet sei, also schenkten sie der Sache keine Beachtung. Als jedoch immer wieder dieselbe Zahl in ihren Prüfungsergebnissen auftauchte, begannen ihre Lehrer zu vermuten, dass dies kein Zufall war.<br /><br />Schon bald wurden lange, innige Gespräche mit den Lehrern für Qingque zur Regel. Jeder, der mit dieser Art von Sophisterei vertraut ist, wird diese Floskeln wiedererkennen: Zuerst wurde sie als „ruhig und brav“ oder „begabt“ bezeichnet. Doch schon bald wurde sie getadelt: „Was für eine Schande, dass du dein Talent vergeudest.“ Gefolgt von dem großen Finale: „Wenn du nur so viel Einfallsreichtum in dein Studium stecken könntest, dann bla, bla, bla ...“<br /><br />Aber Qingque hatte mehr Ahnung von dem Leben, das sie führen wollte, als ihre Lehrer. Sie wiederholte einfach immer wieder: „Oh, ganz genau“ und „Mmm, ja, auf jeden Fall“, bevor sie sich umdrehte, um am Schreibtisch einzuschlafen und bei der nächsten Prüfung gerade so durchzukommen – auf diese Weise reagierte Qingque auf die Zwänge und Drohungen ihrer Lehrer.<br /><br />Schließlich ging den Lehrern die Geduld mit ihr aus. Am Ende hinterließen sie nur eine verärgerte Nachricht in ihrem Jahrbuch:<br /><br />„Es wird eine Herausforderung für sie, Großes zu erreichen.“",
    "unlockRequirement": "Wird auf Figurenstufe <nobr>20</nobr> freigeschaltet"
   },
   {
@@ -2933,7 +2948,7 @@
  "name": "Qingque",
  "rarity": 4,
  "descHash": "Wahrsagerin der Wahrsagekommission an der Xianzhou Luofu, Bibliothekarin. Schwänzt ständig und ist dabei, die Arbeit als „Türwächterin“ zu übernehmen.",
- "artPath": "0bbc2f63e6023b6aaca992f89952d6d44e591918c7834ec3da3598dabea6951a",
+ "artPath": "a3c4a87dbec7414cfb034d00b786b505e980f975391972264a7141b45e9834a1",
  "miniIconPath": "a4c059ae3e42fba63909fef256a5a453033a54e44c9db8af3ce6ea6316f4d5cc",
  "damageType": {
   "id": 32,

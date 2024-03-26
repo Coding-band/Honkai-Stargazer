@@ -5,6 +5,11 @@
  "figPath": "8edb308439fd6545b630899981d7d833a82efc9c241d5a62215b7c6f2c43bb76",
  "fgPath": "",
  "splashIconPath": "8235c510c01b722b5ced0f0ece69b8f597028c031a888fb79177692456aa68f2",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRl4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAEBAAABkGtr27E59/ONbdtuZ01tu4ptp046q05l2+l8Blkpbdt63/sezylExAQAQEiAqRsQaoEZALMJ0NuzKQwTmgEw1D/+dHdaY1YKEJWaCARAgLq/+uf0+u3tm49e3z9RASAEq+QkasLn0wJDxGVHkt47573/Ly1A+dKHIiWRIqm/2tPwRBRFjSXJ/zoUflWOosaSEqkNUZ/kSHGMROrf8XjslrzzIknR//+4MQ5I2vVdkhcpUrq3oihA/N45zUceyVMUn52ZkWkAqhOA9fpP90978zDJnDv6+08aWNCK0HEsBP2/JV3bPtQOw4SGzPNHd+ahumEyMIwNAQyTNViIwQzjAgBWUDggNgEAADAHAJ0BKhQAFAA+bTKVR6QioiEoCACADYlqAJ0zJf9pB3xAPXVsjoiDvJM6owbtofaR3hXH2aoRdGCNaR9U/5+CgAD+9DLbvRnEYp+Qfj6a6cdpnJWurfuP+p6BAjiSRJ+1Ida3M/VahgqaUAB8EzS0ywVuafU8mmXo8duSnrWXMASkxeb8fwZVxiQ5OWgNq929bIxULsklVvLFYX1kk/aTnQmKLksDOwDDdfDtcC+TiRPdN032wuzluUATJTDEv3HMendYCFxMCKc52BoN967q7DeZ0U+RaXyCcHv9+f+MkhpU/v1c5WvMxeDL5sj4QCDK2yGhfguPB4/6DN9skb4c8A5JkQY7Hu9jJl1dseImDofKh8Aj/4Hv/TFq+OOnrD8zZyaH6WnkGKZkEVA46eUEDbmoAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Recompensa de puntos del Universo Simulado",
     "Honor anónimo",
     "Canjeo de Ascuas",
+    "Canjeo de Cosmiluz",
     "Recompensa de evento de duración limitada"
    ]
   },
@@ -64,7 +70,6 @@
    "rarity": 4,
    "rewardPath": "/material/267806",
    "comeFrom": [
-    "Sombra paralizada de la Comisión de Alquimia",
     "Sombra paralizada de la Comisión de Alquimia",
     "Máquina sintetizadora multiusos - Intercambio de material"
    ]
@@ -172,7 +177,6 @@
    "rewardPath": "/material/589818",
    "comeFrom": [
     "Cáliz de la Comisión de Alquimia",
-    "Cáliz de la Comisión de Alquimia",
     "Máquina sintetizadora multiusos - Síntesis de materiales",
     "Canjeo de Ascuas",
     "Máquina sintetizadora multiusos - Intercambio de material"
@@ -209,7 +213,6 @@
    "rewardPath": "/material/673759",
    "comeFrom": [
     "Cáliz de la Comisión de Alquimia",
-    "Cáliz de la Comisión de Alquimia",
     "Máquina sintetizadora multiusos - Síntesis de materiales",
     "Máquina sintetizadora multiusos - Intercambio de material"
    ]
@@ -244,7 +247,6 @@
    "rarity": 2,
    "rewardPath": "/material/874345",
    "comeFrom": [
-    "Cáliz de la Comisión de Alquimia",
     "Cáliz de la Comisión de Alquimia",
     "Canjeo de Ascuas",
     "Máquina sintetizadora multiusos - Intercambio de material"
@@ -449,7 +451,7 @@
   {
    "id": 2,
    "iconPath": "420d033f134db663da7f64e6e3b12017f97b9228fe03a35566b5cad859ae4784",
-   "artPath": "760de1f0c7cd413cda516e16ae5fc6fd57ab962aeed91a22bc1759229eeee97c",
+   "artPath": "7d751acb21fa87b9e3239065a6cc46cf3587d92671e3c23113b1a4eeb6100904",
    "name": "No llores por mí, cordero",
    "descHash": "Cuando se elimina a un enemigo afectado por Arcano, hay una probabilidad base del <nobr>#1[i]%</nobr> de aplicar <nobr>#2[i]</nobr> acumulaciones de Arcano a los enemigos adyacentes.",
    "params": [
@@ -479,7 +481,7 @@
   {
    "id": 5,
    "iconPath": "1f77c680c96f816c05e772ac266cc78a08c5a98ffaba8f5419185cdba1a6ea67",
-   "artPath": "4438d2fa65de7ddc2118afb93b5333900befecd2f95f310f06c00000077fd8cc",
+   "artPath": "46f20e4ec519bee5dfda5fa0ebb507279603181ea6ddb949723de32c0abf65e8",
    "name": "Estrellas migratorias",
    "descHash": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
    "params": []
@@ -1031,7 +1033,7 @@
   },
   {
    "tagHash": "ATQ AdE",
-   "descHash": "Afecta con Desvelación a todos los enemigos durante <nobr>#2[i]</nobr> turnos.<br />En el estado de Desvelación, el daño que reciben los objetivos durante su propio turno aumenta en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>, y mientras el objetivo está afectado por <u>Arcano</u>, se considera que también está afectado por Intemperie, Sangrado, Quemadura y Electrocución. Además, después de que <u>Arcano</u> inflija daño al principio de cada turno, no se restablecen las acumulaciones. Mientras dure Desvelación, este efecto para conservar las acumulaciones de <u>Arcano</u> se puede activar <nobr>#4[i]</nobr> vez como máximo. El contador de activaciones se actualiza cuando se vuelve a aplicar Desvelación.<br />Inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> del ATQ de Cisne Negro como Daño de <span style=\"color:#00FF9C;\">Viento</span> a todos los enemigos.",
+   "descHash": "Afecta con Desvelación a todos los enemigos durante <nobr>#2[i]</nobr> turnos.<br />En el estado de Desvelación, el daño que reciben los objetivos durante su propio turno aumenta en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>, y mientras el objetivo está afectado por <u>Arcano</u>, se considera que también está afectado por Intemperie, Sangrado, Quemadura y Electrocución. Además, después de que <u>Arcano</u> inflija daño al principio de cada turno, no se restablecen las acumulaciones. Mientras dure Desvelación, este efecto para no restablecer las acumulaciones de <u>Arcano</u> se puede activar <nobr>#4[i]</nobr> vez como máximo. El contador de activaciones se actualiza cuando se vuelve a aplicar Desvelación.<br />Inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> del ATQ de Cisne Negro como Daño de <span style=\"color:#00FF9C;\">Viento</span> a todos los enemigos.",
    "ultimateCost": 120,
    "break": "60/hit",
    "energy": "5",
@@ -1780,18 +1782,22 @@
  "skillTreePoints": [
   {
    "id": 1307101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1307202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1307203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1307204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1917,18 +1923,22 @@
   },
   {
    "id": 1307102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1307205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1307206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1307207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2019,7 +2029,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Cuando el enemigo entra en combate, hay una probabilidad base del <nobr>#1[i]%</nobr> de aplicarle 1 acumulación de Arcano. Cada vez que el objetivo enemigo recibe Daño con el tiempo en un ataque de un aliado, hay un <nobr>#1[i]%</nobr> de probabilidad base de aplicar 1 acumulación de Arcano. Cada ataque puede aplicar hasta <nobr>#2[i]</nobr> acumulaciones como máximo.",
+    "descHash": "Cuando el enemigo entra en combate, hay una probabilidad base del <nobr>#1[i]%</nobr> de aplicarle 1 acumulación de Arcano.<br />Cada vez que el objetivo enemigo recibe Daño con el tiempo en un ataque de un aliado, hay un <nobr>#1[i]%</nobr> de probabilidad base de aplicar 1 acumulación de Arcano. Cada ataque puede aplicar hasta <nobr>#2[i]</nobr> acumulaciones como máximo.",
     "ultimateCost": 0,
     "id": 88348,
     "name": "Los posos de la copa",
@@ -2059,10 +2069,12 @@
   },
   {
    "id": 1307103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1307208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2095,6 +2107,7 @@
     },
     {
      "id": 1307209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2167,10 +2180,12 @@
   },
   {
    "id": 1307201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1307210,
+     "anchor": 18,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2296,7 +2311,7 @@
    "cnUrl": "099018899c5cef21798928257c01965bdb7cc2eee6e4d4712e476565c098986a",
    "jpUrl": "7d6424425033075a351237945dd00b426dcb96a2780200fb12b43c872b4855ea",
    "enUrl": "526732b4086ef1ac3b6245f129881e7a55b97d84f15ef984ab481fbdfe77d7db",
-   "krUrl": "2db14673478ba55274cb187d939d953984a11644905277df2357c4d4317bbb54"
+   "krUrl": "79ce2ababf53b66d47ad4d5cf4909901483b7034d5df50724c381fc3dd3b83a9"
   },
   {
    "id": 5,
@@ -2499,6 +2514,26 @@
    "krUrl": "784b7e80568c7702bcacc182a81b60eb0933c8aadb632f102cd922dcbdc37187"
   },
   {
+   "id": 25,
+   "title": "Miembro del equipo: Acheron",
+   "text": "Tú decides... ¿Qué tipo de baile quieres esta vez?",
+   "unlockRequirement": "",
+   "cnUrl": "bd2ae9b04e261093b32005ec1bb1e8675d3f394a34ac1f63afc6275c2bacd941",
+   "jpUrl": "aecc5d2f10eaf4b856b3092f0adcd324f9b490c77ee7df2453b861e9415a9fc4",
+   "enUrl": "3828f5ce1d63e62383782c6e6ee728ea4989ee6df80f8acedfcfa300a4e5af94",
+   "krUrl": "601d24e234772ed45d1b6fb72f3339d2212ebd98751eb83f50c88057b5ee60b4"
+  },
+  {
+   "id": 26,
+   "title": "Miembro del equipo: Aventurino",
+   "text": "Espero que esta vez colaboremos sin problemas y el destino nos conceda a ambos lo que buscamos.",
+   "unlockRequirement": "",
+   "cnUrl": "72cee1d8e11c432ec564631300c82352db5432254cbf90de1c94b9a9b224d392",
+   "jpUrl": "ef268a4b9cc2dc62f83cc940a39d22f508c90747337338460d40b981fb63cc94",
+   "enUrl": "cae396e16ea1637244aba626c13d85d16851b1a6d2bfa0557fbc2668f568a1f3",
+   "krUrl": "6f90a022f3d703b9532848986be5e0db567f7f9b0c6d0b6671681354fa33ec17"
+  },
+  {
    "id": 51,
    "title": "Comienzo de la batalla: Ruptura de Debilidad",
    "text": "El rumbo del destino es cada vez más evidente.",
@@ -2626,7 +2661,7 @@
    "cnUrl": "bb427175e99b7e21d0267bc0c7608164d515a1cc0b1232e87ef5f3f9b168081d",
    "jpUrl": "8cec91d2ba81ec99796fc858dc9c8868b94e5989e34abf7ecf5ab56dc6a38224",
    "enUrl": "ff8714228024c73553e789b7f86fad9743534fec0c7155d7733162e8583e4b35",
-   "krUrl": "15b09317003428e914a89bd9bed1830245d1954ddb47dd4cba3157bcab59ed3f"
+   "krUrl": "80456a009d7ba3be8e9f7dabfbc66fa91ae23046540eb925d48d76a74bee3f95"
   },
   {
    "id": 64,
@@ -2866,7 +2901,7 @@
  "name": "Cisne Negro",
  "rarity": 5,
  "descHash": "Guardamemorias del Jardín de los Recuerdos. Es una vidente lánguida y misteriosa. Escucha con paciencia los recuerdos de otras personas y tira de los hilos del destino.",
- "artPath": "da5a3d8d87865c51907df718c329a6d552ef2ddbc3e1f6e82dd466c14b0c1aa6",
+ "artPath": "870d3284ed48895f121c22c356f4292a94c0e2fdd368e691bf3a595ba7f0634c",
  "miniIconPath": "741cd71f3a6a5c9ad08beec9f832c75eaea8a07246cafcd530c806b8d2dc00a5",
  "damageType": {
   "id": 16,

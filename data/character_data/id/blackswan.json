@@ -5,6 +5,11 @@
  "figPath": "8edb308439fd6545b630899981d7d833a82efc9c241d5a62215b7c6f2c43bb76",
  "fgPath": "",
  "splashIconPath": "8235c510c01b722b5ced0f0ece69b8f597028c031a888fb79177692456aa68f2",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRl4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAEBAAABkGtr27E59/ONbdtuZ01tu4ptp046q05l2+l8Blkpbdt63/sezylExAQAQEiAqRsQaoEZALMJ0NuzKQwTmgEw1D/+dHdaY1YKEJWaCARAgLq/+uf0+u3tm49e3z9RASAEq+QkasLn0wJDxGVHkt47573/Ly1A+dKHIiWRIqm/2tPwRBRFjSXJ/zoUflWOosaSEqkNUZ/kSHGMROrf8XjslrzzIknR//+4MQ5I2vVdkhcpUrq3oihA/N45zUceyVMUn52ZkWkAqhOA9fpP90978zDJnDv6+08aWNCK0HEsBP2/JV3bPtQOw4SGzPNHd+ahumEyMIwNAQyTNViIwQzjAgBWUDggNgEAADAHAJ0BKhQAFAA+bTKVR6QioiEoCACADYlqAJ0zJf9pB3xAPXVsjoiDvJM6owbtofaR3hXH2aoRdGCNaR9U/5+CgAD+9DLbvRnEYp+Qfj6a6cdpnJWurfuP+p6BAjiSRJ+1Ida3M/VahgqaUAB8EzS0ywVuafU8mmXo8duSnrWXMASkxeb8fwZVxiQ5OWgNq929bIxULsklVvLFYX1kk/aTnQmKLksDOwDDdfDtcC+TiRPdN032wuzluUATJTDEv3HMendYCFxMCKc52BoN967q7DeZ0U+RaXyCcHv9+f+MkhpU/v1c5WvMxeDL5sj4QCDK2yGhfguPB4/6DN9skb4c8A5JkQY7Hu9jJl1dseImDofKh8Aj/4Hv/TFq+OOnrD8zZyaH6WnkGKZkEVA46eUEDbmoAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Hadiah Poin \"Simulated Universe\"",
     "Kehormatan Tanpa Nama",
     "Penukaran Ember",
+    "Penukaran Starlight",
     "Hadiah Event Waktu Terbatas"
    ]
   },
@@ -172,7 +178,6 @@
    "rewardPath": "/material/589818",
    "comeFrom": [
     "Calyx \"Alchemy Commission\"",
-    "Calyx \"Alchemy Commission\"",
     "\"Omni-Synthesizer\" - Synthesis Material",
     "Penukaran Ember",
     "\"Omni-Synthesizer\" - Pertukaran Material"
@@ -209,7 +214,6 @@
    "rewardPath": "/material/673759",
    "comeFrom": [
     "Calyx \"Alchemy Commission\"",
-    "Calyx \"Alchemy Commission\"",
     "\"Omni-Synthesizer\" - Synthesis Material",
     "\"Omni-Synthesizer\" - Pertukaran Material"
    ]
@@ -244,7 +248,6 @@
    "rarity": 2,
    "rewardPath": "/material/874345",
    "comeFrom": [
-    "Calyx \"Alchemy Commission\"",
     "Calyx \"Alchemy Commission\"",
     "Penukaran Ember",
     "\"Omni-Synthesizer\" - Pertukaran Material"
@@ -449,7 +452,7 @@
   {
    "id": 2,
    "iconPath": "420d033f134db663da7f64e6e3b12017f97b9228fe03a35566b5cad859ae4784",
-   "artPath": "760de1f0c7cd413cda516e16ae5fc6fd57ab962aeed91a22bc1759229eeee97c",
+   "artPath": "7d751acb21fa87b9e3239065a6cc46cf3587d92671e3c23113b1a4eeb6100904",
    "name": "Weep Not For Me, My Lamb",
    "descHash": "Saat target musuh berstatus \"Arcana\" dikalahkan, ada <nobr>#1[i]%</nobr> Peluang Dasar untuk membuat musuh di sekitar target memasuki <nobr>#2[i]</nobr> lapis \"Arcana\".",
    "params": [
@@ -479,7 +482,7 @@
   {
    "id": 5,
    "iconPath": "1f77c680c96f816c05e772ac266cc78a08c5a98ffaba8f5419185cdba1a6ea67",
-   "artPath": "4438d2fa65de7ddc2118afb93b5333900befecd2f95f310f06c00000077fd8cc",
+   "artPath": "46f20e4ec519bee5dfda5fa0ebb507279603181ea6ddb949723de32c0abf65e8",
    "name": "Linnutee Flyway",
    "descHash": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
    "params": []
@@ -1780,18 +1783,22 @@
  "skillTreePoints": [
   {
    "id": 1307101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1307202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1307203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1307204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1882,7 +1889,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Setelah melancarkan Skill untuk menyerang 1 musuh yang ditargetkan dengan status <span style=\"color:#00FF9C;\">Wind</span> Shear/Bleed/Burn/Shock, masing-masing dari status prasyarat tersebut yang ada pada target memiliki <nobr>#1[i]%</nobr> Peluang Dasar untuk membuat target memasuki ekstra 1 lapis \"Arcana\".",
+    "descHash": "Setelah karakter ini melancarkan Skill untuk menyerang musuh, jika musuh yang ditargetkan berstatus <span style=\"color:#00FF9C;\">Wind</span> Shear/Bleed/Burn/Shock, masing-masing dari status prasyarat tersebut yang ada pada target memiliki <nobr>#1[i]%</nobr> Peluang Dasar untuk membuat target memasuki ekstra 1 lapis \"Arcana\".",
     "ultimateCost": 0,
     "id": 88345,
     "name": "Viscera's Disquiet",
@@ -1917,18 +1924,22 @@
   },
   {
    "id": 1307102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1307205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1307206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1307207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2019,7 +2030,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Saat target musuh memasuki pertempuran, memiliki <nobr>#1[i]%</nobr> Peluang Dasar untuk menambahkan 1 lapis \"Arcana\" padanya. Setiap kali target musuh menerima 1 DoT dalam 1 kali serangan yang dilancarkan rekan tim, musuh tersebut memiliki <nobr>#1[i]%</nobr> Peluang Dasar untuk memasuki 1 lapis \"Arcana\", maksimal dapat memasuki <nobr>#2[i]</nobr> lapis dalam 1 kali serangan.",
+    "descHash": "Saat target musuh memasuki pertempuran, memiliki <nobr>#1[i]%</nobr> Peluang Dasar untuk menambahkan 1 lapis \"Arcana\" padanya.<br />Setiap kali target musuh menerima 1 DoT dalam 1 kali serangan yang dilancarkan rekan tim, musuh tersebut memiliki <nobr>#1[i]%</nobr> Peluang Dasar untuk memasuki 1 lapis \"Arcana\", maksimal dapat memasuki <nobr>#2[i]</nobr> lapis dalam 1 kali serangan.",
     "ultimateCost": 0,
     "id": 88348,
     "name": "Goblet's Dredges",
@@ -2059,10 +2070,12 @@
   },
   {
    "id": 1307103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1307208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2095,6 +2108,7 @@
     },
     {
      "id": 1307209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2167,10 +2181,12 @@
   },
   {
    "id": 1307201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1307210,
+     "anchor": 18,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2296,7 +2312,7 @@
    "cnUrl": "099018899c5cef21798928257c01965bdb7cc2eee6e4d4712e476565c098986a",
    "jpUrl": "7d6424425033075a351237945dd00b426dcb96a2780200fb12b43c872b4855ea",
    "enUrl": "526732b4086ef1ac3b6245f129881e7a55b97d84f15ef984ab481fbdfe77d7db",
-   "krUrl": "2db14673478ba55274cb187d939d953984a11644905277df2357c4d4317bbb54"
+   "krUrl": "79ce2ababf53b66d47ad4d5cf4909901483b7034d5df50724c381fc3dd3b83a9"
   },
   {
    "id": 5,
@@ -2311,7 +2327,7 @@
   {
    "id": 6,
    "title": "Mengobrol: Metode Ramalan",
-   "text": "Pergerakan bintang-bintang, bisikan halus angka-angka, ramalan kartu-kartu ... Mmm, dengar-dengar ramalan melalui aplikasi sangat populer belakangan ini. Tapi, ini sebenarnya hanyalah pelengkap. Mendengar ucapan seseorang, menjelajahi hati mereka, dan mengintip ingatan mereka ... Di situlah kebenaran sesungguhnya terungkap.",
+   "text": "Pergerakan bintang-bintang, bisikan halus angka-angka, ramalan kartu-kartu ... Mmm, dengar-dengar ramalan melalui aplikasi sangat populer belakangan ini. Tapi, ini sebenarnya hanyalah pelengkap. Mendengar ucapan seseorang, menjelajahi hati mereka, dan mengintip memori mereka ... Di situlah kebenaran sesungguhnya terungkap.",
    "unlockRequirement": "",
    "cnUrl": "ed94ca6aede552ed46f9adaf51148552a1e2501e050c1fa11e769914d2f83bcd",
    "jpUrl": "5e0529b9391876c038e181deab3351f841fca7413dfbab842ced1c893448aa6d",
@@ -2321,7 +2337,7 @@
   {
    "id": 7,
    "title": "Mengobrol: Light Cone",
-   "text": "Selama kehidupan seseorang, hanya sejumlah ingatan kuat — sakit, senang, amarah, sedih, yang bisa dipanen ... Garden of Recollection didirikan dengan tujuan untuk menyimpan ingatan-ingatan ini, tetapi ia tidak terhindar dari usaha perusahaan untuk mengambil keuntungan secara terbuka dari hal tersebut.",
+   "text": "Selama kehidupan seseorang, hanya sejumlah memori kuat — sakit, senang, amarah, sedih, yang bisa dipanen ... Garden of Recollection didirikan dengan tujuan untuk menyimpan memori-memori ini, tetapi ia tidak terhindar dari usaha perusahaan untuk mengambil keuntungan secara terbuka dari hal tersebut.",
    "unlockRequirement": "",
    "cnUrl": "e5666436cc1dfe9861044f39b8179f1a85c3e8067d3d6211559ba8f6f8cad84f",
    "jpUrl": "6cc75e8f8785b1de96d2bef7888a90c4617133ea18aabcd57c7e6c926f0f74d4",
@@ -2331,7 +2347,7 @@
   {
    "id": 8,
    "title": "Hobi",
-   "text": "Kalau bisa menemukan dan mengumpulkan sebuah fragmen ingatan sebelum ia terungkap ke dunia, momen-momen kesendirian yang menyenangkan itu adalah ingatan yang paling kusukai, yang tak tergantikan dan unik.",
+   "text": "Kalau bisa menemukan dan mengumpulkan sebuah fragmen memori sebelum ia terungkap ke dunia, momen-momen kesendirian yang menyenangkan itu adalah memori yang paling kusukai, yang tak tergantikan dan unik.",
    "unlockRequirement": "",
    "cnUrl": "d92d968f70c401567640bf4184cfecdd308bc339afb382a51d8e898932b28629",
    "jpUrl": "8191ee9a7e8cb8f40b330261c53b9819cc5387494883c19daaf2386340c94ebe",
@@ -2351,7 +2367,7 @@
   {
    "id": 10,
    "title": "Curhat: Tanah Kemurnian",
-   "text": "Ingatan yang paling bersinar dan berlimpah akan disimpan dan dilindungi di Pure Land of Recollection. Dalam kisah yang dibisikkan di antara para Memokeeper, \"Fuli\" akan menggabungkan ingatan-ingatan ini ke dalam Eden of Blessed Insight, dan mereka akan menjadi fondasi untuk membangun kembali seluruh dunia setelah kehancurannya.",
+   "text": "Memori yang paling bersinar dan berlimpah akan disimpan dan dilindungi di Pure Land of Recollection. Dalam kisah yang dibisikkan di antara para Memokeeper, \"Fuli\" akan menggabungkan memori-memori ini ke dalam Eden of Blessed Insight, dan mereka akan menjadi fondasi untuk membangun kembali seluruh dunia setelah kehancurannya.",
    "unlockRequirement": "",
    "cnUrl": "316ec602869c7fa0f7ed064cab6832018073b7f4de22c48b3d36d311bfda8db2",
    "jpUrl": "66d01a7451db2c351b14628c8c3a7d02232918e62b72859cb8e26dea3963ef7d",
@@ -2361,7 +2377,7 @@
   {
    "id": 11,
    "title": "Curhat: Perwujudan Meme",
-   "text": "Di hari aku menjadi perwujudan Meme, aku melihat tubuh fisikku larut dan ingatan orang-orang mengendap, mengkristal, dan kemudian hancur dalam aliran waktu. Mereka bersinar dengan cemerlang, seperti berlian dengan sisi yang tak terhitung jumlahnya. Pada saat itu aku menyadari, bahwa segala sesuatu bersifat sementara, tetapi ingatan adalah abadi.",
+   "text": "Di hari aku menjadi perwujudan Meme, aku melihat tubuh fisikku larut dan memori orang-orang mengendap, mengkristal, dan kemudian hancur dalam aliran waktu. Mereka bersinar dengan cemerlang, seperti berlian dengan sisi yang tak terhitung jumlahnya. Pada saat itu aku menyadari, bahwa segala sesuatu bersifat sementara, tetapi memori adalah abadi.",
    "unlockRequirement": "",
    "cnUrl": "98eb0822baf4b5ee0bc8e39e42b18accf8926b64b29b11e93849176ccc16db38",
    "jpUrl": "169afa40ff9af0c7a42e72a3dd5b3f2a860a923837f976441d771afbeed993ff",
@@ -2371,7 +2387,7 @@
   {
    "id": 12,
    "title": "Rumor",
-   "text": "Beberapa Memokeeper suka menyelinap ke dalam pikirian orang lain dan mengubah ingatan mereka sesuka hati, tapi aku sama sekali tidak menyukai kelakuan seperti itu. Hanya ingatan yang tidak pernah disentuh orang lain yang memegang esensi sesungguhnya dan patut dihargai. Segala sesuatu di luar itu hanyalah penanaman pikiran orang lain.",
+   "text": "Beberapa Memokeeper suka menyelinap ke dalam pikirian orang lain dan mengubah memori mereka sesuka hati, tapi aku sama sekali tidak menyukai kelakuan seperti itu. Hanya memori yang tidak pernah disentuh orang lain yang memegang esensi sesungguhnya dan patut dihargai. Segala sesuatu di luar itu hanyalah penanaman pikiran orang lain.",
    "unlockRequirement": "",
    "cnUrl": "5239e7dac9c6bb2a333de8bfde0bc44c7f3024109d9c26d24367e8f85d968ff7",
    "jpUrl": "8f9e481599eda12e5d554e110d72d8e18ab89d9688fa9097e2799a916eaf58bf",
@@ -2381,7 +2397,7 @@
   {
    "id": 13,
    "title": "Tentang Trailblazer",
-   "text": "Mungkin akan datang suatu hari ketika kamu dengan senang hati berbagi ingatanmu denganku — Aku sangat menantikan waktu tersebut.",
+   "text": "Mungkin akan datang suatu hari ketika kamu dengan senang hati berbagi memorimu denganku — Aku sangat menantikan waktu tersebut.",
    "unlockRequirement": "",
    "cnUrl": "2f1a728791145555d54e4e6b5cc982fe6b496f954de84eaba0c5a99d73ca4680",
    "jpUrl": "40ffcdb5611ba3e0944adcda6c2ff2e75fdaea1031fa03bee6d36adc6675db7b",
@@ -2421,7 +2437,7 @@
   {
    "id": 17,
    "title": "Tentang March 7th",
-   "text": "Kalaupun masa lalunya sekarang bisikan yang terlupakan, dan dia dulu pernah mempertanyakan masa depannya, pengalaman-pengalaman March pasti akan berubah menjadi Memoria yang unik. Aku sangat menantikan ingatan-ingatan yang dia akan persembahkan ke Garden of Recollection ....",
+   "text": "Kalaupun masa lalunya sekarang bisikan yang terlupakan, dan dia dulu pernah mempertanyakan masa depannya, pengalaman-pengalaman March pasti akan berubah menjadi Memoria yang unik. Aku sangat menantikan memori-memori yang akan dia persembahkan ke Garden of Recollection ....",
    "unlockRequirement": "",
    "cnUrl": "d5abd9d0def47ef5d644c795f34c257e48472a322b12c9021f0dc530c3d0da16",
    "jpUrl": "42d3fa40017b3d578f9ad6d04fb7d960ba74144abf6ab33a5b0c69d98cf4c480",
@@ -2431,7 +2447,7 @@
   {
    "id": 18,
    "title": "Eidolon Diaktifkan",
-   "text": "Sebagaimana kehendak takdir, ingatan-ingatan yang tersebar mulai berjalin kembali ....",
+   "text": "Sebagaimana kehendak takdir, memori-memori yang tersebar mulai berjalin kembali ....",
    "unlockRequirement": "",
    "cnUrl": "73be736c4b2e4ab6a09d73e76d85946afbd4524bd9b693e49c117bb0289000d6",
    "jpUrl": "36913bb888a3e51b4cd3ca7ea5c9a700c4990b904150163e9fa1f00c303b390b",
@@ -2451,7 +2467,7 @@
   {
    "id": 20,
    "title": "Level Max Karakter",
-   "text": "Ayo berangkat, menuju gemilang ingatan yang tak terhitung jumlahnya di kejauhan ....",
+   "text": "Ayo berangkat, menuju gemilang memori yang tak terhitung jumlahnya di kejauhan ....",
    "unlockRequirement": "",
    "cnUrl": "2a703e4d76488847a86c7159a155ef6e8c52489a79fe46c615b9fd52ed9b60e7",
    "jpUrl": "93b0253dfe2155da77376e2423b5172d0d634b71fb4b7008d7fb7ba4f09935bf",
@@ -2497,6 +2513,26 @@
    "jpUrl": "40c567b5983fb2f5472e51c8c6d910546b1d521902c03fb13718a912a5c10110",
    "enUrl": "c7e286cdb86e154495b700ca2446df2914411d7ecedaadcbd9428940b883884b",
    "krUrl": "784b7e80568c7702bcacc182a81b60eb0933c8aadb632f102cd922dcbdc37187"
+  },
+  {
+   "id": 25,
+   "title": "Edit Tim: Acheron",
+   "text": "Keputusan ada di tanganmu ... Tarian seperti apa yang \"kamu\" mau kali ini?",
+   "unlockRequirement": "",
+   "cnUrl": "bd2ae9b04e261093b32005ec1bb1e8675d3f394a34ac1f63afc6275c2bacd941",
+   "jpUrl": "aecc5d2f10eaf4b856b3092f0adcd324f9b490c77ee7df2453b861e9415a9fc4",
+   "enUrl": "3828f5ce1d63e62383782c6e6ee728ea4989ee6df80f8acedfcfa300a4e5af94",
+   "krUrl": "601d24e234772ed45d1b6fb72f3339d2212ebd98751eb83f50c88057b5ee60b4"
+  },
+  {
+   "id": 26,
+   "title": "Edit Tim: Aventurine",
+   "text": "Kita sudah bertemu kembali di petualangan ini, semoga takdir memberikan kita berdua apa yang kita cari.",
+   "unlockRequirement": "",
+   "cnUrl": "72cee1d8e11c432ec564631300c82352db5432254cbf90de1c94b9a9b224d392",
+   "jpUrl": "ef268a4b9cc2dc62f83cc940a39d22f508c90747337338460d40b981fb63cc94",
+   "enUrl": "cae396e16ea1637244aba626c13d85d16851b1a6d2bfa0557fbc2668f568a1f3",
+   "krUrl": "6f90a022f3d703b9532848986be5e0db567f7f9b0c6d0b6671681354fa33ec17"
   },
   {
    "id": 51,
@@ -2601,7 +2637,7 @@
   {
    "id": 61,
    "title": "Ultimate: Aktifkan",
-   "text": "Ingatan terus berubah.",
+   "text": "Memori terus berubah.",
    "unlockRequirement": "",
    "cnUrl": "c6634d1ecdb484522cf6017c5eabd89c5610b2926af1220e0a253b6a3c177594",
    "jpUrl": "320fc595b080638d1d76b8c3663dbaeb026540f68855d4da5952e35610d9ac87",
@@ -2626,12 +2662,12 @@
    "cnUrl": "bb427175e99b7e21d0267bc0c7608164d515a1cc0b1232e87ef5f3f9b168081d",
    "jpUrl": "8cec91d2ba81ec99796fc858dc9c8868b94e5989e34abf7ecf5ab56dc6a38224",
    "enUrl": "ff8714228024c73553e789b7f86fad9743534fec0c7155d7733162e8583e4b35",
-   "krUrl": "15b09317003428e914a89bd9bed1830245d1954ddb47dd4cba3157bcab59ed3f"
+   "krUrl": "80456a009d7ba3be8e9f7dabfbc66fa91ae23046540eb925d48d76a74bee3f95"
   },
   {
    "id": 64,
    "title": "Kembali ke Pertempuran",
-   "text": "Hanya ingatan yang tetap abadi.",
+   "text": "Hanya memori yang tetap abadi.",
    "unlockRequirement": "",
    "cnUrl": "9e903b570fe612b7a149cd83c786681d3cf00436851694f0178fefdbce73156f",
    "jpUrl": "e75255b17f8d0701e050b2e33817e7c3069effde11e155853f2b3b2a24dba1e5",
@@ -2661,7 +2697,7 @@
   {
    "id": 67,
    "title": "Menang Pertempuran",
-   "text": "Satu lagi kenangan berharga untuk diingat.",
+   "text": "Satu lagi memori berharga untuk diingat.",
    "unlockRequirement": "",
    "cnUrl": "12e0683ce4a6d86de6d5c7af899d790ec7188ae510f3b327ceb16cc49d05a547",
    "jpUrl": "4641e18158b2d36c1c24f486842b94e0f9c93ac0f1f24cbd8999853feb7fbbb8",
@@ -2711,7 +2747,7 @@
   {
    "id": 72,
    "title": "Berhasil Memecahkan Teka-teki 2",
-   "text": "Kekuatan kebijaksanaan dan ingatan ....",
+   "text": "Kekuatan kebijaksanaan dan memori ....",
    "unlockRequirement": "",
    "cnUrl": "a577e59a40985c0c041af0a4789f2f229c611e49b71db4948ba26b53796316fb",
    "jpUrl": "1b8b6f5124ba65972b41eeebe38735344f0b2f1fd002f06adf9234588c8c6a7b",
@@ -2747,22 +2783,22 @@
   },
   {
    "title": "Kisah Karakter 1",
-   "text": "\"Dia itu anak yang aneh. Dari dulu aku sudah tahu bakal seperti ini. Di hari kelahirannya, burung yang bertengger di atas pohon berkicauan, bayang-bayang bulan dan matahari yang baru terbit sama-sama menghias cakrawala. Aku bisa baca dari kartu yang ada di tanganku, sebuah jiwa yang merindukan masa lalu akan segera datang ke dunia ini. Sejak kecil, dia paling tertarik dengan cerita-cerita di masa lalu. Dia penasaran dengan keberadaan kita, siapa yang menciptakan kita, dan seperti apa asal-usul dunia ini. Kadang-kadang pertanyaannya bisa membuat orang yang paling berwawasan diam seribu bahasa. Aku tahu banyak anak kecil yang menertawakan dia, tapi apa pertanyaan-pertanyaan itu tidak penting? Kehidupan itu seperti labirin yang rumit. Selain ingatan, kita tidak punya apa-apa lagi.\"<br /><align=\"right\">— Ingatan seorang ibu</align><br /><br />Ibunya yang menderita amnesia itu pun menjadi pelupa, tidak bisa mengenali keluarganya, dan tidak bisa mengingat hal-hal yang baru terjadi beberapa waktu lalu.<br />Sambil memegang kertas diagnosis penyakit amnesia, dia memeluk erat ibunya yang terlihat bingung dan mencoba untuk membacakan diari peninggalan ibunya — Ibunya memang ada di sana, tapi di mana kesadaran ibunya?<br /><br />Dia menemani ibunya sampai penghujung hidupnya. Tapi dia mengerti, sejak ingatan ibunya hancur berkeping-keping, sosok ibunya pun makin lama makin samar. Kalau suatu hari nanti ingatannya sendiri juga hancur berkeping-keping, sosok ibunya akan benar-benar pergi meninggalkannya.<br /><br />\"Kehidupan itu seperti labirin yang rumit. Selain ingatan, kita tidak punya apa-apa lagi.\" Untuk pertama kalinya, dia memahami makna dari kalimat ini.",
+   "text": "\"Dia itu anak yang aneh. Dari dulu aku sudah tahu bakal seperti ini. Di hari kelahirannya, burung yang bertengger di atas pohon berkicauan, bayang-bayang bulan dan matahari yang baru terbit sama-sama menghias cakrawala. Aku bisa baca dari kartu yang ada di tanganku, sebuah jiwa yang merindukan masa lalu akan segera datang ke dunia ini. Sejak kecil, dia paling tertarik dengan cerita-cerita di masa lalu. Dia penasaran dengan keberadaan kita, siapa yang menciptakan kita, dan seperti apa asal-usul dunia ini. Kadang-kadang pertanyaannya bisa membuat orang yang paling berwawasan diam seribu bahasa. Aku tahu banyak anak kecil yang menertawakan dia, tapi apa pertanyaan-pertanyaan itu tidak penting? Kehidupan itu seperti labirin yang rumit. Selain memori, kita tidak punya apa-apa lagi.\"<br /><align=\"right\">— Memori seorang ibu</align><br /><br />Ibunya yang menderita amnesia itu pun menjadi pelupa, tidak bisa mengenali keluarganya, dan tidak bisa mengingat hal-hal yang baru terjadi beberapa waktu lalu.<br />Sambil memegang kertas diagnosis penyakit amnesia, dia memeluk erat ibunya yang terlihat bingung dan mencoba untuk membacakan diari peninggalan ibunya — Ibunya memang ada di sana, tapi di mana kesadaran ibunya?<br /><br />Dia menemani ibunya sampai penghujung hidupnya. Tapi dia mengerti, sejak ingatan ibunya hancur berkeping-keping, sosok ibunya pun makin lama makin samar. Kalau suatu hari nanti ingatannya sendiri juga hancur berkeping-keping, sosok ibunya akan benar-benar pergi meninggalkannya.<br /><br />\"Kehidupan itu seperti labirin yang rumit. Selain memori, kita tidak punya apa-apa lagi.\" Untuk pertama kalinya, dia memahami makna dari kalimat ini.",
    "unlockRequirement": "Buka Level karakter <nobr>20</nobr>"
   },
   {
    "title": "Kisah Karakter 2",
-   "text": "Aku datang ke planet ini sebagai petualang. Sama seperti biasanya, aku akan mendata arah aliran sungai, meneliti bahan batu bata dan ubin di jalanan, derajat kemiringan jalan yang tercuram, serta jumlah dan penyebaran cerobong asap ... Semua pekerjaan ini sesuai dengan bayangan orang-orang tentang cara menyimpan \"ingatan\" sebuah planet.<br /><br />— Akan tetapi, ini semua masih jauh dari cukup.<br /><br />Waktu benar-benar mulai bekerja di belakang orang-orang, aku jadi sering bertemu dengan gadis itu. Cahaya matahari terkadang akan menembus celah dedaunan dan menari-nari di bawah bayangan badannya, lalu menghilang di sebuah tikungan bersamaan dengan lampu jalan yang menyala. Tatapan matanya terkadang tertuju pada seekor merpati pembawa pesan yang pada petang hari di hari ketiga setiap minggunya akan berangkat dari tempat tinggal pendeta agung dan kembali ke tangan kepala pengawal istana keesokan paginya, padahal mereka jelas-jelas adalah musuh politik. Dia terkadang terpaku melihat air hujan yang masuk ke dalam saluran pembuangan yang memiliki bekas tembakan meriam dari negeri musuh. Ombak terkadang akan membasahi tepian roknya, tapi wanita tua yang mencuci pakaian di pinggir sungai malah sedang bergumam tentang kisah penguasa sebelumnya dan kelima anak haramnya.<br /><br />— Selain kami, tidak banyak orang yang tahu bagaimana sebuah planet akan menyimpan \"ingatan\" miliknya sendiri.<br /><br />Aku mengikutinya sampai di depan sebuah batu di alam liar. Menurutku, sudah waktunya untuk mengundangnya.<br /><br />\"Apa yang kamu lihat?\" Aku bertanya padanya sesuai dengan wujud yang bisa dia lihat.<br />Dia menunjuk ke arah tempat yang ditumbuhi rumput liar. Terlihat ada bekas gesekan di sana.<br />\"Sebuah batu. Menurutku, dulu batu ini pernah jadi bagian dari sebuah perapian ... Tapi harusnya bukan cuma itu saja.\"<br />Aku mengangguk, lalu membantunya membersihkan rumput liar dan lumpur di celah batu itu.<br />\"Batu ini pernah menjadi sebuah monumen.\" Dia meraba bekas ukiran yang ada di atas batu itu.<br />\"Betul, tapi 'ingatan' bukan cuma itu saja.\"<br /><br />Akhirnya aku tunjukkan padanya. Batu di alam liar ini pernah menjadi perapian sebuah keluarga. Sebelumnya, pernah menjadi sebuah monumen, petak bunga, dan sebuah altar ... Sebelumnya lagi, pernah menjadi sebuah batu di alam liar.<br /><br />\"Pengorbanan apa yang harus aku bayar untuk melihat semua 'ingatan' ini?\"<br />\"Sebelum kamu bersedia menampakkan diri, orang-orang tidak akan tahu keberadaanmu.\"<br />\"Sama seperti orang-orang yang tidak tahu kalau angsa bukan cuma berwarna putih sebelum melihat angsa hitam?\"<br />\"Ya, seperti itu.\"<br /><br /><align=\"right\">— Ingatan seorang <ruby>petualang<rt>Memokeeper</rt></ruby></align><br /><br />Para Memokeeper berpindah dari planet ke planet untuk mengambil ingatan dari setiap kota yang mereka lewati. Mereka akan memastikan tidak ada jejak yang ditinggalkan agar kota itu tidak mengingat mereka. Tapi, saat mereka bertemu dengan orang-orang yang layak menjadi Memokeeper, orang-orang itu akan dibawa pergi dari ingatan kota ini menuju lautan yang lebih luas.",
+   "text": "Aku datang ke planet ini sebagai petualang. Sama seperti biasanya, aku akan mendata arah aliran sungai, meneliti bahan batu bata dan ubin di jalanan, derajat kemiringan jalan yang tercuram, serta jumlah dan penyebaran cerobong asap ... Semua pekerjaan ini sesuai dengan bayangan orang-orang tentang cara menyimpan \"memori\" sebuah planet.<br /><br />— Akan tetapi, ini semua masih jauh dari cukup.<br /><br />Waktu benar-benar mulai bekerja di belakang orang-orang, aku jadi sering bertemu dengan gadis itu. Cahaya matahari terkadang akan menembus celah dedaunan dan menari-nari di bawah bayangan badannya, lalu menghilang di sebuah tikungan bersamaan dengan lampu jalan yang menyala. Tatapan matanya terkadang tertuju pada seekor merpati pembawa pesan yang pada petang hari di hari ketiga setiap minggunya akan berangkat dari tempat tinggal pendeta agung dan kembali ke tangan kepala pengawal istana keesokan paginya, padahal mereka jelas-jelas adalah musuh politik. Dia terkadang terpaku melihat air hujan yang masuk ke dalam saluran pembuangan yang memiliki bekas tembakan meriam dari negeri musuh. Ombak terkadang akan membasahi tepian roknya, tapi wanita tua yang mencuci pakaian di pinggir sungai malah sedang bergumam tentang kisah penguasa sebelumnya dan kelima anak haramnya.<br /><br />— Selain kami, tidak banyak orang yang tahu bagaimana sebuah planet akan menyimpan \"memori\" miliknya sendiri.<br /><br />Aku mengikutinya sampai di depan sebuah batu di alam liar. Menurutku, sudah waktunya untuk mengundangnya.<br /><br />\"Apa yang kamu lihat?\" Aku bertanya padanya sesuai dengan wujud yang bisa dia lihat.<br />Dia menunjuk ke arah tempat yang ditumbuhi rumput liar. Terlihat ada bekas gesekan di sana.<br />\"Sebuah batu. Menurutku, dulu batu ini pernah jadi bagian dari sebuah perapian ... Tapi harusnya bukan cuma itu saja.\"<br />Aku mengangguk, lalu membantunya membersihkan rumput liar dan lumpur di celah batu itu.<br />\"Batu ini pernah menjadi sebuah monumen.\" Dia meraba bekas ukiran yang ada di atas batu itu.<br />\"Betul, tapi 'memori' bukan cuma itu saja.\"<br /><br />Akhirnya aku tunjukkan padanya. Batu di alam liar ini pernah menjadi perapian sebuah keluarga. Sebelumnya, pernah menjadi sebuah monumen, petak bunga, dan sebuah altar ... Sebelumnya lagi, pernah menjadi sebuah batu di alam liar.<br /><br />\"Pengorbanan apa yang harus aku bayar untuk melihat semua 'memori' ini?\"<br />\"Sebelum kamu bersedia menampakkan diri, orang-orang tidak akan tahu keberadaanmu.\"<br />\"Sama seperti orang-orang yang tidak tahu kalau angsa bukan cuma berwarna putih sebelum melihat angsa hitam?\"<br />\"Ya, seperti itu.\"<br /><br /><align=\"right\">— Memori seorang <ruby>petualang<rt>Memokeeper</rt></ruby></align><br /><br />Para Memokeeper berpindah dari planet ke planet untuk mengumpulkan memori dari setiap kota yang mereka lewati. Mereka akan memastikan tidak ada jejak yang ditinggalkan agar kota itu tidak mengingat mereka. Tapi, saat mereka bertemu dengan orang-orang yang layak menjadi Memokeeper, orang-orang itu akan dibawa pergi dari memori kota ini menuju lautan yang lebih luas.",
    "unlockRequirement": "Buka Level karakter <nobr>40</nobr>"
   },
   {
    "title": "Kisah Karakter 3",
-   "text": "\"Banyak orang terlena dengan keindahan di masa lalu dan berkhayal untuk hidup di dalam ingatan, akhirnya mereka ingin jadi Memokeeper. Tapi sayangnya, orang-orang seperti itu akhirnya akan jadi The Cremator yang menghalalkan segala cara untuk mencapai tujuan. Mereka sembarang mengubah ingatan menjadi seperti apa yang mereka sukai. Akan tetapi, dia tidak sama ... Aku melihat rasa hormatnya terhadap ingatan serta tekad dan kemauannya yang kuat. Seperti inilah jawabannya terhadap tiga pertanyaan yang biasa ditanyakan sebelum menjadi Memokeeper:<br /><br />Apa kamu bersedia menghabiskan hidupmu untuk mengumpulkan ingatan?'<br />'Aku bersedia.'<br />'Apa kamu bersedia menyerahkan tubuh fisikmu dan menerima perubahan pada dirimu?'<br />'Aku bersedia.'<br />'Kalau suatu hari kamu sudah tidak ada lagi, apa yang akan kamu tinggalkan untuk dunia?'<br />'Ingatanku. Benih masa lalu yang ada di dalamnya akan hidup kembali di masa depan.'<br /><br />Ada ingatan yang kecil dan hangat, ada ingatan yang besar dan luas, ada ingatan yang jinak seperti binatang peliharaan, ada juga ingatan yang susah dikendalikan seperti binatang buas ... Waktu dia jadi Memokeeper, ingatannya berubah menjadi tenang dan damai seperti ombak besar yang menemukan tempat untuk berlabuh.\"<br /><align=\"right\">— Ingatan seorang Memokeeper</align><br /><br />\"Apa yang terlintas di pikiranmu?\" tanya Memokeeper.<br />Dia membuka mata, lalu serpihan ingatan berputar mengitari badannya.<br />\"Orang-orang kira mereka sedang menghadapi masa kini dan masa depan, tapi tidak ada yang tahu kalau kita semua sebenarnya sedang berjalan ke arah masa lalu.\"",
+   "text": "\"Banyak orang terlena dengan keindahan di masa lalu dan berkhayal untuk hidup di dalam memori, akhirnya mereka ingin jadi Memokeeper. Tapi sayangnya, orang-orang seperti itu akhirnya akan jadi The Cremator yang menghalalkan segala cara untuk mencapai tujuan. Mereka sembarang mengubah memori menjadi seperti apa yang mereka sukai. Akan tetapi, dia tidak sama ... Aku melihat rasa hormatnya terhadap memori serta tekad dan kemauannya yang kuat. Seperti inilah jawabannya terhadap tiga pertanyaan yang biasa ditanyakan sebelum menjadi Memokeeper:<br /><br />Apa kamu bersedia menghabiskan hidupmu untuk mengumpulkan memori?'<br />'Aku bersedia.'<br />'Apa kamu bersedia menyerahkan tubuh fisikmu dan menerima perubahan pada dirimu?'<br />'Aku bersedia.'<br />'Kalau suatu hari kamu sudah tidak ada lagi, apa yang akan kamu tinggalkan untuk dunia?'<br />'Memoriku. Benih masa lalu yang ada di dalamnya akan hidup kembali di masa depan.'<br /><br />Ada memori yang kecil dan hangat, ada memori yang besar dan luas, ada memori yang jinak seperti binatang peliharaan, ada juga memori yang susah dikendalikan seperti binatang buas ... Waktu dia jadi Memokeeper, memorinya berubah menjadi tenang dan damai seperti ombak besar yang menemukan tempat untuk berlabuh.\"<br /><align=\"right\">— Memori seorang Memokeeper</align><br /><br />\"Apa yang terlintas di pikiranmu?\" tanya Memokeeper.<br />Dia membuka mata, lalu serpihan memori berputar mengitari badannya.<br />\"Orang-orang kira mereka sedang menghadapi masa kini dan masa depan, tapi tidak ada yang tahu kalau kita semua sebenarnya sedang berjalan ke arah masa lalu.\"",
    "unlockRequirement": "Buka Level karakter <nobr>60</nobr>"
   },
   {
    "title": "Kisah Karakter 4",
-   "text": "\"Lokasi: Penacony<br />Waktu: ██-██-██<br />Tamu: ██, ██, ██, dan ██<br />'Sebuah kenangan sedih milik ██. Kenangan yang seolah-olah berlapis emas ini penuh dengan hasrat dan kepalsuan. Kenangan ini akan menyimpan kesedihan yang tersembunyi di masa mendatang, pemiliknya juga ditakdirkan terpengaruh kenangan ini untuk jangka panjang.'<br />'Sebuah kenangan bahagia milik ██. Kenangan bak drama ini diselimuti oleh warna-warna cerah, kebahagiaan, kekacauan, dan humor — Tapi sulit disebut sebagai kebahagiaan. Begitu pula masa depan yang dihadirkan olehnya.'<br />'Sebuah kenangan penyesalan milik ██. Keindahan dalam kenangan yang bahagia ini hanya muncul untuk sesaat, sama seperti percikan api yang terbang dari api unggun yang sudah padam. Nikmatilah waktumu. Kenangan ini memberi tahu aku kalau penyesalan itu akan segera berlalu.'<br />'Sebuah kenangan samar milik ██. Kenangan ini lemah, kacau, dan membingungkan, sama seperti hujan yang tidak terlihat ujungnya dan tidak bisa ditebak akhirnya. Aku ingin mengenang hari esok yang ditunjukkannya, baik hujan maupun cerah ....'\"<br /><align=\"right\">— Kenangan Black Swan</align><br /><br />\"Aku melihat sosok seorang perempuan yang berubah-ubah wujud di antara gambar dan pola. Tidak ... Aku tidak gila. Aku memang melihat 'dia'. Aku ingat suaranya yang terdengar begitu lembut. Aku juga ingat kartu warna-warni yang bersinar di tangannya seperti punya kekuatan sihir ... Oh ya, dia juga meramal nasibku. Dia bilang, 'Mau meramal kebahagiaan, bencana, kehilangan materi, atau keberuntungan yang tidak terduga ... Kamu cuma perlu bayar dengan sebuah cerita yang nyata — Karena masa lalu dan masa depan memang satu titik yang sama dalam sebuah lingkaran yang sama.' Kepalaku rasanya pusing. Dia benar-benar lembut, aku cerita banyak sekali, tapi aku ingat dia mendengarkan semua ceritaku sampai habis dengan penuh kesabaran ... Lalu menurut ramalannya, aku akan menemukan cermin milik tamu hotel! Oh, kamu tanya apa yang aku katakan padanya? Tidak ada hal yang penting kok, cuma beberapa rumor tentang masa lalu saja ....\"<br /><align=\"right\">— Kenangan seorang penduduk lokal Penacony</align><br /><br />Sekarang dia menjadi seorang peramal yang menjelajahi berbagai dunia untuk mengejar ingatan yang berhubungan dengan Path dan Aeon. Dia percaya ingatan-ingatan itu sekeras batu permata. Mereka tidak akan musnah sepenuhnya, meskipun telah dilupakan.<br /><br />\"Banyak Memokeeper yang pernah pergi ke Penacony dan pulang dengan tangan kosong. Mereka bilang, tempat itu cuma sebuah mimpi indah yang berada di atas permukaan air.\"<br />\"Tapi mimpi ... juga salah satu perubahan wujud ingatan. Selagi para Memosnatcher dan The Cremator itu belum datang, aku akan menyelam untuk melihat reruntuhan di dasarnya.\"",
+   "text": "\"Lokasi: Penacony<br />Waktu: ██-██-██<br />Tamu: ██, ██, ██, dan ██<br />'Sebuah memori sedih milik ██. Memori yang seolah-olah berlapis emas ini penuh dengan hasrat dan kepalsuan. Memori ini akan menyimpan kesedihan yang tersembunyi di masa mendatang, pemiliknya juga ditakdirkan terpengaruh memori ini untuk jangka panjang.'<br />'Sebuah memori bahagia milik ██. Memori bak drama ini diselimuti oleh warna-warna cerah, kebahagiaan, kekacauan, dan humor — Tapi sulit disebut sebagai kebahagiaan. Begitu pula masa depan yang dihadirkan olehnya.'<br />'Sebuah memori penyesalan milik ██. Keindahan dalam memori yang bahagia ini hanya muncul untuk sesaat, sama seperti percikan api yang terbang dari api unggun yang sudah padam. Nikmatilah waktumu. Memori ini memberi tahu aku kalau penyesalan itu akan segera berlalu.'<br />'Sebuah memori samar milik ██. Memori ini lemah, kacau, dan membingungkan, sama seperti hujan yang tidak terlihat ujungnya dan tidak bisa ditebak akhirnya. Aku ingin mengenang hari esok yang ditunjukkannya, baik hujan maupun cerah ....'\"<br /><align=\"right\">— Memori Black Swan</align><br /><br />\"Aku melihat sosok seorang perempuan yang berubah-ubah wujud di antara gambar dan pola. Tidak ... Aku tidak gila. Aku memang melihat 'dia'. Aku ingat suaranya yang terdengar begitu lembut. Aku juga ingat kartu warna-warni yang bersinar di tangannya seperti punya kekuatan sihir ... Oh ya, dia juga meramal nasibku. Dia bilang, 'Mau meramal kebahagiaan, bencana, kehilangan materi, atau keberuntungan yang tidak terduga ... Kamu cuma perlu bayar dengan sebuah cerita yang nyata — Karena masa lalu dan masa depan memang satu titik yang sama dalam sebuah lingkaran yang sama.' Kepalaku rasanya pusing. Dia benar-benar lembut, aku cerita banyak sekali, tapi aku ingat dia mendengarkan semua ceritaku sampai habis dengan penuh kesabaran ... Lalu menurut ramalannya, aku akan menemukan cermin milik tamu hotel! Oh, kamu tanya apa yang aku katakan padanya? Tidak ada hal yang penting kok, cuma beberapa rumor tentang masa lalu saja ....\"<br /><align=\"right\">— Memori seorang penduduk lokal Penacony</align><br /><br />Sekarang dia menjadi seorang peramal yang menjelajahi berbagai dunia untuk mengejar memori yang berhubungan dengan Path dan Aeon. Dia percaya memori-memori itu sekeras batu permata. Mereka tidak akan musnah sepenuhnya, meskipun telah dilupakan.<br /><br />\"Banyak Memokeeper yang pernah pergi ke Penacony dan pulang dengan tangan kosong. Mereka bilang, tempat itu cuma sebuah mimpi indah yang berada di atas permukaan air.\"<br />\"Tapi mimpi ... juga salah satu perubahan wujud memori. Selagi para Memosnatcher dan The Cremator itu belum datang, aku akan menyelam untuk melihat reruntuhan di dasarnya.\"",
    "unlockRequirement": "Buka Level karakter <nobr>80</nobr>"
   }
  ],
@@ -2865,8 +2901,8 @@
  },
  "name": "Black Swan",
  "rarity": 5,
- "descHash": "Memokeeper dari Garden of Recollection, peramal yang pemalas dan misterius. Mendengarkan \"ingatan\" orang lain dengan sabar, dan segala jenis nasib ada dalam genggamannya.",
- "artPath": "da5a3d8d87865c51907df718c329a6d552ef2ddbc3e1f6e82dd466c14b0c1aa6",
+ "descHash": "Memokeeper dari Garden of Recollection, peramal yang pemalas dan misterius. Mendengarkan \"memori\" orang lain dengan sabar, dan segala jenis nasib ada dalam genggamannya.",
+ "artPath": "870d3284ed48895f121c22c356f4292a94c0e2fdd368e691bf3a595ba7f0634c",
  "miniIconPath": "741cd71f3a6a5c9ad08beec9f832c75eaea8a07246cafcd530c806b8d2dc00a5",
  "damageType": {
   "id": 16,

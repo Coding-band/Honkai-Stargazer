@@ -1,10 +1,15 @@
 {
  "spRequirement": 120,
  "iconPath": "17266492720566525e238f24da20f368bebee20a8b5814465259075c355fe88b",
- "bgPath": "4363f1edfb2f17661976f8ff7fd55c54c0c53bd614ae8d46b1472765d07251ba",
+ "bgPath": "83c97f48a7f10f0c70189ccd0581f7c9db6464e862e61f7ccff5b4959a0fc404",
  "figPath": "a7ab1ac27366e5fc03d520baa0afb4c5d347e08ec897631ceba7d694fc3d0a95",
  "fgPath": "4ae08d8d0e6ec1c0c2cd4951f15faec82cfa9772857597e4b103f8e6d907f437",
- "splashIconPath": "8430cd69231f8adf112241cb4584984391dbaecea241d597e1be95e316f52cec",
+ "splashIconPath": "83613c825fc9f40ec9a19af592e2ca54f912b6be32001ea094c8ef90d89e8908",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRuACAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSEYBAAABkHNt2yHJ8p+vamzbtm3btieyvbZ3M9u7GaNBtGZk2/bW9vcG1RUREwBlJooMiqa6EGCrBbmgoBuvBzT2w62+2hoiUwOdcE14v9j8iehjFWApExC3eyL5OtF/iX7WHm2RMegcpWPnSOJcog+dgKY2g2XQlj8vJeKcq+i1DbzPLgN8Ntz7+uQvcU4k0f726COFcC+6TfTmwg8izumPKp1Nw92tZ3/g3KmeP6p/xOnFiawKJ/igNxEFs7e+qv68k4iqLewgIONuttHJS2+JiH69evy4zhiA0ZlH9bsnF96c7330kWZ3twAQ4RuXWL4tq3BLSvuqQfcaXQBwyB5beYFuzzxvOTnfvcwfAgBtfe3Kg2c77n/puk601d8Yan0am1r3X3xHd9YHQkeUscRsHaTaGIWFegIMakVtwNgaciZAmQFgEAQGRVZQOCB0AQAAcAgAnQEqFAAUAD5tMpRHpCKiISgIAIANiWwAnTKEe1iB84LwDxSf1myxr0AOlSNUBd2WaT9A9AAPto/a39KY7uihdrK8kHG6zO7ZfAD+9H7bKPhgQxjqJS4q55bbPSOcHgexLm4OHg+Gkg7wXm4AIrq5fN/ZPcadzgpu64gCdeZJsUJ8f+rv86h1GogWgvl1DDgN3u41xPPb6PQbNSsqa5y9jXJUGxIhkwQUGYv4LNwVRxRL/5XJsV/7p7sU/e5r9Rtk+UvuFXqZdR/Rkvb4t0p98Fta8dnCzySOIKPYwjNWdqu2/VVLT32oYNxideTMedOL5E4XMqw0o2av7xI4x7/RyT8wjJ3AfWx3v9yVXedjON574hiKPfhKf+HyuQX725vh2653AMLHoL/lEfjAoLqFJSceLG/tJ40l5JeTR6/5qEjcvWd+HbpyKg8o2/wBe53Ebkfj8c+VuSLzy8e8bD6/D9+P+Da/rWI3gNoiSkUEAwAA",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "시뮬레이션 우주 점수 보상",
     "무명의 공훈",
     "잔화 교환",
+    "스타라이트 교환",
     "한정 이벤트 보상"
    ]
   },
@@ -79,7 +85,6 @@
    "rarity": 4,
    "rewardPath": "/material/351746",
    "comeFrom": [
-    "정체된 허영 [베이스 캐빈]",
     "정체된 허영 [베이스 캐빈]",
     "「만능 합성기」- 재료 치환"
    ]
@@ -190,7 +195,6 @@
    "rewardPath": "/material/635674",
    "comeFrom": [
     "모조 꽃받침 [외곽 설원]",
-    "모조 꽃받침 [외곽 설원]",
     "잔화 교환",
     "「만능 합성기」- 재료 치환"
    ]
@@ -226,7 +230,6 @@
    "rewardPath": "/material/836260",
    "comeFrom": [
     "모조 꽃받침 [외곽 설원]",
-    "모조 꽃받침 [외곽 설원]",
     "「만능 합성기」- 재료 합성",
     "「만능 합성기」- 재료 치환"
    ]
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920201",
    "comeFrom": [
-    "모조 꽃받침 [외곽 설원]",
     "모조 꽃받침 [외곽 설원]",
     "「만능 합성기」- 재료 합성",
     "잔화 교환",
@@ -486,7 +488,7 @@
   {
    "id": 6,
    "iconPath": "07c3550339318c559cd1656906f843969d87148b1101404b23ae4e5ac2a65a2f",
-   "artPath": "7ba48c3eceabab15c9b196505f65ab8a84c529809cab77d7993687dfec59644b",
+   "artPath": "a42458faca2ab56d53edc4e8eedbc66f7729cb3b884b5b960c36b41960bcd437",
    "name": "분열",
    "descHash": "필살기 발동 후 피격된 단일 적은 [혼란의 나비] 상태에 빠진다. 지속 시간: <nobr>#2[i]</nobr>턴. [혼란의 나비] 상태의 적은 피격 후 추가로 제레 필살기 피해의 <nobr>#1[i]%</nobr>만큼 양자 속성 추가 피해를 1회 받는다. 다른 아군의 공격으로 [혼란의 나비] 상태의 추가 피해가 발동되어 해당 적이 처치되면 제레의 특성이 발동하지 않는다.<br />제레가 전투 불능 상태에 빠지면 적의 [혼란의 나비] 상태는 해제된다",
    "params": [
@@ -987,7 +989,7 @@
    "energy": "5",
    "id": 673757,
    "name": "혼란의 나비",
-   "iconPath": "ec07c54387fcb437083280775693b96131527000adcc86c0230abb307a429e9e",
+   "iconPath": "874ee8cbb8ee0bfc680467528fa4f438ddce186080e8dfda0b39e138d309195b",
    "typeDescHash": "필살기",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1594,14 +1596,17 @@
  "skillTreePoints": [
   {
    "id": 1102101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1102202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1102203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1699,14 +1704,17 @@
   },
   {
    "id": 1102102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1102205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1102206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1807,14 +1815,17 @@
   },
   {
    "id": 1102103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1102208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1102209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1847,6 +1858,7 @@
       },
       {
        "id": 1102210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1947,6 +1959,7 @@
   },
   {
    "id": 1102201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -1975,6 +1988,7 @@
   },
   {
    "id": 1102204,
+   "anchor": 12,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2007,6 +2021,7 @@
   },
   {
    "id": 1102207,
+   "anchor": 15,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2667,7 +2682,7 @@
  "name": "제레",
  "rarity": 5,
  "descHash": "지하 대항 조직 「와일드 파이어」의 핵심 인물, 별칭 「나비」 솔직하고 시원시원하지만, 내면에 섬세함과 예리함을 숨기고 있다",
- "artPath": "f2c0429556db8c523804e65f69d79a303fbd0cf769df5fe8639050e0921e732b",
+ "artPath": "00405c43a0290e440d824f553d987218146d55d08419c0505fa617fd259f92d3",
  "miniIconPath": "bb7b6fc54c7623fe2b2b70a10cdd49bde3de3c36507e291da7794c843ff33c7f",
  "damageType": {
   "id": 32,

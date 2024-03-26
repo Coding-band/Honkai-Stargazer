@@ -2,9 +2,14 @@
  "spRequirement": 120,
  "iconPath": "4fd1c8e9a4409a1e2d048ef56d801935a546a54ac47ef46bfce7196d411ff7e3",
  "bgPath": "3ab65caa7b96772c73dc8c3cabb90ce161b6e7486b816a681ae185171d8b9e89",
- "figPath": "f75c33b24895926bb472b2ce5b96ac2beb9803f17c933cc50aae11f388c1d077",
+ "figPath": "658225e2a471fc5b30f169544c3d7effc4d20ece51d14c099a59474ba0f78bd6",
  "fgPath": "7b01a88c112a0ea57e1b16ddf082a960c044fc72b79af6fae1689ee091bee704",
  "splashIconPath": "0d66263c979a48b9d4b1324f02948a881c8a753b5015ef8853bbfbe9fd61990f",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRo4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAEBAAABkGtr27FH9/PFtm3btg7B6Gyrs20nlTGVPZ1tW13MZ/glhxAREwDxRDi+BEDHIQG6qRBNIMD7TRkkQf/QWFYHEBzFe6YAoPkXLp+XUEq//J5/JrvGSxqFAhAg9/7x3XOfeY/Xz5vlVeCfCs3Mu0f7fP10htCkBBCcLeM2dg+Pjg74xuxQHhTlAEjG1PLB0cEBHxwyv+ztAAj+UTX893r7Z97jHyYA1D3jHt6f2J8efz7He7v8VBaEqLq+0QakT9QWXWXm3W51QM3XKqPADobhoVGrG2dP/ay3xH/llSpz7J8VAjZG0n8RgQDk334WJA3xBLi6mgJEYgABJyoIdAIiAQBWUDggZgEAANAHAJ0BKhQAFAA+bS6TRyQiIaEoCqiADYlsAJ0yhH+HkF3NSA/QDeAbzlvE5KkfEjmi76AHbfcsWX5r6b9W/PXytwVLyfEAAP7xzQSJjBZZ40vZb/6cemU7Yk2fRMaZ3sjN7eg2b4GOgudgfPxaOHU0CwLbduK1+H3S9KPA89YUiaojGOgdjOQG7nCHyB8YWynMotwW0UFmT/Uoy9X8Au7slf/0x7DRrfLhzxKrI0RkYywK+ukW/7erWjTNIqhTFUTYiuPnQK6a/FcCMbJu7USDw0oa03T4f9YQKwRUlO8V426eEwr2Um1YlHB+vt5bf5vU/wArRRMWji+INxqi2rz7PVn/6/b/8e/2/5hNiqXu7ExZD791P/mnaspd/k2//Z9Bg9WNKP6/8CQYr+iGTc4OGGxTxD7ixgnne//13pMpmGs8gH81+VVkGNwH4P5+BOQx0iTaM5FbP1UjlEYJ1b0SNc+PAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "「模擬宇宙」ポイント報酬",
     "ナナシの勲功",
     "エンバー交換",
+    "星芒交換",
     "期間限定イベント報酬"
    ]
   },
@@ -158,7 +164,6 @@
    "rewardPath": "/material/635668",
    "comeFrom": [
     "疑似花萼「サポート部分」",
-    "疑似花萼「サポート部分」",
     "エンバー交換",
     "「万能合成マシン」- 素材交換"
    ]
@@ -210,7 +215,6 @@
    "rewardPath": "/material/836254",
    "comeFrom": [
     "疑似花萼「サポート部分」",
-    "疑似花萼「サポート部分」",
     "「万能合成マシン」- 素材合成",
     "「万能合成マシン」- 素材交換"
    ]
@@ -227,7 +231,6 @@
    "rarity": 3,
    "rewardPath": "/material/920195",
    "comeFrom": [
-    "疑似花萼「サポート部分」",
     "疑似花萼「サポート部分」",
     "「万能合成マシン」- 素材合成",
     "エンバー交換",
@@ -486,7 +489,7 @@
   {
    "id": 6,
    "iconPath": "e4b70ad49c4c8cded7fa0f118aa68247cdc1370c1f4c02eabd9e018ada72a432",
-   "artPath": "e210d6be5a1a62d13d30fccc4ec7aa38950042534d74ae7e7148fc2dfe47ba87",
+   "artPath": "edfd67b4fccf2241df54eb7a932ad049d107f6f58cf741a313d44beffa308ea4",
    "name": "永世に聳える壁塁",
    "descHash": "強化通常攻撃または必殺技を発動した後、開拓者の防御力+<nobr>#1[i]%</nobr>、最大で<nobr>#2[i]</nobr>層累積できる。",
    "params": [
@@ -1634,7 +1637,7 @@
    "energy": "30",
    "id": 489786,
    "name": "堅氷を貫く烈火",
-   "iconPath": "d448e9527a8ac43d4fe00d055f78c6c36c2e18934b5ebea37162d30fdbf24bfe",
+   "iconPath": "33c7c232c2926737c5955083d138dab2c0577b27358ff282a61c39cb6b908b3d",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1800,14 +1803,17 @@
  "skillTreePoints": [
   {
    "id": 8004103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 8004208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 8004209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1840,6 +1846,7 @@
       },
       {
        "id": 8004210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1941,18 +1948,22 @@
   },
   {
    "id": 8004201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 8004101,
+     "anchor": 6,
      "type": 1,
      "children": [
       {
        "id": 8004202,
+       "anchor": 10,
        "type": 2,
        "children": [
         {
          "id": 8004203,
+         "anchor": 11,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2051,14 +2062,17 @@
     },
     {
      "id": 8004102,
+     "anchor": 7,
      "type": 1,
      "children": [
       {
        "id": 8004205,
+       "anchor": 13,
        "type": 2,
        "children": [
         {
          "id": 8004206,
+         "anchor": 14,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2184,6 +2198,7 @@
   },
   {
    "id": 8004204,
+   "anchor": 12,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2216,6 +2231,7 @@
   },
   {
    "id": 8004207,
+   "anchor": 15,
    "type": 2,
    "children": [],
    "embedBuff": {

@@ -5,6 +5,11 @@
  "figPath": "f0d10346873e80911f55ed14ed19f8d7ad0b6602aa560eb7e38923ed7a02f30f",
  "fgPath": "04d6bcc33d0353d0143b61ab552916eecac0a1baee3e1e6c1606449c78562590",
  "splashIconPath": "72da6f1b2fae6c3fced8b6356875784d9bdfe1e28c20d7ae1026c5ce9d142cf4",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRlgCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSPEAAAABkLrt//nX8l+f73e2bbsvr3lrTkr2ko206B01OyKuHlb7NOP7eb0OxoiYAJyic5A5kg+QCicHx8xYL8jPzB6Ic2AOCZt/cLdmeaJw4c5wFA5vfLm/8fzp5c/3J8pg/jOIH3rlfRG/SRf88b9B0EVJspSlmuHvAj6Y+f6dpEjS7sYDCAKuyx4gUbrW3ZxY3LBjSUkUKUr6lJf/RqJISiJl9Xkc7qw8UqT4v1UDgEp5FA8Qf+tdEAzMPVnvt6Uo6+lHmwsYpHWV70u0/C2928Lh7WefSVYaCgg/yLgO4Lfm6Wo1jmxcIL8CcMxRAAMALg4GAFZQOCBAAQAA8AYAnQEqFAAUAD5tMpVHpCKiISgIAIANiWIAnTKEdXCBagLsl3mZ8Ae4LeAzAA6OpORbdYkPNMe4r+QKECVxQAD+83sZMfOLCjEVjZd364q5dBoWvKRLMXjyzvYcrWu/WmczIvvF0mv3pA9su+qjAr57EOVtNsYPe3gN7yBReWB7oxh5ttYNuenUmCLl/wvOS3P5EqfVur26RYsSRrn/M23Iysgy0+rd5RqTnVOjEyaCaJ2TC9DwwdiYK3TS23mMhhMV357DIDxO22bPpYU8DuIFB2a3RkZGa6uutfmf+OLkYRQzit/2SlBRimtmH+NvtHlhmfwWrsPQU9Pf7bkw6brKaxwHwftGlXPR5nfduBUGTZPIgROl7ALrF0M92YGmmivj//eMWamdaBFxovqlCFti36unQfBq2VBkyUgAAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "시뮬레이션 우주 점수 보상",
     "무명의 공훈",
     "잔화 교환",
+    "스타라이트 교환",
     "한정 이벤트 보상"
    ]
   },
@@ -148,7 +154,7 @@
    "id": 633445,
    "type": 601,
    "purposeId": 7,
-   "iconPath": "c3cb2e5eb5390586c537d03d1de632b1aa59c49a3cc32f24d68672d2f97fb1e5",
+   "iconPath": "fc1f8e93b552510a719e96df3c4e48ace4f905d262668303315d785b951a7c04",
    "name": "영생의 꽃",
    "desc": "고대 신물에서 피어난 꽃. 강화에 필요한 일반 재료",
    "lore": "선주 장수종의 「무한한 수명」의 원천이자 「풍요」의 기적이 남긴 흔적이다. 수없이 많은 고난 끝에 함대는 신을 만나게 되었다. 신은 그들에게 축복을 내렸고, 그렇게 불멸의 거목은 씨앗을 틔웠다.<br /><br />「새로 피어난 꽃봉오리가 달에서 떨어지자, 온 구름이 향기로 가득했다. 하얗게 세었던 선주 사람들의 머리는 눈 깜짝할 사이에 다시 검게 변했다」",
@@ -174,7 +180,6 @@
    "rarity": 2,
    "rewardPath": "/material/635675",
    "comeFrom": [
-    "모조 꽃받침 [리벳 타운]",
     "모조 꽃받침 [리벳 타운]",
     "잔화 교환",
     "「만능 합성기」- 재료 치환"
@@ -211,7 +216,6 @@
    "rewardPath": "/material/836261",
    "comeFrom": [
     "모조 꽃받침 [리벳 타운]",
-    "모조 꽃받침 [리벳 타운]",
     "「만능 합성기」- 재료 합성",
     "「만능 합성기」- 재료 치환"
    ]
@@ -228,7 +232,6 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
-    "모조 꽃받침 [리벳 타운]",
     "모조 꽃받침 [리벳 타운]",
     "「만능 합성기」- 재료 합성",
     "잔화 교환",
@@ -448,7 +451,7 @@
   },
   {
    "id": 2,
-   "iconPath": "1ada2903de22f2211cd7ccc29b6f1d13cb32c853c2f204b0d98e950f18c05fe7",
+   "iconPath": "5e1700f4af0601eea2bea05a58a7680186dde591658d153603bec9825d60b53a",
    "artPath": "8d02f2fa030804a7410f8f4c0a5c3a21b3366f270f50df1056a2fd16e902eb9d",
    "name": "천지를 뒤흔드는 하늘의 창",
    "descHash": "[신군]이 행동한 후 경원은 일반 공격, 전투 스킬, 필살기로 가하는 피해가 <nobr>#1[i]%</nobr> 증가한다. 지속 시간: <nobr>#2[i]</nobr>턴",
@@ -459,8 +462,8 @@
   },
   {
    "id": 3,
-   "iconPath": "c285ee548496215a285ac813e29e5d66263c9ce37bd30bface67a35dd34607be",
-   "artPath": "008d32c21ea127793484562895a96f6c6316996b554ccfe07cefa105b06d0492",
+   "iconPath": "2c6c8d2c0a5842ea12b010eb66dceff271679a1a7791802da9514e81691d8a9f",
+   "artPath": "1b1e9adb44a8dc1e61488fdf6c251f3e40bcd074cad227d0e5ed911e535e92eb",
    "name": "하늘을 꿰뚫는 번개",
    "descHash": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
    "params": []
@@ -468,7 +471,7 @@
   {
    "id": 4,
    "iconPath": "2b10749c72e213cf02be698dbeeffae1e10ea29442682e2ed7630900cb0bba92",
-   "artPath": "a8ecbfee2b5ed1aee477fc5f41a76a7a49ada94e77550f648f00eea927e0ad64",
+   "artPath": "66dc32381f62c8b17553a8f38f740263cf593f3d5b48991bdd5ff07c5d667efb",
    "name": "백사에 떨어진 칼날에 감긴 구름",
    "descHash": "[신군]의 공격은 단마다 경원의 에너지를 <nobr>#1[i]</nobr>pt 회복한다",
    "params": [
@@ -485,7 +488,7 @@
   },
   {
    "id": 6,
-   "iconPath": "74e9240d790270802b8ce168fcdc3b530c87b633c2c520a85f6dd979454afe8a",
+   "iconPath": "ed18f716d9b696581c1ccfa670bbf946e0295dc6e8d08c87dfaafd89f796e9b4",
    "artPath": "dbaf33bf9cbd2477edf3676e9e13e239f4931131296edd74a2d97f5dc7de0aa6",
    "name": "적을 격멸하는 위령(威霊)",
    "descHash": "[신군]의 공격은 단마다 지정된 적을 추가로 취약 상태에 빠트린다.<br />취약 상태의 적은 받는 피해가 <nobr>#1[i]%</nobr> 증가하며, 이번 [신군] 공격 종료까지 지속된다. 해당 효과 최대 중첩수: <nobr>#2[i]</nobr>스택",
@@ -1654,6 +1657,7 @@
  "skillTreePoints": [
   {
    "id": 1204201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -1682,6 +1686,7 @@
   },
   {
    "id": 1204210,
+   "anchor": 18,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -1714,14 +1719,17 @@
   },
   {
    "id": 1204101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1204202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1204203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1754,6 +1762,7 @@
       },
       {
        "id": 1204204,
+       "anchor": 12,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1851,14 +1860,17 @@
   },
   {
    "id": 1204102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1204205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1204206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1891,6 +1903,7 @@
       },
       {
        "id": 1204207,
+       "anchor": 15,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1991,10 +2004,12 @@
   },
   {
    "id": 1204103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1204208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2027,6 +2042,7 @@
     },
     {
      "id": 1204209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2482,12 +2498,12 @@
   {
    "id": 55,
    "title": "턴 대기",
-   "text": "전술가란 때를 기다리는 법. 움직이지 마",
+   "text": "전술가는 때를 기다려야 하나, 계속 가만히 있지만은 마",
    "unlockRequirement": "",
    "cnUrl": "07e409e5eef76818a0d00dab5e9efe947b47bce36f4e33be8f595955c5c3bfc8",
    "jpUrl": "195e5b1932aed3e62d71d295cc818703ecf0bce17b3afd8d0f4936f776cb57bc",
    "enUrl": "4c6782bf4183a9bbdeac38ba5f352c3176c2fa01138617092107b59f712a245c",
-   "krUrl": "cde1f1c881367ff56c9947bae7e8dec82879dd7f3afa7b921b758aa19df497ca"
+   "krUrl": "4e8475915b51055727050dd34527adb492152fe3c822e538c8d4cbecd833895a"
   },
   {
    "id": 56,

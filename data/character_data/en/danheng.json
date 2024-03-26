@@ -1,10 +1,15 @@
 {
  "spRequirement": 100,
  "iconPath": "16629dd543423ed56936730a2845e7e6ee08ed7c3f835d809843aaefbe04cc8a",
- "bgPath": "2997b302146716287c63fc74b639a1700f22f8e3e710790e218da6c76c0fe1e3",
+ "bgPath": "331b0b5f7f381079c7635e5d96e3add8b48e0bfb5b2df5ceae35c17c1bf9f671",
  "figPath": "f31d66ffb2e38c2727126e93165c3f6cb62701539282df1407645e6660f30826",
  "fgPath": "8751842fd8cbd944778d72d44c2f6bfdc22ba3ba739506578b143e2a937d310a",
  "splashIconPath": "5d4b304a3b358208d876623ce5dc22776cb5f7cbced8f3cc0786bb2e105cde0b",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRrgCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSFYBAAABkCzJtmlbY+vatv1sW03btm3btm3btt9r2Ta313j8h4iYAPy/c7OCgQAgA4CMfPNaenY2v/xc4tu+TxoUQIaW1Ja3qb/l8wWudSUSkgS/zBPbn1KQFBQ2l0BCzpZX7ren+uu9Nl8/oc3tHvCsceTdxdp36Lwm790mHfN0xbQqhVK7bLs7y+S6uft016BzNwYAKkzsWr1v+cqLBxlP79x8vAeQZRkBp8+OVzu9P/j+cp+wlZPxt1ymaqlX886Sg6qvu7Y79h9SutbO/PZDGJ/IJ7GQAQnBuQplvaUQgnOHRUPG3wFADzquySshCcmeAOS4Srly7370nvYP3lnUb0EwgMApdx59Jg2brv7zA6sDkozwm3QsQeG4Jskf01MB37kUpPWdf7/WnYsZgFKmcenZb1/RufR5d7/NHAVI+Dt23LWFDZKLB+VpU80TMgBZUQHZy9cf/wdWUDggPAEAADAGAJ0BKhQAFAA+bTCTRyQioaEoCqiADYlsAJ0hIYmBpme8gVwBQUA0rqzeIz+D/lfz+PXIkflHswAA/FG4Qc9JvUiCkPE4PMd1dR6+dkYVG8WS4nY52j7jmcE1JMX1BXXJDe8Eif8GJO2OY7XCNbyasCcM1nv5Mhd9E0kXFg6oqJY2/FuDmdS1+ZnUj7BzI030BuRTSe6rI82V/bugm6t7zdO7M5GBYP/2YbLatc/5YUR+L4UG5FkHBhkAXNump0vP3zcDrwf8Igns89W4MeycF2kaZ/XKaNIg/+Jcff4lTV3jTy7wHrK2He91FMKP0Xdy3H/2oZ+nFN4/tFH7G+H6VWZzlT83/vWJOEfdIDaZcypv9+8kPepJT8F+tJTdWbJF6vyUU6C7ZC0D1Y5LaqtfspRGCwjOKcoAAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Simulated Universe Point Rewards",
     "Nameless Honor",
     "Embers Exchange",
+    "Starlight Exchange",
     "Limited-Time Event Rewards"
    ]
   },
@@ -175,7 +181,6 @@
    "rewardPath": "/material/635674",
    "comeFrom": [
     "Calyx (Outlying Snow Plains)",
-    "Calyx (Outlying Snow Plains)",
     "Embers Exchange",
     "Omni-Synthesizer — Material Exchange"
    ]
@@ -211,7 +216,6 @@
    "rewardPath": "/material/836260",
    "comeFrom": [
     "Calyx (Outlying Snow Plains)",
-    "Calyx (Outlying Snow Plains)",
     "Omni-Synthesizer — Material Synthesis",
     "Omni-Synthesizer — Material Exchange"
    ]
@@ -228,7 +232,6 @@
    "rarity": 3,
    "rewardPath": "/material/920201",
    "comeFrom": [
-    "Calyx (Outlying Snow Plains)",
     "Calyx (Outlying Snow Plains)",
     "Omni-Synthesizer — Material Synthesis",
     "Embers Exchange",
@@ -465,7 +468,7 @@
   },
   {
    "id": 4,
-   "iconPath": "5d8f07ef763d9553ddf5a6ca0b72fc41e1d82eedfa5c5d9414cd605ad9491253",
+   "iconPath": "c50603213c3dde1a13775a8c8ecb8a27b6a79d024b193f2cf209e2d997567e51",
    "artPath": "64a5cd3588b2f13432ece5f94a06b90725a6944dbe05aab53d7f36b937ff3c28",
    "name": "Roaring Dragon and Soaring Sun",
    "descHash": "When Dan Heng uses his Ultimate to defeat an enemy, he will immediately take action again.",
@@ -482,7 +485,7 @@
   {
    "id": 6,
    "iconPath": "aeb9658eaa694bfce3c982182b9a3cedfe84c700fc56dbec03558660c4d3ca28",
-   "artPath": "b8bad8b84f2c801acb9694de5b044c4d3b5dd355cfe01069fb6b18c96de29e27",
+   "artPath": "4f6ea6f8b26ffa9aaa4afb0f0126126e813245db4de3c05f3c60e5dce266bc53",
    "name": "The Troubled Soul Lies in Wait",
    "descHash": "The Slow state triggered by Skill reduces the enemy's SPD by an extra <nobr>#1[i]%</nobr>.",
    "params": [
@@ -1279,7 +1282,7 @@
    "energy": "0",
    "id": 318995,
    "name": "Superiority of Reach",
-   "iconPath": "7a24cc6210529d0a7db8514ce2550e5f91a1aa0d88faa7f095a5c9ad9a9e1c1d",
+   "iconPath": "83e193b6bdd5a0396c5eb5df8cd02c85a3c2e2c8550e052daae2e6aa8bbac922",
    "typeDescHash": "Talent",
    "levelReq": 0,
    "promotionReq": 0,
@@ -1608,14 +1611,17 @@
  "skillTreePoints": [
   {
    "id": 1002101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1002202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1002203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1713,14 +1719,17 @@
   },
   {
    "id": 1002102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1002205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1002206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1823,14 +1832,17 @@
   },
   {
    "id": 1002103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1002208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1002209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1863,6 +1875,7 @@
       },
       {
        "id": 1002210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1963,6 +1976,7 @@
   },
   {
    "id": 1002201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -1991,6 +2005,7 @@
   },
   {
    "id": 1002204,
+   "anchor": 12,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2023,6 +2038,7 @@
   },
   {
    "id": 1002207,
+   "anchor": 15,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2663,7 +2679,7 @@
  "name": "Dan Heng",
  "rarity": 4,
  "descHash": "A cold and reserved young man who is reticent about his past. To avoid his kin, he decided to travel with the Astral Express.",
- "artPath": "0f8b802df63f838e5eaa08f676fe8f6ce13604975337f8b839e0faf42490502c",
+ "artPath": "309d9ef8358c4d7f2ea5028683a697eebb73f246bd8a58d2f2d5a3732179894e",
  "miniIconPath": "91492a7694eaa247d7e456b162efa981f799d3f973863a712105a5a25206fa11",
  "damageType": {
   "id": 16,

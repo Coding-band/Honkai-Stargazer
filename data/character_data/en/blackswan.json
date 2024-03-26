@@ -5,6 +5,11 @@
  "figPath": "8edb308439fd6545b630899981d7d833a82efc9c241d5a62215b7c6f2c43bb76",
  "fgPath": "",
  "splashIconPath": "8235c510c01b722b5ced0f0ece69b8f597028c031a888fb79177692456aa68f2",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRl4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAEBAAABkGtr27E59/ONbdtuZ01tu4ptp046q05l2+l8Blkpbdt63/sezylExAQAQEiAqRsQaoEZALMJ0NuzKQwTmgEw1D/+dHdaY1YKEJWaCARAgLq/+uf0+u3tm49e3z9RASAEq+QkasLn0wJDxGVHkt47573/Ly1A+dKHIiWRIqm/2tPwRBRFjSXJ/zoUflWOosaSEqkNUZ/kSHGMROrf8XjslrzzIknR//+4MQ5I2vVdkhcpUrq3oihA/N45zUceyVMUn52ZkWkAqhOA9fpP90978zDJnDv6+08aWNCK0HEsBP2/JV3bPtQOw4SGzPNHd+ahumEyMIwNAQyTNViIwQzjAgBWUDggNgEAADAHAJ0BKhQAFAA+bTKVR6QioiEoCACADYlqAJ0zJf9pB3xAPXVsjoiDvJM6owbtofaR3hXH2aoRdGCNaR9U/5+CgAD+9DLbvRnEYp+Qfj6a6cdpnJWurfuP+p6BAjiSRJ+1Ida3M/VahgqaUAB8EzS0ywVuafU8mmXo8duSnrWXMASkxeb8fwZVxiQ5OWgNq929bIxULsklVvLFYX1kk/aTnQmKLksDOwDDdfDtcC+TiRPdN032wuzluUATJTDEv3HMendYCFxMCKc52BoN967q7DeZ0U+RaXyCcHv9+f+MkhpU/v1c5WvMxeDL5sj4QCDK2yGhfguPB4/6DN9skb4c8A5JkQY7Hu9jJl1dseImDofKh8Aj/4Hv/TFq+OOnrD8zZyaH6WnkGKZkEVA46eUEDbmoAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Simulated Universe Point Rewards",
     "Nameless Honor",
     "Embers Exchange",
+    "Starlight Exchange",
     "Limited-Time Event Rewards"
    ]
   },
@@ -172,7 +178,6 @@
    "rewardPath": "/material/589818",
    "comeFrom": [
     "Calyx (Alchemy Commission)",
-    "Calyx (Alchemy Commission)",
     "Omni-Synthesizer — Material Synthesis",
     "Embers Exchange",
     "Omni-Synthesizer — Material Exchange"
@@ -209,7 +214,6 @@
    "rewardPath": "/material/673759",
    "comeFrom": [
     "Calyx (Alchemy Commission)",
-    "Calyx (Alchemy Commission)",
     "Omni-Synthesizer — Material Synthesis",
     "Omni-Synthesizer — Material Exchange"
    ]
@@ -244,7 +248,6 @@
    "rarity": 2,
    "rewardPath": "/material/874345",
    "comeFrom": [
-    "Calyx (Alchemy Commission)",
     "Calyx (Alchemy Commission)",
     "Embers Exchange",
     "Omni-Synthesizer — Material Exchange"
@@ -449,7 +452,7 @@
   {
    "id": 2,
    "iconPath": "420d033f134db663da7f64e6e3b12017f97b9228fe03a35566b5cad859ae4784",
-   "artPath": "760de1f0c7cd413cda516e16ae5fc6fd57ab962aeed91a22bc1759229eeee97c",
+   "artPath": "7d751acb21fa87b9e3239065a6cc46cf3587d92671e3c23113b1a4eeb6100904",
    "name": "Weep Not For Me, My Lamb",
    "descHash": "When an enemy target afflicted with Arcana is defeated, there is a <nobr>#1[i]%</nobr> base chance of inflicting <nobr>#2[i]</nobr> stack(s) of Arcana on adjacent targets.",
    "params": [
@@ -470,7 +473,7 @@
    "iconPath": "ab35f129f930b7e0d7dc02b53f09ca63272056d8eca7dc09f55e248695dec404",
    "artPath": "71d0beda48cd4198ed9d3880275cbef849c999019d5e88bcb355ecc6faacebaf",
    "name": "In Tears We Gift",
-   "descHash": "While in the Epiphany state, enemy targets have their Effect RES reduced by <nobr>#1[i]%</nobr>. And at the start of their turn or when they get defeated, Black Swan regenerates <nobr>#2[i]</nobr> Energy. This Energy Regeneration effect can only trigger up to 1 time while Epiphany lasts. And this trigger count resets after the enemy gets inflicted with Epiphany again.",
+   "descHash": "While in the Epiphany state, enemy targets have their Effect RES reduced by <nobr>#1[i]%</nobr> and Black Swan regenerates <nobr>#2[i]</nobr> Energy at the start of these targets' turns or when they are defeated. This Energy Regeneration effect can only trigger up to 1 time while Epiphany lasts. The trigger count is reset when Epiphany is applied again.",
    "params": [
     0.1,
     8
@@ -479,7 +482,7 @@
   {
    "id": 5,
    "iconPath": "1f77c680c96f816c05e772ac266cc78a08c5a98ffaba8f5419185cdba1a6ea67",
-   "artPath": "4438d2fa65de7ddc2118afb93b5333900befecd2f95f310f06c00000077fd8cc",
+   "artPath": "46f20e4ec519bee5dfda5fa0ebb507279603181ea6ddb949723de32c0abf65e8",
    "name": "Linnutee Flyway",
    "descHash": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Basic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
    "params": []
@@ -489,7 +492,7 @@
    "iconPath": "090706494f93eb29c1fe4706d7cab5959cf93457be91584013611ee7dca14480",
    "artPath": "10c3567544ec1c0100dd07c6efd00fdc5698dd5058f6eb7977b146f36f4c13e1",
    "name": "Pantheon Merciful, Masses Pitiful",
-   "descHash": "When enemy targets get attacked by Black Swan's allies, Black Swan has a <nobr>#2[i]%</nobr> base chance of inflicting 1 stack of Arcana on the target.<br />Each time Black Swan inflicts Arcana on an enemy target, there is a <nobr>#1[i]%</nobr> fixed chance to additionally increase the number of Arcana stacks afflicted this time by <nobr>#3[i]</nobr>.",
+   "descHash": "When an enemy target gets attacked by Black Swan's allies, Black Swan has a <nobr>#2[i]%</nobr> base chance of inflicting 1 stack of Arcana on the target.<br />Every time Black Swan inflicts Arcana on an enemy target, there is a <nobr>#1[i]%</nobr> fixed chance to additionally increase the number of Arcana stacked this time by <nobr>#3[i]</nobr>.",
    "params": [
     0.5,
     0.65,
@@ -517,7 +520,7 @@
  "skills": [
   {
    "tagHash": "Single Target",
-   "descHash": "Deals <span style=\"color:#00FF9C;\">Wind </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Black Swan's ATK to a single target enemy, with a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> <u>base chance</u> of inflicting 1 stack of <u>Arcana</u>. And if the hit target currently has <span style=\"color:#00FF9C;\">Wind </span>Shear, Bleed, Burn, or Shock applied to them, each respectively has a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> <u>base chance</u> of inflicting 1 extra stack of <u>Arcana</u> onto the enemy.",
+   "descHash": "Deals <span style=\"color:#00FF9C;\">Wind </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Black Swan's ATK to a single target enemy, with a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> <u>base chance</u> of inflicting 1 stack of <u>Arcana</u> on the target. Additionally, when attacking a target that suffers <span style=\"color:#00FF9C;\">Wind </span>Shear, Bleed, Burn, or Shock, there is respectively a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> <u>base chance</u> of inflicting 1 extra stack of <u>Arcana</u> on the target.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "20",
@@ -696,7 +699,7 @@
   },
   {
    "tagHash": "Blast",
-   "descHash": "Deals <span style=\"color:#00FF9C;\">Wind </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Black Swan's ATK to a single target enemy and any adjacent targets. At the same time, there is a <nobr>#2[i]%</nobr> <u>base chance</u> of inflicting 1 stack of <u>Arcana</u> on the target enemy and the adjacent targets. And there is a <nobr>#3[i]%</nobr> <u>base chance</u> of reducing the DEF of the target enemy and the adjacent targets by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span>, lasting for <nobr>#5[i]</nobr> turn(s).",
+   "descHash": "Deals <span style=\"color:#00FF9C;\">Wind </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Black Swan's ATK to a single target enemy and any adjacent targets. At the same time, there is a <nobr>#2[i]%</nobr> <u>base chance</u> of inflicting 1 stack of <u>Arcana</u> on the target enemy and the adjacent targets. Additionally, there is a <nobr>#3[i]%</nobr> <u>base chance</u> of reducing the DEF of the target enemy and the adjacent targets by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span>, lasting for <nobr>#5[i]</nobr> turn(s).",
    "ultimateCost": 0,
    "break": "60 + 30/adjacent",
    "energy": "30",
@@ -1031,7 +1034,7 @@
   },
   {
    "tagHash": "AoE",
-   "descHash": "Inflicts Epiphany on all enemies for <nobr>#2[i]</nobr> turn(s).<br />Enemies affected by Epiphany take <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> more DMG in their turn, and their <u>Arcana</u> effect is regarded as <span style=\"color:#00FF9C;\">Wind </span>Shear, Bleed, Burn, and Shock effects. In addition, when their <u>Arcana</u> effect is triggered at the beginning of the next turn, the <u>Arcana</u> stacks are not reset. The stack non-reset effect can be triggered up to <nobr>#4[i]</nobr> time(s) in Epiphany's duration, and its charges are replenished when Epiphany is applied again.<br />Deals <span style=\"color:#00FF9C;\">Wind </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Black Swan's ATK to all enemies.",
+   "descHash": "Inflicts Epiphany on all enemies for <nobr>#2[i]</nobr> turn(s).<br />While afflicted with Epiphany, enemies take <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> increased DMG in their turn. Additionally, if enemies are also inflicted with <u>Arcana</u>, they are considered to be simultaneously afflicted with <span style=\"color:#00FF9C;\">Wind </span>Shear, Bleed, Burn, and Shock. After <u>Arcana</u> causes DMG at the start of each turn, its stacks are not reset. This non-reset effect of <u>Arcana</u> stacks can be triggered up to <nobr>#4[i]</nobr> time(s) for the duration of Epiphany. And the trigger count resets when Epiphany is applied again.<br />Deals <span style=\"color:#00FF9C;\">Wind </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Black Swan's ATK to all enemies.",
    "ultimateCost": 120,
    "break": "60/hit",
    "energy": "5",
@@ -1351,7 +1354,7 @@
   },
   {
    "tagHash": "Impair",
-   "descHash": "Every time an enemy target receives DoT at the start of each turn, there is a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> <u>base chance</u> for it to be inflicted with <u>Arcana</u>.<br />While afflicted with <u>Arcana</u>, enemy targets receive <span style=\"color:#00FF9C;\">Wind </span>DoT equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Black Swan's ATK at the start of each turn. Each stack of <u>Arcana</u> increases this DoT DMG multiplier by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>. Then <u>Arcana</u> resets to 1 stack. <u>Arcana</u> can stack up to <nobr>#8[i]</nobr> times.<br />Only when <u>Arcana</u> causes DMG at the start of an enemy target's turn, Black Swan triggers additional effects based on the number of <u>Arcana</u> stacks inflicted on the target:<br />When there are <nobr>#4[i]</nobr> or more <u>Arcana</u> stacks, deals <span style=\"color:#00FF9C;\">Wind </span>DoT equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> of Black Swan's ATK to adjacent targets, with a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> <u>base chance</u> of inflicting 1 stack of <u>Arcana</u> on adjacent targets.<br />When there are <nobr>#6[i]</nobr> or more <u>Arcana</u> stacks, enables the current DoT dealt this time to ignore <nobr>#7[i]%</nobr> of the target's and adjacent targets' DEF.",
+   "descHash": "Every time an enemy target receives DoT at the start of each turn, there is a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> <u>base chance</u> for it to be inflicted with 1 stack of <u>Arcana</u>.<br />While afflicted with <u>Arcana</u>, enemy targets receive <span style=\"color:#00FF9C;\">Wind </span>DoT equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of Black Swan's ATK at the start of each turn. Each stack of <u>Arcana</u> increases this DMG multiplier by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>. Then <u>Arcana</u> resets to 1 stack. <u>Arcana</u> can stack up to <nobr>#8[i]</nobr> times.<br />Only when <u>Arcana</u> causes DMG at the start of an enemy target's turn, Black Swan triggers additional effects based on the number of <u>Arcana</u> stacks inflicted on the target:<br />When there are <nobr>#4[i]</nobr> or more <u>Arcana</u> stacks, deals <span style=\"color:#00FF9C;\">Wind </span>DoT equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> of Black Swan's ATK to adjacent targets, with a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> <u>base chance</u> of inflicting 1 stack of <u>Arcana</u> on adjacent targets.<br />When there are <nobr>#6[i]</nobr> or more <u>Arcana</u> stacks, enables the current DoT dealt this time to ignore <nobr>#7[i]%</nobr> of the target's and adjacent targets' DEF.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1780,18 +1783,22 @@
  "skillTreePoints": [
   {
    "id": 1307101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1307202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1307203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1307204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1882,7 +1889,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "After using the Skill to hit an enemy that has <span style=\"color:#00FF9C;\">Wind </span>Shear, Bleed, Burn, or Shock, each of these debuffs respectively has a <nobr>#1[i]%</nobr> base chance of inflicting 1 extra stack of Arcana.",
+    "descHash": "After using the Skill to attack a single target enemy that has <span style=\"color:#00FF9C;\">Wind </span>Shear, Bleed, Burn, or Shock, each of these debuffs respectively has a <nobr>#1[i]%</nobr> base chance of inflicting 1 extra stack of Arcana.",
     "ultimateCost": 0,
     "id": 88345,
     "name": "Viscera's Disquiet",
@@ -1917,18 +1924,22 @@
   },
   {
    "id": 1307102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1307205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1307206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1307207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2019,7 +2030,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "There is a <nobr>#1[i]%</nobr> base chance to inflict 1 stack of Arcana when a target enters battle. Every time an enemy target receives DoT during a single attack by an ally, there is a <nobr>#1[i]%</nobr> base chance for the target to be inflicted with 1 stack of Arcana, stacking up to <nobr>#2[i]</nobr> time(s) during 1 single attack.",
+    "descHash": "When an enemy target enters battle, there is a <nobr>#1[i]%</nobr> base chance for it to be inflicted with 1 stack of Arcana.<br />Every time an enemy target receives DoT during a single attack by an ally, there is a <nobr>#1[i]%</nobr> base chance for the target to be inflicted with 1 stack of Arcana. The maximum number of stacks that can be inflicted during 1 single attack is <nobr>#2[i]</nobr>.",
     "ultimateCost": 0,
     "id": 88348,
     "name": "Goblet's Dredges",
@@ -2059,10 +2070,12 @@
   },
   {
    "id": 1307103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1307208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2095,6 +2108,7 @@
     },
     {
      "id": 1307209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2167,10 +2181,12 @@
   },
   {
    "id": 1307201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1307210,
+     "anchor": 18,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2296,7 +2312,7 @@
    "cnUrl": "099018899c5cef21798928257c01965bdb7cc2eee6e4d4712e476565c098986a",
    "jpUrl": "7d6424425033075a351237945dd00b426dcb96a2780200fb12b43c872b4855ea",
    "enUrl": "526732b4086ef1ac3b6245f129881e7a55b97d84f15ef984ab481fbdfe77d7db",
-   "krUrl": "2db14673478ba55274cb187d939d953984a11644905277df2357c4d4317bbb54"
+   "krUrl": "79ce2ababf53b66d47ad4d5cf4909901483b7034d5df50724c381fc3dd3b83a9"
   },
   {
    "id": 5,
@@ -2499,6 +2515,26 @@
    "krUrl": "784b7e80568c7702bcacc182a81b60eb0933c8aadb632f102cd922dcbdc37187"
   },
   {
+   "id": 25,
+   "title": "Added to Team With Acheron",
+   "text": "It's your call... What kind of dance do \"you\" want this time?",
+   "unlockRequirement": "",
+   "cnUrl": "bd2ae9b04e261093b32005ec1bb1e8675d3f394a34ac1f63afc6275c2bacd941",
+   "jpUrl": "aecc5d2f10eaf4b856b3092f0adcd324f9b490c77ee7df2453b861e9415a9fc4",
+   "enUrl": "3828f5ce1d63e62383782c6e6ee728ea4989ee6df80f8acedfcfa300a4e5af94",
+   "krUrl": "601d24e234772ed45d1b6fb72f3339d2212ebd98751eb83f50c88057b5ee60b4"
+  },
+  {
+   "id": 26,
+   "title": "Added to Team With Aventurine",
+   "text": "As we reunite in this venture, let's hope the fates grant us both what we seek.",
+   "unlockRequirement": "",
+   "cnUrl": "72cee1d8e11c432ec564631300c82352db5432254cbf90de1c94b9a9b224d392",
+   "jpUrl": "ef268a4b9cc2dc62f83cc940a39d22f508c90747337338460d40b981fb63cc94",
+   "enUrl": "cae396e16ea1637244aba626c13d85d16851b1a6d2bfa0557fbc2668f568a1f3",
+   "krUrl": "6f90a022f3d703b9532848986be5e0db567f7f9b0c6d0b6671681354fa33ec17"
+  },
+  {
    "id": 51,
    "title": "Battle Begins: Weakness Break",
    "text": "Destiny's course is becoming apparent.",
@@ -2626,7 +2662,7 @@
    "cnUrl": "bb427175e99b7e21d0267bc0c7608164d515a1cc0b1232e87ef5f3f9b168081d",
    "jpUrl": "8cec91d2ba81ec99796fc858dc9c8868b94e5989e34abf7ecf5ab56dc6a38224",
    "enUrl": "ff8714228024c73553e789b7f86fad9743534fec0c7155d7733162e8583e4b35",
-   "krUrl": "15b09317003428e914a89bd9bed1830245d1954ddb47dd4cba3157bcab59ed3f"
+   "krUrl": "80456a009d7ba3be8e9f7dabfbc66fa91ae23046540eb925d48d76a74bee3f95"
   },
   {
    "id": 64,
@@ -2757,12 +2793,12 @@
   },
   {
    "title": "Character Story: Part III",
-   "text": "Many individuals obsess over the glory of the past and aspire to become Memokeepers, longing to live within their memories. Such individuals often degenerate into unbridled Cremators, distorting memories to suit their preferences. However, she is different... I've sensed her unwavering determination and profound respect for memories themselves. Following tradition, I asked her three questions before making her a Memokeeper.<br /><br />\"Are you willing to dedicate your entire life to collecting memories?\"<br />\"I am.\"<br />\"Are you prepared to relinquish your physical form and accept the transformation?\"<br />\"I am.\"<br />\"If one day you cease to exist, what legacy will you leave behind for the world?\"<br />\"My memories. They are seeds from the past and will be reborn in the future.\"<br /><br />Memories come in various forms. Some are trivial and heartwarming, while others are grand and expansive. Some are gentle and meek, while others are wild and untamed... When she became a Memokeeper, her memories became tranquil and serene, like the calm waves that finally found their destined harbor.<br /><align=\"right\">— A Memokeeper's memories</align><br /><br />\"What comes to your mind?\" The Memokeeper asked.<br />As she opened her eyes, fragments of memories swirled around her.<br />\"People tend to believe they are facing the present and the future, yet fail to realize that we are all, in fact, moving toward the past.\"",
+   "text": "Many individuals obsess over the glory of the past and aspire to become Memokeepers, longing to live within their memories. Such individuals often degenerate into unbridled Cremators, distorting memories to suit their preferences. However, she is different... I've sensed her unwavering determination and profound respect for memories themselves. Following tradition, I asked her three questions before making her a Memokeeper.<br /><br />\"Will you dedicate your whole life to the collection of memories?\"<br />\"I will.\"<br />\"Will you relinquish your physical form and embrace the transformation of self?\"<br />\"I will.\"<br />\"If one day you cease to exist, what legacy will you leave behind for the world?\"<br />\"My memories. They hold seeds from the past, destined for rebirth into the future.\"<br /><br />Memories come in various forms. Some are trivial and heartwarming, while others are grand and expansive. Some are gentle and meek, while others are wild and untamed... When she became a Memokeeper, her memories became tranquil and serene, like the calm waves that finally found their destined harbor.<br /><align=\"right\">— A Memokeeper's memories</align><br /><br />\"What comes to your mind?\" The Memokeeper asked.<br />As she opened her eyes, fragments of memories swirled around her.<br />\"People tend to believe they are facing the present and the future, yet fail to realize that we are all, in fact, moving toward the past.\"",
    "unlockRequirement": "Unlocked at Character Level <nobr>60</nobr>"
   },
   {
    "title": "Character Story: Part IV",
-   "text": "Location: Penacony<br />Date: ██/██/██<br />Guests: ██, ██, ██, and ██<br />\"A sorrowful memory from ██. This opulent memory, adorned with ostentation and longing, conceals an unknown sadness that will linger for years, influencing its owner for an extended period.\"<br />\"A joyous memory from ██. This dramatic memory is filled with vibrant hues of joy, confusion, and funny elements, but it can hardly be called true happiness. Such is the future it portrays.\"<br />\"A regrettable memory from ██. The fleeting happiness in this memory is beautiful yet short-lived, like a shooting star from faded ashes. Cherish your limited moment, dear guest, for it informs me that it shall soon vanish.\"<br />\"A vague memory from ██. This memory is faint, chaotic, and disorienting, akin to an endless downpour with no respite in sight. I yearn to capture the future it points to, whether it be filled with rain or sunshine...\"<br /><align=\"right\">— Black Swan's memories</align><br /><br />\"I saw the figure of a woman, gracefully leaping and transforming amidst images and patterns. No... I'm not crazy, I did indeed see 'her.' I remember her voice, its velvety texture, and the colorful cards in her hands, imbued with some sort of magic... Oh, and she invited me to partake in fortune-telling. She said, 'Whether you want to foresee happiness or misfortune in the future, retrieve lost possessions, or seek unexpected gains... All I need is an honest story, for the past and the future are overlapped on the same point of a single circle.' My head spun, and she exuded such gentleness. I talked so much to her, and she patiently listened to my ramblings... And then, following her divination results, I retrieved a lost mirror for a guest of the hotel! Oh, you asked what I said to her? Oh, nothing important... Just some rumors about the past...\"<br /><align=\"right\">— A native Penacony resident's memories</align><br /><br />Currently, she journeys through various realms as a diviner, uncovering memories intertwined with her Path and Aeons. She believes that those memories are as enduring as gems, impervious to the eroding forces of oblivion.<br /><br />\"Numerous Memokeepers have ventured to Penacony, only to discover it as a mere illusory mirage dancing upon the water's surface.\"<br />\"However, dreams... They represent a distorted form of memories. I shall delve into its depths and catch a fleeting glimpse of the buried memories before those Memosnatchers and Cremators arrive.\"",
+   "text": "Location: Penacony<br />Date: ██/██/██<br />Guests: ██, ██, ██, and ██<br />\"A sorrowful memory from ██. This opulent memory, adorned with ostentation and longing, conceals an unknown sadness that will linger for years, influencing its owner for an extended period.\"<br />\"A joyous memory from ██. This dramatic memory is filled with vibrant hues of joy, confusion, and humor, but it can hardly be called true happiness. Such is the future it portrays.\"<br />\"A regrettable memory from ██. The fleeting happiness in this memory is beautiful yet short-lived, like a shooting spark from faded ashes. Cherish your limited moment, dear guest, for it informs me that it shall soon vanish.\"<br />\"A vague memory from ██. This memory is faint, chaotic, and disorienting, akin to an endless downpour with no respite in sight. I yearn to capture the future it points to, whether it be filled with rain or sunshine...\"<br /><align=\"right\">— Black Swan's memories</align><br /><br />\"I saw the figure of a woman, gracefully leaping and transforming amidst images and patterns. No... I'm not crazy, I did indeed see 'her.' I remember her voice, its velvety texture, and the colorful cards in her hands, imbued with some sort of magic... Oh, and she invited me to partake in fortune-telling. She said, 'Whether you want to foresee happiness or misfortune in the future, retrieve lost possessions, or seek unexpected gains... All I need is an honest story, for the past and the future are overlapped on the same point of a single circle.' My head spun, and she exuded such gentleness. I talked so much to her, and she patiently listened to my ramblings... And then, following her divination results, I retrieved a lost mirror for a guest of the hotel! Oh, you asked what I said to her? Oh, nothing important... Just some rumors about the past...\"<br /><align=\"right\">— A native Penacony resident's memories</align><br /><br />Currently, she journeys through various realms as a diviner, uncovering memories intertwined with her Path and Aeons. She believes that those memories are as enduring as gems, impervious to the eroding forces of oblivion.<br /><br />\"Numerous Memokeepers have ventured to Penacony, only to discover it as a mere illusory mirage dancing upon the water's surface.\"<br />\"However, dreams... They represent a distorted form of memories. I shall delve into its depths and catch a fleeting glimpse of the buried memories before those Memosnatchers and Cremators arrive.\"",
    "unlockRequirement": "Unlocked at Character Level <nobr>80</nobr>"
   }
  ],
@@ -2866,7 +2902,7 @@
  "name": "Black Swan",
  "rarity": 5,
  "descHash": "A Memokeeper of the Garden of Recollection. An indolent and mysterious soothsayer. \"Remembrance\" of men are hers to heed, threads of fate are hers to tug.",
- "artPath": "da5a3d8d87865c51907df718c329a6d552ef2ddbc3e1f6e82dd466c14b0c1aa6",
+ "artPath": "870d3284ed48895f121c22c356f4292a94c0e2fdd368e691bf3a595ba7f0634c",
  "miniIconPath": "741cd71f3a6a5c9ad08beec9f832c75eaea8a07246cafcd530c806b8d2dc00a5",
  "damageType": {
   "id": 16,

@@ -5,6 +5,11 @@
  "figPath": "7c35aebf10b363241475811ff972e669b951d598825ff2bcfa587643a26f2988",
  "fgPath": "b5d0c0fca778143dc1b498eed13a93a84f38864c4b98668ee5f6cdfdde8e9b3b",
  "splashIconPath": "cbc92e82df0318c1c5179c971cc3100369680b18f1101057686255c2e02ff3bb",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRqgCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSP0AAAABkKNt27FH9/t9sZ3Sdmo7pZ2pvAV1tlrPdDlmDbY6lTY6fnzvu/ixhoiYACR3AWSUw3UdF8kdAHOH7k4jXQfY/lz63NoycPDKrqwEB/U3JBv5XijpGgxggMcKYlISA20ACUcVUhQTY38GMI55pFiURMrKdiHxhSyVLNJ1GGDHKU9MIjHWeRgckkSlJPW7G7W+QorpBB1YkKVSkLL6tqVo+5NIVGpKL8aAc4pIMYGk3QeTd1ihJIoUafV6+/7V6rVfCrwgskqg1Yd+ACVzfdsiKYyjmLH38GkXHACo333styRZvUHteg1gXBfA4JnNza3DhwcAZCLRuC5SGmMAAFZQOCCEAQAAkAgAnQEqFAAUAD5tMpRHpCKiISgIAIANiWwAnTKEcDeLW4duC8o57f0AbwB6AH6geaB7mxKd/FHqABLumim04f+wOI4KsuDNy4111NwA/tM+xbxChU1+QroDt4OPsYXz+2vqFOqzAxM6ECLwvtPzY00t+mx+CFid/jIX8IyRuWdHfuyw5E5QAi73xifat6pXwKptsIbFqeVLf6YUT3IL6ytKtke8nOxn62iZxfRA+2Vee31Fq/f6hgk1xFEOUTTontTY8uw6OoDtAQf+RvCK+6dr/3l7t/9Qc/s9fwopWW6+Z+9Dv8IP02zcWV4EEdpfdoV5KJajjVGHre84BeiUHrEoqDSgCqfkH4NcqCL23HB5twoCtHBP0/6088xeP/KI3FjWSmz9slQTRMqrSaC9UekCf3JTGwKuaQkpvRVRZc/TAYy6u+WN8mFwupw7XfkyOV9nt/gk5PIL80tHkpT7uC7Vfyt0vbg3/4wiAiTa7JVGT43ipUoAXOacyMM5nkY6tgAAAA==",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "「模擬宇宙」積分獎勵",
     "無名勳禮",
     "餘燼兌換",
+    "星芒兌換",
     "限時活動獎勵"
    ]
   },
@@ -120,7 +126,6 @@
    "rewardPath": "/material/468391",
    "comeFrom": [
     "凝滯虛影【邊緣通路】",
-    "凝滯虛影【邊緣通路】",
     "「萬能合成機」- 材料置換"
    ]
   },
@@ -175,7 +180,6 @@
    "rewardPath": "/material/635670",
    "comeFrom": [
     "擬造花萼【機械聚落】",
-    "擬造花萼【機械聚落】",
     "餘燼兌換",
     "「萬能合成機」- 材料置換"
    ]
@@ -211,7 +215,6 @@
    "rewardPath": "/material/836256",
    "comeFrom": [
     "擬造花萼【機械聚落】",
-    "擬造花萼【機械聚落】",
     "「萬能合成機」- 材料合成",
     "「萬能合成機」- 材料置換"
    ]
@@ -228,7 +231,6 @@
    "rarity": 3,
    "rewardPath": "/material/920197",
    "comeFrom": [
-    "擬造花萼【機械聚落】",
     "擬造花萼【機械聚落】",
     "「萬能合成機」- 材料合成",
     "餘燼兌換",
@@ -1613,14 +1615,17 @@
  "skillTreePoints": [
   {
    "id": 1207101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1207202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1207203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1717,14 +1722,17 @@
   },
   {
    "id": 1207102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1207205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1207206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1825,14 +1833,17 @@
   },
   {
    "id": 1207103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1207208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1207209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1865,6 +1876,7 @@
       },
       {
        "id": 1207210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1965,10 +1977,12 @@
   },
   {
    "id": 1207201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1207204,
+     "anchor": 12,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2001,6 +2015,7 @@
     },
     {
      "id": 1207207,
+     "anchor": 15,
      "type": 2,
      "children": [],
      "embedBuff": {

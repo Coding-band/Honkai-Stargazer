@@ -5,6 +5,11 @@
  "figPath": "991aa9d7c911b02cfd47800cab0ad4146bb0d02de608eb112830f5e334ca2a13",
  "fgPath": "",
  "splashIconPath": "f1dfd94040dc1f7a208bc749c20be2fc5a9bd7a37da45ad756f201f0d49195b6",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRv4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSDkBAAABkHPbtrG9yvejz7Zt22br76sY20lt27ZT2erMynYqO3mesz9HxASgX1Wtao/WAagYWEPhlTp3AwoG9gFqxqcCgJ1PnkM/AaPKLl52jJ2/pahg3aVnWVChoe3jc95Ydujwpye3n4xckm4AGobfPUuT/b6+34k6e2jo2JH7meb//5Zl8scCDx93KAiZF/aNFoUi/7m1drsnAOSfoCXsa/GZ55trgI4p/C8ipIjw53YesIWO+TSFQlKE//5wMmCEJPz6RhHpY/H6kQagpQNTH9AihWLyU/6GOCBlprsWdJCmUITcHdzlCB1DpkTlzyBFhC/PdawLhKIgZn720OM/aZH3sjStug4qVLi1tpZv/2r+WTe9Gq7xnujrv2ZZYtNv8s1OX9ho6Ksg4szzFRuONsbEQMHATu2HJmHQAFZQOCCeAQAAsAgAnQEqFAAUAD5tMJRHpCKiISgIAIANiWwAnTKEen+O8PM7/AA2zXKzaq7vGRPwHpg5p/nL2AP1S31UPNqFIg7Q9T2kHbdQBrCqhrKcAP7veqX6qZbpLZcedXteDfxY2/gB/PEV8UYdmD8EUgmz0t9gc3FBfgkAvb6C2pyleNMk8Br6fwdrFdTyxNsmXwg9/xuQRx3bc0d/+4FysOh+tYqkZN6fLtuxams/N3/KvdriDFt96dXtpuuVl7Afmll03lhB7YNrn5yaU+ck8jW3Y58P8bYvZvHGm1cdV9yRdFmxZCL/xVTjEP/TAfXyK1bLjPaXo2Rx2zL2F70ACVwvdX9MUePuNay0w3+i/NvzggswmF4I5EnffzWPo6b/HUHeNUMNN1AZLpEks/I8uUbtRPT3VYj46xuupu1jrNZ4MWno0ppt2nQWL/jW2+g/fZUyUwb8u2/xcfsrz0IBeySlPfiNafOGfLsfxIVurQCsdFpHy9Vh+lskTADdSKniGHoseVetB0AZ8/SatIIHf2xbdHAgvJ0/t3uoE+IcAAAA",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Récompenses de points de l'Univers simulé",
     "Honneur des Sans Noms",
     "Échange de braises",
+    "Lumières d'étoile",
     "Récompense d'événement à durée limitée"
    ]
   },
@@ -64,7 +70,6 @@
    "rarity": 4,
    "rewardPath": "/material/351748",
    "comeFrom": [
-    "Ombre stagnante de la Frontière des rêves",
     "Ombre stagnante de la Frontière des rêves",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -172,7 +177,6 @@
    "rewardPath": "/material/589819",
    "comeFrom": [
     "Calice de l'Hôtel Rêverie du Pays des rêves",
-    "Calice de l'Hôtel Rêverie du Pays des rêves",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Braises immortelles",
     "Échange de matériaux de l'Omni-synthétiseur"
@@ -185,7 +189,7 @@
    "iconPath": "d76fcb744e5bf3574f3fa68b6e66adfefdf41b1652d1dd788b0dbe68407b1e0d",
    "name": "Fragments d'impression",
    "desc": "Fragment d'impression profonde. Matériau intermédiaire utilisé pour le renforcement.",
-   "lore": "Au sein de la Zone de mémoire, les souvenirs formés flottent tels des lueurs passagères, et seuls les fragments profonds et mémorables peuvent être condensés en cristaux.<br /><br />« La mémoire n'est pas qu'une réplique des moments vécus, c'est aussi une reconstruction des émotions passées ».",
+   "lore": "Au sein de la Zone de mémoire, les souvenirs formés flottent telles des lueurs passagères, et seuls les fragments profonds et mémorables peuvent être condensés en cristaux.<br /><br />« La mémoire n'est pas qu'une réplique des moments vécus, c'est aussi une reconstruction des émotions passées ».",
    "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
    "rarity": 3,
    "rewardPath": "/material/633151",
@@ -208,7 +212,6 @@
    "rarity": 4,
    "rewardPath": "/material/673760",
    "comeFrom": [
-    "Calice de l'Hôtel Rêverie du Pays des rêves",
     "Calice de l'Hôtel Rêverie du Pays des rêves",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Échange de matériaux de l'Omni-synthétiseur"
@@ -244,7 +247,6 @@
    "rarity": 2,
    "rewardPath": "/material/874346",
    "comeFrom": [
-    "Calice de l'Hôtel Rêverie du Pays des rêves",
     "Calice de l'Hôtel Rêverie du Pays des rêves",
     "Braises immortelles",
     "Échange de matériaux de l'Omni-synthétiseur"
@@ -439,9 +441,9 @@
   {
    "id": 1,
    "iconPath": "9ce44da0ce2db178d03fa5848f1666aed212db44e4472db3cfc81a0444ab2964",
-   "artPath": "b410784fbb494f07996741bc2887c9ff9045c4e84e932bd539e9fa2fe8099a4e",
+   "artPath": "9b2cefc8111d1be621f58cde3d8eb08ccf2e22a7992505ebe901b7fd674e78d4",
    "name": "Suspens suspicieux",
-   "descHash": "L'effet Énigme appliqué par l'ultime dure 1 tour supplémentaire. Tous les alliés affectés par Énigme voient leur ATQ augmenter de <nobr>#1[i]%</nobr>.",
+   "descHash": "L'effet Énigme accordé par l'ultime dure 1 tour supplémentaire. Tous les alliés qui bénéficient de cet effet voient leur ATQ augmenter de <nobr>#1[i]%</nobr>.",
    "params": [
     0.4
    ]
@@ -449,9 +451,9 @@
   {
    "id": 2,
    "iconPath": "6831a28c5ceeeeea8480f2a689dea58ab989249c3ceb3f87bfc094c6425b8079",
-   "artPath": "2d3fbd6ed5af564daf5076cb009ffeb329a7da156bf0dacfcdfb91ecd4e3def7",
+   "artPath": "a7670d995478c53fdf6ffff301be8959a00978d21b4ed3d57061f97aac87b567",
    "name": "Fiction sans fondement",
-   "descHash": "Chaque cumul du talent permet aux alliés d'ignorer <nobr>#1[i]%</nobr> de la DÉF de la cible ennemie lorsqu'ils lui infligent des DGT.",
+   "descHash": "Chaque cumul de l'effet du talent permet aux alliés d'ignorer <nobr>#1[i]%</nobr> de la DÉF de la cible lorsqu'ils infligent des DGT.",
    "params": [
     0.08
    ]
@@ -467,9 +469,9 @@
   {
    "id": 4,
    "iconPath": "ec1710504a85dcc5ffd40e56735ef4e3aae137eefa53154bf77668d496a636b9",
-   "artPath": "904de78ea5f505fc17de1b55998b5a9b9ba0a6d9ce09da47947fe953a1ce7a15",
+   "artPath": "3d3fb5c3033c97002ef326352aba0ed5b26636e23699418c56233d94941bed4d",
    "name": "La vie est un jeu",
-   "descHash": "L'ultime régénère 1 point de compétence supplémentaire. Le talent augmente encore le nombre de points de compétence max de 1.",
+   "descHash": "L'ultime régénère 1 point de compétence supplémentaire. Le talent augmente encore de 1 le nombre de points de compétence max.",
    "params": []
   },
   {
@@ -483,9 +485,9 @@
   {
    "id": 6,
    "iconPath": "97946a7beefedaf075a3e045a39f2d44cc9de450c44e047feb9f7bfeea214fb4",
-   "artPath": "83ea4cc2b496ca0758ac0069e3881ff56e4bcd0dc419e3fad8216c438c87a04a",
+   "artPath": "0c42626e2ed820bae2e1a329a7e44dda34ece227cb0df56473cd5eaa0def5431",
    "name": "Choix multiples",
-   "descHash": "L'effet d'augmentation des DGT critiques de la compétence de Sparkle augmente à hauteur de <nobr>#1[i]%</nobr> des DGT critiques de Sparkle, et lorsqu'elle utilise sa compétence, il s'applique à tous les alliés qui bénéficient actuellement d'Énigme. Lorsque Sparkle utilise son ultime, si la cible alliée bénéficie de l'effet d'augmentation des DGT critiques accordé par la compétence de Sparkle, cet effet se propage à tous les alliés avec Énigme.",
+   "descHash": "L'effet d'augmentation des DGT critiques accordé par la compétence de Sparkle augmente d'un montant équivalent à <nobr>#1[i]%</nobr> des DGT critiques de Sparkle. Lorsque Sparkle utilise sa compétence, l'effet d'augmentation des DGT critiques de sa compétence s'applique à tous les alliés qui bénéficient de l'effet Énigme. Lorsque Sparkle utilise son ultime, tout allié qui bénéficie de l'effet d'augmentation de DGT de sa compétence propage cet effet aux alliés avec Énigme.",
    "params": [
     0.3
    ]
@@ -672,7 +674,7 @@
   },
   {
    "tagHash": "Soutien",
-   "descHash": "Augmente les DGT critiques d'un allié unique à hauteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> des DGT critiques de Sparkle +<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> pendant <nobr>#3[i]</nobr> tour et avance de <nobr>#4[i]%</nobr> l'action de cet allié.<br />Lorsque Sparkle utilise cette capacité sur elle-même, son action n'est pas avancée.",
+   "descHash": "Augmente les DGT critiques d'une cible alliée unique à hauteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> des DGT critiques de Sparkle + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> pendant <nobr>#3[i]</nobr> tour et avance de <nobr>#4[i]%</nobr> l'action de cet allié.<br />Lorsque Sparkle utilise cette capacité sur elle-même, son action n'est pas avancée.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -992,7 +994,7 @@
   },
   {
    "tagHash": "Soutien",
-   "descHash": "Régénère <nobr>#2[i]</nobr> points de compétence pour l'équipe et accorde Énigme à tous les alliés. Lorsque des alliés qui bénéficient d'Énigme déclenchent l'effet d'augmentation de DGT accordé par son talent, chaque cumul d'Énigme accroît de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> supplémentaires cet effet pendant <nobr>#4[i]</nobr> tours.",
+   "descHash": "Régénère <nobr>#2[i]</nobr> points de compétence pour l'équipe et accorde Énigme à tous les alliés. Chaque cumul de l'effet d'augmentation de DGT accordé par le talent de Sparkle augmente de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> supplémentaires pour les alliés qui bénéficient d'Énigme. Dure <nobr>#4[i]</nobr> tours.",
    "ultimateCost": 110,
    "break": "0",
    "energy": "5",
@@ -1312,12 +1314,12 @@
   },
   {
    "tagHash": "Soutien",
-   "descHash": "Tant que Sparkle est sur le champ de bataille, le nombre maximum de points de compétence augmente de <nobr>#3[i]</nobr>. Chaque fois qu'un allié utilise 1 point de compétence, les DGT de tous les alliés augmentent de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>. Cet effet dure <nobr>#1[i]</nobr> tours et peut être cumulé jusqu'à <nobr>#4[i]</nobr> fois.",
+   "descHash": "Tant que Sparkle est sur le champ de bataille, le nombre maximum de points de compétence augmente de <nobr>#3[i]</nobr>. Chaque fois qu'un allié utilise 1 point de compétence, les DGT infligés par tous les alliés augmentent de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>. Cet effet dure <nobr>#1[i]</nobr> tours et peut être cumulé jusqu'à <nobr>#4[i]</nobr> fois.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
    "id": 649336,
-   "name": "Hareng rouge",
+   "name": "Fausse piste",
    "iconPath": "9a3f54ee20c7aefec4b5af5eba32319d99d1ef41fa55f73303caa2644bd6e2d3",
    "typeDescHash": "Talent",
    "levelReq": 0,
@@ -1654,7 +1656,7 @@
   },
   {
    "tagHash": "Soutien",
-   "descHash": "L'utilisation de cette technique accorde Tromperie à tous les alliés pendant <nobr>#2[i]</nobr> secondes. Les personnages qui sont en état de Tromperie ne sont pas détectés par les ennemis, et le fait d'engager le combat dans cet état permet de récupérer <nobr>#1[i]</nobr> points de compétence pour l'équipe.",
+   "descHash": "L'utilisation de cette technique accorde Tromperie à tous les alliés pendant <nobr>#2[i]</nobr> secondes. Les personnages qui bénéficient de l'effet Tromperie ne sont pas détectés par les ennemis, et le fait d'engager le combat dans cet état permet de récupérer <nobr>#1[i]</nobr> points de compétence pour l'équipe.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1681,14 +1683,17 @@
  "skillTreePoints": [
   {
    "id": 1306101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1306202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1306203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1785,14 +1790,17 @@
   },
   {
    "id": 1306102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1306205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1306206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1854,7 +1862,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "L'effet d'augmentation des DGT critiques accordé par la compétence dure jusqu'au début du prochain tour de la cible.",
+    "descHash": "L'effet d'augmentation des DGT critiques accordé par la compétence est prolongé jusqu'au début du prochain tour de la cible.",
     "ultimateCost": 0,
     "id": 801431,
     "name": "Fleur artificielle",
@@ -1891,14 +1899,17 @@
   },
   {
    "id": 1306103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1306208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1306209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1931,6 +1942,7 @@
       },
       {
        "id": 1306210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1992,7 +2004,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Augmente de <nobr>#4[i]%</nobr> l'ATQ de tous les alliés. Lorsqu'il y a 1/2/3 personnages de type quantique dans votre équipe, l'ATQ des alliés de type quantique augmente de <nobr>#1[i]%</nobr>/<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>.",
+    "descHash": "Augmente de <nobr>#4[i]%</nobr> l'ATQ de tous les alliés. Lorsqu'il y a 1/2/3 alliés de type quantique dans l'équipe, l'ATQ des alliés de type quantique augmente de <nobr>#1[i]%</nobr>/<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr> supplémentaires.",
     "ultimateCost": 0,
     "id": 801430,
     "name": "Rêverie nocturne",
@@ -2034,10 +2046,12 @@
   },
   {
    "id": 1306201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1306204,
+     "anchor": 12,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2070,6 +2084,7 @@
     },
     {
      "id": 1306207,
+     "anchor": 15,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2190,7 +2205,7 @@
   {
    "id": 4,
    "title": "Connaître Sparkle : Nom",
-   "text": "Moi, j'aime mon rôle de personnage secondaire. J'encourage ceux qui sont sur le devant de la scène, puis, quand l'intrigue est à son comble, je tire vers le ciel, et bang ! Des étincelles colorées comme un feu d'artifice. Tu penses que le personnage principal oserait faire une chose pareille ?",
+   "text": "Moi, j'aime mon rôle de personnage secondaire. J'encourage ceux qui sont sur le devant de la scène, puis, quand l'intrigue est à son comble, je tire vers le ciel, et bang ! Des étincelles de toutes les couleurs. Tu penses que le personnage principal oserait faire une chose pareille ?",
    "unlockRequirement": "",
    "cnUrl": "90a3aacf35e5e83ffd75df5fb0743027a6fa2fb05355370b1ea36cae1e6fac06",
    "jpUrl": "f8a002a7419629e853113df148d5e91d5d0f6a69a7e77f6d1af004a3d9d7b9b4",
@@ -2200,7 +2215,7 @@
   {
    "id": 5,
    "title": "Connaître Sparkle : Rêve",
-   "text": "Je n'ai pas beaucoup de talent, et avoir des rêves n'est pas pour moi. Mais mon but dernièrement est de... rejoindre la Société des génies ! Haha, je veux incarner un génie ! Ah, j'ai trop envie d'essayer. Tu penses que ça va marcher ?",
+   "text": "Je n'ai pas beaucoup de talents, et avoir des rêves n'est pas pour moi. Mais mon but dernièrement est de... rejoindre la Société des génies ! Haha, je veux incarner un génie ! Ah, j'ai trop envie d'essayer. Tu penses que ça va marcher ?",
    "unlockRequirement": "",
    "cnUrl": "0a685f07a61b1e326de971cdecb478630233c6527e3247168282935ba59fbdaf",
    "jpUrl": "6cbeb8865cf1b9d181863639caf8aa61f1f8f7ee38d714b2fe3e62dd866cca13",
@@ -2220,7 +2235,7 @@
   {
    "id": 7,
    "title": "Bavardage : Fous masqués",
-   "text": "Ce monde est comme un grand cirque, avec des bêtes qui font leurs pitreries sans arrêt : des ours sur des monocycles, des lions qui sautent dans des cerceaux de feu, des singes qui jonglent avec des bols... La différence entre nous, les « Fous », et vous autres, c'est qu'on prend déjà part à la scène.",
+   "text": "Ce monde est comme un grand cirque, avec des bêtes qui font leurs pitreries sans arrêt : des ours sur des monocycles, des lions qui sautent dans des cerceaux de feu, des singes qui jonglent avec des bols... La différence entre nous, les « Fous », et vous autres, c'est qu'on joue notre propre rôle.",
    "unlockRequirement": "",
    "cnUrl": "fac0e2003fb8fac3ae9d6a6afbadc6342075ce3ca0444629d4f3ae12c7eca495",
    "jpUrl": "5d3cd15446f466473aaba271b7cede1f95de4cfc981a8789a454b5946bfba140",
@@ -2240,7 +2255,7 @@
   {
    "id": 9,
    "title": "Problèmes",
-   "text": "Les règles, les normes sociales, tous ces codes moraux que les humains ont inventés, j'ai beau faire de mon mieux, ils n'arrêtent pas de me persécuter !",
+   "text": "Les règles, les normes sociales, tous ces codes moraux que les humains ont inventés, j'ai beau faire de mon mieux, ça n'en finit pas !",
    "unlockRequirement": "",
    "cnUrl": "0cd05369580d5b58f3dfdf8fa6c40b9c0028d78fb379051691f35c58ce83083b",
    "jpUrl": "c93a026d464d00201919782db3639324e3b2f8406985e0d38546cd0c0fd8ae08",
@@ -2290,7 +2305,7 @@
   {
    "id": 14,
    "title": "À propos d'Aventurine",
-   "text": "Sérieusement, qui refuserait une invitation à notre « taverne » pour aller se mêler des affaires de la corporation ? Et pourtant, je suis sûre que notre relation serait beaucoup moins intéressante si on était devenus compagnons...",
+   "text": "Sérieusement, qui refuserait une invitation à notre « taverne » pour aller se mêler des affaires de la corporation ? Et pourtant, je suis sûre que notre relation serait bien moins intéressante aujourd'hui si on était devenus compagnons...",
    "unlockRequirement": "",
    "cnUrl": "9c17332ad649a8f7d303b9ee11f8ae75c28fc3d2d11b6ca34d470ae3828bc03e",
    "jpUrl": "2ef917532284da86c58a88ccb0c6b56a7ee3f8072b238256b8042278a859aaf3",
@@ -2366,6 +2381,16 @@
    "jpUrl": "b21a0944431e7f2870d497a187f079bf1efcd57b17699f67f799496df967af6b",
    "enUrl": "2ae45eb385b982fd2f93ee7b13b1b82053600b3bf80b045a8254a36c203f3297",
    "krUrl": "3c96add23447b47cbcb682a44f290d4c680cec3bfc054a260f9faa6f1d2c98f1"
+  },
+  {
+   "id": 24,
+   "title": "Rejoint l'équipe avec Aventurine",
+   "text": "Oh, voyez-vous ça, regardez qui nous fait l'honneur de sa présence ! J'imagine que je vais rester dans ton ombre à présent.",
+   "unlockRequirement": "",
+   "cnUrl": "801cd04799135123803117d999712591bc85c5cb86a4ec30ab5a83a08af42c16",
+   "jpUrl": "fedf2387f18fef1fa479a6328149643f7d16a272e580e1c63c91c6c83cd3e726",
+   "enUrl": "bebd5480174ee3883f66bad127bf3984c82ab8efb86f09f205471db853fb4070",
+   "krUrl": "bd0b37de1c4f8f1bd6721936c83e1a93d5ded73ba254a0ea9c0915a7e110dc47"
   },
   {
    "id": 51,
@@ -2510,7 +2535,7 @@
   {
    "id": 65,
    "title": "Récupération de santé",
-   "text": "On est une équipe, pas vrai ?",
+   "text": "Rien ne vaut le jeu d'équipe, n'est-ce pas ?",
    "unlockRequirement": "",
    "cnUrl": "10062dcec0121a0a08adbf6fcabaa05b220d9af766780f1b4f485e11be9dd53c",
    "jpUrl": "fbda7ef6a0fda5f408515520663e0ff9823afda09fde0b14ec32fd99b58619b0",
@@ -2626,7 +2651,7 @@
   },
   {
    "title": "Histoire du personnage : Partie III",
-   "text": "La fille sans visage réalisa qu'elle devait faire l'objet d'une sorte de malédiction. Pourquoi sinon ne ressentait-elle pas la moindre sensation ? Ses sens de la douleur, du goût et de l'odorat étaient tous intacts, et pourtant elle était incapable d'y réagir. Naturellement, elle ne pouvait ressentir la joie, la colère, la tristesse ou toute autre émotion. Elle ne pouvait qu'observer les réactions d'autres personnes dans diverses situations pour tenter de comprendre leurs sentiments.<br /><br />« Que ressentiriez-vous si vous buviez une tasse de thé amer ? Comment le boiriez-vous ? »<br />Bien qu'attaché à la chaise et immobilisé, le sans-abri à gauche fit un geste reconnaissant et hocha la tête. La fille du milieu se mit immédiatement à pleurer et à secouer la tête en signe de refus, tandis que la dame à droite plissa le nez de dégoût.<br /><br />« Et si vous étiez dans une hutte glacée, avec uniquement cette tasse de thé à la main ? »<br />Naturellement, l'homme hocha la tête. La fille pleura un moment, puis finit par accepter avec réluctance, tandis que la dame continua de réagir avec dégoût.<br /><br />Elle continua de poser des questions en changeant de scénarios nuit et jour jusqu'à ce que les personnes interviewées tombent dans les pommes. Elle les renvoyait chez elles et cherchait de nouvelles cibles pour ses « interviews ».<br /><br />Pendant ce temps, les habitants de la ville faisaient tous le même cauchemar. Ils se retrouvaient enfermés dans un lieu où une jeune fille au visage flou leur posait poliment des questions auxquelles ils n'avaient pas d'autre choix que de répondre. L'une après l'autre, toutes leurs réponses étaient méticuleusement retranscrites sur des masques en papier. Lorsqu'un masque était rempli, un autre prenait sa place.<br /><br />Un autre cauchemar lui succéda bientôt : les habitants commencèrent à raconter qu'ils voyaient des masques en papier voler au beau milieu de la nuit. Les masques discutaient entre eux, émettant une légère lueur qui finissait par s'estomper, comme des feux de Bengale. Ils apparaissaient chaque nuit, comme s'ils habitaient ici, dans l'ombre de la ville.<br /><br />Dans un sous-sol sombre, une jeune fille ignorait tout de ce cauchemar. Elle avait collecté suffisamment d'informations, les émotions subtiles des gens, leurs opinions sur différentes choses, pour fabriquer davantage de masques en papier. Elle croyait fermement que même si elle était dépourvue d'émotions, les masques qu'elle créait étaient de chair et de sang et qu'un jour, ils auraient une vie propre.",
+   "text": "La fille sans visage réalisa qu'elle devait faire l'objet d'une sorte de malédiction. Pourquoi sinon ne ressentait-elle pas la moindre sensation ? Ses sens de la douleur, du goût et de l'odorat étaient tous intacts, et pourtant elle était incapable d'y réagir. Naturellement, elle ne pouvait ressentir la joie, la colère, la tristesse ou toute autre émotion. Elle ne pouvait qu'observer les réactions d'autres personnes dans diverses situations pour tenter de comprendre leurs sentiments.<br /><br />« Que ressentiriez-vous si vous buviez une tasse de thé amer ? Comment le boiriez-vous ? »<br />Bien qu'attaché à la chaise et immobilisé, le sans-abri à gauche fit un geste reconnaissant et hocha la tête. La fille du milieu se mit immédiatement à pleurer et à secouer la tête en signe de refus, tandis que la dame à droite plissa le nez de dégoût.<br /><br />« Et si vous étiez dans une hutte glacée, avec uniquement cette tasse de thé à la main ? »<br />Naturellement, l'homme hocha la tête. La fille pleura un moment, puis finit par accepter à contrecœur, tandis que la dame continua de réagir avec dégoût.<br /><br />Elle continua de poser des questions en changeant de scénarios nuit et jour jusqu'à ce que les personnes interviewées tombent dans les pommes. Elle les renvoyait chez elles et cherchait de nouvelles cibles pour ses « interviews ».<br /><br />Pendant ce temps, les habitants de la ville faisaient tous le même cauchemar. Ils se retrouvaient enfermés dans un lieu où une jeune fille au visage flou leur posait poliment des questions auxquelles ils n'avaient pas d'autre choix que de répondre. L'une après l'autre, toutes leurs réponses étaient méticuleusement retranscrites sur des masques en papier. Lorsqu'un masque était rempli, un autre prenait sa place.<br /><br />Un autre cauchemar lui succéda bientôt : les habitants commencèrent à raconter qu'ils voyaient des masques en papier voler au beau milieu de la nuit. Les masques discutaient entre eux, émettant une légère lueur qui finissait par s'estomper, comme des feux de Bengale. Ils apparaissaient chaque nuit, comme s'ils habitaient ici, dans l'ombre de la ville.<br /><br />Dans un sous-sol sombre, une jeune fille ignorait tout de ce cauchemar. Elle avait collecté suffisamment d'informations, les émotions subtiles des gens, leurs opinions sur différentes choses, pour fabriquer davantage de masques en papier. Elle croyait fermement que même si elle était dépourvue d'émotions, les masques qu'elle créait étaient de chair et de sang et qu'un jour, ils auraient une vie propre.",
    "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
   },
   {
@@ -2735,7 +2760,7 @@
  "name": "Sparkle",
  "rarity": 5,
  "descHash": "Membre des Fous masqués insaisissable et sans scrupules. Une dangereuse spécialiste dans l'art du théâtre, accro au jeu d'acteur. Portant d'innombrables masques, elle est le personnage aux mille visages. La richesse, le statut, le pouvoir... rien de tout cela n'a d'importance pour Sparkle. La seule chose qui la pousse à agir, c'est le « jeu ».",
- "artPath": "22498bd5da077b56fa1c9ef4886efbf3f62b558d381ff1a7b17e2724143426f2",
+ "artPath": "eb7aa57c0d4fd224c13ba71d84d12f4f8bce0e0c098629756852b084527590ce",
  "miniIconPath": "9da8f43ce94fde4b59e6b912399bb691350719279eb77aea9cda9ceb1ddd7548",
  "damageType": {
   "id": 32,

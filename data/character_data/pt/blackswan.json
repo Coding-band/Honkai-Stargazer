@@ -5,6 +5,11 @@
  "figPath": "8edb308439fd6545b630899981d7d833a82efc9c241d5a62215b7c6f2c43bb76",
  "fgPath": "",
  "splashIconPath": "8235c510c01b722b5ced0f0ece69b8f597028c031a888fb79177692456aa68f2",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRl4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAEBAAABkGtr27E59/ONbdtuZ01tu4ptp046q05l2+l8Blkpbdt63/sezylExAQAQEiAqRsQaoEZALMJ0NuzKQwTmgEw1D/+dHdaY1YKEJWaCARAgLq/+uf0+u3tm49e3z9RASAEq+QkasLn0wJDxGVHkt47573/Ly1A+dKHIiWRIqm/2tPwRBRFjSXJ/zoUflWOosaSEqkNUZ/kSHGMROrf8XjslrzzIknR//+4MQ5I2vVdkhcpUrq3oihA/N45zUceyVMUn52ZkWkAqhOA9fpP90978zDJnDv6+08aWNCK0HEsBP2/JV3bPtQOw4SGzPNHd+ahumEyMIwNAQyTNViIwQzjAgBWUDggNgEAADAHAJ0BKhQAFAA+bTKVR6QioiEoCACADYlqAJ0zJf9pB3xAPXVsjoiDvJM6owbtofaR3hXH2aoRdGCNaR9U/5+CgAD+9DLbvRnEYp+Qfj6a6cdpnJWurfuP+p6BAjiSRJ+1Ida3M/VahgqaUAB8EzS0ywVuafU8mmXo8duSnrWXMASkxeb8fwZVxiQ5OWgNq929bIxULsklVvLFYX1kk/aTnQmKLksDOwDDdfDtcC+TiRPdN032wuzluUATJTDEv3HMendYCFxMCKc52BoN967q7DeZ0U+RaXyCcHv9+f+MkhpU/v1c5WvMxeDL5sj4QCDK2yGhfguPB4/6DN9skb4c8A5JkQY7Hu9jJl1dseImDofKh8Aj/4Hv/TFq+OOnrD8zZyaH6WnkGKZkEVA46eUEDbmoAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Recompensas de Pontuação do Universo Simulado",
     "Honra dos Inominados",
     "Troca de Brasas",
+    "Troca de Luz Estelar",
     "Recompensas de Evento por Tempo Limitado"
    ]
   },
@@ -172,7 +178,6 @@
    "rewardPath": "/material/589818",
    "comeFrom": [
     "Cálice (Comissão de Alquimia)",
-    "Cálice (Comissão de Alquimia)",
     "Sintetizador Omni — Síntese de Material",
     "Troca de Brasas",
     "Sintetizador Omni — Troca de Material"
@@ -209,7 +214,6 @@
    "rewardPath": "/material/673759",
    "comeFrom": [
     "Cálice (Comissão de Alquimia)",
-    "Cálice (Comissão de Alquimia)",
     "Sintetizador Omni — Síntese de Material",
     "Sintetizador Omni — Troca de Material"
    ]
@@ -244,7 +248,6 @@
    "rarity": 2,
    "rewardPath": "/material/874345",
    "comeFrom": [
-    "Cálice (Comissão de Alquimia)",
     "Cálice (Comissão de Alquimia)",
     "Troca de Brasas",
     "Sintetizador Omni — Troca de Material"
@@ -449,7 +452,7 @@
   {
    "id": 2,
    "iconPath": "420d033f134db663da7f64e6e3b12017f97b9228fe03a35566b5cad859ae4784",
-   "artPath": "760de1f0c7cd413cda516e16ae5fc6fd57ab962aeed91a22bc1759229eeee97c",
+   "artPath": "7d751acb21fa87b9e3239065a6cc46cf3587d92671e3c23113b1a4eeb6100904",
    "name": "Não Chore por Mim, Cordeirinho",
    "descHash": "Quando um inimigo-alvo afligido por Arcana for derrotado, há uma chance-base de <nobr>#1[i]%</nobr> de infligir <nobr>#2[i]</nobr> acúmulo(s) de Arcana a alvos adjacentes.",
    "params": [
@@ -470,7 +473,7 @@
    "iconPath": "ab35f129f930b7e0d7dc02b53f09ca63272056d8eca7dc09f55e248695dec404",
    "artPath": "71d0beda48cd4198ed9d3880275cbef849c999019d5e88bcb355ecc6faacebaf",
    "name": "Em Lágrimas, Nós Presenteamos",
-   "descHash": "Enquanto estiverem no estado de Epifania, a RES a Efeito dos inimigos-alvo é reduzida em <nobr>#1[i]%</nobr>. E no início da rodada deles ou quando eles são derrotados, Cisne Negro recupera <nobr>#2[i]</nobr> de Energia. Essa Regeneração de Energia só pode ativar 1 vez enquanto Epifania durar. Esta contagem de ativação é redefinida depois que o inimigo é afligido com Epifania novamente.",
+   "descHash": "Enquanto estiverem no estado de Epifania, a RES a Efeito dos inimigos-alvo é reduzida em <nobr>#1[i]%</nobr> e Cisne Negro regenera <nobr>#2[i]</nobr> de Energia no início da rodada desses alvos ou quando eles são derrotados. Essa Regeneração de Energia só pode ativar 1 vez enquanto Epifania durar. A contagem de ativação é redefinida quando Epifania é aplicada novamente.",
    "params": [
     0.1,
     8
@@ -479,7 +482,7 @@
   {
    "id": 5,
    "iconPath": "1f77c680c96f816c05e772ac266cc78a08c5a98ffaba8f5419185cdba1a6ea67",
-   "artPath": "4438d2fa65de7ddc2118afb93b5333900befecd2f95f310f06c00000077fd8cc",
+   "artPath": "46f20e4ec519bee5dfda5fa0ebb507279603181ea6ddb949723de32c0abf65e8",
    "name": "Voo Migratório",
    "descHash": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.<br />Nv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
    "params": []
@@ -489,7 +492,7 @@
    "iconPath": "090706494f93eb29c1fe4706d7cab5959cf93457be91584013611ee7dca14480",
    "artPath": "10c3567544ec1c0100dd07c6efd00fdc5698dd5058f6eb7977b146f36f4c13e1",
    "name": "Panteão Misericordioso, Massas Lamentáveis",
-   "descHash": "Quando inimigos-alvo são atacados pelos aliados da Cisne Negro, Cisne Negro tem uma chance-base de <nobr>#2[i]%</nobr> de infligir 1 acúmulo de Arcana no alvo.<br />Cada vez que Cisne Negro infligir Arcana em um inimigo-alvo, há uma chance fixa de <nobr>#1[i]%</nobr> de aumentar adicionalmente o número de acúmulos de Arcana infligidos desta vez em <nobr>#3[i]</nobr>.",
+   "descHash": "Quando um inimigo-alvo é atacado pelos aliados da Cisne Negro, Cisne Negro tem uma chance-base de <nobr>#2[i]%</nobr> de infligir 1 acúmulo de Arcana no alvo.<br />Sempre que Cisne Negro infligir Arcana em um inimigo-alvo, há uma chance fixa de <nobr>#1[i]%</nobr> de aumentar adicionalmente o número de Arcana acumulados desta vez em <nobr>#3[i]</nobr>.",
    "params": [
     0.5,
     0.65,
@@ -517,7 +520,7 @@
  "skills": [
   {
    "tagHash": "Alvo Único",
-   "descHash": "Causa Dano de <span style=\"color:#00FF9C;\">Vento</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Cisne Negro a um único inimigo-alvo, com uma <u>chance-base</u> de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de infligir 1 acúmulo de <u>Arcana</u>. Caso o inimigo-alvo esteja atualmente afligido com Cisalhamento de <span style=\"color:#00FF9C;\">Vento</span>, Sangramento, Queimadura ou Choque, cada efeito possui uma <u>chance-base</u> de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de aplicar adicionalmente 1 acúmulo de <u>Arcana</u> no inimigo.",
+   "descHash": "Causa Dano de <span style=\"color:#00FF9C;\">Vento</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Cisne Negro a um único inimigo-alvo, com uma <u>chance-base</u> de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de infligir 1 acúmulo de <u>Arcana</u> ao alvo. Adicionalmente, ao atacar um alvo afligido com Cisalhamento de <span style=\"color:#00FF9C;\">Vento</span>, Sangramento, Queimadura ou Choque, existe respectivamente uma <u>chance-base</u> de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de aplicar 1 acúmulo extra de <u>Arcana</u> no inimigo.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "20",
@@ -696,7 +699,7 @@
   },
   {
    "tagHash": "Explosão",
-   "descHash": "Causa Dano de <span style=\"color:#00FF9C;\">Vento</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Cisne Negro a um único inimigo-alvo e a quaisquer alvos adjacentes. Ao mesmo tempo, há uma <u>chance-base</u> de <nobr>#2[i]%</nobr> de infligir 1 acúmulo de <u>Arcana</u> no inimigo-alvo e nos alvos adjacentes. E ainda há uma <u>chance-base</u> de <nobr>#3[i]%</nobr> de reduzir a DEF do inimigo-alvo e alvos adjacentes em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span>, durando por <nobr>#5[i]</nobr> rodada(s).",
+   "descHash": "Causa Dano de <span style=\"color:#00FF9C;\">Vento</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Cisne Negro a um único inimigo-alvo e a quaisquer alvos adjacentes. Ao mesmo tempo, há uma <u>chance-base</u> de <nobr>#2[i]%</nobr> de infligir 1 acúmulo de <u>Arcana</u> no inimigo-alvo e nos alvos adjacentes. Adicionalmente, ainda há uma <u>chance-base</u> de <nobr>#3[i]%</nobr> de reduzir a DEF do inimigo-alvo e alvos adjacentes em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[f1]%</nobr></span>, durando por <nobr>#5[i]</nobr> rodada(s).",
    "ultimateCost": 0,
    "break": "60 + 30/adjacent",
    "energy": "30",
@@ -1031,7 +1034,7 @@
   },
   {
    "tagHash": "Área",
-   "descHash": "Inflige Epifania em todos os inimigos por <nobr>#2[i]</nobr> rodada(s).<br />Os inimigos afetados por Epifania recebem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> a mais de Dano em suas rodadas, e seu efeito de <u>Arcana</u> é levado em conta como efeito de Cisalhamento de <span style=\"color:#00FF9C;\">Vento</span>, Sangramento, Queimadura e Choque. Além disso, quando seu efeito de <u>Arcana</u> é acionado no início da próxima rodada, os acúmulos de <u>Arcana</u> não são redefinidos. O efeito de não-redefinição de acúmulos pode ser acionado até <nobr>#4[i]</nobr> vez(es) durante o período da Epifania, e suas cargas são preenchidas quando a Epifania é aplicada novamente.<br />Causa Dano de <span style=\"color:#00FF9C;\">Vento</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ da Cisne Negro em todos os inimigos.",
+   "descHash": "Inflige Epifania em todos os inimigos por <nobr>#2[i]</nobr> rodada(s).<br />Enquanto estiverem afligidos com Epifania, inimigos recebem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de Dano aumentado em suas rodadas. Adicionalmente, se os inimigos também estiverem afligidos com <u>Arcana</u>, simultaneamente, considera-se que eles estão afligidos com Cisalhamento de <span style=\"color:#00FF9C;\">Vento</span>, Sangramento, Queimadura e Choque. Depois que <u>Arcana</u> causa Dano no início de cada rodada, seus acúmulos não são redefinidos. Este efeito de não redefinição dos acúmulos de <u>Arcana</u> é ativado até <nobr>#4[i]</nobr> vez(es) pela duração de Epifania. E a contagem de ativação é redefinida quando Epifania é aplicada novamente.<br />Causa Dano de <span style=\"color:#00FF9C;\">Vento</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Cisne Negro a todos os inimigos.",
    "ultimateCost": 120,
    "break": "60/hit",
    "energy": "5",
@@ -1351,7 +1354,7 @@
   },
   {
    "tagHash": "Incapacitação",
-   "descHash": "Cada vez que um inimigo recebe Dano Contínuo no início de cada rodada, há uma <u>chance-base</u> de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> dele ser afligido com <u>Arcana</u>.<br />Enquanto estiver sob efeito de <u>Arcana</u>, inimigos-alvo recebem Dano de <span style=\"color:#00FF9C;\">Vento</span> Contínuo igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Cisne Negro no início de cada rodada. Cada acúmulo de <u>Arcana</u> aumenta este multiplicador de Dano Contínuo em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>. Então, <u>Arcana</u> é redefinido para 1 acúmulo. <u>Arcana</u> pode acumular até <nobr>#8[i]</nobr> vezes.<br />Apenas quando <u>Arcana</u> causa Dano no início da rodada do inimigo-alvo, Cisne Negro ativa efeitos adicionais com base no número de acúmulos de <u>Arcana</u> infligidos no alvo:<br />Ao ter <nobr>#4[i]</nobr> ou mais acúmulos de <u>Arcana</u>, causa Dano de <span style=\"color:#00FF9C;\">Vento</span> Contínuo igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> do ATQ de Cisne Negro aos alvos adjacentes, com uma <u>chance-base</u> de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de infligir 1 acúmulo de <u>Arcana</u> em alvos adjacentes.<br />Quando tiver <nobr>#6[i]</nobr> ou mais acúmulos de <u>Arcana</u>, permite que o Dano Contínuo atual causado dessa vez ignore <nobr>#7[i]%</nobr> da DEF do alvo e alvos adjacentes.",
+   "descHash": "Cada vez que um inimigo recebe Dano Contínuo no início de cada rodada, há uma <u>chance-base</u> de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> dele ser afligido com <u> 1 acúmulo de Arcana</u>.<br />Enquanto estiver sob efeito de <u>Arcana</u>, inimigos-alvo recebem Dano de <span style=\"color:#00FF9C;\">Vento</span> Contínuo igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Cisne Negro no início de cada rodada. Cada acúmulo de <u>Arcana</u> aumenta este multiplicador de Dano em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>. Então, <u>Arcana</u> é redefinido para 1 acúmulo. <u>Arcana</u> pode acumular até <nobr>#8[i]</nobr> vezes.<br />Apenas quando <u>Arcana</u> causa Dano no início da rodada de um inimigo-alvo, Cisne Negro ativa efeitos adicionais com base no número de acúmulos de <u>Arcana</u> infligidos no alvo:<br />Ao ter <nobr>#4[i]</nobr> ou mais acúmulos de <u>Arcana</u>, causa Dano de <span style=\"color:#00FF9C;\">Vento</span> Contínuo igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> do ATQ de Cisne Negro aos alvos adjacentes, com uma <u>chance-base</u> de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de infligir 1 acúmulo de <u>Arcana</u> em alvos adjacentes.<br />Quando tiver <nobr>#6[i]</nobr> ou mais acúmulos de <u>Arcana</u>, permite que o Dano Contínuo atual causado dessa vez ignore <nobr>#7[i]%</nobr> da DEF do alvo e alvos adjacentes.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1780,18 +1783,22 @@
  "skillTreePoints": [
   {
    "id": 1307101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1307202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1307203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1307204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1882,7 +1889,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Após usar a Perícia para atingir um inimigo afetado por Cisalhamento de <span style=\"color:#00FF9C;\">Vento</span>, Sangramento, Queimadura e Choque, cada uma dessas penalidades possui uma chance-base de <nobr>#1[i]%</nobr> de infligir 1 acúmulo extra de Arcana.",
+    "descHash": "Após usar a Perícia para atacar um inimigo afetado por Cisalhamento de <span style=\"color:#00FF9C;\">Vento</span>, Sangramento, Queimadura e Choque, cada uma dessas penalidades possui uma chance-base de <nobr>#1[i]%</nobr> de infligir 1 acúmulo extra de Arcana.",
     "ultimateCost": 0,
     "id": 88345,
     "name": "Inquietação das Vísceras",
@@ -1917,18 +1924,22 @@
   },
   {
    "id": 1307102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1307205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1307206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1307207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -2019,7 +2030,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Há uma chance-base de <nobr>#1[i]%</nobr> de infligir 1 acúmulo de Arcana quando um alvo entra em batalha. Cada vez que um inimigo-alvo recebe Dano Contínuo durante um ataque único de um aliado, há uma chance-base de <nobr>#1[i]%</nobr> de infligir 1 acúmulo de Arcana no alvo, acumulando até <nobr>#2[i]</nobr> vez(es) durante 1 ataque único.",
+    "descHash": "Quando um inimigo-alvo entra em batalha, existe uma chance-base de <nobr>#1[i]%</nobr> dele ser afligido com 1 acúmulo de Arcana.<br />Cada vez que um inimigo-alvo recebe Dano Contínuo durante um ataque único de um aliado, há uma chance-base de <nobr>#1[i]%</nobr> dele ser afligido com 1 acúmulo de Arcana. O número máximo de acúmulos que podem ser infligidos durante 1 único ataque é <nobr>#2[i]</nobr>.",
     "ultimateCost": 0,
     "id": 88348,
     "name": "Dragas do Cálice",
@@ -2059,10 +2070,12 @@
   },
   {
    "id": 1307103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1307208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2095,6 +2108,7 @@
     },
     {
      "id": 1307209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2167,10 +2181,12 @@
   },
   {
    "id": 1307201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1307210,
+     "anchor": 18,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2271,7 +2287,7 @@
   {
    "id": 2,
    "title": "Cumprimento",
-   "text": "Como tem sido a jornada? Se houver algo te restringindo, permita-me performar uma divinação para você...",
+   "text": "Como tem sido a jornada? Se houver algo te restringindo, permita-me realizar uma divinação para você...",
    "unlockRequirement": "",
    "cnUrl": "431801ec03501c3273c50fa7a4dd23c2c896b176320dddc596024fd64049be9c",
    "jpUrl": "7570356729de25876a811639a654bcd2c6cac4fb0c3d1940c56e1d59fef4c1e4",
@@ -2296,7 +2312,7 @@
    "cnUrl": "099018899c5cef21798928257c01965bdb7cc2eee6e4d4712e476565c098986a",
    "jpUrl": "7d6424425033075a351237945dd00b426dcb96a2780200fb12b43c872b4855ea",
    "enUrl": "526732b4086ef1ac3b6245f129881e7a55b97d84f15ef984ab481fbdfe77d7db",
-   "krUrl": "2db14673478ba55274cb187d939d953984a11644905277df2357c4d4317bbb54"
+   "krUrl": "79ce2ababf53b66d47ad4d5cf4909901483b7034d5df50724c381fc3dd3b83a9"
   },
   {
    "id": 5,
@@ -2321,7 +2337,7 @@
   {
    "id": 7,
    "title": "Bate-papo: Cone de Luz",
-   "text": "Através do curso da existência de uma pessoa, apenas uma pequena quantidade de memórias impactantes, doloridas, alegres, de ódio e melancolia pode ser resgatada... O Jardim da Recordação foi concebido com a preservação destas memórias em mente. Ainda assim, ele não é imune aos esforços da Corporação de lucrar abertamente disto.",
+   "text": "Através do curso da existência de uma pessoa, apenas uma pequena quantidade de memórias impactantes, doloridas, alegres, de ódio e melancolia pode ser resgatada... O Jardim da Recordação foi concebido com a preservação destas memórias em mente. Ainda assim, ele não é imune aos esforços da Corporação de lucrar abertamente com isto.",
    "unlockRequirement": "",
    "cnUrl": "e5666436cc1dfe9861044f39b8179f1a85c3e8067d3d6211559ba8f6f8cad84f",
    "jpUrl": "6cc75e8f8785b1de96d2bef7888a90c4617133ea18aabcd57c7e6c926f0f74d4",
@@ -2421,7 +2437,7 @@
   {
    "id": 17,
    "title": "Sobre a 7 de Março",
-   "text": "Mesmo que o passado dela seja um sussurro esquecido, e que ela já esteve preocupada com seu futuro, as experiências da Março irão, sem sombra de dúvidas, se tornar memórias únicas. É animador imaginar os tipos de memórias que ela poderá agraciar o Jardim da Recordação...",
+   "text": "Mesmo que o passado dela seja um sussurro esquecido, e que ela já tenha se preocupada com seu futuro, as experiências da Março irão, sem sombra de dúvidas, se tornar memórias únicas. É animador imaginar com que tipos de memórias que ela poderá agraciar o Jardim da Recordação...",
    "unlockRequirement": "",
    "cnUrl": "d5abd9d0def47ef5d644c795f34c257e48472a322b12c9021f0dc530c3d0da16",
    "jpUrl": "42d3fa40017b3d578f9ad6d04fb7d960ba74144abf6ab33a5b0c69d98cf4c480",
@@ -2431,7 +2447,7 @@
   {
    "id": 18,
    "title": "Ativação de Eidolon",
-   "text": "Como o destino dita, memórias dispersadas começam a se entrelaçar novamente...",
+   "text": "Como o destino dita, memórias dispersas começam a se entrelaçar novamente...",
    "unlockRequirement": "",
    "cnUrl": "73be736c4b2e4ab6a09d73e76d85946afbd4524bd9b693e49c117bb0289000d6",
    "jpUrl": "36913bb888a3e51b4cd3ca7ea5c9a700c4990b904150163e9fa1f00c303b390b",
@@ -2497,6 +2513,26 @@
    "jpUrl": "40c567b5983fb2f5472e51c8c6d910546b1d521902c03fb13718a912a5c10110",
    "enUrl": "c7e286cdb86e154495b700ca2446df2914411d7ecedaadcbd9428940b883884b",
    "krUrl": "784b7e80568c7702bcacc182a81b60eb0933c8aadb632f102cd922dcbdc37187"
+  },
+  {
+   "id": 25,
+   "title": "Entrou na Equipe com Acheron",
+   "text": "É sua decisão... Que tipo de dança \"você\" quer performar desta vez?",
+   "unlockRequirement": "",
+   "cnUrl": "bd2ae9b04e261093b32005ec1bb1e8675d3f394a34ac1f63afc6275c2bacd941",
+   "jpUrl": "aecc5d2f10eaf4b856b3092f0adcd324f9b490c77ee7df2453b861e9415a9fc4",
+   "enUrl": "3828f5ce1d63e62383782c6e6ee728ea4989ee6df80f8acedfcfa300a4e5af94",
+   "krUrl": "601d24e234772ed45d1b6fb72f3339d2212ebd98751eb83f50c88057b5ee60b4"
+  },
+  {
+   "id": 26,
+   "title": "Entrou na Equipe com Aventurine",
+   "text": "Ao nos reunirmos nesta empreitada, vamos esperar que o destino nos garanta o que buscamos.",
+   "unlockRequirement": "",
+   "cnUrl": "72cee1d8e11c432ec564631300c82352db5432254cbf90de1c94b9a9b224d392",
+   "jpUrl": "ef268a4b9cc2dc62f83cc940a39d22f508c90747337338460d40b981fb63cc94",
+   "enUrl": "cae396e16ea1637244aba626c13d85d16851b1a6d2bfa0557fbc2668f568a1f3",
+   "krUrl": "6f90a022f3d703b9532848986be5e0db567f7f9b0c6d0b6671681354fa33ec17"
   },
   {
    "id": 51,
@@ -2581,7 +2617,7 @@
   {
    "id": 59,
    "title": "Ao Receber um Ataque Leve",
-   "text": "Cuide da sua postura.",
+   "text": "Tenha modos.",
    "unlockRequirement": "",
    "cnUrl": "5b41d260009a4a7a48481c8775db0a78d785edbbb148baf94bd38a93a508e07d",
    "jpUrl": "14815914073294c8d770547b433a08c4384c203ea06d2ec44771dd4bbe532d24",
@@ -2626,12 +2662,12 @@
    "cnUrl": "bb427175e99b7e21d0267bc0c7608164d515a1cc0b1232e87ef5f3f9b168081d",
    "jpUrl": "8cec91d2ba81ec99796fc858dc9c8868b94e5989e34abf7ecf5ab56dc6a38224",
    "enUrl": "ff8714228024c73553e789b7f86fad9743534fec0c7155d7733162e8583e4b35",
-   "krUrl": "15b09317003428e914a89bd9bed1830245d1954ddb47dd4cba3157bcab59ed3f"
+   "krUrl": "80456a009d7ba3be8e9f7dabfbc66fa91ae23046540eb925d48d76a74bee3f95"
   },
   {
    "id": 64,
    "title": "Ao Voltar à Batalha",
-   "text": "Só as memórias são eternas.",
+   "text": "Apenas as memórias se mantêm eternas.",
    "unlockRequirement": "",
    "cnUrl": "9e903b570fe612b7a149cd83c786681d3cf00436851694f0178fefdbce73156f",
    "jpUrl": "e75255b17f8d0701e050b2e33817e7c3069effde11e155853f2b3b2a24dba1e5",
@@ -2747,22 +2783,22 @@
   },
   {
    "title": "História de Personagem: Parte I",
-   "text": "\"Ela é uma garota bastante incomum, e eu senti isso desde o dia em que ela nasceu. Era como se a própria natureza estivesse celebrando a chegada dela: os pássaros cantavam, a luz e o sol estavam juntos no céu. As cartas na minha mão pareciam indicar a emergência de uma alma repleta de nostalgia. Desde os primeiros anos, ela tinha uma fascinação com histórias do passado. Ela mergulhava ao contemplar nossas origens, criadores e até o próprio começo do mundo. As perguntas dela deixavam até os acadêmicos mais eruditos confusos. Claro, algumas outras crianças podem caçoar dela por fazer perguntas tão profundas, mas esses questionamentos não são importantes? A vida é como um labirinto sinuoso, onde as memórias servem como nossa única companhia.\"<br /><align=\"right\"> – Memórias de uma mãe</align><br /><br />Sua mãe, devido à amnésia, lutava contra o esquecimento, dificultando o reconhecimento da própria família ou as lembranças de eventos recentes.<br />Agarrada ao diagnóstico de amnésia, ela abraçou a mãe com firmeza, tentando ler em voz alta o diário dela. A mãe estava presente fisicamente, mas onde ela se encontrava no reino da consciência?<br /><br />Ela ficou do lado da mãe até o fim de sua vida, percebendo que a mulher desaparecia quanto mais suas memórias ficavam fragmentadas. E se ela também se esquecesse da mãe, suas lembranças ficando borradas, a mulher desapareceria para sempre.<br /><br />\"A vida é como um labirinto sinuoso, onde as memórias servem como nossa única companhia.\" Pela primeira vez, ela compreendeu o significado profundo por trás dessas palavras.",
+   "text": "\"Ela é uma garota bastante incomum, e eu senti isso desde o dia em que ela nasceu. Era como se a própria natureza estivesse celebrando a chegada dela: os pássaros cantavam, a luz e o sol estavam juntos no céu. As cartas na minha mão pareciam indicar a emergência de uma alma repleta de nostalgia. Desde os primeiros anos, ela tinha uma fascinação com histórias do passado. Ela mergulhava ao contemplar nossas origens, criadores e até o próprio começo do mundo. As perguntas dela deixavam até os acadêmicos mais eruditos confusos. Claro, algumas outras crianças podem caçoar dela por fazer perguntas tão profundas, mas esses questionamentos não são importantes? A vida é como um labirinto sinuoso, onde as memórias servem como nossa única companhia.\"<br /><align=\"right\"> – Memórias de uma mãe</align><br /><br />Sua mãe, devido à amnésia, lutava contra o esquecimento, dificultando o reconhecimento da própria família ou as lembranças de eventos recentes.<br />Agarrada ao diagnóstico de amnésia, ela abraçou a mãe com firmeza, tentando ler em voz alta o diário dela. A mãe estava presente fisicamente, mas onde ela se encontrava no reino da consciência?<br /><br />Ela ficou do lado da mãe até o fim de sua vida, percebendo que a mulher desaparecia quanto mais suas memórias ficavam fragmentadas. Se suas próprias lembranças de sua mãe ficassem borradas, sua mãe desapareceria para sempre de sua memória.<br /><br />\"A vida é como um labirinto sinuoso, onde as memórias servem como nossa única companhia.\" Pela primeira vez, ela compreendeu o significado profundo por trás dessas palavras.",
    "unlockRequirement": "Desbloqueado no Nível <nobr>20</nobr> de Personagem"
   },
   {
    "title": "História de Personagem: Parte II",
-   "text": "\"Eu cheguei a este planeta para explorá-lo. Minhas tarefas usuais envolviam observar o fluxo dos rios, examinar os materiais dos tijolos que compõem a cidade, analisar a inclinação das estradas e documentar o número e a distribuição de chaminés... Essas tarefas estavam alinhadas à imaginação das pessoas sobre preservar as 'memórias' de um planeta.\"<br /><br />– No entanto, esses esforços não eram o bastante.<br /><br />Depois que comecei a trabalhar em segredo, eu costumava passar por aquela garota. Às vezes, a luz do sol dançava pelas folhas enquanto ela andava por debaixo delas, desaparecendo pelos cantos assim que os postes de luz iluminavam os arredores. Em outras ocasiões, a visão dela seguia um pombo-correio que deixava os aposentos do sacerdote toda quarta-feira à noite para só voltar na manhã seguinte ao chefe dos guardas do palácio, um conhecido adversário político do sacerdote. Às vezes, ela observava silenciosamente a chuva escorrer pelos esgotos marcados pela artilharia disparada do outro lado da costa. E, em outras, ondas encharcavam sua saia, enquanto uma mulher mais velha lavava as roupas perto do rio e contava a história do último soberano e seus cinco filhos ilegítimos.<br /><br />– Poucos indivíduos, além de nós, compreendem que um planeta esconde e protege suas \"memórias\" dessa forma.<br /><br />Eu a acompanhei por trás até alcançarmos uma rocha na charneca. Eu sabia que era hora de convidá-la.<br /><br />\"O que você vê?\" Eu perguntei, em uma forma visível a ela.<br />Ela apontou para uma parte com ervas daninhas e outros resquícios.<br />\"Eu vejo uma pedra, que talvez tenha sido parte de uma lareira... Mas pode ter tido muito mais importância.\"<br />Eu meneei a cabeça e a ajudei a remover as ervas daninhas e sujeira das fendas da pedra.<br />\"Já foi um monumento\", ela murmurou, acariciando gentilmente as gravuras adornando a superfície.<br />\"Sim, mas a 'memória' tem mais relevância.\"<br /><br />Assim, eu revelei a ela que a pedra na charneca já serviu como fogueira, um monumento antes disso, um jardim e até mesmo um altar... E antes de tudo isso, ela era apenas uma pedra em uma charneca.<br /><br />\"Que preço eu teria que pagar se quiser ver essas 'memórias'?\"<br />\"As pessoas continuarão alheias à sua presença, a não ser que esteja disposta a se revelar.\"<br />\"Do mesmo jeito que as pessoas falham em reconhecer a existência de cisnes negros até encontrarem um?\"<br />\"Sim, exatamente assim.\"<br /><br /><align=\"right\">— Memórias de uma <ruby>Exploradora<rt>Memoriadora</rt></ruby></align><br /><br />Memoriadores viajam para inúmeros planetas, obtendo as memórias de cada cidade que encontram. Eles tomam cuidado para não deixar qualquer traço de sua presença, garantindo que ninguém se lembre deles, a não ser que encontrem alguém com o potencial de se tornar um Memoriador. Essa pessoa é, então, levada da cidade para a vasta expansão das estrelas.",
+   "text": "\"Eu cheguei a este planeta para explorá-lo. Minhas tarefas usuais envolviam observar o fluxo dos rios, examinar os materiais dos tijolos que compõem a cidade, analisar a inclinação das estradas e documentar o número e a distribuição de chaminés... Essas tarefas estavam alinhadas à imaginação das pessoas sobre preservar as 'memórias' de um planeta.\"<br /><br />– No entanto, esses esforços não eram o bastante.<br /><br />Depois que comecei a trabalhar em segredo, eu costumava passar por aquela garota. Às vezes, a luz do sol dançava pelas folhas enquanto ela andava por debaixo delas, desaparecendo pelos cantos assim que os postes de luz iluminavam os arredores. Em outras ocasiões, a visão dela seguia um pombo-correio que deixava os aposentos do sacerdote toda quarta-feira à noite para só voltar na manhã seguinte para o chefe dos guardas do palácio, um conhecido adversário político do sacerdote. Às vezes, ela observava silenciosamente a chuva escorrer pelos esgotos marcados pela artilharia disparada do outro lado da costa. E, em outras, ondas encharcavam sua saia, enquanto uma mulher mais velha lavava as roupas perto do rio e contava a história do último soberano e seus cinco filhos ilegítimos.<br /><br />– Poucos indivíduos, além de nós, compreendem que um planeta esconde e protege suas \"memórias\" dessa forma.<br /><br />Eu a acompanhei por trás até alcançarmos uma rocha na charneca. Eu sabia que era hora de convidá-la.<br /><br />\"O que você vê?\" Eu perguntei, em uma forma visível a ela.<br />Ela apontou para uma parte com ervas daninhas e outros resquícios.<br />\"Eu vejo uma pedra, que talvez tenha sido parte de uma lareira... Mas pode ter tido muito mais importância.\"<br />Eu meneei a cabeça e a ajudei a remover as ervas daninhas e sujeira das fendas da pedra.<br />\"Já foi um monumento\", ela murmurou, acariciando gentilmente as gravuras adornando a superfície.<br />\"Sim, mas a 'memória' tem mais relevância.\"<br /><br />Assim, eu revelei a ela que a pedra na charneca já serviu como fogueira, um monumento antes disso, um jardim e até mesmo um altar... E antes de tudo isso, ela era apenas uma pedra em uma charneca.<br /><br />\"Que preço eu teria que pagar se quisesse ver essas 'memórias'?\"<br />\"As pessoas continuarão alheias à sua presença, a não ser que você esteja disposta a se revelar.\"<br />\"Do mesmo jeito que as pessoas falham em reconhecer a existência de cisnes negros até encontrarem um?\"<br />\"Sim, exatamente assim.\"<br /><br /><align=\"right\">— Memórias de uma <ruby>Exploradora<rt>Memoriadora</rt></ruby></align><br /><br />Memoriadores viajam para inúmeros planetas, obtendo as memórias de cada cidade que encontram. Eles tomam cuidado para não deixar qualquer traço de sua presença, garantindo que ninguém se lembre deles, a não ser que encontrem alguém com o potencial de se tornar um Memoriador. Essa pessoa é, então, levada da cidade para a vasta expansão das estrelas.",
    "unlockRequirement": "Desbloqueado no Nível <nobr>40</nobr> de Personagem"
   },
   {
    "title": "História de Personagem: Parte III",
-   "text": "Muitos indivíduos são obcecados com a glória do passado e buscam se tornar Memoriadores, almejando viver em suas memórias. Tais indivíduos costumam se degenerar em Cremadores desenfreados, distorcendo memórias para atender às próprias preferências. Mas ela é diferente... Eu senti a determinação implacável e o profundo respeito pelas memórias que ela tem. Seguindo a tradição, eu fiz três perguntas a ela antes de torná-la uma Memoriadora.<br /><br />\"Está disposta a dedicar sua vida inteira a obter memórias?\"<br />\"Estou.\"<br />\"Está preparada para abandonar sua forma física e aceitar a transformação?\"<br />\"Estou.\"<br />\"Se um dia você deixar de existir, que legado vai deixar para o mundo?\"<br />\"Minhas memórias. Elas são sementes do passado e renascerão no futuro.\"<br /><br />Memórias têm diferentes formas. Algumas são triviais e reconfortantes, enquanto outras são grandiosas e expansivas. Algumas são gentis e mansas, enquanto as outras são selvagens e indomadas... Quando ela se tornou uma Memoriadora, suas memórias se tornaram tranquilas e serenas, como as ondas calmas que finalmente encontraram seu porto de destino.<br /><align=\"right\">— Memórias de uma Memoriadora</align><br /><br />\"O que vem à sua mente?\" A Memoriadora perguntou.<br />Enquanto ela abria os olhos, fragmentos de memória giravam ao seu redor.<br />\"Pessoas tendem a acreditar que estão diante do presente e do futuro, mas falham em perceber que todos estamos, na verdade, nos movendo até o passado.\"",
+   "text": "Muitos indivíduos são obcecados com a glória do passado e buscam se tornar Memoriadores, almejando viver em suas memórias. Tais indivíduos costumam se degenerar em Cremadores desenfreados, distorcendo memórias para atender às próprias preferências. Mas ela é diferente... Eu senti a determinação implacável e o profundo respeito pelas memórias que ela tem. Seguindo a tradição, eu fiz três perguntas a ela antes de torná-la uma Memoriadora.<br /><br />\"Você dedicará sua vida inteira à obtenção de memórias?\"<br />\"Eu vou.\"<br />\"Você abandonará sua forma física e aceitará a sua transformação?\"<br />\"Eu vou.\"<br />\"Se um dia você deixar de existir, que legado você deixará para o mundo?\"<br />\"Minhas memórias. Elas guardam sementes do passado, destinadas a renascer no futuro.\"<br /><br />Memórias têm diferentes formas. Algumas são triviais e reconfortantes, enquanto outras são grandiosas e expansivas. Algumas são gentis e mansas, enquanto as outras são selvagens e indomadas... Quando ela se tornou uma Memoriadora, suas memórias se tornaram tranquilas e serenas, como as ondas calmas que finalmente encontraram seu porto de destino.<br /><align=\"right\">— Memórias de uma Memoriadora</align><br /><br />\"O que vem à sua mente?\" A Memoriadora perguntou.<br />Enquanto ela abria os olhos, fragmentos de memória giravam ao seu redor.<br />\"Pessoas tendem a acreditar que estão diante do presente e do futuro, mas falham em perceber que todos estamos, na verdade, nos movendo até o passado.\"",
    "unlockRequirement": "Desbloqueado no Nível <nobr>60</nobr> de Personagem"
   },
   {
    "title": "História de Personagem: Parte IV",
-   "text": "Local: Penacony<br />Data: ██/██/██<br />Hóspedes: ██, ██, ██ e ██<br />\"Uma lembrança triste de ██. Essa memória opulenta, adornada com ostentação e saudade, esconde uma tristeza que vai durar por anos, influenciando seu dono por um período extenso.\"<br />\"Uma lembrança feliz de ██. Essa memória dramática está cheia de tons vibrantes de alegria, confusão e elementos divertidos, mas mal pode ser considerada felicidade verdadeira. Esse é o futuro que ela representa.\"<br />\"Uma lembrança arrependida de ██. A felicidade momentânea nessa memória é linda, mas curta, como uma estrela-cadente de cinzas desbotadas. Aproveite seu momento limitado, caro hóspede, pois ele me informa que logo desaparecerá.\"<br />\"Uma memória vaga de ██. Essa memória é fraca, caótica e desorientadora, como uma chuva interminável sem trégua no horizonte. Eu busco capturar o futuro para onde ela aponta, seja ele cheio de chuva ou sol...\"<br /><align=\"right\">— Memórias da Cisne Negro</align><br /><br />\"Eu vi a figura de uma mulher, saltando e se transformando em meio a imagens e padrões. Não... Não enlouqueci, eu realmente 'a' vi. Eu me lembro da voz dela, sua textura aveludada e as cartas coloridas em suas mãos, embebidas em algum tipo de magia... Ah, ela me convidava a participar de uma leitura de sorte. Ela disse 'Queira você prever felicidade ou infortúnio no futuro, encontrar posses perdidas ou buscar ganhos inesperados... Tudo o que eu preciso é uma história honesta, pois o passado e o futuro estão sobrepostos no mesmo ponto de um único círculo.' Minha cabeça girava, e ela exalava tanta gentileza. Eu falei tanto com ela, enquanto ela pacientemente me ouvia tagarelar... Então, depois dos resultados da adivinhação dela, eu recuperei o espelho perdido de um hóspede do hotel! Ah, você perguntou o que eu disse para ela? Ah, nada importante... Só alguns rumores sobre o passado...\"<br /><align=\"right\">— Memórias de um Penaconyano</align><br /><br />Atualmente, ela viaja pelos diversos reinos como profetisa, descobrindo memórias entrelaçadas com seu Caminho e Aeons. Ela acredita que essas memórias são resistentes como pedras preciosas, imunes às forças da erosão do esquecimento.<br /><br />\"Inúmeros Memoriadores se aventuraram por Penacony, só para descobrir que esta é uma mera miragem ilusória dançando sobre a superfície da água.\"<br />\"No entanto, sonhos... Eles representam uma forma distorcida das memórias. Eu devo me aprofundar neles e ter um vislumbre fugaz das memórias enterradas antes que aqueles Furta-Memórias e Cremadores cheguem.\"",
+   "text": "Local: Penacony<br />Data: ██/██/██<br />Hóspedes: ██, ██, ██ e ██<br />\"Uma lembrança triste de ██. Essa memória opulenta, adornada com ostentação e saudade, esconde uma tristeza que vai durar por anos, influenciando seu dono por um período extenso.\"<br />\"Uma lembrança feliz de ██. Essa memória dramática está cheia de tons vibrantes de alegria, confusão e humor, mas mal pode ser considerada felicidade verdadeira. Esse é o futuro que ela representa.\"<br />\"Uma lembrança arrependida de ██. A felicidade momentânea nessa memória é linda, mas curta, como uma fagulha de cinzas desvanescentes. Aproveite seu momento limitado, caro hóspede, pois ele me informa que logo desaparecerá.\"<br />\"Uma memória vaga de ██. Essa memória é fraca, caótica e desorientadora, como uma chuva interminável sem trégua no horizonte. Eu busco capturar o futuro para onde ela aponta, seja ele cheio de chuva ou sol...\"<br /><align=\"right\">— Memórias da Cisne Negro</align><br /><br />\"Eu vi a figura de uma mulher, saltando e se transformando em meio a imagens e padrões. Não... Eu não enlouqueci, eu realmente 'a' vi. Eu me lembro da voz dela, sua textura aveludada e as cartas coloridas em suas mãos, embebidas em algum tipo de magia... Ah, ela me convidava a participar de uma leitura de sorte. Ela disse 'Queira você prever felicidade ou infortúnio no futuro, encontrar posses perdidas ou buscar ganhos inesperados... Tudo o que eu preciso é uma história honesta, pois o passado e o futuro estão sobrepostos no mesmo ponto de um único círculo.' Minha cabeça girava, e ela exalava tanta gentileza. Eu falei tanto com ela, enquanto ela pacientemente me ouvia tagarelar... Então, depois dos resultados da adivinhação dela, eu recuperei o espelho perdido de um hóspede do hotel! Ah, você perguntou o que eu disse para ela? Ah, nada importante... Só alguns rumores sobre o passado...\"<br /><align=\"right\">— Memórias de um Penaconyano</align><br /><br />Atualmente, ela viaja pelos diversos reinos como profetisa, descobrindo memórias entrelaçadas com seu Caminho e Aeons. Ela acredita que essas memórias são resistentes como pedras preciosas, imunes às forças da erosão do esquecimento.<br /><br />\"Inúmeros Memoriadores se aventuraram por Penacony, só para descobrir que esta é uma mera miragem ilusória dançando sobre a superfície da água.\"<br />\"No entanto, sonhos... Eles representam uma forma distorcida das memórias. Eu devo me aprofundar neles e ter um vislumbre fugaz das memórias enterradas antes que aqueles Furta-Memórias e Cremadores cheguem.\"",
    "unlockRequirement": "Desbloqueado no Nível <nobr>80</nobr> de Personagem"
   }
  ],
@@ -2866,7 +2902,7 @@
  "name": "Cisne Negro",
  "rarity": 5,
  "descHash": "Uma Memoriadora do Jardim da Recordação. Uma indolente e misteriosa profetisa. A \"Recordação\" dos homens está sob a guarda dela, os fios do destino estão sob seu domínio.",
- "artPath": "da5a3d8d87865c51907df718c329a6d552ef2ddbc3e1f6e82dd466c14b0c1aa6",
+ "artPath": "870d3284ed48895f121c22c356f4292a94c0e2fdd368e691bf3a595ba7f0634c",
  "miniIconPath": "741cd71f3a6a5c9ad08beec9f832c75eaea8a07246cafcd530c806b8d2dc00a5",
  "damageType": {
   "id": 16,

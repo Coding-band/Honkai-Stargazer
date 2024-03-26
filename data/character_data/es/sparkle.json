@@ -5,6 +5,11 @@
  "figPath": "991aa9d7c911b02cfd47800cab0ad4146bb0d02de608eb112830f5e334ca2a13",
  "fgPath": "",
  "splashIconPath": "f1dfd94040dc1f7a208bc749c20be2fc5a9bd7a37da45ad756f201f0d49195b6",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRv4CAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSDkBAAABkHPbtrG9yvejz7Zt22br76sY20lt27ZT2erMynYqO3mesz9HxASgX1Wtao/WAagYWEPhlTp3AwoG9gFqxqcCgJ1PnkM/AaPKLl52jJ2/pahg3aVnWVChoe3jc95Ydujwpye3n4xckm4AGobfPUuT/b6+34k6e2jo2JH7meb//5Zl8scCDx93KAiZF/aNFoUi/7m1drsnAOSfoCXsa/GZ55trgI4p/C8ipIjw53YesIWO+TSFQlKE//5wMmCEJPz6RhHpY/H6kQagpQNTH9AihWLyU/6GOCBlprsWdJCmUITcHdzlCB1DpkTlzyBFhC/PdawLhKIgZn720OM/aZH3sjStug4qVLi1tpZv/2r+WTe9Gq7xnujrv2ZZYtNv8s1OX9ho6Ksg4szzFRuONsbEQMHATu2HJmHQAFZQOCCeAQAAsAgAnQEqFAAUAD5tMJRHpCKiISgIAIANiWwAnTKEen+O8PM7/AA2zXKzaq7vGRPwHpg5p/nL2AP1S31UPNqFIg7Q9T2kHbdQBrCqhrKcAP7veqX6qZbpLZcedXteDfxY2/gB/PEV8UYdmD8EUgmz0t9gc3FBfgkAvb6C2pyleNMk8Br6fwdrFdTyxNsmXwg9/xuQRx3bc0d/+4FysOh+tYqkZN6fLtuxams/N3/KvdriDFt96dXtpuuVl7Afmll03lhB7YNrn5yaU+ck8jW3Y58P8bYvZvHGm1cdV9yRdFmxZCL/xVTjEP/TAfXyK1bLjPaXo2Rx2zL2F70ACVwvdX9MUePuNay0w3+i/NvzggswmF4I5EnffzWPo6b/HUHeNUMNN1AZLpEks/I8uUbtRPT3VYj46xuupu1jrNZ4MWno0ppt2nQWL/jW2+g/fZUyUwb8u2/xcfsrz0IBeySlPfiNafOGfLsfxIVurQCsdFpHy9Vh+lskTADdSKniGHoseVetB0AZ8/SatIIHf2xbdHAgvJ0/t3uoE+IcAAAA",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Recompensa de puntos del Universo Simulado",
     "Honor anónimo",
     "Canjeo de Ascuas",
+    "Canjeo de Cosmiluz",
     "Recompensa de evento de duración limitada"
    ]
   },
@@ -64,7 +70,6 @@
    "rarity": 4,
    "rewardPath": "/material/351748",
    "comeFrom": [
-    "Sombra paralizada de la Frontera de los Sueños",
     "Sombra paralizada de la Frontera de los Sueños",
     "Máquina sintetizadora multiusos - Intercambio de material"
    ]
@@ -172,7 +177,6 @@
    "rewardPath": "/material/589819",
    "comeFrom": [
     "Cáliz del Hotel Fantasía (paisaje onírico)",
-    "Cáliz del Hotel Fantasía (paisaje onírico)",
     "Máquina sintetizadora multiusos - Síntesis de materiales",
     "Canjeo de Ascuas",
     "Máquina sintetizadora multiusos - Intercambio de material"
@@ -209,7 +213,6 @@
    "rewardPath": "/material/673760",
    "comeFrom": [
     "Cáliz del Hotel Fantasía (paisaje onírico)",
-    "Cáliz del Hotel Fantasía (paisaje onírico)",
     "Máquina sintetizadora multiusos - Síntesis de materiales",
     "Máquina sintetizadora multiusos - Intercambio de material"
    ]
@@ -244,7 +247,6 @@
    "rarity": 2,
    "rewardPath": "/material/874346",
    "comeFrom": [
-    "Cáliz del Hotel Fantasía (paisaje onírico)",
     "Cáliz del Hotel Fantasía (paisaje onírico)",
     "Canjeo de Ascuas",
     "Máquina sintetizadora multiusos - Intercambio de material"
@@ -439,7 +441,7 @@
   {
    "id": 1,
    "iconPath": "9ce44da0ce2db178d03fa5848f1666aed212db44e4472db3cfc81a0444ab2964",
-   "artPath": "b410784fbb494f07996741bc2887c9ff9045c4e84e932bd539e9fa2fe8099a4e",
+   "artPath": "9b2cefc8111d1be621f58cde3d8eb08ccf2e22a7992505ebe901b7fd674e78d4",
    "name": "Suspensión de la incredulidad",
    "descHash": "La duración de Adivinanza otorgada por la habilidad definitiva aumenta en 1 turno. El ATQ de los aliados con Adivinanza aumenta en un <nobr>#1[i]%</nobr>.",
    "params": [
@@ -449,7 +451,7 @@
   {
    "id": 2,
    "iconPath": "6831a28c5ceeeeea8480f2a689dea58ab989249c3ceb3f87bfc094c6425b8079",
-   "artPath": "2d3fbd6ed5af564daf5076cb009ffeb329a7da156bf0dacfcdfb91ecd4e3def7",
+   "artPath": "a7670d995478c53fdf6ffff301be8959a00978d21b4ed3d57061f97aac87b567",
    "name": "Ficción sin fundamento",
    "descHash": "Por cada acumulación del efecto del talento, los aliados ignoran un <nobr>#1[i]%</nobr> de la DEF del objetivo cuando infligen daño.",
    "params": [
@@ -467,7 +469,7 @@
   {
    "id": 4,
    "iconPath": "ec1710504a85dcc5ffd40e56735ef4e3aae137eefa53154bf77668d496a636b9",
-   "artPath": "904de78ea5f505fc17de1b55998b5a9b9ba0a6d9ce09da47947fe953a1ce7a15",
+   "artPath": "3d3fb5c3033c97002ef326352aba0ed5b26636e23699418c56233d94941bed4d",
    "name": "La vida es un juego",
    "descHash": "La habilidad definitiva recupera 1 pt. de habilidad básica adicional. El incremento del límite de pts. de habilidad básica del talento aumenta en 1.",
    "params": []
@@ -483,9 +485,9 @@
   {
    "id": 6,
    "iconPath": "97946a7beefedaf075a3e045a39f2d44cc9de450c44e047feb9f7bfeea214fb4",
-   "artPath": "83ea4cc2b496ca0758ac0069e3881ff56e4bcd0dc419e3fad8216c438c87a04a",
+   "artPath": "0c42626e2ed820bae2e1a329a7e44dda34ece227cb0df56473cd5eaa0def5431",
    "name": "Polisemia narrativa",
-   "descHash": "El efecto de aumento de Daño CRIT de la habilidad básica aumenta adicionalmente en una cantidad equivalente al <nobr>#1[i]%</nobr> del Daño CRIT de Sparkle. Cuando Sparkle usa su habilidad básica, el efecto de aumento de Daño CRIT de la habilidad básica se aplica a todos los aliados que tengan Adivinanza. Cuando Sparkle usa su habilidad definitiva, si el objetivo aliado tiene el efecto de aumento de Daño CRIT de la habilidad básica, este efecto se extiende a todos los aliados que tengan Adivinanza.",
+   "descHash": "El efecto de aumento de Daño CRIT de la habilidad básica aumenta adicionalmente en una cantidad equivalente al <nobr>#1[i]%</nobr> del Daño CRIT de Sparkle. Cuando Sparkle usa su habilidad básica, el efecto de aumento de Daño CRIT de la habilidad básica se aplica a todos los aliados que tengan Adivinanza. Cuando Sparkle usa su habilidad definitiva, si un aliado tiene el efecto de aumento de Daño CRIT de la habilidad básica, este efecto se extiende a todos los aliados que tengan Adivinanza.",
    "params": [
     0.3
    ]
@@ -992,7 +994,7 @@
   },
   {
    "tagHash": "Apoyo",
-   "descHash": "Recupera <nobr>#2[i]</nobr> pts. de habilidad básica para el equipo y otorga Adivinanza a todos los aliados. Cuando un aliado con Adivinanza activa el efecto de aumento de daño del talento de Sparkle, este aumento se incrementa de forma adicional en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> por cada acumulación durante <nobr>#4[i]</nobr> turnos.",
+   "descHash": "Recupera <nobr>#2[i]</nobr> pts. de habilidad básica para el equipo y otorga Adivinanza a todos los aliados. Para los aliados con Adivinanza, el efecto de aumento de daño que proporciona el talento de Sparkle se incrementa de forma adicional en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> por cada acumulación durante <nobr>#4[i]</nobr> turnos.",
    "ultimateCost": 110,
    "break": "0",
    "energy": "5",
@@ -1681,14 +1683,17 @@
  "skillTreePoints": [
   {
    "id": 1306101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1306202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1306203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1785,14 +1790,17 @@
   },
   {
    "id": 1306102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1306205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1306206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1891,14 +1899,17 @@
   },
   {
    "id": 1306103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1306208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1306209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1931,6 +1942,7 @@
       },
       {
        "id": 1306210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2034,10 +2046,12 @@
   },
   {
    "id": 1306201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1306204,
+     "anchor": 12,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2070,6 +2084,7 @@
     },
     {
      "id": 1306207,
+     "anchor": 15,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2368,6 +2383,16 @@
    "krUrl": "3c96add23447b47cbcb682a44f290d4c680cec3bfc054a260f9faa6f1d2c98f1"
   },
   {
+   "id": 24,
+   "title": "Miembro del equipo: Aventurino",
+   "text": "¡Mira quién nos ha honrado con su presencia! Supongo que iré detrás de ti a partir de ahora.",
+   "unlockRequirement": "",
+   "cnUrl": "801cd04799135123803117d999712591bc85c5cb86a4ec30ab5a83a08af42c16",
+   "jpUrl": "fedf2387f18fef1fa479a6328149643f7d16a272e580e1c63c91c6c83cd3e726",
+   "enUrl": "bebd5480174ee3883f66bad127bf3984c82ab8efb86f09f205471db853fb4070",
+   "krUrl": "bd0b37de1c4f8f1bd6721936c83e1a93d5ded73ba254a0ea9c0915a7e110dc47"
+  },
+  {
    "id": 51,
    "title": "Comienzo de la batalla: Ruptura de Debilidad",
    "text": "Ups, ¿te ha dolido?",
@@ -2621,7 +2646,7 @@
   },
   {
    "title": "Historia del personaje II",
-   "text": "Al ser la última descendiente del clan Marioneta, la chica no tenía libertad para elegir. Estaba obligada a vivir de acuerdo con lo que dictaba su máscara, pues las marionetas no son más que meros recipientes.<br /><br />Según la legenda, cuanto más tiempo usa una marioneta su máscara, más posibilidades hay de que la marioneta obtenga un alma y se convierta en un humano de verdad. Sin embargo, en el folclore humano, las máscaras son herramientas usadas para resucitar a los muertos, lo que hizo que disminuyera el número de gente de su clan.<br /><br />No obstante, como no le interesaba convertirse en humana, ser una marioneta tampoco era una mala opción. Con obediencia cumplió las órdenes de la máscara, a pesar de que corría el riesgo de ser perseguida. Al fin y al cabo, desafiar los designios de la máscara suponía todo un desafío.<br /><br />Los movimientos eran un elemento clave.<br />Debido a la voluntad de la máscara, debía sonreír con dulzura cuando estaba feliz, sostenerse la frente mientras lloraba, apretar los dientes cuando estaba enojada, entrecerrar los ojos cuando estaba celosa y montar una escena cuando estaba desperada. También había gestos distintivos, como levantar un poco las cejas cuando miraba a alguien con el lado izquierdo del rostro, levantar la mano para expresar que algo le gustaba, aunque debía bajarla después, y morderse ligeramente el labio inferior para expresar sus verdaderos deseos.<br /><br />La voz era sin duda otro elemento a tener en cuenta.<br />Dependiendo de la situación, su voz debía sonar alegre cuando estaba feliz, melosa cuando expresaba emociones líricas, calmada y firme cuando reiteraba una afirmación, tensa cuando guardaba enojo, y triste cuando estaba llena de aflicción.<br /><br />Extraordinariamente, se las arregló para llevar ese estilo de vida durante años, mimetizándose a la perfección con el entorno, y hasta se convirtió en dramaturga. Nunca nadie sospechó que llevaba una máscara. Sin embargo, no pudo evitar preguntarse si había otro tipo de \"máscara\" en el mundo. Tal vez alguien que llevara una máscara así se reiría al buscar venganza, lloraría al sonreír, se quedaría en silencio de ira ... y pronunciaría los comentarios más sarcásticos con la mayor de las calmas.<br /><br />Naturalmente, ella no podía hacerlo, pues debía actuar como dictaba su máscara. Sin embargo, como dramaturga que era, le resultaba fácil hacer que sus personajes actuaran así en el escenario.<br /><br />Una mañana, sonó el timbre, pero no era la persona que solía hacerle las entregas.<br />\"Querida señorita Sparkle, me preguntaba si tendría un minuto\".<br />\"Leímos su último trabajo y tenemos curiosidad por saber si sabe algo acerca de la 'máscara'...\".<br />",
+   "text": "Al ser la última descendiente del clan Marioneta, la chica no tenía libertad para elegir. Estaba obligada a vivir de acuerdo con lo que dictaba su máscara, pues las marionetas no son más que meros recipientes.<br /><br />Según la leyenda, cuanto más tiempo usa una marioneta su máscara, más posibilidades hay de que la marioneta obtenga un alma y se convierta en un humano de verdad. Sin embargo, en el folclore humano, las máscaras son herramientas usadas para resucitar a los muertos, lo que hizo que disminuyera el número de gente de su clan.<br /><br />No obstante, como no le interesaba convertirse en humana, ser una marioneta tampoco era una mala opción. Con obediencia cumplió las órdenes de la máscara, a pesar de que corría el riesgo de ser perseguida. Al fin y al cabo, desafiar los designios de la máscara suponía todo un desafío.<br /><br />Los movimientos eran un elemento clave.<br />Debido a la voluntad de la máscara, debía sonreír con dulzura cuando estaba feliz, sostenerse la frente mientras lloraba, apretar los dientes cuando estaba enojada, entrecerrar los ojos cuando estaba celosa y montar una escena cuando estaba desperada. También había gestos distintivos, como levantar un poco las cejas cuando miraba a alguien con el lado izquierdo del rostro, levantar la mano para expresar que algo le gustaba, aunque debía bajarla después, y morderse ligeramente el labio inferior para expresar sus verdaderos deseos.<br /><br />La voz era sin duda otro elemento a tener en cuenta.<br />Dependiendo de la situación, su voz debía sonar alegre cuando estaba feliz, melosa cuando expresaba emociones líricas, calmada y firme cuando reiteraba una afirmación, tensa cuando guardaba enojo, y triste cuando estaba llena de aflicción.<br /><br />Extraordinariamente, se las arregló para llevar ese estilo de vida durante años, mimetizándose a la perfección con el entorno, y hasta se convirtió en dramaturga. Nunca nadie sospechó que llevaba una máscara. Sin embargo, no pudo evitar preguntarse si había otro tipo de \"máscara\" en el mundo. Tal vez alguien que llevara una máscara así se reiría al buscar venganza, lloraría al sonreír, se quedaría en silencio de ira ... y pronunciaría los comentarios más sarcásticos con la mayor de las calmas.<br /><br />Naturalmente, ella no podía hacerlo, pues debía actuar como dictaba su máscara. Sin embargo, como dramaturga que era, le resultaba fácil hacer que sus personajes actuaran así en el escenario.<br /><br />Una mañana, sonó el timbre, pero no era la persona que solía hacerle las entregas.<br />\"Querida señorita Sparkle, me preguntaba si tendría un minuto\".<br />\"Leímos su último trabajo y tenemos curiosidad por saber si sabe algo acerca de la 'máscara'...\".<br />",
    "unlockRequirement": "Se desbloquea en el nivel <nobr>40</nobr> de personaje."
   },
   {
@@ -2735,7 +2760,7 @@
  "name": "Sparkle",
  "rarity": 5,
  "descHash": "Una miembro de los Bufones Enmascarados inescrutable y sin escrúpulos. Una peligrosa maestra de las artes dramáticas obsesionada con la actuación. Una mujer de innumerables máscaras y capaz de usar un sinfín de rostros. Riqueza, estatus, poder... Nada de esto importa a Sparkle. Lo único que puede despertar su interés es la \"diversión\".",
- "artPath": "22498bd5da077b56fa1c9ef4886efbf3f62b558d381ff1a7b17e2724143426f2",
+ "artPath": "eb7aa57c0d4fd224c13ba71d84d12f4f8bce0e0c098629756852b084527590ce",
  "miniIconPath": "9da8f43ce94fde4b59e6b912399bb691350719279eb77aea9cda9ceb1ddd7548",
  "damageType": {
   "id": 32,

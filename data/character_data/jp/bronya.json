@@ -2,9 +2,14 @@
  "spRequirement": 120,
  "iconPath": "0219f33f4525e72a1245020a1b0bb2732cbbc5f8fc7dcf2135aa361d036ca654",
  "bgPath": "61f48339e040f4e7aab7e0fc4b4b8411d4e5e8afdf64650fd446f8901c8bab91",
- "figPath": "0e48422d130f92328f8d72f343f0c33fa9edbea228850299ba2e7dd1c0ad687b",
+ "figPath": "8ee552a6d0eb07f637e3860c6ad415ff60407b1123cb45dc5dcffda5567a3494",
  "fgPath": "177b1c2f861cfd37110cc67e7c884c3dbff2b5917c525b1b9f8b16515a42ff4e",
  "splashIconPath": "14d6836c0e0496da69679d68590cd8afab016dde6132a27ea3afae60212d1f3b",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRuICAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSCoBAAABkG3btmlHM7ZtWx9g27adPNpO4dG2bdu2bRtx9pnlqk+IiAnAX8up4T/qOkPm30IsAMj8nQryVQBZGBn9Ddqm6UEGnlH4o6pdYVDreLUfghvwq5ytu7I6ak7sPbS4r3chIKNggd/Wvp9Y+qCqYo47ZKHSdGhmnx9CBzkw48WLXS7e8gBwlBSXB8YlPhjkjFkpkIGSgu/BAfKzkPhkmBTxADD5xks+yD1EIVEaGOYeFQBhswy2pAdTSBR8OfowGrKQUV2W03ThGUmOkezDr3Yrzl4dIIUgn4xdT/ORB6A+hZ8WcPkccn3r5giYOcgDGgsvkqJhP/n83b3N8YAcAC33icu6apfcejVy7t7nChn8Xr9066ONa1ft9TJQx+9loJQ1MxCKemY6gOwvVlA4IJIBAADwCACdASoUABQAPm0ylUekIqIhKAgAgA2JbACdMoR6eNJ2SbDOYxgNtfzzn9J1AD0IP1u8oD4RUQApwQwTxhC418sTEo+GiV6uxw9aYPOwsADW/yx8WQ9MGagRTasXKsZjUBC11TJwN6hsFr0yfx+/1wwP06j9n+Z/Z8+ZhzZufz2xzxCAllB76bczUyI1TzTgzverVk/Tq3jMSz/X6uYL8+dNg6ou/jwrgHckU29lUza63a3QdL9eLSE5EPv78eEXH6PWWmg4bd8/K7jY29ycYM3PnBd2U57bYeKrWjlbRw+B701XoFa5AyYNLgC4hanMGmtEaGHcnuH0LccCsbf/5tW557oqiNbpL4f+2fsf1o5SD+UK0hNl28EXfg2Ftmg/MOmidp1NUTCxXdiTroPQ4NGit8kf9r3bCb8tOpPMuiVbua4VgZvrSfpZmA8ZOQe78zuEIO4i6b0Vru3/HDu6A0/7+9GB43J5/vFV8kJz53GJkyAOqQJcSuLEL+H6j9+atqHB8H+UDPSf49byQr8cwAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "「模擬宇宙」ポイント報酬",
     "ナナシの勲功",
     "エンバー交換",
+    "星芒交換",
     "期間限定イベント報酬"
    ]
   },
@@ -64,7 +70,6 @@
    "rarity": 4,
    "rewardPath": "/material/267805",
    "comeFrom": [
-    "凝結虚影「リベットタウン」",
     "凝結虚影「リベットタウン」",
     "「万能合成マシン」- 素材交換"
    ]
@@ -192,7 +197,6 @@
    "rewardPath": "/material/635670",
    "comeFrom": [
     "疑似花萼「機械集落」",
-    "疑似花萼「機械集落」",
     "エンバー交換",
     "「万能合成マシン」- 素材交換"
    ]
@@ -229,7 +233,6 @@
    "rewardPath": "/material/836256",
    "comeFrom": [
     "疑似花萼「機械集落」",
-    "疑似花萼「機械集落」",
     "「万能合成マシン」- 素材合成",
     "「万能合成マシン」- 素材交換"
    ]
@@ -246,7 +249,6 @@
    "rarity": 3,
    "rewardPath": "/material/920197",
    "comeFrom": [
-    "疑似花萼「機械集落」",
     "疑似花萼「機械集落」",
     "「万能合成マシン」- 素材合成",
     "エンバー交換",
@@ -1641,14 +1643,17 @@
  "skillTreePoints": [
   {
    "id": 1101101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1101202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1101203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1743,14 +1748,17 @@
   },
   {
    "id": 1101102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1101205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1101206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1852,14 +1860,17 @@
   },
   {
    "id": 1101103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1101208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1101209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1892,6 +1903,7 @@
       },
       {
        "id": 1101210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1992,10 +2004,12 @@
   },
   {
    "id": 1101201,
+   "anchor": 9,
    "type": 2,
    "children": [
     {
      "id": 1101204,
+     "anchor": 12,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2028,6 +2042,7 @@
     },
     {
      "id": 1101207,
+     "anchor": 15,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2723,7 +2738,7 @@
  "name": "ブローニャ",
  "rarity": 5,
  "descHash": "ベロブルグの「大守護者」の継承者。 姫としての高貴さと、軍人としての堅実さを兼ね備えている。",
- "artPath": "8c33be13c9182edc46e014bcd95e9a45b1f5b9e333957ca70cfae8d78f21e629",
+ "artPath": "8300e82c084aa6a6c277a0a73b05b0719d6cea924f6ca11dc20a5a6ba3a606b0",
  "miniIconPath": "b4d6d2448a3e241ef439620b72a814bb212ee4a550e7b14e634132d4201f3a87",
  "damageType": {
   "id": 16,

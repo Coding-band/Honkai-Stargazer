@@ -1,10 +1,15 @@
 {
  "spRequirement": 140,
  "iconPath": "62bbed3f4fa89607c950e0c37b287cd629c6dc011b81bd99cf3354a4dd3cb55e",
- "bgPath": "95add5fd751106b1eeb03cfcbe017215893f25a2ef09bf7a0c78af53275456a1",
+ "bgPath": "d82b845f86f056ebc33528c4e14f8dcf0d93fc67de5085a5c516e2ecaa8122ff",
  "figPath": "64b09bba9b3bbdaaccaa720f85047a4a42fd05d52605ef3e96e571d4d8244e6e",
  "fgPath": "939573cb980ac84a1ca1ac5e9b4503698ec38a52c4d17a4f300e98499de70b9a",
  "splashIconPath": "72cee71be6fe4de63b6bdecb1a1b69cb95724bc8f3cc89468c68343e5937c7dc",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRtACAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAUBAAABkLJt+/m/8u+/bVvRStrimm170WprttUU/6v/l7ClLXrJ+5vf7/e+wg8RMQGSlCIVtyklrTQjRQlTpHV1B7cq8+JySelxpCcfTkxPvX44uunFfSkrJvUls/B7Af7AqxtvMpSuTQSEXphZMmEEE5WSzhLYBmx7iZ95qrz6C9vYxhDxSToMJtbYOOSd1LFo2wkc8f5yqvaGmLgG2wvn1BgQ4TjYsMhxNf8lMjaOz/8B6SEBBhPrgNtK0yYWjY1jiZjukqr+EZgkFtmlFPWMERpjQwiskFKkt4SBoyCMlpj6cSlPUpp0H0zsx/5sxU2RVo4xeX/0y9V8KTWOUlKkwfaaVEmpkgQAVlA4IKQBAABQCACdASoUABQAPm0wk0ckIqGhKAqogA2JbACdMoR2iP3sJABLAHoAeWP+x3wV/5nzZimD+L7NX3wAOK5RH8JXtP8c2igGEGOSoAAA/pRKUuAwH5vGJIBA5buIbO3r/DWHcBC8JZpDfYiyM9A+TzJ1SvVbTr9/5m9V5xnrWwiCa2ur9KnZAD4wo9ebbTGyUxngw2i4n1JWVDtX6Hmx2qEZr63H6f9dBwmseTp2bNQzgGmm+KzqWWWwlFj+ZinV3opdnHpaHI+5mYJXBLvkgwQn4RqhX9bDlgNtZAdWrMkDkJ7lzFBxLr95utvv4eAPsluwv/pL1zFVOxJd4MsU+WMEV/hE+2XosW8qAswohM8eu+8B9XX1WRolibrv4u4rOSzCaDFtBVZnodN7/pHV6u26GmnF9/qd78X/ForIUUU6Yr8IgDSOYxDpa0hwkUT4+f386Eznv6M7r/aP/B6avVwKJ3jCor2H3Rmv+9vi53GWz9Kv+gx7zTmleg7HcXF8wtPUK2op3uU/r8f+sl/DyISv9WpnM5dOxR5kcmxJHM3GEPEAAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -49,6 +54,7 @@
     "Награды за очки Виртуальной вселенной",
     "Честь Безымянных",
     "Неугасаемый пепел",
+    "Неугасаемый звёздный свет",
     "Награды временного события"
    ]
   },
@@ -79,7 +85,6 @@
    "rarity": 4,
    "rewardPath": "/material/351746",
    "comeFrom": [
-    "Застойная тень: Базовая зона",
     "Застойная тень: Базовая зона",
     "Универсальная машина для синтеза: Обмен материалов"
    ]
@@ -190,7 +195,6 @@
    "rewardPath": "/material/635675",
    "comeFrom": [
     "Чашелист: Заклёпкоград",
-    "Чашелист: Заклёпкоград",
     "Неугасаемый пепел",
     "Универсальная машина для синтеза: Обмен материалов"
    ]
@@ -226,7 +230,6 @@
    "rewardPath": "/material/836261",
    "comeFrom": [
     "Чашелист: Заклёпкоград",
-    "Чашелист: Заклёпкоград",
     "Универсальная машина для синтеза: Синтез материалов",
     "Универсальная машина для синтеза: Обмен материалов"
    ]
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920202",
    "comeFrom": [
-    "Чашелист: Заклёпкоград",
     "Чашелист: Заклёпкоград",
     "Универсальная машина для синтеза: Синтез материалов",
     "Неугасаемый пепел",
@@ -449,7 +451,7 @@
   {
    "id": 2,
    "iconPath": "75a125b9bf46e6e13c807cc6a74d125467d743e5aeb8253c59df539874114922",
-   "artPath": "9beea03214c8c9074239a759196c18c089ebfe79912c6a1dcde57270dc2ec7b4",
+   "artPath": "afa8cc1b8f7d13306fe2e05de72d149842efd78f9d2c8de3d7f0dfb2b4059e95",
    "name": "Сладкий сон на шахматной доске",
    "descHash": "Каждое вытягивание кости немедленно восстанавливает <nobr>#1[i]</nobr> ед. энергии Цинцюэ.",
    "params": [
@@ -469,7 +471,7 @@
    "iconPath": "ab5657ddac573843dd12b70fbd981dbebfd832b5f23eeeffe9305aa74bfd182b",
    "artPath": "c4be93f91a8ae5cbf0765127b17d166eeb78d8974ab754302f7395489d6cd5db",
    "name": "Удачная комбинация, последняя кость",
-   "descHash": "Использование навыка имеет фиксированный шанс <nobr>#1[i]%</nobr> дать персонажу состояние Независимость до конца хода.<br />После использования базовой атаки или усиленной базовой атаки в состоянии Независимость персонаж выполняет бонус-атаку, которая наносит поражённому противнику квантовый урон, равный <nobr>100%</nobr> от урона проведённой базовой атаки или усиленной базовой атаки.",
+   "descHash": "Использование навыка имеет фиксированный шанс <nobr>#1[i]%</nobr> дать персонажу состояние Независимость до конца хода.<br />После использования базовой атаки или усиленной базовой атаки в состоянии Независимость персонаж выполняет бонус-атаку, которая наносит поражённому этой атакой противнику квантовый урон, равный <nobr>100%</nobr> от урона проведённой базовой атаки или усиленной базовой атаки.",
    "params": [
     0.24
    ]
@@ -1734,14 +1736,17 @@
  "skillTreePoints": [
   {
    "id": 1201101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1201202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1201203,
+       "anchor": 11,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1774,6 +1779,7 @@
       },
       {
        "id": 1201204,
+       "anchor": 12,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1868,14 +1874,17 @@
   },
   {
    "id": 1201102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1201205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1201206,
+       "anchor": 14,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1908,6 +1917,7 @@
       },
       {
        "id": 1201207,
+       "anchor": 15,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2008,10 +2018,12 @@
   },
   {
    "id": 1201103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1201208,
+     "anchor": 16,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2044,6 +2056,7 @@
     },
     {
      "id": 1201209,
+     "anchor": 17,
      "type": 2,
      "children": [],
      "embedBuff": {
@@ -2115,6 +2128,7 @@
   },
   {
    "id": 1201201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2143,6 +2157,7 @@
   },
   {
    "id": 1201210,
+   "anchor": 18,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2933,7 +2948,7 @@
  "name": "Цинцюэ",
  "rarity": 4,
  "descHash": "Прорицательница Комиссии по предсказаниям на Лофу Сяньчжоу, а также архивариус. За безделье скоро будет низведена до привратника.",
- "artPath": "0bbc2f63e6023b6aaca992f89952d6d44e591918c7834ec3da3598dabea6951a",
+ "artPath": "a3c4a87dbec7414cfb034d00b786b505e980f975391972264a7141b45e9834a1",
  "miniIconPath": "a4c059ae3e42fba63909fef256a5a453033a54e44c9db8af3ce6ea6316f4d5cc",
  "damageType": {
   "id": 32,

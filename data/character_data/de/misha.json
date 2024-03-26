@@ -2,9 +2,14 @@
  "spRequirement": 100,
  "iconPath": "370e9bedc92667833afb3178846f177550cfacb08dce4c993257e92af3786f62",
  "bgPath": "5d7ae2341745b44f868ebec61b625914ff772a237df5162132e425dc7b260d27",
- "figPath": "4ea3d874d2365142f7ebeef51b747abd5910864846b52b47f9ad79054bb52edb",
- "fgPath": "38466e0aaef8acf0432888a746e36be0aed2be9a6ab956692fd35faa5af52ae0",
+ "figPath": "157a94e85ec9dcd2d07c75265ca47dcaba9d89170a8560adccab01d939790959",
+ "fgPath": "cbb1c01e976cebe66bd9f9cdd3496cc6f5a93f76c0597428bb4dcd450d730dac",
  "splashIconPath": "1a9427acfd1f096a90ca70972ccb997dcd3dd783985b26b415a9a5e50d517a49",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRqACAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSDcBAAABkHPbtrG9sveDz7Zt27ZtxLYro7PZJZVt20Zr285z744jYgLw34qC/1VNoiav9rEANPU/gJimrd8ezFIA9R963eZXnz6QvLksDKoJAAX6ZFJSCEE+iEO8JRTEbXTs8YSSUhrfeTKmtgAK3GbaIHD/M/mn4PWX4wANKOmK8e++S0FKfvo4AAp8Wi/N7kxL3EchpeCVPa2qjqjzr86sPXFeUkpS8H0yEHvw+w9+XtdnDUlJwXuBqWOOkPIbN1mMeC0MSoO7tAkkf0iDd98uXvn6CQV/ZCAueAb5g6eDEu0Dzt2lwVtm5gBm3SIfVgHJ4z/zG9dFJymKbmJZdmViug6bVfzKZ+Wne+Cv7lpq69AdT0ijtnW29x9a9vzvpPH12c0defi3Rd7oDTt6mForgAJV+ct/KioAAABWUDggQgEAAJAHAJ0BKhQAFAA+bTKVR6QioiEoCACADYlmAJ0ygy7JwEsQegB0spKqvGt9DewBukH63B5IL7r48Dsw6tLvpqlltx+HsAD+8eBcRrzTlFbJxZbifnfozsSfnQYIJ578/7z2ZTyQlG32sOskYluDaSp1czKA4VG/LtE+aDlVOM3OUj76zQ25AHxewToTGl/5/x7vO9WPvXIXog1HsgRmAOom01plhyGTkz1kRWqT2l1uR4nhOTEv206fcOWI4+bZAB3w4PSdvf99rWLbdipNEkuR/4CzbTN7ceUFJGLW8+KgyoSV3OeaEXxKuE2V3ZyP2K/rr7CAxbFqc/nwa7y7d4RURz4tvZpXo3dWriyQmP8Ifa3YG1LVnmM0aq+TLCv5Nw4rzw2Lra60CnUJM7HGl4+j4LkAS1ZC9DFOAOEL65HAAAA=",
+  "w": 2048,
+  "h": 2048
+ },
  "damageTypeId": 0,
  "baseTypeId": 0,
  "baseTypeTraces": {
@@ -20,7 +25,7 @@
    "purposeId": 11,
    "iconPath": "5f5d136a26ef31f77e957533a35243f3fe1773b3167eb996dd3bc3e9508165cb",
    "name": "Credit",
-   "desc": "Diese Währung, die von der Interastrale Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
+   "desc": "Diese Währung, die von der Interastralen Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
    "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
    "purpose": "Gemeinsame Währung",
    "rarity": 3,
@@ -47,8 +52,7 @@
    "rewardPath": "/material/67221",
    "comeFrom": [
     "Ruhender Schatten: Hotel Reverie (Traumlandschaft)",
-    "Ruhender Schatten: Hotel Reverie (Traumlandschaft)",
-    "Omni-Synthesemaschine – Materialtausch"
+    "Omni-Synthesemaschine – Materialtausch"
    ]
   },
   "125435": {
@@ -66,6 +70,7 @@
     "Punktebelohnungen in der Universum-Simulation",
     "Namenlose Ehre",
     "Glut-Tausch",
+    "Sternenlicht-Tausch",
     "Belohnungen für zeitlich begrenzte Aktionen"
    ]
   },
@@ -155,7 +160,7 @@
     "Universum-Simulation-Gegner",
     "Auftragsbelohnungen",
     "Glut-Tausch",
-    "Omni-Synthesemaschine – Materialtausch",
+    "Omni-Synthesemaschine – Materialtausch",
     "Blütenkelch (Golden)"
    ]
   },
@@ -174,7 +179,7 @@
     "Truppe der Albträume auf Balance-Stufe 2 oder höher",
     "Omni-Synthesemaschine – Materialsynthese",
     "Universum-Simulation-Gegner",
-    "Omni-Synthesemaschine – Materialtausch"
+    "Omni-Synthesemaschine – Materialtausch"
    ]
   },
   "635680": {
@@ -184,12 +189,11 @@
    "iconPath": "000c9b7fd1e06bc049904dbe29cde77df866803d5273f717e8d07d6edc45e67c",
    "name": "Borisin-Zähne",
    "desc": "Bei den Eroberungen der Borisin abgebrochene Zähne, mit denen Spuren für Figuren auf dem Pfad der <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Zerstörung</span> ein wenig hochgestuft werden können.",
-   "lore": "Die Borisin erachten ihre Zähne als mächtige Waffen.<br />In ihren Stämmen, in denen die Starken über die Schwachen herrschen, gelten diejenigen mit Karies als nicht lebensfähig.<br /><br />„O Nestlord, gib uns scharfe Zähne und Klauen.“",
+   "lore": "Die Borisin erachten ihre Zähne als mächtige Waffen.<br />In ihren Stämmen, in denen die Starken über die Schwachen herrschen, gelten diejenigen mit Karies als nicht lebensfähig.<br /><br />„Oh Nestlord, gib uns scharfe Zähne und Klauen.“",
    "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
    "rarity": 2,
    "rewardPath": "/material/635680",
    "comeFrom": [
-    "Blütenkelch (Schuppenklamm)",
     "Blütenkelch (Schuppenklamm)",
     "Glut-Tausch",
     "Omni-Synthesemaschine – Materialtausch"
@@ -210,7 +214,7 @@
     "Truppe der Albträume auf Balance-Stufe 4 oder höher",
     "Omni-Synthesemaschine – Materialsynthese",
     "Universum-Simulation-Gegner",
-    "Omni-Synthesemaschine – Materialtausch"
+    "Omni-Synthesemaschine – Materialtausch"
    ]
   },
   "836266": {
@@ -219,13 +223,12 @@
    "purposeId": 3,
    "iconPath": "bdd46b1026059a8d458c4b2ad165608360b1c51edfc47430ea836af6f1b925be",
    "name": "Reißzähne des Mondwahnsinns",
-   "desc": "Bei den Eroberungen der Borisin abgebrochene reißerische Stoßzähne, mit denen Spuren für Figuren auf dem Pfad der <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Zerstörung</span> stark hochgestuft werden können.",
+   "desc": "Bei den Eroberungen der Borisin abgebrochene schreckliche Stoßzähne, mit denen Spuren für Figuren auf dem Pfad der <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Zerstörung</span> stark hochgestuft werden können.",
    "lore": "Borisins werden durch ihren angeborenen „Mondwahnsinn“ noch stärker.<br />Im Zustand der Kampfeswut verfügen sie über unglaubliche Heilfähigkeiten und vergießen das Blut ihrer Feinde in einem blutigen Festmahl.<br /><br />„O Nestlord, gib uns deine göttliche Stärke.“",
    "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
    "rarity": 4,
    "rewardPath": "/material/836266",
    "comeFrom": [
-    "Blütenkelch (Schuppenklamm)",
     "Blütenkelch (Schuppenklamm)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Omni-Synthesemaschine – Materialtausch"
@@ -243,7 +246,6 @@
    "rarity": 3,
    "rewardPath": "/material/920207",
    "comeFrom": [
-    "Blütenkelch (Schuppenklamm)",
     "Blütenkelch (Schuppenklamm)",
     "Omni-Synthesemaschine – Materialsynthese",
     "Glut-Tausch",
@@ -470,7 +472,7 @@
   {
    "id": 4,
    "iconPath": "3e4e166c3d7e25097d36f11b12f31fb228f69168cbec3590cbc6abe843f8447d",
-   "artPath": "fbb1546fb1a861d3e092f2b39cd198700ef483dcadbb47676957bd3bce1aca3c",
+   "artPath": "c01a43ed3ff800848e25dad3208477fd65ae4fca114147af5bb54acde80d90c0",
    "name": "Vertraute Erscheinung",
    "descHash": "Erhöht den SCH-Multiplikator von jedem Treffer des Ultimates um <nobr>#1[i]%</nobr>.",
    "params": [
@@ -490,7 +492,7 @@
    "iconPath": "522236f2e402c98fdb0e2995d635bb29361eafb932051c4acd61510704167bd1",
    "artPath": "0b4aa144cd876a324349b09faee57c378da13c4eefc8c6dc6d0a247a588bf32a",
    "name": "Verblasste Sehnsucht",
-   "descHash": "Nach dem Einsatz des Ultimates wird sein verursachter SCH um <nobr>#2[i]%</nobr> bis zum Ende der eigenen Runde erhöht. Stellt nach dem nächsten Einsatz der Fertigkeit <nobr>#1[i]</nobr> Fertigkeitspunkt(e) für das Team wieder her.",
+   "descHash": "Nach dem Einsatz des Ultimates wird sein verursachter SCH um <nobr>#2[i]%</nobr> bis zum Ende der eigenen Runde erhöht. Stellt nach dem nächsten Einsatz der Fertigkeit <nobr>#1[i]</nobr> Fertigkeitspunkt für das Team wieder her.",
    "params": [
     1,
     0.3
@@ -981,7 +983,7 @@
    "tagHash": "Abprallung",
    "descHash": "Mishas Ultimate hat zunächst eine Trefferzahl von <nobr>#1[i]</nobr>. Anfangs verursacht er einen Treffer und fügt einem anvisierten Gegner <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> seines ANG zu. Mit seinen weiteren Treffern fügt er jeweils einem zufälligen Gegner <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> seines ANG zu. Vor jedem Treffer besteht eine <u>Grundchance</u> von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>, das Ziel für 1 Rd. einzufrieren.<br />Ein gefrorener Gegner kann keine Aktionen ausführen und erleidet zu Beginn jeder Runde <u>zusätzlichen</u> <span style=\"color:#47C7FD;\">Eis</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> von Mishas ANG.<br />Mishas Ultimate kann eine Trefferzahl von bis zu <nobr>#5[i]</nobr> haben. Nach dem Einsatz seines Ultimates wird die Trefferzahl auf die ursprüngliche Anzahl zurückgesetzt.",
    "ultimateCost": 100,
-   "break": "30/hit",
+   "break": "30 + 15/subsequent",
    "energy": "5/hit",
    "id": 182792,
    "name": "Ich bin spät dran!",
@@ -1645,18 +1647,22 @@
  "skillTreePoints": [
   {
    "id": 1312101,
+   "anchor": 6,
    "type": 1,
    "children": [
     {
      "id": 1312202,
+     "anchor": 10,
      "type": 2,
      "children": [
       {
        "id": 1312203,
+       "anchor": 11,
        "type": 2,
        "children": [
         {
          "id": 1312204,
+         "anchor": 12,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1782,18 +1788,22 @@
   },
   {
    "id": 1312102,
+   "anchor": 7,
    "type": 1,
    "children": [
     {
      "id": 1312205,
+     "anchor": 13,
      "type": 2,
      "children": [
       {
        "id": 1312206,
+       "anchor": 14,
        "type": 2,
        "children": [
         {
          "id": 1312207,
+         "anchor": 15,
          "type": 2,
          "children": [],
          "embedBuff": {
@@ -1923,14 +1933,17 @@
   },
   {
    "id": 1312103,
+   "anchor": 8,
    "type": 1,
    "children": [
     {
      "id": 1312208,
+     "anchor": 16,
      "type": 2,
      "children": [
       {
        "id": 1312209,
+       "anchor": 17,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -1963,6 +1976,7 @@
       },
       {
        "id": 1312210,
+       "anchor": 18,
        "type": 2,
        "children": [],
        "embedBuff": {
@@ -2063,6 +2077,7 @@
   },
   {
    "id": 1312201,
+   "anchor": 9,
    "type": 2,
    "children": [],
    "embedBuff": {
@@ -2332,6 +2347,16 @@
    "krUrl": "b89a0c4b55e3ed486f0bb450951fb55c88f52ae3ee3e25711a74dcc2061a4a83"
   },
   {
+   "id": 22,
+   "title": "Teammitglied: Gallagher",
+   "text": "Gallagher ist auch hier? Sieh mal, ich kann jetzt auch alle beschützen, genau wie du!",
+   "unlockRequirement": "",
+   "cnUrl": "ea7e9c5b7043c6a2004fa9b980a0b07f2f678f91fc64a8da4dc10d1e0e57589e",
+   "jpUrl": "9cd0fd82cf10bd8c0c3e3e755da039c81191f92709a76d9c9bae592dd229312b",
+   "enUrl": "3befdc4779ca9e2b6ae2dbb5055e5d434cc8d5d1e8ffce7a48efa9d4da2302cf",
+   "krUrl": "fe634019e5290d9054f631321b3123e5f9a742ea2953f178285739c2a6a9cc5d"
+  },
+  {
    "id": 51,
    "title": "Kampf beginnt: Schwächebruch",
    "text": "Los geht’s, mit aller Kraft ...!",
@@ -2503,7 +2528,7 @@
   },
   {
    "id": 68,
-   "title": "Schatz öffnen 1",
+   "title": "Schatz geöffnet 1",
    "text": "Hat ein Gast diesen Gegenstand hier vergessen?",
    "unlockRequirement": "",
    "cnUrl": "90a809c19f9525aa7005c95338e023b04ee7349038a9000c1f356f182f95ebfd",
@@ -2513,7 +2538,7 @@
   },
   {
    "id": 69,
-   "title": "Schatz öffnen 2",
+   "title": "Schatz geöffnet 2",
    "text": "Was für ein großzügiges Trinkgeld!",
    "unlockRequirement": "",
    "cnUrl": "d013917b1af3072d4860839b6ccfde14c471278de44d38a1f63499f9f5338ed4",
@@ -2523,7 +2548,7 @@
   },
   {
    "id": 70,
-   "title": "Kostbaren Schatz öffnen",
+   "title": "Kostbaren Schatz geöffnet",
    "text": "Ich kann so etwas Wertvolles nicht annehmen ...",
    "unlockRequirement": "",
    "cnUrl": "02c1f3d156903c9df21371a2967651e53fc7a73145a63faebe7965ffbf7e4562",
@@ -2590,7 +2615,7 @@
   },
   {
    "title": "Geschichte (Teil 3)",
-   "text": "Die Taschenuhr zeigte sieben Uhr abends. Misha beendete sein Abendessen und ließ sich auf dem aus einem Schrank umgebauten Klappbett nieder.<br />Er starrte in die Dunkelheit, die ihn umgab, und lauschte dem unermüdlichen Ticken der Taschenuhr. Dies gehörte zu den glücklichsten Stunden seines Tages ... Die Arbeit war getan und die Realität existierte nicht mehr, nur noch die uneingeschränkte Fantasie.<br /><br />Nachdem er den Nebel durchquert hatte, führte ihn seine Fantasie zum spannendsten Teil der Seeschlacht. Er streckte seine Hände aus, zerrte seine Kameraden zurück, die von den Wellen umgeworfen worden waren, und machte eine weitere Bewegung, als würde er ein Seeungeheuer besiegen ...<br /><br />„Kapitän, Kapitän, wach auf, es wird schon hell!“<br />Er rieb sich die Augen und starrte ungläubig auf das Schauspiel, das sich ihm bot.<br />Eine goldene Taschenuhr, die sich in eine Gestalt mit Armen und Beinen verwandelt hatte, gekleidet in eine Uniform und eine rote Fliege, winkte ihm zu.<br />Eine silberne Spiegeldame warf ihm einen Blick zu, rückte ihr Kleid zurecht und schaute durch ein Fernglas auf das Geschehen in der Ferne.<br />Vom Sturm der vergangenen Nacht war keine Spur mehr zu sehen. Eine frische Meeresbrise ließ Mishas Uniform flattern, und in der Ferne zeichnete sich der Umriss der Neuen Welt ab.<br /><br />„Schau mal, Kapitän, die Küste ist nicht mehr weit!“<br />Herr Taschenuhr und Frau Spiegel nahmen Misha an der Hand und sprangen sanft über die Wolken. Bevor er etwas dagegen tun konnte, waren die drei schon in der Luft und blickten auf das grenzenlose Meer und den bogenförmigen Kontinent unter ihnen. Herr Taschenuhr und Frau Spiegel jubelten und verleiteten Misha zu einem freudigen Stepptanz. Voller Staunen und Freude klammerte er sich an den Händen seiner Gefährten fest.<br /><br />„Seid ... Seid ihr meine Gefährten?“<br />„Ganz genau, wir haben gemeinsam unzählige Herausforderungen gemeistert und uns dabei auch oft verlaufen, aber endlich haben wir die Neue Welt gefunden!“<br />...<br /><br />Bei Sonnenaufgang wachte Misha aus seinem Traum auf und eine Träne kullerte über sein Gesicht.<br />Als er sich in seinem Zimmer umsah, bemerkte er die Taschenuhr, die er an seine Brust gepresst hatte, und den Spiegel, der von der Wand gefallen war.<br />Misha wischte sich die Augen und hatte den Eindruck, alles wäre wie vorher, und doch hatte er alles verloren.",
+   "text": "Die Taschenuhr zeigte sieben Uhr abends. Misha beendete sein Abendessen und ließ sich auf dem aus einem Schrank umgebauten Klappbett nieder.<br />Er starrte in die Dunkelheit, die ihn umgab, und lauschte dem unermüdlichen Ticken der Taschenuhr. Dies gehörte zu den glücklichsten Stunden seines Tages ... Die Arbeit war getan und die Realität existierte nicht mehr, nur noch die uneingeschränkte Fantasie.<br /><br />Nachdem er den Nebel durchquert hatte, führte ihn seine Fantasie zum spannendsten Teil der Seeschlacht. Er streckte seine Hände aus, zerrte seine Kameraden zurück, die von den Wellen umgeworfen worden waren, und machte eine weitere Bewegung, als würde er ein Seeungeheuer besiegen ...<br /><br />„Kapitän, Kapitän, wach auf, es wird schon hell!“<br />Er rieb sich die Augen und starrte ungläubig auf das Schauspiel, das sich ihm bot.<br />Eine goldene Taschenuhr, die sich in eine Gestalt mit Armen und Beinen verwandelt hatte, gekleidet in eine Uniform und eine rote Fliege, winkte ihm zu.<br />Eine silberne Spiegeldame warf ihm einen Blick zu, rückte ihr Kleid zurecht und schaute durch ein Fernglas auf das Geschehen in der Ferne.<br />Vom Sturm der vergangenen Nacht war keine Spur mehr zu sehen. Eine frische Meeresbrise ließ Mishas Uniform flattern, und in der Ferne zeichnete sich der Umriss der Neuen Welt ab.<br /><br />„Schau mal, Kapitän, die Küste ist nicht mehr weit!“<br />Herr Taschenuhr und Frau Spiegel nahmen Misha an der Hand und sprangen sanft über die Wolken. Bevor er etwas dagegen tun konnte, waren die drei schon in der Luft und blickten auf das grenzenlose Meer und den bogenförmigen Kontinent unter ihnen. Herr Taschenuhr und Frau Spiegel jubelten und verleiteten Misha zu einem freudigen Stepptanz. Voller Staunen und Freude klammerte er sich an den Händen seiner Gefährten fest.<br /><br />„Seid ... Seid ihr meine Gefährten?“<br />„Ganz genau, wir haben gemeinsam unzählige Herausforderungen gemeistert und uns dabei auch oft verirrt, aber endlich haben wir die Neue Welt gefunden!“<br />...<br /><br />Bei Sonnenaufgang wachte Misha aus seinem Traum auf und eine Träne kullerte über sein Gesicht.<br />Als er sich in seinem Zimmer umsah, bemerkte er die Taschenuhr, die er an seine Brust gepresst hatte, und den Spiegel, der von der Wand gefallen war.<br />Misha wischte sich die Augen und hatte den Eindruck, alles wäre wie vorher, und doch hatte er alles verloren.",
    "unlockRequirement": "Wird auf Figurenstufe <nobr>60</nobr> freigeschaltet"
   },
   {
@@ -2699,7 +2724,7 @@
  "name": "Misha",
  "rarity": 4,
  "descHash": "Ein vernünftiger junger Mann, der als Hotelportier in Penacony arbeitet. Hegt große Sehnsucht für die Namenlosen und träumt davon, eines Tages selbst eine Reise anzutreten.",
- "artPath": "35c2bd0fc3b03dc00d91776118b3e546a73802a01450f335310a1be14fc15a41",
+ "artPath": "f313ab391a54a5508a6c601d604f08410d02e880edc73b4ddbae3fdc560af2cd",
  "miniIconPath": "5901c970a59bd0f0a9e290365b8cc015537c13b9757cf1b77ea1f3c137755d5b",
  "damageType": {
   "id": 4,
