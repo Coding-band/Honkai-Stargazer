@@ -6,7 +6,8 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![Make With Love](https://img.shields.io/badge/make_with_%E2%9D%A4%EF%B8%8F-white)
-![Version](https://img.shields.io/badge/Version-2.1.4_BETA-pink)
+![RELEASE](https://img.shields.io/badge/RELEASE-2.1.0-green)
+![BETA](https://img.shields.io/badge/BETA-2.1.6-pink)
 
 星穹觀星者 2 是由團隊[<span style="color:#E31576">Coding Band</span>](https://github.com/Coding-Band)開發
 - [<span style="color:#00CCFF">2O48](https://github.com/2O48) : UI/UX 設計
@@ -28,7 +29,7 @@
 <span style="color:#E31576">⚠️ 請認准包裝名!!! 不要下載非以下渠道分發的版本!!!⚠️</span>
 
 - `com.voc.honkai_stargazer_gp` ([Google Play](https://play.google.com/store/apps/details?id=com.voc.honkai_stargazer_gp))
-- `com.voc.honkaistargazer` (App Store)
+- `com.voc.honkaistargazer` ([App Store](https://apps.apple.com/us/app/stargazer-2-unofficial/id6474837377))
 
 <br>
 <a href="https://www.buymeacoffee.com/codingband"><img src="https://img.buymeacoffee.com/button-api/?text=Support Us&emoji=☕&slug=codingband&button_colour=ff76ac&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
