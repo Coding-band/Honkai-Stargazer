@@ -60,7 +60,7 @@ export default function ToLoginScreen(props: Props) {
           width={"100%"}
           height={46}
         >
-          <Text>
+          <Text className="text-[16px] font-[HY65] text-black leading-5">
             {server.name}
           </Text>
         </Button>
