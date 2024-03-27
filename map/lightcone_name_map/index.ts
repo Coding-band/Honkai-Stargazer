@@ -1,4 +1,8 @@
 const LightconeName = {
+  //Add in 2.1.0
+  "inherently-unjust-destiny": "Inherently Unjust Destiny",
+  "along-the-passing-shore": "Along the Passing Shore",
+  "concert-for-two": "Concert for Two",
   //Add in 2.0.0
   "earthly-escapade": "Earthly Escapade",
   "reforged-remembrance": "Reforged Remembrance",

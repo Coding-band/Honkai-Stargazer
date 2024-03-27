@@ -40,10 +40,13 @@ const officalCharId: any = {
   1214: "Xueyi",
   1215: "Hanya",
   1217: "Huohuo",
+  1301: "Gallagher",
   1302: "Argenti",
   1303: "Ruan Mei",
+  1304: "Aventurine",
   1305: "Dr. Ratio",
   1306: "Sparkle",
+  1308: "Acheron",
   1307: "Black Swan",
   1312: "Misha",
 };

@@ -29,8 +29,15 @@ import PenaconyLandoftheDreams from "../../data/relic_data/de/312.json";
 //Add in 2.0.0
 import PioneerDiverofDeadWaters from "../../data/relic_data/de/117.json";
 import WatchmakerMasterofDreamMachinations from "../../data/relic_data/de/118.json";
+//Add in 2.1.0
+import SigoniatheUnclaimedDesolation from "../../data/relic_data/de/313.json";
+import IzumoGenseiandTakamaDivineRealm from "../../data/relic_data/de/314.json";
 
 const DE = {
+  //add in 2.1.0
+  "Sigonia, the Unclaimed Desolation":IzumoGenseiandTakamaDivineRealm,
+  "Izumo Gensei and Takama Divine Realm":SigoniatheUnclaimedDesolation,
+  //add in 2.0.0
   "Pioneer Diver of Dead Waters":PioneerDiverofDeadWaters,
   "Watchmaker, Master of Dream Machinations":WatchmakerMasterofDreamMachinations,
   "Passerby of Wandering Cloud": PasserbyofWanderingCloud,

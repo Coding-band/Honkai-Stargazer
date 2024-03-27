@@ -1,14 +1,14 @@
 const Relic: any = {
   //Add in 2.1.0
   "Izumo Gensei and Takama Divine Realm": {
-    icon1: require("../relic_icon/izumo_gensei_and_takama_divine_realm_5.webp"),
-    icon2: require("../relic_icon/izumo_gensei_and_takama_divine_realm_6.webp"),
-    pcIcon: require("../relic_pcicon/izumo_gensei_and_takama_divine_realm.webp"),
+    icon1: require("../ornament_icon/izumo_gensei_and_takama_divine_realm_5.webp"),
+    icon2: require("../ornament_icon/izumo_gensei_and_takama_divine_realm_6.webp"),
+    pcIcon: require("../ornament_pcicon/izumo_gensei_and_takama_divine_realm.webp"),
   },
   "Sigonia, the Unclaimed Desolation": {
-    icon1: require("../relic_icon/sigonia_the_unclaimed_desolation_5.webp"),
-    icon2: require("../relic_icon/sigonia_the_unclaimed_desolation_6.webp"),
-    pcIcon: require("../relic_pcicon/sigonia_the_unclaimed_desolation.webp"),
+    icon1: require("../ornament_icon/sigonia_the_unclaimed_desolation_5.webp"),
+    icon2: require("../ornament_icon/sigonia_the_unclaimed_desolation_6.webp"),
+    pcIcon: require("../ornament_pcicon/sigonia_the_unclaimed_desolation.webp"),
   },
   //Add in 2.0.0
   "Pioneer Diver of Dead Waters": {

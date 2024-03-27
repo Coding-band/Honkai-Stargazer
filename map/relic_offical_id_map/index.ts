@@ -29,6 +29,8 @@ const officalRelicId: any = {
   310: "Broken Keel",
   311: "Firmament Frontline: Glamoth",
   312: "Penacony, Land of the Dreams",
+  313: "Sigonia, the Unclaimed Desolation",
+  314: "Izumo Gensei and Takama Divine Realm",
 };
 
 export default officalRelicId;

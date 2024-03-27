@@ -96,7 +96,16 @@ import IndeliblePromise from "../../data/lightcone_data/kr/21042.json";
 import FinalVictor from "../../data/lightcone_data/kr/21037.json";
 import DreamvilleAdventure from "../../data/lightcone_data/kr/21036.json";
 
+//add in 2.1.0
+import InherentlyUnjustDestiny from "../../data/lightcone_data/kr/23023.json";
+import AlongthePassingShore from "../../data/lightcone_data/kr/23024.json";
+import ConcertforTwo from "../../data/lightcone_data/kr/21043.json";
+
 const KR = {
+  //add in 2.1.0
+  "Inherently Unjust Destiny": InherentlyUnjustDestiny,
+  "Along the Passing Shore": AlongthePassingShore,
+  "Concert for Two": ConcertforTwo,
   //add in 2.0.0
   "Earthly Escapade": EarthlyEscapade,
   "Reforged Remembrance": ReforgedRemembrance,

@@ -15,7 +15,7 @@ const CharacterImage: any = {
   "Gallagher": {
     icon: require("../../images/character_icon/gallagher_icon.webp"),
     imageSplash: require("../../images/character_splash/gallagher_splash.webp"),
-    imageFull: require("../../images/character_full/gallagher_full.webp"),
+    imageFull: require("../../images/character_fade/gallagher_fade.webp"),
     fade: require("../../images/character_fade/gallagher_fade.webp"),
   },
   //add in 2.0.0

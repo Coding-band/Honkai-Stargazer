@@ -50,7 +50,16 @@ import BlackSwan from "../../data/character_data/ru/blackswan.json";
 import Sparkle from "../../data/character_data/ru/sparkle.json";
 import Misha from "../../data/character_data/ru/misha.json";
 
+//add in 2.1.0
+import Acheron from "../../data/character_data/ru/acheron.json";
+import Aventurine from "../../data/character_data/ru/aventurine.json";
+import Gallagher from "../../data/character_data/ru/gallagher.json";
+
 const RU = {
+  //add in 2.1.0
+  "Acheron": Acheron,
+  "Aventurine": Aventurine,
+  "Gallagher": Gallagher,
   //add in 2.0.0
   "Black Swan": BlackSwan,
   "Sparkle": Sparkle,

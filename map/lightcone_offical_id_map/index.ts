@@ -1,5 +1,9 @@
 const officalLightconeId: any = {
 
+  23023: "Inherently Unjust Destiny",
+  23024: "Along the Passing Shore",
+  21043: "Concert for Two",
+
   21035: "What Is Real?",
   21036: "Dreamville Adventure",
   21037: "Final Victor",
