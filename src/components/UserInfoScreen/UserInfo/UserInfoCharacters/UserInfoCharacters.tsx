@@ -47,6 +47,8 @@ export default React.memo(function UserInfoCharacters(props: Props , {isCapture}
   const userDetailCharList =
     useUserCharactersByUUID(profileUUID).data?.characters_details;
 
+  const unknownItemReplace = require("../../../../../assets/images/ui_icon/pom_pom.webp")
+
   // 展櫃資料
   // @ts-ignore
   const inGameCharacters = hsrInGameInfo?.characters?.map((char: any) => {
@@ -57,11 +59,11 @@ export default React.memo(function UserInfoCharacters(props: Props , {isCapture}
 
     return {
       id: charId,
-      rare: charJsonData?.rare,
-      name: charFullData?.name,
+      rare: charJsonData?.rare || 1,
+      name: charFullData?.name || "?",
       rank: char?.rank,
       level: "Lv " + char?.level,
-      image: CharacterImage[charId].icon,
+      image: CharacterImage[charId]?.icon  || unknownItemReplace,
       light_cone: {
         id: officalLightconeId[char?.light_cone?.id] as LightconeName,
         level: char?.light_cone?.level,
@@ -89,11 +91,11 @@ export default React.memo(function UserInfoCharacters(props: Props , {isCapture}
       const charFullData = getCharFullData(charId, textLanguage);
       return {
         id: charId,
-        rare: charJsonData.rare,
-        name: charFullData.name,
+        rare: charJsonData?.rare || 1,
+        name: charFullData?.name || "?",
         rank: char.rank,
         level: LOCALES[appLanguage].UserCharLevelLv + char.level,
-        image: CharacterImage[charId].icon,
+        image: CharacterImage[charId]?.icon  || unknownItemReplace,
         light_cone: {
           id: officalLightconeId[char?.equip?.id] as LightconeName,
           level: char?.equip?.level,
@@ -116,11 +118,11 @@ export default React.memo(function UserInfoCharacters(props: Props , {isCapture}
       const charFullData = getCharFullData(charId, textLanguage);
       return {
         id: charId,
-        rare: charJsonData.rare,
-        name: charFullData.name,
+        rare: charJsonData?.rare || 1,
+        name: charFullData?.name || "?",
         rank: char.rank,
         level: LOCALES[appLanguage].UserCharLevelLv + char.level,
-        image: CharacterImage[charId].icon,
+        image: CharacterImage[charId]?.icon || unknownItemReplace,
         light_cone: {
           id: officalLightconeId[char?.equip?.id] as LightconeName,
           level: char?.equip?.level,
@@ -235,6 +237,7 @@ export default React.memo(function UserInfoCharacters(props: Props , {isCapture}
                     )
                   }
                   onPress={() => {
+                    if(char.name === undefined || char.name === "?") return;
                     // @ts-ignore
                     navigation.navigate("UserCharDetail", {
                       uuid: props.uuid,
@@ -304,6 +307,7 @@ export default React.memo(function UserInfoCharacters(props: Props , {isCapture}
                         )
                       }
                       onPress={() => {
+                        if(char.name === undefined || char.name === "?") return;
                         // @ts-ignore
                         navigation.navigate("UserCharDetail", {
                           uuid: props.uuid,
