@@ -1,4 +1,17 @@
 const Lightcone: any = {
+  //add in 2.1.0
+  "Along the Passing Shore": {
+    icon: require("../../images/lightcone_icon/along_the_passing_shore.webp"),
+    imageFull: require("../../images/lightcone_artwork/along_the_passing_shore_artwork.webp"),
+  },
+  "Inherently Unjust Destiny": {
+    icon: require("../../images/lightcone_icon/inherently_unjust_destiny.webp"),
+    imageFull: require("../../images/lightcone_artwork/inherently_unjust_destiny_artwork.webp"),
+  },
+  "Concert for Two": {
+    icon: require("../../images/lightcone_icon/concert_for_two.webp"),
+    imageFull: require("../../images/lightcone_artwork/concert_for_two_artwork.webp"),
+  },
   //add in 2.0.0
   "Earthly Escapade": {
     icon: require("../../images/lightcone_icon/earthly_escapade.webp"),

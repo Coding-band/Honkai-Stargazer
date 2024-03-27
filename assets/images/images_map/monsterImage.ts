@@ -1,4 +1,20 @@
 const Monsterimages: any = {
+  //Add in 2.1.0
+  "Ten Stonehearts: Aventurine of Stratagems": {
+    icon: require("../../images/monster_icon/monster_ten_stonehearts_aventurine_of_stratagems_icon.webp"),
+  },
+  "\"All or Nothing\"": {
+    icon: require("../../images/monster_icon/monster_all_or_nothing_icon.webp"),
+  },
+  "Dreamjolt Troupe's Winder Goon": {
+    icon: require("../../images/monster_icon/monster_dreamjolt_troupes_winder_goon_icon.webp"),
+  },
+  "Memory Zone Meme \"Something In The Mirror\"": {
+    icon: require("../../images/monster_icon/monster_memory_zone_meme_something_in_the_mirror_icon.webp"),
+  },
+  "Memory Zone Meme \"Shell of Faded Rage\"": {
+    icon: require("../../images/monster_icon/monster_memory_zone_meme_shell_of_faded_rage_icon.webp"),
+  },
   //Add in 2.0.0
   "Stellaron Hunter: Sam": {
     icon: require("../../images/monster_icon/monster_stellaron_hunter_sam_icon.webp"),

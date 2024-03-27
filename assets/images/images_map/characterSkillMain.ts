@@ -4,6 +4,28 @@
  */
 
 const CharacterSkillMain: any = {
+  //add in 2.1.0
+  "Acheron": {
+    skill1: require("../../images/character_skill/acheron_skill1.webp"),
+    skill2: require("../../images/character_skill/acheron_skill2.webp"),
+    skill3: require("../../images/character_skill/acheron_skill3.webp"),
+    skill4: require("../../images/character_skill/acheron_skill4.webp"),
+    skill6: require("../../images/character_skill/acheron_skill6.webp"),
+  },
+  "Aventurine": {
+    skill1: require("../../images/character_skill/aventurine_skill1.webp"),
+    skill2: require("../../images/character_skill/aventurine_skill2.webp"),
+    skill3: require("../../images/character_skill/aventurine_skill3.webp"),
+    skill4: require("../../images/character_skill/aventurine_skill4.webp"),
+    skill6: require("../../images/character_skill/aventurine_skill6.webp"),
+  },
+  "Gallagher": {
+    skill1: require("../../images/character_skill/gallagher_skill1.webp"),
+    skill2: require("../../images/character_skill/gallagher_skill2.webp"),
+    skill3: require("../../images/character_skill/gallagher_skill3.webp"),
+    skill4: require("../../images/character_skill/gallagher_skill4.webp"),
+    skill6: require("../../images/character_skill/gallagher_skill6.webp"),
+  },
   //add in 2.0.0
   "Black Swan": {
     skill1: require("../../images/character_skill/black_swan_skill1.webp"),

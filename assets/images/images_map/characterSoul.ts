@@ -4,6 +4,49 @@
  */
 
 const CharacterSoul: any = {
+  //add in 2.1.0
+  "Acheron": {
+    eidolon1: require("../../images/character_eidolon/acheron_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/acheron_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/acheron_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/acheron_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/acheron_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/acheron_eidolon6.webp"),
+    soul1: require("../../images/character_soul/acheron_soul1.webp"),
+    soul2: require("../../images/character_soul/acheron_soul2.webp"),
+    soul3: require("../../images/character_soul/acheron_soul3.webp"),
+    soul4: require("../../images/character_soul/acheron_soul4.webp"),
+    soul5: require("../../images/character_soul/acheron_soul5.webp"),
+    soul6: require("../../images/character_soul/acheron_soul6.webp"),
+  },
+  "Aventurine": {
+    eidolon1: require("../../images/character_eidolon/aventurine_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/aventurine_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/aventurine_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/aventurine_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/aventurine_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/aventurine_eidolon6.webp"),
+    soul1: require("../../images/character_soul/aventurine_soul1.webp"),
+    soul2: require("../../images/character_soul/aventurine_soul2.webp"),
+    soul3: require("../../images/character_soul/aventurine_soul3.webp"),
+    soul4: require("../../images/character_soul/aventurine_soul4.webp"),
+    soul5: require("../../images/character_soul/aventurine_soul5.webp"),
+    soul6: require("../../images/character_soul/aventurine_soul6.webp"),
+  },
+  "Gallagher": {
+    eidolon1: require("../../images/character_eidolon/gallagher_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/gallagher_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/gallagher_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/gallagher_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/gallagher_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/gallagher_eidolon6.webp"),
+    soul1: require("../../images/character_soul/gallagher_soul1.webp"),
+    soul2: require("../../images/character_soul/gallagher_soul2.webp"),
+    soul3: require("../../images/character_soul/gallagher_soul3.webp"),
+    soul4: require("../../images/character_soul/gallagher_soul4.webp"),
+    soul5: require("../../images/character_soul/gallagher_soul5.webp"),
+    soul6: require("../../images/character_soul/gallagher_soul6.webp"),
+  },
   //add in 2.0.0
   "Black Swan": {
     eidolon1: require("../../images/character_eidolon/black_swan_eidolon1.webp"),

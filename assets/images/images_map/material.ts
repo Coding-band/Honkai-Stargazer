@@ -1,4 +1,12 @@
 const Material: any = {
+  //add in 2.1.0-
+  673758: require("../../images/material_icon/material_divine_amber.webp"),
+  673753: require("../../images/material_icon/material_myriad_fruit.webp"),
+  589817: require("../../images/material_icon/material_crystal_meteorites.webp"),
+  874344: require("../../images/material_icon/material_scattered_stardust.webp"),
+  589812: require("../../images/material_icon/material_nourishing_honey.webp"),
+  874339: require("../../images/material_icon/material_alien_tree_seed.webp"),
+  983280: require("../../images/material_icon/material_raging_heart.webp"),
   //add in 2.0.0
   635680: require("../../images/material_icon/material_borisin_teeth.webp"),
   920207: require("../../images/material_icon/material_lupitoxin_sawteeth.webp"),
@@ -17,7 +25,7 @@ const Material: any = {
   673759: require("../../images/material_icon/material_heaven_incinerator.webp"),
   874345: require("../../images/material_icon/material_fiery_spirit.webp"),
   589818: require("../../images/material_icon/material_starfire_essence.webp"),
-  
+
   //星瓊
   900001: require("../../images/material_icon/material_stella_jade.webp"),
   //Lightcone EXP
