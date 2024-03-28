@@ -3,19 +3,19 @@ const CharacterImage: any = {
   "Acheron": {
     icon: require("../../images/character_icon/acheron_icon.webp"),
     imageSplash: require("../../images/character_splash/acheron_splash.webp"),
-    imageFull: require("../../images/character_splash/acheron_splash.webp"),
+    imageFull: require("../../images/character_full/acheron_full.webp"),
     fade: require("../../images/character_fade/acheron_fade.webp"),
   },
   "Aventurine": {
     icon: require("../../images/character_icon/aventurine_icon.webp"),
     imageSplash: require("../../images/character_splash/aventurine_splash.webp"),
-    imageFull: require("../../images/character_splash/aventurine_splash.webp"),
+    imageFull: require("../../images/character_full/aventurine_full.webp"),
     fade: require("../../images/character_fade/aventurine_fade.webp"),
   },
   "Gallagher": {
     icon: require("../../images/character_icon/gallagher_icon.webp"),
     imageSplash: require("../../images/character_splash/gallagher_splash.webp"),
-    imageFull: require("../../images/character_fade/gallagher_fade.webp"),
+    imageFull: require("../../images/character_full/gallagher_full.webp"),
     fade: require("../../images/character_fade/gallagher_fade.webp"),
   },
   //add in 2.0.0

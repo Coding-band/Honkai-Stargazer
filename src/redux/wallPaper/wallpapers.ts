@@ -22,6 +22,16 @@ export const wallPapers = [
     name: "星火遊園",
   },
   {
+    id: 221004,
+    url: require("../../../assets/images/bgs/221004.webp"),
+    name: "盛會之星",
+  },
+  {
+    id: 221005,
+    url: require("../../../assets/images/bgs/221005.webp"),
+    name: "星間旅行",
+  },
+  {
     id: 999,
     url: require("../../../assets/images/bgs/bg_light.webp"),
     name: "純色壁紙",
@@ -186,8 +196,27 @@ export const wallPapers = [
     id: 1302,
     url: require("../../../assets/images/bgs/1302.webp"),
   },
+  //add in 1.6
   {
     id: 1303,
     url: require("../../../assets/images/bgs/1303.webp"),
+  },
+  {
+    id: 1305,
+    url: require("../../../assets/images/bgs/1305.webp"),
+  },
+  //add in 2.0 
+  {
+    id: 1306,
+    url: require("../../../assets/images/bgs/1306.webp"),
+  },
+  {
+    id: 1307,
+    url: require("../../../assets/images/bgs/1307.webp"),
+  },
+  {
+    id: 1312,
+    url: require("../../../assets/images/bgs/1312.webp"),
   }
+  //add in 2.1
 ];
